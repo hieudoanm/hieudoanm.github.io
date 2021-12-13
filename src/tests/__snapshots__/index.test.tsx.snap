@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage render default 1`] = `
+<div>
+  <div
+    class="h-screen bg-center bg-cover bg-no-repeat overflow-hidden bg-black"
+    style="background-image: url(/images/jpg/background/hero.jpg);"
+  >
+    <div
+      class="h-screen bg-black/75 overflow-auto"
+    >
+      <div
+        class="container mx-auto py-16"
+      >
+        <div
+          class="max-w-fit mx-auto"
+        >
+          <div
+            class="flex flex-col items-center justify-center gap-8"
+          >
+            <div
+              class="w-full"
+            >
+              <div
+                class="relative w-full rounded-full bg-white"
+                style="padding-bottom: 100%;"
+              >
+                <div
+                  class="absolute w-full h-full top-0 left-0"
+                >
+                  <div
+                    class="w-full h-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="text-black text-8xl"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h1
+                class="text-4xl uppercase text-white"
+              >
+                HIEU DOAN
+              </h1>
+            </div>
+            <div
+              class="w-full"
+            >
+              <a
+                href="/about"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <button
+                  class="rounded bg-white text-black w-full py-2 uppercase"
+                  type="button"
+                >
+                  About
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

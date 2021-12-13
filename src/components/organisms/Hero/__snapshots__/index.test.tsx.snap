@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer render default 1`] = `
+<div>
+  <div
+    class="h-screen bg-cover bg-center bg-no-repeat"
+    id=""
+    style="background-image: url();"
+  >
+    <div
+      class="h-full bg-opacity-80 bg-gray-900 text-white"
+    >
+      <div
+        class="h-full flex items-center justify-center"
+      >
+        <div
+          class="text-center py-16 "
+        >
+          
+          <h2
+            class="uppercase text-4xl  "
+          >
+            <b />
+          </h2>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

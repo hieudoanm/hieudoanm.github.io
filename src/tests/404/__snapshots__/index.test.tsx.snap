@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage render default 1`] = `
+<div>
+  <div
+    class="w-screen h-screen flex items-center justify-center"
+  >
+    <div
+      class="text-center py-8"
+    >
+      <h2
+        class="text-9xl mb-4"
+      >
+        404
+      </h2>
+      <p
+        class="uppercase text-2xl mb-4"
+      >
+        Page not found
+      </p>
+      <p>
+        <a
+          aria-current="page"
+          class="uppercase underline"
+          href="/"
+        >
+          Back to Home
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;

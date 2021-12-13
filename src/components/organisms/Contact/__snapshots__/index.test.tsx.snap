@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact render default 1`] = `
+<div>
+  <div
+    class="py-16"
+    id="id"
+  >
+    <div
+      class="container mx-auto px-8"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-16"
+      >
+        <div
+          class="order-2 md:order-1"
+        >
+          <div
+            class="w-full relative"
+            style="padding-bottom: 100%;"
+          >
+            <div
+              class="absolute w-full h-full"
+            >
+              <iframe
+                allowfullscreen=""
+                class="border-none w-full h-full"
+                loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501725.3382572512!2d106.41504093423713!3d10.755341071141125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2zSOG7kyBDaMOtIE1pbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1634894512761!5m2!1svi!2s"
+                title="Ho Chi Minh City"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="order-1 md:order-2"
+        >
+          <div
+            class="text-text-center md:text-left pb-16 "
+          >
+            
+            <h2
+              class="uppercase text-4xl  mb-8"
+            >
+              <b>
+                title
+              </b>
+            </h2>
+            <p>
+              subtitle
+            </p>
+          </div>
+          <form>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-8"
+            >
+              <div
+                class="col-span-1 md:col-span-2"
+              >
+                <label
+                  class="mb-2 block"
+                  for="name"
+                >
+                  Name
+                </label>
+                <input
+                  class="w-full px-3 py-2 rounded border border-solid box-border border-gray-300 "
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  required=""
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <label
+                  class="mb-2 block"
+                  for="phone"
+                >
+                  Phone
+                </label>
+                <input
+                  class="w-full px-3 py-2 rounded border border-solid box-border border-gray-300 "
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone"
+                  required=""
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <label
+                  class="mb-2 block"
+                  for="email"
+                >
+                  Email
+                </label>
+                <input
+                  class="w-full px-3 py-2 rounded border border-solid box-border border-gray-300 "
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required=""
+                  type="email"
+                  value=""
+                />
+              </div>
+              <div
+                class="col-span-1 md:col-span-2"
+              >
+                <label
+                  class="mb-2 block"
+                  for="message"
+                >
+                  Message
+                </label>
+                <textarea
+                  class="w-full px-3 py-2 rounded border border-solid box-border border-gray-300"
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                  required=""
+                  rows="4"
+                />
+              </div>
+              <div
+                class="col-span-1 md:col-span-2"
+              >
+                <button
+                  class="tracking-widest	rounded px-3 py-2 text-base bg-gray-900 text-white  "
+                  type="submit"
+                >
+                  <b>
+                    Send Message
+                  </b>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

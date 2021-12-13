@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testimonials render default 1`] = `
+<div>
+  <section
+    class="pb-16"
+    id="id"
+  >
+    <div
+      class="container mx-auto px-8"
+    >
+      <div
+        class="text-center py-16 "
+      >
+        
+        <h2
+          class="uppercase text-4xl  mb-8"
+        >
+          <b>
+            title
+          </b>
+        </h2>
+        <p>
+          subtitle
+        </p>
+      </div>
+      <div
+        class="w-full md:w-6/12 mx-auto"
+      >
+        <p
+          class="text-2xl mb-8 text-justify"
+        />
+        <p
+          class="text-left md:text-right"
+        >
+          <b />
+           / 
+          
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;

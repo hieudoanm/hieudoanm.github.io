@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pricing render default 1`] = `
+<div>
+  <div
+    class="pb-16"
+    id="id"
+  >
+    <div
+      class="container mx-auto px-8"
+    >
+      <div
+        class="text-center py-16 "
+      >
+        
+        <h2
+          class="uppercase text-4xl  mb-8"
+        >
+          <b>
+            title
+          </b>
+        </h2>
+        <p>
+          subtitle
+        </p>
+      </div>
+      <div
+        class="w-full md:w-6/12 mx-auto flex items-center mb-8 border rounded-lg overflow-hidden"
+      >
+        <div
+          class="text-center w-6/12 py-4 cursor-pointer bg-white"
+        >
+          VND
+        </div>
+        <div
+          class="text-center w-6/12 py-4 cursor-pointer bg-gray-100"
+        >
+          USD
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+      />
+    </div>
+  </div>
+</div>
+`;
