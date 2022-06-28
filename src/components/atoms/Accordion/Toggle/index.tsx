@@ -3,11 +3,7 @@ import Context from '../Context';
 
 type ToggleProps = {
   accordionItemId: string;
-  children:
-    | string
-    | number
-    | JSX.Element
-    | Array<string | number | JSX.Element>;
+  children: React.ReactNode;
 };
 
 const Toggle: React.FC<ToggleProps> = ({

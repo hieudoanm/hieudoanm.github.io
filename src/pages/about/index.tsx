@@ -136,6 +136,7 @@ export const query = graphql`
             title
             subtitle
             features {
+              id
               placeholder
               title
               description
@@ -151,6 +152,7 @@ export const query = graphql`
             title
             subtitle
             logos {
+              id
               href
               image
               title

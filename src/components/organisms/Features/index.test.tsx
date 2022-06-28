@@ -12,6 +12,7 @@ describe('Features', () => {
         subtitle=""
         features={[
           {
+            id: 'id',
             title: 'title',
             description: 'description',
             placeholder: '',

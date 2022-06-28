@@ -3,17 +3,13 @@ import React from 'react';
 export type CollapseProps = {
   active?: boolean;
   className?: string;
-  children:
-    | string
-    | number
-    | JSX.Element
-    | Array<string | number | JSX.Element>;
+  children: React.ReactNode;
 };
 
 const Collapse: React.FC<CollapseProps> = ({
   active,
   children,
-  className
+  className,
 }: CollapseProps) => {
   return (
     <div
@@ -30,7 +26,7 @@ const Collapse: React.FC<CollapseProps> = ({
 Collapse.displayName = 'Collapse';
 Collapse.defaultProps = {
   active: false,
-  className: ''
+  className: '',
 };
 
 export default Collapse;

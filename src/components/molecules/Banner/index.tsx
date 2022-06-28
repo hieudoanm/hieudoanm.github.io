@@ -2,11 +2,7 @@ import React from 'react';
 import Container from '../../atoms/Container';
 
 export type BannerProps = {
-  children:
-    | string
-    | number
-    | JSX.Element
-    | Array<string | number | JSX.Element>;
+  children: React.ReactNode;
 };
 
 const Banner: React.FC<BannerProps> = ({ children }) => {

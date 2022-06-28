@@ -68,6 +68,7 @@ export const query = graphql`
             title
             subtitle
             plans {
+              id
               title
               description
               price {

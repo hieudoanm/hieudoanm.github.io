@@ -1,15 +1,14 @@
 import React from 'react';
-import uuid from '../../../utils/uuid';
 import Container from '../../atoms/Container';
 import Header from '../../molecules/Header';
 
-export type Logo = { href: string; image: string; title: string };
+export type Logo = { id: string; href: string; image: string; title: string };
 
 export type LogosCloudSectionProps = {
   id: string;
   title: string;
   subtitle: string;
-  logos: Array<Logo>;
+  logos: Logo[];
 };
 
 const LogosCloudSection: React.FC<LogosCloudSectionProps> = ({
@@ -24,9 +23,9 @@ const LogosCloudSection: React.FC<LogosCloudSectionProps> = ({
         <Header subtitle={subtitle}>{title}</Header>
       </Container>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        {logos.map(({ href, image, title }) => {
+        {logos.map(({ id, href, image, title }: Logo) => {
           return (
-            <div key={uuid()}>
+            <div key={`logo-${id}`}>
               <div
                 className="w-full pb-full relative bg-cover bg-center"
                 style={{ backgroundImage: `url(${image})` }}

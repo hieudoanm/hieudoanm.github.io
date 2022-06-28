@@ -4,7 +4,17 @@ import { BrowserRouter } from 'react-router-dom';
 import AboutPage from '../../pages/about';
 
 jest.mock('gatsby', () => {
-  return { graphql: jest.fn() };
+  return {
+    graphql: jest.fn(),
+    Link: jest.fn().mockImplementation(
+      // these props are invalid for an `a` tag
+      ({ to, ...rest }: { to: string }) =>
+        React.createElement('a', {
+          ...rest,
+          href: to,
+        })
+    ),
+  };
 });
 
 describe('AboutPage', () => {

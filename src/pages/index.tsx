@@ -3,7 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FaUser } from 'react-icons/fa';
 
-const Button: React.FC<{ href: string }> = ({ href, children }) => {
+type ButtonProps = {
+  href: string;
+  children: React.ReactNode;
+};
+
+const Button: React.FC<ButtonProps> = ({ href, children }) => {
   return (
     <a href={href} target="_blank" rel="noreferrer">
       <button

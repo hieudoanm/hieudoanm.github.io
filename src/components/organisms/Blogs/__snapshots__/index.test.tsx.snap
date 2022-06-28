@@ -12,7 +12,6 @@ exports[`Blogs render default 1`] = `
       <div
         class="text-center py-16 "
       >
-        
         <h2
           class="uppercase text-4xl  mb-8"
         >
@@ -28,7 +27,7 @@ exports[`Blogs render default 1`] = `
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
       >
         <a
-          href="/url"
+          href="url"
         >
           <div
             class="rounded border shadow overflow-hidden shadow"
@@ -72,7 +71,6 @@ exports[`Blogs render without backgroundImage 1`] = `
       <div
         class="text-center py-16 "
       >
-        
         <h2
           class="uppercase text-4xl  mb-8"
         >
@@ -88,7 +86,7 @@ exports[`Blogs render without backgroundImage 1`] = `
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
       >
         <a
-          href="/url"
+          href="url"
         >
           <div
             class="rounded border shadow overflow-hidden shadow"
@@ -132,7 +130,6 @@ exports[`Blogs render without blogs 1`] = `
       <div
         class="text-center py-16 "
       >
-        
         <h2
           class="uppercase text-4xl  mb-8"
         >
@@ -164,7 +161,6 @@ exports[`Blogs render without urlToImage 1`] = `
       <div
         class="text-center py-16 "
       >
-        
         <h2
           class="uppercase text-4xl  mb-8"
         >
@@ -180,7 +176,7 @@ exports[`Blogs render without urlToImage 1`] = `
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
       >
         <a
-          href="/url"
+          href="url"
         >
           <div
             class="rounded border shadow overflow-hidden shadow"

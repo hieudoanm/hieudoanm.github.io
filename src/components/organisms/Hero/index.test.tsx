@@ -1,14 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Hero from './index';
+import HeroSection from './index';
 
 describe('Footer', () => {
   test('render default', () => {
     const wrapper = render(
-      <Hero id="" title="" subtitle="" backgroundImage="">
-        Footer
-      </Hero>
+      <HeroSection id="" title="" subtitle="" backgroundImage="" />
     );
     expect(wrapper.container).toMatchSnapshot();
   });

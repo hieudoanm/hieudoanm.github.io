@@ -6,18 +6,14 @@ import Toggle from './Toggle';
 export type AccordionProps = {
   activeAccordianId?: string;
   className?: string;
-  children:
-    | string
-    | number
-    | JSX.Element
-    | Array<string | number | JSX.Element>;
+  children: React.ReactNode;
 };
 
-const Accordion = ({
+const Accordion: React.FC<AccordionProps> = ({
   children,
   activeAccordianId,
   className = '',
-}: AccordionProps): JSX.Element => {
+}) => {
   const [isOpen, setOpen] = useState(false);
   const [activeId, setActive] = useState(activeAccordianId || '');
   const [selectedId, setSelected] = useState('');
@@ -45,7 +41,5 @@ const Accordion = ({
 
 Accordion.displayName = 'Accordion';
 Accordion.defaultProps = { activeAccordianId: '', className: '' };
-Accordion.Collapse = Collapse;
-Accordion.Toggle = Toggle;
 
-export default Accordion;
+export default Object.assign(Accordion, { Collapse, Toggle });

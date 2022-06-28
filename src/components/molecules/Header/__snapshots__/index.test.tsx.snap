@@ -5,7 +5,6 @@ exports[`Header render default 1`] = `
   <div
     class="text-center py-16 "
   >
-    
     <h2
       class="uppercase text-4xl  "
     >
@@ -13,7 +12,6 @@ exports[`Header render default 1`] = `
         Header
       </b>
     </h2>
-    
   </div>
 </div>
 `;

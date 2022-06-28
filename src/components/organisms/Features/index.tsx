@@ -1,9 +1,9 @@
 import React from 'react';
-import uuid from '../../../utils/uuid';
 import Container from '../../atoms/Container';
 import Header from '../../molecules/Header';
 
 export type Feature = {
+  id: string;
   image: string;
   placeholder: string;
   title: string;
@@ -14,7 +14,7 @@ export type FeaturesSectionProps = {
   id: string;
   title: string;
   subtitle: string;
-  features: Array<Feature>;
+  features: Feature[];
 };
 
 const FeaturesSection: React.FC<FeaturesSectionProps> = ({
@@ -28,9 +28,9 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
       <Container>
         <Header subtitle={subtitle}>{title}</Header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map(({ placeholder, title, description }: Feature) => {
+          {features.map(({ id, placeholder, title, description }: Feature) => {
             return (
-              <div key={uuid()}>
+              <div key={`feature-${id}`}>
                 <div className="w-32 h-32 mx-auto relative mb-8">
                   <div className="absolute w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-white text-4xl">
                     {placeholder}

@@ -1,9 +1,9 @@
 import React from 'react';
-import uuid from '../../../utils/uuid';
 import Container from '../../atoms/Container';
 import Header from '../../molecules/Header';
 
 export type Statistic = {
+  id: string;
   value: string;
   title: string;
   subtitle: string;
@@ -30,7 +30,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-4">
             {stats.map(
               (
-                { value, title, subtitle }: Statistic,
+                { id = '', value, title, subtitle }: Statistic,
                 index: number,
                 array: Array<Statistic>
               ) => {
@@ -39,7 +39,10 @@ const StatsSection: React.FC<StatsSectionProps> = ({
                     ? ''
                     : 'border-r-0 border-b md:border-r md:border-b-0';
                 return (
-                  <div key={uuid()} className={`${border} text-center p-8`}>
+                  <div
+                    key={`stats-${id}`}
+                    className={`${border} text-center p-8`}
+                  >
                     <div className="text-5xl">{value}</div>
                     {title && <div className="text-xl">{title}</div>}
                     {subtitle && <p className="text-gray-500">{subtitle}</p>}

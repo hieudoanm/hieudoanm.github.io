@@ -11,6 +11,7 @@ export type BadgeProps = {
     | 'bg-pink-900'
     | 'bg-gray-900';
   className: string;
+  children: React.ReactNode;
 };
 
 const Badge: React.FC<BadgeProps> = ({

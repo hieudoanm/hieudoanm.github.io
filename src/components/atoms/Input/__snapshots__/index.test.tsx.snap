@@ -2,7 +2,6 @@
 
 exports[`Input render default 1`] = `
 <div>
-  
   <input
     class=" px-3 py-2 rounded border border-solid box-border border-gray-300 "
     id="id"

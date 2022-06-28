@@ -12,7 +12,6 @@ exports[`Team render default 1`] = `
       <div
         class="text-center py-16 "
       >
-        
         <h2
           class="uppercase text-4xl  mb-8"
         >

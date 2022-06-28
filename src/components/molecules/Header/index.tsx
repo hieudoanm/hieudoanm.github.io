@@ -6,11 +6,7 @@ export type HeaderProps = {
   subtitle?: string;
   short?: string;
   className?: string;
-  children:
-    | string
-    | number
-    | JSX.Element
-    | Array<string | number | JSX.Element>;
+  children: React.ReactNode;
 };
 
 const Header: React.FC<HeaderProps> = ({
@@ -19,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({
   children = '',
   className = '',
   short = '',
-  subtitle = ''
+  subtitle = '',
 }: HeaderProps) => {
   const paddingTop: string = short === '' ? '' : 'mt-8';
   const paddingBottom: string = subtitle === '' ? '' : 'mb-8';

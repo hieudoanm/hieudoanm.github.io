@@ -20,7 +20,6 @@ exports[`NotFoundPage render default 1`] = `
       </p>
       <p>
         <a
-          aria-current="page"
           class="uppercase underline"
           href="/"
         >

@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Container: React.FC = ({ children }) => {
+export type ContainerProps = { children: React.ReactNode };
+
+export const Container: React.FC<ContainerProps> = ({ children }) => {
   return <div className="container mx-auto px-8">{children}</div>;
 };
 

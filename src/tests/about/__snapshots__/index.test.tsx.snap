@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navbar render default 1`] = `
+exports[`AboutPage render default 1`] = `
 <div>
   <nav
-    class=" bg-white w-full border-b"
+    class="fixed z-10 top-0 bg-white w-full border-b"
   >
     <div
       class="bg-gray-900 text-white py-4"
@@ -227,5 +227,361 @@ exports[`Navbar render default 1`] = `
       </div>
     </div>
   </nav>
+  <main>
+    <div
+      class="h-screen bg-cover bg-center bg-no-repeat"
+      id="id"
+      style="background-image: url();"
+    >
+      <div
+        class="h-full bg-opacity-80 bg-gray-900 text-white"
+      >
+        <div
+          class="h-full flex items-center justify-center"
+        >
+          <div
+            class="text-center py-16 "
+          >
+            <h2
+              class="uppercase text-4xl  mb-8"
+            >
+              <b>
+                title
+              </b>
+            </h2>
+            <p>
+              subtitle
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="pb-16"
+      id="id"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="text-center py-16 "
+        >
+          <h2
+            class="uppercase text-4xl  mb-8"
+          >
+            <b>
+              title
+            </b>
+          </h2>
+          <p>
+            subtitle
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        />
+      </div>
+    </div>
+    <div
+      class="pb-16"
+      id="id"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="text-center py-16 "
+        >
+          <h2
+            class="uppercase text-4xl  mb-8"
+          >
+            <b>
+              title
+            </b>
+          </h2>
+          <p>
+            subtitle
+          </p>
+        </div>
+        <div
+          class="border border-solid rounded border-gray-300"
+        >
+          <div
+            class=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="pb-16"
+      id="id"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="text-center py-16 "
+        >
+          <h2
+            class="uppercase text-4xl  mb-8"
+          >
+            <b>
+              title
+            </b>
+          </h2>
+          <p>
+            subtitle
+          </p>
+        </div>
+        <div
+          class="border rounded-lg shadow-2xl"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-4"
+          />
+        </div>
+      </div>
+    </div>
+    <section
+      class="pb-16"
+      id="id"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="text-center py-16 "
+        >
+          <h2
+            class="uppercase text-4xl  mb-8"
+          >
+            <b>
+              title
+            </b>
+          </h2>
+          <p>
+            subtitle
+          </p>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+      />
+    </section>
+    <section
+      class="pb-16"
+      id="id"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="text-center py-16 "
+        >
+          <h2
+            class="uppercase text-4xl  mb-8"
+          >
+            <b>
+              title
+            </b>
+          </h2>
+          <p>
+            subtitle
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        />
+      </div>
+    </section>
+    <div
+      class="py-16"
+    >
+      <div
+        class="bg-cover bg-center"
+        id="id"
+        style="background-image: url(backgroundImage);"
+      >
+        <div
+          class="bg-gray-900 bg-opacity-80 pb-16"
+        >
+          <div
+            class="container mx-auto px-8"
+          >
+            <div
+              class="text-center py-16 text-white"
+            >
+              <h2
+                class="uppercase text-4xl  mb-8"
+              >
+                <b>
+                  title
+                </b>
+              </h2>
+              <p>
+                subtitle
+              </p>
+            </div>
+            <a
+              href="mailto:hieumdoan@gmail.com"
+            >
+              <button
+                class="tracking-widest	rounded-md px-4 py-3 text-xl bg-white text-gray-900  block mx-auto uppercase"
+                type="submit"
+              >
+                <b>
+                  cta
+                </b>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section
+      class="pb-16"
+      id="id"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="text-center py-16 "
+        >
+          <h2
+            class="uppercase text-4xl  mb-8"
+          >
+            <b>
+              title
+            </b>
+          </h2>
+          <p>
+            subtitle
+          </p>
+        </div>
+      </div>
+    </section>
+    <div
+      class="pb-16"
+      id="blogs"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="text-center py-16 "
+        >
+          <h2
+            class="uppercase text-4xl  mb-8"
+          >
+            <b>
+              Blogs
+            </b>
+          </h2>
+          <p>
+            Keep updated with new technologies and stories from other developers.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <a
+            href="/blogs/slug"
+          >
+            <div
+              class="rounded border shadow overflow-hidden shadow"
+            >
+              <div
+                class="p-4"
+              >
+                <h2
+                  class="mb-2"
+                >
+                  <b>
+                    title
+                  </b>
+                </h2>
+                <p
+                  class="mb-2 text-justify"
+                >
+                  description
+                </p>
+                <p
+                  class="text-gray-500"
+                >
+                  date
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-gray-900"
+      id="id"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="md:flex justify-between items-center py-16 gap-8"
+        >
+          <div
+            class="text-white mb-8 md:mb-0"
+          >
+            <h2
+              class="text-xl uppercase text-2xl"
+            >
+              title
+            </h2>
+            <p
+              class="text-justify"
+            >
+              subtitle
+            </p>
+          </div>
+          <form
+            class="flex items-center gap-8"
+          >
+            <input
+              class=" px-3 py-2 rounded border border-solid box-border border-gray-300 w-full md:w-auto"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required=""
+              type="email"
+              value=""
+            />
+            <button
+              class="tracking-widest	rounded px-3 py-2 text-base bg-white black  uppercase w-full md:w-auto"
+              type="submit"
+            >
+              <b>
+                Notify
+              </b>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="border-t p-8 bg-gray-900 text-white"
+  >
+    <div
+      class="container mx-auto px-8"
+    >
+      <div
+        class="block md:flex justify-between"
+      >
+        <p>
+          © 
+          2022
+           Hieu Doan. All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
 </div>
 `;

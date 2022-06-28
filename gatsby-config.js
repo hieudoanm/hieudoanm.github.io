@@ -77,24 +77,28 @@ module.exports = {
         subtitle: 'The interests that guide my career.',
         features: [
           {
+            id: 'js',
             placeholder: 'JS',
             title: 'Node.js Developer',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend leo ut vehicula placerat. In condimentum quam non dolor semper.',
           },
           {
+            id: 'ft',
             placeholder: 'FT',
             title: 'Fintech Focus',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend leo ut vehicula placerat. In condimentum quam non dolor semper.',
           },
           {
+            id: 'ff',
             placeholder: 'FF',
             title: 'Football Fan',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend leo ut vehicula placerat. In condimentum quam non dolor semper.',
           },
           {
+            id: 'ml',
             placeholder: 'ML',
             title: 'M.L. Enthusiastist',
             description:
@@ -113,21 +117,25 @@ module.exports = {
         subtitle: 'Personal projects that suits my interests.',
         logos: [
           {
+            id: 'news',
             href: 'https://hieudoanm.github.io/hieudoan.news/',
             image: '/images/jpg/projects/mobius.jpg',
             title: 'news',
           },
           {
+            id: 'finance',
             href: 'https://github.com/hieudoanm/hieudoan.fi',
             image: '/images/jpg/projects/atomic.jpg',
             title: 'finance',
           },
           {
+            id: 'v.league',
             href: 'https://vleague.vercel.app/',
             image: '/images/jpg/projects/vleague.png',
             title: 'v.league',
           },
           {
+            id: 'hieu',
             href: 'https://github.com/hieudoanm',
             image: '/images/jpg/projects/hieu.jpg',
             title: 'HIEU',
@@ -220,6 +228,7 @@ module.exports = {
           '"If you are\'re good at something, never do it for free" - Joker -',
         plans: [
           {
+            id: 'consultant',
             title: 'Consultant',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus.',
@@ -236,6 +245,7 @@ module.exports = {
             ],
           },
           {
+            id: 'web',
             title: 'Web Development',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus.',
@@ -253,6 +263,7 @@ module.exports = {
             ],
           },
           {
+            id: 'app',
             title: 'App Development',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus.',
@@ -274,6 +285,7 @@ module.exports = {
             ],
           },
           {
+            id: 'aws',
             title: 'AWS Education',
             description: 'An AWS Certified Solutions Architect – Associate.',
             price: {

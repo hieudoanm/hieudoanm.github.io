@@ -38,7 +38,6 @@ exports[`Contact render default 1`] = `
           <div
             class="text-text-center md:text-left pb-16 "
           >
-            
             <h2
               class="uppercase text-4xl  mb-8"
             >

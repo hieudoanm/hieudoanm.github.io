@@ -4,11 +4,7 @@ import AccordionContext from '../Context';
 
 export type AccordionCollapseProps = {
   accordionItemId: string;
-  children:
-    | string
-    | number
-    | JSX.Element
-    | Array<string | number | JSX.Element>;
+  children: React.ReactNode;
 };
 
 const AccordionCollapse: React.FC<AccordionCollapseProps> = ({

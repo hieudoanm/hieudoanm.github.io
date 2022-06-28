@@ -5,7 +5,7 @@ import Footer from './index';
 
 describe('Footer', () => {
   test('render default', () => {
-    const wrapper = render(<Footer>Footer</Footer>);
+    const wrapper = render(<Footer />);
     expect(wrapper.container).toMatchSnapshot();
   });
 });

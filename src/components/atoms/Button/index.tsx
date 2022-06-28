@@ -37,11 +37,7 @@ export type ButtonProps = {
     | '7xl'
     | '8xl'
     | '9xl';
-  children:
-    | string
-    | number
-    | JSX.Element
-    | Array<string | number | JSX.Element>;
+  children: React.ReactNode;
 };
 
 const Button: React.FC<ButtonProps> = ({

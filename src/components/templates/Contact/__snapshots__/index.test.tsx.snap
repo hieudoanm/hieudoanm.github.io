@@ -81,10 +81,9 @@ exports[`Contact render default 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="uppercase inline-flex justify-center items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
-                id="headlessui-menu-button-1"
+                id="headlessui-menu-button-:r0:"
                 type="button"
               >
-                
                 <svg
                   fill="currentColor"
                   height="1em"
@@ -103,8 +102,6 @@ exports[`Contact render default 1`] = `
           </div>
         </div>
         <a
-          aria-current="page"
-          class=""
           href="/"
         >
           <div
@@ -213,7 +210,6 @@ exports[`Contact render default 1`] = `
           <div
             class="text-center py-16 "
           >
-            
             <h2
               class="uppercase text-4xl  mb-8"
             >
@@ -238,7 +234,6 @@ exports[`Contact render default 1`] = `
         <div
           class="text-center py-16 "
         >
-          
           <h2
             class="uppercase text-4xl  mb-8"
           >
@@ -305,7 +300,6 @@ exports[`Contact render default 1`] = `
             <div
               class="text-text-center md:text-left pb-16 "
             >
-              
               <h2
                 class="uppercase text-4xl  "
               >
@@ -313,7 +307,6 @@ exports[`Contact render default 1`] = `
                   title
                 </b>
               </h2>
-              
             </div>
             <form>
               <div

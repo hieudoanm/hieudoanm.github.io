@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FaCheck, FaPaypal, FaWallet } from 'react-icons/fa';
-import uuid from '../../../utils/uuid';
 import Button from '../../atoms/Button';
 import Container from '../../atoms/Container';
 import Header from '../../molecules/Header';
@@ -17,6 +16,7 @@ export type Price = {
 };
 
 export type Plan = {
+  id: string;
   title: string;
   description: string;
   price: Record<'vnd' | 'usd' | string, Price>;
@@ -81,6 +81,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map(
             ({
+              id = '',
               title = '',
               description = '',
               price = {},
@@ -88,7 +89,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
               timeUnit = '',
             }: Plan) => {
               return (
-                <div key={uuid()} className="border rounded-lg">
+                <div key={`pricing-${id}`} className="border rounded-lg">
                   <div className="p-8 border-b">
                     <h2 className="text-2xl mb-8 font-semibold">{title}</h2>
                     <p className="text-gray-500 mb-8">{description}</p>
@@ -117,10 +118,10 @@ const PricingSection: React.FC<PricingSectionProps> = ({
                     <h3 className="uppercase mb-8 font-semibold">
                       What&apos;s included
                     </h3>
-                    {features.map((feature: string) => {
+                    {features.map((feature: string, index: number) => {
                       return (
                         <p
-                          key={uuid()}
+                          key={`feature-${index}`}
                           className="text-gray-500 flex items-start"
                         >
                           <FaCheck color="#10B981" className="mr-2" />

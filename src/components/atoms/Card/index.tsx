@@ -1,11 +1,7 @@
 import React from 'react';
 
 export type CardProps = {
-  children:
-    | string
-    | number
-    | JSX.Element
-    | Array<string | number | JSX.Element>;
+  children: React.ReactNode;
 };
 
 const Card: React.FC<CardProps> = ({ children }) => {

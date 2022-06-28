@@ -16,13 +16,11 @@ exports[`Footer render default 1`] = `
         <div
           class="text-center py-16 "
         >
-          
           <h2
             class="uppercase text-4xl  "
           >
             <b />
           </h2>
-          
         </div>
       </div>
     </div>

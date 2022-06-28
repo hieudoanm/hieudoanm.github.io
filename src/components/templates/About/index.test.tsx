@@ -1,8 +1,21 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
-
 import About from './index';
+
+jest.mock('gatsby', () => {
+  return {
+    graphql: jest.fn(),
+    Link: jest.fn().mockImplementation(
+      // these props are invalid for an `a` tag
+      ({ to, ...rest }: { to: string }) =>
+        React.createElement('a', {
+          ...rest,
+          href: to,
+        })
+    ),
+  };
+});
 
 describe('About', () => {
   test('render default', () => {
