@@ -31,8 +31,8 @@
   "dependencies": {
     "@deckdeckgo/highlight-code": "4.3.0",
     "@headlessui/react": "1.6.5",
-    "@mdx-js/mdx": "1.6.22",
-    "@mdx-js/react": "1.6.22",
+    "@mdx-js/mdx": "2.1.2",
+    "@mdx-js/react": "2.1.2",
     "gatsby": "4.17.1",
     "gatsby-plugin-image": "2.17.0",
     "gatsby-plugin-mdx": "3.17.0",
