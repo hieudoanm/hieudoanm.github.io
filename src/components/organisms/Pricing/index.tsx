@@ -7,7 +7,7 @@ import Header from '../../molecules/Header';
 export type Payment = {
   href: string;
   title: string;
-  icon: any;
+  icon: React.ReactNode;
 };
 
 export type Price = {

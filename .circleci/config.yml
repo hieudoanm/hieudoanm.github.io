@@ -4,26 +4,26 @@ jobs:
   build:
     docker:
       - image: node:16
-    working_directory: ~/wallet-api
+    working_directory: ~/hieudoanm.github.io
     steps:
       - checkout
       - run:
-          name: 'Installing YARN packages'
+          name: 'Installing Dependencies'
           command: yarn install
       - run:
-          name: 'Run YARN build'
+          name: 'Build Artifact'
           command: yarn build
   test:
     docker:
       - image: node:16
-    working_directory: ~/wallet-api
+    working_directory: ~/hieudoanm.github.io
     steps:
       - checkout
       - run:
-          name: 'Installing YARN packages'
+          name: 'Installing Dependencies'
           command: yarn install
       - run:
-          name: 'Run YARN tests'
+          name: 'Unit Tests'
           command: yarn test
 
 workflows:

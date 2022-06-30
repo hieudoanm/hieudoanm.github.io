@@ -23,6 +23,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install Dependencies
         run: yarn install
+      - name: Unit Tests
+        run: yarn test
       - name: Build GitHub Pages
         run: yarn build
       - name: Deploy GitHub Pages
