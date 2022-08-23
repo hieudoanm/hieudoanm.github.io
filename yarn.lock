@@ -4610,10 +4610,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.0.tgz#67c7b724e1bcdd7a8821ce0d5ee184d3b4dd525a"
   integrity sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==
 
-"@types/node@16.11.53":
-  version "16.11.53"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.53.tgz#0826570a96f46cdba185c7129f11628bd6d3ab11"
-  integrity sha512-3yJerjVV8GlGSWCjEPal2cDymbQEE/1bhUr1NdW5apDPZo6EjBaqHxR7AC4wKmZ24Hzqcz+tgJyAGe9qcGHw7w==
+"@types/node@16.11.54":
+  version "16.11.54"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.54.tgz#1bc17ff09bf340d9350c32200adab22f22753376"
+  integrity sha512-ryOpwe15+BtTUxKFfzABjaI/EtXLPBSBEW4B6D5ygWNcORLVKG/1/FC3WwAr5d7t6lCnlVPRsCY0NH680QT+Pg==
 
 "@types/node@16.9.1":
   version "16.9.1"
