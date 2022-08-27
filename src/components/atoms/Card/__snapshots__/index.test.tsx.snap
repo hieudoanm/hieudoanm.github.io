@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card render default 1`] = `
+<div>
+  <div
+    class="p-8"
+  >
+    Card
+  </div>
+</div>
+`;
