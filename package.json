@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@deckdeckgo/highlight-code": "4.4.0",
-    "@headlessui/react": "1.7.2",
+    "@headlessui/react": "1.7.3",
     "gatsby": "4.24.0",
     "gatsby-plugin-image": "2.24.0",
     "gatsby-plugin-mdx": "4.3.0",
