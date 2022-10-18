@@ -75,12 +75,14 @@ exports[`About render default 1`] = `
         >
           <div
             class="relative inline-block text-left"
+            data-headlessui-state=""
           >
             <div>
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="uppercase inline-flex justify-center items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                data-headlessui-state=""
                 id="headlessui-menu-button-:r0:"
                 type="button"
               >

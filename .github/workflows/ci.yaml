@@ -1,4 +1,4 @@
-name: Deploy
+name: CI
 
 on:
   push:
@@ -12,17 +12,29 @@ jobs:
   github-actions:
     strategy:
       matrix:
-        node-version: [18.x, 16.x, 14.x]
-        os: [ubuntu-latest, macos-latest, windows-latest]
-    name: Node.js ${{ matrix.node-version }} ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+        node:
+          - name: Node.js 18
+            version: 18.x
+          - name: Node.js 16
+            version: 16.x
+          - name: Node.js 14
+            version: 14.x
+        os:
+          - name: Ubuntu
+            version: ubuntu-latest
+          - name: MacOS
+            version: macos-latest
+          - name: Windows
+            version: windows-latest
+    name: ${{ matrix.node.name }} ${{ matrix.os.name }}
+    runs-on: ${{ matrix.os.version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node.version }}
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
       - name: Build Production

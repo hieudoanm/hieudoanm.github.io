@@ -2,23 +2,28 @@ name: Deploy
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   github-actions:
     strategy:
       matrix:
-        node-version: [16.x]
-        os: [ubuntu-latest]
-    name: Node.js ${{ matrix.node-version }} ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+        node:
+          - name: Node.js 16
+            version: 16.x
+        os:
+          - name: Ubuntu
+            version: ubuntu-latest
+    name: ${{ matrix.node.name }} ${{ matrix.os.name }}
+    runs-on: ${{ matrix.os.version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node.version }}
       - name: Install Dependencies
         run: yarn install
       - name: Unit Tests

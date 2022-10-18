@@ -75,12 +75,14 @@ exports[`AboutPage render default 1`] = `
         >
           <div
             class="relative inline-block text-left"
+            data-headlessui-state=""
           >
             <div>
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="uppercase inline-flex justify-center items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                data-headlessui-state=""
                 id="headlessui-menu-button-:r0:"
                 type="button"
               >
@@ -195,12 +197,14 @@ exports[`AboutPage render default 1`] = `
         >
           <div
             class="relative inline-block text-left"
+            data-headlessui-state=""
           >
             <div>
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="uppercase inline-flex justify-center items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                data-headlessui-state=""
                 id="headlessui-menu-button-:r1:"
                 type="button"
               >
@@ -484,37 +488,7 @@ exports[`AboutPage render default 1`] = `
         </div>
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          <a
-            href="/blogs/slug"
-          >
-            <div
-              class="rounded border shadow overflow-hidden shadow"
-            >
-              <div
-                class="p-4"
-              >
-                <h2
-                  class="mb-2"
-                >
-                  <b>
-                    title
-                  </b>
-                </h2>
-                <p
-                  class="mb-2 text-justify"
-                >
-                  description
-                </p>
-                <p
-                  class="text-gray-500"
-                >
-                  date
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
+        />
       </div>
     </div>
     <div
