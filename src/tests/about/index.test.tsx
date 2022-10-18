@@ -83,19 +83,6 @@ describe('AboutPage', () => {
                 },
               },
             },
-            allMdx: {
-              nodes: [
-                {
-                  id: 'id',
-                  slug: 'slug',
-                  frontmatter: {
-                    title: 'title',
-                    description: 'description',
-                    date: 'date',
-                  },
-                },
-              ],
-            },
           }}
         />
       </BrowserRouter>

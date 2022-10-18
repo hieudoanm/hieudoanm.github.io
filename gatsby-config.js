@@ -310,19 +310,5 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-postcss',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'blogs',
-        path: __dirname + '/docs/',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        extensions: ['.mdx', '.md'],
-        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-highlight-code' }],
-      },
-    },
   ],
 };

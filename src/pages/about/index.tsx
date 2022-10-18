@@ -40,29 +40,10 @@ export type AboutPageProps = {
         };
       };
     };
-    allMdx: {
-      nodes: [
-        {
-          id: string;
-          slug: string;
-          frontmatter: { title: string; description: string; date: string };
-        }
-      ];
-    };
   };
 };
 
 const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
-  const blogs: BlogType[] = data.allMdx.nodes.map((node) => {
-    const {
-      id,
-      frontmatter = { title: '', description: '', date: '' },
-      slug,
-    } = node;
-    const { title, description, date } = frontmatter;
-    return { id, url: '/blogs/' + slug, title, description, date };
-  });
-
   const cta = data.site.siteMetadata.about.cta || {};
   const experiences = data.site.siteMetadata.about.experiences || {};
   const hero = data.site.siteMetadata.about.hero || {};
@@ -94,7 +75,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
           title: 'Blogs',
           subtitle:
             'Keep updated with new technologies and stories from other developers.',
-          blogs,
+          blogs: [],
         }}
         newsletter={newsletter}
       />
@@ -190,19 +171,6 @@ export const query = graphql`
             }
           }
         }
-      }
-    }
-    allMdx(sort: { fields: frontmatter___title, order: ASC }, limit: 4) {
-      nodes {
-        frontmatter {
-          title
-          date(formatString: "MMMM D, YYYY")
-          author
-          description
-        }
-        id
-        body
-        slug
       }
     }
   }
