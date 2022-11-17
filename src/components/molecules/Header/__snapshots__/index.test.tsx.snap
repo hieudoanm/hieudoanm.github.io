@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header render default 1`] = `
+<div>
+  <div
+    class="text-center py-16 "
+  >
+    <h2
+      class="uppercase text-4xl  "
+    >
+      <b>
+        Header
+      </b>
+    </h2>
+  </div>
+</div>
+`;
