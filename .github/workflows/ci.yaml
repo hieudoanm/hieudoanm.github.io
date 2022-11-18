@@ -15,18 +15,10 @@ jobs:
         node:
           - name: Node.js 18
             version: 18.x
-          - name: Node.js 16
-            version: 16.x
-          - name: Node.js 14
-            version: 14.x
         os:
           - name: Ubuntu
             version: ubuntu-latest
-          - name: MacOS
-            version: macos-latest
-          - name: Windows
-            version: windows-latest
-    name: ${{ matrix.node.name }} ${{ matrix.os.name }}
+    name: ${{ matrix.os.name }} - ${{ matrix.node.name }}
     runs-on: ${{ matrix.os.version }}
     steps:
       - name: Checkout
