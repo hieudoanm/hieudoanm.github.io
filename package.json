@@ -41,7 +41,7 @@
     "react-helmet": "6.1.0",
     "react-icons": "4.7.1",
     "react-router-dom": "6.5.0",
-    "sass": "1.57.0",
+    "sass": "1.57.1",
     "styled-components": "5.3.6"
   },
   "devDependencies": {
