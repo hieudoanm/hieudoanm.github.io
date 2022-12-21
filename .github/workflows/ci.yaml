@@ -12,18 +12,18 @@ jobs:
   github-actions:
     strategy:
       matrix:
-        node:
-          - name: Node.js 18
-            version: 18.x
         os:
           - name: Ubuntu
             version: ubuntu-latest
+        node:
+          - name: Node.js 18
+            version: 18.x
         project:
           - name: Gatsby
             working-directory: ./web/gatsby
           - name: Svelte
             working-directory: ./web/svelte
-    name: ${{ matrix.os.name }} - ${{ matrix.node.name }}
+    name: ${{ matrix.node.name }} - ${{ matrix.os.name }} - ${{ matrix.project.name }}
     runs-on: ${{ matrix.os.version }}
     steps:
       - name: Checkout

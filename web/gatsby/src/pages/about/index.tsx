@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { BlogType } from '../../components/organisms/Blogs';
 import { CTASectionProps } from '../../components/organisms/CTA';
 import { ExperiencesSectionProps } from '../../components/organisms/Experiences';
 import { FeaturesSectionProps } from '../../components/organisms/Features';

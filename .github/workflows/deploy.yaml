@@ -9,13 +9,16 @@ jobs:
   github-actions:
     strategy:
       matrix:
-        node:
-          - name: Node.js 18
-            version: 18.x
         os:
           - name: Ubuntu
             version: ubuntu-latest
-    name: ${{ matrix.node.name }} ${{ matrix.os.name }}
+        node:
+          - name: Node.js 18
+            version: 18.x
+        project:
+          - name: Gatsby
+            working-directory: ./web/gatsby
+    name: ${{ matrix.node.name }} - ${{ matrix.os.name }} - ${{ matrix.project.name }}
     runs-on: ${{ matrix.os.version }}
     steps:
       - name: Checkout
@@ -25,11 +28,14 @@ jobs:
         with:
           node-version: ${{ matrix.node.version }}
       - name: Install Dependencies
-        run: yarn install
-      - name: Unit Tests
-        run: yarn test
+        run: yarn install --network-timeout 86400000
+        working-directory: ${{ matrix.project.working-directory }}
       - name: Build GitHub Pages
         run: yarn build
+        working-directory: ${{ matrix.project.working-directory }}
+      - name: Unit Tests
+        run: yarn test
+        working-directory: ${{ matrix.project.working-directory }}
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
