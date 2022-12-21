@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - master
-      - 'hotfix/**'
-      - 'feature/**'
-      - 'renovate/**'
+      - hotfix/**
+      - feature/**
+      - renovate/**
 
 jobs:
   github-actions:
@@ -18,6 +18,11 @@ jobs:
         os:
           - name: Ubuntu
             version: ubuntu-latest
+        project:
+          - name: Gatsby
+            working-directory: ./web/gatsby
+          - name: Svelte
+            working-directory: ./web/svelte
     name: ${{ matrix.os.name }} - ${{ matrix.node.name }}
     runs-on: ${{ matrix.os.version }}
     steps:
@@ -29,7 +34,10 @@ jobs:
           node-version: ${{ matrix.node.version }}
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
+        working-directory: ${{ matrix.project.working-directory }}
       - name: Build Production
         run: yarn build
+        working-directory: ${{ matrix.project.working-directory }}
       - name: Unit Test
         run: yarn test
+        working-directory: ${{ matrix.project.working-directory }}
