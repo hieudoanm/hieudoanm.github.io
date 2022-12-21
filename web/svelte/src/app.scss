@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-hero {
+	background-image: 'url(/images/jpg/background/hero.jpg)';
+}
+
+.pb-full {
+	padding-bottom: 100%;
+}
