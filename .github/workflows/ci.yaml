@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - master
+      - develop
       - hotfix/**
       - feature/**
       - renovate/**
+    paths:
+      - .github/workflows/ci.yaml
+      - web/**
 
 jobs:
   github-actions:
