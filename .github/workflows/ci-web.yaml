@@ -9,7 +9,7 @@ on:
       - feature/**
       - renovate/**
     paths:
-      - .github/workflows/ci.yaml
+      - .github/workflows/ci-web.yaml
       - web/**
 
 jobs:
