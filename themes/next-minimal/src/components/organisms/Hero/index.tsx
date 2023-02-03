@@ -1,11 +1,10 @@
-import { GitHub, LinkedIn, Twitter } from '@mui/icons-material';
+import Container from '@mui/material/Container';
 import Link from 'next/link';
 import React from 'react';
 import deved from '../../../assets/images/dev-ed-wave.png';
 import content from '../../../content';
 import Description from '../../atoms/Description';
 import Heading from '../../atoms/Heading';
-import Container from '@mui/material/Container';
 
 export const Hero: React.FC = () => {
   return (

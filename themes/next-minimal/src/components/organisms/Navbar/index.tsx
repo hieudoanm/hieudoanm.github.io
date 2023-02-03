@@ -1,9 +1,8 @@
 import { DarkMode, LightMode } from '@mui/icons-material';
+import { Container } from '@mui/material';
 import React from 'react';
 import content from '../../../content';
 import { useTheme } from '../../../context/ThemeProvider';
-import Link from 'next/link';
-import { Container } from '@mui/material';
 
 export const Navbar: React.FC = () => {
   const { darkMode, setDarkMode } = useTheme();

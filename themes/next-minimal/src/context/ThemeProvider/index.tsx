@@ -17,6 +17,9 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   );
 };
 
-export const useTheme = () => {
+export const useTheme = (): {
+  darkMode: boolean;
+  setDarkMode: (darkMode: boolean) => void;
+} => {
   return useContext(ThemeContext);
 };
