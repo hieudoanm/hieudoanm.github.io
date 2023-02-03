@@ -1,7 +1,7 @@
 {
-  "name": "next-astronout",
+  "name": "next-profile-astronout",
   "version": "0.0.1",
-  "description": "Next.js Astronout",
+  "description": "Next.js Profile Astronout",
   "main": "index.js",
   "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
   "author": "hieudoanm <hieumdoan@gmail.com>",
