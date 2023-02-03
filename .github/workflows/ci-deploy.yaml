@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+    paths:
+      - .github/workflows/ci-deploy.yaml
+      - web/gatsby
 
 jobs:
   github-actions:
