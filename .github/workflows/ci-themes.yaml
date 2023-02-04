@@ -24,6 +24,8 @@ jobs:
           - name: Node.js 18
             version: 18.x
         project:
+          - name: Next.js App Hero
+            working-directory: ./themes/next-app-hero
           - name: Next.js Profile Astronout
             working-directory: ./themes/next-profile-astronout
           - name: Next.js Profile Card
