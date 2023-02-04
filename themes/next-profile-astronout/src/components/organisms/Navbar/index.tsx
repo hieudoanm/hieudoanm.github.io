@@ -11,9 +11,11 @@ export const Navbar: React.FC = () => {
       if (!document || !document.body || !document.documentElement) {
         return;
       }
-      setTop(
-        document.body.scrollTop || document.documentElement.scrollTop || 0
-      );
+
+      const top: number =
+        document.body.scrollTop || document.documentElement.scrollTop || 0;
+
+      setTop(top);
     };
   }
 

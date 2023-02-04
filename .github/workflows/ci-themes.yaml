@@ -26,6 +26,8 @@ jobs:
         project:
           - name: Next.js App Hero
             working-directory: ./themes/next-app-hero
+          - name: Next.js App Landing
+            working-directory: ./themes/next-app-landing
           - name: Next.js Profile Astronout
             working-directory: ./themes/next-profile-astronout
           - name: Next.js Profile Card
