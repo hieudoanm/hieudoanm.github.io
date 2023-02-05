@@ -24,15 +24,17 @@ jobs:
           - name: Node.js 18
             version: 18.x
         project:
-          - name: Next.js App Hero
+          - name: Next.js - App - Hero
             working-directory: ./themes/next-app-hero
-          - name: Next.js App Landing
+          - name: Next.js - App - Landing
             working-directory: ./themes/next-app-landing
-          - name: Next.js Profile Astronout
+          - name: Next.js - App - Minimal
+            working-directory: ./themes/next-app-minimal
+          - name: Next.js - Profile - Astronout
             working-directory: ./themes/next-profile-astronout
-          - name: Next.js Profile Card
+          - name: Next.js - Profile - Card
             working-directory: ./themes/next-profile-card
-          - name: Next.js Profile Minimal
+          - name: Next.js - Profile - Minimal
             working-directory: ./themes/next-profile-minimal
     name: ${{ matrix.node.name }} - ${{ matrix.os.name }} - ${{ matrix.project.name }}
     runs-on: ${{ matrix.os.version }}
