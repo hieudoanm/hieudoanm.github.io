@@ -1,12 +1,17 @@
 {
-  "name": "next-app-hero",
+  "name": "next-app-minimal",
   "version": "0.0.1",
-  "description": "Next.js App - Hero",
+  "description": "Next.js App Minimal",
   "main": "index.js",
   "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
   "author": "hieudoanm <hieumdoan@gmail.com>",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": ">= 16",
+    "npm": ">= 8",
+    "yarn": ">= 1"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,6 +22,7 @@
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
+    "@fontsource/roboto": "4.5.8",
     "@mui/icons-material": "5.11.0",
     "@mui/material": "5.11.7",
     "@next/font": "13.1.6",
