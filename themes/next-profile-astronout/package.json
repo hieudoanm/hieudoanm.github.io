@@ -37,7 +37,7 @@
     "@types/react-dom": "18.0.10",
     "@types/react-scroll": "1.8.6",
     "autoprefixer": "10.4.13",
-    "eslint": "8.33.0",
+    "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "kill-port": "2.0.1",
     "postcss": "8.4.21",
