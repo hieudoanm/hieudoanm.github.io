@@ -24,9 +24,6 @@ jobs:
           - name: Gatsby
             image-name: gatsby
             working-directory: ./web/gatsby
-          - name: Svelte
-            image-name: svelte
-            working-directory: ./web/svelte
     name: ${{ matrix.node.name }} - ${{ matrix.os.name }} - ${{ matrix.project.name }}
     runs-on: ${{ matrix.os.version }}
     steps:
