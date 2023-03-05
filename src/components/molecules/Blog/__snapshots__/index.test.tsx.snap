@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog render default 1`] = `
+<div>
+  <a
+    href=""
+  >
+    <div
+      class="rounded border shadow overflow-hidden shadow"
+    >
+      <div
+        class="p-4"
+      >
+        <h2
+          class="mb-2"
+        >
+          <b />
+        </h2>
+        <p
+          class="mb-2 text-justify"
+        />
+        <p
+          class="text-gray-500"
+        />
+      </div>
+    </div>
+  </a>
+</div>
+`;
