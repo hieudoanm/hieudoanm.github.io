@@ -27,5 +27,5 @@ jobs:
         with:
           token: ${{ secrets.GH_PAGES }}
           branch: gh-pages
-          folder: web/gatsby/public
+          folder: public
           clean: true
