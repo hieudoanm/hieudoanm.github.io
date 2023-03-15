@@ -1,7 +1,7 @@
 .cache
 coverage
 node_modules
-web/**/public
+public
 
 .env
 yarn-error.log
