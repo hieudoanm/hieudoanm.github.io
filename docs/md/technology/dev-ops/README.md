@@ -1,4 +1,0 @@
-# DevOps
-
-- AWS
-- Docker
