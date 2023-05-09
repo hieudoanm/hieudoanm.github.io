@@ -27,7 +27,7 @@
   "dependencies": {
     "@deckdeckgo/highlight-code": "4.4.0",
     "@headlessui/react": "1.7.14",
-    "gatsby": "5.9.0",
+    "gatsby": "5.9.1",
     "gatsby-plugin-image": "3.9.0",
     "gatsby-plugin-mdx": "5.9.0",
     "gatsby-plugin-sass": "6.9.0",
