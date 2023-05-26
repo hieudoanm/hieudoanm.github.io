@@ -23,7 +23,7 @@ jobs:
       - name: Unit Tests
         run: yarn test
       - name: Deploy GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
         with:
           token: ${{ secrets.GHP_TOKEN }}
           branch: gh-pages
