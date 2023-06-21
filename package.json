@@ -39,7 +39,7 @@
     "react-helmet": "6.1.0",
     "react-icons": "4.9.0",
     "react-router-dom": "6.13.0",
-    "sass": "1.63.4",
+    "sass": "1.63.5",
     "styled-components": "6.0.0-rc.2-4007"
   },
   "devDependencies": {
