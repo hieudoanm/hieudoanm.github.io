@@ -8,7 +8,7 @@
   "license": "GNU GPL V3.0",
   "private": true,
   "engines": {
-    "node": "20.1.0",
+    "node": "20.3.1",
     "npm": "9..6.6",
     "yarn": "1.22.19"
   },
@@ -55,7 +55,7 @@
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.2",
     "@types/jest-axe": "3.5.5",
-    "@types/node": "20.1.2",
+    "@types/node": "20.3.1",
     "@types/react-helmet": "6.1.6",
     "@types/styled-components": "5.1.26",
     "@types/uuid": "9.0.2",
