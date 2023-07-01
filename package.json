@@ -7,11 +7,6 @@
   "author": "hieudoanm <hieumdoan@gmail.com>",
   "license": "GNU GPL V3.0",
   "private": true,
-  "engines": {
-    "node": "20.3.1",
-    "npm": "9..6.6",
-    "yarn": "1.22.19"
-  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
