@@ -16,7 +16,7 @@
     "test": "jest",
     "start:sb": "start-storybook -p 6006",
     "build:sb": "build-storybook",
-    "lint": "eslint . --fix --ext .ts,.tsx",
+    "lint": "eslint . --ext .ts,.tsx",
     "prebuild": "rimraf .cache public",
     "prepare": "husky install || true"
   },
