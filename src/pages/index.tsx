@@ -1,17 +1,42 @@
-import { Button } from '@chakra-ui/react';
+import { Box, Button, Icon } from '@chakra-ui/react';
 import { Link, graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { FaUser } from 'react-icons/fa';
+import {
+  FaComment,
+  FaEnvelope,
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaTelegram,
+  FaUser,
+} from 'react-icons/fa';
 
 export type HomePageProperties = {
   data: {
     site: {
       siteMetadata: {
-        profiles: { href: string; title: string }[];
+        profiles: {
+          auth: boolean;
+          icon: string;
+          href: string;
+          title: string;
+        }[];
       };
     };
   };
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const icons: Record<string, any> = {
+  email: FaEnvelope,
+  linkedin: FaLinkedin,
+  github: FaGithubSquare,
+  instagram: FaInstagram,
+  zalo: FaComment,
+  telegram: FaTelegram,
+  facebook: FaFacebookSquare,
 };
 
 const HomePage: React.FC<HomePageProperties> = ({ data }) => {
@@ -28,45 +53,61 @@ const HomePage: React.FC<HomePageProperties> = ({ data }) => {
         style={{ backgroundImage: 'url(/images/jpg/background/hero.jpg)' }}
       >
         <div className="h-screen bg-black/75 overflow-auto">
-          <div className="container mx-auto py-16">
-            <div className="max-w-fit mx-auto">
-              <div className="flex flex-col items-center justify-center gap-8">
-                <div className="w-full">
-                  <div
-                    className="relative w-full rounded-full bg-white"
-                    style={{ paddingBottom: '100%' }}
-                  >
-                    <div className="absolute w-full h-full top-0 left-0">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <FaUser className="text-black text-8xl" />
+          <div className="container mx-auto py-16 h-full">
+            <div className="flex justify-center items-center h-full">
+              <div className="max-w-fit mx-auto">
+                <div className="flex flex-col items-center justify-center gap-y-8">
+                  <div className="w-full">
+                    <div
+                      className="relative w-full rounded-full bg-white"
+                      style={{ paddingBottom: '100%' }}
+                    >
+                      <div className="absolute w-full h-full top-0 left-0">
+                        <div className="w-full h-full flex items-center justify-center">
+                          <FaUser className="text-black text-8xl" />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div>
-                  <h1 className="text-4xl uppercase text-white">HIEU DOAN</h1>
-                </div>
-                <div className="w-full">
-                  <Link to="/about">
-                    <Button type="button" className="w-full">
-                      About
-                    </Button>
-                  </Link>
-                </div>
-                {profiles.map(({ href, title }) => {
-                  return (
-                    <div
-                      key={`profile-${title.toLowerCase()}`}
-                      className="w-full"
-                    >
-                      <a href={href} target="_blank" rel="noreferrer">
+                  <div>
+                    <h1 className="text-4xl uppercase text-white">HIEU DOAN</h1>
+                  </div>
+                  <div className="w-full">
+                    <Link to="/about">
+                      <div className="flex items-center gap-x-4">
+                        <Box className="p-3 aspect-square flex items-center bg-white rounded-lg">
+                          <Icon as={FaUser} />
+                        </Box>
                         <Button type="button" className="w-full">
-                          {title}
+                          About
                         </Button>
-                      </a>
-                    </div>
-                  );
-                })}
+                      </div>
+                    </Link>
+                  </div>
+                  {profiles.map(({ auth, icon, href, title }) => {
+                    if (auth) {
+                      return <></>;
+                    }
+
+                    return (
+                      <div
+                        key={`profile-${title.toLowerCase()}`}
+                        className="w-full"
+                      >
+                        <a href={href} target="_blank" rel="noreferrer">
+                          <div className="flex items-center gap-x-4">
+                            <Box className="p-3 aspect-square flex items-center bg-white rounded-lg">
+                              <Icon as={icons[`${icon}`]} />
+                            </Box>
+                            <Button type="button" className="w-full">
+                              <span>{title}</span>
+                            </Button>
+                          </div>
+                        </a>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
@@ -81,6 +122,8 @@ export const query = graphql`
     site {
       siteMetadata {
         profiles {
+          auth
+          icon
           href
           title
         }

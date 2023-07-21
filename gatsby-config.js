@@ -3,22 +3,54 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://hieudoanm.github.io/',
     title: 'HIEU DOAN (hieudoanm)',
-    description: 'Full-stack Node.js Developer',
+    description: 'Full-stack Software Developer',
     profiles: [
-      { href: 'mailto:hieumdoan@gmail.com', title: 'Email' },
-      { href: 'https://www.linkedin.com/in/hieudoanm', title: 'LinkedIn' },
-      { href: 'https://github.com/hieudoanm', title: 'GitHub' },
       {
+        auth: true,
+        icon: 'email',
+        href: 'mailto:hieumdoan@gmail.com',
+        title: 'Email',
+      },
+      {
+        auth: true,
+        icon: 'linkedin',
+        href: 'https://www.linkedin.com/in/hieudoanm',
+        title: 'LinkedIn',
+      },
+      {
+        auth: true,
+        icon: 'github',
+        href: 'https://github.com/hieudoanm',
+        title: 'GitHub',
+      },
+      {
+        auth: true,
+        icon: 'zalo',
+        href: 'https://zalo.me/hieudoanm',
+        title: 'Zalo',
+      },
+      {
+        auth: true,
+        icon: 'telegram',
+        href: 'https://t.me/hieudoanm',
+        title: 'Telegram',
+      },
+      {
+        auth: true,
+        icon: 'facebook',
+        href: 'https://www.facebook.com/hieudoanm',
+        title: 'Facebook',
+      },
+      {
+        auth: true,
+        icon: 'instagram',
         href: 'https://www.instagram.com/hieudoan.com.vn/',
         title: 'Instagram',
       },
-      { href: 'https://zalo.me/hieudoanm', title: 'Zalo' },
-      { href: 'https://t.me/hieudoanm', title: 'Telegram' },
-      { href: 'https://www.facebook.com/hieudoanm', title: 'Facebook' },
     ],
     author: {
       name: 'HIEU DOAN',
-      summary: 'Full-stack Node.js Developer',
+      summary: 'Full-stack Software Developer',
     },
     about: {
       cta: {
@@ -69,7 +101,7 @@ module.exports = {
       hero: {
         id: 'hero',
         title: 'HIEU DOAN',
-        subtitle: 'Full-stack Node.js Developer',
+        subtitle: 'Full-stack Software Developer',
         backgroundImage: '/images/jpg/background/hero.jpg',
       },
       interests: {
