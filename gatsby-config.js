@@ -1,3 +1,4 @@
+// eslint-disable-next-line unicorn/no-empty-file, unicorn/prefer-module, import/no-commonjs
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://hieudoanm.github.io/',
@@ -306,6 +307,7 @@ module.exports = {
     },
   },
   plugins: [
+    { resolve: '@chakra-ui/gatsby-plugin' },
     'gatsby-plugin-image',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',

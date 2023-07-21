@@ -1,17 +1,17 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { CTASectionProps } from '../../components/organisms/CTA';
-import { ExperiencesSectionProps } from '../../components/organisms/Experiences';
-import { FeaturesSectionProps } from '../../components/organisms/Features';
-import { HeroSectionProps } from '../../components/organisms/Hero';
-import { LogosCloudSectionProps } from '../../components/organisms/LogoClouds';
+import { CTASectionProperties } from '../../components/organisms/CTA';
+import { ExperiencesSectionProperties } from '../../components/organisms/Experiences';
+import { FeaturesSectionProperties } from '../../components/organisms/Features';
+import { HeroSectionProperties } from '../../components/organisms/Hero';
+import { LogosCloudSectionProperties } from '../../components/organisms/LogoClouds';
 import { Section } from '../../components/organisms/Navbar';
-import { NewsletterSectionProps } from '../../components/organisms/Newsletter';
-import { StatsSectionProps } from '../../components/organisms/Stats';
-import { TeamSectionProps } from '../../components/organisms/Team';
-import { TestimonialsSectionProps } from '../../components/organisms/Testimonials';
-import AboutTemplate from '../../components/templates/About';
+import { NewsletterSectionProperties } from '../../components/organisms/Newsletter';
+import { StatsSectionProperties } from '../../components/organisms/Stats';
+import { TeamSectionProperties } from '../../components/organisms/Team';
+import { TestimonialsSectionProperties } from '../../components/organisms/Testimonials';
+import AboutTemplate from '../../templates/About';
 
 const sections: Section[] = [
   { id: 'interests' },
@@ -22,27 +22,27 @@ const sections: Section[] = [
   { id: 'blogs' },
 ];
 
-export type AboutPageProps = {
+export type AboutPageProperties = {
   data: {
     site: {
       siteMetadata: {
         about: {
-          cta: CTASectionProps;
-          experiences: ExperiencesSectionProps;
-          hero: HeroSectionProps;
-          interests: FeaturesSectionProps;
-          newsletter: NewsletterSectionProps;
-          projects: LogosCloudSectionProps;
-          stats: StatsSectionProps;
-          techstack: TeamSectionProps;
-          testimonials: TestimonialsSectionProps;
+          cta: CTASectionProperties;
+          experiences: ExperiencesSectionProperties;
+          hero: HeroSectionProperties;
+          interests: FeaturesSectionProperties;
+          newsletter: NewsletterSectionProperties;
+          projects: LogosCloudSectionProperties;
+          stats: StatsSectionProperties;
+          techstack: TeamSectionProperties;
+          testimonials: TestimonialsSectionProperties;
         };
       };
     };
   };
 };
 
-const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
+const AboutPage: React.FC<AboutPageProperties> = ({ data }) => {
   const cta = data.site.siteMetadata.about.cta || {};
   const experiences = data.site.siteMetadata.about.experiences || {};
   const hero = data.site.siteMetadata.about.hero || {};

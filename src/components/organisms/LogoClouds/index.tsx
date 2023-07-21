@@ -4,23 +4,23 @@ import Header from '../../molecules/Header';
 
 export type Logo = { id: string; href: string; image: string; title: string };
 
-export type LogosCloudSectionProps = {
+export type LogosCloudSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
   logos: Logo[];
 };
 
-const LogosCloudSection: React.FC<LogosCloudSectionProps> = ({
-  id = '',
-  title = '',
+const LogosCloudSection: React.FC<LogosCloudSectionProperties> = ({
+  id: sectionId = '',
+  title: sectionTitlte = '',
   subtitle = '',
   logos = [],
 }) => {
   return (
-    <section id={id} className="pb-16">
+    <section id={sectionId} className="pb-16">
       <Container>
-        <Header subtitle={subtitle}>{title}</Header>
+        <Header subtitle={subtitle}>{sectionTitlte}</Header>
       </Container>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {logos.map(({ id, href, image, title }: Logo) => {

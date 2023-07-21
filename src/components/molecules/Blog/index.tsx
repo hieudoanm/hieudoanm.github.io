@@ -1,14 +1,14 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-export type BlogProps = {
+export type BlogProperties = {
   url: string;
   title: string;
   description: string;
   date: string;
 };
 
-const Blog: React.FC<BlogProps> = ({ url, title, description, date }) => {
+const Blog: React.FC<BlogProperties> = ({ url, title, description, date }) => {
   return (
     <Link to={url}>
       <div className="rounded border shadow overflow-hidden shadow">

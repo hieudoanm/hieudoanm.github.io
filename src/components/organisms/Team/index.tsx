@@ -11,23 +11,23 @@ export type Person = {
   homepage?: string;
 };
 
-export type TeamSectionProps = {
+export type TeamSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
   team: Array<Person>;
 };
 
-const TeamSection: React.FC<TeamSectionProps> = ({
-  id = '',
-  title = '',
+const TeamSection: React.FC<TeamSectionProperties> = ({
+  id: sectionId = '',
+  title: sectionTitle = '',
   subtitle = '',
   team = [],
 }) => {
   return (
-    <section id={id} className="pb-16">
+    <section id={sectionId} className="pb-16">
       <Container>
-        <Header subtitle={subtitle}>{title}</Header>
+        <Header subtitle={subtitle}>{sectionTitle}</Header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map(({ id, image, title, position, homepage = '' }: Person) => {
             return (

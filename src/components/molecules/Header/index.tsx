@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type HeaderProps = {
+export type HeaderProperties = {
   align?: string | 'center' | 'left' | 'right';
   padding?: string;
   subtitle?: string;
@@ -9,14 +9,14 @@ export type HeaderProps = {
   children: React.ReactNode;
 };
 
-const Header: React.FC<HeaderProps> = ({
+const Header: React.FC<HeaderProperties> = ({
   align = 'center',
   padding = 'py-16',
   children = '',
   className = '',
   short = '',
   subtitle = '',
-}: HeaderProps) => {
+}) => {
   const paddingTop: string = short === '' ? '' : 'mt-8';
   const paddingBottom: string = subtitle === '' ? '' : 'mb-8';
   return (

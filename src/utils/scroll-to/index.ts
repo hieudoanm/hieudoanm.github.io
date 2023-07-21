@@ -1,9 +1,10 @@
 export const scrollTo = (id: string): void => {
-  const top: number = document.getElementById(id)?.offsetTop || 0;
-  if (window) {
-    window.scrollTo({ top: top - 120, behavior: 'smooth' });
-  }
-  return;
+  const element: HTMLElement | null = document.querySelector<HTMLElement>(
+    `#${id}`
+  );
+  if (!element) return;
+  const top: number = element.offsetHeight || 0;
+  window.scrollTo({ top: top - 120, behavior: 'smooth' });
 };
 
 export default scrollTo;

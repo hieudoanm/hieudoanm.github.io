@@ -8,14 +8,14 @@ export type Testimonial = {
   position: string;
 };
 
-export type TestimonialsSectionProps = {
+export type TestimonialsSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
   testimonials: Testimonial[];
 };
 
-const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
+const TestimonialsSection: React.FC<TestimonialsSectionProperties> = ({
   id,
   title,
   subtitle,

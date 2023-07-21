@@ -1,8 +1,15 @@
 import React from 'react';
-import Accordion from '../../atoms/Accordion';
-import Badge from '../../atoms/Badge';
 import Container from '../../atoms/Container';
 import Header from '../../molecules/Header';
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Badge,
+  Box,
+} from '@chakra-ui/react';
 
 export type Experience = {
   company: string;
@@ -11,24 +18,24 @@ export type Experience = {
   title: string;
 };
 
-export type ExperiencesSectionProps = {
+export type ExperiencesSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
   experiences: Experience[];
 };
 
-const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
+const ExperiencesSection: React.FC<ExperiencesSectionProperties> = ({
   id,
-  title,
+  title: sectionTitle,
   subtitle,
   experiences,
 }) => {
   return (
     <div id={id} className="pb-16">
       <Container>
-        <Header subtitle={subtitle}>{title}</Header>
-        <Accordion>
+        <Header subtitle={subtitle}>{sectionTitle}</Header>
+        <Accordion allowToggle>
           <>
             {experiences.map(
               (
@@ -38,26 +45,22 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({
                   city = '',
                   title = '',
                 }: Experience,
-                index: number,
-                array: Experience[]
+                index: number
               ) => {
-                const border: string =
-                  index === array.length - 1 ? '' : 'border-b';
                 return (
-                  <div key={`experience-${index}`} className={border}>
-                    <Accordion.Toggle accordionItemId={index.toString()}>
-                      {company}{' '}
-                      <Badge bgColor={'bg-gray-900'} className={'mr-2'}>
-                        {period}
-                      </Badge>
-                      <Badge bgColor={'bg-gray-900'} className={''}>
-                        {city}
-                      </Badge>
-                    </Accordion.Toggle>
-                    <Accordion.Collapse accordionItemId={index.toString()}>
-                      {title}
-                    </Accordion.Collapse>
-                  </div>
+                  <AccordionItem key={`experience-${index}`}>
+                    <AccordionButton>
+                      <Box flex={1}>
+                        <div className="flex items-center gap-x-2">
+                          <span>{company}</span>
+                          <Badge colorScheme="teal">{period}</Badge>
+                          <Badge colorScheme="teal">{city}</Badge>
+                        </div>
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                    <AccordionPanel>{title}</AccordionPanel>
+                  </AccordionItem>
                 );
               }
             )}

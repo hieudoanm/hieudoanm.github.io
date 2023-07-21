@@ -1,25 +1,28 @@
-import { Link, navigate } from 'gatsby';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
+import { Link } from 'gatsby';
 import React from 'react';
 import {
   FaBlog,
   FaBullhorn,
   FaEnvelope,
-  FaBars,
   FaTimes,
   FaUser,
 } from 'react-icons/fa';
 import scrollTo from '../../../utils/scroll-to';
 import Container from '../../atoms/Container';
 import Banner from '../../molecules/Banner';
-import Dropdown from '../../molecules/Dropdown';
 
 export type Section = {
   id: string;
 };
 
-export type NavbarProps = { fixed?: boolean; sections?: Section[] };
+export type NavbarProperties = { fixed?: boolean; sections?: Section[] };
 
-const Navbar: React.FC<NavbarProps> = ({ fixed = false, sections = [] }) => {
+const Navbar: React.FC<NavbarProperties> = ({
+  fixed = false,
+  sections = [],
+}) => {
   const fixedTop: string = fixed ? 'fixed z-10 top-0' : '';
 
   const options = sections.map(({ id }) => {
@@ -52,32 +55,6 @@ const Navbar: React.FC<NavbarProps> = ({ fixed = false, sections = [] }) => {
       </Banner>
       <Container>
         <div className="flex items-center py-4">
-          <div className="block md:hidden mr-8">
-            <Dropdown
-              align="left"
-              icon={<FaBars />}
-              options={[
-                {
-                  onClick: () => {
-                    navigate('/about');
-                  },
-                  text: 'About',
-                },
-                {
-                  onClick: () => {
-                    navigate('/blogs');
-                  },
-                  text: 'Blogs',
-                },
-                {
-                  onClick: () => {
-                    navigate('/contact');
-                  },
-                  text: 'Contact',
-                },
-              ]}
-            />
-          </div>
           <Link to="/">
             <div className="text-2xl cursor-pointer uppercase">Hieu Doan</div>
           </Link>
@@ -105,7 +82,28 @@ const Navbar: React.FC<NavbarProps> = ({ fixed = false, sections = [] }) => {
           </div>
           {options.length > 0 && (
             <div className="ml-auto">
-              <Dropdown options={options} label={'Options'} />
+              <Menu colorScheme="teal">
+                <MenuButton
+                  as={Button}
+                  colorScheme="teal"
+                  rightIcon={<ChevronDownIcon />}
+                >
+                  Actions
+                </MenuButton>
+                <MenuList>
+                  {options.map(({ text, onClick }) => {
+                    return (
+                      <MenuItem
+                        key={text}
+                        onClick={onClick}
+                        className="capitalize"
+                      >
+                        {text}
+                      </MenuItem>
+                    );
+                  })}
+                </MenuList>
+              </Menu>
             </div>
           )}
         </div>

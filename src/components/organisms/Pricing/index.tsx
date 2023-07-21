@@ -1,6 +1,6 @@
+import { Button } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { FaCheck, FaPaypal, FaWallet } from 'react-icons/fa';
-import Button from '../../atoms/Button';
 import Container from '../../atoms/Container';
 import Header from '../../molecules/Header';
 
@@ -24,16 +24,16 @@ export type Plan = {
   timeUnit: string;
 };
 
-export type PricingSectionProps = {
+export type PricingSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
   plans: Array<Plan>;
 };
 
-const PricingSection: React.FC<PricingSectionProps> = ({
-  id = '',
-  title = '',
+const PricingSection: React.FC<PricingSectionProperties> = ({
+  id: sectionId = '',
+  title: sectionTitle = '',
   subtitle = '',
   plans = [],
 }) => {
@@ -53,9 +53,9 @@ const PricingSection: React.FC<PricingSectionProps> = ({
   };
 
   return (
-    <div id={id} className="pb-16">
+    <div id={sectionId} className="pb-16">
       <Container>
-        <Header subtitle={subtitle}>{title}</Header>
+        <Header subtitle={subtitle}>{sectionTitle}</Header>
         <div className="w-full md:w-6/12 mx-auto flex items-center mb-8 border rounded-lg overflow-hidden">
           <div
             className={`text-center w-6/12 py-4 cursor-pointer ${
@@ -95,21 +95,21 @@ const PricingSection: React.FC<PricingSectionProps> = ({
                     <p className="text-gray-500 mb-8">{description}</p>
                     <p className="mb-8">
                       <span className="text-3xl mr-2 font-semibold">
-                        {price[currency].value}
+                        {price[`${currency}`].value}
                       </span>
                       <sup className="text-lg text-gray-500">
-                        {price[currency].unit}/{timeUnit}
+                        {price[`${currency}`].unit}/{timeUnit}
                       </sup>
                     </p>
                     <a
-                      href={links[currency].href}
+                      href={links[`${currency}`].href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <Button full className="uppercase">
+                      <Button className="uppercase w-full">
                         <div className="flex items-center justify-center gap-4">
-                          {links[currency].icon}
-                          <span>{links[currency].title}</span>
+                          {links[`${currency}`].icon}
+                          <span>{links[`${currency}`].title}</span>
                         </div>
                       </Button>
                     </a>

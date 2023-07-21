@@ -1,16 +1,19 @@
 import React from 'react';
 
-export type GoogleMapsProps = {
-  src: string;
+export type GoogleMapsProperties = {
+  source: string;
   title: string;
 };
 
-const GoogleMaps: React.FC<GoogleMapsProps> = ({ src = '', title = '' }) => {
+const GoogleMaps: React.FC<GoogleMapsProperties> = ({
+  source = '',
+  title = '',
+}) => {
   return (
     <div className="w-full relative" style={{ paddingBottom: '100%' }}>
       <div className="absolute w-full h-full">
         <iframe
-          src={src}
+          src={source}
           title={title}
           className="border-none w-full h-full"
           allowFullScreen={true}

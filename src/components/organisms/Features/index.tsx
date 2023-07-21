@@ -10,23 +10,23 @@ export type Feature = {
   description: string;
 };
 
-export type FeaturesSectionProps = {
+export type FeaturesSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
   features: Feature[];
 };
 
-const FeaturesSection: React.FC<FeaturesSectionProps> = ({
-  id,
-  title,
+const FeaturesSection: React.FC<FeaturesSectionProperties> = ({
+  id: sectionId,
+  title: sectionTitle,
   subtitle,
   features,
 }) => {
   return (
-    <div id={id} className="pb-16">
+    <div id={sectionId} className="pb-16">
       <Container>
-        <Header subtitle={subtitle}>{title}</Header>
+        <Header subtitle={subtitle}>{sectionTitle}</Header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map(({ id, placeholder, title, description }: Feature) => {
             return (

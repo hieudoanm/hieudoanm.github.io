@@ -1,31 +1,31 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { ContactSectionProps } from '../../components/organisms/Contact';
-import { HeroSectionProps } from '../../components/organisms/Hero';
+import { ContactSectionProperties } from '../../components/organisms/Contact';
+import { HeroSectionProperties } from '../../components/organisms/Hero';
 import { Section } from '../../components/organisms/Navbar';
-import { PricingSectionProps } from '../../components/organisms/Pricing';
-import ContactTemplate from '../../components/templates/Contact';
+import { PricingSectionProperties } from '../../components/organisms/Pricing';
+import ContactTemplate from '../../templates/Contact';
 
 const sections: Section[] = [{ id: 'pricing' }, { id: 'contact' }];
 
-export type ContactPageProps = {
+export type ContactPageProperties = {
   data: {
     site: {
       siteMetadata: {
         about: {
-          hero: HeroSectionProps;
+          hero: HeroSectionProperties;
         };
         contact: {
-          contact: ContactSectionProps;
-          pricing: PricingSectionProps;
+          contact: ContactSectionProperties;
+          pricing: PricingSectionProperties;
         };
       };
     };
   };
 };
 
-const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
+const ContactPage: React.FC<ContactPageProperties> = ({ data }) => {
   const contact = data.site.siteMetadata.contact.contact || {};
   const hero = data.site.siteMetadata.about.hero || {};
   const pricing = data.site.siteMetadata.contact.pricing || {};

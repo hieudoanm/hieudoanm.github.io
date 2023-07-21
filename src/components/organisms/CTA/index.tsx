@@ -1,9 +1,9 @@
+import { Button } from '@chakra-ui/react';
 import React from 'react';
-import Button from '../../atoms/Button';
 import Container from '../../atoms/Container';
 import Header from '../../molecules/Header';
 
-export type CTASectionProps = {
+export type CTASectionProperties = {
   id: string;
   title: string;
   subtitle: string;
@@ -11,7 +11,7 @@ export type CTASectionProps = {
   backgroundImage: string;
 };
 
-const CTASection: React.FC<CTASectionProps> = ({
+const CTASection: React.FC<CTASectionProperties> = ({
   id,
   title,
   subtitle,
@@ -32,10 +32,8 @@ const CTASection: React.FC<CTASectionProps> = ({
             </Header>
             <a href="mailto:hieumdoan@gmail.com">
               <Button
-                bg="bg-white"
-                color="text-gray-900"
                 size="xl"
-                className="block mx-auto uppercase"
+                className="block mx-auto uppercase bg-white text-gray-900"
               >
                 {cta}
               </Button>

@@ -9,23 +9,23 @@ export type Statistic = {
   subtitle: string;
 };
 
-export type StatsSectionProps = {
+export type StatsSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
   stats: Array<Statistic>;
 };
 
-const StatsSection: React.FC<StatsSectionProps> = ({
-  id,
-  title,
-  subtitle,
+const StatsSection: React.FC<StatsSectionProperties> = ({
+  id: sectionId = '',
+  title: sectionTitle = '',
+  subtitle: sectionSubtitle = '',
   stats = [],
 }) => {
   return (
-    <div id={id} className="pb-16">
+    <div id={sectionId} className="pb-16">
       <Container>
-        <Header subtitle={subtitle}>{title}</Header>
+        <Header subtitle={sectionSubtitle}>{sectionTitle}</Header>
         <div className="border rounded-lg shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-4">
             {stats.map(

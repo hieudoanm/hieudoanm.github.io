@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../../molecules/Header';
 
-export type HeroSectionProps = {
+export type HeroSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
   backgroundImage: string;
 };
 
-const HeroSection: React.FC<HeroSectionProps> = ({
+const HeroSection: React.FC<HeroSectionProperties> = ({
   id,
   title,
   subtitle,

@@ -1,27 +1,10 @@
-import { graphql } from 'gatsby';
+import { Button } from '@chakra-ui/react';
+import { Link, graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FaUser } from 'react-icons/fa';
 
-type ButtonProps = {
-  href: string;
-  children: React.ReactNode;
-};
-
-const Button: React.FC<ButtonProps> = ({ href, children }) => {
-  return (
-    <a href={href} target="_blank" rel="noreferrer">
-      <button
-        type="button"
-        className="rounded bg-white text-black w-full py-2 uppercase"
-      >
-        {children}
-      </button>
-    </a>
-  );
-};
-
-export type HomePageProps = {
+export type HomePageProperties = {
   data: {
     site: {
       siteMetadata: {
@@ -31,7 +14,7 @@ export type HomePageProps = {
   };
 };
 
-const HomePage: React.FC<HomePageProps> = ({ data }) => {
+const HomePage: React.FC<HomePageProperties> = ({ data }) => {
   const profiles = data.site.siteMetadata.profiles || [];
 
   return (
@@ -64,7 +47,11 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
                   <h1 className="text-4xl uppercase text-white">HIEU DOAN</h1>
                 </div>
                 <div className="w-full">
-                  <Button href="/about">About</Button>
+                  <Link to="/about">
+                    <Button type="button" className="w-full">
+                      About
+                    </Button>
+                  </Link>
                 </div>
                 {profiles.map(({ href, title }) => {
                   return (
@@ -72,7 +59,11 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
                       key={`profile-${title.toLowerCase()}`}
                       className="w-full"
                     >
-                      <Button href={href}>{title}</Button>
+                      <a href={href} target="_blank" rel="noreferrer">
+                        <Button type="button" className="w-full">
+                          {title}
+                        </Button>
+                      </a>
                     </div>
                   );
                 })}

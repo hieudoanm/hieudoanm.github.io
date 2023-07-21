@@ -1,25 +1,23 @@
+import { Button, Input } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import Button from '../../atoms/Button';
 import Container from '../../atoms/Container';
-import Input from '../../atoms/Input';
 
-export type NewsletterSectionProps = {
+export type NewsletterSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
 };
 
-const NewsletterSection: React.FC<NewsletterSectionProps> = ({
+const submit = (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+};
+
+const NewsletterSection: React.FC<NewsletterSectionProperties> = ({
   id,
   title,
   subtitle,
 }) => {
   const [email, setEmail] = useState('');
-
-  const submit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(email);
-  };
 
   return (
     <div id={id} className="bg-gray-900">
@@ -44,9 +42,7 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
             />
             <Button
               type="submit"
-              bg="bg-white"
-              color="black"
-              className="uppercase w-full md:w-auto"
+              className="uppercase w-full md:w-auto bg-white text-black"
             >
               Notify
             </Button>
