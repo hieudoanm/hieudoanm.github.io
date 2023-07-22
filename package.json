@@ -41,7 +41,7 @@
     "react-icons": "4.10.1",
     "react-router-dom": "6.14.2",
     "sass": "1.64.0",
-    "styled-components": "6.0.4"
+    "styled-components": "6.0.5"
   },
   "devDependencies": {
     "@babel/core": "7.22.9",
