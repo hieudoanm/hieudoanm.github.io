@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
   "author": "hieudoanm <hieumdoan@gmail.com>",
-  "license": "GNU GPL V3.0",
+  "license": "GPL-3.0",
   "private": true,
   "scripts": {
     "develop": "gatsby develop",
