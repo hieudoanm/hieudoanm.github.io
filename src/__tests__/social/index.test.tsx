@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import HomePage from '../pages';
+import HomePage from '../../pages/social';
 
 jest.mock('gatsby', () => {
   return {
@@ -21,7 +21,7 @@ describe('HomePage', () => {
   test('render default', () => {
     const wrapper = render(
       <BrowserRouter>
-        <HomePage />
+        <HomePage data={{ site: { siteMetadata: { profiles: [] } } }} />
       </BrowserRouter>
     );
     expect(wrapper.container).toMatchSnapshot();
