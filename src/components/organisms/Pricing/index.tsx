@@ -56,9 +56,9 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
     <div id={sectionId} className="pb-16">
       <Container>
         <Header subtitle={subtitle}>{sectionTitle}</Header>
-        <div className="w-full md:w-6/12 mx-auto flex items-center mb-8 border rounded-lg overflow-hidden">
+        <div className="mx-auto mb-8 flex w-full items-center overflow-hidden rounded-lg border md:w-6/12">
           <div
-            className={`text-center w-6/12 py-4 cursor-pointer ${
+            className={`w-6/12 cursor-pointer py-4 text-center ${
               currency === 'vnd' ? 'bg-white' : 'bg-gray-100'
             }`}
             onClick={() => {
@@ -68,7 +68,7 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
             VND
           </div>
           <div
-            className={`text-center w-6/12 py-4 cursor-pointer ${
+            className={`w-6/12 cursor-pointer py-4 text-center ${
               currency === 'usd' ? 'bg-white' : 'bg-gray-100'
             }`}
             onClick={() => {
@@ -78,7 +78,7 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
             USD
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {plans.map(
             ({
               id = '',
@@ -89,12 +89,12 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
               timeUnit = '',
             }: Plan) => {
               return (
-                <div key={`pricing-${id}`} className="border rounded-lg">
-                  <div className="p-8 border-b">
-                    <h2 className="text-2xl mb-8 font-semibold">{title}</h2>
-                    <p className="text-gray-500 mb-8">{description}</p>
+                <div key={`pricing-${id}`} className="rounded-lg border">
+                  <div className="border-b p-8">
+                    <h2 className="mb-8 text-2xl font-semibold">{title}</h2>
+                    <p className="mb-8 text-gray-500">{description}</p>
                     <p className="mb-8">
-                      <span className="text-3xl mr-2 font-semibold">
+                      <span className="mr-2 text-3xl font-semibold">
                         {price[`${currency}`].value}
                       </span>
                       <sup className="text-lg text-gray-500">
@@ -106,7 +106,7 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <Button className="uppercase w-full">
+                      <Button className="w-full uppercase">
                         <div className="flex items-center justify-center gap-4">
                           {links[`${currency}`].icon}
                           <span>{links[`${currency}`].title}</span>
@@ -115,14 +115,14 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
                     </a>
                   </div>
                   <div className="p-8">
-                    <h3 className="uppercase mb-8 font-semibold">
+                    <h3 className="mb-8 font-semibold uppercase">
                       What&apos;s included
                     </h3>
                     {features.map((feature: string, index: number) => {
                       return (
                         <p
                           key={`feature-${index}`}
-                          className="text-gray-500 flex items-start"
+                          className="flex items-start text-gray-500"
                         >
                           <FaCheck color="#10B981" className="mr-2" />
                           <span className="text-sm">{feature}</span>

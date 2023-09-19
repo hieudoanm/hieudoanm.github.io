@@ -29,9 +29,9 @@ const TestimonialsSection: React.FC<TestimonialsSectionProperties> = ({
           return (
             <div
               key={`testimonial-${index}`}
-              className="w-full md:w-6/12 mx-auto"
+              className="mx-auto w-full md:w-6/12"
             >
-              <p className="text-2xl mb-8 text-justify">{testimonial.quote}</p>
+              <p className="mb-8 text-justify text-2xl">{testimonial.quote}</p>
               <p className="text-left md:text-right">
                 <b>{testimonial.author}</b> / {testimonial.position}
               </p>

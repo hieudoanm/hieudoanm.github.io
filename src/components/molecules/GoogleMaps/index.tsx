@@ -10,12 +10,12 @@ const GoogleMaps: React.FC<GoogleMapsProperties> = ({
   title = '',
 }) => {
   return (
-    <div className="w-full relative" style={{ paddingBottom: '100%' }}>
-      <div className="absolute w-full h-full">
+    <div className="relative w-full" style={{ paddingBottom: '100%' }}>
+      <div className="absolute h-full w-full">
         <iframe
           src={source}
           title={title}
-          className="border-none w-full h-full"
+          className="h-full w-full border-none"
           allowFullScreen={true}
           loading="lazy"
         />

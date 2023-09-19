@@ -33,7 +33,7 @@ const CTASection: React.FC<CTASectionProperties> = ({
             <a href="mailto:hieumdoan@gmail.com">
               <Button
                 size="xl"
-                className="block mx-auto uppercase bg-white text-gray-900"
+                className="mx-auto block bg-white uppercase text-gray-900"
               >
                 {cta}
               </Button>

@@ -26,7 +26,7 @@ const StatsSection: React.FC<StatsSectionProperties> = ({
     <div id={sectionId} className="pb-16">
       <Container>
         <Header subtitle={sectionSubtitle}>{sectionTitle}</Header>
-        <div className="border rounded-lg shadow-2xl">
+        <div className="rounded-lg border shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-4">
             {stats.map(
               (
@@ -41,7 +41,7 @@ const StatsSection: React.FC<StatsSectionProperties> = ({
                 return (
                   <div
                     key={`stats-${id}`}
-                    className={`${border} text-center p-8`}
+                    className={`${border} p-8 text-center`}
                   >
                     <div className="text-5xl">{value}</div>
                     {title && <div className="text-xl">{title}</div>}

@@ -16,7 +16,7 @@ const Form: React.FC = () => {
 
   return (
     <form onSubmit={sendMessage}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="col-span-1 md:col-span-2">
           <label>Name</label>
           <Input
@@ -88,7 +88,7 @@ const ContactSection: React.FC<ContactSectionProperties> = ({
   return (
     <div id={id} className="py-16">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
           <div className="order-2 md:order-1">
             <GoogleMaps
               title="Ho Chi Minh City"

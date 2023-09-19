@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProperties> = ({
   });
 
   return (
-    <nav className={`${fixedTop} bg-white w-full border-b`}>
+    <nav className={`${fixedTop} w-full border-b bg-white`}>
       <Banner>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProperties> = ({
                 href="https://bradfrost.com/blog/post/atomic-web-design/"
                 target="_blank"
                 rel="noreferrer"
-                className="underline uppercase"
+                className="uppercase underline"
               >
                 atomic design
               </a>{' '}
@@ -56,7 +56,7 @@ const Navbar: React.FC<NavbarProperties> = ({
       <Container>
         <div className="flex items-center py-4">
           <Link to="/">
-            <div className="text-2xl cursor-pointer uppercase">Hieu Doan</div>
+            <div className="cursor-pointer text-2xl uppercase">Hieu Doan</div>
           </Link>
           <div className="hidden md:block">
             <div className="ml-8 mr-auto flex items-center gap-8">

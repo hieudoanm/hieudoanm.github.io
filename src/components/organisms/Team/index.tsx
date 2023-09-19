@@ -28,11 +28,11 @@ const TeamSection: React.FC<TeamSectionProperties> = ({
     <section id={sectionId} className="pb-16">
       <Container>
         <Header subtitle={subtitle}>{sectionTitle}</Header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {team.map(({ id, image, title, position, homepage = '' }: Person) => {
             return (
               <div key={`team-${id}`} className="text-center">
-                <div className="w-32 h-32 rounded-full mx-auto mb-8 flex items-center justify-center overflow-hidden border">
+                <div className="mx-auto mb-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border">
                   <img src={image} alt={title} width={'100%'} height={'100%'} />
                 </div>
                 <h2 className="text-2xl">{title}</h2>
@@ -43,7 +43,7 @@ const TeamSection: React.FC<TeamSectionProperties> = ({
                     href={homepage}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-block mx-auto"
+                    className="mx-auto inline-block"
                   >
                     <FaGlobe />
                   </a>

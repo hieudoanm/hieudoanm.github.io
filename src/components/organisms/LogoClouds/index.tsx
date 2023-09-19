@@ -27,12 +27,12 @@ const LogosCloudSection: React.FC<LogosCloudSectionProperties> = ({
           return (
             <div key={`logo-${id}`}>
               <div
-                className="w-full pb-full relative bg-cover bg-center"
+                className="relative w-full bg-cover bg-center pb-full"
                 style={{ backgroundImage: `url(${image})` }}
               >
                 <a href={href} target="_blank" rel="noreferrer">
-                  <div className="absolute w-full h-full bg-gray-900 bg-opacity-80 hover:bg-opacity-90">
-                    <div className="h-full w-full text-white flex items-center justify-center transition-all text-3xl hover:text-4xl">
+                  <div className="absolute h-full w-full bg-gray-900 bg-opacity-80 hover:bg-opacity-90">
+                    <div className="flex h-full w-full items-center justify-center text-3xl text-white transition-all hover:text-4xl">
                       <h3 className="uppercase">{title}</h3>
                     </div>
                   </div>

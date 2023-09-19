@@ -49,22 +49,22 @@ const SocialPage: React.FC<SocialPageProperties> = ({ data }) => {
         <title>HIEU DOAN (hieudoanm)</title>
       </Helmet>
       <div
-        className="h-screen bg-center bg-cover bg-no-repeat overflow-hidden bg-black"
+        className="h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url(/images/jpg/background/hero.jpg)' }}
       >
-        <div className="h-screen bg-black/75 overflow-auto">
-          <div className="container mx-auto py-16 h-full">
-            <div className="flex justify-center items-center h-full">
-              <div className="max-w-fit mx-auto">
+        <div className="h-screen overflow-auto bg-black/75">
+          <div className="container mx-auto h-full py-16">
+            <div className="flex h-full items-center justify-center">
+              <div className="mx-auto max-w-fit">
                 <div className="flex flex-col items-center justify-center gap-y-8">
                   <div className="w-full">
                     <div
                       className="relative w-full rounded-full bg-white"
                       style={{ paddingBottom: '100%' }}
                     >
-                      <div className="absolute w-full h-full top-0 left-0">
-                        <div className="w-full h-full flex items-center justify-center">
-                          <FaUser className="text-black text-8xl" />
+                      <div className="absolute left-0 top-0 h-full w-full">
+                        <div className="flex h-full w-full items-center justify-center">
+                          <FaUser className="text-8xl text-black" />
                         </div>
                       </div>
                     </div>
@@ -75,7 +75,7 @@ const SocialPage: React.FC<SocialPageProperties> = ({ data }) => {
                   <div className="w-full">
                     <Link to="/about">
                       <div className="flex items-center gap-x-4">
-                        <Box className="p-3 aspect-square flex items-center bg-white rounded-lg">
+                        <Box className="flex aspect-square items-center rounded-lg bg-white p-3">
                           <Icon as={FaUser} />
                         </Box>
                         <Button type="button" className="w-full">
@@ -96,7 +96,7 @@ const SocialPage: React.FC<SocialPageProperties> = ({ data }) => {
                       >
                         <a href={href} target="_blank" rel="noreferrer">
                           <div className="flex items-center gap-x-4">
-                            <Box className="p-3 aspect-square flex items-center bg-white rounded-lg">
+                            <Box className="flex aspect-square items-center rounded-lg bg-white p-3">
                               <Icon as={icons[`${icon}`]} />
                             </Box>
                             <Button type="button" className="w-full">

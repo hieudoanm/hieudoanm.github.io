@@ -27,16 +27,16 @@ const FeaturesSection: React.FC<FeaturesSectionProperties> = ({
     <div id={sectionId} className="pb-16">
       <Container>
         <Header subtitle={subtitle}>{sectionTitle}</Header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map(({ id, placeholder, title, description }: Feature) => {
             return (
               <div key={`feature-${id}`}>
-                <div className="w-32 h-32 mx-auto relative mb-8">
-                  <div className="absolute w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-white text-4xl">
+                <div className="relative mx-auto mb-8 h-32 w-32">
+                  <div className="absolute flex h-full w-full items-center justify-center rounded-full bg-gray-900 text-4xl text-white">
                     {placeholder}
                   </div>
                 </div>
-                <h3 className="text-center text-xl uppercase mb-8">{title}</h3>
+                <h3 className="mb-8 text-center text-xl uppercase">{title}</h3>
                 <p className="text-justify">{description}</p>
               </div>
             );

@@ -28,7 +28,7 @@ const BlogsSection: React.FC<BlogsSectionProperties> = ({
     <div id={sectionId} className="pb-16">
       <Container>
         <Header subtitle={subtitle}>{sectionTitle}</Header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {blogs.map((blog: BlogType) => {
             const { id, title, description, url, date } = blog;
             return (

@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProperties> = ({
   return (
     <div className={`text-${align} ${padding} ${className}`}>
       {short && <p>{short}</p>}
-      <h2 className={`uppercase text-4xl ${paddingTop} ${paddingBottom}`}>
+      <h2 className={`text-4xl uppercase ${paddingTop} ${paddingBottom}`}>
         <b>{children}</b>
       </h2>
       {subtitle && <p>{subtitle}</p>}

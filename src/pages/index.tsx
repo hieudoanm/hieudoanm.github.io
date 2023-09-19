@@ -181,9 +181,9 @@ export const HomePage: React.FC = () => {
         <title>HIEU DOAN (hieudoanm)</title>
       </Helmet>
       <div className={theme}>
-        <main className="w-screen h-screen overflow-hidden">
+        <main className="h-screen w-screen overflow-hidden">
           <div className="relative">
-            <div className="absolute top-0 right-0 left-0 bottom-0 mx-auto">
+            <div className="absolute bottom-0 left-0 right-0 top-0 mx-auto">
               <div className="relative">
                 {rows.map((rowColumns: number[], row: number) => {
                   return rowColumns.map((column: number) => {
