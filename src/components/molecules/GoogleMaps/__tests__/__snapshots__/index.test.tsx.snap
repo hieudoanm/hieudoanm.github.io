@@ -3,15 +3,15 @@
 exports[`GoogleMaps render default 1`] = `
 <div>
   <div
-    class="w-full relative"
+    class="relative w-full"
     style="padding-bottom: 100%;"
   >
     <div
-      class="absolute w-full h-full"
+      class="absolute h-full w-full"
     >
       <iframe
         allowfullscreen=""
-        class="border-none w-full h-full"
+        class="h-full w-full border-none"
         loading="lazy"
         src=""
         title=""

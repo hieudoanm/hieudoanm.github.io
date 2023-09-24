@@ -3,10 +3,10 @@
 exports[`Contact render default 1`] = `
 <div>
   <nav
-    class="fixed z-10 top-0 bg-white w-full border-b"
+    class="fixed z-10 top-0 w-full border-b bg-white"
   >
     <div
-      class="bg-gray-900 text-white py-4"
+      class="bg-gray-900 py-4 text-white"
     >
       <div
         class="container mx-auto px-8"
@@ -35,7 +35,7 @@ exports[`Contact render default 1`] = `
               This is my
                
               <a
-                class="underline uppercase"
+                class="uppercase underline"
                 href="https://bradfrost.com/blog/post/atomic-web-design/"
                 rel="noreferrer"
                 target="_blank"
@@ -74,7 +74,7 @@ exports[`Contact render default 1`] = `
           href="/"
         >
           <div
-            class="text-2xl cursor-pointer uppercase"
+            class="cursor-pointer text-2xl uppercase"
           >
             Hieu Doan
           </div>
@@ -171,16 +171,16 @@ exports[`Contact render default 1`] = `
       style="background-image: url();"
     >
       <div
-        class="h-full bg-opacity-80 bg-gray-900 text-white"
+        class="h-full bg-gray-900 bg-opacity-80 text-white"
       >
         <div
-          class="h-full flex items-center justify-center"
+          class="flex h-full items-center justify-center"
         >
           <div
             class="text-center py-16 "
           >
             <h2
-              class="uppercase text-4xl  mb-8"
+              class="text-4xl uppercase  mb-8"
             >
               <b>
                 title
@@ -204,7 +204,7 @@ exports[`Contact render default 1`] = `
           class="text-center py-16 "
         >
           <h2
-            class="uppercase text-4xl  mb-8"
+            class="text-4xl uppercase  mb-8"
           >
             <b>
               title
@@ -215,21 +215,21 @@ exports[`Contact render default 1`] = `
           </p>
         </div>
         <div
-          class="w-full md:w-6/12 mx-auto flex items-center mb-8 border rounded-lg overflow-hidden"
+          class="mx-auto mb-8 flex w-full items-center overflow-hidden rounded-lg border md:w-6/12"
         >
           <div
-            class="text-center w-6/12 py-4 cursor-pointer bg-white"
+            class="w-6/12 cursor-pointer py-4 text-center bg-white"
           >
             VND
           </div>
           <div
-            class="text-center w-6/12 py-4 cursor-pointer bg-gray-100"
+            class="w-6/12 cursor-pointer py-4 text-center bg-gray-100"
           >
             USD
           </div>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
         />
       </div>
     </div>
@@ -241,21 +241,21 @@ exports[`Contact render default 1`] = `
         class="container mx-auto px-8"
       >
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-16"
+          class="grid grid-cols-1 gap-16 md:grid-cols-2"
         >
           <div
             class="order-2 md:order-1"
           >
             <div
-              class="w-full relative"
+              class="relative w-full"
               style="padding-bottom: 100%;"
             >
               <div
-                class="absolute w-full h-full"
+                class="absolute h-full w-full"
               >
                 <iframe
                   allowfullscreen=""
-                  class="border-none w-full h-full"
+                  class="h-full w-full border-none"
                   loading="lazy"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501725.3382572512!2d106.41504093423713!3d10.755341071141125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2zSOG7kyBDaMOtIE1pbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1634894512761!5m2!1svi!2s"
                   title="Ho Chi Minh City"
@@ -270,7 +270,7 @@ exports[`Contact render default 1`] = `
               class="text-text-center md:text-left pb-16 "
             >
               <h2
-                class="uppercase text-4xl  "
+                class="text-4xl uppercase  "
               >
                 <b>
                   title
@@ -279,7 +279,7 @@ exports[`Contact render default 1`] = `
             </div>
             <form>
               <div
-                class="grid grid-cols-1 md:grid-cols-2 gap-8"
+                class="grid grid-cols-1 gap-8 md:grid-cols-2"
               >
                 <div
                   class="col-span-1 md:col-span-2"
@@ -364,13 +364,13 @@ exports[`Contact render default 1`] = `
     </div>
   </main>
   <footer
-    class="border-t p-8 bg-gray-900 text-white"
+    class="border-t bg-gray-900 p-8 text-white"
   >
     <div
       class="container mx-auto px-8"
     >
       <div
-        class="block md:flex justify-between"
+        class="block justify-between md:flex"
       >
         <p>
           © 

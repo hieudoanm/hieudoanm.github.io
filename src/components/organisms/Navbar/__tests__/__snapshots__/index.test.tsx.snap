@@ -3,10 +3,10 @@
 exports[`Navbar render default 1`] = `
 <div>
   <nav
-    class=" bg-white w-full border-b"
+    class=" w-full border-b bg-white"
   >
     <div
-      class="bg-gray-900 text-white py-4"
+      class="bg-gray-900 py-4 text-white"
     >
       <div
         class="container mx-auto px-8"
@@ -35,7 +35,7 @@ exports[`Navbar render default 1`] = `
               This is my
                
               <a
-                class="underline uppercase"
+                class="uppercase underline"
                 href="https://bradfrost.com/blog/post/atomic-web-design/"
                 rel="noreferrer"
                 target="_blank"
@@ -74,7 +74,7 @@ exports[`Navbar render default 1`] = `
           href="/"
         >
           <div
-            class="text-2xl cursor-pointer uppercase"
+            class="cursor-pointer text-2xl uppercase"
           >
             Hieu Doan
           </div>

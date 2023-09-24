@@ -3,10 +3,10 @@
 exports[`About render default 1`] = `
 <div>
   <nav
-    class="fixed z-10 top-0 bg-white w-full border-b"
+    class="fixed z-10 top-0 w-full border-b bg-white"
   >
     <div
-      class="bg-gray-900 text-white py-4"
+      class="bg-gray-900 py-4 text-white"
     >
       <div
         class="container mx-auto px-8"
@@ -35,7 +35,7 @@ exports[`About render default 1`] = `
               This is my
                
               <a
-                class="underline uppercase"
+                class="uppercase underline"
                 href="https://bradfrost.com/blog/post/atomic-web-design/"
                 rel="noreferrer"
                 target="_blank"
@@ -74,7 +74,7 @@ exports[`About render default 1`] = `
           href="/"
         >
           <div
-            class="text-2xl cursor-pointer uppercase"
+            class="cursor-pointer text-2xl uppercase"
           >
             Hieu Doan
           </div>
@@ -169,16 +169,16 @@ exports[`About render default 1`] = `
       style="background-image: url();"
     >
       <div
-        class="h-full bg-opacity-80 bg-gray-900 text-white"
+        class="h-full bg-gray-900 bg-opacity-80 text-white"
       >
         <div
-          class="h-full flex items-center justify-center"
+          class="flex h-full items-center justify-center"
         >
           <div
             class="text-center py-16 "
           >
             <h2
-              class="uppercase text-4xl  "
+              class="text-4xl uppercase  "
             >
               <b />
             </h2>
@@ -197,13 +197,13 @@ exports[`About render default 1`] = `
           class="text-center py-16 "
         >
           <h2
-            class="uppercase text-4xl  "
+            class="text-4xl uppercase  "
           >
             <b />
           </h2>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
         />
       </div>
     </div>
@@ -218,7 +218,7 @@ exports[`About render default 1`] = `
           class="text-center py-16 "
         >
           <h2
-            class="uppercase text-4xl  "
+            class="text-4xl uppercase  "
           >
             <b />
           </h2>
@@ -239,13 +239,13 @@ exports[`About render default 1`] = `
           class="text-center py-16 "
         >
           <h2
-            class="uppercase text-4xl  "
+            class="text-4xl uppercase  "
           >
             <b />
           </h2>
         </div>
         <div
-          class="border rounded-lg shadow-2xl"
+          class="rounded-lg border shadow-2xl"
         >
           <div
             class="grid grid-cols-1 md:grid-cols-4"
@@ -264,7 +264,7 @@ exports[`About render default 1`] = `
           class="text-center py-16 "
         >
           <h2
-            class="uppercase text-4xl  "
+            class="text-4xl uppercase  "
           >
             <b />
           </h2>
@@ -285,13 +285,13 @@ exports[`About render default 1`] = `
           class="text-center py-16 "
         >
           <h2
-            class="uppercase text-4xl  "
+            class="text-4xl uppercase  "
           >
             <b />
           </h2>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
         />
       </div>
     </section>
@@ -313,7 +313,7 @@ exports[`About render default 1`] = `
               class="text-center py-16 text-white"
             >
               <h2
-                class="uppercase text-4xl  "
+                class="text-4xl uppercase  "
               >
                 <b />
               </h2>
@@ -322,7 +322,7 @@ exports[`About render default 1`] = `
               href="mailto:hieumdoan@gmail.com"
             >
               <button
-                class="chakra-button block mx-auto uppercase bg-white text-gray-900 css-4xx2wk"
+                class="chakra-button mx-auto block bg-white uppercase text-gray-900 css-4xx2wk"
                 type="button"
               />
             </a>
@@ -341,16 +341,16 @@ exports[`About render default 1`] = `
           class="text-center py-16 "
         >
           <h2
-            class="uppercase text-4xl  "
+            class="text-4xl uppercase  "
           >
             <b />
           </h2>
         </div>
         <div
-          class="w-full md:w-6/12 mx-auto"
+          class="mx-auto w-full md:w-6/12"
         >
           <p
-            class="text-2xl mb-8 text-justify"
+            class="mb-8 text-justify text-2xl"
           />
           <p
             class="text-left md:text-right"
@@ -372,13 +372,13 @@ exports[`About render default 1`] = `
           class="text-center py-16 "
         >
           <h2
-            class="uppercase text-4xl  "
+            class="text-4xl uppercase  "
           >
             <b />
           </h2>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
         />
       </div>
     </div>
@@ -390,13 +390,13 @@ exports[`About render default 1`] = `
         class="container mx-auto px-8"
       >
         <div
-          class="md:flex justify-between items-center py-16 gap-8"
+          class="items-center justify-between gap-8 py-16 md:flex"
         >
           <div
-            class="text-white mb-8 md:mb-0"
+            class="mb-8 text-white md:mb-0"
           >
             <h2
-              class="text-xl uppercase text-2xl"
+              class="text-2xl text-xl uppercase"
             />
             <p
               class="text-justify"
@@ -416,7 +416,7 @@ exports[`About render default 1`] = `
               value=""
             />
             <button
-              class="chakra-button uppercase w-full md:w-auto bg-white text-black css-4xx2wk"
+              class="chakra-button w-full bg-white uppercase text-black md:w-auto css-4xx2wk"
               type="submit"
             >
               Notify
@@ -427,13 +427,13 @@ exports[`About render default 1`] = `
     </div>
   </main>
   <footer
-    class="border-t p-8 bg-gray-900 text-white"
+    class="border-t bg-gray-900 p-8 text-white"
   >
     <div
       class="container mx-auto px-8"
     >
       <div
-        class="block md:flex justify-between"
+        class="block justify-between md:flex"
       >
         <p>
           © 

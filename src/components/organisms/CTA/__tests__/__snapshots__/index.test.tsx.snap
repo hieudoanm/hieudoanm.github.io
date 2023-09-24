@@ -20,7 +20,7 @@ exports[`CTA render default 1`] = `
             class="text-center py-16 text-white"
           >
             <h2
-              class="uppercase text-4xl  mb-8"
+              class="text-4xl uppercase  mb-8"
             >
               <b>
                 title
@@ -34,7 +34,7 @@ exports[`CTA render default 1`] = `
             href="mailto:hieumdoan@gmail.com"
           >
             <button
-              class="chakra-button block mx-auto uppercase bg-white text-gray-900 css-4xx2wk"
+              class="chakra-button mx-auto block bg-white uppercase text-gray-900 css-4xx2wk"
               type="button"
             >
               CTA

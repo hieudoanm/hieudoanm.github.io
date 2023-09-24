@@ -13,7 +13,7 @@ exports[`Team render default 1`] = `
         class="text-center py-16 "
       >
         <h2
-          class="uppercase text-4xl  mb-8"
+          class="text-4xl uppercase  mb-8"
         >
           <b>
             title
@@ -24,7 +24,7 @@ exports[`Team render default 1`] = `
         </p>
       </div>
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
       />
     </div>
   </section>

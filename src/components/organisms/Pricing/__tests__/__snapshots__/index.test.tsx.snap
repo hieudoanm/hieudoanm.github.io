@@ -13,7 +13,7 @@ exports[`Pricing render default 1`] = `
         class="text-center py-16 "
       >
         <h2
-          class="uppercase text-4xl  mb-8"
+          class="text-4xl uppercase  mb-8"
         >
           <b>
             title
@@ -24,21 +24,21 @@ exports[`Pricing render default 1`] = `
         </p>
       </div>
       <div
-        class="w-full md:w-6/12 mx-auto flex items-center mb-8 border rounded-lg overflow-hidden"
+        class="mx-auto mb-8 flex w-full items-center overflow-hidden rounded-lg border md:w-6/12"
       >
         <div
-          class="text-center w-6/12 py-4 cursor-pointer bg-white"
+          class="w-6/12 cursor-pointer py-4 text-center bg-white"
         >
           VND
         </div>
         <div
-          class="text-center w-6/12 py-4 cursor-pointer bg-gray-100"
+          class="w-6/12 cursor-pointer py-4 text-center bg-gray-100"
         >
           USD
         </div>
       </div>
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
       />
     </div>
   </div>

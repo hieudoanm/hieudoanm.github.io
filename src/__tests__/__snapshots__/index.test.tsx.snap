@@ -6,13 +6,13 @@ exports[`HomePage render default 1`] = `
     class="theme-0"
   >
     <main
-      class="w-screen h-screen overflow-hidden"
+      class="h-screen w-screen overflow-hidden"
     >
       <div
         class="relative"
       >
         <div
-          class="absolute top-0 right-0 left-0 bottom-0 mx-auto"
+          class="absolute bottom-0 left-0 right-0 top-0 mx-auto"
         >
           <div
             class="relative"

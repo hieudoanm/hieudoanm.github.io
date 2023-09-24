@@ -6,7 +6,7 @@ exports[`Header render default 1`] = `
     class="text-center py-16 "
   >
     <h2
-      class="uppercase text-4xl  "
+      class="text-4xl uppercase  "
     >
       <b>
         Header

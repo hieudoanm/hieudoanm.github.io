@@ -3,18 +3,18 @@
 exports[`NotFoundPage render default 1`] = `
 <div>
   <div
-    class="w-screen h-screen flex items-center justify-center"
+    class="flex h-screen w-screen items-center justify-center"
   >
     <div
-      class="text-center py-8"
+      class="py-8 text-center"
     >
       <h2
-        class="text-9xl mb-4"
+        class="mb-4 text-9xl"
       >
         404
       </h2>
       <p
-        class="uppercase text-2xl mb-4"
+        class="mb-4 text-2xl uppercase"
       >
         Page not found
       </p>

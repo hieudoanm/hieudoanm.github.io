@@ -13,7 +13,7 @@ exports[`Stats render default 1`] = `
         class="text-center py-16 "
       >
         <h2
-          class="uppercase text-4xl  mb-8"
+          class="text-4xl uppercase  mb-8"
         >
           <b>
             title
@@ -24,7 +24,7 @@ exports[`Stats render default 1`] = `
         </p>
       </div>
       <div
-        class="border rounded-lg shadow-2xl"
+        class="rounded-lg border shadow-2xl"
       >
         <div
           class="grid grid-cols-1 md:grid-cols-4"

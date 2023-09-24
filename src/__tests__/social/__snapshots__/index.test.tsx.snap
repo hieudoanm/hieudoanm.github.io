@@ -3,20 +3,20 @@
 exports[`HomePage render default 1`] = `
 <div>
   <div
-    class="h-screen bg-center bg-cover bg-no-repeat overflow-hidden bg-black"
+    class="h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"
     style="background-image: url(/images/jpg/background/hero.jpg);"
   >
     <div
-      class="h-screen bg-black/75 overflow-auto"
+      class="h-screen overflow-auto bg-black/75"
     >
       <div
-        class="container mx-auto py-16 h-full"
+        class="container mx-auto h-full py-16"
       >
         <div
-          class="flex justify-center items-center h-full"
+          class="flex h-full items-center justify-center"
         >
           <div
-            class="max-w-fit mx-auto"
+            class="mx-auto max-w-fit"
           >
             <div
               class="flex flex-col items-center justify-center gap-y-8"
@@ -29,13 +29,13 @@ exports[`HomePage render default 1`] = `
                   style="padding-bottom: 100%;"
                 >
                   <div
-                    class="absolute w-full h-full top-0 left-0"
+                    class="absolute left-0 top-0 h-full w-full"
                   >
                     <div
-                      class="w-full h-full flex items-center justify-center"
+                      class="flex h-full w-full items-center justify-center"
                     >
                       <svg
-                        class="text-black text-8xl"
+                        class="text-8xl text-black"
                         fill="currentColor"
                         height="1em"
                         stroke="currentColor"
@@ -69,7 +69,7 @@ exports[`HomePage render default 1`] = `
                     class="flex items-center gap-x-4"
                   >
                     <div
-                      class="p-3 aspect-square flex items-center bg-white rounded-lg css-0"
+                      class="flex aspect-square items-center rounded-lg bg-white p-3 css-0"
                     >
                       <svg
                         class="chakra-icon css-13otjrl"
