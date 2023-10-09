@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact render default 1`] = `
+<div>
+  <nav
+    class="fixed z-10 top-0 w-full border-b bg-white"
+  >
+    <div
+      class="bg-gray-900 py-4 text-white"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="flex items-center justify-between"
+        >
+          <div
+            class="flex items-center"
+          >
+            <svg
+              class="mr-2"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02 0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19 310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65 64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35 25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0 41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44 0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98 52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0 32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96 141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0 136.95-23.78 190.95-66.98L480 98.58v282.84z"
+              />
+            </svg>
+            <span>
+              This is my
+               
+              <a
+                class="uppercase underline"
+                href="https://bradfrost.com/blog/post/atomic-web-design/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                atomic design
+              </a>
+               
+              masterpiece
+            </span>
+          </div>
+          <div>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 352 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container mx-auto px-8"
+    >
+      <div
+        class="flex items-center py-4"
+      >
+        <a
+          href="/"
+        >
+          <div
+            class="cursor-pointer text-2xl uppercase"
+          >
+            Hieu Doan
+          </div>
+        </a>
+        <div
+          class="hidden md:block"
+        >
+          <div
+            class="ml-8 mr-auto flex items-center gap-8"
+          >
+            <a
+              href="/about"
+            >
+              <div
+                class="flex items-center gap-2"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                  />
+                </svg>
+                <span>
+                  About
+                </span>
+              </div>
+            </a>
+            <a
+              href="/blogs"
+            >
+              <div
+                class="flex items-center gap-2"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M172.2 226.8c-14.6-2.9-28.2 8.9-28.2 23.8V301c0 10.2 7.1 18.4 16.7 22 18.2 6.8 31.3 24.4 31.3 45 0 26.5-21.5 48-48 48s-48-21.5-48-48V120c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v248c0 89.5 82.1 160.2 175 140.7 54.4-11.4 98.3-55.4 109.7-109.7 17.4-82.9-37-157.2-112.5-172.2zM209 0c-9.2-.5-17 6.8-17 16v31.6c0 8.5 6.6 15.5 15 15.9 129.4 7 233.4 112 240.9 241.5.5 8.4 7.5 15 15.9 15h32.1c9.2 0 16.5-7.8 16-17C503.4 139.8 372.2 8.6 209 0zm.3 96c-9.3-.7-17.3 6.7-17.3 16.1v32.1c0 8.4 6.5 15.3 14.8 15.9 76.8 6.3 138 68.2 144.9 145.2.8 8.3 7.6 14.7 15.9 14.7h32.2c9.3 0 16.8-8 16.1-17.3-8.4-110.1-96.5-198.2-206.6-206.7z"
+                  />
+                </svg>
+                <span>
+                  Blogs
+                </span>
+              </div>
+            </a>
+            <a
+              href="/contact"
+            >
+              <div
+                class="flex items-center gap-2"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                  />
+                </svg>
+                <span>
+                  Contact
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main
+    class="pt-32"
+  >
+    <div
+      class="h-screen bg-cover bg-center bg-no-repeat"
+      id="id"
+      style="background-image: url();"
+    >
+      <div
+        class="h-full bg-gray-900 bg-opacity-80 text-white"
+      >
+        <div
+          class="flex h-full items-center justify-center"
+        >
+          <div
+            class="text-center py-16 "
+          >
+            <h2
+              class="text-4xl uppercase  mb-8"
+            >
+              <b>
+                title
+              </b>
+            </h2>
+            <p>
+              subtitle
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="pb-16"
+      id="id"
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="text-center py-16 "
+        >
+          <h2
+            class="text-4xl uppercase  mb-8"
+          >
+            <b>
+              title
+            </b>
+          </h2>
+          <p>
+            subtitle
+          </p>
+        </div>
+        <div
+          class="mx-auto mb-8 flex w-full items-center overflow-hidden rounded-lg border md:w-6/12"
+        >
+          <div
+            class="w-6/12 cursor-pointer py-4 text-center bg-white"
+          >
+            VND
+          </div>
+          <div
+            class="w-6/12 cursor-pointer py-4 text-center bg-gray-100"
+          >
+            USD
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
+        />
+      </div>
+    </div>
+    <div
+      class="py-16"
+      id=""
+    >
+      <div
+        class="container mx-auto px-8"
+      >
+        <div
+          class="grid grid-cols-1 gap-16 md:grid-cols-2"
+        >
+          <div
+            class="order-2 md:order-1"
+          >
+            <div
+              class="relative w-full"
+              style="padding-bottom: 100%;"
+            >
+              <div
+                class="absolute h-full w-full"
+              >
+                <iframe
+                  allowfullscreen=""
+                  class="h-full w-full border-none"
+                  loading="lazy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501725.3382572512!2d106.41504093423713!3d10.755341071141125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2zSOG7kyBDaMOtIE1pbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1634894512761!5m2!1svi!2s"
+                  title="Ho Chi Minh City"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="order-1 md:order-2"
+          >
+            <div
+              class="text-text-center md:text-left pb-16 "
+            >
+              <h2
+                class="text-4xl uppercase  "
+              >
+                <b>
+                  title
+                </b>
+              </h2>
+            </div>
+            <form>
+              <div
+                class="grid grid-cols-1 gap-8 md:grid-cols-2"
+              >
+                <div
+                  class="col-span-1 md:col-span-2"
+                >
+                  <label>
+                    Name
+                  </label>
+                  <input
+                    aria-required="true"
+                    class="chakra-input w-full css-0"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    required=""
+                    value=""
+                  />
+                </div>
+                <div
+                  class="col-span-1"
+                >
+                  <label>
+                    Phone
+                  </label>
+                  <input
+                    aria-required="true"
+                    class="chakra-input w-full css-0"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone"
+                    required=""
+                    value=""
+                  />
+                </div>
+                <div
+                  class="col-span-1"
+                >
+                  <label>
+                    Email
+                  </label>
+                  <input
+                    aria-required="true"
+                    class="chakra-input w-full css-0"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required=""
+                    type="email"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="col-span-1 md:col-span-2"
+                >
+                  <label>
+                    Message
+                  </label>
+                  <textarea
+                    aria-required="true"
+                    class="chakra-textarea css-0"
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    required=""
+                    rows="4"
+                  />
+                </div>
+                <div
+                  class="col-span-1 md:col-span-2"
+                >
+                  <button
+                    class="chakra-button css-4xx2wk"
+                    type="button"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="border-t bg-gray-900 p-8 text-white"
+  >
+    <div
+      class="container mx-auto px-8"
+    >
+      <div
+        class="block justify-between md:flex"
+      >
+        <p>
+          © 
+          2023
+           Hieu Doan. All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

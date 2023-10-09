@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Team render default 1`] = `
+<div>
+  <section
+    class="pb-16"
+    id="id"
+  >
+    <div
+      class="container mx-auto px-8"
+    >
+      <div
+        class="text-center py-16 "
+      >
+        <h2
+          class="text-4xl uppercase  mb-8"
+        >
+          <b>
+            title
+          </b>
+        </h2>
+        <p>
+          subtitle
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
+      />
+    </div>
+  </section>
+</div>
+`;
