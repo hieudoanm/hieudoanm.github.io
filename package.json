@@ -35,6 +35,7 @@
     "gatsby-plugin-sass": "6.12.2",
     "gatsby-plugin-sharp": "5.12.2",
     "gatsby-transformer-remark": "6.12.2",
+    "pino": "8.16.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
