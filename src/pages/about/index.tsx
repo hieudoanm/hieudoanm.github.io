@@ -57,7 +57,7 @@ const AboutPage: React.FC<AboutPageProperties> = ({ data }) => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>HIEU DOAN (hieudoanm): About</title>
+        <title>About</title>
       </Helmet>
       <AboutTemplate
         sections={sections}

@@ -194,7 +194,7 @@ export const HomePage: React.FC = () => {
                         key={`hexagon-row-${column}`}
                         data-row={row}
                         data-column={column}
-                        className="relative"
+                        className="absolute"
                         onClick={() => changeTheme()}
                         onMouseLeave={() => {
                           const classNames: string[] = [

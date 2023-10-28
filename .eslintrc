@@ -44,5 +44,5 @@
     },
     "react": { "version": "18" }
   },
-  "rules": {}
+  "rules": { "import/named": "off" }
 }
