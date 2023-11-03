@@ -10,7 +10,9 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
-import { log } from '../../libs/log';
+import { log } from '../../../libs/log';
+import Container from '../../../components/atoms/Container';
+import { Helmet } from 'react-helmet';
 
 type Status = { name: string; page: string; status: boolean };
 
@@ -139,42 +141,50 @@ const StatusPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="container mx-auto">
-      <div className="p-8">
-        <Card className="border border-gray-200 shadow">
-          <CardHeader className="border-b border-gray-200">
-            <Heading className="text-xl">Status</Heading>
-          </CardHeader>
-          {loading ? (
-            <List>
-              <ListItem>
-                <p className="text-center">Loading</p>
-              </ListItem>
-            </List>
-          ) : (
-            <List>
-              {Object.entries(statuses).map(
-                ([service, { name, page, status }]) => {
-                  const bgColor = status ? 'bg-green-500' : 'bg-red-500';
-                  return (
-                    <ListItem key={service} className="border-t">
-                      <CardBody>
-                        <div className="flex items-center justify-between">
-                          <Link href={page} target="_blank">
-                            <Text textDecoration="underline">{name}</Text>
-                          </Link>
-                          <Box className={`h-6 w-6 rounded-full ${bgColor}`} />
-                        </div>
-                      </CardBody>
-                    </ListItem>
-                  );
-                }
-              )}
-            </List>
-          )}
-        </Card>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Statuses</title>
+      </Helmet>
+      <Container>
+        <div className="p-8">
+          <Card className="border border-gray-200 shadow">
+            <CardHeader>
+              <Heading className="text-xl">Statuses</Heading>
+            </CardHeader>
+            {loading ? (
+              <List>
+                <ListItem className="border-t border-gray-200">
+                  <p className="py-8 text-center">Loading</p>
+                </ListItem>
+              </List>
+            ) : (
+              <List>
+                {Object.entries(statuses).map(
+                  ([service, { name, page, status }]) => {
+                    const bgColor = status ? 'bg-green-500' : 'bg-red-500';
+                    return (
+                      <ListItem key={service} className="border-t">
+                        <CardBody>
+                          <div className="flex items-center justify-between">
+                            <Link href={page} target="_blank">
+                              <Text textDecoration="underline">{name}</Text>
+                            </Link>
+                            <Box
+                              className={`h-6 w-6 rounded-full ${bgColor}`}
+                            />
+                          </div>
+                        </CardBody>
+                      </ListItem>
+                    );
+                  }
+                )}
+              </List>
+            )}
+          </Card>
+        </div>
+      </Container>
+    </>
   );
 };
 

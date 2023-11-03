@@ -67,3 +67,5 @@ export const LAST_YEAR: number = 2100;
 export const END_DATES: number[] = [
   31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31,
 ];
+// Configuration
+export const APP_NAME = 'HIEU DOAN (hieudoanm)';

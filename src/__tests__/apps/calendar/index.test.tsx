@@ -1,13 +1,13 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import PomodoroPage from '../../pages/pomodoro';
+import { CalendarPage } from '../../../pages/apps/calendar';
 
-describe('PomodoroPage', () => {
+describe('CalendarPage', () => {
   test('render default', () => {
     const wrapper = render(
       <BrowserRouter>
-        <PomodoroPage />
+        <CalendarPage />
       </BrowserRouter>
     );
     expect(wrapper.container).toMatchSnapshot();

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Calendar } from '../../components/organisms/Calendar';
+import { Calendar } from '../../../components/organisms/Calendar';
 
-const CalendarPage: React.FC = () => {
+export const CalendarPage: React.FC = () => {
   return (
     <>
       <Helmet>
