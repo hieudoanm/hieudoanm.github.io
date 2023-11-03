@@ -25,6 +25,7 @@ export default {
     '!<rootDir>/src/**/*.test.tsx',
     '!<rootDir>/src/**/*.test.tsx.snap',
     '!<rootDir>/src/**/*.stories.tsx',
+    '!<rootDir>/src/__tests__/**/*.ts',
   ],
 
   // The directory where Jest should output its coverage files
