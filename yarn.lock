@@ -5449,10 +5449,10 @@
     "@types/node" "*"
     "@types/responselike" "^1.0.0"
 
-"@types/chart.js@2.9.39":
-  version "2.9.39"
-  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.39.tgz#b0487b82a85ff1874afd871e6e027bc44e61939a"
-  integrity sha512-FAsZ6v8ds40mVCgM44T1/ZDKuT1Lh6/a2D3nD8ZNX9SqBObBc0vH2VrcLjYP3PL8onPPt9rIw+QyEkgrzj31TQ==
+"@types/chart.js@2.9.40":
+  version "2.9.40"
+  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.40.tgz#d3bc09a87d487cc72c29c618a300e754d087eff2"
+  integrity sha512-ApIH2LIDXzKTNtG4oTMmn2CIII6lvRvxyKnmLb1zYFlwXtE4lTOb2ywgXQJYVuhgWpqaCSHSYOlzO+5gs6hL+A==
   dependencies:
     moment "^2.10.2"
 
