@@ -34,7 +34,7 @@ export const AppsPage: React.FC = () => {
                         <div className="flex aspect-square h-16 w-16 items-center justify-center rounded border md:h-20 md:w-20 lg:h-24 lg:w-24">
                           <Icon
                             as={icon}
-                            className="text-md md:text-lg lg:text-xl"
+                            className="text-base md:text-lg lg:text-xl"
                           />
                         </div>
                         <Text className="text-center">{name}</Text>

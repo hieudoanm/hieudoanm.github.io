@@ -24,7 +24,7 @@ const NewsletterSection: React.FC<NewsletterSectionProperties> = ({
       <Container>
         <div className="items-center justify-between gap-8 py-16 md:flex">
           <div className="mb-8 text-white md:mb-0">
-            <h2 className="text-2xl text-xl uppercase">{title}</h2>
+            <h2 className="text-xl uppercase md:text-2xl">{title}</h2>
             <p className="text-justify">{subtitle}</p>
           </div>
           <form onSubmit={submit} className="flex items-center gap-8">

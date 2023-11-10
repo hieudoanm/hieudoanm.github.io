@@ -183,7 +183,7 @@ export const HomePage: React.FC = () => {
       <div className={theme}>
         <main className="h-screen w-screen overflow-hidden">
           <div className="relative">
-            <div className="absolute bottom-0 left-0 right-0 top-0 mx-auto">
+            <div className="absolute inset-0 mx-auto">
               <div className="relative">
                 {rows.map((rowColumns: number[], row: number) => {
                   return rowColumns.map((column: number) => {
