@@ -7,7 +7,7 @@ exports[`Newsletter render default 1`] = `
     id="id"
   >
     <div
-      class="container mx-auto px-8"
+      class="container mx-auto px-8 "
     >
       <div
         class="items-center justify-between gap-8 py-16 md:flex"

@@ -9,7 +9,7 @@ exports[`ContactPage render default 1`] = `
       class="bg-gray-900 py-4 text-white"
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="flex items-center justify-between"
@@ -65,7 +65,7 @@ exports[`ContactPage render default 1`] = `
       </div>
     </div>
     <div
-      class="container mx-auto px-8"
+      class="container mx-auto px-8 "
     >
       <div
         class="flex items-center py-4"
@@ -265,7 +265,7 @@ exports[`ContactPage render default 1`] = `
       id="id"
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="text-center py-16 "
@@ -305,7 +305,7 @@ exports[`ContactPage render default 1`] = `
       id="id"
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="grid grid-cols-1 gap-16 md:grid-cols-2"
@@ -434,7 +434,7 @@ exports[`ContactPage render default 1`] = `
     class="border-t bg-gray-900 p-8 text-white"
   >
     <div
-      class="container mx-auto px-8"
+      class="container mx-auto px-8 "
     >
       <div
         class="block justify-between md:flex"

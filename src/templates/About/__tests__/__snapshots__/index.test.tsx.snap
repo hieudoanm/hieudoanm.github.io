@@ -9,7 +9,7 @@ exports[`About render default 1`] = `
       class="bg-gray-900 py-4 text-white"
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="flex items-center justify-between"
@@ -65,7 +65,7 @@ exports[`About render default 1`] = `
       </div>
     </div>
     <div
-      class="container mx-auto px-8"
+      class="container mx-auto px-8 "
     >
       <div
         class="flex items-center py-4"
@@ -191,7 +191,7 @@ exports[`About render default 1`] = `
       id=""
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="text-center py-16 "
@@ -212,7 +212,7 @@ exports[`About render default 1`] = `
       id=""
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="text-center py-16 "
@@ -233,7 +233,7 @@ exports[`About render default 1`] = `
       id=""
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="text-center py-16 "
@@ -258,7 +258,7 @@ exports[`About render default 1`] = `
       id=""
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="text-center py-16 "
@@ -279,7 +279,7 @@ exports[`About render default 1`] = `
       id=""
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="text-center py-16 "
@@ -307,7 +307,7 @@ exports[`About render default 1`] = `
           class="bg-gray-900 bg-opacity-80 pb-16"
         >
           <div
-            class="container mx-auto px-8"
+            class="container mx-auto px-8 "
           >
             <div
               class="text-center py-16 text-white"
@@ -335,7 +335,7 @@ exports[`About render default 1`] = `
       id=""
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="text-center py-16 "
@@ -366,7 +366,7 @@ exports[`About render default 1`] = `
       id=""
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="text-center py-16 "
@@ -387,7 +387,7 @@ exports[`About render default 1`] = `
       id=""
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="items-center justify-between gap-8 py-16 md:flex"
@@ -430,7 +430,7 @@ exports[`About render default 1`] = `
     class="border-t bg-gray-900 p-8 text-white"
   >
     <div
-      class="container mx-auto px-8"
+      class="container mx-auto px-8 "
     >
       <div
         class="block justify-between md:flex"

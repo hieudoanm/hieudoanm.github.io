@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import { FaBrain, FaCalendar, FaClock, FaFlag } from 'react-icons/fa6';
 import Container from '../../components/atoms/Container';
 import { APP_NAME } from '../../constants';
+import { FaIdBadge } from 'react-icons/fa';
 
 export const AppsPage: React.FC = () => {
   const apps = [
@@ -12,6 +13,7 @@ export const AppsPage: React.FC = () => {
     { id: 'hofstede', name: 'Hofstede', icon: FaBrain },
     { id: 'pomodoro', name: 'Pomodoro', icon: FaClock },
     { id: 'statuses', name: 'Statuses', icon: FaFlag },
+    { id: 'uuid', name: 'UUID', icon: FaIdBadge },
   ];
 
   return (
@@ -27,7 +29,7 @@ export const AppsPage: React.FC = () => {
               return (
                 <Box key={id} className="col-span-1">
                   <div className="flex aspect-square items-center justify-center">
-                    <Link to="/apps/calendar">
+                    <Link to={`/apps/${id}`}>
                       <Box className="flex flex-col items-center gap-y-2 md:gap-y-4">
                         <div className="flex aspect-square h-16 w-16 items-center justify-center rounded border md:h-20 md:w-20 lg:h-24 lg:w-24">
                           <Icon

@@ -9,7 +9,7 @@ exports[`Navbar render default 1`] = `
       class="bg-gray-900 py-4 text-white"
     >
       <div
-        class="container mx-auto px-8"
+        class="container mx-auto px-8 "
       >
         <div
           class="flex items-center justify-between"
@@ -65,7 +65,7 @@ exports[`Navbar render default 1`] = `
       </div>
     </div>
     <div
-      class="container mx-auto px-8"
+      class="container mx-auto px-8 "
     >
       <div
         class="flex items-center py-4"
