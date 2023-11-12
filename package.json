@@ -33,6 +33,7 @@
     "gatsby": "5.12.9",
     "gatsby-plugin-image": "3.12.3",
     "gatsby-plugin-mdx": "5.12.3",
+    "gatsby-plugin-robots-txt": "1.8.0",
     "gatsby-plugin-sass": "6.12.3",
     "gatsby-plugin-sharp": "5.12.3",
     "gatsby-transformer-remark": "6.12.3",

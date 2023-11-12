@@ -341,6 +341,7 @@ module.exports = {
   plugins: [
     { resolve: '@chakra-ui/gatsby-plugin' },
     'gatsby-plugin-image',
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-postcss',
