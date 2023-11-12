@@ -2,7 +2,13 @@ import { Box, Icon, Text } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { FaBrain, FaCalendar, FaClock, FaFlag } from 'react-icons/fa6';
+import {
+  FaBrain,
+  FaCalendar,
+  FaClock,
+  FaCloudSunRain,
+  FaFlag,
+} from 'react-icons/fa6';
 import Container from '../../components/atoms/Container';
 import { APP_NAME } from '../../constants';
 import { FaIdBadge } from 'react-icons/fa';
@@ -14,6 +20,7 @@ export const AppsPage: React.FC = () => {
     { id: 'pomodoro', name: 'Pomodoro', icon: FaClock },
     { id: 'statuses', name: 'Statuses', icon: FaFlag },
     { id: 'uuid', name: 'UUID', icon: FaIdBadge },
+    { id: 'weather', name: 'Weather', icon: FaCloudSunRain },
   ];
 
   return (
