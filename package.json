@@ -59,7 +59,7 @@
     "@storybook/manager-webpack5": "6.5.16",
     "@storybook/react": "7.5.3",
     "@storybook/testing-library": "0.2.2",
-    "@testing-library/react": "14.1.0",
+    "@testing-library/react": "14.1.2",
     "@types/chart.js": "2.9.40",
     "@types/jest": "29.5.8",
     "@types/jest-axe": "3.5.8",
