@@ -18,16 +18,20 @@ jobs:
           node-version: '20.1.0'
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
+        working-directory: web
       - name: Linting
-        run: yarn lint
+        run: yarn lint --fix
+        working-directory: web
       - name: Unit Tests
         run: yarn test -u
+        working-directory: web
       - name: Build Production
         run: yarn build
+        working-directory: web
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           token: ${{ secrets.GHP_TOKEN }}
           branch: gh-pages
-          folder: public
+          folder: web/public
           clean: true

@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lint
+yarn workspaces run lint
 yarn prettier --write .
 git add -A

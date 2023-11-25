@@ -22,9 +22,13 @@ jobs:
           node-version: '20.1.0'
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
+        working-directory: web
       - name: Linting
         run: yarn lint
+        working-directory: web
       - name: Unit Tests
         run: yarn test -u
+        working-directory: web
       - name: Build Production
         run: yarn build
+        working-directory: web
