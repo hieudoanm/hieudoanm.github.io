@@ -16,7 +16,7 @@ exports[`Newsletter render default 1`] = `
           class="mb-8 text-white md:mb-0"
         >
           <h2
-            class="text-2xl text-xl uppercase"
+            class="text-xl uppercase md:text-2xl"
           >
             title
           </h2>
