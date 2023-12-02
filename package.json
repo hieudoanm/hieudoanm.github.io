@@ -16,7 +16,7 @@
   "resolutions": {
     "axios": "1.6.2",
     "glob-parent": "6.0.2",
-    "postcss": "8.4.31"
+    "postcss": "8.4.32"
   },
   "workspaces": [
     "web"
