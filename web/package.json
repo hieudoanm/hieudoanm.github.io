@@ -62,7 +62,7 @@
     "@types/chart.js": "2.9.41",
     "@types/jest": "29.5.10",
     "@types/jest-axe": "3.5.9",
-    "@types/node": "20.10.2",
+    "@types/node": "20.10.3",
     "@types/react-helmet": "6.1.9",
     "@types/styled-components": "5.1.32",
     "@types/uuid": "9.0.7",
