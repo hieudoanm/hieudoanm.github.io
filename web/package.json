@@ -28,7 +28,7 @@
     "@emotion/styled": "11.11.0",
     "@headlessui/react": "1.7.17",
     "chart.js": "4.4.1",
-    "framer-motion": "10.16.15",
+    "framer-motion": "10.16.16",
     "gatsby": "5.12.12",
     "gatsby-plugin-image": "3.12.3",
     "gatsby-plugin-mdx": "5.12.3",
