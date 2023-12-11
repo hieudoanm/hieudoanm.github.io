@@ -48,7 +48,7 @@
     "uuid": "9.0.1"
   },
   "devDependencies": {
-    "@babel/core": "7.23.5",
+    "@babel/core": "7.23.6",
     "@emotion/eslint-plugin": "11.11.0",
     "@storybook/addon-actions": "7.6.4",
     "@storybook/addon-essentials": "7.6.4",
