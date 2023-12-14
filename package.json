@@ -9,6 +9,7 @@
   "scripts": {
     "format": "prettier . --write",
     "lint": "yarn workspaces run lint",
+    "test": "yarn workspaces run test",
     "prepare": "husky install || true"
   },
   "devDependencies": {

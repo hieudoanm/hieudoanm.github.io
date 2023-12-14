@@ -1034,7 +1034,7 @@ exports[`CalendarPage render default 1`] = `
                   <p
                     class="chakra-text truncate text-gray-500 css-0"
                   >
-                    29/10
+                    26/11
                   </p>
                 </div>
               </div>
@@ -1051,7 +1051,7 @@ exports[`CalendarPage render default 1`] = `
                   <p
                     class="chakra-text truncate text-gray-500 css-0"
                   >
-                    30/10
+                    27/11
                   </p>
                 </div>
               </div>
@@ -1068,7 +1068,41 @@ exports[`CalendarPage render default 1`] = `
                   <p
                     class="chakra-text truncate text-gray-500 css-0"
                   >
-                    31/10
+                    28/11
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <div
+                class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
+              >
+                <div
+                  class=""
+                >
+                  <p
+                    class="chakra-text truncate text-gray-500 css-0"
+                  >
+                    29/11
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <div
+                class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
+              >
+                <div
+                  class=""
+                >
+                  <p
+                    class="chakra-text truncate text-gray-500 css-0"
+                  >
+                    30/11
                   </p>
                 </div>
               </div>
@@ -1301,7 +1335,7 @@ exports[`CalendarPage render default 1`] = `
                 class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
               >
                 <div
-                  class=""
+                  class="font-bold"
                 >
                   <p
                     class="chakra-text truncate text-black css-0"
@@ -1505,7 +1539,7 @@ exports[`CalendarPage render default 1`] = `
                 class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
               >
                 <div
-                  class="font-bold"
+                  class=""
                 >
                   <p
                     class="chakra-text truncate text-black css-0"
@@ -1593,9 +1627,9 @@ exports[`CalendarPage render default 1`] = `
                   class=""
                 >
                   <p
-                    class="chakra-text truncate text-gray-500 css-0"
+                    class="chakra-text truncate text-black css-0"
                   >
-                    1/12
+                    31
                   </p>
                 </div>
               </div>
@@ -1612,7 +1646,92 @@ exports[`CalendarPage render default 1`] = `
                   <p
                     class="chakra-text truncate text-gray-500 css-0"
                   >
-                    2/12
+                    1/1
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <div
+                class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
+              >
+                <div
+                  class=""
+                >
+                  <p
+                    class="chakra-text truncate text-gray-500 css-0"
+                  >
+                    2/1
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <div
+                class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
+              >
+                <div
+                  class=""
+                >
+                  <p
+                    class="chakra-text truncate text-gray-500 css-0"
+                  >
+                    3/1
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <div
+                class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
+              >
+                <div
+                  class=""
+                >
+                  <p
+                    class="chakra-text truncate text-gray-500 css-0"
+                  >
+                    4/1
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <div
+                class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
+              >
+                <div
+                  class=""
+                >
+                  <p
+                    class="chakra-text truncate text-gray-500 css-0"
+                  >
+                    5/1
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <div
+                class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
+              >
+                <div
+                  class=""
+                >
+                  <p
+                    class="chakra-text truncate text-gray-500 css-0"
+                  >
+                    6/1
                   </p>
                 </div>
               </div>
@@ -1626,7 +1745,7 @@ exports[`CalendarPage render default 1`] = `
             >
               2023
                - 
-              November
+              December
             </p>
           </div>
         </div>
