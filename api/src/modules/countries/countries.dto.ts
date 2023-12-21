@@ -9,6 +9,9 @@ export class CountryDto {
 
   @ApiProperty()
   currencies: Record<string, { name: string; symbol: string }>;
+
+  @ApiProperty()
+  languages: Record<string, string>;
 }
 
 export class CountriesDto {
@@ -36,4 +39,20 @@ export class CurrenciesDto {
 
   @ApiProperty({ type: [CurrencyDto] })
   currencies: CurrencyDto[];
+}
+
+export class LanguageDto {
+  @ApiProperty()
+  code: string;
+
+  @ApiProperty()
+  name: string;
+}
+
+export class LanguagesDto {
+  @ApiProperty()
+  total: number;
+
+  @ApiProperty({ type: [LanguageDto] })
+  languages: LanguageDto[];
 }

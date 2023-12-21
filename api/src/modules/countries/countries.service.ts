@@ -5,6 +5,8 @@ import {
   CountryDto,
   CurrenciesDto,
   CurrencyDto,
+  LanguageDto,
+  LanguagesDto,
 } from './countries.dto';
 
 @Injectable()
@@ -26,6 +28,7 @@ export class CountriesService {
       return { total: 0, countries: [] };
     }
   }
+
   async getCurrencies(): Promise<CurrenciesDto> {
     const { countries = [] } = await this.getCountries();
     let currenciesMap = {};
@@ -41,5 +44,22 @@ export class CountriesService {
     currencies.sort((a, b) => (a.code > b.code ? 1 : -1));
     const total: number = currencies.length;
     return { total, currencies };
+  }
+
+  async getLanguages(): Promise<LanguagesDto> {
+    const { countries = [] } = await this.getCountries();
+    let languagesMap = {};
+    countries.forEach(({ languages }) => {
+      languagesMap = { ...languages, ...languagesMap };
+    });
+    const languages: LanguageDto[] = Object.keys(languagesMap).map(
+      (code: string) => {
+        const language = languagesMap[code];
+        return { name: language, code };
+      }
+    );
+    languages.sort((a, b) => (a.code > b.code ? 1 : -1));
+    const total: number = languages.length;
+    return { total, languages };
   }
 }

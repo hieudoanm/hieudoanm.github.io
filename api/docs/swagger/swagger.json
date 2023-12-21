@@ -17,9 +17,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/countries/currencies": {
@@ -38,9 +36,26 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
+      }
+    },
+    "/countries/languages": {
+      "get": {
+        "operationId": "CountriesController_getLanguages",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LanguagesDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["countries"]
       }
     },
     "/health": {
@@ -59,9 +74,7 @@
             }
           }
         },
-        "tags": [
-          "health"
-        ]
+        "tags": ["health"]
       }
     },
     "/news/google": {
@@ -80,9 +93,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     },
     "/news/sources": {
@@ -101,9 +112,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     }
   },
@@ -128,13 +137,12 @@
           },
           "currencies": {
             "type": "object"
+          },
+          "languages": {
+            "type": "object"
           }
         },
-        "required": [
-          "region",
-          "subregion",
-          "currencies"
-        ]
+        "required": ["region", "subregion", "currencies", "languages"]
       },
       "CountriesDto": {
         "type": "object",
@@ -149,10 +157,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "countries"
-        ]
+        "required": ["total", "countries"]
       },
       "CurrencyDto": {
         "type": "object",
@@ -167,11 +172,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "code",
-          "name",
-          "symbol"
-        ]
+        "required": ["code", "name", "symbol"]
       },
       "CurrenciesDto": {
         "type": "object",
@@ -186,10 +187,34 @@
             }
           }
         },
-        "required": [
-          "total",
-          "currencies"
-        ]
+        "required": ["total", "currencies"]
+      },
+      "LanguageDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": ["code", "name"]
+      },
+      "LanguagesDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LanguageDto"
+            }
+          }
+        },
+        "required": ["total", "languages"]
       },
       "HealthResponseDto": {
         "type": "object",
@@ -198,9 +223,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "status"
-        ]
+        "required": ["status"]
       },
       "GoogleCountryDto": {
         "type": "object",
@@ -215,10 +238,7 @@
             }
           }
         },
-        "required": [
-          "country",
-          "queries"
-        ]
+        "required": ["country", "queries"]
       },
       "GoogleResponseDto": {
         "type": "object",
@@ -233,10 +253,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "countries"
-        ]
+        "required": ["total", "countries"]
       },
       "NewsSourceDto": {
         "type": "object",
@@ -286,10 +303,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "sources"
-        ]
+        "required": ["total", "sources"]
       }
     }
   }

@@ -5,12 +5,12 @@ paths:
       operationId: CountriesController_getCountries
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CountriesDto"
+                $ref: '#/components/schemas/CountriesDto'
       tags: &a1
         - countries
   /countries/currencies:
@@ -18,24 +18,36 @@ paths:
       operationId: CountriesController_getCurrencies
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CurrenciesDto"
+                $ref: '#/components/schemas/CurrenciesDto'
+      tags: *a1
+  /countries/languages:
+    get:
+      operationId: CountriesController_getLanguages
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LanguagesDto'
       tags: *a1
   /health:
     get:
       operationId: HealthController_getHealth
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/HealthResponseDto"
+                $ref: '#/components/schemas/HealthResponseDto'
       tags:
         - health
   /news/google:
@@ -43,12 +55,12 @@ paths:
       operationId: NewsController_getGoogle
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GoogleResponseDto"
+                $ref: '#/components/schemas/GoogleResponseDto'
       tags: &a2
         - news
   /news/sources:
@@ -56,17 +68,17 @@ paths:
       operationId: NewsController_getSources
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/NewsSourcesDto"
+                $ref: '#/components/schemas/NewsSourcesDto'
       tags: *a2
 info:
   title: hieudoanm
   description: Hieu Doan
-  version: "1.0"
+  version: '1.0'
   contact: {}
 tags: []
 servers: []
@@ -81,10 +93,13 @@ components:
           type: string
         currencies:
           type: object
+        languages:
+          type: object
       required:
         - region
         - subregion
         - currencies
+        - languages
     CountriesDto:
       type: object
       properties:
@@ -93,7 +108,7 @@ components:
         countries:
           type: array
           items:
-            $ref: "#/components/schemas/CountryDto"
+            $ref: '#/components/schemas/CountryDto'
       required:
         - total
         - countries
@@ -118,10 +133,32 @@ components:
         currencies:
           type: array
           items:
-            $ref: "#/components/schemas/CurrencyDto"
+            $ref: '#/components/schemas/CurrencyDto'
       required:
         - total
         - currencies
+    LanguageDto:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+      required:
+        - code
+        - name
+    LanguagesDto:
+      type: object
+      properties:
+        total:
+          type: number
+        languages:
+          type: array
+          items:
+            $ref: '#/components/schemas/LanguageDto'
+      required:
+        - total
+        - languages
     HealthResponseDto:
       type: object
       properties:
@@ -149,7 +186,7 @@ components:
         countries:
           type: array
           items:
-            $ref: "#/components/schemas/GoogleCountryDto"
+            $ref: '#/components/schemas/GoogleCountryDto'
       required:
         - total
         - countries
@@ -186,7 +223,7 @@ components:
         sources:
           type: array
           items:
-            $ref: "#/components/schemas/NewsSourceDto"
+            $ref: '#/components/schemas/NewsSourceDto'
       required:
         - total
         - sources
