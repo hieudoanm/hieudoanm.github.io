@@ -11,13 +11,9 @@ export type CTASectionProperties = {
   backgroundImage: string;
 };
 
-const CTASection: React.FC<CTASectionProperties> = ({
-  id,
-  title,
-  subtitle,
-  cta,
-  backgroundImage,
-}) => {
+const CTASection: React.FC<CTASectionProperties> = (
+  { id, title, subtitle, cta, backgroundImage }
+) => {
   return (
     <div className="py-16">
       <div

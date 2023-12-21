@@ -1,0 +1,115 @@
+{
+  "item": [
+    {
+      "name": "/",
+      "description": "",
+      "item": [
+        {
+          "id": "1cbad179-b94e-405f-9574-8279a3ad0fd0",
+          "name": "Health Controller get Hello",
+          "request": {
+            "name": "Health Controller get Hello",
+            "description": {},
+            "url": {
+              "path": [""],
+              "host": ["{{baseUrl}}"],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {},
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aa45b776-af76-460f-a02e-226980060126",
+              "originalRequest": {
+                "url": {
+                  "path": [""],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [],
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": { "disableBodyPruning": true }
+        }
+      ]
+    },
+    {
+      "name": "news",
+      "description": "",
+      "item": [
+        {
+          "name": "google",
+          "description": "",
+          "item": [
+            {
+              "id": "06422ef8-e43f-4d65-996b-cc7a7ff3d81a",
+              "name": "News Controller get Google",
+              "request": {
+                "name": "News Controller get Google",
+                "description": {},
+                "url": {
+                  "path": ["news", "google"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "1748a69b-84a7-42e1-89fe-49ff682ae41f",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["news", "google"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{\n  \"total\": \"<number>\",\n  \"countries\": [\n    {\n      \"country\": \"<string>\",\n      \"queries\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"country\": \"<string>\",\n      \"queries\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [],
+  "variable": [{ "key": "baseUrl", "value": "/" }],
+  "info": {
+    "_postman_id": "2c45d754-4c77-4337-912b-44eddebcb0d8",
+    "name": "hieudoanm",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": { "content": "Hieu Doan", "type": "text/plain" }
+  }
+}

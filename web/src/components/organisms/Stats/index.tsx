@@ -16,12 +16,14 @@ export type StatsSectionProperties = {
   stats: Array<Statistic>;
 };
 
-const StatsSection: React.FC<StatsSectionProperties> = ({
-  id: sectionId = '',
-  title: sectionTitle = '',
-  subtitle: sectionSubtitle = '',
-  stats = [],
-}) => {
+const StatsSection: React.FC<StatsSectionProperties> = (
+  {
+    id: sectionId = '',
+    title: sectionTitle = '',
+    subtitle: sectionSubtitle = '',
+    stats = [],
+  }
+) => {
   return (
     <div id={sectionId} className="pb-16">
       <Container>

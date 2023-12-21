@@ -1,0 +1,85 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "HealthController_getHello",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/news/google": {
+      "get": {
+        "operationId": "NewsController_getGoogle",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GoogleResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "news"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "hieudoanm",
+    "description": "Hieu Doan",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "GoogleCountryDto": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string"
+          },
+          "queries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "country",
+          "queries"
+        ]
+      },
+      "GoogleResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "countries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GoogleCountryDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "countries"
+        ]
+      }
+    }
+  }
+}

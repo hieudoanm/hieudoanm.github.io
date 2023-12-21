@@ -12,11 +12,9 @@ const submit = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
 };
 
-const NewsletterSection: React.FC<NewsletterSectionProperties> = ({
-  id,
-  title,
-  subtitle,
-}) => {
+const NewsletterSection: React.FC<NewsletterSectionProperties> = (
+  { id, title, subtitle }
+) => {
   const [email, setEmail] = useState('');
 
   return (

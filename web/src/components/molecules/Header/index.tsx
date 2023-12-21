@@ -9,14 +9,16 @@ export type HeaderProperties = {
   children: React.ReactNode;
 };
 
-const Header: React.FC<HeaderProperties> = ({
-  align = 'center',
-  padding = 'py-16',
-  children = '',
-  className = '',
-  short = '',
-  subtitle = '',
-}) => {
+const Header: React.FC<HeaderProperties> = (
+  {
+    align = 'center',
+    padding = 'py-16',
+    children = '',
+    className = '',
+    short = '',
+    subtitle = '',
+  }
+) => {
   const paddingTop: string = short === '' ? '' : 'mt-8';
   const paddingBottom: string = subtitle === '' ? '' : 'mb-8';
   return (

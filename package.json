@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
-  "author": "hieudoanm <hieumdoan@gmail.com>",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
@@ -22,6 +22,7 @@
     "postcss": "8.4.32"
   },
   "workspaces": [
+    "api",
     "web"
   ]
 }

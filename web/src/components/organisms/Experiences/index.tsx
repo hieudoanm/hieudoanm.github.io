@@ -25,12 +25,9 @@ export type ExperiencesSectionProperties = {
   experiences: Experience[];
 };
 
-const ExperiencesSection: React.FC<ExperiencesSectionProperties> = ({
-  id,
-  title: sectionTitle,
-  subtitle,
-  experiences,
-}) => {
+const ExperiencesSection: React.FC<ExperiencesSectionProperties> = (
+  { id, title: sectionTitle, subtitle, experiences }
+) => {
   return (
     <div id={id} className="pb-16">
       <Container>

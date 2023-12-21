@@ -31,12 +31,9 @@ export type PricingSectionProperties = {
   plans: Array<Plan>;
 };
 
-const PricingSection: React.FC<PricingSectionProperties> = ({
-  id: sectionId = '',
-  title: sectionTitle = '',
-  subtitle = '',
-  plans = [],
-}) => {
+const PricingSection: React.FC<PricingSectionProperties> = (
+  { id: sectionId = '', title: sectionTitle = '', subtitle = '', plans = [] }
+) => {
   const [currency, setCurrency] = useState('vnd');
 
   const links: Record<'vnd' | 'usd' | string, Payment> = {
@@ -80,14 +77,16 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {plans.map(
-            ({
-              id = '',
-              title = '',
-              description = '',
-              price = {},
-              features = [],
-              timeUnit = '',
-            }: Plan) => {
+            (
+              {
+                id = '',
+                title = '',
+                description = '',
+                price = {},
+                features = [],
+                timeUnit = '',
+              }: Plan
+            ) => {
               return (
                 <div key={`pricing-${id}`} className="rounded-lg border">
                   <div className="border-b p-8">

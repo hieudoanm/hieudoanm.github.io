@@ -8,12 +8,9 @@ export type HeroSectionProperties = {
   backgroundImage: string;
 };
 
-const HeroSection: React.FC<HeroSectionProperties> = ({
-  id,
-  title,
-  subtitle,
-  backgroundImage,
-}) => {
+const HeroSection: React.FC<HeroSectionProperties> = (
+  { id, title, subtitle, backgroundImage }
+) => {
   return (
     <div
       id={id}
