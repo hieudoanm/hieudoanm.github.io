@@ -2,15 +2,15 @@ openapi: 3.0.0
 paths:
   /health:
     get:
-      operationId: HealthController_getHello
+      operationId: HealthController_getHealth
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/HealthResponseDto"
+                $ref: '#/components/schemas/HealthResponseDto'
       tags:
         - health
   /news/google:
@@ -18,12 +18,12 @@ paths:
       operationId: NewsController_getGoogle
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GoogleResponseDto"
+                $ref: '#/components/schemas/GoogleResponseDto'
       tags: &a1
         - news
   /news/sources:
@@ -31,17 +31,17 @@ paths:
       operationId: NewsController_getSources
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/NewsSourcesDto"
+                $ref: '#/components/schemas/NewsSourcesDto'
       tags: *a1
 info:
   title: hieudoanm
   description: Hieu Doan
-  version: "1.0"
+  version: '1.0'
   contact: {}
 tags: []
 servers: []
@@ -74,7 +74,7 @@ components:
         countries:
           type: array
           items:
-            $ref: "#/components/schemas/GoogleCountryDto"
+            $ref: '#/components/schemas/GoogleCountryDto'
       required:
         - total
         - countries
@@ -111,7 +111,7 @@ components:
         sources:
           type: array
           items:
-            $ref: "#/components/schemas/NewsSourceDto"
+            $ref: '#/components/schemas/NewsSourceDto'
       required:
         - total
         - sources

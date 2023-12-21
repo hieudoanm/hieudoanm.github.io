@@ -11,6 +11,14 @@ on:
 
 jobs:
   continuous-integration:
+    strategy:
+      fail-fast: false
+      matrix:
+        services:
+          - name: API
+            working-directory: api
+          - name: Web
+            working-directory: web
     name: Continuous Integration
     runs-on: ubuntu-latest
     steps:
@@ -22,13 +30,13 @@ jobs:
           node-version: '20.1.0'
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
-        working-directory: web
-      # - name: Linting
-      #   run: yarn lint
-      #   working-directory: web
+        working-directory: ${{ matrix.services.working-directory }}
+      - name: Linting
+        run: yarn lint --fix
+        working-directory: ${{ matrix.services.working-directory }}
       - name: Unit Tests
         run: yarn test -u
-        working-directory: web
+        working-directory: ${{ matrix.services.working-directory }}
       - name: Build Production
         run: yarn build
-        working-directory: web
+        working-directory: ${{ matrix.services.working-directory }}

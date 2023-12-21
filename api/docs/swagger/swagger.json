@@ -3,7 +3,7 @@
   "paths": {
     "/health": {
       "get": {
-        "operationId": "HealthController_getHello",
+        "operationId": "HealthController_getHealth",
         "parameters": [],
         "responses": {
           "200": {
@@ -17,9 +17,7 @@
             }
           }
         },
-        "tags": [
-          "health"
-        ]
+        "tags": ["health"]
       }
     },
     "/news/google": {
@@ -38,9 +36,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     },
     "/news/sources": {
@@ -59,9 +55,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     }
   },
@@ -82,9 +76,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "status"
-        ]
+        "required": ["status"]
       },
       "GoogleCountryDto": {
         "type": "object",
@@ -99,10 +91,7 @@
             }
           }
         },
-        "required": [
-          "country",
-          "queries"
-        ]
+        "required": ["country", "queries"]
       },
       "GoogleResponseDto": {
         "type": "object",
@@ -117,10 +106,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "countries"
-        ]
+        "required": ["total", "countries"]
       },
       "NewsSourceDto": {
         "type": "object",
@@ -170,10 +156,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "sources"
-        ]
+        "required": ["total", "sources"]
       }
     }
   }

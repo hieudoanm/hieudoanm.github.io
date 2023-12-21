@@ -10,7 +10,7 @@ export class HealthController {
 
   @Get()
   @ApiResponse({ status: 200, type: HealthResponseDto })
-  getHello(): HealthResponseDto {
+  getHealth(): HealthResponseDto {
     return this.healthService.getHealth();
   }
 }
