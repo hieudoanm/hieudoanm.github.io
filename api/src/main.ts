@@ -23,7 +23,7 @@ const buildDocument = (app: INestApplication) => {
   writeFileSync('./docs/swagger/swagger.yaml', documentYaml);
   writeFileSync(
     './docs/swagger/swagger.json',
-    JSON.stringify(document, null, 2),
+    JSON.stringify(document, null, 2)
   );
 };
 

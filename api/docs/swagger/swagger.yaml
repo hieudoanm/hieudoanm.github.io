@@ -1,34 +1,59 @@
 openapi: 3.0.0
 paths:
-  /:
+  /health:
     get:
       operationId: HealthController_getHello
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponseDto"
+      tags:
+        - health
   /news/google:
     get:
       operationId: NewsController_getGoogle
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GoogleResponseDto'
-      tags:
+                $ref: "#/components/schemas/GoogleResponseDto"
+      tags: &a1
         - news
+  /news/sources:
+    get:
+      operationId: NewsController_getSources
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NewsSourcesDto"
+      tags: *a1
 info:
   title: hieudoanm
   description: Hieu Doan
-  version: '1.0'
+  version: "1.0"
   contact: {}
 tags: []
 servers: []
 components:
   schemas:
+    HealthResponseDto:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
     GoogleCountryDto:
       type: object
       properties:
@@ -49,7 +74,44 @@ components:
         countries:
           type: array
           items:
-            $ref: '#/components/schemas/GoogleCountryDto'
+            $ref: "#/components/schemas/GoogleCountryDto"
       required:
         - total
         - countries
+    NewsSourceDto:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        url:
+          type: string
+        category:
+          type: string
+        language:
+          type: string
+        country:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - url
+        - category
+        - language
+        - country
+    NewsSourcesDto:
+      type: object
+      properties:
+        total:
+          type: number
+        sources:
+          type: array
+          items:
+            $ref: "#/components/schemas/NewsSourceDto"
+      required:
+        - total
+        - sources

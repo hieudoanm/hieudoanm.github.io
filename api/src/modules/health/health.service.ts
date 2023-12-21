@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { HealthResponseDto } from './health.dto';
 
 @Injectable()
 export class HealthService {
-  getHello(): string {
-    return 'Hello World!';
+  getHealth(): HealthResponseDto {
+    return { status: 'OK' };
   }
 }

@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
-import { GoogleResponseDto } from './news.dto';
+import { GoogleResponseDto, NewsSourcesDto } from './news.dto';
 import { NewsService } from './news.service';
 
 @ApiTags('news')
@@ -10,7 +10,13 @@ export class NewsController {
 
   @Get('google')
   @ApiResponse({ status: 200, type: GoogleResponseDto })
-  async getGoogle() {
+  async getGoogle(): Promise<GoogleResponseDto> {
     return this.newsService.getGoogle();
+  }
+
+  @Get('sources')
+  @ApiResponse({ status: 200, type: NewsSourcesDto })
+  async getSources(): Promise<NewsSourcesDto> {
+    return this.newsService.getSources();
   }
 }

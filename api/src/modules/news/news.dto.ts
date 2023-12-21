@@ -15,3 +15,34 @@ export class GoogleResponseDto {
   @ApiProperty({ type: [GoogleCountryDto] })
   countries: GoogleCountryDto[];
 }
+
+export class NewsSourceDto {
+  @ApiProperty()
+  id: string;
+
+  @ApiProperty()
+  name: string;
+
+  @ApiProperty()
+  description: string;
+
+  @ApiProperty()
+  url: string;
+
+  @ApiProperty()
+  category: string;
+
+  @ApiProperty()
+  language: string;
+
+  @ApiProperty()
+  country: string;
+}
+
+export class NewsSourcesDto {
+  @ApiProperty()
+  total: number;
+
+  @ApiProperty({ type: [NewsSourceDto] })
+  sources: NewsSourceDto[];
+}
