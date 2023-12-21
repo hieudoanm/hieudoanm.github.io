@@ -1,6 +1,48 @@
 {
   "openapi": "3.0.0",
   "paths": {
+    "/countries": {
+      "get": {
+        "operationId": "CountriesController_getCountries",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountriesDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "countries"
+        ]
+      }
+    },
+    "/countries/currencies": {
+      "get": {
+        "operationId": "CountriesController_getCurrencies",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrenciesDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "countries"
+        ]
+      }
+    },
     "/health": {
       "get": {
         "operationId": "HealthController_getHealth",
@@ -17,7 +59,9 @@
             }
           }
         },
-        "tags": ["health"]
+        "tags": [
+          "health"
+        ]
       }
     },
     "/news/google": {
@@ -36,7 +80,9 @@
             }
           }
         },
-        "tags": ["news"]
+        "tags": [
+          "news"
+        ]
       }
     },
     "/news/sources": {
@@ -55,7 +101,9 @@
             }
           }
         },
-        "tags": ["news"]
+        "tags": [
+          "news"
+        ]
       }
     }
   },
@@ -69,6 +117,80 @@
   "servers": [],
   "components": {
     "schemas": {
+      "CountryDto": {
+        "type": "object",
+        "properties": {
+          "region": {
+            "type": "string"
+          },
+          "subregion": {
+            "type": "string"
+          },
+          "currencies": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "region",
+          "subregion",
+          "currencies"
+        ]
+      },
+      "CountriesDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "countries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CountryDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "countries"
+        ]
+      },
+      "CurrencyDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "name",
+          "symbol"
+        ]
+      },
+      "CurrenciesDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "currencies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CurrencyDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "currencies"
+        ]
+      },
       "HealthResponseDto": {
         "type": "object",
         "properties": {
@@ -76,7 +198,9 @@
             "type": "string"
           }
         },
-        "required": ["status"]
+        "required": [
+          "status"
+        ]
       },
       "GoogleCountryDto": {
         "type": "object",
@@ -91,7 +215,10 @@
             }
           }
         },
-        "required": ["country", "queries"]
+        "required": [
+          "country",
+          "queries"
+        ]
       },
       "GoogleResponseDto": {
         "type": "object",
@@ -106,7 +233,10 @@
             }
           }
         },
-        "required": ["total", "countries"]
+        "required": [
+          "total",
+          "countries"
+        ]
       },
       "NewsSourceDto": {
         "type": "object",
@@ -156,7 +286,10 @@
             }
           }
         },
-        "required": ["total", "sources"]
+        "required": [
+          "total",
+          "sources"
+        ]
       }
     }
   }

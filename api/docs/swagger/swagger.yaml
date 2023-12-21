@@ -1,16 +1,41 @@
 openapi: 3.0.0
 paths:
+  /countries:
+    get:
+      operationId: CountriesController_getCountries
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CountriesDto"
+      tags: &a1
+        - countries
+  /countries/currencies:
+    get:
+      operationId: CountriesController_getCurrencies
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrenciesDto"
+      tags: *a1
   /health:
     get:
       operationId: HealthController_getHealth
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HealthResponseDto'
+                $ref: "#/components/schemas/HealthResponseDto"
       tags:
         - health
   /news/google:
@@ -18,35 +43,85 @@ paths:
       operationId: NewsController_getGoogle
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GoogleResponseDto'
-      tags: &a1
+                $ref: "#/components/schemas/GoogleResponseDto"
+      tags: &a2
         - news
   /news/sources:
     get:
       operationId: NewsController_getSources
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsSourcesDto'
-      tags: *a1
+                $ref: "#/components/schemas/NewsSourcesDto"
+      tags: *a2
 info:
   title: hieudoanm
   description: Hieu Doan
-  version: '1.0'
+  version: "1.0"
   contact: {}
 tags: []
 servers: []
 components:
   schemas:
+    CountryDto:
+      type: object
+      properties:
+        region:
+          type: string
+        subregion:
+          type: string
+        currencies:
+          type: object
+      required:
+        - region
+        - subregion
+        - currencies
+    CountriesDto:
+      type: object
+      properties:
+        total:
+          type: number
+        countries:
+          type: array
+          items:
+            $ref: "#/components/schemas/CountryDto"
+      required:
+        - total
+        - countries
+    CurrencyDto:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        symbol:
+          type: string
+      required:
+        - code
+        - name
+        - symbol
+    CurrenciesDto:
+      type: object
+      properties:
+        total:
+          type: number
+        currencies:
+          type: array
+          items:
+            $ref: "#/components/schemas/CurrencyDto"
+      required:
+        - total
+        - currencies
     HealthResponseDto:
       type: object
       properties:
@@ -74,7 +149,7 @@ components:
         countries:
           type: array
           items:
-            $ref: '#/components/schemas/GoogleCountryDto'
+            $ref: "#/components/schemas/GoogleCountryDto"
       required:
         - total
         - countries
@@ -111,7 +186,7 @@ components:
         sources:
           type: array
           items:
-            $ref: '#/components/schemas/NewsSourceDto'
+            $ref: "#/components/schemas/NewsSourceDto"
       required:
         - total
         - sources
