@@ -28,9 +28,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     }
   },
@@ -57,10 +55,7 @@
             }
           }
         },
-        "required": [
-          "country",
-          "queries"
-        ]
+        "required": ["country", "queries"]
       },
       "GoogleResponseDto": {
         "type": "object",
@@ -75,10 +70,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "countries"
-        ]
+        "required": ["total", "countries"]
       }
     }
   }

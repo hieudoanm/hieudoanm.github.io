@@ -5,25 +5,25 @@ paths:
       operationId: HealthController_getHello
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
   /news/google:
     get:
       operationId: NewsController_getGoogle
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GoogleResponseDto"
+                $ref: '#/components/schemas/GoogleResponseDto'
       tags:
         - news
 info:
   title: hieudoanm
   description: Hieu Doan
-  version: "1.0"
+  version: '1.0'
   contact: {}
 tags: []
 servers: []
@@ -49,7 +49,7 @@ components:
         countries:
           type: array
           items:
-            $ref: "#/components/schemas/GoogleCountryDto"
+            $ref: '#/components/schemas/GoogleCountryDto'
       required:
         - total
         - countries
