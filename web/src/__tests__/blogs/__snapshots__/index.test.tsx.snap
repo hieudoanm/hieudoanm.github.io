@@ -169,7 +169,7 @@ exports[`BlogsPage render default 1`] = `
       style="background-image: url();"
     >
       <div
-        class="h-full bg-gray-900 bg-opacity-80 text-white"
+        class="h-full bg-gray-900/80 text-white"
       >
         <div
           class="flex h-full items-center justify-center"

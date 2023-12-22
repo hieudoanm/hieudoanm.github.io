@@ -6,7 +6,7 @@ exports[`Blog render default 1`] = `
     href=""
   >
     <div
-      class="overflow-hidden rounded border shadow shadow"
+      class="overflow-hidden rounded border shadow"
     >
       <div
         class="p-4"

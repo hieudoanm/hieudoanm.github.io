@@ -30,7 +30,7 @@ exports[`Blogs render default 1`] = `
           href="url"
         >
           <div
-            class="overflow-hidden rounded border shadow shadow"
+            class="overflow-hidden rounded border shadow"
           >
             <div
               class="p-4"
@@ -89,7 +89,7 @@ exports[`Blogs render without backgroundImage 1`] = `
           href="url"
         >
           <div
-            class="overflow-hidden rounded border shadow shadow"
+            class="overflow-hidden rounded border shadow"
           >
             <div
               class="p-4"
@@ -179,7 +179,7 @@ exports[`Blogs render without urlToImage 1`] = `
           href="url"
         >
           <div
-            class="overflow-hidden rounded border shadow shadow"
+            class="overflow-hidden rounded border shadow"
           >
             <div
               class="p-4"
