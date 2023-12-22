@@ -40,21 +40,19 @@ export type AboutTemplateProperties = {
   newsletter: NewsletterSectionProperties;
 };
 
-const AboutTemplate: React.FC<AboutTemplateProperties> = (
-  {
-    sections = [],
-    hero,
-    interests,
-    experiences,
-    stats,
-    logos,
-    team,
-    cta,
-    testimonials,
-    blogs,
-    newsletter,
-  }
-) => {
+const AboutTemplate: React.FC<AboutTemplateProperties> = ({
+  sections = [],
+  hero,
+  interests,
+  experiences,
+  stats,
+  logos,
+  team,
+  cta,
+  testimonials,
+  blogs,
+  newsletter,
+}) => {
   return (
     <>
       <Navbar fixed sections={sections} />

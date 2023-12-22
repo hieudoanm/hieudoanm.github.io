@@ -15,9 +15,12 @@ export type TestimonialsSectionProperties = {
   testimonials: Testimonial[];
 };
 
-const TestimonialsSection: React.FC<TestimonialsSectionProperties> = (
-  { id, title, subtitle, testimonials }
-) => {
+const TestimonialsSection: React.FC<TestimonialsSectionProperties> = ({
+  id,
+  title,
+  subtitle,
+  testimonials,
+}) => {
   return (
     <section id={id} className="pb-16">
       <Container>

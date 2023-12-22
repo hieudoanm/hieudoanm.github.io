@@ -12,9 +12,8 @@ export class NewsService {
   async getGoogle(): Promise<GoogleResponseDto> {
     const url: string =
       'https://trends.google.com/trends/hottrends/visualize/internal/data';
-    const response = await this.httpService.axiosRef.get<
-      Record<string, string[]>
-    >(url);
+    const response =
+      await this.httpService.axiosRef.get<Record<string, string[]>>(url);
     const { data } = response;
     const countryKeys = Object.keys(data);
     const countries = countryKeys.map((countryKey: string) => {

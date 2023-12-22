@@ -14,9 +14,12 @@ export type BlogsTemplateProperties = {
   blogs: BlogType[];
 };
 
-const BlogsTemplate: React.FC<BlogsTemplateProperties> = (
-  { hero, title, subtitle, blogs }
-) => {
+const BlogsTemplate: React.FC<BlogsTemplateProperties> = ({
+  hero,
+  title,
+  subtitle,
+  blogs,
+}) => {
   return (
     <>
       <Navbar fixed />

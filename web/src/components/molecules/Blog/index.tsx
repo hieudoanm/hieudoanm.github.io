@@ -11,7 +11,7 @@ export type BlogProperties = {
 const Blog: React.FC<BlogProperties> = ({ url, title, description, date }) => {
   return (
     <Link to={url}>
-      <div className="overflow-hidden rounded border shadow shadow">
+      <div className="overflow-hidden rounded border shadow">
         <div className="p-4">
           <h2 className="mb-2">
             <b>{title}</b>

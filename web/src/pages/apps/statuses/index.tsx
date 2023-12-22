@@ -20,9 +20,13 @@ const StatusPage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [statuses, setStatuses] = useState<Record<string, Status>>({});
 
-  const getStatusByIndicator = async (
-    { url, name }: { url: string; name: string }
-  ): Promise<Status> => {
+  const getStatusByIndicator = async ({
+    url,
+    name,
+  }: {
+    url: string;
+    name: string;
+  }): Promise<Status> => {
     try {
       const response = await fetch(url);
       const data = await response.json();

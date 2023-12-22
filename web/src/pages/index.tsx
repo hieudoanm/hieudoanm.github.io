@@ -58,19 +58,17 @@ export const HomePage: React.FC = () => {
   );
 
   const updateLevel2 = useCallback(
-    (
-      {
-        row,
-        column,
-        left,
-        right,
-      }: {
-        row: number;
-        column: number;
-        left: number;
-        right: number;
-      }
-    ) => {
+    ({
+      row,
+      column,
+      left,
+      right,
+    }: {
+      row: number;
+      column: number;
+      left: number;
+      right: number;
+    }) => {
       const boxes = [
         { row: row - 4, column },
         { row: row - 3, column: column + left },
@@ -102,19 +100,17 @@ export const HomePage: React.FC = () => {
   );
 
   const updateLevel3 = useCallback(
-    (
-      {
-        row,
-        column,
-        left,
-        right,
-      }: {
-        row: number;
-        column: number;
-        left: number;
-        right: number;
-      }
-    ) => {
+    ({
+      row,
+      column,
+      left,
+      right,
+    }: {
+      row: number;
+      column: number;
+      left: number;
+      right: number;
+    }) => {
       const level3Boxes = [
         { row: row - 6, column },
         { row: row - 5, column: column + left },

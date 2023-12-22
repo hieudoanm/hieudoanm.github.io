@@ -18,9 +18,12 @@ export type BlogsSectionProperties = {
   blogs?: BlogType[];
 };
 
-const BlogsSection: React.FC<BlogsSectionProperties> = (
-  { id: sectionId, title: sectionTitle, subtitle, blogs = [] }
-) => {
+const BlogsSection: React.FC<BlogsSectionProperties> = ({
+  id: sectionId,
+  title: sectionTitle,
+  subtitle,
+  blogs = [],
+}) => {
   return (
     <div id={sectionId} className="pb-16">
       <Container>

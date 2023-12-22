@@ -17,9 +17,12 @@ export type FeaturesSectionProperties = {
   features: Feature[];
 };
 
-const FeaturesSection: React.FC<FeaturesSectionProperties> = (
-  { id: sectionId, title: sectionTitle, subtitle, features }
-) => {
+const FeaturesSection: React.FC<FeaturesSectionProperties> = ({
+  id: sectionId,
+  title: sectionTitle,
+  subtitle,
+  features,
+}) => {
   return (
     <div id={sectionId} className="pb-16">
       <Container>

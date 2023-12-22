@@ -11,9 +11,13 @@ export type CTASectionProperties = {
   backgroundImage: string;
 };
 
-const CTASection: React.FC<CTASectionProperties> = (
-  { id, title, subtitle, cta, backgroundImage }
-) => {
+const CTASection: React.FC<CTASectionProperties> = ({
+  id,
+  title,
+  subtitle,
+  cta,
+  backgroundImage,
+}) => {
   return (
     <div className="py-16">
       <div
@@ -21,7 +25,7 @@ const CTASection: React.FC<CTASectionProperties> = (
         className="bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="bg-gray-900 bg-opacity-80 pb-16">
+        <div className="bg-gray-900/80 pb-16">
           <Container>
             <Header subtitle={subtitle} className="text-white">
               {title}

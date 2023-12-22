@@ -18,9 +18,12 @@ export type TeamSectionProperties = {
   team: Array<Person>;
 };
 
-const TeamSection: React.FC<TeamSectionProperties> = (
-  { id: sectionId = '', title: sectionTitle = '', subtitle = '', team = [] }
-) => {
+const TeamSection: React.FC<TeamSectionProperties> = ({
+  id: sectionId = '',
+  title: sectionTitle = '',
+  subtitle = '',
+  team = [],
+}) => {
   return (
     <section id={sectionId} className="pb-16">
       <Container>

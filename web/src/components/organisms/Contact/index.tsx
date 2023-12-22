@@ -80,9 +80,11 @@ export type ContactSectionProperties = {
   subtitle?: string;
 };
 
-const ContactSection: React.FC<ContactSectionProperties> = (
-  { id, title, subtitle = '' }
-) => {
+const ContactSection: React.FC<ContactSectionProperties> = ({
+  id,
+  title,
+  subtitle = '',
+}) => {
   return (
     <div id={id} className="py-16">
       <Container>

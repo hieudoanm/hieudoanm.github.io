@@ -5,9 +5,10 @@ export type ContainerProperties = {
   children: React.ReactNode;
 };
 
-export const Container: React.FC<ContainerProperties> = (
-  { className = '', children }
-) => {
+export const Container: React.FC<ContainerProperties> = ({
+  className = '',
+  children,
+}) => {
   return (
     <div className={`container mx-auto px-8 ${className}`}>{children}</div>
   );

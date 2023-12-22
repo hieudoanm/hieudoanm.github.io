@@ -19,9 +19,10 @@ export type Section = {
 
 export type NavbarProperties = { fixed?: boolean; sections?: Section[] };
 
-const Navbar: React.FC<NavbarProperties> = (
-  { fixed = false, sections = [] }
-) => {
+const Navbar: React.FC<NavbarProperties> = ({
+  fixed = false,
+  sections = [],
+}) => {
   const fixedTop: string = fixed ? 'fixed z-10 top-0' : '';
 
   const options = sections.map(({ id }) => {

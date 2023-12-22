@@ -11,9 +11,12 @@ export type LogosCloudSectionProperties = {
   logos: Logo[];
 };
 
-const LogosCloudSection: React.FC<LogosCloudSectionProperties> = (
-  { id: sectionId = '', title: sectionTitlte = '', subtitle = '', logos = [] }
-) => {
+const LogosCloudSection: React.FC<LogosCloudSectionProperties> = ({
+  id: sectionId = '',
+  title: sectionTitlte = '',
+  subtitle = '',
+  logos = [],
+}) => {
   return (
     <section id={sectionId} className="pb-16">
       <Container>

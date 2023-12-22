@@ -1,7 +1,7 @@
 {
-  "name": "api",
+  "name": "@hieudoanm/api",
   "version": "0.0.1",
-  "description": "API",
+  "description": "hieudoanm - API",
   "main": "dist/main",
   "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",

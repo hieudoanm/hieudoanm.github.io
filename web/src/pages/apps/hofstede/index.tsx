@@ -140,17 +140,15 @@ type Ranking = {
 const processRankings = (scales: Scales): Ranking[] => {
   return countries
     .map(
-      (
-        {
-          country,
-          powerDistance,
-          individualism,
-          masculinity,
-          uncertaintyAvoidance,
-          longTermOrientation,
-          indulgence,
-        }
-      ) => {
+      ({
+        country,
+        powerDistance,
+        individualism,
+        masculinity,
+        uncertaintyAvoidance,
+        longTermOrientation,
+        indulgence,
+      }) => {
         const pdiDiff =
           powerDistance === -1 ? 'N/A' : powerDistance - scales.powerDistance;
         const idvDiff =

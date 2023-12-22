@@ -16,9 +16,12 @@ export type ContactTemplateProperties = {
   contact: ContactSectionProperties;
 };
 
-const ContactTemplate: React.FC<ContactTemplateProperties> = (
-  { sections, hero, pricing, contact }
-) => {
+const ContactTemplate: React.FC<ContactTemplateProperties> = ({
+  sections,
+  hero,
+  pricing,
+  contact,
+}) => {
   return (
     <>
       <Menu fixed sections={sections} />
