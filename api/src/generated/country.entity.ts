@@ -1,0 +1,35 @@
+import { Prisma, DayOfWeek, Region } from '@prisma/client';
+
+export class CountryDto {
+  cca3: string;
+  cca2: string | null;
+  ccn3: string | null;
+  startOfWeek: DayOfWeek | null;
+  region: Region | null;
+  subregion: string | null;
+  status: string | null;
+  flag: string | null;
+  area: number | null;
+  population: number | null;
+  independent: boolean | null;
+  unMember: boolean | null;
+  landlocked: boolean | null;
+  name: Prisma.JsonValue | null;
+  currencies: Prisma.JsonValue | null;
+  idd: Prisma.JsonValue | null;
+  languages: Prisma.JsonValue | null;
+  translations: Prisma.JsonValue | null;
+  demonyms: Prisma.JsonValue | null;
+  maps: Prisma.JsonValue | null;
+  flags: Prisma.JsonValue | null;
+  car: Prisma.JsonValue | null;
+  capitalInfo: Prisma.JsonValue | null;
+  coatOfArms: Prisma.JsonValue | null;
+  postalCode: Prisma.JsonValue | null;
+  timezones: string[];
+  continents: string[];
+  latlng: number[];
+  tld: string[];
+  capital: string[];
+  altSpellings: string[];
+}

@@ -1,0 +1,56 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Country {
+  cca3 String [pk, default: '']
+  cca2 String [unique, default: '']
+  ccn3 String [unique, default: '']
+  startOfWeek DayOfWeek [default: 'MONDAY']
+  region Region [default: 'ANTARCTIC']
+  subregion String [default: '']
+  status String [default: '']
+  flag String [default: '']
+  area Float [default: 0]
+  population Int [default: 0]
+  independent Boolean [default: false]
+  unMember Boolean [default: false]
+  landlocked Boolean [default: false]
+  name Json [default: '{}']
+  currencies Json [default: '{}']
+  idd Json [default: '{}']
+  languages Json [default: '{}']
+  translations Json [default: '{}']
+  demonyms Json [default: '{}']
+  maps Json [default: '{}']
+  flags Json [default: '{}']
+  car Json [default: '{}']
+  capitalInfo Json [default: '{}']
+  coatOfArms Json [default: '{}']
+  postalCode Json [default: '{}']
+  timezones String[] [not null]
+  continents String[] [not null]
+  latlng Float[] [not null]
+  tld String[] [not null]
+  capital String[] [not null]
+  altSpellings String[] [not null]
+}
+
+Enum DayOfWeek {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+Enum Region {
+  AFRICA
+  AMERICAS
+  ANTARCTIC
+  ASIA
+  EUROPE
+  OCEANIA
+}

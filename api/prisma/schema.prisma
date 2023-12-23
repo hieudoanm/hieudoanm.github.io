@@ -1,0 +1,80 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator nestjsDto {
+  provider     = "prisma-generator-nestjs-dto"
+  output       = "../src/generated"
+  entitySuffix = "Dto"
+}
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+}
+
+model Country {
+  cca3         String     @id @default("")
+  cca2         String?    @unique @default("")
+  ccn3         String?    @unique @default("")
+  startOfWeek  DayOfWeek? @default(MONDAY)
+  region       Region?    @default(ANTARCTIC)
+  subregion    String?    @default("")
+  status       String?    @default("")
+  flag         String?    @default("")
+  area         Float?     @default(0)
+  population   Int?       @default(0)
+  independent  Boolean?   @default(false)
+  unMember     Boolean?   @default(false)
+  landlocked   Boolean?   @default(false)
+  name         Json?      @default("{}")
+  currencies   Json?      @default("{}")
+  idd          Json?      @default("{}")
+  languages    Json?      @default("{}")
+  translations Json?      @default("{}")
+  demonyms     Json?      @default("{}")
+  maps         Json?      @default("{}")
+  flags        Json?      @default("{}")
+  car          Json?      @default("{}")
+  capitalInfo  Json?      @default("{}")
+  coatOfArms   Json?      @default("{}")
+  postalCode   Json?      @default("{}")
+  timezones    String[]   @default([])
+  continents   String[]   @default([])
+  latlng       Float[]    @default([])
+  tld          String[]   @default([])
+  capital      String[]   @default([])
+  altSpellings String[]   @default([])
+}
+
+enum DayOfWeek {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+enum Region {
+  AFRICA
+  AMERICAS
+  ANTARCTIC
+  ASIA
+  EUROPE
+  OCEANIA
+}

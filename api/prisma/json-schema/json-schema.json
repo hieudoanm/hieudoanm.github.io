@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Country": {
+      "type": "object",
+      "properties": {
+        "cca3": {
+          "type": "string",
+          "default": ""
+        },
+        "cca2": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "ccn3": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "startOfWeek": {
+          "type": ["string", "null"],
+          "default": "MONDAY",
+          "enum": [
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY",
+            "SATURDAY",
+            "SUNDAY"
+          ]
+        },
+        "region": {
+          "type": ["string", "null"],
+          "default": "ANTARCTIC",
+          "enum": [
+            "AFRICA",
+            "AMERICAS",
+            "ANTARCTIC",
+            "ASIA",
+            "EUROPE",
+            "OCEANIA"
+          ]
+        },
+        "subregion": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "status": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "flag": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "area": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "population": {
+          "type": ["integer", "null"],
+          "default": 0
+        },
+        "independent": {
+          "type": ["boolean", "null"],
+          "default": false
+        },
+        "unMember": {
+          "type": ["boolean", "null"],
+          "default": false
+        },
+        "landlocked": {
+          "type": ["boolean", "null"],
+          "default": false
+        },
+        "name": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "currencies": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "idd": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "languages": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "translations": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "demonyms": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "maps": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "flags": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "car": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "capitalInfo": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "coatOfArms": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "postalCode": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "timezones": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "continents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "latlng": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "tld": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "capital": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "altSpellings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "country": {
+      "$ref": "#/definitions/Country"
+    }
+  }
+}
