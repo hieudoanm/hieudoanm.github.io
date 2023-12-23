@@ -227,6 +227,22 @@
           "default": ""
         }
       }
+    },
+    "EthnicGroup": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "group": {
+          "type": "string",
+          "default": ""
+        }
+      }
     }
   },
   "type": "object",
@@ -245,6 +261,9 @@
     },
     "tarotCard": {
       "$ref": "#/definitions/TarotCard"
+    },
+    "ethnicGroup": {
+      "$ref": "#/definitions/EthnicGroup"
     }
   }
 }

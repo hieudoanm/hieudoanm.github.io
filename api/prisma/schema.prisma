@@ -112,3 +112,9 @@ enum TarotCardType {
   MAJOR
   MINOR
 }
+
+model EthnicGroup {
+  id    Int    @id @default(autoincrement())
+  name  String @default("")
+  group String @default("")
+}

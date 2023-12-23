@@ -66,6 +66,11 @@ erDiagram
     String meaningReverse "nullable"
     String description "nullable"
 }
+"EthnicGroup" {
+    Int id PK
+    String name
+    String group
+}
 ```
 
 ### `Country`
@@ -140,3 +145,11 @@ erDiagram
 - `meaningUp`:
 - `meaningReverse`:
 - `description`:
+
+### `EthnicGroup`
+
+**Properties**
+
+- `id`:
+- `name`:
+- `group`:

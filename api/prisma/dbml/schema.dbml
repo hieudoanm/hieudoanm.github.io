@@ -65,6 +65,12 @@ Table TarotCard {
   description String [default: '']
 }
 
+Table EthnicGroup {
+  id Int [pk, increment]
+  name String [not null, default: '']
+  group String [not null, default: '']
+}
+
 Enum DayOfWeek {
   MONDAY
   TUESDAY
