@@ -95,3 +95,20 @@ model LicensePlate {
   name  String
   group String
 }
+
+model TarotCard {
+  type           TarotCardType @default(MAJOR)
+  id             String        @id @default("")
+  name           String?       @default("")
+  value          String?       @default("")
+  valueInt       Int?          @default(0)
+  suit           String?       @default("")
+  meaningUp      String?       @default("") @db.Text()
+  meaningReverse String?       @default("") @db.Text()
+  description    String?       @default("") @db.Text()
+}
+
+enum TarotCardType {
+  MAJOR
+  MINOR
+}

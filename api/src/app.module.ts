@@ -5,6 +5,7 @@ import { CountriesModule } from './modules/countries/countries.module';
 import { CryptoModule } from './modules/crypto/crypto.module';
 import { HealthModule } from './modules/health/health.module';
 import { NewsModule } from './modules/news/news.module';
+import { TarotModule } from './modules/tarot/tarot.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { NewsModule } from './modules/news/news.module';
     CryptoModule,
     HealthModule,
     NewsModule,
+    TarotModule,
   ],
   controllers: [],
   providers: [],

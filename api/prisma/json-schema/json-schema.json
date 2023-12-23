@@ -185,6 +185,48 @@
           "type": "string"
         }
       }
+    },
+    "TarotCard": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "MAJOR",
+          "enum": ["MAJOR", "MINOR"]
+        },
+        "id": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "value": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "valueInt": {
+          "type": ["integer", "null"],
+          "default": 0
+        },
+        "suit": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "meaningUp": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "meaningReverse": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "description": {
+          "type": ["string", "null"],
+          "default": ""
+        }
+      }
     }
   },
   "type": "object",
@@ -200,6 +242,9 @@
     },
     "licensePlate": {
       "$ref": "#/definitions/LicensePlate"
+    },
+    "tarotCard": {
+      "$ref": "#/definitions/TarotCard"
     }
   }
 }

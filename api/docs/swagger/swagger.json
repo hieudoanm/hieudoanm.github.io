@@ -17,9 +17,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/countries/currencies": {
@@ -38,9 +36,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/countries/languages": {
@@ -59,9 +55,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/vietnam/license-plates": {
@@ -80,9 +74,7 @@
             }
           }
         },
-        "tags": [
-          "vietnam"
-        ]
+        "tags": ["vietnam"]
       }
     },
     "/crypto/coins": {
@@ -110,9 +102,7 @@
             }
           }
         },
-        "tags": [
-          "crypto"
-        ]
+        "tags": ["crypto"]
       }
     },
     "/health": {
@@ -131,9 +121,7 @@
             }
           }
         },
-        "tags": [
-          "health"
-        ]
+        "tags": ["health"]
       }
     },
     "/news/google": {
@@ -152,9 +140,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     },
     "/news/sources": {
@@ -173,9 +159,26 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
+      }
+    },
+    "/tarot/cards": {
+      "get": {
+        "operationId": "TarotController_getCards",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TarotCardsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["tarot"]
       }
     }
   },
@@ -205,12 +208,7 @@
             "type": "object"
           }
         },
-        "required": [
-          "region",
-          "subregion",
-          "currencies",
-          "languages"
-        ]
+        "required": ["region", "subregion", "currencies", "languages"]
       },
       "CountriesDto": {
         "type": "object",
@@ -225,10 +223,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "countries"
-        ]
+        "required": ["total", "countries"]
       },
       "CurrencyDto": {
         "type": "object",
@@ -243,11 +238,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "code",
-          "name",
-          "symbol"
-        ]
+        "required": ["code", "name", "symbol"]
       },
       "CurrenciesDto": {
         "type": "object",
@@ -262,10 +253,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "currencies"
-        ]
+        "required": ["total", "currencies"]
       },
       "LanguageDto": {
         "type": "object",
@@ -277,10 +265,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "code",
-          "name"
-        ]
+        "required": ["code", "name"]
       },
       "LanguagesDto": {
         "type": "object",
@@ -295,10 +280,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "languages"
-        ]
+        "required": ["total", "languages"]
       },
       "LicensePlateDto": {
         "type": "object",
@@ -318,10 +300,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "licensePlates"
-        ]
+        "required": ["total", "licensePlates"]
       },
       "CoinDto": {
         "type": "object",
@@ -413,10 +392,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "coins"
-        ]
+        "required": ["total", "coins"]
       },
       "HealthResponseDto": {
         "type": "object",
@@ -425,9 +401,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "status"
-        ]
+        "required": ["status"]
       },
       "GoogleCountryDto": {
         "type": "object",
@@ -442,10 +416,7 @@
             }
           }
         },
-        "required": [
-          "country",
-          "queries"
-        ]
+        "required": ["country", "queries"]
       },
       "GoogleResponseDto": {
         "type": "object",
@@ -460,10 +431,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "countries"
-        ]
+        "required": ["total", "countries"]
       },
       "NewsSourceDto": {
         "type": "object",
@@ -513,10 +481,27 @@
             }
           }
         },
-        "required": [
-          "total",
-          "sources"
-        ]
+        "required": ["total", "sources"]
+      },
+      "TarotCardDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "TarotCardsResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "cards": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TarotCardDto"
+            }
+          }
+        },
+        "required": ["total", "cards"]
       }
     }
   }

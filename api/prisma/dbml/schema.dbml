@@ -53,6 +53,18 @@ Table LicensePlate {
   group String [not null]
 }
 
+Table TarotCard {
+  type TarotCardType [not null, default: 'MAJOR']
+  id String [pk, default: '']
+  name String [default: '']
+  value String [default: '']
+  valueInt Int [default: 0]
+  suit String [default: '']
+  meaningUp String [default: '']
+  meaningReverse String [default: '']
+  description String [default: '']
+}
+
 Enum DayOfWeek {
   MONDAY
   TUESDAY
@@ -70,4 +82,9 @@ Enum Region {
   ASIA
   EUROPE
   OCEANIA
+}
+
+Enum TarotCardType {
+  MAJOR
+  MINOR
 }

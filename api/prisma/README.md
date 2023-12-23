@@ -55,6 +55,17 @@ erDiagram
     String name
     String group
 }
+"TarotCard" {
+    TarotCardType type
+    String id PK
+    String name "nullable"
+    String value "nullable"
+    Int valueInt "nullable"
+    String suit "nullable"
+    String meaningUp "nullable"
+    String meaningReverse "nullable"
+    String description "nullable"
+}
 ```
 
 ### `Country`
@@ -115,3 +126,17 @@ erDiagram
 - `code`:
 - `name`:
 - `group`:
+
+### `TarotCard`
+
+**Properties**
+
+- `type`:
+- `id`:
+- `name`:
+- `value`:
+- `valueInt`:
+- `suit`:
+- `meaningUp`:
+- `meaningReverse`:
+- `description`:
