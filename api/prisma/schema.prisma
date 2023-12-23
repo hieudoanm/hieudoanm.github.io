@@ -27,9 +27,9 @@ generator markdown {
 }
 
 model Country {
-  cca3         String     @id @default("")
-  cca2         String?    @unique @default("")
-  ccn3         String?    @unique @default("")
+  cca3         String     @id @default("") @db.VarChar(3)
+  cca2         String?    @unique @default("") @db.VarChar(2)
+  ccn3         String?    @unique @default("") @db.VarChar(3)
   startOfWeek  DayOfWeek? @default(MONDAY)
   region       Region?    @default(ANTARCTIC)
   subregion    String?    @default("")
