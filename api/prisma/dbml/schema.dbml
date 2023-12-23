@@ -36,6 +36,17 @@ Table Country {
   altSpellings String[] [not null]
 }
 
+Table Currency {
+  code String [pk]
+  name String [not null]
+  symbol String [not null]
+}
+
+Table Language {
+  code String [pk]
+  name String [not null]
+}
+
 Enum DayOfWeek {
   MONDAY
   TUESDAY

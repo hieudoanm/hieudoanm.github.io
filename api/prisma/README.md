@@ -41,6 +41,15 @@ erDiagram
     String capital
     String altSpellings
 }
+"Currency" {
+    String code PK
+    String name
+    String symbol
+}
+"Language" {
+    String code PK
+    String name
+}
 ```
 
 ### `Country`
@@ -78,3 +87,18 @@ erDiagram
 - `tld`:
 - `capital`:
 - `altSpellings`:
+
+### `Currency`
+
+**Properties**
+
+- `code`:
+- `name`:
+- `symbol`:
+
+### `Language`
+
+**Properties**
+
+- `code`:
+- `name`:

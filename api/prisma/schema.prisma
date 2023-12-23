@@ -78,3 +78,14 @@ enum Region {
   EUROPE
   OCEANIA
 }
+
+model Currency {
+  code   String @id @db.VarChar(3)
+  name   String
+  symbol String
+}
+
+model Language {
+  code String @id @db.VarChar(3)
+  name String
+}

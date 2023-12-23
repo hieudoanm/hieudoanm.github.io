@@ -146,12 +146,43 @@
           }
         }
       }
+    },
+    "Currency": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        }
+      }
+    },
+    "Language": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
     }
   },
   "type": "object",
   "properties": {
     "country": {
       "$ref": "#/definitions/Country"
+    },
+    "currency": {
+      "$ref": "#/definitions/Currency"
+    },
+    "language": {
+      "$ref": "#/definitions/Language"
     }
   }
 }
