@@ -5,12 +5,12 @@ paths:
       operationId: CountriesController_getCountries
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CountriesDto'
+                $ref: "#/components/schemas/CountriesDto"
       tags: &a1
         - countries
   /countries/currencies:
@@ -18,25 +18,38 @@ paths:
       operationId: CountriesController_getCurrencies
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CurrenciesDto'
+                $ref: "#/components/schemas/CurrenciesDto"
       tags: *a1
   /countries/languages:
     get:
       operationId: CountriesController_getLanguages
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LanguagesDto'
+                $ref: "#/components/schemas/LanguagesDto"
       tags: *a1
+  /vietnam/license-plates:
+    get:
+      operationId: VietnamController_getLicensePlates
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LicensePlatesResponseDto"
+      tags:
+        - vietnam
   /crypto/coins:
     get:
       operationId: CryptoController_getCountries
@@ -47,12 +60,12 @@ paths:
           schema:
             type: number
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CoinsResponseDto'
+                $ref: "#/components/schemas/CoinsResponseDto"
       tags:
         - crypto
   /health:
@@ -60,12 +73,12 @@ paths:
       operationId: HealthController_getHealth
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HealthResponseDto'
+                $ref: "#/components/schemas/HealthResponseDto"
       tags:
         - health
   /news/google:
@@ -73,12 +86,12 @@ paths:
       operationId: NewsController_getGoogle
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GoogleResponseDto'
+                $ref: "#/components/schemas/GoogleResponseDto"
       tags: &a2
         - news
   /news/sources:
@@ -86,17 +99,17 @@ paths:
       operationId: NewsController_getSources
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsSourcesDto'
+                $ref: "#/components/schemas/NewsSourcesDto"
       tags: *a2
 info:
   title: hieudoanm
   description: Hieu Doan
-  version: '1.0'
+  version: "1.0"
   contact: {}
 tags: []
 servers: []
@@ -126,7 +139,7 @@ components:
         countries:
           type: array
           items:
-            $ref: '#/components/schemas/CountryDto'
+            $ref: "#/components/schemas/CountryDto"
       required:
         - total
         - countries
@@ -151,7 +164,7 @@ components:
         currencies:
           type: array
           items:
-            $ref: '#/components/schemas/CurrencyDto'
+            $ref: "#/components/schemas/CurrencyDto"
       required:
         - total
         - currencies
@@ -173,10 +186,26 @@ components:
         languages:
           type: array
           items:
-            $ref: '#/components/schemas/LanguageDto'
+            $ref: "#/components/schemas/LanguageDto"
       required:
         - total
         - languages
+    LicensePlateDto:
+      type: object
+      properties: {}
+    LicensePlatesResponseDto:
+      type: object
+      properties:
+        total:
+          type: number
+        licensePlates:
+          default: []
+          type: array
+          items:
+            $ref: "#/components/schemas/LicensePlateDto"
+      required:
+        - total
+        - licensePlates
     CoinDto:
       type: object
       properties:
@@ -242,7 +271,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/CoinDto'
+            $ref: "#/components/schemas/CoinDto"
       required:
         - total
         - coins
@@ -273,7 +302,7 @@ components:
         countries:
           type: array
           items:
-            $ref: '#/components/schemas/GoogleCountryDto'
+            $ref: "#/components/schemas/GoogleCountryDto"
       required:
         - total
         - countries
@@ -310,7 +339,7 @@ components:
         sources:
           type: array
           items:
-            $ref: '#/components/schemas/NewsSourceDto'
+            $ref: "#/components/schemas/NewsSourceDto"
       required:
         - total
         - sources

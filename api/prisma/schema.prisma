@@ -89,3 +89,9 @@ model Language {
   code String @id @db.VarChar(3)
   name String
 }
+
+model LicensePlate {
+  code  String @id @db.VarChar(2)
+  name  String
+  group String
+}

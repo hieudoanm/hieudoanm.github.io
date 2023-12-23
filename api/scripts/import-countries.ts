@@ -1,7 +1,7 @@
-import axios from 'axios';
-import { CountryDto } from '../src/generated/country.entity';
-import { PrismaService } from '../src/common/prisma/prisma.service';
 import { DayOfWeek, Region } from '@prisma/client';
+import axios from 'axios';
+import { PrismaService } from '../src/common/prisma/prisma.service';
+import { CountryDto } from '../src/generated/country.entity';
 
 const main = async () => {
   const prismaService = new PrismaService();

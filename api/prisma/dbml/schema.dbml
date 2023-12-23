@@ -47,6 +47,12 @@ Table Language {
   name String [not null]
 }
 
+Table LicensePlate {
+  code String [pk]
+  name String [not null]
+  group String [not null]
+}
+
 Enum DayOfWeek {
   MONDAY
   TUESDAY

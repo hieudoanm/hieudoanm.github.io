@@ -171,6 +171,20 @@
           "type": "string"
         }
       }
+    },
+    "LicensePlate": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        }
+      }
     }
   },
   "type": "object",
@@ -183,6 +197,9 @@
     },
     "language": {
       "$ref": "#/definitions/Language"
+    },
+    "licensePlate": {
+      "$ref": "#/definitions/LicensePlate"
     }
   }
 }

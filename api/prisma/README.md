@@ -50,6 +50,11 @@ erDiagram
     String code PK
     String name
 }
+"LicensePlate" {
+    String code PK
+    String name
+    String group
+}
 ```
 
 ### `Country`
@@ -102,3 +107,11 @@ erDiagram
 
 - `code`:
 - `name`:
+
+### `LicensePlate`
+
+**Properties**
+
+- `code`:
+- `name`:
+- `group`:
