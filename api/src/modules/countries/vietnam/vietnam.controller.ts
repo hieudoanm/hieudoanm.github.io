@@ -12,13 +12,21 @@ export class VietnamController {
   constructor(private readonly vietnamService: VietnamService) {}
 
   @Get('ethnic-groups')
-  @ApiResponse({ status: 200, type: EthnicGroupsResponseDto })
+  @ApiResponse({
+    status: 200,
+    type: EthnicGroupsResponseDto,
+    description: 'List of Ethnic Groups',
+  })
   async getEthnicGroups(): Promise<EthnicGroupsResponseDto> {
     return this.vietnamService.getEthnicGroups();
   }
 
   @Get('license-plates')
-  @ApiResponse({ status: 200, type: LicensePlatesResponseDto })
+  @ApiResponse({
+    status: 200,
+    type: LicensePlatesResponseDto,
+    description: 'List of License Plates',
+  })
   async getLicensePlates(): Promise<LicensePlatesResponseDto> {
     return this.vietnamService.getLicensePlates();
   }

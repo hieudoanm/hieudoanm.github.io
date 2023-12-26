@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { PrismaService } from 'src/common/prisma/prisma.service';
-import { TarotCardDto } from 'src/generated/tarotCard.entity';
+import { PrismaService } from '../../../src/common/prisma/prisma.service';
+import { TarotCardDto } from '../../../src/generated/tarotCard.entity';
 import { TarotCardsResponseDto } from './tarot.dto';
 
 @Injectable()

@@ -1,43 +1,397 @@
 {
   "item": [
     {
-      "name": "/",
+      "name": "countries",
       "description": "",
       "item": [
         {
-          "id": "1cbad179-b94e-405f-9574-8279a3ad0fd0",
-          "name": "Health Controller get Hello",
+          "id": "fc6bf663-7ce2-4187-9d98-00e19814eb67",
+          "name": "Countries Controller get Countries",
           "request": {
-            "name": "Health Controller get Hello",
+            "name": "Countries Controller get Countries",
             "description": {},
             "url": {
-              "path": [""],
+              "path": ["countries"],
               "host": ["{{baseUrl}}"],
               "query": [],
               "variable": []
             },
+            "header": [{ "key": "Accept", "value": "application/json" }],
             "method": "GET",
             "body": {},
             "auth": null
           },
           "response": [
             {
-              "id": "aa45b776-af76-460f-a02e-226980060126",
+              "id": "6c58ccc2-1ac8-4727-903e-13262c140df5",
+              "name": "List of Countries",
               "originalRequest": {
                 "url": {
-                  "path": [""],
+                  "path": ["countries"],
                   "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
+                "header": [{ "key": "Accept", "value": "application/json" }],
                 "method": "GET",
                 "body": {}
               },
               "status": "OK",
               "code": 200,
-              "header": [],
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"total\": \"<number>\",\n  \"countries\": [\n    {\n      \"region\": \"<string>\",\n      \"subregion\": \"<string>\",\n      \"currencies\": {},\n      \"languages\": {}\n    },\n    {\n      \"region\": \"<string>\",\n      \"subregion\": \"<string>\",\n      \"currencies\": {},\n      \"languages\": {}\n    }\n  ]\n}",
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": { "disableBodyPruning": true }
+        },
+        {
+          "name": "currencies",
+          "description": "",
+          "item": [
+            {
+              "id": "9611049b-489f-4289-b05c-59f33e3a45d0",
+              "name": "Countries Controller get Currencies",
+              "request": {
+                "name": "Countries Controller get Currencies",
+                "description": {},
+                "url": {
+                  "path": ["countries", "currencies"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "3933dc83-5546-4080-8c83-10f618f2253c",
+                  "name": "List of Currencies",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["countries", "currencies"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{\n  \"total\": \"<number>\",\n  \"currencies\": [\n    {\n      \"code\": \"<string>\",\n      \"name\": \"<string>\",\n      \"symbol\": \"<string>\"\n    },\n    {\n      \"code\": \"<string>\",\n      \"name\": \"<string>\",\n      \"symbol\": \"<string>\"\n    }\n  ]\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        },
+        {
+          "name": "languages",
+          "description": "",
+          "item": [
+            {
+              "id": "2435a96f-bcb5-4333-90eb-60ca72dca49b",
+              "name": "Countries Controller get Languages",
+              "request": {
+                "name": "Countries Controller get Languages",
+                "description": {},
+                "url": {
+                  "path": ["countries", "languages"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "1b23e8f9-c605-4a92-901d-aad18ddd774c",
+                  "name": "List of Languages",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["countries", "languages"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{\n  \"total\": \"<number>\",\n  \"languages\": [\n    {\n      \"code\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"code\": \"<string>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vietnam",
+      "description": "",
+      "item": [
+        {
+          "name": "ethnic-groups",
+          "description": "",
+          "item": [
+            {
+              "id": "5f1d4d56-7732-4123-b67c-4669e1ccea42",
+              "name": "Vietnam Controller get Ethnic Groups",
+              "request": {
+                "name": "Vietnam Controller get Ethnic Groups",
+                "description": {},
+                "url": {
+                  "path": ["vietnam", "ethnic-groups"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "d80287c9-b0a5-46cd-a309-a6a29bf36f17",
+                  "name": "List of Ethnic Groups",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["vietnam", "ethnic-groups"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{\n  \"total\": \"<number>\",\n  \"ethnicGroups\": []\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        },
+        {
+          "name": "license-plates",
+          "description": "",
+          "item": [
+            {
+              "id": "5ececb3a-bb22-424b-839f-caa898726497",
+              "name": "Vietnam Controller get License Plates",
+              "request": {
+                "name": "Vietnam Controller get License Plates",
+                "description": {},
+                "url": {
+                  "path": ["vietnam", "license-plates"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "e02f7359-4178-4887-9b5c-17062da561ee",
+                  "name": "List of License Plates",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["vietnam", "license-plates"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{\n  \"total\": \"<number>\",\n  \"licensePlates\": []\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "crypto",
+      "description": "",
+      "item": [
+        {
+          "name": "coins",
+          "description": "",
+          "item": [
+            {
+              "id": "d20644e7-e661-4a9b-94cf-76a6f2fdfdbc",
+              "name": "Crypto Controller get Countries",
+              "request": {
+                "name": "Crypto Controller get Countries",
+                "description": {},
+                "url": {
+                  "path": ["crypto", "coins"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "limit",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "c22e283d-312c-4cac-a19e-4e0b7375b969",
+                  "name": "List of Crypto Coins",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["crypto", "coins"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "(Required) ",
+                            "type": "text/plain"
+                          },
+                          "key": "limit",
+                          "value": "<number>"
+                        }
+                      ],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{\n  \"total\": 0,\n  \"coins\": []\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "health",
+      "description": "",
+      "item": [
+        {
+          "id": "f4bab9c5-73a2-4a7a-a11d-beb9ad976339",
+          "name": "Health Controller get Health",
+          "request": {
+            "name": "Health Controller get Health",
+            "description": {},
+            "url": {
+              "path": ["health"],
+              "host": ["{{baseUrl}}"],
+              "query": [],
+              "variable": []
+            },
+            "header": [{ "key": "Accept", "value": "application/json" }],
+            "method": "GET",
+            "body": {},
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f2aa0c4c-8add-464a-8ae2-bafe786f50c7",
+              "name": "State of the Server",
+              "originalRequest": {
+                "url": {
+                  "path": ["health"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"status\": \"<string>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
             }
           ],
           "event": [],
@@ -54,7 +408,7 @@
           "description": "",
           "item": [
             {
-              "id": "06422ef8-e43f-4d65-996b-cc7a7ff3d81a",
+              "id": "bf635e40-27d7-49a7-8297-3f2801f66212",
               "name": "News Controller get Google",
               "request": {
                 "name": "News Controller get Google",
@@ -72,7 +426,8 @@
               },
               "response": [
                 {
-                  "id": "1748a69b-84a7-42e1-89fe-49ff682ae41f",
+                  "id": "10980dd0-4d0d-401f-8244-f4b95591ce8c",
+                  "name": "List of Google Trends",
                   "originalRequest": {
                     "url": {
                       "path": ["news", "google"],
@@ -100,6 +455,118 @@
               "protocolProfileBehavior": { "disableBodyPruning": true }
             }
           ]
+        },
+        {
+          "name": "sources",
+          "description": "",
+          "item": [
+            {
+              "id": "d58535b2-83f9-49ec-8c2f-1ff73b0438e0",
+              "name": "News Controller get Sources",
+              "request": {
+                "name": "News Controller get Sources",
+                "description": {},
+                "url": {
+                  "path": ["news", "sources"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "fe679080-6544-45e6-a282-d71bbeadf61c",
+                  "name": "List of News Sources",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["news", "sources"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{\n  \"total\": \"<number>\",\n  \"sources\": [\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"url\": \"<string>\",\n      \"category\": \"<string>\",\n      \"language\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"url\": \"<string>\",\n      \"category\": \"<string>\",\n      \"language\": \"<string>\",\n      \"country\": \"<string>\"\n    }\n  ]\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tarot",
+      "description": "",
+      "item": [
+        {
+          "name": "cards",
+          "description": "",
+          "item": [
+            {
+              "id": "5083ccc2-9c7c-4bf0-b80d-7e97cf7f5be8",
+              "name": "Tarot Controller get Cards",
+              "request": {
+                "name": "Tarot Controller get Cards",
+                "description": {},
+                "url": {
+                  "path": ["tarot", "cards"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "eb7b83b9-cab1-47e8-9540-68d8ddb8d4af",
+                  "name": "List of Tarot Cards",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["tarot", "cards"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{\n  \"total\": \"<number>\",\n  \"cards\": []\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
         }
       ]
     }
@@ -107,7 +574,7 @@
   "event": [],
   "variable": [{ "key": "baseUrl", "value": "/" }],
   "info": {
-    "_postman_id": "2c45d754-4c77-4337-912b-44eddebcb0d8",
+    "_postman_id": "79e2e5b9-9427-41e0-abc1-080cda243e92",
     "name": "hieudoanm",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": { "content": "Hieu Doan", "type": "text/plain" }

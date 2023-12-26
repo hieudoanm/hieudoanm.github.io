@@ -1,5 +1,7 @@
 import { HttpService } from '@nestjs/axios';
-import { Injectable, Logger } from '@nestjs/common';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
+import { Inject, Injectable, Logger } from '@nestjs/common';
 import {
   CountriesDto,
   CountryDto,
@@ -13,20 +15,36 @@ import {
 export class CountriesService {
   private readonly logger = new Logger(CountriesService.name);
 
-  constructor(private readonly httpService: HttpService) {}
+  constructor(
+    private readonly httpService: HttpService,
+    @Inject(CACHE_MANAGER) private cacheManager: Cache
+  ) {}
 
-  async getCountries(): Promise<CountriesDto> {
+  private async getCountriesFromAPI(): Promise<CountryDto[]> {
     try {
       const url: string = 'https://restcountries.com/v3.1/all';
       this.logger.log(`getCountries url=${url}`);
       const response = await this.httpService.axiosRef.get<CountryDto[]>(url);
       const { data: countries } = response;
-      const total = countries.length;
-      return { total, countries };
+      return countries;
     } catch (error) {
       this.logger.error(`getCountries error=${error}`);
-      return { total: 0, countries: [] };
+      return [];
     }
+  }
+
+  async getCountries(): Promise<CountriesDto> {
+    const key: string = 'countries';
+    const cacheCountries: CountryDto[] =
+      await this.cacheManager.get<CountryDto[]>(key);
+    if (cacheCountries) {
+      const total: number = cacheCountries.length;
+      return { total, countries: cacheCountries };
+    }
+    const countries: CountryDto[] = await this.getCountriesFromAPI();
+    await this.cacheManager.set(key, countries, 86400);
+    const total: number = countries.length;
+    return { total, countries };
   }
 
   async getCurrencies(): Promise<CurrenciesDto> {

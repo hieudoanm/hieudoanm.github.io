@@ -6,7 +6,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: List of Countries
           content:
             application/json:
               schema:
@@ -19,7 +19,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: List of Currencies
           content:
             application/json:
               schema:
@@ -31,7 +31,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: List of Languages
           content:
             application/json:
               schema:
@@ -43,7 +43,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: List of Ethnic Groups
           content:
             application/json:
               schema:
@@ -56,7 +56,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: List of License Plates
           content:
             application/json:
               schema:
@@ -73,7 +73,7 @@ paths:
             type: number
       responses:
         '200':
-          description: ''
+          description: List of Crypto Coins
           content:
             application/json:
               schema:
@@ -86,7 +86,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: State of the Server
           content:
             application/json:
               schema:
@@ -99,7 +99,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: List of Google Trends
           content:
             application/json:
               schema:
@@ -112,7 +112,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: List of News Sources
           content:
             application/json:
               schema:
@@ -124,7 +124,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: List of Tarot Cards
           content:
             application/json:
               schema:

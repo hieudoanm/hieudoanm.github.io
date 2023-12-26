@@ -1,7 +1,8 @@
-import { INestApplication } from '@nestjs/common';
+import { INestApplication, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, OpenAPIObject, SwaggerModule } from '@nestjs/swagger';
 import compression from 'compression';
+import cookieParser from 'cookie-parser';
 import { writeFileSync } from 'fs';
 import helmet from 'helmet';
 import { stringify } from 'yaml';
@@ -37,6 +38,8 @@ const bootstrap = async () => {
   const app = await NestFactory.create(AppModule);
   buildDocument(app);
   setUpSecurity(app);
+  app.use(cookieParser());
+  app.useGlobalPipes(new ValidationPipe());
   await app.listen(PORT);
 };
 

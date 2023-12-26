@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { EthnicGroupDto } from 'src/generated/ethnicGroup.entity';
-import { LicensePlateDto } from 'src/generated/licensePlate.entity';
+import { EthnicGroupDto } from '../../../../src/generated/ethnicGroup.entity';
+import { LicensePlateDto } from '../../../../src/generated/licensePlate.entity';
 
 export class EthnicGroupsResponseDto {
   @ApiProperty()
