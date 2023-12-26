@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export class HealthResponseDto {
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   status: string;
 }

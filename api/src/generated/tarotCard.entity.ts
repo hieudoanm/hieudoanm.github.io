@@ -10,4 +10,6 @@ export class TarotCardDto {
   meaningUp: string | null;
   meaningReverse: string | null;
   description: string | null;
+  createdAt: Date | null;
+  updatedAt: Date | null;
 }

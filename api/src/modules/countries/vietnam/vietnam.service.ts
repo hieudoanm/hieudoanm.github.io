@@ -26,4 +26,12 @@ export class VietnamService {
     const total = licensePlates.length;
     return { total, licensePlates };
   }
+
+  async getLicensePlate(code: string): Promise<LicensePlateDto> {
+    const licensePlate: LicensePlateDto =
+      await this.prismaService.licensePlate.findFirstOrThrow({
+        where: { code },
+      });
+    return licensePlate;
+  }
 }

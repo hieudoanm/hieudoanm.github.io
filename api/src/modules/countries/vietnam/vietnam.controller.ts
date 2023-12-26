@@ -1,10 +1,11 @@
-import { Controller, Get } from '@nestjs/common';
-import { ApiResponse, ApiTags } from '@nestjs/swagger';
-import { VietnamService } from './vietnam.service';
+import { Controller, Get, Param } from '@nestjs/common';
+import { ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { LicensePlateDto } from '../../../../src/generated/licensePlate.entity';
 import {
   EthnicGroupsResponseDto,
   LicensePlatesResponseDto,
 } from './vietnam.dto';
+import { VietnamService } from './vietnam.service';
 
 @ApiTags('vietnam')
 @Controller('vietnam')
@@ -29,5 +30,16 @@ export class VietnamController {
   })
   async getLicensePlates(): Promise<LicensePlatesResponseDto> {
     return this.vietnamService.getLicensePlates();
+  }
+
+  @Get('license-plates/:code')
+  @ApiParam({ name: 'code', type: String })
+  @ApiResponse({
+    status: 200,
+    type: LicensePlateDto,
+    description: 'Get License Plate by Code',
+  })
+  async getLicensePlate(@Param('code') code): Promise<LicensePlateDto> {
+    return this.vietnamService.getLicensePlate(code);
   }
 }

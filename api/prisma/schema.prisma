@@ -32,9 +32,9 @@ model Country {
   ccn3         String?    @unique @default("") @db.VarChar(3)
   startOfWeek  DayOfWeek? @default(MONDAY)
   region       Region?    @default(ANTARCTIC)
-  subregion    String?    @default("")
-  status       String?    @default("")
-  flag         String?    @default("")
+  subregion    String?    @default("") @db.VarChar(255)
+  status       String?    @default("") @db.VarChar(255)
+  flag         String?    @default("") @db.VarChar(255)
   area         Float?     @default(0)
   population   Int?       @default(0)
   independent  Boolean?   @default(false)
@@ -58,6 +58,11 @@ model Country {
   tld          String[]   @default([])
   capital      String[]   @default([])
   altSpellings String[]   @default([])
+
+  organizations CountriesOnOrganizations[]
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
 }
 
 enum DayOfWeek {
@@ -81,31 +86,67 @@ enum Region {
 
 model Currency {
   code   String @id @db.VarChar(3)
-  name   String
-  symbol String
+  name   String @db.VarChar(255)
+  symbol String @db.VarChar(255)
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
 }
 
 model Language {
   code String @id @db.VarChar(3)
-  name String
+  name String @db.VarChar(255)
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+}
+
+model Organization {
+  code String  @id
+  name String? @default("") @db.VarChar(255)
+
+  countries CountriesOnOrganizations[]
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+}
+
+model CountriesOnOrganizations {
+  organization     Organization @relation(fields: [organizationCode], references: [code])
+  organizationCode String
+  country          Country      @relation(fields: [countryCode], references: [cca3])
+  countryCode      String
+  accession        DateTime?
+  withdrawal       DateTime?
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+
+  @@id([organizationCode, countryCode])
 }
 
 model LicensePlate {
   code  String @id @db.VarChar(2)
-  name  String
-  group String
+  name  String @db.VarChar(255)
+  group String @db.VarChar(255)
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
 }
 
 model TarotCard {
   type           TarotCardType @default(MAJOR)
   id             String        @id @default("")
-  name           String?       @default("")
-  value          String?       @default("")
+  name           String?       @default("") @db.VarChar(255)
+  value          String?       @default("") @db.VarChar(255)
   valueInt       Int?          @default(0)
-  suit           String?       @default("")
+  suit           String?       @default("") @db.VarChar(255)
   meaningUp      String?       @default("") @db.Text()
   meaningReverse String?       @default("") @db.Text()
   description    String?       @default("") @db.Text()
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
 }
 
 enum TarotCardType {
@@ -113,8 +154,46 @@ enum TarotCardType {
   MINOR
 }
 
+enum TarotCardSuit {
+  CUPS
+  PENTACLES
+  SWORDS
+  WANDS
+}
+
 model EthnicGroup {
   id    Int    @id @default(autoincrement())
-  name  String @default("")
-  group String @default("")
+  name  String @default("") @db.VarChar(255)
+  group String @default("") @db.VarChar(255)
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+}
+
+model NewsSource {
+  id          String             @id
+  name        String             @default("") @db.VarChar(255)
+  description String             @default("")
+  url         String             @default("") @db.VarChar(255)
+  category    NewsSourceCategory @default(GENERAL)
+  language    String             @default("") @db.VarChar(2)
+  country     String             @default("") @db.VarChar(2)
+}
+
+enum NewsSourceCategory {
+  BUSINESS
+  ENTERTAINMENT
+  GENERAL
+  HEALTH
+  SCIENCE
+  SPORTS
+  TECHNOLOGY
+}
+
+model Word {
+  word          String @id @db.VarChar(255)
+  results       Json?  @default("{}")
+  syllables     Json?  @default("{}")
+  pronunciation Json?  @default("{}")
+  frequency     Float? @default(0)
 }

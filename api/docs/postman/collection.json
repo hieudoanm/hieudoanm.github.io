@@ -5,7 +5,7 @@
       "description": "",
       "item": [
         {
-          "id": "fc6bf663-7ce2-4187-9d98-00e19814eb67",
+          "id": "85605861-fdaf-45e2-bd17-7eea5784ae0a",
           "name": "Countries Controller get Countries",
           "request": {
             "name": "Countries Controller get Countries",
@@ -13,7 +13,71 @@
             "url": {
               "path": ["countries"],
               "host": ["{{baseUrl}}"],
-              "query": [],
+              "query": [
+                {
+                  "disabled": false,
+                  "description": { "content": "Name", "type": "text/plain" },
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "description": { "content": "Capital", "type": "text/plain" },
+                  "key": "capital",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "United Nation Member",
+                    "type": "text/plain"
+                  },
+                  "key": "unMember",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "description": { "content": "Region", "type": "text/plain" },
+                  "key": "region",
+                  "value": "AFRICA"
+                },
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "Subregion",
+                    "type": "text/plain"
+                  },
+                  "key": "subregion",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "Currency",
+                    "type": "text/plain"
+                  },
+                  "key": "currency",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "Language",
+                    "type": "text/plain"
+                  },
+                  "key": "language",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "Timezone",
+                    "type": "text/plain"
+                  },
+                  "key": "timezone",
+                  "value": "<string>"
+                }
+              ],
               "variable": []
             },
             "header": [{ "key": "Accept", "value": "application/json" }],
@@ -23,13 +87,86 @@
           },
           "response": [
             {
-              "id": "6c58ccc2-1ac8-4727-903e-13262c140df5",
+              "id": "b27b28cc-5551-4c69-ae92-9cddd5eb0e7d",
               "name": "List of Countries",
               "originalRequest": {
                 "url": {
                   "path": ["countries"],
                   "host": ["{{baseUrl}}"],
-                  "query": [],
+                  "query": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Capital",
+                        "type": "text/plain"
+                      },
+                      "key": "capital",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "United Nation Member",
+                        "type": "text/plain"
+                      },
+                      "key": "unMember",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Region",
+                        "type": "text/plain"
+                      },
+                      "key": "region",
+                      "value": "AFRICA"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Subregion",
+                        "type": "text/plain"
+                      },
+                      "key": "subregion",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Currency",
+                        "type": "text/plain"
+                      },
+                      "key": "currency",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Language",
+                        "type": "text/plain"
+                      },
+                      "key": "language",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Timezone",
+                        "type": "text/plain"
+                      },
+                      "key": "timezone",
+                      "value": "<string>"
+                    }
+                  ],
                   "variable": []
                 },
                 "header": [{ "key": "Accept", "value": "application/json" }],
@@ -41,7 +178,7 @@
               "header": [
                 { "key": "Content-Type", "value": "application/json" }
               ],
-              "body": "{\n  \"total\": \"<number>\",\n  \"countries\": [\n    {\n      \"region\": \"<string>\",\n      \"subregion\": \"<string>\",\n      \"currencies\": {},\n      \"languages\": {}\n    },\n    {\n      \"region\": \"<string>\",\n      \"subregion\": \"<string>\",\n      \"currencies\": {},\n      \"languages\": {}\n    }\n  ]\n}",
+              "body": "{\n  \"total\": \"<number>\",\n  \"regions\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"subregions\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"countries\": []\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             }
@@ -50,11 +187,75 @@
           "protocolProfileBehavior": { "disableBodyPruning": true }
         },
         {
+          "name": "{code}",
+          "description": "",
+          "item": [
+            {
+              "id": "8e443f7d-95a0-4c48-9be8-4b63f83c51ce",
+              "name": "Countries Controller get Country",
+              "request": {
+                "name": "Countries Controller get Country",
+                "description": {},
+                "url": {
+                  "path": ["countries", ":code"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": [
+                    {
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "code",
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      }
+                    }
+                  ]
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "7769caf9-faf6-42da-b899-59d578362a91",
+                  "name": "Get Country by Code",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["countries", ":code"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        },
+        {
           "name": "currencies",
           "description": "",
           "item": [
             {
-              "id": "9611049b-489f-4289-b05c-59f33e3a45d0",
+              "id": "2f2fc080-a7ed-4fab-9fa9-334377f11a80",
               "name": "Countries Controller get Currencies",
               "request": {
                 "name": "Countries Controller get Currencies",
@@ -72,7 +273,7 @@
               },
               "response": [
                 {
-                  "id": "3933dc83-5546-4080-8c83-10f618f2253c",
+                  "id": "1b8531c8-a314-45d5-8a4f-43d6d7258578",
                   "name": "List of Currencies",
                   "originalRequest": {
                     "url": {
@@ -107,7 +308,7 @@
           "description": "",
           "item": [
             {
-              "id": "2435a96f-bcb5-4333-90eb-60ca72dca49b",
+              "id": "797d3688-f0a5-4165-b879-4cde6336d528",
               "name": "Countries Controller get Languages",
               "request": {
                 "name": "Countries Controller get Languages",
@@ -125,7 +326,7 @@
               },
               "response": [
                 {
-                  "id": "1b23e8f9-c605-4a92-901d-aad18ddd774c",
+                  "id": "46f9f0ab-b56d-4df6-b7bb-449e57644a7c",
                   "name": "List of Languages",
                   "originalRequest": {
                     "url": {
@@ -158,6 +359,121 @@
       ]
     },
     {
+      "name": "organizations",
+      "description": "",
+      "item": [
+        {
+          "id": "bbfb2031-2160-4cbb-b03c-1bf49cc4d000",
+          "name": "Organizations Controller get Organizations",
+          "request": {
+            "name": "Organizations Controller get Organizations",
+            "description": {},
+            "url": {
+              "path": ["organizations"],
+              "host": ["{{baseUrl}}"],
+              "query": [],
+              "variable": []
+            },
+            "header": [{ "key": "Accept", "value": "application/json" }],
+            "method": "GET",
+            "body": {},
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fced5be9-de7b-47ce-9898-42d3b7905f57",
+              "name": "List of Organizations",
+              "originalRequest": {
+                "url": {
+                  "path": ["organizations"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n  \"total\": 0,\n  \"organizations\": []\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": { "disableBodyPruning": true }
+        },
+        {
+          "name": "{code}",
+          "description": "",
+          "item": [
+            {
+              "id": "314d88dd-9121-477b-8992-de83510d8263",
+              "name": "Organizations Controller get Organization",
+              "request": {
+                "name": "Organizations Controller get Organization",
+                "description": {},
+                "url": {
+                  "path": ["organizations", ":code"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": [
+                    {
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "code",
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Organization Code",
+                        "type": "text/plain"
+                      }
+                    }
+                  ]
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "03d14e4e-2cf7-4190-ac1e-9cb81bb7f3ab",
+                  "name": "Get Organization by Code",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["organizations", ":code"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "vietnam",
       "description": "",
       "item": [
@@ -166,7 +482,7 @@
           "description": "",
           "item": [
             {
-              "id": "5f1d4d56-7732-4123-b67c-4669e1ccea42",
+              "id": "01137325-abf3-4dbb-8a42-ae9cccd9d8f3",
               "name": "Vietnam Controller get Ethnic Groups",
               "request": {
                 "name": "Vietnam Controller get Ethnic Groups",
@@ -184,7 +500,7 @@
               },
               "response": [
                 {
-                  "id": "d80287c9-b0a5-46cd-a309-a6a29bf36f17",
+                  "id": "2f782477-455c-4ae4-9fb5-8aee9b4d0f13",
                   "name": "List of Ethnic Groups",
                   "originalRequest": {
                     "url": {
@@ -219,7 +535,7 @@
           "description": "",
           "item": [
             {
-              "id": "5ececb3a-bb22-424b-839f-caa898726497",
+              "id": "05c60492-cba7-47b9-85c3-0adda7f16988",
               "name": "Vietnam Controller get License Plates",
               "request": {
                 "name": "Vietnam Controller get License Plates",
@@ -237,7 +553,7 @@
               },
               "response": [
                 {
-                  "id": "e02f7359-4178-4887-9b5c-17062da561ee",
+                  "id": "71846a7e-4839-4fa0-a5eb-f0d5910ddd72",
                   "name": "List of License Plates",
                   "originalRequest": {
                     "url": {
@@ -264,6 +580,72 @@
               ],
               "event": [],
               "protocolProfileBehavior": { "disableBodyPruning": true }
+            },
+            {
+              "name": "{code}",
+              "description": "",
+              "item": [
+                {
+                  "id": "7d37b02f-4ba4-4982-adf7-9291e3719477",
+                  "name": "Vietnam Controller get License Plate",
+                  "request": {
+                    "name": "Vietnam Controller get License Plate",
+                    "description": {},
+                    "url": {
+                      "path": ["vietnam", "license-plates", ":code"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": [
+                        {
+                          "type": "any",
+                          "value": "<string>",
+                          "key": "code",
+                          "disabled": false,
+                          "description": {
+                            "content": "(Required) ",
+                            "type": "text/plain"
+                          }
+                        }
+                      ]
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {},
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "b77cd033-cedb-4f54-b1c9-bd3c941d5a00",
+                      "name": "Get License Plate by Code",
+                      "originalRequest": {
+                        "url": {
+                          "path": ["vietnam", "license-plates", ":code"],
+                          "host": ["{{baseUrl}}"],
+                          "query": [],
+                          "variable": []
+                        },
+                        "header": [
+                          { "key": "Accept", "value": "application/json" }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        { "key": "Content-Type", "value": "application/json" }
+                      ],
+                      "body": "{}",
+                      "cookie": [],
+                      "_postman_previewlanguage": "json"
+                    }
+                  ],
+                  "event": [],
+                  "protocolProfileBehavior": { "disableBodyPruning": true }
+                }
+              ]
             }
           ]
         }
@@ -278,7 +660,7 @@
           "description": "",
           "item": [
             {
-              "id": "d20644e7-e661-4a9b-94cf-76a6f2fdfdbc",
+              "id": "5ad72844-e021-46e4-9045-c0935869b5e8",
               "name": "Crypto Controller get Countries",
               "request": {
                 "name": "Crypto Controller get Countries",
@@ -306,7 +688,7 @@
               },
               "response": [
                 {
-                  "id": "c22e283d-312c-4cac-a19e-4e0b7375b969",
+                  "id": "ffcd22b7-4fa6-4b8e-85f3-a8336cb0e8d0",
                   "name": "List of Crypto Coins",
                   "originalRequest": {
                     "url": {
@@ -349,11 +731,108 @@
       ]
     },
     {
+      "name": "forex",
+      "description": "",
+      "item": [
+        {
+          "name": "rates",
+          "description": "",
+          "item": [
+            {
+              "id": "c29f87e9-328a-480f-badd-6bd49027ec17",
+              "name": "Forex Controller get Rates",
+              "request": {
+                "name": "Forex Controller get Rates",
+                "description": {},
+                "url": {
+                  "path": ["forex", "rates"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Base",
+                        "type": "text/plain"
+                      },
+                      "key": "base",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Amount",
+                        "type": "text/plain"
+                      },
+                      "key": "amount",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [{ "key": "Accept", "value": "application/json" }],
+                "method": "GET",
+                "body": {},
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "6d51327f-e9df-4841-9157-f17538a7330a",
+                  "name": "List of Forex Rates",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["forex", "rates"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "Base",
+                            "type": "text/plain"
+                          },
+                          "key": "base",
+                          "value": "<string>"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "Amount",
+                            "type": "text/plain"
+                          },
+                          "key": "amount",
+                          "value": "<number>"
+                        }
+                      ],
+                      "variable": []
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                  ],
+                  "body": "{\n  \"total\": \"<number>\",\n  \"amount\": \"<number>\",\n  \"base\": \"<string>\",\n  \"rates\": [\n    {\n      \"rate\": \"<number>\",\n      \"code\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"rate\": \"<number>\",\n      \"code\": \"<string>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [],
+              "protocolProfileBehavior": { "disableBodyPruning": true }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "health",
       "description": "",
       "item": [
         {
-          "id": "f4bab9c5-73a2-4a7a-a11d-beb9ad976339",
+          "id": "17ffb169-8064-418d-9f5c-5b0315d7e4f6",
           "name": "Health Controller get Health",
           "request": {
             "name": "Health Controller get Health",
@@ -371,7 +850,7 @@
           },
           "response": [
             {
-              "id": "f2aa0c4c-8add-464a-8ae2-bafe786f50c7",
+              "id": "d37fade5-8164-4a7c-b89c-507a78b0deeb",
               "name": "State of the Server",
               "originalRequest": {
                 "url": {
@@ -408,7 +887,7 @@
           "description": "",
           "item": [
             {
-              "id": "bf635e40-27d7-49a7-8297-3f2801f66212",
+              "id": "1968e923-0d0d-4513-83b2-df6a216aafdf",
               "name": "News Controller get Google",
               "request": {
                 "name": "News Controller get Google",
@@ -426,7 +905,7 @@
               },
               "response": [
                 {
-                  "id": "10980dd0-4d0d-401f-8244-f4b95591ce8c",
+                  "id": "c3899fa7-836f-4732-9a36-8173d13b4835",
                   "name": "List of Google Trends",
                   "originalRequest": {
                     "url": {
@@ -461,7 +940,7 @@
           "description": "",
           "item": [
             {
-              "id": "d58535b2-83f9-49ec-8c2f-1ff73b0438e0",
+              "id": "22b32bce-901b-4c42-ae68-0f19286eea92",
               "name": "News Controller get Sources",
               "request": {
                 "name": "News Controller get Sources",
@@ -479,7 +958,7 @@
               },
               "response": [
                 {
-                  "id": "fe679080-6544-45e6-a282-d71bbeadf61c",
+                  "id": "a9fc06bc-ebf2-49f8-8479-e49ec2c9c25e",
                   "name": "List of News Sources",
                   "originalRequest": {
                     "url": {
@@ -520,7 +999,7 @@
           "description": "",
           "item": [
             {
-              "id": "5083ccc2-9c7c-4bf0-b80d-7e97cf7f5be8",
+              "id": "1b8f0dc5-225d-4b4e-bbea-8eccd013a922",
               "name": "Tarot Controller get Cards",
               "request": {
                 "name": "Tarot Controller get Cards",
@@ -528,7 +1007,35 @@
                 "url": {
                   "path": ["tarot", "cards"],
                   "host": ["{{baseUrl}}"],
-                  "query": [],
+                  "query": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Tarot Type",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "MAJOR"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Tarot Suit",
+                        "type": "text/plain"
+                      },
+                      "key": "suit",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Limit",
+                        "type": "text/plain"
+                      },
+                      "key": "limit",
+                      "value": "<number>"
+                    }
+                  ],
                   "variable": []
                 },
                 "header": [{ "key": "Accept", "value": "application/json" }],
@@ -538,13 +1045,41 @@
               },
               "response": [
                 {
-                  "id": "eb7b83b9-cab1-47e8-9540-68d8ddb8d4af",
+                  "id": "7ab845f4-b215-4404-a6b8-1d34d3b40f30",
                   "name": "List of Tarot Cards",
                   "originalRequest": {
                     "url": {
                       "path": ["tarot", "cards"],
                       "host": ["{{baseUrl}}"],
-                      "query": [],
+                      "query": [
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "Tarot Type",
+                            "type": "text/plain"
+                          },
+                          "key": "type",
+                          "value": "MAJOR"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "Tarot Suit",
+                            "type": "text/plain"
+                          },
+                          "key": "suit",
+                          "value": "<string>"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "Limit",
+                            "type": "text/plain"
+                          },
+                          "key": "limit",
+                          "value": "<number>"
+                        }
+                      ],
                       "variable": []
                     },
                     "header": [
@@ -558,13 +1093,88 @@
                   "header": [
                     { "key": "Content-Type", "value": "application/json" }
                   ],
-                  "body": "{\n  \"total\": \"<number>\",\n  \"cards\": []\n}",
+                  "body": "{\n  \"total\": \"<number>\",\n  \"types\": \"MINOR\",\n  \"suits\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"cards\": []\n}",
                   "cookie": [],
                   "_postman_previewlanguage": "json"
                 }
               ],
               "event": [],
               "protocolProfileBehavior": { "disableBodyPruning": true }
+            },
+            {
+              "name": "{id}",
+              "description": "",
+              "item": [
+                {
+                  "id": "bab16d22-97d8-4f2e-b56a-34927a98b100",
+                  "name": "Tarot Controller get Card",
+                  "request": {
+                    "name": "Tarot Controller get Card",
+                    "description": {},
+                    "url": {
+                      "path": ["tarot", "cards", ":id"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "(Required) ",
+                            "type": "text/plain"
+                          },
+                          "key": "id",
+                          "value": "<string>"
+                        }
+                      ],
+                      "variable": [{ "type": "any", "key": "id" }]
+                    },
+                    "header": [
+                      { "key": "Accept", "value": "application/json" }
+                    ],
+                    "method": "GET",
+                    "body": {},
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "07ff8a96-4d63-4691-97c6-4a636aef5754",
+                      "name": "Get Tarot Card by ID",
+                      "originalRequest": {
+                        "url": {
+                          "path": ["tarot", "cards", ":id"],
+                          "host": ["{{baseUrl}}"],
+                          "query": [
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "(Required) ",
+                                "type": "text/plain"
+                              },
+                              "key": "id",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": []
+                        },
+                        "header": [
+                          { "key": "Accept", "value": "application/json" }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        { "key": "Content-Type", "value": "application/json" }
+                      ],
+                      "body": "{}",
+                      "cookie": [],
+                      "_postman_previewlanguage": "json"
+                    }
+                  ],
+                  "event": [],
+                  "protocolProfileBehavior": { "disableBodyPruning": true }
+                }
+              ]
             }
           ]
         }
@@ -574,7 +1184,7 @@
   "event": [],
   "variable": [{ "key": "baseUrl", "value": "/" }],
   "info": {
-    "_postman_id": "79e2e5b9-9427-41e0-abc1-080cda243e92",
+    "_postman_id": "6323012c-0c56-4474-b9c9-032e016165a4",
     "name": "hieudoanm",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": { "content": "Hieu Doan", "type": "text/plain" }

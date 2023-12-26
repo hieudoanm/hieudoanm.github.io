@@ -1,14 +1,16 @@
 import { HttpService } from '@nestjs/axios';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
-import { Cache } from 'cache-manager';
 import { Inject, Injectable, Logger } from '@nestjs/common';
+import { Prisma, Region } from '@prisma/client';
+import { Cache } from 'cache-manager';
+import { PrismaService } from 'src/common/prisma/prisma.service';
+import { CountryDto } from '../../../src/generated/country.entity';
 import {
-  CountriesDto,
-  CountryDto,
-  CurrenciesDto,
+  CountriesResponseDto,
+  CurrenciesResponseDto,
   CurrencyDto,
   LanguageDto,
-  LanguagesDto,
+  LanguagesResponseDto,
 } from './countries.dto';
 
 @Injectable()
@@ -17,6 +19,7 @@ export class CountriesService {
 
   constructor(
     private readonly httpService: HttpService,
+    private readonly prismaService: PrismaService,
     @Inject(CACHE_MANAGER) private cacheManager: Cache
   ) {}
 
@@ -33,24 +36,118 @@ export class CountriesService {
     }
   }
 
-  async getCountries(): Promise<CountriesDto> {
-    const key: string = 'countries';
-    const cacheCountries: CountryDto[] =
-      await this.cacheManager.get<CountryDto[]>(key);
-    if (cacheCountries) {
-      const total: number = cacheCountries.length;
-      return { total, countries: cacheCountries };
+  private async getCountriesFromDB({
+    name,
+    unMember,
+    region,
+    subregion,
+    language,
+    currency,
+    timezone,
+  }: {
+    name: string;
+    unMember: boolean;
+    region: Region;
+    subregion: string;
+    language: string;
+    currency: string;
+    timezone: string;
+  }): Promise<{
+    regions: Region[];
+    subregions: string[];
+    countries: CountryDto[];
+  }> {
+    try {
+      const where: Prisma.CountryWhereInput = {
+        unMember,
+        region,
+        subregion,
+        timezones: timezone ? { has: timezone } : undefined,
+        languages: language ? { path: [language], not: Prisma.DbNull } : {},
+        currencies: currency ? { path: [currency], not: Prisma.DbNull } : {},
+        name: name ? { path: ['official'], string_contains: name } : undefined,
+      };
+      this.logger.log('getCountriesFromDB where', where);
+      const countries = await this.prismaService.country.findMany({
+        where,
+        include: { organizations: true },
+      });
+      const regions: Region[] = (
+        await this.prismaService.country.findMany({
+          where,
+          distinct: 'region',
+          select: { region: true },
+          orderBy: { region: 'asc' },
+        })
+      ).map(({ region }) => region);
+      const subregions: string[] = (
+        await this.prismaService.country.findMany({
+          where,
+          distinct: 'subregion',
+          select: { subregion: true },
+          orderBy: { subregion: 'asc' },
+        })
+      ).map(({ subregion }) => subregion);
+      return { regions, subregions, countries };
+    } catch (error) {
+      this.logger.error(`getCountriesFromDB error=${error}`);
+      return { regions: [], subregions: [], countries: [] };
     }
-    const countries: CountryDto[] = await this.getCountriesFromAPI();
-    await this.cacheManager.set(key, countries, 86400);
-    const total: number = countries.length;
-    return { total, countries };
   }
 
-  async getCurrencies(): Promise<CurrenciesDto> {
-    const { countries = [] } = await this.getCountries();
+  async getCountries({
+    name,
+    unMember,
+    region,
+    subregion,
+    language,
+    currency,
+    timezone,
+  }: {
+    name?: string;
+    unMember?: boolean;
+    region?: Region;
+    subregion?: string;
+    language?: string;
+    currency?: string;
+    timezone?: string;
+  }): Promise<CountriesResponseDto> {
+    const key: string = `countries-${name}-${region}-${subregion}-${language}-${currency}-${timezone}`;
+    this.logger.log(
+      `getCountries name=${name} region=${region} subregion=${subregion} language=${language} currency=${currency} timezone=${timezone}`
+    );
+    const cacheCountries: CountriesResponseDto =
+      await this.cacheManager.get<CountriesResponseDto>(key);
+    if (cacheCountries) {
+      return cacheCountries;
+    }
+    const { regions, subregions, countries } = await this.getCountriesFromDB({
+      name,
+      unMember,
+      region,
+      subregion,
+      language,
+      currency,
+      timezone,
+    });
+    const total: number = countries.length;
+    const countriesResponse = { total, regions, subregions, countries };
+    await this.cacheManager.set(key, countriesResponse, 86400);
+    return countriesResponse;
+  }
+
+  async getCountry(code: string): Promise<CountryDto> {
+    const country = await this.prismaService.country.findFirstOrThrow({
+      where: { cca3: code },
+      include: { organizations: true },
+    });
+    return country;
+  }
+
+  async getCurrencies(): Promise<CurrenciesResponseDto> {
+    const { countries = [] } = await this.getCountries({});
     let currenciesMap = {};
-    countries.forEach(({ currencies }) => {
+    countries.forEach(({ currencies }: { currencies }) => {
       currenciesMap = { ...currenciesMap, ...currencies };
     });
     const currencies: CurrencyDto[] = Object.keys(currenciesMap).map(
@@ -64,11 +161,11 @@ export class CountriesService {
     return { total, currencies };
   }
 
-  async getLanguages(): Promise<LanguagesDto> {
-    const { countries = [] } = await this.getCountries();
+  async getLanguages(): Promise<LanguagesResponseDto> {
+    const { countries = [] } = await this.getCountries({});
     let languagesMap = {};
-    countries.forEach(({ languages }) => {
-      languagesMap = { ...languages, ...languagesMap };
+    countries.forEach(({ languages }: { languages }) => {
+      languagesMap = { ...languagesMap, ...languages };
     });
     const languages: LanguageDto[] = Object.keys(languagesMap).map(
       (code: string) => {

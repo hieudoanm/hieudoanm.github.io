@@ -1,12 +1,13 @@
 import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { ThrottlerModule } from '@nestjs/throttler';
 import { CountriesModule } from './modules/countries/countries.module';
-import { CryptoModule } from './modules/crypto/crypto.module';
+import { FinanceModule } from './modules/finance/finance.module';
 import { HealthModule } from './modules/health/health.module';
 import { NewsModule } from './modules/news/news.module';
 import { TarotModule } from './modules/tarot/tarot.module';
-import { ThrottlerModule } from '@nestjs/throttler';
+import { WordsModule } from './modules/words/words.module';
 
 @Module({
   imports: [
@@ -14,10 +15,11 @@ import { ThrottlerModule } from '@nestjs/throttler';
     ThrottlerModule.forRoot([{ ttl: 60000, limit: 10 }]),
     HttpModule,
     CountriesModule,
-    CryptoModule,
+    FinanceModule,
     HealthModule,
     NewsModule,
     TarotModule,
+    WordsModule,
   ],
   controllers: [],
   providers: [],

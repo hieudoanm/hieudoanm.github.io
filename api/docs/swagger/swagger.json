@@ -4,14 +4,123 @@
     "/countries": {
       "get": {
         "operationId": "CountriesController_getCountries",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "timezone",
+            "required": false,
+            "in": "query",
+            "description": "Timezone",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "language",
+            "required": false,
+            "in": "query",
+            "description": "Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "currency",
+            "required": false,
+            "in": "query",
+            "description": "Currency",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subregion",
+            "required": false,
+            "in": "query",
+            "description": "Subregion",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "region",
+            "required": false,
+            "in": "query",
+            "description": "Region",
+            "schema": {
+              "enum": [
+                "AFRICA",
+                "AMERICAS",
+                "ANTARCTIC",
+                "ASIA",
+                "EUROPE",
+                "OCEANIA"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "unMember",
+            "required": false,
+            "in": "query",
+            "description": "United Nation Member",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "capital",
+            "required": false,
+            "in": "query",
+            "description": "Capital",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "required": false,
+            "in": "query",
+            "description": "Name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "List of Countries",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountriesDto"
+                  "$ref": "#/components/schemas/CountriesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["countries"]
+      }
+    },
+    "/countries/{code}": {
+      "get": {
+        "operationId": "CountriesController_getCountry",
+        "parameters": [
+          {
+            "name": "code",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get Country by Code",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryDto"
                 }
               }
             }
@@ -30,7 +139,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CurrenciesDto"
+                  "$ref": "#/components/schemas/CurrenciesResponseDto"
                 }
               }
             }
@@ -49,13 +158,61 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LanguagesDto"
+                  "$ref": "#/components/schemas/LanguagesResponseDto"
                 }
               }
             }
           }
         },
         "tags": ["countries"]
+      }
+    },
+    "/organizations": {
+      "get": {
+        "operationId": "OrganizationsController_getOrganizations",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Organizations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["organizations"]
+      }
+    },
+    "/organizations/{code}": {
+      "get": {
+        "operationId": "OrganizationsController_getOrganization",
+        "parameters": [
+          {
+            "name": "code",
+            "required": true,
+            "in": "path",
+            "description": "Organization Code",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get Organization by Code",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["organizations"]
       }
     },
     "/vietnam/ethnic-groups": {
@@ -96,6 +253,34 @@
         "tags": ["vietnam"]
       }
     },
+    "/vietnam/license-plates/{code}": {
+      "get": {
+        "operationId": "VietnamController_getLicensePlate",
+        "parameters": [
+          {
+            "name": "code",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get License Plate by Code",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LicensePlateDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["vietnam"]
+      }
+    },
     "/crypto/coins": {
       "get": {
         "operationId": "CryptoController_getCountries",
@@ -122,6 +307,44 @@
           }
         },
         "tags": ["crypto"]
+      }
+    },
+    "/forex/rates": {
+      "get": {
+        "operationId": "ForexController_getRates",
+        "parameters": [
+          {
+            "name": "base",
+            "required": false,
+            "in": "query",
+            "description": "Base",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "amount",
+            "required": false,
+            "in": "query",
+            "description": "Amount",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Forex Rates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RatesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["forex"]
       }
     },
     "/health": {
@@ -184,7 +407,36 @@
     "/tarot/cards": {
       "get": {
         "operationId": "TarotController_getCards",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "type",
+            "required": false,
+            "in": "query",
+            "description": "Tarot Type",
+            "schema": {
+              "enum": ["MAJOR", "MINOR"],
+              "type": "string"
+            }
+          },
+          {
+            "name": "suit",
+            "required": false,
+            "in": "query",
+            "description": "Tarot Suit",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Limit",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "List of Tarot Cards",
@@ -198,6 +450,100 @@
           }
         },
         "tags": ["tarot"]
+      }
+    },
+    "/tarot/cards/{id}": {
+      "get": {
+        "operationId": "TarotController_getCard",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get Tarot Card by ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TarotCardDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["tarot"]
+      }
+    },
+    "/words": {
+      "get": {
+        "operationId": "WordsController_getWords",
+        "parameters": [
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "description": "Offset",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Limit",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Words",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["words"]
+      }
+    },
+    "/words/{word}": {
+      "get": {
+        "operationId": "WordsController_getWord",
+        "parameters": [
+          {
+            "name": "word",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get Words Card by ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["words"]
       }
     }
   },
@@ -213,59 +559,66 @@
     "schemas": {
       "CountryDto": {
         "type": "object",
-        "properties": {
-          "region": {
-            "type": "string"
-          },
-          "subregion": {
-            "type": "string"
-          },
-          "currencies": {
-            "type": "object"
-          },
-          "languages": {
-            "type": "object"
-          }
-        },
-        "required": ["region", "subregion", "currencies", "languages"]
+        "properties": {}
       },
-      "CountriesDto": {
+      "CountriesResponseDto": {
         "type": "object",
         "properties": {
           "total": {
-            "type": "number"
+            "type": "number",
+            "default": 0
+          },
+          "regions": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "subregions": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "countries": {
+            "default": [],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CountryDto"
             }
           }
         },
-        "required": ["total", "countries"]
+        "required": ["total", "regions", "subregions", "countries"]
       },
       "CurrencyDto": {
         "type": "object",
         "properties": {
           "code": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           },
           "symbol": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           }
         },
         "required": ["code", "name", "symbol"]
       },
-      "CurrenciesDto": {
+      "CurrenciesResponseDto": {
         "type": "object",
         "properties": {
           "total": {
-            "type": "number"
+            "type": "number",
+            "default": 0
           },
           "currencies": {
+            "default": [],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CurrencyDto"
@@ -278,21 +631,25 @@
         "type": "object",
         "properties": {
           "code": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           }
         },
         "required": ["code", "name"]
       },
-      "LanguagesDto": {
+      "LanguagesResponseDto": {
         "type": "object",
         "properties": {
           "total": {
-            "type": "number"
+            "type": "number",
+            "default": 0
           },
           "languages": {
+            "default": [],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LanguageDto"
@@ -300,6 +657,27 @@
           }
         },
         "required": ["total", "languages"]
+      },
+      "OrganizationDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "OrganizationsResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "organizations": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrganizationDto"
+            }
+          }
+        },
+        "required": ["total", "organizations"]
       },
       "EthnicGroupDto": {
         "type": "object",
@@ -309,7 +687,8 @@
         "type": "object",
         "properties": {
           "total": {
-            "type": "number"
+            "type": "number",
+            "default": 0
           },
           "ethnicGroups": {
             "default": [],
@@ -329,7 +708,8 @@
         "type": "object",
         "properties": {
           "total": {
-            "type": "number"
+            "type": "number",
+            "default": 0
           },
           "licensePlates": {
             "default": [],
@@ -433,11 +813,48 @@
         },
         "required": ["total", "coins"]
       },
+      "RateDto": {
+        "type": "object",
+        "properties": {
+          "rate": {
+            "type": "number"
+          },
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": ["rate", "code", "name"]
+      },
+      "RatesResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "base": {
+            "type": "string"
+          },
+          "rates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RateDto"
+            }
+          }
+        },
+        "required": ["total", "amount", "base", "rates"]
+      },
       "HealthResponseDto": {
         "type": "object",
         "properties": {
           "status": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           }
         },
         "required": ["status"]
@@ -446,9 +863,11 @@
         "type": "object",
         "properties": {
           "country": {
-            "type": "string"
+            "type": "string",
+            "default": 0
           },
           "queries": {
+            "default": [],
             "type": "array",
             "items": {
               "type": "string"
@@ -461,9 +880,11 @@
         "type": "object",
         "properties": {
           "total": {
-            "type": "number"
+            "type": "number",
+            "default": 0
           },
           "countries": {
+            "default": [],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/GoogleCountryDto"
@@ -476,25 +897,32 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           },
           "url": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           },
           "category": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           },
           "language": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           },
           "country": {
-            "type": "string"
+            "type": "string",
+            "default": ""
           }
         },
         "required": [
@@ -511,9 +939,11 @@
         "type": "object",
         "properties": {
           "total": {
-            "type": "number"
+            "type": "number",
+            "default": 0
           },
           "sources": {
+            "default": [],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/NewsSourceDto"
@@ -530,7 +960,18 @@
         "type": "object",
         "properties": {
           "total": {
-            "type": "number"
+            "type": "number",
+            "default": 0
+          },
+          "types": {
+            "type": "string",
+            "enum": ["MAJOR", "MINOR"]
+          },
+          "suits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "cards": {
             "default": [],
@@ -540,7 +981,36 @@
             }
           }
         },
-        "required": ["total", "cards"]
+        "required": ["total", "types", "suits", "cards"]
+      },
+      "WordDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "WordsResponseDto": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "default": 0
+          },
+          "offset": {
+            "type": "number",
+            "default": 0
+          },
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "words": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WordDto"
+            }
+          }
+        },
+        "required": ["limit", "offset", "total", "words"]
       }
     }
   }

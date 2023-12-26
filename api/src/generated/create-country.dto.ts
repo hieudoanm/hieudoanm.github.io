@@ -28,4 +28,5 @@ export class CreateCountryDto {
   capitalInfo?: Prisma.InputJsonValue;
   coatOfArms?: Prisma.InputJsonValue;
   postalCode?: Prisma.InputJsonValue;
+  createdAt?: Date;
 }

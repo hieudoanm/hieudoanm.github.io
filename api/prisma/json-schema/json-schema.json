@@ -144,6 +144,20 @@
           "items": {
             "type": "string"
           }
+        },
+        "organizations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CountriesOnOrganizations"
+          }
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
         }
       }
     },
@@ -158,6 +172,14 @@
         },
         "symbol": {
           "type": "string"
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
         }
       }
     },
@@ -169,6 +191,67 @@
         },
         "name": {
           "type": "string"
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "Organization": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CountriesOnOrganizations"
+          }
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "CountriesOnOrganizations": {
+      "type": "object",
+      "properties": {
+        "organization": {
+          "$ref": "#/definitions/Organization"
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "accession": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "withdrawal": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
         }
       }
     },
@@ -183,6 +266,14 @@
         },
         "group": {
           "type": "string"
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
         }
       }
     },
@@ -225,6 +316,14 @@
         "description": {
           "type": ["string", "null"],
           "default": ""
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
         }
       }
     },
@@ -241,6 +340,76 @@
         "group": {
           "type": "string",
           "default": ""
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "NewsSource": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "description": {
+          "type": "string",
+          "default": ""
+        },
+        "url": {
+          "type": "string",
+          "default": ""
+        },
+        "category": {
+          "type": "string",
+          "default": "GENERAL",
+          "enum": [
+            "BUSINESS",
+            "ENTERTAINMENT",
+            "GENERAL",
+            "HEALTH",
+            "SCIENCE",
+            "SPORTS",
+            "TECHNOLOGY"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "default": ""
+        },
+        "country": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    },
+    "Word": {
+      "type": "object",
+      "properties": {
+        "word": {
+          "type": "string"
+        },
+        "results": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "syllables": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "pronunciation": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "frequency": {
+          "type": ["number", "null"],
+          "default": 0
         }
       }
     }
@@ -256,6 +425,12 @@
     "language": {
       "$ref": "#/definitions/Language"
     },
+    "organization": {
+      "$ref": "#/definitions/Organization"
+    },
+    "countriesOnOrganizations": {
+      "$ref": "#/definitions/CountriesOnOrganizations"
+    },
     "licensePlate": {
       "$ref": "#/definitions/LicensePlate"
     },
@@ -264,6 +439,12 @@
     },
     "ethnicGroup": {
       "$ref": "#/definitions/EthnicGroup"
+    },
+    "newsSource": {
+      "$ref": "#/definitions/NewsSource"
+    },
+    "word": {
+      "$ref": "#/definitions/Word"
     }
   }
 }

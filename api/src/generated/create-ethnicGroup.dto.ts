@@ -1,1 +1,3 @@
-export class CreateEthnicGroupDto {}
+export class CreateEthnicGroupDto {
+  createdAt?: Date;
+}

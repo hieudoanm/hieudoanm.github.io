@@ -1,48 +1,48 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export class GoogleCountryDto {
-  @ApiProperty()
+  @ApiProperty({ default: 0 })
   country: string;
 
-  @ApiProperty({ type: [String] })
+  @ApiProperty({ type: [String], default: [] })
   queries: string[];
 }
 
 export class GoogleResponseDto {
-  @ApiProperty()
+  @ApiProperty({ default: 0 })
   total: number;
 
-  @ApiProperty({ type: [GoogleCountryDto] })
+  @ApiProperty({ type: [GoogleCountryDto], default: [] })
   countries: GoogleCountryDto[];
 }
 
 export class NewsSourceDto {
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   id: string;
 
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   name: string;
 
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   description: string;
 
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   url: string;
 
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   category: string;
 
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   language: string;
 
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   country: string;
 }
 
 export class NewsSourcesDto {
-  @ApiProperty()
+  @ApiProperty({ default: 0 })
   total: number;
 
-  @ApiProperty({ type: [NewsSourceDto] })
+  @ApiProperty({ type: [NewsSourceDto], default: [] })
   sources: NewsSourceDto[];
 }

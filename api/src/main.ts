@@ -40,6 +40,7 @@ const bootstrap = async () => {
   setUpSecurity(app);
   app.use(cookieParser());
   app.useGlobalPipes(new ValidationPipe());
+  console.info(`Server is listening on port ${PORT}`);
   await app.listen(PORT);
 };
 

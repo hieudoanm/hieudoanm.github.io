@@ -6,4 +6,5 @@ export class CreateTarotCardDto {
   meaningUp?: string;
   meaningReverse?: string;
   description?: string;
+  createdAt?: Date;
 }

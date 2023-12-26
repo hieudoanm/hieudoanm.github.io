@@ -1,58 +1,83 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { CountryDto } from '../../../src/generated/country.entity';
+import { Region } from '@prisma/client';
+import { IsBoolean, IsOptional, IsString } from 'class-validator';
 
-export class CountryDto {
-  @ApiProperty()
-  region: string;
+export class CountriesRequestQueryDto {
+  @IsOptional()
+  @IsString()
+  name: string;
 
-  @ApiProperty()
+  @IsOptional()
+  @IsBoolean()
+  unMember: boolean;
+
+  @IsOptional()
+  @IsString()
+  region: Region;
+
+  @IsOptional()
+  @IsString()
   subregion: string;
 
-  @ApiProperty()
-  currencies: Record<string, { name: string; symbol: string }>;
+  @IsOptional()
+  @IsString()
+  currency: string;
 
-  @ApiProperty()
-  languages: Record<string, string>;
+  @IsOptional()
+  @IsString()
+  language: string;
+
+  @IsOptional()
+  @IsString()
+  timezone: string;
 }
 
-export class CountriesDto {
-  @ApiProperty()
+export class CountriesResponseDto {
+  @ApiProperty({ default: 0 })
   total: number;
 
-  @ApiProperty({ type: [CountryDto] })
+  @ApiProperty({ default: [] })
+  regions: Region[];
+
+  @ApiProperty({ default: [] })
+  subregions: string[];
+
+  @ApiProperty({ type: [CountryDto], default: [] })
   countries: CountryDto[];
 }
 
 export class CurrencyDto {
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   code: string;
 
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   name: string;
 
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   symbol: string;
 }
 
-export class CurrenciesDto {
-  @ApiProperty()
+export class CurrenciesResponseDto {
+  @ApiProperty({ default: 0 })
   total: number;
 
-  @ApiProperty({ type: [CurrencyDto] })
+  @ApiProperty({ type: [CurrencyDto], default: [] })
   currencies: CurrencyDto[];
 }
 
 export class LanguageDto {
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   code: string;
 
-  @ApiProperty()
+  @ApiProperty({ default: '' })
   name: string;
 }
 
-export class LanguagesDto {
-  @ApiProperty()
+export class LanguagesResponseDto {
+  @ApiProperty({ default: 0 })
   total: number;
 
-  @ApiProperty({ type: [LanguageDto] })
+  @ApiProperty({ type: [LanguageDto], default: [] })
   languages: LanguageDto[];
 }

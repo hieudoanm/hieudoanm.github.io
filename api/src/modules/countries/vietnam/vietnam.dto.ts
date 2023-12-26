@@ -3,7 +3,7 @@ import { EthnicGroupDto } from '../../../../src/generated/ethnicGroup.entity';
 import { LicensePlateDto } from '../../../../src/generated/licensePlate.entity';
 
 export class EthnicGroupsResponseDto {
-  @ApiProperty()
+  @ApiProperty({ default: 0 })
   total: number;
 
   @ApiProperty({ type: [EthnicGroupDto], default: [] })
@@ -11,7 +11,7 @@ export class EthnicGroupsResponseDto {
 }
 
 export class LicensePlatesResponseDto {
-  @ApiProperty()
+  @ApiProperty({ default: 0 })
   total: number;
 
   @ApiProperty({ type: [LicensePlateDto], default: [] })

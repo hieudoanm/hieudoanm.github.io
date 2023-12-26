@@ -40,20 +40,42 @@ erDiagram
     String tld
     String capital
     String altSpellings
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
 }
 "Currency" {
     String code PK
     String name
     String symbol
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
 }
 "Language" {
     String code PK
     String name
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"Organization" {
+    String code PK
+    String name "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"CountriesOnOrganizations" {
+    String organizationCode FK
+    String countryCode FK
+    DateTime accession "nullable"
+    DateTime withdrawal "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
 }
 "LicensePlate" {
     String code PK
     String name
     String group
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
 }
 "TarotCard" {
     TarotCardType type
@@ -65,12 +87,34 @@ erDiagram
     String meaningUp "nullable"
     String meaningReverse "nullable"
     String description "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
 }
 "EthnicGroup" {
     Int id PK
     String name
     String group
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
 }
+"NewsSource" {
+    String id PK
+    String name
+    String description
+    String url
+    NewsSourceCategory category
+    String language
+    String country
+}
+"Word" {
+    String word PK
+    Json results "nullable"
+    Json syllables "nullable"
+    Json pronunciation "nullable"
+    Float frequency "nullable"
+}
+"CountriesOnOrganizations" }o--|| "Organization" : organization
+"CountriesOnOrganizations" }o--|| "Country" : country
 ```
 
 ### `Country`
@@ -108,6 +152,8 @@ erDiagram
 - `tld`:
 - `capital`:
 - `altSpellings`:
+- `createdAt`:
+- `updatedAt`:
 
 ### `Currency`
 
@@ -116,6 +162,8 @@ erDiagram
 - `code`:
 - `name`:
 - `symbol`:
+- `createdAt`:
+- `updatedAt`:
 
 ### `Language`
 
@@ -123,6 +171,28 @@ erDiagram
 
 - `code`:
 - `name`:
+- `createdAt`:
+- `updatedAt`:
+
+### `Organization`
+
+**Properties**
+
+- `code`:
+- `name`:
+- `createdAt`:
+- `updatedAt`:
+
+### `CountriesOnOrganizations`
+
+**Properties**
+
+- `organizationCode`:
+- `countryCode`:
+- `accession`:
+- `withdrawal`:
+- `createdAt`:
+- `updatedAt`:
 
 ### `LicensePlate`
 
@@ -131,6 +201,8 @@ erDiagram
 - `code`:
 - `name`:
 - `group`:
+- `createdAt`:
+- `updatedAt`:
 
 ### `TarotCard`
 
@@ -145,6 +217,8 @@ erDiagram
 - `meaningUp`:
 - `meaningReverse`:
 - `description`:
+- `createdAt`:
+- `updatedAt`:
 
 ### `EthnicGroup`
 
@@ -153,3 +227,27 @@ erDiagram
 - `id`:
 - `name`:
 - `group`:
+- `createdAt`:
+- `updatedAt`:
+
+### `NewsSource`
+
+**Properties**
+
+- `id`:
+- `name`:
+- `description`:
+- `url`:
+- `category`:
+- `language`:
+- `country`:
+
+### `Word`
+
+**Properties**
+
+- `word`:
+- `results`:
+- `syllables`:
+- `pronunciation`:
+- `frequency`:

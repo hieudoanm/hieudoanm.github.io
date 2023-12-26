@@ -6,4 +6,5 @@ export class UpdateTarotCardDto {
   meaningUp?: string;
   meaningReverse?: string;
   description?: string;
+  createdAt?: Date;
 }

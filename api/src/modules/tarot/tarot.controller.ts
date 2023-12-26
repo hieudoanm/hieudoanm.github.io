@@ -1,8 +1,10 @@
 import { CacheInterceptor } from '@nestjs/cache-manager';
-import { Controller, Get, UseInterceptors } from '@nestjs/common';
-import { ApiResponse, ApiTags } from '@nestjs/swagger';
+import { Controller, Get, Param, Query, UseInterceptors } from '@nestjs/common';
+import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { TarotCardsResponseDto } from './tarot.dto';
 import { TarotService } from './tarot.service';
+import { TarotCardDto } from 'src/generated/tarotCard.entity';
+import { TarotCardType } from '@prisma/client';
 
 @ApiTags('tarot')
 @Controller('tarot')
@@ -11,12 +13,45 @@ export class TarotController {
   constructor(private readonly tarotService: TarotService) {}
 
   @Get('cards')
+  @ApiQuery({
+    name: 'type',
+    enum: TarotCardType,
+    description: 'Tarot Type',
+    required: false,
+  })
+  @ApiQuery({
+    name: 'suit',
+    type: String,
+    description: 'Tarot Suit',
+    required: false,
+  })
+  @ApiQuery({
+    name: 'limit',
+    type: Number,
+    description: 'Limit',
+    required: false,
+  })
   @ApiResponse({
     status: 200,
     type: TarotCardsResponseDto,
     description: 'List of Tarot Cards',
   })
-  async getCards(): Promise<TarotCardsResponseDto> {
-    return this.tarotService.getCards();
+  async getCards(
+    @Query('type') type: TarotCardType,
+    @Query('suit') suit: string,
+    @Query('limit') limit = 78
+  ): Promise<TarotCardsResponseDto> {
+    return this.tarotService.getCards({ limit, type, suit });
+  }
+
+  @Get('cards/:id')
+  @ApiQuery({ name: 'id', type: String })
+  @ApiResponse({
+    status: 200,
+    type: TarotCardDto,
+    description: 'Get Tarot Card by ID',
+  })
+  async getCard(@Param('id') id): Promise<TarotCardDto> {
+    return this.tarotService.getCard(id);
   }
 }

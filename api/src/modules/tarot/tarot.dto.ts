@@ -1,9 +1,16 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { TarotCardDto } from '../../../src/generated/tarotCard.entity';
+import { TarotCardType } from '@prisma/client';
 
 export class TarotCardsResponseDto {
-  @ApiProperty()
+  @ApiProperty({ default: 0 })
   total: number;
+
+  @ApiProperty({ enum: TarotCardType })
+  types: TarotCardType[];
+
+  @ApiProperty({ type: [String] })
+  suits: string[];
 
   @ApiProperty({ type: [TarotCardDto], default: [] })
   cards: TarotCardDto[];

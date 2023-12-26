@@ -1,1 +1,3 @@
-export class UpdateEthnicGroupDto {}
+export class UpdateEthnicGroupDto {
+  createdAt?: Date;
+}

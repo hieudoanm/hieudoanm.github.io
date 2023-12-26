@@ -34,23 +34,55 @@ Table Country {
   tld String[] [not null]
   capital String[] [not null]
   altSpellings String[] [not null]
+  organizations CountriesOnOrganizations [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
 }
 
 Table Currency {
   code String [pk]
   name String [not null]
   symbol String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
 }
 
 Table Language {
   code String [pk]
   name String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table Organization {
+  code String [pk]
+  name String [default: '']
+  countries CountriesOnOrganizations [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table CountriesOnOrganizations {
+  organization Organization [not null]
+  organizationCode String [not null]
+  country Country [not null]
+  countryCode String [not null]
+  accession DateTime
+  withdrawal DateTime
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (organizationCode, countryCode) [pk]
+  }
 }
 
 Table LicensePlate {
   code String [pk]
   name String [not null]
   group String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
 }
 
 Table TarotCard {
@@ -63,12 +95,34 @@ Table TarotCard {
   meaningUp String [default: '']
   meaningReverse String [default: '']
   description String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
 }
 
 Table EthnicGroup {
   id Int [pk, increment]
   name String [not null, default: '']
   group String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table NewsSource {
+  id String [pk]
+  name String [not null, default: '']
+  description String [not null, default: '']
+  url String [not null, default: '']
+  category NewsSourceCategory [not null, default: 'GENERAL']
+  language String [not null, default: '']
+  country String [not null, default: '']
+}
+
+Table Word {
+  word String [pk]
+  results Json [default: '{}']
+  syllables Json [default: '{}']
+  pronunciation Json [default: '{}']
+  frequency Float [default: 0]
 }
 
 Enum DayOfWeek {
@@ -94,3 +148,24 @@ Enum TarotCardType {
   MAJOR
   MINOR
 }
+
+Enum TarotCardSuit {
+  CUPS
+  PENTACLES
+  SWORDS
+  WANDS
+}
+
+Enum NewsSourceCategory {
+  BUSINESS
+  ENTERTAINMENT
+  GENERAL
+  HEALTH
+  SCIENCE
+  SPORTS
+  TECHNOLOGY
+}
+
+Ref: CountriesOnOrganizations.organizationCode > Organization.code
+
+Ref: CountriesOnOrganizations.countryCode > Country.cca3
