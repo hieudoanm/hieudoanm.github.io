@@ -410,6 +410,34 @@
         "frequency": {
           "type": ["number", "null"],
           "default": 0
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "TopLevelDomain": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string"
+        },
+        "type": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
         }
       }
     }
@@ -445,6 +473,9 @@
     },
     "word": {
       "$ref": "#/definitions/Word"
+    },
+    "topLevelDomain": {
+      "$ref": "#/definitions/TopLevelDomain"
     }
   }
 }

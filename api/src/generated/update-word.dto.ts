@@ -5,4 +5,5 @@ export class UpdateWordDto {
   syllables?: Prisma.InputJsonValue;
   pronunciation?: Prisma.InputJsonValue;
   frequency?: number;
+  createdAt?: Date;
 }

@@ -196,4 +196,15 @@ model Word {
   syllables     Json?  @default("{}")
   pronunciation Json?  @default("{}")
   frequency     Float? @default(0)
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+}
+
+model TopLevelDomain {
+  domain String  @id
+  type   String? @default("")
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
 }

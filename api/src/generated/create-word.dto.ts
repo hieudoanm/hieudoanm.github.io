@@ -6,4 +6,5 @@ export class CreateWordDto {
   syllables?: Prisma.InputJsonValue;
   pronunciation?: Prisma.InputJsonValue;
   frequency?: number;
+  createdAt?: Date;
 }

@@ -112,6 +112,14 @@ erDiagram
     Json syllables "nullable"
     Json pronunciation "nullable"
     Float frequency "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"TopLevelDomain" {
+    String domain PK
+    String type "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
 }
 "CountriesOnOrganizations" }o--|| "Organization" : organization
 "CountriesOnOrganizations" }o--|| "Country" : country
@@ -251,3 +259,14 @@ erDiagram
 - `syllables`:
 - `pronunciation`:
 - `frequency`:
+- `createdAt`:
+- `updatedAt`:
+
+### `TopLevelDomain`
+
+**Properties**
+
+- `domain`:
+- `type`:
+- `createdAt`:
+- `updatedAt`:

@@ -123,6 +123,15 @@ Table Word {
   syllables Json [default: '{}']
   pronunciation Json [default: '{}']
   frequency Float [default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table TopLevelDomain {
+  domain String [pk]
+  type String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
 }
 
 Enum DayOfWeek {

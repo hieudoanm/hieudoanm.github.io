@@ -6,4 +6,6 @@ export class WordDto {
   syllables: Prisma.JsonValue | null;
   pronunciation: Prisma.JsonValue | null;
   frequency: number | null;
+  createdAt: Date | null;
+  updatedAt: Date | null;
 }
