@@ -132,8 +132,60 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"UnitedStatesCongress" {
+    Int congress PK
+    String houseControl "nullable"
+    String senateControl "nullable"
+    String congressControl "nullable"
+    String trifectaControl "nullable"
+    DateTime startDate "nullable"
+    DateTime endDate "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"UnitedStatesCongressMember" {
+    String id PK
+    String firstName "nullable"
+    String middleName "nullable"
+    String lastName "nullable"
+    String suffix "nullable"
+    DateTime dateOfBirth "nullable"
+    String gender "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+    Int unitedStatesCongressCongress FK "nullable"
+}
+"UnitedStatesCongressMembersInCongresses" {
+    UnitedStatesCongressChamber chamber
+    Int congressNumber FK
+    String memberId FK
+    String title "nullable"
+    String shortTitle "nullable"
+    String party "nullable"
+    String leadershipRole "nullable"
+    Int seniority "nullable"
+    String state "nullable"
+    String district "nullable"
+    Boolean atLarge "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"UnitedStatesCongressCommittee" {
+    UnitedStatesCongressChamber chamber
+    Int congressNumber FK
+    String id
+    String name "nullable"
+    String chairId FK "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 "CountriesOnOrganizations" }o--|| "Organization" : organization
 "CountriesOnOrganizations" }o--|| "Country" : country
+"UnitedStatesCongressMember" }o--|| "UnitedStatesCongress" : UnitedStatesCongress
+"UnitedStatesCongressMembersInCongresses" }o--|| "UnitedStatesCongress" : congress
+"UnitedStatesCongressMembersInCongresses" }o--|| "UnitedStatesCongressMember" : member
+"UnitedStatesCongressCommittee" }o--|| "UnitedStatesCongress" : congress
+"UnitedStatesCongressCommittee" }o--|| "UnitedStatesCongressMember" : chair
 ```
 
 ### `Country`
@@ -293,5 +345,64 @@ erDiagram
 - `aliases`:
 - `interpreters`:
 - `filenames`:
+- `createdAt`:
+- `updatedAt`:
+
+### `UnitedStatesCongress`
+
+**Properties**
+
+- `congress`:
+- `houseControl`:
+- `senateControl`:
+- `congressControl`:
+- `trifectaControl`:
+- `startDate`:
+- `endDate`:
+- `createdAt`:
+- `updatedAt`:
+
+### `UnitedStatesCongressMember`
+
+**Properties**
+
+- `id`:
+- `firstName`:
+- `middleName`:
+- `lastName`:
+- `suffix`:
+- `dateOfBirth`:
+- `gender`:
+- `createdAt`:
+- `updatedAt`:
+- `unitedStatesCongressCongress`:
+
+### `UnitedStatesCongressMembersInCongresses`
+
+**Properties**
+
+- `chamber`:
+- `congressNumber`:
+- `memberId`:
+- `title`:
+- `shortTitle`:
+- `party`:
+- `leadershipRole`:
+- `seniority`:
+- `state`:
+- `district`:
+- `atLarge`:
+- `createdAt`:
+- `updatedAt`:
+
+### `UnitedStatesCongressCommittee`
+
+**Properties**
+
+- `chamber`:
+- `congressNumber`:
+- `id`:
+- `name`:
+- `chairId`:
 - `createdAt`:
 - `updatedAt`:

@@ -146,6 +146,75 @@ Table ProgrammingLanguage {
   updatedAt DateTime [default: `now()`]
 }
 
+Table UnitedStatesCongress {
+  congress Int [pk]
+  houseControl String [default: '']
+  senateControl String [default: '']
+  congressControl String [default: '']
+  trifectaControl String [default: '']
+  startDate DateTime
+  endDate DateTime
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  UnitedStatesCongressMember UnitedStatesCongressMember [not null]
+  UnitedStatesCongressCommittee UnitedStatesCongressCommittee [not null]
+  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses [not null]
+}
+
+Table UnitedStatesCongressMember {
+  id String [pk, default: '']
+  firstName String [default: '']
+  middleName String [default: '']
+  lastName String [default: '']
+  suffix String [default: '']
+  dateOfBirth DateTime
+  gender String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  UnitedStatesCongress UnitedStatesCongress
+  unitedStatesCongressCongress Int
+  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses [not null]
+  UnitedStatesCongressCommittee UnitedStatesCongressCommittee [not null]
+}
+
+Table UnitedStatesCongressMembersInCongresses {
+  chamber UnitedStatesCongressChamber [not null, default: 'HOUSE']
+  congress UnitedStatesCongress [not null]
+  congressNumber Int [not null]
+  member UnitedStatesCongressMember [not null]
+  memberId String [not null, default: '']
+  title String [default: '']
+  shortTitle String [default: '']
+  party String [default: '']
+  leadershipRole String [default: '']
+  seniority Int [default: 0]
+  state String [default: '']
+  district String [default: '']
+  atLarge Boolean [default: false]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (chamber, congressNumber, memberId) [pk]
+  }
+}
+
+Table UnitedStatesCongressCommittee {
+  chamber UnitedStatesCongressChamber [not null, default: 'HOUSE']
+  congress UnitedStatesCongress [not null]
+  congressNumber Int [not null]
+  id String [not null, default: '']
+  name String [default: '']
+  chair UnitedStatesCongressMember
+  chairId String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (congressNumber, chamber, id) [pk]
+  }
+}
+
 Enum DayOfWeek {
   MONDAY
   TUESDAY
@@ -194,6 +263,21 @@ Enum ProgrammingLanguageType {
   PROSE
 }
 
+Enum UnitedStatesCongressChamber {
+  HOUSE
+  SENATE
+}
+
 Ref: CountriesOnOrganizations.organizationCode > Organization.code
 
 Ref: CountriesOnOrganizations.countryCode > Country.cca3
+
+Ref: UnitedStatesCongressMember.unitedStatesCongressCongress > UnitedStatesCongress.congress
+
+Ref: UnitedStatesCongressMembersInCongresses.congressNumber > UnitedStatesCongress.congress
+
+Ref: UnitedStatesCongressMembersInCongresses.memberId > UnitedStatesCongressMember.id
+
+Ref: UnitedStatesCongressCommittee.congressNumber > UnitedStatesCongress.congress
+
+Ref: UnitedStatesCongressCommittee.chairId > UnitedStatesCongressMember.id

@@ -4,7 +4,7 @@ import { EthnicGroupDto } from '../../src/generated/ethnicGroup.entity';
 
 const main = async () => {
   const prismaService = new PrismaService();
-  const file = './scripts/csv/ethnic-groups.csv';
+  const file = './scripts/csv/vietnam/ethnic-groups.csv';
   const ethnicGroups: EthnicGroupDto[] = await csv().fromFile(file);
   await prismaService.ethnicGroup.deleteMany();
   for (const ethnicGroup of ethnicGroups) {

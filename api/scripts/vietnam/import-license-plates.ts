@@ -4,7 +4,7 @@ import { LicensePlateDto } from 'src/generated/licensePlate.entity';
 
 const main = async () => {
   const prismaService = new PrismaService();
-  const file = './scripts/csv/license-plates.csv';
+  const file = './scripts/csv/vietnam/license-plates.csv';
   const licensePlates: LicensePlateDto[] = await csv().fromFile(file);
   for (const licensePlate of licensePlates) {
     const { code, name, group } = licensePlate;

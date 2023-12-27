@@ -228,3 +228,80 @@ enum ProgrammingLanguageType {
   PROGRAMMING
   PROSE
 }
+
+model UnitedStatesCongress {
+  congress        Int       @id
+  houseControl    String?   @default("")
+  senateControl   String?   @default("")
+  congressControl String?   @default("")
+  trifectaControl String?   @default("")
+  startDate       DateTime?
+  endDate         DateTime?
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+
+  UnitedStatesCongressMember              UnitedStatesCongressMember[]
+  UnitedStatesCongressCommittee           UnitedStatesCongressCommittee[]
+  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses[]
+}
+
+enum UnitedStatesCongressChamber {
+  HOUSE
+  SENATE
+}
+
+model UnitedStatesCongressMember {
+  id          String    @id @default("")
+  firstName   String?   @default("")
+  middleName  String?   @default("")
+  lastName    String?   @default("")
+  suffix      String?   @default("")
+  dateOfBirth DateTime?
+  gender      String?   @default("")
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+
+  UnitedStatesCongress                    UnitedStatesCongress?                     @relation(fields: [unitedStatesCongressCongress], references: [congress])
+  unitedStatesCongressCongress            Int?
+  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses[]
+  UnitedStatesCongressCommittee           UnitedStatesCongressCommittee[]
+}
+
+model UnitedStatesCongressMembersInCongresses {
+  chamber        UnitedStatesCongressChamber @default(HOUSE)
+  congress       UnitedStatesCongress        @relation(fields: [congressNumber], references: [congress])
+  congressNumber Int
+  member         UnitedStatesCongressMember  @relation(fields: [memberId], references: [id])
+  memberId       String                      @default("")
+
+  title          String?  @default("")
+  shortTitle     String?  @default("")
+  party          String?  @default("")
+  leadershipRole String?  @default("")
+  seniority      Int?     @default(0)
+  state          String?  @default("")
+  district       String?  @default("")
+  atLarge        Boolean? @default(false)
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+
+  @@id([chamber, congressNumber, memberId])
+}
+
+model UnitedStatesCongressCommittee {
+  chamber        UnitedStatesCongressChamber @default(HOUSE)
+  congress       UnitedStatesCongress        @relation(fields: [congressNumber], references: [congress])
+  congressNumber Int
+  id             String                      @default("")
+  name           String?                     @default("")
+  chair          UnitedStatesCongressMember? @relation(fields: [chairId], references: [id])
+  chairId        String?                     @default("")
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+
+  @@id([congressNumber, chamber, id])
+}
