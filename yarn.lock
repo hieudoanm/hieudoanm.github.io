@@ -3787,7 +3787,7 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
-"@prisma/client@5.7.1", "@prisma/client@^5.2.0":
+"@prisma/client@5.7.1":
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/@prisma/client/-/client-5.7.1.tgz#a124afd05663267f7255a639a81d28303684a063"
   integrity sha512-TUSa4nUcC4nf/e7X3jyO1pEd6XcI/TLRCA0KjkA46RDIpxUaRsBYEOqITwXRW2c0bMFyKcCRXrH4f7h4q9oOlg==
@@ -4045,7 +4045,7 @@
   dependencies:
     "@prisma/debug" "5.7.0"
 
-"@prisma/generator-helper@^5.2.0":
+"@prisma/generator-helper@^5.0.0":
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/@prisma/generator-helper/-/generator-helper-5.7.1.tgz#12a7f83e9c3fc228d846fb1abbe7a8e0ad121c2d"
   integrity sha512-BiaCt3YtMnjAoqJ51rVSkvlPk0p7ErjmgFOjRUmAE/m75E9tJmFtgT6NWzXiX6KWs2OvnVuAqNY7imK6ZwlExA==
@@ -18248,13 +18248,12 @@ prisma-json-schema-generator@5.1.1:
     "@prisma/generator-helper" "5.7.0"
     "@prisma/internals" "5.7.0"
 
-prisma-markdown@1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/prisma-markdown/-/prisma-markdown-1.0.7.tgz#c927c49107511c635dabdcb24b90944373fccc8a"
-  integrity sha512-YQvnCYpRuu0yjbb9icZLlkETceSjG4gv/KaI7ybcjOhZFVriaHboYXf2fQ11tYsYdshnr7PDjjUnTMmFBuyn/g==
+prisma-markdown@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/prisma-markdown/-/prisma-markdown-1.0.8.tgz#8686bd4b57b1c525d70018d6187974071a7b3047"
+  integrity sha512-YoVuTRAhIivEKnB1jLu4Ge9PDDhNqvEnc4B9f56OvEXoJ1pT5Pkvd0d0WvLaAtJL6ooT+IGQSRgVi+CuKktZCA==
   dependencies:
-    "@prisma/client" "^5.2.0"
-    "@prisma/generator-helper" "^5.2.0"
+    "@prisma/generator-helper" "^5.0.0"
 
 prisma@5.7.1:
   version "5.7.1"
