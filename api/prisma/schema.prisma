@@ -208,3 +208,23 @@ model TopLevelDomain {
   createdAt DateTime? @default(now())
   updatedAt DateTime? @default(now()) @updatedAt
 }
+
+model ProgrammingLanguage {
+  language     String                  @id
+  color        String?                 @default("")
+  type         ProgrammingLanguageType @default(PROGRAMMING)
+  extensions   String[]                @default([])
+  aliases      String[]                @default([])
+  interpreters String[]                @default([])
+  filenames    String[]                @default([])
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+}
+
+enum ProgrammingLanguageType {
+  DATA
+  MARKUP
+  PROGRAMMING
+  PROSE
+}

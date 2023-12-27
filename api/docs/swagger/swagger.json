@@ -98,9 +98,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/countries/{code}": {
@@ -128,9 +126,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/countries/currencies": {
@@ -149,9 +145,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/countries/languages": {
@@ -170,9 +164,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/organizations": {
@@ -191,9 +183,7 @@
             }
           }
         },
-        "tags": [
-          "organizations"
-        ]
+        "tags": ["organizations"]
       }
     },
     "/organizations/{code}": {
@@ -222,9 +212,7 @@
             }
           }
         },
-        "tags": [
-          "organizations"
-        ]
+        "tags": ["organizations"]
       }
     },
     "/vietnam/ethnic-groups": {
@@ -243,9 +231,7 @@
             }
           }
         },
-        "tags": [
-          "vietnam"
-        ]
+        "tags": ["vietnam"]
       }
     },
     "/vietnam/license-plates": {
@@ -264,9 +250,7 @@
             }
           }
         },
-        "tags": [
-          "vietnam"
-        ]
+        "tags": ["vietnam"]
       }
     },
     "/vietnam/license-plates/{code}": {
@@ -294,9 +278,7 @@
             }
           }
         },
-        "tags": [
-          "vietnam"
-        ]
+        "tags": ["vietnam"]
       }
     },
     "/crypto/coins": {
@@ -324,9 +306,7 @@
             }
           }
         },
-        "tags": [
-          "crypto"
-        ]
+        "tags": ["crypto"]
       }
     },
     "/forex/rates": {
@@ -364,9 +344,7 @@
             }
           }
         },
-        "tags": [
-          "forex"
-        ]
+        "tags": ["forex"]
       }
     },
     "/health": {
@@ -385,9 +363,7 @@
             }
           }
         },
-        "tags": [
-          "health"
-        ]
+        "tags": ["health"]
       }
     },
     "/news/google": {
@@ -406,9 +382,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     },
     "/news/sources": {
@@ -427,9 +401,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     },
     "/tarot/cards": {
@@ -442,10 +414,7 @@
             "in": "query",
             "description": "Tarot Type",
             "schema": {
-              "enum": [
-                "MAJOR",
-                "MINOR"
-              ],
+              "enum": ["MAJOR", "MINOR"],
               "type": "string"
             }
           },
@@ -480,9 +449,7 @@
             }
           }
         },
-        "tags": [
-          "tarot"
-        ]
+        "tags": ["tarot"]
       }
     },
     "/tarot/cards/{id}": {
@@ -510,9 +477,7 @@
             }
           }
         },
-        "tags": [
-          "tarot"
-        ]
+        "tags": ["tarot"]
       }
     },
     "/words": {
@@ -550,9 +515,7 @@
             }
           }
         },
-        "tags": [
-          "words"
-        ]
+        "tags": ["words"]
       }
     },
     "/words/{word}": {
@@ -580,9 +543,7 @@
             }
           }
         },
-        "tags": [
-          "words"
-        ]
+        "tags": ["words"]
       }
     }
   },
@@ -629,12 +590,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "regions",
-          "subregions",
-          "countries"
-        ]
+        "required": ["total", "regions", "subregions", "countries"]
       },
       "CurrencyDto": {
         "type": "object",
@@ -652,11 +608,7 @@
             "default": ""
           }
         },
-        "required": [
-          "code",
-          "name",
-          "symbol"
-        ]
+        "required": ["code", "name", "symbol"]
       },
       "CurrenciesResponseDto": {
         "type": "object",
@@ -673,10 +625,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "currencies"
-        ]
+        "required": ["total", "currencies"]
       },
       "LanguageDto": {
         "type": "object",
@@ -690,10 +639,7 @@
             "default": ""
           }
         },
-        "required": [
-          "code",
-          "name"
-        ]
+        "required": ["code", "name"]
       },
       "LanguagesResponseDto": {
         "type": "object",
@@ -710,10 +656,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "languages"
-        ]
+        "required": ["total", "languages"]
       },
       "OrganizationDto": {
         "type": "object",
@@ -734,10 +677,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "organizations"
-        ]
+        "required": ["total", "organizations"]
       },
       "EthnicGroupDto": {
         "type": "object",
@@ -758,10 +698,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "ethnicGroups"
-        ]
+        "required": ["total", "ethnicGroups"]
       },
       "LicensePlateDto": {
         "type": "object",
@@ -782,10 +719,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "licensePlates"
-        ]
+        "required": ["total", "licensePlates"]
       },
       "CoinDto": {
         "type": "object",
@@ -877,10 +811,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "coins"
-        ]
+        "required": ["total", "coins"]
       },
       "RateDto": {
         "type": "object",
@@ -895,11 +826,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "rate",
-          "code",
-          "name"
-        ]
+        "required": ["rate", "code", "name"]
       },
       "RatesResponseDto": {
         "type": "object",
@@ -920,12 +847,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "amount",
-          "base",
-          "rates"
-        ]
+        "required": ["total", "amount", "base", "rates"]
       },
       "HealthResponseDto": {
         "type": "object",
@@ -935,9 +857,7 @@
             "default": ""
           }
         },
-        "required": [
-          "status"
-        ]
+        "required": ["status"]
       },
       "GoogleCountryDto": {
         "type": "object",
@@ -954,10 +874,7 @@
             }
           }
         },
-        "required": [
-          "country",
-          "queries"
-        ]
+        "required": ["country", "queries"]
       },
       "GoogleResponseDto": {
         "type": "object",
@@ -974,10 +891,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "countries"
-        ]
+        "required": ["total", "countries"]
       },
       "NewsSourceDto": {
         "type": "object",
@@ -1036,10 +950,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "sources"
-        ]
+        "required": ["total", "sources"]
       },
       "TarotCardDto": {
         "type": "object",
@@ -1054,10 +965,7 @@
           },
           "types": {
             "type": "string",
-            "enum": [
-              "MAJOR",
-              "MINOR"
-            ]
+            "enum": ["MAJOR", "MINOR"]
           },
           "suits": {
             "type": "array",
@@ -1073,12 +981,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "types",
-          "suits",
-          "cards"
-        ]
+        "required": ["total", "types", "suits", "cards"]
       },
       "WordDto": {
         "type": "object",
@@ -1107,12 +1010,7 @@
             }
           }
         },
-        "required": [
-          "limit",
-          "offset",
-          "total",
-          "words"
-        ]
+        "required": ["limit", "offset", "total", "words"]
       }
     }
   }

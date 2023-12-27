@@ -60,12 +60,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: List of Countries
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CountriesResponseDto"
+                $ref: '#/components/schemas/CountriesResponseDto'
       tags: &a1
         - countries
   /countries/{code}:
@@ -78,48 +78,48 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Get Country by Code
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CountryDto"
+                $ref: '#/components/schemas/CountryDto'
       tags: *a1
   /countries/currencies:
     get:
       operationId: CountriesController_getCurrencies
       parameters: []
       responses:
-        "200":
+        '200':
           description: List of Currencies
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CurrenciesResponseDto"
+                $ref: '#/components/schemas/CurrenciesResponseDto'
       tags: *a1
   /countries/languages:
     get:
       operationId: CountriesController_getLanguages
       parameters: []
       responses:
-        "200":
+        '200':
           description: List of Languages
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/LanguagesResponseDto"
+                $ref: '#/components/schemas/LanguagesResponseDto'
       tags: *a1
   /organizations:
     get:
       operationId: OrganizationsController_getOrganizations
       parameters: []
       responses:
-        "200":
+        '200':
           description: List of Organizations
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/OrganizationsResponseDto"
+                $ref: '#/components/schemas/OrganizationsResponseDto'
       tags: &a2
         - organizations
   /organizations/{code}:
@@ -133,24 +133,24 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Get Organization by Code
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/OrganizationDto"
+                $ref: '#/components/schemas/OrganizationDto'
       tags: *a2
   /vietnam/ethnic-groups:
     get:
       operationId: VietnamController_getEthnicGroups
       parameters: []
       responses:
-        "200":
+        '200':
           description: List of Ethnic Groups
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/EthnicGroupsResponseDto"
+                $ref: '#/components/schemas/EthnicGroupsResponseDto'
       tags: &a3
         - vietnam
   /vietnam/license-plates:
@@ -158,12 +158,12 @@ paths:
       operationId: VietnamController_getLicensePlates
       parameters: []
       responses:
-        "200":
+        '200':
           description: List of License Plates
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/LicensePlatesResponseDto"
+                $ref: '#/components/schemas/LicensePlatesResponseDto'
       tags: *a3
   /vietnam/license-plates/{code}:
     get:
@@ -175,12 +175,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Get License Plate by Code
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/LicensePlateDto"
+                $ref: '#/components/schemas/LicensePlateDto'
       tags: *a3
   /crypto/coins:
     get:
@@ -192,12 +192,12 @@ paths:
           schema:
             type: number
       responses:
-        "200":
+        '200':
           description: List of Crypto Coins
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CoinsResponseDto"
+                $ref: '#/components/schemas/CoinsResponseDto'
       tags:
         - crypto
   /forex/rates:
@@ -217,12 +217,12 @@ paths:
           schema:
             type: number
       responses:
-        "200":
+        '200':
           description: List of Forex Rates
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/RatesResponseDto"
+                $ref: '#/components/schemas/RatesResponseDto'
       tags:
         - forex
   /health:
@@ -230,12 +230,12 @@ paths:
       operationId: HealthController_getHealth
       parameters: []
       responses:
-        "200":
+        '200':
           description: State of the Server
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/HealthResponseDto"
+                $ref: '#/components/schemas/HealthResponseDto'
       tags:
         - health
   /news/google:
@@ -243,12 +243,12 @@ paths:
       operationId: NewsController_getGoogle
       parameters: []
       responses:
-        "200":
+        '200':
           description: List of Google Trends
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GoogleResponseDto"
+                $ref: '#/components/schemas/GoogleResponseDto'
       tags: &a4
         - news
   /news/sources:
@@ -256,12 +256,12 @@ paths:
       operationId: NewsController_getSources
       parameters: []
       responses:
-        "200":
+        '200':
           description: List of News Sources
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/NewsSourcesDto"
+                $ref: '#/components/schemas/NewsSourcesDto'
       tags: *a4
   /tarot/cards:
     get:
@@ -289,12 +289,12 @@ paths:
           schema:
             type: number
       responses:
-        "200":
+        '200':
           description: List of Tarot Cards
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/TarotCardsResponseDto"
+                $ref: '#/components/schemas/TarotCardsResponseDto'
       tags: &a5
         - tarot
   /tarot/cards/{id}:
@@ -307,12 +307,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Get Tarot Card by ID
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/TarotCardDto"
+                $ref: '#/components/schemas/TarotCardDto'
       tags: *a5
   /words:
     get:
@@ -331,12 +331,12 @@ paths:
           schema:
             type: number
       responses:
-        "200":
+        '200':
           description: List of Words
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/WordsResponseDto"
+                $ref: '#/components/schemas/WordsResponseDto'
       tags: &a6
         - words
   /words/{word}:
@@ -349,17 +349,17 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Get Words Card by ID
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/WordDto"
+                $ref: '#/components/schemas/WordDto'
       tags: *a6
 info:
   title: hieudoanm
   description: Hieu Doan
-  version: "1.0"
+  version: '1.0'
   contact: {}
 tags: []
 servers: []
@@ -388,7 +388,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/CountryDto"
+            $ref: '#/components/schemas/CountryDto'
       required:
         - total
         - regions
@@ -399,13 +399,13 @@ components:
       properties:
         code:
           type: string
-          default: ""
+          default: ''
         name:
           type: string
-          default: ""
+          default: ''
         symbol:
           type: string
-          default: ""
+          default: ''
       required:
         - code
         - name
@@ -420,7 +420,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/CurrencyDto"
+            $ref: '#/components/schemas/CurrencyDto'
       required:
         - total
         - currencies
@@ -429,10 +429,10 @@ components:
       properties:
         code:
           type: string
-          default: ""
+          default: ''
         name:
           type: string
-          default: ""
+          default: ''
       required:
         - code
         - name
@@ -446,7 +446,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/LanguageDto"
+            $ref: '#/components/schemas/LanguageDto'
       required:
         - total
         - languages
@@ -463,7 +463,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/OrganizationDto"
+            $ref: '#/components/schemas/OrganizationDto'
       required:
         - total
         - organizations
@@ -480,7 +480,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/EthnicGroupDto"
+            $ref: '#/components/schemas/EthnicGroupDto'
       required:
         - total
         - ethnicGroups
@@ -497,7 +497,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/LicensePlateDto"
+            $ref: '#/components/schemas/LicensePlateDto'
       required:
         - total
         - licensePlates
@@ -566,7 +566,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/CoinDto"
+            $ref: '#/components/schemas/CoinDto'
       required:
         - total
         - coins
@@ -595,7 +595,7 @@ components:
         rates:
           type: array
           items:
-            $ref: "#/components/schemas/RateDto"
+            $ref: '#/components/schemas/RateDto'
       required:
         - total
         - amount
@@ -606,7 +606,7 @@ components:
       properties:
         status:
           type: string
-          default: ""
+          default: ''
       required:
         - status
     GoogleCountryDto:
@@ -633,7 +633,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/GoogleCountryDto"
+            $ref: '#/components/schemas/GoogleCountryDto'
       required:
         - total
         - countries
@@ -642,25 +642,25 @@ components:
       properties:
         id:
           type: string
-          default: ""
+          default: ''
         name:
           type: string
-          default: ""
+          default: ''
         description:
           type: string
-          default: ""
+          default: ''
         url:
           type: string
-          default: ""
+          default: ''
         category:
           type: string
-          default: ""
+          default: ''
         language:
           type: string
-          default: ""
+          default: ''
         country:
           type: string
-          default: ""
+          default: ''
       required:
         - id
         - name
@@ -679,7 +679,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/NewsSourceDto"
+            $ref: '#/components/schemas/NewsSourceDto'
       required:
         - total
         - sources
@@ -705,7 +705,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/TarotCardDto"
+            $ref: '#/components/schemas/TarotCardDto'
       required:
         - total
         - types
@@ -730,7 +730,7 @@ components:
           default: []
           type: array
           items:
-            $ref: "#/components/schemas/WordDto"
+            $ref: '#/components/schemas/WordDto'
       required:
         - limit
         - offset

@@ -440,6 +440,55 @@
           "format": "date-time"
         }
       }
+    },
+    "ProgrammingLanguage": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string"
+        },
+        "color": {
+          "type": ["string", "null"],
+          "default": ""
+        },
+        "type": {
+          "type": "string",
+          "default": "PROGRAMMING",
+          "enum": ["DATA", "MARKUP", "PROGRAMMING", "PROSE"]
+        },
+        "extensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "interpreters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "filenames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
     }
   },
   "type": "object",
@@ -476,6 +525,9 @@
     },
     "topLevelDomain": {
       "$ref": "#/definitions/TopLevelDomain"
+    },
+    "programmingLanguage": {
+      "$ref": "#/definitions/ProgrammingLanguage"
     }
   }
 }

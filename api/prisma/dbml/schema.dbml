@@ -134,6 +134,18 @@ Table TopLevelDomain {
   updatedAt DateTime [default: `now()`]
 }
 
+Table ProgrammingLanguage {
+  language String [pk]
+  color String [default: '']
+  type ProgrammingLanguageType [not null, default: 'PROGRAMMING']
+  extensions String[] [not null]
+  aliases String[] [not null]
+  interpreters String[] [not null]
+  filenames String[] [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
 Enum DayOfWeek {
   MONDAY
   TUESDAY
@@ -173,6 +185,13 @@ Enum NewsSourceCategory {
   SCIENCE
   SPORTS
   TECHNOLOGY
+}
+
+Enum ProgrammingLanguageType {
+  DATA
+  MARKUP
+  PROGRAMMING
+  PROSE
 }
 
 Ref: CountriesOnOrganizations.organizationCode > Organization.code

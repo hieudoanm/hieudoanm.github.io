@@ -121,6 +121,17 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"ProgrammingLanguage" {
+    String language PK
+    String color "nullable"
+    ProgrammingLanguageType type
+    String extensions
+    String aliases
+    String interpreters
+    String filenames
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 "CountriesOnOrganizations" }o--|| "Organization" : organization
 "CountriesOnOrganizations" }o--|| "Country" : country
 ```
@@ -268,5 +279,19 @@ erDiagram
 
 - `domain`:
 - `type`:
+- `createdAt`:
+- `updatedAt`:
+
+### `ProgrammingLanguage`
+
+**Properties**
+
+- `language`:
+- `color`:
+- `type`:
+- `extensions`:
+- `aliases`:
+- `interpreters`:
+- `filenames`:
 - `createdAt`:
 - `updatedAt`:
