@@ -1,12 +1,12 @@
+import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
+import { FrankfurterClient } from '../../../../src/common/clients/frankfurter/frankfurter.client';
 import { ForexController } from './forex.controller';
 import { ForexService } from './forex.service';
-import { HttpModule } from '@nestjs/axios';
-import { CacheModule } from '@nestjs/cache-manager';
 
 @Module({
-  imports: [CacheModule.register(), HttpModule],
+  imports: [CacheModule.register()],
   controllers: [ForexController],
-  providers: [ForexService],
+  providers: [FrankfurterClient, ForexService],
 })
 export class ForexModule {}

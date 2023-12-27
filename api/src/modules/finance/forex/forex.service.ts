@@ -1,25 +1,17 @@
-import { HttpService } from '@nestjs/axios';
 import { Injectable, Logger } from '@nestjs/common';
-import {
-  FrankfurterLatestResponseDto,
-  RateDto,
-  RatesRequestQueryDto,
-  RatesResponseDto,
-} from './forex.dto';
+import { RateDto, RatesRequestQueryDto, RatesResponseDto } from './forex.dto';
+import { FrankfurterClient } from '../../../../src/common/clients/frankfurter/frankfurter.client';
+import { FrankfurterLatestRequest } from '../../../../src/common/clients/frankfurter/frankfurter.dto';
 
 @Injectable()
 export class ForexService {
   private readonly logger = new Logger(ForexService.name);
 
-  constructor(private readonly httpService: HttpService) {}
+  constructor(private readonly frankfurterClient: FrankfurterClient) {}
 
   private async getCurrencies(): Promise<Record<string, string>> {
     try {
-      const url: string = `https://api.frankfurter.app/currencies`;
-      this.logger.log(`getCurrencies url=${url}`);
-      const response =
-        await this.httpService.axiosRef.get<Record<string, string>>(url);
-      const currencies = response.data;
+      const currencies = this.frankfurterClient.getCurrencies();
       return currencies;
     } catch (error) {
       this.logger.log(`getRates error=${error}`);
@@ -32,16 +24,15 @@ export class ForexService {
     base = 'EUR',
   }: RatesRequestQueryDto): Promise<RatesResponseDto> {
     try {
-      const url: string = `https://api.frankfurter.app/latest?amount=${amount}&from=${base}`;
-      this.logger.log(`getRates url=${url}`);
-      const response =
-        await this.httpService.axiosRef.get<FrankfurterLatestResponseDto>(url);
       const currencies: Record<string, string> = await this.getCurrencies();
-      const rates: Record<string, number> = response.data.rates;
-      const fullRates: RateDto[] = Object.entries(rates).map(([code, rate]) => {
-        const name: string = currencies[code] ?? '';
-        return { code, rate, name };
-      });
+      const latestOptions: FrankfurterLatestRequest = { amount, base, to: [] };
+      const latest = await this.frankfurterClient.getLatest(latestOptions);
+      const fullRates: RateDto[] = Object.entries(latest.rates).map(
+        ([code, rate]) => {
+          const name: string = currencies[code] ?? '';
+          return { code, rate, name };
+        }
+      );
       const total = fullRates.length;
       return { total, amount, base, rates: fullRates };
     } catch (error) {
