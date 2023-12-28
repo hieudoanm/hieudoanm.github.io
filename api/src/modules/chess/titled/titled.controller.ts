@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
-import { ChessTitle } from '../../../common/clients/chess.com/chess.dto';
-import { TimeRange } from '../../../common/types/chess.types';
+import { ChessTitle } from '../../../common/clients/apis/chess.com/chess.dto';
+import { TimeRange } from '../../../common/types/time.types';
 import { TitledStatsDto, TitlesDto } from './titled.dto';
 import { TitledService } from './titled.service';
 
@@ -33,7 +33,7 @@ export class TitledController {
   async getTitledStats(
     @Param('title') title: ChessTitle,
     @Query('cache') cache: boolean = true,
-    @Query('timeRange') timeRange: TimeRange = 'YEAR'
+    @Query('timeRange') timeRange: TimeRange = 'year'
   ): Promise<TitledStatsDto> {
     return this.titledService.getTitledStats({ cache, title, timeRange });
   }

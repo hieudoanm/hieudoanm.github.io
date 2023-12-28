@@ -1,4 +1,4 @@
-import { Title } from '@prisma/client';
+import { ChessTitle } from '@prisma/client';
 import { StreamersRepository } from './streamers.repository';
 import { StreamersResponseDto } from './streamers.dto';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
@@ -12,7 +12,7 @@ export class StreamersController {
   @Get()
   @ApiResponse({ status: 200, type: StreamersResponseDto })
   async getStreamers(
-    @Query('title') title?: Title,
+    @Query('title') title?: ChessTitle,
     @Query('country') country?: string
   ): Promise<StreamersResponseDto> {
     return this.streamersRepository.getStreamers({ title, country });

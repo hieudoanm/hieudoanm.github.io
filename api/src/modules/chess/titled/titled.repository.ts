@@ -1,12 +1,12 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ChessPlayer, Prisma } from '@prisma/client';
-import { ChessTitle } from '../../../common/clients/chess.com/chess.dto';
+import { ChessTitle } from '../../../common/clients/apis/chess.com/chess.dto';
 import {
-  timeRangeInDays,
-  timeRangeInMilliseconds,
-} from '../../../common/constants/constants';
+  TIME_RANGE_IN_DAYS,
+  TIME_RANGE_IN_MILLISECONDS,
+} from '../../../common/constants/time.constants';
 import { PrismaService } from '../../../common/prisma/prisma.service';
-import { TimeRange } from '../../../common/types/chess.types';
+import { TimeRange } from '../../../common/types/time.types';
 import { TitledStatsDto } from './titled.dto';
 
 @Injectable()
@@ -17,12 +17,12 @@ export class TitledRepository {
 
   private async getTitledPlayers({
     title,
-    timeRange = 'YEAR',
+    timeRange = 'year',
   }: {
     title: ChessTitle;
     timeRange: TimeRange;
   }): Promise<{ total: number; players: ChessPlayer[] }> {
-    const milliseconds: number = timeRangeInMilliseconds[`${timeRange}`];
+    const milliseconds: number = TIME_RANGE_IN_MILLISECONDS.get(timeRange);
     const d = new Date(Date.now() - milliseconds);
     const [date] = d.toISOString().split('T');
     const where = { title, lastOnline: { gte: `${date}T00:00:00Z` } };
@@ -53,7 +53,7 @@ export class TitledRepository {
     timeRange: TimeRange;
     timeControl: string;
   }): Prisma.Sql {
-    const days: number = timeRangeInDays[`${timeRange}`];
+    const days: number = TIME_RANGE_IN_DAYS.get(timeRange);
     const query: string = `SELECT AVG(p."stats${timeControl}RatingLast") as "average" FROM public."Player" as p WHERE p."title" = '${title}' AND p."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day) AND p."stats${timeControl}RatingLast" != 0;`;
     this.logger.log(`buildAverageRatingQuery query=${query}`);
     return Prisma.raw(query);
@@ -68,7 +68,7 @@ export class TitledRepository {
     timeRange: TimeRange;
     timeControl: string;
   }): Prisma.Sql {
-    const days: number = timeRangeInDays[`${timeRange}`];
+    const days: number = TIME_RANGE_IN_DAYS.get(timeRange);
     const query: string = `SELECT MAX(p."stats${timeControl}RatingLast") as "max" FROM public."Player" as p WHERE p."title" = '${title}' AND p."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day) AND p."stats${timeControl}RatingLast" != 0;`;
     this.logger.log(`buildMaxAverageRating query=${query}`);
     return Prisma.raw(query);

@@ -1,7 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { CountriesResponseDto, CountryResponseDto } from './countries.dto';
 import { CountriesRepository } from './countries.repository';
-import { RedisClient, getRedisClient } from '../../../../common/clients/redis';
+import {
+  RedisClient,
+  getRedisClient,
+} from '../../../../common/clients/redis/redis.client';
 import { REDIS_URI } from '../../../../common/environments/environments';
 
 @Injectable()

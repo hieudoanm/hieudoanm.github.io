@@ -5,3 +5,6 @@ public
 
 .env
 yarn-error.log
+
+# turbo
+.turbo

@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { League, Prisma, Status, Title } from '@prisma/client';
+import { ChessTitle, League, Prisma, Status } from '@prisma/client';
 import axios from 'axios';
-import { ChessClient } from '../../../common/clients/chess.com/chess.client';
+import { ChessClient } from '../../../common/clients/apis/chess.com/chess.client';
 import {
   ChessPlayer,
   ChessStats,
-} from '../../../common/clients/chess.com/chess.dto';
+} from '../../../common/clients/apis/chess.com/chess.dto';
 import { PrismaService } from '../../../common/prisma/prisma.service';
 import { ChessPlayerDto } from '../../../generated/chessPlayer.entity';
 
@@ -180,7 +180,7 @@ export class PlayerService {
       verified,
       twitchUrl,
       status: status as Status,
-      title: title ? (title as Title) : null,
+      title: title ? (title as ChessTitle) : null,
       league: league ? (league as League) : null,
       archives: archives.map((archive) =>
         archive.split('/').slice(-2).join('/')

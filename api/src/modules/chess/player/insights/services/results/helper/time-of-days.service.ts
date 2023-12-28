@@ -1,12 +1,12 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { ChessResult, Prisma } from '@prisma/client';
 import {
-  DRAW_RESULTS,
-  LOSS_RESULTS,
-  TIME_OF_DAYS,
-} from '../../../../../../../common/constants/constants';
-import { ResultsByTimeOfDayDto } from '../results.dto';
+  CHESS_DRAW_RESULTS,
+  CHESS_LOSS_RESULTS,
+} from '../../../../../../../common/constants/chess.constants';
+import { TIME_OF_DAYS } from '../../../../../../../common/constants/time.constants';
 import { PrismaService } from '../../../../../../../common/prisma/prisma.service';
+import { ResultsByTimeOfDayDto } from '../results.dto';
 
 @Injectable()
 export class TimeOfDaysService {
@@ -24,8 +24,8 @@ export class TimeOfDaysService {
   }
 
   private buildDrawResultsByTimeOfDaysQuery(username: string): Prisma.Sql {
-    const drawList: string = DRAW_RESULTS.map(
-      (result: string) => `'${result}'`
+    const drawList: string = CHESS_DRAW_RESULTS.map(
+      (result: ChessResult) => `'${result}'`
     ).join(',');
     const selectClause =
       'SELECT floor(extract(hour from g."endTime") / 6.0)::int as "timeOfDayIndex", COUNT(*) as "draw"';
@@ -38,8 +38,8 @@ export class TimeOfDaysService {
   }
 
   private buildLossResultsByTimeOfDaysQuery(username: string): Prisma.Sql {
-    const lossList: string = LOSS_RESULTS.map(
-      (result: string) => `'${result}'`
+    const lossList: string = CHESS_LOSS_RESULTS.map(
+      (result: ChessResult) => `'${result}'`
     ).join(',');
     const selectClause =
       'SELECT floor(extract(hour from g."endTime") / 6.0)::int as "timeOfDayIndex", COUNT(*) as "loss"';
@@ -71,7 +71,8 @@ export class TimeOfDaysService {
       ]);
 
     return wins.map(({ win, timeOfDayIndex: winTimeOfDayIndex }) => {
-      const timeOfDay: string = TIME_OF_DAYS[`${winTimeOfDayIndex}`];
+      const timeOfDay: string =
+        Array.from(TIME_OF_DAYS)[`${winTimeOfDayIndex}`];
       const { draw = 0 } = draws.find(
         ({ timeOfDayIndex: drawTimeOfDayIndex }) =>
           drawTimeOfDayIndex === winTimeOfDayIndex

@@ -1,6 +1,6 @@
 import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
-import { FrankfurterClient } from '../../../../src/common/clients/frankfurter/frankfurter.client';
+import { FrankfurterClient } from '../../../common/clients/apis/frankfurter/frankfurter.client';
 import { ForexController } from './forex.controller';
 import { ForexService } from './forex.service';
 

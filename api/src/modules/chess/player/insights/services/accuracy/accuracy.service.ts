@@ -1,13 +1,15 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { ChessResult, Prisma } from '@prisma/client';
+import {
+  CHESS_DRAW_RESULTS,
+  CHESS_LOSS_RESULTS,
+  CHESS_WIN_RESULTS,
+} from '../../../../../../common/constants/chess.constants';
 import {
   DAYS_OF_WEEK,
-  DRAW_RESULTS,
-  LOSS_RESULTS,
   RULE,
   TIME_OF_DAYS,
-  WIN_RESULTS,
-} from '../../../../../../common/constants/constants';
+} from '../../../../../../common/constants/time.constants';
 import { PrismaService } from '../../../../../../common/prisma/prisma.service';
 import {
   AccuracyByDayOfWeekDto,
@@ -28,7 +30,7 @@ export class AccuracyService {
       whereClause,
       username,
     }: { averageClause: string; whereClause: string; username: string },
-    results: string[] = []
+    results: ChessResult[] = []
   ): Prisma.Sql {
     const list: string = results.map((result) => `'${result}'`).join(',');
     const clause = `TEXT(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) in (${list})`;
@@ -48,15 +50,15 @@ export class AccuracyService {
   }): Promise<{ win: number; draw: number; loss: number }> {
     const winQuery = this.buildAccuracyByResultsQuery(
       { averageClause, whereClause, username },
-      WIN_RESULTS
+      CHESS_WIN_RESULTS
     );
     const drawQuery = this.buildAccuracyByResultsQuery(
       { averageClause, whereClause, username },
-      DRAW_RESULTS
+      CHESS_DRAW_RESULTS
     );
     const lossQuery = this.buildAccuracyByResultsQuery(
       { averageClause, whereClause, username },
-      LOSS_RESULTS
+      CHESS_LOSS_RESULTS
     );
     const [
       [{ average: win = 0 }],
@@ -179,13 +181,13 @@ export class AccuracyService {
       timeOfDays: timeOfDaysList.map(
         ({ average: averageOfTimeOfDays, timeOfDayIndex }) => ({
           average: averageOfTimeOfDays,
-          timeOfDay: TIME_OF_DAYS[`${timeOfDayIndex}`],
+          timeOfDay: Array.from(TIME_OF_DAYS)[`${timeOfDayIndex}`],
         })
       ),
       daysOfWeek: daysOfWeekList.map(
         ({ average: averageOfDaysOfWeek, dayOfWeekIndex }) => ({
           average: averageOfDaysOfWeek,
-          dayOfWeek: DAYS_OF_WEEK[`${dayOfWeekIndex}`],
+          dayOfWeek: Array.from(DAYS_OF_WEEK)[`${dayOfWeekIndex}`],
         })
       ),
     };

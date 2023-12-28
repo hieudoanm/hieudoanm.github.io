@@ -1,22 +1,24 @@
+import { ChessTimeClass, ChessVariant, ChessResult } from '@prisma/client';
+
 export class ChessGameDto {
   id: string;
   url: string;
   pgn: string;
   timeControl: string;
-  timeClass: string;
+  timeClass: ChessTimeClass;
   endTime: Date;
   rated: boolean;
   tcn: string;
   initialSetup: string;
-  rules: string;
+  rules: ChessVariant;
   whiteId: string;
   blackId: string;
   whiteUsername: string;
   blackUsername: string;
   whiteAccuracy: number;
   blackAccuracy: number;
-  whiteResult: string;
-  blackResult: string;
+  whiteResult: ChessResult;
+  blackResult: ChessResult;
   whiteRating: number;
   blackRating: number;
   fen: string;

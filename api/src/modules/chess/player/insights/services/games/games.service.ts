@@ -1,13 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { ChessResult, Prisma } from '@prisma/client';
 import {
   DAYS_OF_WEEK,
-  DRAW_RESULTS,
-  LOSS_RESULTS,
   RULE,
   TIME_OF_DAYS,
-  WIN_RESULTS,
-} from '../../../../../../common/constants/constants';
+} from '../../../../../../common/constants/time.constants';
 import {
   GamesByDayOfWeekDto,
   GamesByPeriodDto,
@@ -15,6 +12,11 @@ import {
   GamesDto,
 } from './games.dto';
 import { PrismaService } from '../../../../../../common/prisma/prisma.service';
+import {
+  CHESS_WIN_RESULTS,
+  CHESS_DRAW_RESULTS,
+  CHESS_LOSS_RESULTS,
+} from '../../../../../../common/constants/chess.constants';
 
 @Injectable()
 export class GamesService {
@@ -22,7 +24,7 @@ export class GamesService {
 
   constructor(private readonly prismaService: PrismaService) {}
 
-  private buildGameResultsWhereInput(username: string, results: string[]) {
+  private buildGameResultsWhereInput(username: string, results: ChessResult[]) {
     return {
       OR: [
         { whiteUsername: username, whiteResult: { in: results } },
@@ -42,13 +44,13 @@ export class GamesService {
       OR: [{ whiteUsername: username }, { blackUsername: username }],
     });
     const winWhere: Prisma.ChessGameWhereInput = this.buildGameWhereInput(
-      this.buildGameResultsWhereInput(username, WIN_RESULTS)
+      this.buildGameResultsWhereInput(username, CHESS_WIN_RESULTS)
     );
     const drawWhere: Prisma.ChessGameWhereInput = this.buildGameWhereInput(
-      this.buildGameResultsWhereInput(username, DRAW_RESULTS)
+      this.buildGameResultsWhereInput(username, CHESS_DRAW_RESULTS)
     );
     const lossWhere: Prisma.ChessGameWhereInput = this.buildGameWhereInput(
-      this.buildGameResultsWhereInput(username, LOSS_RESULTS)
+      this.buildGameResultsWhereInput(username, CHESS_LOSS_RESULTS)
     );
     const [total = 0, win = 0, draw = 0, loss = 0] =
       await this.prismaService.$transaction([
@@ -117,13 +119,13 @@ export class GamesService {
     const timeOfDays: GamesByTimeOfDayDto[] = timeOfDaysList.map(
       ({ games = 0, timeOfDayIndex = 0 }) => ({
         games,
-        timeOfDay: TIME_OF_DAYS[`${timeOfDayIndex}`],
+        timeOfDay: Array.from(TIME_OF_DAYS)[`${timeOfDayIndex}`],
       })
     );
     const daysOfWeek: GamesByDayOfWeekDto[] = daysOfWeekList.map(
       ({ games = 0, dayOfWeekIndex = 0 }) => ({
         games,
-        dayOfWeek: DAYS_OF_WEEK[`${dayOfWeekIndex}`],
+        dayOfWeek: Array.from(DAYS_OF_WEEK)[`${dayOfWeekIndex}`],
       })
     );
     return { periods, timeOfDays, daysOfWeek };

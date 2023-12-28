@@ -6,19 +6,22 @@
 // K = 20 for RAPID and BLITZ ratings all players.
 
 import { Injectable } from '@nestjs/common';
+import { ChessTimeClass } from '@prisma/client';
+import { ChessPoint } from 'src/common/enums/chess.enums';
 
-type Result = 0 | 0.5 | 1;
 type DevelopmentCoefficient = 10 | 20 | 40;
-type TimeControl = 'classical' | 'rapid' | 'blitz';
-type Options = { age: number; games: number; timeControl: TimeControl };
+type Options = { age: number; games: number; timeClass: ChessTimeClass };
 
 @Injectable()
 export class RatingService {
   private getDevelopmentCoefficient(
     rating: number,
-    { age = 18, games = 31, timeControl = 'classical' }: Options
+    { age = 18, games = 31, timeClass = ChessTimeClass.classical }: Options
   ): DevelopmentCoefficient {
-    if (timeControl === 'rapid' || timeControl === 'blitz') {
+    if (
+      timeClass === ChessTimeClass.rapid ||
+      timeClass === ChessTimeClass.blitz
+    ) {
       return 20;
     }
     if (games > 30) {
@@ -36,7 +39,7 @@ export class RatingService {
   private getRatingDelta(
     rating: number,
     opponentRating: number,
-    result: Result,
+    result: ChessPoint,
     options: Options
   ): number {
     if ([0, 0.5, 1].includes(result)) {
@@ -54,7 +57,7 @@ export class RatingService {
   public getNewRating(
     rating: number,
     opponentRating: number,
-    result: Result,
+    result: ChessPoint,
     options: Options
   ) {
     return (

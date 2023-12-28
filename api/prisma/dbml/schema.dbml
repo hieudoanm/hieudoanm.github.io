@@ -230,7 +230,7 @@ Table ChessPlayer {
   lastOnline DateTime [default: `now()`, not null]
   joined DateTime [default: `now()`, not null]
   status Status [not null, default: 'basic']
-  title Title
+  title ChessTitle
   league League
   statsDailyRatingBest Int [not null, default: 0]
   statsDailyRatingLast Int [not null, default: 0]
@@ -266,20 +266,20 @@ Table ChessGame {
   url String [not null, default: '']
   pgn String [not null, default: '']
   timeControl String [not null, default: '']
-  timeClass String [not null, default: '']
+  timeClass ChessTimeClass [not null, default: 'daily']
   endTime DateTime [default: `now()`, not null]
   rated Boolean [not null, default: false]
   tcn String [not null, default: '']
   initialSetup String [not null, default: '']
-  rules String [not null, default: '']
+  rules ChessVariant [not null, default: 'chess']
   whiteId String [not null, default: '']
   blackId String [not null, default: '']
   whiteUsername String [not null, default: '']
   blackUsername String [not null, default: '']
   whiteAccuracy Float [not null, default: 0]
   blackAccuracy Float [not null, default: 0]
-  whiteResult String [not null, default: '']
-  blackResult String [not null, default: '']
+  whiteResult ChessResult [not null, default: 'checkmated']
+  blackResult ChessResult [not null, default: 'checkmated']
   whiteRating Int [not null, default: 0]
   blackRating Int [not null, default: 0]
   fen String [not null, default: '']
@@ -371,7 +371,7 @@ Enum League {
   Legend
 }
 
-Enum Title {
+Enum ChessTitle {
   GM
   WGM
   IM
@@ -388,14 +388,29 @@ Enum Title {
   ACM
 }
 
-Enum TimeClass {
+Enum ChessResult {
+  win
+  fiftymove
+  agreed
+  insufficient
+  repetition
+  stalemate
+  timevsinsufficient
+  checkmated
+  resigned
+  timeout
+  abandoned
+}
+
+Enum ChessTimeClass {
   daily
+  classical
   rapid
   blitz
   bullet
 }
 
-Enum Rule {
+Enum ChessVariant {
   bughouse
   chess
   chess960

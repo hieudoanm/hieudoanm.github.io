@@ -321,54 +321,54 @@ model UnitedStatesCongressCommittee {
 // Chess
 
 model ChessPlayer {
-  id                         Int       @id
-  username                   String    @unique
-  name                       String    @default("")
-  followers                  Int       @default(0)
-  avatar                     String    @default("")
-  location                   String    @default("")
-  country                    String    @default("")
-  countryCode                String    @default("")
-  twitchUrl                  String    @default("")
-  isStreamer                 Boolean   @default(false)
-  verified                   Boolean   @default(false)
-  lastOnline                 DateTime  @default(now()) @db.Timestamptz
-  joined                     DateTime  @default(now()) @db.Timestamptz
-  status                     Status    @default(basic)
-  title                      Title?
+  id                         Int         @id
+  username                   String      @unique
+  name                       String      @default("")
+  followers                  Int         @default(0)
+  avatar                     String      @default("")
+  location                   String      @default("")
+  country                    String      @default("")
+  countryCode                String      @default("")
+  twitchUrl                  String      @default("")
+  isStreamer                 Boolean     @default(false)
+  verified                   Boolean     @default(false)
+  lastOnline                 DateTime    @default(now()) @db.Timestamptz
+  joined                     DateTime    @default(now()) @db.Timestamptz
+  status                     Status      @default(basic)
+  title                      ChessTitle?
   league                     League?
   // Rapid
-  statsDailyRatingBest       Int       @default(0)
-  statsDailyRatingLast       Int       @default(0)
-  statsDailyRatingDeviation  Int       @default(0)
-  statsDailyRecordWin        Int       @default(0)
-  statsDailyRecordDraw       Int       @default(0)
-  statsDailyRecordLoss       Int       @default(0)
+  statsDailyRatingBest       Int         @default(0)
+  statsDailyRatingLast       Int         @default(0)
+  statsDailyRatingDeviation  Int         @default(0)
+  statsDailyRecordWin        Int         @default(0)
+  statsDailyRecordDraw       Int         @default(0)
+  statsDailyRecordLoss       Int         @default(0)
   // Rapid
-  statsRapidRatingBest       Int       @default(0)
-  statsRapidRatingLast       Int       @default(0)
-  statsRapidRatingDeviation  Int       @default(0)
-  statsRapidRecordWin        Int       @default(0)
-  statsRapidRecordDraw       Int       @default(0)
-  statsRapidRecordLoss       Int       @default(0)
+  statsRapidRatingBest       Int         @default(0)
+  statsRapidRatingLast       Int         @default(0)
+  statsRapidRatingDeviation  Int         @default(0)
+  statsRapidRecordWin        Int         @default(0)
+  statsRapidRecordDraw       Int         @default(0)
+  statsRapidRecordLoss       Int         @default(0)
   // Blitz
-  statsBlitzRatingLast       Int       @default(0)
-  statsBlitzRatingBest       Int       @default(0)
-  statsBlitzRatingDeviation  Int       @default(0)
-  statsBlitzRecordWin        Int       @default(0)
-  statsBlitzRecordDraw       Int       @default(0)
-  statsBlitzRecordLoss       Int       @default(0)
+  statsBlitzRatingLast       Int         @default(0)
+  statsBlitzRatingBest       Int         @default(0)
+  statsBlitzRatingDeviation  Int         @default(0)
+  statsBlitzRecordWin        Int         @default(0)
+  statsBlitzRecordDraw       Int         @default(0)
+  statsBlitzRecordLoss       Int         @default(0)
   // Bullet
-  statsBulletRatingLast      Int       @default(0)
-  statsBulletRatingBest      Int       @default(0)
-  statsBulletRatingDeviation Int       @default(0)
-  statsBulletRecordWin       Int       @default(0)
-  statsBulletRecordDraw      Int       @default(0)
-  statsBulletRecordLoss      Int       @default(0)
+  statsBulletRatingLast      Int         @default(0)
+  statsBulletRatingBest      Int         @default(0)
+  statsBulletRatingDeviation Int         @default(0)
+  statsBulletRecordWin       Int         @default(0)
+  statsBulletRecordDraw      Int         @default(0)
+  statsBulletRecordLoss      Int         @default(0)
   // Archives
-  archives                   String[]  @default([])
-  createdAt                  DateTime? @default(now()) @db.Timestamptz
-  updatedAt                  DateTime? @updatedAt @db.Timestamptz
+  archives                   String[]    @default([])
+  createdAt                  DateTime?   @default(now()) @db.Timestamptz
+  updatedAt                  DateTime?   @updatedAt @db.Timestamptz
 }
 
 enum Status {
@@ -387,7 +387,7 @@ enum League {
   Legend
 }
 
-enum Title {
+enum ChessTitle {
   GM
   WGM
   IM
@@ -405,39 +405,54 @@ enum Title {
 }
 
 model ChessGame {
-  id            String    @id
-  url           String    @default("")
-  pgn           String    @default("")
-  timeControl   String    @default("")
-  timeClass     String    @default("")
-  endTime       DateTime  @default(now()) @db.Timestamptz
-  rated         Boolean   @default(false)
-  tcn           String    @default("")
-  initialSetup  String    @default("")
-  rules         String    @default("")
-  whiteId       String    @default("")
-  blackId       String    @default("")
-  whiteUsername String    @default("")
-  blackUsername String    @default("")
-  whiteAccuracy Float     @default(0)
-  blackAccuracy Float     @default(0)
-  whiteResult   String    @default("")
-  blackResult   String    @default("")
-  whiteRating   Int       @default(0)
-  blackRating   Int       @default(0)
-  fen           String    @default("")
-  createdAt     DateTime? @default(now()) @db.Timestamptz
-  updatedAt     DateTime? @updatedAt @db.Timestamptz
+  id            String         @id
+  url           String         @default("")
+  pgn           String         @default("")
+  timeControl   String         @default("")
+  timeClass     ChessTimeClass @default(daily)
+  endTime       DateTime       @default(now()) @db.Timestamptz
+  rated         Boolean        @default(false)
+  tcn           String         @default("")
+  initialSetup  String         @default("")
+  rules         ChessVariant   @default(chess)
+  whiteId       String         @default("")
+  blackId       String         @default("")
+  whiteUsername String         @default("")
+  blackUsername String         @default("")
+  whiteAccuracy Float          @default(0)
+  blackAccuracy Float          @default(0)
+  whiteResult   ChessResult    @default(checkmated)
+  blackResult   ChessResult    @default(checkmated)
+  whiteRating   Int            @default(0)
+  blackRating   Int            @default(0)
+  fen           String         @default("")
+  createdAt     DateTime?      @default(now()) @db.Timestamptz
+  updatedAt     DateTime?      @updatedAt @db.Timestamptz
 }
 
-enum TimeClass {
+enum ChessResult {
+  win
+  fiftymove
+  agreed
+  insufficient
+  repetition
+  stalemate
+  timevsinsufficient
+  checkmated
+  resigned
+  timeout
+  abandoned
+}
+
+enum ChessTimeClass {
   daily
+  classical
   rapid
   blitz
   bullet
 }
 
-enum Rule {
+enum ChessVariant {
   bughouse
   chess
   chess960

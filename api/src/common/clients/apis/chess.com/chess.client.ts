@@ -7,7 +7,7 @@ import {
   ChessTitle,
 } from './chess.dto';
 import { Injectable, Logger } from '@nestjs/common';
-import { addZero } from '../../../common/utils/add-zero';
+import { addZero } from '../../../../common/utils/add-zero';
 
 const BASE_URL = 'https://api.chess.com/pub';
 

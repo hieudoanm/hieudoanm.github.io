@@ -1,7 +1,12 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
-import { ChessClient } from '../../../../common/clients/chess.com/chess.client';
-import { ChessGame } from '../../../../common/clients/chess.com/chess.dto';
+import {
+  ChessResult,
+  ChessTimeClass,
+  ChessVariant,
+  Prisma,
+} from '@prisma/client';
+import { ChessClient } from '../../../../common/clients/apis/chess.com/chess.client';
+import { ChessGame } from '../../../../common/clients/apis/chess.com/chess.dto';
 import { PrismaService } from '../../../../common/prisma/prisma.service';
 import { ChessGameDto } from '../../../../generated/chessGame.entity';
 
@@ -114,20 +119,22 @@ export class GamesService {
         const d: Date = new Date();
         const lowerWhiteUsername: string = whiteUsername.toLowerCase();
         const lowerBlackUsername: string = blackUsername.toLowerCase();
-        const lowerWhiteResult: string = whiteResult.toLowerCase();
-        const lowerBlackResult: string = blackResult.toLowerCase();
+        const lowerWhiteResult: ChessResult =
+          whiteResult.toLowerCase() as ChessResult;
+        const lowerBlackResult: ChessResult =
+          blackResult.toLowerCase() as ChessResult;
         games.push({
           url,
           id,
           pgn,
           timeControl,
-          timeClass,
+          timeClass: timeClass as ChessTimeClass,
           endTime: endDate,
           rated,
           tcn,
           initialSetup,
           fen,
-          rules,
+          rules: rules as ChessVariant,
           whiteId: '',
           blackId: '',
           whiteUsername: lowerWhiteUsername,

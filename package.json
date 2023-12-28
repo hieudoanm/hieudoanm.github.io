@@ -7,14 +7,17 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "format": "prettier . --write",
-    "lint": "yarn workspaces run lint",
-    "test": "yarn workspaces run test",
+    "format": "yarn turbo format",
+    "build": "yarn turbo build",
+    "lint": "yarn turbo lint",
+    "test": "yarn turbo test",
+    "dev": "yarn turbo dev",
     "prepare": "husky install || true"
   },
   "devDependencies": {
     "husky": "8.0.3",
-    "prettier": "3.1.1"
+    "prettier": "3.1.1",
+    "turbo": "1.11.2"
   },
   "resolutions": {
     "axios": "1.6.3",

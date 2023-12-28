@@ -9,15 +9,24 @@
           "default": ""
         },
         "cca2": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "ccn3": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "startOfWeek": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": "MONDAY",
           "enum": [
             "MONDAY",
@@ -30,7 +39,10 @@
           ]
         },
         "region": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": "ANTARCTIC",
           "enum": [
             "AFRICA",
@@ -42,72 +54,180 @@
           ]
         },
         "subregion": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "status": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "flag": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "area": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "default": 0
         },
         "population": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "default": 0
         },
         "independent": {
-          "type": ["boolean", "null"],
+          "type": [
+            "boolean",
+            "null"
+          ],
           "default": false
         },
         "unMember": {
-          "type": ["boolean", "null"],
+          "type": [
+            "boolean",
+            "null"
+          ],
           "default": false
         },
         "landlocked": {
-          "type": ["boolean", "null"],
+          "type": [
+            "boolean",
+            "null"
+          ],
           "default": false
         },
         "name": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "currencies": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "idd": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "languages": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "translations": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "demonyms": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "maps": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "flags": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "car": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "capitalInfo": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "coatOfArms": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "postalCode": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "timezones": {
           "type": "array",
@@ -152,11 +272,17 @@
           }
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -174,11 +300,17 @@
           "type": "string"
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -193,11 +325,17 @@
           "type": "string"
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -209,7 +347,10 @@
           "type": "string"
         },
         "name": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "countries": {
@@ -219,11 +360,17 @@
           }
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -238,19 +385,31 @@
           "$ref": "#/definitions/Country"
         },
         "accession": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "withdrawal": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -268,11 +427,17 @@
           "type": "string"
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -292,11 +457,17 @@
           "default": ""
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -307,46 +478,76 @@
         "type": {
           "type": "string",
           "default": "MAJOR",
-          "enum": ["MAJOR", "MINOR"]
+          "enum": [
+            "MAJOR",
+            "MINOR"
+          ]
         },
         "id": {
           "type": "string",
           "default": ""
         },
         "name": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "value": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "valueInt": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "default": 0
         },
         "suit": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "meaningUp": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "meaningReverse": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "description": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -399,24 +600,54 @@
           "type": "string"
         },
         "results": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "syllables": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "pronunciation": {
-          "type": ["number", "string", "boolean", "object", "array", "null"]
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
         },
         "frequency": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "default": 0
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -428,15 +659,24 @@
           "type": "string"
         },
         "type": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -448,13 +688,21 @@
           "type": "string"
         },
         "color": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "type": {
           "type": "string",
           "default": "PROGRAMMING",
-          "enum": ["DATA", "MARKUP", "PROGRAMMING", "PROSE"]
+          "enum": [
+            "DATA",
+            "MARKUP",
+            "PROGRAMMING",
+            "PROSE"
+          ]
         },
         "extensions": {
           "type": "array",
@@ -481,11 +729,17 @@
           }
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -497,35 +751,59 @@
           "type": "integer"
         },
         "houseControl": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "senateControl": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "congressControl": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "trifectaControl": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "startDate": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "endDate": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "UnitedStatesCongressMember": {
@@ -556,35 +834,59 @@
           "default": ""
         },
         "firstName": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "middleName": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "lastName": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "suffix": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "dateOfBirth": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "gender": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "UnitedStatesCongress": {
@@ -617,7 +919,10 @@
         "chamber": {
           "type": "string",
           "default": "HOUSE",
-          "enum": ["HOUSE", "SENATE"]
+          "enum": [
+            "HOUSE",
+            "SENATE"
+          ]
         },
         "congress": {
           "$ref": "#/definitions/UnitedStatesCongress"
@@ -626,43 +931,73 @@
           "$ref": "#/definitions/UnitedStatesCongressMember"
         },
         "title": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "shortTitle": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "party": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "leadershipRole": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "seniority": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "default": 0
         },
         "state": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "district": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "atLarge": {
-          "type": ["boolean", "null"],
+          "type": [
+            "boolean",
+            "null"
+          ],
           "default": false
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -673,7 +1008,10 @@
         "chamber": {
           "type": "string",
           "default": "HOUSE",
-          "enum": ["HOUSE", "SENATE"]
+          "enum": [
+            "HOUSE",
+            "SENATE"
+          ]
         },
         "congress": {
           "$ref": "#/definitions/UnitedStatesCongress"
@@ -683,7 +1021,10 @@
           "default": ""
         },
         "name": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "default": ""
         },
         "chair": {
@@ -697,11 +1038,17 @@
           ]
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -762,10 +1109,16 @@
         "status": {
           "type": "string",
           "default": "basic",
-          "enum": ["basic", "premium"]
+          "enum": [
+            "basic",
+            "premium"
+          ]
         },
         "title": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "enum": [
             "GM",
             "WGM",
@@ -784,7 +1137,10 @@
           ]
         },
         "league": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "enum": [
             "Wood",
             "Stone",
@@ -899,11 +1255,17 @@
           }
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -928,7 +1290,14 @@
         },
         "timeClass": {
           "type": "string",
-          "default": ""
+          "default": "daily",
+          "enum": [
+            "daily",
+            "classical",
+            "rapid",
+            "blitz",
+            "bullet"
+          ]
         },
         "endTime": {
           "type": "string",
@@ -948,7 +1317,16 @@
         },
         "rules": {
           "type": "string",
-          "default": ""
+          "default": "chess",
+          "enum": [
+            "bughouse",
+            "chess",
+            "chess960",
+            "crazyhouse",
+            "kingofthehill",
+            "oddschess",
+            "threecheck"
+          ]
         },
         "whiteId": {
           "type": "string",
@@ -976,11 +1354,37 @@
         },
         "whiteResult": {
           "type": "string",
-          "default": ""
+          "default": "checkmated",
+          "enum": [
+            "win",
+            "fiftymove",
+            "agreed",
+            "insufficient",
+            "repetition",
+            "stalemate",
+            "timevsinsufficient",
+            "checkmated",
+            "resigned",
+            "timeout",
+            "abandoned"
+          ]
         },
         "blackResult": {
           "type": "string",
-          "default": ""
+          "default": "checkmated",
+          "enum": [
+            "win",
+            "fiftymove",
+            "agreed",
+            "insufficient",
+            "repetition",
+            "stalemate",
+            "timevsinsufficient",
+            "checkmated",
+            "resigned",
+            "timeout",
+            "abandoned"
+          ]
         },
         "whiteRating": {
           "type": "integer",
@@ -995,11 +1399,17 @@
           "default": ""
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -1032,11 +1442,17 @@
           "default": 0
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }

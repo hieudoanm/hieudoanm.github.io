@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ChessClient } from '../../../common/clients/chess.com/chess.client';
+import { ChessClient } from '../../../common/clients/apis/chess.com/chess.client';
 import { PrismaService } from '../../../common/prisma/prisma.service';
 import { GamesModule } from './games/games.module';
 import { InsightsModule } from './insights/insights.module';

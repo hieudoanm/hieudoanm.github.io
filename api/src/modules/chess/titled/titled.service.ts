@@ -1,8 +1,11 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { ChessTitle } from '../../../common/clients/chess.com/chess.dto';
-import { RedisClient, getRedisClient } from '../../../common/clients/redis';
+import { ChessTitle } from '../../../common/clients/apis/chess.com/chess.dto';
+import {
+  RedisClient,
+  getRedisClient,
+} from '../../../common/clients/redis/redis.client';
 import { REDIS_URI } from '../../../common/environments/environments';
-import { TimeRange } from '../../../common/types/chess.types';
+import { TimeRange } from '../../../common/types/time.types';
 import { TitledStatsDto } from './titled.dto';
 import { TitledRepository } from './titled.repository';
 
@@ -19,7 +22,7 @@ export class TitledService {
   public async getTitledStats({
     title,
     cache = true,
-    timeRange = 'YEAR',
+    timeRange = 'year',
   }: {
     cache: boolean;
     title: ChessTitle;

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { ChessResult, Prisma } from '@prisma/client';
 import {
-  DRAW_RESULTS,
-  LOSS_RESULTS,
-} from '../../../../../../common/constants/constants';
+  CHESS_DRAW_RESULTS,
+  CHESS_LOSS_RESULTS,
+} from '../../../../../../common/constants/chess.constants';
 import { PrismaService } from '../../../../../../common/prisma/prisma.service';
 import { DaysOfWeekService } from './helper/days-of-week.service';
 import { TimeOfDaysService } from './helper/time-of-days.service';
@@ -28,8 +28,8 @@ export class ResultsService {
   }
 
   private buildDrawResultsQuery(username: string): Prisma.Sql {
-    const drawList: string = DRAW_RESULTS.map(
-      (result: string) => `'${result}'`
+    const drawList: string = CHESS_DRAW_RESULTS.map(
+      (result: ChessResult) => `'${result}'`
     ).join(',');
     const selectClause = `SELECT (CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) as "result", COUNT(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) as "count"`;
     const whereClause = `WHERE TEXT(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) in (${drawList}) AND g."rules" = 'chess' AND g."rated" = true`;
@@ -41,8 +41,8 @@ export class ResultsService {
   }
 
   private buildLossResultsQuery(username: string): Prisma.Sql {
-    const lossList: string = LOSS_RESULTS.map(
-      (result: string) => `'${result}'`
+    const lossList: string = CHESS_LOSS_RESULTS.map(
+      (result: ChessResult) => `'${result}'`
     ).join(',');
     const selectClause = `SELECT (CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) as "result", COUNT(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) as "count"`;
     const whereClause = `WHERE TEXT(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) in (${lossList}) AND g."rules" = 'chess' AND g."rated" = true`;

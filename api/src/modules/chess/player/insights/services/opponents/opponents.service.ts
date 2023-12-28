@@ -1,10 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { ChessResult, Prisma } from '@prisma/client';
 import {
-  DRAW_RESULTS,
-  LOSS_RESULTS,
-  WIN_RESULTS,
-} from '../../../../../../common/constants/constants';
+  CHESS_DRAW_RESULTS,
+  CHESS_LOSS_RESULTS,
+  CHESS_WIN_RESULTS,
+} from '../../../../../../common/constants/chess.constants';
 import { PrismaService } from '../../../../../../common/prisma/prisma.service';
 import { OpponentDto } from './opponents.dto';
 
@@ -15,14 +15,14 @@ export class OpponentsService {
   constructor(private readonly prismaService: PrismaService) {}
 
   private buildOpponentsQuery(username: string): Prisma.Sql {
-    const winList: string = WIN_RESULTS.map(
-      (result: string) => `'${result}'`
+    const winList: string = CHESS_WIN_RESULTS.map(
+      (result: ChessResult) => `'${result}'`
     ).join(',');
-    const drawList: string = DRAW_RESULTS.map(
-      (result: string) => `'${result}'`
+    const drawList: string = CHESS_DRAW_RESULTS.map(
+      (result: ChessResult) => `'${result}'`
     ).join(',');
-    const lossList: string = LOSS_RESULTS.map(
-      (result: string) => `'${result}'`
+    const lossList: string = CHESS_LOSS_RESULTS.map(
+      (result: ChessResult) => `'${result}'`
     ).join(',');
     const selectOpponentClause = `(CASE WHEN g."whiteUsername" = '${username}' THEN g."blackUsername" ELSE g."whiteUsername" END) as "opponent"`;
     const selectCountGamesClause = 'COUNT(*) as "games"';

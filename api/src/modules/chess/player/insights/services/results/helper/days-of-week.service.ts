@@ -1,12 +1,12 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
-import {
-  DAYS_OF_WEEK,
-  DRAW_RESULTS,
-  LOSS_RESULTS,
-} from '../../../../../../../common/constants/constants';
+import { ChessResult, Prisma } from '@prisma/client';
+import { DAYS_OF_WEEK } from '../../../../../../../common/constants/time.constants';
 import { ResultsByDayOfWeekDto } from '../results.dto';
 import { PrismaService } from '../../../../../../../common/prisma/prisma.service';
+import {
+  CHESS_DRAW_RESULTS,
+  CHESS_LOSS_RESULTS,
+} from '../../../../../../../common/constants/chess.constants';
 
 @Injectable()
 export class DaysOfWeekService {
@@ -25,8 +25,8 @@ export class DaysOfWeekService {
   }
 
   private buildDrawResultsByDaysOfWeekQuery(username: string): Prisma.Sql {
-    const drawList: string = DRAW_RESULTS.map(
-      (result: string) => `'${result}'`
+    const drawList: string = CHESS_DRAW_RESULTS.map(
+      (result: ChessResult) => `'${result}'`
     ).join(',');
     const selectClause =
       'SELECT extract(dow from g."endTime")::int as "dayOfWeekIndex", COUNT(*) as "draw"';
@@ -40,9 +40,9 @@ export class DaysOfWeekService {
   }
 
   private buildLossResultsByDaysOfWeekQuery(username: string): Prisma.Sql {
-    const lossList: string = LOSS_RESULTS.map((result) => `'${result}'`).join(
-      ','
-    );
+    const lossList: string = CHESS_LOSS_RESULTS.map(
+      (result: ChessResult) => `'${result}'`
+    ).join(',');
     const selectClause =
       'SELECT extract(dow from g."endTime")::int as "dayOfWeekIndex", COUNT(*) as "loss"';
     const fromClause = 'FROM public."Game" as g';
@@ -73,7 +73,8 @@ export class DaysOfWeekService {
         >(lossQuery),
       ]);
     return wins.map(({ win, dayOfWeekIndex: winDayOfWeekIndex }) => {
-      const dayOfWeek: string = DAYS_OF_WEEK[`${winDayOfWeekIndex}`];
+      const dayOfWeek: string =
+        Array.from(DAYS_OF_WEEK)[`${winDayOfWeekIndex}`];
       const { draw = 0 } = draws.find(
         ({ dayOfWeekIndex: drawDayOfWeekIndex }) =>
           drawDayOfWeekIndex === winDayOfWeekIndex

@@ -1,23 +1,25 @@
-export type PieceSymbol = 'K' | 'Q' | 'R' | 'B' | 'N';
+import {
+  ChessBoardFile,
+  ChessBoardRank,
+  ChessPiece,
+} from '../enums/chess.enums';
 
-export type Evaluation =
-  | 'blunder'
-  | 'mistake'
-  | 'dubious'
-  | 'interesting'
-  | 'good'
-  | 'brilliant';
-export type EvaluationSymbol = '??' | '?' | '?!' | '!?' | '!' | '!!';
-
-export type File = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h';
-export type Rank = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8';
-
-export type TimeRange = 'WEEK' | 'MONTH' | 'QUARTER' | 'YEAR';
-
-export type ChessPiece =
-  | 'king'
-  | 'queen'
-  | 'rook'
-  | 'bishop'
-  | 'knight'
-  | 'pawn';
+// Board
+export type ChessBoardSquare = `${ChessBoardFile}${ChessBoardRank}`;
+// Piece
+export type ChessAnnotation = `${ChessPiece}${ChessBoardSquare}`;
+// Time Control
+export type ChessTimeControl =
+  | '1|0'
+  | '1|1'
+  | '2|1'
+  | '3|1'
+  | '3|2'
+  | '5|0'
+  | '5|5'
+  | '10|0'
+  | '15|10'
+  | '30|0'
+  | '60|0'
+  | '90|0'
+  | '120|0';

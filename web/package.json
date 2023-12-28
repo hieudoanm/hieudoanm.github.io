@@ -8,6 +8,7 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
+    "format": "prettier --write .",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
