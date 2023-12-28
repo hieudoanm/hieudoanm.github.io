@@ -23,7 +23,7 @@
     "axios": "1.6.3",
     "glob-parent": "6.0.2",
     "postcss": "8.4.32",
-    "undici": "5.26.2"
+    "undici": "5.28.2"
   },
   "workspaces": [
     "api",
