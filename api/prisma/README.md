@@ -77,6 +77,13 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"EthnicGroup" {
+    Int id PK
+    String name
+    String group
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 "TarotCard" {
     TarotCardType type
     String id PK
@@ -87,13 +94,6 @@ erDiagram
     String meaningUp "nullable"
     String meaningReverse "nullable"
     String description "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
-"EthnicGroup" {
-    Int id PK
-    String name
-    String group
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -176,6 +176,86 @@ erDiagram
     String id
     String name "nullable"
     String chairId FK "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"ChessPlayer" {
+    Int id PK
+    String username UK
+    String name
+    Int followers
+    String avatar
+    String location
+    String country
+    String countryCode
+    String twitchUrl
+    Boolean isStreamer
+    Boolean verified
+    DateTime lastOnline
+    DateTime joined
+    Status status
+    Title title "nullable"
+    League league "nullable"
+    Int statsDailyRatingBest
+    Int statsDailyRatingLast
+    Int statsDailyRatingDeviation
+    Int statsDailyRecordWin
+    Int statsDailyRecordDraw
+    Int statsDailyRecordLoss
+    Int statsRapidRatingBest
+    Int statsRapidRatingLast
+    Int statsRapidRatingDeviation
+    Int statsRapidRecordWin
+    Int statsRapidRecordDraw
+    Int statsRapidRecordLoss
+    Int statsBlitzRatingLast
+    Int statsBlitzRatingBest
+    Int statsBlitzRatingDeviation
+    Int statsBlitzRecordWin
+    Int statsBlitzRecordDraw
+    Int statsBlitzRecordLoss
+    Int statsBulletRatingLast
+    Int statsBulletRatingBest
+    Int statsBulletRatingDeviation
+    Int statsBulletRecordWin
+    Int statsBulletRecordDraw
+    Int statsBulletRecordLoss
+    String archives
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"ChessGame" {
+    String id PK
+    String url
+    String pgn
+    String timeControl
+    String timeClass
+    DateTime endTime
+    Boolean rated
+    String tcn
+    String initialSetup
+    String rules
+    String whiteId
+    String blackId
+    String whiteUsername
+    String blackUsername
+    Float whiteAccuracy
+    Float blackAccuracy
+    String whiteResult
+    String blackResult
+    Int whiteRating
+    Int blackRating
+    String fen
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"ChessOpening" {
+    String eco
+    String name
+    String pgn
+    String firstMove
+    String fen
+    Int centipawn
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -275,6 +355,16 @@ erDiagram
 - `createdAt`:
 - `updatedAt`:
 
+### `EthnicGroup`
+
+**Properties**
+
+- `id`:
+- `name`:
+- `group`:
+- `createdAt`:
+- `updatedAt`:
+
 ### `TarotCard`
 
 **Properties**
@@ -288,16 +378,6 @@ erDiagram
 - `meaningUp`:
 - `meaningReverse`:
 - `description`:
-- `createdAt`:
-- `updatedAt`:
-
-### `EthnicGroup`
-
-**Properties**
-
-- `id`:
-- `name`:
-- `group`:
 - `createdAt`:
 - `updatedAt`:
 
@@ -404,5 +484,94 @@ erDiagram
 - `id`:
 - `name`:
 - `chairId`:
+- `createdAt`:
+- `updatedAt`:
+
+### `ChessPlayer`
+
+**Properties**
+
+- `id`:
+- `username`:
+- `name`:
+- `followers`:
+- `avatar`:
+- `location`:
+- `country`:
+- `countryCode`:
+- `twitchUrl`:
+- `isStreamer`:
+- `verified`:
+- `lastOnline`:
+- `joined`:
+- `status`:
+- `title`:
+- `league`:
+- `statsDailyRatingBest`:
+- `statsDailyRatingLast`:
+- `statsDailyRatingDeviation`:
+- `statsDailyRecordWin`:
+- `statsDailyRecordDraw`:
+- `statsDailyRecordLoss`:
+- `statsRapidRatingBest`:
+- `statsRapidRatingLast`:
+- `statsRapidRatingDeviation`:
+- `statsRapidRecordWin`:
+- `statsRapidRecordDraw`:
+- `statsRapidRecordLoss`:
+- `statsBlitzRatingLast`:
+- `statsBlitzRatingBest`:
+- `statsBlitzRatingDeviation`:
+- `statsBlitzRecordWin`:
+- `statsBlitzRecordDraw`:
+- `statsBlitzRecordLoss`:
+- `statsBulletRatingLast`:
+- `statsBulletRatingBest`:
+- `statsBulletRatingDeviation`:
+- `statsBulletRecordWin`:
+- `statsBulletRecordDraw`:
+- `statsBulletRecordLoss`:
+- `archives`:
+- `createdAt`:
+- `updatedAt`:
+
+### `ChessGame`
+
+**Properties**
+
+- `id`:
+- `url`:
+- `pgn`:
+- `timeControl`:
+- `timeClass`:
+- `endTime`:
+- `rated`:
+- `tcn`:
+- `initialSetup`:
+- `rules`:
+- `whiteId`:
+- `blackId`:
+- `whiteUsername`:
+- `blackUsername`:
+- `whiteAccuracy`:
+- `blackAccuracy`:
+- `whiteResult`:
+- `blackResult`:
+- `whiteRating`:
+- `blackRating`:
+- `fen`:
+- `createdAt`:
+- `updatedAt`:
+
+### `ChessOpening`
+
+**Properties**
+
+- `eco`:
+- `name`:
+- `pgn`:
+- `firstMove`:
+- `fen`:
+- `centipawn`:
 - `createdAt`:
 - `updatedAt`:

@@ -85,6 +85,14 @@ Table LicensePlate {
   updatedAt DateTime [default: `now()`]
 }
 
+Table EthnicGroup {
+  id Int [pk, increment]
+  name String [not null, default: '']
+  group String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
 Table TarotCard {
   type TarotCardType [not null, default: 'MAJOR']
   id String [pk, default: '']
@@ -95,14 +103,6 @@ Table TarotCard {
   meaningUp String [default: '']
   meaningReverse String [default: '']
   description String [default: '']
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
-}
-
-Table EthnicGroup {
-  id Int [pk, increment]
-  name String [not null, default: '']
-  group String [not null, default: '']
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
 }
@@ -215,6 +215,93 @@ Table UnitedStatesCongressCommittee {
   }
 }
 
+Table ChessPlayer {
+  id Int [pk]
+  username String [unique, not null]
+  name String [not null, default: '']
+  followers Int [not null, default: 0]
+  avatar String [not null, default: '']
+  location String [not null, default: '']
+  country String [not null, default: '']
+  countryCode String [not null, default: '']
+  twitchUrl String [not null, default: '']
+  isStreamer Boolean [not null, default: false]
+  verified Boolean [not null, default: false]
+  lastOnline DateTime [default: `now()`, not null]
+  joined DateTime [default: `now()`, not null]
+  status Status [not null, default: 'basic']
+  title Title
+  league League
+  statsDailyRatingBest Int [not null, default: 0]
+  statsDailyRatingLast Int [not null, default: 0]
+  statsDailyRatingDeviation Int [not null, default: 0]
+  statsDailyRecordWin Int [not null, default: 0]
+  statsDailyRecordDraw Int [not null, default: 0]
+  statsDailyRecordLoss Int [not null, default: 0]
+  statsRapidRatingBest Int [not null, default: 0]
+  statsRapidRatingLast Int [not null, default: 0]
+  statsRapidRatingDeviation Int [not null, default: 0]
+  statsRapidRecordWin Int [not null, default: 0]
+  statsRapidRecordDraw Int [not null, default: 0]
+  statsRapidRecordLoss Int [not null, default: 0]
+  statsBlitzRatingLast Int [not null, default: 0]
+  statsBlitzRatingBest Int [not null, default: 0]
+  statsBlitzRatingDeviation Int [not null, default: 0]
+  statsBlitzRecordWin Int [not null, default: 0]
+  statsBlitzRecordDraw Int [not null, default: 0]
+  statsBlitzRecordLoss Int [not null, default: 0]
+  statsBulletRatingLast Int [not null, default: 0]
+  statsBulletRatingBest Int [not null, default: 0]
+  statsBulletRatingDeviation Int [not null, default: 0]
+  statsBulletRecordWin Int [not null, default: 0]
+  statsBulletRecordDraw Int [not null, default: 0]
+  statsBulletRecordLoss Int [not null, default: 0]
+  archives String[] [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime
+}
+
+Table ChessGame {
+  id String [pk]
+  url String [not null, default: '']
+  pgn String [not null, default: '']
+  timeControl String [not null, default: '']
+  timeClass String [not null, default: '']
+  endTime DateTime [default: `now()`, not null]
+  rated Boolean [not null, default: false]
+  tcn String [not null, default: '']
+  initialSetup String [not null, default: '']
+  rules String [not null, default: '']
+  whiteId String [not null, default: '']
+  blackId String [not null, default: '']
+  whiteUsername String [not null, default: '']
+  blackUsername String [not null, default: '']
+  whiteAccuracy Float [not null, default: 0]
+  blackAccuracy Float [not null, default: 0]
+  whiteResult String [not null, default: '']
+  blackResult String [not null, default: '']
+  whiteRating Int [not null, default: 0]
+  blackRating Int [not null, default: 0]
+  fen String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime
+}
+
+Table ChessOpening {
+  eco String [not null, default: '']
+  name String [not null, default: '']
+  pgn String [not null, default: '']
+  firstMove String [not null, default: '']
+  fen String [not null, default: '']
+  centipawn Int [not null, default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime
+
+  indexes {
+    (eco, name, pgn) [pk]
+  }
+}
+
 Enum DayOfWeek {
   MONDAY
   TUESDAY
@@ -266,6 +353,70 @@ Enum ProgrammingLanguageType {
 Enum UnitedStatesCongressChamber {
   HOUSE
   SENATE
+}
+
+Enum Status {
+  basic
+  premium
+}
+
+Enum League {
+  Wood
+  Stone
+  Bronze
+  Silver
+  Crystal
+  Elite
+  Champion
+  Legend
+}
+
+Enum Title {
+  GM
+  WGM
+  IM
+  WIM
+  FM
+  WFM
+  CM
+  WCM
+  NM
+  WNM
+  AGM
+  AIM
+  AFM
+  ACM
+}
+
+Enum TimeClass {
+  daily
+  rapid
+  blitz
+  bullet
+}
+
+Enum Rule {
+  bughouse
+  chess
+  chess960
+  crazyhouse
+  kingofthehill
+  oddschess
+  threecheck
+}
+
+Enum ChessPiece {
+  king
+  queen
+  rook
+  bishop
+  knight
+  pawn
+}
+
+Enum Side {
+  white
+  black
 }
 
 Ref: CountriesOnOrganizations.organizationCode > Organization.code

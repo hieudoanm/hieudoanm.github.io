@@ -2,6 +2,7 @@ import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { ChessModule } from './modules/chess/chess.module';
 import { CountriesModule } from './modules/countries/countries.module';
 import { FinanceModule } from './modules/finance/finance.module';
 import { GitHubModule } from './modules/github/github.module';
@@ -15,6 +16,7 @@ import { WordsModule } from './modules/words/words.module';
     ConfigModule.forRoot({ isGlobal: true }),
     ThrottlerModule.forRoot([{ ttl: 60000, limit: 10 }]),
     HttpModule,
+    ChessModule,
     CountriesModule,
     FinanceModule,
     GitHubModule,

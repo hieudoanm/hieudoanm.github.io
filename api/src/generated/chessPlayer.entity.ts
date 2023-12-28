@@ -1,0 +1,47 @@
+import { Status, Title, League } from '@prisma/client';
+
+export class ChessPlayerDto {
+  id: number;
+  username: string;
+  name: string;
+  followers: number;
+  avatar: string;
+  location: string;
+  country: string;
+  countryCode: string;
+  twitchUrl: string;
+  isStreamer: boolean;
+  verified: boolean;
+  lastOnline: Date;
+  joined: Date;
+  status: Status;
+  title: Title | null;
+  league: League | null;
+  statsDailyRatingBest: number;
+  statsDailyRatingLast: number;
+  statsDailyRatingDeviation: number;
+  statsDailyRecordWin: number;
+  statsDailyRecordDraw: number;
+  statsDailyRecordLoss: number;
+  statsRapidRatingBest: number;
+  statsRapidRatingLast: number;
+  statsRapidRatingDeviation: number;
+  statsRapidRecordWin: number;
+  statsRapidRecordDraw: number;
+  statsRapidRecordLoss: number;
+  statsBlitzRatingLast: number;
+  statsBlitzRatingBest: number;
+  statsBlitzRatingDeviation: number;
+  statsBlitzRecordWin: number;
+  statsBlitzRecordDraw: number;
+  statsBlitzRecordLoss: number;
+  statsBulletRatingLast: number;
+  statsBulletRatingBest: number;
+  statsBulletRatingDeviation: number;
+  statsBulletRecordWin: number;
+  statsBulletRecordDraw: number;
+  statsBulletRecordLoss: number;
+  archives: string[];
+  createdAt: Date | null;
+  updatedAt: Date | null;
+}

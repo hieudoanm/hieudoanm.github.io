@@ -1,0 +1,43 @@
+import { Injectable, Logger } from '@nestjs/common';
+import { ChessTitle } from '../../../common/clients/chess.com/chess.dto';
+import { RedisClient, getRedisClient } from '../../../common/clients/redis';
+import { REDIS_URI } from '../../../common/environments/environments';
+import { TimeRange } from '../../../common/types/chess.types';
+import { TitledStatsDto } from './titled.dto';
+import { TitledRepository } from './titled.repository';
+
+@Injectable()
+export class TitledService {
+  private readonly logger = new Logger(TitledService.name);
+
+  private redisClient: RedisClient;
+
+  constructor(private readonly titledRepository: TitledRepository) {
+    this.redisClient = getRedisClient(REDIS_URI);
+  }
+
+  public async getTitledStats({
+    title,
+    cache = true,
+    timeRange = 'YEAR',
+  }: {
+    cache: boolean;
+    title: ChessTitle;
+    timeRange: TimeRange;
+  }): Promise<TitledStatsDto> {
+    const key: string = `chess-titled-${title}-${timeRange}`.toLowerCase();
+    if (cache) {
+      const cacheTitledStats: TitledStatsDto | null | undefined =
+        await this.redisClient.getObject<TitledStatsDto>(key);
+      if (cacheTitledStats) {
+        return cacheTitledStats;
+      }
+    }
+    const titledStats: TitledStatsDto =
+      await this.titledRepository.getTitledStats({ title, timeRange });
+    await this.redisClient.setObject<TitledStatsDto>(key, titledStats, {
+      expiresInSeconds: 30 * 60, // 30 minutes
+    });
+    return titledStats;
+  }
+}

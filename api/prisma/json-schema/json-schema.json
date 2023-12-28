@@ -277,6 +277,30 @@
         }
       }
     },
+    "EthnicGroup": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "group": {
+          "type": "string",
+          "default": ""
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
     "TarotCard": {
       "type": "object",
       "properties": {
@@ -315,30 +339,6 @@
         },
         "description": {
           "type": ["string", "null"],
-          "default": ""
-        },
-        "createdAt": {
-          "type": ["string", "null"],
-          "format": "date-time"
-        },
-        "updatedAt": {
-          "type": ["string", "null"],
-          "format": "date-time"
-        }
-      }
-    },
-    "EthnicGroup": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "name": {
-          "type": "string",
-          "default": ""
-        },
-        "group": {
-          "type": "string",
           "default": ""
         },
         "createdAt": {
@@ -705,6 +705,341 @@
           "format": "date-time"
         }
       }
+    },
+    "ChessPlayer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "username": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "followers": {
+          "type": "integer",
+          "default": 0
+        },
+        "avatar": {
+          "type": "string",
+          "default": ""
+        },
+        "location": {
+          "type": "string",
+          "default": ""
+        },
+        "country": {
+          "type": "string",
+          "default": ""
+        },
+        "countryCode": {
+          "type": "string",
+          "default": ""
+        },
+        "twitchUrl": {
+          "type": "string",
+          "default": ""
+        },
+        "isStreamer": {
+          "type": "boolean",
+          "default": false
+        },
+        "verified": {
+          "type": "boolean",
+          "default": false
+        },
+        "lastOnline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "joined": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "default": "basic",
+          "enum": ["basic", "premium"]
+        },
+        "title": {
+          "type": ["string", "null"],
+          "enum": [
+            "GM",
+            "WGM",
+            "IM",
+            "WIM",
+            "FM",
+            "WFM",
+            "CM",
+            "WCM",
+            "NM",
+            "WNM",
+            "AGM",
+            "AIM",
+            "AFM",
+            "ACM"
+          ]
+        },
+        "league": {
+          "type": ["string", "null"],
+          "enum": [
+            "Wood",
+            "Stone",
+            "Bronze",
+            "Silver",
+            "Crystal",
+            "Elite",
+            "Champion",
+            "Legend"
+          ]
+        },
+        "statsDailyRatingBest": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsDailyRatingLast": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsDailyRatingDeviation": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsDailyRecordWin": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsDailyRecordDraw": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsDailyRecordLoss": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsRapidRatingBest": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsRapidRatingLast": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsRapidRatingDeviation": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsRapidRecordWin": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsRapidRecordDraw": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsRapidRecordLoss": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBlitzRatingLast": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBlitzRatingBest": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBlitzRatingDeviation": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBlitzRecordWin": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBlitzRecordDraw": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBlitzRecordLoss": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBulletRatingLast": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBulletRatingBest": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBulletRatingDeviation": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBulletRecordWin": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBulletRecordDraw": {
+          "type": "integer",
+          "default": 0
+        },
+        "statsBulletRecordLoss": {
+          "type": "integer",
+          "default": 0
+        },
+        "archives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "ChessGame": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "default": ""
+        },
+        "pgn": {
+          "type": "string",
+          "default": ""
+        },
+        "timeControl": {
+          "type": "string",
+          "default": ""
+        },
+        "timeClass": {
+          "type": "string",
+          "default": ""
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "rated": {
+          "type": "boolean",
+          "default": false
+        },
+        "tcn": {
+          "type": "string",
+          "default": ""
+        },
+        "initialSetup": {
+          "type": "string",
+          "default": ""
+        },
+        "rules": {
+          "type": "string",
+          "default": ""
+        },
+        "whiteId": {
+          "type": "string",
+          "default": ""
+        },
+        "blackId": {
+          "type": "string",
+          "default": ""
+        },
+        "whiteUsername": {
+          "type": "string",
+          "default": ""
+        },
+        "blackUsername": {
+          "type": "string",
+          "default": ""
+        },
+        "whiteAccuracy": {
+          "type": "number",
+          "default": 0
+        },
+        "blackAccuracy": {
+          "type": "number",
+          "default": 0
+        },
+        "whiteResult": {
+          "type": "string",
+          "default": ""
+        },
+        "blackResult": {
+          "type": "string",
+          "default": ""
+        },
+        "whiteRating": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackRating": {
+          "type": "integer",
+          "default": 0
+        },
+        "fen": {
+          "type": "string",
+          "default": ""
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "ChessOpening": {
+      "type": "object",
+      "properties": {
+        "eco": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "pgn": {
+          "type": "string",
+          "default": ""
+        },
+        "firstMove": {
+          "type": "string",
+          "default": ""
+        },
+        "fen": {
+          "type": "string",
+          "default": ""
+        },
+        "centipawn": {
+          "type": "integer",
+          "default": 0
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
     }
   },
   "type": "object",
@@ -727,11 +1062,11 @@
     "licensePlate": {
       "$ref": "#/definitions/LicensePlate"
     },
-    "tarotCard": {
-      "$ref": "#/definitions/TarotCard"
-    },
     "ethnicGroup": {
       "$ref": "#/definitions/EthnicGroup"
+    },
+    "tarotCard": {
+      "$ref": "#/definitions/TarotCard"
     },
     "newsSource": {
       "$ref": "#/definitions/NewsSource"
@@ -756,6 +1091,15 @@
     },
     "unitedStatesCongressCommittee": {
       "$ref": "#/definitions/UnitedStatesCongressCommittee"
+    },
+    "chessPlayer": {
+      "$ref": "#/definitions/ChessPlayer"
+    },
+    "chessGame": {
+      "$ref": "#/definitions/ChessGame"
+    },
+    "chessOpening": {
+      "$ref": "#/definitions/ChessOpening"
     }
   }
 }
