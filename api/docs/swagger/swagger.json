@@ -42,9 +42,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/openings/ecos": {
@@ -63,9 +61,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/player/{username}": {
@@ -93,9 +89,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       },
       "post": {
         "operationId": "PlayerController_syncPlayer",
@@ -121,9 +115,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/player/{username}/games": {
@@ -167,9 +159,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       },
       "post": {
         "operationId": "GamesController_syncGames",
@@ -205,9 +195,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/player/{username}/games/{gameId}": {
@@ -243,9 +231,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/player/{username}/games/{gameId}/pgn": {
@@ -281,9 +267,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/player/{username}/insights": {
@@ -311,9 +295,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/player/{username}/insights/games": {
@@ -341,9 +323,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/player/{username}/insights/accuracy": {
@@ -371,9 +351,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/player/{username}/insights/results": {
@@ -401,9 +379,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/player/{username}/insights/opponents": {
@@ -431,9 +407,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/streamers": {
@@ -469,9 +443,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/titled": {
@@ -490,9 +462,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/titled/{title}": {
@@ -536,9 +506,7 @@
             }
           }
         },
-        "tags": [
-          "Chess"
-        ]
+        "tags": ["Chess"]
       }
     },
     "/countries": {
@@ -638,9 +606,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/countries/{code}": {
@@ -668,9 +634,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/countries/currencies": {
@@ -689,9 +653,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/countries/languages": {
@@ -710,9 +672,7 @@
             }
           }
         },
-        "tags": [
-          "countries"
-        ]
+        "tags": ["countries"]
       }
     },
     "/organizations": {
@@ -731,9 +691,7 @@
             }
           }
         },
-        "tags": [
-          "organizations"
-        ]
+        "tags": ["organizations"]
       }
     },
     "/organizations/{code}": {
@@ -762,9 +720,7 @@
             }
           }
         },
-        "tags": [
-          "organizations"
-        ]
+        "tags": ["organizations"]
       }
     },
     "/vietnam/ethnic-groups": {
@@ -783,9 +739,7 @@
             }
           }
         },
-        "tags": [
-          "vietnam"
-        ]
+        "tags": ["vietnam"]
       }
     },
     "/vietnam/license-plates": {
@@ -804,9 +758,7 @@
             }
           }
         },
-        "tags": [
-          "vietnam"
-        ]
+        "tags": ["vietnam"]
       }
     },
     "/vietnam/license-plates/{code}": {
@@ -834,9 +786,7 @@
             }
           }
         },
-        "tags": [
-          "vietnam"
-        ]
+        "tags": ["vietnam"]
       }
     },
     "/crypto/coins": {
@@ -864,9 +814,7 @@
             }
           }
         },
-        "tags": [
-          "crypto"
-        ]
+        "tags": ["crypto"]
       }
     },
     "/forex/rates": {
@@ -904,9 +852,7 @@
             }
           }
         },
-        "tags": [
-          "forex"
-        ]
+        "tags": ["forex"]
       }
     },
     "/github/languages": {
@@ -925,9 +871,7 @@
             }
           }
         },
-        "tags": [
-          "github"
-        ]
+        "tags": ["github"]
       }
     },
     "/health": {
@@ -946,9 +890,7 @@
             }
           }
         },
-        "tags": [
-          "health"
-        ]
+        "tags": ["health"]
       }
     },
     "/news/google": {
@@ -967,9 +909,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     },
     "/news/sources": {
@@ -988,9 +928,7 @@
             }
           }
         },
-        "tags": [
-          "news"
-        ]
+        "tags": ["news"]
       }
     },
     "/tarot/cards": {
@@ -1003,10 +941,7 @@
             "in": "query",
             "description": "Tarot Type",
             "schema": {
-              "enum": [
-                "MAJOR",
-                "MINOR"
-              ],
+              "enum": ["MAJOR", "MINOR"],
               "type": "string"
             }
           },
@@ -1041,9 +976,7 @@
             }
           }
         },
-        "tags": [
-          "tarot"
-        ]
+        "tags": ["tarot"]
       }
     },
     "/tarot/cards/{id}": {
@@ -1071,9 +1004,7 @@
             }
           }
         },
-        "tags": [
-          "tarot"
-        ]
+        "tags": ["tarot"]
       }
     },
     "/words": {
@@ -1111,9 +1042,7 @@
             }
           }
         },
-        "tags": [
-          "words"
-        ]
+        "tags": ["words"]
       }
     },
     "/words/{word}": {
@@ -1141,9 +1070,7 @@
             }
           }
         },
-        "tags": [
-          "words"
-        ]
+        "tags": ["words"]
       }
     }
   },
@@ -1174,10 +1101,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "openings"
-        ]
+        "required": ["total", "openings"]
       },
       "EcosResponseDto": {
         "type": "object",
@@ -1192,10 +1116,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "ecos"
-        ]
+        "required": ["total", "ecos"]
       },
       "ChessPlayerDto": {
         "type": "object",
@@ -1218,10 +1139,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "games"
-        ]
+        "required": ["total", "games"]
       },
       "SyncRequestDto": {
         "type": "object",
@@ -1233,10 +1151,7 @@
             "type": "number"
           }
         },
-        "required": [
-          "month",
-          "year"
-        ]
+        "required": ["month", "year"]
       },
       "SyncedResponseDto": {
         "type": "object",
@@ -1251,11 +1166,7 @@
             "type": "number"
           }
         },
-        "required": [
-          "total",
-          "synced",
-          "existed"
-        ]
+        "required": ["total", "synced", "existed"]
       },
       "GamesDto": {
         "type": "object",
@@ -1311,10 +1222,7 @@
             "type": "number"
           }
         },
-        "required": [
-          "average",
-          "period"
-        ]
+        "required": ["average", "period"]
       },
       "AccuracyByTimeOfDayDto": {
         "type": "object",
@@ -1326,10 +1234,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "average",
-          "timeOfDay"
-        ]
+        "required": ["average", "timeOfDay"]
       },
       "AccuracyByDayOfWeekDto": {
         "type": "object",
@@ -1341,10 +1246,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "average",
-          "dayOfWeek"
-        ]
+        "required": ["average", "dayOfWeek"]
       },
       "AccuracyDto": {
         "type": "object",
@@ -1427,13 +1329,7 @@
             }
           }
         },
-        "required": [
-          "win",
-          "draw",
-          "loss",
-          "timeOfDays",
-          "daysOfWeek"
-        ]
+        "required": ["win", "draw", "loss", "timeOfDays", "daysOfWeek"]
       },
       "OpponentDto": {
         "type": "object",
@@ -1454,13 +1350,7 @@
             "type": "number"
           }
         },
-        "required": [
-          "opponent",
-          "games",
-          "win",
-          "draw",
-          "loss"
-        ]
+        "required": ["opponent", "games", "win", "draw", "loss"]
       },
       "InsightsDto": {
         "type": "object",
@@ -1484,13 +1374,7 @@
             }
           }
         },
-        "required": [
-          "username",
-          "games",
-          "accuracy",
-          "results",
-          "opponents"
-        ]
+        "required": ["username", "games", "accuracy", "results", "opponents"]
       },
       "CountryDto": {
         "type": "object",
@@ -1515,11 +1399,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "players",
-          "countries"
-        ]
+        "required": ["total", "players", "countries"]
       },
       "TitlesDto": {
         "type": "object",
@@ -1534,10 +1414,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "titles"
-        ]
+        "required": ["total", "titles"]
       },
       "TitledStatsDto": {
         "type": "object",
@@ -1610,12 +1487,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "regions",
-          "subregions",
-          "countries"
-        ]
+        "required": ["total", "regions", "subregions", "countries"]
       },
       "CurrencyDto": {
         "type": "object",
@@ -1633,11 +1505,7 @@
             "default": ""
           }
         },
-        "required": [
-          "code",
-          "name",
-          "symbol"
-        ]
+        "required": ["code", "name", "symbol"]
       },
       "CurrenciesResponseDto": {
         "type": "object",
@@ -1654,10 +1522,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "currencies"
-        ]
+        "required": ["total", "currencies"]
       },
       "LanguageDto": {
         "type": "object",
@@ -1671,10 +1536,7 @@
             "default": ""
           }
         },
-        "required": [
-          "code",
-          "name"
-        ]
+        "required": ["code", "name"]
       },
       "LanguagesResponseDto": {
         "type": "object",
@@ -1691,10 +1553,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "languages"
-        ]
+        "required": ["total", "languages"]
       },
       "OrganizationDto": {
         "type": "object",
@@ -1715,10 +1574,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "organizations"
-        ]
+        "required": ["total", "organizations"]
       },
       "EthnicGroupDto": {
         "type": "object",
@@ -1739,10 +1595,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "ethnicGroups"
-        ]
+        "required": ["total", "ethnicGroups"]
       },
       "LicensePlateDto": {
         "type": "object",
@@ -1763,10 +1616,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "licensePlates"
-        ]
+        "required": ["total", "licensePlates"]
       },
       "CoinDto": {
         "type": "object",
@@ -1858,10 +1708,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "coins"
-        ]
+        "required": ["total", "coins"]
       },
       "RateDto": {
         "type": "object",
@@ -1876,11 +1723,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "rate",
-          "code",
-          "name"
-        ]
+        "required": ["rate", "code", "name"]
       },
       "RatesResponseDto": {
         "type": "object",
@@ -1901,12 +1744,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "amount",
-          "base",
-          "rates"
-        ]
+        "required": ["total", "amount", "base", "rates"]
       },
       "ProgrammingLanguageDto": {
         "type": "object",
@@ -1926,10 +1764,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "languages"
-        ]
+        "required": ["total", "languages"]
       },
       "HealthResponseDto": {
         "type": "object",
@@ -1939,9 +1774,7 @@
             "default": ""
           }
         },
-        "required": [
-          "status"
-        ]
+        "required": ["status"]
       },
       "GoogleCountryDto": {
         "type": "object",
@@ -1958,10 +1791,7 @@
             }
           }
         },
-        "required": [
-          "country",
-          "queries"
-        ]
+        "required": ["country", "queries"]
       },
       "GoogleResponseDto": {
         "type": "object",
@@ -1978,10 +1808,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "countries"
-        ]
+        "required": ["total", "countries"]
       },
       "NewsSourceDto": {
         "type": "object",
@@ -2040,10 +1867,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "sources"
-        ]
+        "required": ["total", "sources"]
       },
       "TarotCardDto": {
         "type": "object",
@@ -2058,10 +1882,7 @@
           },
           "types": {
             "type": "string",
-            "enum": [
-              "MAJOR",
-              "MINOR"
-            ]
+            "enum": ["MAJOR", "MINOR"]
           },
           "suits": {
             "type": "array",
@@ -2077,12 +1898,7 @@
             }
           }
         },
-        "required": [
-          "total",
-          "types",
-          "suits",
-          "cards"
-        ]
+        "required": ["total", "types", "suits", "cards"]
       },
       "WordDto": {
         "type": "object",
@@ -2111,12 +1927,7 @@
             }
           }
         },
-        "required": [
-          "limit",
-          "offset",
-          "total",
-          "words"
-        ]
+        "required": ["limit", "offset", "total", "words"]
       }
     }
   }
