@@ -13,7 +13,6 @@ import {
   CountriesRequestQueryDto,
   CountriesResponseDto,
   CurrenciesResponseDto,
-  LanguagesResponseDto,
 } from './countries.dto';
 import { CountriesService } from './countries.service';
 import { Region } from '@prisma/client';
@@ -86,23 +85,13 @@ export class CountriesController {
         forbidNonWhitelisted: true,
       })
     )
-    {
-      name,
-      unMember,
-      region,
-      subregion,
-      currency,
-      language,
-      timezone,
-    }: CountriesRequestQueryDto
+    { name, unMember, region, subregion, timezone }: CountriesRequestQueryDto
   ): Promise<CountriesResponseDto> {
     return this.countriesService.getCountries({
       name,
       unMember,
       region,
       subregion,
-      language,
-      currency,
       timezone,
     });
   }
@@ -126,15 +115,5 @@ export class CountriesController {
   })
   async getCurrencies(): Promise<CurrenciesResponseDto> {
     return this.countriesService.getCurrencies();
-  }
-
-  @Get('languages')
-  @ApiResponse({
-    status: 200,
-    type: LanguagesResponseDto,
-    description: 'List of Languages',
-  })
-  async getLanguages(): Promise<LanguagesResponseDto> {
-    return this.countriesService.getLanguages();
   }
 }

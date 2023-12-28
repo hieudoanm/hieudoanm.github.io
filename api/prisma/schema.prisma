@@ -45,9 +45,7 @@ model Country {
   unMember     Boolean?   @default(false)
   landlocked   Boolean?   @default(false)
   name         Json?      @default("{}")
-  currencies   Json?      @default("{}")
   idd          Json?      @default("{}")
-  languages    Json?      @default("{}")
   translations Json?      @default("{}")
   demonyms     Json?      @default("{}")
   maps         Json?      @default("{}")
@@ -63,6 +61,8 @@ model Country {
   capital      String[]   @default([])
   altSpellings String[]   @default([])
 
+  currencies    CurrenciesInCountries[]
+  languages     LanguagesInCountries[]
   organizations CountriesOnOrganizations[]
 
   createdAt DateTime? @default(now())
@@ -93,16 +93,45 @@ model Currency {
   name   String @db.VarChar(255)
   symbol String @db.VarChar(255)
 
+  countries CurrenciesInCountries[]
+
   createdAt DateTime? @default(now())
   updatedAt DateTime? @default(now()) @updatedAt
 }
 
-model Language {
-  code String @id @db.VarChar(3)
-  name String @db.VarChar(255)
+model CurrenciesInCountries {
+  currency     Currency @relation(fields: [currencyCode], references: [code])
+  currencyCode String
+  country      Country  @relation(fields: [countryCode], references: [cca3])
+  countryCode  String
 
   createdAt DateTime? @default(now())
   updatedAt DateTime? @default(now()) @updatedAt
+
+  @@id([currencyCode, countryCode])
+}
+
+model Language {
+  code     String @id @db.VarChar(3)
+  name     String @db.VarChar(255)
+  category Int    @default(0)
+
+  countries LanguagesInCountries[]
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+}
+
+model LanguagesInCountries {
+  language     Language @relation(fields: [languageCode], references: [code])
+  languageCode String
+  country      Country  @relation(fields: [countryCode], references: [cca3])
+  countryCode  String
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
+
+  @@id([languageCode, countryCode])
 }
 
 model Organization {

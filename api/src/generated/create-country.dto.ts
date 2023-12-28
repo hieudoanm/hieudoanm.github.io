@@ -17,9 +17,7 @@ export class CreateCountryDto {
   unMember?: boolean;
   landlocked?: boolean;
   name?: Prisma.InputJsonValue;
-  currencies?: Prisma.InputJsonValue;
   idd?: Prisma.InputJsonValue;
-  languages?: Prisma.InputJsonValue;
   translations?: Prisma.InputJsonValue;
   demonyms?: Prisma.InputJsonValue;
   maps?: Prisma.InputJsonValue;

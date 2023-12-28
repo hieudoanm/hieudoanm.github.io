@@ -414,9 +414,22 @@ paths:
               schema:
                 $ref: "#/components/schemas/CurrenciesResponseDto"
       tags: *a6
-  /countries/languages:
+  /currencies:
     get:
-      operationId: CountriesController_getLanguages
+      operationId: CurrenciesController_getCurrencies
+      parameters: []
+      responses:
+        "200":
+          description: List of Currencies
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrenciesResponseDto"
+      tags:
+        - currencies
+  /languages:
+    get:
+      operationId: LanguagesController_getLanguages
       parameters: []
       responses:
         "200":
@@ -425,7 +438,8 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/LanguagesResponseDto"
-      tags: *a6
+      tags:
+        - languages
   /organizations:
     get:
       operationId: OrganizationsController_getOrganizations
@@ -1047,16 +1061,7 @@ components:
         - currencies
     LanguageDto:
       type: object
-      properties:
-        code:
-          type: string
-          default: ""
-        name:
-          type: string
-          default: ""
-      required:
-        - code
-        - name
+      properties: {}
     LanguagesResponseDto:
       type: object
       properties:

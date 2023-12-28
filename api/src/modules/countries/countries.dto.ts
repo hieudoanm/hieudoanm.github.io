@@ -22,14 +22,6 @@ export class CountriesRequestQueryDto {
 
   @IsOptional()
   @IsString()
-  currency: string;
-
-  @IsOptional()
-  @IsString()
-  language: string;
-
-  @IsOptional()
-  @IsString()
   timezone: string;
 }
 
@@ -64,20 +56,4 @@ export class CurrenciesResponseDto {
 
   @ApiProperty({ type: [CurrencyDto], default: [] })
   currencies: CurrencyDto[];
-}
-
-export class LanguageDto {
-  @ApiProperty({ default: '' })
-  code: string;
-
-  @ApiProperty({ default: '' })
-  name: string;
-}
-
-export class LanguagesResponseDto {
-  @ApiProperty({ default: 0 })
-  total: number;
-
-  @ApiProperty({ type: [LanguageDto], default: [] })
-  languages: LanguageDto[];
 }

@@ -17,9 +17,7 @@ Table Country {
   unMember Boolean [default: false]
   landlocked Boolean [default: false]
   name Json [default: '{}']
-  currencies Json [default: '{}']
   idd Json [default: '{}']
-  languages Json [default: '{}']
   translations Json [default: '{}']
   demonyms Json [default: '{}']
   maps Json [default: '{}']
@@ -34,6 +32,8 @@ Table Country {
   tld String[] [not null]
   capital String[] [not null]
   altSpellings String[] [not null]
+  currencies CurrenciesInCountries [not null]
+  languages LanguagesInCountries [not null]
   organizations CountriesOnOrganizations [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
@@ -45,13 +45,42 @@ Table Currency {
   symbol String [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
+  countries CurrenciesInCountries [not null]
+}
+
+Table CurrenciesInCountries {
+  currency Currency [not null]
+  currencyCode String [not null]
+  country Country [not null]
+  countryCode String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (currencyCode, countryCode) [pk]
+  }
 }
 
 Table Language {
   code String [pk]
   name String [not null]
+  category Int [not null, default: 0]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
+  countries LanguagesInCountries [not null]
+}
+
+Table LanguagesInCountries {
+  language Language [not null]
+  languageCode String [not null]
+  country Country [not null]
+  countryCode String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (languageCode, countryCode) [pk]
+  }
 }
 
 Table Organization {
@@ -433,6 +462,14 @@ Enum Side {
   white
   black
 }
+
+Ref: CurrenciesInCountries.currencyCode > Currency.code
+
+Ref: CurrenciesInCountries.countryCode > Country.cca3
+
+Ref: LanguagesInCountries.languageCode > Language.code
+
+Ref: LanguagesInCountries.countryCode > Country.cca3
 
 Ref: CountriesOnOrganizations.organizationCode > Organization.code
 

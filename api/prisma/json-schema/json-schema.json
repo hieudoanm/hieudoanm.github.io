@@ -119,27 +119,7 @@
             "null"
           ]
         },
-        "currencies": {
-          "type": [
-            "number",
-            "string",
-            "boolean",
-            "object",
-            "array",
-            "null"
-          ]
-        },
         "idd": {
-          "type": [
-            "number",
-            "string",
-            "boolean",
-            "object",
-            "array",
-            "null"
-          ]
-        },
-        "languages": {
           "type": [
             "number",
             "string",
@@ -265,6 +245,18 @@
             "type": "string"
           }
         },
+        "currencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CurrenciesInCountries"
+          }
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LanguagesInCountries"
+          }
+        },
         "organizations": {
           "type": "array",
           "items": {
@@ -312,6 +304,37 @@
             "null"
           ],
           "format": "date-time"
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CurrenciesInCountries"
+          }
+        }
+      }
+    },
+    "CurrenciesInCountries": {
+      "type": "object",
+      "properties": {
+        "currency": {
+          "$ref": "#/definitions/Currency"
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         }
       }
     },
@@ -323,6 +346,41 @@
         },
         "name": {
           "type": "string"
+        },
+        "category": {
+          "type": "integer",
+          "default": 0
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LanguagesInCountries"
+          }
+        }
+      }
+    },
+    "LanguagesInCountries": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "$ref": "#/definitions/Language"
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
         },
         "createdAt": {
           "type": [
@@ -1466,8 +1524,14 @@
     "currency": {
       "$ref": "#/definitions/Currency"
     },
+    "currenciesInCountries": {
+      "$ref": "#/definitions/CurrenciesInCountries"
+    },
     "language": {
       "$ref": "#/definitions/Language"
+    },
+    "languagesInCountries": {
+      "$ref": "#/definitions/LanguagesInCountries"
     },
     "organization": {
       "$ref": "#/definitions/Organization"

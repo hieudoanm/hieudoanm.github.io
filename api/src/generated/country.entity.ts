@@ -1,4 +1,6 @@
 import { Prisma, DayOfWeek, Region } from '@prisma/client';
+import { CurrenciesInCountriesDto } from './currenciesInCountries.entity';
+import { LanguagesInCountriesDto } from './languagesInCountries.entity';
 import { CountriesOnOrganizationsDto } from './countriesOnOrganizations.entity';
 
 export class CountryDto {
@@ -16,9 +18,7 @@ export class CountryDto {
   unMember: boolean | null;
   landlocked: boolean | null;
   name: Prisma.JsonValue | null;
-  currencies: Prisma.JsonValue | null;
   idd: Prisma.JsonValue | null;
-  languages: Prisma.JsonValue | null;
   translations: Prisma.JsonValue | null;
   demonyms: Prisma.JsonValue | null;
   maps: Prisma.JsonValue | null;
@@ -33,6 +33,8 @@ export class CountryDto {
   tld: string[];
   capital: string[];
   altSpellings: string[];
+  currencies?: CurrenciesInCountriesDto[];
+  languages?: LanguagesInCountriesDto[];
   organizations?: CountriesOnOrganizationsDto[];
   createdAt: Date | null;
   updatedAt: Date | null;

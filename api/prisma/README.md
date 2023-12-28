@@ -21,9 +21,7 @@ erDiagram
     Boolean unMember "nullable"
     Boolean landlocked "nullable"
     Json name "nullable"
-    Json currencies "nullable"
     Json idd "nullable"
-    Json languages "nullable"
     Json translations "nullable"
     Json demonyms "nullable"
     Json maps "nullable"
@@ -48,9 +46,22 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"CurrenciesInCountries" {
+    String currencyCode FK
+    String countryCode FK
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 "Language" {
     String code PK
     String name
+    Int category
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"LanguagesInCountries" {
+    String languageCode FK
+    String countryCode FK
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -257,6 +268,10 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"CurrenciesInCountries" }o--|| "Currency" : currency
+"CurrenciesInCountries" }o--|| "Country" : country
+"LanguagesInCountries" }o--|| "Language" : language
+"LanguagesInCountries" }o--|| "Country" : country
 "CountriesOnOrganizations" }o--|| "Organization" : organization
 "CountriesOnOrganizations" }o--|| "Country" : country
 "UnitedStatesCongressMember" }o--|| "UnitedStatesCongress" : UnitedStatesCongress
@@ -283,9 +298,7 @@ erDiagram
   - `unMember`: 
   - `landlocked`: 
   - `name`: 
-  - `currencies`: 
   - `idd`: 
-  - `languages`: 
   - `translations`: 
   - `demonyms`: 
   - `maps`: 
@@ -312,11 +325,28 @@ erDiagram
   - `createdAt`: 
   - `updatedAt`: 
 
+### `CurrenciesInCountries`
+
+**Properties**
+  - `currencyCode`: 
+  - `countryCode`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
 ### `Language`
 
 **Properties**
   - `code`: 
   - `name`: 
+  - `category`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `LanguagesInCountries`
+
+**Properties**
+  - `languageCode`: 
+  - `countryCode`: 
   - `createdAt`: 
   - `updatedAt`: 
 
