@@ -298,6 +298,14 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"University" {
+    Int rank PK
+    String university "nullable"
+    String city "nullable"
+    String countryCode FK "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 "CurrencyHistory" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Country" : country
@@ -310,6 +318,7 @@ erDiagram
 "UnitedStatesCongressMembersInCongresses" }o--|| "UnitedStatesCongressMember" : member
 "UnitedStatesCongressCommittee" }o--|| "UnitedStatesCongress" : congress
 "UnitedStatesCongressCommittee" }o--|| "UnitedStatesCongressMember" : chair
+"University" }o--|| "Country" : country
 ```
 
 ### `Country`
@@ -649,5 +658,15 @@ erDiagram
   - `authorSlug`: 
   - `content`: 
   - `tags`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `University`
+
+**Properties**
+  - `rank`: 
+  - `university`: 
+  - `city`: 
+  - `countryCode`: 
   - `createdAt`: 
   - `updatedAt`: 

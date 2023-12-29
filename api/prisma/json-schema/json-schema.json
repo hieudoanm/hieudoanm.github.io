@@ -276,6 +276,12 @@
             "null"
           ],
           "format": "date-time"
+        },
+        "University": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/University"
+          }
         }
       }
     },
@@ -1684,6 +1690,52 @@
           "format": "date-time"
         }
       }
+    },
+    "University": {
+      "type": "object",
+      "properties": {
+        "rank": {
+          "type": "integer"
+        },
+        "university": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "country": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Country"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
     }
   },
   "type": "object",
@@ -1759,6 +1811,9 @@
     },
     "quote": {
       "$ref": "#/definitions/Quote"
+    },
+    "university": {
+      "$ref": "#/definitions/University"
     }
   }
 }

@@ -2,6 +2,7 @@ import { Prisma, DayOfWeek, Region } from '@prisma/client';
 import { CurrenciesInCountriesDto } from './currenciesInCountries.entity';
 import { LanguagesInCountriesDto } from './languagesInCountries.entity';
 import { CountriesOnOrganizationsDto } from './countriesOnOrganizations.entity';
+import { UniversityDto } from './university.entity';
 
 export class CountryDto {
   cca3: string;
@@ -38,4 +39,5 @@ export class CountryDto {
   organizations?: CountriesOnOrganizationsDto[];
   createdAt: Date | null;
   updatedAt: Date | null;
+  University?: UniversityDto[];
 }
