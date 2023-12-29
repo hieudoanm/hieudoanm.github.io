@@ -18,7 +18,7 @@
     "@typescript-eslint/parser": "6.16.0",
     "axios": "1.6.3",
     "csvtojson": "2.0.10",
-    "eslint": "^8.56.0",
+    "eslint": "8.56.0",
     "ts-node": "10.9.2",
     "typescript": "5.3.3"
   }
