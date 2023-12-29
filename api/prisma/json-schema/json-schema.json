@@ -1620,18 +1620,6 @@
           "type": "string",
           "default": ""
         },
-        "firstMove": {
-          "type": "string",
-          "default": ""
-        },
-        "fen": {
-          "type": "string",
-          "default": ""
-        },
-        "centipawn": {
-          "type": "integer",
-          "default": 0
-        },
         "createdAt": {
           "type": [
             "string",

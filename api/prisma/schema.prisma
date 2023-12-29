@@ -540,12 +540,10 @@ enum Side {
 }
 
 model ChessOpening {
-  eco       String    @default("")
-  name      String    @default("")
-  pgn       String    @default("")
-  firstMove String    @default("")
-  fen       String    @default("")
-  centipawn Int       @default(0)
+  eco  String @default("")
+  name String @default("")
+  pgn  String @default("")
+
   createdAt DateTime? @default(now()) @db.Timestamptz
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
 
