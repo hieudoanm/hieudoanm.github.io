@@ -46,6 +46,22 @@ Table Currency {
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
   countries CurrenciesInCountries [not null]
+  history CurrencyHistory [not null]
+}
+
+Table CurrencyHistory {
+  currency Currency [not null]
+  currencyCode String [not null]
+  date DateTime [not null]
+  rate Float [not null, default: 0]
+  amount Int [not null, default: 1]
+  base String [not null, default: 'EUR']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (currencyCode, date) [pk]
+  }
 }
 
 Table CurrenciesInCountries {
@@ -65,9 +81,9 @@ Table Language {
   code String [pk]
   name String [not null]
   category Int [not null, default: 0]
+  countries LanguagesInCountries [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
-  countries LanguagesInCountries [not null]
 }
 
 Table LanguagesInCountries {
@@ -287,7 +303,7 @@ Table ChessPlayer {
   statsBulletRecordLoss Int [not null, default: 0]
   archives String[] [not null]
   createdAt DateTime [default: `now()`]
-  updatedAt DateTime
+  updatedAt DateTime [default: `now()`]
 }
 
 Table ChessGame {
@@ -313,7 +329,7 @@ Table ChessGame {
   blackRating Int [not null, default: 0]
   fen String [not null, default: '']
   createdAt DateTime [default: `now()`]
-  updatedAt DateTime
+  updatedAt DateTime [default: `now()`]
 }
 
 Table ChessOpening {
@@ -324,7 +340,7 @@ Table ChessOpening {
   fen String [not null, default: '']
   centipawn Int [not null, default: 0]
   createdAt DateTime [default: `now()`]
-  updatedAt DateTime
+  updatedAt DateTime [default: `now()`]
 
   indexes {
     (eco, name, pgn) [pk]
@@ -462,6 +478,8 @@ Enum Side {
   white
   black
 }
+
+Ref: CurrencyHistory.currencyCode > Currency.code
 
 Ref: CurrenciesInCountries.currencyCode > Currency.code
 

@@ -310,6 +310,50 @@
           "items": {
             "$ref": "#/definitions/CurrenciesInCountries"
           }
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CurrencyHistory"
+          }
+        }
+      }
+    },
+    "CurrencyHistory": {
+      "type": "object",
+      "properties": {
+        "currency": {
+          "$ref": "#/definitions/Currency"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "rate": {
+          "type": "number",
+          "default": 0
+        },
+        "amount": {
+          "type": "integer",
+          "default": 1
+        },
+        "base": {
+          "type": "string",
+          "default": "EUR"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         }
       }
     },
@@ -351,6 +395,12 @@
           "type": "integer",
           "default": 0
         },
+        "countries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LanguagesInCountries"
+          }
+        },
         "createdAt": {
           "type": [
             "string",
@@ -364,12 +414,6 @@
             "null"
           ],
           "format": "date-time"
-        },
-        "countries": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/LanguagesInCountries"
-          }
         }
       }
     },
@@ -1523,6 +1567,9 @@
     },
     "currency": {
       "$ref": "#/definitions/Currency"
+    },
+    "currencyHistory": {
+      "$ref": "#/definitions/CurrencyHistory"
     },
     "currenciesInCountries": {
       "$ref": "#/definitions/CurrenciesInCountries"

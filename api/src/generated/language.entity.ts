@@ -4,7 +4,7 @@ export class LanguageDto {
   code: string;
   name: string;
   category: number;
+  countries?: LanguagesInCountriesDto[];
   createdAt: Date | null;
   updatedAt: Date | null;
-  countries?: LanguagesInCountriesDto[];
 }

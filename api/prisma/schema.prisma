@@ -65,8 +65,8 @@ model Country {
   languages     LanguagesInCountries[]
   organizations CountriesOnOrganizations[]
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 enum DayOfWeek {
@@ -93,10 +93,25 @@ model Currency {
   name   String @db.VarChar(255)
   symbol String @db.VarChar(255)
 
-  countries CurrenciesInCountries[]
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  countries CurrenciesInCountries[]
+  history   CurrencyHistory[]
+}
+
+model CurrencyHistory {
+  currency     Currency @relation(fields: [currencyCode], references: [code])
+  currencyCode String
+  date         DateTime @db.Date()
+  rate         Float    @default(0)
+  amount       Int      @default(1)
+  base         String   @default("EUR")
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([currencyCode, date])
 }
 
 model CurrenciesInCountries {
@@ -105,8 +120,8 @@ model CurrenciesInCountries {
   country      Country  @relation(fields: [countryCode], references: [cca3])
   countryCode  String
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
   @@id([currencyCode, countryCode])
 }
@@ -118,8 +133,8 @@ model Language {
 
   countries LanguagesInCountries[]
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 model LanguagesInCountries {
@@ -128,8 +143,8 @@ model LanguagesInCountries {
   country      Country  @relation(fields: [countryCode], references: [cca3])
   countryCode  String
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
   @@id([languageCode, countryCode])
 }
@@ -140,8 +155,8 @@ model Organization {
 
   countries CountriesOnOrganizations[]
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 model CountriesOnOrganizations {
@@ -149,11 +164,11 @@ model CountriesOnOrganizations {
   organizationCode String
   country          Country      @relation(fields: [countryCode], references: [cca3])
   countryCode      String
-  accession        DateTime?
-  withdrawal       DateTime?
+  accession        DateTime?    @db.Date()
+  withdrawal       DateTime?    @db.Date()
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
   @@id([organizationCode, countryCode])
 }
@@ -165,8 +180,8 @@ model LicensePlate {
   name  String @db.VarChar(255)
   group String @db.VarChar(255)
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 model EthnicGroup {
@@ -174,8 +189,8 @@ model EthnicGroup {
   name  String @default("") @db.VarChar(255)
   group String @default("") @db.VarChar(255)
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 // Tarot
@@ -191,8 +206,8 @@ model TarotCard {
   meaningReverse String?       @default("") @db.Text()
   description    String?       @default("") @db.Text()
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 enum TarotCardType {
@@ -236,16 +251,16 @@ model Word {
   pronunciation Json?  @default("{}")
   frequency     Float? @default(0)
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 model TopLevelDomain {
   domain String  @id
   type   String? @default("")
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 model ProgrammingLanguage {
@@ -257,8 +272,8 @@ model ProgrammingLanguage {
   interpreters String[]                @default([])
   filenames    String[]                @default([])
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 enum ProgrammingLanguageType {
@@ -276,11 +291,11 @@ model UnitedStatesCongress {
   senateControl   String?   @default("")
   congressControl String?   @default("")
   trifectaControl String?   @default("")
-  startDate       DateTime?
-  endDate         DateTime?
+  startDate       DateTime? @db.Date()
+  endDate         DateTime? @db.Date()
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
   UnitedStatesCongressMember              UnitedStatesCongressMember[]
   UnitedStatesCongressCommittee           UnitedStatesCongressCommittee[]
@@ -298,11 +313,11 @@ model UnitedStatesCongressMember {
   middleName  String?   @default("")
   lastName    String?   @default("")
   suffix      String?   @default("")
-  dateOfBirth DateTime?
+  dateOfBirth DateTime? @db.Date()
   gender      String?   @default("")
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
   UnitedStatesCongress                    UnitedStatesCongress?                     @relation(fields: [unitedStatesCongressCongress], references: [congress])
   unitedStatesCongressCongress            Int?
@@ -326,8 +341,8 @@ model UnitedStatesCongressMembersInCongresses {
   district       String?  @default("")
   atLarge        Boolean? @default(false)
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
   @@id([chamber, congressNumber, memberId])
 }
@@ -341,8 +356,8 @@ model UnitedStatesCongressCommittee {
   chair          UnitedStatesCongressMember? @relation(fields: [chairId], references: [id])
   chairId        String?                     @default("")
 
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now()) @updatedAt
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
   @@id([congressNumber, chamber, id])
 }
@@ -397,7 +412,7 @@ model ChessPlayer {
   // Archives
   archives                   String[]    @default([])
   createdAt                  DateTime?   @default(now()) @db.Timestamptz
-  updatedAt                  DateTime?   @updatedAt @db.Timestamptz
+  updatedAt                  DateTime?   @default(now()) @updatedAt @db.Timestamptz
 }
 
 enum Status {
@@ -456,7 +471,7 @@ model ChessGame {
   blackRating   Int            @default(0)
   fen           String         @default("")
   createdAt     DateTime?      @default(now()) @db.Timestamptz
-  updatedAt     DateTime?      @updatedAt @db.Timestamptz
+  updatedAt     DateTime?      @default(now()) @updatedAt @db.Timestamptz
 }
 
 enum ChessResult {
@@ -513,7 +528,7 @@ model ChessOpening {
   fen       String    @default("")
   centipawn Int       @default(0)
   createdAt DateTime? @default(now()) @db.Timestamptz
-  updatedAt DateTime? @updatedAt @db.Timestamptz
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
 
   @@id([eco, name, pgn])
 }

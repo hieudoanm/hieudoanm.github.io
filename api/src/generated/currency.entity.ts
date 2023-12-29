@@ -1,4 +1,5 @@
 import { CurrenciesInCountriesDto } from './currenciesInCountries.entity';
+import { CurrencyHistoryDto } from './currencyHistory.entity';
 
 export class CurrencyDto {
   code: string;
@@ -7,4 +8,5 @@ export class CurrencyDto {
   createdAt: Date | null;
   updatedAt: Date | null;
   countries?: CurrenciesInCountriesDto[];
+  history?: CurrencyHistoryDto[];
 }

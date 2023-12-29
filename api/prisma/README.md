@@ -46,6 +46,15 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"CurrencyHistory" {
+    String currencyCode FK
+    DateTime date
+    Float rate
+    Int amount
+    String base
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 "CurrenciesInCountries" {
     String currencyCode FK
     String countryCode FK
@@ -268,6 +277,7 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"CurrencyHistory" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Country" : country
 "LanguagesInCountries" }o--|| "Language" : language
@@ -322,6 +332,17 @@ erDiagram
   - `code`: 
   - `name`: 
   - `symbol`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `CurrencyHistory`
+
+**Properties**
+  - `currencyCode`: 
+  - `date`: 
+  - `rate`: 
+  - `amount`: 
+  - `base`: 
   - `createdAt`: 
   - `updatedAt`: 
 
