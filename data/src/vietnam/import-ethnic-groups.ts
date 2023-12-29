@@ -1,11 +1,10 @@
 import csv from 'csvtojson';
-import { PrismaService } from '../../src/common/prisma/prisma.service';
-import { EthnicGroupDto } from '../../src/generated/ethnicGroup.entity';
+import { PrismaClient, EthnicGroup } from '@prisma/client';
 
 const main = async () => {
-  const prismaService = new PrismaService();
+  const prismaService = new PrismaClient();
   const file = './scripts/csv/vietnam/ethnic-groups.csv';
-  const ethnicGroups: EthnicGroupDto[] = await csv().fromFile(file);
+  const ethnicGroups: EthnicGroup[] = await csv().fromFile(file);
   await prismaService.ethnicGroup.deleteMany();
   for (const ethnicGroup of ethnicGroups) {
     const { name, group } = ethnicGroup;

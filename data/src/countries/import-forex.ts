@@ -1,5 +1,5 @@
+import { PrismaClient } from '@prisma/client';
 import axios from 'axios';
-import { PrismaService } from '../src/common/prisma/prisma.service';
 
 type ForexHistory = {
   amount: number;
@@ -10,7 +10,7 @@ type ForexHistory = {
 };
 
 const main = async () => {
-  const prismaService = new PrismaService();
+  const prismaService = new PrismaClient();
   const url = 'https://api.frankfurter.app/1994-01-04..';
   const response = await axios<ForexHistory>(url);
   const { data } = response;

@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { PrismaService } from '../src/common/prisma/prisma.service';
-import { TarotCardType } from '@prisma/client';
+import { TarotCardType, PrismaClient } from '@prisma/client';
 
 type Card = {
   name: string;
@@ -15,7 +14,8 @@ type Card = {
 };
 
 const main = async () => {
-  const prismaService = new PrismaService();
+  const prismaService = new PrismaClient();
+  await prismaService.$connect();
   const url = 'https://tarotapi.dev/api/v1/cards';
   const response = await axios.get<{ nhits: number; cards: Card[] }>(url);
   const { data } = response;

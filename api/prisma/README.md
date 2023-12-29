@@ -277,6 +277,15 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"Quote" {
+    String id PK
+    String author "nullable"
+    String authorSlug "nullable"
+    String content "nullable"
+    String tags
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 "CurrencyHistory" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Country" : country
@@ -603,5 +612,16 @@ erDiagram
   - `firstMove`: 
   - `fen`: 
   - `centipawn`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `Quote`
+
+**Properties**
+  - `id`: 
+  - `author`: 
+  - `authorSlug`: 
+  - `content`: 
+  - `tags`: 
   - `createdAt`: 
   - `updatedAt`: 

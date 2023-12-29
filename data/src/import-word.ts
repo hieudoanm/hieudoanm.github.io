@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { readFileSync } from 'fs';
-import { PrismaService } from '../src/common/prisma/prisma.service';
-import { WordDto } from '../src/generated/word.entity';
+import { Word, PrismaClient } from '@prisma/client';
 
 export type WordsResponse = {
   query: { limit: string; page: number };
@@ -9,7 +8,7 @@ export type WordsResponse = {
 };
 
 const importWord = async (
-  prismaService: PrismaService,
+  prismaService: PrismaClient,
   wordQuery: string
 ): Promise<void> => {
   try {
@@ -20,9 +19,9 @@ const importWord = async (
     const when = '2023-03-23T06:42:24.775Z';
     const limit = 1000000;
     const url = `${baseUrl}?encrypted=${encrypted}&when=${when}&limit=${limit}`;
-    const response = await axios.get<WordDto>(url);
+    const response = await axios.get<Word>(url);
     const { data } = response;
-    const { word, results, syllables, pronunciation, frequency } = data;
+    const { word, results, syllables, pronunciation, frequency = 0 } = data;
     const body = { word, results, syllables, pronunciation, frequency };
     console.info(`word=${word}`);
     await prismaService.word.upsert({
@@ -36,7 +35,7 @@ const importWord = async (
 };
 
 const main = async () => {
-  const prismaService = new PrismaService();
+  const prismaService = new PrismaClient();
   console.info(`Query from DB`);
   const wordsFromDB: string[] = (
     await prismaService.word.findMany({

@@ -2,7 +2,7 @@ import { UnitedStatesCongressChamber } from '@prisma/client';
 import axios from 'axios';
 import csv from 'csvtojson';
 import dotenv from 'dotenv';
-import { PrismaService } from '../src/common/prisma/prisma.service';
+import { PrismaService } from '../../../api/src/common/prisma/prisma.service';
 
 const BASE_URL = 'https://api.propublica.org/congress/v1';
 const CHAMBERS = ['house', 'senate'];

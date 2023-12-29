@@ -1558,6 +1558,55 @@
           "format": "date-time"
         }
       }
+    },
+    "Quote": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "author": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "authorSlug": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "content": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
     }
   },
   "type": "object",
@@ -1627,6 +1676,9 @@
     },
     "chessOpening": {
       "$ref": "#/definitions/ChessOpening"
+    },
+    "quote": {
+      "$ref": "#/definitions/Quote"
     }
   }
 }

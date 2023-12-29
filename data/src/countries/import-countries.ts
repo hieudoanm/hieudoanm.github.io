@@ -1,13 +1,11 @@
-import { DayOfWeek, Region } from '@prisma/client';
+import { DayOfWeek, Region, PrismaClient } from '@prisma/client';
 import axios from 'axios';
 import csv from 'csvtojson';
-import { PrismaService } from '../src/common/prisma/prisma.service';
-import { CountryDto } from '../src/generated/country.entity';
 
 const main = async () => {
-  const prismaService = new PrismaService();
+  const prismaService = new PrismaClient();
   const url: string = 'https://restcountries.com/v3.1/all';
-  const response = await axios.get<CountryDto[]>(url);
+  const response = await axios.get(url);
   const { data: countries = [] } = response;
   let currenciesMap: Record<string, Record<string, string>> = {};
   let languagesMap: Record<string, string> = {};
@@ -27,9 +25,7 @@ const main = async () => {
       unMember,
       landlocked,
       name,
-      currencies,
       idd,
-      languages = {},
       translations,
       demonyms,
       maps,
@@ -44,6 +40,8 @@ const main = async () => {
       tld,
       capital,
       altSpellings,
+      currencies = {},
+      languages = {},
     } = country;
     console.info('cca3', cca3);
     currenciesMap = {
@@ -58,11 +56,11 @@ const main = async () => {
       cca3,
       cca2,
       ccn3,
-      region: region.toUpperCase() as Region,
+      region: region?.toUpperCase() as Region,
       subregion,
       status,
       flag,
-      startOfWeek: startOfWeek.toUpperCase() as DayOfWeek,
+      startOfWeek: startOfWeek?.toUpperCase() as DayOfWeek,
       area,
       population,
       independent,

@@ -1,6 +1,6 @@
+import { PrismaClient } from '@prisma/client';
 import axios from 'axios';
 import { writeFileSync } from 'fs';
-import { PrismaService } from '../src/common/prisma/prisma.service';
 import { parse } from 'yaml';
 
 const getLanguages = async () => {
@@ -18,7 +18,7 @@ const getLanguages = async () => {
 };
 
 const main = async () => {
-  const prismaService = new PrismaService();
+  const prismaService = new PrismaClient();
   const languages = await getLanguages();
   console.info('languages', languages);
   for (const {

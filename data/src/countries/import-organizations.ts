@@ -1,5 +1,5 @@
+import { PrismaClient } from '@prisma/client';
 import csv from 'csvtojson';
-import { PrismaService } from '../src/common/prisma/prisma.service';
 
 type Organization = {
   organization_code: string;
@@ -10,7 +10,7 @@ type Organization = {
 };
 
 const main = async () => {
-  const prismaService = new PrismaService();
+  const prismaService = new PrismaClient();
   const file = './scripts/csv/organizations.csv';
   const organizations: Organization[] = await csv().fromFile(file);
   for (const organization of organizations) {

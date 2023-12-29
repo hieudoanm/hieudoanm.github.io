@@ -1,11 +1,10 @@
 import csv from 'csvtojson';
-import { PrismaService } from '../../src/common/prisma/prisma.service';
-import { LicensePlateDto } from 'src/generated/licensePlate.entity';
+import { PrismaClient, LicensePlate } from '@prisma/client';
 
 const main = async () => {
-  const prismaService = new PrismaService();
-  const file = './scripts/csv/vietnam/license-plates.csv';
-  const licensePlates: LicensePlateDto[] = await csv().fromFile(file);
+  const prismaService = new PrismaClient();
+  const file = './data/csv/vietnam/license-plates.csv';
+  const licensePlates: LicensePlate[] = await csv().fromFile(file);
   for (const licensePlate of licensePlates) {
     const { code, name, group } = licensePlate;
     await prismaService.licensePlate.upsert({

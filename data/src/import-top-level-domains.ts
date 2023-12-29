@@ -1,11 +1,10 @@
+import { Country, PrismaClient } from '@prisma/client';
 import axios from 'axios';
 import { writeFileSync } from 'fs';
-import { PrismaService } from '../src/common/prisma/prisma.service';
-import { CountryDto } from '../src/generated/country.entity';
 
 const getCountryDomains = async (): Promise<Set<string>> => {
   const url: string = 'https://restcountries.com/v3.1/all';
-  const response = await axios.get<CountryDto[]>(url);
+  const response = await axios.get<Country[]>(url);
   const { data: countries } = response;
   const countryDomains = new Set<string>();
   for (const { tld = [] } of countries) {
@@ -27,7 +26,8 @@ const getDomains = async () => {
 };
 
 const main = async () => {
-  const prismaService = new PrismaService();
+  const prismaService = new PrismaClient();
+  await prismaService.$connect();
   const countryDomains = await getCountryDomains();
   const domains = await getDomains();
   await prismaService.topLevelDomain.deleteMany();

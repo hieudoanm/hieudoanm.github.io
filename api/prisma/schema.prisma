@@ -532,3 +532,16 @@ model ChessOpening {
 
   @@id([eco, name, pgn])
 }
+
+// Quote
+
+model Quote {
+  id         String   @id
+  author     String?  @default("")
+  authorSlug String?  @default("")
+  content    String?  @default("")
+  tags       String[] @default([])
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+}
