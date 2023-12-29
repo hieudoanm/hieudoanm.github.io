@@ -846,6 +846,95 @@
         }
       }
     },
+    "License": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "spdx": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "node": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "html": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "implementation": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "body": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
     "UnitedStatesCongress": {
       "type": "object",
       "properties": {
@@ -1655,6 +1744,9 @@
     },
     "programmingLanguage": {
       "$ref": "#/definitions/ProgrammingLanguage"
+    },
+    "license": {
+      "$ref": "#/definitions/License"
     },
     "unitedStatesCongress": {
       "$ref": "#/definitions/UnitedStatesCongress"

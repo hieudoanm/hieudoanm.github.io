@@ -263,6 +263,8 @@ model TopLevelDomain {
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
+// GitHub
+
 model ProgrammingLanguage {
   language     String                  @id
   color        String?                 @default("")
@@ -281,6 +283,23 @@ enum ProgrammingLanguageType {
   MARKUP
   PROGRAMMING
   PROSE
+}
+
+model License {
+  id             String   @id
+  name           String?  @default("")
+  spdx           String?  @default("")
+  node           String?  @default("")
+  html           String?  @default("")
+  description    String?  @default("")
+  implementation String?  @default("")
+  body           String?  @default("")
+  permissions    String[] @default([])
+  conditions     String[] @default([])
+  limitations    String[] @default([])
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 // United States

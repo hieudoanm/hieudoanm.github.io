@@ -191,6 +191,22 @@ Table ProgrammingLanguage {
   updatedAt DateTime [default: `now()`]
 }
 
+Table License {
+  id String [pk]
+  name String [default: '']
+  spdx String [default: '']
+  node String [default: '']
+  html String [default: '']
+  description String [default: '']
+  implementation String [default: '']
+  body String [default: '']
+  permissions String[] [not null]
+  conditions String[] [not null]
+  limitations String[] [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
 Table UnitedStatesCongress {
   congress Int [pk]
   houseControl String [default: '']
