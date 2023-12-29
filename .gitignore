@@ -1,0 +1,10 @@
+.cache
+coverage
+node_modules
+public
+
+.env
+yarn-error.log
+
+# turbo
+.turbo

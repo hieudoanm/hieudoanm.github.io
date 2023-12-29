@@ -1,0 +1,486 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Country {
+  cca3 String [pk, default: '']
+  cca2 String [unique, default: '']
+  ccn3 String [unique, default: '']
+  startOfWeek DayOfWeek [default: 'MONDAY']
+  region Region [default: 'ANTARCTIC']
+  subregion String [default: '']
+  status String [default: '']
+  flag String [default: '']
+  area Float [default: 0]
+  population Int [default: 0]
+  independent Boolean [default: false]
+  unMember Boolean [default: false]
+  landlocked Boolean [default: false]
+  name Json [default: '{}']
+  idd Json [default: '{}']
+  translations Json [default: '{}']
+  demonyms Json [default: '{}']
+  maps Json [default: '{}']
+  flags Json [default: '{}']
+  car Json [default: '{}']
+  capitalInfo Json [default: '{}']
+  coatOfArms Json [default: '{}']
+  postalCode Json [default: '{}']
+  timezones String[] [not null]
+  continents String[] [not null]
+  latlng Float[] [not null]
+  tld String[] [not null]
+  capital String[] [not null]
+  altSpellings String[] [not null]
+  currencies CurrenciesInCountries [not null]
+  languages LanguagesInCountries [not null]
+  organizations CountriesOnOrganizations [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table Currency {
+  code String [pk]
+  name String [not null]
+  symbol String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  countries CurrenciesInCountries [not null]
+}
+
+Table CurrenciesInCountries {
+  currency Currency [not null]
+  currencyCode String [not null]
+  country Country [not null]
+  countryCode String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (currencyCode, countryCode) [pk]
+  }
+}
+
+Table Language {
+  code String [pk]
+  name String [not null]
+  category Int [not null, default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  countries LanguagesInCountries [not null]
+}
+
+Table LanguagesInCountries {
+  language Language [not null]
+  languageCode String [not null]
+  country Country [not null]
+  countryCode String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (languageCode, countryCode) [pk]
+  }
+}
+
+Table Organization {
+  code String [pk]
+  name String [default: '']
+  countries CountriesOnOrganizations [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table CountriesOnOrganizations {
+  organization Organization [not null]
+  organizationCode String [not null]
+  country Country [not null]
+  countryCode String [not null]
+  accession DateTime
+  withdrawal DateTime
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (organizationCode, countryCode) [pk]
+  }
+}
+
+Table LicensePlate {
+  code String [pk]
+  name String [not null]
+  group String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table EthnicGroup {
+  id Int [pk, increment]
+  name String [not null, default: '']
+  group String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table TarotCard {
+  type TarotCardType [not null, default: 'MAJOR']
+  id String [pk, default: '']
+  name String [default: '']
+  value String [default: '']
+  valueInt Int [default: 0]
+  suit String [default: '']
+  meaningUp String [default: '']
+  meaningReverse String [default: '']
+  description String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table NewsSource {
+  id String [pk]
+  name String [not null, default: '']
+  description String [not null, default: '']
+  url String [not null, default: '']
+  category NewsSourceCategory [not null, default: 'GENERAL']
+  language String [not null, default: '']
+  country String [not null, default: '']
+}
+
+Table Word {
+  word String [pk]
+  results Json [default: '{}']
+  syllables Json [default: '{}']
+  pronunciation Json [default: '{}']
+  frequency Float [default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table TopLevelDomain {
+  domain String [pk]
+  type String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table ProgrammingLanguage {
+  language String [pk]
+  color String [default: '']
+  type ProgrammingLanguageType [not null, default: 'PROGRAMMING']
+  extensions String[] [not null]
+  aliases String[] [not null]
+  interpreters String[] [not null]
+  filenames String[] [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table UnitedStatesCongress {
+  congress Int [pk]
+  houseControl String [default: '']
+  senateControl String [default: '']
+  congressControl String [default: '']
+  trifectaControl String [default: '']
+  startDate DateTime
+  endDate DateTime
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  UnitedStatesCongressMember UnitedStatesCongressMember [not null]
+  UnitedStatesCongressCommittee UnitedStatesCongressCommittee [not null]
+  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses [not null]
+}
+
+Table UnitedStatesCongressMember {
+  id String [pk, default: '']
+  firstName String [default: '']
+  middleName String [default: '']
+  lastName String [default: '']
+  suffix String [default: '']
+  dateOfBirth DateTime
+  gender String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  UnitedStatesCongress UnitedStatesCongress
+  unitedStatesCongressCongress Int
+  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses [not null]
+  UnitedStatesCongressCommittee UnitedStatesCongressCommittee [not null]
+}
+
+Table UnitedStatesCongressMembersInCongresses {
+  chamber UnitedStatesCongressChamber [not null, default: 'HOUSE']
+  congress UnitedStatesCongress [not null]
+  congressNumber Int [not null]
+  member UnitedStatesCongressMember [not null]
+  memberId String [not null, default: '']
+  title String [default: '']
+  shortTitle String [default: '']
+  party String [default: '']
+  leadershipRole String [default: '']
+  seniority Int [default: 0]
+  state String [default: '']
+  district String [default: '']
+  atLarge Boolean [default: false]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (chamber, congressNumber, memberId) [pk]
+  }
+}
+
+Table UnitedStatesCongressCommittee {
+  chamber UnitedStatesCongressChamber [not null, default: 'HOUSE']
+  congress UnitedStatesCongress [not null]
+  congressNumber Int [not null]
+  id String [not null, default: '']
+  name String [default: '']
+  chair UnitedStatesCongressMember
+  chairId String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (congressNumber, chamber, id) [pk]
+  }
+}
+
+Table ChessPlayer {
+  id Int [pk]
+  username String [unique, not null]
+  name String [not null, default: '']
+  followers Int [not null, default: 0]
+  avatar String [not null, default: '']
+  location String [not null, default: '']
+  country String [not null, default: '']
+  countryCode String [not null, default: '']
+  twitchUrl String [not null, default: '']
+  isStreamer Boolean [not null, default: false]
+  verified Boolean [not null, default: false]
+  lastOnline DateTime [default: `now()`, not null]
+  joined DateTime [default: `now()`, not null]
+  status Status [not null, default: 'basic']
+  title ChessTitle
+  league League
+  statsDailyRatingBest Int [not null, default: 0]
+  statsDailyRatingLast Int [not null, default: 0]
+  statsDailyRatingDeviation Int [not null, default: 0]
+  statsDailyRecordWin Int [not null, default: 0]
+  statsDailyRecordDraw Int [not null, default: 0]
+  statsDailyRecordLoss Int [not null, default: 0]
+  statsRapidRatingBest Int [not null, default: 0]
+  statsRapidRatingLast Int [not null, default: 0]
+  statsRapidRatingDeviation Int [not null, default: 0]
+  statsRapidRecordWin Int [not null, default: 0]
+  statsRapidRecordDraw Int [not null, default: 0]
+  statsRapidRecordLoss Int [not null, default: 0]
+  statsBlitzRatingLast Int [not null, default: 0]
+  statsBlitzRatingBest Int [not null, default: 0]
+  statsBlitzRatingDeviation Int [not null, default: 0]
+  statsBlitzRecordWin Int [not null, default: 0]
+  statsBlitzRecordDraw Int [not null, default: 0]
+  statsBlitzRecordLoss Int [not null, default: 0]
+  statsBulletRatingLast Int [not null, default: 0]
+  statsBulletRatingBest Int [not null, default: 0]
+  statsBulletRatingDeviation Int [not null, default: 0]
+  statsBulletRecordWin Int [not null, default: 0]
+  statsBulletRecordDraw Int [not null, default: 0]
+  statsBulletRecordLoss Int [not null, default: 0]
+  archives String[] [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime
+}
+
+Table ChessGame {
+  id String [pk]
+  url String [not null, default: '']
+  pgn String [not null, default: '']
+  timeControl String [not null, default: '']
+  timeClass ChessTimeClass [not null, default: 'daily']
+  endTime DateTime [default: `now()`, not null]
+  rated Boolean [not null, default: false]
+  tcn String [not null, default: '']
+  initialSetup String [not null, default: '']
+  rules ChessVariant [not null, default: 'chess']
+  whiteId String [not null, default: '']
+  blackId String [not null, default: '']
+  whiteUsername String [not null, default: '']
+  blackUsername String [not null, default: '']
+  whiteAccuracy Float [not null, default: 0]
+  blackAccuracy Float [not null, default: 0]
+  whiteResult ChessResult [not null, default: 'checkmated']
+  blackResult ChessResult [not null, default: 'checkmated']
+  whiteRating Int [not null, default: 0]
+  blackRating Int [not null, default: 0]
+  fen String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime
+}
+
+Table ChessOpening {
+  eco String [not null, default: '']
+  name String [not null, default: '']
+  pgn String [not null, default: '']
+  firstMove String [not null, default: '']
+  fen String [not null, default: '']
+  centipawn Int [not null, default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime
+
+  indexes {
+    (eco, name, pgn) [pk]
+  }
+}
+
+Enum DayOfWeek {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+Enum Region {
+  AFRICA
+  AMERICAS
+  ANTARCTIC
+  ASIA
+  EUROPE
+  OCEANIA
+}
+
+Enum TarotCardType {
+  MAJOR
+  MINOR
+}
+
+Enum TarotCardSuit {
+  CUPS
+  PENTACLES
+  SWORDS
+  WANDS
+}
+
+Enum NewsSourceCategory {
+  BUSINESS
+  ENTERTAINMENT
+  GENERAL
+  HEALTH
+  SCIENCE
+  SPORTS
+  TECHNOLOGY
+}
+
+Enum ProgrammingLanguageType {
+  DATA
+  MARKUP
+  PROGRAMMING
+  PROSE
+}
+
+Enum UnitedStatesCongressChamber {
+  HOUSE
+  SENATE
+}
+
+Enum Status {
+  basic
+  premium
+}
+
+Enum League {
+  Wood
+  Stone
+  Bronze
+  Silver
+  Crystal
+  Elite
+  Champion
+  Legend
+}
+
+Enum ChessTitle {
+  GM
+  WGM
+  IM
+  WIM
+  FM
+  WFM
+  CM
+  WCM
+  NM
+  WNM
+  AGM
+  AIM
+  AFM
+  ACM
+}
+
+Enum ChessResult {
+  win
+  fiftymove
+  agreed
+  insufficient
+  repetition
+  stalemate
+  timevsinsufficient
+  checkmated
+  resigned
+  timeout
+  abandoned
+}
+
+Enum ChessTimeClass {
+  daily
+  classical
+  rapid
+  blitz
+  bullet
+}
+
+Enum ChessVariant {
+  bughouse
+  chess
+  chess960
+  crazyhouse
+  kingofthehill
+  oddschess
+  threecheck
+}
+
+Enum ChessPiece {
+  king
+  queen
+  rook
+  bishop
+  knight
+  pawn
+}
+
+Enum Side {
+  white
+  black
+}
+
+Ref: CurrenciesInCountries.currencyCode > Currency.code
+
+Ref: CurrenciesInCountries.countryCode > Country.cca3
+
+Ref: LanguagesInCountries.languageCode > Language.code
+
+Ref: LanguagesInCountries.countryCode > Country.cca3
+
+Ref: CountriesOnOrganizations.organizationCode > Organization.code
+
+Ref: CountriesOnOrganizations.countryCode > Country.cca3
+
+Ref: UnitedStatesCongressMember.unitedStatesCongressCongress > UnitedStatesCongress.congress
+
+Ref: UnitedStatesCongressMembersInCongresses.congressNumber > UnitedStatesCongress.congress
+
+Ref: UnitedStatesCongressMembersInCongresses.memberId > UnitedStatesCongressMember.id
+
+Ref: UnitedStatesCongressCommittee.congressNumber > UnitedStatesCongress.congress
+
+Ref: UnitedStatesCongressCommittee.chairId > UnitedStatesCongressMember.id

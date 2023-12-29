@@ -1,0 +1,2131 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/openings": {
+      "get": {
+        "operationId": "OpeningsController_getOpenings",
+        "parameters": [
+          {
+            "name": "eco",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "firstMove",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OpeningsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/openings/ecos": {
+      "get": {
+        "operationId": "OpeningsController_getECOs",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EcosResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/player/{username}": {
+      "get": {
+        "operationId": "PlayerController_getPlayer",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChessPlayerDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      },
+      "post": {
+        "operationId": "PlayerController_syncPlayer",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChessPlayerDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/player/{username}/games": {
+      "get": {
+        "operationId": "GamesController_getGames",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "month",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "year",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      },
+      "post": {
+        "operationId": "GamesController_syncGames",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SyncRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SyncedResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/player/{username}/games/{gameId}": {
+      "get": {
+        "operationId": "GamesController_getGame",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gameId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChessGameDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/player/{username}/games/{gameId}/pgn": {
+      "get": {
+        "operationId": "GamesController_getGamePGN",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gameId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/player/{username}/insights": {
+      "get": {
+        "operationId": "InsightsController_getInsights",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsightsDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/player/{username}/insights/games": {
+      "get": {
+        "operationId": "InsightsController_getGamesInsights",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsightsDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/player/{username}/insights/accuracy": {
+      "get": {
+        "operationId": "InsightsController_getAccuracyInsights",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsightsDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/player/{username}/insights/results": {
+      "get": {
+        "operationId": "InsightsController_getResultsInsights",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsightsDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/player/{username}/insights/opponents": {
+      "get": {
+        "operationId": "InsightsController_getResultsOpponents",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsightsDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/streamers": {
+      "get": {
+        "operationId": "StreamersController_getStreamers",
+        "parameters": [
+          {
+            "name": "title",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "country",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StreamersResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/titled": {
+      "get": {
+        "operationId": "TitledController_getTitles",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TitlesDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/titled/{title}": {
+      "get": {
+        "operationId": "TitledController_getTitledStats",
+        "parameters": [
+          {
+            "name": "title",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cache",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "timeRange",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TitledStatsDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/countries": {
+      "get": {
+        "operationId": "CountriesController_getCountries",
+        "parameters": [
+          {
+            "name": "timezone",
+            "required": false,
+            "in": "query",
+            "description": "Timezone",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "language",
+            "required": false,
+            "in": "query",
+            "description": "Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "currency",
+            "required": false,
+            "in": "query",
+            "description": "Currency",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subregion",
+            "required": false,
+            "in": "query",
+            "description": "Subregion",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "region",
+            "required": false,
+            "in": "query",
+            "description": "Region",
+            "schema": {
+              "enum": [
+                "AFRICA",
+                "AMERICAS",
+                "ANTARCTIC",
+                "ASIA",
+                "EUROPE",
+                "OCEANIA"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "unMember",
+            "required": false,
+            "in": "query",
+            "description": "United Nation Member",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "capital",
+            "required": false,
+            "in": "query",
+            "description": "Capital",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "required": false,
+            "in": "query",
+            "description": "Name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Countries",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountriesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "countries"
+        ]
+      }
+    },
+    "/countries/{code}": {
+      "get": {
+        "operationId": "CountriesController_getCountry",
+        "parameters": [
+          {
+            "name": "code",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get Country by Code",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "countries"
+        ]
+      }
+    },
+    "/countries/currencies": {
+      "get": {
+        "operationId": "CountriesController_getCurrencies",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Currencies",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrenciesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "countries"
+        ]
+      }
+    },
+    "/currencies": {
+      "get": {
+        "operationId": "CurrenciesController_getCurrencies",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Currencies",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrenciesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "currencies"
+        ]
+      }
+    },
+    "/languages": {
+      "get": {
+        "operationId": "LanguagesController_getLanguages",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Languages",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LanguagesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "languages"
+        ]
+      }
+    },
+    "/organizations": {
+      "get": {
+        "operationId": "OrganizationsController_getOrganizations",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Organizations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "organizations"
+        ]
+      }
+    },
+    "/organizations/{code}": {
+      "get": {
+        "operationId": "OrganizationsController_getOrganization",
+        "parameters": [
+          {
+            "name": "code",
+            "required": true,
+            "in": "path",
+            "description": "Organization Code",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get Organization by Code",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "organizations"
+        ]
+      }
+    },
+    "/vietnam/ethnic-groups": {
+      "get": {
+        "operationId": "VietnamController_getEthnicGroups",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Ethnic Groups",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EthnicGroupsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "vietnam"
+        ]
+      }
+    },
+    "/vietnam/license-plates": {
+      "get": {
+        "operationId": "VietnamController_getLicensePlates",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of License Plates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LicensePlatesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "vietnam"
+        ]
+      }
+    },
+    "/vietnam/license-plates/{code}": {
+      "get": {
+        "operationId": "VietnamController_getLicensePlate",
+        "parameters": [
+          {
+            "name": "code",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get License Plate by Code",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LicensePlateDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "vietnam"
+        ]
+      }
+    },
+    "/crypto/coins": {
+      "get": {
+        "operationId": "CryptoController_getCountries",
+        "parameters": [
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Crypto Coins",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoinsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "crypto"
+        ]
+      }
+    },
+    "/forex/rates": {
+      "get": {
+        "operationId": "ForexController_getRates",
+        "parameters": [
+          {
+            "name": "base",
+            "required": false,
+            "in": "query",
+            "description": "Base",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "amount",
+            "required": false,
+            "in": "query",
+            "description": "Amount",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Forex Rates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RatesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "forex"
+        ]
+      }
+    },
+    "/github/languages": {
+      "get": {
+        "operationId": "GitHubController_getLanguages",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Languages",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GitHubLanguagesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "github"
+        ]
+      }
+    },
+    "/health": {
+      "get": {
+        "operationId": "HealthController_getHealth",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "State of the Server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/news/google": {
+      "get": {
+        "operationId": "NewsController_getGoogle",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Google Trends",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GoogleResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "news"
+        ]
+      }
+    },
+    "/news/sources": {
+      "get": {
+        "operationId": "NewsController_getSources",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of News Sources",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewsSourcesDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "news"
+        ]
+      }
+    },
+    "/tarot/cards": {
+      "get": {
+        "operationId": "TarotController_getCards",
+        "parameters": [
+          {
+            "name": "type",
+            "required": false,
+            "in": "query",
+            "description": "Tarot Type",
+            "schema": {
+              "enum": [
+                "MAJOR",
+                "MINOR"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "suit",
+            "required": false,
+            "in": "query",
+            "description": "Tarot Suit",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Limit",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Tarot Cards",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TarotCardsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "tarot"
+        ]
+      }
+    },
+    "/tarot/cards/{id}": {
+      "get": {
+        "operationId": "TarotController_getCard",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get Tarot Card by ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TarotCardDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "tarot"
+        ]
+      }
+    },
+    "/words": {
+      "get": {
+        "operationId": "WordsController_getWords",
+        "parameters": [
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "description": "Offset",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Limit",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Words",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "words"
+        ]
+      }
+    },
+    "/words/{word}": {
+      "get": {
+        "operationId": "WordsController_getWord",
+        "parameters": [
+          {
+            "name": "word",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get Words Card by ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "words"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "hieudoanm",
+    "description": "Hieu Doan",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "ChessOpeningDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "OpeningsResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "openings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChessOpeningDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "openings"
+        ]
+      },
+      "EcosResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "ecos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "ecos"
+        ]
+      },
+      "ChessPlayerDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "ChessGameDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "GamesResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "games": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChessGameDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "games"
+        ]
+      },
+      "SyncRequestDto": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "number"
+          },
+          "year": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "month",
+          "year"
+        ]
+      },
+      "SyncedResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "synced": {
+            "type": "number"
+          },
+          "existed": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "total",
+          "synced",
+          "existed"
+        ]
+      },
+      "GamesDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "win": {
+            "type": "number"
+          },
+          "draw": {
+            "type": "number"
+          },
+          "loss": {
+            "type": "number"
+          },
+          "periods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "timeOfDays": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "daysOfWeek": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "win",
+          "draw",
+          "loss",
+          "periods",
+          "timeOfDays",
+          "daysOfWeek"
+        ]
+      },
+      "AccuracyByPeriodDto": {
+        "type": "object",
+        "properties": {
+          "average": {
+            "type": "number"
+          },
+          "period": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "average",
+          "period"
+        ]
+      },
+      "AccuracyByTimeOfDayDto": {
+        "type": "object",
+        "properties": {
+          "average": {
+            "type": "number"
+          },
+          "timeOfDay": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "average",
+          "timeOfDay"
+        ]
+      },
+      "AccuracyByDayOfWeekDto": {
+        "type": "object",
+        "properties": {
+          "average": {
+            "type": "number"
+          },
+          "dayOfWeek": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "average",
+          "dayOfWeek"
+        ]
+      },
+      "AccuracyDto": {
+        "type": "object",
+        "properties": {
+          "average": {
+            "type": "number"
+          },
+          "win": {
+            "type": "number"
+          },
+          "draw": {
+            "type": "number"
+          },
+          "loss": {
+            "type": "number"
+          },
+          "periods": {
+            "$ref": "#/components/schemas/AccuracyByPeriodDto"
+          },
+          "timeOfDays": {
+            "$ref": "#/components/schemas/AccuracyByTimeOfDayDto"
+          },
+          "daysOfWeek": {
+            "$ref": "#/components/schemas/AccuracyByDayOfWeekDto"
+          }
+        },
+        "required": [
+          "average",
+          "win",
+          "draw",
+          "loss",
+          "periods",
+          "timeOfDays",
+          "daysOfWeek"
+        ]
+      },
+      "ResultDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "ResultsByTimeOfDayDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "ResultsByDayOfWeekDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "ResultsDto": {
+        "type": "object",
+        "properties": {
+          "win": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResultDto"
+            }
+          },
+          "draw": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResultDto"
+            }
+          },
+          "loss": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResultDto"
+            }
+          },
+          "timeOfDays": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResultsByTimeOfDayDto"
+            }
+          },
+          "daysOfWeek": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResultsByDayOfWeekDto"
+            }
+          }
+        },
+        "required": [
+          "win",
+          "draw",
+          "loss",
+          "timeOfDays",
+          "daysOfWeek"
+        ]
+      },
+      "OpponentDto": {
+        "type": "object",
+        "properties": {
+          "opponent": {
+            "type": "string"
+          },
+          "games": {
+            "type": "number"
+          },
+          "win": {
+            "type": "number"
+          },
+          "draw": {
+            "type": "number"
+          },
+          "loss": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "opponent",
+          "games",
+          "win",
+          "draw",
+          "loss"
+        ]
+      },
+      "InsightsDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "games": {
+            "$ref": "#/components/schemas/GamesDto"
+          },
+          "accuracy": {
+            "$ref": "#/components/schemas/AccuracyDto"
+          },
+          "results": {
+            "$ref": "#/components/schemas/ResultsDto"
+          },
+          "opponents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OpponentDto"
+            }
+          }
+        },
+        "required": [
+          "username",
+          "games",
+          "accuracy",
+          "results",
+          "opponents"
+        ]
+      },
+      "CountryDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "StreamersResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "players": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChessPlayerDto"
+            }
+          },
+          "countries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CountryDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "players",
+          "countries"
+        ]
+      },
+      "TitlesDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "titles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "titles"
+        ]
+      },
+      "TitledStatsDto": {
+        "type": "object",
+        "properties": {
+          "averageRapidRating": {
+            "type": "number"
+          },
+          "maxRapidRating": {
+            "type": "number"
+          },
+          "averageBlitzRating": {
+            "type": "number"
+          },
+          "maxBlitzRating": {
+            "type": "number"
+          },
+          "averageBulletRating": {
+            "type": "number"
+          },
+          "maxBulletRating": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "players": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChessPlayerDto"
+            }
+          }
+        },
+        "required": [
+          "averageRapidRating",
+          "maxRapidRating",
+          "averageBlitzRating",
+          "maxBlitzRating",
+          "averageBulletRating",
+          "maxBulletRating",
+          "total",
+          "players"
+        ]
+      },
+      "CountriesResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "regions": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "subregions": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "countries": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CountryDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "regions",
+          "subregions",
+          "countries"
+        ]
+      },
+      "CurrencyDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "default": ""
+          },
+          "name": {
+            "type": "string",
+            "default": ""
+          },
+          "symbol": {
+            "type": "string",
+            "default": ""
+          }
+        },
+        "required": [
+          "code",
+          "name",
+          "symbol"
+        ]
+      },
+      "CurrenciesResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "currencies": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CurrencyDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "currencies"
+        ]
+      },
+      "LanguageDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "LanguagesResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "languages": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LanguageDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "languages"
+        ]
+      },
+      "OrganizationDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "OrganizationsResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "organizations": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrganizationDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "organizations"
+        ]
+      },
+      "EthnicGroupDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "EthnicGroupsResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "ethnicGroups": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EthnicGroupDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "ethnicGroups"
+        ]
+      },
+      "LicensePlateDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "LicensePlatesResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "licensePlates": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LicensePlateDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "licensePlates"
+        ]
+      },
+      "CoinDto": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "iconUrl": {
+            "type": "string"
+          },
+          "marketCap": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "listedAt": {
+            "type": "number"
+          },
+          "tier": {
+            "type": "number"
+          },
+          "change": {
+            "type": "string"
+          },
+          "rank": {
+            "type": "number"
+          },
+          "sparkline": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lowVolume": {
+            "type": "boolean",
+            "default": false
+          },
+          "coinrankingUrl": {
+            "type": "string"
+          },
+          "24hVolume": {
+            "type": "string"
+          },
+          "btcPrice": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "uuid",
+          "symbol",
+          "name",
+          "color",
+          "iconUrl",
+          "marketCap",
+          "price",
+          "listedAt",
+          "tier",
+          "change",
+          "rank",
+          "sparkline",
+          "lowVolume",
+          "coinrankingUrl",
+          "24hVolume",
+          "btcPrice"
+        ]
+      },
+      "CoinsResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "coins": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CoinDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "coins"
+        ]
+      },
+      "RateDto": {
+        "type": "object",
+        "properties": {
+          "rate": {
+            "type": "number"
+          },
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "rate",
+          "code",
+          "name"
+        ]
+      },
+      "RatesResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "base": {
+            "type": "string"
+          },
+          "rates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RateDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "amount",
+          "base",
+          "rates"
+        ]
+      },
+      "ProgrammingLanguageDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "GitHubLanguagesResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "languages": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProgrammingLanguageDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "languages"
+        ]
+      },
+      "HealthResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "default": ""
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "GoogleCountryDto": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string",
+            "default": 0
+          },
+          "queries": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "country",
+          "queries"
+        ]
+      },
+      "GoogleResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "countries": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GoogleCountryDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "countries"
+        ]
+      },
+      "NewsSourceDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "default": ""
+          },
+          "name": {
+            "type": "string",
+            "default": ""
+          },
+          "description": {
+            "type": "string",
+            "default": ""
+          },
+          "url": {
+            "type": "string",
+            "default": ""
+          },
+          "category": {
+            "type": "string",
+            "default": ""
+          },
+          "language": {
+            "type": "string",
+            "default": ""
+          },
+          "country": {
+            "type": "string",
+            "default": ""
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "description",
+          "url",
+          "category",
+          "language",
+          "country"
+        ]
+      },
+      "NewsSourcesDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "sources": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NewsSourceDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "sources"
+        ]
+      },
+      "TarotCardDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "TarotCardsResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "types": {
+            "type": "string",
+            "enum": [
+              "MAJOR",
+              "MINOR"
+            ]
+          },
+          "suits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cards": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TarotCardDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "types",
+          "suits",
+          "cards"
+        ]
+      },
+      "WordDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "WordsResponseDto": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "default": 0
+          },
+          "offset": {
+            "type": "number",
+            "default": 0
+          },
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "words": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WordDto"
+            }
+          }
+        },
+        "required": [
+          "limit",
+          "offset",
+          "total",
+          "words"
+        ]
+      }
+    }
+  }
+}
