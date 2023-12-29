@@ -4,6 +4,13 @@
     "Country": {
       "type": "object",
       "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
         "cca3": {
           "type": "string",
           "default": ""
@@ -109,27 +116,7 @@
           ],
           "default": false
         },
-        "name": {
-          "type": [
-            "number",
-            "string",
-            "boolean",
-            "object",
-            "array",
-            "null"
-          ]
-        },
         "idd": {
-          "type": [
-            "number",
-            "string",
-            "boolean",
-            "object",
-            "array",
-            "null"
-          ]
-        },
-        "translations": {
           "type": [
             "number",
             "string",
@@ -263,6 +250,18 @@
             "$ref": "#/definitions/CountriesOnOrganizations"
           }
         },
+        "universities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/University"
+          }
+        },
+        "names": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CountryName"
+          }
+        },
         "createdAt": {
           "type": [
             "string",
@@ -276,12 +275,52 @@
             "null"
           ],
           "format": "date-time"
+        }
+      }
+    },
+    "CountryName": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "$ref": "#/definitions/Country"
         },
-        "University": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/University"
-          }
+        "language": {
+          "$ref": "#/definitions/Language"
+        },
+        "common": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "official": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "native": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "default": false
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         }
       }
     },
@@ -420,6 +459,12 @@
             "null"
           ],
           "format": "date-time"
+        },
+        "CountryName": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CountryName"
+          }
         }
       }
     },
@@ -1742,6 +1787,9 @@
   "properties": {
     "country": {
       "$ref": "#/definitions/Country"
+    },
+    "countryName": {
+      "$ref": "#/definitions/CountryName"
     },
     "currency": {
       "$ref": "#/definitions/Currency"

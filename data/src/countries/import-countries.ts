@@ -24,9 +24,7 @@ const main = async () => {
       independent,
       unMember,
       landlocked,
-      name,
       idd,
-      translations,
       demonyms,
       maps,
       flags,
@@ -40,10 +38,10 @@ const main = async () => {
       tld,
       capital,
       altSpellings,
+      name: { common = '' },
       currencies = {},
       languages = {},
     } = country;
-    console.info('cca3', cca3);
     currenciesMap = {
       ...currenciesMap,
       ...(currencies as unknown as Record<string, Record<string, string>>),
@@ -53,6 +51,7 @@ const main = async () => {
       ...(languages as unknown as Record<string, string>),
     };
     const body = {
+      name: common,
       cca3,
       cca2,
       ccn3,
@@ -66,9 +65,7 @@ const main = async () => {
       independent,
       unMember,
       landlocked,
-      name,
       idd,
-      translations,
       demonyms,
       maps,
       flags,
@@ -83,11 +80,15 @@ const main = async () => {
       capital,
       altSpellings,
     };
-    await prismaService.country.upsert({
-      create: body,
-      update: body,
-      where: { cca3 },
-    });
+    try {
+      await prismaService.country.upsert({
+        create: body,
+        update: body,
+        where: { cca3 },
+      });
+    } catch {
+      console.error('cca3', cca3);
+    }
   }
   console.info('Import Languages', languagesMap);
   const file = './data/csv/united-states/languages.csv';
@@ -97,23 +98,29 @@ const main = async () => {
     const { category = '0' } = categoryLanguages.find(
       ({ language }) => name === language
     ) || { category: '0' };
-    console.info(`code=${code} name=${name} category=${category}`);
-    await prismaService.language.upsert({
-      create: { code, name, category: parseInt(category) },
-      update: { code, name, category: parseInt(category) },
-      where: { code },
-    });
+    try {
+      await prismaService.language.upsert({
+        create: { code, name, category: parseInt(category) },
+        update: { code, name, category: parseInt(category) },
+        where: { code },
+      });
+    } catch {
+      console.error(`code=${code} name=${name} category=${category}`);
+    }
   }
   console.info('Import Currencies', currenciesMap);
   for (const [code, { name = '', symbol = '' }] of Object.entries(
     currenciesMap
   )) {
-    console.info(`code=${code} name=${name} symbol=${symbol}`);
-    await prismaService.currency.upsert({
-      create: { code, name, symbol },
-      update: { code, name, symbol },
-      where: { code },
-    });
+    try {
+      await prismaService.currency.upsert({
+        create: { code, name, symbol },
+        update: { code, name, symbol },
+        where: { code },
+      });
+    } catch {
+      console.error(`code=${code} name=${name} symbol=${symbol}`);
+    }
   }
   console.info('Import Many to Many');
   for (const {
@@ -136,6 +143,40 @@ const main = async () => {
       });
     }
   }
+
+  const errorLanguages: Set<string> = new Set<string>();
+  for (const {
+    cca3: countryCode,
+    translations = {},
+    name: { nativeName = {} },
+  } of countries) {
+    const nativeCodes: string[] = Object.keys(nativeName);
+    for (const [
+      languageCode,
+      { common = '', official = '' },
+    ] of Object.entries<{ common: string; official: string }>(translations)) {
+      const native = nativeCodes.includes(languageCode);
+      try {
+        const body = { languageCode, countryCode, common, official, native };
+        await prismaService.countryName.upsert({
+          create: body,
+          update: body,
+          where: { countryCode_languageCode: { countryCode, languageCode } },
+        });
+      } catch {
+        errorLanguages.add(languageCode);
+        console.error(
+          'Erorr',
+          countryCode,
+          languageCode,
+          common,
+          official,
+          native
+        );
+      }
+    }
+  }
+  console.log(errorLanguages);
 };
 
 main().catch((error) => console.error(error));

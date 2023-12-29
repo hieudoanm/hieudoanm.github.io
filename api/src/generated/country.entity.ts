@@ -3,8 +3,10 @@ import { CurrenciesInCountriesDto } from './currenciesInCountries.entity';
 import { LanguagesInCountriesDto } from './languagesInCountries.entity';
 import { CountriesOnOrganizationsDto } from './countriesOnOrganizations.entity';
 import { UniversityDto } from './university.entity';
+import { CountryNameDto } from './countryName.entity';
 
 export class CountryDto {
+  name: string | null;
   cca3: string;
   cca2: string | null;
   ccn3: string | null;
@@ -18,9 +20,7 @@ export class CountryDto {
   independent: boolean | null;
   unMember: boolean | null;
   landlocked: boolean | null;
-  name: Prisma.JsonValue | null;
   idd: Prisma.JsonValue | null;
-  translations: Prisma.JsonValue | null;
   demonyms: Prisma.JsonValue | null;
   maps: Prisma.JsonValue | null;
   flags: Prisma.JsonValue | null;
@@ -37,7 +37,8 @@ export class CountryDto {
   currencies?: CurrenciesInCountriesDto[];
   languages?: LanguagesInCountriesDto[];
   organizations?: CountriesOnOrganizationsDto[];
+  universities?: UniversityDto[];
+  names?: CountryNameDto[];
   createdAt: Date | null;
   updatedAt: Date | null;
-  University?: UniversityDto[];
 }

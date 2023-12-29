@@ -31,6 +31,7 @@ generator markdown {
 }
 
 model Country {
+  name         String?    @default("")
   cca3         String     @id @default("") @db.VarChar(3)
   cca2         String?    @unique @default("") @db.VarChar(2)
   ccn3         String?    @unique @default("") @db.VarChar(3)
@@ -44,9 +45,7 @@ model Country {
   independent  Boolean?   @default(false)
   unMember     Boolean?   @default(false)
   landlocked   Boolean?   @default(false)
-  name         Json?      @default("{}")
   idd          Json?      @default("{}")
-  translations Json?      @default("{}")
   demonyms     Json?      @default("{}")
   maps         Json?      @default("{}")
   flags        Json?      @default("{}")
@@ -64,10 +63,26 @@ model Country {
   currencies    CurrenciesInCountries[]
   languages     LanguagesInCountries[]
   organizations CountriesOnOrganizations[]
+  universities  University[]
+  names         CountryName[]
 
-  createdAt  DateTime?    @default(now()) @db.Timestamptz()
-  updatedAt  DateTime?    @default(now()) @updatedAt @db.Timestamptz()
-  University University[]
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+}
+
+model CountryName {
+  country      Country  @relation(fields: [countryCode], references: [cca3])
+  countryCode  String
+  language     Language @relation(fields: [languageCode], references: [code])
+  languageCode String
+  common       String?  @default("")
+  official     String?  @default("")
+  native       Boolean? @default(false)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([countryCode, languageCode])
 }
 
 enum DayOfWeek {
@@ -134,8 +149,9 @@ model Language {
 
   countries LanguagesInCountries[]
 
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+  createdAt   DateTime?     @default(now()) @db.Timestamptz()
+  updatedAt   DateTime?     @default(now()) @updatedAt @db.Timestamptz()
+  CountryName CountryName[]
 }
 
 model LanguagesInCountries {

@@ -3,6 +3,7 @@
 //// ------------------------------------------------------
 
 Table Country {
+  name String [default: '']
   cca3 String [pk, default: '']
   cca2 String [unique, default: '']
   ccn3 String [unique, default: '']
@@ -16,9 +17,7 @@ Table Country {
   independent Boolean [default: false]
   unMember Boolean [default: false]
   landlocked Boolean [default: false]
-  name Json [default: '{}']
   idd Json [default: '{}']
-  translations Json [default: '{}']
   demonyms Json [default: '{}']
   maps Json [default: '{}']
   flags Json [default: '{}']
@@ -35,9 +34,26 @@ Table Country {
   currencies CurrenciesInCountries [not null]
   languages LanguagesInCountries [not null]
   organizations CountriesOnOrganizations [not null]
+  universities University [not null]
+  names CountryName [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
-  University University [not null]
+}
+
+Table CountryName {
+  country Country [not null]
+  countryCode String [not null]
+  language Language [not null]
+  languageCode String [not null]
+  common String [default: '']
+  official String [default: '']
+  native Boolean [default: false]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (countryCode, languageCode) [pk]
+  }
 }
 
 Table Currency {
@@ -85,6 +101,7 @@ Table Language {
   countries LanguagesInCountries [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
+  CountryName CountryName [not null]
 }
 
 Table LanguagesInCountries {
@@ -512,6 +529,10 @@ Enum Side {
   white
   black
 }
+
+Ref: CountryName.countryCode > Country.cca3
+
+Ref: CountryName.languageCode > Language.code
 
 Ref: CurrencyHistory.currencyCode > Currency.code
 

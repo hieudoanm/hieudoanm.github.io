@@ -7,6 +7,7 @@
 ```mermaid
 erDiagram
 "Country" {
+    String name "nullable"
     String cca3 PK
     String cca2 UK "nullable"
     String ccn3 UK "nullable"
@@ -20,9 +21,7 @@ erDiagram
     Boolean independent "nullable"
     Boolean unMember "nullable"
     Boolean landlocked "nullable"
-    Json name "nullable"
     Json idd "nullable"
-    Json translations "nullable"
     Json demonyms "nullable"
     Json maps "nullable"
     Json flags "nullable"
@@ -36,6 +35,15 @@ erDiagram
     String tld
     String capital
     String altSpellings
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"CountryName" {
+    String countryCode FK
+    String languageCode FK
+    String common "nullable"
+    String official "nullable"
+    Boolean native "nullable"
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -306,6 +314,8 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"CountryName" }o--|| "Country" : country
+"CountryName" }o--|| "Language" : language
 "CurrencyHistory" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Country" : country
@@ -324,6 +334,7 @@ erDiagram
 ### `Country`
 
 **Properties**
+  - `name`: 
   - `cca3`: 
   - `cca2`: 
   - `ccn3`: 
@@ -337,9 +348,7 @@ erDiagram
   - `independent`: 
   - `unMember`: 
   - `landlocked`: 
-  - `name`: 
   - `idd`: 
-  - `translations`: 
   - `demonyms`: 
   - `maps`: 
   - `flags`: 
@@ -353,6 +362,17 @@ erDiagram
   - `tld`: 
   - `capital`: 
   - `altSpellings`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `CountryName`
+
+**Properties**
+  - `countryCode`: 
+  - `languageCode`: 
+  - `common`: 
+  - `official`: 
+  - `native`: 
   - `createdAt`: 
   - `updatedAt`: 
 

@@ -2,6 +2,7 @@ import { Prisma, DayOfWeek, Region } from '@prisma/client';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class UpdateCountryDto {
+  name?: string;
   cca2?: string;
   ccn3?: string;
   @ApiProperty({ enum: DayOfWeek })
@@ -16,9 +17,7 @@ export class UpdateCountryDto {
   independent?: boolean;
   unMember?: boolean;
   landlocked?: boolean;
-  name?: Prisma.InputJsonValue;
   idd?: Prisma.InputJsonValue;
-  translations?: Prisma.InputJsonValue;
   demonyms?: Prisma.InputJsonValue;
   maps?: Prisma.InputJsonValue;
   flags?: Prisma.InputJsonValue;
