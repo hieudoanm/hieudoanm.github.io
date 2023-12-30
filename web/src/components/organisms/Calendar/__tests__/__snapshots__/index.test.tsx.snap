@@ -1581,7 +1581,7 @@ exports[`Calendar render default 1`] = `
           class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
         >
           <div
-            class="font-bold"
+            class=""
           >
             <p
               class="chakra-text truncate text-black css-0"
@@ -1598,7 +1598,7 @@ exports[`Calendar render default 1`] = `
           class="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4"
         >
           <div
-            class=""
+            class="font-bold"
           >
             <p
               class="chakra-text truncate text-black css-0"
