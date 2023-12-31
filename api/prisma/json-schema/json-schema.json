@@ -262,6 +262,12 @@
             "$ref": "#/definitions/CountryName"
           }
         },
+        "cities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/City"
+          }
+        },
         "createdAt": {
           "type": [
             "string",
@@ -307,6 +313,51 @@
             "null"
           ],
           "default": false
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "City": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "capital": {
+          "type": "boolean",
+          "default": false
+        },
+        "city": {
+          "type": "string",
+          "default": ""
+        },
+        "state": {
+          "type": "string",
+          "default": ""
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "latitude": {
+          "type": "number",
+          "default": 0
+        },
+        "longitude": {
+          "type": "number",
+          "default": 0
         },
         "createdAt": {
           "type": [
@@ -1790,6 +1841,9 @@
     },
     "countryName": {
       "$ref": "#/definitions/CountryName"
+    },
+    "city": {
+      "$ref": "#/definitions/City"
     },
     "currency": {
       "$ref": "#/definitions/Currency"

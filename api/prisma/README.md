@@ -47,6 +47,17 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"City" {
+    Int id PK
+    Boolean capital
+    String city
+    String state
+    String countryCode FK
+    Float latitude
+    Float longitude
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 "Currency" {
     String code PK
     String name
@@ -316,6 +327,7 @@ erDiagram
 }
 "CountryName" }o--|| "Country" : country
 "CountryName" }o--|| "Language" : language
+"City" }o--|| "Country" : country
 "CurrencyHistory" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Country" : country
@@ -373,6 +385,19 @@ erDiagram
   - `common`: 
   - `official`: 
   - `native`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `City`
+
+**Properties**
+  - `id`: 
+  - `capital`: 
+  - `city`: 
+  - `state`: 
+  - `countryCode`: 
+  - `latitude`: 
+  - `longitude`: 
   - `createdAt`: 
   - `updatedAt`: 
 

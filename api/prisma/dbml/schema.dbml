@@ -36,6 +36,7 @@ Table Country {
   organizations CountriesOnOrganizations [not null]
   universities University [not null]
   names CountryName [not null]
+  cities City [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
 }
@@ -54,6 +55,19 @@ Table CountryName {
   indexes {
     (countryCode, languageCode) [pk]
   }
+}
+
+Table City {
+  id Int [pk, increment]
+  capital Boolean [not null, default: false]
+  city String [not null, default: '']
+  state String [not null, default: '']
+  country Country [not null]
+  countryCode String [not null]
+  latitude Float [not null, default: 0]
+  longitude Float [not null, default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
 }
 
 Table Currency {
@@ -533,6 +547,8 @@ Enum Side {
 Ref: CountryName.countryCode > Country.cca3
 
 Ref: CountryName.languageCode > Language.code
+
+Ref: City.countryCode > Country.cca3
 
 Ref: CurrencyHistory.currencyCode > Currency.code
 

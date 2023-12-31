@@ -4,6 +4,7 @@ import { LanguagesInCountriesDto } from './languagesInCountries.entity';
 import { CountriesOnOrganizationsDto } from './countriesOnOrganizations.entity';
 import { UniversityDto } from './university.entity';
 import { CountryNameDto } from './countryName.entity';
+import { CityDto } from './city.entity';
 
 export class CountryDto {
   name: string | null;
@@ -39,6 +40,7 @@ export class CountryDto {
   organizations?: CountriesOnOrganizationsDto[];
   universities?: UniversityDto[];
   names?: CountryNameDto[];
+  cities?: CityDto[];
   createdAt: Date | null;
   updatedAt: Date | null;
 }
