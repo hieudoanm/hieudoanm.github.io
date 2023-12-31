@@ -686,6 +686,116 @@
         }
       }
     },
+    "Stock": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "market": {
+          "type": "string",
+          "default": "HOSE",
+          "enum": [
+            "HNX",
+            "HOSE",
+            "UPCOM"
+          ]
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "StockHistory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StockHistory"
+          }
+        }
+      }
+    },
+    "StockHistory": {
+      "type": "object",
+      "properties": {
+        "stock": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Stock"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "open": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "high": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "low": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "close": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "volume": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
     "TarotCard": {
       "type": "object",
       "properties": {
@@ -1884,6 +1994,12 @@
     },
     "ethnicGroup": {
       "$ref": "#/definitions/EthnicGroup"
+    },
+    "stock": {
+      "$ref": "#/definitions/Stock"
+    },
+    "stockHistory": {
+      "$ref": "#/definitions/StockHistory"
     },
     "tarotCard": {
       "$ref": "#/definitions/TarotCard"

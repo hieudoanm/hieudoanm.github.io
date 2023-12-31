@@ -235,6 +235,38 @@ model EthnicGroup {
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
+model Stock {
+  symbol String @id @default("") @db.VarChar(3)
+  name   String @default("")
+  market Market @default(HOSE)
+
+  createdAt    DateTime?      @default(now()) @db.Timestamptz()
+  updatedAt    DateTime?      @default(now()) @updatedAt @db.Timestamptz()
+  StockHistory StockHistory[]
+}
+
+enum Market {
+  HNX
+  HOSE
+  UPCOM
+}
+
+model StockHistory {
+  stock  Stock?   @relation(fields: [symbol], references: [symbol])
+  symbol String
+  date   DateTime @default(now()) @db.Date()
+  open   Float?   @default(0)
+  high   Float?   @default(0)
+  low    Float?   @default(0)
+  close  Float?   @default(0)
+  volume Float?   @default(0)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([symbol, date])
+}
+
 // Tarot
 
 model TarotCard {

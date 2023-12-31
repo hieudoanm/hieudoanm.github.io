@@ -181,6 +181,32 @@ Table EthnicGroup {
   updatedAt DateTime [default: `now()`]
 }
 
+Table Stock {
+  symbol String [pk, default: '']
+  name String [not null, default: '']
+  market Market [not null, default: 'HOSE']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  StockHistory StockHistory [not null]
+}
+
+Table StockHistory {
+  stock Stock
+  symbol String [not null]
+  date DateTime [default: `now()`, not null]
+  open Float [default: 0]
+  high Float [default: 0]
+  low Float [default: 0]
+  close Float [default: 0]
+  volume Float [default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (symbol, date) [pk]
+  }
+}
+
 Table TarotCard {
   type TarotCardType [not null, default: 'MAJOR']
   id String [pk, default: '']
@@ -442,6 +468,12 @@ Enum Region {
   OCEANIA
 }
 
+Enum Market {
+  HNX
+  HOSE
+  UPCOM
+}
+
 Enum TarotCardType {
   MAJOR
   MINOR
@@ -576,6 +608,8 @@ Ref: LanguagesInCountries.countryCode > Country.cca3
 Ref: CountriesOnOrganizations.organizationCode > Organization.code
 
 Ref: CountriesOnOrganizations.countryCode > Country.cca3
+
+Ref: StockHistory.symbol > Stock.symbol
 
 Ref: UnitedStatesCongressMember.unitedStatesCongressCongress > UnitedStatesCongress.congress
 

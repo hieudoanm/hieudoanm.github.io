@@ -125,6 +125,24 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"Stock" {
+    String symbol PK
+    String name
+    Market market
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"StockHistory" {
+    String symbol FK
+    DateTime date
+    Float open "nullable"
+    Float high "nullable"
+    Float low "nullable"
+    Float close "nullable"
+    Float volume "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 "TarotCard" {
     TarotCardType type
     String id PK
@@ -340,6 +358,7 @@ erDiagram
 "LanguagesInCountries" }o--|| "Country" : country
 "CountriesOnOrganizations" }o--|| "Organization" : organization
 "CountriesOnOrganizations" }o--|| "Country" : country
+"StockHistory" }o--|| "Stock" : stock
 "UnitedStatesCongressMember" }o--|| "UnitedStatesCongress" : UnitedStatesCongress
 "UnitedStatesCongressMembersInCongresses" }o--|| "UnitedStatesCongress" : congress
 "UnitedStatesCongressMembersInCongresses" }o--|| "UnitedStatesCongressMember" : member
@@ -490,6 +509,28 @@ erDiagram
   - `id`: 
   - `name`: 
   - `group`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `Stock`
+
+**Properties**
+  - `symbol`: 
+  - `name`: 
+  - `market`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `StockHistory`
+
+**Properties**
+  - `symbol`: 
+  - `date`: 
+  - `open`: 
+  - `high`: 
+  - `low`: 
+  - `close`: 
+  - `volume`: 
   - `createdAt`: 
   - `updatedAt`: 
 
