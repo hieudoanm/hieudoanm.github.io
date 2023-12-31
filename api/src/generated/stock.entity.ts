@@ -7,5 +7,5 @@ export class StockDto {
   market: Market;
   createdAt: Date | null;
   updatedAt: Date | null;
-  StockHistory?: StockHistoryDto[];
+  history?: StockHistoryDto[];
 }

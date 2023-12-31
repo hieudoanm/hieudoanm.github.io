@@ -720,7 +720,7 @@
           ],
           "format": "date-time"
         },
-        "StockHistory": {
+        "history": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/StockHistory"
