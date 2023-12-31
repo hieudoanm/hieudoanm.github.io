@@ -21,19 +21,16 @@ erDiagram
     Boolean independent "nullable"
     Boolean unMember "nullable"
     Boolean landlocked "nullable"
-    Json idd "nullable"
     Json demonyms "nullable"
     Json maps "nullable"
     Json flags "nullable"
     Json car "nullable"
-    Json capitalInfo "nullable"
     Json coatOfArms "nullable"
     Json postalCode "nullable"
     String timezones
     String continents
     Float latlng
     String tld
-    String capital
     String altSpellings
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
@@ -55,6 +52,13 @@ erDiagram
     String countryCode FK
     Float latitude
     Float longitude
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"CallingCode" {
+    String root
+    String suffix
+    String countryCode FK
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -328,6 +332,7 @@ erDiagram
 "CountryName" }o--|| "Country" : country
 "CountryName" }o--|| "Language" : language
 "City" }o--|| "Country" : country
+"CallingCode" }o--|| "Country" : country
 "CurrencyHistory" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Currency" : currency
 "CurrenciesInCountries" }o--|| "Country" : country
@@ -360,19 +365,16 @@ erDiagram
   - `independent`: 
   - `unMember`: 
   - `landlocked`: 
-  - `idd`: 
   - `demonyms`: 
   - `maps`: 
   - `flags`: 
   - `car`: 
-  - `capitalInfo`: 
   - `coatOfArms`: 
   - `postalCode`: 
   - `timezones`: 
   - `continents`: 
   - `latlng`: 
   - `tld`: 
-  - `capital`: 
   - `altSpellings`: 
   - `createdAt`: 
   - `updatedAt`: 
@@ -398,6 +400,15 @@ erDiagram
   - `countryCode`: 
   - `latitude`: 
   - `longitude`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `CallingCode`
+
+**Properties**
+  - `root`: 
+  - `suffix`: 
+  - `countryCode`: 
   - `createdAt`: 
   - `updatedAt`: 
 

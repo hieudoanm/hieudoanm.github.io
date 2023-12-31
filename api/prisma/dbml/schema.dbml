@@ -17,19 +17,16 @@ Table Country {
   independent Boolean [default: false]
   unMember Boolean [default: false]
   landlocked Boolean [default: false]
-  idd Json [default: '{}']
   demonyms Json [default: '{}']
   maps Json [default: '{}']
   flags Json [default: '{}']
   car Json [default: '{}']
-  capitalInfo Json [default: '{}']
   coatOfArms Json [default: '{}']
   postalCode Json [default: '{}']
   timezones String[] [not null]
   continents String[] [not null]
   latlng Float[] [not null]
   tld String[] [not null]
-  capital String[] [not null]
   altSpellings String[] [not null]
   currencies CurrenciesInCountries [not null]
   languages LanguagesInCountries [not null]
@@ -37,6 +34,7 @@ Table Country {
   universities University [not null]
   names CountryName [not null]
   cities City [not null]
+  callingCodes CallingCode [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
 }
@@ -68,6 +66,19 @@ Table City {
   longitude Float [not null, default: 0]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
+}
+
+Table CallingCode {
+  root String [not null, default: '']
+  suffix String [not null, default: '']
+  country Country [not null]
+  countryCode String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (root, suffix) [pk]
+  }
 }
 
 Table Currency {
@@ -264,10 +275,10 @@ Table UnitedStatesCongressMember {
   gender String [default: '']
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
-  UnitedStatesCongress UnitedStatesCongress
-  unitedStatesCongressCongress Int
   UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses [not null]
   committees UnitedStatesCongressCommittee [not null]
+  UnitedStatesCongress UnitedStatesCongress
+  unitedStatesCongressCongress Int
 }
 
 Table UnitedStatesCongressMembersInCongresses {
@@ -549,6 +560,8 @@ Ref: CountryName.countryCode > Country.cca3
 Ref: CountryName.languageCode > Language.code
 
 Ref: City.countryCode > Country.cca3
+
+Ref: CallingCode.countryCode > Country.cca3
 
 Ref: CurrencyHistory.currencyCode > Currency.code
 

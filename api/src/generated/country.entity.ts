@@ -5,6 +5,7 @@ import { CountriesOnOrganizationsDto } from './countriesOnOrganizations.entity';
 import { UniversityDto } from './university.entity';
 import { CountryNameDto } from './countryName.entity';
 import { CityDto } from './city.entity';
+import { CallingCodeDto } from './callingCode.entity';
 
 export class CountryDto {
   name: string | null;
@@ -21,19 +22,16 @@ export class CountryDto {
   independent: boolean | null;
   unMember: boolean | null;
   landlocked: boolean | null;
-  idd: Prisma.JsonValue | null;
   demonyms: Prisma.JsonValue | null;
   maps: Prisma.JsonValue | null;
   flags: Prisma.JsonValue | null;
   car: Prisma.JsonValue | null;
-  capitalInfo: Prisma.JsonValue | null;
   coatOfArms: Prisma.JsonValue | null;
   postalCode: Prisma.JsonValue | null;
   timezones: string[];
   continents: string[];
   latlng: number[];
   tld: string[];
-  capital: string[];
   altSpellings: string[];
   currencies?: CurrenciesInCountriesDto[];
   languages?: LanguagesInCountriesDto[];
@@ -41,6 +39,7 @@ export class CountryDto {
   universities?: UniversityDto[];
   names?: CountryNameDto[];
   cities?: CityDto[];
+  callingCodes?: CallingCodeDto[];
   createdAt: Date | null;
   updatedAt: Date | null;
 }

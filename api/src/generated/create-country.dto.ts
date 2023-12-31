@@ -17,12 +17,10 @@ export class CreateCountryDto {
   independent?: boolean;
   unMember?: boolean;
   landlocked?: boolean;
-  idd?: Prisma.InputJsonValue;
   demonyms?: Prisma.InputJsonValue;
   maps?: Prisma.InputJsonValue;
   flags?: Prisma.InputJsonValue;
   car?: Prisma.InputJsonValue;
-  capitalInfo?: Prisma.InputJsonValue;
   coatOfArms?: Prisma.InputJsonValue;
   postalCode?: Prisma.InputJsonValue;
   createdAt?: Date;

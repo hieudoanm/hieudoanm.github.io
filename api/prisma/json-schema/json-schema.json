@@ -116,16 +116,6 @@
           ],
           "default": false
         },
-        "idd": {
-          "type": [
-            "number",
-            "string",
-            "boolean",
-            "object",
-            "array",
-            "null"
-          ]
-        },
         "demonyms": {
           "type": [
             "number",
@@ -157,16 +147,6 @@
           ]
         },
         "car": {
-          "type": [
-            "number",
-            "string",
-            "boolean",
-            "object",
-            "array",
-            "null"
-          ]
-        },
-        "capitalInfo": {
           "type": [
             "number",
             "string",
@@ -220,12 +200,6 @@
             "type": "string"
           }
         },
-        "capital": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "altSpellings": {
           "type": "array",
           "items": {
@@ -266,6 +240,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/City"
+          }
+        },
+        "callingCodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CallingCode"
           }
         },
         "createdAt": {
@@ -358,6 +338,36 @@
         "longitude": {
           "type": "number",
           "default": 0
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "CallingCode": {
+      "type": "object",
+      "properties": {
+        "root": {
+          "type": "string",
+          "default": ""
+        },
+        "suffix": {
+          "type": "string",
+          "default": ""
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
         },
         "createdAt": {
           "type": [
@@ -1182,16 +1192,6 @@
           ],
           "format": "date-time"
         },
-        "UnitedStatesCongress": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/UnitedStatesCongress"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "UnitedStatesCongressMembersInCongresses": {
           "type": "array",
           "items": {
@@ -1203,6 +1203,16 @@
           "items": {
             "$ref": "#/definitions/UnitedStatesCongressCommittee"
           }
+        },
+        "UnitedStatesCongress": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/UnitedStatesCongress"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       }
     },
@@ -1844,6 +1854,9 @@
     },
     "city": {
       "$ref": "#/definitions/City"
+    },
+    "callingCode": {
+      "$ref": "#/definitions/CallingCode"
     },
     "currency": {
       "$ref": "#/definitions/Currency"

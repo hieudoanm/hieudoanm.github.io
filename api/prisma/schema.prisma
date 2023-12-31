@@ -45,19 +45,16 @@ model Country {
   independent  Boolean?   @default(false)
   unMember     Boolean?   @default(false)
   landlocked   Boolean?   @default(false)
-  idd          Json?      @default("{}")
   demonyms     Json?      @default("{}")
   maps         Json?      @default("{}")
   flags        Json?      @default("{}")
   car          Json?      @default("{}")
-  capitalInfo  Json?      @default("{}")
   coatOfArms   Json?      @default("{}")
   postalCode   Json?      @default("{}")
   timezones    String[]   @default([])
   continents   String[]   @default([])
   latlng       Float[]    @default([])
   tld          String[]   @default([])
-  capital      String[]   @default([])
   altSpellings String[]   @default([])
 
   currencies    CurrenciesInCountries[]
@@ -66,6 +63,7 @@ model Country {
   universities  University[]
   names         CountryName[]
   cities        City[]
+  callingCodes  CallingCode[]
 
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
@@ -98,6 +96,18 @@ model City {
 
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+}
+
+model CallingCode {
+  root        String  @default("")
+  suffix      String  @default("")
+  country     Country @relation(fields: [countryCode], references: [cca3])
+  countryCode String
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([root, suffix])
 }
 
 enum DayOfWeek {
@@ -370,10 +380,10 @@ model UnitedStatesCongressMember {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  UnitedStatesCongress                    UnitedStatesCongress?                     @relation(fields: [unitedStatesCongressCongress], references: [congress])
-  unitedStatesCongressCongress            Int?
   UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses[]
   committees                              UnitedStatesCongressCommittee[]
+  UnitedStatesCongress                    UnitedStatesCongress?                     @relation(fields: [unitedStatesCongressCongress], references: [congress])
+  unitedStatesCongressCongress            Int?
 }
 
 model UnitedStatesCongressMembersInCongresses {
