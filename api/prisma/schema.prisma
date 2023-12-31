@@ -1,7 +1,7 @@
 datasource db {
   provider = "postgresql"
   url      = env("POSTGRESQL_URL")
-  schemas  = ["public"]
+  schemas  = ["public", "vietnam"]
 }
 
 generator client {
@@ -247,7 +247,7 @@ model LicensePlate {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  @@schema("public")
+  @@schema("vietnam")
 }
 
 model EthnicGroup {
@@ -258,7 +258,7 @@ model EthnicGroup {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  @@schema("public")
+  @@schema("vietnam")
 }
 
 model Stock {
@@ -270,7 +270,7 @@ model Stock {
   updatedAt DateTime?      @default(now()) @updatedAt @db.Timestamptz()
   history   StockHistory[]
 
-  @@schema("public")
+  @@schema("vietnam")
 }
 
 enum Market {
@@ -278,7 +278,7 @@ enum Market {
   HOSE
   UPCOM
 
-  @@schema("public")
+  @@schema("vietnam")
 }
 
 model StockHistory {
@@ -295,7 +295,7 @@ model StockHistory {
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
   @@id([symbol, date])
-  @@schema("public")
+  @@schema("vietnam")
 }
 
 // Tarot
