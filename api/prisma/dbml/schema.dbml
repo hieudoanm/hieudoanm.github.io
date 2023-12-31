@@ -362,33 +362,28 @@ Table ChessPlayer {
   status Status [not null, default: 'basic']
   title ChessTitle
   league League
-  statsDailyRatingBest Int [not null, default: 0]
-  statsDailyRatingLast Int [not null, default: 0]
-  statsDailyRatingDeviation Int [not null, default: 0]
-  statsDailyRecordWin Int [not null, default: 0]
-  statsDailyRecordDraw Int [not null, default: 0]
-  statsDailyRecordLoss Int [not null, default: 0]
-  statsRapidRatingBest Int [not null, default: 0]
-  statsRapidRatingLast Int [not null, default: 0]
-  statsRapidRatingDeviation Int [not null, default: 0]
-  statsRapidRecordWin Int [not null, default: 0]
-  statsRapidRecordDraw Int [not null, default: 0]
-  statsRapidRecordLoss Int [not null, default: 0]
-  statsBlitzRatingLast Int [not null, default: 0]
-  statsBlitzRatingBest Int [not null, default: 0]
-  statsBlitzRatingDeviation Int [not null, default: 0]
-  statsBlitzRecordWin Int [not null, default: 0]
-  statsBlitzRecordDraw Int [not null, default: 0]
-  statsBlitzRecordLoss Int [not null, default: 0]
-  statsBulletRatingLast Int [not null, default: 0]
-  statsBulletRatingBest Int [not null, default: 0]
-  statsBulletRatingDeviation Int [not null, default: 0]
-  statsBulletRecordWin Int [not null, default: 0]
-  statsBulletRecordDraw Int [not null, default: 0]
-  statsBulletRecordLoss Int [not null, default: 0]
   archives String[] [not null]
+  stats ChessStats [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
+}
+
+Table ChessStats {
+  player ChessPlayer [not null]
+  playerId Int [not null]
+  timeClass ChessTimeClass [not null, default: 'daily']
+  best Int [not null, default: 0]
+  last Int [not null, default: 0]
+  deviation Int [not null, default: 0]
+  win Int [not null, default: 0]
+  draw Int [not null, default: 0]
+  loss Int [not null, default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (playerId, timeClass) [pk]
+  }
 }
 
 Table ChessGame {
@@ -541,6 +536,14 @@ Enum ChessTitle {
   ACM
 }
 
+Enum ChessTimeClass {
+  daily
+  classical
+  rapid
+  blitz
+  bullet
+}
+
 Enum ChessResult {
   win
   fiftymove
@@ -553,14 +556,6 @@ Enum ChessResult {
   resigned
   timeout
   abandoned
-}
-
-Enum ChessTimeClass {
-  daily
-  classical
-  rapid
-  blitz
-  bullet
 }
 
 Enum ChessVariant {
@@ -620,5 +615,7 @@ Ref: UnitedStatesCongressMembersInCongresses.memberId > UnitedStatesCongressMemb
 Ref: UnitedStatesCongressCommittee.congressNumber > UnitedStatesCongress.congress
 
 Ref: UnitedStatesCongressCommittee.chairId > UnitedStatesCongressMember.id
+
+Ref: ChessStats.playerId > ChessPlayer.id
 
 Ref: University.countryCode > Country.cca3

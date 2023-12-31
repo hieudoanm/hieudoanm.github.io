@@ -1565,107 +1565,74 @@
             "Legend"
           ]
         },
-        "statsDailyRatingBest": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsDailyRatingLast": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsDailyRatingDeviation": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsDailyRecordWin": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsDailyRecordDraw": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsDailyRecordLoss": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsRapidRatingBest": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsRapidRatingLast": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsRapidRatingDeviation": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsRapidRecordWin": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsRapidRecordDraw": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsRapidRecordLoss": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBlitzRatingLast": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBlitzRatingBest": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBlitzRatingDeviation": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBlitzRecordWin": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBlitzRecordDraw": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBlitzRecordLoss": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBulletRatingLast": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBulletRatingBest": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBulletRatingDeviation": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBulletRecordWin": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBulletRecordDraw": {
-          "type": "integer",
-          "default": 0
-        },
-        "statsBulletRecordLoss": {
-          "type": "integer",
-          "default": 0
-        },
         "archives": {
           "type": "array",
           "items": {
             "type": "string"
           }
+        },
+        "stats": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChessStats"
+          }
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "ChessStats": {
+      "type": "object",
+      "properties": {
+        "player": {
+          "$ref": "#/definitions/ChessPlayer"
+        },
+        "timeClass": {
+          "type": "string",
+          "default": "daily",
+          "enum": [
+            "daily",
+            "classical",
+            "rapid",
+            "blitz",
+            "bullet"
+          ]
+        },
+        "best": {
+          "type": "integer",
+          "default": 0
+        },
+        "last": {
+          "type": "integer",
+          "default": 0
+        },
+        "deviation": {
+          "type": "integer",
+          "default": 0
+        },
+        "win": {
+          "type": "integer",
+          "default": 0
+        },
+        "draw": {
+          "type": "integer",
+          "default": 0
+        },
+        "loss": {
+          "type": "integer",
+          "default": 0
         },
         "createdAt": {
           "type": [
@@ -2033,6 +2000,9 @@
     },
     "chessPlayer": {
       "$ref": "#/definitions/ChessPlayer"
+    },
+    "chessStats": {
+      "$ref": "#/definitions/ChessStats"
     },
     "chessGame": {
       "$ref": "#/definitions/ChessGame"

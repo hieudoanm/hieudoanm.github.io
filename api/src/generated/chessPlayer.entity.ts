@@ -1,4 +1,5 @@
 import { Status, ChessTitle, League } from '@prisma/client';
+import { ChessStatsDto } from './chessStats.entity';
 
 export class ChessPlayerDto {
   id: number;
@@ -17,31 +18,8 @@ export class ChessPlayerDto {
   status: Status;
   title: ChessTitle | null;
   league: League | null;
-  statsDailyRatingBest: number;
-  statsDailyRatingLast: number;
-  statsDailyRatingDeviation: number;
-  statsDailyRecordWin: number;
-  statsDailyRecordDraw: number;
-  statsDailyRecordLoss: number;
-  statsRapidRatingBest: number;
-  statsRapidRatingLast: number;
-  statsRapidRatingDeviation: number;
-  statsRapidRecordWin: number;
-  statsRapidRecordDraw: number;
-  statsRapidRecordLoss: number;
-  statsBlitzRatingLast: number;
-  statsBlitzRatingBest: number;
-  statsBlitzRatingDeviation: number;
-  statsBlitzRecordWin: number;
-  statsBlitzRecordDraw: number;
-  statsBlitzRecordLoss: number;
-  statsBulletRatingLast: number;
-  statsBulletRatingBest: number;
-  statsBulletRatingDeviation: number;
-  statsBulletRecordWin: number;
-  statsBulletRecordDraw: number;
-  statsBulletRecordLoss: number;
   archives: string[];
+  stats?: ChessStatsDto[];
   createdAt: Date | null;
   updatedAt: Date | null;
 }

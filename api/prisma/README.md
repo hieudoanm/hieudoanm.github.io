@@ -270,31 +270,19 @@ erDiagram
     Status status
     ChessTitle title "nullable"
     League league "nullable"
-    Int statsDailyRatingBest
-    Int statsDailyRatingLast
-    Int statsDailyRatingDeviation
-    Int statsDailyRecordWin
-    Int statsDailyRecordDraw
-    Int statsDailyRecordLoss
-    Int statsRapidRatingBest
-    Int statsRapidRatingLast
-    Int statsRapidRatingDeviation
-    Int statsRapidRecordWin
-    Int statsRapidRecordDraw
-    Int statsRapidRecordLoss
-    Int statsBlitzRatingLast
-    Int statsBlitzRatingBest
-    Int statsBlitzRatingDeviation
-    Int statsBlitzRecordWin
-    Int statsBlitzRecordDraw
-    Int statsBlitzRecordLoss
-    Int statsBulletRatingLast
-    Int statsBulletRatingBest
-    Int statsBulletRatingDeviation
-    Int statsBulletRecordWin
-    Int statsBulletRecordDraw
-    Int statsBulletRecordLoss
     String archives
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"ChessStats" {
+    Int playerId FK
+    ChessTimeClass timeClass
+    Int best
+    Int last
+    Int deviation
+    Int win
+    Int draw
+    Int loss
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -364,6 +352,7 @@ erDiagram
 "UnitedStatesCongressMembersInCongresses" }o--|| "UnitedStatesCongressMember" : member
 "UnitedStatesCongressCommittee" }o--|| "UnitedStatesCongress" : congress
 "UnitedStatesCongressCommittee" }o--|| "UnitedStatesCongressMember" : chair
+"ChessStats" }o--|| "ChessPlayer" : player
 "University" }o--|| "Country" : country
 ```
 
@@ -683,31 +672,21 @@ erDiagram
   - `status`: 
   - `title`: 
   - `league`: 
-  - `statsDailyRatingBest`: 
-  - `statsDailyRatingLast`: 
-  - `statsDailyRatingDeviation`: 
-  - `statsDailyRecordWin`: 
-  - `statsDailyRecordDraw`: 
-  - `statsDailyRecordLoss`: 
-  - `statsRapidRatingBest`: 
-  - `statsRapidRatingLast`: 
-  - `statsRapidRatingDeviation`: 
-  - `statsRapidRecordWin`: 
-  - `statsRapidRecordDraw`: 
-  - `statsRapidRecordLoss`: 
-  - `statsBlitzRatingLast`: 
-  - `statsBlitzRatingBest`: 
-  - `statsBlitzRatingDeviation`: 
-  - `statsBlitzRecordWin`: 
-  - `statsBlitzRecordDraw`: 
-  - `statsBlitzRecordLoss`: 
-  - `statsBulletRatingLast`: 
-  - `statsBulletRatingBest`: 
-  - `statsBulletRatingDeviation`: 
-  - `statsBulletRecordWin`: 
-  - `statsBulletRecordDraw`: 
-  - `statsBulletRecordLoss`: 
   - `archives`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `ChessStats`
+
+**Properties**
+  - `playerId`: 
+  - `timeClass`: 
+  - `best`: 
+  - `last`: 
+  - `deviation`: 
+  - `win`: 
+  - `draw`: 
+  - `loss`: 
   - `createdAt`: 
   - `updatedAt`: 
 
