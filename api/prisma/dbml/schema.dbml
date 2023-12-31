@@ -99,9 +99,9 @@ Table Language {
   name String [not null]
   category Int [not null, default: 0]
   countries LanguagesInCountries [not null]
+  countryNames CountryName [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
-  CountryName CountryName [not null]
 }
 
 Table LanguagesInCountries {
@@ -235,8 +235,8 @@ Table UnitedStatesCongress {
   endDate DateTime
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
-  UnitedStatesCongressMember UnitedStatesCongressMember [not null]
-  UnitedStatesCongressCommittee UnitedStatesCongressCommittee [not null]
+  members UnitedStatesCongressMember [not null]
+  committees UnitedStatesCongressCommittee [not null]
   UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses [not null]
 }
 
@@ -253,7 +253,7 @@ Table UnitedStatesCongressMember {
   UnitedStatesCongress UnitedStatesCongress
   unitedStatesCongressCongress Int
   UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses [not null]
-  UnitedStatesCongressCommittee UnitedStatesCongressCommittee [not null]
+  committees UnitedStatesCongressCommittee [not null]
 }
 
 Table UnitedStatesCongressMembersInCongresses {

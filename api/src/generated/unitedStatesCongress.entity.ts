@@ -12,7 +12,7 @@ export class UnitedStatesCongressDto {
   endDate: Date | null;
   createdAt: Date | null;
   updatedAt: Date | null;
-  UnitedStatesCongressMember?: UnitedStatesCongressMemberDto[];
-  UnitedStatesCongressCommittee?: UnitedStatesCongressCommitteeDto[];
+  members?: UnitedStatesCongressMemberDto[];
+  committees?: UnitedStatesCongressCommitteeDto[];
   UnitedStatesCongressMembersInCongresses?: UnitedStatesCongressMembersInCongressesDto[];
 }

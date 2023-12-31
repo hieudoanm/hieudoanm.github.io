@@ -6,7 +6,7 @@ export class LanguageDto {
   name: string;
   category: number;
   countries?: LanguagesInCountriesDto[];
+  countryNames?: CountryNameDto[];
   createdAt: Date | null;
   updatedAt: Date | null;
-  CountryName?: CountryNameDto[];
 }

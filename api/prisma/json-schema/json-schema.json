@@ -446,6 +446,12 @@
             "$ref": "#/definitions/LanguagesInCountries"
           }
         },
+        "countryNames": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CountryName"
+          }
+        },
         "createdAt": {
           "type": [
             "string",
@@ -459,12 +465,6 @@
             "null"
           ],
           "format": "date-time"
-        },
-        "CountryName": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/CountryName"
-          }
         }
       }
     },
@@ -1048,13 +1048,13 @@
           ],
           "format": "date-time"
         },
-        "UnitedStatesCongressMember": {
+        "members": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/UnitedStatesCongressMember"
           }
         },
-        "UnitedStatesCongressCommittee": {
+        "committees": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/UnitedStatesCongressCommittee"
@@ -1147,7 +1147,7 @@
             "$ref": "#/definitions/UnitedStatesCongressMembersInCongresses"
           }
         },
-        "UnitedStatesCongressCommittee": {
+        "committees": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/UnitedStatesCongressCommittee"

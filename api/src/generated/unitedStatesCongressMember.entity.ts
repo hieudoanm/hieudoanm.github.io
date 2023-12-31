@@ -15,5 +15,5 @@ export class UnitedStatesCongressMemberDto {
   UnitedStatesCongress?: UnitedStatesCongressDto | null;
   unitedStatesCongressCongress: number | null;
   UnitedStatesCongressMembersInCongresses?: UnitedStatesCongressMembersInCongressesDto[];
-  UnitedStatesCongressCommittee?: UnitedStatesCongressCommitteeDto[];
+  committees?: UnitedStatesCongressCommitteeDto[];
 }

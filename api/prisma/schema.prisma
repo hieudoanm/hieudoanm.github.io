@@ -147,11 +147,11 @@ model Language {
   name     String @db.VarChar(255)
   category Int    @default(0)
 
-  countries LanguagesInCountries[]
+  countries    LanguagesInCountries[]
+  countryNames CountryName[]
 
-  createdAt   DateTime?     @default(now()) @db.Timestamptz()
-  updatedAt   DateTime?     @default(now()) @updatedAt @db.Timestamptz()
-  CountryName CountryName[]
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 }
 
 model LanguagesInCountries {
@@ -333,8 +333,8 @@ model UnitedStatesCongress {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  UnitedStatesCongressMember              UnitedStatesCongressMember[]
-  UnitedStatesCongressCommittee           UnitedStatesCongressCommittee[]
+  members                                 UnitedStatesCongressMember[]
+  committees                              UnitedStatesCongressCommittee[]
   UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses[]
 }
 
@@ -358,7 +358,7 @@ model UnitedStatesCongressMember {
   UnitedStatesCongress                    UnitedStatesCongress?                     @relation(fields: [unitedStatesCongressCongress], references: [congress])
   unitedStatesCongressCongress            Int?
   UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses[]
-  UnitedStatesCongressCommittee           UnitedStatesCongressCommittee[]
+  committees                              UnitedStatesCongressCommittee[]
 }
 
 model UnitedStatesCongressMembersInCongresses {
