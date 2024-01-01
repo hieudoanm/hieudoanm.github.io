@@ -14,7 +14,8 @@
     "dev:webpack": "webpack --progress --watch",
     "start": "node ./dist/main",
     "build": "webpack --mode=production",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {
     "@apollo/server": "4.9.5",
