@@ -28,6 +28,8 @@
   "workspaces": [
     "api",
     "data",
+    "frontend/graphql",
+    "frontend/web",
     "web"
   ]
 }
