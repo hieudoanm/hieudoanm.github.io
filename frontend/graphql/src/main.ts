@@ -1,15 +1,21 @@
 import { ApolloServer, ApolloServerPlugin } from '@apollo/server';
+import { expressMiddleware } from '@apollo/server/express4';
 import {
   ApolloServerPluginLandingPageLocalDefault,
   ApolloServerPluginLandingPageProductionDefault,
 } from '@apollo/server/plugin/landingPage/default';
-import { startStandaloneServer } from '@apollo/server/standalone';
-import { GraphQLSchema } from 'graphql';
+import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
+import cors from 'cors';
+import http from 'http';
 import { NODE_ENV, PORT } from './common/environments/environments';
 import { logger } from './common/libs/logger/logger';
 import { schema } from './graphql/graphql.schema';
+import express from 'express';
 
-const main = async ({ schema }: { schema: GraphQLSchema }) => {
+const main = async () => {
+  const app = express();
+  const httpServer = http.createServer(app);
+  // Apollo Server
   const landingPage: ApolloServerPlugin =
     NODE_ENV === 'production'
       ? ApolloServerPluginLandingPageProductionDefault({ footer: false })
@@ -17,13 +23,26 @@ const main = async ({ schema }: { schema: GraphQLSchema }) => {
   const server = new ApolloServer({
     schema,
     introspection: true,
-    plugins: [landingPage],
+    plugins: [landingPage, ApolloServerPluginDrainHttpServer({ httpServer })],
   });
+  await server.start();
+  // GraphQL
+  app.use(
+    '/graphql',
+    cors<cors.CorsRequest>(),
+    express.json(),
+    expressMiddleware(server)
+  );
 
   const port: number = Number.parseInt(PORT, 10);
-  const { url } = await startStandaloneServer(server, { listen: { port } });
-
-  logger.info(`🚀 GraphQL is ready at ${url}`);
+  await new Promise<void>((resolve) => httpServer.listen({ port }, resolve));
+  logger.info(`🚀 GraphQL is listening on port ${port}`);
 };
 
-main({ schema }).catch(logger.error);
+main().catch(console.error);
+
+process.on('uncaughtException', (error) =>
+  logger.error(`uncaughtException ${error}`)
+);
+
+process.on('warning', (error) => logger.warn(`warning ${error}`));

@@ -1,4 +1,7 @@
 import pino from 'pino';
 import pretty from 'pino-pretty';
+import { LOG_LEVEL } from '../../environments/environments';
 
-export const logger = pino(pretty());
+const stream = pretty({ colorize: true });
+
+export const logger = pino({ level: LOG_LEVEL }, stream);

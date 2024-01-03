@@ -7,11 +7,15 @@
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
   "private": true,
+  "engines": {
+    "node": "20.10.0"
+  },
   "scripts": {
     "prebuild": "rimraf dist && (yarn docs || true)",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
+    "dev": "yarn start:dev",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",

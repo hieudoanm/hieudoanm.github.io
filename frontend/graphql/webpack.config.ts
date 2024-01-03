@@ -1,7 +1,8 @@
 import path from 'path';
 import nodeExternals from 'webpack-node-externals';
 
-const isProduction: boolean = process.env.NODE_ENV == 'production';
+const NODE_ENV: string = process.env.NODE_ENV ?? 'development';
+const isProduction: boolean = NODE_ENV == 'production';
 const mode: string = isProduction ? 'production' : 'development';
 
 export default {
@@ -36,10 +37,5 @@ export default {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
-  },
-  devServer: {
-    static: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 4000,
   },
 };

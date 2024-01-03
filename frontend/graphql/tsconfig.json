@@ -109,6 +109,6 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "files": ["src/graphql/graphql.types.d.ts"],
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "./**/*.graphql"],
   "exclude": ["node_modules"]
 }

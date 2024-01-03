@@ -1,0 +1,11 @@
+type Query {
+  chess: Chess
+}
+
+type Chess {
+  player(username: String!): ChessPlayer
+}
+
+type ChessPlayer {
+  id: String
+}

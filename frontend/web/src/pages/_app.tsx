@@ -1,6 +1,8 @@
-import '@hieudoanm/styles/globals.css';
+import '@hieudoanm/styles/globals.scss';
 import type { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }: AppProps) {
+const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />;
-}
+};
+
+export default App;
