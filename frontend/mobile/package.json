@@ -1,0 +1,33 @@
+{
+  "name": "@hieudoanm/mobile",
+  "version": "0.0.1",
+  "description": "hieudoanm - mobile",
+  "main": "node_modules/expo/AppEntry.js",
+  "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier . --write",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "49.0.21",
+    "expo-status-bar": "1.7.1",
+    "react": "18.2.0",
+    "react-native": "0.73.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.23.7",
+    "@types/node": "20.10.6",
+    "@typescript-eslint/eslint-plugin": "6.17.0",
+    "@typescript-eslint/parser": "6.17.0",
+    "eslint": "8.56.0",
+    "eslint-plugin-react": "7.33.2",
+    "ts-node": "10.9.2",
+    "typescript": "5.3.3"
+  }
+}

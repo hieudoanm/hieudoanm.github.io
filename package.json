@@ -26,9 +26,10 @@
     "undici": "6.2.1"
   },
   "workspaces": [
-    "api",
-    "data",
+    "backend/api",
+    "backend/data",
     "frontend/graphql",
+    "frontend/mobile",
     "frontend/web",
     "web"
   ]

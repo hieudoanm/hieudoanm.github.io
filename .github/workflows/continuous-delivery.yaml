@@ -7,7 +7,17 @@ on:
 
 jobs:
   continuous-delivery:
-    name: Continuous Delivery
+    strategy:
+      fail-fast: false
+      matrix:
+        services:
+          - name: Back-end - API
+            working-directory: backend/api
+          - name: Front-end - GraphQL
+            working-directory: frontend/graphql
+          - name: Front-end - Web
+            working-directory: frontend/web
+    name: Continuous Integration
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,20 +28,13 @@ jobs:
           node-version: '20.1.0'
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
-        working-directory: web
+        working-directory: ${{ matrix.services.working-directory }}
       - name: Linting
         run: yarn lint --fix
-        working-directory: web
+        working-directory: ${{ matrix.services.working-directory }}
       - name: Unit Tests
         run: yarn test -u
-        working-directory: web
+        working-directory: ${{ matrix.services.working-directory }}
       - name: Build Production
         run: yarn build
-        working-directory: web
-      - name: Deploy GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
-        with:
-          token: ${{ secrets.GHP_TOKEN }}
-          branch: gh-pages
-          folder: web/public
-          clean: true
+        working-directory: ${{ matrix.services.working-directory }}

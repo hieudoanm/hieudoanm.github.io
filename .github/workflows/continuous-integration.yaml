@@ -15,10 +15,12 @@ jobs:
       fail-fast: false
       matrix:
         services:
-          - name: API
-            working-directory: api
-          - name: Web
-            working-directory: web
+          - name: Back-end - API
+            working-directory: backend/api
+          - name: Front-end - GraphQL
+            working-directory: frontend/graphql
+          - name: Front-end - Web
+            working-directory: frontend/web
     name: Continuous Integration
     runs-on: ubuntu-latest
     steps:
