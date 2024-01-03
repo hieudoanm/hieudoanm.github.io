@@ -30,12 +30,8 @@ export class TitledRepository {
       this.prismaService.chessPlayer.count({ where }),
       this.prismaService.chessPlayer.findMany({
         where,
-        orderBy: [
-          { statsBulletRatingLast: 'desc' },
-          { statsBlitzRatingLast: 'desc' },
-          { statsRapidRatingLast: 'desc' },
-          { username: 'asc' },
-        ],
+        include: { stats: true },
+        orderBy: [{ username: 'asc' }],
       }),
     ]);
     return {

@@ -12,10 +12,9 @@ export class OpeningsController {
   @ApiResponse({ status: 200, type: OpeningsResponseDto })
   public async getOpenings(
     @Query('eco') eco: string = '',
-    @Query('name') name: string = '',
-    @Query('firstMove') firstMove: string = ''
+    @Query('name') name: string = ''
   ): Promise<OpeningsResponseDto> {
-    return this.openingsRepository.getOpenings({ eco, name, firstMove });
+    return this.openingsRepository.getOpenings({ eco, name });
   }
 
   @Get('ecos')

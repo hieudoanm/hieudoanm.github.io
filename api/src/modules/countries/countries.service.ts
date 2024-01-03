@@ -53,7 +53,7 @@ export class CountriesService {
         region,
         subregion,
         timezones: timezone ? { has: timezone } : undefined,
-        name: name ? { path: ['official'], string_contains: name } : undefined,
+        name: name ? name : undefined,
       };
       this.logger.log('getCountriesFromDB where', where);
       const countries = await this.prismaService.country.findMany({

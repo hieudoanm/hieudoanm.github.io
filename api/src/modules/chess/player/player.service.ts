@@ -1,5 +1,11 @@
-import { Injectable } from '@nestjs/common';
-import { ChessTitle, League, Prisma, Status } from '@prisma/client';
+import { Injectable, Logger } from '@nestjs/common';
+import {
+  ChessTimeClass,
+  ChessTitle,
+  League,
+  Prisma,
+  Status,
+} from '@prisma/client';
 import axios from 'axios';
 import { ChessClient } from '../../../common/clients/apis/chess.com/chess.client';
 import {
@@ -11,6 +17,8 @@ import { ChessPlayerDto } from '../../../generated/chessPlayer.entity';
 
 @Injectable()
 export class PlayerService {
+  private readonly logger = new Logger(PlayerService.name);
+
   constructor(
     private readonly chessClient: ChessClient,
     private readonly prismaService: PrismaService
@@ -25,7 +33,74 @@ export class PlayerService {
     return this.syncPlayer(username);
   }
 
-  private mapStats(stats: ChessStats) {
+  private async mapPlayer(chessPlayer: ChessPlayer, archives: string[]) {
+    const {
+      avatar = '',
+      username = '',
+      player_id: playerId = 0,
+      name = '',
+      title = '',
+      followers = 0,
+      country: countryUrl = '',
+      location = '',
+      last_online: lastOnline = 0,
+      joined = 0,
+      status = '',
+      is_streamer: isStreamer = false,
+      twitch_url: twitchUrl = '',
+      verified = false,
+      league = '',
+    } = chessPlayer;
+    const {
+      data: { name: country = '', code: countryCode = '' },
+    } = await axios.get<{
+      name: string;
+      code: string;
+    }>(countryUrl);
+    const d = new Date();
+    const lastOnlineDate: Date = new Date(lastOnline * 1000);
+    const joinedDate: Date = new Date(joined * 1000);
+    return {
+      id: playerId,
+      avatar,
+      name,
+      username,
+      followers,
+      location,
+      country,
+      countryCode,
+      lastOnline: lastOnlineDate,
+      joined: joinedDate,
+      isStreamer,
+      verified,
+      twitchUrl,
+      status: status as Status,
+      title: title ? (title as ChessTitle) : null,
+      league: league ? (league as League) : null,
+      archives: archives.map((archive) =>
+        archive.split('/').slice(-2).join('/')
+      ),
+      createdAt: d,
+      updatedAt: d,
+    };
+  }
+
+  private async syncProfile(username: string) {
+    const chessPlayer: ChessPlayer =
+      await this.chessClient.getChessPlayer(username);
+    const archives: string[] =
+      await this.chessClient.getChessArchives(username);
+    archives.sort((a, b) => (a < b ? 1 : -1));
+    const player = await this.mapPlayer(chessPlayer, archives);
+
+    return this.prismaService.chessPlayer.upsert({
+      create: player,
+      update: player,
+      where: { id: player.id },
+    });
+  }
+
+  private mapStats(stats: ChessStats, id: number) {
     const {
       chess_daily: {
         last: {
@@ -100,113 +175,81 @@ export class PlayerService {
         record: { win: 0, draw: 0, loss: 0 },
       },
     } = stats;
-    return {
-      // Daily
-      statsDailyRatingBest,
-      statsDailyRatingLast,
-      statsDailyRatingDeviation,
-      statsDailyRecordWin,
-      statsDailyRecordDraw,
-      statsDailyRecordLoss,
-      // Rapid
-      statsRapidRatingBest,
-      statsRapidRatingLast,
-      statsRapidRatingDeviation,
-      statsRapidRecordWin,
-      statsRapidRecordDraw,
-      statsRapidRecordLoss,
-      // Blitz
-      statsBlitzRatingBest,
-      statsBlitzRatingLast,
-      statsBlitzRatingDeviation,
-      statsBlitzRecordWin,
-      statsBlitzRecordDraw,
-      statsBlitzRecordLoss,
-      // Bullt
-      statsBulletRatingBest,
-      statsBulletRatingLast,
-      statsBulletRatingDeviation,
-      statsBulletRecordWin,
-      statsBulletRecordDraw,
-      statsBulletRecordLoss,
-    };
-  }
-
-  private async mapPlayer(
-    chessPlayer: ChessPlayer,
-    stats: ChessStats,
-    archives: string[]
-  ): Promise<ChessPlayerDto> {
-    const {
-      avatar = '',
-      username = '',
-      player_id: playerId = 0,
-      name = '',
-      title = '',
-      followers = 0,
-      country: countryUrl = '',
-      location = '',
-      last_online: lastOnline = 0,
-      joined = 0,
-      status = '',
-      is_streamer: isStreamer = false,
-      twitch_url: twitchUrl = '',
-      verified = false,
-      league = '',
-    } = chessPlayer;
-    const {
-      data: { name: country = '', code: countryCode = '' },
-    } = await axios.get<{
-      name: string;
-      code: string;
-    }>(countryUrl);
-    const chessStats = this.mapStats(stats);
     const d = new Date();
-    const lastOnlineDate: Date = new Date(lastOnline * 1000);
-    const joinedDate: Date = new Date(joined * 1000);
-    return {
-      ...chessStats,
-      id: playerId,
-      avatar,
-      name,
-      username,
-      followers,
-      location,
-      country,
-      countryCode,
-      lastOnline: lastOnlineDate,
-      joined: joinedDate,
-      isStreamer,
-      verified,
-      twitchUrl,
-      status: status as Status,
-      title: title ? (title as ChessTitle) : null,
-      league: league ? (league as League) : null,
-      archives: archives.map((archive) =>
-        archive.split('/').slice(-2).join('/')
-      ),
-      createdAt: d,
-      updatedAt: d,
-    };
+    return [
+      {
+        playerId: id,
+        timeClass: ChessTimeClass.daily,
+        best: statsDailyRatingBest,
+        last: statsDailyRatingLast,
+        deviation: statsDailyRatingDeviation,
+        win: statsDailyRecordWin,
+        draw: statsDailyRecordDraw,
+        loss: statsDailyRecordLoss,
+        createdAt: d,
+        updatedAt: d,
+      },
+      {
+        playerId: id,
+        timeClass: ChessTimeClass.rapid,
+        best: statsRapidRatingBest,
+        last: statsRapidRatingLast,
+        deviation: statsRapidRatingDeviation,
+        win: statsRapidRecordWin,
+        draw: statsRapidRecordDraw,
+        loss: statsRapidRecordLoss,
+        createdAt: d,
+        updatedAt: d,
+      },
+      {
+        playerId: id,
+        timeClass: ChessTimeClass.blitz,
+        best: statsBlitzRatingBest,
+        last: statsBlitzRatingLast,
+        deviation: statsBlitzRatingDeviation,
+        win: statsBlitzRecordWin,
+        draw: statsBlitzRecordDraw,
+        loss: statsBlitzRecordLoss,
+        createdAt: d,
+        updatedAt: d,
+      },
+      {
+        playerId: id,
+        timeClass: ChessTimeClass.bullet,
+        best: statsBulletRatingBest,
+        last: statsBulletRatingLast,
+        deviation: statsBulletRatingDeviation,
+        win: statsBulletRecordWin,
+        draw: statsBulletRecordDraw,
+        loss: statsBulletRecordLoss,
+        createdAt: d,
+        updatedAt: d,
+      },
+    ];
   }
 
-  public async syncPlayer(username: string): Promise<ChessPlayerDto> {
-    const chessPlayer: ChessPlayer =
-      await this.chessClient.getChessPlayer(username);
+  private async syncStats(username: string, id: number): Promise<number> {
     const stats: ChessStats = await this.chessClient.getChessStats(username);
-    const archives: string[] =
-      await this.chessClient.getChessArchives(username);
-    archives.sort((a, b) => (a < b ? 1 : -1));
-    const player: ChessPlayerDto = await this.mapPlayer(
-      chessPlayer,
-      stats,
-      archives
-    );
-    const upsertArguments = {
-      create: player,
-      update: player,
-      where: { username },
-    };
-    return this.prismaService.chessPlayer.upsert(upsertArguments);
+    const playerStats = this.mapStats(stats, id);
+    for (const timeClassStats of playerStats) {
+      await this.prismaService.chessStats.upsert({
+        create: timeClassStats,
+        update: timeClassStats,
+        where: {
+          playerId_timeClass: {
+            playerId: id,
+            timeClass: timeClassStats.timeClass,
+          },
+        },
+      });
+    }
+    return id;
+  }
+
+  public async syncPlayer(username: string) {
+    const player = await this.syncProfile(username);
+    const id: number = await this.syncStats(username, player.id);
+    this.logger.log(`id=${id}`);
+    return player;
   }
 }

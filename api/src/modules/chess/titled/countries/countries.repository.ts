@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { ChessTimeClass, Prisma } from '@prisma/client';
 import { CountriesResponseDto, CountryResponseDto } from './countries.dto';
 import { PrismaService } from '../../../../common/prisma/prisma.service';
 
@@ -25,57 +25,74 @@ ORDER BY total DESC, p."country" ASC;`;
       total = 0,
       players = [],
       {
-        _avg: { statsRapidRatingLast: averageRapidRating = 0 },
+        _avg: { last: averageRapidRating = 0 },
       },
       {
-        _avg: { statsBlitzRatingLast: averageBlitzRating = 0 },
+        _avg: { last: averageBlitzRating = 0 },
       },
       {
-        _avg: { statsBulletRatingLast: averageBulletRating = 0 },
+        _avg: { last: averageBulletRating = 0 },
       },
       {
-        _max: { statsRapidRatingLast: maxRapidRating = 0 },
+        _max: { last: maxRapidRating = 0 },
       },
       {
-        _max: { statsBlitzRatingLast: maxBlitzRating = 0 },
+        _max: { last: maxBlitzRating = 0 },
       },
       {
-        _max: { statsBulletRatingLast: maxBulletRating = 0 },
+        _max: { last: maxBulletRating = 0 },
       },
       titles = [],
     ] = await this.prismaService.$transaction([
       this.prismaService.chessPlayer.count({ where }),
-      this.prismaService.chessPlayer.findMany({
-        where,
-        orderBy: [
-          { statsBulletRatingLast: 'desc' },
-          { statsBlitzRatingLast: 'desc' },
-          { statsRapidRatingLast: 'desc' },
-        ],
+      this.prismaService.chessPlayer.findMany({ where }),
+      this.prismaService.chessStats.aggregate({
+        _avg: { last: true },
+        where: {
+          ...where,
+          timeClass: ChessTimeClass.rapid,
+          last: { gt: 0 },
+        },
       }),
-      this.prismaService.chessPlayer.aggregate({
-        _avg: { statsRapidRatingLast: true },
-        where: { ...where, statsRapidRatingLast: { gt: 0 } },
+      this.prismaService.chessStats.aggregate({
+        _avg: { last: true },
+        where: {
+          ...where,
+          timeClass: ChessTimeClass.blitz,
+          last: { gt: 0 },
+        },
       }),
-      this.prismaService.chessPlayer.aggregate({
-        _avg: { statsBlitzRatingLast: true },
-        where: { ...where, statsBlitzRatingLast: { gt: 0 } },
+      this.prismaService.chessStats.aggregate({
+        _avg: { last: true },
+        where: {
+          ...where,
+          timeClass: ChessTimeClass.bullet,
+          last: { gt: 0 },
+        },
       }),
-      this.prismaService.chessPlayer.aggregate({
-        _avg: { statsBulletRatingLast: true },
-        where: { ...where, statsBulletRatingLast: { gt: 0 } },
+      this.prismaService.chessStats.aggregate({
+        _max: { last: true },
+        where: {
+          ...where,
+          timeClass: ChessTimeClass.rapid,
+          last: { gt: 0 },
+        },
       }),
-      this.prismaService.chessPlayer.aggregate({
-        _max: { statsRapidRatingLast: true },
-        where: { ...where, statsRapidRatingLast: { gt: 0 } },
+      this.prismaService.chessStats.aggregate({
+        _max: { last: true },
+        where: {
+          ...where,
+          timeClass: ChessTimeClass.blitz,
+          last: { gt: 0 },
+        },
       }),
-      this.prismaService.chessPlayer.aggregate({
-        _max: { statsBlitzRatingLast: true },
-        where: { ...where, statsBlitzRatingLast: { gt: 0 } },
-      }),
-      this.prismaService.chessPlayer.aggregate({
-        _max: { statsBulletRatingLast: true },
-        where: { ...where, statsBulletRatingLast: { gt: 0 } },
+      this.prismaService.chessStats.aggregate({
+        _max: { last: true },
+        where: {
+          ...where,
+          timeClass: ChessTimeClass.bullet,
+          last: { gt: 0 },
+        },
       }),
       // this.prismaService.chessPlayer.groupBy({
       //   where,

@@ -20,14 +20,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "firstMove",
-            "required": true,
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {

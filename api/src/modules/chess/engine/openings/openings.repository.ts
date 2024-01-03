@@ -11,18 +11,13 @@ export class OpeningsRepository {
   public async getOpenings({
     eco = '',
     name = '',
-    firstMove = '',
   }: {
     eco: string;
     name: string;
-    firstMove: string;
   }): Promise<OpeningsResponseDto> {
     let where: Prisma.ChessOpeningWhereInput = {};
     if (eco !== '') {
       where = { ...where, eco };
-    }
-    if (firstMove !== '') {
-      where = { ...where, firstMove };
     }
     if (name !== '') {
       where = { ...where, name: { contains: name, mode: 'insensitive' } };
@@ -31,12 +26,7 @@ export class OpeningsRepository {
       this.prismaService.chessOpening.count({ where }),
       this.prismaService.chessOpening.findMany({
         where,
-        orderBy: [
-          { centipawn: 'asc' },
-          { eco: 'asc' },
-          { name: 'asc' },
-          { firstMove: 'asc' },
-        ],
+        orderBy: [{ eco: 'asc' }, { name: 'asc' }],
       }),
     ]);
     return { total, openings };
