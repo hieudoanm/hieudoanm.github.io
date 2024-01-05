@@ -2,7 +2,7 @@ import Pomodoro from '@hieudoanm/components/Pomodoro';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const PomodoroPage: React.FC = () => {
+export const PomodoroPage: React.FC = () => {
   return (
     <>
       <Helmet>
