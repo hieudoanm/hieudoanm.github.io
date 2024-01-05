@@ -113,6 +113,7 @@ const metadata = {
           title: 'Node.js Developer',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend leo ut vehicula placerat. In condimentum quam non dolor semper.',
+          image: '',
         },
         {
           id: 'ft',
@@ -120,6 +121,7 @@ const metadata = {
           title: 'Fintech Focus',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend leo ut vehicula placerat. In condimentum quam non dolor semper.',
+          image: '',
         },
         {
           id: 'ff',
@@ -127,6 +129,7 @@ const metadata = {
           title: 'Football Fan',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend leo ut vehicula placerat. In condimentum quam non dolor semper.',
+          image: '',
         },
         {
           id: 'ml',
@@ -134,6 +137,7 @@ const metadata = {
           title: 'M.L. Enthusiastist',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend leo ut vehicula placerat. In condimentum quam non dolor semper.',
+          image: '',
         },
       ],
     },
@@ -182,21 +186,25 @@ const metadata = {
           value: (2022 - 2015 + 1).toString(),
           title: 'Years',
           subtitle: 'of Experiences',
+          id: '',
         },
         {
           value: '4',
           title: 'Projects',
           subtitle: 'Vietnam - V.League - Vi',
+          id: '',
         },
         {
           value: '3',
           title: 'Programming Languages',
           subtitle: 'TypeScript - Python - Golang',
+          id: '',
         },
         {
           value: '2',
           title: 'Foreign Languages',
           subtitle: 'English - Korean',
+          id: '',
         },
       ],
     },
@@ -206,6 +214,7 @@ const metadata = {
       subtitle: 'Programming Languages - Frameworks - Libraries',
       team: [
         {
+          id: '',
           image:
             'https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/development/front-end-framework/react.svg',
           title: 'React',
@@ -213,6 +222,7 @@ const metadata = {
           homepage: 'https://reactjs.org/',
         },
         {
+          id: '',
           image:
             'https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/development/runtime/node.js.svg',
           title: 'Node.js',
@@ -220,6 +230,7 @@ const metadata = {
           homepage: 'https://nodejs.org/en/',
         },
         {
+          id: '',
           image:
             'https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/development/version-control/git.svg',
           title: 'Git',
@@ -227,6 +238,7 @@ const metadata = {
           homepage: 'https://git-scm.com/',
         },
         {
+          id: '',
           image:
             'https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/big-tech/amazon/aws.svg',
           title: 'AWS',

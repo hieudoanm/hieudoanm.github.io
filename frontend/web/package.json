@@ -11,7 +11,7 @@
     "node": "20.10.0"
   },
   "scripts": {
-    "prebuild": "rimraf .next",
+    "prebuild": "rimraf .next out",
     "format": "prettier . --write",
     "dev": "next dev",
     "build": "next build",

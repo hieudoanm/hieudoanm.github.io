@@ -34,7 +34,6 @@
     "backend/data",
     "frontend/graphql",
     "frontend/mobile",
-    "frontend/web",
-    "web"
+    "frontend/web"
   ]
 }
