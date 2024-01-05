@@ -1,3 +1,4 @@
+// Weekday
 export const DAYS: string[] = [
   'Sunday',
   'Monday',

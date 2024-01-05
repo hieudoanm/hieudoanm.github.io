@@ -28,8 +28,8 @@ import {
 import React, { FormEvent, useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Helmet } from 'react-helmet';
-import Container from '../../../components/atoms/Container';
-import countries from '../../../json/hofstede.json';
+import countries from '@hieudoanm/json/hofstede.json';
+import Container from '@hieudoanm/components/Container';
 
 const TEXT_GREEN = 'text-green-500';
 const TEXT_RED = 'text-red-500';

@@ -1,6 +1,6 @@
+import Calendar from '@hieudoanm/components/Calendar';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Calendar } from '../../../components/organisms/Calendar';
 
 export const CalendarPage: React.FC = () => {
   return (

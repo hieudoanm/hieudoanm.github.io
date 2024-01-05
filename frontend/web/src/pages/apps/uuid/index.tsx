@@ -1,9 +1,9 @@
 import { Icon, IconButton, Input, InputGroup } from '@chakra-ui/react';
+import Container from '@hieudoanm/components/Container';
 import React, { useState } from 'react';
-import { v4 } from 'uuid';
-import Container from '../../../components/atoms/Container';
 import { Helmet } from 'react-helmet';
 import { FaSpinner } from 'react-icons/fa';
+import { v4 } from 'uuid';
 
 export const UuidPage: React.FC = () => {
   const [uuid, setUuid] = useState(v4());

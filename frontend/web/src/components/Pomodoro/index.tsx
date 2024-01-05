@@ -1,7 +1,7 @@
 import { Box, Icon, IconButton, Text } from '@chakra-ui/react';
+import { addZero } from '@hieudoanm/utils/add-zero';
 import React, { useEffect, useState } from 'react';
 import { FaCirclePause, FaCirclePlay, FaCircleStop } from 'react-icons/fa6';
-import { addZero } from '../../../utils/add-zero';
 
 const REST_STATUS: string = 'REST';
 const WORK_STATUS: string = 'WORK';

@@ -9,9 +9,9 @@ import {
   ListItem,
   Text,
 } from '@chakra-ui/react';
+import { log } from '@hieudoanm/common/log';
+import Container from '@hieudoanm/components/Container';
 import React, { useEffect, useState } from 'react';
-import { log } from '../../../libs/log';
-import Container from '../../../components/atoms/Container';
 import { Helmet } from 'react-helmet';
 
 type Status = { name: string; page: string; status: boolean };
@@ -138,7 +138,7 @@ const StatusPage: React.FC = () => {
       setLoading(false);
     };
     getStatusesAsync();
-  }, []);
+  }, [getStatuses]);
 
   return (
     <>

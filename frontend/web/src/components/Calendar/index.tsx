@@ -8,7 +8,6 @@ import {
   Select,
   Text,
 } from '@chakra-ui/react';
-import React, { ChangeEvent, useState } from 'react';
 import {
   DAYS,
   END_DATES,
@@ -17,7 +16,8 @@ import {
   MEDIUM_DAYS,
   MONTHS,
   SMALL_DAYS,
-} from '../../../constants';
+} from '@hieudoanm/constants';
+import React, { ChangeEvent, useState } from 'react';
 
 type YearMonthDate = {
   year: number;
@@ -36,7 +36,9 @@ const getDates = (year: number, month: number): YearMonthDate[] => {
     month === 1 && isLeapYear(year) ? 29 : END_DATES[`${month}`];
   const endD: Date = new Date(year, month, endDate);
   const endDay: number = endD.getDay();
-  const dates: YearMonthDate[] = [...Array.from({ length: endDate }).keys()]
+  const dates: YearMonthDate[] = [
+    ...Array.from<number>({ length: endDate }).keys(),
+  ]
     .map((date: number) => date + 1)
     .map((date: number) => ({ year, month, date, current: 'current' }));
   const previousMonth: number = month - 1 < 0 ? 11 : month - 1;

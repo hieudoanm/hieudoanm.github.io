@@ -1,7 +1,7 @@
 import { List, ListItem, Text } from '@chakra-ui/react';
+import Container from '@hieudoanm/components/Container';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Container from '../../../components/atoms/Container';
 
 type City = { id: string; name: string; timeZone: number };
 
