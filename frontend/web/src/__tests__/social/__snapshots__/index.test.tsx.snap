@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomePage render default 1`] = `
+exports[`SocialPage render default 1`] = `
 <div>
   <div
     class="h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"
