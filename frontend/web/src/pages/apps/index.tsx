@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa6';
 import { FaIdBadge } from 'react-icons/fa';
 import Container from '@hieudoanm/components/Container';
-import { APP_NAME } from '@hieudoanm/constants';
+import { APP_NAME } from '@hieudoanm/constants/time.constants';
 import Link from 'next/link';
 
 export const AppsPage: React.FC = () => {

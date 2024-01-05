@@ -1,6 +1,7 @@
 import { Box, Button, Icon } from '@chakra-ui/react';
-import { Link, graphql } from 'gatsby';
-import React from 'react';
+import metadata from '@hieudoanm/configs/metadata';
+import { NextPage } from 'next';
+import Link from 'next/link';
 import { Helmet } from 'react-helmet';
 import {
   FaComment,
@@ -13,22 +14,6 @@ import {
   FaUser,
 } from 'react-icons/fa';
 
-export type SocialPageProperties = {
-  data: {
-    site: {
-      siteMetadata: {
-        profiles: {
-          auth: boolean;
-          icon: string;
-          href: string;
-          title: string;
-        }[];
-      };
-    };
-  };
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const icons: Record<string, any> = {
   email: FaEnvelope,
   linkedin: FaLinkedin,
@@ -39,8 +24,8 @@ const icons: Record<string, any> = {
   facebook: FaFacebookSquare,
 };
 
-const SocialPage: React.FC<SocialPageProperties> = ({ data }) => {
-  const profiles = data.site.siteMetadata.profiles || [];
+const SocialPage: NextPage = () => {
+  const { profiles = [] } = metadata;
 
   return (
     <>
@@ -73,7 +58,7 @@ const SocialPage: React.FC<SocialPageProperties> = ({ data }) => {
                     <h1 className="text-4xl uppercase text-white">HIEU DOAN</h1>
                   </div>
                   <div className="w-full">
-                    <Link to="/about">
+                    <Link href="/about">
                       <div className="flex items-center gap-x-4">
                         <Box className="flex aspect-square items-center rounded-lg bg-white p-3">
                           <Icon as={FaUser} />
@@ -116,20 +101,5 @@ const SocialPage: React.FC<SocialPageProperties> = ({ data }) => {
     </>
   );
 };
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        profiles {
-          auth
-          icon
-          href
-          title
-        }
-      }
-    }
-  }
-`;
 
 export default SocialPage;

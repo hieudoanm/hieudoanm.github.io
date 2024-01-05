@@ -1,4 +1,4 @@
-import { FIRST_YEAR } from '..';
+import { FIRST_YEAR } from '../time.constants';
 
 describe('constants', () => {
   it('FIRST_YEAR', () => {
