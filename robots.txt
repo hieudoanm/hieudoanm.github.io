@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://hieudoanm.github.io/sitemap-index.xml
-Host: https://hieudoanm.github.io
