@@ -12,7 +12,7 @@ type Game = {
   url: string;
   pgn: string;
   time_control: string;
-  end_time: string;
+  end_time: number;
   rated: boolean;
   tcn: string;
   uuid: string;
@@ -52,7 +52,7 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
           pgn,
           time_control: timeControl,
           time_class: timeClass,
-          end_time,
+          end_time: endTime,
           rated,
           tcn,
           initial_setup: initialSetup,
@@ -83,7 +83,7 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
           pgn,
           timeControl,
           timeClass: timeClass as ChessTimeClass,
-          endTime: new Date(end_time),
+          endTime: new Date(endTime * 1000),
           rated,
           tcn,
           initialSetup,
