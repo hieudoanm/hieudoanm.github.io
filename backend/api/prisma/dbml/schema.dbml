@@ -504,7 +504,7 @@ Enum UnitedStatesCongressChamber {
 Enum ChessStatus {
   basic
   premium
-  status
+  staff
 }
 
 Enum ChessLeague {

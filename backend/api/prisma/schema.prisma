@@ -546,7 +546,7 @@ model ChessPlayer {
 enum ChessStatus {
   basic
   premium
-  status
+  staff
 
   @@schema("chess")
 }
