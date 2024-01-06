@@ -27,7 +27,8 @@
     "axios": "1.6.5",
     "glob-parent": "6.0.2",
     "graphql": "16.8.1",
-    "undici": "6.2.1"
+    "undici": "6.2.1",
+    "semver": "7.5.2"
   },
   "workspaces": [
     "backend/api",
