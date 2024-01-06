@@ -135,8 +135,6 @@ export class GamesService {
           initialSetup,
           fen,
           rules: rules as ChessVariant,
-          whiteId: '',
-          blackId: '',
           whiteUsername: lowerWhiteUsername,
           blackUsername: lowerBlackUsername,
           whiteResult: lowerWhiteResult,

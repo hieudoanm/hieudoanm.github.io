@@ -1,10 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 import {
+  ChessLeague,
+  ChessStatus,
   ChessTimeClass,
   ChessTitle,
-  League,
   Prisma,
-  Status,
 } from '@prisma/client';
 import axios from 'axios';
 import { ChessClient } from '../../../common/clients/apis/chess.com/chess.client';
@@ -74,9 +74,9 @@ export class PlayerService {
       isStreamer,
       verified,
       twitchUrl,
-      status: status as Status,
+      status: status as ChessStatus,
       title: title ? (title as ChessTitle) : null,
-      league: league ? (league as League) : null,
+      league: league ? (league as ChessLeague) : null,
       archives: archives.map((archive) =>
         archive.split('/').slice(-2).join('/')
       ),
