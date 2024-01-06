@@ -1524,7 +1524,8 @@
           "default": "basic",
           "enum": [
             "basic",
-            "premium"
+            "premium",
+            "status"
           ]
         },
         "title": {
@@ -1742,7 +1743,10 @@
             "checkmated",
             "resigned",
             "timeout",
-            "abandoned"
+            "abandoned",
+            "bughousepartnerlose",
+            "threecheck",
+            "kingofthehill"
           ]
         },
         "blackResult": {
@@ -1759,7 +1763,10 @@
             "checkmated",
             "resigned",
             "timeout",
-            "abandoned"
+            "abandoned",
+            "bughousepartnerlose",
+            "threecheck",
+            "kingofthehill"
           ]
         },
         "whiteRating": {

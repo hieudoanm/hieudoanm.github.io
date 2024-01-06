@@ -530,7 +530,7 @@ model ChessPlayer {
   verified    Boolean      @default(false)
   lastOnline  DateTime     @default(now()) @db.Timestamptz
   joined      DateTime     @default(now()) @db.Timestamptz
-  status      Status       @default(basic)
+  status      ChessStatus  @default(basic)
   title       ChessTitle?
   league      ChessLeague?
   archives    String[]     @default([])
@@ -543,9 +543,10 @@ model ChessPlayer {
   @@schema("chess")
 }
 
-enum Status {
+enum ChessStatus {
   basic
   premium
+  status
 
   @@schema("chess")
 }
@@ -648,6 +649,9 @@ enum ChessResult {
   resigned
   timeout
   abandoned
+  bughousepartnerlose
+  threecheck
+  kingofthehill
 
   @@schema("chess")
 }

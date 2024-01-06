@@ -2,7 +2,7 @@ import {
   ChessTitle,
   ChessLeague,
   PrismaClient,
-  Status,
+  ChessStatus,
   ChessTimeClass,
 } from '@prisma/client';
 import axios from 'axios';
@@ -102,7 +102,6 @@ const syncPlayer = async (
 ): Promise<string> => {
   try {
     // Archives
-    console.log(`username=${username}`);
     const archivesUrl = `${PUBLIC_URL}/player/${username}/games/archives`;
     const { data } = await axios.get<{ archives: string[] }>(archivesUrl);
     const { archives = [] } = data;
@@ -123,7 +122,17 @@ const syncPlayer = async (
       status,
       title,
       league,
+      country: countryUrl,
     } = player;
+    const {
+      data: { code: countryCode, name: country } = { code: '', name: '' },
+    } = await axios.get<{
+      code: string;
+      name: string;
+    }>(countryUrl);
+    console.info(
+      `username=${username} country=${country} countryCode=${countryCode}`
+    );
     const body = {
       name,
       id,
@@ -134,11 +143,13 @@ const syncPlayer = async (
       twitchUrl,
       isStreamer,
       verified,
-      joined: new Date(joined),
-      lastOnline: new Date(lastOnline),
-      status: status as Status,
+      country,
+      countryCode,
       title: title as ChessTitle,
       league: league as ChessLeague,
+      status: status as ChessStatus,
+      joined: new Date(joined * 1000),
+      lastOnline: new Date(lastOnline * 1000),
       archives,
     };
     await prismaClient.chessPlayer.upsert({

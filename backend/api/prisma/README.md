@@ -267,7 +267,7 @@ erDiagram
     Boolean verified
     DateTime lastOnline
     DateTime joined
-    Status status
+    ChessStatus status
     ChessTitle title "nullable"
     ChessLeague league "nullable"
     String archives

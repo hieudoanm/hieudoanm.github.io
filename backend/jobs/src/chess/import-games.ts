@@ -26,11 +26,14 @@ type Game = {
 };
 
 const getGames = async (archive: string): Promise<Game[]> => {
-  // PGN
-  console.log(`archive=${archive}`);
-  const { data } = await axios.get<{ games: Game[] }>(archive);
-  const { games = [] } = data;
-  return games;
+  try {
+    const { data } = await axios.get<{ games: Game[] }>(archive);
+    const { games = [] } = data;
+    return games;
+  } catch (error) {
+    console.error('getGames error');
+    return [];
+  }
 };
 
 const getArchives = async (prismaClient: PrismaClient, username: string) => {
@@ -39,6 +42,7 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
     const archivesUrl = `${PUBLIC_URL}/player/${username}/games/archives`;
     const { data } = await axios.get<{ archives: string[] }>(archivesUrl);
     const { archives = [] } = data;
+    archives.reverse();
     for (const archive of archives) {
       const games = await getGames(archive);
       for (const game of games) {
@@ -60,15 +64,19 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
           },
           white: {
             username: whiteUsername = '',
-            result: whiteResult = 0,
+            result: whiteResult = '',
             rating: whiteRating = 0,
-          } = { username: '', result: 0, rating: 0 },
+          } = { username: '', result: '', rating: 0 },
           black: {
             username: blackUsername = '',
-            result: blackResult = 0,
+            result: blackResult = '',
             rating: blackRating = 0,
-          } = { username: '', result: 0, rating: 0 },
+          } = { username: '', result: '', rating: 0 },
         } = game;
+        const whiteResult2: ChessResult =
+          whiteResult === '50move' ? 'fiftymove' : (whiteResult as ChessResult);
+        const blackResult2: ChessResult =
+          blackResult === '50move' ? 'fiftymove' : (blackResult as ChessResult);
         const body = {
           id,
           url,
@@ -87,19 +95,22 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
           blackUsername,
           whiteRating,
           blackRating,
-          whiteResult: whiteResult as ChessResult,
-          blackResult: blackResult as ChessResult,
+          whiteResult: whiteResult2,
+          blackResult: blackResult2,
         };
-        await prismaClient.chessGame.upsert({
-          create: body,
-          update: body,
-          where: { id },
-        });
+        try {
+          await prismaClient.chessGame.upsert({
+            create: body,
+            update: body,
+            where: { id },
+          });
+        } catch (error) {
+          console.error('chessGame.upsert error', error);
+        }
       }
     }
-    archives.reverse();
   } catch (error) {
-    console.error('error', error);
+    console.error('getArchives error');
   }
 };
 
@@ -107,17 +118,22 @@ const main = async () => {
   const prismaClient = new PrismaClient();
   const usernames = [
     'azerichess', // Shakhriyar Mamedyarov
-    'danielnaroditsky',
-    'fabianocaruana',
-    'firouzja2003',
+    'chesswarrior7197', // Nodirbek Abdusattorov
+    'danielnaroditsky', // Daniel Naroditsky
+    'duhless', // Daniil Dubov
+    'fabianocaruana', // Fabiano Caruana
+    'firouzja2003', // Alireza Firouzja
     'gmwso', // Wesley So
-    'hikaru',
-    'levonaronian',
-    'liemle',
+    'grischuk', // Alexander Grischuk
+    'hikaru', // Hikaru Nakamura
+    'levonaronian', // Levon Aronian
+    'liemle', // Liem Le
     'lyonbeast', // MVL
-    'magnuscarlsen',
+    'magnuscarlsen', // Magnus Carlsen
     'thedarkknighttrilogy',
-    'wonderfultime', // Le Minh Tuan
+    'thevish', // Viswanathan Anand
+    'sergeykarjakin', // Sergey Karjakin
+    'wonderfultime', // Tuan Minh Le
   ];
   console.log(usernames.length);
   for (const username of usernames) {

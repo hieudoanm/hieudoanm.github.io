@@ -39,17 +39,22 @@ const getArchives = async (username: string) => {
 const main = async () => {
   const usernames = [
     'azerichess', // Shakhriyar Mamedyarov
-    'danielnaroditsky',
-    'fabianocaruana',
-    'firouzja2003',
+    'chesswarrior7197', // Nodirbek Abdusattorov
+    'danielnaroditsky', // Daniel Naroditsky
+    'duhless', // Daniil Dubov
+    'fabianocaruana', // Fabiano Caruana
+    'firouzja2003', // Alireza Firouzja
     'gmwso', // Wesley So
-    'hikaru',
-    'levonaronian',
-    'liemle',
+    'grischuk', // Alexander Grischuk
+    'hikaru', // Hikaru Nakamura
+    'levonaronian', // Levon Aronian
+    'liemle', // Liem Le
     'lyonbeast', // MVL
-    'magnuscarlsen',
+    'magnuscarlsen', // Magnus Carlsen
     'thedarkknighttrilogy',
-    'wonderfultime',
+    'thevish', // Viswanathan Anand
+    'sergeykarjakin', // Sergey Karjakin
+    'wonderfultime', // Tuan Minh Le
   ];
   console.log(usernames.length);
   for (const username of usernames) {
