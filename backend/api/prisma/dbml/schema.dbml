@@ -361,7 +361,7 @@ Table ChessPlayer {
   joined DateTime [default: `now()`, not null]
   status Status [not null, default: 'basic']
   title ChessTitle
-  league League
+  league ChessLeague
   archives String[] [not null]
   stats ChessStats [not null]
   createdAt DateTime [default: `now()`]
@@ -508,7 +508,7 @@ Enum Status {
   premium
 }
 
-Enum League {
+Enum ChessLeague {
   Wood
   Stone
   Bronze

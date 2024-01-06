@@ -18,6 +18,7 @@ const getArchives = async (username: string) => {
     const archivesUrl = `${PUBLIC_URL}/player/${username}/games/archives`;
     const { data } = await axios.get<{ archives: string[] }>(archivesUrl);
     const { archives = [] } = data;
+    archives.reverse();
     for (const archive of archives) {
       const pgn: string = await getPGN(archive);
       const paths: string[] = archive.split('/');

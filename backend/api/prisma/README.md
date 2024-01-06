@@ -269,7 +269,7 @@ erDiagram
     DateTime joined
     Status status
     ChessTitle title "nullable"
-    League league "nullable"
+    ChessLeague league "nullable"
     String archives
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"

@@ -1,6 +1,6 @@
 import {
   ChessTitle,
-  League,
+  ChessLeague,
   PrismaClient,
   Status,
   ChessTimeClass,
@@ -138,7 +138,7 @@ const syncPlayer = async (
       lastOnline: new Date(lastOnline),
       status: status as Status,
       title: title as ChessTitle,
-      league: league as League,
+      league: league as ChessLeague,
       archives,
     };
     await prismaClient.chessPlayer.upsert({

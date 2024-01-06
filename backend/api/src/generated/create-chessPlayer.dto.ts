@@ -1,4 +1,4 @@
-import { ChessTitle, League } from '@prisma/client';
+import { ChessTitle, ChessLeague } from '@prisma/client';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateChessPlayerDto {
@@ -6,7 +6,7 @@ export class CreateChessPlayerDto {
   username: string;
   @ApiProperty({ enum: ChessTitle })
   title?: ChessTitle;
-  @ApiProperty({ enum: League })
-  league?: League;
+  @ApiProperty({ enum: ChessLeague })
+  league?: ChessLeague;
   createdAt?: Date;
 }

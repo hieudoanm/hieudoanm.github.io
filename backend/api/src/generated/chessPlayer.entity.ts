@@ -1,4 +1,4 @@
-import { Status, ChessTitle, League } from '@prisma/client';
+import { Status, ChessTitle, ChessLeague } from '@prisma/client';
 import { ChessStatsDto } from './chessStats.entity';
 
 export class ChessPlayerDto {
@@ -17,7 +17,7 @@ export class ChessPlayerDto {
   joined: Date;
   status: Status;
   title: ChessTitle | null;
-  league: League | null;
+  league: ChessLeague | null;
   archives: string[];
   stats?: ChessStatsDto[];
   createdAt: Date | null;
