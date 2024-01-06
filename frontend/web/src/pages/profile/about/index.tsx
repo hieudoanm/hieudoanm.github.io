@@ -2,7 +2,7 @@ import { Section } from '@hieudoanm/components/Navbar';
 import metadata from '@hieudoanm/configs/metadata';
 import AboutTemplate from '@hieudoanm/templates/About';
 import { NextPage } from 'next';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 const sections: Section[] = [
   { id: 'interests' },
@@ -30,10 +30,9 @@ const AboutPage: NextPage = () => {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
+      <Head>
         <title>About</title>
-      </Helmet>
+      </Head>
       <AboutTemplate
         sections={sections}
         hero={hero}

@@ -1,7 +1,7 @@
 import Hexagon from '@hieudoanm/components/Hexagon';
 import useWindowSize from '@hieudoanm/hooks/use-window-size';
+import Head from 'next/head';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
 
 const themes = ['theme-0'];
 
@@ -176,10 +176,9 @@ export const HexagonPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
+      <Head>
         <title>HIEU DOAN (hieudoanm)</title>
-      </Helmet>
+      </Head>
       <div className={theme}>
         <main className="h-screen w-screen overflow-hidden">
           <div className="relative">

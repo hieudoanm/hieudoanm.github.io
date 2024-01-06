@@ -1,7 +1,7 @@
 import { Icon, IconButton, Input, InputGroup } from '@chakra-ui/react';
 import Container from '@hieudoanm/components/Container';
+import Head from 'next/head';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
 import { FaSpinner } from 'react-icons/fa';
 import { v4 } from 'uuid';
 
@@ -10,9 +10,9 @@ export const UuidPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>UUID</title>
-      </Helmet>
+      </Head>
       <div className="h-screen w-screen">
         <Container className="h-full">
           <div className="flex h-full items-center justify-center">

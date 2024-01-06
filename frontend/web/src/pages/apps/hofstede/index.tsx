@@ -27,9 +27,9 @@ import {
 } from 'chart.js';
 import React, { FormEvent, useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
-import { Helmet } from 'react-helmet';
 import countries from '@hieudoanm/json/hofstede.json';
 import Container from '@hieudoanm/components/Container';
+import Head from 'next/head';
 
 const TEXT_GREEN = 'text-green-500';
 const TEXT_RED = 'text-red-500';
@@ -284,10 +284,9 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
+      <Head>
         <title>Hofstede</title>
-      </Helmet>
+      </Head>
       <div className="flex min-h-screen flex-col">
         <nav className="border-b">
           <Container>

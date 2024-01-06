@@ -1,35 +1,29 @@
 import { render } from '@testing-library/react';
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import ContactTemplate from '..';
 
 describe('Contact', () => {
   test('render default', () => {
-    const wrapper = render(
-      <BrowserRouter>
-        <>
-          <ContactTemplate
-            sections={[]}
-            hero={{
-              id: 'id',
-              title: 'title',
-              subtitle: 'subtitle',
-              backgroundImage: '',
-            }}
-            pricing={{
-              id: 'id',
-              title: 'title',
-              subtitle: 'subtitle',
-              plans: [],
-            }}
-            contact={{
-              id: '',
-              title: 'title',
-            }}
-          />
-        </>
-      </BrowserRouter>
+    const { container } = render(
+      <ContactTemplate
+        sections={[]}
+        hero={{
+          id: 'id',
+          title: 'title',
+          subtitle: 'subtitle',
+          backgroundImage: '',
+        }}
+        pricing={{
+          id: 'id',
+          title: 'title',
+          subtitle: 'subtitle',
+          plans: [],
+        }}
+        contact={{
+          id: '',
+          title: 'title',
+        }}
+      />
     );
-    expect(wrapper.container).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

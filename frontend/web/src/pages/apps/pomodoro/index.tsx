@@ -1,14 +1,14 @@
 import Pomodoro from '@hieudoanm/components/Pomodoro';
+import Head from 'next/head';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 export const PomodoroPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Head>
         <meta charSet="utf-8" />
         <title>Pomodoro</title>
-      </Helmet>
+      </Head>
       <div className="h-screen w-screen">
         <Pomodoro />
       </div>

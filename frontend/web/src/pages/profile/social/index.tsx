@@ -1,8 +1,8 @@
 import { Box, Button, Icon } from '@chakra-ui/react';
 import metadata from '@hieudoanm/configs/metadata';
 import { NextPage } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
-import { Helmet } from 'react-helmet';
 import {
   FaComment,
   FaEnvelope,
@@ -29,10 +29,9 @@ const SocialPage: NextPage = () => {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
+      <Head>
         <title>HIEU DOAN (hieudoanm)</title>
-      </Helmet>
+      </Head>
       <div
         className="h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url(/images/jpg/background/hero.jpg)' }}

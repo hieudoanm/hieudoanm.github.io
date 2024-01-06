@@ -11,8 +11,8 @@ import {
 } from '@chakra-ui/react';
 import { log } from '@hieudoanm/common/log';
 import Container from '@hieudoanm/components/Container';
+import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
 
 type Status = { name: string; page: string; status: boolean };
 
@@ -142,10 +142,9 @@ const StatusPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
+      <Head>
         <title>Statuses</title>
-      </Helmet>
+      </Head>
       <Container>
         <div className="p-8">
           <Card className="border border-gray-200 shadow">

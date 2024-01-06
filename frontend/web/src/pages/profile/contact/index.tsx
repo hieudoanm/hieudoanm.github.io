@@ -1,8 +1,9 @@
 import { Section } from '@hieudoanm/components/Navbar';
 import metadata from '@hieudoanm/configs/metadata';
+import { APP_NAME } from '@hieudoanm/constants/time.constants';
 import ContactTemplate from '@hieudoanm/templates/Contact';
 import { NextPage } from 'next';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 const sections: Section[] = [{ id: 'pricing' }, { id: 'contact' }];
 
@@ -14,9 +15,9 @@ export const ContactPage: NextPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>HIEU DOAN (hieudoanm): Contact</title>
-      </Helmet>
+      <Head>
+        <title>{APP_NAME}: Contact</title>
+      </Head>
       <ContactTemplate
         sections={sections}
         hero={hero}

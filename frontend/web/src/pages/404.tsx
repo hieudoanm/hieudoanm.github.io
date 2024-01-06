@@ -1,13 +1,13 @@
 import { NextPage } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
-import { Helmet } from 'react-helmet';
 
 export const NotFoundPage: NextPage = () => {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>HIEU: Not Found</title>
-      </Helmet>
+      </Head>
       <div className="flex h-screen w-screen items-center justify-center">
         <div className="py-8 text-center">
           <h2 className="mb-4 text-9xl">404</h2>

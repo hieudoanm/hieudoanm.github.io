@@ -1,6 +1,5 @@
 import { Box, Icon, Text } from '@chakra-ui/react';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import {
   FaBrain,
   FaCalendar,
@@ -12,6 +11,7 @@ import { FaIdBadge } from 'react-icons/fa';
 import Container from '@hieudoanm/components/Container';
 import { APP_NAME } from '@hieudoanm/constants/time.constants';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export const AppsPage: React.FC = () => {
   const apps = [
@@ -25,10 +25,9 @@ export const AppsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
+      <Head>
         <title>{APP_NAME}</title>
-      </Helmet>
+      </Head>
       <Container>
         <div className="h-full w-full">
           <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4 lg:gap-6 xl:grid-cols-6 xl:gap-8">

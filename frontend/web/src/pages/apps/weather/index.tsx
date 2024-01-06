@@ -1,7 +1,7 @@
 import { List, ListItem, Text } from '@chakra-ui/react';
 import Container from '@hieudoanm/components/Container';
+import Head from 'next/head';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 type City = { id: string; name: string; timeZone: number };
 
@@ -17,9 +17,9 @@ export const WeatherPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Weather</title>
-      </Helmet>
+      </Head>
       <Container>
         <div className="py-8">
           <List flexDirection={'row'} gap={8}>
