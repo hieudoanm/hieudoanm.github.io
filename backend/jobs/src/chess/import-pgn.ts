@@ -34,12 +34,20 @@ const getArchives = async (username: string) => {
 
 const main = async () => {
   const usernames = [
+    'azerichess', // Shakhriyar Mamedyarov
     'danielnaroditsky',
+    'fabianocaruana',
+    'firouzja2003',
+    'gmwso', // Wesley So
     'hikaru',
+    'levonaronian',
+    'liemle',
+    'lyonbeast', // MVL
     'magnuscarlsen',
     'thedarkknighttrilogy',
     'wonderfultime',
   ];
+  console.log(usernames.length);
   for (const username of usernames) {
     await getArchives(username);
   }
