@@ -1,6 +1,6 @@
 openapi: 3.0.0
 paths:
-  /openings:
+  /v1/openings:
     get:
       operationId: OpeningsController_getOpenings
       parameters:
@@ -23,7 +23,7 @@ paths:
                 $ref: "#/components/schemas/OpeningsResponseDto"
       tags: &a1
         - Chess
-  /openings/ecos:
+  /v1/openings/ecos:
     get:
       operationId: OpeningsController_getECOs
       parameters: []
@@ -35,7 +35,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/EcosResponseDto"
       tags: *a1
-  /player/{username}:
+  /v1/player/{username}:
     get:
       operationId: PlayerController_getPlayer
       parameters:
@@ -69,7 +69,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/ChessPlayerDto"
       tags: *a2
-  /player/{username}/games:
+  /v1/player/{username}/games:
     get:
       operationId: GamesController_getGames
       parameters:
@@ -119,7 +119,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/SyncedResponseDto"
       tags: *a3
-  /player/{username}/games/{gameId}:
+  /v1/player/{username}/games/{gameId}:
     get:
       operationId: GamesController_getGame
       parameters:
@@ -141,7 +141,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/ChessGameDto"
       tags: *a3
-  /player/{username}/games/{gameId}/pgn:
+  /v1/player/{username}/games/{gameId}/pgn:
     get:
       operationId: GamesController_getGamePGN
       parameters:
@@ -163,7 +163,7 @@ paths:
               schema:
                 type: string
       tags: *a3
-  /player/{username}/insights:
+  /v1/player/{username}/insights:
     get:
       operationId: InsightsController_getInsights
       parameters:
@@ -181,7 +181,7 @@ paths:
                 $ref: "#/components/schemas/InsightsDto"
       tags: &a4
         - Chess
-  /player/{username}/insights/games:
+  /v1/player/{username}/insights/games:
     get:
       operationId: InsightsController_getGamesInsights
       parameters:
@@ -198,7 +198,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/InsightsDto"
       tags: *a4
-  /player/{username}/insights/accuracy:
+  /v1/player/{username}/insights/accuracy:
     get:
       operationId: InsightsController_getAccuracyInsights
       parameters:
@@ -215,7 +215,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/InsightsDto"
       tags: *a4
-  /player/{username}/insights/results:
+  /v1/player/{username}/insights/results:
     get:
       operationId: InsightsController_getResultsInsights
       parameters:
@@ -232,7 +232,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/InsightsDto"
       tags: *a4
-  /player/{username}/insights/opponents:
+  /v1/player/{username}/insights/opponents:
     get:
       operationId: InsightsController_getResultsOpponents
       parameters:
@@ -249,7 +249,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/InsightsDto"
       tags: *a4
-  /streamers:
+  /v1/streamers:
     get:
       operationId: StreamersController_getStreamers
       parameters:
@@ -272,7 +272,7 @@ paths:
                 $ref: "#/components/schemas/StreamersResponseDto"
       tags:
         - Chess
-  /titled:
+  /v1/titled:
     get:
       operationId: TitledController_getTitles
       parameters: []
@@ -285,7 +285,7 @@ paths:
                 $ref: "#/components/schemas/TitlesDto"
       tags: &a5
         - Chess
-  /titled/{title}:
+  /v1/titled/{title}:
     get:
       operationId: TitledController_getTitledStats
       parameters:
@@ -312,7 +312,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/TitledStatsDto"
       tags: *a5
-  /countries:
+  /v1/countries:
     get:
       operationId: CountriesController_getCountries
       parameters:
@@ -380,7 +380,7 @@ paths:
                 $ref: "#/components/schemas/CountriesResponseDto"
       tags: &a6
         - countries
-  /countries/{code}:
+  /v1/countries/{code}:
     get:
       operationId: CountriesController_getCountry
       parameters:
@@ -397,7 +397,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/CountryDto"
       tags: *a6
-  /countries/currencies:
+  /v1/countries/currencies:
     get:
       operationId: CountriesController_getCurrencies
       parameters: []
@@ -409,7 +409,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/CurrenciesResponseDto"
       tags: *a6
-  /currencies:
+  /v1/currencies:
     get:
       operationId: CurrenciesController_getCurrencies
       parameters: []
@@ -422,7 +422,7 @@ paths:
                 $ref: "#/components/schemas/CurrenciesResponseDto"
       tags:
         - currencies
-  /languages:
+  /v1/languages:
     get:
       operationId: LanguagesController_getLanguages
       parameters: []
@@ -435,7 +435,7 @@ paths:
                 $ref: "#/components/schemas/LanguagesResponseDto"
       tags:
         - languages
-  /organizations:
+  /v1/organizations:
     get:
       operationId: OrganizationsController_getOrganizations
       parameters: []
@@ -448,7 +448,7 @@ paths:
                 $ref: "#/components/schemas/OrganizationsResponseDto"
       tags: &a7
         - organizations
-  /organizations/{code}:
+  /v1/organizations/{code}:
     get:
       operationId: OrganizationsController_getOrganization
       parameters:
@@ -466,7 +466,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/OrganizationDto"
       tags: *a7
-  /vietnam/ethnic-groups:
+  /v1/vietnam/ethnic-groups:
     get:
       operationId: VietnamController_getEthnicGroups
       parameters: []
@@ -479,7 +479,7 @@ paths:
                 $ref: "#/components/schemas/EthnicGroupsResponseDto"
       tags: &a8
         - vietnam
-  /vietnam/license-plates:
+  /v1/vietnam/license-plates:
     get:
       operationId: VietnamController_getLicensePlates
       parameters: []
@@ -491,7 +491,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/LicensePlatesResponseDto"
       tags: *a8
-  /vietnam/license-plates/{code}:
+  /v1/vietnam/license-plates/{code}:
     get:
       operationId: VietnamController_getLicensePlate
       parameters:
@@ -508,7 +508,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/LicensePlateDto"
       tags: *a8
-  /crypto/coins:
+  /v1/crypto/coins:
     get:
       operationId: CryptoController_getCountries
       parameters:
@@ -526,7 +526,7 @@ paths:
                 $ref: "#/components/schemas/CoinsResponseDto"
       tags:
         - crypto
-  /forex/rates:
+  /v1/forex/rates:
     get:
       operationId: ForexController_getRates
       parameters:
@@ -551,7 +551,7 @@ paths:
                 $ref: "#/components/schemas/RatesResponseDto"
       tags:
         - forex
-  /github/languages:
+  /v1/github/languages:
     get:
       operationId: GitHubController_getLanguages
       parameters: []
@@ -564,7 +564,7 @@ paths:
                 $ref: "#/components/schemas/GitHubLanguagesResponseDto"
       tags:
         - github
-  /health:
+  /v1/health:
     get:
       operationId: HealthController_getHealth
       parameters: []
@@ -577,7 +577,7 @@ paths:
                 $ref: "#/components/schemas/HealthResponseDto"
       tags:
         - health
-  /news/google:
+  /v1/news/google:
     get:
       operationId: NewsController_getGoogle
       parameters: []
@@ -590,7 +590,7 @@ paths:
                 $ref: "#/components/schemas/GoogleResponseDto"
       tags: &a9
         - news
-  /news/sources:
+  /v1/news/sources:
     get:
       operationId: NewsController_getSources
       parameters: []
@@ -602,7 +602,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/NewsSourcesDto"
       tags: *a9
-  /tarot/cards:
+  /v1/tarot/cards:
     get:
       operationId: TarotController_getCards
       parameters:
@@ -636,7 +636,7 @@ paths:
                 $ref: "#/components/schemas/TarotCardsResponseDto"
       tags: &a10
         - tarot
-  /tarot/cards/{id}:
+  /v1/tarot/cards/{id}:
     get:
       operationId: TarotController_getCard
       parameters:
@@ -653,7 +653,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/TarotCardDto"
       tags: *a10
-  /words:
+  /v1/words:
     get:
       operationId: WordsController_getWords
       parameters:
@@ -678,7 +678,7 @@ paths:
                 $ref: "#/components/schemas/WordsResponseDto"
       tags: &a11
         - words
-  /words/{word}:
+  /v1/words/{word}:
     get:
       operationId: WordsController_getWord
       parameters:

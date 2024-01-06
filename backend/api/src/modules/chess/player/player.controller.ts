@@ -3,7 +3,7 @@ import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { PlayerService } from './player.service';
 import { ChessPlayerDto } from '../../../generated/chessPlayer.entity';
 
-@Controller('player')
+@Controller({ version: '1', path: 'player' })
 @ApiTags('Chess')
 export class PlayerController {
   constructor(private readonly playerService: PlayerService) {}

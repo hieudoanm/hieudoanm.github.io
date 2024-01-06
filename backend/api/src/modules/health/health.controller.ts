@@ -5,7 +5,7 @@ import { HealthResponseDto } from './health.dto';
 import { CacheInterceptor } from '@nestjs/cache-manager';
 
 @ApiTags('health')
-@Controller('health')
+@Controller({ version: '1', path: 'health' })
 @UseInterceptors(CacheInterceptor)
 export class HealthController {
   constructor(private readonly healthService: HealthService) {}

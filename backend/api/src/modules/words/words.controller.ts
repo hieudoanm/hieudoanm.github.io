@@ -13,7 +13,7 @@ import { WordsService } from './words.service';
 import { WordDto } from 'src/generated/word.entity';
 
 @ApiTags('words')
-@Controller('words')
+@Controller({ version: '1', path: 'words' })
 @UseInterceptors(CacheInterceptor)
 export class WordsController {
   constructor(private readonly wordsService: WordsService) {}

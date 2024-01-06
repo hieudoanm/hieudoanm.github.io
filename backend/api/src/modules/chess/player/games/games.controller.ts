@@ -8,7 +8,7 @@ import {
 } from './games.dto';
 import { ChessGameDto } from '../../../../generated/chessGame.entity';
 
-@Controller()
+@Controller({ version: '1' })
 @ApiTags('Chess')
 export class GamesController {
   constructor(private readonly gamesService: GamesService) {}

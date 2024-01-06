@@ -3,8 +3,8 @@ import { InsightsService } from './insights.service';
 import { InsightsDto } from './insights.dto';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
-@Controller()
 @ApiTags('Chess')
+@Controller({ version: '1' })
 export class InsightsController {
   constructor(private readonly insightsService: InsightsService) {}
 

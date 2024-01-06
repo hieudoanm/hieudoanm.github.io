@@ -7,7 +7,7 @@ import { TarotCardDto } from 'src/generated/tarotCard.entity';
 import { TarotCardType } from '@prisma/client';
 
 @ApiTags('tarot')
-@Controller('tarot')
+@Controller({ version: '1', path: 'tarot' })
 @UseInterceptors(CacheInterceptor)
 export class TarotController {
   constructor(private readonly tarotService: TarotService) {}

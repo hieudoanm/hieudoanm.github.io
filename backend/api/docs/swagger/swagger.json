@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "paths": {
-    "/openings": {
+    "/v1/openings": {
       "get": {
         "operationId": "OpeningsController_getOpenings",
         "parameters": [
@@ -39,7 +39,7 @@
         ]
       }
     },
-    "/openings/ecos": {
+    "/v1/openings/ecos": {
       "get": {
         "operationId": "OpeningsController_getECOs",
         "parameters": [],
@@ -60,7 +60,7 @@
         ]
       }
     },
-    "/player/{username}": {
+    "/v1/player/{username}": {
       "get": {
         "operationId": "PlayerController_getPlayer",
         "parameters": [
@@ -118,7 +118,7 @@
         ]
       }
     },
-    "/player/{username}/games": {
+    "/v1/player/{username}/games": {
       "get": {
         "operationId": "GamesController_getGames",
         "parameters": [
@@ -202,7 +202,7 @@
         ]
       }
     },
-    "/player/{username}/games/{gameId}": {
+    "/v1/player/{username}/games/{gameId}": {
       "get": {
         "operationId": "GamesController_getGame",
         "parameters": [
@@ -240,7 +240,7 @@
         ]
       }
     },
-    "/player/{username}/games/{gameId}/pgn": {
+    "/v1/player/{username}/games/{gameId}/pgn": {
       "get": {
         "operationId": "GamesController_getGamePGN",
         "parameters": [
@@ -278,7 +278,7 @@
         ]
       }
     },
-    "/player/{username}/insights": {
+    "/v1/player/{username}/insights": {
       "get": {
         "operationId": "InsightsController_getInsights",
         "parameters": [
@@ -308,7 +308,7 @@
         ]
       }
     },
-    "/player/{username}/insights/games": {
+    "/v1/player/{username}/insights/games": {
       "get": {
         "operationId": "InsightsController_getGamesInsights",
         "parameters": [
@@ -338,7 +338,7 @@
         ]
       }
     },
-    "/player/{username}/insights/accuracy": {
+    "/v1/player/{username}/insights/accuracy": {
       "get": {
         "operationId": "InsightsController_getAccuracyInsights",
         "parameters": [
@@ -368,7 +368,7 @@
         ]
       }
     },
-    "/player/{username}/insights/results": {
+    "/v1/player/{username}/insights/results": {
       "get": {
         "operationId": "InsightsController_getResultsInsights",
         "parameters": [
@@ -398,7 +398,7 @@
         ]
       }
     },
-    "/player/{username}/insights/opponents": {
+    "/v1/player/{username}/insights/opponents": {
       "get": {
         "operationId": "InsightsController_getResultsOpponents",
         "parameters": [
@@ -428,7 +428,7 @@
         ]
       }
     },
-    "/streamers": {
+    "/v1/streamers": {
       "get": {
         "operationId": "StreamersController_getStreamers",
         "parameters": [
@@ -466,7 +466,7 @@
         ]
       }
     },
-    "/titled": {
+    "/v1/titled": {
       "get": {
         "operationId": "TitledController_getTitles",
         "parameters": [],
@@ -487,7 +487,7 @@
         ]
       }
     },
-    "/titled/{title}": {
+    "/v1/titled/{title}": {
       "get": {
         "operationId": "TitledController_getTitledStats",
         "parameters": [
@@ -533,7 +533,7 @@
         ]
       }
     },
-    "/countries": {
+    "/v1/countries": {
       "get": {
         "operationId": "CountriesController_getCountries",
         "parameters": [
@@ -635,7 +635,7 @@
         ]
       }
     },
-    "/countries/{code}": {
+    "/v1/countries/{code}": {
       "get": {
         "operationId": "CountriesController_getCountry",
         "parameters": [
@@ -665,7 +665,7 @@
         ]
       }
     },
-    "/countries/currencies": {
+    "/v1/countries/currencies": {
       "get": {
         "operationId": "CountriesController_getCurrencies",
         "parameters": [],
@@ -686,7 +686,7 @@
         ]
       }
     },
-    "/currencies": {
+    "/v1/currencies": {
       "get": {
         "operationId": "CurrenciesController_getCurrencies",
         "parameters": [],
@@ -707,7 +707,7 @@
         ]
       }
     },
-    "/languages": {
+    "/v1/languages": {
       "get": {
         "operationId": "LanguagesController_getLanguages",
         "parameters": [],
@@ -728,7 +728,7 @@
         ]
       }
     },
-    "/organizations": {
+    "/v1/organizations": {
       "get": {
         "operationId": "OrganizationsController_getOrganizations",
         "parameters": [],
@@ -749,7 +749,7 @@
         ]
       }
     },
-    "/organizations/{code}": {
+    "/v1/organizations/{code}": {
       "get": {
         "operationId": "OrganizationsController_getOrganization",
         "parameters": [
@@ -780,7 +780,7 @@
         ]
       }
     },
-    "/vietnam/ethnic-groups": {
+    "/v1/vietnam/ethnic-groups": {
       "get": {
         "operationId": "VietnamController_getEthnicGroups",
         "parameters": [],
@@ -801,7 +801,7 @@
         ]
       }
     },
-    "/vietnam/license-plates": {
+    "/v1/vietnam/license-plates": {
       "get": {
         "operationId": "VietnamController_getLicensePlates",
         "parameters": [],
@@ -822,7 +822,7 @@
         ]
       }
     },
-    "/vietnam/license-plates/{code}": {
+    "/v1/vietnam/license-plates/{code}": {
       "get": {
         "operationId": "VietnamController_getLicensePlate",
         "parameters": [
@@ -852,7 +852,7 @@
         ]
       }
     },
-    "/crypto/coins": {
+    "/v1/crypto/coins": {
       "get": {
         "operationId": "CryptoController_getCountries",
         "parameters": [
@@ -882,7 +882,7 @@
         ]
       }
     },
-    "/forex/rates": {
+    "/v1/forex/rates": {
       "get": {
         "operationId": "ForexController_getRates",
         "parameters": [
@@ -922,7 +922,7 @@
         ]
       }
     },
-    "/github/languages": {
+    "/v1/github/languages": {
       "get": {
         "operationId": "GitHubController_getLanguages",
         "parameters": [],
@@ -943,7 +943,7 @@
         ]
       }
     },
-    "/health": {
+    "/v1/health": {
       "get": {
         "operationId": "HealthController_getHealth",
         "parameters": [],
@@ -964,7 +964,7 @@
         ]
       }
     },
-    "/news/google": {
+    "/v1/news/google": {
       "get": {
         "operationId": "NewsController_getGoogle",
         "parameters": [],
@@ -985,7 +985,7 @@
         ]
       }
     },
-    "/news/sources": {
+    "/v1/news/sources": {
       "get": {
         "operationId": "NewsController_getSources",
         "parameters": [],
@@ -1006,7 +1006,7 @@
         ]
       }
     },
-    "/tarot/cards": {
+    "/v1/tarot/cards": {
       "get": {
         "operationId": "TarotController_getCards",
         "parameters": [
@@ -1059,7 +1059,7 @@
         ]
       }
     },
-    "/tarot/cards/{id}": {
+    "/v1/tarot/cards/{id}": {
       "get": {
         "operationId": "TarotController_getCard",
         "parameters": [
@@ -1089,7 +1089,7 @@
         ]
       }
     },
-    "/words": {
+    "/v1/words": {
       "get": {
         "operationId": "WordsController_getWords",
         "parameters": [
@@ -1129,7 +1129,7 @@
         ]
       }
     },
-    "/words/{word}": {
+    "/v1/words/{word}": {
       "get": {
         "operationId": "WordsController_getWord",
         "parameters": [

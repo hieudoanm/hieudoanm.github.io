@@ -1,4 +1,8 @@
-import { INestApplication, ValidationPipe } from '@nestjs/common';
+import {
+  INestApplication,
+  ValidationPipe,
+  VersioningType,
+} from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, OpenAPIObject, SwaggerModule } from '@nestjs/swagger';
 import compression from 'compression';
@@ -36,10 +40,11 @@ const setUpSecurity = (app: INestApplication) => {
 
 const bootstrap = async () => {
   const app = await NestFactory.create(AppModule);
-  buildDocument(app);
-  setUpSecurity(app);
   app.use(cookieParser());
   app.useGlobalPipes(new ValidationPipe());
+  app.enableVersioning({ defaultVersion: '1', type: VersioningType.URI });
+  buildDocument(app);
+  setUpSecurity(app);
   console.info(`Server is listening on port ${PORT}`);
   await app.listen(PORT);
 };
