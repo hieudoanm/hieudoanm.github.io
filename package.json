@@ -32,7 +32,7 @@
   },
   "workspaces": [
     "backend/api",
-    "backend/data",
+    "backend/jobs",
     "frontend/graphql",
     "frontend/mobile",
     "frontend/web"
