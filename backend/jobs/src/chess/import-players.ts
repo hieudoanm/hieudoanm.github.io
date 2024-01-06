@@ -151,38 +151,66 @@ const syncPlayer = async (
     const { data: stats } = await axios.get<Stats>(statsUrl);
     const {
       chess_daily: {
-        last: { rating: dailyLastRating, rd: dailyDeviation },
-        best: { rating: dailyBestRating },
-        record: { win: dailyWin, draw: dailyDraw, loss: dailyLoss },
+        last: { rating: dailyLastRating = 0, rd: dailyDeviation = 0 } = {
+          rating: 0,
+          rd: 0,
+        },
+        best: { rating: dailyBestRating = 0 } = { rating: 0 },
+        record: {
+          win: dailyWin = 0,
+          draw: dailyDraw = 0,
+          loss: dailyLoss = 0,
+        } = { win: 0, draw: 0, loss: 0 },
       } = {
-        last: { rating: 0 },
+        last: { rating: 0, rd: 0 },
         best: { rating: 0 },
         record: { win: 0, draw: 0, loss: 0 },
       },
       chess_blitz: {
-        last: { rating: blitzLastRating, rd: blitzDeviation },
-        best: { rating: blitzBestRating },
-        record: { win: blitzWin, draw: blitzDraw, loss: blitzLoss },
+        last: { rating: blitzLastRating, rd: blitzDeviation } = {
+          rating: 0,
+          rd: 0,
+        },
+        best: { rating: blitzBestRating } = { rating: 0 },
+        record: { win: blitzWin, draw: blitzDraw, loss: blitzLoss } = {
+          win: 0,
+          draw: 0,
+          loss: 0,
+        },
       } = {
-        last: { rating: 0 },
+        last: { rating: 0, rd: 0 },
         best: { rating: 0 },
         record: { win: 0, draw: 0, loss: 0 },
       },
       chess_bullet: {
-        last: { rating: bulletLastRating, rd: bulletDeviation },
-        best: { rating: bulletBestRating },
-        record: { win: bulletWin, draw: bulletDraw, loss: bulletLoss },
+        last: { rating: bulletLastRating, rd: bulletDeviation } = {
+          rating: 0,
+          rd: 0,
+        },
+        best: { rating: bulletBestRating } = { rating: 0 },
+        record: { win: bulletWin, draw: bulletDraw, loss: bulletLoss } = {
+          win: 0,
+          draw: 0,
+          loss: 0,
+        },
       } = {
-        last: { rating: 0 },
+        last: { rating: 0, rd: 0 },
         best: { rating: 0 },
         record: { win: 0, draw: 0, loss: 0 },
       },
       chess_rapid: {
-        last: { rating: rapidLastRating, rd: rapidDeviation },
-        best: { rating: rapidBestRating },
-        record: { win: rapidWin, draw: rapidDraw, loss: rapidLoss },
+        last: { rating: rapidLastRating = 0, rd: rapidDeviation = 0 } = {
+          rating: 0,
+          rd: 0,
+        },
+        best: { rating: rapidBestRating = 0 } = { rating: 0 },
+        record: { win: rapidWin, draw: rapidDraw, loss: rapidLoss } = {
+          win: 0,
+          draw: 0,
+          loss: 0,
+        },
       } = {
-        last: { rating: 0 },
+        last: { rating: 0, rd: 0 },
         best: { rating: 0 },
         record: { win: 0, draw: 0, loss: 0 },
       },
