@@ -2,6 +2,9 @@ name: Continuous Delivery
 
 on:
   push:
+    paths:
+      - backend/**
+      - frontend/**
     branches:
       - master
 
