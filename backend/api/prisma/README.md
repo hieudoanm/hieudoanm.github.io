@@ -297,17 +297,15 @@ erDiagram
     String tcn
     String initialSetup
     ChessVariant rules
-    String whiteId
-    String blackId
-    String whiteUsername
-    String blackUsername
+    String fen
     Float whiteAccuracy
     Float blackAccuracy
+    String whiteUsername
+    String blackUsername
     ChessResult whiteResult
     ChessResult blackResult
     Int whiteRating
     Int blackRating
-    String fen
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -703,17 +701,15 @@ erDiagram
   - `tcn`: 
   - `initialSetup`: 
   - `rules`: 
-  - `whiteId`: 
-  - `blackId`: 
-  - `whiteUsername`: 
-  - `blackUsername`: 
+  - `fen`: 
   - `whiteAccuracy`: 
   - `blackAccuracy`: 
+  - `whiteUsername`: 
+  - `blackUsername`: 
   - `whiteResult`: 
   - `blackResult`: 
   - `whiteRating`: 
   - `blackRating`: 
-  - `fen`: 
   - `createdAt`: 
   - `updatedAt`: 
 

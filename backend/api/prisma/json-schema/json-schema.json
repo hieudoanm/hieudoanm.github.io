@@ -1708,19 +1708,7 @@
             "threecheck"
           ]
         },
-        "whiteId": {
-          "type": "string",
-          "default": ""
-        },
-        "blackId": {
-          "type": "string",
-          "default": ""
-        },
-        "whiteUsername": {
-          "type": "string",
-          "default": ""
-        },
-        "blackUsername": {
+        "fen": {
           "type": "string",
           "default": ""
         },
@@ -1731,6 +1719,14 @@
         "blackAccuracy": {
           "type": "number",
           "default": 0
+        },
+        "whiteUsername": {
+          "type": "string",
+          "default": ""
+        },
+        "blackUsername": {
+          "type": "string",
+          "default": ""
         },
         "whiteResult": {
           "type": "string",
@@ -1773,10 +1769,6 @@
         "blackRating": {
           "type": "integer",
           "default": 0
-        },
-        "fen": {
-          "type": "string",
-          "default": ""
         },
         "createdAt": {
           "type": [

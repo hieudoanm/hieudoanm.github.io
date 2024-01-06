@@ -1,4 +1,9 @@
-import { PrismaClient, ChessTimeClass, ChessVariant } from '@prisma/client';
+import {
+  PrismaClient,
+  ChessTimeClass,
+  ChessResult,
+  ChessVariant,
+} from '@prisma/client';
 import axios from 'axios';
 
 const PUBLIC_URL: string = 'https://api.chess.com/pub';
@@ -16,8 +21,8 @@ type Game = {
   time_class: string;
   rules: string;
   accuracies: { white: number; black: number };
-  white: { rating: number; result: number; username: string };
-  black: { rating: number; result: number; username: string };
+  white: { rating: number; result: string; username: string };
+  black: { rating: number; result: string; username: string };
 };
 
 const getGames = async (archive: string): Promise<Game[]> => {
@@ -49,6 +54,20 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
           initial_setup: initialSetup,
           rules,
           fen,
+          accuracies: { white: whiteAccuracy = 0, black: blackAccuracy = 0 } = {
+            white: 0,
+            black: 0,
+          },
+          white: {
+            username: whiteUsername = '',
+            result: whiteResult = 0,
+            rating: whiteRating = 0,
+          } = { username: '', result: 0, rating: 0 },
+          black: {
+            username: blackUsername = '',
+            result: blackResult = 0,
+            rating: blackRating = 0,
+          } = { username: '', result: 0, rating: 0 },
         } = game;
         const body = {
           id,
@@ -62,6 +81,14 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
           initialSetup,
           rules: rules as ChessVariant,
           fen,
+          whiteAccuracy,
+          blackAccuracy,
+          whiteUsername,
+          blackUsername,
+          whiteRating,
+          blackRating,
+          whiteResult: whiteResult as ChessResult,
+          blackResult: blackResult as ChessResult,
         };
         await prismaClient.chessGame.upsert({
           create: body,

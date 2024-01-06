@@ -20,13 +20,16 @@ const getArchives = async (username: string) => {
     const { archives = [] } = data;
     archives.reverse();
     for (const archive of archives) {
-      const pgn: string = await getPGN(archive);
       const paths: string[] = archive.split('/');
       const filename = paths.slice(paths.length - 2).join('-');
       const folder: string = `../../resources/pgn/${username}`;
-      const exists: boolean = existsSync(folder);
-      if (!exists) mkdirSync(folder);
-      writeFileSync(`${folder}/${filename}.pgn`, pgn);
+      const folderExists: boolean = existsSync(folder);
+      if (!folderExists) mkdirSync(folder);
+      const file: string = `${folder}/${filename}.pgn`;
+      const fileExists: boolean = existsSync(file);
+      if (fileExists) continue;
+      const pgn: string = await getPGN(archive);
+      writeFileSync(file, pgn);
     }
   } catch (error) {
     console.error('error', error);
