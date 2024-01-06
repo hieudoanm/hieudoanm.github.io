@@ -7,3 +7,6 @@ yarn-error.log
 
 # turbo
 .turbo
+
+# macOS
+.DS_Store

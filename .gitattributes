@@ -1,4 +1,5 @@
 # Linguist Detectable
-*.html linguist-detectable=false
 *.css linguist-detectable=false
+*.html linguist-detectable=false
+*.ipynb linguist-detectable=false
 *.js linguist-detectable=false
