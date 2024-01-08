@@ -3,6 +3,10 @@ import { existsSync, mkdirSync, writeFileSync } from 'fs';
 
 const PUBLIC_URL: string = 'https://api.chess.com/pub';
 
+const addZero = (number: number): string => {
+  return number > 9 ? `${number}` : `0${number}`;
+};
+
 const getPGN = async (archive: string) => {
   // PGN
   console.log(`archive=${archive}`);
@@ -11,7 +15,11 @@ const getPGN = async (archive: string) => {
   return data;
 };
 
-const getArchives = async (username: string, title: string = '') => {
+const getArchives = async (
+  username: string,
+  current: string,
+  title: string = ''
+) => {
   try {
     // Archives
     console.log(`username=${username}`);
@@ -29,7 +37,7 @@ const getArchives = async (username: string, title: string = '') => {
       if (!folderExists) mkdirSync(folder);
       const file: string = `${folder}/${filename}.pgn`;
       const fileExists: boolean = existsSync(file);
-      if (fileExists) continue;
+      if (fileExists && current !== filename) continue;
       const pgn: string = await getPGN(archive);
       writeFileSync(file, pgn);
     }
@@ -39,6 +47,10 @@ const getArchives = async (username: string, title: string = '') => {
 };
 
 const main = async () => {
+  const d: Date = new Date();
+  const month: number = d.getMonth() + 1;
+  const year: number = d.getFullYear();
+  const current = `${year}-${addZero(month)}.pgn`;
   const usernames = [
     { username: 'thedarkknighttrilogy', title: '' },
     { username: 'anishgiri', title: 'gm' }, // Anish Giri
@@ -74,7 +86,7 @@ const main = async () => {
   ];
   console.log(usernames.length);
   for (const { username, title } of usernames) {
-    await getArchives(username, title);
+    await getArchives(username, current, title);
   }
 };
 
