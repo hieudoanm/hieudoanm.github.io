@@ -1,5 +1,24 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { ChessOpeningDto } from '../../../../generated/chessOpening.entity';
+import { IsNumber, IsOptional, IsString } from 'class-validator';
+
+export class OpeningsRequestQueryResponseDto {
+  @IsOptional()
+  @IsString()
+  eco: string;
+
+  @IsOptional()
+  @IsString()
+  name: string;
+
+  @IsOptional()
+  @IsNumber()
+  limit: number;
+
+  @IsOptional()
+  @IsNumber()
+  offset: number;
+}
 
 export class OpeningsResponseDto {
   @ApiProperty()

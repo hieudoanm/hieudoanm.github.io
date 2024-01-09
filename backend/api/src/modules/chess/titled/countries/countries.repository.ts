@@ -9,7 +9,7 @@ export class CountriesRepository {
 
   public async getCountries(): Promise<CountryResponseDto[]> {
     const query: string = `SELECT p."countryCode", p."country", COUNT(p."id") as total
-FROM public."Player" as p
+FROM chess."ChessPlayer" as p
 WHERE p."title" IS NOT NULL AND p."lastOnline" > (CURRENT_DATE - INTERVAL '1' year)
 GROUP BY p."country", p."countryCode"
 ORDER BY total DESC, p."country" ASC;`;

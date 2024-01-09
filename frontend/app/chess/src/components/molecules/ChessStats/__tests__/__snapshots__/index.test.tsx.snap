@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChessStats to match snapshot 1`] = `
+<div>
+  <div
+    class="chakra-card border border-gray-200 css-2dlz7"
+  >
+    <div
+      class="chakra-card__body css-0"
+    >
+      <div
+        class="flex items-center justify-between"
+      >
+        <div
+          class="chakra-stat css-1mbo1ls"
+        >
+          <dl>
+            <dt
+              class="chakra-stat__label css-0"
+            />
+            <dd
+              class="chakra-stat__number css-fvxuh5"
+            >
+              0
+            </dd>
+            <dd
+              class="chakra-stat__help-text m-0 css-0"
+            >
+              Best: 
+              0
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

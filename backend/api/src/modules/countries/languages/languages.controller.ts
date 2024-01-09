@@ -5,7 +5,7 @@ import { LanguagesResponseDto } from './languages.dto';
 import { LanguagesService } from './languages.service';
 
 @ApiTags('languages')
-@Controller('languages')
+@Controller({ version: '1', path: 'languages' })
 @UseInterceptors(CacheInterceptor)
 export class LanguagesController {
   constructor(private readonly languagesService: LanguagesService) {}

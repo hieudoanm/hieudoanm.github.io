@@ -1,12 +1,14 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
-import { ApiResponse, ApiTags } from '@nestjs/swagger';
+import { Controller, Get, Param, Query, UseInterceptors } from '@nestjs/common';
+import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { ChessTitle } from '../../../common/clients/apis/chess.com/chess.dto';
 import { TimeRange } from '../../../common/types/time.types';
 import { TitledStatsDto, TitlesDto } from './titled.dto';
 import { TitledService } from './titled.service';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 
-@Controller('titled')
 @ApiTags('Chess')
+@Controller({ version: '1', path: 'chess/titled' })
+@UseInterceptors(CacheInterceptor)
 export class TitledController {
   constructor(private readonly titledService: TitledService) {}
 
@@ -29,6 +31,18 @@ export class TitledController {
   }
 
   @Get(':title')
+  @ApiParam({ name: 'title', description: 'title' })
+  @ApiQuery({
+    name: 'cache',
+    description: 'cache',
+    type: Boolean,
+    required: false,
+  })
+  @ApiQuery({
+    name: 'timeRange',
+    description: 'timeRange',
+    required: false,
+  })
   @ApiResponse({ status: 200, type: TitledStatsDto })
   async getTitledStats(
     @Param('title') title: ChessTitle,

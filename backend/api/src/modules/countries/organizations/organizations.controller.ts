@@ -5,7 +5,7 @@ import { OrganizationsResponseDto } from './organizations.dto';
 import { OrganizationDto } from 'src/generated/organization.entity';
 
 @ApiTags('organizations')
-@Controller('organizations')
+@Controller({ version: '1', path: 'organizations' })
 export class OrganizationsController {
   constructor(private readonly organizationsService: OrganizationsService) {}
 

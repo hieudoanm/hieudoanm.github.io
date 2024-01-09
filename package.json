@@ -33,6 +33,7 @@
   "workspaces": [
     "backend/api",
     "backend/jobs",
+    "frontend/app/chess",
     "frontend/graphql",
     "frontend/mobile",
     "frontend/web"

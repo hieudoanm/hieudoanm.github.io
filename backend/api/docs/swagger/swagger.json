@@ -1,22 +1,42 @@
 {
   "openapi": "3.0.0",
   "paths": {
-    "/v1/openings": {
+    "/v1/chess/openings": {
       "get": {
         "operationId": "OpeningsController_getOpenings",
         "parameters": [
           {
-            "name": "eco",
-            "required": true,
+            "name": "offset",
+            "required": false,
             "in": "query",
+            "description": "offset",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "limit",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "name",
+            "required": false,
+            "in": "query",
+            "description": "name",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "name",
-            "required": true,
+            "name": "eco",
+            "required": false,
             "in": "query",
+            "description": "eco",
             "schema": {
               "type": "string"
             }
@@ -39,7 +59,7 @@
         ]
       }
     },
-    "/v1/openings/ecos": {
+    "/v1/chess/openings/ecos": {
       "get": {
         "operationId": "OpeningsController_getECOs",
         "parameters": [],
@@ -60,7 +80,47 @@
         ]
       }
     },
-    "/v1/player/{username}": {
+    "/v1/chess/players": {
+      "get": {
+        "operationId": "PlayerController_getPlayers",
+        "parameters": [
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "limit",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "description": "offset",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlayersResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/v1/chess/players/{username}": {
       "get": {
         "operationId": "PlayerController_getPlayer",
         "parameters": [
@@ -118,7 +178,7 @@
         ]
       }
     },
-    "/v1/player/{username}/games": {
+    "/v1/chess/players/{username}/games": {
       "get": {
         "operationId": "GamesController_getGames",
         "parameters": [
@@ -126,22 +186,43 @@
             "name": "username",
             "required": true,
             "in": "path",
+            "description": "username",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "month",
-            "required": true,
+            "name": "year",
+            "required": false,
             "in": "query",
+            "description": "year",
             "schema": {
               "type": "number"
             }
           },
           {
-            "name": "year",
-            "required": true,
+            "name": "month",
+            "required": false,
             "in": "query",
+            "description": "month",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "limit",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "description": "offset",
             "schema": {
               "type": "number"
             }
@@ -202,7 +283,7 @@
         ]
       }
     },
-    "/v1/player/{username}/games/{gameId}": {
+    "/v1/chess/players/{username}/games/{gameId}": {
       "get": {
         "operationId": "GamesController_getGame",
         "parameters": [
@@ -240,7 +321,7 @@
         ]
       }
     },
-    "/v1/player/{username}/games/{gameId}/pgn": {
+    "/v1/chess/players/{username}/games/{gameId}/pgn": {
       "get": {
         "operationId": "GamesController_getGamePGN",
         "parameters": [
@@ -278,7 +359,7 @@
         ]
       }
     },
-    "/v1/player/{username}/insights": {
+    "/v1/chess/players/{username}/insights": {
       "get": {
         "operationId": "InsightsController_getInsights",
         "parameters": [
@@ -308,7 +389,7 @@
         ]
       }
     },
-    "/v1/player/{username}/insights/games": {
+    "/v1/chess/players/{username}/insights/games": {
       "get": {
         "operationId": "InsightsController_getGamesInsights",
         "parameters": [
@@ -338,7 +419,7 @@
         ]
       }
     },
-    "/v1/player/{username}/insights/accuracy": {
+    "/v1/chess/players/{username}/insights/accuracy": {
       "get": {
         "operationId": "InsightsController_getAccuracyInsights",
         "parameters": [
@@ -368,7 +449,7 @@
         ]
       }
     },
-    "/v1/player/{username}/insights/results": {
+    "/v1/chess/players/{username}/insights/results": {
       "get": {
         "operationId": "InsightsController_getResultsInsights",
         "parameters": [
@@ -398,7 +479,7 @@
         ]
       }
     },
-    "/v1/player/{username}/insights/opponents": {
+    "/v1/chess/players/{username}/insights/opponents": {
       "get": {
         "operationId": "InsightsController_getResultsOpponents",
         "parameters": [
@@ -428,22 +509,24 @@
         ]
       }
     },
-    "/v1/streamers": {
+    "/v1/chess/streamers": {
       "get": {
         "operationId": "StreamersController_getStreamers",
         "parameters": [
           {
             "name": "title",
-            "required": true,
+            "required": false,
             "in": "query",
+            "description": "title",
             "schema": {
               "type": "string"
             }
           },
           {
             "name": "country",
-            "required": true,
+            "required": false,
             "in": "query",
+            "description": "country",
             "schema": {
               "type": "string"
             }
@@ -466,7 +549,7 @@
         ]
       }
     },
-    "/v1/titled": {
+    "/v1/chess/titled": {
       "get": {
         "operationId": "TitledController_getTitles",
         "parameters": [],
@@ -487,7 +570,7 @@
         ]
       }
     },
-    "/v1/titled/{title}": {
+    "/v1/chess/titled/{title}": {
       "get": {
         "operationId": "TitledController_getTitledStats",
         "parameters": [
@@ -495,22 +578,25 @@
             "name": "title",
             "required": true,
             "in": "path",
+            "description": "title",
             "schema": {
               "type": "string"
             }
           },
           {
             "name": "cache",
-            "required": true,
+            "required": false,
             "in": "query",
+            "description": "cache",
             "schema": {
               "type": "boolean"
             }
           },
           {
             "name": "timeRange",
-            "required": true,
+            "required": false,
             "in": "query",
+            "description": "timeRange",
             "schema": {
               "type": "string"
             }
@@ -1213,6 +1299,24 @@
       "ChessPlayerDto": {
         "type": "object",
         "properties": {}
+      },
+      "PlayersResponseDto": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number"
+          },
+          "players": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChessPlayerDto"
+            }
+          }
+        },
+        "required": [
+          "total",
+          "players"
+        ]
       },
       "ChessGameDto": {
         "type": "object",

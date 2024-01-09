@@ -8,7 +8,7 @@ import {
 import { VietnamService } from './vietnam.service';
 
 @ApiTags('vietnam')
-@Controller('vietnam')
+@Controller({ version: '1', path: 'vietnam' })
 export class VietnamController {
   constructor(private readonly vietnamService: VietnamService) {}
 

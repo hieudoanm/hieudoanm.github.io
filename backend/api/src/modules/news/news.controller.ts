@@ -5,7 +5,7 @@ import { NewsService } from './news.service';
 import { CacheInterceptor } from '@nestjs/cache-manager';
 
 @ApiTags('news')
-@Controller('news')
+@Controller({ version: '1', path: 'news' })
 @UseInterceptors(CacheInterceptor)
 export class NewsController {
   constructor(private readonly newsService: NewsService) {}

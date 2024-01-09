@@ -11,7 +11,7 @@ import { ForexService } from './forex.service';
 import { RatesRequestQueryDto, RatesResponseDto } from './forex.dto';
 
 @ApiTags('forex')
-@Controller('forex')
+@Controller({ version: '1', path: 'forex' })
 @UseInterceptors(CacheInterceptor)
 export class ForexController {
   constructor(private readonly forexService: ForexService) {}

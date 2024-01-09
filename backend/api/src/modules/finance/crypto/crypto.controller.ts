@@ -5,7 +5,7 @@ import { CoinsResponseDto } from './crypto.dto';
 import { CryptoService } from './crypto.service';
 
 @ApiTags('crypto')
-@Controller('crypto')
+@Controller({ version: '1', path: 'crypto' })
 @UseInterceptors(CacheInterceptor)
 export class CryptoController {
   constructor(private readonly cryptoService: CryptoService) {}

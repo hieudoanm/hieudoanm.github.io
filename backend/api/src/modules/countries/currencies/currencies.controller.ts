@@ -5,7 +5,7 @@ import { CurrenciesResponseDto } from './currencies.dto';
 import { CurrenciesService } from './currencies.service';
 
 @ApiTags('currencies')
-@Controller('currencies')
+@Controller({ version: '1', path: 'currencies' })
 @UseInterceptors(CacheInterceptor)
 export class CurrenciesController {
   constructor(private readonly currenciesService: CurrenciesService) {}

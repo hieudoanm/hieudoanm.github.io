@@ -5,6 +5,9 @@ import {
   ChessVariant,
 } from '@prisma/client';
 import axios from 'axios';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const PUBLIC_URL: string = 'https://api.chess.com/pub';
 
@@ -45,6 +48,7 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
     archives.reverse();
     for (const archive of archives) {
       const games = await getGames(archive);
+      console.info(`archive=${archive} games=${games.length}`);
       for (const game of games) {
         const {
           uuid: id,
@@ -91,8 +95,8 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
           fen,
           whiteAccuracy,
           blackAccuracy,
-          whiteUsername,
-          blackUsername,
+          whiteUsername: whiteUsername.toLowerCase(),
+          blackUsername: blackUsername.toLowerCase(),
           whiteRating,
           blackRating,
           whiteResult: whiteResult2,
@@ -114,8 +118,16 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
   }
 };
 
+const CHESS_USERNAME = process.env.CHESS_USERNAME ?? '';
+
 const main = async () => {
   const prismaClient = new PrismaClient();
+
+  if (CHESS_USERNAME) {
+    await getArchives(prismaClient, CHESS_USERNAME);
+    return;
+  }
+
   const usernames = [
     { username: 'thedarkknighttrilogy', title: '' },
     { username: 'anishgiri', title: 'gm' }, // Anish Giri

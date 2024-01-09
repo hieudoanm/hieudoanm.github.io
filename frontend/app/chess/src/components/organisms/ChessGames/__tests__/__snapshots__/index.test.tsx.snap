@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChessGames to match snapshot 1`] = `
+<div>
+  <div
+    class="chakra-card border border-gray-200 css-2dlz7"
+  >
+    <div
+      class="chakra-card__header css-0"
+    >
+      <h1
+        class="text-xl md:text-3xl"
+      >
+        Overview
+      </h1>
+    </div>
+    <hr
+      aria-orientation="horizontal"
+      class="chakra-divider css-1upb9tn"
+    />
+    <div
+      class="chakra-card__body css-0"
+    >
+      <div
+        class="flex flex-col gap-y-4"
+      >
+        <div
+          class="flex items-center justify-between"
+        >
+          <div
+            class="flex flex-col gap-y-2"
+          >
+            <p
+              class="text-base md:text-lg"
+            >
+              Games played
+            </p>
+            <p
+              class="text-lg md:text-xl"
+            >
+              <b>
+                0
+              </b>
+            </p>
+          </div>
+          <div
+            class="flex items-center gap-x-2 md:gap-x-4"
+          >
+            <div
+              class="flex flex-col gap-y-1"
+            >
+              <div
+                class="flex items-center gap-x-1 md:gap-x-2"
+              >
+                <svg
+                  class="chakra-icon css-g37jgb"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-32 252c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92H92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+                  />
+                </svg>
+                <b
+                  class="text-base md:text-lg"
+                >
+                  0.00
+                  %
+                </b>
+              </div>
+              <div
+                class="text-right text-xs capitalize md:text-sm"
+              >
+                0
+                 
+                won
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-y-1"
+            >
+              <div
+                class="flex items-center gap-x-1 md:gap-x-2"
+              >
+                <svg
+                  class="chakra-icon css-15t4wcl"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"
+                  />
+                </svg>
+                <b
+                  class="text-base md:text-lg"
+                >
+                  0.00
+                  %
+                </b>
+              </div>
+              <div
+                class="text-right text-xs capitalize md:text-sm"
+              >
+                0
+                 
+                drawn
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-y-1"
+            >
+              <div
+                class="flex items-center gap-x-1 md:gap-x-2"
+              >
+                <svg
+                  class="chakra-icon css-f11o2j"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM92 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H92z"
+                  />
+                </svg>
+                <b
+                  class="text-base md:text-lg"
+                >
+                  0.00
+                  %
+                </b>
+              </div>
+              <div
+                class="text-right text-xs capitalize md:text-sm"
+              >
+                0
+                 
+                lost
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="aspect-video"
+        >
+          <div
+            class="recharts-responsive-container"
+            style="width: 100%; height: 100%; min-width: 0;"
+          />
+        </div>
+      </div>
+    </div>
+    <hr
+      aria-orientation="horizontal"
+      class="chakra-divider css-1upb9tn"
+    />
+    <div
+      class="chakra-card__body css-0"
+    >
+      <div
+        class="flex flex-col gap-y-4"
+      >
+        <div
+          class="flex items-center justify-between"
+        >
+          <div
+            class="flex flex-col gap-y-2"
+          >
+            <p
+              class="text-base md:text-lg"
+            >
+              Average accuracy
+            </p>
+            <p
+              class="text-lg md:text-xl"
+            >
+              <b>
+                0
+              </b>
+            </p>
+          </div>
+          <div
+            class="flex items-center gap-x-2 md:gap-x-4"
+          >
+            <div
+              class="flex flex-col gap-y-1"
+            >
+              <p
+                class="text-right text-xs capitalize md:text-sm"
+              >
+                When you win
+              </p>
+              <div
+                class="flex items-center gap-x-1 md:gap-x-2"
+              >
+                <svg
+                  class="chakra-icon css-g37jgb"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-32 252c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92H92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+                  />
+                </svg>
+                <b
+                  class="text-base md:text-lg"
+                >
+                  0.00
+                  %
+                </b>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-y-1"
+            >
+              <p
+                class="text-right text-xs capitalize md:text-sm"
+              >
+                When you draw
+              </p>
+              <div
+                class="flex items-center gap-x-1 md:gap-x-2"
+              >
+                <svg
+                  class="chakra-icon css-15t4wcl"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"
+                  />
+                </svg>
+                <b
+                  class="text-base md:text-lg"
+                >
+                  0.00
+                  %
+                </b>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-y-1"
+            >
+              <p
+                class="text-right text-xs capitalize md:text-sm"
+              >
+                When you lose
+              </p>
+              <div
+                class="flex items-center gap-x-1 md:gap-x-2"
+              >
+                <svg
+                  class="chakra-icon css-f11o2j"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM92 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H92z"
+                  />
+                </svg>
+                <b
+                  class="text-base md:text-lg"
+                >
+                  0.00
+                  %
+                </b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="aspect-video"
+        >
+          <div
+            class="recharts-responsive-container"
+            style="width: 100%; height: 100%; min-width: 0;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

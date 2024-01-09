@@ -18,7 +18,7 @@ import { CountriesService } from './countries.service';
 import { Region } from '@prisma/client';
 
 @ApiTags('countries')
-@Controller('countries')
+@Controller({ version: '1', path: 'countries' })
 @UseInterceptors(CacheInterceptor)
 export class CountriesController {
   constructor(private readonly countriesService: CountriesService) {}

@@ -5,7 +5,7 @@ import { GitHubLanguagesResponseDto } from './github.dto';
 import { GitHubService } from './github.service';
 
 @ApiTags('github')
-@Controller('github')
+@Controller({ version: '1', path: 'github' })
 @UseInterceptors(CacheInterceptor)
 export class GitHubController {
   constructor(private readonly gitHubService: GitHubService) {}

@@ -1,20 +1,67 @@
 import { OpeningsRepository } from './openings.repository';
-import { ApiResponse, ApiTags } from '@nestjs/swagger';
-import { Controller, Get, Query } from '@nestjs/common';
-import { EcosResponseDto, OpeningsResponseDto } from './openings.dto';
+import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {
+  Controller,
+  Get,
+  Query,
+  UseInterceptors,
+  ValidationPipe,
+} from '@nestjs/common';
+import {
+  EcosResponseDto,
+  OpeningsRequestQueryResponseDto,
+  OpeningsResponseDto,
+} from './openings.dto';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 
-@Controller('openings')
 @ApiTags('Chess')
+@Controller({ version: '1', path: 'chess/openings' })
+@UseInterceptors(CacheInterceptor)
 export class OpeningsController {
   constructor(private readonly openingsRepository: OpeningsRepository) {}
 
   @Get()
+  @ApiQuery({
+    name: 'eco',
+    description: 'eco',
+    type: String,
+    required: false,
+  })
+  @ApiQuery({
+    name: 'name',
+    description: 'name',
+    type: String,
+    required: false,
+  })
+  @ApiQuery({
+    name: 'limit',
+    description: 'limit',
+    type: Number,
+    required: false,
+  })
+  @ApiQuery({
+    name: 'offset',
+    description: 'offset',
+    type: Number,
+    required: false,
+  })
   @ApiResponse({ status: 200, type: OpeningsResponseDto })
   public async getOpenings(
-    @Query('eco') eco: string = '',
-    @Query('name') name: string = ''
+    @Query(
+      new ValidationPipe({
+        transform: true,
+        transformOptions: { enableImplicitConversion: true },
+        forbidNonWhitelisted: true,
+      })
+    )
+    {
+      eco = '',
+      name = '',
+      limit = 100,
+      offset = 0,
+    }: OpeningsRequestQueryResponseDto
   ): Promise<OpeningsResponseDto> {
-    return this.openingsRepository.getOpenings({ eco, name });
+    return this.openingsRepository.getOpenings({ eco, name, limit, offset });
   }
 
   @Get('ecos')

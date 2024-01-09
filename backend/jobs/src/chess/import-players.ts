@@ -287,8 +287,16 @@ const syncPlayer = async (
   }
 };
 
+const USERNAME = process.env.USERNAME ?? '';
+
 const main = async () => {
   const prismaClient = new PrismaClient();
+
+  if (USERNAME) {
+    await syncPlayer(prismaClient, USERNAME);
+    return;
+  }
+
   const usernames: Set<string> = new Set<string>();
   for (const title of TITLES) {
     const players: string[] = await getTitledPlayers(title);

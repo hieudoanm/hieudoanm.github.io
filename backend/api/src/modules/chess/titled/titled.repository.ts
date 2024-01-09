@@ -50,7 +50,7 @@ export class TitledRepository {
     timeControl: string;
   }): Prisma.Sql {
     const days: number = TIME_RANGE_IN_DAYS.get(timeRange);
-    const query: string = `SELECT AVG(p."stats${timeControl}RatingLast") as "average" FROM public."Player" as p WHERE p."title" = '${title}' AND p."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day) AND p."stats${timeControl}RatingLast" != 0;`;
+    const query: string = `SELECT AVG(p."stats${timeControl}RatingLast") as "average" FROM chess."ChessPlayer" as p WHERE p."title" = '${title}' AND p."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day) AND p."stats${timeControl}RatingLast" != 0;`;
     this.logger.log(`buildAverageRatingQuery query=${query}`);
     return Prisma.raw(query);
   }
@@ -65,7 +65,7 @@ export class TitledRepository {
     timeControl: string;
   }): Prisma.Sql {
     const days: number = TIME_RANGE_IN_DAYS.get(timeRange);
-    const query: string = `SELECT MAX(p."stats${timeControl}RatingLast") as "max" FROM public."Player" as p WHERE p."title" = '${title}' AND p."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day) AND p."stats${timeControl}RatingLast" != 0;`;
+    const query: string = `SELECT MAX(p."stats${timeControl}RatingLast") as "max" FROM chess."ChessPlayer" as p WHERE p."title" = '${title}' AND p."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day) AND p."stats${timeControl}RatingLast" != 0;`;
     this.logger.log(`buildMaxAverageRating query=${query}`);
     return Prisma.raw(query);
   }

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { EngineModule } from './engine/engine.module';
-import { PlayerModule } from './player/player.module';
+import { PlayerModule } from './players/players.module';
 import { RatingModule } from './rating/rating.module';
 import { TitledModule } from './titled/titled.module';
 

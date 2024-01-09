@@ -11,9 +11,13 @@ export class OpeningsRepository {
   public async getOpenings({
     eco = '',
     name = '',
+    limit = 100,
+    offset = 0,
   }: {
     eco: string;
     name: string;
+    limit: number;
+    offset: number;
   }): Promise<OpeningsResponseDto> {
     let where: Prisma.ChessOpeningWhereInput = {};
     if (eco !== '') {
@@ -23,9 +27,15 @@ export class OpeningsRepository {
       where = { ...where, name: { contains: name, mode: 'insensitive' } };
     }
     const [total = 0, openings = []] = await this.prismaService.$transaction([
-      this.prismaService.chessOpening.count({ where }),
+      this.prismaService.chessOpening.count({
+        where,
+        take: limit,
+        skip: offset,
+      }),
       this.prismaService.chessOpening.findMany({
         where,
+        take: limit,
+        skip: offset,
         orderBy: [{ eco: 'asc' }, { name: 'asc' }],
       }),
     ]);

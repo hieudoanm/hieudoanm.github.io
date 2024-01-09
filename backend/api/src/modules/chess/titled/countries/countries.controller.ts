@@ -1,10 +1,12 @@
+import { CacheInterceptor } from '@nestjs/cache-manager';
+import { Controller, Get, Param, Query, UseInterceptors } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
-import { CountriesService } from './countries.service';
-import { Controller, Get, Param, Query } from '@nestjs/common';
 import { CountriesResponseDto, CountryResponseDto } from './countries.dto';
+import { CountriesService } from './countries.service';
 
-@Controller('countries')
 @ApiTags('Chess')
+@Controller({ version: '1', path: 'chess/countries' })
+@UseInterceptors(CacheInterceptor)
 export class CountriesController {
   constructor(private readonly countriesService: CountriesService) {}
 
