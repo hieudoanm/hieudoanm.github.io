@@ -11,6 +11,7 @@ import { NODE_ENV, PORT } from './common/environments/environments';
 import { logger } from './common/libs/logger/logger';
 import { schema } from './graphql/graphql.schema';
 import express from 'express';
+import { ChessDataSource } from './common/data/chess/chess.data-source';
 
 const main = async () => {
   const app = express();
@@ -20,18 +21,20 @@ const main = async () => {
     NODE_ENV === 'production'
       ? ApolloServerPluginLandingPageProductionDefault({ footer: false })
       : ApolloServerPluginLandingPageLocalDefault({ footer: false });
-  const server = new ApolloServer({
+  const apolloServer = new ApolloServer({
     schema,
     introspection: true,
     plugins: [landingPage, ApolloServerPluginDrainHttpServer({ httpServer })],
   });
-  await server.start();
+  await apolloServer.start();
   // GraphQL
   app.use(
     '/graphql',
     cors<cors.CorsRequest>(),
     express.json(),
-    expressMiddleware(server)
+    expressMiddleware(apolloServer, {
+      context: async () => ({ chessDataSource: new ChessDataSource() }),
+    })
   );
 
   const port: number = Number.parseInt(PORT, 10);
