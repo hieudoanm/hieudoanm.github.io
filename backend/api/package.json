@@ -52,7 +52,7 @@
     "yaml": "2.3.4"
   },
   "devDependencies": {
-    "@nestjs/cli": "10.2.1",
+    "@nestjs/cli": "10.3.0",
     "@nestjs/schematics": "10.1.0",
     "@nestjs/testing": "10.3.0",
     "@prisma/client": "5.7.1",
