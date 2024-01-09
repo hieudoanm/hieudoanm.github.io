@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hexagon to match snapshot 1`] = `
+<div>
+  <svg
+    height="112"
+    style="pointer-events: none;"
+    version="1.1"
+    viewBox="0 0 128 110.85125168440814"
+    width="128"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 55.42562584220407L32 0L96 0L128 55.42562584220407L96 110.85125168440814L32 110.85125168440814Z"
+      stroke="#ffffff"
+      stroke-width="5"
+      style="pointer-events: none;"
+    />
+  </svg>
+</div>
+`;
