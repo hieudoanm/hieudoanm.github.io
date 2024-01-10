@@ -1,6 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { LicensePlateDto } from '../../../../src/generated/licensePlate.entity';
+import { LicensePlateDto } from '../../../generated/licensePlate.entity';
 import {
   EthnicGroupsResponseDto,
   LicensePlatesResponseDto,

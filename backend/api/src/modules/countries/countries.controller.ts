@@ -8,7 +8,7 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { CountryDto } from '../../../src/generated/country.entity';
+import { CountryDto } from '../../generated/country.entity';
 import {
   CountriesRequestQueryDto,
   CountriesResponseDto,

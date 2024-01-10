@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { PrismaService } from '../../../../src/common/prisma/prisma.service';
+import { PrismaService } from '../../../common/prisma/prisma.service';
 import { OrganizationDto } from '../../../generated/organization.entity';
 import { OrganizationsResponseDto } from './organizations.dto';
 

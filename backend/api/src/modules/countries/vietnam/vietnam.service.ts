@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { PrismaService } from '../../../../src/common/prisma/prisma.service';
-import { EthnicGroupDto } from '../../../../src/generated/ethnicGroup.entity';
-import { LicensePlateDto } from '../../../../src/generated/licensePlate.entity';
+import { PrismaService } from '../../../common/prisma/prisma.service';
+import { EthnicGroupDto } from '../../../generated/ethnicGroup.entity';
+import { LicensePlateDto } from '../../../generated/licensePlate.entity';
 import {
   EthnicGroupsResponseDto,
   LicensePlatesResponseDto,
