@@ -20,7 +20,7 @@ services:
 
   hieudoanm-redis:
     restart: unless-stopped
-    image: redis:7.2.3
+    image: redis:7.2.4
     container_name: hieudoanm-redis
     ports:
       - 6379:6379
