@@ -205,8 +205,12 @@ export const getServerSideProps: GetServerSideProps<
 > = async () => {
   try {
     const {
-      data: { countries = [] },
-    } = await apolloClient.query<{ countries: Country[] }>({ query });
+      data: {
+        chess: { countries = [] },
+      },
+    } = await apolloClient.query<{ chess: { countries: Country[] } }>({
+      query,
+    });
     return { props: { countries } };
   } catch (error) {
     logger.error(`getServerSideProps error=${error}`);

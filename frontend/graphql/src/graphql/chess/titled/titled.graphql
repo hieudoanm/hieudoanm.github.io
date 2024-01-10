@@ -10,10 +10,10 @@ type Titled {
 }
 
 enum TimeRange {
-  YEAR
-  QUARTER
-  MONTH
-  WEEK
+  year
+  quarter
+  month
+  week
 }
 
 enum Title {

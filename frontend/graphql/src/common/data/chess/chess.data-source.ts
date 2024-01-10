@@ -37,17 +37,17 @@ export class ChessDataSource extends RESTDataSource {
   }
 
   async getPlayer(username: string): Promise<ChessPlayer> {
-    return this.get(`/v1/chess/player/${username}`);
+    return this.get(`/v1/chess/players/${username}`);
   }
 
   async syncPlayer(username: string): Promise<ChessPlayer> {
-    return this.post(`/v1/chess/player/${username}`);
+    return this.post(`/v1/chess/players/${username}`);
   }
 
   async getGames(
     username: string
   ): Promise<{ total: number; games: ChessGame[] }> {
-    return this.get(`/v1/chess/player/${username}/games`);
+    return this.get(`/v1/chess/players/${username}/games`);
   }
 
   async syncGames(
@@ -57,7 +57,7 @@ export class ChessDataSource extends RESTDataSource {
       year = new Date().getFullYear(),
     }: { month: number; year: number }
   ): Promise<GamesSynced> {
-    return this.post(`/v1/chess/player/${username}/games`, {
+    return this.post(`/v1/chess/players/${username}/games`, {
       body: { month, year },
     });
   }

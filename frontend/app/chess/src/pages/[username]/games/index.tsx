@@ -197,8 +197,6 @@ const query: DocumentNode = gql`
           tcn
           initialSetup
           rules
-          whiteId
-          blackId
           whiteUsername
           blackUsername
           whiteAccuracy
@@ -221,10 +219,12 @@ export const getServerSideProps: GetServerSideProps = async (
   try {
     const {
       data: {
-        player: { games = [] },
+        chess: {
+          player: { games = [] },
+        },
       },
     } = await apolloClient.query<{
-      player: { games: ChessGame[] };
+      chess: { player: { games: ChessGame[] } };
     }>({ query, variables: { username } });
     return { props: { username, games } };
   } catch (error) {

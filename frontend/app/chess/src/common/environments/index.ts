@@ -10,6 +10,7 @@ export const BASE_API: string =
 export const ANALYSE_API: string =
   process.env.ANALYSE_API ?? 'http://localhost:8000/v1';
 // GraphQL
-export const GRAPHQL_URI: string = process.env.GRAPHQL_URI ?? '';
+export const GRAPHQL_URI: string =
+  process.env.GRAPHQL_URI ?? 'http://localhost:5000/graphql';
 export const NEXT_PUBLIC_GRAPHQL_URI: string =
-  process.env.NEXT_PUBLIC_GRAPHQL_URI ?? '';
+  process.env.NEXT_PUBLIC_GRAPHQL_URI ?? 'http://localhost:5000/graphql';

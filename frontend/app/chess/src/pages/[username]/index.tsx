@@ -4,10 +4,12 @@ import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { Layout } from '@chess/layout';
 import PlayerTemplate from '@chess/templates/PlayerTemplate';
-import { ChessPlayer } from '@prisma/client';
+import { ChessPlayer, ChessStats } from '@prisma/client';
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next';
 
-const PlayerPage: NextPage<{ player: ChessPlayer }> = ({ player }) => {
+const PlayerPage: NextPage<{
+  player: ChessPlayer & { stats: ChessStats[] };
+}> = ({ player }) => {
   return (
     <Layout>
       <Container>
@@ -41,6 +43,7 @@ const query = gql`
         countryCode
         archives
         stats {
+          timeClass
           best
           last
           deviation
@@ -59,8 +62,10 @@ export const getServerSideProps: GetServerSideProps = async (
   const username: string = context.query.username?.toString() ?? '';
   try {
     const {
-      data: { player },
-    } = await apolloClient.query<{ player: ChessPlayer }>({
+      data: {
+        chess: { player },
+      },
+    } = await apolloClient.query<{ chess: { player: ChessPlayer } }>({
       query,
       variables: { username },
     });

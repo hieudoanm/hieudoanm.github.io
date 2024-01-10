@@ -43,18 +43,18 @@ export type StreamersResponse = {
   countries: { countryCode: string; country: string }[];
 };
 
-export type TimeRange = 'WEEK' | 'MONTH' | 'QUARTER' | 'YEAR';
+export type TimeRange = 'week' | 'month' | 'quarter' | 'year';
 
 export const timeRangeInMilliseconds: Record<TimeRange, number> = {
-  WEEK: ONE_WEEK,
-  MONTH: ONE_MONTH,
-  QUARTER: ONE_QUARTER,
-  YEAR: ONE_YEAR,
+  week: ONE_WEEK,
+  month: ONE_MONTH,
+  quarter: ONE_QUARTER,
+  year: ONE_YEAR,
 };
 
 export const timeRangeInDays: Record<TimeRange, number> = {
-  WEEK: 7,
-  MONTH: 30,
-  QUARTER: 90,
-  YEAR: 365,
+  week: 7,
+  month: 30,
+  quarter: 90,
+  year: 365,
 };

@@ -1,1 +1,1 @@
-export type TimeRange = 'YEAR' | 'QUARTER' | 'MONTH' | 'WEEK';
+export type TimeRange = 'year' | 'quarter' | 'month' | 'week';

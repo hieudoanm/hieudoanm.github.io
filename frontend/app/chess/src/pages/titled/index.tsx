@@ -45,8 +45,8 @@ import { ChangeEvent, useState } from 'react';
 import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
 
 const getRatingByTimeClass = (
-  stats: ChessStats[],
-  chessTimeClass: ChessTimeClass
+  chessTimeClass: ChessTimeClass,
+  stats: ChessStats[] = []
 ): number => {
   const chessStats = stats.find(({ timeClass }) => {
     return timeClass === chessTimeClass;
@@ -59,10 +59,10 @@ const RapidHistogramChart: React.FC<{
 }> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
     ({ stats }: { stats: ChessStats[] }) =>
-      getRatingByTimeClass(stats, 'rapid') > 0
+      getRatingByTimeClass('rapid', stats) > 0
   );
   const ratings = ratedPlayers.map(({ stats }: { stats: ChessStats[] }) =>
-    getRatingByTimeClass(stats, 'rapid')
+    getRatingByTimeClass('rapid', stats)
   );
   const max: number = Math.round(Math.max(...ratings) / GAP) * GAP;
   const min: number = Math.round(Math.min(...ratings) / GAP) * GAP;
@@ -78,8 +78,8 @@ const RapidHistogramChart: React.FC<{
     const label = `${point} - ${point + 100}`;
     const value = ratedPlayers.filter(
       ({ stats }) =>
-        getRatingByTimeClass(stats, 'rapid') >= point &&
-        getRatingByTimeClass(stats, 'rapid') < point + 100
+        getRatingByTimeClass('rapid', stats) >= point &&
+        getRatingByTimeClass('rapid', stats) < point + 100
     ).length;
     return { label, value };
   });
@@ -91,10 +91,10 @@ const BlitzHistogramChart: React.FC<{
   players: (ChessPlayer & { stats: ChessStats[] })[];
 }> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
-    ({ stats }) => getRatingByTimeClass(stats, 'blitz') > 0
+    ({ stats }) => getRatingByTimeClass('blitz', stats) > 0
   );
   const ratings = ratedPlayers.map(({ stats }) =>
-    getRatingByTimeClass(stats, 'blitz')
+    getRatingByTimeClass('blitz', stats)
   );
   const max: number = Math.round(Math.max(...ratings) / GAP) * GAP;
   const min: number = Math.round(Math.min(...ratings) / GAP) * GAP;
@@ -110,8 +110,8 @@ const BlitzHistogramChart: React.FC<{
     const label = `${point} - ${point + 100}`;
     const value = ratedPlayers.filter(
       ({ stats }) =>
-        getRatingByTimeClass(stats, 'blitz') >= point &&
-        getRatingByTimeClass(stats, 'blitz') < point + 100
+        getRatingByTimeClass('blitz', stats) >= point &&
+        getRatingByTimeClass('blitz', stats) < point + 100
     ).length;
     return { label, value };
   });
@@ -123,10 +123,10 @@ const BulletHistogramChart: React.FC<{
   players: (ChessPlayer & { stats: ChessStats[] })[];
 }> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
-    ({ stats }) => getRatingByTimeClass(stats, 'bullet') > 0
+    ({ stats = [] }) => getRatingByTimeClass('bullet', stats) > 0
   );
-  const ratings = ratedPlayers.map(({ stats }) =>
-    getRatingByTimeClass(stats, 'bullet')
+  const ratings = ratedPlayers.map(({ stats = [] }) =>
+    getRatingByTimeClass('bullet', stats)
   );
   const max: number = Math.round(Math.max(...ratings) / GAP) * GAP;
   const min: number = Math.round(Math.min(...ratings) / GAP) * GAP;
@@ -141,9 +141,9 @@ const BulletHistogramChart: React.FC<{
   const data = range.map((point: number) => {
     const label = `${point} - ${point + 100}`;
     const value = ratedPlayers.filter(
-      ({ stats }) =>
-        getRatingByTimeClass(stats, 'bullet') >= point &&
-        getRatingByTimeClass(stats, 'bullet') < point + 100
+      ({ stats = [] }) =>
+        getRatingByTimeClass('bullet', stats) >= point &&
+        getRatingByTimeClass('bullet', stats) < point + 100
     ).length;
     return { label, value };
   });
@@ -215,7 +215,7 @@ const PlayersTable: React.FC<{
                     avatar = '',
                     country = '',
                     countryCode = '',
-                    stats,
+                    stats = [],
                   },
                   index: number
                 ) => {
@@ -245,9 +245,9 @@ const PlayersTable: React.FC<{
                           {country}
                         </Link>
                       </Td>
-                      <Td isNumeric>{getRatingByTimeClass(stats, 'rapid')}</Td>
-                      <Td isNumeric>{getRatingByTimeClass(stats, 'blitz')}</Td>
-                      <Td isNumeric>{getRatingByTimeClass(stats, 'bullet')}</Td>
+                      <Td isNumeric>{getRatingByTimeClass('rapid', stats)}</Td>
+                      <Td isNumeric>{getRatingByTimeClass('blitz', stats)}</Td>
+                      <Td isNumeric>{getRatingByTimeClass('bullet', stats)}</Td>
                     </Tr>
                   );
                 }
@@ -275,7 +275,7 @@ type TitledPageProperties = {
 
 const TitledPage: NextPage<TitledPageProperties> = ({
   title = 'GM' as ChessTitle,
-  timeRange: initialTimeRange = 'YEAR',
+  timeRange: initialTimeRange = 'year',
   averageRapidRating = 0,
   averageBlitzRating = 0,
   averageBulletRating = 0,
@@ -340,10 +340,10 @@ const TitledPage: NextPage<TitledPageProperties> = ({
                     });
                   }}
                 >
-                  <option value="WEEK">7 Days</option>
-                  <option value="MONTH">30 Days</option>
-                  <option value="QUARTER">90 Days</option>
-                  <option value="YEAR">1 Year</option>
+                  <option value="week">7 Days</option>
+                  <option value="month">30 Days</option>
+                  <option value="quarter">90 Days</option>
+                  <option value="year">1 Year</option>
                 </Select>
               </Box>
             </Box>
@@ -430,6 +430,7 @@ const query = gql`
           league
           archives
           stats {
+            timeClass
             best
             last
             deviation
@@ -454,27 +455,32 @@ export const getServerSideProps: GetServerSideProps<
   const timeRange: TimeRange = resolveQuery(
     context.query,
     'timeRange',
-    'YEAR'
+    'year'
   ) as TimeRange;
-  logger.info(`getServerSideProps title=${title} timeRange=${timeRange}`);
   try {
-    const {
-      data: {
-        titled: {
-          averageRapidRating = 0,
-          averageBlitzRating = 0,
-          averageBulletRating = 0,
-          maxRapidRating = 0,
-          maxBlitzRating = 0,
-          maxBulletRating = 0,
-          total = 0,
-          players = [],
-        },
-      },
-    } = await apolloClient.query<{ titled: TitledPageProperties }>({
+    const response = await apolloClient.query<{
+      chess: { titled: TitledPageProperties };
+    }>({
       query,
       variables: { title, timeRange },
     });
+    logger.info(`getServerSideProps title=${title} timeRange=${timeRange}`);
+    const {
+      data: {
+        chess: {
+          titled: {
+            averageRapidRating = 0,
+            averageBlitzRating = 0,
+            averageBulletRating = 0,
+            maxRapidRating = 0,
+            maxBlitzRating = 0,
+            maxBulletRating = 0,
+            total = 0,
+            players = [],
+          },
+        },
+      },
+    } = response;
     return {
       props: {
         title,
@@ -490,7 +496,9 @@ export const getServerSideProps: GetServerSideProps<
       },
     };
   } catch (error) {
-    logger.error(`getServerSideProps title=${title} error=${error}`);
+    logger.error(
+      `getServerSideProps title=${title} timeRange=${timeRange} error=${error}`
+    );
     return {
       props: {
         title,

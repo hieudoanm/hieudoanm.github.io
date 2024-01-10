@@ -113,8 +113,12 @@ export const getServerSideProps: GetServerSideProps<
 > = async () => {
   try {
     const {
-      data: { openings = [] },
-    } = await apolloClient.query<{ openings: ChessOpening[] }>({ query });
+      data: {
+        chess: { openings = [] },
+      },
+    } = await apolloClient.query<{ chess: { openings: ChessOpening[] } }>({
+      query,
+    });
     return { props: { openings } };
   } catch (error) {
     logger.error(`getServerSideProps error=${error}`);

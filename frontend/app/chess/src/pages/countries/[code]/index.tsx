@@ -30,19 +30,34 @@ import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
 import { Layout } from '@chess/layout';
-import { ChessPlayer, ChessTitle } from '@prisma/client';
+import {
+  ChessPlayer,
+  ChessStats,
+  ChessTimeClass,
+  ChessTitle,
+} from '@prisma/client';
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next';
 import Link from 'next/link';
 import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
 
-const RapidHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
-  players = [],
-}) => {
+const getRatingByTimeClass = (
+  chessTimeClass: ChessTimeClass,
+  stats: ChessStats[] = []
+): number => {
+  const chessStats = (stats ?? []).find(({ timeClass }) => {
+    return timeClass === chessTimeClass;
+  });
+  return chessStats?.last ?? 0;
+};
+
+const RapidHistogramChart: React.FC<{
+  players: (ChessPlayer & { stats: ChessStats[] })[];
+}> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
-    (player: ChessPlayer) => player.statsRapidRatingLast > 0
+    ({ stats = [] }) => getRatingByTimeClass('rapid', stats) > 0
   );
-  const ratings = ratedPlayers.map(
-    ({ statsRapidRatingLast }) => statsRapidRatingLast
+  const ratings = ratedPlayers.map(({ stats = [] }) =>
+    getRatingByTimeClass('rapid', stats)
   );
   const max: number = Math.round(Math.max(...ratings) / GAP) * GAP;
   const min: number = Math.round(Math.min(...ratings) / GAP) * GAP;
@@ -57,8 +72,9 @@ const RapidHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   const data = range.map((point: number) => {
     const label = `${point} - ${point + 100}`;
     const value = ratedPlayers.filter(
-      ({ statsRapidRatingLast }) =>
-        statsRapidRatingLast >= point && statsRapidRatingLast < point + 100
+      ({ stats = [] }) =>
+        getRatingByTimeClass('rapid', stats) >= point &&
+        getRatingByTimeClass('rapid', stats) < point + 100
     ).length;
     return { label, value };
   });
@@ -66,14 +82,14 @@ const RapidHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   return <ChessHistogramChart title="Rapid" data={data} />;
 };
 
-const BlitzHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
-  players = [],
-}) => {
+const BlitzHistogramChart: React.FC<{
+  players: (ChessPlayer & { stats: ChessStats[] })[];
+}> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
-    (player: ChessPlayer) => player.statsBlitzRatingLast > 0
+    ({ stats = [] }) => getRatingByTimeClass('blitz', stats) > 0
   );
-  const ratings = ratedPlayers.map(
-    ({ statsBlitzRatingLast }) => statsBlitzRatingLast
+  const ratings = ratedPlayers.map(({ stats = [] }) =>
+    getRatingByTimeClass('blitz', stats)
   );
   const max: number = Math.round(Math.max(...ratings) / GAP) * GAP;
   const min: number = Math.round(Math.min(...ratings) / GAP) * GAP;
@@ -88,8 +104,9 @@ const BlitzHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   const data = range.map((point: number) => {
     const label = `${point} - ${point + 100}`;
     const value = ratedPlayers.filter(
-      ({ statsBlitzRatingLast }) =>
-        statsBlitzRatingLast >= point && statsBlitzRatingLast < point + 100
+      ({ stats = [] }) =>
+        getRatingByTimeClass('blitz', stats) >= point &&
+        getRatingByTimeClass('blitz', stats) < point + 100
     ).length;
     return { label, value };
   });
@@ -97,14 +114,14 @@ const BlitzHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   return <ChessHistogramChart title="Blitz" data={data} />;
 };
 
-const BulletHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
-  players = [],
-}) => {
+const BulletHistogramChart: React.FC<{
+  players: (ChessPlayer & { stats: ChessStats[] })[];
+}> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
-    (player: ChessPlayer) => player.statsBulletRatingLast > 0
+    ({ stats = [] }) => getRatingByTimeClass('bullet', stats) > 0
   );
-  const ratings = ratedPlayers.map(
-    ({ statsBulletRatingLast }) => statsBulletRatingLast
+  const ratings = ratedPlayers.map(({ stats = [] }) =>
+    getRatingByTimeClass('bullet', stats)
   );
   const max: number = Math.round(Math.max(...ratings) / GAP) * GAP;
   const min: number = Math.round(Math.min(...ratings) / GAP) * GAP;
@@ -119,8 +136,9 @@ const BulletHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   const data = range.map((point: number) => {
     const label = `${point} - ${point + 100}`;
     const value = ratedPlayers.filter(
-      ({ statsBulletRatingLast }) =>
-        statsBulletRatingLast >= point && statsBulletRatingLast < point + 100
+      ({ stats = [] }) =>
+        getRatingByTimeClass('bullet', stats) >= point &&
+        getRatingByTimeClass('bullet', stats) < point + 100
     ).length;
     return { label, value };
   });
@@ -128,10 +146,10 @@ const BulletHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   return <ChessHistogramChart title="Bullet" data={data} />;
 };
 
-const PlayersTable: React.FC<{ total: number; players: ChessPlayer[] }> = ({
-  total = 0,
-  players = [],
-}) => {
+const PlayersTable: React.FC<{
+  total: number;
+  players: (ChessPlayer & { stats: ChessStats[] })[];
+}> = ({ total = 0, players = [] }) => {
   return (
     <Card className="border border-gray-200 shadow">
       <CardHeader>
@@ -159,14 +177,7 @@ const PlayersTable: React.FC<{ total: number; players: ChessPlayer[] }> = ({
           </Thead>
           <Tbody>
             {players.map(
-              ({
-                title = '',
-                username = '',
-                avatar = '',
-                statsBulletRatingLast = 0,
-                statsBlitzRatingLast = 0,
-                statsRapidRatingLast = 0,
-              }) => {
+              ({ title = '', username = '', avatar = '', stats = [] }) => {
                 return (
                   <Tr key={username}>
                     <Td>
@@ -195,9 +206,9 @@ const PlayersTable: React.FC<{ total: number; players: ChessPlayer[] }> = ({
                         </div>
                       </Link>
                     </Td>
-                    <Td isNumeric>{statsBulletRatingLast}</Td>
-                    <Td isNumeric>{statsBlitzRatingLast}</Td>
-                    <Td isNumeric>{statsRapidRatingLast}</Td>
+                    <Td isNumeric>{getRatingByTimeClass('rapid', stats)}</Td>
+                    <Td isNumeric>{getRatingByTimeClass('blitz', stats)}</Td>
+                    <Td isNumeric>{getRatingByTimeClass('bullet', stats)}</Td>
                   </Tr>
                 );
               }
@@ -248,7 +259,7 @@ type CountryPageProperties = {
   maxBlitzRating: number;
   maxBulletRating: number;
   total: number;
-  players: ChessPlayer[];
+  players: (ChessPlayer & { stats: ChessStats[] })[];
   titles: { title: ChessTitle; total: number }[];
 };
 
@@ -381,6 +392,7 @@ const query = gql`
           league
           archives
           stats {
+            timeClass
             best
             last
             deviation
@@ -401,22 +413,26 @@ export const getServerSideProps: GetServerSideProps<
   try {
     const {
       data: {
-        country: {
-          averageRapidRating = 0,
-          averageBlitzRating = 0,
-          averageBulletRating = 0,
-          maxRapidRating = 0,
-          maxBlitzRating = 0,
-          maxBulletRating = 0,
-          total = 0,
-          players = [],
-          titles = [],
+        chess: {
+          country: {
+            averageRapidRating = 0,
+            averageBlitzRating = 0,
+            averageBulletRating = 0,
+            maxRapidRating = 0,
+            maxBlitzRating = 0,
+            maxBulletRating = 0,
+            total = 0,
+            players = [],
+            titles = [],
+          },
         },
       },
-    } = await apolloClient.query<{ country: CountryPageProperties }>({
-      query,
-      variables: { code },
-    });
+    } = await apolloClient.query<{ chess: { country: CountryPageProperties } }>(
+      {
+        query,
+        variables: { code },
+      }
+    );
     return {
       props: {
         countryCode: code,

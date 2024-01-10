@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { ChessPlayer, Prisma } from '@prisma/client';
+import { ChessPlayer, ChessTimeClass, Prisma } from '@prisma/client';
 import { ChessTitle } from '../../../common/clients/apis/chess.com/chess.dto';
 import {
   TIME_RANGE_IN_DAYS,
@@ -43,14 +43,21 @@ export class TitledRepository {
   private buildAverageRatingQuery({
     title,
     timeRange,
-    timeControl,
+    timeClass,
   }: {
     title: string;
     timeRange: TimeRange;
-    timeControl: string;
+    timeClass: ChessTimeClass;
   }): Prisma.Sql {
     const days: number = TIME_RANGE_IN_DAYS.get(timeRange);
-    const query: string = `SELECT AVG(p."stats${timeControl}RatingLast") as "average" FROM chess."ChessPlayer" as p WHERE p."title" = '${title}' AND p."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day) AND p."stats${timeControl}RatingLast" != 0;`;
+    const query: string = `SELECT AVG(stats."last") AS "average"
+FROM chess."ChessStats" AS stats
+WHERE stats."last" != 0
+AND stats."timeClass" = '${timeClass}'
+AND stats."playerId" IN (SELECT player."id"
+FROM chess."ChessPlayer" AS player
+WHERE player."title" = '${title}'
+AND player."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day));`;
     this.logger.log(`buildAverageRatingQuery query=${query}`);
     return Prisma.raw(query);
   }
@@ -58,14 +65,21 @@ export class TitledRepository {
   private buildMaxAverageRating({
     title,
     timeRange,
-    timeControl,
+    timeClass,
   }: {
     title: string;
     timeRange: TimeRange;
-    timeControl: string;
+    timeClass: string;
   }): Prisma.Sql {
     const days: number = TIME_RANGE_IN_DAYS.get(timeRange);
-    const query: string = `SELECT MAX(p."stats${timeControl}RatingLast") as "max" FROM chess."ChessPlayer" as p WHERE p."title" = '${title}' AND p."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day) AND p."stats${timeControl}RatingLast" != 0;`;
+    const query: string = `SELECT MAX(stats."last") AS "max"
+FROM chess."ChessStats" AS stats
+WHERE stats."last" != 0
+AND stats."timeClass" = '${timeClass}'
+AND stats."playerId" IN (SELECT player."id"
+FROM chess."ChessPlayer" AS player
+WHERE player."title" = '${title}'
+AND player."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day));`;
     this.logger.log(`buildMaxAverageRating query=${query}`);
     return Prisma.raw(query);
   }
@@ -80,32 +94,32 @@ export class TitledRepository {
     const averageRapidRatingQuery = this.buildAverageRatingQuery({
       title,
       timeRange,
-      timeControl: 'Rapid',
+      timeClass: 'rapid',
     });
     const maxRapidRatingQuery = this.buildMaxAverageRating({
       title,
       timeRange,
-      timeControl: 'Rapid',
+      timeClass: 'rapid',
     });
     const averageBlitzRatingQuery = this.buildAverageRatingQuery({
       title,
       timeRange,
-      timeControl: 'Blitz',
+      timeClass: 'blitz',
     });
     const maxBlitzRatingQuery = this.buildMaxAverageRating({
       title,
       timeRange,
-      timeControl: 'Blitz',
+      timeClass: 'blitz',
     });
     const averageBulletRatingQuery = this.buildAverageRatingQuery({
       title,
       timeRange,
-      timeControl: 'Bullet',
+      timeClass: 'bullet',
     });
     const maxBulletRatingQuery = this.buildMaxAverageRating({
       title,
       timeRange,
-      timeControl: 'Bullet',
+      timeClass: 'bullet',
     });
     const [
       [{ average: averageRapidRating = 0 }],

@@ -112,8 +112,10 @@ export const getServerSideProps: GetServerSideProps<
   const eco: string = context.query.eco?.toString() ?? '';
   try {
     const {
-      data: { openings = [] },
-    } = await apolloClient.query<{ openings: ChessOpening[] }>({
+      data: {
+        chess: { openings = [] },
+      },
+    } = await apolloClient.query<{ chess: { openings: ChessOpening[] } }>({
       query,
       variables: { eco },
     });

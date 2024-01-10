@@ -27,6 +27,7 @@ import { ChessPlayer, ChessTitle } from '@prisma/client';
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { constants } from 'node:http2';
 import { ChangeEvent, useState } from 'react';
 import { FaTwitch } from 'react-icons/fa';
 
@@ -255,16 +256,21 @@ export const getServerSideProps: GetServerSideProps<
 > = async (context: GetServerSidePropsContext) => {
   const title = resolveQuery(context.query, 'title', 'GM') as ChessTitle;
   const country = resolveQuery(context.query, 'country');
-  logger.info(`getServerSideProps title=${title} country=${country}`);
   try {
-    const {
-      data: {
-        streamers: { total = 0, countries = [], players = [] },
-      },
-    } = await apolloClient.query<{ streamers: StreamersPageProperties }>({
+    const response = await apolloClient.query<{
+      chess: { streamers: StreamersPageProperties };
+    }>({
       query,
       variables: { title, country },
     });
+    logger.info(`getServerSideProps response=${response}`);
+    const {
+      data: {
+        chess: {
+          streamers: { total = 0, countries = [], players = [] },
+        },
+      },
+    } = response;
     return { props: { title, country, total, countries, players } };
   } catch (error) {
     logger.error(
