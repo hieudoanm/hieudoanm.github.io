@@ -60,7 +60,7 @@ export const ChessHeader: React.FC<ChessHeaderProperties> = ({
   const toast = useToast();
 
   const sync = async () => {
-    await apolloClient.mutate({ mutation, variables: { username } });
+    // await apolloClient.mutate({ mutation, variables: { username } });
     toast({
       title: 'Data Synced',
       description: 'Data is synced successfully',

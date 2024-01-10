@@ -8,6 +8,7 @@ describe('ChessHeader', () => {
         title=""
         name=""
         username=""
+        avatar=""
         verified={true}
         is_streamer={true}
         twitch_url=""

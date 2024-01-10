@@ -6,6 +6,8 @@ import {
 
 const URI: string = NEXT_PUBLIC_GRAPHQL_URI || GRAPHQL_URI || '';
 
+console.info(`URI=${URI}`);
+
 export const apolloClient = new ApolloClient({
   uri: URI,
   cache: new InMemoryCache(),
