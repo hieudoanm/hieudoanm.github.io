@@ -7,7 +7,7 @@
 
 import { Injectable } from '@nestjs/common';
 import { ChessTimeClass } from '@prisma/client';
-import { ChessPoint } from 'src/common/enums/chess.enums';
+import { ChessPoint } from '../../../common/enums/chess.enums';
 
 type DevelopmentCoefficient = 10 | 20 | 40;
 type Options = { age: number; games: number; timeClass: ChessTimeClass };

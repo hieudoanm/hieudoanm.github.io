@@ -2,7 +2,7 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { OrganizationsService } from './organizations.service';
 import { OrganizationsResponseDto } from './organizations.dto';
-import { OrganizationDto } from 'src/generated/organization.entity';
+import { OrganizationDto } from '../../../generated/organization.entity';
 
 @ApiTags('organizations')
 @Controller({ version: '1', path: 'organizations' })

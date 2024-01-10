@@ -1,7 +1,7 @@
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { Cache } from 'cache-manager';
-import { PrismaService } from 'src/common/prisma/prisma.service';
+import { PrismaService } from '../../../common/prisma/prisma.service';
 import { CurrenciesResponseDto } from './currencies.dto';
 
 @Injectable()

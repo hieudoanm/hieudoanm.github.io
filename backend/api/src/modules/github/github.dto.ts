@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { ProgrammingLanguageDto } from 'src/generated/programmingLanguage.entity';
+import { ProgrammingLanguageDto } from '../../generated/programmingLanguage.entity';
 
 export class GitHubLanguagesResponseDto {
   @ApiProperty()

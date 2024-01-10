@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { PrismaService } from '../../../src/common/prisma/prisma.service';
 import { WordsRequestQueryDto, WordsResponseDto } from './words.dto';
-import { WordDto } from 'src/generated/word.entity';
+import { WordDto } from '../../generated/word.entity';
 
 @Injectable()
 export class WordsService {

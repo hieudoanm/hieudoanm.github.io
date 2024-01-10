@@ -3,8 +3,8 @@ import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { Prisma, Region } from '@prisma/client';
 import { Cache } from 'cache-manager';
-import { PrismaService } from 'src/common/prisma/prisma.service';
-import { CountryDto } from '../../../src/generated/country.entity';
+import { PrismaService } from '../../common/prisma/prisma.service';
+import { CountryDto } from '../../generated/country.entity';
 import { CountriesResponseDto, CurrenciesResponseDto } from './countries.dto';
 
 @Injectable()

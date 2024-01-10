@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
 import { IsInt, IsOptional, Max, Min } from 'class-validator';
-import { WordDto } from 'src/generated/word.entity';
+import { WordDto } from '../../generated/word.entity';
 
 export class WordsRequestQueryDto {
   @Type(() => Number)
