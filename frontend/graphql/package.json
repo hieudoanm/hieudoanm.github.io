@@ -8,12 +8,12 @@
   "license": "GPL-3.0",
   "private": true,
   "engines": {
-    "node": "20.11.0"
+    "node": "20.10.0"
   },
   "scripts": {
     "format": "prettier --write .",
     "dev": "rimraf dist && concurrently \"yarn dev:webpack\" \"yarn dev:nodemon\"",
-    "dev:nodemon": "nodemon ./dist/main --watch dist",
+    "dev:nodemon": "nodemon --watch dist",
     "dev:webpack": "webpack --progress --watch",
     "start": "node ./dist/main",
     "prebuild": "rimraf dist",

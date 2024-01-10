@@ -370,6 +370,46 @@ paths:
               schema:
                 $ref: "#/components/schemas/TitledStatsDto"
       tags: *a5
+  /v1/chess/countries:
+    get:
+      operationId: CountriesController_getCountries
+      parameters:
+        - name: cache
+          required: true
+          in: query
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CountryResponseDto"
+      tags: &a6
+        - Chess
+  /v1/chess/countries/{code}:
+    get:
+      operationId: CountriesController_getTitledPlayersByCountry
+      parameters:
+        - name: code
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: cache
+          required: true
+          in: query
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CountriesResponseDto"
+      tags: *a6
   /v1/countries:
     get:
       operationId: CountriesController_getCountries
@@ -436,7 +476,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CountriesResponseDto"
-      tags: &a6
+      tags: &a7
         - countries
   /v1/countries/{code}:
     get:
@@ -454,7 +494,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CountryDto"
-      tags: *a6
+      tags: *a7
   /v1/countries/currencies:
     get:
       operationId: CountriesController_getCurrencies
@@ -466,7 +506,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CurrenciesResponseDto"
-      tags: *a6
+      tags: *a7
   /v1/currencies:
     get:
       operationId: CurrenciesController_getCurrencies
@@ -504,7 +544,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/OrganizationsResponseDto"
-      tags: &a7
+      tags: &a8
         - organizations
   /v1/organizations/{code}:
     get:
@@ -523,7 +563,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/OrganizationDto"
-      tags: *a7
+      tags: *a8
   /v1/vietnam/ethnic-groups:
     get:
       operationId: VietnamController_getEthnicGroups
@@ -535,7 +575,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/EthnicGroupsResponseDto"
-      tags: &a8
+      tags: &a9
         - vietnam
   /v1/vietnam/license-plates:
     get:
@@ -548,7 +588,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/LicensePlatesResponseDto"
-      tags: *a8
+      tags: *a9
   /v1/vietnam/license-plates/{code}:
     get:
       operationId: VietnamController_getLicensePlate
@@ -565,7 +605,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/LicensePlateDto"
-      tags: *a8
+      tags: *a9
   /v1/crypto/coins:
     get:
       operationId: CryptoController_getCountries
@@ -646,7 +686,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GoogleResponseDto"
-      tags: &a9
+      tags: &a10
         - news
   /v1/news/sources:
     get:
@@ -659,7 +699,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/NewsSourcesDto"
-      tags: *a9
+      tags: *a10
   /v1/tarot/cards:
     get:
       operationId: TarotController_getCards
@@ -692,7 +732,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TarotCardsResponseDto"
-      tags: &a10
+      tags: &a11
         - tarot
   /v1/tarot/cards/{id}:
     get:
@@ -710,7 +750,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TarotCardDto"
-      tags: *a10
+      tags: *a11
   /v1/words:
     get:
       operationId: WordsController_getWords
@@ -734,7 +774,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/WordsResponseDto"
-      tags: &a11
+      tags: &a12
         - words
   /v1/words/{word}:
     get:
@@ -752,7 +792,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/WordDto"
-      tags: *a11
+      tags: *a12
 info:
   title: hieudoanm
   description: Hieu Doan
@@ -1068,6 +1108,19 @@ components:
         - maxBulletRating
         - total
         - players
+    CountryResponseDto:
+      type: object
+      properties: {}
+    TitleDto:
+      type: object
+      properties:
+        title:
+          type: string
+        total:
+          type: number
+      required:
+        - title
+        - total
     CountriesResponseDto:
       type: object
       properties:

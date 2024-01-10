@@ -32,21 +32,37 @@ import { resolveQuery } from '@chess/common/utils/resolve-query';
 import { Container } from '@chess/components/atoms/Container';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
 import { Layout } from '@chess/layout';
-import { ChessPlayer, ChessTitle } from '@prisma/client';
+import {
+  ChessPlayer,
+  ChessStats,
+  ChessTimeClass,
+  ChessTitle,
+} from '@prisma/client';
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ChangeEvent, useState } from 'react';
 import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
 
-const RapidHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
-  players = [],
-}) => {
+const getRatingByTimeClass = (
+  stats: ChessStats[],
+  chessTimeClass: ChessTimeClass
+): number => {
+  const chessStats = stats.find(({ timeClass }) => {
+    return timeClass === chessTimeClass;
+  });
+  return chessStats?.last ?? 0;
+};
+
+const RapidHistogramChart: React.FC<{
+  players: (ChessPlayer & { stats: ChessStats[] })[];
+}> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
-    (player: ChessPlayer) => player.statsRapidRatingLast > 0
+    ({ stats }: { stats: ChessStats[] }) =>
+      getRatingByTimeClass(stats, 'rapid') > 0
   );
-  const ratings = ratedPlayers.map(
-    ({ statsRapidRatingLast }) => statsRapidRatingLast
+  const ratings = ratedPlayers.map(({ stats }: { stats: ChessStats[] }) =>
+    getRatingByTimeClass(stats, 'rapid')
   );
   const max: number = Math.round(Math.max(...ratings) / GAP) * GAP;
   const min: number = Math.round(Math.min(...ratings) / GAP) * GAP;
@@ -61,8 +77,9 @@ const RapidHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   const data = range.map((point: number) => {
     const label = `${point} - ${point + 100}`;
     const value = ratedPlayers.filter(
-      ({ statsRapidRatingLast }) =>
-        statsRapidRatingLast >= point && statsRapidRatingLast < point + 100
+      ({ stats }) =>
+        getRatingByTimeClass(stats, 'rapid') >= point &&
+        getRatingByTimeClass(stats, 'rapid') < point + 100
     ).length;
     return { label, value };
   });
@@ -70,14 +87,14 @@ const RapidHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   return <ChessHistogramChart title="Rapid" data={data} />;
 };
 
-const BlitzHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
-  players = [],
-}) => {
+const BlitzHistogramChart: React.FC<{
+  players: (ChessPlayer & { stats: ChessStats[] })[];
+}> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
-    (player: ChessPlayer) => player.statsBlitzRatingLast > 0
+    ({ stats }) => getRatingByTimeClass(stats, 'blitz') > 0
   );
-  const ratings = ratedPlayers.map(
-    ({ statsBlitzRatingLast }) => statsBlitzRatingLast
+  const ratings = ratedPlayers.map(({ stats }) =>
+    getRatingByTimeClass(stats, 'blitz')
   );
   const max: number = Math.round(Math.max(...ratings) / GAP) * GAP;
   const min: number = Math.round(Math.min(...ratings) / GAP) * GAP;
@@ -92,8 +109,9 @@ const BlitzHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   const data = range.map((point: number) => {
     const label = `${point} - ${point + 100}`;
     const value = ratedPlayers.filter(
-      ({ statsBlitzRatingLast }) =>
-        statsBlitzRatingLast >= point && statsBlitzRatingLast < point + 100
+      ({ stats }) =>
+        getRatingByTimeClass(stats, 'blitz') >= point &&
+        getRatingByTimeClass(stats, 'blitz') < point + 100
     ).length;
     return { label, value };
   });
@@ -101,14 +119,14 @@ const BlitzHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   return <ChessHistogramChart title="Blitz" data={data} />;
 };
 
-const BulletHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
-  players = [],
-}) => {
+const BulletHistogramChart: React.FC<{
+  players: (ChessPlayer & { stats: ChessStats[] })[];
+}> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
-    (player: ChessPlayer) => player.statsBulletRatingLast > 0
+    ({ stats }) => getRatingByTimeClass(stats, 'bullet') > 0
   );
-  const ratings = ratedPlayers.map(
-    ({ statsBulletRatingLast }) => statsBulletRatingLast
+  const ratings = ratedPlayers.map(({ stats }) =>
+    getRatingByTimeClass(stats, 'bullet')
   );
   const max: number = Math.round(Math.max(...ratings) / GAP) * GAP;
   const min: number = Math.round(Math.min(...ratings) / GAP) * GAP;
@@ -123,8 +141,9 @@ const BulletHistogramChart: React.FC<{ players: ChessPlayer[] }> = ({
   const data = range.map((point: number) => {
     const label = `${point} - ${point + 100}`;
     const value = ratedPlayers.filter(
-      ({ statsBulletRatingLast }) =>
-        statsBulletRatingLast >= point && statsBulletRatingLast < point + 100
+      ({ stats }) =>
+        getRatingByTimeClass(stats, 'bullet') >= point &&
+        getRatingByTimeClass(stats, 'bullet') < point + 100
     ).length;
     return { label, value };
   });
@@ -162,9 +181,9 @@ const TitledStats: React.FC<{
   );
 };
 
-const PlayersTable: React.FC<{ players: ChessPlayer[] }> = ({
-  players = [],
-}) => {
+const PlayersTable: React.FC<{
+  players: (ChessPlayer & { stats: ChessStats[] })[];
+}> = ({ players = [] }) => {
   return (
     <Card className="border border-gray-200 shadow">
       <CardBody className="p-0">
@@ -196,9 +215,7 @@ const PlayersTable: React.FC<{ players: ChessPlayer[] }> = ({
                     avatar = '',
                     country = '',
                     countryCode = '',
-                    statsRapidRatingLast = 0,
-                    statsBlitzRatingLast = 0,
-                    statsBulletRatingLast = 0,
+                    stats,
                   },
                   index: number
                 ) => {
@@ -228,9 +245,9 @@ const PlayersTable: React.FC<{ players: ChessPlayer[] }> = ({
                           {country}
                         </Link>
                       </Td>
-                      <Td isNumeric>{statsRapidRatingLast}</Td>
-                      <Td isNumeric>{statsBlitzRatingLast}</Td>
-                      <Td isNumeric>{statsBulletRatingLast}</Td>
+                      <Td isNumeric>{getRatingByTimeClass(stats, 'rapid')}</Td>
+                      <Td isNumeric>{getRatingByTimeClass(stats, 'blitz')}</Td>
+                      <Td isNumeric>{getRatingByTimeClass(stats, 'bullet')}</Td>
                     </Tr>
                   );
                 }
@@ -253,7 +270,7 @@ type TitledPageProperties = {
   maxBlitzRating: number;
   maxBulletRating: number;
   total: number;
-  players: ChessPlayer[];
+  players: (ChessPlayer & { stats: ChessStats[] })[];
 };
 
 const TitledPage: NextPage<TitledPageProperties> = ({
@@ -385,56 +402,42 @@ const TitledPage: NextPage<TitledPageProperties> = ({
 
 const query = gql`
   query TitledQuery($title: Title!, $timeRange: TimeRange) {
-    titled(title: $title, timeRange: $timeRange) {
-      averageRapidRating
-      averageBlitzRating
-      averageBulletRating
-      maxRapidRating
-      maxBlitzRating
-      maxBulletRating
-      total
-      players {
-        id
-        username
-        name
-        followers
-        avatar
-        location
-        country
-        countryCode
-        twitchUrl
-        isStreamer
-        verified
-        lastOnline
-        joined
-        status
-        title
-        league
-        archives
-        statsDailyRatingBest
-        statsDailyRatingLast
-        statsDailyRatingDeviation
-        statsDailyRecordWin
-        statsDailyRecordDraw
-        statsDailyRecordLoss
-        statsRapidRatingBest
-        statsRapidRatingLast
-        statsRapidRatingDeviation
-        statsRapidRecordWin
-        statsRapidRecordDraw
-        statsRapidRecordLoss
-        statsBlitzRatingBest
-        statsBlitzRatingLast
-        statsBlitzRatingDeviation
-        statsBlitzRecordWin
-        statsBlitzRecordDraw
-        statsBlitzRecordLoss
-        statsBulletRatingBest
-        statsBulletRatingLast
-        statsBulletRatingDeviation
-        statsBulletRecordWin
-        statsBulletRecordDraw
-        statsBulletRecordLoss
+    chess {
+      titled(title: $title, timeRange: $timeRange) {
+        averageRapidRating
+        averageBlitzRating
+        averageBulletRating
+        maxRapidRating
+        maxBlitzRating
+        maxBulletRating
+        total
+        players {
+          id
+          username
+          name
+          followers
+          avatar
+          location
+          country
+          countryCode
+          twitchUrl
+          isStreamer
+          verified
+          lastOnline
+          joined
+          status
+          title
+          league
+          archives
+          stats {
+            best
+            last
+            deviation
+            win
+            draw
+            loss
+          }
+        }
       }
     }
   }
@@ -443,7 +446,11 @@ const query = gql`
 export const getServerSideProps: GetServerSideProps<
   TitledPageProperties
 > = async (context: GetServerSidePropsContext) => {
-  const title: Title = resolveQuery(context.query, 'title', 'GM') as Title;
+  const title: ChessTitle = resolveQuery(
+    context.query,
+    'title',
+    'GM'
+  ) as ChessTitle;
   const timeRange: TimeRange = resolveQuery(
     context.query,
     'timeRange',

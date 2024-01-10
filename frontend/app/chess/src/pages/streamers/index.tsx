@@ -211,54 +211,40 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
 
 const query: DocumentNode = gql`
   query StreamersQuery($title: Title, $country: String) {
-    streamers(title: $title, country: $country) {
-      total
-      countries {
-        countryCode
-        country
-      }
-      players {
-        id
-        username
-        name
-        followers
-        avatar
-        location
-        country
-        countryCode
-        twitchUrl
-        isStreamer
-        verified
-        lastOnline
-        joined
-        status
-        title
-        league
-        archives
-        statsDailyRatingBest
-        statsDailyRatingLast
-        statsDailyRatingDeviation
-        statsDailyRecordWin
-        statsDailyRecordDraw
-        statsDailyRecordLoss
-        statsRapidRatingBest
-        statsRapidRatingLast
-        statsRapidRatingDeviation
-        statsRapidRecordWin
-        statsRapidRecordDraw
-        statsRapidRecordLoss
-        statsBlitzRatingBest
-        statsBlitzRatingLast
-        statsBlitzRatingDeviation
-        statsBlitzRecordWin
-        statsBlitzRecordDraw
-        statsBlitzRecordLoss
-        statsBulletRatingBest
-        statsBulletRatingLast
-        statsBulletRatingDeviation
-        statsBulletRecordWin
-        statsBulletRecordDraw
-        statsBulletRecordLoss
+    chess {
+      streamers(title: $title, country: $country) {
+        total
+        countries {
+          countryCode
+          country
+        }
+        players {
+          id
+          username
+          name
+          followers
+          avatar
+          location
+          country
+          countryCode
+          twitchUrl
+          isStreamer
+          verified
+          lastOnline
+          joined
+          status
+          title
+          league
+          archives
+          stats {
+            best
+            last
+            deviation
+            win
+            draw
+            loss
+          }
+        }
       }
     }
   }

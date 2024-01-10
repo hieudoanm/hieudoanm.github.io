@@ -60,10 +60,12 @@ const FONT_SEMIBOLD = 'font-semibold';
 
 const mutation = gql`
   mutation SyncGames($username: String!) {
-    games(username: $username) {
-      existed
-      synced
-      total
+    chess {
+      games(username: $username) {
+        existed
+        synced
+        total
+      }
     }
   }
 `;
@@ -182,29 +184,31 @@ const GamesPage: NextPage<{ username: string; games: ChessGame[] }> = ({
 
 const query: DocumentNode = gql`
   query Player($username: String!) {
-    player(username: $username) {
-      games {
-        id
-        url
-        pgn
-        timeControl
-        timeClass
-        endTime
-        rated
-        tcn
-        initialSetup
-        rules
-        whiteId
-        blackId
-        whiteUsername
-        blackUsername
-        whiteAccuracy
-        blackAccuracy
-        whiteResult
-        blackResult
-        whiteRating
-        blackRating
-        fen
+    chess {
+      player(username: $username) {
+        games {
+          id
+          url
+          pgn
+          timeControl
+          timeClass
+          endTime
+          rated
+          tcn
+          initialSetup
+          rules
+          whiteId
+          blackId
+          whiteUsername
+          blackUsername
+          whiteAccuracy
+          blackAccuracy
+          whiteResult
+          blackResult
+          whiteRating
+          blackRating
+          fen
+        }
       }
     }
   }

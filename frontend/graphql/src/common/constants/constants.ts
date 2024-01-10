@@ -1,4 +1,4 @@
-export const BASE_API = process.env.BASE_API ?? '';
+export const BASE_API = process.env.BASE_API ?? 'http://localhost:8080/v1';
 
 export const ONE_SECOND: number = 1000;
 export const ONE_MINUTE: number = ONE_SECOND * 60;

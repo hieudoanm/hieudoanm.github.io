@@ -3,7 +3,7 @@ import { ChessContext } from '../chess.types';
 import { StreamersResponse } from '../../../common/data/chess/chess.types';
 
 export const resolvers = {
-  Query: {
+  Chess: {
     streamers: async (
       _parent: unknown,
       { title, country }: { title: ChessTitle; country: string },

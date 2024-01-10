@@ -21,48 +21,34 @@ const PlayerPage: NextPage<{ player: ChessPlayer }> = ({ player }) => {
 
 const query = gql`
   query PlayerQuery($username: String!) {
-    player(username: $username) {
-      id
-      username
-      name
-      followers
-      avatar
-      location
-      verified
-      lastOnline
-      joined
-      status
-      title
-      league
-      twitchUrl
-      isStreamer
-      country
-      countryCode
-      statsDailyRatingBest
-      statsDailyRatingLast
-      statsDailyRatingDeviation
-      statsDailyRecordWin
-      statsDailyRecordDraw
-      statsDailyRecordLoss
-      statsRapidRatingBest
-      statsRapidRatingLast
-      statsRapidRatingDeviation
-      statsRapidRecordWin
-      statsRapidRecordDraw
-      statsRapidRecordLoss
-      statsBlitzRatingBest
-      statsBlitzRatingLast
-      statsBlitzRatingDeviation
-      statsBlitzRecordWin
-      statsBlitzRecordDraw
-      statsBlitzRecordLoss
-      statsBulletRatingBest
-      statsBulletRatingLast
-      statsBulletRatingDeviation
-      statsBulletRecordWin
-      statsBulletRecordDraw
-      statsBulletRecordLoss
-      archives
+    chess {
+      player(username: $username) {
+        id
+        username
+        name
+        followers
+        avatar
+        location
+        verified
+        lastOnline
+        joined
+        status
+        title
+        league
+        twitchUrl
+        isStreamer
+        country
+        countryCode
+        archives
+        stats {
+          best
+          last
+          deviation
+          win
+          draw
+          loss
+        }
+      }
     }
   }
 `;

@@ -349,60 +349,46 @@ const CountryPage: NextPage<CountryPageProperties> = ({
 
 const query = gql`
   query CountryQuery($code: String!) {
-    country(code: $code) {
-      averageRapidRating
-      averageBlitzRating
-      averageBulletRating
-      maxRapidRating
-      maxBlitzRating
-      maxBulletRating
-      total
-      titles {
-        title
+    chess {
+      country(code: $code) {
+        averageRapidRating
+        averageBlitzRating
+        averageBulletRating
+        maxRapidRating
+        maxBlitzRating
+        maxBulletRating
         total
-      }
-      players {
-        id
-        username
-        name
-        followers
-        avatar
-        location
-        country
-        countryCode
-        twitchUrl
-        isStreamer
-        verified
-        lastOnline
-        joined
-        status
-        title
-        league
-        archives
-        statsDailyRatingBest
-        statsDailyRatingLast
-        statsDailyRatingDeviation
-        statsDailyRecordWin
-        statsDailyRecordDraw
-        statsDailyRecordLoss
-        statsRapidRatingBest
-        statsRapidRatingLast
-        statsRapidRatingDeviation
-        statsRapidRecordWin
-        statsRapidRecordDraw
-        statsRapidRecordLoss
-        statsBlitzRatingBest
-        statsBlitzRatingLast
-        statsBlitzRatingDeviation
-        statsBlitzRecordWin
-        statsBlitzRecordDraw
-        statsBlitzRecordLoss
-        statsBulletRatingBest
-        statsBulletRatingLast
-        statsBulletRatingDeviation
-        statsBulletRecordWin
-        statsBulletRecordDraw
-        statsBulletRecordLoss
+        titles {
+          title
+          total
+        }
+        players {
+          id
+          username
+          name
+          followers
+          avatar
+          location
+          country
+          countryCode
+          twitchUrl
+          isStreamer
+          verified
+          lastOnline
+          joined
+          status
+          title
+          league
+          archives
+          stats {
+            best
+            last
+            deviation
+            win
+            draw
+            loss
+          }
+        }
       }
     }
   }

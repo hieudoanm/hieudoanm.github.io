@@ -2,7 +2,7 @@ import { ChessContext } from '../chess.types';
 import { Country, CountryTotal } from '../../../common/data/chess/chess.types';
 
 export const resolvers = {
-  Query: {
+  Chess: {
     countries: async (
       _parent: unknown,
       _arguments: unknown,

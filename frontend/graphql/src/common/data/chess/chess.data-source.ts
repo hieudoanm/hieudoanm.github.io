@@ -32,22 +32,22 @@ export class ChessDataSource extends RESTDataSource {
     if (country) {
       urlSearchParameters.set('country', country);
     }
-    const endpoint = `/api/chess/streamers?${urlSearchParameters.toString()}`;
+    const endpoint = `/v1/chess/streamers?${urlSearchParameters.toString()}`;
     return this.get(endpoint);
   }
 
   async getPlayer(username: string): Promise<ChessPlayer> {
-    return this.get(`/api/chess/player/${username}`);
+    return this.get(`/v1/chess/player/${username}`);
   }
 
   async syncPlayer(username: string): Promise<ChessPlayer> {
-    return this.post(`/api/chess/player/${username}`);
+    return this.post(`/v1/chess/player/${username}`);
   }
 
   async getGames(
     username: string
   ): Promise<{ total: number; games: ChessGame[] }> {
-    return this.get(`/api/chess/player/${username}/games`);
+    return this.get(`/v1/chess/player/${username}/games`);
   }
 
   async syncGames(
@@ -57,7 +57,7 @@ export class ChessDataSource extends RESTDataSource {
       year = new Date().getFullYear(),
     }: { month: number; year: number }
   ): Promise<GamesSynced> {
-    return this.post(`/api/chess/player/${username}/games`, {
+    return this.post(`/v1/chess/player/${username}/games`, {
       body: { month, year },
     });
   }
@@ -73,16 +73,16 @@ export class ChessDataSource extends RESTDataSource {
     if (timeRange) {
       urlSearchParameters.set('timeRange', timeRange);
     }
-    const url: string = `/api/chess/titled/${title}?${urlSearchParameters.toString()}`;
+    const url: string = `/v1/chess/titled/${title}?${urlSearchParameters.toString()}`;
     return this.get(url);
   }
 
   async getCountries(): Promise<CountryTotal[]> {
-    return this.get('/api/chess/countries');
+    return this.get('/v1/chess/countries');
   }
 
   async getCountry(code: string): Promise<Country> {
-    return this.get(`/api/chess/countries/${code}`);
+    return this.get(`/v1/chess/countries/${code}`);
   }
 
   async getOpenings({
@@ -99,6 +99,6 @@ export class ChessDataSource extends RESTDataSource {
     if (name !== '') {
       urlSearchParameters.set('name', name);
     }
-    return this.get(`/api/chess/openings?${urlSearchParameters.toString()}`);
+    return this.get(`/v1/chess/openings?${urlSearchParameters.toString()}`);
   }
 }

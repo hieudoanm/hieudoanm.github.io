@@ -619,6 +619,74 @@
         ]
       }
     },
+    "/v1/chess/countries": {
+      "get": {
+        "operationId": "CountriesController_getCountries",
+        "parameters": [
+          {
+            "name": "cache",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
+    "/v1/chess/countries/{code}": {
+      "get": {
+        "operationId": "CountriesController_getTitledPlayersByCountry",
+        "parameters": [
+          {
+            "name": "code",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cache",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountriesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Chess"
+        ]
+      }
+    },
     "/v1/countries": {
       "get": {
         "operationId": "CountriesController_getCountries",
@@ -1696,6 +1764,25 @@
           "maxBulletRating",
           "total",
           "players"
+        ]
+      },
+      "CountryResponseDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "TitleDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "total": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "title",
+          "total"
         ]
       },
       "CountriesResponseDto": {

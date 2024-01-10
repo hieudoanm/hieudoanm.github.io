@@ -3,7 +3,7 @@ import { ChessContext } from '../chess.types';
 import { GamesSynced } from '../../../common/data/chess/chess.types';
 
 export const resolvers = {
-  Query: {
+  Chess: {
     player: (
       _parent: unknown,
       { username }: { username: string },

@@ -2,7 +2,7 @@ import { TimeRange, Titled } from '../../../common/data/chess/chess.types';
 import { ChessContext } from '../chess.types';
 
 export const resolvers = {
-  Query: {
+  Chess: {
     titled: (
       _parent: unknown,
       { title, timeRange = 'YEAR' }: { title: string; timeRange: TimeRange },

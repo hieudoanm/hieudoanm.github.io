@@ -22,10 +22,10 @@ import { logger } from '@chess/common/libs/logger';
 import { chunk } from '@chess/common/utils/chunk';
 import { Container } from '@chess/components/atoms/Container';
 import { Layout } from '@chess/layout';
-import { Opening } from '@prisma/client';
+import { ChessOpening } from '@prisma/client';
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next';
 
-type OpeningPageProperties = { eco: string; openings: Opening[] };
+type OpeningPageProperties = { eco: string; openings: ChessOpening[] };
 
 const OpeningPage: NextPage<OpeningPageProperties> = ({
   eco = '',
@@ -68,12 +68,7 @@ const OpeningPage: NextPage<OpeningPageProperties> = ({
                   <Tbody>
                     {openings.map(
                       (
-                        {
-                          eco = '',
-                          name = '',
-                          firstMove = '',
-                          centipawn = 0,
-                        }: Opening,
+                        { eco = '', name = '' }: ChessOpening,
                         index: number
                       ) => {
                         return (
@@ -82,8 +77,6 @@ const OpeningPage: NextPage<OpeningPageProperties> = ({
                             <Td>
                               <Link href={`/openings/${eco}`}>{eco}</Link>
                             </Td>
-                            <Td>{firstMove}</Td>
-                            <Td>{centipawn}</Td>
                             <Td>{name}</Td>
                           </Tr>
                         );
@@ -102,13 +95,13 @@ const OpeningPage: NextPage<OpeningPageProperties> = ({
 
 const query = gql`
   query OpeningsByEcoQuery($eco: String!) {
-    openings(eco: $eco) {
-      eco
-      name
-      pgn
-      firstMove
-      fen
-      centipawn
+    chess {
+      openings(eco: $eco) {
+        eco
+        name
+        pgn
+        fen
+      }
     }
   }
 `;
@@ -120,7 +113,7 @@ export const getServerSideProps: GetServerSideProps<
   try {
     const {
       data: { openings = [] },
-    } = await apolloClient.query<{ openings: Opening[] }>({
+    } = await apolloClient.query<{ openings: ChessOpening[] }>({
       query,
       variables: { eco },
     });

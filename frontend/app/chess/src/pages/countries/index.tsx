@@ -190,10 +190,12 @@ const CountriesPage: NextPage<CountriesPageProperties> = ({
 
 const query: DocumentNode = gql`
   query CountriesQuery {
-    countries {
-      countryCode
-      country
-      total
+    chess {
+      countries {
+        countryCode
+        country
+        total
+      }
     }
   }
 `;

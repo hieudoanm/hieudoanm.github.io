@@ -21,11 +21,11 @@ import { apolloClient } from '@chess/common/graphql';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { Layout } from '@chess/layout';
-import { Opening } from '@prisma/client';
+import { ChessOpening } from '@prisma/client';
 import { GetServerSideProps, NextPage } from 'next';
 
 type OpeningsPageProperties = {
-  openings: Opening[];
+  openings: ChessOpening[];
 };
 
 const OpeningsPage: NextPage<OpeningsPageProperties> = ({ openings = [] }) => {
@@ -55,20 +55,13 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = ({ openings = [] }) => {
                     <Tr>
                       <Th className="w-4">No</Th>
                       <Th className="w-4">ECO</Th>
-                      <Th className="w-4">First</Th>
-                      <Th className="w-4">Centipawn</Th>
                       <Th>Name</Th>
                     </Tr>
                   </Thead>
                   <Tbody>
                     {openings.map(
                       (
-                        {
-                          eco = '',
-                          name = '',
-                          firstMove = '',
-                          centipawn = 0,
-                        }: Opening,
+                        { eco = '', name = '' }: ChessOpening,
                         index: number
                       ) => {
                         return (
@@ -77,8 +70,6 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = ({ openings = [] }) => {
                             <Td>
                               <Link href={`/openings/${eco}`}>{eco}</Link>
                             </Td>
-                            <Td>{firstMove}</Td>
-                            <Td>{centipawn}</Td>
                             <Td>
                               <Text
                                 title={name}
@@ -104,13 +95,15 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = ({ openings = [] }) => {
 
 const query = gql`
   query OpeningsQuery {
-    openings {
-      eco
-      name
-      pgn
-      firstMove
-      fen
-      centipawn
+    chess {
+      openings {
+        eco
+        name
+        pgn
+        firstMove
+        fen
+        centipawn
+      }
     }
   }
 `;
@@ -121,7 +114,7 @@ export const getServerSideProps: GetServerSideProps<
   try {
     const {
       data: { openings = [] },
-    } = await apolloClient.query<{ openings: Opening[] }>({ query });
+    } = await apolloClient.query<{ openings: ChessOpening[] }>({ query });
     return { props: { openings } };
   } catch (error) {
     logger.error(`getServerSideProps error=${error}`);
