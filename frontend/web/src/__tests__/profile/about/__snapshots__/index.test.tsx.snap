@@ -996,9 +996,13 @@ exports[`AboutPage render default 1`] = `
             >
               <img
                 alt="React"
-                height="100%"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
                 src="https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/development/front-end-framework/react.svg"
-                width="100%"
+                style="color: transparent;"
+                width="100"
               />
             </div>
             <h2
@@ -1040,9 +1044,13 @@ exports[`AboutPage render default 1`] = `
             >
               <img
                 alt="Node.js"
-                height="100%"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
                 src="https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/development/runtime/node.js.svg"
-                width="100%"
+                style="color: transparent;"
+                width="100"
               />
             </div>
             <h2
@@ -1084,9 +1092,13 @@ exports[`AboutPage render default 1`] = `
             >
               <img
                 alt="Git"
-                height="100%"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
                 src="https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/development/version-control/git.svg"
-                width="100%"
+                style="color: transparent;"
+                width="100"
               />
             </div>
             <h2
@@ -1128,9 +1140,13 @@ exports[`AboutPage render default 1`] = `
             >
               <img
                 alt="AWS"
-                height="100%"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
                 src="https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/big-tech/amazon/aws.svg"
-                width="100%"
+                style="color: transparent;"
+                width="100"
               />
             </div>
             <h2
