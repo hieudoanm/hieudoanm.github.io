@@ -7,9 +7,6 @@
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
   "private": true,
-  "engines": {
-    "node": "20.10.0"
-  },
   "scripts": {
     "format": "prettier --write .",
     "build": "true",
