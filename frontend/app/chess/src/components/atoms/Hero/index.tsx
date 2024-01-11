@@ -40,7 +40,7 @@ export const Hero: React.FC = () => {
               <form
                 onSubmit={(event: FormEvent) => {
                   event.preventDefault();
-                  router.push(`/${username}`);
+                  router.push(`/${encodeURIComponent(username)}`);
                 }}
               >
                 <FormLabel className="truncate">
