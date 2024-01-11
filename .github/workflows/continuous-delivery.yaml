@@ -22,7 +22,7 @@ jobs:
             working-directory: frontend/graphql
           - name: Front-end - Web
             working-directory: frontend/web
-    name: Continuous Integration
+    name: Continuous Delivery
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

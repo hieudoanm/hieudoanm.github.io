@@ -1,6 +1,15 @@
+# build
 .cache
+.next
 build
-coverage
 dist
-node_modules
 public
+
+# jest.js
+coverage
+
+# node.js
+node_modules
+
+# SQL
+*.sql

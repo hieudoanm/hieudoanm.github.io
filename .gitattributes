@@ -1,3 +1,6 @@
+# Large File Storage
+*.sql filter=lfs diff=lfs merge=lfs -text
+
 # Linguist Detectable
 *.css linguist-detectable=false
 *.html linguist-detectable=false
