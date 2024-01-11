@@ -5,14 +5,14 @@ import {
   ChessPlayer,
   ChessTitle,
 } from '@prisma/client';
-import { BASE_API } from '../../constants/constants';
+import { BASE_API } from '../../environments/environments';
 import {
   Country,
   CountryTotal,
   GamesSynced,
-  Titled,
   StreamersResponse,
   TimeRange,
+  Titled,
 } from './chess.types';
 
 export class ChessDataSource extends RESTDataSource {
