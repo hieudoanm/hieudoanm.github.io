@@ -1,6 +1,6 @@
 import { Controller, Get, Param, Query, UseInterceptors } from '@nestjs/common';
 import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { ChessTitle } from '../../../common/clients/apis/chess.com/chess.dto';
+import { ChessTitle } from '../../../common/clients/apis/chess/chess.com/chess.dto';
 import { TimeRange } from '../../../common/types/time.types';
 import { TitledStatsDto, TitlesDto } from './titled.dto';
 import { TitledService } from './titled.service';

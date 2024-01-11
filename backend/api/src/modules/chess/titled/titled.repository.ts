@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ChessPlayer, ChessTimeClass, Prisma } from '@prisma/client';
-import { ChessTitle } from '../../../common/clients/apis/chess.com/chess.dto';
+import { ChessTitle } from '../../../common/clients/apis/chess/chess.com/chess.dto';
 import {
   TIME_RANGE_IN_DAYS,
   TIME_RANGE_IN_MILLISECONDS,

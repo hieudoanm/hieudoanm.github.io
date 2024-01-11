@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { ChessTitle } from '../../../common/clients/apis/chess.com/chess.dto';
+import { ChessTitle } from '../../../common/clients/apis/chess/chess.com/chess.dto';
 import {
   RedisClient,
   getRedisClient,

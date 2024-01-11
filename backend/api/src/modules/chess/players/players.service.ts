@@ -7,11 +7,11 @@ import {
   Prisma,
 } from '@prisma/client';
 import axios from 'axios';
-import { ChessClient } from '../../../common/clients/apis/chess.com/chess.client';
+import { ChessClient } from '../../../common/clients/apis/chess/chess.com/chess.client';
 import {
   ChessPlayer,
   ChessStats,
-} from '../../../common/clients/apis/chess.com/chess.dto';
+} from '../../../common/clients/apis/chess/chess.com/chess.dto';
 import { PrismaService } from '../../../common/prisma/prisma.service';
 import { ChessPlayerDto } from '../../../generated/chessPlayer.entity';
 import { PlayersResponseDto } from './players.dto';

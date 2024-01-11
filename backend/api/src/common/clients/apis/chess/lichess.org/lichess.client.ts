@@ -2,9 +2,8 @@ import axios from 'axios';
 import { CloudEvaluation, FullCloudEvaluation, PVS } from './lichess.dto';
 import { Logger } from '@nestjs/common';
 
-const BASE_URL = 'https://lichess.org/api';
-
 export class LichessClient {
+  private baseUrl = 'https://lichess.org/api';
   private readonly logger = new Logger(LichessClient.name);
 
   async getCloudEvaluation(
@@ -14,7 +13,7 @@ export class LichessClient {
     const urlSearchParameters = new URLSearchParams();
     urlSearchParameters.set('fen', fen);
     urlSearchParameters.set('multiPv', multiPv.toString());
-    const url = `${BASE_URL}/cloud-eval?${urlSearchParameters.toString()}`;
+    const url = `${this.baseUrl}/cloud-eval?${urlSearchParameters.toString()}`;
     this.logger.log(`getCloudEvaluation url=${url}`);
     try {
       const config = {

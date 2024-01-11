@@ -1,3 +1,5 @@
+import { addZero } from '@hieudoanm/common/utils/add-zero';
+import { Injectable, Logger } from '@nestjs/common';
 import axios from 'axios';
 import {
   ChessFullPlayer,
@@ -6,10 +8,6 @@ import {
   ChessStats,
   ChessTitle,
 } from './chess.dto';
-import { Injectable, Logger } from '@nestjs/common';
-import { addZero } from '../../../../common/utils/add-zero';
-
-const BASE_URL = 'https://api.chess.com/pub';
 
 export const TITLES: ChessTitle[] = [
   'GM',
@@ -26,24 +24,25 @@ export const TITLES: ChessTitle[] = [
 
 @Injectable()
 export class ChessClient {
+  private baseUrl = 'https://api.chess.com/pub';
   private readonly logger = new Logger(ChessClient.name);
 
   async getChessPlayer(username: string): Promise<ChessPlayer> {
-    const url = `${BASE_URL}/player/${username}`;
+    const url = `${this.baseUrl}/player/${username}`;
     this.logger.log(`getChessPlayer url=${url}`);
     const { data } = await axios.get<ChessPlayer>(url);
     return data;
   }
 
   async getChessStats(username: string): Promise<ChessStats> {
-    const url = `${BASE_URL}/player/${username}/stats`;
+    const url = `${this.baseUrl}/player/${username}/stats`;
     this.logger.log(`getChessStats url=${url}`);
     const { data } = await axios.get<ChessStats>(url);
     return data;
   }
 
   async getChessArchives(username: string): Promise<string[]> {
-    const url = `${BASE_URL}/player/${username}/games/archives`;
+    const url = `${this.baseUrl}/player/${username}/games/archives`;
     this.logger.log(`getChessArchives url=${url}`);
     const { data } = await axios.get<{ archives: string[] }>(url);
     return data.archives || [];
@@ -56,7 +55,7 @@ export class ChessClient {
   ): Promise<ChessGame[]> {
     const yyyy: string = addZero(year);
     const mm: string = addZero(month);
-    const url = `${BASE_URL}/player/${username}/games/${yyyy}/${mm}`;
+    const url = `${this.baseUrl}/player/${username}/games/${yyyy}/${mm}`;
     this.logger.log(`getChessGamesByYearAndMonth url=${url}`);
     const { data } = await axios.get<{ games: ChessGame[] }>(url);
     return data.games || [];
@@ -98,7 +97,7 @@ export class ChessClient {
   }
 
   async getChessTitledPlayers(title: ChessTitle): Promise<string[]> {
-    const url = `${BASE_URL}/titled/${title}`;
+    const url = `${this.baseUrl}/titled/${title}`;
     this.logger.log(`getChessTitledPlayers url=${url}`);
     const { data } = await axios.get<{ players: string[] }>(url);
     return data.players || [];

@@ -5,8 +5,8 @@ import {
   ChessVariant,
   Prisma,
 } from '@prisma/client';
-import { ChessClient } from '../../../../common/clients/apis/chess.com/chess.client';
-import { ChessGame } from '../../../../common/clients/apis/chess.com/chess.dto';
+import { ChessClient } from '../../../../common/clients/apis/chess/chess.com/chess.client';
+import { ChessGame } from '../../../../common/clients/apis/chess/chess.com/chess.dto';
 import { PrismaService } from '../../../../common/prisma/prisma.service';
 import { ChessGameDto } from '../../../../generated/chessGame.entity';
 
