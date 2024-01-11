@@ -1,27 +1,28 @@
 import { ApolloServer, ApolloServerPlugin } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
+import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
 import {
   ApolloServerPluginLandingPageLocalDefault,
   ApolloServerPluginLandingPageProductionDefault,
 } from '@apollo/server/plugin/landingPage/default';
-import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
 import cors from 'cors';
+import express from 'express';
 import http from 'http';
+import { app } from './app.module';
+import { ApolloContext } from './common/apollo/apollo.types';
+import { ChessDataSource } from './common/data/chess/chess.data-source';
 import { NODE_ENV, PORT } from './common/environments/environments';
 import { logger } from './common/libs/logger/logger';
 import { schema } from './graphql/graphql.schema';
-import express from 'express';
-import { ChessDataSource } from './common/data/chess/chess.data-source';
 
 const main = async () => {
-  const app = express();
   const httpServer = http.createServer(app);
   // Apollo Server
   const landingPage: ApolloServerPlugin =
     NODE_ENV === 'production'
       ? ApolloServerPluginLandingPageProductionDefault({ footer: false })
       : ApolloServerPluginLandingPageLocalDefault({ footer: false });
-  const apolloServer = new ApolloServer({
+  const apolloServer = new ApolloServer<ApolloContext>({
     schema,
     introspection: true,
     plugins: [landingPage, ApolloServerPluginDrainHttpServer({ httpServer })],
