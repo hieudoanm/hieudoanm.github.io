@@ -39,7 +39,7 @@
     "react-scroll": "1.9.0",
     "recharts": "2.10.4",
     "sharp": "0.33.2",
-    "stripe": "14.11.0"
+    "stripe": "14.12.0"
   },
   "devDependencies": {
     "@apollo/client": "3.8.9",
