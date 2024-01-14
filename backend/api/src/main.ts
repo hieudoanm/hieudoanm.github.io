@@ -15,7 +15,7 @@ import { PORT } from './common/environments/environments';
 
 const NODE_ENV: string = process.env.NODE_ENV || 'development';
 
-const buildDocument = (app: INestApplication) => {
+const setUpSwagger = (app: INestApplication) => {
   if (NODE_ENV !== 'development') return;
   const config = new DocumentBuilder()
     .setTitle('hieudoanm')
@@ -32,20 +32,28 @@ const buildDocument = (app: INestApplication) => {
   );
 };
 
-const setUpSecurity = (app: INestApplication) => {
+const setUpMiddlewares = (app: INestApplication) => {
   app.use(compression());
+  app.use(cookieParser());
+};
+
+const setUpPath = (app: INestApplication) => {
+  app.enableVersioning({ defaultVersion: '1', type: VersioningType.URI });
+  app.useGlobalPipes(new ValidationPipe());
+};
+
+const setUpSecurity = (app: INestApplication) => {
+  if (NODE_ENV === 'development') app.enableCors();
   app.use(helmet());
-  app.enableCors();
 };
 
 const bootstrap = async () => {
   const app = await NestFactory.create(AppModule);
-  app.use(cookieParser());
-  app.useGlobalPipes(new ValidationPipe());
-  app.enableVersioning({ defaultVersion: '1', type: VersioningType.URI });
-  buildDocument(app);
+  setUpMiddlewares(app);
+  setUpPath(app);
   setUpSecurity(app);
-  console.info(`Server is listening on port ${PORT}`);
+  setUpSwagger(app);
+  console.info(`🚀 API is listening on port ${PORT}`);
   await app.listen(PORT);
 };
 
