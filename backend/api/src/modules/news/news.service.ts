@@ -1,7 +1,7 @@
+import { API_KEY_NEWS } from '@hieudoanm/common/environments/environments';
 import { HttpService } from '@nestjs/axios';
 import { Injectable, Logger } from '@nestjs/common';
 import { GoogleResponseDto, NewsSourcesDto } from './news.dto';
-import { API_KEY_NEWS } from '../../common/environments/environments';
 
 @Injectable()
 export class NewsService {

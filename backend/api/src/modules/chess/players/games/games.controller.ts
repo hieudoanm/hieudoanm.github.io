@@ -14,7 +14,7 @@ import {
   SyncRequestDto,
   SyncedResponseDto,
 } from './games.dto';
-import { ChessGameDto } from '../../../../generated/chessGame.entity';
+import { ChessGameDto } from '@hieudoanm/generated/chessGame.entity';
 import { CacheInterceptor } from '@nestjs/cache-manager';
 
 @ApiTags('Chess')

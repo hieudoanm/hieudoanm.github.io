@@ -1,6 +1,6 @@
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
+import { WordDto } from '@hieudoanm/generated/word.entity';
 import { Injectable, Logger } from '@nestjs/common';
-import { PrismaService } from '../../common/prisma/prisma.service';
-import { WordDto } from '../../generated/word.entity';
 import { WordsRequestQueryDto, WordsResponseDto } from './words.dto';
 
 @Injectable()

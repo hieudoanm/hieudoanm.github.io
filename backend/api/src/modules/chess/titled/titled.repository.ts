@@ -1,12 +1,12 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { ChessPlayer, ChessTimeClass, Prisma } from '@prisma/client';
-import { ChessTitle } from '../../../common/clients/apis/chess/chess.com/chess.dto';
+import { ChessTitle } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.dto';
 import {
   TIME_RANGE_IN_DAYS,
   TIME_RANGE_IN_MILLISECONDS,
-} from '../../../common/constants/time.constants';
-import { PrismaService } from '../../../common/prisma/prisma.service';
-import { TimeRange } from '../../../common/types/time.types';
+} from '@hieudoanm/common/constants/time.constants';
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
+import { TimeRange } from '@hieudoanm/common/types/time.types';
+import { Injectable, Logger } from '@nestjs/common';
+import { ChessPlayer, ChessTimeClass, Prisma } from '@prisma/client';
 import { TitledStatsDto } from './titled.dto';
 
 @Injectable()

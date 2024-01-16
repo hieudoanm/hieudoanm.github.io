@@ -1,6 +1,6 @@
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 import { Injectable, Logger } from '@nestjs/common';
-import { PrismaService } from '../../common/prisma/prisma.service';
-import { ProgrammingLanguageDto } from '../../generated/programmingLanguage.entity';
+import { ProgrammingLanguageDto } from '@hieudoanm/generated/programmingLanguage.entity';
 import { GitHubLanguagesResponseDto } from './github.dto';
 
 @Injectable()

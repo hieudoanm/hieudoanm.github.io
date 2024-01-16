@@ -1,10 +1,10 @@
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 import { HttpService } from '@nestjs/axios';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { Prisma, Region } from '@prisma/client';
 import { Cache } from 'cache-manager';
-import { PrismaService } from '../../common/prisma/prisma.service';
-import { CountryDto } from '../../generated/country.entity';
+import { CountryDto } from '@hieudoanm/generated/country.entity';
 import { CountriesResponseDto, CurrenciesResponseDto } from './countries.dto';
 
 @Injectable()

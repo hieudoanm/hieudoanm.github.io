@@ -1,3 +1,4 @@
+import { CountryDto } from '@hieudoanm/generated/country.entity';
 import { CacheInterceptor } from '@nestjs/cache-manager';
 import {
   Controller,
@@ -8,14 +9,13 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { CountryDto } from '../../generated/country.entity';
+import { Region } from '@prisma/client';
 import {
   CountriesRequestQueryDto,
   CountriesResponseDto,
   CurrenciesResponseDto,
 } from './countries.dto';
 import { CountriesService } from './countries.service';
-import { Region } from '@prisma/client';
 
 @ApiTags('countries')
 @Controller({ version: '1', path: 'countries' })

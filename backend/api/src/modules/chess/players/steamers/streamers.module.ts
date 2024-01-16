@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { StreamersController } from './streamers.controller';
 import { StreamersRepository } from './streamers.repository';
-import { PrismaService } from '../../../../common/prisma/prisma.service';
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 import { CacheModule } from '@nestjs/cache-manager';
 
 @Module({

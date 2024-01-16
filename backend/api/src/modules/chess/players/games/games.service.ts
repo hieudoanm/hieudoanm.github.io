@@ -5,10 +5,10 @@ import {
   ChessVariant,
   Prisma,
 } from '@prisma/client';
-import { ChessClient } from '../../../../common/clients/apis/chess/chess.com/chess.client';
-import { ChessGame } from '../../../../common/clients/apis/chess/chess.com/chess.dto';
-import { PrismaService } from '../../../../common/prisma/prisma.service';
-import { ChessGameDto } from '../../../../generated/chessGame.entity';
+import { ChessClient } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.client';
+import { ChessGame } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.dto';
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
+import { ChessGameDto } from '@hieudoanm/generated/chessGame.entity';
 
 @Injectable()
 export class GamesService {

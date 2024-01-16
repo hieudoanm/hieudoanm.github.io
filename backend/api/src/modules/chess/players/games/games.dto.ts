@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { ChessGameDto } from '../../../../generated/chessGame.entity';
+import { ChessGameDto } from '@hieudoanm/generated/chessGame.entity';
 
 export class GamesResponseDto {
   @ApiProperty()

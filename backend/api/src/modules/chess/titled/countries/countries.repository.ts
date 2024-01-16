@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ChessTimeClass, Prisma } from '@prisma/client';
 import { CountriesResponseDto, CountryResponseDto } from './countries.dto';
-import { PrismaService } from '../../../../common/prisma/prisma.service';
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 
 @Injectable()
 export class CountriesRepository {

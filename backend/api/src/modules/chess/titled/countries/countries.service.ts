@@ -4,8 +4,8 @@ import { CountriesRepository } from './countries.repository';
 import {
   RedisClient,
   getRedisClient,
-} from '../../../../common/clients/redis/redis.client';
-import { REDIS_URI } from '../../../../common/environments/environments';
+} from '@hieudoanm/common/clients/redis/redis.client';
+import { REDIS_URI } from '@hieudoanm/common/environments/environments';
 
 @Injectable()
 export class CountriesService {

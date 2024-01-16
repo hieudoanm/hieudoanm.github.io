@@ -5,9 +5,9 @@
 // K = 40 for all players until their 18th birthday, as long as their rating remains under 2300.
 // K = 20 for RAPID and BLITZ ratings all players.
 
+import { ChessPoint } from '@hieudoanm/common/enums/chess.enums';
 import { Injectable } from '@nestjs/common';
 import { ChessTimeClass } from '@prisma/client';
-import { ChessPoint } from '../../../common/enums/chess.enums';
 
 type DevelopmentCoefficient = 10 | 20 | 40;
 type Options = { age: number; games: number; timeClass: ChessTimeClass };

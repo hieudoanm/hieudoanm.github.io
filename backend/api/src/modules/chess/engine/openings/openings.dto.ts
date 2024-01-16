@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { ChessOpeningDto } from '../../../../generated/chessOpening.entity';
+import { ChessOpeningDto } from '@hieudoanm/generated/chessOpening.entity';
 import { IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class OpeningsRequestQueryResponseDto {

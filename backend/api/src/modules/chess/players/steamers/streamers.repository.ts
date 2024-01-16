@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Prisma, ChessTitle } from '@prisma/client';
-import { TIME_RANGE_IN_MILLISECONDS } from '../../../../common/constants/time.constants';
-import { PrismaService } from '../../../../common/prisma/prisma.service';
+import { TIME_RANGE_IN_MILLISECONDS } from '@hieudoanm/common/constants/time.constants';
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 import { StreamersResponseDto } from './streamers.dto';
 
 @Injectable()

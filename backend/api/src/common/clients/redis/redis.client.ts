@@ -1,6 +1,6 @@
-import Redis from 'ioredis';
-import { jsonParse } from '../../utils/json-parse';
+import { jsonParse } from '@hieudoanm/common/utils/json-parse';
 import { Logger } from '@nestjs/common';
+import Redis from 'ioredis';
 
 export class RedisClient {
   private readonly logger = new Logger(RedisClient.name);

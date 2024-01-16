@@ -1,3 +1,9 @@
+import { ChessClient } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.client';
+import {
+  ChessPlayer,
+  ChessStats,
+} from '@hieudoanm/common/clients/apis/chess/chess.com/chess.dto';
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 import { Injectable, Logger } from '@nestjs/common';
 import {
   ChessLeague,
@@ -7,13 +13,7 @@ import {
   Prisma,
 } from '@prisma/client';
 import axios from 'axios';
-import { ChessClient } from '../../../common/clients/apis/chess/chess.com/chess.client';
-import {
-  ChessPlayer,
-  ChessStats,
-} from '../../../common/clients/apis/chess/chess.com/chess.dto';
-import { PrismaService } from '../../../common/prisma/prisma.service';
-import { ChessPlayerDto } from '../../../generated/chessPlayer.entity';
+import { ChessPlayerDto } from '@hieudoanm/generated/chessPlayer.entity';
 import { PlayersResponseDto } from './players.dto';
 
 @Injectable()

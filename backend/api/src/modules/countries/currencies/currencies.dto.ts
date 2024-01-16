@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { CurrencyDto } from '../../../generated/currency.entity';
+import { CurrencyDto } from '@hieudoanm/generated/currency.entity';
 
 export class CurrenciesResponseDto {
   @ApiProperty({ default: 0 })

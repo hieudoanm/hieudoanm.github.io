@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { ChessClient } from '../../../../common/clients/apis/chess/chess.com/chess.client';
-import { PrismaService } from '../../../../common/prisma/prisma.service';
+import { ChessClient } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.client';
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 import { TimeOfDaysService } from '../insights/services/results/helper/time-of-days.service';
 import { GamesController } from './games.controller';
 import { GamesService } from './games.service';

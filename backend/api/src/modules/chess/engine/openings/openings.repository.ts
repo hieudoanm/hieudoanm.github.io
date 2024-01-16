@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
-import { PrismaService } from '../../../../common/prisma/prisma.service';
-import { ChessOpeningDto } from '../../../../generated/chessOpening.entity';
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
+import { ChessOpeningDto } from '@hieudoanm/generated/chessOpening.entity';
 import { EcosResponseDto, OpeningsResponseDto } from './openings.dto';
 
 @Injectable()

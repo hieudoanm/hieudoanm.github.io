@@ -1,9 +1,9 @@
+import { ChessPlayerDto } from '@hieudoanm/generated/chessPlayer.entity';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 import { Controller, Get, Param, Post, UseInterceptors } from '@nestjs/common';
 import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { PlayerService } from './players.service';
-import { ChessPlayerDto } from '../../../generated/chessPlayer.entity';
-import { CacheInterceptor } from '@nestjs/cache-manager';
 import { PlayersResponseDto } from './players.dto';
+import { PlayerService } from './players.service';
 
 @ApiTags('Chess')
 @Controller({ version: '1', path: 'chess/players' })
