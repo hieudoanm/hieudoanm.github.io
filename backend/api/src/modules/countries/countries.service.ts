@@ -119,11 +119,10 @@ export class CountriesService {
   }
 
   async getCountry(code: string): Promise<CountryDto> {
-    const country = await this.prismaService.country.findFirstOrThrow({
+    return await this.prismaService.country.findFirstOrThrow({
       where: { cca3: code },
       include: { organizations: true },
     });
-    return country;
   }
 
   async getCurrencies(): Promise<CurrenciesResponseDto> {

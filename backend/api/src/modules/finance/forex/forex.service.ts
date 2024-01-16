@@ -11,8 +11,7 @@ export class ForexService {
 
   private async getCurrencies(): Promise<Record<string, string>> {
     try {
-      const currencies = this.frankfurterClient.getCurrencies();
-      return currencies;
+      return await this.frankfurterClient.getCurrencies();
     } catch (error) {
       this.logger.log(`getRates error=${error}`);
       return {};
