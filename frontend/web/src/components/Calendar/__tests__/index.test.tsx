@@ -3,7 +3,7 @@ import { Calendar } from '..';
 
 describe('Calendar', () => {
   test('render default', () => {
-    const wrapper = render(<Calendar year={1995} month={12} />);
+    const wrapper = render(<Calendar year={1995} month={12} date={4} />);
     expect(wrapper.container).toMatchSnapshot();
   });
 });
