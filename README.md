@@ -23,8 +23,8 @@
 | 04  |                | PM[^13]       | [Node.js][node]  | [yarn][yarn]                     |                        |
 | 05  |                | Unit Test     | [Node.js][node]  | [jest][jest]                     | [Meta][meta]           |
 | 06  |                | Build         | [Node.js][node]  | [turbo][turbo]                   | [Vercel][vercel]       |
-| 07  |                | Format        | [Node.js][node]  | [prettier][prettier]             |                        |
-| 08  |                | Linting       | [Node.js][node]  | [eslint][eslint]                 |                        |
+| 07  |                | Formatter     | [Node.js][node]  | [biome][biome]                   |                        |
+| 08  |                | Documentation | [Node.js][node]  | [docusaurus]                     | [Meta][meta]           |
 | 09  | `Front-end`    | Language      | [Node.js][node]  | [typescript][typescript]         | [Microsoft][microsoft] |
 | 10  |                | CSS[^15]      | [Node.js][node]  | [tailwindcss][tailwindcss]       |                        |
 | 11  |                | Components    | [Node.js][node]  | [chakra.ui][chakra-ui]           |                        |
@@ -54,8 +54,9 @@
 
 | Supersector    | Sector     | Technology                   | Company              |
 | -------------- | ---------- | ---------------------------- | -------------------- |
-| `Development`  | Format     | [biome][biome]               |                      |
+| `Development`  | Linting    | [eslint][eslint]             |                      |
 | `Development`  | Format     | [dprint][dprint]             |                      |
+| `Development`  | Format     | [prettier][prettier]         |                      |
 | `Front-end`    | Components | [mui][mui]                   | [Alphabet][alphabet] |
 | `Front-end`    | Framework  | [angular][angular]           | [Alphabet][alphabet] |
 | `Front-end`    | Framework  | [react][react]               | [Meta][meta]         |
@@ -86,39 +87,40 @@
 [amazon]: https://www.amazon.com
 [angular]: https://angular.io
 [aws]: https://aws.amazon.com
-[biome]: https://biomejs.dev/
-[chakra-ui]: https://chakra-ui.com/
-[conda]: https://docs.conda.io/en/latest/
+[biome]: https://biomejs.dev
+[chakra-ui]: https://chakra-ui.com
+[conda]: https://docs.conda.ioen/latest/
 [docker]: https://www.docker.com
+[docusaurus]: https://docusaurus.io
 [dprint]: https://dprint.dev
 [eslint]: https://eslint.org
-[fastapi]: https://fastapi.tiangolo.com/
+[fastapi]: https://fastapi.tiangolo.com
 [git]: https://git-scm.com
 [github]: https://github.com
-[github-actions]: https://github.com/features/actions
+[github-actions]: https://github.comfeatures/actions
 [golang]: https://go.dev
 [google-cloud]: https://cloud.google.com
 [graphql]: https://graphql.org
 [hashicorp]: https://www.hashicorp.com
-[jenkins]: https://www.jenkins.io/
+[jenkins]: https://www.jenkins.io
 [jest]: https://jestjs.io
-[jupyter]: https://jupyter.org/
-[keras]: https://keras.io/
-[kubernetes]: https://kubernetes.io/
-[matplotlib]: https://matplotlib.org/
+[jupyter]: https://jupyter.org
+[keras]: https://keras.io
+[kubernetes]: https://kubernetes.io
+[matplotlib]: https://matplotlib.org
 [meta]: https://developers.facebook.com
 [microsoft]: https://www.microsoft.com
-[mui]: https://mui.com/
+[mui]: https://mui.com
 [nest]: https://nestjs.com
 [next]: https://nextjs.org
 [nltk]: https://www.nltk.org
 [node]: https://nodejs.org
-[pandas]: https://pandas.pydata.org/
+[pandas]: https://pandas.pydata.org
 [postgresql]: https://www.postgresql.org
 [prettier]: https://prettier.io
 [prisma]: https://www.prisma.io
 [python]: https://www.python.org
-[pytorch]: https://pytorch.org/
+[pytorch]: https://pytorch.org
 [react]: https://react.dev
 [react-native]: https://reactnative.dev
 [render]: https://render.com
@@ -131,4 +133,4 @@
 [vault]: https://www.vaultproject.io
 [vercel]: https://vercel.com
 [vscode]: https://code.visualstudio.com
-[yarn]: https://yarnpkg.com/
+[yarn]: https://yarnpkg.com
