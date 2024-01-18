@@ -597,11 +597,12 @@ exports[`InsightsTemplate to match snapshot 1`] = `
                   class="css-0"
                   data-is-numeric="true"
                 >
-                  <div
+                  <button
                     class="cursor-pointer capitalize"
+                    type="button"
                   >
                     Games
-                  </div>
+                  </button>
                 </th>
                 <th
                   class="css-0"
@@ -610,16 +611,18 @@ exports[`InsightsTemplate to match snapshot 1`] = `
                   <div
                     class="flex items-center justify-end gap-2"
                   >
-                    <div
+                    <button
                       class="cursor-pointer capitalize"
+                      type="button"
                     >
                       Win
-                    </div>
-                    <div
+                    </button>
+                    <button
                       class="cursor-pointer capitalize"
+                      type="button"
                     >
                       (%)
-                    </div>
+                    </button>
                   </div>
                 </th>
                 <th
@@ -629,16 +632,18 @@ exports[`InsightsTemplate to match snapshot 1`] = `
                   <div
                     class="flex items-center justify-end gap-2"
                   >
-                    <div
+                    <button
                       class="cursor-pointer capitalize"
+                      type="button"
                     >
                       Draw
-                    </div>
-                    <div
+                    </button>
+                    <button
                       class="cursor-pointer capitalize"
+                      type="button"
                     >
                       (%)
-                    </div>
+                    </button>
                   </div>
                 </th>
                 <th
@@ -648,16 +653,18 @@ exports[`InsightsTemplate to match snapshot 1`] = `
                   <div
                     class="flex items-center justify-end gap-2"
                   >
-                    <div
+                    <button
                       class="cursor-pointer capitalize"
+                      type="button"
                     >
                       Loss
-                    </div>
-                    <div
+                    </button>
+                    <button
                       class="cursor-pointer capitalize"
+                      type="button"
                     >
                       (%)
-                    </div>
+                    </button>
                   </div>
                 </th>
               </tr>
