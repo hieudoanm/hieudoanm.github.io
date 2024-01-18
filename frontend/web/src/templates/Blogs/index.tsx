@@ -1,11 +1,11 @@
-import React from 'react';
-import Container from '@hieudoanm/components/Container';
 import Blog from '@hieudoanm/components/Blog';
-import Header from '@hieudoanm/components/Header';
 import { BlogType } from '@hieudoanm/components/Blogs';
+import Container from '@hieudoanm/components/Container';
 import Footer from '@hieudoanm/components/Footer';
+import Header from '@hieudoanm/components/Header';
 import Hero, { HeroSectionProperties } from '@hieudoanm/components/Hero';
 import Navbar from '@hieudoanm/components/Navbar';
+import React from 'react';
 
 export type BlogsTemplateProperties = {
   hero: HeroSectionProperties;
@@ -31,7 +31,7 @@ const BlogsTemplate: React.FC<BlogsTemplateProperties> = ({
           backgroundImage={hero.backgroundImage}
         />
         <Container>
-          <div className="flex flex-col gap-8 py-8 md:py-16">
+          <div className='flex flex-col gap-8 py-8 md:py-16'>
             <Header subtitle={subtitle}>{title}</Header>
             {blogs.map((blog) => {
               return (

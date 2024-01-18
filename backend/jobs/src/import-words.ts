@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { writeFileSync } from 'fs';
+import axios from 'axios';
 
 export type WordsResponse = {
   query: { limit: string; page: number };

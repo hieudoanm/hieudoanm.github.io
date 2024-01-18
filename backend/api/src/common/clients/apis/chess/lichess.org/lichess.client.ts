@@ -1,6 +1,6 @@
+import { Logger } from '@nestjs/common';
 import axios from 'axios';
 import { CloudEvaluation, FullCloudEvaluation, PVS } from './lichess.dto';
-import { Logger } from '@nestjs/common';
 
 export class LichessClient {
   private baseUrl = 'https://lichess.org/api';

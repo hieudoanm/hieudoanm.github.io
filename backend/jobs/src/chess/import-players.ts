@@ -1,9 +1,9 @@
 import {
-  ChessTitle,
   ChessLeague,
-  PrismaClient,
   ChessStatus,
   ChessTimeClass,
+  ChessTitle,
+  PrismaClient,
 } from '@prisma/client';
 import axios from 'axios';
 import chunk from 'lodash/chunk';

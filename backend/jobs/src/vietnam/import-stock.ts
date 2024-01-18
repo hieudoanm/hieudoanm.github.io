@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { PrismaClient } from '@prisma/client';
+import axios from 'axios';
 
 const importStock = async (prismaClient: PrismaClient) => {
   const url = 'https://bgapidatafeed.vps.com.vn/getlistallstock';

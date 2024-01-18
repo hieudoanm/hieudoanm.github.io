@@ -1,5 +1,5 @@
-import React from 'react';
 import Header from '@hieudoanm/components/Header';
+import React from 'react';
 
 export type HeroSectionProperties = {
   id: string;
@@ -17,11 +17,10 @@ const HeroSection: React.FC<HeroSectionProperties> = ({
   return (
     <div
       id={id}
-      className="h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <div className="h-full bg-gray-900/80 text-white">
-        <div className="flex h-full items-center justify-center">
+      className='h-screen bg-cover bg-center bg-no-repeat'
+      style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className='h-full bg-gray-900/80 text-white'>
+        <div className='flex h-full items-center justify-center'>
           <Header subtitle={subtitle}>{title}</Header>
         </div>
       </div>

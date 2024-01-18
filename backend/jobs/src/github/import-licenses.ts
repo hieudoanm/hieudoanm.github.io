@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { PrismaClient } from '@prisma/client';
+import axios from 'axios';
 
 const main = async () => {
   const base = 'https://api.github.com';

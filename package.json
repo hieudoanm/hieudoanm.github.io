@@ -9,12 +9,14 @@
   "scripts": {
     "format": "yarn turbo format",
     "build": "yarn turbo build",
+    "check": "yarn turbo check",
     "lint": "yarn turbo lint",
     "test": "yarn turbo test",
     "dev": "yarn turbo dev",
     "prepare": "husky install || true"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.5.2",
     "husky": "8.0.3",
     "prettier": "3.2.4",
     "turbo": "1.11.3"

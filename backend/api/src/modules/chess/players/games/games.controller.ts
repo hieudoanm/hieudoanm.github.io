@@ -1,5 +1,5 @@
-import { GamesService } from './games.service';
-import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { ChessGameDto } from '@hieudoanm/generated/chessGame.entity';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 import {
   Body,
   Controller,
@@ -9,13 +9,13 @@ import {
   Query,
   UseInterceptors,
 } from '@nestjs/common';
+import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import {
   GamesResponseDto,
   SyncRequestDto,
   SyncedResponseDto,
 } from './games.dto';
-import { ChessGameDto } from '@hieudoanm/generated/chessGame.entity';
-import { CacheInterceptor } from '@nestjs/cache-manager';
+import { GamesService } from './games.service';
 
 @ApiTags('Chess')
 @Controller({ version: '1', path: 'chess' })

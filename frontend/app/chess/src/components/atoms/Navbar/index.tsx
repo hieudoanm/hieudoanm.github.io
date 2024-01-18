@@ -45,23 +45,21 @@ const AuthButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
           <MenuButton
             size={size}
             as={Button}
-            colorScheme="teal"
-            leftIcon={<Icon as={FaCog} />}
-          >
+            colorScheme='teal'
+            leftIcon={<Icon as={FaCog} />}>
             Settings
           </MenuButton>
           <MenuList>
             <MenuItem>
-              <Link href="/profile" className="flex items-center gap-x-2">
+              <Link href='/profile' className='flex items-center gap-x-2'>
                 <Icon as={FaUser} />
                 <Text>Profile</Text>
               </Link>
             </MenuItem>
             <MenuItem>
               <Link
-                href="/api/auth/logout"
-                className="flex items-center gap-x-2"
-              >
+                href='/api/auth/logout'
+                className='flex items-center gap-x-2'>
                 <Icon as={FaSignOutAlt} />
                 <Text>Sign Out</Text>
               </Link>
@@ -69,12 +67,11 @@ const AuthButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
           </MenuList>
         </Menu>
       ) : (
-        <Link href="/api/auth/login">
+        <Link href='/api/auth/login'>
           <Button
             size={size}
-            colorScheme="teal"
-            className="flex w-full items-center gap-x-2"
-          >
+            colorScheme='teal'
+            className='flex w-full items-center gap-x-2'>
             <Icon as={FaSignInAlt} />
             <Text>Sign In</Text>
           </Button>
@@ -87,15 +84,13 @@ const AuthButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
 const GitHubButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
   return (
     <Link
-      href="https://github.com/hieudoanm"
-      className="font-bold"
-      target="_blank"
-    >
+      href='https://github.com/hieudoanm'
+      className='font-bold'
+      target='_blank'>
       <Button
         size={size}
-        colorScheme="teal"
-        className="flex w-full items-center gap-x-2"
-      >
+        colorScheme='teal'
+        className='flex w-full items-center gap-x-2'>
         <Icon as={FaGithub} />
         <Text>GitHub</Text>
       </Button>
@@ -108,35 +103,35 @@ export const MobileDrawer: React.FC<{
   onClose: () => void;
 }> = ({ isOpen, onClose }) => {
   return (
-    <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
+    <Drawer isOpen={isOpen} placement='left' onClose={onClose}>
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader>{APP_NAME}</DrawerHeader>
         <Divider />
         <DrawerBody>
-          <div className="flex flex-col gap-y-4">
-            <Link href="/countries">
+          <div className='flex flex-col gap-y-4'>
+            <Link href='/countries'>
               <Text>Countries</Text>
             </Link>
-            <Link href="/streamers">
+            <Link href='/streamers'>
               <Text>Streamers</Text>
             </Link>
-            <Link href="/titled">
+            <Link href='/titled'>
               <Text>Titled</Text>
             </Link>
-            <Link href="/openings">
+            <Link href='/openings'>
               <Text>Openings</Text>
             </Link>
-            <Link href="/analysis">
+            <Link href='/analysis'>
               <Text>Analysis</Text>
             </Link>
-            <GitHubButton size="md" />
-            <AuthButton size="md" />
+            <GitHubButton size='md' />
+            <AuthButton size='md' />
           </div>
         </DrawerBody>
         <Divider />
-        <DrawerFooter justifyContent="start">
+        <DrawerFooter justifyContent='start'>
           &copy; {YEAR} {APP_NAME}
         </DrawerFooter>
       </DrawerContent>
@@ -149,54 +144,53 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="border-b shadow">
+      <nav className='border-b shadow'>
         <Container>
-          <div className="py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-x-4">
-                <div className="block md:hidden">
-                  <Button colorScheme="teal" onClick={onOpen} size="sm">
+          <div className='py-4'>
+            <div className='flex items-center justify-between'>
+              <div className='flex items-center gap-x-4'>
+                <div className='block md:hidden'>
+                  <Button colorScheme='teal' onClick={onOpen} size='sm'>
                     <HamburgerIcon />
                   </Button>
                 </div>
-                <Link href="/">
+                <Link href='/'>
                   <Text textTransform={'uppercase'} fontWeight={600}>
                     {APP_NAME}
                   </Text>
                 </Link>
               </div>
-              <div className="hidden md:block">
-                <div className="flex items-center gap-x-4">
-                  <Link href="/countries">
+              <div className='hidden md:block'>
+                <div className='flex items-center gap-x-4'>
+                  <Link href='/countries'>
                     <Text>Countries</Text>
                   </Link>
-                  <Link href="/streamers">
+                  <Link href='/streamers'>
                     <Text>Streamers</Text>
                   </Link>
-                  <Link href="/titled">
+                  <Link href='/titled'>
                     <Text>Titled</Text>
                   </Link>
                   <Menu>
                     <MenuButton
                       size={'sm'}
                       as={Button}
-                      colorScheme="teal"
-                      leftIcon={<Icon as={FaTools} />}
-                    >
+                      colorScheme='teal'
+                      leftIcon={<Icon as={FaTools} />}>
                       <Text>Tools</Text>
                     </MenuButton>
                     <MenuList>
                       {['openings', 'analysis'].map((tool: string) => {
                         return (
                           <Link key={tool} href={`/${tool}`}>
-                            <MenuItem className="capitalize">{tool}</MenuItem>
+                            <MenuItem className='capitalize'>{tool}</MenuItem>
                           </Link>
                         );
                       })}
                     </MenuList>
                   </Menu>
-                  <GitHubButton size="sm" />
-                  <AuthButton size="sm" />
+                  <GitHubButton size='sm' />
+                  <AuthButton size='sm' />
                 </div>
               </div>
             </div>

@@ -8,25 +8,26 @@ import {
   StatLabel,
   StatNumber,
 } from '@chakra-ui/react';
+import { IconType } from 'react-icons';
 
 export const ChessStats: React.FC<{
   label: string;
   last: number;
   best: number;
-  icon: any;
+  icon: IconType;
 }> = ({ label = '', last = 0, best = 0, icon }) => {
   return (
-    <Card className="border border-gray-200">
+    <Card className='border border-gray-200'>
       <CardBody>
-        <div className="flex items-center justify-between">
+        <div className='flex items-center justify-between'>
           <Stat>
             <StatLabel>{label}</StatLabel>
             <StatNumber>{last ?? 'N/A'}</StatNumber>
-            <StatHelpText className="m-0">Best: {best ?? 'N/A'}</StatHelpText>
+            <StatHelpText className='m-0'>Best: {best ?? 'N/A'}</StatHelpText>
           </Stat>
           {icon ? (
             <div>
-              <Box bgColor={'teal.500'} color={'white'} className="rounded p-2">
+              <Box bgColor={'teal.500'} color={'white'} className='rounded p-2'>
                 <Icon as={icon} boxSize={6} />
               </Box>
             </div>

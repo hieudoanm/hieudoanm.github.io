@@ -72,8 +72,8 @@ const drawChart = (
     })
     .on('mousemove', (event: MouseEvent) => {
       return tooltip
-        .style('top', event.pageY + 'px')
-        .style('left', event.pageX + 'px');
+        .style('top', `${event.pageY}px`)
+        .style('left', `${event.pageX}px`);
     })
     .on('mouseout', () => {
       return tooltip.style('visibility', 'hidden');
@@ -95,7 +95,7 @@ export const SVGMaps: React.FC<SVGMapsProperties> = ({
       <svg
         id={id}
         viewBox={`0 0 ${maps.width} ${maps.height}`}
-        className="mx-auto overflow-hidden"
+        className='mx-auto overflow-hidden'
       />
     </div>
   );

@@ -43,9 +43,9 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
   );
 
   return (
-    <Card className="border border-gray-200">
+    <Card className='border border-gray-200'>
       <CardHeader>
-        <h1 className="text-xl md:text-3xl">Opponents</h1>
+        <h1 className='text-xl md:text-3xl'>Opponents</h1>
       </CardHeader>
       <Divider />
       <CardBody>
@@ -56,59 +56,59 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                 <Th isNumeric>No</Th>
                 <Th>Opponent</Th>
                 <Th isNumeric>
-                  <div
-                    className="cursor-pointer capitalize"
-                    onClick={() => setSort({ by: 'games' })}
-                  >
+                  <button
+                    type='button'
+                    className='cursor-pointer capitalize'
+                    onClick={() => setSort({ by: 'games' })}>
                     Games
-                  </div>
+                  </button>
                 </Th>
                 <Th isNumeric>
-                  <div className="flex items-center justify-end gap-2">
-                    <div
-                      className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'win' })}
-                    >
+                  <div className='flex items-center justify-end gap-2'>
+                    <button
+                      type='button'
+                      className='cursor-pointer capitalize'
+                      onClick={() => setSort({ by: 'win' })}>
                       Win
-                    </div>
-                    <div
-                      className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'winPercentage' })}
-                    >
+                    </button>
+                    <button
+                      type='button'
+                      className='cursor-pointer capitalize'
+                      onClick={() => setSort({ by: 'winPercentage' })}>
                       (%)
-                    </div>
+                    </button>
                   </div>
                 </Th>
                 <Th isNumeric>
-                  <div className="flex items-center justify-end gap-2">
-                    <div
-                      className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'draw' })}
-                    >
+                  <div className='flex items-center justify-end gap-2'>
+                    <button
+                      type='button'
+                      className='cursor-pointer capitalize'
+                      onClick={() => setSort({ by: 'draw' })}>
                       Draw
-                    </div>
-                    <div
-                      className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'drawPercentage' })}
-                    >
+                    </button>
+                    <button
+                      type='button'
+                      className='cursor-pointer capitalize'
+                      onClick={() => setSort({ by: 'drawPercentage' })}>
                       (%)
-                    </div>
+                    </button>
                   </div>
                 </Th>
                 <Th isNumeric>
-                  <div className="flex items-center justify-end gap-2">
-                    <div
-                      className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'loss' })}
-                    >
+                  <div className='flex items-center justify-end gap-2'>
+                    <button
+                      type='button'
+                      className='cursor-pointer capitalize'
+                      onClick={() => setSort({ by: 'loss' })}>
                       Loss
-                    </div>
-                    <div
-                      className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'lossPercentage' })}
-                    >
+                    </button>
+                    <button
+                      type='button'
+                      className='cursor-pointer capitalize'
+                      onClick={() => setSort({ by: 'lossPercentage' })}>
                       (%)
-                    </div>
+                    </button>
                   </div>
                 </Th>
               </Tr>
@@ -138,17 +138,17 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                         <b>{games}</b>
                       </Td>
                       <Td isNumeric>
-                        <span className="text-teal-500">
+                        <span className='text-teal-500'>
                           {win} ({winPercentage.toFixed(2)}%)
                         </span>
                       </Td>
                       <Td isNumeric>
-                        <span className="text-gray-500">
+                        <span className='text-gray-500'>
                           {draw} ({drawPercentage.toFixed(2)}%)
                         </span>
                       </Td>
                       <Td isNumeric>
-                        <span className="text-red-500">
+                        <span className='text-red-500'>
                           {loss} ({lossPercentage.toFixed(2)}%)
                         </span>
                       </Td>

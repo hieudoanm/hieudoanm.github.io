@@ -1,8 +1,8 @@
+import { OrganizationDto } from '@hieudoanm/generated/organization.entity';
 import { Controller, Get, Param } from '@nestjs/common';
 import { ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { OrganizationsService } from './organizations.service';
 import { OrganizationsResponseDto } from './organizations.dto';
-import { OrganizationDto } from '@hieudoanm/generated/organization.entity';
+import { OrganizationsService } from './organizations.service';
 
 @ApiTags('organizations')
 @Controller({ version: '1', path: 'organizations' })

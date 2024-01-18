@@ -1,6 +1,6 @@
 import { ChessGame, ChessPlayer } from '@prisma/client';
-import { ChessContext } from '../chess.types';
 import { GamesSynced } from '../../../common/data/chess/chess.types';
+import { ChessContext } from '../chess.types';
 
 export const resolvers = {
   Chess: {

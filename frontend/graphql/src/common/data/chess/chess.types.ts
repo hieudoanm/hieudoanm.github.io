@@ -1,8 +1,8 @@
 import { ChessPlayer, ChessTitle } from '@prisma/client';
 import {
-  ONE_WEEK,
   ONE_MONTH,
   ONE_QUARTER,
+  ONE_WEEK,
   ONE_YEAR,
 } from '../../constants/constants';
 

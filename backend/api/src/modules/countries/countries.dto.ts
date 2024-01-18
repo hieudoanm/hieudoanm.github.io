@@ -1,5 +1,5 @@
-import { ApiProperty } from '@nestjs/swagger';
 import { CountryDto } from '@hieudoanm/generated/country.entity';
+import { ApiProperty } from '@nestjs/swagger';
 import { Region } from '@prisma/client';
 import { IsBoolean, IsOptional, IsString } from 'class-validator';
 

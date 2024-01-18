@@ -8,7 +8,9 @@ const profileHandler = async (
   try {
     await handleProfile(request, response);
   } catch (error) {
-    response.status((error as any).status || 400).end((error as Error).message);
+    response
+      .status((error as { status: number }).status || 400)
+      .end((error as Error).message);
   }
 };
 

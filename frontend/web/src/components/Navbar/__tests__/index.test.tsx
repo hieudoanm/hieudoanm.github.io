@@ -4,7 +4,7 @@ import Navbar from '..';
 
 describe('Navbar', () => {
   test('render default', () => {
-    const wrapper = render(<Navbar sections={[{ id: 'id' }]}></Navbar>);
+    const wrapper = render(<Navbar sections={[{ id: 'id' }]} />);
     expect(wrapper.container).toMatchSnapshot();
   });
 });

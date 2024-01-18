@@ -90,7 +90,7 @@ export const Pomodoro: React.FC = () => {
         };
       });
     }
-  }, [clock, timer]);
+  }, [clock]);
 
   useEffect(() => {
     return () => clearInterval(timer);
@@ -100,57 +100,54 @@ export const Pomodoro: React.FC = () => {
   const backgroundColor: string = clock.status ? newColor : IDLE_COLOR;
 
   return (
-    <Box height="full" backgroundColor={backgroundColor}>
+    <Box height='full' backgroundColor={backgroundColor}>
       <Box
-        height="full"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-      >
+        height='full'
+        display='flex'
+        alignItems='center'
+        justifyContent='center'>
         <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          borderWidth="1px"
-          borderColor="#E2E8F0"
-          borderStyle="solid"
-          borderRadius="full"
-          aspectRatio="1 / 1"
-          backgroundColor="white"
-          width="14rem"
-        >
+          display='flex'
+          alignItems='center'
+          justifyContent='center'
+          borderWidth='1px'
+          borderColor='#E2E8F0'
+          borderStyle='solid'
+          borderRadius='full'
+          aspectRatio='1 / 1'
+          backgroundColor='white'
+          width='14rem'>
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            rowGap={{ base: '0.5rem', md: '1rem' }}
-          >
-            <Text textTransform="uppercase">
+            display='flex'
+            flexDirection='column'
+            alignItems='center'
+            rowGap={{ base: '0.5rem', md: '1rem' }}>
+            <Text textTransform='uppercase'>
               {clock.status ? WORK_STATUS : REST_STATUS}
             </Text>
-            <Text fontSize="1.875rem">{clock.display}</Text>
-            <Box display="flex" columnGap={{ base: '0.25rem', md: '0.5rem' }}>
+            <Text fontSize='1.875rem'>{clock.display}</Text>
+            <Box display='flex' columnGap={{ base: '0.25rem', md: '0.5rem' }}>
               {clock.status ? (
                 <IconButton
-                  boxSize="8"
-                  aria-label="pause"
-                  colorScheme="teal"
+                  boxSize='8'
+                  aria-label='pause'
+                  colorScheme='teal'
                   icon={<Icon as={FaCirclePause} />}
                   onClick={pause}
                 />
               ) : (
                 <IconButton
-                  boxSize="8"
-                  aria-label="start"
-                  colorScheme="teal"
+                  boxSize='8'
+                  aria-label='start'
+                  colorScheme='teal'
                   icon={<Icon as={FaCirclePlay} />}
                   onClick={start}
                 />
               )}
               <IconButton
-                boxSize="8"
-                aria-label="start"
-                colorScheme="teal"
+                boxSize='8'
+                aria-label='start'
+                colorScheme='teal'
                 icon={<Icon as={FaCircleStop} />}
                 onClick={reset}
               />

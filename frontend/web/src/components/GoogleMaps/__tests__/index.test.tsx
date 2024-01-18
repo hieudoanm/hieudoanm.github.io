@@ -4,7 +4,7 @@ import GoogleMaps from '..';
 
 describe('GoogleMaps', () => {
   test('render default', () => {
-    const wrapper = render(<GoogleMaps source="" title="" />);
+    const wrapper = render(<GoogleMaps source='' title='' />);
     expect(wrapper.container).toMatchSnapshot();
   });
 });

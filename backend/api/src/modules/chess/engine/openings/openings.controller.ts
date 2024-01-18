@@ -1,5 +1,4 @@
-import { OpeningsRepository } from './openings.repository';
-import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 import {
   Controller,
   Get,
@@ -7,12 +6,13 @@ import {
   UseInterceptors,
   ValidationPipe,
 } from '@nestjs/common';
+import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import {
   EcosResponseDto,
   OpeningsRequestQueryResponseDto,
   OpeningsResponseDto,
 } from './openings.dto';
-import { CacheInterceptor } from '@nestjs/cache-manager';
+import { OpeningsRepository } from './openings.repository';
 
 @ApiTags('Chess')
 @Controller({ version: '1', path: 'chess/openings' })

@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
+import axios from 'axios';
 
 const PUBLIC_URL: string = 'https://api.chess.com/pub';
 
@@ -15,11 +15,7 @@ const getPGN = async (archive: string) => {
   return data;
 };
 
-const getArchives = async (
-  username: string,
-  current: string,
-  title: string = ''
-) => {
+const getArchives = async (username: string, current: string, title = '') => {
   try {
     // Archives
     console.log(`username=${username}`);

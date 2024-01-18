@@ -1,22 +1,22 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ChessResult, Prisma } from '@prisma/client';
 import {
+  CHESS_DRAW_RESULTS,
+  CHESS_LOSS_RESULTS,
+  CHESS_WIN_RESULTS,
+} from '../../../../../../common/constants/chess.constants';
+import {
   DAYS_OF_WEEK,
   RULE,
   TIME_OF_DAYS,
 } from '../../../../../../common/constants/time.constants';
+import { PrismaService } from '../../../../../../common/prisma/prisma.service';
 import {
   GamesByDayOfWeekDto,
   GamesByPeriodDto,
   GamesByTimeOfDayDto,
   GamesDto,
 } from './games.dto';
-import { PrismaService } from '../../../../../../common/prisma/prisma.service';
-import {
-  CHESS_WIN_RESULTS,
-  CHESS_DRAW_RESULTS,
-  CHESS_LOSS_RESULTS,
-} from '../../../../../../common/constants/chess.constants';
 
 @Injectable()
 export class GamesService {

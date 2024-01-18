@@ -1,6 +1,6 @@
+import { writeFileSync } from 'fs';
 import { Country, PrismaClient } from '@prisma/client';
 import axios from 'axios';
-import { writeFileSync } from 'fs';
 
 const getCountryDomains = async (): Promise<Set<string>> => {
   const url: string = 'https://restcountries.com/v3.1/all';
@@ -8,9 +8,9 @@ const getCountryDomains = async (): Promise<Set<string>> => {
   const { data: countries } = response;
   const countryDomains = new Set<string>();
   for (const { tld = [] } of countries) {
-    tld.forEach((domain) => {
+    for (const domain of tld) {
       countryDomains.add(domain);
-    });
+    }
   }
   return countryDomains;
 };

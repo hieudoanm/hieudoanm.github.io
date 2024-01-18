@@ -1,6 +1,6 @@
-import React from 'react';
 import Container from '@hieudoanm/components/Container';
 import Header from '@hieudoanm/components/Header';
+import React from 'react';
 
 export type Statistic = {
   id: string;
@@ -23,11 +23,11 @@ const StatsSection: React.FC<StatsSectionProperties> = ({
   stats = [],
 }) => {
   return (
-    <div id={sectionId} className="pb-16">
+    <div id={sectionId} className='pb-16'>
       <Container>
         <Header subtitle={sectionSubtitle}>{sectionTitle}</Header>
-        <div className="rounded-lg border shadow-2xl">
-          <div className="grid grid-cols-1 md:grid-cols-4">
+        <div className='rounded-lg border shadow-2xl'>
+          <div className='grid grid-cols-1 md:grid-cols-4'>
             {stats.map(
               (
                 { id = '', value, title, subtitle }: Statistic,
@@ -41,11 +41,10 @@ const StatsSection: React.FC<StatsSectionProperties> = ({
                 return (
                   <div
                     key={`stats-${id}`}
-                    className={`${border} p-8 text-center`}
-                  >
-                    <div className="text-5xl">{value}</div>
-                    {title && <div className="text-xl">{title}</div>}
-                    {subtitle && <p className="text-gray-500">{subtitle}</p>}
+                    className={`${border} p-8 text-center`}>
+                    <div className='text-5xl'>{value}</div>
+                    {title && <div className='text-xl'>{title}</div>}
+                    {subtitle && <p className='text-gray-500'>{subtitle}</p>}
                   </div>
                 );
               }

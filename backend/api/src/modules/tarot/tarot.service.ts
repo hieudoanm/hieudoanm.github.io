@@ -1,7 +1,7 @@
 import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
+import { TarotCardDto } from '@hieudoanm/generated/tarotCard.entity';
 import { Injectable, Logger } from '@nestjs/common';
 import { TarotCardType } from '@prisma/client';
-import { TarotCardDto } from '@hieudoanm/generated/tarotCard.entity';
 import { TarotCardsResponseDto } from './tarot.dto';
 
 @Injectable()

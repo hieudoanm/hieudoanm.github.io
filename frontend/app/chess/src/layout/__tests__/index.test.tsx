@@ -13,9 +13,7 @@ describe('Layout', () => {
   it('to match snapshot', () => {
     const { container } = render(
       <UserProvider>
-        <Layout>
-          <></>
-        </Layout>
+        <Layout />
       </UserProvider>
     );
     expect(container).toMatchSnapshot();

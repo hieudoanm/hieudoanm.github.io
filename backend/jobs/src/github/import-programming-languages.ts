@@ -1,6 +1,6 @@
+import { writeFileSync } from 'fs';
 import { PrismaClient } from '@prisma/client';
 import axios from 'axios';
-import { writeFileSync } from 'fs';
 import { parse } from 'yaml';
 
 const getLanguages = async () => {

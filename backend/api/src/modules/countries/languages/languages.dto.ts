@@ -1,5 +1,5 @@
-import { ApiProperty } from '@nestjs/swagger';
 import { LanguageDto } from '@hieudoanm/generated/language.entity';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class LanguagesResponseDto {
   @ApiProperty({ default: 0 })

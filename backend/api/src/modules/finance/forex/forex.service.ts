@@ -1,7 +1,7 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { RateDto, RatesRequestQueryDto, RatesResponseDto } from './forex.dto';
 import { FrankfurterClient } from '@hieudoanm/common/clients/apis/forex/frankfurter/frankfurter.client';
 import { FrankfurterLatestRequest } from '@hieudoanm/common/clients/apis/forex/frankfurter/frankfurter.dto';
+import { Injectable, Logger } from '@nestjs/common';
+import { RateDto, RatesRequestQueryDto, RatesResponseDto } from './forex.dto';
 
 @Injectable()
 export class ForexService {

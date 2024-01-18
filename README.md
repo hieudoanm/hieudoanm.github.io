@@ -54,6 +54,7 @@
 
 | Supersector    | Sector     | Technology                   | Company              |
 | -------------- | ---------- | ---------------------------- | -------------------- |
+| `Development`  | Format     | [biome][biome]               |                      |
 | `Development`  | Format     | [dprint][dprint]             |                      |
 | `Front-end`    | Components | [mui][mui]                   | [Alphabet][alphabet] |
 | `Front-end`    | Framework  | [angular][angular]           | [Alphabet][alphabet] |
@@ -85,6 +86,7 @@
 [amazon]: https://www.amazon.com
 [angular]: https://angular.io
 [aws]: https://aws.amazon.com
+[biome]: https://biomejs.dev/
 [chakra-ui]: https://chakra-ui.com/
 [conda]: https://docs.conda.io/en/latest/
 [docker]: https://www.docker.com

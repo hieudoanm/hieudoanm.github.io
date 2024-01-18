@@ -1,11 +1,11 @@
-import { Prisma, DayOfWeek, Region } from '@prisma/client';
+import { DayOfWeek, Prisma, Region } from '@prisma/client';
+import { CallingCodeDto } from './callingCode.entity';
+import { CityDto } from './city.entity';
+import { CountriesOnOrganizationsDto } from './countriesOnOrganizations.entity';
+import { CountryNameDto } from './countryName.entity';
 import { CurrenciesInCountriesDto } from './currenciesInCountries.entity';
 import { LanguagesInCountriesDto } from './languagesInCountries.entity';
-import { CountriesOnOrganizationsDto } from './countriesOnOrganizations.entity';
 import { UniversityDto } from './university.entity';
-import { CountryNameDto } from './countryName.entity';
-import { CityDto } from './city.entity';
-import { CallingCodeDto } from './callingCode.entity';
 
 export class CountryDto {
   name: string | null;

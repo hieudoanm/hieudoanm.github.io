@@ -5,13 +5,13 @@ describe('ChessHeader', () => {
   it('to match snapshot', () => {
     const { container } = render(
       <ChessHeader
-        title=""
-        name=""
-        username=""
-        avatar=""
+        title=''
+        name=''
+        username=''
+        avatar=''
         verified={true}
         is_streamer={true}
-        twitch_url=""
+        twitch_url=''
       />
     );
     expect(container).toMatchSnapshot();

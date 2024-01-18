@@ -1,5 +1,7 @@
 import Blogs, { BlogsSectionProperties } from '@hieudoanm/components/Blogs';
-import CTA, { CTASectionProperties } from '@hieudoanm/components/CTA';
+import CallToAction, {
+  CallToActionSectionProperties,
+} from '@hieudoanm/components/CTA';
 import Experiences, {
   ExperiencesSectionProperties,
 } from '@hieudoanm/components/Experiences';
@@ -30,7 +32,7 @@ export type AboutTemplateProperties = {
   stats: StatsSectionProperties;
   logos: LogosCloudSectionProperties;
   team: TeamSectionProperties;
-  cta: CTASectionProperties;
+  cta: CallToActionSectionProperties;
   testimonials: TestimonialsSectionProperties;
   blogs: BlogsSectionProperties;
   newsletter: NewsletterSectionProperties;
@@ -89,7 +91,7 @@ const AboutTemplate: React.FC<AboutTemplateProperties> = ({
           subtitle={team.subtitle}
           team={team.team}
         />
-        <CTA
+        <CallToAction
           id={cta.id}
           title={cta.title}
           subtitle={cta.subtitle}

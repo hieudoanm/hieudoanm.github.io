@@ -1,3 +1,4 @@
+import { writeFileSync } from 'fs';
 import {
   INestApplication,
   ValidationPipe,
@@ -7,7 +8,6 @@ import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, OpenAPIObject, SwaggerModule } from '@nestjs/swagger';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
-import { writeFileSync } from 'fs';
 import helmet from 'helmet';
 import { stringify } from 'yaml';
 import { AppModule } from './app.module';

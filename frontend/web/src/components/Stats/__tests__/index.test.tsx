@@ -5,7 +5,7 @@ import Stats from '..';
 describe('Stats', () => {
   test('render default', () => {
     const wrapper = render(
-      <Stats id="id" title="title" subtitle="subtitle" stats={[]}></Stats>
+      <Stats id='id' title='title' subtitle='subtitle' stats={[]} />
     );
     expect(wrapper.container).toMatchSnapshot();
   });

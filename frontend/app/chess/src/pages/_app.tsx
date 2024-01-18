@@ -10,13 +10,13 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>{APP_NAME}</title>
-        <meta charSet="utf-8" key="charset" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content={APP_DESCRIPTION} />
+        <meta charSet='utf-8' key='charset' />
+        <link rel='icon' href='/favicon.ico' />
+        <meta name='description' content={APP_DESCRIPTION} />
         <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1"
-          key="viewport"
+          name='viewport'
+          content='width=device-width,initial-scale=1'
+          key='viewport'
         />
       </Head>
       <UserProvider>

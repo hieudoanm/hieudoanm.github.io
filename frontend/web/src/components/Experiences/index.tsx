@@ -1,6 +1,3 @@
-import React from 'react';
-import Container from '@hieudoanm/components/Container';
-import Header from '@hieudoanm/components/Header';
 import {
   Accordion,
   AccordionButton,
@@ -10,6 +7,9 @@ import {
   Badge,
   Box,
 } from '@chakra-ui/react';
+import Container from '@hieudoanm/components/Container';
+import Header from '@hieudoanm/components/Header';
+import React from 'react';
 
 export type Experience = {
   company: string;
@@ -32,7 +32,7 @@ const ExperiencesSection: React.FC<ExperiencesSectionProperties> = ({
   experiences,
 }) => {
   return (
-    <div id={id} className="pb-16">
+    <div id={id} className='pb-16'>
       <Container>
         <Header subtitle={subtitle}>{sectionTitle}</Header>
         <Accordion allowToggle>
@@ -51,10 +51,10 @@ const ExperiencesSection: React.FC<ExperiencesSectionProperties> = ({
                   <AccordionItem key={`experience-${index}`}>
                     <AccordionButton>
                       <Box flex={1}>
-                        <div className="flex items-center gap-x-2">
+                        <div className='flex items-center gap-x-2'>
                           <span>{company}</span>
-                          <Badge colorScheme="teal">{period}</Badge>
-                          <Badge colorScheme="teal">{city}</Badge>
+                          <Badge colorScheme='teal'>{period}</Badge>
+                          <Badge colorScheme='teal'>{city}</Badge>
                         </div>
                       </Box>
                       <AccordionIcon />

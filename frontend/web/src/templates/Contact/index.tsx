@@ -1,4 +1,3 @@
-import React from 'react';
 import Contact, {
   ContactSectionProperties,
 } from '@hieudoanm/components/Contact';
@@ -8,6 +7,7 @@ import Menu, { Section } from '@hieudoanm/components/Navbar';
 import Pricing, {
   PricingSectionProperties,
 } from '@hieudoanm/components/Pricing';
+import React from 'react';
 
 export type ContactTemplateProperties = {
   sections: Section[];
@@ -25,7 +25,7 @@ const ContactTemplate: React.FC<ContactTemplateProperties> = ({
   return (
     <>
       <Menu fixed sections={sections} />
-      <main className="pt-32">
+      <main className='pt-32'>
         <Hero
           id={hero.id}
           title={hero.title}

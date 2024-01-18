@@ -1,5 +1,5 @@
-import { ApiProperty } from '@nestjs/swagger';
 import { TarotCardDto } from '@hieudoanm/generated/tarotCard.entity';
+import { ApiProperty } from '@nestjs/swagger';
 import { TarotCardType } from '@prisma/client';
 
 export class TarotCardsResponseDto {

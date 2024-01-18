@@ -1,5 +1,5 @@
+import { LicensePlate, PrismaClient } from '@prisma/client';
 import csv from 'csvtojson';
-import { PrismaClient, LicensePlate } from '@prisma/client';
 
 const main = async () => {
   const prismaClient = new PrismaClient();

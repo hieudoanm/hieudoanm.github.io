@@ -1,5 +1,5 @@
-import { Injectable, Logger } from '@nestjs/common';
 import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
+import { Injectable, Logger } from '@nestjs/common';
 import { LanguagesResponseDto } from './languages.dto';
 
 @Injectable()

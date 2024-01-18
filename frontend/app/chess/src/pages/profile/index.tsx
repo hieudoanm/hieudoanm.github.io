@@ -25,7 +25,7 @@ const ProfilePage: NextPage = () => {
     return (
       <Layout>
         <Container>
-          <div className="py-8">
+          <div className='py-8'>
             <Card>
               <CardBody>Loading</CardBody>
             </Card>
@@ -39,7 +39,7 @@ const ProfilePage: NextPage = () => {
     return (
       <Layout>
         <Container>
-          <div className="py-8">
+          <div className='py-8'>
             <Card>
               <CardBody>{error.message}</CardBody>
             </Card>
@@ -58,28 +58,28 @@ const ProfilePage: NextPage = () => {
       '/api/stripe',
       { headers, data: { amount: 5 } }
     );
-    logger.info(`checkoutSession`, checkoutSession);
+    logger.info('checkoutSession', checkoutSession);
     const stripe = await getStripe();
     const options: RedirectToCheckoutOptions = {
       sessionId: checkoutSession.id,
     };
-    const response = await stripe!.redirectToCheckout(options);
-    logger.info(`response`, response);
+    const response = await stripe?.redirectToCheckout(options);
+    logger.info('response', response);
     if (error) {
-      alert(response.error.message ?? 'Donate Error');
+      alert(response?.error.message ?? 'Donate Error');
     }
   };
 
   return (
     <Layout>
       <Container>
-        <div className="py-8">
-          <Card className="border border-gray-200 shadow">
+        <div className='py-8'>
+          <Card className='border border-gray-200 shadow'>
             <CardHeader>
-              <div className="flex items-center justify-between">
-                <h1 className="text-xl font-bold">Profile</h1>
-                <Link href="/api/stripe">
-                  <Button type="button" colorScheme="teal" onClick={checkout}>
+              <div className='flex items-center justify-between'>
+                <h1 className='text-xl font-bold'>Profile</h1>
+                <Link href='/api/stripe'>
+                  <Button type='button' colorScheme='teal' onClick={checkout}>
                     Donate
                   </Button>
                 </Link>
@@ -87,32 +87,32 @@ const ProfilePage: NextPage = () => {
             </CardHeader>
             <Divider />
             <CardBody>
-              <div className="flex flex-col gap-y-2 md:gap-y-4">
-                <div className="flex flex-col gap-y-1 md:gap-y-2">
+              <div className='flex flex-col gap-y-2 md:gap-y-4'>
+                <div className='flex flex-col gap-y-1 md:gap-y-2'>
                   <Text>Name</Text>
                   <Input
-                    id="name"
-                    name="name"
-                    placeholder="Name"
+                    id='name'
+                    name='name'
+                    placeholder='Name'
                     value={user?.name ?? ''}
                   />
                 </div>
-                <div className="flex flex-col gap-y-1 md:gap-y-2">
+                <div className='flex flex-col gap-y-1 md:gap-y-2'>
                   <Text>Username</Text>
                   <Input
-                    id="username"
-                    name="username"
-                    placeholder="Username"
+                    id='username'
+                    name='username'
+                    placeholder='Username'
                     value={user?.nickname ?? ''}
                   />
                 </div>
-                <div className="flex flex-col gap-y-1 md:gap-y-2">
+                <div className='flex flex-col gap-y-1 md:gap-y-2'>
                   <Text>Email Address</Text>
                   <Input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email Address"
+                    type='email'
+                    id='email'
+                    name='email'
+                    placeholder='Email Address'
                     value={user?.email ?? ''}
                   />
                 </div>

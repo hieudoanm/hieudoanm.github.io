@@ -1,3 +1,4 @@
+import { WordDto } from '@hieudoanm/generated/word.entity';
 import { CacheInterceptor } from '@nestjs/cache-manager';
 import {
   Controller,
@@ -10,7 +11,6 @@ import {
 import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { WordsRequestQueryDto, WordsResponseDto } from './words.dto';
 import { WordsService } from './words.service';
-import { WordDto } from '@hieudoanm/generated/word.entity';
 
 @ApiTags('words')
 @Controller({ version: '1', path: 'words' })

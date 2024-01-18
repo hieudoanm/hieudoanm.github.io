@@ -1,5 +1,5 @@
+import { EthnicGroup, PrismaClient } from '@prisma/client';
 import csv from 'csvtojson';
-import { PrismaClient, EthnicGroup } from '@prisma/client';
 
 const main = async () => {
   const prismaService = new PrismaClient();

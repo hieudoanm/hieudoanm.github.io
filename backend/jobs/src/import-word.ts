@@ -1,6 +1,6 @@
-import axios from 'axios';
 import { readFileSync } from 'fs';
-import { Word, PrismaClient } from '@prisma/client';
+import { PrismaClient, Word } from '@prisma/client';
+import axios from 'axios';
 
 export type WordsResponse = {
   query: { limit: string; page: number };
@@ -36,14 +36,14 @@ const importWord = async (
 
 const main = async () => {
   const prismaService = new PrismaClient();
-  console.info(`Query from DB`);
+  console.info('Query from DB');
   const wordsFromDB: string[] = (
     await prismaService.word.findMany({
       select: { word: true },
     })
   ).map(({ word }) => word);
   const wordsSetFromDB = new Set(wordsFromDB);
-  console.info(`Filter from DB`);
+  console.info('Filter from DB');
   const wordsTxt = readFileSync('./scripts/txt/words.txt', 'utf-8');
   const words = wordsTxt
     .split('\n')

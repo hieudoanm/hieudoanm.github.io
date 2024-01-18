@@ -3,7 +3,7 @@ import Container from '@hieudoanm/components/Container';
 import Header from '@hieudoanm/components/Header';
 import React from 'react';
 
-export type CTASectionProperties = {
+export type CallToActionSectionProperties = {
   id: string;
   title: string;
   subtitle: string;
@@ -11,7 +11,7 @@ export type CTASectionProperties = {
   backgroundImage: string;
 };
 
-const CTASection: React.FC<CTASectionProperties> = ({
+const CallToActionSection: React.FC<CallToActionSectionProperties> = ({
   id,
   title,
   subtitle,
@@ -19,22 +19,20 @@ const CTASection: React.FC<CTASectionProperties> = ({
   backgroundImage,
 }) => {
   return (
-    <div className="py-16">
+    <div className='py-16'>
       <div
         id={id}
-        className="bg-cover bg-center"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <div className="bg-gray-900/80 pb-16">
+        className='bg-cover bg-center'
+        style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div className='bg-gray-900/80 pb-16'>
           <Container>
-            <Header subtitle={subtitle} className="text-white">
+            <Header subtitle={subtitle} className='text-white'>
               {title}
             </Header>
-            <a href="mailto:hieumdoan@gmail.com">
+            <a href='mailto:hieumdoan@gmail.com'>
               <Button
-                size="xl"
-                className="mx-auto block bg-white uppercase text-gray-900"
-              >
+                size='xl'
+                className='mx-auto block bg-white uppercase text-gray-900'>
                 {cta}
               </Button>
             </a>
@@ -45,6 +43,6 @@ const CTASection: React.FC<CTASectionProperties> = ({
   );
 };
 
-CTASection.displayName = 'CTASection';
+CallToActionSection.displayName = 'CallToActionSection';
 
-export default CTASection;
+export default CallToActionSection;

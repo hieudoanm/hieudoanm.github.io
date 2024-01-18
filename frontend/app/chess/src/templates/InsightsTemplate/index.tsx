@@ -9,7 +9,7 @@ export const InsightsTemplate: React.FC<{ insights: Insights }> = ({
   insights = {} as Insights,
 }) => {
   return (
-    <div className="flex flex-col gap-y-4 md:gap-y-8">
+    <div className='flex flex-col gap-y-4 md:gap-y-8'>
       <ChessGames insights={insights} />
       <ChessResults insights={insights} />
       <ChessTimeOfDays insights={insights} />

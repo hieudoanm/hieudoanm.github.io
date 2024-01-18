@@ -1,6 +1,6 @@
+import compression from 'compression';
 import cors from 'cors';
 import express, { json } from 'express';
-import compression from 'compression';
 
 export const app = express();
 app.use(cors());

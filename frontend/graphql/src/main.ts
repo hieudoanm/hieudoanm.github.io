@@ -1,3 +1,4 @@
+import http from 'http';
 import { ApolloServer, ApolloServerPlugin } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
@@ -7,7 +8,6 @@ import {
 } from '@apollo/server/plugin/landingPage/default';
 import cors from 'cors';
 import express from 'express';
-import http from 'http';
 import { app } from './app.module';
 import { ApolloContext } from './common/apollo/apollo.types';
 import { ChessDataSource } from './common/data/chess/chess.data-source';

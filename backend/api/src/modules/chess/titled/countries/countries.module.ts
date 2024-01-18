@@ -1,6 +1,6 @@
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
-import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 import { CountriesController } from './countries.controller';
 import { CountriesRepository } from './countries.repository';
 import { CountriesService } from './countries.service';

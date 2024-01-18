@@ -1,5 +1,5 @@
+import { PrismaClient, TarotCardType } from '@prisma/client';
 import axios from 'axios';
-import { TarotCardType, PrismaClient } from '@prisma/client';
 
 type Card = {
   name: string;

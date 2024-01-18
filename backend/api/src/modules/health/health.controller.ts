@@ -1,8 +1,8 @@
+import { CacheInterceptor } from '@nestjs/cache-manager';
 import { Controller, Get, UseInterceptors } from '@nestjs/common';
-import { HealthService } from './health.service';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { HealthResponseDto } from './health.dto';
-import { CacheInterceptor } from '@nestjs/cache-manager';
+import { HealthService } from './health.service';
 
 @ApiTags('health')
 @Controller({ version: '1', path: 'health' })

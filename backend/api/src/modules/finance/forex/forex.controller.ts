@@ -7,8 +7,8 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { ForexService } from './forex.service';
 import { RatesRequestQueryDto, RatesResponseDto } from './forex.dto';
+import { ForexService } from './forex.service';
 
 @ApiTags('forex')
 @Controller({ version: '1', path: 'forex' })

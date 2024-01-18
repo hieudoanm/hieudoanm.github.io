@@ -7,11 +7,11 @@ import {
   Divider,
   Heading,
   Tab,
-  Table,
-  TableContainer,
   TabList,
   TabPanel,
   TabPanels,
+  Table,
+  TableContainer,
   Tabs,
   Tbody,
   Td,
@@ -38,9 +38,9 @@ const CountriesTable: React.FC<{ countries: Country[] }> = ({
   countries = [],
 }) => {
   return (
-    <Card className="border border-gray-200 shadow">
+    <Card className='border border-gray-200 shadow'>
       <CardHeader>
-        <Heading as="h1" className="text-xl">
+        <Heading as='h1' className='text-xl'>
           Countries ({countries.length})
         </Heading>
       </CardHeader>
@@ -49,7 +49,7 @@ const CountriesTable: React.FC<{ countries: Country[] }> = ({
         <Table>
           <Thead>
             <Tr>
-              <Th className="w-4">No</Th>
+              <Th className='w-4'>No</Th>
               <Th>Country</Th>
               <Th isNumeric>Total</Th>
             </Tr>
@@ -115,18 +115,18 @@ const CountriesMaps: React.FC<{ countries: Country[] }> = ({
     return { id: countryCode, label: country, value: total, color };
   });
   return (
-    <Card className="border border-gray-200 shadow">
+    <Card className='border border-gray-200 shadow'>
       <CardHeader>
-        <Heading as="h1" className="text-xl">
+        <Heading as='h1' className='text-xl'>
           Countries ({countries.length})
         </Heading>
       </CardHeader>
       <Divider />
       <CardBody>
-        <div className="flex items-center gap-x-4 md:gap-x-8">
-          <div className="grow">
+        <div className='flex items-center gap-x-4 md:gap-x-8'>
+          <div className='grow'>
             <SVGMaps
-              id="world"
+              id='world'
               maps={maps}
               data={data}
               onClick={(id: string) => {
@@ -134,17 +134,16 @@ const CountriesMaps: React.FC<{ countries: Country[] }> = ({
               }}
             />
           </div>
-          <div className="flex flex-col gap-y-1">
+          <div className='flex flex-col gap-y-1'>
             {colors.map((color: string, index: number) => {
               const start = range[index];
               const end = start + gap;
               const label: string = `${start} - ${end}`;
               return (
-                <Tooltip label={label} key={color} placement="left">
+                <Tooltip label={label} key={color} placement='left'>
                   <Box
                     bgColor={color}
-                    className="aspect-square w-4 cursor-pointer overflow-hidden rounded text-white"
-                  >
+                    className='aspect-square w-4 cursor-pointer overflow-hidden rounded text-white'>
                     <Text color={color}>{color}</Text>
                   </Box>
                 </Tooltip>
@@ -167,8 +166,8 @@ const CountriesPage: NextPage<CountriesPageProperties> = ({
   return (
     <Layout>
       <Container>
-        <div className="py-4 md:py-8">
-          <Tabs isFitted variant="soft-rounded" colorScheme="teal">
+        <div className='py-4 md:py-8'>
+          <Tabs isFitted variant='soft-rounded' colorScheme='teal'>
             <TabList>
               <Tab>Maps</Tab>
               <Tab>List</Tab>
@@ -200,22 +199,21 @@ const query: DocumentNode = gql`
   }
 `;
 
-export const getServerSideProps: GetServerSideProps<
-  CountriesPageProperties
-> = async () => {
-  try {
-    const {
-      data: {
-        chess: { countries = [] },
-      },
-    } = await apolloClient.query<{ chess: { countries: Country[] } }>({
-      query,
-    });
-    return { props: { countries } };
-  } catch (error) {
-    logger.error(`getServerSideProps error=${error}`);
-    return { props: { countries: [] } };
-  }
-};
+export const getServerSideProps: GetServerSideProps<CountriesPageProperties> =
+  async () => {
+    try {
+      const {
+        data: {
+          chess: { countries = [] },
+        },
+      } = await apolloClient.query<{ chess: { countries: Country[] } }>({
+        query,
+      });
+      return { props: { countries } };
+    } catch (error) {
+      logger.error(`getServerSideProps error=${error}`);
+      return { props: { countries: [] } };
+    }
+  };
 
 export default CountriesPage;

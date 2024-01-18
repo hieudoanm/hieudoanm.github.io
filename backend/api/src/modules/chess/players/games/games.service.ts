@@ -1,3 +1,7 @@
+import { ChessClient } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.client';
+import { ChessGame } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.dto';
+import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
+import { ChessGameDto } from '@hieudoanm/generated/chessGame.entity';
 import { Injectable, Logger } from '@nestjs/common';
 import {
   ChessResult,
@@ -5,10 +9,6 @@ import {
   ChessVariant,
   Prisma,
 } from '@prisma/client';
-import { ChessClient } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.client';
-import { ChessGame } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.dto';
-import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
-import { ChessGameDto } from '@hieudoanm/generated/chessGame.entity';
 
 @Injectable()
 export class GamesService {

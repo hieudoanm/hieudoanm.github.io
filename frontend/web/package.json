@@ -10,6 +10,7 @@
   "scripts": {
     "prebuild": "rimraf .next out",
     "format": "prettier . --write",
+    "check": "biome check --apply ./src",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -33,6 +34,7 @@
     "uuid": "9.0.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.5.2",
     "@testing-library/react": "14.1.2",
     "@types/jest": "29.5.11",
     "@types/node": "20.11.5",

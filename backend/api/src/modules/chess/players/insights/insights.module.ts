@@ -1,7 +1,7 @@
-import { CacheModule } from '@nestjs/cache-manager';
-import { Module } from '@nestjs/common';
 import { ChessClient } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.client';
 import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
+import { CacheModule } from '@nestjs/cache-manager';
+import { Module } from '@nestjs/common';
 import { InsightsController } from './insights.controller';
 import { InsightsService } from './insights.service';
 import { AccuracyService } from './services/accuracy/accuracy.service';

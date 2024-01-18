@@ -90,21 +90,20 @@ const GamesPage: NextPage<{ username: string; games: ChessGame[] }> = ({
   return (
     <Layout>
       <Container>
-        <div className="py-8">
-          <Card className="border border-gray-200 shadow">
+        <div className='py-8'>
+          <Card className='border border-gray-200 shadow'>
             <CardHeader>
               <Box
                 display={'flex'}
                 alignItems={'center'}
-                justifyContent={'space-between'}
-              >
-                <Heading className="text-xl">Games ({games.length})</Heading>
-                <Button colorScheme="teal" onClick={syncGames}>
+                justifyContent={'space-between'}>
+                <Heading className='text-xl'>Games ({games.length})</Heading>
+                <Button colorScheme='teal' onClick={syncGames}>
                   <Icon as={FaSync} />
                 </Button>
               </Box>
             </CardHeader>
-            <List className="flex flex-col gap-y-2">
+            <List className='flex flex-col gap-y-2'>
               {games.map(
                 ({
                   id,
@@ -118,9 +117,9 @@ const GamesPage: NextPage<{ username: string; games: ChessGame[] }> = ({
                   endTime,
                 }: ChessGame) => {
                   return (
-                    <ListItem key={id} className="border-t p-2 md:p-4">
-                      <div className="flex items-center justify-between gap-2 md:gap-4">
-                        <div className="flex items-center gap-x-2 md:gap-x-4">
+                    <ListItem key={id} className='border-t p-2 md:p-4'>
+                      <div className='flex items-center justify-between gap-2 md:gap-4'>
+                        <div className='flex items-center gap-x-2 md:gap-x-4'>
                           <div>
                             <TimeClassIcon timeClass={timeClass} />
                           </div>
@@ -129,34 +128,30 @@ const GamesPage: NextPage<{ username: string; games: ChessGame[] }> = ({
                               href={`/${whiteUsername}`}
                               className={`block ${
                                 whiteUsername === username ? FONT_SEMIBOLD : ''
-                              }`}
-                            >
+                              }`}>
                               {whiteUsername} ({whiteRating})
                             </Link>
                             <Link
                               href={`/${blackUsername}`}
                               className={`block ${
                                 blackUsername === username ? FONT_SEMIBOLD : ''
-                              }`}
-                            >
+                              }`}>
                               {blackUsername} ({blackRating})
                             </Link>
                           </div>
                         </div>
-                        <div className="flex items-center gap-x-2 md:gap-x-4">
-                          <div className="text-right">
+                        <div className='flex items-center gap-x-2 md:gap-x-4'>
+                          <div className='text-right'>
                             <p
                               className={
                                 whiteUsername === username ? FONT_SEMIBOLD : ''
-                              }
-                            >
+                              }>
                               {getPoint(whiteResult)}
                             </p>
                             <p
                               className={
                                 blackUsername === username ? FONT_SEMIBOLD : ''
-                              }
-                            >
+                              }>
                               {getPoint(blackResult)}
                             </p>
                           </div>
@@ -164,7 +159,7 @@ const GamesPage: NextPage<{ username: string; games: ChessGame[] }> = ({
                             <p>{endTime.toString().split('T')[0]}</p>
                           </div>
                           <div>
-                            <Button colorScheme="teal">
+                            <Button colorScheme='teal'>
                               <Icon as={FaSearchengin} boxSize={6} />
                             </Button>
                           </div>

@@ -1,6 +1,6 @@
 import { ChessTitle } from '@prisma/client';
-import { ChessContext } from '../chess.types';
 import { StreamersResponse } from '../../../common/data/chess/chess.types';
+import { ChessContext } from '../chess.types';
 
 export const resolvers = {
   Chess: {

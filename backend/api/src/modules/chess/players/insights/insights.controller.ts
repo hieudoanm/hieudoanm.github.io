@@ -1,8 +1,8 @@
-import { Controller, Get, Param, UseInterceptors } from '@nestjs/common';
-import { InsightsService } from './insights.service';
-import { InsightsDto } from './insights.dto';
-import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { CacheInterceptor } from '@nestjs/cache-manager';
+import { Controller, Get, Param, UseInterceptors } from '@nestjs/common';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
+import { InsightsDto } from './insights.dto';
+import { InsightsService } from './insights.service';
 
 @ApiTags('Chess')
 @Controller({ version: '1', path: 'chess' })

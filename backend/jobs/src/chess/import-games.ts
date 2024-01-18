@@ -1,8 +1,8 @@
 import {
-  PrismaClient,
-  ChessTimeClass,
   ChessResult,
+  ChessTimeClass,
   ChessVariant,
+  PrismaClient,
 } from '@prisma/client';
 import axios from 'axios';
 import dotenv from 'dotenv';

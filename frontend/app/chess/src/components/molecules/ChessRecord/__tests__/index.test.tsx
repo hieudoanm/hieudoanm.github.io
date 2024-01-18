@@ -9,7 +9,7 @@ describe('ChessRecord', () => {
 
   it('to match snapshot', () => {
     const { container } = render(
-      <ChessRecord timeClass="" win={0} draw={0} loss={0} />
+      <ChessRecord timeClass='' win={0} draw={0} loss={0} />
     );
     expect(container).toMatchSnapshot();
   });

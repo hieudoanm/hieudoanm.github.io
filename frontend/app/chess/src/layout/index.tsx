@@ -6,14 +6,16 @@ import { ReactNode } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
+export type LayoutProperties = { children?: ReactNode };
+
+export const Layout: React.FC<LayoutProperties> = ({ children = <></> }) => {
   return (
     <>
       <Loading />
       <div className={inter.className}>
-        <div className="flex h-screen flex-col">
+        <div className='flex h-screen flex-col'>
           <Navbar />
-          <div className="grow">{children}</div>
+          <div className='grow'>{children}</div>
           <Footer />
         </div>
       </div>

@@ -1,17 +1,17 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import CTA from '..';
+import CallToAction from '..';
 
-describe('CTA', () => {
+describe('CallToAction', () => {
   test('render default', () => {
     const wrapper = render(
-      <CTA
-        id="id"
-        title="title"
-        subtitle="subtitle"
-        backgroundImage=""
-        cta="CTA"
-      ></CTA>
+      <CallToAction
+        id='id'
+        title='title'
+        subtitle='subtitle'
+        backgroundImage=''
+        cta='CTA'
+      />
     );
     expect(wrapper.container).toMatchSnapshot();
   });

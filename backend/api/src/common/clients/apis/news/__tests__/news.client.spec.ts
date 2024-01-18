@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { NewsClient } from '../news.client';
-import { SourceResponse, ArticleResponse } from '../news.dto';
+import { ArticleResponse, SourceResponse } from '../news.dto';
 import { SearchIn } from '../news.enums';
 
 describe('NewsClient', () => {

@@ -1,5 +1,5 @@
-import { ApiProperty } from '@nestjs/swagger';
 import { ChessPlayerDto } from '@hieudoanm/generated/chessPlayer.entity';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class CountryResponseDto {
   countryCode: string;

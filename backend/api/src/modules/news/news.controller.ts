@@ -1,8 +1,8 @@
+import { CacheInterceptor } from '@nestjs/cache-manager';
 import { Controller, Get, UseInterceptors } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { GoogleResponseDto, NewsSourcesDto } from './news.dto';
 import { NewsService } from './news.service';
-import { CacheInterceptor } from '@nestjs/cache-manager';
 
 @ApiTags('news')
 @Controller({ version: '1', path: 'news' })

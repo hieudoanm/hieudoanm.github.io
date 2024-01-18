@@ -180,20 +180,20 @@ export const HexagonPage: React.FC = () => {
         <title>HIEU DOAN (hieudoanm)</title>
       </Head>
       <div className={theme}>
-        <main className="h-screen w-screen overflow-hidden">
-          <div className="relative">
-            <div className="absolute inset-0 mx-auto">
-              <div className="relative">
+        <main className='h-screen w-screen overflow-hidden'>
+          <div className='relative'>
+            <div className='absolute inset-0 mx-auto'>
+              <div className='relative'>
                 {rows.map((rowColumns: number[], row: number) => {
                   return rowColumns.map((column: number) => {
                     return (
                       <button
-                        type="button"
+                        type='button'
                         id={`hexagon-${row}-${column}`}
                         key={`hexagon-row-${column}`}
                         data-row={row}
                         data-column={column}
-                        className="absolute"
+                        className='absolute'
                         onClick={() => changeTheme()}
                         onMouseLeave={() => {
                           const classNames: string[] = [
@@ -209,13 +209,22 @@ export const HexagonPage: React.FC = () => {
                             }
                           }
                         }}
-                        onMouseOver={(event: any) => {
+                        onFocus={() => {}}
+                        onMouseOver={(
+                          event: React.SyntheticEvent<
+                            HTMLButtonElement,
+                            MouseEvent
+                          >
+                        ) => {
+                          if (!(event.target instanceof HTMLButtonElement)) {
+                            return;
+                          }
                           const newRow = Number.parseInt(
-                            event.target.dataset.row,
+                            event.target.dataset.row ?? '0',
                             10
                           );
                           const newColumn = Number.parseInt(
-                            event.target.dataset.column,
+                            event.target.dataset.column ?? '0',
                             10
                           );
                           const right = row % 2 ? 0 : 1;
@@ -236,8 +245,7 @@ export const HexagonPage: React.FC = () => {
                             right,
                           });
                           // Level 3
-                        }}
-                      >
+                        }}>
                         <Hexagon />
                       </button>
                     );

@@ -1,3 +1,4 @@
+import { constants } from 'node:http2';
 import { DocumentNode, gql } from '@apollo/client';
 import {
   Badge,
@@ -27,7 +28,6 @@ import { ChessPlayer, ChessTitle } from '@prisma/client';
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { constants } from 'node:http2';
 import { ChangeEvent, useState } from 'react';
 import { FaTwitch } from 'react-icons/fa';
 
@@ -53,28 +53,26 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
   return (
     <Layout>
       <Container>
-        <div className="py-4 md:py-8">
-          <Card className="border border-gray-200 shadow">
+        <div className='py-4 md:py-8'>
+          <Card className='border border-gray-200 shadow'>
             <CardHeader>
               <Box
-                display="flex"
-                alignItems="center"
-                justifyContent="space-between"
-                className="gap-x-4 md:gap-x-8"
-              >
-                <Heading as="h1" className="text-xl">
+                display='flex'
+                alignItems='center'
+                justifyContent='space-between'
+                className='gap-x-4 md:gap-x-8'>
+                <Heading as='h1' className='text-xl'>
                   Streamers ({total})
                 </Heading>
                 <Box
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="space-between"
-                  className="gap-x-2 md:gap-x-4"
-                >
+                  display='flex'
+                  alignItems='center'
+                  justifyContent='space-between'
+                  className='gap-x-2 md:gap-x-4'>
                   <Select
-                    id="title"
-                    name="title"
-                    placeholder="Title"
+                    id='title'
+                    name='title'
+                    placeholder='Title'
                     value={title}
                     onChange={(event: ChangeEvent<HTMLSelectElement>) => {
                       const newTitle: ChessTitle = event.target
@@ -84,22 +82,21 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                         pathname: router.pathname,
                         query: { ...router.query, title: newTitle },
                       });
-                    }}
-                  >
-                    <option value="GM">GM</option>
-                    <option value="IM">IM</option>
-                    <option value="FM">FM</option>
-                    <option value="CM">CM</option>
-                    <option value="NM">NM</option>
-                    <option value="WGM">WGM</option>
-                    <option value="WIM">WIM</option>
-                    <option value="WFM">WFM</option>
-                    <option value="WCM">WCM</option>
-                    <option value="WNM">WNM</option>
+                    }}>
+                    <option value='GM'>GM</option>
+                    <option value='IM'>IM</option>
+                    <option value='FM'>FM</option>
+                    <option value='CM'>CM</option>
+                    <option value='NM'>NM</option>
+                    <option value='WGM'>WGM</option>
+                    <option value='WIM'>WIM</option>
+                    <option value='WFM'>WFM</option>
+                    <option value='WCM'>WCM</option>
+                    <option value='WNM'>WNM</option>
                   </Select>
                   <Select
-                    id="country"
-                    name="country"
+                    id='country'
+                    name='country'
                     placeholder={`Country (${countries.length})`}
                     value={country}
                     onChange={(event: ChangeEvent<HTMLSelectElement>) => {
@@ -109,8 +106,7 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                         pathname: router.pathname,
                         query: { ...router.query, country: newCountry },
                       });
-                    }}
-                  >
+                    }}>
                     {countries.map(({ countryCode, country }) => {
                       return (
                         <option key={countryCode} value={countryCode}>
@@ -127,15 +123,15 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
               <Table>
                 <Thead>
                   <Tr>
-                    <Th className="w-4">Title</Th>
+                    <Th className='w-4'>Title</Th>
                     <Th>Username</Th>
-                    <Th isNumeric className="w-4">
+                    <Th isNumeric className='w-4'>
                       Country
                     </Th>
-                    <Th isNumeric className="w-4">
+                    <Th isNumeric className='w-4'>
                       Followers
                     </Th>
-                    <Th isNumeric className="w-4">
+                    <Th isNumeric className='w-4'>
                       Twitch
                     </Th>
                   </Tr>
@@ -156,7 +152,7 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                           <Td>
                             {(title ?? '').length > 0 ? (
                               <Link href={`/titled/${title}`}>
-                                <Badge colorScheme="red">{title}</Badge>
+                                <Badge colorScheme='red'>{title}</Badge>
                               </Link>
                             ) : (
                               <></>
@@ -164,16 +160,16 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                           </Td>
                           <Td>
                             <Link href={`/${username}`}>
-                              <div className="inline-flex items-center gap-x-2">
+                              <div className='inline-flex items-center gap-x-2'>
                                 {avatar.length > 0 ? (
                                   <div
-                                    className="aspect-square w-8 rounded bg-contain bg-center"
+                                    className='aspect-square w-8 rounded bg-contain bg-center'
                                     style={{
                                       backgroundImage: `url(${avatar})`,
                                     }}
                                   />
                                 ) : (
-                                  <div className="aspect-square w-8 rounded border"></div>
+                                  <div className='aspect-square w-8 rounded border' />
                                 )}
                                 <Text>{username}</Text>
                               </div>
@@ -186,12 +182,11 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                           </Td>
                           <Td isNumeric>{followers.toLocaleString()}</Td>
                           <Td isNumeric>
-                            <Link href={twitchUrl} target="_blank">
+                            <Link href={twitchUrl} target='_blank'>
                               <Button
-                                size="sm"
-                                type="button"
-                                colorScheme="teal"
-                              >
+                                size='sm'
+                                type='button'
+                                colorScheme='teal'>
                                 <Icon as={FaTwitch} />
                               </Button>
                             </Link>
@@ -251,35 +246,34 @@ const query: DocumentNode = gql`
   }
 `;
 
-export const getServerSideProps: GetServerSideProps<
-  StreamersPageProperties
-> = async (context: GetServerSidePropsContext) => {
-  const title = resolveQuery(context.query, 'title', 'GM') as ChessTitle;
-  const country = resolveQuery(context.query, 'country');
-  try {
-    const response = await apolloClient.query<{
-      chess: { streamers: StreamersPageProperties };
-    }>({
-      query,
-      variables: { title, country },
-    });
-    logger.info(`getServerSideProps response=${response}`);
-    const {
-      data: {
-        chess: {
-          streamers: { total = 0, countries = [], players = [] },
+export const getServerSideProps: GetServerSideProps<StreamersPageProperties> =
+  async (context: GetServerSidePropsContext) => {
+    const title = resolveQuery(context.query, 'title', 'GM') as ChessTitle;
+    const country = resolveQuery(context.query, 'country');
+    try {
+      const response = await apolloClient.query<{
+        chess: { streamers: StreamersPageProperties };
+      }>({
+        query,
+        variables: { title, country },
+      });
+      logger.info(`getServerSideProps response=${response}`);
+      const {
+        data: {
+          chess: {
+            streamers: { total = 0, countries = [], players = [] },
+          },
         },
-      },
-    } = response;
-    return { props: { title, country, total, countries, players } };
-  } catch (error) {
-    logger.error(
-      `getServerSideProps title=${title} country=${country} error=${error}`
-    );
-    return {
-      props: { title, country, total: 0, players: [], countries: [] },
-    };
-  }
-};
+      } = response;
+      return { props: { title, country, total, countries, players } };
+    } catch (error) {
+      logger.error(
+        `getServerSideProps title=${title} country=${country} error=${error}`
+      );
+      return {
+        props: { title, country, total: 0, players: [], countries: [] },
+      };
+    }
+  };
 
 export default StreamersPage;

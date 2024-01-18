@@ -1,4 +1,4 @@
-import { DayOfWeek, Region, PrismaClient } from '@prisma/client';
+import { DayOfWeek, PrismaClient, Region } from '@prisma/client';
 import axios from 'axios';
 import csv from 'csvtojson';
 

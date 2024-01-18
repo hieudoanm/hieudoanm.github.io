@@ -1,5 +1,5 @@
-import { ApiProperty } from '@nestjs/swagger';
 import { OrganizationDto } from '@hieudoanm/generated/organization.entity';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class OrganizationsResponseDto {
   @ApiProperty({ type: Number, default: 0 })

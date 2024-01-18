@@ -1,6 +1,6 @@
+import { LicensePlateDto } from '@hieudoanm/generated/licensePlate.entity';
 import { Controller, Get, Param } from '@nestjs/common';
 import { ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { LicensePlateDto } from '@hieudoanm/generated/licensePlate.entity';
 import {
   EthnicGroupsResponseDto,
   LicensePlatesResponseDto,

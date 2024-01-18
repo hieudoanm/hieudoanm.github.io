@@ -3,11 +3,7 @@ import { Container } from '..';
 
 describe('Container', () => {
   it('to match snapshot', () => {
-    const { container } = render(
-      <Container>
-        <></>
-      </Container>
-    );
+    const { container } = render(<Container />);
     expect(container).toMatchSnapshot();
   });
 });

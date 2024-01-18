@@ -5,7 +5,7 @@ import LogoClouds from '..';
 describe('LogoClouds', () => {
   test('render default', () => {
     const wrapper = render(
-      <LogoClouds id="id" title="title" subtitle="subtitle" logos={[]} />
+      <LogoClouds id='id' title='title' subtitle='subtitle' logos={[]} />
     );
     expect(wrapper.container).toMatchSnapshot();
   });

@@ -1,5 +1,5 @@
-import { ChessContext } from '../chess.types';
 import { Country, CountryTotal } from '../../../common/data/chess/chess.types';
+import { ChessContext } from '../chess.types';
 
 export const resolvers = {
   Chess: {

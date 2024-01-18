@@ -1,3 +1,4 @@
+import { join } from 'path';
 import { ChessModule } from '@hieudoanm/modules/chess/chess.module';
 import { CountriesModule } from '@hieudoanm/modules/countries/countries.module';
 import { FinanceModule } from '@hieudoanm/modules/finance/finance.module';
@@ -11,7 +12,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { ThrottlerModule } from '@nestjs/throttler';
-import { join } from 'path';
 
 const rootPath: string = join(__dirname, '..', 'public');
 

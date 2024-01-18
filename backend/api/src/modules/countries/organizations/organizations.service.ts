@@ -1,6 +1,6 @@
-import { Injectable, Logger } from '@nestjs/common';
 import { PrismaService } from '@hieudoanm/common/prisma/prisma.service';
 import { OrganizationDto } from '@hieudoanm/generated/organization.entity';
+import { Injectable, Logger } from '@nestjs/common';
 import { OrganizationsResponseDto } from './organizations.dto';
 
 @Injectable()
