@@ -284,16 +284,18 @@ exports[`ContactPage render default 1`] = `
         <div
           class="mx-auto mb-8 flex w-full items-center overflow-hidden rounded-lg border md:w-6/12"
         >
-          <div
+          <button
             class="w-6/12 cursor-pointer py-4 text-center bg-white"
+            type="button"
           >
             VND
-          </div>
-          <div
+          </button>
+          <button
             class="w-6/12 cursor-pointer py-4 text-center bg-gray-100"
+            type="button"
           >
             USD
-          </div>
+          </button>
         </div>
         <div
           class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
@@ -470,7 +472,9 @@ exports[`ContactPage render default 1`] = `
                   AWS Certificates
                 </span>
               </p>
-              <p />
+              <p>
+                Lorem Ipsum
+              </p>
             </div>
           </div>
           <div
@@ -670,7 +674,9 @@ exports[`ContactPage render default 1`] = `
                   WordPress & Haravan.
                 </span>
               </p>
-              <p />
+              <p>
+                Lorem Ipsum
+              </p>
             </div>
           </div>
           <div
@@ -970,7 +976,9 @@ exports[`ContactPage render default 1`] = `
                   Microservices
                 </span>
               </p>
-              <p />
+              <p>
+                Lorem Ipsum
+              </p>
             </div>
           </div>
           <div
@@ -1170,7 +1178,9 @@ exports[`ContactPage render default 1`] = `
                   CloudFormation.
                 </span>
               </p>
-              <p />
+              <p>
+                Lorem Ipsum
+              </p>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CTA render default 1`] = `
+exports[`CallToAction render default 1`] = `
 <div>
   <div
     class="py-16"
