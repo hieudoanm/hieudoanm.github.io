@@ -17,7 +17,7 @@ import {
 } from './games.dto';
 import { GamesService } from './games.service';
 
-@ApiTags('Chess')
+@ApiTags('chess')
 @Controller({ version: '1', path: 'chess' })
 @UseInterceptors(CacheInterceptor)
 export class GamesController {

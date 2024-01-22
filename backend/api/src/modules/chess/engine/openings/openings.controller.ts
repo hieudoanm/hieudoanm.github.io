@@ -14,7 +14,7 @@ import {
 } from './openings.dto';
 import { OpeningsRepository } from './openings.repository';
 
-@ApiTags('Chess')
+@ApiTags('chess')
 @Controller({ version: '1', path: 'chess/openings' })
 @UseInterceptors(CacheInterceptor)
 export class OpeningsController {

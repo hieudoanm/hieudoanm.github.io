@@ -11,6 +11,7 @@ import express from 'express';
 import { app } from './app.module';
 import { ApolloContext } from './common/apollo/apollo.types';
 import { ChessDataSource } from './common/data/chess/chess.data-source';
+import { StatusDataSource } from './common/data/status/status.data-source';
 import { NODE_ENV, PORT } from './common/environments/environments';
 import { logger } from './common/libs/logger/logger';
 import { schema } from './graphql/graphql.schema';
@@ -34,7 +35,10 @@ const main = async () => {
     cors<cors.CorsRequest>(),
     express.json(),
     expressMiddleware(apolloServer, {
-      context: async () => ({ chessDataSource: new ChessDataSource() }),
+      context: async () => ({
+        chessDataSource: new ChessDataSource(),
+        statusDataSource: new StatusDataSource(),
+      }),
     })
   );
 

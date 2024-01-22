@@ -4,7 +4,7 @@ import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { InsightsDto } from './insights.dto';
 import { InsightsService } from './insights.service';
 
-@ApiTags('Chess')
+@ApiTags('chess')
 @Controller({ version: '1', path: 'chess' })
 @UseInterceptors(CacheInterceptor)
 export class InsightsController {

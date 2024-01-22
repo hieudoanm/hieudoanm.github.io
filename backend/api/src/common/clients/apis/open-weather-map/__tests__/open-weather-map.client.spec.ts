@@ -2,7 +2,7 @@ import axios from 'axios';
 import { OpenWeatherMapClient } from '../open-weather-map.client';
 import { Weather } from '../open-weather-map.dto';
 
-describe('OpenWeatherMap', () => {
+describe('OpenWeatherMapClient', () => {
   const openWeatherMapClient = new OpenWeatherMapClient({ apiKey: '' });
 
   describe('getWeather', () => {

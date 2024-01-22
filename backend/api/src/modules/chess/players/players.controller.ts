@@ -5,7 +5,7 @@ import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { PlayersResponseDto } from './players.dto';
 import { PlayerService } from './players.service';
 
-@ApiTags('Chess')
+@ApiTags('chess')
 @Controller({ version: '1', path: 'chess/players' })
 @UseInterceptors(CacheInterceptor)
 export class PlayerController {

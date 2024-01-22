@@ -6,7 +6,7 @@ import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { TitledStatsDto, TitlesDto } from './titled.dto';
 import { TitledService } from './titled.service';
 
-@ApiTags('Chess')
+@ApiTags('chess')
 @Controller({ version: '1', path: 'chess/titled' })
 @UseInterceptors(CacheInterceptor)
 export class TitledController {

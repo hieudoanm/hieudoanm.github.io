@@ -5,7 +5,7 @@ import { ChessTitle } from '@prisma/client';
 import { StreamersResponseDto } from './streamers.dto';
 import { StreamersRepository } from './streamers.repository';
 
-@ApiTags('Chess')
+@ApiTags('chess')
 @Controller({ version: '1', path: 'chess/streamers' })
 @UseInterceptors(CacheInterceptor)
 export class StreamersController {

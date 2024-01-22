@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "check": "biome check --apply ./src",
-    "format": "prettier --write .",
+    "format": "biome format --write ./src",
     "dev": "rimraf dist && concurrently \"yarn dev:webpack\" \"yarn dev:nodemon\"",
     "dev:nodemon": "nodemon --watch dist",
     "dev:webpack": "webpack --progress --watch",

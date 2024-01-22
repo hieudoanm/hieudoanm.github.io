@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "prebuild": "rimraf .next out",
-    "format": "prettier . --write",
+    "format": "biome format --write ./src",
     "check": "biome check --apply ./src",
     "dev": "next dev",
     "build": "next build",

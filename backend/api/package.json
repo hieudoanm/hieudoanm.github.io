@@ -10,7 +10,7 @@
   "scripts": {
     "prebuild": "rimraf dist && (yarn docs || true)",
     "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format": "biome format --write ./src ./test",
     "start": "nest start",
     "dev": "yarn start:dev",
     "start:dev": "nest start --watch",

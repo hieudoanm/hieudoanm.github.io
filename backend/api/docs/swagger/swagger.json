@@ -55,7 +55,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -76,7 +76,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -116,7 +116,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -146,7 +146,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       },
       "post": {
@@ -174,7 +174,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -241,7 +241,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       },
       "post": {
@@ -279,7 +279,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -317,7 +317,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -355,7 +355,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -385,7 +385,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -415,7 +415,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -445,7 +445,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -475,7 +475,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -505,7 +505,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -545,7 +545,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -566,7 +566,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -615,7 +615,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -645,7 +645,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -683,7 +683,7 @@
           }
         },
         "tags": [
-          "Chess"
+          "chess"
         ]
       }
     },
@@ -1157,6 +1157,36 @@
         },
         "tags": [
           "news"
+        ]
+      }
+    },
+    "/v1/status/{service}": {
+      "get": {
+        "operationId": "StatusController_getSources",
+        "parameters": [
+          {
+            "name": "service",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Service Status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "status"
         ]
       }
     },
@@ -2234,6 +2264,17 @@
         "required": [
           "total",
           "sources"
+        ]
+      },
+      "StatusDto": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "error"
         ]
       },
       "TarotCardDto": {

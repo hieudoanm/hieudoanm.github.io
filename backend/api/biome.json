@@ -12,8 +12,8 @@
       "lineEnding": "crlf",
       "indentStyle": "space",
       "quoteStyle": "single",
-      "trailingComma": "es5",
-      "semicolons": "always"
+      "semicolons": "always",
+      "trailingComma": "es5"
     }
   }
 }

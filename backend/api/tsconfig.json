@@ -19,7 +19,7 @@
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "paths": {
-      "@hieudoanm/*": ["./src/*"]
-    }
-  }
+      "@hieudoanm/*": ["./src/*"],
+    },
+  },
 }

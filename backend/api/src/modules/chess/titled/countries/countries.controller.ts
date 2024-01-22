@@ -4,7 +4,7 @@ import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { CountriesResponseDto, CountryResponseDto } from './countries.dto';
 import { CountriesService } from './countries.service';
 
-@ApiTags('Chess')
+@ApiTags('chess')
 @Controller({ version: '1', path: 'chess/countries' })
 @UseInterceptors(CacheInterceptor)
 export class CountriesController {

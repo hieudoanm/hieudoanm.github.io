@@ -29,25 +29,25 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/OpeningsResponseDto'
+                $ref: "#/components/schemas/OpeningsResponseDto"
       tags: &a1
-        - Chess
+        - chess
   /v1/chess/openings/ecos:
     get:
       operationId: OpeningsController_getECOs
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EcosResponseDto'
+                $ref: "#/components/schemas/EcosResponseDto"
       tags: *a1
   /v1/chess/players:
     get:
@@ -66,15 +66,15 @@ paths:
           schema:
             type: number
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PlayersResponseDto'
+                $ref: "#/components/schemas/PlayersResponseDto"
       tags: &a2
-        - Chess
-  '/v1/chess/players/{username}':
+        - chess
+  /v1/chess/players/{username}:
     get:
       operationId: PlayerController_getPlayer
       parameters:
@@ -84,12 +84,12 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ChessPlayerDto'
+                $ref: "#/components/schemas/ChessPlayerDto"
       tags: *a2
     post:
       operationId: PlayerController_syncPlayer
@@ -100,14 +100,14 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ChessPlayerDto'
+                $ref: "#/components/schemas/ChessPlayerDto"
       tags: *a2
-  '/v1/chess/players/{username}/games':
+  /v1/chess/players/{username}/games:
     get:
       operationId: GamesController_getGames
       parameters:
@@ -142,14 +142,14 @@ paths:
           schema:
             type: number
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GamesResponseDto'
+                $ref: "#/components/schemas/GamesResponseDto"
       tags: &a3
-        - Chess
+        - chess
     post:
       operationId: GamesController_syncGames
       parameters:
@@ -163,16 +163,16 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SyncRequestDto'
+              $ref: "#/components/schemas/SyncRequestDto"
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SyncedResponseDto'
+                $ref: "#/components/schemas/SyncedResponseDto"
       tags: *a3
-  '/v1/chess/players/{username}/games/{gameId}':
+  /v1/chess/players/{username}/games/{gameId}:
     get:
       operationId: GamesController_getGame
       parameters:
@@ -187,14 +187,14 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ChessGameDto'
+                $ref: "#/components/schemas/ChessGameDto"
       tags: *a3
-  '/v1/chess/players/{username}/games/{gameId}/pgn':
+  /v1/chess/players/{username}/games/{gameId}/pgn:
     get:
       operationId: GamesController_getGamePGN
       parameters:
@@ -209,14 +209,14 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
                 type: string
       tags: *a3
-  '/v1/chess/players/{username}/insights':
+  /v1/chess/players/{username}/insights:
     get:
       operationId: InsightsController_getInsights
       parameters:
@@ -226,15 +226,15 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InsightsDto'
+                $ref: "#/components/schemas/InsightsDto"
       tags: &a4
-        - Chess
-  '/v1/chess/players/{username}/insights/games':
+        - chess
+  /v1/chess/players/{username}/insights/games:
     get:
       operationId: InsightsController_getGamesInsights
       parameters:
@@ -244,14 +244,14 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InsightsDto'
+                $ref: "#/components/schemas/InsightsDto"
       tags: *a4
-  '/v1/chess/players/{username}/insights/accuracy':
+  /v1/chess/players/{username}/insights/accuracy:
     get:
       operationId: InsightsController_getAccuracyInsights
       parameters:
@@ -261,14 +261,14 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InsightsDto'
+                $ref: "#/components/schemas/InsightsDto"
       tags: *a4
-  '/v1/chess/players/{username}/insights/results':
+  /v1/chess/players/{username}/insights/results:
     get:
       operationId: InsightsController_getResultsInsights
       parameters:
@@ -278,14 +278,14 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InsightsDto'
+                $ref: "#/components/schemas/InsightsDto"
       tags: *a4
-  '/v1/chess/players/{username}/insights/opponents':
+  /v1/chess/players/{username}/insights/opponents:
     get:
       operationId: InsightsController_getResultsOpponents
       parameters:
@@ -295,12 +295,12 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InsightsDto'
+                $ref: "#/components/schemas/InsightsDto"
       tags: *a4
   /v1/chess/streamers:
     get:
@@ -319,28 +319,28 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StreamersResponseDto'
+                $ref: "#/components/schemas/StreamersResponseDto"
       tags:
-        - Chess
+        - chess
   /v1/chess/titled:
     get:
       operationId: TitledController_getTitles
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TitlesDto'
+                $ref: "#/components/schemas/TitlesDto"
       tags: &a5
-        - Chess
-  '/v1/chess/titled/{title}':
+        - chess
+  /v1/chess/titled/{title}:
     get:
       operationId: TitledController_getTitledStats
       parameters:
@@ -363,12 +363,12 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TitledStatsDto'
+                $ref: "#/components/schemas/TitledStatsDto"
       tags: *a5
   /v1/chess/countries:
     get:
@@ -380,15 +380,15 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CountryResponseDto'
+                $ref: "#/components/schemas/CountryResponseDto"
       tags: &a6
-        - Chess
-  '/v1/chess/countries/{code}':
+        - chess
+  /v1/chess/countries/{code}:
     get:
       operationId: CountriesController_getTitledPlayersByCountry
       parameters:
@@ -403,12 +403,12 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CountriesResponseDto'
+                $ref: "#/components/schemas/CountriesResponseDto"
       tags: *a6
   /v1/countries:
     get:
@@ -470,15 +470,15 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: List of Countries
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CountriesResponseDto'
+                $ref: "#/components/schemas/CountriesResponseDto"
       tags: &a7
         - countries
-  '/v1/countries/{code}':
+  /v1/countries/{code}:
     get:
       operationId: CountriesController_getCountry
       parameters:
@@ -488,36 +488,36 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Get Country by Code
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CountryDto'
+                $ref: "#/components/schemas/CountryDto"
       tags: *a7
   /v1/countries/currencies:
     get:
       operationId: CountriesController_getCurrencies
       parameters: []
       responses:
-        '200':
+        "200":
           description: List of Currencies
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CurrenciesResponseDto'
+                $ref: "#/components/schemas/CurrenciesResponseDto"
       tags: *a7
   /v1/currencies:
     get:
       operationId: CurrenciesController_getCurrencies
       parameters: []
       responses:
-        '200':
+        "200":
           description: List of Currencies
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CurrenciesResponseDto'
+                $ref: "#/components/schemas/CurrenciesResponseDto"
       tags:
         - currencies
   /v1/languages:
@@ -525,12 +525,12 @@ paths:
       operationId: LanguagesController_getLanguages
       parameters: []
       responses:
-        '200':
+        "200":
           description: List of Languages
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LanguagesResponseDto'
+                $ref: "#/components/schemas/LanguagesResponseDto"
       tags:
         - languages
   /v1/organizations:
@@ -538,15 +538,15 @@ paths:
       operationId: OrganizationsController_getOrganizations
       parameters: []
       responses:
-        '200':
+        "200":
           description: List of Organizations
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/OrganizationsResponseDto'
+                $ref: "#/components/schemas/OrganizationsResponseDto"
       tags: &a8
         - organizations
-  '/v1/organizations/{code}':
+  /v1/organizations/{code}:
     get:
       operationId: OrganizationsController_getOrganization
       parameters:
@@ -557,24 +557,24 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Get Organization by Code
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/OrganizationDto'
+                $ref: "#/components/schemas/OrganizationDto"
       tags: *a8
   /v1/vietnam/ethnic-groups:
     get:
       operationId: VietnamController_getEthnicGroups
       parameters: []
       responses:
-        '200':
+        "200":
           description: List of Ethnic Groups
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EthnicGroupsResponseDto'
+                $ref: "#/components/schemas/EthnicGroupsResponseDto"
       tags: &a9
         - vietnam
   /v1/vietnam/license-plates:
@@ -582,14 +582,14 @@ paths:
       operationId: VietnamController_getLicensePlates
       parameters: []
       responses:
-        '200':
+        "200":
           description: List of License Plates
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LicensePlatesResponseDto'
+                $ref: "#/components/schemas/LicensePlatesResponseDto"
       tags: *a9
-  '/v1/vietnam/license-plates/{code}':
+  /v1/vietnam/license-plates/{code}:
     get:
       operationId: VietnamController_getLicensePlate
       parameters:
@@ -599,12 +599,12 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Get License Plate by Code
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LicensePlateDto'
+                $ref: "#/components/schemas/LicensePlateDto"
       tags: *a9
   /v1/crypto/coins:
     get:
@@ -616,12 +616,12 @@ paths:
           schema:
             type: number
       responses:
-        '200':
+        "200":
           description: List of Crypto Coins
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CoinsResponseDto'
+                $ref: "#/components/schemas/CoinsResponseDto"
       tags:
         - crypto
   /v1/forex/rates:
@@ -641,12 +641,12 @@ paths:
           schema:
             type: number
       responses:
-        '200':
+        "200":
           description: List of Forex Rates
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RatesResponseDto'
+                $ref: "#/components/schemas/RatesResponseDto"
       tags:
         - forex
   /v1/github/languages:
@@ -654,12 +654,12 @@ paths:
       operationId: GitHubController_getLanguages
       parameters: []
       responses:
-        '200':
+        "200":
           description: List of Languages
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GitHubLanguagesResponseDto'
+                $ref: "#/components/schemas/GitHubLanguagesResponseDto"
       tags:
         - github
   /v1/health:
@@ -667,12 +667,12 @@ paths:
       operationId: HealthController_getHealth
       parameters: []
       responses:
-        '200':
+        "200":
           description: State of the Server
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HealthResponseDto'
+                $ref: "#/components/schemas/HealthResponseDto"
       tags:
         - health
   /v1/news/google:
@@ -680,12 +680,12 @@ paths:
       operationId: NewsController_getGoogle
       parameters: []
       responses:
-        '200':
+        "200":
           description: List of Google Trends
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GoogleResponseDto'
+                $ref: "#/components/schemas/GoogleResponseDto"
       tags: &a10
         - news
   /v1/news/sources:
@@ -693,13 +693,31 @@ paths:
       operationId: NewsController_getSources
       parameters: []
       responses:
-        '200':
+        "200":
           description: List of News Sources
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsSourcesDto'
+                $ref: "#/components/schemas/NewsSourcesDto"
       tags: *a10
+  /v1/status/{service}:
+    get:
+      operationId: StatusController_getSources
+      parameters:
+        - name: service
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Service Status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StatusDto"
+      tags:
+        - status
   /v1/tarot/cards:
     get:
       operationId: TarotController_getCards
@@ -726,15 +744,15 @@ paths:
           schema:
             type: number
       responses:
-        '200':
+        "200":
           description: List of Tarot Cards
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TarotCardsResponseDto'
+                $ref: "#/components/schemas/TarotCardsResponseDto"
       tags: &a11
         - tarot
-  '/v1/tarot/cards/{id}':
+  /v1/tarot/cards/{id}:
     get:
       operationId: TarotController_getCard
       parameters:
@@ -744,12 +762,12 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Get Tarot Card by ID
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TarotCardDto'
+                $ref: "#/components/schemas/TarotCardDto"
       tags: *a11
   /v1/words:
     get:
@@ -768,15 +786,15 @@ paths:
           schema:
             type: number
       responses:
-        '200':
+        "200":
           description: List of Words
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WordsResponseDto'
+                $ref: "#/components/schemas/WordsResponseDto"
       tags: &a12
         - words
-  '/v1/words/{word}':
+  /v1/words/{word}:
     get:
       operationId: WordsController_getWord
       parameters:
@@ -786,17 +804,17 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Get Words Card by ID
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WordDto'
+                $ref: "#/components/schemas/WordDto"
       tags: *a12
 info:
   title: hieudoanm
   description: Hieu Doan
-  version: '1.0'
+  version: "1.0"
   contact: {}
 tags: []
 servers: []
@@ -813,7 +831,7 @@ components:
         openings:
           type: array
           items:
-            $ref: '#/components/schemas/ChessOpeningDto'
+            $ref: "#/components/schemas/ChessOpeningDto"
       required:
         - total
         - openings
@@ -840,7 +858,7 @@ components:
         players:
           type: array
           items:
-            $ref: '#/components/schemas/ChessPlayerDto'
+            $ref: "#/components/schemas/ChessPlayerDto"
       required:
         - total
         - players
@@ -855,7 +873,7 @@ components:
         games:
           type: array
           items:
-            $ref: '#/components/schemas/ChessGameDto'
+            $ref: "#/components/schemas/ChessGameDto"
       required:
         - total
         - games
@@ -955,11 +973,11 @@ components:
         loss:
           type: number
         periods:
-          $ref: '#/components/schemas/AccuracyByPeriodDto'
+          $ref: "#/components/schemas/AccuracyByPeriodDto"
         timeOfDays:
-          $ref: '#/components/schemas/AccuracyByTimeOfDayDto'
+          $ref: "#/components/schemas/AccuracyByTimeOfDayDto"
         daysOfWeek:
-          $ref: '#/components/schemas/AccuracyByDayOfWeekDto'
+          $ref: "#/components/schemas/AccuracyByDayOfWeekDto"
       required:
         - average
         - win
@@ -983,23 +1001,23 @@ components:
         win:
           type: array
           items:
-            $ref: '#/components/schemas/ResultDto'
+            $ref: "#/components/schemas/ResultDto"
         draw:
           type: array
           items:
-            $ref: '#/components/schemas/ResultDto'
+            $ref: "#/components/schemas/ResultDto"
         loss:
           type: array
           items:
-            $ref: '#/components/schemas/ResultDto'
+            $ref: "#/components/schemas/ResultDto"
         timeOfDays:
           type: array
           items:
-            $ref: '#/components/schemas/ResultsByTimeOfDayDto'
+            $ref: "#/components/schemas/ResultsByTimeOfDayDto"
         daysOfWeek:
           type: array
           items:
-            $ref: '#/components/schemas/ResultsByDayOfWeekDto'
+            $ref: "#/components/schemas/ResultsByDayOfWeekDto"
       required:
         - win
         - draw
@@ -1031,15 +1049,15 @@ components:
         username:
           type: string
         games:
-          $ref: '#/components/schemas/GamesDto'
+          $ref: "#/components/schemas/GamesDto"
         accuracy:
-          $ref: '#/components/schemas/AccuracyDto'
+          $ref: "#/components/schemas/AccuracyDto"
         results:
-          $ref: '#/components/schemas/ResultsDto'
+          $ref: "#/components/schemas/ResultsDto"
         opponents:
           type: array
           items:
-            $ref: '#/components/schemas/OpponentDto'
+            $ref: "#/components/schemas/OpponentDto"
       required:
         - username
         - games
@@ -1057,11 +1075,11 @@ components:
         players:
           type: array
           items:
-            $ref: '#/components/schemas/ChessPlayerDto'
+            $ref: "#/components/schemas/ChessPlayerDto"
         countries:
           type: array
           items:
-            $ref: '#/components/schemas/CountryDto'
+            $ref: "#/components/schemas/CountryDto"
       required:
         - total
         - players
@@ -1098,7 +1116,7 @@ components:
         players:
           type: array
           items:
-            $ref: '#/components/schemas/ChessPlayerDto'
+            $ref: "#/components/schemas/ChessPlayerDto"
       required:
         - averageRapidRating
         - maxRapidRating
@@ -1141,7 +1159,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/CountryDto'
+            $ref: "#/components/schemas/CountryDto"
       required:
         - total
         - regions
@@ -1152,13 +1170,13 @@ components:
       properties:
         code:
           type: string
-          default: ''
+          default: ""
         name:
           type: string
-          default: ''
+          default: ""
         symbol:
           type: string
-          default: ''
+          default: ""
       required:
         - code
         - name
@@ -1173,7 +1191,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/CurrencyDto'
+            $ref: "#/components/schemas/CurrencyDto"
       required:
         - total
         - currencies
@@ -1190,7 +1208,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/LanguageDto'
+            $ref: "#/components/schemas/LanguageDto"
       required:
         - total
         - languages
@@ -1207,7 +1225,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/OrganizationDto'
+            $ref: "#/components/schemas/OrganizationDto"
       required:
         - total
         - organizations
@@ -1224,7 +1242,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/EthnicGroupDto'
+            $ref: "#/components/schemas/EthnicGroupDto"
       required:
         - total
         - ethnicGroups
@@ -1241,7 +1259,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/LicensePlateDto'
+            $ref: "#/components/schemas/LicensePlateDto"
       required:
         - total
         - licensePlates
@@ -1310,7 +1328,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/CoinDto'
+            $ref: "#/components/schemas/CoinDto"
       required:
         - total
         - coins
@@ -1339,7 +1357,7 @@ components:
         rates:
           type: array
           items:
-            $ref: '#/components/schemas/RateDto'
+            $ref: "#/components/schemas/RateDto"
       required:
         - total
         - amount
@@ -1357,7 +1375,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/ProgrammingLanguageDto'
+            $ref: "#/components/schemas/ProgrammingLanguageDto"
       required:
         - total
         - languages
@@ -1366,7 +1384,7 @@ components:
       properties:
         status:
           type: string
-          default: ''
+          default: ""
       required:
         - status
     GoogleCountryDto:
@@ -1393,7 +1411,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/GoogleCountryDto'
+            $ref: "#/components/schemas/GoogleCountryDto"
       required:
         - total
         - countries
@@ -1402,25 +1420,25 @@ components:
       properties:
         id:
           type: string
-          default: ''
+          default: ""
         name:
           type: string
-          default: ''
+          default: ""
         description:
           type: string
-          default: ''
+          default: ""
         url:
           type: string
-          default: ''
+          default: ""
         category:
           type: string
-          default: ''
+          default: ""
         language:
           type: string
-          default: ''
+          default: ""
         country:
           type: string
-          default: ''
+          default: ""
       required:
         - id
         - name
@@ -1439,10 +1457,17 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/NewsSourceDto'
+            $ref: "#/components/schemas/NewsSourceDto"
       required:
         - total
         - sources
+    StatusDto:
+      type: object
+      properties:
+        error:
+          type: boolean
+      required:
+        - error
     TarotCardDto:
       type: object
       properties: {}
@@ -1465,7 +1490,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/TarotCardDto'
+            $ref: "#/components/schemas/TarotCardDto"
       required:
         - total
         - types
@@ -1490,7 +1515,7 @@ components:
           default: []
           type: array
           items:
-            $ref: '#/components/schemas/WordDto'
+            $ref: "#/components/schemas/WordDto"
       required:
         - limit
         - offset

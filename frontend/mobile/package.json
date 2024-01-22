@@ -8,7 +8,7 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "format": "prettier . --write",
+    "format": "biome format --write ./src",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
