@@ -34,22 +34,22 @@ const OpeningPage: NextPage<OpeningPageProperties> = ({
   return (
     <Layout>
       <Container>
-        <div className='py-4 md:py-8'>
-          <div className='flex flex-col gap-y-4 md:gap-y-8'>
-            <Breadcrumb separator={<ChevronRightIcon color='gray.500' />}>
+        <div className="py-4 md:py-8">
+          <div className="flex flex-col gap-y-4 md:gap-y-8">
+            <Breadcrumb separator={<ChevronRightIcon color="gray.500" />}>
               <BreadcrumbItem>
-                <Link href='/'>Home</Link>
+                <Link href="/">Home</Link>
               </BreadcrumbItem>
               <BreadcrumbItem>
-                <Link href='/openings'>Openings</Link>
+                <Link href="/openings">Openings</Link>
               </BreadcrumbItem>
               <BreadcrumbItem isCurrentPage>
                 <Text>{eco}</Text>
               </BreadcrumbItem>
             </Breadcrumb>
-            <Card className='border border-gray-200 shadow'>
+            <Card className="border border-gray-200 shadow">
               <CardHeader>
-                <Heading as='h1' className='text-xl'>
+                <Heading as="h1" className="text-xl">
                   Openings by ECO: {eco} ({openings.length})
                 </Heading>
               </CardHeader>
@@ -58,10 +58,10 @@ const OpeningPage: NextPage<OpeningPageProperties> = ({
                 <Table>
                   <Thead>
                     <Tr>
-                      <Th className='w-4'>No</Th>
-                      <Th className='w-4'>ECO</Th>
-                      <Th className='w-4'>First</Th>
-                      <Th className='w-4'>Centipawn</Th>
+                      <Th className="w-4">No</Th>
+                      <Th className="w-4">ECO</Th>
+                      <Th className="w-4">First</Th>
+                      <Th className="w-4">Centipawn</Th>
                       <Th>Name</Th>
                     </Tr>
                   </Thead>

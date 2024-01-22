@@ -43,9 +43,9 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
   );
 
   return (
-    <Card className='border border-gray-200'>
+    <Card className="border border-gray-200">
       <CardHeader>
-        <h1 className='text-xl md:text-3xl'>Opponents</h1>
+        <h1 className="text-xl md:text-3xl">Opponents</h1>
       </CardHeader>
       <Divider />
       <CardBody>
@@ -57,55 +57,55 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                 <Th>Opponent</Th>
                 <Th isNumeric>
                   <button
-                    type='button'
-                    className='cursor-pointer capitalize'
+                    type="button"
+                    className="cursor-pointer capitalize"
                     onClick={() => setSort({ by: 'games' })}>
                     Games
                   </button>
                 </Th>
                 <Th isNumeric>
-                  <div className='flex items-center justify-end gap-2'>
+                  <div className="flex items-center justify-end gap-2">
                     <button
-                      type='button'
-                      className='cursor-pointer capitalize'
+                      type="button"
+                      className="cursor-pointer capitalize"
                       onClick={() => setSort({ by: 'win' })}>
                       Win
                     </button>
                     <button
-                      type='button'
-                      className='cursor-pointer capitalize'
+                      type="button"
+                      className="cursor-pointer capitalize"
                       onClick={() => setSort({ by: 'winPercentage' })}>
                       (%)
                     </button>
                   </div>
                 </Th>
                 <Th isNumeric>
-                  <div className='flex items-center justify-end gap-2'>
+                  <div className="flex items-center justify-end gap-2">
                     <button
-                      type='button'
-                      className='cursor-pointer capitalize'
+                      type="button"
+                      className="cursor-pointer capitalize"
                       onClick={() => setSort({ by: 'draw' })}>
                       Draw
                     </button>
                     <button
-                      type='button'
-                      className='cursor-pointer capitalize'
+                      type="button"
+                      className="cursor-pointer capitalize"
                       onClick={() => setSort({ by: 'drawPercentage' })}>
                       (%)
                     </button>
                   </div>
                 </Th>
                 <Th isNumeric>
-                  <div className='flex items-center justify-end gap-2'>
+                  <div className="flex items-center justify-end gap-2">
                     <button
-                      type='button'
-                      className='cursor-pointer capitalize'
+                      type="button"
+                      className="cursor-pointer capitalize"
                       onClick={() => setSort({ by: 'loss' })}>
                       Loss
                     </button>
                     <button
-                      type='button'
-                      className='cursor-pointer capitalize'
+                      type="button"
+                      className="cursor-pointer capitalize"
                       onClick={() => setSort({ by: 'lossPercentage' })}>
                       (%)
                     </button>
@@ -138,17 +138,17 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                         <b>{games}</b>
                       </Td>
                       <Td isNumeric>
-                        <span className='text-teal-500'>
+                        <span className="text-teal-500">
                           {win} ({winPercentage.toFixed(2)}%)
                         </span>
                       </Td>
                       <Td isNumeric>
-                        <span className='text-gray-500'>
+                        <span className="text-gray-500">
                           {draw} ({drawPercentage.toFixed(2)}%)
                         </span>
                       </Td>
                       <Td isNumeric>
-                        <span className='text-red-500'>
+                        <span className="text-red-500">
                           {loss} ({lossPercentage.toFixed(2)}%)
                         </span>
                       </Td>

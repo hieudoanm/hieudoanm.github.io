@@ -287,33 +287,33 @@ const HomePage: React.FC = () => {
       <Head>
         <title>Hofstede</title>
       </Head>
-      <div className='flex min-h-screen flex-col'>
-        <nav className='border-b'>
+      <div className="flex min-h-screen flex-col">
+        <nav className="border-b">
           <Container>
-            <div className='py-4'>
-              <h1 className='text-xl font-bold uppercase'>Hofstede</h1>
+            <div className="py-4">
+              <h1 className="text-xl font-bold uppercase">Hofstede</h1>
             </div>
           </Container>
         </nav>
-        <main className='grow'>
+        <main className="grow">
           <Container>
-            <div className='py-8'>
-              <Card className='border'>
-                <div className='p-8'>
+            <div className="py-8">
+              <Card className="border">
+                <div className="p-8">
                   <form
                     onSubmit={(event: FormEvent<HTMLFormElement>) => {
                       event.preventDefault();
                       onChange(countryIds);
                     }}>
-                    <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
-                      <div className='col-span-full'>
-                        <FormControl className='w-full'>
-                          <FormLabel id='country-select-label'>
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                      <div className="col-span-full">
+                        <FormControl className="w-full">
+                          <FormLabel id="country-select-label">
                             Country
                           </FormLabel>
-                          <div className='flex gap-x-4'>
+                          <div className="flex gap-x-4">
                             <Select
-                              id='country-select'
+                              id="country-select"
                               value={countryId}
                               onChange={(event) => {
                                 const newCountryId: number = Number.parseInt(
@@ -330,8 +330,8 @@ const HomePage: React.FC = () => {
                               })}
                             </Select>
                             <IconButton
-                              colorScheme='teal'
-                              aria-label='Choose Country'
+                              colorScheme="teal"
+                              aria-label="Choose Country"
                               icon={<PlusSquareIcon />}
                               onClick={(event) => {
                                 event.preventDefault();
@@ -345,10 +345,10 @@ const HomePage: React.FC = () => {
                               }}
                             />
                           </div>
-                          <div className='flex gap-x-2 pt-2'>
+                          <div className="flex gap-x-2 pt-2">
                             {countryIds.map((countryIdOption: number) => {
                               return (
-                                <Badge key={countryIdOption} colorScheme='teal'>
+                                <Badge key={countryIdOption} colorScheme="teal">
                                   {countryIdOption}
                                 </Badge>
                               );
@@ -356,10 +356,10 @@ const HomePage: React.FC = () => {
                           </div>
                         </FormControl>
                       </div>
-                      <div className='col-span-1'>
+                      <div className="col-span-1">
                         <Text>Power Distance ({scales.powerDistance})</Text>
                         <Slider
-                          aria-label='Power Distance'
+                          aria-label="Power Distance"
                           step={1}
                           min={0}
                           max={100}
@@ -377,10 +377,10 @@ const HomePage: React.FC = () => {
                           <SliderThumb />
                         </Slider>
                       </div>
-                      <div className='col-span-1'>
+                      <div className="col-span-1">
                         <Text>Individualism ({scales.individualism})</Text>
                         <Slider
-                          aria-label='Individualism'
+                          aria-label="Individualism"
                           step={1}
                           min={0}
                           max={100}
@@ -398,10 +398,10 @@ const HomePage: React.FC = () => {
                           <SliderThumb />
                         </Slider>
                       </div>
-                      <div className='col-span-1'>
+                      <div className="col-span-1">
                         <Text>Masculinity ({scales.masculinity})</Text>
                         <Slider
-                          aria-label='Masculinity'
+                          aria-label="Masculinity"
                           step={1}
                           min={0}
                           max={100}
@@ -419,12 +419,12 @@ const HomePage: React.FC = () => {
                           <SliderThumb />
                         </Slider>
                       </div>
-                      <div className='col-span-1'>
+                      <div className="col-span-1">
                         <Text>
                           Uncertainty Avoidance ({scales.uncertaintyAvoidance})
                         </Text>
                         <Slider
-                          aria-label='Uncertainty Avoidance'
+                          aria-label="Uncertainty Avoidance"
                           step={1}
                           min={0}
                           max={100}
@@ -442,12 +442,12 @@ const HomePage: React.FC = () => {
                           <SliderThumb />
                         </Slider>
                       </div>
-                      <div className='col-span-1'>
+                      <div className="col-span-1">
                         <Text>
                           Long Term Orientation ({scales.longTermOrientation})
                         </Text>
                         <Slider
-                          aria-label='Long-term Orientation'
+                          aria-label="Long-term Orientation"
                           step={1}
                           min={0}
                           max={100}
@@ -465,10 +465,10 @@ const HomePage: React.FC = () => {
                           <SliderThumb />
                         </Slider>
                       </div>
-                      <div className='col-span-1'>
+                      <div className="col-span-1">
                         <Text>Indulgence ({scales.indulgence})</Text>
                         <Slider
-                          aria-label='Indulgence'
+                          aria-label="Indulgence"
                           step={1}
                           min={0}
                           max={100}
@@ -488,7 +488,7 @@ const HomePage: React.FC = () => {
                       </div>
                     </div>
                   </form>
-                  <div className='py-8'>
+                  <div className="py-8">
                     {data.chart === null ? (
                       <></>
                     ) : (
@@ -499,7 +499,7 @@ const HomePage: React.FC = () => {
                       />
                     )}
                   </div>
-                  <TableContainer className='rounded border'>
+                  <TableContainer className="rounded border">
                     <Table>
                       <Thead>
                         <Tr>
@@ -604,10 +604,10 @@ const HomePage: React.FC = () => {
             </div>
           </Container>
         </main>
-        <footer className='border-t'>
+        <footer className="border-t">
           <Container>
-            <div className='py-4'>
-              <h1 className='uppercase text-gray-700'>
+            <div className="py-4">
+              <h1 className="uppercase text-gray-700">
                 &copy; {year} Hofstede
               </h1>
             </div>

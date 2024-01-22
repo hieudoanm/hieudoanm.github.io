@@ -13,9 +13,9 @@ export const Layout: React.FC<LayoutProperties> = ({ children = <></> }) => {
     <>
       <Loading />
       <div className={inter.className}>
-        <div className='flex h-screen flex-col'>
+        <div className="flex h-screen flex-col">
           <Navbar />
-          <div className='grow'>{children}</div>
+          <div className="grow">{children}</div>
           <Footer />
         </div>
       </div>

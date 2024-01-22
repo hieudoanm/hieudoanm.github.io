@@ -26,20 +26,20 @@ const ChessResult: React.FC<{
   );
   const colors: string[] = COLORS_MAP[color];
   return (
-    <div className='flex flex-col gap-y-4'>
-      <h2 className='font-bold'>{title}</h2>
-      <div className='rounded-2xl bg-gray-100 p-8'>
-        <div className='aspect-video'>
-          <ResponsiveContainer width='100%' height='100%'>
+    <div className="flex flex-col gap-y-4">
+      <h2 className="font-bold">{title}</h2>
+      <div className="rounded-2xl bg-gray-100 p-8">
+        <div className="aspect-video">
+          <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Legend />
               <Tooltip />
               <Pie
                 isAnimationActive={false}
-                dataKey='value'
+                dataKey="value"
                 data={data}
-                cx='50%'
-                cy='50%'
+                cx="50%"
+                cy="50%"
                 labelLine={false}
                 startAngle={-270}
                 fillOpacity={0.75}
@@ -63,32 +63,32 @@ export const ChessResults: React.FC<{ insights: Insights }> = ({
   insights,
 }) => {
   return (
-    <Card className='border border-gray-200'>
+    <Card className="border border-gray-200">
       <CardHeader>
-        <h1 className='text-xl md:text-3xl'>Game Results</h1>
+        <h1 className="text-xl md:text-3xl">Game Results</h1>
       </CardHeader>
       <Divider />
       <CardBody>
         <ChessResult
-          title='Games you won by ...'
+          title="Games you won by ..."
           results={insights?.results?.win ?? []}
-          color='teal'
+          color="teal"
         />
       </CardBody>
       <Divider />
       <CardBody>
         <ChessResult
-          title='Games you drawn by ...'
+          title="Games you drawn by ..."
           results={insights?.results?.draw ?? []}
-          color='gray'
+          color="gray"
         />
       </CardBody>
       <Divider />
       <CardBody>
         <ChessResult
-          title='Games you lost by ...'
+          title="Games you lost by ..."
           results={insights?.results?.loss ?? []}
-          color='red'
+          color="red"
         />
       </CardBody>
       <Divider />

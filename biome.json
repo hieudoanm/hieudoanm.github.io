@@ -7,7 +7,7 @@
       "arrowParentheses": "always",
       "bracketSameLine": true,
       "bracketSpacing": true,
-      "jsxQuoteStyle": "single",
+      "jsxQuoteStyle": "double",
       "lineWidth": 80,
       "lineEnding": "crlf",
       "indentStyle": "space",

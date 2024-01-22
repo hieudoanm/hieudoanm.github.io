@@ -53,12 +53,12 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
   };
 
   return (
-    <div id={sectionId} className='pb-16'>
+    <div id={sectionId} className="pb-16">
       <Container>
         <Header subtitle={subtitle}>{sectionTitle}</Header>
-        <div className='mx-auto mb-8 flex w-full items-center overflow-hidden rounded-lg border md:w-6/12'>
+        <div className="mx-auto mb-8 flex w-full items-center overflow-hidden rounded-lg border md:w-6/12">
           <button
-            type='button'
+            type="button"
             className={`w-6/12 cursor-pointer py-4 text-center ${
               currency === 'vnd' ? 'bg-white' : 'bg-gray-100'
             }`}
@@ -68,7 +68,7 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
             VND
           </button>
           <button
-            type='button'
+            type="button"
             className={`w-6/12 cursor-pointer py-4 text-center ${
               currency === 'usd' ? 'bg-white' : 'bg-gray-100'
             }`}
@@ -78,7 +78,7 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
             USD
           </button>
         </div>
-        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4'>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {plans.map(
             ({
               id = '',
@@ -89,41 +89,41 @@ const PricingSection: React.FC<PricingSectionProperties> = ({
               timeUnit = '',
             }: Plan) => {
               return (
-                <div key={`pricing-${id}`} className='rounded-lg border'>
-                  <div className='border-b p-8'>
-                    <h2 className='mb-8 text-2xl font-semibold'>{title}</h2>
-                    <p className='mb-8 text-gray-500'>{description}</p>
-                    <p className='mb-8'>
-                      <span className='mr-2 text-3xl font-semibold'>
+                <div key={`pricing-${id}`} className="rounded-lg border">
+                  <div className="border-b p-8">
+                    <h2 className="mb-8 text-2xl font-semibold">{title}</h2>
+                    <p className="mb-8 text-gray-500">{description}</p>
+                    <p className="mb-8">
+                      <span className="mr-2 text-3xl font-semibold">
                         {price[`${currency}`].value}
                       </span>
-                      <sup className='text-lg text-gray-500'>
+                      <sup className="text-lg text-gray-500">
                         {price[`${currency}`].unit}/{timeUnit}
                       </sup>
                     </p>
                     <a
                       href={links[`${currency}`].href}
-                      target='_blank'
-                      rel='noreferrer'>
-                      <Button className='w-full uppercase'>
-                        <div className='flex items-center justify-center gap-4'>
+                      target="_blank"
+                      rel="noreferrer">
+                      <Button className="w-full uppercase">
+                        <div className="flex items-center justify-center gap-4">
                           {links[`${currency}`].icon}
                           <span>{links[`${currency}`].title}</span>
                         </div>
                       </Button>
                     </a>
                   </div>
-                  <div className='p-8'>
-                    <h3 className='mb-8 font-semibold uppercase'>
+                  <div className="p-8">
+                    <h3 className="mb-8 font-semibold uppercase">
                       What&apos;s included
                     </h3>
                     {features.map((feature: string) => {
                       return (
                         <p
                           key={`feature-${feature}`}
-                          className='flex items-start text-gray-500'>
-                          <FaCheck color='#10B981' className='mr-2' />
-                          <span className='text-sm'>{feature}</span>
+                          className="flex items-start text-gray-500">
+                          <FaCheck color="#10B981" className="mr-2" />
+                          <span className="text-sm">{feature}</span>
                         </p>
                       );
                     })}

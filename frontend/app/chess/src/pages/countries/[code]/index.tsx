@@ -80,7 +80,7 @@ const RapidHistogramChart: React.FC<{
     return { label, value };
   });
 
-  return <ChessHistogramChart title='Rapid' data={data} />;
+  return <ChessHistogramChart title="Rapid" data={data} />;
 };
 
 const BlitzHistogramChart: React.FC<{
@@ -112,7 +112,7 @@ const BlitzHistogramChart: React.FC<{
     return { label, value };
   });
 
-  return <ChessHistogramChart title='Blitz' data={data} />;
+  return <ChessHistogramChart title="Blitz" data={data} />;
 };
 
 const BulletHistogramChart: React.FC<{
@@ -144,7 +144,7 @@ const BulletHistogramChart: React.FC<{
     return { label, value };
   });
 
-  return <ChessHistogramChart title='Bullet' data={data} />;
+  return <ChessHistogramChart title="Bullet" data={data} />;
 };
 
 const PlayersTable: React.FC<{
@@ -152,9 +152,9 @@ const PlayersTable: React.FC<{
   players: (ChessPlayer & { stats: ChessStats[] })[];
 }> = ({ total = 0, players = [] }) => {
   return (
-    <Card className='border border-gray-200 shadow'>
+    <Card className="border border-gray-200 shadow">
       <CardHeader>
-        <Heading as='h1' className='text-xl'>
+        <Heading as="h1" className="text-xl">
           Players ({total})
         </Heading>
       </CardHeader>
@@ -163,15 +163,15 @@ const PlayersTable: React.FC<{
         <Table>
           <Thead>
             <Tr>
-              <Th className='w-4'>Title</Th>
+              <Th className="w-4">Title</Th>
               <Th>Username</Th>
-              <Th isNumeric className='w-4'>
+              <Th isNumeric className="w-4">
                 Bullet
               </Th>
-              <Th isNumeric className='w-4'>
+              <Th isNumeric className="w-4">
                 Blitz
               </Th>
-              <Th isNumeric className='w-4'>
+              <Th isNumeric className="w-4">
                 Rapid
               </Th>
             </Tr>
@@ -184,7 +184,7 @@ const PlayersTable: React.FC<{
                     <Td>
                       {(title ?? '').length > 0 ? (
                         <Link href={`/titled/${title}`}>
-                          <Badge colorScheme='red'>{title}</Badge>
+                          <Badge colorScheme="red">{title}</Badge>
                         </Link>
                       ) : (
                         <></>
@@ -192,16 +192,16 @@ const PlayersTable: React.FC<{
                     </Td>
                     <Td>
                       <Link href={`/${username}`}>
-                        <div className='inline-flex items-center gap-x-2'>
+                        <div className="inline-flex items-center gap-x-2">
                           {avatar.length > 0 ? (
                             <div
-                              className='aspect-square w-8 rounded bg-contain bg-center'
+                              className="aspect-square w-8 rounded bg-contain bg-center"
                               style={{
                                 backgroundImage: `url(${avatar})`,
                               }}
                             />
                           ) : (
-                            <div className='aspect-square w-8 rounded border' />
+                            <div className="aspect-square w-8 rounded border" />
                           )}
                           <Text>{username}</Text>
                         </div>
@@ -228,9 +228,9 @@ const CountryStats: React.FC<{
   icon: IconType;
 }> = ({ title = '', average = 0, max = 0, icon }) => {
   return (
-    <Card className='border border-gray-200 shadow'>
+    <Card className="border border-gray-200 shadow">
       <CardBody>
-        <div className='flex items-center justify-between'>
+        <div className="flex items-center justify-between">
           <Stat>
             <StatLabel>Average {title}</StatLabel>
             <StatNumber>{average.toLocaleString()}</StatNumber>
@@ -238,7 +238,7 @@ const CountryStats: React.FC<{
           </Stat>
           {icon ? (
             <div>
-              <Box bgColor={'teal.500'} color={'white'} className='rounded p-2'>
+              <Box bgColor={'teal.500'} color={'white'} className="rounded p-2">
                 <Icon as={icon} boxSize={6} />
               </Box>
             </div>
@@ -279,31 +279,31 @@ const CountryPage: NextPage<CountryPageProperties> = ({
   return (
     <Layout>
       <Container>
-        <div className='py-4 md:py-8'>
-          <div className='flex flex-col gap-y-4 md:gap-y-8'>
+        <div className="py-4 md:py-8">
+          <div className="flex flex-col gap-y-4 md:gap-y-8">
             <Heading style={{ wordSpacing: '16px' }}>
               {(flags as Record<string, string>)[countryCode]} {countryCode}
             </Heading>
-            <div className='grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8'>
-              <div className='col-span-1'>
+            <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+              <div className="col-span-1">
                 <CountryStats
-                  title='Rapid'
+                  title="Rapid"
                   average={averageRapidRating}
                   max={maxRapidRating}
                   icon={FaClock}
                 />
               </div>
-              <div className='col-span-1'>
+              <div className="col-span-1">
                 <CountryStats
-                  title='Blitz'
+                  title="Blitz"
                   average={averageBlitzRating}
                   max={maxBlitzRating}
                   icon={FaBolt}
                 />
               </div>
-              <div className='col-span-1'>
+              <div className="col-span-1">
                 <CountryStats
-                  title='Bullet'
+                  title="Bullet"
                   average={averageBulletRating}
                   max={maxBulletRating}
                   icon={FaRocket}
@@ -311,35 +311,35 @@ const CountryPage: NextPage<CountryPageProperties> = ({
               </div>
             </div>
             {players.length > 1 ? (
-              <div className='grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8'>
-                <div className='col-span-1'>
+              <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+                <div className="col-span-1">
                   <RapidHistogramChart players={players} />
                 </div>
-                <div className='col-span-1'>
+                <div className="col-span-1">
                   <BlitzHistogramChart players={players} />
                 </div>
-                <div className='col-span-1'>
+                <div className="col-span-1">
                   <BulletHistogramChart players={players} />
                 </div>
               </div>
             ) : (
               <></>
             )}
-            <Card className='border border-gray-200 shadow'>
+            <Card className="border border-gray-200 shadow">
               <CardHeader>
-                <Heading className='text-xl'>Titles</Heading>
+                <Heading className="text-xl">Titles</Heading>
               </CardHeader>
               <List>
                 {titles.map(({ title, total }) => {
                   return (
-                    <ListItem key={title} className='border-t px-4 py-2'>
+                    <ListItem key={title} className="border-t px-4 py-2">
                       <Box
                         display={'flex'}
                         alignItems={'center'}
                         justifyContent={'space-between'}>
                         <Link href={`/titled/${title}`}>
-                          <div className='inline-flex items-center gap-x-2'>
-                            <Badge colorScheme='red'>{title}</Badge>
+                          <div className="inline-flex items-center gap-x-2">
+                            <Badge colorScheme="red">{title}</Badge>
                             <Text>{TITLED_ABBREVIATIONS[title]}</Text>
                           </div>
                         </Link>

@@ -22,16 +22,16 @@ const TestimonialsSection: React.FC<TestimonialsSectionProperties> = ({
   testimonials,
 }) => {
   return (
-    <section id={id} className='pb-16'>
+    <section id={id} className="pb-16">
       <Container>
         <Header subtitle={subtitle}>{title}</Header>
         {testimonials.map((testimonial: Testimonial, index: number) => {
           return (
             <div
               key={`testimonial-${index}`}
-              className='mx-auto w-full md:w-6/12'>
-              <p className='mb-8 text-justify text-2xl'>{testimonial.quote}</p>
-              <p className='text-left md:text-right'>
+              className="mx-auto w-full md:w-6/12">
+              <p className="mb-8 text-justify text-2xl">{testimonial.quote}</p>
+              <p className="text-left md:text-right">
                 <b>{testimonial.author}</b> / {testimonial.position}
               </p>
             </div>

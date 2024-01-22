@@ -19,20 +19,20 @@ const CallToActionSection: React.FC<CallToActionSectionProperties> = ({
   backgroundImage,
 }) => {
   return (
-    <div className='py-16'>
+    <div className="py-16">
       <div
         id={id}
-        className='bg-cover bg-center'
+        className="bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <div className='bg-gray-900/80 pb-16'>
+        <div className="bg-gray-900/80 pb-16">
           <Container>
-            <Header subtitle={subtitle} className='text-white'>
+            <Header subtitle={subtitle} className="text-white">
               {title}
             </Header>
-            <a href='mailto:hieumdoan@gmail.com'>
+            <a href="mailto:hieumdoan@gmail.com">
               <Button
-                size='xl'
-                className='mx-auto block bg-white uppercase text-gray-900'>
+                size="xl"
+                className="mx-auto block bg-white uppercase text-gray-900">
                 {cta}
               </Button>
             </a>

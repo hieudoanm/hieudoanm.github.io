@@ -13,13 +13,13 @@ export const UuidPage: React.FC = () => {
       <Head>
         <title>UUID</title>
       </Head>
-      <div className='h-screen w-screen'>
-        <Container className='h-full'>
-          <div className='flex h-full items-center justify-center'>
+      <div className="h-screen w-screen">
+        <Container className="h-full">
+          <div className="flex h-full items-center justify-center">
             <InputGroup gap={4}>
               <Input value={uuid} />
               <IconButton
-                colorScheme='teal'
+                colorScheme="teal"
                 onClick={() => setUuid(v4())}
                 aria-label={'UUID'}
                 icon={<Icon as={FaSpinner} />}

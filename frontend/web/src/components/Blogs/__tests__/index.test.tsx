@@ -6,9 +6,9 @@ describe('Blogs', () => {
   test('render default', () => {
     const wrapper = render(
       <Blogs
-        id='id'
-        title='title'
-        subtitle='subtitle'
+        id="id"
+        title="title"
+        subtitle="subtitle"
         blogs={[
           {
             id: 'id',
@@ -26,9 +26,9 @@ describe('Blogs', () => {
   test('render without urlToImage', () => {
     const wrapper = render(
       <Blogs
-        id='id'
-        title='title'
-        subtitle='subtitle'
+        id="id"
+        title="title"
+        subtitle="subtitle"
         blogs={[
           {
             id: 'id',
@@ -44,16 +44,16 @@ describe('Blogs', () => {
   });
 
   test('render without blogs', () => {
-    const wrapper = render(<Blogs id='id' title='title' subtitle='subtitle' />);
+    const wrapper = render(<Blogs id="id" title="title" subtitle="subtitle" />);
     expect(wrapper.container).toMatchSnapshot();
   });
 
   test('render without backgroundImage', () => {
     const wrapper = render(
       <Blogs
-        id='id'
-        title='title'
-        subtitle='subtitle'
+        id="id"
+        title="title"
+        subtitle="subtitle"
         blogs={[
           {
             id: 'id',

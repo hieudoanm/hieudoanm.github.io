@@ -23,12 +23,12 @@ const ChessTotal: React.FC<{
   iconAs: IconType;
 }> = ({ percentage = 0, value = 0, label = '', iconColor, iconAs }) => {
   return (
-    <div className='flex flex-col gap-y-1'>
-      <div className='flex items-center gap-x-1 md:gap-x-2'>
+    <div className="flex flex-col gap-y-1">
+      <div className="flex items-center gap-x-1 md:gap-x-2">
         <Icon as={iconAs} color={iconColor} />
-        <b className='text-base md:text-lg'>{percentage.toFixed(2)}%</b>
+        <b className="text-base md:text-lg">{percentage.toFixed(2)}%</b>
       </div>
-      <div className='text-right text-xs capitalize md:text-sm'>
+      <div className="text-right text-xs capitalize md:text-sm">
         {value} {label}
       </div>
     </div>
@@ -42,11 +42,11 @@ const ChessAccuracy: React.FC<{
   iconAs: IconType;
 }> = ({ value = 0, label = '', iconColor, iconAs }) => {
   return (
-    <div className='flex flex-col gap-y-1'>
-      <p className='text-right text-xs capitalize md:text-sm'>{label}</p>
-      <div className='flex items-center gap-x-1 md:gap-x-2'>
+    <div className="flex flex-col gap-y-1">
+      <p className="text-right text-xs capitalize md:text-sm">{label}</p>
+      <div className="flex items-center gap-x-1 md:gap-x-2">
         <Icon as={iconAs} color={iconColor} />
-        <b className='text-base md:text-lg'>{value.toFixed(2)}%</b>
+        <b className="text-base md:text-lg">{value.toFixed(2)}%</b>
       </div>
     </div>
   );
@@ -54,21 +54,21 @@ const ChessAccuracy: React.FC<{
 
 export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
   return (
-    <Card className='border border-gray-200'>
+    <Card className="border border-gray-200">
       <CardHeader>
-        <h1 className='text-xl md:text-3xl'>Overview</h1>
+        <h1 className="text-xl md:text-3xl">Overview</h1>
       </CardHeader>
       <Divider />
       <CardBody>
-        <div className='flex flex-col gap-y-4'>
-          <div className='flex items-center justify-between'>
-            <div className='flex flex-col gap-y-2'>
-              <p className='text-base md:text-lg'>Games played</p>
-              <p className='text-lg md:text-xl'>
+        <div className="flex flex-col gap-y-4">
+          <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-y-2">
+              <p className="text-base md:text-lg">Games played</p>
+              <p className="text-lg md:text-xl">
                 <b>{(insights?.games?.total ?? 0).toLocaleString()}</b>
               </p>
             </div>
-            <div className='flex items-center gap-x-2 md:gap-x-4'>
+            <div className="flex items-center gap-x-2 md:gap-x-4">
               <ChessTotal
                 value={insights?.games?.win ?? 0}
                 percentage={
@@ -76,9 +76,9 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
                     (insights?.games?.total ?? 1)) *
                   100
                 }
-                label='won'
+                label="won"
                 iconAs={FaPlusSquare}
-                iconColor='teal'
+                iconColor="teal"
               />
               <ChessTotal
                 value={insights?.games?.draw ?? 0}
@@ -87,9 +87,9 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
                     (insights?.games?.total ?? 1)) *
                   100
                 }
-                label='drawn'
+                label="drawn"
                 iconAs={FaSquare}
-                iconColor='gray'
+                iconColor="gray"
               />
               <ChessTotal
                 value={insights?.games?.loss ?? 0}
@@ -98,26 +98,26 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
                     (insights?.games?.total ?? 1)) *
                   100
                 }
-                label='lost'
+                label="lost"
                 iconAs={FaMinusSquare}
-                iconColor='red'
+                iconColor="red"
               />
             </div>
           </div>
-          <div className='aspect-video'>
-            <ResponsiveContainer width='100%' height='100%'>
+          <div className="aspect-video">
+            <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 width={1600}
                 height={900}
                 barCategoryGap={1}
                 data={insights?.games?.periods ?? []}>
-                <CartesianGrid strokeDasharray='3 3' />
-                <XAxis dataKey='period' />
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="period" />
                 <YAxis />
                 <Tooltip />
                 <Bar
                   isAnimationActive={false}
-                  dataKey='games'
+                  dataKey="games"
                   fill={TEAL_COLOR}
                 />
               </BarChart>
@@ -127,51 +127,51 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
       </CardBody>
       <Divider />
       <CardBody>
-        <div className='flex flex-col gap-y-4'>
-          <div className='flex items-center justify-between'>
-            <div className='flex flex-col gap-y-2'>
-              <p className='text-base md:text-lg'>Average accuracy</p>
-              <p className='text-lg md:text-xl'>
+        <div className="flex flex-col gap-y-4">
+          <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-y-2">
+              <p className="text-base md:text-lg">Average accuracy</p>
+              <p className="text-lg md:text-xl">
                 <b>{(insights?.accuracy?.average ?? 0).toLocaleString()}</b>
               </p>
             </div>
-            <div className='flex items-center gap-x-2 md:gap-x-4'>
+            <div className="flex items-center gap-x-2 md:gap-x-4">
               <ChessAccuracy
                 value={insights?.accuracy?.win ?? 0}
-                label='When you win'
+                label="When you win"
                 iconAs={FaPlusSquare}
-                iconColor='teal'
+                iconColor="teal"
               />
               <ChessAccuracy
                 value={insights?.accuracy?.draw ?? 0}
-                label='When you draw'
+                label="When you draw"
                 iconAs={FaSquare}
-                iconColor='gray'
+                iconColor="gray"
               />
               <ChessAccuracy
                 value={insights?.accuracy?.loss ?? 0}
-                label='When you lose'
+                label="When you lose"
                 iconAs={FaMinusSquare}
-                iconColor='red'
+                iconColor="red"
               />
             </div>
           </div>
-          <div className='aspect-video'>
-            <ResponsiveContainer width='100%' height='100%'>
+          <div className="aspect-video">
+            <ResponsiveContainer width="100%" height="100%">
               <AreaChart
                 width={1600}
                 height={900}
                 data={insights?.accuracy?.periods ?? []}>
-                <CartesianGrid strokeDasharray='3 3' />
-                <XAxis dataKey='period' />
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="period" />
                 <YAxis />
                 <Tooltip />
                 <Area
                   isAnimationActive={false}
-                  type='monotone'
-                  dataKey='average'
+                  type="monotone"
+                  dataKey="average"
                   stroke={TEAL_COLOR}
-                  fill='#1a8d8d'
+                  fill="#1a8d8d"
                 />
               </AreaChart>
             </ResponsiveContainer>

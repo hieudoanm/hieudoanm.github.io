@@ -18,7 +18,7 @@ describe('ErrorTemplate', () => {
   it('to match snapshot', () => {
     const { container } = render(
       <UserProvider>
-        <ErrorTemplate status={500} message='Error' />
+        <ErrorTemplate status={500} message="Error" />
       </UserProvider>
     );
     expect(container).toMatchSnapshot();

@@ -6,8 +6,8 @@ describe('Blogs', () => {
     const { container } = render(
       <Blogs
         hero={{ id: '', title: '', subtitle: '', backgroundImage: '' }}
-        title=''
-        subtitle=''
+        title=""
+        subtitle=""
         blogs={[]}
       />
     );

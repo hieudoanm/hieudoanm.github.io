@@ -71,16 +71,16 @@ export const ChessHeader: React.FC<ChessHeaderProperties> = ({
   };
 
   return (
-    <div className='flex items-center justify-between gap-x-2'>
-      <div className='flex items-center gap-x-2 md:gap-x-4'>
+    <div className="flex items-center justify-between gap-x-2">
+      <div className="flex items-center gap-x-2 md:gap-x-4">
         <div
-          className='aspect-square w-16 rounded-xl bg-contain bg-center'
+          className="aspect-square w-16 rounded-xl bg-contain bg-center"
           style={{ backgroundImage: `url(${avatar})` }}
         />
         <div>
-          <Heading className='flex items-center gap-x-2'>
+          <Heading className="flex items-center gap-x-2">
             {title ? (
-              <Badge className='rounded bg-red-500 px-2 py-1 text-white'>
+              <Badge className="rounded bg-red-500 px-2 py-1 text-white">
                 {title}
               </Badge>
             ) : (
@@ -88,25 +88,25 @@ export const ChessHeader: React.FC<ChessHeaderProperties> = ({
             )}
             <Link
               href={`https://www.chess.com/member/${username}`}
-              target='_blank'>
-              <Text className='text-lg uppercase md:text-2xl'>{username}</Text>
+              target="_blank">
+              <Text className="text-lg uppercase md:text-2xl">{username}</Text>
             </Link>
           </Heading>
           <Text>{name}</Text>
         </div>
       </div>
-      <div className='flex items-center gap-2'>
-        {verified ? <Icon as={FaCheckCircle} color='teal' /> : <></>}
+      <div className="flex items-center gap-2">
+        {verified ? <Icon as={FaCheckCircle} color="teal" /> : <></>}
         {is_streamer ? (
-          <Link href={twitch_url} target='_blank'>
-            <Button colorScheme='teal'>
+          <Link href={twitch_url} target="_blank">
+            <Button colorScheme="teal">
               <Icon as={FaTwitch} />
             </Button>
           </Link>
         ) : (
           <></>
         )}
-        <Button colorScheme='teal' onClick={sync}>
+        <Button colorScheme="teal" onClick={sync}>
           <Icon as={FaSync} />
         </Button>
       </div>

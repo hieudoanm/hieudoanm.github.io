@@ -21,12 +21,12 @@ export const WeatherPage: React.FC = () => {
         <title>Weather</title>
       </Head>
       <Container>
-        <div className='py-8'>
+        <div className="py-8">
           <List flexDirection={'row'} gap={8}>
             {cities.map(({ id, name }) => {
               return (
-                <ListItem key={id} className='rounded border'>
-                  <Text className='p-4'>{name}</Text>
+                <ListItem key={id} className="rounded border">
+                  <Text className="p-4">{name}</Text>
                 </ListItem>
               );
             })}

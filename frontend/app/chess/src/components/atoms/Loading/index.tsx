@@ -27,13 +27,13 @@ export const Loading: React.FC = () => {
   return (
     <>
       {loading ? (
-        <div className='fixed z-50 h-screen w-screen bg-white/90'>
-          <div className='flex h-full w-full items-center justify-center'>
-            <div className='text-center'>
-              <div className='flex flex-col items-center justify-center gap-y-4'>
-                <Text color='teal.500'>{APP_NAME}</Text>
-                <Spinner color='teal.500' size='xl' />
-                <Text color='teal.500'>Loading</Text>
+        <div className="fixed z-50 h-screen w-screen bg-white/90">
+          <div className="flex h-full w-full items-center justify-center">
+            <div className="text-center">
+              <div className="flex flex-col items-center justify-center gap-y-4">
+                <Text color="teal.500">{APP_NAME}</Text>
+                <Spinner color="teal.500" size="xl" />
+                <Text color="teal.500">Loading</Text>
               </div>
             </div>
           </div>

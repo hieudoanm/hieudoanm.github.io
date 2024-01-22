@@ -27,9 +27,9 @@ export const customLabel =
       <text
         x={x}
         y={y}
-        fill='#111111'
+        fill="#111111"
         textAnchor={x > cx ? 'start' : 'end'}
-        dominantBaseline='central'>
+        dominantBaseline="central">
         {data[index].name} ({percentage}%)
       </text>
     );

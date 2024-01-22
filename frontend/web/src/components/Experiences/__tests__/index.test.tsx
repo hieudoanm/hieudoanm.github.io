@@ -6,9 +6,9 @@ describe('ExperiencesSection', () => {
   test('render default', () => {
     const wrapper = render(
       <ExperiencesSection
-        id='experiences'
-        title='title'
-        subtitle='subtitle'
+        id="experiences"
+        title="title"
+        subtitle="subtitle"
         experiences={[]}
       />
     );

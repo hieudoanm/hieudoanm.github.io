@@ -6,9 +6,9 @@ describe('Features', () => {
   test('render default', () => {
     const wrapper = render(
       <Features
-        id='id'
-        title=''
-        subtitle=''
+        id="id"
+        title=""
+        subtitle=""
         features={[
           {
             id: 'id',

@@ -10,7 +10,7 @@ const InsightsPage: NextPage<{ insights: Insights }> = ({ insights }) => {
   return (
     <Layout>
       <Container>
-        <div className='py-8'>
+        <div className="py-8">
           <InsightsTemplate insights={insights} />
         </div>
       </Container>

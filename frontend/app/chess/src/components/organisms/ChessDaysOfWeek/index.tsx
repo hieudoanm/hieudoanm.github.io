@@ -36,20 +36,20 @@ const ChessGamesByDaysOfWeek: React.FC<{ insights: Insights }> = ({
   );
 
   return (
-    <div className='flex flex-col gap-y-4'>
-      <h2 className='font-bold'>Games by Days of Week</h2>
+    <div className="flex flex-col gap-y-4">
+      <h2 className="font-bold">Games by Days of Week</h2>
       {pieData.length > 0 ? (
-        <div className='aspect-video'>
-          <ResponsiveContainer width='100%' height='100%'>
+        <div className="aspect-video">
+          <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Legend />
               <Tooltip />
               <Pie
                 isAnimationActive={false}
-                dataKey='value'
+                dataKey="value"
                 data={pieData}
-                cx='50%'
-                cy='50%'
+                cx="50%"
+                cy="50%"
                 labelLine={false}
                 startAngle={-270}
                 fillOpacity={0.75}
@@ -76,20 +76,20 @@ const ChessAccuracyByDaysOfWeek: React.FC<{ insights: Insights }> = ({
 }) => {
   const data = insights?.accuracy?.daysOfWeek || [];
   return (
-    <div className='flex flex-col gap-y-4'>
-      <h2 className='font-bold'>Accuracy by Days of Week</h2>
+    <div className="flex flex-col gap-y-4">
+      <h2 className="font-bold">Accuracy by Days of Week</h2>
       {data.length > 0 ? (
-        <div className='aspect-video'>
-          <ResponsiveContainer width='100%' height='100%'>
+        <div className="aspect-video">
+          <ResponsiveContainer width="100%" height="100%">
             <BarChart width={1600} height={900} barCategoryGap={1} data={data}>
-              <CartesianGrid strokeDasharray='3 3' />
-              <XAxis dataKey='dayOfWeek' />
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="dayOfWeek" />
               <YAxis />
               <Tooltip />
               <Bar
                 isAnimationActive={false}
                 fillOpacity={0.75}
-                dataKey='average'
+                dataKey="average"
                 fill={TEAL_COLOR}
               />
             </BarChart>
@@ -121,35 +121,35 @@ export const ChessResultsByDaysOfWeek: React.FC<{
     }
   );
   return (
-    <div className='flex flex-col gap-y-4'>
-      <h2 className='font-bold'>Results by Days of Week</h2>
+    <div className="flex flex-col gap-y-4">
+      <h2 className="font-bold">Results by Days of Week</h2>
       {data.length > 0 ? (
-        <div className='aspect-video'>
-          <ResponsiveContainer width='100%' height='100%'>
+        <div className="aspect-video">
+          <ResponsiveContainer width="100%" height="100%">
             <BarChart width={1600} height={900} barCategoryGap={1} data={data}>
-              <CartesianGrid strokeDasharray='3 3' />
-              <XAxis dataKey='dayOfWeek' />
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="dayOfWeek" />
               <YAxis />
               <Tooltip />
               <Bar
                 isAnimationActive={false}
                 fillOpacity={0.75}
-                dataKey='lossPercentage'
-                stackId='a'
+                dataKey="lossPercentage"
+                stackId="a"
                 fill={RED_COLOR}
               />
               <Bar
                 isAnimationActive={false}
                 fillOpacity={0.75}
-                dataKey='drawPercentage'
-                stackId='a'
+                dataKey="drawPercentage"
+                stackId="a"
                 fill={GRAY_COLOR}
               />
               <Bar
                 isAnimationActive={false}
                 fillOpacity={0.75}
-                dataKey='winPercentage'
-                stackId='a'
+                dataKey="winPercentage"
+                stackId="a"
                 fill={TEAL_COLOR}
               />
             </BarChart>
@@ -166,9 +166,9 @@ export const ChessDaysOfWeek: React.FC<{ insights: Insights }> = ({
   insights,
 }) => {
   return (
-    <Card className='border border-gray-200'>
+    <Card className="border border-gray-200">
       <CardHeader>
-        <h1 className='text-xl md:text-3xl'>Day of Week</h1>
+        <h1 className="text-xl md:text-3xl">Day of Week</h1>
       </CardHeader>
       <Divider />
       <CardBody>

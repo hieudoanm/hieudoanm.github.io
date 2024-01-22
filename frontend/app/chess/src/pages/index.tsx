@@ -11,9 +11,9 @@ const HomePage: NextPage<{ insights: Insights }> = ({ insights }) => {
   return (
     <Layout>
       <Hero />
-      <div id='demo'>
+      <div id="demo">
         <Container>
-          <div className='py-8'>
+          <div className="py-8">
             <InsightsTemplate insights={insights} />
           </div>
         </Container>

@@ -146,15 +146,15 @@ const StatusPage: React.FC = () => {
         <title>Statuses</title>
       </Head>
       <Container>
-        <div className='p-8'>
-          <Card className='border border-gray-200 shadow'>
+        <div className="p-8">
+          <Card className="border border-gray-200 shadow">
             <CardHeader>
-              <Heading className='text-xl'>Statuses</Heading>
+              <Heading className="text-xl">Statuses</Heading>
             </CardHeader>
             {loading ? (
               <List>
-                <ListItem className='border-t border-gray-200'>
-                  <p className='py-8 text-center'>Loading</p>
+                <ListItem className="border-t border-gray-200">
+                  <p className="py-8 text-center">Loading</p>
                 </ListItem>
               </List>
             ) : (
@@ -163,11 +163,11 @@ const StatusPage: React.FC = () => {
                   ([service, { name, page, status }]) => {
                     const bgColor = status ? 'bg-green-500' : 'bg-red-500';
                     return (
-                      <ListItem key={service} className='border-t'>
+                      <ListItem key={service} className="border-t">
                         <CardBody>
-                          <div className='flex items-center justify-between'>
-                            <Link href={page} target='_blank'>
-                              <Text textDecoration='underline'>{name}</Text>
+                          <div className="flex items-center justify-between">
+                            <Link href={page} target="_blank">
+                              <Text textDecoration="underline">{name}</Text>
                             </Link>
                             <Box
                               className={`h-6 w-6 rounded-full ${bgColor}`}

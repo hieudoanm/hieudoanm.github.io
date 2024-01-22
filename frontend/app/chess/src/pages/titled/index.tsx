@@ -85,7 +85,7 @@ const RapidHistogramChart: React.FC<{
     return { label, value };
   });
 
-  return <ChessHistogramChart title='Rapid' data={data} />;
+  return <ChessHistogramChart title="Rapid" data={data} />;
 };
 
 const BlitzHistogramChart: React.FC<{
@@ -117,7 +117,7 @@ const BlitzHistogramChart: React.FC<{
     return { label, value };
   });
 
-  return <ChessHistogramChart title='Blitz' data={data} />;
+  return <ChessHistogramChart title="Blitz" data={data} />;
 };
 
 const BulletHistogramChart: React.FC<{
@@ -149,7 +149,7 @@ const BulletHistogramChart: React.FC<{
     return { label, value };
   });
 
-  return <ChessHistogramChart title='Bullet' data={data} />;
+  return <ChessHistogramChart title="Bullet" data={data} />;
 };
 
 const TitledStats: React.FC<{
@@ -159,9 +159,9 @@ const TitledStats: React.FC<{
   icon: IconType;
 }> = ({ title = '', average = 0, max = 0, icon }) => {
   return (
-    <Card className='border border-gray-200 shadow'>
+    <Card className="border border-gray-200 shadow">
       <CardBody>
-        <div className='flex items-center justify-between'>
+        <div className="flex items-center justify-between">
           <Stat>
             <StatLabel>Average {title}</StatLabel>
             <StatNumber>{average}</StatNumber>
@@ -169,7 +169,7 @@ const TitledStats: React.FC<{
           </Stat>
           {icon ? (
             <div>
-              <Box bgColor={'teal.500'} color={'white'} className='rounded p-2'>
+              <Box bgColor={'teal.500'} color={'white'} className="rounded p-2">
                 <Icon as={icon} boxSize={6} />
               </Box>
             </div>
@@ -186,24 +186,24 @@ const PlayersTable: React.FC<{
   players: (ChessPlayer & { stats: ChessStats[] })[];
 }> = ({ players = [] }) => {
   return (
-    <Card className='border border-gray-200 shadow'>
-      <CardBody className='p-0'>
+    <Card className="border border-gray-200 shadow">
+      <CardBody className="p-0">
         <TableContainer>
           <Table>
             <Thead>
               <Tr>
-                <Th className='w-4'>No</Th>
+                <Th className="w-4">No</Th>
                 <Th>Username</Th>
-                <Th className='w-4' isNumeric>
+                <Th className="w-4" isNumeric>
                   Country
                 </Th>
-                <Th className='w-4' isNumeric>
+                <Th className="w-4" isNumeric>
                   Rapid
                 </Th>
-                <Th className='w-4' isNumeric>
+                <Th className="w-4" isNumeric>
                   Blitz
                 </Th>
-                <Th className='w-4' isNumeric>
+                <Th className="w-4" isNumeric>
                   Bullet
                 </Th>
               </Tr>
@@ -226,18 +226,18 @@ const PlayersTable: React.FC<{
                       <Td>
                         <Link
                           href={`/${username}`}
-                          className='inline-flex items-center gap-2'>
+                          className="inline-flex items-center gap-2">
                           {avatar.length > 0 ? (
                             <div
-                              className='aspect-square w-8 rounded bg-contain bg-center'
+                              className="aspect-square w-8 rounded bg-contain bg-center"
                               style={{
                                 backgroundImage: `url(${avatar})`,
                               }}
                             />
                           ) : (
-                            <div className='aspect-square w-8 rounded border' />
+                            <div className="aspect-square w-8 rounded border" />
                           )}
-                          <Text className='inline'>{username}</Text>
+                          <Text className="inline">{username}</Text>
                         </Link>
                       </Td>
                       <Td isNumeric>
@@ -291,8 +291,8 @@ const TitledPage: NextPage<TitledPageProperties> = ({
   return (
     <Layout>
       <Container>
-        <div className='py-4 md:py-8'>
-          <div className='flex flex-col gap-y-4 md:gap-y-8'>
+        <div className="py-4 md:py-8">
+          <div className="flex flex-col gap-y-4 md:gap-y-8">
             <Box
               display={'flex'}
               alignItems={'center'}
@@ -301,7 +301,7 @@ const TitledPage: NextPage<TitledPageProperties> = ({
                 <MenuButton
                   as={Button}
                   rightIcon={<ChevronDownIcon />}
-                  className='bg-white px-0 text-lg md:text-4xl'>
+                  className="bg-white px-0 text-lg md:text-4xl">
                   {TITLED_ABBREVIATIONS[title]} ({total})
                 </MenuButton>
                 <MenuList>
@@ -322,11 +322,11 @@ const TitledPage: NextPage<TitledPageProperties> = ({
                     ))}
                 </MenuList>
               </Menu>
-              <Box className='rounded shadow'>
+              <Box className="rounded shadow">
                 <Select
-                  id='timeRange'
-                  name='timeRange'
-                  placeholder='Time Range'
+                  id="timeRange"
+                  name="timeRange"
+                  placeholder="Time Range"
                   value={timeRange}
                   onChange={(event: ChangeEvent<HTMLSelectElement>) => {
                     const newTimeRange = event.target.value as TimeRange;
@@ -336,34 +336,34 @@ const TitledPage: NextPage<TitledPageProperties> = ({
                       query: { ...router.query, timeRange: newTimeRange },
                     });
                   }}>
-                  <option value='week'>7 Days</option>
-                  <option value='month'>30 Days</option>
-                  <option value='quarter'>90 Days</option>
-                  <option value='year'>1 Year</option>
+                  <option value="week">7 Days</option>
+                  <option value="month">30 Days</option>
+                  <option value="quarter">90 Days</option>
+                  <option value="year">1 Year</option>
                 </Select>
               </Box>
             </Box>
             {players.length > 1 ? (
-              <div className='grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8'>
-                <div className='col-span-1'>
+              <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+                <div className="col-span-1">
                   <TitledStats
-                    title='Rapid'
+                    title="Rapid"
                     average={averageRapidRating}
                     max={maxRapidRating}
                     icon={FaClock}
                   />
                 </div>
-                <div className='col-span-1'>
+                <div className="col-span-1">
                   <TitledStats
-                    title='Blitz'
+                    title="Blitz"
                     average={averageBlitzRating}
                     max={maxBlitzRating}
                     icon={FaBolt}
                   />
                 </div>
-                <div className='col-span-1'>
+                <div className="col-span-1">
                   <TitledStats
-                    title='Bullet'
+                    title="Bullet"
                     average={averageBulletRating}
                     max={maxBulletRating}
                     icon={FaRocket}
@@ -374,14 +374,14 @@ const TitledPage: NextPage<TitledPageProperties> = ({
               <></>
             )}
             {players.length > 1 ? (
-              <div className='grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8'>
-                <div className='col-span-1'>
+              <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+                <div className="col-span-1">
                   <RapidHistogramChart players={players} />
                 </div>
-                <div className='col-span-1'>
+                <div className="col-span-1">
                   <BlitzHistogramChart players={players} />
                 </div>
-                <div className='col-span-1'>
+                <div className="col-span-1">
                   <BulletHistogramChart players={players} />
                 </div>
               </div>

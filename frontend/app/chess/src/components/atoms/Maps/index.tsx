@@ -95,7 +95,7 @@ export const SVGMaps: React.FC<SVGMapsProperties> = ({
       <svg
         id={id}
         viewBox={`0 0 ${maps.width} ${maps.height}`}
-        className='mx-auto overflow-hidden'
+        className="mx-auto overflow-hidden"
       />
     </div>
   );

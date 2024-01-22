@@ -43,7 +43,7 @@ export const PlayerTemplate: React.FC<PlayerTemplateProperties> = ({
   const bulletStats = getRatingByTimeClass('bullet', player.stats);
 
   return (
-    <div className='flex flex-col gap-y-4 md:gap-y-8'>
+    <div className="flex flex-col gap-y-4 md:gap-y-8">
       <ChessHeader
         avatar={player.avatar}
         name={player.name}
@@ -53,52 +53,52 @@ export const PlayerTemplate: React.FC<PlayerTemplateProperties> = ({
         twitch_url={player.twitchUrl}
         is_streamer={player.isStreamer}
       />
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8'>
-        <div className='col-span-1'>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+        <div className="col-span-1">
           <ChessStatsComponent
-            label='Rapid'
+            label="Rapid"
             last={rapidStats.last ?? 0}
             best={rapidStats.best ?? 0}
             icon={FaClock}
           />
         </div>
-        <div className='col-span-1'>
+        <div className="col-span-1">
           <ChessStatsComponent
-            label='Blitz'
+            label="Blitz"
             last={blitzStats.last ?? 0}
             best={blitzStats.best ?? 0}
             icon={FaBolt}
           />
         </div>
-        <div className='col-span-1'>
+        <div className="col-span-1">
           <ChessStatsComponent
-            label='Bullet'
+            label="Bullet"
             last={bulletStats.last ?? 0}
             best={bulletStats.best ?? 0}
             icon={FaRocket}
           />
         </div>
       </div>
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8'>
-        <div className='col-span-1'>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+        <div className="col-span-1">
           <ChessRecord
-            timeClass='Rapid'
+            timeClass="Rapid"
             win={rapidStats.win ?? 0}
             draw={rapidStats.draw ?? 0}
             loss={rapidStats.loss ?? 0}
           />
         </div>
-        <div className='col-span-1'>
+        <div className="col-span-1">
           <ChessRecord
-            timeClass='Blitz'
+            timeClass="Blitz"
             win={blitzStats.win ?? 0}
             draw={blitzStats.draw ?? 0}
             loss={blitzStats.loss ?? 0}
           />
         </div>
-        <div className='col-span-1'>
+        <div className="col-span-1">
           <ChessRecord
-            timeClass='Bullet'
+            timeClass="Bullet"
             win={bulletStats.win ?? 0}
             draw={bulletStats.draw ?? 0}
             loss={bulletStats.loss ?? 0}

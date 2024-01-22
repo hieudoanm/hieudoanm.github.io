@@ -32,16 +32,16 @@ const Navbar: React.FC<NavbarProperties> = ({
   return (
     <nav className={`${fixedTop} w-full border-b bg-white`}>
       <Banner>
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center'>
-            <FaBullhorn className='mr-2' />
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <FaBullhorn className="mr-2" />
             <span>
               This is my{' '}
               <a
-                href='https://bradfrost.com/blog/post/atomic-web-design/'
-                target='_blank'
-                rel='noreferrer'
-                className='uppercase underline'>
+                href="https://bradfrost.com/blog/post/atomic-web-design/"
+                target="_blank"
+                rel="noreferrer"
+                className="uppercase underline">
                 atomic design
               </a>{' '}
               masterpiece
@@ -53,26 +53,26 @@ const Navbar: React.FC<NavbarProperties> = ({
         </div>
       </Banner>
       <Container>
-        <div className='flex items-center py-4'>
-          <Link href='/'>
-            <div className='cursor-pointer text-2xl uppercase'>Hieu Doan</div>
+        <div className="flex items-center py-4">
+          <Link href="/">
+            <div className="cursor-pointer text-2xl uppercase">Hieu Doan</div>
           </Link>
-          <div className='hidden md:block'>
-            <div className='ml-8 mr-auto flex items-center gap-8'>
-              <Link href='/about'>
-                <div className='flex items-center gap-2'>
+          <div className="hidden md:block">
+            <div className="ml-8 mr-auto flex items-center gap-8">
+              <Link href="/about">
+                <div className="flex items-center gap-2">
                   <FaUser />
                   <span>About</span>
                 </div>
               </Link>
-              <Link href='/blogs'>
-                <div className='flex items-center gap-2'>
+              <Link href="/blogs">
+                <div className="flex items-center gap-2">
                   <FaBlog />
                   <span>Blogs</span>
                 </div>
               </Link>
-              <Link href='/contact'>
-                <div className='flex items-center gap-2'>
+              <Link href="/contact">
+                <div className="flex items-center gap-2">
                   <FaEnvelope />
                   <span>Contact</span>
                 </div>
@@ -80,11 +80,11 @@ const Navbar: React.FC<NavbarProperties> = ({
             </div>
           </div>
           {options.length > 0 && (
-            <div className='ml-auto'>
-              <Menu colorScheme='teal'>
+            <div className="ml-auto">
+              <Menu colorScheme="teal">
                 <MenuButton
                   as={Button}
-                  colorScheme='teal'
+                  colorScheme="teal"
                   rightIcon={<ChevronDownIcon />}>
                   Actions
                 </MenuButton>
@@ -94,7 +94,7 @@ const Navbar: React.FC<NavbarProperties> = ({
                       <MenuItem
                         key={text}
                         onClick={onClick}
-                        className='capitalize'>
+                        className="capitalize">
                         {text}
                       </MenuItem>
                     );

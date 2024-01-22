@@ -4,7 +4,7 @@ import { ChessStats } from '..';
 describe('ChessStats', () => {
   it('to match snapshot', () => {
     const { container } = render(
-      <ChessStats label='' last={0} best={0} icon={undefined} />
+      <ChessStats label="" last={0} best={0} icon={undefined} />
     );
     expect(container).toMatchSnapshot();
   });

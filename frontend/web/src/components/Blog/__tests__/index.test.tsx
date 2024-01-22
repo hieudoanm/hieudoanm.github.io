@@ -4,7 +4,7 @@ import Blog from '..';
 
 describe('Blog', () => {
   test('render default', () => {
-    const wrapper = render(<Blog url='' title='' description='' date='' />);
+    const wrapper = render(<Blog url="" title="" description="" date="" />);
     expect(wrapper.container).toMatchSnapshot();
   });
 });

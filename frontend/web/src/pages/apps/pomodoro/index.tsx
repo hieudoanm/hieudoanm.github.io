@@ -6,10 +6,10 @@ export const PomodoroPage: React.FC = () => {
   return (
     <>
       <Head>
-        <meta charSet='utf-8' />
+        <meta charSet="utf-8" />
         <title>Pomodoro</title>
       </Head>
-      <div className='h-screen w-screen'>
+      <div className="h-screen w-screen">
         <Pomodoro />
       </div>
     </>

@@ -75,15 +75,15 @@ export const Calendar: React.FC<CalendarProps> = ({
   const dates: YearMonthDate[] = getDates(monthYear.year, monthYear.month);
 
   return (
-    <Card className='border border-gray-200 shadow'>
+    <Card className="border border-gray-200 shadow">
       <CardHeader>
-        <div className='flex items-center justify-between'>
-          <Heading className='text-xl'>Calendar</Heading>
-          <div className='flex items-center gap-x-4'>
+        <div className="flex items-center justify-between">
+          <Heading className="text-xl">Calendar</Heading>
+          <div className="flex items-center gap-x-4">
             <Select
-              id='month'
-              name='month'
-              placeholder='Month'
+              id="month"
+              name="month"
+              placeholder="Month"
               value={monthYear.month}
               onChange={(event: ChangeEvent<HTMLSelectElement>) =>
                 setMonthYear({
@@ -101,9 +101,9 @@ export const Calendar: React.FC<CalendarProps> = ({
               })}
             </Select>
             <Select
-              id='year'
-              name='year'
-              placeholder='Year'
+              id="year"
+              name="year"
+              placeholder="Year"
               value={monthYear.year}
               onChange={(event: ChangeEvent<HTMLSelectElement>) =>
                 setMonthYear({
@@ -122,8 +122,8 @@ export const Calendar: React.FC<CalendarProps> = ({
             </Select>
             <div>
               <Button
-                type='button'
-                colorScheme='teal'
+                type="button"
+                colorScheme="teal"
                 onClick={() => {
                   setMonthYear({
                     month: new Date().getMonth(),
@@ -137,26 +137,26 @@ export const Calendar: React.FC<CalendarProps> = ({
         </div>
       </CardHeader>
       <Divider />
-      <div className='grid grid-cols-7'>
+      <div className="grid grid-cols-7">
         {[0, 1, 2, 3, 4, 5, 6].map((day: number) => {
           return (
-            <div key={day} className='col-span-1'>
-              <div className='border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4'>
-                <Text className='truncate'>
-                  <span className='block md:hidden'>
+            <div key={day} className="col-span-1">
+              <div className="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4">
+                <Text className="truncate">
+                  <span className="block md:hidden">
                     {SMALL_DAYS[`${day}`]}
                   </span>
-                  <span className='hidden md:block lg:hidden'>
+                  <span className="hidden md:block lg:hidden">
                     {MEDIUM_DAYS[`${day}`]}
                   </span>
-                  <span className='hidden lg:block'>{DAYS[`${day}`]}</span>
+                  <span className="hidden lg:block">{DAYS[`${day}`]}</span>
                 </Text>
               </div>
             </div>
           );
         })}
       </div>
-      <div className='grid grid-cols-7'>
+      <div className="grid grid-cols-7">
         {dates.map(({ year: dateYear, month: dateMonth, date, current }) => {
           const todayClass =
             dateYear === currentYear &&
@@ -171,8 +171,8 @@ export const Calendar: React.FC<CalendarProps> = ({
           return (
             <div
               key={`${dateYear}-${dateMonth}-${date}`}
-              className='col-span-1'>
-              <div className='border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4'>
+              className="col-span-1">
+              <div className="border-b px-2 py-1 text-center text-xs md:px-4 md:py-2 md:text-base lg:px-8 lg:py-4">
                 <div className={todayClass}>
                   <Text className={`truncate ${currentClass}`}>
                     {currentText}
@@ -184,7 +184,7 @@ export const Calendar: React.FC<CalendarProps> = ({
         })}
       </div>
       <CardFooter>
-        <Text className='w-full text-center'>
+        <Text className="w-full text-center">
           {monthYear.year} - {MONTHS[`${monthYear.year}`]}
         </Text>
       </CardFooter>

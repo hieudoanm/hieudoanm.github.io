@@ -13,7 +13,7 @@ const PlayerPage: NextPage<{
   return (
     <Layout>
       <Container>
-        <div className='py-8'>
+        <div className="py-8">
           <PlayerTemplate player={player} />
         </div>
       </Container>
