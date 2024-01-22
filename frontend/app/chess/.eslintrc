@@ -1,9 +1,8 @@
 {
   "extends": [
     "next",
-    "prettier",
     "plugin:sonarjs/recommended",
-    "plugin:unicorn/recommended"
+    "plugin:unicorn/recommended",
   ],
-  "plugins": ["sonarjs", "unicorn"]
+  "plugins": ["sonarjs", "unicorn"],
 }

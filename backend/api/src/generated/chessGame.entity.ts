@@ -1,4 +1,4 @@
-import { ChessResult, ChessTimeClass, ChessVariant } from '@prisma/client';
+import { ChessTimeClass, ChessVariant, ChessResult } from '@prisma/client';
 
 export class ChessGameDto {
   id: string;

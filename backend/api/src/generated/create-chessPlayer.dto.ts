@@ -1,5 +1,5 @@
+import { ChessTitle, ChessLeague } from '@prisma/client';
 import { ApiProperty } from '@nestjs/swagger';
-import { ChessLeague, ChessTitle } from '@prisma/client';
 
 export class CreateChessPlayerDto {
   id: number;

@@ -1,4 +1,4 @@
-import { ChessLeague, ChessStatus, ChessTitle } from '@prisma/client';
+import { ChessStatus, ChessTitle, ChessLeague } from '@prisma/client';
 import { ChessStatsDto } from './chessStats.entity';
 
 export class ChessPlayerDto {

@@ -38,17 +38,14 @@ const ExperiencesSection: React.FC<ExperiencesSectionProperties> = ({
         <Accordion allowToggle>
           <>
             {experiences.map(
-              (
-                {
-                  company = '',
-                  period = '',
-                  city = '',
-                  title = '',
-                }: Experience,
-                index: number
-              ) => {
+              ({
+                company = '',
+                period = '',
+                city = '',
+                title = '',
+              }: Experience) => {
                 return (
-                  <AccordionItem key={`experience-${index}`}>
+                  <AccordionItem key={`experience-${company}`}>
                     <AccordionButton>
                       <Box flex={1}>
                         <div className="flex items-center gap-x-2">

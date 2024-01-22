@@ -14,7 +14,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "format": "prettier --write .",
+    "format": "biome format --write ./src",
     "prebuild": "rimraf .next out"
   },
   "dependencies": {

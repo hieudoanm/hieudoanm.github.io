@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "check": "biome check --apply ./src",
-    "format": "prettier --write .",
+    "format": "biome format --write ./src",
     "build": "true",
     "test": "true",
     "lint": "eslint ."

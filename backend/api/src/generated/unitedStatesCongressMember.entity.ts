@@ -1,6 +1,6 @@
-import { UnitedStatesCongressDto } from './unitedStatesCongress.entity';
-import { UnitedStatesCongressCommitteeDto } from './unitedStatesCongressCommittee.entity';
 import { UnitedStatesCongressMembersInCongressesDto } from './unitedStatesCongressMembersInCongresses.entity';
+import { UnitedStatesCongressCommitteeDto } from './unitedStatesCongressCommittee.entity';
+import { UnitedStatesCongressDto } from './unitedStatesCongress.entity';
 
 export class UnitedStatesCongressMemberDto {
   id: string;

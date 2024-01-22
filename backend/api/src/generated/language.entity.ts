@@ -1,5 +1,5 @@
-import { CountryNameDto } from './countryName.entity';
 import { LanguagesInCountriesDto } from './languagesInCountries.entity';
+import { CountryNameDto } from './countryName.entity';
 
 export class LanguageDto {
   code: string;

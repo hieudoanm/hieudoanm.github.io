@@ -1,5 +1,5 @@
-import { CountryDto } from './country.entity';
 import { OrganizationDto } from './organization.entity';
+import { CountryDto } from './country.entity';
 
 export class CountriesOnOrganizationsDto {
   organization?: OrganizationDto;

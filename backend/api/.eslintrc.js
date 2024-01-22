@@ -5,10 +5,9 @@ module.exports = {
     tsconfigRootDir: __dirname,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint/eslint-plugin', 'prettier', 'sonarjs'],
+  plugins: ['@typescript-eslint/eslint-plugin', 'sonarjs'],
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
     'plugin:sonarjs/recommended',
   ],
   root: true,

@@ -1,5 +1,5 @@
+import { Prisma, DayOfWeek, Region } from '@prisma/client';
 import { ApiProperty } from '@nestjs/swagger';
-import { DayOfWeek, Prisma, Region } from '@prisma/client';
 
 export class CreateCountryDto {
   name?: string;
