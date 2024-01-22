@@ -138,7 +138,7 @@ exports[`AppsPage render default 1`] = `
             class="flex aspect-square items-center justify-center"
           >
             <a
-              href="/apps/statuses"
+              href="/apps/status"
             >
               <div
                 class="flex flex-col items-center gap-y-2 md:gap-y-4 css-0"
@@ -165,7 +165,7 @@ exports[`AppsPage render default 1`] = `
                 <p
                   class="chakra-text text-center css-0"
                 >
-                  Statuses
+                  Status
                 </p>
               </div>
             </a>
