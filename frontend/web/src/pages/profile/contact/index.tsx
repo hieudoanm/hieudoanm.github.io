@@ -1,6 +1,6 @@
+import metadata from '@hieudoanm/common/configs/metadata';
+import { APP_NAME } from '@hieudoanm/common/constants/time.constants';
 import { Section } from '@hieudoanm/components/Navbar';
-import metadata from '@hieudoanm/configs/metadata';
-import { APP_NAME } from '@hieudoanm/constants/time.constants';
 import ContactTemplate from '@hieudoanm/templates/Contact';
 import { NextPage } from 'next';
 import Head from 'next/head';

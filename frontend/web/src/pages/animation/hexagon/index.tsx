@@ -1,5 +1,5 @@
+import useWindowSize from '@hieudoanm/common/hooks/use-window-size';
 import Hexagon from '@hieudoanm/components/Hexagon';
-import useWindowSize from '@hieudoanm/hooks/use-window-size';
 import Head from 'next/head';
 import React, { useCallback, useEffect, useState } from 'react';
 

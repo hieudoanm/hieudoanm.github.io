@@ -1,6 +1,6 @@
 import { Box, Icon, Text } from '@chakra-ui/react';
+import { APP_NAME } from '@hieudoanm/common/constants/time.constants';
 import Container from '@hieudoanm/components/Container';
-import { APP_NAME } from '@hieudoanm/constants/time.constants';
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
@@ -18,7 +18,7 @@ export const AppsPage: React.FC = () => {
     { id: 'calendar', name: 'Calendar', icon: FaCalendar },
     { id: 'hofstede', name: 'Hofstede', icon: FaBrain },
     { id: 'pomodoro', name: 'Pomodoro', icon: FaClock },
-    { id: 'statuses', name: 'Statuses', icon: FaFlag },
+    { id: 'status', name: 'Status', icon: FaFlag },
     { id: 'uuid', name: 'UUID', icon: FaIdBadge },
     { id: 'weather', name: 'Weather', icon: FaCloudSunRain },
   ];

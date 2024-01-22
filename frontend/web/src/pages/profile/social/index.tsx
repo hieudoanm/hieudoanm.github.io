@@ -1,5 +1,5 @@
 import { Box, Button, Icon } from '@chakra-ui/react';
-import metadata from '@hieudoanm/configs/metadata';
+import metadata from '@hieudoanm/common/configs/metadata';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';

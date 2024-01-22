@@ -1,5 +1,5 @@
+import metadata from '@hieudoanm/common/configs/metadata';
 import { Section } from '@hieudoanm/components/Navbar';
-import metadata from '@hieudoanm/configs/metadata';
 import AboutTemplate from '@hieudoanm/templates/About';
 import { NextPage } from 'next';
 import Head from 'next/head';

@@ -16,7 +16,7 @@ import {
   MEDIUM_DAYS,
   MONTHS,
   SMALL_DAYS,
-} from '@hieudoanm/constants/time.constants';
+} from '@hieudoanm/common/constants/time.constants';
 import React, { ChangeEvent, useState } from 'react';
 
 type YearMonthDate = {
