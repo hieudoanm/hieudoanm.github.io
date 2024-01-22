@@ -2,7 +2,7 @@ FROM node:20.11.0 AS build
 
 LABEL author hieudoanm
 
-ENV PORT=3000
+ENV PORT=8080
 
 RUN mkdir /home/node/app
 WORKDIR /home/node/app

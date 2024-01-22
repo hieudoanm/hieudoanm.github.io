@@ -226,8 +226,7 @@ const PlayersTable: React.FC<{
                       <Td>
                         <Link
                           href={`/${username}`}
-                          className="inline-flex items-center gap-2"
-                        >
+                          className="inline-flex items-center gap-2">
                           {avatar.length > 0 ? (
                             <div
                               className="aspect-square w-8 rounded bg-contain bg-center"
@@ -297,14 +296,12 @@ const TitledPage: NextPage<TitledPageProperties> = ({
             <Box
               display={'flex'}
               alignItems={'center'}
-              justifyContent={'space-between'}
-            >
+              justifyContent={'space-between'}>
               <Menu>
                 <MenuButton
                   as={Button}
                   rightIcon={<ChevronDownIcon />}
-                  className="bg-white px-0 text-lg md:text-4xl"
-                >
+                  className="bg-white px-0 text-lg md:text-4xl">
                   {TITLED_ABBREVIATIONS[title]} ({total})
                 </MenuButton>
                 <MenuList>
@@ -319,8 +316,7 @@ const TitledPage: NextPage<TitledPageProperties> = ({
                             pathname: router.pathname,
                             query: { ...router.query, title: key },
                           });
-                        }}
-                      >
+                        }}>
                         {value}
                       </MenuItem>
                     ))}
@@ -339,8 +335,7 @@ const TitledPage: NextPage<TitledPageProperties> = ({
                       pathname: router.pathname,
                       query: { ...router.query, timeRange: newTimeRange },
                     });
-                  }}
-                >
+                  }}>
                   <option value="week">7 Days</option>
                   <option value="month">30 Days</option>
                   <option value="quarter">90 Days</option>
@@ -445,76 +440,75 @@ const query = gql`
   }
 `;
 
-export const getServerSideProps: GetServerSideProps<
-  TitledPageProperties
-> = async (context: GetServerSidePropsContext) => {
-  const title: ChessTitle = resolveQuery(
-    context.query,
-    'title',
-    'GM'
-  ) as ChessTitle;
-  const timeRange: TimeRange = resolveQuery(
-    context.query,
-    'timeRange',
-    'year'
-  ) as TimeRange;
-  try {
-    const response = await apolloClient.query<{
-      chess: { titled: TitledPageProperties };
-    }>({
-      query,
-      variables: { title, timeRange },
-    });
-    logger.info(`getServerSideProps title=${title} timeRange=${timeRange}`);
-    const {
-      data: {
-        chess: {
-          titled: {
-            averageRapidRating = 0,
-            averageBlitzRating = 0,
-            averageBulletRating = 0,
-            maxRapidRating = 0,
-            maxBlitzRating = 0,
-            maxBulletRating = 0,
-            total = 0,
-            players = [],
+export const getServerSideProps: GetServerSideProps<TitledPageProperties> =
+  async (context: GetServerSidePropsContext) => {
+    const title: ChessTitle = resolveQuery(
+      context.query,
+      'title',
+      'GM'
+    ) as ChessTitle;
+    const timeRange: TimeRange = resolveQuery(
+      context.query,
+      'timeRange',
+      'year'
+    ) as TimeRange;
+    try {
+      const response = await apolloClient.query<{
+        chess: { titled: TitledPageProperties };
+      }>({
+        query,
+        variables: { title, timeRange },
+      });
+      logger.info(`getServerSideProps title=${title} timeRange=${timeRange}`);
+      const {
+        data: {
+          chess: {
+            titled: {
+              averageRapidRating = 0,
+              averageBlitzRating = 0,
+              averageBulletRating = 0,
+              maxRapidRating = 0,
+              maxBlitzRating = 0,
+              maxBulletRating = 0,
+              total = 0,
+              players = [],
+            },
           },
         },
-      },
-    } = response;
-    return {
-      props: {
-        title,
-        timeRange,
-        averageRapidRating,
-        averageBlitzRating,
-        averageBulletRating,
-        maxRapidRating,
-        maxBlitzRating,
-        maxBulletRating,
-        total,
-        players,
-      },
-    };
-  } catch (error) {
-    logger.error(
-      `getServerSideProps title=${title} timeRange=${timeRange} error=${error}`
-    );
-    return {
-      props: {
-        title,
-        timeRange,
-        averageRapidRating: 0,
-        averageBlitzRating: 0,
-        averageBulletRating: 0,
-        maxRapidRating: 0,
-        maxBlitzRating: 0,
-        maxBulletRating: 0,
-        total: 0,
-        players: [],
-      },
-    };
-  }
-};
+      } = response;
+      return {
+        props: {
+          title,
+          timeRange,
+          averageRapidRating,
+          averageBlitzRating,
+          averageBulletRating,
+          maxRapidRating,
+          maxBlitzRating,
+          maxBulletRating,
+          total,
+          players,
+        },
+      };
+    } catch (error) {
+      logger.error(
+        `getServerSideProps title=${title} timeRange=${timeRange} error=${error}`
+      );
+      return {
+        props: {
+          title,
+          timeRange,
+          averageRapidRating: 0,
+          averageBlitzRating: 0,
+          averageBulletRating: 0,
+          maxRapidRating: 0,
+          maxBlitzRating: 0,
+          maxBulletRating: 0,
+          total: 0,
+          players: [],
+        },
+      };
+    }
+  };
 
 export default TitledPage;

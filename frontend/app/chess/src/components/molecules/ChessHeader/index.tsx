@@ -88,8 +88,7 @@ export const ChessHeader: React.FC<ChessHeaderProperties> = ({
             )}
             <Link
               href={`https://www.chess.com/member/${username}`}
-              target="_blank"
-            >
+              target="_blank">
               <Text className="text-lg uppercase md:text-2xl">{username}</Text>
             </Link>
           </Heading>

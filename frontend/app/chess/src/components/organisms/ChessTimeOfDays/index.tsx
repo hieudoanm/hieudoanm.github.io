@@ -53,8 +53,7 @@ const ChessGamesByTimeOfDays: React.FC<{ insights: Insights }> = ({
                 cy="50%"
                 labelLine={false}
                 startAngle={-270}
-                label={customLabel(data, total)}
-              >
+                label={customLabel(data, total)}>
                 {data.map((entry, index) => (
                   <Cell
                     key={`cell-${entry.name}`}

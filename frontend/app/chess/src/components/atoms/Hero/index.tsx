@@ -25,8 +25,7 @@ export const Hero: React.FC = () => {
   return (
     <div
       className="h-screen bg-cover bg-right-top"
-      style={{ backgroundImage: `url(${hero.src})` }}
-    >
+      style={{ backgroundImage: `url(${hero.src})` }}>
       <div className="flex h-full items-center justify-center border-b bg-teal-500/50">
         <Card className="border border-gray-200 shadow">
           <CardHeader>
@@ -41,8 +40,7 @@ export const Hero: React.FC = () => {
                 onSubmit={(event: FormEvent) => {
                   event.preventDefault();
                   router.push(`/${encodeURIComponent(username)}`);
-                }}
-              >
+                }}>
                 <FormLabel className="truncate">
                   Search with chess.com username
                 </FormLabel>

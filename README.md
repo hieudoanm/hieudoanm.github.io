@@ -8,8 +8,8 @@
 
 ## Projects
 
+- `broca`: Languages Detection
 - `chess`: Titled Players Rating
-- `languages`: Detection
 
 ## Techstack
 
@@ -24,7 +24,7 @@
 | 05  |                | Unit Test     | [Node.js][node]  | [jest][jest]                     | [Meta][meta]           |
 | 06  |                | Build         | [Node.js][node]  | [turbo][turbo]                   | [Vercel][vercel]       |
 | 07  |                | Formatter     | [Node.js][node]  | [biome][biome]                   |                        |
-| 08  |                | Documentation | [Node.js][node]  | [docusaurus]                     | [Meta][meta]           |
+| 08  |                | Documentation | [Node.js][node]  | [docusaurus][docusaurus]         | [Meta][meta]           |
 | 09  | `Front-end`    | Language      | [Node.js][node]  | [typescript][typescript]         | [Microsoft][microsoft] |
 | 10  |                | CSS[^15]      | [Node.js][node]  | [tailwindcss][tailwindcss]       |                        |
 | 11  |                | Components    | [Node.js][node]  | [chakra.ui][chakra-ui]           |                        |
@@ -47,8 +47,8 @@
 | 28  |                | IaC[^6]       |                  | [terraform][terraform]           | [HashiCorp][hashicorp] |
 | 29  |                | Secrets       |                  | [vault][vault]                   | [HashiCorp][hashicorp] |
 | 31  |                | PaaS[^7]      |                  | [render][render]                 |                        |
-| 30  |                | BaaS          |                  | [vercel][vercel]                 | [Vercel][vercel]       |
-| 32  |                | BaaS[^10]     |                  | [supabase][supabase]             |                        |
+| 30  |                | BaaS[^10]     |                  | [vercel][vercel]                 | [Vercel][vercel]       |
+| 32  |                | BaaS          |                  | [supabase][supabase]             |                        |
 
 ### Alternative
 

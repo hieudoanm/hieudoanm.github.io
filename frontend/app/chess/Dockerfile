@@ -4,7 +4,7 @@ LABEL author="hieudoanm"
 LABEL maintainer="hieumdoan@gmail.com"
 LABEL version="1.0"
 
-ENV PORT=8080
+ENV PORT=3000
 
 RUN mkdir /home/node/app
 WORKDIR /home/node/app

@@ -73,8 +73,7 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = ({ openings = [] }) => {
                             <Td>
                               <Text
                                 title={name}
-                                className="w-32 truncate md:w-auto"
-                              >
+                                className="w-32 truncate md:w-auto">
                                 {name}
                               </Text>
                             </Td>
@@ -108,22 +107,21 @@ const query = gql`
   }
 `;
 
-export const getServerSideProps: GetServerSideProps<
-  OpeningsPageProperties
-> = async () => {
-  try {
-    const {
-      data: {
-        chess: { openings = [] },
-      },
-    } = await apolloClient.query<{ chess: { openings: ChessOpening[] } }>({
-      query,
-    });
-    return { props: { openings } };
-  } catch (error) {
-    logger.error(`getServerSideProps error=${error}`);
-    return { props: { openings: [] } };
-  }
-};
+export const getServerSideProps: GetServerSideProps<OpeningsPageProperties> =
+  async () => {
+    try {
+      const {
+        data: {
+          chess: { openings = [] },
+        },
+      } = await apolloClient.query<{ chess: { openings: ChessOpening[] } }>({
+        query,
+      });
+      return { props: { openings } };
+    } catch (error) {
+      logger.error(`getServerSideProps error=${error}`);
+      return { props: { openings: [] } };
+    }
+  };
 
 export default OpeningsPage;

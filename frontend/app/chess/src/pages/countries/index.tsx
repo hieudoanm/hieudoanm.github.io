@@ -143,8 +143,7 @@ const CountriesMaps: React.FC<{ countries: Country[] }> = ({
                 <Tooltip label={label} key={color} placement="left">
                   <Box
                     bgColor={color}
-                    className="aspect-square w-4 cursor-pointer overflow-hidden rounded text-white"
-                  >
+                    className="aspect-square w-4 cursor-pointer overflow-hidden rounded text-white">
                     <Text color={color}>{color}</Text>
                   </Box>
                 </Tooltip>
@@ -200,22 +199,21 @@ const query: DocumentNode = gql`
   }
 `;
 
-export const getServerSideProps: GetServerSideProps<
-  CountriesPageProperties
-> = async () => {
-  try {
-    const {
-      data: {
-        chess: { countries = [] },
-      },
-    } = await apolloClient.query<{ chess: { countries: Country[] } }>({
-      query,
-    });
-    return { props: { countries } };
-  } catch (error) {
-    logger.error(`getServerSideProps error=${error}`);
-    return { props: { countries: [] } };
-  }
-};
+export const getServerSideProps: GetServerSideProps<CountriesPageProperties> =
+  async () => {
+    try {
+      const {
+        data: {
+          chess: { countries = [] },
+        },
+      } = await apolloClient.query<{ chess: { countries: Country[] } }>({
+        query,
+      });
+      return { props: { countries } };
+    } catch (error) {
+      logger.error(`getServerSideProps error=${error}`);
+      return { props: { countries: [] } };
+    }
+  };
 
 export default CountriesPage;

@@ -96,8 +96,7 @@ const GamesPage: NextPage<{ username: string; games: ChessGame[] }> = ({
               <Box
                 display={'flex'}
                 alignItems={'center'}
-                justifyContent={'space-between'}
-              >
+                justifyContent={'space-between'}>
                 <Heading className="text-xl">Games ({games.length})</Heading>
                 <Button colorScheme="teal" onClick={syncGames}>
                   <Icon as={FaSync} />
@@ -129,16 +128,14 @@ const GamesPage: NextPage<{ username: string; games: ChessGame[] }> = ({
                               href={`/${whiteUsername}`}
                               className={`block ${
                                 whiteUsername === username ? FONT_SEMIBOLD : ''
-                              }`}
-                            >
+                              }`}>
                               {whiteUsername} ({whiteRating})
                             </Link>
                             <Link
                               href={`/${blackUsername}`}
                               className={`block ${
                                 blackUsername === username ? FONT_SEMIBOLD : ''
-                              }`}
-                            >
+                              }`}>
                               {blackUsername} ({blackRating})
                             </Link>
                           </div>
@@ -148,15 +145,13 @@ const GamesPage: NextPage<{ username: string; games: ChessGame[] }> = ({
                             <p
                               className={
                                 whiteUsername === username ? FONT_SEMIBOLD : ''
-                              }
-                            >
+                              }>
                               {getPoint(whiteResult)}
                             </p>
                             <p
                               className={
                                 blackUsername === username ? FONT_SEMIBOLD : ''
-                              }
-                            >
+                              }>
                               {getPoint(blackResult)}
                             </p>
                           </div>

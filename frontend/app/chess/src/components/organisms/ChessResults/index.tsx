@@ -43,8 +43,7 @@ const ChessResult: React.FC<{
                 labelLine={false}
                 startAngle={-270}
                 fillOpacity={0.75}
-                label={customLabel(data, total)}
-              >
+                label={customLabel(data, total)}>
                 {data.map((entry, index) => (
                   <Cell
                     key={`cell-${entry.name}`}

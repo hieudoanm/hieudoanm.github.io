@@ -53,8 +53,7 @@ const ChessGamesByDaysOfWeek: React.FC<{ insights: Insights }> = ({
                 labelLine={false}
                 startAngle={-270}
                 fillOpacity={0.75}
-                label={customLabel(pieData, total)}
-              >
+                label={customLabel(pieData, total)}>
                 {pieData.map((entry, index) => (
                   <Cell
                     key={`cell-${entry.name}`}

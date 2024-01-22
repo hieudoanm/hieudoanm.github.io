@@ -336,8 +336,7 @@ const CountryPage: NextPage<CountryPageProperties> = ({
                       <Box
                         display={'flex'}
                         alignItems={'center'}
-                        justifyContent={'space-between'}
-                      >
+                        justifyContent={'space-between'}>
                         <Link href={`/titled/${title}`}>
                           <div className="inline-flex items-center gap-x-2">
                             <Badge colorScheme="red">{title}</Badge>
@@ -407,64 +406,63 @@ const query = gql`
   }
 `;
 
-export const getServerSideProps: GetServerSideProps<
-  CountryPageProperties
-> = async (context: GetServerSidePropsContext) => {
-  const code: string = context.query.code?.toString() ?? '';
-  try {
-    const {
-      data: {
-        chess: {
-          country: {
-            averageRapidRating = 0,
-            averageBlitzRating = 0,
-            averageBulletRating = 0,
-            maxRapidRating = 0,
-            maxBlitzRating = 0,
-            maxBulletRating = 0,
-            total = 0,
-            players = [],
-            titles = [],
+export const getServerSideProps: GetServerSideProps<CountryPageProperties> =
+  async (context: GetServerSidePropsContext) => {
+    const code: string = context.query.code?.toString() ?? '';
+    try {
+      const {
+        data: {
+          chess: {
+            country: {
+              averageRapidRating = 0,
+              averageBlitzRating = 0,
+              averageBulletRating = 0,
+              maxRapidRating = 0,
+              maxBlitzRating = 0,
+              maxBulletRating = 0,
+              total = 0,
+              players = [],
+              titles = [],
+            },
           },
         },
-      },
-    } = await apolloClient.query<{
-      chess: { country: CountryPageProperties };
-    }>({
-      query,
-      variables: { code },
-    });
-    return {
-      props: {
-        countryCode: code,
-        averageRapidRating,
-        averageBlitzRating,
-        averageBulletRating,
-        maxRapidRating,
-        maxBlitzRating,
-        maxBulletRating,
-        total,
-        players,
-        titles,
-      },
-    };
-  } catch (error) {
-    logger.error(`getServerSideProps error=${error}`);
-    return {
-      props: {
-        countryCode: code,
-        averageRapidRating: 0,
-        averageBlitzRating: 0,
-        averageBulletRating: 0,
-        maxRapidRating: 0,
-        maxBlitzRating: 0,
-        maxBulletRating: 0,
-        total: 0,
-        players: [],
-        titles: [],
-      },
-    };
-  }
-};
+      } = await apolloClient.query<{
+        chess: { country: CountryPageProperties };
+      }>({
+        query,
+        variables: { code },
+      });
+      return {
+        props: {
+          countryCode: code,
+          averageRapidRating,
+          averageBlitzRating,
+          averageBulletRating,
+          maxRapidRating,
+          maxBlitzRating,
+          maxBulletRating,
+          total,
+          players,
+          titles,
+        },
+      };
+    } catch (error) {
+      logger.error(`getServerSideProps error=${error}`);
+      return {
+        props: {
+          countryCode: code,
+          averageRapidRating: 0,
+          averageBlitzRating: 0,
+          averageBulletRating: 0,
+          maxRapidRating: 0,
+          maxBlitzRating: 0,
+          maxBulletRating: 0,
+          total: 0,
+          players: [],
+          titles: [],
+        },
+      };
+    }
+  };
 
 export default CountryPage;

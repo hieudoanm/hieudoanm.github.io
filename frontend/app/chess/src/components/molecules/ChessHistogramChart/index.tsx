@@ -27,8 +27,7 @@ export const ChessHistogramChart: React.FC<{
               width={1600}
               height={900}
               barCategoryGap={1}
-              data={data}
-            >
+              data={data}>
               <XAxis dataKey="label" scale="band" />
               <Tooltip />
               <Bar dataKey="value" fill={TEAL_COLOR} />
