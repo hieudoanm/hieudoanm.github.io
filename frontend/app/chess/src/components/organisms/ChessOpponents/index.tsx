@@ -59,7 +59,8 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                   <button
                     type="button"
                     className="cursor-pointer capitalize"
-                    onClick={() => setSort({ by: 'games' })}>
+                    onClick={() => setSort({ by: 'games' })}
+                  >
                     Games
                   </button>
                 </Th>
@@ -68,13 +69,15 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                     <button
                       type="button"
                       className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'win' })}>
+                      onClick={() => setSort({ by: 'win' })}
+                    >
                       Win
                     </button>
                     <button
                       type="button"
                       className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'winPercentage' })}>
+                      onClick={() => setSort({ by: 'winPercentage' })}
+                    >
                       (%)
                     </button>
                   </div>
@@ -84,13 +87,15 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                     <button
                       type="button"
                       className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'draw' })}>
+                      onClick={() => setSort({ by: 'draw' })}
+                    >
                       Draw
                     </button>
                     <button
                       type="button"
                       className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'drawPercentage' })}>
+                      onClick={() => setSort({ by: 'drawPercentage' })}
+                    >
                       (%)
                     </button>
                   </div>
@@ -100,13 +105,15 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                     <button
                       type="button"
                       className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'loss' })}>
+                      onClick={() => setSort({ by: 'loss' })}
+                    >
                       Loss
                     </button>
                     <button
                       type="button"
                       className="cursor-pointer capitalize"
-                      onClick={() => setSort({ by: 'lossPercentage' })}>
+                      onClick={() => setSort({ by: 'lossPercentage' })}
+                    >
                       (%)
                     </button>
                   </div>

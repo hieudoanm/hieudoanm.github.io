@@ -3,15 +3,15 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 
 export type CalendarPageProps = {
-  date: number;
-  month: number;
-  year: number;
+  date?: number;
+  month?: number;
+  year?: number;
 };
 
 export const CalendarPage: NextPage<CalendarPageProps> = ({
-  date,
-  month,
-  year,
+  date = new Date().getDate(),
+  month = new Date().getMonth(),
+  year = new Date().getFullYear(),
 }) => {
   return (
     <>

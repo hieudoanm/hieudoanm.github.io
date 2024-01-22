@@ -46,7 +46,8 @@ const AuthButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
             size={size}
             as={Button}
             colorScheme="teal"
-            leftIcon={<Icon as={FaCog} />}>
+            leftIcon={<Icon as={FaCog} />}
+          >
             Settings
           </MenuButton>
           <MenuList>
@@ -59,7 +60,8 @@ const AuthButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
             <MenuItem>
               <Link
                 href="/api/auth/logout"
-                className="flex items-center gap-x-2">
+                className="flex items-center gap-x-2"
+              >
                 <Icon as={FaSignOutAlt} />
                 <Text>Sign Out</Text>
               </Link>
@@ -71,7 +73,8 @@ const AuthButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
           <Button
             size={size}
             colorScheme="teal"
-            className="flex w-full items-center gap-x-2">
+            className="flex w-full items-center gap-x-2"
+          >
             <Icon as={FaSignInAlt} />
             <Text>Sign In</Text>
           </Button>
@@ -86,11 +89,13 @@ const GitHubButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
     <Link
       href="https://github.com/hieudoanm"
       className="font-bold"
-      target="_blank">
+      target="_blank"
+    >
       <Button
         size={size}
         colorScheme="teal"
-        className="flex w-full items-center gap-x-2">
+        className="flex w-full items-center gap-x-2"
+      >
         <Icon as={FaGithub} />
         <Text>GitHub</Text>
       </Button>
@@ -176,7 +181,8 @@ export const Navbar: React.FC = () => {
                       size={'sm'}
                       as={Button}
                       colorScheme="teal"
-                      leftIcon={<Icon as={FaTools} />}>
+                      leftIcon={<Icon as={FaTools} />}
+                    >
                       <Text>Tools</Text>
                     </MenuButton>
                     <MenuList>

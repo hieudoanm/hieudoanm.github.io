@@ -60,7 +60,8 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                 display="flex"
                 alignItems="center"
                 justifyContent="space-between"
-                className="gap-x-4 md:gap-x-8">
+                className="gap-x-4 md:gap-x-8"
+              >
                 <Heading as="h1" className="text-xl">
                   Streamers ({total})
                 </Heading>
@@ -68,7 +69,8 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                   display="flex"
                   alignItems="center"
                   justifyContent="space-between"
-                  className="gap-x-2 md:gap-x-4">
+                  className="gap-x-2 md:gap-x-4"
+                >
                   <Select
                     id="title"
                     name="title"
@@ -82,7 +84,8 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                         pathname: router.pathname,
                         query: { ...router.query, title: newTitle },
                       });
-                    }}>
+                    }}
+                  >
                     <option value="GM">GM</option>
                     <option value="IM">IM</option>
                     <option value="FM">FM</option>
@@ -106,7 +109,8 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                         pathname: router.pathname,
                         query: { ...router.query, country: newCountry },
                       });
-                    }}>
+                    }}
+                  >
                     {countries.map(({ countryCode, country }) => {
                       return (
                         <option key={countryCode} value={countryCode}>
@@ -186,7 +190,8 @@ const StreamersPage: NextPage<StreamersPageProperties> = ({
                               <Button
                                 size="sm"
                                 type="button"
-                                colorScheme="teal">
+                                colorScheme="teal"
+                              >
                                 <Icon as={FaTwitch} />
                               </Button>
                             </Link>
@@ -246,34 +251,35 @@ const query: DocumentNode = gql`
   }
 `;
 
-export const getServerSideProps: GetServerSideProps<StreamersPageProperties> =
-  async (context: GetServerSidePropsContext) => {
-    const title = resolveQuery(context.query, 'title', 'GM') as ChessTitle;
-    const country = resolveQuery(context.query, 'country');
-    try {
-      const response = await apolloClient.query<{
-        chess: { streamers: StreamersPageProperties };
-      }>({
-        query,
-        variables: { title, country },
-      });
-      logger.info(`getServerSideProps response=${response}`);
-      const {
-        data: {
-          chess: {
-            streamers: { total = 0, countries = [], players = [] },
-          },
+export const getServerSideProps: GetServerSideProps<
+  StreamersPageProperties
+> = async (context: GetServerSidePropsContext) => {
+  const title = resolveQuery(context.query, 'title', 'GM') as ChessTitle;
+  const country = resolveQuery(context.query, 'country');
+  try {
+    const response = await apolloClient.query<{
+      chess: { streamers: StreamersPageProperties };
+    }>({
+      query,
+      variables: { title, country },
+    });
+    logger.info(`getServerSideProps response=${response}`);
+    const {
+      data: {
+        chess: {
+          streamers: { total = 0, countries = [], players = [] },
         },
-      } = response;
-      return { props: { title, country, total, countries, players } };
-    } catch (error) {
-      logger.error(
-        `getServerSideProps title=${title} country=${country} error=${error}`
-      );
-      return {
-        props: { title, country, total: 0, players: [], countries: [] },
-      };
-    }
-  };
+      },
+    } = response;
+    return { props: { title, country, total, countries, players } };
+  } catch (error) {
+    logger.error(
+      `getServerSideProps title=${title} country=${country} error=${error}`
+    );
+    return {
+      props: { title, country, total: 0, players: [], countries: [] },
+    };
+  }
+};
 
 export default StreamersPage;

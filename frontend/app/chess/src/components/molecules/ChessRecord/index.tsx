@@ -31,7 +31,8 @@ const renderCustomizedLabel = ({
       fill="white"
       fontSize={'12px'}
       textAnchor={x > cx ? 'start' : 'end'}
-      dominantBaseline="central">
+      dominantBaseline="central"
+    >
       {`${(percent * 100).toFixed(0)}%`}
     </text>
   );
@@ -68,7 +69,8 @@ export const ChessRecord: React.FC<{
                   labelLine={false}
                   label={renderCustomizedLabel}
                   outerRadius={60}
-                  startAngle={-270}>
+                  startAngle={-270}
+                >
                   {data.map(({ color = '#718096', name = 'name' }) => (
                     <Cell key={`cell-${name}`} fill={color} />
                   ))}

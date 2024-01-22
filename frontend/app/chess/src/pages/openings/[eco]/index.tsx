@@ -106,23 +106,24 @@ const query = gql`
   }
 `;
 
-export const getServerSideProps: GetServerSideProps<OpeningPageProperties> =
-  async (context: GetServerSidePropsContext) => {
-    const eco: string = context.query.eco?.toString() ?? '';
-    try {
-      const {
-        data: {
-          chess: { openings = [] },
-        },
-      } = await apolloClient.query<{ chess: { openings: ChessOpening[] } }>({
-        query,
-        variables: { eco },
-      });
-      return { props: { eco, openings } };
-    } catch (error) {
-      logger.error(`getServerSideProps error=${error}`);
-      return { props: { eco, openings: [] } };
-    }
-  };
+export const getServerSideProps: GetServerSideProps<
+  OpeningPageProperties
+> = async (context: GetServerSidePropsContext) => {
+  const eco: string = context.query.eco?.toString() ?? '';
+  try {
+    const {
+      data: {
+        chess: { openings = [] },
+      },
+    } = await apolloClient.query<{ chess: { openings: ChessOpening[] } }>({
+      query,
+      variables: { eco },
+    });
+    return { props: { eco, openings } };
+  } catch (error) {
+    logger.error(`getServerSideProps error=${error}`);
+    return { props: { eco, openings: [] } };
+  }
+};
 
 export default OpeningPage;

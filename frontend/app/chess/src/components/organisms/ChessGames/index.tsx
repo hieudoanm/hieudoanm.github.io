@@ -110,7 +110,8 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
                 width={1600}
                 height={900}
                 barCategoryGap={1}
-                data={insights?.games?.periods ?? []}>
+                data={insights?.games?.periods ?? []}
+              >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="period" />
                 <YAxis />
@@ -161,7 +162,8 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
               <AreaChart
                 width={1600}
                 height={900}
-                data={insights?.accuracy?.periods ?? []}>
+                data={insights?.accuracy?.periods ?? []}
+              >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="period" />
                 <YAxis />
