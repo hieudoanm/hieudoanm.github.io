@@ -3,6 +3,7 @@ name: Continuous Delivery
 on:
   push:
     paths:
+      - package.json
       - backend/**
       - frontend/**
     branches:

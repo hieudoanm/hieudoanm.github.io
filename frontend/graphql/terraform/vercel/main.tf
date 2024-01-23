@@ -8,8 +8,8 @@ terraform {
 }
 
 resource "vercel_project" "graphql" {
-  name      = "hieudoanm"
-  framework = "nextjs"
+  name      = "graphql"
+  framework = "other"
   git_repository = {
     type = "github"
     repo = "hieudoanm/hieudoanm.github.io"
