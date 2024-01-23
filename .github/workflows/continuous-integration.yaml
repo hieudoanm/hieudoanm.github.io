@@ -21,12 +21,12 @@ jobs:
         services:
           - name: Back-end - API
             working-directory: backend/api
+          - name: Back-end - GraphQL
+            working-directory: backend/graphql
           - name: Front-end - App - Broca
             working-directory: frontend/app/broca
           - name: Front-end - App - Chess
             working-directory: frontend/app/chess
-          - name: Front-end - GraphQL
-            working-directory: frontend/graphql
           - name: Front-end - Mobile
             working-directory: frontend/mobile
           - name: Front-end - Web
