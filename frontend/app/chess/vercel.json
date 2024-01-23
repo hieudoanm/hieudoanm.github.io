@@ -1,0 +1,5 @@
+{
+  "buildCommand": "yarn build --filter=@hieudoanm/chess",
+  "framework": "nextjs",
+  "installCommand": "yarn install"
+}
