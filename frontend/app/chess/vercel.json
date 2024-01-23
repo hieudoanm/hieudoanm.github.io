@@ -2,6 +2,6 @@
   "buildCommand": "yarn build",
   "framework": "nextjs",
   "installCommand": "yarn install",
-  "regions": ["sin1", "hkg1"],
-  "functionFailoverRegions": ["hnd1", "icn1", "kix1", "syd1"]
+  "regions": ["sin1"],
+  "functionFailoverRegions": ["hkg1", "hnd1", "icn1", "kix1", "syd1"]
 }

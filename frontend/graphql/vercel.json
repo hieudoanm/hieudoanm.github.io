@@ -1,4 +1,9 @@
 {
+  "buildCommand": "yarn build",
+  "framework": "other",
   "public": true,
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
+  "installCommand": "yarn install",
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }],
+  "regions": ["sin1"],
+  "functionFailoverRegions": ["hkg1", "hnd1", "icn1", "kix1", "syd1"]
 }
