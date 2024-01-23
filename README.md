@@ -15,40 +15,40 @@
 
 ### Main
 
-| No  | Supersector    | Sector        | Runtime          | Technology                       | Company                |
-| --- | -------------- | ------------- | ---------------- | -------------------------------- | ---------------------- |
-| 01  | `Development`  | VC[^9]        |                  | [git][git]                       |                        |
-| 02  |                | VC Service    |                  | [github][github]                 | [Microsoft][microsoft] |
-| 03  |                | IDE[^8]       | [Node.js][node]  | [vscode][vscode]                 | [Microsoft][microsoft] |
-| 04  |                | PM[^13]       | [Node.js][node]  | [yarn][yarn]                     |                        |
-| 05  |                | Unit Test     | [Node.js][node]  | [jest][jest]                     | [Meta][meta]           |
-| 06  |                | Build         | [Node.js][node]  | [turbo][turbo]                   | [Vercel][vercel]       |
-| 07  |                | Formatter     | [Node.js][node]  | [biome][biome]                   |                        |
-| 08  |                | Documentation | [Node.js][node]  | [docusaurus][docusaurus]         | [Meta][meta]           |
-| 09  | `Front-end`    | Language      | [Node.js][node]  | [typescript][typescript]         | [Microsoft][microsoft] |
-| 10  |                | CSS[^15]      | [Node.js][node]  | [tailwindcss][tailwindcss]       |                        |
-| 11  |                | Components    | [Node.js][node]  | [chakra.ui][chakra-ui]           |                        |
-| 12  |                | Web           | [Node.js][node]  | [next.js][next]                  | [Vercel][vercel]       |
-| 13  |                | Mobile        | [Node.js][node]  | [react.native][react-native]     | [Meta][meta]           |
-| 14  |                | BFF[^1]       | [Node.js][node]  | [graphql][graphql]               | [Meta][meta]           |
-| 15  | `Back-end`     | Framework     | [Node.js][node]  | [nest.js][nest]                  |                        |
-| 16  |                | ORM[^2]       | [Node.js][node]  | [prisma][prisma]                 |                        |
-| 17  |                | Database      | SQL[^14]         | [postgresql][postgresql]         |                        |
-| 18  | `Data Science` | PM            | [Python][python] | [conda][conda]                   |                        |
-| 19  |                | Notebook      | [Python][python] | [jupyter][jupyter]               |                        |
-| 20  |                | Analysis      | [Python][python] | [pandas][pandas]                 |                        |
-| 21  |                | Visualiser    | [Python][python] | [matplotlib][matplotlib]         |                        |
-| 22  |                | ML[^11]       | [Python][python] | [keras][keras]                   |                        |
-| 23  |                | API[^12]      | [Python][python] | [fastapi][fastapi]               |                        |
-| 24  |                | Language      | [Python][python] | [nltk][nltk]                     |                        |
-| 25  | `DevOps`       | Container     |                  | [docker][docker]                 |                        |
-| 26  |                | Orchestration |                  | [kubernetes][kubernetes]         |                        |
-| 27  |                | CI/CD[^3]     |                  | [github.actions][github-actions] | [Microsoft][microsoft] |
-| 28  |                | IaC[^6]       |                  | [terraform][terraform]           | [HashiCorp][hashicorp] |
-| 29  |                | Secrets       |                  | [vault][vault]                   | [HashiCorp][hashicorp] |
-| 31  |                | PaaS[^7]      |                  | [render][render]                 |                        |
-| 30  |                | BaaS[^10]     |                  | [vercel][vercel]                 | [Vercel][vercel]       |
-| 32  |                | BaaS          |                  | [supabase][supabase]             |                        |
+| No  | Supersector    | Sector         | Runtime          | Technology                       | Maintainer             |
+| --- | -------------- | -------------- | ---------------- | -------------------------------- | ---------------------- |
+| 01  | `Development`  | VC[^9] Service | [git][git]       | [github][github]                 | [Microsoft][microsoft] |
+| 02  | `Development`  | IDE[^8]        | [node.js][node]  | [vscode][vscode]                 | [Microsoft][microsoft] |
+| 03  | `Development`  | PM[^13]        | [node.js][node]  | [yarn][yarn]                     |                        |
+| 04  | `Development`  | Unit Test      | [node.js][node]  | [jest][jest]                     | [Meta][meta]           |
+| 05  | `Development`  | Build          | [node.js][node]  | [turbo][turbo]                   | [Vercel][vercel]       |
+| 06  | `Development`  | Formatter      | [node.js][node]  | [biome][biome]                   |                        |
+| 07  | `Development`  | Documentation  | [node.js][node]  | [docusaurus][docusaurus]         | [Meta][meta]           |
+| 08  | `Front-end`    | Language       | [node.js][node]  | [typescript][typescript]         | [Microsoft][microsoft] |
+| 09  | `Front-end`    | CSS[^15]       | [node.js][node]  | [tailwindcss][tailwindcss]       |                        |
+| 10  | `Front-end`    | Components     | [node.js][node]  | [chakra.ui][chakra-ui]           |                        |
+| 11  | `Front-end`    | Web            | [node.js][node]  | [next.js][next]                  | [Vercel][vercel]       |
+| 12  | `Front-end`    | Mobile         | [node.js][node]  | [react.native][react-native]     | [Meta][meta]           |
+| 13  | `Front-end`    | Desktop        | [node.js][node]  | [tauri][tauri]                   |                        |
+| 14  | `Front-end`    | BFF[^1]        | [node.js][node]  | [graphql][graphql]               | [Meta][meta]           |
+| 15  | `Back-end`     | Framework      | [node.js][node]  | [nest.js][nest]                  |                        |
+| 16  | `Back-end`     | ORM[^2]        | [node.js][node]  | [prisma][prisma]                 |                        |
+| 17  | `Back-end`     | Database       | SQL[^14]         | [postgresql][postgresql]         |                        |
+| 18  | `Data Science` | PM             | [python][python] | [conda][conda]                   |                        |
+| 19  | `Data Science` | Notebook       | [python][python] | [jupyter][jupyter]               |                        |
+| 20  | `Data Science` | Analysis       | [python][python] | [pandas][pandas]                 |                        |
+| 21  | `Data Science` | Visualiser     | [python][python] | [matplotlib][matplotlib]         |                        |
+| 22  | `Data Science` | ML[^11]        | [python][python] | [keras][keras]                   |                        |
+| 23  | `Data Science` | API[^12]       | [python][python] | [fastapi][fastapi]               |                        |
+| 24  | `Data Science` | Language       | [python][python] | [nltk][nltk]                     |                        |
+| 25  | `DevOps`       | Container      |                  | [docker][docker]                 |                        |
+| 26  | `DevOps`       | Orchestration  |                  | [kubernetes][kubernetes]         |                        |
+| 27  | `DevOps`       | CI/CD[^3]      |                  | [github.actions][github-actions] | [Microsoft][microsoft] |
+| 28  | `DevOps`       | IaC[^6]        |                  | [terraform][terraform]           | [HashiCorp][hashicorp] |
+| 29  | `DevOps`       | Secrets        |                  | [vault][vault]                   | [HashiCorp][hashicorp] |
+| 30  | `DevOps`       | Serverless     |                  | [vercel][vercel]                 | [Vercel][vercel]       |
+| 31  | `DevOps`       | PaaS[^7]       |                  | [render][render]                 |                        |
+| 32  | `DevOps`       | BaaS[^10]      |                  | [supabase][supabase]             |                        |
 
 ### Alternative
 
@@ -126,6 +126,7 @@
 [render]: https://render.com
 [supabase]: https://supabase.com
 [tailwindcss]: https://tailwindcss.com
+[tauri]: https://tauri.app
 [tensorflow]: https://www.tensorflow.org
 [terraform]: https://www.terraform.io
 [turbo]: https://turbo.build

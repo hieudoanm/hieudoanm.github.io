@@ -7,27 +7,27 @@ terraform {
   }
 }
 
-resource "vercel_project" "chess_web" {
-  name      = "chessinsightsweb"
+resource "vercel_project" "chess" {
+  name      = "chess"
   framework = "nextjs"
   git_repository = {
     type = "github"
-    repo = "hieudoanm/hieudoanm"
+    repo = "hieudoanm/hieudoanm.github.io"
   }
 }
 
-data "vercel_project_directory" "chess_web" {
-  path = "projects/chess.com/web"
+data "vercel_project_directory" "chess" {
+  path = "frontend/app/chess"
 }
 
-resource "vercel_deployment" "chess_web" {
-  project_id  = vercel_project.chess_web.id
-  files       = data.vercel_project_directory.chess_web.files
-  path_prefix = "projects/chess.com/web"
+resource "vercel_deployment" "chess" {
+  project_id  = vercel_project.chess.id
+  files       = data.vercel_project_directory.chess.files
+  path_prefix = "frontend/app/chess"
   production  = true
 }
 
-resource "vercel_project_domain" "chess_web" {
-  project_id = vercel_project.chess_web.id
-  domain     = "chessinsightsweb.vercel.app"
+resource "vercel_project_domain" "chess" {
+  project_id = vercel_project.chess.id
+  domain     = "chessinsights.vercel.app"
 }
