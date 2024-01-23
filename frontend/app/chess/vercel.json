@@ -1,5 +1,7 @@
 {
-  "buildCommand": "yarn build --filter=@hieudoanm/chess",
+  "buildCommand": "yarn build",
   "framework": "nextjs",
-  "installCommand": "yarn install"
+  "installCommand": "yarn install",
+  "regions": ["sin1", "hkg1"],
+  "functionFailoverRegions": ["hnd1", "icn1", "kix1", "syd1"]
 }
