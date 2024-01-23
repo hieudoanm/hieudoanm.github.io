@@ -22,6 +22,8 @@ jobs:
             working-directory: frontend/app/chess
           - name: Front-end - GraphQL
             working-directory: frontend/graphql
+          - name: Front-end - Mobile
+            working-directory: frontend/mobile
           - name: Front-end - Web
             working-directory: frontend/web
     name: Continuous Delivery
@@ -42,6 +44,6 @@ jobs:
       - name: Unit Tests
         run: yarn test -u
         working-directory: ${{ matrix.services.working-directory }}
-      - name: Build Production
+      - name: Build
         run: yarn build
         working-directory: ${{ matrix.services.working-directory }}
