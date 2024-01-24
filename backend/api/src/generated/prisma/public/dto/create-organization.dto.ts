@@ -1,5 +1,11 @@
+
+
+
+
+
+
 export class CreateOrganizationDto {
   code: string;
-  name?: string;
-  createdAt?: Date;
+name?: string;
+createdAt?: Date;
 }

@@ -1,1 +1,5 @@
-export class ConnectLanguagesInCountriesDto {}
+
+  export class ConnectLanguagesInCountriesDto {
+    
+  }
+  

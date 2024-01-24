@@ -1,3 +1,5 @@
-export class ConnectChessGameDto {
-  id: string;
-}
+
+  export class ConnectChessGameDto {
+    id: string;
+  }
+  

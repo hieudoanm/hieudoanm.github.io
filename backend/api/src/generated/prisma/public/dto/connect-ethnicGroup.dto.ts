@@ -1,3 +1,5 @@
-export class ConnectEthnicGroupDto {
-  id: number;
-}
+
+  export class ConnectEthnicGroupDto {
+    id: number;
+  }
+  

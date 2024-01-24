@@ -1,3 +1,5 @@
-export class ConnectTarotCardDto {
-  id: string;
-}
+
+  export class ConnectTarotCardDto {
+    id: string;
+  }
+  

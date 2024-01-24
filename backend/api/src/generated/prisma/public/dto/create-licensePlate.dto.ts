@@ -1,6 +1,12 @@
+
+
+
+
+
+
 export class CreateLicensePlateDto {
   code: string;
-  name: string;
-  group: string;
-  createdAt?: Date;
+name: string;
+group: string;
+createdAt?: Date;
 }

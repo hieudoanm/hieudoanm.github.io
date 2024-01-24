@@ -1,1 +1,5 @@
-export class ConnectUnitedStatesCongressCommitteeDto {}
+
+  export class ConnectUnitedStatesCongressCommitteeDto {
+    
+  }
+  

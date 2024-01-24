@@ -1,3 +1,5 @@
-export class ConnectNewsSourceDto {
-  id: string;
-}
+
+  export class ConnectNewsSourceDto {
+    id: string;
+  }
+  

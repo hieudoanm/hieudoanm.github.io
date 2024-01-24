@@ -1,3 +1,5 @@
-export class ConnectLanguageDto {
-  code: string;
-}
+
+  export class ConnectLanguageDto {
+    code: string;
+  }
+  

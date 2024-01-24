@@ -1,1 +1,5 @@
-export class ConnectCurrenciesInCountriesDto {}
+
+  export class ConnectCurrenciesInCountriesDto {
+    
+  }
+  

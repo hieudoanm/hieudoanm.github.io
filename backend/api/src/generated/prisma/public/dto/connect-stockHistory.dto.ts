@@ -1,1 +1,5 @@
-export class ConnectStockHistoryDto {}
+
+  export class ConnectStockHistoryDto {
+    
+  }
+  

@@ -1,3 +1,5 @@
-export class ConnectCityDto {
-  id: number;
-}
+
+  export class ConnectCityDto {
+    id: number;
+  }
+  

@@ -1,5 +1,11 @@
+
+
+
+
+
+
 export class CreateLanguageDto {
   code: string;
-  name: string;
-  createdAt?: Date;
+name: string;
+createdAt?: Date;
 }

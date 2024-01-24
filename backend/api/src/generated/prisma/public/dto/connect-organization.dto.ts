@@ -1,3 +1,5 @@
-export class ConnectOrganizationDto {
-  code: string;
-}
+
+  export class ConnectOrganizationDto {
+    code: string;
+  }
+  

@@ -1,3 +1,5 @@
-export class ConnectUnitedStatesCongressMemberDto {
-  id: string;
-}
+
+  export class ConnectUnitedStatesCongressMemberDto {
+    id: string;
+  }
+  

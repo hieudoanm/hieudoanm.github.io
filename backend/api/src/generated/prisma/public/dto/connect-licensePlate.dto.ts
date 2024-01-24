@@ -1,3 +1,5 @@
-export class ConnectLicensePlateDto {
-  code: string;
-}
+
+  export class ConnectLicensePlateDto {
+    code: string;
+  }
+  

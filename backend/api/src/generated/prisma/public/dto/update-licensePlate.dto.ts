@@ -1,5 +1,11 @@
+
+
+
+
+
+
 export class UpdateLicensePlateDto {
   name?: string;
-  group?: string;
-  createdAt?: Date;
+group?: string;
+createdAt?: Date;
 }

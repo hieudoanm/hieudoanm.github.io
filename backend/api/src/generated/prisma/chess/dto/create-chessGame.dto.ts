@@ -1,4 +1,10 @@
+
+
+
+
+
+
 export class CreateChessGameDto {
   id: string;
-  createdAt?: Date;
+createdAt?: Date;
 }

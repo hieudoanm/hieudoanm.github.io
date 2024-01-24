@@ -1,4 +1,6 @@
-export class ConnectChessPlayerDto {
-  id?: number;
-  username?: string;
-}
+
+  export class ConnectChessPlayerDto {
+    id?: number;
+username?: string;
+  }
+  

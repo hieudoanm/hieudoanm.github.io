@@ -1,3 +1,5 @@
-export class ConnectQuoteDto {
-  id: string;
-}
+
+  export class ConnectQuoteDto {
+    id: string;
+  }
+  

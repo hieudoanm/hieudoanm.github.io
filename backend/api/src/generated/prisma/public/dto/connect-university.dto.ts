@@ -1,3 +1,5 @@
-export class ConnectUniversityDto {
-  rank: number;
-}
+
+  export class ConnectUniversityDto {
+    rank: number;
+  }
+  
