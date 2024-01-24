@@ -1,15 +1,13 @@
-
-import {ProgrammingLanguageType} from '@prisma/client'
-
+import { ProgrammingLanguageType } from '@hieudoanm/generated/prisma/public/client';
 
 export class ProgrammingLanguageDto {
-  language: string ;
-color: string  | null;
-type: ProgrammingLanguageType ;
-extensions: string[] ;
-aliases: string[] ;
-interpreters: string[] ;
-filenames: string[] ;
-createdAt: Date  | null;
-updatedAt: Date  | null;
+  language: string;
+  color: string | null;
+  type: ProgrammingLanguageType;
+  extensions: string[];
+  aliases: string[];
+  interpreters: string[];
+  filenames: string[];
+  createdAt: Date | null;
+  updatedAt: Date | null;
 }

@@ -1,5 +1,1 @@
-
-  export class ConnectChessStatsDto {
-    
-  }
-  
+export class ConnectChessStatsDto {}

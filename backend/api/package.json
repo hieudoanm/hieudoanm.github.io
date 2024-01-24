@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "prebuild": "rimraf dist && (yarn docs || true)",
-    "build": "nest build",
+    "build": "nest build && ./scripts/copy.sh",
     "format": "biome format --write ./src ./test",
     "start": "nest start",
     "dev": "yarn start:dev",

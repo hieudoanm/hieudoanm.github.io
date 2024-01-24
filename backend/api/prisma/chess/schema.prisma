@@ -21,6 +21,7 @@ generator jsonSchema {
 generator nestjsDto {
   provider     = "prisma-generator-nestjs-dto"
   output       = "../../src/generated/prisma/chess/dto"
+  reExport = true
   entitySuffix = "Dto"
 }
 
