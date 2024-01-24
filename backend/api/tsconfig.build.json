@@ -1,4 +1,12 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["node_modules", "test", "dist", "jest.config.ts", "**/*spec.ts"]
+  "exclude": [
+    "src/generated/prisma/chess/client",
+    "src/generated/prisma/public/client",
+    "node_modules",
+    "test",
+    "dist",
+    "jest.config.ts",
+    "**/*spec.ts"
+  ]
 }
