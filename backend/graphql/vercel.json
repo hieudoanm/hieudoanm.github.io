@@ -3,7 +3,5 @@
   "framework": null,
   "public": true,
   "installCommand": "yarn install",
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }],
-  "regions": ["sin1"],
-  "functionFailoverRegions": ["hkg1", "hnd1", "icn1", "kix1"]
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
 }

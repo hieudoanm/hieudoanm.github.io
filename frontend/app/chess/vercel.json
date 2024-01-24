@@ -1,7 +1,5 @@
 {
   "buildCommand": "yarn build",
   "framework": "nextjs",
-  "installCommand": "yarn install",
-  "regions": ["sin1"],
-  "functionFailoverRegions": ["hkg1", "hnd1", "icn1", "kix1"]
+  "installCommand": "yarn install"
 }
