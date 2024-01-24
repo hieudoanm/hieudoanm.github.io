@@ -30,7 +30,7 @@
     "chess.js": "1.0.0-beta.7",
     "chroma-js": "2.4.2",
     "d3": "7.8.5",
-    "framer-motion": "11.0.1",
+    "framer-motion": "11.0.2",
     "graphql": "16.8.1",
     "next": "14.1.0",
     "pino": "8.17.2",
