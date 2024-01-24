@@ -1,0 +1,9 @@
+spectaql:
+  oneFile: true
+  targetDir: 'public'
+  servers:
+    - url: 'http://localhost:5000/graphql'
+      description: 'Local Server'
+      production: false
+  info:
+    x-url: 'http://localhost:5000/graphql'

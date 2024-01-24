@@ -1,0 +1,1649 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Country": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "cca3": {
+          "type": "string",
+          "default": ""
+        },
+        "cca2": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "ccn3": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "startOfWeek": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "MONDAY",
+          "enum": [
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY",
+            "SATURDAY",
+            "SUNDAY"
+          ]
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "ANTARCTIC",
+          "enum": [
+            "AFRICA",
+            "AMERICAS",
+            "ANTARCTIC",
+            "ASIA",
+            "EUROPE",
+            "OCEANIA"
+          ]
+        },
+        "subregion": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "flag": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "area": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "population": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "default": 0
+        },
+        "independent": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "default": false
+        },
+        "unMember": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "default": false
+        },
+        "landlocked": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "default": false
+        },
+        "demonyms": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "maps": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "flags": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "car": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "coatOfArms": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "postalCode": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "timezones": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "continents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "latlng": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "tld": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "altSpellings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "currencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CurrenciesInCountries"
+          }
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LanguagesInCountries"
+          }
+        },
+        "organizations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CountriesOnOrganizations"
+          }
+        },
+        "universities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/University"
+          }
+        },
+        "names": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CountryName"
+          }
+        },
+        "cities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/City"
+          }
+        },
+        "callingCodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CallingCode"
+          }
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "CountryName": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "language": {
+          "$ref": "#/definitions/Language"
+        },
+        "common": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "official": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "native": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "default": false
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "City": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "capital": {
+          "type": "boolean",
+          "default": false
+        },
+        "city": {
+          "type": "string",
+          "default": ""
+        },
+        "state": {
+          "type": "string",
+          "default": ""
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "latitude": {
+          "type": "number",
+          "default": 0
+        },
+        "longitude": {
+          "type": "number",
+          "default": 0
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "CallingCode": {
+      "type": "object",
+      "properties": {
+        "root": {
+          "type": "string",
+          "default": ""
+        },
+        "suffix": {
+          "type": "string",
+          "default": ""
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "Currency": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CurrenciesInCountries"
+          }
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CurrencyHistory"
+          }
+        }
+      }
+    },
+    "CurrencyHistory": {
+      "type": "object",
+      "properties": {
+        "currency": {
+          "$ref": "#/definitions/Currency"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "rate": {
+          "type": "number",
+          "default": 0
+        },
+        "amount": {
+          "type": "integer",
+          "default": 1
+        },
+        "base": {
+          "type": "string",
+          "default": "EUR"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "CurrenciesInCountries": {
+      "type": "object",
+      "properties": {
+        "currency": {
+          "$ref": "#/definitions/Currency"
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "Language": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "integer",
+          "default": 0
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LanguagesInCountries"
+          }
+        },
+        "countryNames": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CountryName"
+          }
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "LanguagesInCountries": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "$ref": "#/definitions/Language"
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "Organization": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CountriesOnOrganizations"
+          }
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "CountriesOnOrganizations": {
+      "type": "object",
+      "properties": {
+        "organization": {
+          "$ref": "#/definitions/Organization"
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "accession": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "withdrawal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "LicensePlate": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "EthnicGroup": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "group": {
+          "type": "string",
+          "default": ""
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "Stock": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "market": {
+          "type": "string",
+          "default": "HOSE",
+          "enum": [
+            "HNX",
+            "HOSE",
+            "UPCOM"
+          ]
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StockHistory"
+          }
+        }
+      }
+    },
+    "StockHistory": {
+      "type": "object",
+      "properties": {
+        "stock": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Stock"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "open": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "high": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "low": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "close": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "volume": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "TarotCard": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "MAJOR",
+          "enum": [
+            "MAJOR",
+            "MINOR"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "valueInt": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "default": 0
+        },
+        "suit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "meaningUp": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "meaningReverse": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "NewsSource": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "description": {
+          "type": "string",
+          "default": ""
+        },
+        "url": {
+          "type": "string",
+          "default": ""
+        },
+        "category": {
+          "type": "string",
+          "default": "GENERAL",
+          "enum": [
+            "BUSINESS",
+            "ENTERTAINMENT",
+            "GENERAL",
+            "HEALTH",
+            "SCIENCE",
+            "SPORTS",
+            "TECHNOLOGY"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "default": ""
+        },
+        "country": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    },
+    "Word": {
+      "type": "object",
+      "properties": {
+        "word": {
+          "type": "string"
+        },
+        "results": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "syllables": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "pronunciation": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "frequency": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "TopLevelDomain": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string"
+        },
+        "type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "ProgrammingLanguage": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string"
+        },
+        "color": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "type": {
+          "type": "string",
+          "default": "PROGRAMMING",
+          "enum": [
+            "DATA",
+            "MARKUP",
+            "PROGRAMMING",
+            "PROSE"
+          ]
+        },
+        "extensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "interpreters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "filenames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "License": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "spdx": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "node": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "html": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "implementation": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "body": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "UnitedStatesCongress": {
+      "type": "object",
+      "properties": {
+        "congress": {
+          "type": "integer"
+        },
+        "houseControl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "senateControl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "congressControl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "trifectaControl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "startDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "endDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnitedStatesCongressMember"
+          }
+        },
+        "committees": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnitedStatesCongressCommittee"
+          }
+        },
+        "UnitedStatesCongressMembersInCongresses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnitedStatesCongressMembersInCongresses"
+          }
+        }
+      }
+    },
+    "UnitedStatesCongressMember": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": ""
+        },
+        "firstName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "middleName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "lastName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "suffix": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "dateOfBirth": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "gender": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "UnitedStatesCongressMembersInCongresses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnitedStatesCongressMembersInCongresses"
+          }
+        },
+        "committees": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnitedStatesCongressCommittee"
+          }
+        },
+        "UnitedStatesCongress": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/UnitedStatesCongress"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "UnitedStatesCongressMembersInCongresses": {
+      "type": "object",
+      "properties": {
+        "chamber": {
+          "type": "string",
+          "default": "HOUSE",
+          "enum": [
+            "HOUSE",
+            "SENATE"
+          ]
+        },
+        "congress": {
+          "$ref": "#/definitions/UnitedStatesCongress"
+        },
+        "member": {
+          "$ref": "#/definitions/UnitedStatesCongressMember"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "shortTitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "party": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "leadershipRole": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "seniority": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "default": 0
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "district": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "atLarge": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "default": false
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "UnitedStatesCongressCommittee": {
+      "type": "object",
+      "properties": {
+        "chamber": {
+          "type": "string",
+          "default": "HOUSE",
+          "enum": [
+            "HOUSE",
+            "SENATE"
+          ]
+        },
+        "congress": {
+          "$ref": "#/definitions/UnitedStatesCongress"
+        },
+        "id": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "chair": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/UnitedStatesCongressMember"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "Quote": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "author": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "authorSlug": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "content": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "University": {
+      "type": "object",
+      "properties": {
+        "rank": {
+          "type": "integer"
+        },
+        "university": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "country": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Country"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "country": {
+      "$ref": "#/definitions/Country"
+    },
+    "countryName": {
+      "$ref": "#/definitions/CountryName"
+    },
+    "city": {
+      "$ref": "#/definitions/City"
+    },
+    "callingCode": {
+      "$ref": "#/definitions/CallingCode"
+    },
+    "currency": {
+      "$ref": "#/definitions/Currency"
+    },
+    "currencyHistory": {
+      "$ref": "#/definitions/CurrencyHistory"
+    },
+    "currenciesInCountries": {
+      "$ref": "#/definitions/CurrenciesInCountries"
+    },
+    "language": {
+      "$ref": "#/definitions/Language"
+    },
+    "languagesInCountries": {
+      "$ref": "#/definitions/LanguagesInCountries"
+    },
+    "organization": {
+      "$ref": "#/definitions/Organization"
+    },
+    "countriesOnOrganizations": {
+      "$ref": "#/definitions/CountriesOnOrganizations"
+    },
+    "licensePlate": {
+      "$ref": "#/definitions/LicensePlate"
+    },
+    "ethnicGroup": {
+      "$ref": "#/definitions/EthnicGroup"
+    },
+    "stock": {
+      "$ref": "#/definitions/Stock"
+    },
+    "stockHistory": {
+      "$ref": "#/definitions/StockHistory"
+    },
+    "tarotCard": {
+      "$ref": "#/definitions/TarotCard"
+    },
+    "newsSource": {
+      "$ref": "#/definitions/NewsSource"
+    },
+    "word": {
+      "$ref": "#/definitions/Word"
+    },
+    "topLevelDomain": {
+      "$ref": "#/definitions/TopLevelDomain"
+    },
+    "programmingLanguage": {
+      "$ref": "#/definitions/ProgrammingLanguage"
+    },
+    "license": {
+      "$ref": "#/definitions/License"
+    },
+    "unitedStatesCongress": {
+      "$ref": "#/definitions/UnitedStatesCongress"
+    },
+    "unitedStatesCongressMember": {
+      "$ref": "#/definitions/UnitedStatesCongressMember"
+    },
+    "unitedStatesCongressMembersInCongresses": {
+      "$ref": "#/definitions/UnitedStatesCongressMembersInCongresses"
+    },
+    "unitedStatesCongressCommittee": {
+      "$ref": "#/definitions/UnitedStatesCongressCommittee"
+    },
+    "quote": {
+      "$ref": "#/definitions/Quote"
+    },
+    "university": {
+      "$ref": "#/definitions/University"
+    }
+  }
+}

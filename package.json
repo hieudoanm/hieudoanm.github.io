@@ -1,0 +1,40 @@
+{
+  "name": "hieudoanm.github.io",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "format": "yarn turbo format",
+    "build": "yarn turbo build",
+    "check": "yarn turbo check",
+    "lint": "yarn turbo lint",
+    "test": "yarn turbo test",
+    "dev": "yarn turbo dev",
+    "prepare": "husky install || true"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "husky": "8.0.3",
+    "turbo": "1.11.3"
+  },
+  "resolutions": {
+    "**/graphql": "16.8.1",
+    "axios": "1.6.5",
+    "glob-parent": "6.0.2",
+    "graphql": "16.8.1",
+    "undici": "6.4.0",
+    "semver": "7.5.4"
+  },
+  "workspaces": [
+    "backend/api",
+    "backend/graphql",
+    "backend/jobs",
+    "frontend/app/broca",
+    "frontend/app/chess",
+    "frontend/mobile",
+    "frontend/web"
+  ]
+}

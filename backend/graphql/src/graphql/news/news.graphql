@@ -1,0 +1,11 @@
+type Query {
+  news: News
+}
+
+type News {
+  sources: [Source]
+}
+
+type Source {
+  id: String
+}

@@ -1,0 +1,102 @@
+import { RESTDataSource } from '@apollo/datasource-rest';
+import { BASE_API } from '../../environments/environments';
+import {
+  ChessGame,
+  ChessOpening,
+  ChessPlayer,
+  ChessTitle,
+  Country,
+  CountryTotal,
+  GamesSynced,
+  StreamersResponse,
+  TimeRange,
+  Titled,
+} from './chess.types';
+
+export class ChessDataSource extends RESTDataSource {
+  override baseURL = BASE_API;
+
+  async getStreamers({
+    title,
+    country,
+  }: {
+    title: ChessTitle;
+    country: string;
+  }): Promise<StreamersResponse> {
+    const urlSearchParameters: URLSearchParams = new URLSearchParams();
+    if (title) {
+      urlSearchParameters.set('title', title);
+    }
+    if (country) {
+      urlSearchParameters.set('country', country);
+    }
+    const endpoint = `/v1/chess/streamers?${urlSearchParameters.toString()}`;
+    return this.get(endpoint);
+  }
+
+  async getPlayer(username: string): Promise<ChessPlayer> {
+    return this.get(`/v1/chess/players/${username}`);
+  }
+
+  async syncPlayer(username: string): Promise<ChessPlayer> {
+    return this.post(`/v1/chess/players/${username}`);
+  }
+
+  async getGames(
+    username: string
+  ): Promise<{ total: number; games: ChessGame[] }> {
+    return this.get(`/v1/chess/players/${username}/games`);
+  }
+
+  async syncGames(
+    username: string,
+    {
+      month = new Date().getMonth() + 1,
+      year = new Date().getFullYear(),
+    }: { month: number; year: number }
+  ): Promise<GamesSynced> {
+    return this.post(`/v1/chess/players/${username}/games`, {
+      body: { month, year },
+    });
+  }
+
+  async getTitled({
+    title,
+    timeRange,
+  }: {
+    title: string;
+    timeRange: TimeRange;
+  }): Promise<Titled> {
+    const urlSearchParameters: URLSearchParams = new URLSearchParams();
+    if (timeRange) {
+      urlSearchParameters.set('timeRange', timeRange);
+    }
+    const url: string = `/v1/chess/titled/${title}?${urlSearchParameters.toString()}`;
+    return this.get(url);
+  }
+
+  async getCountries(): Promise<CountryTotal[]> {
+    return this.get('/v1/chess/countries');
+  }
+
+  async getCountry(code: string): Promise<Country> {
+    return this.get(`/v1/chess/countries/${code}`);
+  }
+
+  async getOpenings({
+    eco = '',
+    name = '',
+  }: {
+    eco: string;
+    name: string;
+  }): Promise<{ total: number; openings: ChessOpening[] }> {
+    const urlSearchParameters: URLSearchParams = new URLSearchParams();
+    if (eco !== '') {
+      urlSearchParameters.set('eco', eco);
+    }
+    if (name !== '') {
+      urlSearchParameters.set('name', name);
+    }
+    return this.get(`/v1/chess/openings?${urlSearchParameters.toString()}`);
+  }
+}

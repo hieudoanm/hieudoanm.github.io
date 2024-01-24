@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: hieudoanm
+    runtime: node
+    repo: https://github.com/hieudoanm/hieudoanm.github.io.git
+    branch: master
+    rootdir: backend/api

@@ -1,0 +1,12 @@
+type Query {
+  chess: Chess
+}
+
+type Chess {
+  countries: [TitledCountries]
+  country(code: String!): TitledCountry
+  openings(eco: String, name: String): [Opening]
+  player(username: String!): Player
+  streamers(title: Title, country: String): Streamers
+  titled(title: Title!, timeRange: TimeRange): Titled
+}
