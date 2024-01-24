@@ -1,4 +1,4 @@
-import { PrismaPublicClient } from '@hieudoanm/common/prisma/public/prisma.public';
+import { PrismaChessClient } from '@hieudoanm/common/prisma/chess/prisma.chess';
 import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
 import { CountriesController } from './countries.controller';
@@ -8,6 +8,6 @@ import { CountriesService } from './countries.service';
 @Module({
   imports: [CacheModule.register()],
   controllers: [CountriesController],
-  providers: [PrismaPublicClient, CountriesRepository, CountriesService],
+  providers: [PrismaChessClient, CountriesRepository, CountriesService],
 })
 export class CountriesModule {}

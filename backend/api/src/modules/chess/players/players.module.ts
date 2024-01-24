@@ -1,5 +1,5 @@
 import { ChessClient } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.client';
-import { PrismaPublicClient } from '@hieudoanm/common/prisma/public/prisma.public';
+import { PrismaChessClient } from '@hieudoanm/common/prisma/chess/prisma.chess';
 import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
 import { GamesModule } from './games/games.module';
@@ -16,6 +16,6 @@ import { StreamersModule } from './steamers/streamers.module';
     StreamersModule,
   ],
   controllers: [PlayerController],
-  providers: [ChessClient, PrismaPublicClient, PlayerService],
+  providers: [ChessClient, PrismaChessClient, PlayerService],
 })
 export class PlayerModule {}

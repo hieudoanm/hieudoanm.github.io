@@ -1,5 +1,5 @@
 import { ChessClient } from '@hieudoanm/common/clients/apis/chess/chess.com/chess.client';
-import { PrismaPublicClient } from '@hieudoanm/common/prisma/public/prisma.public';
+import { PrismaChessClient } from '@hieudoanm/common/prisma/chess/prisma.chess';
 import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
 import { InsightsController } from './insights.controller';
@@ -18,7 +18,7 @@ import { ResultsService } from './services/results/results.service';
     ChessClient,
     TimeOfDaysService,
     DaysOfWeekService,
-    PrismaPublicClient,
+    PrismaChessClient,
     AccuracyService,
     GamesService,
     OpponentsService,
