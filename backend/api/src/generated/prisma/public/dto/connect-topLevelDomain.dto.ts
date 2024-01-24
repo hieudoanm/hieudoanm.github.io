@@ -1,5 +1,3 @@
-
-  export class ConnectTopLevelDomainDto {
-    domain: string;
-  }
-  
+export class ConnectTopLevelDomainDto {
+  domain: string;
+}

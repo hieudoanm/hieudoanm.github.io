@@ -1,5 +1,1 @@
-
-  export class ConnectCurrencyHistoryDto {
-    
-  }
-  
+export class ConnectCurrencyHistoryDto {}

@@ -1,9 +1,1 @@
-
-
-
-
-
-
-export class UpdateNewsSourceDto {
-  
-}
+export class UpdateNewsSourceDto {}

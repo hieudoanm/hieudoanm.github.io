@@ -1,5 +1,1 @@
-
-  export class ConnectCountryNameDto {
-    
-  }
-  
+export class ConnectCountryNameDto {}

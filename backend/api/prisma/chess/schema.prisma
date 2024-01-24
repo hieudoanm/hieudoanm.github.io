@@ -8,6 +8,7 @@ generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["multiSchema"]
   output          = "../../src/generated/prisma/chess/client"
+  binaryTargets = ["native", "debian-openssl-1.1.x"]
 }
 
 generator dbml {

@@ -1,5 +1,3 @@
-
-  export class ConnectUnitedStatesCongressDto {
-    congress: number;
-  }
-  
+export class ConnectUnitedStatesCongressDto {
+  congress: number;
+}

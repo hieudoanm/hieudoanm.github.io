@@ -1,5 +1,3 @@
-
-  export class ConnectWordDto {
-    word: string;
-  }
-  
+export class ConnectWordDto {
+  word: string;
+}

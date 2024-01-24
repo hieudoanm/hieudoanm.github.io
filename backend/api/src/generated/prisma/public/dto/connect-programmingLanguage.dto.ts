@@ -1,5 +1,3 @@
-
-  export class ConnectProgrammingLanguageDto {
-    language: string;
-  }
-  
+export class ConnectProgrammingLanguageDto {
+  language: string;
+}

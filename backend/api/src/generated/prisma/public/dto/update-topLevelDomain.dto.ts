@@ -1,10 +1,4 @@
-
-
-
-
-
-
 export class UpdateTopLevelDomainDto {
   type?: string;
-createdAt?: Date;
+  createdAt?: Date;
 }

@@ -1,5 +1,3 @@
-
-  export class ConnectLicenseDto {
-    id: string;
-  }
-  
+export class ConnectLicenseDto {
+  id: string;
+}

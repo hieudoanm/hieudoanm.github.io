@@ -1,5 +1,1 @@
-
-  export class ConnectCountriesOnOrganizationsDto {
-    
-  }
-  
+export class ConnectCountriesOnOrganizationsDto {}

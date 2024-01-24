@@ -1,16 +1,10 @@
-
-
-
-
-
-
 export class UpdateTarotCardDto {
   name?: string;
-value?: string;
-valueInt?: number;
-suit?: string;
-meaningUp?: string;
-meaningReverse?: string;
-description?: string;
-createdAt?: Date;
+  value?: string;
+  valueInt?: number;
+  suit?: string;
+  meaningUp?: string;
+  meaningReverse?: string;
+  description?: string;
+  createdAt?: Date;
 }

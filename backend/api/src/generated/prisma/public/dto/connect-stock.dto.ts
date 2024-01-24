@@ -1,5 +1,3 @@
-
-  export class ConnectStockDto {
-    symbol: string;
-  }
-  
+export class ConnectStockDto {
+  symbol: string;
+}

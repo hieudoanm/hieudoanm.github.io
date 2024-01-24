@@ -1,12 +1,6 @@
-
-
-
-
-
-
 export class CreateCountryNameDto {
   common?: string;
-official?: string;
-native?: boolean;
-createdAt?: Date;
+  official?: string;
+  native?: boolean;
+  createdAt?: Date;
 }

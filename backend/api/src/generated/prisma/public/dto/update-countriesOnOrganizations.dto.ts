@@ -1,11 +1,5 @@
-
-
-
-
-
-
 export class UpdateCountriesOnOrganizationsDto {
   accession?: Date;
-withdrawal?: Date;
-createdAt?: Date;
+  withdrawal?: Date;
+  createdAt?: Date;
 }

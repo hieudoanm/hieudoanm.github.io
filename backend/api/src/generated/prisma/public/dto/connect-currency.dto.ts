@@ -1,5 +1,3 @@
-
-  export class ConnectCurrencyDto {
-    code: string;
-  }
-  
+export class ConnectCurrencyDto {
+  code: string;
+}

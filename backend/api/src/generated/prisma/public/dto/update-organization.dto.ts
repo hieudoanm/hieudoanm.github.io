@@ -1,10 +1,4 @@
-
-
-
-
-
-
 export class UpdateOrganizationDto {
   name?: string;
-createdAt?: Date;
+  createdAt?: Date;
 }
