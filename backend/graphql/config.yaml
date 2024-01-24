@@ -1,0 +1,27 @@
+spectaql:
+  displayAllServers: true
+  faviconFile: ./public/favicon.ico
+  oneFile: true
+  targetDir: 'public'
+
+introspection:
+  url: http://localhost:5000/graphql
+  spectaqlDirective:
+    enable: true
+
+info:
+  title: 'hieudoanm GraphQL'
+  description: 'hieudoanm GraphQL'
+  contact:
+    name: hieudoanm
+    url: https://hieudoanm.github.io
+  license:
+    nane: GNU General Public License v3.0
+    url: https://www.gnu.org/licenses/gpl-3.0.html
+
+servers:
+  - url: http://localhost:5000/graphql
+    description: Local
+  - url: https://hieudoanm.vercel.app/api/graphql
+    description: Vercel
+    production: true

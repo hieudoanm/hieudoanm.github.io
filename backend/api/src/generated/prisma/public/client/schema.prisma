@@ -1,0 +1,543 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+  schemas  = ["public", "vietnam", "united_states"]
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+  output          = "../../src/generated/prisma/public/client"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator nestjsDto {
+  provider     = "prisma-generator-nestjs-dto"
+  output       = "../../src/generated/prisma/public/dto"
+  entitySuffix = "Dto"
+}
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+}
+
+model Country {
+  name         String?    @default("")
+  cca3         String     @id @default("") @db.VarChar(3)
+  cca2         String?    @unique @default("") @db.VarChar(2)
+  ccn3         String?    @unique @default("") @db.VarChar(3)
+  startOfWeek  DayOfWeek? @default(MONDAY)
+  region       Region?    @default(ANTARCTIC)
+  subregion    String?    @default("") @db.VarChar(255)
+  status       String?    @default("") @db.VarChar(255)
+  flag         String?    @default("") @db.VarChar(255)
+  area         Float?     @default(0)
+  population   Int?       @default(0)
+  independent  Boolean?   @default(false)
+  unMember     Boolean?   @default(false)
+  landlocked   Boolean?   @default(false)
+  demonyms     Json?      @default("{}")
+  maps         Json?      @default("{}")
+  flags        Json?      @default("{}")
+  car          Json?      @default("{}")
+  coatOfArms   Json?      @default("{}")
+  postalCode   Json?      @default("{}")
+  timezones    String[]   @default([])
+  continents   String[]   @default([])
+  latlng       Float[]    @default([])
+  tld          String[]   @default([])
+  altSpellings String[]   @default([])
+
+  currencies    CurrenciesInCountries[]
+  languages     LanguagesInCountries[]
+  organizations CountriesOnOrganizations[]
+  universities  University[]
+  names         CountryName[]
+  cities        City[]
+  callingCodes  CallingCode[]
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+model CountryName {
+  country      Country  @relation(fields: [countryCode], references: [cca3])
+  countryCode  String
+  language     Language @relation(fields: [languageCode], references: [code])
+  languageCode String
+  common       String?  @default("")
+  official     String?  @default("")
+  native       Boolean? @default(false)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([countryCode, languageCode])
+  @@schema("public")
+}
+
+model City {
+  id          Int     @id @default(autoincrement())
+  capital     Boolean @default(false)
+  city        String  @default("")
+  state       String  @default("")
+  country     Country @relation(fields: [countryCode], references: [cca3])
+  countryCode String
+  latitude    Float   @default(0)
+  longitude   Float   @default(0)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+model CallingCode {
+  root        String  @default("")
+  suffix      String  @default("")
+  country     Country @relation(fields: [countryCode], references: [cca3])
+  countryCode String
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([root, suffix])
+  @@schema("public")
+}
+
+enum DayOfWeek {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+
+  @@schema("public")
+}
+
+enum Region {
+  AFRICA
+  AMERICAS
+  ANTARCTIC
+  ASIA
+  EUROPE
+  OCEANIA
+
+  @@schema("public")
+}
+
+model Currency {
+  code   String @id @db.VarChar(3)
+  name   String @db.VarChar(255)
+  symbol String @db.VarChar(255)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  countries CurrenciesInCountries[]
+  history   CurrencyHistory[]
+
+  @@schema("public")
+}
+
+model CurrencyHistory {
+  currency     Currency @relation(fields: [currencyCode], references: [code])
+  currencyCode String
+  date         DateTime @db.Date()
+  rate         Float    @default(0)
+  amount       Int      @default(1)
+  base         String   @default("EUR")
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([currencyCode, date])
+  @@schema("public")
+}
+
+model CurrenciesInCountries {
+  currency     Currency @relation(fields: [currencyCode], references: [code])
+  currencyCode String
+  country      Country  @relation(fields: [countryCode], references: [cca3])
+  countryCode  String
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([currencyCode, countryCode])
+  @@schema("public")
+}
+
+model Language {
+  code     String @id @db.VarChar(3)
+  name     String @db.VarChar(255)
+  category Int    @default(0)
+
+  countries    LanguagesInCountries[]
+  countryNames CountryName[]
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+model LanguagesInCountries {
+  language     Language @relation(fields: [languageCode], references: [code])
+  languageCode String
+  country      Country  @relation(fields: [countryCode], references: [cca3])
+  countryCode  String
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([languageCode, countryCode])
+  @@schema("public")
+}
+
+model Organization {
+  code String  @id
+  name String? @default("") @db.VarChar(255)
+
+  countries CountriesOnOrganizations[]
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+model CountriesOnOrganizations {
+  organization     Organization @relation(fields: [organizationCode], references: [code])
+  organizationCode String
+  country          Country      @relation(fields: [countryCode], references: [cca3])
+  countryCode      String
+  accession        DateTime?    @db.Date()
+  withdrawal       DateTime?    @db.Date()
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([organizationCode, countryCode])
+  @@schema("public")
+}
+
+// Vietnam
+
+model LicensePlate {
+  code  String @id @db.VarChar(2)
+  name  String @db.VarChar(255)
+  group String @db.VarChar(255)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("vietnam")
+}
+
+model EthnicGroup {
+  id    Int    @id @default(autoincrement())
+  name  String @default("") @db.VarChar(255)
+  group String @default("") @db.VarChar(255)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("vietnam")
+}
+
+model Stock {
+  symbol String @id @default("") @db.VarChar(3)
+  name   String @default("")
+  market Market @default(HOSE)
+
+  createdAt DateTime?      @default(now()) @db.Timestamptz()
+  updatedAt DateTime?      @default(now()) @updatedAt @db.Timestamptz()
+  history   StockHistory[]
+
+  @@schema("vietnam")
+}
+
+enum Market {
+  HNX
+  HOSE
+  UPCOM
+
+  @@schema("vietnam")
+}
+
+model StockHistory {
+  stock  Stock?   @relation(fields: [symbol], references: [symbol])
+  symbol String
+  date   DateTime @default(now()) @db.Date()
+  open   Float?   @default(0)
+  high   Float?   @default(0)
+  low    Float?   @default(0)
+  close  Float?   @default(0)
+  volume Float?   @default(0)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([symbol, date])
+  @@schema("vietnam")
+}
+
+// Tarot
+
+model TarotCard {
+  type           TarotCardType @default(MAJOR)
+  id             String        @id @default("")
+  name           String?       @default("") @db.VarChar(255)
+  value          String?       @default("") @db.VarChar(255)
+  valueInt       Int?          @default(0)
+  suit           String?       @default("") @db.VarChar(255)
+  meaningUp      String?       @default("") @db.Text()
+  meaningReverse String?       @default("") @db.Text()
+  description    String?       @default("") @db.Text()
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+enum TarotCardType {
+  MAJOR
+  MINOR
+
+  @@schema("public")
+}
+
+enum TarotCardSuit {
+  CUPS
+  PENTACLES
+  SWORDS
+  WANDS
+
+  @@schema("public")
+}
+
+// News
+
+model NewsSource {
+  id          String             @id
+  name        String             @default("") @db.VarChar(255)
+  description String             @default("")
+  url         String             @default("") @db.VarChar(255)
+  category    NewsSourceCategory @default(GENERAL)
+  language    String             @default("") @db.VarChar(2)
+  country     String             @default("") @db.VarChar(2)
+
+  @@schema("public")
+}
+
+enum NewsSourceCategory {
+  BUSINESS
+  ENTERTAINMENT
+  GENERAL
+  HEALTH
+  SCIENCE
+  SPORTS
+  TECHNOLOGY
+
+  @@schema("public")
+}
+
+model Word {
+  word          String @id @db.VarChar(255)
+  results       Json?  @default("{}")
+  syllables     Json?  @default("{}")
+  pronunciation Json?  @default("{}")
+  frequency     Float? @default(0)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+model TopLevelDomain {
+  domain String  @id
+  type   String? @default("")
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+// GitHub
+
+model ProgrammingLanguage {
+  language     String                  @id
+  color        String?                 @default("")
+  type         ProgrammingLanguageType @default(PROGRAMMING)
+  extensions   String[]                @default([])
+  aliases      String[]                @default([])
+  interpreters String[]                @default([])
+  filenames    String[]                @default([])
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+enum ProgrammingLanguageType {
+  DATA
+  MARKUP
+  PROGRAMMING
+  PROSE
+
+  @@schema("public")
+}
+
+model License {
+  id             String   @id
+  name           String?  @default("")
+  spdx           String?  @default("")
+  node           String?  @default("")
+  html           String?  @default("")
+  description    String?  @default("")
+  implementation String?  @default("")
+  body           String?  @default("")
+  permissions    String[] @default([])
+  conditions     String[] @default([])
+  limitations    String[] @default([])
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+// United States
+
+model UnitedStatesCongress {
+  congress        Int       @id
+  houseControl    String?   @default("")
+  senateControl   String?   @default("")
+  congressControl String?   @default("")
+  trifectaControl String?   @default("")
+  startDate       DateTime? @db.Date()
+  endDate         DateTime? @db.Date()
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  members                                 UnitedStatesCongressMember[]
+  committees                              UnitedStatesCongressCommittee[]
+  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses[]
+
+  @@schema("united_states")
+}
+
+enum UnitedStatesCongressChamber {
+  HOUSE
+  SENATE
+
+  @@schema("united_states")
+}
+
+model UnitedStatesCongressMember {
+  id          String    @id @default("")
+  firstName   String?   @default("")
+  middleName  String?   @default("")
+  lastName    String?   @default("")
+  suffix      String?   @default("")
+  dateOfBirth DateTime? @db.Date()
+  gender      String?   @default("")
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses[]
+  committees                              UnitedStatesCongressCommittee[]
+  UnitedStatesCongress                    UnitedStatesCongress?                     @relation(fields: [unitedStatesCongressCongress], references: [congress])
+  unitedStatesCongressCongress            Int?
+
+  @@schema("united_states")
+}
+
+model UnitedStatesCongressMembersInCongresses {
+  chamber        UnitedStatesCongressChamber @default(HOUSE)
+  congress       UnitedStatesCongress        @relation(fields: [congressNumber], references: [congress])
+  congressNumber Int
+  member         UnitedStatesCongressMember  @relation(fields: [memberId], references: [id])
+  memberId       String                      @default("")
+
+  title          String?  @default("")
+  shortTitle     String?  @default("")
+  party          String?  @default("")
+  leadershipRole String?  @default("")
+  seniority      Int?     @default(0)
+  state          String?  @default("")
+  district       String?  @default("")
+  atLarge        Boolean? @default(false)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([chamber, congressNumber, memberId])
+  @@schema("united_states")
+}
+
+model UnitedStatesCongressCommittee {
+  chamber        UnitedStatesCongressChamber @default(HOUSE)
+  congress       UnitedStatesCongress        @relation(fields: [congressNumber], references: [congress])
+  congressNumber Int
+  id             String                      @default("")
+  name           String?                     @default("")
+  chair          UnitedStatesCongressMember? @relation(fields: [chairId], references: [id])
+  chairId        String?                     @default("")
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([congressNumber, chamber, id])
+  @@schema("united_states")
+}
+
+// Quote
+
+model Quote {
+  id         String   @id
+  author     String?  @default("")
+  authorSlug String?  @default("")
+  content    String?  @default("")
+  tags       String[] @default([])
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+// University
+
+model University {
+  rank       Int     @id
+  university String? @default("")
+  city       String? @default("")
+
+  country     Country? @relation(fields: [countryCode], references: [cca3])
+  countryCode String?  @default("")
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}

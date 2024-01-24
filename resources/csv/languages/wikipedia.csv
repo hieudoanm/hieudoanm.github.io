@@ -1,0 +1,184 @@
+code2,code3,code3en,name
+ab,abk,abk,Abkhazian
+aa,aar,aar,Afar
+af,afr,afr,Afrikaans
+ak,aka,aka,Akan
+sq,sqi,alb,Albanian
+am,amh,amh,Amharic
+ar,ara,ara,Arabic
+an,arg,arg,Aragonese
+hy,hye,arm,Armenian
+as,asm,asm,Assamese
+av,ava,ava,Avaric
+ae,ave,ave,Avestan
+ay,aym,aym,Aymara
+az,aze,aze,Azerbaijani
+bm,bam,bam,Bambara
+ba,bak,bak,Bashkir
+eu,eus,baq,Basque
+be,bel,bel,Belarusian
+bn,ben,ben,Bengali
+bi,bis,bis,Bislama
+bs,bos,bos,Bosnian
+br,bre,bre,Breton
+bg,bul,bul,Bulgarian
+my,mya,bur,Burmese
+ca,cat,cat,"Catalan, Valencian"
+ch,cha,cha,Chamorro
+ce,che,che,Chechen
+ny,nya,nya,"Chichewa, Chewa, Nyanja"
+zh,zho,chi,Chinese
+cu,chu,chu,"Church Slavonic, Old Slavonic, Old Church Slavonic"
+cv,chv,chv,Chuvash
+kw,cor,cor,Cornish
+co,cos,cos,Corsican
+cr,cre,cre,Cree
+hr,hrv,hrv,Croatian
+cs,ces,cze,Czech
+da,dan,dan,Danish
+dv,div,div,"Divehi, Dhivehi, Maldivian"
+nl,nld,dut,"Dutch, Flemish"
+dz,dzo,dzo,Dzongkha
+en,eng,eng,English
+eo,epo,epo,Esperanto
+et,est,est,Estonian
+ee,ewe,ewe,Ewe
+fo,fao,fao,Faroese
+fj,fij,fij,Fijian
+fi,fin,fin,Finnish
+fr,fra,fre,French
+fy,fry,fry,Western Frisian
+ff,ful,ful,Fulah
+gd,gla,gla,"Gaelic, Scottish Gaelic"
+gl,glg,glg,Galician
+lg,lug,lug,Ganda
+ka,kat,geo,Georgian
+de,deu,ger,German
+el,ell,gre,"Greek, Modern (1453–)"
+kl,kal,kal,"Kalaallisut, Greenlandic"
+gn,grn,grn,Guarani
+gu,guj,guj,Gujarati
+ht,hat,hat,"Haitian, Haitian Creole"
+ha,hau,hau,Hausa
+he,heb,heb,Hebrew
+hz,her,her,Herero
+hi,hin,hin,Hindi
+ho,hmo,hmo,Hiri Motu
+hu,hun,hun,Hungarian
+is,isl,ice,Icelandic
+io,ido,ido,Ido
+ig,ibo,ibo,Igbo
+id,ind,ind,Indonesian
+ia,ina,ina,Interlingua (International Auxiliary Language Association)
+ie,ile,ile,"Interlingue, Occidental"
+iu,iku,iku,Inuktitut
+ik,ipk,ipk,Inupiaq
+ga,gle,gle,Irish
+it,ita,ita,Italian
+ja,jpn,jpn,Japanese
+jv,jav,jav,Javanese
+kn,kan,kan,Kannada
+kr,kau,kau,Kanuri
+ks,kas,kas,Kashmiri
+kk,kaz,kaz,Kazakh
+km,khm,khm,Central Khmer
+ki,kik,kik,"Kikuyu, Gikuyu"
+rw,kin,kin,Kinyarwanda
+ky,kir,kir,"Kirghiz, Kyrgyz"
+kv,kom,kom,Komi
+kg,kon,kon,Kongo
+ko,kor,kor,Korean
+kj,kua,kua,"Kuanyama, Kwanyama"
+ku,kur,kur,Kurdish
+lo,lao,lao,Lao
+la,lat,lat,Latin
+lv,lav,lav,Latvian
+li,lim,lim,"Limburgan, Limburger, Limburgish"
+ln,lin,lin,Lingala
+lt,lit,lit,Lithuanian
+lu,lub,lub,Luba-Katanga
+lb,ltz,ltz,"Luxembourgish, Letzeburgesch"
+mk,mkd,mac,Macedonian
+mg,mlg,mlg,Malagasy
+ms,msa,may,Malay
+ml,mal,mal,Malayalam
+mt,mlt,mlt,Maltese
+gv,glv,glv,Manx
+mi,mri,mao,Maori
+mr,mar,mar,Marathi
+mh,mah,mah,Marshallese
+mn,mon,mon,Mongolian
+na,nau,nau,Nauru
+nv,nav,nav,"Navajo, Navaho"
+nd,nde,nde,North Ndebele
+nr,nbl,nbl,South Ndebele
+ng,ndo,ndo,Ndonga
+ne,nep,nep,Nepali
+no,nor,nor,Norwegian
+nb,nob,nob,Norwegian Bokmål
+nn,nno,nno,Norwegian Nynorsk
+ii,iii,iii,"Sichuan Yi, Nuosu"
+oc,oci,oci,Occitan
+oj,oji,oji,Ojibwa
+or,ori,ori,Oriya
+om,orm,orm,Oromo
+os,oss,oss,"Ossetian, Ossetic"
+pi,pli,pli,Pali
+ps,pus,pus,"Pashto, Pushto"
+fa,fas,per,Persian
+pl,pol,pol,Polish
+pt,por,por,Portuguese
+pa,pan,pan,"Punjabi, Panjabi"
+qu,que,que,Quechua
+ro,ron,rum,"Romanian, Moldavian, Moldovan"
+rm,roh,roh,Romansh
+rn,run,run,Rundi
+ru,rus,rus,Russian
+se,sme,sme,Northern Sami
+sm,smo,smo,Samoan
+sg,sag,sag,Sango
+sa,san,san,Sanskrit
+sc,srd,srd,Sardinian
+sr,srp,srp,Serbian
+sn,sna,sna,Shona
+sd,snd,snd,Sindhi
+si,sin,sin,"Sinhala, Sinhalese"
+sk,slk,slo,Slovak
+sl,slv,slv,Slovenian
+so,som,som,Somali
+st,sot,sot,Southern Sotho
+es,spa,spa,"Spanish, Castilian"
+su,sun,sun,Sundanese
+sw,swa,swa,Swahili
+ss,ssw,ssw,Swati
+sv,swe,swe,Swedish
+tl,tgl,tgl,Tagalog
+ty,tah,tah,Tahitian
+tg,tgk,tgk,Tajik
+ta,tam,tam,Tamil
+tt,tat,tat,Tatar
+te,tel,tel,Telugu
+th,tha,tha,Thai
+bo,bod,tib,Tibetan
+ti,tir,tir,Tigrinya
+to,ton,ton,Tonga (Tonga Islands)
+ts,tso,tso,Tsonga
+tn,tsn,tsn,Tswana
+tr,tur,tur,Turkish
+tk,tuk,tuk,Turkmen
+tw,twi,twi,Twi
+ug,uig,uig,"Uighur, Uyghur"
+uk,ukr,ukr,Ukrainian
+ur,urd,urd,Urdu
+uz,uzb,uzb,Uzbek
+ve,ven,ven,Venda
+vi,vie,vie,Vietnamese
+vo,vol,vol,Volapük
+wa,wln,wln,Walloon
+cy,cym,wel,Welsh
+wo,wol,wol,Wolof
+xh,xho,xho,Xhosa
+yi,yid,yid,Yiddish
+yo,yor,yor,Yoruba
+za,zha,zha,"Zhuang, Chuang"
+zu,zul,zul,Zulu
