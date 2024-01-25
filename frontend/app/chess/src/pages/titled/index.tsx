@@ -24,7 +24,6 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
-import { TimeRange } from '@chess/common/@types';
 import { GAP, TITLED_ABBREVIATIONS } from '@chess/common/constants';
 import { apolloClient } from '@chess/common/graphql';
 import { logger } from '@chess/common/libs/logger';
@@ -34,6 +33,7 @@ import {
   ChessTimeClass,
   ChessTitle,
 } from '@chess/common/types/chess';
+import { TimeRange } from '@chess/common/types/time';
 import { resolveQuery } from '@chess/common/utils/resolve-query';
 import { Container } from '@chess/components/atoms/Container';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
