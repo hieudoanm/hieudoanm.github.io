@@ -1,3 +1,5 @@
+'use client';
+
 import { Insights } from '@chess/common/types/chess';
 import { ChessDaysOfWeek } from '@chess/components/organisms/ChessDaysOfWeek';
 import { ChessGames } from '@chess/components/organisms/ChessGames';

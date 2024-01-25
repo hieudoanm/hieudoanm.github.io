@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardBody, CardHeader, Divider } from '@chakra-ui/react';
 import {
   GRAY_COLOR,
@@ -24,7 +26,7 @@ import {
 const ChessGamesByTimeOfDays: React.FC<{ insights: Insights }> = ({
   insights = {} as Insights,
 }) => {
-  const data = (insights?.games?.timeOfDays || []).map(
+  const data = (insights?.games?.timeOfDays ?? []).map(
     ({ games, timeOfDay }) => ({
       name: timeOfDay ?? '',
       value: games ?? 0,
@@ -74,7 +76,8 @@ const ChessGamesByTimeOfDays: React.FC<{ insights: Insights }> = ({
 const ChessAccuracyByTimeOfDays: React.FC<{ insights: Insights }> = ({
   insights = {} as Insights,
 }) => {
-  const data = insights?.accuracy?.timeOfDays || [];
+  const data = insights?.accuracy?.timeOfDays ?? [];
+
   return (
     <div className="flex flex-col gap-y-4">
       <h2 className="font-bold">Accuracy by Time of Day</h2>

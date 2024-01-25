@@ -1,3 +1,5 @@
+'use client';
+
 import { DocumentNode, gql } from '@apollo/client';
 import { Badge, Button, Heading, Icon, Text, useToast } from '@chakra-ui/react';
 import { apolloClient } from '@chess/graphql/apollo/client';

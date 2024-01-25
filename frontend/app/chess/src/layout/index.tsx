@@ -1,5 +1,7 @@
+'use client';
+
 import { Footer } from '@chess/components/atoms/Footer';
-import { Loading } from '@chess/components/atoms/Loading';
+// import { Loading } from '@chess/components/atoms/Loading';
 import { Navbar } from '@chess/components/atoms/Navbar';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
@@ -11,7 +13,7 @@ export type LayoutProperties = { children?: ReactNode };
 export const Layout: React.FC<LayoutProperties> = ({ children = <></> }) => {
   return (
     <>
-      <Loading />
+      {/* <Loading /> */}
       <div className={inter.className}>
         <div className="flex h-screen flex-col">
           <Navbar />

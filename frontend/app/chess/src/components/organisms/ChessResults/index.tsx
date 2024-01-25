@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardBody, CardHeader, Divider } from '@chakra-ui/react';
 import { COLORS_MAP } from '@chess/common/constants/chess.constants';
 import { Insights, Result } from '@chess/common/types/chess';

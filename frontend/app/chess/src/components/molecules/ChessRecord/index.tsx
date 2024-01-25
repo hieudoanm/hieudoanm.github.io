@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardBody, Heading, Text } from '@chakra-ui/react';
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
 

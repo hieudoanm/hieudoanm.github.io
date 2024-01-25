@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Button,
   Card,
@@ -11,9 +13,9 @@ import {
   IconButton,
   Input,
 } from '@chakra-ui/react';
-import hero from '@chess/assets/hero.jpg';
+import hero from '@chess/common/assets/hero.jpg';
 import { APP_NAME } from '@chess/common/constants/app.constants';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { FormEvent, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';

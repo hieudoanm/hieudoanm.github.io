@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffectOnce } from '@chess/common/hooks/use-effect-once';
 import { select } from 'd3';
 

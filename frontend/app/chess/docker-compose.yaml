@@ -1,0 +1,33 @@
+version: '3.9'
+
+volumes:
+  chess_postgresql:
+    driver: local
+  chess_redis:
+    driver: local
+
+services:
+  chess-postgresql:
+    restart: unless-stopped
+    image: postgres:16.1
+    container_name: chess-postgresql
+    volumes:
+      - chess_postgresql:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+
+  chess-redis:
+    restart: unless-stopped
+    image: redis:7.2.4
+    container_name: chess-redis
+    volumes:
+      - chess_redis:/data
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_USER=default
+      - REDIS_PASS=password

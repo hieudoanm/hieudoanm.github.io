@@ -1,4 +1,5 @@
-import { useUser } from '@auth0/nextjs-auth0/client';
+'use client';
+
 import { ChevronDownIcon, HamburgerIcon, Icon } from '@chakra-ui/icons';
 import {
   Button,
@@ -33,52 +34,6 @@ import {
   FaTools,
   FaUser,
 } from 'react-icons/fa';
-
-const AuthButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
-  const { user } = useUser();
-
-  return (
-    <>
-      {user ? (
-        <Menu>
-          <MenuButton
-            size={size}
-            as={Button}
-            colorScheme="teal"
-            leftIcon={<Icon as={FaCog} />}>
-            Settings
-          </MenuButton>
-          <MenuList>
-            <MenuItem>
-              <Link href="/profile" className="flex items-center gap-x-2">
-                <Icon as={FaUser} />
-                <Text>Profile</Text>
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link
-                href="/api/auth/logout"
-                className="flex items-center gap-x-2">
-                <Icon as={FaSignOutAlt} />
-                <Text>Sign Out</Text>
-              </Link>
-            </MenuItem>
-          </MenuList>
-        </Menu>
-      ) : (
-        <Link href="/api/auth/login">
-          <Button
-            size={size}
-            colorScheme="teal"
-            className="flex w-full items-center gap-x-2">
-            <Icon as={FaSignInAlt} />
-            <Text>Sign In</Text>
-          </Button>
-        </Link>
-      )}
-    </>
-  );
-};
 
 const GitHubButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
   return (
@@ -126,7 +81,6 @@ export const MobileDrawer: React.FC<{
               <Text>Analysis</Text>
             </Link>
             <GitHubButton size="md" />
-            <AuthButton size="md" />
           </div>
         </DrawerBody>
         <Divider />
@@ -189,7 +143,6 @@ export const Navbar: React.FC = () => {
                     </MenuList>
                   </Menu>
                   <GitHubButton size="sm" />
-                  <AuthButton size="sm" />
                 </div>
               </div>
             </div>

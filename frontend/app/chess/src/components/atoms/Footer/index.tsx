@@ -1,3 +1,5 @@
+'use client';
+
 import { Text } from '@chakra-ui/react';
 import { APP_NAME, YEAR } from '@chess/common/constants/app.constants';
 import { Container } from '@chess/components/atoms/Container';

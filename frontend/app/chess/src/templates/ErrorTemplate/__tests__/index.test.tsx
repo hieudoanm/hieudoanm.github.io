@@ -1,9 +1,8 @@
-import { UserProvider } from '@auth0/nextjs-auth0/client';
 import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
 import { ErrorTemplate } from '..';
 
-jest.mock('next/router', () => ({
+jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
     asPath: '',
     events: { on: jest.fn(), off: jest.fn() },
@@ -17,9 +16,7 @@ describe('ErrorTemplate', () => {
 
   it('to match snapshot', () => {
     const { container } = render(
-      <UserProvider>
-        <ErrorTemplate status={500} message="Error" />
-      </UserProvider>
+      <ErrorTemplate status={500} message="Error" />
     );
     expect(container).toMatchSnapshot();
   });

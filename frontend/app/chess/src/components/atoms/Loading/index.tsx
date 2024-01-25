@@ -1,10 +1,15 @@
+'use client';
+
 import { Spinner, Text } from '@chakra-ui/react';
 import { APP_NAME } from '@chess/common/constants/app.constants';
+import { useSearchParams, usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 export const Loading: React.FC = () => {
   const router = useRouter();
+  const pathname = usePathname();
+  const searchParameters = useSearchParams();
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -12,17 +17,10 @@ export const Loading: React.FC = () => {
       url !== router.asPath && setLoading(true);
     const handleComplete = (url: string) =>
       url === router.asPath && setTimeout(() => setLoading(false), 2000);
-
-    router.events.on('routeChangeStart', handleStart);
-    router.events.on('routeChangeComplete', handleComplete);
-    router.events.on('routeChangeError', handleComplete);
-
-    return () => {
-      router.events.off('routeChangeStart', handleStart);
-      router.events.off('routeChangeComplete', handleComplete);
-      router.events.off('routeChangeError', handleComplete);
-    };
-  });
+    const url = `${pathname}?${searchParameters}`;
+    handleStart(url);
+    handleComplete(url);
+  }, [pathname, searchParameters, router]);
 
   return (
     <>

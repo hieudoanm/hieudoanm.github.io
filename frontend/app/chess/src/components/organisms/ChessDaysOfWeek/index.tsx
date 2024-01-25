@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardBody, CardHeader, Divider } from '@chakra-ui/react';
 import {
   GRAY_COLOR,

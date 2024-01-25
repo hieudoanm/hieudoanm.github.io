@@ -1,5 +1,6 @@
 import { ChessTitle } from '../types/chess';
 
+export const CHESS_USERNAME = 'hikaru';
 // Titles
 export const OPEN_TITLES: ChessTitle[] = ['GM', 'IM', 'FM', 'CM', 'NM'];
 export const WOMAN_TITLES: ChessTitle[] = ['WGM', 'WIM', 'WFM', 'WCM', 'WNM'];

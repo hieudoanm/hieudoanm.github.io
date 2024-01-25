@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardBody, CardHeader, Divider, Heading } from '@chakra-ui/react';
 import { TEAL_COLOR } from '@chess/common/constants/chess.constants';
 import {

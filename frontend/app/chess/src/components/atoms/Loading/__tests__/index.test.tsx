@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Loading } from '..';
 
-jest.mock('next/router', () => ({
+jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
     asPath: '',
     events: { on: jest.fn(), off: jest.fn() },

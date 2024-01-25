@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Hero } from '..';
 
-jest.mock('next/router', () => ({
+jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
     push: jest.fn(),
     asPath: '',
