@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoogleMaps render default 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    style="padding-bottom: 100%;"
+  >
+    <div
+      class="absolute h-full w-full"
+    >
+      <iframe
+        allowfullscreen=""
+        class="h-full w-full border-none"
+        loading="lazy"
+        src=""
+        title=""
+      />
+    </div>
+  </div>
+</div>
+`;

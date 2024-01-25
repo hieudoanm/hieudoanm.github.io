@@ -1,0 +1,15 @@
+# build
+.cache
+.next
+build
+dist
+public
+
+# jest.js
+coverage
+
+# node.js
+node_modules
+
+# SQL
+*.sql

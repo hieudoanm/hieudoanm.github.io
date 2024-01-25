@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChessTimeOfDays to match snapshot 1`] = `
+<div>
+  <div
+    class="chakra-card border border-gray-200 css-2dlz7"
+  >
+    <div
+      class="chakra-card__header css-0"
+    >
+      <h1
+        class="text-xl md:text-3xl"
+      >
+        Time of Day
+      </h1>
+    </div>
+    <hr
+      aria-orientation="horizontal"
+      class="chakra-divider css-1upb9tn"
+    />
+    <div
+      class="chakra-card__body css-0"
+    >
+      <div
+        class="flex flex-col gap-y-4"
+      >
+        <h2
+          class="font-bold"
+        >
+          Games by Time of Day
+        </h2>
+      </div>
+    </div>
+    <hr
+      aria-orientation="horizontal"
+      class="chakra-divider css-1upb9tn"
+    />
+    <div
+      class="chakra-card__body css-0"
+    >
+      <div
+        class="flex flex-col gap-y-4"
+      >
+        <h2
+          class="font-bold"
+        >
+          Accuracy by Time of Day
+        </h2>
+      </div>
+    </div>
+    <hr
+      aria-orientation="horizontal"
+      class="chakra-divider css-1upb9tn"
+    />
+    <div
+      class="chakra-card__body css-0"
+    >
+      <div
+        class="flex flex-col gap-y-4"
+      >
+        <h2
+          class="font-bold"
+        >
+          Results by Time of Day
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+`;

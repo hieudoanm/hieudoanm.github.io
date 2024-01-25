@@ -1,0 +1,21 @@
+cacheFolder: './.yarn/cache'
+
+cloneConcurrency: 2
+
+defaultLanguageName: 'node'
+
+enableColors: true
+
+enableConstraintsChecks: true
+
+enableGlobalCache: true
+
+enableProgressBars: true
+
+enableStrictSsl: true
+
+httpRetry: 6
+
+httpTimeout: 60000
+
+initScope: 'yarnpkg'

@@ -1,0 +1,50 @@
+name: Continuous Delivery
+
+on:
+  push:
+    paths:
+      - package.json
+      - backend/**
+      - frontend/**
+    branches:
+      - master
+
+jobs:
+  continuous-delivery:
+    strategy:
+      fail-fast: false
+      matrix:
+        services:
+          - name: Back-end - API
+            working-directory: backend/api
+          - name: Front-end - App - Broca
+            working-directory: frontend/app/broca
+          - name: Front-end - App - Chess
+            working-directory: frontend/app/chess
+          - name: Front-end - App - Mini
+            working-directory: frontend/app/mini
+          - name: Front-end - Mobile
+            working-directory: frontend/mobile
+          - name: Front-end - Web
+            working-directory: frontend/web
+    name: Continuous Delivery
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.10.0'
+      - name: Install Dependencies
+        run: yarn install --network-timeout 86400000
+        working-directory: ${{ matrix.services.working-directory }}
+      - name: Linting
+        run: yarn lint --fix
+        working-directory: ${{ matrix.services.working-directory }}
+      - name: Unit Tests
+        run: yarn test -u
+        working-directory: ${{ matrix.services.working-directory }}
+      - name: Build
+        run: yarn build
+        working-directory: ${{ matrix.services.working-directory }}

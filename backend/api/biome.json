@@ -1,0 +1,19 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.5.2/schema.json",
+  "files": { "maxSize": 1073741824 },
+  "formatter": { "indentWidth": 2 },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "always",
+      "bracketSameLine": true,
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "double",
+      "lineWidth": 80,
+      "lineEnding": "crlf",
+      "indentStyle": "space",
+      "quoteStyle": "single",
+      "semicolons": "always",
+      "trailingComma": "es5"
+    }
+  }
+}
