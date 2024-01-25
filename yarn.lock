@@ -9942,10 +9942,10 @@ human-signals@^2.1.0:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
 
-husky@9.0.3:
-  version "9.0.3"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-9.0.3.tgz#26bf3f7597fc977589c82c16c680e9320b9fcf5b"
-  integrity sha512-MNRluWx5bvZ2Ft2Z9ni5KZAgNFrQSM4LKvEtTJVKTjGRqliI1CeWv8HWnPXfM+4snOaU04bb7IU2u6TPDb8ROw==
+husky@9.0.5:
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-9.0.5.tgz#b01f5bcd5ca2230c5b29b0c891a9699bebefc4ab"
+  integrity sha512-/EX48XLor4FczjgdJjwK4qMETrJxJqF4rkgo+NUeK8b2F4TV6s5QxAuG2JZfxm4b9WnrgBGS7bA/JK+H5CKg+A==
 
 hyphenate-style-name@^1.0.3:
   version "1.0.4"
