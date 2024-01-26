@@ -9,15 +9,21 @@ import { ChessPlayer, ChessStats, ChessTitle, Prisma } from '@prisma/client';
 
 export type PlayersResponse = {
   total: number;
+  limit: number;
+  offset: number;
   players: (ChessPlayer & { stats: ChessStats[] })[];
 };
 
 export const getPlayers = async ({
   country,
   title,
+  limit = 100,
+  offset = 0,
 }: {
   country?: string;
   title?: ChessTitle;
+  limit?: number;
+  offset?: number;
 }): Promise<PlayersResponse> => {
   const milliseconds: number =
     2 * (TIME_RANGE_IN_MILLISECONDS.get('year') ?? 0);
@@ -37,6 +43,8 @@ export const getPlayers = async ({
     getPrismaClient().chessPlayer.count({ where }),
     getPrismaClient().chessPlayer.findMany({
       where,
+      take: limit,
+      skip: offset,
       include: { stats: true },
       orderBy: [{ followers: 'desc' }],
     }),
@@ -44,5 +52,5 @@ export const getPlayers = async ({
 
   await getPrismaClient().$disconnect();
 
-  return { total, players };
+  return { total, offset, limit, players };
 };

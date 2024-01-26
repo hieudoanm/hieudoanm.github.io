@@ -77,16 +77,16 @@ type Player = {
 const PUBLIC_URL: string = 'https://api.chess.com/pub';
 
 const TITLES: string[] = [
-  // 'GM',
+  'GM',
   'WGM',
-  // 'IM',
+  'IM',
   'WIM',
-  // 'FM',
+  'FM',
   'WFM',
-  // 'CM',
+  'CM',
   'WCM',
-  // 'NM',
-  // 'WNM',
+  'NM',
+  'WNM',
 ];
 
 const getTitledPlayers = async (title: string): Promise<string[]> => {
@@ -287,13 +287,26 @@ const syncPlayer = async (
   }
 };
 
+const syncPlayerByAPI = async (username: string) => {
+  try {
+    const url = `https://chessinsights.vercel.app/api/chess/players/${username}`;
+    await axios.get(url);
+    return `${username} OK`;
+  } catch (error) {
+    console.error(`error ${error}`);
+    return `${username} ERROR`;
+  }
+};
+
 const USERNAME = process.env.USERNAME ?? '';
+
+const STRESS = 100;
 
 const main = async () => {
   const prismaClient = new PrismaClient();
 
   if (USERNAME) {
-    await syncPlayer(prismaClient, USERNAME);
+    await syncPlayerByAPI(USERNAME);
     return;
   }
 
@@ -306,18 +319,20 @@ const main = async () => {
   console.log('usernames', usernames.size);
   const chunks = chunk(
     [...usernames].sort((a, b) => (a > b ? 1 : -1)),
-    1
+    STRESS
   );
   chunks.reverse();
 
   for (const chunk of chunks) {
+    console.time();
     await Promise.all(
       chunk.map(async (username) => {
-        return await syncPlayer(prismaClient, username);
+        return await syncPlayerByAPI(username);
       })
     ).then((responses: string[]) => {
       console.log('responses', responses);
     });
+    console.timeEnd();
   }
 };
 
