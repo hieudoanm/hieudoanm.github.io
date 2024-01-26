@@ -34,6 +34,19 @@ export class ChessDataSource extends RESTDataSource {
     return this.get(endpoint);
   }
 
+  async getPlayers({
+    limit,
+    offset,
+  }: {
+    limit: number;
+    offset: number;
+  }): Promise<ChessPlayer> {
+    const parameters = new URLSearchParams();
+    parameters.set('limit', limit.toString());
+    parameters.set('offset', offset.toString());
+    return this.get(`/v1/chess/players?${parameters.toString()}`);
+  }
+
   async getPlayer(username: string): Promise<ChessPlayer> {
     return this.get(`/v1/chess/players/${username}`);
   }

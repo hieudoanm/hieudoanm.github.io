@@ -7,8 +7,8 @@ import countriesTypeDefs from './countries/countries.graphql';
 import { resolvers as countriesResolvers } from './countries/countries.resolvers';
 import openingsTypeDefs from './openings/openings.graphql';
 import { resolvers as openingsResolvers } from './openings/openings.resolvers';
-import playerTypeDefs from './player/player.graphql';
-import { resolvers as playerResolvers } from './player/player.resolvers';
+import playersTypeDefs from './players/players.graphql';
+import { resolvers as playerResolvers } from './players/players.resolvers';
 import streamersTypeDefs from './streamers/streamers.graphql';
 import { resolvers as streamersResolvers } from './streamers/streamers.resolvers';
 import titledTypeDefs from './titled/titled.graphql';
@@ -18,7 +18,7 @@ const typeDefs = mergeTypeDefs([
   chessTypeDefs,
   countriesTypeDefs,
   openingsTypeDefs,
-  playerTypeDefs,
+  playersTypeDefs,
   streamersTypeDefs,
   titledTypeDefs,
 ]);

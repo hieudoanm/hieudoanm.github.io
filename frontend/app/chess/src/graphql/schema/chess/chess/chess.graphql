@@ -6,6 +6,7 @@ type Chess {
   countries: [TitledCountries]
   country(code: String!): TitledCountry
   openings(eco: String, name: String): [Opening]
+  players(limit: Int, offset: Int): [Player]
   player(username: String!): Player
   streamers(title: Title, country: String): Streamers
   titled(title: Title!, timeRange: TimeRange): Titled

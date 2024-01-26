@@ -7,6 +7,13 @@ import {
 
 export const resolvers = {
   Chess: {
+    players: (
+      _parent: unknown,
+      { limit = 100, offset = 0 }: { limit: number; offset: number },
+      { chessDataSource }: { chessDataSource: ChessDataSource }
+    ) => {
+      return chessDataSource.getPlayers({ limit, offset });
+    },
     player: (
       _parent: unknown,
       { username }: { username: string },
