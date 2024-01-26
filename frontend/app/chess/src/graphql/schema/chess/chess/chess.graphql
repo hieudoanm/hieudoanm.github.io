@@ -8,6 +8,6 @@ type Chess {
   openings(eco: String, name: String): [Opening]
   players(limit: Int, offset: Int): [Player]
   player(username: String!): Player
-  streamers(title: Title, country: String): Streamers
-  titled(title: Title!, timeRange: TimeRange): Titled
+  streamers(title: String, country: String): Streamers
+  titled(title: String!, timeRange: String): Titled
 }

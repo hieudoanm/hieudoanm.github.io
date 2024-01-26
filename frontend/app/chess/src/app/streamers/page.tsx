@@ -26,7 +26,7 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 
 const streamersQuery: DocumentNode = gql`
-  query StreamersQuery($title: Title, $country: String) {
+  query StreamersQuery($title: String, $country: String) {
     chess {
       streamers(title: $title, country: $country) {
         total
