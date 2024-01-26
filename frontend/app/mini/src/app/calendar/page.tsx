@@ -4,10 +4,19 @@ import Calendar from '@mini/components/Calendar';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-const CalendarPage: NextPage = () => {
-  const date = new Date().getDate();
-  const month = new Date().getMonth();
-  const year = new Date().getFullYear();
+type CalendarPageProps = {
+  params: { date: number; month: number; year: number };
+};
+
+const CalendarPage: NextPage<CalendarPageProps> = ({
+  params,
+}: CalendarPageProps) => {
+  const d: Date = new Date();
+  const {
+    date = d.getDate(),
+    month = d.getMonth(),
+    year = d.getFullYear(),
+  } = params;
 
   return (
     <>
