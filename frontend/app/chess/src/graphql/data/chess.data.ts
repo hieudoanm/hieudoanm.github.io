@@ -30,7 +30,7 @@ export class ChessDataSource extends RESTDataSource {
     if (country) {
       urlSearchParameters.set('country', country);
     }
-    const endpoint = `/v1/chess/streamers?${urlSearchParameters.toString()}`;
+    const endpoint = `/chess/streamers?${urlSearchParameters.toString()}`;
     return this.get(endpoint);
   }
 
@@ -44,21 +44,21 @@ export class ChessDataSource extends RESTDataSource {
     const parameters = new URLSearchParams();
     parameters.set('limit', limit.toString());
     parameters.set('offset', offset.toString());
-    return this.get(`/v1/chess/players?${parameters.toString()}`);
+    return this.get(`/chess/players?${parameters.toString()}`);
   }
 
   async getPlayer(username: string): Promise<ChessPlayer> {
-    return this.get(`/v1/chess/players/${username}`);
+    return this.get(`/chess/players/${username}`);
   }
 
   async syncPlayer(username: string): Promise<ChessPlayer> {
-    return this.post(`/v1/chess/players/${username}`);
+    return this.post(`/chess/players/${username}`);
   }
 
   async getGames(
     username: string
   ): Promise<{ total: number; games: ChessGame[] }> {
-    return this.get(`/v1/chess/players/${username}/games`);
+    return this.get(`/chess/players/${username}/games`);
   }
 
   async syncGames(
@@ -68,7 +68,7 @@ export class ChessDataSource extends RESTDataSource {
       year = new Date().getFullYear(),
     }: { month: number; year: number }
   ): Promise<GamesSynced> {
-    return this.post(`/v1/chess/players/${username}/games`, {
+    return this.post(`/chess/players/${username}/games`, {
       body: { month, year },
     });
   }
@@ -84,16 +84,16 @@ export class ChessDataSource extends RESTDataSource {
     if (timeRange) {
       urlSearchParameters.set('timeRange', timeRange);
     }
-    const url: string = `/v1/chess/titled/${title}?${urlSearchParameters.toString()}`;
+    const url: string = `/chess/titled/${title}?${urlSearchParameters.toString()}`;
     return this.get(url);
   }
 
   async getCountries(): Promise<CountryTotal[]> {
-    return this.get('/v1/chess/countries');
+    return this.get('/chess/countries');
   }
 
   async getCountry(code: string): Promise<Country> {
-    return this.get(`/v1/chess/countries/${code}`);
+    return this.get(`/chess/countries/${code}`);
   }
 
   async getOpenings({
@@ -110,6 +110,6 @@ export class ChessDataSource extends RESTDataSource {
     if (name !== '') {
       urlSearchParameters.set('name', name);
     }
-    return this.get(`/v1/chess/openings?${urlSearchParameters.toString()}`);
+    return this.get(`/chess/openings?${urlSearchParameters.toString()}`);
   }
 }

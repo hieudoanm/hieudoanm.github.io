@@ -1,0 +1,23 @@
+import { ChessPlayer } from '@prisma/client';
+import { NextRequest, NextResponse } from 'next/server';
+import { getChessPlayer, syncChessPlayer } from './service';
+
+type PlayersParameters = { params: { username: string } };
+
+export const GET = async (
+  _request: NextRequest,
+  { params }: PlayersParameters
+): Promise<NextResponse<ChessPlayer>> => {
+  const username: string = params.username ?? '';
+  const player: ChessPlayer = await getChessPlayer(username);
+  return NextResponse.json(player, { status: 200 });
+};
+
+export const POST = async (
+  _request: NextRequest,
+  { params }: PlayersParameters
+): Promise<NextResponse<ChessPlayer>> => {
+  const username: string = params.username ?? '';
+  const player: ChessPlayer = await syncChessPlayer(username);
+  return NextResponse.json(player, { status: 200 });
+};
