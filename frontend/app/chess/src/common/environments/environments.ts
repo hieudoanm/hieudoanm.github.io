@@ -4,7 +4,7 @@ export const STRIPE_SECRET_KEY: string = process.env.STRIPE_SECRET_KEY ?? '';
 export const STRIPE_PRICE_ID: string = process.env.STRIPE_PRICE_ID ?? '';
 export const NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: string =
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? '';
-// Base API
+// Base URL
 export const BASE_URL: string = process.env.BASE_URL ?? 'http://localhost:8080';
 export const GRAPHQL_BASE_URL: string =
   process.env.GRAPHQL_BASE_URL ?? 'http://localhost:8080';
