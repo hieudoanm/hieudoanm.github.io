@@ -5,4 +5,5 @@
     "plugin:unicorn/recommended",
   ],
   "plugins": ["sonarjs", "unicorn"],
+  "rules": { "unicorn/no-null": "warn" },
 }

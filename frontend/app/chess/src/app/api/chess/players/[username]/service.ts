@@ -17,6 +17,11 @@ import {
 } from '@prisma/client';
 import axios from 'axios';
 
+(BigInt.prototype as any).toJSON = function () {
+  const int = Number.parseInt(this.toString());
+  return int ?? this.toString();
+};
+
 export const getChessPlayer = async (
   username: string
 ): Promise<ChessPlayer> => {
