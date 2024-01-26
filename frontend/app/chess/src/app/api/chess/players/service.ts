@@ -11,7 +11,7 @@ export type PlayersResponse = {
   total: number;
   limit: number;
   offset: number;
-  players: (ChessPlayer & { stats: ChessStats[] })[];
+  players: (ChessStats & { player: ChessPlayer })[];
 };
 
 export const getPlayers = async ({
@@ -25,13 +25,7 @@ export const getPlayers = async ({
   limit?: number;
   offset?: number;
 }): Promise<PlayersResponse> => {
-  const milliseconds: number =
-    2 * (TIME_RANGE_IN_MILLISECONDS.get('year') ?? 0);
-  const d = new Date(Date.now() - milliseconds);
-  const [date] = d.toISOString().split('T');
-  let where: Prisma.ChessPlayerWhereInput = {
-    lastOnline: { gte: `${date}T00:00:00Z` },
-  };
+  let where: Prisma.ChessPlayerWhereInput = {};
   if (title) {
     where = { ...where, title };
   }
@@ -41,12 +35,12 @@ export const getPlayers = async ({
 
   const [total = 0, players = []] = await getPrismaClient().$transaction([
     getPrismaClient().chessPlayer.count({ where }),
-    getPrismaClient().chessPlayer.findMany({
-      where,
+    getPrismaClient().chessStats.findMany({
       take: limit,
       skip: offset,
-      include: { stats: true },
-      orderBy: [{ followers: 'desc' }],
+      include: { player: true },
+      orderBy: { last: 'desc' },
+      where: { timeClass: 'blitz', player: { ...where } },
     }),
   ]);
 

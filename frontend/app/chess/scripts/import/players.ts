@@ -300,7 +300,7 @@ const syncPlayerByAPI = async (username: string) => {
 
 const USERNAME = process.env.USERNAME ?? '';
 
-const STRESS = 100;
+const STRESS = 1000;
 
 const main = async () => {
   const prismaClient = new PrismaClient();
