@@ -42,5 +42,7 @@ export const getPlayers = async ({
     }),
   ]);
 
+  await getPrismaClient().$disconnect();
+
   return { total, players };
 };

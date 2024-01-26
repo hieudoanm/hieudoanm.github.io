@@ -308,6 +308,7 @@ const main = async () => {
     [...usernames].sort((a, b) => (a > b ? 1 : -1)),
     1
   );
+  chunks.reverse();
 
   for (const chunk of chunks) {
     await Promise.all(

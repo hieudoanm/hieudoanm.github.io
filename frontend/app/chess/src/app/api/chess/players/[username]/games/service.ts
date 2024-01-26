@@ -47,6 +47,9 @@ export const getChessGames = async (
       orderBy: { endTime: 'desc' },
     }),
   ]);
+
+  await getPrismaClient().$disconnect();
+
   return { total, games };
 };
 

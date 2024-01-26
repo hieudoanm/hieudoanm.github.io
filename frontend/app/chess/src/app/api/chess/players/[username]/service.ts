@@ -31,7 +31,10 @@ export const getChessPlayer = async (
     where,
     include: { stats: true },
   });
-  if (player !== null) return player;
+  if (player !== null) {
+    await getPrismaClient().$disconnect();
+    return player;
+  }
   return syncChessPlayer(username);
 };
 
@@ -41,6 +44,7 @@ export const syncChessPlayer = async (
   const player = await syncProfile(username);
   const id: number = await syncStats(username, player.id);
   logger.info(`syncChessPlayer id=${id}`);
+  await getPrismaClient().$disconnect();
   return player;
 };
 

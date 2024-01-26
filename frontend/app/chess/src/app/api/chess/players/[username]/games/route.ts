@@ -19,6 +19,7 @@ export const GET = (
   const limit: number = Number.parseInt(limitString, 10);
   const offsetString: string | undefined = searchParams.get('offset') ?? '0';
   const offset: number = Number.parseInt(offsetString, 10);
+
   const response = getChessGames(username, { year, month }, { limit, offset });
   return NextResponse.json(response, { status: 200 });
 };

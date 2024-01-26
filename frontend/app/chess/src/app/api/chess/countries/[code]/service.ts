@@ -95,6 +95,9 @@ export const getCountry = async (
       countTitledPlayers(countryCode)
     ),
   ]);
+
+  await getPrismaClient().$disconnect();
+
   return {
     averageRapidRating: averageRapidRating ?? 0,
     averageBlitzRating: averageBlitzRating ?? 0,

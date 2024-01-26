@@ -1,7 +1,6 @@
 import { TIME_RANGE_IN_MILLISECONDS } from '@chess/common/constants/time.constants';
 import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
-import { Prisma } from '@prisma/client';
 import { Country } from './model';
 
 (BigInt.prototype as any).toJSON = function () {
@@ -20,6 +19,7 @@ export const getCountries = async (): Promise<Country[]> => {
       orderBy: { country: 'asc' },
       where: { title: { not: null }, lastOnline: { gte: `${date}T00:00:00Z` } },
     });
+    await getPrismaClient().$disconnect();
     return countries.map((country) => ({
       ...country,
       count: country._count.country,

@@ -45,5 +45,7 @@ export const getStreamers = async ({
       }),
     ]);
 
+  await getPrismaClient().$disconnect();
+
   return { total, countries, players };
 };

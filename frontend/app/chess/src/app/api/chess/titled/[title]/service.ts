@@ -145,6 +145,7 @@ export const getTitledStats = async ({
     title,
     timeRange,
   });
+  await getPrismaClient().$disconnect();
   return {
     averageRapidRating: Number.parseFloat(averageRapidRating.toFixed(2)),
     maxRapidRating,

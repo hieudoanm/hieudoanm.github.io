@@ -15,5 +15,6 @@ export const getOpenings = async (eco?: string): Promise<OpeningsResponse> => {
       where,
     });
   const total: number = openings.length;
+  await getPrismaClient().$disconnect();
   return { total, openings };
 };
