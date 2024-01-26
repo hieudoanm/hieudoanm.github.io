@@ -79,7 +79,7 @@ const CountriesTable: React.FC<{ countries: Country[] }> = ({
 const CountriesMaps: React.FC<{ countries: Country[] }> = ({
   countries = [],
 }) => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const gap = 50;
   const numberOfTitlePlayers: number[] = countries
@@ -169,9 +169,7 @@ type CountriesResponse = { chess: { countries: Country[] } };
 
 const CountriesPage: NextPage = async () => {
   logger.info('CountriesPage');
-  const data = await query<CountriesResponse>({
-    query: countriesQuery,
-  });
+  const data = await query<CountriesResponse>({ query: countriesQuery });
   const countries = data?.chess?.countries ?? [];
 
   return (
