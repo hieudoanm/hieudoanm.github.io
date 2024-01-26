@@ -1,5 +1,5 @@
-import { logger } from '@chess/common/libs/logger';
 import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
+import { logger } from '@chess/common/libs/logger';
 import { getInsights } from '@chess/common/services/insights.service';
 import { Insights } from '@chess/common/types/chess';
 import { Container } from '@chess/components/atoms/Container';

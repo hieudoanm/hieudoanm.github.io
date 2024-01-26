@@ -139,8 +139,7 @@ const CountriesMaps: React.FC<{ countries: Country[] }> = ({
                 <Tooltip label={label} key={color} placement="left">
                   <Box
                     bgColor={color}
-                    className="aspect-square w-4 cursor-pointer overflow-hidden rounded text-white"
-                  >
+                    className="aspect-square w-4 cursor-pointer overflow-hidden rounded text-white">
                     <Text color={color}>{color}</Text>
                   </Box>
                 </Tooltip>

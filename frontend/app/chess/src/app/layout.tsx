@@ -1,10 +1,10 @@
 import {
-  APP_NAME,
   APP_DESCRIPTION,
+  APP_NAME,
 } from '@chess/common/constants/app.constants';
+import '@chess/styles/globals.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '@chess/styles/globals.scss';
 import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'] });

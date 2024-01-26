@@ -19,10 +19,10 @@ import {
   Tr,
 } from '@chakra-ui/react';
 import { logger } from '@chess/common/libs/logger';
-import { ChessPlayer, ChessTitle } from '@prisma/client';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
+import { ChessPlayer, ChessTitle } from '@prisma/client';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { ChangeEvent } from 'react';
@@ -110,35 +110,18 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                 display="flex"
                 alignItems="center"
                 justifyContent="space-between"
-                className="gap-x-4 md:gap-x-8"
-              >
+                className="gap-x-4 md:gap-x-8">
                 <Heading className="text-xl">Streamers ({total})</Heading>
                 <Box
                   display="flex"
                   alignItems="center"
                   justifyContent="space-between"
-                  className="gap-x-2 md:gap-x-4"
-                >
+                  className="gap-x-2 md:gap-x-4">
                   <Select
                     id="title"
                     name="title"
                     placeholder="Title"
-                    value={title}
-                    // onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-                    //   const newTitle: ChessTitle = event.target
-                    //     .value as ChessTitle;
-                    //   const updatedSearchParameters = {
-                    //     ...searchParams,
-                    //     title: newTitle,
-                    //   };
-                    // const newSearchParameters = new URLSearchParams([
-                    //   ...updatedSearchParameters.entries(),
-                    // ]);
-                    // router.push(
-                    //   `${pathname}${newSearchParameters.toString()}`
-                    // );
-                    // }}
-                  >
+                    value={title}>
                     <option value="GM">GM</option>
                     <option value="IM">IM</option>
                     <option value="FM">FM</option>
@@ -154,21 +137,7 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                     id="country"
                     name="country"
                     placeholder={`Country (${countries.length})`}
-                    value={country}
-                    // onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-                    //   const newCountry: string = event.target.value;
-                    // const updatedSearchParameters = {
-                    //   ...searchParams,
-                    //   country: newCountry,
-                    // };
-                    // const newSearchParameters = new URLSearchParams([
-                    //   ...updatedSearchParameters.entries(),
-                    // ]);
-                    // router.push(
-                    //   `${pathname}${newSearchParameters.toString()}`
-                    // );
-                    // }}
-                  >
+                    value={country}>
                     {countries.map(({ countryCode, country }) => {
                       return (
                         <option key={countryCode} value={countryCode}>
@@ -248,8 +217,7 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                               <Button
                                 size="sm"
                                 type="button"
-                                colorScheme="teal"
-                              >
+                                colorScheme="teal">
                                 {/* <Icon as={FaTwitch} /> */}
                                 Twitch
                               </Button>

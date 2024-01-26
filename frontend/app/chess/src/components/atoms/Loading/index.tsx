@@ -17,7 +17,7 @@ export const Loading: React.FC = () => {
     const url = `${pathname}?${searchParameters}`;
     logger.info(`url=${url}`);
     setTimeout(() => setLoading(false), 2000);
-  }, [pathname, searchParameters, router]);
+  }, [pathname, searchParameters]);
 
   return (
     <>

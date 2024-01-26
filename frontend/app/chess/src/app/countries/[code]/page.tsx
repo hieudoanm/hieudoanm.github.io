@@ -404,8 +404,7 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
                       <Box
                         display={'flex'}
                         alignItems={'center'}
-                        justifyContent={'space-between'}
-                      >
+                        justifyContent={'space-between'}>
                         <Link href={`/titled/${title}`}>
                           <div className="inline-flex items-center gap-x-2">
                             <Badge colorScheme="red">{title}</Badge>

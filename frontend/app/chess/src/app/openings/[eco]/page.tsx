@@ -18,10 +18,10 @@ import {
   Tr,
 } from '@chakra-ui/react';
 import { logger } from '@chess/common/libs/logger';
-import { ChessOpening } from '@prisma/client';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
+import { ChessOpening } from '@prisma/client';
 import { NextPage } from 'next';
 import { FaChevronRight } from 'react-icons/fa6';
 
@@ -60,8 +60,7 @@ const OpeningPage: NextPage<{ params: { eco: string } }> = async ({
         <div className="py-4 md:py-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <Breadcrumb
-              separator={<Icon as={FaChevronRight} color="gray.500" />}
-            >
+              separator={<Icon as={FaChevronRight} color="gray.500" />}>
               <BreadcrumbItem>
                 <Link href="/">Home</Link>
               </BreadcrumbItem>

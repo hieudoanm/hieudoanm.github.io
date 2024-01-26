@@ -17,10 +17,10 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
-import { ChessOpening } from '@prisma/client';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
+import { ChessOpening } from '@prisma/client';
 import { NextPage } from 'next';
 import { FaChevronRight } from 'react-icons/fa6';
 
@@ -91,8 +91,7 @@ const OpeningsPage: NextPage = async () => {
                             <Td>
                               <Text
                                 title={name}
-                                className="w-32 truncate md:w-auto"
-                              >
+                                className="w-32 truncate md:w-auto">
                                 {name}
                               </Text>
                             </Td>

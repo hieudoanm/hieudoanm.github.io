@@ -223,8 +223,7 @@ const PlayersTable: React.FC<{
                       <Td>
                         <Link
                           href={`/${username}`}
-                          className="inline-flex items-center gap-2"
-                        >
+                          className="inline-flex items-center gap-2">
                           {avatar.length > 0 ? (
                             <div
                               className="aspect-square w-8 rounded bg-contain bg-center"
@@ -313,14 +312,12 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
             <Box
               display={'flex'}
               alignItems={'center'}
-              justifyContent={'space-between'}
-            >
+              justifyContent={'space-between'}>
               <Menu>
                 <MenuButton
                   // as={Button}
                   // rightIcon={<Icon as={FaChevronDown} />}
-                  className="bg-white px-0 text-lg md:text-4xl"
-                >
+                  className="bg-white px-0 text-lg md:text-4xl">
                   {TITLED_ABBREVIATIONS[title]} ({total})
                 </MenuButton>
                 <MenuList>
@@ -329,20 +326,7 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
                     .map(([key, value]) => (
                       <MenuItem
                         key={key}
-                        className={`${title === key ? 'font-bold' : ''}`}
-                        // onClick={() => {
-                        //   const updatedSearchParameters = {
-                        //     ...searchParameters,
-                        //     title: key,
-                        //   };
-                        //   const newSearchParameters = new URLSearchParams([
-                        //     ...updatedSearchParameters.entries(),
-                        //   ]);
-                        //   router.push(
-                        //     `${pathname}${newSearchParameters.toString()}`
-                        //   );
-                        // }}
-                      >
+                        className={`${title === key ? 'font-bold' : ''}`}>
                         {value}
                       </MenuItem>
                     ))}
@@ -353,19 +337,7 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
                   id="timeRange"
                   name="timeRange"
                   placeholder="Time Range"
-                  value={timeRange}
-                  // onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-                  //   const newTimeRange = event.target.value as TimeRange;
-                  //   const updatedSearchParameters = {
-                  //     ...searchParameters,
-                  //     timeRange: newTimeRange,
-                  //   };
-                  //   const newSearchParameters = new URLSearchParams([
-                  //     ...updatedSearchParameters.entries(),
-                  //   ]);
-                  //   router.push(`${pathname}${newSearchParameters.toString()}`);
-                  // }}
-                >
+                  value={timeRange}>
                   <option value="week">7 Days</option>
                   <option value="month">30 Days</option>
                   <option value="quarter">90 Days</option>

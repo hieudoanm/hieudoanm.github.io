@@ -21,20 +21,18 @@ import {
 import { APP_NAME, YEAR } from '@chess/common/constants/app.constants';
 import { Container } from '@chess/components/atoms/Container';
 import Link from 'next/link';
-import { FaGithub, FaTools, FaHamburger } from 'react-icons/fa';
+import { FaGithub, FaHamburger, FaTools } from 'react-icons/fa';
 
 const GitHubButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
   return (
     <Link
       href="https://github.com/hieudoanm"
       className="font-bold"
-      target="_blank"
-    >
+      target="_blank">
       <Button
         size={size}
         colorScheme="teal"
-        className="flex w-full items-center gap-x-2"
-      >
+        className="flex w-full items-center gap-x-2">
         <Icon as={FaGithub} />
         <Text>GitHub</Text>
       </Button>
@@ -119,8 +117,7 @@ export const Navbar: React.FC = () => {
                       size={'sm'}
                       as={Button}
                       colorScheme="teal"
-                      leftIcon={<Icon as={FaTools} />}
-                    >
+                      leftIcon={<Icon as={FaTools} />}>
                       <Text>Tools</Text>
                     </MenuButton>
                     <MenuList>
