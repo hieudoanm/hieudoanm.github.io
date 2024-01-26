@@ -1,12 +1,9 @@
 import { gql } from '@apollo/client';
 import {
-  Breadcrumb,
-  BreadcrumbItem,
   Card,
   CardHeader,
   Divider,
   Heading,
-  Icon,
   Link,
   Table,
   TableContainer,
@@ -22,10 +19,9 @@ import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
 import { ChessOpening } from '@prisma/client';
 import { NextPage } from 'next';
-import { FaChevronRight } from 'react-icons/fa6';
 
 const openingsQuery = gql`
-  query OpeningsQuery {
+  query OpeningsQuery($eco: String) {
     chess {
       openings {
         eco
@@ -39,10 +35,20 @@ const openingsQuery = gql`
   }
 `;
 
+type OpeningsPageProperties = {
+  params: { eco: string };
+};
+
 type OpeningsResponse = { chess: { openings: ChessOpening[] } };
 
-const OpeningsPage: NextPage = async () => {
-  const data = await query<OpeningsResponse>({ query: openingsQuery });
+const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
+  params,
+}: OpeningsPageProperties) => {
+  const eco = params.eco ?? undefined;
+  const data = await query<OpeningsResponse>({
+    query: openingsQuery,
+    variables: { eco },
+  });
   const openings = data?.chess?.openings ?? [];
 
   return (
@@ -50,16 +56,6 @@ const OpeningsPage: NextPage = async () => {
       <Container>
         <div className="py-4 md:py-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
-            {/* <Breadcrumb
-              separator={<Icon as={FaChevronRight} color="gray.500" />}
-            >
-              <BreadcrumbItem>
-                <Link href="/">Home</Link>
-              </BreadcrumbItem>
-              <BreadcrumbItem isCurrentPage>
-                <Text>Openings</Text>
-              </BreadcrumbItem>
-            </Breadcrumb> */}
             <Card className="border border-gray-200 shadow">
               <CardHeader>
                 <Heading className="text-xl">

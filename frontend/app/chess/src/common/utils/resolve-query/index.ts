@@ -1,7 +1,7 @@
 export const resolveQuery = <T>(
   queryString: string,
   name: string,
-  fallback = ''
+  fallback = undefined
 ): T => {
   const parameters = new URLSearchParams(queryString);
   if (parameters.has(name)) return fallback as T;

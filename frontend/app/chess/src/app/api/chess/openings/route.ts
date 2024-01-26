@@ -1,19 +1,11 @@
-import { getPrismaClient } from '@chess/common/prisma/prisma.client';
-import { resolveQuery } from '@chess/common/utils/resolve-query';
-import { ChessOpening } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
-
-type OpeningsResponse = { total: number; openings: ChessOpening[] };
+import { OpeningsResponse, getOpenings } from './service';
 
 export const GET = async (
   request: NextRequest
 ): Promise<NextResponse<OpeningsResponse>> => {
-  const url: string = request.url;
-  const [_, queryString] = url.split('?');
-  const eco: string = resolveQuery(queryString, 'eco');
-  const where = { eco };
-  const openings: ChessOpening[] =
-    await getPrismaClient().chessOpening.findMany({ where });
-  const total: number = openings.length;
+  const { searchParams } = new URL(request.url);
+  const eco: string | undefined = searchParams.get('eco') ?? undefined;
+  const { total = 0, openings = [] } = await getOpenings(eco);
   return NextResponse.json({ total, openings }, { status: 200 });
 };
