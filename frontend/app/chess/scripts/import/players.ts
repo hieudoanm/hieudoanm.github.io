@@ -282,7 +282,7 @@ const syncPlayer = async (
     }
     return `${username} OK`;
   } catch (error) {
-    console.error(`error ${error}`);
+    console.error(`${username} error=${error}`);
     return `${username} ERROR`;
   }
 };
@@ -293,7 +293,7 @@ const syncPlayerByAPI = async (username: string) => {
     await axios.get(url);
     return `${username} OK`;
   } catch (error) {
-    console.error(`error ${error}`);
+    console.error(`${username} error=${error}`);
     return `${username} ERROR`;
   }
 };
@@ -303,8 +303,6 @@ const USERNAME = process.env.USERNAME ?? '';
 const STRESS = 1000;
 
 const main = async () => {
-  const prismaClient = new PrismaClient();
-
   if (USERNAME) {
     await syncPlayerByAPI(USERNAME);
     return;
