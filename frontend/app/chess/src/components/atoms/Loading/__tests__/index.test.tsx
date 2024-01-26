@@ -6,6 +6,8 @@ jest.mock('next/navigation', () => ({
     asPath: '',
     events: { on: jest.fn(), off: jest.fn() },
   }),
+  usePathname: jest.fn().mockResolvedValue(''),
+  useSearchParams: jest.fn().mockResolvedValue(new URLSearchParams()),
 }));
 
 describe('Loading', () => {

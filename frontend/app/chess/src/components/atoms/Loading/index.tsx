@@ -2,8 +2,8 @@
 
 import { Spinner, Text } from '@chakra-ui/react';
 import { APP_NAME } from '@chess/common/constants/app.constants';
-import { useSearchParams, usePathname } from 'next/navigation';
-import { useRouter } from 'next/router';
+import { logger } from '@chess/common/libs/logger';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export const Loading: React.FC = () => {
@@ -13,13 +13,10 @@ export const Loading: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const handleStart = (url: string) =>
-      url !== router.asPath && setLoading(true);
-    const handleComplete = (url: string) =>
-      url === router.asPath && setTimeout(() => setLoading(false), 2000);
+    setLoading(true);
     const url = `${pathname}?${searchParameters}`;
-    handleStart(url);
-    handleComplete(url);
+    logger.info(`url=${url}`);
+    setTimeout(() => setLoading(false), 2000);
   }, [pathname, searchParameters, router]);
 
   return (
