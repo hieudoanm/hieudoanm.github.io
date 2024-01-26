@@ -5,8 +5,9 @@ import {
   ChessOpening,
   ChessPlayer,
   ChessTitle,
+} from '@prisma/client';
+import {
   Country,
-  CountryTotal,
   GamesSynced,
   StreamersResponse,
   TimeRange,
@@ -16,22 +17,29 @@ import {
 export class ChessDataSource extends RESTDataSource {
   override baseURL = GRAPHQL_BASE_URL;
 
-  async getStreamers({
-    title,
-    country,
+  async getCountries(): Promise<Country[]> {
+    return this.get('/chess/countries');
+  }
+
+  async getCountry(code: string): Promise<Country> {
+    return this.get(`/chess/countries/${code}`);
+  }
+
+  async getOpenings({
+    eco = '',
+    name = '',
   }: {
-    title: ChessTitle;
-    country: string;
-  }): Promise<StreamersResponse> {
+    eco: string;
+    name: string;
+  }): Promise<{ total: number; openings: ChessOpening[] }> {
     const urlSearchParameters: URLSearchParams = new URLSearchParams();
-    if (title) {
-      urlSearchParameters.set('title', title);
+    if (eco !== '') {
+      urlSearchParameters.set('eco', eco);
     }
-    if (country) {
-      urlSearchParameters.set('country', country);
+    if (name !== '') {
+      urlSearchParameters.set('name', name);
     }
-    const endpoint = `/chess/streamers?${urlSearchParameters.toString()}`;
-    return this.get(endpoint);
+    return this.get(`/chess/openings?${urlSearchParameters.toString()}`);
   }
 
   async getPlayers({
@@ -55,13 +63,13 @@ export class ChessDataSource extends RESTDataSource {
     return this.post(`/chess/players/${username}`);
   }
 
-  async getGames(
+  async getPlayerGames(
     username: string
   ): Promise<{ total: number; games: ChessGame[] }> {
     return this.get(`/chess/players/${username}/games`);
   }
 
-  async syncGames(
+  async syncPlayerGames(
     username: string,
     {
       month = new Date().getMonth() + 1,
@@ -71,6 +79,24 @@ export class ChessDataSource extends RESTDataSource {
     return this.post(`/chess/players/${username}/games`, {
       body: { month, year },
     });
+  }
+
+  async getStreamers({
+    title,
+    country,
+  }: {
+    title: ChessTitle;
+    country: string;
+  }): Promise<StreamersResponse> {
+    const urlSearchParameters: URLSearchParams = new URLSearchParams();
+    if (title) {
+      urlSearchParameters.set('title', title);
+    }
+    if (country) {
+      urlSearchParameters.set('country', country);
+    }
+    const endpoint = `/chess/streamers?${urlSearchParameters.toString()}`;
+    return this.get(endpoint);
   }
 
   async getTitled({
@@ -86,30 +112,5 @@ export class ChessDataSource extends RESTDataSource {
     }
     const url: string = `/chess/titled/${title}?${urlSearchParameters.toString()}`;
     return this.get(url);
-  }
-
-  async getCountries(): Promise<CountryTotal[]> {
-    return this.get('/chess/countries');
-  }
-
-  async getCountry(code: string): Promise<Country> {
-    return this.get(`/chess/countries/${code}`);
-  }
-
-  async getOpenings({
-    eco = '',
-    name = '',
-  }: {
-    eco: string;
-    name: string;
-  }): Promise<{ total: number; openings: ChessOpening[] }> {
-    const urlSearchParameters: URLSearchParams = new URLSearchParams();
-    if (eco !== '') {
-      urlSearchParameters.set('eco', eco);
-    }
-    if (name !== '') {
-      urlSearchParameters.set('name', name);
-    }
-    return this.get(`/chess/openings?${urlSearchParameters.toString()}`);
   }
 }

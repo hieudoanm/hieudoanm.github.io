@@ -1,5 +1,5 @@
 import { ChessDataSource } from '@chess/graphql/data/chess.data';
-import { Country, CountryTotal } from '@chess/graphql/data/chess.types';
+import { Country } from '@chess/graphql/data/chess.types';
 
 export const resolvers = {
   Chess: {
@@ -7,7 +7,7 @@ export const resolvers = {
       _parent: unknown,
       _arguments: unknown,
       { chessDataSource }: { chessDataSource: ChessDataSource }
-    ): Promise<CountryTotal[]> => {
+    ): Promise<Country[]> => {
       return chessDataSource.getCountries();
     },
     country: async (

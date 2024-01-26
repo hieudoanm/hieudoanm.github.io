@@ -5,5 +5,5 @@
     "plugin:unicorn/recommended",
   ],
   "plugins": ["sonarjs", "unicorn"],
-  "rules": { "unicorn/no-null": "warn" },
+  "rules": { "unicorn/no-null": "warn", "unicorn/prefer-spread": "warn" },
 }

@@ -1,5 +1,6 @@
 import { ChessDataSource } from '@chess/graphql/data/chess.data';
-import { ChessTitle, StreamersResponse } from '@chess/graphql/data/chess.types';
+import { StreamersResponse } from '@chess/graphql/data/chess.types';
+import { ChessTitle } from '@prisma/client';
 
 export const resolvers = {
   Chess: {

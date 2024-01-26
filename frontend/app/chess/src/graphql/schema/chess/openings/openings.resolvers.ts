@@ -1,5 +1,5 @@
 import { ChessDataSource } from '@chess/graphql/data/chess.data';
-import { ChessOpening } from '@chess/graphql/data/chess.types';
+import { ChessOpening } from '@prisma/client';
 
 export const resolvers = {
   Chess: {

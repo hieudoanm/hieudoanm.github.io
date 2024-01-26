@@ -1,9 +1,6 @@
 import { ChessDataSource } from '@chess/graphql/data/chess.data';
-import {
-  ChessGame,
-  ChessPlayer,
-  GamesSynced,
-} from '@chess/graphql/data/chess.types';
+import { GamesSynced } from '@chess/graphql/data/chess.types';
+import { ChessGame, ChessPlayer } from '@prisma/client';
 
 export const resolvers = {
   Chess: {
@@ -39,7 +36,7 @@ export const resolvers = {
       }: { username: string; year: number; month: number },
       { chessDataSource }: { chessDataSource: ChessDataSource }
     ): Promise<GamesSynced> => {
-      return chessDataSource.syncGames(username, { year, month });
+      return chessDataSource.syncPlayerGames(username, { year, month });
     },
   },
   Player: {
@@ -48,7 +45,7 @@ export const resolvers = {
       _arguments: unknown,
       { chessDataSource }: { chessDataSource: ChessDataSource }
     ): Promise<ChessGame[]> => {
-      const { games = [] } = await chessDataSource.getGames(username);
+      const { games = [] } = await chessDataSource.getPlayerGames(username);
       return games;
     },
   },

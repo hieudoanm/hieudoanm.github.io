@@ -164,15 +164,6 @@ const TitledStats: React.FC<{
             <StatNumber>{average}</StatNumber>
             <StatHelpText>Highest: {max}</StatHelpText>
           </Stat>
-          {/* {icon ? (
-            <div>
-              <Box bgColor={'teal.500'} color={'white'} className="rounded p-2">
-                <Icon as={icon} boxSize={6} />
-              </Box>
-            </div>
-          ) : (
-            <></>
-          )} */}
         </div>
       </CardBody>
     </Card>

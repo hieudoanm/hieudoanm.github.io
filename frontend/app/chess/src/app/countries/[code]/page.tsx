@@ -27,7 +27,7 @@ import {
   GAP,
   TITLED_ABBREVIATIONS,
 } from '@chess/common/constants/chess.constants';
-import flags from '@chess/common/data/flags.json';
+import flags from '@chess/common/json/flags.json';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';

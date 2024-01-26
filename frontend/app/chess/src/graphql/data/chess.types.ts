@@ -4,20 +4,7 @@ import {
   ONE_WEEK,
   ONE_YEAR,
 } from '@chess/common/constants/time.constants';
-
-export type ChessPlayer = { id: string };
-
-export type ChessTitle = 'GM';
-
-export type ChessOpening = { eco: string };
-
-export type ChessGame = { id: string };
-
-export type CountryTotal = {
-  countryCode: string;
-  country: string;
-  total: number;
-};
+import { ChessPlayer, ChessTitle } from '@prisma/client';
 
 export type Titled = {
   averageRapidRating: number;
@@ -31,13 +18,15 @@ export type Titled = {
 };
 
 export type Country = {
+  countryCode: string;
+  country: string;
+  total: number;
   averageRapidRating: number;
   averageBlitzRating: number;
   averageBulletRating: number;
   maxRapidRating: number;
   maxBlitzRating: number;
   maxBulletRating: number;
-  total: number;
   players: ChessPlayer[];
   titles: ChessTitle[];
 };

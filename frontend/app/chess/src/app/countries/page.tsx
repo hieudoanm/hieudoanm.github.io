@@ -21,7 +21,7 @@ import {
   Tooltip,
   Tr,
 } from '@chakra-ui/react';
-import maps from '@chess/common/data/world.json';
+import maps from '@chess/common/json/world.json';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { SVGMaps } from '@chess/components/atoms/Maps';

@@ -7,7 +7,6 @@ import {
   CardHeader,
   Divider,
   Heading,
-  Icon,
   Select,
   Table,
   TableContainer,
@@ -25,8 +24,6 @@ import { Layout } from '@chess/layout';
 import { ChessPlayer, ChessTitle } from '@prisma/client';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { ChangeEvent } from 'react';
-import { FaTwitch } from 'react-icons/fa';
 
 const streamersQuery: DocumentNode = gql`
   query StreamersQuery($title: Title, $country: String) {
