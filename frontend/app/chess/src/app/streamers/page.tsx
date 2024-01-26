@@ -114,7 +114,7 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                   alignItems="center"
                   justifyContent="space-between"
                   className="gap-x-2 md:gap-x-4">
-                  <Select
+                  {/* <Select
                     id="title"
                     name="title"
                     placeholder="Title"
@@ -142,7 +142,7 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                         </option>
                       );
                     })}
-                  </Select>
+                  </Select> */}
                 </Box>
               </Box>
             </CardHeader>

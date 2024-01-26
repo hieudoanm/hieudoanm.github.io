@@ -1,7 +1,7 @@
 import {
   ApolloClient,
-  DocumentNode,
   InMemoryCache,
+  NormalizedCacheObject,
   OperationVariables,
   QueryOptions,
 } from '@apollo/client';
@@ -13,18 +13,23 @@ import { logger } from '@chess/common/libs/logger';
 
 const URI: string = NEXT_PUBLIC_GRAPHQL_URI || GRAPHQL_URI || '';
 
-console.info(`URI=${URI}`);
+let apolloClient: ApolloClient<NormalizedCacheObject> | undefined;
 
-export const apolloClient = new ApolloClient({
-  uri: URI,
-  cache: new InMemoryCache(),
-});
+export const getApolloClient = (
+  uri: string
+): ApolloClient<NormalizedCacheObject> => {
+  if (apolloClient) return apolloClient;
+  const cache: InMemoryCache = new InMemoryCache();
+  apolloClient = new ApolloClient({ uri, cache });
+  return apolloClient;
+};
 
 export const query = async <T>(
   queryOptions: QueryOptions<OperationVariables, T>
 ): Promise<T> => {
   try {
-    const { data } = await apolloClient.query<T>(queryOptions);
+    logger.info(`query URI=${URI}`);
+    const { data } = await getApolloClient(URI).query<T>(queryOptions);
     return data;
   } catch (error) {
     logger.error(`query error=${error}`);

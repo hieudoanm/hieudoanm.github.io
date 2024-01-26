@@ -2,7 +2,6 @@
 
 import { DocumentNode, gql } from '@apollo/client';
 import { Badge, Button, Heading, Icon, Text, useToast } from '@chakra-ui/react';
-import { apolloClient } from '@chess/graphql/apollo/client';
 import Link from 'next/link';
 import { FaCheckCircle, FaSync, FaTwitch } from 'react-icons/fa';
 

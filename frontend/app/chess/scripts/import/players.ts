@@ -77,16 +77,16 @@ type Player = {
 const PUBLIC_URL: string = 'https://api.chess.com/pub';
 
 const TITLES: string[] = [
-  'GM',
+  // 'GM',
   'WGM',
-  'IM',
+  // 'IM',
   'WIM',
-  'FM',
+  // 'FM',
   'WFM',
-  'CM',
+  // 'CM',
   'WCM',
-  'NM',
-  'WNM',
+  // 'NM',
+  // 'WNM',
 ];
 
 const getTitledPlayers = async (title: string): Promise<string[]> => {
@@ -109,20 +109,20 @@ const syncPlayer = async (
     const url = `${PUBLIC_URL}/player/${username}`;
     const { data: player } = await axios.get<Player>(url);
     const {
-      player_id: id,
-      followers,
-      avatar,
-      location,
-      verified,
-      name,
-      twitch_url: twitchUrl,
-      is_streamer: isStreamer,
-      last_online: lastOnline,
-      joined,
-      status,
-      title,
-      league,
-      country: countryUrl,
+      player_id: id = 0,
+      followers = 0,
+      avatar = '',
+      location = '',
+      verified = false,
+      name = '',
+      twitch_url: twitchUrl = '',
+      is_streamer: isStreamer = false,
+      last_online: lastOnline = 0,
+      joined = 0,
+      status = '',
+      title = '',
+      league = null,
+      country: countryUrl = '',
     } = player;
     const {
       data: { code: countryCode, name: country } = { code: '', name: '' },

@@ -16,9 +16,10 @@ import {
   LOSS_RESULTS,
   WIN_RESULTS,
 } from '@chess/common/constants/chess.constants';
+import { NEXT_PUBLIC_GRAPHQL_URI } from '@chess/common/environments/environments';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
-import { apolloClient, query } from '@chess/graphql/apollo/client';
+import { getApolloClient, query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
 import { ChessGame, ChessResult } from '@prisma/client';
 import { NextPage } from 'next';
@@ -120,7 +121,10 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
   const games: ChessGame[] = data?.chess?.player?.games ?? [];
 
   const syncGames = async () => {
-    await apolloClient.mutate({ mutation, variables: { username } });
+    await getApolloClient(NEXT_PUBLIC_GRAPHQL_URI).mutate({
+      mutation,
+      variables: { username },
+    });
     toast({
       title: 'Games Synced',
       description: 'Games are Synced Successfully',

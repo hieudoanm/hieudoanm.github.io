@@ -18,11 +18,11 @@ export class ChessDataSource extends RESTDataSource {
   override baseURL = GRAPHQL_BASE_URL;
 
   async getCountries(): Promise<Country[]> {
-    return this.get('/chess/countries');
+    return this.get('/api/chess/countries');
   }
 
   async getCountry(code: string): Promise<Country> {
-    return this.get(`/chess/countries/${code}`);
+    return this.get(`/api/chess/countries/${code}`);
   }
 
   async getOpenings({
@@ -39,7 +39,7 @@ export class ChessDataSource extends RESTDataSource {
     if (name !== '') {
       urlSearchParameters.set('name', name);
     }
-    return this.get(`/chess/openings?${urlSearchParameters.toString()}`);
+    return this.get(`/api/chess/openings?${urlSearchParameters.toString()}`);
   }
 
   async getPlayers({
@@ -52,21 +52,21 @@ export class ChessDataSource extends RESTDataSource {
     const parameters = new URLSearchParams();
     parameters.set('limit', limit.toString());
     parameters.set('offset', offset.toString());
-    return this.get(`/chess/players?${parameters.toString()}`);
+    return this.get(`/api/chess/players?${parameters.toString()}`);
   }
 
   async getPlayer(username: string): Promise<ChessPlayer> {
-    return this.get(`/chess/players/${username}`);
+    return this.get(`/api/chess/players/${username}`);
   }
 
   async syncPlayer(username: string): Promise<ChessPlayer> {
-    return this.post(`/chess/players/${username}`);
+    return this.post(`/api/chess/players/${username}`);
   }
 
   async getPlayerGames(
     username: string
   ): Promise<{ total: number; games: ChessGame[] }> {
-    return this.get(`/chess/players/${username}/games`);
+    return this.get(`/api/chess/players/${username}/games`);
   }
 
   async syncPlayerGames(
@@ -76,7 +76,7 @@ export class ChessDataSource extends RESTDataSource {
       year = new Date().getFullYear(),
     }: { month: number; year: number }
   ): Promise<GamesSynced> {
-    return this.post(`/chess/players/${username}/games`, {
+    return this.post(`/api/chess/players/${username}/games`, {
       body: { month, year },
     });
   }
@@ -89,13 +89,9 @@ export class ChessDataSource extends RESTDataSource {
     country: string;
   }): Promise<StreamersResponse> {
     const urlSearchParameters: URLSearchParams = new URLSearchParams();
-    if (title) {
-      urlSearchParameters.set('title', title);
-    }
-    if (country) {
-      urlSearchParameters.set('country', country);
-    }
-    const endpoint = `/chess/streamers?${urlSearchParameters.toString()}`;
+    if (title) urlSearchParameters.set('title', title);
+    if (country) urlSearchParameters.set('country', country);
+    const endpoint = `/api/chess/streamers?${urlSearchParameters.toString()}`;
     return this.get(endpoint);
   }
 
@@ -110,7 +106,7 @@ export class ChessDataSource extends RESTDataSource {
     if (timeRange) {
       urlSearchParameters.set('timeRange', timeRange);
     }
-    const url: string = `/chess/titled/${title}?${urlSearchParameters.toString()}`;
+    const url: string = `/api/chess/titled/${title}?${urlSearchParameters.toString()}`;
     return this.get(url);
   }
 }

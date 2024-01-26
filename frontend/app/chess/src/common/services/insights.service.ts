@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export const getInsights = async (username: string): Promise<Insights> => {
   try {
-    const url = `${BASE_URL}/chess/players/${username}/insights`;
+    const url = `${BASE_URL}/api/chess/players/${username}/insights`;
     const { data: insights } = await axios.get<Insights>(url);
     return insights;
   } catch (error) {

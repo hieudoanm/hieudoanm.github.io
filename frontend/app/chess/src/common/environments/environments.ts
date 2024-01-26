@@ -5,10 +5,9 @@ export const STRIPE_PRICE_ID: string = process.env.STRIPE_PRICE_ID ?? '';
 export const NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: string =
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? '';
 // Base URL
-export const BASE_URL: string =
-  process.env.BASE_URL ?? 'http://localhost:3210/api';
+export const BASE_URL: string = process.env.BASE_URL ?? 'http://localhost:3210';
 export const GRAPHQL_BASE_URL: string =
-  process.env.GRAPHQL_BASE_URL ?? 'http://localhost:3210/api';
+  process.env.GRAPHQL_BASE_URL ?? 'http://localhost:3210';
 // GraphQL
 export const GRAPHQL_URI: string =
   process.env.GRAPHQL_URI ?? 'http://localhost:3210/api/graphql';
