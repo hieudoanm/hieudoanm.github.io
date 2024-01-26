@@ -1,5 +1,3 @@
-'use client';
-
 import { DocumentNode, gql } from '@apollo/client';
 import {
   Badge,
@@ -27,17 +25,8 @@ import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { ChangeEvent } from 'react';
 import { FaTwitch } from 'react-icons/fa';
-
-type StreamersPageProperties = {
-  total: number;
-  title: ChessTitle;
-  country: string;
-  players: ChessPlayer[];
-  countries: { countryCode: string; country: string }[];
-};
 
 const streamersQuery: DocumentNode = gql`
   query StreamersQuery($title: Title, $country: String) {
@@ -80,22 +69,36 @@ const streamersQuery: DocumentNode = gql`
   }
 `;
 
-const StreamersPage: NextPage = async () => {
-  const router = useRouter();
-  const pathname = usePathname();
+type StreamersResponse = {
+  chess: {
+    streamers: {
+      total: number;
+      title: ChessTitle;
+      country: string;
+      players: ChessPlayer[];
+      countries: { countryCode: string; country: string }[];
+    };
+  };
+};
 
-  const searchParameters = useSearchParams();
-  const title = searchParameters.get('title') ?? '';
-  const country = searchParameters.get('country') ?? '';
+type StreamersPageProperties = {
+  searchParams: { title: string; country: string };
+};
+
+const StreamersPage: NextPage<StreamersPageProperties> = async ({
+  searchParams,
+}: StreamersPageProperties) => {
+  const title = searchParams?.title ?? '';
+  const country = searchParams?.country ?? '';
   logger.info(`StreamersPage country=${country} title=${title}`);
 
-  const {
-    chess: {
-      streamers: { total = 0, countries = [], players = [] },
-    },
-  } = await query<{
-    chess: { streamers: StreamersPageProperties };
-  }>(streamersQuery, { title, country });
+  const data = await query<StreamersResponse>({
+    query: streamersQuery,
+    variables: { title, country },
+  });
+  const total = data?.chess?.streamers?.total ?? 0;
+  const countries = data?.chess?.streamers?.countries ?? [];
+  const players = data?.chess?.streamers?.players ?? [];
 
   return (
     <Layout>
@@ -109,9 +112,7 @@ const StreamersPage: NextPage = async () => {
                 justifyContent="space-between"
                 className="gap-x-4 md:gap-x-8"
               >
-                <Heading as="h1" className="text-xl">
-                  Streamers ({total})
-                </Heading>
+                <Heading className="text-xl">Streamers ({total})</Heading>
                 <Box
                   display="flex"
                   alignItems="center"
@@ -123,20 +124,20 @@ const StreamersPage: NextPage = async () => {
                     name="title"
                     placeholder="Title"
                     value={title}
-                    onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-                      const newTitle: ChessTitle = event.target
-                        .value as ChessTitle;
-                      const updatedSearchParameters = {
-                        ...searchParameters,
-                        title: newTitle,
-                      };
-                      const newSearchParameters = new URLSearchParams([
-                        ...updatedSearchParameters.entries(),
-                      ]);
-                      router.push(
-                        `${pathname}${newSearchParameters.toString()}`
-                      );
-                    }}
+                    // onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                    //   const newTitle: ChessTitle = event.target
+                    //     .value as ChessTitle;
+                    //   const updatedSearchParameters = {
+                    //     ...searchParams,
+                    //     title: newTitle,
+                    //   };
+                    // const newSearchParameters = new URLSearchParams([
+                    //   ...updatedSearchParameters.entries(),
+                    // ]);
+                    // router.push(
+                    //   `${pathname}${newSearchParameters.toString()}`
+                    // );
+                    // }}
                   >
                     <option value="GM">GM</option>
                     <option value="IM">IM</option>
@@ -154,19 +155,19 @@ const StreamersPage: NextPage = async () => {
                     name="country"
                     placeholder={`Country (${countries.length})`}
                     value={country}
-                    onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-                      const newCountry: string = event.target.value;
-                      const updatedSearchParameters = {
-                        ...searchParameters,
-                        country: newCountry,
-                      };
-                      const newSearchParameters = new URLSearchParams([
-                        ...updatedSearchParameters.entries(),
-                      ]);
-                      router.push(
-                        `${pathname}${newSearchParameters.toString()}`
-                      );
-                    }}
+                    // onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                    //   const newCountry: string = event.target.value;
+                    // const updatedSearchParameters = {
+                    //   ...searchParams,
+                    //   country: newCountry,
+                    // };
+                    // const newSearchParameters = new URLSearchParams([
+                    //   ...updatedSearchParameters.entries(),
+                    // ]);
+                    // router.push(
+                    //   `${pathname}${newSearchParameters.toString()}`
+                    // );
+                    // }}
                   >
                     {countries.map(({ countryCode, country }) => {
                       return (
@@ -249,7 +250,8 @@ const StreamersPage: NextPage = async () => {
                                 type="button"
                                 colorScheme="teal"
                               >
-                                <Icon as={FaTwitch} />
+                                {/* <Icon as={FaTwitch} /> */}
+                                Twitch
                               </Button>
                             </Link>
                           </Td>

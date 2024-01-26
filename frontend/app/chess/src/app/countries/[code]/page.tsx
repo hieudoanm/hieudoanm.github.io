@@ -37,7 +37,7 @@ import {
 } from '@chess/common/types/chess';
 import { Container } from '@chess/components/atoms/Container';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
-import { apolloClient } from '@chess/graphql/apollo/client';
+import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -254,20 +254,7 @@ const CountryStats: React.FC<{
   );
 };
 
-type CountryPageProperties = {
-  countryCode: string;
-  averageRapidRating: number;
-  averageBlitzRating: number;
-  averageBulletRating: number;
-  maxRapidRating: number;
-  maxBlitzRating: number;
-  maxBulletRating: number;
-  total: number;
-  players: (ChessPlayer & { stats: ChessStats[] })[];
-  titles: { title: ChessTitle; total: number }[];
-};
-
-const query = gql`
+const countryQuery = gql`
   query CountryQuery($code: String!) {
     chess {
       country(code: $code) {
@@ -315,6 +302,23 @@ const query = gql`
   }
 `;
 
+type CountryResponse = {
+  chess: {
+    country: {
+      countryCode: string;
+      averageRapidRating: number;
+      averageBlitzRating: number;
+      averageBulletRating: number;
+      maxRapidRating: number;
+      maxBlitzRating: number;
+      maxBulletRating: number;
+      total: number;
+      players: (ChessPlayer & { stats: ChessStats[] })[];
+      titles: { title: ChessTitle; total: number }[];
+    };
+  };
+};
+
 const CountryPage: NextPage<{ params: { code: string } }> = async ({
   params,
 }: {
@@ -323,28 +327,22 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
   const countryCode: string = params.code ?? 'US';
   logger.info(`CountryPage countryCode=${countryCode}`);
 
-  const {
-    data: {
-      chess: {
-        country: {
-          averageRapidRating = 0,
-          averageBlitzRating = 0,
-          averageBulletRating = 0,
-          maxRapidRating = 0,
-          maxBlitzRating = 0,
-          maxBulletRating = 0,
-          total = 0,
-          players = [],
-          titles = [],
-        },
-      },
-    },
-  } = await apolloClient.query<{
-    chess: { country: CountryPageProperties };
-  }>({
-    query,
+  const data = await query<CountryResponse>({
+    query: countryQuery,
     variables: { code: countryCode },
   });
+  const country = data?.chess?.country ?? {};
+  const {
+    averageRapidRating = 0,
+    averageBlitzRating = 0,
+    averageBulletRating = 0,
+    maxRapidRating = 0,
+    maxBlitzRating = 0,
+    maxBulletRating = 0,
+    total = 0,
+    players = [],
+    titles = [],
+  } = country;
 
   return (
     <Layout>
@@ -406,7 +404,8 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
                       <Box
                         display={'flex'}
                         alignItems={'center'}
-                        justifyContent={'space-between'}>
+                        justifyContent={'space-between'}
+                      >
                         <Link href={`/titled/${title}`}>
                           <div className="inline-flex items-center gap-x-2">
                             <Badge colorScheme="red">{title}</Badge>

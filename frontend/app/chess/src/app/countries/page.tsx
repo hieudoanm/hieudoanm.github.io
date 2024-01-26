@@ -40,9 +40,7 @@ const CountriesTable: React.FC<{ countries: Country[] }> = ({
   return (
     <Card className="border border-gray-200 shadow">
       <CardHeader>
-        <Heading as="h1" className="text-xl">
-          Countries ({countries.length})
-        </Heading>
+        <Heading className="text-xl">Countries ({countries.length})</Heading>
       </CardHeader>
       <Divider />
       <TableContainer>
@@ -117,9 +115,7 @@ const CountriesMaps: React.FC<{ countries: Country[] }> = ({
   return (
     <Card className="border border-gray-200 shadow">
       <CardHeader>
-        <Heading as="h1" className="text-xl">
-          Countries ({countries.length})
-        </Heading>
+        <Heading className="text-xl">Countries ({countries.length})</Heading>
       </CardHeader>
       <Divider />
       <CardBody>
@@ -129,9 +125,9 @@ const CountriesMaps: React.FC<{ countries: Country[] }> = ({
               id="world"
               maps={maps}
               data={data}
-              onClick={(id: string) => {
-                router.push(`/countries/${id}`);
-              }}
+              // onClick={(id: string) => {
+              //   router.push(`/countries/${id}`);
+              // }}
             />
           </div>
           <div className="flex flex-col gap-y-1">
@@ -169,10 +165,14 @@ const countriesQuery: DocumentNode = gql`
   }
 `;
 
+type CountriesResponse = { chess: { countries: Country[] } };
+
 const CountriesPage: NextPage = async () => {
-  const {
-    chess: { countries = [] },
-  } = await query<{ chess: { countries: Country[] } }>(countriesQuery);
+  logger.info('CountriesPage');
+  const data = await query<CountriesResponse>({
+    query: countriesQuery,
+  });
+  const countries = data?.chess?.countries ?? [];
 
   return (
     <Layout>

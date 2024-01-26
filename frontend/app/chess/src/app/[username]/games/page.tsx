@@ -19,7 +19,7 @@ import {
 import { logger } from '@chess/common/libs/logger';
 import { ChessGame } from '@chess/common/types/chess';
 import { Container } from '@chess/components/atoms/Container';
-import { apolloClient } from '@chess/graphql/apollo/client';
+import { apolloClient, query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -71,8 +71,8 @@ const mutation = gql`
   }
 `;
 
-const query: DocumentNode = gql`
-  query Player($username: String!) {
+const playerQuery: DocumentNode = gql`
+  query PlayerQuery($username: String!) {
     chess {
       player(username: $username) {
         games {
@@ -101,6 +101,8 @@ const query: DocumentNode = gql`
   }
 `;
 
+type PlayerResponse = { chess: { player: { games: ChessGame[] } } };
+
 const GamesPage: NextPage<{ params: { username: string } }> = async ({
   params,
 }: {
@@ -111,15 +113,11 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
   const username: string = params.username ?? CHESS_USERNAME;
   logger.info(`InsightsPage username=${username}`);
 
-  const {
-    data: {
-      chess: {
-        player: { games = [] },
-      },
-    },
-  } = await apolloClient.query<{
-    chess: { player: { games: ChessGame[] } };
-  }>({ query, variables: { username } });
+  const data = await query<PlayerResponse>({
+    query: playerQuery,
+    variables: { username },
+  });
+  const games: ChessGame[] = data?.chess?.player?.games ?? [];
 
   const syncGames = async () => {
     await apolloClient.mutate({ mutation, variables: { username } });
@@ -141,7 +139,8 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
               <Box
                 display={'flex'}
                 alignItems={'center'}
-                justifyContent={'space-between'}>
+                justifyContent={'space-between'}
+              >
                 <Heading className="text-xl">Games ({games.length})</Heading>
                 <Button colorScheme="teal" onClick={syncGames}>
                   <Icon as={FaSync} />
@@ -173,14 +172,16 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
                               href={`/${whiteUsername}`}
                               className={`block ${
                                 whiteUsername === username ? FONT_SEMIBOLD : ''
-                              }`}>
+                              }`}
+                            >
                               {whiteUsername} ({whiteRating})
                             </Link>
                             <Link
                               href={`/${blackUsername}`}
                               className={`block ${
                                 blackUsername === username ? FONT_SEMIBOLD : ''
-                              }`}>
+                              }`}
+                            >
                               {blackUsername} ({blackRating})
                             </Link>
                           </div>
@@ -190,13 +191,15 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
                             <p
                               className={
                                 whiteUsername === username ? FONT_SEMIBOLD : ''
-                              }>
+                              }
+                            >
                               {getPoint(whiteResult)}
                             </p>
                             <p
                               className={
                                 blackUsername === username ? FONT_SEMIBOLD : ''
-                              }>
+                              }
+                            >
                               {getPoint(blackResult)}
                             </p>
                           </div>

@@ -1,7 +1,4 @@
-'use client';
-
 import { gql } from '@apollo/client';
-import { ChevronDownIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
@@ -40,14 +37,13 @@ import {
 import { TimeRange } from '@chess/common/types/time';
 import { Container } from '@chess/components/atoms/Container';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
-import { apolloClient } from '@chess/graphql/apollo/client';
+import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { ChangeEvent } from 'react';
 import { IconType } from 'react-icons';
-import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
+import { FaBolt, FaClock, FaRocket, FaChevronDown } from 'react-icons/fa';
 
 const getRatingByTimeClass = (
   chessTimeClass: ChessTimeClass,
@@ -171,7 +167,7 @@ const TitledStats: React.FC<{
             <StatNumber>{average}</StatNumber>
             <StatHelpText>Highest: {max}</StatHelpText>
           </Stat>
-          {icon ? (
+          {/* {icon ? (
             <div>
               <Box bgColor={'teal.500'} color={'white'} className="rounded p-2">
                 <Icon as={icon} boxSize={6} />
@@ -179,7 +175,7 @@ const TitledStats: React.FC<{
             </div>
           ) : (
             <></>
-          )}
+          )} */}
         </div>
       </CardBody>
     </Card>
@@ -265,49 +261,52 @@ const PlayersTable: React.FC<{
   );
 };
 
-type TitledPageProperties = {
-  title: ChessTitle;
-  timeRange: TimeRange;
-  averageRapidRating: number;
-  averageBlitzRating: number;
-  averageBulletRating: number;
-  maxRapidRating: number;
-  maxBlitzRating: number;
-  maxBulletRating: number;
-  total: number;
-  players: (ChessPlayer & { stats: ChessStats[] })[];
+type TitledResponse = {
+  chess: {
+    titled: {
+      title: ChessTitle;
+      timeRange: TimeRange;
+      averageRapidRating: number;
+      averageBlitzRating: number;
+      averageBulletRating: number;
+      maxRapidRating: number;
+      maxBlitzRating: number;
+      maxBulletRating: number;
+      total: number;
+      players: (ChessPlayer & { stats: ChessStats[] })[];
+    };
+  };
 };
 
-const TitledPage: NextPage = async () => {
-  const router = useRouter();
-  const pathname = usePathname();
+type TitledPageProperties = {
+  searchParams: {
+    timeRange: TimeRange;
+    title: ChessTitle;
+  };
+};
 
-  const searchParameters = useSearchParams();
-  const timeRange = (searchParameters.get('timeRange') ?? 'year') as TimeRange;
-  const title = (searchParameters.get('title') ?? 'GM') as ChessTitle;
+const TitledPage: NextPage<TitledPageProperties> = async ({
+  searchParams,
+}: TitledPageProperties) => {
+  const timeRange = searchParams?.timeRange ?? 'year';
+  const title = searchParams?.title ?? 'GM';
   logger.info(`TitledPage timeRange=${timeRange} title=${title}`);
 
-  const {
-    data: {
-      chess: {
-        titled: {
-          averageRapidRating = 0,
-          averageBlitzRating = 0,
-          averageBulletRating = 0,
-          maxRapidRating = 0,
-          maxBlitzRating = 0,
-          maxBulletRating = 0,
-          total = 0,
-          players = [],
-        },
-      },
-    },
-  } = await apolloClient.query<{
-    chess: { titled: TitledPageProperties };
-  }>({
-    query,
+  const data = await query<TitledResponse>({
+    query: titledQuery,
     variables: { title, timeRange },
   });
+  const titled = data?.chess?.titled ?? {};
+  const {
+    averageRapidRating = 0,
+    averageBlitzRating = 0,
+    averageBulletRating = 0,
+    maxRapidRating = 0,
+    maxBlitzRating = 0,
+    maxBulletRating = 0,
+    total = 0,
+    players = [],
+  } = titled;
 
   return (
     <Layout>
@@ -321,8 +320,8 @@ const TitledPage: NextPage = async () => {
             >
               <Menu>
                 <MenuButton
-                  as={Button}
-                  rightIcon={<ChevronDownIcon />}
+                  // as={Button}
+                  // rightIcon={<Icon as={FaChevronDown} />}
                   className="bg-white px-0 text-lg md:text-4xl"
                 >
                   {TITLED_ABBREVIATIONS[title]} ({total})
@@ -334,18 +333,18 @@ const TitledPage: NextPage = async () => {
                       <MenuItem
                         key={key}
                         className={`${title === key ? 'font-bold' : ''}`}
-                        onClick={() => {
-                          const updatedSearchParameters = {
-                            ...searchParameters,
-                            title: key,
-                          };
-                          const newSearchParameters = new URLSearchParams([
-                            ...updatedSearchParameters.entries(),
-                          ]);
-                          router.push(
-                            `${pathname}${newSearchParameters.toString()}`
-                          );
-                        }}
+                        // onClick={() => {
+                        //   const updatedSearchParameters = {
+                        //     ...searchParameters,
+                        //     title: key,
+                        //   };
+                        //   const newSearchParameters = new URLSearchParams([
+                        //     ...updatedSearchParameters.entries(),
+                        //   ]);
+                        //   router.push(
+                        //     `${pathname}${newSearchParameters.toString()}`
+                        //   );
+                        // }}
                       >
                         {value}
                       </MenuItem>
@@ -358,17 +357,17 @@ const TitledPage: NextPage = async () => {
                   name="timeRange"
                   placeholder="Time Range"
                   value={timeRange}
-                  onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-                    const newTimeRange = event.target.value as TimeRange;
-                    const updatedSearchParameters = {
-                      ...searchParameters,
-                      timeRange: newTimeRange,
-                    };
-                    const newSearchParameters = new URLSearchParams([
-                      ...updatedSearchParameters.entries(),
-                    ]);
-                    router.push(`${pathname}${newSearchParameters.toString()}`);
-                  }}
+                  // onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                  //   const newTimeRange = event.target.value as TimeRange;
+                  //   const updatedSearchParameters = {
+                  //     ...searchParameters,
+                  //     timeRange: newTimeRange,
+                  //   };
+                  //   const newSearchParameters = new URLSearchParams([
+                  //     ...updatedSearchParameters.entries(),
+                  //   ]);
+                  //   router.push(`${pathname}${newSearchParameters.toString()}`);
+                  // }}
                 >
                   <option value="week">7 Days</option>
                   <option value="month">30 Days</option>
@@ -430,7 +429,7 @@ const TitledPage: NextPage = async () => {
   );
 };
 
-const query = gql`
+const titledQuery = gql`
   query TitledQuery($title: Title!, $timeRange: TimeRange) {
     chess {
       titled(title: $title, timeRange: $timeRange) {

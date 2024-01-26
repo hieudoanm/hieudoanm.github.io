@@ -1,7 +1,4 @@
-'use client';
-
 import { gql } from '@apollo/client';
-import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -9,6 +6,7 @@ import {
   CardHeader,
   Divider,
   Heading,
+  Icon,
   Link,
   Table,
   TableContainer,
@@ -22,12 +20,13 @@ import {
 import { logger } from '@chess/common/libs/logger';
 import { ChessOpening } from '@chess/common/types/chess';
 import { Container } from '@chess/components/atoms/Container';
-import { apolloClient } from '@chess/graphql/apollo/client';
+import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
 import { NextPage } from 'next';
+import { FaChevronRight } from 'react-icons/fa6';
 
-const query = gql`
-  query OpeningsByEcoQuery($eco: String!) {
+const openingsQuery = gql`
+  query OpeningsQuery($eco: String!) {
     chess {
       openings(eco: $eco) {
         eco
@@ -39,6 +38,8 @@ const query = gql`
   }
 `;
 
+type OpeningsResponse = { chess: { openings: ChessOpening[] } };
+
 const OpeningPage: NextPage<{ params: { eco: string } }> = async ({
   params,
 }: {
@@ -47,21 +48,20 @@ const OpeningPage: NextPage<{ params: { eco: string } }> = async ({
   const eco: string = params.eco ?? 'A00';
   logger.info(`OpeningPage eco=${eco}`);
 
-  const {
-    data: {
-      chess: { openings = [] },
-    },
-  } = await apolloClient.query<{ chess: { openings: ChessOpening[] } }>({
-    query,
+  const data = await query<OpeningsResponse>({
+    query: openingsQuery,
     variables: { eco },
   });
+  const openings = data?.chess?.openings ?? [];
 
   return (
     <Layout>
       <Container>
         <div className="py-4 md:py-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
-            <Breadcrumb separator={<ChevronRightIcon color="gray.500" />}>
+            <Breadcrumb
+              separator={<Icon as={FaChevronRight} color="gray.500" />}
+            >
               <BreadcrumbItem>
                 <Link href="/">Home</Link>
               </BreadcrumbItem>

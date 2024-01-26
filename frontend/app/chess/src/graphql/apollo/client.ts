@@ -1,4 +1,10 @@
-import { ApolloClient, DocumentNode, InMemoryCache } from '@apollo/client';
+import {
+  ApolloClient,
+  DocumentNode,
+  InMemoryCache,
+  OperationVariables,
+  QueryOptions,
+} from '@apollo/client';
 import {
   GRAPHQL_URI,
   NEXT_PUBLIC_GRAPHQL_URI,
@@ -15,14 +21,10 @@ export const apolloClient = new ApolloClient({
 });
 
 export const query = async <T>(
-  documentNode: DocumentNode,
-  variables: Record<string, string | number> = {}
+  queryOptions: QueryOptions<OperationVariables, T>
 ): Promise<T> => {
   try {
-    const { data } = await apolloClient.query<T>({
-      query: documentNode,
-      variables,
-    });
+    const { data } = await apolloClient.query<T>(queryOptions);
     return data;
   } catch (error) {
     logger.error(`query error=${error}`);
