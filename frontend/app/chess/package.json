@@ -16,7 +16,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "prisma:init": "prisma format && prisma generate && prisma migrate dev --name init"
+    "prisma:dev": "prisma format && prisma generate && prisma migrate dev --name init",
+    "prisma:push": "prisma format && prisma generate && prisma db push"
   },
   "dependencies": {
     "@apollo/client": "3.8.10",
