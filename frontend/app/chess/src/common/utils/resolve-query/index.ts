@@ -1,16 +1,11 @@
-import { ParsedUrlQuery } from 'node:querystring';
-
 export const resolveQuery = <T>(
-  query: ParsedUrlQuery,
-  key: string,
+  queryString: string,
+  name: string,
   fallback = ''
-): string => {
-  const value: string | string[] | undefined = query[key];
-  if (!value) {
-    return fallback;
-  }
-  if (typeof value === 'string') {
-    return value;
-  }
-  return value[0];
+): T => {
+  const parameters = new URLSearchParams(queryString);
+  if (parameters.has(name)) return fallback as T;
+  const value: T | null = parameters.get(name) as T;
+  if (!value) return fallback as T;
+  return value;
 };
