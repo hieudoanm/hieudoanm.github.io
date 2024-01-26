@@ -19,7 +19,7 @@ import {
   Tr,
 } from '@chakra-ui/react';
 import { logger } from '@chess/common/libs/logger';
-import { ChessPlayer, ChessTitle } from '@chess/common/types/chess';
+import { ChessPlayer, ChessTitle } from '@prisma/client';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';

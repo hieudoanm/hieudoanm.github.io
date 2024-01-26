@@ -11,16 +11,16 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import {
+  CHESS_USERNAME,
   DRAW_RESULTS,
   LOSS_RESULTS,
   WIN_RESULTS,
-  CHESS_USERNAME,
 } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
-import { ChessGame } from '@chess/common/types/chess';
 import { Container } from '@chess/components/atoms/Container';
 import { apolloClient, query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
+import { ChessGame, ChessResult } from '@prisma/client';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import {
@@ -44,7 +44,7 @@ const TimeClassIcon: React.FC<{ timeClass: string }> = ({ timeClass = '' }) => {
   return <></>;
 };
 
-const getPoint = (result: string): number => {
+const getPoint = (result: ChessResult): number => {
   if (WIN_RESULTS.includes(result)) {
     return 1;
   }

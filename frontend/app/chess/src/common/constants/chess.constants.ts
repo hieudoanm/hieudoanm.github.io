@@ -1,10 +1,15 @@
-import { ChessTitle } from '../types/chess';
+import { ChessResult, ChessTitle } from '@prisma/client';
 
 export const CHESS_USERNAME = 'hikaru';
 // Titles
 export const OPEN_TITLES: ChessTitle[] = ['GM', 'IM', 'FM', 'CM', 'NM'];
 export const WOMAN_TITLES: ChessTitle[] = ['WGM', 'WIM', 'WFM', 'WCM', 'WNM'];
-export const TITLES: ChessTitle[] = [...OPEN_TITLES, ...WOMAN_TITLES];
+export const ARENA_TITLES: ChessTitle[] = ['AGM', 'AIM', 'AFM', 'ACM'];
+export const TITLES: ChessTitle[] = [
+  ...OPEN_TITLES,
+  ...WOMAN_TITLES,
+  ...ARENA_TITLES,
+];
 // Ratings
 export const GAP: number = 100;
 // Colors
@@ -66,16 +71,16 @@ export const COLORS_MAP: Record<string, string[]> = {
   red: RED_COLORS,
 };
 // Results
-export const WIN_RESULTS: string[] = ['win'];
-export const DRAW_RESULTS: string[] = [
-  '50move',
+export const WIN_RESULTS: ChessResult[] = ['win'];
+export const DRAW_RESULTS: ChessResult[] = [
+  'fiftymove',
   'agreed',
   'insufficient',
   'repetition',
   'stalemate',
   'timevsinsufficient',
 ];
-export const LOSS_RESULTS: string[] = [
+export const LOSS_RESULTS: ChessResult[] = [
   'checkmated',
   'resigned',
   'timeout',

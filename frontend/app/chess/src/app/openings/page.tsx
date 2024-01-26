@@ -17,7 +17,7 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
-import { ChessOpening } from '@chess/common/types/chess';
+import { ChessOpening } from '@prisma/client';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';

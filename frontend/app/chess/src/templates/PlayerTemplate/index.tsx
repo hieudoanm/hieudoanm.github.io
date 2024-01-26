@@ -1,13 +1,9 @@
 'use client';
 
-import {
-  ChessPlayer,
-  ChessStats,
-  ChessTimeClass,
-} from '@chess/common/types/chess';
 import { ChessHeader } from '@chess/components/molecules/ChessHeader';
 import { ChessRecord } from '@chess/components/molecules/ChessRecord';
 import { ChessStats as ChessStatsComponent } from '@chess/components/molecules/ChessStats';
+import { ChessPlayer, ChessStats, ChessTimeClass } from '@prisma/client';
 import { Dispatch, SetStateAction } from 'react';
 import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
 

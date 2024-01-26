@@ -1,10 +1,8 @@
 import { gql } from '@apollo/client';
 import {
   Box,
-  Button,
   Card,
   CardBody,
-  Icon,
   Menu,
   MenuButton,
   MenuItem,
@@ -28,22 +26,21 @@ import {
   TITLED_ABBREVIATIONS,
 } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
-import {
-  ChessPlayer,
-  ChessStats,
-  ChessTimeClass,
-  ChessTitle,
-} from '@chess/common/types/chess';
 import { TimeRange } from '@chess/common/types/time';
 import { Container } from '@chess/components/atoms/Container';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
 import { query } from '@chess/graphql/apollo/client';
 import { Layout } from '@chess/layout';
+import {
+  ChessPlayer,
+  ChessStats,
+  ChessTimeClass,
+  ChessTitle,
+} from '@prisma/client';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { ChangeEvent } from 'react';
 import { IconType } from 'react-icons';
-import { FaBolt, FaClock, FaRocket, FaChevronDown } from 'react-icons/fa';
+import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
 
 const getRatingByTimeClass = (
   chessTimeClass: ChessTimeClass,

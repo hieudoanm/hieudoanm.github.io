@@ -29,16 +29,16 @@ import {
 } from '@chess/common/constants/chess.constants';
 import flags from '@chess/common/data/flags.json';
 import { logger } from '@chess/common/libs/logger';
+import { Container } from '@chess/components/atoms/Container';
+import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
+import { query } from '@chess/graphql/apollo/client';
+import { Layout } from '@chess/layout';
 import {
   ChessPlayer,
   ChessStats,
   ChessTimeClass,
   ChessTitle,
-} from '@chess/common/types/chess';
-import { Container } from '@chess/components/atoms/Container';
-import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
-import { query } from '@chess/graphql/apollo/client';
-import { Layout } from '@chess/layout';
+} from '@prisma/client';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { IconType } from 'react-icons';
