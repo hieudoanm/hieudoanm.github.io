@@ -95,12 +95,12 @@ model ChessStats {
   player    ChessPlayer    @relation(fields: [playerId], references: [id])
   playerId  Int
   timeClass ChessTimeClass @default(daily)
-  best      Int            @default(0)
-  last      Int            @default(0)
-  deviation Int            @default(0)
-  win       Int            @default(0)
-  draw      Int            @default(0)
-  loss      Int            @default(0)
+  best      Int            @default(0) @db.SmallInt
+  last      Int            @default(0) @db.SmallInt
+  deviation Int            @default(0) @db.SmallInt
+  win       Int            @default(0) @db.Integer
+  draw      Int            @default(0) @db.Integer
+  loss      Int            @default(0) @db.Integer
 
   createdAt DateTime? @default(now()) @db.Timestamptz
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
@@ -121,24 +121,24 @@ enum ChessTimeClass {
 
 model ChessGame {
   id            String         @id
-  url           String         @default("")
+  url           String         @default("") @db.VarChar(255)
   pgn           String         @default("")
-  timeControl   String         @default("")
+  timeControl   String         @default("") @db.VarChar(255)
   timeClass     ChessTimeClass @default(daily)
   endTime       DateTime       @default(now()) @db.Timestamptz
-  rated         Boolean        @default(false)
-  tcn           String         @default("")
-  initialSetup  String         @default("")
+  rated         Boolean        @default(false) @db.Boolean
+  tcn           String         @default("") @db.VarChar(255)
+  initialSetup  String         @default("") @db.VarChar(255)
   rules         ChessVariant   @default(chess)
   fen           String         @default("")
-  whiteAccuracy Float          @default(0)
-  blackAccuracy Float          @default(0)
-  whiteUsername String         @default("")
-  blackUsername String         @default("")
+  whiteAccuracy Float          @default(0) @db.Real
+  blackAccuracy Float          @default(0) @db.Real
+  whiteUsername String         @default("") @db.VarChar(255)
+  blackUsername String         @default("") @db.VarChar(255)
   whiteResult   ChessResult    @default(checkmated)
   blackResult   ChessResult    @default(checkmated)
-  whiteRating   Int            @default(0)
-  blackRating   Int            @default(0)
+  whiteRating   Int            @default(0) @db.SmallInt
+  blackRating   Int            @default(0) @db.SmallInt
   createdAt     DateTime?      @default(now()) @db.Timestamptz
   updatedAt     DateTime?      @default(now()) @updatedAt @db.Timestamptz
 
@@ -195,9 +195,9 @@ enum ChessSide {
 }
 
 model ChessOpening {
-  eco  String @default("")
-  name String @default("")
-  pgn  String @default("")
+  eco  String @default("") @db.VarChar(255)
+  name String @default("") @db.VarChar(255)
+  pgn  String @default("") @db.VarChar(255)
 
   createdAt DateTime? @default(now()) @db.Timestamptz
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
