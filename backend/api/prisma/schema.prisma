@@ -20,7 +20,7 @@ generator jsonSchema {
 
 generator nestjsDto {
   provider     = "prisma-generator-nestjs-dto"
-  output       = "../../src/generated/prisma/dto"
+  output       = "../src/generated/prisma/dto"
   entitySuffix = "Dto"
 }
 
