@@ -62,7 +62,7 @@ const syncProfile = async (username: string): Promise<ChessPlayer> => {
   });
 };
 
-const mapProfile = (chessPlayer: Player, archives: string[]) => {
+const mapProfile = (player: Player, archives: string[]) => {
   const {
     avatar = '',
     username = '',
@@ -79,8 +79,9 @@ const mapProfile = (chessPlayer: Player, archives: string[]) => {
     twitch_url: twitchUrl = '',
     verified = false,
     league = '',
-  } = chessPlayer;
+  } = player;
   const countryCode: string = countryUrl.split('/').pop() ?? '';
+  logger.info(`mapProfile username=${username} countryCode=${countryCode}`);
   const d = new Date();
   const lastOnlineDate: Date = new Date(lastOnline * 1000);
   const joinedDate: Date = new Date(joined * 1000);

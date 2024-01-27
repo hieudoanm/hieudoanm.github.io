@@ -289,8 +289,9 @@ const syncPlayer = async (
 const syncPlayerByAPI = async (username: string) => {
   try {
     const url = `https://chessinsights.vercel.app/api/chess/players/${username}`;
-    const response = await axios.get(url);
-    return `${username} ${response}`;
+    const { data } = await axios.get<{ id: number; username: string }>(url);
+    const { id } = data;
+    return `${username} ${id}`;
   } catch (error) {
     console.error(`${username} error=${error}`);
     return `${username} ERROR`;
