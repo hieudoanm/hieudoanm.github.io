@@ -4,6 +4,9 @@ import-countries:
 import-games:
 	yarn ts-node ./scripts/import/games
 
+import-missing:
+	yarn ts-node ./scripts/import/missing
+
 import-openings:
 	yarn ts-node ./scripts/import/openings
 

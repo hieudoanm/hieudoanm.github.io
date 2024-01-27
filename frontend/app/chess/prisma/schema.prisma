@@ -67,6 +67,7 @@ enum ChessStatus {
   basic
   premium
   staff
+  mod
 
   @@schema("chess")
 }

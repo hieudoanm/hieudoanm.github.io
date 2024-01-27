@@ -7,6 +7,8 @@ import {
 } from '@prisma/client';
 import axios from 'axios';
 import chunk from 'lodash/chunk';
+import { getTitledPlayers } from '../client/chess.client';
+import { TITLES } from '../constants/chess.constants';
 
 type Last = { rating: number; date: number; rd: number };
 
@@ -75,26 +77,6 @@ type Player = {
 };
 
 const PUBLIC_URL: string = 'https://api.chess.com/pub';
-
-const TITLES: string[] = [
-  'GM',
-  'WGM',
-  'IM',
-  'WIM',
-  'FM',
-  'WFM',
-  'CM',
-  'WCM',
-  'NM',
-  'WNM',
-];
-
-const getTitledPlayers = async (title: string): Promise<string[]> => {
-  const url = `${PUBLIC_URL}/titled/${title}`;
-  const { data } = await axios.get<{ players: string[] }>(url);
-  const { players = [] } = data;
-  return players;
-};
 
 const syncPlayer = async (
   prismaClient: PrismaClient,
@@ -300,7 +282,7 @@ const syncPlayerByAPI = async (username: string) => {
 
 const USERNAME = process.env.USERNAME ?? '';
 
-const STRESS = 1;
+const STRESS = 10;
 
 const main = async () => {
   if (USERNAME) {

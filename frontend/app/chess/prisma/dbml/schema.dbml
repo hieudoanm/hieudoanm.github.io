@@ -95,6 +95,7 @@ Enum ChessStatus {
   basic
   premium
   staff
+  mod
 }
 
 Enum ChessLeague {
