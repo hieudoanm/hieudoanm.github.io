@@ -67,6 +67,15 @@ exports[`Navbar to match snapshot 1`] = `
                 </p>
               </a>
               <a
+                href="/players"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  Players
+                </p>
+              </a>
+              <a
                 href="/streamers"
               >
                 <p
@@ -146,20 +155,6 @@ exports[`Navbar to match snapshot 1`] = `
                       type="button"
                     >
                       openings
-                    </button>
-                  </a>
-                  <a
-                    href="/analysis"
-                  >
-                    <button
-                      class="chakra-menu__menuitem capitalize css-1k756t9"
-                      data-index="1"
-                      id="menu-list-:r2:-menuitem-:r4:"
-                      role="menuitem"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      analysis
                     </button>
                   </a>
                 </div>
