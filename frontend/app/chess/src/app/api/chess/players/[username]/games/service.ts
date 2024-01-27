@@ -9,6 +9,7 @@ import {
   ChessVariant,
   Prisma,
 } from '@prisma/client';
+import { GamesResponse, SyncedResponse } from './dto';
 
 (BigInt.prototype as any).toJSON = function () {
   const int = Number.parseInt(this.toString());
@@ -18,11 +19,12 @@ import {
 export const getChessGames = async (
   username: string,
   {
+    limit = 100,
+    offset = 0,
     month = new Date().getMonth() + 1,
     year = new Date().getFullYear(),
-  }: { month: number; year: number },
-  { limit = 100, offset = 0 }: { limit: number; offset: number }
-): Promise<{ total: number; games: ChessGame[] }> => {
+  }: { month: number; year: number; limit: number; offset: number }
+): Promise<GamesResponse> => {
   logger.info(`getGames month=${month} year=${year}`);
   const where: Prisma.ChessGameWhereInput = {
     OR: [
@@ -173,17 +175,18 @@ const syncGamesByYearAndMonth = async (
   synced: number;
   existed: number;
 }> => {
-  const chessGames: Game[] = await getGamesByYearAndMonth(
+  const { games: chessGames = [] } = await getGamesByYearAndMonth(
     username,
     year,
     month
   );
   const chessGameUuids: string[] = chessGames.map(({ uuid }) => uuid);
-  const { games: databaseGames = [] } = await getChessGames(
-    username,
-    { year, month },
-    { offset: 0, limit: 1_000_000 }
-  );
+  const { games: databaseGames = [] } = await getChessGames(username, {
+    year,
+    month,
+    offset: 0,
+    limit: 1_000_000,
+  });
   const databaseGameIds: Set<string> = new Set(
     databaseGames.map(({ id }) => id)
   );
@@ -202,13 +205,13 @@ const syncGamesByYearAndMonth = async (
   };
 };
 
-const syncGames = async (
+export const syncGames = async (
   username: string,
   {
     month = new Date().getMonth() + 1,
     year = new Date().getFullYear(),
   }: { month: number; year: number }
-): Promise<{ total: number; synced: number; existed: number }> => {
+): Promise<SyncedResponse> => {
   logger.info(`syncGames month=${month} year=${year}`);
   const {
     total = 0,

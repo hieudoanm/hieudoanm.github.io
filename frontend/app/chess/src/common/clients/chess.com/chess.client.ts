@@ -1,52 +1,101 @@
+import { BASE_URL, PROXY } from '@chess/common/environments/environments';
 import { logger } from '@chess/common/libs/logger';
 import { addZero } from '@chess/common/utils/add-zero';
 import axios from 'axios';
-import { FullPlayer, Game, Player, Stats, Title } from './chess.dto';
+import {
+  Archives,
+  FullPlayer,
+  Game,
+  GamesResponse,
+  Player,
+  Stats,
+  Title,
+} from './chess.dto';
 
-const BASE_URL = 'https://api.chess.com/pub';
+const MAIN_BASE_URL: string = 'https://api.chess.com/pub';
+const PROXY_BASE_URL = `${BASE_URL}/api/chess.com`;
+const CHESS_BASE_URL = PROXY === 'true' ? PROXY_BASE_URL : MAIN_BASE_URL;
+
+const getTitledUrl = (title: string): string =>
+  `${CHESS_BASE_URL}/titled/${encodeURIComponent(title)}`;
+
+const getPlayerUrl = (username: string): string =>
+  `${CHESS_BASE_URL}/player/${encodeURIComponent(username)}`;
+
+const getPlayerStatsUrl = (username: string): string =>
+  `${CHESS_BASE_URL}/player/${encodeURIComponent(username)}/stats`;
+
+const getPlayerArchivesUrl = (username: string): string =>
+  `${CHESS_BASE_URL}/player/${encodeURIComponent(username)}/games/archives`;
+const getPlayerGamesUrl = (
+  username: string,
+  yyyy: string,
+  mm: string
+): string =>
+  `${CHESS_BASE_URL}/player/${encodeURIComponent(
+    username
+  )}/games/${encodeURIComponent(yyyy)}/${encodeURIComponent(mm)}`;
 
 export const getPlayer = async (username: string): Promise<Player> => {
-  const encodedUsername: string = encodeURIComponent(username);
-  const url = `${BASE_URL}/player/${encodedUsername}`;
-  logger.info(`getPlayer url=${url}`);
-  const { data } = await axios.get<Player>(url);
-  return data;
+  try {
+    const url = getPlayerUrl(username);
+    logger.info(`getPlayer url=${url}`);
+    const { data } = await axios.get<Player>(url);
+    return data;
+  } catch (error) {
+    logger.error(`getPlayer error=${error}`);
+    return {} as Player;
+  }
 };
 
 export const getStats = async (username: string): Promise<Stats> => {
-  const encodedUsername: string = encodeURIComponent(username);
-  const url = `${BASE_URL}/player/${encodedUsername}/stats`;
-  logger.info(`getStats url=${url}`);
-  const { data } = await axios.get<Stats>(url);
-  return data;
+  try {
+    const url = getPlayerStatsUrl(username);
+    logger.info(`getStats url=${url}`);
+    const { data } = await axios.get<Stats>(url);
+    return data;
+  } catch (error) {
+    logger.error(`getStats error=${error}`);
+    return {} as Stats;
+  }
 };
 
-export const getArchives = async (username: string): Promise<string[]> => {
-  const encodedUsername: string = encodeURIComponent(username);
-  const url = `${BASE_URL}/player/${encodedUsername}/games/archives`;
-  logger.info(`getArchives url=${url}`);
-  const { data } = await axios.get<{ archives: string[] }>(url);
-  return data.archives || [];
+export const getArchives = async (username: string): Promise<Archives> => {
+  try {
+    const url = getPlayerArchivesUrl(username);
+    logger.info(`getArchives url=${url}`);
+    const { data } = await axios.get<Archives>(url);
+    return data;
+  } catch (error) {
+    logger.error(`getArchives error=${error}`);
+    return { archives: [] };
+  }
 };
 
 export const getGamesByYearAndMonth = async (
   username: string,
   year: number,
   month: number
-): Promise<Game[]> => {
-  const encodedUsername: string = encodeURIComponent(username);
-  const yyyy: string = encodeURIComponent(addZero(year));
-  const mm: string = encodeURIComponent(addZero(month));
-  const url = `${BASE_URL}/player/${encodedUsername}/games/${yyyy}/${mm}`;
-  logger.info(`getGamesByYearAndMonth url=${url}`);
-  const { data } = await axios.get<{ games: Game[] }>(url);
-  return data.games || [];
+): Promise<GamesResponse> => {
+  try {
+    const url: string = getPlayerGamesUrl(
+      username,
+      addZero(year),
+      addZero(month)
+    );
+    logger.info(`getGamesByYearAndMonth url=${url}`);
+    const { data } = await axios.get<GamesResponse>(url);
+    return data;
+  } catch (error) {
+    logger.error(`getGamesByYearAndMonth error=${error}`);
+    return { games: [] };
+  }
 };
 
 export const getFullPlayer = async (username: string): Promise<FullPlayer> => {
   const player = await getPlayer(username);
   const stats = await getStats(username);
-  const archives = await getArchives(username);
+  const { archives = [] } = await getArchives(username);
   return { ...player, stats, archives };
 };
 
@@ -54,7 +103,7 @@ export const getGames = async (
   username: string,
   { month = 0, year = 0 }: { month: number; year: number }
 ): Promise<Game[]> => {
-  const archives = await getArchives(username);
+  const { archives = [] } = await getArchives(username);
   const filterArchives = archives.filter((archive: string) => {
     const [yearPath = '', monthPath = ''] = archive.split('/').slice(-2);
     const monthFlag: boolean =
@@ -79,8 +128,7 @@ export const getGames = async (
 };
 
 export const getTitled = async (title: Title): Promise<string[]> => {
-  const encodedTitle: string = encodeURIComponent(title);
-  const url = `${BASE_URL}/titled/${encodedTitle}`;
+  const url = getTitledUrl(title);
   logger.info(`getTitled url=${url}`);
   const { data } = await axios.get<{ players: string[] }>(url);
   return data.players || [];

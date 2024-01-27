@@ -114,3 +114,7 @@ export type Title =
   | 'WCM'
   | 'NM'
   | 'WNM';
+
+export type Archives = { archives: string[] };
+
+export type GamesResponse = { games: Game[] };

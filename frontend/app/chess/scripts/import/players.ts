@@ -78,15 +78,15 @@ const PUBLIC_URL: string = 'https://api.chess.com/pub';
 
 const TITLES: string[] = [
   'GM',
-  // 'WGM',
+  'WGM',
   'IM',
-  // 'WIM',
+  'WIM',
   'FM',
-  // 'WFM',
+  'WFM',
   'CM',
-  // 'WCM',
+  'WCM',
   'NM',
-  // 'WNM',
+  'WNM',
 ];
 
 const getTitledPlayers = async (title: string): Promise<string[]> => {

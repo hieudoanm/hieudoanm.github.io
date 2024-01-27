@@ -50,7 +50,7 @@ export const syncChessPlayer = async (
 
 const syncProfile = async (username: string): Promise<ChessPlayer> => {
   const chessPlayer: Player = await getPlayer(username);
-  const archives: string[] = await getArchives(username);
+  const { archives = [] } = await getArchives(username);
   archives.sort((a, b) => (a < b ? 1 : -1));
   const player = await mapProfile(chessPlayer, archives);
 

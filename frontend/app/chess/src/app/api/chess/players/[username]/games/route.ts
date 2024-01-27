@@ -1,25 +1,50 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getChessGames } from './service';
+import { GamesResponse, SyncedResponse } from './dto';
+import { getChessGames, syncGames } from './service';
 
 type PlayersParameters = { params: { username: string } };
 
-export const GET = (
-  request: NextRequest,
-  { params }: PlayersParameters
-): NextResponse => {
-  const username: string = params?.username ?? '';
-  const { searchParams } = new URL(request.url);
+const resolveQuery = (searchParameters: URLSearchParams) => {
   const yearString: string =
-    searchParams.get('year') ?? new Date().getFullYear().toString();
+    searchParameters.get('year') ?? new Date().getFullYear().toString();
   const year: number = Number.parseInt(yearString, 10);
   const monthString: string =
-    searchParams.get('month') ?? (new Date().getMonth() + 1).toString();
+    searchParameters.get('month') ?? (new Date().getMonth() + 1).toString();
   const month: number = Number.parseInt(monthString, 10);
-  const limitString: string | undefined = searchParams.get('limit') ?? '100';
+  const limitString: string | undefined =
+    searchParameters.get('limit') ?? '100';
   const limit: number = Number.parseInt(limitString, 10);
-  const offsetString: string | undefined = searchParams.get('offset') ?? '0';
+  const offsetString: string | undefined =
+    searchParameters.get('offset') ?? '0';
   const offset: number = Number.parseInt(offsetString, 10);
 
-  const response = getChessGames(username, { year, month }, { limit, offset });
+  return { year, month, limit, offset };
+};
+
+export const GET = async (
+  request: NextRequest,
+  { params }: PlayersParameters
+): Promise<NextResponse<GamesResponse>> => {
+  const username: string = params?.username ?? '';
+  const { searchParams } = new URL(request.url);
+  const { year, month, limit, offset } = resolveQuery(searchParams);
+
+  const response = await getChessGames(username, {
+    year,
+    month,
+    limit,
+    offset,
+  });
+  return NextResponse.json(response, { status: 200 });
+};
+
+export const POST = async (
+  request: NextRequest,
+  { params }: PlayersParameters
+): Promise<NextResponse<SyncedResponse>> => {
+  const username: string = params?.username ?? '';
+  const body: { month: number; year: number } = await request.json();
+  const { month, year } = body;
+  const response = await syncGames(username, { month, year });
   return NextResponse.json(response, { status: 200 });
 };

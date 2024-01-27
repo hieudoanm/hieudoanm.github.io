@@ -13,3 +13,5 @@ export const GRAPHQL_URI: string =
   process.env.GRAPHQL_URI ?? 'http://localhost:3210/api/graphql';
 export const NEXT_PUBLIC_GRAPHQL_URI: string =
   process.env.NEXT_PUBLIC_GRAPHQL_URI ?? 'http://localhost:3210/api/graphql';
+
+export const PROXY: string = process.env.PROXY ?? 'false';
