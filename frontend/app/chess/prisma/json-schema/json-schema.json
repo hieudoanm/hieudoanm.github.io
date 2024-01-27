@@ -14,14 +14,6 @@
           "type": "string",
           "default": ""
         },
-        "followers": {
-          "type": "integer",
-          "default": 0
-        },
-        "avatar": {
-          "type": "string",
-          "default": ""
-        },
         "location": {
           "type": "string",
           "default": ""
@@ -34,9 +26,17 @@
           "type": "string",
           "default": ""
         },
+        "avatar": {
+          "type": "string",
+          "default": ""
+        },
         "twitchUrl": {
           "type": "string",
           "default": ""
+        },
+        "followers": {
+          "type": "integer",
+          "default": 0
         },
         "isStreamer": {
           "type": "boolean",

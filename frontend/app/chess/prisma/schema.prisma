@@ -27,15 +27,15 @@ generator markdown {
 model ChessPlayer {
   id          Int          @id
   username    String       @unique
-  name        String       @default("")
-  followers   Int          @default(0)
-  avatar      String       @default("")
-  location    String       @default("")
-  country     String       @default("")
-  countryCode String       @default("")
-  twitchUrl   String       @default("")
-  isStreamer  Boolean      @default(false)
-  verified    Boolean      @default(false)
+  name        String       @default("") @db.VarChar(255)
+  location    String       @default("") @db.VarChar(255)
+  country     String       @default("") @db.VarChar(255)
+  countryCode String       @default("") @db.VarChar(255)
+  avatar      String       @default("") @db.VarChar(255)
+  twitchUrl   String       @default("") @db.VarChar(255)
+  followers   Int          @default(0) @db.Integer
+  isStreamer  Boolean      @default(false) @db.Boolean
+  verified    Boolean      @default(false) @db.Boolean
   lastOnline  DateTime     @default(now()) @db.Timestamptz
   joined      DateTime     @default(now()) @db.Timestamptz
   status      ChessStatus  @default(basic)
