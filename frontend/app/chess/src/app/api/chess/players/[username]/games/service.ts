@@ -1,5 +1,5 @@
-import { getGamesByYearAndMonth } from '@chess/common/clients/chess.com/chess.client';
 import { Game } from '@chess/common/clients/chess.com/chess.dto';
+import { getGamesByYearAndMonth } from '@chess/common/clients/chess.com/proxy.client';
 import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
 import {

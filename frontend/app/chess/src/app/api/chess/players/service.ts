@@ -1,4 +1,3 @@
-import { TIME_RANGE_IN_MILLISECONDS } from '@chess/common/constants/time.constants';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
 import { ChessPlayer, ChessStats, ChessTitle, Prisma } from '@prisma/client';
 

@@ -1,9 +1,9 @@
+import { Player, Stats } from '@chess/common/clients/chess.com/chess.dto';
 import {
   getArchives,
   getPlayer as getPlayerFromAPI,
   getStats,
-} from '@chess/common/clients/chess.com/chess.client';
-import { Player, Stats } from '@chess/common/clients/chess.com/chess.dto';
+} from '@chess/common/clients/chess.com/proxy.client';
 import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
 import {

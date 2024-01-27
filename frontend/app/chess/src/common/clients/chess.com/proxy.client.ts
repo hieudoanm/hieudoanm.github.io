@@ -12,7 +12,7 @@ import {
   Title,
 } from './chess.dto';
 
-const CHESS_BASE_URL: string = 'https://api.chess.com/pub';
+const CHESS_BASE_URL = `${BASE_URL}/api/chess.com`;
 
 const getTitledUrl = (title: string): string =>
   `${CHESS_BASE_URL}/titled/${encodeURIComponent(title)}`;
