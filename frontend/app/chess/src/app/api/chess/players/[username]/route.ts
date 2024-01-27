@@ -1,6 +1,6 @@
 import { ChessPlayer } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
-import { getChessPlayer, syncChessPlayer } from './service';
+import { getPlayer, syncPlayer } from './service';
 
 type PlayersParameters = { params: { username: string } };
 
@@ -9,7 +9,7 @@ export const GET = async (
   { params }: PlayersParameters
 ): Promise<NextResponse<ChessPlayer>> => {
   const username: string = params.username ?? '';
-  const player: ChessPlayer = await getChessPlayer(username);
+  const player: ChessPlayer = await getPlayer(username);
   return NextResponse.json(player, { status: 200 });
 };
 
@@ -18,6 +18,6 @@ export const POST = async (
   { params }: PlayersParameters
 ): Promise<NextResponse<ChessPlayer>> => {
   const username: string = params.username ?? '';
-  const player: ChessPlayer = await syncChessPlayer(username);
+  const player: ChessPlayer = await syncPlayer(username);
   return NextResponse.json(player, { status: 200 });
 };

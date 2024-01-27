@@ -1,6 +1,6 @@
 import {
   getArchives,
-  getPlayer,
+  getPlayer as getPlayerFromAPI,
   getStats,
 } from '@chess/common/clients/chess.com/chess.client';
 import { Player, Stats } from '@chess/common/clients/chess.com/chess.dto';
@@ -15,54 +15,54 @@ import {
   ChessTitle,
   Prisma,
 } from '@prisma/client';
-import axios from 'axios';
 
 (BigInt.prototype as any).toJSON = function () {
   const int = Number.parseInt(this.toString());
   return int ?? this.toString();
 };
 
-export const getChessPlayer = async (
-  username: string
-): Promise<ChessPlayer> => {
-  logger.info(`syncChessPlayer username=${username}`);
+export const getPlayer = async (username: string): Promise<ChessPlayer> => {
+  logger.info(`getPlayer username=${username}`);
   const where: Prisma.ChessPlayerWhereInput = { username };
+  const include: Prisma.ChessPlayerInclude = { country: true, stats: true };
   const player = await getPrismaClient().chessPlayer.findFirst({
     where,
-    include: { country: true, stats: true },
+    include,
   });
   if (player !== null) {
     await getPrismaClient().$disconnect();
     return player;
   }
-  return syncChessPlayer(username);
+  return syncPlayer(username);
 };
 
-export const syncChessPlayer = async (
-  username: string
-): Promise<ChessPlayer> => {
+export const syncPlayer = async (username: string): Promise<ChessPlayer> => {
   const player = await syncProfile(username);
   const id: number = await syncStats(username, player.id);
-  logger.info(`syncChessPlayer id=${id}`);
+  logger.info(`syncPlayer id=${id}`);
   await getPrismaClient().$disconnect();
   return player;
 };
 
 const syncProfile = async (username: string): Promise<ChessPlayer> => {
-  const chessPlayer: Player = await getPlayer(username);
+  const player: Player = await getPlayerFromAPI(username);
   const { archives = [] } = await getArchives(username);
   archives.sort((a, b) => (a < b ? 1 : -1));
-  const player = await mapProfile(chessPlayer, archives);
+  const createUpdate = mapProfile(player, archives);
+
+  if (!createUpdate.id) {
+    return { id: 0 } as ChessPlayer;
+  }
 
   return getPrismaClient().chessPlayer.upsert({
-    create: player,
-    update: player,
-    where: { id: player.id },
+    create: createUpdate,
+    update: createUpdate,
+    where: { id: createUpdate.id },
     include: { country: true, stats: true },
   });
 };
 
-const mapProfile = async (chessPlayer: Player, archives: string[]) => {
+const mapProfile = (chessPlayer: Player, archives: string[]) => {
   const {
     avatar = '',
     username = '',
@@ -107,6 +107,7 @@ const mapProfile = async (chessPlayer: Player, archives: string[]) => {
 };
 
 const syncStats = async (username: string, id: number): Promise<number> => {
+  if (!id) return id;
   const stats = await getStats(username);
   const playerStats = mapStats(stats, id);
   for (const timeClassStats of playerStats) {
