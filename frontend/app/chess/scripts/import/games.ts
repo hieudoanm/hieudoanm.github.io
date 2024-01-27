@@ -34,7 +34,7 @@ const getGames = async (archive: string): Promise<Game[]> => {
     const { games = [] } = data;
     return games;
   } catch (error) {
-    console.error('getGames error');
+    console.error(`getGames error=${error}`);
     return [];
   }
 };
@@ -114,7 +114,7 @@ const getArchives = async (prismaClient: PrismaClient, username: string) => {
       }
     }
   } catch (error) {
-    console.error('getArchives error');
+    console.error(`getArchives error=${error}`);
   }
 };
 

@@ -1,5 +1,5 @@
-import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import axios from 'axios';
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 
 const PUBLIC_URL: string = 'https://api.chess.com/pub';
 
@@ -25,7 +25,7 @@ const getArchives = async (username: string, current: string, title = '') => {
     archives.reverse();
     for (const archive of archives) {
       const paths: string[] = archive.split('/');
-      const filename = paths.slice(paths.length - 2).join('-');
+      const filename = paths.slice(-2).join('-');
       const folder: string = ['..', '..', 'resources', 'pgn', title, username]
         .filter((path) => path !== '')
         .join('/');

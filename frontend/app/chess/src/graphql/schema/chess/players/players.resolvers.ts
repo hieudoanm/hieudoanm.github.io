@@ -1,14 +1,14 @@
 import { ChessDataSource } from '@chess/graphql/data/chess.data';
 import { GamesSynced } from '@chess/graphql/data/chess.types';
-import { ChessGame, ChessPlayer } from '@prisma/client';
+import { ChessGame, ChessPlayer, ChessStats } from '@prisma/client';
 
 export const resolvers = {
   Chess: {
-    players: (
+    players: async (
       _parent: unknown,
       { limit = 100, offset = 0 }: { limit: number; offset: number },
       { chessDataSource }: { chessDataSource: ChessDataSource }
-    ) => {
+    ): Promise<(ChessStats & { player: ChessPlayer })[]> => {
       return chessDataSource.getPlayers({ limit, offset });
     },
     player: (

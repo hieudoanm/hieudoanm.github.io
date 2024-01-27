@@ -26,10 +26,10 @@ generator markdown {
 
 model ChessPlayer {
   id          Int          @id
-  username    String       @unique
+  username    String       @unique @db.VarChar(255)
   name        String       @default("") @db.VarChar(255)
   location    String       @default("") @db.VarChar(255)
-  country     String       @default("") @db.VarChar(255)
+  country     ChessCountry @relation(fields: [countryCode], references: [cca2])
   countryCode String       @default("") @db.VarChar(255)
   avatar      String       @default("") @db.VarChar(255)
   twitchUrl   String       @default("") @db.VarChar(255)
@@ -48,6 +48,18 @@ model ChessPlayer {
   createdAt DateTime? @default(now()) @db.Timestamptz
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
 
+  @@schema("chess")
+}
+
+model ChessCountry {
+  cca2 String @unique @default("") @db.VarChar(255)
+  cca3 String @unique @default("") @db.VarChar(255)
+  name String @default("") @db.VarChar(255)
+  flag String @default("") @db.VarChar(255)
+
+  players ChessPlayer[]
+
+  @@id([cca2, cca3])
   @@schema("chess")
 }
 

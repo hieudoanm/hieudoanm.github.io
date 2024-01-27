@@ -11,8 +11,7 @@ erDiagram
     String username UK
     String name
     String location
-    String country
-    String countryCode
+    String countryCode FK
     String avatar
     String twitchUrl
     Int followers
@@ -26,6 +25,12 @@ erDiagram
     String archives
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
+}
+"ChessCountry" {
+    String cca2 UK
+    String cca3 UK
+    String name
+    String flag
 }
 "ChessStats" {
     Int playerId FK
@@ -69,6 +74,7 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"ChessPlayer" }o--|| "ChessCountry" : country
 "ChessStats" }o--|| "ChessPlayer" : player
 ```
 
@@ -79,7 +85,6 @@ erDiagram
   - `username`: 
   - `name`: 
   - `location`: 
-  - `country`: 
   - `countryCode`: 
   - `avatar`: 
   - `twitchUrl`: 
@@ -94,6 +99,14 @@ erDiagram
   - `archives`: 
   - `createdAt`: 
   - `updatedAt`: 
+
+### `ChessCountry`
+
+**Properties**
+  - `cca2`: 
+  - `cca3`: 
+  - `name`: 
+  - `flag`: 
 
 ### `ChessStats`
 

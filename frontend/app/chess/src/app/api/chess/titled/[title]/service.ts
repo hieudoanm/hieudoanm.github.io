@@ -33,7 +33,7 @@ const getTitledPlayers = async ({
     getPrismaClient().chessPlayer.count({ where }),
     getPrismaClient().chessPlayer.findMany({
       where,
-      include: { stats: true },
+      include: { country: true, stats: true },
       orderBy: [{ username: 'asc' }],
     }),
   ]);

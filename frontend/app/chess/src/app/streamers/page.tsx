@@ -20,8 +20,12 @@ import {
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
-import { Layout } from '@chess/layout';
-import { ChessPlayer, ChessTitle } from '@prisma/client';
+import {
+  ChessCountry,
+  ChessPlayer,
+  ChessStats,
+  ChessTitle,
+} from '@prisma/client';
 import { NextPage } from 'next';
 import Link from 'next/link';
 
@@ -41,7 +45,6 @@ const streamersQuery: DocumentNode = gql`
           followers
           avatar
           location
-          country
           countryCode
           twitchUrl
           isStreamer
@@ -52,6 +55,11 @@ const streamersQuery: DocumentNode = gql`
           title
           league
           archives
+          country {
+            code
+            name
+            flag
+          }
           stats {
             best
             last
@@ -71,8 +79,7 @@ type StreamersResponse = {
     streamers: {
       total: number;
       title: ChessTitle;
-      country: string;
-      players: ChessPlayer[];
+      players: (ChessPlayer & { country: ChessCountry; stats: ChessStats[] })[];
       countries: { countryCode: string; country: string }[];
     };
   };
@@ -98,23 +105,22 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
   const players = data?.chess?.streamers?.players ?? [];
 
   return (
-    <Layout>
-      <Container>
-        <div className="py-4 md:py-8">
-          <Card className="border border-gray-200 shadow">
-            <CardHeader>
+    <Container>
+      <div className="py-4 md:py-8">
+        <Card className="border border-gray-200 shadow">
+          <CardHeader>
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+              className="gap-x-4 md:gap-x-8">
+              <Heading className="text-xl">Streamers ({total})</Heading>
               <Box
                 display="flex"
                 alignItems="center"
                 justifyContent="space-between"
-                className="gap-x-4 md:gap-x-8">
-                <Heading className="text-xl">Streamers ({total})</Heading>
-                <Box
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="space-between"
-                  className="gap-x-2 md:gap-x-4">
-                  {/* <Select
+                className="gap-x-2 md:gap-x-4">
+                {/* <Select
                     id="title"
                     name="title"
                     placeholder="Title"
@@ -143,94 +149,91 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                       );
                     })}
                   </Select> */}
-                </Box>
               </Box>
-            </CardHeader>
-            <Divider />
-            <TableContainer>
-              <Table>
-                <Thead>
-                  <Tr>
-                    <Th className="w-4">Title</Th>
-                    <Th>Username</Th>
-                    <Th isNumeric className="w-4">
-                      Country
-                    </Th>
-                    <Th isNumeric className="w-4">
-                      Followers
-                    </Th>
-                    <Th isNumeric className="w-4">
-                      Twitch
-                    </Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                  {players.map(
-                    ({
-                      title = '',
-                      username = '',
-                      avatar = '',
-                      followers = 0,
-                      country = '',
-                      countryCode = '',
-                      twitchUrl = '',
-                    }) => {
-                      return (
-                        <Tr key={username}>
-                          <Td>
-                            {(title ?? '').length > 0 ? (
-                              <Link href={`/titled/${title}`}>
-                                <Badge colorScheme="red">{title}</Badge>
-                              </Link>
-                            ) : (
-                              <></>
-                            )}
-                          </Td>
-                          <Td>
-                            <Link href={`/${username}`}>
-                              <div className="inline-flex items-center gap-x-2">
-                                {avatar.length > 0 ? (
-                                  <div
-                                    className="aspect-square w-8 rounded bg-contain bg-center"
-                                    style={{
-                                      backgroundImage: `url(${avatar})`,
-                                    }}
-                                  />
-                                ) : (
-                                  <div className="aspect-square w-8 rounded border" />
-                                )}
-                                <Text>{username}</Text>
-                              </div>
+            </Box>
+          </CardHeader>
+          <Divider />
+          <TableContainer>
+            <Table>
+              <Thead>
+                <Tr>
+                  <Th className="w-4">Title</Th>
+                  <Th>Username</Th>
+                  <Th isNumeric className="w-4">
+                    Country
+                  </Th>
+                  <Th isNumeric className="w-4">
+                    Followers
+                  </Th>
+                  <Th isNumeric className="w-4">
+                    Twitch
+                  </Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {players.map(
+                  ({
+                    title = '',
+                    username = '',
+                    avatar = '',
+                    followers = 0,
+                    country,
+                    countryCode = '',
+                    twitchUrl = '',
+                  }) => {
+                    return (
+                      <Tr key={username}>
+                        <Td>
+                          {(title ?? '').length > 0 ? (
+                            <Link href={`/titled/${title}`}>
+                              <Badge colorScheme="red">{title}</Badge>
                             </Link>
-                          </Td>
-                          <Td isNumeric>
-                            <Link href={`/countries/${countryCode}`}>
-                              {country}
-                            </Link>
-                          </Td>
-                          <Td isNumeric>{followers.toLocaleString()}</Td>
-                          <Td isNumeric>
-                            <Link href={twitchUrl} target="_blank">
-                              <Button
-                                size="sm"
-                                type="button"
-                                colorScheme="teal">
-                                {/* <Icon as={FaTwitch} /> */}
-                                Twitch
-                              </Button>
-                            </Link>
-                          </Td>
-                        </Tr>
-                      );
-                    }
-                  )}
-                </Tbody>
-              </Table>
-            </TableContainer>
-          </Card>
-        </div>
-      </Container>
-    </Layout>
+                          ) : (
+                            <></>
+                          )}
+                        </Td>
+                        <Td>
+                          <Link
+                            href={`/players/${encodeURIComponent(username)}`}>
+                            <div className="inline-flex items-center gap-x-2">
+                              {avatar.length > 0 ? (
+                                <div
+                                  className="aspect-square w-8 rounded bg-contain bg-center"
+                                  style={{
+                                    backgroundImage: `url(${avatar})`,
+                                  }}
+                                />
+                              ) : (
+                                <div className="aspect-square w-8 rounded border" />
+                              )}
+                              <Text>{username}</Text>
+                            </div>
+                          </Link>
+                        </Td>
+                        <Td isNumeric>
+                          <Link href={`/countries/${countryCode}`}>
+                            {country.name}
+                          </Link>
+                        </Td>
+                        <Td isNumeric>{followers.toLocaleString()}</Td>
+                        <Td isNumeric>
+                          <Link href={twitchUrl} target="_blank">
+                            <Button size="sm" type="button" colorScheme="teal">
+                              {/* <Icon as={FaTwitch} /> */}
+                              Twitch
+                            </Button>
+                          </Link>
+                        </Td>
+                      </Tr>
+                    );
+                  }
+                )}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </Card>
+      </div>
+    </Container>
   );
 };
 

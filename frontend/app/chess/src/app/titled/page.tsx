@@ -30,8 +30,8 @@ import { TimeRange } from '@chess/common/types/time';
 import { Container } from '@chess/components/atoms/Container';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
 import { query } from '@chess/graphql/apollo/client';
-import { Layout } from '@chess/layout';
 import {
+  ChessCountry,
   ChessPlayer,
   ChessStats,
   ChessTimeClass,
@@ -41,6 +41,11 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import { IconType } from 'react-icons';
 import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
+
+type FullChessPlayer = ChessPlayer & {
+  country: ChessCountry;
+  stats: ChessStats[];
+};
 
 const getRatingByTimeClass = (
   chessTimeClass: ChessTimeClass,
@@ -53,7 +58,7 @@ const getRatingByTimeClass = (
 };
 
 const RapidHistogramChart: React.FC<{
-  players: (ChessPlayer & { stats: ChessStats[] })[];
+  players: FullChessPlayer[];
 }> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
     ({ stats }: { stats: ChessStats[] }) =>
@@ -86,7 +91,7 @@ const RapidHistogramChart: React.FC<{
 };
 
 const BlitzHistogramChart: React.FC<{
-  players: (ChessPlayer & { stats: ChessStats[] })[];
+  players: FullChessPlayer[];
 }> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
     ({ stats }) => getRatingByTimeClass('blitz', stats) > 0
@@ -118,7 +123,7 @@ const BlitzHistogramChart: React.FC<{
 };
 
 const BulletHistogramChart: React.FC<{
-  players: (ChessPlayer & { stats: ChessStats[] })[];
+  players: FullChessPlayer[];
 }> = ({ players = [] }) => {
   const ratedPlayers = players.filter(
     ({ stats = [] }) => getRatingByTimeClass('bullet', stats) > 0
@@ -171,7 +176,7 @@ const TitledStats: React.FC<{
 };
 
 const PlayersTable: React.FC<{
-  players: (ChessPlayer & { stats: ChessStats[] })[];
+  players: FullChessPlayer[];
 }> = ({ players = [] }) => {
   return (
     <Card className="border border-gray-200 shadow">
@@ -202,7 +207,7 @@ const PlayersTable: React.FC<{
                   {
                     username = '',
                     avatar = '',
-                    country = '',
+                    country,
                     countryCode = '',
                     stats = [],
                   },
@@ -213,7 +218,7 @@ const PlayersTable: React.FC<{
                       <Td>{index + 1}</Td>
                       <Td>
                         <Link
-                          href={`/${username}`}
+                          href={`/players/${encodeURIComponent(username)}`}
                           className="inline-flex items-center gap-2">
                           {avatar.length > 0 ? (
                             <div
@@ -230,7 +235,7 @@ const PlayersTable: React.FC<{
                       </Td>
                       <Td isNumeric>
                         <Link href={`/countries/${countryCode}`}>
-                          {country}
+                          {country.flag} {country.name}
                         </Link>
                       </Td>
                       <Td isNumeric>{getRatingByTimeClass('rapid', stats)}</Td>
@@ -260,7 +265,7 @@ type TitledResponse = {
       maxBlitzRating: number;
       maxBulletRating: number;
       total: number;
-      players: (ChessPlayer & { stats: ChessStats[] })[];
+      players: FullChessPlayer[];
     };
   };
 };
@@ -296,96 +301,94 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
   } = titled;
 
   return (
-    <Layout>
-      <Container>
-        <div className="py-4 md:py-8">
-          <div className="flex flex-col gap-y-4 md:gap-y-8">
-            <Box
-              display={'flex'}
-              alignItems={'center'}
-              justifyContent={'space-between'}>
-              <Menu>
-                <MenuButton
-                  // as={Button}
-                  // rightIcon={<Icon as={FaChevronDown} />}
-                  className="bg-white px-0 text-lg md:text-4xl">
-                  {TITLED_ABBREVIATIONS[title]} ({total})
-                </MenuButton>
-                <MenuList>
-                  {Object.entries(TITLED_ABBREVIATIONS)
-                    .filter(([key, value]) => !value.includes('Arena'))
-                    .map(([key, value]) => (
-                      <MenuItem
-                        key={key}
-                        className={`${title === key ? 'font-bold' : ''}`}>
-                        {value}
-                      </MenuItem>
-                    ))}
-                </MenuList>
-              </Menu>
-              <Box className="rounded shadow">
-                <Select
-                  id="timeRange"
-                  name="timeRange"
-                  placeholder="Time Range"
-                  value={timeRange}>
-                  <option value="week">7 Days</option>
-                  <option value="month">30 Days</option>
-                  <option value="quarter">90 Days</option>
-                  <option value="year">1 Year</option>
-                </Select>
-              </Box>
+    <Container>
+      <div className="py-4 md:py-8">
+        <div className="flex flex-col gap-y-4 md:gap-y-8">
+          <Box
+            display={'flex'}
+            alignItems={'center'}
+            justifyContent={'space-between'}>
+            <Menu>
+              <MenuButton
+                // as={Button}
+                // rightIcon={<Icon as={FaChevronDown} />}
+                className="bg-white px-0 text-lg md:text-4xl">
+                {TITLED_ABBREVIATIONS[title]} ({total})
+              </MenuButton>
+              <MenuList>
+                {Object.entries(TITLED_ABBREVIATIONS)
+                  .filter(([key, value]) => !value.includes('Arena'))
+                  .map(([key, value]) => (
+                    <MenuItem
+                      key={key}
+                      className={`${title === key ? 'font-bold' : ''}`}>
+                      {value}
+                    </MenuItem>
+                  ))}
+              </MenuList>
+            </Menu>
+            <Box className="rounded shadow">
+              <Select
+                id="timeRange"
+                name="timeRange"
+                placeholder="Time Range"
+                value={timeRange}>
+                <option value="week">7 Days</option>
+                <option value="month">30 Days</option>
+                <option value="quarter">90 Days</option>
+                <option value="year">1 Year</option>
+              </Select>
             </Box>
-            {players.length > 1 ? (
-              <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
-                <div className="col-span-1">
-                  <TitledStats
-                    title="Rapid"
-                    average={averageRapidRating}
-                    max={maxRapidRating}
-                    icon={FaClock}
-                  />
-                </div>
-                <div className="col-span-1">
-                  <TitledStats
-                    title="Blitz"
-                    average={averageBlitzRating}
-                    max={maxBlitzRating}
-                    icon={FaBolt}
-                  />
-                </div>
-                <div className="col-span-1">
-                  <TitledStats
-                    title="Bullet"
-                    average={averageBulletRating}
-                    max={maxBulletRating}
-                    icon={FaRocket}
-                  />
-                </div>
+          </Box>
+          {players.length > 1 ? (
+            <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+              <div className="col-span-1">
+                <TitledStats
+                  title="Rapid"
+                  average={averageRapidRating}
+                  max={maxRapidRating}
+                  icon={FaClock}
+                />
               </div>
-            ) : (
-              <></>
-            )}
-            {players.length > 1 ? (
-              <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
-                <div className="col-span-1">
-                  <RapidHistogramChart players={players} />
-                </div>
-                <div className="col-span-1">
-                  <BlitzHistogramChart players={players} />
-                </div>
-                <div className="col-span-1">
-                  <BulletHistogramChart players={players} />
-                </div>
+              <div className="col-span-1">
+                <TitledStats
+                  title="Blitz"
+                  average={averageBlitzRating}
+                  max={maxBlitzRating}
+                  icon={FaBolt}
+                />
               </div>
-            ) : (
-              <></>
-            )}
-            <PlayersTable players={players} />
-          </div>
+              <div className="col-span-1">
+                <TitledStats
+                  title="Bullet"
+                  average={averageBulletRating}
+                  max={maxBulletRating}
+                  icon={FaRocket}
+                />
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
+          {players.length > 1 ? (
+            <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+              <div className="col-span-1">
+                <RapidHistogramChart players={players} />
+              </div>
+              <div className="col-span-1">
+                <BlitzHistogramChart players={players} />
+              </div>
+              <div className="col-span-1">
+                <BulletHistogramChart players={players} />
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
+          <PlayersTable players={players} />
         </div>
-      </Container>
-    </Layout>
+      </div>
+    </Container>
   );
 };
 
@@ -407,7 +410,6 @@ const titledQuery = gql`
           followers
           avatar
           location
-          country
           countryCode
           twitchUrl
           isStreamer
@@ -418,6 +420,11 @@ const titledQuery = gql`
           title
           league
           archives
+          country {
+            code
+            name
+            flag
+          }
           stats {
             timeClass
             best

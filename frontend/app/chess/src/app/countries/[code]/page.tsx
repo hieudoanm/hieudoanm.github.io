@@ -32,7 +32,6 @@ import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
 import { query } from '@chess/graphql/apollo/client';
-import { Layout } from '@chess/layout';
 import {
   ChessPlayer,
   ChessStats,
@@ -194,7 +193,7 @@ const PlayersTable: React.FC<{
                       )}
                     </Td>
                     <Td>
-                      <Link href={`/${username}`}>
+                      <Link href={`/players/${encodeURIComponent(username)}`}>
                         <div className="inline-flex items-center gap-x-2">
                           {avatar.length > 0 ? (
                             <div
@@ -276,7 +275,6 @@ const countryQuery = gql`
           followers
           avatar
           location
-          country
           countryCode
           twitchUrl
           isStreamer
@@ -287,6 +285,11 @@ const countryQuery = gql`
           title
           league
           archives
+          country {
+            code
+            name
+            flag
+          }
           stats {
             timeClass
             best
@@ -345,84 +348,82 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
   } = country;
 
   return (
-    <Layout>
-      <Container>
-        <div className="py-4 md:py-8">
-          <div className="flex flex-col gap-y-4 md:gap-y-8">
-            <Heading style={{ wordSpacing: '16px' }}>
-              {(flags as Record<string, string>)[countryCode]} {countryCode}
-            </Heading>
+    <Container>
+      <div className="py-4 md:py-8">
+        <div className="flex flex-col gap-y-4 md:gap-y-8">
+          <Heading style={{ wordSpacing: '16px' }}>
+            {(flags as Record<string, string>)[countryCode]} {countryCode}
+          </Heading>
+          <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+            <div className="col-span-1">
+              <CountryStats
+                title="Rapid"
+                average={averageRapidRating}
+                max={maxRapidRating}
+                icon={FaClock}
+              />
+            </div>
+            <div className="col-span-1">
+              <CountryStats
+                title="Blitz"
+                average={averageBlitzRating}
+                max={maxBlitzRating}
+                icon={FaBolt}
+              />
+            </div>
+            <div className="col-span-1">
+              <CountryStats
+                title="Bullet"
+                average={averageBulletRating}
+                max={maxBulletRating}
+                icon={FaRocket}
+              />
+            </div>
+          </div>
+          {players.length > 1 ? (
             <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
               <div className="col-span-1">
-                <CountryStats
-                  title="Rapid"
-                  average={averageRapidRating}
-                  max={maxRapidRating}
-                  icon={FaClock}
-                />
+                <RapidHistogramChart players={players} />
               </div>
               <div className="col-span-1">
-                <CountryStats
-                  title="Blitz"
-                  average={averageBlitzRating}
-                  max={maxBlitzRating}
-                  icon={FaBolt}
-                />
+                <BlitzHistogramChart players={players} />
               </div>
               <div className="col-span-1">
-                <CountryStats
-                  title="Bullet"
-                  average={averageBulletRating}
-                  max={maxBulletRating}
-                  icon={FaRocket}
-                />
+                <BulletHistogramChart players={players} />
               </div>
             </div>
-            {players.length > 1 ? (
-              <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
-                <div className="col-span-1">
-                  <RapidHistogramChart players={players} />
-                </div>
-                <div className="col-span-1">
-                  <BlitzHistogramChart players={players} />
-                </div>
-                <div className="col-span-1">
-                  <BulletHistogramChart players={players} />
-                </div>
-              </div>
-            ) : (
-              <></>
-            )}
-            <Card className="border border-gray-200 shadow">
-              <CardHeader>
-                <Heading className="text-xl">Titles</Heading>
-              </CardHeader>
-              <List>
-                {titles.map(({ title, total }) => {
-                  return (
-                    <ListItem key={title} className="border-t px-4 py-2">
-                      <Box
-                        display={'flex'}
-                        alignItems={'center'}
-                        justifyContent={'space-between'}>
-                        <Link href={`/titled/${title}`}>
-                          <div className="inline-flex items-center gap-x-2">
-                            <Badge colorScheme="red">{title}</Badge>
-                            <Text>{TITLED_ABBREVIATIONS[title]}</Text>
-                          </div>
-                        </Link>
-                        <Text>{total}</Text>
-                      </Box>
-                    </ListItem>
-                  );
-                })}
-              </List>
-            </Card>
-            <PlayersTable total={total} players={players} />
-          </div>
+          ) : (
+            <></>
+          )}
+          <Card className="border border-gray-200 shadow">
+            <CardHeader>
+              <Heading className="text-xl">Titles</Heading>
+            </CardHeader>
+            <List>
+              {titles.map(({ title, total }) => {
+                return (
+                  <ListItem key={title} className="border-t px-4 py-2">
+                    <Box
+                      display={'flex'}
+                      alignItems={'center'}
+                      justifyContent={'space-between'}>
+                      <Link href={`/titled/${title}`}>
+                        <div className="inline-flex items-center gap-x-2">
+                          <Badge colorScheme="red">{title}</Badge>
+                          <Text>{TITLED_ABBREVIATIONS[title]}</Text>
+                        </div>
+                      </Link>
+                      <Text>{total}</Text>
+                    </Box>
+                  </ListItem>
+                );
+              })}
+            </List>
+          </Card>
+          <PlayersTable total={total} players={players} />
         </div>
-      </Container>
-    </Layout>
+      </div>
+    </Container>
   );
 };
 

@@ -7,7 +7,7 @@ Table ChessPlayer {
   username String [unique, not null]
   name String [not null, default: '']
   location String [not null, default: '']
-  country String [not null, default: '']
+  country ChessCountry [not null]
   countryCode String [not null, default: '']
   avatar String [not null, default: '']
   twitchUrl String [not null, default: '']
@@ -23,6 +23,18 @@ Table ChessPlayer {
   stats ChessStats [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
+}
+
+Table ChessCountry {
+  cca2 String [unique, not null, default: '']
+  cca3 String [unique, not null, default: '']
+  name String [not null, default: '']
+  flag String [not null, default: '']
+  players ChessPlayer [not null]
+
+  indexes {
+    (cca2, cca3) [pk]
+  }
 }
 
 Table ChessStats {
@@ -161,5 +173,7 @@ Enum ChessSide {
   white
   black
 }
+
+Ref: ChessPlayer.countryCode > ChessCountry.cca2
 
 Ref: ChessStats.playerId > ChessPlayer.id

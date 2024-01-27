@@ -106,6 +106,9 @@ export const Navbar: React.FC = () => {
                   <Link href="/countries">
                     <Text>Countries</Text>
                   </Link>
+                  <Link href="/players">
+                    <Text>Players</Text>
+                  </Link>
                   <Link href="/streamers">
                     <Text>Streamers</Text>
                   </Link>
@@ -121,7 +124,7 @@ export const Navbar: React.FC = () => {
                       <Text>Tools</Text>
                     </MenuButton>
                     <MenuList>
-                      {['openings', 'analysis'].map((tool: string) => {
+                      {['openings'].map((tool: string) => {
                         return (
                           <Link key={tool} href={`/${tool}`}>
                             <MenuItem className="capitalize">{tool}</MenuItem>

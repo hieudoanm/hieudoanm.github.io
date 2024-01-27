@@ -32,15 +32,15 @@ export const getStreamers = async ({
   const [countries = [], total = 0, players = []] =
     await getPrismaClient().$transaction([
       getPrismaClient().chessPlayer.findMany({
-        select: { countryCode: true, country: true },
-        distinct: ['countryCode', 'country'],
+        select: { countryCode: true },
+        distinct: ['countryCode'],
         where,
-        orderBy: { country: 'asc' },
+        orderBy: { countryCode: 'asc' },
       }),
       getPrismaClient().chessPlayer.count({ where }),
       getPrismaClient().chessPlayer.findMany({
         where,
-        include: { stats: true },
+        include: { country: true, stats: true },
         orderBy: [{ followers: 'desc' }],
       }),
     ]);

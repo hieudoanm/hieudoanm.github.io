@@ -14,15 +14,15 @@ export const getCountries = async (): Promise<Country[]> => {
     const d = new Date(Date.now() - milliseconds);
     const [date] = d.toISOString().split('T');
     const countries = await getPrismaClient().chessPlayer.groupBy({
-      by: ['country', 'countryCode'],
-      _count: { country: true },
-      orderBy: { country: 'asc' },
+      by: ['countryCode'],
+      _count: { countryCode: true },
+      orderBy: { countryCode: 'asc' },
       where: { title: { not: null }, lastOnline: { gte: `${date}T00:00:00Z` } },
     });
     await getPrismaClient().$disconnect();
     return countries.map((country) => ({
       ...country,
-      count: country._count.country,
+      count: country._count.countryCode,
     }));
   } catch (error) {
     logger.error(`getCountries error=${error}`);

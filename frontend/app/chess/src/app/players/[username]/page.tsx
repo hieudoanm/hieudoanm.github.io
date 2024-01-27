@@ -3,7 +3,6 @@ import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
-import { Layout } from '@chess/layout';
 import PlayerTemplate from '@chess/templates/PlayerTemplate';
 import { ChessPlayer, ChessStats } from '@prisma/client';
 import { NextPage } from 'next';
@@ -62,13 +61,11 @@ const PlayerPage: NextPage<{ params: { username: string } }> = async ({
   const player = data?.chess?.player;
 
   return (
-    <Layout>
-      <Container>
-        <div className="py-8">
-          <PlayerTemplate player={player} />
-        </div>
-      </Container>
-    </Layout>
+    <Container>
+      <div className="py-8">
+        <PlayerTemplate player={player} />
+      </div>
+    </Container>
   );
 };
 

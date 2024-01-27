@@ -16,7 +16,6 @@ import {
 } from '@chakra-ui/react';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
-import { Layout } from '@chess/layout';
 import { ChessOpening } from '@prisma/client';
 import { NextPage } from 'next';
 
@@ -52,57 +51,52 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
   const openings = data?.chess?.openings ?? [];
 
   return (
-    <Layout>
-      <Container>
-        <div className="py-4 md:py-8">
-          <div className="flex flex-col gap-y-4 md:gap-y-8">
-            <Card className="border border-gray-200 shadow">
-              <CardHeader>
-                <Heading className="text-xl">
-                  Openings ({openings.length})
-                </Heading>
-              </CardHeader>
-              <Divider />
-              <TableContainer>
-                <Table>
-                  <Thead>
-                    <Tr>
-                      <Th className="w-4">No</Th>
-                      <Th className="w-4">ECO</Th>
-                      <Th>Name</Th>
-                    </Tr>
-                  </Thead>
-                  <Tbody>
-                    {openings.map(
-                      (
-                        { eco = '', name = '' }: ChessOpening,
-                        index: number
-                      ) => {
-                        return (
-                          <Tr key={`${eco}-${name}`}>
-                            <Td>{index + 1}</Td>
-                            <Td>
-                              <Link href={`/openings/${eco}`}>{eco}</Link>
-                            </Td>
-                            <Td>
-                              <Text
-                                title={name}
-                                className="w-32 truncate md:w-auto">
-                                {name}
-                              </Text>
-                            </Td>
-                          </Tr>
-                        );
-                      }
-                    )}
-                  </Tbody>
-                </Table>
-              </TableContainer>
-            </Card>
-          </div>
+    <Container>
+      <div className="py-4 md:py-8">
+        <div className="flex flex-col gap-y-4 md:gap-y-8">
+          <Card className="border border-gray-200 shadow">
+            <CardHeader>
+              <Heading className="text-xl">
+                Openings ({openings.length})
+              </Heading>
+            </CardHeader>
+            <Divider />
+            <TableContainer>
+              <Table>
+                <Thead>
+                  <Tr>
+                    <Th className="w-4">No</Th>
+                    <Th className="w-4">ECO</Th>
+                    <Th>Name</Th>
+                  </Tr>
+                </Thead>
+                <Tbody>
+                  {openings.map(
+                    ({ eco = '', name = '' }: ChessOpening, index: number) => {
+                      return (
+                        <Tr key={`${eco}-${name}`}>
+                          <Td>{index + 1}</Td>
+                          <Td>
+                            <Link href={`/openings/${eco}`}>{eco}</Link>
+                          </Td>
+                          <Td>
+                            <Text
+                              title={name}
+                              className="w-32 truncate md:w-auto">
+                              {name}
+                            </Text>
+                          </Td>
+                        </Tr>
+                      );
+                    }
+                  )}
+                </Tbody>
+              </Table>
+            </TableContainer>
+          </Card>
         </div>
-      </Container>
-    </Layout>
+      </div>
+    </Container>
   );
 };
 

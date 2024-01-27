@@ -1,3 +1,6 @@
+import-countries:
+	yarn ts-node ./scripts/import/countries
+
 import-games:
 	yarn ts-node ./scripts/import/games
 

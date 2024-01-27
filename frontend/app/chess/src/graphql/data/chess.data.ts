@@ -4,6 +4,7 @@ import {
   ChessGame,
   ChessOpening,
   ChessPlayer,
+  ChessStats,
   ChessTitle,
 } from '@prisma/client';
 import {
@@ -43,16 +44,20 @@ export class ChessDataSource extends RESTDataSource {
   }
 
   async getPlayers({
-    limit,
-    offset,
+    limit = 100,
+    offset = 0,
   }: {
-    limit: number;
-    offset: number;
-  }): Promise<ChessPlayer> {
+    limit?: number;
+    offset?: number;
+  }): Promise<(ChessStats & { player: ChessPlayer })[]> {
     const parameters = new URLSearchParams();
     parameters.set('limit', limit.toString());
     parameters.set('offset', offset.toString());
-    return this.get(`/api/chess/players?${parameters.toString()}`);
+    const url = `/api/chess/players?${parameters.toString()}`;
+    const { players = [] } = await this.get<{
+      players: (ChessStats & { player: ChessPlayer })[];
+    }>(url);
+    return players;
   }
 
   async getPlayer(username: string): Promise<ChessPlayer> {

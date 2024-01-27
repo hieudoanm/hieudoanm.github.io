@@ -78,15 +78,15 @@ const PUBLIC_URL: string = 'https://api.chess.com/pub';
 
 const TITLES: string[] = [
   'GM',
-  'WGM',
+  // 'WGM',
   'IM',
-  'WIM',
+  // 'WIM',
   'FM',
-  'WFM',
+  // 'WFM',
   'CM',
-  'WCM',
+  // 'WCM',
   'NM',
-  'WNM',
+  // 'WNM',
 ];
 
 const getTitledPlayers = async (title: string): Promise<string[]> => {
@@ -143,7 +143,6 @@ const syncPlayer = async (
       twitchUrl,
       isStreamer,
       verified,
-      country,
       countryCode,
       title: title as ChessTitle,
       league: league as ChessLeague,
@@ -312,14 +311,15 @@ const main = async () => {
   for (const title of TITLES) {
     const players: string[] = await getTitledPlayers(title);
     console.log(`${title} ${players.length}`);
-    players.forEach(usernames.add, usernames);
+    for (const player of players) {
+      usernames.add(player);
+    }
   }
   console.log('usernames', usernames.size);
   const chunks = chunk(
     [...usernames].sort((a, b) => (a > b ? 1 : -1)),
     STRESS
   );
-  chunks.reverse();
 
   for (const chunk of chunks) {
     console.time();

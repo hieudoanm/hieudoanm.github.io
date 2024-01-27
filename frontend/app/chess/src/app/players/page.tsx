@@ -1,40 +1,53 @@
 import { gql } from '@apollo/client';
+import {
+  Badge,
+  Card,
+  CardHeader,
+  Table,
+  TableContainer,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+} from '@chakra-ui/react';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
-import { Layout } from '@chess/layout';
 import { ChessPlayer, ChessStats } from '@prisma/client';
 import type { NextPage } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const playersQuery = gql`
   query PlayersQuery($limit: Int, $offset: Int) {
     chess {
       players(limit: $limit, offset: $offset) {
-        id
-        username
-        name
-        followers
-        avatar
-        location
-        verified
-        lastOnline
-        joined
-        status
-        title
-        league
-        twitchUrl
-        isStreamer
-        country
-        countryCode
-        archives
-        stats {
-          timeClass
-          best
-          last
-          deviation
-          win
-          draw
-          loss
+        timeClass
+        best
+        last
+        deviation
+        win
+        draw
+        loss
+        player {
+          id
+          username
+          name
+          followers
+          avatar
+          location
+          verified
+          lastOnline
+          joined
+          status
+          title
+          league
+          twitchUrl
+          isStreamer
+          country
+          countryCode
+          archives
         }
       }
     }
@@ -42,7 +55,7 @@ const playersQuery = gql`
 `;
 
 type PlayersResponse = {
-  chess: { players: (ChessPlayer & { stats: ChessStats[] })[] };
+  chess: { players: (ChessStats & { player: ChessPlayer })[] };
 };
 
 type PlayersPageProperties = {
@@ -64,11 +77,79 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
   logger.info(`PlayersPage players=${players.length}`);
 
   return (
-    <Layout>
-      <Container>
-        <div className="py-8" />
-      </Container>
-    </Layout>
+    <Container>
+      <div className="py-8">
+        <div className="overflow-hidden rounded border">
+          <Card>
+            <CardHeader className="border-b">
+              <div>Player</div>
+            </CardHeader>
+            <TableContainer>
+              <Table>
+                <Thead>
+                  <Tr>
+                    <Th>Avatar</Th>
+                    <Th>ID</Th>
+                    <Th>Username</Th>
+                    <Th>Title</Th>
+                    <Th isNumeric>Rating</Th>
+                    <Th isNumeric>Best</Th>
+                  </Tr>
+                </Thead>
+                <Tbody>
+                  {players.map(
+                    ({
+                      last = 0,
+                      best = 0,
+                      player: {
+                        id = '',
+                        username = '',
+                        avatar = '',
+                        title = '',
+                      },
+                    }) => {
+                      return (
+                        <Tr key={id}>
+                          <Td>
+                            <div className="h-12 w-12 overflow-hidden rounded border">
+                              {avatar ? (
+                                <Image
+                                  src={avatar}
+                                  alt={username}
+                                  title={username}
+                                  width={48}
+                                  height={48}
+                                />
+                              ) : (
+                                <></>
+                              )}
+                            </div>
+                          </Td>
+                          <Td>{id}</Td>
+                          <Td>
+                            <Link
+                              href={`/players/${encodeURIComponent(username)}`}>
+                              {username}
+                            </Link>
+                          </Td>
+                          <Td>
+                            <Badge color="white" backgroundColor="red.500">
+                              {title}
+                            </Badge>
+                          </Td>
+                          <Td isNumeric>{last}</Td>
+                          <Td isNumeric>{best}</Td>
+                        </Tr>
+                      );
+                    }
+                  )}
+                </Tbody>
+              </Table>
+            </TableContainer>
+          </Card>
+        </div>
+      </div>
+    </Container>
   );
 };
 

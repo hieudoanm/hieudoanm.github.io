@@ -19,12 +19,7 @@
           "default": ""
         },
         "country": {
-          "type": "string",
-          "default": ""
-        },
-        "countryCode": {
-          "type": "string",
-          "default": ""
+          "$ref": "#/definitions/ChessCountry"
         },
         "avatar": {
           "type": "string",
@@ -126,6 +121,33 @@
             "null"
           ],
           "format": "date-time"
+        }
+      }
+    },
+    "ChessCountry": {
+      "type": "object",
+      "properties": {
+        "cca2": {
+          "type": "string",
+          "default": ""
+        },
+        "cca3": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "flag": {
+          "type": "string",
+          "default": ""
+        },
+        "players": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChessPlayer"
+          }
         }
       }
     },
@@ -364,6 +386,9 @@
   "properties": {
     "chessPlayer": {
       "$ref": "#/definitions/ChessPlayer"
+    },
+    "chessCountry": {
+      "$ref": "#/definitions/ChessCountry"
     },
     "chessStats": {
       "$ref": "#/definitions/ChessStats"

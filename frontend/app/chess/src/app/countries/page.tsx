@@ -26,7 +26,6 @@ import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { SVGMaps } from '@chess/components/atoms/Maps';
 import { query } from '@chess/graphql/apollo/client';
-import { Layout } from '@chess/layout';
 import chroma from 'chroma-js';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -172,26 +171,24 @@ const CountriesPage: NextPage = async () => {
   const countries = data?.chess?.countries ?? [];
 
   return (
-    <Layout>
-      <Container>
-        <div className="py-4 md:py-8">
-          <Tabs isFitted variant="soft-rounded" colorScheme="teal">
-            <TabList>
-              <Tab>Maps</Tab>
-              <Tab>List</Tab>
-            </TabList>
-            <TabPanels>
-              <TabPanel>
-                <CountriesMaps countries={countries} />
-              </TabPanel>
-              <TabPanel>
-                <CountriesTable countries={countries} />
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
-        </div>
-      </Container>
-    </Layout>
+    <Container>
+      <div className="py-4 md:py-8">
+        <Tabs isFitted variant="soft-rounded" colorScheme="teal">
+          <TabList>
+            <Tab>Maps</Tab>
+            <Tab>List</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <CountriesMaps countries={countries} />
+            </TabPanel>
+            <TabPanel>
+              <CountriesTable countries={countries} />
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </div>
+    </Container>
   );
 };
 

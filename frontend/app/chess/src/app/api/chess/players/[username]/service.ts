@@ -29,7 +29,7 @@ export const getChessPlayer = async (
   const where: Prisma.ChessPlayerWhereInput = { username };
   const player = await getPrismaClient().chessPlayer.findFirst({
     where,
-    include: { stats: true },
+    include: { country: true, stats: true },
   });
   if (player !== null) {
     await getPrismaClient().$disconnect();
@@ -58,7 +58,7 @@ const syncProfile = async (username: string): Promise<ChessPlayer> => {
     create: player,
     update: player,
     where: { id: player.id },
-    include: { stats: true },
+    include: { country: true, stats: true },
   });
 };
 
@@ -80,12 +80,7 @@ const mapProfile = async (chessPlayer: Player, archives: string[]) => {
     verified = false,
     league = '',
   } = chessPlayer;
-  const {
-    data: { name: country = '', code: countryCode = '' },
-  } = await axios.get<{
-    name: string;
-    code: string;
-  }>(countryUrl);
+  const countryCode: string = countryUrl.split('/').pop() ?? '';
   const d = new Date();
   const lastOnlineDate: Date = new Date(lastOnline * 1000);
   const joinedDate: Date = new Date(joined * 1000);
@@ -96,7 +91,6 @@ const mapProfile = async (chessPlayer: Player, archives: string[]) => {
     username,
     followers,
     location,
-    country,
     countryCode,
     lastOnline: lastOnlineDate,
     joined: joinedDate,
