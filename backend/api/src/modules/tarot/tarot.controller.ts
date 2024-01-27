@@ -2,7 +2,7 @@ import { TarotCardDto } from '@hieudoanm/generated/prisma/public/dto/tarotCard.e
 import { CacheInterceptor } from '@nestjs/cache-manager';
 import { Controller, Get, Param, Query, UseInterceptors } from '@nestjs/common';
 import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { TarotCardType } from '@hieudoanm/generated/prisma/public/client';
+import { TarotCardType } from '@prisma/client';
 import { TarotCardsResponseDto } from './tarot.dto';
 import { TarotService } from './tarot.service';
 

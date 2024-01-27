@@ -1,4 +1,4 @@
-import { UnitedStatesCongressChamber } from '@hieudoanm/generated/prisma/public/client';
+import { UnitedStatesCongressChamber } from '@prisma/client';
 import { UnitedStatesCongressDto } from './unitedStatesCongress.entity';
 import { UnitedStatesCongressMemberDto } from './unitedStatesCongressMember.entity';
 

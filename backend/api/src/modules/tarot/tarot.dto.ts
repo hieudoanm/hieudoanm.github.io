@@ -1,6 +1,6 @@
 import { TarotCardDto } from '@hieudoanm/generated/prisma/public/dto/tarotCard.entity';
 import { ApiProperty } from '@nestjs/swagger';
-import { TarotCardType } from '@hieudoanm/generated/prisma/public/client';
+import { TarotCardType } from '@prisma/client';
 
 export class TarotCardsResponseDto {
   @ApiProperty({ default: 0 })

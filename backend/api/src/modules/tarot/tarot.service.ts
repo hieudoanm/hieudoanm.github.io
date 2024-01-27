@@ -1,7 +1,7 @@
-import { PrismaPublicClient } from '@hieudoanm/common/prisma/public/prisma.public';
+import { PrismaPublicClient } from '@hieudoanm/common/prisma/prisma.public';
 import { TarotCardDto } from '@hieudoanm/generated/prisma/public/dto/tarotCard.entity';
 import { Injectable, Logger } from '@nestjs/common';
-import { TarotCardType } from '@hieudoanm/generated/prisma/public/client';
+import { TarotCardType } from '@prisma/client';
 import { TarotCardsResponseDto } from './tarot.dto';
 
 @Injectable()

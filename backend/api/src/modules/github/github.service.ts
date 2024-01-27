@@ -1,4 +1,4 @@
-import { PrismaPublicClient } from '@hieudoanm/common/prisma/public/prisma.public';
+import { PrismaPublicClient } from '@hieudoanm/common/prisma/prisma.public';
 import { ProgrammingLanguageDto } from '@hieudoanm/generated/prisma/public/dto/programmingLanguage.entity';
 import { Injectable, Logger } from '@nestjs/common';
 import { GitHubLanguagesResponseDto } from './github.dto';

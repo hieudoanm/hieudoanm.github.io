@@ -10,7 +10,6 @@
   "scripts": {
     "prebuild": "rimraf dist && (yarn docs || true)",
     "build": "nest build",
-    "postbuild": "./scripts/copy.sh",
     "format": "biome format --write ./src ./test",
     "start": "nest start",
     "dev": "yarn start:dev",
@@ -26,10 +25,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prisma:generate": "make prisma-generate",
-    "prisma:init": "yarn prisma:chess:init && yarn prisma:public:init",
-    "prisma:chess:init": "make prisma-chess-init",
-    "prisma:public:init": "make prisma-public-init"
+    "prisma:init": "make prisma-init"
   },
   "dependencies": {
     "@nestjs/axios": "3.0.1",

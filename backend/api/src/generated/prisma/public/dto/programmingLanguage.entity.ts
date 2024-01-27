@@ -1,4 +1,4 @@
-import { ProgrammingLanguageType } from '@hieudoanm/generated/prisma/public/client';
+import { ProgrammingLanguageType } from '@prisma/client';
 
 export class ProgrammingLanguageDto {
   language: string;

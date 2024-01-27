@@ -1,8 +1,4 @@
-import {
-  Prisma,
-  DayOfWeek,
-  Region,
-} from '@hieudoanm/generated/prisma/public/client';
+import { Prisma, DayOfWeek, Region } from '@prisma/client';
 import { CurrenciesInCountriesDto } from './currenciesInCountries.entity';
 import { LanguagesInCountriesDto } from './languagesInCountries.entity';
 import { CountriesOnOrganizationsDto } from './countriesOnOrganizations.entity';

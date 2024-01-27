@@ -1,4 +1,4 @@
-import { Market } from '@hieudoanm/generated/prisma/public/client';
+import { Market } from '@prisma/client';
 import { StockHistoryDto } from './stockHistory.entity';
 
 export class StockDto {

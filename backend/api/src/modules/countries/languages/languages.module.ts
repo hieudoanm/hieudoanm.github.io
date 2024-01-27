@@ -1,4 +1,4 @@
-import { PrismaPublicClient } from '@hieudoanm/common/prisma/public/prisma.public';
+import { PrismaPublicClient } from '@hieudoanm/common/prisma/prisma.public';
 import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
 import { LanguagesController } from './languages.controller';

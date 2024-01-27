@@ -1,8 +1,4 @@
-import {
-  Prisma,
-  DayOfWeek,
-  Region,
-} from '@hieudoanm/generated/prisma/public/client';
+import { Prisma, DayOfWeek, Region } from '@prisma/client';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class UpdateCountryDto {

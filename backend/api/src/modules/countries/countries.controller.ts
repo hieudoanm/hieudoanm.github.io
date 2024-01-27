@@ -9,7 +9,7 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { Region } from '@hieudoanm/generated/prisma/public/client';
+import { Region } from '@prisma/client';
 import {
   CountriesRequestQueryDto,
   CountriesResponseDto,

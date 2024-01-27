@@ -1,4 +1,4 @@
-import { TarotCardType } from '@hieudoanm/generated/prisma/public/client';
+import { TarotCardType } from '@prisma/client';
 
 export class TarotCardDto {
   type: TarotCardType;

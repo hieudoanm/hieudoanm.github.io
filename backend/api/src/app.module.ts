@@ -1,4 +1,3 @@
-import { ChessModule } from '@hieudoanm/modules/chess/chess.module';
 import { CountriesModule } from '@hieudoanm/modules/countries/countries.module';
 import { FinanceModule } from '@hieudoanm/modules/finance/finance.module';
 import { GitHubModule } from '@hieudoanm/modules/github/github.module';
@@ -22,7 +21,6 @@ const rootPath: string = join(__dirname, '..', 'public');
     ThrottlerModule.forRoot([{ ttl: 60000, limit: 10 }]),
     ServeStaticModule.forRoot({ rootPath }),
     HttpModule,
-    ChessModule,
     CountriesModule,
     FinanceModule,
     GitHubModule,

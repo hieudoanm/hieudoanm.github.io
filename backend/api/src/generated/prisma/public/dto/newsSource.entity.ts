@@ -1,4 +1,4 @@
-import { NewsSourceCategory } from '@hieudoanm/generated/prisma/public/client';
+import { NewsSourceCategory } from '@prisma/client';
 
 export class NewsSourceDto {
   id: string;

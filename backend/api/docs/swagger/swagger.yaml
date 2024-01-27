@@ -1,415 +1,5 @@
 openapi: 3.0.0
 paths:
-  /v1/chess/openings:
-    get:
-      operationId: OpeningsController_getOpenings
-      parameters:
-        - name: offset
-          required: false
-          in: query
-          description: offset
-          schema:
-            type: number
-        - name: limit
-          required: false
-          in: query
-          description: limit
-          schema:
-            type: number
-        - name: name
-          required: false
-          in: query
-          description: name
-          schema:
-            type: string
-        - name: eco
-          required: false
-          in: query
-          description: eco
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/OpeningsResponseDto"
-      tags: &a1
-        - chess
-  /v1/chess/openings/ecos:
-    get:
-      operationId: OpeningsController_getECOs
-      parameters: []
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/EcosResponseDto"
-      tags: *a1
-  /v1/chess/players:
-    get:
-      operationId: PlayerController_getPlayers
-      parameters:
-        - name: limit
-          required: false
-          in: query
-          description: limit
-          schema:
-            type: number
-        - name: offset
-          required: false
-          in: query
-          description: offset
-          schema:
-            type: number
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/PlayersResponseDto"
-      tags: &a2
-        - chess
-  /v1/chess/players/{username}:
-    get:
-      operationId: PlayerController_getPlayer
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ChessPlayerDto"
-      tags: *a2
-    post:
-      operationId: PlayerController_syncPlayer
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ChessPlayerDto"
-      tags: *a2
-  /v1/chess/players/{username}/games:
-    get:
-      operationId: GamesController_getGames
-      parameters:
-        - name: username
-          required: true
-          in: path
-          description: username
-          schema:
-            type: string
-        - name: year
-          required: false
-          in: query
-          description: year
-          schema:
-            type: number
-        - name: month
-          required: false
-          in: query
-          description: month
-          schema:
-            type: number
-        - name: limit
-          required: false
-          in: query
-          description: limit
-          schema:
-            type: number
-        - name: offset
-          required: false
-          in: query
-          description: offset
-          schema:
-            type: number
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/GamesResponseDto"
-      tags: &a3
-        - chess
-    post:
-      operationId: GamesController_syncGames
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/SyncRequestDto"
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/SyncedResponseDto"
-      tags: *a3
-  /v1/chess/players/{username}/games/{gameId}:
-    get:
-      operationId: GamesController_getGame
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-        - name: gameId
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ChessGameDto"
-      tags: *a3
-  /v1/chess/players/{username}/games/{gameId}/pgn:
-    get:
-      operationId: GamesController_getGamePGN
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-        - name: gameId
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                type: string
-      tags: *a3
-  /v1/chess/players/{username}/insights:
-    get:
-      operationId: InsightsController_getInsights
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/InsightsDto"
-      tags: &a4
-        - chess
-  /v1/chess/players/{username}/insights/games:
-    get:
-      operationId: InsightsController_getGamesInsights
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/InsightsDto"
-      tags: *a4
-  /v1/chess/players/{username}/insights/accuracy:
-    get:
-      operationId: InsightsController_getAccuracyInsights
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/InsightsDto"
-      tags: *a4
-  /v1/chess/players/{username}/insights/results:
-    get:
-      operationId: InsightsController_getResultsInsights
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/InsightsDto"
-      tags: *a4
-  /v1/chess/players/{username}/insights/opponents:
-    get:
-      operationId: InsightsController_getResultsOpponents
-      parameters:
-        - name: username
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/InsightsDto"
-      tags: *a4
-  /v1/chess/streamers:
-    get:
-      operationId: StreamersController_getStreamers
-      parameters:
-        - name: title
-          required: false
-          in: query
-          description: title
-          schema:
-            type: string
-        - name: country
-          required: false
-          in: query
-          description: country
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StreamersResponseDto"
-      tags:
-        - chess
-  /v1/chess/titled:
-    get:
-      operationId: TitledController_getTitles
-      parameters: []
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/TitlesDto"
-      tags: &a5
-        - chess
-  /v1/chess/titled/{title}:
-    get:
-      operationId: TitledController_getTitledStats
-      parameters:
-        - name: title
-          required: true
-          in: path
-          description: title
-          schema:
-            type: string
-        - name: cache
-          required: false
-          in: query
-          description: cache
-          schema:
-            type: boolean
-        - name: timeRange
-          required: false
-          in: query
-          description: timeRange
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/TitledStatsDto"
-      tags: *a5
-  /v1/chess/countries:
-    get:
-      operationId: CountriesController_getCountries
-      parameters:
-        - name: cache
-          required: true
-          in: query
-          schema:
-            type: boolean
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/CountryResponseDto"
-      tags: &a6
-        - chess
-  /v1/chess/countries/{code}:
-    get:
-      operationId: CountriesController_getTitledPlayersByCountry
-      parameters:
-        - name: code
-          required: true
-          in: path
-          schema:
-            type: string
-        - name: cache
-          required: true
-          in: query
-          schema:
-            type: boolean
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/CountriesResponseDto"
-      tags: *a6
   /v1/countries:
     get:
       operationId: CountriesController_getCountries
@@ -476,7 +66,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CountriesResponseDto"
-      tags: &a7
+      tags: &a1
         - countries
   /v1/countries/{code}:
     get:
@@ -494,7 +84,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CountryDto"
-      tags: *a7
+      tags: *a1
   /v1/countries/currencies:
     get:
       operationId: CountriesController_getCurrencies
@@ -506,7 +96,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CurrenciesResponseDto"
-      tags: *a7
+      tags: *a1
   /v1/currencies:
     get:
       operationId: CurrenciesController_getCurrencies
@@ -544,7 +134,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/OrganizationsResponseDto"
-      tags: &a8
+      tags: &a2
         - organizations
   /v1/organizations/{code}:
     get:
@@ -563,7 +153,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/OrganizationDto"
-      tags: *a8
+      tags: *a2
   /v1/vietnam/ethnic-groups:
     get:
       operationId: VietnamController_getEthnicGroups
@@ -575,7 +165,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/EthnicGroupsResponseDto"
-      tags: &a9
+      tags: &a3
         - vietnam
   /v1/vietnam/license-plates:
     get:
@@ -588,7 +178,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/LicensePlatesResponseDto"
-      tags: *a9
+      tags: *a3
   /v1/vietnam/license-plates/{code}:
     get:
       operationId: VietnamController_getLicensePlate
@@ -605,7 +195,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/LicensePlateDto"
-      tags: *a9
+      tags: *a3
   /v1/crypto/coins:
     get:
       operationId: CryptoController_getCountries
@@ -686,7 +276,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GoogleResponseDto"
-      tags: &a10
+      tags: &a4
         - news
   /v1/news/sources:
     get:
@@ -699,7 +289,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/NewsSourcesDto"
-      tags: *a10
+      tags: *a4
   /v1/status/{service}:
     get:
       operationId: StatusController_getSources
@@ -750,7 +340,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TarotCardsResponseDto"
-      tags: &a11
+      tags: &a5
         - tarot
   /v1/tarot/cards/{id}:
     get:
@@ -768,7 +358,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TarotCardDto"
-      tags: *a11
+      tags: *a5
   /v1/words:
     get:
       operationId: WordsController_getWords
@@ -792,7 +382,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/WordsResponseDto"
-      tags: &a12
+      tags: &a6
         - words
   /v1/words/{word}:
     get:
@@ -810,7 +400,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/WordDto"
-      tags: *a12
+      tags: *a6
 info:
   title: hieudoanm
   description: Hieu Doan
@@ -820,325 +410,9 @@ tags: []
 servers: []
 components:
   schemas:
-    ChessOpeningDto:
-      type: object
-      properties: {}
-    OpeningsResponseDto:
-      type: object
-      properties:
-        total:
-          type: number
-        openings:
-          type: array
-          items:
-            $ref: "#/components/schemas/ChessOpeningDto"
-      required:
-        - total
-        - openings
-    EcosResponseDto:
-      type: object
-      properties:
-        total:
-          type: number
-        ecos:
-          type: array
-          items:
-            type: string
-      required:
-        - total
-        - ecos
-    ChessPlayerDto:
-      type: object
-      properties: {}
-    PlayersResponseDto:
-      type: object
-      properties:
-        total:
-          type: number
-        players:
-          type: array
-          items:
-            $ref: "#/components/schemas/ChessPlayerDto"
-      required:
-        - total
-        - players
-    ChessGameDto:
-      type: object
-      properties: {}
-    GamesResponseDto:
-      type: object
-      properties:
-        total:
-          type: number
-        games:
-          type: array
-          items:
-            $ref: "#/components/schemas/ChessGameDto"
-      required:
-        - total
-        - games
-    SyncRequestDto:
-      type: object
-      properties:
-        month:
-          type: number
-        year:
-          type: number
-      required:
-        - month
-        - year
-    SyncedResponseDto:
-      type: object
-      properties:
-        total:
-          type: number
-        synced:
-          type: number
-        existed:
-          type: number
-      required:
-        - total
-        - synced
-        - existed
-    GamesDto:
-      type: object
-      properties:
-        total:
-          type: number
-        win:
-          type: number
-        draw:
-          type: number
-        loss:
-          type: number
-        periods:
-          type: array
-          items:
-            type: string
-        timeOfDays:
-          type: array
-          items:
-            type: string
-        daysOfWeek:
-          type: array
-          items:
-            type: string
-      required:
-        - total
-        - win
-        - draw
-        - loss
-        - periods
-        - timeOfDays
-        - daysOfWeek
-    AccuracyByPeriodDto:
-      type: object
-      properties:
-        average:
-          type: number
-        period:
-          type: number
-      required:
-        - average
-        - period
-    AccuracyByTimeOfDayDto:
-      type: object
-      properties:
-        average:
-          type: number
-        timeOfDay:
-          type: string
-      required:
-        - average
-        - timeOfDay
-    AccuracyByDayOfWeekDto:
-      type: object
-      properties:
-        average:
-          type: number
-        dayOfWeek:
-          type: string
-      required:
-        - average
-        - dayOfWeek
-    AccuracyDto:
-      type: object
-      properties:
-        average:
-          type: number
-        win:
-          type: number
-        draw:
-          type: number
-        loss:
-          type: number
-        periods:
-          $ref: "#/components/schemas/AccuracyByPeriodDto"
-        timeOfDays:
-          $ref: "#/components/schemas/AccuracyByTimeOfDayDto"
-        daysOfWeek:
-          $ref: "#/components/schemas/AccuracyByDayOfWeekDto"
-      required:
-        - average
-        - win
-        - draw
-        - loss
-        - periods
-        - timeOfDays
-        - daysOfWeek
-    ResultDto:
-      type: object
-      properties: {}
-    ResultsByTimeOfDayDto:
-      type: object
-      properties: {}
-    ResultsByDayOfWeekDto:
-      type: object
-      properties: {}
-    ResultsDto:
-      type: object
-      properties:
-        win:
-          type: array
-          items:
-            $ref: "#/components/schemas/ResultDto"
-        draw:
-          type: array
-          items:
-            $ref: "#/components/schemas/ResultDto"
-        loss:
-          type: array
-          items:
-            $ref: "#/components/schemas/ResultDto"
-        timeOfDays:
-          type: array
-          items:
-            $ref: "#/components/schemas/ResultsByTimeOfDayDto"
-        daysOfWeek:
-          type: array
-          items:
-            $ref: "#/components/schemas/ResultsByDayOfWeekDto"
-      required:
-        - win
-        - draw
-        - loss
-        - timeOfDays
-        - daysOfWeek
-    OpponentDto:
-      type: object
-      properties:
-        opponent:
-          type: string
-        games:
-          type: number
-        win:
-          type: number
-        draw:
-          type: number
-        loss:
-          type: number
-      required:
-        - opponent
-        - games
-        - win
-        - draw
-        - loss
-    InsightsDto:
-      type: object
-      properties:
-        username:
-          type: string
-        games:
-          $ref: "#/components/schemas/GamesDto"
-        accuracy:
-          $ref: "#/components/schemas/AccuracyDto"
-        results:
-          $ref: "#/components/schemas/ResultsDto"
-        opponents:
-          type: array
-          items:
-            $ref: "#/components/schemas/OpponentDto"
-      required:
-        - username
-        - games
-        - accuracy
-        - results
-        - opponents
     CountryDto:
       type: object
       properties: {}
-    StreamersResponseDto:
-      type: object
-      properties:
-        total:
-          type: number
-        players:
-          type: array
-          items:
-            $ref: "#/components/schemas/ChessPlayerDto"
-        countries:
-          type: array
-          items:
-            $ref: "#/components/schemas/CountryDto"
-      required:
-        - total
-        - players
-        - countries
-    TitlesDto:
-      type: object
-      properties:
-        total:
-          type: number
-        titles:
-          type: array
-          items:
-            type: string
-      required:
-        - total
-        - titles
-    TitledStatsDto:
-      type: object
-      properties:
-        averageRapidRating:
-          type: number
-        maxRapidRating:
-          type: number
-        averageBlitzRating:
-          type: number
-        maxBlitzRating:
-          type: number
-        averageBulletRating:
-          type: number
-        maxBulletRating:
-          type: number
-        total:
-          type: number
-        players:
-          type: array
-          items:
-            $ref: "#/components/schemas/ChessPlayerDto"
-      required:
-        - averageRapidRating
-        - maxRapidRating
-        - averageBlitzRating
-        - maxBlitzRating
-        - averageBulletRating
-        - maxBulletRating
-        - total
-        - players
-    CountryResponseDto:
-      type: object
-      properties: {}
-    TitleDto:
-      type: object
-      properties:
-        title:
-          type: string
-        total:
-          type: number
-      required:
-        - title
-        - total
     CountriesResponseDto:
       type: object
       properties:

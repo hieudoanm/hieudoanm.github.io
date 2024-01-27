@@ -1,6 +1,6 @@
 import { CountryDto } from '@hieudoanm/generated/prisma/public/dto/country.entity';
 import { ApiProperty } from '@nestjs/swagger';
-import { Region } from '@hieudoanm/generated/prisma/public/client';
+import { Region } from '@prisma/client';
 import { IsBoolean, IsOptional, IsString } from 'class-validator';
 
 export class CountriesRequestQueryDto {

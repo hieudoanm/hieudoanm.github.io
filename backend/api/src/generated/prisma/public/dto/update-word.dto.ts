@@ -1,4 +1,4 @@
-import { Prisma } from '@hieudoanm/generated/prisma/public/client';
+import { Prisma } from '@prisma/client';
 
 export class UpdateWordDto {
   results?: Prisma.InputJsonValue;
