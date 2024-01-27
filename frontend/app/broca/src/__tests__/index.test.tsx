@@ -1,4 +1,4 @@
-import HomePage from '@broca/pages';
+import HomePage from '@broca/app/page';
 import { render } from '@testing-library/react';
 
 describe('HomePage', () => {
