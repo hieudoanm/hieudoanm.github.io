@@ -56,7 +56,8 @@ const streamersQuery: DocumentNode = gql`
           league
           archives
           country {
-            code
+            cca2
+            cca3
             name
             flag
           }

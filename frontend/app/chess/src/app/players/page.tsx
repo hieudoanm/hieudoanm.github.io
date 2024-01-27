@@ -45,9 +45,14 @@ const playersQuery = gql`
           league
           twitchUrl
           isStreamer
-          country
           countryCode
           archives
+          country {
+            cca2
+            cca3
+            name
+            flag
+          }
         }
       }
     }

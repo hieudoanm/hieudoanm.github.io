@@ -320,6 +320,7 @@ const main = async () => {
     [...usernames].sort((a, b) => (a > b ? 1 : -1)),
     STRESS
   );
+  chunks.reverse();
 
   for (const chunk of chunks) {
     console.time();
