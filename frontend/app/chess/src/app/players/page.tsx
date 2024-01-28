@@ -14,6 +14,7 @@ import {
 import { APP_NAME } from '@chess/common/constants/app.constants';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
+import { TitleBadge } from '@chess/components/atoms/TitleBadge';
 import { query } from '@chess/graphql/apollo/client';
 import { ChessPlayer, ChessStats } from '@prisma/client';
 import type { NextPage } from 'next';
@@ -116,12 +117,7 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
                       ({
                         last = 0,
                         best = 0,
-                        player: {
-                          id = '',
-                          username = '',
-                          avatar = '',
-                          title = '',
-                        },
+                        player: { id = '', username = '', avatar = '', title },
                       }) => {
                         return (
                           <Tr key={id}>
@@ -150,9 +146,7 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
                               </Link>
                             </Td>
                             <Td>
-                              <Badge color="white" backgroundColor="red.500">
-                                {title}
-                              </Badge>
+                              <TitleBadge title={title} />
                             </Td>
                             <Td isNumeric>{last}</Td>
                             <Td isNumeric>{best}</Td>

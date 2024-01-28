@@ -29,6 +29,7 @@ import {
 import flags from '@chess/common/json/flags.json';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
+import { TitleBadge } from '@chess/components/atoms/TitleBadge';
 import { ChessHistogramChart } from '@chess/components/molecules/ChessHistogramChart';
 import { query } from '@chess/graphql/apollo/client';
 import {
@@ -177,17 +178,11 @@ const PlayersTable: React.FC<{
           </Thead>
           <Tbody>
             {players.map(
-              ({ title = '', username = '', avatar = '', stats = [] }) => {
+              ({ title, username = '', avatar = '', stats = [] }) => {
                 return (
                   <Tr key={username}>
                     <Td>
-                      {(title ?? '').length > 0 ? (
-                        <Link href={`/titled/${title}`}>
-                          <Badge colorScheme="red">{title}</Badge>
-                        </Link>
-                      ) : (
-                        <></>
-                      )}
+                      <TitleBadge title={title} />
                     </Td>
                     <Td>
                       <Link href={`/players/${encodeURIComponent(username)}`}>
@@ -411,7 +406,7 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
                       justifyContent={'space-between'}>
                       <Link href={`/titled/${title}`}>
                         <div className="inline-flex items-center gap-x-2">
-                          <Badge colorScheme="red">{title}</Badge>
+                          <TitleBadge title={title} />
                           <Text>{TITLED_ABBREVIATIONS[title]}</Text>
                         </div>
                       </Link>

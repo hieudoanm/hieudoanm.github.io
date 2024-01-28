@@ -5,9 +5,7 @@ import {
   gql,
 } from '@apollo/client';
 import {
-  Badge,
   Box,
-  Button,
   Card,
   CardHeader,
   Divider,
@@ -25,6 +23,7 @@ import {
 import { APP_NAME } from '@chess/common/constants/app.constants';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
+import { TitleBadge } from '@chess/components/atoms/TitleBadge';
 import { TwitchButton } from '@chess/components/atoms/TwitchButton';
 import { query } from '@chess/graphql/apollo/client';
 import {
@@ -193,7 +192,7 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                 <Tbody>
                   {players.map(
                     ({
-                      title = '',
+                      title,
                       username = '',
                       avatar = '',
                       followers = 0,
@@ -204,15 +203,7 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                       return (
                         <Tr key={username}>
                           <Td>
-                            {(title ?? '').length > 0 ? (
-                              <Link href={`/titled/${title}`}>
-                                <Badge color="white" backgroundColor="red.500">
-                                  {title}
-                                </Badge>
-                              </Link>
-                            ) : (
-                              <></>
-                            )}
+                            <TitleBadge title={title} />
                           </Td>
                           <Td>
                             <Link

@@ -1,7 +1,8 @@
 'use client';
 
 import { DocumentNode, gql } from '@apollo/client';
-import { Badge, Button, Heading, Icon, Text, useToast } from '@chakra-ui/react';
+import { Button, Heading, Icon, Text, useToast } from '@chakra-ui/react';
+import { TitleBadge } from '@chess/components/atoms/TitleBadge';
 import Link from 'next/link';
 import { FaCheckCircle, FaSync, FaTwitch } from 'react-icons/fa';
 
@@ -80,13 +81,7 @@ export const ChessHeader: React.FC<ChessHeaderProperties> = ({
         />
         <div>
           <Heading className="flex items-center gap-x-2">
-            {title ? (
-              <Badge className="rounded bg-red-500 px-2 py-1 text-white">
-                {title}
-              </Badge>
-            ) : (
-              <></>
-            )}
+            <TitleBadge title={title} />
             <Link
               href={`https://www.chess.com/member/${username}`}
               target="_blank">
