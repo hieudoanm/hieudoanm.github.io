@@ -1,6 +1,6 @@
 import { ChessDataSource } from '@chess/graphql/data/chess.data';
-import { GamesSynced } from '@chess/graphql/data/chess.types';
-import { ChessGame, ChessPlayer, ChessStats } from '@prisma/client';
+import { GamesSynced, PlayersResponse } from '@chess/graphql/data/chess.types';
+import { ChessGame, ChessPlayer, ChessTitle } from '@prisma/client';
 
 export const resolvers = {
   Chess: {
@@ -9,11 +9,31 @@ export const resolvers = {
       {
         limit = 100,
         offset = 0,
+        title,
+        countryCode = '',
         isStreamer = false,
-      }: { limit: number; offset: number; isStreamer: boolean },
+      }: {
+        limit: number;
+        offset: number;
+        title: ChessTitle;
+        countryCode: string;
+        isStreamer: boolean;
+      },
       { chessDataSource }: { chessDataSource: ChessDataSource }
-    ): Promise<(ChessStats & { player: ChessPlayer })[]> => {
-      return chessDataSource.getPlayers({ limit, offset, isStreamer });
+    ): Promise<PlayersResponse> => {
+      const {
+        countries = [],
+        players = [],
+        titles = [],
+        total = 0,
+      } = await chessDataSource.getPlayers({
+        limit,
+        offset,
+        title,
+        countryCode,
+        isStreamer,
+      });
+      return { total, countries, players, titles };
     },
     player: (
       _parent: unknown,

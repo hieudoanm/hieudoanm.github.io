@@ -3,8 +3,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { PlayersResponse, getPlayers } from './service';
 
 const resolveQuery = (searchParameters: URLSearchParams) => {
-  const country: string | undefined =
-    searchParameters.get('country') ?? undefined;
+  const countryCode: string | undefined =
+    searchParameters.get('countryCode') ?? undefined;
   const title: ChessTitle | undefined =
     (searchParameters.get('title') as ChessTitle) ?? undefined;
   const isStreamer: boolean | undefined =
@@ -16,14 +16,14 @@ const resolveQuery = (searchParameters: URLSearchParams) => {
     searchParameters.get('offset') ?? '0';
   const offset: number = Number.parseInt(offsetString, 10);
 
-  return { isStreamer, country, title, limit, offset };
+  return { isStreamer, countryCode, title, limit, offset };
 };
 
 export const GET = async (
   request: NextRequest
 ): Promise<NextResponse<PlayersResponse>> => {
   const { searchParams } = new URL(request.url);
-  const { country, title, limit, offset, isStreamer } =
+  const { countryCode, title, limit, offset, isStreamer } =
     resolveQuery(searchParams);
 
   const {
@@ -33,7 +33,7 @@ export const GET = async (
     titles = [],
   } = await getPlayers({
     isStreamer,
-    country,
+    countryCode,
     limit,
     offset,
     title,

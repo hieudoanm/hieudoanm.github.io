@@ -47,19 +47,25 @@ export class ChessDataSource extends RESTDataSource {
   async getPlayers({
     limit = 100,
     offset = 0,
+    title,
+    countryCode = '',
     isStreamer = false,
   }: {
     limit?: number;
     offset?: number;
+    title?: ChessTitle;
+    countryCode?: string;
     isStreamer?: boolean;
-  }): Promise<Player[]> {
+  }): Promise<PlayersResponse> {
     const urlSearchParameters = new URLSearchParams();
-    urlSearchParameters.set('limit', limit.toString());
-    urlSearchParameters.set('offset', offset.toString());
-    urlSearchParameters.set('isStreamer', isStreamer.toString());
+    if (limit) urlSearchParameters.set('limit', limit.toString());
+    if (offset) urlSearchParameters.set('offset', offset.toString());
+    if (isStreamer)
+      urlSearchParameters.set('isStreamer', isStreamer.toString());
+    if (title) urlSearchParameters.set('title', title);
+    if (countryCode) urlSearchParameters.set('countryCode', countryCode);
     const endpoint = `/api/chess/players?${urlSearchParameters.toString()}`;
-    const { players = [] } = await this.get<PlayersResponse>(endpoint);
-    return players;
+    return this.get<PlayersResponse>(endpoint);
   }
 
   async getPlayer(username: string): Promise<ChessPlayer> {

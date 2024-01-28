@@ -33,7 +33,7 @@ export const TitledTemplate: React.FC<TitledTemplateProperties> = ({
   stats,
 }) => {
   return (
-    <div className="flex flex-col gap-y-4 md:gap-y-8">
+    <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
       <TitledHeader total={total} timeRange={timeRange} title={title} />
       <TitledStats players={players} stats={stats} />
       <TitledCharts players={players} />

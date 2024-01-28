@@ -23,13 +23,13 @@ export type PlayersResponse = {
 
 export const getPlayers = async ({
   isStreamer = false,
-  country,
+  countryCode,
   title,
   limit = 100,
   offset = 0,
 }: {
   isStreamer?: boolean;
-  country?: string;
+  countryCode?: string;
   title?: ChessTitle;
   limit?: number;
   offset?: number;
@@ -38,8 +38,8 @@ export const getPlayers = async ({
   if (title) {
     where = { ...where, title };
   }
-  if (country) {
-    where = { ...where, countryCode: country };
+  if (countryCode) {
+    where = { ...where, countryCode };
   }
   if (isStreamer) {
     where = { ...where, isStreamer, twitchUrl: { not: '' } };

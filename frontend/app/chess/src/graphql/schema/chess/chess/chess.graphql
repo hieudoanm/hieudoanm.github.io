@@ -2,11 +2,22 @@ type Query {
   chess: Chess
 }
 
+type Mutation {
+  player(username: String!): Player
+  games(username: String!, month: Int, year: Int): GamesSynced
+}
+
 type Chess {
   countries: [Country]
   country(code: String!): TitledCountry
   openings(eco: String, name: String, limit: Int, offset: Int): [Opening]
-  players(limit: Int, offset: Int, isStreamer: Boolean): [Stats]
+  players(
+    limit: Int
+    offset: Int
+    title: String
+    countryCode: String
+    isStreamer: Boolean
+  ): Players
   player(username: String!): Player
   titled(title: String!, timeRange: String): Titled
 }

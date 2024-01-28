@@ -1,12 +1,40 @@
-type Mutation {
-  player(username: String!): Player
-  games(username: String!, month: Int, year: Int): GamesSynced
-}
-
 type GamesSynced {
   total: Int
   synced: Int
   existed: Int
+}
+
+type Players {
+  total: Int
+  titles: [PlayerTitle]
+  players: [PlayerStats]
+  countries: [PlayerCountry]
+}
+
+type PlayerCountry {
+  countryCode: String
+}
+
+type PlayerTitle {
+  title: String
+}
+
+type PlayerStats {
+  timeClass: String
+  last: Int
+  best: Int
+  deviation: Int
+  win: Int
+  draw: Int
+  loss: Int
+  player: Player
+}
+
+type PlayerCountry {
+  cca2: String
+  cca3: String
+  name: String
+  flag: String
 }
 
 type Player {
@@ -26,23 +54,12 @@ type Player {
   twitchUrl: String
   isStreamer: Boolean
   # Country
-  country: Country
   countryCode: String
+  country: PlayerCountry
   # Games
   archives: [String]
   games: [Game]
-  stats: [Stats]
-}
-
-type Stats {
-  timeClass: String
-  last: Int
-  best: Int
-  deviation: Int
-  win: Int
-  draw: Int
-  loss: Int
-  player: Player
+  stats: [PlayerStats]
 }
 
 type Game {
@@ -65,11 +82,4 @@ type Game {
   whiteRating: Int
   blackRating: Int
   fen: String
-}
-
-type Country {
-  cca2: String
-  cca3: String
-  name: String
-  flag: String
 }

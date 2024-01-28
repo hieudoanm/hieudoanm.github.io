@@ -1,24 +1,24 @@
 import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
-import { PlayersTemplate } from '..';
+import { PlayersHeader } from '..';
 
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
     asPath: '',
     events: { on: jest.fn(), off: jest.fn() },
   }),
+  usePathname: jest.fn().mockReturnValue(''),
   useSearchParams: jest.fn().mockReturnValue(new URLSearchParams()),
-  usePathname: jest.fn().mockResolvedValue(''),
 }));
 
-describe('PlayersTemplate', () => {
+describe('PlayerHeader', () => {
   beforeEach(() => {
     mockResizeObserver();
   });
 
   it('to match snapshot', () => {
     const { container } = render(
-      <PlayersTemplate total={0} titles={[]} players={[]} countries={[]} />
+      <PlayersHeader total={0} titles={[]} countries={[]} />
     );
     expect(container).toMatchSnapshot();
   });

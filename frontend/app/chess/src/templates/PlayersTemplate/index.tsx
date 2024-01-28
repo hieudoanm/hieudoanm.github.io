@@ -2,9 +2,6 @@
 
 import {
   Button,
-  Card,
-  CardHeader,
-  Heading,
   Link,
   Table,
   TableContainer,
@@ -16,16 +13,28 @@ import {
 } from '@chakra-ui/react';
 import { TitleBadge } from '@chess/components/atoms/TitleBadge';
 import { TwitchButton } from '@chess/components/atoms/TwitchButton';
-import { ChessCountry, ChessPlayer, ChessStats } from '@prisma/client';
+import {
+  ChessCountry,
+  ChessPlayer,
+  ChessStats,
+  ChessTitle,
+} from '@prisma/client';
 import Image from 'next/image';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { PlayersHeader } from './components/PlayersHeader';
 
 type PlayersTemplateProperties = {
+  total: number;
+  titles: { title: ChessTitle }[];
+  countries: { countryCode: string }[];
   players: (ChessStats & { player: ChessPlayer & { country: ChessCountry } })[];
 };
 
 export const PlayersTemplate: React.FC<PlayersTemplateProperties> = ({
+  total = 0,
+  titles = [],
   players = [],
+  countries = [],
 }) => {
   const router = useRouter();
   const pathname: string = usePathname();
@@ -33,11 +42,9 @@ export const PlayersTemplate: React.FC<PlayersTemplateProperties> = ({
   const isStreamer: boolean = searchParameters.get('isStreamer') === 'true';
 
   return (
-    <Card className="overflow-hidden rounded border border-gray-200 shadow">
-      <CardHeader className="border-b">
-        <Heading className="text-xl">Players ({players.length})</Heading>
-      </CardHeader>
-      <TableContainer>
+    <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
+      <PlayersHeader total={total} titles={titles} countries={countries} />
+      <TableContainer className="overflow-hidden rounded border border-gray-200 shadow">
         <Table>
           <Thead>
             <Tr>
@@ -122,7 +129,7 @@ export const PlayersTemplate: React.FC<PlayersTemplateProperties> = ({
           </Tbody>
         </Table>
       </TableContainer>
-    </Card>
+    </div>
   );
 };
 
