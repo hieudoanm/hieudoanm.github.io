@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 
-export const ChessStats: React.FC<{
+export const ChessPlayerStats: React.FC<{
   label: string;
   last: number;
   best: number;
@@ -41,3 +41,5 @@ export const ChessStats: React.FC<{
     </Card>
   );
 };
+
+ChessPlayerStats.displayName = 'ChessPlayerStats';

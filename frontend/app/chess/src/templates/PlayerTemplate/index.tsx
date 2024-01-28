@@ -1,8 +1,8 @@
 'use client';
 
 import { ChessHeader } from '@chess/components/molecules/ChessHeader';
+import { ChessPlayerStats } from '@chess/components/molecules/ChessPlayerStats';
 import { ChessRecord } from '@chess/components/molecules/ChessRecord';
-import { ChessStats as ChessStatsComponent } from '@chess/components/molecules/ChessStats';
 import { ChessPlayer, ChessStats, ChessTimeClass } from '@prisma/client';
 import { Dispatch, SetStateAction } from 'react';
 import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
@@ -57,7 +57,7 @@ export const PlayerTemplate: React.FC<PlayerTemplateProperties> = ({
       />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
         <div className="col-span-1">
-          <ChessStatsComponent
+          <ChessPlayerStats
             label="Rapid"
             last={rapidStats.last ?? 0}
             best={rapidStats.best ?? 0}
@@ -65,7 +65,7 @@ export const PlayerTemplate: React.FC<PlayerTemplateProperties> = ({
           />
         </div>
         <div className="col-span-1">
-          <ChessStatsComponent
+          <ChessPlayerStats
             label="Blitz"
             last={blitzStats.last ?? 0}
             best={blitzStats.best ?? 0}
@@ -73,7 +73,7 @@ export const PlayerTemplate: React.FC<PlayerTemplateProperties> = ({
           />
         </div>
         <div className="col-span-1">
-          <ChessStatsComponent
+          <ChessPlayerStats
             label="Bullet"
             last={bulletStats.last ?? 0}
             best={bulletStats.best ?? 0}
