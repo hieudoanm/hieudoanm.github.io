@@ -4,6 +4,7 @@ import {
   Button,
   Link,
   Table,
+  TableCaption,
   TableContainer,
   Tbody,
   Td,
@@ -46,6 +47,9 @@ export const PlayersTemplate: React.FC<PlayersTemplateProperties> = ({
       <PlayersHeader total={total} titles={titles} countries={countries} />
       <TableContainer className="overflow-hidden rounded border border-gray-200 shadow">
         <Table>
+          <TableCaption>
+            <p className="pb-4">Players ({total})</p>
+          </TableCaption>
           <Thead>
             <Tr>
               <Th>Username</Th>

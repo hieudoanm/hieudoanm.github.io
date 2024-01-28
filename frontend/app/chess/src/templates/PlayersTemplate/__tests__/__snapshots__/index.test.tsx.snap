@@ -92,6 +92,17 @@ exports[`PlayersTemplate to match snapshot 1`] = `
       <table
         class="chakra-table css-0"
       >
+        <caption
+          class="css-18i7bby"
+        >
+          <p
+            class="pb-4"
+          >
+            Players (
+            0
+            )
+          </p>
+        </caption>
         <thead
           class="css-0"
         >

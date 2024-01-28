@@ -30,8 +30,8 @@ export const resolvers = {
         limit,
         offset,
         title,
-        countryCode,
         isStreamer,
+        countryCode,
       });
       return { total, countries, players, titles };
     },

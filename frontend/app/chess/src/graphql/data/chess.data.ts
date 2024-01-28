@@ -7,7 +7,6 @@ import {
   GamesSynced,
   OpeningsOptions,
   OpeningsResponse,
-  Player,
   PlayersResponse,
   StreamersResponse,
   TimeRange,

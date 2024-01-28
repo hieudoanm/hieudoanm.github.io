@@ -103,7 +103,7 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
   const offset: number = Number.parseInt(searchParams.offset ?? '0', 10);
   const title: ChessTitle = searchParams.title ?? undefined;
   const countryCode: string = searchParams.countryCode ?? '';
-  const isStreamer: boolean = (searchParams.isStreamer ?? 'false') === 'true';
+  const isStreamer: boolean = (searchParams.isStreamer ?? '') === 'true';
   logger.info(
     { limit, offset, title, isStreamer, countryCode },
     'PlayersPage searchParams'

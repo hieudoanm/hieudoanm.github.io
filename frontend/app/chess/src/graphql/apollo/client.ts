@@ -1,10 +1,12 @@
 import {
   ApolloClient,
+  ApolloError,
   InMemoryCache,
   NormalizedCacheObject,
   OperationVariables,
   QueryOptions,
 } from '@apollo/client';
+import { GraphQLErrors } from '@apollo/client/errors';
 import {
   GRAPHQL_URI,
   NEXT_PUBLIC_GRAPHQL_URI,
@@ -36,7 +38,9 @@ export const query = async <T>(
     });
     return data;
   } catch (error) {
-    logger.error(`apolloClient.query name=${name} error=${error}`);
+    const graphQLErrors: GraphQLErrors =
+      (error as ApolloError).graphQLErrors ?? '';
+    logger.error({ name, graphQLErrors }, `apolloClient.query error=${error}`);
     return {} as T;
   }
 };
