@@ -115,24 +115,9 @@ export const Navbar: React.FC = () => {
                   <Link href="/titled">
                     <Text>Titled</Text>
                   </Link>
-                  <Menu>
-                    <MenuButton
-                      size={'sm'}
-                      as={Button}
-                      colorScheme="teal"
-                      leftIcon={<Icon as={FaTools} />}>
-                      <Text>Tools</Text>
-                    </MenuButton>
-                    <MenuList>
-                      {['openings'].map((tool: string) => {
-                        return (
-                          <Link key={tool} href={`/${tool}`}>
-                            <MenuItem className="capitalize">{tool}</MenuItem>
-                          </Link>
-                        );
-                      })}
-                    </MenuList>
-                  </Menu>
+                  <Link href="/openings">
+                    <Text>Openings</Text>
+                  </Link>
                   <GitHubButton size="sm" />
                 </div>
               </div>
