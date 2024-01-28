@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import {
   Box,
   Card,
@@ -284,10 +284,14 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
   const title = searchParams?.title ?? 'GM';
   logger.info(`TitledPage timeRange=${timeRange} title=${title}`);
 
-  const data = await query<TitledResponse>({
+  const queryOptions: QueryOptions<OperationVariables, TitledResponse> = {
     query: titledQuery,
     variables: { title, timeRange },
-  });
+  };
+  const data: TitledResponse = await query<TitledResponse>(
+    'titledQuery',
+    queryOptions
+  );
   const titled = data?.chess?.titled ?? {};
   const {
     averageRapidRating = 0,

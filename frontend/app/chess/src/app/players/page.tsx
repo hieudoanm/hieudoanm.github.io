@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import {
   Badge,
   Card,
@@ -74,10 +74,14 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
   const offset: number = searchParams.offset ?? 0;
   logger.info(`PlayersPage limit=${limit} offset=${offset}`);
 
-  const data = await query<PlayersResponse>({
+  const queryOptions: QueryOptions<OperationVariables, PlayersResponse> = {
     query: playersQuery,
     variables: { limit, offset },
-  });
+  };
+  const data: PlayersResponse = await query<PlayersResponse>(
+    'playersQuery',
+    queryOptions
+  );
   const players = data?.chess?.players ?? '';
   logger.info(`PlayersPage players=${players.length}`);
 

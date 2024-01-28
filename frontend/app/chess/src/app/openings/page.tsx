@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import {
   Card,
   CardHeader,
@@ -44,10 +44,14 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
   params,
 }: OpeningsPageProperties) => {
   const eco = params.eco ?? undefined;
-  const data = await query<OpeningsResponse>({
+  const queryOptions: QueryOptions<OperationVariables, OpeningsResponse> = {
     query: openingsQuery,
     variables: { eco },
-  });
+  };
+  const data: OpeningsResponse = await query<OpeningsResponse>(
+    'openingsQuery',
+    queryOptions
+  );
   const openings = data?.chess?.openings ?? [];
 
   return (

@@ -1,4 +1,9 @@
-import { DocumentNode, gql } from '@apollo/client';
+import {
+  DocumentNode,
+  OperationVariables,
+  QueryOptions,
+  gql,
+} from '@apollo/client';
 import {
   Box,
   Button,
@@ -71,8 +76,8 @@ const mutation = gql`
   }
 `;
 
-const playerQuery: DocumentNode = gql`
-  query PlayerQuery($username: String!) {
+const gamesQuery: DocumentNode = gql`
+  query GamesQuery($username: String!) {
     chess {
       player(username: $username) {
         games {
@@ -101,7 +106,7 @@ const playerQuery: DocumentNode = gql`
   }
 `;
 
-type PlayerResponse = { chess: { player: { games: ChessGame[] } } };
+type GamesResponse = { chess: { player: { games: ChessGame[] } } };
 
 const GamesPage: NextPage<{ params: { username: string } }> = async ({
   params,
@@ -113,10 +118,14 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
   const username: string = params.username ?? CHESS_USERNAME;
   logger.info(`InsightsPage username=${username}`);
 
-  const data = await query<PlayerResponse>({
-    query: playerQuery,
+  const queryOptions: QueryOptions<OperationVariables, GamesResponse> = {
+    query: gamesQuery,
     variables: { username },
-  });
+  };
+  const data: GamesResponse = await query<GamesResponse>(
+    'gamesQuery',
+    queryOptions
+  );
   const games: ChessGame[] = data?.chess?.player?.games ?? [];
 
   const syncGames = async () => {

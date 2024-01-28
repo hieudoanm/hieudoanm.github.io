@@ -1,4 +1,9 @@
-import { DocumentNode, gql } from '@apollo/client';
+import {
+  DocumentNode,
+  OperationVariables,
+  QueryOptions,
+  gql,
+} from '@apollo/client';
 import {
   Badge,
   Box,
@@ -97,11 +102,15 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
   const country = searchParams?.country ?? '';
   logger.info(`StreamersPage country=${country} title=${title}`);
 
-  const data = await query<StreamersResponse>({
+  const queryOptions: QueryOptions<OperationVariables, StreamersResponse> = {
     query: streamersQuery,
     variables: { title, country },
-  });
-  const total = data?.chess?.streamers?.total ?? 0;
+  };
+  const data: StreamersResponse = await query<StreamersResponse>(
+    'streamersQuery',
+    queryOptions
+  );
+  const total: number = data?.chess?.streamers?.total ?? 0;
   const countries = data?.chess?.streamers?.countries ?? [];
   const players = data?.chess?.streamers?.players ?? [];
 

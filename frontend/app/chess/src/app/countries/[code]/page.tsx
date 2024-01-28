@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import {
   Badge,
   Box,
@@ -328,10 +328,14 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
   const countryCode: string = params.code ?? 'US';
   logger.info(`CountryPage countryCode=${countryCode}`);
 
-  const data = await query<CountryResponse>({
+  const queryOptions: QueryOptions<OperationVariables, CountryResponse> = {
     query: countryQuery,
     variables: { code: countryCode },
-  });
+  };
+  const data: CountryResponse = await query<CountryResponse>(
+    'countryQuery',
+    queryOptions
+  );
   const country = data?.chess?.country ?? {};
   const {
     averageRapidRating = 0,

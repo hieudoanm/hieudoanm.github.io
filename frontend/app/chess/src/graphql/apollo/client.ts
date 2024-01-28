@@ -25,14 +25,15 @@ export const getApolloClient = (
 };
 
 export const query = async <T>(
+  name: string,
   queryOptions: QueryOptions<OperationVariables, T>
 ): Promise<T> => {
   try {
-    logger.info(`query URI=${URI}`);
-    const { data } = await getApolloClient(URI).query<T>(queryOptions);
+    logger.info(`apolloClient.query name=${name} URI=${URI}`);
+    const { data } = await getApolloClient(URI).query<T>({ ...queryOptions });
     return data;
   } catch (error) {
-    logger.error(`query error=${error}`);
+    logger.error(`apolloClient.query name=${name} error=${error}`);
     return {} as T;
   }
 };

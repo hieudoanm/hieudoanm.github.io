@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
@@ -59,10 +59,14 @@ const PlayerPage: NextPage<{ params: { username: string } }> = async ({
   const username: string = params.username ?? CHESS_USERNAME;
   logger.info(`PlayerPage username=${username}`);
 
-  const data = await query<PlayerResponse>({
+  const queryOptions: QueryOptions<OperationVariables, PlayerResponse> = {
     query: playerQuery,
     variables: { username },
-  });
+  };
+  const data: PlayerResponse = await query<PlayerResponse>(
+    'playerQuery',
+    queryOptions
+  );
   const player = data?.chess?.player;
 
   return (

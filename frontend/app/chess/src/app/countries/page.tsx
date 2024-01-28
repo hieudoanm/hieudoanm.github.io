@@ -1,4 +1,9 @@
-import { DocumentNode, gql } from '@apollo/client';
+import {
+  DocumentNode,
+  OperationVariables,
+  QueryOptions,
+  gql,
+} from '@apollo/client';
 import {
   Box,
   Card,
@@ -163,7 +168,13 @@ type CountriesResponse = { chess: { countries: Country[] } };
 const CountriesPage: NextPage = async () => {
   logger.info('CountriesPage');
 
-  const data = await query<CountriesResponse>({ query: countriesQuery });
+  const queryOptions: QueryOptions<OperationVariables, CountriesResponse> = {
+    query: countriesQuery,
+  };
+  const data: CountriesResponse = await query<CountriesResponse>(
+    'countriesQuery',
+    queryOptions
+  );
   const countries = data?.chess?.countries ?? [];
 
   return (
