@@ -53,6 +53,8 @@ export type TimeRange = 'week' | 'month' | 'quarter' | 'year';
 export type OpeningsOptions = {
   eco?: string;
   name?: string;
+  limit?: number;
+  offset?: number;
 };
 
 export type OpeningsResponse = {

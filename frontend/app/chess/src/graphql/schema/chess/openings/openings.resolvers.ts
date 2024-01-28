@@ -5,12 +5,19 @@ export const resolvers = {
   Chess: {
     openings: async (
       _parent: unknown,
-      { eco = '', name = '' }: { eco: string; name: string },
+      {
+        eco = '',
+        name = '',
+        limit = 100,
+        offset = 0,
+      }: { eco: string; name: string; limit: number; offset: number },
       { chessDataSource }: { chessDataSource: ChessDataSource }
     ): Promise<ChessOpening[]> => {
       const { openings = [] } = await chessDataSource.getOpenings({
         eco,
         name,
+        limit,
+        offset,
       });
       return openings;
     },

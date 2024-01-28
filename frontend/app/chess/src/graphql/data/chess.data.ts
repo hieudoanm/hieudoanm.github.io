@@ -31,15 +31,16 @@ export class ChessDataSource extends RESTDataSource {
   async getOpenings({
     eco = '',
     name = '',
+    limit = 100,
+    offset = 0,
   }: OpeningsOptions): Promise<OpeningsResponse> {
     const urlSearchParameters: URLSearchParams = new URLSearchParams();
-    if (eco !== '') {
-      urlSearchParameters.set('eco', eco);
-    }
-    if (name !== '') {
-      urlSearchParameters.set('name', name);
-    }
-    const endpoint: string = `/api/chess/openings?${urlSearchParameters.toString()}`;
+    if (eco !== '') urlSearchParameters.set('eco', eco);
+    if (name !== '') urlSearchParameters.set('name', name);
+    if (limit) urlSearchParameters.set('limit', limit.toString());
+    if (offset) urlSearchParameters.set('offset', offset.toString());
+    const queryString: string = urlSearchParameters.toString();
+    const endpoint: string = `/api/chess/openings?${queryString}`;
     return this.get<OpeningsResponse>(endpoint);
   }
 

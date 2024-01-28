@@ -3,9 +3,9 @@ type Query {
 }
 
 type Chess {
-  countries: [TitledCountries]
+  countries: [Country]
   country(code: String!): TitledCountry
-  openings(eco: String, name: String): [Opening]
+  openings(eco: String, name: String, limit: Int, offset: Int): [Opening]
   players(limit: Int, offset: Int): [Stats]
   player(username: String!): Player
   streamers(title: String, country: String): Streamers

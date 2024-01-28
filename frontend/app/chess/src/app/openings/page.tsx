@@ -20,9 +20,9 @@ import { ChessOpening } from '@prisma/client';
 import { NextPage } from 'next';
 
 const openingsQuery = gql`
-  query OpeningsQuery($eco: String) {
+  query OpeningsQuery($eco: String, $limit: Int, $offset: Int) {
     chess {
-      openings(eco: $eco) {
+      openings(eco: $eco, limit: $limit, offset: $offset) {
         eco
         name
         pgn
@@ -33,18 +33,19 @@ const openingsQuery = gql`
 `;
 
 type OpeningsPageProperties = {
-  params: { eco: string };
+  searchParams: { eco: string; limit: number; offset: number };
 };
 
 type OpeningsData = { chess: { openings: ChessOpening[] } };
 
 const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
-  params,
+  searchParams,
 }: OpeningsPageProperties) => {
-  const eco = params.eco ?? undefined;
+  const { eco, limit = 100, offset = 0 } = searchParams;
+  const variables = { eco, limit, offset };
   const queryOptions: QueryOptions<OperationVariables, OpeningsData> = {
     query: openingsQuery,
-    variables: { eco },
+    variables,
   };
   const data: OpeningsData = await query<OpeningsData>(
     'openingsQuery',

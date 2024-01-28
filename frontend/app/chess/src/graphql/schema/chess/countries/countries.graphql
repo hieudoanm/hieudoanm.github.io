@@ -1,6 +1,5 @@
-type TitledCountries {
+type Country {
   countryCode: String
-  country: String
   count: Int
 }
 
@@ -13,10 +12,10 @@ type TitledCountry {
   maxBulletRating: Int
   total: Int
   players: [Player]
-  titles: [TitleCount]
+  titles: [Title]
 }
 
-type TitleCount {
+type Title {
   title: String
   total: Int
 }
