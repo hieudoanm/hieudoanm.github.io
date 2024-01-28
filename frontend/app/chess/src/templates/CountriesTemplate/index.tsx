@@ -12,7 +12,7 @@ export const CountriesTemplate: React.FC<CountriesTemplateProperties> = ({
   countries = [],
 }) => {
   return (
-    <div className="py-4 md:py-8">
+    <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
       <Tabs isFitted variant="soft-rounded" colorScheme="teal">
         <TabList>
           <Tab>Maps</Tab>

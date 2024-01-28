@@ -1,5 +1,4 @@
 import { APP_NAME } from '@chess/common/constants/app.constants';
-import { Container } from '@chess/components/atoms/Container';
 import { ChessTimeClass } from '@prisma/client';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -32,9 +31,7 @@ const RatingPage: NextPage<RatingPageProperties> = ({
       <Head>
         <title>{APP_NAME} - Rating</title>
       </Head>
-      <Container>
-        <div className="py-4 md:py-8" />
-      </Container>
+      <div className="py-4 md:py-8" />
     </>
   );
 };

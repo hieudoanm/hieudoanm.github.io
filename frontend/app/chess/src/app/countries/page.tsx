@@ -4,11 +4,12 @@ import {
   QueryOptions,
   gql,
 } from '@apollo/client';
+import { APP_NAME } from '@chess/common/constants/app.constants';
 import { logger } from '@chess/common/libs/logger';
-import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { CountriesTemplate, Country } from '@chess/templates/CountriesTemplate';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 type CountriesData = { chess: { countries: Country[] } };
 
@@ -36,9 +37,12 @@ const CountriesPage: NextPage = async () => {
   const countries = data?.chess?.countries ?? [];
 
   return (
-    <Container>
+    <>
+      <Head>
+        <title>{APP_NAME} - Countries</title>
+      </Head>
       <CountriesTemplate countries={countries} />
-    </Container>
+    </>
   );
 };
 

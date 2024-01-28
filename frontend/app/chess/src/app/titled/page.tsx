@@ -50,15 +50,13 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
       <Head>
         <title>{APP_NAME} - Titled</title>
       </Head>
-      <Container>
-        <TitledTemplate
-          title={title}
-          total={total}
-          timeRange={timeRange}
-          players={players}
-          stats={stats}
-        />
-      </Container>
+      <TitledTemplate
+        title={title}
+        total={total}
+        timeRange={timeRange}
+        players={players}
+        stats={stats}
+      />
     </>
   );
 };

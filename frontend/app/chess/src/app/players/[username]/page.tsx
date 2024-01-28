@@ -1,11 +1,12 @@
 import { OperationVariables, QueryOptions, gql } from '@apollo/client';
+import { APP_NAME } from '@chess/common/constants/app.constants';
 import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
-import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import PlayerTemplate from '@chess/templates/PlayerTemplate';
 import { ChessPlayer, ChessStats } from '@prisma/client';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 const playerQuery = gql`
   query PlayerQuery($username: String!) {
@@ -67,9 +68,14 @@ const PlayerPage: NextPage<{ params: { username: string } }> = async ({
   const player = data?.chess?.player;
 
   return (
-    <Container>
+    <>
+      <Head>
+        <title>
+          {APP_NAME} - {username}
+        </title>
+      </Head>
       <PlayerTemplate player={player} />
-    </Container>
+    </>
   );
 };
 

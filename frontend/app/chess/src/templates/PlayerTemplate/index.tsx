@@ -24,7 +24,7 @@ export const PlayerTemplate: React.FC<PlayerTemplateProperties> = ({
   options.sort((a: string, b: string) => (a < b ? 1 : -1));
 
   return (
-    <div className="flex flex-col gap-y-4 md:gap-y-8">
+    <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
       <PlayerHeader
         avatar={player.avatar}
         name={player.name}

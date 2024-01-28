@@ -1,10 +1,11 @@
+import { APP_NAME } from '@chess/common/constants/app.constants';
 import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
 import { getInsights } from '@chess/common/services/insights.service';
 import { Insights } from '@chess/common/types/chess';
-import { Container } from '@chess/components/atoms/Container';
 import { PlayerInsightsTemplate } from '@chess/templates/PlayerInsightsTemplate';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 const InsightsPage: NextPage<{ params: { username: string } }> = async ({
   params,
@@ -17,9 +18,14 @@ const InsightsPage: NextPage<{ params: { username: string } }> = async ({
   const insights: Insights = await getInsights(username);
 
   return (
-    <Container>
+    <>
+      <Head>
+        <title>
+          {APP_NAME} - {username} - Insights
+        </title>
+      </Head>
       <PlayerInsightsTemplate insights={insights} />
-    </Container>
+    </>
   );
 };
 

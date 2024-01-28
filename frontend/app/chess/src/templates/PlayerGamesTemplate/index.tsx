@@ -95,7 +95,7 @@ export const PlayerGamesTemplate: React.FC<PlayerGamesTemplateProperties> = ({
   };
 
   return (
-    <div className="py-4 md:py-8">
+    <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
       <Card className="border border-gray-200 shadow">
         <CardHeader>
           <div className="flex items-center justify-between">

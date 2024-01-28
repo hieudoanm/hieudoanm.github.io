@@ -3,7 +3,7 @@
 exports[`PlayerTemplate to match snapshot 1`] = `
 <div>
   <div
-    class="flex flex-col gap-y-4 md:gap-y-8"
+    class="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8"
   >
     <header
       class="flex items-center justify-between gap-x-2"

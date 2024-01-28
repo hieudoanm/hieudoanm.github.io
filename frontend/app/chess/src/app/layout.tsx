@@ -3,6 +3,7 @@ import {
   APP_NAME,
 } from '@chess/common/constants/app.constants';
 import '@chess/common/styles/globals.scss';
+import { Container } from '@chess/components/atoms/Container';
 import { Footer } from '@chess/components/atoms/Footer';
 import { Navbar } from '@chess/components/atoms/Navbar';
 import type { Metadata } from 'next';
@@ -27,7 +28,9 @@ const RootLayout = ({
         <Providers>
           <div className="flex h-screen flex-col">
             <Navbar />
-            <div className="grow">{children}</div>
+            <div className="grow">
+              <Container>{children}</Container>
+            </div>
             <Footer />
           </div>
         </Providers>

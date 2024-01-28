@@ -1,7 +1,6 @@
 import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import { APP_NAME } from '@chess/common/constants/app.constants';
 import { logger } from '@chess/common/libs/logger';
-import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { PlayersTemplate } from '@chess/templates/PlayersTemplate';
 import {
@@ -129,14 +128,12 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
       <Head>
         <title>{APP_NAME} - Players</title>
       </Head>
-      <Container>
-        <PlayersTemplate
-          total={total}
-          titles={titles}
-          players={players}
-          countries={countries}
-        />
-      </Container>
+      <PlayersTemplate
+        total={total}
+        titles={titles}
+        players={players}
+        countries={countries}
+      />
     </>
   );
 };

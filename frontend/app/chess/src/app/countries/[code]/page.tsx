@@ -1,12 +1,13 @@
 import { OperationVariables, QueryOptions, gql } from '@apollo/client';
+import { APP_NAME } from '@chess/common/constants/app.constants';
 import { logger } from '@chess/common/libs/logger';
-import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { CountryTemplate } from '@chess/templates/CountryTemplate';
 import { Stats } from '@chess/templates/CountryTemplate/components/CountryStats';
 import { TitleTotal } from '@chess/templates/CountryTemplate/components/CountryTitles';
 import { ChessPlayer, ChessStats } from '@prisma/client';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 const countryQuery = gql`
   query CountryQuery($code: String!) {
@@ -102,7 +103,12 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
   const { stats, total = 0, players = [], titles = [] } = country;
 
   return (
-    <Container>
+    <>
+      <Head>
+        <title>
+          {APP_NAME} - {countryCode}
+        </title>
+      </Head>
       <CountryTemplate
         countryCode={countryCode}
         stats={stats}
@@ -110,7 +116,7 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
         titles={titles}
         players={players}
       />
-    </Container>
+    </>
   );
 };
 

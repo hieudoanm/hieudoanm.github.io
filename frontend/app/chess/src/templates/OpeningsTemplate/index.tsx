@@ -23,7 +23,7 @@ export const OpeningsTemplate: React.FC<OpeningsTemplateProperties> = ({
   openings = [],
 }) => {
   return (
-    <div className="flex flex-col gap-y-4 md:gap-y-8">
+    <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
       <Card className="border border-gray-200 shadow">
         <CardHeader>
           <Heading className="text-xl">Openings ({openings.length})</Heading>

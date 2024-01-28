@@ -1,6 +1,5 @@
 import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import { APP_NAME } from '@chess/common/constants/app.constants';
-import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { OpeningsTemplate } from '@chess/templates/OpeningsTemplate';
 import { ChessOpening } from '@prisma/client';
@@ -46,9 +45,7 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
       <Head>
         <title>{APP_NAME} - Titled</title>
       </Head>
-      <Container>
-        <OpeningsTemplate openings={openings} />
-      </Container>
+      <OpeningsTemplate openings={openings} />
     </>
   );
 };

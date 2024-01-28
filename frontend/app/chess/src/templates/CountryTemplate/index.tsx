@@ -23,7 +23,7 @@ export const CountryTemplate: React.FC<CountryTemplateProperties> = ({
   players = [],
 }) => {
   return (
-    <div className="flex flex-col gap-y-4 md:gap-y-8">
+    <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
       <CountryHeader countryCode={countryCode} />
       <CountryStats stats={stats} />
       <CountryCharts players={players} />

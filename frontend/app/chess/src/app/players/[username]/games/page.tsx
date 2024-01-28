@@ -4,13 +4,14 @@ import {
   QueryOptions,
   gql,
 } from '@apollo/client';
+import { APP_NAME } from '@chess/common/constants/app.constants';
 import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
-import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import { PlayerGamesTemplate } from '@chess/templates/PlayerGamesTemplate';
 import { ChessGame } from '@prisma/client';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 const gamesQuery: DocumentNode = gql`
   query GamesQuery($username: String!) {
@@ -60,9 +61,14 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
   const games: ChessGame[] = data?.chess?.player?.games ?? [];
 
   return (
-    <Container>
+    <>
+      <Head>
+        <title>
+          {APP_NAME} - {username} - Games
+        </title>
+      </Head>
       <PlayerGamesTemplate username={username} games={games} />
-    </Container>
+    </>
   );
 };
 
