@@ -59,7 +59,7 @@ const playersQuery = gql`
   }
 `;
 
-type PlayersResponse = {
+type PlayersData = {
   chess: { players: (ChessStats & { player: ChessPlayer })[] };
 };
 
@@ -74,11 +74,11 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
   const offset: number = searchParams.offset ?? 0;
   logger.info(`PlayersPage limit=${limit} offset=${offset}`);
 
-  const queryOptions: QueryOptions<OperationVariables, PlayersResponse> = {
+  const queryOptions: QueryOptions<OperationVariables, PlayersData> = {
     query: playersQuery,
     variables: { limit, offset },
   };
-  const data: PlayersResponse = await query<PlayersResponse>(
+  const data: PlayersData = await query<PlayersData>(
     'playersQuery',
     queryOptions
   );

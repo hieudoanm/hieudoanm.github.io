@@ -22,13 +22,11 @@ import { NextPage } from 'next';
 const openingsQuery = gql`
   query OpeningsQuery($eco: String) {
     chess {
-      openings {
+      openings(eco: $eco) {
         eco
         name
         pgn
-        firstMove
         fen
-        centipawn
       }
     }
   }
@@ -38,17 +36,17 @@ type OpeningsPageProperties = {
   params: { eco: string };
 };
 
-type OpeningsResponse = { chess: { openings: ChessOpening[] } };
+type OpeningsData = { chess: { openings: ChessOpening[] } };
 
 const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
   params,
 }: OpeningsPageProperties) => {
   const eco = params.eco ?? undefined;
-  const queryOptions: QueryOptions<OperationVariables, OpeningsResponse> = {
+  const queryOptions: QueryOptions<OperationVariables, OpeningsData> = {
     query: openingsQuery,
     variables: { eco },
   };
-  const data: OpeningsResponse = await query<OpeningsResponse>(
+  const data: OpeningsData = await query<OpeningsData>(
     'openingsQuery',
     queryOptions
   );
@@ -72,11 +70,15 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
                     <Th className="w-4">No</Th>
                     <Th className="w-4">ECO</Th>
                     <Th>Name</Th>
+                    <Th>FEN</Th>
                   </Tr>
                 </Thead>
                 <Tbody>
                   {openings.map(
-                    ({ eco = '', name = '' }: ChessOpening, index: number) => {
+                    (
+                      { eco = '', name = '', fen = '' }: ChessOpening,
+                      index: number
+                    ) => {
                       return (
                         <Tr key={`${eco}-${name}`}>
                           <Td>{index + 1}</Td>
@@ -90,6 +92,7 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
                               {name}
                             </Text>
                           </Td>
+                          <Td>{fen}</Td>
                         </Tr>
                       );
                     }

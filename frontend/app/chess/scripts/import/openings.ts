@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import { Chess } from 'chess.js';
 import axios from 'axios';
 import csv from 'csvtojson';
 
@@ -15,8 +16,12 @@ const main = async () => {
     const { data } = response;
     const openings: Opening[] = await csv({ delimiter: '\t' }).fromString(data);
     for (const { eco, name, pgn } of openings) {
-      const body = { eco, name, pgn };
-      console.info(`eco=${eco} name=${name} pgn=${pgn}`);
+      const chess = new Chess();
+      chess.loadPgn(pgn);
+      const fen: string = chess.fen();
+      chess.clear();
+      const body = { eco, name, pgn, fen };
+      console.info(`eco=${eco} name=${name} pgn=${pgn} fen=${fen}`);
       await prismaService.chessOpening.upsert({
         create: body,
         update: body,

@@ -70,6 +70,7 @@ erDiagram
 "ChessOpening" {
     String eco
     String name
+    String fen
     String pgn
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
@@ -152,6 +153,7 @@ erDiagram
 **Properties**
   - `eco`: 
   - `name`: 
+  - `fen`: 
   - `pgn`: 
   - `createdAt`: 
   - `updatedAt`: 

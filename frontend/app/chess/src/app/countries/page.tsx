@@ -163,15 +163,15 @@ const countriesQuery: DocumentNode = gql`
   }
 `;
 
-type CountriesResponse = { chess: { countries: Country[] } };
+type CountriesData = { chess: { countries: Country[] } };
 
 const CountriesPage: NextPage = async () => {
   logger.info('CountriesPage');
 
-  const queryOptions: QueryOptions<OperationVariables, CountriesResponse> = {
+  const queryOptions: QueryOptions<OperationVariables, CountriesData> = {
     query: countriesQuery,
   };
-  const data: CountriesResponse = await query<CountriesResponse>(
+  const data: CountriesData = await query<CountriesData>(
     'countriesQuery',
     queryOptions
   );

@@ -5,6 +5,7 @@ import {
   CountriesResponse,
   Country,
   GamesSynced,
+  OpeningsOptions,
   OpeningsResponse,
   Player,
   PlayersResponse,
@@ -30,10 +31,7 @@ export class ChessDataSource extends RESTDataSource {
   async getOpenings({
     eco = '',
     name = '',
-  }: {
-    eco: string;
-    name: string;
-  }): Promise<OpeningsResponse> {
+  }: OpeningsOptions): Promise<OpeningsResponse> {
     const urlSearchParameters: URLSearchParams = new URLSearchParams();
     if (eco !== '') {
       urlSearchParameters.set('eco', eco);

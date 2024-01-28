@@ -80,7 +80,7 @@ const streamersQuery: DocumentNode = gql`
   }
 `;
 
-type StreamersResponse = {
+type StreamersData = {
   chess: {
     streamers: {
       total: number;
@@ -102,11 +102,11 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
   const country = searchParams?.country ?? '';
   logger.info(`StreamersPage country=${country} title=${title}`);
 
-  const queryOptions: QueryOptions<OperationVariables, StreamersResponse> = {
+  const queryOptions: QueryOptions<OperationVariables, StreamersData> = {
     query: streamersQuery,
     variables: { title, country },
   };
-  const data: StreamersResponse = await query<StreamersResponse>(
+  const data: StreamersData = await query<StreamersData>(
     'streamersQuery',
     queryOptions
   );

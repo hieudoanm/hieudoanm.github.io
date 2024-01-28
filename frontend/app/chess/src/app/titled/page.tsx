@@ -253,7 +253,7 @@ const PlayersTable: React.FC<{
   );
 };
 
-type TitledResponse = {
+type TitledData = {
   chess: {
     titled: {
       title: ChessTitle;
@@ -284,14 +284,11 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
   const title = searchParams?.title ?? 'GM';
   logger.info(`TitledPage timeRange=${timeRange} title=${title}`);
 
-  const queryOptions: QueryOptions<OperationVariables, TitledResponse> = {
+  const queryOptions: QueryOptions<OperationVariables, TitledData> = {
     query: titledQuery,
     variables: { title, timeRange },
   };
-  const data: TitledResponse = await query<TitledResponse>(
-    'titledQuery',
-    queryOptions
-  );
+  const data: TitledData = await query<TitledData>('titledQuery', queryOptions);
   const titled = data?.chess?.titled ?? {};
   const {
     averageRapidRating = 0,

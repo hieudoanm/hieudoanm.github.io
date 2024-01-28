@@ -106,7 +106,7 @@ const gamesQuery: DocumentNode = gql`
   }
 `;
 
-type GamesResponse = { chess: { player: { games: ChessGame[] } } };
+type GamesData = { chess: { player: { games: ChessGame[] } } };
 
 const GamesPage: NextPage<{ params: { username: string } }> = async ({
   params,
@@ -118,14 +118,11 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
   const username: string = params.username ?? CHESS_USERNAME;
   logger.info(`InsightsPage username=${username}`);
 
-  const queryOptions: QueryOptions<OperationVariables, GamesResponse> = {
+  const queryOptions: QueryOptions<OperationVariables, GamesData> = {
     query: gamesQuery,
     variables: { username },
   };
-  const data: GamesResponse = await query<GamesResponse>(
-    'gamesQuery',
-    queryOptions
-  );
+  const data: GamesData = await query<GamesData>('gamesQuery', queryOptions);
   const games: ChessGame[] = data?.chess?.player?.games ?? [];
 
   const syncGames = async () => {

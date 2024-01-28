@@ -50,6 +50,11 @@ export type StreamersResponse = {
 
 export type TimeRange = 'week' | 'month' | 'quarter' | 'year';
 
+export type OpeningsOptions = {
+  eco?: string;
+  name?: string;
+};
+
 export type OpeningsResponse = {
   total: number;
   openings: ChessOpening[];

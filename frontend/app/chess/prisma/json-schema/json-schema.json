@@ -362,6 +362,10 @@
           "type": "string",
           "default": ""
         },
+        "fen": {
+          "type": "string",
+          "default": ""
+        },
         "pgn": {
           "type": "string",
           "default": ""

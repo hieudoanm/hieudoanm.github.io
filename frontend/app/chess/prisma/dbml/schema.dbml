@@ -82,6 +82,7 @@ Table ChessGame {
 Table ChessOpening {
   eco String [not null, default: '']
   name String [not null, default: '']
+  fen String [not null, default: '']
   pgn String [not null, default: '']
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]

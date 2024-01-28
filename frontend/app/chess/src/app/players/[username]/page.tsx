@@ -47,7 +47,7 @@ const playerQuery = gql`
   }
 `;
 
-type PlayerResponse = {
+type PlayerData = {
   chess: { player: ChessPlayer & { stats: ChessStats[] } };
 };
 
@@ -59,14 +59,11 @@ const PlayerPage: NextPage<{ params: { username: string } }> = async ({
   const username: string = params.username ?? CHESS_USERNAME;
   logger.info(`PlayerPage username=${username}`);
 
-  const queryOptions: QueryOptions<OperationVariables, PlayerResponse> = {
+  const queryOptions: QueryOptions<OperationVariables, PlayerData> = {
     query: playerQuery,
     variables: { username },
   };
-  const data: PlayerResponse = await query<PlayerResponse>(
-    'playerQuery',
-    queryOptions
-  );
+  const data: PlayerData = await query<PlayerData>('playerQuery', queryOptions);
   const player = data?.chess?.player;
 
   return (
