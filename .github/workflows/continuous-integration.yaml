@@ -46,9 +46,9 @@ jobs:
       - name: Linting
         run: yarn lint --fix
         working-directory: ${{ matrix.services.working-directory }}
+      - name: Build Production
+        run: yarn build
+        working-directory: ${{ matrix.services.working-directory }}
       - name: Unit Tests
         run: yarn test -u
-        working-directory: ${{ matrix.services.working-directory }}
-      - name: Build
-        run: yarn build
         working-directory: ${{ matrix.services.working-directory }}
