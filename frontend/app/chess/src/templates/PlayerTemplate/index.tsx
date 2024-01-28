@@ -49,7 +49,7 @@ export const PlayerTemplate: React.FC<PlayerTemplateProperties> = ({
       <ChessHeader
         avatar={player.avatar}
         name={player.name}
-        title={player.title ?? ''}
+        title={player.title}
         username={player.username}
         verified={player.verified}
         twitch_url={player.twitchUrl}
