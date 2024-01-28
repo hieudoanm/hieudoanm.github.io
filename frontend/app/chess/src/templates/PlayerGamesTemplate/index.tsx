@@ -97,15 +97,12 @@ export const PlayerGamesTemplate: React.FC<PlayerGamesTemplateProperties> = ({
   return (
     <Card className="border border-gray-200 shadow">
       <CardHeader>
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent={'space-between'}>
+        <div className="flex items-center justify-between">
           <Heading className="text-xl">Games ({games.length})</Heading>
           <Button type="button" colorScheme="teal" onClick={syncGames}>
             <Icon as={FaSync} />
           </Button>
-        </Box>
+        </div>
       </CardHeader>
       <List className="flex flex-col gap-y-2">
         {games.map(

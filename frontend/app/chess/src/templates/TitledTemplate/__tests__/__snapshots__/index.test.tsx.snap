@@ -6,7 +6,7 @@ exports[`TitledTemplate to match snapshot 1`] = `
     class="flex flex-col gap-y-4 md:gap-y-8"
   >
     <div
-      class="css-1lekzkb"
+      class="flex items-center justify-between"
     >
       <button
         aria-controls="menu-list-:r1:"
@@ -139,7 +139,7 @@ exports[`TitledTemplate to match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="rounded shadow css-0"
+        class="rounded shadow"
       >
         <div
           class="chakra-select__wrapper css-42b2qy"
@@ -194,6 +194,19 @@ exports[`TitledTemplate to match snapshot 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      class="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8"
+    >
+      <div
+        class="col-span-1"
+      />
+      <div
+        class="col-span-1"
+      />
+      <div
+        class="col-span-1"
+      />
     </div>
     <div
       class="chakra-card border border-gray-200 shadow css-2dlz7"

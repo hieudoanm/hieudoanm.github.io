@@ -2,11 +2,10 @@ import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
-import {
-  CountryStats,
-  CountryTemplate,
-} from '@chess/templates/CountryTemplate';
-import { ChessPlayer, ChessStats, ChessTitle } from '@prisma/client';
+import { CountryTemplate } from '@chess/templates/CountryTemplate';
+import { Stats } from '@chess/templates/CountryTemplate/components/CountryStats';
+import { TitleTotal } from '@chess/templates/CountryTemplate/components/CountryTitles';
+import { ChessPlayer, ChessStats } from '@prisma/client';
 import { NextPage } from 'next';
 
 const countryQuery = gql`
@@ -74,10 +73,10 @@ type CountryData = {
   chess: {
     country: {
       countryCode: string;
-      stats: CountryStats;
+      stats: Stats;
       total: number;
       players: (ChessPlayer & { stats: ChessStats[] })[];
-      titles: { title: ChessTitle; total: number }[];
+      titles: TitleTotal[];
     };
   };
 };

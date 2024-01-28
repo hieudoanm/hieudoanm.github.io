@@ -6,9 +6,9 @@ import { Container } from '@chess/components/atoms/Container';
 import { query } from '@chess/graphql/apollo/client';
 import {
   FullChessPlayer,
-  TitledStats,
   TitledTemplate,
 } from '@chess/templates/TitledTemplate';
+import { Stats } from '@chess/templates/TitledTemplate/components/TitledStats';
 import { ChessTitle } from '@prisma/client';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -16,7 +16,7 @@ import Head from 'next/head';
 type TitledData = {
   chess: {
     titled: {
-      stats: TitledStats;
+      stats: Stats;
       total: number;
       players: FullChessPlayer[];
     };

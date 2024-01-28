@@ -36,17 +36,9 @@ export const StreamersTemplate: React.FC<StreamersTemplateProperties> = ({
   return (
     <Card className="border border-gray-200 shadow">
       <CardHeader>
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
-          className="gap-x-4 md:gap-x-8">
+        <div className="flex items-center justify-between gap-x-4 md:gap-x-8">
           <Heading className="text-xl">Streamers ({total})</Heading>
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="space-between"
-            className="gap-x-2 md:gap-x-4">
+          <div className="flex items-center justify-between gap-x-2 md:gap-x-4">
             {/* <Select
                     id="title"
                     name="title"
@@ -76,8 +68,8 @@ export const StreamersTemplate: React.FC<StreamersTemplateProperties> = ({
                       );
                     })}
                   </Select> */}
-          </Box>
-        </Box>
+          </div>
+        </div>
       </CardHeader>
       <Divider />
       <TableContainer>

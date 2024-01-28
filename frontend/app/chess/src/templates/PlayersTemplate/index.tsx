@@ -1,6 +1,7 @@
 import {
   Card,
   CardHeader,
+  Heading,
   Link,
   Table,
   TableContainer,
@@ -25,7 +26,7 @@ export const PlayersTemplate: React.FC<PlayersTemplateProperties> = ({
     <div className="overflow-hidden rounded border">
       <Card>
         <CardHeader className="border-b">
-          <div>Player</div>
+          <Heading className="text-xl">Players ({players.length})</Heading>
         </CardHeader>
         <TableContainer>
           <Table>

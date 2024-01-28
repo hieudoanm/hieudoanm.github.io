@@ -11,9 +11,13 @@ exports[`PlayersTemplate to match snapshot 1`] = `
       <div
         class="chakra-card__header border-b css-0"
       >
-        <div>
-          Player
-        </div>
+        <h2
+          class="chakra-heading text-xl css-0"
+        >
+          Players (
+          0
+          )
+        </h2>
       </div>
       <div
         class="chakra-table__container css-zipzvv"

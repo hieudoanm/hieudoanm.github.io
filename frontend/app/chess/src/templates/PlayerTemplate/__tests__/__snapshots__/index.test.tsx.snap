@@ -5,7 +5,7 @@ exports[`PlayerTemplate to match snapshot 1`] = `
   <div
     class="flex flex-col gap-y-4 md:gap-y-8"
   >
-    <div
+    <header
       class="flex items-center justify-between gap-x-2"
     >
       <div
@@ -71,7 +71,7 @@ exports[`PlayerTemplate to match snapshot 1`] = `
           </svg>
         </button>
       </div>
-    </div>
+    </header>
     <div
       class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8"
     >
@@ -94,7 +94,7 @@ exports[`PlayerTemplate to match snapshot 1`] = `
                   <dt
                     class="chakra-stat__label css-0"
                   >
-                    Rapid
+                    rapid
                   </dt>
                   <dd
                     class="chakra-stat__number css-fvxuh5"
@@ -153,7 +153,7 @@ exports[`PlayerTemplate to match snapshot 1`] = `
                   <dt
                     class="chakra-stat__label css-0"
                   >
-                    Blitz
+                    blitz
                   </dt>
                   <dd
                     class="chakra-stat__number css-fvxuh5"
@@ -212,7 +212,7 @@ exports[`PlayerTemplate to match snapshot 1`] = `
                   <dt
                     class="chakra-stat__label css-0"
                   >
-                    Bullet
+                    blitz
                   </dt>
                   <dd
                     class="chakra-stat__number css-fvxuh5"
@@ -268,7 +268,11 @@ exports[`PlayerTemplate to match snapshot 1`] = `
             <h2
               class="chakra-heading text-center md:text-left css-0"
             >
-              Rapid
+              <span
+                class="capitalize"
+              >
+                rapid
+              </span>
                Record
             </h2>
             <div
@@ -344,7 +348,11 @@ exports[`PlayerTemplate to match snapshot 1`] = `
             <h2
               class="chakra-heading text-center md:text-left css-0"
             >
-              Blitz
+              <span
+                class="capitalize"
+              >
+                blitz
+              </span>
                Record
             </h2>
             <div
@@ -420,7 +428,11 @@ exports[`PlayerTemplate to match snapshot 1`] = `
             <h2
               class="chakra-heading text-center md:text-left css-0"
             >
-              Bullet
+              <span
+                class="capitalize"
+              >
+                bullet
+              </span>
                Record
             </h2>
             <div
