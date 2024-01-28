@@ -121,7 +121,7 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
                         <Tr key={id}>
                           <Td>
                             <div className="h-12 w-12 overflow-hidden rounded border">
-                              {avatar ? (
+                              {avatar.length > 0 ? (
                                 <Image
                                   src={avatar}
                                   alt={username}

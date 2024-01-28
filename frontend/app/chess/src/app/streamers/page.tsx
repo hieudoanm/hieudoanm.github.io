@@ -32,6 +32,7 @@ import {
   ChessTitle,
 } from '@prisma/client';
 import { NextPage } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const streamersQuery: DocumentNode = gql`
@@ -196,7 +197,9 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                         <Td>
                           {(title ?? '').length > 0 ? (
                             <Link href={`/titled/${title}`}>
-                              <Badge colorScheme="red">{title}</Badge>
+                              <Badge color="white" backgroundColor="red.500">
+                                {title}
+                              </Badge>
                             </Link>
                           ) : (
                             <></>
@@ -206,16 +209,19 @@ const StreamersPage: NextPage<StreamersPageProperties> = async ({
                           <Link
                             href={`/players/${encodeURIComponent(username)}`}>
                             <div className="inline-flex items-center gap-x-2">
-                              {avatar.length > 0 ? (
-                                <div
-                                  className="aspect-square w-8 rounded bg-contain bg-center"
-                                  style={{
-                                    backgroundImage: `url(${avatar})`,
-                                  }}
-                                />
-                              ) : (
-                                <div className="aspect-square w-8 rounded border" />
-                              )}
+                              <div className="h-12 w-12 overflow-hidden rounded border">
+                                {avatar.length > 0 ? (
+                                  <Image
+                                    src={avatar}
+                                    alt={username}
+                                    title={username}
+                                    width={48}
+                                    height={48}
+                                  />
+                                ) : (
+                                  <></>
+                                )}
+                              </div>
                               <Text>{username}</Text>
                             </div>
                           </Link>

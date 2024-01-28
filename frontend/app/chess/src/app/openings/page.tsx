@@ -93,7 +93,13 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
                               {name}
                             </Text>
                           </Td>
-                          <Td>{fen}</Td>
+                          <Td>
+                            <Text
+                              title={fen}
+                              className="w-32 truncate md:w-auto">
+                              {fen}
+                            </Text>
+                          </Td>
                         </Tr>
                       );
                     }
