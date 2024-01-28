@@ -6,10 +6,14 @@ export const resolvers = {
   Chess: {
     players: async (
       _parent: unknown,
-      { limit = 100, offset = 0 }: { limit: number; offset: number },
+      {
+        limit = 100,
+        offset = 0,
+        isStreamer = false,
+      }: { limit: number; offset: number; isStreamer: boolean },
       { chessDataSource }: { chessDataSource: ChessDataSource }
     ): Promise<(ChessStats & { player: ChessPlayer })[]> => {
-      return chessDataSource.getPlayers({ limit, offset });
+      return chessDataSource.getPlayers({ limit, offset, isStreamer });
     },
     player: (
       _parent: unknown,

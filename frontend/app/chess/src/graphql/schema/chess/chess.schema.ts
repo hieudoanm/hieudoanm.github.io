@@ -9,8 +9,6 @@ import openingsTypeDefs from './openings/openings.graphql';
 import { resolvers as openingsResolvers } from './openings/openings.resolvers';
 import playersTypeDefs from './players/players.graphql';
 import { resolvers as playerResolvers } from './players/players.resolvers';
-import streamersTypeDefs from './streamers/streamers.graphql';
-import { resolvers as streamersResolvers } from './streamers/streamers.resolvers';
 import titledTypeDefs from './titled/titled.graphql';
 import { resolvers as titledResolvers } from './titled/titled.resolvers';
 
@@ -19,7 +17,6 @@ const typeDefs = mergeTypeDefs([
   countriesTypeDefs,
   openingsTypeDefs,
   playersTypeDefs,
-  streamersTypeDefs,
   titledTypeDefs,
 ]);
 
@@ -28,7 +25,6 @@ const resolvers = mergeResolvers([
   countriesResolvers,
   openingsResolvers,
   playerResolvers,
-  streamersResolvers,
   titledResolvers,
 ]);
 

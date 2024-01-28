@@ -1,5 +1,11 @@
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
-import { ChessPlayer, ChessStats, ChessTitle, Prisma } from '@prisma/client';
+import {
+  ChessCountry,
+  ChessPlayer,
+  ChessStats,
+  ChessTitle,
+  Prisma,
+} from '@prisma/client';
 
 (BigInt.prototype as any).toJSON = function () {
   const int = Number.parseInt(this.toString());
@@ -10,15 +16,19 @@ export type PlayersResponse = {
   total: number;
   limit: number;
   offset: number;
-  players: (ChessStats & { player: ChessPlayer })[];
+  players: (ChessStats & { player: ChessPlayer & { country: ChessCountry } })[];
+  countries: { countryCode: string }[];
+  titles: { title: ChessTitle | null }[];
 };
 
 export const getPlayers = async ({
+  isStreamer = false,
   country,
   title,
   limit = 100,
   offset = 0,
 }: {
+  isStreamer?: boolean;
   country?: string;
   title?: ChessTitle;
   limit?: number;
@@ -31,19 +41,32 @@ export const getPlayers = async ({
   if (country) {
     where = { ...where, countryCode: country };
   }
-
-  const [total = 0, players = []] = await getPrismaClient().$transaction([
-    getPrismaClient().chessPlayer.count({ where }),
-    getPrismaClient().chessStats.findMany({
-      take: limit,
-      skip: offset,
-      include: { player: true },
-      orderBy: { last: 'desc' },
-      where: { timeClass: 'blitz', player: { ...where } },
-    }),
-  ]);
+  if (isStreamer) {
+    where = { ...where, isStreamer, twitchUrl: { not: '' } };
+  }
+  const [total = 0, players = [], countries = [], titles = []] =
+    await getPrismaClient().$transaction([
+      getPrismaClient().chessPlayer.count({ where }),
+      getPrismaClient().chessStats.findMany({
+        take: limit,
+        skip: offset,
+        orderBy: { last: 'desc' },
+        include: { player: { include: { country: true } } },
+        where: { timeClass: 'blitz', player: { ...where } },
+      }),
+      getPrismaClient().chessPlayer.findMany({
+        select: { countryCode: true },
+        distinct: ['countryCode'],
+        orderBy: { countryCode: 'asc' },
+      }),
+      getPrismaClient().chessPlayer.findMany({
+        select: { title: true },
+        distinct: ['title'],
+        orderBy: { title: 'asc' },
+      }),
+    ]);
 
   await getPrismaClient().$disconnect();
 
-  return { total, offset, limit, players };
+  return { total, offset, limit, players, countries, titles };
 };

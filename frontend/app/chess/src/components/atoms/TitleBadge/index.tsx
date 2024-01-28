@@ -12,9 +12,10 @@ export const TitleBadge: React.FC<TitleBadgeProperties> = ({
   return (
     <Link href={`/titled/${title}`}>
       <Badge
-        backgroundColor="red.500"
-        color="white"
+        colorScheme="red"
+        size="md"
         textAlign="center"
+        variant="solid"
         width={10}>
         {title}
       </Badge>

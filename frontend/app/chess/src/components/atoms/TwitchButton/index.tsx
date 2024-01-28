@@ -13,7 +13,7 @@ export const TwitchButton: React.FC<TwitchButtonProperties> = ({
 
   return (
     <Link href={href} target="_blank">
-      <Button colorScheme="teal" type="button">
+      <Button colorScheme="teal" type="button" size="sm">
         <Icon as={FaTwitch} />
       </Button>
     </Link>
