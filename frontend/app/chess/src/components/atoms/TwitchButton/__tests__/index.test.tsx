@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Loading } from '..';
+import { TwitchButton } from '..';
 
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
@@ -10,9 +10,9 @@ jest.mock('next/navigation', () => ({
   useSearchParams: jest.fn().mockResolvedValue(new URLSearchParams()),
 }));
 
-describe('Loading', () => {
+describe('TwitchButton', () => {
   it('to match snapshot', () => {
-    const { container } = render(<Loading />);
+    const { container } = render(<TwitchButton />);
     expect(container).toMatchSnapshot();
   });
 });

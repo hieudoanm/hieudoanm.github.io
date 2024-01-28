@@ -12,10 +12,10 @@ type TitledCountry {
   maxBulletRating: Int
   total: Int
   players: [Player]
-  titles: [Title]
+  titles: [TitleTotal]
 }
 
-type Title {
+type TitleTotal {
   title: String
   total: Int
 }

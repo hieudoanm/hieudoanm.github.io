@@ -16,9 +16,10 @@ exports[`PlayerTemplate to match snapshot 1`] = `
           style="background-image: url();"
         />
         <div>
-          <h2
-            class="chakra-heading flex items-center gap-x-2 css-0"
+          <div
+            class="flex items-center gap-x-2"
           >
+             
             <a
               href="/titled/GM"
             >
@@ -28,15 +29,19 @@ exports[`PlayerTemplate to match snapshot 1`] = `
                 GM
               </span>
             </a>
-            <a
-              href="https://www.chess.com/member/"
-              target="_blank"
+            <h2
+              class="chakra-heading css-0"
             >
-              <p
-                class="chakra-text text-lg uppercase md:text-2xl css-0"
-              />
-            </a>
-          </h2>
+              <a
+                href="https://www.chess.com/member/"
+                target="_blank"
+              >
+                <p
+                  class="chakra-text text-lg uppercase md:text-2xl css-0"
+                />
+              </a>
+            </h2>
+          </div>
           <p
             class="chakra-text css-0"
           />

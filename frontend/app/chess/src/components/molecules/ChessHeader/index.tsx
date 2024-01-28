@@ -81,14 +81,20 @@ export const ChessHeader: React.FC<ChessHeaderProperties> = ({
           style={{ backgroundImage: `url(${avatar})` }}
         />
         <div>
-          <Heading className="flex items-center gap-x-2">
+          <div className="flex items-center gap-x-2">
+            {' '}
             <TitleBadge title={title} />
-            <Link
-              href={`https://www.chess.com/member/${username}`}
-              target="_blank">
-              <Text className="text-lg uppercase md:text-2xl">{username}</Text>
-            </Link>
-          </Heading>
+            <Heading>
+              <Link
+                href={`https://www.chess.com/member/${username}`}
+                target="_blank">
+                <Text className="text-lg uppercase md:text-2xl">
+                  {username}
+                </Text>
+              </Link>
+            </Heading>
+          </div>
+
           <Text>{name}</Text>
         </div>
       </div>
