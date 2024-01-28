@@ -1,26 +1,12 @@
 import { OperationVariables, QueryOptions, gql } from '@apollo/client';
-import {
-  Badge,
-  Card,
-  CardHeader,
-  Table,
-  TableContainer,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr,
-} from '@chakra-ui/react';
 import { APP_NAME } from '@chess/common/constants/app.constants';
 import { logger } from '@chess/common/libs/logger';
 import { Container } from '@chess/components/atoms/Container';
-import { TitleBadge } from '@chess/components/atoms/TitleBadge';
 import { query } from '@chess/graphql/apollo/client';
+import { PlayersTemplate } from '@chess/templates/PlayersTemplate';
 import { ChessPlayer, ChessStats } from '@prisma/client';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 
 const playersQuery = gql`
   query PlayersQuery($limit: Int, $offset: Int) {
@@ -94,71 +80,8 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
         <title>{APP_NAME} - Players</title>
       </Head>
       <Container>
-        <div className="py-8">
-          <div className="overflow-hidden rounded border">
-            <Card>
-              <CardHeader className="border-b">
-                <div>Player</div>
-              </CardHeader>
-              <TableContainer>
-                <Table>
-                  <Thead>
-                    <Tr>
-                      <Th>Avatar</Th>
-                      <Th>ID</Th>
-                      <Th>Username</Th>
-                      <Th>Title</Th>
-                      <Th isNumeric>Rating</Th>
-                      <Th isNumeric>Best</Th>
-                    </Tr>
-                  </Thead>
-                  <Tbody>
-                    {players.map(
-                      ({
-                        last = 0,
-                        best = 0,
-                        player: { id = '', username = '', avatar = '', title },
-                      }) => {
-                        return (
-                          <Tr key={id}>
-                            <Td>
-                              <div className="h-12 w-12 overflow-hidden rounded border">
-                                {avatar.length > 0 ? (
-                                  <Image
-                                    src={avatar}
-                                    alt={username}
-                                    title={username}
-                                    width={48}
-                                    height={48}
-                                  />
-                                ) : (
-                                  <></>
-                                )}
-                              </div>
-                            </Td>
-                            <Td>{id}</Td>
-                            <Td>
-                              <Link
-                                href={`/players/${encodeURIComponent(
-                                  username
-                                )}`}>
-                                {username}
-                              </Link>
-                            </Td>
-                            <Td>
-                              <TitleBadge title={title} />
-                            </Td>
-                            <Td isNumeric>{last}</Td>
-                            <Td isNumeric>{best}</Td>
-                          </Tr>
-                        );
-                      }
-                    )}
-                  </Tbody>
-                </Table>
-              </TableContainer>
-            </Card>
-          </div>
+        <div className="py-4 md:py-8">
+          <PlayersTemplate players={players} />
         </div>
       </Container>
     </>

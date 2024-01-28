@@ -1,6 +1,6 @@
 import { LoadingOverlay } from '@chess/components/atoms/LoadingOverlay';
 
-const Loading = () => {
+const Loading: React.FC = () => {
   return <LoadingOverlay />;
 };
 

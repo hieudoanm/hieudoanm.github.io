@@ -6,7 +6,7 @@ exports[`ErrorTemplate to match snapshot 1`] = `
     class="container mx-auto px-4 md:px-8"
   >
     <div
-      class="py-8"
+      class="py-4 md:py-8"
     >
       <div
         class="flex h-full items-center justify-center"

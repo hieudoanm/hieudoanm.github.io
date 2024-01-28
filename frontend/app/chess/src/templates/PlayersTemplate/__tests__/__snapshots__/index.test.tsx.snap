@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayersTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="overflow-hidden rounded border"
+  >
+    <div
+      class="chakra-card css-2dlz7"
+    >
+      <div
+        class="chakra-card__header border-b css-0"
+      >
+        <div>
+          Player
+        </div>
+      </div>
+      <div
+        class="chakra-table__container css-zipzvv"
+      >
+        <table
+          class="chakra-table css-0"
+        >
+          <thead
+            class="css-0"
+          >
+            <tr
+              class="css-0"
+            >
+              <th
+                class="css-0"
+              >
+                Avatar
+              </th>
+              <th
+                class="css-0"
+              >
+                ID
+              </th>
+              <th
+                class="css-0"
+              >
+                Username
+              </th>
+              <th
+                class="css-0"
+              >
+                Title
+              </th>
+              <th
+                class="css-0"
+                data-is-numeric="true"
+              >
+                Rating
+              </th>
+              <th
+                class="css-0"
+                data-is-numeric="true"
+              >
+                Best
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="css-0"
+          />
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;

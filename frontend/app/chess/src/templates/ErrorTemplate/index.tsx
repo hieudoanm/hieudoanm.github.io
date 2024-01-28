@@ -11,7 +11,7 @@ export const ErrorTemplate: React.FC<ErrorTemplateProperties> = ({
 }) => {
   return (
     <Container>
-      <div className="py-8">
+      <div className="py-4 md:py-8">
         <div className="flex h-full items-center justify-center">
           <div className="text-center">
             <div className="text-9xl font-bold">{status}</div>

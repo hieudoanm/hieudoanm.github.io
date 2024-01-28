@@ -7,7 +7,7 @@ import { ChessOpponents } from '@chess/components/organisms/ChessOpponents';
 import { ChessResults } from '@chess/components/organisms/ChessResults';
 import { ChessTimeOfDays } from '@chess/components/organisms/ChessTimeOfDays';
 
-export const InsightsTemplate: React.FC<{ insights: Insights }> = ({
+export const PlayerInsightsTemplate: React.FC<{ insights: Insights }> = ({
   insights = {} as Insights,
 }) => {
   return (
@@ -20,3 +20,5 @@ export const InsightsTemplate: React.FC<{ insights: Insights }> = ({
     </div>
   );
 };
+
+PlayerInsightsTemplate.displayName = 'PlayerInsightsTemplate';

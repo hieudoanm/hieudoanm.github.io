@@ -252,10 +252,7 @@ export const TitledTemplate: React.FC<TitledTemplateProperties> = ({
 }) => {
   return (
     <div className="flex flex-col gap-y-4 md:gap-y-8">
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'space-between'}>
+      <Box display="flex" alignItems="center" justifyContent="space-between">
         <Menu>
           <MenuButton
             // as={Button}

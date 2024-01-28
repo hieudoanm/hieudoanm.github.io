@@ -1,7 +1,6 @@
-import { Insights } from '@chess/common/types/chess';
 import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
-import { InsightsTemplate } from '..';
+import { PlayerGamesTemplate } from '..';
 
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
@@ -10,14 +9,14 @@ jest.mock('next/navigation', () => ({
   }),
 }));
 
-describe('InsightsTemplate', () => {
+describe('PlayerGamesTemplate', () => {
   beforeEach(() => {
     mockResizeObserver();
   });
 
   it('to match snapshot', () => {
     const { container } = render(
-      <InsightsTemplate insights={{} as Insights} />
+      <PlayerGamesTemplate games={[]} username="hikaru" />
     );
     expect(container).toMatchSnapshot();
   });

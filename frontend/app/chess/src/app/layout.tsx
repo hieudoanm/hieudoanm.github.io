@@ -4,7 +4,6 @@ import {
 } from '@chess/common/constants/app.constants';
 import '@chess/common/styles/globals.scss';
 import { Footer } from '@chess/components/atoms/Footer';
-import { LoadingOverlay } from '@chess/components/atoms/LoadingOverlay';
 import { Navbar } from '@chess/components/atoms/Navbar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
