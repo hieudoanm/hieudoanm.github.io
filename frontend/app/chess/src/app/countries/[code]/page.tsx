@@ -103,15 +103,13 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
 
   return (
     <Container>
-      <div className="py-4 md:py-8">
-        <CountryTemplate
-          countryCode={countryCode}
-          stats={stats}
-          total={total}
-          titles={titles}
-          players={players}
-        />
-      </div>
+      <CountryTemplate
+        countryCode={countryCode}
+        stats={stats}
+        total={total}
+        titles={titles}
+        players={players}
+      />
     </Container>
   );
 };

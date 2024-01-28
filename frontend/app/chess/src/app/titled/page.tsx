@@ -51,15 +51,13 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
         <title>{APP_NAME} - Titled</title>
       </Head>
       <Container>
-        <div className="py-4 md:py-8">
-          <TitledTemplate
-            title={title}
-            total={total}
-            timeRange={timeRange}
-            players={players}
-            stats={stats}
-          />
-        </div>
+        <TitledTemplate
+          title={title}
+          total={total}
+          timeRange={timeRange}
+          players={players}
+          stats={stats}
+        />
       </Container>
     </>
   );

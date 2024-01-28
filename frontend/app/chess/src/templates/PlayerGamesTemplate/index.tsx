@@ -95,82 +95,84 @@ export const PlayerGamesTemplate: React.FC<PlayerGamesTemplateProperties> = ({
   };
 
   return (
-    <Card className="border border-gray-200 shadow">
-      <CardHeader>
-        <div className="flex items-center justify-between">
-          <Heading className="text-xl">Games ({games.length})</Heading>
-          <Button type="button" colorScheme="teal" onClick={syncGames}>
-            <Icon as={FaSync} />
-          </Button>
-        </div>
-      </CardHeader>
-      <List className="flex flex-col gap-y-2">
-        {games.map(
-          ({
-            id,
-            timeClass,
-            whiteUsername,
-            blackUsername,
-            whiteResult,
-            whiteRating,
-            blackResult,
-            blackRating,
-            endTime,
-          }: ChessGame) => {
-            return (
-              <ListItem key={id} className="border-t p-2 md:p-4">
-                <div className="flex items-center justify-between gap-2 md:gap-4">
-                  <div className="flex items-center gap-x-2 md:gap-x-4">
-                    <div>
-                      <TimeClassIcon timeClass={timeClass} />
+    <div className="py-4 md:py-8">
+      <Card className="border border-gray-200 shadow">
+        <CardHeader>
+          <div className="flex items-center justify-between">
+            <Heading className="text-xl">Games ({games.length})</Heading>
+            <Button type="button" colorScheme="teal" onClick={syncGames}>
+              <Icon as={FaSync} />
+            </Button>
+          </div>
+        </CardHeader>
+        <List className="flex flex-col gap-y-2">
+          {games.map(
+            ({
+              id,
+              timeClass,
+              whiteUsername,
+              blackUsername,
+              whiteResult,
+              whiteRating,
+              blackResult,
+              blackRating,
+              endTime,
+            }: ChessGame) => {
+              return (
+                <ListItem key={id} className="border-t p-2 md:p-4">
+                  <div className="flex items-center justify-between gap-2 md:gap-4">
+                    <div className="flex items-center gap-x-2 md:gap-x-4">
+                      <div>
+                        <TimeClassIcon timeClass={timeClass} />
+                      </div>
+                      <div>
+                        <Link
+                          href={`/players/${encodeURIComponent(whiteUsername)}`}
+                          className={`block ${
+                            whiteUsername === username ? FONT_SEMIBOLD : ''
+                          }`}>
+                          {whiteUsername} ({whiteRating})
+                        </Link>
+                        <Link
+                          href={`/players/${encodeURIComponent(blackUsername)}`}
+                          className={`block ${
+                            blackUsername === username ? FONT_SEMIBOLD : ''
+                          }`}>
+                          {blackUsername} ({blackRating})
+                        </Link>
+                      </div>
                     </div>
-                    <div>
-                      <Link
-                        href={`/players/${encodeURIComponent(whiteUsername)}`}
-                        className={`block ${
-                          whiteUsername === username ? FONT_SEMIBOLD : ''
-                        }`}>
-                        {whiteUsername} ({whiteRating})
-                      </Link>
-                      <Link
-                        href={`/players/${encodeURIComponent(blackUsername)}`}
-                        className={`block ${
-                          blackUsername === username ? FONT_SEMIBOLD : ''
-                        }`}>
-                        {blackUsername} ({blackRating})
-                      </Link>
+                    <div className="flex items-center gap-x-2 md:gap-x-4">
+                      <div className="text-right">
+                        <p
+                          className={
+                            whiteUsername === username ? FONT_SEMIBOLD : ''
+                          }>
+                          {getPoint(whiteResult)}
+                        </p>
+                        <p
+                          className={
+                            blackUsername === username ? FONT_SEMIBOLD : ''
+                          }>
+                          {getPoint(blackResult)}
+                        </p>
+                      </div>
+                      <div>
+                        <p>{endTime.toString().split('T')[0]}</p>
+                      </div>
+                      <div>
+                        <Button colorScheme="teal">
+                          <Icon as={FaSearchengin} boxSize={6} />
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-x-2 md:gap-x-4">
-                    <div className="text-right">
-                      <p
-                        className={
-                          whiteUsername === username ? FONT_SEMIBOLD : ''
-                        }>
-                        {getPoint(whiteResult)}
-                      </p>
-                      <p
-                        className={
-                          blackUsername === username ? FONT_SEMIBOLD : ''
-                        }>
-                        {getPoint(blackResult)}
-                      </p>
-                    </div>
-                    <div>
-                      <p>{endTime.toString().split('T')[0]}</p>
-                    </div>
-                    <div>
-                      <Button colorScheme="teal">
-                        <Icon as={FaSearchengin} boxSize={6} />
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </ListItem>
-            );
-          }
-        )}
-      </List>
-    </Card>
+                </ListItem>
+              );
+            }
+          )}
+        </List>
+      </Card>
+    </div>
   );
 };

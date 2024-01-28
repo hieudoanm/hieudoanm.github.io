@@ -1,7 +1,6 @@
 import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
-import { TitledTemplate } from '..';
-import { Stats } from '../components/TitledStats';
+import { CountriesTable } from '..';
 
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
@@ -10,21 +9,13 @@ jest.mock('next/navigation', () => ({
   }),
 }));
 
-describe('TitledTemplate', () => {
+describe('CountriesTable', () => {
   beforeEach(() => {
     mockResizeObserver();
   });
 
   it('to match snapshot', () => {
-    const { container } = render(
-      <TitledTemplate
-        title={'GM'}
-        total={0}
-        timeRange={'year'}
-        players={[]}
-        stats={{} as Stats}
-      />
-    );
+    const { container } = render(<CountriesTable countries={[]} />);
     expect(container).toMatchSnapshot();
   });
 });

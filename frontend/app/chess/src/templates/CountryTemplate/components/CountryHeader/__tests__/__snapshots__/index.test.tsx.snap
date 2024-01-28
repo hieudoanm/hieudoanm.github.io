@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryChart to match snapshot 1`] = `
+<div>
+  <h2
+    class="chakra-heading css-0"
+    style="word-spacing: 16px;"
+  >
+    🇺🇸
+     
+    US
+  </h2>
+</div>
+`;

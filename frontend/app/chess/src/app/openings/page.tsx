@@ -47,9 +47,7 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
         <title>{APP_NAME} - Titled</title>
       </Head>
       <Container>
-        <div className="py-4 md:py-8">
-          <OpeningsTemplate openings={openings} />
-        </div>
+        <OpeningsTemplate openings={openings} />
       </Container>
     </>
   );

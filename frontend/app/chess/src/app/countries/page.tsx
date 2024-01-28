@@ -37,9 +37,7 @@ const CountriesPage: NextPage = async () => {
 
   return (
     <Container>
-      <div className="py-4 md:py-8">
-        <CountriesTemplate countries={countries} />
-      </div>
+      <CountriesTemplate countries={countries} />
     </Container>
   );
 };

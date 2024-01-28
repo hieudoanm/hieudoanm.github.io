@@ -49,17 +49,14 @@ export const MobileDrawer: React.FC<{
         <Divider />
         <DrawerBody>
           <div className="flex flex-col gap-y-4">
-            <Link href="/countries">
-              <Text>Countries</Text>
-            </Link>
             <Link href="/players">
               <Text>Players</Text>
             </Link>
-            <Link href="/streamers">
-              <Text>Streamers</Text>
-            </Link>
             <Link href="/titled">
               <Text>Titled</Text>
+            </Link>
+            <Link href="/countries">
+              <Text>Countries</Text>
             </Link>
             <Divider />
             <Link href="/openings">
@@ -102,17 +99,14 @@ export const Navbar: React.FC = () => {
                 </Link>
                 <div className="hidden md:block">
                   <div className="flex items-center gap-x-4">
-                    <Link href="/countries">
-                      <Text>Countries</Text>
-                    </Link>
                     <Link href="/players">
                       <Text>Players</Text>
                     </Link>
-                    <Link href="/streamers">
-                      <Text>Streamers</Text>
-                    </Link>
                     <Link href="/titled">
                       <Text>Titled</Text>
+                    </Link>
+                    <Link href="/countries">
+                      <Text>Countries</Text>
                     </Link>
                   </div>
                 </div>

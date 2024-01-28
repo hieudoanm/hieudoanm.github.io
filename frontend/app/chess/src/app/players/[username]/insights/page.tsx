@@ -18,9 +18,7 @@ const InsightsPage: NextPage<{ params: { username: string } }> = async ({
 
   return (
     <Container>
-      <div className="py-4 md:py-8">
-        <PlayerInsightsTemplate insights={insights} />
-      </div>
+      <PlayerInsightsTemplate insights={insights} />
     </Container>
   );
 };

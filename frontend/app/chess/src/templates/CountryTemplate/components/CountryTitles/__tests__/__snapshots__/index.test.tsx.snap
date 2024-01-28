@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryTitles to match snapshot 1`] = `
+<div>
+  <div
+    class="chakra-card border border-gray-200 shadow css-2dlz7"
+  >
+    <div
+      class="chakra-card__header css-0"
+    >
+      <h2
+        class="chakra-heading text-xl css-0"
+      >
+        Titles
+      </h2>
+    </div>
+    <ul
+      class="css-155za0w"
+      role="list"
+    />
+  </div>
+</div>
+`;

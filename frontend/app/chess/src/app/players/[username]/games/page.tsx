@@ -61,9 +61,7 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
 
   return (
     <Container>
-      <div className="py-4 md:py-8">
-        <PlayerGamesTemplate username={username} games={games} />
-      </div>
+      <PlayerGamesTemplate username={username} games={games} />
     </Container>
   );
 };
