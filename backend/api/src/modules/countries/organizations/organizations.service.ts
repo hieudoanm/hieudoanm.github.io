@@ -1,5 +1,5 @@
 import { PrismaPublicClient } from '@hieudoanm/common/prisma/prisma.public';
-import { OrganizationDto } from '@hieudoanm/generated/prisma/public/dto/organization.entity';
+import { OrganizationDto } from '@hieudoanm/generated/prisma/dto/organization.entity';
 import { Injectable, Logger } from '@nestjs/common';
 import { OrganizationsResponseDto } from './organizations.dto';
 

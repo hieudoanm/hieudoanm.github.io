@@ -8,7 +8,7 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "prebuild": "rimraf dist && (yarn docs || true)",
+    "prebuild": "rimraf dist && (yarn docs || true) & yarn prisma generate",
     "build": "nest build",
     "format": "biome format --write ./src ./test",
     "start": "nest start",

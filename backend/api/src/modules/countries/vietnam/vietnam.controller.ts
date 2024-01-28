@@ -1,4 +1,4 @@
-import { LicensePlateDto } from '@hieudoanm/generated/prisma/public/dto/licensePlate.entity';
+import { LicensePlateDto } from '@hieudoanm/generated/prisma/dto/licensePlate.entity';
 import { Controller, Get, Param } from '@nestjs/common';
 import { ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
 import {

@@ -1,4 +1,4 @@
-import { WordDto } from '@hieudoanm/generated/prisma/public/dto/word.entity';
+import { WordDto } from '@hieudoanm/generated/prisma/dto/word.entity';
 import { CacheInterceptor } from '@nestjs/cache-manager';
 import {
   Controller,

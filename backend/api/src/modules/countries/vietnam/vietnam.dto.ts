@@ -1,5 +1,5 @@
-import { EthnicGroupDto } from '@hieudoanm/generated/prisma/public/dto/ethnicGroup.entity';
-import { LicensePlateDto } from '@hieudoanm/generated/prisma/public/dto/licensePlate.entity';
+import { EthnicGroupDto } from '@hieudoanm/generated/prisma/dto/ethnicGroup.entity';
+import { LicensePlateDto } from '@hieudoanm/generated/prisma/dto/licensePlate.entity';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class EthnicGroupsResponseDto {

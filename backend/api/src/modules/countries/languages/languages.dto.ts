@@ -1,4 +1,4 @@
-import { LanguageDto } from '@hieudoanm/generated/prisma/public/dto/language.entity';
+import { LanguageDto } from '@hieudoanm/generated/prisma/dto/language.entity';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class LanguagesResponseDto {

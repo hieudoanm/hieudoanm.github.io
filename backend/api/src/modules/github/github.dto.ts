@@ -1,4 +1,4 @@
-import { ProgrammingLanguageDto } from '@hieudoanm/generated/prisma/public/dto/programmingLanguage.entity';
+import { ProgrammingLanguageDto } from '@hieudoanm/generated/prisma/dto/programmingLanguage.entity';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class GitHubLanguagesResponseDto {

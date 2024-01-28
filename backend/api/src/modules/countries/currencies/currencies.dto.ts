@@ -1,4 +1,4 @@
-import { CurrencyDto } from '@hieudoanm/generated/prisma/public/dto/currency.entity';
+import { CurrencyDto } from '@hieudoanm/generated/prisma/dto/currency.entity';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CurrenciesResponseDto {

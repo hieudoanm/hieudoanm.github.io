@@ -1,6 +1,6 @@
 import { PrismaPublicClient } from '@hieudoanm/common/prisma/prisma.public';
 import { Prisma, Region } from '@prisma/client';
-import { CountryDto } from '@hieudoanm/generated/prisma/public/dto/country.entity';
+import { CountryDto } from '@hieudoanm/generated/prisma/dto/country.entity';
 import { HttpService } from '@nestjs/axios';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { Inject, Injectable, Logger } from '@nestjs/common';

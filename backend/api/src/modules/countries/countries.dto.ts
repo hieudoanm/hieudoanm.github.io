@@ -1,4 +1,4 @@
-import { CountryDto } from '@hieudoanm/generated/prisma/public/dto/country.entity';
+import { CountryDto } from '@hieudoanm/generated/prisma/dto/country.entity';
 import { ApiProperty } from '@nestjs/swagger';
 import { Region } from '@prisma/client';
 import { IsBoolean, IsOptional, IsString } from 'class-validator';

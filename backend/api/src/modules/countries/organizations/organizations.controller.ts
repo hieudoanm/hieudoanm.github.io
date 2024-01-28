@@ -1,4 +1,4 @@
-import { OrganizationDto } from '@hieudoanm/generated/prisma/public/dto/organization.entity';
+import { OrganizationDto } from '@hieudoanm/generated/prisma/dto/organization.entity';
 import { Controller, Get, Param } from '@nestjs/common';
 import { ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { OrganizationsResponseDto } from './organizations.dto';

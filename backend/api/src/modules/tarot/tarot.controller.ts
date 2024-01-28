@@ -1,4 +1,4 @@
-import { TarotCardDto } from '@hieudoanm/generated/prisma/public/dto/tarotCard.entity';
+import { TarotCardDto } from '@hieudoanm/generated/prisma/dto/tarotCard.entity';
 import { CacheInterceptor } from '@nestjs/cache-manager';
 import { Controller, Get, Param, Query, UseInterceptors } from '@nestjs/common';
 import { ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';

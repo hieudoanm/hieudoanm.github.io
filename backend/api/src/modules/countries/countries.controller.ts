@@ -1,4 +1,4 @@
-import { CountryDto } from '@hieudoanm/generated/prisma/public/dto/country.entity';
+import { CountryDto } from '@hieudoanm/generated/prisma/dto/country.entity';
 import { CacheInterceptor } from '@nestjs/cache-manager';
 import {
   Controller,

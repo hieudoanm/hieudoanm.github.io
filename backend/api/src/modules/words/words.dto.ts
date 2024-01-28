@@ -1,4 +1,4 @@
-import { WordDto } from '@hieudoanm/generated/prisma/public/dto/word.entity';
+import { WordDto } from '@hieudoanm/generated/prisma/dto/word.entity';
 import { ApiProperty } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
 import { IsInt, IsOptional, Max, Min } from 'class-validator';
