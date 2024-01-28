@@ -23,7 +23,13 @@ exports[`PlayerHeader to match snapshot 1`] = `
           class="chakra-select css-1ik61og"
           id="title"
           name="title"
-        />
+        >
+          <option
+            value=""
+          >
+            Title
+          </option>
+        </select>
         <div
           class="chakra-select__icon-wrapper css-162mkon"
         >
@@ -50,7 +56,13 @@ exports[`PlayerHeader to match snapshot 1`] = `
           class="chakra-select css-1ik61og"
           id="country"
           name="country"
-        />
+        >
+          <option
+            value=""
+          >
+            Country
+          </option>
+        </select>
         <div
           class="chakra-select__icon-wrapper css-162mkon"
         >
