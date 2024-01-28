@@ -21,6 +21,7 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
+import { APP_NAME } from '@chess/common/constants/app.constants';
 import {
   GAP,
   TITLED_ABBREVIATIONS,
@@ -38,6 +39,7 @@ import {
   ChessTitle,
 } from '@prisma/client';
 import { NextPage } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import { IconType } from 'react-icons';
 import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
@@ -302,94 +304,99 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
   } = titled;
 
   return (
-    <Container>
-      <div className="py-4 md:py-8">
-        <div className="flex flex-col gap-y-4 md:gap-y-8">
-          <Box
-            display={'flex'}
-            alignItems={'center'}
-            justifyContent={'space-between'}>
-            <Menu>
-              <MenuButton
-                // as={Button}
-                // rightIcon={<Icon as={FaChevronDown} />}
-                className="bg-white px-0 text-lg md:text-4xl">
-                {TITLED_ABBREVIATIONS[title]} ({total})
-              </MenuButton>
-              <MenuList>
-                {Object.entries(TITLED_ABBREVIATIONS)
-                  .filter(([key, value]) => !value.includes('Arena'))
-                  .map(([key, value]) => (
-                    <MenuItem
-                      key={key}
-                      className={`${title === key ? 'font-bold' : ''}`}>
-                      {value}
-                    </MenuItem>
-                  ))}
-              </MenuList>
-            </Menu>
-            <Box className="rounded shadow">
-              <Select
-                id="timeRange"
-                name="timeRange"
-                placeholder="Time Range"
-                value={timeRange}>
-                <option value="week">7 Days</option>
-                <option value="month">30 Days</option>
-                <option value="quarter">90 Days</option>
-                <option value="year">1 Year</option>
-              </Select>
+    <>
+      <Head>
+        <title>{APP_NAME} - Titled</title>
+      </Head>
+      <Container>
+        <div className="py-4 md:py-8">
+          <div className="flex flex-col gap-y-4 md:gap-y-8">
+            <Box
+              display={'flex'}
+              alignItems={'center'}
+              justifyContent={'space-between'}>
+              <Menu>
+                <MenuButton
+                  // as={Button}
+                  // rightIcon={<Icon as={FaChevronDown} />}
+                  className="bg-white px-0 text-lg md:text-4xl">
+                  {TITLED_ABBREVIATIONS[title]} ({total})
+                </MenuButton>
+                <MenuList>
+                  {Object.entries(TITLED_ABBREVIATIONS)
+                    .filter(([key, value]) => !value.includes('Arena'))
+                    .map(([key, value]) => (
+                      <MenuItem
+                        key={key}
+                        className={`${title === key ? 'font-bold' : ''}`}>
+                        {value}
+                      </MenuItem>
+                    ))}
+                </MenuList>
+              </Menu>
+              <Box className="rounded shadow">
+                <Select
+                  id="timeRange"
+                  name="timeRange"
+                  placeholder="Time Range"
+                  value={timeRange}>
+                  <option value="week">7 Days</option>
+                  <option value="month">30 Days</option>
+                  <option value="quarter">90 Days</option>
+                  <option value="year">1 Year</option>
+                </Select>
+              </Box>
             </Box>
-          </Box>
-          {players.length > 1 ? (
-            <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
-              <div className="col-span-1">
-                <TitledStats
-                  title="Rapid"
-                  average={averageRapidRating}
-                  max={maxRapidRating}
-                  icon={FaClock}
-                />
+            {players.length > 1 ? (
+              <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+                <div className="col-span-1">
+                  <TitledStats
+                    title="Rapid"
+                    average={averageRapidRating}
+                    max={maxRapidRating}
+                    icon={FaClock}
+                  />
+                </div>
+                <div className="col-span-1">
+                  <TitledStats
+                    title="Blitz"
+                    average={averageBlitzRating}
+                    max={maxBlitzRating}
+                    icon={FaBolt}
+                  />
+                </div>
+                <div className="col-span-1">
+                  <TitledStats
+                    title="Bullet"
+                    average={averageBulletRating}
+                    max={maxBulletRating}
+                    icon={FaRocket}
+                  />
+                </div>
               </div>
-              <div className="col-span-1">
-                <TitledStats
-                  title="Blitz"
-                  average={averageBlitzRating}
-                  max={maxBlitzRating}
-                  icon={FaBolt}
-                />
+            ) : (
+              <></>
+            )}
+            {players.length > 1 ? (
+              <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+                <div className="col-span-1">
+                  <RapidHistogramChart players={players} />
+                </div>
+                <div className="col-span-1">
+                  <BlitzHistogramChart players={players} />
+                </div>
+                <div className="col-span-1">
+                  <BulletHistogramChart players={players} />
+                </div>
               </div>
-              <div className="col-span-1">
-                <TitledStats
-                  title="Bullet"
-                  average={averageBulletRating}
-                  max={maxBulletRating}
-                  icon={FaRocket}
-                />
-              </div>
-            </div>
-          ) : (
-            <></>
-          )}
-          {players.length > 1 ? (
-            <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
-              <div className="col-span-1">
-                <RapidHistogramChart players={players} />
-              </div>
-              <div className="col-span-1">
-                <BlitzHistogramChart players={players} />
-              </div>
-              <div className="col-span-1">
-                <BulletHistogramChart players={players} />
-              </div>
-            </div>
-          ) : (
-            <></>
-          )}
-          <PlayersTable players={players} />
+            ) : (
+              <></>
+            )}
+            <PlayersTable players={players} />
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 };
 

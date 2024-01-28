@@ -19,9 +19,9 @@ export type DevelopmentCoefficient = 10 | 20 | 40;
 export type RatingRequestBody = {
   rating: number;
   opponentRating: number;
-  result?: ChessPoint;
   age?: number;
   games?: number;
+  result?: ChessPoint;
   timeClass?: ChessTimeClass;
 };
 

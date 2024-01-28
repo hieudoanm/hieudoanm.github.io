@@ -1,11 +1,41 @@
+import { APP_NAME } from '@chess/common/constants/app.constants';
 import { Container } from '@chess/components/atoms/Container';
+import { ChessTimeClass } from '@prisma/client';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
-const RatingPage: NextPage = () => {
+type RatingPageProperties = {
+  searchParams: {
+    rating: number;
+    opponentRating: number;
+    age: number;
+    games: number;
+    result: number;
+    timeClass: ChessTimeClass;
+  };
+};
+
+const RatingPage: NextPage<RatingPageProperties> = ({
+  searchParams,
+}: RatingPageProperties) => {
+  const {
+    rating = 1000,
+    opponentRating = 1000,
+    age = 18,
+    games = 30,
+    result = 0.5,
+    timeClass = 'classical',
+  } = searchParams;
+
   return (
-    <Container>
-      <div className="py-4 md:py-8" />
-    </Container>
+    <>
+      <Head>
+        <title>{APP_NAME} - Rating</title>
+      </Head>
+      <Container>
+        <div className="py-4 md:py-8" />
+      </Container>
+    </>
   );
 };
 

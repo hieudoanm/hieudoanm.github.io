@@ -11,17 +11,13 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Icon,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
 import { APP_NAME, YEAR } from '@chess/common/constants/app.constants';
 import { Container } from '@chess/components/atoms/Container';
 import Link from 'next/link';
-import { FaGithub, FaHamburger, FaTools } from 'react-icons/fa';
+import { FaBars, FaGithub } from 'react-icons/fa';
 
 const GitHubButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
   return (
@@ -56,17 +52,21 @@ export const MobileDrawer: React.FC<{
             <Link href="/countries">
               <Text>Countries</Text>
             </Link>
+            <Link href="/players">
+              <Text>Players</Text>
+            </Link>
             <Link href="/streamers">
               <Text>Streamers</Text>
             </Link>
             <Link href="/titled">
               <Text>Titled</Text>
             </Link>
+            <Divider />
             <Link href="/openings">
               <Text>Openings</Text>
             </Link>
-            <Link href="/analysis">
-              <Text>Analysis</Text>
+            <Link href="/rating">
+              <Text>Rating</Text>
             </Link>
             <GitHubButton size="md" />
           </div>
@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
               <div className="flex items-center gap-x-4">
                 <div className="block md:hidden">
                   <Button colorScheme="teal" onClick={onOpen} size="sm">
-                    <Icon as={FaHamburger} />
+                    <Icon as={FaBars} />
                   </Button>
                 </div>
                 <Link href="/">
@@ -100,23 +100,30 @@ export const Navbar: React.FC = () => {
                     {APP_NAME}
                   </Text>
                 </Link>
+                <div className="hidden md:block">
+                  <div className="flex items-center gap-x-4">
+                    <Link href="/countries">
+                      <Text>Countries</Text>
+                    </Link>
+                    <Link href="/players">
+                      <Text>Players</Text>
+                    </Link>
+                    <Link href="/streamers">
+                      <Text>Streamers</Text>
+                    </Link>
+                    <Link href="/titled">
+                      <Text>Titled</Text>
+                    </Link>
+                  </div>
+                </div>
               </div>
               <div className="hidden md:block">
                 <div className="flex items-center gap-x-4">
-                  <Link href="/countries">
-                    <Text>Countries</Text>
-                  </Link>
-                  <Link href="/players">
-                    <Text>Players</Text>
-                  </Link>
-                  <Link href="/streamers">
-                    <Text>Streamers</Text>
-                  </Link>
-                  <Link href="/titled">
-                    <Text>Titled</Text>
-                  </Link>
                   <Link href="/openings">
                     <Text>Openings</Text>
+                  </Link>
+                  <Link href="/rating">
+                    <Text>Rating</Text>
                   </Link>
                   <GitHubButton size="sm" />
                 </div>
