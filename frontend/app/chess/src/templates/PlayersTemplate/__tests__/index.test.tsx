@@ -7,6 +7,8 @@ jest.mock('next/navigation', () => ({
     asPath: '',
     events: { on: jest.fn(), off: jest.fn() },
   }),
+  useSearchParams: jest.fn().mockReturnValue(new URLSearchParams()),
+  usePathname: jest.fn().mockResolvedValue(''),
 }));
 
 describe('PlayersTemplate', () => {

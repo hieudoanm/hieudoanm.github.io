@@ -3,73 +3,65 @@
 exports[`PlayersTemplate to match snapshot 1`] = `
 <div>
   <div
-    class="overflow-hidden rounded border"
+    class="chakra-card overflow-hidden rounded border border-gray-200 shadow css-2dlz7"
   >
     <div
-      class="chakra-card css-2dlz7"
+      class="chakra-card__header border-b css-0"
     >
-      <div
-        class="chakra-card__header border-b css-0"
+      <h2
+        class="chakra-heading text-xl css-0"
       >
-        <h2
-          class="chakra-heading text-xl css-0"
-        >
-          Players (
-          0
-          )
-        </h2>
-      </div>
-      <div
-        class="chakra-table__container css-zipzvv"
+        Players (
+        0
+        )
+      </h2>
+    </div>
+    <div
+      class="chakra-table__container css-zipzvv"
+    >
+      <table
+        class="chakra-table css-0"
       >
-        <table
-          class="chakra-table css-0"
+        <thead
+          class="css-0"
         >
-          <thead
+          <tr
             class="css-0"
           >
-            <tr
+            <th
               class="css-0"
             >
-              <th
-                class="css-0"
+              Username
+            </th>
+            <th
+              class="w-8 css-0"
+              data-is-numeric="true"
+            >
+              Rating
+            </th>
+            <th
+              class="w-8 css-0"
+              data-is-numeric="true"
+            >
+              Best
+            </th>
+            <th
+              class="w-8 css-0"
+              data-is-numeric="true"
+            >
+              <button
+                class="chakra-button css-4xx2wk"
+                type="button"
               >
-                Avatar
-              </th>
-              <th
-                class="css-0"
-              >
-                ID
-              </th>
-              <th
-                class="css-0"
-              >
-                Username
-              </th>
-              <th
-                class="css-0"
-              >
-                Title
-              </th>
-              <th
-                class="css-0"
-                data-is-numeric="true"
-              >
-                Rating
-              </th>
-              <th
-                class="css-0"
-                data-is-numeric="true"
-              >
-                Best
-              </th>
-            </tr>
-          </thead>
-          <tbody
-            class="css-0"
-          />
-        </table>
-      </div>
+                Twitch
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="css-0"
+        />
+      </table>
     </div>
   </div>
 </div>
