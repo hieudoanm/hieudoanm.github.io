@@ -146,13 +146,22 @@ export const getTitledStats = async ({
     timeRange,
   });
   await getPrismaClient().$disconnect();
+  const stats = {
+    rapid: {
+      average: Number.parseFloat(averageRapidRating.toFixed(2)),
+      max: maxRapidRating,
+    },
+    blitz: {
+      average: Number.parseFloat(averageBlitzRating.toFixed(2)),
+      max: maxBlitzRating,
+    },
+    bullet: {
+      average: Number.parseFloat(averageBulletRating.toFixed(2)),
+      max: maxBulletRating,
+    },
+  };
   return {
-    averageRapidRating: Number.parseFloat(averageRapidRating.toFixed(2)),
-    maxRapidRating,
-    averageBlitzRating: Number.parseFloat(averageBlitzRating.toFixed(2)),
-    maxBlitzRating,
-    averageBulletRating: Number.parseFloat(averageBulletRating.toFixed(2)),
-    maxBulletRating,
+    stats,
     total,
     players,
   };

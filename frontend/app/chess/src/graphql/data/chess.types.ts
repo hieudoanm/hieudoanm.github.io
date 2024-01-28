@@ -22,18 +22,17 @@ export type Titled = {
   players: ChessPlayer[];
 };
 
+export type Stat = { rapid: number; blitz: number; bullet: number };
+
+export type Stats = { average: Stat; max: Stat };
+
 export type Country = {
   countryCode: string;
   country: string;
+  stats: Stats;
   total: number;
-  averageRapidRating: number;
-  averageBlitzRating: number;
-  averageBulletRating: number;
-  maxRapidRating: number;
-  maxBlitzRating: number;
-  maxBulletRating: number;
-  players: ChessPlayer[];
   titles: ChessTitle[];
+  players: ChessPlayer[];
 };
 
 export type CountriesResponse = {

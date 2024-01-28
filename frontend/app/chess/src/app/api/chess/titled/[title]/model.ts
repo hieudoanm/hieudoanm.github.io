@@ -5,13 +5,19 @@ export type TitlesDto = {
   titles: string[];
 };
 
+export type TitledStat = {
+  average: number;
+  max: number;
+};
+
+export type TitledStats = {
+  rapid: TitledStat;
+  blitz: TitledStat;
+  bullet: TitledStat;
+};
+
 export type TitledStatsDto = {
-  averageRapidRating: number;
-  maxRapidRating: number;
-  averageBlitzRating: number;
-  maxBlitzRating: number;
-  averageBulletRating: number;
-  maxBulletRating: number;
+  stats: TitledStats;
   total: number;
   players: ChessPlayer[];
 };

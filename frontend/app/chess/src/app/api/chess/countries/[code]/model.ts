@@ -1,18 +1,21 @@
 import { ChessPlayer } from '@prisma/client';
 
-export type TitleDto = {
+export type Title = {
   title: string;
   total: number;
 };
 
+export type CountryStat = { average: number; max: number };
+
+export type CountryStats = {
+  rapid: CountryStat;
+  blitz: CountryStat;
+  bullet: CountryStat;
+};
+
 export type CountryResponse = {
-  averageRapidRating: number;
-  averageBlitzRating: number;
-  averageBulletRating: number;
-  maxRapidRating: number;
-  maxBlitzRating: number;
-  maxBulletRating: number;
+  stats: CountryStats;
   total: number;
+  titles: Title[];
   players: ChessPlayer[];
-  titles: TitleDto[];
 };

@@ -3,16 +3,22 @@ type Country {
   count: Int
 }
 
+type CountryStat {
+  average: Float
+  max: Float
+}
+
+type CountryStats {
+  rapid: CountryStat
+  blitz: CountryStat
+  bullet: CountryStat
+}
+
 type TitledCountry {
-  averageRapidRating: Float
-  averageBlitzRating: Float
-  averageBulletRating: Float
-  maxRapidRating: Int
-  maxBlitzRating: Int
-  maxBulletRating: Int
+  stats: CountryStats
   total: Int
-  players: [Player]
   titles: [TitleTotal]
+  players: [Player]
 }
 
 type TitleTotal {

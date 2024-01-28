@@ -11,9 +11,9 @@ type Path = {
 
 type MapsProperties = {
   viewBox?: string;
-  width: string;
-  height: string;
-  paths: Path[];
+  width?: string;
+  height?: string;
+  paths?: Path[];
 };
 
 type Data = { id: string; label: string; value: number; color: string };
@@ -46,7 +46,7 @@ const drawChart = (
   svg
     .append('g')
     .selectAll('path')
-    .data(maps.paths)
+    .data(maps.paths ?? [])
     .enter()
     .append('path')
     .attr('d', (path: Path) => path.d)

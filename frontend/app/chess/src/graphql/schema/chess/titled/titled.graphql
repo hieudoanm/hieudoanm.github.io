@@ -1,10 +1,16 @@
+type TitledStat {
+  average: Float
+  max: Float
+}
+
+type TitledStats {
+  rapid: TitledStat
+  blitz: TitledStat
+  bullet: TitledStat
+}
+
 type Titled {
-  averageRapidRating: Float
-  averageBlitzRating: Float
-  averageBulletRating: Float
-  maxRapidRating: Int
-  maxBlitzRating: Int
-  maxBulletRating: Int
+  stats: TitledStats
   total: Int
   players: [Player]
 }

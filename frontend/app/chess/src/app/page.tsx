@@ -3,7 +3,7 @@ import { getInsights } from '@chess/common/services/insights.service';
 import { Insights } from '@chess/common/types/chess';
 import { Container } from '@chess/components/atoms/Container';
 import { Hero } from '@chess/components/atoms/Hero';
-import { InsightsTemplate } from '@chess/templates/PlayerInsightsTemplate';
+import { PlayerInsightsTemplate } from '@chess/templates/PlayerInsightsTemplate';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -19,7 +19,7 @@ const HomePage: NextPage = async () => {
       <div id="demo">
         <Container>
           <div className="py-4 md:py-8">
-            <InsightsTemplate insights={insights} />
+            <PlayerInsightsTemplate insights={insights} />
           </div>
         </Container>
       </div>

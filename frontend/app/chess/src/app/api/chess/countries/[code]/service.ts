@@ -98,15 +98,25 @@ export const getCountry = async (
 
   await getPrismaClient().$disconnect();
 
+  const stats = {
+    rapid: {
+      average: averageRapidRating ?? 0,
+      max: maxRapidRating ?? 0,
+    },
+    blitz: {
+      average: averageBlitzRating ?? 0,
+      max: maxBlitzRating ?? 0,
+    },
+    bullet: {
+      average: averageBulletRating ?? 0,
+      max: maxBulletRating ?? 0,
+    },
+  };
+
   return {
-    averageRapidRating: averageRapidRating ?? 0,
-    averageBlitzRating: averageBlitzRating ?? 0,
-    averageBulletRating: averageBulletRating ?? 0,
-    maxRapidRating: maxRapidRating ?? 0,
-    maxBlitzRating: maxBlitzRating ?? 0,
-    maxBulletRating: maxBulletRating ?? 0,
+    stats,
     total,
-    players,
     titles,
+    players,
   };
 };

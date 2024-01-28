@@ -225,17 +225,23 @@ const PlayersTable: React.FC<{
   );
 };
 
+export type TitledStat = {
+  average: number;
+  max: number;
+};
+
+export type TitledStats = {
+  rapid: TitledStat;
+  blitz: TitledStat;
+  bullet: TitledStat;
+};
+
 export type TitledTemplateProperties = {
-  title: ChessTitle;
-  total: number;
   timeRange: TimeRange;
+  title: ChessTitle;
+  stats: TitledStats;
+  total: number;
   players: FullChessPlayer[];
-  averageRapidRating: number;
-  maxRapidRating: number;
-  averageBlitzRating: number;
-  maxBlitzRating: number;
-  averageBulletRating: number;
-  maxBulletRating: number;
 };
 
 export const TitledTemplate: React.FC<TitledTemplateProperties> = ({
@@ -243,12 +249,7 @@ export const TitledTemplate: React.FC<TitledTemplateProperties> = ({
   total = 0,
   timeRange,
   players = [],
-  averageRapidRating = 0,
-  maxRapidRating = 0,
-  averageBlitzRating = 0,
-  maxBlitzRating = 0,
-  averageBulletRating = 0,
-  maxBulletRating = 0,
+  stats,
 }) => {
   return (
     <div className="flex flex-col gap-y-4 md:gap-y-8">
@@ -290,24 +291,24 @@ export const TitledTemplate: React.FC<TitledTemplateProperties> = ({
           <div className="col-span-1">
             <ChessTitledStats
               title="Rapid"
-              average={averageRapidRating}
-              max={maxRapidRating}
+              average={stats.rapid.average}
+              max={stats.rapid.max}
               icon={FaClock}
             />
           </div>
           <div className="col-span-1">
             <ChessTitledStats
               title="Blitz"
-              average={averageBlitzRating}
-              max={maxBlitzRating}
+              average={stats.blitz.average}
+              max={stats.blitz.max}
               icon={FaBolt}
             />
           </div>
           <div className="col-span-1">
             <ChessTitledStats
               title="Bullet"
-              average={averageBulletRating}
-              max={maxBulletRating}
+              average={stats.bullet.average}
+              max={stats.bullet.max}
               icon={FaRocket}
             />
           </div>
