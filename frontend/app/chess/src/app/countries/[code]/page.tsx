@@ -7,7 +7,6 @@ import {
   CardHeader,
   Divider,
   Heading,
-  Icon,
   List,
   ListItem,
   Stat,
@@ -156,9 +155,7 @@ const PlayersTable: React.FC<{
   return (
     <Card className="border border-gray-200 shadow">
       <CardHeader>
-        <Heading as="h1" className="text-xl">
-          Players ({total})
-        </Heading>
+        <Heading className="text-xl">Players ({total})</Heading>
       </CardHeader>
       <Divider />
       <TableContainer>
@@ -238,7 +235,7 @@ const CountryStats: React.FC<{
             <StatNumber>{average.toLocaleString()}</StatNumber>
             <StatHelpText>Highest: {max}</StatHelpText>
           </Stat>
-          {icon ? (
+          {/* {icon ? (
             <div>
               <Box bgColor={'teal.500'} color={'white'} className="rounded p-2">
                 <Icon as={icon} boxSize={6} />
@@ -246,7 +243,7 @@ const CountryStats: React.FC<{
             </div>
           ) : (
             <></>
-          )}
+          )} */}
         </div>
       </CardBody>
     </Card>

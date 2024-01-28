@@ -1,7 +1,7 @@
 type TitledCountries {
   countryCode: String
   country: String
-  total: Int
+  count: Int
 }
 
 type TitledCountry {

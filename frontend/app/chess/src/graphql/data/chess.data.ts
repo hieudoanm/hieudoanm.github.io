@@ -1,15 +1,13 @@
 import { RESTDataSource } from '@apollo/datasource-rest';
 import { GRAPHQL_BASE_URL } from '@chess/common/environments/environments';
+import { ChessGame, ChessPlayer, ChessTitle } from '@prisma/client';
 import {
-  ChessGame,
-  ChessOpening,
-  ChessPlayer,
-  ChessStats,
-  ChessTitle,
-} from '@prisma/client';
-import {
+  CountriesResponse,
   Country,
   GamesSynced,
+  OpeningsResponse,
+  Player,
+  PlayersResponse,
   StreamersResponse,
   TimeRange,
   Titled,
@@ -19,11 +17,14 @@ export class ChessDataSource extends RESTDataSource {
   override baseURL = GRAPHQL_BASE_URL;
 
   async getCountries(): Promise<Country[]> {
-    return this.get('/api/chess/countries');
+    const endpoint: string = '/api/chess/countries';
+    const { countries = [] } = await this.get<CountriesResponse>(endpoint);
+    return countries;
   }
 
   async getCountry(code: string): Promise<Country> {
-    return this.get(`/api/chess/countries/${code}`);
+    const endpoint: string = `/api/chess/countries/${code}`;
+    return this.get(endpoint);
   }
 
   async getOpenings({
@@ -32,7 +33,7 @@ export class ChessDataSource extends RESTDataSource {
   }: {
     eco: string;
     name: string;
-  }): Promise<{ total: number; openings: ChessOpening[] }> {
+  }): Promise<OpeningsResponse> {
     const urlSearchParameters: URLSearchParams = new URLSearchParams();
     if (eco !== '') {
       urlSearchParameters.set('eco', eco);
@@ -40,7 +41,8 @@ export class ChessDataSource extends RESTDataSource {
     if (name !== '') {
       urlSearchParameters.set('name', name);
     }
-    return this.get(`/api/chess/openings?${urlSearchParameters.toString()}`);
+    const endpoint: string = `/api/chess/openings?${urlSearchParameters.toString()}`;
+    return this.get<OpeningsResponse>(endpoint);
   }
 
   async getPlayers({
@@ -49,29 +51,30 @@ export class ChessDataSource extends RESTDataSource {
   }: {
     limit?: number;
     offset?: number;
-  }): Promise<(ChessStats & { player: ChessPlayer })[]> {
+  }): Promise<Player[]> {
     const parameters = new URLSearchParams();
     parameters.set('limit', limit.toString());
     parameters.set('offset', offset.toString());
-    const url = `/api/chess/players?${parameters.toString()}`;
-    const { players = [] } = await this.get<{
-      players: (ChessStats & { player: ChessPlayer })[];
-    }>(url);
+    const endpoint = `/api/chess/players?${parameters.toString()}`;
+    const { players = [] } = await this.get<PlayersResponse>(endpoint);
     return players;
   }
 
   async getPlayer(username: string): Promise<ChessPlayer> {
-    return this.get(`/api/chess/players/${username}`);
+    const endpoint: string = `/api/chess/players/${username}`;
+    return this.get(endpoint);
   }
 
   async syncPlayer(username: string): Promise<ChessPlayer> {
-    return this.post(`/api/chess/players/${username}`);
+    const endpoint: string = `/api/chess/players/${username}`;
+    return this.post(endpoint);
   }
 
   async getPlayerGames(
     username: string
   ): Promise<{ total: number; games: ChessGame[] }> {
-    return this.get(`/api/chess/players/${username}/games`);
+    const endpoint = `/api/chess/players/${username}/games`;
+    return this.get(endpoint);
   }
 
   async syncPlayerGames(

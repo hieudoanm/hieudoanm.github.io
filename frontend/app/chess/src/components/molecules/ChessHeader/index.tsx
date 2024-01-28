@@ -75,7 +75,7 @@ export const ChessHeader: React.FC<ChessHeaderProperties> = ({
     <div className="flex items-center justify-between gap-x-2">
       <div className="flex items-center gap-x-2 md:gap-x-4">
         <div
-          className="aspect-square w-16 rounded-xl bg-contain bg-center"
+          className="aspect-square w-16 rounded-xl border bg-contain bg-center"
           style={{ backgroundImage: `url(${avatar})` }}
         />
         <div>

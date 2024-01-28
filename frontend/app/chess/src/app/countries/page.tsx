@@ -29,9 +29,8 @@ import { query } from '@chess/graphql/apollo/client';
 import chroma from 'chroma-js';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
-type Country = { countryCode: string; country: string; total: number };
+type Country = { countryCode: string; count: number };
 
 const CountriesTable: React.FC<{ countries: Country[] }> = ({
   countries = [],
@@ -48,26 +47,23 @@ const CountriesTable: React.FC<{ countries: Country[] }> = ({
             <Tr>
               <Th className="w-4">No</Th>
               <Th>Country</Th>
-              <Th isNumeric>Total</Th>
+              <Th isNumeric>Count</Th>
             </Tr>
           </Thead>
           <Tbody>
-            {countries.map(
-              (
-                { countryCode = '', country = '', total = 0 },
-                index: number
-              ) => {
-                return (
-                  <Tr key={countryCode}>
-                    <Td>{index + 1}</Td>
-                    <Td>
-                      <Link href={`/countries/${countryCode}`}>{country}</Link>
-                    </Td>
-                    <Td isNumeric>{total}</Td>
-                  </Tr>
-                );
-              }
-            )}
+            {countries.map(({ countryCode = '', count = 0 }, index: number) => {
+              return (
+                <Tr key={countryCode}>
+                  <Td>{index + 1}</Td>
+                  <Td>
+                    <Link href={`/countries/${countryCode}`}>
+                      {countryCode}
+                    </Link>
+                  </Td>
+                  <Td isNumeric>{count}</Td>
+                </Tr>
+              );
+            })}
           </Tbody>
         </Table>
       </TableContainer>
@@ -82,8 +78,8 @@ const CountriesMaps: React.FC<{ countries: Country[] }> = ({
 
   const gap = 50;
   const numberOfTitlePlayers: number[] = countries
-    .map(({ total }) => total)
-    .filter((total: number) => total < 1000);
+    .map(({ count }) => count)
+    .filter((count: number) => count < 1000);
   const min: number = Math.round(Math.min(...numberOfTitlePlayers) / gap) * gap;
   const max: number = Math.ceil(Math.max(...numberOfTitlePlayers) / gap) * gap;
   const range: number[] = Array.from({ length: (max - min) / gap }).map(
@@ -96,20 +92,20 @@ const CountriesMaps: React.FC<{ countries: Country[] }> = ({
     .scale([minColor, maxColor])
     .mode('rgb')
     .colors(range.length);
-  const data = countries.map(({ countryCode, country, total }) => {
-    if (total > max) {
+  const data = countries.map(({ countryCode = '', count = 0 }) => {
+    if (count > max) {
       return {
         id: countryCode,
-        label: country,
-        value: total,
+        label: countryCode,
+        value: count,
         color: overColor,
       };
     }
     const colorIndex: number = range.findIndex(
-      (start: number) => start <= total && total < start + 100
+      (start: number) => start <= count && count < start + 100
     );
     const color = colors[colorIndex];
-    return { id: countryCode, label: country, value: total, color };
+    return { id: countryCode, label: countryCode, value: count, color };
   });
   return (
     <Card className="border border-gray-200 shadow">
@@ -156,8 +152,7 @@ const countriesQuery: DocumentNode = gql`
     chess {
       countries {
         countryCode
-        country
-        total
+        count
       }
     }
   }
@@ -167,6 +162,7 @@ type CountriesResponse = { chess: { countries: Country[] } };
 
 const CountriesPage: NextPage = async () => {
   logger.info('CountriesPage');
+
   const data = await query<CountriesResponse>({ query: countriesQuery });
   const countries = data?.chess?.countries ?? [];
 

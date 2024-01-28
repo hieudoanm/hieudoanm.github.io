@@ -4,7 +4,12 @@ import {
   ONE_WEEK,
   ONE_YEAR,
 } from '@chess/common/constants/time.constants';
-import { ChessPlayer, ChessTitle } from '@prisma/client';
+import {
+  ChessOpening,
+  ChessPlayer,
+  ChessStats,
+  ChessTitle,
+} from '@prisma/client';
 
 export type Titled = {
   averageRapidRating: number;
@@ -31,6 +36,10 @@ export type Country = {
   titles: ChessTitle[];
 };
 
+export type CountriesResponse = {
+  countries: Country[];
+};
+
 export type GamesSynced = { total: number; synced: number; existed: number };
 
 export type StreamersResponse = {
@@ -40,6 +49,17 @@ export type StreamersResponse = {
 };
 
 export type TimeRange = 'week' | 'month' | 'quarter' | 'year';
+
+export type OpeningsResponse = {
+  total: number;
+  openings: ChessOpening[];
+};
+
+export type Player = ChessStats & { player: ChessPlayer };
+
+export type PlayersResponse = {
+  players: Player[];
+};
 
 export const timeRangeInMilliseconds: Record<TimeRange, number> = {
   week: ONE_WEEK,

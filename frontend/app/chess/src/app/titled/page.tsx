@@ -393,7 +393,7 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
 };
 
 const titledQuery = gql`
-  query TitledQuery($title: String!, $timeRange: TimeRange) {
+  query TitledQuery($title: String!, $timeRange: String) {
     chess {
       titled(title: $title, timeRange: $timeRange) {
         averageRapidRating
