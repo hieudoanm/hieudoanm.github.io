@@ -3,12 +3,13 @@
 import { DocumentNode, gql } from '@apollo/client';
 import { Button, Heading, Icon, Text, useToast } from '@chakra-ui/react';
 import { TitleBadge } from '@chess/components/atoms/TitleBadge';
+import { ChessTitle } from '@prisma/client';
 import Link from 'next/link';
 import { FaCheckCircle, FaSync, FaTwitch } from 'react-icons/fa';
 
 type ChessHeaderProperties = {
   avatar: string;
-  title: string;
+  title: ChessTitle | null;
   name: string;
   username: string;
   verified: boolean;
@@ -51,9 +52,9 @@ const mutation: DocumentNode = gql`
 `;
 
 export const ChessHeader: React.FC<ChessHeaderProperties> = ({
-  avatar = '',
-  title = '',
+  title,
   name = '',
+  avatar = '',
   username = '',
   verified = false,
   is_streamer = false,
