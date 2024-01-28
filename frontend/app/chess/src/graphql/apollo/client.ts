@@ -30,7 +30,10 @@ export const query = async <T>(
 ): Promise<T> => {
   try {
     logger.info(`apolloClient.query name=${name} URI=${URI}`);
-    const { data } = await getApolloClient(URI).query<T>({ ...queryOptions });
+    const { data } = await getApolloClient(URI).query<T>({
+      ...queryOptions,
+      fetchPolicy: 'network-only',
+    });
     return data;
   } catch (error) {
     logger.error(`apolloClient.query name=${name} error=${error}`);

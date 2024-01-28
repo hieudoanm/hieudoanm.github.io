@@ -6,15 +6,30 @@ import { ChessOpening } from '@prisma/client';
   return int ?? this.toString();
 };
 
-export type OpeningsResponse = { total: number; openings: ChessOpening[] };
+export type OpeningsResponse = {
+  total: number;
+  limit: number;
+  offset: number;
+  openings: ChessOpening[];
+};
 
-export const getOpenings = async (eco?: string): Promise<OpeningsResponse> => {
+export const getOpenings = async ({
+  eco,
+  limit = 100,
+  offset = 0,
+}: {
+  eco?: string;
+  limit?: number;
+  offset?: number;
+}): Promise<OpeningsResponse> => {
   const where = { eco };
   const openings: ChessOpening[] =
     await getPrismaClient().chessOpening.findMany({
       where,
+      take: limit,
+      skip: offset,
     });
   const total: number = openings.length;
   await getPrismaClient().$disconnect();
-  return { total, openings };
+  return { total, limit, offset, openings };
 };
