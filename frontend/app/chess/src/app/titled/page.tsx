@@ -71,7 +71,7 @@ const titledQuery = gql`
 
 type TitledData = {
   chess: {
-    titled: {
+    title: {
       stats: Stats;
       total: number;
       players: FullChessPlayer[];
@@ -98,8 +98,8 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
     variables: { title, timeRange },
   };
   const data: TitledData = await query<TitledData>('titledQuery', queryOptions);
-  const titled = data?.chess?.titled ?? {};
-  const { stats, total = 0, players = [] } = titled;
+  const titleData = data?.chess?.title ?? {};
+  const { stats, total = 0, players = [] } = titleData;
 
   return (
     <>
