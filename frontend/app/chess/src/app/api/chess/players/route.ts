@@ -38,12 +38,15 @@ export const GET = async (
     offset,
     title,
   });
-  return NextResponse.json({
-    offset,
-    limit,
-    total,
-    players,
-    countries,
-    titles,
-  });
+  return NextResponse.json<PlayersResponse>(
+    {
+      offset,
+      limit,
+      total,
+      players,
+      countries,
+      titles,
+    },
+    { status: 200 }
+  );
 };

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpeningsHeader to match snapshot 1`] = `
+<div>
+  <h2
+    class="chakra-heading css-0"
+  >
+    Openings (
+    0
+    )
+  </h2>
+</div>
+`;

@@ -10,5 +10,5 @@ export const GET = async (
 ): Promise<NextResponse<Insights>> => {
   const username: string = params.username ?? '';
   const insights: Insights = await getInsights(username);
-  return NextResponse.json(insights, { status: 200 });
+  return NextResponse.json<Insights>(insights, { status: 200 });
 };

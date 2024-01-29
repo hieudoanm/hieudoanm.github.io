@@ -108,20 +108,21 @@ const mapProfile = (player: Player, archives: string[]) => {
 };
 
 const syncStats = async (username: string, id: number): Promise<number> => {
-  if (!id) return id;
-  const stats = await getStats(username);
-  const playerStats = mapStats(stats, id);
-  for (const timeClassStats of playerStats) {
-    await getPrismaClient().chessStats.upsert({
-      create: timeClassStats,
-      update: timeClassStats,
-      where: {
-        playerId_timeClass: {
-          playerId: id,
-          timeClass: timeClassStats.timeClass,
+  if (id) {
+    const stats = await getStats(username);
+    const playerStats = mapStats(stats, id);
+    for (const timeClassStats of playerStats) {
+      await getPrismaClient().chessStats.upsert({
+        create: timeClassStats,
+        update: timeClassStats,
+        where: {
+          playerId_timeClass: {
+            playerId: id,
+            timeClass: timeClassStats.timeClass,
+          },
         },
-      },
-    });
+      });
+    }
   }
   return id;
 };

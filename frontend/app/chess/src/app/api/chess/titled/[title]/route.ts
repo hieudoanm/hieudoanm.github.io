@@ -15,5 +15,5 @@ export const GET = async (
     (searchParams.get('timeRange') as TimeRange) ?? 'year';
   const title: ChessTitle = (params.title as ChessTitle) ?? 'GM';
   const titleStats = await getTitledStats({ timeRange, title });
-  return NextResponse.json(titleStats, { status: 200 });
+  return NextResponse.json<TitledStatsDto>(titleStats, { status: 200 });
 };

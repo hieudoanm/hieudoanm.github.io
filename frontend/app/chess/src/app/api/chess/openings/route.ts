@@ -23,5 +23,8 @@ export const GET = async (
     limit,
     offset,
   });
-  return NextResponse.json({ total, limit, offset, openings }, { status: 200 });
+  return NextResponse.json<OpeningsResponse>(
+    { total, limit, offset, openings },
+    { status: 200 }
+  );
 };

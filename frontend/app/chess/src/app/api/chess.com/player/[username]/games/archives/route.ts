@@ -1,4 +1,5 @@
 import { getArchives } from '@chess/common/clients/chess.com/chess.client';
+import { ArchivesResponse } from '@chess/common/clients/chess.com/chess.dto';
 import { NextRequest, NextResponse } from 'next/server';
 
 type PlayerParameters = { params: { username: string } };
@@ -6,8 +7,8 @@ type PlayerParameters = { params: { username: string } };
 export const GET = async (
   _request: NextRequest,
   { params }: PlayerParameters
-) => {
+): Promise<NextResponse> => {
   const username: string = params.username ?? '';
-  const archives = await getArchives(username);
-  return NextResponse.json(archives);
+  const archivesResponse = await getArchives(username);
+  return NextResponse.json<ArchivesResponse>(archivesResponse, { status: 200 });
 };

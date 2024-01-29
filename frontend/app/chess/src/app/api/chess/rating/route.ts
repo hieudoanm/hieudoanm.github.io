@@ -8,5 +8,5 @@ export const POST = async (
   const ratingRequestBody: RatingRequestBody = await request.json();
   logger.info(`ratingRequestBody=${JSON.stringify(ratingRequestBody)}`);
   const rating = calculateRating(ratingRequestBody);
-  return NextResponse.json({ rating }, { status: 200 });
+  return NextResponse.json<RatingResponse>({ rating }, { status: 200 });
 };

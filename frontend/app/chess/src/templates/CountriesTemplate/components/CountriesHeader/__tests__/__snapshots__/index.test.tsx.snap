@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayerHeader to match snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center justify-between"
+  >
+    <h2
+      class="chakra-heading css-0"
+    >
+      Countries (
+      0
+      )
+    </h2>
+    <div
+      class="chakra-button__group css-1ayoy1w"
+      data-attached=""
+      data-orientation="horizontal"
+      role="group"
+    >
+      <button
+        class="chakra-button css-1fysbuj"
+        type="button"
+      >
+        List
+      </button>
+      <button
+        class="chakra-button css-1fysbuj"
+        type="button"
+      >
+        Maps
+      </button>
+    </div>
+  </div>
+</div>
+`;

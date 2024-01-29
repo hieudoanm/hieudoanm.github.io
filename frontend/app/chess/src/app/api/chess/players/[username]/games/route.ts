@@ -35,7 +35,7 @@ export const GET = async (
     limit,
     offset,
   });
-  return NextResponse.json(response, { status: 200 });
+  return NextResponse.json<GamesResponse>(response, { status: 200 });
 };
 
 export const POST = async (
@@ -46,5 +46,5 @@ export const POST = async (
   const body: { month: number; year: number } = await request.json();
   const { month, year } = body;
   const response = await syncGames(username, { month, year });
-  return NextResponse.json(response, { status: 200 });
+  return NextResponse.json<SyncedResponse>(response, { status: 200 });
 };

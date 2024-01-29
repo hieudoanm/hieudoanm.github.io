@@ -1,7 +1,6 @@
 import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
-import { TitledTemplate } from '..';
-import { Stats } from '../components/TitledStats';
+import { CountriesHeader } from '..';
 
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
@@ -12,15 +11,13 @@ jest.mock('next/navigation', () => ({
   useSearchParams: jest.fn().mockReturnValue(new URLSearchParams()),
 }));
 
-describe('TitledTemplate', () => {
+describe('PlayerHeader', () => {
   beforeEach(() => {
     mockResizeObserver();
   });
 
   it('to match snapshot', () => {
-    const { container } = render(
-      <TitledTemplate total={0} players={[]} stats={{} as Stats} />
-    );
+    const { container } = render(<CountriesHeader total={0} />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -2,8 +2,8 @@
 
 import { Heading, Select } from '@chakra-ui/react';
 import { TITLED_ABBREVIATIONS } from '@chess/common/constants/chess.constants';
+import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import { ChessTitle } from '@prisma/client';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 export type PlayersHeaderProperties = {
   total: number;
@@ -16,12 +16,8 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
   titles = [],
   countries = [],
 }) => {
-  const router = useRouter();
-  const pathname: string = usePathname();
-  const searchParameters = useSearchParams();
-  const title: ChessTitle =
-    (searchParameters.get('title') as ChessTitle) ?? undefined;
-  const countryCode: string = searchParameters.get('countryCode') ?? '';
+  const [countryCode, setCountryCode] = useSearchParameter('countryCode');
+  const [title, setTitle] = useSearchParameter('title');
 
   return (
     <div className="flex items-center justify-between">
@@ -31,13 +27,11 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
           aria-label="Title"
           id="title"
           name="title"
+          className="shadow"
           value={title}
           onChange={(event) => {
             const newTitle: string = event.target.value;
-            const newSearchParameters = new URLSearchParams(searchParameters);
-            newSearchParameters.set('title', newTitle);
-            const href: string = `${pathname}?${newSearchParameters.toString()}`;
-            router.push(href);
+            setTitle(newTitle);
           }}>
           <option value="">Title</option>
           {titles.map(({ title }) => (
@@ -50,13 +44,11 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
           aria-label="Country"
           id="country"
           name="country"
+          className="shadow"
           value={countryCode}
           onChange={(event) => {
             const newCountryCode: string = event.target.value;
-            const newSearchParameters = new URLSearchParams(searchParameters);
-            newSearchParameters.set('countryCode', newCountryCode);
-            const href: string = `${pathname}?${newSearchParameters.toString()}`;
-            router.push(href);
+            setCountryCode(newCountryCode);
           }}>
           <option value="">Country</option>
           {countries.map(({ countryCode }) => (

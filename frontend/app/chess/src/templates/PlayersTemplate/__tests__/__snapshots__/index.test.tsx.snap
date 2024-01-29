@@ -23,7 +23,7 @@ exports[`PlayersTemplate to match snapshot 1`] = `
         >
           <select
             aria-label="Title"
-            class="chakra-select css-1ik61og"
+            class="chakra-select shadow css-1ik61og"
             id="title"
             name="title"
           >
@@ -56,7 +56,7 @@ exports[`PlayersTemplate to match snapshot 1`] = `
         >
           <select
             aria-label="Country"
-            class="chakra-select css-1ik61og"
+            class="chakra-select shadow css-1ik61og"
             id="country"
             name="country"
           >

@@ -1,9 +1,9 @@
-import { BASE_URL, PROXY } from '@chess/common/environments/environments';
+import { BASE_URL } from '@chess/common/environments/environments';
 import { logger } from '@chess/common/libs/logger';
 import { addZero } from '@chess/common/utils/add-zero';
 import axios from 'axios';
 import {
-  Archives,
+  ArchivesResponse,
   FullPlayer,
   Game,
   GamesResponse,
@@ -58,11 +58,13 @@ export const getStats = async (username: string): Promise<Stats> => {
   }
 };
 
-export const getArchives = async (username: string): Promise<Archives> => {
+export const getArchives = async (
+  username: string
+): Promise<ArchivesResponse> => {
   try {
     const url = getPlayerArchivesUrl(username);
     logger.info(`getArchives url=${url}`);
-    const { data } = await axios.get<Archives>(url);
+    const { data } = await axios.get<ArchivesResponse>(url);
     return data;
   } catch (error) {
     logger.error(`getArchives error=${error}`);

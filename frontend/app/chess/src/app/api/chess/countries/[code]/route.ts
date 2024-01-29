@@ -10,5 +10,5 @@ export const GET = async (
 ): Promise<NextResponse<CountryResponse>> => {
   const code: string = params.code ?? '';
   const country = await getCountry(code);
-  return NextResponse.json(country, { status: 200 });
+  return NextResponse.json<CountryResponse>(country, { status: 200 });
 };

@@ -56,10 +56,6 @@ export const CountriesMaps: React.FC<CountriesMapsProperties> = ({
   });
   return (
     <Card className="border border-gray-200 shadow">
-      <CardHeader>
-        <Heading className="text-xl">Countries ({countries.length})</Heading>
-      </CardHeader>
-      <Divider />
       <CardBody>
         <div className="flex items-center gap-x-4 md:gap-x-8">
           <div className="grow">

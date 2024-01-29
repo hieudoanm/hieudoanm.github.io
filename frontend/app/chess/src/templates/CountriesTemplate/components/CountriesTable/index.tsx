@@ -1,8 +1,5 @@
 import {
   Card,
-  CardHeader,
-  Divider,
-  Heading,
   Table,
   TableContainer,
   Tbody,
@@ -23,10 +20,6 @@ export const CountriesTable: React.FC<CountriesTableProperties> = ({
 }) => {
   return (
     <Card className="border border-gray-200 shadow">
-      <CardHeader>
-        <Heading className="text-xl">Countries ({countries.length})</Heading>
-      </CardHeader>
-      <Divider />
       <TableContainer>
         <Table>
           <Thead>

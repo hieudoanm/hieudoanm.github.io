@@ -1,6 +1,5 @@
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
-import { CountriesMaps } from './components/CountriesMaps';
-import { CountriesTable } from './components/CountriesTable';
+import { CountriesHeader } from './components/CountriesHeader';
+import { CountriesView } from './components/CountriesView';
 
 export type Country = { countryCode: string; count: number };
 
@@ -13,20 +12,8 @@ export const CountriesTemplate: React.FC<CountriesTemplateProperties> = ({
 }) => {
   return (
     <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
-      <Tabs isFitted variant="soft-rounded" colorScheme="teal">
-        <TabList>
-          <Tab>Maps</Tab>
-          <Tab>List</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <CountriesMaps countries={countries} />
-          </TabPanel>
-          <TabPanel>
-            <CountriesTable countries={countries} />
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
+      <CountriesHeader total={countries.length} />
+      <CountriesView countries={countries} />
     </div>
   );
 };

@@ -6,21 +6,6 @@ exports[`CountriesTable to match snapshot 1`] = `
     class="chakra-card border border-gray-200 shadow css-2dlz7"
   >
     <div
-      class="chakra-card__header css-0"
-    >
-      <h2
-        class="chakra-heading text-xl css-0"
-      >
-        Countries (
-        0
-        )
-      </h2>
-    </div>
-    <hr
-      aria-orientation="horizontal"
-      class="chakra-divider css-1upb9tn"
-    />
-    <div
       class="chakra-table__container css-zipzvv"
     >
       <table

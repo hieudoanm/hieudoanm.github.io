@@ -5,144 +5,83 @@ exports[`TitledHeader to match snapshot 1`] = `
   <div
     class="flex items-center justify-between"
   >
-    <button
-      aria-controls="menu-list-:r1:"
-      aria-expanded="false"
-      aria-haspopup="menu"
-      class="chakra-menu__menu-button bg-white px-0 text-lg md:text-4xl css-1eqi7qs"
-      id="menu-button-:r1:"
+    <h2
+      class="chakra-heading css-0"
     >
-      <span
-        class="css-xl71ch"
-      >
-        Grand Master
-         (
-        0
-        )
-      </span>
-    </button>
+      Players (
+      0
+      )
+    </h2>
     <div
-      class="css-0"
-      style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
-    >
-      <div
-        aria-orientation="vertical"
-        class="chakra-menu__menu-list css-sjt5nk"
-        id="menu-list-:r1:"
-        role="menu"
-        style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
-        tabindex="-1"
-      >
-        <button
-          class="chakra-menu__menuitem font-bold css-1k756t9"
-          data-index="0"
-          id="menu-list-:r1:-menuitem-:r2:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          Grand Master
-        </button>
-        <button
-          class="chakra-menu__menuitem css-1k756t9"
-          data-index="1"
-          id="menu-list-:r1:-menuitem-:r3:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          International Master
-        </button>
-        <button
-          class="chakra-menu__menuitem css-1k756t9"
-          data-index="2"
-          id="menu-list-:r1:-menuitem-:r4:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          FIDE Master
-        </button>
-        <button
-          class="chakra-menu__menuitem css-1k756t9"
-          data-index="3"
-          id="menu-list-:r1:-menuitem-:r5:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          Candidate Master
-        </button>
-        <button
-          class="chakra-menu__menuitem css-1k756t9"
-          data-index="4"
-          id="menu-list-:r1:-menuitem-:r6:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          National Master
-        </button>
-        <button
-          class="chakra-menu__menuitem css-1k756t9"
-          data-index="5"
-          id="menu-list-:r1:-menuitem-:r7:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          Woman Grand Master
-        </button>
-        <button
-          class="chakra-menu__menuitem css-1k756t9"
-          data-index="6"
-          id="menu-list-:r1:-menuitem-:r8:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          Woman International Master
-        </button>
-        <button
-          class="chakra-menu__menuitem css-1k756t9"
-          data-index="7"
-          id="menu-list-:r1:-menuitem-:r9:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          Woman FIDE Master
-        </button>
-        <button
-          class="chakra-menu__menuitem css-1k756t9"
-          data-index="8"
-          id="menu-list-:r1:-menuitem-:ra:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          Woman Candidate Master
-        </button>
-        <button
-          class="chakra-menu__menuitem css-1k756t9"
-          data-index="9"
-          id="menu-list-:r1:-menuitem-:rb:"
-          role="menuitem"
-          tabindex="-1"
-          type="button"
-        >
-          Woman National Master
-        </button>
-      </div>
-    </div>
-    <div
-      class="rounded shadow"
+      class="flex items-center justify-between gap-x-2 md:gap-x-4"
     >
       <div
         class="chakra-select__wrapper css-42b2qy"
       >
         <select
-          class="chakra-select css-1ik61og"
+          class="chakra-select shadow css-1ik61og"
+          id="title"
+          name="title"
+        >
+          <option
+            value=""
+          >
+            Title
+          </option>
+          <option>
+            Grand Master
+          </option>
+          <option>
+            International Master
+          </option>
+          <option>
+            FIDE Master
+          </option>
+          <option>
+            Candidate Master
+          </option>
+          <option>
+            National Master
+          </option>
+          <option>
+            Woman Grand Master
+          </option>
+          <option>
+            Woman International Master
+          </option>
+          <option>
+            Woman FIDE Master
+          </option>
+          <option>
+            Woman Candidate Master
+          </option>
+          <option>
+            Woman National Master
+          </option>
+        </select>
+        <div
+          class="chakra-select__icon-wrapper css-162mkon"
+        >
+          <svg
+            aria-hidden="true"
+            class="chakra-select__icon"
+            focusable="false"
+            role="presentation"
+            style="width: 1em; height: 1em; color: currentColor;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="chakra-select__wrapper css-42b2qy"
+      >
+        <select
+          class="chakra-select shadow css-1ik61og"
           id="timeRange"
           name="timeRange"
         >

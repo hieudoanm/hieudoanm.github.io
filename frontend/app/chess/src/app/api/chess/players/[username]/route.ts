@@ -10,7 +10,7 @@ export const GET = async (
 ): Promise<NextResponse<ChessPlayer>> => {
   const username: string = params.username ?? '';
   const player: ChessPlayer = await getPlayer(username);
-  return NextResponse.json(player, { status: 200 });
+  return NextResponse.json<ChessPlayer>(player, { status: 200 });
 };
 
 export const POST = async (
@@ -19,5 +19,5 @@ export const POST = async (
 ): Promise<NextResponse<ChessPlayer>> => {
   const username: string = params.username ?? '';
   const player: ChessPlayer = await syncPlayer(username);
-  return NextResponse.json(player, { status: 200 });
+  return NextResponse.json<ChessPlayer>(player, { status: 200 });
 };

@@ -5,63 +5,51 @@ exports[`OpeningsTemplate to match snapshot 1`] = `
   <div
     class="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8"
   >
-    <div
-      class="chakra-card border border-gray-200 shadow css-2dlz7"
+    <h2
+      class="chakra-heading css-0"
     >
-      <div
-        class="chakra-card__header css-0"
+      Openings (
+      0
+      )
+    </h2>
+    <div
+      class="chakra-table__container overflow-hidden rounded border border-gray-200 shadow css-zipzvv"
+    >
+      <table
+        class="chakra-table css-0"
       >
-        <h2
-          class="chakra-heading text-xl css-0"
+        <thead
+          class="css-0"
         >
-          Openings (
-          0
-          )
-        </h2>
-      </div>
-      <hr
-        aria-orientation="horizontal"
-        class="chakra-divider css-1upb9tn"
-      />
-      <div
-        class="chakra-table__container css-zipzvv"
-      >
-        <table
-          class="chakra-table css-0"
-        >
-          <thead
+          <tr
             class="css-0"
           >
-            <tr
+            <th
+              class="w-4 css-0"
+            >
+              No
+            </th>
+            <th
+              class="w-4 css-0"
+            >
+              ECO
+            </th>
+            <th
               class="css-0"
             >
-              <th
-                class="w-4 css-0"
-              >
-                No
-              </th>
-              <th
-                class="w-4 css-0"
-              >
-                ECO
-              </th>
-              <th
-                class="css-0"
-              >
-                Name
-              </th>
-              <th
-                class="css-0"
-              >
-                FEN
-              </th>
-            </tr>
-          </thead>
-          <tbody
-            class="css-0"
-          />
-        </table>
-      </div>
+              Name
+            </th>
+            <th
+              class="css-0"
+            >
+              FEN
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="css-0"
+        />
+      </table>
     </div>
   </div>
 </div>
