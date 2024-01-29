@@ -18,7 +18,7 @@ exports[`Hero to match snapshot 1`] = `
           <h2
             class="chakra-heading text-center text-xl md:text-3xl css-0"
           >
-            Chess Insights
+            chess.com Insights
           </h2>
         </div>
         <hr

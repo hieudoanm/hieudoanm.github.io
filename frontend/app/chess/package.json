@@ -11,7 +11,7 @@
     "check": "biome check --apply ./src",
     "format": "biome format --write ./src",
     "dev": "kill-port 3210 && next dev --port 3210",
-    "prebuild": "rimraf .next out && prisma generate",
+    "prebuild": "rimraf .next out && (prisma generate || true)",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

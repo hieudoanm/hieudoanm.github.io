@@ -9,7 +9,7 @@
 ## Projects
 
 - `broca`: Languages Detection
-- `chess`: Titled Players Rating
+- [chess.com Insights](https://chessinsights.vercel.app/)
 
 ## Techstack
 
