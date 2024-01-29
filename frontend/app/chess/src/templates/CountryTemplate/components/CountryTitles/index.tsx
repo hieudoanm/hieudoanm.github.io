@@ -12,8 +12,8 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
+import { TitleBadge } from '@chess/common/components/TitleBadge';
 import { TITLED_ABBREVIATIONS } from '@chess/common/constants/chess.constants';
-import { TitleBadge } from '@chess/components/atoms/TitleBadge';
 import { ChessTitleAbbreviation } from '@prisma/client';
 
 export type TitleTotal = { title: ChessTitleAbbreviation; total: number };

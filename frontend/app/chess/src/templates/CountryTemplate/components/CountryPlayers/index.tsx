@@ -12,7 +12,7 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
-import { TitleBadge } from '@chess/components/atoms/TitleBadge';
+import { TitleBadge } from '@chess/common/components/TitleBadge';
 import { ChessPlayer, ChessStats, ChessTimeClass } from '@prisma/client';
 import Link from 'next/link';
 

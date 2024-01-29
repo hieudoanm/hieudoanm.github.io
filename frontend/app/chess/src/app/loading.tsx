@@ -1,4 +1,4 @@
-import { LoadingOverlay } from '@chess/components/atoms/LoadingOverlay';
+import { LoadingOverlay } from '@chess/common/components/LoadingOverlay';
 
 const Loading: React.FC = () => {
   return <LoadingOverlay />;

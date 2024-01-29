@@ -2,7 +2,7 @@
 
 import { DocumentNode, gql } from '@apollo/client';
 import { Button, Heading, Icon, Text, useToast } from '@chakra-ui/react';
-import { TitleBadge } from '@chess/components/atoms/TitleBadge';
+import { TitleBadge } from '@chess/common/components/TitleBadge';
 import { ChessTitleAbbreviation } from '@prisma/client';
 import Link from 'next/link';
 import { FaCheckCircle, FaSync, FaTwitch } from 'react-icons/fa';

@@ -1,17 +1,8 @@
 'use client';
 
-import {
-  Box,
-  Card,
-  CardBody,
-  CardHeader,
-  Divider,
-  Heading,
-  Text,
-  Tooltip,
-} from '@chakra-ui/react';
+import { Box, Card, CardBody, Text, Tooltip } from '@chakra-ui/react';
+import { SVGMaps } from '@chess/common/components/Maps';
 import maps from '@chess/common/json/world.json';
-import { SVGMaps } from '@chess/components/atoms/Maps';
 import chroma from 'chroma-js';
 import { useRouter } from 'next/navigation';
 import { Country } from '../..';

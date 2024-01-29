@@ -1,5 +1,5 @@
+import { ChessHistogramChart } from '@chess/common/components/HistogramChart';
 import { GAP } from '@chess/common/constants/chess.constants';
-import { ChessHistogramChart } from '@chess/components/atoms/HistogramChart';
 import { ChessPlayer, ChessStats, ChessTimeClass } from '@prisma/client';
 
 const getRatingByTimeClass = (

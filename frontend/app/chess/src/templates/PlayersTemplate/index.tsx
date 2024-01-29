@@ -12,8 +12,8 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
-import { TitleBadge } from '@chess/components/atoms/TitleBadge';
-import { TwitchButton } from '@chess/components/atoms/TwitchButton';
+import { TitleBadge } from '@chess/common/components/TitleBadge';
+import { TwitchButton } from '@chess/common/components/TwitchButton';
 import {
   ChessCountry,
   ChessPlayer,
