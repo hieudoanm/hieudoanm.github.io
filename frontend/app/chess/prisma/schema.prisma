@@ -145,20 +145,20 @@ enum ChessTimeClass {
 
 model ChessGame {
   id            String         @id
-  url           String         @default("") @db.VarChar(255)
-  pgn           String         @default("")
-  timeControl   String         @default("") @db.VarChar(255)
+  url           String         @default("") @db.Text()
+  pgn           String         @default("") @db.Text()
+  timeControl   String         @default("") @db.Text()
   timeClass     ChessTimeClass @default(daily)
   endTime       DateTime       @default(now()) @db.Timestamptz
   rated         Boolean        @default(false) @db.Boolean
-  tcn           String         @default("") @db.VarChar(255)
-  initialSetup  String         @default("") @db.VarChar(255)
+  tcn           String         @default("") @db.Text()
+  initialSetup  String         @default("") @db.Text()
   rules         ChessVariant   @default(chess)
-  fen           String         @default("")
+  fen           String         @default("") @db.Text()
   whiteAccuracy Float          @default(0) @db.Real
   blackAccuracy Float          @default(0) @db.Real
-  whiteUsername String         @default("") @db.VarChar(255)
-  blackUsername String         @default("") @db.VarChar(255)
+  whiteUsername String         @default("") @db.Text()
+  blackUsername String         @default("") @db.Text()
   whiteResult   ChessResult    @default(checkmated)
   blackResult   ChessResult    @default(checkmated)
   whiteRating   Int            @default(0) @db.SmallInt

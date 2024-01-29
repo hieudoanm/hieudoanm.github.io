@@ -24,7 +24,7 @@ export const ChessHistogramChart: React.FC<{
       </CardHeader>
       <Divider />
       <CardBody>
-        <div className="aspect-video">
+        <div className="aspect-video overflow-hidden">
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart
               width={1600}

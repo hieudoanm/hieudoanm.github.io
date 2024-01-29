@@ -1,5 +1,5 @@
 import { TimeRange } from '@chess/common/types/time';
-import { ChessTimeClass, ChessTitleAbbreviation } from '@prisma/client';
+import { ChessTitleAbbreviation } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 import { PlayersResponse, getPlayers } from './service';
 

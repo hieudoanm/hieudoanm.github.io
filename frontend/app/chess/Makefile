@@ -4,8 +4,11 @@ export-countries:
 import-countries:
 	yarn ts-node ./scripts/import/countries
 
-import-games:
-	yarn ts-node ./scripts/import/games
+import-games-api:
+	yarn ts-node ./scripts/import/games-api
+
+import-games-database:
+	yarn ts-node ./scripts/import/games-database
 
 import-missing:
 	yarn ts-node ./scripts/import/missing
