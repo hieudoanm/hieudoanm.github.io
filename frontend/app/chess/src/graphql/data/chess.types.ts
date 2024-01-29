@@ -64,11 +64,18 @@ export type OpeningsResponse = {
 
 export type Player = ChessStats & { player: ChessPlayer };
 
+export type TitleTotal = { title: ChessTitleAbbreviation; total: number };
+
+export type CountryTotal = {
+  countryCode: string;
+  total: number;
+};
+
 export type PlayersResponse = {
   total: number;
   players: Player[];
-  titles: { title: ChessTitleAbbreviation }[];
-  countries: { countryCode: string }[];
+  titles: TitleTotal[];
+  countries: CountryTotal[];
 };
 
 export const timeRangeInMilliseconds: Record<TimeRange, number> = {

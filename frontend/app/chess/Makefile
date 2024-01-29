@@ -1,3 +1,6 @@
+export-countries:
+	yarn ts-node ./scripts/export/countries
+
 import-countries:
 	yarn ts-node ./scripts/import/countries
 

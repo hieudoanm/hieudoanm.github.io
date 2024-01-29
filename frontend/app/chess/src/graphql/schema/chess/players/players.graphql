@@ -6,17 +6,19 @@ type GamesSynced {
 
 type Players {
   total: Int
-  titles: [PlayerTitle]
   players: [PlayerStats]
+  titles: [PlayerTitleTotal]
   countries: [PlayerCountry]
 }
 
 type PlayerCountry {
   countryCode: String
+  total: Int
 }
 
-type PlayerTitle {
+type PlayerTitleTotal {
   title: String
+  total: Int
 }
 
 type PlayerStats {

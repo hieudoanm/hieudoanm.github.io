@@ -74,15 +74,6 @@ exports[`Navbar to match snapshot 1`] = `
                     Titled
                   </p>
                 </a>
-                <a
-                  href="/countries"
-                >
-                  <p
-                    class="chakra-text css-0"
-                  >
-                    Countries
-                  </p>
-                </a>
               </div>
             </div>
           </div>

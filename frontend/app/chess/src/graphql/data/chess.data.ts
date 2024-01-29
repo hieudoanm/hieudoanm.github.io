@@ -4,6 +4,7 @@ import {
   ChessCountry,
   ChessGame,
   ChessPlayer,
+  ChessTimeClass,
   ChessTitle,
   ChessTitleAbbreviation,
 } from '@prisma/client';
@@ -78,25 +79,31 @@ export class ChessDataSource extends RESTDataSource {
   }
 
   async getPlayers({
+    title,
     limit = 100,
     offset = 0,
-    title,
+    timeClass,
+    timeRange,
     countryCode = '',
     isStreamer = false,
   }: {
     limit?: number;
     offset?: number;
     title?: ChessTitleAbbreviation;
+    timeRange?: TimeRange;
+    timeClass?: ChessTimeClass;
     countryCode?: string;
     isStreamer?: boolean;
   }): Promise<PlayersResponse> {
     const urlSearchParameters = new URLSearchParams();
     if (limit) urlSearchParameters.set('limit', limit.toString());
     if (offset) urlSearchParameters.set('offset', offset.toString());
+    if (title) urlSearchParameters.set('title', title);
+    if (timeClass) urlSearchParameters.set('timeClass', timeClass);
+    if (timeRange) urlSearchParameters.set('timeRange', timeRange);
+    if (countryCode) urlSearchParameters.set('countryCode', countryCode);
     if (isStreamer)
       urlSearchParameters.set('isStreamer', isStreamer.toString());
-    if (title) urlSearchParameters.set('title', title);
-    if (countryCode) urlSearchParameters.set('countryCode', countryCode);
     const endpoint = `/api/chess/players?${urlSearchParameters.toString()}`;
     return this.get<PlayersResponse>(endpoint);
   }

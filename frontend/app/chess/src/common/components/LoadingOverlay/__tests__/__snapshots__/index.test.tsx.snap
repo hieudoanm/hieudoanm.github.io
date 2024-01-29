@@ -3,7 +3,7 @@
 exports[`LoadingOverlay to match snapshot 1`] = `
 <div>
   <div
-    class="fixed top-0 z-50 h-screen w-screen bg-white/90"
+    class="fixed right-0 top-0 z-50 h-screen w-screen bg-white/90"
   >
     <div
       class="flex h-full w-full items-center justify-center"

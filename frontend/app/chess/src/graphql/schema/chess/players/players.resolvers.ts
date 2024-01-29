@@ -1,6 +1,12 @@
+import { TimeRange } from '@chess/common/types/time';
 import { ChessDataSource } from '@chess/graphql/data/chess.data';
 import { GamesSynced, PlayersResponse } from '@chess/graphql/data/chess.types';
-import { ChessGame, ChessPlayer, ChessTitleAbbreviation } from '@prisma/client';
+import {
+  ChessGame,
+  ChessPlayer,
+  ChessTimeClass,
+  ChessTitleAbbreviation,
+} from '@prisma/client';
 
 export const resolvers = {
   Chess: {
@@ -10,11 +16,15 @@ export const resolvers = {
         limit = 100,
         offset = 0,
         title,
+        timeClass,
+        timeRange,
         countryCode = '',
         isStreamer = false,
       }: {
         limit: number;
         offset: number;
+        timeRange: TimeRange;
+        timeClass: ChessTimeClass;
         title: ChessTitleAbbreviation;
         countryCode: string;
         isStreamer: boolean;
@@ -27,9 +37,11 @@ export const resolvers = {
         titles = [],
         total = 0,
       } = await chessDataSource.getPlayers({
+        title,
         limit,
         offset,
-        title,
+        timeClass,
+        timeRange,
         isStreamer,
         countryCode,
       });

@@ -12,9 +12,11 @@ type Chess {
   ecos: [String]
   openings(eco: String, name: String, limit: Int, offset: Int): [Opening]
   players(
+    title: String
     limit: Int
     offset: Int
-    title: String
+    timeClass: String
+    timeRange: String
     countryCode: String
     isStreamer: Boolean
   ): Players
