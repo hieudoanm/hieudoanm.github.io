@@ -3,7 +3,8 @@ import axios from 'axios';
 
 const USERNAME = process.env.USERNAME ?? '';
 
-const BASE_URL = 'http://localhost:3210/api/chess';
+const BASE_URL = 'https://chessinsights.vercel.app/api/chess';
+// const BASE_URL = 'http://localhost:3210/api/chess';
 
 const syncGames = async (username: string) => {
   try {
