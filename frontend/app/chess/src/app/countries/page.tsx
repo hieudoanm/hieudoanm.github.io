@@ -11,7 +11,7 @@ import { CountriesTemplate, Country } from '@chess/templates/CountriesTemplate';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-type CountriesData = { chess: { countries: Country[] } };
+type CountriesData = { chess: { titledCountries: Country[] } };
 
 const countriesQuery: DocumentNode = gql`
   query CountriesQuery {
@@ -34,7 +34,7 @@ const CountriesPage: NextPage = async () => {
     'countriesQuery',
     queryOptions
   );
-  const countries = data?.chess?.countries ?? [];
+  const countries = data?.chess?.titledCountries ?? [];
 
   return (
     <>

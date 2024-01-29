@@ -72,7 +72,7 @@ const countryQuery = gql`
 
 type CountryData = {
   chess: {
-    country: {
+    titledCountry: {
       countryCode: string;
       stats: Stats;
       total: number;
@@ -98,7 +98,7 @@ const CountryPage: NextPage<{ params: { code: string } }> = async ({
     'countryQuery',
     queryOptions
   );
-  const country = data?.chess?.country ?? {};
+  const country = data?.chess?.titledCountry ?? {};
 
   const { stats, total = 0, players = [], titles = [] } = country;
 

@@ -1,5 +1,6 @@
 import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import { APP_NAME } from '@chess/common/constants/app.constants';
+import { logger } from '@chess/common/libs/logger';
 import { query } from '@chess/graphql/apollo/client';
 import { OpeningsTemplate } from '@chess/templates/OpeningsTemplate';
 import { ChessOpening } from '@prisma/client';
@@ -35,12 +36,14 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
     query: openingsQuery,
     variables,
   };
+
   const data: OpeningsData = await query<OpeningsData>(
     'openingsQuery',
     queryOptions
   );
   const ecos: string[] = data?.chess?.ecos ?? [];
   const openings = data?.chess?.openings ?? [];
+  logger.info({ ecos: ecos.length, openings: openings.length }, 'OpeningsPage');
 
   return (
     <>

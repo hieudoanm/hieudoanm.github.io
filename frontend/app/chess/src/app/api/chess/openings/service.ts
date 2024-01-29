@@ -1,5 +1,5 @@
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
-import { ChessOpening } from '@prisma/client';
+import { ChessOpening, Prisma } from '@prisma/client';
 
 (BigInt.prototype as any).toJSON = function () {
   const int = Number.parseInt(this.toString());
@@ -22,14 +22,15 @@ export const getOpenings = async ({
   limit?: number;
   offset?: number;
 }): Promise<OpeningsResponse> => {
-  const where = { eco };
-  const openings: ChessOpening[] =
-    await getPrismaClient().chessOpening.findMany({
+  const where: Prisma.ChessOpeningWhereInput = { eco };
+  const [total = 0, openings = []] = await getPrismaClient().$transaction([
+    getPrismaClient().chessOpening.count({ where }),
+    getPrismaClient().chessOpening.findMany({
       where,
       take: limit,
       skip: offset,
-    });
-  const total: number = openings.length;
+    }),
+  ]);
   await getPrismaClient().$disconnect();
   return { total, limit, offset, openings };
 };
