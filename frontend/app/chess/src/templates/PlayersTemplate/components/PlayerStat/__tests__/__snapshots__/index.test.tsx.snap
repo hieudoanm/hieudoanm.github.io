@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TitledStat to match snapshot 1`] = `
+exports[`PlayerStat to match snapshot 1`] = `
 <div>
   <div
     class="chakra-card border border-gray-200 shadow css-2dlz7"

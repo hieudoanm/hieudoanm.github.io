@@ -6,6 +6,7 @@ type GamesSynced {
 
 type Players {
   total: Int
+  stats: TitledStats
   players: [PlayerStats]
   titles: [PlayerTitleTotal]
   countries: [PlayerCountry]

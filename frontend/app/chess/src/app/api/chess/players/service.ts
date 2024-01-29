@@ -23,13 +23,141 @@ export type TitleTotal = { title: ChessTitleAbbreviation; total: number };
 
 export type CountryTotal = { countryCode: string; total: number };
 
+export type Stat = {
+  average: number;
+  max: number;
+};
+
+export type Stats = {
+  rapid: Stat;
+  blitz: Stat;
+  bullet: Stat;
+};
+
 export type PlayersResponse = {
   total: number;
   limit: number;
   offset: number;
+  stats: Stats;
   titles: TitleTotal[];
-  players: (ChessStats & { player: ChessPlayer & { country: ChessCountry } })[];
   countries: CountryTotal[];
+  players: (ChessStats & { player: ChessPlayer & { country: ChessCountry } })[];
+};
+
+const buildCalculateRatingQuery = (
+  sqlFunction: 'AVG' | 'MAX',
+  {
+    title,
+    timeRange,
+    timeClass,
+    isStreamer,
+    countryCode,
+  }: {
+    countryCode?: string;
+    isStreamer?: boolean;
+    timeClass?: ChessTimeClass;
+    timeRange?: TimeRange;
+    title?: ChessTitleAbbreviation;
+  }
+): Prisma.Sql => {
+  // Country
+  const whereCountry: string = countryCode
+    ? `player."countryCode" = '${countryCode}'`
+    : 'player."countryCode" IS NOT NULL';
+  // Is Streamer
+  const whereIsStreamer: string = isStreamer
+    ? `AND player."isStreamer" AND player."twitchUrl" NOT LIKE ''`
+    : '';
+  // Time Range
+  const days: number = timeRange ? TIME_RANGE_IN_DAYS.get(timeRange) ?? 0 : 0;
+  const whereLastOnline: string =
+    days > 0
+      ? `AND player."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day)`
+      : '';
+  // Title
+  const whereTitle: string = title
+    ? `player."title" = '${title}'`
+    : 'player."title" IS NOT NULL';
+
+  const query: string = `SELECT ${sqlFunction}(stats."last") AS "${sqlFunction.toLowerCase()}"
+FROM chess."ChessStats" AS stats
+WHERE stats."last" != 0
+AND stats."timeClass" = '${timeClass}'
+AND stats."playerId" IN (SELECT player."id"
+FROM chess."ChessPlayer" AS player
+WHERE ${whereCountry} AND ${whereTitle} ${whereIsStreamer} ${whereLastOnline}
+);`;
+  logger.info(`buildAverageRatingQuery query=${query}`);
+  return Prisma.raw(query);
+};
+
+const getStats = async ({
+  title,
+  timeRange,
+  isStreamer,
+  countryCode,
+}: {
+  countryCode?: string;
+  isStreamer?: boolean;
+  timeRange?: TimeRange;
+  title?: ChessTitleAbbreviation;
+}): Promise<Stats> => {
+  const options = { title, timeRange, isStreamer, countryCode };
+  const averageRapidRatingQuery = buildCalculateRatingQuery('AVG', {
+    ...options,
+    timeClass: 'rapid',
+  });
+  const maxRapidRatingQuery = buildCalculateRatingQuery('MAX', {
+    ...options,
+    timeClass: 'rapid',
+  });
+  const averageBlitzRatingQuery = buildCalculateRatingQuery('AVG', {
+    ...options,
+    timeClass: 'blitz',
+  });
+  const maxBlitzRatingQuery = buildCalculateRatingQuery('MAX', {
+    ...options,
+    timeClass: 'blitz',
+  });
+  const averageBulletRatingQuery = buildCalculateRatingQuery('AVG', {
+    ...options,
+    timeClass: 'bullet',
+  });
+  const maxBulletRatingQuery = buildCalculateRatingQuery('MAX', {
+    ...options,
+    timeClass: 'bullet',
+  });
+
+  const [
+    [{ avg: averageRapidRating = 0 }],
+    [{ max: maxRapidRating = 0 }],
+    [{ avg: averageBlitzRating = 0 }],
+    [{ max: maxBlitzRating = 0 }],
+    [{ avg: averageBulletRating = 0 }],
+    [{ max: maxBulletRating = 0 }],
+  ] = await getPrismaClient().$transaction([
+    getPrismaClient().$queryRaw<{ avg: number }[]>(averageRapidRatingQuery),
+    getPrismaClient().$queryRaw<{ max: number }[]>(maxRapidRatingQuery),
+    getPrismaClient().$queryRaw<{ avg: number }[]>(averageBlitzRatingQuery),
+    getPrismaClient().$queryRaw<{ max: number }[]>(maxBlitzRatingQuery),
+    getPrismaClient().$queryRaw<{ avg: number }[]>(averageBulletRatingQuery),
+    getPrismaClient().$queryRaw<{ max: number }[]>(maxBulletRatingQuery),
+  ]);
+
+  return {
+    rapid: {
+      average: Number.parseFloat(averageRapidRating?.toFixed(2)),
+      max: maxRapidRating,
+    },
+    blitz: {
+      average: Number.parseFloat(averageBlitzRating?.toFixed(2)),
+      max: maxBlitzRating,
+    },
+    bullet: {
+      average: Number.parseFloat(averageBulletRating?.toFixed(2)),
+      max: maxBulletRating,
+    },
+  };
 };
 
 const buildTitledCountQuery = ({
@@ -43,19 +171,24 @@ const buildTitledCountQuery = ({
   timeRange?: TimeRange;
   title?: ChessTitleAbbreviation;
 }): Prisma.Sql => {
+  // Country
   const whereCountry: string = countryCode
     ? `player."countryCode" = '${countryCode}'`
     : 'player."countryCode" IS NOT NULL';
-  const whereTitle: string = title
-    ? `player."title" = '${title}'`
-    : 'player."title" IS NOT NULL';
-  const whereIsStreamer: string = isStreamer ? `AND player."isStreamer"` : '';
-
+  // Is Streamer
+  const whereIsStreamer: string = isStreamer
+    ? `AND player."isStreamer" AND player."twitchUrl" NOT LIKE ''`
+    : '';
+  // Time Range
   const days: number = timeRange ? TIME_RANGE_IN_DAYS.get(timeRange) ?? 0 : 0;
   const whereLastOnline: string =
     days > 0
       ? `AND player."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day)`
       : '';
+  // Title
+  const whereTitle: string = title
+    ? `player."title" = '${title}'`
+    : 'player."title" IS NOT NULL';
 
   const query: string = `SELECT player."title", COUNT(*) as total
 FROM chess."ChessPlayer" AS player
@@ -92,7 +225,7 @@ export const getPlayers = async (
   let playerWhere: Prisma.ChessPlayerWhereInput = {};
   if (countryCode) playerWhere = { ...playerWhere, countryCode };
   // eslint-disable-next-line unicorn/no-null
-  if (title) playerWhere = { ...playerWhere, title: title ?? { not: null } };
+  playerWhere = { ...playerWhere, title: title ?? { not: null } };
   if (isStreamer)
     playerWhere = { ...playerWhere, isStreamer, twitchUrl: { not: '' } };
   if (timeRange) {
@@ -119,9 +252,11 @@ export const getPlayers = async (
         by: ['countryCode'],
         _count: { countryCode: true },
         orderBy: { countryCode: 'asc' },
-        where: { ...playerWhere },
+        where: playerWhere,
       }),
     ]);
+
+  const stats = await getStats({ title, timeRange, countryCode, isStreamer });
 
   await getPrismaClient().$disconnect();
 
@@ -129,6 +264,7 @@ export const getPlayers = async (
     total,
     offset,
     limit,
+    stats,
     titles,
     players,
     countries: countries.map((country) => {

@@ -1,7 +1,7 @@
 import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
 import { TitledTemplate } from '..';
-import { Stats } from '../components/TitledStats';
+import { Stats } from '../../PlayersTemplate/components/PlayerStats';
 
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
@@ -19,7 +19,7 @@ describe('TitledTemplate', () => {
 
   it('to match snapshot', () => {
     const { container } = render(
-      <TitledTemplate total={0} players={[]} stats={{} as Stats} />
+      <TitledTemplate total={0} players={[]} countries={[]} />
     );
     expect(container).toMatchSnapshot();
   });

@@ -3,11 +3,11 @@ import { APP_NAME } from '@chess/common/constants/app.constants';
 import { logger } from '@chess/common/libs/logger';
 import { TimeRange } from '@chess/common/types/time';
 import { query } from '@chess/graphql/apollo/client';
+import { Stats } from '@chess/templates/PlayersTemplate/components/PlayerStats';
 import {
   FullChessPlayer,
   TitledTemplate,
 } from '@chess/templates/TitledTemplate';
-import { Stats } from '@chess/templates/TitledTemplate/components/TitledStats';
 import { ChessCountry, ChessTitleAbbreviation } from '@prisma/client';
 import { NextPage } from 'next';
 import Head from 'next/head';

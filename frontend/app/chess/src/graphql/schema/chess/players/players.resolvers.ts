@@ -36,6 +36,7 @@ export const resolvers = {
         players = [],
         titles = [],
         total = 0,
+        stats,
       } = await chessDataSource.getPlayers({
         title,
         limit,
@@ -45,7 +46,7 @@ export const resolvers = {
         isStreamer,
         countryCode,
       });
-      return { total, countries, players, titles };
+      return { total, stats, countries, players, titles };
     },
     player: (
       _parent: unknown,

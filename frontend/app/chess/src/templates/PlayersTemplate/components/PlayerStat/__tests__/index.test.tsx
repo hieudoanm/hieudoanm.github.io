@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 import { FaClock } from 'react-icons/fa';
-import { TitledStat } from '..';
+import { PlayerStat } from '..';
 
-describe('TitledStat', () => {
+describe('PlayerStat', () => {
   it('to match snapshot', () => {
     const { container } = render(
-      <TitledStat title="GM" average={0} max={0} icon={FaClock} />
+      <PlayerStat title="GM" average={0} max={0} icon={FaClock} />
     );
     expect(container).toMatchSnapshot();
   });

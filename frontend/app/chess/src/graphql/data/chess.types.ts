@@ -22,10 +22,6 @@ export type Titled = {
   players: ChessPlayer[];
 };
 
-export type Stat = { rapid: number; blitz: number; bullet: number };
-
-export type Stats = { average: Stat; max: Stat };
-
 export type TitledCountry = {
   countryCode: string;
   country: string;
@@ -71,8 +67,13 @@ export type CountryTotal = {
   total: number;
 };
 
+export type Stat = { average: number; max: number };
+
+export type Stats = { rapid: Stat };
+
 export type PlayersResponse = {
   total: number;
+  stats: Stats;
   players: Player[];
   titles: TitleTotal[];
   countries: CountryTotal[];

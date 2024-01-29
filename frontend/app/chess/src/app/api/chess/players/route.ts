@@ -47,6 +47,7 @@ export const GET = async (
   } = resolveQuery(searchParams);
 
   const {
+    stats,
     total = 0,
     titles = [],
     players = [],
@@ -56,7 +57,7 @@ export const GET = async (
     { limit, offset }
   );
   return NextResponse.json<PlayersResponse>(
-    { offset, limit, total, titles, players, countries },
+    { offset, limit, total, stats, titles, players, countries },
     { status: 200 }
   );
 };

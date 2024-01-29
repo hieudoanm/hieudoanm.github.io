@@ -8,6 +8,7 @@ import {
   ChessStats,
   ChessTitle,
 } from '@prisma/client';
+import { PlayerStats, Stats } from './components/PlayerStats';
 import { TitleTotal } from './components/PlayerTitles';
 import { PlayersTitles } from './components/PlayerTitles';
 import { PlayersCountries } from './components/PlayersCountries';
@@ -15,15 +16,17 @@ import { PlayersHeader } from './components/PlayersHeader';
 import { PlayersTable } from './components/PlayersTable';
 
 type PlayersTemplateProperties = {
+  stats: Stats;
   total: number;
-  titleOptions: ChessTitle[];
-  countryOptions: ChessCountry[];
   titles: TitleTotal[];
   countries: CountryTotal[];
   players: (ChessStats & { player: ChessPlayer & { country: ChessCountry } })[];
+  titleOptions: ChessTitle[];
+  countryOptions: ChessCountry[];
 };
 
 export const PlayersTemplate: React.FC<PlayersTemplateProperties> = ({
+  stats,
   total = 0,
   titles = [],
   players = [],
@@ -34,6 +37,8 @@ export const PlayersTemplate: React.FC<PlayersTemplateProperties> = ({
   return (
     <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
       <PlayersHeader titles={titleOptions} countries={countryOptions} />
+      <Divider />
+      <PlayerStats players={players} stats={stats} />
       <Divider />
       <PlayersTitles titles={titles} />
       <Divider />

@@ -54,6 +54,20 @@ const playersQuery = gql`
           countryCode
           total
         }
+        stats {
+          rapid {
+            average
+            max
+          }
+          blitz {
+            average
+            max
+          }
+          bullet {
+            average
+            max
+          }
+        }
         players {
           timeClass
           best
@@ -96,12 +110,17 @@ export type TitleTotal = { title: ChessTitleAbbreviation; total: number };
 
 export type CountryTotal = { countryCode: string; total: number };
 
+export type Stat = { average: number; max: number };
+
+export type Stats = { rapid: Stat; blitz: Stat; bullet: Stat };
+
 type PlayersData = {
   chess: {
     countries: ChessCountry[];
     titled: ChessTitle[];
     players: {
       total: number;
+      stats: Stats;
       titles: TitleTotal[];
       countries: CountryTotal[];
       players: (ChessStats & {
@@ -157,6 +176,7 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
   const titleOptions = data?.chess?.titled ?? [];
   const countryOptions = data?.chess?.countries ?? [];
   const total = data?.chess?.players?.total ?? 0;
+  const stats = data?.chess?.players?.stats ?? {};
   const titles = data?.chess?.players?.titles ?? [];
   const players = data?.chess?.players?.players ?? [];
   const countries = data?.chess?.players?.countries ?? [];
@@ -169,6 +189,7 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
       </Head>
       <PlayersTemplate
         total={total}
+        stats={stats}
         titles={titles}
         players={players}
         countries={countries}
