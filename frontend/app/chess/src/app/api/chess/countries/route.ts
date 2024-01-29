@@ -1,14 +1,9 @@
 import { NextResponse } from 'next/server';
-import { Country } from './model';
-import { getCountries } from './service';
-
-export type CountriesResponse = { total: number; countries: Country[] };
+import { CountriesResponse, getCountries } from './service';
 
 export const GET = async (): Promise<NextResponse<CountriesResponse>> => {
-  const countries: Country[] = await getCountries();
-  const total: number = countries.length;
-  return NextResponse.json<CountriesResponse>(
-    { total, countries },
-    { status: 200 }
-  );
+  const countriesResponse = await getCountries();
+  return NextResponse.json<CountriesResponse>(countriesResponse, {
+    status: 200,
+  });
 };

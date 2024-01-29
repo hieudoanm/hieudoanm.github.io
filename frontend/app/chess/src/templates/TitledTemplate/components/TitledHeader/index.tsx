@@ -31,7 +31,9 @@ export const TitledHeader: React.FC<TitledHeaderProperties> = ({
           {Object.entries(TITLED_ABBREVIATIONS)
             .filter(([_key, value]) => !value.includes('Arena'))
             .map(([key, value]) => (
-              <option key={key}>{value}</option>
+              <option key={key} value={key}>
+                {value}
+              </option>
             ))}
         </Select>
         <Select

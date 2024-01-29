@@ -17,13 +17,13 @@ export class ChessDataSource extends RESTDataSource {
   override baseURL = GRAPHQL_BASE_URL;
 
   async getCountries(): Promise<Country[]> {
-    const endpoint: string = '/api/chess/countries';
+    const endpoint: string = '/api/chess/countries/titled';
     const { countries = [] } = await this.get<CountriesResponse>(endpoint);
     return countries;
   }
 
   async getCountry(code: string): Promise<Country> {
-    const endpoint: string = `/api/chess/countries/${code}`;
+    const endpoint: string = `/api/chess/countries/titled/${code}`;
     return this.get(endpoint);
   }
 

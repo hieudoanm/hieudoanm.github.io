@@ -1,8 +1,9 @@
 import {
-  Card,
-  CardHeader,
-  Divider,
-  Heading,
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   Table,
   TableContainer,
   Tbody,
@@ -35,63 +36,76 @@ export const CountryPlayers: React.FC<CountryPlayersProperties> = ({
   players = [],
 }) => {
   return (
-    <Card className="border border-gray-200 shadow">
-      <CardHeader>
-        <Heading className="text-xl">Players ({total})</Heading>
-      </CardHeader>
-      <Divider />
-      <TableContainer>
-        <Table>
-          <Thead>
-            <Tr>
-              <Th className="w-4">Title</Th>
-              <Th>Username</Th>
-              <Th isNumeric className="w-4">
-                Bullet
-              </Th>
-              <Th isNumeric className="w-4">
-                Blitz
-              </Th>
-              <Th isNumeric className="w-4">
-                Rapid
-              </Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            {players.map(
-              ({ title, username = '', avatar = '', stats = [] }) => {
-                return (
-                  <Tr key={username}>
-                    <Td>
-                      <TitleBadge title={title} />
-                    </Td>
-                    <Td>
-                      <Link href={`/players/${encodeURIComponent(username)}`}>
-                        <div className="inline-flex items-center gap-x-2">
-                          {avatar.length > 0 ? (
-                            <div
-                              className="aspect-square w-8 rounded bg-contain bg-center"
-                              style={{
-                                backgroundImage: `url(${avatar})`,
-                              }}
-                            />
-                          ) : (
-                            <div className="aspect-square w-8 rounded border" />
-                          )}
-                          <p>{username}</p>
-                        </div>
-                      </Link>
-                    </Td>
-                    <Td isNumeric>{getRatingByTimeClass('rapid', stats)}</Td>
-                    <Td isNumeric>{getRatingByTimeClass('blitz', stats)}</Td>
-                    <Td isNumeric>{getRatingByTimeClass('bullet', stats)}</Td>
-                  </Tr>
-                );
-              }
-            )}
-          </Tbody>
-        </Table>
-      </TableContainer>
-    </Card>
+    <Accordion allowToggle className="rounded border">
+      <AccordionItem className="border-0">
+        <AccordionButton className="border-b">
+          <div className="flex w-full items-center justify-between">
+            <div className="flex-grow text-left">Players ({total})</div>
+            <AccordionIcon />
+          </div>
+        </AccordionButton>
+        <AccordionPanel padding={0}>
+          <TableContainer>
+            <Table>
+              <Thead>
+                <Tr>
+                  <Th className="w-4">Title</Th>
+                  <Th>Username</Th>
+                  <Th isNumeric className="w-4">
+                    Bullet
+                  </Th>
+                  <Th isNumeric className="w-4">
+                    Blitz
+                  </Th>
+                  <Th isNumeric className="w-4">
+                    Rapid
+                  </Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {players.map(
+                  ({ title, username = '', avatar = '', stats = [] }) => {
+                    return (
+                      <Tr key={username}>
+                        <Td>
+                          <TitleBadge title={title} />
+                        </Td>
+                        <Td>
+                          <Link
+                            href={`/players/${encodeURIComponent(username)}`}>
+                            <div className="inline-flex items-center gap-x-2">
+                              {avatar.length > 0 ? (
+                                <div
+                                  className="aspect-square w-8 rounded bg-contain bg-center"
+                                  style={{
+                                    backgroundImage: `url(${avatar})`,
+                                  }}
+                                />
+                              ) : (
+                                <div className="aspect-square w-8 rounded border" />
+                              )}
+                              <p>{username}</p>
+                            </div>
+                          </Link>
+                        </Td>
+                        <Td isNumeric>
+                          {getRatingByTimeClass('rapid', stats)}
+                        </Td>
+                        <Td isNumeric>
+                          {getRatingByTimeClass('blitz', stats)}
+                        </Td>
+                        <Td isNumeric>
+                          {getRatingByTimeClass('bullet', stats)}
+                        </Td>
+                      </Tr>
+                    );
+                  }
+                )}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </AccordionPanel>
+      </AccordionItem>
+    </Accordion>
   );
 };

@@ -28,34 +28,54 @@ exports[`TitledHeader to match snapshot 1`] = `
           >
             Title
           </option>
-          <option>
+          <option
+            value="GM"
+          >
             Grand Master
           </option>
-          <option>
+          <option
+            value="IM"
+          >
             International Master
           </option>
-          <option>
+          <option
+            value="FM"
+          >
             FIDE Master
           </option>
-          <option>
+          <option
+            value="CM"
+          >
             Candidate Master
           </option>
-          <option>
+          <option
+            value="NM"
+          >
             National Master
           </option>
-          <option>
+          <option
+            value="WGM"
+          >
             Woman Grand Master
           </option>
-          <option>
+          <option
+            value="WIM"
+          >
             Woman International Master
           </option>
-          <option>
+          <option
+            value="WFM"
+          >
             Woman FIDE Master
           </option>
-          <option>
+          <option
+            value="WCM"
+          >
             Woman Candidate Master
           </option>
-          <option>
+          <option
+            value="WNM"
+          >
             Woman National Master
           </option>
         </select>
