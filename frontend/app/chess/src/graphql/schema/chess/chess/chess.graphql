@@ -15,7 +15,6 @@ type Chess {
     title: String
     limit: Int
     offset: Int
-    timeClass: String
     timeRange: String
     countryCode: String
     isStreamer: Boolean

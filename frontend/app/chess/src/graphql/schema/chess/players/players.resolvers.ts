@@ -16,7 +16,6 @@ export const resolvers = {
         limit = 100,
         offset = 0,
         title,
-        timeClass,
         timeRange,
         countryCode = '',
         isStreamer = false,
@@ -24,7 +23,6 @@ export const resolvers = {
         limit: number;
         offset: number;
         timeRange: TimeRange;
-        timeClass: ChessTimeClass;
         title: ChessTitleAbbreviation;
         countryCode: string;
         isStreamer: boolean;
@@ -41,7 +39,6 @@ export const resolvers = {
         title,
         limit,
         offset,
-        timeClass,
         timeRange,
         isStreamer,
         countryCode,

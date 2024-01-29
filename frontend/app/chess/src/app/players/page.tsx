@@ -19,7 +19,6 @@ const playersQuery = gql`
     $limit: Int
     $offset: Int
     $title: String
-    $timeClass: String
     $timeRange: String
     $isStreamer: Boolean
     $countryCode: String
@@ -39,7 +38,6 @@ const playersQuery = gql`
         title: $title
         limit: $limit
         offset: $offset
-        timeClass: $timeClass
         timeRange: $timeRange
         isStreamer: $isStreamer
         countryCode: $countryCode
@@ -135,7 +133,6 @@ type PlayersPageProperties = {
     isStreamer: string;
     countryCode: string;
     timeRange: TimeRange;
-    timeClass: ChessTimeClass;
   };
 };
 
@@ -148,9 +145,8 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
   const countryCode: string = searchParams.countryCode ?? '';
   const isStreamer: boolean = (searchParams.isStreamer ?? '') === 'true';
   const timeRange: TimeRange = searchParams.timeRange ?? undefined;
-  const timeClass: ChessTimeClass = searchParams.timeClass ?? 'blitz';
   logger.info(
-    { limit, offset, title, timeRange, timeClass, isStreamer, countryCode },
+    { limit, offset, title, timeRange, isStreamer, countryCode },
     'PlayersPage searchParams'
   );
 
@@ -160,7 +156,6 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
       title,
       limit,
       offset,
-      timeClass,
       timeRange,
       isStreamer,
       countryCode,

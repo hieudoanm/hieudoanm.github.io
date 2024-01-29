@@ -57,7 +57,6 @@ export class ChessDataSource extends RESTDataSource {
     title,
     limit = 100,
     offset = 0,
-    timeClass,
     timeRange,
     countryCode = '',
     isStreamer = false,
@@ -66,7 +65,6 @@ export class ChessDataSource extends RESTDataSource {
     offset?: number;
     title?: ChessTitleAbbreviation;
     timeRange?: TimeRange;
-    timeClass?: ChessTimeClass;
     countryCode?: string;
     isStreamer?: boolean;
   }): Promise<PlayersResponse> {
@@ -74,7 +72,6 @@ export class ChessDataSource extends RESTDataSource {
     if (limit) urlSearchParameters.set('limit', limit.toString());
     if (offset) urlSearchParameters.set('offset', offset.toString());
     if (title) urlSearchParameters.set('title', title);
-    if (timeClass) urlSearchParameters.set('timeClass', timeClass);
     if (timeRange) urlSearchParameters.set('timeRange', timeRange);
     if (countryCode) urlSearchParameters.set('countryCode', countryCode);
     if (isStreamer)

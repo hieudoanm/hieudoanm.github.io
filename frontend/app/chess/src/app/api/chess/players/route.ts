@@ -8,8 +8,6 @@ const resolveQuery = (searchParameters: URLSearchParams) => {
     searchParameters.get('countryCode') ?? undefined;
   const title: ChessTitleAbbreviation | undefined =
     (searchParameters.get('title') as ChessTitleAbbreviation) ?? undefined;
-  const timeClass: ChessTimeClass =
-    (searchParameters.get('timeClass') as ChessTimeClass) ?? 'blitz';
   const timeRange: TimeRange =
     (searchParameters.get('timeRange') as TimeRange) ?? undefined;
   const isStreamer: boolean | undefined =
@@ -24,7 +22,6 @@ const resolveQuery = (searchParameters: URLSearchParams) => {
   return {
     isStreamer,
     timeRange,
-    timeClass,
     countryCode,
     title,
     limit,
@@ -36,15 +33,8 @@ export const GET = async (
   request: NextRequest
 ): Promise<NextResponse<PlayersResponse>> => {
   const { searchParams } = new URL(request.url);
-  const {
-    countryCode,
-    timeClass,
-    timeRange,
-    title,
-    limit,
-    offset,
-    isStreamer,
-  } = resolveQuery(searchParams);
+  const { countryCode, timeRange, title, limit, offset, isStreamer } =
+    resolveQuery(searchParams);
 
   const {
     stats,
@@ -53,7 +43,7 @@ export const GET = async (
     players = [],
     countries = [],
   } = await getPlayers(
-    { isStreamer, countryCode, title, timeClass, timeRange },
+    { isStreamer, countryCode, title, timeRange },
     { limit, offset }
   );
   return NextResponse.json<PlayersResponse>(
