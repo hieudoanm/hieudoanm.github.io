@@ -17,15 +17,11 @@ exports[`PlayerHeader to match snapshot 1`] = `
           class="flex items-center gap-x-2"
         >
            
-          <a
-            href="/titled?title=GM"
+          <span
+            class="chakra-badge css-1nt6cy7"
           >
-            <span
-              class="chakra-badge css-1nt6cy7"
-            >
-              GM
-            </span>
-          </a>
+            GM
+          </span>
           <h2
             class="chakra-heading css-0"
           >

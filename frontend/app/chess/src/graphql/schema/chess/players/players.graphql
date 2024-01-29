@@ -4,10 +4,21 @@ type GamesSynced {
   existed: Int
 }
 
+type OverallStat {
+  average: Float
+  max: Float
+}
+
+type OverallStats {
+  rapid: OverallStat
+  blitz: OverallStat
+  bullet: OverallStat
+}
+
 type Players {
   total: Int
-  stats: TitledStats
-  players: [PlayerStats]
+  stats: OverallStats
+  players: [Player]
   titles: [PlayerTitleTotal]
   countries: [PlayerCountry]
 }

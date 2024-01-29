@@ -1,18 +1,15 @@
 'use client';
 
 import { Divider } from '@chakra-ui/react';
+import { FullChessPlayer } from '@chess/app/api/chess/players/service';
 import { CountryTotal } from '@chess/graphql/data/chess.types';
-import {
-  ChessCountry,
-  ChessPlayer,
-  ChessStats,
-  ChessTitle,
-} from '@prisma/client';
-import { PlayerStats, Stats } from './components/PlayerStats';
+import { ChessCountry, ChessTitle } from '@prisma/client';
 import { TitleTotal } from './components/PlayerTitles';
 import { PlayersTitles } from './components/PlayerTitles';
 import { PlayersCountries } from './components/PlayersCountries';
+import { PlayersDistributions } from './components/PlayersDistributions';
 import { PlayersHeader } from './components/PlayersHeader';
+import { PlayersStats, Stats } from './components/PlayersStats';
 import { PlayersTable } from './components/PlayersTable';
 
 type PlayersTemplateProperties = {
@@ -20,7 +17,7 @@ type PlayersTemplateProperties = {
   total: number;
   titles: TitleTotal[];
   countries: CountryTotal[];
-  players: (ChessStats & { player: ChessPlayer & { country: ChessCountry } })[];
+  players: FullChessPlayer[];
   titleOptions: ChessTitle[];
   countryOptions: ChessCountry[];
 };
@@ -36,9 +33,15 @@ export const PlayersTemplate: React.FC<PlayersTemplateProperties> = ({
 }) => {
   return (
     <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
-      <PlayersHeader titles={titleOptions} countries={countryOptions} />
+      <PlayersHeader
+        total={total}
+        titles={titleOptions}
+        countries={countryOptions}
+      />
       <Divider />
-      <PlayerStats players={players} stats={stats} />
+      <PlayersStats players={players} stats={stats} />
+      <Divider />
+      <PlayersDistributions players={players} />
       <Divider />
       <PlayersTitles titles={titles} />
       <Divider />

@@ -22,7 +22,28 @@ type Chess {
   ): Players
   player(username: String!): Player
   titled: [Title]
-  title(countryCode: String, title: String!, timeRange: String): Titled
-  titledCountries(title: String): [TitledCountry]
-  titledCountry(code: String!, title: String): TitledCountry
+}
+
+enum TimeRange {
+  year
+  quarter
+  month
+  week
+}
+
+enum TitleAbbreviation {
+  GM
+  IM
+  FM
+  CM
+  NM
+  WGM
+  WIM
+  WFM
+  WCM
+  WNM
+  AGM
+  AIM
+  AFM
+  ACM
 }

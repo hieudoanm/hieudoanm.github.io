@@ -34,6 +34,11 @@ export type Stats = {
   bullet: Stat;
 };
 
+export type FullChessPlayer = ChessPlayer & {
+  country: ChessCountry;
+  stats: ChessStats[];
+};
+
 export type PlayersResponse = {
   total: number;
   limit: number;
@@ -41,7 +46,7 @@ export type PlayersResponse = {
   stats: Stats;
   titles: TitleTotal[];
   countries: CountryTotal[];
-  players: (ChessStats & { player: ChessPlayer & { country: ChessCountry } })[];
+  players: FullChessPlayer[];
 };
 
 const buildCalculateRatingQuery = (
@@ -160,58 +165,17 @@ const getStats = async ({
   };
 };
 
-const buildTitledCountQuery = ({
-  title,
-  timeRange,
-  isStreamer,
-  countryCode,
-}: {
-  countryCode?: string;
-  isStreamer?: boolean;
-  timeRange?: TimeRange;
-  title?: ChessTitleAbbreviation;
-}): Prisma.Sql => {
-  // Country
-  const whereCountry: string = countryCode
-    ? `player."countryCode" = '${countryCode}'`
-    : 'player."countryCode" IS NOT NULL';
-  // Is Streamer
-  const whereIsStreamer: string = isStreamer
-    ? `AND player."isStreamer" AND player."twitchUrl" NOT LIKE ''`
-    : '';
-  // Time Range
-  const days: number = timeRange ? TIME_RANGE_IN_DAYS.get(timeRange) ?? 0 : 0;
-  const whereLastOnline: string =
-    days > 0
-      ? `AND player."lastOnline" > (CURRENT_DATE - INTERVAL '${days}' day)`
-      : '';
-  // Title
-  const whereTitle: string = title
-    ? `player."title" = '${title}'`
-    : 'player."title" IS NOT NULL';
-
-  const query: string = `SELECT player."title", COUNT(*) as total
-FROM chess."ChessPlayer" AS player
-WHERE ${whereCountry} AND ${whereTitle} ${whereIsStreamer} ${whereLastOnline}
-GROUP BY player."title"
-ORDER BY player."title";`;
-  logger.info(`buildTitledCountQuery query=${query}`);
-
-  return Prisma.raw(query);
-};
-
 export const getPlayers = async (
   {
     isStreamer = false,
     countryCode,
     title,
-    timeClass = 'blitz',
     timeRange,
   }: {
     isStreamer?: boolean;
     countryCode?: string;
     title?: ChessTitleAbbreviation;
-    timeClass?: ChessTimeClass;
+
     timeRange?: TimeRange;
   },
   {
@@ -235,18 +199,21 @@ export const getPlayers = async (
     playerWhere = { ...playerWhere, lastOnline: { gte: `${date}T00:00:00Z` } };
   }
 
-  const [total = 0, titles = [], players = [], countries = []] =
+  const [total = 0, players = [], titles = [], countries = []] =
     await getPrismaClient().$transaction([
       getPrismaClient().chessPlayer.count({ where: playerWhere }),
-      getPrismaClient().$queryRaw<TitleTotal[]>(
-        buildTitledCountQuery({ countryCode, title, isStreamer, timeRange })
-      ),
-      getPrismaClient().chessStats.findMany({
+      getPrismaClient().chessPlayer.findMany({
         take: limit,
         skip: offset,
-        orderBy: { last: 'desc' },
-        include: { player: { include: { country: true } } },
-        where: { timeClass, player: { ...playerWhere } },
+        orderBy: { username: 'asc' },
+        include: { country: true, stats: true },
+        where: { ...playerWhere },
+      }),
+      getPrismaClient().chessPlayer.groupBy({
+        by: ['title'],
+        _count: { title: true },
+        orderBy: { title: 'asc' },
+        where: playerWhere,
       }),
       getPrismaClient().chessPlayer.groupBy({
         by: ['countryCode'],
@@ -265,7 +232,12 @@ export const getPlayers = async (
     offset,
     limit,
     stats,
-    titles,
+    titles: titles.map((title) => {
+      return {
+        title: title.title as ChessTitleAbbreviation,
+        total: (title._count as { title: number })?.title ?? 0,
+      };
+    }),
     players,
     countries: countries.map((country) => {
       return {

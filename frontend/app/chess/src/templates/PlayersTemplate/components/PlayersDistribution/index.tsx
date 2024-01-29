@@ -22,12 +22,12 @@ const getRatingByTimeClass = (
   return chessStats?.last ?? 0;
 };
 
-export type TitledChartProperties = {
+export type PlayersDistributionProperties = {
   timeClass: ChessTimeClass;
   players: FullChessPlayer[];
 };
 
-export const TitledChart: React.FC<TitledChartProperties> = ({
+export const PlayersDistribution: React.FC<PlayersDistributionProperties> = ({
   timeClass,
   players = [],
 }) => {
@@ -63,4 +63,4 @@ export const TitledChart: React.FC<TitledChartProperties> = ({
   );
 };
 
-TitledChart.displayName = 'TitledChart';
+PlayersDistribution.displayName = 'PlayersDistribution';

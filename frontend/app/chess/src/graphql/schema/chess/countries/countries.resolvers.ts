@@ -12,20 +12,5 @@ export const resolvers = {
     ): Promise<ChessCountry[]> => {
       return chessDataSource.getCountries();
     },
-    titledCountries: async (
-      _parent: unknown,
-      { title }: { title?: ChessTitleAbbreviation },
-      { chessDataSource }: { chessDataSource: ChessDataSource }
-    ): Promise<TitledCountry[]> => {
-      return chessDataSource.getTitledCountries({ title });
-    },
-    titledCountry: async (
-      _parent: unknown,
-      { code, title }: { code: string; title?: ChessTitleAbbreviation },
-      { chessDataSource }: { chessDataSource: ChessDataSource }
-    ): Promise<TitledCountry> => {
-      logger.info(`titledCountry code=${code} title=${title}`);
-      return chessDataSource.getTitledCountry({ code, title });
-    },
   },
 };

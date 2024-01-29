@@ -52,9 +52,6 @@ export const MobileDrawer: React.FC<{
             <Link href="/players">
               <Text>Players</Text>
             </Link>
-            <Link href="/titled">
-              <Text>Titled</Text>
-            </Link>
             <Divider />
             <Link href="/openings">
               <Text>Openings</Text>
@@ -98,9 +95,6 @@ export const Navbar: React.FC = () => {
                   <div className="flex items-center gap-x-4">
                     <Link href="/players">
                       <Text>Players</Text>
-                    </Link>
-                    <Link href="/titled">
-                      <Text>Titled</Text>
                     </Link>
                   </div>
                 </div>

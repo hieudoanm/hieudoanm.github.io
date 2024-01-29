@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 
-export const PlayerStat: React.FC<{
+export const PlayersStat: React.FC<{
   title: string;
   average: number;
   max: number;
@@ -42,4 +42,4 @@ export const PlayerStat: React.FC<{
   );
 };
 
-PlayerStat.displayName = 'PlayerStat';
+PlayersStat.displayName = 'PlayersStat';

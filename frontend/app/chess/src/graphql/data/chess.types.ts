@@ -1,3 +1,4 @@
+import { FullChessPlayer } from '@chess/app/api/chess/players/service';
 import {
   ONE_MONTH,
   ONE_QUARTER,
@@ -7,7 +8,6 @@ import {
 import {
   ChessOpening,
   ChessPlayer,
-  ChessStats,
   ChessTitleAbbreviation,
 } from '@prisma/client';
 
@@ -58,8 +58,6 @@ export type OpeningsResponse = {
   openings: ChessOpening[];
 };
 
-export type Player = ChessStats & { player: ChessPlayer };
-
 export type TitleTotal = { title: ChessTitleAbbreviation; total: number };
 
 export type CountryTotal = {
@@ -69,12 +67,12 @@ export type CountryTotal = {
 
 export type Stat = { average: number; max: number };
 
-export type Stats = { rapid: Stat };
+export type Stats = { rapid: Stat; blitz: Stat; bullet: Stat };
 
 export type PlayersResponse = {
   total: number;
   stats: Stats;
-  players: Player[];
+  players: FullChessPlayer[];
   titles: TitleTotal[];
   countries: CountryTotal[];
 };

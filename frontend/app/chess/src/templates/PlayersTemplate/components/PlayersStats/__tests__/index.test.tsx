@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
-import { PlayerStats, Stats } from '..';
+import { PlayersStats, Stats } from '..';
 
-describe('PlayerStats', () => {
+describe('PlayersStats', () => {
   it('to match snapshot', () => {
     const { container } = render(
-      <PlayerStats players={[]} stats={{} as Stats} />
+      <PlayersStats players={[]} stats={{} as Stats} />
     );
     expect(container).toMatchSnapshot();
   });

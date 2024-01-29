@@ -6,14 +6,13 @@ import { query } from '@chess/graphql/apollo/client';
 import { PlayersTemplate } from '@chess/templates/PlayersTemplate';
 import {
   ChessCountry,
-  ChessPlayer,
-  ChessStats,
   ChessTimeClass,
   ChessTitle,
   ChessTitleAbbreviation,
 } from '@prisma/client';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { FullChessPlayer } from '../api/chess/players/service';
 
 const playersQuery = gql`
   query PlayersQuery(
@@ -69,36 +68,36 @@ const playersQuery = gql`
           }
         }
         players {
-          timeClass
-          best
-          last
-          deviation
-          win
-          draw
-          loss
-          player {
-            id
-            username
+          id
+          username
+          name
+          followers
+          avatar
+          location
+          verified
+          lastOnline
+          joined
+          status
+          title
+          league
+          twitchUrl
+          isStreamer
+          countryCode
+          archives
+          country {
+            cca2
+            cca3
             name
-            followers
-            avatar
-            location
-            verified
-            lastOnline
-            joined
-            status
-            title
-            league
-            twitchUrl
-            isStreamer
-            countryCode
-            archives
-            country {
-              cca2
-              cca3
-              name
-              flag
-            }
+            flag
+          }
+          stats {
+            timeClass
+            best
+            last
+            deviation
+            win
+            draw
+            loss
           }
         }
       }
@@ -123,9 +122,7 @@ type PlayersData = {
       stats: Stats;
       titles: TitleTotal[];
       countries: CountryTotal[];
-      players: (ChessStats & {
-        player: ChessPlayer & { country: ChessCountry };
-      })[];
+      players: FullChessPlayer[];
     };
   };
 };

@@ -2,6 +2,13 @@
 
 exports[`PlayerHeader to match snapshot 1`] = `
 <div>
+  <h2
+    class="chakra-heading text-center text-lg md:text-left md:text-2xl css-0"
+  >
+    Players (
+    0
+    )
+  </h2>
   <div
     class="chakra-accordion rounded border css-0"
   >
@@ -70,13 +77,19 @@ exports[`PlayerHeader to match snapshot 1`] = `
                     class="w-8 css-0"
                     data-is-numeric="true"
                   >
-                    Rating
+                    Bullet
                   </th>
                   <th
                     class="w-8 css-0"
                     data-is-numeric="true"
                   >
-                    Best
+                    Blitz
+                  </th>
+                  <th
+                    class="w-8 css-0"
+                    data-is-numeric="true"
+                  >
+                    Rapid
                   </th>
                   <th
                     class="w-8 css-0"

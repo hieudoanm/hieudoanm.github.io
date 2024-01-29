@@ -31,31 +31,6 @@ export class ChessDataSource extends RESTDataSource {
     return countries;
   }
 
-  async getTitledCountries({
-    title,
-  }: {
-    title?: ChessTitleAbbreviation;
-  }): Promise<TitledCountry[]> {
-    const urlSearchParameters: URLSearchParams = new URLSearchParams();
-    if (title) urlSearchParameters.set('title', title);
-    const endpoint: string = `/api/chess/countries/titled?${urlSearchParameters.toString()}`;
-    const { countries = [] } = await this.get<CountriesResponse>(endpoint);
-    return countries;
-  }
-
-  async getTitledCountry({
-    code,
-    title,
-  }: {
-    code: string;
-    title?: ChessTitleAbbreviation;
-  }): Promise<TitledCountry> {
-    const urlSearchParameters: URLSearchParams = new URLSearchParams();
-    if (title) urlSearchParameters.set('title', title);
-    const endpoint: string = `/api/chess/countries/titled/${code}?${urlSearchParameters.toString()}`;
-    return this.get(endpoint);
-  }
-
   async getEcos(): Promise<string[]> {
     const endpoint: string = '/api/chess/openings/ecos';
     const { ecos = [] } = await this.get<{ ecos: string[] }>(endpoint);
@@ -137,39 +112,9 @@ export class ChessDataSource extends RESTDataSource {
     });
   }
 
-  async getStreamers({
-    title,
-    country,
-  }: {
-    title: ChessTitleAbbreviation;
-    country: string;
-  }): Promise<StreamersResponse> {
-    const urlSearchParameters: URLSearchParams = new URLSearchParams();
-    if (title) urlSearchParameters.set('title', title);
-    if (country) urlSearchParameters.set('country', country);
-    const endpoint = `/api/chess/streamers?${urlSearchParameters.toString()}`;
-    return this.get(endpoint);
-  }
-
   async getTitled(): Promise<ChessTitle[]> {
     const endpoint = '/api/chess/titled';
     const { titles = [] } = await this.get<{ titles: ChessTitle[] }>(endpoint);
     return titles;
-  }
-
-  async getTitle({
-    title,
-    timeRange,
-    countryCode,
-  }: {
-    title: string;
-    countryCode: string;
-    timeRange: TimeRange;
-  }): Promise<Titled> {
-    const urlSearchParameters: URLSearchParams = new URLSearchParams();
-    if (timeRange) urlSearchParameters.set('timeRange', timeRange);
-    if (countryCode) urlSearchParameters.set('countryCode', countryCode);
-    const url: string = `/api/chess/titled/${title}?${urlSearchParameters.toString()}`;
-    return this.get(url);
   }
 }

@@ -2,156 +2,160 @@
 
 exports[`PlayerHeader to match snapshot 1`] = `
 <div>
-  <div
-    class="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4"
-  >
+  <header>
     <div
-      class="col-span-1"
-    >
-      <h2
-        class="chakra-heading css-0"
-      >
-        Titled
-      </h2>
-    </div>
-    <div
-      class="col-span-2"
+      class="grid grid-cols-1 items-center gap-2 md:grid-cols-3 md:gap-4"
     >
       <div
-        class="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4"
+        class="col-span-1"
+      >
+        <h2
+          class="chakra-heading text-center text-xl md:text-left md:text-3xl css-0"
+        >
+          Titled (
+          0
+          )
+        </h2>
+      </div>
+      <div
+        class="col-span-2"
       >
         <div
-          class="col-span-1"
+          class="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4"
         >
           <div
-            class="chakra-select__wrapper css-42b2qy"
+            class="col-span-1"
           >
-            <select
-              aria-label="Title"
-              class="chakra-select shadow css-1ik61og"
-              id="title"
-              name="title"
-            >
-              <option
-                value=""
-              >
-                Title
-              </option>
-            </select>
             <div
-              class="chakra-select__icon-wrapper css-162mkon"
+              class="chakra-select__wrapper css-42b2qy"
             >
-              <svg
-                aria-hidden="true"
-                class="chakra-select__icon"
-                focusable="false"
-                role="presentation"
-                style="width: 1em; height: 1em; color: currentColor;"
-                viewBox="0 0 24 24"
+              <select
+                aria-label="Title"
+                class="chakra-select shadow css-1ik61og"
+                id="title"
+                name="title"
               >
-                <path
-                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                  fill="currentColor"
-                />
-              </svg>
+                <option
+                  value=""
+                >
+                  Title
+                </option>
+              </select>
+              <div
+                class="chakra-select__icon-wrapper css-162mkon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-select__icon"
+                  focusable="false"
+                  role="presentation"
+                  style="width: 1em; height: 1em; color: currentColor;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="col-span-1"
-        >
           <div
-            class="chakra-select__wrapper css-42b2qy"
+            class="col-span-1"
           >
-            <select
-              aria-label="Country"
-              class="chakra-select shadow css-1ik61og"
-              id="country"
-              name="country"
-            >
-              <option
-                value=""
-              >
-                Country
-              </option>
-            </select>
             <div
-              class="chakra-select__icon-wrapper css-162mkon"
+              class="chakra-select__wrapper css-42b2qy"
             >
-              <svg
-                aria-hidden="true"
-                class="chakra-select__icon"
-                focusable="false"
-                role="presentation"
-                style="width: 1em; height: 1em; color: currentColor;"
-                viewBox="0 0 24 24"
+              <select
+                aria-label="Country"
+                class="chakra-select shadow css-1ik61og"
+                id="country"
+                name="country"
               >
-                <path
-                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                  fill="currentColor"
-                />
-              </svg>
+                <option
+                  value=""
+                >
+                  Country
+                </option>
+              </select>
+              <div
+                class="chakra-select__icon-wrapper css-162mkon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-select__icon"
+                  focusable="false"
+                  role="presentation"
+                  style="width: 1em; height: 1em; color: currentColor;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="col-span-1"
-        >
           <div
-            class="chakra-select__wrapper css-42b2qy"
+            class="col-span-1"
           >
-            <select
-              class="chakra-select shadow css-1ik61og"
-              id="timeRange"
-              name="timeRange"
-            >
-              <option
-                value=""
-              >
-                Time Range
-              </option>
-              <option
-                value="week"
-              >
-                7 Days
-              </option>
-              <option
-                value="month"
-              >
-                30 Days
-              </option>
-              <option
-                value="quarter"
-              >
-                90 Days
-              </option>
-              <option
-                value="year"
-              >
-                1 Year
-              </option>
-            </select>
             <div
-              class="chakra-select__icon-wrapper css-162mkon"
+              class="chakra-select__wrapper css-42b2qy"
             >
-              <svg
-                aria-hidden="true"
-                class="chakra-select__icon"
-                focusable="false"
-                role="presentation"
-                style="width: 1em; height: 1em; color: currentColor;"
-                viewBox="0 0 24 24"
+              <select
+                class="chakra-select shadow css-1ik61og"
+                id="timeRange"
+                name="timeRange"
               >
-                <path
-                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                  fill="currentColor"
-                />
-              </svg>
+                <option
+                  value=""
+                >
+                  Time Range
+                </option>
+                <option
+                  value="week"
+                >
+                  7 Days
+                </option>
+                <option
+                  value="month"
+                >
+                  30 Days
+                </option>
+                <option
+                  value="quarter"
+                >
+                  90 Days
+                </option>
+                <option
+                  value="year"
+                >
+                  1 Year
+                </option>
+              </select>
+              <div
+                class="chakra-select__icon-wrapper css-162mkon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-select__icon"
+                  focusable="false"
+                  role="presentation"
+                  style="width: 1em; height: 1em; color: currentColor;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </div>
 `;

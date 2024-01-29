@@ -8,6 +8,7 @@ import {
   AccordionPanel,
   Button,
   ButtonGroup,
+  Heading,
 } from '@chakra-ui/react';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import { CountryTotal, PlayersCountriesList } from '../PlayersCountriesList';
@@ -29,7 +30,10 @@ export const PlayersCountries: React.FC<PlayersCountriesProperties> = ({
 
   return (
     <>
-      <div className="flex justify-end">
+      <div className="flex justify-between">
+        <Heading className="text-center text-lg md:text-left md:text-2xl">
+          Countries ({countries.length})
+        </Heading>
         <ButtonGroup isAttached className="inline-flex">
           <Button
             type="button"

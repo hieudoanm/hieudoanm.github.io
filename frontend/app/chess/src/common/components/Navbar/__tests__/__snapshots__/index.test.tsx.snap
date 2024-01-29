@@ -65,15 +65,6 @@ exports[`Navbar to match snapshot 1`] = `
                     Players
                   </p>
                 </a>
-                <a
-                  href="/titled"
-                >
-                  <p
-                    class="chakra-text css-0"
-                  >
-                    Titled
-                  </p>
-                </a>
               </div>
             </div>
           </div>

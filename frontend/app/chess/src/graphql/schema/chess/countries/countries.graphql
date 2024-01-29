@@ -4,28 +4,3 @@ type Country {
   name: String
   flag: String
 }
-
-type TitledCountryStat {
-  average: Float
-  max: Float
-}
-
-type TitledCountryStats {
-  rapid: TitledCountryStat
-  blitz: TitledCountryStat
-  bullet: TitledCountryStat
-}
-
-type TitledCountry {
-  countryCode: String
-  total: Int
-  count: Int
-  stats: TitledCountryStats
-  titles: [TitleTotal]
-  players: [Player]
-}
-
-type TitleTotal {
-  title: String
-  total: Int
-}

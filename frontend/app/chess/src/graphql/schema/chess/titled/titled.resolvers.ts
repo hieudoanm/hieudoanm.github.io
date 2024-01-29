@@ -11,16 +11,5 @@ export const resolvers = {
     ): Promise<ChessTitle[]> => {
       return chessDataSource.getTitled();
     },
-    title: (
-      _parent: unknown,
-      {
-        countryCode,
-        title,
-        timeRange = 'year',
-      }: { countryCode: string; title: string; timeRange: TimeRange },
-      { chessDataSource }: { chessDataSource: ChessDataSource }
-    ): Promise<Titled> => {
-      return chessDataSource.getTitle({ countryCode, title, timeRange });
-    },
   },
 };
