@@ -34,7 +34,7 @@ export const query = async <T>(
     logger.info(`apolloClient.query name=${name} URI=${URI}`);
     const { data } = await getApolloClient(URI).query<T>({
       ...queryOptions,
-      fetchPolicy: 'network-only',
+      fetchPolicy: 'no-cache',
     });
     return data;
   } catch (error) {

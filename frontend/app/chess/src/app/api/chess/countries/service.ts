@@ -9,7 +9,9 @@ export type CountriesResponse = {
 export const getCountries = async (): Promise<CountriesResponse> => {
   const [total = 0, countries = []] = await getPrismaClient().$transaction([
     getPrismaClient().chessCountry.count(),
-    getPrismaClient().chessCountry.findMany(),
+    getPrismaClient().chessCountry.findMany({
+      orderBy: { name: 'asc' },
+    }),
   ]);
 
   await getPrismaClient().$disconnect();
