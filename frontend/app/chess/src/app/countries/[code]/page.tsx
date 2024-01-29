@@ -5,14 +5,18 @@ import { query } from '@chess/graphql/apollo/client';
 import { CountryTemplate } from '@chess/templates/CountryTemplate';
 import { Stats } from '@chess/templates/CountryTemplate/components/CountryStats';
 import { TitleTotal } from '@chess/templates/CountryTemplate/components/CountryTitles';
-import { ChessPlayer, ChessStats } from '@prisma/client';
+import { ChessPlayer, ChessStats, ChessTitle } from '@prisma/client';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
 const countryQuery = gql`
-  query CountryQuery($code: String!) {
+  query CountryQuery($code: String!, $title: String) {
     chess {
-      titledCountry(code: $code) {
+      titled {
+        abbreviation
+        title
+      }
+      titledCountry(code: $code, title: $title) {
         stats {
           rapid {
             average
@@ -72,6 +76,7 @@ const countryQuery = gql`
 
 type CountryData = {
   chess: {
+    titled: ChessTitle[];
     titledCountry: {
       countryCode: string;
       stats: Stats;
@@ -82,38 +87,45 @@ type CountryData = {
   };
 };
 
-const CountryPage: NextPage<{ params: { code: string } }> = async ({
-  params,
-}: {
+type CountryPageProperties = {
   params: { code: string };
-}) => {
-  const countryCode: string = params.code ?? 'US';
-  logger.info(`CountryPage countryCode=${countryCode}`);
+  searchParams: { title: string };
+};
+
+const CountryPage: NextPage<CountryPageProperties> = async ({
+  params,
+  searchParams,
+}: CountryPageProperties) => {
+  const code: string = params.code ?? 'US';
+  const title = searchParams.title ?? undefined;
+  logger.info({ code, title }, 'CountryPage');
 
   const queryOptions: QueryOptions<OperationVariables, CountryData> = {
     query: countryQuery,
-    variables: { code: countryCode },
+    variables: { code, title },
   };
   const data: CountryData = await query<CountryData>(
     'countryQuery',
     queryOptions
   );
-  const country = data?.chess?.titledCountry ?? {};
 
+  const titled = data?.chess?.titled ?? [];
+  const country = data?.chess?.titledCountry ?? {};
   const { stats, total = 0, players = [], titles = [] } = country;
 
   return (
     <>
       <Head>
         <title>
-          {APP_NAME} - {countryCode}
+          {APP_NAME} - {code}
         </title>
       </Head>
       <CountryTemplate
-        countryCode={countryCode}
+        countryCode={code}
         stats={stats}
         total={total}
         titles={titles}
+        titled={titled}
         players={players}
       />
     </>

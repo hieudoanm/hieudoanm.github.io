@@ -8,14 +8,20 @@ import {
   TitledTemplate,
 } from '@chess/templates/TitledTemplate';
 import { Stats } from '@chess/templates/TitledTemplate/components/TitledStats';
-import { ChessTitleAbbreviation } from '@prisma/client';
+import { ChessCountry, ChessTitleAbbreviation } from '@prisma/client';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
 const titledQuery = gql`
-  query TitledQuery($title: String!, $timeRange: String) {
+  query TitledQuery($countryCode: String, $title: String!, $timeRange: String) {
     chess {
-      title(title: $title, timeRange: $timeRange) {
+      countries {
+        cca2
+        cca3
+        name
+        flag
+      }
+      title(countryCode: $countryCode, title: $title, timeRange: $timeRange) {
         stats {
           rapid {
             average
@@ -71,6 +77,7 @@ const titledQuery = gql`
 
 type TitledData = {
   chess: {
+    countries: ChessCountry[];
     title: {
       stats: Stats;
       total: number;
@@ -81,6 +88,7 @@ type TitledData = {
 
 type TitledPageProperties = {
   searchParams: {
+    countryCode: string;
     timeRange: TimeRange;
     title: ChessTitleAbbreviation;
   };
@@ -91,13 +99,15 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
 }: TitledPageProperties) => {
   const timeRange = searchParams?.timeRange ?? 'year';
   const title = searchParams?.title ?? 'GM';
-  logger.info({ timeRange, title }, 'TitledPage searchParams');
+  const countryCode = searchParams?.countryCode ?? undefined;
+  logger.info({ countryCode, timeRange, title }, 'TitledPage searchParams');
 
   const queryOptions: QueryOptions<OperationVariables, TitledData> = {
     query: titledQuery,
-    variables: { title, timeRange },
+    variables: { countryCode, title, timeRange },
   };
   const data: TitledData = await query<TitledData>('titledQuery', queryOptions);
+  const countries = data?.chess?.countries ?? [];
   const titleData = data?.chess?.title ?? {};
   const { stats, total = 0, players = [] } = titleData;
 
@@ -106,7 +116,12 @@ const TitledPage: NextPage<TitledPageProperties> = async ({
       <Head>
         <title>{APP_NAME} - Titled</title>
       </Head>
-      <TitledTemplate total={total} players={players} stats={stats} />
+      <TitledTemplate
+        stats={stats}
+        total={total}
+        players={players}
+        countries={countries}
+      />
     </>
   );
 };

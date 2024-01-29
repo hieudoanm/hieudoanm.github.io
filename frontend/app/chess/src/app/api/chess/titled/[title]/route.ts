@@ -1,3 +1,4 @@
+import { logger } from '@chess/common/libs/logger';
 import { TimeRange } from '@chess/common/types/time';
 import { ChessTitleAbbreviation } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
@@ -13,8 +14,16 @@ export const GET = async (
   const { searchParams } = new URL(request.url);
   const timeRange: TimeRange =
     (searchParams.get('timeRange') as TimeRange) ?? 'year';
+  const countryCode: string | undefined =
+    searchParams.get('countryCode') ?? undefined;
+
   const title: ChessTitleAbbreviation =
     (params.title as ChessTitleAbbreviation) ?? 'GM';
-  const titleStats = await getTitledStats({ timeRange, title });
+
+  logger.info(
+    `title=${title} countryCode=${countryCode} timeRange=${timeRange}`
+  );
+
+  const titleStats = await getTitledStats({ countryCode, timeRange, title });
   return NextResponse.json<TitledStatsDto>(titleStats, { status: 200 });
 };

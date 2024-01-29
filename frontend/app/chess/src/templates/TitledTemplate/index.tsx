@@ -15,16 +15,18 @@ export type TitledTemplateProperties = {
   stats: Stats;
   total: number;
   players: FullChessPlayer[];
+  countries: ChessCountry[];
 };
 
 export const TitledTemplate: React.FC<TitledTemplateProperties> = ({
+  stats,
   total = 0,
   players = [],
-  stats,
+  countries = [],
 }) => {
   return (
     <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
-      <TitledHeader total={total} />
+      <TitledHeader total={total} countries={countries} />
       <TitledStats players={players} stats={stats} />
       <TitledCharts players={players} />
       <TitledPlayers players={players} />

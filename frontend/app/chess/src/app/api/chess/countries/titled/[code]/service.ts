@@ -1,5 +1,5 @@
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
-import { ChessTimeClass, Prisma } from '@prisma/client';
+import { ChessTimeClass, ChessTitleAbbreviation, Prisma } from '@prisma/client';
 import { CountryResponse } from './model';
 
 (BigInt.prototype as any).toJSON = function () {
@@ -7,20 +7,37 @@ import { CountryResponse } from './model';
   return int ?? this.toString();
 };
 
-const countTitledPlayers = (countryCode: string): Prisma.Sql => {
+const countTitledPlayers = ({
+  title,
+  code,
+}: {
+  title: ChessTitleAbbreviation;
+  code: string;
+}): Prisma.Sql => {
+  const whereTitle = title
+    ? `player."title" = '${title}'`
+    : 'player."title" IS NOT NULL';
   const query = `SELECT player."title", COUNT(*) as total
 FROM chess."ChessPlayer" AS player
-WHERE player."countryCode" = '${countryCode}'
-AND player."title" IS NOT NULL
+WHERE player."countryCode" = '${code}'
+AND ${whereTitle}
 GROUP BY player."title"
 ORDER BY player."title";`;
   return Prisma.raw(query);
 };
 
-export const getCountry = async (
-  countryCode: string
-): Promise<CountryResponse> => {
-  const where = { countryCode, title: { not: null } };
+export const getCountry = async ({
+  title,
+  code,
+}: {
+  title: ChessTitleAbbreviation;
+  code: string;
+}): Promise<CountryResponse> => {
+  const whereTitle = title ?? { not: null };
+  const where: Prisma.ChessPlayerWhereInput = {
+    countryCode: code,
+    title: whereTitle,
+  };
   const [
     total = 0,
     players = [],
@@ -52,48 +69,30 @@ export const getCountry = async (
     }),
     getPrismaClient().chessStats.aggregate({
       _avg: { last: true },
-      where: {
-        timeClass: ChessTimeClass.rapid,
-        last: { gt: 0 },
-      },
+      where: { timeClass: ChessTimeClass.rapid, last: { gt: 0 } },
     }),
     getPrismaClient().chessStats.aggregate({
       _avg: { last: true },
-      where: {
-        timeClass: ChessTimeClass.blitz,
-        last: { gt: 0 },
-      },
+      where: { timeClass: ChessTimeClass.blitz, last: { gt: 0 } },
     }),
     getPrismaClient().chessStats.aggregate({
       _avg: { last: true },
-      where: {
-        timeClass: ChessTimeClass.bullet,
-        last: { gt: 0 },
-      },
+      where: { timeClass: ChessTimeClass.bullet, last: { gt: 0 } },
     }),
     getPrismaClient().chessStats.aggregate({
       _max: { last: true },
-      where: {
-        timeClass: ChessTimeClass.rapid,
-        last: { gt: 0 },
-      },
+      where: { timeClass: ChessTimeClass.rapid, last: { gt: 0 } },
     }),
     getPrismaClient().chessStats.aggregate({
       _max: { last: true },
-      where: {
-        timeClass: ChessTimeClass.blitz,
-        last: { gt: 0 },
-      },
+      where: { timeClass: ChessTimeClass.blitz, last: { gt: 0 } },
     }),
     getPrismaClient().chessStats.aggregate({
       _max: { last: true },
-      where: {
-        timeClass: ChessTimeClass.bullet,
-        last: { gt: 0 },
-      },
+      where: { timeClass: ChessTimeClass.bullet, last: { gt: 0 } },
     }),
     getPrismaClient().$queryRaw<{ title: string; total: number }[]>(
-      countTitledPlayers(countryCode)
+      countTitledPlayers({ code, title })
     ),
   ]);
 

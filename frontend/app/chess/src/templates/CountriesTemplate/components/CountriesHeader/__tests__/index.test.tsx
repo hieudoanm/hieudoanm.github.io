@@ -17,7 +17,7 @@ describe('PlayerHeader', () => {
   });
 
   it('to match snapshot', () => {
-    const { container } = render(<CountriesHeader total={0} />);
+    const { container } = render(<CountriesHeader total={0} titles={[]} />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -1,6 +1,7 @@
 import { TIME_RANGE_IN_MILLISECONDS } from '@chess/common/constants/time.constants';
 import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
+import { ChessTitleAbbreviation } from '@prisma/client';
 import { Country } from './model';
 
 (BigInt.prototype as any).toJSON = function () {
@@ -8,16 +9,21 @@ import { Country } from './model';
   return int ?? this.toString();
 };
 
-export const getTitledCountries = async (): Promise<Country[]> => {
+export const getTitledCountries = async ({
+  title,
+}: {
+  title: ChessTitleAbbreviation;
+}): Promise<Country[]> => {
   try {
     const milliseconds: number = TIME_RANGE_IN_MILLISECONDS.get('year') ?? 0;
     const d = new Date(Date.now() - milliseconds);
     const [date] = d.toISOString().split('T');
+    const whereTitle = title ?? { not: null };
     const countries = await getPrismaClient().chessPlayer.groupBy({
       by: ['countryCode'],
       _count: { countryCode: true },
       orderBy: { countryCode: 'asc' },
-      where: { title: { not: null }, lastOnline: { gte: `${date}T00:00:00Z` } },
+      where: { title: whereTitle, lastOnline: { gte: `${date}T00:00:00Z` } },
     });
     await getPrismaClient().$disconnect();
     return countries.map((country) => ({

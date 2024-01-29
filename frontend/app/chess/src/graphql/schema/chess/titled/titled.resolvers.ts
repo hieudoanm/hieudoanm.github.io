@@ -13,10 +13,14 @@ export const resolvers = {
     },
     title: (
       _parent: unknown,
-      { title, timeRange = 'year' }: { title: string; timeRange: TimeRange },
+      {
+        countryCode,
+        title,
+        timeRange = 'year',
+      }: { countryCode: string; title: string; timeRange: TimeRange },
       { chessDataSource }: { chessDataSource: ChessDataSource }
     ): Promise<Titled> => {
-      return chessDataSource.getTitle({ title, timeRange });
+      return chessDataSource.getTitle({ countryCode, title, timeRange });
     },
   },
 };

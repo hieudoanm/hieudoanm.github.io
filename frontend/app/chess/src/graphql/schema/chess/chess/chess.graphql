@@ -20,7 +20,7 @@ type Chess {
   ): Players
   player(username: String!): Player
   titled: [Title]
-  title(title: String!, timeRange: String): Titled
-  titledCountries: [TitledCountry]
-  titledCountry(code: String!): TitledCountry
+  title(countryCode: String, title: String!, timeRange: String): Titled
+  titledCountries(title: String): [TitledCountry]
+  titledCountry(code: String!, title: String): TitledCountry
 }

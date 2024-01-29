@@ -1,6 +1,6 @@
 'use client';
 
-import { ChessPlayer, ChessStats } from '@prisma/client';
+import { ChessPlayer, ChessStats, ChessTitle } from '@prisma/client';
 import { CountryCharts } from './components/CountryCharts';
 import { CountryHeader } from './components/CountryHeader';
 import { CountryPlayers } from './components/CountryPlayers';
@@ -12,6 +12,7 @@ type CountryTemplateProperties = {
   stats: Stats;
   total: number;
   titles: TitleTotal[];
+  titled: ChessTitle[];
   players: (ChessPlayer & { stats: ChessStats[] })[];
 };
 
@@ -20,11 +21,12 @@ export const CountryTemplate: React.FC<CountryTemplateProperties> = ({
   stats,
   total = 0,
   titles = [],
+  titled = [],
   players = [],
 }) => {
   return (
     <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
-      <CountryHeader countryCode={countryCode} />
+      <CountryHeader countryCode={countryCode} titles={titled} />
       <CountryStats stats={stats} />
       <CountryCharts players={players} />
       <CountryTitles titles={titles} />

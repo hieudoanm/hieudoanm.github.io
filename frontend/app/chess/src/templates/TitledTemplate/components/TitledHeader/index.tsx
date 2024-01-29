@@ -2,15 +2,19 @@ import { Heading, Select } from '@chakra-ui/react';
 import { TITLED_ABBREVIATIONS } from '@chess/common/constants/chess.constants';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import { logger } from '@chess/common/libs/logger';
+import { ChessCountry } from '@prisma/client';
 
 export type TitledHeaderProperties = {
   total: number;
+  countries: ChessCountry[];
 };
 
 export const TitledHeader: React.FC<TitledHeaderProperties> = ({
   total = 0,
+  countries = [],
 }) => {
   const [title, setTitle] = useSearchParameter('title', 'GM');
+  const [countryCode, setCountryCode] = useSearchParameter('countryCode');
   const [timeRange, setTimeRange] = useSearchParameter('timeRange');
 
   return (
@@ -25,7 +29,7 @@ export const TitledHeader: React.FC<TitledHeaderProperties> = ({
           value={title}
           onChange={(event) => {
             const newTitle: string = event.target.value;
-            logger.info(`newTitle=${newTitle}`);
+            logger.info(`TitledHeader newTitle=${newTitle}`);
             setTitle(newTitle);
           }}>
           {Object.entries(TITLED_ABBREVIATIONS)
@@ -35,6 +39,23 @@ export const TitledHeader: React.FC<TitledHeaderProperties> = ({
                 {value}
               </option>
             ))}
+        </Select>
+        <Select
+          id="country"
+          name="country"
+          placeholder="Country"
+          className="shadow"
+          value={countryCode}
+          onChange={(event) => {
+            const newCountry: string = event.target.value;
+            logger.info(`TitledHeader newCountry=${newCountry}`);
+            setCountryCode(newCountry);
+          }}>
+          {countries.map(({ cca2, name, flag }) => (
+            <option key={cca2} value={cca2}>
+              {flag} {name}
+            </option>
+          ))}
         </Select>
         <Select
           id="timeRange"

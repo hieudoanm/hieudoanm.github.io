@@ -13,23 +13,60 @@ exports[`PlayerHeader to match snapshot 1`] = `
       )
     </h2>
     <div
-      class="chakra-button__group css-1ayoy1w"
-      data-attached=""
-      data-orientation="horizontal"
-      role="group"
+      class="flex items-center gap-x-2"
     >
-      <button
-        class="chakra-button css-1fysbuj"
-        type="button"
+      <div
+        class="chakra-select__wrapper css-42b2qy"
       >
-        List
-      </button>
-      <button
-        class="chakra-button css-1fysbuj"
-        type="button"
+        <select
+          aria-label="Title"
+          class="chakra-select shadow css-1ik61og"
+          id="title"
+          name="title"
+        >
+          <option
+            value=""
+          >
+            Title
+          </option>
+        </select>
+        <div
+          class="chakra-select__icon-wrapper css-162mkon"
+        >
+          <svg
+            aria-hidden="true"
+            class="chakra-select__icon"
+            focusable="false"
+            role="presentation"
+            style="width: 1em; height: 1em; color: currentColor;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="chakra-button__group shadow css-1ayoy1w"
+        data-attached=""
+        data-orientation="horizontal"
+        role="group"
       >
-        Maps
-      </button>
+        <button
+          class="chakra-button css-1fysbuj"
+          type="button"
+        >
+          List
+        </button>
+        <button
+          class="chakra-button css-1fysbuj"
+          type="button"
+        >
+          Maps
+        </button>
+      </div>
     </div>
   </div>
 </div>

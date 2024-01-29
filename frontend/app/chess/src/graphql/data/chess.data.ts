@@ -30,14 +30,28 @@ export class ChessDataSource extends RESTDataSource {
     return countries;
   }
 
-  async getTitledCountries(): Promise<TitledCountry[]> {
-    const endpoint: string = '/api/chess/countries/titled';
+  async getTitledCountries({
+    title,
+  }: {
+    title?: ChessTitleAbbreviation;
+  }): Promise<TitledCountry[]> {
+    const urlSearchParameters: URLSearchParams = new URLSearchParams();
+    if (title) urlSearchParameters.set('title', title);
+    const endpoint: string = `/api/chess/countries/titled?${urlSearchParameters.toString()}`;
     const { countries = [] } = await this.get<CountriesResponse>(endpoint);
     return countries;
   }
 
-  async getTitledCountry(code: string): Promise<TitledCountry> {
-    const endpoint: string = `/api/chess/countries/titled/${code}`;
+  async getTitledCountry({
+    code,
+    title,
+  }: {
+    code: string;
+    title?: ChessTitleAbbreviation;
+  }): Promise<TitledCountry> {
+    const urlSearchParameters: URLSearchParams = new URLSearchParams();
+    if (title) urlSearchParameters.set('title', title);
+    const endpoint: string = `/api/chess/countries/titled/${code}?${urlSearchParameters.toString()}`;
     return this.get(endpoint);
   }
 
@@ -139,14 +153,15 @@ export class ChessDataSource extends RESTDataSource {
   async getTitle({
     title,
     timeRange,
+    countryCode,
   }: {
     title: string;
+    countryCode: string;
     timeRange: TimeRange;
   }): Promise<Titled> {
     const urlSearchParameters: URLSearchParams = new URLSearchParams();
-    if (timeRange) {
-      urlSearchParameters.set('timeRange', timeRange);
-    }
+    if (timeRange) urlSearchParameters.set('timeRange', timeRange);
+    if (countryCode) urlSearchParameters.set('countryCode', countryCode);
     const url: string = `/api/chess/titled/${title}?${urlSearchParameters.toString()}`;
     return this.get(url);
   }

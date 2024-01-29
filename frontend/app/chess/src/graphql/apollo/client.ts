@@ -31,7 +31,10 @@ export const query = async <T>(
   queryOptions: QueryOptions<OperationVariables, T>
 ): Promise<T> => {
   try {
-    logger.info(`apolloClient.query name=${name} URI=${URI}`);
+    logger.info(
+      queryOptions.variables ?? {},
+      `apolloClient.query name=${name} URI=${URI}`
+    );
     const { data } = await getApolloClient(URI).query<T>({
       ...queryOptions,
       fetchPolicy: 'no-cache',
