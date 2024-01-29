@@ -1,14 +1,13 @@
 'use client';
 
 import { Heading, Select } from '@chakra-ui/react';
-import { TITLED_ABBREVIATIONS } from '@chess/common/constants/chess.constants';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
-import { ChessTitleAbbreviation } from '@prisma/client';
+import { ChessCountry, ChessTitle } from '@prisma/client';
 
 export type PlayersHeaderProperties = {
   total: number;
-  titles: { title: ChessTitleAbbreviation }[];
-  countries: { countryCode: string }[];
+  titles: ChessTitle[];
+  countries: ChessCountry[];
 };
 
 export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
@@ -34,9 +33,9 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
             setTitle(newTitle);
           }}>
           <option value="">Title</option>
-          {titles.map(({ title }) => (
-            <option key={title} value={title}>
-              {TITLED_ABBREVIATIONS[title]}
+          {titles.map(({ abbreviation, title }) => (
+            <option key={abbreviation} value={abbreviation}>
+              {title}
             </option>
           ))}
         </Select>
@@ -51,9 +50,9 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
             setCountryCode(newCountryCode);
           }}>
           <option value="">Country</option>
-          {countries.map(({ countryCode }) => (
-            <option key={countryCode} value={countryCode}>
-              {countryCode}
+          {countries.map(({ cca2, name }) => (
+            <option key={cca2} value={cca2}>
+              {name}
             </option>
           ))}
         </Select>

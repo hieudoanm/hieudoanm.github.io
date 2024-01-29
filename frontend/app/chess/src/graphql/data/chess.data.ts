@@ -4,6 +4,7 @@ import {
   ChessCountry,
   ChessGame,
   ChessPlayer,
+  ChessTitle,
   ChessTitleAbbreviation,
 } from '@prisma/client';
 import {
@@ -129,7 +130,13 @@ export class ChessDataSource extends RESTDataSource {
     return this.get(endpoint);
   }
 
-  async getTitled({
+  async getTitled(): Promise<ChessTitle[]> {
+    const endpoint = '/api/chess/titled';
+    const { titles = [] } = await this.get<{ titles: ChessTitle[] }>(endpoint);
+    return titles;
+  }
+
+  async getTitle({
     title,
     timeRange,
   }: {

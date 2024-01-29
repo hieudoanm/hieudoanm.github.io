@@ -7,6 +7,7 @@ import {
   ChessCountry,
   ChessPlayer,
   ChessStats,
+  ChessTitle,
   ChessTitleAbbreviation,
 } from '@prisma/client';
 import type { NextPage } from 'next';
@@ -21,6 +22,16 @@ const playersQuery = gql`
     $countryCode: String
   ) {
     chess {
+      countries {
+        cca2
+        cca3
+        name
+        flag
+      }
+      titled {
+        abbreviation
+        title
+      }
       players(
         limit: $limit
         offset: $offset
@@ -29,12 +40,6 @@ const playersQuery = gql`
         countryCode: $countryCode
       ) {
         total
-        titles {
-          title
-        }
-        countries {
-          countryCode
-        }
         players {
           timeClass
           best
@@ -75,10 +80,10 @@ const playersQuery = gql`
 
 type PlayersData = {
   chess: {
+    countries: ChessCountry[];
+    titled: ChessTitle[];
     players: {
       total: number;
-      titles: { title: ChessTitleAbbreviation }[];
-      countries: { countryCode: string }[];
       players: (ChessStats & {
         player: ChessPlayer & { country: ChessCountry };
       })[];
@@ -117,9 +122,9 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
     'playersQuery',
     queryOptions
   );
+  const countries = data?.chess?.countries ?? [];
+  const titles = data?.chess?.titled ?? [];
   const total = data?.chess?.players?.total ?? 0;
-  const titles = data?.chess?.players?.titles ?? [];
-  const countries = data?.chess?.players?.countries ?? [];
   const players = data?.chess?.players?.players ?? [];
   logger.info(`PlayersPage players=${players.length}`);
 

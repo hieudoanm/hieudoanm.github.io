@@ -19,7 +19,8 @@ type Chess {
     isStreamer: Boolean
   ): Players
   player(username: String!): Player
-  titled(title: String!, timeRange: String): Titled
+  titled: [Title]
+  title(title: String!, timeRange: String): Titled
   titledCountries: [TitledCountry]
   titledCountry(code: String!): TitledCountry
 }

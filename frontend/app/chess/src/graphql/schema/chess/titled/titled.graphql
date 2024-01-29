@@ -1,3 +1,8 @@
+type Title {
+  abbreviation: TitleAbbreviation
+  title: String
+}
+
 type TitledStat {
   average: Float
   max: Float
@@ -22,7 +27,7 @@ enum TimeRange {
   week
 }
 
-enum Title {
+enum TitleAbbreviation {
   GM
   IM
   FM
@@ -33,4 +38,8 @@ enum Title {
   WFM
   WCM
   WNM
+  AGM
+  AIM
+  AFM
+  ACM
 }

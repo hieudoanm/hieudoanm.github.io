@@ -15,7 +15,7 @@ import Head from 'next/head';
 const titledQuery = gql`
   query TitledQuery($title: String!, $timeRange: String) {
     chess {
-      titled(title: $title, timeRange: $timeRange) {
+      title(title: $title, timeRange: $timeRange) {
         stats {
           rapid {
             average
