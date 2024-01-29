@@ -104,6 +104,7 @@ Enum ChessStatus {
   premium
   staff
   mod
+  closed
 }
 
 Enum ChessLeague {

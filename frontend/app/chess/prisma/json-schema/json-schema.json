@@ -56,7 +56,8 @@
             "basic",
             "premium",
             "staff",
-            "mod"
+            "mod",
+            "closed"
           ]
         },
         "title": {
