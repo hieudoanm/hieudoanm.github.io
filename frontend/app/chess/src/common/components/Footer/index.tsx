@@ -1,8 +1,8 @@
 'use client';
 
 import { Text } from '@chakra-ui/react';
+import { Container } from '@chess/common/components/Container';
 import { APP_NAME, YEAR } from '@chess/common/constants/app.constants';
-import { Container } from '@chess/components/atoms/Container';
 
 export const Footer: React.FC = () => {
   return (

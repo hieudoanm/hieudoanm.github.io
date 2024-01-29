@@ -2,7 +2,7 @@ import {
   ChessLeague,
   ChessStatus,
   ChessTimeClass,
-  ChessTitle,
+  ChessTitleAbbreviation,
   PrismaClient,
 } from '@prisma/client';
 import axios from 'axios';
@@ -126,7 +126,7 @@ const syncPlayer = async (
       isStreamer,
       verified,
       countryCode,
-      title: title as ChessTitle,
+      title: title as ChessTitleAbbreviation,
       league: league as ChessLeague,
       status: status as ChessStatus,
       joined: new Date(joined * 1000),

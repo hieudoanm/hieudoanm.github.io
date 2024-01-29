@@ -31,7 +31,7 @@ export const PlayerStat: React.FC<PlayerStatProperties> = ({
       <CardBody>
         <div className="flex items-center justify-between">
           <Stat>
-            <StatLabel>{timeClass}</StatLabel>
+            <StatLabel className="capitalize">{timeClass}</StatLabel>
             <StatNumber>{last ?? 'N/A'}</StatNumber>
             <StatHelpText className="m-0">Best: {best ?? 'N/A'}</StatHelpText>
           </Stat>

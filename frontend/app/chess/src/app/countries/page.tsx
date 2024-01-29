@@ -16,7 +16,7 @@ type CountriesData = { chess: { countries: Country[] } };
 const countriesQuery: DocumentNode = gql`
   query CountriesQuery {
     chess {
-      countries {
+      titledCountries {
         countryCode
         count
       }

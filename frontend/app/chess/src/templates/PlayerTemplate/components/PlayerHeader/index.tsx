@@ -3,13 +3,13 @@
 import { DocumentNode, gql } from '@apollo/client';
 import { Button, Heading, Icon, Text, useToast } from '@chakra-ui/react';
 import { TitleBadge } from '@chess/components/atoms/TitleBadge';
-import { ChessTitle } from '@prisma/client';
+import { ChessTitleAbbreviation } from '@prisma/client';
 import Link from 'next/link';
 import { FaCheckCircle, FaSync, FaTwitch } from 'react-icons/fa';
 
 type ChessHeaderProperties = {
   avatar: string;
-  title: ChessTitle | null;
+  title: ChessTitleAbbreviation | null;
   name: string;
   username: string;
   verified: boolean;

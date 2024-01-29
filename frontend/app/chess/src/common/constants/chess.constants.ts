@@ -1,12 +1,29 @@
-import { ChessResult, ChessTitle } from '@prisma/client';
+import { ChessResult, ChessTitleAbbreviation } from '@prisma/client';
 import { ChessBoardSquare } from '../types/chess';
 
 export const CHESS_USERNAME = 'hikaru';
 // Titles
-export const OPEN_TITLES: ChessTitle[] = ['GM', 'IM', 'FM', 'CM', 'NM'];
-export const WOMAN_TITLES: ChessTitle[] = ['WGM', 'WIM', 'WFM', 'WCM', 'WNM'];
-export const ARENA_TITLES: ChessTitle[] = ['AGM', 'AIM', 'AFM', 'ACM'];
-export const TITLES: ChessTitle[] = [
+export const OPEN_TITLES: ChessTitleAbbreviation[] = [
+  'GM',
+  'IM',
+  'FM',
+  'CM',
+  'NM',
+];
+export const WOMAN_TITLES: ChessTitleAbbreviation[] = [
+  'WGM',
+  'WIM',
+  'WFM',
+  'WCM',
+  'WNM',
+];
+export const ARENA_TITLES: ChessTitleAbbreviation[] = [
+  'AGM',
+  'AIM',
+  'AFM',
+  'ACM',
+];
+export const TITLES: ChessTitleAbbreviation[] = [
   ...OPEN_TITLES,
   ...WOMAN_TITLES,
   ...ARENA_TITLES,
@@ -88,7 +105,7 @@ export const LOSS_RESULTS: ChessResult[] = [
   'abandoned',
 ];
 
-export const TITLED_ABBREVIATIONS: Record<ChessTitle, string> = {
+export const TITLED_ABBREVIATIONS: Record<ChessTitleAbbreviation, string> = {
   GM: 'Grand Master',
   IM: 'International Master',
   FM: 'FIDE Master',

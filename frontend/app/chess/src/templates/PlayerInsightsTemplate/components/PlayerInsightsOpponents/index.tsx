@@ -142,19 +142,19 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                         <b>{games}</b>
                       </Td>
                       <Td isNumeric>
-                        <span className="text-teal-500">
+                        <p className="text-teal-500">
                           {win} ({winPercentage.toFixed(2)}%)
-                        </span>
+                        </p>
                       </Td>
                       <Td isNumeric>
-                        <span className="text-gray-500">
+                        <p className="text-gray-500">
                           {draw} ({drawPercentage.toFixed(2)}%)
-                        </span>
+                        </p>
                       </Td>
                       <Td isNumeric>
-                        <span className="text-red-500">
+                        <p className="text-red-500">
                           {loss} ({lossPercentage.toFixed(2)}%)
-                        </span>
+                        </p>
                       </Td>
                     </Tr>
                   );

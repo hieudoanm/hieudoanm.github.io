@@ -1,12 +1,12 @@
-import { ChessTitle } from '@prisma/client';
+import { ChessTitleAbbreviation } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 import { PlayersResponse, getPlayers } from './service';
 
 const resolveQuery = (searchParameters: URLSearchParams) => {
   const countryCode: string | undefined =
     searchParameters.get('countryCode') ?? undefined;
-  const title: ChessTitle | undefined =
-    (searchParameters.get('title') as ChessTitle) ?? undefined;
+  const title: ChessTitleAbbreviation | undefined =
+    (searchParameters.get('title') as ChessTitleAbbreviation) ?? undefined;
   const isStreamer: boolean | undefined =
     (searchParameters.get('isStreamer') ?? '') === 'true';
   const limitString: string | undefined =

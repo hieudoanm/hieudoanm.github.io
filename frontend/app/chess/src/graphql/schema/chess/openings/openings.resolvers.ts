@@ -3,6 +3,13 @@ import { ChessOpening } from '@prisma/client';
 
 export const resolvers = {
   Chess: {
+    ecos: async (
+      _parent: unknown,
+      _parameters: unknown,
+      { chessDataSource }: { chessDataSource: ChessDataSource }
+    ): Promise<string[]> => {
+      return chessDataSource.getEcos();
+    },
     openings: async (
       _parent: unknown,
       {

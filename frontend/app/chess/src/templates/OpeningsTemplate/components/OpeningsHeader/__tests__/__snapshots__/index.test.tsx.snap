@@ -2,12 +2,51 @@
 
 exports[`OpeningsHeader to match snapshot 1`] = `
 <div>
-  <h2
-    class="chakra-heading css-0"
+  <div
+    class="flex items-center justify-between"
   >
-    Openings (
-    0
-    )
-  </h2>
+    <h2
+      class="chakra-heading css-0"
+    >
+      Openings (
+      0
+      )
+    </h2>
+    <div>
+      <div
+        class="chakra-select__wrapper css-42b2qy"
+      >
+        <select
+          aria-label="ECO"
+          class="chakra-select shadow css-1ik61og"
+          id="eco"
+          name="eco"
+        >
+          <option
+            value=""
+          >
+            ECO
+          </option>
+        </select>
+        <div
+          class="chakra-select__icon-wrapper css-162mkon"
+        >
+          <svg
+            aria-hidden="true"
+            class="chakra-select__icon"
+            focusable="false"
+            role="presentation"
+            style="width: 1em; height: 1em; color: currentColor;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;

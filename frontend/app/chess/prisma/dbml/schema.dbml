@@ -17,10 +17,17 @@ Table ChessPlayer {
   lastOnline DateTime [default: `now()`, not null]
   joined DateTime [default: `now()`, not null]
   status ChessStatus [not null, default: 'basic']
-  title ChessTitle
+  title ChessTitleAbbreviation
   league ChessLeague
   archives String[] [not null]
   stats ChessStats [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table ChessTitle {
+  abbreviation ChessTitleAbbreviation [pk]
+  title String [not null, default: '']
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
 }
@@ -110,7 +117,7 @@ Enum ChessLeague {
   Legend
 }
 
-Enum ChessTitle {
+Enum ChessTitleAbbreviation {
   GM
   WGM
   IM

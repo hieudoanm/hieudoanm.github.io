@@ -1,8 +1,8 @@
 'use client';
 
 import { Button } from '@chakra-ui/react';
-import { Footer } from '@chess/components/atoms/Footer';
-import { Navbar } from '@chess/components/atoms/Navbar';
+import { Footer } from '@chess/common/components/Footer';
+import { Navbar } from '@chess/common/components/Navbar';
 import { Providers } from './providers';
 
 const GlobalError: React.FC<{

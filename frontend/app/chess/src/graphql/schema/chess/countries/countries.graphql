@@ -1,22 +1,26 @@
 type Country {
-  countryCode: String
-  count: Int
+  cca2: String
+  cca3: String
+  name: String
+  flag: String
 }
 
-type CountryStat {
+type TitledCountryStat {
   average: Float
   max: Float
 }
 
-type CountryStats {
-  rapid: CountryStat
-  blitz: CountryStat
-  bullet: CountryStat
+type TitledCountryStats {
+  rapid: TitledCountryStat
+  blitz: TitledCountryStat
+  bullet: TitledCountryStat
 }
 
 type TitledCountry {
-  stats: CountryStats
+  countryCode: String
   total: Int
+  count: Int
+  stats: TitledCountryStats
   titles: [TitleTotal]
   players: [Player]
 }

@@ -7,7 +7,7 @@ import {
   ChessCountry,
   ChessPlayer,
   ChessStats,
-  ChessTitle,
+  ChessTitleAbbreviation,
 } from '@prisma/client';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -77,7 +77,7 @@ type PlayersData = {
   chess: {
     players: {
       total: number;
-      titles: { title: ChessTitle }[];
+      titles: { title: ChessTitleAbbreviation }[];
       countries: { countryCode: string }[];
       players: (ChessStats & {
         player: ChessPlayer & { country: ChessCountry };
@@ -90,7 +90,7 @@ type PlayersPageProperties = {
   searchParams: {
     limit: string;
     offset: string;
-    title: ChessTitle;
+    title: ChessTitleAbbreviation;
     isStreamer: string;
     countryCode: string;
   };
@@ -101,7 +101,7 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
 }: PlayersPageProperties) => {
   const limit: number = Number.parseInt(searchParams.limit ?? '100', 10);
   const offset: number = Number.parseInt(searchParams.offset ?? '0', 10);
-  const title: ChessTitle = searchParams.title ?? undefined;
+  const title: ChessTitleAbbreviation = searchParams.title ?? undefined;
   const countryCode: string = searchParams.countryCode ?? '';
   const isStreamer: boolean = (searchParams.isStreamer ?? '') === 'true';
   logger.info(

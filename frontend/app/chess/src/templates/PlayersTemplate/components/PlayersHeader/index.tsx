@@ -3,11 +3,11 @@
 import { Heading, Select } from '@chakra-ui/react';
 import { TITLED_ABBREVIATIONS } from '@chess/common/constants/chess.constants';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
-import { ChessTitle } from '@prisma/client';
+import { ChessTitleAbbreviation } from '@prisma/client';
 
 export type PlayersHeaderProperties = {
   total: number;
-  titles: { title: ChessTitle }[];
+  titles: { title: ChessTitleAbbreviation }[];
   countries: { countryCode: string }[];
 };
 

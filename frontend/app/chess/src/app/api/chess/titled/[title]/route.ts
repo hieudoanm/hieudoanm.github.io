@@ -1,5 +1,5 @@
 import { TimeRange } from '@chess/common/types/time';
-import { ChessTitle } from '@prisma/client';
+import { ChessTitleAbbreviation } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 import { TitledStatsDto } from './model';
 import { getTitledStats } from './service';
@@ -13,7 +13,8 @@ export const GET = async (
   const { searchParams } = new URL(request.url);
   const timeRange: TimeRange =
     (searchParams.get('timeRange') as TimeRange) ?? 'year';
-  const title: ChessTitle = (params.title as ChessTitle) ?? 'GM';
+  const title: ChessTitleAbbreviation =
+    (params.title as ChessTitleAbbreviation) ?? 'GM';
   const titleStats = await getTitledStats({ timeRange, title });
   return NextResponse.json<TitledStatsDto>(titleStats, { status: 200 });
 };

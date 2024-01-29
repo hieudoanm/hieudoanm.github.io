@@ -9,6 +9,7 @@ import Head from 'next/head';
 const openingsQuery = gql`
   query OpeningsQuery($eco: String, $limit: Int, $offset: Int) {
     chess {
+      ecos
       openings(eco: $eco, limit: $limit, offset: $offset) {
         eco
         name
@@ -23,7 +24,7 @@ type OpeningsPageProperties = {
   searchParams: { eco: string; limit: number; offset: number };
 };
 
-type OpeningsData = { chess: { openings: ChessOpening[] } };
+type OpeningsData = { chess: { ecos: string[]; openings: ChessOpening[] } };
 
 const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
   searchParams,
@@ -38,14 +39,15 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
     'openingsQuery',
     queryOptions
   );
+  const ecos: string[] = data?.chess?.ecos ?? [];
   const openings = data?.chess?.openings ?? [];
 
   return (
     <>
       <Head>
-        <title>{APP_NAME} - Titled</title>
+        <title>{APP_NAME} - Openings</title>
       </Head>
-      <OpeningsTemplate openings={openings} />
+      <OpeningsTemplate ecos={ecos} openings={openings} />
     </>
   );
 };

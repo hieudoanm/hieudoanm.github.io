@@ -18,7 +18,7 @@ import {
   ChessCountry,
   ChessPlayer,
   ChessStats,
-  ChessTitle,
+  ChessTitleAbbreviation,
 } from '@prisma/client';
 import Image from 'next/image';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
@@ -26,7 +26,7 @@ import { PlayersHeader } from './components/PlayersHeader';
 
 type PlayersTemplateProperties = {
   total: number;
-  titles: { title: ChessTitle }[];
+  titles: { title: ChessTitleAbbreviation }[];
   countries: { countryCode: string }[];
   players: (ChessStats & { player: ChessPlayer & { country: ChessCountry } })[];
 };

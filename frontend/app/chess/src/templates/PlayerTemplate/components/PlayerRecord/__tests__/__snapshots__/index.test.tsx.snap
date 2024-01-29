@@ -9,13 +9,9 @@ exports[`PlayerRecord to match snapshot 1`] = `
       class="chakra-card__body css-0"
     >
       <h2
-        class="chakra-heading text-center md:text-left css-0"
+        class="chakra-heading text-center capitalize md:text-left css-0"
       >
-        <span
-          class="capitalize"
-        >
-          classical
-        </span>
+        classical
          Record
       </h2>
       <div

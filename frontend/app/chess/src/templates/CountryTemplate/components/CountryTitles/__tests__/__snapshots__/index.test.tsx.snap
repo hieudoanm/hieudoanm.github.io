@@ -55,6 +55,25 @@ exports[`CountryTitles to match snapshot 1`] = `
             <table
               class="chakra-table css-0"
             >
+              <thead
+                class="css-0"
+              >
+                <tr
+                  class="css-0"
+                >
+                  <th
+                    class="css-0"
+                  >
+                    Title
+                  </th>
+                  <th
+                    class="css-0"
+                    data-is-numeric="true"
+                  >
+                    Total
+                  </th>
+                </tr>
+              </thead>
               <tbody
                 class="css-0"
               />

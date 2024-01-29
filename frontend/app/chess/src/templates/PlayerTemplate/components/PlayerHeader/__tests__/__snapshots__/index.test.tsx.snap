@@ -18,7 +18,7 @@ exports[`PlayerHeader to match snapshot 1`] = `
         >
            
           <a
-            href="/titled/GM"
+            href="/titled?title=GM"
           >
             <span
               class="chakra-badge css-1nt6cy7"

@@ -15,3 +15,6 @@ import-pgn:
 
 import-players:
 	yarn ts-node ./scripts/import/players
+
+import-titles:
+	yarn ts-node ./scripts/import/titles

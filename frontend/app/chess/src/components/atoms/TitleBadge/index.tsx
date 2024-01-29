@@ -1,8 +1,10 @@
+'use client';
+
 import { Badge } from '@chakra-ui/react';
-import { ChessTitle } from '@prisma/client';
+import { ChessTitleAbbreviation } from '@prisma/client';
 import Link from 'next/link';
 
-type TitleBadgeProperties = { title: ChessTitle | null };
+type TitleBadgeProperties = { title: ChessTitleAbbreviation | null };
 
 export const TitleBadge: React.FC<TitleBadgeProperties> = ({
   title = 'GM',
@@ -10,7 +12,7 @@ export const TitleBadge: React.FC<TitleBadgeProperties> = ({
   if (!title) return <></>;
 
   return (
-    <Link href={`/titled/${title}`}>
+    <Link href={`/titled?title=${title}`}>
       <Badge
         colorScheme="red"
         size="md"

@@ -13,15 +13,17 @@ import Link from 'next/link';
 import { OpeningsHeader } from './components/OpeningsHeader';
 
 export type OpeningsTemplateProperties = {
+  ecos: string[];
   openings: ChessOpening[];
 };
 
 export const OpeningsTemplate: React.FC<OpeningsTemplateProperties> = ({
+  ecos = [],
   openings = [],
 }) => {
   return (
     <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
-      <OpeningsHeader total={openings.length} />
+      <OpeningsHeader ecos={[]} total={openings.length} />
       <TableContainer className="overflow-hidden rounded border border-gray-200 shadow">
         <Table>
           <Thead>

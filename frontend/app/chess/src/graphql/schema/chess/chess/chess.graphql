@@ -9,7 +9,7 @@ type Mutation {
 
 type Chess {
   countries: [Country]
-  country(code: String!): TitledCountry
+  ecos: [String]
   openings(eco: String, name: String, limit: Int, offset: Int): [Opening]
   players(
     limit: Int
@@ -20,4 +20,6 @@ type Chess {
   ): Players
   player(username: String!): Player
   titled(title: String!, timeRange: String): Titled
+  titledCountries: [TitledCountry]
+  titledCountry(code: String!): TitledCountry
 }

@@ -62,8 +62,8 @@ export const PlayerRecord: React.FC<PlayerRecordProperties> = ({
   return (
     <Card className="border border-gray-200">
       <CardBody>
-        <Heading className="text-center md:text-left" size={'md'}>
-          <span className="capitalize">{timeClass}</span> Record
+        <Heading className="text-center capitalize md:text-left" size={'md'}>
+          {timeClass} Record
         </Heading>
         <div className="flex h-full flex-col items-center gap-x-2 md:flex-row">
           <div className="h-[180px] w-[180px]">

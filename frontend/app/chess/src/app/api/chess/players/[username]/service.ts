@@ -12,7 +12,7 @@ import {
   ChessStats,
   ChessStatus,
   ChessTimeClass,
-  ChessTitle,
+  ChessTitleAbbreviation,
   Prisma,
 } from '@prisma/client';
 
@@ -99,7 +99,7 @@ const mapProfile = (player: Player, archives: string[]) => {
     verified,
     twitchUrl,
     status: status as ChessStatus,
-    title: title ? (title as ChessTitle) : undefined,
+    title: title ? (title as ChessTitleAbbreviation) : undefined,
     league: league ? (league as ChessLeague) : undefined,
     archives,
     createdAt: d,

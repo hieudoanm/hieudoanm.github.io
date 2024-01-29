@@ -21,7 +21,7 @@ exports[`PlayerTemplate to match snapshot 1`] = `
           >
              
             <a
-              href="/titled/GM"
+              href="/titled?title=GM"
             >
               <span
                 class="chakra-badge css-1nt6cy7"
@@ -92,7 +92,7 @@ exports[`PlayerTemplate to match snapshot 1`] = `
               >
                 <dl>
                   <dt
-                    class="chakra-stat__label css-0"
+                    class="chakra-stat__label capitalize css-0"
                   >
                     rapid
                   </dt>
@@ -151,7 +151,7 @@ exports[`PlayerTemplate to match snapshot 1`] = `
               >
                 <dl>
                   <dt
-                    class="chakra-stat__label css-0"
+                    class="chakra-stat__label capitalize css-0"
                   >
                     blitz
                   </dt>
@@ -210,7 +210,7 @@ exports[`PlayerTemplate to match snapshot 1`] = `
               >
                 <dl>
                   <dt
-                    class="chakra-stat__label css-0"
+                    class="chakra-stat__label capitalize css-0"
                   >
                     blitz
                   </dt>
@@ -266,13 +266,9 @@ exports[`PlayerTemplate to match snapshot 1`] = `
             class="chakra-card__body css-0"
           >
             <h2
-              class="chakra-heading text-center md:text-left css-0"
+              class="chakra-heading text-center capitalize md:text-left css-0"
             >
-              <span
-                class="capitalize"
-              >
-                rapid
-              </span>
+              rapid
                Record
             </h2>
             <div
@@ -346,13 +342,9 @@ exports[`PlayerTemplate to match snapshot 1`] = `
             class="chakra-card__body css-0"
           >
             <h2
-              class="chakra-heading text-center md:text-left css-0"
+              class="chakra-heading text-center capitalize md:text-left css-0"
             >
-              <span
-                class="capitalize"
-              >
-                blitz
-              </span>
+              blitz
                Record
             </h2>
             <div
@@ -426,13 +418,9 @@ exports[`PlayerTemplate to match snapshot 1`] = `
             class="chakra-card__body css-0"
           >
             <h2
-              class="chakra-heading text-center md:text-left css-0"
+              class="chakra-heading text-center capitalize md:text-left css-0"
             >
-              <span
-                class="capitalize"
-              >
-                bullet
-              </span>
+              bullet
                Record
             </h2>
             <div

@@ -12,7 +12,7 @@ import Head from 'next/head';
 const countryQuery = gql`
   query CountryQuery($code: String!) {
     chess {
-      country(code: $code) {
+      titledCountry(code: $code) {
         stats {
           rapid {
             average

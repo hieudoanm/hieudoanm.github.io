@@ -31,9 +31,7 @@ export const CountryStat: React.FC<CountryStatsProperties> = ({
       <CardBody>
         <div className="flex items-center justify-between">
           <Stat>
-            <StatLabel>
-              Average <span className="capitalize">{timeClass}</span>
-            </StatLabel>
+            <StatLabel className="capitalize">Average {timeClass}</StatLabel>
             <StatNumber>{average.toLocaleString()}</StatNumber>
             <StatHelpText>Highest: {max}</StatHelpText>
           </Stat>

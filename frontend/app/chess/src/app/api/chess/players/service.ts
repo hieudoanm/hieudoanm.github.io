@@ -3,7 +3,7 @@ import {
   ChessCountry,
   ChessPlayer,
   ChessStats,
-  ChessTitle,
+  ChessTitleAbbreviation,
   Prisma,
 } from '@prisma/client';
 
@@ -18,7 +18,7 @@ export type PlayersResponse = {
   offset: number;
   players: (ChessStats & { player: ChessPlayer & { country: ChessCountry } })[];
   countries: { countryCode: string }[];
-  titles: { title: ChessTitle | null }[];
+  titles: { title: ChessTitleAbbreviation | null }[];
 };
 
 export const getPlayers = async ({
@@ -30,7 +30,7 @@ export const getPlayers = async ({
 }: {
   isStreamer?: boolean;
   countryCode?: string;
-  title?: ChessTitle;
+  title?: ChessTitleAbbreviation;
   limit?: number;
   offset?: number;
 }): Promise<PlayersResponse> => {

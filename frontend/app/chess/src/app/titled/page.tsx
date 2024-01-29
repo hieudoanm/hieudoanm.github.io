@@ -8,7 +8,7 @@ import {
   TitledTemplate,
 } from '@chess/templates/TitledTemplate';
 import { Stats } from '@chess/templates/TitledTemplate/components/TitledStats';
-import { ChessTitle } from '@prisma/client';
+import { ChessTitleAbbreviation } from '@prisma/client';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -82,7 +82,7 @@ type TitledData = {
 type TitledPageProperties = {
   searchParams: {
     timeRange: TimeRange;
-    title: ChessTitle;
+    title: ChessTitleAbbreviation;
   };
 };
 

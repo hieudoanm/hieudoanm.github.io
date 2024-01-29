@@ -20,9 +20,15 @@ erDiagram
     DateTime lastOnline
     DateTime joined
     ChessStatus status
-    ChessTitle title "nullable"
+    ChessTitleAbbreviation title "nullable"
     ChessLeague league "nullable"
     String archives
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"ChessTitle" {
+    ChessTitleAbbreviation abbreviation PK
+    String title
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -98,6 +104,14 @@ erDiagram
   - `title`: 
   - `league`: 
   - `archives`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `ChessTitle`
+
+**Properties**
+  - `abbreviation`: 
+  - `title`: 
   - `createdAt`: 
   - `updatedAt`: 
 

@@ -15,13 +15,9 @@ exports[`PlayerRecords to match snapshot 1`] = `
           class="chakra-card__body css-0"
         >
           <h2
-            class="chakra-heading text-center md:text-left css-0"
+            class="chakra-heading text-center capitalize md:text-left css-0"
           >
-            <span
-              class="capitalize"
-            >
-              rapid
-            </span>
+            rapid
              Record
           </h2>
           <div
@@ -95,13 +91,9 @@ exports[`PlayerRecords to match snapshot 1`] = `
           class="chakra-card__body css-0"
         >
           <h2
-            class="chakra-heading text-center md:text-left css-0"
+            class="chakra-heading text-center capitalize md:text-left css-0"
           >
-            <span
-              class="capitalize"
-            >
-              blitz
-            </span>
+            blitz
              Record
           </h2>
           <div
@@ -175,13 +167,9 @@ exports[`PlayerRecords to match snapshot 1`] = `
           class="chakra-card__body css-0"
         >
           <h2
-            class="chakra-heading text-center md:text-left css-0"
+            class="chakra-heading text-center capitalize md:text-left css-0"
           >
-            <span
-              class="capitalize"
-            >
-              bullet
-            </span>
+            bullet
              Record
           </h2>
           <div

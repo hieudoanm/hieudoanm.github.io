@@ -1,6 +1,6 @@
 import { ChessDataSource } from '@chess/graphql/data/chess.data';
 import { GamesSynced, PlayersResponse } from '@chess/graphql/data/chess.types';
-import { ChessGame, ChessPlayer, ChessTitle } from '@prisma/client';
+import { ChessGame, ChessPlayer, ChessTitleAbbreviation } from '@prisma/client';
 
 export const resolvers = {
   Chess: {
@@ -15,7 +15,7 @@ export const resolvers = {
       }: {
         limit: number;
         offset: number;
-        title: ChessTitle;
+        title: ChessTitleAbbreviation;
         countryCode: string;
         isStreamer: boolean;
       },

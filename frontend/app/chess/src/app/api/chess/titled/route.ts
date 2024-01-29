@@ -1,7 +1,9 @@
-import { TITLES } from '@chess/common/constants/chess.constants';
-import { ChessTitle } from '@prisma/client';
 import { NextResponse } from 'next/server';
+import { TitledResponse, getTitled } from './service';
 
-export const GET = (): NextResponse<ChessTitle[]> => {
-  return NextResponse.json<ChessTitle[]>(TITLES, { status: 200 });
+export const GET = async (): Promise<NextResponse<TitledResponse>> => {
+  const titledResponse = await getTitled();
+  return NextResponse.json<TitledResponse>(titledResponse, {
+    status: 200,
+  });
 };

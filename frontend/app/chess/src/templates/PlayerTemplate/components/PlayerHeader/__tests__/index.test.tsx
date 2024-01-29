@@ -1,4 +1,4 @@
-import { ChessTitle } from '@prisma/client';
+import { ChessTitleAbbreviation } from '@prisma/client';
 import { render } from '@testing-library/react';
 import { PlayerHeader } from '..';
 
@@ -6,7 +6,7 @@ describe('PlayerHeader', () => {
   it('to match snapshot', () => {
     const { container } = render(
       <PlayerHeader
-        title={ChessTitle.GM}
+        title={ChessTitleAbbreviation.GM}
         name=""
         username=""
         avatar=""

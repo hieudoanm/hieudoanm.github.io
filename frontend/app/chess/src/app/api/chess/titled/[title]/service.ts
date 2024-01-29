@@ -8,7 +8,7 @@ import { TimeRange } from '@chess/common/types/time';
 import {
   ChessPlayer,
   ChessTimeClass,
-  ChessTitle,
+  ChessTitleAbbreviation,
   Prisma,
 } from '@prisma/client';
 import { TitledStatsDto } from './model';
@@ -22,7 +22,7 @@ const getTitledPlayers = async ({
   title,
   timeRange = 'year',
 }: {
-  title: ChessTitle;
+  title: ChessTitleAbbreviation;
   timeRange: TimeRange;
 }): Promise<{ total: number; players: ChessPlayer[] }> => {
   const milliseconds: number = TIME_RANGE_IN_MILLISECONDS.get(timeRange) ?? 0;
@@ -91,7 +91,7 @@ export const getTitledStats = async ({
   title,
   timeRange,
 }: {
-  title: ChessTitle;
+  title: ChessTitleAbbreviation;
   timeRange: TimeRange;
 }): Promise<TitledStatsDto> => {
   const averageRapidRatingQuery = buildAverageRatingQuery({

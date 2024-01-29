@@ -7,6 +7,8 @@ jest.mock('next/navigation', () => ({
     asPath: '',
     events: { on: jest.fn(), off: jest.fn() },
   }),
+  usePathname: jest.fn().mockReturnValue(''),
+  useSearchParams: jest.fn().mockReturnValue(new URLSearchParams()),
 }));
 
 describe('OpeningsTemplate', () => {
@@ -15,7 +17,7 @@ describe('OpeningsTemplate', () => {
   });
 
   it('to match snapshot', () => {
-    const { container } = render(<OpeningsTemplate openings={[]} />);
+    const { container } = render(<OpeningsTemplate ecos={[]} openings={[]} />);
     expect(container).toMatchSnapshot();
   });
 });

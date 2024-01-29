@@ -1,12 +1,6 @@
 'use client';
 
-import { TimeRange } from '@chess/common/types/time';
-import {
-  ChessCountry,
-  ChessPlayer,
-  ChessStats,
-  ChessTitle,
-} from '@prisma/client';
+import { ChessCountry, ChessPlayer, ChessStats } from '@prisma/client';
 import { TitledCharts } from './components/TitledCharts';
 import { TitledHeader } from './components/TitledHeader';
 import { TitledPlayers } from './components/TitledPlayers';

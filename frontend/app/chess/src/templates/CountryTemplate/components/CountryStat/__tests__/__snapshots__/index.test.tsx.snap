@@ -16,14 +16,10 @@ exports[`CountryStat to match snapshot 1`] = `
         >
           <dl>
             <dt
-              class="chakra-stat__label css-0"
+              class="chakra-stat__label capitalize css-0"
             >
               Average 
-              <span
-                class="capitalize"
-              >
-                blitz
-              </span>
+              blitz
             </dt>
             <dd
               class="chakra-stat__number css-fvxuh5"

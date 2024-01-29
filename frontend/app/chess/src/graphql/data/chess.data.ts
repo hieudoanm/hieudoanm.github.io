@@ -1,9 +1,13 @@
 import { RESTDataSource } from '@apollo/datasource-rest';
 import { GRAPHQL_BASE_URL } from '@chess/common/environments/environments';
-import { ChessGame, ChessPlayer, ChessTitle } from '@prisma/client';
+import {
+  ChessCountry,
+  ChessGame,
+  ChessPlayer,
+  ChessTitleAbbreviation,
+} from '@prisma/client';
 import {
   CountriesResponse,
-  Country,
   GamesSynced,
   OpeningsOptions,
   OpeningsResponse,
@@ -11,20 +15,35 @@ import {
   StreamersResponse,
   TimeRange,
   Titled,
+  TitledCountry,
 } from './chess.types';
 
 export class ChessDataSource extends RESTDataSource {
   override baseURL = GRAPHQL_BASE_URL;
 
-  async getCountries(): Promise<Country[]> {
+  async getCountries(): Promise<ChessCountry[]> {
+    const endpoint: string = '/api/chess/countries';
+    const { countries = [] } = await this.get<{ countries: ChessCountry[] }>(
+      endpoint
+    );
+    return countries;
+  }
+
+  async getTitledCountries(): Promise<TitledCountry[]> {
     const endpoint: string = '/api/chess/countries/titled';
     const { countries = [] } = await this.get<CountriesResponse>(endpoint);
     return countries;
   }
 
-  async getCountry(code: string): Promise<Country> {
+  async getTitledCountry(code: string): Promise<TitledCountry> {
     const endpoint: string = `/api/chess/countries/titled/${code}`;
     return this.get(endpoint);
+  }
+
+  async getEcos(): Promise<string[]> {
+    const endpoint: string = '/api/chess/openings/ecos';
+    const { ecos = [] } = await this.get<{ ecos: string[] }>(endpoint);
+    return ecos;
   }
 
   async getOpenings({
@@ -52,7 +71,7 @@ export class ChessDataSource extends RESTDataSource {
   }: {
     limit?: number;
     offset?: number;
-    title?: ChessTitle;
+    title?: ChessTitleAbbreviation;
     countryCode?: string;
     isStreamer?: boolean;
   }): Promise<PlayersResponse> {
@@ -100,7 +119,7 @@ export class ChessDataSource extends RESTDataSource {
     title,
     country,
   }: {
-    title: ChessTitle;
+    title: ChessTitleAbbreviation;
     country: string;
   }): Promise<StreamersResponse> {
     const urlSearchParameters: URLSearchParams = new URLSearchParams();

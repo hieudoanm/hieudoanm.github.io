@@ -48,6 +48,7 @@ export const getCountry = async (
     getPrismaClient().chessPlayer.findMany({
       where,
       include: { country: true, stats: true },
+      orderBy: { username: 'asc' },
     }),
     getPrismaClient().chessStats.aggregate({
       _avg: { last: true },

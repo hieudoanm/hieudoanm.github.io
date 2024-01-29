@@ -22,7 +22,7 @@ exports[`PlayerStats to match snapshot 1`] = `
             >
               <dl>
                 <dt
-                  class="chakra-stat__label css-0"
+                  class="chakra-stat__label capitalize css-0"
                 >
                   rapid
                 </dt>
@@ -81,7 +81,7 @@ exports[`PlayerStats to match snapshot 1`] = `
             >
               <dl>
                 <dt
-                  class="chakra-stat__label css-0"
+                  class="chakra-stat__label capitalize css-0"
                 >
                   blitz
                 </dt>
@@ -140,7 +140,7 @@ exports[`PlayerStats to match snapshot 1`] = `
             >
               <dl>
                 <dt
-                  class="chakra-stat__label css-0"
+                  class="chakra-stat__label capitalize css-0"
                 >
                   blitz
                 </dt>

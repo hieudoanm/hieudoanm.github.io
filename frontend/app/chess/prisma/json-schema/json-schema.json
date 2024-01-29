@@ -125,6 +125,48 @@
         }
       }
     },
+    "ChessTitle": {
+      "type": "object",
+      "properties": {
+        "abbreviation": {
+          "type": "string",
+          "enum": [
+            "GM",
+            "WGM",
+            "IM",
+            "WIM",
+            "FM",
+            "WFM",
+            "CM",
+            "WCM",
+            "NM",
+            "WNM",
+            "AGM",
+            "AIM",
+            "AFM",
+            "ACM"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "default": ""
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
     "ChessCountry": {
       "type": "object",
       "properties": {
@@ -391,6 +433,9 @@
   "properties": {
     "chessPlayer": {
       "$ref": "#/definitions/ChessPlayer"
+    },
+    "chessTitle": {
+      "$ref": "#/definitions/ChessTitle"
     },
     "chessCountry": {
       "$ref": "#/definitions/ChessCountry"

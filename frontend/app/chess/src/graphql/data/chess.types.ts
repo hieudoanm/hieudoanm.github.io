@@ -8,7 +8,7 @@ import {
   ChessOpening,
   ChessPlayer,
   ChessStats,
-  ChessTitle,
+  ChessTitleAbbreviation,
 } from '@prisma/client';
 
 export type Titled = {
@@ -26,17 +26,18 @@ export type Stat = { rapid: number; blitz: number; bullet: number };
 
 export type Stats = { average: Stat; max: Stat };
 
-export type Country = {
+export type TitledCountry = {
   countryCode: string;
   country: string;
-  stats: Stats;
+  count: number;
   total: number;
-  titles: ChessTitle[];
+  stats: Stats;
   players: ChessPlayer[];
+  titles: ChessTitleAbbreviation[];
 };
 
 export type CountriesResponse = {
-  countries: Country[];
+  countries: TitledCountry[];
 };
 
 export type GamesSynced = { total: number; synced: number; existed: number };
@@ -66,7 +67,7 @@ export type Player = ChessStats & { player: ChessPlayer };
 export type PlayersResponse = {
   total: number;
   players: Player[];
-  titles: { title: ChessTitle }[];
+  titles: { title: ChessTitleAbbreviation }[];
   countries: { countryCode: string }[];
 };
 

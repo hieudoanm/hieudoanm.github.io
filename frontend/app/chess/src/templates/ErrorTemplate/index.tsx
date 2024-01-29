@@ -1,4 +1,4 @@
-import { Container } from '@chess/components/atoms/Container';
+import { Container } from '@chess/common/components/Container';
 
 export type ErrorTemplateProperties = {
   status: number;

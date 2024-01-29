@@ -8,7 +8,7 @@ import { Country } from './model';
   return int ?? this.toString();
 };
 
-export const getCountries = async (): Promise<Country[]> => {
+export const getTitledCountries = async (): Promise<Country[]> => {
   try {
     const milliseconds: number = TIME_RANGE_IN_MILLISECONDS.get('year') ?? 0;
     const d = new Date(Date.now() - milliseconds);
@@ -25,7 +25,7 @@ export const getCountries = async (): Promise<Country[]> => {
       count: country._count.countryCode,
     }));
   } catch (error) {
-    logger.error(`getCountries error=${error}`);
+    logger.error(`getTitledCountries error=${error}`);
     return [];
   }
 };

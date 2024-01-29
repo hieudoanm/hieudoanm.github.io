@@ -14,8 +14,8 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
+import { Container } from '@chess/common/components/Container';
 import { APP_NAME, YEAR } from '@chess/common/constants/app.constants';
-import { Container } from '@chess/components/atoms/Container';
 import Link from 'next/link';
 import { FaBars, FaGithub } from 'react-icons/fa';
 
