@@ -3,8 +3,10 @@ import axios from 'axios';
 
 const USERNAME = process.env.USERNAME ?? '';
 
-const BASE_URL = 'https://chessinsights.vercel.app/api/chess';
-// const BASE_URL = 'http://localhost:3210/api/chess';
+const NODE_ENV = process.env.NODE_ENV ?? 'development';
+const PROD_BASE_URL = 'https://chessinsights.vercel.app/api/chess';
+const LOCAL_BASE_URL = 'http://localhost:3210/api/chess';
+const BASE_URL = NODE_ENV === 'development' ? LOCAL_BASE_URL : PROD_BASE_URL;
 
 const syncGames = async (username: string) => {
   try {
@@ -15,6 +17,7 @@ const syncGames = async (username: string) => {
     });
     console.info(player, 'player');
     const { archives = [] } = player;
+    archives.reverse();
     for (const archive of archives) {
       try {
         const [yyyy = '', mm = ''] = archive.split('/').slice(-2);
