@@ -1,8 +1,8 @@
 'use client';
 
 import { Box, Icon, Text } from '@chakra-ui/react';
-import { APP_NAME } from '@mini/common/constants/time.constants';
 import Container from '@mini/common/components/Container';
+import { APP_NAME } from '@mini/common/constants/time.constants';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';

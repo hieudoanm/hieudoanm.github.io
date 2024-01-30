@@ -1,6 +1,6 @@
+import { FIXER_ACCESS_KEY } from '@mini/common/environments/environments';
 import axios from 'axios';
 import { FixerLatestResponse, SymbolsResponse } from './fixer.dto';
-import { FIXER_ACCESS_KEY } from '@mini/common/environments/environments';
 
 const BASE_URL = 'http://data.fixer.io/api';
 

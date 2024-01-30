@@ -2,7 +2,7 @@ datasource db {
   provider  = "postgresql"
   url       = env("POSTGRESQL_URL")
   directUrl = env("POSTGRESQL_URL")
-  schemas   = ["public", "vietnam", "united_states"]
+  schemas   = ["public", "github", "united_states", "vietnam"]
 }
 
 generator client {
@@ -346,7 +346,7 @@ model ProgrammingLanguage {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  @@schema("public")
+  @@schema("github")
 }
 
 enum ProgrammingLanguageType {
@@ -355,7 +355,7 @@ enum ProgrammingLanguageType {
   PROGRAMMING
   PROSE
 
-  @@schema("public")
+  @@schema("github")
 }
 
 model License {
@@ -374,7 +374,7 @@ model License {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  @@schema("public")
+  @@schema("github")
 }
 
 // United States

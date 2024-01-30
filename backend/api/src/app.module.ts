@@ -1,5 +1,4 @@
 import { CountriesModule } from '@hieudoanm/modules/countries/countries.module';
-import { FinanceModule } from '@hieudoanm/modules/finance/finance.module';
 import { GitHubModule } from '@hieudoanm/modules/github/github.module';
 import { HealthModule } from '@hieudoanm/modules/health/health.module';
 import { NewsModule } from '@hieudoanm/modules/news/news.module';
@@ -20,7 +19,6 @@ const rootPath: string = join(__dirname, '..', 'public');
     ServeStaticModule.forRoot({ rootPath }),
     HttpModule,
     CountriesModule,
-    FinanceModule,
     GitHubModule,
     HealthModule,
     NewsModule,
