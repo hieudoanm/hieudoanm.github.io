@@ -36,3 +36,16 @@ model Language {
 
   @@schema("broca")
 }
+
+model Word {
+  word          String @id @db.VarChar(255)
+  results       Json?  @default("{}")
+  syllables     Json?  @default("{}")
+  pronunciation Json?  @default("{}")
+  frequency     Float? @default(0)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("broca")
+}

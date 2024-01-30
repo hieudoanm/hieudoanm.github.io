@@ -18,7 +18,7 @@ const main = async () => {
     },
   } = response;
   console.info(`total=${total}`);
-  writeFileSync('./scripts/txt/words.txt', data.join('\n'));
+  writeFileSync('./resources/txt/words.txt', data.join('\n'));
 };
 
 main();

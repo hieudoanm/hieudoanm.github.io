@@ -11,3 +11,13 @@ Table Language {
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
 }
+
+Table Word {
+  word String [pk]
+  results Json [default: '{}']
+  syllables Json [default: '{}']
+  pronunciation Json [default: '{}']
+  frequency Float [default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}

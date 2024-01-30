@@ -39,12 +39,74 @@
           "format": "date-time"
         }
       }
+    },
+    "Word": {
+      "type": "object",
+      "properties": {
+        "word": {
+          "type": "string"
+        },
+        "results": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "syllables": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "pronunciation": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "frequency": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": 0
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
     }
   },
   "type": "object",
   "properties": {
     "language": {
       "$ref": "#/definitions/Language"
+    },
+    "word": {
+      "$ref": "#/definitions/Word"
     }
   }
 }
