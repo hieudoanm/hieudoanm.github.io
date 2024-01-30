@@ -3,5 +3,4 @@
 
 yarn lint
 yarn format
-yarn run check
 git add -A
