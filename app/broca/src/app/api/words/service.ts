@@ -1,5 +1,5 @@
 import { getPrismaClient } from '@broca/common/prisma/prisma.client';
-import { Word, PrismaClient } from '@prisma/client';
+import { PrismaClient, Word } from '@prisma/client';
 
 export const getWords = async ({
   limit = 100,
