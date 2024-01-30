@@ -1,1 +1,1 @@
-# Chess Insights Web
+# chess.com Insights

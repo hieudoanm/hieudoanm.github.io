@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Language": {
+      "type": "object",
+      "properties": {
+        "cca2": {
+          "type": "string",
+          "default": ""
+        },
+        "cca3": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "category": {
+          "type": "integer",
+          "default": 0
+        },
+        "duolingo": {
+          "type": "boolean",
+          "default": false
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "language": {
+      "$ref": "#/definitions/Language"
+    }
+  }
+}

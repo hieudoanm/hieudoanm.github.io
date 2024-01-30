@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   description: APP_DESCRIPTION,
 };
 
-const RootLayout = ({
+type RootLayoutProperties = { children: React.ReactNode };
+
+const RootLayout: React.FC<RootLayoutProperties> = ({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) => {
+}: Readonly<RootLayoutProperties>) => {
   return (
     <html lang="en">
       <body className={inter.className}>

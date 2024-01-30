@@ -1,0 +1,39 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  schemas   = ["broca"]
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+  binaryTargets   = ["native", "debian-openssl-1.1.x"]
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+}
+
+model Language {
+  cca2     String  @unique @default("") @db.VarChar(2)
+  cca3     String  @unique @default("") @db.VarChar(3)
+  name     String  @default("") @db.VarChar(255)
+  category Int     @default(0) @db.SmallInt
+  duolingo Boolean @default(false) @db.Boolean
+
+  createdAt DateTime? @default(now()) @db.Timestamptz
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+
+  @@id([cca2, cca3])
+  @@schema("broca")
+}
