@@ -21,7 +21,7 @@ import {
   Tr,
 } from '@chakra-ui/react';
 import countries from '@mini/common/json/hofstede.json';
-import Container from '@mini/components/Container';
+import Container from '@mini/common/components/Container';
 import {
   Chart as ChartJS,
   ChartData,

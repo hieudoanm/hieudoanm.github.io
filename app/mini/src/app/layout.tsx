@@ -1,5 +1,5 @@
 import { APP_NAME } from '@mini/common/constants/app.constants';
-import { Navbar } from '@mini/components/Navbar';
+import { Navbar } from '@mini/common/components/Navbar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.scss';

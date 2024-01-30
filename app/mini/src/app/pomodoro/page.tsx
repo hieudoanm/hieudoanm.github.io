@@ -1,6 +1,6 @@
 'use client';
 
-import Pomodoro from '@mini/components/Pomodoro';
+import Pomodoro from '@mini/common/components/Pomodoro';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 

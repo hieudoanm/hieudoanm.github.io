@@ -1,6 +1,6 @@
 'use client';
 
-import Calendar from '@mini/components/Calendar';
+import Calendar from '@mini/common/components/Calendar';
 import { NextPage } from 'next';
 import Head from 'next/head';
 

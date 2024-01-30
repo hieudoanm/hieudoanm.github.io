@@ -1,7 +1,7 @@
 'use client';
 
 import { Text } from '@chakra-ui/react';
-import { Container } from '@mini/components/Container';
+import { Container } from '@mini/common/components/Container';
 
 export const Navbar: React.FC = () => {
   return (

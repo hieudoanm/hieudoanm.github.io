@@ -1,7 +1,7 @@
 'use client';
 
 import { Icon, IconButton, Input, InputGroup } from '@chakra-ui/react';
-import Container from '@mini/components/Container';
+import Container from '@mini/common/components/Container';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useState } from 'react';
