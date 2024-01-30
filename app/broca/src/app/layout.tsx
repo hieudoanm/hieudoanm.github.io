@@ -3,6 +3,7 @@ import {
   APP_NAME,
 } from '@broca/common/constants/app.constants';
 import '@broca/common/styles/globals.scss';
+import { LayoutTemplate } from '@broca/templates/LayoutTemplate';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
@@ -22,7 +23,9 @@ const RootLayout: React.FC<RootLayoutProperties> = ({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <LayoutTemplate>{children}</LayoutTemplate>
+        </Providers>
       </body>
     </html>
   );

@@ -25,8 +25,8 @@ generator markdown {
 }
 
 model Language {
-  cca2     String  @unique @default("") @db.VarChar(2)
-  cca3     String  @unique @default("") @db.VarChar(3)
+  cca2     String  @default("") @db.VarChar(2)
+  cca3     String  @id @default("") @db.VarChar(3)
   name     String  @default("") @db.VarChar(255)
   category Int     @default(0) @db.SmallInt
   duolingo Boolean @default(false) @db.Boolean
@@ -34,6 +34,5 @@ model Language {
   createdAt DateTime? @default(now()) @db.Timestamptz
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
 
-  @@id([cca2, cca3])
   @@schema("broca")
 }

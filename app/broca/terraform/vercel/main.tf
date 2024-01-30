@@ -17,13 +17,13 @@ resource "vercel_project" "broca" {
 }
 
 data "vercel_project_directory" "broca" {
-  path = "frontend/app/broca"
+  path = "app/broca"
 }
 
 resource "vercel_deployment" "broca" {
   project_id  = vercel_project.broca.id
   files       = data.vercel_project_directory.broca.files
-  path_prefix = "frontend/app/broca"
+  path_prefix = "app/broca"
   production  = true
 }
 

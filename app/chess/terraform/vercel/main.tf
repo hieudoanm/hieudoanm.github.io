@@ -17,13 +17,13 @@ resource "vercel_project" "chess" {
 }
 
 data "vercel_project_directory" "chess" {
-  path = "frontend/app/chess"
+  path = "app/chess/chess"
 }
 
 resource "vercel_deployment" "chess" {
   project_id  = vercel_project.chess.id
   files       = data.vercel_project_directory.chess.files
-  path_prefix = "frontend/app/chess"
+  path_prefix = "app/chess/chess"
   production  = true
 }
 

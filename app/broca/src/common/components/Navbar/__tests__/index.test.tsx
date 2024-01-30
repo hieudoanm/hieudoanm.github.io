@@ -1,9 +1,9 @@
-import HomePage from '@broca/app/page';
 import { render } from '@testing-library/react';
+import { Navbar } from '..';
 
-describe('HomePage', () => {
+describe('Navbar', () => {
   it('to match snapshot', () => {
-    const { container } = render(<HomePage />);
+    const { container } = render(<Navbar />);
     expect(container).toMatchSnapshot();
   });
 });
