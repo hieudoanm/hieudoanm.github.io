@@ -1,5 +1,3 @@
-import { URLSearchParams } from 'url';
-import { Word } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 import { getWords } from './service';
 
@@ -16,7 +14,7 @@ type WordsResponse = {
   total: number;
   limit: number;
   offset: number;
-  words: Pick<Word, 'word'>[];
+  words: string[];
 };
 
 export const GET = async (

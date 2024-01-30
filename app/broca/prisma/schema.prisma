@@ -49,3 +49,49 @@ model Word {
 
   @@schema("broca")
 }
+
+model Quote {
+  id         String   @id
+  author     String?  @default("")
+  authorSlug String?  @default("")
+  content    String?  @default("")
+  tags       String[] @default([])
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("broca")
+}
+
+model TarotCard {
+  suit           TarotCardSuit?
+  type           TarotCardType  @default(MAJOR)
+  id             String         @id @default("")
+  name           String?        @default("") @db.VarChar(255)
+  value          String?        @default("") @db.VarChar(255)
+  valueInt       Int?           @default(0)
+  meaningUp      String?        @default("") @db.Text()
+  meaningReverse String?        @default("") @db.Text()
+  description    String?        @default("") @db.Text()
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("broca")
+}
+
+enum TarotCardType {
+  MAJOR
+  MINOR
+
+  @@schema("broca")
+}
+
+enum TarotCardSuit {
+  CUPS
+  PENTACLES
+  SWORDS
+  WANDS
+
+  @@schema("broca")
+}

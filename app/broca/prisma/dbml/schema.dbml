@@ -21,3 +21,39 @@ Table Word {
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
 }
+
+Table Quote {
+  id String [pk]
+  author String [default: '']
+  authorSlug String [default: '']
+  content String [default: '']
+  tags String[] [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table TarotCard {
+  suit TarotCardSuit
+  type TarotCardType [not null, default: 'MAJOR']
+  id String [pk, default: '']
+  name String [default: '']
+  value String [default: '']
+  valueInt Int [default: 0]
+  meaningUp String [default: '']
+  meaningReverse String [default: '']
+  description String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Enum TarotCardType {
+  MAJOR
+  MINOR
+}
+
+Enum TarotCardSuit {
+  CUPS
+  PENTACLES
+  SWORDS
+  WANDS
+}

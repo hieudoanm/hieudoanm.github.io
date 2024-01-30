@@ -1,5 +1,5 @@
 import { getPrismaClient } from '@broca/common/prisma/prisma.client';
-import { PrismaClient, Word } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 export const getWords = async ({
   limit = 100,
@@ -7,7 +7,7 @@ export const getWords = async ({
 }: {
   limit: number;
   offset: number;
-}): Promise<{ total: number; words: Pick<Word, 'word'>[] }> => {
+}): Promise<{ total: number; words: string[] }> => {
   const prismaClient: PrismaClient = getPrismaClient();
   const [total = 0, words = []] = await prismaClient.$transaction([
     prismaClient.word.count(),
@@ -18,5 +18,5 @@ export const getWords = async ({
       orderBy: { word: 'asc' },
     }),
   ]);
-  return { total, words };
+  return { total, words: words.map(({ word }) => word) };
 };

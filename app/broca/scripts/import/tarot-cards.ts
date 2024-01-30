@@ -1,4 +1,4 @@
-import { PrismaClient, TarotCardType } from '@prisma/client';
+import { PrismaClient, TarotCardSuit, TarotCardType } from '@prisma/client';
 import axios from 'axios';
 
 type Card = {
@@ -38,8 +38,10 @@ const main = async () => {
       name,
       value,
       valueInt,
-      type: type.toUpperCase() as TarotCardType,
-      suit,
+      suit: suit ? ((suit ?? '').toUpperCase() as TarotCardSuit) : null,
+      type: type
+        ? ((type ?? '').toUpperCase() as TarotCardType)
+        : TarotCardType.MAJOR,
       meaningUp,
       meaningReverse,
       description,

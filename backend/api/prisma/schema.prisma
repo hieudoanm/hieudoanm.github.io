@@ -356,19 +356,6 @@ enum NewsSourceCategory {
   @@schema("public")
 }
 
-model Word {
-  word          String @id @db.VarChar(255)
-  results       Json?  @default("{}")
-  syllables     Json?  @default("{}")
-  pronunciation Json?  @default("{}")
-  frequency     Float? @default(0)
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@schema("public")
-}
-
 model TopLevelDomain {
   domain String  @id
   type   String? @default("")
@@ -509,21 +496,6 @@ model UnitedStatesCongressCommittee {
 
   @@id([congressNumber, chamber, id])
   @@schema("united_states")
-}
-
-// Quote
-
-model Quote {
-  id         String   @id
-  author     String?  @default("")
-  authorSlug String?  @default("")
-  content    String?  @default("")
-  tags       String[] @default([])
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@schema("public")
 }
 
 // University

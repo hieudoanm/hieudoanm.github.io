@@ -24,6 +24,28 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"Quote" {
+    String id PK
+    String author "nullable"
+    String authorSlug "nullable"
+    String content "nullable"
+    String tags
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"TarotCard" {
+    TarotCardSuit suit "nullable"
+    TarotCardType type
+    String id PK
+    String name "nullable"
+    String value "nullable"
+    Int valueInt "nullable"
+    String meaningUp "nullable"
+    String meaningReverse "nullable"
+    String description "nullable"
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
 ```
 
 ### `Language`
@@ -45,5 +67,31 @@ erDiagram
   - `syllables`: 
   - `pronunciation`: 
   - `frequency`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `Quote`
+
+**Properties**
+  - `id`: 
+  - `author`: 
+  - `authorSlug`: 
+  - `content`: 
+  - `tags`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `TarotCard`
+
+**Properties**
+  - `suit`: 
+  - `type`: 
+  - `id`: 
+  - `name`: 
+  - `value`: 
+  - `valueInt`: 
+  - `meaningUp`: 
+  - `meaningReverse`: 
+  - `description`: 
   - `createdAt`: 
   - `updatedAt`: 
