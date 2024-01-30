@@ -29,11 +29,11 @@
     "semver": "7.5.4"
   },
   "workspaces": [
+    "app/broca",
+    "app/chess",
+    "app/mini",
     "backend/api",
     "backend/jobs",
-    "frontend/app/broca",
-    "frontend/app/chess",
-    "frontend/app/mini",
     "frontend/mobile",
     "frontend/web"
   ]

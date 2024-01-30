@@ -1,0 +1,50 @@
+name: Chess - Sync Titled
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  sync:
+    strategy:
+      fail-fast: false
+      matrix:
+        titles:
+          - title: GM
+          - title: IM
+          - title: FM
+          - title: CM
+          - title: NM
+          - title: WGM
+          - title: WIM
+          - title: WFM
+          - title: WCM
+          - title: WNM
+    name: Sync Titled - ${{ matrix.titles.title }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.0'
+      - name: Install Dependencies
+        run: yarn install --network-timeout 86400000
+        working-directory: app/chess
+      - name: Set Up Prisma
+        run: yarn prisma format && yarn prisma generate
+        working-directory: app/chess
+        env:
+          TITLE: ${{ matrix.titles.title }}
+          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
+          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
+      - name: Sync Titled
+        run: yarn import:titled
+        working-directory: app/chess
+        env:
+          TITLE: ${{ matrix.titles.title }}
+          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
+          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}

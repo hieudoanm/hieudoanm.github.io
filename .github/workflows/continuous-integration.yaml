@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - package.json
+      - app/**
       - backend/**
       - frontend/**
     branches:
@@ -19,14 +20,14 @@ jobs:
       fail-fast: false
       matrix:
         services:
+          - name: Front-end - App - Broca
+            working-directory: app/broca
+          - name: Front-end - App - Chess
+            working-directory: app/chess
+          - name: Front-end - App - Mini
+            working-directory: app/mini
           - name: Back-end - API
             working-directory: backend/api
-          - name: Front-end - App - Broca
-            working-directory: frontend/app/broca
-          - name: Front-end - App - Chess
-            working-directory: frontend/app/chess
-          - name: Front-end - App - Mini
-            working-directory: frontend/app/mini
           - name: Front-end - Mobile
             working-directory: frontend/mobile
           - name: Front-end - Web
