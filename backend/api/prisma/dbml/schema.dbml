@@ -207,20 +207,6 @@ Table StockHistory {
   }
 }
 
-Table TarotCard {
-  type TarotCardType [not null, default: 'MAJOR']
-  id String [pk, default: '']
-  name String [default: '']
-  value String [default: '']
-  valueInt Int [default: 0]
-  suit String [default: '']
-  meaningUp String [default: '']
-  meaningReverse String [default: '']
-  description String [default: '']
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
-}
-
 Table NewsSource {
   id String [pk]
   name String [not null, default: '']
@@ -229,16 +215,6 @@ Table NewsSource {
   category NewsSourceCategory [not null, default: 'GENERAL']
   language String [not null, default: '']
   country String [not null, default: '']
-}
-
-Table Word {
-  word String [pk]
-  results Json [default: '{}']
-  syllables Json [default: '{}']
-  pronunciation Json [default: '{}']
-  frequency Float [default: 0]
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
 }
 
 Table TopLevelDomain {
@@ -345,16 +321,6 @@ Table UnitedStatesCongressCommittee {
   }
 }
 
-Table Quote {
-  id String [pk]
-  author String [default: '']
-  authorSlug String [default: '']
-  content String [default: '']
-  tags String[] [not null]
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
-}
-
 Table University {
   rank Int [pk]
   university String [default: '']
@@ -388,18 +354,6 @@ Enum Market {
   HNX
   HOSE
   UPCOM
-}
-
-Enum TarotCardType {
-  MAJOR
-  MINOR
-}
-
-Enum TarotCardSuit {
-  CUPS
-  PENTACLES
-  SWORDS
-  WANDS
 }
 
 Enum NewsSourceCategory {

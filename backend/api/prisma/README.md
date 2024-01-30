@@ -143,19 +143,6 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
-"TarotCard" {
-    TarotCardType type
-    String id PK
-    String name "nullable"
-    String value "nullable"
-    Int valueInt "nullable"
-    String suit "nullable"
-    String meaningUp "nullable"
-    String meaningReverse "nullable"
-    String description "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
 "NewsSource" {
     String id PK
     String name
@@ -164,15 +151,6 @@ erDiagram
     NewsSourceCategory category
     String language
     String country
-}
-"Word" {
-    String word PK
-    Json results "nullable"
-    Json syllables "nullable"
-    Json pronunciation "nullable"
-    Float frequency "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
 }
 "TopLevelDomain" {
     String domain PK
@@ -250,15 +228,6 @@ erDiagram
     String id
     String name "nullable"
     String chairId FK "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
-"Quote" {
-    String id PK
-    String author "nullable"
-    String authorSlug "nullable"
-    String content "nullable"
-    String tags
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -457,21 +426,6 @@ erDiagram
   - `createdAt`: 
   - `updatedAt`: 
 
-### `TarotCard`
-
-**Properties**
-  - `type`: 
-  - `id`: 
-  - `name`: 
-  - `value`: 
-  - `valueInt`: 
-  - `suit`: 
-  - `meaningUp`: 
-  - `meaningReverse`: 
-  - `description`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
 ### `NewsSource`
 
 **Properties**
@@ -482,17 +436,6 @@ erDiagram
   - `category`: 
   - `language`: 
   - `country`: 
-
-### `Word`
-
-**Properties**
-  - `word`: 
-  - `results`: 
-  - `syllables`: 
-  - `pronunciation`: 
-  - `frequency`: 
-  - `createdAt`: 
-  - `updatedAt`: 
 
 ### `TopLevelDomain`
 
@@ -584,17 +527,6 @@ erDiagram
   - `id`: 
   - `name`: 
   - `chairId`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `Quote`
-
-**Properties**
-  - `id`: 
-  - `author`: 
-  - `authorSlug`: 
-  - `content`: 
-  - `tags`: 
   - `createdAt`: 
   - `updatedAt`: 
 

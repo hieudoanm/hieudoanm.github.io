@@ -1,7 +1,8 @@
 datasource db {
-  provider = "postgresql"
-  url      = env("PUBLIC_POSTGRESQL_URL")
-  schemas  = ["public", "vietnam", "united_states"]
+  provider  = "postgresql"
+  url       = env("POSTGRESQL_URL")
+  directUrl = env("POSTGRESQL_URL")
+  schemas   = ["public", "vietnam", "united_states"]
 }
 
 generator client {
@@ -293,41 +294,6 @@ model StockHistory {
 
   @@id([symbol, date])
   @@schema("vietnam")
-}
-
-// Tarot
-
-model TarotCard {
-  type           TarotCardType @default(MAJOR)
-  id             String        @id @default("")
-  name           String?       @default("") @db.VarChar(255)
-  value          String?       @default("") @db.VarChar(255)
-  valueInt       Int?          @default(0)
-  suit           String?       @default("") @db.VarChar(255)
-  meaningUp      String?       @default("") @db.Text()
-  meaningReverse String?       @default("") @db.Text()
-  description    String?       @default("") @db.Text()
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@schema("public")
-}
-
-enum TarotCardType {
-  MAJOR
-  MINOR
-
-  @@schema("public")
-}
-
-enum TarotCardSuit {
-  CUPS
-  PENTACLES
-  SWORDS
-  WANDS
-
-  @@schema("public")
 }
 
 // News

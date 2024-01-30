@@ -1,5 +1,5 @@
 import { getPrismaClient } from '@broca/common/prisma/prisma.client';
-import { Quote, Prisma, PrismaClient } from '@prisma/client';
+import { Prisma, PrismaClient, Quote } from '@prisma/client';
 
 const buildWhere = ({
   author = '',

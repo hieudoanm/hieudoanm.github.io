@@ -1,5 +1,5 @@
 import { getPrismaClient } from '@broca/common/prisma/prisma.client';
-import { TarotCard, Prisma, PrismaClient } from '@prisma/client';
+import { Prisma, PrismaClient, TarotCard } from '@prisma/client';
 
 export const getTarotCard = async (id: string): Promise<TarotCard> => {
   const prismaClient: PrismaClient = getPrismaClient();

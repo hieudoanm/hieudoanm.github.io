@@ -3,7 +3,7 @@ version: '3.9'
 volumes:
   hieudoanm_postgresql:
     driver: local
-  chess_postgresql:
+  hieudoanm_redis:
     driver: local
 
 services:
@@ -14,20 +14,7 @@ services:
     volumes:
       - hieudoanm_postgresql:/var/lib/postgresql/data
     ports:
-      - '54321:5432'
-    environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: username
-      POSTGRES_PASSWORD: password
-
-  chess-postgresql:
-    restart: unless-stopped
-    image: postgres:16.1
-    container_name: chess-postgresql
-    volumes:
-      - chess_postgresql:/var/lib/postgresql/data
-    ports:
-      - '54322:5432'
+      - '5432:5432'
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: username
@@ -37,6 +24,8 @@ services:
     restart: unless-stopped
     image: redis:7.2.4
     container_name: hieudoanm-redis
+    volumes:
+      - hieudoanm_redis:/data
     ports:
       - 6379:6379
     environment:
