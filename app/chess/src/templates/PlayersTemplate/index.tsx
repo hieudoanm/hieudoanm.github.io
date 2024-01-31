@@ -4,12 +4,12 @@ import { Divider } from '@chakra-ui/react';
 import { FullChessPlayer } from '@chess/app/api/chess/players/service';
 import { CountryTotal } from '@chess/graphql/data/chess.types';
 import { ChessCountry, ChessTitle } from '@prisma/client';
-import { PlayersTitles, TitleTotal } from './components/PlayersTitles';
 import { PlayersCountries } from './components/PlayersCountries';
 import { PlayersDistributions } from './components/PlayersDistributions';
 import { PlayersHeader } from './components/PlayersHeader';
 import { PlayersStats, Stats } from './components/PlayersStats';
 import { PlayersTable } from './components/PlayersTable';
+import { PlayersTitles, TitleTotal } from './components/PlayersTitles';
 
 type PlayersTemplateProperties = {
   stats: Stats;
