@@ -5,7 +5,7 @@ const USERNAME = process.env.USERNAME ?? '';
 
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
 const PROD_BASE_URL = 'https://chessinsights.vercel.app/api/chess';
-const LOCAL_BASE_URL = 'http://localhost:3210/api/chess';
+const LOCAL_BASE_URL = 'http://localhost:3000/api/chess';
 const BASE_URL = NODE_ENV === 'development' ? LOCAL_BASE_URL : PROD_BASE_URL;
 
 const syncGames = async (username: string) => {

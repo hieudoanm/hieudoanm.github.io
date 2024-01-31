@@ -24,3 +24,9 @@ import-players:
 
 import-titles:
 	yarn ts-node ./scripts/import/titles
+
+tauri-dev:
+	yarn tauri dev
+
+tauri-build-macos:
+	BUILD_ENV="desktop" yarn tauri build --target universal-apple-darwin
