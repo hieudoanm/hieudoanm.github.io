@@ -1,4 +1,4 @@
-import { Prisma, PrismaClient } from '@prisma/client';
+import { Prisma, PrismaClient, Word } from '@prisma/client';
 import axios from 'axios';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
@@ -50,11 +50,10 @@ const getWordsFromDB = async (
   if (FULL === 'true') return new Set();
 
   console.info('Query from DB');
-  const wordsFromDB: string[] = (
-    await prismaClient.word.findMany({
-      select: { word: true },
-    })
-  ).map(({ word }) => word);
+  const words: Pick<Word, 'word'>[] = await prismaClient.word.findMany({
+    select: { word: true },
+  });
+  const wordsFromDB = words.map(({ word }: Pick<Word, 'word'>) => word);
   const wordsSetFromDB: Set<string> = new Set(wordsFromDB);
   return wordsSetFromDB;
 };
