@@ -41,7 +41,7 @@ jobs:
           POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
           POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
       - name: Sync Titled
-        run: yarn import:titled
+        run: make import-players
         working-directory: app/chess
         env:
           TITLE: ${{ matrix.titles.title }}

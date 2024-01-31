@@ -281,8 +281,30 @@ const syncPlayerByAPI = async (username: string) => {
 };
 
 const USERNAME = process.env.USERNAME ?? '';
+const TITLE = process.env.TITLE ?? '';
 
 const STRESS = 10;
+
+const getPlayers = async (): Promise<Set<string>> => {
+  const usernames: Set<string> = new Set<string>();
+
+  if (TITLE) {
+    const players: string[] = await getTitledPlayers(TITLE);
+    for (const player of players) {
+      usernames.add(player);
+    }
+  } else {
+    for (const title of TITLES) {
+      const players: string[] = await getTitledPlayers(title);
+      console.log(`${title} ${players.length}`);
+      for (const player of players) {
+        usernames.add(player);
+      }
+    }
+  }
+
+  return usernames;
+};
 
 const main = async () => {
   if (USERNAME) {
