@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "next",
+    "plugin:sonarjs/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "plugins": ["sonarjs", "unicorn"],
+  "rules": {
+    "unicorn/no-null": "warn",
+    "unicorn/prefer-spread": "warn"
+  }
+}
