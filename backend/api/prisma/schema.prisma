@@ -296,32 +296,6 @@ model StockHistory {
   @@schema("vietnam")
 }
 
-// News
-
-model NewsSource {
-  id          String             @id
-  name        String             @default("") @db.VarChar(255)
-  description String             @default("")
-  url         String             @default("") @db.VarChar(255)
-  category    NewsSourceCategory @default(GENERAL)
-  language    String             @default("") @db.VarChar(2)
-  country     String             @default("") @db.VarChar(2)
-
-  @@schema("public")
-}
-
-enum NewsSourceCategory {
-  BUSINESS
-  ENTERTAINMENT
-  GENERAL
-  HEALTH
-  SCIENCE
-  SPORTS
-  TECHNOLOGY
-
-  @@schema("public")
-}
-
 model TopLevelDomain {
   domain String  @id
   type   String? @default("")

@@ -1,6 +1,9 @@
 import-languages:
 	yarn ts-node ./scripts/import/languages
 
+import-news-sources:
+	yarn ts-node ./scripts/import/news-sources --env-file=.env
+
 import-quotes:
 	yarn ts-node ./scripts/import/quotes
 

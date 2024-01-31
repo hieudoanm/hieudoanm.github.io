@@ -14,8 +14,8 @@ type Card = {
 };
 
 const main = async () => {
-  const prismaService = new PrismaClient();
-  await prismaService.$connect();
+  const prismaClient = new PrismaClient();
+  await prismaClient.$connect();
   const url = 'https://tarotapi.dev/api/v1/cards';
   const response = await axios.get<{ nhits: number; cards: Card[] }>(url);
   const { data } = response;
@@ -46,7 +46,7 @@ const main = async () => {
       meaningReverse,
       description,
     };
-    await prismaService.tarotCard.upsert({
+    await prismaClient.tarotCard.upsert({
       create: body,
       update: body,
       where: { id },

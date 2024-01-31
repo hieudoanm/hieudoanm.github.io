@@ -46,6 +46,15 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
+"NewsSource" {
+    String id PK
+    String name
+    String description
+    String url
+    NewsSourceCategory category
+    NewsSourceLanguage language
+    NewsSourceCountry country
+}
 ```
 
 ### `Language`
@@ -95,3 +104,14 @@ erDiagram
   - `description`: 
   - `createdAt`: 
   - `updatedAt`: 
+
+### `NewsSource`
+
+**Properties**
+  - `id`: 
+  - `name`: 
+  - `description`: 
+  - `url`: 
+  - `category`: 
+  - `language`: 
+  - `country`: 

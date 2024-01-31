@@ -95,3 +95,109 @@ enum TarotCardSuit {
 
   @@schema("broca")
 }
+
+model NewsSource {
+  id          String             @id
+  name        String             @default("") @db.VarChar(255)
+  description String             @default("")
+  url         String             @default("") @db.VarChar(255)
+  category    NewsSourceCategory @default(GENERAL)
+  language    NewsSourceLanguage @default(EN)
+  country     NewsSourceCountry  @default(US)
+
+  @@schema("broca")
+}
+
+enum NewsSourceCategory {
+  BUSINESS
+  ENTERTAINMENT
+  GENERAL
+  HEALTH
+  SCIENCE
+  SPORTS
+  TECHNOLOGY
+
+  @@schema("broca")
+}
+
+enum NewsSourceLanguage {
+  AR
+  DE
+  EN
+  ES
+  FR
+  HE
+  IT
+  NL
+  NO
+  PT
+  RU
+  SV
+  UD
+  ZH
+
+  @@schema("broca")
+}
+
+enum NewsSourceCountry {
+  AE
+  AR
+  AT
+  AU
+  BE
+  BG
+  BR
+  CA
+  CH
+  CN
+  CO
+  CU
+  CZ
+  DE
+  EG
+  ES
+  FR
+  GB
+  GR
+  HK
+  HU
+  ID
+  IE
+  IL
+  IN
+  IS
+  IT
+  JP
+  KR
+  LT
+  LV
+  MA
+  MX
+  MY
+  NG
+  NL
+  NO
+  NZ
+  PH
+  PK
+  PL
+  PT
+  RO
+  RS
+  RU
+  SA
+  SE
+  SG
+  SI
+  SK
+  TH
+  TR
+  TW
+  UA
+  US
+  VE
+  ZA
+  ZH
+
+  @@schema("broca")
+}

@@ -232,6 +232,123 @@
           "format": "date-time"
         }
       }
+    },
+    "NewsSource": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "description": {
+          "type": "string",
+          "default": ""
+        },
+        "url": {
+          "type": "string",
+          "default": ""
+        },
+        "category": {
+          "type": "string",
+          "default": "GENERAL",
+          "enum": [
+            "BUSINESS",
+            "ENTERTAINMENT",
+            "GENERAL",
+            "HEALTH",
+            "SCIENCE",
+            "SPORTS",
+            "TECHNOLOGY"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "default": "EN",
+          "enum": [
+            "AR",
+            "DE",
+            "EN",
+            "ES",
+            "FR",
+            "HE",
+            "IT",
+            "NL",
+            "NO",
+            "PT",
+            "RU",
+            "SV",
+            "UD",
+            "ZH"
+          ]
+        },
+        "country": {
+          "type": "string",
+          "default": "US",
+          "enum": [
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BR",
+            "CA",
+            "CH",
+            "CN",
+            "CO",
+            "CU",
+            "CZ",
+            "DE",
+            "EG",
+            "ES",
+            "FR",
+            "GB",
+            "GR",
+            "HK",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JP",
+            "KR",
+            "LT",
+            "LV",
+            "MA",
+            "MX",
+            "MY",
+            "NG",
+            "NL",
+            "NO",
+            "NZ",
+            "PH",
+            "PK",
+            "PL",
+            "PT",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "TH",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "VE",
+            "ZA",
+            "ZH"
+          ]
+        }
+      }
     }
   },
   "type": "object",
@@ -247,6 +364,9 @@
     },
     "tarotCard": {
       "$ref": "#/definitions/TarotCard"
+    },
+    "newsSource": {
+      "$ref": "#/definitions/NewsSource"
     }
   }
 }

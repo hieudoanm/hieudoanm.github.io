@@ -1,12 +1,12 @@
 import { Category, Country, Language, SearchIn, SortBy } from './news.enums';
 
-export class SourceRequest {
+export type SourceRequest = {
   category?: Category;
   country?: Country;
   language?: Language;
-}
+};
 
-export class Source {
+export type Source = {
   id: string;
   name: string;
   description: string;
@@ -14,14 +14,14 @@ export class Source {
   category: Category;
   language: Language;
   country: Country;
-}
+};
 
-export class SourceResponse {
+export type SourceResponse = {
   status: string;
   sources: Source[];
-}
+};
 
-export class EverythingRequest {
+export type EverythingRequest = {
   domains?: string[];
   excludeDomains?: string[];
   language?: Language;
@@ -33,18 +33,18 @@ export class EverythingRequest {
   sortBy?: SortBy;
   sources?: string[];
   to?: string;
-}
+};
 
-export class TopHeadlinesRequest {
+export type TopHeadlinesRequest = {
   category?: Category;
   country?: Country;
   page?: number;
   pageSize?: number;
   q?: string;
   sources?: string[];
-}
+};
 
-export class Article {
+export type Article = {
   source: {
     id: string;
     name: string;
@@ -56,10 +56,10 @@ export class Article {
   urlToImage: string;
   publishedAt: string;
   content: string;
-}
+};
 
-export class ArticleResponse {
+export type ArticleResponse = {
   status: string;
   totalResults: number;
   articles: Article[];
-}
+};

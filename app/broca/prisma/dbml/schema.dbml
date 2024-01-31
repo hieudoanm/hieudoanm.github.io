@@ -46,6 +46,16 @@ Table TarotCard {
   updatedAt DateTime [default: `now()`]
 }
 
+Table NewsSource {
+  id String [pk]
+  name String [not null, default: '']
+  description String [not null, default: '']
+  url String [not null, default: '']
+  category NewsSourceCategory [not null, default: 'GENERAL']
+  language NewsSourceLanguage [not null, default: 'EN']
+  country NewsSourceCountry [not null, default: 'US']
+}
+
 Enum TarotCardType {
   MAJOR
   MINOR
@@ -56,4 +66,92 @@ Enum TarotCardSuit {
   PENTACLES
   SWORDS
   WANDS
+}
+
+Enum NewsSourceCategory {
+  BUSINESS
+  ENTERTAINMENT
+  GENERAL
+  HEALTH
+  SCIENCE
+  SPORTS
+  TECHNOLOGY
+}
+
+Enum NewsSourceLanguage {
+  AR
+  DE
+  EN
+  ES
+  FR
+  HE
+  IT
+  NL
+  NO
+  PT
+  RU
+  SV
+  UD
+  ZH
+}
+
+Enum NewsSourceCountry {
+  AE
+  AR
+  AT
+  AU
+  BE
+  BG
+  BR
+  CA
+  CH
+  CN
+  CO
+  CU
+  CZ
+  DE
+  EG
+  ES
+  FR
+  GB
+  GR
+  HK
+  HU
+  ID
+  IE
+  IL
+  IN
+  IS
+  IT
+  JP
+  KR
+  LT
+  LV
+  MA
+  MX
+  MY
+  NG
+  NL
+  NO
+  NZ
+  PH
+  PK
+  PL
+  PT
+  RO
+  RS
+  RU
+  SA
+  SE
+  SG
+  SI
+  SK
+  TH
+  TR
+  TW
+  UA
+  US
+  VE
+  ZA
+  ZH
 }
