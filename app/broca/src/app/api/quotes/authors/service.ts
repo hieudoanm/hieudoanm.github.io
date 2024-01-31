@@ -9,7 +9,7 @@ export const getAuthors = async () => {
     orderBy: { author: 'asc' },
   });
   const authors = authorsResponse
-    .map(({ author }) => author ?? '')
-    .filter((author) => author);
+    .map(({ author }: { author: string }) => author ?? '')
+    .filter((author: string) => author);
   return { total: authors.length, authors: authors };
 };

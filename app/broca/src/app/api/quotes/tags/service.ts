@@ -7,7 +7,9 @@ export const getTags = async () => {
     select: { tags: true },
     distinct: 'tags',
   });
-  const tags: string[][] = tagsResponse.map(({ tags }) => tags);
+  const tags: string[][] = tagsResponse.map(
+    ({ tags }: { tags: string[] }) => tags
+  );
   const flattenTags: string[] = tags.flat();
   const setTags: Set<string> = new Set(flattenTags);
   const uniqueTags: string[] = [...setTags];

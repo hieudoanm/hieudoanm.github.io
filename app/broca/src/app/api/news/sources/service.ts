@@ -52,9 +52,15 @@ export const getNewsSources = async ({
   ]);
   return {
     total,
-    categories: categories.map(({ category }) => category),
-    countries: countries.map(({ country }) => country),
-    languages: languages.map(({ language }) => language),
+    categories: categories.map(
+      ({ category }: { category: NewsSourceCategory }) => category
+    ),
+    countries: countries.map(
+      ({ country }: { country: NewsSourceCountry }) => country
+    ),
+    languages: languages.map(
+      ({ language }: { language: NewsSourceLanguage }) => language
+    ),
     sources,
   };
 };
