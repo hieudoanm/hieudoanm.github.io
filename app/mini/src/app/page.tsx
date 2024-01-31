@@ -23,7 +23,7 @@ const App: React.FC<AppProps> = ({ id, name, icon }) => {
     <div className="flex items-center justify-center">
       <Link href={`/${encodeURI(id)}`}>
         <div className="flex flex-col items-center gap-y-2 md:gap-y-4">
-          <div className="flex aspect-square h-16 w-16 items-center justify-center hover:rounded border hover:shadow md:h-20 md:w-20 lg:h-24 lg:w-24 rounded-full transition-all ease-linear">
+          <div className="flex aspect-square h-16 w-16 items-center justify-center border hover:shadow md:h-20 md:w-20 lg:h-24 lg:w-24 rounded-full transition-all ease-linear">
             <Icon as={icon} className="text-base md:text-lg lg:text-xl" />
           </div>
           <p className="text-center text-sm md:text-base">{name}</p>

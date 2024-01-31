@@ -1,6 +1,7 @@
 'use client';
 
 import { List, ListItem, Text } from '@chakra-ui/react';
+import { APP_NAME } from '@mini/common/constants/app.constants';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -20,19 +21,17 @@ const WeatherPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Weather</title>
+        <title>{APP_NAME} - Weather</title>
       </Head>
-      <div className="p-4 md:p-8">
-        <List className="flex flex-col gap-y-2 md:gap-y-4">
-          {cities.map(({ id, name }) => {
-            return (
-              <ListItem key={id} className="rounded border">
-                <Text className="p-4">{name}</Text>
-              </ListItem>
-            );
-          })}
-        </List>
-      </div>
+      <List className="flex flex-col gap-y-2 md:gap-y-4">
+        {cities.map(({ id, name }) => {
+          return (
+            <ListItem key={id} className="rounded border">
+              <Text className="p-4">{name}</Text>
+            </ListItem>
+          );
+        })}
+      </List>
     </>
   );
 };

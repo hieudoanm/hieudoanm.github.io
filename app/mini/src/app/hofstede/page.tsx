@@ -20,7 +20,7 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
-import Container from '@mini/common/components/Container';
+import { APP_NAME } from '@mini/common/constants/app.constants';
 import countries from '@mini/common/json/hofstede.json';
 import {
   Chart as ChartJS,
@@ -31,7 +31,7 @@ import {
 } from 'chart.js';
 import { NextPage } from 'next';
 import Head from 'next/head';
-import React, { FormEvent, useEffect, useState } from 'react';
+import React, { FormEvent, useCallback, useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 const TEXT_GREEN = 'text-green-500';
@@ -209,8 +209,6 @@ const processRankings = (scales: Scales): Ranking[] => {
 };
 
 const HofstedePage: NextPage = () => {
-  const year = new Date().getFullYear();
-
   const [countryId, setCountryId] = useState<number>(537);
   const [countryIds, setCountryIds] = useState<number[]>([537]);
   const [scales, setScales] = useState<Scales>({
@@ -227,56 +225,59 @@ const HofstedePage: NextPage = () => {
     rankings: Ranking[];
   }>({ chart: { datasets: [] }, rankings: [] });
 
-  const onChange = (newCountryIds: string | number[]) => {
-    let selectedCountryIds = newCountryIds;
-    if (typeof newCountryIds === 'string') {
-      selectedCountryIds = newCountryIds
-        .split(',')
-        .map((value) => Number.parseInt(value, 10));
-    }
-    const selectedCountries: Country[] = countries.filter((country) =>
-      (selectedCountryIds as number[]).includes(country.id)
-    );
+  const onChange = useCallback(
+    (newCountryIds: string | number[]) => {
+      let selectedCountryIds = newCountryIds;
+      if (typeof newCountryIds === 'string') {
+        selectedCountryIds = newCountryIds
+          .split(',')
+          .map((value) => Number.parseInt(value, 10));
+      }
+      const selectedCountries: Country[] = countries.filter((country) =>
+        (selectedCountryIds as number[]).includes(country.id)
+      );
 
-    const rankings = processRankings(scales);
-    const newDatasets = [
-      {
-        ...personalDataset,
-        data: [
-          scales.powerDistance,
-          scales.individualism,
-          scales.masculinity,
-          scales.uncertaintyAvoidance,
-          scales.longTermOrientation,
-          scales.indulgence,
-        ],
-      },
-    ];
-
-    const total = selectedCountries.length > 4 ? 4 : selectedCountries.length;
-
-    for (let index = 0; index < total; index++) {
-      const country = selectedCountries[`${index}`];
-      const data = [
-        country?.powerDistance || 0,
-        country?.individualism || 0,
-        country?.masculinity || 0,
-        country?.uncertaintyAvoidance || 0,
-        country?.longTermOrientation || 0,
-        country?.indulgence || 0,
+      const rankings = processRankings(scales);
+      const newDatasets = [
+        {
+          ...personalDataset,
+          data: [
+            scales.powerDistance,
+            scales.individualism,
+            scales.masculinity,
+            scales.uncertaintyAvoidance,
+            scales.longTermOrientation,
+            scales.indulgence,
+          ],
+        },
       ];
 
-      const backgroundColor = COLORS[index + 1];
-      newDatasets.push({
-        ...countryDataset,
-        backgroundColor,
-        label: country?.country || 'Country',
-        data,
-      });
-    }
+      const total = selectedCountries.length > 4 ? 4 : selectedCountries.length;
 
-    setData({ chart: { labels, datasets: newDatasets }, rankings });
-  };
+      for (let index = 0; index < total; index++) {
+        const country = selectedCountries[`${index}`];
+        const data = [
+          country?.powerDistance || 0,
+          country?.individualism || 0,
+          country?.masculinity || 0,
+          country?.uncertaintyAvoidance || 0,
+          country?.longTermOrientation || 0,
+          country?.indulgence || 0,
+        ];
+
+        const backgroundColor = COLORS[index + 1];
+        newDatasets.push({
+          ...countryDataset,
+          backgroundColor,
+          label: country?.country || 'Country',
+          data,
+        });
+      }
+
+      setData({ chart: { labels, datasets: newDatasets }, rankings });
+    },
+    [scales]
+  );
 
   useEffect(() => {
     onChange(countryIds);
@@ -285,335 +286,305 @@ const HofstedePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Hofstede</title>
+        <title>{APP_NAME} - Hofstede</title>
       </Head>
-      <div className="flex min-h-screen flex-col">
-        <nav className="border-b">
-          <Container>
-            <div className="py-4">
-              <h1 className="text-xl font-bold uppercase">Hofstede</h1>
-            </div>
-          </Container>
-        </nav>
-        <main className="grow">
-          <Container>
-            <div className="py-8">
-              <Card className="border">
-                <div className="p-8">
-                  <form
-                    onSubmit={(event: FormEvent<HTMLFormElement>) => {
-                      event.preventDefault();
-                      onChange(countryIds);
-                    }}>
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                      <div className="col-span-full">
-                        <FormControl className="w-full">
-                          <FormLabel id="country-select-label">
-                            Country
-                          </FormLabel>
-                          <div className="flex gap-x-4">
-                            <Select
-                              id="country-select"
-                              value={countryId}
-                              onChange={(event) => {
-                                const newCountryId: number = Number.parseInt(
-                                  event.target.value
-                                );
-                                setCountryId(newCountryId);
-                              }}>
-                              {countries.map((country) => {
-                                return (
-                                  <option key={country.id} value={country.id}>
-                                    {country.country}
-                                  </option>
-                                );
-                              })}
-                            </Select>
-                            <IconButton
-                              colorScheme="teal"
-                              aria-label="Choose Country"
-                              icon={<PlusSquareIcon />}
-                              onClick={(event) => {
-                                event.preventDefault();
-                                setCountryIds((previous) => {
-                                  previous.push(countryId);
-                                  const newCountryIds: number[] = [
-                                    ...new Set(previous),
-                                  ];
-                                  return newCountryIds;
-                                });
-                              }}
-                            />
-                          </div>
-                          <div className="flex gap-x-2 pt-2">
-                            {countryIds.map((countryIdOption: number) => {
-                              return (
-                                <Badge key={countryIdOption} colorScheme="teal">
-                                  {countryIdOption}
-                                </Badge>
-                              );
-                            })}
-                          </div>
-                        </FormControl>
-                      </div>
-                      <div className="col-span-1">
-                        <Text>Power Distance ({scales.powerDistance})</Text>
-                        <Slider
-                          aria-label="Power Distance"
-                          step={1}
-                          min={0}
-                          max={100}
-                          value={scales.powerDistance}
-                          onChange={(newValue: number) => {
-                            setScales({
-                              ...scales,
-                              powerDistance: newValue,
-                            });
-                            onChange(countryIds);
-                          }}>
-                          <SliderTrack>
-                            <SliderFilledTrack />
-                          </SliderTrack>
-                          <SliderThumb />
-                        </Slider>
-                      </div>
-                      <div className="col-span-1">
-                        <Text>Individualism ({scales.individualism})</Text>
-                        <Slider
-                          aria-label="Individualism"
-                          step={1}
-                          min={0}
-                          max={100}
-                          value={scales.individualism}
-                          onChange={(newValue: number) => {
-                            setScales({
-                              ...scales,
-                              individualism: newValue,
-                            });
-                            onChange(countryIds);
-                          }}>
-                          <SliderTrack>
-                            <SliderFilledTrack />
-                          </SliderTrack>
-                          <SliderThumb />
-                        </Slider>
-                      </div>
-                      <div className="col-span-1">
-                        <Text>Masculinity ({scales.masculinity})</Text>
-                        <Slider
-                          aria-label="Masculinity"
-                          step={1}
-                          min={0}
-                          max={100}
-                          value={scales.masculinity}
-                          onChange={(newValue: number) => {
-                            setScales({
-                              ...scales,
-                              masculinity: newValue,
-                            });
-                            onChange(countryIds);
-                          }}>
-                          <SliderTrack>
-                            <SliderFilledTrack />
-                          </SliderTrack>
-                          <SliderThumb />
-                        </Slider>
-                      </div>
-                      <div className="col-span-1">
-                        <Text>
-                          Uncertainty Avoidance ({scales.uncertaintyAvoidance})
-                        </Text>
-                        <Slider
-                          aria-label="Uncertainty Avoidance"
-                          step={1}
-                          min={0}
-                          max={100}
-                          value={scales.uncertaintyAvoidance}
-                          onChange={(newValue: number) => {
-                            setScales({
-                              ...scales,
-                              uncertaintyAvoidance: newValue,
-                            });
-                            onChange(countryIds);
-                          }}>
-                          <SliderTrack>
-                            <SliderFilledTrack />
-                          </SliderTrack>
-                          <SliderThumb />
-                        </Slider>
-                      </div>
-                      <div className="col-span-1">
-                        <Text>
-                          Long Term Orientation ({scales.longTermOrientation})
-                        </Text>
-                        <Slider
-                          aria-label="Long-term Orientation"
-                          step={1}
-                          min={0}
-                          max={100}
-                          value={scales.longTermOrientation}
-                          onChange={(newValue: number) => {
-                            setScales({
-                              ...scales,
-                              longTermOrientation: newValue,
-                            });
-                            onChange(countryIds);
-                          }}>
-                          <SliderTrack>
-                            <SliderFilledTrack />
-                          </SliderTrack>
-                          <SliderThumb />
-                        </Slider>
-                      </div>
-                      <div className="col-span-1">
-                        <Text>Indulgence ({scales.indulgence})</Text>
-                        <Slider
-                          aria-label="Indulgence"
-                          step={1}
-                          min={0}
-                          max={100}
-                          value={scales.indulgence}
-                          onChange={(newValue: number) => {
-                            setScales({
-                              ...scales,
-                              indulgence: newValue,
-                            });
-                            onChange(countryIds);
-                          }}>
-                          <SliderTrack>
-                            <SliderFilledTrack />
-                          </SliderTrack>
-                          <SliderThumb />
-                        </Slider>
-                      </div>
-                    </div>
-                  </form>
-                  <div className="py-8">
-                    {data.chart === null ? (
-                      <></>
-                    ) : (
-                      <Bar
-                        data={data.chart}
-                        height={300}
-                        options={barChartOptions}
-                      />
-                    )}
+      <Card className="border border-gray-200">
+        <div className="p-8">
+          <form
+            onSubmit={(event: FormEvent<HTMLFormElement>) => {
+              event.preventDefault();
+              onChange(countryIds);
+            }}>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div className="col-span-full">
+                <FormControl className="w-full">
+                  <FormLabel id="country-select-label">Country</FormLabel>
+                  <div className="flex gap-x-4">
+                    <Select
+                      id="country-select"
+                      value={countryId}
+                      onChange={(event) => {
+                        const newCountryId: number = Number.parseInt(
+                          event.target.value
+                        );
+                        setCountryId(newCountryId);
+                      }}>
+                      {countries.map((country) => {
+                        return (
+                          <option key={country.id} value={country.id}>
+                            {country.country}
+                          </option>
+                        );
+                      })}
+                    </Select>
+                    <IconButton
+                      colorScheme="teal"
+                      aria-label="Choose Country"
+                      icon={<PlusSquareIcon />}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        setCountryIds((previous) => {
+                          previous.push(countryId);
+                          const newCountryIds: number[] = [
+                            ...new Set(previous),
+                          ];
+                          return newCountryIds;
+                        });
+                      }}
+                    />
                   </div>
-                  <TableContainer className="rounded border">
-                    <Table>
-                      <Thead>
-                        <Tr>
-                          <Td>No</Td>
-                          <Td>Country</Td>
-                          <Td>Power Distance</Td>
-                          <Td>Individualism</Td>
-                          <Td>Masculinity</Td>
-                          <Td>Uncertainty Avoidance</Td>
-                          <Td>Long Term Orientation</Td>
-                          <Td>Indulgence</Td>
-                          <Td>Difference</Td>
-                        </Tr>
-                      </Thead>
-                      <Tbody>
-                        {data.rankings.map((ranking, index: number) => {
-                          return (
-                            <Tr key={ranking.country}>
-                              <Td>{index + 1}</Td>
-                              <Td>{ranking.country}</Td>
-                              <Td>
-                                {ranking.powerDistance}{' '}
-                                <span
-                                  className={
-                                    typeof ranking.pdiDiff === 'number' &&
-                                    ranking.pdiDiff >= 0
-                                      ? TEXT_GREEN
-                                      : TEXT_RED
-                                  }>
-                                  ({ranking.pdiDiff})
-                                </span>
-                              </Td>
-                              <Td>
-                                {ranking.individualism}{' '}
-                                <span
-                                  className={
-                                    typeof ranking.idvDiff === 'number' &&
-                                    ranking.idvDiff >= 0
-                                      ? TEXT_GREEN
-                                      : TEXT_RED
-                                  }>
-                                  ({ranking.idvDiff})
-                                </span>
-                              </Td>
-                              <Td>
-                                {ranking.masculinity}{' '}
-                                <span
-                                  className={
-                                    typeof ranking.masDiff === 'number' &&
-                                    ranking.masDiff >= 0
-                                      ? TEXT_GREEN
-                                      : TEXT_RED
-                                  }>
-                                  ({ranking.masDiff})
-                                </span>
-                              </Td>
-                              <Td>
-                                {ranking.uncertaintyAvoidance}{' '}
-                                <span
-                                  className={
-                                    typeof ranking.uaiDiff === 'number' &&
-                                    ranking.uaiDiff >= 0
-                                      ? TEXT_GREEN
-                                      : TEXT_RED
-                                  }>
-                                  ({ranking.uaiDiff})
-                                </span>
-                              </Td>
-                              <Td>
-                                {ranking.longTermOrientation}{' '}
-                                <span
-                                  className={
-                                    typeof ranking.ltoDiff === 'number' &&
-                                    ranking.ltoDiff >= 0
-                                      ? TEXT_GREEN
-                                      : TEXT_RED
-                                  }>
-                                  ({ranking.ltoDiff})
-                                </span>
-                              </Td>
-                              <Td>
-                                {ranking.indulgence}{' '}
-                                <span
-                                  className={
-                                    typeof ranking.indDiff === 'number' &&
-                                    ranking.indDiff >= 0
-                                      ? TEXT_GREEN
-                                      : TEXT_RED
-                                  }>
-                                  ({ranking.indDiff})
-                                </span>
-                              </Td>
-                              <Td>{ranking.avgDiff}</Td>
-                            </Tr>
-                          );
-                        })}
-                      </Tbody>
-                    </Table>
-                  </TableContainer>
-                </div>
-              </Card>
+                  <div className="flex gap-x-2 pt-2">
+                    {countryIds.map((countryIdOption: number) => {
+                      return (
+                        <Badge key={countryIdOption} colorScheme="teal">
+                          {countryIdOption}
+                        </Badge>
+                      );
+                    })}
+                  </div>
+                </FormControl>
+              </div>
+              <div className="col-span-1">
+                <Text>Power Distance ({scales.powerDistance})</Text>
+                <Slider
+                  aria-label="Power Distance"
+                  step={1}
+                  min={0}
+                  max={100}
+                  value={scales.powerDistance}
+                  onChange={(newValue: number) => {
+                    setScales({
+                      ...scales,
+                      powerDistance: newValue,
+                    });
+                    onChange(countryIds);
+                  }}>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </div>
+              <div className="col-span-1">
+                <Text>Individualism ({scales.individualism})</Text>
+                <Slider
+                  aria-label="Individualism"
+                  step={1}
+                  min={0}
+                  max={100}
+                  value={scales.individualism}
+                  onChange={(newValue: number) => {
+                    setScales({
+                      ...scales,
+                      individualism: newValue,
+                    });
+                    onChange(countryIds);
+                  }}>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </div>
+              <div className="col-span-1">
+                <Text>Masculinity ({scales.masculinity})</Text>
+                <Slider
+                  aria-label="Masculinity"
+                  step={1}
+                  min={0}
+                  max={100}
+                  value={scales.masculinity}
+                  onChange={(newValue: number) => {
+                    setScales({
+                      ...scales,
+                      masculinity: newValue,
+                    });
+                    onChange(countryIds);
+                  }}>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </div>
+              <div className="col-span-1">
+                <Text>
+                  Uncertainty Avoidance ({scales.uncertaintyAvoidance})
+                </Text>
+                <Slider
+                  aria-label="Uncertainty Avoidance"
+                  step={1}
+                  min={0}
+                  max={100}
+                  value={scales.uncertaintyAvoidance}
+                  onChange={(newValue: number) => {
+                    setScales({
+                      ...scales,
+                      uncertaintyAvoidance: newValue,
+                    });
+                    onChange(countryIds);
+                  }}>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </div>
+              <div className="col-span-1">
+                <Text>
+                  Long Term Orientation ({scales.longTermOrientation})
+                </Text>
+                <Slider
+                  aria-label="Long-term Orientation"
+                  step={1}
+                  min={0}
+                  max={100}
+                  value={scales.longTermOrientation}
+                  onChange={(newValue: number) => {
+                    setScales({
+                      ...scales,
+                      longTermOrientation: newValue,
+                    });
+                    onChange(countryIds);
+                  }}>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </div>
+              <div className="col-span-1">
+                <Text>Indulgence ({scales.indulgence})</Text>
+                <Slider
+                  aria-label="Indulgence"
+                  step={1}
+                  min={0}
+                  max={100}
+                  value={scales.indulgence}
+                  onChange={(newValue: number) => {
+                    setScales({
+                      ...scales,
+                      indulgence: newValue,
+                    });
+                    onChange(countryIds);
+                  }}>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </div>
             </div>
-          </Container>
-        </main>
-        <footer className="border-t">
-          <Container>
-            <div className="py-4">
-              <h1 className="uppercase text-gray-700">
-                &copy; {year} Hofstede
-              </h1>
-            </div>
-          </Container>
-        </footer>
-      </div>
+          </form>
+          <div className="py-8">
+            {data.chart === null ? (
+              <></>
+            ) : (
+              <Bar data={data.chart} height={300} options={barChartOptions} />
+            )}
+          </div>
+          <TableContainer className="rounded border">
+            <Table>
+              <Thead>
+                <Tr>
+                  <Td>No</Td>
+                  <Td>Country</Td>
+                  <Td>Power Distance</Td>
+                  <Td>Individualism</Td>
+                  <Td>Masculinity</Td>
+                  <Td>Uncertainty Avoidance</Td>
+                  <Td>Long Term Orientation</Td>
+                  <Td>Indulgence</Td>
+                  <Td>Difference</Td>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {data.rankings.map((ranking, index: number) => {
+                  return (
+                    <Tr key={ranking.country}>
+                      <Td>{index + 1}</Td>
+                      <Td>{ranking.country}</Td>
+                      <Td>
+                        {ranking.powerDistance}{' '}
+                        <span
+                          className={
+                            typeof ranking.pdiDiff === 'number' &&
+                            ranking.pdiDiff >= 0
+                              ? TEXT_GREEN
+                              : TEXT_RED
+                          }>
+                          ({ranking.pdiDiff})
+                        </span>
+                      </Td>
+                      <Td>
+                        {ranking.individualism}{' '}
+                        <span
+                          className={
+                            typeof ranking.idvDiff === 'number' &&
+                            ranking.idvDiff >= 0
+                              ? TEXT_GREEN
+                              : TEXT_RED
+                          }>
+                          ({ranking.idvDiff})
+                        </span>
+                      </Td>
+                      <Td>
+                        {ranking.masculinity}{' '}
+                        <span
+                          className={
+                            typeof ranking.masDiff === 'number' &&
+                            ranking.masDiff >= 0
+                              ? TEXT_GREEN
+                              : TEXT_RED
+                          }>
+                          ({ranking.masDiff})
+                        </span>
+                      </Td>
+                      <Td>
+                        {ranking.uncertaintyAvoidance}{' '}
+                        <span
+                          className={
+                            typeof ranking.uaiDiff === 'number' &&
+                            ranking.uaiDiff >= 0
+                              ? TEXT_GREEN
+                              : TEXT_RED
+                          }>
+                          ({ranking.uaiDiff})
+                        </span>
+                      </Td>
+                      <Td>
+                        {ranking.longTermOrientation}{' '}
+                        <span
+                          className={
+                            typeof ranking.ltoDiff === 'number' &&
+                            ranking.ltoDiff >= 0
+                              ? TEXT_GREEN
+                              : TEXT_RED
+                          }>
+                          ({ranking.ltoDiff})
+                        </span>
+                      </Td>
+                      <Td>
+                        {ranking.indulgence}{' '}
+                        <span
+                          className={
+                            typeof ranking.indDiff === 'number' &&
+                            ranking.indDiff >= 0
+                              ? TEXT_GREEN
+                              : TEXT_RED
+                          }>
+                          ({ranking.indDiff})
+                        </span>
+                      </Td>
+                      <Td>{ranking.avgDiff}</Td>
+                    </Tr>
+                  );
+                })}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </div>
+      </Card>
     </>
   );
 };

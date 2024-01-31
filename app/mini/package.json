@@ -15,7 +15,8 @@
 		"prebuild": "rimraf .next out",
 		"build": "next build",
 		"lint": "next lint",
-		"test": "jest"
+		"test": "jest",
+		"tauri": "tauri"
 	},
 	"dependencies": {
 		"@apollo/client": "3.9.0",
@@ -43,6 +44,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
+		"@tauri-apps/cli": "1.5.9",
 		"@testing-library/react": "14.2.0",
 		"@types/node": "20.11.13",
 		"@types/react": "18.2.48",
