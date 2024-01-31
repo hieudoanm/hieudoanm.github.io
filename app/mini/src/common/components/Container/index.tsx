@@ -11,9 +11,8 @@ export const Container: React.FC<ContainerProperties> = ({
   className = '',
   children = <></>,
 }) => {
-  return (
-    <div className={`container mx-auto px-8 ${className}`}>{children}</div>
-  );
+  const containerClassName = `container mx-auto ${className}`.trim();
+  return <div className={containerClassName}>{children}</div>;
 };
 
 Container.displayName = 'Container';

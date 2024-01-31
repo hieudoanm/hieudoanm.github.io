@@ -11,7 +11,7 @@ const PomodoroPage: NextPage = () => {
         <meta charSet="utf-8" />
         <title>Pomodoro</title>
       </Head>
-      <div className="h-screen w-screen">
+      <div className="h-full w-full">
         <Pomodoro />
       </div>
     </>

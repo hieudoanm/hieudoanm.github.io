@@ -7,7 +7,7 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="border-b shadow">
       <Container>
-        <div className="px-8 py-4">
+        <div className="px-4 md:px-8 py-2 md:py-4">
           <Text className="uppercase">Mini</Text>
         </div>
       </Container>

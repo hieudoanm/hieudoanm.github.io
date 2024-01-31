@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.scss';
 import { Providers } from './providers';
+import Container from '@mini/common/components/Container';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,8 +22,19 @@ const RootLayout = ({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Navbar />
-          {children}
+          <div className="flex h-screen flex-col">
+            <Navbar />
+            <div className="grow h-full">
+              <Container className="h-full">{children}</Container>
+            </div>
+            <footer className="border-t shadow">
+              <Container>
+                <div className="px-4 md:px-8 py-2 md:py-4">
+                  <p className="uppercase">Mini</p>
+                </div>
+              </Container>
+            </footer>
+          </div>
         </Providers>
       </body>
     </html>
