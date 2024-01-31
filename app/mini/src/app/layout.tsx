@@ -1,4 +1,5 @@
 import Container from '@mini/common/components/Container';
+import { Footer } from '@mini/common/components/Footer';
 import { Navbar } from '@mini/common/components/Navbar';
 import { APP_NAME } from '@mini/common/constants/app.constants';
 import type { Metadata } from 'next';
@@ -24,16 +25,12 @@ const RootLayout = ({
         <Providers>
           <div className="flex h-screen flex-col">
             <Navbar />
-            <div className="grow h-full">
-              <Container className="h-full">{children}</Container>
-            </div>
-            <footer className="border-t shadow">
-              <Container>
-                <div className="px-4 md:px-8 py-2 md:py-4">
-                  <p className="uppercase">Mini</p>
-                </div>
+            <div className="grow">
+              <Container className="min-h-full">
+                <div className="p-4 md:p-8 h-full">{children}</div>
               </Container>
-            </footer>
+            </div>
+            <Footer />
           </div>
         </Providers>
       </body>

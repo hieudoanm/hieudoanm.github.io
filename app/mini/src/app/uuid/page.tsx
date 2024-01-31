@@ -15,18 +15,16 @@ const UuidPage: NextPage = () => {
       <Head>
         <title>UUID</title>
       </Head>
-      <div className="p-4 md:p-8">
-        <div className="flex h-full items-center justify-center">
-          <InputGroup gap={4}>
-            <Input value={uuid} />
-            <IconButton
-              colorScheme="teal"
-              onClick={() => setUuid(v4())}
-              aria-label={'UUID'}
-              icon={<Icon as={FaSpinner} />}
-            />
-          </InputGroup>
-        </div>
+      <div className="flex h-full items-center justify-center">
+        <InputGroup gap={4}>
+          <Input value={uuid} />
+          <IconButton
+            colorScheme="teal"
+            onClick={() => setUuid(v4())}
+            aria-label={'UUID'}
+            icon={<Icon as={FaSpinner} />}
+          />
+        </InputGroup>
       </div>
     </>
   );
