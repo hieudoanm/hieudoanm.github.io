@@ -10,13 +10,13 @@
   "scripts": {
     "check": "biome check --apply ./src",
     "format": "biome format --write ./src",
-    "dev": "kill-port 3210 && next dev --port 3210",
+    "dev": "kill-port 3210 && next dev -p 3210",
+    "start": "next start -p 3210",
     "prebuild": "rimraf .next out && (prisma generate || true)",
     "build": "next build",
-    "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "prisma:dev": "prisma format && prisma generate && prisma migrate dev --name init",
+    "prisma:migrate": "prisma format && prisma generate && prisma migrate dev --name init",
     "prisma:push": "prisma format && prisma generate && prisma db push"
   },
   "dependencies": {

@@ -12,10 +12,10 @@
     "format": "biome format --write ./src",
     "dev": "kill-port 3000 && next dev -p 3000",
     "start": "next start -p 3000",
+    "prebuild": "rimraf .next out && (prisma generate || true)",
     "build": "next build",
     "lint": "next lint",
     "test": "jest",
-    "prebuild": "rimraf .next out",
     "prisma:migrate": "prisma format && prisma generate && prisma migrate dev --name init",
     "prisma:push": "prisma format && prisma generate && prisma db push"
   },

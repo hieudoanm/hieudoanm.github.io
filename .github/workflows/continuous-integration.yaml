@@ -50,6 +50,14 @@ jobs:
       - name: Build Production
         run: yarn build
         working-directory: ${{ matrix.services.working-directory }}
+        env:
+          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
+          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
       - name: Unit Tests
         run: yarn test -u
         working-directory: ${{ matrix.services.working-directory }}
+        env:
+          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
+          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
