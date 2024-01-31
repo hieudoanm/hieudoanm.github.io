@@ -4,8 +4,7 @@ import { Divider } from '@chakra-ui/react';
 import { FullChessPlayer } from '@chess/app/api/chess/players/service';
 import { CountryTotal } from '@chess/graphql/data/chess.types';
 import { ChessCountry, ChessTitle } from '@prisma/client';
-import { TitleTotal } from './components/PlayerTitles';
-import { PlayersTitles } from './components/PlayerTitles';
+import { PlayersTitles, TitleTotal } from './components/PlayersTitles';
 import { PlayersCountries } from './components/PlayersCountries';
 import { PlayersDistributions } from './components/PlayersDistributions';
 import { PlayersHeader } from './components/PlayersHeader';
@@ -38,15 +37,10 @@ export const PlayersTemplate: React.FC<PlayersTemplateProperties> = ({
         titles={titleOptions}
         countries={countryOptions}
       />
-      <Divider />
       <PlayersStats players={players} stats={stats} />
-      <Divider />
       <PlayersDistributions players={players} />
-      <Divider />
       <PlayersTitles titles={titles} />
-      <Divider />
       <PlayersCountries countries={countries} />
-      <Divider />
       <PlayersTable total={total} players={players} />
     </div>
   );

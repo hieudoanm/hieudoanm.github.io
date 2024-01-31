@@ -49,6 +49,8 @@ export const PlayersTable: React.FC<PlayersTableProperties> = ({
   const [isStreamer, setIsStreamer] = useSearchParameter('isStreamer');
   const isStreamerFlag = isStreamer === 'true';
 
+  if (players.length === 0) return <></>;
+
   return (
     <>
       <Heading className="text-center text-lg md:text-left md:text-2xl">

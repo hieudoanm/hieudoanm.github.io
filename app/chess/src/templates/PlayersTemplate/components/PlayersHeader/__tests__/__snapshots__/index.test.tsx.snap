@@ -157,5 +157,9 @@ exports[`PlayerHeader to match snapshot 1`] = `
       </div>
     </div>
   </header>
+  <hr
+    aria-orientation="horizontal"
+    class="chakra-divider css-1upb9tn"
+  />
 </div>
 `;

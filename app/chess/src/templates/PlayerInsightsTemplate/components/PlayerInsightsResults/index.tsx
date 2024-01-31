@@ -27,6 +27,7 @@ const ChessResult: React.FC<{
     0
   );
   const colors: string[] = COLORS_MAP[color];
+
   return (
     <div className="flex flex-col gap-y-4">
       <h2 className="font-bold">{title}</h2>

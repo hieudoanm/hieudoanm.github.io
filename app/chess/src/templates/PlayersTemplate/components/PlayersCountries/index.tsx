@@ -8,6 +8,7 @@ import {
   AccordionPanel,
   Button,
   ButtonGroup,
+  Divider,
   Heading,
 } from '@chakra-ui/react';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
@@ -27,6 +28,8 @@ export const PlayersCountries: React.FC<PlayersCountriesProperties> = ({
     (previousValue: number, { total }) => previousValue + total,
     0
   );
+
+  if (countries.length === 0) return <></>;
 
   return (
     <>
@@ -68,6 +71,7 @@ export const PlayersCountries: React.FC<PlayersCountriesProperties> = ({
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
+      <Divider />
     </>
   );
 };

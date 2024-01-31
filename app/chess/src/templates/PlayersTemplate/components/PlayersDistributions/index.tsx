@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react';
+import { Divider, Heading } from '@chakra-ui/react';
 import { ChessTimeClass } from '@prisma/client';
 import { FullChessPlayer, PlayersDistribution } from '../PlayersDistribution';
 
@@ -9,6 +9,8 @@ export type PlayersDistributionsProperties = {
 export const PlayersDistributions: React.FC<PlayersDistributionsProperties> = ({
   players = [],
 }) => {
+  if (players.length === 0) return <></>;
+
   return (
     <>
       <Heading className="text-center text-lg md:text-left md:text-2xl">
@@ -34,6 +36,7 @@ export const PlayersDistributions: React.FC<PlayersDistributionsProperties> = ({
           />
         </div>
       </div>
+      <Divider />
     </>
   );
 };

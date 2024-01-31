@@ -6,7 +6,6 @@ import { query } from '@chess/graphql/apollo/client';
 import { PlayersTemplate } from '@chess/templates/PlayersTemplate';
 import {
   ChessCountry,
-  ChessTimeClass,
   ChessTitle,
   ChessTitleAbbreviation,
 } from '@prisma/client';

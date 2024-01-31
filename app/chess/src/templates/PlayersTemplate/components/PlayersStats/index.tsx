@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react';
+import { Divider, Heading } from '@chakra-ui/react';
 import { FullChessPlayer } from '@chess/app/api/chess/players/service';
 import { FaBolt, FaClock, FaRocket } from 'react-icons/fa';
 import { PlayersStat } from '../PlayersStat';
@@ -56,6 +56,7 @@ export const PlayersStats: React.FC<PlayersStatsProperties> = ({
           />
         </div>
       </div>
+      <Divider />
     </>
   );
 };

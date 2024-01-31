@@ -9,11 +9,11 @@ export const useSearchParameter = (
   const searchParameters = useSearchParams();
   const searchParamter = searchParameters.get(key) ?? defaultValue;
 
-  const setSearchParameter = (value: string) => {
+  const setSearchParameter = (value = '') => {
     const newSearchParameters = new URLSearchParams(searchParameters);
     newSearchParameters.set(key, value);
     const href: string = `${pathname}?${newSearchParameters.toString()}`;
-    router.push(href);
+    router.replace(href, { scroll: true });
   };
 
   return [searchParamter, setSearchParameter];
