@@ -17,7 +17,7 @@ erDiagram
 }
 "Word" {
     String word PK
-    Json results "nullable"
+    Json results
     Json syllables "nullable"
     Json pronunciation "nullable"
     Float frequency "nullable"

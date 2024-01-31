@@ -39,7 +39,7 @@ model Language {
 
 model Word {
   word          String @id @db.VarChar(255)
-  results       Json?  @default("{}")
+  results       Json[] @default([])
   syllables     Json?  @default("{}")
   pronunciation Json?  @default("{}")
   frequency     Float? @default(0)

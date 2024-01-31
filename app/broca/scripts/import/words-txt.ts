@@ -22,7 +22,13 @@ const importWord = async (
     const url = `${baseUrl}?encrypted=${encrypted}&when=${when}&limit=${limit}`;
     const response = await axios.get<Prisma.WordCreateInput>(url);
     const { data } = response;
-    const { word, results, syllables, pronunciation, frequency = 0 } = data;
+    const {
+      word,
+      results = [],
+      syllables,
+      pronunciation,
+      frequency = 0,
+    } = data;
     const body = { word, results, syllables, pronunciation, frequency };
     console.info(`word=${word}`);
     await prismaClient.word.upsert({
@@ -35,15 +41,29 @@ const importWord = async (
   }
 };
 
-const main = async () => {
-  const prismaClient = new PrismaClient();
+const FULL: string = process.env.FULL ?? 'false';
+
+const getWordsFromDB = async (
+  prismaClient: PrismaClient
+): Promise<Set<string>> => {
+  console.log(`FULL=${FULL}`);
+  if (FULL === 'true') return new Set();
+
   console.info('Query from DB');
   const wordsFromDB: string[] = (
     await prismaClient.word.findMany({
       select: { word: true },
     })
   ).map(({ word }) => word);
-  const wordsSetFromDB = new Set(wordsFromDB);
+  const wordsSetFromDB: Set<string> = new Set(wordsFromDB);
+  return wordsSetFromDB;
+};
+
+const main = async () => {
+  const prismaClient = new PrismaClient();
+
+  const wordsSetFromDB = await getWordsFromDB(prismaClient);
+
   console.info('Filter from DB');
   const wordsTxt = readFileSync(
     path.join(__dirname, '../..', './resources/txt/words.txt'),
@@ -57,8 +77,9 @@ const main = async () => {
   console.info(`length=${length}`);
   const pages = Math.ceil(length / limit);
   for (let i = 0; i < pages; i++) {
+    console.time();
     const offset = i * limit;
-    console.info(`page=${i} offset=${offset} limit=${limit}`);
+    console.info(`page=${i}/${pages} offset=${offset} limit=${limit}`);
     const slice: string[] = words.slice(offset, offset + limit);
     // if (slice.length) continue;
     await Promise.all(
@@ -66,6 +87,7 @@ const main = async () => {
         return await importWord(prismaClient, word);
       })
     );
+    console.timeEnd();
   }
 };
 

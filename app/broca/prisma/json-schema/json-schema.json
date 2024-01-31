@@ -47,14 +47,17 @@
           "type": "string"
         },
         "results": {
-          "type": [
-            "number",
-            "string",
-            "boolean",
-            "object",
-            "array",
-            "null"
-          ]
+          "type": "array",
+          "items": {
+            "type": [
+              "number",
+              "string",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
         },
         "syllables": {
           "type": [

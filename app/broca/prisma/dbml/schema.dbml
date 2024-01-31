@@ -14,7 +14,7 @@ Table Language {
 
 Table Word {
   word String [pk]
-  results Json [default: '{}']
+  results Json[] [not null]
   syllables Json [default: '{}']
   pronunciation Json [default: '{}']
   frequency Float [default: 0]
