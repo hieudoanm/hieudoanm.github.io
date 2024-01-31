@@ -1,10 +1,10 @@
+import Container from '@mini/common/components/Container';
 import { Navbar } from '@mini/common/components/Navbar';
 import { APP_NAME } from '@mini/common/constants/app.constants';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.scss';
 import { Providers } from './providers';
-import Container from '@mini/common/components/Container';
 
 const inter = Inter({ subsets: ['latin'] });
 
