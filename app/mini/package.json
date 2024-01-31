@@ -19,7 +19,7 @@
 		"tauri": "tauri"
 	},
 	"dependencies": {
-		"@apollo/client": "3.9.0",
+		"@apollo/client": "3.9.1",
 		"@apollo/datasource-rest": "6.2.2",
 		"@apollo/server": "4.10.0",
 		"@as-integrations/next": "3.0.0",
