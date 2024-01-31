@@ -18,7 +18,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
     "husky": "9.0.7",
-    "turbo": "1.12.0"
+    "turbo": "1.12.1"
   },
   "resolutions": {
     "**/graphql": "16.8.1",
