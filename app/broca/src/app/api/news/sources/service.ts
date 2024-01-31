@@ -1,11 +1,11 @@
 import { getPrismaClient } from '@broca/common/prisma/prisma.client';
 import {
-  Prisma,
-  PrismaClient,
   NewsSource,
   NewsSourceCategory,
   NewsSourceCountry,
   NewsSourceLanguage,
+  Prisma,
+  PrismaClient,
 } from '@prisma/client';
 
 export const getNewsSources = async ({

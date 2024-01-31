@@ -628,6 +628,52 @@
         }
       }
     },
+    "University": {
+      "type": "object",
+      "properties": {
+        "rank": {
+          "type": "integer"
+        },
+        "university": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": ""
+        },
+        "country": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Country"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
     "LicensePlate": {
       "type": "object",
       "properties": {
@@ -793,47 +839,6 @@
             "null"
           ],
           "format": "date-time"
-        }
-      }
-    },
-    "NewsSource": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string",
-          "default": ""
-        },
-        "description": {
-          "type": "string",
-          "default": ""
-        },
-        "url": {
-          "type": "string",
-          "default": ""
-        },
-        "category": {
-          "type": "string",
-          "default": "GENERAL",
-          "enum": [
-            "BUSINESS",
-            "ENTERTAINMENT",
-            "GENERAL",
-            "HEALTH",
-            "SCIENCE",
-            "SPORTS",
-            "TECHNOLOGY"
-          ]
-        },
-        "language": {
-          "type": "string",
-          "default": ""
-        },
-        "country": {
-          "type": "string",
-          "default": ""
         }
       }
     },
@@ -1326,52 +1331,6 @@
           "format": "date-time"
         }
       }
-    },
-    "University": {
-      "type": "object",
-      "properties": {
-        "rank": {
-          "type": "integer"
-        },
-        "university": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "default": ""
-        },
-        "city": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "default": ""
-        },
-        "country": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/Country"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "createdAt": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        },
-        "updatedAt": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        }
-      }
     }
   },
   "type": "object",
@@ -1409,6 +1368,9 @@
     "countriesOnOrganizations": {
       "$ref": "#/definitions/CountriesOnOrganizations"
     },
+    "university": {
+      "$ref": "#/definitions/University"
+    },
     "licensePlate": {
       "$ref": "#/definitions/LicensePlate"
     },
@@ -1420,9 +1382,6 @@
     },
     "stockHistory": {
       "$ref": "#/definitions/StockHistory"
-    },
-    "newsSource": {
-      "$ref": "#/definitions/NewsSource"
     },
     "topLevelDomain": {
       "$ref": "#/definitions/TopLevelDomain"
@@ -1444,9 +1403,6 @@
     },
     "unitedStatesCongressCommittee": {
       "$ref": "#/definitions/UnitedStatesCongressCommittee"
-    },
-    "university": {
-      "$ref": "#/definitions/University"
     }
   }
 }

@@ -1,3 +1,4 @@
+import { NEWS_API_KEY } from '@broca/common/environments/environments';
 import axios, { AxiosRequestConfig } from 'axios';
 import {
   ArticleResponse,
@@ -7,7 +8,6 @@ import {
   TopHeadlinesRequest,
 } from './news.dto';
 import { Category, Country, Language, SortBy } from './news.enums';
-import { NEWS_API_KEY } from '@broca/common/environments/environments';
 
 export const NEWS_V2_URL = 'https://newsapi.org/v2';
 

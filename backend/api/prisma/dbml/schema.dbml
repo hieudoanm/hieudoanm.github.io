@@ -165,6 +165,16 @@ Table CountriesOnOrganizations {
   }
 }
 
+Table University {
+  rank Int [pk]
+  university String [default: '']
+  city String [default: '']
+  country Country
+  countryCode String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
 Table LicensePlate {
   code String [pk]
   name String [not null]
@@ -205,16 +215,6 @@ Table StockHistory {
   indexes {
     (symbol, date) [pk]
   }
-}
-
-Table NewsSource {
-  id String [pk]
-  name String [not null, default: '']
-  description String [not null, default: '']
-  url String [not null, default: '']
-  category NewsSourceCategory [not null, default: 'GENERAL']
-  language String [not null, default: '']
-  country String [not null, default: '']
 }
 
 Table TopLevelDomain {
@@ -321,16 +321,6 @@ Table UnitedStatesCongressCommittee {
   }
 }
 
-Table University {
-  rank Int [pk]
-  university String [default: '']
-  city String [default: '']
-  country Country
-  countryCode String [default: '']
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
-}
-
 Enum DayOfWeek {
   MONDAY
   TUESDAY
@@ -354,16 +344,6 @@ Enum Market {
   HNX
   HOSE
   UPCOM
-}
-
-Enum NewsSourceCategory {
-  BUSINESS
-  ENTERTAINMENT
-  GENERAL
-  HEALTH
-  SCIENCE
-  SPORTS
-  TECHNOLOGY
 }
 
 Enum ProgrammingLanguageType {
@@ -400,6 +380,8 @@ Ref: CountriesOnOrganizations.organizationCode > Organization.code
 
 Ref: CountriesOnOrganizations.countryCode > Country.cca3
 
+Ref: University.countryCode > Country.cca3
+
 Ref: StockHistory.symbol > Stock.symbol
 
 Ref: UnitedStatesCongressMember.unitedStatesCongressCongress > UnitedStatesCongress.congress
@@ -411,5 +393,3 @@ Ref: UnitedStatesCongressMembersInCongresses.memberId > UnitedStatesCongressMemb
 Ref: UnitedStatesCongressCommittee.congressNumber > UnitedStatesCongress.congress
 
 Ref: UnitedStatesCongressCommittee.chairId > UnitedStatesCongressMember.id
-
-Ref: University.countryCode > Country.cca3

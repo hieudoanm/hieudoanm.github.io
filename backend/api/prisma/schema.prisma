@@ -2,7 +2,7 @@ datasource db {
   provider  = "postgresql"
   url       = env("POSTGRESQL_URL")
   directUrl = env("POSTGRESQL_URL")
-  schemas   = ["public", "github", "united_states", "vietnam"]
+  schemas   = ["public", "linus", "united_states", "vietnam"]
 }
 
 generator client {
@@ -235,6 +235,20 @@ model CountriesOnOrganizations {
   @@schema("public")
 }
 
+model University {
+  rank       Int     @id
+  university String? @default("")
+  city       String? @default("")
+
+  country     Country? @relation(fields: [countryCode], references: [cca3])
+  countryCode String?  @default("")
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
 // Vietnam
 
 model LicensePlate {
@@ -296,6 +310,9 @@ model StockHistory {
   @@schema("vietnam")
 }
 
+// Linus
+
+
 model TopLevelDomain {
   domain String  @id
   type   String? @default("")
@@ -303,10 +320,8 @@ model TopLevelDomain {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  @@schema("public")
+  @@schema("linus")
 }
-
-// GitHub
 
 model ProgrammingLanguage {
   language     String                  @id
@@ -320,7 +335,7 @@ model ProgrammingLanguage {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  @@schema("github")
+  @@schema("linus")
 }
 
 enum ProgrammingLanguageType {
@@ -329,7 +344,7 @@ enum ProgrammingLanguageType {
   PROGRAMMING
   PROSE
 
-  @@schema("github")
+  @@schema("linus")
 }
 
 model License {
@@ -348,7 +363,7 @@ model License {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  @@schema("github")
+  @@schema("linus")
 }
 
 // United States
@@ -436,20 +451,4 @@ model UnitedStatesCongressCommittee {
 
   @@id([congressNumber, chamber, id])
   @@schema("united_states")
-}
-
-// University
-
-model University {
-  rank       Int     @id
-  university String? @default("")
-  city       String? @default("")
-
-  country     Country? @relation(fields: [countryCode], references: [cca3])
-  countryCode String?  @default("")
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@schema("public")
 }

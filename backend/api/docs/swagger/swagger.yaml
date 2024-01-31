@@ -196,19 +196,6 @@ paths:
               schema:
                 $ref: "#/components/schemas/LicensePlateDto"
       tags: *a3
-  /v1/github/languages:
-    get:
-      operationId: GitHubController_getLanguages
-      parameters: []
-      responses:
-        "200":
-          description: List of Languages
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/GitHubLanguagesResponseDto"
-      tags:
-        - github
   /v1/health:
     get:
       operationId: HealthController_getHealth
@@ -222,34 +209,22 @@ paths:
                 $ref: "#/components/schemas/HealthResponseDto"
       tags:
         - health
-  /v1/news/google:
+  /v1/linus/languages:
     get:
-      operationId: NewsController_getGoogle
+      operationId: LinusController_getLanguages
       parameters: []
       responses:
         "200":
-          description: List of Google Trends
+          description: List of Languages
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GoogleResponseDto"
+                $ref: "#/components/schemas/ProgrammingLanguagesResponseDto"
       tags: &a4
-        - news
-  /v1/news/sources:
+        - linus
+  /v1/linus/service/{service}:
     get:
-      operationId: NewsController_getSources
-      parameters: []
-      responses:
-        "200":
-          description: List of News Sources
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/NewsSourcesDto"
-      tags: *a4
-  /v1/status/{service}:
-    get:
-      operationId: StatusController_getSources
+      operationId: LinusController_getSources
       parameters:
         - name: service
           required: true
@@ -263,8 +238,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/StatusDto"
-      tags:
-        - status
+      tags: *a4
 info:
   title: hieudoanm
   description: Hieu Doan
@@ -401,10 +375,18 @@ components:
       required:
         - total
         - licensePlates
+    HealthResponseDto:
+      type: object
+      properties:
+        status:
+          type: string
+          default: ""
+      required:
+        - status
     ProgrammingLanguageDto:
       type: object
       properties: {}
-    GitHubLanguagesResponseDto:
+    ProgrammingLanguagesResponseDto:
       type: object
       properties:
         total:
@@ -417,88 +399,6 @@ components:
       required:
         - total
         - languages
-    HealthResponseDto:
-      type: object
-      properties:
-        status:
-          type: string
-          default: ""
-      required:
-        - status
-    GoogleCountryDto:
-      type: object
-      properties:
-        country:
-          type: string
-          default: 0
-        queries:
-          default: []
-          type: array
-          items:
-            type: string
-      required:
-        - country
-        - queries
-    GoogleResponseDto:
-      type: object
-      properties:
-        total:
-          type: number
-          default: 0
-        countries:
-          default: []
-          type: array
-          items:
-            $ref: "#/components/schemas/GoogleCountryDto"
-      required:
-        - total
-        - countries
-    NewsSourceDto:
-      type: object
-      properties:
-        id:
-          type: string
-          default: ""
-        name:
-          type: string
-          default: ""
-        description:
-          type: string
-          default: ""
-        url:
-          type: string
-          default: ""
-        category:
-          type: string
-          default: ""
-        language:
-          type: string
-          default: ""
-        country:
-          type: string
-          default: ""
-      required:
-        - id
-        - name
-        - description
-        - url
-        - category
-        - language
-        - country
-    NewsSourcesDto:
-      type: object
-      properties:
-        total:
-          type: number
-          default: 0
-        sources:
-          default: []
-          type: array
-          items:
-            $ref: "#/components/schemas/NewsSourceDto"
-      required:
-        - total
-        - sources
     StatusDto:
       type: object
       properties:
