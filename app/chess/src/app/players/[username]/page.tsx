@@ -79,4 +79,9 @@ const PlayerPage: NextPage<{ params: { username: string } }> = async ({
   );
 };
 
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const generateStaticParams = () => {
+  return [{ username: 'hikaru' }];
+};
+
 export default PlayerPage;

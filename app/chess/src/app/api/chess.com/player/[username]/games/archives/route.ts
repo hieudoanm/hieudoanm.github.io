@@ -12,3 +12,8 @@ export const GET = async (
   const archivesResponse = await getArchives(username);
   return NextResponse.json<ArchivesResponse>(archivesResponse, { status: 200 });
 };
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const generateStaticParams = () => {
+  return [{ username: 'hikaru' }];
+};

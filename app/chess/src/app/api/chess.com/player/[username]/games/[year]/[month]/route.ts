@@ -1,5 +1,5 @@
 import { getGamesByYearAndMonth } from '@chess/common/clients/chess.com/chess.client';
-import { Game, GamesResponse } from '@chess/common/clients/chess.com/chess.dto';
+import { GamesResponse } from '@chess/common/clients/chess.com/chess.dto';
 import { NextRequest, NextResponse } from 'next/server';
 
 type GamesParameters = {
@@ -17,4 +17,12 @@ export const GET = async (
   const month: number = Number.parseInt(monthString, 10);
   const gamesResponse = await getGamesByYearAndMonth(username, year, month);
   return NextResponse.json<GamesResponse>(gamesResponse, { status: 200 });
+};
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const generateStaticParams = () => {
+  const d: Date = new Date();
+  const year: string = d.getFullYear().toString();
+  const month: string = (d.getMonth() + 1).toString();
+  return [{ username: 'hikaru', year, month }];
 };

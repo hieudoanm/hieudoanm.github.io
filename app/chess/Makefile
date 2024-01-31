@@ -28,5 +28,8 @@ import-titles:
 tauri-dev:
 	yarn tauri dev
 
+tauri-build:
+	BUILD_ENV="desktop" yarn tauri build
+
 tauri-build-macos:
 	BUILD_ENV="desktop" yarn tauri build --target universal-apple-darwin

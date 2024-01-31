@@ -21,3 +21,8 @@ export const POST = async (
   const player: ChessPlayer = await syncPlayer(username);
   return NextResponse.json<ChessPlayer>(player, { status: 200 });
 };
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const generateStaticParams = () => {
+  return [{ username: 'hikaru' }];
+};

@@ -11,3 +11,8 @@ export const GET = async (
   const stats = await getStats(username);
   return NextResponse.json(stats);
 };
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const generateStaticParams = () => {
+  return [{ username: 'hikaru' }];
+};

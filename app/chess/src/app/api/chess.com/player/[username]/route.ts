@@ -12,3 +12,8 @@ export const GET = async (
   const player = await getPlayer(username);
   return NextResponse.json<Player>(player, { status: 200 });
 };
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const generateStaticParams = () => {
+  return [{ username: 'hikaru' }];
+};

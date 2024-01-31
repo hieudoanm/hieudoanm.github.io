@@ -12,3 +12,8 @@ export const GET = async (
   const insights: Insights = await getInsights(username);
   return NextResponse.json<Insights>(insights, { status: 200 });
 };
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const generateStaticParams = () => {
+  return [{ username: 'hikaru' }];
+};

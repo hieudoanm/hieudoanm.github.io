@@ -5,11 +5,12 @@ import { getChessGames, syncGames } from './service';
 type PlayersParameters = { params: { username: string } };
 
 const resolveQuery = (searchParameters: URLSearchParams) => {
+  const d = new Date();
   const yearString: string =
-    searchParameters.get('year') ?? new Date().getFullYear().toString();
+    searchParameters.get('year') ?? d.getFullYear().toString();
   const year: number = Number.parseInt(yearString, 10);
   const monthString: string =
-    searchParameters.get('month') ?? (new Date().getMonth() + 1).toString();
+    searchParameters.get('month') ?? (d.getMonth() + 1).toString();
   const month: number = Number.parseInt(monthString, 10);
   const limitString: string | undefined =
     searchParameters.get('limit') ?? '100';
@@ -47,4 +48,9 @@ export const POST = async (
   const { month, year } = body;
   const response = await syncGames(username, { month, year });
   return NextResponse.json<SyncedResponse>(response, { status: 200 });
+};
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const generateStaticParams = () => {
+  return [{ username: 'hikaru' }];
 };
