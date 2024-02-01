@@ -19,3 +19,12 @@ import-words-api:
 
 import-words-txt:
 	yarn ts-node ./scripts/import/words-txt
+
+tauri-dev:
+	yarn tauri dev
+
+tauri-build:
+	BUILD_ENV="static" yarn tauri build
+
+tauri-build-macos:
+	BUILD_ENV="static" yarn tauri build --target universal-apple-darwin

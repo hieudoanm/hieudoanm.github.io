@@ -3,8 +3,12 @@
 - [hieudoanm.github.io](#hieudoanmgithubio)
   - [Projects](#projects)
   - [Techstack](#techstack)
-    - [Main](#main)
-    - [Alternative](#alternative)
+    - [Main - Personal](#main---personal)
+    - [Enterprise](#enterprise)
+      - [Facebook - Meta](#facebook---meta)
+      - [AWS - Amazon](#aws---amazon)
+      - [Google - Alphabet](#google---alphabet)
+    - [Alternative - Open Source](#alternative---open-source)
 
 ## Projects
 
@@ -13,7 +17,7 @@
 
 ## Techstack
 
-### Main
+### Main - Personal
 
 | No  | Supersector    | Sector         | Runtime          | Technology                       | Maintainer             |
 | --- | -------------- | -------------- | ---------------- | -------------------------------- | ---------------------- |
@@ -21,15 +25,15 @@
 | 02  | `Development`  | IDE[^8]        | [node.js][node]  | [vscode][vscode]                 | [Microsoft][microsoft] |
 | 03  | `Development`  | PM[^13]        | [node.js][node]  | [yarn][yarn]                     |                        |
 | 04  | `Development`  | Unit Test      | [node.js][node]  | [jest][jest]                     | [Meta][meta]           |
-| 05  | `Development`  | Build          | [node.js][node]  | [turbo][turbo]                   | [Vercel][vercel]       |
-| 06  | `Development`  | Formatter      | [node.js][node]  | [biome][biome]                   |                        |
+| 05  | `Development`  | Build          | [rust][rust]     | [turbo][turbo]                   | [Vercel][vercel]       |
+| 06  | `Development`  | Formatter      | [rust][rust]     | [biome][biome]                   |                        |
 | 07  | `Development`  | Documentation  | [node.js][node]  | [docusaurus][docusaurus]         | [Meta][meta]           |
 | 08  | `Front-end`    | Language       | [node.js][node]  | [typescript][typescript]         | [Microsoft][microsoft] |
 | 09  | `Front-end`    | CSS[^15]       | [node.js][node]  | [tailwindcss][tailwindcss]       |                        |
 | 10  | `Front-end`    | Components     | [node.js][node]  | [chakra.ui][chakra-ui]           |                        |
 | 11  | `Front-end`    | Web            | [node.js][node]  | [next.js][next]                  | [Vercel][vercel]       |
-| 12  | `Front-end`    | Mobile         | [node.js][node]  | [react.native][react-native]     | [Meta][meta]           |
-| 13  | `Front-end`    | Desktop        | [node.js][node]  | [tauri][tauri]                   |                        |
+| 12  | `Front-end`    | Mobile         | [node.js][node]  | [expo][expo]                     | [Meta][meta]           |
+| 13  | `Front-end`    | Desktop        | [rust][rust]     | [tauri][tauri]                   |                        |
 | 14  | `Front-end`    | BFF[^1]        | [node.js][node]  | [graphql][graphql]               | [Meta][meta]           |
 | 15  | `Back-end`     | Framework      | [node.js][node]  | [nest.js][nest]                  |                        |
 | 16  | `Back-end`     | ORM[^2]        | [node.js][node]  | [prisma][prisma]                 |                        |
@@ -50,22 +54,42 @@
 | 31  | `DevOps`       | PaaS[^7]       |                  | [render][render]                 |                        |
 | 32  | `DevOps`       | BaaS[^10]      |                  | [supabase][supabase]             |                        |
 
-### Alternative
+### Enterprise
 
-| Supersector    | Sector     | Technology                   | Company              |
-| -------------- | ---------- | ---------------------------- | -------------------- |
-| `Development`  | Linting    | [eslint][eslint]             |                      |
-| `Development`  | Format     | [dprint][dprint]             |                      |
-| `Development`  | Format     | [prettier][prettier]         |                      |
-| `Front-end`    | Components | [mui][mui]                   | [Alphabet][alphabet] |
-| `Front-end`    | Framework  | [angular][angular]           | [Alphabet][alphabet] |
-| `Front-end`    | Framework  | [react][react]               | [Meta][meta]         |
-| `Back-end`     | Runtime    | [golang][golang]             | [Alphabet][alphabet] |
-| `Data Science` | ML         | [pytorch][pytorch]           |                      |
-| `Data Science` | ML         | [tensorflow][tensorflow]     | [Alphabet][alphabet] |
-| `DevOps`       | CI/CD      | [jenkins][jenkins]           |                      |
-| `DevOps`       | IaaS[^4]   | [aws][aws][^5]               | [Amazon][amazon]     |
-| `DevOps`       | IaaS       | [google.cloud][google-cloud] | [Alphabet][alphabet] |
+#### Facebook - [Meta][meta]
+
+| Supersector | Sector | Technology                   |
+| ----------- | ------ | ---------------------------- |
+| `Front-end` | Web    | [react][react]               |
+| `Front-end` | Mobile | [react.native][react-native] |
+
+#### AWS - [Amazon][amazon]
+
+[AWS][aws][^5] is an IaaS[^4] Provider
+
+| Supersector | Sector     | Technology           |
+| ----------- | ---------- | -------------------- |
+| `DevOps`    | Serverless | [Lambda][aws-lambda] |
+
+#### Google - [Alphabet][alphabet]
+
+| Supersector    | Sector     | Technology                   |
+| -------------- | ---------- | ---------------------------- |
+| `Front-end`    | Components | [mui][mui]                   |
+| `Front-end`    | Framework  | [angular][angular]           |
+| `Back-end`     | Language   | [golang][golang]             |
+| `Data Science` | ML         | [tensorflow][tensorflow]     |
+| `DevOps`       | IaaS       | [google.cloud][google-cloud] |
+
+### Alternative - Open Source
+
+| Supersector    | Sector    | Runtime         | Technology           |
+| -------------- | --------- | --------------- | -------------------- |
+| `Development`  | Formatter | [node.js][node] | [dprint][dprint]     |
+| `Development`  | Formatter | [node.js][node] | [prettier][prettier] |
+| `Development`  | Linting   | [node.js][node] | [eslint][eslint]     |
+| `Data Science` | ML        |                 | [pytorch][pytorch]   |
+| `DevOps`       | CI/CD     |                 | [jenkins][jenkins]   |
 
 [^1]: Back-end for Front-end
 [^2]: Object Relational Mapping
@@ -87,6 +111,7 @@
 [amazon]: https://www.amazon.com
 [angular]: https://angular.io
 [aws]: https://aws.amazon.com
+[aws-lambda]:https://aws.amazon.com/lambda/
 [biome]: https://biomejs.dev
 [chakra-ui]: https://chakra-ui.com
 [conda]: https://docs.conda.ioen/latest/
@@ -94,6 +119,7 @@
 [docusaurus]: https://docusaurus.io
 [dprint]: https://dprint.dev
 [eslint]: https://eslint.org
+[expo]: https://expo.dev
 [fastapi]: https://fastapi.tiangolo.com
 [git]: https://git-scm.com
 [github]: https://github.com
@@ -124,6 +150,7 @@
 [react]: https://react.dev
 [react-native]: https://reactnative.dev
 [render]: https://render.com
+[rust]: https://www.rust-lang.org
 [supabase]: https://supabase.com
 [tailwindcss]: https://tailwindcss.com
 [tauri]: https://tauri.app
