@@ -10,7 +10,7 @@ dev-broca:
 dev-chess:
 	yarn workspace @hieudoanm/chess dev
 
-dev-mini:
+dev-sunil:
 	yarn workspace @hieudoanm/chess dev
 
 format-api:
@@ -25,8 +25,8 @@ format-broca:
 format-chess:
 	yarn workspace @hieudoanm/chess format
 
-format-mini:
-	yarn workspace @hieudoanm/mini format
+format-sunil:
+	yarn workspace @hieudoanm/sunil format
 
 lint-api:
 	yarn workspace @hieudoanm/api lint
@@ -40,8 +40,8 @@ lint-broca:
 lint-chess:
 	yarn workspace @hieudoanm/chess lint
 
-lint-mini:
-	yarn workspace @hieudoanm/mini lint
+lint-sunil:
+	yarn workspace @hieudoanm/sunil lint
 
 test-api:
 	yarn workspace @hieudoanm/api test
@@ -55,5 +55,5 @@ test-broca:
 test-chess:
 	yarn workspace @hieudoanm/chess test
 
-test-graphql:
-	yarn workspace @hieudoanm/mini test
+test-sunil:
+	yarn workspace @hieudoanm/sunil test

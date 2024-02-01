@@ -1,135 +1,24 @@
 {
   "openapi": "3.0.0",
   "paths": {
-    "/v1/countries": {
+    "/v1/health": {
       "get": {
-        "operationId": "CountriesController_getCountries",
-        "parameters": [
-          {
-            "name": "timezone",
-            "required": false,
-            "in": "query",
-            "description": "Timezone",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "language",
-            "required": false,
-            "in": "query",
-            "description": "Language",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "currency",
-            "required": false,
-            "in": "query",
-            "description": "Currency",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "subregion",
-            "required": false,
-            "in": "query",
-            "description": "Subregion",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "region",
-            "required": false,
-            "in": "query",
-            "description": "Region",
-            "schema": {
-              "enum": [
-                "AFRICA",
-                "AMERICAS",
-                "ANTARCTIC",
-                "ASIA",
-                "EUROPE",
-                "OCEANIA"
-              ],
-              "type": "string"
-            }
-          },
-          {
-            "name": "unMember",
-            "required": false,
-            "in": "query",
-            "description": "United Nation Member",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "capital",
-            "required": false,
-            "in": "query",
-            "description": "Capital",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "name",
-            "required": false,
-            "in": "query",
-            "description": "Name",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "operationId": "HealthController_getHealth",
+        "parameters": [],
         "responses": {
           "200": {
-            "description": "List of Countries",
+            "description": "State of the Server",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountriesResponseDto"
+                  "$ref": "#/components/schemas/HealthResponseDto"
                 }
               }
             }
           }
         },
         "tags": [
-          "countries"
-        ]
-      }
-    },
-    "/v1/countries/{code}": {
-      "get": {
-        "operationId": "CountriesController_getCountry",
-        "parameters": [
-          {
-            "name": "code",
-            "required": true,
-            "in": "path",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Get Country by Code",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CountryDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "countries"
+          "health"
         ]
       }
     },
@@ -256,27 +145,6 @@
           "vietnam"
         ]
       }
-    },
-    "/v1/health": {
-      "get": {
-        "operationId": "HealthController_getHealth",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "State of the Server",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HealthResponseDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "health"
-        ]
-      }
     }
   },
   "info": {
@@ -289,44 +157,16 @@
   "servers": [],
   "components": {
     "schemas": {
-      "CountryDto": {
-        "type": "object",
-        "properties": {}
-      },
-      "CountriesResponseDto": {
+      "HealthResponseDto": {
         "type": "object",
         "properties": {
-          "total": {
-            "type": "number",
-            "default": 0
-          },
-          "regions": {
-            "default": [],
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "subregions": {
-            "default": [],
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "countries": {
-            "default": [],
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CountryDto"
-            }
+          "status": {
+            "type": "string",
+            "default": ""
           }
         },
         "required": [
-          "total",
-          "regions",
-          "subregions",
-          "countries"
+          "status"
         ]
       },
       "OrganizationDto": {
@@ -399,18 +239,6 @@
         "required": [
           "total",
           "licensePlates"
-        ]
-      },
-      "HealthResponseDto": {
-        "type": "object",
-        "properties": {
-          "status": {
-            "type": "string",
-            "default": ""
-          }
-        },
-        "required": [
-          "status"
         ]
       }
     }

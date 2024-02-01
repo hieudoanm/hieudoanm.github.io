@@ -33,7 +33,6 @@
 		"app/chess",
 		"app/sunil",
 		"backend/api",
-		"backend/jobs",
 		"frontend/mobile",
 		"frontend/web"
 	]

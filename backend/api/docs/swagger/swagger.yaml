@@ -1,90 +1,18 @@
 openapi: 3.0.0
 paths:
-  /v1/countries:
+  /v1/health:
     get:
-      operationId: CountriesController_getCountries
-      parameters:
-        - name: timezone
-          required: false
-          in: query
-          description: Timezone
-          schema:
-            type: string
-        - name: language
-          required: false
-          in: query
-          description: Language
-          schema:
-            type: string
-        - name: currency
-          required: false
-          in: query
-          description: Currency
-          schema:
-            type: string
-        - name: subregion
-          required: false
-          in: query
-          description: Subregion
-          schema:
-            type: string
-        - name: region
-          required: false
-          in: query
-          description: Region
-          schema:
-            enum:
-              - AFRICA
-              - AMERICAS
-              - ANTARCTIC
-              - ASIA
-              - EUROPE
-              - OCEANIA
-            type: string
-        - name: unMember
-          required: false
-          in: query
-          description: United Nation Member
-          schema:
-            type: boolean
-        - name: capital
-          required: false
-          in: query
-          description: Capital
-          schema:
-            type: string
-        - name: name
-          required: false
-          in: query
-          description: Name
-          schema:
-            type: string
+      operationId: HealthController_getHealth
+      parameters: []
       responses:
         "200":
-          description: List of Countries
+          description: State of the Server
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CountriesResponseDto"
-      tags: &a1
-        - countries
-  /v1/countries/{code}:
-    get:
-      operationId: CountriesController_getCountry
-      parameters:
-        - name: code
-          required: true
-          in: path
-          schema:
-            type: string
-      responses:
-        "200":
-          description: Get Country by Code
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/CountryDto"
-      tags: *a1
+                $ref: "#/components/schemas/HealthResponseDto"
+      tags:
+        - health
   /v1/organizations:
     get:
       operationId: OrganizationsController_getOrganizations
@@ -96,7 +24,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/OrganizationsResponseDto"
-      tags: &a2
+      tags: &a1
         - organizations
   /v1/organizations/{code}:
     get:
@@ -115,7 +43,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/OrganizationDto"
-      tags: *a2
+      tags: *a1
   /v1/vietnam/ethnic-groups:
     get:
       operationId: VietnamController_getEthnicGroups
@@ -127,7 +55,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/EthnicGroupsResponseDto"
-      tags: &a3
+      tags: &a2
         - vietnam
   /v1/vietnam/license-plates:
     get:
@@ -140,7 +68,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/LicensePlatesResponseDto"
-      tags: *a3
+      tags: *a2
   /v1/vietnam/license-plates/{code}:
     get:
       operationId: VietnamController_getLicensePlate
@@ -157,20 +85,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/LicensePlateDto"
-      tags: *a3
-  /v1/health:
-    get:
-      operationId: HealthController_getHealth
-      parameters: []
-      responses:
-        "200":
-          description: State of the Server
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/HealthResponseDto"
-      tags:
-        - health
+      tags: *a2
 info:
   title: hieudoanm
   description: Hieu Doan
@@ -180,35 +95,14 @@ tags: []
 servers: []
 components:
   schemas:
-    CountryDto:
-      type: object
-      properties: {}
-    CountriesResponseDto:
+    HealthResponseDto:
       type: object
       properties:
-        total:
-          type: number
-          default: 0
-        regions:
-          default: []
-          type: array
-          items:
-            type: string
-        subregions:
-          default: []
-          type: array
-          items:
-            type: string
-        countries:
-          default: []
-          type: array
-          items:
-            $ref: "#/components/schemas/CountryDto"
+        status:
+          type: string
+          default: ""
       required:
-        - total
-        - regions
-        - subregions
-        - countries
+        - status
     OrganizationDto:
       type: object
       properties: {}
@@ -260,11 +154,3 @@ components:
       required:
         - total
         - licensePlates
-    HealthResponseDto:
-      type: object
-      properties:
-        status:
-          type: string
-          default: ""
-      required:
-        - status
