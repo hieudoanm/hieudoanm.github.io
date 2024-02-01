@@ -24,8 +24,8 @@ jobs:
             working-directory: app/broca
           - name: Front-end - App - Chess
             working-directory: app/chess
-          - name: Front-end - App - Mini
-            working-directory: app/mini
+          - name: Front-end - App - Sunil
+            working-directory: app/sunil
           - name: Back-end - API
             working-directory: backend/api
           - name: Front-end - Mobile

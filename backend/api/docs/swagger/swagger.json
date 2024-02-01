@@ -133,69 +133,6 @@
         ]
       }
     },
-    "/v1/countries/currencies": {
-      "get": {
-        "operationId": "CountriesController_getCurrencies",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "List of Currencies",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CurrenciesResponseDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "countries"
-        ]
-      }
-    },
-    "/v1/currencies": {
-      "get": {
-        "operationId": "CurrenciesController_getCurrencies",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "List of Currencies",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CurrenciesResponseDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "currencies"
-        ]
-      }
-    },
-    "/v1/languages": {
-      "get": {
-        "operationId": "LanguagesController_getLanguages",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "List of Languages",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LanguagesResponseDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "languages"
-        ]
-      }
-    },
     "/v1/organizations": {
       "get": {
         "operationId": "OrganizationsController_getOrganizations",
@@ -340,57 +277,6 @@
           "health"
         ]
       }
-    },
-    "/v1/linus/languages": {
-      "get": {
-        "operationId": "LinusController_getLanguages",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "List of Languages",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProgrammingLanguagesResponseDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "linus"
-        ]
-      }
-    },
-    "/v1/linus/service/{service}": {
-      "get": {
-        "operationId": "LinusController_getSources",
-        "parameters": [
-          {
-            "name": "service",
-            "required": true,
-            "in": "path",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Service Status",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/StatusDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "linus"
-        ]
-      }
     }
   },
   "info": {
@@ -441,72 +327,6 @@
           "regions",
           "subregions",
           "countries"
-        ]
-      },
-      "CurrencyDto": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "string",
-            "default": ""
-          },
-          "name": {
-            "type": "string",
-            "default": ""
-          },
-          "symbol": {
-            "type": "string",
-            "default": ""
-          }
-        },
-        "required": [
-          "code",
-          "name",
-          "symbol"
-        ]
-      },
-      "CurrenciesResponseDto": {
-        "type": "object",
-        "properties": {
-          "total": {
-            "type": "number",
-            "default": 0
-          },
-          "currencies": {
-            "default": [],
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CurrencyDto"
-            }
-          }
-        },
-        "required": [
-          "total",
-          "currencies"
-        ]
-      },
-      "LanguageDto": {
-        "type": "object",
-        "properties": {}
-      },
-      "LanguagesResponseDto": {
-        "type": "object",
-        "properties": {
-          "total": {
-            "type": "number",
-            "default": 0
-          },
-          "languages": {
-            "default": [],
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LanguageDto"
-            }
-          }
-        },
-        "required": [
-          "total",
-          "languages"
         ]
       },
       "OrganizationDto": {
@@ -591,40 +411,6 @@
         },
         "required": [
           "status"
-        ]
-      },
-      "ProgrammingLanguageDto": {
-        "type": "object",
-        "properties": {}
-      },
-      "ProgrammingLanguagesResponseDto": {
-        "type": "object",
-        "properties": {
-          "total": {
-            "type": "number"
-          },
-          "languages": {
-            "default": [],
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProgrammingLanguageDto"
-            }
-          }
-        },
-        "required": [
-          "total",
-          "languages"
-        ]
-      },
-      "StatusDto": {
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "error"
         ]
       }
     }

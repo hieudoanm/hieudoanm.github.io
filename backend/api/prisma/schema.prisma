@@ -2,7 +2,7 @@ datasource db {
   provider  = "postgresql"
   url       = env("POSTGRESQL_URL")
   directUrl = env("POSTGRESQL_URL")
-  schemas   = ["public", "linus", "united_states", "vietnam"]
+  schemas   = ["public",  "united_states", "vietnam"]
 }
 
 generator client {
@@ -310,8 +310,6 @@ model StockHistory {
   @@schema("vietnam")
 }
 
-// Linus
-
 
 model TopLevelDomain {
   domain String  @id
@@ -320,50 +318,7 @@ model TopLevelDomain {
   createdAt DateTime? @default(now()) @db.Timestamptz()
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
-  @@schema("linus")
-}
-
-model ProgrammingLanguage {
-  language     String                  @id
-  color        String?                 @default("")
-  type         ProgrammingLanguageType @default(PROGRAMMING)
-  extensions   String[]                @default([])
-  aliases      String[]                @default([])
-  interpreters String[]                @default([])
-  filenames    String[]                @default([])
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@schema("linus")
-}
-
-enum ProgrammingLanguageType {
-  DATA
-  MARKUP
-  PROGRAMMING
-  PROSE
-
-  @@schema("linus")
-}
-
-model License {
-  id             String   @id
-  name           String?  @default("")
-  spdx           String?  @default("")
-  node           String?  @default("")
-  html           String?  @default("")
-  description    String?  @default("")
-  implementation String?  @default("")
-  body           String?  @default("")
-  permissions    String[] @default([])
-  conditions     String[] @default([])
-  limitations    String[] @default([])
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@schema("linus")
+  @@schema("public")
 }
 
 // United States

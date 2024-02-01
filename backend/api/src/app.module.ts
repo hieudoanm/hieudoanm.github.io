@@ -1,6 +1,5 @@
 import { CountriesModule } from '@hieudoanm/modules/countries/countries.module';
 import { HealthModule } from '@hieudoanm/modules/health/health.module';
-import { LinusModule } from '@hieudoanm/modules/linus/linus.module';
 import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
@@ -18,7 +17,6 @@ const rootPath: string = join(__dirname, '..', 'public');
     HttpModule,
     CountriesModule,
     HealthModule,
-    LinusModule,
   ],
 })
 export class AppModule {}

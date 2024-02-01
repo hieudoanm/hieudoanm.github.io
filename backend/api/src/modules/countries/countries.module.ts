@@ -4,8 +4,6 @@ import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
 import { CountriesController } from './countries.controller';
 import { CountriesService } from './countries.service';
-import { CurrenciesModule } from './currencies/currencies.module';
-import { LanguagesModule } from './languages/languages.module';
 import { OrganizationsModule } from './organizations/organizations.module';
 import { VietnamModule } from './vietnam/vietnam.module';
 
@@ -13,8 +11,6 @@ import { VietnamModule } from './vietnam/vietnam.module';
   imports: [
     CacheModule.register(),
     HttpModule,
-    CurrenciesModule,
-    LanguagesModule,
     OrganizationsModule,
     VietnamModule,
   ],

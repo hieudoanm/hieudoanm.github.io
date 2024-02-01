@@ -13,7 +13,6 @@ import { Region } from '@prisma/client';
 import {
   CountriesRequestQueryDto,
   CountriesResponseDto,
-  CurrenciesResponseDto,
 } from './countries.dto';
 import { CountriesService } from './countries.service';
 
@@ -105,15 +104,5 @@ export class CountriesController {
   })
   async getCountry(@Param('code') code: string): Promise<CountryDto> {
     return this.countriesService.getCountry(code);
-  }
-
-  @Get('currencies')
-  @ApiResponse({
-    status: 200,
-    type: CurrenciesResponseDto,
-    description: 'List of Currencies',
-  })
-  async getCurrencies(): Promise<CurrenciesResponseDto> {
-    return this.countriesService.getCurrencies();
   }
 }

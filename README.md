@@ -1,23 +1,24 @@
-# hieudoanm.github.io
+<div align="center">
+  <h1><a href="https://hieudoanm.github.io">hieudoanm.github.io</a></h1>
+</div>
 
-- [hieudoanm.github.io](#hieudoanmgithubio)
-  - [Projects](#projects)
-  - [Techstack](#techstack)
-    - [Main - Personal](#main---personal)
-    - [Enterprise](#enterprise)
-      - [Facebook - Meta](#facebook---meta)
-      - [AWS - Amazon](#aws---amazon)
-      - [Google - Alphabet](#google---alphabet)
-    - [Alternative - Open Source](#alternative---open-source)
+- [Projects](#projects)
+- [Techstack](#techstack)
+  - [Personal](#personal)
+  - [Enterprise](#enterprise)
+    - [Facebook - Meta](#facebook---meta)
+    - [AWS - Amazon](#aws---amazon)
+    - [Google - Alphabet](#google---alphabet)
+  - [Alternative - Open Source](#alternative---open-source)
 
 ## Projects
 
-- `broca`: Languages Detection
-- [chess.com Insights](https://chessinsights.vercel.app/)
+- `broca` - [Language Processing](https://broca.vercel.app/)
+- `chess` - [chess.com Insights](https://chessinsights.vercel.app/)
 
 ## Techstack
 
-### Main - Personal
+### Personal
 
 | No  | Supersector    | Sector         | Runtime          | Technology                       | Maintainer             |
 | --- | -------------- | -------------- | ---------------- | -------------------------------- | ---------------------- |
