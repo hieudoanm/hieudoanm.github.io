@@ -20,7 +20,7 @@
 		"prisma:push": "prisma format && prisma generate && prisma db push"
 	},
 	"dependencies": {
-		"@apollo/client": "3.9.0",
+		"@apollo/client": "3.9.1",
 		"@apollo/server": "4.10.0",
 		"@as-integrations/next": "3.0.0",
 		"@chakra-ui/next-js": "2.2.0",
