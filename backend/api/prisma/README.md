@@ -157,53 +157,6 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
-"UnitedStatesCongress" {
-    Int congress PK
-    String houseControl "nullable"
-    String senateControl "nullable"
-    String congressControl "nullable"
-    String trifectaControl "nullable"
-    DateTime startDate "nullable"
-    DateTime endDate "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
-"UnitedStatesCongressMember" {
-    String id PK
-    String firstName "nullable"
-    String middleName "nullable"
-    String lastName "nullable"
-    String suffix "nullable"
-    DateTime dateOfBirth "nullable"
-    String gender "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-    Int unitedStatesCongressCongress FK "nullable"
-}
-"UnitedStatesCongressMembersInCongresses" {
-    UnitedStatesCongressChamber chamber
-    Int congressNumber FK
-    String memberId FK
-    String title "nullable"
-    String shortTitle "nullable"
-    String party "nullable"
-    String leadershipRole "nullable"
-    Int seniority "nullable"
-    String state "nullable"
-    String district "nullable"
-    Boolean atLarge "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
-"UnitedStatesCongressCommittee" {
-    UnitedStatesCongressChamber chamber
-    Int congressNumber FK
-    String id
-    String name "nullable"
-    String chairId FK "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
 "CountryName" }o--|| "Country" : country
 "CountryName" }o--|| "Language" : language
 "City" }o--|| "Country" : country
@@ -217,249 +170,189 @@ erDiagram
 "CountriesOnOrganizations" }o--|| "Country" : country
 "University" }o--|| "Country" : country
 "StockHistory" }o--|| "Stock" : stock
-"UnitedStatesCongressMember" }o--|| "UnitedStatesCongress" : UnitedStatesCongress
-"UnitedStatesCongressMembersInCongresses" }o--|| "UnitedStatesCongress" : congress
-"UnitedStatesCongressMembersInCongresses" }o--|| "UnitedStatesCongressMember" : member
-"UnitedStatesCongressCommittee" }o--|| "UnitedStatesCongress" : congress
-"UnitedStatesCongressCommittee" }o--|| "UnitedStatesCongressMember" : chair
 ```
 
 ### `Country`
 
 **Properties**
-  - `name`: 
-  - `cca3`: 
-  - `cca2`: 
-  - `ccn3`: 
-  - `startOfWeek`: 
-  - `region`: 
-  - `subregion`: 
-  - `status`: 
-  - `flag`: 
-  - `area`: 
-  - `population`: 
-  - `independent`: 
-  - `unMember`: 
-  - `landlocked`: 
-  - `demonyms`: 
-  - `maps`: 
-  - `flags`: 
-  - `car`: 
-  - `coatOfArms`: 
-  - `postalCode`: 
-  - `timezones`: 
-  - `continents`: 
-  - `latlng`: 
-  - `tld`: 
-  - `altSpellings`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `name`:
+  - `cca3`:
+  - `cca2`:
+  - `ccn3`:
+  - `startOfWeek`:
+  - `region`:
+  - `subregion`:
+  - `status`:
+  - `flag`:
+  - `area`:
+  - `population`:
+  - `independent`:
+  - `unMember`:
+  - `landlocked`:
+  - `demonyms`:
+  - `maps`:
+  - `flags`:
+  - `car`:
+  - `coatOfArms`:
+  - `postalCode`:
+  - `timezones`:
+  - `continents`:
+  - `latlng`:
+  - `tld`:
+  - `altSpellings`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `CountryName`
 
 **Properties**
-  - `countryCode`: 
-  - `languageCode`: 
-  - `common`: 
-  - `official`: 
-  - `native`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `countryCode`:
+  - `languageCode`:
+  - `common`:
+  - `official`:
+  - `native`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `City`
 
 **Properties**
-  - `id`: 
-  - `capital`: 
-  - `city`: 
-  - `state`: 
-  - `countryCode`: 
-  - `latitude`: 
-  - `longitude`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `id`:
+  - `capital`:
+  - `city`:
+  - `state`:
+  - `countryCode`:
+  - `latitude`:
+  - `longitude`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `CallingCode`
 
 **Properties**
-  - `root`: 
-  - `suffix`: 
-  - `countryCode`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `root`:
+  - `suffix`:
+  - `countryCode`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `Currency`
 
 **Properties**
-  - `code`: 
-  - `name`: 
-  - `symbol`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `code`:
+  - `name`:
+  - `symbol`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `CurrencyHistory`
 
 **Properties**
-  - `currencyCode`: 
-  - `date`: 
-  - `rate`: 
-  - `amount`: 
-  - `base`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `currencyCode`:
+  - `date`:
+  - `rate`:
+  - `amount`:
+  - `base`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `CurrenciesInCountries`
 
 **Properties**
-  - `currencyCode`: 
-  - `countryCode`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `currencyCode`:
+  - `countryCode`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `Language`
 
 **Properties**
-  - `code`: 
-  - `name`: 
-  - `category`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `code`:
+  - `name`:
+  - `category`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `LanguagesInCountries`
 
 **Properties**
-  - `languageCode`: 
-  - `countryCode`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `languageCode`:
+  - `countryCode`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `Organization`
 
 **Properties**
-  - `code`: 
-  - `name`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `code`:
+  - `name`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `CountriesOnOrganizations`
 
 **Properties**
-  - `organizationCode`: 
-  - `countryCode`: 
-  - `accession`: 
-  - `withdrawal`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `organizationCode`:
+  - `countryCode`:
+  - `accession`:
+  - `withdrawal`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `University`
 
 **Properties**
-  - `rank`: 
-  - `university`: 
-  - `city`: 
-  - `countryCode`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `rank`:
+  - `university`:
+  - `city`:
+  - `countryCode`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `LicensePlate`
 
 **Properties**
-  - `code`: 
-  - `name`: 
-  - `group`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `code`:
+  - `name`:
+  - `group`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `EthnicGroup`
 
 **Properties**
-  - `id`: 
-  - `name`: 
-  - `group`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `id`:
+  - `name`:
+  - `group`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `Stock`
 
 **Properties**
-  - `symbol`: 
-  - `name`: 
-  - `market`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `symbol`:
+  - `name`:
+  - `market`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `StockHistory`
 
 **Properties**
-  - `symbol`: 
-  - `date`: 
-  - `open`: 
-  - `high`: 
-  - `low`: 
-  - `close`: 
-  - `volume`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `symbol`:
+  - `date`:
+  - `open`:
+  - `high`:
+  - `low`:
+  - `close`:
+  - `volume`:
+  - `createdAt`:
+  - `updatedAt`:
 
 ### `TopLevelDomain`
 
 **Properties**
-  - `domain`: 
-  - `type`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `UnitedStatesCongress`
-
-**Properties**
-  - `congress`: 
-  - `houseControl`: 
-  - `senateControl`: 
-  - `congressControl`: 
-  - `trifectaControl`: 
-  - `startDate`: 
-  - `endDate`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `UnitedStatesCongressMember`
-
-**Properties**
-  - `id`: 
-  - `firstName`: 
-  - `middleName`: 
-  - `lastName`: 
-  - `suffix`: 
-  - `dateOfBirth`: 
-  - `gender`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-  - `unitedStatesCongressCongress`: 
-
-### `UnitedStatesCongressMembersInCongresses`
-
-**Properties**
-  - `chamber`: 
-  - `congressNumber`: 
-  - `memberId`: 
-  - `title`: 
-  - `shortTitle`: 
-  - `party`: 
-  - `leadershipRole`: 
-  - `seniority`: 
-  - `state`: 
-  - `district`: 
-  - `atLarge`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `UnitedStatesCongressCommittee`
-
-**Properties**
-  - `chamber`: 
-  - `congressNumber`: 
-  - `id`: 
-  - `name`: 
-  - `chairId`: 
-  - `createdAt`: 
-  - `updatedAt`: 
+  - `domain`:
+  - `type`:
+  - `createdAt`:
+  - `updatedAt`:

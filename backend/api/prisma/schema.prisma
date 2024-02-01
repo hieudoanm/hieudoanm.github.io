@@ -2,7 +2,7 @@ datasource db {
   provider  = "postgresql"
   url       = env("POSTGRESQL_URL")
   directUrl = env("POSTGRESQL_URL")
-  schemas   = ["public",  "united_states", "vietnam"]
+  schemas   = ["public", "vietnam"]
 }
 
 generator client {
@@ -319,91 +319,4 @@ model TopLevelDomain {
   updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
 
   @@schema("public")
-}
-
-// United States
-
-model UnitedStatesCongress {
-  congress        Int       @id
-  houseControl    String?   @default("")
-  senateControl   String?   @default("")
-  congressControl String?   @default("")
-  trifectaControl String?   @default("")
-  startDate       DateTime? @db.Date()
-  endDate         DateTime? @db.Date()
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  members                                 UnitedStatesCongressMember[]
-  committees                              UnitedStatesCongressCommittee[]
-  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses[]
-
-  @@schema("united_states")
-}
-
-enum UnitedStatesCongressChamber {
-  HOUSE
-  SENATE
-
-  @@schema("united_states")
-}
-
-model UnitedStatesCongressMember {
-  id          String    @id @default("")
-  firstName   String?   @default("")
-  middleName  String?   @default("")
-  lastName    String?   @default("")
-  suffix      String?   @default("")
-  dateOfBirth DateTime? @db.Date()
-  gender      String?   @default("")
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  UnitedStatesCongressMembersInCongresses UnitedStatesCongressMembersInCongresses[]
-  committees                              UnitedStatesCongressCommittee[]
-  UnitedStatesCongress                    UnitedStatesCongress?                     @relation(fields: [unitedStatesCongressCongress], references: [congress])
-  unitedStatesCongressCongress            Int?
-
-  @@schema("united_states")
-}
-
-model UnitedStatesCongressMembersInCongresses {
-  chamber        UnitedStatesCongressChamber @default(HOUSE)
-  congress       UnitedStatesCongress        @relation(fields: [congressNumber], references: [congress])
-  congressNumber Int
-  member         UnitedStatesCongressMember  @relation(fields: [memberId], references: [id])
-  memberId       String                      @default("")
-
-  title          String?  @default("")
-  shortTitle     String?  @default("")
-  party          String?  @default("")
-  leadershipRole String?  @default("")
-  seniority      Int?     @default(0)
-  state          String?  @default("")
-  district       String?  @default("")
-  atLarge        Boolean? @default(false)
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@id([chamber, congressNumber, memberId])
-  @@schema("united_states")
-}
-
-model UnitedStatesCongressCommittee {
-  chamber        UnitedStatesCongressChamber @default(HOUSE)
-  congress       UnitedStatesCongress        @relation(fields: [congressNumber], references: [congress])
-  congressNumber Int
-  id             String                      @default("")
-  name           String?                     @default("")
-  chair          UnitedStatesCongressMember? @relation(fields: [chairId], references: [id])
-  chairId        String?                     @default("")
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@id([congressNumber, chamber, id])
-  @@schema("united_states")
 }
