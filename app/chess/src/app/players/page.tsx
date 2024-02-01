@@ -193,6 +193,6 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
 };
 
 export const dynamic =
-  BUILD_ENV === 'desktop' ? 'force-static' : 'force-dynamic';
+  BUILD_ENV === 'static' ? 'force-static' : 'force-dynamic';
 
 export default PlayersPage;

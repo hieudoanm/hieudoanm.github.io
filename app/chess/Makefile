@@ -29,7 +29,7 @@ tauri-dev:
 	yarn tauri dev
 
 tauri-build:
-	BUILD_ENV="desktop" yarn tauri build
+	BUILD_ENV="static" yarn tauri build
 
 tauri-build-macos:
-	BUILD_ENV="desktop" yarn tauri build --target universal-apple-darwin
+	BUILD_ENV="static" yarn tauri build --target universal-apple-darwin

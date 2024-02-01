@@ -14,10 +14,15 @@ const withPWA = nextPWA({
   skipWaiting: true,
 });
 
-const output = BUILD_ENV === 'desktop' ? 'export' : 'standalone';
+const output = BUILD_ENV === 'static' ? 'export' : 'standalone';
+const pageExtensions =
+  BUILD_ENV === 'static'
+    ? ['page.tsx', 'page.ts']
+    : ['page.tsx', 'page.ts', 'route.tsx', 'route.ts'];
 
 const nextConfig = withPWA({
   output,
+  pageExtensions,
   reactStrictMode: true,
   images: {
     remotePatterns: [

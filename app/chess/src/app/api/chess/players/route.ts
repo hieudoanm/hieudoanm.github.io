@@ -54,4 +54,4 @@ export const GET = async (
 };
 
 export const dynamic =
-  BUILD_ENV === 'desktop' ? 'force-static' : 'force-dynamic';
+  BUILD_ENV === 'static' ? 'force-static' : 'force-dynamic';
