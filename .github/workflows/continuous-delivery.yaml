@@ -24,8 +24,6 @@ jobs:
             working-directory: app/sunil
           - name: Back-end - API
             working-directory: backend/api
-          - name: Front-end - Mobile
-            working-directory: frontend/mobile
           - name: Front-end - Web
             working-directory: frontend/web
     name: Continuous Delivery
