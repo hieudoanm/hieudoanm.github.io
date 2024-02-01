@@ -5,5 +5,5 @@ type HealthResponse = {
 };
 
 export const GET = (): NextResponse<HealthResponse> => {
-  return NextResponse.json({ status: 'OK' }, { status: 500 });
+  return NextResponse.json({ status: 'OK' }, { status: 200 });
 };

@@ -17,5 +17,5 @@ export const GET = async (
 ): Promise<NextResponse<StatusResponse>> => {
   const service: Service = params.service;
   const { error } = await getServiceStatus(service);
-  return NextResponse.json({ service, error }, { status: 500 });
+  return NextResponse.json({ service, error }, { status: 200 });
 };
