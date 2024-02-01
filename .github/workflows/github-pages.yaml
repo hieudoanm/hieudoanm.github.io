@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     paths:
-      - frontend/web
+      - frontend/web/**
     branches:
       - master
 
@@ -30,9 +30,6 @@ jobs:
       - name: Build Production
         run: yarn build
         working-directory: frontend/web
-        env:
-          GRAPHQL_URI: 'https://hieudoanm.vercel.app/api/graphql'
-          NEXT_PUBLIC_GRAPHQL_URI: 'https://hieudoanm.vercel.app/api/graphql'
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
