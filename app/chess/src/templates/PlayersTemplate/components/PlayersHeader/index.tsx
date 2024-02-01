@@ -10,7 +10,6 @@ import {
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import names from '@chess/common/json/names.json';
 import { ChessCountry, ChessTitle } from '@prisma/client';
-import { MultiSelect } from 'chakra-multiselect';
 import { ChangeEvent } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
