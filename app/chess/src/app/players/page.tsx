@@ -1,5 +1,6 @@
 import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import { APP_NAME } from '@chess/common/constants/app.constants';
+import { BUILD_ENV } from '@chess/common/environments/environments';
 import { logger } from '@chess/common/libs/logger';
 import { TimeRange } from '@chess/common/types/time';
 import { query } from '@chess/graphql/apollo/client';
@@ -12,7 +13,6 @@ import {
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { FullChessPlayer } from '../api/chess/players/service';
-import { BUILD_ENV } from '@chess/common/environments/environments';
 
 const playersQuery = gql`
   query PlayersQuery(

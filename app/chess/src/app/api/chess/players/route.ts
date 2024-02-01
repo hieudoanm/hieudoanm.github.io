@@ -1,8 +1,8 @@
+import { BUILD_ENV } from '@chess/common/environments/environments';
 import { TimeRange } from '@chess/common/types/time';
 import { ChessTitleAbbreviation } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 import { PlayersResponse, getPlayers } from './service';
-import { BUILD_ENV } from '@chess/common/environments/environments';
 
 const resolveQuery = (searchParameters: URLSearchParams) => {
   const countryCode: string | undefined =

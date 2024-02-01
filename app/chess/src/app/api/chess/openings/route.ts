@@ -1,6 +1,6 @@
+import { BUILD_ENV } from '@chess/common/environments/environments';
 import { NextRequest, NextResponse } from 'next/server';
 import { OpeningsResponse, getOpenings } from './service';
-import { BUILD_ENV } from '@chess/common/environments/environments';
 
 const resolveQuery = (searchParameters: URLSearchParams) => {
   const eco: string | undefined = searchParameters.get('eco') ?? undefined;

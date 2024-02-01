@@ -1,7 +1,7 @@
+import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { Insights } from '@chess/common/types/chess';
 import { NextRequest, NextResponse } from 'next/server';
 import { getInsights } from './service';
-import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 
 type PlayersParameters = { params: { username: string } };
 

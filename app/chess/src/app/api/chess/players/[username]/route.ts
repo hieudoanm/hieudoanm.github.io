@@ -1,7 +1,7 @@
+import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { ChessPlayer } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 import { getPlayer, syncPlayer } from './service';
-import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 
 type PlayersParameters = { params: { username: string } };
 
