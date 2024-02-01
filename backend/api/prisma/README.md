@@ -157,32 +157,6 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
-"ProgrammingLanguage" {
-    String language PK
-    String color "nullable"
-    ProgrammingLanguageType type
-    String extensions
-    String aliases
-    String interpreters
-    String filenames
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
-"License" {
-    String id PK
-    String name "nullable"
-    String spdx "nullable"
-    String node "nullable"
-    String html "nullable"
-    String description "nullable"
-    String implementation "nullable"
-    String body "nullable"
-    String permissions
-    String conditions
-    String limitations
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
 "UnitedStatesCongress" {
     Int congress PK
     String houseControl "nullable"
@@ -432,36 +406,6 @@ erDiagram
 **Properties**
   - `domain`: 
   - `type`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `ProgrammingLanguage`
-
-**Properties**
-  - `language`: 
-  - `color`: 
-  - `type`: 
-  - `extensions`: 
-  - `aliases`: 
-  - `interpreters`: 
-  - `filenames`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `License`
-
-**Properties**
-  - `id`: 
-  - `name`: 
-  - `spdx`: 
-  - `node`: 
-  - `html`: 
-  - `description`: 
-  - `implementation`: 
-  - `body`: 
-  - `permissions`: 
-  - `conditions`: 
-  - `limitations`: 
   - `createdAt`: 
   - `updatedAt`: 
 

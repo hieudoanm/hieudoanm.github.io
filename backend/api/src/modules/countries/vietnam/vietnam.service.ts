@@ -1,4 +1,4 @@
-import { PrismaPublicClient } from '@hieudoanm/common/prisma/prisma.public';
+import { PrismaPublicClient } from '@hieudoanm/common/prisma/prisma.client';
 import { EthnicGroupDto } from '@hieudoanm/generated/prisma/dto/ethnicGroup.entity';
 import { LicensePlateDto } from '@hieudoanm/generated/prisma/dto/licensePlate.entity';
 import { Injectable, Logger } from '@nestjs/common';
