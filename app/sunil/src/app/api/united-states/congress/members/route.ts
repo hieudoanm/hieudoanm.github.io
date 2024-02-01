@@ -1,6 +1,6 @@
 import {
-  getMembers,
   Chamber,
+  getMembers,
 } from '@sunil/common/clients/propublica/congress/congress.client';
 import { NextRequest, NextResponse } from 'next/server';
 
