@@ -158,5 +158,3 @@ export const Pomodoro: React.FC = () => {
     </Box>
   );
 };
-
-export default Pomodoro;

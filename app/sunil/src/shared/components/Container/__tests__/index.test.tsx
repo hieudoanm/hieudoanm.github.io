@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Container from '..';
+import { Container } from '..';
 
 describe('Container', () => {
   test('render default', () => {

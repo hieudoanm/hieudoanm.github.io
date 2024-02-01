@@ -1,7 +1,7 @@
 'use client';
 
-import { Container } from '@sunil/common/components/Container';
 import { APP_NAME } from '@sunil/common/constants/app.constants';
+import { Container } from '@sunil/shared/components/Container';
 import Link from 'next/link';
 
 export const Navbar: React.FC = () => {
@@ -19,5 +19,3 @@ export const Navbar: React.FC = () => {
 };
 
 Navbar.displayName = 'Navbar';
-
-export default Navbar;

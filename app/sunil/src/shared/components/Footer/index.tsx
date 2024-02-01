@@ -1,5 +1,5 @@
 import { APP_NAME } from '@sunil/common/constants/app.constants';
-import Container from '../Container';
+import { Container } from '../Container';
 
 export const Footer: React.FC = () => {
   return (

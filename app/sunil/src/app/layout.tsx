@@ -1,7 +1,7 @@
-import Container from '@sunil/common/components/Container';
-import { Footer } from '@sunil/common/components/Footer';
-import { Navbar } from '@sunil/common/components/Navbar';
 import { APP_NAME } from '@sunil/common/constants/app.constants';
+import { Container } from '@sunil/shared/components/Container';
+import { Footer } from '@sunil/shared/components/Footer';
+import { Navbar } from '@sunil/shared/components/Navbar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.scss';

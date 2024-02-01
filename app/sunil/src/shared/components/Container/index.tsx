@@ -16,5 +16,3 @@ export const Container: React.FC<ContainerProperties> = ({
 };
 
 Container.displayName = 'Container';
-
-export default Container;
