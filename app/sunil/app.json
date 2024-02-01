@@ -1,0 +1,28 @@
+{
+	"expo": {
+		"name": "sunil",
+		"slug": "sunil",
+		"version": "0.0.1",
+		"orientation": "portrait",
+		"userInterfaceStyle": "light",
+		"assetBundlePatterns": ["**/*"],
+		"splash": {
+			"image": "./public/assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./public/assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			}
+		},
+		"ios": {
+			"supportsTablet": true
+		},
+		"web": {
+			"favicon": "./public/favicon.ico",
+			"bundler": "metro"
+		}
+	}
+}

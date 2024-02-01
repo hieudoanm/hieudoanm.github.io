@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 
+const { withExpo } = require('@expo/next-adapter');
 const nextPWA = require('next-pwa');
 
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
@@ -18,7 +19,10 @@ const output = BUILD_ENV === 'desktop' ? 'export' : 'standalone';
 
 const nextConfig = withPWA({
   output,
+  swcMinify: true,
   reactStrictMode: true,
+  experimental: { forceSwcTransforms: true },
+  transpilePackages: ['expo', 'react-native'],
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(graphql|gql)/,
@@ -30,4 +34,4 @@ const nextConfig = withPWA({
   },
 });
 
-module.exports = nextConfig;
+module.exports = withExpo(nextConfig);
