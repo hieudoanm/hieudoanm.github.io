@@ -30,6 +30,9 @@ jobs:
       - name: Build Production
         run: yarn build
         working-directory: frontend/web
+      - name: Disable Jekyll
+        run: touch .nojekyll
+        working-directory: frontend/web/out
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
