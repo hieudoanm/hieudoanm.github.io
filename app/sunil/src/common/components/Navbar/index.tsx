@@ -1,7 +1,7 @@
 'use client';
 
-import { APP_NAME } from '@sunil/common/constants/app.constants';
 import { Container } from '@sunil/common/components/Container';
+import { APP_NAME } from '@sunil/common/constants/app.constants';
 import Link from 'next/link';
 
 export const Navbar: React.FC = () => {
