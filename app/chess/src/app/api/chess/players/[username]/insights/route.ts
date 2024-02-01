@@ -1,6 +1,7 @@
 import { Insights } from '@chess/common/types/chess';
 import { NextRequest, NextResponse } from 'next/server';
 import { getInsights } from './service';
+import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 
 type PlayersParameters = { params: { username: string } };
 
@@ -15,5 +16,5 @@ export const GET = async (
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const generateStaticParams = () => {
-  return [{ username: 'hikaru' }];
+  return [{ username: CHESS_USERNAME }];
 };

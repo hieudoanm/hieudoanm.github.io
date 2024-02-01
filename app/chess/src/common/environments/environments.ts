@@ -1,3 +1,4 @@
+export const BUILD_ENV: string = process.env.BUILD_ENV ?? 'web';
 export const NODE_ENV: string = process.env.NODE_ENV ?? 'development';
 // Stripe
 export const STRIPE_SECRET_KEY: string = process.env.STRIPE_SECRET_KEY ?? '';

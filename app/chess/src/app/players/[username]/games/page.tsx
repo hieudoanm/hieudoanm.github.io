@@ -74,7 +74,7 @@ const GamesPage: NextPage<{ params: { username: string } }> = async ({
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const generateStaticParams = () => {
-  return [{ username: 'hikaru' }];
+  return [{ username: CHESS_USERNAME }];
 };
 
 export default GamesPage;

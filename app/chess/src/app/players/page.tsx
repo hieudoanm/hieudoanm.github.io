@@ -12,6 +12,7 @@ import {
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { FullChessPlayer } from '../api/chess/players/service';
+import { BUILD_ENV } from '@chess/common/environments/environments';
 
 const playersQuery = gql`
   query PlayersQuery(
@@ -190,5 +191,8 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
     </>
   );
 };
+
+export const dynamic =
+  BUILD_ENV === 'desktop' ? 'force-static' : 'force-dynamic';
 
 export default PlayersPage;

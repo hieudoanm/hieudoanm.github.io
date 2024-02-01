@@ -1,5 +1,6 @@
 import { Heading } from '@chakra-ui/react';
 import { APP_NAME } from '@chess/common/constants/app.constants';
+import { BUILD_ENV } from '@chess/common/environments/environments';
 import { ChessTimeClass } from '@prisma/client';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -38,5 +39,8 @@ const RatingPage: NextPage<RatingPageProperties> = ({
     </>
   );
 };
+
+export const dynamic =
+  BUILD_ENV === 'desktop' ? 'force-static' : 'force-dynamic';
 
 export default RatingPage;
