@@ -1,10 +1,10 @@
 import {
   Card,
+  CardBody,
   CardHeader,
   Heading,
   List,
   ListItem,
-  CardBody,
 } from '@chakra-ui/react';
 import React from 'react';
 
