@@ -25,17 +25,11 @@
           "default": false
         },
         "createdAt": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "format": "date-time"
         },
         "updatedAt": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "format": "date-time"
         }
       }
@@ -87,17 +81,11 @@
           "default": 0
         },
         "createdAt": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "format": "date-time"
         },
         "updatedAt": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "format": "date-time"
         }
       }
@@ -109,24 +97,15 @@
           "type": "string"
         },
         "author": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "default": ""
         },
         "authorSlug": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "default": ""
         },
         "content": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "default": ""
         },
         "tags": {
@@ -136,17 +115,11 @@
           }
         },
         "createdAt": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "format": "date-time"
         },
         "updatedAt": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "format": "date-time"
         }
       }
@@ -179,59 +152,35 @@
           "default": ""
         },
         "name": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "default": ""
         },
         "value": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "default": ""
         },
         "valueInt": {
-          "type": [
-            "integer",
-            "null"
-          ],
+          "type": "integer",
           "default": 0
         },
         "meaningUp": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "default": ""
         },
         "meaningReverse": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "default": ""
         },
         "description": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "default": ""
         },
         "createdAt": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "format": "date-time"
         },
         "updatedAt": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "format": "date-time"
         }
       }

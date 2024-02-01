@@ -12,8 +12,8 @@ erDiagram
     String name
     Int category
     Boolean duolingo
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+    DateTime createdAt
+    DateTime updatedAt
 }
 "Word" {
     String word PK
@@ -21,30 +21,30 @@ erDiagram
     Json syllables "nullable"
     Json pronunciation "nullable"
     Float frequency "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+    DateTime createdAt
+    DateTime updatedAt
 }
 "Quote" {
     String id PK
-    String author "nullable"
-    String authorSlug "nullable"
-    String content "nullable"
+    String author
+    String authorSlug
+    String content
     String tags
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+    DateTime createdAt
+    DateTime updatedAt
 }
 "TarotCard" {
     TarotCardSuit suit "nullable"
     TarotCardType type
     String id PK
-    String name "nullable"
-    String value "nullable"
-    Int valueInt "nullable"
-    String meaningUp "nullable"
-    String meaningReverse "nullable"
-    String description "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+    String name
+    String value
+    Int valueInt
+    String meaningUp
+    String meaningReverse
+    String description
+    DateTime createdAt
+    DateTime updatedAt
 }
 "NewsSource" {
     String id PK

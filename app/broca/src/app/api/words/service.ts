@@ -29,5 +29,5 @@ export const getWords = async (
       orderBy: { word: 'asc' },
     }),
   ]);
-  return { total, words: words.map(({ word }: Word) => word) };
+  return { total, words: words.map(({ word }: { word: string }) => word) };
 };

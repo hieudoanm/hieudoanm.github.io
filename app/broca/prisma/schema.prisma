@@ -31,8 +31,8 @@ model Language {
   category Int     @default(0) @db.SmallInt
   duolingo Boolean @default(false) @db.Boolean
 
-  createdAt DateTime? @default(now()) @db.Timestamptz
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+  createdAt DateTime @default(now()) @db.Timestamptz
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz
 
   @@schema("broca")
 }
@@ -44,21 +44,21 @@ model Word {
   pronunciation Json?  @default("{}")
   frequency     Float? @default(0)
 
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
 
   @@schema("broca")
 }
 
 model Quote {
   id         String   @id
-  author     String?  @default("")
-  authorSlug String?  @default("")
-  content    String?  @default("")
+  author     String   @default("")
+  authorSlug String   @default("")
+  content    String   @default("")
   tags       String[] @default([])
 
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
 
   @@schema("broca")
 }
@@ -67,15 +67,15 @@ model TarotCard {
   suit           TarotCardSuit?
   type           TarotCardType  @default(MAJOR)
   id             String         @id @default("")
-  name           String?        @default("") @db.VarChar(255)
-  value          String?        @default("") @db.VarChar(255)
-  valueInt       Int?           @default(0)
-  meaningUp      String?        @default("") @db.Text()
-  meaningReverse String?        @default("") @db.Text()
-  description    String?        @default("") @db.Text()
+  name           String         @default("") @db.VarChar(255)
+  value          String         @default("") @db.VarChar(255)
+  valueInt       Int            @default(0)
+  meaningUp      String         @default("") @db.Text()
+  meaningReverse String         @default("") @db.Text()
+  description    String         @default("") @db.Text()
 
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
 
   @@schema("broca")
 }

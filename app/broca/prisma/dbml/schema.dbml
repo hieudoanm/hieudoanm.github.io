@@ -8,8 +8,8 @@ Table Language {
   name String [not null, default: '']
   category Int [not null, default: 0]
   duolingo Boolean [not null, default: false]
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
 }
 
 Table Word {
@@ -18,32 +18,32 @@ Table Word {
   syllables Json [default: '{}']
   pronunciation Json [default: '{}']
   frequency Float [default: 0]
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
 }
 
 Table Quote {
   id String [pk]
-  author String [default: '']
-  authorSlug String [default: '']
-  content String [default: '']
+  author String [not null, default: '']
+  authorSlug String [not null, default: '']
+  content String [not null, default: '']
   tags String[] [not null]
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
 }
 
 Table TarotCard {
   suit TarotCardSuit
   type TarotCardType [not null, default: 'MAJOR']
   id String [pk, default: '']
-  name String [default: '']
-  value String [default: '']
-  valueInt Int [default: 0]
-  meaningUp String [default: '']
-  meaningReverse String [default: '']
-  description String [default: '']
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
+  name String [not null, default: '']
+  value String [not null, default: '']
+  valueInt Int [not null, default: 0]
+  meaningUp String [not null, default: '']
+  meaningReverse String [not null, default: '']
+  description String [not null, default: '']
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
 }
 
 Table NewsSource {
