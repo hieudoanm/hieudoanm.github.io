@@ -57,7 +57,7 @@
 		"@testing-library/react": "14.2.0",
 		"@types/chroma-js": "2.4.3",
 		"@types/d3": "7.4.3",
-		"@types/jest": "29.5.11",
+		"@types/jest": "29.5.12",
 		"@types/node": "20.11.15",
 		"@types/react": "18.2.51",
 		"@types/react-dom": "18.2.18",
