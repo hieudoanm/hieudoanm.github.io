@@ -1,4 +1,4 @@
-import { HexagonPage } from '@hieudoanm/pages/animation/hexagon';
+import { HexagonPage } from '@hieudoanm/pages';
 import { render } from '@testing-library/react';
 
 describe('HexagonPage', () => {

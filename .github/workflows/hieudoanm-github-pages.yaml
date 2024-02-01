@@ -8,7 +8,7 @@ on:
       - master
 
 jobs:
-  github-pages:
+  hieudoanm:
     name: GitHub Pages
     runs-on: ubuntu-latest
     steps:
