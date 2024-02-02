@@ -1,0 +1,276 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Country {
+  name String [default: '']
+  cca3 String [pk, default: '']
+  cca2 String [unique, default: '']
+  ccn3 String [unique, default: '']
+  startOfWeek DayOfWeek [default: 'MONDAY']
+  region Region [default: 'ANTARCTIC']
+  subregion String [default: '']
+  status String [default: '']
+  flag String [default: '']
+  area Float [default: 0]
+  population Int [default: 0]
+  independent Boolean [default: false]
+  unMember Boolean [default: false]
+  landlocked Boolean [default: false]
+  demonyms Json [default: '{}']
+  maps Json [default: '{}']
+  flags Json [default: '{}']
+  car Json [default: '{}']
+  coatOfArms Json [default: '{}']
+  postalCode Json [default: '{}']
+  timezones String[] [not null]
+  continents String[] [not null]
+  latlng Float[] [not null]
+  tld String[] [not null]
+  altSpellings String[] [not null]
+  currencies CurrenciesInCountries [not null]
+  languages LanguagesInCountries [not null]
+  organizations CountriesOnOrganizations [not null]
+  universities University [not null]
+  names CountryName [not null]
+  cities City [not null]
+  callingCodes CallingCode [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table CountryName {
+  country Country [not null]
+  countryCode String [not null]
+  language Language [not null]
+  languageCode String [not null]
+  common String [default: '']
+  official String [default: '']
+  native Boolean [default: false]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (countryCode, languageCode) [pk]
+  }
+}
+
+Table City {
+  id Int [pk, increment]
+  capital Boolean [not null, default: false]
+  city String [not null, default: '']
+  state String [not null, default: '']
+  country Country [not null]
+  countryCode String [not null]
+  latitude Float [not null, default: 0]
+  longitude Float [not null, default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table CallingCode {
+  root String [not null, default: '']
+  suffix String [not null, default: '']
+  country Country [not null]
+  countryCode String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (root, suffix) [pk]
+  }
+}
+
+Table Currency {
+  code String [pk]
+  name String [not null]
+  symbol String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  countries CurrenciesInCountries [not null]
+  history CurrencyHistory [not null]
+}
+
+Table CurrencyHistory {
+  currency Currency [not null]
+  currencyCode String [not null]
+  date DateTime [not null]
+  rate Float [not null, default: 0]
+  amount Int [not null, default: 1]
+  base String [not null, default: 'EUR']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (currencyCode, date) [pk]
+  }
+}
+
+Table CurrenciesInCountries {
+  currency Currency [not null]
+  currencyCode String [not null]
+  country Country [not null]
+  countryCode String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (currencyCode, countryCode) [pk]
+  }
+}
+
+Table Language {
+  code String [pk]
+  name String [not null]
+  category Int [not null, default: 0]
+  countries LanguagesInCountries [not null]
+  countryNames CountryName [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table LanguagesInCountries {
+  language Language [not null]
+  languageCode String [not null]
+  country Country [not null]
+  countryCode String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (languageCode, countryCode) [pk]
+  }
+}
+
+Table Organization {
+  code String [pk]
+  name String [default: '']
+  countries CountriesOnOrganizations [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table CountriesOnOrganizations {
+  organization Organization [not null]
+  organizationCode String [not null]
+  country Country [not null]
+  countryCode String [not null]
+  accession DateTime
+  withdrawal DateTime
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (organizationCode, countryCode) [pk]
+  }
+}
+
+Table University {
+  rank Int [pk]
+  university String [default: '']
+  city String [default: '']
+  country Country
+  countryCode String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table LicensePlate {
+  code String [pk]
+  name String [not null]
+  group String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table EthnicGroup {
+  id Int [pk, increment]
+  name String [not null, default: '']
+  group String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table Stock {
+  symbol String [pk, default: '']
+  name String [not null, default: '']
+  market Market [not null, default: 'HOSE']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  history StockHistory [not null]
+}
+
+Table StockHistory {
+  stock Stock
+  symbol String [not null]
+  date DateTime [default: `now()`, not null]
+  open Float [default: 0]
+  high Float [default: 0]
+  low Float [default: 0]
+  close Float [default: 0]
+  volume Float [default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (symbol, date) [pk]
+  }
+}
+
+Table TopLevelDomain {
+  domain String [pk]
+  type String [default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Enum DayOfWeek {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+Enum Region {
+  AFRICA
+  AMERICAS
+  ANTARCTIC
+  ASIA
+  EUROPE
+  OCEANIA
+}
+
+Enum Market {
+  HNX
+  HOSE
+  UPCOM
+}
+
+Ref: CountryName.countryCode > Country.cca3
+
+Ref: CountryName.languageCode > Language.code
+
+Ref: City.countryCode > Country.cca3
+
+Ref: CallingCode.countryCode > Country.cca3
+
+Ref: CurrencyHistory.currencyCode > Currency.code
+
+Ref: CurrenciesInCountries.currencyCode > Currency.code
+
+Ref: CurrenciesInCountries.countryCode > Country.cca3
+
+Ref: LanguagesInCountries.languageCode > Language.code
+
+Ref: LanguagesInCountries.countryCode > Country.cca3
+
+Ref: CountriesOnOrganizations.organizationCode > Organization.code
+
+Ref: CountriesOnOrganizations.countryCode > Country.cca3
+
+Ref: University.countryCode > Country.cca3
+
+Ref: StockHistory.symbol > Stock.symbol

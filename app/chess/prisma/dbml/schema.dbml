@@ -1,0 +1,189 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table ChessPlayer {
+  id Int [pk]
+  username String [unique, not null]
+  name String [not null, default: '']
+  location String [not null, default: '']
+  country ChessCountry [not null]
+  countryCode String [not null, default: '']
+  avatar String [not null, default: '']
+  twitchUrl String [not null, default: '']
+  followers Int [not null, default: 0]
+  isStreamer Boolean [not null, default: false]
+  verified Boolean [not null, default: false]
+  lastOnline DateTime [default: `now()`, not null]
+  joined DateTime [default: `now()`, not null]
+  status ChessStatus [not null, default: 'basic']
+  title ChessTitleAbbreviation
+  league ChessLeague
+  archives String[] [not null]
+  stats ChessStats [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table ChessTitle {
+  abbreviation ChessTitleAbbreviation [pk]
+  title String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table ChessCountry {
+  cca2 String [unique, not null, default: '']
+  cca3 String [unique, not null, default: '']
+  name String [not null, default: '']
+  flag String [not null, default: '']
+  players ChessPlayer [not null]
+
+  indexes {
+    (cca2, cca3) [pk]
+  }
+}
+
+Table ChessStats {
+  player ChessPlayer [not null]
+  playerId Int [not null]
+  timeClass ChessTimeClass [not null, default: 'daily']
+  best Int [not null, default: 0]
+  last Int [not null, default: 0]
+  deviation Int [not null, default: 0]
+  win Int [not null, default: 0]
+  draw Int [not null, default: 0]
+  loss Int [not null, default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (playerId, timeClass) [pk]
+  }
+}
+
+Table ChessGame {
+  id String [pk]
+  url String [not null, default: '']
+  pgn String [not null, default: '']
+  timeControl String [not null, default: '']
+  timeClass ChessTimeClass [not null, default: 'daily']
+  endTime DateTime [default: `now()`, not null]
+  rated Boolean [not null, default: false]
+  tcn String [not null, default: '']
+  initialSetup String [not null, default: '']
+  rules ChessVariant [not null, default: 'chess']
+  fen String [not null, default: '']
+  whiteAccuracy Float [not null, default: 0]
+  blackAccuracy Float [not null, default: 0]
+  whiteUsername String [not null, default: '']
+  blackUsername String [not null, default: '']
+  whiteResult ChessResult [not null, default: 'checkmated']
+  blackResult ChessResult [not null, default: 'checkmated']
+  whiteRating Int [not null, default: 0]
+  blackRating Int [not null, default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table ChessOpening {
+  eco String [not null, default: '']
+  name String [not null, default: '']
+  fen String [not null, default: '']
+  pgn String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (eco, name, pgn) [pk]
+  }
+}
+
+Enum ChessStatus {
+  basic
+  premium
+  staff
+  mod
+  closed
+}
+
+Enum ChessLeague {
+  Wood
+  Stone
+  Bronze
+  Silver
+  Crystal
+  Elite
+  Champion
+  Legend
+}
+
+Enum ChessTitleAbbreviation {
+  GM
+  WGM
+  IM
+  WIM
+  FM
+  WFM
+  CM
+  WCM
+  NM
+  WNM
+  AGM
+  AIM
+  AFM
+  ACM
+}
+
+Enum ChessTimeClass {
+  daily
+  classical
+  rapid
+  blitz
+  bullet
+}
+
+Enum ChessResult {
+  win
+  fiftymove
+  agreed
+  insufficient
+  repetition
+  stalemate
+  timevsinsufficient
+  checkmated
+  resigned
+  timeout
+  abandoned
+  bughousepartnerlose
+  threecheck
+  kingofthehill
+}
+
+Enum ChessVariant {
+  bughouse
+  chess
+  chess960
+  crazyhouse
+  kingofthehill
+  oddschess
+  threecheck
+}
+
+Enum ChessPiece {
+  king
+  queen
+  rook
+  bishop
+  knight
+  pawn
+}
+
+Enum ChessSide {
+  white
+  black
+}
+
+Ref: ChessPlayer.countryCode > ChessCountry.cca2
+
+Ref: ChessStats.playerId > ChessPlayer.id

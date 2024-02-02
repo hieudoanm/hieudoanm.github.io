@@ -1,0 +1,15 @@
+.cache
+coverage
+node_modules
+
+.env
+yarn-error.log
+
+# turbo
+.turbo
+
+# macOS
+.DS_Store
+
+# expo
+.expo

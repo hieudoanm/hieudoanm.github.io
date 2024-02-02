@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChessOpponents to match snapshot 1`] = `
+<div>
+  <div
+    class="chakra-card border border-gray-200 css-2dlz7"
+  >
+    <div
+      class="chakra-card__header css-0"
+    >
+      <h1
+        class="text-xl md:text-3xl"
+      >
+        Opponents
+      </h1>
+    </div>
+    <hr
+      aria-orientation="horizontal"
+      class="chakra-divider css-1upb9tn"
+    />
+    <div
+      class="chakra-card__body css-0"
+    >
+      <div
+        class="chakra-table__container css-zipzvv"
+      >
+        <table
+          class="chakra-table css-0"
+        >
+          <thead
+            class="css-0"
+          >
+            <tr
+              class="css-0"
+            >
+              <th
+                class="css-0"
+                data-is-numeric="true"
+              >
+                No
+              </th>
+              <th
+                class="css-0"
+              >
+                Opponent
+              </th>
+              <th
+                class="css-0"
+                data-is-numeric="true"
+              >
+                <button
+                  class="cursor-pointer capitalize"
+                  type="button"
+                >
+                  Games
+                </button>
+              </th>
+              <th
+                class="css-0"
+                data-is-numeric="true"
+              >
+                <div
+                  class="flex items-center justify-end gap-2"
+                >
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    Win
+                  </button>
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    (%)
+                  </button>
+                </div>
+              </th>
+              <th
+                class="css-0"
+                data-is-numeric="true"
+              >
+                <div
+                  class="flex items-center justify-end gap-2"
+                >
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    Draw
+                  </button>
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    (%)
+                  </button>
+                </div>
+              </th>
+              <th
+                class="css-0"
+                data-is-numeric="true"
+              >
+                <div
+                  class="flex items-center justify-end gap-2"
+                >
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    Loss
+                  </button>
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    (%)
+                  </button>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="css-0"
+          />
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;

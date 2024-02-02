@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleBadge to match snapshot 1`] = `
+<div>
+  <span
+    class="chakra-badge css-1nt6cy7"
+  >
+    GM
+  </span>
+</div>
+`;
