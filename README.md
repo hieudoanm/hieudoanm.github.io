@@ -29,6 +29,14 @@
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/pytorch.svg" title="PyTorch" alt="PyTorch" width="32px" height="32px" />
 </div>
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/github.svg" title="GitHub" alt="GitHub" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/docker.svg" title="Docker" alt="Docker" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/terraform.svg" title="Terraform" alt="Terraform" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/vault.svg" title="Vault" alt="Vault" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/vercel.svg" title="Vercel" alt="Vercel" width="32px" height="32px" />
+</div>
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
