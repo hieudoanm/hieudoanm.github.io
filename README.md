@@ -20,6 +20,15 @@
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/prisma.svg" title="Prisma" alt="Prisma" width="32px" height="32px" />
 </div>
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/python.svg" title="Python" alt="Python" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/jupyter.svg" title="Jupyter" alt="Jupyter" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/pandas.svg" title="Pandas" alt="Pandas" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/numpy.svg" title="NumPy" alt="NumPy" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/tensorflow.svg" title="Tensorflow" alt="Tensorflow" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/pytorch.svg" title="PyTorch" alt="PyTorch" width="32px" height="32px" />
+</div>
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
