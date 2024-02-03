@@ -1,8 +1,7 @@
-<div align="center">
-  <h1><a href="https://sunilos.vercel.app">Sunil</a></h1>
-</div>
+# Sunil
 
-- [Techstack](#techstack)
+- [Sunil](#sunil)
+  - [Techstack](#techstack)
 
 ## Techstack
 

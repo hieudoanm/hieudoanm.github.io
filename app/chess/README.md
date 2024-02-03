@@ -1,20 +1,16 @@
-<div align="center">
-  <h1><a href="https://chessinsights.vercel.app">chess.com Insights</a></h1>
-</div>
+# chess.com Insights
 
-- [Techstack](#techstack)
+- [chess.com Insights](#chesscom-insights)
+  - [Engines](#engines)
 
-## Techstack
+## Engines
 
-1. [TypeScript](https://www.typescriptlang.org)
-2. [Biome](https://biomejs.dev)
-3. [Jest](https://jestjs.io/)
-4. [TailwindCSS](https://tailwindcss.com)
-5. [NativeWind](https://www.nativewind.dev)
-6. [DaisyUI](https://daisyui.com)
-7. [Next.js](https://nextjs.org)
-8. [Expo](https://expo.dev)
-9. [Tauri](https://tauri.app)
-10. [GraphQL](https://graphql.org/)
-11. [Apollo](https://www.apollographql.com/)
-12. [Prisma](https://www.prisma.io)
+- [AlphaZero][alpha-zero]
+- [Komodo][komodo]
+- [Leela][leela]
+- [Stockfish][stockfish]
+
+[alpha-zero]: https://deepmind.google/technologies/alphazero-and-muzero
+[komodo]: https://komodochess.com
+[leela]: https://lczero.org
+[stockfish]: https://stockfishchess.org
