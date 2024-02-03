@@ -1,11 +1,15 @@
 {
 	"name": "hieudoanm.github.io",
 	"version": "0.0.1",
+	"description": "hieudoanm - GitHub Pages",
 	"main": "index.js",
 	"repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
 	"author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
 	"license": "GPL-3.0",
 	"private": true,
+	"engines": {
+		"npm": "10.2.4"
+	},
 	"scripts": {
 		"format": "yarn turbo format",
 		"build": "yarn turbo build",

@@ -7,6 +7,9 @@
 	"author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
 	"license": "GPL-3.0",
 	"private": true,
+	"engines": {
+		"npm": "10.2.4"
+	},
 	"scripts": {
 		"prebuild": "rimraf dist src/generated && (yarn docs || true) & yarn prisma generate",
 		"build": "nest build",
