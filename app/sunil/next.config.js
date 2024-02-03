@@ -16,13 +16,18 @@ const withPWA = nextPWA({
 });
 
 const output = BUILD_ENV === 'desktop' ? 'export' : 'standalone';
+const pageExtensions =
+  BUILD_ENV === 'static' ? ['page.tsx', 'page.ts'] : undefined;
+const transpilePackages =
+  BUILD_ENV === 'mobile' ? ['expo', 'react-native'] : undefined;
 
 const nextConfig = withPWA({
   output,
+  pageExtensions,
+  transpilePackages,
   swcMinify: true,
   reactStrictMode: true,
   experimental: { forceSwcTransforms: true },
-  transpilePackages: ['expo', 'react-native'],
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(graphql|gql)/,

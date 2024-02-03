@@ -15,12 +15,18 @@ const withPWA = nextPWA({
 });
 
 const output = BUILD_ENV === 'static' ? 'export' : 'standalone';
-const pageExtensions = BUILD_ENV === 'static' ? ['page.tsx', 'page.ts'] : null;
+const pageExtensions =
+  BUILD_ENV === 'static' ? ['page.tsx', 'page.ts'] : undefined;
+const transpilePackages =
+  BUILD_ENV === 'mobile' ? ['expo', 'react-native'] : undefined;
 
 const nextConfig = withPWA({
   output,
   pageExtensions,
+  transpilePackages,
+  swcMinify: true,
   reactStrictMode: true,
+  experimental: { forceSwcTransforms: true },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.chesscomfiles.com' },
