@@ -8,8 +8,7 @@
 	"license": "GPL-3.0",
 	"private": true,
 	"engines": {
-		"npm": "10.4.0",
-		"yarn": "1.22.21"
+		"npm": "10.4.0"
 	},
 	"scripts": {
 		"format": "yarn turbo format",
