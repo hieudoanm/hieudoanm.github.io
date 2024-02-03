@@ -4,7 +4,7 @@
 	"description": "hieudoanm - chess",
 	"main": "src/mobile",
 	"engines": {
-		"npm": "10.2.4"
+		"npm": "10.4.0"
 	},
 	"repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
 	"author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
