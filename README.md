@@ -22,14 +22,15 @@
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/python.svg" title="Python" alt="Python" width="32px" height="32px" />
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/conda.svg" title="Conda" alt="Conda" width="32px" height="32px" />
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/jupyter.svg" title="Jupyter" alt="Jupyter" width="32px" height="32px" />
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/pandas.svg" title="Pandas" alt="Pandas" width="32px" height="32px" />
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/numpy.svg" title="NumPy" alt="NumPy" width="32px" height="32px" />
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/tensorflow.svg" title="Tensorflow" alt="Tensorflow" width="32px" height="32px" />
-  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/pytorch.svg" title="PyTorch" alt="PyTorch" width="32px" height="32px" />
 </div>
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/pytorch.svg" title="PyTorch" alt="PyTorch" width="32px" height="32px" />
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/github.svg" title="GitHub" alt="GitHub" width="32px" height="32px" />
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/docker.svg" title="Docker" alt="Docker" width="32px" height="32px" />
   <img src="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/svg/terraform.svg" title="Terraform" alt="Terraform" width="32px" height="32px" />
