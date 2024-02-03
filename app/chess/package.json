@@ -3,13 +3,14 @@
 	"version": "0.0.1",
 	"description": "hieudoanm - chess",
 	"main": "src/mobile",
-	"engines": {
-		"npm": "10.4.0"
-	},
 	"repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
 	"author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
 	"license": "GPL-3.0",
 	"private": true,
+	"engines": {
+		"npm": "10.4.0",
+		"yarn": "1.22.21"
+	},
 	"scripts": {
 		"check": "biome check --apply ./src",
 		"format": "biome format --write ./src",
