@@ -10,15 +10,15 @@ jobs:
       fail-fast: false
       matrix:
         titles:
-          - title: GM
-          - title: IM
-          - title: FM
-          - title: CM
-          - title: NM
-          - title: WGM
-          - title: WIM
-          - title: WFM
-          - title: WCM
+          # - title: GM
+          # - title: IM
+          # - title: FM
+          # - title: CM
+          # - title: NM
+          # - title: WGM
+          # - title: WIM
+          # - title: WFM
+          # - title: WCM
           - title: WNM
     name: Sync Titled - ${{ matrix.titles.title }}
     runs-on: ubuntu-latest
