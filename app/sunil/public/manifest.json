@@ -7,6 +7,7 @@
 	"name": "Sunil",
 	"short_name": "sunil",
 	"description": "Sunil - Mini Apps",
+	"orientation": "landscape",
 	"icons": [
 		{
 			"src": "/icons/128x128.png",
