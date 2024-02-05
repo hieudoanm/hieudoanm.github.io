@@ -983,9 +983,9 @@ exports[`Calendar render default 1`] = `
           class="w-full text-center"
         >
            
-          2
+          6
           <sup>
-            nd
+            th
           </sup>
           , 
           1995

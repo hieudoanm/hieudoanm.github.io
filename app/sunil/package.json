@@ -16,6 +16,7 @@
 		"dev": "kill-port 3000 && next dev -p 3000",
 		"dev:mobile": "kill-port 8081 && expo start",
 		"dev:desktop": "kill-port 3000 && tauri dev",
+		"prestart": "kill-port 3000",
 		"start": "next start -p 3000",
 		"prebuild": "rimraf .next out",
 		"build": "next build",

@@ -2,7 +2,7 @@ import { Head, Html, Main, NextScript } from 'next/document';
 
 const Document: React.FC = () => {
   return (
-    <Html lang="en">
+    <Html lang="en" data-theme="light">
       <Head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon-512x512.png" />

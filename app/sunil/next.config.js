@@ -16,7 +16,7 @@ const withPWA = nextPWA({
   register: NODE_ENV !== 'development',
 });
 
-const output = BUILD_ENV === 'desktop' ? 'export' : 'standalone';
+const output = BUILD_ENV === 'desktop' ? 'export' : undefined;
 const pageExtensions =
   BUILD_ENV === 'static' ? ['page.tsx', 'page.ts'] : undefined;
 const transpilePackages =

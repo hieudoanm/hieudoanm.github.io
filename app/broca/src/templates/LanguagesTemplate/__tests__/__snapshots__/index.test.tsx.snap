@@ -3,140 +3,90 @@
 exports[`LanguagesTemplate to match snapshot 1`] = `
 <div>
   <div
-    class="chakra-card border border-gray-200 css-2dlz7"
+    class="card border border-gray-200"
   >
     <div
-      class="chakra-card__header border-b css-0"
+      class="border-b py-2 px-4"
     >
       <div
         class="flex items-center justify-between"
       >
-        <h2
-          class="chakra-heading text-xl css-0"
+        <h1
+          class="text-xl"
         >
           Languages (
           0
           )
-        </h2>
+        </h1>
         <div
-          class="flex items-center gap-x-1 md:gap-x-2"
+          class="flex items-center gap-x-2 md:gap-x-4"
         >
-          <label
-            class="chakra-switch css-16pgy8f"
+          <input
+            class="toggle toggle-success"
+            id="duolingo"
+            name="duolingo"
             title="duolingo"
-          >
-            <input
-              class="chakra-switch__input"
-              id="duolingo"
-              name="duolingo"
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-              type="checkbox"
-              value=""
-            />
-            <span
-              aria-hidden="true"
-              class="chakra-switch__track css-14qxnv8"
+            type="checkbox"
+          />
+          <div>
+            <select
+              class="select select-bordered"
+              id="category"
+              name="category"
             >
-              <span
-                class="chakra-switch__thumb css-0"
-              />
-            </span>
-          </label>
-          <div
-            class="chakra-form-control css-0"
-            role="group"
-          >
-            <div
-              class="chakra-select__wrapper css-42b2qy"
-            >
-              <select
-                class="chakra-select css-1ik61og"
-                id="category"
-                name="category"
+              <option>
+                Category
+              </option>
+              <option
+                value="1"
               >
-                <option
-                  value=""
-                >
-                  Category
-                </option>
-                <option
-                  value="1"
-                >
-                  1
-                </option>
-                <option
-                  value="2"
-                >
-                  2
-                </option>
-                <option
-                  value="3"
-                >
-                  3
-                </option>
-                <option
-                  value="4"
-                >
-                  4
-                </option>
-              </select>
-              <div
-                class="chakra-select__icon-wrapper css-162mkon"
+                1
+              </option>
+              <option
+                value="2"
               >
-                <svg
-                  aria-hidden="true"
-                  class="chakra-select__icon"
-                  focusable="false"
-                  role="presentation"
-                  style="width: 1em; height: 1em; color: currentColor;"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
+                2
+              </option>
+              <option
+                value="3"
+              >
+                3
+              </option>
+              <option
+                value="4"
+              >
+                4
+              </option>
+            </select>
           </div>
         </div>
       </div>
     </div>
-    <div
-      class="chakra-table__container css-zipzvv"
-    >
+    <div>
       <table
-        class="chakra-table css-0"
+        class="table"
       >
         <caption
-          class="pb-4 css-18i7bby"
+          class="py-4 border-b"
         >
           Languages (
           0
           )
         </caption>
-        <thead
-          class="css-0"
-        >
-          <tr
-            class="css-0"
-          >
-            <th
-              class="css-0"
-            >
+        <thead>
+          <tr>
+            <th>
               Code
             </th>
             <th
-              class="w-8 css-0"
-              data-is-numeric="true"
+              align="right"
+              class="w-8"
             >
               Name
             </th>
           </tr>
         </thead>
-        <tbody
-          class="css-0"
-        />
+        <tbody />
       </table>
     </div>
   </div>
