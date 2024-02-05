@@ -28,7 +28,7 @@ const importFromAPI = async (prismaClient: PrismaClient) => {
 };
 
 const importFromCSV = async (prismaClient: PrismaClient) => {
-  const languages = await csv().fromFile('./resources/languages.csv');
+  const languages = await csv().fromFile('./resources/csv/languages.csv');
 
   for (const {
     cca3 = '',

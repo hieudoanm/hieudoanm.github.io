@@ -1,22 +1,6 @@
 'use client';
 
 import { useSearchParameter } from '@broca/common/hooks/use-search-param';
-import {
-  Card,
-  CardHeader,
-  FormControl,
-  Heading,
-  Select,
-  Switch,
-  Table,
-  TableCaption,
-  TableContainer,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr,
-} from '@chakra-ui/react';
 import { Language } from '@prisma/client';
 import Link from 'next/link';
 
@@ -31,67 +15,67 @@ export const LanguagesTemplate: React.FC<LanguagesTemplateProperties> = ({
   const [duolingo, setDuolingo] = useSearchParameter('duolingo', 'false');
 
   return (
-    <Card className="border border-gray-200">
-      <CardHeader className="border-b">
+    <div className="card border border-gray-200">
+      <div className="border-b py-2 px-4">
         <div className="flex items-center justify-between">
-          <Heading className="text-xl">Languages ({languages.length})</Heading>
-          <div className="flex items-center gap-x-1 md:gap-x-2">
-            <Switch
-              size="lg"
+          <h1 className="text-xl">Languages ({languages.length})</h1>
+          <div className="flex items-center gap-x-2 md:gap-x-4">
+            <input
+              type="checkbox"
               id="duolingo"
               name="duolingo"
               title="duolingo"
-              colorScheme="teal"
+              className="toggle toggle-success"
               checked={duolingo === 'true'}
               onChange={() => setDuolingo((duolingo !== 'true').toString())}
             />
-            <FormControl>
-              <Select
-                size="sm"
+            <div>
+              <select
                 id="category"
                 name="category"
-                placeholder="Category"
+                className="select select-bordered"
                 value={category}
                 onChange={(event) => setCategory(event.target.value)}>
+                <option>Category</option>
                 <option value={1}>1</option>
                 <option value={2}>2</option>
                 <option value={3}>3</option>
                 <option value={4}>4</option>
-              </Select>
-            </FormControl>
+              </select>
+            </div>
           </div>
         </div>
-      </CardHeader>
-      <TableContainer>
-        <Table>
-          <TableCaption className="pb-4">
+      </div>
+      <div>
+        <table className="table">
+          <caption className="py-4 border-b">
             Languages ({languages.length})
-          </TableCaption>
-          <Thead>
-            <Tr>
-              <Th>Code</Th>
-              <Th isNumeric className="w-8">
+          </caption>
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th align="right" className="w-8">
                 Name
-              </Th>
-            </Tr>
-          </Thead>
-          <Tbody>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
             {languages.map(({ cca3, name }) => {
               return (
-                <Tr key={cca3}>
-                  <Td>
+                <tr key={cca3}>
+                  <td>
                     <Link href={`/languages/${encodeURIComponent(cca3)}`}>
                       {cca3}
                     </Link>
-                  </Td>
-                  <Td isNumeric>{name}</Td>
-                </Tr>
+                  </td>
+                  <td align="right">{name}</td>
+                </tr>
               );
             })}
-          </Tbody>
-        </Table>
-      </TableContainer>
-    </Card>
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 };
 
