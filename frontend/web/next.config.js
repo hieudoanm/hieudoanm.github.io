@@ -7,8 +7,9 @@ console.log(`NODE_ENV=${NODE_ENV}`);
 
 const withPWA = nextPWA({
   dest: 'public',
-  register: NODE_ENV === 'production',
   skipWaiting: true,
+  disable: NODE_ENV === 'development',
+  register: NODE_ENV !== 'development',
 });
 
 const nextConfig = withPWA({

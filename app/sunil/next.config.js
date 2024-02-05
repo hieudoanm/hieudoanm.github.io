@@ -11,8 +11,9 @@ console.log(`BUILD_ENV=${BUILD_ENV}`);
 
 const withPWA = nextPWA({
   dest: 'public',
-  register: NODE_ENV === 'production',
   skipWaiting: true,
+  disable: NODE_ENV === 'development',
+  register: NODE_ENV !== 'development',
 });
 
 const output = BUILD_ENV === 'desktop' ? 'export' : 'standalone';
