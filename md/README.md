@@ -19,6 +19,7 @@
     - [Front-end](#front-end)
       - [CSS\[^3\]](#css3)
       - [Components](#components)
+      - [Framework](#framework)
     - [DevOps](#devops)
 
 ## Big Tech
@@ -133,39 +134,33 @@
 
 ## Open Source
 
-| Supersector    | Sector           | Subsector             | Technology                          |
-| -------------- | ---------------- | --------------------- | ----------------------------------- |
-| `Development`  | Formatter        | [node.js][node]       | [DPrint][dprint]                    |
-| `Development`  | Formatter        | [node.js][node]       | [Prettier][prettier]                |
-| `Development`  | Linting          | [node.js][node]       | [ESLint][eslint]                    |
-| `Development`  | Linting          | [node.js][node]       | [Biome][biome]                      |
-| `Development`  | Package Manager  | [node.js][node]       | [Yarn][yarn]                        |
-| `Front-end`    | Web              | [node.js][node]       | [Solid.js][solid]                   |
-| `Front-end`    | Web              | [node.js][node]       | [Svelte](https://svelte.dev)        |
-| `Front-end`    | Web              | [node.js][node]       | [Vue.js](https://vuejs.org)         |
-| `Front-end`    | Web              | [node.js][node]       | [Nuxt](https://nuxtjs.org)          |
-| `Front-end`    | Web              | [node.js][node]       | [SvelteKit](https://kit.svelte.dev) |
-| `Front-end`    | Web              | [node.js][node]       | [SolidStart][solid-start]           |
-| `Front-end`    | Mobile           | [node.js][node]       | [Expo][expo]                        |
-| `Front-end`    | Mobile           | [node.js][node]       | [Ionic](https://ionicframework.com) |
-| `Front-end`    | Mobile           | [node.js][node]       | [NativeScript][nativescript]        |
-| `Front-end`    | Desktop          | [node.js][node]       | [Electron][electron]                |
-| `Front-end`    | Desktop          | [node.js][node]       | [Tauri][tauri]                      |
-| `Back-end`     | Database         | Key-Value             | [Redis](https://redis.io)           |
-| `Back-end`     | Database         | Key-Value             | [Memcached](https://memcached.org)  |
-| `Back-end`     | Database         | Document              | [MongoDB](https://www.mongodb.com)  |
-| `Back-end`     | Database         | Relational - SQL[^12] | [MySQL](https://www.mysql.com/)     |
-| `Back-end`     | Database         | Relational - SQL[^12] | [PostgreSQL][postgresql]            |
-| `Back-end`     | Framework        | [node.js][node]       | [Nest.js][nest]                     |
-| `Back-end`     | Framework        | [python][python]      | [Fastapi][fastapi]                  |
-| `Back-end`     | ORM[^10]         | [node.js][node]       | [Prisma][prisma]                    |
-| `Data Science` | Machine Learning | [python][python]      | [Pytorch][pytorch]                  |
-| `Data Science` | Machine Learning | [python][python]      | [Keras][keras]                      |
-| `Data Science` | Package Manager  | [python][python]      | [Conda][conda]                      |
-| `Data Science` | Notebook         | [python][python]      | [Jupyter][jupyter]                  |
-| `Data Science` | Analysis         | [python][python]      | [Pandas][pandas]                    |
-| `Data Science` | Visualiser       | [python][python]      | [Matplotlib][matplotlib]            |
-| `Data Science` | NLP[^9]          | [python][python]      | [Nltk][nltk]                        |
+| Supersector    | Sector           | Subsector             | Technology                         |
+| -------------- | ---------------- | --------------------- | ---------------------------------- |
+| `Development`  | Formatter        | [node.js][node]       | [DPrint][dprint]                   |
+| `Development`  | Formatter        | [node.js][node]       | [Prettier][prettier]               |
+| `Development`  | Linting          | [node.js][node]       | [ESLint][eslint]                   |
+| `Development`  | Linting          | [node.js][node]       | [Biome][biome]                     |
+| `Development`  | Package Manager  | [node.js][node]       | [Yarn][yarn]                       |
+| `Back-end`     | Database         | Key-Value             | [Redis](https://redis.io)          |
+| `Back-end`     | Database         | Key-Value             | [Memcached](https://memcached.org) |
+| `Back-end`     | Database         | Document              | [MongoDB](https://www.mongodb.com) |
+| `Back-end`     | Database         | Relational - SQL[^12] | [CockroachDB][cockroachdb]         |
+| `Back-end`     | Database         | Relational - SQL[^12] | [MySQL](https://www.mysql.com/)    |
+| `Back-end`     | Database         | Relational - SQL[^12] | [PostgreSQL][postgresql]           |
+| `Back-end`     | Database         | Relational - SQL[^12] | [SQLite](https://www.sqlite.org/)  |
+| `Back-end`     | Database         | Graph                 | [neo4j](https://neo4j.com)         |
+| `Back-end`     | Database         | Search Engine         | [elasticsearch][elasticsearch]     |
+| `Back-end`     | Database         | Multi Model           | [FaunaDB](https://fauna.com)       |
+| `Back-end`     | Framework        | [node.js][node]       | [Nest.js][nest]                    |
+| `Back-end`     | Framework        | [python][python]      | [Fastapi][fastapi]                 |
+| `Back-end`     | ORM[^10]         | [node.js][node]       | [Prisma][prisma]                   |
+| `Data Science` | Machine Learning | [python][python]      | [Pytorch][pytorch]                 |
+| `Data Science` | Machine Learning | [python][python]      | [Keras][keras]                     |
+| `Data Science` | Package Manager  | [python][python]      | [Conda][conda]                     |
+| `Data Science` | Notebook         | [python][python]      | [Jupyter][jupyter]                 |
+| `Data Science` | Analysis         | [python][python]      | [Pandas][pandas]                   |
+| `Data Science` | Visualiser       | [python][python]      | [Matplotlib][matplotlib]           |
+| `Data Science` | NLP[^9]          | [python][python]      | [Nltk][nltk]                       |
 
 ### Front-end
 
@@ -188,6 +183,22 @@
 | `Front-end` | Web    | [TailwindUI](https://tailwindui.com/) |
 | `Front-end` | Web    | [Theme UI](https://theme-ui.com/)     |
 | `Front-end` | Mobile | [Native Wind][nativewind]             |
+
+#### Framework
+
+| Supersector | Sector  | Subsector       | Technology                          |
+| ----------- | ------- | --------------- | ----------------------------------- |
+| `Front-end` | Web     | [node.js][node] | [Solid.js][solid]                   |
+| `Front-end` | Web     | [node.js][node] | [Svelte](https://svelte.dev)        |
+| `Front-end` | Web     | [node.js][node] | [Vue.js](https://vuejs.org)         |
+| `Front-end` | Web     | [node.js][node] | [Nuxt](https://nuxtjs.org)          |
+| `Front-end` | Web     | [node.js][node] | [SvelteKit](https://kit.svelte.dev) |
+| `Front-end` | Web     | [node.js][node] | [SolidStart][solid-start]           |
+| `Front-end` | Mobile  | [node.js][node] | [Expo][expo]                        |
+| `Front-end` | Mobile  | [node.js][node] | [Ionic](https://ionicframework.com) |
+| `Front-end` | Mobile  | [node.js][node] | [NativeScript][nativescript]        |
+| `Front-end` | Desktop | [node.js][node] | [Electron][electron]                |
+| `Front-end` | Desktop | [node.js][node] | [Tauri][tauri]                      |
 
 ### DevOps
 
@@ -227,12 +238,14 @@
 [aws-lambda]:https://aws.amazon.com/lambda
 [biome]: https://biomejs.dev
 [chakra-ui]: https://chakra-ui.com
+[cockroachdb]: https://www.cockroachlabs.com
 [conda]: https://docs.conda.io
 [csharp]: https://dotnet.microsoft.com/en-us/languages/csharp
 [daisyui]: https://daisyui.com
 [docker]: https://www.docker.com
 [docusaurus]: https://docusaurus.io
 [dprint]: https://dprint.dev
+[elasticsearch]: https://www.elastic.co/elasticsearch
 [electron]: https://www.electronjs.org
 [eslint]: https://eslint.org
 [expo]: https://expo.dev
