@@ -21,12 +21,14 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en" data-theme="light">
-      <body className={inter.className}>
+      <body
+        style={{ background: 'transparent' }}
+        className={`${inter.className} text-black`}>
         <Providers>
           <div className="flex h-screen flex-col">
             <Navbar />
             <div className="grow">
-              <Container className="min-h-full h-full">
+              <Container className="h-full">
                 <div className="p-4 md:p-8 h-full">{children}</div>
               </Container>
             </div>

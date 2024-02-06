@@ -48,7 +48,7 @@ export const StatusTemplate: React.FC<StatusTemplateProperties> = ({
         }).map(([service, error]) => {
           const bgColor = error ? 'bg-red-500' : 'bg-green-500';
           return (
-            <div key={service} className="border-t">
+            <div key={service} className="border-t px-8 py-4">
               <div className="flex items-center justify-between">
                 <p className="uppercase">{service}</p>
                 <div className={`h-6 w-6 rounded-full ${bgColor}`} />
