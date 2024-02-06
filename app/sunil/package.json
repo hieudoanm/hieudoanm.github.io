@@ -34,7 +34,7 @@
 		"@graphql-tools/schema": "10.0.2",
 		"daisyui": "4.6.1",
 		"expo": "50.0.6",
-		"expo-router": "3.4.6",
+		"expo-router": "3.4.7",
 		"expo-status-bar": "1.11.1",
 		"graphql": "16.8.1",
 		"graphql-tag": "2.12.6",
