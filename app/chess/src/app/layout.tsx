@@ -17,14 +17,23 @@ export const metadata: Metadata = {
   description: APP_DESCRIPTION,
 };
 
-const RootLayout = ({
+type RootLayoutProperties = {
+  children: React.ReactNode;
+};
+
+const RootLayout: React.FC<RootLayoutProperties> = ({
   children = <></>,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" data-theme="light">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body
+        style={{ background: 'transparent' }}
+        className={`${inter.className} text-black`}>
         <Providers>
           <div className="flex h-screen flex-col">
             <Navbar />

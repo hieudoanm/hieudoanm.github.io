@@ -1,4 +1,5 @@
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
+import { PrismaClient } from '@prisma/client';
 
 export type EcosResponse = {
   total: number;
@@ -6,11 +7,13 @@ export type EcosResponse = {
 };
 
 export const getECOs = async (): Promise<EcosResponse> => {
-  const ecos = await getPrismaClient().chessOpening.findMany({
+  const prismaClient: PrismaClient = getPrismaClient();
+  const ecos = await prismaClient.chessOpening.findMany({
     select: { eco: true },
     distinct: ['eco'],
     orderBy: { eco: 'asc' },
   });
   const total: number = ecos.length;
+  await prismaClient.$disconnect();
   return { total, ecos: ecos.map(({ eco }) => eco) };
 };

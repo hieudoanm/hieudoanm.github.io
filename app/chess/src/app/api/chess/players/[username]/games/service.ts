@@ -8,6 +8,7 @@ import {
   ChessTimeClass,
   ChessVariant,
   Prisma,
+  PrismaClient,
 } from '@prisma/client';
 import { GamesResponse, SyncedResponse } from './dto';
 
@@ -25,6 +26,7 @@ export const getChessGames = async (
     year = new Date().getFullYear(),
   }: { month: number; year: number; limit: number; offset: number }
 ): Promise<GamesResponse> => {
+  const prismaClient: PrismaClient = getPrismaClient();
   logger.info(`getGames month=${month} year=${year}`);
   const where: Prisma.ChessGameWhereInput = {
     OR: [
@@ -36,13 +38,13 @@ export const getChessGames = async (
       lt: new Date(year, month, 1),
     },
   };
-  const [total = 0, games = []] = await getPrismaClient().$transaction([
-    getPrismaClient().chessGame.count({
+  const [total = 0, games = []] = await prismaClient.$transaction([
+    prismaClient.chessGame.count({
       where,
       take: limit,
       skip: offset,
     }),
-    getPrismaClient().chessGame.findMany({
+    prismaClient.chessGame.findMany({
       where,
       take: limit,
       skip: offset,
@@ -50,7 +52,7 @@ export const getChessGames = async (
     }),
   ]);
 
-  await getPrismaClient().$disconnect();
+  await prismaClient.$disconnect();
 
   return { total, games };
 };
@@ -59,11 +61,12 @@ const getGame = async (
   username: string,
   gameId: string
 ): Promise<ChessGame> => {
+  const prismaClient: PrismaClient = getPrismaClient();
   const where: Prisma.ChessGameWhereInput = {
     OR: [{ whiteUsername: username }, { blackUsername: username }],
     id: gameId,
   };
-  const game: ChessGame = await getPrismaClient().chessGame.findFirstOrThrow({
+  const game: ChessGame = await prismaClient.chessGame.findFirstOrThrow({
     where,
   });
   return game;
@@ -78,15 +81,16 @@ const getGamePGN = async (
 };
 
 const upsertGames = async (games: ChessGame[]): Promise<ChessGame[]> => {
+  const prismaClient: PrismaClient = getPrismaClient();
   const upsertTransactions = games.map((game) => {
     const upsertArguments = {
       create: game,
       update: game,
       where: { id: game.id },
     };
-    return getPrismaClient().chessGame.upsert(upsertArguments);
+    return prismaClient.chessGame.upsert(upsertArguments);
   });
-  return getPrismaClient().$transaction(upsertTransactions);
+  return prismaClient.$transaction(upsertTransactions);
 };
 
 const mapGames = (chessGames: Game[]): ChessGame[] => {

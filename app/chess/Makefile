@@ -25,6 +25,10 @@ import-players:
 import-titles:
 	yarn ts-node ./scripts/import/titles
 
+prisma-generate:
+	yarn prisma format
+	yarn prisma generate
+
 tauri-dev:
 	yarn tauri dev
 

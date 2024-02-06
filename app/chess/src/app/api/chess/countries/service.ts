@@ -1,5 +1,6 @@
+import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
-import { ChessCountry } from '@prisma/client';
+import { ChessCountry, PrismaClient } from '@prisma/client';
 
 export type CountriesResponse = {
   total: number;
@@ -7,14 +8,20 @@ export type CountriesResponse = {
 };
 
 export const getCountries = async (): Promise<CountriesResponse> => {
-  const [total = 0, countries = []] = await getPrismaClient().$transaction([
-    getPrismaClient().chessCountry.count(),
-    getPrismaClient().chessCountry.findMany({
-      orderBy: { name: 'asc' },
-    }),
-  ]);
+  try {
+    const prismaClient: PrismaClient = getPrismaClient();
+    const [total = 0, countries = []] = await prismaClient.$transaction([
+      prismaClient.chessCountry.count(),
+      prismaClient.chessCountry.findMany({
+        orderBy: { name: 'asc' },
+      }),
+    ]);
 
-  await getPrismaClient().$disconnect();
+    await prismaClient.$disconnect();
 
-  return { total, countries };
+    return { total, countries };
+  } catch (error) {
+    logger.error(`getCountries error=${error}`);
+    return { total: 0, countries: [] };
+  }
 };

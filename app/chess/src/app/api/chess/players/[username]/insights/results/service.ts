@@ -8,7 +8,7 @@ import {
 } from '@chess/common/constants/time.constants';
 import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
-import { ChessResult, Prisma } from '@prisma/client';
+import { ChessResult, Prisma, PrismaClient } from '@prisma/client';
 import {
   ResultDto,
   ResultsByDayOfWeekDto,
@@ -56,38 +56,6 @@ const buildLossResultsByDaysOfWeekQuery = (username: string): Prisma.Sql => {
   return sql;
 };
 
-const getResultsByDaysOfWeek = async (
-  username: string
-): Promise<ResultsByDayOfWeekDto[]> => {
-  const winQuery = buildWinResultsByDaysOfWeekQuery(username);
-  const drawQuery = buildDrawResultsByDaysOfWeekQuery(username);
-  const lossQuery = buildLossResultsByDaysOfWeekQuery(username);
-  const [wins = [], draws = [], losses = []] =
-    await getPrismaClient().$transaction([
-      getPrismaClient().$queryRaw<{ win: number; dayOfWeekIndex: number }[]>(
-        winQuery
-      ),
-      getPrismaClient().$queryRaw<{ draw: number; dayOfWeekIndex: number }[]>(
-        drawQuery
-      ),
-      getPrismaClient().$queryRaw<{ loss: number; dayOfWeekIndex: number }[]>(
-        lossQuery
-      ),
-    ]);
-  return wins.map(({ win, dayOfWeekIndex: winDayOfWeekIndex }) => {
-    const dayOfWeek: string = Array.from(DAYS_OF_WEEK)[`${winDayOfWeekIndex}`];
-    const { draw = 0 } = draws.find(
-      ({ dayOfWeekIndex: drawDayOfWeekIndex }) =>
-        drawDayOfWeekIndex === winDayOfWeekIndex
-    ) ?? { draw: 0 };
-    const { loss = 0 } = losses.find(
-      ({ dayOfWeekIndex: lossDayOfWeekIndex }) =>
-        lossDayOfWeekIndex === winDayOfWeekIndex
-    ) ?? { draw: 0 };
-    return { dayOfWeek, win, draw, loss };
-  });
-};
-
 const buildWinResultsByTimeOfDaysQuery = (username: string): Prisma.Sql => {
   const selectClause =
     'SELECT floor(extract(hour from g."endTime") / 6.0)::int as "timeOfDayIndex", COUNT(*) as "win"';
@@ -125,35 +93,94 @@ const buildLossResultsByTimeOfDaysQuery = (username: string): Prisma.Sql => {
 
 const getResultsByTimeOfDays = async (
   username: string
-): Promise<ResultsByTimeOfDayDto[]> => {
-  const winQuery = buildWinResultsByTimeOfDaysQuery(username);
-  const drawQuery = buildDrawResultsByTimeOfDaysQuery(username);
-  const lossQuery = buildLossResultsByTimeOfDaysQuery(username);
-  const [wins = [], draws = [], losses = []] =
-    await getPrismaClient().$transaction([
-      getPrismaClient().$queryRaw<{ win: number; timeOfDayIndex: number }[]>(
-        winQuery
-      ),
-      getPrismaClient().$queryRaw<{ draw: number; timeOfDayIndex: number }[]>(
-        drawQuery
-      ),
-      getPrismaClient().$queryRaw<{ loss: number; timeOfDayIndex: number }[]>(
-        lossQuery
-      ),
-    ]);
+): Promise<{
+  win: ResultDto[];
+  draw: ResultDto[];
+  loss: ResultDto[];
+  timeOfDays: ResultsByTimeOfDayDto[];
+  daysOfWeek: ResultsByDayOfWeekDto[];
+}> => {
+  const prismaClient: PrismaClient = getPrismaClient();
+  const winResultsQuery: Prisma.Sql = buildWinResultsQuery(username);
+  const drawResultsQuery: Prisma.Sql = buildDrawResultsQuery(username);
+  const lossResultsQuery: Prisma.Sql = buildLossResultsQuery(username);
+  const winResultsByTimeOfDaysQuery: Prisma.Sql =
+    buildWinResultsByTimeOfDaysQuery(username);
+  const drawResultsByTimeOfDaysQuery: Prisma.Sql =
+    buildDrawResultsByTimeOfDaysQuery(username);
+  const lossResultsByTimeOfDaysQuery: Prisma.Sql =
+    buildLossResultsByTimeOfDaysQuery(username);
+  const winResultsByDaysOfWeekQuery =
+    buildWinResultsByDaysOfWeekQuery(username);
+  const drawResultsByDaysOfWeekQuery =
+    buildDrawResultsByDaysOfWeekQuery(username);
+  const lossResultsByDaysOfWeekQuery =
+    buildLossResultsByDaysOfWeekQuery(username);
+  const [
+    win = [],
+    draw = [],
+    loss = [],
+    winResultsByTimeOfDays = [],
+    drawResultsByTimeOfDays = [],
+    lossResultsByTimeOfDays = [],
+    winResultsByDaysOfWeek = [],
+    drawResultsByDaysOfWeek = [],
+    lossResultsByDaysOfWeek = [],
+  ] = await prismaClient.$transaction([
+    prismaClient.$queryRaw<ResultDto[]>(winResultsQuery),
+    prismaClient.$queryRaw<ResultDto[]>(drawResultsQuery),
+    prismaClient.$queryRaw<ResultDto[]>(lossResultsQuery),
+    prismaClient.$queryRaw<{ win: number; timeOfDayIndex: number }[]>(
+      winResultsByTimeOfDaysQuery
+    ),
+    prismaClient.$queryRaw<{ draw: number; timeOfDayIndex: number }[]>(
+      drawResultsByTimeOfDaysQuery
+    ),
+    prismaClient.$queryRaw<{ loss: number; timeOfDayIndex: number }[]>(
+      lossResultsByTimeOfDaysQuery
+    ),
+    prismaClient.$queryRaw<{ win: number; dayOfWeekIndex: number }[]>(
+      winResultsByDaysOfWeekQuery
+    ),
+    prismaClient.$queryRaw<{ draw: number; dayOfWeekIndex: number }[]>(
+      drawResultsByDaysOfWeekQuery
+    ),
+    prismaClient.$queryRaw<{ loss: number; dayOfWeekIndex: number }[]>(
+      lossResultsByDaysOfWeekQuery
+    ),
+  ]);
 
-  return wins.map(({ win, timeOfDayIndex: winTimeOfDayIndex }) => {
-    const timeOfDay: string = Array.from(TIME_OF_DAYS)[`${winTimeOfDayIndex}`];
-    const { draw = 0 } = draws.find(
-      ({ timeOfDayIndex: drawTimeOfDayIndex }) =>
-        drawTimeOfDayIndex === winTimeOfDayIndex
-    ) ?? { draw: 0 };
-    const { loss = 0 } = losses.find(
-      ({ timeOfDayIndex: lossTimeOfDayIndex }) =>
-        lossTimeOfDayIndex === winTimeOfDayIndex
-    ) ?? { draw: 0 };
-    return { timeOfDay, win, draw, loss };
-  });
+  const timeOfDays = winResultsByTimeOfDays.map(
+    ({ win, timeOfDayIndex: winTimeOfDayIndex }) => {
+      const timeOfDay: string = [...TIME_OF_DAYS][`${winTimeOfDayIndex}`];
+      const { draw = 0 } = drawResultsByTimeOfDays.find(
+        ({ timeOfDayIndex: drawTimeOfDayIndex }) =>
+          drawTimeOfDayIndex === winTimeOfDayIndex
+      ) ?? { draw: 0 };
+      const { loss = 0 } = lossResultsByTimeOfDays.find(
+        ({ timeOfDayIndex: lossTimeOfDayIndex }) =>
+          lossTimeOfDayIndex === winTimeOfDayIndex
+      ) ?? { draw: 0 };
+      return { timeOfDay, win, draw, loss };
+    }
+  );
+
+  const daysOfWeek = winResultsByDaysOfWeek.map(
+    ({ win, dayOfWeekIndex: winDayOfWeekIndex }) => {
+      const dayOfWeek: string = [...DAYS_OF_WEEK][`${winDayOfWeekIndex}`];
+      const { draw = 0 } = drawResultsByDaysOfWeek.find(
+        ({ dayOfWeekIndex: drawDayOfWeekIndex }) =>
+          drawDayOfWeekIndex === winDayOfWeekIndex
+      ) ?? { draw: 0 };
+      const { loss = 0 } = lossResultsByDaysOfWeek.find(
+        ({ dayOfWeekIndex: lossDayOfWeekIndex }) =>
+          lossDayOfWeekIndex === winDayOfWeekIndex
+      ) ?? { draw: 0 };
+      return { dayOfWeek, win, draw, loss };
+    }
+  );
+
+  return { win, draw, loss, timeOfDays, daysOfWeek };
 };
 
 const buildWinResultsQuery = (username: string): Prisma.Sql => {
@@ -193,17 +220,7 @@ const buildLossResultsQuery = (username: string): Prisma.Sql => {
 };
 
 export const getResults = async (username: string): Promise<ResultsDto> => {
-  const winQuery = buildWinResultsQuery(username);
-  const drawQuery = buildDrawResultsQuery(username);
-  const lossQuery = buildLossResultsQuery(username);
-  const [win = [], draw = [], loss = []] = await getPrismaClient().$transaction(
-    [
-      getPrismaClient().$queryRaw<ResultDto[]>(winQuery),
-      getPrismaClient().$queryRaw<ResultDto[]>(drawQuery),
-      getPrismaClient().$queryRaw<ResultDto[]>(lossQuery),
-    ]
-  );
-  const timeOfDays = await getResultsByTimeOfDays(username);
-  const daysOfWeek = await getResultsByDaysOfWeek(username);
+  const { win, draw, loss, timeOfDays, daysOfWeek } =
+    await getResultsByTimeOfDays(username);
   return { win, draw, loss, timeOfDays, daysOfWeek };
 };

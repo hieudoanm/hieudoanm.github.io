@@ -21,8 +21,10 @@ const RootLayout: React.FC<RootLayoutProperties> = ({
   children,
 }: Readonly<RootLayoutProperties>) => {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" data-theme="light">
+      <body
+        style={{ background: 'transparent' }}
+        className={`${inter.className} text-black`}>
         <Providers>
           <LayoutTemplate>{children}</LayoutTemplate>
         </Providers>

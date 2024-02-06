@@ -1,5 +1,6 @@
+import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
-import { ChessOpening, Prisma } from '@prisma/client';
+import { ChessOpening, Prisma, PrismaClient } from '@prisma/client';
 
 (BigInt.prototype as any).toJSON = function () {
   const int = Number.parseInt(this.toString());
@@ -22,15 +23,21 @@ export const getOpenings = async ({
   limit?: number;
   offset?: number;
 }): Promise<OpeningsResponse> => {
-  const where: Prisma.ChessOpeningWhereInput = { eco };
-  const [total = 0, openings = []] = await getPrismaClient().$transaction([
-    getPrismaClient().chessOpening.count({ where }),
-    getPrismaClient().chessOpening.findMany({
-      where,
-      take: limit,
-      skip: offset,
-    }),
-  ]);
-  await getPrismaClient().$disconnect();
-  return { total, limit, offset, openings };
+  try {
+    const prismaClient: PrismaClient = getPrismaClient();
+    const where: Prisma.ChessOpeningWhereInput = { eco };
+    const [total = 0, openings = []] = await prismaClient.$transaction([
+      prismaClient.chessOpening.count({ where }),
+      prismaClient.chessOpening.findMany({
+        where,
+        take: limit,
+        skip: offset,
+      }),
+    ]);
+    await prismaClient.$disconnect();
+    return { total, limit, offset, openings };
+  } catch (error) {
+    logger.error(`getOpenings error=${error}`);
+    return { total: 0, openings: [], limit, offset };
+  }
 };

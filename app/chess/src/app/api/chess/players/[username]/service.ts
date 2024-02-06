@@ -14,6 +14,7 @@ import {
   ChessTimeClass,
   ChessTitleAbbreviation,
   Prisma,
+  PrismaClient,
 } from '@prisma/client';
 
 (BigInt.prototype as any).toJSON = function () {
@@ -22,29 +23,32 @@ import {
 };
 
 export const getPlayer = async (username: string): Promise<ChessPlayer> => {
+  const prismaClient: PrismaClient = getPrismaClient();
   logger.info(`getPlayer username=${username}`);
   const where: Prisma.ChessPlayerWhereInput = { username };
   const include: Prisma.ChessPlayerInclude = { country: true, stats: true };
-  const player = await getPrismaClient().chessPlayer.findFirst({
+  const player = await prismaClient.chessPlayer.findFirst({
     where,
     include,
   });
   if (player !== null) {
-    await getPrismaClient().$disconnect();
+    await prismaClient.$disconnect();
     return player;
   }
   return syncPlayer(username);
 };
 
 export const syncPlayer = async (username: string): Promise<ChessPlayer> => {
+  const prismaClient: PrismaClient = getPrismaClient();
   const player = await syncProfile(username);
   const id: number = await syncStats(username, player.id);
   logger.info(`syncPlayer id=${id}`);
-  await getPrismaClient().$disconnect();
+  await prismaClient.$disconnect();
   return player;
 };
 
 const syncProfile = async (username: string): Promise<ChessPlayer> => {
+  const prismaClient: PrismaClient = getPrismaClient();
   const player: Player = await getPlayerFromAPI(username);
   const { archives = [] } = await getArchives(username);
   archives.sort((a, b) => (a < b ? 1 : -1));
@@ -54,7 +58,7 @@ const syncProfile = async (username: string): Promise<ChessPlayer> => {
     return { id: 0 } as ChessPlayer;
   }
 
-  return getPrismaClient().chessPlayer.upsert({
+  return prismaClient.chessPlayer.upsert({
     create: createUpdate,
     update: createUpdate,
     where: { id: createUpdate.id },
@@ -109,10 +113,11 @@ const mapProfile = (player: Player, archives: string[]) => {
 
 const syncStats = async (username: string, id: number): Promise<number> => {
   if (id) {
+    const prismaClient: PrismaClient = getPrismaClient();
     const stats = await getStats(username);
     const playerStats = mapStats(stats, id);
     for (const timeClassStats of playerStats) {
-      await getPrismaClient().chessStats.upsert({
+      await prismaClient.chessStats.upsert({
         create: timeClassStats,
         update: timeClassStats,
         where: {

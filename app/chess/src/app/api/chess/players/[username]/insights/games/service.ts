@@ -10,7 +10,12 @@ import {
 } from '@chess/common/constants/time.constants';
 import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
-import { ChessResult, ChessVariant, Prisma } from '@prisma/client';
+import {
+  ChessResult,
+  ChessVariant,
+  Prisma,
+  PrismaClient,
+} from '@prisma/client';
 import {
   GamesByDayOfWeekDto,
   GamesByPeriodDto,
@@ -37,6 +42,7 @@ const buildGameWhereInput = (
 };
 
 const getNumberOfGames = async (username: string) => {
+  const prismaClient: PrismaClient = getPrismaClient();
   const totalWhere: Prisma.ChessGameWhereInput = buildGameWhereInput({
     OR: [{ whiteUsername: username }, { blackUsername: username }],
   });
@@ -49,14 +55,46 @@ const getNumberOfGames = async (username: string) => {
   const lossWhere: Prisma.ChessGameWhereInput = buildGameWhereInput(
     buildGameResultsWhereInput(username, CHESS_LOSS_RESULTS)
   );
-  const [total = 0, win = 0, draw = 0, loss = 0] =
-    await getPrismaClient().$transaction([
-      getPrismaClient().chessGame.count({ where: totalWhere }),
-      getPrismaClient().chessGame.count({ where: winWhere }),
-      getPrismaClient().chessGame.count({ where: drawWhere }),
-      getPrismaClient().chessGame.count({ where: lossWhere }),
-    ]);
-  return { total, win, draw, loss };
+  const gamesByPeriodsQuery: Prisma.Sql = buildGamesByPeriodsQuery(username);
+  const gamesByTimeOfDaysQuery: Prisma.Sql =
+    buildGamesByTimeOfDaysQuery(username);
+  const gamesByDaysOfWeekQuery: Prisma.Sql = buildGamesByDaysOfWeek(username);
+  const [
+    total = 0,
+    win = 0,
+    draw = 0,
+    loss = 0,
+    periods = [],
+    timeOfDaysList = [],
+    daysOfWeekList = [],
+  ] = await prismaClient.$transaction([
+    prismaClient.chessGame.count({ where: totalWhere }),
+    prismaClient.chessGame.count({ where: winWhere }),
+    prismaClient.chessGame.count({ where: drawWhere }),
+    prismaClient.chessGame.count({ where: lossWhere }),
+    prismaClient.$queryRaw<GamesByPeriodDto[]>(gamesByPeriodsQuery),
+    prismaClient.$queryRaw<{ games: number; timeOfDayIndex: number }[]>(
+      gamesByTimeOfDaysQuery
+    ),
+    prismaClient.$queryRaw<{ games: number; dayOfWeekIndex: number }[]>(
+      gamesByDaysOfWeekQuery
+    ),
+  ]);
+
+  const timeOfDays: GamesByTimeOfDayDto[] = timeOfDaysList.map(
+    ({ games = 0, timeOfDayIndex = 0 }) => ({
+      games,
+      timeOfDay: [...TIME_OF_DAYS][`${timeOfDayIndex}`],
+    })
+  );
+  const daysOfWeek: GamesByDayOfWeekDto[] = daysOfWeekList.map(
+    ({ games = 0, dayOfWeekIndex = 0 }) => ({
+      games,
+      dayOfWeek: [...DAYS_OF_WEEK][`${dayOfWeekIndex}`],
+    })
+  );
+
+  return { total, win, draw, loss, periods, timeOfDays, daysOfWeek };
 };
 
 const buildGamesByPeriodsQuery = (username: string): Prisma.Sql => {
@@ -92,53 +130,15 @@ const buildGamesByDaysOfWeek = (username: string): Prisma.Sql => {
   return sql;
 };
 
-const getGamesByCalender = async (
-  username: string
-): Promise<{
-  periods: GamesByPeriodDto[];
-  timeOfDays: GamesByTimeOfDayDto[];
-  daysOfWeek: GamesByDayOfWeekDto[];
-}> => {
-  const gamesByPeriodsQuery: Prisma.Sql = buildGamesByPeriodsQuery(username);
-  const gamesByTimeOfDaysQuery: Prisma.Sql =
-    buildGamesByTimeOfDaysQuery(username);
-  const gamesByDaysOfWeekQuery: Prisma.Sql = buildGamesByDaysOfWeek(username);
-  const [periods = [], timeOfDaysList = [], daysOfWeekList = []] =
-    await getPrismaClient().$transaction([
-      getPrismaClient().$queryRaw<GamesByPeriodDto[]>(gamesByPeriodsQuery),
-      getPrismaClient().$queryRaw<{ games: number; timeOfDayIndex: number }[]>(
-        gamesByTimeOfDaysQuery
-      ),
-      getPrismaClient().$queryRaw<{ games: number; dayOfWeekIndex: number }[]>(
-        gamesByDaysOfWeekQuery
-      ),
-    ]);
-  const timeOfDays: GamesByTimeOfDayDto[] = timeOfDaysList.map(
-    ({ games = 0, timeOfDayIndex = 0 }) => ({
-      games,
-      timeOfDay: Array.from(TIME_OF_DAYS)[`${timeOfDayIndex}`],
-    })
-  );
-  const daysOfWeek: GamesByDayOfWeekDto[] = daysOfWeekList.map(
-    ({ games = 0, dayOfWeekIndex = 0 }) => ({
-      games,
-      dayOfWeek: Array.from(DAYS_OF_WEEK)[`${dayOfWeekIndex}`],
-    })
-  );
-  return { periods, timeOfDays, daysOfWeek };
-};
-
 export const getGames = async (username: string): Promise<GamesDto> => {
   const {
     total = 0,
     win = 0,
     draw = 0,
     loss = 0,
-  } = await getNumberOfGames(username);
-  const {
     periods = [],
     timeOfDays = [],
     daysOfWeek = [],
-  } = await getGamesByCalender(username);
+  } = await getNumberOfGames(username);
   return { total, win, draw, loss, periods, timeOfDays, daysOfWeek };
 };

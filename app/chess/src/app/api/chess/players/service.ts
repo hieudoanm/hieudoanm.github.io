@@ -12,6 +12,7 @@ import {
   ChessTimeClass,
   ChessTitleAbbreviation,
   Prisma,
+  PrismaClient,
 } from '@prisma/client';
 
 (BigInt.prototype as any).toJSON = function () {
@@ -107,6 +108,7 @@ const getStats = async ({
   timeRange?: TimeRange;
   title?: ChessTitleAbbreviation;
 }): Promise<Stats> => {
+  const prismaClient: PrismaClient = getPrismaClient();
   const options = { title, timeRange, isStreamer, countryCode };
   const averageRapidRatingQuery = buildCalculateRatingQuery('AVG', {
     ...options,
@@ -140,13 +142,13 @@ const getStats = async ({
     [{ max: maxBlitzRating = 0 }],
     [{ avg: averageBulletRating = 0 }],
     [{ max: maxBulletRating = 0 }],
-  ] = await getPrismaClient().$transaction([
-    getPrismaClient().$queryRaw<{ avg: number }[]>(averageRapidRatingQuery),
-    getPrismaClient().$queryRaw<{ max: number }[]>(maxRapidRatingQuery),
-    getPrismaClient().$queryRaw<{ avg: number }[]>(averageBlitzRatingQuery),
-    getPrismaClient().$queryRaw<{ max: number }[]>(maxBlitzRatingQuery),
-    getPrismaClient().$queryRaw<{ avg: number }[]>(averageBulletRatingQuery),
-    getPrismaClient().$queryRaw<{ max: number }[]>(maxBulletRatingQuery),
+  ] = await prismaClient.$transaction([
+    prismaClient.$queryRaw<{ avg: number }[]>(averageRapidRatingQuery),
+    prismaClient.$queryRaw<{ max: number }[]>(maxRapidRatingQuery),
+    prismaClient.$queryRaw<{ avg: number }[]>(averageBlitzRatingQuery),
+    prismaClient.$queryRaw<{ max: number }[]>(maxBlitzRatingQuery),
+    prismaClient.$queryRaw<{ avg: number }[]>(averageBulletRatingQuery),
+    prismaClient.$queryRaw<{ max: number }[]>(maxBulletRatingQuery),
   ]);
 
   return {
@@ -186,6 +188,7 @@ export const getPlayers = async (
     offset?: number;
   }
 ): Promise<PlayersResponse> => {
+  const prismaClient: PrismaClient = getPrismaClient();
   let playerWhere: Prisma.ChessPlayerWhereInput = {};
   if (countryCode) playerWhere = { ...playerWhere, countryCode };
   // eslint-disable-next-line unicorn/no-null
@@ -200,22 +203,22 @@ export const getPlayers = async (
   }
 
   const [total = 0, players = [], titles = [], countries = []] =
-    await getPrismaClient().$transaction([
-      getPrismaClient().chessPlayer.count({ where: playerWhere }),
-      getPrismaClient().chessPlayer.findMany({
+    await prismaClient.$transaction([
+      prismaClient.chessPlayer.count({ where: playerWhere }),
+      prismaClient.chessPlayer.findMany({
         take: limit,
         skip: offset,
         orderBy: { username: 'asc' },
         include: { country: true, stats: true },
         where: { ...playerWhere },
       }),
-      getPrismaClient().chessPlayer.groupBy({
+      prismaClient.chessPlayer.groupBy({
         by: ['title'],
         _count: { title: true },
         orderBy: { title: 'asc' },
         where: playerWhere,
       }),
-      getPrismaClient().chessPlayer.groupBy({
+      prismaClient.chessPlayer.groupBy({
         by: ['countryCode'],
         _count: { countryCode: true },
         orderBy: { countryCode: 'asc' },
@@ -225,7 +228,7 @@ export const getPlayers = async (
 
   const stats = await getStats({ title, timeRange, countryCode, isStreamer });
 
-  await getPrismaClient().$disconnect();
+  await prismaClient.$disconnect();
 
   return {
     total,
