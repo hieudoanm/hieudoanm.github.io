@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@chakra-ui/react';
 import { Footer } from '@chess/common/components/Footer';
 import { Navbar } from '@chess/common/components/Navbar';
 import { Providers } from './providers';
@@ -20,12 +19,12 @@ const GlobalError: React.FC<{
                 <div className="rounded border p-8 text-center">
                   <h1>Something went wrong!</h1>
                   <div>{error.message}</div>
-                  <Button
+                  <button
                     type="button"
-                    colorScheme="teal"
+                    className="btn bg-teal-500 text-white"
                     onClick={() => reset()}>
                     Reset
-                  </Button>
+                  </button>
                 </div>
               </div>
             </div>

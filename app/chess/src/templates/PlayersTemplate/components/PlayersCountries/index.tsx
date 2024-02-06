@@ -6,10 +6,7 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-  Button,
   ButtonGroup,
-  Divider,
-  Heading,
 } from '@chakra-ui/react';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import { CountryTotal, PlayersCountriesList } from '../PlayersCountriesList';
@@ -34,24 +31,24 @@ export const PlayersCountries: React.FC<PlayersCountriesProperties> = ({
   return (
     <>
       <div className="flex justify-between">
-        <Heading className="text-center text-lg md:text-left md:text-2xl">
+        <h1 className="text-center text-lg md:text-left md:text-2xl">
           Countries ({countries.length})
-        </Heading>
+        </h1>
         <ButtonGroup isAttached className="inline-flex">
-          <Button
+          <button
             type="button"
-            colorScheme="teal"
-            variant={view === 'maps' ? 'outline' : 'solid'}
+            className="bg-teal-500 text-white btn"
+            // variant={view === 'maps' ? 'outline' : 'solid'}
             onClick={() => setView(view === 'maps' ? 'list' : 'maps')}>
             List
-          </Button>
-          <Button
+          </button>
+          <button
             type="button"
-            colorScheme="teal"
-            variant={view === 'maps' ? 'solid' : 'outline'}
+            className="bg-teal-500 text-white btn"
+            // variant={view === 'maps' ? 'solid' : 'outline'}
             onClick={() => setView(view === 'maps' ? 'list' : 'maps')}>
             Maps
-          </Button>
+          </button>
         </ButtonGroup>
       </div>
       <Accordion allowToggle className="rounded border">
@@ -71,7 +68,7 @@ export const PlayersCountries: React.FC<PlayersCountriesProperties> = ({
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
-      <Divider />
+      <div className="divider" />
     </>
   );
 };

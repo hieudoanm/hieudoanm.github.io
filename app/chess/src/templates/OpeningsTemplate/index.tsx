@@ -1,13 +1,3 @@
-import {
-  Table,
-  TableContainer,
-  Tbody,
-  Td,
-  Text,
-  Th,
-  Thead,
-  Tr,
-} from '@chakra-ui/react';
 import { ChessOpening } from '@prisma/client';
 import Link from 'next/link';
 import { OpeningsHeader } from './components/OpeningsHeader';
@@ -24,45 +14,45 @@ export const OpeningsTemplate: React.FC<OpeningsTemplateProperties> = ({
   return (
     <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
       <OpeningsHeader ecos={ecos} total={openings.length} />
-      <TableContainer className="overflow-hidden rounded border border-gray-200 shadow">
-        <Table>
-          <Thead>
-            <Tr>
-              <Th className="w-4">No</Th>
-              <Th className="w-4">ECO</Th>
-              <Th>Name</Th>
-              <Th>FEN</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
+      <div className="overflow-hidden rounded border border-gray-200 shadow">
+        <table className="table">
+          <thead>
+            <tr>
+              <th className="w-4">No</th>
+              <th className="w-4">ECO</th>
+              <th>Name</th>
+              <th>FEN</th>
+            </tr>
+          </thead>
+          <tbody>
             {openings.map(
               (
                 { eco = '', name = '', fen = '' }: ChessOpening,
                 index: number
               ) => {
                 return (
-                  <Tr key={`${eco}-${name}`}>
-                    <Td>{index + 1}</Td>
-                    <Td>
+                  <tr key={`${eco}-${name}`}>
+                    <td>{index + 1}</td>
+                    <td>
                       <Link href={`/openings/${eco}`}>{eco}</Link>
-                    </Td>
-                    <Td>
-                      <Text title={name} className="w-32 truncate md:w-auto">
+                    </td>
+                    <td>
+                      <p title={name} className="w-32 truncate md:w-auto">
                         {name}
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text title={fen} className="w-32 truncate md:w-auto">
+                      </p>
+                    </td>
+                    <td>
+                      <p title={fen} className="w-32 truncate md:w-auto">
                         {fen}
-                      </Text>
-                    </Td>
-                  </Tr>
+                      </p>
+                    </td>
+                  </tr>
                 );
               }
             )}
-          </Tbody>
-        </Table>
-      </TableContainer>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

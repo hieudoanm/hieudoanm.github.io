@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Card, CardBody, Text, Tooltip } from '@chakra-ui/react';
+import { Tooltip } from '@chakra-ui/react';
 import { SVGMaps } from '@chess/common/components/Maps';
 import maps from '@chess/common/json/world.json';
 import chroma from 'chroma-js';
@@ -46,8 +46,8 @@ export const PlayersCountriesMaps: React.FC<PlayersCountriesMapsProperties> = ({
     return { id: countryCode, label: countryCode, value: total, color };
   });
   return (
-    <Card>
-      <CardBody>
+    <div className="card">
+      <div className="card-body">
         <div className="flex items-center gap-x-4 md:gap-x-8">
           <div className="grow">
             <SVGMaps
@@ -64,17 +64,16 @@ export const PlayersCountriesMaps: React.FC<PlayersCountriesMapsProperties> = ({
               const label: string = `${start} - ${end}`;
               return (
                 <Tooltip label={label} key={color} placement="left">
-                  <Box
-                    bgColor={color}
-                    className="aspect-square w-4 cursor-pointer overflow-hidden rounded text-white">
-                    <Text color={color}>{color}</Text>
-                  </Box>
+                  <div
+                    className={`aspect-square w-4 cursor-pointer overflow-hidden rounded text-white bg-[${color}]`}>
+                    <p className={`text-[${color}]`}>{color}</p>
+                  </div>
                 </Tooltip>
               );
             })}
           </div>
         </div>
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 };

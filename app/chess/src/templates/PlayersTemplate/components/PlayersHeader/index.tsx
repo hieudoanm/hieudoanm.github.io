@@ -1,12 +1,6 @@
 'use client';
 
-import {
-  Divider,
-  Heading,
-  Select,
-  Tag,
-  TagCloseButton,
-} from '@chakra-ui/react';
+import { Tag, TagCloseButton } from '@chakra-ui/react';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import names from '@chess/common/json/names.json';
 import { ChessCountry, ChessTitle } from '@prisma/client';
@@ -33,18 +27,18 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
       <header>
         <div className="grid grid-cols-1 items-center gap-2 md:grid-cols-3 md:gap-4">
           <div className="col-span-1">
-            <Heading className="text-center text-xl md:text-left md:text-3xl">
+            <h1 className="text-center text-xl md:text-left md:text-3xl">
               Titled ({total})
-            </Heading>
+            </h1>
           </div>
           <div className="col-span-2">
             <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
               <div className="col-span-1">
-                <Select
+                <select
                   aria-label="Title"
                   id="title"
                   name="title"
-                  className="shadow"
+                  className="shadow select select-bordered"
                   value={title}
                   onChange={(event: ChangeEvent<HTMLSelectElement>) => {
                     const newTitle: string = event.target.value;
@@ -56,14 +50,14 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
                       {title}
                     </option>
                   ))}
-                </Select>
+                </select>
               </div>
               <div className="col-span-1">
-                <Select
+                <select
                   aria-label="Country"
                   id="country"
                   name="country"
-                  className="shadow"
+                  className="shadow select select-bordered"
                   value={countryCode}
                   onChange={(event) => {
                     const newCountryCode: string = event.target.value;
@@ -75,24 +69,24 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
                       {flag} {name}
                     </option>
                   ))}
-                </Select>
+                </select>
               </div>
               <div className="col-span-1">
-                <Select
+                <select
                   id="timeRange"
                   name="timeRange"
-                  placeholder="Time Range"
-                  className="shadow"
+                  className="shadow select select-bordered"
                   value={timeRange}
                   onChange={(event) => {
                     const newTimeRange: string = event.target.value;
                     setTimeRange(newTimeRange);
                   }}>
+                  <option>Time Range</option>
                   <option value="week">7 Days</option>
                   <option value="month">30 Days</option>
                   <option value="quarter">90 Days</option>
                   <option value="year">1 Year</option>
-                </Select>
+                </select>
               </div>
             </div>
           </div>
@@ -100,7 +94,7 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
       </header>
       {title || countryCode || timeRange ? (
         <>
-          <Divider />
+          <div className="divider" />
           <div className="flex items-center gap-x-4">
             {title ? (
               <>
@@ -152,7 +146,7 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
       ) : (
         <></>
       )}
-      <Divider />
+      <div className="divider" />
     </>
   );
 };

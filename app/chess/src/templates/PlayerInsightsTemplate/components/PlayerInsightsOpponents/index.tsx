@@ -1,18 +1,5 @@
 'use client';
 
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Divider,
-  Table,
-  TableContainer,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr,
-} from '@chakra-ui/react';
 import { Insights } from '@chess/common/types/chess';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -45,27 +32,27 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
   );
 
   return (
-    <Card className="border border-gray-200">
-      <CardHeader>
+    <div className="card border border-gray-200">
+      <div className="py-4 px-8">
         <h1 className="text-xl md:text-3xl">Opponents</h1>
-      </CardHeader>
-      <Divider />
-      <CardBody>
-        <TableContainer>
-          <Table>
-            <Thead>
-              <Tr>
-                <Th isNumeric>No</Th>
-                <Th>Opponent</Th>
-                <Th isNumeric>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
+        <div className="rounded border border-gray-200">
+          <table className="table">
+            <thead>
+              <tr>
+                <th align="right">No</th>
+                <th>Opponent</th>
+                <th align="right">
                   <button
                     type="button"
                     className="cursor-pointer capitalize"
                     onClick={() => setSort({ by: 'games' })}>
                     Games
                   </button>
-                </Th>
-                <Th isNumeric>
+                </th>
+                <th align="right">
                   <div className="flex items-center justify-end gap-2">
                     <button
                       type="button"
@@ -80,8 +67,8 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                       (%)
                     </button>
                   </div>
-                </Th>
-                <Th isNumeric>
+                </th>
+                <th align="right">
                   <div className="flex items-center justify-end gap-2">
                     <button
                       type="button"
@@ -96,8 +83,8 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                       (%)
                     </button>
                   </div>
-                </Th>
-                <Th isNumeric>
+                </th>
+                <th align="right">
                   <div className="flex items-center justify-end gap-2">
                     <button
                       type="button"
@@ -112,10 +99,10 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                       (%)
                     </button>
                   </div>
-                </Th>
-              </Tr>
-            </Thead>
-            <Tbody>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
               {data.map(
                 (
                   {
@@ -131,39 +118,39 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
                   index: number
                 ) => {
                   return (
-                    <Tr key={opponent}>
-                      <Td isNumeric>{index + 1}</Td>
-                      <Td>
+                    <tr key={opponent}>
+                      <td align="right">{index + 1}</td>
+                      <td>
                         <Link href={`/players/${encodeURIComponent(opponent)}`}>
                           {opponent}
                         </Link>
-                      </Td>
-                      <Td isNumeric>
+                      </td>
+                      <td align="right">
                         <b>{games}</b>
-                      </Td>
-                      <Td isNumeric>
+                      </td>
+                      <td align="right">
                         <p className="text-teal-500">
                           {win} ({winPercentage.toFixed(2)}%)
                         </p>
-                      </Td>
-                      <Td isNumeric>
+                      </td>
+                      <td align="right">
                         <p className="text-gray-500">
                           {draw} ({drawPercentage.toFixed(2)}%)
                         </p>
-                      </Td>
-                      <Td isNumeric>
+                      </td>
+                      <td align="right">
                         <p className="text-red-500">
                           {loss} ({lossPercentage.toFixed(2)}%)
                         </p>
-                      </Td>
-                    </Tr>
+                      </td>
+                    </tr>
                   );
                 }
               )}
-            </Tbody>
-          </Table>
-        </TableContainer>
-      </CardBody>
-    </Card>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   );
 };

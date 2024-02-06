@@ -4,8 +4,6 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-  Divider,
-  Heading,
 } from '@chakra-ui/react';
 import { ChessTitleAbbreviation } from '@prisma/client';
 import React from 'react';
@@ -28,9 +26,9 @@ export const PlayersTitles: React.FC<PlayersTitlesProperties> = ({
 
   return (
     <>
-      <Heading className="text-center text-lg md:text-left md:text-2xl">
+      <h1 className="text-center text-lg md:text-left md:text-2xl">
         Titles ({titles.length})
-      </Heading>
+      </h1>
       <Accordion allowToggle className="rounded border">
         <AccordionItem className="border-0">
           <AccordionButton className="border-b">
@@ -53,7 +51,7 @@ export const PlayersTitles: React.FC<PlayersTitlesProperties> = ({
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
-      <Divider />
+      <div className="divider" />
     </>
   );
 };

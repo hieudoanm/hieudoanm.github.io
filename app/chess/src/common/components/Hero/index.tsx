@@ -1,18 +1,5 @@
 'use client';
 
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Divider,
-  FormLabel,
-  Heading,
-  Icon,
-  IconButton,
-  Input,
-} from '@chakra-ui/react';
 import hero from '@chess/common/assets/hero.jpg';
 import { APP_NAME } from '@chess/common/constants/app.constants';
 import { useRouter } from 'next/navigation';
@@ -29,51 +16,52 @@ export const Hero: React.FC = () => {
       className="h-screen bg-cover bg-right-top"
       style={{ backgroundImage: `url(${hero.src})` }}>
       <div className="flex h-full items-center justify-center border-b bg-teal-500/50">
-        <Card className="border border-gray-200 shadow">
-          <CardHeader>
-            <Heading className="text-center text-xl md:text-3xl">
-              {APP_NAME}
-            </Heading>
-          </CardHeader>
-          <Divider />
-          <CardBody>
+        <div className="card border border-gray-200 shadow">
+          <div className="py-4 px-8">
+            <h1 className="text-center text-xl md:text-3xl">{APP_NAME}</h1>
+          </div>
+          <div className="divider" />
+          <div className="card-body">
             <div className="flex flex-col gap-4 text-center">
               <form
                 onSubmit={(event: FormEvent) => {
                   event.preventDefault();
                   router.push(`/${encodeURIComponent(username)}`);
                 }}>
-                <FormLabel className="truncate">
+                <label className="truncate">
                   Search with chess.com username
-                </FormLabel>
+                </label>
                 <div className="flex flex  items-center justify-between gap-x-2 md:gap-x-4">
-                  <Input
+                  <input
                     id="username"
                     name="username"
                     placeholder="Username"
+                    className="input input-bordered"
                     value={username}
                     onChange={(event) => setUsername(event.target.value)}
                     required
                   />
-                  <IconButton
+                  <button
                     aria-label="search"
                     type="submit"
-                    colorScheme="teal"
-                    icon={<Icon as={FaSearch} />}
-                  />
+                    className="bg-teal-500 text-white btn">
+                    <FaSearch />
+                  </button>
                 </div>
               </form>
             </div>
-          </CardBody>
-          <Divider />
-          <CardFooter display={'block'}>
+          </div>
+          <div className="divider" />
+          <div className="py-4 px-8">
             <ScrollLink to="demo" smooth={true} spy={true} duration={500}>
-              <Button type="button" colorScheme="teal" className="w-full">
+              <button
+                type="button"
+                className="w-full bg-teal-500 text-white btn">
                 View Demo
-              </Button>
+              </button>
             </ScrollLink>
-          </CardFooter>
-        </Card>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-import { Heading } from '@chakra-ui/react';
 import { APP_NAME } from '@chess/common/constants/app.constants';
 import { BUILD_ENV } from '@chess/common/environments/environments';
 import { ChessTimeClass } from '@prisma/client';
@@ -34,7 +33,7 @@ const RatingPage: NextPage<RatingPageProperties> = ({
         <title>{APP_NAME} - Rating</title>
       </Head>
       <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
-        <Heading>Rating</Heading>
+        <h1>Rating</h1>
       </div>
     </>
   );

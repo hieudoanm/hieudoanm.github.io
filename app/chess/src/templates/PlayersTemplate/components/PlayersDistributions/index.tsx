@@ -1,4 +1,3 @@
-import { Divider, Heading } from '@chakra-ui/react';
 import { ChessTimeClass } from '@prisma/client';
 import { FullChessPlayer, PlayersDistribution } from '../PlayersDistribution';
 
@@ -13,9 +12,9 @@ export const PlayersDistributions: React.FC<PlayersDistributionsProperties> = ({
 
   return (
     <>
-      <Heading className="text-center text-lg md:text-left md:text-2xl">
+      <h1 className="text-center text-lg md:text-left md:text-2xl">
         Distribution
-      </Heading>
+      </h1>
       <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
         <div className="col-span-1">
           <PlayersDistribution
@@ -36,7 +35,7 @@ export const PlayersDistributions: React.FC<PlayersDistributionsProperties> = ({
           />
         </div>
       </div>
-      <Divider />
+      <div className="divider" />
     </>
   );
 };

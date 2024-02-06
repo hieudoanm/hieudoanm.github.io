@@ -1,6 +1,5 @@
 'use client';
 
-import { Card, CardBody, CardHeader, Divider } from '@chakra-ui/react';
 import {
   GRAY_COLOR,
   RED_COLOR,
@@ -169,22 +168,22 @@ export const ChessTimeOfDays: React.FC<{ insights: Insights }> = ({
   insights,
 }) => {
   return (
-    <Card className="border border-gray-200">
-      <CardHeader>
+    <div className="card border border-gray-200">
+      <div className="py-4 px-8">
         <h1 className="text-xl md:text-3xl">Time of Day</h1>
-      </CardHeader>
-      <Divider />
-      <CardBody>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
         <ChessGamesByTimeOfDays insights={insights} />
-      </CardBody>
-      <Divider />
-      <CardBody>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
         <ChessAccuracyByTimeOfDays insights={insights} />
-      </CardBody>
-      <Divider />
-      <CardBody>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
         <ChessResultsByTimeOfDays insights={insights} />
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 };

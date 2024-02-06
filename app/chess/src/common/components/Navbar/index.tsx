@@ -1,8 +1,6 @@
 'use client';
 
 import {
-  Button,
-  Divider,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -10,8 +8,6 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  Icon,
-  Text,
   useDisclosure,
 } from '@chakra-ui/react';
 import { Container } from '@chess/common/components/Container';
@@ -25,13 +21,12 @@ const GitHubButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
       href="https://github.com/hieudoanm"
       className="font-bold"
       target="_blank">
-      <Button
-        size={size}
-        colorScheme="teal"
-        className="flex w-full items-center gap-x-2">
-        <Icon as={FaGithub} />
-        <Text>GitHub</Text>
-      </Button>
+      <button
+        type="button"
+        className="flex w-full items-center gap-x-2 bg-teal-500 text-white btn btn-xs">
+        <FaGithub />
+        <p>GitHub</p>
+      </button>
     </Link>
   );
 };
@@ -46,23 +41,23 @@ export const MobileDrawer: React.FC<{
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader>{APP_NAME}</DrawerHeader>
-        <Divider />
+        <div className="divider" />
         <DrawerBody>
           <div className="flex flex-col gap-y-4">
             <Link href="/players">
-              <Text>Players</Text>
+              <p>Players</p>
             </Link>
-            <Divider />
+            <div className="divider" />
             <Link href="/openings">
-              <Text>Openings</Text>
+              <p>Openings</p>
             </Link>
             <Link href="/rating">
-              <Text>Rating</Text>
+              <p>Rating</p>
             </Link>
             <GitHubButton size="md" />
           </div>
         </DrawerBody>
-        <Divider />
+        <div className="divider" />
         <DrawerFooter justifyContent="start">
           &copy; {YEAR} {APP_NAME}
         </DrawerFooter>
@@ -82,19 +77,20 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-x-4">
                 <div className="block md:hidden">
-                  <Button colorScheme="teal" onClick={onOpen} size="sm">
-                    <Icon as={FaBars} />
-                  </Button>
+                  <button
+                    type="button"
+                    className="bg-teal-500 text-white btn btn-xs"
+                    onClick={onOpen}>
+                    <FaBars />
+                  </button>
                 </div>
                 <Link href="/">
-                  <Text textTransform={'uppercase'} fontWeight={600}>
-                    {APP_NAME}
-                  </Text>
+                  <p className="uppercase font-bold">{APP_NAME}</p>
                 </Link>
                 <div className="hidden md:block">
                   <div className="flex items-center gap-x-4">
                     <Link href="/players">
-                      <Text>Players</Text>
+                      <p>Players</p>
                     </Link>
                   </div>
                 </div>
@@ -102,10 +98,10 @@ export const Navbar: React.FC = () => {
               <div className="hidden md:block">
                 <div className="flex items-center gap-x-4">
                   <Link href="/openings">
-                    <Text>Openings</Text>
+                    <p>Openings</p>
                   </Link>
                   <Link href="/rating">
-                    <Text>Rating</Text>
+                    <p>Rating</p>
                   </Link>
                   <GitHubButton size="sm" />
                 </div>

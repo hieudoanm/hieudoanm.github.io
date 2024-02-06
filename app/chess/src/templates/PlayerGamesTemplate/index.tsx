@@ -1,18 +1,7 @@
 'use client';
 
 import { gql } from '@apollo/client';
-import {
-  Box,
-  Button,
-  Card,
-  CardHeader,
-  Heading,
-  Icon,
-  Link,
-  List,
-  ListItem,
-  useToast,
-} from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react';
 import {
   DRAW_RESULTS,
   LOSS_RESULTS,
@@ -21,6 +10,7 @@ import {
 import { NEXT_PUBLIC_GRAPHQL_URI } from '@chess/common/environments/environments';
 import { getApolloClient } from '@chess/graphql/apollo/client';
 import { ChessGame, ChessResult } from '@prisma/client';
+import Link from 'next/link';
 import {
   FaBolt,
   FaClock,
@@ -44,13 +34,13 @@ const getPoint = (result: ChessResult): number => {
 
 const TimeClassIcon: React.FC<{ timeClass: string }> = ({ timeClass = '' }) => {
   if (timeClass === 'bullet') {
-    return <Icon as={FaRocket} boxSize={6} />;
+    return <FaRocket />;
   }
   if (timeClass === 'rapid') {
-    return <Icon as={FaClock} boxSize={6} />;
+    return <FaClock />;
   }
   if (timeClass === 'blitz') {
-    return <Icon as={FaBolt} boxSize={6} />;
+    return <FaBolt />;
   }
   return <></>;
 };
@@ -96,16 +86,20 @@ export const PlayerGamesTemplate: React.FC<PlayerGamesTemplateProperties> = ({
 
   return (
     <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
-      <Card className="border border-gray-200 shadow">
-        <CardHeader>
+      <div className="card border border-gray-200 shadow">
+        <div className="py-4 px-8">
+          {' '}
           <div className="flex items-center justify-between">
-            <Heading className="text-xl">Games ({games.length})</Heading>
-            <Button type="button" colorScheme="teal" onClick={syncGames}>
-              <Icon as={FaSync} />
-            </Button>
+            <h1 className="text-xl">Games ({games.length})</h1>
+            <button
+              type="button"
+              className="bg-teal-500 text-white btn"
+              onClick={syncGames}>
+              <FaSync />
+            </button>
           </div>
-        </CardHeader>
-        <List className="flex flex-col gap-y-2">
+        </div>
+        <div className="flex flex-col gap-y-2">
           {games.map(
             ({
               id,
@@ -119,7 +113,7 @@ export const PlayerGamesTemplate: React.FC<PlayerGamesTemplateProperties> = ({
               endTime,
             }: ChessGame) => {
               return (
-                <ListItem key={id} className="border-t p-2 md:p-4">
+                <div key={id} className="border-t p-2 md:p-4">
                   <div className="flex items-center justify-between gap-2 md:gap-4">
                     <div className="flex items-center gap-x-2 md:gap-x-4">
                       <div>
@@ -161,18 +155,20 @@ export const PlayerGamesTemplate: React.FC<PlayerGamesTemplateProperties> = ({
                         <p>{endTime.toString().split('T')[0]}</p>
                       </div>
                       <div>
-                        <Button colorScheme="teal">
-                          <Icon as={FaSearchengin} boxSize={6} />
-                        </Button>
+                        <button
+                          type="button"
+                          className="bg-teal-500 text-white btn">
+                          <FaSearchengin />
+                        </button>
                       </div>
                     </div>
                   </div>
-                </ListItem>
+                </div>
               );
             }
           )}
-        </List>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 };

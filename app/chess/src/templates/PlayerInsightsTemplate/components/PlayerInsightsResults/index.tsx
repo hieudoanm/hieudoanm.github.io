@@ -1,6 +1,5 @@
 'use client';
 
-import { Card, CardBody, CardHeader, Divider } from '@chakra-ui/react';
 import { COLORS_MAP } from '@chess/common/constants/chess.constants';
 import { Insights, Result } from '@chess/common/types/chess';
 import { customLabel } from '@chess/common/utils/custom-label';
@@ -66,36 +65,36 @@ export const ChessResults: React.FC<{ insights: Insights }> = ({
   insights,
 }) => {
   return (
-    <Card className="border border-gray-200">
-      <CardHeader>
+    <div className="card border border-gray-200">
+      <div className="py-4 px-8">
         <h1 className="text-xl md:text-3xl">Game Results</h1>
-      </CardHeader>
-      <Divider />
-      <CardBody>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
         <ChessResult
           title="Games you won by ..."
           results={insights?.results?.win ?? []}
           color="teal"
         />
-      </CardBody>
-      <Divider />
-      <CardBody>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
         <ChessResult
           title="Games you drawn by ..."
           results={insights?.results?.draw ?? []}
           color="gray"
         />
-      </CardBody>
-      <Divider />
-      <CardBody>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
         <ChessResult
           title="Games you lost by ..."
           results={insights?.results?.loss ?? []}
           color="red"
         />
-      </CardBody>
-      <Divider />
-      <CardBody />
-    </Card>
+      </div>
+      <div className="divider" />
+      <div className="card-body" />
+    </div>
   );
 };

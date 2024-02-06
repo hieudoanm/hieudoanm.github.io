@@ -4,15 +4,6 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-  Button,
-  Heading,
-  Table,
-  TableContainer,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr,
 } from '@chakra-ui/react';
 import { FullChessPlayer } from '@chess/app/api/chess/players/service';
 import { TitleBadge } from '@chess/common/components/TitleBadge';
@@ -53,9 +44,9 @@ export const PlayersTable: React.FC<PlayersTableProperties> = ({
 
   return (
     <>
-      <Heading className="text-center text-lg md:text-left md:text-2xl">
+      <h1 className="text-center text-lg md:text-left md:text-2xl">
         Players ({total})
-      </Heading>
+      </h1>
       <Accordion allowToggle className="rounded border">
         <AccordionItem className="border-0">
           <AccordionButton className="border-b">
@@ -65,35 +56,34 @@ export const PlayersTable: React.FC<PlayersTableProperties> = ({
             </div>
           </AccordionButton>
           <AccordionPanel padding={0}>
-            <TableContainer>
-              <Table>
-                <Thead>
-                  <Tr>
-                    <Th>Username</Th>
-                    <Th isNumeric className="w-8">
+            <div className="rounded border border-gray-200">
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Username</th>
+                    <th align="right" className="w-8">
                       Bullet
-                    </Th>
-                    <Th isNumeric className="w-8">
+                    </th>
+                    <th align="right" className="w-8">
                       Blitz
-                    </Th>
-                    <Th isNumeric className="w-8">
+                    </th>
+                    <th align="right" className="w-8">
                       Rapid
-                    </Th>
-                    <Th isNumeric className="w-8">
-                      <Button
+                    </th>
+                    <th align="right" className="w-8">
+                      <button
                         type="button"
-                        size="xs"
-                        colorScheme="teal"
-                        variant={isStreamerFlag ? 'solid' : 'outline'}
+                        className="btn btn-xs bg-teal-500 text-white"
+                        // variant={isStreamerFlag ? 'solid' : 'outline'}
                         onClick={() => {
                           setIsStreamer((!isStreamerFlag).toString());
                         }}>
                         Twitch
-                      </Button>
-                    </Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
+                      </button>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
                   {players.map(
                     ({
                       title,
@@ -110,8 +100,8 @@ export const PlayersTable: React.FC<PlayersTableProperties> = ({
                       const rapidStats = getStatsByTimeClass('rapid');
 
                       return (
-                        <Tr key={id}>
-                          <Td>
+                        <tr key={id}>
+                          <td>
                             <div className="inline-flex items-center gap-x-2">
                               <div className="h-10 w-10 overflow-hidden rounded border">
                                 {avatar.length > 0 ? (
@@ -137,20 +127,20 @@ export const PlayersTable: React.FC<PlayersTableProperties> = ({
                                 {country?.flag ?? ''}
                               </Link>
                             </div>
-                          </Td>
-                          <Td isNumeric>{bulletStats.last}</Td>
-                          <Td isNumeric>{blitzStats.last}</Td>
-                          <Td isNumeric>{rapidStats.last}</Td>
-                          <Td isNumeric>
+                          </td>
+                          <td align="right">{bulletStats.last}</td>
+                          <td align="right">{blitzStats.last}</td>
+                          <td align="right">{rapidStats.last}</td>
+                          <td align="right">
                             <TwitchButton href={twitchUrl} />
-                          </Td>
-                        </Tr>
+                          </td>
+                        </tr>
                       );
                     }
                   )}
-                </Tbody>
-              </Table>
-            </TableContainer>
+                </tbody>
+              </table>
+            </div>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

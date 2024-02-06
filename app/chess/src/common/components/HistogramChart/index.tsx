@@ -1,6 +1,5 @@
 'use client';
 
-import { Card, CardBody, CardHeader, Divider, Heading } from '@chakra-ui/react';
 import { TEAL_COLOR } from '@chess/common/constants/chess.constants';
 import { ChessTimeClass } from '@prisma/client';
 import {
@@ -16,14 +15,12 @@ export const ChessHistogramChart: React.FC<{
   data: { label: string; value: number }[];
 }> = ({ timeClass = '', data = [] }) => {
   return (
-    <Card className="border border-gray-200 shadow">
-      <CardHeader>
-        <Heading as={'h2'} className="text-lg capitalize">
-          {timeClass} Distribution
-        </Heading>
-      </CardHeader>
-      <Divider />
-      <CardBody>
+    <div className="card border border-gray-200 shadow">
+      <div className="py-4 px-8">
+        <h2 className="text-lg capitalize">{timeClass} Distribution</h2>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
         <div className="aspect-video overflow-hidden">
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart
@@ -37,7 +34,7 @@ export const ChessHistogramChart: React.FC<{
             </ComposedChart>
           </ResponsiveContainer>
         </div>
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 };

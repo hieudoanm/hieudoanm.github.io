@@ -1,6 +1,5 @@
 'use client';
 
-import { Heading, Select } from '@chakra-ui/react';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 
 export type OpeningsHeaderProperties = {
@@ -16,13 +15,13 @@ export const OpeningsHeader: React.FC<OpeningsHeaderProperties> = ({
 
   return (
     <div className="flex items-center justify-between">
-      <Heading>Openings ({total})</Heading>
+      <h1>Openings ({total})</h1>
       <div>
-        <Select
+        <select
           aria-label="ECO"
           id="eco"
           name="eco"
-          className="shadow"
+          className="shadow select select-bordered"
           value={eco}
           onChange={(event) => {
             const newECO: string = event.target.value;
@@ -34,7 +33,7 @@ export const OpeningsHeader: React.FC<OpeningsHeaderProperties> = ({
               {eco}
             </option>
           ))}
-        </Select>
+        </select>
       </div>
     </div>
   );

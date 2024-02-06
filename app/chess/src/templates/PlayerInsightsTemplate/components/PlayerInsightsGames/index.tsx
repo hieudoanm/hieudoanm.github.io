@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, CardBody, CardHeader, Divider, Icon } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react';
 import { TEAL_COLOR } from '@chess/common/constants/chess.constants';
 import { Insights } from '@chess/common/types/chess';
 import { IconType } from 'react-icons';
@@ -56,12 +56,12 @@ const ChessAccuracy: React.FC<{
 
 export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
   return (
-    <Card className="border border-gray-200">
-      <CardHeader>
+    <div className="card border border-gray-200">
+      <div className="py-4 px-8">
         <h1 className="text-xl md:text-3xl">Overview</h1>
-      </CardHeader>
-      <Divider />
-      <CardBody>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
         <div className="flex flex-col gap-y-4">
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-y-2">
@@ -126,9 +126,9 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
             </ResponsiveContainer>
           </div>
         </div>
-      </CardBody>
-      <Divider />
-      <CardBody>
+      </div>
+      <div className="divider" />
+      <div className="card-body">
         <div className="flex flex-col gap-y-4">
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-y-2">
@@ -179,7 +179,7 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
             </ResponsiveContainer>
           </div>
         </div>
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 };

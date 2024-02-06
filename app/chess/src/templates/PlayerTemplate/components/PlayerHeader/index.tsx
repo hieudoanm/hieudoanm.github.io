@@ -1,7 +1,7 @@
 'use client';
 
 import { DocumentNode, gql } from '@apollo/client';
-import { Button, Heading, Icon, Text, useToast } from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react';
 import { TitleBadge } from '@chess/common/components/TitleBadge';
 import { ChessTitleAbbreviation } from '@prisma/client';
 import Link from 'next/link';
@@ -82,36 +82,35 @@ export const PlayerHeader: React.FC<ChessHeaderProperties> = ({
         />
         <div>
           <div className="flex items-center gap-x-2">
-            {' '}
             <TitleBadge title={title} />
-            <Heading>
+            <h1>
               <Link
                 href={`https://www.chess.com/member/${username}`}
                 target="_blank">
-                <Text className="text-lg uppercase md:text-2xl">
-                  {username}
-                </Text>
+                <p className="text-lg uppercase md:text-2xl">{username}</p>
               </Link>
-            </Heading>
+            </h1>
           </div>
-
-          <Text>{name}</Text>
+          <p>{name}</p>
         </div>
       </div>
       <div className="flex items-center gap-2">
-        {verified ? <Icon as={FaCheckCircle} color="teal" /> : <></>}
+        {verified ? <FaCheckCircle className="text-teal-500" /> : <></>}
         {is_streamer ? (
           <Link href={twitch_url} target="_blank">
-            <Button colorScheme="teal">
-              <Icon as={FaTwitch} />
-            </Button>
+            <button className="bg-teal-500 text-white btn" type="button">
+              <FaTwitch />
+            </button>
           </Link>
         ) : (
           <></>
         )}
-        <Button colorScheme="teal" onClick={sync}>
-          <Icon as={FaSync} />
-        </Button>
+        <button
+          className="bg-teal-500 btn text-white"
+          type="button"
+          onClick={sync}>
+          <FaSync />
+        </button>
       </div>
     </header>
   );

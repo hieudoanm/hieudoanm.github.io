@@ -1,6 +1,5 @@
 'use client';
 
-import { Divider } from '@chakra-ui/react';
 import { FullChessPlayer } from '@chess/app/api/chess/players/service';
 import { CountryTotal } from '@chess/graphql/data/chess.types';
 import { ChessCountry, ChessTitle } from '@prisma/client';

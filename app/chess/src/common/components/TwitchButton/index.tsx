@@ -1,6 +1,5 @@
 'use client';
 
-import { Button, Icon } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FaTwitch } from 'react-icons/fa';
 
@@ -13,9 +12,9 @@ export const TwitchButton: React.FC<TwitchButtonProperties> = ({
 
   return (
     <Link href={href} target="_blank">
-      <Button colorScheme="teal" type="button" size="sm">
-        <Icon as={FaTwitch} />
-      </Button>
+      <button className="btn btn-sm bg-teal-500 text-white" type="button">
+        <FaTwitch />
+      </button>
     </Link>
   );
 };

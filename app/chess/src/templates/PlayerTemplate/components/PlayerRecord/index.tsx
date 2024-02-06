@@ -1,6 +1,5 @@
 'use client';
 
-import { Card, CardBody, Heading, Text } from '@chakra-ui/react';
 import { ChessTimeClass } from '@prisma/client';
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
 
@@ -60,11 +59,11 @@ export const PlayerRecord: React.FC<PlayerRecordProperties> = ({
   ];
 
   return (
-    <Card className="border border-gray-200">
-      <CardBody>
-        <Heading className="text-center capitalize md:text-left" size={'md'}>
+    <div className="card border border-gray-200">
+      <div className="card-body">
+        <h1 className="text-center capitalize md:text-left">
           {timeClass} Record
-        </Heading>
+        </h1>
         <div className="flex h-full flex-col items-center gap-x-2 md:flex-row">
           <div className="h-[180px] w-[180px]">
             <ResponsiveContainer width="100%" height="100%">
@@ -89,9 +88,9 @@ export const PlayerRecord: React.FC<PlayerRecordProperties> = ({
           <div className="px-8 text-center">
             <div className="flex items-center justify-between gap-x-4">
               <div className="text-left">
-                <Text>Win</Text>
-                <Text>Draw</Text>
-                <Text>Loss</Text>
+                <p>Win</p>
+                <p>Draw</p>
+                <p>Loss</p>
               </div>
               <div className="text-right">
                 <div className="font-medium">{win.toLocaleString()}</div>
@@ -101,8 +100,8 @@ export const PlayerRecord: React.FC<PlayerRecordProperties> = ({
             </div>
           </div>
         </div>
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 };
 

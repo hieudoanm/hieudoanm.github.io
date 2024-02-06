@@ -1,9 +1,6 @@
 'use client';
 
 import {
-  Box,
-  Card,
-  CardBody,
   Icon,
   Stat,
   StatHelpText,
@@ -27,8 +24,8 @@ export const PlayerStat: React.FC<PlayerStatProperties> = ({
   icon,
 }) => {
   return (
-    <Card className="border border-gray-200">
-      <CardBody>
+    <div className="card border border-gray-200">
+      <div className="card-body">
         <div className="flex items-center justify-between">
           <Stat>
             <StatLabel className="capitalize">{timeClass}</StatLabel>
@@ -37,16 +34,16 @@ export const PlayerStat: React.FC<PlayerStatProperties> = ({
           </Stat>
           {icon ? (
             <div>
-              <Box bgColor={'teal.500'} color={'white'} className="rounded p-2">
+              <div className="rounded p-2 text-white bg-teal-500">
                 <Icon as={icon} boxSize={6} />
-              </Box>
+              </div>
             </div>
           ) : (
             <></>
           )}
         </div>
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 };
 
