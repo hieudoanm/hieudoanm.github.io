@@ -8,7 +8,7 @@ import { APP_NAME } from '@chess/common/constants/app.constants';
 import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
 import { query } from '@chess/graphql/apollo/client';
-import { PlayerGamesTemplate } from '@chess/templates/PlayerGamesTemplate';
+import { PlayerGamesTemplate } from '@chess/shared/templates/PlayerGamesTemplate';
 import { ChessGame } from '@prisma/client';
 import { NextPage } from 'next';
 import Head from 'next/head';

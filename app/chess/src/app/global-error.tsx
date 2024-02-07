@@ -1,7 +1,7 @@
 'use client';
 
-import { Footer } from '@chess/common/components/Footer';
-import { Navbar } from '@chess/common/components/Navbar';
+import { Footer } from '@chess/shared/components/Footer';
+import { Navbar } from '@chess/shared/components/Navbar';
 import { Providers } from './providers';
 
 const GlobalError: React.FC<{

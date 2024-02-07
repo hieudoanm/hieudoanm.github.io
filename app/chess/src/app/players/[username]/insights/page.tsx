@@ -3,7 +3,7 @@ import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
 import { getInsights } from '@chess/common/services/insights.service';
 import { Insights } from '@chess/common/types/chess';
-import { PlayerInsightsTemplate } from '@chess/templates/PlayerInsightsTemplate';
+import { PlayerInsightsTemplate } from '@chess/shared/templates/PlayerInsightsTemplate';
 import { NextPage } from 'next';
 import Head from 'next/head';
 

@@ -3,7 +3,7 @@ import { APP_NAME } from '@chess/common/constants/app.constants';
 import { BUILD_ENV } from '@chess/common/environments/environments';
 import { logger } from '@chess/common/libs/logger';
 import { query } from '@chess/graphql/apollo/client';
-import { OpeningsTemplate } from '@chess/templates/OpeningsTemplate';
+import { OpeningsTemplate } from '@chess/shared/templates/OpeningsTemplate';
 import { ChessOpening } from '@prisma/client';
 import { NextPage } from 'next';
 import Head from 'next/head';

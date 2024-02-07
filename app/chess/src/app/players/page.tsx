@@ -4,7 +4,7 @@ import { BUILD_ENV } from '@chess/common/environments/environments';
 import { logger } from '@chess/common/libs/logger';
 import { TimeRange } from '@chess/common/types/time';
 import { query } from '@chess/graphql/apollo/client';
-import { PlayersTemplate } from '@chess/templates/PlayersTemplate';
+import { PlayersTemplate } from '@chess/shared/templates/PlayersTemplate';
 import {
   ChessCountry,
   ChessTitle,

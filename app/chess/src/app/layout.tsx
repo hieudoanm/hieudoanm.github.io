@@ -1,6 +1,6 @@
-import { Container } from '@chess/common/components/Container';
-import { Footer } from '@chess/common/components/Footer';
-import { Navbar } from '@chess/common/components/Navbar';
+import { Container } from '@chess/shared/components/Container';
+import { Footer } from '@chess/shared/components/Footer';
+import { Navbar } from '@chess/shared/components/Navbar';
 import {
   APP_DESCRIPTION,
   APP_NAME,
