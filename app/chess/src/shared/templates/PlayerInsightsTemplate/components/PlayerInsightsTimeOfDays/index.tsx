@@ -169,7 +169,7 @@ export const ChessTimeOfDays: React.FC<{ insights: Insights }> = ({
   insights,
 }) => {
   return (
-    <div className="card border border-gray-200">
+    <div className="card border border-gray-200 shadow">
       <div className="py-4 px-8 border-b">
         <Heading>Time of Day</Heading>
       </div>

@@ -6,27 +6,31 @@ exports[`PlayersStat to match snapshot 1`] = `
     class="border border-gray-200 shadow rounded"
   >
     <div
-      class="stat"
+      class="flex items-center justify-between"
     >
       <div
-        class="stat-title"
+        class="stat"
       >
-        Average 
-        GM
+        <div
+          class="stat-title"
+        >
+          Average 
+          GM
+        </div>
+        <div
+          class="stat-value"
+        >
+          0
+        </div>
+        <div
+          class="stat-desc"
+        >
+          Highest: 
+          0
+        </div>
       </div>
       <div
-        class="stat-value"
-      >
-        0
-      </div>
-      <div
-        class="stat-desc"
-      >
-        Highest: 
-        0
-      </div>
-      <div
-        class="stat-figure"
+        class="p-4"
       >
         <div
           class="rounded p-2 text-white bg-teal-500 w-12 h-12 flex items-center justify-center"

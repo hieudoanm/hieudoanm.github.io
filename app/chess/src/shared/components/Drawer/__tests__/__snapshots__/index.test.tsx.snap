@@ -21,38 +21,43 @@ exports[`Drawer to match snapshot 1`] = `
         class="drawer-overlay"
         for="chess-drawer"
       />
-      <ul
+      <div
         class="menu p-4 w-80 min-h-full bg-base-200 text-base-content"
       >
-        <li>
+        <div
+          class="border-b pb-4"
+        >
+          <p
+            class="text-xl md:text-2xl lg:text-3xl"
+          >
+            chess.com Insights
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-y-4 py-4"
+        >
           <a
             href="/"
           >
             Insights
           </a>
-        </li>
-        <li>
           <a
             href="/players"
           >
             Players
           </a>
-        </li>
-        <li>
           <a
             href="/openings"
           >
             Openings
           </a>
-        </li>
-        <li>
           <a
             href="/rating"
           >
             Rating
           </a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

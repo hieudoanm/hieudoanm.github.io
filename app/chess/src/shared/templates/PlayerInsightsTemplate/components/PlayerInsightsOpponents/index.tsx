@@ -33,7 +33,7 @@ export const ChessOpponents: React.FC<{ insights: Insights }> = ({
   );
 
   return (
-    <div className="card border border-gray-200">
+    <div className="card border border-gray-200 shadow">
       <div className="py-4 px-8 border-b">
         <Heading>Opponents</Heading>
       </div>

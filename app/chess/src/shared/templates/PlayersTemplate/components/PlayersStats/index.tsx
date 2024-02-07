@@ -29,7 +29,7 @@ export const PlayersStats: React.FC<PlayersStatsProperties> = ({
       <p className="text-center text-lg md:text-left sm:text-xl md:text-2xl">
         Stats
       </p>
-      <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-3 sm:gap-x-8">
+      <div className="grid grid-cols-1 gap-y-4 lg:grid-cols-3 lg:gap-x-8">
         <div className="col-span-1">
           <PlayersStat
             title="Rapid"

@@ -3,7 +3,7 @@
 exports[`ChessResults to match snapshot 1`] = `
 <div>
   <div
-    class="card border border-gray-200"
+    class="card border border-gray-200 shadow"
   >
     <div
       class="py-4 px-8 border-b"
