@@ -1,7 +1,7 @@
 'use client';
 
-import { Container } from '@chess/shared/components/Container';
 import { APP_NAME, YEAR } from '@chess/common/constants/app.constants';
+import { Container } from '@chess/shared/components/Container';
 
 export const Footer: React.FC = () => {
   return (

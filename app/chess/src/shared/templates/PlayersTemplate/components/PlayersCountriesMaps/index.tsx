@@ -1,7 +1,7 @@
 'use client';
 
-import { SVGMaps } from '@chess/shared/components/Maps';
 import maps from '@chess/common/json/world.json';
+import { SVGMaps } from '@chess/shared/components/Maps';
 import chroma from 'chroma-js';
 import { useRouter } from 'next/navigation';
 import { CountryTotal } from '../PlayersCountriesList';

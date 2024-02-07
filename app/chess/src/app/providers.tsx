@@ -2,8 +2,8 @@
 
 import { ApolloProvider } from '@apollo/client';
 import {
-  NEXT_PUBLIC_GRAPHQL_URI,
   GRAPHQL_URI,
+  NEXT_PUBLIC_GRAPHQL_URI,
 } from '@chess/common/environments/environments';
 import { getApolloClient } from '@chess/graphql/apollo/client';
 

@@ -1,15 +1,15 @@
-import { Container } from '@chess/shared/components/Container';
-import { Footer } from '@chess/shared/components/Footer';
-import { Navbar } from '@chess/shared/components/Navbar';
 import {
   APP_DESCRIPTION,
   APP_NAME,
 } from '@chess/common/constants/app.constants';
 import '@chess/common/styles/globals.scss';
+import { Container } from '@chess/shared/components/Container';
+import { Drawer } from '@chess/shared/components/Drawer';
+import { Footer } from '@chess/shared/components/Footer';
+import { Navbar } from '@chess/shared/components/Navbar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
-import { Drawer } from '@chess/shared/components/Drawer';
 
 const inter = Inter({ subsets: ['latin'] });
 

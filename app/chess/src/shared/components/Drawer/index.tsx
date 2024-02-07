@@ -1,7 +1,7 @@
+import { APP_NAME } from '@chess/common/constants/app.constants';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import { Heading } from '../Heading';
-import { APP_NAME } from '@chess/common/constants/app.constants';
 
 export type DrawerProperties = { children?: ReactNode };
 

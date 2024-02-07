@@ -1,5 +1,5 @@
-import { TitleBadge } from '@chess/shared/components/TitleBadge';
 import { TITLED_ABBREVIATIONS } from '@chess/common/constants/chess.constants';
+import { TitleBadge } from '@chess/shared/components/TitleBadge';
 import { TitleTotal } from '../PlayersTitles';
 
 export const PlayersTitlesTable: React.FC<{ titles: TitleTotal[] }> = ({

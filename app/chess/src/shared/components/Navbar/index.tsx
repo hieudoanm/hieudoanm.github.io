@@ -1,7 +1,7 @@
 'use client';
 
-import { Container } from '@chess/shared/components/Container';
 import { APP_NAME } from '@chess/common/constants/app.constants';
+import { Container } from '@chess/shared/components/Container';
 import Link from 'next/link';
 import { FaBars, FaGithub } from 'react-icons/fa';
 

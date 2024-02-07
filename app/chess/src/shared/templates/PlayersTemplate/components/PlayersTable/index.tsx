@@ -1,7 +1,7 @@
 import { FullChessPlayer } from '@chess/app/api/chess/players/service';
+import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import { TitleBadge } from '@chess/shared/components/TitleBadge';
 import { TwitchButton } from '@chess/shared/components/TwitchButton';
-import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import { ChessStats, ChessTimeClass } from '@prisma/client';
 import Image from 'next/image';
 import Link from 'next/link';

@@ -1,5 +1,5 @@
-import { ChessHistogramChart } from '@chess/shared/components/HistogramChart';
 import { GAP } from '@chess/common/constants/chess.constants';
+import { ChessHistogramChart } from '@chess/shared/components/HistogramChart';
 import {
   ChessCountry,
   ChessPlayer,
