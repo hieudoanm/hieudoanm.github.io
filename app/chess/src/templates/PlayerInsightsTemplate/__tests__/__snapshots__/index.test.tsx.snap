@@ -320,11 +320,11 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
         <div
           class="flex flex-col gap-y-4"
         >
-          <h2
+          <p
             class="font-bold"
           >
             Games you won by ...
-          </h2>
+          </p>
           <div
             class="rounded-2xl bg-gray-100 p-8"
           >
@@ -345,11 +345,11 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
         <div
           class="flex flex-col gap-y-4"
         >
-          <h2
+          <p
             class="font-bold"
           >
             Games you drawn by ...
-          </h2>
+          </p>
           <div
             class="rounded-2xl bg-gray-100 p-8"
           >
@@ -370,11 +370,11 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
         <div
           class="flex flex-col gap-y-4"
         >
-          <h2
+          <p
             class="font-bold"
           >
             Games you lost by ...
-          </h2>
+          </p>
           <div
             class="rounded-2xl bg-gray-100 p-8"
           >
@@ -411,11 +411,11 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
         <div
           class="flex flex-col gap-y-4"
         >
-          <h2
+          <p
             class="font-bold"
           >
             Games by Time of Day
-          </h2>
+          </p>
         </div>
       </div>
       <div
@@ -424,11 +424,11 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
         <div
           class="flex flex-col gap-y-4"
         >
-          <h2
+          <p
             class="font-bold"
           >
             Accuracy by Time of Day
-          </h2>
+          </p>
         </div>
       </div>
       <div
@@ -437,11 +437,11 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
         <div
           class="flex flex-col gap-y-4"
         >
-          <h2
+          <p
             class="font-bold"
           >
             Results by Time of Day
-          </h2>
+          </p>
         </div>
       </div>
       <div
@@ -466,11 +466,11 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
         <div
           class="flex flex-col gap-y-4"
         >
-          <h2
+          <p
             class="font-bold"
           >
             Games by Days of Week
-          </h2>
+          </p>
         </div>
       </div>
       <div
@@ -479,11 +479,11 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
         <div
           class="flex flex-col gap-y-4"
         >
-          <h2
+          <p
             class="font-bold"
           >
             Accuracy by Days of Week
-          </h2>
+          </p>
         </div>
       </div>
       <div
@@ -492,11 +492,11 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
         <div
           class="flex flex-col gap-y-4"
         >
-          <h2
+          <p
             class="font-bold"
           >
             Results by Days of Week
-          </h2>
+          </p>
         </div>
       </div>
       <div

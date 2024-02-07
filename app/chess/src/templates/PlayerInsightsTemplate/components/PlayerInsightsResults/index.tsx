@@ -29,7 +29,7 @@ const ChessResult: React.FC<{
 
   return (
     <div className="flex flex-col gap-y-4">
-      <h2 className="font-bold">{title}</h2>
+      <p className="font-bold">{title}</p>
       <div className="rounded-2xl bg-gray-100 p-8">
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">

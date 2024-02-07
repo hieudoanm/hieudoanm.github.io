@@ -38,7 +38,7 @@ const ChessGamesByTimeOfDays: React.FC<{ insights: Insights }> = ({
 
   return (
     <div className="flex flex-col gap-y-4">
-      <h2 className="font-bold">Games by Time of Day</h2>
+      <p className="font-bold">Games by Time of Day</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -79,7 +79,7 @@ const ChessAccuracyByTimeOfDays: React.FC<{ insights: Insights }> = ({
 
   return (
     <div className="flex flex-col gap-y-4">
-      <h2 className="font-bold">Accuracy by Time of Day</h2>
+      <p className="font-bold">Accuracy by Time of Day</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -124,7 +124,7 @@ export const ChessResultsByTimeOfDays: React.FC<{
   );
   return (
     <div className="flex flex-col gap-y-4">
-      <h2 className="font-bold">Results by Time of Day</h2>
+      <p className="font-bold">Results by Time of Day</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
