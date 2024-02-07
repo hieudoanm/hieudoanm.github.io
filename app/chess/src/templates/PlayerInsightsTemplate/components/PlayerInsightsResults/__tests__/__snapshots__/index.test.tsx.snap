@@ -9,7 +9,7 @@ exports[`ChessResults to match snapshot 1`] = `
       class="py-4 px-8 border-b"
     >
       <p
-        class="text-xl md:text-3xl"
+        class="text-xl md:text-2xl lg:text-3xl"
       >
         Game Results
       </p>

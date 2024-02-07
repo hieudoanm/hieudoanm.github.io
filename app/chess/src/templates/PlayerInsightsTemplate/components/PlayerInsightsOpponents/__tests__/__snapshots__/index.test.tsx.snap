@@ -9,98 +9,106 @@ exports[`ChessOpponents to match snapshot 1`] = `
       class="py-4 px-8 border-b"
     >
       <p
-        class="text-xl md:text-3xl"
+        class="text-xl md:text-2xl lg:text-3xl"
       >
         Opponents
       </p>
     </div>
-    <table
-      class="table"
+    <div
+      class="w-full overflow-x-auto"
     >
-      <thead>
-        <tr>
-          <th
-            align="left"
+      <table
+        class="table"
+      >
+        <thead>
+          <tr
+            class="px-8"
           >
-            No
-          </th>
-          <th>
-            Opponent
-          </th>
-          <th
-            align="right"
-          >
-            <button
-              class="cursor-pointer capitalize"
-              type="button"
+            <th
+              align="left"
+              class="pl-8"
             >
-              Games
-            </button>
-          </th>
-          <th
-            align="right"
-          >
-            <div
-              class="flex items-center justify-end gap-2"
+              No
+            </th>
+            <th>
+              Opponent
+            </th>
+            <th
+              align="right"
             >
               <button
                 class="cursor-pointer capitalize"
                 type="button"
               >
-                Win
+                Games
               </button>
-              <button
-                class="cursor-pointer capitalize"
-                type="button"
-              >
-                (%)
-              </button>
-            </div>
-          </th>
-          <th
-            align="right"
-          >
-            <div
-              class="flex items-center justify-end gap-2"
+            </th>
+            <th
+              align="right"
             >
-              <button
-                class="cursor-pointer capitalize"
-                type="button"
+              <div
+                class="flex items-center justify-end gap-2"
               >
-                Draw
-              </button>
-              <button
-                class="cursor-pointer capitalize"
-                type="button"
-              >
-                (%)
-              </button>
-            </div>
-          </th>
-          <th
-            align="right"
-          >
-            <div
-              class="flex items-center justify-end gap-2"
+                <button
+                  class="cursor-pointer capitalize"
+                  type="button"
+                >
+                  Win
+                </button>
+                <button
+                  class="cursor-pointer capitalize"
+                  type="button"
+                >
+                  (%)
+                </button>
+              </div>
+            </th>
+            <th
+              align="right"
             >
-              <button
-                class="cursor-pointer capitalize"
-                type="button"
+              <div
+                class="flex items-center justify-end gap-2"
               >
-                Loss
-              </button>
-              <button
-                class="cursor-pointer capitalize"
-                type="button"
+                <button
+                  class="cursor-pointer capitalize"
+                  type="button"
+                >
+                  Draw
+                </button>
+                <button
+                  class="cursor-pointer capitalize"
+                  type="button"
+                >
+                  (%)
+                </button>
+              </div>
+            </th>
+            <th
+              align="right"
+              class="pr-8"
+            >
+              <div
+                class="flex items-center justify-end gap-2"
               >
-                (%)
-              </button>
-            </div>
-          </th>
-        </tr>
-      </thead>
-      <tbody />
-    </table>
+                <button
+                  class="cursor-pointer capitalize"
+                  type="button"
+                >
+                  Loss
+                </button>
+                <button
+                  class="cursor-pointer capitalize"
+                  type="button"
+                >
+                  (%)
+                </button>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
   </div>
 </div>
 `;

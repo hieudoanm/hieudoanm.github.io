@@ -55,7 +55,7 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
   return (
     <div className="card border border-gray-200">
       <div className="py-4 px-8 border-b">
-        <p className="text-xl md:text-3xl">Overview</p>
+        <p className="text-xl md:text-2xl lg:text-3xl">Overview</p>
       </div>
       <div className="card-body border-b">
         <div className="flex flex-col gap-y-4">

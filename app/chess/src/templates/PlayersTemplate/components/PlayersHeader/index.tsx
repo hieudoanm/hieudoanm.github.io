@@ -26,7 +26,7 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
       <header>
         <div className="grid grid-cols-1 items-center gap-2 md:grid-cols-3 md:gap-4">
           <div className="col-span-1">
-            <p className="text-center text-xl md:text-left md:text-3xl">
+            <p className="text-center text-xl md:text-left md:text-2xl lg:text-3xl">
               Titled ({total})
             </p>
           </div>

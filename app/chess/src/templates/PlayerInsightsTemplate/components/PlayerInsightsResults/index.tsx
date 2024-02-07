@@ -67,7 +67,7 @@ export const ChessResults: React.FC<{ insights: Insights }> = ({
   return (
     <div className="card border border-gray-200">
       <div className="py-4 px-8 border-b">
-        <p className="text-xl md:text-3xl">Game Results</p>
+        <p className="text-xl md:text-2xl lg:text-3xl">Game Results</p>
       </div>
       <div className="card-body border-b">
         <ChessResult

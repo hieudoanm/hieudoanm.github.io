@@ -169,7 +169,7 @@ export const ChessDaysOfWeek: React.FC<{ insights: Insights }> = ({
   return (
     <div className="card border border-gray-200">
       <div className="py-4 px-8 border-b">
-        <p className="text-xl md:text-3xl">Day of Week</p>
+        <p className="text-xl md:text-2xl lg:text-3xl">Day of Week</p>
       </div>
       <div className="card-body border-b">
         <ChessGamesByDaysOfWeek insights={insights} />

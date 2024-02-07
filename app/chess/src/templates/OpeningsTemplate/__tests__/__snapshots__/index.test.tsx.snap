@@ -8,7 +8,9 @@ exports[`OpeningsTemplate to match snapshot 1`] = `
     <div
       class="flex items-center justify-between"
     >
-      <p>
+      <p
+        class="text-xl md:text-2xl lg:text-3xl"
+      >
         Openings (
         0
         )

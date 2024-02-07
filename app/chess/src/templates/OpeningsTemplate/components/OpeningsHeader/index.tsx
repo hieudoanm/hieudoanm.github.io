@@ -15,7 +15,7 @@ export const OpeningsHeader: React.FC<OpeningsHeaderProperties> = ({
 
   return (
     <div className="flex items-center justify-between">
-      <p>Openings ({total})</p>
+      <p className="text-xl md:text-2xl lg:text-3xl">Openings ({total})</p>
       <div>
         <select
           aria-label="ECO"
