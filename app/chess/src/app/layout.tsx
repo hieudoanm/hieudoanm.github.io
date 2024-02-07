@@ -9,6 +9,7 @@ import '@chess/common/styles/globals.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
+import { Drawer } from '@chess/shared/components/Drawer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -35,13 +36,15 @@ const RootLayout: React.FC<RootLayoutProperties> = ({
         style={{ background: 'transparent' }}
         className={`${inter.className} text-black`}>
         <Providers>
-          <div className="flex h-screen flex-col">
-            <Navbar />
-            <div className="grow">
-              <Container>{children}</Container>
+          <Drawer>
+            <div className="flex h-screen flex-col">
+              <Navbar />
+              <div className="grow">
+                <Container>{children}</Container>
+              </div>
+              <Footer />
             </div>
-            <Footer />
-          </div>
+          </Drawer>
         </Providers>
       </body>
     </html>

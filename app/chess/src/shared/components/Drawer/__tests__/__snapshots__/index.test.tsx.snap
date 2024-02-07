@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer to match snapshot 1`] = `
+<div>
+  <div
+    class="drawer"
+  >
+    <input
+      class="drawer-toggle"
+      id="chess-drawer"
+      type="checkbox"
+    />
+    <div
+      class="drawer-content"
+    />
+    <div
+      class="drawer-side"
+    >
+      <label
+        aria-label="close sidebar"
+        class="drawer-overlay"
+        for="chess-drawer"
+      />
+      <ul
+        class="menu p-4 w-80 min-h-full bg-base-200 text-base-content"
+      >
+        <li>
+          <a
+            href="/"
+          >
+            Insights
+          </a>
+        </li>
+        <li>
+          <a
+            href="/players"
+          >
+            Players
+          </a>
+        </li>
+        <li>
+          <a
+            href="/openings"
+          >
+            Openings
+          </a>
+        </li>
+        <li>
+          <a
+            href="/rating"
+          >
+            Rating
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

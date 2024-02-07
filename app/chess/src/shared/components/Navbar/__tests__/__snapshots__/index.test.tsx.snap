@@ -20,9 +20,9 @@ exports[`Navbar to match snapshot 1`] = `
             <div
               class="block md:hidden"
             >
-              <button
-                class="bg-teal-500 text-white btn btn-xs"
-                type="button"
+              <label
+                class="btn bg-teal-500 text-white drawer-button"
+                for="chess-drawer"
               >
                 <svg
                   fill="currentColor"
@@ -37,7 +37,7 @@ exports[`Navbar to match snapshot 1`] = `
                     d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
                   />
                 </svg>
-              </button>
+              </label>
             </div>
             <a
               href="/"
