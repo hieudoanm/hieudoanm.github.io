@@ -165,11 +165,11 @@ export const PlayerGamesTemplate: React.FC<PlayerGamesTemplateProperties> = ({
           </div>
         </div>
       </div>
-      <div className="toast toast-center">
+      {/* <div className="toast toast-center none">
         <div className="alert bg-teal-500 text-white">
           <span>New mail arrived.</span>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

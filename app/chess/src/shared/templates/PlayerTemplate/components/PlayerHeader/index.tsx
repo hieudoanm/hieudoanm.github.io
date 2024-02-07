@@ -97,11 +97,11 @@ export const PlayerHeader: React.FC<ChessHeaderProperties> = ({
           </button>
         </div>
       </header>
-      <div className="toast toast-center">
+      {/* <div className="toast toast-center none">
         <div className="alert bg-teal-500 text-white">
           <span>New mail arrived.</span>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
