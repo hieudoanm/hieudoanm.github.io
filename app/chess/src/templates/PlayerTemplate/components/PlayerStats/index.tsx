@@ -34,7 +34,7 @@ export const PlayerStats: React.FC<PlayerStatsProperties> = ({
           timeClass={ChessTimeClass.rapid}
           last={rapidStats.last ?? 0}
           best={rapidStats.best ?? 0}
-          icon={<FaClock size="4x" />}
+          icon={<FaClock size={16} />}
         />
       </div>
       <div className="col-span-1">
@@ -42,7 +42,7 @@ export const PlayerStats: React.FC<PlayerStatsProperties> = ({
           timeClass={ChessTimeClass.blitz}
           last={blitzStats.last ?? 0}
           best={blitzStats.best ?? 0}
-          icon={<FaBolt size="4x" />}
+          icon={<FaBolt size={16} />}
         />
       </div>
       <div className="col-span-1">
@@ -50,7 +50,7 @@ export const PlayerStats: React.FC<PlayerStatsProperties> = ({
           timeClass={ChessTimeClass.blitz}
           last={bulletStats.last ?? 0}
           best={bulletStats.best ?? 0}
-          icon={<FaRocket size="4x" />}
+          icon={<FaRocket size={16} />}
         />
       </div>
     </div>

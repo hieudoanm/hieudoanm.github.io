@@ -27,7 +27,7 @@ export const PlayersTitlesChart: React.FC<{ titles: TitleTotal[] }> = ({
 
   return (
     <div className="flex items-center h-full">
-      <div className="p-4 md:p-8 w-full h-full">
+      <div className="p-10 md:p-20 w-full h-full">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Legend />

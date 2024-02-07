@@ -3,7 +3,7 @@
 exports[`PlayerRecord to match snapshot 1`] = `
 <div>
   <div
-    class="card border border-gray-200"
+    class="card border border-gray-200 shadow"
   >
     <div
       class="card-body"

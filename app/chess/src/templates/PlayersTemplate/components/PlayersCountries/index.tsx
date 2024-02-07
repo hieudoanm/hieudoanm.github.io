@@ -45,21 +45,13 @@ export const PlayersCountries: React.FC<PlayersCountriesProperties> = ({
           </button>
         </div>
       </div>
-      <div className="rounded border collapse collapse-arrow">
-        <div className="border-0">
-          <div className="border-b collapse-title">
-            <div className="flex w-full items-center justify-between">
-              <div className="flex-grow text-left">Countries ({total}) </div>
-            </div>
-          </div>
-          <div className="collapse-content p-0">
-            {view === 'maps' ? (
-              <PlayersCountriesMaps countries={countries} />
-            ) : (
-              <PlayersCountriesList countries={countries} />
-            )}
-          </div>
-        </div>
+      <div className="rounded border shadow">
+        <div className="border-b px-8 py-4">Countries ({total})</div>
+        {view === 'maps' ? (
+          <PlayersCountriesMaps countries={countries} />
+        ) : (
+          <PlayersCountriesList countries={countries} />
+        )}
       </div>
       <div className="divider m-0" />
     </>

@@ -2,29 +2,27 @@
 
 exports[`PlayersCountriesList to match snapshot 1`] = `
 <div>
-  <div
-    class="rounded border border-gray-200"
+  <table
+    class="table"
   >
-    <table>
-      <thead>
-        <tr>
-          <th
-            class="w-4"
-          >
-            No
-          </th>
-          <th>
-            Country
-          </th>
-          <th
-            align="right"
-          >
-            Total
-          </th>
-        </tr>
-      </thead>
-      <tbody />
-    </table>
-  </div>
+    <thead>
+      <tr>
+        <th
+          class="w-4"
+        >
+          No
+        </th>
+        <th>
+          Country
+        </th>
+        <th
+          align="right"
+        >
+          Total
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
 </div>
 `;

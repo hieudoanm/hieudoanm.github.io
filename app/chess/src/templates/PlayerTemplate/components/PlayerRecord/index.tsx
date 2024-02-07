@@ -59,7 +59,7 @@ export const PlayerRecord: React.FC<PlayerRecordProperties> = ({
   ];
 
   return (
-    <div className="card border border-gray-200">
+    <div className="card border border-gray-200 shadow">
       <div className="card-body">
         <p className="text-center capitalize md:text-left">
           {timeClass} Record

@@ -9,7 +9,7 @@ exports[`PlayerRecords to match snapshot 1`] = `
       class="col-span-1"
     >
       <div
-        class="card border border-gray-200"
+        class="card border border-gray-200 shadow"
       >
         <div
           class="card-body"
@@ -79,7 +79,7 @@ exports[`PlayerRecords to match snapshot 1`] = `
       class="col-span-1"
     >
       <div
-        class="card border border-gray-200"
+        class="card border border-gray-200 shadow"
       >
         <div
           class="card-body"
@@ -149,7 +149,7 @@ exports[`PlayerRecords to match snapshot 1`] = `
       class="col-span-1"
     >
       <div
-        class="card border border-gray-200"
+        class="card border border-gray-200 shadow"
       >
         <div
           class="card-body"
