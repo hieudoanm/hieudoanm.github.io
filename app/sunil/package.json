@@ -25,7 +25,7 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"@apollo/client": "3.9.3",
+		"@apollo/client": "3.9.4",
 		"@apollo/datasource-rest": "6.2.2",
 		"@apollo/server": "4.10.0",
 		"@as-integrations/next": "3.0.0",
