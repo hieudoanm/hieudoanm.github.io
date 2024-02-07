@@ -1,8 +1,8 @@
 import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { Insights } from '@chess/common/types/chess';
+import { ChessTimeClass, ChessVariant } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 import { getInsights } from './service';
-import { ChessTimeClass, ChessVariant } from '@prisma/client';
 
 type PlayersParameters = { params: { username: string } };
 
