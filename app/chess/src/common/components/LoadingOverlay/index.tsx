@@ -1,4 +1,3 @@
-import { Spinner } from '@chakra-ui/react';
 import { APP_NAME } from '@chess/common/constants/app.constants';
 
 export const LoadingOverlay: React.FC = () => {
@@ -8,7 +7,7 @@ export const LoadingOverlay: React.FC = () => {
         <div className="text-center">
           <div className="flex flex-col items-center justify-center gap-y-4">
             <p className="text-teal-500">{APP_NAME}</p>
-            <Spinner color="teal.500" size="xl" />
+            <span className="loading loading-spinner loading-lg bg-teal-500" />
             <p className="text-teal-500">Loading</p>
           </div>
         </div>

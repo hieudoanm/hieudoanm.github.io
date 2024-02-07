@@ -3,17 +3,17 @@
 exports[`PlayerRecord to match snapshot 1`] = `
 <div>
   <div
-    class="chakra-card border border-gray-200 css-2dlz7"
+    class="card border border-gray-200"
   >
     <div
-      class="chakra-card__body css-0"
+      class="card-body"
     >
-      <h2
-        class="chakra-heading text-center capitalize md:text-left css-0"
+      <p
+        class="text-center capitalize md:text-left"
       >
         classical
          Record
-      </h2>
+      </p>
       <div
         class="flex h-full flex-col items-center gap-x-2 md:flex-row"
       >
@@ -34,19 +34,13 @@ exports[`PlayerRecord to match snapshot 1`] = `
             <div
               class="text-left"
             >
-              <p
-                class="chakra-text css-0"
-              >
+              <p>
                 Win
               </p>
-              <p
-                class="chakra-text css-0"
-              >
+              <p>
                 Draw
               </p>
-              <p
-                class="chakra-text css-0"
-              >
+              <p>
                 Loss
               </p>
             </div>

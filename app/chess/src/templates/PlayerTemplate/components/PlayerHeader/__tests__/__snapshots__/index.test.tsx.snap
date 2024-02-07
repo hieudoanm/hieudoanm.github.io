@@ -16,37 +16,31 @@ exports[`PlayerHeader to match snapshot 1`] = `
         <div
           class="flex items-center gap-x-2"
         >
-           
-          <span
-            class="chakra-badge css-1nt6cy7"
+          <div
+            class="badge badge-md bg-red-500 w-8 text-center"
           >
             GM
-          </span>
-          <h2
-            class="chakra-heading css-0"
-          >
+          </div>
+          <p>
             <a
               href="https://www.chess.com/member/"
               target="_blank"
             >
               <p
-                class="chakra-text text-lg uppercase md:text-2xl css-0"
+                class="text-lg uppercase md:text-2xl"
               />
             </a>
-          </h2>
+          </p>
         </div>
-        <p
-          class="chakra-text css-0"
-        />
+        <p />
       </div>
     </div>
     <div
       class="flex items-center gap-2"
     >
       <svg
-        class="chakra-icon css-g37jgb"
+        class="text-teal-500"
         fill="currentColor"
-        focusable="false"
         height="1em"
         stroke="currentColor"
         stroke-width="0"
@@ -63,13 +57,11 @@ exports[`PlayerHeader to match snapshot 1`] = `
         target="_blank"
       >
         <button
-          class="chakra-button css-4xx2wk"
+          class="bg-teal-500 text-white btn"
           type="button"
         >
           <svg
-            class="chakra-icon css-13otjrl"
             fill="currentColor"
-            focusable="false"
             height="1em"
             stroke="currentColor"
             stroke-width="0"
@@ -84,13 +76,11 @@ exports[`PlayerHeader to match snapshot 1`] = `
         </button>
       </a>
       <button
-        class="chakra-button css-4xx2wk"
+        class="bg-teal-500 btn text-white"
         type="button"
       >
         <svg
-          class="chakra-icon css-13otjrl"
           fill="currentColor"
-          focusable="false"
           height="1em"
           stroke="currentColor"
           stroke-width="0"
@@ -105,5 +95,16 @@ exports[`PlayerHeader to match snapshot 1`] = `
       </button>
     </div>
   </header>
+  <div
+    class="toast toast-center"
+  >
+    <div
+      class="alert bg-teal-500 text-white"
+    >
+      <span>
+        New mail arrived.
+      </span>
+    </div>
+  </div>
 </div>
 `;

@@ -3,23 +3,19 @@
 exports[`ChessGames to match snapshot 1`] = `
 <div>
   <div
-    class="chakra-card border border-gray-200 css-2dlz7"
+    class="card border border-gray-200"
   >
     <div
-      class="chakra-card__header css-0"
+      class="py-4 px-8 border-b"
     >
-      <h1
+      <p
         class="text-xl md:text-3xl"
       >
         Overview
-      </h1>
+      </p>
     </div>
-    <hr
-      aria-orientation="horizontal"
-      class="chakra-divider css-1upb9tn"
-    />
     <div
-      class="chakra-card__body css-0"
+      class="card-body border-b"
     >
       <div
         class="flex flex-col gap-y-4"
@@ -53,9 +49,8 @@ exports[`ChessGames to match snapshot 1`] = `
                 class="flex items-center gap-x-1 md:gap-x-2"
               >
                 <svg
-                  class="chakra-icon css-g37jgb"
+                  class="text-teal-500"
                   fill="currentColor"
-                  focusable="false"
                   height="1em"
                   stroke="currentColor"
                   stroke-width="0"
@@ -89,9 +84,8 @@ exports[`ChessGames to match snapshot 1`] = `
                 class="flex items-center gap-x-1 md:gap-x-2"
               >
                 <svg
-                  class="chakra-icon css-15t4wcl"
+                  class="text-gray-500"
                   fill="currentColor"
-                  focusable="false"
                   height="1em"
                   stroke="currentColor"
                   stroke-width="0"
@@ -125,9 +119,8 @@ exports[`ChessGames to match snapshot 1`] = `
                 class="flex items-center gap-x-1 md:gap-x-2"
               >
                 <svg
-                  class="chakra-icon css-f11o2j"
+                  class="text-red-500"
                   fill="currentColor"
-                  focusable="false"
                   height="1em"
                   stroke="currentColor"
                   stroke-width="0"
@@ -166,12 +159,8 @@ exports[`ChessGames to match snapshot 1`] = `
         </div>
       </div>
     </div>
-    <hr
-      aria-orientation="horizontal"
-      class="chakra-divider css-1upb9tn"
-    />
     <div
-      class="chakra-card__body css-0"
+      class="card-body"
     >
       <div
         class="flex flex-col gap-y-4"
@@ -210,9 +199,8 @@ exports[`ChessGames to match snapshot 1`] = `
                 class="flex items-center gap-x-1 md:gap-x-2"
               >
                 <svg
-                  class="chakra-icon css-g37jgb"
+                  class="text-teal-500"
                   fill="currentColor"
-                  focusable="false"
                   height="1em"
                   stroke="currentColor"
                   stroke-width="0"
@@ -244,9 +232,8 @@ exports[`ChessGames to match snapshot 1`] = `
                 class="flex items-center gap-x-1 md:gap-x-2"
               >
                 <svg
-                  class="chakra-icon css-15t4wcl"
+                  class="text-gray-500"
                   fill="currentColor"
-                  focusable="false"
                   height="1em"
                   stroke="currentColor"
                   stroke-width="0"
@@ -278,9 +265,8 @@ exports[`ChessGames to match snapshot 1`] = `
                 class="flex items-center gap-x-1 md:gap-x-2"
               >
                 <svg
-                  class="chakra-icon css-f11o2j"
+                  class="text-red-500"
                   fill="currentColor"
-                  focusable="false"
                   height="1em"
                   stroke="currentColor"
                   stroke-width="0"

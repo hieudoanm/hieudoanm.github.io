@@ -19,7 +19,7 @@ export const ChessHistogramChart: React.FC<{
       <div className="py-4 px-8">
         <h2 className="text-lg capitalize">{timeClass} Distribution</h2>
       </div>
-      <div className="divider" />
+      <div className="divider m-0" />
       <div className="card-body">
         <div className="aspect-video overflow-hidden">
           <ResponsiveContainer width="100%" height="100%">

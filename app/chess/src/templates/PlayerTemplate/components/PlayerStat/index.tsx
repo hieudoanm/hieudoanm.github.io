@@ -1,46 +1,37 @@
 'use client';
 
-import {
-  Icon,
-  Stat,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
-} from '@chakra-ui/react';
 import { ChessTimeClass } from '@prisma/client';
-import { IconType } from 'react-icons';
+import { ReactNode } from 'react';
 
 export type PlayerStatProperties = {
   timeClass: ChessTimeClass;
   last: number;
   best: number;
-  icon: IconType;
+  icon: ReactNode;
 };
 
 export const PlayerStat: React.FC<PlayerStatProperties> = ({
   timeClass,
   last = 0,
   best = 0,
-  icon,
+  icon = <></>,
 }) => {
   return (
     <div className="card border border-gray-200">
       <div className="card-body">
         <div className="flex items-center justify-between">
-          <Stat>
-            <StatLabel className="capitalize">{timeClass}</StatLabel>
-            <StatNumber>{last ?? 'N/A'}</StatNumber>
-            <StatHelpText className="m-0">Best: {best ?? 'N/A'}</StatHelpText>
-          </Stat>
-          {icon ? (
-            <div>
-              <div className="rounded p-2 text-white bg-teal-500">
-                <Icon as={icon} boxSize={6} />
+          <div className="stat">
+            <div className="capitalize stat-title">{timeClass}</div>
+            <div className="stat-value">{last ?? 'N/A'}</div>
+            <div className="stat-desc m-0">Best: {best ?? 'N/A'}</div>
+            {icon ? (
+              <div className="stat-figure">
+                <div className="rounded p-2 text-white bg-teal-500">{icon}</div>
               </div>
-            </div>
-          ) : (
-            <></>
-          )}
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@ const GlobalError: React.FC<{
             <div className="grow">
               <div className="flex h-full items-center justify-center shadow">
                 <div className="rounded border p-8 text-center">
-                  <h1>Something went wrong!</h1>
+                  <p>Something went wrong!</p>
                   <div>{error.message}</div>
                   <button
                     type="button"

@@ -10,7 +10,7 @@ describe('PlayerStat', () => {
         timeClass={ChessTimeClass.classical}
         last={0}
         best={0}
-        icon={FaClock}
+        icon={<FaClock />}
       />
     );
     expect(container).toMatchSnapshot();

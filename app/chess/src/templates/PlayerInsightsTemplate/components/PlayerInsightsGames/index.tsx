@@ -1,9 +1,8 @@
 'use client';
 
-import { Icon } from '@chakra-ui/react';
 import { TEAL_COLOR } from '@chess/common/constants/chess.constants';
 import { Insights } from '@chess/common/types/chess';
-import { IconType } from 'react-icons';
+import { ReactNode } from 'react';
 import { FaMinusSquare, FaPlusSquare, FaSquare } from 'react-icons/fa';
 import {
   Area,
@@ -21,13 +20,12 @@ const ChessTotal: React.FC<{
   percentage: number;
   value: number;
   label: string;
-  iconColor: string;
-  iconAs: IconType;
-}> = ({ percentage = 0, value = 0, label = '', iconColor, iconAs }) => {
+  iconAs: ReactNode;
+}> = ({ percentage = 0, value = 0, label = '', iconAs = <></> }) => {
   return (
     <div className="flex flex-col gap-y-1">
       <div className="flex items-center gap-x-1 md:gap-x-2">
-        <Icon as={iconAs} color={iconColor} />
+        {iconAs}
         <b className="text-base md:text-lg">{percentage.toFixed(2)}%</b>
       </div>
       <div className="text-right text-xs capitalize md:text-sm">
@@ -40,14 +38,13 @@ const ChessTotal: React.FC<{
 const ChessAccuracy: React.FC<{
   value: number;
   label: string;
-  iconColor: string;
-  iconAs: IconType;
-}> = ({ value = 0, label = '', iconColor, iconAs }) => {
+  iconAs: ReactNode;
+}> = ({ value = 0, label = '', iconAs = <></> }) => {
   return (
     <div className="flex flex-col gap-y-1">
       <p className="text-right text-xs capitalize md:text-sm">{label}</p>
       <div className="flex items-center gap-x-1 md:gap-x-2">
-        <Icon as={iconAs} color={iconColor} />
+        {iconAs}
         <b className="text-base md:text-lg">{value.toFixed(2)}%</b>
       </div>
     </div>
@@ -57,11 +54,10 @@ const ChessAccuracy: React.FC<{
 export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
   return (
     <div className="card border border-gray-200">
-      <div className="py-4 px-8">
-        <h1 className="text-xl md:text-3xl">Overview</h1>
+      <div className="py-4 px-8 border-b">
+        <p className="text-xl md:text-3xl">Overview</p>
       </div>
-      <div className="divider" />
-      <div className="card-body">
+      <div className="card-body border-b">
         <div className="flex flex-col gap-y-4">
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-y-2">
@@ -79,8 +75,7 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
                   100
                 }
                 label="won"
-                iconAs={FaPlusSquare}
-                iconColor="teal"
+                iconAs={<FaPlusSquare className="text-teal-500" />}
               />
               <ChessTotal
                 value={insights?.games?.draw ?? 0}
@@ -90,8 +85,7 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
                   100
                 }
                 label="drawn"
-                iconAs={FaSquare}
-                iconColor="gray"
+                iconAs={<FaSquare className="text-gray-500" />}
               />
               <ChessTotal
                 value={insights?.games?.loss ?? 0}
@@ -101,8 +95,7 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
                   100
                 }
                 label="lost"
-                iconAs={FaMinusSquare}
-                iconColor="red"
+                iconAs={<FaMinusSquare className="text-red-500" />}
               />
             </div>
           </div>
@@ -127,7 +120,6 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
           </div>
         </div>
       </div>
-      <div className="divider" />
       <div className="card-body">
         <div className="flex flex-col gap-y-4">
           <div className="flex items-center justify-between">
@@ -141,20 +133,17 @@ export const ChessGames: React.FC<{ insights: Insights }> = ({ insights }) => {
               <ChessAccuracy
                 value={insights?.accuracy?.win ?? 0}
                 label="When you win"
-                iconAs={FaPlusSquare}
-                iconColor="teal"
+                iconAs={<FaPlusSquare className="text-teal-500" />}
               />
               <ChessAccuracy
                 value={insights?.accuracy?.draw ?? 0}
                 label="When you draw"
-                iconAs={FaSquare}
-                iconColor="gray"
+                iconAs={<FaSquare className="text-gray-500" />}
               />
               <ChessAccuracy
                 value={insights?.accuracy?.loss ?? 0}
                 label="When you lose"
-                iconAs={FaMinusSquare}
-                iconColor="red"
+                iconAs={<FaMinusSquare className="text-red-500" />}
               />
             </div>
           </div>

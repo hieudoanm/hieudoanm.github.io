@@ -1,6 +1,5 @@
 'use client';
 
-import { Tag, TagCloseButton } from '@chakra-ui/react';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import names from '@chess/common/json/names.json';
 import { ChessCountry, ChessTitle } from '@prisma/client';
@@ -27,86 +26,76 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
       <header>
         <div className="grid grid-cols-1 items-center gap-2 md:grid-cols-3 md:gap-4">
           <div className="col-span-1">
-            <h1 className="text-center text-xl md:text-left md:text-3xl">
+            <p className="text-center text-xl md:text-left md:text-3xl">
               Titled ({total})
-            </h1>
+            </p>
           </div>
           <div className="col-span-2">
-            <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
-              <div className="col-span-1">
-                <select
-                  aria-label="Title"
-                  id="title"
-                  name="title"
-                  className="shadow select select-bordered"
-                  value={title}
-                  onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-                    const newTitle: string = event.target.value;
-                    setTitle(newTitle);
-                  }}>
-                  <option value="">Title</option>
-                  {titles.map(({ abbreviation, title }) => (
-                    <option key={abbreviation} value={abbreviation}>
-                      {title}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="col-span-1">
-                <select
-                  aria-label="Country"
-                  id="country"
-                  name="country"
-                  className="shadow select select-bordered"
-                  value={countryCode}
-                  onChange={(event) => {
-                    const newCountryCode: string = event.target.value;
-                    setCountryCode(newCountryCode);
-                  }}>
-                  <option value="">Country</option>
-                  {countries.map(({ cca2, name, flag }) => (
-                    <option key={cca2} value={cca2}>
-                      {flag} {name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="col-span-1">
-                <select
-                  id="timeRange"
-                  name="timeRange"
-                  className="shadow select select-bordered"
-                  value={timeRange}
-                  onChange={(event) => {
-                    const newTimeRange: string = event.target.value;
-                    setTimeRange(newTimeRange);
-                  }}>
-                  <option>Time Range</option>
-                  <option value="week">7 Days</option>
-                  <option value="month">30 Days</option>
-                  <option value="quarter">90 Days</option>
-                  <option value="year">1 Year</option>
-                </select>
-              </div>
+            <div className="join shadow w-full">
+              <select
+                aria-label="Title"
+                id="title"
+                name="title"
+                className="select select-bordered join-item w-full"
+                value={title}
+                onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                  const newTitle: string = event.target.value;
+                  setTitle(newTitle);
+                }}>
+                <option value="">Title</option>
+                {titles.map(({ abbreviation, title }) => (
+                  <option key={abbreviation} value={abbreviation}>
+                    {title}
+                  </option>
+                ))}
+              </select>
+              <select
+                aria-label="Country"
+                id="country"
+                name="country"
+                className="select select-bordered join-item w-full"
+                value={countryCode}
+                onChange={(event) => {
+                  const newCountryCode: string = event.target.value;
+                  setCountryCode(newCountryCode);
+                }}>
+                <option value="">Country</option>
+                {countries.map(({ cca2, name, flag }) => (
+                  <option key={cca2} value={cca2}>
+                    {flag} {name}
+                  </option>
+                ))}
+              </select>
+              <select
+                id="timeRange"
+                name="timeRange"
+                className="select select-bordered join-item w-full"
+                value={timeRange}
+                onChange={(event) => {
+                  const newTimeRange: string = event.target.value;
+                  setTimeRange(newTimeRange);
+                }}>
+                <option>Time Range</option>
+                <option value="week">7 Days</option>
+                <option value="month">30 Days</option>
+                <option value="quarter">90 Days</option>
+                <option value="year">1 Year</option>
+              </select>
             </div>
           </div>
         </div>
       </header>
       {title || countryCode || timeRange ? (
         <>
-          <div className="divider" />
+          <div className="divider m-0" />
           <div className="flex items-center gap-x-4">
             {title ? (
               <>
                 Title:
-                <Tag size="lg" colorScheme="teal">
+                <div className="badge bg-teal-500 text-white">
                   {title}
-                  <TagCloseButton
-                    type="button"
-                    as={FaTimes}
-                    onClick={() => setTitle('')}
-                  />
-                </Tag>
+                  <FaTimes onClick={() => setTitle('')} />
+                </div>
               </>
             ) : (
               <></>
@@ -114,14 +103,10 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
             {countryCode ? (
               <>
                 Country:
-                <Tag size="lg" colorScheme="teal">
+                <div className="badge bg-teal-500 text-white">
                   {(names as Record<string, string>)[countryCode]}
-                  <TagCloseButton
-                    type="button"
-                    as={FaTimes}
-                    onClick={() => setCountryCode('')}
-                  />
-                </Tag>
+                  <FaTimes onClick={() => setCountryCode('')} />
+                </div>
               </>
             ) : (
               <></>
@@ -129,14 +114,10 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
             {timeRange ? (
               <>
                 Time Range:
-                <Tag size="lg" colorScheme="teal">
+                <div className="badge bg-teal-500 text-white">
                   {timeRange.toUpperCase()}
-                  <TagCloseButton
-                    type="button"
-                    as={FaTimes}
-                    onClick={() => setTimeRange('')}
-                  />
-                </Tag>
+                  <FaTimes onClick={() => setTimeRange('')} />
+                </div>
               </>
             ) : (
               <></>
@@ -146,7 +127,7 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
       ) : (
         <></>
       )}
-      <div className="divider" />
+      <div className="divider m-0" />
     </>
   );
 };

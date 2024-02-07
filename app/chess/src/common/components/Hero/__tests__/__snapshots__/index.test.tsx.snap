@@ -10,30 +10,29 @@ exports[`Hero to match snapshot 1`] = `
       class="flex h-full items-center justify-center border-b bg-teal-500/50"
     >
       <div
-        class="chakra-card border border-gray-200 shadow css-2dlz7"
+        class="card border border-gray-200 shadow"
       >
         <div
-          class="chakra-card__header css-0"
+          class="py-4 px-8"
         >
-          <h2
-            class="chakra-heading text-center text-xl md:text-3xl css-0"
+          <p
+            class="text-center text-xl md:text-3xl"
           >
             chess.com Insights
-          </h2>
+          </p>
         </div>
-        <hr
-          aria-orientation="horizontal"
-          class="chakra-divider css-1upb9tn"
+        <div
+          class="divider m-0"
         />
         <div
-          class="chakra-card__body css-0"
+          class="card-body"
         >
           <div
             class="flex flex-col gap-4 text-center"
           >
             <form>
               <label
-                class="chakra-form__label truncate css-uvho5g"
+                class="truncate"
               >
                 Search with chess.com username
               </label>
@@ -41,8 +40,7 @@ exports[`Hero to match snapshot 1`] = `
                 class="flex flex  items-center justify-between gap-x-2 md:gap-x-4"
               >
                 <input
-                  aria-required="true"
-                  class="chakra-input css-0"
+                  class="input input-bordered"
                   id="username"
                   name="username"
                   placeholder="Username"
@@ -51,14 +49,11 @@ exports[`Hero to match snapshot 1`] = `
                 />
                 <button
                   aria-label="search"
-                  class="chakra-button css-p7mkev"
+                  class="bg-teal-500 text-white btn"
                   type="submit"
                 >
                   <svg
-                    aria-hidden="true"
-                    class="chakra-icon css-13otjrl"
                     fill="currentColor"
-                    focusable="false"
                     height="1em"
                     stroke="currentColor"
                     stroke-width="0"
@@ -75,16 +70,15 @@ exports[`Hero to match snapshot 1`] = `
             </form>
           </div>
         </div>
-        <hr
-          aria-orientation="horizontal"
-          class="chakra-divider css-1upb9tn"
+        <div
+          class="divider m-0"
         />
         <div
-          class="chakra-card__footer css-13o7eu2"
+          class="py-4 px-8"
         >
           <a>
             <button
-              class="chakra-button w-full css-4xx2wk"
+              class="w-full bg-teal-500 text-white btn"
               type="button"
             >
               View Demo

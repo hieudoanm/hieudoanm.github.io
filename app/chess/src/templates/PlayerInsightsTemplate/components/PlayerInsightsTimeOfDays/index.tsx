@@ -169,21 +169,19 @@ export const ChessTimeOfDays: React.FC<{ insights: Insights }> = ({
 }) => {
   return (
     <div className="card border border-gray-200">
-      <div className="py-4 px-8">
-        <h1 className="text-xl md:text-3xl">Time of Day</h1>
+      <div className="py-4 px-8 border-b">
+        <p className="text-xl md:text-3xl">Time of Day</p>
       </div>
-      <div className="divider" />
-      <div className="card-body">
+      <div className="card-body border-b">
         <ChessGamesByTimeOfDays insights={insights} />
       </div>
-      <div className="divider" />
-      <div className="card-body">
+      <div className="card-body border-b">
         <ChessAccuracyByTimeOfDays insights={insights} />
       </div>
-      <div className="divider" />
-      <div className="card-body">
+      <div className="card-body border-b">
         <ChessResultsByTimeOfDays insights={insights} />
       </div>
+      <div className="card-body" />
     </div>
   );
 };

@@ -12,9 +12,9 @@ export const PlayersDistributions: React.FC<PlayersDistributionsProperties> = ({
 
   return (
     <>
-      <h1 className="text-center text-lg md:text-left md:text-2xl">
+      <p className="text-center text-lg md:text-left md:text-2xl">
         Distribution
-      </h1>
+      </p>
       <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
         <div className="col-span-1">
           <PlayersDistribution
@@ -35,7 +35,7 @@ export const PlayersDistributions: React.FC<PlayersDistributionsProperties> = ({
           />
         </div>
       </div>
-      <div className="divider" />
+      <div className="divider m-0" />
     </>
   );
 };

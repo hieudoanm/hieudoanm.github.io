@@ -3,38 +3,27 @@
 exports[`PlayersCountriesList to match snapshot 1`] = `
 <div>
   <div
-    class="chakra-table__container css-zipzvv"
+    class="rounded border border-gray-200"
   >
-    <table
-      class="chakra-table css-0"
-    >
-      <thead
-        class="css-0"
-      >
-        <tr
-          class="css-0"
-        >
+    <table>
+      <thead>
+        <tr>
           <th
-            class="w-4 css-0"
+            class="w-4"
           >
             No
           </th>
-          <th
-            class="css-0"
-          >
+          <th>
             Country
           </th>
           <th
-            class="css-0"
-            data-is-numeric="true"
+            align="right"
           >
             Total
           </th>
         </tr>
       </thead>
-      <tbody
-        class="css-0"
-      />
+      <tbody />
     </table>
   </div>
 </div>

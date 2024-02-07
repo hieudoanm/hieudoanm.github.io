@@ -1,10 +1,3 @@
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-} from '@chakra-ui/react';
 import { FullChessPlayer } from '@chess/app/api/chess/players/service';
 import { TitleBadge } from '@chess/common/components/TitleBadge';
 import { TwitchButton } from '@chess/common/components/TwitchButton';
@@ -44,18 +37,17 @@ export const PlayersTable: React.FC<PlayersTableProperties> = ({
 
   return (
     <>
-      <h1 className="text-center text-lg md:text-left md:text-2xl">
+      <p className="text-center text-lg md:text-left md:text-2xl">
         Players ({total})
-      </h1>
-      <Accordion allowToggle className="rounded border">
-        <AccordionItem className="border-0">
-          <AccordionButton className="border-b">
+      </p>
+      <div className="rounded border">
+        <div className="collapse collapse-arrow border-0">
+          <div className="collapse-title border-b">
             <div className="flex w-full items-center justify-between">
               <div className="flex-grow text-left">Players ({total})</div>
-              <AccordionIcon />
             </div>
-          </AccordionButton>
-          <AccordionPanel padding={0}>
+          </div>
+          <div className="p-0 collapse-content">
             <div className="rounded border border-gray-200">
               <table className="table">
                 <thead>
@@ -141,9 +133,9 @@ export const PlayersTable: React.FC<PlayersTableProperties> = ({
                 </tbody>
               </table>
             </div>
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

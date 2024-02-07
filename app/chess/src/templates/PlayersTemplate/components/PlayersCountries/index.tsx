@@ -1,13 +1,5 @@
 'use client';
 
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  ButtonGroup,
-} from '@chakra-ui/react';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import { CountryTotal, PlayersCountriesList } from '../PlayersCountriesList';
 import { PlayersCountriesMaps } from '../PlayersCountriesMaps';
@@ -30,45 +22,46 @@ export const PlayersCountries: React.FC<PlayersCountriesProperties> = ({
 
   return (
     <>
-      <div className="flex justify-between">
-        <h1 className="text-center text-lg md:text-left md:text-2xl">
+      <div className="flex justify-between items-center">
+        <p className="text-center text-lg md:text-left md:text-2xl">
           Countries ({countries.length})
-        </h1>
-        <ButtonGroup isAttached className="inline-flex">
+        </p>
+        <div className="join inline-flex">
           <button
             type="button"
-            className="bg-teal-500 text-white btn"
-            // variant={view === 'maps' ? 'outline' : 'solid'}
+            className={`btn-accent btn join-item ${
+              view === 'maps' ? 'btn-outline' : 'btn-solid'
+            }`}
             onClick={() => setView(view === 'maps' ? 'list' : 'maps')}>
             List
           </button>
           <button
             type="button"
-            className="bg-teal-500 text-white btn"
-            // variant={view === 'maps' ? 'solid' : 'outline'}
+            className={`btn-accent btn join-item ${
+              view === 'maps' ? 'btn-solid' : 'btn-outline'
+            }`}
             onClick={() => setView(view === 'maps' ? 'list' : 'maps')}>
             Maps
           </button>
-        </ButtonGroup>
+        </div>
       </div>
-      <Accordion allowToggle className="rounded border">
-        <AccordionItem className="border-0">
-          <AccordionButton className="border-b">
+      <div className="rounded border collapse collapse-arrow">
+        <div className="border-0">
+          <div className="border-b collapse-title">
             <div className="flex w-full items-center justify-between">
               <div className="flex-grow text-left">Countries ({total}) </div>
-              <AccordionIcon />
             </div>
-          </AccordionButton>
-          <AccordionPanel padding={0}>
+          </div>
+          <div className="collapse-content p-0">
             {view === 'maps' ? (
               <PlayersCountriesMaps countries={countries} />
             ) : (
               <PlayersCountriesList countries={countries} />
             )}
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
-      <div className="divider" />
+          </div>
+        </div>
+      </div>
+      <div className="divider m-0" />
     </>
   );
 };

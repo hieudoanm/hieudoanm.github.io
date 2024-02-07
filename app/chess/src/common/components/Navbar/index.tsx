@@ -41,13 +41,13 @@ export const MobileDrawer: React.FC<{
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader>{APP_NAME}</DrawerHeader>
-        <div className="divider" />
+        <div className="divider m-0" />
         <DrawerBody>
           <div className="flex flex-col gap-y-4">
             <Link href="/players">
               <p>Players</p>
             </Link>
-            <div className="divider" />
+            <div className="divider m-0" />
             <Link href="/openings">
               <p>Openings</p>
             </Link>
@@ -57,7 +57,7 @@ export const MobileDrawer: React.FC<{
             <GitHubButton size="md" />
           </div>
         </DrawerBody>
-        <div className="divider" />
+        <div className="divider m-0" />
         <DrawerFooter justifyContent="start">
           &copy; {YEAR} {APP_NAME}
         </DrawerFooter>

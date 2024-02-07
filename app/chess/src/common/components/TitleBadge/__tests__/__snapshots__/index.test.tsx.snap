@@ -2,10 +2,10 @@
 
 exports[`TitleBadge to match snapshot 1`] = `
 <div>
-  <span
-    class="chakra-badge css-1nt6cy7"
+  <div
+    class="badge badge-md bg-red-500 w-8 text-center"
   >
     GM
-  </span>
+  </div>
 </div>
 `;

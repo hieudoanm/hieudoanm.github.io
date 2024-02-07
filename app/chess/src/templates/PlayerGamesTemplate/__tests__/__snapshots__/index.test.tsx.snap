@@ -6,29 +6,28 @@ exports[`PlayerGamesTemplate to match snapshot 1`] = `
     class="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8"
   >
     <div
-      class="chakra-card border border-gray-200 shadow css-2dlz7"
+      class="card border border-gray-200 shadow"
     >
       <div
-        class="chakra-card__header css-0"
+        class="py-4 px-8"
       >
+         
         <div
           class="flex items-center justify-between"
         >
-          <h2
-            class="chakra-heading text-xl css-0"
+          <p
+            class="text-xl"
           >
             Games (
             0
             )
-          </h2>
+          </p>
           <button
-            class="chakra-button css-4xx2wk"
+            class="bg-teal-500 text-white btn"
             type="button"
           >
             <svg
-              class="chakra-icon css-13otjrl"
               fill="currentColor"
-              focusable="false"
               height="1em"
               stroke="currentColor"
               stroke-width="0"
@@ -43,10 +42,20 @@ exports[`PlayerGamesTemplate to match snapshot 1`] = `
           </button>
         </div>
       </div>
-      <ul
-        class="flex flex-col gap-y-2 css-155za0w"
-        role="list"
+      <div
+        class="flex flex-col gap-y-2"
       />
+    </div>
+  </div>
+  <div
+    class="toast toast-center"
+  >
+    <div
+      class="alert bg-teal-500 text-white"
+    >
+      <span>
+        New mail arrived.
+      </span>
     </div>
   </div>
 </div>

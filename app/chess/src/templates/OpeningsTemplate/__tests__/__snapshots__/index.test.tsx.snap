@@ -8,86 +8,53 @@ exports[`OpeningsTemplate to match snapshot 1`] = `
     <div
       class="flex items-center justify-between"
     >
-      <h2
-        class="chakra-heading css-0"
-      >
+      <p>
         Openings (
         0
         )
-      </h2>
+      </p>
       <div>
-        <div
-          class="chakra-select__wrapper css-42b2qy"
+        <select
+          aria-label="ECO"
+          class="shadow select select-bordered"
+          id="eco"
+          name="eco"
         >
-          <select
-            aria-label="ECO"
-            class="chakra-select shadow css-1ik61og"
-            id="eco"
-            name="eco"
+          <option
+            value=""
           >
-            <option
-              value=""
-            >
-              ECO
-            </option>
-          </select>
-          <div
-            class="chakra-select__icon-wrapper css-162mkon"
-          >
-            <svg
-              aria-hidden="true"
-              class="chakra-select__icon"
-              focusable="false"
-              role="presentation"
-              style="width: 1em; height: 1em; color: currentColor;"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
+            ECO
+          </option>
+        </select>
       </div>
     </div>
     <div
-      class="chakra-table__container overflow-hidden rounded border border-gray-200 shadow css-zipzvv"
+      class="overflow-hidden rounded border border-gray-200 shadow"
     >
       <table
-        class="chakra-table css-0"
+        class="table"
       >
-        <thead
-          class="css-0"
-        >
-          <tr
-            class="css-0"
-          >
+        <thead>
+          <tr>
             <th
-              class="w-4 css-0"
+              class="w-4"
             >
               No
             </th>
             <th
-              class="w-4 css-0"
+              class="w-4"
             >
               ECO
             </th>
-            <th
-              class="css-0"
-            >
+            <th>
               Name
             </th>
-            <th
-              class="css-0"
-            >
+            <th>
               FEN
             </th>
           </tr>
         </thead>
-        <tbody
-          class="css-0"
-        />
+        <tbody />
       </table>
     </div>
   </div>

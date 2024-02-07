@@ -26,14 +26,16 @@ export const PlayersStats: React.FC<PlayersStatsProperties> = ({
 
   return (
     <>
-      <h1 className="text-center text-lg md:text-left md:text-2xl">Stats</h1>
-      <div className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-8">
+      <p className="text-center text-lg md:text-left sm:text-xl md:text-2xl">
+        Stats
+      </p>
+      <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-3 sm:gap-x-8">
         <div className="col-span-1">
           <PlayersStat
             title="Rapid"
             average={stats.rapid.average}
             max={stats.rapid.max}
-            icon={FaClock}
+            icon={<FaClock size={16} />}
           />
         </div>
         <div className="col-span-1">
@@ -41,7 +43,7 @@ export const PlayersStats: React.FC<PlayersStatsProperties> = ({
             title="Blitz"
             average={stats.blitz.average}
             max={stats.blitz.max}
-            icon={FaBolt}
+            icon={<FaBolt size={16} />}
           />
         </div>
         <div className="col-span-1">
@@ -49,11 +51,11 @@ export const PlayersStats: React.FC<PlayersStatsProperties> = ({
             title="Bullet"
             average={stats.bullet.average}
             max={stats.bullet.max}
-            icon={FaRocket}
+            icon={<FaRocket size={16} />}
           />
         </div>
       </div>
-      <div className="divider" />
+      <div className="divider m-0" />
     </>
   );
 };

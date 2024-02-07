@@ -61,9 +61,9 @@ export const PlayerRecord: React.FC<PlayerRecordProperties> = ({
   return (
     <div className="card border border-gray-200">
       <div className="card-body">
-        <h1 className="text-center capitalize md:text-left">
+        <p className="text-center capitalize md:text-left">
           {timeClass} Record
-        </h1>
+        </p>
         <div className="flex h-full flex-col items-center gap-x-2 md:flex-row">
           <div className="h-[180px] w-[180px]">
             <ResponsiveContainer width="100%" height="100%">

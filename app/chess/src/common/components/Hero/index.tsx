@@ -18,9 +18,9 @@ export const Hero: React.FC = () => {
       <div className="flex h-full items-center justify-center border-b bg-teal-500/50">
         <div className="card border border-gray-200 shadow">
           <div className="py-4 px-8">
-            <h1 className="text-center text-xl md:text-3xl">{APP_NAME}</h1>
+            <p className="text-center text-xl md:text-3xl">{APP_NAME}</p>
           </div>
-          <div className="divider" />
+          <div className="divider m-0" />
           <div className="card-body">
             <div className="flex flex-col gap-4 text-center">
               <form
@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
               </form>
             </div>
           </div>
-          <div className="divider" />
+          <div className="divider m-0" />
           <div className="py-4 px-8">
             <ScrollLink to="demo" smooth={true} spy={true} duration={500}>
               <button

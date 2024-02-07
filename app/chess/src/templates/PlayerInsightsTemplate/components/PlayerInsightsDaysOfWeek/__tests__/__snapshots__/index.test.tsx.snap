@@ -3,23 +3,19 @@
 exports[`ChessDaysOfWeek to match snapshot 1`] = `
 <div>
   <div
-    class="chakra-card border border-gray-200 css-2dlz7"
+    class="card border border-gray-200"
   >
     <div
-      class="chakra-card__header css-0"
+      class="py-4 px-8 border-b"
     >
-      <h1
+      <p
         class="text-xl md:text-3xl"
       >
         Day of Week
-      </h1>
+      </p>
     </div>
-    <hr
-      aria-orientation="horizontal"
-      class="chakra-divider css-1upb9tn"
-    />
     <div
-      class="chakra-card__body css-0"
+      class="card-body border-b"
     >
       <div
         class="flex flex-col gap-y-4"
@@ -31,12 +27,8 @@ exports[`ChessDaysOfWeek to match snapshot 1`] = `
         </h2>
       </div>
     </div>
-    <hr
-      aria-orientation="horizontal"
-      class="chakra-divider css-1upb9tn"
-    />
     <div
-      class="chakra-card__body css-0"
+      class="card-body border-b"
     >
       <div
         class="flex flex-col gap-y-4"
@@ -48,12 +40,8 @@ exports[`ChessDaysOfWeek to match snapshot 1`] = `
         </h2>
       </div>
     </div>
-    <hr
-      aria-orientation="horizontal"
-      class="chakra-divider css-1upb9tn"
-    />
     <div
-      class="chakra-card__body css-0"
+      class="card-body border-b"
     >
       <div
         class="flex flex-col gap-y-4"
@@ -65,6 +53,9 @@ exports[`ChessDaysOfWeek to match snapshot 1`] = `
         </h2>
       </div>
     </div>
+    <div
+      class="card-body"
+    />
   </div>
 </div>
 `;

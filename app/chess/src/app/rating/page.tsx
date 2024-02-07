@@ -33,7 +33,7 @@ const RatingPage: NextPage<RatingPageProperties> = ({
         <title>{APP_NAME} - Rating</title>
       </Head>
       <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
-        <h1>Rating</h1>
+        <p>Rating</p>
       </div>
     </>
   );

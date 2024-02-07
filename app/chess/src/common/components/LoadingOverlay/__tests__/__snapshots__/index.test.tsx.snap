@@ -15,21 +15,15 @@ exports[`LoadingOverlay to match snapshot 1`] = `
           class="flex flex-col items-center justify-center gap-y-4"
         >
           <p
-            class="chakra-text css-1856l8r"
+            class="text-teal-500"
           >
             chess.com Insights
           </p>
-          <div
-            class="chakra-spinner css-1nh7m0o"
-          >
-            <span
-              class="css-8b45rq"
-            >
-              Loading...
-            </span>
-          </div>
+          <span
+            class="loading loading-spinner loading-lg bg-teal-500"
+          />
           <p
-            class="chakra-text css-1856l8r"
+            class="text-teal-500"
           >
             Loading
           </p>

@@ -15,7 +15,7 @@ export const GET = async (
     (searchParams.get('variant') as ChessVariant) ?? 'chess';
   const timeClass: ChessTimeClass =
     (searchParams.get('timeClass') as ChessTimeClass) ?? 'blitz';
-  const rated: boolean = searchParams.get('rated') === 'true' ?? 'true';
+  const rated: boolean = (searchParams.get('rated') ?? 'true') === 'true';
   const username: string = params.username ?? '';
 
   const insights: Insights = await getInsights({
