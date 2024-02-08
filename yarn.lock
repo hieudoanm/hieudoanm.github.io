@@ -5167,10 +5167,10 @@
     "@types/connect" "*"
     "@types/node" "*"
 
-"@types/chroma-js@2.4.3":
-  version "2.4.3"
-  resolved "https://registry.npmjs.org/@types/chroma-js/-/chroma-js-2.4.3.tgz"
-  integrity sha512-1ly5ly/7S/YF8aD7MxUQnFOZxdegimuOunJl0xDsLlguu5JrwuSTVGVH3UpIUlh6YauI0RMNT4cqjBonhgbdIQ==
+"@types/chroma-js@2.4.4":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@types/chroma-js/-/chroma-js-2.4.4.tgz#254dddff54568ff8e5d0dcdb071871a458fdfd31"
+  integrity sha512-/DTccpHTaKomqussrn+ciEvfW4k6NAHzNzs/sts1TCqg333qNxOhy8TNIoQCmbGG3Tl8KdEhkGAssb1n3mTXiQ==
 
 "@types/connect@*":
   version "3.4.38"
