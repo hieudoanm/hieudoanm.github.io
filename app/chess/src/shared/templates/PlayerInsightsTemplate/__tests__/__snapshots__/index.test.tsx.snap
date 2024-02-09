@@ -1,0 +1,804 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayerInsightsTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-y-6 py-6 md:gap-y-8 md:py-8 lg:gap-y-10 lg:py-10"
+  >
+    <header
+      class="flex items-center justify-between gap-x-2"
+    >
+      <div
+        class="flex items-center gap-x-2 md:gap-x-4"
+      >
+        <div
+          class="aspect-square w-16 rounded-xl border bg-contain bg-center"
+          style="background-image: url();"
+        />
+        <div>
+          <div
+            class="flex items-center gap-x-2"
+          >
+            <p>
+              <a
+                href="https://www.chess.com/member/"
+                target="_blank"
+              >
+                <p
+                  class="text-lg uppercase md:text-xl"
+                />
+              </a>
+            </p>
+          </div>
+          <p
+            class="truncate"
+          />
+        </div>
+      </div>
+      <div
+        class="join shadow"
+      >
+        <select
+          class="select select-bordered join-item w-full"
+          id="timeClass"
+          name="timeClass"
+        >
+          <option
+            value="daily"
+          >
+            Daily
+          </option>
+          <option
+            value="rapid"
+          >
+            Rapid
+          </option>
+          <option
+            value="blitz"
+          >
+            Blitz
+          </option>
+          <option
+            value="bullet"
+          >
+            Bullet
+          </option>
+        </select>
+        <select
+          class="select select-bordered join-item w-full"
+          id="variant"
+          name="variant"
+        >
+          <option
+            value="chess"
+          >
+            Chess
+          </option>
+          <option
+            value="chess960"
+          >
+            Chess960
+          </option>
+        </select>
+      </div>
+    </header>
+    <div
+      class="text-center"
+    >
+      <div
+        class="text-lg md:text-xl lg:text-2xl"
+      >
+        <div
+          class="flex items-center justify-center gap-x-2"
+        >
+          <svg
+            class="text-teal-500"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm64 64v64h64V96h64v64h64V96h64v64H320v64h64v64H320v64h64v64H320V352H256v64H192V352H128v64H64V352h64V288H64V224h64V160H64V96h64zm64 128h64V160H192v64zm0 64V224H128v64h64zm64 0H192v64h64V288zm0 0h64V224H256v64z"
+            />
+          </svg>
+           Games
+        </div>
+      </div>
+      <p
+        class="text-xs md:text-sm lg:text-base"
+      >
+        How accurately are you playing in your games?
+      </p>
+    </div>
+    <div
+      class="card border border-gray-200 shadow"
+    >
+      <div
+        class="py-4 px-8 border-b"
+      >
+        <div
+          class="text-base md:text-lg lg:text-xl"
+        >
+          <div
+            class="flex items-center gap-x-2"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+            Overview
+          </div>
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <div
+            class="flex items-center justify-between"
+          >
+            <div
+              class="flex flex-col gap-y-2"
+            >
+              <p
+                class="text-base md:text-lg"
+              >
+                Games played
+              </p>
+              <p
+                class="text-lg md:text-xl"
+              >
+                <b>
+                  0
+                </b>
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-x-2 md:gap-x-4"
+            >
+              <div
+                class="flex flex-col gap-y-1"
+              >
+                <div
+                  class="flex items-center gap-x-1 md:gap-x-2"
+                >
+                  <svg
+                    class="text-teal-500"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-32 252c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92H92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+                    />
+                  </svg>
+                  <b
+                    class="text-base md:text-lg"
+                  >
+                    0.00
+                    %
+                  </b>
+                </div>
+                <div
+                  class="text-right text-xs capitalize md:text-sm"
+                >
+                  0
+                   
+                  won
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-y-1"
+              >
+                <div
+                  class="flex items-center gap-x-1 md:gap-x-2"
+                >
+                  <svg
+                    class="text-gray-500"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"
+                    />
+                  </svg>
+                  <b
+                    class="text-base md:text-lg"
+                  >
+                    0.00
+                    %
+                  </b>
+                </div>
+                <div
+                  class="text-right text-xs capitalize md:text-sm"
+                >
+                  0
+                   
+                  drawn
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-y-1"
+              >
+                <div
+                  class="flex items-center gap-x-1 md:gap-x-2"
+                >
+                  <svg
+                    class="text-red-500"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM92 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H92z"
+                    />
+                  </svg>
+                  <b
+                    class="text-base md:text-lg"
+                  >
+                    0.00
+                    %
+                  </b>
+                </div>
+                <div
+                  class="text-right text-xs capitalize md:text-sm"
+                >
+                  0
+                   
+                  lost
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="aspect-video"
+          >
+            <div
+              class="recharts-responsive-container"
+              style="width: 100%; height: 100%; min-width: 0;"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <div
+            class="flex items-center justify-between"
+          >
+            <div
+              class="flex flex-col gap-y-2"
+            >
+              <p
+                class="text-base md:text-lg"
+              >
+                Average accuracy
+              </p>
+              <p
+                class="text-lg md:text-xl"
+              >
+                <b>
+                  0
+                </b>
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-x-2 md:gap-x-4"
+            >
+              <div
+                class="flex flex-col gap-y-1"
+              >
+                <p
+                  class="text-right text-xs capitalize md:text-sm"
+                >
+                  When you win
+                </p>
+                <div
+                  class="flex items-center gap-x-1 md:gap-x-2"
+                >
+                  <svg
+                    class="text-teal-500"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-32 252c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92H92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+                    />
+                  </svg>
+                  <b
+                    class="text-base md:text-lg"
+                  >
+                    0.00
+                    %
+                  </b>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-y-1"
+              >
+                <p
+                  class="text-right text-xs capitalize md:text-sm"
+                >
+                  When you draw
+                </p>
+                <div
+                  class="flex items-center gap-x-1 md:gap-x-2"
+                >
+                  <svg
+                    class="text-gray-500"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"
+                    />
+                  </svg>
+                  <b
+                    class="text-base md:text-lg"
+                  >
+                    0.00
+                    %
+                  </b>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-y-1"
+              >
+                <p
+                  class="text-right text-xs capitalize md:text-sm"
+                >
+                  When you lose
+                </p>
+                <div
+                  class="flex items-center gap-x-1 md:gap-x-2"
+                >
+                  <svg
+                    class="text-red-500"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM92 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H92z"
+                    />
+                  </svg>
+                  <b
+                    class="text-base md:text-lg"
+                  >
+                    0.00
+                    %
+                  </b>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="aspect-video"
+          >
+            <div
+              class="recharts-responsive-container"
+              style="width: 100%; height: 100%; min-width: 0;"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Results by Time of Day
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="card border border-gray-200 shadow"
+    >
+      <div
+        class="py-4 px-8 border-b"
+      >
+        <div
+          class="text-base md:text-lg lg:text-xl"
+        >
+          <div
+            class="flex items-center gap-x-2"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"
+              />
+            </svg>
+            Game Results
+          </div>
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Games you won by ...
+          </p>
+          <div
+            class="rounded-2xl bg-gray-100 p-8"
+          >
+            <div
+              class="aspect-video"
+            >
+              <div
+                class="recharts-responsive-container"
+                style="width: 100%; height: 100%; min-width: 0;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Games you drawn by ...
+          </p>
+          <div
+            class="rounded-2xl bg-gray-100 p-8"
+          >
+            <div
+              class="aspect-video"
+            >
+              <div
+                class="recharts-responsive-container"
+                style="width: 100%; height: 100%; min-width: 0;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Games you lost by ...
+          </p>
+          <div
+            class="rounded-2xl bg-gray-100 p-8"
+          >
+            <div
+              class="aspect-video"
+            >
+              <div
+                class="recharts-responsive-container"
+                style="width: 100%; height: 100%; min-width: 0;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      />
+    </div>
+    <div
+      class="text-center"
+    >
+      <div
+        class="text-lg md:text-xl lg:text-2xl"
+      >
+        <div
+          class="flex items-center justify-center gap-x-2"
+        >
+          <svg
+            class="text-teal-500"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"
+            />
+          </svg>
+           Calendar
+        </div>
+      </div>
+      <p
+        class="text-xs md:text-sm lg:text-base"
+      >
+        When do you play your best?
+      </p>
+    </div>
+    <div
+      class="card border border-gray-200 shadow"
+    >
+      <div
+        class="py-4 px-8 border-b"
+      >
+        <div
+          class="text-base md:text-lg lg:text-xl"
+        >
+          Time of Day
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Games by Time of Day
+          </p>
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Accuracy by Time of Day
+          </p>
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Results by Time of Day
+          </p>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      />
+    </div>
+    <div
+      class="card border border-gray-200 shadow"
+    >
+      <div
+        class="py-4 px-8 border-b"
+      >
+        <div
+          class="text-base md:text-lg lg:text-xl"
+        >
+          Day of Week
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Games by Days of Week
+          </p>
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Accuracy by Days of Week
+          </p>
+        </div>
+      </div>
+      <div
+        class="card-body border-b"
+      >
+        <div
+          class="flex flex-col gap-y-4"
+        >
+          <p
+            class="font-bold"
+          >
+            Results by Days of Week
+          </p>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      />
+    </div>
+    <div
+      class="card border border-gray-200 shadow"
+    >
+      <div
+        class="py-4 px-8 border-b"
+      >
+        <div
+          class="text-base md:text-lg lg:text-xl"
+        >
+          Opponents
+        </div>
+      </div>
+      <div
+        class="w-full overflow-x-auto"
+      >
+        <table
+          class="table"
+        >
+          <thead>
+            <tr
+              class="px-8"
+            >
+              <th
+                align="left"
+                class="pl-8"
+              >
+                No
+              </th>
+              <th>
+                Opponent
+              </th>
+              <th
+                align="right"
+              >
+                <button
+                  class="cursor-pointer capitalize"
+                  type="button"
+                >
+                  Games
+                </button>
+              </th>
+              <th
+                align="right"
+              >
+                <div
+                  class="flex items-center justify-end gap-2"
+                >
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    Win
+                  </button>
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    (%)
+                  </button>
+                </div>
+              </th>
+              <th
+                align="right"
+              >
+                <div
+                  class="flex items-center justify-end gap-2"
+                >
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    Draw
+                  </button>
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    (%)
+                  </button>
+                </div>
+              </th>
+              <th
+                align="right"
+                class="pr-8"
+              >
+                <div
+                  class="flex items-center justify-end gap-2"
+                >
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    Loss
+                  </button>
+                  <button
+                    class="cursor-pointer capitalize"
+                    type="button"
+                  >
+                    (%)
+                  </button>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody />
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;

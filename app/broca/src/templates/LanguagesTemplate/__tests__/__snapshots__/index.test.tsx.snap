@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LanguagesTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="card border border-gray-200"
+  >
+    <div
+      class="border-b py-2 px-4"
+    >
+      <div
+        class="flex items-center justify-between"
+      >
+        <h1
+          class="text-xl"
+        >
+          Languages (
+          0
+          )
+        </h1>
+        <div
+          class="flex items-center gap-x-2 md:gap-x-4"
+        >
+          <input
+            class="toggle toggle-success"
+            id="duolingo"
+            name="duolingo"
+            title="duolingo"
+            type="checkbox"
+          />
+          <div>
+            <select
+              class="select select-bordered"
+              id="category"
+              name="category"
+            >
+              <option>
+                Category
+              </option>
+              <option
+                value="1"
+              >
+                1
+              </option>
+              <option
+                value="2"
+              >
+                2
+              </option>
+              <option
+                value="3"
+              >
+                3
+              </option>
+              <option
+                value="4"
+              >
+                4
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <table
+        class="table"
+      >
+        <caption
+          class="py-4 border-b"
+        >
+          Languages (
+          0
+          )
+        </caption>
+        <thead>
+          <tr>
+            <th>
+              Code
+            </th>
+            <th
+              align="right"
+              class="w-8"
+            >
+              Name
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,4 @@
+type Title {
+  abbreviation: TitleAbbreviation
+  title: String
+}

@@ -1,0 +1,156 @@
+openapi: 3.0.0
+paths:
+  /v1/health:
+    get:
+      operationId: HealthController_getHealth
+      parameters: []
+      responses:
+        "200":
+          description: State of the Server
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponseDto"
+      tags:
+        - health
+  /v1/organizations:
+    get:
+      operationId: OrganizationsController_getOrganizations
+      parameters: []
+      responses:
+        "200":
+          description: List of Organizations
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrganizationsResponseDto"
+      tags: &a1
+        - organizations
+  /v1/organizations/{code}:
+    get:
+      operationId: OrganizationsController_getOrganization
+      parameters:
+        - name: code
+          required: true
+          in: path
+          description: Organization Code
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Get Organization by Code
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrganizationDto"
+      tags: *a1
+  /v1/vietnam/ethnic-groups:
+    get:
+      operationId: VietnamController_getEthnicGroups
+      parameters: []
+      responses:
+        "200":
+          description: List of Ethnic Groups
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EthnicGroupsResponseDto"
+      tags: &a2
+        - vietnam
+  /v1/vietnam/license-plates:
+    get:
+      operationId: VietnamController_getLicensePlates
+      parameters: []
+      responses:
+        "200":
+          description: List of License Plates
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LicensePlatesResponseDto"
+      tags: *a2
+  /v1/vietnam/license-plates/{code}:
+    get:
+      operationId: VietnamController_getLicensePlate
+      parameters:
+        - name: code
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Get License Plate by Code
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LicensePlateDto"
+      tags: *a2
+info:
+  title: hieudoanm
+  description: Hieu Doan
+  version: "1.0"
+  contact: {}
+tags: []
+servers: []
+components:
+  schemas:
+    HealthResponseDto:
+      type: object
+      properties:
+        status:
+          type: string
+          default: ""
+      required:
+        - status
+    OrganizationDto:
+      type: object
+      properties: {}
+    OrganizationsResponseDto:
+      type: object
+      properties:
+        total:
+          type: number
+          default: 0
+        organizations:
+          default: []
+          type: array
+          items:
+            $ref: "#/components/schemas/OrganizationDto"
+      required:
+        - total
+        - organizations
+    EthnicGroupDto:
+      type: object
+      properties: {}
+    EthnicGroupsResponseDto:
+      type: object
+      properties:
+        total:
+          type: number
+          default: 0
+        ethnicGroups:
+          default: []
+          type: array
+          items:
+            $ref: "#/components/schemas/EthnicGroupDto"
+      required:
+        - total
+        - ethnicGroups
+    LicensePlateDto:
+      type: object
+      properties: {}
+    LicensePlatesResponseDto:
+      type: object
+      properties:
+        total:
+          type: number
+          default: 0
+        licensePlates:
+          default: []
+          type: array
+          items:
+            $ref: "#/components/schemas/LicensePlateDto"
+      required:
+        - total
+        - licensePlates

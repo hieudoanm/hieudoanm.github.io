@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingOverlay to match snapshot 1`] = `
+<div>
+  <div
+    class="fixed right-0 top-0 z-50 h-screen w-screen bg-white/90"
+  >
+    <div
+      class="flex h-full w-full items-center justify-center"
+    >
+      <div
+        class="text-center"
+      >
+        <div
+          class="flex flex-col items-center justify-center gap-y-4"
+        >
+          <p
+            class="text-teal-500"
+          >
+            chess.com Insights
+          </p>
+          <span
+            class="loading loading-spinner loading-lg bg-teal-500"
+          />
+          <p
+            class="text-teal-500"
+          >
+            Loading
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

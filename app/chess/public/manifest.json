@@ -1,0 +1,28 @@
+{
+	"theme_color": "#ffffff",
+	"background_color": "#ffffff",
+	"display": "standalone",
+	"scope": "/",
+	"start_url": "/",
+	"name": "Chess Insights",
+	"short_name": "mini",
+	"description": "chess.com Insights",
+	"orientation": "landscape",
+	"icons": [
+		{
+			"src": "/icons/128x128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "/icons/256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "/icons/512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

@@ -1,0 +1,232 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  schemas   = ["chess"]
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+  binaryTargets   = ["native", "debian-openssl-1.1.x"]
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+}
+
+model ChessPlayer {
+  id          Int                     @id
+  username    String                  @unique @db.VarChar(255)
+  name        String                  @default("") @db.VarChar(255)
+  location    String                  @default("") @db.VarChar(255)
+  country     ChessCountry            @relation(fields: [countryCode], references: [cca2])
+  countryCode String                  @default("") @db.VarChar(255)
+  avatar      String                  @default("") @db.VarChar(255)
+  twitchUrl   String                  @default("") @db.VarChar(255)
+  followers   Int                     @default(0) @db.Integer
+  isStreamer  Boolean                 @default(false) @db.Boolean
+  verified    Boolean                 @default(false) @db.Boolean
+  lastOnline  DateTime                @default(now()) @db.Timestamptz
+  joined      DateTime                @default(now()) @db.Timestamptz
+  status      ChessStatus             @default(basic)
+  title       ChessTitleAbbreviation?
+  league      ChessLeague?
+  archives    String[]                @default([])
+
+  stats ChessStats[]
+
+  createdAt DateTime? @default(now()) @db.Timestamptz
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+
+  @@schema("chess")
+}
+
+model ChessTitle {
+  abbreviation ChessTitleAbbreviation @id
+  title        String                 @default("") @db.VarChar(255)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+
+  @@schema("chess")
+}
+
+model ChessCountry {
+  cca2 String @unique @default("") @db.VarChar(255)
+  cca3 String @unique @default("") @db.VarChar(255)
+  name String @default("") @db.VarChar(255)
+  flag String @default("") @db.VarChar(255)
+
+  players ChessPlayer[]
+
+  @@id([cca2, cca3])
+  @@schema("chess")
+}
+
+enum ChessStatus {
+  basic
+  premium
+  staff
+  mod
+  closed
+
+  @@schema("chess")
+}
+
+enum ChessLeague {
+  Wood
+  Stone
+  Bronze
+  Silver
+  Crystal
+  Elite
+  Champion
+  Legend
+
+  @@schema("chess")
+}
+
+enum ChessTitleAbbreviation {
+  GM
+  WGM
+  IM
+  WIM
+  FM
+  WFM
+  CM
+  WCM
+  NM
+  WNM
+  AGM
+  AIM
+  AFM
+  ACM
+
+  @@schema("chess")
+}
+
+model ChessStats {
+  player    ChessPlayer    @relation(fields: [playerId], references: [id])
+  playerId  Int
+  timeClass ChessTimeClass @default(daily)
+  best      Int            @default(0) @db.SmallInt
+  last      Int            @default(0) @db.SmallInt
+  deviation Int            @default(0) @db.SmallInt
+  win       Int            @default(0) @db.Integer
+  draw      Int            @default(0) @db.Integer
+  loss      Int            @default(0) @db.Integer
+
+  createdAt DateTime? @default(now()) @db.Timestamptz
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+
+  @@id([playerId, timeClass])
+  @@schema("chess")
+}
+
+enum ChessTimeClass {
+  daily
+  classical
+  rapid
+  blitz
+  bullet
+
+  @@schema("chess")
+}
+
+model ChessGame {
+  id            String         @id
+  url           String         @default("") @db.Text()
+  pgn           String         @default("") @db.Text()
+  timeControl   String         @default("") @db.Text()
+  timeClass     ChessTimeClass @default(daily)
+  endTime       DateTime       @default(now()) @db.Timestamptz
+  rated         Boolean        @default(false) @db.Boolean
+  tcn           String         @default("") @db.Text()
+  initialSetup  String         @default("") @db.Text()
+  rules         ChessVariant   @default(chess)
+  fen           String         @default("") @db.Text()
+  whiteAccuracy Float          @default(0) @db.Real
+  blackAccuracy Float          @default(0) @db.Real
+  whiteUsername String         @default("") @db.Text()
+  blackUsername String         @default("") @db.Text()
+  whiteResult   ChessResult    @default(checkmated)
+  blackResult   ChessResult    @default(checkmated)
+  whiteRating   Int            @default(0) @db.SmallInt
+  blackRating   Int            @default(0) @db.SmallInt
+  createdAt     DateTime?      @default(now()) @db.Timestamptz
+  updatedAt     DateTime?      @default(now()) @updatedAt @db.Timestamptz
+
+  @@schema("chess")
+}
+
+enum ChessResult {
+  win
+  fiftymove
+  agreed
+  insufficient
+  repetition
+  stalemate
+  timevsinsufficient
+  checkmated
+  resigned
+  timeout
+  abandoned
+  bughousepartnerlose
+  threecheck
+  kingofthehill
+
+  @@schema("chess")
+}
+
+enum ChessVariant {
+  bughouse
+  chess
+  chess960
+  crazyhouse
+  kingofthehill
+  oddschess
+  threecheck
+
+  @@schema("chess")
+}
+
+enum ChessPiece {
+  king
+  queen
+  rook
+  bishop
+  knight
+  pawn
+
+  @@schema("chess")
+}
+
+enum ChessSide {
+  white
+  black
+
+  @@schema("chess")
+}
+
+model ChessOpening {
+  eco  String @default("") @db.VarChar(255)
+  name String @default("") @db.VarChar(255)
+  fen  String @default("") @db.VarChar(255)
+  pgn  String @default("") @db.VarChar(255)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+
+  @@id([eco, name, pgn])
+  @@schema("chess")
+}

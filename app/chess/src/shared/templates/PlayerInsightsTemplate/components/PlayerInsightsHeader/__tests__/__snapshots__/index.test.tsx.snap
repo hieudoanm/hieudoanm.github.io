@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayerInsightsHeader to match snapshot 1`] = `
+<div>
+  <header
+    class="flex items-center justify-between gap-x-2"
+  >
+    <div
+      class="flex items-center gap-x-2 md:gap-x-4"
+    >
+      <div
+        class="aspect-square w-16 rounded-xl border bg-contain bg-center"
+        style="background-image: url();"
+      />
+      <div>
+        <div
+          class="flex items-center gap-x-2"
+        >
+          <div
+            class="text-white bg-red-500 w-12 text-xs h-4 leading-4 text-center rounded"
+          >
+            GM
+          </div>
+          <p>
+            <a
+              href="https://www.chess.com/member/"
+              target="_blank"
+            >
+              <p
+                class="text-lg uppercase md:text-xl"
+              />
+            </a>
+          </p>
+        </div>
+        <p
+          class="truncate"
+        />
+      </div>
+    </div>
+    <div
+      class="join shadow"
+    >
+      <select
+        class="select select-bordered join-item w-full"
+        id="timeClass"
+        name="timeClass"
+      >
+        <option
+          value="daily"
+        >
+          Daily
+        </option>
+        <option
+          value="rapid"
+        >
+          Rapid
+        </option>
+        <option
+          value="blitz"
+        >
+          Blitz
+        </option>
+        <option
+          value="bullet"
+        >
+          Bullet
+        </option>
+      </select>
+      <select
+        class="select select-bordered join-item w-full"
+        id="variant"
+        name="variant"
+      >
+        <option
+          value="chess"
+        >
+          Chess
+        </option>
+        <option
+          value="chess960"
+        >
+          Chess960
+        </option>
+      </select>
+    </div>
+  </header>
+</div>
+`;

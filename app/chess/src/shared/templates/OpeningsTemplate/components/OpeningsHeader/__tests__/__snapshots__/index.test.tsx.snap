@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpeningsHeader to match snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center justify-between"
+  >
+    <div
+      class="text-xl md:text-2xl lg:text-3xl"
+    >
+      Openings (
+      0
+      )
+    </div>
+    <div>
+      <select
+        aria-label="ECO"
+        class="shadow select select-bordered"
+        id="eco"
+        name="eco"
+      >
+        <option
+          value=""
+        >
+          ECO
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;

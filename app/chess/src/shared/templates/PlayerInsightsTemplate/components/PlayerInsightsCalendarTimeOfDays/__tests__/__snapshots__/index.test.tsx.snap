@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayerInsightsCalendarTimeOfDays to match snapshot 1`] = `
+<div>
+  <div
+    class="card border border-gray-200 shadow"
+  >
+    <div
+      class="py-4 px-8 border-b"
+    >
+      <div
+        class="text-base md:text-lg lg:text-xl"
+      >
+        Time of Day
+      </div>
+    </div>
+    <div
+      class="card-body border-b"
+    >
+      <div
+        class="flex flex-col gap-y-4"
+      >
+        <p
+          class="font-bold"
+        >
+          Games by Time of Day
+        </p>
+      </div>
+    </div>
+    <div
+      class="card-body border-b"
+    >
+      <div
+        class="flex flex-col gap-y-4"
+      >
+        <p
+          class="font-bold"
+        >
+          Accuracy by Time of Day
+        </p>
+      </div>
+    </div>
+    <div
+      class="card-body border-b"
+    >
+      <div
+        class="flex flex-col gap-y-4"
+      >
+        <p
+          class="font-bold"
+        >
+          Results by Time of Day
+        </p>
+      </div>
+    </div>
+    <div
+      class="card-body"
+    />
+  </div>
+</div>
+`;
