@@ -1,3 +1,4 @@
+import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
 import {
   ChessGame,
@@ -8,7 +9,6 @@ import {
 } from '@prisma/client';
 import { Chess } from 'chess.js';
 import { GameResponse, Move } from './model';
-import { logger } from '@chess/common/libs/logger';
 
 export const analyzeGame = async (game: ChessGame) => {
   try {

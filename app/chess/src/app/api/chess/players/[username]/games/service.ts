@@ -12,10 +12,10 @@ import {
   Prisma,
   PrismaClient,
 } from '@prisma/client';
-import { GamesResponse, SyncedResponse, TimeControl } from './dto';
 import { Chess } from 'chess.js';
 import { Move } from './[id]/model';
 import { getNumberOfMajorAndMinorPieces } from './[id]/service';
+import { GamesResponse, SyncedResponse, TimeControl } from './dto';
 
 const getTimeControl = ({
   timeClass,

@@ -1,8 +1,8 @@
+import { logger } from '@chess/common/libs/logger';
 import { ChessTimeClass } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 import { GamesResponse, SyncedResponse } from './dto';
 import { getChessGames, syncGames } from './service';
-import { logger } from '@chess/common/libs/logger';
 
 type PlayersParameters = { params: { username: string } };
 
