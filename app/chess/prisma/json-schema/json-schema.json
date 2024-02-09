@@ -14,28 +14,9 @@
           "type": "string",
           "default": ""
         },
-        "location": {
-          "type": "string",
-          "default": ""
-        },
-        "country": {
-          "$ref": "#/definitions/ChessCountry"
-        },
         "avatar": {
           "type": "string",
           "default": ""
-        },
-        "twitchUrl": {
-          "type": "string",
-          "default": ""
-        },
-        "followers": {
-          "type": "integer",
-          "default": 0
-        },
-        "isStreamer": {
-          "type": "boolean",
-          "default": false
         },
         "verified": {
           "type": "boolean",
@@ -103,6 +84,25 @@
           "items": {
             "type": "string"
           }
+        },
+        "location": {
+          "type": "string",
+          "default": ""
+        },
+        "country": {
+          "$ref": "#/definitions/ChessCountry"
+        },
+        "followers": {
+          "type": "integer",
+          "default": 0
+        },
+        "isStreamer": {
+          "type": "boolean",
+          "default": false
+        },
+        "twitchUrl": {
+          "type": "string",
+          "default": ""
         },
         "stats": {
           "type": "array",
@@ -252,148 +252,6 @@
         }
       }
     },
-    "ChessGame": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "default": ""
-        },
-        "pgn": {
-          "type": "string",
-          "default": ""
-        },
-        "timeControl": {
-          "type": "string",
-          "default": ""
-        },
-        "timeClass": {
-          "type": "string",
-          "default": "daily",
-          "enum": [
-            "daily",
-            "classical",
-            "rapid",
-            "blitz",
-            "bullet"
-          ]
-        },
-        "endTime": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "rated": {
-          "type": "boolean",
-          "default": false
-        },
-        "tcn": {
-          "type": "string",
-          "default": ""
-        },
-        "initialSetup": {
-          "type": "string",
-          "default": ""
-        },
-        "rules": {
-          "type": "string",
-          "default": "chess",
-          "enum": [
-            "bughouse",
-            "chess",
-            "chess960",
-            "crazyhouse",
-            "kingofthehill",
-            "oddschess",
-            "threecheck"
-          ]
-        },
-        "fen": {
-          "type": "string",
-          "default": ""
-        },
-        "whiteAccuracy": {
-          "type": "number",
-          "default": 0
-        },
-        "blackAccuracy": {
-          "type": "number",
-          "default": 0
-        },
-        "whiteUsername": {
-          "type": "string",
-          "default": ""
-        },
-        "blackUsername": {
-          "type": "string",
-          "default": ""
-        },
-        "whiteResult": {
-          "type": "string",
-          "default": "checkmated",
-          "enum": [
-            "win",
-            "fiftymove",
-            "agreed",
-            "insufficient",
-            "repetition",
-            "stalemate",
-            "timevsinsufficient",
-            "checkmated",
-            "resigned",
-            "timeout",
-            "abandoned",
-            "bughousepartnerlose",
-            "threecheck",
-            "kingofthehill"
-          ]
-        },
-        "blackResult": {
-          "type": "string",
-          "default": "checkmated",
-          "enum": [
-            "win",
-            "fiftymove",
-            "agreed",
-            "insufficient",
-            "repetition",
-            "stalemate",
-            "timevsinsufficient",
-            "checkmated",
-            "resigned",
-            "timeout",
-            "abandoned",
-            "bughousepartnerlose",
-            "threecheck",
-            "kingofthehill"
-          ]
-        },
-        "whiteRating": {
-          "type": "integer",
-          "default": 0
-        },
-        "blackRating": {
-          "type": "integer",
-          "default": 0
-        },
-        "createdAt": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        },
-        "updatedAt": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        }
-      }
-    },
     "ChessOpening": {
       "type": "object",
       "properties": {
@@ -428,6 +286,167 @@
           "format": "date-time"
         }
       }
+    },
+    "ChessGame": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "default": ""
+        },
+        "pgn": {
+          "type": "string",
+          "default": ""
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "rated": {
+          "type": "boolean",
+          "default": false
+        },
+        "rules": {
+          "type": "string",
+          "default": "chess",
+          "enum": [
+            "bughouse",
+            "chess",
+            "chess960",
+            "crazyhouse",
+            "kingofthehill",
+            "oddschess",
+            "threecheck"
+          ]
+        },
+        "tcn": {
+          "type": "string",
+          "default": ""
+        },
+        "initialSetup": {
+          "type": "string",
+          "default": ""
+        },
+        "fen": {
+          "type": "string",
+          "default": ""
+        },
+        "timeControl": {
+          "type": "string",
+          "default": ""
+        },
+        "timeClass": {
+          "type": "string",
+          "default": "daily",
+          "enum": [
+            "daily",
+            "classical",
+            "rapid",
+            "blitz",
+            "bullet"
+          ]
+        },
+        "whiteAccuracy": {
+          "type": "number",
+          "default": 0
+        },
+        "whiteUsername": {
+          "type": "string",
+          "default": ""
+        },
+        "whiteResult": {
+          "type": "string",
+          "default": "checkmated",
+          "enum": [
+            "win",
+            "fiftymove",
+            "agreed",
+            "insufficient",
+            "repetition",
+            "stalemate",
+            "timevsinsufficient",
+            "checkmated",
+            "resigned",
+            "timeout",
+            "abandoned",
+            "bughousepartnerlose",
+            "threecheck",
+            "kingofthehill"
+          ]
+        },
+        "whiteRating": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackAccuracy": {
+          "type": "number",
+          "default": 0
+        },
+        "blackUsername": {
+          "type": "string",
+          "default": ""
+        },
+        "blackResult": {
+          "type": "string",
+          "default": "checkmated",
+          "enum": [
+            "win",
+            "fiftymove",
+            "agreed",
+            "insufficient",
+            "repetition",
+            "stalemate",
+            "timevsinsufficient",
+            "checkmated",
+            "resigned",
+            "timeout",
+            "abandoned",
+            "bughousepartnerlose",
+            "threecheck",
+            "kingofthehill"
+          ]
+        },
+        "blackRating": {
+          "type": "integer",
+          "default": 0
+        },
+        "eco": {
+          "type": "string",
+          "default": ""
+        },
+        "opening": {
+          "type": "string",
+          "default": ""
+        },
+        "endPhrase": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "opening",
+            "middlegame",
+            "endgame"
+          ]
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
     }
   },
   "type": "object",
@@ -444,11 +463,11 @@
     "chessStats": {
       "$ref": "#/definitions/ChessStats"
     },
-    "chessGame": {
-      "$ref": "#/definitions/ChessGame"
-    },
     "chessOpening": {
       "$ref": "#/definitions/ChessOpening"
+    },
+    "chessGame": {
+      "$ref": "#/definitions/ChessGame"
     }
   }
 }

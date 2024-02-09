@@ -14,7 +14,7 @@ export const OpeningsTemplate: React.FC<OpeningsTemplateProperties> = ({
   return (
     <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
       <OpeningsHeader ecos={ecos} total={openings.length} />
-      <div className="overflow-hidden rounded border border-gray-200 shadow">
+      <div className="overflow-auto rounded border border-gray-200 shadow">
         <table className="table">
           <thead>
             <tr>

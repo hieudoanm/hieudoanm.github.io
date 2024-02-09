@@ -10,12 +10,7 @@ erDiagram
     Int id PK
     String username UK
     String name
-    String location
-    String countryCode FK
     String avatar
-    String twitchUrl
-    Int followers
-    Boolean isStreamer
     Boolean verified
     DateTime lastOnline
     DateTime joined
@@ -23,6 +18,11 @@ erDiagram
     ChessTitleAbbreviation title "nullable"
     ChessLeague league "nullable"
     String archives
+    String location
+    String countryCode FK
+    Int followers
+    Boolean isStreamer
+    String twitchUrl
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -50,34 +50,37 @@ erDiagram
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
-"ChessGame" {
-    String id PK
-    String url
-    String pgn
-    String timeControl
-    ChessTimeClass timeClass
-    DateTime endTime
-    Boolean rated
-    String tcn
-    String initialSetup
-    ChessVariant rules
-    String fen
-    Float whiteAccuracy
-    Float blackAccuracy
-    String whiteUsername
-    String blackUsername
-    ChessResult whiteResult
-    ChessResult blackResult
-    Int whiteRating
-    Int blackRating
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
 "ChessOpening" {
     String eco
     String name
     String fen
     String pgn
+    DateTime createdAt "nullable"
+    DateTime updatedAt "nullable"
+}
+"ChessGame" {
+    String id PK
+    String url
+    String pgn
+    DateTime endTime
+    Boolean rated
+    ChessVariant rules
+    String tcn
+    String initialSetup
+    String fen
+    String timeControl
+    ChessTimeClass timeClass
+    Float whiteAccuracy
+    String whiteUsername
+    ChessResult whiteResult
+    Int whiteRating
+    Float blackAccuracy
+    String blackUsername
+    ChessResult blackResult
+    Int blackRating
+    String eco
+    String opening
+    ChessPhrase endPhrase "nullable"
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -91,12 +94,7 @@ erDiagram
   - `id`: 
   - `username`: 
   - `name`: 
-  - `location`: 
-  - `countryCode`: 
   - `avatar`: 
-  - `twitchUrl`: 
-  - `followers`: 
-  - `isStreamer`: 
   - `verified`: 
   - `lastOnline`: 
   - `joined`: 
@@ -104,6 +102,11 @@ erDiagram
   - `title`: 
   - `league`: 
   - `archives`: 
+  - `location`: 
+  - `countryCode`: 
+  - `followers`: 
+  - `isStreamer`: 
+  - `twitchUrl`: 
   - `createdAt`: 
   - `updatedAt`: 
 
@@ -137,31 +140,6 @@ erDiagram
   - `createdAt`: 
   - `updatedAt`: 
 
-### `ChessGame`
-
-**Properties**
-  - `id`: 
-  - `url`: 
-  - `pgn`: 
-  - `timeControl`: 
-  - `timeClass`: 
-  - `endTime`: 
-  - `rated`: 
-  - `tcn`: 
-  - `initialSetup`: 
-  - `rules`: 
-  - `fen`: 
-  - `whiteAccuracy`: 
-  - `blackAccuracy`: 
-  - `whiteUsername`: 
-  - `blackUsername`: 
-  - `whiteResult`: 
-  - `blackResult`: 
-  - `whiteRating`: 
-  - `blackRating`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
 ### `ChessOpening`
 
 **Properties**
@@ -169,5 +147,33 @@ erDiagram
   - `name`: 
   - `fen`: 
   - `pgn`: 
+  - `createdAt`: 
+  - `updatedAt`: 
+
+### `ChessGame`
+
+**Properties**
+  - `id`: 
+  - `url`: 
+  - `pgn`: 
+  - `endTime`: 
+  - `rated`: 
+  - `rules`: 
+  - `tcn`: 
+  - `initialSetup`: 
+  - `fen`: 
+  - `timeControl`: 
+  - `timeClass`: 
+  - `whiteAccuracy`: 
+  - `whiteUsername`: 
+  - `whiteResult`: 
+  - `whiteRating`: 
+  - `blackAccuracy`: 
+  - `blackUsername`: 
+  - `blackResult`: 
+  - `blackRating`: 
+  - `eco`: 
+  - `opening`: 
+  - `endPhrase`: 
   - `createdAt`: 
   - `updatedAt`: 

@@ -28,13 +28,7 @@ model ChessPlayer {
   id          Int                     @id
   username    String                  @unique @db.VarChar(255)
   name        String                  @default("") @db.VarChar(255)
-  location    String                  @default("") @db.VarChar(255)
-  country     ChessCountry            @relation(fields: [countryCode], references: [cca2])
-  countryCode String                  @default("") @db.VarChar(255)
   avatar      String                  @default("") @db.VarChar(255)
-  twitchUrl   String                  @default("") @db.VarChar(255)
-  followers   Int                     @default(0) @db.Integer
-  isStreamer  Boolean                 @default(false) @db.Boolean
   verified    Boolean                 @default(false) @db.Boolean
   lastOnline  DateTime                @default(now()) @db.Timestamptz
   joined      DateTime                @default(now()) @db.Timestamptz
@@ -42,11 +36,19 @@ model ChessPlayer {
   title       ChessTitleAbbreviation?
   league      ChessLeague?
   archives    String[]                @default([])
-
-  stats ChessStats[]
-
-  createdAt DateTime? @default(now()) @db.Timestamptz
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+  // Location
+  location    String                  @default("") @db.VarChar(255)
+  country     ChessCountry            @relation(fields: [countryCode], references: [cca2])
+  countryCode String                  @default("") @db.VarChar(255)
+  // Streamer
+  followers   Int                     @default(0) @db.Integer
+  isStreamer  Boolean                 @default(false) @db.Boolean
+  twitchUrl   String                  @default("") @db.VarChar(255)
+  // Stats
+  stats       ChessStats[]
+  // Date Time
+  createdAt   DateTime?               @default(now()) @db.Timestamptz
+  updatedAt   DateTime?               @default(now()) @updatedAt @db.Timestamptz
 
   @@schema("chess")
 }
@@ -54,9 +56,9 @@ model ChessPlayer {
 model ChessTitle {
   abbreviation ChessTitleAbbreviation @id
   title        String                 @default("") @db.VarChar(255)
-
-  createdAt DateTime? @default(now()) @db.Timestamptz
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+  // Date Time
+  createdAt    DateTime?              @default(now()) @db.Timestamptz
+  updatedAt    DateTime?              @default(now()) @updatedAt @db.Timestamptz
 
   @@schema("chess")
 }
@@ -119,15 +121,17 @@ model ChessStats {
   player    ChessPlayer    @relation(fields: [playerId], references: [id])
   playerId  Int
   timeClass ChessTimeClass @default(daily)
+  // Stat
   best      Int            @default(0) @db.SmallInt
   last      Int            @default(0) @db.SmallInt
   deviation Int            @default(0) @db.SmallInt
+  // Record
   win       Int            @default(0) @db.Integer
   draw      Int            @default(0) @db.Integer
   loss      Int            @default(0) @db.Integer
-
-  createdAt DateTime? @default(now()) @db.Timestamptz
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+  // Date Time
+  createdAt DateTime?      @default(now()) @db.Timestamptz
+  updatedAt DateTime?      @default(now()) @updatedAt @db.Timestamptz
 
   @@id([playerId, timeClass])
   @@schema("chess")
@@ -143,26 +147,48 @@ enum ChessTimeClass {
   @@schema("chess")
 }
 
+model ChessOpening {
+  eco       String    @default("") @db.VarChar(3)
+  name      String    @default("") @db.VarChar(255)
+  fen       String    @default("") @db.VarChar(255)
+  pgn       String    @default("") @db.VarChar(255)
+  // Date Time
+  createdAt DateTime? @default(now()) @db.Timestamptz
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
+
+  @@id([eco, name, pgn])
+  @@schema("chess")
+}
+
 model ChessGame {
   id            String         @id
   url           String         @default("") @db.Text()
   pgn           String         @default("") @db.Text()
-  timeControl   String         @default("") @db.Text()
-  timeClass     ChessTimeClass @default(daily)
   endTime       DateTime       @default(now()) @db.Timestamptz
   rated         Boolean        @default(false) @db.Boolean
+  rules         ChessVariant   @default(chess)
+  // Position
   tcn           String         @default("") @db.Text()
   initialSetup  String         @default("") @db.Text()
-  rules         ChessVariant   @default(chess)
   fen           String         @default("") @db.Text()
+  // Time Control
+  timeControl   String         @default("") @db.Text()
+  timeClass     ChessTimeClass @default(daily)
+  // White
   whiteAccuracy Float          @default(0) @db.Real
-  blackAccuracy Float          @default(0) @db.Real
   whiteUsername String         @default("") @db.Text()
-  blackUsername String         @default("") @db.Text()
   whiteResult   ChessResult    @default(checkmated)
-  blackResult   ChessResult    @default(checkmated)
   whiteRating   Int            @default(0) @db.SmallInt
+  // Black
+  blackAccuracy Float          @default(0) @db.Real
+  blackUsername String         @default("") @db.Text()
+  blackResult   ChessResult    @default(checkmated)
   blackRating   Int            @default(0) @db.SmallInt
+  // Opening
+  eco           String         @default("") @db.VarChar(3)
+  opening       String         @default("") @db.Text()
+  endPhrase     ChessPhrase?
+  // Date Time
   createdAt     DateTime?      @default(now()) @db.Timestamptz
   updatedAt     DateTime?      @default(now()) @updatedAt @db.Timestamptz
 
@@ -218,15 +244,10 @@ enum ChessSide {
   @@schema("chess")
 }
 
-model ChessOpening {
-  eco  String @default("") @db.VarChar(255)
-  name String @default("") @db.VarChar(255)
-  fen  String @default("") @db.VarChar(255)
-  pgn  String @default("") @db.VarChar(255)
+enum ChessPhrase {
+  opening
+  middlegame
+  endgame
 
-  createdAt DateTime? @default(now()) @db.Timestamptz
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz
-
-  @@id([eco, name, pgn])
   @@schema("chess")
 }

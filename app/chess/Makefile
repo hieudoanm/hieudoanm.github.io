@@ -29,6 +29,16 @@ prisma-generate:
 	yarn prisma format
 	yarn prisma generate
 
+prisma-push:
+	yarn prisma format
+	yarn prisma generate
+	yarn prisma db push
+
+prisma-migrate:
+	yarn prisma format
+	yarn prisma generate
+	yarn prisma migrate dev --name init
+
 tauri-dev:
 	yarn tauri dev
 

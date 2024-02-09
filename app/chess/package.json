@@ -22,8 +22,8 @@
 		"lint": "next lint",
 		"pretest": "rimraf coverage",
 		"test": "jest",
-		"prisma:migrate": "prisma format && prisma generate && prisma migrate dev --name init",
-		"prisma:push": "prisma format && prisma generate && prisma db push"
+		"prisma:push": "make prisma-push",
+		"prisma:migrate": "make prisma-migrate"
 	},
 	"dependencies": {
 		"@apollo/client": "3.9.4",

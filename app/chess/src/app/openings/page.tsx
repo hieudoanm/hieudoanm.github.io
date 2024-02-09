@@ -23,7 +23,7 @@ const openingsQuery = gql`
 `;
 
 type OpeningsPageProperties = {
-  searchParams: { eco: string; limit: number; offset: number };
+  searchParams: { eco: string; limit: string; offset: string };
 };
 
 type OpeningsData = { chess: { ecos: string[]; openings: ChessOpening[] } };
@@ -31,7 +31,13 @@ type OpeningsData = { chess: { ecos: string[]; openings: ChessOpening[] } };
 const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
   searchParams,
 }: OpeningsPageProperties) => {
-  const { eco, limit = 100, offset = 0 } = searchParams;
+  const {
+    eco,
+    limit: limitString = '100',
+    offset: offsetString = '0',
+  } = searchParams;
+  const limit: number = Number.parseInt(limitString ?? '100');
+  const offset: number = Number.parseInt(offsetString ?? '0');
   const variables = { eco, limit, offset };
   const queryOptions: QueryOptions<OperationVariables, OpeningsData> = {
     query: openingsQuery,
