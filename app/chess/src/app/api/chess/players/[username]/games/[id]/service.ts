@@ -1,19 +1,25 @@
+import { Game } from '@chess/common/clients/chess.com/chess.dto';
 import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
 import {
   ChessGame,
   ChessOpening,
   ChessPhrase,
+  ChessVariant,
   Prisma,
   PrismaClient,
 } from '@prisma/client';
 import { Chess } from 'chess.js';
 import { GameResponse, Move } from './model';
 
-export const analyzeGame = async (game: ChessGame) => {
+export const analyzeGame = async (game: Game | ChessGame) => {
   try {
+    if (game.rules !== ChessVariant.chess) {
+      return { eco: '', opening: '', endPhrase: null, moves: [] };
+    }
     const chess = new Chess();
-    chess.loadPgn(game.pgn);
+    const { pgn } = game;
+    chess.loadPgn(pgn);
     const newChess = new Chess();
     let moves: Move[] = chess.history().map((move: string, index: number) => {
       newChess.move(move);
@@ -55,7 +61,8 @@ export const analyzeGame = async (game: ChessGame) => {
 
     return { eco, opening, endPhrase, moves };
   } catch (error) {
-    logger.error(`analyzeGame id=${game.id} error=${error}`);
+    const url = game.url;
+    logger.error(`analyzeGame url=${url} error=${error}`);
     return { eco: '', opening: '', endPhrase: null, moves: [] };
   }
 };

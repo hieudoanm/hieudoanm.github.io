@@ -14,7 +14,7 @@ import {
 } from '@prisma/client';
 import { Chess } from 'chess.js';
 import { Move } from './[id]/model';
-import { getNumberOfMajorAndMinorPieces } from './[id]/service';
+import { analyzeGame, getNumberOfMajorAndMinorPieces } from './[id]/service';
 import { GamesResponse, SyncedResponse, TimeControl } from './dto';
 
 const getTimeControl = ({
@@ -202,55 +202,6 @@ const upsertGames = async (games: ChessGame[]): Promise<ChessGame[]> => {
     return prismaClient.chessGame.upsert(upsertArguments);
   });
   return prismaClient.$transaction(upsertTransactions);
-};
-
-const analyzeGame = async (game: Game) => {
-  try {
-    const chess = new Chess();
-    chess.loadPgn(game.pgn);
-    const newChess = new Chess();
-    let moves: Move[] = chess.history().map((move: string, index: number) => {
-      newChess.move(move);
-      const fen: string = newChess.fen();
-      const no: number = Math.floor(index / 2) + 1;
-      const side: 'white' | 'black' = index % 2 === 0 ? 'white' : 'black';
-      const numberOfMajorAndMinorPieces = getNumberOfMajorAndMinorPieces(fen);
-      return {
-        no,
-        side,
-        move,
-        fen,
-        eco: '',
-        opening: '',
-        phrase: null,
-        numberOfMajorAndMinorPieces,
-      };
-    });
-    const fens: string[] = moves.map(({ fen }) => fen);
-    const prismaClient: PrismaClient = getPrismaClient();
-    const openings: ChessOpening[] = await prismaClient.chessOpening.findMany({
-      where: { fen: { in: fens } },
-    });
-    moves = moves.map((move: Move) => {
-      const { fen, numberOfMajorAndMinorPieces } = move;
-      const { eco = '', name: opening = '' } = openings.find(
-        (opening) => opening.fen === fen
-      ) ?? { eco: '', name: '' };
-      let phrase: ChessPhrase =
-        eco.length > 0 ? ChessPhrase.opening : ChessPhrase.middlegame;
-      phrase = numberOfMajorAndMinorPieces <= 6 ? ChessPhrase.endgame : phrase;
-      return { ...move, eco, opening, phrase };
-    });
-    const openingMoves = moves.filter(
-      ({ eco, opening }) => eco !== '' && opening !== ''
-    );
-    const { eco, opening } = openingMoves.at(-1) ?? { eco: '', opening: '' };
-    const { phrase: endPhrase } = moves.at(-1) ?? { phrase: '' as ChessPhrase };
-    return { eco, opening, endPhrase };
-  } catch (error) {
-    logger.error(`analyzeGame uuid=${game.uuid} error=${error}`);
-    return { eco: '', opening: '', endPhrase: null };
-  }
 };
 
 const mapGames = async (chessGames: Game[]): Promise<ChessGame[]> => {

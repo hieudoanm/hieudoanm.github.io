@@ -38,7 +38,6 @@ const FROM_CLAUSE = 'FROM chess."ChessGame" as g';
 const buildWhereClause = ({
   username = '',
   results = [],
-  ownResults = [],
   accuracy = false,
   variant = ChessVariant.chess,
   timeClass = ChessTimeClass.blitz,
@@ -49,19 +48,11 @@ const buildWhereClause = ({
   accuracy?: boolean;
   timeClass?: ChessTimeClass;
   results?: ChessResult[];
-  ownResults?: ChessResult[];
   rated?: boolean;
 }) => {
   let whereResultsClause = '';
   if (results.length > 0) {
     const resultsString: string = results
-      .map((result: ChessResult) => `'${result}'`)
-      .join(',');
-    whereResultsClause = results.includes(ChessResult.win)
-      ? `TEXT(CASE WHEN g."whiteUsername" = '${username}' THEN g."blackResult" ELSE g."whiteResult" END) in (${resultsString})`
-      : `TEXT(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) in (${resultsString})`;
-  } else if (ownResults.length > 0) {
-    const resultsString: string = ownResults
       .map((result: ChessResult) => `'${result}'`)
       .join(',');
     whereResultsClause = `TEXT(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) in (${resultsString})`;
@@ -140,7 +131,6 @@ const buildFunctionQuery = ({
   variant = ChessVariant.chess,
   timeClass = ChessTimeClass.blitz,
   results = [],
-  ownResults = [],
   rated = true,
 }: {
   name?: string;
@@ -150,7 +140,6 @@ const buildFunctionQuery = ({
   username?: string;
   variant?: ChessVariant;
   timeClass?: ChessTimeClass;
-  ownResults?: ChessResult[];
   results?: ChessResult[];
   rated?: boolean;
 }): Prisma.Sql => {
@@ -178,7 +167,6 @@ const buildFunctionQuery = ({
   const options = {
     accuracy,
     username,
-    ownResults,
     results,
     variant,
     timeClass,
@@ -198,7 +186,6 @@ const buildFunctionQuery = ({
       timeClass,
       column,
       results,
-      ownResults,
       accuracy,
       sqlFunction,
     },
@@ -407,19 +394,19 @@ export const getInsights = async ({
     ...baseOptions,
     name: 'winResultsQueryByOpponentRating',
     column: 'opponent',
-    ownResults: CHESS_WIN_RESULTS,
+    results: CHESS_WIN_RESULTS,
   });
   const drawResultsQueryByOpponentRating: Prisma.Sql = buildFunctionQuery({
     ...baseOptions,
     name: 'drawResultsQueryByOpponentRating',
     column: 'opponent',
-    ownResults: CHESS_DRAW_RESULTS,
+    results: CHESS_DRAW_RESULTS,
   });
   const lossResultsQueryByOpponentRating: Prisma.Sql = buildFunctionQuery({
     ...baseOptions,
     name: 'lossResultsQueryByOpponentRating',
     column: 'opponent',
-    ownResults: CHESS_LOSS_RESULTS,
+    results: CHESS_LOSS_RESULTS,
   });
   const [
     [{ average = 0 }],
