@@ -10,6 +10,7 @@ import {
 import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
 import {
+  ChessPhrase,
   ChessResult,
   ChessTimeClass,
   ChessVariant,
@@ -23,6 +24,7 @@ import {
   GamesByYear,
   Insights,
   Opponent,
+  ResultsByEndPhrase,
   ResultsByDayOfWeek,
   ResultsByOpponentRating,
   ResultsByTimeOfDay,
@@ -42,6 +44,7 @@ const buildWhereClause = ({
   variant = ChessVariant.chess,
   timeClass = ChessTimeClass.blitz,
   rated = true,
+  endPhrase = false,
 }: {
   username?: string;
   variant?: ChessVariant;
@@ -49,6 +52,7 @@ const buildWhereClause = ({
   timeClass?: ChessTimeClass;
   results?: ChessResult[];
   rated?: boolean;
+  endPhrase?: boolean;
 }) => {
   let whereResultsClause = '';
   if (results.length > 0) {
@@ -73,9 +77,14 @@ const buildWhereClause = ({
 
   const whereRuleClause: string = variant ? `g."rules" = '${variant}'` : '';
 
+  const whereEndPhraseClause: string = endPhrase
+    ? `g."endPhrase" IS NOT NULL`
+    : '';
+
   const whereRatedClause: string = rated ? `g."rated" = true` : '';
 
   const whereClauses: string[] = [
+    whereEndPhraseClause,
     whereTimeClassClause,
     whereAccuracyClause,
     whereUsernameClause,
@@ -132,16 +141,25 @@ const buildFunctionQuery = ({
   timeClass = ChessTimeClass.blitz,
   results = [],
   rated = true,
+  endPhrase = false,
 }: {
   name?: string;
   sqlFunction?: 'count' | 'avg';
-  column?: 'year' | 'timeOfDay' | 'dayOfWeek' | 'result' | 'opponent' | '';
+  column?:
+    | 'year'
+    | 'timeOfDay'
+    | 'dayOfWeek'
+    | 'result'
+    | 'opponent'
+    | 'endPhrase'
+    | '';
   accuracy?: boolean;
   username?: string;
   variant?: ChessVariant;
   timeClass?: ChessTimeClass;
   results?: ChessResult[];
   rated?: boolean;
+  endPhrase?: boolean;
 }): Prisma.Sql => {
   // SELECT
   const countClause: string = 'COUNT(*) as "count"';
@@ -154,6 +172,7 @@ const buildFunctionQuery = ({
     timeOfDay: `floor(extract(hour from g."endTime") / 6.0)::int`,
     result: `CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END`,
     opponent: `floor((CASE WHEN g."whiteUsername" = '${username}' THEN g."blackRating" ELSE g."whiteRating" END) / 100)`,
+    endPhrase: 'g."endPhrase"',
   };
   const columnClause: string =
     column.length > 0 ? `${columnClauses[column]} as "column"` : '';
@@ -171,6 +190,7 @@ const buildFunctionQuery = ({
     variant,
     timeClass,
     rated,
+    endPhrase,
   };
   const whereClause: string = buildWhereClause(options);
   // GROUP BY
@@ -187,6 +207,7 @@ const buildFunctionQuery = ({
       column,
       results,
       accuracy,
+      endPhrase,
       sqlFunction,
     },
     `buildFunctionQuery name=${name} query=${query}`
@@ -408,6 +429,27 @@ export const getInsights = async ({
     column: 'opponent',
     results: CHESS_LOSS_RESULTS,
   });
+  const winResultsQueryByEndPhrase: Prisma.Sql = buildFunctionQuery({
+    ...baseOptions,
+    endPhrase: true,
+    name: 'winResultsQueryByEndPhrase',
+    column: 'endPhrase',
+    results: CHESS_WIN_RESULTS,
+  });
+  const drawResultsQueryByEndPhrase: Prisma.Sql = buildFunctionQuery({
+    ...baseOptions,
+    endPhrase: true,
+    name: 'drawResultsQueryByEndPhrase',
+    column: 'endPhrase',
+    results: CHESS_DRAW_RESULTS,
+  });
+  const lossResultsQueryByEndPhrase: Prisma.Sql = buildFunctionQuery({
+    ...baseOptions,
+    endPhrase: true,
+    name: 'lossResultsQueryByEndPhrase',
+    column: 'endPhrase',
+    results: CHESS_LOSS_RESULTS,
+  });
   const [
     [{ average = 0 }],
     [{ average: win = 0 }],
@@ -436,6 +478,9 @@ export const getInsights = async ({
     winResultsByOpponentRating = [],
     drawResultsByOpponentRating = [],
     lossResultsByOpponentRating = [],
+    winResultsByEndPhrase = [],
+    drawResultsByEndPhrase = [],
+    lossResultsByEndPhrase = [],
   ] = await prismaClient.$transaction([
     // Accuracy
     prismaClient.$queryRaw<AverageByColumn[]>(averageAccuracyQuery),
@@ -472,6 +517,9 @@ export const getInsights = async ({
     prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByOpponentRating),
     prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByOpponentRating),
     prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByOpponentRating),
+    prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByEndPhrase),
+    prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByEndPhrase),
+    prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByEndPhrase),
   ]);
   // Accuracy
   const accuracy = {
@@ -496,28 +544,28 @@ export const getInsights = async ({
       })
     ),
   };
-  // Games
+  // Games by Years
   const gamesByYears: GamesByYear[] = gamesByYearsList.map(
     ({ count: games = 0, column = 0 }) => ({
       games,
       period: column,
     })
   );
-
+  // Games by Time of Day
   const gamesByTimeOfDays: GamesByTimeOfDay[] = gamesByTimeOfDaysList.map(
     ({ count: games = 0, column = 0 }) => ({
       games,
       timeOfDay: [...TIME_OF_DAYS][`${column}`],
     })
   );
-
+  // Games by Day of Week
   const gamesByDaysOfWeek: GamesByDayOfWeek[] = gamesByDaysOfWeekList.map(
     ({ count: games = 0, column = 0 }) => ({
       games,
       dayOfWeek: [...DAYS_OF_WEEK][`${column}`],
     })
   );
-
+  // Games
   const games = {
     total: totalGames,
     win: winGames,
@@ -528,8 +576,7 @@ export const getInsights = async ({
     daysOfWeek: gamesByDaysOfWeek,
   };
 
-  // Results
-
+  // Results by Time of Day
   const resultsByTimeOfDays: ResultsByTimeOfDay[] = winResultsByTimeOfDays.map(
     ({ count: win, column }) => {
       const timeOfDay: string = [...TIME_OF_DAYS][
@@ -544,7 +591,7 @@ export const getInsights = async ({
       return { timeOfDay, win, draw, loss };
     }
   );
-
+  // Results by Day of Week
   const resultsByDaysOfWeek: ResultsByDayOfWeek[] = winResultsByDaysOfWeek.map(
     ({ count: win, column }) => {
       const dayOfWeek: string = [...DAYS_OF_WEEK][
@@ -559,7 +606,7 @@ export const getInsights = async ({
       return { dayOfWeek, win, draw, loss };
     }
   );
-
+  // Results by Opponent Rating
   const ratings: Set<number> = new Set(
     [
       ...winResultsByOpponentRating,
@@ -567,7 +614,6 @@ export const getInsights = async ({
       ...lossResultsByOpponentRating,
     ].map(({ column }) => column)
   );
-
   const resultsByOpponentRating: ResultsByOpponentRating[] = [...ratings]
     .map((rating: number) => {
       const { count: win = 0 } = winResultsByOpponentRating.find(
@@ -582,7 +628,31 @@ export const getInsights = async ({
       return { rating: rating * 100, win, draw, loss };
     })
     .sort((a, b) => (a.rating > b.rating ? 1 : -1));
-
+  // Results by
+  const endPhrases = new Set(
+    [
+      ...winResultsByEndPhrase,
+      ...drawResultsByEndPhrase,
+      ...lossResultsByEndPhrase,
+    ].map(({ column }) => column)
+  );
+  const resultsByEndPhrase: ResultsByEndPhrase[] = [...endPhrases].map(
+    (endPhrase: number) => {
+      const { count: win = 0 } = winResultsByEndPhrase.find(
+        ({ column: winPhrase }) => winPhrase.toString() === endPhrase.toString()
+      ) ?? { count: 0 };
+      const { count: draw = 0 } = drawResultsByEndPhrase.find(
+        ({ column: drawPhrase }) =>
+          drawPhrase.toString() === endPhrase.toString()
+      ) ?? { count: 0 };
+      const { count: loss = 0 } = lossResultsByEndPhrase.find(
+        ({ column: lossPhrase }) =>
+          lossPhrase.toString() === endPhrase.toString()
+      ) ?? { count: 0 };
+      return { phrase: endPhrase.toString() as ChessPhrase, win, draw, loss };
+    }
+  );
+  // Results
   const results = {
     win: winResults.map(({ column, count }) => ({
       result: column.toString(),
@@ -599,6 +669,7 @@ export const getInsights = async ({
     timeOfDays: resultsByTimeOfDays,
     daysOfWeek: resultsByDaysOfWeek,
     opponents: resultsByOpponentRating,
+    endPhrases: resultsByEndPhrase,
   };
   // Disconect
   await prismaClient.$disconnect();

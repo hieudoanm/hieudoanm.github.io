@@ -57,7 +57,7 @@ const ChessAccuracy: React.FC<{
   );
 };
 
-export const ChessResultsByOpponentsRating: React.FC<{
+export const PlayerInsightsGamesResultsByOpponentsRating: React.FC<{
   insights: Insights;
 }> = ({ insights = {} as Insights }) => {
   const data = (insights?.results?.opponents ?? []).map(
@@ -78,7 +78,7 @@ export const ChessResultsByOpponentsRating: React.FC<{
 
   return (
     <div className="flex flex-col gap-y-4">
-      <p className="font-bold">Results by Time of Day</p>
+      <p className="font-bold">Results by Opponent Rating</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -118,9 +118,13 @@ export const ChessResultsByOpponentsRating: React.FC<{
   );
 };
 
-export const PlayerInsightsGamesOverview: React.FC<{ insights: Insights }> = ({
-  insights,
-}) => {
+export type PlayerInsightsGamesOverviewProperties = {
+  insights: Insights;
+};
+
+export const PlayerInsightsGamesOverview: React.FC<
+  PlayerInsightsGamesOverviewProperties
+> = ({ insights }) => {
   return (
     <div className="card border border-gray-200 shadow">
       <div className="py-4 px-8 border-b">
@@ -244,7 +248,7 @@ export const PlayerInsightsGamesOverview: React.FC<{ insights: Insights }> = ({
         </div>
       </div>
       <div className="card-body">
-        <ChessResultsByOpponentsRating insights={insights} />
+        <PlayerInsightsGamesResultsByOpponentsRating insights={insights} />
       </div>
     </div>
   );

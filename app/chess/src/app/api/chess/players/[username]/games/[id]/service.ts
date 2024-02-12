@@ -14,11 +14,14 @@ import { GameResponse, Move } from './model';
 
 export const analyzeGame = async (game: Game | ChessGame) => {
   try {
-    if (game.rules !== ChessVariant.chess) {
+    const initial = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+    const { pgn } = game;
+    const initialSetup =
+      (game as any).initialSetup ?? (game as any).initial_setup ?? '';
+    if (game.rules === ChessVariant.chess && initialSetup !== initial) {
       return { eco: '', opening: '', endPhrase: null, moves: [] };
     }
-    const chess = new Chess();
-    const { pgn } = game;
+    const chess = new Chess(initialSetup);
     chess.loadPgn(pgn);
     const newChess = new Chess();
     let moves: Move[] = chess.history().map((move: string, index: number) => {

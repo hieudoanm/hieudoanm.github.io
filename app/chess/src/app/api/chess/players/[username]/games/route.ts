@@ -64,7 +64,7 @@ export const POST = async (
   const data = JSON.parse(body.data);
   const { month, year, full = false } = data;
   logger.info(
-    `/api/chess/players/${username}/games month=${month} year=${month}`
+    `/api/chess/players/${username}/games month=${month} year=${year} full=${full}`
   );
   const response = await syncGames({ username, month, year, full });
   return NextResponse.json<SyncedResponse>(response, { status: 200 });

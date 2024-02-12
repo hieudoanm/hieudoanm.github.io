@@ -178,6 +178,7 @@ type Results {
   timeOfDays: [ResultsByTimeOfDay]
   daysOfWeek: [ResultsByDayOfWeek]
   opponents: [ResultsByOpponentRating]
+  endPhrases: [ResultsByEndPhrase]
 }
 
 type ResultsByTimeOfDay {
@@ -199,4 +200,11 @@ type ResultsByOpponentRating {
   draw: Int
   loss: Int
   rating: Int
+}
+
+type ResultsByEndPhrase {
+  win: Int
+  draw: Int
+  loss: Int
+  phrase: String
 }

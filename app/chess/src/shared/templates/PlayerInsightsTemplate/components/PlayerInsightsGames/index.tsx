@@ -2,9 +2,14 @@ import { Insights } from '@chess/common/types/chess';
 import { SectionHeading } from '@chess/shared/components/SectionHeading';
 import { FaChessBoard } from 'react-icons/fa6';
 import { PlayerInsightsGamesOverview } from '../PlayerInsightsGamesOverview';
+import { PlayerInsightsGamesPhrases } from '../PlayerInsightsGamesPhrases';
 import { PlayerInsightsGamesResults } from '../PlayerInsightsGamesResults';
 
-export const PlayerInsightsGames: React.FC<{ insights?: Insights }> = ({
+export type PlayerInsightsGamesProperties = {
+  insights?: Insights;
+};
+
+export const PlayerInsightsGames: React.FC<PlayerInsightsGamesProperties> = ({
   insights = {} as Insights,
 }) => {
   return (
@@ -21,6 +26,7 @@ export const PlayerInsightsGames: React.FC<{ insights?: Insights }> = ({
       </div>
       <PlayerInsightsGamesOverview insights={insights} />
       <PlayerInsightsGamesResults insights={insights} />
+      <PlayerInsightsGamesPhrases insights={insights} />
     </>
   );
 };

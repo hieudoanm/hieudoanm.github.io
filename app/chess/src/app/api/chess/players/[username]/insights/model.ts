@@ -1,3 +1,5 @@
+import { ChessPhrase } from '@prisma/client';
+
 export type Insights = {
   username: string;
   accuracy: Accuracy;
@@ -70,6 +72,13 @@ export type ResultsByOpponentRating = {
   rating: number;
 };
 
+export type ResultsByEndPhrase = {
+  win: number;
+  draw: number;
+  loss: number;
+  phrase: ChessPhrase;
+};
+
 export type Results = {
   win: Result[];
   draw: Result[];
@@ -77,6 +86,7 @@ export type Results = {
   timeOfDays: ResultsByTimeOfDay[];
   daysOfWeek: ResultsByDayOfWeek[];
   opponents: ResultsByOpponentRating[];
+  endPhrases: ResultsByEndPhrase[];
 };
 
 export type AverageByColumn = {

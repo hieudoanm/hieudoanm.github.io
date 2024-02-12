@@ -102,6 +102,12 @@ const playerInsightsQuery: DocumentNode = gql`
               draw
               loss
             }
+            endPhrases {
+              phrase
+              win
+              draw
+              loss
+            }
           }
         }
       }
@@ -111,16 +117,15 @@ const playerInsightsQuery: DocumentNode = gql`
 
 type PlayerData = { chess: { player: ChessPlayer & { insights: Insights } } };
 
-const InsightsPage: NextPage<{
+type InsightsPageProperties = {
   params: { username: string };
   searchParams: { timeClass: ChessTimeClass; variant: ChessVariant };
-}> = async ({
+};
+
+const InsightsPage: NextPage<InsightsPageProperties> = async ({
   params,
   searchParams,
-}: {
-  params: { username: string };
-  searchParams: { timeClass: ChessTimeClass; variant: ChessVariant };
-}) => {
+}: InsightsPageProperties) => {
   const username: string = params.username ?? CHESS_USERNAME;
   const timeClass: ChessTimeClass =
     searchParams.timeClass ?? ChessTimeClass.blitz;

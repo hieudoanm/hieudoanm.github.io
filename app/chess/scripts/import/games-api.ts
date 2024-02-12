@@ -40,7 +40,7 @@ const syncArchives = async (username: string) => {
     const { data: player } = await axios.post<ChessPlayer>(playerUrl);
     console.info(player, 'player');
     const { archives = [] } = player;
-    // archives.reverse();
+    archives.reverse();
     for (const archive of archives) {
       await syncGames(username, archive);
     }

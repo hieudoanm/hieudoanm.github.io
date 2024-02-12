@@ -1,4 +1,7 @@
-import { ResultsByOpponentRating } from '@chess/app/api/chess/players/[username]/insights/model';
+import {
+  ResultsByOpponentRating,
+  Results,
+} from '@chess/app/api/chess/players/[username]/insights/model';
 import {
   ChessBoardFile,
   ChessBoardRank,
@@ -11,15 +14,6 @@ export type Insights = {
   accuracy?: Accuracy;
   results?: Results;
   opponents?: Opponent[];
-};
-
-export type Results = {
-  win?: Result[];
-  draw?: Result[];
-  loss?: Result[];
-  timeOfDays?: ResultsByTimeOfDay[];
-  daysOfWeek?: ResultsByDayOfWeek[];
-  opponents?: ResultsByOpponentRating[];
 };
 
 export type Result = {

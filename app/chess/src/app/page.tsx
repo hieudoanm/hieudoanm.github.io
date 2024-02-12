@@ -102,6 +102,12 @@ const playerInsightsQuery: DocumentNode = gql`
               draw
               loss
             }
+            endPhrases {
+              phrase
+              win
+              draw
+              loss
+            }
           }
         }
       }
