@@ -5,8 +5,8 @@ import { ChessTitleAbbreviation } from '@prisma/client';
 import { PlayerInsightsCalendar } from './components/PlayerInsightsCalendar';
 import { PlayerInsightsGames } from './components/PlayerInsightsGames';
 import { PlayerInsightsHeader } from './components/PlayerInsightsHeader';
-import { PlayerInsightsOpponents } from './components/PlayerInsightsOpponents';
 import { PlayerInsightsOpenings } from './components/PlayerInsightsOpenings';
+import { PlayerInsightsOpponents } from './components/PlayerInsightsOpponents';
 
 export type PlayerInsightsTemplateProperties = {
   mobile?: boolean;
