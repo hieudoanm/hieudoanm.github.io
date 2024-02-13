@@ -9,7 +9,7 @@ volumes:
 services:
   broca-postgresql:
     restart: unless-stopped
-    image: postgres:16.1
+    image: postgres:16.2
     container_name: broca-postgresql
     volumes:
       - broca_postgresql:/var/lib/postgresql/data
