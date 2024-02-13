@@ -9,7 +9,7 @@ volumes:
 services:
   hieudoanm-postgresql:
     restart: unless-stopped
-    image: postgres:16.1
+    image: postgres:16.2
     container_name: hieudoanm-postgresql
     volumes:
       - hieudoanm_postgresql:/var/lib/postgresql/data
