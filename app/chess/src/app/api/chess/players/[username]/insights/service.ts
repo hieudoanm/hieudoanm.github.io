@@ -24,8 +24,8 @@ import {
   GamesByYear,
   Insights,
   Opponent,
-  ResultsByEndPhrase,
   ResultsByDayOfWeek,
+  ResultsByEndPhrase,
   ResultsByOpponentRating,
   ResultsByTimeOfDay,
 } from './model';

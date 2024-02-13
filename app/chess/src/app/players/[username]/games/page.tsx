@@ -10,7 +10,7 @@ import { logger } from '@chess/common/libs/logger';
 import { query } from '@chess/graphql/apollo/client';
 import { PlayerGamesTemplate } from '@chess/shared/templates/PlayerGamesTemplate';
 import { ChessGame } from '@prisma/client';
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
 import Head from 'next/head';
 
 const gamesQuery: DocumentNode = gql`

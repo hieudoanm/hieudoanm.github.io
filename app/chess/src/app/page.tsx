@@ -16,8 +16,11 @@ import {
   ChessTitleAbbreviation,
   ChessVariant,
 } from '@prisma/client';
-import { NextPage } from 'next';
-import Head from 'next/head';
+import { Metadata, NextPage } from 'next';
+
+export const metadata: Metadata = {
+  title: `${APP_NAME} - Home`,
+};
 
 const playerInsightsQuery: DocumentNode = gql`
   query PlayerQuery($username: String!, $timeClass: String, $variant: String) {
@@ -149,18 +152,13 @@ const HomePage: NextPage<HomePageProperties> = async ({ searchParams }) => {
   const insights: Insights = data?.chess?.player?.insights ?? [];
 
   return (
-    <>
-      <Head>
-        <title>{APP_NAME} - Home</title>
-      </Head>
-      <PlayerInsightsTemplate
-        name={name}
-        title={title}
-        avatar={avatar}
-        username={username}
-        insights={insights}
-      />
-    </>
+    <PlayerInsightsTemplate
+      name={name}
+      title={title}
+      avatar={avatar}
+      username={username}
+      insights={insights}
+    />
   );
 };
 

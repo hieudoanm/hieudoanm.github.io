@@ -6,6 +6,7 @@ import { PlayerInsightsCalendar } from './components/PlayerInsightsCalendar';
 import { PlayerInsightsGames } from './components/PlayerInsightsGames';
 import { PlayerInsightsHeader } from './components/PlayerInsightsHeader';
 import { PlayerInsightsOpponents } from './components/PlayerInsightsOpponents';
+import { PlayerInsightsOpenings } from './components/PlayerInsightsOpenings';
 
 export type PlayerInsightsTemplateProperties = {
   mobile?: boolean;
@@ -39,6 +40,7 @@ export const PlayerInsightsTemplate: React.FC<
         />
       )}
       <PlayerInsightsGames insights={insights} />
+      <PlayerInsightsOpenings insights={insights} />
       <PlayerInsightsCalendar insights={insights} />
       <PlayerInsightsOpponents insights={insights} />
     </div>

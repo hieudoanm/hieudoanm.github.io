@@ -5,8 +5,11 @@ import { logger } from '@chess/common/libs/logger';
 import { query } from '@chess/graphql/apollo/client';
 import { OpeningsTemplate } from '@chess/shared/templates/OpeningsTemplate';
 import { ChessOpening } from '@prisma/client';
-import { NextPage } from 'next';
-import Head from 'next/head';
+import { Metadata, NextPage } from 'next';
+
+export const metadata: Metadata = {
+  title: `${APP_NAME} - Openings`,
+};
 
 const openingsQuery = gql`
   query OpeningsQuery($eco: String, $limit: Int, $offset: Int) {
@@ -52,14 +55,7 @@ const OpeningsPage: NextPage<OpeningsPageProperties> = async ({
   const openings = data?.chess?.openings ?? [];
   logger.info({ ecos: ecos.length, openings: openings.length }, 'OpeningsPage');
 
-  return (
-    <>
-      <Head>
-        <title>{APP_NAME} - Openings</title>
-      </Head>
-      <OpeningsTemplate ecos={ecos} openings={openings} />
-    </>
-  );
+  return <OpeningsTemplate ecos={ecos} openings={openings} />;
 };
 
 export const dynamic =

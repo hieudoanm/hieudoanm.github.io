@@ -1,6 +1,6 @@
 import {
-  ResultsByOpponentRating,
   Results,
+  ResultsByOpponentRating,
 } from '@chess/app/api/chess/players/[username]/insights/model';
 import {
   ChessBoardFile,

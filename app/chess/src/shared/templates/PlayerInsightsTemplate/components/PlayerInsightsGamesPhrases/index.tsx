@@ -1,9 +1,11 @@
+import { ResultsByEndPhrase } from '@chess/app/api/chess/players/[username]/insights/model';
 import {
-  RED_COLOR,
   GRAY_COLOR,
+  RED_COLOR,
   TEAL_COLOR,
 } from '@chess/common/constants/chess.constants';
 import { Insights } from '@chess/common/types/chess';
+import {} from '@chess/common/utils/add-zero';
 import { CardHeading } from '@chess/shared/components/CardHeading';
 import { FaXmarksLines } from 'react-icons/fa6';
 import {
@@ -15,6 +17,61 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
+
+export const PlayerInsightsGamesEndPhrases: React.FC<{
+  insights: Insights;
+}> = ({ insights }) => {
+  const resultsByEndPhrase: ResultsByEndPhrase[] =
+    insights?.results?.endPhrases ?? [];
+  const fullTotal: number = resultsByEndPhrase.reduce(
+    (previousValue: number, { win, draw, loss }) =>
+      previousValue + win + draw + loss,
+    0
+  );
+  const phrases = resultsByEndPhrase
+    .map(({ phrase, win, draw, loss }: ResultsByEndPhrase) => {
+      const total: number = win + draw + loss;
+      const width: number = Number.parseFloat(
+        ((total / fullTotal) * 100).toFixed(2)
+      );
+      return { phrase, total, width };
+    })
+    .map(({ phrase, total, width }, index: number, array) => {
+      const left: number = array
+        .slice(0, index)
+        .reduce((previousValue: number, { width }) => previousValue + width, 0);
+      return { phrase, total, width, left };
+    });
+
+  return (
+    <div className="flex flex-col gap-y-4">
+      <p className="text-base md:text-lg">Games that ended in the...</p>
+      {phrases.map(({ phrase, total, width, left }) => {
+        return (
+          <div key={phrase} className="grid grid-cols-3">
+            <div className="col-span-1">
+              <p className="text-sm md:text-base capitalize font-semibold">
+                {phrase}
+              </p>
+              <p className="text-sm md:text-base">
+                {total.toLocaleString('en', { useGrouping: true })}
+              </p>
+            </div>
+            <div className="col-span-2">
+              <div className="w-full bg-gray-200 h-full relative">
+                <div
+                  className="absolute top-0 bg-teal-500 h-full flex items-center justify-center text-xs text-white"
+                  style={{ width: `${width}%`, left: `${left}%` }}>
+                  {width}%
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 export const PlayerInsightsGamesResultsByEndPhrase: React.FC<{
   insights: Insights;
@@ -93,12 +150,7 @@ export const PlayerInsightsGamesPhrases: React.FC<{ insights: Insights }> = ({
         </CardHeading>
       </div>
       <div className="card-body border-b">
-        <p className="text-base md:text-lg">Games that ended in the...</p>
-        <div className="aspect-video">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart />
-          </ResponsiveContainer>
-        </div>
+        <PlayerInsightsGamesEndPhrases insights={insights} />
       </div>
       <div className="card-body">
         <PlayerInsightsGamesResultsByEndPhrase insights={insights} />

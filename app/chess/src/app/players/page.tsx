@@ -10,9 +10,12 @@ import {
   ChessTitle,
   ChessTitleAbbreviation,
 } from '@prisma/client';
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { Metadata, NextPage } from 'next';
 import { FullChessPlayer } from '../api/chess/players/service';
+
+export const metadata: Metadata = {
+  title: `${APP_NAME} - Players`,
+};
 
 const playersQuery = gql`
   query PlayersQuery(
@@ -175,20 +178,15 @@ const PlayersPage: NextPage<PlayersPageProperties> = async ({
   logger.info(`PlayersPage players=${players.length}`);
 
   return (
-    <>
-      <Head>
-        <title>{APP_NAME} - Players</title>
-      </Head>
-      <PlayersTemplate
-        total={total}
-        stats={stats}
-        titles={titles}
-        players={players}
-        countries={countries}
-        titleOptions={titleOptions}
-        countryOptions={countryOptions}
-      />
-    </>
+    <PlayersTemplate
+      total={total}
+      stats={stats}
+      titles={titles}
+      players={players}
+      countries={countries}
+      titleOptions={titleOptions}
+      countryOptions={countryOptions}
+    />
   );
 };
 
