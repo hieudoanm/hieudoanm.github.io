@@ -5024,10 +5024,10 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@stripe/stripe-js@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.0.1.tgz#2af731bef7df784f752eb564e8dce042794169c4"
-  integrity sha512-ei7MmSdzRnd2h6QM6oOQSfvR9PF7oNp22bIdAdGwNSejL5i5xEZM15ucQ48JEIdDNC1ecq6FNkD2XxE+sk2mpg==
+"@stripe/stripe-js@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.0.2.tgz#218c238f32b7b34cdf4e7322935a70cb9db7f217"
+  integrity sha512-Ykr5mtTwbG+wleKQhtKOKyOfZ/0lRmwf49IBLi1vUxS/Mp9A0usiNFEkOh+kUGxEyD/lht+VgPTxPHbgUlqI+Q==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
