@@ -5,6 +5,7 @@ import { ChessTitleAbbreviation } from '@prisma/client';
 import { PlayerInsightsCalendar } from './components/PlayerInsightsCalendar';
 import { PlayerInsightsGames } from './components/PlayerInsightsGames';
 import { PlayerInsightsHeader } from './components/PlayerInsightsHeader';
+import { PlayerInsightsMoves } from './components/PlayerInsightsMoves';
 import { PlayerInsightsOpenings } from './components/PlayerInsightsOpenings';
 import { PlayerInsightsOpponents } from './components/PlayerInsightsOpponents';
 
@@ -41,6 +42,7 @@ export const PlayerInsightsTemplate: React.FC<
       )}
       <PlayerInsightsGames insights={insights} />
       <PlayerInsightsOpenings insights={insights} />
+      <PlayerInsightsMoves insights={insights} />
       <PlayerInsightsCalendar insights={insights} />
       <PlayerInsightsOpponents insights={insights} />
     </div>

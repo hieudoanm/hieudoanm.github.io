@@ -83,3 +83,15 @@ export type ChessTimeControl =
   | '60|0'
   | '90|0'
   | '120|0';
+
+export type ChessPieceType =
+  | 'king'
+  | 'queen'
+  | 'rook'
+  | 'bishop'
+  | 'knight'
+  | 'pawn';
+
+export type ChessCastling = 'short' | 'long' | '';
+
+export type ChessSide = 'white' | 'black';

@@ -251,7 +251,8 @@ const mapGames = async (chessGames: Game[]): Promise<ChessGame[]> => {
         whiteResult.toLowerCase() as ChessResult;
       const lowerBlackResult: ChessResult =
         blackResult.toLowerCase() as ChessResult;
-      const { eco, opening, endPhrase } = await analyzeGame(chessGame);
+      const { eco, opening, endPhrase, castling, pieces } =
+        await analyzeGame(chessGame);
       games.push({
         url,
         id,
@@ -275,6 +276,20 @@ const mapGames = async (chessGames: Game[]): Promise<ChessGame[]> => {
         eco,
         opening,
         endPhrase,
+        whiteKing: pieces.white.king,
+        whiteQueen: pieces.white.queen,
+        whiteRook: pieces.white.rook,
+        whiteBishop: pieces.white.bishop,
+        whiteKnight: pieces.white.knight,
+        whitePawn: pieces.white.pawn,
+        whiteCastling: castling.white,
+        blackKing: pieces.black.king,
+        blackQueen: pieces.black.queen,
+        blackRook: pieces.black.rook,
+        blackBishop: pieces.black.bishop,
+        blackKnight: pieces.black.knight,
+        blackPawn: pieces.black.pawn,
+        blackCastling: castling.black,
         createdAt: d,
         updatedAt: d,
       });

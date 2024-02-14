@@ -432,6 +432,62 @@
             "endgame"
           ]
         },
+        "whiteKing": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteQueen": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteRook": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteBishop": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteKnight": {
+          "type": "integer",
+          "default": 0
+        },
+        "whitePawn": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteCastling": {
+          "type": "string",
+          "default": ""
+        },
+        "blackKing": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackQueen": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackRook": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackBishop": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackKnight": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackPawn": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackCastling": {
+          "type": "string",
+          "default": ""
+        },
         "createdAt": {
           "type": [
             "string",

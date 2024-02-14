@@ -81,6 +81,20 @@ erDiagram
     String eco
     String opening
     ChessPhrase endPhrase "nullable"
+    Int whiteKing
+    Int whiteQueen
+    Int whiteRook
+    Int whiteBishop
+    Int whiteKnight
+    Int whitePawn
+    String whiteCastling
+    Int blackKing
+    Int blackQueen
+    Int blackRook
+    Int blackBishop
+    Int blackKnight
+    Int blackPawn
+    String blackCastling
     DateTime createdAt "nullable"
     DateTime updatedAt "nullable"
 }
@@ -175,5 +189,19 @@ erDiagram
   - `eco`: 
   - `opening`: 
   - `endPhrase`: 
+  - `whiteKing`: 
+  - `whiteQueen`: 
+  - `whiteRook`: 
+  - `whiteBishop`: 
+  - `whiteKnight`: 
+  - `whitePawn`: 
+  - `whiteCastling`: 
+  - `blackKing`: 
+  - `blackQueen`: 
+  - `blackRook`: 
+  - `blackBishop`: 
+  - `blackKnight`: 
+  - `blackPawn`: 
+  - `blackCastling`: 
   - `createdAt`: 
   - `updatedAt`: 

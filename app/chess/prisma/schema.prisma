@@ -188,6 +188,22 @@ model ChessGame {
   eco           String         @default("") @db.VarChar(3)
   opening       String         @default("") @db.Text()
   endPhrase     ChessPhrase?
+  // Moves - White
+  whiteKing     Int            @default(0) @db.SmallInt
+  whiteQueen    Int            @default(0) @db.SmallInt
+  whiteRook     Int            @default(0) @db.SmallInt
+  whiteBishop   Int            @default(0) @db.SmallInt
+  whiteKnight   Int            @default(0) @db.SmallInt
+  whitePawn     Int            @default(0) @db.SmallInt
+  whiteCastling String         @default("") @db.VarChar(5)
+  // Moves - Black
+  blackKing     Int            @default(0) @db.SmallInt
+  blackQueen    Int            @default(0) @db.SmallInt
+  blackRook     Int            @default(0) @db.SmallInt
+  blackBishop   Int            @default(0) @db.SmallInt
+  blackKnight   Int            @default(0) @db.SmallInt
+  blackPawn     Int            @default(0) @db.SmallInt
+  blackCastling String         @default("") @db.VarChar(5)
   // Date Time
   createdAt     DateTime?      @default(now()) @db.Timestamptz
   updatedAt     DateTime?      @default(now()) @updatedAt @db.Timestamptz

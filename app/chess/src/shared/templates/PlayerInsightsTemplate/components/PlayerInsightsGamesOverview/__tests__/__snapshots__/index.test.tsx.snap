@@ -324,7 +324,7 @@ exports[`PlayerInsightsGamesOverview to match snapshot 1`] = `
         <p
           class="font-bold"
         >
-          Results by Time of Day
+          Results by Opponent Rating
         </p>
       </div>
     </div>
