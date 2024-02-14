@@ -8363,10 +8363,10 @@ dag-map@~1.0.0:
   resolved "https://registry.npmjs.org/dag-map/-/dag-map-1.0.2.tgz"
   integrity sha512-+LSAiGFwQ9dRnRdOeaj7g47ZFJcOUPukAP8J3A3fuZ1g9Y44BG+P1sgApjLXTQPOzC4+7S9Wr8kXsfpINM4jpw==
 
-daisyui@4.7.1:
-  version "4.7.1"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-4.7.1.tgz#a1cdda6fd62970646bf20a0042e36c1a87139705"
-  integrity sha512-ejSUJMBH49Oxge3KkrOiaV5K4CE3/gvOnyRzD1fKR0Uw8IsKHqrrkYSb0hNYh2qw3C1tGKUZL6BrzoD6n3/3VQ==
+daisyui@4.7.2:
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-4.7.2.tgz#d2359d9eb1cac2082302ca55b6b35eca437a011f"
+  integrity sha512-9UCss12Zmyk/22u+JbkVrHHxOzFOyY17HuqP5LeswI4hclbj6qbjJTovdj2zRy8cCH6/n6Wh0lTLjriGnyGh0g==
   dependencies:
     css-selector-tokenizer "^0.8"
     culori "^3"
