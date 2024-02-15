@@ -9,6 +9,7 @@ import {
 } from '@chess/common/constants/time.constants';
 import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
+import { ChessSide } from '@chess/common/types/chess';
 import {
   ChessPhrase,
   ChessResult,
@@ -23,7 +24,9 @@ import {
   GamesByTimeOfDay,
   GamesByYear,
   Insights,
+  OpeningCount,
   Opponent,
+  Pieces,
   ResultsByDayOfWeek,
   ResultsByEndPhrase,
   ResultsByOpponentRating,
@@ -215,6 +218,120 @@ const buildFunctionQuery = ({
   return Prisma.raw(query);
 };
 
+const buildOpeningsQuery = ({
+  username,
+  side,
+  limit = 10,
+}: { username: string; side: ChessSide; limit?: number }): Prisma.Sql => {
+  const winResults: string = CHESS_WIN_RESULTS.map(
+    (result: ChessResult) => `'${result}'`
+  ).join(',');
+  const drawResults: string = CHESS_DRAW_RESULTS.map(
+    (result: ChessResult) => `'${result}'`
+  ).join(',');
+  const lossResults: string = CHESS_LOSS_RESULTS.map(
+    (result: ChessResult) => `'${result}'`
+  ).join(',');
+  const query: string = `SELECT c."opening",
+o."pgn",
+COUNT(*) as total,
+SUM(CASE WHEN c."${side}Result" IN (${winResults}) THEN 1 ELSE 0 END) as win,
+SUM(CASE WHEN c."${side}Result" IN (${drawResults}) THEN 1 ELSE 0 END) as draw,
+SUM(CASE WHEN c."${side}Result" IN (${lossResults}) THEN 1 ELSE 0 END) as loss
+FROM chess."ChessGame" as c
+JOIN chess."ChessOpening" as o
+ON c."opening" = o."name"
+WHERE c."opening" <> ''
+AND c."${side}Username" = '${username}'
+GROUP BY c."opening", o."pgn"
+ORDER BY total DESC
+LIMIT 10;`;
+  logger.info({ username, side, limit }, 'buildOpeningsQuery');
+  return Prisma.raw(query);
+};
+
+const buildMovesByPiecesQuery = ({
+  username,
+}: { username: string }): Prisma.Sql => {
+  const query: string = `SELECT
+SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whitePawn" ELSE c."blackPawn" END) as pawn,
+SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteKnight" ELSE c."blackKnight" END) as knight,
+SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteBishop" ELSE c."blackBishop" END) as bishop,
+SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteRook" ELSE c."blackRook" END) as rook,
+SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteQueen" ELSE c."blackQueen" END) as queen,
+SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteKing" ELSE c."blackKing" END) as king
+FROM chess."ChessGame" as c
+WHERE c."whiteUsername" = '${username}' OR c."blackUsername" = '${username}';`;
+  logger.info({ username }, `buildMovesByPiecesQuery query=${query}`);
+  return Prisma.raw(query);
+};
+
+const buildSumMovesByCastlingQuery =
+  (
+    username: string,
+    first: string,
+    second: string
+  ): ((results: ChessResult[], column: string) => string) =>
+  (results: ChessResult[], column: string): string => {
+    const resultsString: string = results
+      .map((result: ChessResult) => `'${result}'`)
+      .join(',');
+    return `SUM(CASE WHEN
+  (CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteCastling" ELSE c."blackCastling" END) = '${first}' AND
+  (CASE WHEN c."whiteUsername" = '${username}' THEN c."blackCastling" ELSE c."whiteCastling" END) = '${second}' AND
+  (CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteResult" ELSE c."blackResult" END) IN (${resultsString}) THEN 1 ELSE 0 END
+) as ${column}`;
+  };
+
+const buildMovesByCastlingQuery = ({
+  username,
+}: { username: string }): Prisma.Sql => {
+  const ssQuery = buildSumMovesByCastlingQuery(username, 'short', 'short');
+  const ssw: string = ssQuery(CHESS_WIN_RESULTS, 'short_short_win');
+  const ssd: string = ssQuery(CHESS_DRAW_RESULTS, 'short_short_draw');
+  const ssl: string = ssQuery(CHESS_LOSS_RESULTS, 'short_short_loss');
+  const slQuery = buildSumMovesByCastlingQuery(username, 'short', 'long');
+  const slw: string = slQuery(CHESS_WIN_RESULTS, 'short_long_win');
+  const sld: string = slQuery(CHESS_DRAW_RESULTS, 'short_long_draw');
+  const sll: string = slQuery(CHESS_LOSS_RESULTS, 'short_long_loss');
+  const snQuery = buildSumMovesByCastlingQuery(username, 'short', '');
+  const snw: string = snQuery(CHESS_WIN_RESULTS, 'short_none_win');
+  const snd: string = snQuery(CHESS_DRAW_RESULTS, 'short_none_draw');
+  const snl: string = snQuery(CHESS_LOSS_RESULTS, 'short_none_loss');
+  const lsQuery = buildSumMovesByCastlingQuery(username, 'long', 'short');
+  const lsw: string = lsQuery(CHESS_WIN_RESULTS, 'long_short_win');
+  const lsd: string = lsQuery(CHESS_DRAW_RESULTS, 'long_short_draw');
+  const lsl: string = lsQuery(CHESS_LOSS_RESULTS, 'long_short_loss');
+  const llQuery = buildSumMovesByCastlingQuery(username, 'long', 'long');
+  const llw: string = llQuery(CHESS_WIN_RESULTS, 'long_long_win');
+  const lld: string = llQuery(CHESS_DRAW_RESULTS, 'long_long_draw');
+  const lll: string = llQuery(CHESS_LOSS_RESULTS, 'long_long_loss');
+  const lnQuery = buildSumMovesByCastlingQuery(username, 'long', '');
+  const lnw: string = lnQuery(CHESS_WIN_RESULTS, 'long_none_win');
+  const lnd: string = lnQuery(CHESS_DRAW_RESULTS, 'long_none_draw');
+  const lnl: string = lnQuery(CHESS_LOSS_RESULTS, 'long_none_loss');
+  const nsQuery = buildSumMovesByCastlingQuery(username, '', 'short');
+  const nsw: string = nsQuery(CHESS_WIN_RESULTS, 'none_short_win');
+  const nsd: string = nsQuery(CHESS_DRAW_RESULTS, 'none_short_draw');
+  const nsl: string = nsQuery(CHESS_LOSS_RESULTS, 'none_short_loss');
+  const nlQuery = buildSumMovesByCastlingQuery(username, '', 'long');
+  const nlw: string = nlQuery(CHESS_WIN_RESULTS, 'none_long_win');
+  const nld: string = nlQuery(CHESS_DRAW_RESULTS, 'none_long_draw');
+  const nll: string = nlQuery(CHESS_LOSS_RESULTS, 'none_long_loss');
+  const nnQuery = buildSumMovesByCastlingQuery(username, '', '');
+  const nnw: string = nnQuery(CHESS_WIN_RESULTS, 'none_none_win');
+  const nnd: string = nnQuery(CHESS_DRAW_RESULTS, 'none_none_draw');
+  const nnl: string = nnQuery(CHESS_LOSS_RESULTS, 'none_none_loss');
+  const query: string = `SELECT
+${ssw}, ${ssd}, ${ssl}, ${slw}, ${sld}, ${sll}, ${snw}, ${snd}, ${snl},
+${lsw}, ${lsd}, ${lsl}, ${llw}, ${lld}, ${lll}, ${lnw}, ${lnd}, ${lnl},
+${nsw}, ${nsd}, ${nsl}, ${nlw}, ${nld}, ${nll}, ${nnw}, ${nnd}, ${nnl}
+FROM chess."ChessGame" as c
+WHERE c."whiteUsername" = '${username}' OR c."blackUsername" = '${username}'`;
+  logger.info({ username }, `buildMovesByCastlingQuery query=${query}`);
+  return Prisma.raw(query);
+};
+
 const buildOpponentsQuery = ({
   username = '',
   limit = 100,
@@ -270,408 +387,620 @@ export const getInsights = async ({
   timeClass: ChessTimeClass;
   rated: boolean;
 }): Promise<Insights> => {
-  const prismaClient = getPrismaClient();
-  const baseOptions = { username, timeClass, variant, rated };
-  // Accuracy
-  const averageAccuracyQuery: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'averageAccuracyQuery',
-    sqlFunction: 'avg',
-    accuracy: true,
-  });
-  const averageAccuracyQueryByWinResults: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'averageAccuracyQueryByWinResults',
-    sqlFunction: 'avg',
-    accuracy: true,
-    results: CHESS_WIN_RESULTS,
-  });
-  const averageAccuracyQueryByDrawResults: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'averageAccuracyQueryByDrawResults',
-    sqlFunction: 'avg',
-    accuracy: true,
-    results: CHESS_DRAW_RESULTS,
-  });
-  const averageAccuracyQueryByLossResults: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'averageAccuracyQueryByLossResults',
-    sqlFunction: 'avg',
-    accuracy: true,
-    results: CHESS_LOSS_RESULTS,
-  });
-  const averageAccuracyQueryByYears: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'averageAccuracyQueryByYears',
-    sqlFunction: 'avg',
-    accuracy: true,
-    column: 'year',
-  });
-  const averageAccuracyQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'averageAccuracyQueryByTimeOfDay',
-    sqlFunction: 'avg',
-    accuracy: true,
-    column: 'timeOfDay',
-  });
-  const averageAccuracyQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'averageAccuracyQueryByDayOfWeek',
-    sqlFunction: 'avg',
-    accuracy: true,
-    column: 'dayOfWeek',
-  });
-  // Games
-  const totalGamesWhere: Prisma.ChessGameWhereInput =
-    buildWhereInput(baseOptions);
-  const winGamesWhere: Prisma.ChessGameWhereInput = buildWhereInput({
-    ...baseOptions,
-    results: CHESS_WIN_RESULTS,
-  });
-  const drawGamesWhere: Prisma.ChessGameWhereInput = buildWhereInput({
-    ...baseOptions,
-    results: CHESS_DRAW_RESULTS,
-  });
-  const lossGamesWhere: Prisma.ChessGameWhereInput = buildWhereInput({
-    ...baseOptions,
-    results: CHESS_LOSS_RESULTS,
-  });
-  const gamesQueryByYear: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'gamesQueryByYear',
-    column: 'year',
-  });
-  const gamesQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'gamesQueryByTimeOfDay',
-    column: 'timeOfDay',
-  });
-  const gamesQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'gamesQueryByDayOfWeek',
-    column: 'dayOfWeek',
-  });
-  // Opponents
-  const opponentsQuery = buildOpponentsQuery({
-    ...baseOptions,
-    limit: 100,
-  });
-  // Results
-  const winResultsQuery: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'winResultsQuery',
-    column: 'result',
-    results: CHESS_WIN_RESULTS,
-  });
-  const drawResultsQuery: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'drawResultsQuery',
-    column: 'result',
-    results: CHESS_DRAW_RESULTS,
-  });
-  const lossResultsQuery: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'lossResultsQuery',
-    column: 'result',
-    results: CHESS_LOSS_RESULTS,
-  });
-  const winResultsQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'winResultsQueryByTimeOfDay',
-    column: 'timeOfDay',
-    results: CHESS_WIN_RESULTS,
-  });
-  const drawResultsQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'drawResultsQueryByTimeOfDay',
-    column: 'timeOfDay',
-    results: CHESS_DRAW_RESULTS,
-  });
-  const lossResultsQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'lossResultsQueryByTimeOfDay',
-    column: 'timeOfDay',
-    results: CHESS_LOSS_RESULTS,
-  });
-  const winResultsQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'winResultsQueryByDayOfWeek',
-    column: 'dayOfWeek',
-    results: CHESS_WIN_RESULTS,
-  });
-  const drawResultsQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'drawResultsQueryByDayOfWeek',
-    column: 'dayOfWeek',
-    results: CHESS_DRAW_RESULTS,
-  });
-  const lossResultsQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'lossResultsQueryByDayOfWeek',
-    column: 'dayOfWeek',
-    results: CHESS_LOSS_RESULTS,
-  });
-  const winResultsQueryByOpponentRating: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'winResultsQueryByOpponentRating',
-    column: 'opponent',
-    results: CHESS_WIN_RESULTS,
-  });
-  const drawResultsQueryByOpponentRating: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'drawResultsQueryByOpponentRating',
-    column: 'opponent',
-    results: CHESS_DRAW_RESULTS,
-  });
-  const lossResultsQueryByOpponentRating: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    name: 'lossResultsQueryByOpponentRating',
-    column: 'opponent',
-    results: CHESS_LOSS_RESULTS,
-  });
-  const winResultsQueryByEndPhrase: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    endPhrase: true,
-    name: 'winResultsQueryByEndPhrase',
-    column: 'endPhrase',
-    results: CHESS_WIN_RESULTS,
-  });
-  const drawResultsQueryByEndPhrase: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    endPhrase: true,
-    name: 'drawResultsQueryByEndPhrase',
-    column: 'endPhrase',
-    results: CHESS_DRAW_RESULTS,
-  });
-  const lossResultsQueryByEndPhrase: Prisma.Sql = buildFunctionQuery({
-    ...baseOptions,
-    endPhrase: true,
-    name: 'lossResultsQueryByEndPhrase',
-    column: 'endPhrase',
-    results: CHESS_LOSS_RESULTS,
-  });
-  const [
-    [{ average = 0 }],
-    [{ average: win = 0 }],
-    [{ average: draw = 0 }],
-    [{ average: loss = 0 }],
-    averageAccuracyByYearsList = [],
-    averageAccuracyByTimeOfDaysList = [],
-    averageAccuracyByDaysOfWeekList = [],
-    opponents = [],
-    totalGames = 0,
-    winGames = 0,
-    drawGames = 0,
-    lossGames = 0,
-    gamesByYearsList = [],
-    gamesByTimeOfDaysList = [],
-    gamesByDaysOfWeekList = [],
-    winResults = [],
-    drawResults = [],
-    lossResults = [],
-    winResultsByTimeOfDays = [],
-    drawResultsByTimeOfDays = [],
-    lossResultsByTimeOfDays = [],
-    winResultsByDaysOfWeek = [],
-    drawResultsByDaysOfWeek = [],
-    lossResultsByDaysOfWeek = [],
-    winResultsByOpponentRating = [],
-    drawResultsByOpponentRating = [],
-    lossResultsByOpponentRating = [],
-    winResultsByEndPhrase = [],
-    drawResultsByEndPhrase = [],
-    lossResultsByEndPhrase = [],
-  ] = await prismaClient.$transaction([
+  try {
+    const prismaClient = getPrismaClient();
+    const baseOptions = { username, timeClass, variant, rated };
     // Accuracy
-    prismaClient.$queryRaw<AverageByColumn[]>(averageAccuracyQuery),
-    prismaClient.$queryRaw<AverageByColumn[]>(averageAccuracyQueryByWinResults),
-    prismaClient.$queryRaw<AverageByColumn[]>(
-      averageAccuracyQueryByDrawResults
-    ),
-    prismaClient.$queryRaw<AverageByColumn[]>(
-      averageAccuracyQueryByLossResults
-    ),
-    prismaClient.$queryRaw<AverageByColumn[]>(averageAccuracyQueryByYears),
-    prismaClient.$queryRaw<AverageByColumn[]>(averageAccuracyQueryByTimeOfDay),
-    prismaClient.$queryRaw<AverageByColumn[]>(averageAccuracyQueryByDayOfWeek),
-    // Opponents
-    prismaClient.$queryRaw<Opponent[]>(opponentsQuery),
+    const averageAccuracyQuery: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'averageAccuracyQuery',
+      sqlFunction: 'avg',
+      accuracy: true,
+    });
+    const averageAccuracyQueryByWinResults: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'averageAccuracyQueryByWinResults',
+      sqlFunction: 'avg',
+      accuracy: true,
+      results: CHESS_WIN_RESULTS,
+    });
+    const averageAccuracyQueryByDrawResults: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'averageAccuracyQueryByDrawResults',
+      sqlFunction: 'avg',
+      accuracy: true,
+      results: CHESS_DRAW_RESULTS,
+    });
+    const averageAccuracyQueryByLossResults: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'averageAccuracyQueryByLossResults',
+      sqlFunction: 'avg',
+      accuracy: true,
+      results: CHESS_LOSS_RESULTS,
+    });
+    const averageAccuracyQueryByYears: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'averageAccuracyQueryByYears',
+      sqlFunction: 'avg',
+      accuracy: true,
+      column: 'year',
+    });
+    const averageAccuracyQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'averageAccuracyQueryByTimeOfDay',
+      sqlFunction: 'avg',
+      accuracy: true,
+      column: 'timeOfDay',
+    });
+    const averageAccuracyQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'averageAccuracyQueryByDayOfWeek',
+      sqlFunction: 'avg',
+      accuracy: true,
+      column: 'dayOfWeek',
+    });
     // Games
-    prismaClient.chessGame.count({ where: totalGamesWhere }),
-    prismaClient.chessGame.count({ where: winGamesWhere }),
-    prismaClient.chessGame.count({ where: drawGamesWhere }),
-    prismaClient.chessGame.count({ where: lossGamesWhere }),
-    prismaClient.$queryRaw<CountByColumn[]>(gamesQueryByYear),
-    prismaClient.$queryRaw<CountByColumn[]>(gamesQueryByTimeOfDay),
-    prismaClient.$queryRaw<CountByColumn[]>(gamesQueryByDayOfWeek),
+    const totalGamesWhere: Prisma.ChessGameWhereInput =
+      buildWhereInput(baseOptions);
+    const winGamesWhere: Prisma.ChessGameWhereInput = buildWhereInput({
+      ...baseOptions,
+      results: CHESS_WIN_RESULTS,
+    });
+    const drawGamesWhere: Prisma.ChessGameWhereInput = buildWhereInput({
+      ...baseOptions,
+      results: CHESS_DRAW_RESULTS,
+    });
+    const lossGamesWhere: Prisma.ChessGameWhereInput = buildWhereInput({
+      ...baseOptions,
+      results: CHESS_LOSS_RESULTS,
+    });
+    const gamesQueryByYear: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'gamesQueryByYear',
+      column: 'year',
+    });
+    const gamesQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'gamesQueryByTimeOfDay',
+      column: 'timeOfDay',
+    });
+    const gamesQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'gamesQueryByDayOfWeek',
+      column: 'dayOfWeek',
+    });
+    // Openings
+    const whiteOpeningsQuery: Prisma.Sql = buildOpeningsQuery({
+      username,
+      limit: 10,
+      side: 'white',
+    });
+    const blackOpeningsQuery: Prisma.Sql = buildOpeningsQuery({
+      username,
+      limit: 10,
+      side: 'black',
+    });
+    // Moves
+    const movesByPiecesQuery: Prisma.Sql = buildMovesByPiecesQuery({
+      username,
+    });
+    const movesByCastlingQuery: Prisma.Sql = buildMovesByCastlingQuery({
+      username,
+    });
+    // Opponents
+    const opponentsQuery = buildOpponentsQuery({
+      ...baseOptions,
+      limit: 100,
+    });
     // Results
-    prismaClient.$queryRaw<CountByColumn[]>(winResultsQuery),
-    prismaClient.$queryRaw<CountByColumn[]>(drawResultsQuery),
-    prismaClient.$queryRaw<CountByColumn[]>(lossResultsQuery),
-    prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByTimeOfDay),
-    prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByTimeOfDay),
-    prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByTimeOfDay),
-    prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByDayOfWeek),
-    prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByDayOfWeek),
-    prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByDayOfWeek),
-    prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByOpponentRating),
-    prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByOpponentRating),
-    prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByOpponentRating),
-    prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByEndPhrase),
-    prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByEndPhrase),
-    prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByEndPhrase),
-  ]);
-  // Accuracy
-  const accuracy = {
-    average,
-    win,
-    draw,
-    loss,
-    periods: averageAccuracyByYearsList.map(({ average, column }) => ({
+    const winResultsQuery: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'winResultsQuery',
+      column: 'result',
+      results: CHESS_WIN_RESULTS,
+    });
+    const drawResultsQuery: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'drawResultsQuery',
+      column: 'result',
+      results: CHESS_DRAW_RESULTS,
+    });
+    const lossResultsQuery: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'lossResultsQuery',
+      column: 'result',
+      results: CHESS_LOSS_RESULTS,
+    });
+    const winResultsQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'winResultsQueryByTimeOfDay',
+      column: 'timeOfDay',
+      results: CHESS_WIN_RESULTS,
+    });
+    const drawResultsQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'drawResultsQueryByTimeOfDay',
+      column: 'timeOfDay',
+      results: CHESS_DRAW_RESULTS,
+    });
+    const lossResultsQueryByTimeOfDay: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'lossResultsQueryByTimeOfDay',
+      column: 'timeOfDay',
+      results: CHESS_LOSS_RESULTS,
+    });
+    const winResultsQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'winResultsQueryByDayOfWeek',
+      column: 'dayOfWeek',
+      results: CHESS_WIN_RESULTS,
+    });
+    const drawResultsQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'drawResultsQueryByDayOfWeek',
+      column: 'dayOfWeek',
+      results: CHESS_DRAW_RESULTS,
+    });
+    const lossResultsQueryByDayOfWeek: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'lossResultsQueryByDayOfWeek',
+      column: 'dayOfWeek',
+      results: CHESS_LOSS_RESULTS,
+    });
+    const winResultsQueryByOpponentRating: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'winResultsQueryByOpponentRating',
+      column: 'opponent',
+      results: CHESS_WIN_RESULTS,
+    });
+    const drawResultsQueryByOpponentRating: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'drawResultsQueryByOpponentRating',
+      column: 'opponent',
+      results: CHESS_DRAW_RESULTS,
+    });
+    const lossResultsQueryByOpponentRating: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      name: 'lossResultsQueryByOpponentRating',
+      column: 'opponent',
+      results: CHESS_LOSS_RESULTS,
+    });
+    const winResultsQueryByEndPhrase: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      endPhrase: true,
+      name: 'winResultsQueryByEndPhrase',
+      column: 'endPhrase',
+      results: CHESS_WIN_RESULTS,
+    });
+    const drawResultsQueryByEndPhrase: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      endPhrase: true,
+      name: 'drawResultsQueryByEndPhrase',
+      column: 'endPhrase',
+      results: CHESS_DRAW_RESULTS,
+    });
+    const lossResultsQueryByEndPhrase: Prisma.Sql = buildFunctionQuery({
+      ...baseOptions,
+      endPhrase: true,
+      name: 'lossResultsQueryByEndPhrase',
+      column: 'endPhrase',
+      results: CHESS_LOSS_RESULTS,
+    });
+    const [
+      // Accuracy
+      [{ average = 0 }] = [{ average: 0 }],
+      [{ average: win = 0 }] = [{ average: 0 }],
+      [{ average: draw = 0 }] = [{ average: 0 }],
+      [{ average: loss = 0 }] = [{ average: 0 }],
+      averageAccuracyByYearsList = [],
+      averageAccuracyByTimeOfDaysList = [],
+      averageAccuracyByDaysOfWeekList = [],
+      // Openings
+      whiteOpenings = [],
+      blackOpenings = [],
+      // Moves
+      [{ king = 0, queen = 0, rook = 0, bishop = 0, knight = 0, pawn = 0 }] = [
+        { king: 0, queen: 0, rook: 0, bishop: 0, knight: 0, pawn: 0 },
+      ],
+      [
+        {
+          short_short_win = 0,
+          short_short_draw = 0,
+          short_short_loss = 0,
+          short_long_win = 0,
+          short_long_draw = 0,
+          short_long_loss = 0,
+          short_none_win = 0,
+          short_none_draw = 0,
+          short_none_loss = 0,
+          long_short_win = 0,
+          long_short_draw = 0,
+          long_short_loss = 0,
+          long_long_win = 0,
+          long_long_draw = 0,
+          long_long_loss = 0,
+          long_none_win = 0,
+          long_none_draw = 0,
+          long_none_loss = 0,
+          none_short_win = 0,
+          none_short_draw = 0,
+          none_short_loss = 0,
+          none_long_win = 0,
+          none_long_draw = 0,
+          none_long_loss = 0,
+          none_none_win = 0,
+          none_none_draw = 0,
+          none_none_loss = 0,
+        },
+      ] = [
+        {
+          short_short_win: 0,
+          short_short_draw: 0,
+          short_short_loss: 0,
+          short_long_win: 0,
+          short_long_draw: 0,
+          short_long_loss: 0,
+          short_none_win: 0,
+          short_none_draw: 0,
+          short_none_loss: 0,
+          long_short_win: 0,
+          long_short_draw: 0,
+          long_short_loss: 0,
+          long_long_win: 0,
+          long_long_draw: 0,
+          long_long_loss: 0,
+          long_none_win: 0,
+          long_none_draw: 0,
+          long_none_loss: 0,
+          none_short_win: 0,
+          none_short_draw: 0,
+          none_short_loss: 0,
+          none_long_win: 0,
+          none_long_draw: 0,
+          none_long_loss: 0,
+          none_none_win: 0,
+          none_none_draw: 0,
+          none_none_loss: 0,
+        },
+      ],
+      // Opponents
+      opponents = [],
+      // Games
+      totalGames = 0,
+      winGames = 0,
+      drawGames = 0,
+      lossGames = 0,
+      gamesByYearsList = [],
+      gamesByTimeOfDaysList = [],
+      gamesByDaysOfWeekList = [],
+      // Results
+      winResults = [],
+      drawResults = [],
+      lossResults = [],
+      winResultsByTimeOfDays = [],
+      drawResultsByTimeOfDays = [],
+      lossResultsByTimeOfDays = [],
+      winResultsByDaysOfWeek = [],
+      drawResultsByDaysOfWeek = [],
+      lossResultsByDaysOfWeek = [],
+      winResultsByOpponentRating = [],
+      drawResultsByOpponentRating = [],
+      lossResultsByOpponentRating = [],
+      winResultsByEndPhrase = [],
+      drawResultsByEndPhrase = [],
+      lossResultsByEndPhrase = [],
+    ] = await prismaClient.$transaction([
+      // Accuracy
+      prismaClient.$queryRaw<AverageByColumn[]>(averageAccuracyQuery),
+      prismaClient.$queryRaw<AverageByColumn[]>(
+        averageAccuracyQueryByWinResults
+      ),
+      prismaClient.$queryRaw<AverageByColumn[]>(
+        averageAccuracyQueryByDrawResults
+      ),
+      prismaClient.$queryRaw<AverageByColumn[]>(
+        averageAccuracyQueryByLossResults
+      ),
+      prismaClient.$queryRaw<AverageByColumn[]>(averageAccuracyQueryByYears),
+      prismaClient.$queryRaw<AverageByColumn[]>(
+        averageAccuracyQueryByTimeOfDay
+      ),
+      prismaClient.$queryRaw<AverageByColumn[]>(
+        averageAccuracyQueryByDayOfWeek
+      ),
+      // Openings
+      prismaClient.$queryRaw<OpeningCount[]>(whiteOpeningsQuery),
+      prismaClient.$queryRaw<OpeningCount[]>(blackOpeningsQuery),
+      // Moves
+      prismaClient.$queryRaw<Pieces[]>(movesByPiecesQuery),
+      prismaClient.$queryRaw<
+        {
+          short_short_win: number;
+          short_short_draw: number;
+          short_short_loss: number;
+          short_long_win: number;
+          short_long_draw: number;
+          short_long_loss: number;
+          short_none_win: number;
+          short_none_draw: number;
+          short_none_loss: number;
+          long_short_win: number;
+          long_short_draw: number;
+          long_short_loss: number;
+          long_long_win: number;
+          long_long_draw: number;
+          long_long_loss: number;
+          long_none_win: number;
+          long_none_draw: number;
+          long_none_loss: number;
+          none_short_win: number;
+          none_short_draw: number;
+          none_short_loss: number;
+          none_long_win: number;
+          none_long_draw: number;
+          none_long_loss: number;
+          none_none_win: number;
+          none_none_draw: number;
+          none_none_loss: number;
+        }[]
+      >(movesByCastlingQuery),
+      // Opponents
+      prismaClient.$queryRaw<Opponent[]>(opponentsQuery),
+      // Games
+      prismaClient.chessGame.count({ where: totalGamesWhere }),
+      prismaClient.chessGame.count({ where: winGamesWhere }),
+      prismaClient.chessGame.count({ where: drawGamesWhere }),
+      prismaClient.chessGame.count({ where: lossGamesWhere }),
+      prismaClient.$queryRaw<CountByColumn[]>(gamesQueryByYear),
+      prismaClient.$queryRaw<CountByColumn[]>(gamesQueryByTimeOfDay),
+      prismaClient.$queryRaw<CountByColumn[]>(gamesQueryByDayOfWeek),
+      // Results
+      prismaClient.$queryRaw<CountByColumn[]>(winResultsQuery),
+      prismaClient.$queryRaw<CountByColumn[]>(drawResultsQuery),
+      prismaClient.$queryRaw<CountByColumn[]>(lossResultsQuery),
+      prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByTimeOfDay),
+      prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByTimeOfDay),
+      prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByTimeOfDay),
+      prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByDayOfWeek),
+      prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByDayOfWeek),
+      prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByDayOfWeek),
+      prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByOpponentRating),
+      prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByOpponentRating),
+      prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByOpponentRating),
+      prismaClient.$queryRaw<CountByColumn[]>(winResultsQueryByEndPhrase),
+      prismaClient.$queryRaw<CountByColumn[]>(drawResultsQueryByEndPhrase),
+      prismaClient.$queryRaw<CountByColumn[]>(lossResultsQueryByEndPhrase),
+    ]);
+    // Accuracy
+    const accuracy = {
       average,
-      period: column,
-    })),
-    timeOfDays: averageAccuracyByTimeOfDaysList.map(
-      ({ average: averageOfTimeOfDays, column }) => ({
-        average: averageOfTimeOfDays,
+      win,
+      draw,
+      loss,
+      periods: averageAccuracyByYearsList.map(({ average, column }) => ({
+        average,
+        period: column,
+      })),
+      timeOfDays: averageAccuracyByTimeOfDaysList.map(
+        ({ average: averageOfTimeOfDays, column }) => ({
+          average: averageOfTimeOfDays,
+          timeOfDay: [...TIME_OF_DAYS][`${column}`],
+        })
+      ),
+      daysOfWeek: averageAccuracyByDaysOfWeekList.map(
+        ({ average: averageOfDaysOfWeek, column }) => ({
+          average: averageOfDaysOfWeek,
+          dayOfWeek: [...DAYS_OF_WEEK][`${column}`],
+        })
+      ),
+    };
+    // Games by Years
+    const gamesByYears: GamesByYear[] = gamesByYearsList.map(
+      ({ count: games = 0, column = 0 }) => ({
+        games,
+        period: column,
+      })
+    );
+    // Games by Time of Day
+    const gamesByTimeOfDays: GamesByTimeOfDay[] = gamesByTimeOfDaysList.map(
+      ({ count: games = 0, column = 0 }) => ({
+        games,
         timeOfDay: [...TIME_OF_DAYS][`${column}`],
       })
-    ),
-    daysOfWeek: averageAccuracyByDaysOfWeekList.map(
-      ({ average: averageOfDaysOfWeek, column }) => ({
-        average: averageOfDaysOfWeek,
+    );
+    // Games by Day of Week
+    const gamesByDaysOfWeek: GamesByDayOfWeek[] = gamesByDaysOfWeekList.map(
+      ({ count: games = 0, column = 0 }) => ({
+        games,
         dayOfWeek: [...DAYS_OF_WEEK][`${column}`],
       })
-    ),
-  };
-  // Games by Years
-  const gamesByYears: GamesByYear[] = gamesByYearsList.map(
-    ({ count: games = 0, column = 0 }) => ({
-      games,
-      period: column,
-    })
-  );
-  // Games by Time of Day
-  const gamesByTimeOfDays: GamesByTimeOfDay[] = gamesByTimeOfDaysList.map(
-    ({ count: games = 0, column = 0 }) => ({
-      games,
-      timeOfDay: [...TIME_OF_DAYS][`${column}`],
-    })
-  );
-  // Games by Day of Week
-  const gamesByDaysOfWeek: GamesByDayOfWeek[] = gamesByDaysOfWeekList.map(
-    ({ count: games = 0, column = 0 }) => ({
-      games,
-      dayOfWeek: [...DAYS_OF_WEEK][`${column}`],
-    })
-  );
-  // Games
-  const games = {
-    total: totalGames,
-    win: winGames,
-    draw: drawGames,
-    loss: lossGames,
-    periods: gamesByYears,
-    timeOfDays: gamesByTimeOfDays,
-    daysOfWeek: gamesByDaysOfWeek,
-  };
+    );
+    // Games
+    const games = {
+      total: totalGames,
+      win: winGames,
+      draw: drawGames,
+      loss: lossGames,
+      periods: gamesByYears,
+      timeOfDays: gamesByTimeOfDays,
+      daysOfWeek: gamesByDaysOfWeek,
+    };
 
-  // Results by Time of Day
-  const resultsByTimeOfDays: ResultsByTimeOfDay[] = winResultsByTimeOfDays.map(
-    ({ count: win, column }) => {
-      const timeOfDay: string = [...TIME_OF_DAYS][
-        `${Number.parseInt(column.toString())}`
-      ];
-      const { count: draw = 0 } = drawResultsByTimeOfDays.find(
-        ({ column: drawColumn }) => drawColumn.toString() === column.toString()
-      ) ?? { draw: 0 };
-      const { count: loss = 0 } = lossResultsByTimeOfDays.find(
-        ({ column: lossColumn }) => lossColumn.toString() === column.toString()
-      ) ?? { count: 0 };
-      return { timeOfDay, win, draw, loss };
-    }
-  );
-  // Results by Day of Week
-  const resultsByDaysOfWeek: ResultsByDayOfWeek[] = winResultsByDaysOfWeek.map(
-    ({ count: win, column }) => {
-      const dayOfWeek: string = [...DAYS_OF_WEEK][
-        `${Number.parseInt(column.toString())}`
-      ];
-      const { count: draw = 0 } = drawResultsByDaysOfWeek.find(
-        ({ column: drawColumn }) => drawColumn.toString() === column.toString()
-      ) ?? { draw: 0 };
-      const { count: loss = 0 } = lossResultsByDaysOfWeek.find(
-        ({ column: lossColumn }) => lossColumn.toString() === column.toString()
-      ) ?? { count: 0 };
-      return { dayOfWeek, win, draw, loss };
-    }
-  );
-  // Results by Opponent Rating
-  const ratings: Set<number> = new Set(
-    [
-      ...winResultsByOpponentRating,
-      ...drawResultsByOpponentRating,
-      ...lossResultsByOpponentRating,
-    ].map(({ column }) => column)
-  );
-  const resultsByOpponentRating: ResultsByOpponentRating[] = [...ratings]
-    .map((rating: number) => {
-      const { count: win = 0 } = winResultsByOpponentRating.find(
-        ({ column: winRating }) => winRating.toString() === rating.toString()
-      ) ?? { count: 0 };
-      const { count: draw = 0 } = drawResultsByOpponentRating.find(
-        ({ column: drawRating }) => drawRating.toString() === rating.toString()
-      ) ?? { count: 0 };
-      const { count: loss = 0 } = lossResultsByOpponentRating.find(
-        ({ column: lossRating }) => lossRating.toString() === rating.toString()
-      ) ?? { count: 0 };
-      return { rating: rating * 100, win, draw, loss };
-    })
-    .sort((a, b) => (a.rating > b.rating ? 1 : -1));
-  // Results by
-  const endPhrases = new Set(
-    [
-      ...winResultsByEndPhrase,
-      ...drawResultsByEndPhrase,
-      ...lossResultsByEndPhrase,
-    ].map(({ column }) => column)
-  );
-  const resultsByEndPhrase: ResultsByEndPhrase[] = [...endPhrases].map(
-    (endPhrase: number) => {
-      const { count: win = 0 } = winResultsByEndPhrase.find(
-        ({ column: winPhrase }) => winPhrase.toString() === endPhrase.toString()
-      ) ?? { count: 0 };
-      const { count: draw = 0 } = drawResultsByEndPhrase.find(
-        ({ column: drawPhrase }) =>
-          drawPhrase.toString() === endPhrase.toString()
-      ) ?? { count: 0 };
-      const { count: loss = 0 } = lossResultsByEndPhrase.find(
-        ({ column: lossPhrase }) =>
-          lossPhrase.toString() === endPhrase.toString()
-      ) ?? { count: 0 };
-      return { phrase: endPhrase.toString() as ChessPhrase, win, draw, loss };
-    }
-  );
-  // Results
-  const results = {
-    win: winResults.map(({ column, count }) => ({
-      result: column.toString(),
-      count,
-    })),
-    draw: drawResults.map(({ column, count }) => ({
-      result: column.toString(),
-      count,
-    })),
-    loss: lossResults.map(({ column, count }) => ({
-      result: column.toString(),
-      count,
-    })),
-    timeOfDays: resultsByTimeOfDays,
-    daysOfWeek: resultsByDaysOfWeek,
-    opponents: resultsByOpponentRating,
-    endPhrases: resultsByEndPhrase,
-  };
-  // Disconect
-  await prismaClient.$disconnect();
-  return { username, accuracy, games, opponents, results };
+    // Results by Time of Day
+    const resultsByTimeOfDays: ResultsByTimeOfDay[] =
+      winResultsByTimeOfDays.map(({ count: win, column }) => {
+        const timeOfDay: string = [...TIME_OF_DAYS][
+          `${Number.parseInt(column.toString())}`
+        ];
+        const { count: draw = 0 } = drawResultsByTimeOfDays.find(
+          ({ column: drawColumn }) =>
+            drawColumn.toString() === column.toString()
+        ) ?? { draw: 0 };
+        const { count: loss = 0 } = lossResultsByTimeOfDays.find(
+          ({ column: lossColumn }) =>
+            lossColumn.toString() === column.toString()
+        ) ?? { count: 0 };
+        return { timeOfDay, win, draw, loss };
+      });
+    // Results by Day of Week
+    const resultsByDaysOfWeek: ResultsByDayOfWeek[] =
+      winResultsByDaysOfWeek.map(({ count: win, column }) => {
+        const dayOfWeek: string = [...DAYS_OF_WEEK][
+          `${Number.parseInt(column.toString())}`
+        ];
+        const { count: draw = 0 } = drawResultsByDaysOfWeek.find(
+          ({ column: drawColumn }) =>
+            drawColumn.toString() === column.toString()
+        ) ?? { draw: 0 };
+        const { count: loss = 0 } = lossResultsByDaysOfWeek.find(
+          ({ column: lossColumn }) =>
+            lossColumn.toString() === column.toString()
+        ) ?? { count: 0 };
+        return { dayOfWeek, win, draw, loss };
+      });
+    // Results by Opponent Rating
+    const ratings: Set<number> = new Set(
+      [
+        ...winResultsByOpponentRating,
+        ...drawResultsByOpponentRating,
+        ...lossResultsByOpponentRating,
+      ].map(({ column }) => column)
+    );
+    const resultsByOpponentRating: ResultsByOpponentRating[] = [...ratings]
+      .map((rating: number) => {
+        const { count: win = 0 } = winResultsByOpponentRating.find(
+          ({ column: winRating }) => winRating.toString() === rating.toString()
+        ) ?? { count: 0 };
+        const { count: draw = 0 } = drawResultsByOpponentRating.find(
+          ({ column: drawRating }) =>
+            drawRating.toString() === rating.toString()
+        ) ?? { count: 0 };
+        const { count: loss = 0 } = lossResultsByOpponentRating.find(
+          ({ column: lossRating }) =>
+            lossRating.toString() === rating.toString()
+        ) ?? { count: 0 };
+        return { rating: rating * 100, win, draw, loss };
+      })
+      .sort((a, b) => (a.rating > b.rating ? 1 : -1));
+    // Results by
+    const endPhrases = new Set(
+      [
+        ...winResultsByEndPhrase,
+        ...drawResultsByEndPhrase,
+        ...lossResultsByEndPhrase,
+      ].map(({ column }) => column)
+    );
+    const resultsByEndPhrase: ResultsByEndPhrase[] = [...endPhrases].map(
+      (endPhrase: number) => {
+        const { count: win = 0 } = winResultsByEndPhrase.find(
+          ({ column: winPhrase }) =>
+            winPhrase.toString() === endPhrase.toString()
+        ) ?? { count: 0 };
+        const { count: draw = 0 } = drawResultsByEndPhrase.find(
+          ({ column: drawPhrase }) =>
+            drawPhrase.toString() === endPhrase.toString()
+        ) ?? { count: 0 };
+        const { count: loss = 0 } = lossResultsByEndPhrase.find(
+          ({ column: lossPhrase }) =>
+            lossPhrase.toString() === endPhrase.toString()
+        ) ?? { count: 0 };
+        return { phrase: endPhrase.toString() as ChessPhrase, win, draw, loss };
+      }
+    );
+    // Results
+    const results = {
+      win: winResults.map(({ column, count }) => ({
+        result: column.toString(),
+        count,
+      })),
+      draw: drawResults.map(({ column, count }) => ({
+        result: column.toString(),
+        count,
+      })),
+      loss: lossResults.map(({ column, count }) => ({
+        result: column.toString(),
+        count,
+      })),
+      timeOfDays: resultsByTimeOfDays,
+      daysOfWeek: resultsByDaysOfWeek,
+      opponents: resultsByOpponentRating,
+      endPhrases: resultsByEndPhrase,
+    };
+    // Disconect
+    await prismaClient.$disconnect();
+    return {
+      username,
+      games,
+      openings: { white: whiteOpenings, black: blackOpenings },
+      moves: {
+        pieces: {
+          king,
+          queen,
+          rook,
+          bishop,
+          knight,
+          pawn,
+        },
+        castling: {
+          short: {
+            short: {
+              win: short_short_win,
+              draw: short_short_draw,
+              loss: short_short_loss,
+            },
+            long: {
+              win: short_long_win,
+              draw: short_long_draw,
+              loss: short_long_loss,
+            },
+            none: {
+              win: short_none_win,
+              draw: short_none_draw,
+              loss: short_none_loss,
+            },
+          },
+          long: {
+            short: {
+              win: long_short_win,
+              draw: long_short_draw,
+              loss: long_short_loss,
+            },
+            long: {
+              win: long_long_win,
+              draw: long_long_draw,
+              loss: long_long_loss,
+            },
+            none: {
+              win: long_none_win,
+              draw: long_none_draw,
+              loss: long_none_loss,
+            },
+          },
+          none: {
+            short: {
+              win: none_short_win,
+              draw: none_short_draw,
+              loss: none_short_loss,
+            },
+            long: {
+              win: none_long_win,
+              draw: none_long_draw,
+              loss: none_long_loss,
+            },
+            none: {
+              win: none_none_win,
+              draw: none_none_draw,
+              loss: none_none_loss,
+            },
+          },
+        },
+      },
+      accuracy,
+      opponents,
+      results,
+    };
+  } catch (error) {
+    logger.error(`getInsights error=${error}`);
+    return { username } as Insights;
+  }
 };

@@ -47,7 +47,16 @@ const getPiecesFromMoves = (moves: Move[]) => {
   return { pieces, castling };
 };
 
-export const analyzeGame = async (game: Game | ChessGame) => {
+export const analyzeGame = async (
+  game: Game | ChessGame
+): Promise<{
+  eco: string;
+  opening: string;
+  endPhrase: ChessPhrase | null;
+  castling: Record<ChessSide, ChessCastling>;
+  pieces: Record<ChessSide, Record<ChessPieceType, number>>;
+  moves: Move[];
+}> => {
   try {
     // const initial = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
     const { pgn } = game;

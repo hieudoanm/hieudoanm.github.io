@@ -1,6 +1,6 @@
 import { DocumentNode, gql, useQuery } from '@apollo/client';
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
-import { Insights } from '@chess/common/types/chess';
 import { PlayerInsightsTemplate } from '@chess/shared/templates/PlayerInsightsTemplate';
 import {
   ChessPlayer,

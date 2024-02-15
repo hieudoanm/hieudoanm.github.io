@@ -1,7 +1,8 @@
-import { Insights } from '@chess/common/types/chess';
-import { CardHeading } from '@chess/shared/components/CardHeading';
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { SectionHeading } from '@chess/shared/components/SectionHeading';
 import { FaChessPawn } from 'react-icons/fa6';
+import { PlayerInsightsMovesCastling } from '../PlayerInsightsMovesCastling';
+import { PlayerInsightsMovesPieces } from '../PlayerInsightsMovesPieces';
 
 export type PlayerInsightsMovesProperties = {
   insights?: Insights;
@@ -12,7 +13,7 @@ export const PlayerInsightsMoves: React.FC<PlayerInsightsMovesProperties> = ({
 }) => {
   return (
     <>
-      <div className="text-center">
+      <div id="moves" className="text-center">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaChessPawn className="text-teal-500" /> Moves
@@ -22,18 +23,8 @@ export const PlayerInsightsMoves: React.FC<PlayerInsightsMovesProperties> = ({
           What are your strengths and areas to improve?
         </p>
       </div>
-      <div className="card border border-gray-200 shadow">
-        <div className="py-4 px-8 border-b">
-          <CardHeading>Pieces</CardHeading>
-        </div>
-        <div className="card-body" />
-      </div>
-      <div className="card border border-gray-200 shadow">
-        <div className="py-4 px-8 border-b">
-          <CardHeading>Castling</CardHeading>
-        </div>
-        <div className="card-body" />
-      </div>
+      <PlayerInsightsMovesPieces insights={insights} />
+      <PlayerInsightsMovesCastling insights={insights} />
     </>
   );
 };

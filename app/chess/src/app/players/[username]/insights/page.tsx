@@ -4,10 +4,10 @@ import {
   QueryOptions,
   gql,
 } from '@apollo/client';
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { APP_NAME } from '@chess/common/constants/app.constants';
 import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
-import { Insights } from '@chess/common/types/chess';
 import { query } from '@chess/graphql/apollo/client';
 import { PlayerInsightsTemplate } from '@chess/shared/templates/PlayerInsightsTemplate';
 import {
@@ -62,6 +62,87 @@ const playerInsightsQuery: DocumentNode = gql`
             daysOfWeek {
               games
               dayOfWeek
+            }
+          }
+          openings {
+            white {
+              opening
+              pgn
+              total
+              win
+              draw
+              loss
+            }
+            black {
+              opening
+              pgn
+              total
+              win
+              draw
+              loss
+            }
+          }
+          moves {
+            pieces {
+              king
+              queen
+              rook
+              bishop
+              knight
+              pawn
+            }
+            castling {
+              short {
+                short {
+                  win
+                  draw
+                  loss
+                }
+                long {
+                  win
+                  draw
+                  loss
+                }
+                none {
+                  win
+                  draw
+                  loss
+                }
+              }
+              long {
+                short {
+                  win
+                  draw
+                  loss
+                }
+                long {
+                  win
+                  draw
+                  loss
+                }
+                none {
+                  win
+                  draw
+                  loss
+                }
+              }
+              none {
+                short {
+                  win
+                  draw
+                  loss
+                }
+                long {
+                  win
+                  draw
+                  loss
+                }
+                none {
+                  win
+                  draw
+                  loss
+                }
+              }
             }
           }
           opponents {

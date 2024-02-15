@@ -1,4 +1,4 @@
-import { Insights } from '@chess/common/types/chess';
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { SectionHeading } from '@chess/shared/components/SectionHeading';
 import { FaChessBoard } from 'react-icons/fa6';
 import { PlayerInsightsGamesOverview } from '../PlayerInsightsGamesOverview';
@@ -14,7 +14,7 @@ export const PlayerInsightsGames: React.FC<PlayerInsightsGamesProperties> = ({
 }) => {
   return (
     <>
-      <div className="text-center">
+      <div id="games" className="text-center">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaChessBoard className="text-teal-500" /> Games

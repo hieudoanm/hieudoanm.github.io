@@ -1,4 +1,4 @@
-import { Insights } from '@chess/common/types/chess';
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { SectionHeading } from '@chess/shared/components/SectionHeading';
 import { FaCalendarDays } from 'react-icons/fa6';
 import { PlayerInsightsCalendarDaysOfWeek } from '../PlayerInsightsCalendarDaysOfWeek';
@@ -9,7 +9,7 @@ export const PlayerInsightsCalendar: React.FC<{ insights?: Insights }> = ({
 }) => {
   return (
     <>
-      <div className="text-center">
+      <div id="calendar" className="text-center">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaCalendarDays className="text-teal-500" /> Calendar

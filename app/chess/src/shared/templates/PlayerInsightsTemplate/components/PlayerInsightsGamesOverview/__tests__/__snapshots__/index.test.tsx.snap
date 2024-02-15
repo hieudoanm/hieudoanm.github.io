@@ -35,7 +35,7 @@ exports[`PlayerInsightsGamesOverview to match snapshot 1`] = `
       class="card-body border-b"
     >
       <div
-        class="flex flex-col gap-y-4"
+        class="flex flex-col gap-y-8"
       >
         <div
           class="flex items-center justify-between"
@@ -44,16 +44,14 @@ exports[`PlayerInsightsGamesOverview to match snapshot 1`] = `
             class="flex flex-col gap-y-2"
           >
             <p
-              class="text-base md:text-lg"
+              class="text-base md:text-lg truncate capitalize"
             >
               Games played
             </p>
             <p
-              class="text-lg md:text-xl"
+              class="text-lg md:text-xl font-bold"
             >
-              <b>
-                0
-              </b>
+              0
             </p>
           </div>
           <div
@@ -87,7 +85,7 @@ exports[`PlayerInsightsGamesOverview to match snapshot 1`] = `
                 </b>
               </div>
               <div
-                class="text-right text-xs capitalize md:text-sm"
+                class="text-right text-xs capitalize md:text-sm truncate"
               >
                 0
                  
@@ -122,7 +120,7 @@ exports[`PlayerInsightsGamesOverview to match snapshot 1`] = `
                 </b>
               </div>
               <div
-                class="text-right text-xs capitalize md:text-sm"
+                class="text-right text-xs capitalize md:text-sm truncate"
               >
                 0
                  
@@ -157,7 +155,7 @@ exports[`PlayerInsightsGamesOverview to match snapshot 1`] = `
                 </b>
               </div>
               <div
-                class="text-right text-xs capitalize md:text-sm"
+                class="text-right text-xs capitalize md:text-sm truncate"
               >
                 0
                  
@@ -180,7 +178,7 @@ exports[`PlayerInsightsGamesOverview to match snapshot 1`] = `
       class="card-body border-b"
     >
       <div
-        class="flex flex-col gap-y-4"
+        class="flex flex-col gap-y-8"
       >
         <div
           class="flex items-center justify-between"
@@ -319,10 +317,10 @@ exports[`PlayerInsightsGamesOverview to match snapshot 1`] = `
       class="card-body"
     >
       <div
-        class="flex flex-col gap-y-4"
+        class="flex flex-col gap-y-8"
       >
         <p
-          class="font-bold"
+          class="text-base md:text-lg font-bold"
         >
           Results by Opponent Rating
         </p>

@@ -4,6 +4,7 @@ exports[`PlayerInsightsCalendar to match snapshot 1`] = `
 <div>
   <div
     class="text-center"
+    id="calendar"
   >
     <div
       class="text-lg md:text-xl lg:text-2xl"
@@ -50,10 +51,10 @@ exports[`PlayerInsightsCalendar to match snapshot 1`] = `
       class="card-body border-b"
     >
       <div
-        class="flex flex-col gap-y-4"
+        class="flex flex-col gap-y-8"
       >
         <p
-          class="font-bold"
+          class="text-base md:text-lg font-bold"
         >
           Games by Time of Day
         </p>
@@ -63,10 +64,10 @@ exports[`PlayerInsightsCalendar to match snapshot 1`] = `
       class="card-body border-b"
     >
       <div
-        class="flex flex-col gap-y-4"
+        class="flex flex-col gap-y-8"
       >
         <p
-          class="font-bold"
+          class="text-base md:text-lg font-bold"
         >
           Accuracy by Time of Day
         </p>
@@ -76,10 +77,10 @@ exports[`PlayerInsightsCalendar to match snapshot 1`] = `
       class="card-body border-b"
     >
       <div
-        class="flex flex-col gap-y-4"
+        class="flex flex-col gap-y-8"
       >
         <p
-          class="font-bold"
+          class="text-base md:text-lg font-bold"
         >
           Results by Time of Day
         </p>
@@ -105,10 +106,10 @@ exports[`PlayerInsightsCalendar to match snapshot 1`] = `
       class="card-body border-b"
     >
       <div
-        class="flex flex-col gap-y-4"
+        class="flex flex-col gap-y-8"
       >
         <p
-          class="font-bold"
+          class="text-base md:text-lg font-bold"
         >
           Games by Days of Week
         </p>
@@ -118,10 +119,10 @@ exports[`PlayerInsightsCalendar to match snapshot 1`] = `
       class="card-body border-b"
     >
       <div
-        class="flex flex-col gap-y-4"
+        class="flex flex-col gap-y-8"
       >
         <p
-          class="font-bold"
+          class="text-base md:text-lg font-bold"
         >
           Accuracy by Days of Week
         </p>
@@ -131,10 +132,10 @@ exports[`PlayerInsightsCalendar to match snapshot 1`] = `
       class="card-body border-b"
     >
       <div
-        class="flex flex-col gap-y-4"
+        class="flex flex-col gap-y-8"
       >
         <p
-          class="font-bold"
+          class="text-base md:text-lg font-bold"
         >
           Results by Days of Week
         </p>

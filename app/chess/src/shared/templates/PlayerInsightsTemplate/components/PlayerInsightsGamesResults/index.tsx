@@ -1,7 +1,10 @@
 'use client';
 
+import {
+  Insights,
+  Result,
+} from '@chess/app/api/chess/players/[username]/insights/model';
 import { COLORS_MAP } from '@chess/common/constants/chess.constants';
-import { Insights, Result } from '@chess/common/types/chess';
 import { customLabel } from '@chess/common/utils/custom-label';
 import { CardHeading } from '@chess/shared/components/CardHeading';
 import { FaTrophy } from 'react-icons/fa6';
@@ -30,8 +33,8 @@ const ChessResult: React.FC<{
   const colors: string[] = COLORS_MAP[color];
 
   return (
-    <div className="flex flex-col gap-y-4">
-      <p className="font-bold">{title}</p>
+    <div className="flex flex-col gap-y-8">
+      <p className="text-base md:text-lg font-bold">{title}</p>
       <div className="rounded-2xl bg-gray-100 p-8">
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">

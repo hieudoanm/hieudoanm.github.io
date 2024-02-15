@@ -1,4 +1,4 @@
-import { Insights } from '@chess/common/types/chess';
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
 import { PlayerInsightsGamesOverview } from '..';

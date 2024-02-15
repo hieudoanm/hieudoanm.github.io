@@ -1,11 +1,12 @@
-import { ResultsByEndPhrase } from '@chess/app/api/chess/players/[username]/insights/model';
+import {
+  Insights,
+  ResultsByEndPhrase,
+} from '@chess/app/api/chess/players/[username]/insights/model';
 import {
   GRAY_COLOR,
   RED_COLOR,
   TEAL_COLOR,
 } from '@chess/common/constants/chess.constants';
-import { Insights } from '@chess/common/types/chess';
-import {} from '@chess/common/utils/add-zero';
 import { CardHeading } from '@chess/shared/components/CardHeading';
 import { FaXmarksLines } from 'react-icons/fa6';
 import {
@@ -44,7 +45,7 @@ export const PlayerInsightsGamesEndPhrases: React.FC<{
     });
 
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-8">
       <p className="text-base md:text-lg">Games that ended in the...</p>
       {phrases.map(({ phrase, total, width, left }) => {
         return (
@@ -93,7 +94,7 @@ export const PlayerInsightsGamesResultsByEndPhrase: React.FC<{
   );
 
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-8">
       <p className="text-base md:text-lg">
         Results for games that ended in the...
       </p>

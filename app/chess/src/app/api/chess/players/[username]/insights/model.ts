@@ -6,6 +6,57 @@ export type Insights = {
   games: Games;
   opponents: Opponent[];
   results: Results;
+  openings: Openings;
+  moves: Moves;
+};
+
+export type Moves = {
+  pieces: Pieces;
+  castling: Castling;
+};
+
+export type Castling = {
+  short: {
+    short: CastlingResults;
+    long: CastlingResults;
+    none: CastlingResults;
+  };
+  long: {
+    short: CastlingResults;
+    long: CastlingResults;
+    none: CastlingResults;
+  };
+  none: {
+    short: CastlingResults;
+    long: CastlingResults;
+    none: CastlingResults;
+  };
+};
+
+export type CastlingResults = {
+  win: number;
+  draw: number;
+  loss: number;
+};
+
+export type Pieces = {
+  king: number;
+  queen: number;
+  rook: number;
+  bishop: number;
+  knight: number;
+  pawn: number;
+};
+
+export type Openings = { white: OpeningCount[]; black: OpeningCount[] };
+
+export type OpeningCount = {
+  opening: string;
+  pgn: string;
+  total: number;
+  win: number;
+  draw: number;
+  loss: number;
 };
 
 export type CountByColumn = {

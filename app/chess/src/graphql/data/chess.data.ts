@@ -1,6 +1,6 @@
 import { RESTDataSource } from '@apollo/datasource-rest';
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { GRAPHQL_BASE_URL } from '@chess/common/environments/environments';
-import { Insights } from '@chess/common/types/chess';
 import {
   ChessCountry,
   ChessGame,
@@ -152,7 +152,7 @@ export class ChessDataSource extends RESTDataSource {
       return await this.get(endpoint);
     } catch (error) {
       this.logger.error(`getPlayerInsights error=${error}`);
-      return {};
+      return {} as Insights;
     }
   }
 

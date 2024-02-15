@@ -1,6 +1,6 @@
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { BASE_URL } from '@chess/common/environments/environments';
 import { logger } from '@chess/common/libs/logger';
-import { Insights } from '@chess/common/types/chess';
 import axios from 'axios';
 
 export const getInsights = async (username: string): Promise<Insights> => {

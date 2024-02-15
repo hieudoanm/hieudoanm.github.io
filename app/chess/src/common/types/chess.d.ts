@@ -8,14 +8,6 @@ import {
   ChessPiece,
 } from '../enums/chess.enums';
 
-export type Insights = {
-  username?: string;
-  games?: Games;
-  accuracy?: Accuracy;
-  results?: Results;
-  opponents?: Opponent[];
-};
-
 export type Result = {
   result?: string;
   count?: number;
@@ -92,6 +84,6 @@ export type ChessPieceType =
   | 'knight'
   | 'pawn';
 
-export type ChessCastling = 'short' | 'long' | '';
+export type ChessCastling = 'short' | 'long' | 'none' | '';
 
 export type ChessSide = 'white' | 'black';

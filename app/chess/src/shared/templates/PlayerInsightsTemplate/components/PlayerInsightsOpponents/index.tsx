@@ -1,6 +1,6 @@
 'use client';
 
-import { Insights } from '@chess/common/types/chess';
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { CardHeading } from '@chess/shared/components/CardHeading';
 import Link from 'next/link';
 import { useState } from 'react';

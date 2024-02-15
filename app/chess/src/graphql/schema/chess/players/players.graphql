@@ -106,6 +106,54 @@ type Insights {
   games: Games
   opponents: [Opponent]
   results: Results
+  openings: Openings
+  moves: Moves
+}
+
+type Moves {
+  pieces: Pieces
+  castling: Castling
+}
+
+type Castling {
+  short: OpponentCastling
+  long: OpponentCastling
+  none: OpponentCastling
+}
+
+type OpponentCastling {
+  short: CastlingResults
+  long: CastlingResults
+  none: CastlingResults
+}
+
+type CastlingResults {
+  win: Int
+  draw: Int
+  loss: Int
+}
+
+type Pieces {
+  king: Int
+  queen: Int
+  rook: Int
+  bishop: Int
+  knight: Int
+  pawn: Int
+}
+
+type Openings {
+  white: [OpeningCount]
+  black: [OpeningCount]
+}
+
+type OpeningCount {
+  opening: String
+  pgn: String
+  total: Int
+  win: Int
+  draw: Int
+  loss: Int
 }
 
 type Accuracy {

@@ -4,17 +4,13 @@ import { logger } from '@chess/common/libs/logger';
 import { getPrismaClient } from '@chess/common/prisma/prisma.client';
 import {
   ChessGame,
-  ChessOpening,
-  ChessPhrase,
   ChessResult,
   ChessTimeClass,
   ChessVariant,
   Prisma,
   PrismaClient,
 } from '@prisma/client';
-import { Chess } from 'chess.js';
-import { Move } from './[id]/model';
-import { analyzeGame, getNumberOfMajorAndMinorPieces } from './[id]/service';
+import { analyzeGame } from './[id]/service';
 import { GamesResponse, SyncedResponse, TimeControl } from './dto';
 
 const getTimeControl = ({
@@ -360,11 +356,16 @@ export const syncGames = async ({
   year: number;
   full: boolean;
 }): Promise<SyncedResponse> => {
-  logger.info(`syncGames username=${username} month=${month} year=${year}`);
-  const {
-    total = 0,
-    synced = 0,
-    existed = 0,
-  } = await syncGamesByYearAndMonth({ username, year, month, full });
-  return { total, synced, existed };
+  try {
+    logger.info(`syncGames username=${username} month=${month} year=${year}`);
+    const {
+      total = 0,
+      synced = 0,
+      existed = 0,
+    } = await syncGamesByYearAndMonth({ username, year, month, full });
+    return { total, synced, existed };
+  } catch (error) {
+    logger.error(`syncGames error=${error}`);
+    return { total: 0, synced: 0, existed: 0 };
+  }
 };

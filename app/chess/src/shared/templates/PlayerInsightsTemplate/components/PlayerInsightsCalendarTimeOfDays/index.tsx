@@ -1,12 +1,12 @@
 'use client';
 
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import {
   GRAY_COLOR,
   RED_COLOR,
   TEAL_COLOR,
   TIME_COLORS,
 } from '@chess/common/constants/chess.constants';
-import { Insights } from '@chess/common/types/chess';
 import { customLabel } from '@chess/common/utils/custom-label';
 import { CardHeading } from '@chess/shared/components/CardHeading';
 import {
@@ -38,8 +38,8 @@ const ChessGamesByTimeOfDays: React.FC<{ insights: Insights }> = ({
   );
 
   return (
-    <div className="flex flex-col gap-y-4">
-      <p className="font-bold">Games by Time of Day</p>
+    <div className="flex flex-col gap-y-8">
+      <p className="text-base md:text-lg font-bold">Games by Time of Day</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -79,8 +79,8 @@ const ChessAccuracyByTimeOfDays: React.FC<{ insights: Insights }> = ({
   const data = insights?.accuracy?.timeOfDays ?? [];
 
   return (
-    <div className="flex flex-col gap-y-4">
-      <p className="font-bold">Accuracy by Time of Day</p>
+    <div className="flex flex-col gap-y-8">
+      <p className="text-base md:text-lg font-bold">Accuracy by Time of Day</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -124,8 +124,8 @@ export const ChessResultsByTimeOfDays: React.FC<{
     }
   );
   return (
-    <div className="flex flex-col gap-y-4">
-      <p className="font-bold">Results by Time of Day</p>
+    <div className="flex flex-col gap-y-8">
+      <p className="text-base md:text-lg font-bold">Results by Time of Day</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">

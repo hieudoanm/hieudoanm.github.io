@@ -1,11 +1,11 @@
 'use client';
 
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import {
   GRAY_COLOR,
   RED_COLOR,
   TEAL_COLOR,
 } from '@chess/common/constants/chess.constants';
-import { Insights } from '@chess/common/types/chess';
 import { CardHeading } from '@chess/shared/components/CardHeading';
 import { ReactNode } from 'react';
 import { FaMinusSquare, FaPlusSquare, FaSquare } from 'react-icons/fa';
@@ -34,7 +34,7 @@ const ChessTotal: React.FC<{
         {iconAs}
         <b className="text-base md:text-lg">{percentage.toFixed(2)}%</b>
       </div>
-      <div className="text-right text-xs capitalize md:text-sm">
+      <div className="text-right text-xs capitalize md:text-sm truncate">
         {value} {label}
       </div>
     </div>
@@ -77,8 +77,10 @@ export const PlayerInsightsGamesResultsByOpponentsRating: React.FC<{
   );
 
   return (
-    <div className="flex flex-col gap-y-4">
-      <p className="font-bold">Results by Opponent Rating</p>
+    <div className="flex flex-col gap-y-8">
+      <p className="text-base md:text-lg font-bold">
+        Results by Opponent Rating
+      </p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -136,12 +138,14 @@ export const PlayerInsightsGamesOverview: React.FC<
         </CardHeading>
       </div>
       <div className="card-body border-b">
-        <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col gap-y-8">
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-y-2">
-              <p className="text-base md:text-lg">Games played</p>
-              <p className="text-lg md:text-xl">
-                <b>{(insights?.games?.total ?? 0).toLocaleString()}</b>
+              <p className="text-base md:text-lg truncate capitalize">
+                Games played
+              </p>
+              <p className="text-lg md:text-xl font-bold">
+                {(insights?.games?.total ?? 0).toLocaleString()}
               </p>
             </div>
             <div className="flex items-center gap-x-2 md:gap-x-4">
@@ -199,7 +203,7 @@ export const PlayerInsightsGamesOverview: React.FC<
         </div>
       </div>
       <div className="card-body border-b">
-        <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col gap-y-8">
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-y-2">
               <p className="text-base md:text-lg">Average accuracy</p>
