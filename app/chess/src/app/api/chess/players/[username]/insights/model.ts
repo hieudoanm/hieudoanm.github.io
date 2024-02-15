@@ -8,6 +8,17 @@ export type Insights = {
   results: Results;
   openings: Openings;
   moves: Moves;
+  geography: Geography[];
+};
+
+export type Geography = {
+  flag: string;
+  code: string;
+  name: string;
+  total: number;
+  win: number;
+  draw: number;
+  loss: number;
 };
 
 export type Moves = {

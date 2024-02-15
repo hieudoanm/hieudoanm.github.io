@@ -23,6 +23,7 @@ import {
   GamesByDayOfWeek,
   GamesByTimeOfDay,
   GamesByYear,
+  Geography,
   Insights,
   OpeningCount,
   Opponent,
@@ -332,6 +333,35 @@ WHERE c."whiteUsername" = '${username}' OR c."blackUsername" = '${username}'`;
   return Prisma.raw(query);
 };
 
+const buildGeographyQuery = ({ username }: { username: string }) => {
+  const winResults: string = CHESS_WIN_RESULTS.map(
+    (result: ChessResult) => `'${result}'`
+  ).join(',');
+  const drawResults: string = CHESS_DRAW_RESULTS.map(
+    (result: ChessResult) => `'${result}'`
+  ).join(',');
+  const lossResults: string = CHESS_LOSS_RESULTS.map(
+    (result: ChessResult) => `'${result}'`
+  ).join(',');
+  const query: string = `SELECT
+c."flag",
+p."countryCode" as code,
+c."name",
+COUNT(p."countryCode") as total,
+SUM(CASE WHEN (CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) IN (${winResults}) THEN 1 ELSE 0 END) as win,
+SUM(CASE WHEN (CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) IN (${drawResults}) THEN 1 ELSE 0 END) as draw,
+SUM(CASE WHEN (CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteResult" ELSE g."blackResult" END) IN (${lossResults}) THEN 1 ELSE 0 END) as loss
+FROM chess."ChessGame" as g
+JOIN chess."ChessPlayer" as p
+ON (CASE g."whiteUsername" WHEN '${username}' THEN g."blackUsername" ELSE g."whiteUsername" END) = p."username"
+JOIN chess."ChessCountry" as c
+ON c."cca2" = p."countryCode"
+WHERE g."whiteUsername" = '${username}' OR g."blackUsername" = '${username}'
+GROUP BY c."flag", p."countryCode", c."name"
+ORDER BY total DESC;`;
+  return Prisma.raw(query);
+};
+
 const buildOpponentsQuery = ({
   username = '',
   limit = 100,
@@ -487,6 +517,8 @@ export const getInsights = async ({
     const movesByCastlingQuery: Prisma.Sql = buildMovesByCastlingQuery({
       username,
     });
+    // Geography
+    const geographyQuery: Prisma.Sql = buildGeographyQuery({ username });
     // Opponents
     const opponentsQuery = buildOpponentsQuery({
       ...baseOptions,
@@ -663,6 +695,8 @@ export const getInsights = async ({
           none_none_loss: 0,
         },
       ],
+      // Geography
+      geography = [],
       // Opponents
       opponents = [],
       // Games
@@ -744,6 +778,8 @@ export const getInsights = async ({
           none_none_loss: number;
         }[]
       >(movesByCastlingQuery),
+      // Geography
+      prismaClient.$queryRaw<Geography[]>(geographyQuery),
       // Opponents
       prismaClient.$queryRaw<Opponent[]>(opponentsQuery),
       // Games
@@ -930,6 +966,8 @@ export const getInsights = async ({
     await prismaClient.$disconnect();
     return {
       username,
+      accuracy,
+      results,
       games,
       openings: { white: whiteOpenings, black: blackOpenings },
       moves: {
@@ -995,9 +1033,8 @@ export const getInsights = async ({
           },
         },
       },
-      accuracy,
+      geography,
       opponents,
-      results,
     };
   } catch (error) {
     logger.error(`getInsights error=${error}`);

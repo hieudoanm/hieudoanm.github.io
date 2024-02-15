@@ -145,6 +145,15 @@ const playerInsightsQuery: DocumentNode = gql`
               }
             }
           }
+          geography {
+            flag
+            code
+            name
+            total
+            win
+            draw
+            loss
+          }
           opponents {
             opponent
             games

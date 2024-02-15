@@ -108,6 +108,17 @@ type Insights {
   results: Results
   openings: Openings
   moves: Moves
+  geography: [Geography]
+}
+
+type Geography {
+  flag: String
+  code: String
+  name: String
+  total: Int
+  win: Int
+  draw: Int
+  loss: Int
 }
 
 type Moves {

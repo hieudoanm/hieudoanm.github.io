@@ -144,3 +144,20 @@ SUM(CASE WHEN
 ) as none_none_loss
 FROM chess."ChessGame" as c
 WHERE c."whiteUsername" = 'hikaru' OR c."blackUsername" = 'hikaru'
+-- How do you perform in the global chess community?
+SELECT
+c."flag",
+p."countryCode" as code,
+c."name",
+COUNT(p."countryCode") as total,
+SUM(CASE WHEN (CASE WHEN g."whiteUsername" = 'hikaru' THEN g."whiteResult" ELSE g."blackResult" END) IN ('win') THEN 1 ELSE 0 END) as win,
+SUM(CASE WHEN (CASE WHEN g."whiteUsername" = 'hikaru' THEN g."whiteResult" ELSE g."blackResult" END) IN ('agreed') THEN 1 ELSE 0 END) as draw,
+SUM(CASE WHEN (CASE WHEN g."whiteUsername" = 'hikaru' THEN g."whiteResult" ELSE g."blackResult" END) IN ('checkmated') THEN 1 ELSE 0 END) as loss
+FROM chess."ChessGame" as g
+JOIN chess."ChessPlayer" as p
+ON (CASE g."whiteUsername" WHEN 'hikaru' THEN g."blackUsername" ELSE g."whiteUsername" END) = p."username"
+JOIN chess."ChessCountry" as c
+ON c."cca2" = p."countryCode"
+WHERE g."whiteUsername" = 'hikaru' OR g."blackUsername" = 'hikaru'
+GROUP BY c."flag", p."countryCode", c."name"
+ORDER BY total DESC;

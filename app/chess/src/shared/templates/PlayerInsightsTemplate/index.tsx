@@ -5,7 +5,13 @@ import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import { ChessTitleAbbreviation } from '@prisma/client';
 import { useCallback, useEffect, useState } from 'react';
 import { FaChessPawn } from 'react-icons/fa';
-import { FaBook, FaCalendar, FaChessBoard, FaGlobe } from 'react-icons/fa6';
+import {
+  FaBook,
+  FaCalendar,
+  FaChessBoard,
+  FaGlobe,
+  FaUser,
+} from 'react-icons/fa6';
 import { Link as ScrollLink } from 'react-scroll';
 import { PlayerInsightsCalendar } from './components/PlayerInsightsCalendar';
 import { PlayerInsightsGames } from './components/PlayerInsightsGames';
@@ -13,6 +19,7 @@ import { PlayerInsightsHeader } from './components/PlayerInsightsHeader';
 import { PlayerInsightsMoves } from './components/PlayerInsightsMoves';
 import { PlayerInsightsOpenings } from './components/PlayerInsightsOpenings';
 import { PlayerInsightsOpponents } from './components/PlayerInsightsOpponents';
+import { PlayerInsightsGeography } from './components/PlayerInsightsGeography';
 
 export type PlayerInsightsTemplateProperties = {
   mobile?: boolean;
@@ -63,6 +70,7 @@ export const PlayerInsightsTemplate: React.FC<
           <PlayerInsightsOpenings insights={insights} />
           <PlayerInsightsMoves insights={insights} />
           <PlayerInsightsCalendar insights={insights} />
+          <PlayerInsightsGeography insights={insights} />
           <PlayerInsightsOpponents insights={insights} />
         </div>
       </div>
@@ -137,7 +145,29 @@ export const PlayerInsightsTemplate: React.FC<
               <div className="px-4 py-2 border-t">
                 <div className="flex items-center gap-x-2">
                   <FaGlobe className="text-teal-500" />
-                  Opponents
+                  <ScrollLink
+                    to="geography"
+                    className="cursor-pointer"
+                    duration={500}
+                    offset={-100}
+                    smooth
+                    spy>
+                    Geography
+                  </ScrollLink>
+                </div>
+              </div>
+              <div className="px-4 py-2 border-t">
+                <div className="flex items-center gap-x-2">
+                  <FaUser className="text-teal-500" />
+                  <ScrollLink
+                    to="opponents"
+                    className="cursor-pointer"
+                    duration={500}
+                    offset={-100}
+                    smooth
+                    spy>
+                    Opponents
+                  </ScrollLink>
                 </div>
               </div>
             </div>
