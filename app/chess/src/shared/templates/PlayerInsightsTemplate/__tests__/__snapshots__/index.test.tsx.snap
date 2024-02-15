@@ -3,7 +3,7 @@
 exports[`PlayerInsightsTemplate to match snapshot 1`] = `
 <div>
   <div
-    class="grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-x-8 h-full overflow-hidden py-8"
+    class="grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-x-8 h-full overflow-hidden py-8"
   >
     <div
       class="col-span-1 md:col-span-3 order-2 md:order-1"
@@ -1147,17 +1147,33 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
       class="col-span-1 order-1 md:order-2"
     >
       <div
-        class="relative"
+        class="relative hidden md:block"
       >
         <div
-          class="md:transition-all md:ease-linear md:duration-0 md:absolute w-full right-0 left-0"
+          class="transition-all ease-linear duration-0 absolute w-full right-0 left-0"
           style="top: 0px;"
         >
           <div
             class="card border shadow"
           >
             <div
-              class="px-4 py-2 border-b"
+              class="px-4 py-2"
+            >
+              <div
+                class="flex justify-between"
+              >
+                <div
+                  class="uppercase"
+                />
+                <div
+                  class="capitalize"
+                >
+                  blitz
+                </div>
+              </div>
+            </div>
+            <div
+              class="px-4 py-2 border-t"
             >
               <div
                 class="flex items-center gap-x-2"
@@ -1184,7 +1200,7 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="px-4 py-2 border-b"
+              class="px-4 py-2 border-t"
             >
               <div
                 class="flex items-center gap-x-2"
@@ -1211,7 +1227,7 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="px-4 py-2 border-b"
+              class="px-4 py-2 border-t"
             >
               <div
                 class="flex items-center gap-x-2"
@@ -1238,7 +1254,7 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="px-4 py-2 border-b"
+              class="px-4 py-2 border-t"
             >
               <div
                 class="flex items-center gap-x-2"
@@ -1265,7 +1281,7 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="px-4 py-2"
+              class="px-4 py-2 border-t"
             >
               <div
                 class="flex items-center gap-x-2"

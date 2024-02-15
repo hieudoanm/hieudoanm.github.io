@@ -12,6 +12,7 @@ import { PlayerInsightsHeader } from './components/PlayerInsightsHeader';
 import { PlayerInsightsMoves } from './components/PlayerInsightsMoves';
 import { PlayerInsightsOpenings } from './components/PlayerInsightsOpenings';
 import { PlayerInsightsOpponents } from './components/PlayerInsightsOpponents';
+import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 
 export type PlayerInsightsTemplateProperties = {
   mobile?: boolean;
@@ -32,6 +33,7 @@ export const PlayerInsightsTemplate: React.FC<
   title = '' as ChessTitleAbbreviation,
   insights = {} as Insights,
 }) => {
+  const [timeClass] = useSearchParameter('timeClass', 'blitz');
   const [top, setTop] = useState(0);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -48,7 +50,7 @@ export const PlayerInsightsTemplate: React.FC<
   }, [handleScroll]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-x-8 h-full overflow-hidden py-8">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-x-8 h-full overflow-hidden py-8">
       <div className="col-span-1 md:col-span-3 order-2 md:order-1">
         <div className="flex flex-col gap-y-8">
           <PlayerInsightsHeader
@@ -65,12 +67,18 @@ export const PlayerInsightsTemplate: React.FC<
         </div>
       </div>
       <div className="col-span-1 order-1 md:order-2">
-        <div className="relative">
+        <div className="relative hidden md:block">
           <div
             style={{ top: `${top}px` }}
-            className="md:transition-all md:ease-linear md:duration-0 md:absolute w-full right-0 left-0">
+            className="transition-all ease-linear duration-0 absolute w-full right-0 left-0">
             <div className="card border shadow">
-              <div className="px-4 py-2 border-b">
+              <div className="px-4 py-2">
+                <div className="flex justify-between">
+                  <div className="uppercase">{username}</div>
+                  <div className="capitalize">{timeClass}</div>
+                </div>
+              </div>
+              <div className="px-4 py-2 border-t">
                 <div className="flex items-center gap-x-2">
                   <FaChessBoard className="text-teal-500" />
                   <ScrollLink
@@ -84,7 +92,7 @@ export const PlayerInsightsTemplate: React.FC<
                   </ScrollLink>
                 </div>
               </div>
-              <div className="px-4 py-2 border-b">
+              <div className="px-4 py-2 border-t">
                 <div className="flex items-center gap-x-2">
                   <FaBook className="text-teal-500" />
                   <ScrollLink
@@ -98,7 +106,7 @@ export const PlayerInsightsTemplate: React.FC<
                   </ScrollLink>
                 </div>
               </div>
-              <div className="px-4 py-2 border-b">
+              <div className="px-4 py-2 border-t">
                 <div className="flex items-center gap-x-2">
                   <FaChessPawn className="text-teal-500" />
                   <ScrollLink
@@ -112,7 +120,7 @@ export const PlayerInsightsTemplate: React.FC<
                   </ScrollLink>
                 </div>
               </div>
-              <div className="px-4 py-2 border-b">
+              <div className="px-4 py-2 border-t">
                 <div className="flex items-center gap-x-2">
                   <FaCalendar className="text-teal-500" />
                   <ScrollLink
@@ -126,7 +134,7 @@ export const PlayerInsightsTemplate: React.FC<
                   </ScrollLink>
                 </div>
               </div>
-              <div className="px-4 py-2">
+              <div className="px-4 py-2 border-t">
                 <div className="flex items-center gap-x-2">
                   <FaGlobe className="text-teal-500" />
                   Opponents
