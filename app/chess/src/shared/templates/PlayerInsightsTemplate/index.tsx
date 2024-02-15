@@ -15,11 +15,11 @@ import {
 import { Link as ScrollLink } from 'react-scroll';
 import { PlayerInsightsCalendar } from './components/PlayerInsightsCalendar';
 import { PlayerInsightsGames } from './components/PlayerInsightsGames';
+import { PlayerInsightsGeography } from './components/PlayerInsightsGeography';
 import { PlayerInsightsHeader } from './components/PlayerInsightsHeader';
 import { PlayerInsightsMoves } from './components/PlayerInsightsMoves';
 import { PlayerInsightsOpenings } from './components/PlayerInsightsOpenings';
 import { PlayerInsightsOpponents } from './components/PlayerInsightsOpponents';
-import { PlayerInsightsGeography } from './components/PlayerInsightsGeography';
 
 export type PlayerInsightsTemplateProperties = {
   mobile?: boolean;
