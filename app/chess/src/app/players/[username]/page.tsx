@@ -1,6 +1,9 @@
 import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import { APP_NAME } from '@chess/common/constants/app.constants';
-import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
+import {
+  CHESS_USERNAME,
+  MAGNUS_CHESS_USERNAME,
+} from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
 import { query } from '@chess/graphql/apollo/client';
 import PlayerTemplate from '@chess/shared/templates/PlayerTemplate';
@@ -81,7 +84,7 @@ const PlayerPage: NextPage<{ params: { username: string } }> = async ({
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const generateStaticParams = () => {
-  return [{ username: CHESS_USERNAME }];
+  return [{ username: CHESS_USERNAME }, { username: MAGNUS_CHESS_USERNAME }];
 };
 
 export default PlayerPage;
