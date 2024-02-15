@@ -5,7 +5,7 @@ import { CardHeading } from '@chess/shared/components/CardHeading';
 import { SectionHeading } from '@chess/shared/components/SectionHeading';
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaUser } from 'react-icons/fa6';
+import { FaCircleUser } from 'react-icons/fa6';
 
 export const PlayerInsightsOpponents: React.FC<{ insights: Insights }> = ({
   insights: { opponents = [] },
@@ -36,14 +36,14 @@ export const PlayerInsightsOpponents: React.FC<{ insights: Insights }> = ({
 
   return (
     <>
-      <div id="openings" className="text-center">
+      <div id="opponents" className="text-center flex flex-col gap-y-2">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
-            <FaUser className="text-teal-500" /> Opponents
+            <FaCircleUser className="text-teal-500" /> Opponents
           </div>
         </SectionHeading>
         <p className="text-xs md:text-sm lg:text-base">
-          Most Frequeny Opponents
+          Most frequently played opponents
         </p>
       </div>
       <div className="card border border-gray-200 shadow">

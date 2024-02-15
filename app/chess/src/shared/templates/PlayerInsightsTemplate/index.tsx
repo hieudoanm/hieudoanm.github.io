@@ -9,8 +9,8 @@ import {
   FaBook,
   FaCalendar,
   FaChessBoard,
+  FaCircleUser,
   FaGlobe,
-  FaUser,
 } from 'react-icons/fa6';
 import { Link as ScrollLink } from 'react-scroll';
 import { PlayerInsightsCalendar } from './components/PlayerInsightsCalendar';
@@ -158,7 +158,7 @@ export const PlayerInsightsTemplate: React.FC<
               </div>
               <div className="px-4 py-2 border-t">
                 <div className="flex items-center gap-x-2">
-                  <FaUser className="text-teal-500" />
+                  <FaCircleUser className="text-teal-500" />
                   <ScrollLink
                     to="opponents"
                     className="cursor-pointer"

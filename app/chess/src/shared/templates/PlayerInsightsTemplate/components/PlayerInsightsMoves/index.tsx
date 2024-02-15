@@ -13,7 +13,7 @@ export const PlayerInsightsMoves: React.FC<PlayerInsightsMovesProperties> = ({
 }) => {
   return (
     <>
-      <div id="moves" className="text-center">
+      <div id="moves" className="text-center flex flex-col gap-y-2">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaChessPawn className="text-teal-500" /> Moves

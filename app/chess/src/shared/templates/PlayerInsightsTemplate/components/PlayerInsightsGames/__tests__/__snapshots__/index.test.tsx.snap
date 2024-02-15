@@ -3,7 +3,7 @@
 exports[`PlayerInsightsGames to match snapshot 1`] = `
 <div>
   <div
-    class="text-center"
+    class="text-center flex flex-col gap-y-2"
     id="games"
   >
     <div

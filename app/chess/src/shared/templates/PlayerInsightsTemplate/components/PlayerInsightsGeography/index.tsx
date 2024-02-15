@@ -16,7 +16,7 @@ export const PlayerInsightsGeography: React.FC<
 
   return (
     <>
-      <div id="geography" className="text-center">
+      <div id="geography" className="text-center flex flex-col gap-y-2">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaGlobe className="text-teal-500" /> Geography
