@@ -1,6 +1,7 @@
 'use client';
 
 import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
+import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 import { ChessTitleAbbreviation } from '@prisma/client';
 import { useCallback, useEffect, useState } from 'react';
 import { FaChessPawn } from 'react-icons/fa';
@@ -12,7 +13,6 @@ import { PlayerInsightsHeader } from './components/PlayerInsightsHeader';
 import { PlayerInsightsMoves } from './components/PlayerInsightsMoves';
 import { PlayerInsightsOpenings } from './components/PlayerInsightsOpenings';
 import { PlayerInsightsOpponents } from './components/PlayerInsightsOpponents';
-import { useSearchParameter } from '@chess/common/hooks/use-search-param';
 
 export type PlayerInsightsTemplateProperties = {
   mobile?: boolean;
@@ -72,10 +72,10 @@ export const PlayerInsightsTemplate: React.FC<
             style={{ top: `${top}px` }}
             className="transition-all ease-linear duration-0 absolute w-full right-0 left-0">
             <div className="card border shadow">
-              <div className="px-4 py-2">
+              <div className="p-4">
                 <div className="flex justify-between">
                   <div className="uppercase">{username}</div>
-                  <div className="capitalize">{timeClass}</div>
+                  <div className="capitalize font-semibold">{timeClass}</div>
                 </div>
               </div>
               <div className="px-4 py-2 border-t">
@@ -85,7 +85,7 @@ export const PlayerInsightsTemplate: React.FC<
                     to="games"
                     className="cursor-pointer"
                     duration={500}
-                    offset={100}
+                    offset={-100}
                     smooth
                     spy>
                     Games
@@ -99,7 +99,7 @@ export const PlayerInsightsTemplate: React.FC<
                     to="openings"
                     className="cursor-pointer"
                     duration={500}
-                    offset={100}
+                    offset={-100}
                     smooth
                     spy>
                     Openings
@@ -113,7 +113,7 @@ export const PlayerInsightsTemplate: React.FC<
                     to="moves"
                     className="cursor-pointer"
                     duration={500}
-                    offset={100}
+                    offset={-100}
                     smooth
                     spy>
                     Moves
@@ -127,7 +127,7 @@ export const PlayerInsightsTemplate: React.FC<
                     to="calendar"
                     className="cursor-pointer"
                     duration={500}
-                    offset={100}
+                    offset={-100}
                     smooth
                     spy>
                     Calendar

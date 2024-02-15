@@ -1157,7 +1157,7 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
             class="card border shadow"
           >
             <div
-              class="px-4 py-2"
+              class="p-4"
             >
               <div
                 class="flex justify-between"
@@ -1166,7 +1166,7 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
                   class="uppercase"
                 />
                 <div
-                  class="capitalize"
+                  class="capitalize font-semibold"
                 >
                   blitz
                 </div>
