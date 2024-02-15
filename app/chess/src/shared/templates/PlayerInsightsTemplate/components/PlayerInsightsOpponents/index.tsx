@@ -8,11 +8,11 @@ import { useState } from 'react';
 import { FaCircleUser } from 'react-icons/fa6';
 
 export const PlayerInsightsOpponents: React.FC<{ insights: Insights }> = ({
-  insights: { opponents = [] },
+  insights,
 }) => {
   const [sort, setSort] = useState<{ by: string }>({ by: 'games' });
 
-  const data = opponents.map(
+  const data = (insights?.opponents ?? []).map(
     ({ opponent = '', games = 1, win = 0, draw = 0, loss = 0 }) => {
       const winPercentage = (win / games) * 100;
       const drawPercentage = (draw / games) * 100;

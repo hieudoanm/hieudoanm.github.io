@@ -29,7 +29,7 @@ const ChessTotal: React.FC<{
   iconAs: ReactNode;
 }> = ({ percentage = 0, value = 0, label = '', iconAs = <></> }) => {
   return (
-    <div className="flex flex-col gap-y-1">
+    <div className="flex flex-col gap-y-2">
       <div className="flex items-center gap-x-1 md:gap-x-2">
         {iconAs}
         <b className="text-base md:text-lg">{percentage.toFixed(2)}%</b>
@@ -47,9 +47,11 @@ const ChessAccuracy: React.FC<{
   iconAs: ReactNode;
 }> = ({ value = 0, label = '', iconAs = <></> }) => {
   return (
-    <div className="flex flex-col gap-y-1">
-      <p className="text-right text-xs capitalize md:text-sm">{label}</p>
-      <div className="flex items-center gap-x-1 md:gap-x-2">
+    <div className="flex flex-col gap-y-2">
+      <p className="text-right text-xs capitalize md:text-sm truncate">
+        {label}
+      </p>
+      <div className="flex items-center justify-end gap-x-1 md:gap-x-2">
         {iconAs}
         <b className="text-base md:text-lg">{value.toFixed(2)}%</b>
       </div>
@@ -127,6 +129,11 @@ export type PlayerInsightsGamesOverviewProperties = {
 export const PlayerInsightsGamesOverview: React.FC<
   PlayerInsightsGamesOverviewProperties
 > = ({ insights }) => {
+  const win: number = insights?.games?.win ?? 0;
+  const draw: number = insights?.games?.draw ?? 0;
+  const loss: number = insights?.games?.loss ?? 0;
+  const total: number = insights?.games?.total ?? 1;
+
   return (
     <div className="card border border-gray-200 shadow">
       <div className="py-4 px-8 border-b">
@@ -139,46 +146,36 @@ export const PlayerInsightsGamesOverview: React.FC<
       </div>
       <div className="card-body border-b">
         <div className="flex flex-col gap-y-8">
-          <div className="flex items-center justify-between">
-            <div className="flex flex-col gap-y-2">
-              <p className="text-base md:text-lg truncate capitalize">
-                Games played
-              </p>
-              <p className="text-lg md:text-xl font-bold">
-                {(insights?.games?.total ?? 0).toLocaleString()}
-              </p>
-            </div>
-            <div className="flex items-center gap-x-2 md:gap-x-4">
-              <ChessTotal
-                value={insights?.games?.win ?? 0}
-                percentage={
-                  ((insights?.games?.win ?? 0) /
-                    (insights?.games?.total ?? 1)) *
-                  100
-                }
-                label="won"
-                iconAs={<FaPlusSquare className="text-teal-500" />}
-              />
-              <ChessTotal
-                value={insights?.games?.draw ?? 0}
-                percentage={
-                  ((insights?.games?.draw ?? 0) /
-                    (insights?.games?.total ?? 1)) *
-                  100
-                }
-                label="drawn"
-                iconAs={<FaSquare className="text-gray-500" />}
-              />
-              <ChessTotal
-                value={insights?.games?.loss ?? 0}
-                percentage={
-                  ((insights?.games?.loss ?? 0) /
-                    (insights?.games?.total ?? 1)) *
-                  100
-                }
-                label="lost"
-                iconAs={<FaMinusSquare className="text-red-500" />}
-              />
+          <div className="overflow-auto">
+            <div className="flex items-center justify-between">
+              <div className="flex flex-col gap-y-2">
+                <p className="text-base md:text-lg truncate capitalize">
+                  Games played
+                </p>
+                <p className="text-lg md:text-xl font-bold">
+                  {total.toLocaleString()}
+                </p>
+              </div>
+              <div className="flex items-center gap-x-2 md:gap-x-4">
+                <ChessTotal
+                  value={win}
+                  percentage={(win / total) * 100}
+                  label="won"
+                  iconAs={<FaPlusSquare className="text-teal-500" />}
+                />
+                <ChessTotal
+                  value={draw}
+                  percentage={(draw / total) * 100}
+                  label="drawn"
+                  iconAs={<FaSquare className="text-gray-500" />}
+                />
+                <ChessTotal
+                  value={loss}
+                  percentage={(loss / total) * 100}
+                  label="lost"
+                  iconAs={<FaMinusSquare className="text-red-500" />}
+                />
+              </div>
             </div>
           </div>
           <div className="aspect-video">
@@ -204,29 +201,33 @@ export const PlayerInsightsGamesOverview: React.FC<
       </div>
       <div className="card-body border-b">
         <div className="flex flex-col gap-y-8">
-          <div className="flex items-center justify-between">
-            <div className="flex flex-col gap-y-2">
-              <p className="text-base md:text-lg">Average accuracy</p>
-              <p className="text-lg md:text-xl">
-                <b>{(insights?.accuracy?.average ?? 0).toLocaleString()}</b>
-              </p>
-            </div>
-            <div className="flex items-center gap-x-2 md:gap-x-4">
-              <ChessAccuracy
-                value={insights?.accuracy?.win ?? 0}
-                label="When you win"
-                iconAs={<FaPlusSquare className="text-teal-500" />}
-              />
-              <ChessAccuracy
-                value={insights?.accuracy?.draw ?? 0}
-                label="When you draw"
-                iconAs={<FaSquare className="text-gray-500" />}
-              />
-              <ChessAccuracy
-                value={insights?.accuracy?.loss ?? 0}
-                label="When you lose"
-                iconAs={<FaMinusSquare className="text-red-500" />}
-              />
+          <div className="overflow-auto">
+            <div className="flex items-center justify-between">
+              <div className="flex flex-col gap-y-2">
+                <p className="text-base md:text-lg truncate">
+                  Average accuracy
+                </p>
+                <p className="text-lg md:text-xl">
+                  <b>{(insights?.accuracy?.average ?? 0).toLocaleString()}</b>
+                </p>
+              </div>
+              <div className="flex items-center gap-x-2 md:gap-x-4">
+                <ChessAccuracy
+                  value={insights?.accuracy?.win ?? 0}
+                  label="When you win"
+                  iconAs={<FaPlusSquare className="text-teal-500" />}
+                />
+                <ChessAccuracy
+                  value={insights?.accuracy?.draw ?? 0}
+                  label="When you draw"
+                  iconAs={<FaSquare className="text-gray-500" />}
+                />
+                <ChessAccuracy
+                  value={insights?.accuracy?.loss ?? 0}
+                  label="When you lose"
+                  iconAs={<FaMinusSquare className="text-red-500" />}
+                />
+              </div>
             </div>
           </div>
           <div className="aspect-video">

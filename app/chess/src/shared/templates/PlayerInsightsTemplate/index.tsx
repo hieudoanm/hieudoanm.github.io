@@ -7,7 +7,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { FaChessPawn } from 'react-icons/fa';
 import {
   FaBook,
-  FaCalendar,
+  FaCalendarDays,
   FaChessBoard,
   FaCircleUser,
   FaGlobe,
@@ -93,7 +93,7 @@ export const PlayerInsightsTemplate: React.FC<
                     to="games"
                     className="cursor-pointer"
                     duration={500}
-                    offset={-100}
+                    offset={-32}
                     smooth
                     spy>
                     Games
@@ -107,7 +107,7 @@ export const PlayerInsightsTemplate: React.FC<
                     to="openings"
                     className="cursor-pointer"
                     duration={500}
-                    offset={-100}
+                    offset={-32}
                     smooth
                     spy>
                     Openings
@@ -121,7 +121,7 @@ export const PlayerInsightsTemplate: React.FC<
                     to="moves"
                     className="cursor-pointer"
                     duration={500}
-                    offset={-100}
+                    offset={-32}
                     smooth
                     spy>
                     Moves
@@ -130,12 +130,12 @@ export const PlayerInsightsTemplate: React.FC<
               </div>
               <div className="px-4 py-2 border-t">
                 <div className="flex items-center gap-x-2">
-                  <FaCalendar className="text-teal-500" />
+                  <FaCalendarDays className="text-teal-500" />
                   <ScrollLink
                     to="calendar"
                     className="cursor-pointer"
                     duration={500}
-                    offset={-100}
+                    offset={-32}
                     smooth
                     spy>
                     Calendar
@@ -149,7 +149,7 @@ export const PlayerInsightsTemplate: React.FC<
                     to="geography"
                     className="cursor-pointer"
                     duration={500}
-                    offset={-100}
+                    offset={-32}
                     smooth
                     spy>
                     Geography
@@ -163,7 +163,7 @@ export const PlayerInsightsTemplate: React.FC<
                     to="opponents"
                     className="cursor-pointer"
                     duration={500}
-                    offset={-100}
+                    offset={-32}
                     smooth
                     spy>
                     Opponents
