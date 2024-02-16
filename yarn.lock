@@ -13894,10 +13894,10 @@ prisma-json-schema-generator@5.1.1:
     "@prisma/generator-helper" "5.7.0"
     "@prisma/internals" "5.7.0"
 
-prisma-markdown@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.npmjs.org/prisma-markdown/-/prisma-markdown-1.0.8.tgz"
-  integrity sha512-YoVuTRAhIivEKnB1jLu4Ge9PDDhNqvEnc4B9f56OvEXoJ1pT5Pkvd0d0WvLaAtJL6ooT+IGQSRgVi+CuKktZCA==
+prisma-markdown@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/prisma-markdown/-/prisma-markdown-1.0.9.tgz#90fce43ff7b9aa3173bceef6fc09e9ee912a5e90"
+  integrity sha512-Y/aWUgDnzYt7JFjhUOmLzNs+09eoITq8ZK9CmG3L6TTKc/prYr+2EClD4jRcfEgyElfJlvH2/4QeZponu9D92Q==
   dependencies:
     "@prisma/generator-helper" "^5.0.0"
 
