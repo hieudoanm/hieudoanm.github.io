@@ -37,7 +37,7 @@ export class ChessDataSource extends RESTDataSource {
 
   async getEcos(): Promise<string[]> {
     try {
-      const endpoint: string = '/api/chess/openings/ecos';
+      const endpoint: string = '/api/chess/engine/openings/ecos';
       const { ecos = [] } = await this.get<{ ecos: string[] }>(endpoint);
       return ecos;
     } catch (error) {
@@ -59,7 +59,7 @@ export class ChessDataSource extends RESTDataSource {
       if (limit) urlSearchParameters.set('limit', limit.toString());
       if (offset) urlSearchParameters.set('offset', offset.toString());
       const queryString: string = urlSearchParameters.toString();
-      const endpoint: string = `/api/chess/openings?${queryString}`;
+      const endpoint: string = `/api/chess/engine/openings?${queryString}`;
       return this.get<OpeningsResponse>(endpoint);
     } catch (error) {
       this.logger.error(`getOpenings error=${error}`);
