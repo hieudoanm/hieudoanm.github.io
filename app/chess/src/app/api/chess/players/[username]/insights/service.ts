@@ -223,7 +223,15 @@ const buildOpeningsQuery = ({
   username,
   side,
   limit = 10,
-}: { username: string; side: ChessSide; limit?: number }): Prisma.Sql => {
+  variant = 'chess',
+  timeClass = 'blitz',
+}: {
+  username: string;
+  side: ChessSide;
+  limit?: number;
+  variant?: ChessVariant;
+  timeClass?: ChessTimeClass;
+}): Prisma.Sql => {
   const winResults: string = CHESS_WIN_RESULTS.map(
     (result: ChessResult) => `'${result}'`
   ).join(',');
@@ -233,36 +241,48 @@ const buildOpeningsQuery = ({
   const lossResults: string = CHESS_LOSS_RESULTS.map(
     (result: ChessResult) => `'${result}'`
   ).join(',');
-  const query: string = `SELECT c."opening",
+  const query: string = `SELECT g."opening",
 o."pgn",
 COUNT(*) as total,
-SUM(CASE WHEN c."${side}Result" IN (${winResults}) THEN 1 ELSE 0 END) as win,
-SUM(CASE WHEN c."${side}Result" IN (${drawResults}) THEN 1 ELSE 0 END) as draw,
-SUM(CASE WHEN c."${side}Result" IN (${lossResults}) THEN 1 ELSE 0 END) as loss
-FROM chess."ChessGame" as c
+SUM(CASE WHEN g."${side}Result" IN (${winResults}) THEN 1 ELSE 0 END) as win,
+SUM(CASE WHEN g."${side}Result" IN (${drawResults}) THEN 1 ELSE 0 END) as draw,
+SUM(CASE WHEN g."${side}Result" IN (${lossResults}) THEN 1 ELSE 0 END) as loss
+FROM chess."ChessGame" as g
 JOIN chess."ChessOpening" as o
-ON c."opening" = o."name"
-WHERE c."opening" <> ''
-AND c."${side}Username" = '${username}'
-GROUP BY c."opening", o."pgn"
+ON g."opening" = o."name"
+WHERE g."opening" <> ''
+AND g."rated" = true
+AND g."rules" = '${variant}'
+AND g."timeClass" = '${timeClass}'
+AND g."${side}Username" = '${username}'
+GROUP BY g."opening", o."pgn"
 ORDER BY total DESC
 LIMIT 10;`;
-  logger.info({ username, side, limit }, 'buildOpeningsQuery');
+  logger.info({ username, side, limit }, `buildOpeningsQuery query=${query}`);
   return Prisma.raw(query);
 };
 
 const buildMovesByPiecesQuery = ({
   username,
-}: { username: string }): Prisma.Sql => {
+  variant = 'chess',
+  timeClass = 'blitz',
+}: {
+  username: string;
+  variant?: ChessVariant;
+  timeClass?: ChessTimeClass;
+}): Prisma.Sql => {
   const query: string = `SELECT
-SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whitePawn" ELSE c."blackPawn" END) as pawn,
-SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteKnight" ELSE c."blackKnight" END) as knight,
-SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteBishop" ELSE c."blackBishop" END) as bishop,
-SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteRook" ELSE c."blackRook" END) as rook,
-SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteQueen" ELSE c."blackQueen" END) as queen,
-SUM(CASE WHEN c."whiteUsername" = '${username}' THEN c."whiteKing" ELSE c."blackKing" END) as king
-FROM chess."ChessGame" as c
-WHERE c."whiteUsername" = '${username}' OR c."blackUsername" = '${username}';`;
+SUM(CASE WHEN g."whiteUsername" = '${username}' THEN g."whitePawn" ELSE g."blackPawn" END) as pawn,
+SUM(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteKnight" ELSE g."blackKnight" END) as knight,
+SUM(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteBishop" ELSE g."blackBishop" END) as bishop,
+SUM(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteRook" ELSE g."blackRook" END) as rook,
+SUM(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteQueen" ELSE g."blackQueen" END) as queen,
+SUM(CASE WHEN g."whiteUsername" = '${username}' THEN g."whiteKing" ELSE g."blackKing" END) as king
+FROM chess."ChessGame" as g
+WHERE (g."whiteUsername" = '${username}' OR g."blackUsername" = '${username}')
+AND g."rated" = true
+AND g."rules" = '${variant}'
+AND g."timeClass" = '${timeClass}';`;
   logger.info({ username }, `buildMovesByPiecesQuery query=${query}`);
   return Prisma.raw(query);
 };
@@ -286,7 +306,13 @@ const buildSumMovesByCastlingQuery =
 
 const buildMovesByCastlingQuery = ({
   username,
-}: { username: string }): Prisma.Sql => {
+  variant = 'chess',
+  timeClass = 'blitz',
+}: {
+  username: string;
+  variant?: ChessVariant;
+  timeClass?: ChessTimeClass;
+}): Prisma.Sql => {
   const ssQuery = buildSumMovesByCastlingQuery(username, 'short', 'short');
   const ssw: string = ssQuery(CHESS_WIN_RESULTS, 'short_short_win');
   const ssd: string = ssQuery(CHESS_DRAW_RESULTS, 'short_short_draw');
@@ -328,12 +354,23 @@ ${ssw}, ${ssd}, ${ssl}, ${slw}, ${sld}, ${sll}, ${snw}, ${snd}, ${snl},
 ${lsw}, ${lsd}, ${lsl}, ${llw}, ${lld}, ${lll}, ${lnw}, ${lnd}, ${lnl},
 ${nsw}, ${nsd}, ${nsl}, ${nlw}, ${nld}, ${nll}, ${nnw}, ${nnd}, ${nnl}
 FROM chess."ChessGame" as c
-WHERE c."whiteUsername" = '${username}' OR c."blackUsername" = '${username}'`;
+WHERE (c."whiteUsername" = '${username}' OR c."blackUsername" = '${username}')
+AND c."rated" = true
+AND c."rules" = '${variant}'
+AND c."timeClass" = '${timeClass}';`;
   logger.info({ username }, `buildMovesByCastlingQuery query=${query}`);
   return Prisma.raw(query);
 };
 
-const buildGeographyQuery = ({ username }: { username: string }) => {
+const buildGeographyQuery = ({
+  username,
+  variant = 'chess',
+  timeClass = 'blitz',
+}: {
+  username: string;
+  variant?: ChessVariant;
+  timeClass?: ChessTimeClass;
+}) => {
   const winResults: string = CHESS_WIN_RESULTS.map(
     (result: ChessResult) => `'${result}'`
   ).join(',');
@@ -356,7 +393,10 @@ JOIN chess."ChessPlayer" as p
 ON (CASE g."whiteUsername" WHEN '${username}' THEN g."blackUsername" ELSE g."whiteUsername" END) = p."username"
 JOIN chess."ChessCountry" as c
 ON c."cca2" = p."countryCode"
-WHERE g."whiteUsername" = '${username}' OR g."blackUsername" = '${username}'
+WHERE (g."whiteUsername" = '${username}' OR g."blackUsername" = '${username}')
+AND g."rated" = true
+AND g."rules" = '${variant}'
+AND g."timeClass" = '${timeClass}'
 GROUP BY c."flag", p."countryCode", c."name"
 ORDER BY total DESC;`;
   return Prisma.raw(query);
@@ -501,24 +541,36 @@ export const getInsights = async ({
     });
     // Openings
     const whiteOpeningsQuery: Prisma.Sql = buildOpeningsQuery({
+      variant,
       username,
+      timeClass,
       limit: 10,
       side: 'white',
     });
     const blackOpeningsQuery: Prisma.Sql = buildOpeningsQuery({
+      variant,
       username,
+      timeClass,
       limit: 10,
       side: 'black',
     });
     // Moves
     const movesByPiecesQuery: Prisma.Sql = buildMovesByPiecesQuery({
+      variant,
       username,
+      timeClass,
     });
     const movesByCastlingQuery: Prisma.Sql = buildMovesByCastlingQuery({
+      variant,
       username,
+      timeClass,
     });
     // Geography
-    const geographyQuery: Prisma.Sql = buildGeographyQuery({ username });
+    const geographyQuery: Prisma.Sql = buildGeographyQuery({
+      variant,
+      username,
+      timeClass,
+    });
     // Opponents
     const opponentsQuery = buildOpponentsQuery({
       ...baseOptions,

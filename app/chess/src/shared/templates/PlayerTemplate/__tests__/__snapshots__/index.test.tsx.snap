@@ -24,16 +24,13 @@ exports[`PlayerTemplate to match snapshot 1`] = `
             >
               GM
             </div>
-            <p>
+            <div>
               <a
+                class="text-lg uppercase md:text-xl"
                 href="https://www.chess.com/member/"
                 target="_blank"
-              >
-                <p
-                  class="text-lg uppercase md:text-xl"
-                />
-              </a>
-            </p>
+              />
+            </div>
           </div>
           <p />
         </div>

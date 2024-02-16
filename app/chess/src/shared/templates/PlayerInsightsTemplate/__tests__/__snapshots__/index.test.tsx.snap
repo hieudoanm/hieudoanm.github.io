@@ -25,16 +25,13 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
               <div
                 class="flex items-center gap-x-2"
               >
-                <p>
+                <div>
                   <a
+                    class="text-lg uppercase md:text-xl"
                     href="https://www.chess.com/member/"
                     target="_blank"
-                  >
-                    <p
-                      class="text-lg uppercase md:text-xl"
-                    />
-                  </a>
-                </p>
+                  />
+                </div>
               </div>
               <p
                 class="truncate"
@@ -703,22 +700,24 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
                   class="table"
                 >
                   <thead>
-                    <th
-                      class="p-0"
-                    >
-                      Opening
-                    </th>
-                    <th>
-                      Moves
-                    </th>
-                    <th
-                      align="right"
-                    >
-                      Total Games
-                    </th>
-                    <th
-                      class="w-1/2"
-                    />
+                    <tr>
+                      <th
+                        class="p-0"
+                      >
+                        Opening
+                      </th>
+                      <th>
+                        Moves
+                      </th>
+                      <th
+                        align="right"
+                      >
+                        Total Games
+                      </th>
+                      <th
+                        class="w-1/2"
+                      />
+                    </tr>
                   </thead>
                   <tbody />
                 </table>
@@ -736,22 +735,24 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
                   class="table"
                 >
                   <thead>
-                    <th
-                      class="p-0"
-                    >
-                      Opening
-                    </th>
-                    <th>
-                      Moves
-                    </th>
-                    <th
-                      align="right"
-                    >
-                      Total Games
-                    </th>
-                    <th
-                      class="w-1/2"
-                    />
+                    <tr>
+                      <th
+                        class="p-0"
+                      >
+                        Opening
+                      </th>
+                      <th>
+                        Moves
+                      </th>
+                      <th
+                        align="right"
+                      >
+                        Total Games
+                      </th>
+                      <th
+                        class="w-1/2"
+                      />
+                    </tr>
                   </thead>
                   <tbody />
                 </table>

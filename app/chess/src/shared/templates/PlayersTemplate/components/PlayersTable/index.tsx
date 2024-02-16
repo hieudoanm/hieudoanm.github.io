@@ -105,7 +105,7 @@ export const PlayersTable: React.FC<PlayersTableProperties> = ({
                         <TitleBadge title={title} />
                         <Link href={`/players/${encodeURIComponent(username)}`}>
                           {username}
-                        </Link>{' '}
+                        </Link>
                         <Link href={`/countries/${country.cca2}`}>
                           {country?.flag ?? ''}
                         </Link>

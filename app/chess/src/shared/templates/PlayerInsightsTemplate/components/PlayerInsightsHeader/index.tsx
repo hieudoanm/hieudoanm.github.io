@@ -42,13 +42,14 @@ export const PlayerInsightsHeader: React.FC<PlayerInsightsHeaderProperties> = ({
         <div>
           <div className="flex items-center gap-x-2">
             <TitleBadge title={title} />
-            <p>
+            <div>
               <Link
                 href={`https://www.chess.com/member/${username}`}
-                target="_blank">
-                <p className="text-lg uppercase md:text-xl">{username}</p>
+                target="_blank"
+                className="text-lg uppercase md:text-xl">
+                {username}
               </Link>
-            </p>
+            </div>
           </div>
           <p className="truncate">{name}</p>
         </div>

@@ -16,10 +16,12 @@ const PlayerInsightsOpeningsBySide: React.FC<{ openings: OpeningCount[] }> = ({
     <div id="white" className="overflow-auto">
       <table className="table">
         <thead>
-          <th className="p-0">Opening</th>
-          <th>Moves</th>
-          <th align="right">Total Games</th>
-          <th className="w-1/2" />
+          <tr>
+            <th className="p-0">Opening</th>
+            <th>Moves</th>
+            <th align="right">Total Games</th>
+            <th className="w-1/2" />
+          </tr>
         </thead>
         <tbody>
           {openings.map(({ opening, pgn, total, win, draw, loss }) => {

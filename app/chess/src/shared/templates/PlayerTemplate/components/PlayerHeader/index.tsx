@@ -70,13 +70,14 @@ export const PlayerHeader: React.FC<ChessHeaderProperties> = ({
           <div>
             <div className="flex items-center gap-x-2">
               <TitleBadge title={title} />
-              <p>
+              <div>
                 <Link
                   href={`https://www.chess.com/member/${username}`}
-                  target="_blank">
-                  <p className="text-lg uppercase md:text-xl">{username}</p>
+                  target="_blank"
+                  className="text-lg uppercase md:text-xl">
+                  {username}
                 </Link>
-              </p>
+              </div>
             </div>
             <p>{name}</p>
           </div>
