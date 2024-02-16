@@ -1087,7 +1087,9 @@ exports[`PlayerInsightsTemplate to match snapshot 1`] = `
               <div
                 class="text-base md:text-lg lg:text-xl"
               >
-                Countries
+                Countries (
+                0
+                )
               </div>
             </div>
           </div>

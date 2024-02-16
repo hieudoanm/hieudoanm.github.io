@@ -1,4 +1,4 @@
-import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
+import { HIKARU_CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { ChessPlayer } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 import { getPlayer, syncPlayer } from './service';
@@ -25,5 +25,5 @@ export const POST = async (
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const generateStaticParams = () => {
-  return [{ username: CHESS_USERNAME }];
+  return [{ username: HIKARU_CHESS_USERNAME }];
 };

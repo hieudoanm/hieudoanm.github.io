@@ -1,9 +1,9 @@
 import { ChessResult, ChessTitleAbbreviation } from '@prisma/client';
 import { ChessBoardSquare } from '../types/chess';
 
-export const CHESS_USERNAME = 'hikaru';
 export const HIKARU_CHESS_USERNAME = 'hikaru';
 export const MAGNUS_CHESS_USERNAME = 'magnuscarlsen';
+export const DANIEL_CHESS_USERNAME = 'danielnaroditsky';
 // Titles
 export const OPEN_TITLES: ChessTitleAbbreviation[] = [
   'GM',

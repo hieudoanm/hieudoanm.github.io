@@ -5,7 +5,7 @@ import {
   gql,
 } from '@apollo/client';
 import { APP_NAME } from '@chess/common/constants/app.constants';
-import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
+import { HIKARU_CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
 import { query } from '@chess/graphql/apollo/client';
 import { PlayerInsightsTemplate } from '@chess/shared/templates/PlayerInsightsTemplate';
@@ -219,7 +219,7 @@ type HomePageProperties = {
 };
 
 const HomePage: NextPage<HomePageProperties> = async ({ searchParams }) => {
-  const username: string = searchParams.username ?? CHESS_USERNAME;
+  const username: string = searchParams.username ?? HIKARU_CHESS_USERNAME;
   const timeClass: ChessTimeClass =
     searchParams.timeClass ?? ChessTimeClass.blitz;
   const variant: ChessVariant = searchParams.variant ?? ChessVariant.chess;

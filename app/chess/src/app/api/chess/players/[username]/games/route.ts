@@ -72,5 +72,5 @@ export const POST = async (
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 // export const generateStaticParams = () => {
-//   return [{ username: CHESS_USERNAME }];
+//   return [{ username: HIKARU_CHESS_USERNAME }];
 // };

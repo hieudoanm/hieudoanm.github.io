@@ -6,7 +6,11 @@ import {
 } from '@apollo/client';
 import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { APP_NAME } from '@chess/common/constants/app.constants';
-import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
+import {
+  DANIEL_CHESS_USERNAME,
+  HIKARU_CHESS_USERNAME,
+  MAGNUS_CHESS_USERNAME,
+} from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
 import { query } from '@chess/graphql/apollo/client';
 import { PlayerInsightsTemplate } from '@chess/shared/templates/PlayerInsightsTemplate';
@@ -216,7 +220,7 @@ const InsightsPage: NextPage<InsightsPageProperties> = async ({
   params,
   searchParams,
 }: InsightsPageProperties) => {
-  const username: string = params.username ?? CHESS_USERNAME;
+  const username: string = params.username ?? HIKARU_CHESS_USERNAME;
   const timeClass: ChessTimeClass =
     searchParams.timeClass ?? ChessTimeClass.blitz;
   const variant: ChessVariant = searchParams.variant ?? ChessVariant.chess;
@@ -258,7 +262,11 @@ const InsightsPage: NextPage<InsightsPageProperties> = async ({
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const generateStaticParams = () => {
-  return [{ username: CHESS_USERNAME }];
+  return [
+    { username: DANIEL_CHESS_USERNAME },
+    { username: HIKARU_CHESS_USERNAME },
+    { username: MAGNUS_CHESS_USERNAME },
+  ];
 };
 
 export default InsightsPage;

@@ -1,7 +1,8 @@
 import { OperationVariables, QueryOptions, gql } from '@apollo/client';
 import { APP_NAME } from '@chess/common/constants/app.constants';
 import {
-  CHESS_USERNAME,
+  DANIEL_CHESS_USERNAME,
+  HIKARU_CHESS_USERNAME,
   MAGNUS_CHESS_USERNAME,
 } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
@@ -60,7 +61,7 @@ const PlayerPage: NextPage<{ params: { username: string } }> = async ({
 }: {
   params: { username: string };
 }) => {
-  const username: string = params.username ?? CHESS_USERNAME;
+  const username: string = params.username ?? HIKARU_CHESS_USERNAME;
   logger.info(`PlayerPage username=${username}`);
 
   const queryOptions: QueryOptions<OperationVariables, PlayerData> = {
@@ -84,7 +85,11 @@ const PlayerPage: NextPage<{ params: { username: string } }> = async ({
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const generateStaticParams = () => {
-  return [{ username: CHESS_USERNAME }, { username: MAGNUS_CHESS_USERNAME }];
+  return [
+    { username: DANIEL_CHESS_USERNAME },
+    { username: HIKARU_CHESS_USERNAME },
+    { username: MAGNUS_CHESS_USERNAME },
+  ];
 };
 
 export default PlayerPage;

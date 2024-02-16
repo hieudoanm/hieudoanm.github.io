@@ -1,6 +1,6 @@
 import { DocumentNode, gql, useQuery } from '@apollo/client';
 import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
-import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
+import { HIKARU_CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { PlayerInsightsTemplate } from '@chess/shared/templates/PlayerInsightsTemplate';
 import {
   ChessPlayer,
@@ -107,7 +107,7 @@ const playerInsightsQuery: DocumentNode = gql`
 type PlayerData = { chess: { player: ChessPlayer & { insights: Insights } } };
 
 export const InsightsPage: React.FC = () => {
-  const username = CHESS_USERNAME;
+  const username = HIKARU_CHESS_USERNAME;
   const timeClass = ChessTimeClass.blitz;
   const variant = ChessVariant.chess;
 

@@ -1,6 +1,6 @@
 import { getGamesByYearAndMonth } from '@chess/common/clients/chess.com/chess.client';
 import { GamesResponse } from '@chess/common/clients/chess.com/chess.dto';
-import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
+import { HIKARU_CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { NextRequest, NextResponse } from 'next/server';
 
 type GamesParameters = {
@@ -25,5 +25,5 @@ export const generateStaticParams = () => {
   const d: Date = new Date();
   const year: string = d.getFullYear().toString();
   const month: string = (d.getMonth() + 1).toString();
-  return [{ username: CHESS_USERNAME, year, month }];
+  return [{ username: HIKARU_CHESS_USERNAME, year, month }];
 };

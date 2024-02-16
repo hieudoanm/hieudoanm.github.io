@@ -29,7 +29,7 @@ export const PlayerInsightsGeography: React.FC<
       <div className="card border border-gray-300 shadow">
         <div className="py-4 px-8 border-b">
           <div className="flex items-center justify-between">
-            <CardHeading>Countries</CardHeading>
+            <CardHeading>Countries ({countries.length})</CardHeading>
           </div>
         </div>
         <div className="overflow-auto">

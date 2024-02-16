@@ -1,4 +1,4 @@
-import { CHESS_USERNAME } from '@chess/common/constants/chess.constants';
+import { HIKARU_CHESS_USERNAME } from '@chess/common/constants/chess.constants';
 import { NextRequest, NextResponse } from 'next/server';
 import { GameResponse } from './model';
 import { getGame } from './service';
@@ -19,6 +19,9 @@ export const GET = async (
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const generateStaticParams = () => {
   return [
-    { username: CHESS_USERNAME, id: '2f9fd93a-9e93-11ee-8c7e-6cfe544c0428' },
+    {
+      username: HIKARU_CHESS_USERNAME,
+      id: '2f9fd93a-9e93-11ee-8c7e-6cfe544c0428',
+    },
   ];
 };
