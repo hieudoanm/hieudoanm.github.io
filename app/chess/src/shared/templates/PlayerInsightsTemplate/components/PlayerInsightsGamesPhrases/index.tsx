@@ -46,19 +46,21 @@ export const PlayerInsightsGamesEndPhrases: React.FC<{
 
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg">Games that ended in the...</p>
+      <p className="text-base md:text-lg font-bold">
+        Games that ended in the...
+      </p>
       {phrases.map(({ phrase, total, width, left }) => {
         return (
-          <div key={phrase} className="grid grid-cols-3">
+          <div key={phrase} className="grid grid-cols-5">
             <div className="col-span-1">
-              <p className="text-sm md:text-base capitalize font-semibold">
+              <p className="text-sm md:text-base capitalize font-medium">
                 {phrase}
               </p>
               <p className="text-sm md:text-base">
                 {total.toLocaleString('en', { useGrouping: true })}
               </p>
             </div>
-            <div className="col-span-2">
+            <div className="col-span-4">
               <div className="w-full bg-gray-200 h-full relative">
                 <div
                   className="absolute top-0 bg-teal-500 h-full flex items-center justify-center text-xs text-white"
@@ -95,7 +97,7 @@ export const PlayerInsightsGamesResultsByEndPhrase: React.FC<{
 
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg">
+      <p className="text-base md:text-lg font-bold">
         Results for games that ended in the...
       </p>
       {data.length > 0 ? (

@@ -512,7 +512,7 @@ exports[`PlayerInsightsGames to match snapshot 1`] = `
         class="flex flex-col gap-y-8"
       >
         <p
-          class="text-base md:text-lg"
+          class="text-base md:text-lg font-bold"
         >
           Games that ended in the...
         </p>
@@ -525,7 +525,7 @@ exports[`PlayerInsightsGames to match snapshot 1`] = `
         class="flex flex-col gap-y-8"
       >
         <p
-          class="text-base md:text-lg"
+          class="text-base md:text-lg font-bold"
         >
           Results for games that ended in the...
         </p>
