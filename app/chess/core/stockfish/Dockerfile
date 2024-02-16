@@ -7,6 +7,7 @@ LABEL maintainer="hieumdoan@gmail.com"
 ENV DEVELOPMENT='false'
 ENV CONTAINER='true'
 ENV LOG_LEVEL='error'
+ENV PORT='10000'
 
 # Install Stockfish
 RUN apt-get update && apt upgrade -y && apt install scid stockfish -y && rm -rf /var/lib/apt/lists/*
@@ -20,5 +21,4 @@ RUN python3.11 -m pip install --no-cache-dir --upgrade -r /code/requirements.txt
 # Start Application
 COPY ./main.py /code/main.py
 EXPOSE $PORT
-RUN echo "$PORT"
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "$PORT"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
