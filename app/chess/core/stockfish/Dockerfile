@@ -20,4 +20,5 @@ RUN python3.11 -m pip install --no-cache-dir --upgrade -r /code/requirements.txt
 # Start Application
 COPY ./main.py /code/main.py
 EXPOSE $PORT
+RUN echo "$PORT"
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "$PORT"]
