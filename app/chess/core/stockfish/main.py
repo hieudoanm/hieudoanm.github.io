@@ -1,5 +1,5 @@
 import chess
-from fastapi import FastAPI
+from fastapi import FastAPI, responses
 import os
 import platform
 from pydantic import BaseModel
@@ -22,8 +22,8 @@ print('PORT', PORT)
 app = FastAPI()
 
 
-@app.get("/")
-def health():
+@app.get("/", response_class=responses.JSONResponse)
+def health() -> responses.JSONResponse:
     return { "status": "OK" }
 
 
@@ -61,7 +61,7 @@ def map_top_move(fen : str, top_move: dict):
     }
 
 
-@app.post("/")
+@app.post("/", response_class=responses.JSONResponse)
 async def analyze(fen_request_body: FenRequestBody) -> list:
     try:
         fen : str = fen_request_body.fen
