@@ -4,6 +4,7 @@ import { ChessBoardSquare } from '../types/chess';
 export const HIKARU_CHESS_USERNAME = 'hikaru';
 export const MAGNUS_CHESS_USERNAME = 'magnuscarlsen';
 export const DANIEL_CHESS_USERNAME = 'danielnaroditsky';
+export const TUAN_CHESS_USERNAME = 'wonderfultime';
 // Titles
 export const OPEN_TITLES: ChessTitleAbbreviation[] = [
   'GM',

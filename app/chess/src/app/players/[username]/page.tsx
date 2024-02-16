@@ -4,6 +4,7 @@ import {
   DANIEL_CHESS_USERNAME,
   HIKARU_CHESS_USERNAME,
   MAGNUS_CHESS_USERNAME,
+  TUAN_CHESS_USERNAME,
 } from '@chess/common/constants/chess.constants';
 import { logger } from '@chess/common/libs/logger';
 import { query } from '@chess/graphql/apollo/client';
@@ -89,6 +90,7 @@ export const generateStaticParams = () => {
     { username: DANIEL_CHESS_USERNAME },
     { username: HIKARU_CHESS_USERNAME },
     { username: MAGNUS_CHESS_USERNAME },
+    { username: TUAN_CHESS_USERNAME },
   ];
 };
 
