@@ -22,7 +22,7 @@ print('PORT', PORT)
 app = FastAPI()
 
 
-@app.get("/", response_class=responses.JSONResponse)
+@app.get("/", response_class=responses.JSONResponse, tags=["stockfish"], name="health", operation_id="health")
 def health() -> responses.JSONResponse:
     return { "status": "OK" }
 
@@ -61,7 +61,7 @@ def map_top_move(fen : str, top_move: dict):
     }
 
 
-@app.post("/", response_class=responses.JSONResponse)
+@app.post("/", response_class=responses.JSONResponse, tags=["stockfish"], name="analyse", operation_id="analyse")
 async def analyze(fen_request_body: FenRequestBody) -> list:
     try:
         fen : str = fen_request_body.fen
