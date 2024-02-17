@@ -6,6 +6,7 @@ import os
 import platform
 from pydantic import BaseModel
 from stockfish import Stockfish
+from typing import Optional
 import uvicorn
 
 
@@ -93,19 +94,17 @@ async def analyse_pgn(pgn_request_body: PgnRequestBody):
         board.push(move)
         uci : str = move.uci()
         fen : str = board.board_fen()
-        centipawn : int = 0
-        mate : int= 0
+        centipawn : Optional[int] = None
+        mate : Optional[int] = None
         try:
             stockfish.set_fen_position(fen)
             top_moves = stockfish.get_top_moves(1)
             top_move : dict = top_moves[0]
-            centipawn : int = top_move.get('Centipawn', 0)
-            mate : int = top_move.get('Mate', 0)
+            centipawn : int = top_move.get('Centipawn', None)
+            mate : int = top_move.get('Mate', None)
             print('analyse_pgn', centipawn, mate)
         except:
             print('analyse_pgn', 'error')
-            centipawn = 0
-            mate = 0
         moves.append({
             "centipawn": centipawn,
             "mate": mate,
