@@ -8,6 +8,7 @@ from multiprocessing import Pool, current_process
 import os
 import psutil
 from pydantic import BaseModel
+from statistics import mean
 from stockfish import Stockfish, models
 import time
 from typing import Optional
@@ -243,9 +244,7 @@ def get_move_quality(opening : str, uci : str, best : str, win_percentage_delta 
     return 'good'
 
 
-def get_moves(pgn : str) -> list[dict]:
-    pgn_string_io : io.StringIO = io.StringIO(pgn)
-    game : chess_pgn.Game= chess_pgn.read_game(pgn_string_io)
+def get_moves(game : chess_pgn.Game) -> list[dict]:
     moves_without_evaluation = get_moves_without_evaluation(game)
     moves_with_evaluation : list[dict] = get_moves_with_evaluation(moves_without_evaluation)
     moves : list[dict] = []
@@ -261,7 +260,7 @@ def get_moves(pgn : str) -> list[dict]:
                 **move_with_evaluation,
                 "winDelta": 0,
                 "winPercentage": win_percentage,
-                "accuracyPercentage": 100
+                "accuracy": 100
             })
             break
         WIN_MULTIPLIER = -0.00368208
@@ -275,14 +274,14 @@ def get_moves(pgn : str) -> list[dict]:
         ACCURACY_DELTA = -3.166924740191411
         win_percentage_delta = round(win_percentage_before - win_percentage, 2)
         move_quality : dict[str, str]= get_move_quality(opening, uci, best, win_percentage_delta, turn)
-        accuracy_percentage = ACCURACY_MULTIPLIER * math.exp(ACCURACY_DELTA_MULTIPLIER * win_percentage_delta) + ACCURACY_DELTA
-        accuracy_percentage = accuracy_percentage if accuracy_percentage <= 100 else 100
+        accuracy = ACCURACY_MULTIPLIER * math.exp(ACCURACY_DELTA_MULTIPLIER * win_percentage_delta) + ACCURACY_DELTA
+        accuracy = accuracy if accuracy <= 100 else 100
         moves.append({
             **move_with_evaluation,
             "moveQuality": move_quality,
             "winDelta": win_percentage_delta,
             "winPercentage": round(win_percentage, 2),
-            "accuracyPercentage": round(accuracy_percentage, 2),
+            "accuracy": round(accuracy, 2),
         })
     return moves
 
@@ -294,21 +293,52 @@ class PgnRequestBody(BaseModel):
 @app.post("/pgn", response_class=responses.JSONResponse, tags=["stockfish"], name="Analyse PGN", operation_id="analyse_pgn")
 async def analyse_pgn(pgn_request_body: PgnRequestBody) -> dict:
     pgn : str = pgn_request_body.pgn
-    moves : list[dict] = get_moves(pgn)
+    pgn_string_io : io.StringIO = io.StringIO(pgn)
+    game : chess_pgn.Game= chess_pgn.read_game(pgn_string_io)
+    game_headers = game.headers
+    result : str = game_headers.get('Result', "")
+    time_control : str = game_headers.get('TimeControl', "")
+    white_username = game_headers.get('White', "").lower()
+    black_username = game_headers.get('Black', "").lower()
+    white_rating = game_headers.get('WhiteElo', "")
+    black_rating = game_headers.get('BlackElo', "")
+    moves : list[dict] = get_moves(game)
     kill_stockfish()
     last_book_move : dict = list(filter(lambda move: move.get("moveQuality") == 'book', moves))[-1]
     eco : str = last_book_move.get("eco", "")
     name : str = last_book_move.get("opening", "")
     pgn : str = last_book_move.get("pgn", "")
-    out_of_book : str = "black" if last_book_move.get("turn", "") == "white" else "white"
-    move_number : str = last_book_move.get("number", "") + (1 if out_of_book == "white" else 0)
+    leave_book : str = "black" if last_book_move.get("turn", "") == "white" else "white"
+    leave_move : str = last_book_move.get("number", "") + (1 if leave_book == "white" else 0)
+    white_moves : list[dict] = list(filter(lambda move: move.get("turn") == 'white', moves))
+    white_accuracies : list[float] = list(map(lambda move: move.get("accuracy"), white_moves))
+    white_accuracy : float = round(mean(white_accuracies), 2)
+    black_moves : list[dict] = list(filter(lambda move: move.get("turn") == 'black', moves))
+    black_accuracies : list[float] = list(map(lambda move: move.get("accuracy"), black_moves))
+    black_accuracy : float = round(mean(black_accuracies), 2)
     return {
+        "result": result,
+        "timeControl": time_control,
+        "players": {
+            "white": {
+                "username": white_username,
+                "rating": white_rating
+            },
+            "black": {
+                "username": black_username,
+                "rating": black_rating
+            }
+        },
+        "accuracies": {
+            "white": white_accuracy,
+            "black": black_accuracy
+        },
         "opening": {
             "eco": eco,
             "name": name,
             "pgn": pgn,
-            "leaveBook": out_of_book,
-            "leaveMove": move_number
+            "leaveBook": leave_book,
+            "leaveMove": leave_move
         },
         "moves": moves
     }
