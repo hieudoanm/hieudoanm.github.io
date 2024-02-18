@@ -19,6 +19,7 @@ COPY ./requirements.txt /code/requirements.txt
 RUN python3 -m pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 # Start Application
+COPY ./resources/openings/json/openings.json /code/resources/openings/json/openings.json
 COPY ./main.py /code/main.py
 EXPOSE $PORT
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]

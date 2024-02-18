@@ -3,6 +3,7 @@
 - [chess.com Insights](#chesscom-insights)
   - [Website](#website)
   - [Engines](#engines)
+  - [Docs](#docs)
 
 ## Website
 
@@ -15,6 +16,10 @@
 - [Komodo][komodo]
 - [Leela][leela]
 - [Stockfish][stockfish]
+
+## Docs
+
+- [Accuracy](https://lichess.org/page/accuracy)
 
 [alpha-zero]: https://deepmind.google/technologies/alphazero-and-muzero
 [chess]: https://www.chess.com

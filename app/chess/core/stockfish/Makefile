@@ -8,7 +8,7 @@ dev:
 	uvicorn main:app --reload
 
 freeze:
-	python3.12 -m pigar generate
+	python3 -m pigar generate
 
 start:
 	docker run -it stockfish
