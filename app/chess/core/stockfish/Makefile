@@ -12,3 +12,9 @@ freeze:
 
 start:
 	docker run -it stockfish
+
+get-chess-openings:
+	python3 ./scripts/chess/openings.py
+
+get-chess960-setup:
+	python3 ./scripts/chess960/setup.py

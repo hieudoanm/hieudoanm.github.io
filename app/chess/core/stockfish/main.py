@@ -1,27 +1,29 @@
-import chess
-import chess.pgn as chess_pgn
+
+from chess import Board, Move, parse_square, PIECE_NAMES
+from chess.pgn import Game, read_game
 from fastapi import FastAPI, responses
-import io
+from io import StringIO
 from json import load
-import math
+from math import exp
 from multiprocessing import Pool, current_process
-import os
-import psutil
+from os import getenv
+from psutil import process_iter
 from pydantic import BaseModel
+from requests import get as requests_get, Response
 from statistics import mean
 from stockfish import Stockfish, models
-import time
+from time import time
 from typing import Optional
-import uvicorn
+from uvicorn import run
 
 
 MAX_CENTIPAWN : int = 1500
 
 
-DEVELOPMENT : str = os.getenv('DEVELOPMENT') or 'true'
-CONTAINER : str = os.getenv('CONTAINER') or 'false'
-LOG_LEVEL : str = os.getenv('LOG_LEVEL') or 'debug'
-PORT : str = os.getenv('PORT') or '8000'
+DEVELOPMENT : str = getenv('DEVELOPMENT') or 'true'
+CONTAINER : str = getenv('CONTAINER') or 'false'
+LOG_LEVEL : str = getenv('LOG_LEVEL') or 'debug'
+PORT : str = getenv('PORT') or '8000'
 
 
 print('DEVELOPMENT', DEVELOPMENT)
@@ -30,15 +32,46 @@ print('LOG_LEVEL', LOG_LEVEL)
 print('PORT', PORT)
 
 
-openings_json_file = open("./resources/openings/json/openings.json", "r")
-openings : dict[str, dict[str, str]] = load(openings_json_file)
+class Opening(BaseModel):
+    eco: str
+    name: str
+    pgn: str
+
+
+openings_file_path : str = "./resources/chess/openings/json"
+openings_dict_json_file = open(f"{openings_file_path}/dict/openings.json", "r")
+openings_dict : dict[str, dict[str, str]] = load(openings_dict_json_file)
+openings_list_json_file = open(f"{openings_file_path}/list/openings.json", "r")
+openings_list : list[Opening] = load(openings_list_json_file)
+
 
 app = FastAPI()
 
 
-@app.get("/health", response_class=responses.JSONResponse, tags=["stockfish"], name="health", operation_id="health")
-def health() -> responses.JSONResponse:
+class HealthResponse:
+    def __init__(self, status : str):
+        self.status = status
+
+    status: str
+
+
+@app.get("/health", response_class=responses.JSONResponse, tags=["health"], name="health", operation_id="health")
+def health() -> dict:
     return { "status": "OK" }
+
+
+class OpeningsResponse:
+    total: int
+    openings: list[Opening]
+
+
+@app.get("/openings", response_class=responses.JSONResponse, tags=["stockfish"], name="openings", operation_id="openings")
+def get_openings() -> dict:
+    total = len(openings_list)
+    return {
+        "total": total,
+        "openings": openings_list
+    }
 
 
 class FenRequestBody(BaseModel):
@@ -46,28 +79,34 @@ class FenRequestBody(BaseModel):
     variations : int
 
 
+class TopMove(BaseModel):
+    centipawn: int
+    pawn: float
+    mate: int
+    san: str
+    uci: str
+
 def get_stockfish_engine():
     if CONTAINER == 'true':
         return Stockfish(path="/usr/games/stockfish")
     return Stockfish()
 
 
-def map_top_move(fen : str, top_move: dict):
-    board = chess.Board(fen)
-    move_uci: str = top_move.get('Move', '')
-    move = chess.Move.from_uci(move_uci)
-    move_san = board.san(move)
-    centipawn: int = top_move.get('Centipawn', '')
+def map_top_move(fen : str, top_move_dict: dict) -> TopMove:
+    board = Board(fen)
+    uci: str = top_move_dict.get('Move', '')
+    move = Move.from_uci(uci)
+    san : str = board.san(move)
+    centipawn: int = top_move_dict.get('Centipawn', '')
     pawn = centipawn / 100 if centipawn is not None else None
-    mate: int = top_move.get('Mate', '')
-    return {
-        "centipawn": centipawn,
-        "pawn": pawn,
-        "mate": mate,
-        "move_san": move_san,
-        "move_uci": move_uci,
-        "move": move
-    }
+    mate: int = top_move_dict.get('Mate', '')
+    top_move = TopMove()
+    top_move.centipawn = centipawn
+    top_move.pawn = pawn
+    top_move.mate = mate
+    top_move.san = san
+    top_move.uci = uci
+    return top_move
 
 
 def get_top_moves(fen : str, variations : int, retry : int = 0) -> list[dict]:
@@ -87,24 +126,24 @@ def get_top_moves(fen : str, variations : int, retry : int = 0) -> list[dict]:
 
 
 @app.post("/fen", response_class=responses.JSONResponse, tags=["stockfish"], name="Analyse FEN", operation_id="analyse_fen")
-async def analyse_fen(fen_request_body: FenRequestBody) -> list:
+async def analyse_fen(fen_request_body: FenRequestBody) -> list[TopMove]:
     fen : str = fen_request_body.fen
     variations : int = fen_request_body.variations
-    top_moves = get_top_moves(fen, variations)
-    mapped_top_moves = list(map(lambda top_move: map_top_move(fen, top_move), top_moves))
+    top_moves : list[dict] = get_top_moves(fen, variations)
+    mapped_top_moves : list[TopMove] = list(map(lambda top_move: map_top_move(fen, top_move), top_moves))
     kill_stockfish()
     return mapped_top_moves
 
 
 
-def get_piece_name(board: chess.Board, uci: str):
-    piece = board.piece_at(chess.parse_square(uci[-2:]))
-    piece_name = chess.PIECE_NAMES[piece.piece_type]
+def get_piece_name(board: Board, uci: str):
+    piece = board.piece_at(parse_square(uci[-2:]))
+    piece_name = PIECE_NAMES[piece.piece_type]
     return piece_name
 
 
 def check_if_stockfish_is_running() -> bool:
-    for process in psutil.process_iter():
+    for process in process_iter():
         if "stockfish" in process.name():
             return True
     return False
@@ -112,7 +151,7 @@ def check_if_stockfish_is_running() -> bool:
 
 def kill_stockfish():
     print("check_if_stockfish_is_running before_kill", check_if_stockfish_is_running())
-    for process in psutil.process_iter():
+    for process in process_iter():
         if "stockfish" in process.name():
             process.terminate()
             process.wait()
@@ -148,7 +187,7 @@ def evaluate(fen : str, retry : int = 0) -> dict:
 
 
 def get_book_move(pgn : str) -> dict[str, str]:
-    opening : dict[str, str] = openings.get(pgn, {})
+    opening : dict[str, str] = openings_dict.get(pgn, {})
     opening_eco : str = opening.get("eco", "")
     opening_name : str = opening.get("name", "")
     return {
@@ -157,7 +196,7 @@ def get_book_move(pgn : str) -> dict[str, str]:
     }
 
 
-def get_moves_without_evaluation(game : chess_pgn.Game) -> list[dict]:
+def get_moves_without_evaluation(game : Game) -> list[dict]:
     board = game.board()
     moves_without_evaluation : list[dict] = []
     pgn_moves : list[str] = []
@@ -176,6 +215,13 @@ def get_moves_without_evaluation(game : chess_pgn.Game) -> list[dict]:
         book_move = get_book_move(pgn)
         eco : str = book_move.get("eco", "")
         opening : str = book_move.get("opening", "")
+        # Major Pieces
+        board_fen : str = board.board_fen()
+        board_fen_without_numbers : str = ''.join("" if c.isdigit() else c for c in board_fen)
+        board_fen_without_king_and_pawn : str = ''.join("" if c in ['/', 'K', 'P', 'k', 'p'] else c for c in board_fen_without_numbers)
+        number_of_major_pieces : int = len(board_fen_without_king_and_pawn)
+        phrase : str = 'opening' if eco != '' else 'middlegame'
+        phrase : str = 'endgame' if number_of_major_pieces <= 6 else phrase
         moves_without_evaluation.append({
             "number": fullmove_number,
             "turn": turn,
@@ -185,6 +231,7 @@ def get_moves_without_evaluation(game : chess_pgn.Game) -> list[dict]:
             "san": san,
             "uci": uci,
             "eco": eco,
+            "phrase": phrase,
             "opening": opening
         })
     return moves_without_evaluation
@@ -201,7 +248,7 @@ def get_move_centipawn(centipawn: Optional[int], mate: Optional[int], turn : str
     return centipawn
 
 
-def get_move_with_evaluation(move_without_evaluation):
+def get_move_with_evaluation(move_without_evaluation : dict):
     fen = move_without_evaluation.get('fen')
     turn = move_without_evaluation.get('turn')
     evaluation = evaluate(fen, 0)
@@ -218,18 +265,18 @@ def get_move_with_evaluation(move_without_evaluation):
 
 
 def get_moves_with_evaluation(moves_without_evaluation: list[dict]) -> list[dict]:
-    # loop_time = time.time()
+    # loop_time = time()
     # moves_with_evaluation : list[dict] = []
     # for move_without_evaluation in moves_without_evaluation:
     #     move_with_evaluation = get_move_with_evaluation(move_without_evaluation)
     #     moves_with_evaluation.append(move_with_evaluation)
-    # print(f"seconds={(time.time() - loop_time)}")
-    parallel_time : float = time.time()
+    # print(f"seconds={(time() - loop_time)}")
+    parallel_time : float = time()
     evaluation_pool = Pool()
     print(f"processes={evaluation_pool._processes}")
     moves_with_evaluation = evaluation_pool.map(get_move_with_evaluation, moves_without_evaluation)
     evaluation_pool.close()
-    print(f"seconds={(time.time() - parallel_time)}")
+    print(f"seconds={(time() - parallel_time)}")
     return moves_with_evaluation
 
 
@@ -244,7 +291,7 @@ def get_move_quality(opening : str, uci : str, best : str, win_percentage_delta 
     return 'good'
 
 
-def get_moves(game : chess_pgn.Game) -> list[dict]:
+def get_moves(game : Game) -> list[dict]:
     moves_without_evaluation = get_moves_without_evaluation(game)
     moves_with_evaluation : list[dict] = get_moves_with_evaluation(moves_without_evaluation)
     moves : list[dict] = []
@@ -264,7 +311,7 @@ def get_moves(game : chess_pgn.Game) -> list[dict]:
             })
             break
         WIN_MULTIPLIER = -0.00368208
-        win_percentage : float = 50 + 50 * (2 / (1 + math.exp(WIN_MULTIPLIER * centipawn)) - 1)
+        win_percentage : float = 50 + 50 * (2 / (1 + exp(WIN_MULTIPLIER * centipawn)) - 1)
         win_percentage_delta = 0
         previous_move : dict = moves[index - 1] if index > 0 else {}
         win_percentage_before : float = previous_move.get("winPercentage", 50)
@@ -274,7 +321,7 @@ def get_moves(game : chess_pgn.Game) -> list[dict]:
         ACCURACY_DELTA = -3.166924740191411
         win_percentage_delta = round(win_percentage_before - win_percentage, 2)
         move_quality : dict[str, str]= get_move_quality(opening, uci, best, win_percentage_delta, turn)
-        accuracy = ACCURACY_MULTIPLIER * math.exp(ACCURACY_DELTA_MULTIPLIER * win_percentage_delta) + ACCURACY_DELTA
+        accuracy = ACCURACY_MULTIPLIER * exp(ACCURACY_DELTA_MULTIPLIER * win_percentage_delta) + ACCURACY_DELTA
         accuracy = accuracy if accuracy <= 100 else 100
         moves.append({
             **move_with_evaluation,
@@ -293,8 +340,8 @@ class PgnRequestBody(BaseModel):
 @app.post("/pgn", response_class=responses.JSONResponse, tags=["stockfish"], name="Analyse PGN", operation_id="analyse_pgn")
 async def analyse_pgn(pgn_request_body: PgnRequestBody) -> dict:
     pgn : str = pgn_request_body.pgn
-    pgn_string_io : io.StringIO = io.StringIO(pgn)
-    game : chess_pgn.Game= chess_pgn.read_game(pgn_string_io)
+    pgn_string_io : StringIO = StringIO(pgn)
+    game : Game= read_game(pgn_string_io)
     game_headers = game.headers
     result : str = game_headers.get('Result', "")
     time_control : str = game_headers.get('TimeControl', "")
@@ -304,12 +351,17 @@ async def analyse_pgn(pgn_request_body: PgnRequestBody) -> dict:
     black_rating = game_headers.get('BlackElo', "")
     moves : list[dict] = get_moves(game)
     kill_stockfish()
+    # End Phrase
+    last_move : dict = moves[-1]
+    end_phrase : str = last_move.get("phrase", "")
+    # Opening
     last_book_move : dict = list(filter(lambda move: move.get("moveQuality") == 'book', moves))[-1]
     eco : str = last_book_move.get("eco", "")
     name : str = last_book_move.get("opening", "")
     pgn : str = last_book_move.get("pgn", "")
     leave_book : str = "black" if last_book_move.get("turn", "") == "white" else "white"
     leave_move : str = last_book_move.get("number", "") + (1 if leave_book == "white" else 0)
+    # Accuracy
     white_moves : list[dict] = list(filter(lambda move: move.get("turn") == 'white', moves))
     white_accuracies : list[float] = list(map(lambda move: move.get("accuracy"), white_moves))
     white_accuracy : float = round(mean(white_accuracies), 2)
@@ -319,6 +371,7 @@ async def analyse_pgn(pgn_request_body: PgnRequestBody) -> dict:
     return {
         "result": result,
         "timeControl": time_control,
+        "endPhrase": end_phrase,
         "players": {
             "white": {
                 "username": white_username,
@@ -344,8 +397,49 @@ async def analyse_pgn(pgn_request_body: PgnRequestBody) -> dict:
     }
 
 
+class TablebaseRequestBody(BaseModel):
+    fen: str
+
+
+class TablebaseMove(BaseModel):
+    uci: str
+    san: str
+    zeroing: bool
+    checkmate: bool
+    stalemate: bool
+    variant_win: bool
+    variant_loss: bool
+    insufficient_material: bool
+    dtz: int
+    precise_dtz: int
+    dtm: int
+    category: str
+
+
+class TablebaseResponse:
+    checkmate: bool
+    stalemate: bool
+    variant_win: bool
+    variant_loss: bool
+    insufficient_material: bool
+    dtz: int
+    precise_dtz: int
+    dtm: int
+    category: str
+    moves: list[TablebaseMove]
+
+
+@app.post("/tablebase", response_class=responses.JSONResponse, tags=["stockfish"], name="Analyse Tablebase", operation_id="analyse_tablebase")
+async def analyse_tablebase(tablebase_request_body: TablebaseRequestBody) -> dict:
+    fen : str = tablebase_request_body.fen.replace(" ", "_")
+    url : str = f"http://tablebase.lichess.ovh/standard?fen={fen}"
+    response : Response = requests_get(url)
+    response = response.json()
+    return response
+
+
 if __name__ == "__main__":
-    uvicorn.run(
+    run(
         "main:app",
         host="0.0.0.0",
         port = int(PORT),
