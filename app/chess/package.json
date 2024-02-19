@@ -65,7 +65,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
 		"@prisma/client": "5.9.1",
-		"@tauri-apps/cli": "1.5.9",
+		"@tauri-apps/cli": "1.5.10",
 		"@testing-library/react": "14.2.1",
 		"@types/chroma-js": "2.4.4",
 		"@types/d3": "7.4.3",
