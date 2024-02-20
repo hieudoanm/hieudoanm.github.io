@@ -30,7 +30,7 @@
 		"@apollo/server": "4.10.0",
 		"@as-integrations/next": "3.0.0",
 		"@expo/next-adapter": "6.0.0",
-		"@graphql-tools/merge": "9.0.1",
+		"@graphql-tools/merge": "9.0.2",
 		"@graphql-tools/schema": "10.0.2",
 		"daisyui": "4.7.2",
 		"expo": "50.0.7",
