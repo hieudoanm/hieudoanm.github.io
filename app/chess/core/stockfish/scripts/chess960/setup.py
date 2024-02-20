@@ -1,6 +1,4 @@
-from io import TextIOWrapper
-from json import dumps
-from multiprocessing import Pool, current_process
+from chess import Board, Move
 from pandas import read_csv, DataFrame
 from stockfish import Stockfish
 
@@ -46,19 +44,22 @@ for setup in setup_list:
     diff = get_diff(board_fen)
     centipawn = setup.get("centipawn", "")
     print('centipawn', str(centipawn))
-    # if str(centipawn) != 'nan':
-    #     continue
-    # stockfish_engine : Stockfish = get_stockfish_engine()
-    # if not stockfish_engine.is_fen_valid(fen):
-    #     continue
-    # stockfish_engine.set_fen_position(fen)
-    # evaluation = stockfish_engine.get_evaluation()
-    # evaluation_type = evaluation.get("type", "")
-    # evaluation_value = evaluation.get("value", "")
-    # new_centipawn = evaluation_value if evaluation_type == 'cp' else f'M{evaluation_value}'
-    # print(fen, evaluation_type, evaluation_value)
-    # setup_list[number]['centipawn'] = new_centipawn
+    stockfish_engine : Stockfish = get_stockfish_engine()
+    if not stockfish_engine.is_fen_valid(fen):
+        continue
+    stockfish_engine.set_fen_position(fen)
+    evaluation = stockfish_engine.get_evaluation()
+    evaluation_type = evaluation.get("type", "")
+    evaluation_value = evaluation.get("value", "")
+    new_centipawn = evaluation_value if evaluation_type == 'cp' else f'M{evaluation_value}'
+    print(fen, evaluation_type, evaluation_value)
+    [top_move] = stockfish_engine.get_top_moves(1)
+    setup_list[number]['centipawn'] = new_centipawn
     setup_list[number]['diff'] = diff
+    best_move_uci = top_move.get("Move")
+    board = Board(fen)
+    move = Move.from_uci(best_move_uci)
+    setup_list[number]['best_move'] = board.san(move)
     new_setup_data_frame : DataFrame = DataFrame(setup_list)
     new_setup_data_frame = new_setup_data_frame.sort_values(by='number')
     new_setup_data_frame.to_csv("./resources/chess960/setup.csv", index=False)

@@ -86,6 +86,7 @@ class TopMove(BaseModel):
     san: str
     uci: str
 
+
 def get_stockfish_engine():
     if CONTAINER == 'true':
         return Stockfish(path="/usr/games/stockfish")
@@ -133,7 +134,6 @@ async def analyse_fen(fen_request_body: FenRequestBody) -> list[TopMove]:
     mapped_top_moves : list[TopMove] = list(map(lambda top_move: map_top_move(fen, top_move), top_moves))
     kill_stockfish()
     return mapped_top_moves
-
 
 
 def get_piece_name(board: Board, uci: str):
