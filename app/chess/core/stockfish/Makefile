@@ -16,5 +16,5 @@ start:
 get-chess-openings:
 	python3 ./scripts/chess/openings.py
 
-get-chess960-setup:
-	python3 ./scripts/chess960/setup.py
+get-chess960-positions:
+	python3 ./scripts/chess960/positions.py
