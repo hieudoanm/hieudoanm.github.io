@@ -22,7 +22,7 @@ const PlayerInsightsMovesCastlingByType: React.FC<{
 }> = ({ title, data }) => {
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">{title}</p>
+      <p className="text-base font-bold md:text-lg">{title}</p>
       <div className="aspect-video">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart width={1600} height={900} barCategoryGap={1} data={data}>
@@ -113,7 +113,7 @@ export const PlayerInsightsMovesCastling: React.FC<{ insights?: Insights }> = ({
 
   return (
     <div className="card border border-gray-200 shadow">
-      <div className="py-4 px-8 border-b">
+      <div className="border-b px-8 py-4">
         <CardHeading>Castling</CardHeading>
       </div>
       <div className="card-body border-b">

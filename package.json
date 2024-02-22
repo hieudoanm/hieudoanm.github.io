@@ -11,6 +11,7 @@
 		"npm": "10.4.0"
 	},
 	"scripts": {
+		"prettify": "yarn turbo prettify",
 		"format": "yarn turbo format",
 		"build": "yarn turbo build",
 		"check": "yarn turbo check",
@@ -36,6 +37,7 @@
 		"app/broca",
 		"app/chess",
 		"app/sunil",
+		"app/vi",
 		"backend/api",
 		"frontend/mobile",
 		"frontend/web"

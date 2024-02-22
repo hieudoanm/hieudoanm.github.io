@@ -13,7 +13,7 @@ const GitHubButton: React.FC<{ size: string }> = ({ size = 'md' }) => {
       target="_blank">
       <button
         type="button"
-        className="flex w-full items-center gap-x-2 bg-teal-500 text-white btn btn-xs">
+        className="btn btn-xs flex w-full items-center gap-x-2 bg-teal-500 text-white">
         <FaGithub />
         <p>GitHub</p>
       </button>
@@ -31,12 +31,12 @@ export const Navbar: React.FC = () => {
               <div className="block md:hidden">
                 <label
                   htmlFor="chess-drawer"
-                  className="btn bg-teal-500 text-white drawer-button">
+                  className="btn drawer-button bg-teal-500 text-white">
                   <FaBars />
                 </label>
               </div>
               <Link href="/">
-                <p className="uppercase font-bold">{APP_NAME}</p>
+                <p className="font-bold uppercase">{APP_NAME}</p>
               </Link>
               <div className="hidden md:block">
                 <div className="flex items-center gap-x-4">

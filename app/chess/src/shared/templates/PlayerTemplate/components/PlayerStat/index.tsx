@@ -19,12 +19,12 @@ export const PlayerStat: React.FC<PlayerStatProperties> = ({
   return (
     <div className="card border border-gray-200 shadow">
       <div className="stat">
-        <div className="capitalize stat-title">{timeClass}</div>
+        <div className="stat-title capitalize">{timeClass}</div>
         <div className="stat-value">{last ?? 'N/A'}</div>
         <div className="stat-desc m-0">Best: {best ?? 'N/A'}</div>
         {icon ? (
           <div className="stat-figure">
-            <div className="rounded p-2 text-white bg-teal-500 w-12 h-12 flex items-center justify-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded bg-teal-500 p-2 text-white">
               {icon}
             </div>
           </div>

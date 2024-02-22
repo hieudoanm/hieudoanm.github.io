@@ -16,7 +16,7 @@ export const LanguagesTemplate: React.FC<LanguagesTemplateProperties> = ({
 
   return (
     <div className="card border border-gray-200">
-      <div className="border-b py-2 px-4">
+      <div className="border-b px-4 py-2">
         <div className="flex items-center justify-between">
           <h1 className="text-xl">Languages ({languages.length})</h1>
           <div className="flex items-center gap-x-2 md:gap-x-4">
@@ -48,7 +48,7 @@ export const LanguagesTemplate: React.FC<LanguagesTemplateProperties> = ({
       </div>
       <div>
         <table className="table">
-          <caption className="py-4 border-b">
+          <caption className="border-b py-4">
             Languages ({languages.length})
           </caption>
           <thead>

@@ -16,7 +16,7 @@ export const ChessHistogramChart: React.FC<{
 }> = ({ timeClass = '', data = [] }) => {
   return (
     <div className="card border border-gray-200 shadow">
-      <div className="py-4 px-8">
+      <div className="px-8 py-4">
         <p className="text-lg capitalize">{timeClass} Distribution</p>
       </div>
       <div className="divider m-0" />

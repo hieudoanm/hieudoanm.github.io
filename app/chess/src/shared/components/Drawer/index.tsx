@@ -16,7 +16,7 @@ export const Drawer: React.FC<DrawerProperties> = ({ children = <></> }) => {
           aria-label="close sidebar"
           className="drawer-overlay"
         />
-        <div className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+        <div className="menu min-h-full w-80 bg-base-200 p-4 text-base-content">
           <div className="border-b pb-4">
             <PageHeading>{APP_NAME}</PageHeading>
           </div>

@@ -1,0 +1,91 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRESQL_URL")
+  directUrl = env("POSTGRESQL_URL")
+  schemas   = ["vi"]
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+  binaryTargets   = ["native", "debian-openssl-1.1.x"]
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+}
+
+model LicensePlate {
+  code  String @id @db.VarChar(2)
+  name  String @db.VarChar(255)
+  group String @db.VarChar(255)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("vi")
+}
+
+model EthnicGroup {
+  id    Int    @id @default(autoincrement())
+  name  String @default("") @db.VarChar(255)
+  group String @default("") @db.VarChar(255)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("vi")
+}
+
+model StockSymbol {
+  symbol    String         @id @default("") @db.VarChar(3)
+  name      String         @default("") @db.VarChar(255)
+  market    Market         @default(HOSE)
+  vn30      Boolean        @default(false)
+  hnx30     Boolean        @default(false)
+  // Metadata
+  createdAt DateTime?      @default(now()) @db.Timestamptz()
+  updatedAt DateTime?      @default(now()) @updatedAt @db.Timestamptz()
+  history   StockHistory[]
+
+  @@schema("vi")
+}
+
+enum Market {
+  HNX
+  HOSE
+  UPCOM
+
+  @@schema("vi")
+}
+
+model StockHistory {
+  stock       StockSymbol? @relation(fields: [symbol], references: [symbol])
+  symbol      String
+  date        DateTime     @default(now()) @db.Date()
+  open        Float?       @default(0)
+  high        Float?       @default(0)
+  low         Float?       @default(0)
+  close       Float?       @default(0)
+  volume      Float?       @default(0)
+  // Analyse
+  ma50        Float?       @db.DoublePrecision
+  ma200       Float?       @db.DoublePrecision
+  goldenCross Boolean      @default(false)
+  deathCross  Boolean      @default(false)
+  // Metadata
+  createdAt   DateTime?    @default(now()) @db.Timestamptz()
+  updatedAt   DateTime?    @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([symbol, date])
+  @@schema("vi")
+}

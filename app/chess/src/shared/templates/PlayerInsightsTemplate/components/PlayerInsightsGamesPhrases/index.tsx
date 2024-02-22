@@ -46,14 +46,14 @@ export const PlayerInsightsGamesEndPhrases: React.FC<{
 
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">
+      <p className="text-base font-bold md:text-lg">
         Games that ended in the...
       </p>
       {phrases.map(({ phrase, total, width, left }) => {
         return (
           <div key={phrase} className="grid grid-cols-5">
             <div className="col-span-1">
-              <p className="text-sm md:text-base capitalize font-medium">
+              <p className="text-sm font-medium capitalize md:text-base">
                 {phrase}
               </p>
               <p className="text-sm md:text-base">
@@ -61,9 +61,9 @@ export const PlayerInsightsGamesEndPhrases: React.FC<{
               </p>
             </div>
             <div className="col-span-4">
-              <div className="w-full bg-gray-200 h-full relative">
+              <div className="relative h-full w-full bg-gray-200">
                 <div
-                  className="absolute top-0 bg-teal-500 h-full flex items-center justify-center text-xs text-white"
+                  className="absolute top-0 flex h-full items-center justify-center bg-teal-500 text-xs text-white"
                   style={{ width: `${width}%`, left: `${left}%` }}>
                   {width}%
                 </div>
@@ -97,7 +97,7 @@ export const PlayerInsightsGamesResultsByEndPhrase: React.FC<{
 
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">
+      <p className="text-base font-bold md:text-lg">
         Results for games that ended in the...
       </p>
       {data.length > 0 ? (
@@ -141,10 +141,12 @@ export const PlayerInsightsGamesResultsByEndPhrase: React.FC<{
 
 export const PlayerInsightsGamesPhrases: React.FC<{ insights: Insights }> = ({
   insights = {} as Insights,
-}: { insights: Insights }) => {
+}: {
+  insights: Insights;
+}) => {
   return (
     <div className="card border border-gray-200 shadow">
-      <div className="py-4 px-8 border-b">
+      <div className="border-b px-8 py-4">
         <CardHeading>
           <div className="flex items-center gap-x-2">
             <FaXmarksLines />

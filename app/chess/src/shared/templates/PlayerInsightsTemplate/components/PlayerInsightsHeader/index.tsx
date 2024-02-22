@@ -58,7 +58,7 @@ export const PlayerInsightsHeader: React.FC<PlayerInsightsHeaderProperties> = ({
         <select
           id="timeClass"
           name="timeClass"
-          className="select select-bordered join-item w-full"
+          className="join-item select select-bordered w-full"
           value={timeClass}
           onChange={(event: ChangeEvent<HTMLSelectElement>) => {
             const newTimeClass: string = event.target.value;
@@ -72,7 +72,7 @@ export const PlayerInsightsHeader: React.FC<PlayerInsightsHeaderProperties> = ({
         <select
           id="variant"
           name="variant"
-          className="select select-bordered join-item w-full"
+          className="join-item select select-bordered w-full"
           value={variant}
           onChange={(event: ChangeEvent<HTMLSelectElement>) => {
             const newVariant: string = event.target.value;

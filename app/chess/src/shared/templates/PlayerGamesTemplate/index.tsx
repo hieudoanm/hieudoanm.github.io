@@ -80,12 +80,12 @@ export const PlayerGamesTemplate: React.FC<PlayerGamesTemplateProperties> = ({
     <>
       <div className="flex flex-col gap-y-4 py-4 md:gap-y-8 md:py-8">
         <div className="card border border-gray-200 shadow">
-          <div className="py-4 px-8">
+          <div className="px-8 py-4">
             <div className="flex items-center justify-between">
               <p className="text-xl">Games ({games.length})</p>
               <button
                 type="button"
-                className="bg-teal-500 text-white btn"
+                className="btn bg-teal-500 text-white"
                 onClick={syncGames}>
                 <FaSync />
               </button>
@@ -153,7 +153,7 @@ export const PlayerGamesTemplate: React.FC<PlayerGamesTemplateProperties> = ({
                         <div>
                           <button
                             type="button"
-                            className="bg-teal-500 text-white btn">
+                            className="btn bg-teal-500 text-white">
                             <FaSearchengin />
                           </button>
                         </div>

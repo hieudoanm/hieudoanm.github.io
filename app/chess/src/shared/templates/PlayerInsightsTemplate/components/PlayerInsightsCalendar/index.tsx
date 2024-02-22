@@ -9,7 +9,7 @@ export const PlayerInsightsCalendar: React.FC<{ insights?: Insights }> = ({
 }) => {
   return (
     <>
-      <div id="calendar" className="text-center flex flex-col gap-y-2">
+      <div id="calendar" className="flex flex-col gap-y-2 text-center">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaCalendarDays className="text-teal-500" /> Calendar

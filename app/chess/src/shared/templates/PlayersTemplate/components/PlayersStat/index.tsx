@@ -9,7 +9,7 @@ export const PlayersStat: React.FC<{
   icon: ReactNode;
 }> = ({ title = '', average = 0, max = 0, icon }) => {
   return (
-    <div className="border border-gray-200 shadow rounded">
+    <div className="rounded border border-gray-200 shadow">
       <div className="flex items-center justify-between">
         <div className="stat">
           <div className="stat-title">Average {title}</div>
@@ -18,7 +18,7 @@ export const PlayersStat: React.FC<{
         </div>
         {icon ? (
           <div className="p-4">
-            <div className="rounded p-2 text-white bg-teal-500 w-12 h-12 flex items-center justify-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded bg-teal-500 p-2 text-white">
               {icon}
             </div>
           </div>

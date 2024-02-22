@@ -26,8 +26,8 @@ export const PlayersTitlesChart: React.FC<{ titles: TitleTotal[] }> = ({
   const colors: string[] = COLORS_MAP.teal;
 
   return (
-    <div className="flex items-center h-full">
-      <div className="p-10 md:p-20 w-full h-full">
+    <div className="flex h-full items-center">
+      <div className="h-full w-full p-10 md:p-20">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Legend />

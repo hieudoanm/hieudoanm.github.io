@@ -14,7 +14,7 @@ export const PlayerInsightsGames: React.FC<PlayerInsightsGamesProperties> = ({
 }) => {
   return (
     <>
-      <div id="games" className="text-center flex flex-col gap-y-2">
+      <div id="games" className="flex flex-col gap-y-2 text-center">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaChessBoard className="text-teal-500" /> Games

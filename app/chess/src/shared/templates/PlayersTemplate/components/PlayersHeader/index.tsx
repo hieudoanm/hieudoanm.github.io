@@ -31,12 +31,12 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
             </p>
           </div>
           <div className="col-span-2">
-            <div className="join shadow w-full">
+            <div className="join w-full shadow">
               <select
                 aria-label="Title"
                 id="title"
                 name="title"
-                className="select select-bordered join-item w-full"
+                className="join-item select select-bordered w-full"
                 value={title}
                 onChange={(event: ChangeEvent<HTMLSelectElement>) => {
                   const newTitle: string = event.target.value;
@@ -53,7 +53,7 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
                 aria-label="Country"
                 id="country"
                 name="country"
-                className="select select-bordered join-item w-full"
+                className="join-item select select-bordered w-full"
                 value={countryCode}
                 onChange={(event) => {
                   const newCountryCode: string = event.target.value;
@@ -69,7 +69,7 @@ export const PlayersHeader: React.FC<PlayersHeaderProperties> = ({
               <select
                 id="timeRange"
                 name="timeRange"
-                className="select select-bordered join-item w-full"
+                className="join-item select select-bordered w-full"
                 value={timeRange}
                 onChange={(event) => {
                   const newTimeRange: string = event.target.value;

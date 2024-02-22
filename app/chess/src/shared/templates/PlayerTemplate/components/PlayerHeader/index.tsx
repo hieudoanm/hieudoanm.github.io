@@ -86,14 +86,14 @@ export const PlayerHeader: React.FC<ChessHeaderProperties> = ({
           {verified ? <FaCheckCircle className="text-teal-500" /> : <></>}
           {is_streamer ? (
             <Link href={twitch_url} target="_blank">
-              <button className="bg-teal-500 text-white btn" type="button">
+              <button className="btn bg-teal-500 text-white" type="button">
                 <FaTwitch />
               </button>
             </Link>
           ) : (
             <></>
           )}
-          <button className="bg-teal-500 btn text-white" type="button">
+          <button className="btn bg-teal-500 text-white" type="button">
             <FaSync />
           </button>
         </div>

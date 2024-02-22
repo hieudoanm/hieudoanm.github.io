@@ -16,7 +16,10 @@ import { GamesResponse, SyncedResponse, TimeControl } from './dto';
 const getTimeControl = ({
   timeClass,
   timeControl,
-}: { timeClass: ChessTimeClass; timeControl: string }) => {
+}: {
+  timeClass: ChessTimeClass;
+  timeControl: string;
+}) => {
   if (timeClass === ChessTimeClass.daily) {
     const [_, secondsString] = timeControl.split('/');
     const seconds: number = Number.parseInt(secondsString);
@@ -301,7 +304,12 @@ const syncGamesByYearAndMonth = async ({
   year,
   month,
   full = false,
-}: { username: string; year: number; month: number; full: boolean }): Promise<{
+}: {
+  username: string;
+  year: number;
+  month: number;
+  full: boolean;
+}): Promise<{
   total: number;
   synced: number;
   existed: number;

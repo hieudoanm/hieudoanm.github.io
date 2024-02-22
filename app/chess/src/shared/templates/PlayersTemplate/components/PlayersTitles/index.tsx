@@ -29,7 +29,7 @@ export const PlayersTitles: React.FC<PlayersTitlesProperties> = ({
             <PlayersTitlesChart titles={titles} />
           </div>
           <div className="col-span-1 ">
-            <div className="border-t border-l-0 md:border-t-0 md:border-l border-gray-200">
+            <div className="border-l-0 border-t border-gray-200 md:border-l md:border-t-0">
               <PlayersTitlesTable titles={titles} />
             </div>
           </div>

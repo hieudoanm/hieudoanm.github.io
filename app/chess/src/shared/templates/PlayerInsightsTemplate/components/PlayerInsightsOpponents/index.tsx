@@ -36,7 +36,7 @@ export const PlayerInsightsOpponents: React.FC<{ insights: Insights }> = ({
 
   return (
     <>
-      <div id="opponents" className="text-center flex flex-col gap-y-2">
+      <div id="opponents" className="flex flex-col gap-y-2 text-center">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaCircleUser className="text-teal-500" /> Opponents
@@ -47,7 +47,7 @@ export const PlayerInsightsOpponents: React.FC<{ insights: Insights }> = ({
         </p>
       </div>
       <div className="card border border-gray-200 shadow">
-        <div className="py-4 px-8 border-b">
+        <div className="border-b px-8 py-4">
           <CardHeading>Opponents</CardHeading>
         </div>
         <div className="w-full overflow-x-auto">
@@ -145,17 +145,17 @@ export const PlayerInsightsOpponents: React.FC<{ insights: Insights }> = ({
                         <b>{games}</b>
                       </td>
                       <td align="right">
-                        <div className="text-teal-500 truncate">
+                        <div className="truncate text-teal-500">
                           {win} ({winPercentage.toFixed(2)}%)
                         </div>
                       </td>
                       <td align="right">
-                        <div className="text-gray-500 truncate">
+                        <div className="truncate text-gray-500">
                           {draw} ({drawPercentage.toFixed(2)}%)
                         </div>
                       </td>
                       <td align="right">
-                        <div className="pr-8 text-red-500 truncate">
+                        <div className="truncate pr-8 text-red-500">
                           {loss} ({lossPercentage.toFixed(2)}%)
                         </div>
                       </td>

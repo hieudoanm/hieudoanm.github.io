@@ -39,7 +39,7 @@ const ChessGamesByTimeOfDays: React.FC<{ insights: Insights }> = ({
 
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">Games by Time of Day</p>
+      <p className="text-base font-bold md:text-lg">Games by Time of Day</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -80,7 +80,7 @@ const ChessAccuracyByTimeOfDays: React.FC<{ insights: Insights }> = ({
 
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">Accuracy by Time of Day</p>
+      <p className="text-base font-bold md:text-lg">Accuracy by Time of Day</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -125,7 +125,7 @@ export const ChessResultsByTimeOfDays: React.FC<{
   );
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">Results by Time of Day</p>
+      <p className="text-base font-bold md:text-lg">Results by Time of Day</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -170,7 +170,7 @@ export const PlayerInsightsCalendarTimeOfDays: React.FC<{
 }> = ({ insights }) => {
   return (
     <div className="card border border-gray-200 shadow">
-      <div className="py-4 px-8 border-b">
+      <div className="border-b px-8 py-4">
         <CardHeading>Time of Day</CardHeading>
       </div>
       <div className="card-body border-b">

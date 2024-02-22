@@ -34,7 +34,7 @@ const ChessResult: React.FC<{
 
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">{title}</p>
+      <p className="text-base font-bold md:text-lg">{title}</p>
       <div className="rounded-2xl bg-gray-100 p-8">
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -71,7 +71,7 @@ export const PlayerInsightsGamesResults: React.FC<{ insights: Insights }> = ({
 }) => {
   return (
     <div className="card border border-gray-200 shadow">
-      <div className="py-4 px-8 border-b">
+      <div className="border-b px-8 py-4">
         <CardHeading>
           <div className="flex items-center gap-x-2">
             <FaTrophy />

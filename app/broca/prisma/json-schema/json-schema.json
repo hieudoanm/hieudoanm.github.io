@@ -43,41 +43,17 @@
         "results": {
           "type": "array",
           "items": {
-            "type": [
-              "number",
-              "string",
-              "boolean",
-              "object",
-              "array",
-              "null"
-            ]
+            "type": ["number", "string", "boolean", "object", "array", "null"]
           }
         },
         "syllables": {
-          "type": [
-            "number",
-            "string",
-            "boolean",
-            "object",
-            "array",
-            "null"
-          ]
+          "type": ["number", "string", "boolean", "object", "array", "null"]
         },
         "pronunciation": {
-          "type": [
-            "number",
-            "string",
-            "boolean",
-            "object",
-            "array",
-            "null"
-          ]
+          "type": ["number", "string", "boolean", "object", "array", "null"]
         },
         "frequency": {
-          "type": [
-            "number",
-            "null"
-          ],
+          "type": ["number", "null"],
           "default": 0
         },
         "createdAt": {
@@ -128,24 +104,13 @@
       "type": "object",
       "properties": {
         "suit": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "enum": [
-            "CUPS",
-            "PENTACLES",
-            "SWORDS",
-            "WANDS"
-          ]
+          "type": ["string", "null"],
+          "enum": ["CUPS", "PENTACLES", "SWORDS", "WANDS"]
         },
         "type": {
           "type": "string",
           "default": "MAJOR",
-          "enum": [
-            "MAJOR",
-            "MINOR"
-          ]
+          "enum": ["MAJOR", "MINOR"]
         },
         "id": {
           "type": "string",

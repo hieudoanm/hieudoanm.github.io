@@ -34,11 +34,11 @@ export const PlayerInsightsMovesPieces: React.FC<
 
   return (
     <div className="card border border-gray-200 shadow">
-      <div className="py-4 px-8 border-b">
+      <div className="border-b px-8 py-4">
         <CardHeading>Pieces</CardHeading>
       </div>
       <div className="card-body">
-        <p className="text-base md:text-lg font-bold">Moves per piece</p>
+        <p className="text-base font-bold md:text-lg">Moves per piece</p>
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>

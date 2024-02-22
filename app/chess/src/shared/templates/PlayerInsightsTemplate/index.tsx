@@ -57,8 +57,8 @@ export const PlayerInsightsTemplate: React.FC<
   }, [handleScroll]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-x-8 h-full overflow-hidden py-8">
-      <div className="col-span-1 md:col-span-3 order-2 md:order-1">
+    <div className="grid h-full grid-cols-1 gap-0 overflow-hidden py-8 md:grid-cols-4 md:gap-x-8">
+      <div className="order-2 col-span-1 md:order-1 md:col-span-3">
         <div className="flex flex-col gap-y-8">
           <PlayerInsightsHeader
             name={name}
@@ -74,19 +74,19 @@ export const PlayerInsightsTemplate: React.FC<
           <PlayerInsightsOpponents insights={insights} />
         </div>
       </div>
-      <div className="col-span-1 order-1 md:order-2">
+      <div className="order-1 col-span-1 md:order-2">
         <div className="relative hidden md:block">
           <div
             style={{ top: `${top}px` }}
-            className="transition-all ease-linear duration-0 absolute w-full right-0 left-0">
+            className="absolute left-0 right-0 w-full transition-all duration-0 ease-linear">
             <div className="card border shadow">
               <div className="p-4">
                 <div className="flex justify-between">
                   <div className="uppercase">{username}</div>
-                  <div className="capitalize font-semibold">{timeClass}</div>
+                  <div className="font-semibold capitalize">{timeClass}</div>
                 </div>
               </div>
-              <div className="px-4 py-2 border-t">
+              <div className="border-t px-4 py-2">
                 <div className="flex items-center gap-x-2">
                   <FaChessBoard className="text-teal-500" />
                   <ScrollLink
@@ -100,7 +100,7 @@ export const PlayerInsightsTemplate: React.FC<
                   </ScrollLink>
                 </div>
               </div>
-              <div className="px-4 py-2 border-t">
+              <div className="border-t px-4 py-2">
                 <div className="flex items-center gap-x-2">
                   <FaBook className="text-teal-500" />
                   <ScrollLink
@@ -114,7 +114,7 @@ export const PlayerInsightsTemplate: React.FC<
                   </ScrollLink>
                 </div>
               </div>
-              <div className="px-4 py-2 border-t">
+              <div className="border-t px-4 py-2">
                 <div className="flex items-center gap-x-2">
                   <FaChessPawn className="text-teal-500" />
                   <ScrollLink
@@ -128,7 +128,7 @@ export const PlayerInsightsTemplate: React.FC<
                   </ScrollLink>
                 </div>
               </div>
-              <div className="px-4 py-2 border-t">
+              <div className="border-t px-4 py-2">
                 <div className="flex items-center gap-x-2">
                   <FaCalendarDays className="text-teal-500" />
                   <ScrollLink
@@ -142,7 +142,7 @@ export const PlayerInsightsTemplate: React.FC<
                   </ScrollLink>
                 </div>
               </div>
-              <div className="px-4 py-2 border-t">
+              <div className="border-t px-4 py-2">
                 <div className="flex items-center gap-x-2">
                   <FaGlobe className="text-teal-500" />
                   <ScrollLink
@@ -156,7 +156,7 @@ export const PlayerInsightsTemplate: React.FC<
                   </ScrollLink>
                 </div>
               </div>
-              <div className="px-4 py-2 border-t">
+              <div className="border-t px-4 py-2">
                 <div className="flex items-center gap-x-2">
                   <FaCircleUser className="text-teal-500" />
                   <ScrollLink

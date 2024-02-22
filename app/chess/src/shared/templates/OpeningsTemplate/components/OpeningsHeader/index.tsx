@@ -23,7 +23,7 @@ export const OpeningsHeader: React.FC<OpeningsHeaderProperties> = ({
           aria-label="ECO"
           id="eco"
           name="eco"
-          className="shadow select select-bordered join-item"
+          className="join-item select select-bordered shadow"
           value={eco}
           onChange={(event) => {
             const newECO: string = event.target.value;
@@ -40,7 +40,7 @@ export const OpeningsHeader: React.FC<OpeningsHeaderProperties> = ({
           aria-label="Limit"
           id="limit"
           name="limit"
-          className="shadow select select-bordered join-item"
+          className="join-item select select-bordered shadow"
           value={limit}
           onChange={(event) => {
             const newLimit: string = event.target.value;

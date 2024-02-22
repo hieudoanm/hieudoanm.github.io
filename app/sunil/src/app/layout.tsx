@@ -29,7 +29,7 @@ const RootLayout = ({
             <Navbar />
             <div className="grow">
               <Container className="h-full">
-                <div className="p-4 md:p-8 h-full">{children}</div>
+                <div className="h-full p-4 md:p-8">{children}</div>
               </Container>
             </div>
             <Footer />

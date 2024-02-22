@@ -40,7 +40,7 @@ const ChessGames: React.FC<{
         {iconAs}
         <b className="text-base md:text-lg">{percentage.toFixed(2)}%</b>
       </div>
-      <div className="text-right text-xs capitalize md:text-sm truncate">
+      <div className="truncate text-right text-xs capitalize md:text-sm">
         {value} {label}
       </div>
     </div>
@@ -54,7 +54,7 @@ const ChessAccuracy: React.FC<{
 }> = ({ value = 0, label = '', iconAs = <></> }) => {
   return (
     <div className="flex flex-col gap-y-1 md:gap-y-2">
-      <p className="text-right text-xs capitalize md:text-sm truncate">
+      <p className="truncate text-right text-xs capitalize md:text-sm">
         {label}
       </p>
       <div className="flex items-center justify-end gap-x-1 md:gap-x-2">
@@ -86,7 +86,7 @@ export const PlayerInsightsGamesResultsByOpponentsRating: React.FC<{
 
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">
+      <p className="text-base font-bold md:text-lg">
         Results by Opponent Rating
       </p>
       {data.length > 0 ? (
@@ -151,7 +151,7 @@ export const PlayerInsightsGamesOverview: React.FC<
 
   return (
     <div className="card border border-gray-200 shadow">
-      <div className="py-4 px-8 border-b">
+      <div className="border-b px-8 py-4">
         <CardHeading>
           <div className="flex items-center gap-x-2">
             <FaMagnifyingGlass />
@@ -161,13 +161,13 @@ export const PlayerInsightsGamesOverview: React.FC<
       </div>
       <div className="card-body border-b">
         <div className="flex flex-col gap-y-8">
-          <p className="text-base md:text-lg truncate capitalize font-bold">
+          <p className="truncate text-base font-bold capitalize md:text-lg">
             Games played
           </p>
           <div className="flex flex-col overflow-auto">
             <div className="flex items-center justify-between gap-x-2 md:gap-x-4">
               <div className="flex items-center gap-x-2 md:gap-x-4">
-                <FaChessBoard className="text-3xl md:text-4xl text-teal-500" />
+                <FaChessBoard className="text-3xl text-teal-500 md:text-4xl" />
                 <p className="truncate text-3xl md:text-4xl">
                   {total.toLocaleString()}
                 </p>
@@ -193,18 +193,18 @@ export const PlayerInsightsGamesOverview: React.FC<
                     iconAs={<FaSquareMinus className="text-red-500" />}
                   />
                 </div>
-                <div className="w-full rounded-full h-4 flex overflow-hidden">
+                <div className="flex h-4 w-full overflow-hidden rounded-full">
                   <div
                     style={{ width: `${winPercentage}%` }}
-                    className="bg-teal-500 h-full"
+                    className="h-full bg-teal-500"
                   />
                   <div
                     style={{ width: `${drawPercentage}%` }}
-                    className="bg-gray-500 h-full"
+                    className="h-full bg-gray-500"
                   />
                   <div
                     style={{ width: `${lossPercentage}%` }}
-                    className="bg-red-500 h-full"
+                    className="h-full bg-red-500"
                   />
                 </div>
               </div>
@@ -233,13 +233,13 @@ export const PlayerInsightsGamesOverview: React.FC<
       </div>
       <div className="card-body border-b">
         <div className="flex flex-col gap-y-8">
-          <p className="text-base md:text-lg truncate capitalize font-bold">
+          <p className="truncate text-base font-bold capitalize md:text-lg">
             Average accuracy
           </p>
           <div className="flex flex-col overflow-auto">
             <div className="flex items-center justify-between gap-x-2 md:gap-x-4">
               <div className="flex items-center gap-x-2 md:gap-x-4">
-                <FaCrosshairs className="text-3xl md:text-4xl text-teal-500" />
+                <FaCrosshairs className="text-3xl text-teal-500 md:text-4xl" />
                 <p className="truncate text-3xl md:text-4xl">
                   {(insights?.accuracy?.average ?? 0).toLocaleString()}
                 </p>

@@ -10,7 +10,7 @@ export const TitleBadge: React.FC<TitleBadgeProperties> = ({
   if (!title) return <></>;
 
   return (
-    <div className="text-white bg-red-500 w-12 text-xs h-4 leading-4 text-center rounded">
+    <div className="h-4 w-12 rounded bg-red-500 text-center text-xs leading-4 text-white">
       {title}
     </div>
   );

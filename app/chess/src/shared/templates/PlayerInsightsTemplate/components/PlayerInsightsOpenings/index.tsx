@@ -40,7 +40,7 @@ const PlayerInsightsOpeningsBySide: React.FC<{ openings: OpeningCount[] }> = ({
                 <td>{pgn}</td>
                 <td align="right">{total}</td>
                 <td>
-                  <div className="grid grid-cols-3 w-full">
+                  <div className="grid w-full grid-cols-3">
                     <div className="col-span-1">
                       <div className="flex items-center gap-x-1">
                         <FaSquarePlus className="text-teal-500" />
@@ -64,18 +64,18 @@ const PlayerInsightsOpeningsBySide: React.FC<{ openings: OpeningCount[] }> = ({
                       </div>
                     </div>
                     <div className="col-span-3">
-                      <div className="w-full h-4 rounded-full flex items-center rounded">
+                      <div className="flex h-4 w-full items-center rounded rounded-full">
                         <div
                           style={{ width: `${winPercentage}%` }}
-                          className="bg-teal-500 h-full"
+                          className="h-full bg-teal-500"
                         />
                         <div
                           style={{ width: `${drawPercentage}%` }}
-                          className="bg-gray-300 h-full"
+                          className="h-full bg-gray-300"
                         />
                         <div
                           style={{ width: `${lossPercentage}%` }}
-                          className="bg-red-500 h-full"
+                          className="h-full bg-red-500"
                         />
                       </div>
                     </div>
@@ -104,7 +104,7 @@ export const PlayerInsightsOpenings: React.FC<
 
   return (
     <>
-      <div id="openings" className="text-center flex flex-col gap-y-2">
+      <div id="openings" className="flex flex-col gap-y-2 text-center">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaBook className="text-teal-500" /> Openings
@@ -115,7 +115,7 @@ export const PlayerInsightsOpenings: React.FC<
         </p>
       </div>
       <div className="card border border-gray-300 shadow">
-        <div className="py-4 px-8 border-b">
+        <div className="border-b px-8 py-4">
           <div className="flex items-center justify-between">
             <CardHeading>Performance</CardHeading>
             <div className="join">
@@ -139,7 +139,7 @@ export const PlayerInsightsOpenings: React.FC<
           </div>
         </div>
         <div className="card-body">
-          <p className="text-base md:text-lg font-bold">
+          <p className="text-base font-bold md:text-lg">
             How well you perform in your 10 most played openings
           </p>
           <div

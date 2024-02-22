@@ -71,7 +71,7 @@ export const Calendar: React.FC<CalendarProps> = ({
   return (
     <div className="overflow-hidden rounded border border-gray-200 shadow">
       <div className="card">
-        <div className="py-2 px-4 md:py-4 md:px-8 border-b">
+        <div className="border-b px-4 py-2 md:px-8 md:py-4">
           <div className="flex items-center justify-between">
             <p className="text-lg font-bold">Calendar</p>
             <div className="flex items-center gap-x-4">
@@ -175,7 +175,7 @@ export const Calendar: React.FC<CalendarProps> = ({
             );
           })}
         </div>
-        <div className="py-4 px-8">
+        <div className="px-8 py-4">
           <p className="w-full text-center">
             {MONTHS[`${monthYear.month}`]} {today}
             <sup>{SUFFIX_DATE[today]}</sup>, {monthYear.year}

@@ -22,14 +22,14 @@ export const PlayersCountries: React.FC<PlayersCountriesProperties> = ({
 
   return (
     <>
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <p className="text-center text-lg md:text-left md:text-2xl">
           Countries ({countries.length})
         </p>
         <div className="join inline-flex">
           <button
             type="button"
-            className={`btn-accent btn join-item ${
+            className={`btn btn-accent join-item ${
               view === 'maps' ? 'btn-outline' : 'btn-solid'
             }`}
             onClick={() => setView(view === 'maps' ? 'list' : 'maps')}>
@@ -37,7 +37,7 @@ export const PlayersCountries: React.FC<PlayersCountriesProperties> = ({
           </button>
           <button
             type="button"
-            className={`btn-accent btn join-item ${
+            className={`btn btn-accent join-item ${
               view === 'maps' ? 'btn-solid' : 'btn-outline'
             }`}
             onClick={() => setView(view === 'maps' ? 'list' : 'maps')}>

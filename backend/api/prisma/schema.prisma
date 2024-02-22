@@ -249,68 +249,6 @@ model University {
   @@schema("public")
 }
 
-// Vietnam
-
-model LicensePlate {
-  code  String @id @db.VarChar(2)
-  name  String @db.VarChar(255)
-  group String @db.VarChar(255)
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@schema("vietnam")
-}
-
-model EthnicGroup {
-  id    Int    @id @default(autoincrement())
-  name  String @default("") @db.VarChar(255)
-  group String @default("") @db.VarChar(255)
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@schema("vietnam")
-}
-
-model Stock {
-  symbol String @id @default("") @db.VarChar(3)
-  name   String @default("")
-  market Market @default(HOSE)
-
-  createdAt DateTime?      @default(now()) @db.Timestamptz()
-  updatedAt DateTime?      @default(now()) @updatedAt @db.Timestamptz()
-  history   StockHistory[]
-
-  @@schema("vietnam")
-}
-
-enum Market {
-  HNX
-  HOSE
-  UPCOM
-
-  @@schema("vietnam")
-}
-
-model StockHistory {
-  stock  Stock?   @relation(fields: [symbol], references: [symbol])
-  symbol String
-  date   DateTime @default(now()) @db.Date()
-  open   Float?   @default(0)
-  high   Float?   @default(0)
-  low    Float?   @default(0)
-  close  Float?   @default(0)
-  volume Float?   @default(0)
-
-  createdAt DateTime? @default(now()) @db.Timestamptz()
-  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
-
-  @@id([symbol, date])
-  @@schema("vietnam")
-}
-
-
 model TopLevelDomain {
   domain String  @id
   type   String? @default("")

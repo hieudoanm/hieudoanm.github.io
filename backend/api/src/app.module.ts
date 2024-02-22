@@ -5,7 +5,6 @@ import { ConfigModule } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { join } from 'path';
-import { VietnamModule } from './modules/vietnam/vietnam.module';
 import { OrganizationsModule } from './modules/organizations/organizations.module';
 
 const rootPath: string = join(__dirname, '..', 'public');
@@ -18,7 +17,6 @@ const rootPath: string = join(__dirname, '..', 'public');
     HttpModule,
     HealthModule,
     OrganizationsModule,
-    VietnamModule,
   ],
 })
 export class AppModule {}

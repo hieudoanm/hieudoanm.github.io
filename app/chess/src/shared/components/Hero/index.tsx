@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
       style={{ backgroundImage: `url(${hero.src})` }}>
       <div className="flex h-full items-center justify-center border-b bg-teal-500/50">
         <div className="card border border-gray-200 shadow">
-          <div className="py-4 px-8">
+          <div className="px-8 py-4">
             <p className="text-center text-xl md:text-3xl">{APP_NAME}</p>
           </div>
           <div className="divider m-0" />
@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
                   <button
                     aria-label="search"
                     type="submit"
-                    className="bg-teal-500 text-white btn">
+                    className="btn bg-teal-500 text-white">
                     <FaSearch />
                   </button>
                 </div>
@@ -52,11 +52,11 @@ export const Hero: React.FC = () => {
             </div>
           </div>
           <div className="divider m-0" />
-          <div className="py-4 px-8">
+          <div className="px-8 py-4">
             <ScrollLink to="demo" smooth={true} spy={true} duration={500}>
               <button
                 type="button"
-                className="w-full bg-teal-500 text-white btn">
+                className="btn w-full bg-teal-500 text-white">
                 View Demo
               </button>
             </ScrollLink>

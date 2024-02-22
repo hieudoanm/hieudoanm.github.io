@@ -175,48 +175,6 @@ Table University {
   updatedAt DateTime [default: `now()`]
 }
 
-Table LicensePlate {
-  code String [pk]
-  name String [not null]
-  group String [not null]
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
-}
-
-Table EthnicGroup {
-  id Int [pk, increment]
-  name String [not null, default: '']
-  group String [not null, default: '']
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
-}
-
-Table Stock {
-  symbol String [pk, default: '']
-  name String [not null, default: '']
-  market Market [not null, default: 'HOSE']
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
-  history StockHistory [not null]
-}
-
-Table StockHistory {
-  stock Stock
-  symbol String [not null]
-  date DateTime [default: `now()`, not null]
-  open Float [default: 0]
-  high Float [default: 0]
-  low Float [default: 0]
-  close Float [default: 0]
-  volume Float [default: 0]
-  createdAt DateTime [default: `now()`]
-  updatedAt DateTime [default: `now()`]
-
-  indexes {
-    (symbol, date) [pk]
-  }
-}
-
 Table TopLevelDomain {
   domain String [pk]
   type String [default: '']
@@ -243,12 +201,6 @@ Enum Region {
   OCEANIA
 }
 
-Enum Market {
-  HNX
-  HOSE
-  UPCOM
-}
-
 Ref: CountryName.countryCode > Country.cca3
 
 Ref: CountryName.languageCode > Language.code
@@ -272,5 +224,3 @@ Ref: CountriesOnOrganizations.organizationCode > Organization.code
 Ref: CountriesOnOrganizations.countryCode > Country.cca3
 
 Ref: University.countryCode > Country.cca3
-
-Ref: StockHistory.symbol > Stock.symbol

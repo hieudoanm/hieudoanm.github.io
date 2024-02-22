@@ -16,7 +16,7 @@ export const PlayerInsightsGeography: React.FC<
 
   return (
     <>
-      <div id="geography" className="text-center flex flex-col gap-y-2">
+      <div id="geography" className="flex flex-col gap-y-2 text-center">
         <SectionHeading>
           <div className="flex items-center justify-center gap-x-2">
             <FaGlobe className="text-teal-500" /> Geography
@@ -27,7 +27,7 @@ export const PlayerInsightsGeography: React.FC<
         </p>
       </div>
       <div className="card border border-gray-300 shadow">
-        <div className="py-4 px-8 border-b">
+        <div className="border-b px-8 py-4">
           <div className="flex items-center justify-between">
             <CardHeading>Countries ({countries.length})</CardHeading>
           </div>

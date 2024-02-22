@@ -39,7 +39,7 @@ const ChessGamesByDaysOfWeek: React.FC<{ insights: Insights }> = ({
 
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">Games by Days of Week</p>
+      <p className="text-base font-bold md:text-lg">Games by Days of Week</p>
       {pieData.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -79,7 +79,7 @@ const ChessAccuracyByDaysOfWeek: React.FC<{ insights: Insights }> = ({
   const data = insights?.accuracy?.daysOfWeek ?? [];
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">Accuracy by Days of Week</p>
+      <p className="text-base font-bold md:text-lg">Accuracy by Days of Week</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -124,7 +124,7 @@ export const ChessResultsByDaysOfWeek: React.FC<{
   );
   return (
     <div className="flex flex-col gap-y-8">
-      <p className="text-base md:text-lg font-bold">Results by Days of Week</p>
+      <p className="text-base font-bold md:text-lg">Results by Days of Week</p>
       {data.length > 0 ? (
         <div className="aspect-video">
           <ResponsiveContainer width="100%" height="100%">
@@ -169,7 +169,7 @@ export const PlayerInsightsCalendarDaysOfWeek: React.FC<{
 }> = ({ insights }) => {
   return (
     <div className="card border border-gray-200 shadow">
-      <div className="py-4 px-8 border-b">
+      <div className="border-b px-8 py-4">
         <CardHeading>Day of Week</CardHeading>
       </div>
       <div className="card-body border-b">

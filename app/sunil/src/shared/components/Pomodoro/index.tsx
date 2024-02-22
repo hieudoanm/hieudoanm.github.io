@@ -100,8 +100,8 @@ export const Pomodoro: React.FC = () => {
 
   return (
     <div className={`h-full bg-[${backgroundColor}]`}>
-      <div className="h-full flex items-center justify-center">
-        <div className="flex items-center justify-center border border-gray-200 rounded-full aspect-square bg-white w-20">
+      <div className="flex h-full items-center justify-center">
+        <div className="flex aspect-square w-20 items-center justify-center rounded-full border border-gray-200 bg-white">
           <div className="flex flex-col items-center gap-y-2 md:gap-y-4">
             <p className="uppercase">
               {clock.status ? WORK_STATUS : REST_STATUS}

@@ -7,155 +7,123 @@
 ```mermaid
 erDiagram
 "Country" {
-    String name "nullable"
-    String cca3 PK
-    String cca2 UK "nullable"
-    String ccn3 UK "nullable"
-    DayOfWeek startOfWeek "nullable"
-    Region region "nullable"
-    String subregion "nullable"
-    String status "nullable"
-    String flag "nullable"
-    Float area "nullable"
-    Int population "nullable"
-    Boolean independent "nullable"
-    Boolean unMember "nullable"
-    Boolean landlocked "nullable"
-    Json demonyms "nullable"
-    Json maps "nullable"
-    Json flags "nullable"
-    Json car "nullable"
-    Json coatOfArms "nullable"
-    Json postalCode "nullable"
-    String timezones
-    String continents
-    Float latlng
-    String tld
-    String altSpellings
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String name "nullable"
+  String cca3 PK
+  String cca2 UK "nullable"
+  String ccn3 UK "nullable"
+  DayOfWeek startOfWeek "nullable"
+  Region region "nullable"
+  String subregion "nullable"
+  String status "nullable"
+  String flag "nullable"
+  Float area "nullable"
+  Int population "nullable"
+  Boolean independent "nullable"
+  Boolean unMember "nullable"
+  Boolean landlocked "nullable"
+  Json demonyms "nullable"
+  Json maps "nullable"
+  Json flags "nullable"
+  Json car "nullable"
+  Json coatOfArms "nullable"
+  Json postalCode "nullable"
+  String timezones
+  String continents
+  Float latlng
+  String tld
+  String altSpellings
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "CountryName" {
-    String countryCode FK
-    String languageCode FK
-    String common "nullable"
-    String official "nullable"
-    Boolean native "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String countryCode FK
+  String languageCode FK
+  String common "nullable"
+  String official "nullable"
+  Boolean native "nullable"
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "City" {
-    Int id PK
-    Boolean capital
-    String city
-    String state
-    String countryCode FK
-    Float latitude
-    Float longitude
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  Int id PK
+  Boolean capital
+  String city
+  String state
+  String countryCode FK
+  Float latitude
+  Float longitude
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "CallingCode" {
-    String root
-    String suffix
-    String countryCode FK
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String root
+  String suffix
+  String countryCode FK
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "Currency" {
-    String code PK
-    String name
-    String symbol
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String code PK
+  String name
+  String symbol
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "CurrencyHistory" {
-    String currencyCode FK
-    DateTime date
-    Float rate
-    Int amount
-    String base
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String currencyCode FK
+  DateTime date
+  Float rate
+  Int amount
+  String base
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "CurrenciesInCountries" {
-    String currencyCode FK
-    String countryCode FK
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String currencyCode FK
+  String countryCode FK
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "Language" {
-    String code PK
-    String name
-    Int category
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String code PK
+  String name
+  Int category
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "LanguagesInCountries" {
-    String languageCode FK
-    String countryCode FK
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String languageCode FK
+  String countryCode FK
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "Organization" {
-    String code PK
-    String name "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String code PK
+  String name "nullable"
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "CountriesOnOrganizations" {
-    String organizationCode FK
-    String countryCode FK
-    DateTime accession "nullable"
-    DateTime withdrawal "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String organizationCode FK
+  String countryCode FK
+  DateTime accession "nullable"
+  DateTime withdrawal "nullable"
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "University" {
-    Int rank PK
-    String university "nullable"
-    String city "nullable"
-    String countryCode FK "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
-"LicensePlate" {
-    String code PK
-    String name
-    String group
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
-"EthnicGroup" {
-    Int id PK
-    String name
-    String group
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
-"Stock" {
-    String symbol PK
-    String name
-    Market market
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
-}
-"StockHistory" {
-    String symbol FK
-    DateTime date
-    Float open "nullable"
-    Float high "nullable"
-    Float low "nullable"
-    Float close "nullable"
-    Float volume "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  Int rank PK
+  String university "nullable"
+  String city "nullable"
+  String countryCode FK "nullable"
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "TopLevelDomain" {
-    String domain PK
-    String type "nullable"
-    DateTime createdAt "nullable"
-    DateTime updatedAt "nullable"
+  String domain PK
+  String type "nullable"
+  DateTime createdAt "nullable"
+  DateTime updatedAt "nullable"
 }
 "CountryName" }o--|| "Country" : country
 "CountryName" }o--|| "Language" : language
@@ -168,8 +136,7 @@ erDiagram
 "LanguagesInCountries" }o--|| "Country" : country
 "CountriesOnOrganizations" }o--|| "Organization" : organization
 "CountriesOnOrganizations" }o--|| "Country" : country
-"University" }o--|| "Country" : country
-"StockHistory" }o--|| "Stock" : stock
+"University" }o--o| "Country" : country
 ```
 
 ### `Country`
@@ -306,46 +273,6 @@ erDiagram
   - `university`: 
   - `city`: 
   - `countryCode`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `LicensePlate`
-
-**Properties**
-  - `code`: 
-  - `name`: 
-  - `group`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `EthnicGroup`
-
-**Properties**
-  - `id`: 
-  - `name`: 
-  - `group`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `Stock`
-
-**Properties**
-  - `symbol`: 
-  - `name`: 
-  - `market`: 
-  - `createdAt`: 
-  - `updatedAt`: 
-
-### `StockHistory`
-
-**Properties**
-  - `symbol`: 
-  - `date`: 
-  - `open`: 
-  - `high`: 
-  - `low`: 
-  - `close`: 
-  - `volume`: 
   - `createdAt`: 
   - `updatedAt`: 
 

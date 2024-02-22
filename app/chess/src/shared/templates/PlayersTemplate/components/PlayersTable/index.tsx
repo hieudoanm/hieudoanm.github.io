@@ -55,10 +55,10 @@ export const PlayersTable: React.FC<PlayersTableProperties> = ({
               <th align="right" className="w-8">
                 Rapid
               </th>
-              <th align="right" className="pr-8 w-8">
+              <th align="right" className="w-8 pr-8">
                 <button
                   type="button"
-                  className={`btn btn-xs btn-accent ${
+                  className={`btn btn-accent btn-xs ${
                     isStreamerFlag ? 'btn-solid' : 'btn-outline'
                   }`}
                   onClick={() => {
