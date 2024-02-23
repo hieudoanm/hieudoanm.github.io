@@ -14,13 +14,16 @@
     "check": "biome check --apply ./src",
     "format": "biome format --write ./src",
     "prettify": "prettier . --write --cache",
-    "prebuild": "rimraf .next out",
-    "build": "next build",
-    "predev": "prisma format && prisma generate",
+    "predev": "rimraf .next out && yarn prisma:generate || true",
     "dev": "kill-port 3000 && next dev -p 3000",
-    "start": "kill-port 3000 && next start -p 3000",
+    "prebuild": "rimraf .next out && (yarn prisma:generate || true)",
+    "build": "next build",
+    "prestart": "kill-port 3000",
+    "start": "next start -p 3000",
     "lint": "next lint",
-    "test": "jest"
+    "pretest": "rimraf coverage",
+    "test": "jest",
+    "prisma:generate": "prisma format && prisma generate"
   },
   "dependencies": {
     "next": "14.1.0",
