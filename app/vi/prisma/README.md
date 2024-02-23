@@ -28,6 +28,7 @@ erDiagram
   Market market
   Boolean vn30
   Boolean hnx30
+  Sector sector "nullable"
   DateTime createdAt "nullable"
   DateTime updatedAt "nullable"
 }
@@ -39,10 +40,25 @@ erDiagram
   Float low "nullable"
   Float close "nullable"
   Float volume "nullable"
+  Float change "nullable"
+  Float changePercentage "nullable"
+  Float bollingerUpperBand "nullable"
+  Float bollingerMiddleBand "nullable"
+  Float bollingerLowerBand "nullable"
+  Boolean bollingerOverbought
+  Boolean bollingerOversold
   Float ma50 "nullable"
   Float ma200 "nullable"
   Boolean goldenCross
   Boolean deathCross
+  Float mf "nullable"
+  Float mfPrice "nullable"
+  Float mfi "nullable"
+  Boolean mfiOversold
+  Boolean mfiOverbought
+  Float rsi "nullable"
+  Boolean rsiOversold
+  Boolean rsiOverbought
   DateTime createdAt "nullable"
   DateTime updatedAt "nullable"
 }
@@ -78,6 +94,7 @@ erDiagram
 - `market`:
 - `vn30`:
 - `hnx30`:
+- `sector`:
 - `createdAt`:
 - `updatedAt`:
 
@@ -92,9 +109,24 @@ erDiagram
 - `low`:
 - `close`:
 - `volume`:
+- `change`:
+- `changePercentage`:
+- `bollingerUpperBand`:
+- `bollingerMiddleBand`:
+- `bollingerLowerBand`:
+- `bollingerOverbought`:
+- `bollingerOversold`:
 - `ma50`:
 - `ma200`:
 - `goldenCross`:
 - `deathCross`:
+- `mf`:
+- `mfPrice`:
+- `mfi`:
+- `mfiOversold`:
+- `mfiOverbought`:
+- `rsi`:
+- `rsiOversold`:
+- `rsiOverbought`:
 - `createdAt`:
 - `updatedAt`:

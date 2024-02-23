@@ -4,6 +4,7 @@ const main = async () => {
   const prismaClient = new PrismaClient();
   const stockSymbols = await prismaClient.stockSymbol.findMany({
     select: { symbol: true },
+    orderBy: { symbol: 'desc' },
   });
   const symbols: string[] = stockSymbols.map(({ symbol }) => symbol);
   for (const symbol of symbols) {

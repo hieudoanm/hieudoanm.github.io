@@ -24,6 +24,7 @@ Table StockSymbol {
   market Market [not null, default: 'HOSE']
   vn30 Boolean [not null, default: false]
   hnx30 Boolean [not null, default: false]
+  sector Sector
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
   history StockHistory [not null]
@@ -38,16 +39,50 @@ Table StockHistory {
   low Float [default: 0]
   close Float [default: 0]
   volume Float [default: 0]
-  ma50 Float
-  ma200 Float
+  change Float [default: 0]
+  changePercentage Float [default: 0]
+  bollingerUpperBand Float [default: 0]
+  bollingerMiddleBand Float [default: 0]
+  bollingerLowerBand Float [default: 0]
+  bollingerOverbought Boolean [not null, default: false]
+  bollingerOversold Boolean [not null, default: false]
+  ma50 Float [default: 0]
+  ma200 Float [default: 0]
   goldenCross Boolean [not null, default: false]
   deathCross Boolean [not null, default: false]
+  mf Float [default: 0]
+  mfPrice Float [default: 0]
+  mfi Float [default: 0]
+  mfiOversold Boolean [not null, default: false]
+  mfiOverbought Boolean [not null, default: false]
+  rsi Float [default: 0]
+  rsiOversold Boolean [not null, default: false]
+  rsiOverbought Boolean [not null, default: false]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime [default: `now()`]
 
   indexes {
     (symbol, date) [pk]
   }
+}
+
+Enum Sector {
+  BANKING
+  BASIC_RESOURCES
+  CHEMICAL
+  COMMUNICATIONS
+  ELECTRICITY_WATER_PETROL
+  FINANCIAL_SERVICES
+  FOOD_BEVERAGE
+  INDUSTRIAL_GOODS_SERVICES
+  INFORMATION_TECHNOLOGY
+  INSURANCE
+  MEDICAL
+  PETROLEUM
+  REAL_ESTATE
+  RETAIL
+  TELECOMMUNICATION
+  TRAVEL_ENTERTAINMENT
 }
 
 Enum Market {

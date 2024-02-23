@@ -1,47 +1,33 @@
-import { prismaClient } from '@vi/common/prisma/prisma.client';
+import { Market, Prisma, Sector } from '@prisma/client';
+import { BUILD_ENV } from '@vi/common/environments/environments';
+import { getPrismaClient } from '@vi/common/prisma/prisma.client';
+import { SymbolsTemplate } from '@vi/shared/templates/SymbolsTemplate';
 import { NextPage } from 'next';
 
-const HomePage: NextPage = async () => {
-  const stockSymbols = await prismaClient.stockSymbol.findMany();
-
-  return (
-    <main>
-      <div className="p-8">
-        <div className="container mx-auto">
-          <div className="card overflow-hidden border shadow">
-            <div className="overflow-auto">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th>Symbol</th>
-                    <th align="right">Market</th>
-                    <th align="right" className="w-8">
-                      VN30
-                    </th>
-                    <th align="right" className="w-8">
-                      HNX30
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {stockSymbols.map(({ symbol, market, vn30, hnx30 }) => {
-                    return (
-                      <tr key={symbol}>
-                        <td>{symbol}</td>
-                        <td align="right">{market}</td>
-                        <td>{vn30 ? 'VN30' : ''}</td>
-                        <td>{hnx30 ? 'HNX30' : ''}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  );
+export type HomePageProperties = {
+  searchParams: { market: string; sector: string };
 };
+
+const HomePage: NextPage<HomePageProperties> = async ({ searchParams }) => {
+  const market: string = searchParams.market ?? undefined;
+  const sector: string = searchParams.sector ?? undefined;
+
+  const prismaClient = getPrismaClient();
+  let where: Prisma.StockSymbolWhereInput = {};
+  if (market) {
+    if (market === 'VN30') where = { ...where, vn30: true };
+    else if (market === 'HNX30') where = { ...where, hnx30: true };
+    else where = { ...where, market: market as Market };
+  }
+  if (sector) where = { ...where, sector: sector as Sector };
+
+  const stockSymbols = await prismaClient.stockSymbol.findMany({ where });
+  await prismaClient.$disconnect();
+
+  return <SymbolsTemplate title="Symbols" stockSymbols={stockSymbols} />;
+};
+
+export const dynamic =
+  BUILD_ENV === 'static' ? 'force-static' : 'force-dynamic';
 
 export default HomePage;

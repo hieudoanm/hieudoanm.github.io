@@ -71,6 +71,27 @@
           "type": "boolean",
           "default": false
         },
+        "sector": {
+          "type": ["string", "null"],
+          "enum": [
+            "BANKING",
+            "BASIC_RESOURCES",
+            "CHEMICAL",
+            "COMMUNICATIONS",
+            "ELECTRICITY_WATER_PETROL",
+            "FINANCIAL_SERVICES",
+            "FOOD_BEVERAGE",
+            "INDUSTRIAL_GOODS_SERVICES",
+            "INFORMATION_TECHNOLOGY",
+            "INSURANCE",
+            "MEDICAL",
+            "PETROLEUM",
+            "REAL_ESTATE",
+            "RETAIL",
+            "TELECOMMUNICATION",
+            "TRAVEL_ENTERTAINMENT"
+          ]
+        },
         "createdAt": {
           "type": ["string", "null"],
           "format": "date-time"
@@ -124,17 +145,79 @@
           "type": ["number", "null"],
           "default": 0
         },
+        "change": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "changePercentage": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "bollingerUpperBand": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "bollingerMiddleBand": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "bollingerLowerBand": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "bollingerOverbought": {
+          "type": "boolean",
+          "default": false
+        },
+        "bollingerOversold": {
+          "type": "boolean",
+          "default": false
+        },
         "ma50": {
-          "type": ["number", "null"]
+          "type": ["number", "null"],
+          "default": 0
         },
         "ma200": {
-          "type": ["number", "null"]
+          "type": ["number", "null"],
+          "default": 0
         },
         "goldenCross": {
           "type": "boolean",
           "default": false
         },
         "deathCross": {
+          "type": "boolean",
+          "default": false
+        },
+        "mf": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "mfPrice": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "mfi": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "mfiOversold": {
+          "type": "boolean",
+          "default": false
+        },
+        "mfiOverbought": {
+          "type": "boolean",
+          "default": false
+        },
+        "rsi": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "rsiOversold": {
+          "type": "boolean",
+          "default": false
+        },
+        "rsiOverbought": {
           "type": "boolean",
           "default": false
         },
