@@ -12,6 +12,7 @@
 
 - `broca` - [Language Processing](https://broca.vercel.app/)
 - `chess` - [chess.com Insights](https://chessinsights.vercel.app/)
+- `vi` - [VI](https://iboard.ssi.com.vn/)
 
 ## Techstack
 

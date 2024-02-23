@@ -1,45 +1,43 @@
 {
-	"name": "hieudoanm.github.io",
-	"version": "0.0.1",
-	"description": "hieudoanm - GitHub Pages",
-	"main": "index.js",
-	"repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
-	"author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
-	"license": "GPL-3.0",
-	"private": true,
-	"engines": {
-		"npm": "10.4.0"
-	},
-	"scripts": {
-		"prettify": "yarn turbo prettify",
-		"format": "yarn turbo format",
-		"build": "yarn turbo build",
-		"check": "yarn turbo check",
-		"lint": "yarn turbo lint",
-		"test": "yarn turbo test",
-		"dev": "yarn turbo dev",
-		"prepare": "husky install || true"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.5.3",
-		"husky": "9.0.11",
-		"turbo": "1.12.4"
-	},
-	"resolutions": {
-		"**/graphql": "16.8.1",
-		"axios": "1.6.7",
-		"glob-parent": "6.0.2",
-		"graphql": "16.8.1",
-		"undici": "6.6.2",
-		"semver": "7.6.0"
-	},
-	"workspaces": [
-		"app/broca",
-		"app/chess",
-		"app/sunil",
-		"app/vi",
-		"backend/api",
-		"frontend/mobile",
-		"frontend/web"
-	]
+  "name": "hieudoanm.github.io",
+  "version": "0.0.1",
+  "description": "hieudoanm - GitHub Pages",
+  "main": "index.js",
+  "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "private": true,
+  "engines": {
+    "npm": "10.4.0"
+  },
+  "scripts": {
+    "prettify": "yarn turbo prettify",
+    "format": "yarn turbo format",
+    "build": "yarn turbo build",
+    "check": "yarn turbo check",
+    "lint": "yarn turbo lint",
+    "test": "yarn turbo test",
+    "dev": "yarn turbo dev",
+    "prepare": "husky install || true"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "husky": "9.0.11",
+    "turbo": "1.12.4"
+  },
+  "resolutions": {
+    "**/graphql": "16.8.1",
+    "axios": "1.6.7",
+    "glob-parent": "6.0.2",
+    "graphql": "16.8.1",
+    "undici": "6.6.2",
+    "semver": "7.6.0"
+  },
+  "workspaces": [
+    "app/broca",
+    "app/chess",
+    "app/sunil",
+    "app/vi",
+    "app/web"
+  ]
 }
