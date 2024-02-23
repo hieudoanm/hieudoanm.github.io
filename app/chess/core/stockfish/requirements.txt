@@ -2,7 +2,7 @@
 
 chess==1.10.0
 fastapi==0.109.2
-pandas==2.2.0
+pandas==2.2.1
 psutil==5.9.8
 pydantic==2.6.2
 requests==2.31.0
