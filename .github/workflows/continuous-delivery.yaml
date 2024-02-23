@@ -22,6 +22,8 @@ jobs:
             working-directory: app/chess
           - name: Front-end - App - Sunil
             working-directory: app/sunil
+          - name: Front-end - App - VI
+            working-directory: app/vi
           - name: Back-end - API
             working-directory: backend/api
           - name: Front-end - Web
@@ -34,7 +36,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.10.0'
+          node-version: "20.10.0"
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
         working-directory: ${{ matrix.services.working-directory }}
