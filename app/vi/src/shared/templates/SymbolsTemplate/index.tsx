@@ -1,6 +1,6 @@
 'use client';
 
-import { Market, StockSymbol, Sector } from '@prisma/client';
+import { Market, Sector, StockSymbol } from '@prisma/client';
 import { useSearchParameter } from '@vi/common/hooks/use-search-param';
 import Link from 'next/link';
 import { ChangeEvent } from 'react';

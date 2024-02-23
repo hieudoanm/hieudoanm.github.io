@@ -4,15 +4,15 @@ import { StockHistory } from '@prisma/client';
 import { useSearchParameter } from '@vi/common/hooks/use-search-param';
 import React, { ChangeEvent, ReactNode, useState } from 'react';
 import {
-  LineChart,
+  CartesianGrid,
+  Legend,
   Line,
+  LineChart,
+  ReferenceLine,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  ReferenceLine,
 } from 'recharts';
 import { Payload } from 'recharts/types/component/DefaultLegendContent';
 
@@ -56,12 +56,12 @@ export const PriceChart: React.FC<{ stockHistory: StockHistory[] }> = ({
     }
   );
   const values: number[] = [
-    ...priceData.map(({ close }) => close!),
-    ...priceData.map(({ ma50 }) => ma50!),
-    ...priceData.map(({ ma200 }) => ma200!),
-    ...priceData.map(({ bollingerUpperBand }) => bollingerUpperBand!),
-    ...priceData.map(({ bollingerMiddleBand }) => bollingerMiddleBand!),
-    ...priceData.map(({ bollingerLowerBand }) => bollingerLowerBand!),
+    ...priceData.map(({ close }) => close ?? 0),
+    ...priceData.map(({ ma50 }) => ma50 ?? 0),
+    ...priceData.map(({ ma200 }) => ma200 ?? 0),
+    ...priceData.map(({ bollingerUpperBand }) => bollingerUpperBand ?? 0),
+    ...priceData.map(({ bollingerMiddleBand }) => bollingerMiddleBand ?? 0),
+    ...priceData.map(({ bollingerLowerBand }) => bollingerLowerBand ?? 0),
   ];
   const min = Math.round(Math.min(...values));
   const max = Math.round(Math.max(...values));
