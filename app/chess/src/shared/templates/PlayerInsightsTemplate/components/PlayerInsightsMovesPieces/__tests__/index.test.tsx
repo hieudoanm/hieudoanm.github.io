@@ -1,0 +1,26 @@
+import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
+import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
+import { render } from '@testing-library/react';
+import { PlayerInsightsMovesPieces } from '..';
+
+jest.mock('next/navigation', () => ({
+  useRouter: jest.fn().mockReturnValue({
+    asPath: '',
+    events: { on: jest.fn(), off: jest.fn() },
+  }),
+  usePathname: jest.fn().mockReturnValue(''),
+  useSearchParams: jest.fn().mockReturnValue(new URLSearchParams()),
+}));
+
+describe('PlayerInsightsMovesPieces', () => {
+  beforeEach(() => {
+    mockResizeObserver();
+  });
+
+  it('to match snapshot', () => {
+    const { container } = render(
+      <PlayerInsightsMovesPieces insights={{} as Insights} />
+    );
+    expect(container).toMatchSnapshot();
+  });
+});

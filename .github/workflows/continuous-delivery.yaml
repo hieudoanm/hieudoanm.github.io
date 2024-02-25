@@ -1,0 +1,57 @@
+name: Continuous Delivery
+
+on:
+  push:
+    paths:
+      - package.json
+      - app/**
+      - backend/**
+      - app/**
+    branches:
+      - master
+
+jobs:
+  continuous-delivery:
+    strategy:
+      fail-fast: false
+      matrix:
+        services:
+          - name: App - Broca
+            working-directory: app/broca
+          - name: App - Chess
+            working-directory: app/chess
+          - name: App - Sunil
+            working-directory: app/sunil
+          - name: App - VI
+            working-directory: app/vi
+          - name: App - Web
+            working-directory: app/web
+    name: Continuous Delivery
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.10.0"
+      - name: Install Dependencies
+        run: yarn install --network-timeout 86400000
+        working-directory: ${{ matrix.services.working-directory }}
+      - name: Linting
+        run: yarn lint --fix
+        working-directory: ${{ matrix.services.working-directory }}
+      - name: Build Production
+        run: yarn build
+        working-directory: ${{ matrix.services.working-directory }}
+        env:
+          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
+          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
+      - name: Unit Tests
+        run: yarn test -u
+        working-directory: ${{ matrix.services.working-directory }}
+        env:
+          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
+          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}

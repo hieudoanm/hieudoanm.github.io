@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  broca:
+    build: .
+    container_name: 'broca'
+    ports:
+      - '8000:8000'
+    environment:
+      DEVELOPMENT: false
+      LOG_LEVEL: 'info'
+      DOCKER: true
+      PORT: '8000'

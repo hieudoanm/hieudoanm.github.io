@@ -1,0 +1,203 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  schemas   = ["broca"]
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+  binaryTargets   = ["native", "debian-openssl-1.1.x"]
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+}
+
+model Language {
+  cca2     String  @default("") @db.VarChar(2)
+  cca3     String  @id @default("") @db.VarChar(3)
+  name     String  @default("") @db.VarChar(255)
+  category Int     @default(0) @db.SmallInt
+  duolingo Boolean @default(false) @db.Boolean
+
+  createdAt DateTime @default(now()) @db.Timestamptz
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz
+
+  @@schema("broca")
+}
+
+model Word {
+  word          String @id @db.VarChar(255)
+  results       Json[] @default([])
+  syllables     Json?  @default("{}")
+  pronunciation Json?  @default("{}")
+  frequency     Float? @default(0)
+
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("broca")
+}
+
+model Quote {
+  id         String   @id
+  author     String   @default("")
+  authorSlug String   @default("")
+  content    String   @default("")
+  tags       String[] @default([])
+
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("broca")
+}
+
+model TarotCard {
+  suit           TarotCardSuit?
+  type           TarotCardType  @default(MAJOR)
+  id             String         @id @default("")
+  name           String         @default("") @db.VarChar(255)
+  value          String         @default("") @db.VarChar(255)
+  valueInt       Int            @default(0)
+  meaningUp      String         @default("") @db.Text()
+  meaningReverse String         @default("") @db.Text()
+  description    String         @default("") @db.Text()
+
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("broca")
+}
+
+enum TarotCardType {
+  MAJOR
+  MINOR
+
+  @@schema("broca")
+}
+
+enum TarotCardSuit {
+  CUPS
+  PENTACLES
+  SWORDS
+  WANDS
+
+  @@schema("broca")
+}
+
+model NewsSource {
+  id          String             @id
+  name        String             @default("") @db.VarChar(255)
+  description String             @default("")
+  url         String             @default("") @db.VarChar(255)
+  category    NewsSourceCategory @default(GENERAL)
+  language    NewsSourceLanguage @default(EN)
+  country     NewsSourceCountry  @default(US)
+
+  @@schema("broca")
+}
+
+enum NewsSourceCategory {
+  BUSINESS
+  ENTERTAINMENT
+  GENERAL
+  HEALTH
+  SCIENCE
+  SPORTS
+  TECHNOLOGY
+
+  @@schema("broca")
+}
+
+enum NewsSourceLanguage {
+  AR
+  DE
+  EN
+  ES
+  FR
+  HE
+  IT
+  NL
+  NO
+  PT
+  RU
+  SV
+  UD
+  ZH
+
+  @@schema("broca")
+}
+
+enum NewsSourceCountry {
+  AE
+  AR
+  AT
+  AU
+  BE
+  BG
+  BR
+  CA
+  CH
+  CN
+  CO
+  CU
+  CZ
+  DE
+  EG
+  ES
+  FR
+  GB
+  GR
+  HK
+  HU
+  ID
+  IE
+  IL
+  IN
+  IS
+  IT
+  JP
+  KR
+  LT
+  LV
+  MA
+  MX
+  MY
+  NG
+  NL
+  NO
+  NZ
+  PH
+  PK
+  PL
+  PT
+  RO
+  RS
+  RU
+  SA
+  SE
+  SG
+  SI
+  SK
+  TH
+  TR
+  TW
+  UA
+  US
+  VE
+  ZA
+  ZH
+
+  @@schema("broca")
+}

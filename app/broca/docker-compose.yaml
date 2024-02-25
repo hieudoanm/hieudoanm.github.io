@@ -1,0 +1,33 @@
+version: '3.9'
+
+volumes:
+  broca_postgresql:
+    driver: local
+  broca_redis:
+    driver: local
+
+services:
+  broca-postgresql:
+    restart: unless-stopped
+    image: postgres:16.2
+    container_name: broca-postgresql
+    volumes:
+      - broca_postgresql:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+
+  broca-redis:
+    restart: unless-stopped
+    image: redis:7.2.4
+    container_name: broca-redis
+    volumes:
+      - broca_redis:/data
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_USER=default
+      - REDIS_PASS=password
