@@ -36,7 +36,7 @@
     "pino": "8.19.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.73.4",
+    "react-native": "0.73.5",
     "react-native-web": "0.19.10"
   },
   "devDependencies": {
