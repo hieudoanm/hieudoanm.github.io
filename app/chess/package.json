@@ -33,7 +33,7 @@
     "@apollo/datasource-rest": "6.2.2",
     "@apollo/server": "4.10.0",
     "@as-integrations/next": "3.0.0",
-    "@emotion/react": "11.11.3",
+    "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.0",
     "@graphql-tools/merge": "9.0.3",
     "@graphql-tools/schema": "10.0.3",
