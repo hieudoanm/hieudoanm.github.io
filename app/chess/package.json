@@ -29,7 +29,7 @@
     "prisma:migrate": "make prisma-migrate"
   },
   "dependencies": {
-    "@apollo/client": "3.9.5",
+    "@apollo/client": "3.9.6",
     "@apollo/datasource-rest": "6.2.2",
     "@apollo/server": "4.10.1",
     "@as-integrations/next": "3.0.0",
