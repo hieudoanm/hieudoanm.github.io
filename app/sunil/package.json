@@ -45,7 +45,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "5.0.1",
-    "react-native": "0.73.5",
+    "react-native": "0.73.6",
     "react-native-web": "0.19.10",
     "sharp": "0.33.2",
     "yaml": "2.4.1"
