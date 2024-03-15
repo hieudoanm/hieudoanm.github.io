@@ -27,7 +27,7 @@
   },
   "resolutions": {
     "**/graphql": "16.8.1",
-    "axios": "1.6.7",
+    "axios": "1.6.8",
     "glob-parent": "6.0.2",
     "graphql": "16.8.1",
     "undici": "6.9.0",
