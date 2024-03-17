@@ -28,7 +28,7 @@
     "prisma:push": "prisma format && prisma generate && prisma db push"
   },
   "dependencies": {
-    "axios": "1.6.7",
+    "axios": "1.6.8",
     "expo": "50.0.13",
     "expo-status-bar": "1.11.1",
     "next": "14.1.3",
