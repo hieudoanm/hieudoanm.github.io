@@ -23,19 +23,19 @@ jobs:
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
         working-directory: app/chess
-      - name: Set Up Prisma
-        run: yarn prisma format && yarn prisma generate
-        working-directory: app/chess
-        env:
-          USERNAME: ${{ matrix.players.username }}
-          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
-          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
-          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
-      - name: Sync Games
-        run: make import-games-api
-        working-directory: app/chess
-        env:
-          USERNAME: ${{ matrix.players.username }}
-          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
-          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
-          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
+      # - name: Set Up Prisma
+      #   run: yarn prisma format && yarn prisma generate
+      #   working-directory: app/chess
+      #   env:
+      #     USERNAME: ${{ matrix.players.username }}
+      #     POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
+      #     POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+      #     POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
+      # - name: Sync Games
+      #   run: make import-games-api
+      #   working-directory: app/chess
+      #   env:
+      #     USERNAME: ${{ matrix.players.username }}
+      #     POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
+      #     POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+      #     POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
