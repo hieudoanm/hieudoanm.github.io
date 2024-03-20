@@ -7,4 +7,4 @@ psutil==5.9.8
 pydantic==2.6.4
 requests==2.31.0
 stockfish==3.28.0
-uvicorn==0.28.1
+uvicorn==0.29.0
