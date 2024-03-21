@@ -30,7 +30,7 @@
     "axios": "1.6.8",
     "glob-parent": "6.0.2",
     "graphql": "16.8.1",
-    "undici": "6.9.0",
+    "undici": "6.10.1",
     "semver": "7.6.0"
   },
   "workspaces": [
