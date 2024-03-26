@@ -33,7 +33,7 @@
     "@expo/next-adapter": "6.0.0",
     "@graphql-tools/merge": "9.0.3",
     "@graphql-tools/schema": "10.0.3",
-    "daisyui": "4.8.0",
+    "daisyui": "4.9.0",
     "expo": "50.0.14",
     "expo-router": "3.4.8",
     "expo-status-bar": "1.11.1",
