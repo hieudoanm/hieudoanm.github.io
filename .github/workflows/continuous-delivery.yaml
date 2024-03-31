@@ -16,8 +16,6 @@ jobs:
       fail-fast: false
       matrix:
         services:
-          - name: App - Chess
-            working-directory: app/chess
           - name: App - VI
             working-directory: app/vi
           - name: App - Web

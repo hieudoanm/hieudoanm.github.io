@@ -1,6 +1,0 @@
-type Country {
-  cca2: String
-  cca3: String
-  name: String
-  flag: String
-}

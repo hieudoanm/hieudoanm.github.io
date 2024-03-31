@@ -1,6 +1,0 @@
-type Opening {
-  eco: String
-  name: String
-  fen: String
-  pgn: String
-}
