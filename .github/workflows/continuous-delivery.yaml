@@ -2,22 +2,11 @@ name: Continuous Delivery
 
 on:
   push:
-    paths:
-      - package.json
-      - app/**
-      - backend/**
-      - app/**
     branches:
       - master
 
 jobs:
   continuous-delivery:
-    strategy:
-      fail-fast: false
-      matrix:
-        services:
-          - name: App - Web
-            working-directory: app/web
     name: Continuous Delivery
     runs-on: ubuntu-latest
     steps:

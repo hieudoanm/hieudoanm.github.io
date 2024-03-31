@@ -2,11 +2,6 @@ name: Continuous Integration
 
 on:
   push:
-    paths:
-      - package.json
-      - app/**
-      - backend/**
-      - frontend/**
     branches:
       - develop
       - hotfix/**
@@ -16,12 +11,6 @@ on:
 
 jobs:
   continuous-integration:
-    strategy:
-      fail-fast: false
-      matrix:
-        services:
-          - name: App - Web
-            working-directory: app/web
     name: Continuous Integration
     runs-on: ubuntu-latest
     steps:
