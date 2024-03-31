@@ -16,8 +16,6 @@ jobs:
       fail-fast: false
       matrix:
         services:
-          - name: App - Broca
-            working-directory: app/broca
           - name: App - Chess
             working-directory: app/chess
           - name: App - VI
