@@ -16,8 +16,6 @@ jobs:
       fail-fast: false
       matrix:
         services:
-          - name: App - VI
-            working-directory: app/vi
           - name: App - Web
             working-directory: app/web
     name: Continuous Delivery
