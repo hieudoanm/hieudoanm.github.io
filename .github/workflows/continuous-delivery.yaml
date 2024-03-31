@@ -20,8 +20,6 @@ jobs:
             working-directory: app/broca
           - name: App - Chess
             working-directory: app/chess
-          - name: App - Sunil
-            working-directory: app/sunil
           - name: App - VI
             working-directory: app/vi
           - name: App - Web
