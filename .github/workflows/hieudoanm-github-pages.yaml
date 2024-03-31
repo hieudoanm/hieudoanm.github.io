@@ -2,8 +2,6 @@ name: GitHub Pages
 
 on:
   push:
-    paths:
-      - app/web/**
     branches:
       - master
 
@@ -20,23 +18,19 @@ jobs:
           node-version: '20.10.0'
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
-        working-directory: app/web
       - name: Linting
         run: yarn lint --fix
-        working-directory: app/web
       - name: Unit Tests
         run: yarn test -u
-        working-directory: app/web
       - name: Build Production
         run: yarn build
-        working-directory: app/web
       - name: Disable Jekyll
         run: touch .nojekyll
-        working-directory: app/web/out
+        working-directory: out
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           token: ${{ secrets.GHP_TOKEN }}
           branch: gh-pages
-          folder: app/web/out
+          folder: out
           clean: true
