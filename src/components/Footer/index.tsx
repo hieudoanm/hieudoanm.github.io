@@ -1,5 +1,5 @@
 import Container from '@hieudoanm/components/Container';
-import React from 'react';
+import type React from 'react';
 
 const Footer: React.FC = () => {
   const year: number = new Date().getFullYear();

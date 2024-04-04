@@ -1,9 +1,9 @@
 import { Box, Button, Icon } from '@chakra-ui/react';
 import metadata from '@hieudoanm/common/configs/metadata';
-import { NextPage } from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { IconType } from 'react-icons';
+import type { IconType } from 'react-icons';
 import {
   FaComment,
   FaEnvelope,

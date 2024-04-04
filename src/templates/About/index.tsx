@@ -1,28 +1,32 @@
-import Blogs, { BlogsSectionProperties } from '@hieudoanm/components/Blogs';
+import Blogs, {
+  type BlogsSectionProperties,
+} from '@hieudoanm/components/Blogs';
 import CallToAction, {
-  CallToActionSectionProperties,
+  type CallToActionSectionProperties,
 } from '@hieudoanm/components/CTA';
 import Experiences, {
-  ExperiencesSectionProperties,
+  type ExperiencesSectionProperties,
 } from '@hieudoanm/components/Experiences';
 import Features, {
-  FeaturesSectionProperties,
+  type FeaturesSectionProperties,
 } from '@hieudoanm/components/Features';
 import Footer from '@hieudoanm/components/Footer';
-import Hero, { HeroSectionProperties } from '@hieudoanm/components/Hero';
+import Hero, { type HeroSectionProperties } from '@hieudoanm/components/Hero';
 import LogosCloudSection, {
-  LogosCloudSectionProperties,
+  type LogosCloudSectionProperties,
 } from '@hieudoanm/components/LogoClouds';
-import Navbar, { Section } from '@hieudoanm/components/Navbar';
+import Navbar, { type Section } from '@hieudoanm/components/Navbar';
 import Newsletter, {
-  NewsletterSectionProperties,
+  type NewsletterSectionProperties,
 } from '@hieudoanm/components/Newsletter';
-import Stats, { StatsSectionProperties } from '@hieudoanm/components/Stats';
-import Team, { TeamSectionProperties } from '@hieudoanm/components/Team';
+import Stats, {
+  type StatsSectionProperties,
+} from '@hieudoanm/components/Stats';
+import Team, { type TeamSectionProperties } from '@hieudoanm/components/Team';
 import Testimonials, {
-  TestimonialsSectionProperties,
+  type TestimonialsSectionProperties,
 } from '@hieudoanm/components/Testimonials';
-import React from 'react';
+import type React from 'react';
 
 export type AboutTemplateProperties = {
   sections: Section[];

@@ -2,7 +2,8 @@ import { Button, Input, Textarea } from '@chakra-ui/react';
 import Container from '@hieudoanm/components/Container';
 import GoogleMaps from '@hieudoanm/components/GoogleMaps';
 import Header from '@hieudoanm/components/Header';
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 
 const sendMessage = (event: React.FormEvent) => {
   event.preventDefault();

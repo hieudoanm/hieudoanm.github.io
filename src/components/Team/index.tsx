@@ -1,7 +1,7 @@
 import Container from '@hieudoanm/components/Container';
 import Header from '@hieudoanm/components/Header';
 import Image from 'next/image';
-import React from 'react';
+import type React from 'react';
 import { FaGlobe } from 'react-icons/fa';
 
 export type Person = {

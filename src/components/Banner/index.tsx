@@ -1,5 +1,5 @@
 import Container from '@hieudoanm/components/Container';
-import React from 'react';
+import type React from 'react';
 
 export type BannerProperties = {
   children: React.ReactNode;

@@ -1,7 +1,8 @@
 import useWindowSize from '@hieudoanm/common/hooks/use-window-size';
 import Hexagon from '@hieudoanm/components/Hexagon';
 import Head from 'next/head';
-import React, { useCallback, useEffect, useState } from 'react';
+import type React from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const themes = ['theme-0'];
 

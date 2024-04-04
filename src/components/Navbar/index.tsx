@@ -4,7 +4,7 @@ import Banner from '@hieudoanm/components/Banner';
 import Container from '@hieudoanm/components/Container';
 import scrollTo from '@hieudoanm/utils/scroll-to';
 import Link from 'next/link';
-import React from 'react';
+import type React from 'react';
 import {
   FaBlog,
   FaBullhorn,

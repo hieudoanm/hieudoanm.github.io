@@ -1,6 +1,6 @@
 import Container from '@hieudoanm/components/Container';
 import Header from '@hieudoanm/components/Header';
-import React from 'react';
+import type React from 'react';
 
 export type Testimonial = {
   quote: string;

@@ -1,11 +1,11 @@
 import Blog from '@hieudoanm/components/Blog';
-import { BlogType } from '@hieudoanm/components/Blogs';
+import type { BlogType } from '@hieudoanm/components/Blogs';
 import Container from '@hieudoanm/components/Container';
 import Footer from '@hieudoanm/components/Footer';
 import Header from '@hieudoanm/components/Header';
-import Hero, { HeroSectionProperties } from '@hieudoanm/components/Hero';
+import Hero, { type HeroSectionProperties } from '@hieudoanm/components/Hero';
 import Navbar from '@hieudoanm/components/Navbar';
-import React from 'react';
+import type React from 'react';
 
 export type BlogsTemplateProperties = {
   hero: HeroSectionProperties;

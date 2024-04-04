@@ -1,8 +1,8 @@
 import metadata from '@hieudoanm/common/configs/metadata';
 import { APP_NAME } from '@hieudoanm/common/constants/time.constants';
-import { Section } from '@hieudoanm/components/Navbar';
+import type { Section } from '@hieudoanm/components/Navbar';
 import ContactTemplate from '@hieudoanm/templates/Contact';
-import { NextPage } from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
 
 const sections: Section[] = [{ id: 'pricing' }, { id: 'contact' }];

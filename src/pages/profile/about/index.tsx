@@ -1,7 +1,7 @@
 import metadata from '@hieudoanm/common/configs/metadata';
-import { Section } from '@hieudoanm/components/Navbar';
+import type { Section } from '@hieudoanm/components/Navbar';
 import AboutTemplate from '@hieudoanm/templates/About';
-import { NextPage } from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
 
 const sections: Section[] = [

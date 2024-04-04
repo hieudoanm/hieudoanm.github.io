@@ -1,6 +1,7 @@
 import { Button, Input } from '@chakra-ui/react';
 import Container from '@hieudoanm/components/Container';
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 
 export type NewsletterSectionProperties = {
   id: string;

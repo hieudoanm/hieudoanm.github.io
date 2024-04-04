@@ -1,5 +1,5 @@
 import Header from '@hieudoanm/components/Header';
-import React from 'react';
+import type React from 'react';
 
 export type HeroSectionProperties = {
   id: string;

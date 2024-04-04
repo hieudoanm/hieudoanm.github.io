@@ -1,13 +1,13 @@
 import Contact, {
-  ContactSectionProperties,
+  type ContactSectionProperties,
 } from '@hieudoanm/components/Contact';
 import Footer from '@hieudoanm/components/Footer';
-import Hero, { HeroSectionProperties } from '@hieudoanm/components/Hero';
-import Menu, { Section } from '@hieudoanm/components/Navbar';
+import Hero, { type HeroSectionProperties } from '@hieudoanm/components/Hero';
+import Menu, { type Section } from '@hieudoanm/components/Navbar';
 import Pricing, {
-  PricingSectionProperties,
+  type PricingSectionProperties,
 } from '@hieudoanm/components/Pricing';
-import React from 'react';
+import type React from 'react';
 
 export type ContactTemplateProperties = {
   sections: Section[];

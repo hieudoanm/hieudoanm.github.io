@@ -1,7 +1,8 @@
 import { Button } from '@chakra-ui/react';
 import Container from '@hieudoanm/components/Container';
 import Header from '@hieudoanm/components/Header';
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 import { FaCheck, FaPaypal, FaWallet } from 'react-icons/fa';
 
 export type Payment = {
