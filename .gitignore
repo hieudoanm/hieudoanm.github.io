@@ -1,8 +1,8 @@
 .cache
-coverage
-node_modules
-
 .env
+
+# node.js
+node_modules
 yarn-error.log
 
 # turbo
@@ -13,3 +13,15 @@ yarn-error.log
 
 # expo
 .expo
+
+# turbo
+.turbo
+
+# build
+out
+
+# next.js
+.next
+
+# jest.js
+coverage
