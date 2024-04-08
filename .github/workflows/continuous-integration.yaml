@@ -10,8 +10,8 @@ on:
       - dependabot/**
 
 jobs:
-  continuous-integration:
-    name: Continuous Integration
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,24 +19,38 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.10.0'
+          node-version: '20.11.0'
       - name: Install Dependencies
-        run: yarn install --network-timeout 86400000
-        working-directory: ${{ matrix.services.working-directory }}
+        run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Linting
         run: yarn lint --fix
-        working-directory: ${{ matrix.services.working-directory }}
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.0'
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Build Production
         run: yarn build
-        working-directory: ${{ matrix.services.working-directory }}
-        env:
-          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
-          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
-          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
-      - name: Unit Tests
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.0'
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --network-timeout 86400000
+      - name: Unit Test
         run: yarn test -u
-        working-directory: ${{ matrix.services.working-directory }}
-        env:
-          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
-          POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
-          POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
