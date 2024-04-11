@@ -25,3 +25,7 @@ out
 
 # jest.js
 coverage
+
+# service workers
+**/sw.js
+**/workbox-*.js
