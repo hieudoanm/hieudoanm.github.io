@@ -70,6 +70,7 @@
     "typescript": "5.4.5"
   },
   "resolutions": {
+    "serialize-javascript": "6.0.2",
     "string-width": "4.2.3",
     "wrap-ansi": "7.0.0"
   }
