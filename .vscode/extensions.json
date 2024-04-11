@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "dbaeumer.vscode-eslint",
+    "prisma.prisma",
+    "redhat.vscode-yaml"
+  ]
+}

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatsSection render default 1`] = `
+<div>
+  <div
+    class="pb-16"
+    id="id"
+  >
+    <div
+      class="container mx-auto px-8 "
+    >
+      <div
+        class="text-center py-16 "
+      >
+        <h2
+          class="text-4xl uppercase  mb-8"
+        >
+          <b>
+            title
+          </b>
+        </h2>
+        <p>
+          subtitle
+        </p>
+      </div>
+      <div
+        class="rounded-lg border shadow-2xl"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-4"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:github/recommended",
+    "plugin:jest/recommended",
+    "plugin:react/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "plugins": ["github", "jest", "react", "sonarjs"],
+  "rules": {
+    "i18n-text/no-en": "off",
+    "filenames/match-regex": "off",
+    "react/react-in-jsx-scope": "off"
+  }
+}

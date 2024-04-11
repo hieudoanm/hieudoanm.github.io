@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallToActionSection render default 1`] = `
+<div>
+  <div
+    class="py-16"
+  >
+    <div
+      class="bg-cover bg-center"
+      id="id"
+      style="background-image: url();"
+    >
+      <div
+        class="bg-gray-900/80 pb-16"
+      >
+        <div
+          class="container mx-auto px-8 "
+        >
+          <div
+            class="text-center py-16 text-white"
+          >
+            <h2
+              class="text-4xl uppercase  mb-8"
+            >
+              <b>
+                title
+              </b>
+            </h2>
+            <p>
+              subtitle
+            </p>
+          </div>
+          <a
+            href="mailto:hieumdoan@gmail.com"
+          >
+            <button
+              class="chakra-button mx-auto block bg-white uppercase text-gray-900 css-4xx2wk"
+              type="button"
+            >
+              CTA
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
