@@ -16,13 +16,13 @@ export const Blog: React.FC<BlogProperties> = ({
 }) => {
   return (
     <Link href={url}>
-      <div className="overflow-hidden rounded border shadow">
-        <div className="p-4">
-          <h2 className="mb-2">
+      <div className='overflow-hidden rounded border shadow'>
+        <div className='p-4'>
+          <h2 className='mb-2'>
             <b>{title}</b>
           </h2>
-          <p className="mb-2 text-justify">{description}</p>
-          <p className="text-gray-500">{date}</p>
+          <p className='mb-2 text-justify'>{description}</p>
+          <p className='text-gray-500'>{date}</p>
         </div>
       </div>
     </Link>

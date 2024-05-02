@@ -5,7 +5,7 @@ import { TeamSection } from '../index';
 describe('TeamSection', () => {
   test('render default', () => {
     const wrapper = render(
-      <TeamSection id="id" title="title" subtitle="subtitle" team={[]} />
+      <TeamSection id='id' title='title' subtitle='subtitle' team={[]} />
     );
     expect(wrapper.container).toMatchSnapshot();
   });

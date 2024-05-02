@@ -29,3 +29,6 @@ coverage
 # service workers
 **/sw.js
 **/workbox-*.js
+
+# swc
+.swc

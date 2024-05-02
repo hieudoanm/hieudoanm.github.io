@@ -3,97 +3,322 @@
 exports[`SocialPage render default 1`] = `
 <div>
   <div
-    class="h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"
-    style="background-image: url(/images/jpg/background/hero.jpg);"
+    data-theme="luxury"
   >
     <div
-      class="h-screen overflow-auto bg-black/75"
+      class="h-screen w-screen overflow-auto bg-white p-8 lg:p-16"
     >
       <div
-        class="container mx-auto h-full py-16"
+        class="grid grid-cols-1 gap-8 lg:grid-cols-3"
       >
         <div
-          class="flex h-full items-center justify-center"
+          class="col-span-1"
         >
           <div
-            class="mx-auto max-w-fit"
+            class="flex flex-col items-center justify-center gap-y-8"
           >
             <div
-              class="flex flex-col items-center justify-center gap-y-8"
+              class="mx-auto flex w-[25%] flex-col lg:w-[50%]"
             >
               <div
-                class="w-full"
+                class="aspect-square w-full overflow-hidden rounded-full border border-secondary p-1"
               >
                 <div
-                  class="relative w-full rounded-full bg-white"
-                  style="padding-bottom: 100%;"
+                  class="h-full w-full rounded-full bg-cover bg-center"
+                  style="background-image: url(/img.jpg);"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-y-4 text-center"
+            >
+              <a
+                class="text-2xl font-bold uppercase"
+                href="/about"
+              >
+                Hieu Doan
+              </a>
+              <p>
+                📍 Vietnam
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-span-1 lg:col-span-2"
+        >
+          <div
+            class="grid grid-cols-1 gap-8 lg:grid-cols-2"
+          >
+            <div
+              class="col-span-1"
+            >
+              <a
+                href="https://chessinsights.vercel.app"
+                target="_blank"
+              >
+                <div
+                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
                 >
                   <div
-                    class="absolute left-0 top-0 h-full w-full"
+                    class="flex flex-col gap-y-2 p-4"
                   >
                     <div
-                      class="flex h-full w-full items-center justify-center"
+                      class="flex items-center justify-between"
                     >
-                      <svg
-                        class="text-8xl text-black"
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 448 512"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="flex items-center gap-x-2"
                       >
-                        <path
-                          d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
-                        />
-                      </svg>
+                        <div
+                          class="flex h-6 w-6 items-center justify-center rounded-full bg-white"
+                        >
+                          ♟️
+                        </div>
+                        <h2
+                          class="text-lg font-bold"
+                        >
+                          chess.com Insights
+                        </h2>
+                      </div>
+                      <div
+                        class="badge badge-primary capitalize"
+                      >
+                        free
+                      </div>
                     </div>
+                    <p
+                      class="truncate text-sm"
+                    >
+                      Chess.com Insights: analytics, trends, and personalized data for chess improvement.
+                    </p>
                   </div>
                 </div>
-              </div>
-              <div>
-                <h1
-                  class="text-4xl uppercase text-white"
-                >
-                  HIEU DOAN
-                </h1>
-              </div>
-              <div
-                class="w-full"
+              </a>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <a
+                href="https://hieudoanm.github.io/app-colours"
+                target="_blank"
               >
-                <a
-                  href="/about"
+                <div
+                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
                 >
                   <div
-                    class="flex items-center gap-x-4"
+                    class="flex flex-col gap-y-2 p-4"
                   >
                     <div
-                      class="flex aspect-square items-center rounded-lg bg-white p-3"
+                      class="flex items-center justify-between"
                     >
-                      <svg
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 448 512"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="flex items-center gap-x-2"
                       >
-                        <path
-                          d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
-                        />
-                      </svg>
+                        <div
+                          class="flex h-6 w-6 items-center justify-center rounded-full bg-white"
+                        >
+                          🎨
+                        </div>
+                        <h2
+                          class="text-lg font-bold"
+                        >
+                          Colours
+                        </h2>
+                      </div>
+                      <div
+                        class="badge badge-primary capitalize"
+                      >
+                        free
+                      </div>
                     </div>
-                    <button
-                      class="btn btn-primary w-full"
-                      type="button"
+                    <p
+                      class="truncate text-sm"
                     >
-                      About
-                    </button>
+                      Colours Tools - HEX to RGB and Colours Picker
+                    </p>
                   </div>
-                </a>
-              </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <a
+                href="https://hieudoanm.github.io/app-csv"
+                target="_blank"
+              >
+                <div
+                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                >
+                  <div
+                    class="flex flex-col gap-y-2 p-4"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                    >
+                      <div
+                        class="flex items-center gap-x-2"
+                      >
+                        <div
+                          class="flex h-6 w-6 items-center justify-center rounded-full bg-white"
+                        >
+                          📒
+                        </div>
+                        <h2
+                          class="text-lg font-bold"
+                        >
+                          CSV
+                        </h2>
+                      </div>
+                      <div
+                        class="badge badge-primary capitalize"
+                      >
+                        free
+                      </div>
+                    </div>
+                    <p
+                      class="truncate text-sm"
+                    >
+                      Tool for creating, editing, and managing CSV (comma-separated values) files.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <a
+                href="https://hieudoanm.github.io/geerthofstede.com/"
+                target="_blank"
+              >
+                <div
+                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                >
+                  <div
+                    class="flex flex-col gap-y-2 p-4"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                    >
+                      <div
+                        class="flex items-center gap-x-2"
+                      >
+                        <div
+                          class="flex h-6 w-6 items-center justify-center rounded-full bg-white"
+                        >
+                          🤌
+                        </div>
+                        <h2
+                          class="text-lg font-bold"
+                        >
+                          Geert Hofstede
+                        </h2>
+                      </div>
+                      <div
+                        class="badge badge-primary capitalize"
+                      >
+                        free
+                      </div>
+                    </div>
+                    <p
+                      class="truncate text-sm"
+                    >
+                      Cultural dimensions researcher, known for cross-cultural studies.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <a
+                href="https://instagramdownload.vercel.app/"
+                target="_blank"
+              >
+                <div
+                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                >
+                  <div
+                    class="flex flex-col gap-y-2 p-4"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                    >
+                      <div
+                        class="flex items-center gap-x-2"
+                      >
+                        <div
+                          class="flex h-6 w-6 items-center justify-center rounded-full bg-white"
+                        >
+                          📷
+                        </div>
+                        <h2
+                          class="text-lg font-bold"
+                        >
+                          InstaX
+                        </h2>
+                      </div>
+                      <div
+                        class="badge badge-primary capitalize"
+                      >
+                        free
+                      </div>
+                    </div>
+                    <p
+                      class="truncate text-sm"
+                    >
+                      Instagram Extensions: Download posts, stories and reels
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <a
+                href="https://hieudoanm.github.io/app-pomodoro"
+                target="_blank"
+              >
+                <div
+                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                >
+                  <div
+                    class="flex flex-col gap-y-2 p-4"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                    >
+                      <div
+                        class="flex items-center gap-x-2"
+                      >
+                        <div
+                          class="flex h-6 w-6 items-center justify-center rounded-full bg-white"
+                        >
+                          ⏱️
+                        </div>
+                        <h2
+                          class="text-lg font-bold"
+                        >
+                          Pomodoro
+                        </h2>
+                      </div>
+                      <div
+                        class="badge badge-primary capitalize"
+                      >
+                        free
+                      </div>
+                    </div>
+                    <p
+                      class="truncate text-sm"
+                    >
+                      Time management technique: work for 25 mins, break, repeat.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>

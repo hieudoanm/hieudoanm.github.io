@@ -6,8 +6,8 @@ describe('BlogsTemplate', () => {
     const { container } = render(
       <BlogsTemplate
         hero={{ id: '', title: '', subtitle: '', backgroundImage: '' }}
-        title=""
-        subtitle=""
+        title=''
+        subtitle=''
         blogs={[]}
       />
     );

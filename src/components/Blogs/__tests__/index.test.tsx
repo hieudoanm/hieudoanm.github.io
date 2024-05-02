@@ -6,9 +6,9 @@ describe('Blogs', () => {
   test('render default', () => {
     const wrapper = render(
       <BlogsSection
-        id="id"
-        title="title"
-        subtitle="subtitle"
+        id='id'
+        title='title'
+        subtitle='subtitle'
         blogs={[
           {
             id: 'id',
@@ -26,9 +26,9 @@ describe('Blogs', () => {
   test('render without urlToImage', () => {
     const wrapper = render(
       <BlogsSection
-        id="id"
-        title="title"
-        subtitle="subtitle"
+        id='id'
+        title='title'
+        subtitle='subtitle'
         blogs={[
           {
             id: 'id',
@@ -45,7 +45,7 @@ describe('Blogs', () => {
 
   test('render without blogs', () => {
     const wrapper = render(
-      <BlogsSection id="id" title="title" subtitle="subtitle" />
+      <BlogsSection id='id' title='title' subtitle='subtitle' />
     );
     expect(wrapper.container).toMatchSnapshot();
   });
@@ -53,9 +53,9 @@ describe('Blogs', () => {
   test('render without backgroundImage', () => {
     const wrapper = render(
       <BlogsSection
-        id="id"
-        title="title"
-        subtitle="subtitle"
+        id='id'
+        title='title'
+        subtitle='subtitle'
         blogs={[
           {
             id: 'id',

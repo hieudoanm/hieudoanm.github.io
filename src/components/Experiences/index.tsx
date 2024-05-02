@@ -32,7 +32,7 @@ export const ExperiencesSection: React.FC<ExperiencesSectionProperties> = ({
   experiences,
 }) => {
   return (
-    <div id={id} className="pb-16">
+    <div id={id} className='pb-16'>
       <Container>
         <Header subtitle={subtitle}>{sectionTitle}</Header>
         <Accordion allowToggle>
@@ -48,10 +48,10 @@ export const ExperiencesSection: React.FC<ExperiencesSectionProperties> = ({
                   <AccordionItem key={`experience-${company}`}>
                     <AccordionButton>
                       <Box flex={1}>
-                        <div className="flex items-center gap-x-2">
+                        <div className='flex items-center gap-x-2'>
                           <span>{company}</span>
-                          <Badge colorScheme="teal">{period}</Badge>
-                          <Badge colorScheme="teal">{city}</Badge>
+                          <Badge colorScheme='teal'>{period}</Badge>
+                          <Badge colorScheme='teal'>{city}</Badge>
                         </div>
                       </Box>
                       <AccordionIcon />

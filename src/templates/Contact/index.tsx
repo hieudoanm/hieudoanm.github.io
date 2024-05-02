@@ -30,7 +30,7 @@ export const ContactTemplate: React.FC<ContactTemplateProperties> = ({
   return (
     <>
       <Navbar fixed sections={sections} />
-      <main className="pt-32">
+      <main className='pt-32'>
         <HeroSection
           id={hero.id}
           title={hero.title}

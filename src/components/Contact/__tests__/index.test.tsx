@@ -5,7 +5,7 @@ import { ContactSection } from '..';
 describe('Contact', () => {
   test('render default', () => {
     const wrapper = render(
-      <ContactSection id="id" title="title" subtitle="subtitle" />
+      <ContactSection id='id' title='title' subtitle='subtitle' />
     );
     expect(wrapper.container).toMatchSnapshot();
   });

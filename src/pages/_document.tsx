@@ -3,7 +3,7 @@ import React from 'react';
 
 const Document: React.FC = () => {
   return (
-    <Html lang="en">
+    <Html lang='en'>
       <Head />
       <body>
         <Main />

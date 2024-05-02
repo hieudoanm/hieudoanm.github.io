@@ -6,9 +6,9 @@ describe('Testimonials', () => {
   test('render default', () => {
     const wrapper = render(
       <TestimonialsSection
-        id="id"
-        title="title"
-        subtitle="subtitle"
+        id='id'
+        title='title'
+        subtitle='subtitle'
         testimonials={[{ quote: '', author: '', position: '' }]}
       />
     );

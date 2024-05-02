@@ -1,106 +1,135 @@
-import { Icon } from '@chakra-ui/react';
-import { metadata } from '@hieudoanm/common/configs/metadata';
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import { NextPage } from 'next';
 import Link from 'next/link';
-import type { IconType } from 'react-icons';
-import {
-  FaComment,
-  FaEnvelope,
-  FaFacebookSquare,
-  FaGithubSquare,
-  FaInstagram,
-  FaLinkedin,
-  FaTelegram,
-  FaUser,
-} from 'react-icons/fa';
+import profile from '@hieudoanm/assets/profile.jpg';
 
-const icons: Record<string, IconType> = {
-  email: FaEnvelope,
-  linkedin: FaLinkedin,
-  github: FaGithubSquare,
-  instagram: FaInstagram,
-  zalo: FaComment,
-  telegram: FaTelegram,
-  facebook: FaFacebookSquare,
+type Project = {
+  id: string;
+  name: string;
+  emoji: string;
+  description: string;
+  link: string;
+  pricing: string;
 };
 
-const SocialPage: NextPage = () => {
-  const { profiles = [] } = metadata;
+const HomePage: NextPage = () => {
+  const projects: Project[] = [
+    {
+      id: 'chess',
+      name: 'chess.com Insights',
+      emoji: '♟️',
+      description:
+        'Chess.com Insights: analytics, trends, and personalized data for chess improvement.',
+      link: 'https://chessinsights.vercel.app',
+      pricing: 'free',
+    },
+    {
+      id: 'colours',
+      name: 'Colours',
+      emoji: '🎨',
+      description: 'Colours Tools - HEX to RGB and Colours Picker',
+      link: 'https://hieudoanm.github.io/app-colours',
+      pricing: 'free',
+    },
+    {
+      id: 'csv',
+      name: 'CSV',
+      emoji: '📒',
+      description:
+        'Tool for creating, editing, and managing CSV (comma-separated values) files.',
+      link: 'https://hieudoanm.github.io/app-csv',
+      pricing: 'free',
+    },
+    {
+      id: 'geerthofstede',
+      name: 'Geert Hofstede',
+      emoji: '🤌',
+      description:
+        'Cultural dimensions researcher, known for cross-cultural studies.',
+      link: 'https://hieudoanm.github.io/geerthofstede.com/',
+      pricing: 'free',
+    },
+    {
+      id: 'instax',
+      name: 'InstaX',
+      emoji: '📷',
+      description: 'Instagram Extensions: Download posts, stories and reels',
+      link: 'https://instagramdownload.vercel.app/',
+      pricing: 'free',
+    },
+    {
+      id: 'pomodoro',
+      name: 'Pomodoro',
+      emoji: '⏱️',
+      description:
+        'Time management technique: work for 25 mins, break, repeat.',
+      link: 'https://hieudoanm.github.io/app-pomodoro',
+      pricing: 'free',
+    },
+  ];
 
   return (
-    <>
-      <Head>
-        <title>HIEU DOAN (hieudoanm)</title>
-      </Head>
-      <div
-        className="h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/images/jpg/background/hero.jpg)' }}>
-        <div className="h-screen overflow-auto bg-black/75">
-          <div className="container mx-auto h-full py-16">
-            <div className="flex h-full items-center justify-center">
-              <div className="mx-auto max-w-fit">
-                <div className="flex flex-col items-center justify-center gap-y-8">
-                  <div className="w-full">
-                    <div
-                      className="relative w-full rounded-full bg-white"
-                      style={{ paddingBottom: '100%' }}>
-                      <div className="absolute left-0 top-0 h-full w-full">
-                        <div className="flex h-full w-full items-center justify-center">
-                          <FaUser className="text-8xl text-black" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <h1 className="text-4xl uppercase text-white">HIEU DOAN</h1>
-                  </div>
-                  <div className="w-full">
-                    <Link href="/about">
-                      <div className="flex items-center gap-x-4">
-                        <div className="flex aspect-square items-center rounded-lg bg-white p-3">
-                          <FaUser />
-                        </div>
-                        <button
-                          type="button"
-                          className="btn btn-primary w-full">
-                          About
-                        </button>
-                      </div>
-                    </Link>
-                  </div>
-                  {profiles.map(({ auth, icon, href, title }) => {
-                    if (auth) {
-                      return <></>;
-                    }
-
-                    return (
-                      <div
-                        key={`profile-${title.toLowerCase()}`}
-                        className="w-full">
-                        <a href={href} target="_blank" rel="noreferrer">
-                          <div className="flex items-center gap-x-4">
-                            <div className="flex aspect-square items-center rounded-lg bg-white p-3">
-                              <Icon as={icons[`${icon}`]} />
-                            </div>
-                            <button
-                              type="button"
-                              className="btn btn-primary w-full">
-                              <span>{title}</span>
-                            </button>
-                          </div>
-                        </a>
-                      </div>
-                    );
-                  })}
+    <div data-theme='luxury'>
+      <div className='h-screen w-screen overflow-auto bg-white p-8 lg:p-16'>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
+          <div className='col-span-1'>
+            <div className='flex flex-col items-center justify-center gap-y-8'>
+              <div className='mx-auto flex w-[25%] flex-col lg:w-[50%]'>
+                <div className='aspect-square w-full overflow-hidden rounded-full border border-secondary p-1'>
+                  <div
+                    className='h-full w-full rounded-full bg-cover bg-center'
+                    style={{ backgroundImage: `url(${profile.src})` }}
+                  />
                 </div>
               </div>
+              <div className='flex flex-col gap-y-4 text-center'>
+                <Link href='/about' className='text-2xl font-bold uppercase'>
+                  Hieu Doan
+                </Link>
+                <p>📍 Vietnam</p>
+              </div>
+            </div>
+          </div>
+          <div className='col-span-1 lg:col-span-2'>
+            <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
+              {projects.map(
+                ({
+                  id = '',
+                  name = '',
+                  emoji = '',
+                  description = '',
+                  link = '',
+                  pricing = '',
+                }: Project) => {
+                  return (
+                    <div key={id} className='col-span-1'>
+                      <Link href={link} target='_blank'>
+                        <div className='w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl'>
+                          <div className='flex flex-col gap-y-2 p-4'>
+                            <div className='flex items-center justify-between'>
+                              <div className='flex items-center gap-x-2'>
+                                <div className='flex h-6 w-6 items-center justify-center rounded-full bg-white'>
+                                  {emoji}
+                                </div>
+                                <h2 className='text-lg font-bold'>{name}</h2>
+                              </div>
+                              <div className='badge badge-primary capitalize'>
+                                {pricing}
+                              </div>
+                            </div>
+                            <p className='truncate text-sm'>{description}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  );
+                }
+              )}
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default SocialPage;
+export default HomePage;

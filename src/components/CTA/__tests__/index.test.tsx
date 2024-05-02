@@ -6,11 +6,11 @@ describe('CallToActionSection', () => {
   test('render default', () => {
     const wrapper = render(
       <CallToActionSection
-        id="id"
-        title="title"
-        subtitle="subtitle"
-        backgroundImage=""
-        cta="CTA"
+        id='id'
+        title='title'
+        subtitle='subtitle'
+        backgroundImage=''
+        cta='CTA'
       />
     );
     expect(wrapper.container).toMatchSnapshot();

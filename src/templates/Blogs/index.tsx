@@ -34,7 +34,7 @@ export const BlogsTemplate: React.FC<BlogsTemplateProperties> = ({
           backgroundImage={hero.backgroundImage}
         />
         <Container>
-          <div className="flex flex-col gap-8 py-8 md:py-16">
+          <div className='flex flex-col gap-8 py-8 md:py-16'>
             <Header subtitle={subtitle}>{title}</Header>
             {blogs.map((blog) => {
               return (
