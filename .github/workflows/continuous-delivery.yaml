@@ -21,21 +21,6 @@ jobs:
       - name: Linting
         run: yarn lint --fix
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.11.0'
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile --network-timeout 86400000
-      - name: Build Production
-        run: yarn build
-
   test:
     name: Test
     runs-on: ubuntu-latest
@@ -50,6 +35,21 @@ jobs:
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Unit Test
         run: yarn test -u
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.0'
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --network-timeout 86400000
+      - name: Build Production
+        run: yarn build
       - name: Disable Jekyll
         run: touch .nojekyll
         working-directory: out
