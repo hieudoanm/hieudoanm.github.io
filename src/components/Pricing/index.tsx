@@ -1,4 +1,3 @@
-import { Button } from '@chakra-ui/react';
 import { Container } from '@hieudoanm/components/Container';
 import { Header } from '@hieudoanm/components/Header';
 import type React from 'react';
@@ -106,12 +105,14 @@ export const PricingSection: React.FC<PricingSectionProperties> = ({
                       href={links[`${currency}`].href}
                       target="_blank"
                       rel="noreferrer">
-                      <Button className="w-full uppercase">
+                      <button
+                        type="button"
+                        className="btn btn-primary w-full uppercase">
                         <div className="flex items-center justify-center gap-4">
                           {links[`${currency}`].icon}
                           <span>{links[`${currency}`].title}</span>
                         </div>
-                      </Button>
+                      </button>
                     </a>
                   </div>
                   <div className="p-8">

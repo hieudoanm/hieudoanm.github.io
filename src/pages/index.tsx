@@ -1,264 +1,106 @@
-import { useWindowSize } from '@hieudoanm/common/hooks/use-window-size';
-import { Hexagon } from '@hieudoanm/components/Hexagon';
+import { Icon } from '@chakra-ui/react';
+import { metadata } from '@hieudoanm/common/configs/metadata';
+import type { NextPage } from 'next';
 import Head from 'next/head';
-import type React from 'react';
-import { useCallback, useEffect, useState } from 'react';
+import Link from 'next/link';
+import type { IconType } from 'react-icons';
+import {
+  FaComment,
+  FaEnvelope,
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaTelegram,
+  FaUser,
+} from 'react-icons/fa';
 
-const themes = ['theme-0'];
+const icons: Record<string, IconType> = {
+  email: FaEnvelope,
+  linkedin: FaLinkedin,
+  github: FaGithubSquare,
+  instagram: FaInstagram,
+  zalo: FaComment,
+  telegram: FaTelegram,
+  facebook: FaFacebookSquare,
+};
 
-export const HexagonPage: React.FC = () => {
-  const { width, height } = useWindowSize();
-
-  const [theme, setTheme] = useState(themes[0]);
-  const [{ maxRows, maxColumns }, setMax] = useState({
-    maxColumns: Math.floor(width / 128) + 10,
-    maxRows: Math.floor(height / 112) * 2 + 10,
-  });
-
-  useEffect(() => {
-    const newMaxColumns = Math.floor(width / 128) + 5;
-    const newMaxRows = Math.floor(height / 112) * 2 + 5;
-
-    setMax({ maxColumns: newMaxColumns, maxRows: newMaxRows });
-  }, [width, height]);
-
-  const columns = [...Array.from({ length: maxColumns + 1 }).keys()].map(
-    (index: number) => index
-  );
-  const rows = [...Array.from({ length: maxRows + 1 }).keys()].map(
-    () => columns
-  );
-
-  const changeTheme = () => {
-    const themeIndex = themes.indexOf(theme);
-    const nextIndex = themeIndex + 1 === themes.length ? 0 : themeIndex + 1;
-    const nextTheme = themes[`${nextIndex}`];
-    setTheme(nextTheme);
-  };
-
-  const updateLevel1 = useCallback(
-    ({ row, column }: { row: number; column: number }) => {
-      const leftLevel1 = row % 2 === 0 ? 0 : -1;
-      const rightLevel1 = row % 2 === 0 ? 1 : 0;
-      const boxes = [
-        { row: row - 2, column },
-        { row: row - 1, column: column + leftLevel1 },
-        { row: row - 1, column: column + rightLevel1 },
-        { row: row + 1, column: column + leftLevel1 },
-        { row: row + 1, column: column + rightLevel1 },
-        { row: row + 2, column },
-      ].map(
-        ({ row: rowIndex, column: columnIndex }) =>
-          `hexagon-${rowIndex}-${columnIndex}`
-      );
-      for (const id of boxes) {
-        document.querySelector(`#${id}`)?.classList.add('level-1');
-      }
-    },
-    []
-  );
-
-  const updateLevel2 = useCallback(
-    ({
-      row,
-      column,
-      left,
-      right,
-    }: {
-      row: number;
-      column: number;
-      left: number;
-      right: number;
-    }) => {
-      const boxes = [
-        { row: row - 4, column },
-        { row: row - 3, column: column + left },
-        {
-          row: row - 3,
-          column: column + right,
-        },
-        { row: row - 2, column: column + 1 },
-        { row: row - 2, column: column + -1 },
-        { row, column: column + -1 },
-        { row, column: column + 1 },
-        { row: row + 2, column: column + 1 },
-        { row: row + 2, column: column + -1 },
-        { row: row + 3, column: column + left },
-        {
-          row: row + 3,
-          column: column + right,
-        },
-        { row: row + 4, column },
-      ].map(
-        ({ row: rowIndex, column: columnIndex }) =>
-          `hexagon-${rowIndex}-${columnIndex}`
-      );
-      for (const id of boxes) {
-        document.querySelector(`#${id}`)?.classList.add('level-2');
-      }
-    },
-    []
-  );
-
-  const updateLevel3 = useCallback(
-    ({
-      row,
-      column,
-      left,
-      right,
-    }: {
-      row: number;
-      column: number;
-      left: number;
-      right: number;
-    }) => {
-      const level3Boxes = [
-        { row: row - 6, column },
-        { row: row - 5, column: column + left },
-        {
-          row: row - 5,
-          column: column + right,
-        },
-        { row: row - 4, column: column - 1 },
-        { row: row - 4, column: column + 1 },
-        {
-          row: row - 3,
-          column: column + left - 1,
-        },
-        {
-          row: row - 3,
-          column: column + right + 1,
-        },
-        {
-          row: row - 1,
-          column: column + left - 1,
-        },
-        {
-          row: row - 1,
-          column: column + right + 1,
-        },
-        {
-          row: row + 1,
-          column: column + left - 1,
-        },
-        {
-          row: row + 1,
-          column: column + right + 1,
-        },
-        {
-          row: row + 3,
-          column: column + left - 1,
-        },
-        {
-          row: row + 3,
-          column: column + right + 1,
-        },
-        { row: row + 4, column: column - 1 },
-        { row: row + 4, column: column + 1 },
-        {
-          row: row + 5,
-          column: column + left,
-        },
-        {
-          row: row + 5,
-          column: column + right,
-        },
-        { row: row + 6, column },
-      ].map(
-        ({ row: rowIndex, column: columnIndex }) =>
-          `hexagon-${rowIndex}-${columnIndex}`
-      );
-      for (const id of level3Boxes) {
-        document.querySelector(`#${id}`)?.classList.add('level-3');
-      }
-    },
-    []
-  );
+const SocialPage: NextPage = () => {
+  const { profiles = [] } = metadata;
 
   return (
     <>
       <Head>
         <title>HIEU DOAN (hieudoanm)</title>
       </Head>
-      <div className={theme}>
-        <main className="h-screen w-screen overflow-hidden">
-          <div className="relative">
-            <div className="absolute inset-0 mx-auto">
-              <div className="relative">
-                {rows.map((rowColumns: number[], row: number) => {
-                  return rowColumns.map((column: number) => {
+      <div
+        className="h-screen overflow-hidden bg-black bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/images/jpg/background/hero.jpg)' }}>
+        <div className="h-screen overflow-auto bg-black/75">
+          <div className="container mx-auto h-full py-16">
+            <div className="flex h-full items-center justify-center">
+              <div className="mx-auto max-w-fit">
+                <div className="flex flex-col items-center justify-center gap-y-8">
+                  <div className="w-full">
+                    <div
+                      className="relative w-full rounded-full bg-white"
+                      style={{ paddingBottom: '100%' }}>
+                      <div className="absolute left-0 top-0 h-full w-full">
+                        <div className="flex h-full w-full items-center justify-center">
+                          <FaUser className="text-8xl text-black" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="text-4xl uppercase text-white">HIEU DOAN</h1>
+                  </div>
+                  <div className="w-full">
+                    <Link href="/about">
+                      <div className="flex items-center gap-x-4">
+                        <div className="flex aspect-square items-center rounded-lg bg-white p-3">
+                          <FaUser />
+                        </div>
+                        <button
+                          type="button"
+                          className="btn btn-primary w-full">
+                          About
+                        </button>
+                      </div>
+                    </Link>
+                  </div>
+                  {profiles.map(({ auth, icon, href, title }) => {
+                    if (auth) {
+                      return <></>;
+                    }
+
                     return (
-                      <button
-                        type="button"
-                        id={`hexagon-${row}-${column}`}
-                        key={`hexagon-row-${column}`}
-                        data-row={row}
-                        data-column={column}
-                        className="absolute"
-                        onClick={() => changeTheme()}
-                        onMouseLeave={() => {
-                          const classNames: string[] = [
-                            '.level-1',
-                            '.level-2',
-                            '.level-3',
-                          ];
-                          for (const className of classNames) {
-                            const oldBoxes =
-                              document.querySelectorAll(className);
-                            for (const box of oldBoxes) {
-                              box.classList.remove(className.replace('.', ''));
-                            }
-                          }
-                        }}
-                        onFocus={() => {}}
-                        onMouseOver={(
-                          event: React.SyntheticEvent<
-                            HTMLButtonElement,
-                            MouseEvent
-                          >
-                        ) => {
-                          if (!(event.target instanceof HTMLButtonElement)) {
-                            return;
-                          }
-                          const newRow = Number.parseInt(
-                            event.target.dataset.row ?? '0',
-                            10
-                          );
-                          const newColumn = Number.parseInt(
-                            event.target.dataset.column ?? '0',
-                            10
-                          );
-                          const right = row % 2 ? 0 : 1;
-                          const left = row % 2 ? -1 : 0;
-                          // Level 1
-                          updateLevel1({ row: newRow, column: newColumn });
-                          // Level 2
-                          updateLevel2({
-                            row: newRow,
-                            column: newColumn,
-                            left,
-                            right,
-                          });
-                          updateLevel3({
-                            row: newRow,
-                            column: newColumn,
-                            left,
-                            right,
-                          });
-                          // Level 3
-                        }}>
-                        <Hexagon />
-                      </button>
+                      <div
+                        key={`profile-${title.toLowerCase()}`}
+                        className="w-full">
+                        <a href={href} target="_blank" rel="noreferrer">
+                          <div className="flex items-center gap-x-4">
+                            <div className="flex aspect-square items-center rounded-lg bg-white p-3">
+                              <Icon as={icons[`${icon}`]} />
+                            </div>
+                            <button
+                              type="button"
+                              className="btn btn-primary w-full">
+                              <span>{title}</span>
+                            </button>
+                          </div>
+                        </a>
+                      </div>
                     );
-                  });
-                })}
+                  })}
+                </div>
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     </>
   );
 };
 
-export default HexagonPage;
+export default SocialPage;

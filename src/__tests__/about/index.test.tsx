@@ -1,10 +1,10 @@
-import ContactPage from '@hieudoanm/pages/profile/contact';
+import AboutPage from '@hieudoanm/pages/about';
 import { render } from '@testing-library/react';
 import React from 'react';
 
-describe('ContactPage', () => {
+describe('AboutPage', () => {
   test('render default', () => {
-    const wrapper = render(<ContactPage />);
+    const wrapper = render(<AboutPage />);
     expect(wrapper.container).toMatchSnapshot();
   });
 });

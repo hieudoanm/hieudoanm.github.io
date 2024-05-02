@@ -1,10 +1,10 @@
-import SocialPage from '@hieudoanm/pages/profile/social';
+import ContactPage from '@hieudoanm/pages/contact';
 import { render } from '@testing-library/react';
 import React from 'react';
 
-describe('SocialPage', () => {
+describe('ContactPage', () => {
   test('render default', () => {
-    const wrapper = render(<SocialPage />);
+    const wrapper = render(<ContactPage />);
     expect(wrapper.container).toMatchSnapshot();
   });
 });

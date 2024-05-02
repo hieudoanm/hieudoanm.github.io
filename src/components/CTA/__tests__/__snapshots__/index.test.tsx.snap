@@ -34,7 +34,7 @@ exports[`CallToActionSection render default 1`] = `
             href="mailto:hieumdoan@gmail.com"
           >
             <button
-              class="chakra-button mx-auto block bg-white uppercase text-gray-900 css-4xx2wk"
+              class="btn-white mx-auto block uppercase"
               type="button"
             >
               CTA

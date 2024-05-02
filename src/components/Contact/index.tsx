@@ -1,4 +1,3 @@
-import { Button, Input, Textarea } from '@chakra-ui/react';
 import { Container } from '@hieudoanm/components/Container';
 import { GoogleMaps } from '@hieudoanm/components/GoogleMaps';
 import { Header } from '@hieudoanm/components/Header';
@@ -18,56 +17,59 @@ const Form: React.FC = () => {
     <form onSubmit={sendMessage}>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="col-span-1 md:col-span-2">
-          <label>Name</label>
-          <Input
+          <label htmlFor="name">Name</label>
+          <input
             id="name"
             name="name"
             placeholder="Name"
+            className="input input-bordered w-full"
             value={name}
-            className="w-full"
             onChange={(event) => setName(event.target.value)}
             required
           />
         </div>
         <div className="col-span-1">
-          <label>Phone</label>
-          <Input
+          <label htmlFor="phone">Phone</label>
+          <input
             id="phone"
             name="phone"
             placeholder="Phone"
+            className="input input-bordered w-full"
             value={phone}
-            className="w-full"
             onChange={(event) => setPhone(event.target.value)}
             required
           />
         </div>
         <div className="col-span-1">
-          <label>Email</label>
-          <Input
+          <label htmlFor="email">Email</label>
+          <input
             type="email"
             id="email"
             name="email"
             placeholder="Email"
+            className="input input-bordered w-full"
             value={email}
-            className="w-full"
             onChange={(event) => setEmail(event.target.value)}
             required
           />
         </div>
         <div className="col-span-1 md:col-span-2">
-          <label>Message</label>
-          <Textarea
+          <label htmlFor="message">Message</label>
+          <textarea
             rows={4}
             id="message"
             name="message"
             placeholder="Message"
+            className="textarea textarea-bordered w-full"
             value={message}
             onChange={(event) => setMessage(event.target.value)}
             required
           />
         </div>
         <div className="col-span-1 md:col-span-2">
-          <Button>Send Message</Button>
+          <button type="button" className="btn btn-primary">
+            Send Message
+          </button>
         </div>
       </div>
     </form>

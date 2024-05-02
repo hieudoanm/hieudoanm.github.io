@@ -338,7 +338,7 @@ exports[`ContactPage render default 1`] = `
                 target="_blank"
               >
                 <button
-                  class="chakra-button w-full uppercase css-4xx2wk"
+                  class="btn btn-primary w-full uppercase"
                   type="button"
                 >
                   <div
@@ -515,7 +515,7 @@ exports[`ContactPage render default 1`] = `
                 target="_blank"
               >
                 <button
-                  class="chakra-button w-full uppercase css-4xx2wk"
+                  class="btn btn-primary w-full uppercase"
                   type="button"
                 >
                   <div
@@ -717,7 +717,7 @@ exports[`ContactPage render default 1`] = `
                 target="_blank"
               >
                 <button
-                  class="chakra-button w-full uppercase css-4xx2wk"
+                  class="btn btn-primary w-full uppercase"
                   type="button"
                 >
                   <div
@@ -1019,7 +1019,7 @@ exports[`ContactPage render default 1`] = `
                 target="_blank"
               >
                 <button
-                  class="chakra-button w-full uppercase css-4xx2wk"
+                  class="btn btn-primary w-full uppercase"
                   type="button"
                 >
                   <div
@@ -1237,12 +1237,13 @@ exports[`ContactPage render default 1`] = `
                 <div
                   class="col-span-1 md:col-span-2"
                 >
-                  <label>
+                  <label
+                    for="name"
+                  >
                     Name
                   </label>
                   <input
-                    aria-required="true"
-                    class="chakra-input w-full css-0"
+                    class="input input-bordered w-full"
                     id="name"
                     name="name"
                     placeholder="Name"
@@ -1253,12 +1254,13 @@ exports[`ContactPage render default 1`] = `
                 <div
                   class="col-span-1"
                 >
-                  <label>
+                  <label
+                    for="phone"
+                  >
                     Phone
                   </label>
                   <input
-                    aria-required="true"
-                    class="chakra-input w-full css-0"
+                    class="input input-bordered w-full"
                     id="phone"
                     name="phone"
                     placeholder="Phone"
@@ -1269,12 +1271,13 @@ exports[`ContactPage render default 1`] = `
                 <div
                   class="col-span-1"
                 >
-                  <label>
+                  <label
+                    for="email"
+                  >
                     Email
                   </label>
                   <input
-                    aria-required="true"
-                    class="chakra-input w-full css-0"
+                    class="input input-bordered w-full"
                     id="email"
                     name="email"
                     placeholder="Email"
@@ -1286,12 +1289,13 @@ exports[`ContactPage render default 1`] = `
                 <div
                   class="col-span-1 md:col-span-2"
                 >
-                  <label>
+                  <label
+                    for="message"
+                  >
                     Message
                   </label>
                   <textarea
-                    aria-required="true"
-                    class="chakra-textarea css-0"
+                    class="textarea textarea-bordered w-full"
                     id="message"
                     name="message"
                     placeholder="Message"
@@ -1303,7 +1307,7 @@ exports[`ContactPage render default 1`] = `
                   class="col-span-1 md:col-span-2"
                 >
                   <button
-                    class="chakra-button css-4xx2wk"
+                    class="btn btn-primary"
                     type="button"
                   >
                     Send Message

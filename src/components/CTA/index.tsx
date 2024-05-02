@@ -1,4 +1,3 @@
-import { Button } from '@chakra-ui/react';
 import { Container } from '@hieudoanm/components/Container';
 import { Header } from '@hieudoanm/components/Header';
 import type React from 'react';
@@ -30,11 +29,11 @@ export const CallToActionSection: React.FC<CallToActionSectionProperties> = ({
               {title}
             </Header>
             <a href="mailto:hieumdoan@gmail.com">
-              <Button
-                size="xl"
-                className="mx-auto block bg-white uppercase text-gray-900">
+              <button
+                type="button"
+                className="btn-white mx-auto block uppercase">
                 {cta}
-              </Button>
+              </button>
             </a>
           </Container>
         </div>

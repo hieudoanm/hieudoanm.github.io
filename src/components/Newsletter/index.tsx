@@ -1,4 +1,3 @@
-import { Button, Input } from '@chakra-ui/react';
 import { Container } from '@hieudoanm/components/Container';
 import type React from 'react';
 import { useState } from 'react';
@@ -29,23 +28,23 @@ export const NewsletterSection: React.FC<NewsletterSectionProperties> = ({
             <p className="text-justify">{subtitle}</p>
           </div>
           <form onSubmit={submit} className="flex items-center gap-8">
-            <Input
+            <input
               id="email"
               type="email"
               name="email"
               placeholder="Email Address"
-              className="w-full md:w-auto"
+              className="input input-bordered w-full md:w-auto"
               value={email}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 setEmail(event.target.value)
               }
               required
             />
-            <Button
+            <button
               type="submit"
-              className="w-full bg-white uppercase text-black md:w-auto">
+              className="btn-white w-full uppercase md:w-auto">
               Notify
-            </Button>
+            </button>
           </form>
         </div>
       </Container>

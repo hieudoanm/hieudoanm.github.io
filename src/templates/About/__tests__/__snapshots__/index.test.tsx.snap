@@ -322,7 +322,7 @@ exports[`AboutTemplate render default 1`] = `
               href="mailto:hieumdoan@gmail.com"
             >
               <button
-                class="chakra-button mx-auto block bg-white uppercase text-gray-900 css-4xx2wk"
+                class="btn-white mx-auto block uppercase"
                 type="button"
               />
             </a>
@@ -406,8 +406,7 @@ exports[`AboutTemplate render default 1`] = `
             class="flex items-center gap-8"
           >
             <input
-              aria-required="true"
-              class="chakra-input w-full md:w-auto css-0"
+              class="input input-bordered w-full md:w-auto"
               id="email"
               name="email"
               placeholder="Email Address"
@@ -416,7 +415,7 @@ exports[`AboutTemplate render default 1`] = `
               value=""
             />
             <button
-              class="chakra-button w-full bg-white uppercase text-black md:w-auto css-4xx2wk"
+              class="btn-white w-full uppercase md:w-auto"
               type="submit"
             >
               Notify

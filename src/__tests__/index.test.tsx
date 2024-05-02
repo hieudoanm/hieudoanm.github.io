@@ -1,9 +1,10 @@
-import { HexagonPage } from '@hieudoanm/pages';
+import SocialPage from '@hieudoanm/pages';
 import { render } from '@testing-library/react';
+import React from 'react';
 
-describe('HexagonPage', () => {
+describe('SocialPage', () => {
   test('render default', () => {
-    const wrapper = render(<HexagonPage />);
+    const wrapper = render(<SocialPage />);
     expect(wrapper.container).toMatchSnapshot();
   });
 });
