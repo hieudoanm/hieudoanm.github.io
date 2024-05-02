@@ -50,3 +50,13 @@ jobs:
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Unit Test
         run: yarn test -u
+      - name: Disable Jekyll
+        run: touch .nojekyll
+        working-directory: out
+      - name: Deploy GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.6.0
+        with:
+          token: ${{ secrets.GHP_TOKEN }}
+          branch: gh-pages
+          folder: out
+          clean: true
