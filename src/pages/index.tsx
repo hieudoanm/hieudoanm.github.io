@@ -1,6 +1,12 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import profile from '@hieudoanm/assets/profile.jpg';
+import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa6';
+import {
+  FaEnvelopeSquare,
+  FaFacebookSquare,
+  FaInstagramSquare,
+} from 'react-icons/fa';
 
 type Project = {
   id: string;
@@ -11,62 +17,105 @@ type Project = {
   pricing: string;
 };
 
-const HomePage: NextPage = () => {
-  const projects: Project[] = [
-    {
-      id: 'chess',
-      name: 'chess.com Insights',
-      emoji: '♟️',
-      description:
-        'Chess.com Insights: analytics, trends, and personalized data for chess improvement.',
-      link: 'https://chessinsights.vercel.app',
-      pricing: 'free',
-    },
-    {
-      id: 'colours',
-      name: 'Colours',
-      emoji: '🎨',
-      description: 'Colours Tools - HEX to RGB and Colours Picker',
-      link: 'https://hieudoanm.github.io/app-colours',
-      pricing: 'free',
-    },
-    {
-      id: 'csv',
-      name: 'CSV',
-      emoji: '📒',
-      description:
-        'Tool for creating, editing, and managing CSV (comma-separated values) files.',
-      link: 'https://hieudoanm.github.io/app-csv',
-      pricing: 'free',
-    },
-    {
-      id: 'geerthofstede',
-      name: 'Geert Hofstede',
-      emoji: '🤌',
-      description:
-        'Cultural dimensions researcher, known for cross-cultural studies.',
-      link: 'https://hieudoanm.github.io/geerthofstede.com/',
-      pricing: 'free',
-    },
-    {
-      id: 'instax',
-      name: 'InstaX',
-      emoji: '📷',
-      description: 'Instagram Extensions: Download posts, stories and reels',
-      link: 'https://instagramdownload.vercel.app/',
-      pricing: 'free',
-    },
-    {
-      id: 'pomodoro',
-      name: 'Pomodoro',
-      emoji: '⏱️',
-      description:
-        'Time management technique: work for 25 mins, break, repeat.',
-      link: 'https://hieudoanm.github.io/app-pomodoro',
-      pricing: 'free',
-    },
-  ];
+const socialMedias = [
+  {
+    shown: false,
+    id: 'email',
+    icon: <FaEnvelopeSquare />,
+    link: 'mailto:hieumdoan@gmail.com',
+    title: 'Email',
+  },
+  {
+    shown: true,
+    id: 'linkedin',
+    icon: <FaLinkedin />,
+    link: 'https://www.linkedin.com/in/hieudoanm',
+    title: 'LinkedIn',
+  },
+  {
+    shown: true,
+    id: 'github',
+    icon: <FaGithub />,
+    link: 'https://github.com/hieudoanm',
+    title: 'GitHub',
+  },
+  {
+    shown: false,
+    id: 'telegram',
+    icon: <FaTelegram />,
+    link: 'https://t.me/hieudoanm',
+    title: 'Telegram',
+  },
+  {
+    shown: false,
+    id: 'facebook',
+    icon: <FaFacebookSquare />,
+    link: 'https://www.facebook.com/hieudoanm',
+    title: 'Facebook',
+  },
+  {
+    shown: false,
+    id: 'instagram',
+    icon: <FaInstagramSquare />,
+    link: 'https://www.instagram.com/hieudoan.com.vn/',
+    title: 'Instagram',
+  },
+];
+const projects: Project[] = [
+  {
+    id: 'chess',
+    name: 'chess.com Insights',
+    emoji: '♟️',
+    description:
+      'Chess.com Insights: analytics, trends, and personalized data for chess improvement.',
+    link: 'https://chessinsights.vercel.app',
+    pricing: 'free',
+  },
+  {
+    id: 'colours',
+    name: 'Colours',
+    emoji: '🎨',
+    description: 'Colours Tools - HEX to RGB and Colours Picker',
+    link: 'https://hieudoanm.github.io/app-colours',
+    pricing: 'free',
+  },
+  {
+    id: 'csv',
+    name: 'CSV',
+    emoji: '📒',
+    description:
+      'Tool for creating, editing, and managing CSV (comma-separated values) files.',
+    link: 'https://hieudoanm.github.io/app-csv',
+    pricing: 'free',
+  },
+  {
+    id: 'geerthofstede',
+    name: 'Geert Hofstede',
+    emoji: '🤌',
+    description:
+      'Cultural dimensions researcher, known for cross-cultural studies.',
+    link: 'https://hieudoanm.github.io/geerthofstede.com/',
+    pricing: 'free',
+  },
+  {
+    id: 'instax',
+    name: 'InstaX',
+    emoji: '📷',
+    description: 'Instagram Extensions: Download posts, stories and reels',
+    link: 'https://instagramdownload.vercel.app/',
+    pricing: 'free',
+  },
+  {
+    id: 'pomodoro',
+    name: 'Pomodoro',
+    emoji: '⏱️',
+    description: 'Time management technique: work for 25 mins, break, repeat.',
+    link: 'https://hieudoanm.github.io/app-pomodoro',
+    pricing: 'free',
+  },
+];
 
+const HomePage: NextPage = () => {
   return (
     <div data-theme='luxury'>
       <div className='h-screen w-screen overflow-auto bg-white p-8 lg:p-16'>
@@ -86,6 +135,19 @@ const HomePage: NextPage = () => {
                   Hieu Doan
                 </Link>
                 <p>📍 Vietnam</p>
+                <div className='flex items-center justify-center gap-x-2'>
+                  {socialMedias
+                    .filter(({ shown }) => shown)
+                    .map(({ id, icon, link }) => {
+                      return (
+                        <div key={id}>
+                          <Link href={link} target='_blank'>
+                            {icon}
+                          </Link>
+                        </div>
+                      );
+                    })}
+                </div>
               </div>
             </div>
           </div>

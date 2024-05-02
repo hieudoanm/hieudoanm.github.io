@@ -207,7 +207,7 @@ exports[`AboutPage render default 1`] = `
                 tabindex="-1"
                 type="button"
               >
-                projects
+                techstack
               </button>
               <button
                 class="chakra-menu__menuitem capitalize css-1k756t9"
@@ -217,22 +217,12 @@ exports[`AboutPage render default 1`] = `
                 tabindex="-1"
                 type="button"
               >
-                techstack
+                testimonials
               </button>
               <button
                 class="chakra-menu__menuitem capitalize css-1k756t9"
                 data-index="4"
                 id="menu-list-:r1:-menuitem-:r6:"
-                role="menuitem"
-                tabindex="-1"
-                type="button"
-              >
-                testimonials
-              </button>
-              <button
-                class="chakra-menu__menuitem capitalize css-1k756t9"
-                data-index="5"
-                id="menu-list-:r1:-menuitem-:r7:"
                 role="menuitem"
                 tabindex="-1"
                 type="button"
@@ -413,11 +403,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:r8:"
+              aria-controls="accordion-panel-:r7:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="0"
-              id="accordion-button-:r8:"
+              id="accordion-button-:r7:"
               type="button"
             >
               <div
@@ -458,9 +448,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:r8:"
+                aria-labelledby="accordion-button-:r7:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:r8:"
+                id="accordion-panel-:r7:"
                 role="region"
               >
                 Full-stack Software Developer
@@ -471,11 +461,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:ra:"
+              aria-controls="accordion-panel-:r9:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="1"
-              id="accordion-button-:ra:"
+              id="accordion-button-:r9:"
               type="button"
             >
               <div
@@ -516,9 +506,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:ra:"
+                aria-labelledby="accordion-button-:r9:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:ra:"
+                id="accordion-panel-:r9:"
                 role="region"
               >
                 Full-stack Software Developer
@@ -529,11 +519,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:rc:"
+              aria-controls="accordion-panel-:rb:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="2"
-              id="accordion-button-:rc:"
+              id="accordion-button-:rb:"
               type="button"
             >
               <div
@@ -574,9 +564,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:rc:"
+                aria-labelledby="accordion-button-:rb:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:rc:"
+                id="accordion-panel-:rb:"
                 role="region"
               >
                 Full-stack Software Developer
@@ -587,11 +577,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:re:"
+              aria-controls="accordion-panel-:rd:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="3"
-              id="accordion-button-:re:"
+              id="accordion-button-:rd:"
               type="button"
             >
               <div
@@ -632,9 +622,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:re:"
+                aria-labelledby="accordion-button-:rd:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:re:"
+                id="accordion-panel-:rd:"
                 role="region"
               >
                 Front-end Developer
@@ -645,11 +635,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:rg:"
+              aria-controls="accordion-panel-:rf:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="4"
-              id="accordion-button-:rg:"
+              id="accordion-button-:rf:"
               type="button"
             >
               <div
@@ -690,9 +680,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:rg:"
+                aria-labelledby="accordion-button-:rf:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:rg:"
+                id="accordion-panel-:rf:"
                 role="region"
               >
                 Front-end Developer
@@ -809,137 +799,6 @@ exports[`AboutPage render default 1`] = `
         </div>
       </div>
     </div>
-    <section
-      class="pb-16"
-      id="projects"
-    >
-      <div
-        class="container mx-auto px-8 "
-      >
-        <div
-          class="text-center py-16 "
-        >
-          <h2
-            class="text-4xl uppercase  mb-8"
-          >
-            <b>
-              Projects
-            </b>
-          </h2>
-          <p>
-            Personal projects that suits my interests.
-          </p>
-        </div>
-      </div>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
-      >
-        <div>
-          <div
-            class="pb-full relative w-full bg-cover bg-center"
-            style="background-image: url(/images/jpg/projects/mobius.jpg);"
-          >
-            <a
-              href="https://hieudoanm.github.io/hieudoan.news/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                class="absolute h-full w-full bg-gray-900 bg-opacity-80 hover:bg-opacity-90"
-              >
-                <div
-                  class="flex h-full w-full items-center justify-center text-3xl text-white transition-all hover:text-4xl"
-                >
-                  <h3
-                    class="uppercase"
-                  >
-                    news
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div>
-          <div
-            class="pb-full relative w-full bg-cover bg-center"
-            style="background-image: url(/images/jpg/projects/atomic.jpg);"
-          >
-            <a
-              href="https://github.com/hieudoanm/hieudoan.fi"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                class="absolute h-full w-full bg-gray-900 bg-opacity-80 hover:bg-opacity-90"
-              >
-                <div
-                  class="flex h-full w-full items-center justify-center text-3xl text-white transition-all hover:text-4xl"
-                >
-                  <h3
-                    class="uppercase"
-                  >
-                    finance
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div>
-          <div
-            class="pb-full relative w-full bg-cover bg-center"
-            style="background-image: url(/images/jpg/projects/vleague.png);"
-          >
-            <a
-              href="https://vleague.vercel.app/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                class="absolute h-full w-full bg-gray-900 bg-opacity-80 hover:bg-opacity-90"
-              >
-                <div
-                  class="flex h-full w-full items-center justify-center text-3xl text-white transition-all hover:text-4xl"
-                >
-                  <h3
-                    class="uppercase"
-                  >
-                    v.league
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div>
-          <div
-            class="pb-full relative w-full bg-cover bg-center"
-            style="background-image: url(/images/jpg/projects/hieu.jpg);"
-          >
-            <a
-              href="https://github.com/hieudoanm"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                class="absolute h-full w-full bg-gray-900 bg-opacity-80 hover:bg-opacity-90"
-              >
-                <div
-                  class="flex h-full w-full items-center justify-center text-3xl text-white transition-all hover:text-4xl"
-                >
-                  <h3
-                    class="uppercase"
-                  >
-                    HIEU
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
     <section
       class="pb-16"
       id="techstack"

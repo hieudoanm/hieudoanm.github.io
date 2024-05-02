@@ -19,10 +19,6 @@ import {
   HeroSection,
   type HeroSectionProperties,
 } from '@hieudoanm/components/Hero';
-import {
-  LogosCloudSection,
-  type LogosCloudSectionProperties,
-} from '@hieudoanm/components/LogoClouds';
 import { Navbar, type Section } from '@hieudoanm/components/Navbar';
 import {
   NewsletterSection,
@@ -48,7 +44,6 @@ export type AboutTemplateProperties = {
   interests: FeaturesSectionProperties;
   experiences: ExperiencesSectionProperties;
   stats: StatsSectionProperties;
-  logos: LogosCloudSectionProperties;
   team: TeamSectionProperties;
   cta: CallToActionSectionProperties;
   testimonials: TestimonialsSectionProperties;
@@ -62,7 +57,6 @@ export const AboutTemplate: React.FC<AboutTemplateProperties> = ({
   interests,
   experiences,
   stats,
-  logos,
   team,
   cta,
   testimonials,
@@ -96,12 +90,6 @@ export const AboutTemplate: React.FC<AboutTemplateProperties> = ({
           title={stats.title}
           subtitle={stats.subtitle}
           stats={stats.stats}
-        />
-        <LogosCloudSection
-          id={logos.id}
-          title={logos.title}
-          subtitle={logos.subtitle}
-          logos={logos.logos}
         />
         <TeamSection
           id={team.id}

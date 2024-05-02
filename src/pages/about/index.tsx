@@ -7,7 +7,6 @@ import Head from 'next/head';
 const sections: Section[] = [
   { id: 'interests' },
   { id: 'stats' },
-  { id: 'projects' },
   { id: 'techstack' },
   { id: 'testimonials' },
   { id: 'blogs' },
@@ -21,7 +20,6 @@ const AboutPage: NextPage = () => {
       hero,
       interests,
       newsletter,
-      projects,
       stats,
       techstack,
       testimonials,
@@ -39,7 +37,6 @@ const AboutPage: NextPage = () => {
         interests={interests}
         experiences={experiences}
         stats={stats}
-        logos={projects}
         team={techstack}
         cta={cta}
         testimonials={testimonials}
