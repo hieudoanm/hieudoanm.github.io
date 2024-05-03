@@ -123,9 +123,9 @@ const HomePage: NextPage = () => {
           <div className='col-span-1'>
             <div className='flex flex-col items-center justify-center gap-y-8'>
               <div className='mx-auto flex w-[25%] flex-col lg:w-[50%]'>
-                <div className='aspect-square w-full overflow-hidden rounded-full border border-secondary p-1'>
+                <div className='aspect-square w-full overflow-hidden rounded-full border border-secondary'>
                   <div
-                    className='h-full w-full rounded-full bg-cover bg-center'
+                    className='h-full w-full rounded-full border-4 border-white bg-cover bg-center'
                     style={{ backgroundImage: `url(${profile.src})` }}
                   />
                 </div>
