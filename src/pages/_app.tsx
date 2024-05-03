@@ -10,6 +10,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>{APP_NAME}</title>
+        <link rel='icon' href='/favicon.ico' sizes='any' />
       </Head>
       <ChakraProvider>
         <Component {...pageProps} />
