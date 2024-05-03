@@ -113,6 +113,15 @@ const projects: Project[] = [
     link: 'https://hieudoanm.github.io/app-pomodoro',
     pricing: 'free',
   },
+  {
+    id: 'telegram',
+    name: 'TeleX',
+    emoji: '📟',
+    description:
+      'Utility bots enhancing user experience within Telegram messaging platform.',
+    link: 'https://telegramx.vercel.app',
+    pricing: 'free',
+  },
 ];
 
 const HomePage: NextPage = () => {
@@ -169,7 +178,7 @@ const HomePage: NextPage = () => {
                           <div className='flex flex-col gap-y-2 p-4'>
                             <div className='flex items-center justify-between'>
                               <div className='flex items-center gap-x-2'>
-                                <div className='flex h-6 w-6 items-center justify-center rounded-full bg-white'>
+                                <div className='flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white'>
                                   {emoji}
                                 </div>
                                 <h2 className='text-lg font-bold'>{name}</h2>
