@@ -233,6 +233,51 @@ exports[`SocialPage render default 1`] = `
               class="col-span-1"
             >
               <a
+                href="https://hieudoanm.github.io/app-forex"
+                target="_blank"
+              >
+                <div
+                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                >
+                  <div
+                    class="flex flex-col gap-y-2 p-4"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                    >
+                      <div
+                        class="flex items-center gap-x-2"
+                      >
+                        <div
+                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                        >
+                          💱
+                        </div>
+                        <h2
+                          class="text-lg font-bold"
+                        >
+                          Forex
+                        </h2>
+                      </div>
+                      <div
+                        class="badge badge-primary capitalize"
+                      >
+                        free
+                      </div>
+                    </div>
+                    <p
+                      class="truncate text-sm"
+                    >
+                      Currency conversion tool for global financial transactions, facilitating exchange rates.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-span-1"
+            >
+              <a
                 href="https://hieudoanm.github.io/geerthofstede.com/"
                 target="_blank"
               >

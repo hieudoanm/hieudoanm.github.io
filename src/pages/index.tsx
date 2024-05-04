@@ -89,6 +89,15 @@ const projects: Project[] = [
     pricing: 'free',
   },
   {
+    id: 'fx',
+    name: 'Forex',
+    emoji: '💱',
+    description:
+      'Currency conversion tool for global financial transactions, facilitating exchange rates.',
+    link: 'https://hieudoanm.github.io/app-forex',
+    pricing: 'free',
+  },
+  {
     id: 'geerthofstede',
     name: 'Geert Hofstede',
     emoji: '🤌',
