@@ -34,7 +34,7 @@ exports[`SocialPage render default 1`] = `
             >
               <a
                 class="text-2xl font-bold uppercase"
-                href="/about"
+                href="/"
               >
                 Hieu Doan
               </a>
@@ -92,412 +92,688 @@ exports[`SocialPage render default 1`] = `
           class="col-span-1 lg:col-span-2"
         >
           <div
-            class="grid grid-cols-1 gap-8 lg:grid-cols-2"
+            class="flex flex-col gap-y-8"
           >
-            <div
-              class="col-span-1"
+            <h1
+              class="text-xl font-bold"
             >
-              <a
-                href="https://chessinsights.vercel.app"
-                target="_blank"
+              Mini Apps
+            </h1>
+            <div
+              class="grid grid-cols-1 gap-8 lg:grid-cols-2"
+            >
+              <div
+                class="col-span-1"
               >
-                <div
-                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                <a
+                  href="https://chessinsights.vercel.app"
+                  target="_blank"
                 >
                   <div
-                    class="flex flex-col gap-y-2 p-4"
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
                   >
                     <div
-                      class="flex items-center justify-between"
+                      class="flex flex-col gap-y-2 p-4"
                     >
                       <div
-                        class="flex items-center gap-x-2"
+                        class="flex items-center justify-between"
                       >
                         <div
-                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          class="flex items-center gap-x-2"
                         >
-                          ♟️
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            ♟️
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            chess.com Insights
+                          </h2>
                         </div>
-                        <h2
-                          class="text-lg font-bold"
+                        <div
+                          class="badge badge-primary capitalize"
                         >
-                          chess.com Insights
-                        </h2>
+                          free
+                        </div>
                       </div>
-                      <div
-                        class="badge badge-primary capitalize"
+                      <p
+                        class="truncate text-sm"
                       >
-                        free
-                      </div>
+                        Chess.com Insights: analytics, trends, and personalized data for chess improvement.
+                      </p>
                     </div>
-                    <p
-                      class="truncate text-sm"
-                    >
-                      Chess.com Insights: analytics, trends, and personalized data for chess improvement.
-                    </p>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://hieudoanm.github.io/app-colours"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            🎨
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Colours
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          free
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Colours Tools - HEX to RGB and Colours Picker
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://hieudoanm.github.io/app-csv"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            📒
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            CSV
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          free
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Tool for creating, editing, and managing CSV (comma-separated values) files.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://hieudoanm.github.io/app-forex"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            💱
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Forex
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          free
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Currency conversion tool for global financial transactions, facilitating exchange rates.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://hieudoanm.github.io/geerthofstede.com/"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            🤌
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Geert Hofstede
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          free
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Cultural dimensions researcher, known for cross-cultural studies.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://googlex.vercel.app"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            🔍
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            GoogleX
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          free
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Add-ons enhancing Google functionality, offering various features and utilities.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://instagramdownload.vercel.app/"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            📷
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            InstaX
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          free
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Instagram Extensions: Download posts, stories and reels
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://hieudoanm.github.io/app-pomodoro"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            ⏱️
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Pomodoro
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          free
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Time management technique: work for 25 mins, break, repeat.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://telegramx.vercel.app"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            📟
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            TeleX
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          free
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Utility bots enhancing user experience within Telegram messaging platform.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div
-              class="col-span-1"
+            <h1
+              class="text-xl font-bold"
             >
-              <a
-                href="https://hieudoanm.github.io/app-colours"
-                target="_blank"
+              Boilerplates
+            </h1>
+            <div
+              class="grid grid-cols-1 gap-8 lg:grid-cols-2"
+            >
+              <div
+                class="col-span-1"
               >
-                <div
-                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                <a
+                  href="https://github.com/hieudoanm/go-cli"
+                  target="_blank"
                 >
                   <div
-                    class="flex flex-col gap-y-2 p-4"
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
                   >
                     <div
-                      class="flex items-center justify-between"
+                      class="flex flex-col gap-y-2 p-4"
                     >
                       <div
-                        class="flex items-center gap-x-2"
+                        class="flex items-center justify-between"
                       >
                         <div
-                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          class="flex items-center gap-x-2"
                         >
-                          🎨
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          />
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Go CLI
+                          </h2>
                         </div>
-                        <h2
-                          class="text-lg font-bold"
+                        <div
+                          class="badge badge-primary capitalize"
                         >
-                          Colours
-                        </h2>
+                          public
+                        </div>
                       </div>
-                      <div
-                        class="badge badge-primary capitalize"
+                      <p
+                        class="truncate text-sm"
                       >
-                        free
-                      </div>
+                        Golang CLI Boilerplate: Foundation for building command-line interfaces in Go.
+                      </p>
                     </div>
-                    <p
-                      class="truncate text-sm"
-                    >
-                      Colours Tools - HEX to RGB and Colours Picker
-                    </p>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-span-1"
-            >
-              <a
-                href="https://hieudoanm.github.io/app-csv"
-                target="_blank"
+                </a>
+              </div>
+              <div
+                class="col-span-1"
               >
-                <div
-                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                <a
+                  href="https://github.com/hieudoanm/ts-solid"
+                  target="_blank"
                 >
                   <div
-                    class="flex flex-col gap-y-2 p-4"
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
                   >
                     <div
-                      class="flex items-center justify-between"
+                      class="flex flex-col gap-y-2 p-4"
                     >
                       <div
-                        class="flex items-center gap-x-2"
+                        class="flex items-center justify-between"
                       >
                         <div
-                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          class="flex items-center gap-x-2"
                         >
-                          📒
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          />
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Solid.js
+                          </h2>
                         </div>
-                        <h2
-                          class="text-lg font-bold"
+                        <div
+                          class="badge badge-primary capitalize"
                         >
-                          CSV
-                        </h2>
+                          public
+                        </div>
                       </div>
-                      <div
-                        class="badge badge-primary capitalize"
+                      <p
+                        class="truncate text-sm"
                       >
-                        free
-                      </div>
+                        Solid.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.
+                      </p>
                     </div>
-                    <p
-                      class="truncate text-sm"
-                    >
-                      Tool for creating, editing, and managing CSV (comma-separated values) files.
-                    </p>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-span-1"
-            >
-              <a
-                href="https://hieudoanm.github.io/app-forex"
-                target="_blank"
+                </a>
+              </div>
+              <div
+                class="col-span-1"
               >
-                <div
-                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                <a
+                  href="https://github.com/hieudoanm/ts-next"
+                  target="_blank"
                 >
                   <div
-                    class="flex flex-col gap-y-2 p-4"
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
                   >
                     <div
-                      class="flex items-center justify-between"
+                      class="flex flex-col gap-y-2 p-4"
                     >
                       <div
-                        class="flex items-center gap-x-2"
+                        class="flex items-center justify-between"
                       >
                         <div
-                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          class="flex items-center gap-x-2"
                         >
-                          💱
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          />
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Next.js
+                          </h2>
                         </div>
-                        <h2
-                          class="text-lg font-bold"
+                        <div
+                          class="badge badge-primary capitalize"
                         >
-                          Forex
-                        </h2>
+                          public
+                        </div>
                       </div>
-                      <div
-                        class="badge badge-primary capitalize"
+                      <p
+                        class="truncate text-sm"
                       >
-                        free
-                      </div>
+                        Next.js Boilerplate: Efficient starting point for React web application development.
+                      </p>
                     </div>
-                    <p
-                      class="truncate text-sm"
-                    >
-                      Currency conversion tool for global financial transactions, facilitating exchange rates.
-                    </p>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-span-1"
-            >
-              <a
-                href="https://hieudoanm.github.io/geerthofstede.com/"
-                target="_blank"
+                </a>
+              </div>
+              <div
+                class="col-span-1"
               >
-                <div
-                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                <a
+                  href="https://github.com/hieudoanm/ts-expo"
+                  target="_blank"
                 >
                   <div
-                    class="flex flex-col gap-y-2 p-4"
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
                   >
                     <div
-                      class="flex items-center justify-between"
+                      class="flex flex-col gap-y-2 p-4"
                     >
                       <div
-                        class="flex items-center gap-x-2"
+                        class="flex items-center justify-between"
                       >
                         <div
-                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          class="flex items-center gap-x-2"
                         >
-                          🤌
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          />
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Expo
+                          </h2>
                         </div>
-                        <h2
-                          class="text-lg font-bold"
+                        <div
+                          class="badge badge-primary capitalize"
                         >
-                          Geert Hofstede
-                        </h2>
+                          public
+                        </div>
                       </div>
-                      <div
-                        class="badge badge-primary capitalize"
+                      <p
+                        class="truncate text-sm"
                       >
-                        free
-                      </div>
+                        Expo Boilerplate: Rapid setup for cross-platform mobile app development with ease.
+                      </p>
                     </div>
-                    <p
-                      class="truncate text-sm"
-                    >
-                      Cultural dimensions researcher, known for cross-cultural studies.
-                    </p>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-span-1"
-            >
-              <a
-                href="https://googlex.vercel.app"
-                target="_blank"
+                </a>
+              </div>
+              <div
+                class="col-span-1"
               >
-                <div
-                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                <a
+                  href="https://github.com/hieudoanm/ts-graphql"
+                  target="_blank"
                 >
                   <div
-                    class="flex flex-col gap-y-2 p-4"
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
                   >
                     <div
-                      class="flex items-center justify-between"
+                      class="flex flex-col gap-y-2 p-4"
                     >
                       <div
-                        class="flex items-center gap-x-2"
+                        class="flex items-center justify-between"
                       >
                         <div
-                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          class="flex items-center gap-x-2"
                         >
-                          🔍
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          />
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            GraphQL
+                          </h2>
                         </div>
-                        <h2
-                          class="text-lg font-bold"
+                        <div
+                          class="badge badge-primary capitalize"
                         >
-                          GoogleX
-                        </h2>
+                          public
+                        </div>
                       </div>
-                      <div
-                        class="badge badge-primary capitalize"
+                      <p
+                        class="truncate text-sm"
                       >
-                        free
-                      </div>
+                        GraphQL Boilerplate: Kickstart GraphQL projects with structured schema and essential configurations.
+                      </p>
                     </div>
-                    <p
-                      class="truncate text-sm"
-                    >
-                      Add-ons enhancing Google functionality, offering various features and utilities.
-                    </p>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-span-1"
-            >
-              <a
-                href="https://instagramdownload.vercel.app/"
-                target="_blank"
+                </a>
+              </div>
+              <div
+                class="col-span-1"
               >
-                <div
-                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                <a
+                  href="https://github.com/hieudoanm/ts-nest"
+                  target="_blank"
                 >
                   <div
-                    class="flex flex-col gap-y-2 p-4"
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
                   >
                     <div
-                      class="flex items-center justify-between"
+                      class="flex flex-col gap-y-2 p-4"
                     >
                       <div
-                        class="flex items-center gap-x-2"
+                        class="flex items-center justify-between"
                       >
                         <div
-                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          class="flex items-center gap-x-2"
                         >
-                          📷
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          />
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Nest.js
+                          </h2>
                         </div>
-                        <h2
-                          class="text-lg font-bold"
-                        >
-                          InstaX
-                        </h2>
-                      </div>
-                      <div
-                        class="badge badge-primary capitalize"
-                      >
-                        free
-                      </div>
-                    </div>
-                    <p
-                      class="truncate text-sm"
-                    >
-                      Instagram Extensions: Download posts, stories and reels
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-span-1"
-            >
-              <a
-                href="https://hieudoanm.github.io/app-pomodoro"
-                target="_blank"
-              >
-                <div
-                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
-                >
-                  <div
-                    class="flex flex-col gap-y-2 p-4"
-                  >
-                    <div
-                      class="flex items-center justify-between"
-                    >
-                      <div
-                        class="flex items-center gap-x-2"
-                      >
                         <div
-                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          class="badge badge-primary capitalize"
                         >
-                          ⏱️
+                          public
                         </div>
-                        <h2
-                          class="text-lg font-bold"
-                        >
-                          Pomodoro
-                        </h2>
                       </div>
-                      <div
-                        class="badge badge-primary capitalize"
+                      <p
+                        class="truncate text-sm"
                       >
-                        free
-                      </div>
+                        Nest.js Boilerplate: Streamlined foundation for scalable TypeScript backend development.
+                      </p>
                     </div>
-                    <p
-                      class="truncate text-sm"
-                    >
-                      Time management technique: work for 25 mins, break, repeat.
-                    </p>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-span-1"
-            >
-              <a
-                href="https://telegramx.vercel.app"
-                target="_blank"
-              >
-                <div
-                  class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
-                >
-                  <div
-                    class="flex flex-col gap-y-2 p-4"
-                  >
-                    <div
-                      class="flex items-center justify-between"
-                    >
-                      <div
-                        class="flex items-center gap-x-2"
-                      >
-                        <div
-                          class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                        >
-                          📟
-                        </div>
-                        <h2
-                          class="text-lg font-bold"
-                        >
-                          TeleX
-                        </h2>
-                      </div>
-                      <div
-                        class="badge badge-primary capitalize"
-                      >
-                        free
-                      </div>
-                    </div>
-                    <p
-                      class="truncate text-sm"
-                    >
-                      Utility bots enhancing user experience within Telegram messaging platform.
-                    </p>
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>

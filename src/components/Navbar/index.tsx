@@ -5,7 +5,7 @@ import { Container } from '@hieudoanm/components/Container';
 import { scrollTo } from '@hieudoanm/utils/scroll-to';
 import Link from 'next/link';
 import type { FC } from 'react';
-import { FaBullhorn, FaEnvelope, FaTimes, FaUser } from 'react-icons/fa';
+import { FaBullhorn, FaTimes, FaUser } from 'react-icons/fa';
 
 export type Section = {
   id: string;
@@ -59,12 +59,12 @@ export const Navbar: FC<NavbarProperties> = ({
                   <span>About</span>
                 </div>
               </Link>
-              <Link href='/contact'>
+              {/* <Link href='/contact'>
                 <div className='flex items-center gap-2'>
                   <FaEnvelope />
                   <span>Contact</span>
                 </div>
-              </Link>
+              </Link> */}
             </div>
           </div>
           {options.length > 0 && (

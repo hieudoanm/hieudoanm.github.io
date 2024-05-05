@@ -1,8 +1,4 @@
 import {
-  BlogsSection,
-  type BlogsSectionProperties,
-} from '@hieudoanm/components/Blogs';
-import {
   CallToActionSection,
   type CallToActionSectionProperties,
 } from '@hieudoanm/components/CTA';
@@ -24,18 +20,6 @@ import {
   NewsletterSection,
   type NewsletterSectionProperties,
 } from '@hieudoanm/components/Newsletter';
-import {
-  StatsSection,
-  type StatsSectionProperties,
-} from '@hieudoanm/components/Stats';
-import {
-  TeamSection,
-  type TeamSectionProperties,
-} from '@hieudoanm/components/Team';
-import {
-  TestimonialsSection,
-  type TestimonialsSectionProperties,
-} from '@hieudoanm/components/Testimonials';
 import type React from 'react';
 
 export type AboutTemplateProperties = {
@@ -43,11 +27,7 @@ export type AboutTemplateProperties = {
   hero: HeroSectionProperties;
   interests: FeaturesSectionProperties;
   experiences: ExperiencesSectionProperties;
-  stats: StatsSectionProperties;
-  team: TeamSectionProperties;
   cta: CallToActionSectionProperties;
-  testimonials: TestimonialsSectionProperties;
-  blogs: BlogsSectionProperties;
   newsletter: NewsletterSectionProperties;
 };
 
@@ -56,11 +36,7 @@ export const AboutTemplate: React.FC<AboutTemplateProperties> = ({
   hero,
   interests,
   experiences,
-  stats,
-  team,
   cta,
-  testimonials,
-  blogs,
   newsletter,
 }) => {
   return (
@@ -85,36 +61,12 @@ export const AboutTemplate: React.FC<AboutTemplateProperties> = ({
           subtitle={experiences.subtitle}
           experiences={experiences.experiences}
         />
-        <StatsSection
-          id={stats.id}
-          title={stats.title}
-          subtitle={stats.subtitle}
-          stats={stats.stats}
-        />
-        <TeamSection
-          id={team.id}
-          title={team.title}
-          subtitle={team.subtitle}
-          team={team.team}
-        />
         <CallToActionSection
           id={cta.id}
           title={cta.title}
           subtitle={cta.subtitle}
           cta={cta.cta}
           backgroundImage={cta.backgroundImage}
-        />
-        <TestimonialsSection
-          id={testimonials.id}
-          title={testimonials.title}
-          subtitle={testimonials.subtitle}
-          testimonials={testimonials.testimonials}
-        />
-        <BlogsSection
-          id={blogs.id}
-          title={blogs.title}
-          subtitle={blogs.subtitle}
-          blogs={blogs.blogs}
         />
         <NewsletterSection
           id={newsletter.id}

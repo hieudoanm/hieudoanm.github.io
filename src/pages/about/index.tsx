@@ -4,26 +4,11 @@ import { AboutTemplate } from '@hieudoanm/templates/About';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const sections: Section[] = [
-  { id: 'interests' },
-  { id: 'stats' },
-  { id: 'techstack' },
-  { id: 'testimonials' },
-  { id: 'blogs' },
-];
+const sections: Section[] = [{ id: 'interests' }];
 
 const AboutPage: NextPage = () => {
   const {
-    about: {
-      cta,
-      experiences,
-      hero,
-      interests,
-      newsletter,
-      stats,
-      techstack,
-      testimonials,
-    },
+    about: { cta, experiences, hero, interests, newsletter },
   } = metadata;
 
   return (
@@ -36,17 +21,7 @@ const AboutPage: NextPage = () => {
         hero={hero}
         interests={interests}
         experiences={experiences}
-        stats={stats}
-        team={techstack}
         cta={cta}
-        testimonials={testimonials}
-        blogs={{
-          id: 'blogs',
-          title: 'Blogs',
-          subtitle:
-            'Keep updated with new technologies and stories from other developers.',
-          blogs: [],
-        }}
         newsletter={newsletter}
       />
     </>

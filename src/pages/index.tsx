@@ -15,6 +15,7 @@ type Project = {
   description: string;
   link: string;
   pricing: string;
+  type: 'miniapp' | 'boilerplate';
 };
 
 const socialMedias = [
@@ -70,6 +71,7 @@ const projects: Project[] = [
       'Chess.com Insights: analytics, trends, and personalized data for chess improvement.',
     link: 'https://chessinsights.vercel.app',
     pricing: 'free',
+    type: 'miniapp',
   },
   {
     id: 'colours',
@@ -78,6 +80,7 @@ const projects: Project[] = [
     description: 'Colours Tools - HEX to RGB and Colours Picker',
     link: 'https://hieudoanm.github.io/app-colours',
     pricing: 'free',
+    type: 'miniapp',
   },
   {
     id: 'csv',
@@ -87,6 +90,7 @@ const projects: Project[] = [
       'Tool for creating, editing, and managing CSV (comma-separated values) files.',
     link: 'https://hieudoanm.github.io/app-csv',
     pricing: 'free',
+    type: 'miniapp',
   },
   {
     id: 'fx',
@@ -96,6 +100,7 @@ const projects: Project[] = [
       'Currency conversion tool for global financial transactions, facilitating exchange rates.',
     link: 'https://hieudoanm.github.io/app-forex',
     pricing: 'free',
+    type: 'miniapp',
   },
   {
     id: 'geerthofstede',
@@ -105,6 +110,7 @@ const projects: Project[] = [
       'Cultural dimensions researcher, known for cross-cultural studies.',
     link: 'https://hieudoanm.github.io/geerthofstede.com/',
     pricing: 'free',
+    type: 'miniapp',
   },
   {
     id: 'google',
@@ -114,6 +120,7 @@ const projects: Project[] = [
       'Add-ons enhancing Google functionality, offering various features and utilities.',
     link: 'https://googlex.vercel.app',
     pricing: 'free',
+    type: 'miniapp',
   },
   {
     id: 'instax',
@@ -122,6 +129,7 @@ const projects: Project[] = [
     description: 'Instagram Extensions: Download posts, stories and reels',
     link: 'https://instagramdownload.vercel.app/',
     pricing: 'free',
+    type: 'miniapp',
   },
   {
     id: 'pomodoro',
@@ -130,6 +138,7 @@ const projects: Project[] = [
     description: 'Time management technique: work for 25 mins, break, repeat.',
     link: 'https://hieudoanm.github.io/app-pomodoro',
     pricing: 'free',
+    type: 'miniapp',
   },
   {
     id: 'telegram',
@@ -139,8 +148,72 @@ const projects: Project[] = [
       'Utility bots enhancing user experience within Telegram messaging platform.',
     link: 'https://telegramx.vercel.app',
     pricing: 'free',
+    type: 'miniapp',
+  },
+  {
+    id: 'go-cli',
+    name: 'Go CLI',
+    emoji: '',
+    description:
+      'Golang CLI Boilerplate: Foundation for building command-line interfaces in Go.',
+    link: 'https://github.com/hieudoanm/go-cli',
+    pricing: 'public',
+    type: 'boilerplate',
+  },
+  {
+    id: 'solid',
+    name: 'Solid.js',
+    emoji: '',
+    description:
+      'Solid.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.',
+    link: 'https://github.com/hieudoanm/ts-solid',
+    pricing: 'public',
+    type: 'boilerplate',
+  },
+  {
+    id: 'next',
+    name: 'Next.js',
+    emoji: '',
+    description:
+      'Next.js Boilerplate: Efficient starting point for React web application development.',
+    link: 'https://github.com/hieudoanm/ts-next',
+    pricing: 'public',
+    type: 'boilerplate',
+  },
+  {
+    id: 'expo',
+    name: 'Expo',
+    emoji: '',
+    description:
+      'Expo Boilerplate: Rapid setup for cross-platform mobile app development with ease.',
+    link: 'https://github.com/hieudoanm/ts-expo',
+    pricing: 'public',
+    type: 'boilerplate',
+  },
+  {
+    id: 'graphql',
+    name: 'GraphQL',
+    emoji: '',
+    description:
+      'GraphQL Boilerplate: Kickstart GraphQL projects with structured schema and essential configurations.',
+    link: 'https://github.com/hieudoanm/ts-graphql',
+    pricing: 'public',
+    type: 'boilerplate',
+  },
+  {
+    id: 'nest',
+    name: 'Nest.js',
+    emoji: '',
+    description:
+      'Nest.js Boilerplate: Streamlined foundation for scalable TypeScript backend development.',
+    link: 'https://github.com/hieudoanm/ts-nest',
+    pricing: 'public',
+    type: 'boilerplate',
   },
 ];
+
+const miniapps = projects.filter(({ type }) => type === 'miniapp');
+const boilerplates = projects.filter(({ type }) => type === 'boilerplate');
 
 const HomePage: NextPage = () => {
   return (
@@ -158,7 +231,7 @@ const HomePage: NextPage = () => {
                 </div>
               </div>
               <div className='flex flex-col gap-y-4 text-center'>
-                <Link href='/about' className='text-2xl font-bold uppercase'>
+                <Link href='/' className='text-2xl font-bold uppercase'>
                   Hieu Doan
                 </Link>
                 <p>📍 Vietnam</p>
@@ -179,40 +252,79 @@ const HomePage: NextPage = () => {
             </div>
           </div>
           <div className='col-span-1 lg:col-span-2'>
-            <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
-              {projects.map(
-                ({
-                  id = '',
-                  name = '',
-                  emoji = '',
-                  description = '',
-                  link = '',
-                  pricing = '',
-                }: Project) => {
-                  return (
-                    <div key={id} className='col-span-1'>
-                      <Link href={link} target='_blank'>
-                        <div className='w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl'>
-                          <div className='flex flex-col gap-y-2 p-4'>
-                            <div className='flex items-center justify-between'>
-                              <div className='flex items-center gap-x-2'>
-                                <div className='flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white'>
-                                  {emoji}
+            <div className='flex flex-col gap-y-8'>
+              <h1 className='text-xl font-bold'>Mini Apps</h1>
+              <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
+                {miniapps.map(
+                  ({
+                    id = '',
+                    name = '',
+                    emoji = '',
+                    description = '',
+                    link = '',
+                    pricing = '',
+                  }: Project) => {
+                    return (
+                      <div key={id} className='col-span-1'>
+                        <Link href={link} target='_blank'>
+                          <div className='w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl'>
+                            <div className='flex flex-col gap-y-2 p-4'>
+                              <div className='flex items-center justify-between'>
+                                <div className='flex items-center gap-x-2'>
+                                  <div className='flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white'>
+                                    {emoji}
+                                  </div>
+                                  <h2 className='text-lg font-bold'>{name}</h2>
                                 </div>
-                                <h2 className='text-lg font-bold'>{name}</h2>
+                                <div className='badge badge-primary capitalize'>
+                                  {pricing}
+                                </div>
                               </div>
-                              <div className='badge badge-primary capitalize'>
-                                {pricing}
-                              </div>
+                              <p className='truncate text-sm'>{description}</p>
                             </div>
-                            <p className='truncate text-sm'>{description}</p>
                           </div>
-                        </div>
-                      </Link>
-                    </div>
-                  );
-                }
-              )}
+                        </Link>
+                      </div>
+                    );
+                  }
+                )}
+              </div>
+              <h1 className='text-xl font-bold'>Boilerplates</h1>
+              <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
+                {boilerplates.map(
+                  ({
+                    id = '',
+                    name = '',
+                    emoji = '',
+                    description = '',
+                    link = '',
+                    pricing = '',
+                  }: Project) => {
+                    return (
+                      <div key={id} className='col-span-1'>
+                        <Link href={link} target='_blank'>
+                          <div className='w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl'>
+                            <div className='flex flex-col gap-y-2 p-4'>
+                              <div className='flex items-center justify-between'>
+                                <div className='flex items-center gap-x-2'>
+                                  <div className='flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white'>
+                                    {emoji}
+                                  </div>
+                                  <h2 className='text-lg font-bold'>{name}</h2>
+                                </div>
+                                <div className='badge badge-primary capitalize'>
+                                  {pricing}
+                                </div>
+                              </div>
+                              <p className='truncate text-sm'>{description}</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                    );
+                  }
+                )}
+              </div>
             </div>
           </div>
         </div>

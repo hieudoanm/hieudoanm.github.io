@@ -109,30 +109,6 @@ exports[`AboutPage render default 1`] = `
                 </span>
               </div>
             </a>
-            <a
-              href="/contact"
-            >
-              <div
-                class="flex items-center gap-2"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 512 512"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
-                  />
-                </svg>
-                <span>
-                  Contact
-                </span>
-              </div>
-            </a>
           </div>
         </div>
         <div
@@ -188,46 +164,6 @@ exports[`AboutPage render default 1`] = `
                 type="button"
               >
                 interests
-              </button>
-              <button
-                class="chakra-menu__menuitem capitalize css-1k756t9"
-                data-index="1"
-                id="menu-list-:r1:-menuitem-:r3:"
-                role="menuitem"
-                tabindex="-1"
-                type="button"
-              >
-                stats
-              </button>
-              <button
-                class="chakra-menu__menuitem capitalize css-1k756t9"
-                data-index="2"
-                id="menu-list-:r1:-menuitem-:r4:"
-                role="menuitem"
-                tabindex="-1"
-                type="button"
-              >
-                techstack
-              </button>
-              <button
-                class="chakra-menu__menuitem capitalize css-1k756t9"
-                data-index="3"
-                id="menu-list-:r1:-menuitem-:r5:"
-                role="menuitem"
-                tabindex="-1"
-                type="button"
-              >
-                testimonials
-              </button>
-              <button
-                class="chakra-menu__menuitem capitalize css-1k756t9"
-                data-index="4"
-                id="menu-list-:r1:-menuitem-:r6:"
-                role="menuitem"
-                tabindex="-1"
-                type="button"
-              >
-                blogs
               </button>
             </div>
           </div>
@@ -403,11 +339,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:r7:"
+              aria-controls="accordion-panel-:r3:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="0"
-              id="accordion-button-:r7:"
+              id="accordion-button-:r3:"
               type="button"
             >
               <div
@@ -448,9 +384,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:r7:"
+                aria-labelledby="accordion-button-:r3:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:r7:"
+                id="accordion-panel-:r3:"
                 role="region"
               >
                 Full-stack Software Developer
@@ -461,11 +397,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:r9:"
+              aria-controls="accordion-panel-:r5:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="1"
-              id="accordion-button-:r9:"
+              id="accordion-button-:r5:"
               type="button"
             >
               <div
@@ -506,9 +442,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:r9:"
+                aria-labelledby="accordion-button-:r5:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:r9:"
+                id="accordion-panel-:r5:"
                 role="region"
               >
                 Full-stack Software Developer
@@ -519,11 +455,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:rb:"
+              aria-controls="accordion-panel-:r7:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="2"
-              id="accordion-button-:rb:"
+              id="accordion-button-:r7:"
               type="button"
             >
               <div
@@ -564,9 +500,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:rb:"
+                aria-labelledby="accordion-button-:r7:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:rb:"
+                id="accordion-panel-:r7:"
                 role="region"
               >
                 Full-stack Software Developer
@@ -577,11 +513,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:rd:"
+              aria-controls="accordion-panel-:r9:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="3"
-              id="accordion-button-:rd:"
+              id="accordion-button-:r9:"
               type="button"
             >
               <div
@@ -622,9 +558,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:rd:"
+                aria-labelledby="accordion-button-:r9:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:rd:"
+                id="accordion-panel-:r9:"
                 role="region"
               >
                 Front-end Developer
@@ -635,11 +571,11 @@ exports[`AboutPage render default 1`] = `
             class="chakra-accordion__item css-1fsnuue"
           >
             <button
-              aria-controls="accordion-panel-:rf:"
+              aria-controls="accordion-panel-:rb:"
               aria-expanded="false"
               class="chakra-accordion__button css-ubg1nw"
               data-index="4"
-              id="accordion-button-:rf:"
+              id="accordion-button-:rb:"
               type="button"
             >
               <div
@@ -680,9 +616,9 @@ exports[`AboutPage render default 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                aria-labelledby="accordion-button-:rf:"
+                aria-labelledby="accordion-button-:rb:"
                 class="chakra-accordion__panel css-0"
-                id="accordion-panel-:rf:"
+                id="accordion-panel-:rb:"
                 role="region"
               >
                 Front-end Developer
@@ -692,332 +628,6 @@ exports[`AboutPage render default 1`] = `
         </div>
       </div>
     </div>
-    <div
-      class="pb-16"
-      id="stats"
-    >
-      <div
-        class="container mx-auto px-8 "
-      >
-        <div
-          class="text-center py-16 "
-        >
-          <h2
-            class="text-4xl uppercase  mb-8"
-          >
-            <b>
-              Statistics
-            </b>
-          </h2>
-          <p>
-            My experiences in number.
-          </p>
-        </div>
-        <div
-          class="rounded-lg border shadow-2xl"
-        >
-          <div
-            class="grid grid-cols-1 md:grid-cols-4"
-          >
-            <div
-              class="border-r-0 border-b md:border-r md:border-b-0 p-8 text-center"
-            >
-              <div
-                class="text-5xl"
-              >
-                8
-              </div>
-              <div
-                class="text-xl"
-              >
-                Years
-              </div>
-              <p
-                class="text-gray-500"
-              >
-                of Experiences
-              </p>
-            </div>
-            <div
-              class="border-r-0 border-b md:border-r md:border-b-0 p-8 text-center"
-            >
-              <div
-                class="text-5xl"
-              >
-                4
-              </div>
-              <div
-                class="text-xl"
-              >
-                Projects
-              </div>
-              <p
-                class="text-gray-500"
-              >
-                Vietnam - V.League - Vi
-              </p>
-            </div>
-            <div
-              class="border-r-0 border-b md:border-r md:border-b-0 p-8 text-center"
-            >
-              <div
-                class="text-5xl"
-              >
-                3
-              </div>
-              <div
-                class="text-xl"
-              >
-                Programming Languages
-              </div>
-              <p
-                class="text-gray-500"
-              >
-                TypeScript - Python - Golang
-              </p>
-            </div>
-            <div
-              class=" p-8 text-center"
-            >
-              <div
-                class="text-5xl"
-              >
-                2
-              </div>
-              <div
-                class="text-xl"
-              >
-                Foreign Languages
-              </div>
-              <p
-                class="text-gray-500"
-              >
-                English - Korean
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section
-      class="pb-16"
-      id="techstack"
-    >
-      <div
-        class="container mx-auto px-8 "
-      >
-        <div
-          class="text-center py-16 "
-        >
-          <h2
-            class="text-4xl uppercase  mb-8"
-          >
-            <b>
-              Techstack
-            </b>
-          </h2>
-          <p>
-            Programming Languages - Frameworks - Libraries
-          </p>
-        </div>
-        <div
-          class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
-        >
-          <div
-            class="text-center"
-          >
-            <div
-              class="mx-auto mb-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border"
-            >
-              <img
-                alt="React"
-                data-nimg="1"
-                decoding="async"
-                height="100"
-                loading="lazy"
-                src="https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/development/front-end-framework/react.svg"
-                style="color: transparent;"
-                width="100"
-              />
-            </div>
-            <h2
-              class="text-2xl"
-            >
-              React
-            </h2>
-            <p
-              class="mb-4"
-            >
-              Front-end Framework
-            </p>
-            <a
-              class="mx-auto inline-block"
-              href="https://reactjs.org/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 496 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"
-                />
-              </svg>
-            </a>
-          </div>
-          <div
-            class="text-center"
-          >
-            <div
-              class="mx-auto mb-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border"
-            >
-              <img
-                alt="Node.js"
-                data-nimg="1"
-                decoding="async"
-                height="100"
-                loading="lazy"
-                src="https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/development/runtime/node.js.svg"
-                style="color: transparent;"
-                width="100"
-              />
-            </div>
-            <h2
-              class="text-2xl"
-            >
-              Node.js
-            </h2>
-            <p
-              class="mb-4"
-            >
-              Back-end
-            </p>
-            <a
-              class="mx-auto inline-block"
-              href="https://nodejs.org/en/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 496 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"
-                />
-              </svg>
-            </a>
-          </div>
-          <div
-            class="text-center"
-          >
-            <div
-              class="mx-auto mb-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border"
-            >
-              <img
-                alt="Git"
-                data-nimg="1"
-                decoding="async"
-                height="100"
-                loading="lazy"
-                src="https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/development/version-control/git.svg"
-                style="color: transparent;"
-                width="100"
-              />
-            </div>
-            <h2
-              class="text-2xl"
-            >
-              Git
-            </h2>
-            <p
-              class="mb-4"
-            >
-              Version Control
-            </p>
-            <a
-              class="mx-auto inline-block"
-              href="https://git-scm.com/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 496 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"
-                />
-              </svg>
-            </a>
-          </div>
-          <div
-            class="text-center"
-          >
-            <div
-              class="mx-auto mb-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border"
-            >
-              <img
-                alt="AWS"
-                data-nimg="1"
-                decoding="async"
-                height="100"
-                loading="lazy"
-                src="https://raw.githubusercontent.com/hieudoanm/react-icons/master/svg/big-tech/amazon/aws.svg"
-                style="color: transparent;"
-                width="100"
-              />
-            </div>
-            <h2
-              class="text-2xl"
-            >
-              AWS
-            </h2>
-            <p
-              class="mb-4"
-            >
-              Cloud Computing
-            </p>
-            <a
-              class="mx-auto inline-block"
-              href="https://aws.amazon.com/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 496 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
     <div
       class="py-16"
     >
@@ -1058,73 +668,6 @@ exports[`AboutPage render default 1`] = `
             </a>
           </div>
         </div>
-      </div>
-    </div>
-    <section
-      class="pb-16"
-      id="testimonials"
-    >
-      <div
-        class="container mx-auto px-8 "
-      >
-        <div
-          class="text-center py-16 "
-        >
-          <h2
-            class="text-4xl uppercase  mb-8"
-          >
-            <b>
-              Testimonials
-            </b>
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor.
-          </p>
-        </div>
-        <div
-          class="mx-auto w-full md:w-6/12"
-        >
-          <p
-            class="mb-8 text-justify text-2xl"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus ex, interdum quis leo vitae, viverra bibendum neque. Suspendisse convallis vel purus ut elementum. Vestibulum id nulla scelerisque, hendrerit sem.
-          </p>
-          <p
-            class="text-left md:text-right"
-          >
-            <b>
-              John Doe
-            </b>
-             / 
-            Colleague at ABC
-          </p>
-        </div>
-      </div>
-    </section>
-    <div
-      class="pb-16"
-      id="blogs"
-    >
-      <div
-        class="container mx-auto px-8 "
-      >
-        <div
-          class="text-center py-16 "
-        >
-          <h2
-            class="text-4xl uppercase  mb-8"
-          >
-            <b>
-              Blogs
-            </b>
-          </h2>
-          <p>
-            Keep updated with new technologies and stories from other developers.
-          </p>
-        </div>
-        <div
-          class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
-        />
       </div>
     </div>
     <div
