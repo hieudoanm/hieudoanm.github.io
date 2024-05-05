@@ -107,6 +107,15 @@ const projects: Project[] = [
     pricing: 'free',
   },
   {
+    id: 'google',
+    name: 'GoogleX',
+    emoji: '🔍',
+    description:
+      'Add-ons enhancing Google functionality, offering various features and utilities.',
+    link: 'https://googlex.vercel.app',
+    pricing: 'free',
+  },
+  {
     id: 'instax',
     name: 'InstaX',
     emoji: '📷',
