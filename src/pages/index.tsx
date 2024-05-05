@@ -196,7 +196,7 @@ const projects: Project[] = [
     emoji: '',
     description:
       'GraphQL Boilerplate: Kickstart GraphQL projects with structured schema and essential configurations.',
-    link: 'https://github.com/hieudoanm/ts-graphql',
+    link: 'https://github.com/hieudoanm/ts-gql',
     pricing: 'public',
     type: 'boilerplate',
   },
