@@ -692,7 +692,7 @@ exports[`SocialPage render default 1`] = `
                 class="col-span-1"
               >
                 <a
-                  href="https://github.com/hieudoanm/ts-graphql"
+                  href="https://github.com/hieudoanm/ts-gql"
                   target="_blank"
                 >
                   <div
