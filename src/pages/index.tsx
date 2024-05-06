@@ -201,6 +201,16 @@ const projects: Project[] = [
     type: 'boilerplate',
   },
   {
+    id: 'hono',
+    name: 'Hono',
+    emoji: '',
+    description:
+      '"Hono - Serverless Framework: Scalable, efficient, cloud-native, event-driven computing solution."',
+    link: 'https://github.com/hieudoanm/ts-hono',
+    pricing: 'public',
+    type: 'boilerplate',
+  },
+  {
     id: 'nest',
     name: 'Nest.js',
     emoji: '',
