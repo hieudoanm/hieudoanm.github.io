@@ -141,12 +141,12 @@ const projects: Project[] = [
     type: 'miniapp',
   },
   {
-    id: 'telegram',
-    name: 'TeleX',
+    id: 'telegpt',
+    name: 'TeleGPT',
     emoji: '📟',
     description:
-      'Utility bots enhancing user experience within Telegram messaging platform.',
-    link: 'https://telegramx.vercel.app',
+      'Enhanced messaging with AI-driven assistance, enriching Telegram conversations seamlessly.',
+    link: 'https://telegramxgpt.vercel.app',
     pricing: 'free',
     type: 'miniapp',
   },

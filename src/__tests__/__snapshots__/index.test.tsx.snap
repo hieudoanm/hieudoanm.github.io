@@ -466,7 +466,7 @@ exports[`SocialPage render default 1`] = `
                 class="col-span-1"
               >
                 <a
-                  href="https://telegramx.vercel.app"
+                  href="https://telegramxgpt.vercel.app"
                   target="_blank"
                 >
                   <div
@@ -489,7 +489,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            TeleX
+                            TeleGPT
                           </h2>
                         </div>
                         <div
@@ -501,7 +501,7 @@ exports[`SocialPage render default 1`] = `
                       <p
                         class="truncate text-sm"
                       >
-                        Utility bots enhancing user experience within Telegram messaging platform.
+                        Enhanced messaging with AI-driven assistance, enriching Telegram conversations seamlessly.
                       </p>
                     </div>
                   </div>
