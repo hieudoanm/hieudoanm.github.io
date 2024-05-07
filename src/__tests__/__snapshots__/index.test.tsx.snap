@@ -563,6 +563,49 @@ exports[`SocialPage render default 1`] = `
                 class="col-span-1"
               >
                 <a
+                  href="https://github.com/hieudoanm/py-fastapi"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          />
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            FastAPI
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          public
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Build RESTful API quickly.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
                   href="https://github.com/hieudoanm/ts-solid"
                   target="_blank"
                 >
@@ -584,7 +627,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            Solid.js
+                            TypeScript - Solid.js
                           </h2>
                         </div>
                         <div
@@ -627,7 +670,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            Next.js
+                            TypeScript - Next.js
                           </h2>
                         </div>
                         <div
@@ -670,7 +713,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            Expo
+                            TypeScript - Expo
                           </h2>
                         </div>
                         <div
@@ -713,7 +756,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            GraphQL
+                            TypeScript - GraphQL
                           </h2>
                         </div>
                         <div
@@ -756,7 +799,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            Hono
+                            TypeScript - Hono
                           </h2>
                         </div>
                         <div
@@ -799,7 +842,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            Nest.js
+                            TypeScript - Nest.js
                           </h2>
                         </div>
                         <div

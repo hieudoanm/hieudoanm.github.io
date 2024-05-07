@@ -161,8 +161,17 @@ const projects: Project[] = [
     type: 'boilerplate',
   },
   {
-    id: 'solid',
-    name: 'Solid.js',
+    id: 'py-fast',
+    name: 'FastAPI',
+    emoji: '',
+    description: 'Build RESTful API quickly.',
+    link: 'https://github.com/hieudoanm/py-fastapi',
+    pricing: 'public',
+    type: 'boilerplate',
+  },
+  {
+    id: 'ts-solid',
+    name: 'TypeScript - Solid.js',
     emoji: '',
     description:
       'Solid.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.',
@@ -171,8 +180,8 @@ const projects: Project[] = [
     type: 'boilerplate',
   },
   {
-    id: 'next',
-    name: 'Next.js',
+    id: 'ts - next',
+    name: 'TypeScript - Next.js',
     emoji: '',
     description:
       'Next.js Boilerplate: Efficient starting point for React web application development.',
@@ -181,8 +190,8 @@ const projects: Project[] = [
     type: 'boilerplate',
   },
   {
-    id: 'expo',
-    name: 'Expo',
+    id: 'ts-expo',
+    name: 'TypeScript - Expo',
     emoji: '',
     description:
       'Expo Boilerplate: Rapid setup for cross-platform mobile app development with ease.',
@@ -191,8 +200,8 @@ const projects: Project[] = [
     type: 'boilerplate',
   },
   {
-    id: 'graphql',
-    name: 'GraphQL',
+    id: 'ts-gql',
+    name: 'TypeScript - GraphQL',
     emoji: '',
     description:
       'GraphQL Boilerplate: Kickstart GraphQL projects with structured schema and essential configurations.',
@@ -201,8 +210,8 @@ const projects: Project[] = [
     type: 'boilerplate',
   },
   {
-    id: 'hono',
-    name: 'Hono',
+    id: 'ts-hono',
+    name: 'TypeScript - Hono',
     emoji: '',
     description:
       '"Hono - Serverless Framework: Scalable, efficient, cloud-native, event-driven computing solution."',
@@ -211,8 +220,8 @@ const projects: Project[] = [
     type: 'boilerplate',
   },
   {
-    id: 'nest',
-    name: 'Nest.js',
+    id: 'ts-nest',
+    name: 'TypeScript - Nest.js',
     emoji: '',
     description:
       'Nest.js Boilerplate: Streamlined foundation for scalable TypeScript backend development.',
