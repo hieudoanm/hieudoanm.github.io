@@ -132,6 +132,15 @@ const projects: Project[] = [
     type: 'miniapp',
   },
   {
+    id: 'news',
+    name: 'News Express',
+    emoji: '📰',
+    description: 'Reading quick news in 10 minutes every morning',
+    link: 'https://newsexpress.vercel.app/',
+    pricing: 'free',
+    type: 'miniapp',
+  },
+  {
     id: 'pomodoro',
     name: 'Pomodoro',
     emoji: '⏱️',
