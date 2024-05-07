@@ -553,11 +553,39 @@ exports[`SocialPage render default 1`] = `
                 </a>
               </div>
             </div>
-            <h1
-              class="text-xl font-bold"
+            <div
+              class="flex items-center justify-between"
             >
-              Boilerplates
-            </h1>
+              <h1
+                class="text-xl font-bold"
+              >
+                Boilerplates (
+                8
+                )
+              </h1>
+              <div
+                class="join"
+              >
+                <button
+                  class="btn bg-content-base join-item uppercase"
+                  type="button"
+                >
+                  go
+                </button>
+                <button
+                  class="btn bg-content-base join-item uppercase"
+                  type="button"
+                >
+                  py
+                </button>
+                <button
+                  class="btn bg-content-base join-item uppercase"
+                  type="button"
+                >
+                  ts
+                </button>
+              </div>
+            </div>
             <div
               class="grid grid-cols-1 gap-8 lg:grid-cols-2"
             >
@@ -629,7 +657,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            FastAPI
+                            Python - FastAPI
                           </h2>
                         </div>
                         <div

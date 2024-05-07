@@ -7,6 +7,7 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
 } from 'react-icons/fa';
+import { useState } from 'react';
 
 type Project = {
   id: string;
@@ -16,6 +17,7 @@ type Project = {
   link: string;
   pricing: string;
   type: 'miniapp' | 'boilerplate';
+  category: string;
 };
 
 const socialMedias = [
@@ -62,6 +64,7 @@ const socialMedias = [
     title: 'Instagram',
   },
 ];
+
 const projects: Project[] = [
   {
     id: 'chess',
@@ -72,6 +75,7 @@ const projects: Project[] = [
     link: 'https://chessinsights.vercel.app',
     pricing: 'free',
     type: 'miniapp',
+    category: 'visualization',
   },
   {
     id: 'colours',
@@ -81,6 +85,7 @@ const projects: Project[] = [
     link: 'https://hieudoanm.github.io/app-colours',
     pricing: 'free',
     type: 'miniapp',
+    category: 'tool',
   },
   {
     id: 'csv',
@@ -91,6 +96,7 @@ const projects: Project[] = [
     link: 'https://hieudoanm.github.io/app-csv',
     pricing: 'free',
     type: 'miniapp',
+    category: 'tool',
   },
   {
     id: 'fx',
@@ -101,6 +107,7 @@ const projects: Project[] = [
     link: 'https://hieudoanm.github.io/app-forex',
     pricing: 'free',
     type: 'miniapp',
+    category: 'tool',
   },
   {
     id: 'geerthofstede',
@@ -111,6 +118,7 @@ const projects: Project[] = [
     link: 'https://hieudoanm.github.io/geerthofstede.com/',
     pricing: 'free',
     type: 'miniapp',
+    category: 'visualization',
   },
   {
     id: 'google',
@@ -121,6 +129,7 @@ const projects: Project[] = [
     link: 'https://googlex.vercel.app',
     pricing: 'free',
     type: 'miniapp',
+    category: 'tool',
   },
   {
     id: 'instax',
@@ -130,6 +139,7 @@ const projects: Project[] = [
     link: 'https://instagramdownload.vercel.app/',
     pricing: 'free',
     type: 'miniapp',
+    category: 'tool',
   },
   {
     id: 'news',
@@ -139,6 +149,7 @@ const projects: Project[] = [
     link: 'https://newsexpress.vercel.app/',
     pricing: 'free',
     type: 'miniapp',
+    category: 'tool',
   },
   {
     id: 'pomodoro',
@@ -148,6 +159,7 @@ const projects: Project[] = [
     link: 'https://hieudoanm.github.io/app-pomodoro',
     pricing: 'free',
     type: 'miniapp',
+    category: 'tool',
   },
   {
     id: 'telegpt',
@@ -158,6 +170,7 @@ const projects: Project[] = [
     link: 'https://telegramxgpt.vercel.app',
     pricing: 'free',
     type: 'miniapp',
+    category: 'gpt',
   },
   {
     id: 'go-cli',
@@ -168,15 +181,17 @@ const projects: Project[] = [
     link: 'https://github.com/hieudoanm/go-cli',
     pricing: 'public',
     type: 'boilerplate',
+    category: 'go',
   },
   {
     id: 'py-fast',
-    name: 'FastAPI',
+    name: 'Python - FastAPI',
     emoji: '',
     description: 'Build RESTful API quickly.',
     link: 'https://github.com/hieudoanm/py-fastapi',
     pricing: 'public',
     type: 'boilerplate',
+    category: 'py',
   },
   {
     id: 'ts-solid',
@@ -187,6 +202,7 @@ const projects: Project[] = [
     link: 'https://github.com/hieudoanm/ts-solid',
     pricing: 'public',
     type: 'boilerplate',
+    category: 'ts',
   },
   {
     id: 'ts - next',
@@ -197,6 +213,7 @@ const projects: Project[] = [
     link: 'https://github.com/hieudoanm/ts-next',
     pricing: 'public',
     type: 'boilerplate',
+    category: 'ts',
   },
   {
     id: 'ts-expo',
@@ -207,6 +224,7 @@ const projects: Project[] = [
     link: 'https://github.com/hieudoanm/ts-expo',
     pricing: 'public',
     type: 'boilerplate',
+    category: 'ts',
   },
   {
     id: 'ts-gql',
@@ -217,6 +235,7 @@ const projects: Project[] = [
     link: 'https://github.com/hieudoanm/ts-gql',
     pricing: 'public',
     type: 'boilerplate',
+    category: 'ts',
   },
   {
     id: 'ts-hono',
@@ -227,6 +246,7 @@ const projects: Project[] = [
     link: 'https://github.com/hieudoanm/ts-hono',
     pricing: 'public',
     type: 'boilerplate',
+    category: 'ts',
   },
   {
     id: 'ts-nest',
@@ -237,13 +257,27 @@ const projects: Project[] = [
     link: 'https://github.com/hieudoanm/ts-nest',
     pricing: 'public',
     type: 'boilerplate',
+    category: 'ts',
   },
 ];
 
-const miniapps = projects.filter(({ type }) => type === 'miniapp');
-const boilerplates = projects.filter(({ type }) => type === 'boilerplate');
-
 const HomePage: NextPage = () => {
+  const [boilerplateFilter, setBoilerplateFilter] = useState('');
+
+  const miniapps = projects.filter(({ type }) => type === 'miniapp');
+  const boilerplates = projects.filter(({ category, type }) => {
+    const categoryFilter: boolean =
+      boilerplateFilter !== '' ? boilerplateFilter === category : true;
+    return type === 'boilerplate' && categoryFilter;
+  });
+
+  const changeBoilerplateFilter = (value: string) => {
+    setBoilerplateFilter((previous) => {
+      if (value === previous) return '';
+      return value;
+    });
+  };
+
   return (
     <div data-theme='luxury'>
       <div className='h-screen w-screen overflow-auto bg-white p-8 lg:p-16'>
@@ -317,7 +351,28 @@ const HomePage: NextPage = () => {
                   }
                 )}
               </div>
-              <h1 className='text-xl font-bold'>Boilerplates</h1>
+              <div className='flex items-center justify-between'>
+                <h1 className='text-xl font-bold'>
+                  Boilerplates ({boilerplates.length})
+                </h1>
+                <div className='join'>
+                  {['go', 'py', 'ts'].map((category) => {
+                    const bg =
+                      category === boilerplateFilter
+                        ? 'bg-secondary'
+                        : 'bg-content-base';
+                    return (
+                      <button
+                        key={category}
+                        type='button'
+                        className={`btn ${bg} join-item uppercase`}
+                        onClick={() => changeBoilerplateFilter(category)}>
+                        {category}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
               <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
                 {boilerplates.map(
                   ({
