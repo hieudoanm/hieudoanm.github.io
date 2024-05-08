@@ -1,6 +1,5 @@
-/** @type {import('next').NextConfig} */
-
-const nextPWA = require('next-pwa');
+import million from 'million/compiler';
+import nextPWA from 'next-pwa';
 
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
 console.log(`NODE_ENV=${NODE_ENV}`);
@@ -12,6 +11,7 @@ const withPWA = nextPWA({
   register: NODE_ENV !== 'development',
 });
 
+/** @type {import('next').NextConfig} */
 const nextConfig = withPWA({
   swcMinify: true,
   output: 'export',
@@ -19,4 +19,4 @@ const nextConfig = withPWA({
   images: { loader: 'akamai', path: '' },
 });
 
-module.exports = nextConfig;
+export default million.next(nextConfig);

@@ -41,6 +41,7 @@
     "uuid": "9.0.1"
   },
   "devDependencies": {
+    "@million/lint": "0.0.73",
     "@testing-library/react": "15.0.7",
     "@types/jest": "29.5.12",
     "@types/node": "20.12.10",
@@ -60,6 +61,7 @@
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "kill-port": "2.0.1",
+    "million": "3.0.6",
     "postcss": "8.4.38",
     "prettier": "3.2.5",
     "prettier-plugin-tailwindcss": "0.5.14",
