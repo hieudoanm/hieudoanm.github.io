@@ -205,23 +205,12 @@ const projects: Project[] = [
     category: 'ts',
   },
   {
-    id: 'ts - next',
-    name: 'TypeScript - Next.js',
+    id: 'ts - nett',
+    name: 'TypeScript - NETT',
     emoji: '',
     description:
-      'Next.js Boilerplate: Efficient starting point for React web application development.',
+      'Next.js x Expo x Tauri x tRPC Boilerplate: Starting point for React application.',
     link: 'https://github.com/hieudoanm/ts-next',
-    pricing: 'public',
-    type: 'boilerplate',
-    category: 'ts',
-  },
-  {
-    id: 'ts-expo',
-    name: 'TypeScript - Expo',
-    emoji: '',
-    description:
-      'Expo Boilerplate: Rapid setup for cross-platform mobile app development with ease.',
-    link: 'https://github.com/hieudoanm/ts-expo',
     pricing: 'public',
     type: 'boilerplate',
     category: 'ts',
