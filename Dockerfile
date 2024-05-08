@@ -1,4 +1,4 @@
-FROM node:20.12.2 AS build
+FROM node:20.13.0 AS build
 
 LABEL author hieudoanm
 
@@ -12,7 +12,7 @@ COPY . /home/node/app
 RUN yarn install
 RUN yarn build
 
-FROM node:20.12.2-alpine
+FROM node:20.13.0-alpine
 
 USER node
 
