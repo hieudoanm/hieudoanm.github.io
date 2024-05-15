@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import { APP_NAME } from '@hieudoanm/common/constants/time.constants';
-import '@hieudoanm/styles/globals.scss';
+import '@hieudoanm/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
