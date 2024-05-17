@@ -99,17 +99,6 @@ const projects: Project[] = [
     category: 'tool',
   },
   {
-    id: 'fx',
-    name: 'Forex',
-    emoji: '💱',
-    description:
-      'Currency conversion tool for global financial transactions, facilitating exchange rates.',
-    link: 'https://hieudoanm.github.io/app-forex',
-    pricing: 'free',
-    type: 'miniapp',
-    category: 'tool',
-  },
-  {
     id: 'geerthofstede',
     name: 'Geert Hofstede',
     emoji: '🤌',
@@ -142,11 +131,12 @@ const projects: Project[] = [
     category: 'tool',
   },
   {
-    id: 'news',
-    name: 'News Express',
-    emoji: '📰',
-    description: 'Reading quick news in 10 minutes every morning',
-    link: 'https://newsexpress.vercel.app/',
+    id: 'nlp',
+    name: 'Natural Language Processing',
+    emoji: '🈸',
+    description:
+      'Natural Language Toolkit: Online Tools for text analysis and linguistic processing.',
+    link: 'https://languagesdetectionweb.vercel.app/',
     pricing: 'free',
     type: 'miniapp',
     category: 'tool',
@@ -171,6 +161,16 @@ const projects: Project[] = [
     pricing: 'free',
     type: 'miniapp',
     category: 'gpt',
+  },
+  {
+    id: 'x',
+    name: 'XPress',
+    emoji: '📰',
+    description: 'Reading quick news in 10 minutes every morning',
+    link: 'https://newsexpress.vercel.app/',
+    pricing: 'free',
+    type: 'miniapp',
+    category: 'tool',
   },
   {
     id: 'go-cli',
@@ -206,7 +206,7 @@ const projects: Project[] = [
   },
   {
     id: 'ts - nett',
-    name: 'TypeScript - NETT',
+    name: 'TypeScript - N.E.T.T',
     emoji: '',
     description:
       'Next.js x Expo x Tauri x tRPC Boilerplate: Starting point for React application.',
@@ -348,8 +348,8 @@ const HomePage: NextPage = () => {
                   {['go', 'py', 'ts'].map((category) => {
                     const bg =
                       category === boilerplateFilter
-                        ? 'bg-secondary'
-                        : 'bg-content-base';
+                        ? 'bg-content-base'
+                        : 'bg-primary';
                     return (
                       <button
                         key={category}
