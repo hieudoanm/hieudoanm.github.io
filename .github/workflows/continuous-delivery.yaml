@@ -54,7 +54,7 @@ jobs:
         run: touch .nojekyll
         working-directory: out
       - name: Deploy GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.6.0
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
           token: ${{ secrets.GHP_TOKEN }}
           branch: gh-pages
