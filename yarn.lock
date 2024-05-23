@@ -2715,10 +2715,10 @@
   resolved "https://registry.npmjs.org/@kurkle/color/-/color-0.3.2.tgz"
   integrity sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==
 
-"@million/install@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@million/install/-/install-0.0.3.tgz#ccccebe09823c0d52d4e672bbb69d2fef64e33ef"
-  integrity sha512-yK8NgP+73+Tby/bmQ12B96bJ7RjsLazLtFgBed1Fg1WfTCCpHTILq79yQMSD/OWgm1tt1NYV4ELaTRM6wZOeAg==
+"@million/install@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@million/install/-/install-0.0.5.tgz#4a12e81330aa27382b52ca85951c316c55c3ac17"
+  integrity sha512-9KYVwMT6yEX0k/DMo8cOQNxeFdZme/yTqncPwXgvoQ0qUAUkulvm0ivRHTYrsuPNrCA6lqsJD005D1hhuI2fGQ==
   dependencies:
     "@antfu/ni" "^0.21.12"
     "@axiomhq/js" "1.0.0-rc.3"
@@ -2727,6 +2727,7 @@
     "@clack/prompts" "^0.7.0"
     cli-high "^0.4.1"
     diff "^5.1.0"
+    nanoid "^5.0.7"
     posthog-node "^3.6.3"
     xycolors "^0.1.1"
 
@@ -7344,14 +7345,14 @@ micromatch@^4.0.4, micromatch@^4.0.5:
     braces "^3.0.2"
     picomatch "^2.3.1"
 
-million@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/million/-/million-3.1.1.tgz#0a9f65202b6a47c3e788fe2c7bc05826fd0c7110"
-  integrity sha512-vmI3lyA3IN4QKiB0/M3uDef3lZZvgVUokWtLkc5NvxEnykY+TdSR6xatMMNDJmzMHTneayIOpc/eQu4d9Z/r2w==
+million@3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/million/-/million-3.1.4.tgz#51938de3f672f4ef296ca707c2c3ab6f27c4f94e"
+  integrity sha512-ZEg5EX8leO9TQK1S6Sxas7BTzo7CcNMZD9E/9VdqI3vJpgPxSMS7IEq6VO4i/hgZWC2m2b2mBTAx/Ms98hdjXg==
   dependencies:
     "@babel/core" "^7.23.7"
     "@babel/types" "^7.23.6"
-    "@million/install" "^0.0.3"
+    "@million/install" "^0.0.5"
     "@rollup/pluginutils" "^5.1.0"
     kleur "^4.1.5"
     undici "^6.3.0"
@@ -7435,6 +7436,11 @@ nanoid@^3.3.6, nanoid@^3.3.7:
   version "3.3.7"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz"
   integrity sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==
+
+nanoid@^5.0.7:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-5.0.7.tgz#6452e8c5a816861fd9d2b898399f7e5fd6944cc6"
+  integrity sha512-oLxFY2gd2IqnjcYyOXD8XGCftpGtZP2AbHbOkthDkvRywH5ayNtPVy9YlOPcHckXzbLTCHpkb7FB+yuxKV13pQ==
 
 natural-compare@^1.4.0:
   version "1.4.0"
