@@ -73,7 +73,7 @@
   },
   "resolutions": {
     "braces": "3.0.3",
-    "micromatch": "4.0.6",
+    "micromatch": "4.0.7",
     "serialize-javascript": "6.0.2",
     "string-width": "4.2.3",
     "wrap-ansi": "7.0.0"
