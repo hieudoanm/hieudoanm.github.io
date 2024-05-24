@@ -2715,10 +2715,10 @@
   resolved "https://registry.npmjs.org/@kurkle/color/-/color-0.3.2.tgz"
   integrity sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==
 
-"@million/install@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@million/install/-/install-0.0.5.tgz#4a12e81330aa27382b52ca85951c316c55c3ac17"
-  integrity sha512-9KYVwMT6yEX0k/DMo8cOQNxeFdZme/yTqncPwXgvoQ0qUAUkulvm0ivRHTYrsuPNrCA6lqsJD005D1hhuI2fGQ==
+"@million/install@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@million/install/-/install-0.0.6.tgz#9bbe72331a8991c98d51d9bbb62e98ee0ed36138"
+  integrity sha512-XsBVyZZUBQ0fAAC6taX7jBuSdA3R9Q+cTWzZifZmHUCLyy+azgOQ8ZMHTClXPzPaI+yWLf6mr3l3UYcaJdCE4w==
   dependencies:
     "@antfu/ni" "^0.21.12"
     "@axiomhq/js" "1.0.0-rc.3"
@@ -7345,14 +7345,14 @@ micromatch@^4.0.4, micromatch@^4.0.5:
     braces "^3.0.2"
     picomatch "^2.3.1"
 
-million@3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/million/-/million-3.1.4.tgz#51938de3f672f4ef296ca707c2c3ab6f27c4f94e"
-  integrity sha512-ZEg5EX8leO9TQK1S6Sxas7BTzo7CcNMZD9E/9VdqI3vJpgPxSMS7IEq6VO4i/hgZWC2m2b2mBTAx/Ms98hdjXg==
+million@3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/million/-/million-3.1.5.tgz#ea4f61df0d4d7e78ae7a068e1a97a397d9903692"
+  integrity sha512-EUNMtvdZdD3gN9+qxxzr4TRRIolb6ldy/HVQKCVMJlBWs0pF0i/GKA+zOipp//tqckBA0KMEEp3aWDlwZQFTjg==
   dependencies:
     "@babel/core" "^7.23.7"
     "@babel/types" "^7.23.6"
-    "@million/install" "^0.0.5"
+    "@million/install" "^0.0.6"
     "@rollup/pluginutils" "^5.1.0"
     kleur "^4.1.5"
     undici "^6.3.0"
