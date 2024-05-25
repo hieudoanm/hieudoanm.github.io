@@ -2714,17 +2714,17 @@
   resolved "https://registry.npmjs.org/@kurkle/color/-/color-0.3.2.tgz"
   integrity sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==
 
-"@million/install@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@million/install/-/install-0.0.6.tgz#9bbe72331a8991c98d51d9bbb62e98ee0ed36138"
-  integrity sha512-XsBVyZZUBQ0fAAC6taX7jBuSdA3R9Q+cTWzZifZmHUCLyy+azgOQ8ZMHTClXPzPaI+yWLf6mr3l3UYcaJdCE4w==
+"@million/install@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@million/install/-/install-0.0.7.tgz#381b20725215272b3d4253201e0706ab85717483"
+  integrity sha512-knhZwT8mi6jWfdPPzVuk9HfNWyhfOJsUmLmR1A7pQYxERiya8YKXdm3XZZXQF9An/5n1CjeLeyXPwk7Pc0utRQ==
   dependencies:
     "@antfu/ni" "^0.21.12"
     "@axiomhq/js" "1.0.0-rc.3"
     "@babel/core" "^7.24.5"
     "@babel/types" "^7.23.6"
     "@clack/prompts" "^0.7.0"
-    cli-high "^0.4.1"
+    cli-high "^0.4.2"
     diff "^5.1.0"
     nanoid "^5.0.7"
     posthog-node "^3.6.3"
@@ -4495,10 +4495,10 @@ clean-webpack-plugin@^4.0.0:
   dependencies:
     del "^4.1.1"
 
-cli-high@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/cli-high/-/cli-high-0.4.1.tgz#df4befcb309a19542756e9a317647049b5e223bf"
-  integrity sha512-fPbkILfCVG6mfxbsJbJZQsKE5JmfgJNlfBxap52XHXjLwPDhs/OMFVFrNR7bqiavZt2r5A80+wiRHzJyzWqwEQ==
+cli-high@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/cli-high/-/cli-high-0.4.2.tgz#6d84388208355b28ba8ed9e593e6282e154375c3"
+  integrity sha512-q/CIxOggmzAw/67QYS4j1bMo72IpC+dAlswZl8xHxp8XvmWS97x3Q30pWNXq8mg0pZLSJwIFWZpUWTfcF119wA==
   dependencies:
     "@clack/prompts" "^0.7.0"
     sugar-high "^0.6.1"
@@ -7339,14 +7339,14 @@ micromatch@4.0.7, micromatch@^4.0.4, micromatch@^4.0.5:
     braces "^3.0.3"
     picomatch "^2.3.1"
 
-million@3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/million/-/million-3.1.5.tgz#ea4f61df0d4d7e78ae7a068e1a97a397d9903692"
-  integrity sha512-EUNMtvdZdD3gN9+qxxzr4TRRIolb6ldy/HVQKCVMJlBWs0pF0i/GKA+zOipp//tqckBA0KMEEp3aWDlwZQFTjg==
+million@3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/million/-/million-3.1.6.tgz#3b4c334d5080ad7711a5e430ae7edfa9339ec247"
+  integrity sha512-GbI6S88EEwJKJ8wsFyqAG/Fuy9lrWjWJGDENONfGcGe1Pv0Cunk1oRliPY65ZpJ2AovViZEBjsAWIBXY6dA9sg==
   dependencies:
     "@babel/core" "^7.23.7"
     "@babel/types" "^7.23.6"
-    "@million/install" "^0.0.6"
+    "@million/install" "^0.0.7"
     "@rollup/pluginutils" "^5.1.0"
     kleur "^4.1.5"
     undici "^6.3.0"
