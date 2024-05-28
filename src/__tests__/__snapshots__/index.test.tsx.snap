@@ -511,7 +511,7 @@ exports[`SocialPage render default 1`] = `
                 class="col-span-1"
               >
                 <a
-                  href="https://newsexpress.vercel.app/"
+                  href="https://ultimatex.vercel.app/"
                   target="_blank"
                 >
                   <div
@@ -534,7 +534,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            XPress
+                            X
                           </h2>
                         </div>
                         <div

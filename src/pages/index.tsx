@@ -164,10 +164,10 @@ const projects: Project[] = [
   },
   {
     id: 'x',
-    name: 'XPress',
+    name: 'X',
     emoji: '📰',
     description: 'Reading quick news in 10 minutes every morning',
-    link: 'https://newsexpress.vercel.app/',
+    link: 'https://ultimatex.vercel.app/',
     pricing: 'free',
     type: 'miniapp',
     category: 'tool',
