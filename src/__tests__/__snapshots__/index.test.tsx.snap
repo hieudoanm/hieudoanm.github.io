@@ -286,51 +286,6 @@ exports[`SocialPage render default 1`] = `
                 class="col-span-1"
               >
                 <a
-                  href="https://googlex.vercel.app"
-                  target="_blank"
-                >
-                  <div
-                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
-                  >
-                    <div
-                      class="flex flex-col gap-y-2 p-4"
-                    >
-                      <div
-                        class="flex items-center justify-between"
-                      >
-                        <div
-                          class="flex items-center gap-x-2"
-                        >
-                          <div
-                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                          >
-                            🔍
-                          </div>
-                          <h2
-                            class="text-lg font-bold"
-                          >
-                            GoogleX
-                          </h2>
-                        </div>
-                        <div
-                          class="badge badge-primary capitalize"
-                        >
-                          free
-                        </div>
-                      </div>
-                      <p
-                        class="truncate text-sm"
-                      >
-                        Add-ons enhancing Google functionality, offering various features and utilities.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div
-                class="col-span-1"
-              >
-                <a
                   href="https://instagramdownload.vercel.app/"
                   target="_blank"
                 >
@@ -412,51 +367,6 @@ exports[`SocialPage render default 1`] = `
                         class="truncate text-sm"
                       >
                         Natural Language Toolkit: Online Tools for text analysis and linguistic processing.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div
-                class="col-span-1"
-              >
-                <a
-                  href="https://hieudoanm.github.io/app-pomodoro"
-                  target="_blank"
-                >
-                  <div
-                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
-                  >
-                    <div
-                      class="flex flex-col gap-y-2 p-4"
-                    >
-                      <div
-                        class="flex items-center justify-between"
-                      >
-                        <div
-                          class="flex items-center gap-x-2"
-                        >
-                          <div
-                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                          >
-                            ⏱️
-                          </div>
-                          <h2
-                            class="text-lg font-bold"
-                          >
-                            Pomodoro
-                          </h2>
-                        </div>
-                        <div
-                          class="badge badge-primary capitalize"
-                        >
-                          free
-                        </div>
-                      </div>
-                      <p
-                        class="truncate text-sm"
-                      >
-                        Time management technique: work for 25 mins, break, repeat.
                       </p>
                     </div>
                   </div>

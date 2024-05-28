@@ -110,17 +110,6 @@ const projects: Project[] = [
     category: 'visualization',
   },
   {
-    id: 'google',
-    name: 'GoogleX',
-    emoji: '🔍',
-    description:
-      'Add-ons enhancing Google functionality, offering various features and utilities.',
-    link: 'https://googlex.vercel.app',
-    pricing: 'free',
-    type: 'miniapp',
-    category: 'tool',
-  },
-  {
     id: 'instax',
     name: 'InstaX',
     emoji: '📷',
@@ -137,16 +126,6 @@ const projects: Project[] = [
     description:
       'Natural Language Toolkit: Online Tools for text analysis and linguistic processing.',
     link: 'https://languagesdetectionweb.vercel.app/',
-    pricing: 'free',
-    type: 'miniapp',
-    category: 'tool',
-  },
-  {
-    id: 'pomodoro',
-    name: 'Pomodoro',
-    emoji: '⏱️',
-    description: 'Time management technique: work for 25 mins, break, repeat.',
-    link: 'https://hieudoanm.github.io/app-pomodoro',
     pricing: 'free',
     type: 'miniapp',
     category: 'tool',
