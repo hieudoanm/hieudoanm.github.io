@@ -78,27 +78,6 @@ const projects: Project[] = [
     category: 'visualization',
   },
   {
-    id: 'colours',
-    name: 'Colours',
-    emoji: '🎨',
-    description: 'Colours Tools - HEX to RGB and Colours Picker',
-    link: 'https://hieudoanm.github.io/app-colours',
-    pricing: 'free',
-    type: 'miniapp',
-    category: 'tool',
-  },
-  {
-    id: 'csv',
-    name: 'CSV',
-    emoji: '📒',
-    description:
-      'Tool for creating, editing, and managing CSV (comma-separated values) files.',
-    link: 'https://hieudoanm.github.io/app-csv',
-    pricing: 'free',
-    type: 'miniapp',
-    category: 'tool',
-  },
-  {
     id: 'geerthofstede',
     name: 'Geert Hofstede',
     emoji: '🤌',
@@ -108,27 +87,6 @@ const projects: Project[] = [
     pricing: 'free',
     type: 'miniapp',
     category: 'visualization',
-  },
-  {
-    id: 'instax',
-    name: 'InstaX',
-    emoji: '📷',
-    description: 'Instagram Extensions: Download posts, stories and reels',
-    link: 'https://instagramdownload.vercel.app/',
-    pricing: 'free',
-    type: 'miniapp',
-    category: 'tool',
-  },
-  {
-    id: 'nlp',
-    name: 'Natural Language Processing',
-    emoji: '🈸',
-    description:
-      'Natural Language Toolkit: Online Tools for text analysis and linguistic processing.',
-    link: 'https://languagesdetectionweb.vercel.app/',
-    pricing: 'free',
-    type: 'miniapp',
-    category: 'tool',
   },
   {
     id: 'telegpt',
@@ -158,6 +116,17 @@ const projects: Project[] = [
     description:
       'Golang CLI Boilerplate: Foundation for building command-line interfaces in Go.',
     link: 'https://github.com/hieudoanm/go-cli',
+    pricing: 'public',
+    type: 'boilerplate',
+    category: 'go',
+  },
+  {
+    id: 'go-htmx',
+    name: 'Go x HTMX',
+    emoji: '',
+    description:
+      'Efficient backend with Go, dynamic frontend using HTMX for minimal JavaScript.',
+    link: 'https://github.com/hieudoanm/go-htmx',
     pricing: 'public',
     type: 'boilerplate',
     category: 'go',
