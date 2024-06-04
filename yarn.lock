@@ -7285,10 +7285,10 @@ micromatch@4.0.7, micromatch@^4.0.4, micromatch@^4.0.5:
     braces "^3.0.3"
     picomatch "^2.3.1"
 
-million@3.1.9:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/million/-/million-3.1.9.tgz#d21c668ea1ea7f863cae10da00d02848fbfb103d"
-  integrity sha512-SrmjRIN724rvW7t4ciJ17VMw4y3HHImGwc1dIIHpwNpsmlb2adUN9rm+tfKR1LzP//afdqnh3hB6R9KgoHlrWQ==
+million@3.1.11:
+  version "3.1.11"
+  resolved "https://registry.yarnpkg.com/million/-/million-3.1.11.tgz#dfd947270e89735657be8ec23335a16f19ba6cac"
+  integrity sha512-6Vh1s0da0PzSqbbp9Zd8yMTIkOWnvBU4vNJCMHTZPXaY3fZ5h+N7s5croS/RBgjJIHz3WQZnvyNBQz7gQ6cqJg==
   dependencies:
     "@babel/core" "^7.23.7"
     "@babel/types" "^7.23.6"
