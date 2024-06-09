@@ -38,7 +38,7 @@
     "react-dom": "18.3.1",
     "react-icons": "5.2.1",
     "sharp": "0.33.4",
-    "uuid": "9.0.1"
+    "uuid": "10.0.0"
   },
   "devDependencies": {
     "@million/lint": "0.0.73",
