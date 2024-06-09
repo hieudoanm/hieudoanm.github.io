@@ -1,0 +1,76 @@
+# Physical Wishlist
+
+- [ ] House
+  - [ ] Bedroom
+    - [ ] King size bed
+    - [ ] Closet
+      - [ ] 12 T-shirts
+      - [ ] 6 Shirts
+        - [ ] Black
+        - [ ] White
+      - [ ] 6 Suits
+        - [ ] Black
+        - [ ] Navy
+        - [ ] Borderux Red
+      - [ ] 3 Shoes
+        - [ ] Dress Shoes
+        - [ ] Sneakers
+        - [ ] Running Shoes
+      - [ ] 2 Suitcase for 23 to 30 kg
+      - [ ] Medical Cabinet
+  - [ ] Bathroom
+    - [ ] Washing Machine
+    - [ ] Dryer
+  - [ ] Kitchen
+    - [ ] Rice Cooker
+    - [ ] Blender
+    - [ ] Dish Washer
+  - [ ] Living room
+    - [ ] Sofa
+    - [ ] Chess
+    - [ ] TV: 48 inch
+    - [ ] Speaker: Bose
+    - [ ] PS5
+  - [ ] Personal room
+    - [ ] Working Station
+      - [ ] Adjustable Standing Desk
+      - [ ] Ergonomic Chair
+      - [ ] Desktop: 32 inch
+      - [ ] Laptop
+        - [ ] 12 to 15 inch
+        - [ ] 512MB to 1TB of Memory
+        - [ ] 16 to 32 GB of RAM
+        - [ ] Apple Macbook with M Chip
+        - [ ] ASUS Zenbook with Intel Chip
+      - [ ] Tablet
+        - [ ] Pen
+        - [ ] 10 to 12 inch
+        - [ ] Apple iPad
+        - [ ] Samsung Galaxy Tab S
+      - [ ] Headphone: Beat by Dre
+    - [ ] Toys: LEGO
+  - [ ] Dining room
+    - [ ] Table
+    - [ ] 12 Chair
+    - [ ] 12 Plates
+    - [ ] 12 Bowls
+    - [ ] 12 Utilities Set
+  - [ ] Gym
+  - [ ] Garage
+    - [ ] Car
+      - [ ] Everyday Car: Vinfast (A car from VN)
+      - [ ] Speed Car: Bugatti Veyron
+    - [ ] Motorcycle
+      - [ ] Everyday: Dat Bike
+      - [ ] Traveling: Honda Rebel 300
+    - [ ] Bicycle
+    - [ ] Toolbox
+      - [ ] Screwdriver
+- [ ] Handy
+  - [ ] Phone
+    - [ ] 6 inch screen
+    - [ ] Google Pixel (Best software)
+    - [ ] Apple iPhone (Best hardware)
+    - [ ] Samsung Galaxy S (Best of Both)?
+  - [ ] Swiss Army Knifes
+  - [ ] Watch: Casio G-Shock
