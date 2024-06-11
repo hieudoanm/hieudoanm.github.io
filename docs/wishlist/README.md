@@ -2,75 +2,72 @@
 
 - [ ] House
   - [ ] Bedroom
-    - [ ] King size bed
-    - [ ] Closet
-      - [ ] 12 T-shirts
-      - [ ] 6 Shirts
-        - [ ] Black
-        - [ ] White
-      - [ ] 6 Suits
-        - [ ] Black
-        - [ ] Navy
-        - [ ] Borderux Red
-      - [ ] 3 Shoes
-        - [ ] Dress Shoes
-        - [ ] Sneakers
-        - [ ] Running Shoes
-      - [ ] 2 Suitcase for 23 to 30 kg
-      - [ ] Medical Cabinet
+    - [ ] Bed (King-size)
+      - [ ] **4/4** Pillow
+    - [ ] Clothes
+      - [ ] **2/8** `Black` Gym Shirts
+      - [ ] **2/8** `Black` Gym Shorts
+      - [ ] **2/8** `Black` T-shirts
+      - [ ] **2/8** `Black` Shorts
+      - [ ] **2/8** `Black` Shirts
+      - [ ] **2/8** `White` Shirts
+      - [ ] **2/8** `Black` Khaki Pants
+      - [ ] **2/2** `Black` Suits
+      - [ ] **0/2** `Navy Blue` Suits
+      - [ ] **0/2** `Borderux Red` Suits
+      - [ ] **0/1** `Black` Dress Shoes
+      - [ ] **1/1** `Black` Sneakers
+      - [ ] **1/1** `Black` Running Shoes
+      - [ ] **1/2** `Black` Suitcase 30 kg
+    - [ ] 0/1 Medical Cabinet
   - [ ] Bathroom
-    - [ ] Washing Machine
-    - [ ] Dryer
+    - [ ] 1/1 Washing Machine
+    - [ ] 0/1 Dryer
   - [ ] Kitchen
-    - [ ] Rice Cooker
-    - [ ] Blender
-    - [ ] Dish Washer
+    - [ ] 1/1 Rice Cooker
+    - [ ] 0/1 Blender
+    - [ ] 0/1 Dish Washer
+    - [ ] 1/1 Air Fryer
   - [ ] Living room
-    - [ ] Sofa
-    - [ ] Chess
-    - [ ] TV: 48 inch
-    - [ ] Speaker: Bose
-    - [ ] PS5
+    - [ ] 0/1 Sofa
+    - [ ] 0/1 Chess Set
+    - [ ] 0/1 TV (48-inch)
+    - [ ] 0/1 Speaker (Bose)
+    - [ ] 0/1 Gaming Console (PS5)
   - [ ] Personal room
     - [ ] Working Station
-      - [ ] Adjustable Standing Desk
-      - [ ] Ergonomic Chair
-      - [ ] Desktop: 32 inch
-      - [ ] Laptop
-        - [ ] 12 to 15 inch
+      - [ ] 0/1 Adjustable Standing Desk
+      - [ ] 1/1 Ergonomic Chair
+      - [ ] 1/1 Desktop
+        - [ ] 32-inch
+      - [ ] 1/1 Laptop (Apple Macbook with M Chip / ASUS Zenbook with Intel Chip)
+        - [ ] 12 to 15-inch
         - [ ] 512MB to 1TB of Memory
         - [ ] 16 to 32 GB of RAM
-        - [ ] Apple Macbook with M Chip
-        - [ ] ASUS Zenbook with Intel Chip
-      - [ ] Tablet
+      - [ ] 0/1 Tablet (Apple iPad / Samsung Galaxy Tab S)
         - [ ] Pen
-        - [ ] 10 to 12 inch
-        - [ ] Apple iPad
-        - [ ] Samsung Galaxy Tab S
-      - [ ] Headphone: Beat by Dre
+        - [ ] 10 to 12-inch
+      - [ ] 0/1 Headphone (Beat by Dre)
     - [ ] Toys: LEGO
   - [ ] Dining room
-    - [ ] Table
-    - [ ] 12 Chair
-    - [ ] 12 Plates
-    - [ ] 12 Bowls
-    - [ ] 12 Utilities Set
+    - [ ] 1/1 Table
+    - [ ] 2/12 Chair
+    - [ ] 2/12 Plates
+    - [ ] 2/12 Bowls
+    - [ ] 2/12 Utilities Set
   - [ ] Gym
+    - [ ] 0/1 Running Treadmill
   - [ ] Garage
-    - [ ] Car
-      - [ ] Everyday Car: Vinfast (A car from VN)
-      - [ ] Speed Car: Bugatti Veyron
-    - [ ] Motorcycle
-      - [ ] Everyday: Dat Bike
-      - [ ] Traveling: Honda Rebel 300
-    - [ ] Bicycle
-    - [ ] Toolbox
+    - [ ] 0/1 Car - Everyday - Electric (Vinfast)
+    - [ ] 0/1 Car - Super (Bugatti Veyron)
+    - [ ] 0/1 Motorcycle - Everyday - Electric (Dat Bike)
+    - [ ] 0/1 Motorcycle - Super (Honda Rebel 300)
+    - [ ] 1/1 Bicycle
+    - [ ] 0/1 Toolbox
       - [ ] Screwdriver
-- [ ] Handy
+- [ ] Handy (Google Pixel (Best software) / Apple iPhone (Best hardware) / Samsung Galaxy S (Best of Both)?)
   - [ ] Phone
-    - [ ] 6 inch screen
-    - [ ] Google Pixel (Best software)
-    - [ ] Apple iPhone (Best hardware)
-    - [ ] Samsung Galaxy S (Best of Both)?
-  - [ ] Swiss Army Knifes
-  - [ ] Watch: Casio G-Shock
+    - [ ] 6-inch screen
+    - [ ] AI on the GO
+  - [ ] 1/1 Swiss Army Knifes
+  - [ ] 0/1 Watch (Casio G-Shock)
