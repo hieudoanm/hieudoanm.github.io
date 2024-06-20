@@ -9,13 +9,13 @@ exports[`SocialPage render default 1`] = `
       class="h-screen w-screen overflow-auto bg-white p-8 lg:p-16"
     >
       <div
-        class="grid grid-cols-1 gap-8 lg:grid-cols-3"
+        class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8"
       >
         <div
           class="col-span-1"
         >
           <div
-            class="flex flex-col items-center justify-center gap-y-8"
+            class="flex flex-col items-center justify-center gap-y-4 md:gap-y-8"
           >
             <div
               class="mx-auto flex w-[25%] flex-col lg:w-[50%]"
@@ -30,7 +30,7 @@ exports[`SocialPage render default 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-col gap-y-4 text-center"
+              class="flex flex-col gap-y-2 text-center md:gap-y-4"
             >
               <a
                 class="text-2xl font-bold uppercase"
@@ -92,15 +92,22 @@ exports[`SocialPage render default 1`] = `
           class="col-span-1 lg:col-span-2"
         >
           <div
-            class="flex flex-col gap-y-8"
+            class="flex flex-col gap-y-4 md:gap-y-8"
           >
-            <h1
-              class="text-xl font-bold"
-            >
-              Mini Apps
-            </h1>
             <div
-              class="grid grid-cols-1 gap-8 lg:grid-cols-2"
+              class="flex items-center justify-between"
+            >
+              <h1
+                class="text-xl font-bold"
+              >
+                Mini Apps
+                 (
+                2
+                )
+              </h1>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
             >
               <div
                 class="col-span-1"
@@ -199,14 +206,210 @@ exports[`SocialPage render default 1`] = `
               <h1
                 class="text-xl font-bold"
               >
-                Front-end
-                 Boilerplates (
+                Front-end Boilerplates
+                 (
                 4
                 )
               </h1>
             </div>
             <div
-              class="grid grid-cols-1 gap-8 lg:grid-cols-2"
+              class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
+            >
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://github.com/hieudoanm/ts-fe-angular"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            💻
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            TypeScript - Angular
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          public
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Angular Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://github.com/hieudoanm/ts-fe-gatsby"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            💻
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            TypeScript - Gatsby
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          public
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Gatsby.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://github.com/hieudoanm/ts-fe-solid"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            💻
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            TypeScript - SolidStart
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          public
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Solid.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://github.com/hieudoanm/ts-fe-svelte"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            💻
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            TypeScript - SvelteKit
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          public
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Svelte.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between"
+            >
+              <h1
+                class="text-xl font-bold"
+              >
+                Full-stack Boilerplates
+                 (
+                2
+                )
+              </h1>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
             >
               <div
                 class="col-span-1"
@@ -255,7 +458,7 @@ exports[`SocialPage render default 1`] = `
                 class="col-span-1"
               >
                 <a
-                  href="https://github.com/hieudoanm/ts-fe-angular"
+                  href="https://github.com/hieudoanm/ts-fs-nett"
                   target="_blank"
                 >
                   <div
@@ -276,7 +479,7 @@ exports[`SocialPage render default 1`] = `
                           <h2
                             class="text-lg font-bold"
                           >
-                            TypeScript - Angular
+                            TypeScript - N.E.T.T
                           </h2>
                         </div>
                         <div
@@ -288,93 +491,7 @@ exports[`SocialPage render default 1`] = `
                       <p
                         class="truncate text-sm"
                       >
-                        Angular Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div
-                class="col-span-1"
-              >
-                <a
-                  href="https://github.com/hieudoanm/ts-fe-gatsby"
-                  target="_blank"
-                >
-                  <div
-                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
-                  >
-                    <div
-                      class="flex flex-col gap-y-2 p-4"
-                    >
-                      <div
-                        class="flex items-center justify-between"
-                      >
-                        <div
-                          class="flex items-center gap-x-2"
-                        >
-                          <div
-                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                          />
-                          <h2
-                            class="text-lg font-bold"
-                          >
-                            TypeScript - Gatsby
-                          </h2>
-                        </div>
-                        <div
-                          class="badge badge-primary capitalize"
-                        >
-                          public
-                        </div>
-                      </div>
-                      <p
-                        class="truncate text-sm"
-                      >
-                        Gatsby.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div
-                class="col-span-1"
-              >
-                <a
-                  href="https://github.com/hieudoanm/ts-fe-solid"
-                  target="_blank"
-                >
-                  <div
-                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
-                  >
-                    <div
-                      class="flex flex-col gap-y-2 p-4"
-                    >
-                      <div
-                        class="flex items-center justify-between"
-                      >
-                        <div
-                          class="flex items-center gap-x-2"
-                        >
-                          <div
-                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                          />
-                          <h2
-                            class="text-lg font-bold"
-                          >
-                            TypeScript - Solid
-                          </h2>
-                        </div>
-                        <div
-                          class="badge badge-primary capitalize"
-                        >
-                          public
-                        </div>
-                      </div>
-                      <p
-                        class="truncate text-sm"
-                      >
-                        Solid.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.
+                        Next.js x Expo x Tauri x tRPC Boilerplate: Starting point for React application.
                       </p>
                     </div>
                   </div>
@@ -387,159 +504,14 @@ exports[`SocialPage render default 1`] = `
               <h1
                 class="text-xl font-bold"
               >
-                REST
-                 Boilerplates (
-                3
-                )
-              </h1>
-            </div>
-            <div
-              class="grid grid-cols-1 gap-8 lg:grid-cols-2"
-            >
-              <div
-                class="col-span-1"
-              >
-                <a
-                  href="https://github.com/hieudoanm/py-fastapi"
-                  target="_blank"
-                >
-                  <div
-                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
-                  >
-                    <div
-                      class="flex flex-col gap-y-2 p-4"
-                    >
-                      <div
-                        class="flex items-center justify-between"
-                      >
-                        <div
-                          class="flex items-center gap-x-2"
-                        >
-                          <div
-                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                          />
-                          <h2
-                            class="text-lg font-bold"
-                          >
-                            Python - FastAPI
-                          </h2>
-                        </div>
-                        <div
-                          class="badge badge-primary capitalize"
-                        >
-                          public
-                        </div>
-                      </div>
-                      <p
-                        class="truncate text-sm"
-                      >
-                        Build RESTful API quickly.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div
-                class="col-span-1"
-              >
-                <a
-                  href="https://github.com/hieudoanm/ts-be-hono"
-                  target="_blank"
-                >
-                  <div
-                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
-                  >
-                    <div
-                      class="flex flex-col gap-y-2 p-4"
-                    >
-                      <div
-                        class="flex items-center justify-between"
-                      >
-                        <div
-                          class="flex items-center gap-x-2"
-                        >
-                          <div
-                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                          />
-                          <h2
-                            class="text-lg font-bold"
-                          >
-                            TypeScript - Hono
-                          </h2>
-                        </div>
-                        <div
-                          class="badge badge-primary capitalize"
-                        >
-                          public
-                        </div>
-                      </div>
-                      <p
-                        class="truncate text-sm"
-                      >
-                        Hono - Serverless Framework: Scalable, efficient, cloud-native, event-driven computing solution.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div
-                class="col-span-1"
-              >
-                <a
-                  href="https://github.com/hieudoanm/ts-be-nest"
-                  target="_blank"
-                >
-                  <div
-                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
-                  >
-                    <div
-                      class="flex flex-col gap-y-2 p-4"
-                    >
-                      <div
-                        class="flex items-center justify-between"
-                      >
-                        <div
-                          class="flex items-center gap-x-2"
-                        >
-                          <div
-                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                          />
-                          <h2
-                            class="text-lg font-bold"
-                          >
-                            TypeScript - Nest.js
-                          </h2>
-                        </div>
-                        <div
-                          class="badge badge-primary capitalize"
-                        >
-                          public
-                        </div>
-                      </div>
-                      <p
-                        class="truncate text-sm"
-                      >
-                        Nest.js Boilerplate: Streamlined foundation for scalable TypeScript backend development.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between"
-            >
-              <h1
-                class="text-xl font-bold"
-              >
-                GraphQL
-                 Boilerplates (
+                GraphQL Boilerplates
+                 (
                 2
                 )
               </h1>
             </div>
             <div
-              class="grid grid-cols-1 gap-8 lg:grid-cols-2"
+              class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
             >
               <div
                 class="col-span-1"
@@ -562,7 +534,9 @@ exports[`SocialPage render default 1`] = `
                         >
                           <div
                             class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                          />
+                          >
+                            🚀
+                          </div>
                           <h2
                             class="text-lg font-bold"
                           >
@@ -605,7 +579,9 @@ exports[`SocialPage render default 1`] = `
                         >
                           <div
                             class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
-                          />
+                          >
+                            🚀
+                          </div>
                           <h2
                             class="text-lg font-bold"
                           >
@@ -622,6 +598,157 @@ exports[`SocialPage render default 1`] = `
                         class="truncate text-sm"
                       >
                         GraphQL Boilerplate: Kickstart GraphQL projects with structured schema and essential configurations.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between"
+            >
+              <h1
+                class="text-xl font-bold"
+              >
+                REST Boilerplates
+                 (
+                3
+                )
+              </h1>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
+            >
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://github.com/hieudoanm/py-fastapi"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            🚀
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            Python - FastAPI
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          public
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Build RESTful API quickly.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://github.com/hieudoanm/ts-be-hono"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            🚀
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            TypeScript - Hono
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          public
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Hono - Serverless Framework: Scalable, efficient, cloud-native, event-driven computing solution.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <a
+                  href="https://github.com/hieudoanm/ts-be-nest"
+                  target="_blank"
+                >
+                  <div
+                    class="w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl"
+                  >
+                    <div
+                      class="flex flex-col gap-y-2 p-4"
+                    >
+                      <div
+                        class="flex items-center justify-between"
+                      >
+                        <div
+                          class="flex items-center gap-x-2"
+                        >
+                          <div
+                            class="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white"
+                          >
+                            🚀
+                          </div>
+                          <h2
+                            class="text-lg font-bold"
+                          >
+                            TypeScript - Nest.js
+                          </h2>
+                        </div>
+                        <div
+                          class="badge badge-primary capitalize"
+                        >
+                          public
+                        </div>
+                      </div>
+                      <p
+                        class="truncate text-sm"
+                      >
+                        Nest.js Boilerplate: Streamlined foundation for scalable TypeScript backend development.
                       </p>
                     </div>
                   </div>
