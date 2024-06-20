@@ -7,6 +7,8 @@
   ],
   "plugins": ["github", "jest", "react", "sonarjs"],
   "rules": {
+    "no-shadow": "warn",
+    "no-unused-vars": "warn",
     "i18n-text/no-en": "off",
     "filenames/match-regex": "off",
     "react/react-in-jsx-scope": "off"

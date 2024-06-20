@@ -7,7 +7,25 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
 } from 'react-icons/fa';
-import { useState } from 'react';
+import { FC } from 'react';
+
+enum Language {
+  GOLANG_PYTHON_TYPESCRIPT = 'gpt',
+  GOLANG = 'go',
+  PYTHON = 'py',
+  TYPESCRIPT = 'ts',
+}
+
+enum Platform {
+  FRONT_END_WEB = 'front-end-web',
+  FRONT_END_MOBILE = 'front-end-mobile',
+  FRONT_END_DESKTOP = 'front-end-desktop',
+}
+
+enum API {
+  REST = 'REST',
+  GRAPHQL = 'graphql',
+}
 
 type Project = {
   id: string;
@@ -16,7 +34,9 @@ type Project = {
   description: string;
   link: string;
   pricing: string;
-  type: 'miniapp' | 'boilerplate';
+  language: Language;
+  group: 'miniapp' | 'boilerplate';
+  subgroup: 'cli' | Platform | API | 'full-stack';
   category: string;
 };
 
@@ -74,40 +94,22 @@ const projects: Project[] = [
       'Chess.com Insights: analytics, trends, and personalized data for chess improvement.',
     link: 'https://chessinsights.vercel.app',
     pricing: 'free',
-    type: 'miniapp',
+    language: Language.GOLANG_PYTHON_TYPESCRIPT,
     category: 'visualization',
+    group: 'miniapp',
+    subgroup: 'full-stack',
   },
   {
-    id: 'geerthofstede',
-    name: 'Geert Hofstede',
-    emoji: '🤌',
-    description:
-      'Cultural dimensions researcher, known for cross-cultural studies.',
-    link: 'https://hieudoanm.github.io/geerthofstede.com/',
-    pricing: 'free',
-    type: 'miniapp',
-    category: 'visualization',
-  },
-  {
-    id: 'telegpt',
-    name: 'TeleGPT',
-    emoji: '📟',
-    description:
-      'Enhanced messaging with AI-driven assistance, enriching Telegram conversations seamlessly.',
-    link: 'https://telegramxgpt.vercel.app',
-    pricing: 'free',
-    type: 'miniapp',
-    category: 'gpt',
-  },
-  {
-    id: 'x',
-    name: 'X',
+    id: 'fx',
+    name: 'f(x)',
     emoji: '📰',
     description: 'Reading quick news in 10 minutes every morning',
-    link: 'https://ultimatex.vercel.app/',
+    link: 'https://fxai.vercel.app/',
     pricing: 'free',
-    type: 'miniapp',
     category: 'tool',
+    language: Language.GOLANG_PYTHON_TYPESCRIPT,
+    group: 'miniapp',
+    subgroup: 'full-stack',
   },
   {
     id: 'go-cli',
@@ -117,19 +119,35 @@ const projects: Project[] = [
       'Golang CLI Boilerplate: Foundation for building command-line interfaces in Go.',
     link: 'https://github.com/hieudoanm/go-cli',
     pricing: 'public',
-    type: 'boilerplate',
-    category: 'go',
+    category: Language.GOLANG,
+    language: Language.GOLANG,
+    group: 'boilerplate',
+    subgroup: 'full-stack',
+  },
+  {
+    id: 'go-gql',
+    name: 'Go - GraphQL',
+    emoji: '',
+    description: 'Go - GraphQL',
+    link: 'https://github.com/hieudoanm/go-gql',
+    pricing: 'public',
+    language: Language.GOLANG,
+    group: 'boilerplate',
+    subgroup: API.GRAPHQL,
+    category: Language.GOLANG,
   },
   {
     id: 'go-htmx',
-    name: 'Go x HTMX',
+    name: 'Go - HTMX',
     emoji: '',
     description:
       'Efficient backend with Go, dynamic frontend using HTMX for minimal JavaScript.',
     link: 'https://github.com/hieudoanm/go-htmx',
     pricing: 'public',
-    type: 'boilerplate',
-    category: 'go',
+    language: Language.GOLANG,
+    group: 'boilerplate',
+    subgroup: Platform.FRONT_END_WEB,
+    category: Language.GOLANG,
   },
   {
     id: 'py-fast',
@@ -138,82 +156,167 @@ const projects: Project[] = [
     description: 'Build RESTful API quickly.',
     link: 'https://github.com/hieudoanm/py-fastapi',
     pricing: 'public',
-    type: 'boilerplate',
-    category: 'py',
+    language: Language.PYTHON,
+    group: 'boilerplate',
+    subgroup: API.REST,
+    category: Language.PYTHON,
   },
   {
-    id: 'ts-solid',
-    name: 'TypeScript - Solid.js',
+    id: 'ts-fe-angular',
+    name: 'TypeScript - Angular',
+    emoji: '',
+    description:
+      'Angular Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.',
+    link: 'https://github.com/hieudoanm/ts-fe-angular',
+    pricing: 'public',
+    language: Language.TYPESCRIPT,
+    group: 'boilerplate',
+    subgroup: Platform.FRONT_END_WEB,
+    category: Language.TYPESCRIPT,
+  },
+  {
+    id: 'ts-fe-gatsby',
+    name: 'TypeScript - Gatsby',
+    emoji: '',
+    description:
+      'Gatsby.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.',
+    link: 'https://github.com/hieudoanm/ts-fe-gatsby',
+    pricing: 'public',
+    language: Language.TYPESCRIPT,
+    group: 'boilerplate',
+    subgroup: Platform.FRONT_END_WEB,
+    category: Language.TYPESCRIPT,
+  },
+  {
+    id: 'ts-fe-solid',
+    name: 'TypeScript - Solid',
     emoji: '',
     description:
       'Solid.js Boilerplate: Jumpstart for building fast and reactive web applications effortlessly.',
-    link: 'https://github.com/hieudoanm/ts-solid',
+    link: 'https://github.com/hieudoanm/ts-fe-solid',
     pricing: 'public',
-    type: 'boilerplate',
-    category: 'ts',
+    language: Language.TYPESCRIPT,
+    group: 'boilerplate',
+    subgroup: Platform.FRONT_END_WEB,
+    category: Language.TYPESCRIPT,
   },
   {
-    id: 'ts - nett',
-    name: 'TypeScript - N.E.T.T',
-    emoji: '',
-    description:
-      'Next.js x Expo x Tauri x tRPC Boilerplate: Starting point for React application.',
-    link: 'https://github.com/hieudoanm/ts-next',
-    pricing: 'public',
-    type: 'boilerplate',
-    category: 'ts',
-  },
-  {
-    id: 'ts-gql',
+    id: 'ts-be-gql',
     name: 'TypeScript - GraphQL',
     emoji: '',
     description:
       'GraphQL Boilerplate: Kickstart GraphQL projects with structured schema and essential configurations.',
-    link: 'https://github.com/hieudoanm/ts-gql',
+    link: 'https://github.com/hieudoanm/ts-be-gql',
     pricing: 'public',
-    type: 'boilerplate',
-    category: 'ts',
+    language: Language.TYPESCRIPT,
+    group: 'boilerplate',
+    subgroup: API.GRAPHQL,
+    category: Language.TYPESCRIPT,
   },
   {
-    id: 'ts-hono',
+    id: 'ts-be-hono',
     name: 'TypeScript - Hono',
     emoji: '',
     description:
-      '"Hono - Serverless Framework: Scalable, efficient, cloud-native, event-driven computing solution."',
-    link: 'https://github.com/hieudoanm/ts-hono',
+      'Hono - Serverless Framework: Scalable, efficient, cloud-native, event-driven computing solution.',
+    link: 'https://github.com/hieudoanm/ts-be-hono',
     pricing: 'public',
-    type: 'boilerplate',
-    category: 'ts',
+    language: Language.TYPESCRIPT,
+    group: 'boilerplate',
+    subgroup: API.REST,
+    category: Language.TYPESCRIPT,
   },
   {
-    id: 'ts-nest',
+    id: 'ts-be-nest',
     name: 'TypeScript - Nest.js',
     emoji: '',
     description:
       'Nest.js Boilerplate: Streamlined foundation for scalable TypeScript backend development.',
-    link: 'https://github.com/hieudoanm/ts-nest',
+    link: 'https://github.com/hieudoanm/ts-be-nest',
     pricing: 'public',
-    type: 'boilerplate',
-    category: 'ts',
+    language: Language.TYPESCRIPT,
+    group: 'boilerplate',
+    subgroup: API.REST,
+    category: Language.TYPESCRIPT,
+  },
+  {
+    id: 'ts-fs-nett',
+    name: 'TypeScript - N.E.T.T',
+    emoji: '',
+    description:
+      'Next.js x Expo x Tauri x tRPC Boilerplate: Starting point for React application.',
+    link: 'https://github.com/hieudoanm/ts-fs-nett',
+    pricing: 'public',
+    language: Language.TYPESCRIPT,
+    group: 'boilerplate',
+    subgroup: 'full-stack',
+    category: Language.TYPESCRIPT,
   },
 ];
 
+const Boilerplate: FC<{ title: string; boilerplates: Project[] }> = ({
+  title = '',
+  boilerplates = [],
+}) => {
+  return (
+    <>
+      <div className='flex items-center justify-between'>
+        <h1 className='text-xl font-bold'>
+          {title} Boilerplates ({boilerplates.length})
+        </h1>
+      </div>
+      <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
+        {boilerplates.map(
+          ({
+            id = '',
+            name = '',
+            emoji = '',
+            description = '',
+            link = '',
+            pricing = '',
+          }: Project) => {
+            return (
+              <div key={id} className='col-span-1'>
+                <Link href={link} target='_blank'>
+                  <div className='w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl'>
+                    <div className='flex flex-col gap-y-2 p-4'>
+                      <div className='flex items-center justify-between'>
+                        <div className='flex items-center gap-x-2'>
+                          <div className='flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white'>
+                            {emoji}
+                          </div>
+                          <h2 className='text-lg font-bold'>{name}</h2>
+                        </div>
+                        <div className='badge badge-primary capitalize'>
+                          {pricing}
+                        </div>
+                      </div>
+                      <p className='truncate text-sm'>{description}</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            );
+          }
+        )}
+      </div>
+    </>
+  );
+};
+
 const HomePage: NextPage = () => {
-  const [boilerplateFilter, setBoilerplateFilter] = useState('');
-
-  const miniapps = projects.filter(({ type }) => type === 'miniapp');
-  const boilerplates = projects.filter(({ category, type }) => {
-    const categoryFilter: boolean =
-      boilerplateFilter !== '' ? boilerplateFilter === category : true;
-    return type === 'boilerplate' && categoryFilter;
-  });
-
-  const changeBoilerplateFilter = (value: string) => {
-    setBoilerplateFilter((previous) => {
-      if (value === previous) return '';
-      return value;
-    });
-  };
+  const miniapps = projects.filter(({ group }) => group === 'miniapp');
+  // Boilerplates
+  const boilerplates = projects.filter(({ group }) => group === 'boilerplate');
+  const frontEndBoilerplates = boilerplates.filter(
+    ({ subgroup }) => subgroup === Platform.FRONT_END_WEB
+  );
+  const restBackEndBoilerplates = boilerplates.filter(
+    ({ subgroup }) => subgroup === API.REST
+  );
+  const graphqlBackEndBoilerplates = boilerplates.filter(
+    ({ subgroup }) => subgroup === API.GRAPHQL
+  );
 
   return (
     <div data-theme='luxury'>
@@ -288,63 +391,18 @@ const HomePage: NextPage = () => {
                   }
                 )}
               </div>
-              <div className='flex items-center justify-between'>
-                <h1 className='text-xl font-bold'>
-                  Boilerplates ({boilerplates.length})
-                </h1>
-                <div className='join'>
-                  {['go', 'py', 'ts'].map((category) => {
-                    const bg =
-                      category === boilerplateFilter
-                        ? 'bg-content-base'
-                        : 'bg-primary';
-                    return (
-                      <button
-                        key={category}
-                        type='button'
-                        className={`btn ${bg} join-item uppercase`}
-                        onClick={() => changeBoilerplateFilter(category)}>
-                        {category}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
-                {boilerplates.map(
-                  ({
-                    id = '',
-                    name = '',
-                    emoji = '',
-                    description = '',
-                    link = '',
-                    pricing = '',
-                  }: Project) => {
-                    return (
-                      <div key={id} className='col-span-1'>
-                        <Link href={link} target='_blank'>
-                          <div className='w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl'>
-                            <div className='flex flex-col gap-y-2 p-4'>
-                              <div className='flex items-center justify-between'>
-                                <div className='flex items-center gap-x-2'>
-                                  <div className='flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white'>
-                                    {emoji}
-                                  </div>
-                                  <h2 className='text-lg font-bold'>{name}</h2>
-                                </div>
-                                <div className='badge badge-primary capitalize'>
-                                  {pricing}
-                                </div>
-                              </div>
-                              <p className='truncate text-sm'>{description}</p>
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
-                    );
-                  }
-                )}
-              </div>
+              <Boilerplate
+                title='Front-end'
+                boilerplates={frontEndBoilerplates}
+              />
+              <Boilerplate
+                title='REST'
+                boilerplates={restBackEndBoilerplates}
+              />
+              <Boilerplate
+                title='GraphQL'
+                boilerplates={graphqlBackEndBoilerplates}
+              />
             </div>
           </div>
         </div>
