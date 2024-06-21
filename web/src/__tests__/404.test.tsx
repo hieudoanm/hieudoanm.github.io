@@ -1,4 +1,4 @@
-import { NotFoundPage } from '@hieudoanm/pages/404';
+import { NotFoundPage } from '@web/pages/404';
 import { render } from '@testing-library/react';
 
 describe('NotFoundPage', () => {

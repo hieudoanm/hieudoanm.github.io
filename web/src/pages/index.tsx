@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
-import profile from '@hieudoanm/assets/profile.jpg';
+import profile from '@web/assets/profile.jpg';
 import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa6';
 import {
   FaEnvelopeSquare,

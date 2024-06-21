@@ -1,4 +1,4 @@
-import SocialPage from '@hieudoanm/pages';
+import SocialPage from '@web/pages';
 import { render } from '@testing-library/react';
 import React from 'react';
 

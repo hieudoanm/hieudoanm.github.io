@@ -1,6 +1,6 @@
-import { APP_NAME } from '@hieudoanm/common/constants/time.constants';
-import { ThemeProvider } from '@hieudoanm/context/ThemeContext';
-import '@hieudoanm/styles/globals.css';
+import { APP_NAME } from '@web/common/constants/time.constants';
+import { ThemeProvider } from '@web/context/ThemeContext';
+import '@web/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Roboto_Mono } from 'next/font/google';
 import Head from 'next/head';

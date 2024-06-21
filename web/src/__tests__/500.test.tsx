@@ -1,4 +1,4 @@
-import { InternalServerErrorPage } from '@hieudoanm/pages/500';
+import { InternalServerErrorPage } from '@web/pages/500';
 import { render } from '@testing-library/react';
 
 describe('InternalServerErrorPage', () => {
