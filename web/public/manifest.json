@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "version": "1.0.0",
-  "name": "f(x)",
-  "short_name": "f(x)",
-  "description": "Functional App",
+  "name": "hieudoan",
+  "short_name": "hd",
+  "description": "Hieu Doan - Mini Apps",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",

@@ -22,4 +22,4 @@ const nextConfig = withPWA({
   },
 });
 
-export default million.next(withPWA(nextConfig));
+export default million.next(nextConfig);
