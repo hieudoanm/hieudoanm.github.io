@@ -19,7 +19,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Linting
-        run: yarn lint --fix
+        run: yarn lint
 
   test:
     name: Test
@@ -34,7 +34,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Unit Test
-        run: yarn test -u
+        run: yarn test
 
   build:
     name: Build
