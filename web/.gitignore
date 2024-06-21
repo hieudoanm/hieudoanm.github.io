@@ -29,6 +29,7 @@ coverage
 # service workers
 **/sw.js
 **/workbox-*.js
+**/fallback-*.js
 
 # swc
 .swc

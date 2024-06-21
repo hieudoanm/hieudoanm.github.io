@@ -1,7 +1,7 @@
 {
-  "name": "hieudoanm.github.io",
+  "name": "web",
   "version": "0.0.1",
-  "description": "hieudoanm.github.io",
+  "description": "Web",
   "main": "index.js",
   "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
@@ -13,7 +13,7 @@
   "scripts": {
     "format": "prettier --cache --write .",
     "lint": "next lint",
-    "prebuild": "rimraf .next out",
+    "prebuild": "rimraf .next out public/**/*.js",
     "build": "next build",
     "predev": "kill-port 3000",
     "dev": "next dev -p 3000",

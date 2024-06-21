@@ -1,4 +1,4 @@
-import { APP_NAME } from '@web/common/constants/time.constants';
+import { APP_NAME } from '@web/constants/time.constants';
 import { ThemeProvider } from '@web/context/ThemeContext';
 import '@web/styles/globals.css';
 import type { AppProps } from 'next/app';
