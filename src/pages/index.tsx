@@ -50,17 +50,17 @@ const socialMedias = [
   },
   {
     shown: true,
-    id: 'linkedin',
-    icon: <FaLinkedin />,
-    link: 'https://www.linkedin.com/in/hieudoanm',
-    title: 'LinkedIn',
-  },
-  {
-    shown: true,
     id: 'github',
     icon: <FaGithub />,
     link: 'https://github.com/hieudoanm',
     title: 'GitHub',
+  },
+  {
+    shown: true,
+    id: 'linkedin',
+    icon: <FaLinkedin />,
+    link: 'https://www.linkedin.com/in/hieudoanm',
+    title: 'LinkedIn',
   },
   {
     shown: false,
@@ -291,16 +291,16 @@ const Boilerplate: FC<{ title: string; boilerplates: Project[] }> = ({
             return (
               <div key={id} className='col-span-1'>
                 <Link href={link} target='_blank'>
-                  <div className='w-full rounded-xl border bg-secondary shadow transition-all hover:shadow-xl'>
+                  <div className='w-full rounded-xl border border-base-content shadow transition-all hover:shadow-xl'>
                     <div className='flex flex-col gap-y-2 p-4'>
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-x-2'>
-                          <div className='flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-white'>
+                          <div className='flex h-8 w-8 items-center justify-center overflow-hidden rounded-full border border-base-content text-sm'>
                             {emoji}
                           </div>
-                          <h2 className='text-lg font-bold'>{name}</h2>
+                          <h2 className='truncate text-lg font-bold'>{name}</h2>
                         </div>
-                        <div className='badge badge-primary capitalize'>
+                        <div className='badge badge-lg border border-base-content text-xs capitalize'>
                           {pricing}
                         </div>
                       </div>
@@ -335,65 +335,65 @@ const HomePage: NextPage = () => {
   );
 
   return (
-    <div data-theme='luxury'>
-      <div className='h-screen w-screen overflow-auto bg-white p-8 lg:p-16'>
-        <div className='grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8'>
-          <div className='col-span-1'>
-            <div className='flex flex-col items-center justify-center gap-y-4 md:gap-y-8'>
-              <div className='mx-auto flex w-[25%] flex-col lg:w-[50%]'>
-                <div className='aspect-square w-full overflow-hidden rounded-full border border-secondary'>
-                  <div
-                    className='h-full w-full rounded-full border-4 border-white bg-cover bg-center'
-                    style={{ backgroundImage: `url(${profile.src})` }}
-                  />
-                </div>
+    <div className='h-screen w-screen overflow-auto p-8 lg:p-16'>
+      <div className='grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8'>
+        <div className='col-span-1'>
+          <div className='flex flex-col items-center justify-center gap-y-4 lg:gap-y-8'>
+            <div className='mx-auto flex w-[25%] flex-col lg:w-[50%]'>
+              <div className='aspect-square w-full overflow-hidden rounded-full'>
+                <div
+                  className='h-full w-full rounded-full border-4 border-base-content bg-cover bg-center'
+                  style={{ backgroundImage: `url(${profile.src})` }}
+                />
               </div>
-              <div className='flex flex-col gap-y-2 text-center md:gap-y-4'>
-                <Link href='/' className='text-2xl font-bold uppercase'>
-                  Hieu Doan
-                </Link>
-                <p>📍 Vietnam</p>
-                <div className='flex items-center justify-center gap-x-2'>
-                  {socialMedias
-                    .filter(({ shown }) => shown)
-                    .map(({ id, icon, link }) => {
-                      return (
-                        <div key={id}>
-                          <Link href={link} target='_blank'>
-                            {icon}
-                          </Link>
-                        </div>
-                      );
-                    })}
-                </div>
+            </div>
+            <div className='flex flex-col gap-y-1 text-center lg:gap-y-2'>
+              <p className='text-2xl uppercase'>
+                <Link href='/'>Hieu Doan</Link>
+              </p>
+              <p className='leading-8'>📍 Vietnam</p>
+              <div className='flex h-8 items-center justify-center gap-x-2'>
+                {socialMedias
+                  .filter(({ shown }) => shown)
+                  .map(({ id, icon, link }) => {
+                    return (
+                      <div key={id}>
+                        <Link href={link} target='_blank'>
+                          {icon}
+                        </Link>
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           </div>
-          <div className='col-span-1 lg:col-span-2'>
-            <div className='flex flex-col gap-y-4 md:gap-y-8'>
-              <Boilerplate title='Mini Apps' boilerplates={miniapps} />
-              <Boilerplate
-                title='Front-end Boilerplates'
-                boilerplates={frontEndBoilerplates}
-              />
-              <Boilerplate
-                title='Full-stack Boilerplates'
-                boilerplates={fullStackBoilerplates}
-              />
-              <Boilerplate
-                title='GraphQL Boilerplates'
-                boilerplates={graphqlBackEndBoilerplates}
-              />
-              <Boilerplate
-                title='REST Boilerplates'
-                boilerplates={restBackEndBoilerplates}
-              />
-            </div>
+        </div>
+        <div className='col-span-1 lg:col-span-2'>
+          <div className='flex flex-col gap-y-4 lg:gap-y-8'>
+            <Boilerplate title='Mini Apps' boilerplates={miniapps} />
+            <Boilerplate
+              title='Front-end Boilerplates'
+              boilerplates={frontEndBoilerplates}
+            />
+            <Boilerplate
+              title='Full-stack Boilerplates'
+              boilerplates={fullStackBoilerplates}
+            />
+            <Boilerplate
+              title='GraphQL Boilerplates'
+              boilerplates={graphqlBackEndBoilerplates}
+            />
+            <Boilerplate
+              title='REST Boilerplates'
+              boilerplates={restBackEndBoilerplates}
+            />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+export const dynamic = 'force-static';
 
 export default HomePage;

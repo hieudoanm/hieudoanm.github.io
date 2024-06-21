@@ -7,6 +7,7 @@
   ],
   "plugins": ["github", "jest", "react", "sonarjs"],
   "rules": {
+    "camelcase": "warn",
     "no-shadow": "warn",
     "no-unused-vars": "warn",
     "i18n-text/no-en": "off",
