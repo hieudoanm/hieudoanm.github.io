@@ -12,7 +12,7 @@ const withPWA = nextPWA({
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withPWA({
+const nextConfig = {
   swcMinify: true,
   output: 'export',
   reactStrictMode: true,
@@ -20,6 +20,6 @@ const nextConfig = withPWA({
   compiler: {
     removeConsole: process.env.NODE_ENV !== 'development',
   },
-});
+};
 
-export default million.next(nextConfig);
+export default million.next(withPWA(nextConfig));
