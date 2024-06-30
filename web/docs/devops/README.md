@@ -2,12 +2,12 @@
 
 ## Table of Content
 
-- [DevOps](#devops)
+<!-- - [DevOps](#devops)
   - [Table of Content](#table-of-content)
   - [IaaS](#iaas)
   - [Blockchain](#blockchain)
   - [Design](#design)
-  - [Game Engines](#game-engines)
+  - [Game Engines](#game-engines) -->
 
 ## IaaS
 
@@ -44,22 +44,12 @@
 - [Polkadot](https://polkadot.network)
 - [Solana](https://solana.com)
 
-## Design
-
-- [Adobe][adobe]
-  - [Photoshop][adobe-photoshop]
-  - [Illustrator][adobe-illustrator]
-- [Figma](https://www.figma.com)
-
 ## Game Engines
 
 - [Photon Engine](https://www.photonengine.com)
 - [Unity](https://unity.com)
 - [Unreal Engine](https://www.unrealengine.com)
 
-[adobe]: https://www.adobe.com
-[adobe-illustrator]: https://www.adobe.com/products/illustrator.html
-[adobe-photoshop]: https://www.adobe.com/products/photoshop.html
 [aws]: https://aws.amazon.com/
 [aws-ebs]: https://aws.amazon.com/ebs/
 [aws-ec2]: https://aws.amazon.com/ec2/

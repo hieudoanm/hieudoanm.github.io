@@ -2,7 +2,7 @@
 
 ## Table of Content
 
-- [JavaScript](#javascript)
+<!-- - [JavaScript](#javascript)
   - [Table of Content](#table-of-content)
   - [Abbreviation](#abbreviation)
   - [Nominations](#nominations)
@@ -36,11 +36,10 @@
     - [Back-end as a Service](#back-end-as-a-service)
     - [Infrastructure as a Service](#infrastructure-as-a-service)
   - [Techstack](#techstack)
-  - [References](#references)
+  - [References](#references) -->
 
 ## Abbreviation
 
-```txt
 - AI    : Artificial Intelligence
 - AWS   : Amazon Web Services
 - BaaS  : Back-end as a Service
@@ -65,7 +64,6 @@
 - SSR   : Server-Side Rendering
 - TS    : TypeScript
 - UI    : User Interface
-```
 
 [⬆️ Back to Table of Content](#table-of-content)
 

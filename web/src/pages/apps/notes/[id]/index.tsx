@@ -4,6 +4,11 @@ import { GetStaticPaths, GetStaticPropsContext, NextPage } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import { Suspense } from 'react';
+import rehypeStringify from 'rehype-stringify';
+import remarkGfm from 'remark-gfm';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
 
 type NotePageProps = {
   mdxSource: any;
@@ -34,7 +39,14 @@ export const getStaticProps = async (
   const { params } = context;
   const id: string = (params ?? { id: '' }).id ?? '';
   const source: string = readFileSync(`./docs/${id}/README.md`, 'utf-8');
-  const mdxSource = await serialize(source);
+  const remarkSource = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .process(source);
+  const remarkSourceString: string = String(remarkSource);
+  const mdxSource = await serialize(remarkSourceString);
   return { props: { mdxSource } };
 };
 

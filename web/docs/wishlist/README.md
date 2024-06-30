@@ -1,109 +1,154 @@
 # Wishlist
 
-- [ ] House
-  - [ ] Bedroom
-    - [ ] Bed (King-size)
-      - [ ] **4/4** Pillow
-    - [ ] Clothes
-      - [ ] **2/8** `Black` Gym Shirts
-      - [ ] **2/8** `Black` Gym Shorts
-      - [ ] **2/8** `Black` T-shirts
-      - [ ] **2/8** `Black` Shorts
-      - [ ] **2/8** `Black` Shirts
-      - [ ] **2/8** `White` Shirts
-      - [ ] **2/8** `Black` Khaki Pants
-      - [ ] **2/2** `Black` Suits
-      - [ ] **0/2** `Navy Blue` Suits
-      - [ ] **0/2** `Borderux Red` Suits
-      - [ ] **0/1** `Black` Dress Shoes
-      - [ ] **1/1** `Black` Sneakers
-      - [ ] **1/1** `Black` Running Shoes
-      - [ ] **1/2** `Black` Suitcase 30 kg
-    - [ ] 0/1 Medical Cabinet
-  - [ ] Bathroom
-    - [ ] 1/1 Washing Machine
-    - [ ] 0/1 Dryer
-  - [ ] Kitchen
-    - [ ] 1/1 Rice Cooker
-    - [ ] 0/1 Blender
-    - [ ] 0/1 Dish Washer
-    - [ ] 1/1 Air Fryer
-  - [ ] Living room
-    - [ ] 0/1 Sofa
-    - [ ] 0/1 Chess Set
-    - [ ] 0/1 TV (48-inch)
-    - [ ] 0/1 Speaker (Bose)
-    - [ ] 0/1 Gaming Console (PS5)
-  - [ ] Personal room
-    - [ ] Working Station
-      - [ ] 0/1 Adjustable Standing Desk
-      - [ ] 1/1 Ergonomic Chair
-    - [ ] Toys: LEGO
-  - [ ] Dining room
-    - [ ] 1/1 Table
-    - [ ] 2/12 Chair
-    - [ ] 2/12 Plates
-    - [ ] 2/12 Bowls
-    - [ ] 2/12 Utilities Set
-  - [ ] Gym
-    - [ ] 0/1 Running Treadmill
-  - [ ] Garage
-    - [ ] 0/1 Car - Everyday - Electric (Vinfast)
-    - [ ] 0/1 Car - Super (Bugatti Veyron)
-    - [ ] 0/1 Motorcycle - Everyday - Electric (Dat Bike)
-    - [ ] 0/1 Motorcycle - Super (Honda Rebel 300)
-    - [ ] 1/1 Bicycle
-    - [ ] 0/1 Toolbox
-      - [ ] Screwdriver
-- [ ] Technology
-  - [ ] 1/1 Desktop
-    - [ ] 32-inch
-  - [ ] 1/1 Laptop (Apple Macbook with M Chip / ASUS Zenbook with Intel Chip)
-    - [ ] 12 to 15-inch
-    - [ ] 512MB to 1TB of Memory
-    - [ ] 16 to 32 GB of RAM
-    - [ ] 8 core chip
-  - [ ] 0/1 Tablet (Apple iPad / Samsung Galaxy Tab S)
-    - [ ] Pen
-    - [ ] 10 to 12-inch
-  - [ ] Phone (Google Pixel (Best software) / Apple iPhone (Best hardware) / Samsung Galaxy S (Best of Both)?)
-    - [ ] 6-inch screen
-    - [ ] AI on the GO
-  - [ ] 0/1 Headphone (Beat by Dre)
-  - [ ] 1/1 Swiss Army Knifes
-  - [ ] 0/1 Watch (Casio G-Shock)
-- [ ] Brain
-  - [ ] Education
-    - [ ] Bachelor of Psychology
-    - [ ] Master of Computational Neuroscience (minimum)
-    - [ ] PhD of Computational Neuroscience
-    - [ ] MD of Neurology
-  - [ ] Chess
-    - [ ] CM
-    - [ ] FM
-    - [ ] IM
-    - [ ] GM
-  - [ ] Languages
-    - [ ] Korean
-    - [ ] Deutsch
-- [ ] Physical
-  - [ ] Marathon
-    - [x] 5 km
-    - [ ] 10 km (goal)
-    - [ ] 21 km
-    - [ ] 42 km
+## House
+
+### Bedroom
+
+- **1/1** Bed (King-size)
+- **4/4** Pillow
+- **2/2** Blanket
+
+#### Clothes
+
+- **2/8** `Black` Gym Shirts
+- **2/8** `Black` Gym Shorts
+- **2/8** `Black` T-shirts
+- **2/8** `Black` Shorts
+- **2/8** `Black` Shirts
+- **2/8** `White` Shirts
+- **2/8** `Black` Khaki Pants
+- **2/2** `Black` Suits
+- **0/2** `Navy Blue` Suits
+- **0/2** `Borderux Red` Suits
+- **0/1** `Black` Dress Shoes
+- **1/1** `Black` Sneakers
+- **1/1** `Black` Running Shoes
+- **1/2** `Black` Suitcase 30 kg
+- 0/1 Medical Cabinet
+
+### Bathroom
+
+- 1/1 Washing Machine
+- 0/1 Dryer
+
+### Kitchen
+
+- 1/1 Rice Cooker
+- 0/1 Blender
+- 0/1 Dish Washer
+- 1/1 Air Fryer
+
+### Living room
+
+- 0/1 Sofa
+- 0/1 Chess Set
+- 0/1 TV (48-inch)
+- 0/1 Speaker (Bose)
+- 0/1 Gaming Console (PS5)
+
+### Personal room
+
+#### Working Station
+
+- 0/1 Adjustable Standing Desk
+- 1/1 Ergonomic Chair
+- 0/1 3D Printer
+
+#### Toys
+
+- LEGO
+
+### Dining room
+
+- 1/1 Table
+- 2/12 Chair
+- 2/12 Plates
+- 2/12 Bowls
+- 2/12 Utilities Set
+
+### Gym
+
+- 0/1 Running Treadmill
+
+### Garage
+
+- 0/1 Car - Everyday - Electric (Vinfast)
+- 0/1 Car - Super (Bugatti Veyron)
+- 0/1 Motorcycle - Everyday - Electric (Dat Bike)
+- 0/1 Motorcycle - Super (Honda Rebel 300)
+- 1/1 Bicycle
+- 0/1 Toolbox
+- Screwdriver
+
+## Technology
+
+### Desktop
+
+- 32-inch
+
+### Laptop (Apple Macbook with M Chip / ASUS Zenbook with Intel Chip)
+
+- 12 to 15-inch
+- 512MB to 1TB of Memory
+- 16 to 32 GB of RAM
+- 8 core chip
+
+### Tablet (Apple iPad / Samsung Galaxy Tab S)
+
+- Pen
+- 10 to 12-inch
+
+### Phone (Google Pixel (Best software) / Apple iPhone (Best hardware) / Samsung Galaxy S (Best of Both)?)
+
+- 6-inch screen
+- AI on the GO
+
+- 0/1 Headphone (Beat by Dre)
+- 1/1 Swiss Army Knifes
+- 0/1 Watch (Casio G-Shock)
+
+## Brain
+
+### Education
+
+- Bachelor of Business Information Technology
+- Bachelor of Psychology
+- Master of Computational Neuroscience (minimum)
+- PhD of Computational Neuroscience
+- MD of Neurology
+
+### Chess
+
+- CM (Candidate Master)
+- FM (FIDE Master)
+- IM (International Master)
+- GM (Grandmaster)
+
+### Languages
+
+- Korean
+- Deutsch
+
+## Physical
+
+### Marathon
+
+- 5 km
+- 10 km
+- 21 km
+- 42 km
 
 ## Mark Resolutions (2009 - 2020)
 
-- [ ] 2020 - Ditch annual challenges in favor of long-term predictions
-- [ ] 2019 - Host public debates about the effects of tech on society
-- [ ] 2018 - Focus on fixing Facebook's platform-abuse problems
-- [ ] 2017 - Meet someone from every US state
-- [ ] 2016 - Build an AI for his home and run 365 miles.
-- [ ] 2015 - Read a book every two weeks
-- [ ] 2014 - Write a thank-you note daily
-- [ ] 2013 - Meet a non-Facebook person every day
-- [ ] 2012 - Code daily
-- [ ] 2011 - Be a vegetarian, or eat meat only if he killed the animal himself
-- [ ] 2010 - Learn Mandarin
-- [ ] 2009 - Wear a tie every day
+- 2020 - Ditch annual challenges in favor of long-term predictions
+- 2019 - Host public debates about the effects of tech on society
+- 2018 - Focus on fixing Facebook's platform-abuse problems
+- 2017 - Meet someone from every US state
+- 2016 - Build an AI for his home and run 365 miles.
+- 2015 - Read a book every two weeks
+- 2014 - Write a thank-you note daily
+- 2013 - Meet a non-Facebook person every day
+- 2012 - Code daily
+- 2011 - Be a vegetarian, or eat meat only if he killed the animal himself
+- 2010 - Learn Mandarin
+- 2009 - Wear a tie every day

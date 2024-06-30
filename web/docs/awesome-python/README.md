@@ -2,7 +2,7 @@
 
 ## Table of Content
 
-- [Python](#python)
+<!-- - [Python](#python)
   - [Table of Content](#table-of-content)
   - [Languages](#languages)
   - [Packages Managers](#packages-managers)
@@ -13,7 +13,7 @@
   - [Chatbot](#chatbot)
   - [Generative AI](#generative-ai)
   - [Mathematics](#mathematics)
-  - [Machine Learning](#machine-learning)
+  - [Machine Learning](#machine-learning) -->
 
 ## Languages
 
