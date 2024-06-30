@@ -1,6 +1,7 @@
 import { APP_NAME } from '@web/constants/app.constants';
 import { ThemeProvider } from '@web/context/ThemeContext';
 import '@web/styles/globals.css';
+import 'github-markdown-css';
 import type { AppProps } from 'next/app';
 import { Roboto_Mono } from 'next/font/google';
 import Head from 'next/head';
