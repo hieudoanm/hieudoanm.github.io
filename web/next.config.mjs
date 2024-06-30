@@ -1,3 +1,4 @@
+import mdx from '@next/mdx';
 import million from 'million/compiler';
 import nextPWA from 'next-pwa';
 
@@ -13,8 +14,9 @@ const withPWA = nextPWA({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ['next-mdx-remote'],
   swcMinify: true,
-  output: 'export',
+  output: process.env.NODE_ENV !== 'development' ? 'export' : 'standalone',
   reactStrictMode: true,
   images: { loader: 'akamai', path: '' },
   compiler: {
@@ -22,4 +24,10 @@ const nextConfig = {
   },
 };
 
-export default million.next(withPWA(nextConfig));
+const pwaConfig = withPWA(nextConfig);
+
+const withMDX = mdx();
+
+const mdxConfig = withMDX(pwaConfig);
+
+export default million.next(mdxConfig);
