@@ -61,7 +61,7 @@
     "jest-environment-jsdom": "29.7.0",
     "kill-port": "2.0.1",
     "million": "3.1.11",
-    "postcss": "8.4.38",
+    "postcss": "8.4.39",
     "prettier": "3.3.2",
     "prettier-plugin-tailwindcss": "0.6.5",
     "rimraf": "5.0.7",
