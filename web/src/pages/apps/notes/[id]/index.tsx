@@ -1,10 +1,6 @@
+import notes from '@web/json/notes.json';
 import { readFileSync } from 'fs';
-import {
-  GetServerSidePropsContext,
-  GetStaticPaths,
-  GetStaticPropsContext,
-  NextPage,
-} from 'next';
+import { GetStaticPaths, GetStaticPropsContext, NextPage } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import { Suspense } from 'react';
@@ -26,16 +22,8 @@ const NotePage: NextPage<NotePageProps> = ({ mdxSource }: NotePageProps) => {
 };
 
 export const getStaticPaths = (async () => {
-  return {
-    paths: [
-      {
-        params: {
-          id: 'wishlist',
-        },
-      }, // See the "paths" section below
-    ],
-    fallback: true, // false or "blocking"
-  };
+  const paths = notes.map((id) => ({ params: { id } }));
+  return { paths, fallback: true };
 }) satisfies GetStaticPaths;
 
 export const getStaticProps = async (

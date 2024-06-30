@@ -13,7 +13,7 @@
   "scripts": {
     "format": "prettier --cache --write .",
     "lint": "next lint",
-    "prebuild": "rimraf .next out public/**/*.js",
+    "prebuild": "rimraf .next out public/**/*.js && ts-node ./scripts/get-notes.ts",
     "build": "next build",
     "predev": "kill-port 3000",
     "dev": "next dev -p 3000",

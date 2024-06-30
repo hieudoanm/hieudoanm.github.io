@@ -833,10 +833,8 @@
 [js]: https://www.javascript.com
 [jsc]: https://developer.apple.com/documentation/javascriptcore
 [jslint]: https://www.jslint.com
-[jsr]: https://jsr.io
-
-<!-- [json]: https://www.json.org -->
-
+[jsr]: https://jsr.i
+[json]: https://www.json.org
 [jsx]: https://facebook.github.io/jsx
 [jwt]: https://jwt.io
 [karma]: https://karma-runner.github.io
@@ -1010,9 +1008,6 @@
 [zig]: https://ziglang.org
 [zitadel]: https://zitadel.com
 [zustand]: https://zustand-demo.pmnd.rs
-
-<!-- GitHub -->
-
 [gh-babel]: https://github.com/babel/babel
 [gh-biome]: https://github.com/biomejs/biome
 [gh-bun]: https://github.com/oven-sh/bun

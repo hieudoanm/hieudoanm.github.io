@@ -11,6 +11,7 @@
     "no-shadow": "warn",
     "no-unused-vars": "warn",
     "i18n-text/no-en": "off",
+    "import/extensions": "off",
     "filenames/match-regex": "off",
     "react/react-in-jsx-scope": "off"
   }
