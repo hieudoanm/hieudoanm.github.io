@@ -133,7 +133,7 @@
 
 ### Marathon
 
-- 5 km
+- 05 km
 - 10 km
 - 21 km
 - 42 km
