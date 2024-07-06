@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@million/lint": "0.0.73",
-    "@testing-library/dom": "10.3.0",
+    "@testing-library/dom": "10.3.1",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
     "@types/mdx": "2.0.13",
