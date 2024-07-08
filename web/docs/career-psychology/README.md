@@ -1,5 +1,7 @@
 # Psychology
 
+## Subjects
+
 1. Biological Psychology
 2. Cognitive Psychology
 3. Communication & Professional Practices
@@ -20,3 +22,16 @@
 18. Research Project
 19. Social Psychology
 20. STEM for Sustainable Development
+
+## Companies
+
+1. [bitbrain](https://www.bitbrain.com/)
+2. [blackrockneurotech](https://blackrockneurotech.com/)
+3. [brainco](https://brainco.tech/)
+4. [braingate](https://www.braingate.org/)
+5. [emotiv](https://www.emotiv.com/)
+6. [kernel](https://www.kernel.com/)
+7. [neurable](https://neurable.com/)
+8. [neuralink](https://neuralink.com/)
+9. [precisionneuro](https://precisionneuro.io/)
+10. [synchron](https://synchron.com/)
