@@ -40,30 +40,30 @@
 
 ## Abbreviation
 
-- AI    : Artificial Intelligence
-- AWS   : Amazon Web Services
-- BaaS  : Back-end as a Service
+- AI : Artificial Intelligence
+- AWS : Amazon Web Services
+- BaaS : Back-end as a Service
 - CI/CD : Continuous Integration / Continuous Delivery
-- CLI   : Command Line Interface
-- CSR   : Client-side Rendering
-- CSS   : Cascading Style Sheets
-- E2E   : End-to-end
-- IaC   : Infrastructure as Code
-- IaaS  : Infrastructure as a Service
-- IDE   : Integrated Development Environment
-- JS    : JavaScript
-- LLM   : Large Language Model
-- MVC   : Model-View-Controller
-- PaaS  : Platform as a Service
-- ORM   : Object Relational Mapping
-- OS    : Operating System
-- RPC   : Remote Procedure Call
-- SaaS  : Software as a Service
-- SASS  : Syntactically Awesome Style Sheets
-- SSG   : Static Site Generation
-- SSR   : Server-Side Rendering
-- TS    : TypeScript
-- UI    : User Interface
+- CLI : Command Line Interface
+- CSR : Client-side Rendering
+- CSS : Cascading Style Sheets
+- E2E : End-to-end
+- IaC : Infrastructure as Code
+- IaaS : Infrastructure as a Service
+- IDE : Integrated Development Environment
+- JS : JavaScript
+- LLM : Large Language Model
+- MVC : Model-View-Controller
+- PaaS : Platform as a Service
+- ORM : Object Relational Mapping
+- OS : Operating System
+- RPC : Remote Procedure Call
+- SaaS : Software as a Service
+- SASS : Syntactically Awesome Style Sheets
+- SSG : Static Site Generation
+- SSR : Server-Side Rendering
+- TS : TypeScript
+- UI : User Interface
 
 [⬆️ Back to Table of Content](#table-of-content)
 
