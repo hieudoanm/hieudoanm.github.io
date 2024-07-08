@@ -16,12 +16,14 @@ type NotePageProps = {
 
 const NotePage: NextPage<NotePageProps> = ({ mdxSource }: NotePageProps) => {
   return (
-    <div className='container mx-auto'>
-      <div className='p-4 md:p-8'>
-        <div className='markdown-body !bg-base-100'>
-          <Suspense fallback={<>Loading...</>}>
-            <MDXRemote {...mdxSource} />
-          </Suspense>
+    <div className='min-h-screen'>
+      <div className='container mx-auto'>
+        <div className='p-4 md:p-8'>
+          <div className='markdown-body !bg-base-100'>
+            <Suspense fallback={<>Loading...</>}>
+              <MDXRemote {...mdxSource} />
+            </Suspense>
+          </div>
         </div>
       </div>
     </div>
