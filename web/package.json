@@ -8,7 +8,7 @@
   "license": "GPL-3.0",
   "private": true,
   "engines": {
-    "npm": "10.8.1"
+    "npm": "10.8.2"
   },
   "scripts": {
     "format": "prettier --cache --write .",
