@@ -1,13 +1,13 @@
+import profile from '@web/assets/profile.jpg';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import profile from '@web/assets/profile.jpg';
-import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa6';
+import { FC } from 'react';
 import {
   FaEnvelopeSquare,
   FaFacebookSquare,
   FaInstagramSquare,
 } from 'react-icons/fa';
-import { FC } from 'react';
+import { FaAppStore, FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa6';
 
 enum Language {
   GOLANG_PYTHON_TYPESCRIPT = 'gpt',
@@ -96,18 +96,6 @@ const projects: Project[] = [
     pricing: 'free',
     language: Language.GOLANG_PYTHON_TYPESCRIPT,
     category: 'visualization',
-    group: 'miniapp',
-    subgroup: 'full-stack',
-  },
-  {
-    id: 'fx',
-    name: 'f(x)',
-    emoji: '📰',
-    description: 'Reading quick news in 10 minutes every morning',
-    link: 'https://fxai.vercel.app/',
-    pricing: 'free',
-    category: 'tool',
-    language: Language.GOLANG_PYTHON_TYPESCRIPT,
     group: 'miniapp',
     subgroup: 'full-stack',
   },
@@ -353,6 +341,11 @@ const HomePage: NextPage = () => {
               </p>
               <p className='leading-8'>📍 Vietnam</p>
               <div className='flex h-8 items-center justify-center gap-x-2'>
+                <div>
+                  <Link href='/apps'>
+                    <FaAppStore />
+                  </Link>
+                </div>
                 {socialMedias
                   .filter(({ shown }) => shown)
                   .map(({ id, icon, link }) => {
