@@ -84,7 +84,7 @@
     "kill-port": "2.0.1",
     "million": "3.1.11",
     "postcss": "8.4.39",
-    "prettier": "3.3.2",
+    "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.5",
     "rehype-stringify": "10.0.0",
     "remark-gfm": "4.0.0",
