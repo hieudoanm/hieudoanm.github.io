@@ -29,5 +29,5 @@ resource "vercel_deployment" "news" {
 
 resource "vercel_project_domain" "news" {
   project_id = vercel_project.news.id
-  domain     = "news.vercel.app"
+  domain     = "fxai.vercel.app"
 }

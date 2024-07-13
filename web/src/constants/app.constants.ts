@@ -1,1 +1,1 @@
-export const APP_NAME = 'HIEU DOAN (hieudoanm)';
+export const APP_NAME: string = 'HIEU DOAN (hieudoanm)';

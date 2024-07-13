@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavbarColors to match snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center justify-center gap-x-2"
+  >
+    <a
+      class="uppercase"
+      href="/apps/colors/converter"
+    >
+      Converter
+    </a>
+    <span>
+      |
+    </span>
+    <a
+      class="uppercase"
+      href="/apps/colors/picker"
+    >
+      Picker
+    </a>
+    <span>
+      |
+    </span>
+    <a
+      class="uppercase"
+      href="/apps/colors/randomiser"
+    >
+      Randomiser
+    </a>
+  </div>
+</div>
+`;

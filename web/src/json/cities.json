@@ -1,0 +1,407 @@
+[
+  {
+    "city": "Honolulu",
+    "state": "Hawaii",
+    "country": "United States",
+    "continent": "North America",
+    "timezone": -10,
+    "latitude": 21.3069,
+    "longitude": -157.8583
+  },
+  {
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "continent": "North America",
+    "timezone": -7,
+    "latitude": 34.0522,
+    "longitude": -118.2437
+  },
+  {
+    "city": "Chicago",
+    "state": "Illinois",
+    "country": "United States",
+    "continent": "North America",
+    "timezone": -5,
+    "latitude": 41.85,
+    "longitude": -87.65
+  },
+  {
+    "city": "Dallas",
+    "state": "Texas",
+    "country": "United States",
+    "continent": "North America",
+    "timezone": -5,
+    "latitude": 32.7831,
+    "longitude": -96.8067
+  },
+  {
+    "city": "Houston",
+    "state": "Texas",
+    "country": "United States",
+    "continent": "North America",
+    "timezone": -5,
+    "latitude": 29.7633,
+    "longitude": -95.3633
+  },
+  {
+    "city": "Austin",
+    "state": "Texas",
+    "country": "United States",
+    "continent": "North America",
+    "timezone": -5,
+    "latitude": 30.2672,
+    "longitude": -97.7431
+  },
+  {
+    "city": "New York City",
+    "state": "New York",
+    "country": "United States",
+    "continent": "North America",
+    "timezone": -4,
+    "latitude": 40.7143,
+    "longitude": -74.006
+  },
+  {
+    "city": "São Paulo",
+    "state": "São Paulo",
+    "country": "Brazil",
+    "continent": "South America",
+    "timezone": -3,
+    "latitude": -23.5475,
+    "longitude": -46.6361
+  },
+  {
+    "city": "London",
+    "state": "Greater London",
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "timezone": 0,
+    "latitude": 51.5085,
+    "longitude": -0.1257
+  },
+  {
+    "city": "Manchester",
+    "state": "Greater Manchester",
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "timezone": 0,
+    "latitude": 53.4809,
+    "longitude": -2.2374
+  },
+  {
+    "city": "Liverpool",
+    "state": "Merseyside",
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "timezone": 0,
+    "latitude": 53.4106,
+    "longitude": -2.9779
+  },
+  {
+    "city": "Paris",
+    "state": "Île-de-France",
+    "country": "France",
+    "continent": "Europe",
+    "timezone": 2,
+    "latitude": 48.8534,
+    "longitude": 2.3488
+  },
+  {
+    "city": "Bordeaux",
+    "state": "Nouvelle-Aquitaine",
+    "country": "France",
+    "continent": "Europe",
+    "timezone": 2,
+    "latitude": 44.8404,
+    "longitude": -0.5805
+  },
+  {
+    "city": "Marseille",
+    "state": "Provence-Alpes-Côte d'Azur",
+    "country": "France",
+    "continent": "Europe",
+    "timezone": 2,
+    "latitude": 43.297,
+    "longitude": 5.3811
+  },
+  {
+    "city": "Berlin",
+    "state": "Berlin",
+    "country": "Germany",
+    "continent": "Europe",
+    "timezone": 2,
+    "latitude": 52.5244,
+    "longitude": 13.4105
+  },
+  {
+    "city": "Hamburg",
+    "state": "Hamburg",
+    "country": "Germany",
+    "continent": "Europe",
+    "timezone": 2,
+    "latitude": 53.5507,
+    "longitude": 9.993
+  },
+  {
+    "city": "Bremen",
+    "state": "Bremen",
+    "country": "Germany",
+    "continent": "Europe",
+    "timezone": 2,
+    "latitude": 53.0758,
+    "longitude": 8.8072
+  },
+  {
+    "city": "Frankfurt am Main",
+    "state": "Hessen",
+    "country": "Germany",
+    "continent": "Europe",
+    "timezone": 2,
+    "latitude": 50.1155,
+    "longitude": 8.6842
+  },
+  {
+    "city": "Munich",
+    "state": "Bavaria",
+    "country": "Germany",
+    "continent": "Europe",
+    "timezone": 2,
+    "latitude": 48.1374,
+    "longitude": 11.5755
+  },
+  {
+    "city": "Cologne",
+    "state": "North Rhine-Westphalia",
+    "country": "Germany",
+    "continent": "Europe",
+    "timezone": 2,
+    "latitude": 48.1374,
+    "longitude": 11.5755
+  },
+  {
+    "city": "Pretoria",
+    "state": "Gauteng",
+    "country": "South Africa",
+    "continent": "Africa",
+    "timezone": 2,
+    "latitude": -25.7449,
+    "longitude": 28.1878
+  },
+  {
+    "city": "Bloemfontein",
+    "state": "Orange Free State",
+    "country": "South Africa",
+    "continent": "Africa",
+    "timezone": 2,
+    "latitude": -29.1211,
+    "longitude": 26.214
+  },
+  {
+    "city": "Cape Town",
+    "state": "Western Cape",
+    "country": "South Africa",
+    "continent": "Africa",
+    "timezone": 2,
+    "latitude": -33.9258,
+    "longitude": 18.4232
+  },
+  {
+    "city": "Bangkok",
+    "state": "Bangkok",
+    "country": "Thailand",
+    "continent": "Asia",
+    "timezone": 7,
+    "latitude": 13.754,
+    "longitude": 100.5014
+  },
+  {
+    "city": "Pattaya",
+    "state": "Chon Buri",
+    "country": "Thailand",
+    "continent": "Asia",
+    "timezone": 7,
+    "latitude": 12.9333,
+    "longitude": 100.8833
+  },
+  {
+    "city": "Phuket",
+    "state": "Phuket",
+    "country": "Thailand",
+    "continent": "Asia",
+    "timezone": 7,
+    "latitude": 7.8906,
+    "longitude": 98.3981
+  },
+  {
+    "city": "Hanoi",
+    "state": "Hanoi",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "timezone": 7,
+    "latitude": 21.0245,
+    "longitude": 105.8412
+  },
+  {
+    "city": "Da Nang",
+    "state": "Da Nang",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "timezone": 7,
+    "latitude": 16.0678,
+    "longitude": 108.2208
+  },
+  {
+    "city": "Nha Trang",
+    "state": "Nha Trang",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "timezone": 7,
+    "latitude": 12.2451,
+    "longitude": 109.1943
+  },
+  {
+    "city": "Da Lat",
+    "state": "Lam Dong",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "timezone": 7,
+    "latitude": 11.9465,
+    "longitude": 108.4419
+  },
+  {
+    "city": "Ho Chi Minh",
+    "state": "Ho Chi Minh",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "timezone": 7,
+    "latitude": 10.823,
+    "longitude": 106.6296
+  },
+  {
+    "city": "Can Tho",
+    "state": "Can Tho",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "timezone": 7,
+    "latitude": 10.0371,
+    "longitude": 105.7883
+  },
+  {
+    "city": "Kuala Lumpur",
+    "state": "Kuala Lumpur",
+    "country": "Malaysia",
+    "continent": "Asia",
+    "timezone": 8,
+    "latitude": 3.1412,
+    "longitude": 101.6865
+  },
+  {
+    "city": "Malacca",
+    "state": "Melaka",
+    "country": "Malaysia",
+    "continent": "Asia",
+    "timezone": 8,
+    "latitude": 2.196,
+    "longitude": 102.2405
+  },
+  {
+    "city": "Penang",
+    "state": "Penang",
+    "country": "Malaysia",
+    "continent": "Asia",
+    "timezone": 8,
+    "latitude": 5.3729,
+    "longitude": 100.2496
+  },
+  {
+    "city": "Singapore",
+    "state": "Singapore",
+    "country": "Singapore",
+    "continent": "Asia",
+    "timezone": 8,
+    "latitude": 1.2897,
+    "longitude": 103.8501
+  },
+  {
+    "city": "Seoul",
+    "state": "Gyeonggi",
+    "country": "Korea",
+    "continent": "Asia",
+    "timezone": 9,
+    "latitude": 37.566,
+    "longitude": 126.9784
+  },
+  {
+    "city": "Incheon",
+    "state": "Gyeonggi",
+    "country": "Korea",
+    "continent": "Asia",
+    "timezone": 9,
+    "latitude": 37.4565,
+    "longitude": 126.7052
+  },
+  {
+    "city": "Busan",
+    "state": "Gyeongsang",
+    "country": "Korea",
+    "continent": "Asia",
+    "timezone": 9,
+    "latitude": 35.1017,
+    "longitude": 129.03
+  },
+  {
+    "city": "Tokyo",
+    "state": "Tokyo",
+    "country": "Japan",
+    "continent": "Asia",
+    "timezone": 9,
+    "latitude": 35.6895,
+    "longitude": 139.6917
+  },
+  {
+    "city": "Kyoto",
+    "state": "Kyoto",
+    "country": "Japan",
+    "continent": "Asia",
+    "timezone": 9,
+    "latitude": 35.0211,
+    "longitude": 135.7538
+  },
+  {
+    "city": "Osaka",
+    "state": "Osaka",
+    "country": "Japan",
+    "continent": "Asia",
+    "timezone": 9,
+    "latitude": 34.6937,
+    "longitude": 135.5022
+  },
+  {
+    "city": "Sydney",
+    "state": "New South Wales",
+    "country": "Australia",
+    "continent": "Oceania",
+    "timezone": 10,
+    "latitude": -33.8678,
+    "longitude": 151.2073
+  },
+  {
+    "city": "Brisbane",
+    "state": "Queenlands",
+    "country": "Australia",
+    "continent": "Oceania",
+    "timezone": 10,
+    "latitude": -27.4679,
+    "longitude": 153.0281
+  },
+  {
+    "city": "Melbourne",
+    "state": "Victoria",
+    "country": "Australia",
+    "continent": "Oceania",
+    "timezone": 10,
+    "latitude": -37.814,
+    "longitude": 144.9633
+  }
+]

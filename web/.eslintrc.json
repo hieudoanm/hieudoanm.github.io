@@ -5,14 +5,19 @@
     "plugin:jest/recommended",
     "plugin:react/recommended"
   ],
-  "plugins": ["github", "jest", "react", "sonarjs"],
+  "plugins": ["github", "jest", "react"],
   "rules": {
     "camelcase": "warn",
+    "github/no-then": "warn",
+    "i18n-text/no-en": "warn",
+    "import/extensions": "warn",
+    "import/named": "warn",
+    "import/no-namespace": "warn",
+    "filenames/match-regex": "warn",
+    "jest/no-conditional-expect": "warn",
     "no-shadow": "warn",
     "no-unused-vars": "warn",
-    "i18n-text/no-en": "off",
-    "import/extensions": "off",
-    "filenames/match-regex": "off",
+    "react/prop-types": "off",
     "react/react-in-jsx-scope": "off"
   }
 }

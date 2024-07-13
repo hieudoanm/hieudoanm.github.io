@@ -1,13 +1,13 @@
 import { APP_NAME } from '@web/constants/app.constants';
 import { ThemeProvider } from '@web/context/ThemeContext';
 import '@web/styles/globals.css';
-import 'github-markdown-css';
+import { trpc } from '@web/utils/trpc';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
-import { Roboto_Mono } from 'next/font/google';
 import Head from 'next/head';
 import { FC } from 'react';
 
-const font = Roboto_Mono({ subsets: ['latin'] });
+const queryClient: QueryClient = new QueryClient();
 
 const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
@@ -25,19 +25,19 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
         <meta charSet='UTF-8' />
         <meta name='keywords' content='f(x)' />
         <meta name='theme-color' content='#000000' />
-        <meta name='url' content='https://hieudoanm.github.io' />
+        <meta name='url' content='https://fxai.vercel.app' />
         <meta
           name='viewport'
           content='width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'
         />
       </Head>
-      <ThemeProvider>
-        <div className={font.className}>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider>
           <Component {...pageProps} />
-        </div>
-      </ThemeProvider>
+        </ThemeProvider>
+      </QueryClientProvider>
     </>
   );
 };
 
-export default App;
+export default trpc.withTRPC(App);

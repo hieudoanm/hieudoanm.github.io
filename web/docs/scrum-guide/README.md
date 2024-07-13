@@ -2,32 +2,6 @@
 
 The Definitive Guide to Scrum: The Rules of the Game
 
-- [The Scrum Guide](#the-scrum-guide)
-  - [Purpose of the Scrum Guide](#purpose-of-the-scrum-guide)
-  - [Scrum Definition](#scrum-definition)
-  - [Scrum Theory](#scrum-theory)
-    - [Transparency](#transparency)
-    - [Inspection](#inspection)
-    - [Adaption](#adaption)
-  - [Scrum Values](#scrum-values)
-  - [Scrum Team](#scrum-team)
-    - [Developers](#developers)
-    - [Product Owner](#product-owner)
-    - [Scrum Master](#scrum-master)
-  - [Scrum Events](#scrum-events)
-    - [The Sprint](#the-sprint)
-    - [Sprint Planning](#sprint-planning)
-    - [Daily Scrum](#daily-scrum)
-    - [Sprint Review](#sprint-review)
-    - [Sprint Retrospective](#sprint-retrospective)
-  - [Scrum Artifacts](#scrum-artifacts)
-    - [Product Backlog](#product-backlog)
-      - [Commitment: Product Goal](#commitment-product-goal)
-    - [Sprint Backlog](#sprint-backlog)
-      - [Commitment: Sprint Goal](#commitment-sprint-goal)
-    - [Increment](#increment)
-      - [Commitment: Definition of Done](#commitment-definition-of-done)
-
 ## Purpose of the Scrum Guide
 
 We developed Scrum in the early 1990s. We wrote the first version of the Scrum Guide in 2010 to help people worldwide understand Scrum. We have evolved the Guide since then through small, functional updates. Together, we stand behind it.

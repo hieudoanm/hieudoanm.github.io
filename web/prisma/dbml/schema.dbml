@@ -1,0 +1,13 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Word {
+  word String [pk]
+  results Json[] [not null]
+  syllables Json [default: '{}']
+  pronunciation Json [default: '{}']
+  frequency Float [default: 0]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+}

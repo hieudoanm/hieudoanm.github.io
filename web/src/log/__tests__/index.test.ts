@@ -1,27 +1,27 @@
-import { log } from '..';
+import { logger } from '..';
 
 describe('log', () => {
   it('info', () => {
-    log.info('info');
+    logger.info('info');
   });
 
   it('error', () => {
-    log.error('error');
+    logger.error('error');
   });
 
   it('warn', () => {
-    log.warn('warn');
+    logger.warn('warn');
   });
 
   it('debug', () => {
-    log.debug('debug');
+    logger.debug('debug');
   });
 
   it('fatal', () => {
-    log.fatal('fatal');
+    logger.fatal('fatal');
   });
 
   it('trace', () => {
-    log.trace('trace');
+    logger.trace('trace');
   });
 });

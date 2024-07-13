@@ -1,0 +1,1064 @@
+[
+  {
+    "number": "1",
+    "element": "Hydrogen",
+    "symbol": "H",
+    "mass": "1.007",
+    "neutrons": "0",
+    "protons": "1",
+    "electrons": "1"
+  },
+  {
+    "number": "2",
+    "element": "Helium",
+    "symbol": "He",
+    "mass": "4.002",
+    "neutrons": "2",
+    "protons": "2",
+    "electrons": "2"
+  },
+  {
+    "number": "3",
+    "element": "Lithium",
+    "symbol": "Li",
+    "mass": "6.941",
+    "neutrons": "4",
+    "protons": "3",
+    "electrons": "3"
+  },
+  {
+    "number": "4",
+    "element": "Beryllium",
+    "symbol": "Be",
+    "mass": "9.012",
+    "neutrons": "5",
+    "protons": "4",
+    "electrons": "4"
+  },
+  {
+    "number": "5",
+    "element": "Boron",
+    "symbol": "B",
+    "mass": "10.811",
+    "neutrons": "6",
+    "protons": "5",
+    "electrons": "5"
+  },
+  {
+    "number": "6",
+    "element": "Carbon",
+    "symbol": "C",
+    "mass": "12.011",
+    "neutrons": "6",
+    "protons": "6",
+    "electrons": "6"
+  },
+  {
+    "number": "7",
+    "element": "Nitrogen",
+    "symbol": "N",
+    "mass": "14.007",
+    "neutrons": "7",
+    "protons": "7",
+    "electrons": "7"
+  },
+  {
+    "number": "8",
+    "element": "Oxygen",
+    "symbol": "O",
+    "mass": "15.999",
+    "neutrons": "8",
+    "protons": "8",
+    "electrons": "8"
+  },
+  {
+    "number": "9",
+    "element": "Fluorine",
+    "symbol": "F",
+    "mass": "18.998",
+    "neutrons": "10",
+    "protons": "9",
+    "electrons": "9"
+  },
+  {
+    "number": "10",
+    "element": "Neon",
+    "symbol": "Ne",
+    "mass": "20.18",
+    "neutrons": "10",
+    "protons": "10",
+    "electrons": "10"
+  },
+  {
+    "number": "11",
+    "element": "Sodium",
+    "symbol": "Na",
+    "mass": "22.99",
+    "neutrons": "12",
+    "protons": "11",
+    "electrons": "11"
+  },
+  {
+    "number": "12",
+    "element": "Magnesium",
+    "symbol": "Mg",
+    "mass": "24.305",
+    "neutrons": "12",
+    "protons": "12",
+    "electrons": "12"
+  },
+  {
+    "number": "13",
+    "element": "Aluminum",
+    "symbol": "Al",
+    "mass": "26.982",
+    "neutrons": "14",
+    "protons": "13",
+    "electrons": "13"
+  },
+  {
+    "number": "14",
+    "element": "Silicon",
+    "symbol": "Si",
+    "mass": "28.086",
+    "neutrons": "14",
+    "protons": "14",
+    "electrons": "14"
+  },
+  {
+    "number": "15",
+    "element": "Phosphorus",
+    "symbol": "P",
+    "mass": "30.974",
+    "neutrons": "16",
+    "protons": "15",
+    "electrons": "15"
+  },
+  {
+    "number": "16",
+    "element": "Sulfur",
+    "symbol": "S",
+    "mass": "32.065",
+    "neutrons": "16",
+    "protons": "16",
+    "electrons": "16"
+  },
+  {
+    "number": "17",
+    "element": "Chlorine",
+    "symbol": "Cl",
+    "mass": "35.453",
+    "neutrons": "18",
+    "protons": "17",
+    "electrons": "17"
+  },
+  {
+    "number": "18",
+    "element": "Argon",
+    "symbol": "Ar",
+    "mass": "39.948",
+    "neutrons": "22",
+    "protons": "18",
+    "electrons": "18"
+  },
+  {
+    "number": "19",
+    "element": "Potassium",
+    "symbol": "K",
+    "mass": "39.098",
+    "neutrons": "20",
+    "protons": "19",
+    "electrons": "19"
+  },
+  {
+    "number": "20",
+    "element": "Calcium",
+    "symbol": "Ca",
+    "mass": "40.078",
+    "neutrons": "20",
+    "protons": "20",
+    "electrons": "20"
+  },
+  {
+    "number": "21",
+    "element": "Scandium",
+    "symbol": "Sc",
+    "mass": "44.956",
+    "neutrons": "24",
+    "protons": "21",
+    "electrons": "21"
+  },
+  {
+    "number": "22",
+    "element": "Titanium",
+    "symbol": "Ti",
+    "mass": "47.867",
+    "neutrons": "26",
+    "protons": "22",
+    "electrons": "22"
+  },
+  {
+    "number": "23",
+    "element": "Vanadium",
+    "symbol": "V",
+    "mass": "50.942",
+    "neutrons": "28",
+    "protons": "23",
+    "electrons": "23"
+  },
+  {
+    "number": "24",
+    "element": "Chromium",
+    "symbol": "Cr",
+    "mass": "51.996",
+    "neutrons": "28",
+    "protons": "24",
+    "electrons": "24"
+  },
+  {
+    "number": "25",
+    "element": "Manganese",
+    "symbol": "Mn",
+    "mass": "54.938",
+    "neutrons": "30",
+    "protons": "25",
+    "electrons": "25"
+  },
+  {
+    "number": "26",
+    "element": "Iron",
+    "symbol": "Fe",
+    "mass": "55.845",
+    "neutrons": "30",
+    "protons": "26",
+    "electrons": "26"
+  },
+  {
+    "number": "27",
+    "element": "Cobalt",
+    "symbol": "Co",
+    "mass": "58.933",
+    "neutrons": "32",
+    "protons": "27",
+    "electrons": "27"
+  },
+  {
+    "number": "28",
+    "element": "Nickel",
+    "symbol": "Ni",
+    "mass": "58.693",
+    "neutrons": "31",
+    "protons": "28",
+    "electrons": "28"
+  },
+  {
+    "number": "29",
+    "element": "Copper",
+    "symbol": "Cu",
+    "mass": "63.546",
+    "neutrons": "35",
+    "protons": "29",
+    "electrons": "29"
+  },
+  {
+    "number": "30",
+    "element": "Zinc",
+    "symbol": "Zn",
+    "mass": "65.38",
+    "neutrons": "35",
+    "protons": "30",
+    "electrons": "30"
+  },
+  {
+    "number": "31",
+    "element": "Gallium",
+    "symbol": "Ga",
+    "mass": "69.723",
+    "neutrons": "39",
+    "protons": "31",
+    "electrons": "31"
+  },
+  {
+    "number": "32",
+    "element": "Germanium",
+    "symbol": "Ge",
+    "mass": "72.64",
+    "neutrons": "41",
+    "protons": "32",
+    "electrons": "32"
+  },
+  {
+    "number": "33",
+    "element": "Arsenic",
+    "symbol": "As",
+    "mass": "74.922",
+    "neutrons": "42",
+    "protons": "33",
+    "electrons": "33"
+  },
+  {
+    "number": "34",
+    "element": "Selenium",
+    "symbol": "Se",
+    "mass": "78.96",
+    "neutrons": "45",
+    "protons": "34",
+    "electrons": "34"
+  },
+  {
+    "number": "35",
+    "element": "Bromine",
+    "symbol": "Br",
+    "mass": "79.904",
+    "neutrons": "45",
+    "protons": "35",
+    "electrons": "35"
+  },
+  {
+    "number": "36",
+    "element": "Krypton",
+    "symbol": "Kr",
+    "mass": "83.798",
+    "neutrons": "48",
+    "protons": "36",
+    "electrons": "36"
+  },
+  {
+    "number": "37",
+    "element": "Rubidium",
+    "symbol": "Rb",
+    "mass": "85.468",
+    "neutrons": "48",
+    "protons": "37",
+    "electrons": "37"
+  },
+  {
+    "number": "38",
+    "element": "Strontium",
+    "symbol": "Sr",
+    "mass": "87.62",
+    "neutrons": "50",
+    "protons": "38",
+    "electrons": "38"
+  },
+  {
+    "number": "39",
+    "element": "Yttrium",
+    "symbol": "Y",
+    "mass": "88.906",
+    "neutrons": "50",
+    "protons": "39",
+    "electrons": "39"
+  },
+  {
+    "number": "40",
+    "element": "Zirconium",
+    "symbol": "Zr",
+    "mass": "91.224",
+    "neutrons": "51",
+    "protons": "40",
+    "electrons": "40"
+  },
+  {
+    "number": "41",
+    "element": "Niobium",
+    "symbol": "Nb",
+    "mass": "92.906",
+    "neutrons": "52",
+    "protons": "41",
+    "electrons": "41"
+  },
+  {
+    "number": "42",
+    "element": "Molybdenum",
+    "symbol": "Mo",
+    "mass": "95.96",
+    "neutrons": "54",
+    "protons": "42",
+    "electrons": "42"
+  },
+  {
+    "number": "43",
+    "element": "Technetium",
+    "symbol": "Tc",
+    "mass": "98",
+    "neutrons": "55",
+    "protons": "43",
+    "electrons": "43"
+  },
+  {
+    "number": "44",
+    "element": "Ruthenium",
+    "symbol": "Ru",
+    "mass": "101.07",
+    "neutrons": "57",
+    "protons": "44",
+    "electrons": "44"
+  },
+  {
+    "number": "45",
+    "element": "Rhodium",
+    "symbol": "Rh",
+    "mass": "102.906",
+    "neutrons": "58",
+    "protons": "45",
+    "electrons": "45"
+  },
+  {
+    "number": "46",
+    "element": "Palladium",
+    "symbol": "Pd",
+    "mass": "106.42",
+    "neutrons": "60",
+    "protons": "46",
+    "electrons": "46"
+  },
+  {
+    "number": "47",
+    "element": "Silver",
+    "symbol": "Ag",
+    "mass": "107.868",
+    "neutrons": "61",
+    "protons": "47",
+    "electrons": "47"
+  },
+  {
+    "number": "48",
+    "element": "Cadmium",
+    "symbol": "Cd",
+    "mass": "112.411",
+    "neutrons": "64",
+    "protons": "48",
+    "electrons": "48"
+  },
+  {
+    "number": "49",
+    "element": "Indium",
+    "symbol": "In",
+    "mass": "114.818",
+    "neutrons": "66",
+    "protons": "49",
+    "electrons": "49"
+  },
+  {
+    "number": "50",
+    "element": "Tin",
+    "symbol": "Sn",
+    "mass": "118.71",
+    "neutrons": "69",
+    "protons": "50",
+    "electrons": "50"
+  },
+  {
+    "number": "51",
+    "element": "Antimony",
+    "symbol": "Sb",
+    "mass": "121.76",
+    "neutrons": "71",
+    "protons": "51",
+    "electrons": "51"
+  },
+  {
+    "number": "52",
+    "element": "Tellurium",
+    "symbol": "Te",
+    "mass": "127.6",
+    "neutrons": "76",
+    "protons": "52",
+    "electrons": "52"
+  },
+  {
+    "number": "53",
+    "element": "Iodine",
+    "symbol": "I",
+    "mass": "126.904",
+    "neutrons": "74",
+    "protons": "53",
+    "electrons": "53"
+  },
+  {
+    "number": "54",
+    "element": "Xenon",
+    "symbol": "Xe",
+    "mass": "131.293",
+    "neutrons": "77",
+    "protons": "54",
+    "electrons": "54"
+  },
+  {
+    "number": "55",
+    "element": "Cesium",
+    "symbol": "Cs",
+    "mass": "132.905",
+    "neutrons": "78",
+    "protons": "55",
+    "electrons": "55"
+  },
+  {
+    "number": "56",
+    "element": "Barium",
+    "symbol": "Ba",
+    "mass": "137.327",
+    "neutrons": "81",
+    "protons": "56",
+    "electrons": "56"
+  },
+  {
+    "number": "57",
+    "element": "Lanthanum",
+    "symbol": "La",
+    "mass": "138.905",
+    "neutrons": "82",
+    "protons": "57",
+    "electrons": "57"
+  },
+  {
+    "number": "58",
+    "element": "Cerium",
+    "symbol": "Ce",
+    "mass": "140.116",
+    "neutrons": "82",
+    "protons": "58",
+    "electrons": "58"
+  },
+  {
+    "number": "59",
+    "element": "Praseodymium",
+    "symbol": "Pr",
+    "mass": "140.908",
+    "neutrons": "82",
+    "protons": "59",
+    "electrons": "59"
+  },
+  {
+    "number": "60",
+    "element": "Neodymium",
+    "symbol": "Nd",
+    "mass": "144.242",
+    "neutrons": "84",
+    "protons": "60",
+    "electrons": "60"
+  },
+  {
+    "number": "61",
+    "element": "Promethium",
+    "symbol": "Pm",
+    "mass": "145",
+    "neutrons": "84",
+    "protons": "61",
+    "electrons": "61"
+  },
+  {
+    "number": "62",
+    "element": "Samarium",
+    "symbol": "Sm",
+    "mass": "150.36",
+    "neutrons": "88",
+    "protons": "62",
+    "electrons": "62"
+  },
+  {
+    "number": "63",
+    "element": "Europium",
+    "symbol": "Eu",
+    "mass": "151.964",
+    "neutrons": "89",
+    "protons": "63",
+    "electrons": "63"
+  },
+  {
+    "number": "64",
+    "element": "Gadolinium",
+    "symbol": "Gd",
+    "mass": "157.25",
+    "neutrons": "93",
+    "protons": "64",
+    "electrons": "64"
+  },
+  {
+    "number": "65",
+    "element": "Terbium",
+    "symbol": "Tb",
+    "mass": "158.925",
+    "neutrons": "94",
+    "protons": "65",
+    "electrons": "65"
+  },
+  {
+    "number": "66",
+    "element": "Dysprosium",
+    "symbol": "Dy",
+    "mass": "162.5",
+    "neutrons": "97",
+    "protons": "66",
+    "electrons": "66"
+  },
+  {
+    "number": "67",
+    "element": "Holmium",
+    "symbol": "Ho",
+    "mass": "164.93",
+    "neutrons": "98",
+    "protons": "67",
+    "electrons": "67"
+  },
+  {
+    "number": "68",
+    "element": "Erbium",
+    "symbol": "Er",
+    "mass": "167.259",
+    "neutrons": "99",
+    "protons": "68",
+    "electrons": "68"
+  },
+  {
+    "number": "69",
+    "element": "Thulium",
+    "symbol": "Tm",
+    "mass": "168.934",
+    "neutrons": "100",
+    "protons": "69",
+    "electrons": "69"
+  },
+  {
+    "number": "70",
+    "element": "Ytterbium",
+    "symbol": "Yb",
+    "mass": "173.054",
+    "neutrons": "103",
+    "protons": "70",
+    "electrons": "70"
+  },
+  {
+    "number": "71",
+    "element": "Lutetium",
+    "symbol": "Lu",
+    "mass": "174.967",
+    "neutrons": "104",
+    "protons": "71",
+    "electrons": "71"
+  },
+  {
+    "number": "72",
+    "element": "Hafnium",
+    "symbol": "Hf",
+    "mass": "178.49",
+    "neutrons": "106",
+    "protons": "72",
+    "electrons": "72"
+  },
+  {
+    "number": "73",
+    "element": "Tantalum",
+    "symbol": "Ta",
+    "mass": "180.948",
+    "neutrons": "108",
+    "protons": "73",
+    "electrons": "73"
+  },
+  {
+    "number": "74",
+    "element": "Wolfram",
+    "symbol": "W",
+    "mass": "183.84",
+    "neutrons": "110",
+    "protons": "74",
+    "electrons": "74"
+  },
+  {
+    "number": "75",
+    "element": "Rhenium",
+    "symbol": "Re",
+    "mass": "186.207",
+    "neutrons": "111",
+    "protons": "75",
+    "electrons": "75"
+  },
+  {
+    "number": "76",
+    "element": "Osmium",
+    "symbol": "Os",
+    "mass": "190.23",
+    "neutrons": "114",
+    "protons": "76",
+    "electrons": "76"
+  },
+  {
+    "number": "77",
+    "element": "Iridium",
+    "symbol": "Ir",
+    "mass": "192.217",
+    "neutrons": "115",
+    "protons": "77",
+    "electrons": "77"
+  },
+  {
+    "number": "78",
+    "element": "Platinum",
+    "symbol": "Pt",
+    "mass": "195.084",
+    "neutrons": "117",
+    "protons": "78",
+    "electrons": "78"
+  },
+  {
+    "number": "79",
+    "element": "Gold",
+    "symbol": "Au",
+    "mass": "196.967",
+    "neutrons": "118",
+    "protons": "79",
+    "electrons": "79"
+  },
+  {
+    "number": "80",
+    "element": "Mercury",
+    "symbol": "Hg",
+    "mass": "200.59",
+    "neutrons": "121",
+    "protons": "80",
+    "electrons": "80"
+  },
+  {
+    "number": "81",
+    "element": "Thallium",
+    "symbol": "Tl",
+    "mass": "204.383",
+    "neutrons": "123",
+    "protons": "81",
+    "electrons": "81"
+  },
+  {
+    "number": "82",
+    "element": "Lead",
+    "symbol": "Pb",
+    "mass": "207.2",
+    "neutrons": "125",
+    "protons": "82",
+    "electrons": "82"
+  },
+  {
+    "number": "83",
+    "element": "Bismuth",
+    "symbol": "Bi",
+    "mass": "208.98",
+    "neutrons": "126",
+    "protons": "83",
+    "electrons": "83"
+  },
+  {
+    "number": "84",
+    "element": "Polonium",
+    "symbol": "Po",
+    "mass": "210",
+    "neutrons": "126",
+    "protons": "84",
+    "electrons": "84"
+  },
+  {
+    "number": "85",
+    "element": "Astatine",
+    "symbol": "At",
+    "mass": "210",
+    "neutrons": "125",
+    "protons": "85",
+    "electrons": "85"
+  },
+  {
+    "number": "86",
+    "element": "Radon",
+    "symbol": "Rn",
+    "mass": "222",
+    "neutrons": "136",
+    "protons": "86",
+    "electrons": "86"
+  },
+  {
+    "number": "87",
+    "element": "Francium",
+    "symbol": "Fr",
+    "mass": "223",
+    "neutrons": "136",
+    "protons": "87",
+    "electrons": "87"
+  },
+  {
+    "number": "88",
+    "element": "Radium",
+    "symbol": "Ra",
+    "mass": "226",
+    "neutrons": "138",
+    "protons": "88",
+    "electrons": "88"
+  },
+  {
+    "number": "89",
+    "element": "Actinium",
+    "symbol": "Ac",
+    "mass": "227",
+    "neutrons": "138",
+    "protons": "89",
+    "electrons": "89"
+  },
+  {
+    "number": "90",
+    "element": "Thorium",
+    "symbol": "Th",
+    "mass": "232.038",
+    "neutrons": "142",
+    "protons": "90",
+    "electrons": "90"
+  },
+  {
+    "number": "91",
+    "element": "Protactinium",
+    "symbol": "Pa",
+    "mass": "231.036",
+    "neutrons": "140",
+    "protons": "91",
+    "electrons": "91"
+  },
+  {
+    "number": "92",
+    "element": "Uranium",
+    "symbol": "U",
+    "mass": "238.029",
+    "neutrons": "146",
+    "protons": "92",
+    "electrons": "92"
+  },
+  {
+    "number": "93",
+    "element": "Neptunium",
+    "symbol": "Np",
+    "mass": "237",
+    "neutrons": "144",
+    "protons": "93",
+    "electrons": "93"
+  },
+  {
+    "number": "94",
+    "element": "Plutonium",
+    "symbol": "Pu",
+    "mass": "244",
+    "neutrons": "150",
+    "protons": "94",
+    "electrons": "94"
+  },
+  {
+    "number": "95",
+    "element": "Americium",
+    "symbol": "Am",
+    "mass": "243",
+    "neutrons": "148",
+    "protons": "95",
+    "electrons": "95"
+  },
+  {
+    "number": "96",
+    "element": "Curium",
+    "symbol": "Cm",
+    "mass": "247",
+    "neutrons": "151",
+    "protons": "96",
+    "electrons": "96"
+  },
+  {
+    "number": "97",
+    "element": "Berkelium",
+    "symbol": "Bk",
+    "mass": "247",
+    "neutrons": "150",
+    "protons": "97",
+    "electrons": "97"
+  },
+  {
+    "number": "98",
+    "element": "Californium",
+    "symbol": "Cf",
+    "mass": "251",
+    "neutrons": "153",
+    "protons": "98",
+    "electrons": "98"
+  },
+  {
+    "number": "99",
+    "element": "Einsteinium",
+    "symbol": "Es",
+    "mass": "252",
+    "neutrons": "153",
+    "protons": "99",
+    "electrons": "99"
+  },
+  {
+    "number": "100",
+    "element": "Fermium",
+    "symbol": "Fm",
+    "mass": "257",
+    "neutrons": "157",
+    "protons": "100",
+    "electrons": "100"
+  },
+  {
+    "number": "101",
+    "element": "Mendelevium",
+    "symbol": "Md",
+    "mass": "258",
+    "neutrons": "157",
+    "protons": "101",
+    "electrons": "101"
+  },
+  {
+    "number": "102",
+    "element": "Nobelium",
+    "symbol": "No",
+    "mass": "259",
+    "neutrons": "157",
+    "protons": "102",
+    "electrons": "102"
+  },
+  {
+    "number": "103",
+    "element": "Lawrencium",
+    "symbol": "Lr",
+    "mass": "262",
+    "neutrons": "159",
+    "protons": "103",
+    "electrons": "103"
+  },
+  {
+    "number": "104",
+    "element": "Rutherfordium",
+    "symbol": "Rf",
+    "mass": "261",
+    "neutrons": "157",
+    "protons": "104",
+    "electrons": "104"
+  },
+  {
+    "number": "105",
+    "element": "Dubnium",
+    "symbol": "Db",
+    "mass": "262",
+    "neutrons": "157",
+    "protons": "105",
+    "electrons": "105"
+  },
+  {
+    "number": "106",
+    "element": "Seaborgium",
+    "symbol": "Sg",
+    "mass": "266",
+    "neutrons": "160",
+    "protons": "106",
+    "electrons": "106"
+  },
+  {
+    "number": "107",
+    "element": "Bohrium",
+    "symbol": "Bh",
+    "mass": "264",
+    "neutrons": "157",
+    "protons": "107",
+    "electrons": "107"
+  },
+  {
+    "number": "108",
+    "element": "Hassium",
+    "symbol": "Hs",
+    "mass": "267",
+    "neutrons": "159",
+    "protons": "108",
+    "electrons": "108"
+  },
+  {
+    "number": "109",
+    "element": "Meitnerium",
+    "symbol": "Mt",
+    "mass": "268",
+    "neutrons": "159",
+    "protons": "109",
+    "electrons": "109"
+  },
+  {
+    "number": "110",
+    "element": "Darmstadtium",
+    "symbol": "Ds",
+    "mass": "271",
+    "neutrons": "161",
+    "protons": "110",
+    "electrons": "110"
+  },
+  {
+    "number": "111",
+    "element": "Roentgenium",
+    "symbol": "Rg",
+    "mass": "272",
+    "neutrons": "161",
+    "protons": "111",
+    "electrons": "111"
+  },
+  {
+    "number": "112",
+    "element": "Copernicium",
+    "symbol": "Cn",
+    "mass": "285",
+    "neutrons": "173",
+    "protons": "112",
+    "electrons": "112"
+  },
+  {
+    "number": "113",
+    "element": "Nihonium",
+    "symbol": "Nh",
+    "mass": "284",
+    "neutrons": "171",
+    "protons": "113",
+    "electrons": "113"
+  },
+  {
+    "number": "114",
+    "element": "Flerovium",
+    "symbol": "Fl",
+    "mass": "289",
+    "neutrons": "175",
+    "protons": "114",
+    "electrons": "114"
+  },
+  {
+    "number": "115",
+    "element": "Moscovium",
+    "symbol": "Mc",
+    "mass": "288",
+    "neutrons": "173",
+    "protons": "115",
+    "electrons": "115"
+  },
+  {
+    "number": "116",
+    "element": "Livermorium",
+    "symbol": "Lv",
+    "mass": "292",
+    "neutrons": "176",
+    "protons": "116",
+    "electrons": "116"
+  },
+  {
+    "number": "117",
+    "element": "Tennessine",
+    "symbol": "Ts",
+    "mass": "295",
+    "neutrons": "178",
+    "protons": "117",
+    "electrons": "117"
+  },
+  {
+    "number": "118",
+    "element": "Oganesson",
+    "symbol": "Og",
+    "mass": "294",
+    "neutrons": "176",
+    "protons": "118",
+    "electrons": "118"
+  }
+]

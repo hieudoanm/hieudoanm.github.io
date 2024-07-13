@@ -17,12 +17,9 @@ const withPWA = nextPWA({
 const nextConfig = {
   transpilePackages: ['next-mdx-remote'],
   swcMinify: true,
-  output: process.env.NODE_ENV !== 'development' ? 'export' : 'standalone',
+  output: NODE_ENV !== 'development' ? 'export' : 'standalone',
   reactStrictMode: true,
-  images: { loader: 'akamai', path: '' },
-  compiler: {
-    removeConsole: process.env.NODE_ENV !== 'development',
-  },
+  compiler: { removeConsole: NODE_ENV !== 'development' },
 };
 
 const pwaConfig = withPWA(nextConfig);

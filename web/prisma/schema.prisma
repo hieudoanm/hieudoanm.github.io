@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+}
+
+// generator trpc {
+//   provider        = "prisma-trpc-generator"
+//   withZod         = true
+//   withMiddleware  = true
+//   withShield      = true
+//   output          = "../src/server/generated"
+//   contextPath     = "../src/context"
+//   trpcOptionsPath = "../src/trpcOptions"
+// }
+
+model Word {
+  word          String @id @db.VarChar(255)
+  results       Json[] @default([])
+  syllables     Json?  @default("{}")
+  pronunciation Json?  @default("{}")
+  frequency     Float? @default(0)
+
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
+}
