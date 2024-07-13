@@ -20,6 +20,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   reactStrictMode: true,
+  output: NODE_ENV !== 'development' ? 'export' : 'standalone',
   compiler: { removeConsole: NODE_ENV !== 'development' },
 };
 

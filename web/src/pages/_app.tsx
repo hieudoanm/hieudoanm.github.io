@@ -3,6 +3,7 @@ import { ThemeProvider } from '@web/context/ThemeContext';
 import '@web/styles/globals.css';
 import { trpc } from '@web/utils/trpc';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import 'github-markdown-css/github-markdown.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { FC } from 'react';

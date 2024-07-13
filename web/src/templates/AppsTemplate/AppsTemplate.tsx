@@ -37,6 +37,7 @@ import {
   FaMap,
   FaMarkdown,
   FaMedal,
+  FaMedium,
   FaMeteor,
   FaMoneyBill,
   FaMoneyBillTransfer,
@@ -44,6 +45,7 @@ import {
   FaN,
   FaNewspaper,
   FaNfcSymbol,
+  FaNoteSticky,
   FaPalette,
   FaPen,
   FaQrcode,
@@ -80,6 +82,7 @@ export type Folder =
   | 'finance'
   | 'generator'
   | 'languages'
+  | 'media'
   | 'news'
   | 'science'
   | 'transfer'
@@ -484,6 +487,39 @@ export const APPS: App[] = [
     isFolder: true,
   },
   {
+    id: 'media',
+    href: 'media',
+    name: 'Media',
+    shortName: 'Media',
+    enabled: true,
+    icon: <FaMedium />,
+    borderStyle: Border.Solid,
+    folder: 'home',
+    isFolder: true,
+  },
+  {
+    id: 'media-photos',
+    href: 'media/photos',
+    name: 'Photos',
+    shortName: 'Photos',
+    enabled: true,
+    icon: <FaInstagram />,
+    borderStyle: Border.Solid,
+    folder: 'media',
+    isFolder: false,
+  },
+  {
+    id: 'media-videos',
+    href: 'media/videos',
+    name: 'Videos',
+    shortName: 'Videos',
+    enabled: true,
+    icon: <FaYoutube />,
+    borderStyle: Border.Solid,
+    folder: 'media',
+    isFolder: false,
+  },
+  {
     id: 'messages',
     href: 'messages',
     name: 'Messages',
@@ -506,15 +542,15 @@ export const APPS: App[] = [
     isFolder: true,
   },
   {
-    id: 'photos',
-    href: 'photos',
-    name: 'Photos',
-    shortName: 'Photos',
+    id: 'notes',
+    href: 'notes',
+    name: 'Notes',
+    shortName: 'Notes',
     enabled: true,
-    icon: <FaInstagram />,
+    icon: <FaNoteSticky />,
     borderStyle: Border.Solid,
     folder: 'home',
-    isFolder: false,
+    isFolder: true,
   },
   {
     id: 'science',
@@ -647,17 +683,6 @@ export const APPS: App[] = [
     borderStyle: Border.Solid,
     folder: 'home',
     isFolder: true,
-  },
-  {
-    id: 'videos',
-    href: 'videos',
-    name: 'Videos',
-    shortName: 'Videos',
-    enabled: true,
-    icon: <FaYoutube />,
-    borderStyle: Border.Solid,
-    folder: 'home',
-    isFolder: false,
   },
   {
     id: 'weather',
