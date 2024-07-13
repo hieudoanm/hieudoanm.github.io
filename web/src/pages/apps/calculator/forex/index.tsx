@@ -1,4 +1,4 @@
-import { getLatest } from '@web/clients/frankfurter/frankfurter.client';
+import { getLatest } from '@web/clients/forex/frankfurter/frankfurter.client';
 import { Layout } from '@web/layout';
 import { logger } from '@web/log';
 import { GetStaticProps, NextPage } from 'next';

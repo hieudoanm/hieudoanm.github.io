@@ -1,4 +1,4 @@
-import { getLatest } from '@web/clients/frankfurter/frankfurter.client';
+import { getLatest } from '@web/clients/forex/frankfurter/frankfurter.client';
 import { useIsOnline } from '@web/hooks/use-is-online';
 import currencies from '@web/json/currencies.json';
 import { Layout } from '@web/layout';
