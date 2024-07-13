@@ -1,5 +1,5 @@
 import { Layout } from '@web/layout';
-import { addZero } from '@web/utils/number';
+import { addZero } from '@web/utils/number/number';
 import { NextPage } from 'next';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { FaCirclePause, FaCirclePlay, FaCircleStop } from 'react-icons/fa6';

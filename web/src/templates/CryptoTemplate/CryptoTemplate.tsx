@@ -1,7 +1,7 @@
 import { Tag } from '@web/clients/coinranking/coinranking.client';
 import { Coin } from '@web/clients/coinranking/coinranking.dto';
 import { Layout } from '@web/layout';
-import { formatCurrency } from '@web/utils/number';
+import { formatCurrency } from '@web/utils/number/number';
 import { trpc } from '@web/utils/trpc';
 import { FC } from 'react';
 import { QueryTemplate } from '../QueryTemplate/QueryTemplate';

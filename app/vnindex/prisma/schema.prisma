@@ -1,0 +1,133 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRESQL_URL")
+  directUrl = env("POSTGRESQL_URL")
+  schemas   = ["vi"]
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+  binaryTargets   = ["native", "debian-openssl-1.1.x"]
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+}
+
+model LicensePlate {
+  code  String @id @db.VarChar(2)
+  name  String @db.VarChar(255)
+  group String @db.VarChar(255)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("vi")
+}
+
+model EthnicGroup {
+  id    Int    @id @default(autoincrement())
+  name  String @default("") @db.VarChar(255)
+  group String @default("") @db.VarChar(255)
+
+  createdAt DateTime? @default(now()) @db.Timestamptz()
+  updatedAt DateTime? @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("vi")
+}
+
+model StockSymbol {
+  symbol    String         @id @default("") @db.VarChar(3)
+  name      String         @default("") @db.VarChar(255)
+  market    Market         @default(HOSE)
+  vn30      Boolean        @default(false)
+  hnx30     Boolean        @default(false)
+  sector    Sector?
+  // Metadata
+  createdAt DateTime?      @default(now()) @db.Timestamptz()
+  updatedAt DateTime?      @default(now()) @updatedAt @db.Timestamptz()
+  // Relation
+  history   StockHistory[]
+
+  @@schema("vi")
+}
+
+enum Sector {
+  BANKING
+  BASIC_RESOURCES
+  CHEMICAL
+  COMMUNICATIONS
+  ELECTRICITY_WATER_PETROL
+  FINANCIAL_SERVICES
+  FOOD_BEVERAGE
+  INDUSTRIAL_GOODS_SERVICES
+  INFORMATION_TECHNOLOGY
+  INSURANCE
+  MEDICAL
+  PETROLEUM
+  REAL_ESTATE
+  RETAIL
+  TELECOMMUNICATION
+  TRAVEL_ENTERTAINMENT
+
+  @@schema("vi")
+}
+
+enum Market {
+  HNX
+  HOSE
+  UPCOM
+
+  @@schema("vi")
+}
+
+model StockHistory {
+  stock               StockSymbol? @relation(fields: [symbol], references: [symbol])
+  symbol              String
+  date                DateTime     @default(now()) @db.Date()
+  open                Float?       @default(0)
+  high                Float?       @default(0)
+  low                 Float?       @default(0)
+  close               Float?       @default(0)
+  volume              Float?       @default(0)
+  // Indicators - Change
+  change              Float?       @default(0) @db.DoublePrecision
+  changePercentage    Float?       @default(0) @db.DoublePrecision
+  // Indicators - Bollinger Bands
+  bollingerUpperBand  Float?       @default(0) @db.DoublePrecision
+  bollingerMiddleBand Float?       @default(0) @db.DoublePrecision
+  bollingerLowerBand  Float?       @default(0) @db.DoublePrecision
+  bollingerOverbought Boolean      @default(false)
+  bollingerOversold   Boolean      @default(false)
+  // Indicators - Moving average
+  ma50                Float?       @default(0) @db.DoublePrecision
+  ma200               Float?       @default(0) @db.DoublePrecision
+  goldenCross         Boolean      @default(false)
+  deathCross          Boolean      @default(false)
+  // Indicators - Money Flow Index
+  mf                  Float?       @default(0) @db.DoublePrecision
+  mfPrice             Float?       @default(0) @db.DoublePrecision
+  mfi                 Float?       @default(0) @db.DoublePrecision
+  mfiOversold         Boolean      @default(false)
+  mfiOverbought       Boolean      @default(false)
+  // Indicators - Relative Strength Index
+  rsi                 Float?       @default(0) @db.DoublePrecision
+  rsiOversold         Boolean      @default(false)
+  rsiOverbought       Boolean      @default(false)
+  // Metadata
+  createdAt           DateTime?    @default(now()) @db.Timestamptz()
+  updatedAt           DateTime?    @default(now()) @updatedAt @db.Timestamptz()
+
+  @@id([symbol, date])
+  @@schema("vi")
+}

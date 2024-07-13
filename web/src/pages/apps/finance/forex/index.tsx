@@ -3,7 +3,7 @@ import { useIsOnline } from '@web/hooks/use-is-online';
 import currencies from '@web/json/currencies.json';
 import { Layout } from '@web/layout';
 import { logger } from '@web/log';
-import { formatCurrency } from '@web/utils/number';
+import { formatCurrency } from '@web/utils/number/number';
 import { trpc } from '@web/utils/trpc';
 import type { GetStaticProps, NextPage } from 'next';
 import { ChangeEvent, Dispatch, FC, SetStateAction, useState } from 'react';

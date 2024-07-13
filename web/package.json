@@ -1,7 +1,7 @@
 {
-  "name": "web",
+  "name": "@hieudoanm/web",
   "version": "0.0.1",
-  "description": "Web",
+  "description": "hieudoanm - web",
   "main": "index.js",
   "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",

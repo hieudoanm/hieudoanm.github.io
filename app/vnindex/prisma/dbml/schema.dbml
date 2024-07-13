@@ -1,0 +1,94 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table LicensePlate {
+  code String [pk]
+  name String [not null]
+  group String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table EthnicGroup {
+  id Int [pk, increment]
+  name String [not null, default: '']
+  group String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+}
+
+Table StockSymbol {
+  symbol String [pk, default: '']
+  name String [not null, default: '']
+  market Market [not null, default: 'HOSE']
+  vn30 Boolean [not null, default: false]
+  hnx30 Boolean [not null, default: false]
+  sector Sector
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+  history StockHistory [not null]
+}
+
+Table StockHistory {
+  stock StockSymbol
+  symbol String [not null]
+  date DateTime [default: `now()`, not null]
+  open Float [default: 0]
+  high Float [default: 0]
+  low Float [default: 0]
+  close Float [default: 0]
+  volume Float [default: 0]
+  change Float [default: 0]
+  changePercentage Float [default: 0]
+  bollingerUpperBand Float [default: 0]
+  bollingerMiddleBand Float [default: 0]
+  bollingerLowerBand Float [default: 0]
+  bollingerOverbought Boolean [not null, default: false]
+  bollingerOversold Boolean [not null, default: false]
+  ma50 Float [default: 0]
+  ma200 Float [default: 0]
+  goldenCross Boolean [not null, default: false]
+  deathCross Boolean [not null, default: false]
+  mf Float [default: 0]
+  mfPrice Float [default: 0]
+  mfi Float [default: 0]
+  mfiOversold Boolean [not null, default: false]
+  mfiOverbought Boolean [not null, default: false]
+  rsi Float [default: 0]
+  rsiOversold Boolean [not null, default: false]
+  rsiOverbought Boolean [not null, default: false]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
+
+  indexes {
+    (symbol, date) [pk]
+  }
+}
+
+Enum Sector {
+  BANKING
+  BASIC_RESOURCES
+  CHEMICAL
+  COMMUNICATIONS
+  ELECTRICITY_WATER_PETROL
+  FINANCIAL_SERVICES
+  FOOD_BEVERAGE
+  INDUSTRIAL_GOODS_SERVICES
+  INFORMATION_TECHNOLOGY
+  INSURANCE
+  MEDICAL
+  PETROLEUM
+  REAL_ESTATE
+  RETAIL
+  TELECOMMUNICATION
+  TRAVEL_ENTERTAINMENT
+}
+
+Enum Market {
+  HNX
+  HOSE
+  UPCOM
+}
+
+Ref: StockHistory.symbol > StockSymbol.symbol

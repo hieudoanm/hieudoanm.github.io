@@ -1,0 +1,15 @@
+{
+  "name": "Delete Liked Videos",
+  "description": "Delete Liked Videos",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "icon.ico"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://youtube.com/*"],
+      "js": ["index.js"]
+    }
+  ]
+}

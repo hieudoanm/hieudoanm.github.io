@@ -1,0 +1,19 @@
+version: "3.9"
+
+volumes:
+  postgresql_chess:
+    driver: local
+
+services:
+  postgresql-chess:
+    restart: unless-stopped
+    image: postgres:16.3
+    container_name: postgresql-chess
+    volumes:
+      - postgresql_chess:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password

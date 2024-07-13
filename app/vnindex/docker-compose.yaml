@@ -1,0 +1,33 @@
+version: '3.9'
+
+volumes:
+  vi_postgresql:
+    driver: local
+  vi_redis:
+    driver: local
+
+services:
+  vi-postgresql:
+    restart: unless-stopped
+    image: postgres:16.3
+    container_name: vi-postgresql
+    volumes:
+      - vi_postgresql:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+
+  vi-redis:
+    restart: unless-stopped
+    image: redis:7.2.5
+    container_name: vi-redis
+    volumes:
+      - vi_redis:/data
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_USER=default
+      - REDIS_PASS=password
