@@ -6,7 +6,9 @@ const defaultOptions = {
   quote: '"',
 };
 
-export const jsonToCsv = <T extends Record<string, string>>(
+export const jsonToCsv = <
+  T extends Record<string, string | number | boolean | Date>,
+>(
   data: T[],
   { delimiter = ',', headers = [], quote = '"' }: Options = defaultOptions
 ): string => {
@@ -20,9 +22,12 @@ export const jsonToCsv = <T extends Record<string, string>>(
     .map((header: string) => `${quote}${header}${quote}`)
     .join(delimiter);
   const rows: string = data
-    .map((item: Record<string, string>) =>
+    .map((item: Record<string, string | number | boolean | Date>) =>
       headers
-        .map((key: string) => `${quote}${item[key] || ''}${quote}`)
+        .map((key: string) => {
+          const value: string = (item[key] || '').toString();
+          return `${quote}${value}${quote}`;
+        })
         .join(delimiter)
     )
     .join('\n');

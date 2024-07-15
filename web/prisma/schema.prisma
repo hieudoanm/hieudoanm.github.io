@@ -6,11 +6,13 @@
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("POSTGRESQL_URL")
+  schemas  = ["chess", "public"]
 }
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
 }
 
 generator dbml {
@@ -26,16 +28,6 @@ generator markdown {
   output   = "./README.md"
 }
 
-// generator trpc {
-//   provider        = "prisma-trpc-generator"
-//   withZod         = true
-//   withMiddleware  = true
-//   withShield      = true
-//   output          = "../src/server/generated"
-//   contextPath     = "../src/context"
-//   trpcOptionsPath = "../src/trpcOptions"
-// }
-
 model Word {
   word          String @id @db.VarChar(255)
   results       Json[] @default([])
@@ -45,4 +37,59 @@ model Word {
 
   createdAt DateTime @default(now()) @db.Timestamptz()
   updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
+
+  @@schema("public")
+}
+
+model Player {
+  id                    Int      @id @map("id")
+  username              String   @unique @map("username")
+  avatar                String   @default("") @map("avatar")
+  name                  String   @default("") @map("name")
+  title                 Title    @default(GM) @map("title")
+  country               String   @default("") @map("country")
+  countryCode           String   @default("") @map("countryCode")
+  status                String   @default("") @map("status")
+  league                String   @default("") @map("league")
+  url                   String   @default("") @map("url")
+  twitchUrl             String   @default("") @map("twitch_url")
+  isStreamer            Boolean  @default(false) @map("is_streamer")
+  verified              Boolean  @default(false) @map("verified")
+  lastOnline            DateTime @default(now()) @map("last_online")
+  joined                DateTime @default(now()) @map("joined")
+  rapidRatingBest       Int      @default(0) @map("rapid_rating_best")
+  rapidRatingLast       Int      @default(0) @map("rapid_rating_last")
+  rapidRatingDeviation  Int      @default(0) @map("rapid_rating_reviation")
+  rapidRecordWin        Int      @default(0) @map("rapid_record_win")
+  rapidRecordDraw       Int      @default(0) @map("rapid_record_draw")
+  rapidRecordLoss       Int      @default(0) @map("rapid_record_loss")
+  blitzRatingBest       Int      @default(0) @map("blitz_rating_best")
+  blitzRatingLast       Int      @default(0) @map("blitz_rating_last")
+  blitzRatingDeviation  Int      @default(0) @map("blitz_rating_reviation")
+  blitzRecordWin        Int      @default(0) @map("blitz_record_win")
+  blitzRecordDraw       Int      @default(0) @map("blitz_record_draw")
+  blitzRecordLoss       Int      @default(0) @map("blitz_record_loss")
+  bulletRatingBest      Int      @default(0) @map("bullet_rating_best")
+  bulletRatingLast      Int      @default(0) @map("bullet_rating_last")
+  bulletRatingDeviation Int      @default(0) @map("bullet_rating_reviation")
+  bulletRecordWin       Int      @default(0) @map("bullet_record_win")
+  bulletRecordDraw      Int      @default(0) @map("bullet_record_draw")
+  bulletRecordLoss      Int      @default(0) @map("bullet_record_loss")
+
+  @@schema("chess")
+}
+
+enum Title {
+  GM
+  IM
+  FM
+  CM
+  NM
+  WGM
+  WIM
+  WFM
+  WCM
+  WNM
+
+  @@schema("chess")
 }

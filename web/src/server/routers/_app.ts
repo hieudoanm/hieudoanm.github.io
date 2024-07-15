@@ -11,6 +11,8 @@ import { logger } from '@web/log';
 import axios, { AxiosError } from 'axios';
 import { z } from 'zod';
 import { procedure, router } from '../trpc';
+import { getTitled, Days } from '@web/services/chess.service';
+import { Title } from '@prisma/client';
 
 export type Result = {
   definition: string;
@@ -74,6 +76,23 @@ const weatherCodes: Record<number, string> = {
 };
 
 export const appRouter = router({
+  chess: {
+    titled: procedure
+      .input(
+        z.object({
+          days: z.number().int().optional(),
+          title: z.nativeEnum(Title).optional(),
+          countryCode: z.string().optional(),
+        })
+      )
+      .query(async (options) => {
+        const days: Days | undefined = options.input.days as Days | undefined;
+        const title: Title | undefined = options.input.title;
+        const countryCode: string | undefined = options.input.countryCode;
+        const titled = await getTitled({ days, title, countryCode });
+        return titled;
+      }),
+  },
   countries: procedure.query(async () => {
     const url = 'https://restcountries.com/v3.1/all';
     const { data: countries } = await axios.get<{

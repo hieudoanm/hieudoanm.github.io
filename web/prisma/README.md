@@ -17,6 +17,41 @@ erDiagram
   DateTime createdAt
   DateTime updatedAt
 }
+"Player" {
+  Int id PK
+  String username UK
+  String avatar
+  String name
+  Title title
+  String country
+  String countryCode
+  String status
+  String league
+  String url
+  String twitch_url
+  Boolean is_streamer
+  Boolean verified
+  DateTime last_online
+  DateTime joined
+  Int rapid_rating_best
+  Int rapid_rating_last
+  Int rapid_rating_reviation
+  Int rapid_record_win
+  Int rapid_record_draw
+  Int rapid_record_loss
+  Int blitz_rating_best
+  Int blitz_rating_last
+  Int blitz_rating_reviation
+  Int blitz_record_win
+  Int blitz_record_draw
+  Int blitz_record_loss
+  Int bullet_rating_best
+  Int bullet_rating_last
+  Int bullet_rating_reviation
+  Int bullet_record_win
+  Int bullet_record_draw
+  Int bullet_record_loss
+}
 ```
 
 ### `Word`
@@ -30,3 +65,41 @@ erDiagram
 - `frequency`:
 - `createdAt`:
 - `updatedAt`:
+
+### `Player`
+
+**Properties**
+
+- `id`:
+- `username`:
+- `avatar`:
+- `name`:
+- `title`:
+- `country`:
+- `countryCode`:
+- `status`:
+- `league`:
+- `url`:
+- `twitch_url`:
+- `is_streamer`:
+- `verified`:
+- `last_online`:
+- `joined`:
+- `rapid_rating_best`:
+- `rapid_rating_last`:
+- `rapid_rating_reviation`:
+- `rapid_record_win`:
+- `rapid_record_draw`:
+- `rapid_record_loss`:
+- `blitz_rating_best`:
+- `blitz_rating_last`:
+- `blitz_rating_reviation`:
+- `blitz_record_win`:
+- `blitz_record_draw`:
+- `blitz_record_loss`:
+- `bullet_rating_best`:
+- `bullet_rating_last`:
+- `bullet_rating_reviation`:
+- `bullet_record_win`:
+- `bullet_record_draw`:
+- `bullet_record_loss`:
