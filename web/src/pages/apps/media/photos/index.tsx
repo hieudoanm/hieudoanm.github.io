@@ -1,11 +1,11 @@
+import { useIsOnline } from '@web/hooks/use-is-online';
+import { Layout } from '@web/layout';
+import { logger } from '@web/log';
+import { RequestBody, ResponseData } from '@web/pages/api/instagram';
+import { validate } from '@web/utils/instagram/validate';
 import axios from 'axios';
 import { NextPage } from 'next';
 import { FormEvent, useCallback, useState } from 'react';
-import { RequestBody, ResponseData } from '@web/pages/api/instagram';
-import { validate } from '@web/utils/validate';
-import { logger } from '@web/log';
-import { Layout } from '@web/layout';
-import { useIsOnline } from '@web/hooks/use-is-online';
 
 const DEFAULT_VALUE = 'https://www.instagram.com/p/C578i4-tkI4/';
 

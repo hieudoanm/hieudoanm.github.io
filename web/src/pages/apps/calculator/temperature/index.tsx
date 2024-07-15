@@ -1,11 +1,13 @@
 import { Layout } from '@web/layout';
-import { cf, ck, fc, fk, kc, kf } from '@web/utils/temperature';
+import { cf, ck, fc, fk, kc, kf } from '@web/utils/temperature/temperature';
 import { NextPage } from 'next';
 import { ChangeEvent, useState } from 'react';
 
+type TemperatureUnit = 'celsius' | 'fahrenheit' | 'kelvin';
+
 const TemperaturePage: NextPage = () => {
   const [temperature, setTemperature] = useState<
-    Record<'celsius' | 'fahrenheit' | 'kelvin', number>
+    Record<TemperatureUnit, number>
   >({
     celsius: 1,
     fahrenheit: cf(1),

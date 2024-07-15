@@ -1,4 +1,4 @@
-import { randomInt } from '@web/utils/random';
+import { randomNumber } from '@web/utils/random/number';
 import { Theme } from 'daisyui';
 import {
   Inter,
@@ -134,7 +134,7 @@ const ThemeContext = createContext<{
 export const ThemeProvider: FC<{ children: ReactNode }> = ({
   children = <></>,
 }) => {
-  const randomThemeIndex: number = randomInt(0, DARK_THEMES.length - 1);
+  const randomThemeIndex: number = randomNumber(0, DARK_THEMES.length - 1);
   const [settings, setSettings] = useState<{ font: Font; theme: Theme }>({
     font: 'robotoMono',
     theme: DARK_THEMES[randomThemeIndex],
