@@ -1,10 +1,13 @@
 import { Title } from '@prisma/client';
+import { SVGMaps } from '@web/components/Maps';
 import { useTheme } from '@web/context/ThemeContext';
 import countries from '@web/json/countries.json';
 import { Layout } from '@web/layout';
 import { Days } from '@web/services/chess.service';
+import maps from '@web/json/maps/world.json';
 import { QueryTemplate } from '@web/templates/QueryTemplate/QueryTemplate';
 import { trpc } from '@web/utils/trpc';
+import chroma from 'chroma-js';
 import daisyuiColors from 'daisyui/src/theming/themes';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -69,7 +72,41 @@ const TitledQuery: FC = () => {
     { title: 'WFM', value: data?.count.wfm ?? 0 },
     { title: 'WCM', value: data?.count.wcm ?? 0 },
     { title: 'WNM', value: data?.count.wnm ?? 0 },
-  ];
+  ].filter(({ value }) => value !== 0);
+  // Countries
+  const gap = 50;
+  const numberOfTitlePlayers: number[] = (data?.countries ?? [])
+    .map(({ count }) => count)
+    .filter((count: number) => count < 1000);
+  const min: number = Math.round(Math.min(...numberOfTitlePlayers) / gap) * gap;
+  const max: number = Math.ceil(Math.max(...numberOfTitlePlayers) / gap) * gap;
+  const range: number[] = Array.from({ length: (max - min) / gap }).map(
+    (_value: unknown, index: number) => min + index * gap
+  );
+  const minColor: string = '#ffffff';
+  const maxColor: string = chartColor;
+  const overflowColor: string = chartColor;
+  const colors: string[] = chroma
+    .scale([minColor, maxColor])
+    .mode('rgb')
+    .colors(range.length);
+  const countriesData = data?.countries.map(
+    ({ countryCode = '', count = 0 }) => {
+      if (count > max) {
+        return {
+          id: countryCode,
+          label: countryCode,
+          value: count,
+          color: overflowColor,
+        };
+      }
+      const colorIndex: number = range.findIndex(
+        (start: number) => start <= count && count < start + 100
+      );
+      const color = colors[colorIndex];
+      return { id: countryCode, label: countryCode, value: count, color };
+    }
+  );
 
   return (
     <QueryTemplate isPending={isPending} error={error} noData={!data}>
@@ -88,7 +125,7 @@ const TitledQuery: FC = () => {
                   value={state.title}
                   onChange={(event) => {
                     const title =
-                      event.target.value === ''
+                      event.target.value !== ''
                         ? (event.target.value as Title)
                         : undefined;
                     setState({ ...state, title });
@@ -111,7 +148,7 @@ const TitledQuery: FC = () => {
                   value={state.countryCode}
                   onChange={(event) => {
                     const countryCode =
-                      event.target.value === ''
+                      event.target.value !== ''
                         ? event.target.value
                         : undefined;
                     setState({ ...state, countryCode });
@@ -134,7 +171,7 @@ const TitledQuery: FC = () => {
                   value={state.days}
                   onChange={(event) => {
                     const days: Days | undefined =
-                      event.target.value === ''
+                      event.target.value !== ''
                         ? (parseInt(event.target.value, 10) as Days)
                         : undefined;
                     setState({ ...state, days });
@@ -349,6 +386,37 @@ const TitledQuery: FC = () => {
                       )}
                     </tbody>
                   </table>
+                </div>
+              ) : (
+                <></>
+              )}
+              {state.countriesView === 'maps' ? (
+                <div className='card'>
+                  <div className='card-body'>
+                    <div className='flex items-center gap-x-4 md:gap-x-8'>
+                      <div className='grow'>
+                        <SVGMaps id='world' svg={maps} data={countriesData} />
+                      </div>
+                      {/* <div className='flex flex-col gap-y-1'>
+                        {colors.map((color: string, index: number) => {
+                          const start = range[index];
+                          const end = start + gap;
+                          const label: string = `${start} - ${end}`;
+                          return (
+                            <div
+                              key={color}
+                              data-tip={label}
+                              className='tooltip tooltip-left'>
+                              <div
+                                className={`aspect-square w-4 cursor-pointer overflow-hidden rounded text-white bg-[${color}]`}>
+                                <p className={`text-[${color}]`}>{color}</p>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div> */}
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <></>

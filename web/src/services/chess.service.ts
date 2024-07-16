@@ -94,7 +94,7 @@ CAST(ROUND(AVG(CASE WHEN p."bullet_rating_best" <> 0 THEN p."bullet_rating_best"
 MAX(p."rapid_rating_best") AS "max_rapid_rating_best", -- Max
 MAX(p."blitz_rating_best") AS "max_blitz_rating_best", -- Max
 MAX(p."bullet_rating_best") AS "max_bullet_rating_best" -- Max
-FROM chess."Player" AS p;
+FROM chess."Player" AS p
 ${buildWhereClause({ days, title, countryCode })};`;
     const sql = Prisma.raw(query);
     const results: Descriptive[] = await prismaClient.$queryRaw(sql);
