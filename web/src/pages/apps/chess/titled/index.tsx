@@ -1,12 +1,16 @@
 import { Title } from '@prisma/client';
+import { useTheme } from '@web/context/ThemeContext';
+import countries from '@web/json/countries.json';
 import { Layout } from '@web/layout';
+import { Days } from '@web/services/chess.service';
 import { QueryTemplate } from '@web/templates/QueryTemplate/QueryTemplate';
 import { trpc } from '@web/utils/trpc';
-import countries from '@web/json/countries.json';
+import daisyuiColors from 'daisyui/src/theming/themes';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { FaBoltLightning, FaClock, FaRocket } from 'react-icons/fa6';
+import { Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
 const titles: Record<Title, string> = {
   GM: 'Grandmaster',
@@ -22,9 +26,40 @@ const titles: Record<Title, string> = {
 };
 
 const TitledQuery: FC = () => {
-  const { isPending, error, data } = trpc.chess.titled.useQuery({
-    days: 7,
+  const { theme } = useTheme();
+  const [state, setState] = useState<{
+    days?: Days;
+    title?: Title;
+    countryCode?: string;
+    titleView: 'table' | 'chart';
+    countriesView: 'table' | 'maps';
+  }>({
+    days: undefined,
+    title: undefined,
+    countryCode: undefined,
+    titleView: 'table',
+    countriesView: 'table',
   });
+  const { isPending, error, data } = trpc.chess.titled.useQuery({
+    days: state.days as Days,
+    title: state.title as Title,
+    countryCode: state.countryCode,
+  });
+
+  const chartColor = daisyuiColors[theme].primary;
+
+  const titleData = [
+    { title: 'GM', value: data?.count.gm ?? 0 },
+    { title: 'IM', value: data?.count.im ?? 0 },
+    { title: 'FM', value: data?.count.fm ?? 0 },
+    { title: 'CM', value: data?.count.cm ?? 0 },
+    { title: 'NM', value: data?.count.nm ?? 0 },
+    { title: 'WGM', value: data?.count.wgm ?? 0 },
+    { title: 'WIM', value: data?.count.wim ?? 0 },
+    { title: 'WFM', value: data?.count.wfm ?? 0 },
+    { title: 'WCM', value: data?.count.wcm ?? 0 },
+    { title: 'WNM', value: data?.count.wnm ?? 0 },
+  ];
 
   return (
     <QueryTemplate isPending={isPending} error={error} noData={!data}>
@@ -39,8 +74,14 @@ const TitledQuery: FC = () => {
                 <select
                   id='title'
                   name='title'
-                  className='join-item select select-bordered w-full'>
-                  <option selected>Title</option>
+                  className='join-item select select-bordered w-full'
+                  value={state.title}
+                  onChange={(event) => {
+                    setState({ ...state, title: event.target.value as Title });
+                  }}>
+                  <option value={undefined} selected>
+                    Title
+                  </option>
                   {Object.entries(titles).map(([key, value]) => {
                     return (
                       <option key={key} value={key}>
@@ -52,8 +93,17 @@ const TitledQuery: FC = () => {
                 <select
                   id='country'
                   name='country'
-                  className='join-item select select-bordered w-full'>
-                  <option selected>Country</option>
+                  className='join-item select select-bordered w-full'
+                  value={state.countryCode}
+                  onChange={(event) => {
+                    setState({
+                      ...state,
+                      countryCode: event.target.value as Title,
+                    });
+                  }}>
+                  <option value={undefined} selected>
+                    Country
+                  </option>
                   {countries.map(({ name: { common }, cca2 }) => {
                     return (
                       <option key={cca2} value={cca2}>
@@ -65,8 +115,17 @@ const TitledQuery: FC = () => {
                 <select
                   id='days'
                   name='days'
-                  className='join-item select select-bordered w-full'>
-                  <option selected>Timeframe</option>
+                  className='join-item select select-bordered w-full'
+                  value={state.days}
+                  onChange={(event) => {
+                    setState({
+                      ...state,
+                      days: parseInt(event.target.value, 10) as Days,
+                    });
+                  }}>
+                  <option value={undefined} selected>
+                    Timeframe
+                  </option>
                   <option value={7}>Week</option>
                   <option value={30}>Month</option>
                   <option value={90}>Quarter</option>
@@ -112,69 +171,128 @@ const TitledQuery: FC = () => {
                   </div>
                 </div>
               </div>
-              <h1 className='text-xl md:text-4xl'>Title</h1>
-              <div className='overflow-auto'>
-                <table className='table'>
-                  <thead>
-                    <tr>
-                      <th>Title</th>
-                      <th align='right'>Count</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      { title: 'GM', count: data?.count.gm ?? 0 },
-                      { title: 'IM', count: data?.count.im ?? 0 },
-                      { title: 'FM', count: data?.count.fm ?? 0 },
-                      { title: 'CM', count: data?.count.cm ?? 0 },
-                      { title: 'NM', count: data?.count.nm ?? 0 },
-                      { title: 'WGM', count: data?.count.wgm ?? 0 },
-                      { title: 'WIM', count: data?.count.wim ?? 0 },
-                      { title: 'WFM', count: data?.count.wfm ?? 0 },
-                      { title: 'WCM', count: data?.count.wcm ?? 0 },
-                      { title: 'WNM', count: data?.count.wnm ?? 0 },
-                    ].map(({ title, count }) => {
-                      return (
-                        <tr key={title}>
-                          <td>
-                            <span className='badge badge-primary badge-outline'>
-                              {title}
-                            </span>
-                          </td>
-                          <td align='right'>{count}</td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
+              <div className='flex items-center justify-between'>
+                <h1 className='text-xl md:text-4xl'>Title</h1>
+                <div className='join rounded-xl'>
+                  <button
+                    type='button'
+                    className={`btn btn-outline join-item ${state.titleView === 'table' ? 'btn-active' : ''}`}
+                    onClick={() => setState({ ...state, titleView: 'table' })}>
+                    Table
+                  </button>
+                  <button
+                    type='button'
+                    className={`btn btn-outline join-item ${state.titleView === 'chart' ? 'btn-active' : ''}`}
+                    onClick={() => setState({ ...state, titleView: 'chart' })}>
+                    Chart
+                  </button>
+                </div>
               </div>
-              <h1 className='text-xl md:text-4xl'>Countries</h1>
-              <div className='overflow-auto'>
-                <table className='table'>
-                  <thead>
-                    <tr>
-                      <th align='center' className='w-4'>
-                        #
-                      </th>
-                      <th>Country</th>
-                      <th align='right'>Count</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data?.countries.map(
-                      ({ countryCode, country, count }, index: number) => {
+              {state.titleView === 'table' ? (
+                <div className='overflow-auto'>
+                  <table className='table'>
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th align='right'>Count</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {titleData.map(({ title, value }) => {
                         return (
-                          <tr key={countryCode}>
-                            <td align='center'>{index + 1}</td>
-                            <td>{country}</td>
-                            <td align='right'>{count}</td>
+                          <tr key={title}>
+                            <td>
+                              <span className='badge badge-primary badge-outline'>
+                                {title}
+                              </span>
+                            </td>
+                            <td align='right'>{value}</td>
                           </tr>
                         );
-                      }
-                    )}
-                  </tbody>
-                </table>
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <></>
+              )}
+              {state.titleView === 'chart' ? (
+                <div className='aspect-square rounded-xl border border-primary md:aspect-video'>
+                  <ResponsiveContainer>
+                    <PieChart>
+                      <Legend verticalAlign='top' />
+                      <Tooltip />
+                      <Pie
+                        isAnimationActive={false}
+                        data={titleData}
+                        dataKey='value'
+                        nameKey='title'
+                        cx='50%'
+                        cy='50%'
+                        innerRadius={180}
+                        outerRadius={240}
+                        fill={chartColor}
+                        label={(entry: { name: string; value: number }) => {
+                          return `${entry.name} (${entry.value})`;
+                        }}
+                      />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
+              ) : (
+                <></>
+              )}
+              <div className='flex items-center justify-between'>
+                <h1 className='text-xl md:text-4xl'>Countries</h1>
+                <div className='join rounded-xl'>
+                  <button
+                    type='button'
+                    className={`btn btn-outline join-item ${state.countriesView === 'table' ? 'btn-active' : ''}`}
+                    onClick={() =>
+                      setState({ ...state, countriesView: 'table' })
+                    }>
+                    Table
+                  </button>
+                  <button
+                    type='button'
+                    className={`btn btn-outline join-item ${state.countriesView === 'maps' ? 'btn-active' : ''}`}
+                    onClick={() =>
+                      setState({ ...state, countriesView: 'maps' })
+                    }>
+                    Maps
+                  </button>
+                </div>
               </div>
+              {state.countriesView === 'table' ? (
+                <div className='overflow-auto'>
+                  <table className='table'>
+                    <thead>
+                      <tr>
+                        <th align='center' className='w-4'>
+                          #
+                        </th>
+                        <th>Country</th>
+                        <th align='right'>Count</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {data?.countries.map(
+                        ({ countryCode, country, count }, index: number) => {
+                          return (
+                            <tr key={countryCode}>
+                              <td align='center'>{index + 1}</td>
+                              <td>{country}</td>
+                              <td align='right'>{count}</td>
+                            </tr>
+                          );
+                        }
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <></>
+              )}
               <h1 className='text-xl md:text-4xl'>Leaderboard</h1>
               <div className='overflow-auto'>
                 <table className='table'>
