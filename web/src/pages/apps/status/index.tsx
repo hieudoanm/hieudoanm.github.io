@@ -25,7 +25,10 @@ const groups: Record<string, Record<string, string>> = {
     vercel: 'https://www.vercel-status.com/api/v2/status.json',
   },
   saas: { github: 'https://www.githubstatus.com/api/v2/status.json' },
-  paas: { render: 'https://status.render.com/api/v2/status.json' },
+  paas: {
+    render: 'https://status.render.com/api/v2/status.json',
+    supabase: 'https://status.supabase.com/api/v2/status.json',
+  },
   blockchain: {
     hedera: 'https://status.hedera.com/api/v2/status.json',
     solana: 'https://status.solana.com/api/v2/status.json',
