@@ -19,11 +19,11 @@ MAX(p."bullet_rating_best") AS "max_bullet_rating_best" -- Max
 FROM chess."Player" AS p
 WHERE p."title" = 'GM' AND p."countryCode" = 'US' AND p."last_online" > now() - interval '366 days';
 --- Distribution
-SELECT COUNT(p."username") AS "total", (FLOOR((p."rapid_rating_last" / 100)) * 100) AS "rapid_group" FROM chess."Player" AS p GROUP BY "rapid_group" ORDER BY "rapid_group";
+SELECT COUNT(p."username") AS "total", (FLOOR((p."rapid_rating_last" / 100)) * 100) AS "rapid_group" FROM chess."Player" AS p WHERE (FLOOR((p."rapid_rating_last" / 100)) * 100) <> 0 GROUP BY "rapid_group" ORDER BY "rapid_group"
 
-SELECT COUNT(p."username") AS "total", (FLOOR((p."blitz_rating_last" / 100)) * 100) AS "blitz_group" FROM chess."Player" AS p GROUP BY "blitz_group" ORDER BY "blitz_group";
+SELECT COUNT(p."username") AS "total", (FLOOR((p."blitz_rating_last" / 100)) * 100) AS "blitz_group" FROM chess."Player" AS p WHERE (FLOOR((p."blitz_rating_last" / 100)) * 100) <> 0 GROUP BY "blitz_group" ORDER BY "blitz_group"
 
-SELECT COUNT(p."username") AS "total", (FLOOR((p."bullet_rating_last" / 100)) * 100) AS "bullet_group" FROM chess."Player" AS p GROUP BY "bullet_group" ORDER BY "bullet_group";
+SELECT COUNT(p."username") AS "total", (FLOOR((p."bullet_rating_last" / 100)) * 100) AS "bullet_group" FROM chess."Player" AS p WHERE (FLOOR((p."bullet_rating_last" / 100)) * 100) <> 0 GROUP BY "bullet_group" ORDER BY "bullet_group"
 --- Country
 SELECT p."countryCode", p."country", COUNT(p."username") AS "count"
 FROM chess."Player" AS p

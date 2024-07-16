@@ -45,16 +45,19 @@ type Descriptive = {
 
 export type Days = 7 | 30 | 90 | 366;
 
-const buildWhereClause = ({
-  days,
-  title,
-  countryCode,
-}: {
-  days?: Days;
-  title?: Title;
-  countryCode?: string;
-}) => {
-  const where: string[] = [];
+const buildWhereClause = (
+  {
+    days,
+    title,
+    countryCode,
+  }: {
+    days?: Days;
+    title?: Title;
+    countryCode?: string;
+  },
+  extra: string[] = []
+) => {
+  const where: string[] = extra;
   if (title) where.push(`p."title" = '${title}'`);
   if (countryCode) where.push(`p."countryCode" = '${countryCode}'`);
   if (days) where.push(`p."last_online" > now() - interval '${days} days'`);
@@ -85,13 +88,13 @@ SUM(CASE WHEN p."title" = 'WIM' then 1 else 0 end) AS "count_wim", -- Count - WI
 SUM(CASE WHEN p."title" = 'WFM' then 1 else 0 end) AS "count_wfm", -- Count - WFM
 SUM(CASE WHEN p."title" = 'WCM' then 1 else 0 end) AS "count_wcm", -- Count - WCM
 SUM(CASE WHEN p."title" = 'WNM' then 1 else 0 end) AS "count_wnm", -- Count - WNM
-CAST(ROUND(AVG(p."rapid_rating_best"), 2) AS FLOAT) AS "average_rapid_rating_best", -- Average
-CAST(ROUND(AVG(p."blitz_rating_best"), 2) AS FLOAT) AS "average_blitz_rating_best", -- Average
-CAST(ROUND(AVG(p."bullet_rating_best"), 2) AS FLOAT) AS "average_bullet_rating_best", -- Average
+CAST(ROUND(AVG(CASE WHEN p."rapid_rating_best" <> 0 THEN p."rapid_rating_best" ELSE NULL END), 2) AS FLOAT) AS "average_rapid_rating_best", -- Average
+CAST(ROUND(AVG(CASE WHEN p."blitz_rating_best" <> 0 THEN p."blitz_rating_best" ELSE NULL END), 2) AS FLOAT) AS "average_blitz_rating_best", -- Average
+CAST(ROUND(AVG(CASE WHEN p."bullet_rating_best" <> 0 THEN p."bullet_rating_best" ELSE NULL END), 2) AS FLOAT) AS "average_bullet_rating_best", -- Average
 MAX(p."rapid_rating_best") AS "max_rapid_rating_best", -- Max
 MAX(p."blitz_rating_best") AS "max_blitz_rating_best", -- Max
 MAX(p."bullet_rating_best") AS "max_bullet_rating_best" -- Max
-FROM chess."Player" AS p
+FROM chess."Player" AS p;
 ${buildWhereClause({ days, title, countryCode })};`;
     const sql = Prisma.raw(query);
     const results: Descriptive[] = await prismaClient.$queryRaw(sql);
@@ -170,7 +173,7 @@ export const getDistributionByTimeClass = async ({
   timeClass: TimeClass;
 }): Promise<{ group: number; total: number }[]> => {
   try {
-    const query: string = `SELECT COUNT(p."username") AS "total", (FLOOR((p."${timeClass}_rating_last" / 100)) * 100) AS "group" FROM chess."Player" AS p ${buildWhereClause({ days, title, countryCode })} GROUP BY "group" ORDER BY "group";`;
+    const query: string = `SELECT COUNT(p."username") AS "total", (FLOOR((p."${timeClass}_rating_last" / 100)) * 100) AS "group" FROM chess."Player" AS p ${buildWhereClause({ days, title, countryCode }, [`(FLOOR((p."${timeClass}_rating_last" / 100)) * 100) <> 0`])} GROUP BY "group" ORDER BY "group";`;
     const sql = Prisma.raw(query);
     return prismaClient.$queryRaw(sql);
   } catch (error) {

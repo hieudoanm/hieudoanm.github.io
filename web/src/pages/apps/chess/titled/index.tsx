@@ -281,6 +281,8 @@ const TitledQuery: FC = () => {
                       <Legend verticalAlign='top' />
                       <Tooltip />
                       <Pie
+                        startAngle={-270}
+                        endAngle={90}
                         isAnimationActive={false}
                         data={titleData}
                         dataKey='value'
