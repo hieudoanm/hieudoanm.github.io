@@ -8,7 +8,7 @@
 
 ```mermaid
 erDiagram
-"Word" {
+"word" {
   String word PK
   Json results
   Json syllables "nullable"
@@ -54,7 +54,7 @@ erDiagram
 }
 ```
 
-### `Word`
+### `word`
 
 **Properties**
 

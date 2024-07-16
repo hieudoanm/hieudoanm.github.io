@@ -38,6 +38,8 @@ model Word {
   createdAt DateTime @default(now()) @db.Timestamptz()
   updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
 
+  @@index([word])
+  @@map("word")
   @@schema("public")
 }
 

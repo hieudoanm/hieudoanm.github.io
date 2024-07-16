@@ -2,7 +2,7 @@
 //// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 //// ------------------------------------------------------
 
-Table Word {
+Table word {
   word String [pk]
   results Json[] [not null]
   syllables Json [default: '{}']
