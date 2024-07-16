@@ -1,10 +1,25 @@
+import { Title } from '@prisma/client';
 import { Layout } from '@web/layout';
 import { QueryTemplate } from '@web/templates/QueryTemplate/QueryTemplate';
 import { trpc } from '@web/utils/trpc';
+import countries from '@web/json/countries.json';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { FC } from 'react';
 import { FaBoltLightning, FaClock, FaRocket } from 'react-icons/fa6';
+
+const titles: Record<Title, string> = {
+  GM: 'Grandmaster',
+  IM: 'International Master',
+  FM: 'FIDE Master',
+  CM: 'Candidate Master',
+  NM: 'National Master',
+  WGM: 'Woman Grandmaster',
+  WIM: 'Woman International Master',
+  WFM: 'Woman FIDE Master',
+  WCM: 'Woman Candidate Master',
+  WNM: 'Woman National Master',
+};
 
 const TitledQuery: FC = () => {
   const { isPending, error, data } = trpc.chess.titled.useQuery({
@@ -17,52 +32,52 @@ const TitledQuery: FC = () => {
         <div className='container mx-auto'>
           <div className='p-4 md:p-8'>
             <div className='flex flex-col gap-y-4 md:gap-y-8'>
-              <h1 className='text-4xl'>Players ({data?.count.total ?? 0})</h1>
-              <div className='join w-full'>
+              <h1 className='text-xl md:text-4xl'>
+                Titled ({data?.count.total ?? 0})
+              </h1>
+              <div className='join join-vertical w-full md:join-horizontal'>
                 <select
                   id='title'
                   name='title'
                   className='join-item select select-bordered w-full'>
-                  <option disabled selected>
-                    Title
-                  </option>
-                  <option value='GM'>Grandmaster</option>
-                  <option value='IM'>International Master</option>
-                  <option value='FM'>FIDE Master</option>
-                  <option value='CM'>Candidate Master</option>
-                  <option value='NM'>National Master</option>
-                  <option value='WGM'>Woman Grandmaster</option>
-                  <option value='WIM'>Woman International Master</option>
-                  <option value='WFM'>Woman FIDE Master</option>
-                  <option value='WCM'>Woman Candidate Master</option>
-                  <option value='WNM'>Woman National Master</option>
+                  <option selected>Title</option>
+                  {Object.entries(titles).map(([key, value]) => {
+                    return (
+                      <option key={key} value={key}>
+                        {value}
+                      </option>
+                    );
+                  })}
                 </select>
                 <select
                   id='country'
                   name='country'
                   className='join-item select select-bordered w-full'>
-                  <option disabled selected>
-                    Country
-                  </option>
+                  <option selected>Country</option>
+                  {countries.map(({ name: { common }, cca2 }) => {
+                    return (
+                      <option key={cca2} value={cca2}>
+                        {common}
+                      </option>
+                    );
+                  })}
                 </select>
                 <select
                   id='days'
                   name='days'
                   className='join-item select select-bordered w-full'>
-                  <option disabled selected>
-                    Timeframe
-                  </option>
+                  <option selected>Timeframe</option>
                   <option value={7}>Week</option>
                   <option value={30}>Month</option>
                   <option value={90}>Quarter</option>
                   <option value={366}>Year</option>
                 </select>
               </div>
-              <h1 className='text-4xl'>Overall</h1>
-              <div className='stats w-full rounded-2xl'>
+              <h1 className='text-xl md:text-4xl'>Overall</h1>
+              <div className='stats stats-vertical w-full rounded-2xl md:stats-horizontal'>
                 <div className='stat'>
                   <div className='stat-figure text-primary'>
-                    <FaClock className='text-4xl' />
+                    <FaClock className='text-xl md:text-4xl' />
                   </div>
                   <div className='stat-title'>Rapid</div>
                   <div className='stat-value'>
@@ -74,7 +89,7 @@ const TitledQuery: FC = () => {
                 </div>
                 <div className='stat'>
                   <div className='stat-figure text-primary'>
-                    <FaBoltLightning className='text-4xl' />
+                    <FaBoltLightning className='text-xl md:text-4xl' />
                   </div>
                   <div className='stat-title'>Blitz</div>
                   <div className='stat-value'>
@@ -86,7 +101,7 @@ const TitledQuery: FC = () => {
                 </div>
                 <div className='stat'>
                   <div className='stat-figure text-primary'>
-                    <FaRocket className='text-4xl' />
+                    <FaRocket className='text-xl md:text-4xl' />
                   </div>
                   <div className='stat-title'>Bullet</div>
                   <div className='stat-value'>
@@ -97,7 +112,7 @@ const TitledQuery: FC = () => {
                   </div>
                 </div>
               </div>
-              <h1 className='text-4xl'>Title</h1>
+              <h1 className='text-xl md:text-4xl'>Title</h1>
               <div className='overflow-auto'>
                 <table className='table'>
                   <thead>
@@ -121,7 +136,11 @@ const TitledQuery: FC = () => {
                     ].map(({ title, count }) => {
                       return (
                         <tr key={title}>
-                          <td>{title}</td>
+                          <td>
+                            <span className='badge badge-primary badge-outline'>
+                              {title}
+                            </span>
+                          </td>
                           <td align='right'>{count}</td>
                         </tr>
                       );
@@ -129,32 +148,41 @@ const TitledQuery: FC = () => {
                   </tbody>
                 </table>
               </div>
-              <h1 className='text-4xl'>Countries</h1>
+              <h1 className='text-xl md:text-4xl'>Countries</h1>
               <div className='overflow-auto'>
                 <table className='table'>
                   <thead>
                     <tr>
+                      <th align='center' className='w-4'>
+                        #
+                      </th>
                       <th>Country</th>
                       <th align='right'>Count</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {data?.countries.map(({ countryCode, country, count }) => {
-                      return (
-                        <tr key={countryCode}>
-                          <td>{country}</td>
-                          <td align='right'>{count}</td>
-                        </tr>
-                      );
-                    })}
+                    {data?.countries.map(
+                      ({ countryCode, country, count }, index: number) => {
+                        return (
+                          <tr key={countryCode}>
+                            <td align='center'>{index + 1}</td>
+                            <td>{country}</td>
+                            <td align='right'>{count}</td>
+                          </tr>
+                        );
+                      }
+                    )}
                   </tbody>
                 </table>
               </div>
-              <h1 className='text-4xl'>Leaderboard</h1>
+              <h1 className='text-xl md:text-4xl'>Leaderboard</h1>
               <div className='overflow-auto'>
                 <table className='table'>
                   <thead>
                     <tr>
+                      <th align='center' className='w-4'>
+                        #
+                      </th>
                       <th>Title</th>
                       <th>Country</th>
                       <th>Name</th>
@@ -165,20 +193,28 @@ const TitledQuery: FC = () => {
                   </thead>
                   <tbody>
                     {data?.leaderboard.map(
-                      ({
-                        title,
-                        countryCode,
-                        country,
-                        username,
-                        name,
-                        rapid_rating_last,
-                        blitz_rating_last,
-                        bullet_rating_last,
-                      }) => {
+                      (
+                        {
+                          title,
+                          countryCode,
+                          country,
+                          username,
+                          name,
+                          rapid_rating_last,
+                          blitz_rating_last,
+                          bullet_rating_last,
+                        },
+                        index: number
+                      ) => {
                         const url = `https://www.chess.com/member/${username}`;
                         return (
                           <tr key={username}>
-                            <td>{title}</td>
+                            <td align='center'>{index + 1}</td>
+                            <td>
+                              <span className='badge badge-primary badge-outline'>
+                                {title}
+                              </span>
+                            </td>
                             <td title={countryCode}>{country}</td>
                             <td>
                               <Link href={url} target='_blank'>
