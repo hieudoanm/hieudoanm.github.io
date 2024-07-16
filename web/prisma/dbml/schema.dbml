@@ -12,7 +12,7 @@ Table Word {
   updatedAt DateTime [default: `now()`, not null]
 }
 
-Table Player {
+Table player {
   id Int [pk]
   username String [unique, not null]
   avatar String [not null, default: '']

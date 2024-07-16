@@ -38,6 +38,26 @@ const titles: Record<Title, string> = {
   WNM: 'Woman National Master',
 };
 
+const getColors = ({
+  colors,
+  baseColor,
+  primaryColor,
+}: {
+  colors: number;
+  baseColor: string;
+  primaryColor: string;
+}) => {
+  try {
+    return chroma.scale([baseColor, primaryColor]).mode('rgb').colors(colors);
+  } catch {
+    try {
+      return chroma.scale([primaryColor, baseColor]).mode('rgb').colors(colors);
+    } catch {
+      return [];
+    }
+  }
+};
+
 const TitledQuery: FC = () => {
   const { theme } = useTheme();
   const [state, setState] = useState<{
@@ -59,7 +79,8 @@ const TitledQuery: FC = () => {
     countryCode: state.countryCode,
   });
 
-  const chartColor = daisyuiColors[theme]['primary'];
+  const primaryColor = daisyuiColors[theme]['primary'];
+  const baseColor = daisyuiColors[theme]['base-100'];
 
   const titleData = [
     { title: 'GM', value: data?.count.gm ?? 0 },
@@ -83,19 +104,18 @@ const TitledQuery: FC = () => {
   const range: number[] = Array.from({ length: (max - min) / gap }).map(
     (_value: unknown, index: number) => min + index * gap
   );
-  const minColor: string = '#ffffff';
-  const maxColor: string = chartColor;
-  const overflowColor: string = chartColor;
-  const colors: string[] = chroma
-    .scale([minColor, maxColor])
-    .mode('rgb')
-    .colors(range.length);
+  const overflowColor: string = primaryColor;
+  const colors: string[] = getColors({
+    baseColor,
+    primaryColor,
+    colors: range.length,
+  });
   const countriesData = data?.countries.map(
-    ({ countryCode = '', count = 0 }) => {
+    ({ country_code = '', count = 0 }) => {
       if (count > max) {
         return {
-          id: countryCode,
-          label: countryCode,
+          id: country_code,
+          label: country_code,
           value: count,
           color: overflowColor,
         };
@@ -104,7 +124,7 @@ const TitledQuery: FC = () => {
         (start: number) => start <= count && count < start + 100
       );
       const color = colors[colorIndex];
-      return { id: countryCode, label: countryCode, value: count, color };
+      return { id: country_code, label: country_code, value: count, color };
     }
   );
 
@@ -234,7 +254,7 @@ const TitledQuery: FC = () => {
                         <XAxis dataKey='group' />
                         <YAxis />
                         <Tooltip />
-                        <Bar dataKey='total' fill={chartColor} />
+                        <Bar dataKey='total' fill={primaryColor} />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -247,7 +267,7 @@ const TitledQuery: FC = () => {
                         <XAxis dataKey='group' />
                         <YAxis />
                         <Tooltip />
-                        <Bar dataKey='total' fill={chartColor} />
+                        <Bar dataKey='total' fill={primaryColor} />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -260,7 +280,7 @@ const TitledQuery: FC = () => {
                         <XAxis dataKey='group' />
                         <YAxis />
                         <Tooltip />
-                        <Bar dataKey='total' fill={chartColor} />
+                        <Bar dataKey='total' fill={primaryColor} />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -328,7 +348,7 @@ const TitledQuery: FC = () => {
                         cy='50%'
                         innerRadius={180}
                         outerRadius={240}
-                        fill={chartColor}
+                        fill={primaryColor}
                         label={(entry: { name: string; value: number }) => {
                           return `${entry.name} (${entry.value})`;
                         }}
@@ -374,9 +394,9 @@ const TitledQuery: FC = () => {
                     </thead>
                     <tbody>
                       {data?.countries.map(
-                        ({ countryCode, country, count }, index: number) => {
+                        ({ country_code, country, count }, index: number) => {
                           return (
-                            <tr key={countryCode}>
+                            <tr key={country_code}>
                               <td align='center'>{index + 1}</td>
                               <td>{country}</td>
                               <td align='right'>{count}</td>

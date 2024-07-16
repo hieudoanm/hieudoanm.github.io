@@ -260,7 +260,7 @@ const main = async () => {
     ({ username }) => username
   );
   const existingUsernamesSet: Set<string> = new Set(existingUsernames);
-  titles.reverse();
+  // titles.reverse();
   for (const title of titles) {
     const usernames = await getTitled(title);
     const usernamesSet: Set<string> = new Set(usernames);

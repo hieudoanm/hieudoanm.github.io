@@ -17,14 +17,14 @@ erDiagram
   DateTime createdAt
   DateTime updatedAt
 }
-"Player" {
+"player" {
   Int id PK
   String username UK
   String avatar
   String name
   Title title
   String country
-  String countryCode
+  String country_code
   String status
   String league
   String url
@@ -66,7 +66,7 @@ erDiagram
 - `createdAt`:
 - `updatedAt`:
 
-### `Player`
+### `player`
 
 **Properties**
 
@@ -76,7 +76,7 @@ erDiagram
 - `name`:
 - `title`:
 - `country`:
-- `countryCode`:
+- `country_code`:
 - `status`:
 - `league`:
 - `url`:

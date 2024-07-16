@@ -48,7 +48,7 @@ model Player {
   name                  String   @default("") @map("name")
   title                 Title    @default(GM) @map("title")
   country               String   @default("") @map("country")
-  countryCode           String   @default("") @map("countryCode")
+  countryCode           String   @default("") @map("country_code")
   status                String   @default("") @map("status")
   league                String   @default("") @map("league")
   url                   String   @default("") @map("url")
@@ -76,6 +76,8 @@ model Player {
   bulletRecordDraw      Int      @default(0) @map("bullet_record_draw")
   bulletRecordLoss      Int      @default(0) @map("bullet_record_loss")
 
+  @@index([id, username])
+  @@map("player")
   @@schema("chess")
 }
 

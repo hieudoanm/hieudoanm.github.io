@@ -59,7 +59,7 @@ const buildWhereClause = (
 ) => {
   const where: string[] = extra;
   if (title) where.push(`p."title" = '${title}'`);
-  if (countryCode) where.push(`p."countryCode" = '${countryCode}'`);
+  if (countryCode) where.push(`p."country_code" = '${countryCode}'`);
   if (days) where.push(`p."last_online" > now() - interval '${days} days'`);
   const whereClause = where.length === 0 ? '' : `WHERE ${where.join(' AND ')}`;
   logger.info(`whereClause=${whereClause}`);
@@ -94,7 +94,7 @@ CAST(ROUND(AVG(CASE WHEN p."bullet_rating_best" <> 0 THEN p."bullet_rating_best"
 MAX(p."rapid_rating_best") AS "max_rapid_rating_best", -- Max
 MAX(p."blitz_rating_best") AS "max_blitz_rating_best", -- Max
 MAX(p."bullet_rating_best") AS "max_bullet_rating_best" -- Max
-FROM chess."Player" AS p
+FROM chess."player" AS p
 ${buildWhereClause({ days, title, countryCode })};`;
     const sql = Prisma.raw(query);
     const results: Descriptive[] = await prismaClient.$queryRaw(sql);
@@ -173,7 +173,7 @@ export const getDistributionByTimeClass = async ({
   timeClass: TimeClass;
 }): Promise<{ group: number; total: number }[]> => {
   try {
-    const query: string = `SELECT COUNT(p."username") AS "total", (FLOOR((p."${timeClass}_rating_last" / 100)) * 100) AS "group" FROM chess."Player" AS p ${buildWhereClause({ days, title, countryCode }, [`(FLOOR((p."${timeClass}_rating_last" / 100)) * 100) <> 0`])} GROUP BY "group" ORDER BY "group";`;
+    const query: string = `SELECT COUNT(p."username") AS "total", (FLOOR((p."${timeClass}_rating_last" / 100)) * 100) AS "group" FROM chess."player" AS p ${buildWhereClause({ days, title, countryCode }, [`(FLOOR((p."${timeClass}_rating_last" / 100)) * 100) <> 0`])} GROUP BY "group" ORDER BY "group";`;
     const sql = Prisma.raw(query);
     return prismaClient.$queryRaw(sql);
   } catch (error) {
@@ -212,7 +212,7 @@ export const getDistribution = async ({
   return { rapid, blitz, bullet };
 };
 
-type Country = { countryCode: string; country: string; count: number };
+type Country = { country_code: string; country: string; count: number };
 
 export const getCountries = async ({
   days,
@@ -224,7 +224,7 @@ export const getCountries = async ({
   countryCode?: string;
 }): Promise<Country[]> => {
   try {
-    const query = `SELECT p."countryCode", p."country", COUNT(p."username") AS "count" FROM chess."Player" AS p ${buildWhereClause({ days, title, countryCode })} GROUP BY p."countryCode", p."country"
+    const query = `SELECT p."country_code", p."country", COUNT(p."username") AS "count" FROM chess."player" AS p ${buildWhereClause({ days, title, countryCode })} GROUP BY p."country_code", p."country"
 ORDER BY p."count" DESC;`;
     const sql = Prisma.raw(query);
     return prismaClient.$queryRaw(sql);
@@ -255,7 +255,7 @@ export const getLeaderboard = async ({
   countryCode?: string;
 }): Promise<Leader[]> => {
   try {
-    const query = `SELECT p."title", p."countryCode", p."country", p."username", p."name", p."bullet_rating_last", p."blitz_rating_last", p."rapid_rating_last" FROM chess."Player" AS p ${buildWhereClause({ days, title, countryCode })} ORDER BY p."bullet_rating_last" DESC, p."blitz_rating_last" DESC, p."rapid_rating_last" DESC LIMIT 100 OFFSET 0 ;`;
+    const query = `SELECT p."title", p."country_code", p."country", p."username", p."name", p."bullet_rating_last", p."blitz_rating_last", p."rapid_rating_last" FROM chess."player" AS p ${buildWhereClause({ days, title, countryCode })} ORDER BY p."bullet_rating_last" DESC, p."blitz_rating_last" DESC, p."rapid_rating_last" DESC LIMIT 100 OFFSET 0 ;`;
     const sql = Prisma.raw(query);
     return prismaClient.$queryRaw(sql);
   } catch (error) {
