@@ -10,7 +10,17 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import { FC, useState } from 'react';
 import { FaBoltLightning, FaClock, FaRocket } from 'react-icons/fa6';
-import { Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import {
+  Bar,
+  BarChart,
+  Legend,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts';
 
 const titles: Record<Title, string> = {
   GM: 'Grandmaster',
@@ -46,7 +56,7 @@ const TitledQuery: FC = () => {
     countryCode: state.countryCode,
   });
 
-  const chartColor = daisyuiColors[theme].primary;
+  const chartColor = daisyuiColors[theme]['primary'];
 
   const titleData = [
     { title: 'GM', value: data?.count.gm ?? 0 },
@@ -77,9 +87,13 @@ const TitledQuery: FC = () => {
                   className='join-item select select-bordered w-full'
                   value={state.title}
                   onChange={(event) => {
-                    setState({ ...state, title: event.target.value as Title });
+                    const title =
+                      event.target.value === ''
+                        ? (event.target.value as Title)
+                        : undefined;
+                    setState({ ...state, title });
                   }}>
-                  <option value={undefined} selected>
+                  <option value={''} selected>
                     Title
                   </option>
                   {Object.entries(titles).map(([key, value]) => {
@@ -96,12 +110,13 @@ const TitledQuery: FC = () => {
                   className='join-item select select-bordered w-full'
                   value={state.countryCode}
                   onChange={(event) => {
-                    setState({
-                      ...state,
-                      countryCode: event.target.value as Title,
-                    });
+                    const countryCode =
+                      event.target.value === ''
+                        ? event.target.value
+                        : undefined;
+                    setState({ ...state, countryCode });
                   }}>
-                  <option value={undefined} selected>
+                  <option value={''} selected>
                     Country
                   </option>
                   {countries.map(({ name: { common }, cca2 }) => {
@@ -118,12 +133,13 @@ const TitledQuery: FC = () => {
                   className='join-item select select-bordered w-full'
                   value={state.days}
                   onChange={(event) => {
-                    setState({
-                      ...state,
-                      days: parseInt(event.target.value, 10) as Days,
-                    });
+                    const days: Days | undefined =
+                      event.target.value === ''
+                        ? (parseInt(event.target.value, 10) as Days)
+                        : undefined;
+                    setState({ ...state, days });
                   }}>
-                  <option value={undefined} selected>
+                  <option value={''} selected>
                     Timeframe
                   </option>
                   <option value={7}>Week</option>
@@ -168,6 +184,48 @@ const TitledQuery: FC = () => {
                   </div>
                   <div className='stat-desc'>
                     Best: {data?.overall?.bullet.max ?? 0}
+                  </div>
+                </div>
+              </div>
+              <h1 className='text-xl md:text-4xl'>Distribution</h1>
+              <div className='grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8'>
+                <div className='col-span-1'>
+                  <div className='aspect-square md:aspect-video'>
+                    <h2 className='text-center'>Rapid</h2>
+                    <ResponsiveContainer>
+                      <BarChart data={data?.distribution.rapid}>
+                        <XAxis dataKey='group' />
+                        <YAxis />
+                        <Tooltip />
+                        <Bar dataKey='total' fill={chartColor} />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+                </div>
+                <div className='col-span-1'>
+                  <div className='aspect-square md:aspect-video'>
+                    <h2 className='text-center'>Blitz</h2>
+                    <ResponsiveContainer>
+                      <BarChart data={data?.distribution.blitz}>
+                        <XAxis dataKey='group' />
+                        <YAxis />
+                        <Tooltip />
+                        <Bar dataKey='total' fill={chartColor} />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+                </div>
+                <div className='col-span-1'>
+                  <div className='aspect-square md:aspect-video'>
+                    <h2 className='text-center'>Bullet</h2>
+                    <ResponsiveContainer>
+                      <BarChart data={data?.distribution.bullet}>
+                        <XAxis dataKey='group' />
+                        <YAxis />
+                        <Tooltip />
+                        <Bar dataKey='total' fill={chartColor} />
+                      </BarChart>
+                    </ResponsiveContainer>
                   </div>
                 </div>
               </div>
@@ -217,7 +275,7 @@ const TitledQuery: FC = () => {
                 <></>
               )}
               {state.titleView === 'chart' ? (
-                <div className='aspect-square rounded-xl border border-primary md:aspect-video'>
+                <div className='aspect-square md:aspect-video'>
                   <ResponsiveContainer>
                     <PieChart>
                       <Legend verticalAlign='top' />
