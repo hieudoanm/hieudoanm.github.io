@@ -33,9 +33,9 @@ const updatePrices = () => {
 
 const observeDOM = (() => {
   const MutationObserver =
-    window.MutationObserver || window.WebKitMutationObserver;
+    window.MutationObserver || (window as any).WebKitMutationObserver;
 
-  return (obj, callback) => {
+  return (obj: any, callback: any) => {
     // define new observer
     const obs = new MutationObserver((mutations) => {
       if (mutations[0].addedNodes.length || mutations[0].removedNodes.length) {

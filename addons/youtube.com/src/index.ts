@@ -1,4 +1,4 @@
-function sleep(ms) {
+function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
@@ -9,19 +9,15 @@ async function deleteLikedVideos() {
   );
   let out;
 
-  for (let i = 0; i < items.length; i++) {
-    (items[i] as HTMLElement).click();
+  for (const item of items) {
+    (item as HTMLElement).click();
     out = setTimeout(function () {
-      if (
-        document.querySelector(
-          'tp-yt-paper-listbox.style-scope.ytd-menu-popup-renderer'
-        )?.lastElementChild
-      ) {
-        document
-          .querySelector(
-            'tp-yt-paper-listbox.style-scope.ytd-menu-popup-renderer'
-          )
-          ?.lastElementChild.click();
+      const selector =
+        'tp-yt-paper-listbox.style-scope.ytd-menu-popup-renderer';
+      if (document.querySelector(selector)?.lastElementChild) {
+        (
+          document?.querySelector(selector)?.lastElementChild as HTMLElement
+        ).click();
       }
     }, 100);
     await sleep(500); // sleep cause browser can not handle the process
