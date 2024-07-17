@@ -1,16 +1,5 @@
 # Education
 
-- [Education](#education)
-  - [Blogs](#blogs)
-  - [Coding](#coding)
-  - [Online](#online)
-    - [University](#university)
-    - [Coures](#coures)
-  - [Resources](#resources)
-  - [IoT](#iot)
-  - [Design](#design)
-  - [Diagrams](#diagrams)
-
 ## Blogs
 
 - [baeldung](https://www.baeldung.com/)
@@ -36,14 +25,18 @@
 
 ## Online
 
+### [Coursera](https://www.coursera.org/)
+
+- [Computational Neuroscience](https://www.coursera.org/learn/computational-neuroscience)
+- [Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)
+
 ### University
 
-- [Coursera](https://www.coursera.org/)
-  - [Computational Neuroscience](https://www.coursera.org/learn/computational-neuroscience)
-  - [Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)
 - [Harvard](https://pll.harvard.edu/)
-- [Redwood - Berkeley - University of California](https://redwood.berkeley.edu/)
-  - [Neural Computation](https://redwood.berkeley.edu/courses/vs265/)
+
+### [Redwood - Berkeley - University of California](https://redwood.berkeley.edu/)
+
+- [Neural Computation](https://redwood.berkeley.edu/courses/vs265/)
 
 ### Coures
 
