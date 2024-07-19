@@ -87,7 +87,9 @@ export type Folder =
   | 'news'
   | 'science'
   | 'transfer'
-  | 'trends';
+  | 'trends'
+  | 'vietnam'
+  | 'usa';
 
 export type App = {
   id: string;
@@ -742,11 +744,55 @@ export const APPS: App[] = [
   },
   {
     id: 'usa',
-    href: 'countries/united-states',
+    href: 'countries/usa',
     name: 'United States',
     shortName: 'USA',
     enabled: true,
     icon: <FaFlagUsa />,
+    borderStyle: Border.Solid,
+    folder: 'countries',
+    isFolder: false,
+  },
+  {
+    id: 'usa-states',
+    href: 'countries/usa/states',
+    name: 'States',
+    shortName: 'States',
+    enabled: true,
+    icon: <FaFlagUsa />,
+    borderStyle: Border.Solid,
+    folder: 'usa',
+    isFolder: false,
+  },
+  {
+    id: 'usa-congress',
+    href: 'countries/usa/congress',
+    name: 'Congress',
+    shortName: 'Congress',
+    enabled: true,
+    icon: <FaFlagUsa />,
+    borderStyle: Border.Solid,
+    folder: 'usa',
+    isFolder: false,
+  },
+  {
+    id: 'usa-presidents',
+    href: 'countries/usa/presidents',
+    name: 'Presidents',
+    shortName: 'Presidents',
+    enabled: true,
+    icon: <FaFlagUsa />,
+    borderStyle: Border.Solid,
+    folder: 'usa',
+    isFolder: false,
+  },
+  {
+    id: 'vietnam',
+    href: 'countries/vietnam',
+    name: 'Vietnam',
+    shortName: 'Vietnam',
+    enabled: true,
+    icon: <FaStar />,
     borderStyle: Border.Solid,
     folder: 'countries',
     isFolder: false,
@@ -759,7 +805,7 @@ export const APPS: App[] = [
     enabled: true,
     icon: <FaStar />,
     borderStyle: Border.Solid,
-    folder: 'countries',
+    folder: 'vietnam',
     isFolder: false,
   },
   {
@@ -770,7 +816,7 @@ export const APPS: App[] = [
     enabled: true,
     icon: <FaStar />,
     borderStyle: Border.Solid,
-    folder: 'countries',
+    folder: 'vietnam',
     isFolder: false,
   },
   {
