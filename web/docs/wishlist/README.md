@@ -2,110 +2,85 @@
 
 ## House
 
-### Bedroom
+| Room        | Place                    | Item                       | Color | Number |
+| ----------- | ------------------------ | -------------------------- | ----- | ------ |
+| Bathroom    | Washing Machine          |                            |       | 1/1    |
+| Bathroom    | Dryer                    |                            |       | 1/1    |
+| Bathroom    | Toilet                   |                            |       | 1/1    |
+| Bathroom    | Toilet Paper             |                            |       | 1/1    |
+| Bathroom    | Heater                   |                            |       | 1/1    |
+| Bathroom    | Sink                     |                            |       | 1/1    |
+| Bathroom    | Mirror Cabinet           |                            |       | 1/1    |
+| Bathroom    | Electric Toothbrush      |                            |       | 1/1    |
+| Bathroom    | Waterpick                |                            |       | 1/1    |
+| Bathroom    | Cup                      |                            |       | 2/2    |
+| Bedroom     | Bed                      | Pillow                     |       | 4/4    |
+| Bedroom     | Bed                      | Blanket                    |       | 2/2    |
+| Bedroom     | Closet                   | Gym Shirts                 | Black | 2/8    |
+| Bedroom     | Closet                   | Gym Shorts                 | Black | 2/8    |
+| Bedroom     | Closet                   | T-shirts                   | Black | 2/8    |
+| Bedroom     | Closet                   | Shorts                     | Black | 2/8    |
+| Bedroom     | Closet                   | Shirts                     | White | 2/8    |
+| Bedroom     | Closet                   | Shirts                     | Black | 2/8    |
+| Bedroom     | Closet                   | Khaki Pants                | Black | 2/8    |
+| Bedroom     | Closet                   | Suits                      | Black | 2/2    |
+| Bedroom     | Closet                   | Suits                      | Navy  | 0/1    |
+| Bedroom     | Closet                   | Suits                      | Red   | 0/1    |
+| Bedroom     | Closet                   | Dress Shoes                | Black | 0/1    |
+| Bedroom     | Closet                   | Sneakers                   | Black | 0/1    |
+| Bedroom     | Closet                   | Running Shoes              | Black | 0/1    |
+| Bedroom     | Closet                   | Big Suitcase (30 kg)       | Black | 1/2    |
+| Bedroom     | Closet                   | Small Suitcase (7 kg)      | Black | 1/2    |
+| Bedroom     | Cabinet                  | Medical                    |       | 0/1    |
+| Dining room | Table for 12             |                            |       |        |
+| Dining room | Chair                    |                            |       | 4/12   |
+| Dining room | Plates                   |                            |       | 4/12   |
+| Dining room | Bowls                    |                            |       | 4/12   |
+| Dining room | Spoons                   |                            |       | 4/12   |
+| Dining room | Forks                    |                            |       | 4/12   |
+| Dining room | Eating Knifes            |                            |       | 4/12   |
+| Living Room | Sofa                     |                            |       |        |
+| Living Room | Smart TV                 |                            |       |        |
+| Living Room | Speaker                  |                            |       |        |
+| Living Room | Gaming Console (PS5)     |                            |       |        |
+| Living Room | Coffee Table             |                            |       |        |
+| Living Room | Coffee Cups              |                            |       |        |
+| Living Room | Chess Board              |                            |       |        |
+| Living Room | Chess Clock              |                            |       |        |
+| Kitchen     | Rice Cooker              |                            |       | 1/1    |
+| Kitchen     | Blender                  |                            |       | 1/1    |
+| Kitchen     | Dish Washer              |                            |       | 1/1    |
+| Kitchen     | Air Fryer                |                            |       | 1/1    |
+| Kitchen     | Stove                    |                            |       | 1/1    |
+| Kitchen     | Sink                     |                            |       |        |
+| Home Office | Adjustable Standing Desk |                            |       | 0/1    |
+| Home Office | Ergonomic Chair          |                            |       | 1/1    |
+| Home Office | 3D Printer               |                            |       | 0/1    |
+| Home Office | LEGO                     |                            |       | 0/1    |
+| Home Office | Running Treadmill        |                            |       |        |
+| Vehicle     | Car                      | Vinfast / Bugatti Veyron   |       | 0/1    |
+| Vehicle     | Motorcycle               | Dat Bike / Honda Rebel 300 |       | 0/1    |
+| Vehicle     | Bicycle                  | Xiaomi                     |       | 0/1    |
 
-- **1/1** Bed (King-size)
-- **4/4** Pillow
-- **2/2** Blanket
-
-#### Clothes
-
-- **2/8** `Black` Gym Shirts
-- **2/8** `Black` Gym Shorts
-- **2/8** `Black` T-shirts
-- **2/8** `Black` Shorts
-- **2/8** `Black` Shirts
-- **2/8** `White` Shirts
-- **2/8** `Black` Khaki Pants
-- **2/2** `Black` Suits
-- **0/2** `Navy Blue` Suits
-- **0/2** `Borderux Red` Suits
-- **0/1** `Black` Dress Shoes
-- **1/1** `Black` Sneakers
-- **1/1** `Black` Running Shoes
-- **1/2** `Black` Suitcase 30 kg
-- 0/1 Medical Cabinet
-
-### Bathroom
-
-- 1/1 Washing Machine
-- 0/1 Dryer
-
-### Kitchen
-
-- 1/1 Rice Cooker
-- 0/1 Blender
-- 0/1 Dish Washer
-- 1/1 Air Fryer
-
-### Living room
-
-- 0/1 Sofa
-- 0/1 Chess Set
-- 0/1 TV (48-inch)
-- 0/1 Speaker (Bose)
-- 0/1 Gaming Console (PS5)
-
-### Personal room
-
-#### Working Station
-
-- 0/1 Adjustable Standing Desk
-- 1/1 Ergonomic Chair
-- 0/1 3D Printer
-
-#### Toys
-
-- LEGO
-
-### Dining room
-
-- 1/1 Table
-- 2/12 Chair
-- 2/12 Plates
-- 2/12 Bowls
-- 2/12 Utilities Set
-
-### Gym
-
-- 0/1 Running Treadmill
-
-### Garage
-
-- 0/1 Car - Everyday - Electric (Vinfast)
-- 0/1 Car - Super (Bugatti Veyron)
-- 0/1 Motorcycle - Everyday - Electric (Dat Bike)
-- 0/1 Motorcycle - Super (Honda Rebel 300)
-- 1/1 Bicycle
 - 0/1 Toolbox
 - Screwdriver
 
 ## Technology
 
-### Desktop
-
-- 32-inch
-
-### Laptop (Apple Macbook with M Chip / ASUS Zenbook with Intel Chip)
-
-- 12 to 15-inch
-- 512MB to 1TB of Memory
-- 16 to 32 GB of RAM
-- 8 core chip
-
-### Tablet (Apple iPad / Samsung Galaxy Tab S)
-
-- Pen
-- 10 to 12-inch
-
-### Phone (Google Pixel (Best software) / Apple iPhone (Best hardware) / Samsung Galaxy S (Best of Both)?)
-
-- 6-inch screen
 - AI on the GO
 
-- 0/1 Headphone (Beat by Dre)
+| Technology | Size (inch) | CPU (Core) | Hard Drive (SSD) | RAM (GB) | First Choice         | Second Choice | Third Choice     |
+| ---------- | ----------- | ---------- | ---------------- | -------- | -------------------- | ------------- | ---------------- |
+| Desktop    | 32          |            |                  |          | ASUS                 |               |                  |
+| Laptop     | 12-15       | 16-32      | 1-2 TB           | 16-32    | ASUS Zenbook         | Apple Macbook |                  |
+| Mouse      |             |            |                  |          | Logitech             |               |                  |
+| Tablet     | 10-12       |            | 512MB - 1TB      |          | Samsung Galaxy Tab S | Apple iPad    |                  |
+| Pen        |             |            |                  |          | Samsung S Pen        | Apple Pencil  |                  |
+| Phone      | 6           |            | 128-512 MB       | 8        | Google Pixel         | Apple iPhone  | Samsung Galaxy S |
+| Headphone  |             |            |                  |          | Beat by Dre          |               |                  |
+| Watch      |             |            |                  |          | Casio G-Shock        | Apple Watch   |                  |
+
 - 1/1 Swiss Army Knifes
-- 0/1 Watch (Casio G-Shock)
 
 ## Brain
 
@@ -131,12 +106,7 @@
 
 ## Physical
 
-### Marathon
-
-- 05 km
-- 10 km
-- 21 km
-- 42 km
+- Marathon (5 / 10 / 21 / 42 km)
 
 ## Mark Resolutions (2009 - 2020)
 
