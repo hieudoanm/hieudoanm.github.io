@@ -15,7 +15,7 @@
     "lint": "next lint",
     "prebuild": "rimraf .next out public/**/*.js && ts-node ./scripts/get-notes.ts && prisma format && prisma generate",
     "build": "next build",
-    "predev": "kill-port 3000",
+    "predev": "kill-port 3000 && prisma format && prisma generate",
     "dev": "next dev -p 3000",
     "prestart": "kill-port 3000",
     "start": "next start -p 3000",
