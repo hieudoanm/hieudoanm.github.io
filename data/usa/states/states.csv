@@ -12,7 +12,7 @@ Virginia,VA,Richmond,Virginia Beach,1788-06-25,state,South,South Atlantic
 New York,NY,Albany,New York City,1788-07-26,state,Northeast,Middle Atlantic
 North Carolina,NC,Raleigh,Charlotte,1789-11-21,state,South,South Atlantic
 Rhode Island,RI,Providence,Providence,1790-05-29,state,Northeast,New England
-District of Columbia,DC,District of Columbia,District of Columbia,1790-07-16,federal-district,South,South Atlantic
+District of Columbia,DC,District of Columbia,District of Columbia,1790-07-16,federal,South,South Atlantic
 Vermont,VT,Montpelier,Burlington,1791-03-04,state,Northeast,New England
 Kentucky,KY,Frankfort,Louisville,1792-06-01,state,South,East South Central
 Tennessee,TN,Nashville,Nashville,1796-06-01,state,South,East South Central
@@ -46,7 +46,7 @@ Idaho,ID,Boise,Boise,1890-07-03,state,West,Mountain
 Wyoming,WY,Cheyenne,Cheyenne,1890-07-10,state,West,Mountain
 Utah,UT,Salt Lake City,Salt Lake City,1896-01-04,state,West,Mountain
 Guam,GU,Hagåtña,Hagåtña,1898-12-10,territory,,
-"Puerto Rico ",PR,San Juan,San Juan,1898-12-10,territory,,
+"Puerto Rico",PR,San Juan,San Juan,1898-12-10,territory,,
 American Samoa,AS,Pago Pago,Pago Pago,1900-02-16,territory,,
 Oklahoma,OK,Oklahoma City,Oklahoma City,1907-11-16,state,South,West South Central
 New Mexico,NM,Santa Fe,Albuquerque,1912-01-06,state,West,Mountain

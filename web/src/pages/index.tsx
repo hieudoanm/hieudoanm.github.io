@@ -9,7 +9,6 @@ import {
 } from 'react-icons/fa';
 import {
   FaAppStore,
-  FaFilePdf,
   FaGithub,
   FaLinkedin,
   FaMapPin,
