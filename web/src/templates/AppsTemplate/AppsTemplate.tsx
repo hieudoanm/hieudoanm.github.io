@@ -730,7 +730,7 @@ export const APPS: App[] = [
     isFolder: false,
   },
   {
-    id: 'usa',
+    id: 'un',
     href: 'countries/united-nations',
     name: 'United Nations',
     shortName: 'UN',
