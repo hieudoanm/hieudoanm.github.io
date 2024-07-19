@@ -21,6 +21,7 @@ type SocialMedia = {
   name: string;
   link: string;
   icon: ReactNode;
+  external: boolean;
 };
 
 const socialMedias: SocialMedia[] = [
@@ -30,6 +31,7 @@ const socialMedias: SocialMedia[] = [
     name: 'Apps',
     icon: <FaAppStore className='inline' />,
     link: '/apps',
+    external: false,
   },
   {
     shown: false,
@@ -37,6 +39,7 @@ const socialMedias: SocialMedia[] = [
     name: 'Email',
     icon: <FaEnvelopeSquare className='inline' />,
     link: 'mailto:hieumdoan@gmail.com',
+    external: true,
   },
   {
     shown: true,
@@ -44,6 +47,7 @@ const socialMedias: SocialMedia[] = [
     name: 'GitHub',
     icon: <FaGithub className='inline' />,
     link: 'https://github.com/hieudoanm',
+    external: true,
   },
   {
     shown: true,
@@ -51,6 +55,7 @@ const socialMedias: SocialMedia[] = [
     name: 'LinkedIn',
     icon: <FaLinkedin className='inline' />,
     link: 'https://www.linkedin.com/in/hieudoanm',
+    external: true,
   },
   {
     shown: false,
@@ -58,6 +63,7 @@ const socialMedias: SocialMedia[] = [
     name: 'Telegram',
     icon: <FaTelegram className='inline' />,
     link: 'https://t.me/hieudoanm',
+    external: true,
   },
   {
     shown: false,
@@ -65,6 +71,7 @@ const socialMedias: SocialMedia[] = [
     name: 'Facebook',
     icon: <FaFacebookSquare className='inline' />,
     link: 'https://www.facebook.com/hieudoanm',
+    external: true,
   },
   {
     shown: false,
@@ -72,6 +79,7 @@ const socialMedias: SocialMedia[] = [
     name: 'Instagram',
     icon: <FaInstagramSquare className='inline' />,
     link: 'https://www.instagram.com/hieudoan.com.vn/',
+    external: true,
   },
 ];
 
@@ -97,9 +105,13 @@ const HomePage: NextPage = () => {
             </p>
             {socialMedias
               .filter(({ shown }) => shown)
-              .map(({ id, icon, link, name }) => {
+              .map(({ id, icon, link, name, external }) => {
                 return (
-                  <Link key={id} href={link} target='_blank' className='w-full'>
+                  <Link
+                    key={id}
+                    href={link}
+                    target={external ? '_blank' : '_self'}
+                    className='w-full'>
                     <button className='btn btn-primary w-full'>
                       {icon} {name}
                     </button>
