@@ -57,7 +57,7 @@ exports[`SocialPage render default 1`] = `
           <a
             class="w-full"
             href="/apps"
-            target="_blank"
+            target="_self"
           >
             <button
               class="btn btn-primary w-full"
