@@ -15,7 +15,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20.14.0"
+          node-version: "20.15.0"
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Linting
@@ -30,7 +30,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20.14.0"
+          node-version: "20.15.0"
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Unit Test
@@ -45,7 +45,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20.14.0"
+          node-version: "20.15.0"
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Build Production
