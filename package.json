@@ -20,7 +20,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "turbo": "2.0.8"
+    "turbo": "2.0.9"
   },
   "workspaces": {
     "packages": [
