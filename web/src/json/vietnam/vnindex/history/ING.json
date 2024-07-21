@@ -1,0 +1,434 @@
+[
+  {
+    "symbol": "ING",
+    "date": "2024-05-15",
+    "close": 9,
+    "open": 9,
+    "high": 9,
+    "low": 9,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-16",
+    "close": 9,
+    "open": 9,
+    "high": 9,
+    "low": 9,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-17",
+    "close": 9,
+    "open": 9,
+    "high": 9,
+    "low": 9,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-20",
+    "close": 9,
+    "open": 9,
+    "high": 9,
+    "low": 9,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-21",
+    "close": 9,
+    "open": 9,
+    "high": 9,
+    "low": 9,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-22",
+    "close": 9,
+    "open": 9,
+    "high": 9,
+    "low": 9,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-23",
+    "close": 9,
+    "open": 9,
+    "high": 9,
+    "low": 9,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-24",
+    "close": 5.434,
+    "open": 5.4,
+    "high": 5.5,
+    "low": 5.4,
+    "volume": 629900
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-27",
+    "close": 5.4,
+    "open": 5.4,
+    "high": 5.4,
+    "low": 5.4,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-28",
+    "close": 5.4,
+    "open": 5.4,
+    "high": 5.4,
+    "low": 5.4,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-29",
+    "close": 5.4,
+    "open": 5.4,
+    "high": 5.4,
+    "low": 5.4,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-30",
+    "close": 5.4,
+    "open": 5.4,
+    "high": 5.4,
+    "low": 5.4,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-05-31",
+    "close": 4.615,
+    "open": 4.6,
+    "high": 6.2,
+    "low": 4.6,
+    "volume": 110819
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-03",
+    "close": 4.6,
+    "open": 4.6,
+    "high": 4.6,
+    "low": 4.6,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-04",
+    "close": 4.6,
+    "open": 4.6,
+    "high": 4.6,
+    "low": 4.6,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-05",
+    "close": 4.6,
+    "open": 4.6,
+    "high": 4.6,
+    "low": 4.6,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-06",
+    "close": 4.6,
+    "open": 4.6,
+    "high": 4.6,
+    "low": 4.6,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-07",
+    "close": 5.2,
+    "open": 5.2,
+    "high": 5.2,
+    "low": 5.2,
+    "volume": 100
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-10",
+    "close": 5.2,
+    "open": 5.2,
+    "high": 5.2,
+    "low": 5.2,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-11",
+    "close": 5.2,
+    "open": 5.2,
+    "high": 5.2,
+    "low": 5.2,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-12",
+    "close": 5.2,
+    "open": 5.2,
+    "high": 5.2,
+    "low": 5.2,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-13",
+    "close": 5.2,
+    "open": 5.2,
+    "high": 5.2,
+    "low": 5.2,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-14",
+    "close": 5.433,
+    "open": 5.2,
+    "high": 5.9,
+    "low": 5.2,
+    "volume": 300
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-17",
+    "close": 5.4,
+    "open": 5.4,
+    "high": 5.4,
+    "low": 5.4,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-18",
+    "close": 5.4,
+    "open": 5.4,
+    "high": 5.4,
+    "low": 5.4,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-19",
+    "close": 5.4,
+    "open": 5.4,
+    "high": 5.4,
+    "low": 5.4,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-20",
+    "close": 5.4,
+    "open": 5.4,
+    "high": 5.4,
+    "low": 5.4,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-21",
+    "close": 6.2,
+    "open": 6.2,
+    "high": 6.2,
+    "low": 6.2,
+    "volume": 500
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-24",
+    "close": 6.2,
+    "open": 6.2,
+    "high": 6.2,
+    "low": 6.2,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-25",
+    "close": 6.2,
+    "open": 6.2,
+    "high": 6.2,
+    "low": 6.2,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-26",
+    "close": 6.2,
+    "open": 6.2,
+    "high": 6.2,
+    "low": 6.2,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-27",
+    "close": 6.2,
+    "open": 6.2,
+    "high": 6.2,
+    "low": 6.2,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-06-28",
+    "close": 7.1,
+    "open": 7.1,
+    "high": 7.1,
+    "low": 7.1,
+    "volume": 28844
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-01",
+    "close": 7.1,
+    "open": 7.1,
+    "high": 7.1,
+    "low": 7.1,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-02",
+    "close": 7.1,
+    "open": 7.1,
+    "high": 7.1,
+    "low": 7.1,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-03",
+    "close": 7.1,
+    "open": 7.1,
+    "high": 7.1,
+    "low": 7.1,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-04",
+    "close": 7.1,
+    "open": 7.1,
+    "high": 7.1,
+    "low": 7.1,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-05",
+    "close": 8.1,
+    "open": 8.1,
+    "high": 8.1,
+    "low": 8.1,
+    "volume": 200
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-08",
+    "close": 8.1,
+    "open": 8.1,
+    "high": 8.1,
+    "low": 8.1,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-09",
+    "close": 8.1,
+    "open": 8.1,
+    "high": 8.1,
+    "low": 8.1,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-10",
+    "close": 8.1,
+    "open": 8.1,
+    "high": 8.1,
+    "low": 8.1,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-11",
+    "close": 8.1,
+    "open": 8.1,
+    "high": 8.1,
+    "low": 8.1,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-12",
+    "close": 9.3,
+    "open": 9.3,
+    "high": 9.3,
+    "low": 9.3,
+    "volume": 100
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-15",
+    "close": 9.3,
+    "open": 9.3,
+    "high": 9.3,
+    "low": 9.3,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-16",
+    "close": 9.3,
+    "open": 9.3,
+    "high": 9.3,
+    "low": 9.3,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-17",
+    "close": 9.3,
+    "open": 9.3,
+    "high": 9.3,
+    "low": 9.3,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-18",
+    "close": 9.3,
+    "open": 9.3,
+    "high": 9.3,
+    "low": 9.3,
+    "volume": 0
+  },
+  {
+    "symbol": "ING",
+    "date": "2024-07-19",
+    "close": 9.3,
+    "open": 9.3,
+    "high": 9.3,
+    "low": 9.3,
+    "volume": 0
+  }
+]

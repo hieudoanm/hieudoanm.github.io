@@ -820,6 +820,17 @@ export const APPS: App[] = [
     isFolder: false,
   },
   {
+    id: 'vietnam-vnindex',
+    href: 'countries/vietnam/vnindex',
+    name: 'VNIndex',
+    shortName: 'VNIndex',
+    enabled: true,
+    icon: <FaStar />,
+    borderStyle: Border.Solid,
+    folder: 'vietnam',
+    isFolder: false,
+  },
+  {
     id: 'coins',
     href: 'finance/crypto/coins',
     name: 'Coins',
