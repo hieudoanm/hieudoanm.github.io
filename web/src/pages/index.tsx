@@ -84,12 +84,15 @@ const socialMedias: SocialMedia[] = [
 ];
 
 const HomePage: NextPage = () => {
+  const quote =
+    'Neurons create soul, soul then reorganizes those neurons, then those reorganized neurons make the soul evolve.';
+
   return (
     <div className='h-screen w-screen overflow-auto p-8 lg:p-16'>
       <div className='container mx-auto h-full w-full'>
         <div className='flex h-full items-center justify-center'>
           <div className='flex flex-col items-center justify-center gap-y-4 lg:gap-y-8'>
-            <div className='w-48'>
+            <div className='w-48 md:w-64'>
               <div className='aspect-square w-full overflow-hidden rounded-full'>
                 <div
                   className='h-full w-full rounded-full border-4 border-base-content bg-cover bg-center'
@@ -100,6 +103,9 @@ const HomePage: NextPage = () => {
             <p className='text-2xl uppercase'>
               <Link href='/'>Hieu Doan</Link>
             </p>
+            <p className='w-72 text-center text-xs md:w-96 md:text-sm'>
+              {quote}
+            </p>
             <p className='leading-8'>
               <FaMapPin className='inline' /> Vietnam
             </p>
@@ -107,15 +113,16 @@ const HomePage: NextPage = () => {
               .filter(({ shown }) => shown)
               .map(({ id, icon, link, name, external }) => {
                 return (
-                  <Link
-                    key={id}
-                    href={link}
-                    target={external ? '_blank' : '_self'}
-                    className='w-full'>
-                    <button className='btn btn-primary w-full'>
-                      {icon} {name}
-                    </button>
-                  </Link>
+                  <div key={id}>
+                    <Link
+                      href={link}
+                      target={external ? '_blank' : '_self'}
+                      className='w-full'>
+                      <button className='btn btn-primary mx-auto w-48 md:w-64'>
+                        {icon} {name}
+                      </button>
+                    </Link>
+                  </div>
                 );
               })}
           </div>
