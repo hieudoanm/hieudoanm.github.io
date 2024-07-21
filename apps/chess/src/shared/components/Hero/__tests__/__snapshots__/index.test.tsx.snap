@@ -33,6 +33,7 @@ exports[`Hero to match snapshot 1`] = `
             <form>
               <label
                 class="truncate"
+                for="username"
               >
                 Search with chess.com username
               </label>
