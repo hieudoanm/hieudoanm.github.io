@@ -1,0 +1,329 @@
+type Query {
+  chess: Chess
+  health: String
+}
+
+type Mutation {
+  player(username: String!): Player
+  games(username: String!, month: Int, year: Int): GamesSynced
+}
+
+type Chess {
+  countries: [Country]
+  ecos: [String]
+  players(
+    title: String
+    limit: Int
+    offset: Int
+    timeRange: String
+    countryCode: String
+    isStreamer: Boolean
+  ): Players
+  player(username: String!, timeClass: String, variant: String): Player
+  titled: [Title]
+}
+
+enum TimeRange {
+  year
+  quarter
+  month
+  week
+}
+
+enum TitleAbbreviation {
+  GM
+  IM
+  FM
+  CM
+  NM
+  WGM
+  WIM
+  WFM
+  WCM
+  WNM
+  AGM
+  AIM
+  AFM
+  ACM
+}
+
+type Country {
+  cca2: String
+  cca3: String
+  name: String
+  flag: String
+}
+type GamesSynced {
+  total: Int
+  synced: Int
+  existed: Int
+}
+
+type OverallStat {
+  average: Float
+  max: Float
+}
+
+type OverallStats {
+  rapid: OverallStat
+  blitz: OverallStat
+  bullet: OverallStat
+}
+
+type Players {
+  total: Int
+  stats: OverallStats
+  players: [Player]
+  titles: [PlayerTitleTotal]
+  countries: [PlayerCountry]
+}
+
+type PlayerCountry {
+  countryCode: String
+  total: Int
+}
+
+type PlayerTitleTotal {
+  title: String
+  total: Int
+}
+
+type PlayerStats {
+  timeClass: String
+  last: Int
+  best: Int
+  deviation: Int
+  win: Int
+  draw: Int
+  loss: Int
+  player: Player
+}
+
+type PlayerCountry {
+  cca2: String
+  cca3: String
+  name: String
+  flag: String
+}
+
+type Player {
+  id: Int
+  username: String
+  name: String
+  followers: Int
+  avatar: String
+  location: String
+  verified: Boolean
+  lastOnline: String
+  joined: String
+  status: String
+  title: String
+  league: String
+  # Streamer
+  twitchUrl: String
+  isStreamer: Boolean
+  # Country
+  countryCode: String
+  country: PlayerCountry
+  # Games
+  archives: [String]
+  games: [Game]
+  # Stats
+  stats: [PlayerStats]
+  # Insights
+  insights: Insights
+}
+
+type Game {
+  id: String
+  url: String
+  pgn: String
+  timeControl: String
+  timeClass: String
+  endTime: String
+  rated: Boolean
+  tcn: String
+  initialSetup: String
+  rules: String
+  whiteUsername: String
+  blackUsername: String
+  whiteAccuracy: Float
+  blackAccuracy: Float
+  whiteResult: String
+  blackResult: String
+  whiteRating: Int
+  blackRating: Int
+  fen: String
+}
+
+type Insights {
+  accuracy: Accuracy
+  games: Games
+  opponents: [Opponent]
+  results: Results
+  openings: Openings
+  moves: Moves
+  geography: [Geography]
+}
+
+type Geography {
+  flag: String
+  code: String
+  name: String
+  total: Int
+  win: Int
+  draw: Int
+  loss: Int
+}
+
+type Moves {
+  pieces: Pieces
+  castling: Castling
+}
+
+type Castling {
+  short: OpponentCastling
+  long: OpponentCastling
+  none: OpponentCastling
+}
+
+type OpponentCastling {
+  short: CastlingResults
+  long: CastlingResults
+  none: CastlingResults
+}
+
+type CastlingResults {
+  win: Int
+  draw: Int
+  loss: Int
+}
+
+type Pieces {
+  king: Int
+  queen: Int
+  rook: Int
+  bishop: Int
+  knight: Int
+  pawn: Int
+}
+
+type Openings {
+  white: [OpeningCount]
+  black: [OpeningCount]
+}
+
+type OpeningCount {
+  opening: String
+  pgn: String
+  total: Int
+  win: Int
+  draw: Int
+  loss: Int
+}
+
+type Accuracy {
+  average: Float
+  win: Float
+  draw: Float
+  loss: Float
+  periods: [AccuracyByPeriod]
+  timeOfDays: [AccuracyByTimeOfDay]
+  daysOfWeek: [AccuracyByDayOfWeek]
+}
+
+type AccuracyByPeriod {
+  average: Float
+  period: Int
+}
+
+type AccuracyByTimeOfDay {
+  average: Float
+  timeOfDay: String
+}
+
+type AccuracyByDayOfWeek {
+  average: Float
+  dayOfWeek: String
+}
+
+type Games {
+  total: Int
+  win: Int
+  draw: Int
+  loss: Int
+  periods: [GamesByYear]
+  timeOfDays: [GamesByTimeOfDay]
+  daysOfWeek: [GamesByDayOfWeek]
+}
+
+type GamesByYear {
+  games: Int
+  period: Int
+}
+
+type GamesByTimeOfDay {
+  games: Int
+  timeOfDay: String
+}
+
+type GamesByDayOfWeek {
+  games: Int
+  dayOfWeek: String
+}
+
+type Opponent {
+  opponent: String
+  games: Int
+  win: Int
+  draw: Int
+  loss: Int
+}
+
+type Result {
+  result: String
+  count: Int
+}
+
+type Results {
+  win: [Result]
+  draw: [Result]
+  loss: [Result]
+  timeOfDays: [ResultsByTimeOfDay]
+  daysOfWeek: [ResultsByDayOfWeek]
+  opponents: [ResultsByOpponentRating]
+  endPhrases: [ResultsByEndPhrase]
+}
+
+type ResultsByTimeOfDay {
+  win: Int
+  draw: Int
+  loss: Int
+  timeOfDay: String
+}
+
+type ResultsByDayOfWeek {
+  win: Int
+  draw: Int
+  loss: Int
+  dayOfWeek: String
+}
+
+type ResultsByOpponentRating {
+  win: Int
+  draw: Int
+  loss: Int
+  rating: Int
+}
+
+type ResultsByEndPhrase {
+  win: Int
+  draw: Int
+  loss: Int
+  phrase: String
+}
+
+type Title {
+  abbreviation: TitleAbbreviation
+  title: String
+}
