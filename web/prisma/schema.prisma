@@ -45,38 +45,38 @@ model Word {
 
 model Player {
   id                    Int      @id @map("id")
-  username              String   @unique @map("username")
-  avatar                String   @default("") @map("avatar")
-  name                  String   @default("") @map("name")
+  username              String   @unique @map("username") @db.VarChar(255)
+  avatar                String   @default("") @map("avatar") @db.VarChar(255)
+  name                  String   @default("") @map("name") @db.VarChar(255)
   title                 Title    @default(GM) @map("title")
-  country               String   @default("") @map("country")
-  countryCode           String   @default("") @map("country_code")
-  status                String   @default("") @map("status")
-  league                String   @default("") @map("league")
-  url                   String   @default("") @map("url")
-  twitchUrl             String   @default("") @map("twitch_url")
-  isStreamer            Boolean  @default(false) @map("is_streamer")
-  verified              Boolean  @default(false) @map("verified")
-  lastOnline            DateTime @default(now()) @map("last_online")
-  joined                DateTime @default(now()) @map("joined")
-  rapidRatingBest       Int      @default(0) @map("rapid_rating_best")
-  rapidRatingLast       Int      @default(0) @map("rapid_rating_last")
-  rapidRatingDeviation  Int      @default(0) @map("rapid_rating_reviation")
-  rapidRecordWin        Int      @default(0) @map("rapid_record_win")
-  rapidRecordDraw       Int      @default(0) @map("rapid_record_draw")
-  rapidRecordLoss       Int      @default(0) @map("rapid_record_loss")
-  blitzRatingBest       Int      @default(0) @map("blitz_rating_best")
-  blitzRatingLast       Int      @default(0) @map("blitz_rating_last")
-  blitzRatingDeviation  Int      @default(0) @map("blitz_rating_reviation")
-  blitzRecordWin        Int      @default(0) @map("blitz_record_win")
-  blitzRecordDraw       Int      @default(0) @map("blitz_record_draw")
-  blitzRecordLoss       Int      @default(0) @map("blitz_record_loss")
-  bulletRatingBest      Int      @default(0) @map("bullet_rating_best")
-  bulletRatingLast      Int      @default(0) @map("bullet_rating_last")
-  bulletRatingDeviation Int      @default(0) @map("bullet_rating_reviation")
-  bulletRecordWin       Int      @default(0) @map("bullet_record_win")
-  bulletRecordDraw      Int      @default(0) @map("bullet_record_draw")
-  bulletRecordLoss      Int      @default(0) @map("bullet_record_loss")
+  country               String   @default("") @map("country") @db.VarChar(255)
+  countryCode           String   @default("") @map("country_code") @db.VarChar(255)
+  status                String   @default("") @map("status") @db.VarChar(255)
+  league                String   @default("") @map("league") @db.VarChar(255)
+  url                   String   @default("") @map("url") @db.VarChar(255)
+  twitchUrl             String   @default("") @map("twitch_url") @db.VarChar(255)
+  isStreamer            Boolean  @default(false) @map("is_streamer") @db.Boolean
+  verified              Boolean  @default(false) @map("verified") @db.Boolean
+  lastOnline            DateTime @default(now()) @map("last_online") @db.Timestamptz()
+  joined                DateTime @default(now()) @map("joined") @db.Timestamptz()
+  rapidRatingBest       Int      @default(0) @map("rapid_rating_best") @db.Integer
+  rapidRatingLast       Int      @default(0) @map("rapid_rating_last") @db.Integer
+  rapidRatingDeviation  Int      @default(0) @map("rapid_rating_reviation") @db.Integer
+  rapidRecordWin        Int      @default(0) @map("rapid_record_win") @db.Integer
+  rapidRecordDraw       Int      @default(0) @map("rapid_record_draw") @db.Integer
+  rapidRecordLoss       Int      @default(0) @map("rapid_record_loss") @db.Integer
+  blitzRatingBest       Int      @default(0) @map("blitz_rating_best") @db.Integer
+  blitzRatingLast       Int      @default(0) @map("blitz_rating_last") @db.Integer
+  blitzRatingDeviation  Int      @default(0) @map("blitz_rating_reviation") @db.Integer
+  blitzRecordWin        Int      @default(0) @map("blitz_record_win") @db.Integer
+  blitzRecordDraw       Int      @default(0) @map("blitz_record_draw") @db.Integer
+  blitzRecordLoss       Int      @default(0) @map("blitz_record_loss") @db.Integer
+  bulletRatingBest      Int      @default(0) @map("bullet_rating_best") @db.Integer
+  bulletRatingLast      Int      @default(0) @map("bullet_rating_last") @db.Integer
+  bulletRatingDeviation Int      @default(0) @map("bullet_rating_reviation") @db.Integer
+  bulletRecordWin       Int      @default(0) @map("bullet_record_win") @db.Integer
+  bulletRecordDraw      Int      @default(0) @map("bullet_record_draw") @db.Integer
+  bulletRecordLoss      Int      @default(0) @map("bullet_record_loss") @db.Integer
 
   @@index([id, username])
   @@map("player")
