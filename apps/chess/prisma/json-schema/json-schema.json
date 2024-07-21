@@ -33,10 +33,19 @@
         "status": {
           "type": "string",
           "default": "basic",
-          "enum": ["basic", "premium", "staff", "mod", "closed"]
+          "enum": [
+            "basic",
+            "premium",
+            "staff",
+            "mod",
+            "closed"
+          ]
         },
         "title": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "enum": [
             "GM",
             "WGM",
@@ -55,7 +64,10 @@
           ]
         },
         "league": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "enum": [
             "Wood",
             "Stone",
@@ -99,11 +111,17 @@
           }
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -135,11 +153,17 @@
           "default": ""
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -180,7 +204,13 @@
         "timeClass": {
           "type": "string",
           "default": "daily",
-          "enum": ["daily", "classical", "rapid", "blitz", "bullet"]
+          "enum": [
+            "daily",
+            "classical",
+            "rapid",
+            "blitz",
+            "bullet"
+          ]
         },
         "best": {
           "type": "integer",
@@ -207,11 +237,17 @@
           "default": 0
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -236,11 +272,17 @@
           "default": ""
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
@@ -299,7 +341,13 @@
         "timeClass": {
           "type": "string",
           "default": "daily",
-          "enum": ["daily", "classical", "rapid", "blitz", "bullet"]
+          "enum": [
+            "daily",
+            "classical",
+            "rapid",
+            "blitz",
+            "bullet"
+          ]
         },
         "whiteAccuracy": {
           "type": "number",
@@ -374,8 +422,15 @@
           "default": ""
         },
         "endPhrase": {
-          "type": ["string", "null"],
-          "enum": ["opening", "middlegame", "endgame"]
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "opening",
+            "middlegame",
+            "endgame"
+          ]
         },
         "whiteKing": {
           "type": "integer",
@@ -434,11 +489,17 @@
           "default": ""
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         }
       }
