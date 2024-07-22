@@ -49,7 +49,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Build Production
-        run: yarn build
+        run: yarn build --filter="@hieudoanm/web"
       - name: Disable Jekyll
         run: touch .nojekyll
         working-directory: web/out
