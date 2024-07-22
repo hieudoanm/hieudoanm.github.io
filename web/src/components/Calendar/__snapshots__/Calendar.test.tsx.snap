@@ -953,11 +953,12 @@ exports[`Calendar render default 1`] = `
                   class="w-full text-center"
                 >
                    
-                  21
+                  4
                   <sup>
-                    st
+                    th
                   </sup>
-                  , 
+                  ,
+                   
                   1995
                 </div>
               </td>

@@ -70,15 +70,22 @@ export const Calendar: React.FC<CalendarProps> = ({
   month: currentMonth = new Date().getMonth(),
   year: currentYear = new Date().getFullYear(),
 }) => {
-  const today = new Date().getDate();
   const years = [...Array.from({ length: LAST_YEAR - FIRST_YEAR + 1 }).keys()]
     .map((year: number) => year + FIRST_YEAR)
     .reverse();
-  const [monthYear, setMonthYear] = useState({
+  const [dateMonthYear, setDateMonthYear] = useState<{
+    date: number;
+    month: number;
+    year: number;
+  }>({
+    date: currentDate,
     month: currentMonth,
     year: currentYear,
   });
-  const dates: YearMonthDate[] = getDates(monthYear.year, monthYear.month);
+  const dates: YearMonthDate[] = getDates(
+    dateMonthYear.year,
+    dateMonthYear.month
+  );
 
   return (
     <div className='overflow-hidden'>
@@ -89,11 +96,11 @@ export const Calendar: React.FC<CalendarProps> = ({
             <select
               id='month'
               name='month'
-              value={monthYear.month}
+              value={dateMonthYear.month}
               className='join-item select select-bordered select-sm border-base-content md:select-md'
               onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-                setMonthYear({
-                  ...monthYear,
+                setDateMonthYear({
+                  ...dateMonthYear,
                   month: Number.parseInt(event.target.value, 10),
                 })
               }
@@ -110,10 +117,10 @@ export const Calendar: React.FC<CalendarProps> = ({
               id='year'
               name='year'
               className='join-item select select-bordered select-sm border-base-content md:select-md'
-              value={monthYear.year}
+              value={dateMonthYear.year}
               onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-                setMonthYear({
-                  ...monthYear,
+                setDateMonthYear({
+                  ...dateMonthYear,
                   year: Number.parseInt(event.target.value, 10),
                 })
               }
@@ -130,7 +137,8 @@ export const Calendar: React.FC<CalendarProps> = ({
               type='button'
               className='btn btn-outline join-item btn-sm md:btn-md'
               onClick={() => {
-                setMonthYear({
+                setDateMonthYear({
+                  date: new Date().getDate(),
                   month: new Date().getMonth(),
                   year: new Date().getFullYear(),
                 });
@@ -204,8 +212,9 @@ export const Calendar: React.FC<CalendarProps> = ({
               <tr>
                 <td colSpan={7}>
                   <div className='w-full text-center'>
-                    {MONTHS[`${monthYear.month}`]} {today}
-                    <sup>{SUFFIX_DATE[today]}</sup>, {monthYear.year}
+                    {MONTHS[`${dateMonthYear.month}`]} {dateMonthYear.date}
+                    <sup>{SUFFIX_DATE[dateMonthYear.date]}</sup>,{' '}
+                    {dateMonthYear.year}
                   </div>
                 </td>
               </tr>
