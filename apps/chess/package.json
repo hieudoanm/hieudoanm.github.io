@@ -28,9 +28,9 @@
     "prisma:migrate": "make prisma-migrate"
   },
   "dependencies": {
-    "@apollo/client": "3.10.8",
+    "@apollo/client": "3.11.0",
     "@apollo/datasource-rest": "6.3.0",
-    "@apollo/server": "4.10.4",
+    "@apollo/server": "4.10.5",
     "@as-integrations/next": "3.0.0",
     "@emotion/react": "11.13.0",
     "@emotion/styled": "11.13.0",
