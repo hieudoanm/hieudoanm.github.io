@@ -54,7 +54,7 @@
     "react-scroll": "1.9.0",
     "recharts": "2.12.7",
     "sharp": "0.33.4",
-    "stripe": "16.2.0"
+    "stripe": "16.4.0"
   },
   "devDependencies": {
     "@million/lint": "0.0.73",
