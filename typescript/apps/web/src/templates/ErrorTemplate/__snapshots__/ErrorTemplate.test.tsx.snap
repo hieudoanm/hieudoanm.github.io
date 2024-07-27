@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorRoute to match snapshot 1`] = `
+exports[`ErrorTemplate to match snapshot 1`] = `
 <div>
   <div
     class="flex h-screen w-screen items-center justify-center"

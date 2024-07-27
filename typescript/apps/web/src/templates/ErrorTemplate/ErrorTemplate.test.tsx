@@ -1,9 +1,9 @@
-import { ErrorRoute } from './ErrorTemplate';
+import { ErrorTemplate } from './ErrorTemplate';
 import { render } from '@testing-library/react';
 
-describe('ErrorRoute', () => {
+describe('ErrorTemplate', () => {
   test('to match snapshot', () => {
-    const { container } = render(<ErrorRoute />);
+    const { container } = render(<ErrorTemplate />);
     expect(container).toMatchSnapshot();
   });
 });
