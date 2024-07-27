@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 export type ErrorRouteProps = { code?: number; title?: string };
 
-export const ErrorRoute: FC<ErrorRouteProps> = ({
+export const ErrorTemplate: FC<ErrorRouteProps> = ({
   code = 500,
   title = 'Error',
 }) => {

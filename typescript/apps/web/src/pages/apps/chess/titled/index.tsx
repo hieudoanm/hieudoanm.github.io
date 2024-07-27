@@ -2,10 +2,10 @@ import { Title } from '@prisma/client';
 import { SVGMaps } from '@web/components/Maps';
 import { useTheme } from '@web/context/ThemeContext';
 import countries from '@web/json/countries.json';
+import maps from '@web/json/maps/world.json';
 import { Layout } from '@web/layout';
 import { Days } from '@web/services/chess.service';
-import maps from '@web/json/maps/world.json';
-import { QueryTemplate } from '@web/router/QueryTemplate/QueryTemplate';
+import { QueryTemplate } from '@web/templates/QueryTemplate';
 import { trpc } from '@web/utils/trpc';
 import chroma from 'chroma-js';
 import daisyuiColors from 'daisyui/src/theming/themes';
@@ -58,6 +58,23 @@ const getColors = ({
   }
 };
 
+const processData = (data: any) => {
+  const titleData = [
+    { title: 'GM', value: data?.count.gm ?? 0 },
+    { title: 'IM', value: data?.count.im ?? 0 },
+    { title: 'FM', value: data?.count.fm ?? 0 },
+    { title: 'CM', value: data?.count.cm ?? 0 },
+    { title: 'NM', value: data?.count.nm ?? 0 },
+    { title: 'WGM', value: data?.count.wgm ?? 0 },
+    { title: 'WIM', value: data?.count.wim ?? 0 },
+    { title: 'WFM', value: data?.count.wfm ?? 0 },
+    { title: 'WCM', value: data?.count.wcm ?? 0 },
+    { title: 'WNM', value: data?.count.wnm ?? 0 },
+  ].filter(({ value }) => value !== 0);
+
+  return { titleData };
+};
+
 const TitledQuery: FC = () => {
   const { theme } = useTheme();
   const [state, setState] = useState<{
@@ -82,18 +99,8 @@ const TitledQuery: FC = () => {
   const primaryColor = daisyuiColors[theme]['primary'];
   const baseColor = daisyuiColors[theme]['base-100'];
 
-  const titleData = [
-    { title: 'GM', value: data?.count.gm ?? 0 },
-    { title: 'IM', value: data?.count.im ?? 0 },
-    { title: 'FM', value: data?.count.fm ?? 0 },
-    { title: 'CM', value: data?.count.cm ?? 0 },
-    { title: 'NM', value: data?.count.nm ?? 0 },
-    { title: 'WGM', value: data?.count.wgm ?? 0 },
-    { title: 'WIM', value: data?.count.wim ?? 0 },
-    { title: 'WFM', value: data?.count.wfm ?? 0 },
-    { title: 'WCM', value: data?.count.wcm ?? 0 },
-    { title: 'WNM', value: data?.count.wnm ?? 0 },
-  ].filter(({ value }) => value !== 0);
+  const { titleData } = processData(data);
+
   // Countries
   const gap = 50;
   const numberOfTitlePlayers: number[] = (data?.countries ?? [])

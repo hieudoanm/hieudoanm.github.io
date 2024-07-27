@@ -3,7 +3,7 @@ import { Article } from '@web/clients/news/news.dto';
 import { Category, Country } from '@web/clients/news/news.enums';
 import { useIsOnline } from '@web/hooks/use-is-online';
 import { Layout } from '@web/layout/Layout';
-import { Articles, NewsQuery } from '@web/router/news/News';
+import { Articles, NewsQuery } from '@web/router/apps/news';
 import { GetStaticProps, NextPage } from 'next';
 
 const NewsPage: NextPage<{ articles: Article[] }> = ({

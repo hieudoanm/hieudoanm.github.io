@@ -14,6 +14,10 @@ type ChessClock = {
   increment: { top: number; bottom: number };
 };
 
+const options: number[] = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 45, 60, 90, 120, 150, 180,
+];
+
 const ChessClockPage: NextPage = () => {
   const oneSecond = 1_000;
 
@@ -24,7 +28,12 @@ const ChessClockPage: NextPage = () => {
     running: false,
   };
   const [clock, setClock] = useState<ChessClock>(initial);
-
+  const [modal, setModal] = useState({
+    topTime: 10,
+    bottomTime: 10,
+    topIncrement: 0,
+    bottomIncrement: 0,
+  });
   const [timer, setTimer] = useState<any>(null);
 
   const click = (side: ChessSide) => {
@@ -142,13 +151,16 @@ const ChessClockPage: NextPage = () => {
         <div className='modal-box'>
           <div className='flex flex-col gap-y-4'>
             <div className='join'>
-              <input
-                type='number'
+              <select
                 id='topTime'
                 name='Top Time'
-                className='input join-item input-bordered'
-                value={clock.seconds.top}
-                onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                className='join-item select select-bordered w-full'
+                value={modal.topTime}
+                onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                  const topTime = parseInt(event.target.value);
+                  setModal((modal) => {
+                    return { ...modal, topTime };
+                  });
                   setClock(({ current, seconds, increment, running }) => {
                     return {
                       current,
@@ -156,41 +168,58 @@ const ChessClockPage: NextPage = () => {
                       increment,
                       seconds: {
                         ...seconds,
-                        top: parseInt(event.target.value),
+                        top: topTime * 60,
                       },
                     };
                   });
-                }}
-              />
-              <input
-                type='number'
+                }}>
+                {options.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+              <select
                 id='topIncrement'
                 name='Top Increment'
-                className='input join-item input-bordered'
-                value={clock.increment.top}
-                onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                className='join-item select select-bordered w-full'
+                value={modal.topIncrement}
+                onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                  const topIncrement = parseInt(event.target.value);
+                  setModal((modal) => {
+                    return { ...modal, topIncrement };
+                  });
                   setClock(({ current, seconds, increment, running }) => {
                     return {
                       current,
                       running,
                       increment: {
                         ...increment,
-                        top: parseInt(event.target.value),
+                        top: topIncrement,
                       },
                       seconds,
                     };
                   });
-                }}
-              />
+                }}>
+                <option value={0}>0</option>
+                {options.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
             </div>
             <div className='join'>
-              <input
-                type='number'
-                id='topIncrement'
-                name='Top Increment'
-                className='input join-item input-bordered'
-                value={clock.seconds.bottom}
-                onChange={(event: ChangeEvent<HTMLInputElement>) => {
+              <select
+                id='bottomTime'
+                name='Bottom Increment'
+                className='join-item select select-bordered w-full'
+                value={modal.bottomTime}
+                onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                  const bottomTime = parseInt(event.target.value);
+                  setModal((modal) => {
+                    return { ...modal, bottomTime };
+                  });
                   setClock(({ current, seconds, increment, running }) => {
                     return {
                       current,
@@ -198,38 +227,52 @@ const ChessClockPage: NextPage = () => {
                       increment,
                       seconds: {
                         ...seconds,
-                        bottom: parseInt(event.target.value),
+                        bottom: bottomTime * 60,
                       },
                     };
                   });
-                }}
-              />
-              <input
-                type='number'
+                }}>
+                {options.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+              <select
                 id='bottomIncrement'
                 name='Bottom Increment'
-                className='input join-item input-bordered'
+                className='join-item select select-bordered w-full'
                 value={clock.increment.bottom}
-                onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                  const bottomIncrement = parseInt(event.target.value);
+                  setModal((modal) => {
+                    return { ...modal, bottomIncrement };
+                  });
                   setClock(({ current, seconds, increment, running }) => {
                     return {
                       current,
                       running,
                       increment: {
                         ...increment,
-                        bottom: parseInt(event.target.value),
+                        bottom: bottomIncrement,
                       },
                       seconds,
                     };
                   });
-                }}
-              />
+                }}>
+                <option value={0}>0</option>
+                {options.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
           <div className='modal-action'>
             <form method='dialog'>
               {/* if there is a button in form, it will close the modal */}
-              <button className='btn btn-primary'>Set Clock</button>
+              <button className='btn btn-primary w-full'>Set Clock</button>
             </form>
           </div>
         </div>
