@@ -6,12 +6,12 @@ import {
   OperationVariables,
   QueryOptions,
 } from '@apollo/client';
-import { GraphQLErrors } from '@apollo/client/errors';
 import {
   GRAPHQL_URI,
   NEXT_PUBLIC_GRAPHQL_URI,
 } from '@chess/common/environments/environments';
 import { logger } from '@chess/common/libs/logger';
+import { GraphQLFormattedError } from 'graphql';
 
 const URI: string = NEXT_PUBLIC_GRAPHQL_URI || GRAPHQL_URI || '';
 
@@ -41,7 +41,7 @@ export const query = async <T>(
     });
     return data;
   } catch (error) {
-    const graphQLErrors: GraphQLErrors =
+    const graphQLErrors: ReadonlyArray<GraphQLFormattedError> =
       (error as ApolloError).graphQLErrors ?? '';
     logger.error({ name, graphQLErrors }, `apolloClient.query error=${error}`);
     return {} as T;
