@@ -153,7 +153,7 @@ opentelemetry-util-http==0.45b0
 ordered-set==4.1.0
 orjson==3.10.6
 overrides==7.7.0
-packaging==23.2
+packaging==24.1
 pandas==2.2.2
 pandocfilters==1.5.1
 parso==0.8.4
