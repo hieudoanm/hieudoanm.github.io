@@ -59,6 +59,7 @@
 | 38  | Entry Area  | Shoes Cabinet            | Dress Shoes               | Black | 1/1    |                                             |
 | 39  | Entry Area  | Shoes Cabinet            | Running Shoes             | Black | 1/1    |                                             |
 | 40  | Entry Area  | Shoes Cabinet            | Sneakers                  | Black | 1/1    |                                             |
+|     | Entry Area  | Masks                    |                           |       | 8/8    |                                             |
 | 41  | Entry Area  | Umbrella                 |                           |       |        |                                             |
 | 42  | Living Room | Sofa                     |                           |       |        |                                             |
 | 43  | Living Room | Smart TV                 |                           |       |        |                                             |
