@@ -24,9 +24,8 @@
   },
   "workspaces": {
     "packages": [
-      "addons/*",
-      "apps/*",
-      "web"
+      "typescript/addons/*",
+      "typescript/apps/*"
     ]
   }
 }

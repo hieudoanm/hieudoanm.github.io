@@ -15,7 +15,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20.15.0"
+          node-version: "20.16.0"
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Linting
@@ -30,7 +30,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20.15.0"
+          node-version: "20.16.0"
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Unit Test
@@ -45,18 +45,18 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20.15.0"
+          node-version: "20.16.0"
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Build Production
         run: yarn build --filter="@hieudoanm/web"
       - name: Disable Jekyll
         run: touch .nojekyll
-        working-directory: web/out
+        working-directory: typescript/apps/web/out
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.6.3
         with:
           token: ${{ secrets.GHP_TOKEN }}
           branch: gh-pages
-          folder: web/out
+          folder: typescript/apps/web/out
           clean: true
