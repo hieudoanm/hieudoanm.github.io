@@ -210,7 +210,7 @@ rich==13.7.1
 rpds-py==0.18.0
 rsa==4.9
 s3transfer==0.10.1
-scikit-learn==1.4.2
+scikit-learn==1.5.0
 scipy==1.13.0
 seaborn==0.13.2
 Send2Trash==1.8.3
