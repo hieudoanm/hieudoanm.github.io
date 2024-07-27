@@ -136,7 +136,7 @@ nest-asyncio==1.6.0
 nltk==3.8.1
 notebook==7.2.1
 notebook_shim==0.2.4
-numpy==1.26.4
+numpy==2.0.1
 oauthlib==3.2.2
 onnxruntime==1.18.1
 openai==1.37.1
