@@ -48,7 +48,7 @@ distlib==0.3.8
 distro==1.9.0
 dnspython==2.6.1
 docopt==0.6.2
-email_validator==2.1.1
+email_validator==2.2.0
 emoji==2.12.1
 executing==2.0.1
 fastapi==0.111.0
