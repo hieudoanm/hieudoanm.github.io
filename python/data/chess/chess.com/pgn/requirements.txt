@@ -181,7 +181,7 @@ pydantic==2.8.2
 pydantic_core==2.18.2
 pydeck==0.9.1
 Pygments==2.18.0
-pylint==3.1.0
+pylint==3.2.6
 pyparsing==3.1.2
 pypdf==4.2.0
 PyPika==0.48.9
