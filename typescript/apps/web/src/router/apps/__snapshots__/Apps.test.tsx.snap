@@ -1443,6 +1443,46 @@ exports[`ListTemplate render default 1`] = `
           </div>
         </a>
         <a
+          href="chess/clock"
+        >
+          <div
+            class="border-b border-base-content"
+          >
+            <div
+              class="container mx-auto"
+            >
+              <div
+                class="p-4 md:p-8"
+              >
+                <div
+                  class="flex items-center gap-x-4"
+                >
+                  <div
+                    class="text-4xl"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    Clock
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a
           href="chess/elo"
         >
           <div

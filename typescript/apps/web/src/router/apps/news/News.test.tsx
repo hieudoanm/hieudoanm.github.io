@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Articles } from './NewsTemplate';
+import { Articles } from './News';
 
 describe('Articles', () => {
   test('render default', () => {

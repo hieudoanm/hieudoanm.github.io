@@ -5,7 +5,7 @@ import countries from '@web/json/countries.json';
 import { Layout } from '@web/layout';
 import { Days } from '@web/services/chess.service';
 import maps from '@web/json/maps/world.json';
-import { QueryTemplate } from '@web/templates/QueryTemplate/QueryTemplate';
+import { QueryTemplate } from '@web/router/QueryTemplate/QueryTemplate';
 import { trpc } from '@web/utils/trpc';
 import chroma from 'chroma-js';
 import daisyuiColors from 'daisyui/src/theming/themes';

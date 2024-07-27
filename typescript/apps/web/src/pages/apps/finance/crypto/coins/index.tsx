@@ -4,7 +4,7 @@ import { useIsOnline } from '@web/hooks/use-is-online';
 import {
   CryptoQuery,
   CryptoTemplate,
-} from '@web/templates/CryptoTemplate/CryptoTemplate';
+} from '@web/router/CryptoTemplate/CryptoTemplate';
 import { GetStaticProps, NextPage } from 'next';
 
 const CryptoPage: NextPage<{ coins: Coin[] }> = ({ coins = [] }) => {

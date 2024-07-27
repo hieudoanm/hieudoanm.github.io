@@ -16,7 +16,7 @@ import {
 } from '@web/constants/news.constants';
 import { useIsOnline } from '@web/hooks/use-is-online';
 import { Layout } from '@web/layout';
-import { QueryTemplate } from '@web/templates/QueryTemplate/QueryTemplate';
+import { QueryTemplate } from '@web/router/QueryTemplate/QueryTemplate';
 import { trpc } from '@web/utils/trpc';
 import { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';

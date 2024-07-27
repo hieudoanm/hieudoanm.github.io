@@ -18,7 +18,7 @@ type Clock = {
 };
 
 const Pomodoro: NextPage = () => {
-  const seconds = 1_000;
+  const oneSecond: number = 1_000;
 
   const [restTime, setRestTime] = useState(5);
   const [workTime, setWorkTime] = useState(25);
@@ -60,7 +60,7 @@ const Pomodoro: NextPage = () => {
           }
         );
       }
-    }, seconds);
+    }, oneSecond);
 
     setTimer(newTimer);
   };

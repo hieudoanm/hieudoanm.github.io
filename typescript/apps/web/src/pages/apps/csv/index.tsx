@@ -1,4 +1,4 @@
-import { GridTemplate } from '@web/templates/AppsTemplate/AppsTemplate';
+import { GridTemplate } from '@web/router/apps/Apps';
 import { NextPage } from 'next';
 
 const CsvApps: NextPage = () => {

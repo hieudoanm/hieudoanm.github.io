@@ -1,22 +1,22 @@
 import { Article } from '@web/clients/news/news.dto';
 import { Category, Country } from '@web/clients/news/news.enums';
 import { Layout } from '@web/layout';
+import { QueryTemplate } from '@web/templates/QueryTemplate';
 import { trpc } from '@web/utils/trpc';
 import Link from 'next/link';
 import { FC } from 'react';
-import { QueryTemplate } from '../QueryTemplate/QueryTemplate';
 
 export const PublishedAt: FC<{ publishedAt: string }> = ({
   publishedAt = '',
 }) => {
   if (!publishedAt) return <></>;
 
-  const oneSecond = 1000;
-  const oneMinute = oneSecond * 60;
-  const oneHour = oneMinute * 60;
-  const oneDay = oneHour * 24;
-  const oneMonth = oneDay * 30;
-  const oneYear = oneDay * 365;
+  const oneSecond: number = 1000;
+  const oneMinute: number = oneSecond * 60;
+  const oneHour: number = oneMinute * 60;
+  const oneDay: number = oneHour * 24;
+  const oneMonth: number = oneDay * 30;
+  const oneYear: number = oneDay * 365;
 
   const time: number = Date.now();
   const publishedTime: number = new Date(publishedAt).getTime();

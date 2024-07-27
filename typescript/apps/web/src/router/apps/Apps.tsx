@@ -160,6 +160,17 @@ export const APPS: App[] = [
     isFolder: true,
   },
   {
+    id: 'chess-clock',
+    href: 'chess/clock',
+    name: 'Clock',
+    shortName: 'Clock',
+    enabled: true,
+    icon: <FaClock />,
+    borderStyle: Border.Solid,
+    folder: 'chess',
+    isFolder: false,
+  },
+  {
     id: 'chess-elo',
     href: 'chess/elo',
     name: 'Elo',

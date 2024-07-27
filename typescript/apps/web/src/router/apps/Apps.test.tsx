@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { GridTemplate, ListTemplate } from './AppsTemplate';
+import { GridTemplate, ListTemplate } from './Apps';
 
 describe('GridTemplate', () => {
   test('render default', () => {

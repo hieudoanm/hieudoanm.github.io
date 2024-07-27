@@ -1,10 +1,10 @@
 import { Tag } from '@web/clients/coinranking/coinranking.client';
 import { Coin } from '@web/clients/coinranking/coinranking.dto';
 import { Layout } from '@web/layout';
+import { QueryTemplate } from '@web/templates/QueryTemplate';
 import { formatCurrency } from '@web/utils/number/number';
 import { trpc } from '@web/utils/trpc';
 import { FC } from 'react';
-import { QueryTemplate } from '../QueryTemplate/QueryTemplate';
 
 export const CryptoQuery: FC<{ tag: Tag }> = ({ tag }) => {
   const {

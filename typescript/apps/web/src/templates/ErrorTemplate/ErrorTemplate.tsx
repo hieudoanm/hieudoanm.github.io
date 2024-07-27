@@ -2,9 +2,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { FC } from 'react';
 
-export type ErrorTemplateProps = { code?: number; title?: string };
+export type ErrorRouteProps = { code?: number; title?: string };
 
-export const ErrorTemplate: FC<ErrorTemplateProps> = ({
+export const ErrorRoute: FC<ErrorRouteProps> = ({
   code = 500,
   title = 'Error',
 }) => {

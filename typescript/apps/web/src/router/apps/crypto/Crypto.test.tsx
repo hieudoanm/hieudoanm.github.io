@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { CryptoTemplate } from './CryptoTemplate';
+import { CryptoTemplate } from './Crypto';
 
 describe('CryptoTemplate', () => {
   test('render default', () => {
