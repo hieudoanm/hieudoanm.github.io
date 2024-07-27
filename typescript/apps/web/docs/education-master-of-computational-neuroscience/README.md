@@ -20,18 +20,23 @@
 
 ### Goldsmith
 
-- Term 1 (45 CATS):
-  - Foundations of Neuroscience (15 CATS)
-  - Statistical Methods (15 CATS)
-  - Data Programming (15 CATS)
-  - _Optional_ (15 CATS)
-- Term 2 (60 CATS):
-  - Cortical Modelling (15 CATS)
-  - Cognitive Neuroscience (15 CATS)
-  - Advanced Quantitative Methods (15 CATS)
-  - Modelling Cognitive Functions (15 CATS)
-- Term 3 (60 CATS):
-  - Research Project in Computational Cognitive Neuroscience (60 CATS)
+### Term 1 (60 CATS)
+
+- Foundations of Neuroscience (15 CATS)
+- Statistical Methods (15 CATS)
+- Data Programming (15 CATS)
+- _Optional_ (15 CATS)
+
+### Term 2 (60 CATS)
+
+- Cortical Modelling (15 CATS)
+- Cognitive Neuroscience (15 CATS)
+- Advanced Quantitative Methods (15 CATS)
+- Modelling Cognitive Functions (15 CATS)
+
+### Term 3 (60 CATS)
+
+- Research Project in Computational Cognitive Neuroscience (60 CATS)
 
 [birmingham]: https://www.birmingham.ac.uk/postgraduate/courses/taught/psych/computation-neuro-cognitive-robotics.aspx
 [edinburgh-phd]: https://www.ed.ac.uk/studying/postgraduate/degrees/index.php?r=site/view&id=489
