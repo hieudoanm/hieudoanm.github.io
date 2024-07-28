@@ -1,0 +1,35 @@
+.cache
+.env
+
+# node.js
+node_modules
+yarn-error.log
+
+# turbo
+.turbo
+
+# macOS
+.DS_Store
+
+# expo
+.expo
+
+# turbo
+.turbo
+
+# build
+out
+
+# next.js
+.next
+
+# jest.js
+coverage
+
+# service workers
+**/sw.js
+**/workbox-*.js
+**/fallback-*.js
+
+# swc
+.swc

@@ -1,0 +1,33 @@
+version: '3.9'
+
+volumes:
+  hieudoan_postgresql:
+    driver: local
+  hieudoan_redis:
+    driver: local
+
+services:
+  hieudoan-postgresql:
+    restart: unless-stopped
+    image: postgres:16.3
+    container_name: hieudoan-postgresql
+    volumes:
+      - hieudoan_postgresql:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+
+  hieudoan-redis:
+    restart: unless-stopped
+    image: redis:7.2.5
+    container_name: hieudoan-redis
+    volumes:
+      - hieudoan_redis:/data
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_USER=default
+      - REDIS_PASS=password

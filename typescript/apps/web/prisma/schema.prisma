@@ -1,0 +1,124 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+  schemas  = ["chess", "public"]
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+}
+
+model Word {
+  word          String @id @db.VarChar(255)
+  results       Json[] @default([])
+  syllables     Json?  @default("{}")
+  pronunciation Json?  @default("{}")
+  frequency     Float? @default(0)
+
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
+
+  @@index([word])
+  @@map("word")
+  @@schema("public")
+}
+
+model Player {
+  id                    Int      @id @map("id")
+  username              String   @unique @map("username") @db.VarChar(255)
+  avatar                String   @default("") @map("avatar") @db.VarChar(255)
+  name                  String   @default("") @map("name") @db.VarChar(255)
+  title                 Title    @default(GM) @map("title")
+  country               String   @default("") @map("country") @db.VarChar(255)
+  countryCode           String   @default("") @map("country_code") @db.VarChar(255)
+  status                String   @default("") @map("status") @db.VarChar(255)
+  league                String   @default("") @map("league") @db.VarChar(255)
+  url                   String   @default("") @map("url") @db.VarChar(255)
+  twitchUrl             String   @default("") @map("twitch_url") @db.VarChar(255)
+  isStreamer            Boolean  @default(false) @map("is_streamer") @db.Boolean
+  verified              Boolean  @default(false) @map("verified") @db.Boolean
+  lastOnline            DateTime @default(now()) @map("last_online") @db.Timestamptz()
+  joined                DateTime @default(now()) @map("joined") @db.Timestamptz()
+  rapidRatingBest       Int      @default(0) @map("rapid_rating_best") @db.Integer
+  rapidRatingLast       Int      @default(0) @map("rapid_rating_last") @db.Integer
+  rapidRatingDeviation  Int      @default(0) @map("rapid_rating_reviation") @db.Integer
+  rapidRecordWin        Int      @default(0) @map("rapid_record_win") @db.Integer
+  rapidRecordDraw       Int      @default(0) @map("rapid_record_draw") @db.Integer
+  rapidRecordLoss       Int      @default(0) @map("rapid_record_loss") @db.Integer
+  blitzRatingBest       Int      @default(0) @map("blitz_rating_best") @db.Integer
+  blitzRatingLast       Int      @default(0) @map("blitz_rating_last") @db.Integer
+  blitzRatingDeviation  Int      @default(0) @map("blitz_rating_reviation") @db.Integer
+  blitzRecordWin        Int      @default(0) @map("blitz_record_win") @db.Integer
+  blitzRecordDraw       Int      @default(0) @map("blitz_record_draw") @db.Integer
+  blitzRecordLoss       Int      @default(0) @map("blitz_record_loss") @db.Integer
+  bulletRatingBest      Int      @default(0) @map("bullet_rating_best") @db.Integer
+  bulletRatingLast      Int      @default(0) @map("bullet_rating_last") @db.Integer
+  bulletRatingDeviation Int      @default(0) @map("bullet_rating_reviation") @db.Integer
+  bulletRecordWin       Int      @default(0) @map("bullet_record_win") @db.Integer
+  bulletRecordDraw      Int      @default(0) @map("bullet_record_draw") @db.Integer
+  bulletRecordLoss      Int      @default(0) @map("bullet_record_loss") @db.Integer
+
+  @@index([id, username])
+  @@map("player")
+  @@schema("chess")
+}
+
+enum Title {
+  GM
+  IM
+  FM
+  CM
+  NM
+  WGM
+  WIM
+  WFM
+  WCM
+  WNM
+
+  @@schema("chess")
+}
+
+model Game {
+  uuid          String   @id @map("uuid") @db.Uuid
+  pgn           String   @default("") @map("pgn") @db.Text
+  timeControl   String   @default("") @map("time_control")
+  timeClass     String   @default("") @map("time_class")
+  endTime       DateTime @default(now()) @map("end_time")
+  rated         Boolean  @default(false) @map("rated")
+  initialSetup  String   @default("") @map("initial_setup")
+  fen           String   @default("") @map("fen")
+  tcn           String   @default("") @map("tcn")
+  rules         String   @default("") @map("rules")
+  whiteAccuracy Float    @default(0) @map("white_accuracy")
+  whiteRating   Int      @default(0) @map("white_rating")
+  whiteResult   String   @default("") @map("white_result")
+  whiteUsername String   @default("") @map("white_username")
+  blackAccuracy Float    @default(0) @map("black_accuracy")
+  blackRating   Int      @default(0) @map("black_rating")
+  blackResult   String   @default("") @map("black_result")
+  blackUsername String   @default("") @map("black_username")
+
+  @@index([uuid])
+  @@map("game")
+  @@schema("chess")
+}

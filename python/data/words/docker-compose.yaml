@@ -1,0 +1,19 @@
+version: '3.9'
+
+volumes:
+  thesaurus_postgresql:
+    driver: local
+
+services:
+  thesaurus-postgresql:
+    restart: unless-stopped
+    image: postgres:16.3
+    container_name: thesaurus-postgresql
+    volumes:
+      - thesaurus_postgresql:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password

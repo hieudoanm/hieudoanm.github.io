@@ -1,0 +1,282 @@
+[
+  {
+    "number": "1",
+    "hangul": "ㄱ",
+    "latin": "g",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "2",
+    "hangul": "ㄴ",
+    "latin": "n",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "3",
+    "hangul": "ㄷ",
+    "latin": "d",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "4",
+    "hangul": "ㄹ",
+    "latin": "r",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "5",
+    "hangul": "ㅁ",
+    "latin": "m",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "6",
+    "hangul": "ㅂ",
+    "latin": "b",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "7",
+    "hangul": "ㅅ",
+    "latin": "s",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "8",
+    "hangul": "ㅇ",
+    "latin": "-",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "9",
+    "hangul": "ㅈ",
+    "latin": "j",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "10",
+    "hangul": "ㅎ",
+    "latin": "h",
+    "category": "consonant",
+    "subcategory": "plain"
+  },
+  {
+    "number": "11",
+    "hangul": "ㅊ",
+    "latin": "ch",
+    "category": "consonant",
+    "subcategory": "aspirated"
+  },
+  {
+    "number": "12",
+    "hangul": "ㅋ",
+    "latin": "k",
+    "category": "consonant",
+    "subcategory": "aspirated"
+  },
+  {
+    "number": "13",
+    "hangul": "ㅌ",
+    "latin": "t",
+    "category": "consonant",
+    "subcategory": "aspirated"
+  },
+  {
+    "number": "14",
+    "hangul": "ㅍ",
+    "latin": "p",
+    "category": "consonant",
+    "subcategory": "aspirated"
+  },
+  {
+    "number": "15",
+    "hangul": "ㄲ",
+    "latin": "kk",
+    "category": "consonant",
+    "subcategory": "tense"
+  },
+  {
+    "number": "16",
+    "hangul": "ㄸ",
+    "latin": "tt",
+    "category": "consonant",
+    "subcategory": "tense"
+  },
+  {
+    "number": "17",
+    "hangul": "ㅃ",
+    "latin": "pp",
+    "category": "consonant",
+    "subcategory": "tense"
+  },
+  {
+    "number": "18",
+    "hangul": "ㅆ",
+    "latin": "ss",
+    "category": "consonant",
+    "subcategory": "tense"
+  },
+  {
+    "number": "19",
+    "hangul": "ㅉ",
+    "latin": "jj",
+    "category": "consonant",
+    "subcategory": "tense"
+  },
+  {
+    "number": "20",
+    "hangul": "ㅏ",
+    "latin": "a",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "21",
+    "hangul": "ㅑ",
+    "latin": "ya",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "22",
+    "hangul": "ㅓ",
+    "latin": "eo",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "23",
+    "hangul": "ㅕ",
+    "latin": "yeo",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "24",
+    "hangul": "ㅗ",
+    "latin": "o",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "25",
+    "hangul": "ㅛ",
+    "latin": "yo",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "26",
+    "hangul": "ㅜ",
+    "latin": "u",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "27",
+    "hangul": "ㅠ",
+    "latin": "yu",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "28",
+    "hangul": "ㅡ",
+    "latin": "eu",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "29",
+    "hangul": "ㅣ",
+    "latin": "i",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "30",
+    "hangul": "ㅐ",
+    "latin": "ae",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "31",
+    "hangul": "ㅒ",
+    "latin": "yae",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "32",
+    "hangul": "ㅔ",
+    "latin": "e",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "33",
+    "hangul": "ㅖ",
+    "latin": "ye",
+    "category": "vowel",
+    "subcategory": "plain"
+  },
+  {
+    "number": "34",
+    "hangul": "ㅘ",
+    "latin": "wa",
+    "category": "vowel",
+    "subcategory": "double"
+  },
+  {
+    "number": "35",
+    "hangul": "ㅙ",
+    "latin": "wae",
+    "category": "vowel",
+    "subcategory": "double"
+  },
+  {
+    "number": "36",
+    "hangul": "ㅚ",
+    "latin": "oe",
+    "category": "vowel",
+    "subcategory": "double"
+  },
+  {
+    "number": "37",
+    "hangul": "ㅝ",
+    "latin": "wo",
+    "category": "vowel",
+    "subcategory": "double"
+  },
+  {
+    "number": "38",
+    "hangul": "ㅞ",
+    "latin": "we",
+    "category": "vowel",
+    "subcategory": "double"
+  },
+  {
+    "number": "39",
+    "hangul": "ㅟ",
+    "latin": "wi",
+    "category": "vowel",
+    "subcategory": "double"
+  },
+  {
+    "number": "40",
+    "hangul": "ㅢ",
+    "latin": "ui",
+    "category": "vowel",
+    "subcategory": "double"
+  }
+]

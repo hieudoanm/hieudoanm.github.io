@@ -1,0 +1,1361 @@
+[
+  {
+    "symbol": "BCR",
+    "date": "2023-12-08",
+    "close": 13.45,
+    "open": 15,
+    "high": 15,
+    "low": 12.3,
+    "volume": 5546200
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-11",
+    "close": 13.037,
+    "open": 14,
+    "high": 15.3,
+    "low": 12,
+    "volume": 6048600
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-12",
+    "close": 11.814,
+    "open": 12.7,
+    "high": 13.2,
+    "low": 11.4,
+    "volume": 2342261
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-13",
+    "close": 10.625,
+    "open": 11.5,
+    "high": 11.5,
+    "low": 10.4,
+    "volume": 2672678
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-14",
+    "close": 10.044,
+    "open": 10.6,
+    "high": 10.6,
+    "low": 9.4,
+    "volume": 2060018
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-15",
+    "close": 9.045,
+    "open": 9.6,
+    "high": 9.7,
+    "low": 8.9,
+    "volume": 1140487
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-18",
+    "close": 8.234,
+    "open": 9,
+    "high": 9,
+    "low": 7.9,
+    "volume": 1175151
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-19",
+    "close": 8.943,
+    "open": 7.8,
+    "high": 9.4,
+    "low": 7.8,
+    "volume": 839955
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-20",
+    "close": 8.959,
+    "open": 9,
+    "high": 9.2,
+    "low": 8.7,
+    "volume": 549074
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-21",
+    "close": 8.827,
+    "open": 9,
+    "high": 9.2,
+    "low": 8.7,
+    "volume": 225662
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-22",
+    "close": 8.863,
+    "open": 8.9,
+    "high": 9.1,
+    "low": 8.7,
+    "volume": 593957
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-25",
+    "close": 8.906,
+    "open": 8.9,
+    "high": 9.2,
+    "low": 8.6,
+    "volume": 1022748
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-26",
+    "close": 9.2,
+    "open": 8.9,
+    "high": 9.3,
+    "low": 8.9,
+    "volume": 953027
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-27",
+    "close": 9.387,
+    "open": 9.2,
+    "high": 9.6,
+    "low": 9.2,
+    "volume": 1225398
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-28",
+    "close": 9.307,
+    "open": 9.2,
+    "high": 9.5,
+    "low": 9.1,
+    "volume": 838766
+  },
+  {
+    "symbol": "BCR",
+    "date": "2023-12-29",
+    "close": 10.262,
+    "open": 9.1,
+    "high": 10.5,
+    "low": 9.1,
+    "volume": 3654470
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-02",
+    "close": 9.28,
+    "open": 10,
+    "high": 10.2,
+    "low": 8.9,
+    "volume": 3343341
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-03",
+    "close": 8.375,
+    "open": 9,
+    "high": 9,
+    "low": 8.1,
+    "volume": 5296476
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-04",
+    "close": 8.559,
+    "open": 8.4,
+    "high": 8.8,
+    "low": 8.3,
+    "volume": 1595404
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-05",
+    "close": 8.159,
+    "open": 8.4,
+    "high": 8.5,
+    "low": 8,
+    "volume": 4847992
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-08",
+    "close": 8.126,
+    "open": 8.2,
+    "high": 8.3,
+    "low": 8,
+    "volume": 2108004
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-09",
+    "close": 8.023,
+    "open": 8.1,
+    "high": 8.2,
+    "low": 7.9,
+    "volume": 2928818
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-10",
+    "close": 8.144,
+    "open": 8.1,
+    "high": 8.3,
+    "low": 8,
+    "volume": 1863493
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-11",
+    "close": 8.062,
+    "open": 8.2,
+    "high": 8.2,
+    "low": 8,
+    "volume": 1713077
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-12",
+    "close": 8.252,
+    "open": 8.1,
+    "high": 8.7,
+    "low": 7.9,
+    "volume": 2679763
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-15",
+    "close": 7.861,
+    "open": 8,
+    "high": 8.1,
+    "low": 7.7,
+    "volume": 1497929
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-16",
+    "close": 7.529,
+    "open": 7.8,
+    "high": 7.8,
+    "low": 7.4,
+    "volume": 1867246
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-17",
+    "close": 7.317,
+    "open": 7.6,
+    "high": 7.7,
+    "low": 7.1,
+    "volume": 2082302
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-18",
+    "close": 6.983,
+    "open": 7.3,
+    "high": 7.3,
+    "low": 6.9,
+    "volume": 2527455
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-19",
+    "close": 6.979,
+    "open": 7,
+    "high": 7.1,
+    "low": 6.9,
+    "volume": 899924
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-22",
+    "close": 7.123,
+    "open": 7,
+    "high": 7.3,
+    "low": 6.9,
+    "volume": 2138242
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-23",
+    "close": 6.775,
+    "open": 7,
+    "high": 7,
+    "low": 6.6,
+    "volume": 2023996
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-24",
+    "close": 6.518,
+    "open": 6.7,
+    "high": 6.7,
+    "low": 6.4,
+    "volume": 3719733
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-25",
+    "close": 6.651,
+    "open": 6.5,
+    "high": 6.9,
+    "low": 6.5,
+    "volume": 2030613
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-26",
+    "close": 6.492,
+    "open": 6.7,
+    "high": 6.7,
+    "low": 6.3,
+    "volume": 1832449
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-29",
+    "close": 6.235,
+    "open": 6.4,
+    "high": 6.4,
+    "low": 6.1,
+    "volume": 2674049
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-30",
+    "close": 6.037,
+    "open": 6.1,
+    "high": 6.2,
+    "low": 5.9,
+    "volume": 2026291
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-01-31",
+    "close": 6.115,
+    "open": 6.1,
+    "high": 6.4,
+    "low": 5.9,
+    "volume": 2606214
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-01",
+    "close": 5.996,
+    "open": 6,
+    "high": 6.1,
+    "low": 5.9,
+    "volume": 1118669
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-02",
+    "close": 6.05,
+    "open": 6,
+    "high": 6.2,
+    "low": 5.9,
+    "volume": 2448921
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-05",
+    "close": 5.927,
+    "open": 6.1,
+    "high": 6.1,
+    "low": 5.8,
+    "volume": 756611
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-06",
+    "close": 5.9,
+    "open": 5.9,
+    "high": 6,
+    "low": 5.8,
+    "volume": 615067
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-07",
+    "close": 5.917,
+    "open": 5.9,
+    "high": 6,
+    "low": 5.8,
+    "volume": 943153
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-15",
+    "close": 5.976,
+    "open": 5.9,
+    "high": 6.1,
+    "low": 5.9,
+    "volume": 682138
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-16",
+    "close": 6.064,
+    "open": 6,
+    "high": 6.2,
+    "low": 5.9,
+    "volume": 6933663
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-19",
+    "close": 6.231,
+    "open": 6.2,
+    "high": 6.4,
+    "low": 6.1,
+    "volume": 3199940
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-20",
+    "close": 6.245,
+    "open": 6.3,
+    "high": 6.4,
+    "low": 6.1,
+    "volume": 2346925
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-21",
+    "close": 6.098,
+    "open": 6.3,
+    "high": 6.3,
+    "low": 6,
+    "volume": 2595047
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-22",
+    "close": 6.179,
+    "open": 6.1,
+    "high": 6.3,
+    "low": 6.1,
+    "volume": 1484119
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-23",
+    "close": 6.011,
+    "open": 6.2,
+    "high": 6.2,
+    "low": 5.8,
+    "volume": 3666660
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-26",
+    "close": 5.871,
+    "open": 5.9,
+    "high": 6,
+    "low": 5.8,
+    "volume": 1706056
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-27",
+    "close": 5.922,
+    "open": 5.9,
+    "high": 6,
+    "low": 5.9,
+    "volume": 1266706
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-28",
+    "close": 5.909,
+    "open": 6,
+    "high": 6,
+    "low": 5.8,
+    "volume": 1086744
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-02-29",
+    "close": 5.874,
+    "open": 6,
+    "high": 6,
+    "low": 5.8,
+    "volume": 795974
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-01",
+    "close": 5.8,
+    "open": 5.8,
+    "high": 5.9,
+    "low": 5.7,
+    "volume": 1895922
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-04",
+    "close": 5.969,
+    "open": 5.9,
+    "high": 6.1,
+    "low": 5.8,
+    "volume": 1757892
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-05",
+    "close": 5.905,
+    "open": 6,
+    "high": 6,
+    "low": 5.9,
+    "volume": 979344
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-06",
+    "close": 5.847,
+    "open": 5.9,
+    "high": 6,
+    "low": 5.8,
+    "volume": 1496614
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-07",
+    "close": 5.814,
+    "open": 5.9,
+    "high": 5.9,
+    "low": 5.7,
+    "volume": 1081713
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-08",
+    "close": 5.809,
+    "open": 5.9,
+    "high": 5.9,
+    "low": 5.8,
+    "volume": 1377970
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-11",
+    "close": 5.742,
+    "open": 5.8,
+    "high": 5.9,
+    "low": 5.7,
+    "volume": 928239
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-12",
+    "close": 5.655,
+    "open": 5.7,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 1258358
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-13",
+    "close": 5.671,
+    "open": 5.6,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 1227166
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-14",
+    "close": 5.692,
+    "open": 5.8,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 821211
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-15",
+    "close": 5.687,
+    "open": 5.7,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 693291
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-18",
+    "close": 5.704,
+    "open": 5.7,
+    "high": 5.9,
+    "low": 5.6,
+    "volume": 2040760
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-19",
+    "close": 5.921,
+    "open": 5.8,
+    "high": 6.2,
+    "low": 5.6,
+    "volume": 2936428
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-20",
+    "close": 5.871,
+    "open": 6,
+    "high": 6,
+    "low": 5.8,
+    "volume": 405823
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-21",
+    "close": 5.938,
+    "open": 5.9,
+    "high": 6.1,
+    "low": 5.8,
+    "volume": 2434274
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-22",
+    "close": 5.938,
+    "open": 6,
+    "high": 6.1,
+    "low": 5.8,
+    "volume": 1354378
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-25",
+    "close": 5.894,
+    "open": 5.9,
+    "high": 6,
+    "low": 5.8,
+    "volume": 829783
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-26",
+    "close": 5.801,
+    "open": 5.9,
+    "high": 5.9,
+    "low": 5.7,
+    "volume": 1380653
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-27",
+    "close": 5.807,
+    "open": 5.8,
+    "high": 5.9,
+    "low": 5.7,
+    "volume": 637001
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-28",
+    "close": 5.764,
+    "open": 5.8,
+    "high": 5.9,
+    "low": 5.7,
+    "volume": 754225
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-03-29",
+    "close": 5.689,
+    "open": 5.8,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 1099374
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-01",
+    "close": 5.685,
+    "open": 5.7,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 871936
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-02",
+    "close": 5.645,
+    "open": 5.7,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 1647479
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-03",
+    "close": 5.677,
+    "open": 5.7,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 1235418
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-04",
+    "close": 5.69,
+    "open": 5.7,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 1365726
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-05",
+    "close": 5.694,
+    "open": 5.7,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 1839329
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-08",
+    "close": 5.706,
+    "open": 5.7,
+    "high": 5.8,
+    "low": 5.7,
+    "volume": 1172214
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-09",
+    "close": 5.584,
+    "open": 5.8,
+    "high": 5.8,
+    "low": 5.1,
+    "volume": 981862
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-10",
+    "close": 5.694,
+    "open": 5.7,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 770254
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-11",
+    "close": 5.677,
+    "open": 5.7,
+    "high": 5.7,
+    "low": 5.6,
+    "volume": 493380
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-12",
+    "close": 5.607,
+    "open": 5.7,
+    "high": 5.7,
+    "low": 5.5,
+    "volume": 1684947
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-15",
+    "close": 5.471,
+    "open": 5.6,
+    "high": 5.7,
+    "low": 5.3,
+    "volume": 1588268
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-16",
+    "close": 5.062,
+    "open": 5.4,
+    "high": 5.4,
+    "low": 4.8,
+    "volume": 2171929
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-17",
+    "close": 4.952,
+    "open": 5.1,
+    "high": 5.1,
+    "low": 4.8,
+    "volume": 493489
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-19",
+    "close": 4.825,
+    "open": 5,
+    "high": 5,
+    "low": 4.6,
+    "volume": 1150378
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-22",
+    "close": 4.891,
+    "open": 4.9,
+    "high": 5,
+    "low": 4.8,
+    "volume": 402212
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-23",
+    "close": 4.84,
+    "open": 4.9,
+    "high": 5,
+    "low": 4.8,
+    "volume": 404491
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-24",
+    "close": 4.935,
+    "open": 4.8,
+    "high": 5.1,
+    "low": 4.8,
+    "volume": 569091
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-25",
+    "close": 4.901,
+    "open": 4.9,
+    "high": 5,
+    "low": 4.8,
+    "volume": 201984
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-04-26",
+    "close": 4.805,
+    "open": 4.9,
+    "high": 4.9,
+    "low": 4.8,
+    "volume": 779844
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-02",
+    "close": 4.886,
+    "open": 4.9,
+    "high": 5,
+    "low": 4.8,
+    "volume": 394604
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-03",
+    "close": 4.994,
+    "open": 5,
+    "high": 5.1,
+    "low": 4.9,
+    "volume": 463652
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-06",
+    "close": 4.996,
+    "open": 5.1,
+    "high": 5.1,
+    "low": 4.9,
+    "volume": 473915
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-07",
+    "close": 4.998,
+    "open": 5.1,
+    "high": 5.1,
+    "low": 4.9,
+    "volume": 435602
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-08",
+    "close": 5.521,
+    "open": 5,
+    "high": 5.7,
+    "low": 4.9,
+    "volume": 3868988
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-09",
+    "close": 5.96,
+    "open": 5.8,
+    "high": 6.2,
+    "low": 5.8,
+    "volume": 3514967
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-10",
+    "close": 5.815,
+    "open": 6,
+    "high": 6.1,
+    "low": 5.6,
+    "volume": 1829949
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-13",
+    "close": 5.978,
+    "open": 5.9,
+    "high": 6.1,
+    "low": 5.8,
+    "volume": 2040428
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-14",
+    "close": 5.925,
+    "open": 6,
+    "high": 6.1,
+    "low": 5.8,
+    "volume": 1261569
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-15",
+    "close": 5.852,
+    "open": 6,
+    "high": 6,
+    "low": 5.7,
+    "volume": 1054489
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-16",
+    "close": 5.661,
+    "open": 5.9,
+    "high": 5.9,
+    "low": 5.5,
+    "volume": 2385115
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-17",
+    "close": 5.586,
+    "open": 5.6,
+    "high": 5.7,
+    "low": 5.5,
+    "volume": 982040
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-20",
+    "close": 5.806,
+    "open": 5.6,
+    "high": 5.9,
+    "low": 5.6,
+    "volume": 1329253
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-21",
+    "close": 5.716,
+    "open": 5.8,
+    "high": 5.9,
+    "low": 5.7,
+    "volume": 805494
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-22",
+    "close": 5.934,
+    "open": 5.7,
+    "high": 6.1,
+    "low": 5.7,
+    "volume": 1863014
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-23",
+    "close": 5.79,
+    "open": 5.9,
+    "high": 6,
+    "low": 5.7,
+    "volume": 1046835
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-24",
+    "close": 5.834,
+    "open": 5.9,
+    "high": 6,
+    "low": 5.7,
+    "volume": 1765775
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-27",
+    "close": 5.723,
+    "open": 5.8,
+    "high": 5.8,
+    "low": 5.6,
+    "volume": 419005
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-28",
+    "close": 5.799,
+    "open": 5.8,
+    "high": 5.9,
+    "low": 5.7,
+    "volume": 756810
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-29",
+    "close": 6.389,
+    "open": 5.9,
+    "high": 6.6,
+    "low": 5.8,
+    "volume": 7813666
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-30",
+    "close": 6.889,
+    "open": 6.8,
+    "high": 7.2,
+    "low": 6.6,
+    "volume": 4398739
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-05-31",
+    "close": 6.696,
+    "open": 7,
+    "high": 7.1,
+    "low": 6.5,
+    "volume": 3131674
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-03",
+    "close": 6.528,
+    "open": 6.7,
+    "high": 6.7,
+    "low": 6.4,
+    "volume": 2984102
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-04",
+    "close": 6.382,
+    "open": 6.6,
+    "high": 6.6,
+    "low": 6.3,
+    "volume": 1880460
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-05",
+    "close": 6.717,
+    "open": 6.4,
+    "high": 7,
+    "low": 6.3,
+    "volume": 4165546
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-06",
+    "close": 6.662,
+    "open": 6.8,
+    "high": 6.9,
+    "low": 6.5,
+    "volume": 1311713
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-07",
+    "close": 6.586,
+    "open": 6.7,
+    "high": 6.7,
+    "low": 6.5,
+    "volume": 2296315
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-10",
+    "close": 6.722,
+    "open": 6.7,
+    "high": 6.9,
+    "low": 6.6,
+    "volume": 2061560
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-11",
+    "close": 6.649,
+    "open": 6.8,
+    "high": 6.8,
+    "low": 6.5,
+    "volume": 1500794
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-12",
+    "close": 6.527,
+    "open": 6.6,
+    "high": 6.7,
+    "low": 6.4,
+    "volume": 1126566
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-13",
+    "close": 6.591,
+    "open": 6.5,
+    "high": 6.7,
+    "low": 6.4,
+    "volume": 1040175
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-14",
+    "close": 6.503,
+    "open": 6.6,
+    "high": 6.7,
+    "low": 6.3,
+    "volume": 2070924
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-17",
+    "close": 6.28,
+    "open": 6.4,
+    "high": 6.5,
+    "low": 6.1,
+    "volume": 1522307
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-18",
+    "close": 6.184,
+    "open": 6.3,
+    "high": 6.3,
+    "low": 6.1,
+    "volume": 1235483
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-19",
+    "close": 6.267,
+    "open": 6.2,
+    "high": 6.4,
+    "low": 6.1,
+    "volume": 1535818
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-20",
+    "close": 6.336,
+    "open": 6.3,
+    "high": 6.5,
+    "low": 6.2,
+    "volume": 1395916
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-21",
+    "close": 6.189,
+    "open": 6.4,
+    "high": 6.4,
+    "low": 6,
+    "volume": 1977334
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-24",
+    "close": 6.052,
+    "open": 6.2,
+    "high": 6.3,
+    "low": 5.9,
+    "volume": 2216426
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-25",
+    "close": 5.956,
+    "open": 6,
+    "high": 6.1,
+    "low": 5.8,
+    "volume": 475564
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-26",
+    "close": 6.045,
+    "open": 6,
+    "high": 6.2,
+    "low": 5.9,
+    "volume": 871407
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-27",
+    "close": 6.018,
+    "open": 6,
+    "high": 6.1,
+    "low": 5.9,
+    "volume": 780710
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-06-28",
+    "close": 5.906,
+    "open": 6,
+    "high": 6.1,
+    "low": 5.8,
+    "volume": 952185
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-01",
+    "close": 6.231,
+    "open": 6,
+    "high": 6.4,
+    "low": 5.9,
+    "volume": 2740638
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-02",
+    "close": 6.429,
+    "open": 6.4,
+    "high": 6.6,
+    "low": 6.2,
+    "volume": 5539288
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-03",
+    "close": 6.191,
+    "open": 6.2,
+    "high": 6.4,
+    "low": 6.1,
+    "volume": 1602511
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-04",
+    "close": 6.52,
+    "open": 6.3,
+    "high": 6.9,
+    "low": 6.2,
+    "volume": 4818910
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-05",
+    "close": 6.402,
+    "open": 6.4,
+    "high": 6.5,
+    "low": 6.3,
+    "volume": 1726022
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-08",
+    "close": 6.256,
+    "open": 6.3,
+    "high": 6.4,
+    "low": 6.1,
+    "volume": 1733640
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-09",
+    "close": 6.354,
+    "open": 6.2,
+    "high": 6.5,
+    "low": 6.2,
+    "volume": 2044136
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-10",
+    "close": 6.526,
+    "open": 6.3,
+    "high": 6.7,
+    "low": 6.3,
+    "volume": 2832169
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-11",
+    "close": 6.405,
+    "open": 6.4,
+    "high": 6.7,
+    "low": 6.1,
+    "volume": 5812544
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-12",
+    "close": 6.162,
+    "open": 6.3,
+    "high": 6.3,
+    "low": 6.1,
+    "volume": 2701252
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-15",
+    "close": 6.138,
+    "open": 6.1,
+    "high": 6.3,
+    "low": 6.1,
+    "volume": 909256
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-16",
+    "close": 6.159,
+    "open": 6.2,
+    "high": 6.3,
+    "low": 6.1,
+    "volume": 1351905
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-17",
+    "close": 6.001,
+    "open": 6.2,
+    "high": 6.2,
+    "low": 5.8,
+    "volume": 1814700
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-18",
+    "close": 5.964,
+    "open": 6,
+    "high": 6.1,
+    "low": 5.9,
+    "volume": 975399
+  },
+  {
+    "symbol": "BCR",
+    "date": "2024-07-19",
+    "close": 5.996,
+    "open": 6.1,
+    "high": 6.1,
+    "low": 5.9,
+    "volume": 1281482
+  }
+]

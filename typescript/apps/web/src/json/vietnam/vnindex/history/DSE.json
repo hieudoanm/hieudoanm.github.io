@@ -1,0 +1,137 @@
+[
+  {
+    "symbol": "DSE",
+    "date": "2024-07-01",
+    "close": 28.6,
+    "open": 30,
+    "high": 30,
+    "low": 24,
+    "volume": 1250400
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-02",
+    "close": 28.7,
+    "open": 28.6,
+    "high": 28.85,
+    "low": 28.55,
+    "volume": 719857
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-03",
+    "close": 28,
+    "open": 28.7,
+    "high": 29,
+    "low": 27.5,
+    "volume": 656735
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-04",
+    "close": 26.9,
+    "open": 27.9,
+    "high": 28,
+    "low": 26.7,
+    "volume": 556235
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-05",
+    "close": 25.85,
+    "open": 26.85,
+    "high": 26.9,
+    "low": 25.85,
+    "volume": 509995
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-08",
+    "close": 27,
+    "open": 25.8,
+    "high": 27,
+    "low": 25.8,
+    "volume": 195344
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-09",
+    "close": 27.05,
+    "open": 27.1,
+    "high": 27.2,
+    "low": 26.95,
+    "volume": 299293
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-10",
+    "close": 26.8,
+    "open": 27.05,
+    "high": 27.2,
+    "low": 26.8,
+    "volume": 258228
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-11",
+    "close": 27.1,
+    "open": 26.8,
+    "high": 27.15,
+    "low": 26.8,
+    "volume": 233721
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-12",
+    "close": 27,
+    "open": 27.1,
+    "high": 27.2,
+    "low": 26.9,
+    "volume": 208515
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-15",
+    "close": 26.85,
+    "open": 27,
+    "high": 27.2,
+    "low": 26.7,
+    "volume": 238385
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-16",
+    "close": 26.8,
+    "open": 26.85,
+    "high": 27,
+    "low": 26.75,
+    "volume": 177823
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-17",
+    "close": 26.4,
+    "open": 26.8,
+    "high": 27.1,
+    "low": 26.25,
+    "volume": 315790
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-18",
+    "close": 25.65,
+    "open": 26.4,
+    "high": 26.55,
+    "low": 25.2,
+    "volume": 355001
+  },
+  {
+    "symbol": "DSE",
+    "date": "2024-07-19",
+    "close": 25.3,
+    "open": 25.65,
+    "high": 25.75,
+    "low": 25.15,
+    "volume": 293627
+  }
+]

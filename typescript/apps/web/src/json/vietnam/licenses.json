@@ -1,0 +1,747 @@
+[
+  {
+    "code": "11",
+    "name": "Cao Bằng",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "12",
+    "name": "Lạng Sơn",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "13",
+    "name": "Bắc Giang",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "14",
+    "name": "Quảng Ninh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "15",
+    "name": "Hải Phòng",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "16",
+    "name": "Hải Phòng",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "17",
+    "name": "Thái Bình",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "18",
+    "name": "Nam Định",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "19",
+    "name": "Phú Thọ",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "20",
+    "name": "Thái Nguyên",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "21",
+    "name": "Yên Bái",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "22",
+    "name": "Tuyên Quang",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "23",
+    "name": "Hà Giang",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "24",
+    "name": "Lào Cai",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "25",
+    "name": "Lai Châu",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "26",
+    "name": "Sơn La",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "27",
+    "name": "Điện Biên",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "28",
+    "name": "Hòa Bình",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "29",
+    "name": "Hà Nội",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "30",
+    "name": "Hà Nội",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "31",
+    "name": "Hà Nội",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "32",
+    "name": "Hà Nội",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "33",
+    "name": "Hà Nội",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "34",
+    "name": "Hải Dương",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "35",
+    "name": "Ninh Bình",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "36",
+    "name": "Thanh Hóa",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "37",
+    "name": "Nghệ An",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "38",
+    "name": "Hà Tĩnh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "39",
+    "name": "Đồng Nai",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "40",
+    "name": "Hà Nội",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "41",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "43",
+    "name": "Đà Nẵng",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "47",
+    "name": "Đắk Lắk",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "48",
+    "name": "Đắk Nông",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "49",
+    "name": "Lâm Đồng",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "50",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "51",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "52",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "53",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "54",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "55",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "56",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "57",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "58",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "59",
+    "name": "Hồ Chí Minh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "60",
+    "name": "Đồng Nai",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "61",
+    "name": "Bình Dương",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "62",
+    "name": "Long An",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "63",
+    "name": "Tiền Giang",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "64",
+    "name": "Vĩnh Long",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "65",
+    "name": "Cần Thơ",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "66",
+    "name": "Đồng Tháp",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "67",
+    "name": "An Giang",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "68",
+    "name": "Kiên Giang",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "69",
+    "name": "Cà Mau",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "70",
+    "name": "Tây Ninh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "71",
+    "name": "Bến Tre",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "72",
+    "name": "Bà Rịa - Vũng Tàu",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "73",
+    "name": "Quảng Bình",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "74",
+    "name": "Quảng Trị",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "75",
+    "name": "Thừa Thiên - Huế",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "76",
+    "name": "Quảng Ngãi",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "77",
+    "name": "Bình Định",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "78",
+    "name": "Phú Yên",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "79",
+    "name": "Khánh Hòa",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "80",
+    "name": "Chính Phủ",
+    "group": "Đặc Biệt"
+  },
+  {
+    "code": "81",
+    "name": "Gia Lai",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "82",
+    "name": "Kon Tum",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "83",
+    "name": "Sóc Trăng",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "84",
+    "name": "Trà Vinh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "85",
+    "name": "Ninh Thuận",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "86",
+    "name": "Bình Thuận",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "88",
+    "name": "Vĩnh Phúc",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "89",
+    "name": "Hưng Yên",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "90",
+    "name": "Hà Nam",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "92",
+    "name": "Quảng Nam",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "93",
+    "name": "Bình Phước",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "94",
+    "name": "Bạc Liêu",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "95",
+    "name": "Hậu Giang",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "97",
+    "name": "Bắc Kạn",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "98",
+    "name": "Bắc Giang",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "99",
+    "name": "Bắc Ninh",
+    "group": "Tỉnh"
+  },
+  {
+    "code": "AA",
+    "name": "Quân đoàn 1 - Binh đoàn Quyết Thắng",
+    "group": "Quân Đoàn"
+  },
+  {
+    "code": "AB",
+    "name": "Quân đoàn 2 - Binh đoàn Hương Giang",
+    "group": "Quân Đoàn"
+  },
+  {
+    "code": "AC",
+    "name": "Quân đoàn 3 - Binh đoàn Tây Nguyên",
+    "group": "Quân Đoàn"
+  },
+  {
+    "code": "AD",
+    "name": "Quân Đoàn 4 - Binh đoàn Cửu Long",
+    "group": "Quân Đoàn"
+  },
+  {
+    "code": "AN",
+    "name": "Binh đoàn 15",
+    "group": "Quân Đoàn"
+  },
+  {
+    "code": "AP",
+    "name": "Lữ đoàn M44",
+    "group": "Quân Đoàn"
+  },
+  {
+    "code": "AT",
+    "name": "Binh đoàn 12 - Tổng công ty Trường Sơn",
+    "group": "Quân Đoàn"
+  },
+  {
+    "code": "AV",
+    "name": "Binh đoàn 11 - Tổng Công Ty Xây Dựng Thành An",
+    "group": "Quân Đoàn"
+  },
+  {
+    "code": "BB",
+    "name": "Bộ binh - Binh chủng Tăng thiết giáp",
+    "group": "Bộ Tư Lệnh"
+  },
+  {
+    "code": "BC",
+    "name": "Binh chủng Công binh",
+    "group": "Bộ Tư Lệnh"
+  },
+  {
+    "code": "BH",
+    "name": "Binh chủng Hóa học",
+    "group": "Bộ Tư Lệnh"
+  },
+  {
+    "code": "BK",
+    "name": "Binh chủng Đặc công",
+    "group": "Bộ Tư Lệnh"
+  },
+  {
+    "code": "BL",
+    "name": "Bộ tư lệnh bảo vệ lăng",
+    "group": "Bộ Tư Lệnh"
+  },
+  {
+    "code": "BP",
+    "name": "Bộ tư lệnh Pháo binh",
+    "group": "Bộ Tư Lệnh"
+  },
+  {
+    "code": "BS",
+    "name": "Lực lượng cảnh sát biển VN",
+    "group": "Bộ Tư Lệnh"
+  },
+  {
+    "code": "BT",
+    "name": "Bộ tư lệnh Thông tin liên lạc",
+    "group": "Bộ Tư Lệnh"
+  },
+  {
+    "code": "BV",
+    "name": "Tổng Công ty Dịch vụ bay",
+    "group": "Bộ Tư Lệnh"
+  },
+  {
+    "code": "CA",
+    "name": "Tổng công ty 36 - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "CB",
+    "name": "Ngân hàng TMCP Quân Đội - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "CC",
+    "name": "Tổng công ty xăng dầu quân đội - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "CH",
+    "name": "Bộ phận chính trị của Khối văn phòng - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "CM",
+    "name": "Tổng công ty Thái Sơn - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "CP",
+    "name": "Tổng Công Ty 319 - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "CV",
+    "name": "Tổng công ty xây dựng Lũng Lô - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "DB",
+    "name": "Tổng công ty Đông Bắc - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "HA",
+    "name": "Học viện Quốc phòng",
+    "group": "Học Viện"
+  },
+  {
+    "code": "HB",
+    "name": "Học viện Lục quân",
+    "group": "Học Viện"
+  },
+  {
+    "code": "HC",
+    "name": "Học viện Chính trị quân sự",
+    "group": "Học Viện"
+  },
+  {
+    "code": "HD",
+    "name": "Học viện Kỹ thuật Quân sự",
+    "group": "Học Viện"
+  },
+  {
+    "code": "HE",
+    "name": "Học viện Hậu cần",
+    "group": "Học Viện"
+  },
+  {
+    "code": "HH",
+    "name": "Học viện quân y",
+    "group": "Học Viện"
+  },
+  {
+    "code": "HN",
+    "name": "Học viện chính trị Quân sự Bắc Ninh",
+    "group": "Học Viện"
+  },
+  {
+    "code": "HQ",
+    "name": "Trường Sỹ quan lục quân II",
+    "group": "Học Viện"
+  },
+  {
+    "code": "HT",
+    "name": "Trường Sỹ quan lục quân I",
+    "group": "Học Viện"
+  },
+  {
+    "code": "KA",
+    "name": "Quân khu 1",
+    "group": "Quân Khu"
+  },
+  {
+    "code": "KB",
+    "name": "Quân khu 2",
+    "group": "Quân Khu"
+  },
+  {
+    "code": "KC",
+    "name": "Quân khu 3",
+    "group": "Quân Khu"
+  },
+  {
+    "code": "KD",
+    "name": "Quân khu 4",
+    "group": "Quân Khu"
+  },
+  {
+    "code": "KK",
+    "name": "Quân khu 9",
+    "group": "Quân Khu"
+  },
+  {
+    "code": "KN",
+    "name": "Đặc khu Quảng Ninh",
+    "group": "Quân Khu"
+  },
+  {
+    "code": "KP",
+    "name": "Quân khu 7",
+    "group": "Quân Khu"
+  },
+  {
+    "code": "KT",
+    "name": "Quân khu Thủ đô",
+    "group": "Quân Khu"
+  },
+  {
+    "code": "KV",
+    "name": "Quân khu 5",
+    "group": "Quân Khu"
+  },
+  {
+    "code": "ND",
+    "name": "Tổng công ty Đầu tư Phát triển nhà - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "NG",
+    "name": "Ngoại giao",
+    "group": "Đặc Biệt"
+  },
+  {
+    "code": "NN",
+    "name": "Nước ngoài",
+    "group": "Đặc Biệt"
+  },
+  {
+    "code": "PA",
+    "name": "Cục đối ngoại BQP",
+    "group": "Cơ Quan Đặc Biệt"
+  },
+  {
+    "code": "PC",
+    "name": "Tổng cục tình báo",
+    "group": "Cơ Quan Đặc Biệt"
+  },
+  {
+    "code": "PK",
+    "name": "Ban Cơ yếu - Bộ Quốc phòng",
+    "group": "Cơ Quan Đặc Biệt"
+  },
+  {
+    "code": "PM",
+    "name": "Viện thiết kế - Bộ Quốc phòng",
+    "group": "Cơ Quan Đặc Biệt"
+  },
+  {
+    "code": "PP",
+    "name": "Bệnh viện 108 - Bộ Quốc phòng",
+    "group": "Cơ Quan Đặc Biệt"
+  },
+  {
+    "code": "PQ",
+    "name": "Trung tâm khoa học và kỹ thuật QS",
+    "group": "Cơ Quan Đặc Biệt"
+  },
+  {
+    "code": "PT",
+    "name": "Cục tài chính - Bộ Quốc phòng",
+    "group": "Cơ Quan Đặc Biệt"
+  },
+  {
+    "code": "PX",
+    "name": "Trung tâm nhiệt đới Việt – Nga",
+    "group": "Cơ Quan Đặc Biệt"
+  },
+  {
+    "code": "PY",
+    "name": "Cục Quân Y - Bộ Quốc phòng",
+    "group": "Cơ Quan Đặc Biệt"
+  },
+  {
+    "code": "QA",
+    "name": "Quân chủng Phòng không không quân",
+    "group": "Quân Chủng"
+  },
+  {
+    "code": "QB",
+    "name": "Bộ tư lệnh Bộ đội biên phòng",
+    "group": "Quân Chủng"
+  },
+  {
+    "code": "QH",
+    "name": "Quân chủng Hải quân",
+    "group": "Quân Chủng"
+  },
+  {
+    "code": "TC",
+    "name": "Tổng cục Chính trị",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "TH",
+    "name": "Tổng cục Hậu cần",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "TK",
+    "name": "Tổng cục Công nghiệp quốc phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "TM",
+    "name": "Bộ Tổng tham mưu",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "TN",
+    "name": "Tổng cục tình báo quân đội",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "TT",
+    "name": "Tổng cục kỹ thuật",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "VB",
+    "name": "Khối văn phòng Binh chủng - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "VK",
+    "name": "Ủy ban tìm kiếm cứu nạn - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  },
+  {
+    "code": "VT",
+    "name": "Tập đoàn Viettel - Bộ Quốc Phòng",
+    "group": "Tổng Cục"
+  }
+]

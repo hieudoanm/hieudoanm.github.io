@@ -1,0 +1,30 @@
+{
+  "name": "@chess.com/addon",
+  "version": "0.0.1",
+  "description": "chess.com",
+  "main": "index.js",
+  "repository": "git@github.com:hieudoanm/chess.com.git",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "lint": "eslint . --fix",
+    "format": "prettier --cache --write ."
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.269",
+    "@types/node": "20.14.12",
+    "@typescript-eslint/eslint-plugin": "7.17.0",
+    "@typescript-eslint/parser": "7.17.0",
+    "@webpack-cli/generators": "3.0.7",
+    "copy-webpack-plugin": "12.0.2",
+    "eslint": "8.57.0",
+    "prettier": "3.3.3",
+    "ts-loader": "9.5.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.5.4",
+    "webpack": "5.93.0",
+    "webpack-cli": "5.1.4"
+  }
+}

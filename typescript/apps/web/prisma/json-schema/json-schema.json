@@ -1,0 +1,272 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Word": {
+      "type": "object",
+      "properties": {
+        "word": {
+          "type": "string"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": ["number", "string", "boolean", "object", "array", "null"]
+          }
+        },
+        "syllables": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "pronunciation": {
+          "type": ["number", "string", "boolean", "object", "array", "null"]
+        },
+        "frequency": {
+          "type": ["number", "null"],
+          "default": 0
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Player": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "username": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "title": {
+          "type": "string",
+          "default": "GM",
+          "enum": [
+            "GM",
+            "IM",
+            "FM",
+            "CM",
+            "NM",
+            "WGM",
+            "WIM",
+            "WFM",
+            "WCM",
+            "WNM"
+          ]
+        },
+        "country": {
+          "type": "string",
+          "default": ""
+        },
+        "countryCode": {
+          "type": "string",
+          "default": ""
+        },
+        "status": {
+          "type": "string",
+          "default": ""
+        },
+        "league": {
+          "type": "string",
+          "default": ""
+        },
+        "url": {
+          "type": "string",
+          "default": ""
+        },
+        "twitchUrl": {
+          "type": "string",
+          "default": ""
+        },
+        "isStreamer": {
+          "type": "boolean",
+          "default": false
+        },
+        "verified": {
+          "type": "boolean",
+          "default": false
+        },
+        "lastOnline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "joined": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "rapidRatingBest": {
+          "type": "integer",
+          "default": 0
+        },
+        "rapidRatingLast": {
+          "type": "integer",
+          "default": 0
+        },
+        "rapidRatingDeviation": {
+          "type": "integer",
+          "default": 0
+        },
+        "rapidRecordWin": {
+          "type": "integer",
+          "default": 0
+        },
+        "rapidRecordDraw": {
+          "type": "integer",
+          "default": 0
+        },
+        "rapidRecordLoss": {
+          "type": "integer",
+          "default": 0
+        },
+        "blitzRatingBest": {
+          "type": "integer",
+          "default": 0
+        },
+        "blitzRatingLast": {
+          "type": "integer",
+          "default": 0
+        },
+        "blitzRatingDeviation": {
+          "type": "integer",
+          "default": 0
+        },
+        "blitzRecordWin": {
+          "type": "integer",
+          "default": 0
+        },
+        "blitzRecordDraw": {
+          "type": "integer",
+          "default": 0
+        },
+        "blitzRecordLoss": {
+          "type": "integer",
+          "default": 0
+        },
+        "bulletRatingBest": {
+          "type": "integer",
+          "default": 0
+        },
+        "bulletRatingLast": {
+          "type": "integer",
+          "default": 0
+        },
+        "bulletRatingDeviation": {
+          "type": "integer",
+          "default": 0
+        },
+        "bulletRecordWin": {
+          "type": "integer",
+          "default": 0
+        },
+        "bulletRecordDraw": {
+          "type": "integer",
+          "default": 0
+        },
+        "bulletRecordLoss": {
+          "type": "integer",
+          "default": 0
+        }
+      }
+    },
+    "Game": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "pgn": {
+          "type": "string",
+          "default": ""
+        },
+        "timeControl": {
+          "type": "string",
+          "default": ""
+        },
+        "timeClass": {
+          "type": "string",
+          "default": ""
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "rated": {
+          "type": "boolean",
+          "default": false
+        },
+        "initialSetup": {
+          "type": "string",
+          "default": ""
+        },
+        "fen": {
+          "type": "string",
+          "default": ""
+        },
+        "tcn": {
+          "type": "string",
+          "default": ""
+        },
+        "rules": {
+          "type": "string",
+          "default": ""
+        },
+        "whiteAccuracy": {
+          "type": "number",
+          "default": 0
+        },
+        "whiteRating": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteResult": {
+          "type": "string",
+          "default": ""
+        },
+        "whiteUsername": {
+          "type": "string",
+          "default": ""
+        },
+        "blackAccuracy": {
+          "type": "number",
+          "default": 0
+        },
+        "blackRating": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackResult": {
+          "type": "string",
+          "default": ""
+        },
+        "blackUsername": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "word": {
+      "$ref": "#/definitions/Word"
+    },
+    "player": {
+      "$ref": "#/definitions/Player"
+    },
+    "game": {
+      "$ref": "#/definitions/Game"
+    }
+  }
+}

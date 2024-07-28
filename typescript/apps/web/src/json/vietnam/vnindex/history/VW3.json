@@ -1,0 +1,9551 @@
+[
+  {
+    "symbol": "VW3",
+    "date": "2020-04-23",
+    "close": 9.808,
+    "open": 9.808,
+    "high": 9.808,
+    "low": 9.808,
+    "volume": 2500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-04-24",
+    "close": 9.808,
+    "open": 9.808,
+    "high": 9.808,
+    "low": 9.808,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-04-27",
+    "close": 9.808,
+    "open": 9.808,
+    "high": 9.808,
+    "low": 9.808,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-04-28",
+    "close": 9.808,
+    "open": 9.808,
+    "high": 9.808,
+    "low": 9.808,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-04-29",
+    "close": 9.24,
+    "open": 9.24,
+    "high": 9.24,
+    "low": 9.24,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-04",
+    "close": 9.24,
+    "open": 9.24,
+    "high": 9.24,
+    "low": 9.24,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-05",
+    "close": 9.24,
+    "open": 9.24,
+    "high": 9.24,
+    "low": 9.24,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-06",
+    "close": 9.24,
+    "open": 9.24,
+    "high": 9.24,
+    "low": 9.24,
+    "volume": 1400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-07",
+    "close": 9.24,
+    "open": 9.24,
+    "high": 9.24,
+    "low": 9.24,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-08",
+    "close": 10.59,
+    "open": 10.59,
+    "high": 10.59,
+    "low": 10.59,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-11",
+    "close": 12.154,
+    "open": 12.154,
+    "high": 12.154,
+    "low": 12.154,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-12",
+    "close": 12.154,
+    "open": 12.154,
+    "high": 12.154,
+    "low": 12.154,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-13",
+    "close": 12.154,
+    "open": 12.154,
+    "high": 12.154,
+    "low": 12.154,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-14",
+    "close": 13.931,
+    "open": 13.931,
+    "high": 13.931,
+    "low": 13.931,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-15",
+    "close": 13.931,
+    "open": 13.931,
+    "high": 13.931,
+    "low": 13.931,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-18",
+    "close": 15.992,
+    "open": 15.992,
+    "high": 15.992,
+    "low": 15.992,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-19",
+    "close": 15.992,
+    "open": 15.992,
+    "high": 15.992,
+    "low": 15.992,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-20",
+    "close": 15.992,
+    "open": 15.992,
+    "high": 15.992,
+    "low": 15.992,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-21",
+    "close": 15.992,
+    "open": 15.992,
+    "high": 15.992,
+    "low": 15.992,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-22",
+    "close": 15.992,
+    "open": 13.647,
+    "high": 18.338,
+    "low": 13.647,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-25",
+    "close": 15.992,
+    "open": 15.992,
+    "high": 15.992,
+    "low": 15.992,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-26",
+    "close": 15.992,
+    "open": 15.992,
+    "high": 15.992,
+    "low": 15.992,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-27",
+    "close": 15.992,
+    "open": 15.992,
+    "high": 15.992,
+    "low": 15.992,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-28",
+    "close": 15.992,
+    "open": 15.992,
+    "high": 15.992,
+    "low": 15.992,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-05-29",
+    "close": 13.647,
+    "open": 13.647,
+    "high": 13.647,
+    "low": 13.647,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-01",
+    "close": 12.453,
+    "open": 15.637,
+    "high": 15.637,
+    "low": 11.656,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-02",
+    "close": 10.59,
+    "open": 10.59,
+    "high": 10.59,
+    "low": 10.59,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-03",
+    "close": 9.027,
+    "open": 9.027,
+    "high": 9.027,
+    "low": 9.027,
+    "volume": 1200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-04",
+    "close": 7.676,
+    "open": 7.676,
+    "high": 7.676,
+    "low": 7.676,
+    "volume": 1600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-05",
+    "close": 6.638,
+    "open": 6.539,
+    "high": 8.813,
+    "low": 6.539,
+    "volume": 2300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-08",
+    "close": 6.61,
+    "open": 6.61,
+    "high": 6.61,
+    "low": 6.61,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-09",
+    "close": 6.61,
+    "open": 6.61,
+    "high": 6.61,
+    "low": 6.61,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-10",
+    "close": 6.633,
+    "open": 6.61,
+    "high": 7.463,
+    "low": 6.61,
+    "volume": 3800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-11",
+    "close": 7.392,
+    "open": 7.107,
+    "high": 7.534,
+    "low": 7.107,
+    "volume": 4000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-12",
+    "close": 7.235,
+    "open": 8.387,
+    "high": 8.387,
+    "low": 7.107,
+    "volume": 2000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-15",
+    "close": 7.087,
+    "open": 7.605,
+    "high": 7.605,
+    "low": 6.397,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-16",
+    "close": 7.285,
+    "open": 7.747,
+    "high": 7.747,
+    "low": 7.107,
+    "volume": 1800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-17",
+    "close": 7.107,
+    "open": 7.107,
+    "high": 7.107,
+    "low": 7.107,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-18",
+    "close": 6.965,
+    "open": 6.965,
+    "high": 6.965,
+    "low": 6.965,
+    "volume": 800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-19",
+    "close": 6.837,
+    "open": 6.965,
+    "high": 7.747,
+    "low": 6.041,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-22",
+    "close": 6.457,
+    "open": 6.823,
+    "high": 6.823,
+    "low": 5.899,
+    "volume": 1300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-23",
+    "close": 6.61,
+    "open": 6.61,
+    "high": 6.61,
+    "low": 6.61,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-24",
+    "close": 6.539,
+    "open": 6.539,
+    "high": 6.539,
+    "low": 6.539,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-25",
+    "close": 6.539,
+    "open": 6.539,
+    "high": 6.539,
+    "low": 6.539,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-26",
+    "close": 7.463,
+    "open": 7.463,
+    "high": 7.463,
+    "low": 7.463,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-29",
+    "close": 7.178,
+    "open": 7.178,
+    "high": 7.178,
+    "low": 7.178,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-06-30",
+    "close": 7.107,
+    "open": 7.107,
+    "high": 7.107,
+    "low": 7.107,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-01",
+    "close": 7.107,
+    "open": 7.107,
+    "high": 7.107,
+    "low": 7.107,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-02",
+    "close": 7.107,
+    "open": 7.107,
+    "high": 7.107,
+    "low": 7.107,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-03",
+    "close": 6.6,
+    "open": 7.107,
+    "high": 7.107,
+    "low": 6.397,
+    "volume": 710
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-06",
+    "close": 6.61,
+    "open": 6.61,
+    "high": 6.61,
+    "low": 6.61,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-07",
+    "close": 6.041,
+    "open": 6.041,
+    "high": 6.041,
+    "low": 6.041,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-08",
+    "close": 6.041,
+    "open": 6.041,
+    "high": 6.041,
+    "low": 6.041,
+    "volume": 810
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-09",
+    "close": 6.041,
+    "open": 6.041,
+    "high": 6.041,
+    "low": 6.041,
+    "volume": 2500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-10",
+    "close": 6.114,
+    "open": 6.041,
+    "high": 6.894,
+    "low": 5.544,
+    "volume": 15200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-13",
+    "close": 6.663,
+    "open": 6.112,
+    "high": 6.894,
+    "low": 6.112,
+    "volume": 2000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-14",
+    "close": 6.367,
+    "open": 6.326,
+    "high": 6.397,
+    "low": 6.326,
+    "volume": 1700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-15",
+    "close": 6.082,
+    "open": 5.899,
+    "high": 6.397,
+    "low": 5.828,
+    "volume": 2400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-16",
+    "close": 6.302,
+    "open": 6.254,
+    "high": 6.397,
+    "low": 6.254,
+    "volume": 3040
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-17",
+    "close": 6.344,
+    "open": 6.326,
+    "high": 6.397,
+    "low": 6.041,
+    "volume": 2300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-20",
+    "close": 5.923,
+    "open": 6.041,
+    "high": 6.041,
+    "low": 5.828,
+    "volume": 900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-21",
+    "close": 5.487,
+    "open": 5.828,
+    "high": 5.828,
+    "low": 5.402,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-22",
+    "close": 5.996,
+    "open": 6.041,
+    "high": 6.254,
+    "low": 5.402,
+    "volume": 4400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-23",
+    "close": 5.686,
+    "open": 5.686,
+    "high": 5.686,
+    "low": 5.686,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-24",
+    "close": 6.112,
+    "open": 6.112,
+    "high": 6.112,
+    "low": 6.112,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-27",
+    "close": 6.539,
+    "open": 6.539,
+    "high": 6.539,
+    "low": 6.539,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-28",
+    "close": 7.321,
+    "open": 7.321,
+    "high": 7.321,
+    "low": 7.321,
+    "volume": 110
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-29",
+    "close": 6.254,
+    "open": 6.254,
+    "high": 6.254,
+    "low": 6.254,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-30",
+    "close": 6.254,
+    "open": 6.254,
+    "high": 6.254,
+    "low": 6.254,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-07-31",
+    "close": 6.254,
+    "open": 6.254,
+    "high": 6.254,
+    "low": 6.254,
+    "volume": 10
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-03",
+    "close": 5.594,
+    "open": 6.397,
+    "high": 6.397,
+    "low": 5.402,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-04",
+    "close": 6.351,
+    "open": 6.183,
+    "high": 6.397,
+    "low": 6.183,
+    "volume": 1420
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-05",
+    "close": 5.709,
+    "open": 6.681,
+    "high": 6.681,
+    "low": 5.686,
+    "volume": 4300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-06",
+    "close": 6.354,
+    "open": 6.326,
+    "high": 6.397,
+    "low": 5.757,
+    "volume": 11110
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-07",
+    "close": 6.326,
+    "open": 6.326,
+    "high": 6.326,
+    "low": 6.326,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-10",
+    "close": 5.757,
+    "open": 5.757,
+    "high": 5.757,
+    "low": 5.757,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-11",
+    "close": 5.928,
+    "open": 6.397,
+    "high": 6.397,
+    "low": 5.828,
+    "volume": 5700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-12",
+    "close": 5.913,
+    "open": 6.539,
+    "high": 6.539,
+    "low": 5.757,
+    "volume": 5000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-13",
+    "close": 5.686,
+    "open": 5.686,
+    "high": 5.686,
+    "low": 5.686,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-14",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-17",
+    "close": 5.757,
+    "open": 5.757,
+    "high": 5.757,
+    "low": 5.757,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-18",
+    "close": 6.261,
+    "open": 5.046,
+    "high": 6.61,
+    "low": 5.046,
+    "volume": 4500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-19",
+    "close": 6.041,
+    "open": 6.041,
+    "high": 6.041,
+    "low": 6.041,
+    "volume": 1300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-20",
+    "close": 5.942,
+    "open": 6.397,
+    "high": 6.539,
+    "low": 5.828,
+    "volume": 4600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-21",
+    "close": 5.402,
+    "open": 5.402,
+    "high": 5.402,
+    "low": 5.402,
+    "volume": 800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-24",
+    "close": 5.574,
+    "open": 6.183,
+    "high": 6.183,
+    "low": 5.473,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-25",
+    "close": 5.925,
+    "open": 6.326,
+    "high": 6.326,
+    "low": 5.899,
+    "volume": 3300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-26",
+    "close": 6.394,
+    "open": 6.397,
+    "high": 6.752,
+    "low": 6.041,
+    "volume": 4700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-27",
+    "close": 6.898,
+    "open": 7.107,
+    "high": 7.321,
+    "low": 6.61,
+    "volume": 14321
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-28",
+    "close": 7.373,
+    "open": 7.036,
+    "high": 7.889,
+    "low": 7.036,
+    "volume": 3709
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-08-31",
+    "close": 7.818,
+    "open": 7.818,
+    "high": 7.818,
+    "low": 7.818,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-01",
+    "close": 8.579,
+    "open": 8.529,
+    "high": 8.6,
+    "low": 8.529,
+    "volume": 6720
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-03",
+    "close": 8.6,
+    "open": 8.6,
+    "high": 8.6,
+    "low": 8.6,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-04",
+    "close": 7.321,
+    "open": 7.321,
+    "high": 7.321,
+    "low": 7.321,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-07",
+    "close": 6.802,
+    "open": 8.387,
+    "high": 8.387,
+    "low": 6.326,
+    "volume": 3800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-08",
+    "close": 6.99,
+    "open": 7.302,
+    "high": 7.778,
+    "low": 6.191,
+    "volume": 2900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-09",
+    "close": 6.508,
+    "open": 6.508,
+    "high": 6.508,
+    "low": 6.508,
+    "volume": 1500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-10",
+    "close": 7.146,
+    "open": 6.508,
+    "high": 7.461,
+    "low": 6.508,
+    "volume": 4600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-11",
+    "close": 6.508,
+    "open": 6.508,
+    "high": 6.508,
+    "low": 6.508,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-14",
+    "close": 7.434,
+    "open": 7.381,
+    "high": 7.461,
+    "low": 7.381,
+    "volume": 900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-15",
+    "close": 7.461,
+    "open": 7.461,
+    "high": 7.461,
+    "low": 7.461,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-16",
+    "close": 7.858,
+    "open": 7.778,
+    "high": 7.858,
+    "low": 7.778,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-17",
+    "close": 7.778,
+    "open": 7.778,
+    "high": 7.778,
+    "low": 7.778,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-18",
+    "close": 7.262,
+    "open": 6.746,
+    "high": 7.778,
+    "low": 6.746,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-21",
+    "close": 7.302,
+    "open": 7.302,
+    "high": 7.302,
+    "low": 7.302,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-22",
+    "close": 7.302,
+    "open": 7.302,
+    "high": 7.302,
+    "low": 7.302,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-23",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-24",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-25",
+    "close": 6.749,
+    "open": 6.191,
+    "high": 7.064,
+    "low": 6.191,
+    "volume": 7100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-28",
+    "close": 6.108,
+    "open": 6.032,
+    "high": 7.54,
+    "low": 6.032,
+    "volume": 2300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-29",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-09-30",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-01",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-02",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-05",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-06",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-07",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-08",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-09",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-12",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-13",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-14",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-15",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-16",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-19",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-20",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-21",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-22",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-23",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-26",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-27",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-28",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-29",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-10-30",
+    "close": 5.953,
+    "open": 5.953,
+    "high": 5.953,
+    "low": 5.953,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-02",
+    "close": 5.953,
+    "open": 5.953,
+    "high": 5.953,
+    "low": 5.953,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-03",
+    "close": 6.032,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 5.238,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-04",
+    "close": 6.032,
+    "open": 6.032,
+    "high": 6.032,
+    "low": 6.032,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-05",
+    "close": 6.032,
+    "open": 6.032,
+    "high": 6.032,
+    "low": 6.032,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-06",
+    "close": 6.032,
+    "open": 6.032,
+    "high": 6.032,
+    "low": 6.032,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-09",
+    "close": 6.032,
+    "open": 6.032,
+    "high": 6.032,
+    "low": 6.032,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-10",
+    "close": 6.032,
+    "open": 6.032,
+    "high": 6.032,
+    "low": 6.032,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-11",
+    "close": 6.032,
+    "open": 6.032,
+    "high": 6.032,
+    "low": 6.032,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-12",
+    "close": 6.032,
+    "open": 6.032,
+    "high": 6.032,
+    "low": 6.032,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-13",
+    "close": 6.429,
+    "open": 6.905,
+    "high": 6.905,
+    "low": 6.032,
+    "volume": 2200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-16",
+    "close": 6.429,
+    "open": 6.429,
+    "high": 6.429,
+    "low": 6.429,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-17",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-18",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-19",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-20",
+    "close": 7.143,
+    "open": 7.143,
+    "high": 7.143,
+    "low": 7.143,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-23",
+    "close": 8.02,
+    "open": 8.175,
+    "high": 8.175,
+    "low": 8.016,
+    "volume": 4200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-24",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 1100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-25",
+    "close": 7.679,
+    "open": 7.381,
+    "high": 7.778,
+    "low": 7.381,
+    "volume": 800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-26",
+    "close": 7.699,
+    "open": 7.699,
+    "high": 7.699,
+    "low": 7.699,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-27",
+    "close": 7.699,
+    "open": 7.699,
+    "high": 7.699,
+    "low": 7.699,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-11-30",
+    "close": 6.667,
+    "open": 6.667,
+    "high": 6.667,
+    "low": 6.667,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-01",
+    "close": 6.667,
+    "open": 6.667,
+    "high": 6.667,
+    "low": 6.667,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-02",
+    "close": 6.762,
+    "open": 7.619,
+    "high": 7.619,
+    "low": 6.191,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-03",
+    "close": 6.349,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 6.111,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-04",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-07",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-08",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-09",
+    "close": 5.979,
+    "open": 7.302,
+    "high": 7.302,
+    "low": 5.714,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-10",
+    "close": 5.953,
+    "open": 5.953,
+    "high": 5.953,
+    "low": 5.953,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-11",
+    "close": 5.953,
+    "open": 5.953,
+    "high": 5.953,
+    "low": 5.953,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-14",
+    "close": 5.953,
+    "open": 5.953,
+    "high": 5.953,
+    "low": 5.953,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-15",
+    "close": 5.953,
+    "open": 5.953,
+    "high": 5.953,
+    "low": 5.953,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-16",
+    "close": 5.953,
+    "open": 5.953,
+    "high": 5.953,
+    "low": 5.953,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-17",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-18",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-21",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-22",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 1300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-23",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-24",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-25",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-28",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-29",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-30",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2020-12-31",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-04",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-05",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-06",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-07",
+    "close": 6.826,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.826,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-08",
+    "close": 7.778,
+    "open": 7.778,
+    "high": 7.778,
+    "low": 7.778,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-11",
+    "close": 7.778,
+    "open": 7.778,
+    "high": 7.778,
+    "low": 7.778,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-12",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-13",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-14",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-15",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-18",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-19",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-20",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-21",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-22",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-25",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-26",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-27",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-28",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-01-29",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-01",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-02",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-03",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-04",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-05",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-08",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-09",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-17",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-18",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-19",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-22",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-23",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-24",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-25",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-02-26",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-01",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-02",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-03",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-04",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-05",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-08",
+    "close": 8.731,
+    "open": 8.731,
+    "high": 8.731,
+    "low": 8.731,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-09",
+    "close": 8.334,
+    "open": 8.334,
+    "high": 8.334,
+    "low": 8.334,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-10",
+    "close": 8.334,
+    "open": 8.334,
+    "high": 8.334,
+    "low": 8.334,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-11",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-12",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-15",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-16",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-17",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-18",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-19",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-22",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-23",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-24",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-25",
+    "close": 8.651,
+    "open": 8.651,
+    "high": 8.651,
+    "low": 8.651,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-26",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-29",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-30",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-03-31",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-01",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-02",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-05",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-06",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-07",
+    "close": 7.937,
+    "open": 7.937,
+    "high": 7.937,
+    "low": 7.937,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-08",
+    "close": 9.048,
+    "open": 9.048,
+    "high": 9.048,
+    "low": 9.048,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-09",
+    "close": 7.937,
+    "open": 7.937,
+    "high": 7.937,
+    "low": 7.937,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-12",
+    "close": 7.937,
+    "open": 7.937,
+    "high": 7.937,
+    "low": 7.937,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-13",
+    "close": 9.048,
+    "open": 9.048,
+    "high": 9.048,
+    "low": 9.048,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-14",
+    "close": 7.916,
+    "open": 10.159,
+    "high": 10.159,
+    "low": 7.699,
+    "volume": 3400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-15",
+    "close": 7.937,
+    "open": 7.937,
+    "high": 7.937,
+    "low": 7.937,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-16",
+    "close": 7.997,
+    "open": 7.937,
+    "high": 9.048,
+    "low": 7.699,
+    "volume": 1700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-19",
+    "close": 7.995,
+    "open": 7.937,
+    "high": 8.81,
+    "low": 7.937,
+    "volume": 1500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-20",
+    "close": 8.016,
+    "open": 8.016,
+    "high": 8.016,
+    "low": 8.016,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-22",
+    "close": 8.016,
+    "open": 8.016,
+    "high": 8.016,
+    "low": 8.016,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-23",
+    "close": 7.003,
+    "open": 7.699,
+    "high": 7.699,
+    "low": 6.826,
+    "volume": 7900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-26",
+    "close": 6.984,
+    "open": 6.984,
+    "high": 6.984,
+    "low": 6.984,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-27",
+    "close": 7.143,
+    "open": 7.143,
+    "high": 7.143,
+    "low": 7.143,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-28",
+    "close": 7.154,
+    "open": 7.143,
+    "high": 7.381,
+    "low": 7.143,
+    "volume": 2100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-04-29",
+    "close": 7.381,
+    "open": 7.381,
+    "high": 7.381,
+    "low": 7.381,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-04",
+    "close": 7.127,
+    "open": 7.143,
+    "high": 7.223,
+    "low": 6.905,
+    "volume": 2000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-05",
+    "close": 7.545,
+    "open": 7.143,
+    "high": 7.699,
+    "low": 7.143,
+    "volume": 6600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-06",
+    "close": 7.54,
+    "open": 7.54,
+    "high": 7.54,
+    "low": 7.54,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-07",
+    "close": 6.974,
+    "open": 7.858,
+    "high": 7.858,
+    "low": 6.905,
+    "volume": 3100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-10",
+    "close": 6.489,
+    "open": 6.905,
+    "high": 6.905,
+    "low": 6.349,
+    "volume": 3400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-11",
+    "close": 7.302,
+    "open": 7.302,
+    "high": 7.302,
+    "low": 7.302,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-12",
+    "close": 7.302,
+    "open": 7.302,
+    "high": 7.302,
+    "low": 7.302,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-13",
+    "close": 7.183,
+    "open": 7.143,
+    "high": 7.223,
+    "low": 7.143,
+    "volume": 3000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-14",
+    "close": 7.223,
+    "open": 7.223,
+    "high": 7.223,
+    "low": 7.223,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-17",
+    "close": 7.223,
+    "open": 7.223,
+    "high": 7.223,
+    "low": 7.223,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-18",
+    "close": 7.223,
+    "open": 7.223,
+    "high": 7.223,
+    "low": 7.223,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-19",
+    "close": 7.223,
+    "open": 7.223,
+    "high": 7.223,
+    "low": 7.223,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-20",
+    "close": 6.37,
+    "open": 6.746,
+    "high": 6.746,
+    "low": 6.349,
+    "volume": 9500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-21",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-24",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-25",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-26",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-27",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-28",
+    "close": 6.366,
+    "open": 6.746,
+    "high": 6.746,
+    "low": 6.349,
+    "volume": 2400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-05-31",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-01",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-02",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-03",
+    "close": 6.349,
+    "open": 6.349,
+    "high": 6.349,
+    "low": 6.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-04",
+    "close": 6.085,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 5.953,
+    "volume": 3600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-07",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-08",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-09",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-10",
+    "close": 6.111,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.111,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-11",
+    "close": 6.042,
+    "open": 6.111,
+    "high": 6.111,
+    "low": 6.032,
+    "volume": 2300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-14",
+    "close": 6.299,
+    "open": 6.111,
+    "high": 6.588,
+    "low": 6.111,
+    "volume": 7100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-15",
+    "close": 6.304,
+    "open": 6.826,
+    "high": 6.826,
+    "low": 6.27,
+    "volume": 10900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-16",
+    "close": 6.508,
+    "open": 6.508,
+    "high": 6.508,
+    "low": 6.508,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-17",
+    "close": 6.508,
+    "open": 6.508,
+    "high": 6.508,
+    "low": 6.508,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-18",
+    "close": 6.27,
+    "open": 6.27,
+    "high": 6.27,
+    "low": 6.27,
+    "volume": 3800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-21",
+    "close": 6.514,
+    "open": 6.508,
+    "high": 6.588,
+    "low": 6.508,
+    "volume": 2700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-22",
+    "close": 6.534,
+    "open": 6.588,
+    "high": 6.588,
+    "low": 6.508,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-23",
+    "close": 6.584,
+    "open": 6.508,
+    "high": 6.588,
+    "low": 6.508,
+    "volume": 2100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-24",
+    "close": 6.514,
+    "open": 6.588,
+    "high": 6.588,
+    "low": 5.714,
+    "volume": 1200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-25",
+    "close": 6.746,
+    "open": 6.746,
+    "high": 6.746,
+    "low": 6.746,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-28",
+    "close": 6.746,
+    "open": 6.746,
+    "high": 6.746,
+    "low": 6.746,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-29",
+    "close": 6.746,
+    "open": 6.746,
+    "high": 6.746,
+    "low": 6.746,
+    "volume": 1800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-06-30",
+    "close": 6.746,
+    "open": 6.746,
+    "high": 6.746,
+    "low": 6.746,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-01",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-02",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-05",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-06",
+    "close": 6.979,
+    "open": 6.979,
+    "high": 6.979,
+    "low": 6.979,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-07",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-08",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-09",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-12",
+    "close": 5.803,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 5.702,
+    "volume": 9800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-13",
+    "close": 5.974,
+    "open": 5.872,
+    "high": 6.042,
+    "low": 5.872,
+    "volume": 2500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-14",
+    "close": 5.957,
+    "open": 5.957,
+    "high": 5.957,
+    "low": 5.957,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-15",
+    "close": 6.042,
+    "open": 6.042,
+    "high": 6.042,
+    "low": 6.042,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-16",
+    "close": 6.042,
+    "open": 6.042,
+    "high": 6.042,
+    "low": 6.042,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-19",
+    "close": 6.042,
+    "open": 6.042,
+    "high": 6.042,
+    "low": 6.042,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-20",
+    "close": 6.042,
+    "open": 6.042,
+    "high": 6.042,
+    "low": 6.042,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-21",
+    "close": 6.27,
+    "open": 6.213,
+    "high": 6.298,
+    "low": 6.213,
+    "volume": 1500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-22",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-23",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-26",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-27",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-28",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-29",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-07-30",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-02",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-03",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-04",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-05",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-06",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-09",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-10",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-11",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-12",
+    "close": 6.468,
+    "open": 6.468,
+    "high": 6.468,
+    "low": 6.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-13",
+    "close": 7.002,
+    "open": 6.979,
+    "high": 7.064,
+    "low": 6.979,
+    "volume": 4500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-16",
+    "close": 6.979,
+    "open": 6.979,
+    "high": 6.979,
+    "low": 6.979,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-17",
+    "close": 6.979,
+    "open": 6.979,
+    "high": 6.979,
+    "low": 6.979,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-18",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-19",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-20",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-23",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-24",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-25",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-26",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-27",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-30",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-08-31",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-01",
+    "close": 7.193,
+    "open": 7.149,
+    "high": 7.234,
+    "low": 7.149,
+    "volume": 3100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-06",
+    "close": 6.979,
+    "open": 6.979,
+    "high": 6.979,
+    "low": 6.979,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-07",
+    "close": 7.059,
+    "open": 6.979,
+    "high": 7.489,
+    "low": 6.638,
+    "volume": 2100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-08",
+    "close": 7.659,
+    "open": 7.659,
+    "high": 7.659,
+    "low": 7.659,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-09",
+    "close": 8.17,
+    "open": 7.659,
+    "high": 8.425,
+    "low": 7.659,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-10",
+    "close": 7.164,
+    "open": 7.064,
+    "high": 8.17,
+    "low": 7.064,
+    "volume": 1100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-13",
+    "close": 7.162,
+    "open": 7.064,
+    "high": 7.574,
+    "low": 7.064,
+    "volume": 8800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-14",
+    "close": 7.134,
+    "open": 7.064,
+    "high": 7.489,
+    "low": 7.064,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-15",
+    "close": 7.191,
+    "open": 7.064,
+    "high": 7.319,
+    "low": 7.064,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-16",
+    "close": 7.234,
+    "open": 7.234,
+    "high": 7.234,
+    "low": 7.234,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-17",
+    "close": 7.376,
+    "open": 7.319,
+    "high": 7.404,
+    "low": 7.319,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-20",
+    "close": 7.394,
+    "open": 7.404,
+    "high": 7.574,
+    "low": 7.064,
+    "volume": 6800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-21",
+    "close": 7.276,
+    "open": 7.234,
+    "high": 7.489,
+    "low": 7.234,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-22",
+    "close": 7.359,
+    "open": 7.404,
+    "high": 7.404,
+    "low": 7.319,
+    "volume": 1900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-23",
+    "close": 7.319,
+    "open": 7.319,
+    "high": 7.319,
+    "low": 7.319,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-24",
+    "close": 7.336,
+    "open": 7.319,
+    "high": 7.489,
+    "low": 7.319,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-27",
+    "close": 7.404,
+    "open": 7.404,
+    "high": 7.404,
+    "low": 7.404,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-28",
+    "close": 7.404,
+    "open": 7.404,
+    "high": 7.404,
+    "low": 7.404,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-29",
+    "close": 7.404,
+    "open": 7.404,
+    "high": 7.404,
+    "low": 7.404,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-09-30",
+    "close": 7.404,
+    "open": 7.404,
+    "high": 7.404,
+    "low": 7.404,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-01",
+    "close": 7.489,
+    "open": 7.489,
+    "high": 7.489,
+    "low": 7.489,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-04",
+    "close": 7.489,
+    "open": 7.489,
+    "high": 7.489,
+    "low": 7.489,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-05",
+    "close": 7.659,
+    "open": 7.659,
+    "high": 7.659,
+    "low": 7.659,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-06",
+    "close": 7.064,
+    "open": 7.064,
+    "high": 7.064,
+    "low": 7.064,
+    "volume": 900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-07",
+    "close": 7.127,
+    "open": 7.149,
+    "high": 7.149,
+    "low": 7.064,
+    "volume": 2401
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-08",
+    "close": 7.126,
+    "open": 7.149,
+    "high": 7.149,
+    "low": 7.064,
+    "volume": 4500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-11",
+    "close": 7.149,
+    "open": 7.149,
+    "high": 7.149,
+    "low": 7.149,
+    "volume": 11000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-12",
+    "close": 7.404,
+    "open": 7.404,
+    "high": 7.404,
+    "low": 7.404,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-13",
+    "close": 7.121,
+    "open": 6.979,
+    "high": 7.404,
+    "low": 6.979,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-14",
+    "close": 7.149,
+    "open": 7.149,
+    "high": 7.149,
+    "low": 7.149,
+    "volume": 2800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-15",
+    "close": 7.163,
+    "open": 7.234,
+    "high": 7.234,
+    "low": 7.149,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-18",
+    "close": 7.193,
+    "open": 7.234,
+    "high": 7.234,
+    "low": 7.149,
+    "volume": 2100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-19",
+    "close": 7.191,
+    "open": 7.149,
+    "high": 7.574,
+    "low": 7.149,
+    "volume": 2400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-20",
+    "close": 7.149,
+    "open": 7.149,
+    "high": 7.149,
+    "low": 7.149,
+    "volume": 800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-21",
+    "close": 7.149,
+    "open": 7.149,
+    "high": 7.149,
+    "low": 7.149,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-22",
+    "close": 7.177,
+    "open": 7.149,
+    "high": 7.234,
+    "low": 7.149,
+    "volume": 3000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-25",
+    "close": 7.234,
+    "open": 7.234,
+    "high": 7.234,
+    "low": 7.234,
+    "volume": 1400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-26",
+    "close": 7.282,
+    "open": 7.234,
+    "high": 7.659,
+    "low": 7.234,
+    "volume": 2700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-27",
+    "close": 7.663,
+    "open": 7.404,
+    "high": 7.83,
+    "low": 7.404,
+    "volume": 11600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-28",
+    "close": 8.004,
+    "open": 7.659,
+    "high": 8.511,
+    "low": 7.659,
+    "volume": 4200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-10-29",
+    "close": 8.537,
+    "open": 8.511,
+    "high": 8.766,
+    "low": 8.511,
+    "volume": 2900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-01",
+    "close": 9.319,
+    "open": 9.787,
+    "high": 9.787,
+    "low": 8.936,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-02",
+    "close": 9.362,
+    "open": 9.362,
+    "high": 9.362,
+    "low": 9.362,
+    "volume": 3010
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-03",
+    "close": 9.362,
+    "open": 9.362,
+    "high": 9.362,
+    "low": 9.362,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-04",
+    "close": 9.652,
+    "open": 9.362,
+    "high": 10.128,
+    "low": 9.362,
+    "volume": 10300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-05",
+    "close": 9.76,
+    "open": 9.617,
+    "high": 9.787,
+    "low": 9.617,
+    "volume": 7900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-08",
+    "close": 9.219,
+    "open": 8.936,
+    "high": 9.787,
+    "low": 8.936,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-09",
+    "close": 9.191,
+    "open": 9.191,
+    "high": 9.191,
+    "low": 9.191,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-10",
+    "close": 9.277,
+    "open": 9.277,
+    "high": 9.277,
+    "low": 9.277,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-11",
+    "close": 9.277,
+    "open": 9.277,
+    "high": 9.277,
+    "low": 9.277,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-12",
+    "close": 9.277,
+    "open": 9.277,
+    "high": 9.277,
+    "low": 9.277,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-15",
+    "close": 9.4,
+    "open": 9.277,
+    "high": 9.447,
+    "low": 9.277,
+    "volume": 3300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-16",
+    "close": 9.362,
+    "open": 9.362,
+    "high": 9.362,
+    "low": 9.362,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-17",
+    "close": 9.787,
+    "open": 8.766,
+    "high": 10.043,
+    "low": 8.766,
+    "volume": 2500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-18",
+    "close": 9.787,
+    "open": 9.787,
+    "high": 9.787,
+    "low": 9.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-19",
+    "close": 9.913,
+    "open": 9.787,
+    "high": 10.213,
+    "low": 9.787,
+    "volume": 6400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-22",
+    "close": 9.957,
+    "open": 9.957,
+    "high": 9.957,
+    "low": 9.957,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-23",
+    "close": 11.319,
+    "open": 11.319,
+    "high": 11.319,
+    "low": 11.319,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-24",
+    "close": 12.761,
+    "open": 12.936,
+    "high": 12.936,
+    "low": 12.681,
+    "volume": 1600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-25",
+    "close": 12.766,
+    "open": 12.766,
+    "high": 12.766,
+    "low": 12.766,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-26",
+    "close": 12.766,
+    "open": 12.766,
+    "high": 12.766,
+    "low": 12.766,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-29",
+    "close": 12.766,
+    "open": 12.766,
+    "high": 12.766,
+    "low": 12.766,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-11-30",
+    "close": 12.766,
+    "open": 12.766,
+    "high": 12.766,
+    "low": 12.766,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-01",
+    "close": 10.894,
+    "open": 10.894,
+    "high": 10.894,
+    "low": 10.894,
+    "volume": 6802
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-02",
+    "close": 11.094,
+    "open": 11.66,
+    "high": 11.66,
+    "low": 10.894,
+    "volume": 9800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-03",
+    "close": 11.063,
+    "open": 10.894,
+    "high": 12.34,
+    "low": 10.894,
+    "volume": 10900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-06",
+    "close": 10.372,
+    "open": 10.383,
+    "high": 10.383,
+    "low": 10.298,
+    "volume": 2300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-07",
+    "close": 11.234,
+    "open": 11.234,
+    "high": 11.234,
+    "low": 11.234,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-08",
+    "close": 11.915,
+    "open": 11.915,
+    "high": 11.915,
+    "low": 11.915,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-09",
+    "close": 11.915,
+    "open": 11.915,
+    "high": 11.915,
+    "low": 11.915,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-10",
+    "close": 10.826,
+    "open": 10.468,
+    "high": 11.83,
+    "low": 10.468,
+    "volume": 9500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-13",
+    "close": 10.78,
+    "open": 11.745,
+    "high": 11.745,
+    "low": 10.298,
+    "volume": 1500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-14",
+    "close": 10.987,
+    "open": 11.915,
+    "high": 11.915,
+    "low": 10.383,
+    "volume": 5100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-15",
+    "close": 10.46,
+    "open": 10.468,
+    "high": 10.468,
+    "low": 10.383,
+    "volume": 1100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-16",
+    "close": 10.678,
+    "open": 10.468,
+    "high": 10.979,
+    "low": 10.468,
+    "volume": 16000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-17",
+    "close": 11.745,
+    "open": 11.745,
+    "high": 11.745,
+    "low": 11.745,
+    "volume": 800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-20",
+    "close": 10.618,
+    "open": 10.638,
+    "high": 10.638,
+    "low": 10.553,
+    "volume": 4100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-21",
+    "close": 11.16,
+    "open": 10.638,
+    "high": 12,
+    "low": 10.638,
+    "volume": 13507
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-22",
+    "close": 11.157,
+    "open": 12.255,
+    "high": 12.255,
+    "low": 11.064,
+    "volume": 5100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-23",
+    "close": 11.317,
+    "open": 11.234,
+    "high": 11.574,
+    "low": 11.234,
+    "volume": 6900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-24",
+    "close": 11.294,
+    "open": 11.319,
+    "high": 11.319,
+    "low": 11.234,
+    "volume": 11400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-27",
+    "close": 11.319,
+    "open": 11.319,
+    "high": 11.319,
+    "low": 11.319,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-28",
+    "close": 11.833,
+    "open": 11.064,
+    "high": 12.596,
+    "low": 11.064,
+    "volume": 2400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-29",
+    "close": 12.255,
+    "open": 12.255,
+    "high": 12.255,
+    "low": 12.255,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-30",
+    "close": 12.255,
+    "open": 12.255,
+    "high": 12.255,
+    "low": 12.255,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2021-12-31",
+    "close": 12.057,
+    "open": 12.17,
+    "high": 12.17,
+    "low": 11.915,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-04",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-05",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-06",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-07",
+    "close": 13.106,
+    "open": 13.106,
+    "high": 13.106,
+    "low": 13.106,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-10",
+    "close": 11.321,
+    "open": 11.234,
+    "high": 11.574,
+    "low": 11.234,
+    "volume": 13100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-11",
+    "close": 10.867,
+    "open": 12.766,
+    "high": 12.766,
+    "low": 10.298,
+    "volume": 6500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-12",
+    "close": 10.545,
+    "open": 10.638,
+    "high": 10.638,
+    "low": 10.468,
+    "volume": 10000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-13",
+    "close": 10.979,
+    "open": 10.979,
+    "high": 10.979,
+    "low": 10.979,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-14",
+    "close": 11.404,
+    "open": 12.34,
+    "high": 12.34,
+    "low": 10.468,
+    "volume": 2000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-17",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-18",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-19",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-20",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-21",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-24",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-25",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-26",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-27",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-01-28",
+    "close": 10.298,
+    "open": 10.298,
+    "high": 10.298,
+    "low": 10.298,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-07",
+    "close": 11.249,
+    "open": 11.234,
+    "high": 11.319,
+    "low": 11.234,
+    "volume": 4200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-08",
+    "close": 11.493,
+    "open": 11.234,
+    "high": 11.574,
+    "low": 11.234,
+    "volume": 6800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-09",
+    "close": 11.489,
+    "open": 11.489,
+    "high": 11.489,
+    "low": 11.489,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-10",
+    "close": 10.385,
+    "open": 9.787,
+    "high": 11.489,
+    "low": 9.787,
+    "volume": 5700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-11",
+    "close": 10.203,
+    "open": 10.383,
+    "high": 11.489,
+    "low": 9.872,
+    "volume": 8309
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-14",
+    "close": 10.213,
+    "open": 10.213,
+    "high": 10.213,
+    "low": 10.213,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-15",
+    "close": 11.064,
+    "open": 11.064,
+    "high": 11.064,
+    "low": 11.064,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-16",
+    "close": 10.596,
+    "open": 10.298,
+    "high": 10.894,
+    "low": 10.298,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-17",
+    "close": 10.638,
+    "open": 10.638,
+    "high": 10.638,
+    "low": 10.638,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-18",
+    "close": 10.213,
+    "open": 10.213,
+    "high": 10.213,
+    "low": 10.213,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-21",
+    "close": 9.417,
+    "open": 9.447,
+    "high": 10.468,
+    "low": 8.851,
+    "volume": 10000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-22",
+    "close": 10.043,
+    "open": 10.043,
+    "high": 10.043,
+    "low": 10.043,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-23",
+    "close": 9.957,
+    "open": 9.957,
+    "high": 9.957,
+    "low": 9.957,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-24",
+    "close": 9.852,
+    "open": 9.957,
+    "high": 9.957,
+    "low": 9.702,
+    "volume": 1700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-25",
+    "close": 10.007,
+    "open": 9.957,
+    "high": 10.128,
+    "low": 9.957,
+    "volume": 2400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-02-28",
+    "close": 10.496,
+    "open": 10.043,
+    "high": 11.064,
+    "low": 10.043,
+    "volume": 4500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-01",
+    "close": 10.468,
+    "open": 10.468,
+    "high": 10.468,
+    "low": 10.468,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-02",
+    "close": 11.149,
+    "open": 11.149,
+    "high": 11.149,
+    "low": 11.149,
+    "volume": 800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-03",
+    "close": 11.149,
+    "open": 11.149,
+    "high": 11.149,
+    "low": 11.149,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-04",
+    "close": 11.149,
+    "open": 11.149,
+    "high": 11.149,
+    "low": 11.149,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-07",
+    "close": 11.149,
+    "open": 11.149,
+    "high": 11.149,
+    "low": 11.149,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-08",
+    "close": 11.237,
+    "open": 11.149,
+    "high": 11.489,
+    "low": 10.468,
+    "volume": 10600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-09",
+    "close": 11.374,
+    "open": 10.553,
+    "high": 12.596,
+    "low": 10.553,
+    "volume": 10400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-10",
+    "close": 11.483,
+    "open": 11.404,
+    "high": 11.489,
+    "low": 11.404,
+    "volume": 1200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-11",
+    "close": 11.95,
+    "open": 11.489,
+    "high": 12.34,
+    "low": 11.489,
+    "volume": 8700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-14",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-15",
+    "close": 12.085,
+    "open": 12.085,
+    "high": 12.085,
+    "low": 12.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-16",
+    "close": 11.432,
+    "open": 10.808,
+    "high": 11.745,
+    "low": 10.808,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-17",
+    "close": 11.778,
+    "open": 11.489,
+    "high": 12.17,
+    "low": 11.489,
+    "volume": 4600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-18",
+    "close": 11.927,
+    "open": 12.17,
+    "high": 12.17,
+    "low": 11.915,
+    "volume": 2100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-21",
+    "close": 11.809,
+    "open": 12.766,
+    "high": 12.766,
+    "low": 11.064,
+    "volume": 2500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-22",
+    "close": 12.334,
+    "open": 12.681,
+    "high": 12.681,
+    "low": 11.83,
+    "volume": 2500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-23",
+    "close": 12.34,
+    "open": 12.34,
+    "high": 12.34,
+    "low": 12.34,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-24",
+    "close": 12.681,
+    "open": 12.681,
+    "high": 12.681,
+    "low": 12.681,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-25",
+    "close": 12.681,
+    "open": 12.681,
+    "high": 12.681,
+    "low": 12.681,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-28",
+    "close": 12.681,
+    "open": 12.681,
+    "high": 12.681,
+    "low": 12.681,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-29",
+    "close": 13.745,
+    "open": 13.958,
+    "high": 13.958,
+    "low": 13.532,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-30",
+    "close": 13.787,
+    "open": 13.787,
+    "high": 13.787,
+    "low": 13.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-03-31",
+    "close": 13.787,
+    "open": 13.787,
+    "high": 13.787,
+    "low": 13.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-01",
+    "close": 13.787,
+    "open": 13.787,
+    "high": 13.787,
+    "low": 13.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-04",
+    "close": 13.787,
+    "open": 13.787,
+    "high": 13.787,
+    "low": 13.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-05",
+    "close": 13.787,
+    "open": 13.787,
+    "high": 13.787,
+    "low": 13.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-06",
+    "close": 13.787,
+    "open": 13.787,
+    "high": 13.787,
+    "low": 13.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-07",
+    "close": 13.787,
+    "open": 13.787,
+    "high": 13.787,
+    "low": 13.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-08",
+    "close": 14.345,
+    "open": 15.234,
+    "high": 15.234,
+    "low": 11.745,
+    "volume": 1100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-12",
+    "close": 14.383,
+    "open": 14.383,
+    "high": 14.383,
+    "low": 14.383,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-13",
+    "close": 13.575,
+    "open": 12.766,
+    "high": 14.383,
+    "low": 12.766,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-14",
+    "close": 13.617,
+    "open": 13.617,
+    "high": 13.617,
+    "low": 13.617,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-15",
+    "close": 13.617,
+    "open": 13.617,
+    "high": 13.617,
+    "low": 13.617,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-18",
+    "close": 11.803,
+    "open": 11.745,
+    "high": 13.617,
+    "low": 11.574,
+    "volume": 5400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-19",
+    "close": 12.009,
+    "open": 13.447,
+    "high": 13.447,
+    "low": 11.064,
+    "volume": 1800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-20",
+    "close": 13.277,
+    "open": 13.277,
+    "high": 13.277,
+    "low": 13.277,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-21",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-22",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-25",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-26",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-27",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-28",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-04-29",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-04",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-05",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-06",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-09",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-10",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-11",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-12",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-13",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-16",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-17",
+    "close": 14.894,
+    "open": 14.894,
+    "high": 14.894,
+    "low": 14.894,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-18",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-19",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-20",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-23",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-24",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-25",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-26",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-27",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-30",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-05-31",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-01",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-02",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-03",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-06",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-07",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-08",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-09",
+    "close": 16,
+    "open": 16,
+    "high": 16,
+    "low": 16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-10",
+    "close": 15.745,
+    "open": 15.319,
+    "high": 16.17,
+    "low": 15.319,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-13",
+    "close": 15.745,
+    "open": 15.745,
+    "high": 15.745,
+    "low": 15.745,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-14",
+    "close": 16.085,
+    "open": 16.085,
+    "high": 16.085,
+    "low": 16.085,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-15",
+    "close": 16.085,
+    "open": 16.085,
+    "high": 16.085,
+    "low": 16.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-16",
+    "close": 16.085,
+    "open": 16.085,
+    "high": 16.085,
+    "low": 16.085,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-17",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 110
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-20",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-21",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-22",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-23",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-24",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-27",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-28",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-29",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-06-30",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-01",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-04",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-05",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-06",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-07",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-08",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-11",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-12",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-13",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-14",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-15",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-18",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-19",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-20",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-21",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-22",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-25",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-26",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-27",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-28",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-07-29",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-01",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-02",
+    "close": 18.298,
+    "open": 18.298,
+    "high": 18.298,
+    "low": 18.298,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-03",
+    "close": 17.155,
+    "open": 11.031,
+    "high": 17.86,
+    "low": 11.031,
+    "volume": 2000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-04",
+    "close": 17.16,
+    "open": 17.16,
+    "high": 17.16,
+    "low": 17.16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-05",
+    "close": 17.16,
+    "open": 17.16,
+    "high": 17.16,
+    "low": 17.16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-08",
+    "close": 17.16,
+    "open": 17.16,
+    "high": 17.16,
+    "low": 17.16,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-09",
+    "close": 16.42,
+    "open": 18.211,
+    "high": 18.211,
+    "low": 14.621,
+    "volume": 1100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-10",
+    "close": 16.459,
+    "open": 16.459,
+    "high": 16.459,
+    "low": 16.459,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-11",
+    "close": 16.072,
+    "open": 14.008,
+    "high": 17.16,
+    "low": 14.008,
+    "volume": 2410
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-12",
+    "close": 16.109,
+    "open": 16.109,
+    "high": 16.109,
+    "low": 16.109,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-15",
+    "close": 17.948,
+    "open": 17.948,
+    "high": 17.948,
+    "low": 17.948,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-16",
+    "close": 17.948,
+    "open": 17.948,
+    "high": 17.948,
+    "low": 17.948,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-17",
+    "close": 17.948,
+    "open": 17.948,
+    "high": 17.948,
+    "low": 17.948,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-18",
+    "close": 17.948,
+    "open": 17.948,
+    "high": 17.948,
+    "low": 17.948,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-19",
+    "close": 15.321,
+    "open": 15.321,
+    "high": 15.321,
+    "low": 15.321,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-22",
+    "close": 13.774,
+    "open": 13.045,
+    "high": 15.234,
+    "low": 13.045,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-23",
+    "close": 13.745,
+    "open": 13.745,
+    "high": 13.745,
+    "low": 13.745,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-24",
+    "close": 11.732,
+    "open": 11.732,
+    "high": 11.732,
+    "low": 11.732,
+    "volume": 3800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-25",
+    "close": 10.537,
+    "open": 12.957,
+    "high": 12.957,
+    "low": 10.243,
+    "volume": 1100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-26",
+    "close": 11.425,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 10.418,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-29",
+    "close": 12.651,
+    "open": 13.045,
+    "high": 13.045,
+    "low": 12.257,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-30",
+    "close": 13.658,
+    "open": 13.658,
+    "high": 13.658,
+    "low": 13.658,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-08-31",
+    "close": 11.644,
+    "open": 11.644,
+    "high": 11.644,
+    "low": 11.644,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-05",
+    "close": 11.542,
+    "open": 12.782,
+    "high": 12.782,
+    "low": 9.981,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-06",
+    "close": 12.432,
+    "open": 12.432,
+    "high": 12.432,
+    "low": 12.432,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-07",
+    "close": 12.432,
+    "open": 12.432,
+    "high": 12.432,
+    "low": 12.432,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-08",
+    "close": 12.432,
+    "open": 12.432,
+    "high": 12.432,
+    "low": 12.432,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-09",
+    "close": 10.593,
+    "open": 10.593,
+    "high": 10.593,
+    "low": 10.593,
+    "volume": 1100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-12",
+    "close": 9.54,
+    "open": 9.981,
+    "high": 9.981,
+    "low": 9.017,
+    "volume": 7200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-13",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-14",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-15",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-16",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-19",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-20",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-21",
+    "close": 10.331,
+    "open": 10.331,
+    "high": 10.331,
+    "low": 10.331,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-22",
+    "close": 10.331,
+    "open": 10.331,
+    "high": 10.331,
+    "low": 10.331,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-23",
+    "close": 9.017,
+    "open": 9.105,
+    "high": 9.105,
+    "low": 8.93,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-26",
+    "close": 9.49,
+    "open": 9.805,
+    "high": 9.805,
+    "low": 9.017,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-27",
+    "close": 10.156,
+    "open": 10.156,
+    "high": 10.156,
+    "low": 10.156,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-28",
+    "close": 10.156,
+    "open": 10.156,
+    "high": 10.156,
+    "low": 10.156,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-29",
+    "close": 10.156,
+    "open": 10.156,
+    "high": 10.156,
+    "low": 10.156,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-09-30",
+    "close": 10.156,
+    "open": 10.156,
+    "high": 10.156,
+    "low": 10.156,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-03",
+    "close": 11.556,
+    "open": 11.556,
+    "high": 11.556,
+    "low": 11.556,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-04",
+    "close": 9.893,
+    "open": 9.893,
+    "high": 9.893,
+    "low": 9.893,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-05",
+    "close": 9.981,
+    "open": 10.856,
+    "high": 10.856,
+    "low": 8.492,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-06",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-07",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-10",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-11",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-12",
+    "close": 10.593,
+    "open": 10.593,
+    "high": 10.593,
+    "low": 10.593,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-13",
+    "close": 10.593,
+    "open": 10.593,
+    "high": 10.593,
+    "low": 10.593,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-14",
+    "close": 10.856,
+    "open": 10.856,
+    "high": 10.856,
+    "low": 10.856,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-17",
+    "close": 10.856,
+    "open": 10.856,
+    "high": 10.856,
+    "low": 10.856,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-18",
+    "close": 10.473,
+    "open": 9.28,
+    "high": 10.769,
+    "low": 9.28,
+    "volume": 6600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-19",
+    "close": 9.731,
+    "open": 8.93,
+    "high": 10.856,
+    "low": 8.93,
+    "volume": 3900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-20",
+    "close": 10.375,
+    "open": 8.405,
+    "high": 11.031,
+    "low": 8.405,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-21",
+    "close": 10.418,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.418,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-24",
+    "close": 10.733,
+    "open": 9.017,
+    "high": 11.381,
+    "low": 9.017,
+    "volume": 1701
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-25",
+    "close": 9.805,
+    "open": 9.805,
+    "high": 9.805,
+    "low": 9.805,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-26",
+    "close": 9.443,
+    "open": 10.856,
+    "high": 10.856,
+    "low": 9.193,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-27",
+    "close": 10.002,
+    "open": 8.755,
+    "high": 10.418,
+    "low": 8.755,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-28",
+    "close": 10.856,
+    "open": 10.856,
+    "high": 10.856,
+    "low": 10.856,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-10-31",
+    "close": 9.28,
+    "open": 9.28,
+    "high": 9.28,
+    "low": 9.28,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-01",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-02",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-03",
+    "close": 9.849,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 9.193,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-04",
+    "close": 10.051,
+    "open": 8.842,
+    "high": 11.119,
+    "low": 8.492,
+    "volume": 1600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-07",
+    "close": 8.58,
+    "open": 8.58,
+    "high": 8.58,
+    "low": 8.58,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-08",
+    "close": 8.905,
+    "open": 9.805,
+    "high": 9.805,
+    "low": 7.354,
+    "volume": 1400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-09",
+    "close": 9.455,
+    "open": 9.455,
+    "high": 9.455,
+    "low": 9.455,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-10",
+    "close": 9.455,
+    "open": 9.455,
+    "high": 9.455,
+    "low": 9.455,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-11",
+    "close": 9.455,
+    "open": 9.455,
+    "high": 9.455,
+    "low": 9.455,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-14",
+    "close": 9.455,
+    "open": 9.455,
+    "high": 9.455,
+    "low": 9.455,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-15",
+    "close": 9.455,
+    "open": 9.455,
+    "high": 9.455,
+    "low": 9.455,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-16",
+    "close": 9.017,
+    "open": 8.142,
+    "high": 9.193,
+    "low": 8.142,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-17",
+    "close": 9.157,
+    "open": 7.879,
+    "high": 9.368,
+    "low": 7.879,
+    "volume": 3200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-18",
+    "close": 9.608,
+    "open": 9.718,
+    "high": 9.718,
+    "low": 9.543,
+    "volume": 800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-21",
+    "close": 9.093,
+    "open": 8.755,
+    "high": 9.543,
+    "low": 8.755,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-22",
+    "close": 9.309,
+    "open": 9.455,
+    "high": 9.455,
+    "low": 8.755,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-23",
+    "close": 8.798,
+    "open": 8.755,
+    "high": 9.718,
+    "low": 8.667,
+    "volume": 5500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-24",
+    "close": 8.576,
+    "open": 8.142,
+    "high": 9.718,
+    "low": 8.142,
+    "volume": 2700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-25",
+    "close": 8.923,
+    "open": 8.142,
+    "high": 9.455,
+    "low": 8.142,
+    "volume": 1300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-28",
+    "close": 9.517,
+    "open": 8.317,
+    "high": 9.718,
+    "low": 8.317,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-29",
+    "close": 9.509,
+    "open": 8.317,
+    "high": 9.805,
+    "low": 8.317,
+    "volume": 1800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-11-30",
+    "close": 9.182,
+    "open": 8.405,
+    "high": 9.718,
+    "low": 8.405,
+    "volume": 1600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-01",
+    "close": 9.221,
+    "open": 8.58,
+    "high": 9.543,
+    "low": 8.58,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-02",
+    "close": 9.08,
+    "open": 8.58,
+    "high": 9.455,
+    "low": 8.58,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-05",
+    "close": 8.74,
+    "open": 8.58,
+    "high": 9.543,
+    "low": 8.58,
+    "volume": 2400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-06",
+    "close": 8.753,
+    "open": 8.317,
+    "high": 9.28,
+    "low": 8.317,
+    "volume": 4300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-07",
+    "close": 8.711,
+    "open": 8.317,
+    "high": 9.105,
+    "low": 8.317,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-08",
+    "close": 8.864,
+    "open": 8.405,
+    "high": 9.017,
+    "low": 8.405,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-09",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-12",
+    "close": 8.898,
+    "open": 8.405,
+    "high": 9.455,
+    "low": 8.317,
+    "volume": 800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-13",
+    "close": 9.368,
+    "open": 9.368,
+    "high": 9.368,
+    "low": 9.368,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-14",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-15",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-16",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-19",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-20",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-21",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-22",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-23",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-26",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-27",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-28",
+    "close": 9.543,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 9.543,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-29",
+    "close": 9.981,
+    "open": 9.981,
+    "high": 9.981,
+    "low": 9.981,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2022-12-30",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-03",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-04",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-05",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-06",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-09",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-10",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-11",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-12",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-13",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-16",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-17",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-18",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-19",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-27",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-30",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-01-31",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-01",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-02",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-03",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-06",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-07",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-08",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-09",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-10",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-13",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-14",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-15",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-16",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-17",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-20",
+    "close": 8.93,
+    "open": 8.58,
+    "high": 10.331,
+    "low": 7.179,
+    "volume": 1200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-21",
+    "close": 9.981,
+    "open": 9.981,
+    "high": 9.981,
+    "low": 9.981,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-22",
+    "close": 11.031,
+    "open": 11.031,
+    "high": 11.031,
+    "low": 11.031,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-23",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-24",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-27",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-02-28",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-01",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-02",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-03",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-06",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-07",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-08",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-09",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-10",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-13",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-14",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-15",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-16",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-17",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-20",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-21",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-22",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-23",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-24",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-27",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-28",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-29",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-30",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-03-31",
+    "close": 12.082,
+    "open": 12.082,
+    "high": 12.082,
+    "low": 12.082,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-03",
+    "close": 7.266,
+    "open": 7.266,
+    "high": 7.266,
+    "low": 7.266,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-04",
+    "close": 8.317,
+    "open": 8.317,
+    "high": 8.317,
+    "low": 8.317,
+    "volume": 5600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-05",
+    "close": 9.368,
+    "open": 9.368,
+    "high": 9.368,
+    "low": 9.368,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-06",
+    "close": 10.316,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 10.243,
+    "volume": 1200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-07",
+    "close": 10.331,
+    "open": 10.331,
+    "high": 10.331,
+    "low": 10.331,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-10",
+    "close": 10.331,
+    "open": 10.331,
+    "high": 10.331,
+    "low": 10.331,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-11",
+    "close": 10.331,
+    "open": 10.331,
+    "high": 10.331,
+    "low": 10.331,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-12",
+    "close": 10.331,
+    "open": 10.331,
+    "high": 10.331,
+    "low": 10.331,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-13",
+    "close": 10.331,
+    "open": 10.331,
+    "high": 10.331,
+    "low": 10.331,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-14",
+    "close": 10.331,
+    "open": 10.331,
+    "high": 10.331,
+    "low": 10.331,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-17",
+    "close": 8.842,
+    "open": 8.842,
+    "high": 8.842,
+    "low": 8.842,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-18",
+    "close": 9.578,
+    "open": 9.981,
+    "high": 9.981,
+    "low": 7.967,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-19",
+    "close": 8.368,
+    "open": 8.142,
+    "high": 9.28,
+    "low": 8.142,
+    "volume": 1900
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-20",
+    "close": 8.723,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 7.879,
+    "volume": 1400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-21",
+    "close": 10.068,
+    "open": 10.068,
+    "high": 10.068,
+    "low": 10.068,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-24",
+    "close": 10.068,
+    "open": 10.068,
+    "high": 10.068,
+    "low": 10.068,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-25",
+    "close": 11.206,
+    "open": 11.206,
+    "high": 11.206,
+    "low": 11.206,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-26",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-27",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-04-28",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-04",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-05",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-08",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-09",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-10",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-11",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-12",
+    "close": 11.994,
+    "open": 11.994,
+    "high": 11.994,
+    "low": 11.994,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-15",
+    "close": 10.243,
+    "open": 10.243,
+    "high": 10.243,
+    "low": 10.243,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-16",
+    "close": 10.243,
+    "open": 10.243,
+    "high": 10.243,
+    "low": 10.243,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-17",
+    "close": 10.243,
+    "open": 10.243,
+    "high": 10.243,
+    "low": 10.243,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-18",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-19",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-22",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-23",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-24",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-25",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-26",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-29",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-30",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-05-31",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-01",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-02",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-05",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-06",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-07",
+    "close": 11.119,
+    "open": 11.119,
+    "high": 11.119,
+    "low": 11.119,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-08",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-09",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-12",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-13",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-14",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-15",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-16",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-19",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-20",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 4
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-21",
+    "close": 9.805,
+    "open": 9.805,
+    "high": 9.805,
+    "low": 9.805,
+    "volume": 805
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-22",
+    "close": 9.211,
+    "open": 10.593,
+    "high": 10.593,
+    "low": 8.667,
+    "volume": 6700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-23",
+    "close": 9.818,
+    "open": 10.243,
+    "high": 10.243,
+    "low": 8.755,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-26",
+    "close": 9.937,
+    "open": 10.418,
+    "high": 10.418,
+    "low": 9.455,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-27",
+    "close": 8.492,
+    "open": 8.492,
+    "high": 8.492,
+    "low": 8.492,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-28",
+    "close": 9.193,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 8.492,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-29",
+    "close": 8.609,
+    "open": 9.193,
+    "high": 9.193,
+    "low": 8.317,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-06-30",
+    "close": 8.855,
+    "open": 9.63,
+    "high": 9.63,
+    "low": 8.229,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-03",
+    "close": 9.922,
+    "open": 10.156,
+    "high": 10.156,
+    "low": 9.805,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-04",
+    "close": 9.893,
+    "open": 9.893,
+    "high": 9.893,
+    "low": 9.893,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-05",
+    "close": 8.755,
+    "open": 8.492,
+    "high": 9.543,
+    "low": 8.492,
+    "volume": 700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-06",
+    "close": 8.764,
+    "open": 9.543,
+    "high": 9.543,
+    "low": 8.142,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-07",
+    "close": 10.068,
+    "open": 10.068,
+    "high": 10.068,
+    "low": 10.068,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-10",
+    "close": 10.068,
+    "open": 10.068,
+    "high": 10.068,
+    "low": 10.068,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-11",
+    "close": 10.068,
+    "open": 10.068,
+    "high": 10.068,
+    "low": 10.068,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-12",
+    "close": 10.068,
+    "open": 10.068,
+    "high": 10.068,
+    "low": 10.068,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-13",
+    "close": 10.068,
+    "open": 10.068,
+    "high": 10.068,
+    "low": 10.068,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-14",
+    "close": 10.068,
+    "open": 10.068,
+    "high": 10.068,
+    "low": 10.068,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-17",
+    "close": 8.689,
+    "open": 8.58,
+    "high": 9.28,
+    "low": 8.58,
+    "volume": 1200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-18",
+    "close": 9.805,
+    "open": 9.805,
+    "high": 9.805,
+    "low": 9.805,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-19",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-20",
+    "close": 10.506,
+    "open": 10.506,
+    "high": 10.506,
+    "low": 10.506,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-21",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-24",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-25",
+    "close": 11.469,
+    "open": 11.469,
+    "high": 11.469,
+    "low": 11.469,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-26",
+    "close": 9.84,
+    "open": 9.805,
+    "high": 9.893,
+    "low": 9.805,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-27",
+    "close": 9.689,
+    "open": 10.944,
+    "high": 10.944,
+    "low": 8.755,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-28",
+    "close": 10.287,
+    "open": 9.63,
+    "high": 10.944,
+    "low": 9.63,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-07-31",
+    "close": 10.513,
+    "open": 10.331,
+    "high": 10.681,
+    "low": 10.331,
+    "volume": 1300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-01",
+    "close": 10.505,
+    "open": 10.505,
+    "high": 10.505,
+    "low": 10.505,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-02",
+    "close": 10.505,
+    "open": 10.505,
+    "high": 10.505,
+    "low": 10.505,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-03",
+    "close": 10.718,
+    "open": 10.505,
+    "high": 12.006,
+    "low": 9.004,
+    "volume": 1500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-04",
+    "close": 11.912,
+    "open": 11.912,
+    "high": 11.912,
+    "low": 11.912,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-07",
+    "close": 11.912,
+    "open": 11.912,
+    "high": 11.912,
+    "low": 11.912,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-08",
+    "close": 11.912,
+    "open": 11.912,
+    "high": 11.912,
+    "low": 11.912,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-09",
+    "close": 11.912,
+    "open": 11.912,
+    "high": 11.912,
+    "low": 11.912,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-10",
+    "close": 11.912,
+    "open": 11.912,
+    "high": 11.912,
+    "low": 11.912,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-11",
+    "close": 11.912,
+    "open": 11.912,
+    "high": 11.912,
+    "low": 11.912,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-14",
+    "close": 10.13,
+    "open": 10.13,
+    "high": 10.13,
+    "low": 10.13,
+    "volume": 505
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-15",
+    "close": 10.74,
+    "open": 11.256,
+    "high": 11.256,
+    "low": 9.38,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-16",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-17",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-18",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-21",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-22",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-23",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-24",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-25",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-28",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-29",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-30",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-08-31",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-05",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-06",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-07",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-08",
+    "close": 10.904,
+    "open": 10.13,
+    "high": 11.162,
+    "low": 10.13,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-11",
+    "close": 11.537,
+    "open": 11.537,
+    "high": 11.537,
+    "low": 11.537,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-12",
+    "close": 11.537,
+    "open": 11.537,
+    "high": 11.537,
+    "low": 11.537,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-13",
+    "close": 11.537,
+    "open": 11.537,
+    "high": 11.537,
+    "low": 11.537,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-14",
+    "close": 9.849,
+    "open": 9.849,
+    "high": 9.849,
+    "low": 9.849,
+    "volume": 1000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-15",
+    "close": 9.681,
+    "open": 11.068,
+    "high": 11.068,
+    "low": 9.38,
+    "volume": 1400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-18",
+    "close": 10.13,
+    "open": 10.13,
+    "high": 10.13,
+    "low": 10.13,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-19",
+    "close": 9.38,
+    "open": 9.38,
+    "high": 9.38,
+    "low": 9.38,
+    "volume": 6500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-20",
+    "close": 10.787,
+    "open": 10.787,
+    "high": 10.787,
+    "low": 10.787,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-21",
+    "close": 10.787,
+    "open": 10.787,
+    "high": 10.787,
+    "low": 10.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-22",
+    "close": 10.787,
+    "open": 10.787,
+    "high": 10.787,
+    "low": 10.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-25",
+    "close": 10.787,
+    "open": 10.787,
+    "high": 10.787,
+    "low": 10.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-26",
+    "close": 10.787,
+    "open": 10.787,
+    "high": 10.787,
+    "low": 10.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-27",
+    "close": 10.787,
+    "open": 10.787,
+    "high": 10.787,
+    "low": 10.787,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-28",
+    "close": 11.396,
+    "open": 10.693,
+    "high": 11.537,
+    "low": 10.693,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-09-29",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-02",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-03",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-04",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-05",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-06",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-09",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-10",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-11",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-12",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-13",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-16",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-17",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-18",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-19",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-20",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-23",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-24",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-25",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-26",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-27",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-30",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-10-31",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-01",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-02",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-03",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-06",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-07",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-08",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-09",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-10",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-13",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-14",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-15",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-16",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-17",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-20",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-21",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-22",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-23",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-24",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-27",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-28",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-29",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-11-30",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-01",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-04",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-05",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-06",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-07",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-08",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-11",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-12",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-13",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-14",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-15",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-18",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-19",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-20",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-21",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-22",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-25",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-26",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-27",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-28",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2023-12-29",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-02",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-03",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-04",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-05",
+    "close": 12.756,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 12.756,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-08",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-09",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-10",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-11",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-12",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-15",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-16",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-17",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-18",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-19",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-22",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-23",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-24",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-25",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-26",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-29",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-30",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-01-31",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-01",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-02",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-05",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-06",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-07",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-15",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-16",
+    "close": 13.976,
+    "open": 13.976,
+    "high": 13.976,
+    "low": 13.976,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-19",
+    "close": 11.912,
+    "open": 11.912,
+    "high": 11.912,
+    "low": 11.912,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-20",
+    "close": 10.13,
+    "open": 10.13,
+    "high": 10.13,
+    "low": 10.13,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-21",
+    "close": 9.661,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 9.004,
+    "volume": 2200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-22",
+    "close": 9.661,
+    "open": 9.661,
+    "high": 9.661,
+    "low": 9.661,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-23",
+    "close": 9.567,
+    "open": 9.567,
+    "high": 9.567,
+    "low": 9.567,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-26",
+    "close": 9.098,
+    "open": 8.629,
+    "high": 9.567,
+    "low": 8.629,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-27",
+    "close": 9.879,
+    "open": 10.411,
+    "high": 10.411,
+    "low": 9.473,
+    "volume": 300
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-28",
+    "close": 9.849,
+    "open": 9.849,
+    "high": 9.849,
+    "low": 9.849,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-02-29",
+    "close": 10.974,
+    "open": 10.974,
+    "high": 10.974,
+    "low": 10.974,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-01",
+    "close": 10.974,
+    "open": 10.974,
+    "high": 10.974,
+    "low": 10.974,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-04",
+    "close": 10.974,
+    "open": 10.974,
+    "high": 10.974,
+    "low": 10.974,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-05",
+    "close": 11.537,
+    "open": 11.537,
+    "high": 11.537,
+    "low": 11.537,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-06",
+    "close": 11.537,
+    "open": 11.537,
+    "high": 11.537,
+    "low": 11.537,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-07",
+    "close": 11.537,
+    "open": 11.537,
+    "high": 11.537,
+    "low": 11.537,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-08",
+    "close": 9.849,
+    "open": 9.849,
+    "high": 9.849,
+    "low": 9.849,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-11",
+    "close": 9.849,
+    "open": 9.849,
+    "high": 9.849,
+    "low": 9.849,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-12",
+    "close": 9.483,
+    "open": 9.286,
+    "high": 11.162,
+    "low": 9.286,
+    "volume": 3000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-13",
+    "close": 9.473,
+    "open": 9.473,
+    "high": 9.473,
+    "low": 9.473,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-14",
+    "close": 10.13,
+    "open": 10.13,
+    "high": 10.13,
+    "low": 10.13,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-15",
+    "close": 10.13,
+    "open": 10.13,
+    "high": 10.13,
+    "low": 10.13,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-18",
+    "close": 9.611,
+    "open": 9.38,
+    "high": 11.349,
+    "low": 9.38,
+    "volume": 3400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-19",
+    "close": 9.567,
+    "open": 9.567,
+    "high": 9.567,
+    "low": 9.567,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-20",
+    "close": 9.567,
+    "open": 9.567,
+    "high": 9.567,
+    "low": 9.567,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-21",
+    "close": 10.505,
+    "open": 10.505,
+    "high": 10.505,
+    "low": 10.505,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-22",
+    "close": 10.505,
+    "open": 10.505,
+    "high": 10.505,
+    "low": 10.505,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-25",
+    "close": 10.505,
+    "open": 10.505,
+    "high": 10.505,
+    "low": 10.505,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-26",
+    "close": 12.006,
+    "open": 12.006,
+    "high": 12.006,
+    "low": 12.006,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-27",
+    "close": 12.006,
+    "open": 13.788,
+    "high": 13.788,
+    "low": 10.224,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-28",
+    "close": 10.48,
+    "open": 10.224,
+    "high": 13.413,
+    "low": 10.224,
+    "volume": 9600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-03-29",
+    "close": 10.65,
+    "open": 12.006,
+    "high": 12.006,
+    "low": 10.505,
+    "volume": 11400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-01",
+    "close": 10.154,
+    "open": 9.849,
+    "high": 10.224,
+    "low": 9.849,
+    "volume": 3800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-02",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-03",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-04",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-05",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-08",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-09",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-10",
+    "close": 11.42,
+    "open": 11.537,
+    "high": 11.631,
+    "low": 11.256,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-11",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-12",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-15",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-16",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-17",
+    "close": 11.443,
+    "open": 11.443,
+    "high": 11.443,
+    "low": 11.443,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-19",
+    "close": 10.13,
+    "open": 10.13,
+    "high": 10.13,
+    "low": 10.13,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-22",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-23",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-24",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-25",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-04-26",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-02",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-03",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-06",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-07",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-08",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-09",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-10",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-13",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-14",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-15",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-16",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-17",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-20",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-21",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-22",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-23",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-24",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-27",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-28",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-29",
+    "close": 11.631,
+    "open": 11.631,
+    "high": 11.631,
+    "low": 11.631,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-30",
+    "close": 13.132,
+    "open": 13.132,
+    "high": 13.132,
+    "low": 13.132,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-05-31",
+    "close": 13.132,
+    "open": 13.132,
+    "high": 13.132,
+    "low": 13.132,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-03",
+    "close": 11.197,
+    "open": 11.256,
+    "high": 11.256,
+    "low": 11.162,
+    "volume": 2600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-04",
+    "close": 11.361,
+    "open": 12.756,
+    "high": 12.756,
+    "low": 11.162,
+    "volume": 800
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-05",
+    "close": 11.349,
+    "open": 11.349,
+    "high": 11.349,
+    "low": 11.349,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-06",
+    "close": 10.565,
+    "open": 13.038,
+    "high": 13.038,
+    "low": 10.318,
+    "volume": 1100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-07",
+    "close": 11.068,
+    "open": 11.068,
+    "high": 11.068,
+    "low": 11.068,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-10",
+    "close": 10.271,
+    "open": 10.318,
+    "high": 10.318,
+    "low": 10.13,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-11",
+    "close": 11.725,
+    "open": 11.725,
+    "high": 11.725,
+    "low": 11.725,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-12",
+    "close": 11.725,
+    "open": 11.725,
+    "high": 11.725,
+    "low": 11.725,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-13",
+    "close": 11.725,
+    "open": 11.725,
+    "high": 11.725,
+    "low": 11.725,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-14",
+    "close": 11.725,
+    "open": 11.725,
+    "high": 11.725,
+    "low": 11.725,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-17",
+    "close": 11.725,
+    "open": 11.725,
+    "high": 11.725,
+    "low": 11.725,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-18",
+    "close": 10.411,
+    "open": 10.411,
+    "high": 10.411,
+    "low": 10.411,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-19",
+    "close": 10.411,
+    "open": 10.411,
+    "high": 10.411,
+    "low": 10.411,
+    "volume": 500
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-20",
+    "close": 10.405,
+    "open": 10.13,
+    "high": 10.974,
+    "low": 10.13,
+    "volume": 1400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-21",
+    "close": 11.49,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.162,
+    "volume": 200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-24",
+    "close": 10.318,
+    "open": 10.318,
+    "high": 10.318,
+    "low": 10.318,
+    "volume": 400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-25",
+    "close": 11.725,
+    "open": 11.725,
+    "high": 11.725,
+    "low": 11.725,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-26",
+    "close": 10.574,
+    "open": 10.787,
+    "high": 10.787,
+    "low": 10.318,
+    "volume": 2200
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-27",
+    "close": 10.599,
+    "open": 10.599,
+    "high": 10.599,
+    "low": 10.599,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-06-28",
+    "close": 10.436,
+    "open": 12.006,
+    "high": 12.006,
+    "low": 10.318,
+    "volume": 2700
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-01",
+    "close": 10.411,
+    "open": 10.411,
+    "high": 10.411,
+    "low": 10.411,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-02",
+    "close": 11.818,
+    "open": 11.818,
+    "high": 11.818,
+    "low": 11.818,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-03",
+    "close": 10.693,
+    "open": 10.693,
+    "high": 10.693,
+    "low": 10.693,
+    "volume": 600
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-04",
+    "close": 10.622,
+    "open": 10.599,
+    "high": 10.693,
+    "low": 10.599,
+    "volume": 6000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-05",
+    "close": 10.599,
+    "open": 10.599,
+    "high": 10.599,
+    "low": 10.599,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-08",
+    "close": 10.829,
+    "open": 11.256,
+    "high": 11.256,
+    "low": 10.787,
+    "volume": 1100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-09",
+    "close": 10.563,
+    "open": 10.787,
+    "high": 10.787,
+    "low": 10.318,
+    "volume": 20400
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-10",
+    "close": 10.88,
+    "open": 10.88,
+    "high": 10.88,
+    "low": 10.88,
+    "volume": 2000
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-11",
+    "close": 12.1,
+    "open": 12.194,
+    "high": 12.194,
+    "low": 11.256,
+    "volume": 7858
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-12",
+    "close": 10.925,
+    "open": 10.9,
+    "high": 11,
+    "low": 10.9,
+    "volume": 1250
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-15",
+    "close": 12.4,
+    "open": 12.4,
+    "high": 12.4,
+    "low": 12.4,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-16",
+    "close": 12.4,
+    "open": 12.4,
+    "high": 12.4,
+    "low": 12.4,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-17",
+    "close": 12.4,
+    "open": 12.4,
+    "high": 12.4,
+    "low": 12.4,
+    "volume": 0
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-18",
+    "close": 10.8,
+    "open": 10.8,
+    "high": 10.8,
+    "low": 10.8,
+    "volume": 100
+  },
+  {
+    "symbol": "VW3",
+    "date": "2024-07-19",
+    "close": 10.146,
+    "open": 12.3,
+    "high": 12.3,
+    "low": 10,
+    "volume": 8200
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["jest", "prettier", "react"],
+  "rules": {
+    "camelcase": "warn",
+    "import/extensions": "warn",
+    "import/named": "warn",
+    "import/no-namespace": "warn",
+    "jest/no-conditional-expect": "warn",
+    "no-shadow": "warn",
+    "no-unused-vars": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off"
+  }
+}
