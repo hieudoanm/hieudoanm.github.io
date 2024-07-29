@@ -199,7 +199,7 @@ PyYAML==6.0.1
 pyzmq==26.0.3
 qtconsole==5.5.2
 QtPy==2.4.1
-rapidfuzz==3.9.4
+rapidfuzz==3.9.5
 referencing==0.35.1
 regex==2024.7.24
 requests==2.32.3
