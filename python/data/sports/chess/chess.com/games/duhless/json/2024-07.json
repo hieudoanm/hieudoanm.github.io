@@ -435,6 +435,10 @@
     "time_control": "180+1",
     "end_time": 1721145375,
     "rated": true,
+    "accuracies": {
+      "white": 89.44,
+      "black": 89.53
+    },
     "tcn": "lBZJgv!TkAYQbs0SowJAfoXHvKWOeg6XjrHzsCTCoCAsiqOGcD2MDu1TKA5ZdkTLCo90ai8!faLDucZPkCPAqzAlCS!2iG4GaG0TGW91oQ7PS121WXPXQXTBXJ1TgoTKJ!3VzHlCwDMDovClvolC!3CnovnxvExnEvnxvoxM3kMSovBPmuDucuSBuBKBpxBIvCIHCtHztCP7Ct7MkdMDdkDMkdMDdkDM",
     "uuid": "d11b757e-438a-11ef-93b6-6cfe544c0428",
     "initial_setup": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",

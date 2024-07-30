@@ -708,6 +708,10 @@
     "time_control": "60",
     "end_time": 1720284937,
     "rated": true,
+    "accuracies": {
+      "white": 69.06,
+      "black": 84.09
+    },
     "tcn": "pFYQFNZJmC!VbsJBsm0Kmw5ZfAZTgv9RvMTElt7TnvEucuBuMxWGefXHtBHA",
     "uuid": "7792b86b-3bb8-11ef-b0b7-6cfe544c0428",
     "initial_setup": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",

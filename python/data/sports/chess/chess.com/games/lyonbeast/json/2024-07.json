@@ -888,6 +888,10 @@
     "time_control": "60",
     "end_time": 1721861988,
     "rated": true,
+    "accuracies": {
+      "white": 78.47,
+      "black": 86.16
+    },
     "tcn": "kA0Kbs1LgvKCvB7TmuYQoEZJAJLEsCTKfoQJdk5OCs!TsH6ZnDEvBvKNHYOYkY46YKNKvKZLhfLCox6Yjr9Rcj80jBRIBIYIKETExE?9f909emIkiqkjrz90ac0TcYjiYXiqX5TMESCtmnqi57ilnwtC79lowxog973N7Z2UzHNFZJCJSJgeuCeuxoFxonMDJQUMQJMEJQEwpwuwCKwuQZxpnoumohDw",
     "uuid": "2453f9ab-4a10-11ef-8d1b-6cfe544c0428",
     "initial_setup": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
