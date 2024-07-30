@@ -101,22 +101,24 @@ enum Title {
 model Game {
   uuid          String   @id @map("uuid") @db.Uuid
   pgn           String   @default("") @map("pgn") @db.Text
-  timeControl   String   @default("") @map("time_control")
-  timeClass     String   @default("") @map("time_class")
-  endTime       DateTime @default(now()) @map("end_time")
-  rated         Boolean  @default(false) @map("rated")
-  initialSetup  String   @default("") @map("initial_setup")
-  fen           String   @default("") @map("fen")
-  tcn           String   @default("") @map("tcn")
-  rules         String   @default("") @map("rules")
-  whiteAccuracy Float    @default(0) @map("white_accuracy")
-  whiteRating   Int      @default(0) @map("white_rating")
-  whiteResult   String   @default("") @map("white_result")
-  whiteUsername String   @default("") @map("white_username")
-  blackAccuracy Float    @default(0) @map("black_accuracy")
-  blackRating   Int      @default(0) @map("black_rating")
-  blackResult   String   @default("") @map("black_result")
-  blackUsername String   @default("") @map("black_username")
+  timeControl   String   @default("") @map("time_control") @db.VarChar(255)
+  timeClass     String   @default("") @map("time_class") @db.VarChar(255)
+  endTime       DateTime @default(now()) @map("end_time") @db.Timestamptz()
+  rated         Boolean  @default(false) @map("rated") @db.Boolean
+  initialSetup  String   @default("") @map("initial_setup") @db.VarChar(255)
+  fen           String   @default("") @map("fen") @db.VarChar(255)
+  tcn           String   @default("") @map("tcn") @db.VarChar(255)
+  rules         String   @default("") @map("rules") @db.VarChar(255)
+  whiteAccuracy Float    @default(0) @map("white_accuracy") @db.DoublePrecision
+  whiteRating   Int      @default(0) @map("white_rating") @db.SmallInt
+  whiteResult   String   @default("") @map("white_result") @db.VarChar(255)
+  whiteUsername String   @default("") @map("white_username") @db.VarChar(255)
+  blackAccuracy Float    @default(0) @map("black_accuracy") @db.DoublePrecision
+  blackRating   Int      @default(0) @map("black_rating") @db.SmallInt
+  blackResult   String   @default("") @map("black_result") @db.VarChar(255)
+  blackUsername String   @default("") @map("black_username") @db.VarChar(255)
+  opening       String   @default("") @map("opening") @db.VarChar(3)
+  openingName   String   @default("") @map("opening_name") @db.VarChar(255)
 
   @@index([uuid])
   @@map("game")

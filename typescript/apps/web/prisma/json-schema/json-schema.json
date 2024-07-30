@@ -253,6 +253,14 @@
         "blackUsername": {
           "type": "string",
           "default": ""
+        },
+        "opening": {
+          "type": "string",
+          "default": ""
+        },
+        "openingName": {
+          "type": "string",
+          "default": ""
         }
       }
     }

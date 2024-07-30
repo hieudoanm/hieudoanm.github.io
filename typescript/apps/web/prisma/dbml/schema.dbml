@@ -67,6 +67,8 @@ Table game {
   blackRating Int [not null, default: 0]
   blackResult String [not null, default: '']
   blackUsername String [not null, default: '']
+  opening String [not null, default: '']
+  openingName String [not null, default: '']
 }
 
 Enum Title {

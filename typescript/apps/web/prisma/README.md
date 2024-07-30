@@ -71,6 +71,8 @@ erDiagram
   Int black_rating
   String black_result
   String black_username
+  String opening
+  String opening_name
 }
 ```
 
@@ -146,3 +148,5 @@ erDiagram
 - `black_rating`:
 - `black_result`:
 - `black_username`:
+- `opening`:
+- `opening_name`:
