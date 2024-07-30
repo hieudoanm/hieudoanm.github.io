@@ -252,7 +252,10 @@ const getPlayers = (usernames: string[]): Promise<'OK' | 'ERROR'> => {
   });
 };
 
-const main = async () => {
+const getExistingUsernames = async (
+  existing: boolean = true
+): Promise<Set<string>> => {
+  if (!existing) return new Set<string>();
   const existingPlayers = await prismaClient.player.findMany({
     select: { username: true },
   });
@@ -260,6 +263,11 @@ const main = async () => {
     ({ username }) => username
   );
   const existingUsernamesSet: Set<string> = new Set(existingUsernames);
+  return existingUsernamesSet;
+};
+
+const main = async () => {
+  const existingUsernamesSet: Set<string> = await getExistingUsernames(true);
   titles.reverse();
   for (const title of titles) {
     const usernames = await getTitled(title);
