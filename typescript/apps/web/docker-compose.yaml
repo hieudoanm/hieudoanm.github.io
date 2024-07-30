@@ -22,7 +22,7 @@ services:
 
   hieudoan-redis:
     restart: unless-stopped
-    image: redis:7.2.5
+    image: redis:7.4.0
     container_name: hieudoan-redis
     volumes:
       - hieudoan_redis:/data

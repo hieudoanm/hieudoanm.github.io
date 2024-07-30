@@ -22,7 +22,7 @@ services:
 
   chess-redis:
     restart: unless-stopped
-    image: redis:7.2.5
+    image: redis:7.4.0
     container_name: chess-redis
     volumes:
       - chess_redis:/data
