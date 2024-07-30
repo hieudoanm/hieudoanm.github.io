@@ -51,32 +51,63 @@ erDiagram
   Int bullet_record_win
   Int bullet_record_draw
   Int bullet_record_loss
-  DateTime created_at "nullable"
-  DateTime updated_at "nullable"
+  DateTime created_at
+  DateTime updated_at
 }
 "game" {
   String uuid PK
   String pgn
+  TimeClass time_class
   String time_control
-  String time_class
   DateTime end_time
   Boolean rated
   String initial_setup
   String fen
   String tcn
-  String rules
+  Variant rules
   Float white_accuracy
   Int white_rating
-  String white_result
+  Result white_result
   String white_username
+  Int white_king
+  Int white_queen
+  Int white_rook
+  Int white_bishop
+  Int white_knight
+  Int white_pawn
+  String white_castling
   Float black_accuracy
   Int black_rating
-  String black_result
+  Result black_result
   String black_username
+  Int black_king
+  Int black_queen
+  Int black_rook
+  Int black_bishop
+  Int black_knight
+  Int black_pawn
+  String black_castling
   String opening
   String opening_name
-  DateTime created_at "nullable"
-  DateTime updated_at "nullable"
+  Phrase end_phrase
+  DateTime created_at
+  DateTime updated_at
+}
+"opening" {
+  String eco
+  String name
+  String fen
+  String pgn
+  DateTime createdAt
+  DateTime updatedAt
+}
+"country" {
+  String cca2 UK
+  String cca3 UK
+  String name
+  String flag
+  DateTime createdAt
+  DateTime updatedAt
 }
 ```
 
@@ -138,8 +169,8 @@ erDiagram
 
 - `uuid`:
 - `pgn`:
-- `time_control`:
 - `time_class`:
+- `time_control`:
 - `end_time`:
 - `rated`:
 - `initial_setup`:
@@ -150,11 +181,48 @@ erDiagram
 - `white_rating`:
 - `white_result`:
 - `white_username`:
+- `white_king`:
+- `white_queen`:
+- `white_rook`:
+- `white_bishop`:
+- `white_knight`:
+- `white_pawn`:
+- `white_castling`:
 - `black_accuracy`:
 - `black_rating`:
 - `black_result`:
 - `black_username`:
+- `black_king`:
+- `black_queen`:
+- `black_rook`:
+- `black_bishop`:
+- `black_knight`:
+- `black_pawn`:
+- `black_castling`:
 - `opening`:
 - `opening_name`:
+- `end_phrase`:
 - `created_at`:
 - `updated_at`:
+
+### `opening`
+
+**Properties**
+
+- `eco`:
+- `name`:
+- `fen`:
+- `pgn`:
+- `createdAt`:
+- `updatedAt`:
+
+### `country`
+
+**Properties**
+
+- `cca2`:
+- `cca3`:
+- `name`:
+- `flag`:
+- `createdAt`:
+- `updatedAt`:

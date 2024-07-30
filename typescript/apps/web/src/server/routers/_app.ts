@@ -1,3 +1,4 @@
+import { Title, Variant, TimeClass } from '@prisma/client';
 import { getCoins, Tag } from '@web/clients/coinranking/coinranking.client';
 import { Coin } from '@web/clients/coinranking/coinranking.dto';
 import { getLatest } from '@web/clients/forex/frankfurter/frankfurter.client';
@@ -8,11 +9,15 @@ import { Article } from '@web/clients/news/news.dto';
 import { Category, Country } from '@web/clients/news/news.enums';
 import { LANGUAGES_API } from '@web/constants/languages.constants';
 import { logger } from '@web/log';
+import {
+  Days,
+  getInsights,
+  getTitled,
+} from '@web/services/chess/chess.service';
 import axios, { AxiosError } from 'axios';
 import { z } from 'zod';
 import { procedure, router } from '../trpc';
-import { getTitled, Days } from '@web/services/chess.service';
-import { Title } from '@prisma/client';
+import { Insights } from '@web/services/chess/chess.model';
 
 export type Result = {
   definition: string;
@@ -91,6 +96,26 @@ export const appRouter = router({
         const countryCode: string | undefined = options.input.countryCode;
         const titled = await getTitled({ days, title, countryCode });
         return titled;
+      }),
+    insights: procedure
+      .input(
+        z.object({
+          username: z.string(),
+          variant: z.nativeEnum(Variant),
+          timeClass: z.nativeEnum(TimeClass),
+        })
+      )
+      .query(async (options): Promise<Insights> => {
+        const timeClass: TimeClass = options.input.timeClass;
+        const username: string = options.input.username;
+        const variant: Variant = options.input.variant;
+        const insights = await getInsights({
+          username,
+          variant,
+          timeClass,
+          rated: true,
+        });
+        return insights;
       }),
   },
   countries: procedure.query(async () => {

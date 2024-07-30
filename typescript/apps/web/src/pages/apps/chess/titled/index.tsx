@@ -4,7 +4,7 @@ import { useTheme } from '@web/context/ThemeContext';
 import countries from '@web/json/countries.json';
 import maps from '@web/json/maps/world.json';
 import { Layout } from '@web/layout';
-import { Days } from '@web/services/chess.service';
+import { Days } from '@web/services/chess/chess.service';
 import { QueryTemplate } from '@web/templates/QueryTemplate';
 import { trpc } from '@web/utils/trpc';
 import chroma from 'chroma-js';
@@ -36,6 +36,10 @@ const titles: Record<Title, string> = {
   WFM: 'Woman FIDE Master',
   WCM: 'Woman Candidate Master',
   WNM: 'Woman National Master',
+  AGM: 'Arena Grandmaster',
+  AIM: 'Arena International Master',
+  AFM: 'Arena FIDE Master',
+  ACM: 'Arena Candidate Master',
 };
 
 const getColors = ({

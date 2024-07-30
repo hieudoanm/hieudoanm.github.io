@@ -134,10 +134,10 @@ const ThemeContext = createContext<{
 export const ThemeProvider: FC<{ children: ReactNode }> = ({
   children = <></>,
 }) => {
-  const randomThemeIndex: number = randomNumber(0, DARK_THEMES.length - 1);
+  // const randomThemeIndex: number = randomNumber(0, DARK_THEMES.length - 1);
   const [settings, setSettings] = useState<{ font: Font; theme: Theme }>({
     font: 'robotoMono',
-    theme: DARK_THEMES[randomThemeIndex],
+    theme: 'coffee',
   });
   const setTheme = (theme: Theme) => setSettings({ ...settings, theme });
   const setFont = (font: Font) => setSettings({ ...settings, font });

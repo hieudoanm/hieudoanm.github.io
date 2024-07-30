@@ -63,7 +63,11 @@
             "WIM",
             "WFM",
             "WCM",
-            "WNM"
+            "WNM",
+            "AGM",
+            "AIM",
+            "AFM",
+            "ACM"
           ]
         },
         "country": {
@@ -179,11 +183,11 @@
           "default": 0
         },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": "string",
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": "string",
           "format": "date-time"
         }
       }
@@ -198,11 +202,12 @@
           "type": "string",
           "default": ""
         },
-        "timeControl": {
-          "type": "string",
-          "default": ""
-        },
         "timeClass": {
+          "type": "string",
+          "default": "classical",
+          "enum": ["daily", "classical", "rapid", "blitz", "bullet"]
+        },
+        "timeControl": {
           "type": "string",
           "default": ""
         },
@@ -228,7 +233,16 @@
         },
         "rules": {
           "type": "string",
-          "default": ""
+          "default": "chess",
+          "enum": [
+            "bughouse",
+            "chess",
+            "chess960",
+            "crazyhouse",
+            "kingofthehill",
+            "oddschess",
+            "threecheck"
+          ]
         },
         "whiteAccuracy": {
           "type": "number",
@@ -240,9 +254,52 @@
         },
         "whiteResult": {
           "type": "string",
-          "default": ""
+          "enum": [
+            "win",
+            "fiftymove",
+            "agreed",
+            "insufficient",
+            "repetition",
+            "stalemate",
+            "timevsinsufficient",
+            "checkmated",
+            "resigned",
+            "timeout",
+            "abandoned",
+            "bughousepartnerlose",
+            "threecheck",
+            "kingofthehill"
+          ]
         },
         "whiteUsername": {
+          "type": "string",
+          "default": ""
+        },
+        "whiteKing": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteQueen": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteRook": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteBishop": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteKnight": {
+          "type": "integer",
+          "default": 0
+        },
+        "whitePawn": {
+          "type": "integer",
+          "default": 0
+        },
+        "whiteCastling": {
           "type": "string",
           "default": ""
         },
@@ -256,9 +313,52 @@
         },
         "blackResult": {
           "type": "string",
-          "default": ""
+          "enum": [
+            "win",
+            "fiftymove",
+            "agreed",
+            "insufficient",
+            "repetition",
+            "stalemate",
+            "timevsinsufficient",
+            "checkmated",
+            "resigned",
+            "timeout",
+            "abandoned",
+            "bughousepartnerlose",
+            "threecheck",
+            "kingofthehill"
+          ]
         },
         "blackUsername": {
+          "type": "string",
+          "default": ""
+        },
+        "blackKing": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackQueen": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackRook": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackBishop": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackKnight": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackPawn": {
+          "type": "integer",
+          "default": 0
+        },
+        "blackCastling": {
           "type": "string",
           "default": ""
         },
@@ -270,12 +370,75 @@
           "type": "string",
           "default": ""
         },
+        "endPhrase": {
+          "type": "string",
+          "default": "endgame",
+          "enum": ["opening", "middlegame", "endgame"]
+        },
         "createdAt": {
-          "type": ["string", "null"],
+          "type": "string",
           "format": "date-time"
         },
         "updatedAt": {
-          "type": ["string", "null"],
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Opening": {
+      "type": "object",
+      "properties": {
+        "eco": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "fen": {
+          "type": "string",
+          "default": ""
+        },
+        "pgn": {
+          "type": "string",
+          "default": ""
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Country": {
+      "type": "object",
+      "properties": {
+        "cca2": {
+          "type": "string",
+          "default": ""
+        },
+        "cca3": {
+          "type": "string",
+          "default": ""
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "flag": {
+          "type": "string",
+          "default": ""
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
           "format": "date-time"
         }
       }
@@ -291,6 +454,12 @@
     },
     "game": {
       "$ref": "#/definitions/Game"
+    },
+    "opening": {
+      "$ref": "#/definitions/Opening"
+    },
+    "country": {
+      "$ref": "#/definitions/Country"
     }
   }
 }

@@ -1,5 +1,3 @@
-'use client';
-
 import { useTheme } from '@web/context/ThemeContext';
 import { useEffectOnce } from '@web/hooks/use-effect-once';
 import { select } from 'd3';

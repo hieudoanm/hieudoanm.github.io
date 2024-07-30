@@ -1,3 +1,5 @@
+import { DayOfWeek, TimeOfDay } from '@web/types/time';
+
 // Weekday
 export const DAYS: string[] = [
   'Sunday',
@@ -67,3 +69,18 @@ export const LAST_YEAR: number = 2100;
 export const END_DATES: number[] = [
   31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31,
 ];
+
+export const DAYS_OF_WEEK: Set<DayOfWeek> = new Set<DayOfWeek>();
+DAYS_OF_WEEK.add('sunday');
+DAYS_OF_WEEK.add('monday');
+DAYS_OF_WEEK.add('tuesday');
+DAYS_OF_WEEK.add('wednesday');
+DAYS_OF_WEEK.add('thursday');
+DAYS_OF_WEEK.add('friday');
+DAYS_OF_WEEK.add('saturday');
+
+export const TIME_OF_DAYS: Set<TimeOfDay> = new Set<TimeOfDay>();
+TIME_OF_DAYS.add('night');
+TIME_OF_DAYS.add('morning');
+TIME_OF_DAYS.add('afternoon');
+TIME_OF_DAYS.add('evening');

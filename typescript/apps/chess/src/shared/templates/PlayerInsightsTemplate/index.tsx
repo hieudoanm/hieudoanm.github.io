@@ -2,7 +2,7 @@
 
 import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
 import { useSearchParameter } from '@chess/common/hooks/use-search-param';
-import { ChessTitleAbbreviation } from '@prisma/client';
+import { Title } from '@prisma/client';
 import { useCallback, useEffect, useState } from 'react';
 import { FaChessPawn } from 'react-icons/fa';
 import {
@@ -26,7 +26,7 @@ export type PlayerInsightsTemplateProperties = {
   name?: string;
   avatar?: string;
   username?: string;
-  title?: ChessTitleAbbreviation;
+  title?: Title;
   insights?: Insights;
 };
 
@@ -37,7 +37,7 @@ export const PlayerInsightsTemplate: React.FC<
   name = '',
   username = '',
   avatar = '',
-  title = '' as ChessTitleAbbreviation,
+  title = '' as Title,
   insights = {} as Insights,
 }) => {
   const [timeClass] = useSearchParameter('timeClass', 'blitz');
