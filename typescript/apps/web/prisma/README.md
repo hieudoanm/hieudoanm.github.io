@@ -51,6 +51,8 @@ erDiagram
   Int bullet_record_win
   Int bullet_record_draw
   Int bullet_record_loss
+  DateTime created_at "nullable"
+  DateTime updated_at "nullable"
 }
 "game" {
   String uuid PK
@@ -73,6 +75,8 @@ erDiagram
   String black_username
   String opening
   String opening_name
+  DateTime created_at "nullable"
+  DateTime updated_at "nullable"
 }
 ```
 
@@ -125,6 +129,8 @@ erDiagram
 - `bullet_record_win`:
 - `bullet_record_draw`:
 - `bullet_record_loss`:
+- `created_at`:
+- `updated_at`:
 
 ### `game`
 
@@ -150,3 +156,5 @@ erDiagram
 - `black_username`:
 - `opening`:
 - `opening_name`:
+- `created_at`:
+- `updated_at`:

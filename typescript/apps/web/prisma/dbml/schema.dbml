@@ -46,6 +46,8 @@ Table player {
   bulletRecordWin Int [not null, default: 0]
   bulletRecordDraw Int [not null, default: 0]
   bulletRecordLoss Int [not null, default: 0]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
 }
 
 Table game {
@@ -69,6 +71,8 @@ Table game {
   blackUsername String [not null, default: '']
   opening String [not null, default: '']
   openingName String [not null, default: '']
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime [default: `now()`]
 }
 
 Enum Title {
@@ -82,4 +86,39 @@ Enum Title {
   WFM
   WCM
   WNM
+}
+
+Enum TimeClass {
+  daily
+  classical
+  rapid
+  blitz
+  bullet
+}
+
+Enum Result {
+  win
+  fiftymove
+  agreed
+  insufficient
+  repetition
+  stalemate
+  timevsinsufficient
+  checkmated
+  resigned
+  timeout
+  abandoned
+  bughousepartnerlose
+  threecheck
+  kingofthehill
+}
+
+Enum Variant {
+  bughouse
+  chess
+  chess960
+  crazyhouse
+  kingofthehill
+  oddschess
+  threecheck
 }

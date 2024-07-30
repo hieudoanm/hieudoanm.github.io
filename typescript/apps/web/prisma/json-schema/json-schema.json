@@ -177,6 +177,14 @@
         "bulletRecordLoss": {
           "type": "integer",
           "default": 0
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
         }
       }
     },
@@ -261,6 +269,14 @@
         "openingName": {
           "type": "string",
           "default": ""
+        },
+        "createdAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
         }
       }
     }
