@@ -1,8 +1,0 @@
-{
-  "buildCommand": "yarn build",
-  "cleanUrls": true,
-  "framework": "nextjs",
-  "installCommand": "yarn install",
-  "trailingSlash": false,
-  "regions": ["sin1"]
-}

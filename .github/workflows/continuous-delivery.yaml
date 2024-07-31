@@ -49,14 +49,14 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-timeout 86400000
       - name: Build Production
-        run: yarn build --filter="@hieudoanm/web"
+        run: yarn build
       - name: Disable Jekyll
         run: touch .nojekyll
-        working-directory: typescript/apps/web/out
+        working-directory: typescript/web/out
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.6.3
         with:
           token: ${{ secrets.GHP_TOKEN }}
           branch: gh-pages
-          folder: typescript/apps/web/out
+          folder: typescript/web/out
           clean: true
