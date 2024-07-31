@@ -3,7 +3,17 @@
 - [hieudoanm.github.io](https://hieudoanm.github.io)
 - [hieudoanm.vercel.app](https://hieudoanm.vercel.app)
 
+## Table of Content
+
+- [hieudoanm.github.io](#hieudoanmgithubio)
+  - [Table of Content](#table-of-content)
+  - [Techstack](#techstack)
+    - [Web Development](#web-development)
+    - [Data Science](#data-science)
+
 ## Techstack
+
+### Web Development
 
 Inspired by [T3](https://create.t3.gg/) and [T4](https://t4stack.com/)
 
@@ -22,3 +32,12 @@ Inspired by [T3](https://create.t3.gg/) and [T4](https://t4stack.com/)
 13. [postgresql](https://www.postgresql.org/)
 14. [terraform](https://www.terraform.io/)
 15. [vercel](https://vercel.com/)
+16. [supabase](https://supabase.com/)
+
+### Data Science
+
+1. [python](https://www.python.org/)
+2. [pandas](https://pandas.pydata.org/)
+3. [numpy](https://numpy.org/)
+4. [scikit-learn](https://scikit-learn.org/)
+5. [tensorflow](https://www.tensorflow.org/)
