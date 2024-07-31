@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InsightsTemplate to match snapshot 1`] = `
+exports[`ChessInsights to match snapshot 1`] = `
 <div>
   <div
     class="grid h-full grid-cols-1 gap-0 overflow-hidden py-8 md:grid-cols-4 md:gap-x-8"
@@ -224,7 +224,7 @@ exports[`InsightsTemplate to match snapshot 1`] = `
                           class="truncate text-right text-xs capitalize md:text-sm"
                         >
                           0
-
+                           
                           won
                         </div>
                       </div>
@@ -259,7 +259,7 @@ exports[`InsightsTemplate to match snapshot 1`] = `
                           class="truncate text-right text-xs capitalize md:text-sm"
                         >
                           0
-
+                           
                           drawn
                         </div>
                       </div>
@@ -294,7 +294,7 @@ exports[`InsightsTemplate to match snapshot 1`] = `
                           class="truncate text-right text-xs capitalize md:text-sm"
                         >
                           0
-
+                           
                           lost
                         </div>
                       </div>

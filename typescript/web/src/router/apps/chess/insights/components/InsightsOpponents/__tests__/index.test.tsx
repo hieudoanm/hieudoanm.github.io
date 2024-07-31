@@ -1,6 +1,6 @@
-import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
-import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
+import { Insights } from '@web/services/chess/chess.model';
+import { mockResizeObserver } from '@web/utils/mock-resize-observer';
 import { InsightsOpponents } from '..';
 
 describe('InsightsOpponents', () => {
@@ -10,7 +10,7 @@ describe('InsightsOpponents', () => {
 
   it('to match snapshot', () => {
     const { container } = render(
-      <InsightsOpponents insights={{ opponents: [] } as Insights} />
+      <InsightsOpponents insights={{ opponents: [] } as any as Insights} />
     );
     expect(container).toMatchSnapshot();
   });

@@ -16,11 +16,11 @@ exports[`InsightsHeader to match snapshot 1`] = `
         <div
           class="flex items-center gap-x-2"
         >
-          <div
-            class="h-4 w-12 rounded bg-red-500 text-center text-xs leading-4 text-white"
+          <span
+            class="badge badge-primary badge-outline"
           >
             GM
-          </div>
+          </span>
           <div>
             <a
               class="text-lg uppercase md:text-xl"

@@ -1,6 +1,13 @@
-import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
+import { mockResizeObserver } from '@web/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
 import { InsightsHeader } from '..';
+
+jest.mock('next/router', () => ({
+  useRouter: jest.fn().mockReturnValue({
+    basePath: '',
+    pathname: '',
+  }),
+}));
 
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({

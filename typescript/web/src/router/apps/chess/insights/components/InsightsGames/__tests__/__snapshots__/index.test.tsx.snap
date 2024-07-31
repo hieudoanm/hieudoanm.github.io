@@ -141,7 +141,7 @@ exports[`InsightsGames to match snapshot 1`] = `
                     class="truncate text-right text-xs capitalize md:text-sm"
                   >
                     0
-
+                     
                     won
                   </div>
                 </div>
@@ -176,7 +176,7 @@ exports[`InsightsGames to match snapshot 1`] = `
                     class="truncate text-right text-xs capitalize md:text-sm"
                   >
                     0
-
+                     
                     drawn
                   </div>
                 </div>
@@ -211,7 +211,7 @@ exports[`InsightsGames to match snapshot 1`] = `
                     class="truncate text-right text-xs capitalize md:text-sm"
                   >
                     0
-
+                     
                     lost
                   </div>
                 </div>

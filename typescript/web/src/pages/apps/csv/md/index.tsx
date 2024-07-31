@@ -10,7 +10,7 @@ const HomePage: NextPage = () => {
   const [csv, setCSV] = useState<string>(
     'header1,header2,header3,header4\nvalue1,value2,value3,value4\nvalue1,value2,value3,value4\nvalue1,value2,value3,value4\nvalue1,value2,value3,value4'
   );
-  const [json, setJSON] = useState<string>('');
+  const [json, setJSON] = useState<string>('[]');
   const [name, setName] = useState<string>('file_name');
   const [delimiter, setDelimiter] = useState<string>(',');
 

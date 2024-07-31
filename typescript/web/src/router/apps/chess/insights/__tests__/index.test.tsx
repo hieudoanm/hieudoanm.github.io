@@ -1,7 +1,14 @@
-import { Insights } from '@chess/app/api/chess/players/[username]/insights/model';
-import { mockResizeObserver } from '@chess/common/utils/mock-resize-observer';
 import { render } from '@testing-library/react';
-import { InsightsTemplate } from '..';
+import { Insights } from '@web/services/chess/chess.model';
+import { mockResizeObserver } from '@web/utils/mock-resize-observer';
+import { ChessInsights } from '..';
+
+jest.mock('next/router', () => ({
+  useRouter: jest.fn().mockReturnValue({
+    basePath: '',
+    pathname: '',
+  }),
+}));
 
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
@@ -12,15 +19,13 @@ jest.mock('next/navigation', () => ({
   useSearchParams: jest.fn().mockReturnValue(new URLSearchParams()),
 }));
 
-describe('InsightsTemplate', () => {
+describe('ChessInsights', () => {
   beforeEach(() => {
     mockResizeObserver();
   });
 
   it('to match snapshot', () => {
-    const { container } = render(
-      <InsightsTemplate insights={{} as Insights} />
-    );
+    const { container } = render(<ChessInsights insights={{} as Insights} />);
     expect(container).toMatchSnapshot();
   });
 });
