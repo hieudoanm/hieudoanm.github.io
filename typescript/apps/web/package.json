@@ -74,7 +74,7 @@
     "@types/uuid": "10.0.0",
     "@types/web-bluetooth": "0.0.20",
     "autoprefixer": "10.4.19",
-    "chroma-js": "2.4.2",
+    "chroma-js": "2.6.0",
     "d3": "7.9.0",
     "daisyui": "4.12.10",
     "eslint": "8.57.0",
