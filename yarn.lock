@@ -232,10 +232,10 @@
   resolved "https://registry.yarnpkg.com/@apollo/utils.withrequired/-/utils.withrequired-3.0.0.tgz#1342bab438528d09c41e43ce33cb976fa9c99e52"
   integrity sha512-aaxeavfJ+RHboh7c2ofO5HHtQobGX4AgUujXP4CXpREHp9fQ9jPi6K9T1jrAKe7HIipoP0OJ1gd6JamSkFIpvA==
 
-"@as-integrations/next@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@as-integrations/next/-/next-3.0.0.tgz#868d45da046164a97c4e267abdf6a4b76b9f87ff"
-  integrity sha512-FmqJjoH5XamyBZQVTnnG9ssE3ywf/TPIanFGwYjp3YFsX92F1lY7FDcrQJa/gCJQnb8gSZAdqAIgrWo4K325sA==
+"@as-integrations/next@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@as-integrations/next/-/next-3.1.0.tgz#513509cd5c269e91c3d1cda883a2ac9f07711800"
+  integrity sha512-grNdI/LgUebsYSc2wmoIFBpF+d7RjRO4nUWrM+8hVhSFzJlLd5vBfTcvFQ0LaOnhHpQmDBqNFIss+97Q+NZHiQ==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.23.5", "@babel/code-frame@^7.24.7":
   version "7.24.7"
