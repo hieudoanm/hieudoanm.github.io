@@ -20,7 +20,7 @@
     "prestart": "kill-port 3000",
     "start": "next start -p 3000",
     "pretest": "rimraf coverage",
-    "test": "jest",
+    "test": "jest --coverage",
     "prepare": "husky || true"
   },
   "dependencies": {

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Insights } from '@web/services/chess/chess.model';
 import { mockResizeObserver } from '@web/utils/mock-resize-observer';
-import { ChessInsights } from '..';
+import { ChessInsights } from '../ChessInsights';
 
 jest.mock('next/router', () => ({
   useRouter: jest.fn().mockReturnValue({

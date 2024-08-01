@@ -1,10 +1,10 @@
+import { DING_CHESS_USERNAME } from '@web/constants/chess.constants';
+import { Layout } from '@web/layout';
+import { ChessInsights } from '@web/router/apps/chess/insights/ChessInsights';
+import { QueryTemplate } from '@web/templates/QueryTemplate';
+import { trpc } from '@web/utils/trpc';
 import { NextPage } from 'next';
 import { FC } from 'react';
-import { trpc } from '@web/utils/trpc';
-import { DING_CHESS_USERNAME } from '@web/constants/chess.constants';
-import { QueryTemplate } from '@web/templates/QueryTemplate';
-import { Layout } from '@web/layout';
-import { ChessInsights } from '@web/router/apps/chess/insights';
 
 const InsightsQuery: FC = () => {
   const { isPending, error, data } = trpc.chess.insights.useQuery({
