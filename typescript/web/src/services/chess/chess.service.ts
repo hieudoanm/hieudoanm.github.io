@@ -1334,9 +1334,9 @@ type Leader = {
   country: string;
   username: string;
   name: string;
-  rapid_rating_last: number;
-  blitz_rating_last: number;
-  bullet_rating_last: number;
+  rapid_rating_best: number;
+  blitz_rating_best: number;
+  bullet_rating_best: number;
 };
 
 export const getLeaderboard = async ({
@@ -1349,7 +1349,7 @@ export const getLeaderboard = async ({
   countryCode?: string;
 }): Promise<Leader[]> => {
   try {
-    const query = `SELECT p."title", p."country_code", p."country", p."username", p."name", p."bullet_rating_last", p."blitz_rating_last", p."rapid_rating_last" FROM chess."player" AS p ${buildPlayersWhereClause({ days, title, countryCode })} ORDER BY p."bullet_rating_last" DESC, p."blitz_rating_last" DESC, p."rapid_rating_last" DESC LIMIT 100 OFFSET 0 ;`;
+    const query = `SELECT p."title", p."country_code", p."country", p."username", p."name", p."bullet_rating_best", p."blitz_rating_best", p."rapid_rating_best" FROM chess."player" AS p ${buildPlayersWhereClause({ days, title, countryCode })} ORDER BY p."blitz_rating_best" DESC, p."bullet_rating_best" DESC, p."rapid_rating_best" DESC LIMIT 100 OFFSET 0 ;`;
     const sql = Prisma.raw(query);
     return prismaClient.$queryRaw(sql);
   } catch (error) {

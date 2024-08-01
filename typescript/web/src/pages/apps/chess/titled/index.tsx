@@ -477,9 +477,9 @@ const TitledQuery: FC = () => {
                           country,
                           username,
                           name,
-                          rapid_rating_last,
-                          blitz_rating_last,
-                          bullet_rating_last,
+                          rapid_rating_best,
+                          blitz_rating_best,
+                          bullet_rating_best,
                         },
                         index: number
                       ) => {
@@ -498,9 +498,9 @@ const TitledQuery: FC = () => {
                                 {name || username}
                               </Link>
                             </td>
-                            <td align='right'>{rapid_rating_last}</td>
-                            <td align='right'>{blitz_rating_last}</td>
-                            <td align='right'>{bullet_rating_last}</td>
+                            <td align='right'>{rapid_rating_best}</td>
+                            <td align='right'>{blitz_rating_best}</td>
+                            <td align='right'>{bullet_rating_best}</td>
                           </tr>
                         );
                       }
