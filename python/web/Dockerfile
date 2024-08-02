@@ -22,6 +22,12 @@ RUN python3 -m pip install --no-cache-dir --upgrade -r /code/requirements.txt
 COPY ./resources/chess/openings/json/dict/openings.json /code/resources/chess/openings/json/dict/openings.json
 COPY ./resources/chess/openings/json/list/openings.json /code/resources/chess/openings/json/list/openings.json
 
+# Copy Models
+COPY ./models/label.pkl /code/models/label.pkl
+COPY ./models/model.pkl /code/models/model.pkl
+COPY ./models/vector.pkl /code/models/vector.pkl
+
+
 # Start Application
 COPY ./main.py /code/main.py
 EXPOSE $PORT
