@@ -2972,10 +2972,10 @@
   resolved "https://registry.yarnpkg.com/@trpc/client/-/client-11.0.0-rc.475.tgz#077ae0d8b3c261ab6027a896c6625569a507bc74"
   integrity sha512-PUEIBKN66jib+VjpZKsmYYPMQN1nkvG8J0W6Co9QcMppH7d84/kNBodkCeodyhoBnbROKEBlEK0IOb7XKqEyrQ==
 
-"@trpc/next@11.0.0-rc.474":
-  version "11.0.0-rc.474"
-  resolved "https://registry.yarnpkg.com/@trpc/next/-/next-11.0.0-rc.474.tgz#5f11a6f0298ac719a5032c46f08672f1cde5ab0b"
-  integrity sha512-uaS+CQU5rvyJpEpHvZCK5YU0cR1LD5qX8pBRUR0s37E5TSAO9juNw/JRgSdQzARiPFks2kdeKJ3Lmhou+6zpWQ==
+"@trpc/next@11.0.0-rc.475":
+  version "11.0.0-rc.475"
+  resolved "https://registry.yarnpkg.com/@trpc/next/-/next-11.0.0-rc.475.tgz#c99e15e103b7e4a1977b625b817a402dfea821a2"
+  integrity sha512-b7PqdM2uGi9LzbxDeP2obRQVVlnm8jTU+6d6/EFD+kmlAFMoNm9GBeOkjO5imdWOFBGXk/nT/TBVpuasIe8S0g==
 
 "@trpc/react-query@11.0.0-rc.475":
   version "11.0.0-rc.475"
