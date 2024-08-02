@@ -4,10 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-chess = '*'
+chess = "*"
+curl-cffi= "*"
 fastapi = "*"
+g4f = "*"
 pydantic = "*"
 scikit-learn = "*"
+stockfish = "*"
 uvicorn = "*"
 
 [dev-packages]
