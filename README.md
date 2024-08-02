@@ -17,7 +17,7 @@ Inspired by [T3](https://create.t3.gg/) and [T4](https://t4stack.com/)
 | ------------------- | ---------------------------- | ------------------------------------ |
 | Languages           | [python][python]             | [typescript][typescript]             |
 | Linter              | [pylint][pylint]             | [eslint](https://eslint.org/)        |
-| Linter (React)      |                              | [million][million]                   |
+| Linter (React)      | [ruff][ruff]                 | [million][million]                   |
 | Formatter           | [black][black]               | [prettier](https://prettier.io/)     |
 | Testing             |                              | [jest](https://jestjs.io/)           |
 | Build               |                              | [turbo](https://turbo.build/)        |
@@ -47,6 +47,7 @@ Inspired by [T3](https://create.t3.gg/) and [T4](https://t4stack.com/)
 [pylint]: https://www.pylint.org/
 [python]: https://www.python.org/
 [requests]: https://requests.readthedocs.io/en/latest/
+[ruff]: https://docs.astral.sh/ruff
 [scikit-learn]: https://scikit-learn.org/
 [tailwindcss]: https://tailwindcss.com/
 [tanstack-query]: https://tanstack.com/query/latest
