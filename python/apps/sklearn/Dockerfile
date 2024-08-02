@@ -1,4 +1,4 @@
-FROM python:3.12.4
+FROM python:3.12
 
 # Set labels
 LABEL maintainer="hieumdoan@gmail.com"
@@ -9,16 +9,20 @@ ENV CONTAINER='true'
 ENV LOG_LEVEL='error'
 ENV PORT='10000'
 
-RUN python3 -m pip install pipenv
+# Install Stockfish
+RUN apt-get update && apt upgrade -y && apt install scid stockfish -y && rm -rf /var/lib/apt/lists/*
+RUN /usr/games/stockfish help
 
 # Instal Python Dependencies
-COPY ./main.py main.py
-COPY ./models models
-COPY ./requirements.txt requirements.txt
-RUN python3 -m pip install -r requirements.txt
+WORKDIR /code
+COPY ./requirements.txt /code/requirements.txt
+RUN python3 -m pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+# Copy Chess Openings
+COPY ./resources/chess/openings/json/dict/openings.json /code/resources/chess/openings/json/dict/openings.json
+COPY ./resources/chess/openings/json/list/openings.json /code/resources/chess/openings/json/list/openings.json
 
 # Start Application
+COPY ./main.py /code/main.py
 EXPOSE $PORT
-
-ENTRYPOINT ["python3"]
-CMD ["main.py"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000", "--loop", "asyncio"]
