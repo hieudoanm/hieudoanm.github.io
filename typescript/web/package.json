@@ -34,7 +34,7 @@
     "@tanstack/react-table": "8.19.3",
     "@tanstack/react-virtual": "3.8.4",
     "@trpc/client": "11.0.0-rc.475",
-    "@trpc/next": "11.0.0-rc.474",
+    "@trpc/next": "11.0.0-rc.475",
     "@trpc/react-query": "11.0.0-rc.475",
     "@trpc/server": "11.0.0-rc.475",
     "chart.js": "4.4.3",
