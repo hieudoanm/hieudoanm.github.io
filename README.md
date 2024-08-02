@@ -8,36 +8,50 @@
 - [hieudoanm.github.io](#hieudoanmgithubio)
   - [Table of Content](#table-of-content)
   - [Techstack](#techstack)
-    - [Web Development](#web-development)
-    - [Data Science](#data-science)
 
 ## Techstack
 
-### Web Development
-
 Inspired by [T3](https://create.t3.gg/) and [T4](https://t4stack.com/)
 
-1. [typescript](https://www.typescriptlang.org/)
-2. [eslint](https://eslint.org/)
-3. [million](https://million.dev/)
-4. [prettier](https://prettier.io/)
-5. [jest](https://jestjs.io/)
-6. [turbo](https://turbo.build/)
-7. [next.js](https://nextjs.org/)
-8. [tailwindcss](https://tailwindcss.com/)
-9. [daisyui](https://daisyui.com/)
-10. [tanstack](https://tanstack.com/)
-11. [trpc](https://trpc.io/)
-12. [prisma](https://www.prisma.io/)
-13. [postgresql](https://www.postgresql.org/)
-14. [terraform](https://www.terraform.io/)
-15. [vercel](https://vercel.com/)
-16. [supabase](https://supabase.com/)
+| Purpose             | Data Science                 | Web Development                      |
+| ------------------- | ---------------------------- | ------------------------------------ |
+| Languages           | [python][python]             | [typescript][typescript]             |
+| Linter              | [pylint][pylint]             | [eslint](https://eslint.org/)        |
+| Linter (React)      |                              | [million][million]                   |
+| Formatter           | [black][black]               | [prettier](https://prettier.io/)     |
+| Testing             |                              | [jest](https://jestjs.io/)           |
+| Build               |                              | [turbo](https://turbo.build/)        |
+| CSS Utilities       |                              | [tailwindcss][tailwindcss]           |
+| CSS Framework       |                              | [daisyui](https://daisyui.com/)      |
+| Front-end Framework |                              | [next.js](https://nextjs.org/)       |
+| Data Table          |                              | [TanStack Table][tanstack-table]     |
+| Data Virtual        |                              | [TanStack Virtual][tanstack-virtual] |
+| Data Query          | [requests][requests]         | [Tanstack Query][tanstack-query]     |
+| Back-end Framework  | [FastAPI][fastapi]           | [trpc](https://trpc.io/)             |
+| ORM                 |                              | [prisma](https://www.prisma.io/)     |
+| Database            | [PostgreSQL][postgresql]     | [PostgreSQL][postgresql]             |
+| IaC                 |                              | [Terraform][terraform]               |
+| PaaS                |                              | [Vercel](https://vercel.com/)        |
+| BaaS                |                              | [Supabase](https://supabase.com/)    |
+| Data Analysis       | [pandas][pandas]             |                                      |
+| Math                | [numpy](https://numpy.org/)  | [math.js][math.js]                   |
+| Machine Learning    | [tensorflow][tensorflow]     | [tensorflow][tensorflow]             |
+| Machine Learning    | [scikit-learn][scikit-learn] |                                      |
 
-### Data Science
-
-1. [python](https://www.python.org/)
-2. [pandas](https://pandas.pydata.org/)
-3. [numpy](https://numpy.org/)
-4. [scikit-learn](https://scikit-learn.org/)
-5. [tensorflow](https://www.tensorflow.org/)
+[black]: https://black.readthedocs.io/
+[fastapi]: https://fastapi.tiangolo.com/
+[math.js]: https://mathjs.org/
+[million]: https://million.dev/
+[pandas]: https://pandas.pydata.org/
+[postgresql]: https://www.postgresql.org/
+[pylint]: https://www.pylint.org/
+[python]: https://www.python.org/
+[requests]: https://requests.readthedocs.io/en/latest/
+[scikit-learn]: https://scikit-learn.org/
+[tailwindcss]: https://tailwindcss.com/
+[tanstack-query]: https://tanstack.com/query/latest
+[tanstack-table]: https://tanstack.com/table/latest
+[tanstack-virtual]: https://tanstack.com/virtual/latest
+[tensorflow]: https://www.tensorflow.org/
+[terraform]: https://www.terraform.io/
+[typescript]: https://www.typescriptlang.org/

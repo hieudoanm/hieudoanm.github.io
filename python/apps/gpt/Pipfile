@@ -12,6 +12,7 @@ nest-asyncio = "*"
 pandas = "*"
 psutil = "*"
 pydantic = "*"
+stockfish = "*"
 requests = "*"
 uvicorn = "*"
 
