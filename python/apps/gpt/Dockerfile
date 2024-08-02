@@ -9,10 +9,18 @@ ENV CONTAINER='true'
 ENV LOG_LEVEL='error'
 ENV PORT='10000'
 
+# Install Stockfish
+RUN apt-get update && apt upgrade -y && apt install scid stockfish -y && rm -rf /var/lib/apt/lists/*
+RUN /usr/games/stockfish help
+
 # Instal Python Dependencies
 WORKDIR /code
 COPY ./requirements.txt /code/requirements.txt
 RUN python3 -m pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+# Copy Chess Openings
+COPY ./resources/chess/openings/json/dict/openings.json /code/resources/chess/openings/json/dict/openings.json
+COPY ./resources/chess/openings/json/list/openings.json /code/resources/chess/openings/json/list/openings.json
 
 # Start Application
 COPY ./main.py /code/main.py

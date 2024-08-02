@@ -4,11 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+chess = "*"
+curl-cffi = "*"
 fastapi = "*"
 g4f = "*"
 nest-asyncio = "*"
+pandas = "*"
+psutil = "*"
 pydantic = "*"
-curl-cffi = "*"
+requests = "*"
 uvicorn = "*"
 
 [dev-packages]

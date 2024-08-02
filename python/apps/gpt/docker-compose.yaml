@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  hieudoanm:
+    build: .
+    container_name: "hieudoanm"
+    ports:
+      - "8000:8000"
+    environment:
+      DEVELOPMENT: false
+      LOG_LEVEL: "info"
+      DOCKER: true
+      PORT: "8000"

@@ -21,6 +21,8 @@ RUN python3 -m pip install --no-cache-dir --upgrade -r /code/requirements.txt
 # Start Application
 COPY ./resources/chess/openings/json/dict/openings.json /code/resources/chess/openings/json/dict/openings.json
 COPY ./resources/chess/openings/json/list/openings.json /code/resources/chess/openings/json/list/openings.json
+
+
 COPY ./main.py /code/main.py
 EXPOSE $PORT
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
