@@ -11,7 +11,7 @@ asgiref==3.8.1
 astroid==3.2.4
 asttokens==2.4.1
 async-lru==2.0.4
-attrs==23.2.0
+attrs==24.1.0
 Babel==2.15.0
 backcall==0.2.0
 backoff==2.2.1
