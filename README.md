@@ -13,40 +13,40 @@
 
 Inspired by [T3][t3] and [T4][t4]
 
-| No  | Group       | Usage                       | Data Science                                    | Web Development                                  |
-| --- | ----------- | --------------------------- | ----------------------------------------------- | ------------------------------------------------ |
-| 01  | Development | Languages                   | [Python][python]                                | [TypeScript][typescript]                         |
-| 02  | Development | Runtime Environment         | [virtualenv][virtualenv]                        | [Node.js][node.js]                               |
-| 03  | Development | Packages Registry x Manager | [PyPi][pypi] x [pip][pip]                       | [npm][npm] x [Yarn][yarn]                        |
-| 04  | Development | Linter                      | [Pylint][pylint]                                | [ESLint][eslint] x [Million][million]            |
-| 05  | Development | Formatter                   | [Black][black]                                  | [Prettier][prettier]                             |
-| 06  | Development | Linter x Formatter          | [Ruff][ruff]                                    | [Biome][biome]                                   |
-| 07  | Development | Testing                     | [PyTest][pytest]                                | [Jest][jest]                                     |
-| 08  | Development | Build                       |                                                 | [Turbo][turbo]                                   |
-| 09  | Development | Documentation               | [Jupyter][jupyter]                              | [Markdown][markdown]                             |
-| 10  | Front-end   | Styling (shared)            | [Tailwindcss][tailwindcss] x [DaisyUI][daisyui] | [Tailwindcss][tailwindcss] x [DaisyUI][daisyui]  |
-| 11  | Front-end   | Framework                   | [HTMX][htmx]                                    | [Next.js][next.js]                               |
-| 12  | Front-end   | Data Format                 | CSV                                             | JSON                                             |
-| 13  | Front-end   | Data Query                  | [Requests][requests]                            | [Tanstack Query][tanstack-query]                 |
-| 14  | Front-end   | Data Tabular                | [Pandas][pandas]                                | [TanStack Virtual Table][tanstack-virtual-table] |
-| 15  | Front-end   | Data Visualisation          | [Matplotlib][matplotlib]                        | [Recharts][recharts]                             |
-| 16  | Back-end    | Documentation (shared)      | [Swagger][swagger]                              | [Swagger][swagger]                               |
-| 17  | Back-end    | Framework                   | [FastAPI][fastapi]                              | [tRPC][trpc]                                     |
-| 18  | Back-end    | Messaging                   | [Kafka][kafka]                                  | [gRPC][grpc]                                     |
-| 19  | Back-end    | ORM                         | [SQLAlchemy][sqlalchemy]                        | [Drizzle][drizzle] / [Prisma][prisma]            |
-| 20  | Back-end    | Database (shared)           | [PostgreSQL][postgresql]                        | [PostgreSQL][postgresql]                         |
-| 21  | DevOps      | CI/CD (shared)              | [GitHub Actions][github-actions]                | [GitHub Actions][github-actions]                 |
-| 22  | DevOps      | Containerisation            | [Docker (Python)][docker-python]                | [Docker (Node.js)][docker-node]                  |
-| 23  | DevOps      | IaC (shared)                | [Terraform][terraform]                          | [Terraform][terraform]                           |
-| 24  | DevOps      | PaaS                        | [Render][render]                                | [Vercel][vercel]                                 |
-| 25  | DevOps      | DBaaS                       | [Neon][neon]                                    | [Supabase][supabase]                             |
-| 26  | AI          | Math                        | [NumPy][numpy]                                  | [math.js][math.js]                               |
-| 27  | AI          | Machine Learning            | [scikit-learn][scikit-learn]                    | [ml5][ml5]                                       |
-| 28  | AI          | Deep Learning               | [TensorFlow][tensorflow] / [PyTorch][pytorch]   | [TensorFlow][tensorflow] / [brain.js][brain.js]  |
-| 29  | AI          | Chess Engine (shared)       | [Stockfish][stockfish]                          | [Stockfish][stockfish]                           |
-| 30  | AI          | Computer Vision (shared)    | [OpenCV][opencv]                                | [OpenCV][opencv]                                 |
-| 31  | AI          | Languages Processing        | [nltk][nltk]                                    | [natural][natural]                               |
-| 32  | AI          | Web Scraping                | [BeautifulSoup][beautifulsoup]                  | [Cheerio][cheerio]                               |
+| No  | Group    | Subgroup           | Usage                    | Data Science                                                   | Software Development                             |
+| --- | -------- | ------------------ | ------------------------ | -------------------------------------------------------------- | ------------------------------------------------ |
+| 01  | DevTools | Languages          |                          | [Python][python]                                               | [TypeScript][typescript]                         |
+| 02  | DevTools | Environment        |                          | [virtualenv][virtualenv]                                       | [Node.js][node.js]                               |
+| 03  | DevTools | Packages           | Registry x Manager       | [PyPi][pypi] x [pip][pip]                                      | [npm][npm] x [Yarn][yarn]                        |
+| 04  | DevTools | Linter x Formatter | Linter                   | [Pylint][pylint]                                               | [ESLint][eslint] x [Million][million]            |
+| 05  | DevTools | Linter x Formatter | Formatter                | [Black][black]                                                 | [Prettier][prettier]                             |
+| 06  | DevTools | Linter x Formatter | Linter x Formatter       | [Ruff][ruff]                                                   | [Biome][biome]                                   |
+| 07  | DevTools | Testing            |                          | [PyTest][pytest]                                               | [Jest][jest]                                     |
+| 08  | DevTools | Build              |                          |                                                                | [Turbo][turbo]                                   |
+| 09  | Software | Front-end          | Documentation            | [Jupyter][jupyter]                                             | [Markdown][markdown]                             |
+| 10  | Software | Front-end          | Styling (shared)         | [Tailwindcss][tailwindcss] x [DaisyUI][daisyui]                | [Tailwindcss][tailwindcss] x [DaisyUI][daisyui]  |
+| 11  | Software | Front-end          | Web                      | [HTMX][htmx]                                                   | [Next.js][next.js]                               |
+| 16  | Software | Front-end          | Mobile                   |                                                                | [Expo][expo]                                     |
+| 12  | Software | Front-end          | Data Format              | CSV                                                            | JSON                                             |
+| 13  | Software | Front-end          | Data Query               | [Requests][requests]                                           | [Tanstack Query][tanstack-query]                 |
+| 14  | Software | Front-end          | Data Tabular             | [Pandas][pandas]                                               | [TanStack Virtual Table][tanstack-virtual-table] |
+| 15  | Software | Front-end          | Data Visualisation       | [Matplotlib][matplotlib] / [Seaborn][seaborn]                  | [Recharts][recharts] / [Plotly][plotly]          |
+| 17  | Software | Back-end           | Framework                | [FastAPI][fastapi] ([Swagger][swagger])                        | [tRPC][trpc]                                     |
+| 18  | Software | Back-end           | Messaging                | [Kafka][kafka]                                                 | [gRPC][grpc]                                     |
+| 19  | Software | Back-end           | [PostgreSQL][postgresql] | [SQLAlchemy][sqlalchemy]                                       | [Drizzle][drizzle] / [Prisma][prisma]            |
+| 20  | Software | Back-end           | [PostgreSQL][postgresql] | [Neon][neon]                                                   | [Supabase][supabase]                             |
+| 21  | Software | DevOps             | CI/CD (shared)           | [GitHub Actions][github-actions]                               | [GitHub Actions][github-actions]                 |
+| 22  | Software | DevOps             | Containerisation         | [Docker (Python)][docker-python]                               | [Docker (Node.js)][docker-node]                  |
+| 23  | Software | DevOps             | IaC (shared)             | [Terraform][terraform]                                         | [Terraform][terraform]                           |
+| 24  | Software | DevOps             | PaaS                     | [Render][render]                                               | [Vercel][vercel]                                 |
+| 25  | AI       | General            | Math                     | [NumPy][numpy]                                                 | [math.js][math.js]                               |
+| 26  | AI       | General            | Science                  | [SciPy][scipy]                                                 |                                                  |
+| 27  | AI       | General            | Machine Learning         | [scikit-learn][scikit-learn]                                   | [ml5][ml5]                                       |
+| 28  | AI       | General            | Deep Learning            | [Keras][keras] ([TensorFlow][tensorflow] x [PyTorch][pytorch]) | [brain.js][brain.js]                             |
+| 29  | AI       | Specialised        | Chess Engine (shared)    | [Stockfish][stockfish]                                         | [Stockfish][stockfish]                           |
+| 30  | AI       | Specialised        | Computer Vision (shared) | [OpenCV][opencv]                                               | [OpenCV][opencv]                                 |
+| 31  | AI       | Specialised        | Languages Processing     | [nltk][nltk] / [spaCy][spacy]                                  | [natural][natural]                               |
+| 32  | AI       | Specialised        | Web Scraping             | [BeautifulSoup][beautifulsoup]                                 | [Cheerio][cheerio]                               |
 
 [beautifulsoup]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 [biome]: https://biomejs.dev/
@@ -58,6 +58,7 @@ Inspired by [T3][t3] and [T4][t4]
 [docker-python]: https://hub.docker.com/_/python
 [drizzle]: https://orm.drizzle.team/
 [eslint]: https://eslint.org/
+[expo]: https://expo.dev/
 [fastapi]: https://fastapi.tiangolo.com/
 [github-actions]: https://github.com/features/actions
 [grpc]: https://grpc.io/
@@ -65,6 +66,7 @@ Inspired by [T3][t3] and [T4][t4]
 [jest]: https://jestjs.io/
 [jupyter]: https://jupyter.org/
 [kafka]: https://kafka.apache.org/
+[keras]: https://keras.io/
 [markdown]: https://www.markdownguide.org/
 [math.js]: https://mathjs.org/
 [matplotlib]: https://matplotlib.org/
@@ -80,6 +82,7 @@ Inspired by [T3][t3] and [T4][t4]
 [opencv]: https://opencv.org/
 [pandas]: https://pandas.pydata.org/
 [pip]: https://pip.pypa.io/
+[plotly]: https://plotly.com/
 [postgresql]: https://www.postgresql.org/
 [prettier]: https://prettier.io/
 [prisma]: https://www.prisma.io/
@@ -93,6 +96,9 @@ Inspired by [T3][t3] and [T4][t4]
 [requests]: https://requests.readthedocs.io/en/latest/
 [ruff]: https://docs.astral.sh/ruff
 [scikit-learn]: https://scikit-learn.org/
+[scipy]: https://scipy.org/
+[seaborn]: https://seaborn.pydata.org/
+[spacy]: https://spacy.io/
 [sqlalchemy]: https://www.sqlalchemy.org/
 [stockfish]: https://stockfishchess.org/
 [supabase]: https://supabase.com/
@@ -102,6 +108,7 @@ Inspired by [T3][t3] and [T4][t4]
 [tailwindcss]: https://tailwindcss.com/
 [tanstack-query]: https://tanstack.com/query/latest
 [tanstack-virtual-table]: https://tanstack.com/virtual/latest/docs/framework/react/examples/table
+[tauri]: https://tauri.app/
 [tensorflow]: https://www.tensorflow.org/
 [terraform]: https://www.terraform.io/
 [trpc]: https://trpc.io/
