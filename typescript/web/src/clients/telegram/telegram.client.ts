@@ -17,8 +17,9 @@ const post = async <T, D>(
   options: AxiosRequestConfig<D> = {}
 ): Promise<T> => {
   try {
-    const response = await axios.post<T, AxiosResponse<T>, D>(
-      url,
+    const encodedUrl = encodeURI(url);
+    const response: AxiosResponse<T> = await axios.post<T, AxiosResponse<T>, D>(
+      encodedUrl,
       data,
       options
     );

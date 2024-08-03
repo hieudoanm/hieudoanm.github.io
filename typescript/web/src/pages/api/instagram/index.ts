@@ -34,7 +34,7 @@ const getImages = (links: string[]): Promise<string[]> => {
 
 const getLinks = async (url: string) => {
   if (url.endsWith('/')) url = url.slice(0, -1);
-  const embedUrl: string = `${url}/embed/captioned`;
+  const embedUrl: string = encodeURI(`${url}/embed/captioned`);
   logger.info('embedUrl', embedUrl);
   const headers = { 'User-Agent': 'PostmanRuntime/7.37.0' };
   const response = await axios.get<string>(embedUrl, { headers });
