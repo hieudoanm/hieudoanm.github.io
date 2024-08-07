@@ -61,4 +61,6 @@ export const getStaticProps = async (
 //   return { props: { mdxSource } };
 // };
 
+export const dynamic = 'force-static';
+
 export default NotePage;
