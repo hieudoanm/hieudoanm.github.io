@@ -1,10 +1,118 @@
 # Best 11
 
+## Champions
+
+| Year | World Cup    | Euro           | Copa America | Champion League   | Premier League    | La Liga             | Seria A     | Bundesliga           | Ligue 1             |
+| ---- | ------------ | -------------- | ------------ | ----------------- | ----------------- | ------------------- | ----------- | -------------------- | ------------------- |
+| 1930 | Uruguay      |                |              |                   |                   |                     |             |                      |                     |
+| 1931 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1932 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1933 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1934 | Italy        |                |              |                   |                   |                     |             |                      |                     |
+| 1935 |              |                | Uruguay      |                   |                   |                     |             |                      |                     |
+| 1936 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1937 |              |                | Argentina    |                   |                   |                     |             |                      |                     |
+| 1938 | Italy        |                |              |                   |                   |                     |             |                      |                     |
+| 1939 |              |                | Peru         |                   |                   |                     |             |                      |                     |
+| 1940 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1941 |              |                | Argentina    |                   |                   |                     |             |                      |                     |
+| 1942 |              |                | Uruguay      |                   |                   |                     |             |                      |                     |
+| 1943 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1944 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1945 |              |                | Argentina    |                   |                   |                     |             |                      |                     |
+| 1946 |              |                | Argentina    |                   |                   |                     |             |                      |                     |
+| 1947 |              |                | Argentina    |                   |                   |                     |             |                      |                     |
+| 1948 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1949 |              |                | Brazil       |                   |                   |                     |             |                      |                     |
+| 1950 | Uruguay      |                |              |                   |                   |                     |             |                      |                     |
+| 1951 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1952 |              |                |              |                   |                   |                     |             |                      |                     |
+| 1953 |              |                | Paraguay     |                   |                   |                     |             |                      |                     |
+| 1954 | West Germany |                |              |                   |                   |                     |             |                      |                     |
+| 1955 |              |                | Argentina    |                   |                   |                     |             |                      |                     |
+| 1956 |              |                | Uruguay      | Real Madrid       |                   |                     |             |                      |                     |
+| 1957 |              |                | Argentina    | Real Madrid       |                   |                     |             |                      |                     |
+| 1958 | Brazil       |                |              | Real Madrid       |                   |                     |             |                      |                     |
+| 1959 |              |                | Argentina    | Real Madrid       |                   |                     |             |                      |                     |
+| 1960 |              | Soviet Union   |              | Real Madrid       |                   |                     |             |                      |                     |
+| 1961 |              |                |              | Benfica           |                   |                     |             |                      |                     |
+| 1962 | Brazil       |                |              | Benfica           |                   |                     |             |                      |                     |
+| 1963 |              |                | Bolivia      | AC Milan          |                   |                     |             |                      |                     |
+| 1964 |              | Spain          |              | Inter Milan       |                   |                     |             |                      |                     |
+| 1965 |              |                |              | Inter Milan       |                   |                     |             |                      |                     |
+| 1966 | England      |                |              | Real Madrid       |                   |                     |             |                      |                     |
+| 1967 |              |                | Uruguay      | Celtic            |                   |                     |             |                      |                     |
+| 1968 |              | Italy          |              | Manchester United |                   |                     |             |                      |                     |
+| 1969 |              |                |              | AC Milan          |                   |                     |             |                      |                     |
+| 1970 | Brazil       |                |              | Feyenoord         |                   |                     |             |                      |                     |
+| 1971 |              |                |              | Ajax              |                   |                     |             |                      |                     |
+| 1972 |              | West Germany   |              | Ajax              |                   |                     |             |                      |                     |
+| 1973 |              |                |              | Ajax              |                   |                     |             |                      |                     |
+| 1974 | West Germany |                |              | Bayern Munich     |                   |                     |             |                      |                     |
+| 1975 |              |                | Peru         | Bayern Munich     |                   |                     |             |                      |                     |
+| 1976 |              | Czechoslovakia |              | Bayern Munich     |                   |                     |             |                      |                     |
+| 1977 |              |                |              | Liverpool         |                   |                     |             |                      |                     |
+| 1978 | Argentina    |                |              | Liverpool         |                   |                     |             |                      |                     |
+| 1979 |              |                | Paraguay     | Nottingham Forest |                   |                     |             |                      |                     |
+| 1980 |              | West Germany   |              | Nottingham Forest |                   |                     |             |                      |                     |
+| 1981 |              |                |              | Liverpool         |                   |                     |             |                      |                     |
+| 1982 | Italy        |                |              | Aston Villa       |                   |                     |             |                      |                     |
+| 1983 |              |                | Uruguay      | Hamburger SV      |                   |                     |             |                      |                     |
+| 1984 |              | France         |              | Liverpool         |                   |                     |             |                      |                     |
+| 1985 |              |                |              | Juventus          |                   |                     |             |                      |                     |
+| 1986 | Argentina    |                |              | Steaua București  |                   |                     |             |                      |                     |
+| 1987 |              |                | Uruguay      | Porto             |                   |                     |             |                      |                     |
+| 1988 |              | Netherlands    |              | PSV Eindhoven     |                   |                     |             |                      |                     |
+| 1989 |              |                | Brazil       | AC Milan          |                   |                     |             |                      |                     |
+| 1990 | West Germany |                |              | AC Milan          |                   |                     |             |                      |                     |
+| 1991 |              |                | Argentina    | Red Star Belgrade |                   |                     |             |                      |                     |
+| 1992 |              | Denmark        |              | Barcelona         | Leeds United      | Barcelona           | AC Milan    | VfB Stuttgart        | Marseille           |
+| 1993 |              |                | Argentina    | Marseille         | Manchester United | Barcelona           | AC Milan    | Werder Bremen        | Marseille\*         |
+| 1994 | Brazil       |                |              | AC Milan          | Manchester United | Barcelona           | AC Milan    | Bayern Munich        | Paris Saint-Germain |
+| 1995 |              |                | Uruguay      | Ajax              | Blackburn Rovers  | Real Madrid         | Juventus    | Borussia Dortmund    | Nantes              |
+| 1996 |              | Germany        |              | Juventus          | Manchester United | Atlético Madrid     | AC Milan    | Borussia Dortmund    | Auxerre             |
+| 1997 |              |                | Brazil       | Borussia Dortmund | Manchester United | Real Madrid         | Juventus    | Bayern Munich        | Monaco              |
+| 1998 | France       |                |              | Real Madrid       | Arsenal           | Barcelona           | Juventus    | 1. FC Kaiserslautern | Lens                |
+| 1999 |              |                | Brazil       | Manchester United | Manchester United | Barcelona           | AC Milan    | Bayern Munich        | Bordeaux            |
+| 2000 |              | France         |              | Real Madrid       | Manchester United | Deportivo La Coruña | Lazio       | Bayern Munich        | Monaco              |
+| 2001 |              |                | Colombia     | Bayern Munich     | Manchester United | Real Madrid         | AS Roma     | Bayern Munich        | Nantes              |
+| 2002 | Brazil       |                |              | Real Madrid       | Arsenal           | Valencia            | Juventus    | Borussia Dortmund    | Lyon                |
+| 2003 |              |                |              | AC Milan          | Manchester United | Real Madrid         | Juventus    | Bayern Munich        | Lyon                |
+| 2004 |              | Greece         | Brazil       | Porto             | Arsenal           | Valencia            | AC Milan    | Werder Bremen        | Lyon                |
+| 2005 |              |                |              | Liverpool         | Chelsea           | Barcelona           | Juventus    | Bayern Munich        | Lyon                |
+| 2006 | Italy        |                |              | Barcelona         | Chelsea           | Barcelona           | Inter Milan | Bayern Munich        | Lyon                |
+| 2007 |              |                | Brazil       | AC Milan          | Manchester United | Real Madrid         | Inter Milan | VfB Stuttgart        | Lyon                |
+| 2008 |              | Spain          |              | Manchester United | Manchester United | Real Madrid         | Inter Milan | Bayern Munich        | Lyon                |
+| 2009 |              |                |              | Barcelona         | Manchester United | Barcelona           | Inter Milan | VfL Wolfsburg        | Bordeaux            |
+| 2010 | Spain        |                |              | Inter Milan       | Chelsea           | Barcelona           | AC Milan    | Bayern Munich        | Marseille           |
+| 2011 |              |                | Uruguay      | Barcelona         | Manchester United | Barcelona           | Juventus    | Borussia Dortmund    | Lille               |
+| 2012 |              | Spain          |              | Chelsea           | Manchester City   | Real Madrid         | Juventus    | Borussia Dortmund    | Montpellier         |
+| 2013 |              |                |              | Bayern Munich     | Manchester United | Barcelona           | Juventus    | Bayern Munich        | Paris Saint-Germain |
+| 2014 | Germany      |                |              | Real Madrid       | Manchester City   | Atlético Madrid     | Juventus    | Bayern Munich        | Paris Saint-Germain |
+| 2015 |              |                | Chile        | Barcelona         | Chelsea           | Barcelona           | Juventus    | Bayern Munich        | Paris Saint-Germain |
+| 2016 |              | Portugal       | Chile        | Real Madrid       | Leicester City    | Barcelona           | Juventus    | Bayern Munich        | Paris Saint-Germain |
+| 2017 |              |                |              | Real Madrid       | Chelsea           | Real Madrid         | Juventus    | Bayern Munich        | Monaco              |
+| 2018 | France       |                |              | Real Madrid       | Manchester City   | Barcelona           | Juventus    | Bayern Munich        | Paris Saint-Germain |
+| 2019 |              |                | Brazil       | Liverpool         | Manchester City   | Barcelona           | Juventus    | Bayern Munich        | Paris Saint-Germain |
+| 2020 |              | Italy          |              | Bayern Munich     | Liverpool         | Real Madrid         | Juventus    | Bayern Munich        | Paris Saint-Germain |
+| 2021 |              |                | Argentina    | Chelsea           | Manchester City   | Atlético Madrid     | Inter Milan | Bayern Munich        | Lille               |
+| 2022 | Argentina    |                |              | Real Madrid       | Manchester City   | Real Madrid         | AC Milan    | Bayern Munich        | Paris Saint-Germain |
+| 2023 |              |                |              | Manchester City   | Manchester City   | Barcelona           | Napoli      | Bayern Munich        | Paris Saint-Germain |
+| 2024 |              | Spain          | Argentina    | Real Madrid       | Manchester City   | Real Madrid         | Inter Milan | Bayer Leverkusen     | Paris Saint-Germain |
+| 2025 |              |                |              |                   |                   |                     |             |                      |                     |
+| 2026 |              |                |              |                   |                   |                     |             |                      |                     |
+| 2027 |              |                |              |                   |                   |                     |             |                      |                     |
+| 2028 |              |                |              |                   |                   |                     |             |                      |                     |
+| 2029 |              |                |              |                   |                   |                     |             |                      |                     |
+| 2030 |              |                |              |                   |                   |                     |             |                      |                     |
+
+## Players
+
 - Birth Year: 1970 - now
 - Active Year: 1990 - now
 - Formation: 4-3-3
 
-## Positions
+### Positions
 
 - `GK` - Goalkeeper: Shot Stop and Ball Playing
 - `RB` - Right-back: Stamina and Crossing
