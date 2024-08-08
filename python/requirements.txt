@@ -231,7 +231,7 @@ terminado==0.18.1
 threadpoolctl==3.5.0
 tinycss2==1.3.0
 tokenize-rt==6.0.0
-tokenizers==0.19.1
+tokenizers==0.20.0
 toml==0.10.2
 tomlkit==0.13.0
 toolz==0.12.1
