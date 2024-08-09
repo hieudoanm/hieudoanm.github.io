@@ -4,27 +4,18 @@
 
 [Openings](https://github.com/lichess-org/chess-openings)
 
-### e4
-
-1. Ruy Lopez
-2. Italian Game
-3. Sicilian Defense
-4. French Defense
-5. Caro-Kann Defense
-6. Pirc Defense
-
-### d4
-
-1. Queen's Gambit
-2. Indian Defenses
-
-### c4
-
-1. English Opening
-
-### Nf3
-
-1. Reti Opening
+| No  | First | Name              |
+| --- | ----- | ----------------- |
+| 1   | e4    | Ruy Lopez         |
+| 2   | e4    | Italian Game      |
+| 3   | e4    | Sicilian Defense  |
+| 4   | e4    | French Defense    |
+| 5   | e4    | Caro-Kann Defense |
+| 6   | e4    | Pirc Defense      |
+| 7   | d4    | Queen's Gambit    |
+| 8   | d4    | Indian Defenses   |
+| 9   | c4    | English Opening   |
+| 10  | Nf3   | Reti Opening      |
 
 ## Tactics
 
