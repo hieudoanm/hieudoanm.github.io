@@ -1,17 +1,17 @@
 # Wishlist
 
-## Health
+## Health & Hapiness
 
 | Group         | Item                   | Note                                             |
 | ------------- | ---------------------- | ------------------------------------------------ |
 | Physical      | Food                   | Nutritional Diet                                 |
-| Physical      | Water                  |                                                  |
-| Physical      | Excercises             |                                                  |
-| Psychological | Autonomy               | Financial stability                              |
+| Physical      | Water                  | Avoid Soft Drink                                 |
+| Physical      | Excercises             | Marathon & Football                              |
+| Psychological | Autonomy               | Financial Stability                              |
 | Psychological | Environmental Mastery  | How to Win Friends & Influence People            |
-| Psychological | Growth                 | Short term (small) wins                          |
+| Psychological | Growth                 | Short-term (_Small_) wins                        |
 | Psychological | Positive Relationships | Sense of Belonging (family, friends, colleagues) |
-| Psychological | Purpose in Life        | Long term (important) goals                      |
+| Psychological | Purpose in Life        | Long-term (**Important**) goals                  |
 | Psychological | Self-acceptance        | Graceful and Mindfulness                         |
 
 ## Titles
@@ -280,6 +280,48 @@
 - MSI: Micro-Star International
 - USA: United States
 
+### Vehicle Options
+
+| Vehicle    | Continent | Country        | Brand            | Model | Price Range |
+| ---------- | --------- | -------------- | ---------------- | ----- | ----------- |
+| Car        | America   | United States  | [Ford][ford]     |       |             |
+| Car        | America   | United States  | [GM][gm]         |       |             |
+| Car        | America   | United States  | [Jeep][jeep]     |       |             |
+| Car        | America   | United States  | [Tesla][tesla]   |       |             |
+| Car        | Asia      | Japan          | Honda            |       |             |
+| Car        | Asia      | Japan          | Mazda            |       |             |
+| Car        | Asia      | Japan          | Nissan           |       |             |
+| Car        | Asia      | Japan          | Subaru           |       |             |
+| Car        | Asia      | Japan          | Toyota           |       |             |
+| Car        | Asia      | South Korea    | Genesis          |       |             |
+| Car        | Asia      | South Korea    | Hyundai          |       |             |
+| Car        | Asia      | South Korea    | Kia              |       |             |
+| Car        | Asia      | Vietnam        | Vinfast          |       |             |
+| Car        | Europe    | Germany        | Audi             |       |             |
+| Car        | Europe    | Germany        | BMW              |       |             |
+| Car        | Europe    | Germany        | [Brabus][brabus] |       |             |
+| Car        | Europe    | Germany        | Mercedes-Benz    |       |             |
+| Car        | Europe    | Germany        | Porsche          |       |             |
+| Car        | Europe    | Germany        | Volkswagen       |       |             |
+| Car        | Europe    | Italy          | Ferrari          |       |             |
+| Car        | Europe    | Italy          | Fiat             |       |             |
+| Car        | Europe    | Italy          | Lamborghini      |       |             |
+| Car        | Europe    | Italy          | Maserati         |       |             |
+| Car        | Europe    | United Kingdom | Aston Martin     |       |             |
+| Car        | Europe    | United Kingdom | Bentley          |       |             |
+| Car        | Europe    | United Kingdom | Jaguar           |       |             |
+| Car        | Europe    | United Kingdom | Land Rover       |       |             |
+| Car        | Europe    | United Kingdom | Mini             |       |             |
+| Car        | Europe    | United Kingdom | Rolls-Royce      |       |             |
+| Motorcycle | America   | United States  | Harley-Davidson  |       |             |
+| Motorcycle | Asia      | Japan          | Honda            |       |             |
+| Motorcycle | Asia      | Japan          | Kawasaki         |       |             |
+| Motorcycle | Asia      | Japan          | Suzuki           |       |             |
+| Motorcycle | Asia      | Japan          | Yamaha           |       |             |
+| Motorcycle | Asia      | Vietnam        | Datbike          |       |             |
+| Motorcycle | Europe    | Italy          | Ducati           |       |             |
+| Motorcycle | Europe    | United Kingdom | Triumph          |       |             |
+
 ## Mark Resolutions (2009 - 2020)
 
 - 2020 - Ditch annual challenges in favor of long-term predictions
@@ -294,3 +336,9 @@
 - 2011 - Be a vegetarian, or eat meat only if he killed the animal himself
 - 2010 - Learn Mandarin
 - 2009 - Wear a tie every day
+
+[brabus]: https://www.brabus.com/
+[ford]: https://www.ford.com/
+[gm]: https://www.gm.com/
+[jeep]: https://www.jeep.com/
+[tesla]: https://www.tesla.com/
