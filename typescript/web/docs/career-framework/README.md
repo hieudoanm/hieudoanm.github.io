@@ -1,114 +1,112 @@
 # Career
 
-## Framework
+## Subjects
 
-- Theoretically vs Applied
-- STEM: Science + Technology + Engineering + Math
+| No. | Group            | Subject                                        | Original         | Note                                  |
+| --- | ---------------- | ---------------------------------------------- | ---------------- | ------------------------------------- |
+| 1   | Natural Sciences | Mathematics                                    |                  | Language of the Universe              |
+| 2   | Natural Sciences | Physics                                        |                  | Applied Mathematics                   |
+| 3   | Natural Sciences | Chemistry                                      |                  | Applied Physics                       |
+| 4   | Natural Sciences | Biology                                        |                  | Applied Chemistry                     |
+| 5   | Natural Sciences | Geography                                      |                  | Applied Physics / Chemistry / Biology |
+| 6   | Social Sciences  | Psychology                                     | Ethics           | Applied Biology                       |
+| 7   | Applied Sciences | Technology (Software) / Engineering (Hardware) | Computer         |                                       |
+| 8   | Social Sciences  | Literature                                     |                  | Human Expressions                     |
+| 9   | Social Sciences  | Languages                                      |                  | Human Expressions                     |
+| 10  | Social Sciences  | Arts                                           | Painting + Music | Human Expressions                     |
+| 11  | Social Sciences  | History                                        |                  | Human Records                         |
+| 12  | Social Sciences  | Physical Education                             |                  | Sports                                |
+| 13  |                  | ~~National Defense and Security Education~~    |                  |                                       |
 
-### Vietnam Subjects
+## Biology
 
-1. Math (Toán)
-2. Physics (Vật Lý)
-3. Chemistry (Hoá Học)
-4. Biology (Sinh Học)
-5. Geography (Địa Lý)
-6. Foreign Languages (Ngoại Ngữ)
-7. Literature (Văn Học)
-8. History (Lịch Sử)
-9. Arts (Nghệ Thuật) = Painting (Hội Hoạ) + Music (Âm Nhạc)
-10. Physical Education (Thể Dục Thể Chất)
-11. ~~Ethics (Đạo Đức / Giáo Dục Công Dân aka Học Làm Người Tốt)~~ Psychology (Học Làm Người)
-12. Technology (Công Nghệ) / Computer (Tin Học)
-13. National Defense and Security Education (Giáo Dục Quốc Phòng và An Ninh)
+### Human Anatomy
 
-## Natural Sciences
+| No  | Organ        |                | Department                | Simplified                           |
+| --- | ------------ | -------------- | ------------------------- | ------------------------------------ |
+| 1   | Brain        | Frontal Lobe   | Neurology                 | Control Center                       |
+| 2   | Brain        | Parietal Lobe  |                           |                                      |
+| 3   | Brain        | Temporal Lobe  |                           |                                      |
+| 4   | Brain        | Occipital Lobe |                           |                                      |
+| 5   | Brain        | Cerebellum     |                           |                                      |
+| 6   | Brain        | Spinal Cord    |                           |                                      |
+| 7   | Eyes         | Iris           |                           | Vision                               |
+| 8   | Eyes         | Pupil          |                           |                                      |
+| 9   | Eyes         | Sclera         |                           |                                      |
+| 10  | Eyes         | Retina         |                           |                                      |
+| 11  | Eyes         | Macula         |                           |                                      |
+| 12  | Eyes         | Optic Nerve    |                           |                                      |
+| 13  | Ears         |                |                           | Sound                                |
+| 14  | Heart        |                | Cardiology                | Engine                               |
+| 15  | Lungs        |                |                           | Inject Fuel                          |
+| 16  | Liver        |                |                           | Convert Nutrient and Blood Filtering |
+| 17  | Kidneys      |                |                           | Blood Filtering                      |
+| 18  | Spleen       |                |                           | Remove Old Blood Cells               |
+| 19  | Gallbladder  |                |                           | Waste Control                        |
+| 20  | Pancreas     |                |                           |                                      |
+| 21  | Stomach      |                |                           | Breaking Down and Digest Food        |
+| 22  | Intestines   |                |                           | Filter Waste, Absord Water           |
+| 23  | Skin         |                |                           | Cover the body                       |
+| 24  | Reproductive |                | Obstetrics and Gynecology |                                      |
 
-- Math
-- Physics
-- Chemistry
-- Bio
-- Geo = Physics + Chem + Bio (Applied)
+## Jobs
 
-### Bio
+| Job                   | Mathematics | Physics | Chemistry | Biology       | Geography  | Psychology       | Technology  | Literature | Languages | Arts (Music x Painting)     | History | Physical Education | Money   |
+| --------------------- | ----------- | ------- | --------- | ------------- | ---------- | ---------------- | ----------- | ---------- | --------- | --------------------------- | ------- | ------------------ | ------- |
+| Psychologist          |             |         |           | Human - Brain |            |                  |             |            |           |                             |         |                    |         |
+| Medical Doctor        |             |         |           | Human - Body  |            |                  |             |            |           |                             |         |                    |         |
+| Vet                   |             |         |           | Animals       |            |                  |             |            |           |                             |         |                    |         |
+| Farmer                |             |         |           | Plants        |            |                  |             |            |           |                             |         |                    |         |
+| Athletes              |             |         |           |               |            |                  |             |            |           |                             |         | Sports             |         |
+| Physician             |             |         |           | Disease       |            |                  |             |            |           |                             |         |                    |         |
+| Musician              |             |         |           |               |            |                  |             |            |           | Music - Instruments         |         |                    |         |
+| Food Processing       |             |         | Food      | Food          |            |                  |             |            |           |                             |         |                    |         |
+| Video Game Designer   |             | Engine  |           |               |            |                  | Programming |            |           | Graphic Design x Soundtrack |         |                    |         |
+| Translator            |             |         |           |               |            |                  |             |            | Foreign   |                             |         |                    |         |
+| Graphics Design       |             |         |           |               |            |                  | Software    |            |           | Drawing                     |         |                    |         |
+| Fashion               |             |         |           |               |            |                  |             |            |           | Drawing                     |         |                    |         |
+| Film and Video Editor |             |         |           |               |            |                  | Software    |            |           |                             |         |                    |         |
+| Robotics              |             |         |           |               |            |                  | Programming |            |           |                             |         |                    |         |
+| Software Engineer     |             |         |           |               |            |                  | Programming |            |           |                             |         |                    |         |
+| Macroeconomist        |             |         |           |               |            | Socio-psychology |             |            |           |                             |         |                    | Current |
+| Financial             |             |         |           |               |            | Socio-psychology |             |            |           |                             |         |                    | Future  |
+| Accounting            |             |         |           |               |            | Socio-psychology |             |            |           |                             |         |                    | Past    |
+| Logistics             |             |         |           |               | Location   |                  |             |            |           |                             |         |                    |         |
+| Journalism            |             |         |           |               |            |                  |             | Writing    |           |                             |         |                    |         |
+| Lawyer                |             |         |           |               |            |                  |             | Argument   |           |                             |         |                    |         |
+| Communication         |             |         |           |               |            |                  |             | Wording    |           |                             |         |                    |         |
+| Tourism               |             |         |           |               | Attraction | Psychology       |             |            |           |                             |         |                    |         |
+| Human Resources       |             |         |           |               |            | Motivational     |             |            |           |                             |         |                    |         |
+| Marketing             |             |         |           |               |            | Psychology       |             |            |           |                             |         |                    |         |
+| Sales                 |             |         |           |               |            | Psychology       |             |            |           |                             |         |                    |         |
+| Advertising           |             |         |           |               |            | Psychology       |             |            |           | Images and Videos           |         |                    |         |
+| Data Sciencist        | Statistics  |         |           |               |            |                  | Programming |            |           |                             |         |                    |         |
+| Gambling              |             |         |           |               |            | Psychology       |             |            |           |                             |         |                    |         |
 
-- Human
-- Animals
-- Plants
+## Trade Skills
 
-## Human
-
-- Brain
-
-### Physical
-
-- Physical
-- Sports (Athletes)
-- Minics (Robots / Engineering) (Physics)
-- Disease: Physician (Bio)
-
-### Arts
-
-- Games (Technology, Arts, Psychology)
-- Graphics Design (Arts)
-- Fashion (Arts)
-- Film and Video (Arts)
-- Musician
-
-### Technology
-
+- Beverage-related - Barista
+- Beverage-related - Batender
+- Food-related - Bakery
+- Food-related - Chef
 - Pilot
 
-### Food
+## Expertise
 
-- Bakery
-- Chef
-
-### Beverage
-
-- Barista
-- Batender
-
-- Human
-- Brain
-- Mental Health: Psychologist
-- Expressive Thoughts
-- Literature (Languages)
-- Arts (Painting and Music)
-- Mimics Thoughts (Technology)
-- Computer Science (Software Development)
-- Data Science (Machine Learning)
-- Health: Food and Nutrition (Chem + Bio)
-- Time: History
-- Business: Human x Something x Human
-- Money:
-- Macro: Economic (Psychological)
-- Future: Financial (Math)
-- Past: Accounting (Math)
-- Physical Products:
-- Logistics + Supply Chain (Warehouse + Transportation) (Geography)
-- Product Design
-- Human Management
-- Internal: Resources (Psychology)
-- External (Customer): Marketing (Psychology)
-- Sales
-- Advertising (Digital)
-- Research (Insights)
-- Services
-- Leisure
-- Tourism
-- Gambling
-- Knowledge
-- Teacher
-- Information (Literature)
-- Journalism
-- Lawyer
 - Consultant
-- Appoarch
-- Bottom Up: From Skillset to Career
-- Top Down: From Career to Skillset
-- Soft skills
-- Communication
+- Teacher
+
+## Soft Skills
+
 - Creative
-- Personal
+- Story telling
+
+## Metrics
+
 - Goals and Ambitions
 - Personality
+
+## Appoarch
+
+- Bottom Up: From Skillset to Career
+- Top Down: From Career to Skillset
