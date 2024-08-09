@@ -1,19 +1,32 @@
 # Wishlist
 
-## Mark Resolutions (2009 - 2020)
+## Health
 
-- 2020 - Ditch annual challenges in favor of long-term predictions
-- 2019 - Host public debates about the effects of tech on society
-- 2018 - Focus on fixing Facebook's platform-abuse problems
-- 2017 - Meet someone from every US state
-- 2016 - Build an AI for his home and run 365 miles.
-- 2015 - Read a book every two weeks
-- 2014 - Write a thank-you note daily
-- 2013 - Meet a non-Facebook person every day
-- 2012 - Code daily
-- 2011 - Be a vegetarian, or eat meat only if he killed the animal himself
-- 2010 - Learn Mandarin
-- 2009 - Wear a tie every day
+| Group         | Item                   | Note                                             |
+| ------------- | ---------------------- | ------------------------------------------------ |
+| Physical      | Food                   | Nutritional Diet                                 |
+| Physical      | Water                  |                                                  |
+| Physical      | Excercises             |                                                  |
+| Psychological | Autonomy               | Financial stability                              |
+| Psychological | Environmental Mastery  | How to Win Friends & Influence People            |
+| Psychological | Growth                 | Short term (small) wins                          |
+| Psychological | Positive Relationships | Sense of Belonging (family, friends, colleagues) |
+| Psychological | Purpose in Life        | Long term (important) goals                      |
+| Psychological | Self-acceptance        | Graceful and Mindfulness                         |
+
+## Titles
+
+| No  | Group     | Subgroup  | Title                                                       | Status      |
+| --- | --------- | --------- | ----------------------------------------------------------- | ----------- |
+| 01  | Education |           | Bachelor of Business Information Technology                 | Done        |
+| 02  | Education |           | Bachelor of Psychology                                      | In Progress |
+| 03  | Education |           | Master of Computational Neuroscience or Biology Engineering | Defined     |
+| 04  | Education |           | PhD in Biology / Neuroscience                               | Defined     |
+| 05  | Education |           | MD of Neurology                                             | Defined     |
+| 06  | Hobby     | Marathon  | **5** / 10 / 21 / 42 (km)                                   | In Progress |
+| 07  | Hobby     | Chess     | CM / FM / IM / GM                                           | In Progress |
+| 08  | Hobby     | Languages | Deutsch (B1)                                                | Defined     |
+| 09  | Hobby     | Languages | Korean (TOPIK I)                                            | Defined     |
 
 ## House
 
@@ -104,16 +117,17 @@
 | 82  | Windows     | Solar Glass              |                           |       | 0/1    |                                             |
 | 83  | Doors       | Finger Print             |                           |       | 0/1    |                                             |
 
-## Titles
+## Mark Resolutions (2009 - 2020)
 
-| No  | Group     | Subgroup  | Title                                                       | Status      |
-| --- | --------- | --------- | ----------------------------------------------------------- | ----------- |
-| 01  | Education |           | Bachelor of Business Information Technology                 | Done        |
-| 02  | Education |           | Bachelor of Psychology                                      | In Progress |
-| 03  | Education |           | Master of Computational Neuroscience or Biology Engineering | Defined     |
-| 04  | Education |           | PhD in Biology / Neuroscience                               | Defined     |
-| 05  | Education |           | MD of Neurology                                             | Defined     |
-| 06  | Hobby     | Marathon  | **5** / 10 / 21 / 42 (km)                                   | In Progress |
-| 07  | Hobby     | Chess     | CM / FM / IM / GM                                           | In Progress |
-| 08  | Hobby     | Languages | Deutsch (B1)                                                | Defined     |
-| 09  | Hobby     | Languages | Korean (TOPIK I)                                            | Defined     |
+- 2020 - Ditch annual challenges in favor of long-term predictions
+- 2019 - Host public debates about the effects of tech on society
+- 2018 - Focus on fixing Facebook's platform-abuse problems
+- 2017 - Meet someone from every US state
+- 2016 - Build an AI for his home and run 365 miles.
+- 2015 - Read a book every two weeks
+- 2014 - Write a thank-you note daily
+- 2013 - Meet a non-Facebook person every day
+- 2012 - Code daily
+- 2011 - Be a vegetarian, or eat meat only if he killed the animal himself
+- 2010 - Learn Mandarin
+- 2009 - Wear a tie every day

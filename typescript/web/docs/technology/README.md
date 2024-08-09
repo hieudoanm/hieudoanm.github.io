@@ -1,4 +1,4 @@
-# Mobile Devices
+# Technology
 
 | Continent | Country       | Company   | Desktop  | Laptop     | Tablet  | Mobile        | Speaker | Headphones     | Earbuds |
 | --------- | ------------- | --------- | -------- | ---------- | ------- | ------------- | ------- | -------------- | ------- |
