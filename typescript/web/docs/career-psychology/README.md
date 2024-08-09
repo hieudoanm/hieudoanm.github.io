@@ -1,37 +1,60 @@
 # Psychology
 
-## Subjects
+## RMIT
 
-1. Biological Psychology
-2. Cognitive Psychology
-3. Communication & Professional Practices
-4. Cyber-Physical-Biological Systems: Technology for a Digital World
-5. Developmental Psychology
-6. Ethnic Diversity & Health
-7. Forensic Psychology
-8. Foundation of Psychology
-9. Foundations of Artificial Intelligence for STEM
-10. Motivation and Organisational Psychology (WIL)
-11. Philosophy and Methodology of Psychology
-12. Principles of Psychology
-13. Professional Practices in Psychology
-14. Psychological Assessment and Individual Differences
-15. Psychology of Gender
-16. Psychopathology and Models of Intervention
-17. Research Methods in Psychology
-18. Research Project
-19. Social Psychology
-20. STEM for Sustainable Development
+| Year | Semester | Subject                                             | Alternative                          |
+| ---- | -------- | --------------------------------------------------- | ------------------------------------ |
+| 2023 | C        | Environmental Psychology                            |                                      |
+| 2023 | C        | Foundation of Psychology                            |                                      |
+| 2023 | C        | Understading Personality                            | Personality Psychology               |
+| 2024 | A        | Forensic Psychology                                 |                                      |
+| 2024 | A        | Psychology of Everyday Thinking                     | Cognitive Psychology (Foundation)    |
+| 2024 | A        | Psychology of Social Life                           | Social Psychology (Foundation)       |
+| 2024 | B        | **The Science of Human Nature**                     | Evolutionary Psychology              |
+| 2024 | B        | Principles of Psychology                            |                                      |
+| 2024 | B        | Psychology of Gender                                |                                      |
+| 2024 | C        | **Cognitive Psychology**                            |                                      |
+| 2024 | C        | _Developmental Psychology_                          |                                      |
+| 2024 | C        | _Social Psychology_                                 |                                      |
+| 2025 | A        | **Biological Psychology**                           |                                      |
+| 2025 | A        | Research Methods in Psychology                      | Statistics                           |
+| 2025 | B        | Motivation and Organisational Psychology            | Industrial-Organizational psychology |
+| 2025 | B        | Philosophy and Methodology of Psychology            | Statistics (Advanced)                |
+| 2025 | C        | Psychological Assessment and Individual Differences |                                      |
+| 2025 | C        | Psychopathology and Models of Intervention          |                                      |
+| 2026 | A        | Foundations of Artificial Intelligence for STEM     |                                      |
+| 2026 | A        |                                                     |                                      |
+| 2026 | B        | Research Project                                    |                                      |
+| 2026 | B        |                                                     |                                      |
 
-## Companies
+## Computational NeuroScience
 
-1. [bitbrain](https://www.bitbrain.com/)
-2. [blackrockneurotech](https://blackrockneurotech.com/)
-3. [brainco](https://brainco.tech/)
-4. [braingate](https://www.braingate.org/)
-5. [emotiv](https://www.emotiv.com/)
-6. [kernel](https://www.kernel.com/)
-7. [neurable](https://neurable.com/)
-8. [neuralink](https://neuralink.com/)
-9. [precisionneuro](https://precisionneuro.io/)
-10. [synchron](https://synchron.com/)
+### Techstack
+
+- C - C++
+- JavaScript - React, Angular, Vue
+- Python - Scientific Computing - Pandas, Numpy
+- Python - Machine Learning - sklearn, PyTorch, Tensorflow
+- Rust
+- AWS
+- Linux/Unix systems
+
+#### References
+
+- [Synchron - Neural research engineer](https://job-boards.greenhouse.io/synchron/jobs/5231485004)
+- [Neuralink - Machine Learning Engineer](https://boards.greenhouse.io/neuralink/jobs/5663271003?gh_jid=5663271003&gh_src=c356a2533us)
+
+### Companies
+
+| Company                                               | Careers                                   |
+| ----------------------------------------------------- | ----------------------------------------- |
+| [bitbrain](https://www.bitbrain.com/)                 | [Careers](https://synchron.com/careers)   |
+| [blackrockneurotech](https://blackrockneurotech.com/) |                                           |
+| [brainco](https://brainco.tech/)                      |                                           |
+| [braingate](https://www.braingate.org/)               |                                           |
+| [emotiv](https://www.emotiv.com/)                     |                                           |
+| [kernel](https://www.kernel.com/)                     |                                           |
+| [neurable](https://neurable.com/)                     |                                           |
+| [neuralink](https://neuralink.com/)                   | [Careers](https://neuralink.com/careers/) |
+| [precisionneuro](https://precisionneuro.io/)          |                                           |
+| [synchron](https://synchron.com/)                     |                                           |

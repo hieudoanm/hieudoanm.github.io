@@ -8,10 +8,9 @@
 - [hieudoanm.github.io](#hieudoanmgithubio)
   - [Table of Content](#table-of-content)
   - [Techstack](#techstack)
+  - [References](#references)
 
 ## Techstack
-
-Inspired by [T3][t3] and [T4][t4]
 
 | No  | Group    | Subgroup    | Usage                             | Data Science                                                   | Software Development                                         |
 | --- | -------- | ----------- | --------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------ |
@@ -43,10 +42,15 @@ Inspired by [T3][t3] and [T4][t4]
 | 26  | AI       | General     | Web Scraping                      | [BeautifulSoup][beautifulsoup]                                 | [Cheerio][cheerio]                                           |
 | 27  | AI       | General     | Machine Learning                  | [scikit-learn][scikit-learn]                                   | [ml5][ml5]                                                   |
 | 28  | AI       | General     | Deep Learning                     | [Keras][keras] ([TensorFlow][tensorflow] x [PyTorch][pytorch]) | [brain.js][brain.js]                                         |
-| 29  | AI       | Specialised | Chess Engine (shared)             | [Stockfish][stockfish]                                         | [Stockfish][stockfish]                                       |
+| 29  | AI       | Specialised | Chess Engine (shared)             | [Leela Chess Zero][lczero]                                     | [Stockfish][stockfish]                                       |
 | 30  | AI       | Specialised | Computer Vision (shared)          | [OpenCV][opencv]                                               | [OpenCV][opencv]                                             |
 | 31  | AI       | Specialised | Natural Languages Processing      | [nltk][nltk] / [spaCy][spacy]                                  | [natural][natural]                                           |
 | 32  | AI       | Specialised | Large Languages Model             | [LangChain (Python)][langchain-python]                         | [LangChain (JavaScript)][langchain-javascript]               |
+
+## References
+
+- [T3][t3]
+- [T4][t4]
 
 [beautifulsoup]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 [biome]: https://biomejs.dev/
@@ -71,6 +75,7 @@ Inspired by [T3][t3] and [T4][t4]
 [keras]: https://keras.io/
 [langchain-python]: https://python.langchain.com
 [langchain-javascript]: https://js.langchain.com
+[lczero]: https://lczero.org/
 [markdown]: https://www.markdownguide.org/
 [math.js]: https://mathjs.org/
 [matplotlib]: https://matplotlib.org/
