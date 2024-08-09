@@ -14,7 +14,7 @@
 
 | No  | Group    | Subgroup    | Usage                             | Data Science                                                   | Software Development                                         |
 | --- | -------- | ----------- | --------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------ |
-| 01  | DevTools | Set-up      | Languages                         | [Python][python]                                               | [TypeScript][typescript]                                     |
+| 01  | DevTools | Set-up      | Languages                         | [Python][python] x [R][r]                                      | [TypeScript][typescript]                                     |
 | 02  | DevTools | Set-up      | Version Control (shared)          | [git][git] x [GitHub][github]                                  | [git][git] x [GitHub][github]                                |
 | 03  | DevTools | Set-up      | Environment                       | [virtualenv][virtualenv]                                       | [nvm][nvm] x [Node.js][node.js]                              |
 | 04  | DevTools | Set-up      | Packages Registry x Manager       | [PyPi][pypi] x [pip][pip]                                      | [npm][npm] x [Yarn][yarn]                                    |
@@ -39,12 +39,12 @@
 | 23  | Software | DevOps      | IaC (shared)                      | [Terraform][terraform]                                         | [Terraform][terraform]                                       |
 | 24  | Software | DevOps      | PaaS                              | [Render][render]                                               | [Vercel][vercel]                                             |
 | 25  | AI       | General     | Math                              | [NumPy][numpy] x [SciPy][scipy]                                | [math.js][math.js]                                           |
-| 26  | AI       | General     | Web Scraping                      | [BeautifulSoup][beautifulsoup]                                 | [Cheerio][cheerio]                                           |
+| 26  | AI       | General     | Web Scraping                      | [BeautifulSoup][beautifulsoup] x [scrapy][scrapy]              | [Cheerio][cheerio]                                           |
 | 27  | AI       | General     | Machine Learning                  | [scikit-learn][scikit-learn]                                   | [ml5][ml5]                                                   |
 | 28  | AI       | General     | Deep Learning                     | [Keras][keras] ([TensorFlow][tensorflow] x [PyTorch][pytorch]) | [brain.js][brain.js]                                         |
 | 29  | AI       | Specialised | Chess Engine (shared)             | [Leela Chess Zero][lczero]                                     | [Stockfish][stockfish]                                       |
 | 30  | AI       | Specialised | Computer Vision (shared)          | [OpenCV][opencv]                                               | [OpenCV][opencv]                                             |
-| 31  | AI       | Specialised | Natural Languages Processing      | [nltk][nltk] / [spaCy][spacy]                                  | [natural][natural]                                           |
+| 31  | AI       | Specialised | Natural Language Processing (NLP) | [nltk][nltk] / [spaCy][spacy]                                  | [natural][natural]                                           |
 | 32  | AI       | Specialised | Large Languages Model             | [LangChain (Python)][langchain-python]                         | [LangChain (JavaScript)][langchain-javascript]               |
 
 ## References
@@ -101,12 +101,14 @@
 [pytest]: https://docs.pytest.org/
 [python]: https://www.python.org/
 [pytorch]: https://pytorch.org/
+[r]: https://www.r-project.org/
 [recharts]: https://recharts.org/
 [render]: https://render.com/
 [requests]: https://requests.readthedocs.io/en/latest/
 [ruff]: https://docs.astral.sh/ruff
 [scikit-learn]: https://scikit-learn.org/
 [scipy]: https://scipy.org/
+[scrapy]: https://scrapy.org
 [seaborn]: https://seaborn.pydata.org/
 [spacy]: https://spacy.io/
 [sqlalchemy]: https://www.sqlalchemy.org/

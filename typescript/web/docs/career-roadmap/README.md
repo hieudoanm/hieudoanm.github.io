@@ -143,11 +143,13 @@
 
 ### Techstack
 
-- C - C++
-- JavaScript - React, Angular, Vue
-- Python - Scientific Computing - Pandas, Numpy
-- Python - Machine Learning - sklearn, PyTorch, Tensorflow
-- Rust
+- Hardware: C / C++ / Rust
+- Software: JavaScript (React, Angular, Vue)
+- Mathematics: Linear Algebra, Calculus, Mathematical Analysis
+- Python: Scientific Computing (Pandas, Numpy)
+- Python: Machine Learning (sklearn, PyTorch, Tensorflow)
+- Machine Learning: Classic (Supervised and Unsupervised)
+- Deep Learning: Reinforcements
 - AWS
 - Linux/Unix systems
 

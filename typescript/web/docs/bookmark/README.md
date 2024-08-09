@@ -1,5 +1,26 @@
 # Bookmark
 
+- [Bookmark](#bookmark)
+  - [Datasets](#datasets)
+  - [Design](#design)
+  - [Education](#education)
+  - [Generative AI](#generative-ai)
+  - [Online](#online)
+    - [Coursera](#coursera)
+    - [Platform](#platform)
+    - [Resources](#resources)
+    - [University](#university)
+  - [Programming](#programming)
+    - [Blogs](#blogs)
+    - [Coding](#coding)
+    - [Hardware](#hardware)
+  - [SaaS](#saas)
+
+## Datasets
+
+- [kaggle](https://www.kaggle.com)
+- [statista](https://www.statista.com)
+
 ## Design
 
 - [Adobe][adobe] [Photoshop][adobe-photoshop]
@@ -10,6 +31,13 @@
 - [Figma][figma]
 
 ## Education
+
+## Generative AI
+
+- [DeepAI](https://deepai.org)
+- [JenniAI](https://jenni.ai/)
+- [QuillBot](https://quillbot.com)
+- [Woebot Health](https://woebothealth.com)
 
 ## Online
 
