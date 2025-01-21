@@ -4,12 +4,29 @@
 
 - [Nothing](#nothing)
   - [Table of Content](#table-of-content)
+  - [Apps](#apps)
   - [Calendar](#calendar)
   - [Clock](#clock)
   - [Compass](#compass)
+  - [Files](#files)
   - [Fitness](#fitness)
   - [Health](#health)
+  - [Mail](#mail)
+  - [Maps](#maps)
+  - [Messages](#messages)
+  - [Music](#music)
+  - [News](#news)
+  - [Notes](#notes)
+  - [Phone](#phone)
+  - [Photos](#photos)
+  - [Settings](#settings)
+  - [Stocks](#stocks)
+  - [Tasks](#tasks)
   - [Weather](#weather)
+
+## Apps
+
+![apps](./images/apps.png)
 
 ## Calendar
 
@@ -23,8 +40,34 @@
 
 ![compass](./images/compass.png)
 
+## Files
+
 ## Fitness
 
 ## Health
+
+## Mail
+
+## Maps
+
+## Messages
+
+## Music
+
+## News
+
+## Notes
+
+## Phone
+
+## Photos
+
+## Settings
+
+![settings](./images/settings.png)
+
+## Stocks
+
+## Tasks
 
 ## Weather

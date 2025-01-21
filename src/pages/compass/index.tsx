@@ -70,7 +70,7 @@ const CompassPage: NextPage = () => {
   }, []);
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-gray-300">
+    <div className="h-screen w-screen overflow-hidden bg-gray-100">
       <div className="flex h-full items-center justify-center">
         <div className="shadow-3xl relative aspect-square w-72 rounded-full bg-black">
           <div className="absolute left-0 right-0 top-0 mx-auto flex justify-center py-4">
