@@ -1,12 +1,30 @@
 {
-  "name": "Nothing PWA",
-  "short_name": "NothingPWA",
+  "id": "nothing",
+  "name": "Nothing",
+  "short_name": "Nothing",
   "description": "A Nothing Progressive Web App",
   "start_url": "/",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#ffffff",
   "theme_color": "#000000",
+  "orientation": "portrait",
+  "categories": ["design"],
   "icons": [
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
     {
       "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
