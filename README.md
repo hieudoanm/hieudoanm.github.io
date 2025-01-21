@@ -54,6 +54,8 @@
 
 ## Music
 
+![music](./images/music.png)
+
 ## News
 
 ## Notes
@@ -69,5 +71,7 @@
 ## Stocks
 
 ## Tasks
+
+![tasks](./images/tasks.png)
 
 ## Weather
