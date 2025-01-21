@@ -1,4 +1,4 @@
-name: TypeScript - Continuous Integration
+name: Nothing - Continuous Integration
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   ci:
-    name: TypeScript - Continuous Integration
+    name: Nothing - Continuous Integration
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,7 +30,6 @@ jobs:
       - name: Linting
         run: pnpm run lint
       # - name: Unit Test
-      #   run: pnpm run test --concurrency 1
-      #   working-directory: "./languages/javascript"
+      #   run: pnpm run test
       - name: Build Production
-        run: pnpm run build --concurrency 1
+        run: pnpm run build
