@@ -64,11 +64,15 @@
 
 ## Photos
 
+![photos](./images/photos.png)
+
 ## Settings
 
 ![settings](./images/settings.png)
 
 ## Stocks
+
+![stocks](./images/stocks.png)
 
 ## Tasks
 

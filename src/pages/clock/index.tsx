@@ -149,7 +149,7 @@ const AnalogClock: FC<{ seconds: number; minutes: number; hours: number }> = ({
 }) => {
   const secondsAngle = (seconds < 60 ? (seconds / 60) * 360 : 0) + 90;
   const minutesAngle = (minutes < 60 ? (minutes / 60) * 360 : 0) + 90;
-  const hoursAngle = (minutes < 24 ? (hours / 24) * 360 : 0) + 90;
+  const hoursAngle = (hours < 24 ? (hours / 24) * 360 : 0) - 90;
 
   return (
     <div className="shadow-3xl aspect-square w-72 rounded-full border border-white bg-black">
