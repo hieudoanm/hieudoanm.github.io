@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import { JSX } from 'react';
 import {
+  FaCalculator,
   FaCalendarDays,
   FaChartLine,
   FaClock,
@@ -10,7 +11,10 @@ import {
   FaEnvelopesBulk,
   FaFileLines,
   FaFileZipper,
+  FaFirefoxBrowser,
   FaHeart,
+  FaHouseChimney,
+  FaLanguage,
   FaMapLocationDot,
   FaMessage,
   FaMusic,
@@ -20,6 +24,8 @@ import {
   FaRectangleList,
   FaScrewdriverWrench,
   FaTemperatureFull,
+  FaWallet,
+  FaYoutube,
 } from 'react-icons/fa6';
 
 type NothingApp = {
@@ -31,6 +37,18 @@ type NothingApp = {
 
 const HomePage: NextPage = () => {
   const apps: NothingApp[] = [
+    {
+      id: 'browser',
+      href: 'browser',
+      name: 'browser',
+      icon: <FaFirefoxBrowser className="text-2xl" />,
+    },
+    {
+      id: 'calculator',
+      href: 'calculator',
+      name: 'calculator',
+      icon: <FaCalculator className="text-2xl" />,
+    },
     {
       id: 'calendar',
       href: 'calendar',
@@ -66,6 +84,12 @@ const HomePage: NextPage = () => {
       href: 'health',
       name: 'health',
       icon: <FaTemperatureFull className="text-2xl" />,
+    },
+    {
+      id: 'home',
+      href: 'home',
+      name: 'home',
+      icon: <FaHouseChimney className="text-2xl" />,
     },
     {
       id: 'mail',
@@ -134,6 +158,24 @@ const HomePage: NextPage = () => {
       icon: <FaRectangleList className="text-2xl" />,
     },
     {
+      id: 'translate',
+      href: 'translate',
+      name: 'translate',
+      icon: <FaLanguage className="text-2xl" />,
+    },
+    {
+      id: 'videos',
+      href: 'videos',
+      name: 'videos',
+      icon: <FaYoutube className="text-2xl" />,
+    },
+    {
+      id: 'wallet',
+      href: 'wallet',
+      name: 'wallet',
+      icon: <FaWallet className="text-2xl" />,
+    },
+    {
       id: 'weather',
       href: 'weather',
       name: 'weather',
@@ -143,13 +185,13 @@ const HomePage: NextPage = () => {
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-3 gap-4 md:grid-cols-4 md:gap-8 lg:grid-cols-6">
+        <div className="grid h-full grid-cols-4 gap-4 md:grid-cols-6 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">
                 <div className="flex h-full items-center justify-center">
                   <Link href={`/${href}`} className="flex flex-col gap-y-1">
-                    <div className="flex aspect-square w-16 items-center justify-center overflow-hidden rounded-full bg-black text-white">
+                    <div className="flex aspect-square w-16 items-center justify-center overflow-hidden rounded-full bg-black text-white hover:bg-red-500">
                       {icon}
                     </div>
                     <p className="text-center text-sm font-semibold capitalize">

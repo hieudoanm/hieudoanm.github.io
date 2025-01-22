@@ -4,84 +4,115 @@
 
 - [Nothing](#nothing)
   - [Table of Content](#table-of-content)
+  - [Home Screen](#home-screen)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
   - [Apps](#apps)
-  - [Calendar](#calendar)
-  - [Clock](#clock)
-  - [Compass](#compass)
-  - [Files](#files)
-  - [Fitness](#fitness)
-  - [Health](#health)
-  - [Mail](#mail)
-  - [Maps](#maps)
-  - [Messages](#messages)
-  - [Music](#music)
-  - [News](#news)
-  - [Notes](#notes)
-  - [Phone](#phone)
-  - [Photos](#photos)
-  - [Settings](#settings)
-  - [Stocks](#stocks)
-  - [Tasks](#tasks)
-  - [Weather](#weather)
+    - [Browser](#browser)
+    - [Calculator](#calculator)
+    - [Calendar](#calendar)
+    - [Clock](#clock)
+    - [Compass](#compass)
+    - [Files](#files)
+    - [Fitness](#fitness)
+    - [Health](#health)
+    - [Home](#home)
+    - [Mail](#mail)
+    - [Maps](#maps)
+    - [Messages](#messages)
+    - [Music](#music)
+    - [News](#news)
+    - [Notes](#notes)
+    - [Phone](#phone)
+    - [Photos](#photos)
+    - [Settings](#settings)
+    - [Stocks](#stocks)
+    - [Tasks](#tasks)
+    - [Translate](#translate)
+    - [Videos](#videos)
+    - [Wallet](#wallet)
+    - [Weather](#weather)
+
+## Home Screen
+
+### Desktop
+
+![desktop](./images/apps/desktop.png)
+
+### Mobile
+
+![mobile](./images/apps/mobile.png)
 
 ## Apps
 
-![apps](./images/apps.png)
+### Browser
 
-## Calendar
+### Calculator
+
+![calculator](./images/calculator.png)
+
+### Calendar
 
 ![calendar](./images/calendar.png)
 
-## Clock
+### Clock
 
 ![clock](./images/clock.png)
 
-## Compass
+### Compass
 
 ![compass](./images/compass.png)
 
-## Files
+### Files
 
-## Fitness
+### Fitness
 
-## Health
+### Health
 
-## Mail
+### Home
 
-## Maps
+### Mail
 
-## Messages
+### Maps
 
-## Music
+### Messages
+
+### Music
 
 ![music](./images/music.png)
 
-## News
+### News
 
 ![news](./images/news.png)
 
-## Notes
+### Notes
 
 ![notes](./images/notes.png)
 
-## Phone
+### Phone
 
 ![phone](./images/phone.png)
 
-## Photos
+### Photos
 
 ![photos](./images/photos.png)
 
-## Settings
+### Settings
 
 ![settings](./images/settings.png)
 
-## Stocks
+### Stocks
 
 ![stocks](./images/stocks.png)
 
-## Tasks
+### Tasks
 
 ![tasks](./images/tasks.png)
 
-## Weather
+### Translate
+
+### Videos
+
+### Wallet
+
+### Weather

@@ -19,7 +19,9 @@ const TasksPage: NextPage = () => {
               <div className="col-span-1">
                 <div className="flex h-full items-center justify-between">
                   <h1 className="text-xl font-black">Tasks</h1>
-                  <p className="text-xl">{items.length}</p>
+                  <p className="text-xl">
+                    {items.filter(({ completed }) => !completed).length}
+                  </p>
                 </div>
               </div>
               {items.map(({ title, completed }, index) => {
