@@ -1,1 +1,2 @@
-export * from './WidgetHealth';
+export * from './WidgetHealthBloodPressure';
+export * from './WidgetHealthBodyTemperature';

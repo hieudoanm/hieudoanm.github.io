@@ -3,21 +3,23 @@ import {
   WidgetCalculator,
   WidgetCalendarMonthly,
   WidgetCalendarToday,
+  WidgetCalendarEvents,
   WidgetClockAnalog,
   WidgetClockDigital,
   WidgetClockTimeZone,
-  WidgetCompass,
+  WidgetCompassFull,
   WidgetFiles,
   WidgetFitness,
-  WidgetHealth,
+  WidgetHealthBloodPressure,
   WidgetHome,
   WidgetMail,
-  WidgetMaps,
+  WidgetMapsEmbedded,
   WidgetMessages,
   WidgetMusic,
   WidgetNews,
   WidgetNotes,
-  WidgetPhone,
+  WidgetPhoneContacts,
+  WidgetPhoneDialer,
   WidgetPhotos,
   WidgetStocks,
   WidgetTasks,
@@ -26,7 +28,10 @@ import {
   WidgetWallet,
   WidgetWeatherDescription,
   WidgetWeatherTemperature,
+  WidgetHealthBodyTemperature,
+  WidgetCompassCompact,
 } from '@nothing/widgets';
+import { WidgetMapsCoordinates } from '@nothing/widgets/maps/WidgetMapsCoordinates';
 import { NextPage } from 'next';
 
 const WidgetsPage: NextPage = () => {
@@ -35,21 +40,26 @@ const WidgetsPage: NextPage = () => {
     { id: 'calculator', widget: <WidgetCalculator /> },
     { id: 'calendar-today', widget: <WidgetCalendarToday /> },
     { id: 'calendar-monthly', widget: <WidgetCalendarMonthly /> },
+    { id: 'calendar-events', widget: <WidgetCalendarEvents /> },
     { id: 'clock-analog', widget: <WidgetClockAnalog /> },
     { id: 'clock-digital', widget: <WidgetClockDigital /> },
     { id: 'clock-time-zone', widget: <WidgetClockTimeZone /> },
-    { id: 'compass', widget: <WidgetCompass /> },
+    { id: 'compass-compact', widget: <WidgetCompassCompact /> },
+    { id: 'compass-full', widget: <WidgetCompassFull /> },
     { id: 'files', widget: <WidgetFiles /> },
     { id: 'fitness', widget: <WidgetFitness /> },
-    { id: 'health', widget: <WidgetHealth /> },
+    { id: 'health-body-temperature', widget: <WidgetHealthBodyTemperature /> },
+    { id: 'health-blood-pressure', widget: <WidgetHealthBloodPressure /> },
     { id: 'home', widget: <WidgetHome /> },
     { id: 'mail', widget: <WidgetMail /> },
-    { id: 'maps', widget: <WidgetMaps /> },
+    { id: 'maps-coordinates', widget: <WidgetMapsCoordinates /> },
+    { id: 'maps-embedded', widget: <WidgetMapsEmbedded /> },
     { id: 'messages', widget: <WidgetMessages /> },
     { id: 'music', widget: <WidgetMusic /> },
     { id: 'news', widget: <WidgetNews /> },
     { id: 'notes', widget: <WidgetNotes /> },
-    { id: 'phone', widget: <WidgetPhone /> },
+    { id: 'phone-contacts', widget: <WidgetPhoneContacts /> },
+    { id: 'phone-dialer', widget: <WidgetPhoneDialer /> },
     { id: 'photos', widget: <WidgetPhotos /> },
     { id: 'stocks', widget: <WidgetStocks /> },
     { id: 'tasks', widget: <WidgetTasks /> },
@@ -59,9 +69,10 @@ const WidgetsPage: NextPage = () => {
     { id: 'weather-description', widget: <WidgetWeatherDescription /> },
     { id: 'weather-temperature', widget: <WidgetWeatherTemperature /> },
   ];
+
   return (
-    <div className="h-screen-8 w-screen overflow-hidden bg-gray-100">
-      <div className="grid h-full grid-cols-2 md:grid-cols-3">
+    <div className="h-[3000vh] w-screen overflow-hidden bg-gray-100 md:h-[800vh]">
+      <div className="grid h-full grid-cols-1 lg:grid-cols-4">
         {widgets.map(({ id, widget }) => {
           return (
             <div key={id} className="col-span-1">

@@ -1,2 +1,2 @@
-export * from './WeatherDescription';
-export * from './WeatherTemperature';
+export * from './WidgetWeatherDescription';
+export * from './WidgetWeatherTemperature';

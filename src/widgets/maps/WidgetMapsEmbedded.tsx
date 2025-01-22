@@ -1,7 +1,7 @@
 import { useGeolocation } from '@nothing/hooks/use-geolocation';
 import { FC } from 'react';
 
-export const WidgetMaps: FC = () => {
+export const WidgetMapsEmbedded: FC = () => {
   const { latitude = 0, longitude = 0 } = useGeolocation();
 
   const radius: number = 0.1;

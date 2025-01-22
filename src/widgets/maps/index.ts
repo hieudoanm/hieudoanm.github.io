@@ -1,1 +1,1 @@
-export * from './WidgetMaps';
+export * from './WidgetMapsEmbedded';

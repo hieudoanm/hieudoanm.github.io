@@ -3,9 +3,9 @@ import { useState } from 'react';
 export const WidgetTasks = () => {
   const [items, setItems] = useState([
     { title: 'Health Check', completed: false },
-    { title: 'Complete NAB Tasks', completed: false },
+    { title: 'Complete NAB Tasks', completed: true },
     { title: 'Complete RMIT Tasks', completed: false },
-    { title: 'Play Chess', completed: false },
+    { title: 'Play Chess', completed: true },
     { title: 'Learn Korean', completed: false },
   ]);
 
@@ -39,7 +39,7 @@ export const WidgetTasks = () => {
                     )}
                   </div>
                   <p
-                    className={`truncate whitespace-nowrap capitalize ${completed ? 'line-through' : ''}`}>
+                    className={`truncate whitespace-nowrap capitalize ${completed ? 'text-gray-500 line-through' : ''}`}>
                     {title}
                   </p>
                 </button>

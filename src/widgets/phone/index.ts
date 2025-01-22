@@ -1,1 +1,2 @@
-export * from './WidgetPhone';
+export * from './WidgetPhoneContacts';
+export * from './WidgetPhoneDialer';

@@ -1,11 +1,21 @@
-import { WidgetHealth } from '@nothing/widgets/health/WidgetHealth';
+import { WidgetHealthBodyTemperature } from '@nothing/widgets';
+import { WidgetHealthBloodPressure } from '@nothing/widgets/health/WidgetHealthBloodPressure';
 import { NextPage } from 'next';
 
 const HealthPage: NextPage = () => {
   return (
-    <div className="h-screen w-screen overflow-hidden bg-gray-100">
-      <div className="flex h-full items-center justify-center">
-        <WidgetHealth />
+    <div className="h-[200vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
+      <div className="grid h-full grid-cols-1 md:grid-cols-2">
+        <div className="col-span-1">
+          <div className="flex h-full items-center justify-center">
+            <WidgetHealthBodyTemperature />
+          </div>
+        </div>
+        <div className="col-span-1">
+          <div className="flex h-full items-center justify-center">
+            <WidgetHealthBloodPressure />
+          </div>
+        </div>
       </div>
     </div>
   );

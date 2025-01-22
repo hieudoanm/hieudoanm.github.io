@@ -1,6 +1,6 @@
 import { FaVoicemail, FaStar, FaPlus, FaPhone } from 'react-icons/fa6';
 
-export const WidgetPhone = () => {
+export const WidgetPhoneDialer = () => {
   const items = [
     1,
     2,

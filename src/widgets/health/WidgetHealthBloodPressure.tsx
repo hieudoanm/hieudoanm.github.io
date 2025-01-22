@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-export const WidgetHealth: FC = () => {
+export const WidgetHealthBloodPressure: FC = () => {
   return (
     <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
       <div className="h-full w-full p-8">

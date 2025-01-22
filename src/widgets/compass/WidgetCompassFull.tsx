@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FC, useEffect, useState } from 'react';
 
-export const WidgetCompass: FC = () => {
+export const WidgetCompassFull: FC = () => {
   const [{ alpha = 0, error = '' }, setCompass] = useState<{
     alpha: number;
     error: string;

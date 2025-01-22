@@ -43,38 +43,43 @@ export const WidgetClockAnalog: FC = () => {
     return () => clearInterval(interval);
   });
 
-  const secondsAngle =
+  const secondsAngle: number =
     (clock.seconds < 60 ? (clock.seconds / 60) * 360 : 0) + 90;
-  const minutesAngle =
+  const minutesAngle: number =
     (clock.minutes < 60 ? (clock.minutes / 60) * 360 : 0) + 90;
-  const hoursAngle = (clock.hours < 24 ? (clock.hours / 24) * 360 : 0) - 90;
+  const hoursAngle: number = (clock.hours / 12) * 360 + 90;
 
   return (
     <div className="shadow-3xl aspect-square w-72 rounded-full border border-white bg-black">
       <div className="relative h-full w-full rounded-full">
         <div className="absolute bottom-0 left-0 right-0 top-0 m-auto aspect-square w-4 rounded-full bg-white">
           <div className="relative h-full w-full">
-            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
-              (index) => {
-                const angle = 22.5 * index;
-                const mainPoint =
-                  angle % 90 === 0 ? (
-                    <div className="aspect-square w-4 rounded-full bg-white" />
-                  ) : (
-                    <div className="h-2 w-2 rounded-full bg-gray-500"></div>
-                  );
-                return (
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((index: number) => {
+              const angle: number = 30 * index;
+              const activeHour: boolean = (index + 9) % 12 === clock.hours % 12;
+              const mainPoint =
+                angle % 90 === 0 ? (
                   <div
-                    key={angle}
-                    className="absolute h-full w-full"
-                    style={{ rotate: `${angle}deg` }}>
-                    <div className="absolute bottom-0 right-2 top-0 my-auto flex h-4 w-28 items-center justify-start bg-transparent">
-                      {mainPoint}
-                    </div>
-                  </div>
+                    title={((index + 9) % 12).toString()}
+                    className={`aspect-square w-4 rounded-full ${activeHour ? 'bg-red-500' : 'bg-white'}`}
+                  />
+                ) : (
+                  <div
+                    title={((index + 9) % 12).toString()}
+                    className={`aspect-square w-2 rounded-full ${activeHour ? 'bg-red-500' : 'bg-gray-500'}`}
+                  />
                 );
-              }
-            )}
+              return (
+                <div
+                  key={angle}
+                  className="absolute h-full w-full origin-top"
+                  style={{ rotate: `${angle}deg` }}>
+                  <div className="absolute bottom-0 right-2 top-0 my-auto flex h-4 w-28 items-center justify-start bg-transparent">
+                    {mainPoint}
+                  </div>
+                </div>
+              );
+            })}
             <div
               className="absolute z-10 h-full w-full transition-all ease-linear"
               style={{ rotate: `${secondsAngle}deg` }}>

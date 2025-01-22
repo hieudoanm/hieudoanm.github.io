@@ -1,1 +1,2 @@
-export * from './WidgetCompass';
+export * from './WidgetCompassCompact';
+export * from './WidgetCompassFull';
