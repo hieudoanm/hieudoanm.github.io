@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 
-const InternalServerErrorPage: NextPage = () => {
+const ErrorPage: NextPage = () => {
   return (
     <div className="h-screen w-screen bg-gray-100">
       <div className="flex h-full w-full items-center justify-center">
@@ -20,4 +20,4 @@ const InternalServerErrorPage: NextPage = () => {
   );
 };
 
-export default InternalServerErrorPage;
+export default ErrorPage;

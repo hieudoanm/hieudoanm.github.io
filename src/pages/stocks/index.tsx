@@ -37,8 +37,6 @@ const StocksPage: NextPage = () => {
                   </div>
                 );
               })}
-              <div className="col-span-1"></div>
-              <div className="col-span-1"></div>
             </div>
           </div>
         </div>

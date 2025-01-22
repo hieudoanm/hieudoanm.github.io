@@ -58,9 +58,15 @@
 
 ## News
 
+![news](./images/news.png)
+
 ## Notes
 
+![notes](./images/notes.png)
+
 ## Phone
+
+![phone](./images/phone.png)
 
 ## Photos
 

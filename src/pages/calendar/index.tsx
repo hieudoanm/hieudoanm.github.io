@@ -1,30 +1,6 @@
+import { months, weekdays } from '@nothing/constants';
 import { NextPage } from 'next';
 import { FC, useEffect, useState } from 'react';
-
-const months: string[] = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-
-const weekdays: string[] = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-];
 
 const chunkArray = <T,>(array: T[], chunkSize: number) => {
   if (chunkSize <= 0) throw new Error('Chunk size must be greater than 0');
