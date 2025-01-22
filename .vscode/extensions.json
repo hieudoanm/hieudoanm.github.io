@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "2gua.rainbow-brackets",
     "adpyke.codesnap",
     "anseki.vscode-color",
     "Arjun.swagger-viewer",
@@ -9,7 +8,6 @@
     "cssho.vscode-svgviewer",
     "csstools.postcss",
     "DavidAnson.vscode-markdownlint",
-    "dbaeumer.jshint",
     "dbaeumer.vscode-eslint",
     "docsmsft.docs-markdown",
     "donjayamanne.githistory",

@@ -32,6 +32,7 @@
     - [Videos](#videos)
     - [Wallet](#wallet)
     - [Weather](#weather)
+  - [Widgets](#widgets)
 
 ## Home Screen
 
@@ -140,3 +141,7 @@
 ### Weather
 
 ![weather](./images/apps/weather.png)
+
+## Widgets
+
+![widgets](./images/widgets.png)

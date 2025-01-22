@@ -1,37 +1,11 @@
+import { WidgetTranslate } from '@nothing/widgets/translate/WidgetTranslate';
 import { NextPage } from 'next';
-import { FaCamera } from 'react-icons/fa6';
 
 const TranslatePage: NextPage = () => {
-  const icons = [
-    <p key="languages" className="font-semibold">
-      English to Korean
-    </p>,
-    <FaCamera key="security" className="text-3xl" />,
-  ];
-
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100">
       <div className="flex h-full items-center justify-center">
-        <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
-          <div className="flex h-full w-full flex-col px-8 py-8">
-            <div className="pb-8">
-              <p className="text-center font-black">Translate</p>
-            </div>
-            <div className="grid grow grid-cols-2 gap-y-8">
-              {icons.map((icon, index) => {
-                return (
-                  <div key={'item' + index} className="col-span-2">
-                    <div className="flex h-full w-full items-center justify-center">
-                      <div className="flex h-full w-full items-center justify-center rounded-full bg-white text-black hover:bg-red-500 hover:text-white">
-                        {icon}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        <WidgetTranslate />
       </div>
     </div>
   );
