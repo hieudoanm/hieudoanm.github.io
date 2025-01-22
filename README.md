@@ -37,82 +37,106 @@
 
 ### Desktop
 
-![desktop](./images/apps/desktop.png)
+![desktop](./images/home/desktop.png)
 
 ### Mobile
 
-![mobile](./images/apps/mobile.png)
+![mobile](./images/home/mobile.png)
 
 ## Apps
 
 ### Browser
 
+![browser](./images/apps/browser.png)
+
 ### Calculator
 
-![calculator](./images/calculator.png)
+![calculator](./images/apps/calculator.png)
 
 ### Calendar
 
-![calendar](./images/calendar.png)
+![calendar](./images/apps/calendar.png)
 
 ### Clock
 
-![clock](./images/clock.png)
+![clock](./images/apps/clock.png)
 
 ### Compass
 
-![compass](./images/compass.png)
+![compass](./images/apps/compass.png)
 
 ### Files
 
+![files](./images/apps/files.png)
+
 ### Fitness
+
+![fitness](./images/apps/fitness.png)
 
 ### Health
 
+![health](./images/apps/health.png)
+
 ### Home
+
+![home](./images/apps/home.png)
 
 ### Mail
 
+![mail](./images/apps/mail.png)
+
 ### Maps
+
+![maps](./images/apps/maps.png)
 
 ### Messages
 
+![messages](./images/apps/messages.png)
+
 ### Music
 
-![music](./images/music.png)
+![music](./images/apps/music.png)
 
 ### News
 
-![news](./images/news.png)
+![news](./images/apps/news.png)
 
 ### Notes
 
-![notes](./images/notes.png)
+![notes](./images/apps/notes.png)
 
 ### Phone
 
-![phone](./images/phone.png)
+![phone](./images/apps/phone.png)
 
 ### Photos
 
-![photos](./images/photos.png)
+![photos](./images/apps/photos.png)
 
 ### Settings
 
-![settings](./images/settings.png)
+![settings](./images/apps/settings.png)
 
 ### Stocks
 
-![stocks](./images/stocks.png)
+![stocks](./images/apps/stocks.png)
 
 ### Tasks
 
-![tasks](./images/tasks.png)
+![tasks](./images/apps/tasks.png)
 
 ### Translate
 
+![videos](./images/apps/translate.png)
+
 ### Videos
+
+![videos](./images/apps/videos.png)
 
 ### Wallet
 
+![wallet](./images/apps/wallet.png)
+
 ### Weather
+
+![weather](./images/apps/weather.png)

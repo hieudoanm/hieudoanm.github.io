@@ -11,8 +11,8 @@ export default {
         '34': '8.5rem',
       },
       height: {
-        'double-screen': '200vh',
-        'triple-screen': '300vh',
+        'screen-2': '200vh',
+        'screen-3': '300vh',
       },
     },
   },

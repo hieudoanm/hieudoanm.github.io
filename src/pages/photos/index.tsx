@@ -8,7 +8,7 @@ const PhotosPage: NextPage = () => {
         <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
           <div className="h-full w-full p-2">
             <div
-              className="h-full w-full rounded-2xl bg-cover bg-center grayscale"
+              className="h-full w-full overflow-hidden rounded-2xl bg-cover bg-center grayscale"
               style={{ backgroundImage: `url(${image.src})` }}></div>
           </div>
         </div>

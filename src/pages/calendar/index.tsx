@@ -195,7 +195,7 @@ const CalendarPage: NextPage = () => {
   const weekday: string = weekdays[clock.weekday];
 
   return (
-    <div className="h-double-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
+    <div className="h-screen-2 w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="grid h-full grid-cols-none grid-rows-2 md:grid-cols-2 md:grid-rows-none">
         <div className="col-span-1">
           <div className="flex h-full w-full items-center justify-center">

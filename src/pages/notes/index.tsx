@@ -44,9 +44,7 @@ const NotesPage: NextPage = () => {
                           <p className="font-bold">{title}</p>
                           <p className="text-sm">{dateTime}</p>
                         </div>
-                        <p className="w-full truncate text-gray-500">
-                          {content}
-                        </p>
+                        <p className="w-48 truncate text-gray-500">{content}</p>
                       </div>
                     </div>
                   </div>

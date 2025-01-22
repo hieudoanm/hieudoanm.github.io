@@ -3,8 +3,8 @@ import { NextPage } from 'next';
 const StocksPage: NextPage = () => {
   const stocks = [
     { symbol: 'TCB', price: 30000, change: 10 },
-    { symbol: 'MSN', price: 100000, change: 10 },
-    { symbol: 'VIC', price: 50000, change: 10 },
+    { symbol: 'MSN', price: 100000, change: 0 },
+    { symbol: 'VIC', price: 50000, change: -10 },
   ];
 
   return (
@@ -25,8 +25,10 @@ const StocksPage: NextPage = () => {
                           <span className="font-black">{symbol}</span> / VND
                         </p>
                         <div className="flex w-full items-center justify-between">
-                          <p className="text-green-500">
-                            +{change.toFixed(2)}%
+                          <p
+                            className={`${change === 0 ? 'text-gray-500' : change > 0 ? 'text-green-500' : 'text-red-500'}`}>
+                            {change === 0 ? '=' : change > 0 ? '+' : '-'}{' '}
+                            {Math.abs(change).toFixed(2)}%
                           </p>
                           <p className="font-black">
                             {price.toLocaleString()} <sup>đ</sup>
