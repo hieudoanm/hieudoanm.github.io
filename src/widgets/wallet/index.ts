@@ -1,1 +1,2 @@
-export * from './WidgetWallet';
+export * from './WidgetWalletBank';
+export * from './WidgetWalletForex';

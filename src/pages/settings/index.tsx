@@ -14,6 +14,9 @@ import {
   FaLock,
   FaMicrophoneLines,
   FaMicrophoneLinesSlash,
+  FaMoon,
+  FaNfcDirectional,
+  FaNfcSymbol,
   FaPhone,
   FaPhoneSlash,
   FaPlane,
@@ -21,6 +24,7 @@ import {
   FaRegCirclePlay,
   FaRegLightbulb,
   FaSignal,
+  FaSun,
   FaUnlock,
   FaWifi,
 } from 'react-icons/fa6';
@@ -38,6 +42,8 @@ type Settings = {
   phone: boolean;
   screen: boolean;
   recording: boolean;
+  nfc: boolean;
+  focus: boolean;
 };
 
 const QuickSetting: FC<{
@@ -85,6 +91,8 @@ const SettingsPage: NextPage = () => {
     phone: false,
     screen: false,
     recording: false,
+    nfc: false,
+    focus: false,
   });
 
   return (
@@ -197,6 +205,24 @@ const SettingsPage: NextPage = () => {
               setSettings={setSettings}
               activeIcon={<FaCirclePlay className="text-3xl" />}
               inactiveIcon={<FaRegCirclePlay className="text-3xl" />}
+            />
+          </div>
+          <div className="col-span-1">
+            <QuickSetting
+              setting="nfc"
+              settings={settings}
+              setSettings={setSettings}
+              activeIcon={<FaNfcDirectional className="text-3xl" />}
+              inactiveIcon={<FaNfcSymbol className="text-3xl" />}
+            />
+          </div>
+          <div className="col-span-1">
+            <QuickSetting
+              setting="focus"
+              settings={settings}
+              setSettings={setSettings}
+              inactiveIcon={<FaSun className="text-3xl" />}
+              activeIcon={<FaMoon className="text-3xl" />}
             />
           </div>
         </div>

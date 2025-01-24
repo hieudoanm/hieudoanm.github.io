@@ -62,7 +62,7 @@ export const WidgetCalendarMonthly: FC = () => {
   return (
     <div className="shadow-3xl aspect-square w-72 rounded-3xl bg-black p-8 text-white">
       <div className="relative flex h-full items-center justify-center">
-        <div className="absolute left-0 right-0 top-0">
+        <div className="absolute top-0 right-0 left-0">
           <div className="flex items-center justify-between">
             <p className="text-red-500">
               {month} {clock.year}
@@ -88,21 +88,26 @@ export const WidgetCalendarMonthly: FC = () => {
               <div
                 key={`week-${weekdays}`}
                 className="flex w-full items-center justify-between">
-                {weekdays.map((weekday) => {
+                {weekdays.map((date) => {
                   return (
                     <div
-                      key={`weekday-${weekday}`}
+                      key={`date-${date}`}
                       className="flex items-center justify-center py-2">
                       <button
                         type="button"
                         onClick={() => {
-                          console.log(clock.year, month, weekday);
+                          console.log(
+                            weekdays[clock.weekday],
+                            month,
+                            date,
+                            clock.year
+                          );
                         }}>
-                        {weekday === clock.date ? (
+                        {date === clock.date ? (
                           <div className="aspect-square w-2 rounded-full bg-red-500" />
                         ) : (
                           <>
-                            {weekday <= 0 || weekday > numberOfDaysPerMonth ? (
+                            {date <= 0 || date > numberOfDaysPerMonth ? (
                               <div className="aspect-square w-2 rounded-full bg-gray-700" />
                             ) : (
                               <div className="aspect-square w-2 rounded-full bg-white" />
@@ -117,7 +122,7 @@ export const WidgetCalendarMonthly: FC = () => {
             );
           })}
         </div>
-        <div className="absolute bottom-0 left-0 right-0">
+        <div className="absolute right-0 bottom-0 left-0">
           <div className="flex items-center justify-center">
             <p>Nothing to Do</p>
           </div>

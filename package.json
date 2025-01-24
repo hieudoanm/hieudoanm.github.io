@@ -20,12 +20,12 @@
   "private": true,
   "scripts": {
     "format": "prettier --cache --write .",
-    "predev": "kill-port 3000",
-    "dev": "next dev --turbopack",
+    "predev": "kill-port 3001",
+    "dev": "next dev -p 3001 --turbopack",
     "prebuild": "rimraf .next docs",
     "build": "next build && touch ./docs/.nojekyll",
-    "prestart": "kill-port 3000",
-    "start": "next start",
+    "prestart": "kill-port 3001",
+    "start": "next start -p 3001",
     "lint": "next lint",
     "prepare": "husky || true"
   },

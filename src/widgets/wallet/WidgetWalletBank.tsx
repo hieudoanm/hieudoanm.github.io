@@ -5,7 +5,7 @@ import {
   FaMoneyBill,
 } from 'react-icons/fa6';
 
-export const WidgetWallet = () => {
+export const WidgetWalletBank = () => {
   const icons = [
     <FaWallet key="accounts" />,
     <FaMoneyBillTransfer key="transfer" />,

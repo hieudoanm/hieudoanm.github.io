@@ -25,7 +25,8 @@ import {
   WidgetTasks,
   WidgetTranslate,
   WidgetVideos,
-  WidgetWallet,
+  WidgetWalletBank,
+  WidgetWalletForex,
   WidgetWeatherDescription,
   WidgetWeatherTemperature,
   WidgetHealthBodyTemperature,
@@ -65,13 +66,16 @@ const WidgetsPage: NextPage = () => {
     { id: 'tasks', widget: <WidgetTasks /> },
     { id: 'translate', widget: <WidgetTranslate /> },
     { id: 'videos', widget: <WidgetVideos /> },
-    { id: 'wallet', widget: <WidgetWallet /> },
+    { id: 'wallet-bank', widget: <WidgetWalletBank /> },
+    { id: 'wallet-forex', widget: <WidgetWalletForex /> },
     { id: 'weather-description', widget: <WidgetWeatherDescription /> },
     { id: 'weather-temperature', widget: <WidgetWeatherTemperature /> },
   ];
 
+  console.log(widgets.length);
+
   return (
-    <div className="h-[3000vh] w-screen overflow-hidden bg-gray-100 md:h-[800vh]">
+    <div className="h-[3300vh] w-screen overflow-hidden bg-gray-100 md:h-[900vh]">
       <div className="grid h-full grid-cols-1 lg:grid-cols-4">
         {widgets.map(({ id, widget }) => {
           return (
