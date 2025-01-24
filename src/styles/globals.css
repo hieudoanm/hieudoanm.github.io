@@ -15,6 +15,29 @@
   }
 }
 
+.animate-flip {
+  animation: flip 500ms linear infinite; /* Add flip animation */
+  transform-style: preserve-3d; /* Allows 3D transforms for the coin faces */
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
 body {
   overflow-x: hidden;
 }

@@ -1,6 +1,7 @@
 import {
   WidgetBattery,
   WidgetBrowser,
+  WidgetBrowsers,
   WidgetCalculatorBasic,
   WidgetCalculatorConvertForex,
   WidgetCalculatorConvertLength,
@@ -40,12 +41,22 @@ import {
   WidgetWeatherDescription,
   WidgetWeatherTemperature,
 } from '@nothing/widgets';
+import {
+  WidgetColorsConverter,
+  WidgetColorsPicker,
+} from '@nothing/widgets/colors';
+import {
+  WidgetGamesFlipism,
+  WidgetGamesRockPaperScissors,
+} from '@nothing/widgets/games';
 import { NextPage } from 'next';
 
 const WidgetsPage: NextPage = () => {
   const widgets = [
     { id: 'battery', widget: <WidgetBattery /> },
     { id: 'browser', widget: <WidgetBrowser /> },
+    { id: 'browsers', widget: <WidgetBrowsers /> },
+
     { id: 'calculator-basic', widget: <WidgetCalculatorBasic /> },
     {
       id: 'calculator-convert-forex',
@@ -68,9 +79,19 @@ const WidgetsPage: NextPage = () => {
     { id: 'clock-time-zone', widget: <WidgetClockTimeZone /> },
     { id: 'compass-compact', widget: <WidgetCompassCompact /> },
     { id: 'compass-full', widget: <WidgetCompassFull /> },
+    { id: 'colors-converter', widget: <WidgetColorsConverter /> },
+    { id: 'colors-picker', widget: <WidgetColorsPicker /> },
     { id: 'crypto', widget: <WidgetCrypto /> },
     { id: 'files', widget: <WidgetFiles /> },
     { id: 'fitness', widget: <WidgetFitness /> },
+    {
+      id: 'games-flipism',
+      widget: <WidgetGamesFlipism />,
+    },
+    {
+      id: 'games-rock-paper-scissors',
+      widget: <WidgetGamesRockPaperScissors />,
+    },
     { id: 'health-body-temperature', widget: <WidgetHealthBodyTemperature /> },
     { id: 'health-blood-pressure', widget: <WidgetHealthBloodPressure /> },
     { id: 'home', widget: <WidgetHome /> },
@@ -98,8 +119,8 @@ const WidgetsPage: NextPage = () => {
   console.log(widgets.length);
 
   return (
-    <div className="h-[1800vh] w-screen overflow-hidden bg-gray-100 md:h-[400vh]">
-      <div className="grid h-full grid-cols-1 lg:grid-cols-5">
+    <div className="h-[2200vh] w-screen overflow-hidden bg-gray-100 md:h-[450vh]">
+      <div className="grid h-full grid-cols-2 lg:grid-cols-5">
         {widgets.map(({ id, widget }) => {
           return (
             <div key={id} className="col-span-1">

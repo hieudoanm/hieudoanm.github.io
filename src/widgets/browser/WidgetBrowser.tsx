@@ -3,7 +3,7 @@ import { FaBookmark, FaClockRotateLeft, FaMask, FaPlus } from 'react-icons/fa6';
 export const WidgetBrowser = () => {
   const icons = [
     <FaPlus key="new" />,
-    <FaMask key="transfer" />,
+    <FaMask key="icognito" />,
     <FaBookmark key="bookmark" />,
     <FaClockRotateLeft key="history" />,
   ];

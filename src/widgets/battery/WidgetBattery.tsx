@@ -33,7 +33,7 @@ export const WidgetBattery = () => {
 
     const initBattery = async () => {
       try {
-        if (navigator) {
+        if (navigator && typeof (navigator as any).getBattery === 'function') {
           batteryManager = await (navigator as any).getBattery();
           updateBatteryInfo(batteryManager);
 

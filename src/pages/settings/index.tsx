@@ -98,7 +98,7 @@ const SettingsPage: NextPage = () => {
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100">
       <div className="flex h-full items-center justify-center">
-        <div className="grid grid-cols-3 gap-4 md:grid-cols-4 md:gap-8 lg:grid-cols-6">
+        <div className="grid grid-cols-3 gap-4 md:grid-cols-4 md:gap-8 lg:grid-cols-7">
           <div className="col-span-1">
             <QuickSetting
               setting="cellular"

@@ -8,11 +8,15 @@
     - [Desktop](#desktop)
     - [Mobile](#mobile)
   - [Apps](#apps)
+    - [Battery](#battery)
     - [Browser](#browser)
     - [Calculator](#calculator)
     - [Calendar](#calendar)
+    - [Camera](#camera)
     - [Clock](#clock)
+    - [Colors](#colors)
     - [Compass](#compass)
+    - [Crypto](#crypto)
     - [Files](#files)
     - [Fitness](#fitness)
     - [Health](#health)
@@ -46,6 +50,10 @@
 
 ## Apps
 
+### [Battery](https://hieudoanm.github.io/nothing/battery/)
+
+![battery](./images/apps/battery.png)
+
 ### [Browser](https://hieudoanm.github.io/nothing/browser/)
 
 ![browser](./images/apps/browser.png)
@@ -58,13 +66,23 @@
 
 ![calendar](./images/apps/calendar.png)
 
+### [Camera](https://hieudoanm.github.io/nothing/camera/)
+
 ### [Clock](https://hieudoanm.github.io/nothing/clock/)
 
 ![clock](./images/apps/clock.png)
 
+### [Colors](https://hieudoanm.github.io/nothing/colors/)
+
+![colors](./images/apps/colors.png)
+
 ### [Compass](https://hieudoanm.github.io/nothing/compass/)
 
 ![compass](./images/apps/compass.png)
+
+### [Crypto](https://hieudoanm.github.io/nothing/crypto/)
+
+![crypto](./images/apps/crypto.png)
 
 ### [Files](https://hieudoanm.github.io/nothing/files/)
 

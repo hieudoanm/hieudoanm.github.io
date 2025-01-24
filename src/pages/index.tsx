@@ -6,6 +6,7 @@ import {
   FaBitcoin,
   FaCalculator,
   FaCalendarDays,
+  FaCamera,
   FaChartLine,
   FaClock,
   FaCloudSunRain,
@@ -14,6 +15,8 @@ import {
   FaFileLines,
   FaFileZipper,
   FaFirefoxBrowser,
+  FaGamepad,
+  FaGear,
   FaHeart,
   FaHouseChimney,
   FaLanguage,
@@ -21,10 +24,10 @@ import {
   FaMessage,
   FaMusic,
   FaNewspaper,
+  FaPalette,
   FaPhone,
   FaPhotoFilm,
   FaRectangleList,
-  FaScrewdriverWrench,
   FaTemperatureFull,
   FaWallet,
   FaYoutube,
@@ -64,10 +67,22 @@ const HomePage: NextPage = () => {
       icon: <FaCalendarDays className="text-2xl" />,
     },
     {
+      id: 'camera',
+      href: 'camera',
+      name: 'camera',
+      icon: <FaCamera className="mx-auto text-2xl" />,
+    },
+    {
       id: 'clock',
       href: 'clock',
       name: 'clock',
       icon: <FaClock className="text-2xl" />,
+    },
+    {
+      id: 'colors',
+      href: 'colors',
+      name: 'colors',
+      icon: <FaPalette className="text-2xl" />,
     },
     {
       id: 'compass',
@@ -92,6 +107,12 @@ const HomePage: NextPage = () => {
       href: 'fitness',
       name: 'fitness',
       icon: <FaHeart className="text-2xl" />,
+    },
+    {
+      id: 'games',
+      href: 'games',
+      name: 'games',
+      icon: <FaGamepad className="text-2xl" />,
     },
     {
       id: 'health',
@@ -157,7 +178,7 @@ const HomePage: NextPage = () => {
       id: 'settings',
       href: 'settings',
       name: 'settings',
-      icon: <FaScrewdriverWrench className="text-2xl" />,
+      icon: <FaGear className="text-2xl" />,
     },
     {
       id: 'stocks',
@@ -197,18 +218,20 @@ const HomePage: NextPage = () => {
     },
   ];
   return (
-    <div className="h-[200vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
+    <div className="h-[130vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-4 gap-4 md:grid-cols-6 md:gap-8">
+        <div className="grid h-full grid-cols-4 gap-4 md:grid-cols-8 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">
                 <div className="flex h-full items-center justify-center">
-                  <Link href={`/${href}`} className="flex flex-col gap-y-1">
+                  <Link
+                    href={`/${href}`}
+                    className="flex flex-col items-center gap-y-1">
                     <div className="flex aspect-square w-16 items-center justify-center overflow-hidden rounded-full bg-black text-white hover:bg-red-500">
                       {icon}
                     </div>
-                    <p className="text-center text-sm font-semibold capitalize">
+                    <p className="w-24 truncate text-center text-sm font-semibold capitalize">
                       {name}
                     </p>
                   </Link>
