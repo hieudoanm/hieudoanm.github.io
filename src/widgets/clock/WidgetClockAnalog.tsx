@@ -50,9 +50,9 @@ export const WidgetClockAnalog: FC = () => {
   const hoursAngle: number = (clock.hours / 12) * 360 + 90;
 
   return (
-    <div className="shadow-3xl aspect-square w-72 rounded-full border border-white bg-black">
+    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-full border border-white bg-black">
       <div className="relative h-full w-full rounded-full">
-        <div className="absolute bottom-0 left-0 right-0 top-0 m-auto aspect-square w-4 rounded-full bg-white">
+        <div className="absolute top-0 right-0 bottom-0 left-0 m-auto aspect-square w-4 rounded-full bg-white">
           <div className="relative h-full w-full">
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((index: number) => {
               const angle: number = 30 * index;
@@ -72,9 +72,9 @@ export const WidgetClockAnalog: FC = () => {
               return (
                 <div
                   key={angle}
-                  className="absolute h-full w-full origin-top"
+                  className="absolute h-full w-full origin-center"
                   style={{ rotate: `${angle}deg` }}>
-                  <div className="absolute bottom-0 right-2 top-0 my-auto flex h-4 w-28 items-center justify-start bg-transparent">
+                  <div className="absolute top-0 right-2 bottom-0 my-auto flex h-4 w-24 items-center justify-start bg-transparent">
                     {mainPoint}
                   </div>
                 </div>
@@ -83,17 +83,17 @@ export const WidgetClockAnalog: FC = () => {
             <div
               className="absolute z-10 h-full w-full transition-all ease-linear"
               style={{ rotate: `${secondsAngle}deg` }}>
-              <div className="absolute bottom-0 right-2 top-0 my-auto h-1 w-24 rounded-full bg-red-700"></div>
+              <div className="absolute top-0 right-2 bottom-0 my-auto h-1 w-20 rounded-full bg-red-700"></div>
             </div>
             <div
               className="absolute h-full w-full transition-all"
               style={{ rotate: `${minutesAngle}deg` }}>
-              <div className="absolute bottom-0 right-2 top-0 my-auto h-2 w-20 rounded-full bg-white"></div>
+              <div className="absolute top-0 right-2 bottom-0 my-auto h-2 w-16 rounded-full bg-white"></div>
             </div>
             <div
               className="absolute h-full w-full transition-all"
               style={{ rotate: `${hoursAngle}deg` }}>
-              <div className="absolute bottom-0 right-2 top-0 my-auto h-2 w-16 rounded-full bg-white"></div>
+              <div className="absolute top-0 right-2 bottom-0 my-auto h-2 w-12 rounded-full bg-white"></div>
             </div>
           </div>
         </div>

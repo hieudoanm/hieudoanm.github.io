@@ -12,7 +12,7 @@ export const WidgetMusic: FC = () => {
   const [status, setStatus] = useState(false);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
       <div className="flex h-full w-full flex-col p-8">
         <div className="mb-2 text-center">
           <p className="truncate text-xl">
@@ -33,7 +33,7 @@ export const WidgetMusic: FC = () => {
           <div className="grid h-full grid-cols-3">
             <div className="col-span-1">
               <div className="flex h-full items-center justify-start">
-                <FaBackward className="text-4xl" />
+                <FaBackward className="text-2xl" />
               </div>
             </div>
             <div className="col-span-1">
@@ -42,15 +42,15 @@ export const WidgetMusic: FC = () => {
                 onClick={() => setStatus(!status)}
                 className="flex h-full w-full items-center justify-center">
                 {status ? (
-                  <FaPlay className="text-6xl" />
+                  <FaPlay className="text-4xl" />
                 ) : (
-                  <FaPause className="text-6xl" />
+                  <FaPause className="text-4xl" />
                 )}
               </button>
             </div>
             <div className="col-span-1">
               <div className="flex h-full items-center justify-end">
-                <FaForward className="text-4xl" />
+                <FaForward className="text-2xl" />
               </div>
             </div>
           </div>

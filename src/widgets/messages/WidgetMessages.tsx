@@ -27,8 +27,8 @@ export const WidgetMessages: FC = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
-      <div className="h-full w-full p-8">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
+      <div className="h-full w-full p-6">
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between pb-2">
             <p className="text-xl font-black">Messages</p>
@@ -47,10 +47,12 @@ export const WidgetMessages: FC = () => {
                   )}
                   <div className={`grow ${unread ? 'font-bold' : ''}`}>
                     <div className="flex items-center justify-between truncate">
-                      <p className="text-base">{contact}</p>
+                      <p className="text-sm">{contact}</p>
                       <p className="text-xs">{dateTime}</p>
                     </div>
-                    <p className="w-48 truncate text-gray-500">{message}</p>
+                    <p className="w-44 truncate text-sm text-gray-500">
+                      {message}
+                    </p>
                   </div>
                 </div>
               </div>

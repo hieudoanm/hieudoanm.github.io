@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { JSX } from 'react';
 import {
   FaBatteryFull,
+  FaBitcoin,
   FaCalculator,
   FaCalendarDays,
   FaChartLine,
@@ -73,6 +74,12 @@ const HomePage: NextPage = () => {
       href: 'compass',
       name: 'compass',
       icon: <FaCompass className="text-2xl" />,
+    },
+    {
+      id: 'crypto',
+      href: 'crypto',
+      name: 'crypto',
+      icon: <FaBitcoin className="text-2xl" />,
     },
     {
       id: 'files',
@@ -190,9 +197,9 @@ const HomePage: NextPage = () => {
     },
   ];
   return (
-    <div className="h-screen w-screen overflow-hidden bg-gray-100">
+    <div className="h-[200vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-4 gap-4 md:grid-cols-7 md:gap-8">
+        <div className="grid h-full grid-cols-4 gap-4 md:grid-cols-6 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">

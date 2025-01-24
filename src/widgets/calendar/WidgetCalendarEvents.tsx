@@ -24,14 +24,14 @@ export const WidgetCalendarEvents: FC = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
-      <div className="h-full w-full p-8">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
+      <div className="h-full w-full p-6">
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between pb-2">
-            <p className="text-xl font-black">Events</p>
-            <p>
+            <p className="text-lg font-black">Events</p>
+            <button type="button">
               <FaPlus />
-            </p>
+            </button>
           </div>
           {events.map(({ title, description, dateTime }) => {
             return (
@@ -39,10 +39,12 @@ export const WidgetCalendarEvents: FC = () => {
                 <div className="flex h-full w-full items-center gap-x-2 overflow-hidden">
                   <div className="w-full">
                     <div className="flex items-center justify-between truncate">
-                      <p className="font-bold">{title}</p>
+                      <p className="text-sm font-bold">{title}</p>
                       <p className="text-xs">{dateTime}</p>
                     </div>
-                    <p className="w-48 truncate text-gray-500">{description}</p>
+                    <p className="w-48 truncate text-sm text-gray-500">
+                      {description}
+                    </p>
                   </div>
                 </div>
               </div>

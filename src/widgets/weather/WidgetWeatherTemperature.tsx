@@ -11,7 +11,7 @@ export const WidgetWeatherTemperature: FC = () => {
   const unit: TemperatureUnit = units[unitIndex];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-full bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-black text-white">
       <button
         type="button"
         className="flex h-full w-full items-center justify-center"

@@ -1,1 +1,2 @@
-export * from './WidgetStocks';
+export * from './WidgetStocksIndexes';
+export * from './WidgetStocksSymbols';

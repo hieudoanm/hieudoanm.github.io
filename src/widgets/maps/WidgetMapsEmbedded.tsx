@@ -11,7 +11,7 @@ export const WidgetMapsEmbedded: FC = () => {
   const bottom: number = parseFloat((latitude ?? 0).toFixed(1)) - radius;
 
   return (
-    <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
       <div className="h-full w-full p-2">
         <div className="h-full w-full overflow-hidden rounded-2xl">
           <iframe

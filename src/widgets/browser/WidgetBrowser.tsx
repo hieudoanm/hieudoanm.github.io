@@ -9,7 +9,7 @@ export const WidgetBrowser = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
       <div className="flex h-full w-full flex-col px-8 py-6">
         <div className="grid grid-cols-2 pb-2">
           <div className="col-span-1">

@@ -51,7 +51,7 @@ export const WidgetClockTimeZone: FC = () => {
   ];
 
   return (
-    <div className="shadow-3xl aspect-square w-72 rounded-3xl border border-white bg-black p-8">
+    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl border border-white bg-black p-8">
       <div className="grid h-full w-full grid-rows-3">
         {timeZones.map(({ city, timeZone }, index: number, array) => {
           const last = array.length - 1 === index;
@@ -71,14 +71,14 @@ export const WidgetClockTimeZone: FC = () => {
               className={`col-span-1 text-white ${!last ? 'border-b border-gray-500' : ''}`}>
               <div className="flex h-full w-full items-center justify-between">
                 <div>
-                  <p className="text-sm uppercase text-gray-500">
+                  <p className="text-xs text-gray-500 uppercase">
                     +{addZero(timeZone)}Hrs
                   </p>
-                  <p className="truncate whitespace-nowrap text-base font-semibold">
+                  <p className="truncate text-sm font-semibold whitespace-nowrap">
                     {city}
                   </p>
                 </div>
-                <p className="text-3xl font-bold">
+                <p className="text-2xl font-bold">
                   {addZero(timeZoneHours)}:{addZero(timeZoneMinutes)}
                 </p>
               </div>

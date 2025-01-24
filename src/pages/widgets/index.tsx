@@ -1,18 +1,26 @@
 import {
+  WidgetBattery,
   WidgetBrowser,
-  WidgetCalculator,
+  WidgetCalculatorBasic,
+  WidgetCalculatorConvertForex,
+  WidgetCalculatorConvertLength,
+  WidgetCalculatorConvertWeight,
+  WidgetCalendarEvents,
   WidgetCalendarMonthly,
   WidgetCalendarToday,
-  WidgetCalendarEvents,
   WidgetClockAnalog,
   WidgetClockDigital,
   WidgetClockTimeZone,
+  WidgetCompassCompact,
   WidgetCompassFull,
+  WidgetCrypto,
   WidgetFiles,
   WidgetFitness,
   WidgetHealthBloodPressure,
+  WidgetHealthBodyTemperature,
   WidgetHome,
   WidgetMail,
+  WidgetMapsCoordinates,
   WidgetMapsEmbedded,
   WidgetMessages,
   WidgetMusic,
@@ -21,7 +29,8 @@ import {
   WidgetPhoneContacts,
   WidgetPhoneDialer,
   WidgetPhotos,
-  WidgetStocks,
+  WidgetStocksIndexes,
+  WidgetStocksSymbols,
   WidgetTasks,
   WidgetTranslate,
   WidgetVideos,
@@ -29,18 +38,26 @@ import {
   WidgetWalletForex,
   WidgetWeatherDescription,
   WidgetWeatherTemperature,
-  WidgetHealthBodyTemperature,
-  WidgetCompassCompact,
 } from '@nothing/widgets';
-import { WidgetBattery } from '@nothing/widgets/battery';
-import { WidgetMapsCoordinates } from '@nothing/widgets/maps/WidgetMapsCoordinates';
 import { NextPage } from 'next';
 
 const WidgetsPage: NextPage = () => {
   const widgets = [
     { id: 'battery', widget: <WidgetBattery /> },
     { id: 'browser', widget: <WidgetBrowser /> },
-    { id: 'calculator', widget: <WidgetCalculator /> },
+    { id: 'calculator-basic', widget: <WidgetCalculatorBasic /> },
+    {
+      id: 'calculator-convert-forex',
+      widget: <WidgetCalculatorConvertForex />,
+    },
+    {
+      id: 'calculator-convert-length',
+      widget: <WidgetCalculatorConvertLength />,
+    },
+    {
+      id: 'calculator-convert-weight',
+      widget: <WidgetCalculatorConvertWeight />,
+    },
     { id: 'calendar-today', widget: <WidgetCalendarToday /> },
     { id: 'calendar-monthly', widget: <WidgetCalendarMonthly /> },
     { id: 'calendar-events', widget: <WidgetCalendarEvents /> },
@@ -49,6 +66,7 @@ const WidgetsPage: NextPage = () => {
     { id: 'clock-time-zone', widget: <WidgetClockTimeZone /> },
     { id: 'compass-compact', widget: <WidgetCompassCompact /> },
     { id: 'compass-full', widget: <WidgetCompassFull /> },
+    { id: 'crypto', widget: <WidgetCrypto /> },
     { id: 'files', widget: <WidgetFiles /> },
     { id: 'fitness', widget: <WidgetFitness /> },
     { id: 'health-body-temperature', widget: <WidgetHealthBodyTemperature /> },
@@ -64,7 +82,8 @@ const WidgetsPage: NextPage = () => {
     { id: 'phone-contacts', widget: <WidgetPhoneContacts /> },
     { id: 'phone-dialer', widget: <WidgetPhoneDialer /> },
     { id: 'photos', widget: <WidgetPhotos /> },
-    { id: 'stocks', widget: <WidgetStocks /> },
+    { id: 'stocks-indexes', widget: <WidgetStocksIndexes /> },
+    { id: 'stocks-symbols', widget: <WidgetStocksSymbols /> },
     { id: 'tasks', widget: <WidgetTasks /> },
     { id: 'translate', widget: <WidgetTranslate /> },
     { id: 'videos', widget: <WidgetVideos /> },
@@ -77,8 +96,8 @@ const WidgetsPage: NextPage = () => {
   console.log(widgets.length);
 
   return (
-    <div className="h-[3300vh] w-screen overflow-hidden bg-gray-100 md:h-[900vh]">
-      <div className="grid h-full grid-cols-1 lg:grid-cols-4">
+    <div className="h-[1800vh] w-screen overflow-hidden bg-gray-100 md:h-[800vh]">
+      <div className="grid h-full grid-cols-1 lg:grid-cols-5">
         {widgets.map(({ id, widget }) => {
           return (
             <div key={id} className="col-span-1">

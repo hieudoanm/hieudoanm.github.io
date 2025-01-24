@@ -48,15 +48,13 @@ export const WidgetCalendarToday: FC = () => {
   const weekday: string = weekdays[clock.weekday];
 
   return (
-    <div className="shadow-3xl aspect-square w-72 rounded-3xl bg-black p-8 text-white">
-      <div className="relative flex h-full items-center justify-center">
-        <div className="absolute left-0 right-0 top-0">
-          <p className="text-red-500">{month}</p>
+    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl bg-black p-4 text-white">
+      <div className="flex h-full flex-col items-center justify-center">
+        <p className="w-full text-left">{month}</p>
+        <div className="flex grow items-center justify-center">
+          <p className="text-9xl text-red-500">{clock.date}</p>
         </div>
-        <div className="text-center">
-          <p className="text-9xl">{clock.date}</p>
-          <p className="text-4xl">{weekday}</p>
-        </div>
+        <p className="text-xl">{weekday}</p>
       </div>
     </div>
   );

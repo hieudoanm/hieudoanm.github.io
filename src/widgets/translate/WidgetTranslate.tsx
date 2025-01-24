@@ -9,7 +9,7 @@ export const WidgetTranslate = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
       <div className="flex h-full w-full flex-col px-8 py-8">
         <div className="pb-8">
           <p className="text-center font-black">Translate</p>

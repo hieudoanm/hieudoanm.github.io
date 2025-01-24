@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 export const WidgetFitness: FC = () => {
   return (
-    <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
       <div className="h-full w-full p-8">
         <div className="grid h-full grid-rows-5">
           <div className="row-span-1">
@@ -12,7 +12,7 @@ export const WidgetFitness: FC = () => {
           </div>
           <div className="row-span-2">
             <div className="flex h-full items-center justify-between">
-              <p className="text-6xl font-black text-red-500">10,000</p>
+              <p className="text-4xl font-black text-red-500">10,000</p>
               <div className="flex h-full items-end">
                 <p className="text-sm">steps</p>
               </div>
@@ -20,7 +20,7 @@ export const WidgetFitness: FC = () => {
           </div>
           <div className="row-span-2">
             <div className="flex h-full items-center justify-between">
-              <p className="text-6xl font-black text-red-500">2,500</p>
+              <p className="text-4xl font-black text-red-500">2,500</p>
               <div className="flex h-full items-end">
                 <p className="text-sm">calories</p>
               </div>

@@ -10,8 +10,8 @@ export const WidgetTasks = () => {
   ]);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-72 overflow-hidden rounded-3xl bg-black text-white">
-      <div className="h-full w-full p-8">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
+      <div className="h-full w-full p-6">
         <div className="grid h-full grid-rows-6">
           <div className="col-span-1">
             <div className="flex h-full items-center justify-between">

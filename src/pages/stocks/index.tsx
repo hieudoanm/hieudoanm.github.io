@@ -1,11 +1,21 @@
-import { WidgetStocks } from '@nothing/widgets/stocks/WidgetStocks';
+import { WidgetStocksIndexes } from '@nothing/widgets/stocks/WidgetStocksIndexes';
+import { WidgetStocksSymbols } from '@nothing/widgets/stocks/WidgetStocksSymbols';
 import { NextPage } from 'next';
 
 const StocksPage: NextPage = () => {
   return (
-    <div className="h-screen w-screen overflow-hidden bg-gray-100">
-      <div className="flex h-full items-center justify-center">
-        <WidgetStocks />
+    <div className="h-[200vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
+      <div className="grid h-full grid-cols-1 md:grid-cols-2">
+        <div className="col-span-1">
+          <div className="flex h-full items-center justify-center">
+            <WidgetStocksIndexes />
+          </div>
+        </div>
+        <div className="col-span-1">
+          <div className="flex h-full items-center justify-center">
+            <WidgetStocksSymbols />
+          </div>
+        </div>
       </div>
     </div>
   );

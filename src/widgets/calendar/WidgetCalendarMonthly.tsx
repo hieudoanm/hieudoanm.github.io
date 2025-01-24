@@ -60,20 +60,18 @@ export const WidgetCalendarMonthly: FC = () => {
   const daysByWeek: number[][] = chunkArray(array, 7);
 
   return (
-    <div className="shadow-3xl aspect-square w-72 rounded-3xl bg-black p-8 text-white">
-      <div className="relative flex h-full items-center justify-center">
-        <div className="absolute top-0 right-0 left-0">
-          <div className="flex items-center justify-between">
-            <p className="text-red-500">
-              {month} {clock.year}
-            </p>
-            <p>
-              {clock.date}
-              <sup>{getOrdinalSuffix(clock.date)}</sup>
-            </p>
-          </div>
+    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl bg-black p-6 text-white">
+      <div className="flex h-full flex-col items-center justify-center gap-y-2">
+        <div className="flex w-full items-center justify-between">
+          <p className="text-red-500">
+            {month} {clock.year}
+          </p>
+          <p>
+            {clock.date}
+            <sup>{getOrdinalSuffix(clock.date)}</sup>
+          </p>
         </div>
-        <div className="w-full">
+        <div className="w-full grow">
           <div className="flex w-full items-center justify-between">
             <div>S</div>
             <div>M</div>
@@ -122,10 +120,8 @@ export const WidgetCalendarMonthly: FC = () => {
             );
           })}
         </div>
-        <div className="absolute right-0 bottom-0 left-0">
-          <div className="flex items-center justify-center">
-            <p>Nothing to Do</p>
-          </div>
+        <div className="flex items-center justify-center">
+          <p>Nothing to Do</p>
         </div>
       </div>
     </div>
