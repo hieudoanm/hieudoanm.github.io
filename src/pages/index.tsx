@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import { JSX } from 'react';
 import {
+  FaBatteryFull,
   FaCalculator,
   FaCalendarDays,
   FaChartLine,
@@ -37,6 +38,12 @@ type NothingApp = {
 
 const HomePage: NextPage = () => {
   const apps: NothingApp[] = [
+    {
+      id: 'battery',
+      href: 'battery',
+      name: 'battery',
+      icon: <FaBatteryFull className="text-2xl" />,
+    },
     {
       id: 'browser',
       href: 'browser',
@@ -185,7 +192,7 @@ const HomePage: NextPage = () => {
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-4 gap-4 md:grid-cols-6 md:gap-8">
+        <div className="grid h-full grid-cols-4 gap-4 md:grid-cols-7 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">

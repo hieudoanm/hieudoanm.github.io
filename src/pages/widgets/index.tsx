@@ -32,11 +32,13 @@ import {
   WidgetHealthBodyTemperature,
   WidgetCompassCompact,
 } from '@nothing/widgets';
+import { WidgetBattery } from '@nothing/widgets/battery';
 import { WidgetMapsCoordinates } from '@nothing/widgets/maps/WidgetMapsCoordinates';
 import { NextPage } from 'next';
 
 const WidgetsPage: NextPage = () => {
   const widgets = [
+    { id: 'battery', widget: <WidgetBattery /> },
     { id: 'browser', widget: <WidgetBrowser /> },
     { id: 'calculator', widget: <WidgetCalculator /> },
     { id: 'calendar-today', widget: <WidgetCalendarToday /> },
