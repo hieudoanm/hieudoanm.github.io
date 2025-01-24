@@ -96,7 +96,7 @@ const WidgetsPage: NextPage = () => {
   console.log(widgets.length);
 
   return (
-    <div className="h-[1800vh] w-screen overflow-hidden bg-gray-100 md:h-[800vh]">
+    <div className="h-[1800vh] w-screen overflow-hidden bg-gray-100 md:h-[400vh]">
       <div className="grid h-full grid-cols-1 lg:grid-cols-5">
         {widgets.map(({ id, widget }) => {
           return (
