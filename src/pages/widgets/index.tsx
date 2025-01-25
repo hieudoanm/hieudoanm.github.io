@@ -48,6 +48,7 @@ import {
 import {
   WidgetGamesFlipism,
   WidgetGamesRockPaperScissors,
+  WidgetGamesWheelOfFortune,
 } from '@nothing/widgets/games';
 import { NextPage } from 'next';
 
@@ -92,6 +93,10 @@ const WidgetsPage: NextPage = () => {
       id: 'games-rock-paper-scissors',
       widget: <WidgetGamesRockPaperScissors />,
     },
+    {
+      id: 'games-wheel-of-fortune',
+      widget: <WidgetGamesWheelOfFortune />,
+    },
     { id: 'health-body-temperature', widget: <WidgetHealthBodyTemperature /> },
     { id: 'health-blood-pressure', widget: <WidgetHealthBloodPressure /> },
     { id: 'home', widget: <WidgetHome /> },
@@ -119,7 +124,7 @@ const WidgetsPage: NextPage = () => {
   console.log(widgets.length);
 
   return (
-    <div className="h-[2200vh] w-screen overflow-hidden bg-gray-100 md:h-[450vh]">
+    <div className="h-[1100vh] w-screen overflow-hidden bg-gray-100 lg:h-[500vh]">
       <div className="grid h-full grid-cols-2 lg:grid-cols-5">
         {widgets.map(({ id, widget }) => {
           return (

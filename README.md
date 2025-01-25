@@ -18,6 +18,7 @@
     - [Compass](#compass)
     - [Crypto](#crypto)
     - [Files](#files)
+    - [Games](#games)
     - [Fitness](#fitness)
     - [Health](#health)
     - [Home](#home)
@@ -87,6 +88,10 @@
 ### [Files](https://hieudoanm.github.io/nothing/files/)
 
 ![files](./images/apps/files.png)
+
+### [Games](https://hieudoanm.github.io/nothing/games/)
+
+![games](./images/apps/games.png)
 
 ### [Fitness](https://hieudoanm.github.io/nothing/fitness/)
 
