@@ -17,9 +17,10 @@
     - [Colors](#colors)
     - [Compass](#compass)
     - [Crypto](#crypto)
+    - [Devices](#devices)
     - [Files](#files)
-    - [Games](#games)
     - [Fitness](#fitness)
+    - [Games](#games)
     - [Health](#health)
     - [Home](#home)
     - [Mail](#mail)
@@ -31,6 +32,7 @@
     - [Phone](#phone)
     - [Photos](#photos)
     - [Settings](#settings)
+    - [Sports](#sports)
     - [Stocks](#stocks)
     - [Tasks](#tasks)
     - [Translate](#translate)
@@ -85,17 +87,21 @@
 
 ![crypto](./images/apps/crypto.png)
 
+### [Devices](https://hieudoanm.github.io/nothing/devices/)
+
+![devices](./images/apps/devices.png)
+
 ### [Files](https://hieudoanm.github.io/nothing/files/)
 
 ![files](./images/apps/files.png)
 
-### [Games](https://hieudoanm.github.io/nothing/games/)
-
-![games](./images/apps/games.png)
-
 ### [Fitness](https://hieudoanm.github.io/nothing/fitness/)
 
 ![fitness](./images/apps/fitness.png)
+
+### [Games](https://hieudoanm.github.io/nothing/games/)
+
+![games](./images/apps/games.png)
 
 ### [Health](https://hieudoanm.github.io/nothing/health/)
 
@@ -140,6 +146,10 @@
 ### [Settings](https://hieudoanm.github.io/nothing/settings/)
 
 ![settings](./images/apps/settings.png)
+
+### [Sports](https://hieudoanm.github.io/nothing/sports/)
+
+![sports](./images/apps/sports.png)
 
 ### [Stocks](https://hieudoanm.github.io/nothing/stocks/)
 

@@ -13,11 +13,17 @@ import {
   WidgetClockDigital,
   WidgetClockPomodoro,
   WidgetClockTimeZone,
+  WidgetColorsConverter,
+  WidgetColorsPicker,
   WidgetCompassCompact,
   WidgetCompassFull,
   WidgetCrypto,
+  WidgetDevices,
   WidgetFiles,
-  WidgetFitness,
+  WidgetFitnessStepCount,
+  WidgetGamesFlipism,
+  WidgetGamesRockPaperScissors,
+  WidgetGamesWheelOfFortune,
   WidgetHealthBloodPressure,
   WidgetHealthBodyTemperature,
   WidgetHome,
@@ -25,31 +31,27 @@ import {
   WidgetMapsCoordinates,
   WidgetMapsEmbedded,
   WidgetMessages,
-  WidgetMusic,
+  WidgetMusicApps,
+  WidgetMusicPlayer,
   WidgetNews,
   WidgetNotes,
   WidgetPhoneContacts,
   WidgetPhoneDialer,
   WidgetPhotos,
+  WidgetSports,
   WidgetStocksIndexes,
   WidgetStocksSymbols,
   WidgetTasks,
   WidgetTranslate,
+  WidgetTransportation,
   WidgetVideos,
   WidgetWalletBank,
   WidgetWalletForex,
+  WidgetWalletPay,
   WidgetWeatherDescription,
   WidgetWeatherTemperature,
 } from '@nothing/widgets';
-import {
-  WidgetColorsConverter,
-  WidgetColorsPicker,
-} from '@nothing/widgets/colors';
-import {
-  WidgetGamesFlipism,
-  WidgetGamesRockPaperScissors,
-  WidgetGamesWheelOfFortune,
-} from '@nothing/widgets/games';
+import { WidgetFitnessRun } from '@nothing/widgets/fitness/WidgetFitnessRun';
 import { NextPage } from 'next';
 
 const WidgetsPage: NextPage = () => {
@@ -83,8 +85,10 @@ const WidgetsPage: NextPage = () => {
     { id: 'colors-converter', widget: <WidgetColorsConverter /> },
     { id: 'colors-picker', widget: <WidgetColorsPicker /> },
     { id: 'crypto', widget: <WidgetCrypto /> },
+    { id: 'devices', widget: <WidgetDevices /> },
     { id: 'files', widget: <WidgetFiles /> },
-    { id: 'fitness', widget: <WidgetFitness /> },
+    { id: 'fitness-run', widget: <WidgetFitnessRun /> },
+    { id: 'fitness-step-count', widget: <WidgetFitnessStepCount /> },
     {
       id: 'games-flipism',
       widget: <WidgetGamesFlipism />,
@@ -104,19 +108,23 @@ const WidgetsPage: NextPage = () => {
     { id: 'maps-coordinates', widget: <WidgetMapsCoordinates /> },
     { id: 'maps-embedded', widget: <WidgetMapsEmbedded /> },
     { id: 'messages', widget: <WidgetMessages /> },
-    { id: 'music', widget: <WidgetMusic /> },
+    { id: 'music-apps', widget: <WidgetMusicApps /> },
+    { id: 'music-player', widget: <WidgetMusicPlayer /> },
     { id: 'news', widget: <WidgetNews /> },
     { id: 'notes', widget: <WidgetNotes /> },
     { id: 'phone-contacts', widget: <WidgetPhoneContacts /> },
     { id: 'phone-dialer', widget: <WidgetPhoneDialer /> },
     { id: 'photos', widget: <WidgetPhotos /> },
+    { id: 'sports', widget: <WidgetSports /> },
     { id: 'stocks-indexes', widget: <WidgetStocksIndexes /> },
     { id: 'stocks-symbols', widget: <WidgetStocksSymbols /> },
     { id: 'tasks', widget: <WidgetTasks /> },
     { id: 'translate', widget: <WidgetTranslate /> },
+    { id: 'transportation', widget: <WidgetTransportation /> },
     { id: 'videos', widget: <WidgetVideos /> },
     { id: 'wallet-bank', widget: <WidgetWalletBank /> },
     { id: 'wallet-forex', widget: <WidgetWalletForex /> },
+    { id: 'wallet-pay', widget: <WidgetWalletPay /> },
     { id: 'weather-description', widget: <WidgetWeatherDescription /> },
     { id: 'weather-temperature', widget: <WidgetWeatherTemperature /> },
   ];
@@ -124,7 +132,7 @@ const WidgetsPage: NextPage = () => {
   console.log(widgets.length);
 
   return (
-    <div className="h-[1100vh] w-screen overflow-hidden bg-gray-100 lg:h-[500vh]">
+    <div className="h-[1300vh] w-screen overflow-hidden bg-gray-100 lg:h-[550vh]">
       <div className="grid h-full grid-cols-2 lg:grid-cols-5">
         {widgets.map(({ id, widget }) => {
           return (

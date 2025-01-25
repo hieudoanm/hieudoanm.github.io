@@ -1,1 +1,1 @@
-export * from './WidgetFitness';
+export * from './WidgetFitnessStepCount';

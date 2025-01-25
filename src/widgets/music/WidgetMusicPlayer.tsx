@@ -8,7 +8,7 @@ import {
   FaVolumeOff,
 } from 'react-icons/fa6';
 
-export const WidgetMusic: FC = () => {
+export const WidgetMusicPlayer: FC = () => {
   const [status, setStatus] = useState(false);
 
   return (

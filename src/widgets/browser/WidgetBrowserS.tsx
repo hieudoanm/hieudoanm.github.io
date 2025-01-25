@@ -11,9 +11,9 @@ export const WidgetBrowsers = () => {
   return (
     <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
       <div className="flex h-full w-full flex-col px-8 py-6">
-        <div className="grid grid-cols-2 pb-2">
+        <div className="grid grid-cols-2 items-center pb-2">
           <div className="col-span-1">
-            <h1 className="text-center font-black">Browser</h1>
+            <h1 className="text-center font-black">Browsers</h1>
           </div>
           <div className="col-span-1">
             <p className="text-center text-sm">Default</p>

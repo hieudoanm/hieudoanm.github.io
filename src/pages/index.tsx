@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import {
   FaBatteryFull,
   FaBitcoin,
+  FaBus,
   FaCalculator,
   FaCalendarDays,
   FaCamera,
@@ -15,6 +16,7 @@ import {
   FaFileLines,
   FaFileZipper,
   FaFirefoxBrowser,
+  FaFutbol,
   FaGamepad,
   FaGear,
   FaHeart,
@@ -22,6 +24,7 @@ import {
   FaLanguage,
   FaMapLocationDot,
   FaMessage,
+  FaMobile,
   FaMusic,
   FaNewspaper,
   FaPalette,
@@ -95,6 +98,12 @@ const HomePage: NextPage = () => {
       href: 'crypto',
       name: 'crypto',
       icon: <FaBitcoin className="text-2xl" />,
+    },
+    {
+      id: 'devices',
+      href: 'devices',
+      name: 'devices',
+      icon: <FaMobile className="text-2xl" />,
     },
     {
       id: 'files',
@@ -181,6 +190,12 @@ const HomePage: NextPage = () => {
       icon: <FaGear className="text-2xl" />,
     },
     {
+      id: 'sports',
+      href: 'sports',
+      name: 'sports',
+      icon: <FaFutbol className="text-2xl" />,
+    },
+    {
       id: 'stocks',
       href: 'stocks',
       name: 'stocks',
@@ -197,6 +212,12 @@ const HomePage: NextPage = () => {
       href: 'translate',
       name: 'translate',
       icon: <FaLanguage className="text-2xl" />,
+    },
+    {
+      id: 'transportation',
+      href: 'transportation',
+      name: 'transportation',
+      icon: <FaBus className="text-2xl" />,
     },
     {
       id: 'videos',
@@ -217,10 +238,11 @@ const HomePage: NextPage = () => {
       icon: <FaCloudSunRain className="text-2xl" />,
     },
   ];
+
   return (
-    <div className="h-[130vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
+    <div className="h-[100vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-4 gap-4 md:grid-cols-8 md:gap-8">
+        <div className="grid h-full grid-cols-4 grid-rows-8 gap-4 md:grid-cols-8 md:grid-rows-4 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">

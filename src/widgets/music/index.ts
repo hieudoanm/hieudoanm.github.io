@@ -1,1 +1,2 @@
-export * from './WidgetMusic';
+export * from './WidgetMusicApps';
+export * from './WidgetMusicPlayer';
