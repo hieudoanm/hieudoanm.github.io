@@ -108,6 +108,9 @@ const CsvPage: NextPage = () => {
                   await getFile(file);
                 }}>
                 <option value="">New</option>
+                <option value="data/csv/psychology/hofstede.csv">
+                  Psychology - Hofstede
+                </option>
                 <option value="data/csv/usa/congresses.csv">
                   USA - Congresses
                 </option>
