@@ -359,7 +359,7 @@ const ManifestPage: NextPage = () => {
             <textarea
               name="manifest.json"
               placeholder="manifest.json"
-              className="w-full rounded-2xl bg-black p-4 text-white"
+              className="w-full rounded-2xl bg-black p-4 whitespace-pre text-white"
               value={JSON.stringify(manifest, null, 4)}
               rows={18}
               disabled
