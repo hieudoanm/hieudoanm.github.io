@@ -18,6 +18,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   distDir: 'docs',
+  experimental: { turbo: { treeShaking: true } },
+  images: { unoptimized: true },
 };
 
 export default withPWA(nextConfig as any);
