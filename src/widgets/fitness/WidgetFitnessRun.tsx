@@ -22,7 +22,7 @@ export const WidgetFitnessRun: FC = () => {
             <div className="flex h-full items-center justify-between">
               <p className="text-4xl font-black text-red-500">5</p>
               <div className="flex h-full items-end">
-                <p className="text-sm">pace (minutes / km)</p>
+                <p className="text-sm">pace (minutes/km)</p>
               </div>
             </div>
           </div>

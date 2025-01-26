@@ -4,6 +4,9 @@ import { Geist_Mono } from 'next/font/google';
 import Head from 'next/head';
 import 'github-markdown-css/github-markdown.css';
 import { BASE_PATH } from '@nothing/environments/environments';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 const mono = Geist_Mono({
   weight: ['400', '700'],
@@ -24,7 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <div className={mono.className}>
-        <Component {...pageProps} />
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+        </QueryClientProvider>
       </div>
     </>
   );

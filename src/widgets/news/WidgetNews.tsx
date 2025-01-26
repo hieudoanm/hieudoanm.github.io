@@ -27,7 +27,7 @@ export const WidgetNews = () => {
       <div className="h-full w-full p-6">
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between pb-2">
-            <p className="text-xl font-black">News</p>
+            <p className="text-xl font-black text-red-500">News</p>
             <p>
               {shortMonths[new Date().getMonth() + 1]} {new Date().getDate()}
             </p>
