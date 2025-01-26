@@ -39,7 +39,7 @@ export const TanStackTable: FC<TanStackTableProps> = ({
 
   return (
     <div className="no-scrollbar h-full overflow-auto rounded-xl border bg-black text-white">
-      <table>
+      <table className="w-full">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
