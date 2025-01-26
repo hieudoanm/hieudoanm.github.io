@@ -4,10 +4,11 @@
 
 - [Nothing](#nothing)
   - [Table of Content](#table-of-content)
-  - [Home Screen](#home-screen)
+  - [Home](#home)
     - [Desktop](#desktop)
     - [Mobile](#mobile)
-  - [Apps](#apps)
+  - [Widgets](#widgets)
+    - [All](#all)
     - [Battery](#battery)
     - [Browser](#browser)
     - [Calculator](#calculator)
@@ -22,7 +23,7 @@
     - [Fitness](#fitness)
     - [Games](#games)
     - [Health](#health)
-    - [Home](#home)
+    - [Home](#home-1)
     - [Mail](#mail)
     - [Maps](#maps)
     - [Messages](#messages)
@@ -39,9 +40,8 @@
     - [Videos](#videos)
     - [Wallet](#wallet)
     - [Weather](#weather)
-  - [Widgets](#widgets)
 
-## [Home Screen](https://hieudoanm.github.io/nothing/)
+## [Home](https://hieudoanm.github.io/nothing/)
 
 ### Desktop
 
@@ -51,130 +51,130 @@
 
 ![mobile](./images/home/mobile.png)
 
-## Apps
+## Widgets
 
-### [Battery](https://hieudoanm.github.io/nothing/battery/)
+### [All](https://hieudoanm.github.io/nothing/widgets/all)
 
-![battery](./images/apps/battery.png)
+![all](./images/widgets/all.png)
 
-### [Browser](https://hieudoanm.github.io/nothing/browser/)
+### [Battery](https://hieudoanm.github.io/nothing/widgets/battery/)
 
-![browser](./images/apps/browser.png)
+![battery](./images/widgets/battery.png)
 
-### [Calculator](https://hieudoanm.github.io/nothing/calculator/)
+### [Browser](https://hieudoanm.github.io/nothing/widgets/browser/)
 
-![calculator](./images/apps/calculator.png)
+![browser](./images/widgets/browser.png)
 
-### [Calendar](https://hieudoanm.github.io/nothing/clock/)
+### [Calculator](https://hieudoanm.github.io/nothing/widgets/calculator/)
 
-![calendar](./images/apps/calendar.png)
+![calculator](./images/widgets/calculator.png)
 
-### [Camera](https://hieudoanm.github.io/nothing/camera/)
+### [Calendar](https://hieudoanm.github.io/nothing/widgets/clock/)
 
-### [Clock](https://hieudoanm.github.io/nothing/clock/)
+![calendar](./images/widgets/calendar.png)
 
-![clock](./images/apps/clock.png)
+### [Camera](https://hieudoanm.github.io/nothing/widgets/camera/)
 
-### [Colors](https://hieudoanm.github.io/nothing/colors/)
+### [Clock](https://hieudoanm.github.io/nothing/widgets/clock/)
 
-![colors](./images/apps/colors.png)
+![clock](./images/widgets/clock.png)
 
-### [Compass](https://hieudoanm.github.io/nothing/compass/)
+### [Colors](https://hieudoanm.github.io/nothing/widgets/colors/)
 
-![compass](./images/apps/compass.png)
+![colors](./images/widgets/colors.png)
 
-### [Crypto](https://hieudoanm.github.io/nothing/crypto/)
+### [Compass](https://hieudoanm.github.io/nothing/widgets/compass/)
 
-![crypto](./images/apps/crypto.png)
+![compass](./images/widgets/compass.png)
 
-### [Devices](https://hieudoanm.github.io/nothing/devices/)
+### [Crypto](https://hieudoanm.github.io/nothing/widgets/crypto/)
 
-![devices](./images/apps/devices.png)
+![crypto](./images/widgets/crypto.png)
 
-### [Files](https://hieudoanm.github.io/nothing/files/)
+### [Devices](https://hieudoanm.github.io/nothing/widgets/devices/)
 
-![files](./images/apps/files.png)
+![devices](./images/widgets/devices.png)
 
-### [Fitness](https://hieudoanm.github.io/nothing/fitness/)
+### [Files](https://hieudoanm.github.io/nothing/widgets/files/)
 
-![fitness](./images/apps/fitness.png)
+![files](./images/widgets/files.png)
 
-### [Games](https://hieudoanm.github.io/nothing/games/)
+### [Fitness](https://hieudoanm.github.io/nothing/widgets/fitness/)
 
-![games](./images/apps/games.png)
+![fitness](./images/widgets/fitness.png)
 
-### [Health](https://hieudoanm.github.io/nothing/health/)
+### [Games](https://hieudoanm.github.io/nothing/widgets/games/)
 
-![health](./images/apps/health.png)
+![games](./images/widgets/games.png)
 
-### [Home](https://hieudoanm.github.io/nothing/home/)
+### [Health](https://hieudoanm.github.io/nothing/widgets/health/)
 
-![home](./images/apps/home.png)
+![health](./images/widgets/health.png)
 
-### [Mail](https://hieudoanm.github.io/nothing/mail/)
+### [Home](https://hieudoanm.github.io/nothing/widgets/home/)
 
-![mail](./images/apps/mail.png)
+![home](./images/widgets/home.png)
 
-### [Maps](https://hieudoanm.github.io/nothing/maps/)
+### [Mail](https://hieudoanm.github.io/nothing/widgets/mail/)
 
-![maps](./images/apps/maps.png)
+![mail](./images/widgets/mail.png)
 
-### [Messages](https://hieudoanm.github.io/nothing/messages/)
+### [Maps](https://hieudoanm.github.io/nothing/widgets/maps/)
 
-![messages](./images/apps/messages.png)
+![maps](./images/widgets/maps.png)
 
-### [Music](https://hieudoanm.github.io/nothing/music/)
+### [Messages](https://hieudoanm.github.io/nothing/widgets/messages/)
 
-![music](./images/apps/music.png)
+![messages](./images/widgets/messages.png)
 
-### [News](https://hieudoanm.github.io/nothing/news/)
+### [Music](https://hieudoanm.github.io/nothing/widgets/music/)
 
-![news](./images/apps/news.png)
+![music](./images/widgets/music.png)
 
-### [Notes](https://hieudoanm.github.io/nothing/notes/)
+### [News](https://hieudoanm.github.io/nothing/widgets/news/)
 
-![notes](./images/apps/notes.png)
+![news](./images/widgets/news.png)
 
-### [Phone](https://hieudoanm.github.io/nothing/phone/)
+### [Notes](https://hieudoanm.github.io/nothing/widgets/notes/)
 
-![phone](./images/apps/phone.png)
+![notes](./images/widgets/notes.png)
 
-### [Photos](https://hieudoanm.github.io/nothing/photos/)
+### [Phone](https://hieudoanm.github.io/nothing/widgets/phone/)
 
-![photos](./images/apps/photos.png)
+![phone](./images/widgets/phone.png)
 
-### [Settings](https://hieudoanm.github.io/nothing/settings/)
+### [Photos](https://hieudoanm.github.io/nothing/widgets/photos/)
 
-![settings](./images/apps/settings.png)
+![photos](./images/widgets/photos.png)
 
-### [Sports](https://hieudoanm.github.io/nothing/sports/)
+### [Settings](https://hieudoanm.github.io/nothing/widgets/settings/)
 
-![sports](./images/apps/sports.png)
+![settings](./images/widgets/settings.png)
 
-### [Stocks](https://hieudoanm.github.io/nothing/stocks/)
+### [Sports](https://hieudoanm.github.io/nothing/widgets/sports/)
 
-![stocks](./images/apps/stocks.png)
+![sports](./images/widgets/sports.png)
 
-### [Tasks](https://hieudoanm.github.io/nothing/tasks/)
+### [Stocks](https://hieudoanm.github.io/nothing/widgets/stocks/)
 
-![tasks](./images/apps/tasks.png)
+![stocks](./images/widgets/stocks.png)
 
-### [Translate](https://hieudoanm.github.io/nothing/translate/)
+### [Tasks](https://hieudoanm.github.io/nothing/widgets/tasks/)
 
-![videos](./images/apps/translate.png)
+![tasks](./images/widgets/tasks.png)
 
-### [Videos](https://hieudoanm.github.io/nothing/videos/)
+### [Translate](https://hieudoanm.github.io/nothing/widgets/translate/)
 
-![videos](./images/apps/videos.png)
+![videos](./images/widgets/translate.png)
 
-### [Wallet](https://hieudoanm.github.io/nothing/wallet/)
+### [Videos](https://hieudoanm.github.io/nothing/widgets/videos/)
 
-![wallet](./images/apps/wallet.png)
+![videos](./images/widgets/videos.png)
 
-### [Weather](https://hieudoanm.github.io/nothing/weather/)
+### [Wallet](https://hieudoanm.github.io/nothing/widgets/wallet/)
 
-![weather](./images/apps/weather.png)
+![wallet](./images/widgets/wallet.png)
 
-## [Widgets](https://hieudoanm.github.io/nothing/)
+### [Weather](https://hieudoanm.github.io/nothing/widgets/weather/)
 
-![widgets](./images/widgets.png)
+![weather](./images/widgets/weather.png)
