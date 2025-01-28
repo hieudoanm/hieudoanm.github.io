@@ -7,7 +7,7 @@ export const WidgetNewsTrends = () => {
   const reverseProxyUrl = `https://hieudoanm-reverse-proxy.vercel.app/api?url=${url}`;
 
   const { isPending, error, data } = useQuery<Record<string, string[]>>({
-    queryKey: ['repoData'],
+    queryKey: ['google-trends'],
     queryFn: () => fetch(reverseProxyUrl).then((res) => res.json()),
   });
 
