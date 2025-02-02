@@ -10,7 +10,7 @@ const InternalServerErrorPage: NextPage = () => {
           <Link href="/">
             <button
               type="button"
-              className="btn w-full rounded-xl bg-black py-4 uppercase text-white">
+              className="btn w-full rounded-xl bg-black py-4 text-white uppercase">
               Back to Home
             </button>
           </Link>
