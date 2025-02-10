@@ -126,7 +126,7 @@ importers:
         version: 2.0.6
       daisyui:
         specifier: 4.12.23
-        version: 4.12.23(postcss@8.5.1)
+        version: 4.12.23(postcss@8.5.2)
       eslint:
         specifier: 9.20.0
         version: 9.20.0(jiti@2.4.2)
@@ -143,8 +143,8 @@ importers:
         specifier: 2.0.1
         version: 2.0.1
       postcss:
-        specifier: 8.5.1
-        version: 8.5.1
+        specifier: 8.5.2
+        version: 8.5.2
       prettier:
         specifier: 3.5.0
         version: 3.5.0
@@ -4048,8 +4048,8 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.1:
-    resolution: {integrity: sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==}
+  postcss@8.5.2:
+    resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -7330,7 +7330,7 @@ snapshots:
       '@tailwindcss/node': 4.0.6
       '@tailwindcss/oxide': 4.0.6
       lightningcss: 1.29.1
-      postcss: 8.5.1
+      postcss: 8.5.2
       tailwindcss: 4.0.6
 
   '@tanstack/query-core@5.66.0': {}
@@ -8206,12 +8206,12 @@ snapshots:
 
   culori@3.3.0: {}
 
-  daisyui@4.12.23(postcss@8.5.1):
+  daisyui@4.12.23(postcss@8.5.2):
     dependencies:
       css-selector-tokenizer: 0.8.0
       culori: 3.3.0
       picocolors: 1.1.1
-      postcss-js: 4.0.1(postcss@8.5.1)
+      postcss-js: 4.0.1(postcss@8.5.2)
     transitivePeerDependencies:
       - postcss
 
@@ -10071,10 +10071,10 @@ snapshots:
 
   possible-typed-array-names@1.0.0: {}
 
-  postcss-js@4.0.1(postcss@8.5.1):
+  postcss-js@4.0.1(postcss@8.5.2):
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.5.1
+      postcss: 8.5.2
 
   postcss@8.4.31:
     dependencies:
@@ -10082,7 +10082,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.1:
+  postcss@8.5.2:
     dependencies:
       nanoid: 3.3.8
       picocolors: 1.1.1
