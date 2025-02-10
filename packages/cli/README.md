@@ -2,4 +2,4 @@
 
 | Features | C++   | Go    | Python | Rust  | TypeScript |
 | -------- | ----- | ----- | ------ | ----- | ---------- |
-| UUID     | `Yes` | `Yes` | `Yes`  | `Yes` | `No`       |
+| UUID     | `Yes` | `Yes` | `Yes`  | `Yes` | `Yes`      |
