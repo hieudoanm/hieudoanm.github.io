@@ -15,7 +15,7 @@
   "devDependencies": {
     "husky": "9.1.7",
     "prettier": "3.5.0",
-    "turbo": "2.4.0"
+    "turbo": "2.4.1"
   },
   "resolutions": {
     "next": "15.1.6"
