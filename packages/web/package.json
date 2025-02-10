@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.2.0",
-    "@tailwindcss/postcss": "4.0.5",
+    "@tailwindcss/postcss": "4.0.6",
     "@tanstack/react-query": "5.66.0",
     "@types/jest": "29.5.14",
     "@types/next-pwa": "5.6.9",
@@ -64,7 +64,7 @@
     "prettier": "3.5.0",
     "prettier-plugin-tailwindcss": "0.6.11",
     "rimraf": "6.0.1",
-    "tailwindcss": "4.0.5",
+    "tailwindcss": "4.0.6",
     "ts-jest": "29.2.5",
     "ts-node": "10.9.2",
     "typescript": "5.7.3"
