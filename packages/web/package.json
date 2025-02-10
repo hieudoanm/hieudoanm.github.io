@@ -27,7 +27,6 @@
     "prestart": "kill-port 3001",
     "start": "next start -p 3001",
     "lint": "next lint",
-    "prepare": "husky || true",
     "test": "jest"
   },
   "dependencies": {
@@ -69,8 +68,5 @@
     "ts-jest": "29.2.5",
     "ts-node": "10.9.2",
     "typescript": "5.7.3"
-  },
-  "resolutions": {
-    "next": "15.1.6"
   }
 }
