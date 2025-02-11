@@ -12,5 +12,5 @@
 
 ## Rust
 
-- [Argh](https://github.com/google/argh) - **Google**
-- [Clap](https://docs.rs/clap/latest/clap/)
+- [Argh](https://docs.rs/argh/latest/argh/) - [GitHub](https://github.com/google/argh) - **Google**
+- [Clap](https://docs.rs/clap/latest/clap/) - [GitHub](https://github.com/clap-rs/clap)
