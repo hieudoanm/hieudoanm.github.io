@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import {
   FaFlag,
   FaFlask,
+  FaGithub,
   FaI,
   FaLightbulb,
   FaMarkdown,
@@ -39,6 +40,12 @@ const WidgetsPage: NextPage = () => {
       href: 'csv',
       name: 'CSV',
       icon: <FaTable className="text-2xl" />,
+    },
+    {
+      id: 'github',
+      href: 'github',
+      name: 'GitHub',
+      icon: <FaGithub className="text-2xl" />,
     },
     {
       id: 'manifest.json',
@@ -81,7 +88,7 @@ const WidgetsPage: NextPage = () => {
   return (
     <div className="h-[100vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-3 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-3 md:gap-8">
+        <div className="grid h-full grid-cols-2 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-2 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">
