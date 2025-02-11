@@ -2,10 +2,12 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import { JSX } from 'react';
 import {
+  FaCamera,
   FaFlag,
   FaFlask,
   FaGithub,
   FaI,
+  FaImages,
   FaLightbulb,
   FaMarkdown,
   FaQrcode,
@@ -40,6 +42,12 @@ const WidgetsPage: NextPage = () => {
       href: 'csv',
       name: 'CSV',
       icon: <FaTable className="text-2xl" />,
+    },
+    {
+      id: 'filmify',
+      href: 'filmify',
+      name: 'Filmify',
+      icon: <FaCamera className="text-2xl" />,
     },
     {
       id: 'github',
@@ -78,6 +86,12 @@ const WidgetsPage: NextPage = () => {
       icon: <FaLightbulb className="text-2xl" />,
     },
     {
+      id: 'svg2png',
+      href: 'svg2png',
+      name: 'svg2png',
+      icon: <FaImages className="text-2xl" />,
+    },
+    {
       id: 'uuid',
       href: 'uuid',
       name: 'UUID',
@@ -88,7 +102,7 @@ const WidgetsPage: NextPage = () => {
   return (
     <div className="h-[100vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-2 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-2 md:gap-8">
+        <div className="grid h-full grid-cols-3 grid-rows-4 gap-4 md:grid-cols-4 md:grid-rows-3 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">
