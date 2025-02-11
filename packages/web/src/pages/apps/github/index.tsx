@@ -78,7 +78,7 @@ const GitHubPage: NextPage = () => {
                   const canvas = await html2canvas(coverRef.current, {
                     width: 1280,
                     height: 640,
-                    scale: 20,
+                    scale: 1,
                     allowTaint: true,
                   });
                   const dataURL = canvas.toDataURL('image/png');
