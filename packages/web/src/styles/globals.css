@@ -15,6 +15,10 @@
   }
 }
 
+body > div:last-child > span + img {
+  display: inline !important;
+}
+
 .animate-flip {
   animation: flip 500ms linear infinite; /* Add flip animation */
   transform-style: preserve-3d; /* Allows 3D transforms for the coin faces */

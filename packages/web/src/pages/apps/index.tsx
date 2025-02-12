@@ -14,6 +14,8 @@ import {
   FaRulerCombined,
   FaSquareJs,
   FaTable,
+  FaTelegram,
+  FaY,
 } from 'react-icons/fa6';
 
 type NothingApp = {
@@ -50,9 +52,15 @@ const WidgetsPage: NextPage = () => {
       icon: <FaCamera className="text-2xl" />,
     },
     {
-      id: 'github',
-      href: 'github',
-      name: 'GitHub',
+      id: 'github-cover',
+      href: 'github/cover',
+      name: 'GitHub Cover',
+      icon: <FaGithub className="text-2xl" />,
+    },
+    {
+      id: 'github-languages',
+      href: 'github/languages',
+      name: 'GitHub Languages',
       icon: <FaGithub className="text-2xl" />,
     },
     {
@@ -88,8 +96,14 @@ const WidgetsPage: NextPage = () => {
     {
       id: 'svg2png',
       href: 'svg2png',
-      name: 'svg2png',
+      name: 'SVG to PNG',
       icon: <FaImages className="text-2xl" />,
+    },
+    {
+      id: 'telegram-webhook',
+      href: 'telegram/webhook',
+      name: 'Telegram Webhook',
+      icon: <FaTelegram className="text-2xl" />,
     },
     {
       id: 'uuid',
@@ -97,12 +111,18 @@ const WidgetsPage: NextPage = () => {
       name: 'UUID',
       icon: <FaI className="text-2xl" />,
     },
+    {
+      id: 'yaml2json',
+      href: 'yaml2json',
+      name: 'YAML to JSON',
+      icon: <FaY className="text-2xl" />,
+    },
   ];
 
   return (
     <div className="h-[100vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-3 grid-rows-4 gap-4 md:grid-cols-4 md:grid-rows-3 md:gap-8">
+        <div className="grid h-full grid-cols-3 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-3 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">
