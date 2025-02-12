@@ -46,12 +46,6 @@ const WidgetsPage: NextPage = () => {
       icon: <FaTable className="text-2xl" />,
     },
     {
-      id: 'filmify',
-      href: 'filmify',
-      name: 'Filmify',
-      icon: <FaCamera className="text-2xl" />,
-    },
-    {
       id: 'github-cover',
       href: 'github/cover',
       name: 'GitHub Cover',
@@ -62,6 +56,12 @@ const WidgetsPage: NextPage = () => {
       href: 'github/languages',
       name: 'GitHub Languages',
       icon: <FaGithub className="text-2xl" />,
+    },
+    {
+      id: 'grayify',
+      href: 'grayify',
+      name: 'Grayify',
+      icon: <FaCamera className="text-2xl" />,
     },
     {
       id: 'manifest.json',

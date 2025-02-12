@@ -3,7 +3,7 @@ import film from '@nothing/assets/film.jpg';
 import { useRef, useState } from 'react';
 import html2canvas from 'html2canvas';
 
-const FilmifyPage: NextPage = () => {
+const GrayifyPage: NextPage = () => {
   const imageRef = useRef<HTMLDivElement>(null);
   const [
     { base64 = film.src, aspectRatio = '3 / 2', loading = false },
@@ -101,4 +101,4 @@ const FilmifyPage: NextPage = () => {
   );
 };
 
-export default FilmifyPage;
+export default GrayifyPage;
