@@ -34,10 +34,10 @@ importers:
         version: 22.13.2
       '@webpack-cli/generators':
         specifier: 3.0.7
-        version: 3.0.7(encoding@0.1.13)(mem-fs@2.3.0)(prettier@3.5.0)(webpack-cli@6.0.1)(webpack@5.97.1)
+        version: 3.0.7(encoding@0.1.13)(mem-fs@2.3.0)(prettier@3.5.0)(webpack-cli@6.0.1)(webpack@5.98.0)
       copy-webpack-plugin:
         specifier: 12.0.2
-        version: 12.0.2(webpack@5.97.1)
+        version: 12.0.2(webpack@5.98.0)
       eslint:
         specifier: 9.20.1
         version: 9.20.1(jiti@2.4.2)
@@ -49,7 +49,7 @@ importers:
         version: 3.5.0
       ts-loader:
         specifier: 9.5.2
-        version: 9.5.2(typescript@5.7.3)(webpack@5.97.1)
+        version: 9.5.2(typescript@5.7.3)(webpack@5.98.0)
       ts-node:
         specifier: 10.9.2
         version: 10.9.2(@types/node@22.13.2)(typescript@5.7.3)
@@ -60,11 +60,11 @@ importers:
         specifier: 8.24.0
         version: 8.24.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
       webpack:
-        specifier: 5.97.1
-        version: 5.97.1(webpack-cli@6.0.1)
+        specifier: 5.98.0
+        version: 5.98.0(webpack-cli@6.0.1)
       webpack-cli:
         specifier: 6.0.1
-        version: 6.0.1(webpack@5.97.1)
+        version: 6.0.1(webpack@5.98.0)
 
   packages/cli/ts:
     dependencies:
@@ -125,7 +125,7 @@ importers:
         version: 15.1.7(@babel/core@7.26.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next-pwa:
         specifier: 5.6.0
-        version: 5.6.0(@babel/core@7.26.8)(@types/babel__core@7.20.5)(next@15.1.7(@babel/core@7.26.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(webpack@5.97.1)
+        version: 5.6.0(@babel/core@7.26.8)(@types/babel__core@7.20.5)(next@15.1.7(@babel/core@7.26.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(webpack@5.98.0)
       qrcode:
         specifier: 1.5.4
         version: 1.5.4
@@ -5359,10 +5359,6 @@ packages:
     resolution: {integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==}
     engines: {node: '>= 8.9.0'}
 
-  schema-utils@3.3.0:
-    resolution: {integrity: sha512-pN/yOAvcC+5rQ5nERGuwrjLlYvLTbCibnZ1I7B1LaiAz9BRBlE9GMgE/eqV30P7aJQUf7Ddimy/RsbYO/GrVGg==}
-    engines: {node: '>= 10.13.0'}
-
   schema-utils@4.3.0:
     resolution: {integrity: sha512-Gf9qqc58SpCA/xdziiHz35F4GNIWYWZrEshUc/G/r5BnLph6xpKuLeoJoQuj5WfBIx/eQLf+hmVPYHaxJu7V2g==}
     engines: {node: '>= 10.13.0'}
@@ -6095,8 +6091,8 @@ packages:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
     engines: {node: '>=10.13.0'}
 
-  webpack@5.97.1:
-    resolution: {integrity: sha512-EksG6gFY3L1eFMROS/7Wzgrii5mBAFe4rIr3r2BTfo7bcc+DWwFZ4OJ/miOuHJO/A85HwyI4eQ0F6IKXesO7Fg==}
+  webpack@5.98.0:
+    resolution: {integrity: sha512-UFynvx+gM44Gv9qFgj0acCQK2VE1CtdfwFdimkapco3hlPCJ/zeq73n2yVKimVbtm+TnApIugGhLJnkU6gjYXA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -9219,15 +9215,15 @@ snapshots:
       '@webassemblyjs/ast': 1.14.1
       '@xtuc/long': 4.2.2
 
-  '@webpack-cli/configtest@3.0.1(webpack-cli@6.0.1)(webpack@5.97.1)':
+  '@webpack-cli/configtest@3.0.1(webpack-cli@6.0.1)(webpack@5.98.0)':
     dependencies:
-      webpack: 5.97.1(webpack-cli@6.0.1)
-      webpack-cli: 6.0.1(webpack@5.97.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
+      webpack-cli: 6.0.1(webpack@5.98.0)
 
-  '@webpack-cli/generators@3.0.7(encoding@0.1.13)(mem-fs@2.3.0)(prettier@3.5.0)(webpack-cli@6.0.1)(webpack@5.97.1)':
+  '@webpack-cli/generators@3.0.7(encoding@0.1.13)(mem-fs@2.3.0)(prettier@3.5.0)(webpack-cli@6.0.1)(webpack@5.98.0)':
     dependencies:
-      webpack: 5.97.1(webpack-cli@6.0.1)
-      webpack-cli: 6.0.1(webpack@5.97.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
+      webpack-cli: 6.0.1(webpack@5.98.0)
       yeoman-environment: 3.19.3
       yeoman-generator: 5.10.0(encoding@0.1.13)(mem-fs@2.3.0)(yeoman-environment@3.19.3)
     optionalDependencies:
@@ -9238,15 +9234,15 @@ snapshots:
       - mem-fs
       - supports-color
 
-  '@webpack-cli/info@3.0.1(webpack-cli@6.0.1)(webpack@5.97.1)':
+  '@webpack-cli/info@3.0.1(webpack-cli@6.0.1)(webpack@5.98.0)':
     dependencies:
-      webpack: 5.97.1(webpack-cli@6.0.1)
-      webpack-cli: 6.0.1(webpack@5.97.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
+      webpack-cli: 6.0.1(webpack@5.98.0)
 
-  '@webpack-cli/serve@3.0.1(webpack-cli@6.0.1)(webpack@5.97.1)':
+  '@webpack-cli/serve@3.0.1(webpack-cli@6.0.1)(webpack@5.98.0)':
     dependencies:
-      webpack: 5.97.1(webpack-cli@6.0.1)
-      webpack-cli: 6.0.1(webpack@5.97.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
+      webpack-cli: 6.0.1(webpack@5.98.0)
 
   '@xtuc/ieee754@1.2.0': {}
 
@@ -9466,14 +9462,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  babel-loader@8.4.1(@babel/core@7.26.8)(webpack@5.97.1):
+  babel-loader@8.4.1(@babel/core@7.26.8)(webpack@5.98.0):
     dependencies:
       '@babel/core': 7.26.8
       find-cache-dir: 3.3.2
       loader-utils: 2.0.4
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 5.97.1(webpack-cli@6.0.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
 
   babel-plugin-istanbul@6.1.1:
     dependencies:
@@ -9767,10 +9763,10 @@ snapshots:
     dependencies:
       escape-string-regexp: 4.0.0
 
-  clean-webpack-plugin@4.0.0(webpack@5.97.1):
+  clean-webpack-plugin@4.0.0(webpack@5.98.0):
     dependencies:
       del: 4.1.1
-      webpack: 5.97.1(webpack-cli@6.0.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
 
   cli-cursor@3.1.0:
     dependencies:
@@ -9885,7 +9881,7 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  copy-webpack-plugin@12.0.2(webpack@5.97.1):
+  copy-webpack-plugin@12.0.2(webpack@5.98.0):
     dependencies:
       fast-glob: 3.3.3
       glob-parent: 6.0.2
@@ -9893,7 +9889,7 @@ snapshots:
       normalize-path: 3.0.0
       schema-utils: 4.3.0
       serialize-javascript: 6.0.2
-      webpack: 5.97.1(webpack-cli@6.0.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
 
   core-js-compat@3.40.0:
     dependencies:
@@ -11992,14 +11988,14 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-pwa@5.6.0(@babel/core@7.26.8)(@types/babel__core@7.20.5)(next@15.1.7(@babel/core@7.26.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(webpack@5.97.1):
+  next-pwa@5.6.0(@babel/core@7.26.8)(@types/babel__core@7.20.5)(next@15.1.7(@babel/core@7.26.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(webpack@5.98.0):
     dependencies:
-      babel-loader: 8.4.1(@babel/core@7.26.8)(webpack@5.97.1)
-      clean-webpack-plugin: 4.0.0(webpack@5.97.1)
+      babel-loader: 8.4.1(@babel/core@7.26.8)(webpack@5.98.0)
+      clean-webpack-plugin: 4.0.0(webpack@5.98.0)
       globby: 11.1.0
       next: 15.1.7(@babel/core@7.26.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      terser-webpack-plugin: 5.3.11(webpack@5.97.1)
-      workbox-webpack-plugin: 6.6.0(@types/babel__core@7.20.5)(webpack@5.97.1)
+      terser-webpack-plugin: 5.3.11(webpack@5.98.0)
+      workbox-webpack-plugin: 6.6.0(@types/babel__core@7.20.5)(webpack@5.98.0)
       workbox-window: 6.6.0
     transitivePeerDependencies:
       - '@babel/core'
@@ -12854,12 +12850,6 @@ snapshots:
       ajv: 6.12.6
       ajv-keywords: 3.5.2(ajv@6.12.6)
 
-  schema-utils@3.3.0:
-    dependencies:
-      '@types/json-schema': 7.0.15
-      ajv: 6.12.6
-      ajv-keywords: 3.5.2(ajv@6.12.6)
-
   schema-utils@4.3.0:
     dependencies:
       '@types/json-schema': 7.0.15
@@ -13275,14 +13265,14 @@ snapshots:
       type-fest: 0.16.0
       unique-string: 2.0.0
 
-  terser-webpack-plugin@5.3.11(webpack@5.97.1):
+  terser-webpack-plugin@5.3.11(webpack@5.98.0):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 4.3.0
       serialize-javascript: 6.0.2
       terser: 5.38.1
-      webpack: 5.97.1(webpack-cli@6.0.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
 
   terser@5.38.1:
     dependencies:
@@ -13355,7 +13345,7 @@ snapshots:
       '@jest/types': 29.6.3
       babel-jest: 29.7.0(@babel/core@7.26.8)
 
-  ts-loader@9.5.2(typescript@5.7.3)(webpack@5.97.1):
+  ts-loader@9.5.2(typescript@5.7.3)(webpack@5.98.0):
     dependencies:
       chalk: 4.1.2
       enhanced-resolve: 5.18.1
@@ -13363,7 +13353,7 @@ snapshots:
       semver: 7.7.1
       source-map: 0.7.4
       typescript: 5.7.3
-      webpack: 5.97.1(webpack-cli@6.0.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
 
   ts-node@10.9.2(@types/node@22.13.2)(typescript@5.7.3):
     dependencies:
@@ -13633,12 +13623,12 @@ snapshots:
 
   webidl-conversions@4.0.2: {}
 
-  webpack-cli@6.0.1(webpack@5.97.1):
+  webpack-cli@6.0.1(webpack@5.98.0):
     dependencies:
       '@discoveryjs/json-ext': 0.6.3
-      '@webpack-cli/configtest': 3.0.1(webpack-cli@6.0.1)(webpack@5.97.1)
-      '@webpack-cli/info': 3.0.1(webpack-cli@6.0.1)(webpack@5.97.1)
-      '@webpack-cli/serve': 3.0.1(webpack-cli@6.0.1)(webpack@5.97.1)
+      '@webpack-cli/configtest': 3.0.1(webpack-cli@6.0.1)(webpack@5.98.0)
+      '@webpack-cli/info': 3.0.1(webpack-cli@6.0.1)(webpack@5.98.0)
+      '@webpack-cli/serve': 3.0.1(webpack-cli@6.0.1)(webpack@5.98.0)
       colorette: 2.0.20
       commander: 12.1.0
       cross-spawn: 7.0.6
@@ -13647,7 +13637,7 @@ snapshots:
       import-local: 3.2.0
       interpret: 3.1.1
       rechoir: 0.8.0
-      webpack: 5.97.1(webpack-cli@6.0.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
       webpack-merge: 6.0.1
 
   webpack-merge@6.0.1:
@@ -13663,7 +13653,7 @@ snapshots:
 
   webpack-sources@3.2.3: {}
 
-  webpack@5.97.1(webpack-cli@6.0.1):
+  webpack@5.98.0(webpack-cli@6.0.1):
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.6
@@ -13683,13 +13673,13 @@ snapshots:
       loader-runner: 4.3.0
       mime-types: 2.1.35
       neo-async: 2.6.2
-      schema-utils: 3.3.0
+      schema-utils: 4.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.11(webpack@5.97.1)
+      terser-webpack-plugin: 5.3.11(webpack@5.98.0)
       watchpack: 2.4.2
       webpack-sources: 3.2.3
     optionalDependencies:
-      webpack-cli: 6.0.1(webpack@5.97.1)
+      webpack-cli: 6.0.1(webpack@5.98.0)
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
@@ -13883,12 +13873,12 @@ snapshots:
 
   workbox-sw@6.6.0: {}
 
-  workbox-webpack-plugin@6.6.0(@types/babel__core@7.20.5)(webpack@5.97.1):
+  workbox-webpack-plugin@6.6.0(@types/babel__core@7.20.5)(webpack@5.98.0):
     dependencies:
       fast-json-stable-stringify: 2.1.0
       pretty-bytes: 5.6.0
       upath: 1.2.0
-      webpack: 5.97.1(webpack-cli@6.0.1)
+      webpack: 5.98.0(webpack-cli@6.0.1)
       webpack-sources: 1.4.3
       workbox-build: 6.6.0(@types/babel__core@7.20.5)
     transitivePeerDependencies:
