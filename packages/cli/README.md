@@ -6,9 +6,13 @@
 
 ## Features
 
-| Features | C++   | Go    | Python | Rust  | TypeScript |
-| -------- | ----- | ----- | ------ | ----- | ---------- |
-| UUID     | `Yes` | `Yes` | `Yes`  | `Yes` | `Yes`      |
+| Features                      | C++   | Go    | Python | Rust  | TypeScript |
+| ----------------------------- | ----- | ----- | ------ | ----- | ---------- |
+| Telegram - Message - Send     |       | `Yes` |        |       |            |
+| Telegram - Webhook - Set      |       | `Yes` |        |       |            |
+| Telegram - Webhook - Get Info |       | `Yes` |        |       |            |
+| Telegram - Webhook - Delete   |       | `Yes` |        |       |            |
+| UUID                          | `Yes` | `Yes` | `Yes`  | `Yes` | `Yes`      |
 
 ## Rust
 
