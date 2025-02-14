@@ -12,10 +12,4 @@ build:
 	go vet main.go
 	find . -type d | xargs -L 1 golint
 	go build -o ./bin/nothing ./main.go
-
-install:
-	go fmt
-	go vet main.go
-	find . -type d | xargs -L 1 golint
-	go build -o ./bin/nothing ./main.go
 	sudo cp ./bin/nothing /usr/local/bin/

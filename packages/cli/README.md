@@ -8,6 +8,7 @@
 
 | Features                      | C++   | Go    | Python | Rust  | TypeScript |
 | ----------------------------- | ----- | ----- | ------ | ----- | ---------- |
+| QRCode                        |       | `Yes` |        |       |            |
 | Telegram - Message - Send     |       | `Yes` |        |       |            |
 | Telegram - Webhook - Set      |       | `Yes` |        |       |            |
 | Telegram - Webhook - Get Info |       | `Yes` |        |       |            |

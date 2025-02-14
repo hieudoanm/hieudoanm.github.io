@@ -1,6 +1,4 @@
-/*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-*/
+// Package cmd ...
 package main
 
 import "nothing-cli/cmd"
