@@ -22,6 +22,7 @@ to quickly create a Cobra application.`,
 		fmt.Println("status   - Get Status")
 		fmt.Println("telegram - Telegram SDK")
 		fmt.Println("uuid     - Generate UUID")
+		fmt.Println("version  - Get Version")
 	},
 }
 
