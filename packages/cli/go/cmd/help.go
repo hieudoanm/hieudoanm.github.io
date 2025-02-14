@@ -7,9 +7,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// telegramCmd represents the telegram command
-var telegramCmd = &cobra.Command{
-	Use:   "telegram",
+// helpCmd represents the help command
+var helpCmd = &cobra.Command{
+	Use:   "help",
 	Short: "A brief description of your command",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
@@ -18,21 +18,23 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("message - Telegram Message")
-		fmt.Println("webhook - Telegram Webhook")
+		fmt.Println("qrcode   - Generate QRCode from URL")
+		fmt.Println("status   - Get Status")
+		fmt.Println("telegram - Telegram SDK")
+		fmt.Println("uuid     - Generate UUID")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(telegramCmd)
+	rootCmd.AddCommand(helpCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// telegramCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// helpCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// telegramCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// helpCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
