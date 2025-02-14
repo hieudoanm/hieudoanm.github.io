@@ -100,7 +100,7 @@ export const WidgetClockPomodoro: NextPage = () => {
   }, [timer]);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-gray-900 text-gray-100">
       <div className="flex h-full items-center">
         <div className="flex w-full flex-col items-center gap-y-4">
           <div className="flex w-full flex-col items-center gap-y-1">

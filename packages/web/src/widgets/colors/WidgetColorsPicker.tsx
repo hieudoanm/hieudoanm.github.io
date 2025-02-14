@@ -18,14 +18,14 @@ export const WidgetColorsPicker: FC = () => {
   ];
 
   return (
-    <div className="shadow-3xl aspect-square w-full max-w-60 overflow-hidden rounded-full border border-black bg-black">
+    <div className="shadow-3xl aspect-square w-full max-w-60 overflow-hidden rounded-full border border-black bg-gray-900">
       <div className="h-full w-full p-2">
         <div
           className="h-full w-full rounded-full bg-white p-2 transition-all"
           style={{
             background: `linear-gradient(#111111, ${color}, #eeeeee)`,
           }}>
-          <div className="h-full w-full rounded-full bg-black p-2">
+          <div className="h-full w-full rounded-full bg-gray-900 p-2">
             <button
               className="relative h-full w-full rounded-full"
               style={{

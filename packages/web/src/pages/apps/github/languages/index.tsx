@@ -123,7 +123,7 @@ const GitHubLanguagesPage: NextPage = () => {
                   return (
                     <div
                       key={languageKey}
-                      className="flex h-full w-full items-center justify-center text-center text-xs text-white"
+                      className="flex h-full w-full items-center justify-center text-center text-xs text-gray-100"
                       style={{ backgroundColor: color }}>
                       {languageKey}
                     </div>

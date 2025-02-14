@@ -48,7 +48,7 @@ export const WidgetCalendarToday: FC = () => {
   const weekday: string = weekdays[clock.weekday];
 
   return (
-    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl bg-black p-4 text-white">
+    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl bg-gray-900 p-4 text-gray-100">
       <div className="flex h-full flex-col items-center justify-center">
         <p className="w-full text-left">{month}</p>
         <div className="flex grow items-center justify-center">

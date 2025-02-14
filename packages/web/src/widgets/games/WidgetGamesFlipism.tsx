@@ -21,7 +21,7 @@ export const WidgetGamesFlipism = () => {
   };
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-gray-900 text-gray-100">
       <div className="h-full w-full p-4">
         <button
           className={`flex h-full w-full items-center justify-center rounded-full border-4 border-red-700 bg-red-500 text-xl font-bold transition-transform duration-500 ${

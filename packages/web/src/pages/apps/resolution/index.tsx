@@ -10,7 +10,7 @@ const ScreenPage: NextPage = () => {
     <div className="h-screen w-screen">
       <div className="h-full p-4 md:p-8">
         <div className="flex h-full items-center justify-center">
-          <div className="relative aspect-[3/4] w-full rounded-xl border bg-black text-white md:aspect-video md:w-[50%]">
+          <div className="relative aspect-[3/4] w-full rounded-xl border bg-gray-900 text-gray-100 md:aspect-video md:w-[50%]">
             <div className="absolute top-4 right-0 left-0 text-center">
               {width}
             </div>

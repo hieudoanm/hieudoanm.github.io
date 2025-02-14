@@ -70,7 +70,7 @@ const QuickSetting: FC<{
         })
       }>
       <div
-        className={`flex aspect-square w-16 items-center justify-center rounded-full ${settings[setting] ? 'bg-red-700' : 'bg-black'} text-white`}>
+        className={`flex aspect-square w-16 items-center justify-center rounded-full ${settings[setting] ? 'bg-red-700' : 'bg-gray-900'} text-gray-100`}>
         {settings[setting] ? activeIcon : inactiveIcon}
       </div>
     </button>

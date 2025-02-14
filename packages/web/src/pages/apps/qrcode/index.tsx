@@ -38,7 +38,7 @@ const QRCodePage: NextPage = () => {
     <div className="h-screen w-screen p-8">
       <div className="flex h-full items-center justify-center">
         <div className="flex flex-col gap-y-4">
-          <div className="flex items-center gap-x-2 rounded-full border bg-black p-2 text-white">
+          <div className="flex items-center gap-x-2 rounded-full border bg-gray-900 p-2 text-gray-100">
             <div className="flex">
               <select
                 name="prefix"

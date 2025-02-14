@@ -101,7 +101,7 @@ const CsvPage: NextPage = () => {
             <div>
               <select
                 name="file"
-                className="w-full appearance-none rounded-full bg-black px-4 py-2 text-white"
+                className="w-full appearance-none rounded-full bg-gray-900 px-4 py-2 text-gray-100"
                 value={file}
                 onChange={async (event: ChangeEvent<HTMLSelectElement>) => {
                   const file = event.target.value;
@@ -153,7 +153,7 @@ const CsvPage: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 h-full bg-black text-white">
+        <div className="col-span-1 h-full bg-gray-900 text-gray-100">
           <div className="flex h-full flex-col gap-y-4 p-4">
             <div className="grid grid-cols-5 gap-x-2">
               {['html', 'json', 'md', 'sql'].map((view: any) => {

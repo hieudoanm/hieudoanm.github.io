@@ -83,7 +83,7 @@ export const WidgetCompassCompact: FC = () => {
   console.error('error', error);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 rounded-full bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 rounded-full bg-gray-900 text-gray-100">
       <div className="relative flex h-full items-center justify-center text-5xl">
         <p>
           {alpha}° {getDirection(alpha)}

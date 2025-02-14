@@ -47,9 +47,9 @@ export const WidgetClockDigital: FC = () => {
   });
 
   return (
-    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl border border-white bg-black p-8">
+    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl border border-white bg-gray-900 p-8">
       <div className="flex h-full w-full items-center justify-center">
-        <div className="flex flex-col items-center justify-center gap-y-2 text-white">
+        <div className="flex flex-col items-center justify-center gap-y-2 text-gray-100">
           <p className="text-sm">
             <span className="uppercase">{months[clock.month]}</span>{' '}
             {clock.date}

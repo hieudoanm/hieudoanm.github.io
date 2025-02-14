@@ -26,7 +26,7 @@ export const WidgetGamesRockPaperScissors = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-gray-900 text-gray-100">
       <button
         type="button"
         className="flex h-full w-full items-center justify-center text-9xl text-red-500"

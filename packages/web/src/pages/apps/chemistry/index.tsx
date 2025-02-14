@@ -9,7 +9,7 @@ const Block: FC<{
 }> = ({ number = 0, mass = 0, symbol = '', name = '', commonName }) => {
   return (
     <div className="p-1">
-      <div className="relative aspect-square w-16 transform rounded-lg bg-black text-white transition-all duration-100 ease-linear hover:z-10 hover:scale-[2]">
+      <div className="relative aspect-square w-16 transform rounded-lg bg-gray-900 text-gray-100 transition-all duration-100 ease-linear hover:z-10 hover:scale-[2]">
         {number > 0 ? (
           <div className="absolute top-2 left-2">
             <p className="truncate text-center text-[8px]">{number}</p>

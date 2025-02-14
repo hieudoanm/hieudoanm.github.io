@@ -76,10 +76,10 @@ export const WidgetBattery = () => {
   }, []);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-gray-900 text-gray-100">
       <div className="flex h-full w-full items-center justify-center p-8">
         <div
-          className={`flex flex-col items-center justify-center gap-y-4 ${batteryInfo.charging ? 'text-red-500' : 'text-white'}`}>
+          className={`flex flex-col items-center justify-center gap-y-4 ${batteryInfo.charging ? 'text-red-500' : 'text-gray-100'}`}>
           <div
             className={`flex aspect-square w-24 items-center justify-center rounded-full border-8 ${batteryInfo.charging ? 'border-red-500' : 'border-white'}`}>
             {batteryInfo.charging ? (

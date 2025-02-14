@@ -8,7 +8,7 @@ export const WidgetWalletForex = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
       <div className="h-full w-full p-6">
         <div className="grid h-full grid-rows-6">
           <div className="flex w-full items-center justify-between">

@@ -45,7 +45,7 @@ export const WidgetCamera = () => {
 
   if (!camera) {
     return (
-      <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
+      <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
         <div className="flex h-full w-full items-center justify-center p-2">
           <FaCamera />
         </div>
@@ -54,7 +54,7 @@ export const WidgetCamera = () => {
   }
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
       <div className="h-full w-full p-2">
         <video
           id="camera"

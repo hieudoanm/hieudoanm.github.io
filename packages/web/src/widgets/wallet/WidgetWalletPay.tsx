@@ -14,7 +14,7 @@ export const WidgetWalletPay = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
       <div className="flex h-full w-full flex-col px-8 py-6">
         <div className="grid grid-cols-2 items-center pb-2">
           <div className="col-span-1">
@@ -29,7 +29,7 @@ export const WidgetWalletPay = () => {
             return (
               <div key={'item' + index} className="col-span-1">
                 <div className="flex h-full w-full items-center justify-center">
-                  <div className="flex aspect-square w-[75%] items-center justify-center rounded-full bg-white text-4xl text-black hover:bg-red-500 hover:text-white">
+                  <div className="flex aspect-square w-[75%] items-center justify-center rounded-full bg-white text-4xl text-black hover:bg-red-500 hover:text-gray-100">
                     {icon}
                   </div>
                 </div>

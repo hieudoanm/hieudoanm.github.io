@@ -38,10 +38,10 @@ const ManifestPage: NextPage = () => {
     manifest_version: 3,
     version: '1.0.0',
     version_name: '1.0.0-alpha',
-    name: 'Name',
-    short_name: 'Short Name',
-    description: 'Description',
-    author: 'Author',
+    name: 'Nothing',
+    short_name: 'Nothing is a list of mini apps',
+    description: 'Nothing (Web, CLI)',
+    author: 'hieumdoan@gmail.com',
     default_locale: 'en',
     theme_color: '#000000',
     background_color: '#000000',
@@ -67,7 +67,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="version"
                   placeholder="Version"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.version}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -86,7 +86,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="version_name"
                   placeholder="Version"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.version_name}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -105,7 +105,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.name}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({ ...manifest, name: event.target.value })
@@ -121,7 +121,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="short_name"
                   placeholder="Short Name"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.short_name}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -140,7 +140,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="description"
                   placeholder="Description"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.description}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -159,7 +159,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="author"
                   placeholder="Author"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.author}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -178,7 +178,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="default_locale"
                   placeholder="Default Locale"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.author}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -198,7 +198,7 @@ const ManifestPage: NextPage = () => {
                     type="text"
                     name="theme_color"
                     placeholder="Theme Color"
-                    className="w-full bg-black px-4 py-1 text-white"
+                    className="w-full bg-gray-900 px-4 py-1 text-gray-100"
                     value={manifest.theme_color}
                     onChange={(event: ChangeEvent<HTMLInputElement>) =>
                       setManifest({
@@ -223,7 +223,7 @@ const ManifestPage: NextPage = () => {
                     type="text"
                     name="background_color"
                     placeholder="Background Color"
-                    className="w-full bg-black px-4 py-1 text-white"
+                    className="w-full bg-gray-900 px-4 py-1 text-gray-100"
                     value={manifest.background_color}
                     onChange={(event: ChangeEvent<HTMLInputElement>) =>
                       setManifest({
@@ -245,7 +245,7 @@ const ManifestPage: NextPage = () => {
                 <select
                   id="display"
                   name="display"
-                  className="w-full appearance-none rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full appearance-none rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.display}
                   onChange={(event: ChangeEvent<HTMLSelectElement>) =>
                     setManifest({
@@ -271,7 +271,7 @@ const ManifestPage: NextPage = () => {
                 <select
                   id="orientation"
                   name="orientation"
-                  className="w-full appearance-none rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full appearance-none rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.orientation}
                   onChange={(event: ChangeEvent<HTMLSelectElement>) =>
                     setManifest({
@@ -305,7 +305,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="scope"
                   placeholder="Scope"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.scope}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -324,7 +324,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="start_url"
                   placeholder="Start URL"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.start_url}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -343,7 +343,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="homepage_url"
                   placeholder="Home Page URL"
-                  className="w-full rounded-2xl bg-black px-4 py-1 text-white"
+                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
                   value={manifest.homepage_url}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -359,7 +359,7 @@ const ManifestPage: NextPage = () => {
             <textarea
               name="manifest.json"
               placeholder="manifest.json"
-              className="w-full rounded-2xl bg-black p-4 whitespace-pre text-white"
+              className="w-full rounded-2xl bg-gray-900 p-4 whitespace-pre text-gray-100"
               value={JSON.stringify(manifest, null, 4)}
               rows={18}
               disabled
@@ -368,7 +368,7 @@ const ManifestPage: NextPage = () => {
           <div className="col-span-1">
             <button
               type="button"
-              className="w-full rounded-3xl bg-black py-2 text-white"
+              className="w-full rounded-3xl bg-gray-900 py-2 text-gray-100"
               onClick={() =>
                 copyToClipboard(JSON.stringify(manifest, null, 4))
               }>
@@ -378,7 +378,7 @@ const ManifestPage: NextPage = () => {
           <div className="col-span-1">
             <button
               type="button"
-              className="w-full rounded-3xl bg-black py-2 text-white"
+              className="w-full rounded-3xl bg-gray-900 py-2 text-gray-100"
               onClick={() =>
                 downloadText({
                   content: JSON.stringify(manifest, null, 4),

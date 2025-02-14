@@ -60,7 +60,7 @@ export const WidgetCalendarMonthly: FC = () => {
   const daysByWeek: number[][] = chunkArray(array, 7);
 
   return (
-    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl bg-black p-6 text-white">
+    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl bg-gray-900 p-6 text-gray-100">
       <div className="flex h-full flex-col items-center justify-center gap-y-2">
         <div className="flex w-full items-center justify-between">
           <p className="text-red-500">

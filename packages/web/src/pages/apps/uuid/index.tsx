@@ -14,20 +14,20 @@ const UuidPage: NextPage = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center p-8">
       <div className="flex flex-col items-center gap-2 md:flex-row">
-        <p className="truncate rounded-full bg-black px-4 py-2 text-base text-white">
+        <p className="truncate rounded-full bg-gray-900 px-4 py-2 text-base text-gray-100">
           {uuid}
         </p>
         <div className="flex items-center justify-center gap-x-2">
           <button
             type="button"
             onClick={() => copyToClipboard(uuid)}
-            className="rounded-full bg-black p-2 text-white">
+            className="rounded-full bg-gray-900 p-2 text-gray-100">
             <FaCopy />
           </button>
           <button
             type="button"
             onClick={() => setUuid(v4())}
-            className="rounded-full bg-black p-2 text-white">
+            className="rounded-full bg-gray-900 p-2 text-gray-100">
             <FaArrowRotateLeft />
           </button>
         </div>

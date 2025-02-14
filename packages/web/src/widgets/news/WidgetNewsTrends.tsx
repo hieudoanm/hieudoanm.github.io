@@ -26,7 +26,7 @@ export const WidgetNewsTrends = () => {
   const ranks = [...ranksMap.entries()].sort((a, b) => b[1] - a[1]);
 
   return (
-    <div className="no-scrollbar aspect-square w-full max-w-60 overflow-auto rounded-3xl bg-black p-4 text-white">
+    <div className="no-scrollbar aspect-square w-full max-w-60 overflow-auto rounded-3xl bg-gray-900 p-4 text-gray-100">
       {isPending && (
         <div className="flex h-full items-center justify-center">
           <p className="text-red-500">Loading</p>

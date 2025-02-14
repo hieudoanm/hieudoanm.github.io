@@ -130,7 +130,7 @@ const WidgetsPage: NextPage = () => {
                   <Link
                     href={`/apps/${href}`}
                     className="flex flex-col items-center gap-y-1">
-                    <div className="flex aspect-square w-16 items-center justify-center overflow-hidden rounded-full bg-black text-white hover:bg-red-500">
+                    <div className="flex aspect-square w-16 items-center justify-center overflow-hidden rounded-full bg-gray-900 text-gray-100 hover:bg-red-500">
                       {icon}
                     </div>
                     <p className="w-24 truncate text-center text-sm font-semibold">

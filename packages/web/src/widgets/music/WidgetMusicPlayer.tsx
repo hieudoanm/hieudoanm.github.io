@@ -12,7 +12,7 @@ export const WidgetMusicPlayer: FC = () => {
   const [status, setStatus] = useState(false);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
       <div className="flex h-full w-full flex-col p-8">
         <div className="mb-2 text-center">
           <p className="truncate text-xl">

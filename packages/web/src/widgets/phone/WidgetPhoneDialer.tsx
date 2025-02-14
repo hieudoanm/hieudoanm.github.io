@@ -21,7 +21,7 @@ export const WidgetPhoneDialer = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900">
       <div className="h-full w-full p-6">
         <div className="grid h-full grid-cols-4">
           {items.map((item, index) => {
@@ -29,7 +29,7 @@ export const WidgetPhoneDialer = () => {
               <div
                 key={'item-' + index}
                 className="col-span-1 flex h-full items-center justify-center">
-                <div className="flex aspect-square w-10 items-center justify-center rounded-full bg-white font-black text-black hover:bg-red-500 hover:text-white">
+                <div className="flex aspect-square w-10 items-center justify-center rounded-full bg-white font-black text-black hover:bg-red-500 hover:text-gray-100">
                   {item}
                 </div>
               </div>

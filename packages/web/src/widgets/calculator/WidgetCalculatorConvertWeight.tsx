@@ -44,7 +44,7 @@ export const WidgetCalculatorConvertWeight: FC = () => {
   const convert = convertRates(weightRates);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-black text-white">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
       <div className="h-full w-full p-6">
         <div className="flex h-full flex-col">
           <div className="flex h-full w-full items-center gap-x-1">
