@@ -2,7 +2,7 @@
   "name": "nothing",
   "version": "0.0.1",
   "description": "It's Nothing",
-  "packageManager": "pnpm@10.3.0",
+  "packageManager": "pnpm@10.4.0",
   "scripts": {
     "dev": "turbo run dev",
     "lint": "turbo run lint",
