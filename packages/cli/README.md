@@ -9,6 +9,9 @@
 | Features                      | C++   | Go    | Python | Rust  | TypeScript |
 | ----------------------------- | ----- | ----- | ------ | ----- | ---------- |
 | QRCode                        |       | `Yes` |        |       |            |
+| Status - GitHub               |       | `Yes` |        |       |            |
+| Status - Supabase             |       | `Yes` |        |       |            |
+| Status - Vercel               |       | `Yes` |        |       |            |
 | Telegram - Message - Send     |       | `Yes` |        |       |            |
 | Telegram - Webhook - Set      |       | `Yes` |        |       |            |
 | Telegram - Webhook - Get Info |       | `Yes` |        |       |            |

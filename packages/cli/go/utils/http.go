@@ -8,13 +8,37 @@ import (
 	"net/http"
 )
 
+// Get ...
+func Get(url string, requestQuery map[string]string) ([]byte, error) {
+	// Make the GET request
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Println("Error:", err)
+		return nil, err
+	}
+	defer resp.Body.Close() // Ensure response body is closed
+
+	// Read response body
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println("Error reading response:", err)
+		return nil, err
+	}
+
+	fmt.Println("Response Status:", resp.Status)
+	fmt.Println("Response Body:", string(body))
+
+	// Return response body
+	return body, nil
+}
+
 // Post ...
 func Post(url string, requestBody map[string]string) ([]byte, error) {
 	// JSON payload
-	jsonData, _ := json.Marshal(requestBody)
+	requestData, _ := json.Marshal(requestBody)
 
 	// Create request
-	req, _ := http.NewRequest("POST", url, bytes.NewBuffer(jsonData))
+	req, _ := http.NewRequest("POST", url, bytes.NewBuffer(requestData))
 	req.Header.Set("Content-Type", "application/json")
 
 	// Send request
