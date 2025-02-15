@@ -8,6 +8,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var max int
+
 // uuidCmd represents the download command
 var uuidCmd = &cobra.Command{
 	Use:   "uuid",
@@ -19,14 +21,18 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		// Generate a new UUID (v4)
-		newUUID := uuid.New()
+		for i := 0; i < max; i++ {
+			// Generate a new UUID (v4)
+			newUUID := uuid.New()
 
-		// Print the UUID
-		fmt.Println(newUUID)
+			// Print the UUID
+			fmt.Println(newUUID)
+		}
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(uuidCmd)
+
+	uuidCmd.PersistentFlags().IntVarP(&max, "max", "m", 1, "Number of UUIDs")
 }
