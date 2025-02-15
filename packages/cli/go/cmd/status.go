@@ -3,6 +3,7 @@ package cmd
 
 import (
 	"fmt"
+	"nothing-cli/utils"
 
 	"github.com/spf13/cobra"
 )
@@ -18,6 +19,8 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		utils.LogProgramName()
+		// Get Subcommands
 		fmt.Println("github   - Get Status of GitHub")
 		fmt.Println("supabase - Get Status of Supabase")
 		fmt.Println("vercel   - Get Status of Vercel")

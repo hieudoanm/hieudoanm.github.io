@@ -3,6 +3,7 @@ package cmd
 
 import (
 	"fmt"
+	"nothing-cli/utils"
 
 	"github.com/spf13/cobra"
 )
@@ -18,6 +19,8 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		utils.LogProgramName()
+		// Get subcommands
 		fmt.Println("delete   - Delete Webhook")
 		fmt.Println("get-info - Get Info of Webhook")
 		fmt.Println("set      - Set Webhook")
