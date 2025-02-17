@@ -1,0 +1,39 @@
+{
+  "name": "nothing-vscode-theme",
+  "displayName": "Nothing VSCode Theme",
+  "version": "0.0.1",
+  "description": "VSCode Theme - Nothing Inspired",
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "extension",
+    "nothing",
+    "vscode",
+    "theme"
+  ],
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.4.1",
+  "repository": "git@github.com:hieudoanm/nothing.git",
+  "engines": {
+    "node": "22.14.0",
+    "vscode": "1.90.0"
+  },
+  "scripts": {
+    "build": "rimraf build && mkdir build && vsce package --out \"./build/nothing-vscode-theme-0.0.1.vsix\""
+  },
+  "devDependencies": {
+    "rimraf": "6.0.1",
+    "vsce": "2.15.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Nothing VSCode Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nothing.json"
+      }
+    ]
+  }
+}

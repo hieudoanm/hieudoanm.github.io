@@ -1,7 +1,7 @@
 {
   "name": "nothing",
   "version": "0.0.1",
-  "description": "It's Nothing",
+  "description": "it is nothing",
   "packageManager": "pnpm@10.4.1",
   "scripts": {
     "dev": "turbo run dev",
@@ -11,6 +11,7 @@
     "prepare": "husky || true"
   },
   "keywords": [],
+  "repository": "git@github.com:hieudoanm/nothing.git",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
   "devDependencies": {
