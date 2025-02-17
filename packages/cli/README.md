@@ -11,6 +11,7 @@
 
 | Command  | Subcommand 1 | Subcommand 2 | C++   | Go    | Py    | Rs    | TS    |
 | -------- | ------------ | ------------ | ----- | ----- | ----- | ----- | ----- |
+| Forex    |              |              |       | `Yes` |       |       |       |
 | QRCode   |              |              |       | `Yes` |       |       |       |
 | Status   | GitHub       |              |       | `Yes` |       |       |       |
 | Status   | Supabase     |              |       | `Yes` |       |       |       |
