@@ -9,20 +9,27 @@
 
 ## Features
 
-| Command  | Subcommand 1 | Subcommand 2 | C++   | Go    | Py    | Rs    | TS    |
-| -------- | ------------ | ------------ | ----- | ----- | ----- | ----- | ----- |
-| Forex    |              |              |       | `Yes` |       |       |       |
-| QRCode   |              |              |       | `Yes` |       |       |       |
-| Status   | GitHub       |              |       | `Yes` |       |       |       |
-| Status   | Supabase     |              |       | `Yes` |       |       |       |
-| Status   | Vercel       |              |       | `Yes` |       |       |       |
-| Telegram | Message      | Send         |       | `Yes` |       |       |       |
-| Telegram | Webhook      | Set          |       | `Yes` |       |       |       |
-| Telegram | Webhook      | Get Info     |       | `Yes` |       |       |       |
-| Telegram | Webhook      | Delete       |       | `Yes` |       |       |       |
-| UUID     |              |              | `Yes` | `Yes` | `Yes` | `Yes` | `Yes` |
+| Command   | Subcommand 1 | Subcommand 2 | C++   | Go    | Py    | Rs    | TS    |
+| --------- | ------------ | ------------ | ----- | ----- | ----- | ----- | ----- |
+| Braille   |              |              |       | `Yes` |       |       |       |
+| Forex     |              |              |       | `Yes` |       |       |       |
+| Instagram | Download     |              |       | `Yes` |       |       |       |
+| Morse     |              |              |       | `Yes` |       |       |       |
+| QRCode    |              |              |       | `Yes` |       |       |       |
+| Status    | GitHub       |              |       | `Yes` |       |       |       |
+| Status    | Supabase     |              |       | `Yes` |       |       |       |
+| Status    | Vercel       |              |       | `Yes` |       |       |       |
+| Telegram  | Message      | Send         |       | `Yes` |       |       |       |
+| Telegram  | Webhook      | Set          |       | `Yes` |       |       |       |
+| Telegram  | Webhook      | Get Info     |       | `Yes` |       |       |       |
+| Telegram  | Webhook      | Delete       |       | `Yes` |       |       |       |
+| UUID      |              |              | `Yes` | `Yes` | `Yes` | `Yes` | `Yes` |
+| Version   |              |              |       | `Yes` |       |       |       |
+| YouTube   | Download     |              |       | `Yes` |       |       |       |
 
 ## Go (Golang)
+
+- [Cobra](https://cobra.dev/) - [GitHub](https://github.com/spf13/cobra)
 
 ## Py (Python)
 
