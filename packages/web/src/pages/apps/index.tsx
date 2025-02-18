@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { JSX } from 'react';
+import { FaDotCircle } from 'react-icons/fa';
 import {
   FaCamera,
   FaFlag,
@@ -27,6 +28,12 @@ type NothingApp = {
 
 const WidgetsPage: NextPage = () => {
   const apps: NothingApp[] = [
+    {
+      id: 'braille',
+      href: 'braille',
+      name: 'Braille',
+      icon: <FaDotCircle className="text-2xl" />,
+    },
     {
       id: 'chemistry',
       href: 'chemistry',
@@ -122,7 +129,7 @@ const WidgetsPage: NextPage = () => {
   return (
     <div className="h-[100vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-3 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-3 md:gap-8">
+        <div className="grid h-full grid-cols-4 grid-rows-4 gap-4 md:grid-cols-4 md:grid-rows-4 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">
