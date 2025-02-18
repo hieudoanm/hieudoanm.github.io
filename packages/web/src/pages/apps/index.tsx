@@ -30,28 +30,34 @@ type NothingApp = {
 const WidgetsPage: NextPage = () => {
   const apps: NothingApp[] = [
     {
-      id: 'braille',
-      href: 'braille',
+      id: 'convert-braille',
+      href: 'convert/braille',
       name: 'Braille',
       icon: <FaEyeSlash className="text-2xl" />,
     },
     {
-      id: 'chemistry',
-      href: 'chemistry',
-      name: 'Chemistry',
-      icon: <FaFlask className="text-2xl" />,
-    },
-    {
-      id: 'countries',
-      href: 'countries',
-      name: 'Countries',
-      icon: <FaFlag className="text-2xl" />,
-    },
-    {
-      id: 'csv',
-      href: 'csv',
+      id: 'convert-csv',
+      href: 'convert/csv',
       name: 'CSV',
       icon: <FaTable className="text-2xl" />,
+    },
+    {
+      id: 'convert-markdown',
+      href: 'convert/markdown',
+      name: 'Markdown',
+      icon: <FaMarkdown className="text-2xl" />,
+    },
+    {
+      id: 'convert-morse',
+      href: 'convert/morse',
+      name: 'Morse',
+      icon: <FaDotCircle className="text-2xl" />,
+    },
+    {
+      id: 'convert-yaml2json',
+      href: 'convert/yaml2json',
+      name: 'YAML to JSON',
+      icon: <FaY className="text-2xl" />,
     },
     {
       id: 'github-cover',
@@ -66,34 +72,40 @@ const WidgetsPage: NextPage = () => {
       icon: <FaGithub className="text-2xl" />,
     },
     {
+      id: 'generate-manifest.json',
+      href: 'generate/manifest.json',
+      name: 'manifest.json',
+      icon: <FaSquareJs className="text-2xl" />,
+    },
+    {
+      id: 'generate-qrcode',
+      href: 'generate/qrcode',
+      name: 'QR',
+      icon: <FaQrcode className="text-2xl" />,
+    },
+    {
+      id: 'generate-uuid',
+      href: 'generate/uuid',
+      name: 'UUID',
+      icon: <FaI className="text-2xl" />,
+    },
+    {
       id: 'grayify',
       href: 'grayify',
       name: 'Grayify',
       icon: <FaCamera className="text-2xl" />,
     },
     {
-      id: 'manifest.json',
-      href: 'manifest.json',
-      name: 'manifest.json',
-      icon: <FaSquareJs className="text-2xl" />,
+      id: 'list-chemistry',
+      href: 'list/chemistry',
+      name: 'Chemistry',
+      icon: <FaFlask className="text-2xl" />,
     },
     {
-      id: 'markdown',
-      href: 'markdown',
-      name: 'Markdown',
-      icon: <FaMarkdown className="text-2xl" />,
-    },
-    {
-      id: 'morse',
-      href: 'morse',
-      name: 'Morse',
-      icon: <FaDotCircle className="text-2xl" />,
-    },
-    {
-      id: 'qrcode',
-      href: 'qrcode',
-      name: 'QR',
-      icon: <FaQrcode className="text-2xl" />,
+      id: 'list-countries',
+      href: 'list/countries',
+      name: 'Countries',
+      icon: <FaFlag className="text-2xl" />,
     },
     {
       id: 'resolution',
@@ -118,18 +130,6 @@ const WidgetsPage: NextPage = () => {
       href: 'telegram/webhook',
       name: 'Telegram Webhook',
       icon: <FaTelegram className="text-2xl" />,
-    },
-    {
-      id: 'uuid',
-      href: 'uuid',
-      name: 'UUID',
-      icon: <FaI className="text-2xl" />,
-    },
-    {
-      id: 'yaml2json',
-      href: 'yaml2json',
-      name: 'YAML to JSON',
-      icon: <FaY className="text-2xl" />,
     },
   ];
 

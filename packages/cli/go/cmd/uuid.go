@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var max int
+var maxUUID int
 
 // uuidCmd represents the download command
 var uuidCmd = &cobra.Command{
@@ -23,7 +23,7 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		utils.LogProgramName()
-		for i := 0; i < max; i++ {
+		for i := 0; i < maxUUID; i++ {
 			// Generate a new UUID (v4)
 			newUUID := uuid.New()
 
@@ -36,5 +36,5 @@ to quickly create a Cobra application.`,
 func init() {
 	rootCmd.AddCommand(uuidCmd)
 
-	uuidCmd.PersistentFlags().IntVarP(&max, "max", "m", 1, "Number of UUIDs")
+	uuidCmd.PersistentFlags().IntVarP(&maxUUID, "max", "m", 1, "Number of UUIDs")
 }

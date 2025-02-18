@@ -23,6 +23,7 @@ to quickly create a Cobra application.`,
 		utils.LogProgramName()
 		// Commands
 		fmt.Println("braille   - Convert Text to Braille")
+		fmt.Println("colors    - Colors SDK")
 		fmt.Println("forex     - Get Foreign Currency Exchange")
 		fmt.Println("instagram - Instagram SDK")
 		fmt.Println("morse     - Convert Text to Morse")

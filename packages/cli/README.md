@@ -9,23 +9,25 @@
 
 ## Features
 
-| Command   | Subcommand 1 | Subcommand 2 | C++   | Go    | Py    | Rs    | TS    |
-| --------- | ------------ | ------------ | ----- | ----- | ----- | ----- | ----- |
-| Braille   |              |              |       | `Yes` |       |       |       |
-| Forex     |              |              |       | `Yes` |       |       |       |
-| Instagram | Download     |              |       | `Yes` |       |       |       |
-| Morse     |              |              |       | `Yes` |       |       |       |
-| QRCode    |              |              |       | `Yes` |       |       |       |
-| Status    | GitHub       |              |       | `Yes` |       |       |       |
-| Status    | Supabase     |              |       | `Yes` |       |       |       |
-| Status    | Vercel       |              |       | `Yes` |       |       |       |
-| Telegram  | Message      | Send         |       | `Yes` |       |       |       |
-| Telegram  | Webhook      | Set          |       | `Yes` |       |       |       |
-| Telegram  | Webhook      | Get Info     |       | `Yes` |       |       |       |
-| Telegram  | Webhook      | Delete       |       | `Yes` |       |       |       |
-| UUID      |              |              | `Yes` | `Yes` | `Yes` | `Yes` | `Yes` |
-| Version   |              |              |       | `Yes` |       |       |       |
-| YouTube   | Download     |              |       | `Yes` |       |       |       |
+| No  | Command   | Subcommand 1 | Subcommand 2 | C++   | Go    | Py    | Rs    | TS    |
+| --- | --------- | ------------ | ------------ | ----- | ----- | ----- | ----- | ----- |
+| 01  | braille   |              |              |       | `Yes` |       |       |       |
+| 02  | colors    | hex2rgb      |              |       | `Yes` |       |       |       |
+| 03  | colors    | random       |              |       | `Yes` |       |       |       |
+| 04  | forex     |              |              |       | `Yes` |       |       |       |
+| 05  | instagram | download     |              |       | `Yes` |       |       |       |
+| 06  | morse     |              |              |       | `Yes` |       |       |       |
+| 07  | qrcode    |              |              |       | `Yes` |       |       |       |
+| 08  | status    | github       |              |       | `Yes` |       |       |       |
+| 09  | status    | supabase     |              |       | `Yes` |       |       |       |
+| 10  | status    | vercel       |              |       | `Yes` |       |       |       |
+| 11  | telegram  | message      | send         |       | `Yes` |       |       |       |
+| 12  | telegram  | webhook      | set          |       | `Yes` |       |       |       |
+| 13  | telegram  | webhook      | get-info     |       | `Yes` |       |       |       |
+| 14  | telegram  | webhook      | delete       |       | `Yes` |       |       |       |
+| 15  | uuid      |              |              | `Yes` | `Yes` | `Yes` | `Yes` | `Yes` |
+| 16  | version   |              |              |       | `Yes` |       |       |       |
+| 17  | youtube   | download     |              |       | `Yes` |       |       |       |
 
 ## Go (Golang)
 
