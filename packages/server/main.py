@@ -7,8 +7,9 @@ from shutil import copyfileobj
 from easyocr import Reader
 
 
-ocrReader = Reader(["en"])
-
+ocrReader = Reader(
+    ["en"], model_storage_directory="models", detector=True, recognizer=True
+)
 
 app = FastAPI(
     title="Nothing",
