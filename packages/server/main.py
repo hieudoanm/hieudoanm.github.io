@@ -3,8 +3,9 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from os import makedirs, path
 from pydantic import BaseModel
-from shutil import copyfileobj
+from shutil import copyfileobj, disk_usage
 from easyocr import Reader
+from psutil import virtual_memory
 
 
 ocrReader = Reader(
@@ -34,6 +35,8 @@ async def favicon():
 
 class HealthResponse(BaseModel):
     status: str
+    disk_memory: dict[str, int]
+    virtual_memory: dict[str, int]
 
 
 @app.get(
@@ -45,7 +48,25 @@ class HealthResponse(BaseModel):
     response_model=HealthResponse,
 )
 def health():
-    return {"status": "OK"}
+    memory = virtual_memory()
+    total, used, free = disk_usage("/")
+    return JSONResponse(
+        content={
+            "status": "OK",
+            "disk_memory": {
+                "total_gb": round(total / (1024**3), 2),  # Convert to GB
+                "used_gb": round(used / (1024**3), 2),
+                "free_gb": round(free / (1024**3), 2),
+                "percent_used": round((used / total) * 100, 2),
+            },
+            "virtual_memory": {
+                "total": memory.total // (1024 * 1024),  # Convert to MB
+                "used": memory.used // (1024 * 1024),
+                "free": memory.available // (1024 * 1024),
+                "percent": memory.percent,
+            },
+        }
+    )
 
 
 class OCRResponse(BaseModel):
