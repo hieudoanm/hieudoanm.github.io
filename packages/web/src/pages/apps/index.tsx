@@ -42,6 +42,18 @@ const WidgetsPage: NextPage = () => {
       icon: <FaTable className="text-2xl" />,
     },
     {
+      id: 'convert-image-png2ico',
+      href: 'convert/images/png2ico',
+      name: 'PNG to ICO',
+      icon: <FaImages className="text-2xl" />,
+    },
+    {
+      id: 'convert-image-svg2png',
+      href: 'convert/images/svg2png',
+      name: 'SVG to PNG',
+      icon: <FaImages className="text-2xl" />,
+    },
+    {
       id: 'convert-markdown',
       href: 'convert/markdown',
       name: 'Markdown',
@@ -118,12 +130,6 @@ const WidgetsPage: NextPage = () => {
       href: 'status',
       name: 'Status',
       icon: <FaLightbulb className="text-2xl" />,
-    },
-    {
-      id: 'svg2png',
-      href: 'svg2png',
-      name: 'SVG to PNG',
-      icon: <FaImages className="text-2xl" />,
     },
     {
       id: 'telegram-webhook',

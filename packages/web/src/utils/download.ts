@@ -11,7 +11,8 @@ const download = ({
   const link: HTMLAnchorElement = document.createElement('a');
   link.setAttribute('href', encodedUri);
   const date: string = new Date().toISOString().split('T')[0];
-  link.setAttribute('download', `${filename}-${date}.${format}`);
+  const filenameWithExtension: string = `${filename}-${date}.${format}`;
+  link.setAttribute('download', filenameWithExtension);
   document.body.append(link); // Required for FF
   link.click(); // This will download the data file.
   link.remove();
@@ -36,7 +37,7 @@ export const downloadImage = ({
   filename,
 }: {
   content: string;
-  format: 'jpg' | 'png';
+  format: 'jpg' | 'png' | 'ico';
   filename: string;
 }) => {
   download({ content, format, filename });
