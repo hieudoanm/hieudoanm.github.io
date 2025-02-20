@@ -4,6 +4,10 @@ from fastapi.staticfiles import StaticFiles
 from os import makedirs, path
 from pydantic import BaseModel
 from shutil import copyfileobj
+from easyocr import Reader
+
+
+ocrReader = Reader(["en"])
 
 
 app = FastAPI(
@@ -62,6 +66,7 @@ def ocr():
 class OCRVietnamLicensePlatesResponse(BaseModel):
     message: str
     file_name: str
+    text: str
 
 
 @app.post(
@@ -78,6 +83,12 @@ def ocr_vietnam_license_plates(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         copyfileobj(file.file, buffer)
 
+    result: list[str] = ocrReader.readtext(file_path, detail=0)
+
     return JSONResponse(
-        content={"file_name": file.filename, "message": "File uploaded successfully"}
+        content={
+            "file_name": file.filename,
+            "message": "File uploaded successfully",
+            "text": "".join(result),
+        }
     )
