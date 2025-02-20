@@ -1,8 +1,9 @@
-from fastapi import FastAPI
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, UploadFile, File
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from os import makedirs, path
 from pydantic import BaseModel
-from uvicorn import run
+from shutil import copyfileobj
 
 
 app = FastAPI(
@@ -11,6 +12,10 @@ app = FastAPI(
     docs_url="/swagger",
     redoc_url="/",
 )
+
+
+UPLOAD_DIR = "uploads"
+makedirs(UPLOAD_DIR, exist_ok=True)  # Ensure the uploads directory exists
 
 
 # Mount static files
@@ -27,7 +32,7 @@ class HealthResponse(BaseModel):
 
 
 @app.get(
-    "/heath",
+    "/health",
     name="Health",
     summary="Health",
     description="Health Check",
@@ -55,7 +60,8 @@ def ocr():
 
 
 class OCRVietnamLicensePlatesResponse(BaseModel):
-    text: str
+    message: str
+    file_name: str
 
 
 @app.post(
@@ -66,5 +72,12 @@ class OCRVietnamLicensePlatesResponse(BaseModel):
     tags=["OCR"],
     response_model=OCRVietnamLicensePlatesResponse,
 )
-def ocr_vietnam_license_plates():
-    return {"text": "29A-12345"}
+def ocr_vietnam_license_plates(file: UploadFile = File(...)):
+    file_path = path.join(UPLOAD_DIR, file.filename)
+
+    with open(file_path, "wb") as buffer:
+        copyfileobj(file.file, buffer)
+
+    return JSONResponse(
+        content={"file_name": file.filename, "message": "File uploaded successfully"}
+    )

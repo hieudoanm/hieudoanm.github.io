@@ -1,0 +1,15 @@
+@host = http://127.0.0.1:8000
+
+### Health Check
+GET {{host}}/health HTTP/1.1
+
+### Upload an Image
+POST {{host}}/ocr/vietnam/license/plates HTTP/1.1
+Content-Type: multipart/form-data; boundary=LicensePlatesBoundry
+
+--LicensePlatesBoundry
+Content-Disposition: form-data; name="file"; filename="license-plate.jpg"
+Content-Type: image/jpeg
+
+< ../static/license-plate.jpg
+--LicensePlatesBoundry--
