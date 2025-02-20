@@ -8,7 +8,7 @@ from easyocr import Reader
 
 
 ocrReader = Reader(
-    ["en"], model_storage_directory="models", detector=True, recognizer=True
+    ["en"], model_storage_directory="models", detector=True, recognizer=True, gpu=False
 )
 
 app = FastAPI(
@@ -79,6 +79,7 @@ class OCRVietnamLicensePlatesResponse(BaseModel):
     response_model=OCRVietnamLicensePlatesResponse,
 )
 def ocr_vietnam_license_plates(file: UploadFile = File(...)):
+    print("filename", file.filename)
     file_path = path.join(UPLOAD_DIR, file.filename)
 
     with open(file_path, "wb") as buffer:

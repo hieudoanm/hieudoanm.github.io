@@ -9,4 +9,7 @@ COPY main.py main.py
 COPY models models
 COPY static static
 
+# Print memory info
+RUN free -m || cat /proc/meminfo
+
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
