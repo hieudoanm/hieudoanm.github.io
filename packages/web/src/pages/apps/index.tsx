@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { FaDotCircle } from 'react-icons/fa';
 import {
   FaCamera,
+  FaEye,
   FaEyeSlash,
   FaFlag,
   FaFlask,
@@ -120,6 +121,12 @@ const WidgetsPage: NextPage = () => {
       icon: <FaFlag className="text-2xl" />,
     },
     {
+      id: 'ocr',
+      href: 'ocr',
+      name: 'OCR',
+      icon: <FaEye className="text-2xl" />,
+    },
+    {
       id: 'resolution',
       href: 'resolution',
       name: 'Resolution',
@@ -142,7 +149,7 @@ const WidgetsPage: NextPage = () => {
   return (
     <div className="h-[100vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-3 grid-rows-6 gap-4 md:grid-cols-6 md:grid-rows-3 md:gap-8">
+        <div className="grid h-full grid-cols-3 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-3 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">
