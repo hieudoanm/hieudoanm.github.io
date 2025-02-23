@@ -20,6 +20,14 @@ const nextConfig: NextConfig = {
   experimental: { turbo: { treeShaking: true } },
   basePath: NODE_ENV === 'development' ? '' : '/nothing',
   distDir: NODE_ENV === 'development' ? '.next' : '../../docs',
+  webpack: (config) => {
+    config.experiments = {
+      layers: true,
+      asyncWebAssembly: true,
+      topLevelAwait: true,
+    };
+    return config;
+  },
 };
 
 export default withPWA(nextConfig as any);

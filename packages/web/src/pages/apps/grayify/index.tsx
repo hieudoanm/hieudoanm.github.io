@@ -1,7 +1,7 @@
-import { NextPage } from 'next';
 import film from '@nothing/assets/film.jpg';
-import { useRef, useState } from 'react';
 import html2canvas from 'html2canvas';
+import { NextPage } from 'next';
+import { useRef, useState } from 'react';
 
 const GrayifyPage: NextPage = () => {
   const imageRef = useRef<HTMLDivElement>(null);
@@ -33,10 +33,32 @@ const GrayifyPage: NextPage = () => {
               const reader = new FileReader();
               reader.readAsDataURL(file);
               reader.onload = () => {
-                setState((previous) => ({
-                  ...previous,
-                  base64: reader.result?.toString() ?? film.src,
-                }));
+                const base64: string = reader.result?.toString() ?? '';
+                const img = new Image();
+                img.src = base64;
+
+                img.onload = async () => {
+                  const { grayscale, open_image } = await import(
+                    '@silvia-odwyer/photon'
+                  );
+
+                  const canvas = document.createElement('canvas');
+                  canvas.width = img.width;
+                  canvas.height = img.height;
+
+                  const context = canvas.getContext('2d');
+                  if (context === null) return;
+                  context.drawImage(img, 0, 0);
+
+                  const photonImage = open_image(canvas, context);
+                  grayscale(photonImage);
+                  const grayscaleBase64: string = photonImage.get_base64();
+                  console.info('Grayscale Base64:', grayscaleBase64);
+                  setState((previous) => ({
+                    ...previous,
+                    base64: grayscaleBase64 ?? base64 ?? film.src,
+                  }));
+                };
               };
               reader.onerror = (error) => {
                 console.error('Error converting file to Base64:', error);
@@ -56,7 +78,7 @@ const GrayifyPage: NextPage = () => {
           }}>
           <div ref={imageRef} className="h-full w-full">
             <div
-              className="h-full w-full bg-cover bg-center grayscale"
+              className="h-full w-full bg-cover bg-center"
               style={{
                 backgroundImage: `url(${base64})`,
               }}

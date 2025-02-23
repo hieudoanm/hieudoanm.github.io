@@ -114,6 +114,9 @@ importers:
 
   packages/web:
     dependencies:
+      '@silvia-odwyer/photon':
+        specifier: 0.3.2
+        version: 0.3.2
       '@tanstack/react-query':
         specifier: 5.66.9
         version: 5.66.9(react@19.0.0)
@@ -1668,6 +1671,9 @@ packages:
   '@sigstore/tuf@1.0.3':
     resolution: {integrity: sha512-2bRovzs0nJZFlCN3rXirE4gwxCn97JNjMmwpecqlbgV9WcxX7WRuIrgzx/X7Ib7MYRbyUTpBYE0s2x6AmZXnlg==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+
+  '@silvia-odwyer/photon@0.3.2':
+    resolution: {integrity: sha512-1h5MFDyu4WYQwbFYtHcAl4FWxEZncgdo/tQFmrsiIiIglRt4R+VTiRrplDS+kCofEaafjXkwdXP1fRwh/pgA5A==}
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -8757,6 +8763,8 @@ snapshots:
       tuf-js: 1.1.7
     transitivePeerDependencies:
       - supports-color
+
+  '@silvia-odwyer/photon@0.3.2': {}
 
   '@sinclair/typebox@0.27.8': {}
 
