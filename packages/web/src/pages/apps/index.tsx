@@ -11,6 +11,7 @@ import {
   FaGithub,
   FaI,
   FaImages,
+  FaJ,
   FaLightbulb,
   FaMarkdown,
   FaQrcode,
@@ -31,16 +32,58 @@ type NothingApp = {
 const WidgetsPage: NextPage = () => {
   const apps: NothingApp[] = [
     {
-      id: 'convert-braille',
-      href: 'convert/braille',
+      id: 'convert-code-braille',
+      href: 'convert/code/braille',
       name: 'Braille',
       icon: <FaEyeSlash className="text-2xl" />,
     },
     {
-      id: 'convert-csv',
-      href: 'convert/csv',
-      name: 'CSV',
+      id: 'convert-code-morse',
+      href: 'convert/code/morse',
+      name: 'Morse',
+      icon: <FaDotCircle className="text-2xl" />,
+    },
+    {
+      id: 'convert-data-csv-html',
+      href: 'convert/data/csv/html',
+      name: 'CSV to HTML',
       icon: <FaTable className="text-2xl" />,
+    },
+    {
+      id: 'convert-data-csv-json',
+      href: 'convert/data/csv/json',
+      name: 'CSV to JSON',
+      icon: <FaTable className="text-2xl" />,
+    },
+    {
+      id: 'convert-data-csv-md',
+      href: 'convert/data/csv/md',
+      name: 'CSV to MD',
+      icon: <FaTable className="text-2xl" />,
+    },
+    {
+      id: 'convert-data-csv-sql',
+      href: 'convert/data/csv/sql',
+      name: 'CSV to SQL',
+      icon: <FaTable className="text-2xl" />,
+    },
+    {
+      id: 'convert-data-json-csv',
+      href: 'convert/data/json/csv',
+      name: 'JSON to CSV',
+      icon: <FaJ className="text-2xl" />,
+    },
+    {
+      id: 'convert-data-json-yaml',
+      href: 'convert/data/json/yaml',
+      name: 'JSON to YAML',
+      icon: <FaJ className="text-2xl" />,
+    },
+    {
+      id: 'convert-data-yaml-json',
+      href: 'convert/data/yaml/json',
+      name: 'YAML to JSON',
+      icon: <FaY className="text-2xl" />,
     },
     {
       id: 'convert-image-png2ico',
@@ -59,18 +102,6 @@ const WidgetsPage: NextPage = () => {
       href: 'convert/markdown',
       name: 'Markdown',
       icon: <FaMarkdown className="text-2xl" />,
-    },
-    {
-      id: 'convert-morse',
-      href: 'convert/morse',
-      name: 'Morse',
-      icon: <FaDotCircle className="text-2xl" />,
-    },
-    {
-      id: 'convert-yaml2json',
-      href: 'convert/yaml2json',
-      name: 'YAML to JSON',
-      icon: <FaY className="text-2xl" />,
     },
     {
       id: 'github-cover',
@@ -149,7 +180,7 @@ const WidgetsPage: NextPage = () => {
   return (
     <div className="h-[100vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-3 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-3 md:gap-8">
+        <div className="grid h-full grid-cols-4 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-4 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">
