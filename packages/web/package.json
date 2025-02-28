@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@silvia-odwyer/photon": "0.3.2",
-    "@tanstack/react-query": "5.66.9",
+    "@tanstack/react-query": "5.66.11",
     "@tanstack/react-table": "8.21.2",
     "@tanstack/react-virtual": "3.13.2",
     "github-markdown-css": "5.8.1",
@@ -50,7 +50,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "3.3.0",
     "@tailwindcss/postcss": "4.0.9",
-    "@tanstack/react-query": "5.66.9",
+    "@tanstack/react-query": "5.66.11",
     "@types/jest": "29.5.14",
     "@types/next-pwa": "5.6.9",
     "@types/node": "22.13.5",
