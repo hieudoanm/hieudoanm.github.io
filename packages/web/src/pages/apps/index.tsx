@@ -98,8 +98,14 @@ const WidgetsPage: NextPage = () => {
       icon: <FaImages className="text-2xl" />,
     },
     {
-      id: 'convert-markdown',
-      href: 'convert/markdown',
+      id: 'editor-manifest.json',
+      href: 'editor/manifest.json',
+      name: 'manifest.json',
+      icon: <FaSquareJs className="text-2xl" />,
+    },
+    {
+      id: 'editor-markdown',
+      href: 'editor/markdown',
       name: 'Markdown',
       icon: <FaMarkdown className="text-2xl" />,
     },
@@ -114,12 +120,6 @@ const WidgetsPage: NextPage = () => {
       href: 'github/languages',
       name: 'GitHub Languages',
       icon: <FaGithub className="text-2xl" />,
-    },
-    {
-      id: 'generate-manifest.json',
-      href: 'generate/manifest.json',
-      name: 'manifest.json',
-      icon: <FaSquareJs className="text-2xl" />,
     },
     {
       id: 'generate-qrcode',

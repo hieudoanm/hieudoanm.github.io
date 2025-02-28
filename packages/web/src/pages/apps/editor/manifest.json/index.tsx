@@ -52,14 +52,17 @@ const ManifestPage: NextPage = () => {
     homepage_url: 'https://example.com',
     offline_enabled: true,
   });
+
   return (
     <div className="h-screen w-screen">
-      <div className="container mx-auto p-8">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div className="col-span-1">
-            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
-              <div className="col-span-1">
-                <label htmlFor="version" className="px-4">
+      <div className="grid h-full grid-cols-2 gap-4">
+        <div className="col-span-1">
+          <div className="flex h-full items-center justify-center">
+            <div className="flex w-full flex-col p-8">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="version"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Version
                 </label>
                 <input
@@ -67,7 +70,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="version"
                   placeholder="Version"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.version}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -77,8 +80,10 @@ const ManifestPage: NextPage = () => {
                   }
                 />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="version_name" className="px-4">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="version_name"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Version Name
                 </label>
                 <input
@@ -86,7 +91,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="version_name"
                   placeholder="Version"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.version_name}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -96,8 +101,10 @@ const ManifestPage: NextPage = () => {
                   }
                 />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="name" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="name"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Name
                 </label>
                 <input
@@ -105,15 +112,17 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.name}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({ ...manifest, name: event.target.value })
                   }
                 />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="short_name" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="short_name"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Short Name
                 </label>
                 <input
@@ -121,7 +130,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="short_name"
                   placeholder="Short Name"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.short_name}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -131,8 +140,10 @@ const ManifestPage: NextPage = () => {
                   }
                 />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="description" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="description"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Description
                 </label>
                 <input
@@ -140,7 +151,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="description"
                   placeholder="Description"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.description}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -150,8 +161,10 @@ const ManifestPage: NextPage = () => {
                   }
                 />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="author" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="author"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Author
                 </label>
                 <input
@@ -159,7 +172,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="author"
                   placeholder="Author"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.author}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -169,8 +182,10 @@ const ManifestPage: NextPage = () => {
                   }
                 />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="default_locale" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="default_locale"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Default Locale
                 </label>
                 <input
@@ -178,7 +193,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="default_locale"
                   placeholder="Default Locale"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.author}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -188,64 +203,58 @@ const ManifestPage: NextPage = () => {
                   }
                 />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="theme_color" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="theme_color"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Theme Color
                 </label>
-                <div className="flex w-full items-center overflow-hidden rounded-2xl border border-black">
-                  <input
-                    id="theme_color"
-                    type="text"
-                    name="theme_color"
-                    placeholder="Theme Color"
-                    className="w-full bg-gray-900 px-4 py-1 text-gray-100"
-                    value={manifest.theme_color}
-                    onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                      setManifest({
-                        ...manifest,
-                        theme_color: event.target.value,
-                      })
-                    }
-                  />
-                  <div
-                    className="h-8 w-16 border-l border-white"
-                    style={{ backgroundColor: manifest.theme_color }}
-                  />
-                </div>
+                <input
+                  id="theme_color"
+                  type="text"
+                  name="theme_color"
+                  placeholder="Theme Color"
+                  className="w-full py-1"
+                  value={manifest.theme_color}
+                  onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                    setManifest({
+                      ...manifest,
+                      theme_color: event.target.value,
+                    })
+                  }
+                />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="background_color" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="background_color"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Background Color
                 </label>
-                <div className="flex w-full items-center overflow-hidden rounded-2xl border border-black">
-                  <input
-                    id="background_color"
-                    type="text"
-                    name="background_color"
-                    placeholder="Background Color"
-                    className="w-full bg-gray-900 px-4 py-1 text-gray-100"
-                    value={manifest.background_color}
-                    onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                      setManifest({
-                        ...manifest,
-                        theme_color: event.target.value,
-                      })
-                    }
-                  />
-                  <div
-                    className="h-8 w-16 border-l border-white"
-                    style={{ backgroundColor: manifest.background_color }}
-                  />
-                </div>
+                <input
+                  id="background_color"
+                  type="text"
+                  name="background_color"
+                  placeholder="Background Color"
+                  className="w-full py-1"
+                  value={manifest.background_color}
+                  onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                    setManifest({
+                      ...manifest,
+                      theme_color: event.target.value,
+                    })
+                  }
+                />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="display" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="display"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Display
                 </label>
                 <select
                   id="display"
                   name="display"
-                  className="w-full appearance-none rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full appearance-none py-1"
                   value={manifest.display}
                   onChange={(event: ChangeEvent<HTMLSelectElement>) =>
                     setManifest({
@@ -264,14 +273,16 @@ const ManifestPage: NextPage = () => {
                   <option value={'browser'}>browser</option>
                 </select>
               </div>
-              <div className="col-span-1">
-                <label htmlFor="orientation" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="orientation"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Orientation
                 </label>
                 <select
                   id="orientation"
                   name="orientation"
-                  className="w-full appearance-none rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full appearance-none py-1"
                   value={manifest.orientation}
                   onChange={(event: ChangeEvent<HTMLSelectElement>) =>
                     setManifest({
@@ -296,8 +307,10 @@ const ManifestPage: NextPage = () => {
                   </option>
                 </select>
               </div>
-              <div className="col-span-1">
-                <label htmlFor="scope" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="scope"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Scope
                 </label>
                 <input
@@ -305,7 +318,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="scope"
                   placeholder="Scope"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.scope}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -315,8 +328,10 @@ const ManifestPage: NextPage = () => {
                   }
                 />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="start_url" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="start_url"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Start URL
                 </label>
                 <input
@@ -324,7 +339,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="start_url"
                   placeholder="Start URL"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.start_url}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -334,8 +349,10 @@ const ManifestPage: NextPage = () => {
                   }
                 />
               </div>
-              <div className="col-span-1">
-                <label htmlFor="homepage_url" className="px-4 text-sm">
+              <div className="flex w-full items-center border-t border-gray-300">
+                <label
+                  htmlFor="homepage_url"
+                  className="w-60 truncate px-2 whitespace-nowrap">
                   Home Page URL
                 </label>
                 <input
@@ -343,7 +360,7 @@ const ManifestPage: NextPage = () => {
                   type="text"
                   name="homepage_url"
                   placeholder="Home Page URL"
-                  className="w-full rounded-2xl bg-gray-900 px-4 py-1 text-gray-100"
+                  className="w-full py-1"
                   value={manifest.homepage_url}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setManifest({
@@ -353,42 +370,33 @@ const ManifestPage: NextPage = () => {
                   }
                 />
               </div>
+              <button
+                type="button"
+                className="w-full bg-gray-900 py-2 text-gray-100"
+                onClick={() =>
+                  downloadText({
+                    content: JSON.stringify(manifest, null, 4),
+                    format: 'json',
+                    filename: 'manifest',
+                  })
+                }>
+                Download
+              </button>
             </div>
           </div>
-          <div className="col-span-1">
-            <textarea
-              name="manifest.json"
-              placeholder="manifest.json"
-              className="w-full rounded-2xl bg-gray-900 p-4 whitespace-pre text-gray-100"
-              value={JSON.stringify(manifest, null, 4)}
-              rows={18}
-              disabled
-            />
-          </div>
-          <div className="col-span-1">
-            <button
-              type="button"
-              className="w-full rounded-3xl bg-gray-900 py-2 text-gray-100"
-              onClick={() =>
-                copyToClipboard(JSON.stringify(manifest, null, 4))
-              }>
-              Copy
-            </button>
-          </div>
-          <div className="col-span-1">
-            <button
-              type="button"
-              className="w-full rounded-3xl bg-gray-900 py-2 text-gray-100"
-              onClick={() =>
-                downloadText({
-                  content: JSON.stringify(manifest, null, 4),
-                  format: 'json',
-                  filename: 'manifest',
-                })
-              }>
-              Download
-            </button>
-          </div>
+        </div>
+        <div className="col-span-1">
+          <textarea
+            name="manifest.json"
+            placeholder="manifest.json"
+            className="h-full w-full bg-gray-900 p-4 whitespace-pre text-gray-100"
+            value={JSON.stringify(manifest, null, 4)}
+            rows={18}
+            onClick={() => {
+              copyToClipboard(JSON.stringify(manifest, null, 4));
+            }}
+            readOnly
+          />
         </div>
       </div>
     </div>

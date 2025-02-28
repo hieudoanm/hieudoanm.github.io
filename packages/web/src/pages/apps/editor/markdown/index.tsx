@@ -146,7 +146,7 @@ const MarkdownPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="col-span-1 overflow-auto bg-[#0d1117]">
+        <div className="col-span-1 overflow-auto bg-gray-900">
           <div className="markdown-body h-full w-full px-8">
             <div dangerouslySetInnerHTML={{ __html: content.html }} />
           </div>
