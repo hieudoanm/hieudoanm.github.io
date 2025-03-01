@@ -8,17 +8,38 @@ import {
   FaChessRook,
 } from 'react-icons/fa6';
 import { Chessboard as ReactChessboard } from 'react-chessboard';
+import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 
 export const Chessboard: FC<{
   id: string;
   position: string;
   arePiecesDraggable?: boolean;
-}> = ({ id = '', position = '', arePiecesDraggable = false }) => {
+  onPieceDrop?: (
+    sourceSquare: Square,
+    targetSquare: Square,
+    piece: Piece
+  ) => boolean;
+}> = ({
+  id = '',
+  position = '',
+  arePiecesDraggable = false,
+  onPieceDrop = (
+    sourceSquare: Square,
+    targetSquare: Square,
+    piece: Piece
+  ): boolean => {
+    console.info('sourceSquare', sourceSquare);
+    console.info('targetSquare', targetSquare);
+    console.info('piece', piece);
+    return false;
+  },
+}) => {
   return (
     <ReactChessboard
       id={id}
       position={position}
       arePiecesDraggable={arePiecesDraggable}
+      onPieceDrop={onPieceDrop}
       customDarkSquareStyle={{
         backgroundColor: 'oklch(21% 0.034 264.665 / 100%)',
         text: 'white',

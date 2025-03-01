@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { JSX } from 'react';
 import { FaDotCircle } from 'react-icons/fa';
 import {
-  FaCamera,
   FaChessKnight,
   FaEye,
   FaEyeSlash,
@@ -11,7 +10,7 @@ import {
   FaFlask,
   FaGithub,
   FaImages,
-  FaJ,
+  FaJs,
   FaLightbulb,
   FaMarkdown,
   FaQrcode,
@@ -31,41 +30,13 @@ type NothingApp = {
   icon: JSX.Element;
 };
 
-const WidgetsPage: NextPage = () => {
+const AppsPage: NextPage = () => {
   const apps: NothingApp[] = [
     {
-      id: 'chess-converter-fen2png',
-      href: 'chess/converter/fen2png',
-      name: 'FEN to PNG',
-      shortName: 'fen2png',
-      icon: <FaChessKnight className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'chess-converter-pgn2gif',
-      href: 'chess/converter/pgn2gif',
-      name: 'PGN to GIF',
-      shortName: 'pgn2gif',
-      icon: <FaChessKnight className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'chess-tools-elo',
-      href: 'chess/tools/elo',
-      name: 'Chess Elo',
-      shortName: 'elo',
-      icon: <FaChessKnight className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'chess-tools-clock',
-      href: 'chess/tools/clock',
-      name: 'Chess Clock',
-      shortName: 'clock',
-      icon: <FaChessKnight className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'chess-variants-chess960',
-      href: 'chess/variants/chess960',
-      name: 'Chess960',
-      shortName: 'chess960',
+      id: 'chess',
+      href: 'chess',
+      name: 'Chess',
+      shortName: 'chess',
       icon: <FaChessKnight className="text-xl md:text-2xl" />,
     },
     {
@@ -111,18 +82,11 @@ const WidgetsPage: NextPage = () => {
       icon: <FaTable className="text-xl md:text-2xl" />,
     },
     {
-      id: 'converter-data-json-csv',
-      href: 'converter/data/json/csv',
-      name: 'JSON to CSV',
-      shortName: 'json2csv',
-      icon: <FaJ className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-data-json-yaml',
-      href: 'converter/data/json/yaml',
-      name: 'JSON to YAML',
-      shortName: 'json2yaml',
-      icon: <FaJ className="text-xl md:text-2xl" />,
+      id: 'converter-data-json',
+      href: 'converter/data/json',
+      name: 'JSON',
+      shortName: 'json',
+      icon: <FaJs className="text-xl md:text-2xl" />,
     },
     {
       id: 'converter-data-yaml-json',
@@ -130,20 +94,6 @@ const WidgetsPage: NextPage = () => {
       name: 'YAML to JSON',
       shortName: 'yaml2json',
       icon: <FaY className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-image-png2ico',
-      href: 'converter/images/png2ico',
-      name: 'PNG to ICO',
-      shortName: 'png2ico',
-      icon: <FaImages className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-image-svg2png',
-      href: 'converter/images/svg2png',
-      name: 'SVG to PNG',
-      shortName: 'svg2png',
-      icon: <FaImages className="text-xl md:text-2xl" />,
     },
     {
       id: 'editor-manifest.json',
@@ -160,18 +110,18 @@ const WidgetsPage: NextPage = () => {
       icon: <FaMarkdown className="text-xl md:text-2xl" />,
     },
     {
-      id: 'github-cover',
-      href: 'github/cover',
-      name: 'GitHub Cover',
-      shortName: 'gh.cover',
+      id: 'github',
+      href: 'github',
+      name: 'GitHub',
+      shortName: 'gh',
       icon: <FaGithub className="text-xl md:text-2xl" />,
     },
     {
-      id: 'github-languages',
-      href: 'github/languages',
-      name: 'GitHub Languages',
-      shortName: 'gh.lang',
-      icon: <FaGithub className="text-xl md:text-2xl" />,
+      id: 'image',
+      href: 'images',
+      name: 'Images',
+      shortName: 'images',
+      icon: <FaImages className="text-xl md:text-2xl" />,
     },
     {
       id: 'generate-qrcode',
@@ -186,20 +136,6 @@ const WidgetsPage: NextPage = () => {
       name: 'UUID',
       shortName: 'uuid',
       icon: <FaU className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'filter-golden',
-      href: 'filter/golden',
-      name: 'Filter - Golden',
-      shortName: 'golden',
-      icon: <FaCamera className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'filter-grayscale',
-      href: 'filter/grayscale',
-      name: 'Filter - Grayscale',
-      shortName: 'grayscale',
-      icon: <FaCamera className="text-xl md:text-2xl" />,
     },
     {
       id: 'list-chemistry',
@@ -240,7 +176,7 @@ const WidgetsPage: NextPage = () => {
       id: 'telegram-webhook',
       href: 'telegram/webhook',
       name: 'Telegram Webhook',
-      shortName: 't.webhook',
+      shortName: 'tele.hook',
       icon: <FaTelegram className="text-xl md:text-2xl" />,
     },
   ];
@@ -248,7 +184,7 @@ const WidgetsPage: NextPage = () => {
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-4 grid-rows-8 gap-4 md:grid-cols-8 md:grid-rows-4 md:gap-8">
+        <div className="grid h-full grid-cols-3 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-3 md:gap-8">
           {apps.map(
             ({ id = '', href = '', name = '', shortName = '', icon }) => {
               return (
@@ -276,4 +212,4 @@ const WidgetsPage: NextPage = () => {
   );
 };
 
-export default WidgetsPage;
+export default AppsPage;

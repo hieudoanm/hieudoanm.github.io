@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Chessboard } from '@nothing/components/Chessboard';
+import { getMovesFromPGN } from '@nothing/utils/chess';
 import { Chess } from 'chess.js';
 import GIF from 'gif.js';
 import html2canvas from 'html2canvas-pro';
@@ -54,13 +55,6 @@ game Carlsen asked Nakamura why he didn't play} 34... Nxd5 {but the American
 player didn't see much of an advantage after} 35. Re5 Qd2 36. Qxd2+ Rxd2 37. b5)
 35. hxg4 Qh4+ 36. Kg1 Qxg4+ 37. Kh1 Qh4+ 38. Kg1 Qg4+ 39. Kh1 Qh4+ 40. Kg1 Qg4+
 1/2-1/2`;
-
-const getMovesFromPGN = (pgn: string): string[] => {
-  const chess = new Chess();
-  chess.loadPgn(pgn);
-  const moves = chess.history();
-  return moves;
-};
 
 const downloadGIF = (dataURLs: string[]): void => {
   const gif = new GIF({
