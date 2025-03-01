@@ -1,8 +1,9 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 import { FaDotCircle } from 'react-icons/fa';
 import {
+  FaCamera,
   FaChessKnight,
   FaEye,
   FaEyeSlash,
@@ -31,6 +32,8 @@ type NothingApp = {
 };
 
 const AppsPage: NextPage = () => {
+  const [{ search }, setState] = useState<{ search: string }>({ search: '' });
+
   const apps: NothingApp[] = [
     {
       id: 'chess',
@@ -82,10 +85,17 @@ const AppsPage: NextPage = () => {
       icon: <FaTable className="text-xl md:text-2xl" />,
     },
     {
-      id: 'converter-data-json',
-      href: 'converter/data/json',
-      name: 'JSON',
-      shortName: 'json',
+      id: 'converter-data-json-csv',
+      href: 'converter/data/json/csv',
+      name: 'JSON to CSV',
+      shortName: 'json2csv',
+      icon: <FaJs className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'converter-data-json-yaml',
+      href: 'converter/data/json/yaml',
+      name: 'JSON to YAML',
+      shortName: 'json2yaml',
       icon: <FaJs className="text-xl md:text-2xl" />,
     },
     {
@@ -110,20 +120,6 @@ const AppsPage: NextPage = () => {
       icon: <FaMarkdown className="text-xl md:text-2xl" />,
     },
     {
-      id: 'github',
-      href: 'github',
-      name: 'GitHub',
-      shortName: 'gh',
-      icon: <FaGithub className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'image',
-      href: 'images',
-      name: 'Images',
-      shortName: 'images',
-      icon: <FaImages className="text-xl md:text-2xl" />,
-    },
-    {
       id: 'generate-qrcode',
       href: 'generate/qrcode',
       name: 'QR Code',
@@ -136,6 +132,48 @@ const AppsPage: NextPage = () => {
       name: 'UUID',
       shortName: 'uuid',
       icon: <FaU className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'github-cover',
+      href: 'github/cover',
+      name: 'GitHub Cover',
+      shortName: 'gh.cover',
+      icon: <FaGithub className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'github-languages',
+      href: 'github/languages',
+      name: 'GitHub Languages',
+      shortName: 'gh.languages',
+      icon: <FaGithub className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'images-converter-png2ico',
+      href: 'images/converter/png2ico',
+      name: 'PNG to ICO',
+      shortName: 'png2ico',
+      icon: <FaImages className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'images-converter-svg2png',
+      href: 'images/converter/svg2png',
+      name: 'SVG to PNG',
+      shortName: 'svg2png',
+      icon: <FaImages className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'images-filter-golden',
+      href: 'images/filter/golden',
+      name: 'Filter - Golden',
+      shortName: 'golden',
+      icon: <FaCamera className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'images-filter-grayscale',
+      href: 'images/filter/grayscale',
+      name: 'Filter - Grayscale',
+      shortName: 'grayscale',
+      icon: <FaCamera className="text-xl md:text-2xl" />,
     },
     {
       id: 'list-chemistry',
@@ -183,12 +221,33 @@ const AppsPage: NextPage = () => {
 
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
-      <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-3 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-3 md:gap-8">
-          {apps.map(
-            ({ id = '', href = '', name = '', shortName = '', icon }) => {
+      <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
+        <div className="w-full">
+          <input
+            id="search"
+            name="search"
+            placeholder="Search"
+            className="w-full rounded border border-gray-300 px-4 py-2"
+            value={search}
+            onChange={(event) => {
+              setState((previous) => ({
+                ...previous,
+                search: event.target.value,
+              }));
+            }}
+          />
+        </div>
+        <div className="grid h-full grow grid-cols-4 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-4 md:gap-8">
+          {apps
+            .filter(({ name, shortName }) => {
+              return search !== ''
+                ? name.toLowerCase().includes(search.toLowerCase()) ||
+                    shortName.toLowerCase().includes(search.toLowerCase())
+                : true;
+            })
+            .map(({ id = '', href = '', name = '', shortName = '', icon }) => {
               return (
-                <div key={id} className="col-span-1">
+                <div key={id} className="col-span-1 row-span-1">
                   <div className="flex h-full items-center justify-center">
                     <Link
                       href={`/apps/${href}`}
@@ -204,8 +263,7 @@ const AppsPage: NextPage = () => {
                   </div>
                 </div>
               );
-            }
-          )}
+            })}
         </div>
       </div>
     </div>
