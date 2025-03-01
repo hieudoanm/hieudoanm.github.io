@@ -1,13 +1,12 @@
+import { Chessboard } from '@nothing/components/Chessboard';
 import chess960 from '@nothing/json/chess/chess960.json';
 import { addZero, range } from '@nothing/utils/number';
 import { NextPage } from 'next';
 import { ChangeEvent, FC, useState } from 'react';
-import { Chessboard } from 'react-chessboard';
 import {
   FaChessBishop,
   FaChessKing,
   FaChessKnight,
-  FaChessPawn,
   FaChessQueen,
   FaChessRook,
 } from 'react-icons/fa6';
@@ -134,78 +133,9 @@ const Chess960Page: NextPage = () => {
             }}>
             <Pieces position={positionString} />
           </button>
-          <Chessboard
-            id="board"
-            position={fen}
-            customDarkSquareStyle={{
-              backgroundColor: 'oklch(21% 0.034 264.665 / 100%)',
-            }}
-            customLightSquareStyle={{
-              backgroundColor: 'oklch(21% 0.034 264.665 / 95%)',
-            }}
-            customPieces={{
-              wK: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessKing className="text-2xl text-white md:text-4xl" />
-                </div>
-              ),
-              wQ: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessQueen className="text-2xl text-white md:text-4xl" />
-                </div>
-              ),
-              wR: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessRook className="text-2xl text-white md:text-4xl" />
-                </div>
-              ),
-              wB: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessBishop className="text-2xl text-white md:text-4xl" />
-                </div>
-              ),
-              wN: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessKnight className="text-2xl text-white md:text-4xl" />
-                </div>
-              ),
-              wP: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessPawn className="text-2xl text-white md:text-4xl" />
-                </div>
-              ),
-              bK: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessKing className="text-2xl text-red-500 md:text-4xl" />
-                </div>
-              ),
-              bQ: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessQueen className="text-2xl text-red-500 md:text-4xl" />
-                </div>
-              ),
-              bR: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessRook className="text-2xl text-red-500 md:text-4xl" />
-                </div>
-              ),
-              bB: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessBishop className="text-2xl text-red-500 md:text-4xl" />
-                </div>
-              ),
-              bN: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessKnight className="text-2xl text-red-500 md:text-4xl" />
-                </div>
-              ),
-              bP: () => (
-                <div className="flex h-full w-full items-center justify-center">
-                  <FaChessPawn className="text-2xl text-red-500 md:text-4xl" />
-                </div>
-              ),
-            }}
-          />
+          <div className="aspect-square w-full overflow-hidden rounded">
+            <Chessboard id="board" position={fen} />
+          </div>
         </div>
       </div>
       <button

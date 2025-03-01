@@ -126,12 +126,21 @@ importers:
       '@tanstack/react-virtual':
         specifier: 3.13.2
         version: 3.13.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      chess.js:
+        specifier: 1.1.0
+        version: 1.1.0
+      gif.js:
+        specifier: 0.2.0
+        version: 0.2.0
       github-markdown-css:
         specifier: 5.8.1
         version: 5.8.1
       html2canvas:
         specifier: 1.4.1
         version: 1.4.1
+      html2canvas-pro:
+        specifier: 1.5.8
+        version: 1.5.8
       next:
         specifier: 15.2.0
         version: 15.2.0(@babel/core@7.26.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -172,6 +181,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: 4.0.9
         version: 4.0.9
+      '@types/gif.js':
+        specifier: 0.2.5
+        version: 0.2.5
       '@types/jest':
         specifier: 29.5.14
         version: 29.5.14
@@ -2084,6 +2096,9 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/events@3.0.3':
+    resolution: {integrity: sha512-trOc4AAUThEz9hapPtSd7wf5tiQKvTtu5b371UxXdTuqzIh0ArcRspRP0i0Viu+LXstIQ1z96t1nsPxT9ol01g==}
+
   '@types/expect@1.20.4':
     resolution: {integrity: sha512-Q5Vn3yjTDyCMV50TB6VRIbQNxSE4OmZR86VSbGaNpfUolm0iePBB4KdEEHmxoY5sT2+2DIvXW0rvMDP2nHZ4Mg==}
 
@@ -2095,6 +2110,9 @@ packages:
 
   '@types/gensync@1.0.4':
     resolution: {integrity: sha512-C3YYeRQWp2fmq9OryX+FoDy8nXS6scQ7dPptD8LnFDAUNcKWJjXQKDNJD3HVm+kOUsXhTOkpi69vI4EuAr95bA==}
+
+  '@types/gif.js@0.2.5':
+    resolution: {integrity: sha512-OdDQYh9v7td9ztjaooBSqjUBAyAuui2xwDDmQcyRLd6c9T0iWgkebAoCBEdEEBoZG3ekJE/6UnH63Dzq0S3bvw==}
 
   '@types/glob@7.2.0':
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
@@ -2727,6 +2745,9 @@ packages:
   cheerio@1.0.0:
     resolution: {integrity: sha512-quS9HgjQpdaXOvsZz82Oz7uxtXiy6UIsIQcpBj7HRw2M63Skasm9qlDocAM7jNuaxdhpPU7c4kJN+gA5MCu4ww==}
     engines: {node: '>=18.17'}
+
+  chess.js@1.1.0:
+    resolution: {integrity: sha512-IfdeaJnpdU1LddIenp36O7Fz19nIxk3x4cznwo2Qf25T1XSeP85XRBrjWUsSpk1RpDeXdijraoLxXt3PCaudVg==}
 
   chownr@1.1.4:
     resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
@@ -3586,6 +3607,9 @@ packages:
   get-tsconfig@4.10.0:
     resolution: {integrity: sha512-kGzZ3LWWQcGIAmg6iWvXn0ei6WDtV26wzHRMwDSzmAbcXrTEXxHy6IehI6/4eT6VRKyMP1eF1VqwrVUmE/LR7A==}
 
+  gif.js@0.2.0:
+    resolution: {integrity: sha512-bYxCoT8OZKmbxY8RN4qDiYuj4nrQDTzgLRcFVovyona1PTWNePzI4nzOmotnlOFIzTk/ZxAHtv+TfVLiBWj/hw==}
+
   git-hooks-list@3.2.0:
     resolution: {integrity: sha512-ZHG9a1gEhUMX1TvGrLdyWb9kDopCBbTnI8z4JgRMYxsijWipgjSEYoPWqBuIB0DnRnvqlQSEeVmzpeuPm7NdFQ==}
 
@@ -3734,6 +3758,10 @@ packages:
 
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
+
+  html2canvas-pro@1.5.8:
+    resolution: {integrity: sha512-bVGAU7IvhBwBlRAmX6QhekX8lsaxmYoF6zIwf/HNlHscjx+KN8jw/U4PQRYqeEVm9+m13hcS1l5ChJB9/e29Lw==}
+    engines: {node: '>=16.0.0'}
 
   html2canvas@1.4.1:
     resolution: {integrity: sha512-fPU6BHNpsyIhr8yyMpTLLxAbkaK8ArIBcmZIRiBLiDhjeqvXolaEmDGmELFuX9I4xDcaKKcJl+TKZLqruBbmWA==}
@@ -9231,6 +9259,8 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/events@3.0.3': {}
+
   '@types/expect@1.20.4': {}
 
   '@types/filesystem@0.0.36':
@@ -9240,6 +9270,10 @@ snapshots:
   '@types/filewriter@0.0.33': {}
 
   '@types/gensync@1.0.4': {}
+
+  '@types/gif.js@0.2.5':
+    dependencies:
+      '@types/events': 3.0.3
 
   '@types/glob@7.2.0':
     dependencies:
@@ -10071,6 +10105,8 @@ snapshots:
       parse5-parser-stream: 7.1.2
       undici: 6.21.1
       whatwg-mimetype: 4.0.0
+
+  chess.js@1.1.0: {}
 
   chownr@1.1.4: {}
 
@@ -11046,6 +11082,8 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
+  gif.js@0.2.0: {}
+
   git-hooks-list@3.2.0: {}
 
   github-from-package@0.0.0: {}
@@ -11207,6 +11245,11 @@ snapshots:
       lru-cache: 10.4.3
 
   html-escaper@2.0.2: {}
+
+  html2canvas-pro@1.5.8:
+    dependencies:
+      css-line-break: 2.1.0
+      text-segmentation: 1.0.3
 
   html2canvas@1.4.1:
     dependencies:
