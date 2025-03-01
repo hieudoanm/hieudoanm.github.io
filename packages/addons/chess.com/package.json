@@ -1,0 +1,44 @@
+{
+  "name": "@nothing/addons-chess.com",
+  "version": "0.0.1",
+  "description": "Nothing - Addons - chess.com",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.git"
+  },
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "private": true,
+  "packageManager": "pnpm@10.5.2",
+  "scripts": {
+    "prebuild": "pnpm run lint && pnpm run format",
+    "build": "webpack --mode=production",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "format": "prettier --cache --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "9.21.0",
+    "@types/chrome": "0.0.307",
+    "@types/node": "22.13.8",
+    "@webpack-cli/generators": "3.0.7",
+    "copy-webpack-plugin": "13.0.0",
+    "eslint": "9.21.0",
+    "globals": "16.0.0",
+    "prettier": "3.5.2",
+    "ts-loader": "9.5.2",
+    "ts-node": "10.9.2",
+    "typescript": "5.8.2",
+    "typescript-eslint": "8.25.0",
+    "webpack": "5.98.0",
+    "webpack-cli": "6.0.1"
+  },
+  "keywords": [
+    "chess",
+    "chess.com"
+  ],
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/hieudoanm#readme"
+}

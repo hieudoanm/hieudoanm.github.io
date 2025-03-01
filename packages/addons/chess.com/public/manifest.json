@@ -1,0 +1,15 @@
+{
+  "name": "Hide Ratings",
+  "description": "Hide Ratings on chess.com ",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.chess.com/*"],
+      "js": ["index.js"]
+    }
+  ]
+}
