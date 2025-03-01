@@ -48,6 +48,20 @@ const WidgetsPage: NextPage = () => {
       icon: <FaChessKnight className="text-xl md:text-2xl" />,
     },
     {
+      id: 'chess-tools-elo',
+      href: 'chess/tools/elo',
+      name: 'Chess Elo',
+      shortName: 'elo',
+      icon: <FaChessKnight className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'chess-tools-clock',
+      href: 'chess/tools/clock',
+      name: 'Chess Clock',
+      shortName: 'clock',
+      icon: <FaChessKnight className="text-xl md:text-2xl" />,
+    },
+    {
       id: 'chess-variants-chess960',
       href: 'chess/variants/chess960',
       name: 'Chess960',
@@ -58,14 +72,14 @@ const WidgetsPage: NextPage = () => {
       id: 'converter-code-braille',
       href: 'converter/code/braille',
       name: 'Braille',
-      shortName: 'Braille',
+      shortName: 'braille',
       icon: <FaEyeSlash className="text-xl md:text-2xl" />,
     },
     {
       id: 'converter-code-morse',
       href: 'converter/code/morse',
       name: 'Morse',
-      shortName: 'Morse',
+      shortName: 'morse',
       icon: <FaDotCircle className="text-xl md:text-2xl" />,
     },
     {
@@ -149,21 +163,21 @@ const WidgetsPage: NextPage = () => {
       id: 'github-cover',
       href: 'github/cover',
       name: 'GitHub Cover',
-      shortName: 'ghCover',
+      shortName: 'gh.cover',
       icon: <FaGithub className="text-xl md:text-2xl" />,
     },
     {
       id: 'github-languages',
       href: 'github/languages',
       name: 'GitHub Languages',
-      shortName: 'ghLanguages',
+      shortName: 'gh.lang',
       icon: <FaGithub className="text-xl md:text-2xl" />,
     },
     {
       id: 'generate-qrcode',
       href: 'generate/qrcode',
       name: 'QR Code',
-      shortName: 'qrCode',
+      shortName: 'qr.code',
       icon: <FaQrcode className="text-xl md:text-2xl" />,
     },
     {
@@ -177,56 +191,56 @@ const WidgetsPage: NextPage = () => {
       id: 'filter-golden',
       href: 'filter/golden',
       name: 'Filter - Golden',
-      shortName: 'Golden',
+      shortName: 'golden',
       icon: <FaCamera className="text-xl md:text-2xl" />,
     },
     {
       id: 'filter-grayscale',
       href: 'filter/grayscale',
       name: 'Filter - Grayscale',
-      shortName: 'Grayscale',
+      shortName: 'grayscale',
       icon: <FaCamera className="text-xl md:text-2xl" />,
     },
     {
       id: 'list-chemistry',
       href: 'list/chemistry',
       name: 'Chemistry',
-      shortName: 'Chemistry',
+      shortName: 'chemistry',
       icon: <FaFlask className="text-xl md:text-2xl" />,
     },
     {
       id: 'list-countries',
       href: 'list/countries',
       name: 'Countries',
-      shortName: 'Countries',
+      shortName: 'countries',
       icon: <FaFlag className="text-xl md:text-2xl" />,
     },
     {
       id: 'ocr',
       href: 'ocr',
       name: 'OCR',
-      shortName: 'OCR',
+      shortName: 'ocr',
       icon: <FaEye className="text-xl md:text-2xl" />,
     },
     {
       id: 'resolution',
       href: 'resolution',
       name: 'Resolution',
-      shortName: 'Resolution',
+      shortName: 'resolution',
       icon: <FaRulerCombined className="text-xl md:text-2xl" />,
     },
     {
       id: 'status',
       href: 'status',
       name: 'Status',
-      shortName: 'Status',
+      shortName: 'status',
       icon: <FaLightbulb className="text-xl md:text-2xl" />,
     },
     {
       id: 'telegram-webhook',
       href: 'telegram/webhook',
       name: 'Telegram Webhook',
-      shortName: 'TLG Webhook',
+      shortName: 't.webhook',
       icon: <FaTelegram className="text-xl md:text-2xl" />,
     },
   ];
@@ -234,7 +248,7 @@ const WidgetsPage: NextPage = () => {
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-4 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-4 md:gap-8">
+        <div className="grid h-full grid-cols-4 grid-rows-8 gap-4 md:grid-cols-8 md:grid-rows-4 md:gap-8">
           {apps.map(
             ({ id = '', href = '', name = '', shortName = '', icon }) => {
               return (
