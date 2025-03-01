@@ -1,7 +1,7 @@
 {
-  "name": "@nothing/addons-focus.io",
+  "name": "@nothing/extensions-focus.io",
   "version": "0.0.1",
-  "description": "Nothing - Addons - Focus.io",
+  "description": "Nothing - Extensions - Focus.io",
   "main": "dist/index.js",
   "repository": "git@github.com:hieudoanm/hieudoanm.git",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",

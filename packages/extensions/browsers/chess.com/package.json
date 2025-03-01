@@ -1,7 +1,7 @@
 {
-  "name": "@nothing/addons-chess.com",
+  "name": "@nothing/extensions-chess.com",
   "version": "0.0.1",
-  "description": "Nothing - Addons - chess.com",
+  "description": "Nothing - Extensions - chess.com",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
