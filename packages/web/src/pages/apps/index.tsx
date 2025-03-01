@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { FaDotCircle } from 'react-icons/fa';
 import {
   FaCamera,
+  FaChessKnight,
   FaEye,
   FaEyeSlash,
   FaFlag,
@@ -32,6 +33,13 @@ type NothingApp = {
 
 const WidgetsPage: NextPage = () => {
   const apps: NothingApp[] = [
+    {
+      id: 'chess-variants-chess960',
+      href: 'chess/variants/chess960',
+      name: 'Chess960',
+      shortName: 'chess960',
+      icon: <FaChessKnight className="text-xl md:text-2xl" />,
+    },
     {
       id: 'convert-code-braille',
       href: 'convert/code/braille',
