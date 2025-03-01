@@ -1,0 +1,4 @@
+
+fastapi==0.115.10
+stockfish==3.28.0
+uvicorn==0.34.0
