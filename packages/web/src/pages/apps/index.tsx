@@ -85,17 +85,10 @@ const AppsPage: NextPage = () => {
       icon: <FaTable className="text-xl md:text-2xl" />,
     },
     {
-      id: 'converter-data-json-csv',
-      href: 'converter/data/json/csv',
-      name: 'JSON to CSV',
-      shortName: 'json2csv',
-      icon: <FaJs className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-data-json-yaml',
-      href: 'converter/data/json/yaml',
-      name: 'JSON to YAML',
-      shortName: 'json2yaml',
+      id: 'converter-data-json',
+      href: 'converter/data/json',
+      name: 'JSON',
+      shortName: 'json',
       icon: <FaJs className="text-xl md:text-2xl" />,
     },
     {
@@ -134,17 +127,10 @@ const AppsPage: NextPage = () => {
       icon: <FaU className="text-xl md:text-2xl" />,
     },
     {
-      id: 'github-cover',
-      href: 'github/cover',
-      name: 'GitHub Cover',
-      shortName: 'gh.cover',
-      icon: <FaGithub className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'github-languages',
-      href: 'github/languages',
-      name: 'GitHub Languages',
-      shortName: 'gh.languages',
+      id: 'github',
+      href: 'github',
+      name: 'GitHub',
+      shortName: 'gh',
       icon: <FaGithub className="text-xl md:text-2xl" />,
     },
     {
@@ -237,7 +223,7 @@ const AppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-4 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-4 md:gap-8">
+        <div className="grid h-full grow grid-cols-4 grid-rows-6 gap-4 md:grid-cols-6 md:grid-rows-4 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''
@@ -256,7 +242,9 @@ const AppsPage: NextPage = () => {
                         {icon}
                       </div>
                       <p className="w-full truncate text-center text-xs font-semibold md:text-sm">
-                        <span className="inline md:hidden">{shortName}</span>
+                        <span className="inline lowercase md:hidden">
+                          {shortName}
+                        </span>
                         <span className="hidden md:inline">{name}</span>
                       </p>
                     </Link>
