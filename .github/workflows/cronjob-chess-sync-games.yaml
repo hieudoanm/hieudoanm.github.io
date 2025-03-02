@@ -1,0 +1,37 @@
+name: Chess - Sync Games
+
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'packages/web/import/games.ts'
+  schedule:
+    - cron: '0 0 * * 0' # "At 00:00 on Sunday."
+
+jobs:
+  sync:
+    name: Sync Games
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '10.5.2'
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+      - name: Install Dependencies
+        run: pnpm install
+        working-directory: packages/web
+      - name: Set Up Prisma
+        run: pnpm prisma format && pnpm prisma generate
+        working-directory: packages/web
+      - name: Sync Games
+        run: pnpm ts-node ./scripts/ts/chess/import/games.ts
+        working-directory: packages/web
+        env:
+          POSTGRESQL_URL: ${{ secrets.POSTGRESQL_URL }}
