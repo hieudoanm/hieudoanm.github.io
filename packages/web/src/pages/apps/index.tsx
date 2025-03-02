@@ -1,16 +1,19 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { JSX, useState } from 'react';
-import { FaDotCircle } from 'react-icons/fa';
 import {
+  FaBook,
   FaCamera,
   FaChessKnight,
+  FaCircleDot,
+  FaClock,
   FaEye,
   FaEyeSlash,
   FaFlag,
   FaFlask,
   FaGithub,
   FaImages,
+  FaInstagram,
   FaJs,
   FaLightbulb,
   FaMarkdown,
@@ -43,6 +46,13 @@ const AppsPage: NextPage = () => {
       icon: <FaChessKnight className="text-xl md:text-2xl" />,
     },
     {
+      id: 'clock',
+      href: 'clock',
+      name: 'Clock',
+      shortName: 'clock',
+      icon: <FaClock className="text-xl md:text-2xl" />,
+    },
+    {
       id: 'converter-code-braille',
       href: 'converter/code/braille',
       name: 'Braille',
@@ -54,34 +64,13 @@ const AppsPage: NextPage = () => {
       href: 'converter/code/morse',
       name: 'Morse',
       shortName: 'morse',
-      icon: <FaDotCircle className="text-xl md:text-2xl" />,
+      icon: <FaCircleDot className="text-xl md:text-2xl" />,
     },
     {
-      id: 'converter-data-csv-html',
-      href: 'converter/data/csv/html',
-      name: 'CSV to HTML',
-      shortName: 'csv2html',
-      icon: <FaTable className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-data-csv-json',
-      href: 'converter/data/csv/json',
-      name: 'CSV to JSON',
-      shortName: 'csv2json',
-      icon: <FaTable className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-data-csv-md',
-      href: 'converter/data/csv/md',
-      name: 'CSV to MD',
-      shortName: 'csv2md',
-      icon: <FaTable className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-data-csv-sql',
-      href: 'converter/data/csv/sql',
-      name: 'CSV to SQL',
-      shortName: 'csv2sql',
+      id: 'converter-data-csv',
+      href: 'converter/data/csv',
+      name: 'CSV',
+      shortName: 'csv',
       icon: <FaTable className="text-xl md:text-2xl" />,
     },
     {
@@ -162,6 +151,13 @@ const AppsPage: NextPage = () => {
       icon: <FaCamera className="text-xl md:text-2xl" />,
     },
     {
+      id: 'instagram',
+      href: 'instagram',
+      name: 'Instagram',
+      shortName: 'insta',
+      icon: <FaInstagram className="text-xl md:text-2xl" />,
+    },
+    {
       id: 'list-chemistry',
       href: 'list/chemistry',
       name: 'Chemistry',
@@ -202,6 +198,13 @@ const AppsPage: NextPage = () => {
       name: 'Telegram Webhook',
       shortName: 'tele.hook',
       icon: <FaTelegram className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'words',
+      href: 'words',
+      name: 'Words',
+      shortName: 'words',
+      icon: <FaBook className="text-xl md:text-2xl" />,
     },
   ];
 
