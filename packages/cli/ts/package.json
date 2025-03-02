@@ -23,7 +23,7 @@
     "@types/node": "22.13.8",
     "eslint": "9.21.0",
     "globals": "16.0.0",
-    "oclif": "4.17.32",
+    "oclif": "4.17.34",
     "prettier": "3.5.2",
     "ts-node": "10.9.2",
     "typescript": "5.8.2",
