@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9902],{47788:(_,s,e)=>{"use strict";e.r(s),e.d(s,{default:()=>r});var n=e(33736);let r=()=>(0,n.jsx)(n.Fragment,{})},78164:(_,s,e)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/apps/words",function(){return e(47788)}])}},_=>{var s=s=>_(_.s=s);_.O(0,[636,6593,8792],()=>s(78164)),_N_E=_.O()}]);

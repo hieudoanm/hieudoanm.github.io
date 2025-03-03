@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[929],{46660:(_,s,a)=>{"use strict";a.r(s),a.d(s,{default:()=>n});var e=a(33736);let n=()=>(0,e.jsx)(e.Fragment,{})},74115:(_,s,a)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/apps/instagram",function(){return a(46660)}])}},_=>{var s=s=>_(_.s=s);_.O(0,[636,6593,8792],()=>s(74115)),_N_E=_.O()}]);
