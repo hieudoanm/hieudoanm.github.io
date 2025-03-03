@@ -12,8 +12,7 @@
     "format": "prettier --cache --write .",
     "build": "rimraf dist && tsc",
     "dev": "nodemon",
-    "start": "node ./dist/server.js",
-    "prepare": "puppeteer browsers install firefox"
+    "start": "node ./dist/server.js"
   },
   "dependencies": {
     "puppeteer": "24.3.0"
