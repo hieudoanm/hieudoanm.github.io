@@ -126,7 +126,7 @@ const server = createServer((request, response) => {
   }
 });
 
-const PORT: number = parseInt(process.env.PORT ?? '8080') ?? 8080;
+const PORT: number = parseInt(process.env.PORT ?? '10000') ?? 10000;
 
 // starts a simple http server locally on port 3000
 server.listen(PORT, '127.0.0.1', () => {
