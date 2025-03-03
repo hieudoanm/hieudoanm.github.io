@@ -1,2 +1,2 @@
 update:
-	pnpm update --latest
+	pnpm update --latest --recursive
