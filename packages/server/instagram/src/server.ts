@@ -12,29 +12,33 @@ export const getImages = async (
     executablePath: undefined,
     supportedBrowser: undefined,
   }
-): Promise<{ browser: Browser; images: string[] }> => {
+): Promise<{ images: string[] }> => {
   // Open Page
+  console.info('getImages');
   const browser: Browser = await puppeteer.launch({
     browser: supportedBrowser,
     executablePath,
     headless: true,
   });
+  console.info('puppeteer.launch');
   const page = await browser.newPage();
+  console.info('browser.newPage');
   const [url] = instagramURL.split('?');
   const embedURL: string = url.at(-1) === '/' ? `${url}embed` : `${url}/embed`;
-  console.info(embedURL);
+  console.info('embedURL', embedURL);
   await page.goto(embedURL, { waitUntil: 'networkidle2', timeout: 60000 });
+  console.info('page.goto');
   // Check Next Button
   let buttonExists: boolean =
     (await page.$('button[aria-label="Next"]')) !== null;
-  console.info('Check if button exists', buttonExists);
+  console.info('button.exists', buttonExists);
   while (buttonExists) {
     await page.waitForSelector('[aria-label="Next"]', { visible: true });
     await page.click('[aria-label="Next"]');
     buttonExists = (await page.$('button[aria-label="Next"]')) !== null;
-    console.info('Check if button exists', buttonExists);
+    console.info('button.exists', buttonExists);
   }
-  console.info('Done checking if button exists');
+  console.info('button.exists.complete');
   // Get all Images
   const images = await page.evaluate(() => {
     const imageElements: NodeListOf<HTMLImageElement> =
@@ -46,8 +50,9 @@ export const getImages = async (
     console.log();
     return images;
   });
-  console.info('images');
-  return { browser, images };
+  console.info('images', images);
+  await browser.close();
+  return { images };
 };
 
 const imageUrlToBase64 = async (imageUrl: string) => {
@@ -96,18 +101,18 @@ const server = createServer((request, response) => {
         console.log('Received JSON:', jsonData);
         const { url = '' } = jsonData;
 
-        const { browser, images: imageUrls = [] } = await getImages(url, {
+        const { images: imageUrls = [] } = await getImages(url, {
           supportedBrowser: 'firefox',
           executablePath: FIREFOX_EXECUTABLE_PATH,
         });
-        await browser.close();
-        console.log('imageUrls', imageUrls);
+        console.log('image.urls', imageUrls);
 
         const images = [];
         for (const imageUrl of imageUrls) {
           const image = await imageUrlToBase64(imageUrl);
           images.push(image);
         }
+        console.log('images', images);
 
         response.writeHead(200, {
           'Content-Type': 'application/json',
