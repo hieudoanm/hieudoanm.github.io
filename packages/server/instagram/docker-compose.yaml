@@ -1,5 +1,6 @@
 services:
-  innstagram-download:
+  nothing-instagram:
+    container_name: nothing-instagram
     build: ./Dockerfile
     ports:
       - '10000:10000'

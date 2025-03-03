@@ -1,4 +1,4 @@
-@host = http://127.0.0.1:8000
+@host = http://localhost:10000
 
 ### Health Check
 GET {{host}}/health HTTP/1.1
