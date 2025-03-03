@@ -4,8 +4,21 @@ FROM node:22.14.0
 # Set working directory inside the container
 WORKDIR /app
 
-RUN apt-get update && \
-  apt-get install -y firefox-esr \
+# Install Firefox for Puppeteer
+RUN apt-get update && apt-get install -y \
+  firefox-esr \
+  libasound2 \
+  libcups2 \
+  libgbm-dev \
+  libnss3 \
+  libpango1.0-0 \
+  libx11-xcb1 \
+  libxcomposite1 \
+  libxcursor1 \
+  libxdamage1 \
+  libxfixes3 \
+  libxi6 \
+  libxrandr2 \
   && rm -rf /var/lib/apt/lists/*
 
 # Copy package.json and package-lock.json (for better caching)
