@@ -20,8 +20,9 @@ RUN apt-get update && apt-get install -y \
   libxi6 \
   libxrandr2 \
   && rm -rf /var/lib/apt/lists/* \
-  && which firefox \
-  && echo "export FIREFOX_EXECUTABLE_PATH=$(which firefox)" >> /etc/environment
+  && which firefox
+
+ENV FIREFOX_EXECUTABLE_PATH="/usr/bin/firefox"
 
 # Copy package.json and package-lock.json (for better caching)
 COPY ./ ./
