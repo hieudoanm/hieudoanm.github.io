@@ -1,9 +1,14 @@
 services:
   innstagram-download:
-    build: .
+    build: ./Dockerfile
     ports:
       - '10000:10000'
     environment:
       # This is optional since your Dockerfile already sets it,
       # but you can override or confirm the value here.
       - FIREFOX_EXECUTABLE_PATH=/usr/bin/firefox
+    deploy:
+      resources:
+        limits:
+          cpus: 0.1
+          memory: 512M

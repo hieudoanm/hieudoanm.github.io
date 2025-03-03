@@ -48,7 +48,6 @@ export const getImages = async (
     for (const imageElement of imageElements) {
       images.push(imageElement.src);
     }
-    console.log();
     return images;
   });
   console.info('images', images);
@@ -97,23 +96,23 @@ const server = createServer((request, response) => {
 
     request.on('end', async () => {
       try {
-        console.log('Received Data:', body);
+        console.info('Received Data:', body);
         const jsonData = JSON.parse(body); // Parse JSON
-        console.log('Received JSON:', jsonData);
+        console.info('Received JSON:', jsonData);
         const { url = '' } = jsonData;
 
         const { images: imageUrls = [] } = await getImages(url, {
           supportedBrowser: 'firefox',
           executablePath: FIREFOX_EXECUTABLE_PATH,
         });
-        console.log('image.urls', imageUrls);
+        console.info('image.urls', imageUrls);
 
         const images = [];
         for (const imageUrl of imageUrls) {
           const image = await imageUrlToBase64(imageUrl);
           images.push(image);
         }
-        console.log('images', images);
+        console.info('images', images);
 
         response.writeHead(200, {
           'Content-Type': 'application/json',
