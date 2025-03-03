@@ -4,7 +4,9 @@ FROM node:22.14.0
 # Set working directory inside the container
 WORKDIR /app
 
-RUN add-apt-repository ppa:mozillateam/ppa && \
+RUN apt-get update && \
+  apt-get install software-properties-common -y && \
+  add-apt-repository ppa:mozillateam/ppa && \
   apt-get update && apt-get install firefox -y && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
