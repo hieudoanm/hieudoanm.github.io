@@ -5,11 +5,8 @@ FROM node:22.14.0
 WORKDIR /app
 
 RUN apt-get update && \
-  apt-get install software-properties-common -y && \
-  add-apt-repository ppa:mozillateam/ppa && \
-  apt-get update && apt-get install firefox -y && \
-  apt-get clean && \
-  rm -rf /var/lib/apt/lists/*
+  apt-get install -y firefox-esr \
+  && rm -rf /var/lib/apt/lists/*
 
 # Copy package.json and package-lock.json (for better caching)
 COPY ./ ./
