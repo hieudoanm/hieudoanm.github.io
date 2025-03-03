@@ -1,7 +1,7 @@
 services:
   nothing-instagram:
     container_name: nothing-instagram
-    build: ./Dockerfile
+    build: .
     ports:
       - '10000:10000'
     environment:

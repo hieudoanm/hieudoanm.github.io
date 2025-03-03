@@ -1,23 +1,20 @@
 import { createServer } from 'node:http';
 import puppeteer, { Browser, SupportedBrowser } from 'puppeteer';
 
-const FIREFOX_EXECUTABLE_PATH = process.env.FIREFOX_EXECUTABLE_PATH;
+const CHROMIUM_EXECUTABLE_PATH = process.env.CHROMIUM_EXECUTABLE_PATH;
 
 export const getImages = async (
   instagramURL: string,
   {
     executablePath,
-    supportedBrowser,
   }: { executablePath?: string; supportedBrowser?: SupportedBrowser } = {
     executablePath: undefined,
-    supportedBrowser: undefined,
   }
 ): Promise<{ images: string[] }> => {
   // Open Page
   console.info('get.images');
   const browser: Browser = await puppeteer.launch({
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    browser: supportedBrowser,
     executablePath,
     headless: true,
   });
@@ -102,8 +99,7 @@ const server = createServer((request, response) => {
         const { url = '' } = jsonData;
 
         const { images: imageUrls = [] } = await getImages(url, {
-          supportedBrowser: 'firefox',
-          executablePath: FIREFOX_EXECUTABLE_PATH,
+          executablePath: CHROMIUM_EXECUTABLE_PATH,
         });
         console.info('image.urls', imageUrls);
 
@@ -138,6 +134,6 @@ const PORT: number = parseInt(process.env.PORT ?? '10000') ?? 10000;
 
 // starts a simple http server locally on port 3000
 server.listen(PORT, '0.0.0.0', () => {
-  console.info(`FIREFOX_EXECUTABLE_PATH=${FIREFOX_EXECUTABLE_PATH}`);
+  console.info(`CHROMIUM_EXECUTABLE_PATH=${CHROMIUM_EXECUTABLE_PATH}`);
   console.info(`Listening on 0.0.0.0:${PORT}`);
 });
