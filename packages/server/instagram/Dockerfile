@@ -20,21 +20,17 @@ RUN apt-get update && apt-get install -y \
   libxi6 \
   libxrandr2 \
   && rm -rf /var/lib/apt/lists/* \
-  && which firefox
+  && which firefox \
+  && firefox --version
+
 
 ENV FIREFOX_EXECUTABLE_PATH="/usr/bin/firefox"
 
 # Copy package.json and package-lock.json (for better caching)
-COPY ./ ./
-
-# Install dependencies using pnpm
-RUN corepack enable && pnpm install
-
-# Copy the rest of the application files
 COPY . .
 
-# Build Production
-RUN pnpm run build
+# Install dependencies using pnpm
+RUN corepack enable && pnpm install && pnpm run build
 
 # Expose the server port
 EXPOSE 10000

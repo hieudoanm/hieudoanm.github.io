@@ -10,7 +10,8 @@
   "scripts": {
     "lint": "eslint --fix .",
     "format": "prettier --cache --write .",
-    "build": "rimraf dist && tsc",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
     "dev": "nodemon",
     "start": "node ./dist/server.js"
   },
