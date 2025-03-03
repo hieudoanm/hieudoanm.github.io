@@ -1,6 +1,6 @@
+import { NothingApp } from '@nothing/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { JSX } from 'react';
 import {
   FaBatteryFull,
   FaBitcoin,
@@ -36,205 +36,230 @@ import {
   FaYoutube,
 } from 'react-icons/fa6';
 
-type NothingApp = {
-  id: string;
-  href: string;
-  name: string;
-  icon: JSX.Element;
-};
-
 const WidgetsPage: NextPage = () => {
   const apps: NothingApp[] = [
     {
       id: 'battery',
       href: 'battery',
       name: 'battery',
+      shortName: '',
       icon: <FaBatteryFull className="text-2xl" />,
     },
     {
       id: 'browser',
       href: 'browser',
       name: 'browser',
+      shortName: '',
       icon: <FaFirefoxBrowser className="text-2xl" />,
     },
     {
       id: 'calculator',
       href: 'calculator',
       name: 'calculator',
+      shortName: '',
       icon: <FaCalculator className="text-2xl" />,
     },
     {
       id: 'calendar',
       href: 'calendar',
       name: 'calendar',
+      shortName: '',
       icon: <FaCalendarDays className="text-2xl" />,
     },
     {
       id: 'camera',
       href: 'camera',
       name: 'camera',
+      shortName: '',
       icon: <FaCamera className="mx-auto text-2xl" />,
     },
     {
       id: 'clock',
       href: 'clock',
       name: 'clock',
+      shortName: '',
       icon: <FaClock className="text-2xl" />,
     },
     {
       id: 'colors',
       href: 'colors',
       name: 'colors',
+      shortName: '',
       icon: <FaPalette className="text-2xl" />,
     },
     {
       id: 'compass',
       href: 'compass',
       name: 'compass',
+      shortName: '',
       icon: <FaCompass className="text-2xl" />,
     },
     {
       id: 'crypto',
       href: 'crypto',
       name: 'crypto',
+      shortName: '',
       icon: <FaBitcoin className="text-2xl" />,
     },
     {
       id: 'devices',
       href: 'devices',
       name: 'devices',
+      shortName: '',
       icon: <FaMobile className="text-2xl" />,
     },
     {
       id: 'files',
       href: 'files',
       name: 'files',
+      shortName: '',
       icon: <FaFileZipper className="text-2xl" />,
     },
     {
       id: 'fitness',
       href: 'fitness',
       name: 'fitness',
+      shortName: '',
       icon: <FaHeart className="text-2xl" />,
     },
     {
       id: 'games',
       href: 'games',
       name: 'games',
+      shortName: '',
       icon: <FaGamepad className="text-2xl" />,
     },
     {
       id: 'health',
       href: 'health',
       name: 'health',
+      shortName: '',
       icon: <FaTemperatureFull className="text-2xl" />,
     },
     {
       id: 'home',
       href: 'home',
       name: 'home',
+      shortName: '',
       icon: <FaHouseChimney className="text-2xl" />,
     },
     {
       id: 'mail',
       href: 'mail',
       name: 'mail',
+      shortName: '',
       icon: <FaEnvelopesBulk className="text-2xl" />,
     },
     {
       id: 'maps',
       href: 'maps',
       name: 'maps',
+      shortName: '',
       icon: <FaMapLocationDot className="text-2xl" />,
     },
     {
       id: 'messages',
       href: 'messages',
       name: 'messages',
+      shortName: '',
       icon: <FaMessage className="text-2xl" />,
     },
     {
       id: 'music',
       href: 'music',
       name: 'music',
+      shortName: '',
       icon: <FaMusic className="text-2xl" />,
     },
     {
       id: 'news',
       href: 'news',
       name: 'news',
+      shortName: '',
       icon: <FaNewspaper className="text-2xl" />,
     },
     {
       id: 'notes',
       href: 'notes',
       name: 'notes',
+      shortName: '',
       icon: <FaFileLines className="text-2xl" />,
     },
     {
       id: 'phone',
       href: 'phone',
       name: 'phone',
+      shortName: '',
       icon: <FaPhone className="text-2xl" />,
     },
     {
       id: 'photos',
       href: 'photos',
       name: 'photos',
+      shortName: '',
       icon: <FaPhotoFilm className="text-2xl" />,
     },
     {
       id: 'settings',
       href: 'settings',
       name: 'settings',
+      shortName: '',
       icon: <FaGear className="text-2xl" />,
     },
     {
       id: 'sports',
       href: 'sports',
       name: 'sports',
+      shortName: '',
       icon: <FaFutbol className="text-2xl" />,
     },
     {
       id: 'stocks',
       href: 'stocks',
       name: 'stocks',
+      shortName: '',
       icon: <FaChartLine className="text-2xl" />,
     },
     {
       id: 'tasks',
       href: 'tasks',
       name: 'tasks',
+      shortName: '',
       icon: <FaRectangleList className="text-2xl" />,
     },
     {
       id: 'translate',
       href: 'translate',
       name: 'translate',
+      shortName: '',
       icon: <FaLanguage className="text-2xl" />,
     },
     {
       id: 'transportation',
       href: 'transportation',
       name: 'transportation',
+      shortName: '',
       icon: <FaBus className="text-2xl" />,
     },
     {
       id: 'videos',
       href: 'videos',
       name: 'videos',
+      shortName: '',
       icon: <FaYoutube className="text-2xl" />,
     },
     {
       id: 'wallet',
       href: 'wallet',
       name: 'wallet',
+      shortName: '',
       icon: <FaWallet className="text-2xl" />,
     },
     {
       id: 'weather',
       href: 'weather',
       name: 'weather',
+      shortName: '',
       icon: <FaCloudSunRain className="text-2xl" />,
     },
   ];

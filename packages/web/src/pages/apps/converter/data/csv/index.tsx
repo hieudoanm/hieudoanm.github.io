@@ -1,15 +1,8 @@
+import { NothingApp } from '@nothing/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { JSX, useState } from 'react';
+import { useState } from 'react';
 import { FaDatabase, FaHtml5, FaJs, FaMarkdown } from 'react-icons/fa6';
-
-type NothingApp = {
-  id: string;
-  href: string;
-  name: string;
-  shortName: string;
-  icon: JSX.Element;
-};
 
 const CsvAppsPage: NextPage = () => {
   const [{ search }, setState] = useState<{ search: string }>({ search: '' });

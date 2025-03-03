@@ -1,15 +1,7 @@
+import { NothingApp } from '@nothing/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { JSX } from 'react';
 import { FaTable, FaY } from 'react-icons/fa6';
-
-type NothingApp = {
-  id: string;
-  href: string;
-  name: string;
-  shortName: string;
-  icon: JSX.Element;
-};
 
 const JsonAppsPage: NextPage = () => {
   const apps: NothingApp[] = [
