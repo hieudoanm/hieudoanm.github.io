@@ -16,10 +16,10 @@ export const getImages = async (
   // Open Page
   console.info('get.images');
   const browser: Browser = await puppeteer.launch({
+    args: ['--no-sandbox'],
     browser: supportedBrowser,
     executablePath,
     headless: true,
-    dumpio: true,
   });
   console.info('puppeteer.launch');
   const page = await browser.newPage();
