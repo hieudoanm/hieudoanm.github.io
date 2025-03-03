@@ -1,5 +1,7 @@
+@host = https://nothing-instagram.onrender.com
+
 ## Download Images from Instagram Post URL
-POST https://nothing-instagram-download.onrender.com/download
+POST {{host}}/download
 Content-Type: application/json
 
 {

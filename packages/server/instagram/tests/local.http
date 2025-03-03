@@ -1,5 +1,7 @@
+@host = http://localhost:10000
+
 ## Download Images from Instagram Post URL
-POST http://localhost:10000/download
+POST {{host}}/download
 Content-Type: application/json
 
 {
