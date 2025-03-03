@@ -17,7 +17,7 @@ COPY . .
 RUN pnpm run build
 
 # Expose the server port
-EXPOSE 8080
+EXPOSE 10000
 
 # Command to start the server
 CMD ["pnpm", "start"]
