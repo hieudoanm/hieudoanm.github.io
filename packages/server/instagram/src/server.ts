@@ -1,6 +1,8 @@
 import { createServer } from 'node:http';
 import puppeteer, { Browser, SupportedBrowser } from 'puppeteer';
 
+const FIREFOX_EXECUTABLE_PATH = process.env.FIREFOX_EXECUTABLE_PATH;
+
 export const getImages = async (
   instagramURL: string,
   {
@@ -96,6 +98,7 @@ const server = createServer((request, response) => {
 
         const { browser, images: imageUrls = [] } = await getImages(url, {
           supportedBrowser: 'firefox',
+          executablePath: FIREFOX_EXECUTABLE_PATH,
         });
         await browser.close();
         console.log('imageUrls', imageUrls);

@@ -4,7 +4,7 @@ FROM node:22.14.0
 # Set working directory inside the container
 WORKDIR /app
 
-# Install Firefox for Puppeteer
+# Install Firefox for Puppeteer and Dynamically set FIREFOX_EXECUTABLE_PATH
 RUN apt-get update && apt-get install -y \
   firefox-esr \
   libasound2 \
@@ -19,7 +19,9 @@ RUN apt-get update && apt-get install -y \
   libxfixes3 \
   libxi6 \
   libxrandr2 \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
+  && which firefox \
+  && echo "export FIREFOX_EXECUTABLE_PATH=$(which firefox)" >> /etc/environment
 
 # Copy package.json and package-lock.json (for better caching)
 COPY ./ ./
