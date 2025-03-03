@@ -14,11 +14,12 @@ export const getImages = async (
   }
 ): Promise<{ images: string[] }> => {
   // Open Page
-  console.info('getImages');
+  console.info('get.images');
   const browser: Browser = await puppeteer.launch({
     browser: supportedBrowser,
     executablePath,
     headless: true,
+    dumpio: true,
   });
   console.info('puppeteer.launch');
   const page = await browser.newPage();
