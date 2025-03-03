@@ -4,6 +4,8 @@ FROM node:22.14.0
 # Set working directory inside the container
 WORKDIR /app
 
+RUN apt-get update && apt-get install packagekit-gtk3-module -y && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # Copy package.json and package-lock.json (for better caching)
 COPY ./ ./
 
