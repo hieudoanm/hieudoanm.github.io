@@ -2,7 +2,7 @@ import { Chessboard } from '@nothing/components/Chessboard';
 import chess960 from '@nothing/json/chess/chess960.json';
 import { addZero, range } from '@nothing/utils/number';
 import { NextPage } from 'next';
-import { ChangeEvent, FC, useState } from 'react';
+import { ChangeEvent, FC, useEffect, useState } from 'react';
 import {
   FaChessBishop,
   FaChessKing,
@@ -85,6 +85,31 @@ const Chess960Page: NextPage = () => {
     positionString: initialPositionString,
   });
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.code === 'Space' || event.key === ' ') {
+        randomisePosition();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  const randomisePosition = () => {
+    const randomPositionNumber = Math.floor(Math.random() * 960) + 1;
+    const positionString: string = chess960[randomPositionNumber - 1];
+    setState((previous) => ({
+      ...previous,
+      positionNumber: randomPositionNumber,
+      positionString,
+      fen: `${positionString.toLowerCase()}/pppppppp/8/8/8/8/PPPPPPPP/${positionString.toUpperCase()} w KQkq - 0 1`,
+    }));
+  };
+
   return (
     <div className="container mx-auto px-8">
       <div className="flex h-full flex-col items-center justify-center gap-y-4 pt-4 md:gap-y-8 md:pt-8">
@@ -121,21 +146,14 @@ const Chess960Page: NextPage = () => {
           <button
             type="button"
             className="flex w-full items-center justify-between rounded bg-gray-900 p-2 text-red-500 shadow md:p-4"
-            onClick={() => {
-              const randomPositionNumber = Math.floor(Math.random() * 960) + 1;
-              const positionString: string = chess960[randomPositionNumber - 1];
-              setState((previous) => ({
-                ...previous,
-                positionNumber: randomPositionNumber,
-                positionString,
-                fen: `${positionString.toLowerCase()}/pppppppp/8/8/8/8/PPPPPPPP/${positionString.toUpperCase()} w KQkq - 0 1`,
-              }));
-            }}>
+            onClick={randomisePosition}>
             <Pieces position={positionString} />
           </button>
-          <div className="aspect-square w-full overflow-hidden rounded">
+          <button
+            className="aspect-square w-full overflow-hidden rounded"
+            onClick={randomisePosition}>
             <Chessboard id="board" position={fen} />
-          </div>
+          </button>
         </div>
       </div>
       <button
