@@ -1,0 +1,17 @@
+{
+  "name": "@broca/backend",
+  "version": "0.0.1",
+  "description": "Broca Backend",
+  "scripts": {
+    "format": "black .",
+    "lint": "ruff check",
+    "dev": "uvicorn main:app --host 0.0.0.0 --port 8000",
+    "generate": "python3 -m pigar generate"
+  },
+  "keywords": [
+    "broca",
+    "backend"
+  ],
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0"
+}

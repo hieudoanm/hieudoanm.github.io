@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import {
   FaBook,
-  FaCamera,
   FaChessKnight,
   FaCircleDot,
   FaClock,
@@ -19,6 +18,7 @@ import {
   FaLightbulb,
   FaMarkdown,
   FaQrcode,
+  FaRobot,
   FaRulerCombined,
   FaSquareJs,
   FaTable,
@@ -109,6 +109,13 @@ const AppsPage: NextPage = () => {
       icon: <FaU className="text-xl md:text-2xl" />,
     },
     {
+      id: 'gen.ai',
+      href: 'gen.ai',
+      name: 'GenAI',
+      shortName: 'gen.ai',
+      icon: <FaRobot className="text-xl md:text-2xl" />,
+    },
+    {
       id: 'github',
       href: 'github',
       name: 'GitHub',
@@ -116,32 +123,11 @@ const AppsPage: NextPage = () => {
       icon: <FaGithub className="text-xl md:text-2xl" />,
     },
     {
-      id: 'images-converter-png2ico',
-      href: 'images/converter/png2ico',
-      name: 'PNG to ICO',
-      shortName: 'png2ico',
+      id: 'images',
+      href: 'images',
+      name: 'Images',
+      shortName: 'images',
       icon: <FaImages className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'images-converter-svg2png',
-      href: 'images/converter/svg2png',
-      name: 'SVG to PNG',
-      shortName: 'svg2png',
-      icon: <FaImages className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'images-filter-golden',
-      href: 'images/filter/golden',
-      name: 'Filter - Golden',
-      shortName: 'golden',
-      icon: <FaCamera className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'images-filter-grayscale',
-      href: 'images/filter/grayscale',
-      name: 'Filter - Grayscale',
-      shortName: 'grayscale',
-      icon: <FaCamera className="text-xl md:text-2xl" />,
     },
     {
       id: 'instagram',
