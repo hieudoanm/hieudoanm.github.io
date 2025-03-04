@@ -17,7 +17,7 @@ type Word = {
 const EnglishWordsPage: NextPage = () => {
   const [word, setWord] = useState('example');
 
-  const input: string = `https://raw.githubusercontent.com/hieudoanm/words/refs/heads/master/data/languages/english/words/${encodeURI(word)}.json`;
+  const input: string = `https://raw.githubusercontent.com/hieudoanm/nothing/refs/heads/master/data/languages/english/words/${encodeURI(word)}.json`;
   const { isPending, error, data, refetch } = useQuery({
     queryKey: [`word-${encodeURI(word)}`],
     queryFn: () => fetch(input).then((res) => res.json()),
@@ -34,20 +34,13 @@ const EnglishWordsPage: NextPage = () => {
                 WordsAPI
               </Link>
             </h1>
-            <div className="flex items-center gap-x-2">
-              <p>
-                <Link href="https://github.com/hieudoanm/words" target="_blank">
-                  GitHub
-                </Link>
-              </p>
-              <p>
-                <Link
-                  href="https://raw.githubusercontent.com/hieudoanm/words/refs/heads/master/data/english/words.jsonl"
-                  target="_blank">
-                  Download
-                </Link>
-              </p>
-            </div>
+            <p>
+              <Link
+                href="https://raw.githubusercontent.com/hieudoanm/nothing/refs/heads/master/data/english/words.jsonl"
+                target="_blank">
+                Download
+              </Link>
+            </p>
           </div>
         </div>
       </nav>
