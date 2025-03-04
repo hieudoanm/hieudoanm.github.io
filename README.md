@@ -1,180 +1,66 @@
-# Nothing
-
-## Table of Content
-
-- [Nothing](#nothing)
-  - [Table of Content](#table-of-content)
-  - [Home](#home)
-    - [Desktop](#desktop)
-    - [Mobile](#mobile)
-  - [Widgets](#widgets)
-    - [All](#all)
-    - [Battery](#battery)
-    - [Browser](#browser)
-    - [Calculator](#calculator)
-    - [Calendar](#calendar)
-    - [Camera](#camera)
-    - [Clock](#clock)
-    - [Colors](#colors)
-    - [Compass](#compass)
-    - [Crypto](#crypto)
-    - [Devices](#devices)
-    - [Files](#files)
-    - [Fitness](#fitness)
-    - [Games](#games)
-    - [Health](#health)
-    - [Home](#home-1)
-    - [Mail](#mail)
-    - [Maps](#maps)
-    - [Messages](#messages)
-    - [Music](#music)
-    - [News](#news)
-    - [Notes](#notes)
-    - [Phone](#phone)
-    - [Photos](#photos)
-    - [Settings](#settings)
-    - [Sports](#sports)
-    - [Stocks](#stocks)
-    - [Tasks](#tasks)
-    - [Translate](#translate)
-    - [Videos](#videos)
-    - [Wallet](#wallet)
-    - [Weather](#weather)
-
-## [Home](https://hieudoanm.github.io/nothing/)
-
-### Desktop
-
-![desktop](./images/home/desktop.png)
-
-### Mobile
-
-![mobile](./images/home/mobile.png)
-
-## Widgets
-
-### [All](https://hieudoanm.github.io/nothing/widgets/all)
-
-![all](./images/widgets/all.png)
-
-### [Battery](https://hieudoanm.github.io/nothing/widgets/battery/)
-
-![battery](./images/widgets/battery.png)
-
-### [Browser](https://hieudoanm.github.io/nothing/widgets/browser/)
-
-![browser](./images/widgets/browser.png)
-
-### [Calculator](https://hieudoanm.github.io/nothing/widgets/calculator/)
-
-![calculator](./images/widgets/calculator.png)
-
-### [Calendar](https://hieudoanm.github.io/nothing/widgets/clock/)
-
-![calendar](./images/widgets/calendar.png)
-
-### [Camera](https://hieudoanm.github.io/nothing/widgets/camera/)
-
-### [Clock](https://hieudoanm.github.io/nothing/widgets/clock/)
-
-![clock](./images/widgets/clock.png)
-
-### [Colors](https://hieudoanm.github.io/nothing/widgets/colors/)
-
-![colors](./images/widgets/colors.png)
-
-### [Compass](https://hieudoanm.github.io/nothing/widgets/compass/)
-
-![compass](./images/widgets/compass.png)
-
-### [Crypto](https://hieudoanm.github.io/nothing/widgets/crypto/)
-
-![crypto](./images/widgets/crypto.png)
-
-### [Devices](https://hieudoanm.github.io/nothing/widgets/devices/)
-
-![devices](./images/widgets/devices.png)
-
-### [Files](https://hieudoanm.github.io/nothing/widgets/files/)
-
-![files](./images/widgets/files.png)
-
-### [Fitness](https://hieudoanm.github.io/nothing/widgets/fitness/)
-
-![fitness](./images/widgets/fitness.png)
-
-### [Games](https://hieudoanm.github.io/nothing/widgets/games/)
-
-![games](./images/widgets/games.png)
-
-### [Health](https://hieudoanm.github.io/nothing/widgets/health/)
-
-![health](./images/widgets/health.png)
-
-### [Home](https://hieudoanm.github.io/nothing/widgets/home/)
-
-![home](./images/widgets/home.png)
-
-### [Mail](https://hieudoanm.github.io/nothing/widgets/mail/)
-
-![mail](./images/widgets/mail.png)
-
-### [Maps](https://hieudoanm.github.io/nothing/widgets/maps/)
-
-![maps](./images/widgets/maps.png)
-
-### [Messages](https://hieudoanm.github.io/nothing/widgets/messages/)
-
-![messages](./images/widgets/messages.png)
-
-### [Music](https://hieudoanm.github.io/nothing/widgets/music/)
-
-![music](./images/widgets/music.png)
-
-### [News](https://hieudoanm.github.io/nothing/widgets/news/)
-
-![news](./images/widgets/news.png)
-
-### [Notes](https://hieudoanm.github.io/nothing/widgets/notes/)
-
-![notes](./images/widgets/notes.png)
-
-### [Phone](https://hieudoanm.github.io/nothing/widgets/phone/)
-
-![phone](./images/widgets/phone.png)
-
-### [Photos](https://hieudoanm.github.io/nothing/widgets/photos/)
-
-![photos](./images/widgets/photos.png)
-
-### [Settings](https://hieudoanm.github.io/nothing/widgets/settings/)
-
-![settings](./images/widgets/settings.png)
-
-### [Sports](https://hieudoanm.github.io/nothing/widgets/sports/)
-
-![sports](./images/widgets/sports.png)
-
-### [Stocks](https://hieudoanm.github.io/nothing/widgets/stocks/)
-
-![stocks](./images/widgets/stocks.png)
-
-### [Tasks](https://hieudoanm.github.io/nothing/widgets/tasks/)
-
-![tasks](./images/widgets/tasks.png)
-
-### [Translate](https://hieudoanm.github.io/nothing/widgets/translate/)
-
-![videos](./images/widgets/translate.png)
-
-### [Videos](https://hieudoanm.github.io/nothing/widgets/videos/)
-
-![videos](./images/widgets/videos.png)
-
-### [Wallet](https://hieudoanm.github.io/nothing/widgets/wallet/)
-
-![wallet](./images/widgets/wallet.png)
-
-### [Weather](https://hieudoanm.github.io/nothing/widgets/weather/)
-
-![weather](./images/widgets/weather.png)
+# [Nothing](https://hieudoanm.github.io/nothing)
+
+## Downloads
+
+- CLI
+  - `nothing.bash` - Download [here](./packages/cli/bash/dist/nothing.bash)
+  - `nothing.binary` - Download [here](./packages/cli/go/bin/nothing)
+- Desktop (In Progress)
+
+## Favourites
+
+- ⭐ [Apps](https://hieudoanm.github.io/nothing/apps)
+  - ⭐ [Chess](https://hieudoanm.github.io/nothing/apps/chess)
+    - ⭐ [Chess960](https://hieudoanm.github.io/nothing/apps/chess960)
+  - ⭐ [Instagram](https://hieudoanm.github.io/nothing/apps/instagram)
+
+## Tech Stack
+
+| No  | Group     | Subgroup         |                    | Technology                  |
+| --- | --------- | ---------------- | ------------------ | --------------------------- |
+| 01  | Front-end | Dev Tools        | Language           | [TypeScript][typescript]    |
+| 02  | Front-end | Dev Tools        | Linting            | [ESLint][eslint]            |
+| 03  | Front-end | Dev Tools        | Formatting         | [Prettier][prettier]        |
+| 04  | Front-end | Styling          | CSS Utilities      | [TailwindCSS][tailwindcss]  |
+| 05  | Front-end | Framework        | Web                | [Next.js][next.js] (React)  |
+| 06  | Front-end | Framework        | Mobile             | [Expo][expo] (React Native) |
+| 07  | Front-end | Framework        | Desktop            | [Tauri][tauri]              |
+| 08  | Back-end  | Serverless       | Language           | [Go][go]                    |
+| 09  | Back-end  | Dev Tools        | Language           | [Python][python]            |
+| 10  | Back-end  | Dev Tools        | Linting            | [Ruff][ruff]                |
+| 11  | Back-end  | Dev Tools        | Formatting         | [Black][black]              |
+| 12  | Back-end  | Framework        |                    | [FastAPI][fastapi]          |
+| 13  | Back-end  | Dev Tools        | Language           | [Node.js][node.js]          |
+| 14  | Back-end  | Web Scraping     | [Node.js][node.js] | [Puppeteer][puppeteer]      |
+| 15  | Back-end  | Database         | Key-Value          | [Redis][redis]              |
+| 16  | Back-end  | Database         | NoSQL              | [MongoDB][mongodb]          |
+| 17  | Back-end  | Database         | SQL                | [PostgreSQL][postgresql]    |
+| 18  | DevOps    | Containerisation |                    | [Docker][docker]            |
+| 19  | DevOps    | Hosting          | Web                | [Vercel][vercel]            |
+| 20  | DevOps    | Hosting          | Server             | [Render][render]            |
+
+## Todo
+
+- [ ] Build Mobile App with [Expo](https://expo.dev)
+- [ ] Build Desktop App with [Tauri](https://v2.tauri.app/)
+
+[black]: https://black.readthedocs.io/en/stable/
+[docker]: https://www.docker.com/
+[eslint]: https://eslint.org/
+[expo]: https://expo.dev/
+[fastapi]: https://fastapi.tiangolo.com/
+[go]: https://go.dev/
+[mongodb]: https://www.mongodb.com/
+[next.js]: https://nextjs.org/
+[node.js]: https://nodejs.org/en
+[postgresql]: https://www.postgresql.org/
+[prettier]: https://prettier.io/
+[puppeteer]: https://pptr.dev/
+[python]: https://www.python.org/
+[redis]: https://redis.io/
+[render]: https://render.com/
+[ruff]: https://docs.astral.sh/ruff/
+[tailwindcss]: https://tailwindcss.com/
+[tauri]: https://v2.tauri.app/
+[typescript]: https://www.typescriptlang.org/
+[vercel]: https://vercel.com/

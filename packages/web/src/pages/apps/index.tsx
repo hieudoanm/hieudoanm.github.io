@@ -17,6 +17,7 @@ import {
   FaJs,
   FaLightbulb,
   FaMarkdown,
+  FaPalette,
   FaQrcode,
   FaRobot,
   FaRulerCombined,
@@ -44,6 +45,13 @@ const AppsPage: NextPage = () => {
       name: 'Clock',
       shortName: 'clock',
       icon: <FaClock className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'colors',
+      href: 'colors',
+      name: 'Colors',
+      shortName: 'colors',
+      icon: <FaPalette className="text-xl md:text-2xl" />,
     },
     {
       id: 'converter-code-braille',

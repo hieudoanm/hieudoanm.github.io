@@ -43,6 +43,7 @@ export const rgbToHex = (
 export const hexToRgb = (
   hex: string
 ): { r: number; g: number; b: number } | null => {
+  hex = hex.replace('#', '');
   if (hex.length === 3) {
     hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
   }
