@@ -193,10 +193,10 @@ const AppsPage: NextPage = () => {
       icon: <FaTelegram className="text-xl md:text-2xl" />,
     },
     {
-      id: 'words',
-      href: 'words',
-      name: 'Words',
-      shortName: 'words',
+      id: 'words-english',
+      href: 'words/english',
+      name: 'English',
+      shortName: 'eng',
       icon: <FaBook className="text-xl md:text-2xl" />,
     },
   ];
