@@ -1,7 +1,7 @@
-import { NextPage } from 'next';
 import instagram from '@nothing/assets/instagram.svg';
+import html2canvas from 'html2canvas-pro';
+import { NextPage } from 'next';
 import { useRef, useState } from 'react';
-import html2canvas from 'html2canvas';
 
 const Svg2PngPage: NextPage = () => {
   const iconRef = useRef<HTMLDivElement>(null);

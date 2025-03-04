@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import languages from '@nothing/json/github/languages.json';
 import { useQuery } from '@tanstack/react-query';
 import { useRef, useState } from 'react';
-import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas-pro';
 
 const GitHubLanguagesPage: NextPage = () => {
   const languagesRef = useRef(null);

@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import React, { useRef, useState } from 'react';
 import { Oleo_Script } from 'next/font/google';
-import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas-pro';
 
 const oleoScript = Oleo_Script({ weight: '400', subsets: ['latin'] });
 
