@@ -80,7 +80,9 @@ export const WidgetCompassCompact: FC = () => {
     };
   }, []);
 
-  console.error('error', error);
+  if (error) {
+    console.error('error', error);
+  }
 
   return (
     <div className="shadow-3xl relative aspect-square w-full max-w-60 rounded-full bg-gray-900 text-gray-100">
