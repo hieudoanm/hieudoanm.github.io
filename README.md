@@ -5,7 +5,9 @@
 - CLI
   - `nothing.bash` - Download [here](./packages/cli/bash/dist/nothing.bash)
   - `nothing.binary` - Download [here](./packages/cli/go/bin/nothing)
-- Desktop (In Progress)
+- Desktop
+  - `macos.dmg`- Download [here](./packages/frontend/web/src-tauri/dist/dmg/nothing_0.0.1_aarch64.dmg)
+  - `windows.exe` - Download [here](./packages/frontend/web/src-tauri/dist/exe/nothing_0.0.1_x64-setup.exe)
 
 ## Favourites
 
@@ -42,7 +44,6 @@
 ## Todo
 
 - [ ] Build Mobile App with [Expo](https://expo.dev)
-- [ ] Build Desktop App with [Tauri](https://v2.tauri.app/)
 
 [black]: https://black.readthedocs.io/en/stable/
 [docker]: https://www.docker.com/

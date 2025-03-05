@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Brew
+
+function brew-update() {
+  brew update
+  brew upgrade
+  brew cleanup
+}
+
 # Docker
 
 alias dlist='docker ps -a'

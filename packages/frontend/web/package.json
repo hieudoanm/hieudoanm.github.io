@@ -27,7 +27,9 @@
     "prestart": "kill-port 3001",
     "start": "next start --port 3001",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "tauri": "tauri",
+    "tauri:build": "./scripts/build-desktop.sh"
   },
   "dependencies": {
     "@silvia-odwyer/photon": "0.3.2",
@@ -55,6 +57,7 @@
     "@eslint/eslintrc": "3.3.0",
     "@tailwindcss/postcss": "4.0.9",
     "@tanstack/react-query": "5.67.1",
+    "@tauri-apps/cli": "2.3.1",
     "@types/gif.js": "0.2.5",
     "@types/jest": "29.5.14",
     "@types/next-pwa": "5.6.9",
@@ -64,6 +67,7 @@
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
     "@types/showdown": "2.0.6",
+    "cpr": "3.0.1",
     "daisyui": "5.0.0",
     "eslint": "9.21.0",
     "eslint-config-next": "15.2.1",
