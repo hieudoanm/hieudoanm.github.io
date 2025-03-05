@@ -43,7 +43,9 @@ const FenToPngPage: NextPage = () => {
     },
   });
 
-  console.error('queryError', queryError);
+  if (queryError) {
+    console.error('queryError', queryError);
+  }
 
   const pawn: number = (data?.pvs?.at(0)?.cp ?? 0) / 100;
   const mate: number = data?.pvs?.at(0)?.mate ?? 0;
@@ -146,7 +148,7 @@ const FenToPngPage: NextPage = () => {
                 }));
               }
             } catch (error) {
-              console.error(error);
+              console.error('error', error);
               alert((error as Error).message);
             } finally {
               setState((previous) => ({

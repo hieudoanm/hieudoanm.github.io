@@ -41,7 +41,7 @@ const InstagramPage: NextPage = () => {
         loading: false,
       }));
     } catch (error) {
-      console.error(error);
+      console.error('error', error);
     } finally {
       setState((previous) => ({
         ...previous,

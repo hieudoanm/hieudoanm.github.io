@@ -28,7 +28,7 @@ const JsonToYamlPage: NextPage = () => {
                 const newCSV: string = json2csv(JSON.parse(newJSON));
                 setState({ csv: newCSV, json: newJSON });
               } catch (error) {
-                console.error(error);
+                console.error('error', error);
                 setState((previous) => ({ ...previous, json: newJSON }));
               }
             }}

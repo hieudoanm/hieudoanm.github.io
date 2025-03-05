@@ -34,6 +34,10 @@
       "icons/icon.ico"
     ],
     "linux": {
+      "appimage": {
+        "bundleMediaFramework": false,
+        "files": {}
+      },
       "deb": {
         "files": {}
       }

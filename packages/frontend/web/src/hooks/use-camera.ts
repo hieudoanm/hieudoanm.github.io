@@ -27,7 +27,7 @@ export const useCamera = ({
         });
         setMediaStream(stream);
       } catch (error) {
-        console.error(error);
+        console.error('error', error);
       }
     };
 

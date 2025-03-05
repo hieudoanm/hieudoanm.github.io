@@ -86,7 +86,7 @@ const Svg2PngPage: NextPage = () => {
                 }));
               }
             } catch (error) {
-              console.error(error);
+              console.error('error', error);
               setState((previous) => ({
                 ...previous,
                 loading: false,

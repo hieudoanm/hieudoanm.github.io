@@ -144,8 +144,6 @@ const citiesByTimezone = [
   },
 ];
 
-console.log(citiesByTimezone);
-
 const ClockPage: NextPage = () => {
   const d = new Date();
   const [clock, setClock] = useState<{
