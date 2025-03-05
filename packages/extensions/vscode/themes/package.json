@@ -21,7 +21,8 @@
     "vscode": "1.97.2"
   },
   "scripts": {
-    "build": "rimraf build && mkdir build && vsce package --out \"./build/nothing-vscode-theme-0.0.1.vsix\""
+    "format": "prettier --cache --write .",
+    "package": "rimraf build && mkdir build && vsce package --out \"./build/nothing-vscode-theme-0.0.1.vsix\""
   },
   "devDependencies": {
     "rimraf": "6.0.1",

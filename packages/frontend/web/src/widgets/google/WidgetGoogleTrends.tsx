@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 
-export const WidgetNewsTrends = () => {
+export const WidgetGoogleTrends = () => {
   const url: string =
     'https://trends.google.com/trends/hottrends/visualize/internal/data';
   const reverseProxyUrl = `https://hieudoanm-reverse-proxy.vercel.app/api?url=${url}`;

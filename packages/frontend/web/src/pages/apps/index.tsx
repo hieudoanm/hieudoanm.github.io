@@ -12,6 +12,7 @@ import {
   FaFlag,
   FaFlask,
   FaGithub,
+  FaGoogle,
   FaImages,
   FaInstagram,
   FaJs,
@@ -129,6 +130,13 @@ const AppsPage: NextPage = () => {
       name: 'GitHub',
       shortName: 'gh',
       icon: <FaGithub className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'google',
+      href: 'google',
+      name: 'Google',
+      shortName: 'ggl',
+      icon: <FaGoogle className="text-xl md:text-2xl" />,
     },
     {
       id: 'images',
