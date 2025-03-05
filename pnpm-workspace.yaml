@@ -1,3 +1,5 @@
 packages:
   - data/**
   - packages/**
+onlyBuiltDependencies:
+  - tesseract.js

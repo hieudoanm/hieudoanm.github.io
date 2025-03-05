@@ -235,6 +235,145 @@ importers:
         specifier: 2.15.0
         version: 2.15.0
 
+  packages/frontend/web:
+    dependencies:
+      '@silvia-odwyer/photon':
+        specifier: 0.3.2
+        version: 0.3.2
+      '@tanstack/react-query':
+        specifier: 5.67.1
+        version: 5.67.1(react@19.0.0)
+      '@tanstack/react-table':
+        specifier: 8.21.2
+        version: 8.21.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@tanstack/react-virtual':
+        specifier: 3.13.2
+        version: 3.13.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      chess.js:
+        specifier: 1.1.0
+        version: 1.1.0
+      gif.js:
+        specifier: 0.2.0
+        version: 0.2.0
+      github-markdown-css:
+        specifier: 5.8.1
+        version: 5.8.1
+      html2canvas-pro:
+        specifier: 1.5.8
+        version: 1.5.8
+      next:
+        specifier: 15.2.1
+        version: 15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      next-pwa:
+        specifier: 5.6.0
+        version: 5.6.0(@babel/core@7.26.9)(@types/babel__core@7.20.5)(next@15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(webpack@5.98.0)
+      pdfmake:
+        specifier: 0.2.18
+        version: 0.2.18
+      qrcode:
+        specifier: 1.5.4
+        version: 1.5.4
+      react:
+        specifier: 19.0.0
+        version: 19.0.0
+      react-chessboard:
+        specifier: 4.7.2
+        version: 4.7.2(@types/node@22.13.9)(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-dom:
+        specifier: 19.0.0
+        version: 19.0.0(react@19.0.0)
+      react-icons:
+        specifier: 5.5.0
+        version: 5.5.0(react@19.0.0)
+      showdown:
+        specifier: 2.1.0
+        version: 2.1.0
+      tesseract.js:
+        specifier: 6.0.0
+        version: 6.0.0(encoding@0.1.13)
+      uuid:
+        specifier: 11.1.0
+        version: 11.1.0
+      yaml:
+        specifier: 2.7.0
+        version: 2.7.0
+    devDependencies:
+      '@eslint/eslintrc':
+        specifier: 3.3.0
+        version: 3.3.0
+      '@tailwindcss/postcss':
+        specifier: 4.0.9
+        version: 4.0.9
+      '@types/gif.js':
+        specifier: 0.2.5
+        version: 0.2.5
+      '@types/jest':
+        specifier: 29.5.14
+        version: 29.5.14
+      '@types/next-pwa':
+        specifier: 5.6.9
+        version: 5.6.9(@babel/core@7.26.9)(@types/babel__core@7.20.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@types/node':
+        specifier: 22.13.9
+        version: 22.13.9
+      '@types/pdfmake':
+        specifier: 0.2.11
+        version: 0.2.11
+      '@types/qrcode':
+        specifier: 1.5.5
+        version: 1.5.5
+      '@types/react':
+        specifier: 19.0.10
+        version: 19.0.10
+      '@types/react-dom':
+        specifier: 19.0.4
+        version: 19.0.4(@types/react@19.0.10)
+      '@types/showdown':
+        specifier: 2.0.6
+        version: 2.0.6
+      daisyui:
+        specifier: 5.0.0
+        version: 5.0.0
+      eslint:
+        specifier: 9.21.0
+        version: 9.21.0(jiti@2.4.2)
+      eslint-config-next:
+        specifier: 15.2.1
+        version: 15.2.1(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)
+      husky:
+        specifier: 9.1.7
+        version: 9.1.7
+      jest:
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@22.13.9)(ts-node@10.9.2(@types/node@22.13.9)(typescript@5.8.2))
+      kill-port:
+        specifier: 2.0.1
+        version: 2.0.1
+      postcss:
+        specifier: 8.5.3
+        version: 8.5.3
+      prettier:
+        specifier: 3.5.3
+        version: 3.5.3
+      prettier-plugin-tailwindcss:
+        specifier: 0.6.11
+        version: 0.6.11(prettier@3.5.3)
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      tailwindcss:
+        specifier: 4.0.9
+        version: 4.0.9
+      ts-jest:
+        specifier: 29.2.6
+        version: 29.2.6(@babel/core@7.26.9)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.9))(jest@29.7.0(@types/node@22.13.9)(ts-node@10.9.2(@types/node@22.13.9)(typescript@5.8.2)))(typescript@5.8.2)
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@types/node@22.13.9)(typescript@5.8.2)
+      typescript:
+        specifier: 5.8.2
+        version: 5.8.2
+
   packages/server/instagram:
     dependencies:
       puppeteer:
@@ -430,145 +569,6 @@ importers:
       typescript-eslint:
         specifier: 8.26.0
         version: 8.26.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)
-
-  packages/web:
-    dependencies:
-      '@silvia-odwyer/photon':
-        specifier: 0.3.2
-        version: 0.3.2
-      '@tanstack/react-query':
-        specifier: 5.67.1
-        version: 5.67.1(react@19.0.0)
-      '@tanstack/react-table':
-        specifier: 8.21.2
-        version: 8.21.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@tanstack/react-virtual':
-        specifier: 3.13.2
-        version: 3.13.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      chess.js:
-        specifier: 1.1.0
-        version: 1.1.0
-      gif.js:
-        specifier: 0.2.0
-        version: 0.2.0
-      github-markdown-css:
-        specifier: 5.8.1
-        version: 5.8.1
-      html2canvas-pro:
-        specifier: 1.5.8
-        version: 1.5.8
-      next:
-        specifier: 15.2.1
-        version: 15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      next-pwa:
-        specifier: 5.6.0
-        version: 5.6.0(@babel/core@7.26.9)(@types/babel__core@7.20.5)(next@15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(webpack@5.98.0)
-      pdfmake:
-        specifier: 0.2.18
-        version: 0.2.18
-      qrcode:
-        specifier: 1.5.4
-        version: 1.5.4
-      react:
-        specifier: 19.0.0
-        version: 19.0.0
-      react-chessboard:
-        specifier: 4.7.2
-        version: 4.7.2(@types/node@22.13.9)(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      react-dom:
-        specifier: 19.0.0
-        version: 19.0.0(react@19.0.0)
-      react-icons:
-        specifier: 5.5.0
-        version: 5.5.0(react@19.0.0)
-      showdown:
-        specifier: 2.1.0
-        version: 2.1.0
-      tesseract.js:
-        specifier: 6.0.0
-        version: 6.0.0(encoding@0.1.13)
-      uuid:
-        specifier: 11.1.0
-        version: 11.1.0
-      yaml:
-        specifier: 2.7.0
-        version: 2.7.0
-    devDependencies:
-      '@eslint/eslintrc':
-        specifier: 3.3.0
-        version: 3.3.0
-      '@tailwindcss/postcss':
-        specifier: 4.0.9
-        version: 4.0.9
-      '@types/gif.js':
-        specifier: 0.2.5
-        version: 0.2.5
-      '@types/jest':
-        specifier: 29.5.14
-        version: 29.5.14
-      '@types/next-pwa':
-        specifier: 5.6.9
-        version: 5.6.9(@babel/core@7.26.9)(@types/babel__core@7.20.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@types/node':
-        specifier: 22.13.9
-        version: 22.13.9
-      '@types/pdfmake':
-        specifier: 0.2.11
-        version: 0.2.11
-      '@types/qrcode':
-        specifier: 1.5.5
-        version: 1.5.5
-      '@types/react':
-        specifier: 19.0.10
-        version: 19.0.10
-      '@types/react-dom':
-        specifier: 19.0.4
-        version: 19.0.4(@types/react@19.0.10)
-      '@types/showdown':
-        specifier: 2.0.6
-        version: 2.0.6
-      daisyui:
-        specifier: 5.0.0
-        version: 5.0.0
-      eslint:
-        specifier: 9.21.0
-        version: 9.21.0(jiti@2.4.2)
-      eslint-config-next:
-        specifier: 15.2.1
-        version: 15.2.1(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)
-      husky:
-        specifier: 9.1.7
-        version: 9.1.7
-      jest:
-        specifier: 29.7.0
-        version: 29.7.0(@types/node@22.13.9)(ts-node@10.9.2(@types/node@22.13.9)(typescript@5.8.2))
-      kill-port:
-        specifier: 2.0.1
-        version: 2.0.1
-      postcss:
-        specifier: 8.5.3
-        version: 8.5.3
-      prettier:
-        specifier: 3.5.3
-        version: 3.5.3
-      prettier-plugin-tailwindcss:
-        specifier: 0.6.11
-        version: 0.6.11(prettier@3.5.3)
-      rimraf:
-        specifier: 6.0.1
-        version: 6.0.1
-      tailwindcss:
-        specifier: 4.0.9
-        version: 4.0.9
-      ts-jest:
-        specifier: 29.2.6
-        version: 29.2.6(@babel/core@7.26.9)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.9))(jest@29.7.0(@types/node@22.13.9)(ts-node@10.9.2(@types/node@22.13.9)(typescript@5.8.2)))(typescript@5.8.2)
-      ts-node:
-        specifier: 10.9.2
-        version: 10.9.2(@types/node@22.13.9)(typescript@5.8.2)
-      typescript:
-        specifier: 5.8.2
-        version: 5.8.2
 
 packages:
 
