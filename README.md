@@ -11,13 +11,13 @@
   - [x] `macos.dmg`- Download [here](./packages/frontend/web/src-tauri/dist/dmg/nothing_0.0.1_aarch64.dmg)
   - [x] `windows.exe` - Download [here](./packages/frontend/web/src-tauri/dist/exe/nothing_0.0.1_x64-setup.exe)
 - Mobile
-  - [x] `android.apk`
+  - [ ] `android.apk`
 
 ## Favourites
 
 - ⭐ [Apps](https://hieudoanm.github.io/nothing/apps)
   - ⭐ [Chess](https://hieudoanm.github.io/nothing/apps/chess)
-    - ⭐ [Chess960](https://hieudoanm.github.io/nothing/apps/chess960)
+    - ⭐ [Chess960](https://hieudoanm.github.io/nothing/apps/chess/chess960)
   - ⭐ [Instagram](https://hieudoanm.github.io/nothing/apps/instagram)
 
 ## Tech Stack
