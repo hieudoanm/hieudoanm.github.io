@@ -17,7 +17,8 @@
 
 - ⭐ [Apps](https://hieudoanm.github.io/nothing/apps)
   - ⭐ [Chess](https://hieudoanm.github.io/nothing/apps/chess)
-    - ⭐ [Chess960](https://hieudoanm.github.io/nothing/apps/chess/chess960)
+    - ⭐ [Chess960](https://hieudoanm.github.io/nothing/apps/chess/books/chess960)
+    - ⭐ [Openings](https://hieudoanm.github.io/nothing/apps/chess/books/openings)
   - ⭐ [Instagram](https://hieudoanm.github.io/nothing/apps/instagram)
 
 ## Tech Stack
