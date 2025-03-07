@@ -58,6 +58,14 @@
 | 22  | DevOps    | CI/CD            |                    | [GitHub Actions][gh-actions]                |
 | 23  | DevOps    | Hosting          | Web                | [Vercel][vercel]                            |
 | 24  | DevOps    | Hosting          | Server             | [Render][render]                            |
+| 25  |           |                  |                    |                                             |
+| 26  |           |                  |                    |                                             |
+| 27  |           |                  |                    |                                             |
+| 28  |           |                  |                    |                                             |
+| 29  |           |                  |                    |                                             |
+| 30  |           |                  |                    |                                             |
+| 31  |           |                  |                    |                                             |
+| 32  |           |                  |                    |                                             |
 
 ## Todo
 
