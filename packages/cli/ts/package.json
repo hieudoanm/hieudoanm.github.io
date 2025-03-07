@@ -2,7 +2,7 @@
   "name": "@nothing/cli",
   "version": "0.0.1",
   "description": "Nothing CLI",
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.6.1",
   "keywords": [
     "cli"
   ],
