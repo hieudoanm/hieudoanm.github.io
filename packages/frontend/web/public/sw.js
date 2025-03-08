@@ -1,38 +1,38 @@
 if (!self.define) {
-  let s,
-    e = {};
-  const n = (n, t) => (
-    (n = new URL(n + '.js', t).href),
-    e[n] ||
-      new Promise((e) => {
+  let e,
+    s = {};
+  const n = (n, a) => (
+    (n = new URL(n + '.js', a).href),
+    s[n] ||
+      new Promise((s) => {
         if ('document' in self) {
-          const s = document.createElement('script');
-          (s.src = n), (s.onload = e), document.head.appendChild(s);
-        } else (s = n), importScripts(n), e();
+          const e = document.createElement('script');
+          (e.src = n), (e.onload = s), document.head.appendChild(e);
+        } else (e = n), importScripts(n), s();
       }).then(() => {
-        let s = e[n];
-        if (!s) throw new Error(`Module ${n} didn’t register its module`);
-        return s;
+        let e = s[n];
+        if (!e) throw new Error(`Module ${n} didn’t register its module`);
+        return e;
       })
   );
-  self.define = (t, i) => {
-    const a =
-      s ||
+  self.define = (a, t) => {
+    const i =
+      e ||
       ('document' in self ? document.currentScript.src : '') ||
       location.href;
-    if (e[a]) return;
+    if (s[i]) return;
     let c = {};
-    const o = (s) => n(s, a),
-      r = { module: { uri: a }, exports: c, require: o };
-    e[a] = Promise.all(t.map((s) => r[s] || o(s))).then((s) => (i(...s), c));
+    const o = (e) => n(e, i),
+      r = { module: { uri: i }, exports: c, require: o };
+    s[i] = Promise.all(a.map((e) => r[e] || o(e))).then((e) => (t(...e), c));
   };
 }
-define(['./workbox-46b0bab3'], function (s) {
+define(['./workbox-46b0bab3'], function (e) {
   'use strict';
   importScripts(),
     self.skipWaiting(),
-    s.clientsClaim(),
-    s.precacheAndRoute(
+    e.clientsClaim(),
+    e.precacheAndRoute(
       [
         {
           url: '/nothing/_next/app-build-manifest.json',
@@ -43,11 +43,11 @@ define(['./workbox-46b0bab3'], function (s) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
-          url: '/nothing/_next/static/5Hv_L54BtyU0CVD6lPHGL/_buildManifest.js',
+          url: '/nothing/_next/static/Ka5PMI0G_VY1vDeeBBa2X/_buildManifest.js',
           revision: 'f18a6d39d7775627b6473706ab7a3367',
         },
         {
-          url: '/nothing/_next/static/5Hv_L54BtyU0CVD6lPHGL/_ssgManifest.js',
+          url: '/nothing/_next/static/Ka5PMI0G_VY1vDeeBBa2X/_ssgManifest.js',
           revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
@@ -56,423 +56,423 @@ define(['./workbox-46b0bab3'], function (s) {
         },
         {
           url: '/nothing/_next/static/chunks/1782-68b4034db863f82c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/2515-79de49b7db3f1d9c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/3495-b01e6002d3800b90.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/39c732d3-59b550d94aa0eabc.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/5163ca1c-a1199f4643217b18.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/5506-82f15a300adacc17.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/5962-edcc007ac210e745.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/6335-c9815eae8de24e1a.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/6d1efd94-68f65a841f4bdba7.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/7299-4a2962458cd77647.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/7700-55e7a1df39745771.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/992-4b92f6276b954f32.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/bf9d8ce5-9f7306c40178035c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/d7f847cb-e4eba5bf8a09df3c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/framework-da1c48dc673ca549.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/main-7a06ab2bd0eefb0c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/main-app-696435575ca801fa.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/404-28338b5bf63d5e2b.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/500-100e9df60e4413e2.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/_app-58a714a08ab10a96.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/_error-548b0f9c0089112c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps-6ec630d0964c4084.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/chess-d00a0e0871f8a96e.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/chess/bookmarks-4c3af25d56f0f77c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/chess/books/chess960-e942a6723c7bcc62.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/chess/books/openings-5ee2ea5644ed9f86.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/chess/converter/fen2png-410723f88218d4b4.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/chess/converter/pgn2gif-ce1f25efa92989b4.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/chess/tools/clock-73c93b44a3b336f2.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/chess/tools/elo-c46ae34e6f1148d8.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/clock-9e444c0f16776563.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/clock/epoch-bcc305909e64a160.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/clock/timezones-81a2ecbdbce1baa9.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/clock/widgets-fd8a4f9b9dd2270e.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/colors-7cb65d75109be4bd.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/colors/hex2rgb-612003487a5a8971.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/colors/widgets-893e458b2b09a821.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/code/braille-be7ac4bfc4540900.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/code/morse-1ff3cbcada14703c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/data/csv-af64b1cb7af35210.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/data/csv/html-d737ae90eff216cd.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/data/csv/json-b19be3594483d404.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/data/csv/md-9af882e872e33a0b.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/data/csv/sql-f4e5e0a24f885edf.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/data/json-e8cd51168451b957.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/data/json/csv-3824ae750df6a98d.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/data/json/yaml-00d64b07e13ea7b1.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/converter/data/yaml/json-9cf6b7316ed418f6.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/editor/manifest.json-46db29b4d5718f54.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/editor/markdown-1b49f55ce3c9d2e4.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/gen.ai-aa58dfcd24b32fc3.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/generate/qrcode-af3ca1d31148ea67.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/generate/uuid-c444184dbd72249b.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/github-ff94d2482d9756ff.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/github/cover-33b29706f052d165.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/github/languages-2f82ed5cf7878ca0.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/google-29509cc7525873c9.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/google/trends-876c23744d8d105f.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/google/widgets-0b5e8347379188c9.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/images-f46af23371d75dcf.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/images/converter/png2ico-2a89133c8c643875.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/images/converter/svg2png-37f177d08abf97f0.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/images/filter/golden-a7d4e62d05b742d5.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/images/filter/grayscale-8ab55dade66c41ff.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/instagram-02e13dd5e0b773ac.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/list/chemistry-4abc717bbd07afcf.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/list/countries-c746143e1252de63.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/ocr-0ddc6e6c8e0e9f8c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/resolution-104d2218e80e0329.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/status-1e4b516993bb89b6.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/telegram/webhook-f6c8f2f651031e21.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/apps/words/english-0d2c1fe612dc2ac5.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/index-8795844391d27742.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets-54278f6a020f731a.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/all-1774d0cf3d919b51.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/battery-a51c1ad6a7512503.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/browser-3b1d908d5a9c5834.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/calculator-b3af4f45c8e582a1.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/calendar-58330b5d6520a329.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/camera-f3e8d0275942a677.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/compass-20e4362a113c42c5.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/crypto-82b9e27de759fda6.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/devices-71fc4fc687593e15.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/files-36239e5f181364de.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/fitness-7fb8694ed0cfb36c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/games-f5c8029e3cd0320d.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/health-a0b3b7680aed8f38.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/home-0a4b24f7ba755250.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/mail-10a9cb1948c6446c.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/maps-eb6bf44afe19be9f.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/messages-da05a8eddea1c1af.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/music-c1c8eecd6ea69885.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/news-baab22adcde59fa0.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/notes-f2254a4fc5515c18.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/phone-7370b9d7c0a58d6f.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/photos-782d28392e36125f.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/settings-8dd9811f64b831e4.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/sports-124d1e82fed79cb7.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/stocks-047770c9d32bd1ea.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/tasks-0914681d47f1bf28.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/translate-f77fbc743d0df7e8.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/transportation-eecc677ac5c3d214.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/videos-d54fcf26e36e9bac.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/wallet-4bccca60f7fed470.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/pages/widgets/weather-73d9d656d2168bda.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/chunks/polyfills-42372ed130431b0a.js',
@@ -480,7 +480,7 @@ define(['./workbox-46b0bab3'], function (s) {
         },
         {
           url: '/nothing/_next/static/chunks/webpack-4f5575b795a65899.js',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/_next/static/css/2ec94e8fc73ebb20.css',
@@ -512,7 +512,7 @@ define(['./workbox-46b0bab3'], function (s) {
         },
         {
           url: '/nothing/_next/static/wasm/80eae4f554bb5227.wasm',
-          revision: '5Hv_L54BtyU0CVD6lPHGL',
+          revision: 'Ka5PMI0G_VY1vDeeBBa2X',
         },
         {
           url: '/nothing/data/csv/psychology/hofstede.csv',
@@ -609,179 +609,179 @@ define(['./workbox-46b0bab3'], function (s) {
       ],
       { ignoreURLParametersMatching: [] }
     ),
-    s.cleanupOutdatedCaches(),
-    s.registerRoute(
+    e.cleanupOutdatedCaches(),
+    e.registerRoute(
       '/nothing',
-      new s.NetworkFirst({
+      new e.NetworkFirst({
         cacheName: 'start-url',
         plugins: [
           {
             cacheWillUpdate: async ({
-              request: s,
-              response: e,
+              request: e,
+              response: s,
               event: n,
-              state: t,
+              state: a,
             }) =>
-              e && 'opaqueredirect' === e.type
-                ? new Response(e.body, {
+              s && 'opaqueredirect' === s.type
+                ? new Response(s.body, {
                     status: 200,
                     statusText: 'OK',
-                    headers: e.headers,
+                    headers: s.headers,
                   })
-                : e,
+                : s,
           },
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,
-      new s.CacheFirst({
+      new e.CacheFirst({
         cacheName: 'google-fonts-webfonts',
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 31536e3 }),
+          new e.ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 31536e3 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /^https:\/\/fonts\.(?:googleapis)\.com\/.*/i,
-      new s.StaleWhileRevalidate({
+      new e.StaleWhileRevalidate({
         cacheName: 'google-fonts-stylesheets',
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 604800 }),
+          new e.ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 604800 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,
-      new s.StaleWhileRevalidate({
+      new e.StaleWhileRevalidate({
         cacheName: 'static-font-assets',
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 604800 }),
+          new e.ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 604800 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,
-      new s.StaleWhileRevalidate({
+      new e.StaleWhileRevalidate({
         cacheName: 'static-image-assets',
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 64, maxAgeSeconds: 86400 }),
+          new e.ExpirationPlugin({ maxEntries: 64, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /\/_next\/image\?url=.+$/i,
-      new s.StaleWhileRevalidate({
+      new e.StaleWhileRevalidate({
         cacheName: 'next-image',
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 64, maxAgeSeconds: 86400 }),
+          new e.ExpirationPlugin({ maxEntries: 64, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /\.(?:mp3|wav|ogg)$/i,
-      new s.CacheFirst({
+      new e.CacheFirst({
         cacheName: 'static-audio-assets',
         plugins: [
-          new s.RangeRequestsPlugin(),
-          new s.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+          new e.RangeRequestsPlugin(),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /\.(?:mp4)$/i,
-      new s.CacheFirst({
+      new e.CacheFirst({
         cacheName: 'static-video-assets',
         plugins: [
-          new s.RangeRequestsPlugin(),
-          new s.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+          new e.RangeRequestsPlugin(),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /\.(?:js)$/i,
-      new s.StaleWhileRevalidate({
+      new e.StaleWhileRevalidate({
         cacheName: 'static-js-assets',
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /\.(?:css|less)$/i,
-      new s.StaleWhileRevalidate({
+      new e.StaleWhileRevalidate({
         cacheName: 'static-style-assets',
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /\/_next\/data\/.+\/.+\.json$/i,
-      new s.StaleWhileRevalidate({
+      new e.StaleWhileRevalidate({
         cacheName: 'next-data',
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
+    e.registerRoute(
       /\.(?:json|xml|csv)$/i,
-      new s.NetworkFirst({
+      new e.NetworkFirst({
         cacheName: 'static-data-assets',
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
-      ({ url: s }) => {
-        if (!(self.origin === s.origin)) return !1;
-        const e = s.pathname;
-        return !e.startsWith('/api/auth/') && !!e.startsWith('/api/');
+    e.registerRoute(
+      ({ url: e }) => {
+        if (!(self.origin === e.origin)) return !1;
+        const s = e.pathname;
+        return !s.startsWith('/api/auth/') && !!s.startsWith('/api/');
       },
-      new s.NetworkFirst({
+      new e.NetworkFirst({
         cacheName: 'apis',
         networkTimeoutSeconds: 10,
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 16, maxAgeSeconds: 86400 }),
+          new e.ExpirationPlugin({ maxEntries: 16, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
-      ({ url: s }) => {
-        if (!(self.origin === s.origin)) return !1;
-        return !s.pathname.startsWith('/api/');
+    e.registerRoute(
+      ({ url: e }) => {
+        if (!(self.origin === e.origin)) return !1;
+        return !e.pathname.startsWith('/api/');
       },
-      new s.NetworkFirst({
+      new e.NetworkFirst({
         cacheName: 'others',
         networkTimeoutSeconds: 10,
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
         ],
       }),
       'GET'
     ),
-    s.registerRoute(
-      ({ url: s }) => !(self.origin === s.origin),
-      new s.NetworkFirst({
+    e.registerRoute(
+      ({ url: e }) => !(self.origin === e.origin),
+      new e.NetworkFirst({
         cacheName: 'cross-origin',
         networkTimeoutSeconds: 10,
         plugins: [
-          new s.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 3600 }),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 3600 }),
         ],
       }),
       'GET'
