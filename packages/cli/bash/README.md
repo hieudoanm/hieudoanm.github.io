@@ -236,6 +236,16 @@ alias heroku-open='heroku apps:open --app '
 alias heroku-restart='heroku ps:restart web.1 --app '
 ```
 
+## macos
+
+```bash
+#!/bin/bash
+
+# MacOS
+
+alias delete-ds-store="find . -name ".DS_Store" -delete"
+```
+
 ## python
 
 ```bash
