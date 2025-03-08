@@ -61,7 +61,7 @@
     "@types/gif.js": "0.2.5",
     "@types/jest": "29.5.14",
     "@types/next-pwa": "5.6.9",
-    "@types/node": "22.13.9",
+    "@types/node": "22.13.10",
     "@types/pdfmake": "0.2.11",
     "@types/qrcode": "1.5.5",
     "@types/react": "19.0.10",
