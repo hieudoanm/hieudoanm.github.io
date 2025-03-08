@@ -1,19 +1,5 @@
 # Bash
 
-## brew
-
-```bash
-#!/bin/bash
-
-# Brew
-
-function brew-update() {
-  brew update
-  brew upgrade
-  brew cleanup
-}
-```
-
 ## docker
 
 ```bash
@@ -236,14 +222,42 @@ alias heroku-open='heroku apps:open --app '
 alias heroku-restart='heroku ps:restart web.1 --app '
 ```
 
-## macos
+## os-macos
 
 ```bash
 #!/bin/bash
 
 # MacOS
 
+# Brew
+
+function brew-update() {
+  brew update
+  brew upgrade
+  brew cleanup
+}
+
+function print-env() {
+  lines=$(printenv);
+  IFS=$'\n' sorted=$(sort <<< "${lines[*]}");
+  unset IFS;
+  printf "%s" "${sorted[@]}";
+}
+
 alias delete-ds-store="find . -name ".DS_Store" -delete"
+alias kill-port='sudo lsof -i tcp:'
+alias hex='openssl rand -hex 32'
+```
+
+## os-windows
+
+```bash
+#!/bin/bash
+
+## Windows
+
+alias cls='clear'
+alias rst='reset'
 ```
 
 ## python
@@ -285,26 +299,4 @@ alias tf-validate='terraform validate '
 alias tf-show='terraform show '
 alias tf-state-list='terraform state list '
 alias tf-output='terraform output '
-```
-
-## utils
-
-```bash
-#!/bin/bash
-
-# Utils
-
-alias kill-port='sudo lsof -i tcp:'
-alias hex='openssl rand -hex 32'
-```
-
-## windows
-
-```bash
-#!/bin/bash
-
-## Windows
-
-alias cls='clear'
-alias rst='reset'
 ```
