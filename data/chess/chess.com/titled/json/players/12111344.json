@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/12111344.cdc6c5c3.200x200o.321fc6512b4f.jpg",
+    "player_id": 12111344,
+    "@id": "https://api.chess.com/pub/player/cheburashka2013",
+    "url": "https://www.chess.com/member/cheburashka2013",
+    "username": "cheburashka2013",
+    "title": "CM",
+    "followers": 44,
+    "country": "https://api.chess.com/pub/country/JP",
+    "last_online": 1734099226,
+    "joined": 1370081299,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

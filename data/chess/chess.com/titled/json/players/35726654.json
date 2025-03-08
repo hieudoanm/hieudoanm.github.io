@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35726654.8356d774.200x200o.5b128b11fd87.jpg",
+    "player_id": 35726654,
+    "@id": "https://api.chess.com/pub/player/sariedrez",
+    "url": "https://www.chess.com/member/Sariedrez",
+    "name": "Wilfredo Sariego Figueredo",
+    "username": "sariedrez",
+    "title": "IM",
+    "followers": 35,
+    "country": "https://api.chess.com/pub/country/CU",
+    "location": "Miami",
+    "last_online": 1733945968,
+    "joined": 1495469262,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2139,
+            "date": 1733239640,
+            "rd": 78
+        },
+        "best": {
+            "rating": 2450,
+            "date": 1540344208,
+            "game": "https://www.chess.com/game/live/87413449383"
+        },
+        "record": {
+            "win": 10289,
+            "loss": 9543,
+            "draw": 735
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2618,
+            "date": 1733167754,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2696,
+            "date": 1727708987,
+            "game": "https://www.chess.com/game/live/100381484057"
+        },
+        "record": {
+            "win": 3397,
+            "loss": 2931,
+            "draw": 503
+        }
+    },
+    "fide": 2315,
+    "tactics": {
+        "highest": {
+            "rating": 2599,
+            "date": 1553008314
+        },
+        "lowest": {
+            "rating": 1012,
+            "date": 1543524213
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

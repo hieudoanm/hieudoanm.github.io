@@ -1,0 +1,68 @@
+{
+    "player_id": 294827545,
+    "@id": "https://api.chess.com/pub/player/chill_out112",
+    "url": "https://www.chess.com/member/Chill_Out112",
+    "name": "Randi-Ioan Gales",
+    "username": "chill_out112",
+    "title": "CM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/RO",
+    "last_online": 1734165198,
+    "joined": 1687251524,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2579,
+            "date": 1734181354,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2731,
+            "date": 1731779237,
+            "game": "https://www.chess.com/game/live/124280985667"
+        },
+        "record": {
+            "win": 314,
+            "loss": 313,
+            "draw": 55
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2611,
+            "date": 1734180894,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2718,
+            "date": 1729609503,
+            "game": "https://www.chess.com/game/live/125257127567"
+        },
+        "record": {
+            "win": 239,
+            "loss": 208,
+            "draw": 37
+        }
+    },
+    "fide": 2206,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1687251524
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1687251524
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

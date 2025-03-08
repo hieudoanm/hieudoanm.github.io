@@ -1,0 +1,110 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34737498.bb196000.200x200o.2aa2d5edfed0.jpg",
+    "player_id": 34737498,
+    "@id": "https://api.chess.com/pub/player/sam_chessmood",
+    "url": "https://www.chess.com/member/Sam_ChessMood",
+    "name": "Samvel Ter-Sahakyan",
+    "username": "sam_chessmood",
+    "title": "GM",
+    "followers": 2158,
+    "country": "https://api.chess.com/pub/country/AM",
+    "location": "Armenia,Yerevan",
+    "last_online": 1734169849,
+    "joined": 1492072105,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2124,
+            "date": 1711453435,
+            "rd": 69
+        },
+        "best": {
+            "rating": 2211,
+            "date": 1676103386,
+            "game": "https://www.chess.com/game/daily/527805125"
+        },
+        "record": {
+            "win": 61,
+            "loss": 24,
+            "draw": 8,
+            "time_per_move": 12589,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2615,
+            "date": 1727366165,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2661,
+            "date": 1706895530,
+            "game": "https://www.chess.com/game/live/100458888529"
+        },
+        "record": {
+            "win": 153,
+            "loss": 61,
+            "draw": 78
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2932,
+            "date": 1732005166,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2949,
+            "date": 1620305643,
+            "game": "https://www.chess.com/game/live/82497749823"
+        },
+        "record": {
+            "win": 132,
+            "loss": 108,
+            "draw": 26
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2930,
+            "date": 1733854080,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2992,
+            "date": 1719506484,
+            "game": "https://www.chess.com/game/live/77028207695"
+        },
+        "record": {
+            "win": 1601,
+            "loss": 1003,
+            "draw": 499
+        }
+    },
+    "fide": 2624,
+    "tactics": {
+        "highest": {
+            "rating": 3444,
+            "date": 1675080869
+        },
+        "lowest": {
+            "rating": 1209,
+            "date": 1503986315
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 79,
+            "score": 78
+        },
+        "daily": {
+            "total_attempts": 18,
+            "score": 15
+        }
+    }
+}

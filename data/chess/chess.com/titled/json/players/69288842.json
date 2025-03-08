@@ -1,0 +1,110 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/69288842.7ca25517.200x200o.36a4107e3e84.jpg",
+    "player_id": 69288842,
+    "@id": "https://api.chess.com/pub/player/fannyduartenapoles",
+    "url": "https://www.chess.com/member/FannyDuarteNapoles",
+    "name": "Fanny Duarte Napoles",
+    "username": "fannyduartenapoles",
+    "title": "FM",
+    "followers": 52,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Brazil",
+    "last_online": 1734125744,
+    "joined": 1576250459,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2000,
+            "date": 1671365762,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 91,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1390,
+            "date": 1650907314,
+            "rd": 346
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 91,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2374,
+            "date": 1726175230,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2390,
+            "date": 1698422829,
+            "game": "https://www.chess.com/game/live/92161276399"
+        },
+        "record": {
+            "win": 7,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2367,
+            "date": 1657896042,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2387,
+            "date": 1609642878,
+            "game": "https://www.chess.com/game/live/51549567103"
+        },
+        "record": {
+            "win": 123,
+            "loss": 69,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2437,
+            "date": 1728691213,
+            "rd": 70
+        },
+        "best": {
+            "rating": 2513,
+            "date": 1714704633,
+            "game": "https://www.chess.com/game/live/4722019349"
+        },
+        "record": {
+            "win": 140,
+            "loss": 97,
+            "draw": 19
+        }
+    },
+    "fide": 2203,
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1576250459
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1576250459
+        }
+    },
+    "puzzle_rush": {}
+}

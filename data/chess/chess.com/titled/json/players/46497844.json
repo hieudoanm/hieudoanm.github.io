@@ -1,0 +1,136 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/46497844.cdc78ad4.200x200o.025172706fb6.jpeg",
+    "player_id": 46497844,
+    "@id": "https://api.chess.com/pub/player/darius321",
+    "url": "https://www.chess.com/member/Darius321",
+    "name": "Darius Vi\u0161kelis",
+    "username": "darius321",
+    "title": "FM",
+    "followers": 120,
+    "country": "https://api.chess.com/pub/country/LT",
+    "location": "Vilnius",
+    "last_online": 1734183487,
+    "joined": 1527244035,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2080,
+            "date": 1734183556,
+            "rd": 83
+        },
+        "best": {
+            "rating": 2155,
+            "date": 1643717982,
+            "game": "https://www.chess.com/game/daily/676665475"
+        },
+        "record": {
+            "win": 204,
+            "loss": 56,
+            "draw": 42,
+            "time_per_move": 22927,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 176,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 2
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 2026,
+            "date": 1733126444,
+            "rd": 112
+        },
+        "best": {
+            "rating": 2063,
+            "date": 1704874003,
+            "game": "https://www.chess.com/game/daily/472806529"
+        },
+        "record": {
+            "win": 41,
+            "loss": 12,
+            "draw": 15,
+            "time_per_move": 22927,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 176,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 2
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1968,
+            "date": 1615746719,
+            "rd": 59
+        },
+        "best": {
+            "rating": 1968,
+            "date": 1615746511,
+            "game": "https://www.chess.com/game/live/6263630576"
+        },
+        "record": {
+            "win": 68,
+            "loss": 16,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2044,
+            "date": 1617296303,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2125,
+            "date": 1603649005,
+            "game": "https://www.chess.com/game/live/6589527837"
+        },
+        "record": {
+            "win": 134,
+            "loss": 84,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2290,
+            "date": 1730031918,
+            "rd": 78
+        },
+        "best": {
+            "rating": 2407,
+            "date": 1606932326,
+            "game": "https://www.chess.com/game/live/97700971629"
+        },
+        "record": {
+            "win": 2769,
+            "loss": 2183,
+            "draw": 331
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3516,
+            "date": 1732455232
+        },
+        "lowest": {
+            "rating": 816,
+            "date": 1538800128
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

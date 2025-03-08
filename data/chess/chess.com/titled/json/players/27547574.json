@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/27547574.acb9d52c.200x200o.210c48bf720a.jpg",
+    "player_id": 27547574,
+    "@id": "https://api.chess.com/pub/player/only_strong_moves",
+    "url": "https://www.chess.com/member/only_strong_moves",
+    "name": "Maksym Dubnevych",
+    "username": "only_strong_moves",
+    "title": "FM",
+    "followers": 94,
+    "country": "https://api.chess.com/pub/country/UA",
+    "last_online": 1734166368,
+    "joined": 1459544028,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1372,
+            "date": 1717871950,
+            "rd": 170
+        },
+        "best": {
+            "rating": 1453,
+            "date": 1648899551,
+            "game": "https://www.chess.com/game/daily/390560417"
+        },
+        "record": {
+            "win": 5,
+            "loss": 7,
+            "draw": 2,
+            "time_per_move": 14645,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2218,
+            "date": 1728986632,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2270,
+            "date": 1648057484,
+            "game": "https://www.chess.com/game/live/6007464705"
+        },
+        "record": {
+            "win": 93,
+            "loss": 56,
+            "draw": 15
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2648,
+            "date": 1734169400,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2847,
+            "date": 1718449682,
+            "game": "https://www.chess.com/game/live/100117504639"
+        },
+        "record": {
+            "win": 1800,
+            "loss": 1468,
+            "draw": 174
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2749,
+            "date": 1734092532,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2835,
+            "date": 1733851061,
+            "game": "https://www.chess.com/game/live/126466127987"
+        },
+        "record": {
+            "win": 3806,
+            "loss": 3279,
+            "draw": 481
+        }
+    },
+    "fide": 2293,
+    "tactics": {
+        "highest": {
+            "rating": 4100,
+            "date": 1560154659
+        },
+        "lowest": {
+            "rating": 751,
+            "date": 1471860374
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/327020419.6bd8c24f.200x200o.00bf793b38d2.jpg",
+    "player_id": 327020419,
+    "@id": "https://api.chess.com/pub/player/vorobei1978",
+    "url": "https://www.chess.com/member/Vorobei1978",
+    "name": "Denis Trifonov",
+    "username": "vorobei1978",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/BY",
+    "last_online": 1734165325,
+    "joined": 1700377985,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

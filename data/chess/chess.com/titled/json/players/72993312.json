@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/72993312.9d82cd72.200x200o.e79a1618f08b.jpeg",
+    "player_id": 72993312,
+    "@id": "https://api.chess.com/pub/player/igor_kowalski",
+    "url": "https://www.chess.com/member/Igor_Kowalski",
+    "name": "Igor Kowalski",
+    "username": "igor_kowalski",
+    "title": "IM",
+    "followers": 332,
+    "country": "https://api.chess.com/pub/country/PL",
+    "location": "Warsaw",
+    "last_online": 1734173373,
+    "joined": 1583255698,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2486,
+            "date": 1730832522,
+            "rd": 205
+        },
+        "best": {
+            "rating": 2486,
+            "date": 1641762949,
+            "game": "https://www.chess.com/game/live/35281049183"
+        },
+        "record": {
+            "win": 28,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 3008,
+            "date": 1733495741,
+            "rd": 42
+        },
+        "best": {
+            "rating": 3110,
+            "date": 1664884452,
+            "game": "https://www.chess.com/game/live/75108044901"
+        },
+        "record": {
+            "win": 8690,
+            "loss": 4201,
+            "draw": 672
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2901,
+            "date": 1733856874,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2905,
+            "date": 1705246457,
+            "game": "https://www.chess.com/game/live/55028748507"
+        },
+        "record": {
+            "win": 1235,
+            "loss": 782,
+            "draw": 210
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1583255698
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1583255698
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

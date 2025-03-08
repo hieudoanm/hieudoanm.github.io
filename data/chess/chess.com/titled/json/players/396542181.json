@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/396542181.c8cdb559.200x200o.492e75bfbfba.jpg",
+    "player_id": 396542181,
+    "@id": "https://api.chess.com/pub/player/caissa20188",
+    "url": "https://www.chess.com/member/Caissa20188",
+    "username": "caissa20188",
+    "title": "WCM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/MX",
+    "last_online": 1734138410,
+    "joined": 1729215576,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2053,
+            "date": 1733798731,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2059,
+            "date": 1730769440,
+            "game": "https://www.chess.com/game/live/124507761327"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2062,
+            "date": 1734134273,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2134,
+            "date": 1732289703,
+            "game": "https://www.chess.com/game/live/125910502809"
+        },
+        "record": {
+            "win": 64,
+            "loss": 66,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2144,
+            "date": 1734125981,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2190,
+            "date": 1731864161,
+            "game": "https://www.chess.com/game/live/126572937277"
+        },
+        "record": {
+            "win": 106,
+            "loss": 81,
+            "draw": 8
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3071,
+            "date": 1730385604
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1729215576
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 41,
+            "score": 40
+        }
+    }
+}

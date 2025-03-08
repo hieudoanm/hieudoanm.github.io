@@ -1,0 +1,18 @@
+{
+    "player_id": 170188057,
+    "@id": "https://api.chess.com/pub/player/ticoluis",
+    "url": "https://www.chess.com/member/Ticoluis",
+    "name": "H\u00e9ctor L Gil Alba",
+    "username": "ticoluis",
+    "title": "FM",
+    "followers": 174,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Espa\u00f1a",
+    "last_online": 1734126500,
+    "joined": 1643037212,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

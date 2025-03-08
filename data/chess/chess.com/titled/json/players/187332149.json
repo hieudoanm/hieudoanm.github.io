@@ -1,0 +1,85 @@
+{
+    "player_id": 187332149,
+    "@id": "https://api.chess.com/pub/player/mydream003",
+    "url": "https://www.chess.com/member/MyDream003",
+    "name": "Zou Chen",
+    "username": "mydream003",
+    "title": "IM",
+    "followers": 32,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734139291,
+    "joined": 1655600451,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2070,
+            "date": 1733985688,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2070,
+            "date": 1733985688,
+            "game": "https://www.chess.com/game/live/123415797149"
+        },
+        "record": {
+            "win": 8,
+            "loss": 2,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2766,
+            "date": 1733962946,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2786,
+            "date": 1713693115,
+            "game": "https://www.chess.com/game/live/100720937897"
+        },
+        "record": {
+            "win": 180,
+            "loss": 113,
+            "draw": 22
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2829,
+            "date": 1734141490,
+            "rd": 33
+        },
+        "best": {
+            "rating": 3005,
+            "date": 1726456985,
+            "game": "https://www.chess.com/game/live/108232332141"
+        },
+        "record": {
+            "win": 1449,
+            "loss": 853,
+            "draw": 325
+        }
+    },
+    "fide": 2449,
+    "tactics": {
+        "highest": {
+            "rating": 3517,
+            "date": 1730374580
+        },
+        "lowest": {
+            "rating": 2408,
+            "date": 1659090235
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 69,
+            "score": 66
+        }
+    }
+}

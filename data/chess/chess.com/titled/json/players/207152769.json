@@ -1,0 +1,82 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/207152769.320b99af.200x200o.0d38a71db7fd.jpg",
+    "player_id": 207152769,
+    "@id": "https://api.chess.com/pub/player/formentopaolo",
+    "url": "https://www.chess.com/member/FormentoPaolo",
+    "name": "Paolo Formento",
+    "username": "formentopaolo",
+    "title": "FM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/IT",
+    "location": "Imperia",
+    "last_online": 1734097604,
+    "joined": 1668775651,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2412,
+            "date": 1692835646,
+            "rd": 348
+        },
+        "best": {
+            "rating": 2412,
+            "date": 1675272088,
+            "game": "https://www.chess.com/game/live/81438044527"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2521,
+            "date": 1722511251,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2522,
+            "date": 1722510967,
+            "game": "https://www.chess.com/game/live/116248873151"
+        },
+        "record": {
+            "win": 79,
+            "loss": 46,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2419,
+            "date": 1729905339,
+            "rd": 78
+        },
+        "best": {
+            "rating": 2454,
+            "date": 1729904421,
+            "game": "https://www.chess.com/game/live/113162355401"
+        },
+        "record": {
+            "win": 138,
+            "loss": 98,
+            "draw": 12
+        }
+    },
+    "fide": 2401,
+    "tactics": {
+        "highest": {
+            "rating": 1087,
+            "date": 1715762405
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1670371669
+        }
+    },
+    "puzzle_rush": {}
+}

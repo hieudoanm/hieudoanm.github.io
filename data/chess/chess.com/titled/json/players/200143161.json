@@ -1,0 +1,68 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/200143161.8278b7f6.200x200o.212c6f77199b.jpg",
+    "player_id": 200143161,
+    "@id": "https://api.chess.com/pub/player/herewecomes1",
+    "url": "https://www.chess.com/member/herewecomes1",
+    "name": "August Jalving",
+    "username": "herewecomes1",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/DK",
+    "last_online": 1733516454,
+    "joined": 1664894800,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2069,
+            "date": 1669570159,
+            "rd": 113
+        },
+        "best": {
+            "rating": 2072,
+            "date": 1666430790,
+            "game": "https://www.chess.com/game/live/60168595583"
+        },
+        "record": {
+            "win": 4,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2239,
+            "date": 1733406735,
+            "rd": 75
+        },
+        "best": {
+            "rating": 2239,
+            "date": 1733406735,
+            "game": "https://www.chess.com/game/live/127144838239"
+        },
+        "record": {
+            "win": 15,
+            "loss": 5,
+            "draw": 2
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1114,
+            "date": 1733405268
+        },
+        "lowest": {
+            "rating": 1012,
+            "date": 1665207535
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
+}

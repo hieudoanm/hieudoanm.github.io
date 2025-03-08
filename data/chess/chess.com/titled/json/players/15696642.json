@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/15696642.815a16e9.200x200o.4846b6849543.jpeg",
+    "player_id": 15696642,
+    "@id": "https://api.chess.com/pub/player/vangulio",
+    "url": "https://www.chess.com/member/vangulio",
+    "name": "Jorge Luis Baules Rodriguez",
+    "username": "vangulio",
+    "title": "IM",
+    "followers": 107,
+    "country": "https://api.chess.com/pub/country/PA",
+    "location": "Panama City, Panama",
+    "last_online": 1734044396,
+    "joined": 1390399959,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1185,
+            "date": 1733840322,
+            "rd": 227
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1390399959,
+            "game": "https://www.chess.com/game/daily/657081589"
+        },
+        "record": {
+            "win": 7,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 70194,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2001,
+            "date": 1724355791,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2194,
+            "date": 1596821172,
+            "game": "https://www.chess.com/game/live/5264927098"
+        },
+        "record": {
+            "win": 28,
+            "loss": 3,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2558,
+            "date": 1732993195,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2690,
+            "date": 1645038231,
+            "game": "https://www.chess.com/game/live/101619752593"
+        },
+        "record": {
+            "win": 138,
+            "loss": 92,
+            "draw": 14
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2562,
+            "date": 1721482921,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2616,
+            "date": 1643140997,
+            "game": "https://www.chess.com/game/live/98558797219"
+        },
+        "record": {
+            "win": 117,
+            "loss": 63,
+            "draw": 14
+        }
+    },
+    "fide": 2355,
+    "tactics": {
+        "highest": {
+            "rating": 3433,
+            "date": 1717560249
+        },
+        "lowest": {
+            "rating": 1349,
+            "date": 1486754954
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

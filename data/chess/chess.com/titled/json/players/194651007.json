@@ -1,0 +1,80 @@
+{
+    "player_id": 194651007,
+    "@id": "https://api.chess.com/pub/player/dinnukhammedtulendinov",
+    "url": "https://www.chess.com/member/Dinnukhammedtulendinov",
+    "name": "Dinmukhammed Tulendinov",
+    "username": "dinnukhammedtulendinov",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1734002687,
+    "joined": 1661421411,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2299,
+            "date": 1726852507,
+            "rd": 49
+        },
+        "record": {
+            "win": 0,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2399,
+            "date": 1732986018,
+            "rd": 87
+        },
+        "best": {
+            "rating": 2475,
+            "date": 1727794270,
+            "game": "https://www.chess.com/game/live/121595432161"
+        },
+        "record": {
+            "win": 9,
+            "loss": 9,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2407,
+            "date": 1734003392,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2435,
+            "date": 1732547617,
+            "game": "https://www.chess.com/game/live/124583399511"
+        },
+        "record": {
+            "win": 238,
+            "loss": 244,
+            "draw": 34
+        }
+    },
+    "fide": 2303,
+    "tactics": {
+        "highest": {
+            "rating": 2785,
+            "date": 1732894240
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1661421411
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 40
+        }
+    }
+}

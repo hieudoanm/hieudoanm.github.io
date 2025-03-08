@@ -1,0 +1,17 @@
+{
+    "player_id": 346414273,
+    "@id": "https://api.chess.com/pub/player/drm_champ3",
+    "url": "https://www.chess.com/member/DRM_CHAMP3",
+    "name": "DR",
+    "username": "drm_champ3",
+    "title": "CM",
+    "followers": 67,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734145241,
+    "joined": 1708424436,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

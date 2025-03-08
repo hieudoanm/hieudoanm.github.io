@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/278889063.fe6063b6.200x200o.bf149320505a.jpg",
+    "player_id": 278889063,
+    "@id": "https://api.chess.com/pub/player/katakuridono",
+    "url": "https://www.chess.com/member/KatakuriDono",
+    "name": "Mathis Sabatier",
+    "username": "katakuridono",
+    "title": "CM",
+    "followers": 31,
+    "country": "https://api.chess.com/pub/country/FR",
+    "location": "Saint Offenge",
+    "last_online": 1733911567,
+    "joined": 1682377698,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1482,
+            "date": 1727339746,
+            "rd": 84
+        },
+        "best": {
+            "rating": 1605,
+            "date": 1689284269,
+            "game": "https://www.chess.com/game/daily/540019261"
+        },
+        "record": {
+            "win": 23,
+            "loss": 8,
+            "draw": 2,
+            "time_per_move": 6943,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2149,
+            "date": 1733835028,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2393,
+            "date": 1684676336,
+            "game": "https://www.chess.com/game/live/78414161681"
+        },
+        "record": {
+            "win": 30,
+            "loss": 18,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2206,
+            "date": 1732468226,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2296,
+            "date": 1718381658,
+            "game": "https://www.chess.com/game/live/112206090257"
+        },
+        "record": {
+            "win": 175,
+            "loss": 140,
+            "draw": 26
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2414,
+            "date": 1733875520,
+            "rd": 52
+        },
+        "best": {
+            "rating": 2432,
+            "date": 1733249194,
+            "game": "https://www.chess.com/game/live/116697583155"
+        },
+        "record": {
+            "win": 431,
+            "loss": 401,
+            "draw": 82
+        }
+    },
+    "fide": 2125,
+    "tactics": {
+        "highest": {
+            "rating": 3216,
+            "date": 1717917430
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1682377698
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

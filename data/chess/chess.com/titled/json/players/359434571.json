@@ -1,0 +1,50 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/359434571.34e56cdd.200x200o.25bc16ef75cb.jpg",
+    "player_id": 359434571,
+    "@id": "https://api.chess.com/pub/player/mikamis_fault",
+    "url": "https://www.chess.com/member/Mikamis_Fault",
+    "username": "mikamis_fault",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/JP",
+    "last_online": 1734182501,
+    "joined": 1714090596,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2744,
+            "date": 1732665685,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2745,
+            "date": 1732664293,
+            "game": "https://www.chess.com/game/live/113704770647"
+        },
+        "record": {
+            "win": 151,
+            "loss": 98,
+            "draw": 29
+        }
+    },
+    "fide": 2548,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1714090596
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1714090596
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        }
+    }
+}

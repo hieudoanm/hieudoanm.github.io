@@ -1,0 +1,16 @@
+{
+    "player_id": 102497646,
+    "@id": "https://api.chess.com/pub/player/sir_frankie_crisp",
+    "url": "https://www.chess.com/member/Sir_Frankie_Crisp",
+    "username": "sir_frankie_crisp",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1726585404,
+    "joined": 1607356202,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

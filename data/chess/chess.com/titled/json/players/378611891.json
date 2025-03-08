@@ -1,0 +1,16 @@
+{
+    "player_id": 378611891,
+    "@id": "https://api.chess.com/pub/player/theonetrueim",
+    "url": "https://www.chess.com/member/TheOneTrueIM",
+    "username": "theonetrueim",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/ZA",
+    "last_online": 1733989490,
+    "joined": 1722547341,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

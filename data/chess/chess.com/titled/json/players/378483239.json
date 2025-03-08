@@ -1,0 +1,78 @@
+{
+    "player_id": 378483239,
+    "@id": "https://api.chess.com/pub/player/hai_rapidgiulesti",
+    "url": "https://www.chess.com/member/Hai_RapidGiulesti",
+    "username": "hai_rapidgiulesti",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/RO",
+    "last_online": 1733995103,
+    "joined": 1722491411,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2097,
+            "date": 1733996145,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2105,
+            "date": 1733427339,
+            "game": "https://www.chess.com/game/live/127165219501"
+        },
+        "record": {
+            "win": 18,
+            "loss": 5,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1927,
+            "date": 1733995235,
+            "rd": 203
+        },
+        "best": {
+            "rating": 1927,
+            "date": 1733995235,
+            "game": "https://www.chess.com/game/live/127734011393"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1968,
+            "date": 1730814937,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2045,
+            "date": 1722509100,
+            "game": "https://www.chess.com/game/live/120468019671"
+        },
+        "record": {
+            "win": 31,
+            "loss": 29,
+            "draw": 0
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2713,
+            "date": 1723581714
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1722491411
+        }
+    },
+    "puzzle_rush": {}
+}

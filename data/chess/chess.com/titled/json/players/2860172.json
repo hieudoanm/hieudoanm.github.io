@@ -1,0 +1,16 @@
+{
+    "player_id": 2860172,
+    "@id": "https://api.chess.com/pub/player/wanyaland",
+    "url": "https://www.chess.com/member/wanyaland",
+    "username": "wanyaland",
+    "title": "FM",
+    "followers": 232,
+    "country": "https://api.chess.com/pub/country/UG",
+    "last_online": 1732943504,
+    "joined": 1274802031,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

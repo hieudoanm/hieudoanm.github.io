@@ -1,0 +1,51 @@
+{
+    "player_id": 141346279,
+    "@id": "https://api.chess.com/pub/player/echsoterik",
+    "url": "https://www.chess.com/member/Echsoterik",
+    "name": "Richard Zienert",
+    "username": "echsoterik",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1733860587,
+    "joined": 1621628113,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2514,
+            "date": 1733854022,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2519,
+            "date": 1733853481,
+            "game": "https://www.chess.com/game/live/127591239607"
+        },
+        "record": {
+            "win": 105,
+            "loss": 49,
+            "draw": 16
+        }
+    },
+    "fide": 2266,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1621628113
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1621628113
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

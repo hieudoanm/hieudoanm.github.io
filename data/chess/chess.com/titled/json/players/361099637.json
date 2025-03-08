@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/361099637.1f19e2e8.200x200o.9d95275baa58.jpg",
+    "player_id": 361099637,
+    "@id": "https://api.chess.com/pub/player/jethrovv",
+    "url": "https://www.chess.com/member/jethrovv",
+    "name": "Jethro Dino Aquino",
+    "username": "jethrovv",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/PH",
+    "location": "Lucena",
+    "last_online": 1734179741,
+    "joined": 1714811118,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2570,
+            "date": 1733932779,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2729,
+            "date": 1721404247,
+            "game": "https://www.chess.com/game/live/120410380443"
+        },
+        "record": {
+            "win": 493,
+            "loss": 632,
+            "draw": 67
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2666,
+            "date": 1734183128,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2769,
+            "date": 1726430529,
+            "game": "https://www.chess.com/game/live/115652349781"
+        },
+        "record": {
+            "win": 129,
+            "loss": 118,
+            "draw": 35
+        }
+    },
+    "fide": 2316,
+    "tactics": {
+        "highest": {
+            "rating": 3052,
+            "date": 1721819685
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1714811118
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 49,
+            "score": 46
+        }
+    }
+}

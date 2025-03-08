@@ -1,0 +1,89 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/207852275.0d9ef396.200x200o.140b0d3a1d98.jpg",
+    "player_id": 207852275,
+    "@id": "https://api.chess.com/pub/player/philippians46",
+    "url": "https://www.chess.com/member/Philippians46",
+    "name": "Andy Woodward",
+    "username": "philippians46",
+    "title": "GM",
+    "followers": 477,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734131552,
+    "joined": 1669071125,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2352,
+            "date": 1731707658,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2506,
+            "date": 1676308478,
+            "game": "https://www.chess.com/game/live/121104641243"
+        },
+        "record": {
+            "win": 8,
+            "loss": 9,
+            "draw": 7
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2935,
+            "date": 1734140268,
+            "rd": 18
+        },
+        "best": {
+            "rating": 3258,
+            "date": 1720209369,
+            "game": "https://www.chess.com/game/live/106087802985"
+        },
+        "record": {
+            "win": 4241,
+            "loss": 2400,
+            "draw": 395
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 3185,
+            "date": 1734183574,
+            "rd": 32
+        },
+        "best": {
+            "rating": 3215,
+            "date": 1734093855,
+            "game": "https://www.chess.com/game/live/124317016365"
+        },
+        "record": {
+            "win": 914,
+            "loss": 596,
+            "draw": 179
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 5584,
+            "date": 1682768360
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1673324929
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 103,
+            "score": 100
+        },
+        "daily": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

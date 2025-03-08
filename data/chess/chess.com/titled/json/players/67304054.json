@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/67304054.b75d68c0.200x200o.9206dd99424e.jpg",
+    "player_id": 67304054,
+    "@id": "https://api.chess.com/pub/player/gordonzyxu",
+    "url": "https://www.chess.com/member/gordonzyxu",
+    "name": "Gordon Xu",
+    "username": "gordonzyxu",
+    "title": "CM",
+    "followers": 92,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "California, Us",
+    "last_online": 1734052528,
+    "joined": 1572415224,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1695,
+            "date": 1734105411,
+            "rd": 98
+        },
+        "best": {
+            "rating": 1705,
+            "date": 1724693019,
+            "game": "https://www.chess.com/game/daily/347346817"
+        },
+        "record": {
+            "win": 179,
+            "loss": 81,
+            "draw": 7,
+            "time_per_move": 23718,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1623,
+            "date": 1722279237,
+            "rd": 232
+        },
+        "best": {
+            "rating": 1623,
+            "date": 1722279237,
+            "game": "https://www.chess.com/game/daily/677010609"
+        },
+        "record": {
+            "win": 8,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 23718,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1828,
+            "date": 1730949828,
+            "rd": 139
+        },
+        "best": {
+            "rating": 1992,
+            "date": 1645371525,
+            "game": "https://www.chess.com/game/live/32803171667"
+        },
+        "record": {
+            "win": 233,
+            "loss": 160,
+            "draw": 28
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1976,
+            "date": 1731520706,
+            "rd": 94
+        },
+        "best": {
+            "rating": 2014,
+            "date": 1721592387,
+            "game": "https://www.chess.com/game/live/36391211433"
+        },
+        "record": {
+            "win": 287,
+            "loss": 201,
+            "draw": 31
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2319,
+            "date": 1731714943,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2325,
+            "date": 1728931468,
+            "game": "https://www.chess.com/game/live/87082854871"
+        },
+        "record": {
+            "win": 897,
+            "loss": 446,
+            "draw": 59
+        }
+    },
+    "fide": 2002,
+    "tactics": {
+        "highest": {
+            "rating": 3674,
+            "date": 1681871261
+        },
+        "lowest": {
+            "rating": 416,
+            "date": 1572493636
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 53
+        }
+    }
+}

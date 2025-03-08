@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/10799404.738495d4.200x200o.7b78fd984c87.jpg",
+    "player_id": 10799404,
+    "@id": "https://api.chess.com/pub/player/masruri_rahman",
+    "url": "https://www.chess.com/member/masruri_rahman",
+    "name": "Masruri Rahman",
+    "username": "masruri_rahman",
+    "title": "FM",
+    "followers": 506,
+    "country": "https://api.chess.com/pub/country/ID",
+    "location": "Jakarta",
+    "last_online": 1734152733,
+    "joined": 1360734127,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2335,
+            "date": 1733727487,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2335,
+            "date": 1733721577,
+            "game": "https://www.chess.com/game/live/126562802671"
+        },
+        "record": {
+            "win": 57,
+            "loss": 8,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2899,
+            "date": 1732784633,
+            "rd": 19
+        },
+        "best": {
+            "rating": 2899,
+            "date": 1732784633,
+            "game": "https://www.chess.com/game/live/124637983529"
+        },
+        "record": {
+            "win": 635,
+            "loss": 517,
+            "draw": 76
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2804,
+            "date": 1733903882,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2868,
+            "date": 1732475975,
+            "game": "https://www.chess.com/game/live/126180570677"
+        },
+        "record": {
+            "win": 656,
+            "loss": 498,
+            "draw": 132
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3475,
+            "date": 1733039346
+        },
+        "lowest": {
+            "rating": 1382,
+            "date": 1360734198
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 46
+        }
+    }
+}

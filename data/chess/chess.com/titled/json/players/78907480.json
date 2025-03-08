@@ -1,0 +1,45 @@
+{
+    "player_id": 78907480,
+    "@id": "https://api.chess.com/pub/player/mi2497",
+    "url": "https://www.chess.com/member/mi2497",
+    "name": "Oleg Gladyszev",
+    "username": "mi2497",
+    "title": "IM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1634079091,
+    "joined": 1588936652,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2501,
+            "date": 1633964544,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2501,
+            "date": 1633964544,
+            "game": "https://www.chess.com/game/live/6240769505"
+        },
+        "record": {
+            "win": 319,
+            "loss": 306,
+            "draw": 45
+        }
+    },
+    "fide": 2410,
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1588936652
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1588936652
+        }
+    },
+    "puzzle_rush": {}
+}

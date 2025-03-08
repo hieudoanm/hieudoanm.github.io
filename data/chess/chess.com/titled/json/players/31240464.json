@@ -1,0 +1,76 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/31240464.77fed9fa.200x200o.27e2a0eb375b.jpg",
+    "player_id": 31240464,
+    "@id": "https://api.chess.com/pub/player/mohsengabr2002",
+    "url": "https://www.chess.com/member/mohsengabr2002",
+    "name": "Mohsen Gabr",
+    "username": "mohsengabr2002",
+    "title": "FM",
+    "followers": 48,
+    "country": "https://api.chess.com/pub/country/EG",
+    "last_online": 1733563265,
+    "joined": 1480397231,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2017,
+            "date": 1679759354,
+            "rd": 333
+        },
+        "best": {
+            "rating": 2017,
+            "date": 1679759354,
+            "game": "https://www.chess.com/game/live/73497815967"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1899,
+            "date": 1732666664,
+            "rd": 263
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2442,
+            "date": 1734171221,
+            "rd": 19
+        },
+        "best": {
+            "rating": 2547,
+            "date": 1732775286,
+            "game": "https://www.chess.com/game/live/77080824997"
+        },
+        "record": {
+            "win": 1526,
+            "loss": 1671,
+            "draw": 169
+        }
+    },
+    "fide": 2208,
+    "tactics": {
+        "highest": {
+            "rating": 2048,
+            "date": 1677590112
+        },
+        "lowest": {
+            "rating": 1322,
+            "date": 1480397294
+        }
+    },
+    "puzzle_rush": {}
+}

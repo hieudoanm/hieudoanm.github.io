@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39072512.6f508a1c.200x200o.8177f89916d8.jpeg",
+    "player_id": 39072512,
+    "@id": "https://api.chess.com/pub/player/timurist",
+    "url": "https://www.chess.com/member/Timurist",
+    "name": "Timur Radionov",
+    "username": "timurist",
+    "title": "FM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/MT",
+    "last_online": 1734156315,
+    "joined": 1506799286,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

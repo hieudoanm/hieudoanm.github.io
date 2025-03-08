@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34673120.c9a7f7e0.200x200o.174c880122ec.jpeg",
+    "player_id": 34673120,
+    "@id": "https://api.chess.com/pub/player/woodhy",
+    "url": "https://www.chess.com/member/woodhy",
+    "name": "Ettore Stromboli",
+    "username": "woodhy",
+    "title": "FM",
+    "followers": 41,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1732523540,
+    "joined": 1491845229,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

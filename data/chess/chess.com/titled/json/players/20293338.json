@@ -1,0 +1,88 @@
+{
+    "player_id": 20293338,
+    "@id": "https://api.chess.com/pub/player/harrisonchess21",
+    "url": "https://www.chess.com/member/harrisonchess21",
+    "name": "Lye Lik Zang",
+    "username": "harrisonchess21",
+    "title": "FM",
+    "followers": 37,
+    "country": "https://api.chess.com/pub/country/MY",
+    "last_online": 1734099256,
+    "joined": 1419327318,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2400,
+            "date": 1680851226,
+            "rd": 265
+        },
+        "best": {
+            "rating": 2400,
+            "date": 1590203036,
+            "game": "https://www.chess.com/game/live/1866370221"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2718,
+            "date": 1732099250,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2779,
+            "date": 1730971748,
+            "game": "https://www.chess.com/game/live/122549678091"
+        },
+        "record": {
+            "win": 489,
+            "loss": 380,
+            "draw": 74
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2594,
+            "date": 1730972968,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2652,
+            "date": 1587474367,
+            "game": "https://www.chess.com/game/live/100020790931"
+        },
+        "record": {
+            "win": 1133,
+            "loss": 877,
+            "draw": 186
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3003,
+            "date": 1595633836
+        },
+        "lowest": {
+            "rating": 1309,
+            "date": 1419849479
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        },
+        "daily": {
+            "total_attempts": 35,
+            "score": 32
+        }
+    }
+}

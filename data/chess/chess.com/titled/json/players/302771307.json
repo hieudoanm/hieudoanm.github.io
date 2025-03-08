@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/302771307.eac977c5.200x200o.22bd1c2d8a16.jpg",
+    "player_id": 302771307,
+    "@id": "https://api.chess.com/pub/player/heydarli77",
+    "url": "https://www.chess.com/member/Heydarli77",
+    "name": "Kanan Heydarli",
+    "username": "heydarli77",
+    "title": "IM",
+    "followers": 91,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1733564442,
+    "joined": 1690662870,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1412,
+            "date": 1733336979,
+            "rd": 179
+        },
+        "best": {
+            "rating": 1412,
+            "date": 1729922250,
+            "game": "https://www.chess.com/game/daily/631024139"
+        },
+        "record": {
+            "win": 6,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 58208,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2284,
+            "date": 1734024435,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2300,
+            "date": 1697280203,
+            "game": "https://www.chess.com/game/live/122145613137"
+        },
+        "record": {
+            "win": 219,
+            "loss": 89,
+            "draw": 62
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1954,
+            "date": 1704308568,
+            "rd": 264
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2468,
+            "date": 1731397579,
+            "rd": 61
+        },
+        "best": {
+            "rating": 2482,
+            "date": 1722802904,
+            "game": "https://www.chess.com/game/live/117932354067"
+        },
+        "record": {
+            "win": 338,
+            "loss": 215,
+            "draw": 72
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3264,
+            "date": 1719239315
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1690662870
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

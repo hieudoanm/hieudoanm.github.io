@@ -1,0 +1,44 @@
+{
+    "player_id": 378322159,
+    "@id": "https://api.chess.com/pub/player/pipin-1115",
+    "url": "https://www.chess.com/member/Pipin-1115",
+    "username": "pipin-1115",
+    "title": "WCM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1728744485,
+    "joined": 1722412720,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 1920,
+            "date": 1728745594,
+            "rd": 144
+        },
+        "best": {
+            "rating": 1970,
+            "date": 1728744961,
+            "game": "https://www.chess.com/game/live/122483642329"
+        },
+        "record": {
+            "win": 3,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1722412720
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1722412720
+        }
+    },
+    "puzzle_rush": {}
+}

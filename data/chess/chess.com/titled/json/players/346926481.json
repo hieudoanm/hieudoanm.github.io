@@ -1,0 +1,16 @@
+{
+    "player_id": 346926481,
+    "@id": "https://api.chess.com/pub/player/chesscoach2025",
+    "url": "https://www.chess.com/member/chesscoach2025",
+    "username": "chesscoach2025",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1727917402,
+    "joined": 1708646668,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

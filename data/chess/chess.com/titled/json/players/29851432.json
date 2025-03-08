@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/29851432.8b7f5741.200x200o.83f79f91d7a6.jpg",
+    "player_id": 29851432,
+    "@id": "https://api.chess.com/pub/player/resha1988",
+    "url": "https://www.chess.com/member/resha1988",
+    "name": "Alexey Reshetnikov",
+    "username": "resha1988",
+    "title": "IM",
+    "followers": 40,
+    "country": "https://api.chess.com/pub/country/AE",
+    "last_online": 1734102428,
+    "joined": 1473415119,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2205,
+            "date": 1647170806,
+            "rd": 184
+        },
+        "best": {
+            "rating": 2205,
+            "date": 1609532752,
+            "game": "https://www.chess.com/game/live/1758504718"
+        },
+        "record": {
+            "win": 5,
+            "loss": 13,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2645,
+            "date": 1731780060,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2785,
+            "date": 1665167043,
+            "game": "https://www.chess.com/game/live/4487265620"
+        },
+        "record": {
+            "win": 372,
+            "loss": 318,
+            "draw": 38
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2773,
+            "date": 1733854044,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2851,
+            "date": 1644746347,
+            "game": "https://www.chess.com/game/live/3500867102"
+        },
+        "record": {
+            "win": 2827,
+            "loss": 2032,
+            "draw": 571
+        }
+    },
+    "fide": 2492,
+    "tactics": {
+        "highest": {
+            "rating": 3179,
+            "date": 1665768342
+        },
+        "lowest": {
+            "rating": 2007,
+            "date": 1473766174
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        }
+    }
+}

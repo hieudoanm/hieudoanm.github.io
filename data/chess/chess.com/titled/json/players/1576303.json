@@ -1,0 +1,64 @@
+{
+    "player_id": 1576303,
+    "@id": "https://api.chess.com/pub/player/pemered",
+    "url": "https://www.chess.com/member/Pemered",
+    "name": "Mark Burgess",
+    "username": "pemered",
+    "title": "FM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/XS",
+    "location": "Edinburgh",
+    "last_online": 1734120021,
+    "joined": 1225726117,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2330,
+            "date": 1733604596,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2373,
+            "date": 1731349183,
+            "game": "https://www.chess.com/game/live/121377024697"
+        },
+        "record": {
+            "win": 141,
+            "loss": 73,
+            "draw": 21
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2240,
+            "date": 1734120595,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2417,
+            "date": 1728422798,
+            "game": "https://www.chess.com/game/live/122160006293"
+        },
+        "record": {
+            "win": 1519,
+            "loss": 1166,
+            "draw": 167
+        }
+    },
+    "fide": 2260,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1225726117
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1225726117
+        }
+    },
+    "puzzle_rush": {}
+}

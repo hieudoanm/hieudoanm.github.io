@@ -1,0 +1,103 @@
+{
+    "player_id": 181492329,
+    "@id": "https://api.chess.com/pub/player/novabbeseiungenio",
+    "url": "https://www.chess.com/member/NoVabbeSeiUnGenio",
+    "name": "Joshuaede Cappelletto",
+    "username": "novabbeseiungenio",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/HN",
+    "last_online": 1734180304,
+    "joined": 1650788366,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1727,
+            "date": 1726346485,
+            "rd": 252
+        },
+        "best": {
+            "rating": 1727,
+            "date": 1726346485,
+            "game": "https://www.chess.com/game/daily/691226889"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 90269,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2339,
+            "date": 1732363093,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2436,
+            "date": 1678119294,
+            "game": "https://www.chess.com/game/live/50748582557"
+        },
+        "record": {
+            "win": 47,
+            "loss": 23,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2577,
+            "date": 1714585220,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2785,
+            "date": 1690181752,
+            "game": "https://www.chess.com/game/live/84108032003"
+        },
+        "record": {
+            "win": 43,
+            "loss": 46,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2640,
+            "date": 1733751073,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2797,
+            "date": 1730382111,
+            "game": "https://www.chess.com/game/live/50188846351"
+        },
+        "record": {
+            "win": 1703,
+            "loss": 1511,
+            "draw": 218
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3558,
+            "date": 1678868258
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1654784937
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 68,
+            "score": 65
+        }
+    }
+}

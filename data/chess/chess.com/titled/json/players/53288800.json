@@ -1,0 +1,85 @@
+{
+    "player_id": 53288800,
+    "@id": "https://api.chess.com/pub/player/csativero",
+    "url": "https://www.chess.com/member/csativero",
+    "name": "Martin Botond Vodila",
+    "username": "csativero",
+    "title": "FM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/MZ",
+    "last_online": 1733868512,
+    "joined": 1544895322,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2317,
+            "date": 1719779263,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2317,
+            "date": 1712667351,
+            "game": "https://www.chess.com/game/live/106405143163"
+        },
+        "record": {
+            "win": 8,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2527,
+            "date": 1730932199,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2551,
+            "date": 1729603731,
+            "game": "https://www.chess.com/game/live/123294591721"
+        },
+        "record": {
+            "win": 174,
+            "loss": 93,
+            "draw": 15
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2352,
+            "date": 1732991586,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2444,
+            "date": 1717244203,
+            "game": "https://www.chess.com/game/live/123940244579"
+        },
+        "record": {
+            "win": 251,
+            "loss": 143,
+            "draw": 46
+        }
+    },
+    "fide": 2291,
+    "tactics": {
+        "highest": {
+            "rating": 3393,
+            "date": 1731080816
+        },
+        "lowest": {
+            "rating": 2268,
+            "date": 1665872251
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

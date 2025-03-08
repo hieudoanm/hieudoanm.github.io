@@ -1,0 +1,62 @@
+{
+    "player_id": 58333822,
+    "@id": "https://api.chess.com/pub/player/stewie_89",
+    "url": "https://www.chess.com/member/Stewie_89",
+    "name": "Javier Vallejo Diaz",
+    "username": "stewie_89",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734032916,
+    "joined": 1552215749,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2413,
+            "date": 1617297327,
+            "rd": 157
+        },
+        "best": {
+            "rating": 2413,
+            "date": 1617297327,
+            "game": "https://www.chess.com/game/live/11036111401"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2687,
+            "date": 1734080532,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2711,
+            "date": 1569059612,
+            "game": "https://www.chess.com/game/live/123091808675"
+        },
+        "record": {
+            "win": 423,
+            "loss": 361,
+            "draw": 103
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3320,
+            "date": 1702066785
+        },
+        "lowest": {
+            "rating": 1012,
+            "date": 1589020175
+        }
+    },
+    "puzzle_rush": {}
+}

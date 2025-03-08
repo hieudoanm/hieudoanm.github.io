@@ -1,0 +1,68 @@
+{
+    "player_id": 149497631,
+    "@id": "https://api.chess.com/pub/player/mikhailpanin",
+    "url": "https://www.chess.com/member/MikhailPanin",
+    "name": "Mikhail Panin",
+    "username": "mikhailpanin",
+    "title": "CM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734082752,
+    "joined": 1627617302,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2640,
+            "date": 1722489666,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2669,
+            "date": 1722186382,
+            "game": "https://www.chess.com/game/live/110091012419"
+        },
+        "record": {
+            "win": 118,
+            "loss": 71,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2639,
+            "date": 1726157095,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2733,
+            "date": 1723579220,
+            "game": "https://www.chess.com/game/live/112851558265"
+        },
+        "record": {
+            "win": 258,
+            "loss": 208,
+            "draw": 48
+        }
+    },
+    "fide": 2183,
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1627618050
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1627618050
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

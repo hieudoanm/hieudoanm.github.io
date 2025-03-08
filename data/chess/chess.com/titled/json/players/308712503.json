@@ -1,0 +1,83 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/308712503.5d82fc3c.200x200o.7d6cf9b85c09.jpg",
+    "player_id": 308712503,
+    "@id": "https://api.chess.com/pub/player/viktoker",
+    "url": "https://www.chess.com/member/Viktoker",
+    "name": "Luca Silva",
+    "username": "viktoker",
+    "title": "FM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/AR",
+    "last_online": 1734100118,
+    "joined": 1693180227,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1600,
+            "date": 1732375159,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 195543,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2450,
+            "date": 1733805442,
+            "rd": 56
+        },
+        "best": {
+            "rating": 2486,
+            "date": 1733072428,
+            "game": "https://www.chess.com/game/live/127543216991"
+        },
+        "record": {
+            "win": 92,
+            "loss": 94,
+            "draw": 12
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2524,
+            "date": 1733875649,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2634,
+            "date": 1723417574,
+            "game": "https://www.chess.com/game/live/124044692331"
+        },
+        "record": {
+            "win": 998,
+            "loss": 1096,
+            "draw": 228
+        }
+    },
+    "fide": 2246,
+    "tactics": {
+        "highest": {
+            "rating": 3011,
+            "date": 1730416724
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1693180227
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

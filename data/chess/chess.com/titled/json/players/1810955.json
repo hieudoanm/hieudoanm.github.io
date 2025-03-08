@@ -1,0 +1,18 @@
+{
+    "player_id": 1810955,
+    "@id": "https://api.chess.com/pub/player/dvella",
+    "url": "https://www.chess.com/member/dvella",
+    "name": "Duncan Vella",
+    "username": "dvella",
+    "title": "CM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/MT",
+    "location": "Swieqi",
+    "last_online": 1734116377,
+    "joined": 1236633693,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

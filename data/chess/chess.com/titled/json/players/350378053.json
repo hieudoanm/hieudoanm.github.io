@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/350378053.2b77153c.200x200o.2cdc15e693b3.jpg",
+    "player_id": 350378053,
+    "@id": "https://api.chess.com/pub/player/vrashank_chouhan",
+    "url": "https://www.chess.com/member/Vrashank_Chouhan",
+    "name": "Vrashank Chouhan",
+    "username": "vrashank_chouhan",
+    "title": "FM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734176351,
+    "joined": 1710243630,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

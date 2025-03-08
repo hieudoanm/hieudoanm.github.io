@@ -1,0 +1,99 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/182073697.6b71d746.200x200o.ce75815d18b1.jpeg",
+    "player_id": 182073697,
+    "@id": "https://api.chess.com/pub/player/ineverlikedyou",
+    "url": "https://www.chess.com/member/ineverlikedyou",
+    "name": "Benedikt Huber",
+    "username": "ineverlikedyou",
+    "title": "FM",
+    "followers": 21,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734105732,
+    "joined": 1651244518,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2000,
+            "date": 1729585431,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 9446,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2326,
+            "date": 1731772893,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2348,
+            "date": 1713185449,
+            "game": "https://www.chess.com/game/live/117992340829"
+        },
+        "record": {
+            "win": 66,
+            "loss": 33,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2483,
+            "date": 1733526036,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2588,
+            "date": 1721165818,
+            "game": "https://www.chess.com/game/live/114883748761"
+        },
+        "record": {
+            "win": 610,
+            "loss": 459,
+            "draw": 49
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2584,
+            "date": 1733847130,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2612,
+            "date": 1722373482,
+            "game": "https://www.chess.com/game/live/77988214641"
+        },
+        "record": {
+            "win": 191,
+            "loss": 186,
+            "draw": 19
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3315,
+            "date": 1724148343
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1651247219
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

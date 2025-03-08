@@ -1,0 +1,53 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/209.8fe13646.200x200o.dbc0175d618d.jpeg",
+    "player_id": 209,
+    "@id": "https://api.chess.com/pub/player/igorkhmelnitsky",
+    "url": "https://www.chess.com/member/IgorKhmelnitsky",
+    "name": "Igor Khmelnitsky",
+    "username": "igorkhmelnitsky",
+    "title": "IM",
+    "followers": 107,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Philadelphia, PA",
+    "last_online": 1734148818,
+    "joined": 1179603509,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2613,
+            "date": 1734149133,
+            "rd": 21
+        },
+        "best": {
+            "rating": 2622,
+            "date": 1691022901,
+            "game": "https://www.chess.com/game/live/11889314369"
+        },
+        "record": {
+            "win": 9195,
+            "loss": 8485,
+            "draw": 1493
+        }
+    },
+    "fide": 2450,
+    "tactics": {
+        "highest": {
+            "rating": 3756,
+            "date": 1733882698
+        },
+        "lowest": {
+            "rating": 1289,
+            "date": 1299525431
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 41
+        }
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "player_id": 285477351,
+    "@id": "https://api.chess.com/pub/player/mestre_soares",
+    "url": "https://www.chess.com/member/Mestre_Soares",
+    "name": "Roberto Suardi Jr.",
+    "username": "mestre_soares",
+    "title": "CM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/BR",
+    "last_online": 1733860449,
+    "joined": 1684104953,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2034,
+            "date": 1734082447,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2128,
+            "date": 1723936117,
+            "game": "https://www.chess.com/game/live/117673197133"
+        },
+        "record": {
+            "win": 1984,
+            "loss": 2147,
+            "draw": 443
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1789,
+            "date": 1717667884,
+            "rd": 249
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "fide": 2249,
+    "tactics": {
+        "highest": {
+            "rating": 2899,
+            "date": 1709656022
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1684104953
+        }
+    },
+    "puzzle_rush": {}
+}

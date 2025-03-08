@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/86782758.4ec230bb.200x200o.06e0ae68fd42.jpeg",
+    "player_id": 86782758,
+    "@id": "https://api.chess.com/pub/player/chesskingcasa",
+    "url": "https://www.chess.com/member/ChesskingCasa",
+    "name": "Casanova Sanches",
+    "username": "chesskingcasa",
+    "title": "CM",
+    "followers": 27,
+    "country": "https://api.chess.com/pub/country/SR",
+    "last_online": 1732311759,
+    "joined": 1594842348,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

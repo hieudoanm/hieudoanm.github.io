@@ -1,0 +1,16 @@
+{
+    "player_id": 5021460,
+    "@id": "https://api.chess.com/pub/player/el_ultimo_pablo",
+    "url": "https://www.chess.com/member/El_ultimo_Pablo",
+    "username": "el_ultimo_pablo",
+    "title": "CM",
+    "followers": 375,
+    "country": "https://api.chess.com/pub/country/CL",
+    "last_online": 1730364343,
+    "joined": 1303469532,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

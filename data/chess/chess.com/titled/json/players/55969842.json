@@ -1,0 +1,86 @@
+{
+    "player_id": 55969842,
+    "@id": "https://api.chess.com/pub/player/virgo15",
+    "url": "https://www.chess.com/member/Virgo15",
+    "name": "Munkhgal Gombosuren",
+    "username": "virgo15",
+    "title": "GM",
+    "followers": 125,
+    "country": "https://api.chess.com/pub/country/MN",
+    "location": "Ulaanbaatar",
+    "last_online": 1734173956,
+    "joined": 1547482645,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2303,
+            "date": 1730288988,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2614,
+            "date": 1597916467,
+            "game": "https://www.chess.com/game/live/5323736681"
+        },
+        "record": {
+            "win": 51,
+            "loss": 22,
+            "draw": 21
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2669,
+            "date": 1711787869,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2709,
+            "date": 1693833432,
+            "game": "https://www.chess.com/game/live/87572457021"
+        },
+        "record": {
+            "win": 80,
+            "loss": 58,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2700,
+            "date": 1734175432,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2932,
+            "date": 1720541067,
+            "game": "https://www.chess.com/game/live/98089790503"
+        },
+        "record": {
+            "win": 2795,
+            "loss": 2980,
+            "draw": 559
+        }
+    },
+    "fide": 2463,
+    "tactics": {
+        "highest": {
+            "rating": 4034,
+            "date": 1724642161
+        },
+        "lowest": {
+            "rating": 1004,
+            "date": 1557487740
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

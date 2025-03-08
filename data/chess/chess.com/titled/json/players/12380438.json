@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/12380438.d8def4f7.200x200o.576286eb9046.jpeg",
+    "player_id": 12380438,
+    "@id": "https://api.chess.com/pub/player/albert_kloc",
+    "url": "https://www.chess.com/member/ALBERT_KLOC",
+    "name": "Bartlomiej Mondrzycki",
+    "username": "albert_kloc",
+    "title": "CM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734169444,
+    "joined": 1371592195,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

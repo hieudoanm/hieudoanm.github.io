@@ -1,0 +1,80 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/294878173.5205b3a6.200x200o.4f1027bdad75.jpg",
+    "player_id": 294878173,
+    "@id": "https://api.chess.com/pub/player/rahmanyahia",
+    "url": "https://www.chess.com/member/RahmanYahia",
+    "username": "rahmanyahia",
+    "title": "IM",
+    "followers": 33,
+    "country": "https://api.chess.com/pub/country/EG",
+    "last_online": 1728575113,
+    "joined": 1687269874,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2327,
+            "date": 1712931260,
+            "rd": 74
+        },
+        "best": {
+            "rating": 2357,
+            "date": 1691356183,
+            "game": "https://www.chess.com/game/live/85606741977"
+        },
+        "record": {
+            "win": 56,
+            "loss": 32,
+            "draw": 21
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1578,
+            "date": 1730366973,
+            "rd": 201
+        },
+        "best": {
+            "rating": 1635,
+            "date": 1690071680,
+            "game": "https://www.chess.com/game/live/83842772225"
+        },
+        "record": {
+            "win": 1,
+            "loss": 3,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2167,
+            "date": 1733133252,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2265,
+            "date": 1729114878,
+            "game": "https://www.chess.com/game/live/83099207301"
+        },
+        "record": {
+            "win": 1012,
+            "loss": 821,
+            "draw": 155
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2463,
+            "date": 1703354376
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1687269874
+        }
+    },
+    "puzzle_rush": {}
+}

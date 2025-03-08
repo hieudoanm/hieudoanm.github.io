@@ -1,0 +1,68 @@
+{
+    "player_id": 9378036,
+    "@id": "https://api.chess.com/pub/player/check_85",
+    "url": "https://www.chess.com/member/CHECK_85",
+    "name": "Luca Cerquitella",
+    "username": "check_85",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1733913259,
+    "joined": 1351081902,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2500,
+            "date": 1731693552,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2532,
+            "date": 1657662658,
+            "game": "https://www.chess.com/game/live/116197878109"
+        },
+        "record": {
+            "win": 99,
+            "loss": 76,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2505,
+            "date": 1722546123,
+            "rd": 54
+        },
+        "best": {
+            "rating": 2580,
+            "date": 1678577545,
+            "game": "https://www.chess.com/game/live/93397171807"
+        },
+        "record": {
+            "win": 182,
+            "loss": 115,
+            "draw": 16
+        }
+    },
+    "fide": 2252,
+    "tactics": {
+        "highest": {
+            "rating": 2431,
+            "date": 1556911078
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1556316161
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 53
+        }
+    }
+}

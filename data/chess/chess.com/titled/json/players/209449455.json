@@ -1,0 +1,63 @@
+{
+    "player_id": 209449455,
+    "@id": "https://api.chess.com/pub/player/yerkinio",
+    "url": "https://www.chess.com/member/Yerkinio",
+    "name": "Yerkin Kozganbay",
+    "username": "yerkinio",
+    "title": "FM",
+    "followers": 15,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1734120745,
+    "joined": 1669795241,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2411,
+            "date": 1718638900,
+            "rd": 49
+        },
+        "record": {
+            "win": 0,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2711,
+            "date": 1734091634,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2877,
+            "date": 1692029537,
+            "game": "https://www.chess.com/game/live/108231709441"
+        },
+        "record": {
+            "win": 1888,
+            "loss": 1621,
+            "draw": 377
+        }
+    },
+    "fide": 2282,
+    "tactics": {
+        "highest": {
+            "rating": 2671,
+            "date": 1721589144
+        },
+        "lowest": {
+            "rating": 987,
+            "date": 1707301060
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

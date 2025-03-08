@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/68711268.f7a29d5f.200x200o.99ba8542b568.jpg",
+    "player_id": 68711268,
+    "@id": "https://api.chess.com/pub/player/imajs",
+    "url": "https://www.chess.com/member/IMajs",
+    "name": "Azarya Jodi Setyaki",
+    "username": "imajs",
+    "title": "IM",
+    "followers": 70,
+    "country": "https://api.chess.com/pub/country/ID",
+    "location": "Bekasi",
+    "last_online": 1734150265,
+    "joined": 1575201741,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2389,
+            "date": 1729782421,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2389,
+            "date": 1724936570,
+            "game": "https://www.chess.com/game/live/5641214774"
+        },
+        "record": {
+            "win": 25,
+            "loss": 7,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2625,
+            "date": 1734151328,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2729,
+            "date": 1727892350,
+            "game": "https://www.chess.com/game/live/126002346347"
+        },
+        "record": {
+            "win": 247,
+            "loss": 215,
+            "draw": 36
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2608,
+            "date": 1733848380,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2659,
+            "date": 1716823251,
+            "game": "https://www.chess.com/game/live/107425369723"
+        },
+        "record": {
+            "win": 258,
+            "loss": 177,
+            "draw": 26
+        }
+    },
+    "fide": 2389,
+    "tactics": {
+        "highest": {
+            "rating": 460,
+            "date": 1623995007
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1623994979
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

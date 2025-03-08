@@ -1,0 +1,17 @@
+{
+    "player_id": 55647606,
+    "@id": "https://api.chess.com/pub/player/warerman",
+    "url": "https://www.chess.com/member/Warerman",
+    "name": "Rosen Yordanov Rusev",
+    "username": "warerman",
+    "title": "FM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/BG",
+    "last_online": 1734183082,
+    "joined": 1546877447,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

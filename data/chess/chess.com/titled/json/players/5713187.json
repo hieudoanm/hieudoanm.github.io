@@ -1,0 +1,83 @@
+{
+    "player_id": 5713187,
+    "@id": "https://api.chess.com/pub/player/slayyy_200",
+    "url": "https://www.chess.com/member/Slayyy_200",
+    "username": "slayyy_200",
+    "title": "WCM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734178278,
+    "joined": 1314849468,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2188,
+            "date": 1733376763,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2188,
+            "date": 1733376763,
+            "game": "https://www.chess.com/game/live/127114753981"
+        },
+        "record": {
+            "win": 25,
+            "loss": 15,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1812,
+            "date": 1733902832,
+            "rd": 52
+        },
+        "best": {
+            "rating": 1939,
+            "date": 1722152647,
+            "game": "https://www.chess.com/game/live/80376587675"
+        },
+        "record": {
+            "win": 117,
+            "loss": 114,
+            "draw": 11
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1995,
+            "date": 1733546002,
+            "rd": 77
+        },
+        "best": {
+            "rating": 2174,
+            "date": 1675413319,
+            "game": "https://www.chess.com/game/live/78599466091"
+        },
+        "record": {
+            "win": 76,
+            "loss": 95,
+            "draw": 7
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3283,
+            "date": 1691750052
+        },
+        "lowest": {
+            "rating": 1312,
+            "date": 1316581607
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 34,
+            "score": 32
+        }
+    }
+}

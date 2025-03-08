@@ -1,0 +1,17 @@
+{
+    "player_id": 28821874,
+    "@id": "https://api.chess.com/pub/player/thenewfiredragon",
+    "url": "https://www.chess.com/member/thenewfiredragon",
+    "name": "Yans Richard Girones Barrios",
+    "username": "thenewfiredragon",
+    "title": "FM",
+    "followers": 20,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1733799123,
+    "joined": 1467057769,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

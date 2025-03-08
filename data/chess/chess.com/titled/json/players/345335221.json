@@ -1,0 +1,73 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/345335221.a0ab7c20.200x200o.d0f0d0af37ef.jpg",
+    "player_id": 345335221,
+    "@id": "https://api.chess.com/pub/player/jm05c",
+    "url": "https://www.chess.com/member/JM05C",
+    "name": "Jean Marco Cruz Mendez",
+    "username": "jm05c",
+    "title": "FM",
+    "followers": 28,
+    "country": "https://api.chess.com/pub/country/CU",
+    "last_online": 1734129216,
+    "joined": 1707944462,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2603,
+            "date": 1734038108,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2661,
+            "date": 1720110459,
+            "game": "https://www.chess.com/game/live/107973682549"
+        },
+        "record": {
+            "win": 295,
+            "loss": 282,
+            "draw": 53
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2653,
+            "date": 1734112933,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2657,
+            "date": 1733790853,
+            "game": "https://www.chess.com/game/live/117321647445"
+        },
+        "record": {
+            "win": 350,
+            "loss": 262,
+            "draw": 63
+        }
+    },
+    "fide": 2214,
+    "tactics": {
+        "highest": {
+            "rating": 3278,
+            "date": 1728933206
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1707944462
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        },
+        "daily": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "player_id": 375458623,
+    "@id": "https://api.chess.com/pub/player/murugapotri",
+    "url": "https://www.chess.com/member/murugapotri",
+    "username": "murugapotri",
+    "title": "WCM",
+    "followers": 30,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734180686,
+    "joined": 1721038488,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1604,
+            "date": 1733126655,
+            "rd": 346
+        },
+        "best": {
+            "rating": 1604,
+            "date": 1728103291,
+            "game": "https://www.chess.com/game/daily/705046677"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 73882,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2063,
+            "date": 1730903091,
+            "rd": 247
+        },
+        "best": {
+            "rating": 2063,
+            "date": 1730903091,
+            "game": "https://www.chess.com/game/live/124641582213"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1966,
+            "date": 1734025210,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2057,
+            "date": 1733138951,
+            "game": "https://www.chess.com/game/live/127147206661"
+        },
+        "record": {
+            "win": 95,
+            "loss": 62,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2171,
+            "date": 1734180727,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2387,
+            "date": 1733051026,
+            "game": "https://www.chess.com/game/live/126789582537"
+        },
+        "record": {
+            "win": 343,
+            "loss": 255,
+            "draw": 43
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3291,
+            "date": 1726675428
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1721038488
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 53,
+            "score": 51
+        },
+        "daily": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

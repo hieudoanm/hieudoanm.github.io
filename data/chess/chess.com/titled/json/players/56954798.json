@@ -1,0 +1,68 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/56954798.a7e18c21.200x200o.bd998fd0d96a.png",
+    "player_id": 56954798,
+    "@id": "https://api.chess.com/pub/player/idiot33333",
+    "url": "https://www.chess.com/member/idiot33333",
+    "name": "fda fadf",
+    "username": "idiot33333",
+    "title": "IM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/SG",
+    "last_online": 1734083035,
+    "joined": 1549335666,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2669,
+            "date": 1734097171,
+            "rd": 18
+        },
+        "best": {
+            "rating": 2767,
+            "date": 1728924479,
+            "game": "https://www.chess.com/game/live/123679225315"
+        },
+        "record": {
+            "win": 2965,
+            "loss": 3095,
+            "draw": 785
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2569,
+            "date": 1726130980,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2703,
+            "date": 1723285304,
+            "game": "https://www.chess.com/game/live/117205255809"
+        },
+        "record": {
+            "win": 158,
+            "loss": 119,
+            "draw": 49
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2901,
+            "date": 1722677844
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1549335666
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

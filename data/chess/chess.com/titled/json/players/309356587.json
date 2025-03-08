@@ -1,0 +1,17 @@
+{
+    "player_id": 309356587,
+    "@id": "https://api.chess.com/pub/player/elbebiber",
+    "url": "https://www.chess.com/member/Elbebiber",
+    "name": "Dr. Joerg Teumer",
+    "username": "elbebiber",
+    "title": "CM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1733913151,
+    "joined": 1693427914,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

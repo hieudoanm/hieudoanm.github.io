@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/12974014.2d506121.200x200o.ee154cc4cb0e.jpeg",
+    "player_id": 12974014,
+    "@id": "https://api.chess.com/pub/player/tosicsrecko",
+    "url": "https://www.chess.com/member/TosicSrecko",
+    "name": "Srecko Tosic",
+    "username": "tosicsrecko",
+    "title": "FM",
+    "followers": 54,
+    "country": "https://api.chess.com/pub/country/RS",
+    "last_online": 1733951932,
+    "joined": 1375360707,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

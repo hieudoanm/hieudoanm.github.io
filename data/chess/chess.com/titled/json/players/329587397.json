@@ -1,0 +1,16 @@
+{
+    "player_id": 329587397,
+    "@id": "https://api.chess.com/pub/player/chessmaster67890123",
+    "url": "https://www.chess.com/member/chessmaster67890123",
+    "username": "chessmaster67890123",
+    "title": "CM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734180152,
+    "joined": 1701373776,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

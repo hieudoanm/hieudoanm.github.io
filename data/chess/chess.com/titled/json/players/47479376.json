@@ -1,0 +1,107 @@
+{
+    "player_id": 47479376,
+    "@id": "https://api.chess.com/pub/player/bipe137",
+    "url": "https://www.chess.com/member/bipe137",
+    "name": "Jakub Suder",
+    "username": "bipe137",
+    "title": "FM",
+    "followers": 38,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734173827,
+    "joined": 1530269764,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1492,
+            "date": 1701815265,
+            "rd": 160
+        },
+        "best": {
+            "rating": 1666,
+            "date": 1577702778,
+            "game": "https://www.chess.com/game/daily/243162578"
+        },
+        "record": {
+            "win": 1,
+            "loss": 3,
+            "draw": 1,
+            "time_per_move": 53947,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2309,
+            "date": 1723373250,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2372,
+            "date": 1657544276,
+            "game": "https://www.chess.com/game/live/52256474235"
+        },
+        "record": {
+            "win": 55,
+            "loss": 44,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2671,
+            "date": 1734181968,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2852,
+            "date": 1729767331,
+            "game": "https://www.chess.com/game/live/123030004009"
+        },
+        "record": {
+            "win": 5684,
+            "loss": 4867,
+            "draw": 704
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2602,
+            "date": 1734011942,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2752,
+            "date": 1713216841,
+            "game": "https://www.chess.com/game/live/122765665917"
+        },
+        "record": {
+            "win": 6845,
+            "loss": 5916,
+            "draw": 1324
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3532,
+            "date": 1733917298
+        },
+        "lowest": {
+            "rating": 1007,
+            "date": 1533114700
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 69,
+            "score": 66
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
+}

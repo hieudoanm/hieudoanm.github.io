@@ -1,0 +1,104 @@
+{
+    "player_id": 17513144,
+    "@id": "https://api.chess.com/pub/player/03revilo",
+    "url": "https://www.chess.com/member/03revilo",
+    "name": "Oliver Stork",
+    "username": "03revilo",
+    "title": "FM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734019234,
+    "joined": 1401551849,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2019,
+            "date": 1725265709,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2024,
+            "date": 1687033293,
+            "game": "https://www.chess.com/game/daily/527803793"
+        },
+        "record": {
+            "win": 85,
+            "loss": 8,
+            "draw": 3,
+            "time_per_move": 27710,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2516,
+            "date": 1733005831,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2544,
+            "date": 1715509887,
+            "game": "https://www.chess.com/game/live/101351486863"
+        },
+        "record": {
+            "win": 108,
+            "loss": 58,
+            "draw": 20
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2413,
+            "date": 1716891548,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2519,
+            "date": 1608401121,
+            "game": "https://www.chess.com/game/live/6007644276"
+        },
+        "record": {
+            "win": 426,
+            "loss": 339,
+            "draw": 29
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2488,
+            "date": 1722981219,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2565,
+            "date": 1715543382,
+            "game": "https://www.chess.com/game/live/87667899111"
+        },
+        "record": {
+            "win": 861,
+            "loss": 678,
+            "draw": 109
+        }
+    },
+    "fide": 2370,
+    "tactics": {
+        "highest": {
+            "rating": 3139,
+            "date": 1733009407
+        },
+        "lowest": {
+            "rating": 1208,
+            "date": 1503578758
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 71,
+            "score": 68
+        }
+    }
+}

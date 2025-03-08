@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/61176452.30f7a988.200x200o.968d1ae1065a.jpeg",
+    "player_id": 61176452,
+    "@id": "https://api.chess.com/pub/player/blackgod93",
+    "url": "https://www.chess.com/member/BlackGod93",
+    "name": "Grigor Dilanyan",
+    "username": "blackgod93",
+    "title": "FM",
+    "followers": 98,
+    "country": "https://api.chess.com/pub/country/AM",
+    "location": "Yerevan",
+    "last_online": 1734007552,
+    "joined": 1558276442,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1971,
+            "date": 1731395622,
+            "rd": 150
+        },
+        "best": {
+            "rating": 2155,
+            "date": 1600001441,
+            "game": "https://www.chess.com/game/live/39725378097"
+        },
+        "record": {
+            "win": 11,
+            "loss": 5,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2720,
+            "date": 1731783589,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2731,
+            "date": 1731782871,
+            "game": "https://www.chess.com/game/live/125520557299"
+        },
+        "record": {
+            "win": 291,
+            "loss": 277,
+            "draw": 39
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2648,
+            "date": 1733556156,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2784,
+            "date": 1732468217,
+            "game": "https://www.chess.com/game/live/57425803201"
+        },
+        "record": {
+            "win": 572,
+            "loss": 533,
+            "draw": 71
+        }
+    },
+    "fide": 2300,
+    "tactics": {
+        "highest": {
+            "rating": 3430,
+            "date": 1661932153
+        },
+        "lowest": {
+            "rating": 2300,
+            "date": 1558560840
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

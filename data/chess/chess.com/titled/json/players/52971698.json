@@ -1,0 +1,47 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/52971698.fec4614a.200x200o.ea9c6e27d711.jpg",
+    "player_id": 52971698,
+    "@id": "https://api.chess.com/pub/player/yuriydovzik",
+    "url": "https://www.chess.com/member/yuriydovzik",
+    "name": "Yuriy Dovzik",
+    "username": "yuriydovzik",
+    "title": "IM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/UA",
+    "last_online": 1734004819,
+    "joined": 1544294648,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2181,
+            "date": 1733869762,
+            "rd": 56
+        },
+        "best": {
+            "rating": 2297,
+            "date": 1688501965,
+            "game": "https://www.chess.com/game/live/104620904213"
+        },
+        "record": {
+            "win": 157,
+            "loss": 342,
+            "draw": 24
+        }
+    },
+    "fide": 2237,
+    "tactics": {
+        "highest": {
+            "rating": 2285,
+            "date": 1712047124
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1544294648
+        }
+    },
+    "puzzle_rush": {}
+}

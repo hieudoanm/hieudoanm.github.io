@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/22393922.f4a96140.200x200o.d0eec351814f.png",
+    "player_id": 22393922,
+    "@id": "https://api.chess.com/pub/player/kaslask",
+    "url": "https://www.chess.com/member/Kaslask",
+    "name": "Alvaro Blanco Fernandez",
+    "username": "kaslask",
+    "title": "IM",
+    "followers": 860,
+    "country": "https://api.chess.com/pub/country/MX",
+    "location": "M&eacute;xico",
+    "last_online": 1734152024,
+    "joined": 1431664028,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1395,
+            "date": 1720540287,
+            "rd": 126
+        },
+        "best": {
+            "rating": 1395,
+            "date": 1720540287,
+            "game": "https://www.chess.com/game/daily/651900099"
+        },
+        "record": {
+            "win": 11,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 45062,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2276,
+            "date": 1725580603,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2345,
+            "date": 1607112602,
+            "game": "https://www.chess.com/game/live/9484459253"
+        },
+        "record": {
+            "win": 17,
+            "loss": 6,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2220,
+            "date": 1610763089,
+            "rd": 126
+        },
+        "best": {
+            "rating": 2273,
+            "date": 1601774349,
+            "game": "https://www.chess.com/game/live/6248697888"
+        },
+        "record": {
+            "win": 3,
+            "loss": 11,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2280,
+            "date": 1734047847,
+            "rd": 62
+        },
+        "best": {
+            "rating": 2396,
+            "date": 1605455560,
+            "game": "https://www.chess.com/game/live/5644223387"
+        },
+        "record": {
+            "win": 8481,
+            "loss": 6750,
+            "draw": 1230
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3189,
+            "date": 1733268088
+        },
+        "lowest": {
+            "rating": 1214,
+            "date": 1594224948
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 30,
+            "score": 27
+        }
+    }
+}

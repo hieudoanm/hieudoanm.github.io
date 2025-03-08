@@ -1,0 +1,122 @@
+{
+    "player_id": 20682152,
+    "@id": "https://api.chess.com/pub/player/unstoppable_legend",
+    "url": "https://www.chess.com/member/UNSTOPPABLE_LEGEND",
+    "name": "Ritvik Krishnan",
+    "username": "unstoppable_legend",
+    "title": "FM",
+    "followers": 126,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734158938,
+    "joined": 1421567268,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1430,
+            "date": 1714724914,
+            "rd": 125
+        },
+        "best": {
+            "rating": 1559,
+            "date": 1442938279,
+            "game": "https://www.chess.com/game/daily/120078828"
+        },
+        "record": {
+            "win": 71,
+            "loss": 53,
+            "draw": 5,
+            "time_per_move": 49376,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1538,
+            "date": 1560516623,
+            "rd": 200
+        },
+        "best": {
+            "rating": 1538,
+            "date": 1560516623,
+            "game": "https://www.chess.com/game/daily/226173083"
+        },
+        "record": {
+            "win": 3,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 49376,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1509,
+            "date": 1697706089,
+            "rd": 224
+        },
+        "best": {
+            "rating": 1612,
+            "date": 1490284024,
+            "game": "https://www.chess.com/game/live/1925086819"
+        },
+        "record": {
+            "win": 145,
+            "loss": 130,
+            "draw": 17
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2801,
+            "date": 1734163961,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2802,
+            "date": 1725256498,
+            "game": "https://www.chess.com/game/live/116769664641"
+        },
+        "record": {
+            "win": 5849,
+            "loss": 4453,
+            "draw": 384
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2592,
+            "date": 1728828887,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2609,
+            "date": 1724945476,
+            "game": "https://www.chess.com/game/live/106413980823"
+        },
+        "record": {
+            "win": 1935,
+            "loss": 1551,
+            "draw": 172
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3444,
+            "date": 1675516823
+        },
+        "lowest": {
+            "rating": 916,
+            "date": 1422087309
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

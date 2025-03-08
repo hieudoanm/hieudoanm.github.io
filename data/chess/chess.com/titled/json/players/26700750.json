@@ -1,0 +1,94 @@
+{
+    "player_id": 26700750,
+    "@id": "https://api.chess.com/pub/player/underdogchss",
+    "url": "https://www.chess.com/member/underdogchss",
+    "name": "Kenneth Solomon",
+    "username": "underdogchss",
+    "title": "GM",
+    "followers": 68,
+    "country": "https://api.chess.com/pub/country/ZA",
+    "location": "Venezia Italy",
+    "last_online": 1732897872,
+    "joined": 1455400928,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1597840542,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 173328,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2193,
+            "date": 1598186263,
+            "rd": 188
+        },
+        "record": {
+            "win": 1,
+            "loss": 4,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2353,
+            "date": 1728724544,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2516,
+            "date": 1727515343,
+            "game": "https://www.chess.com/game/live/122311805063"
+        },
+        "record": {
+            "win": 311,
+            "loss": 346,
+            "draw": 39
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2497,
+            "date": 1732898238,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2629,
+            "date": 1705759074,
+            "game": "https://www.chess.com/game/live/1940209342"
+        },
+        "record": {
+            "win": 2010,
+            "loss": 2143,
+            "draw": 402
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1541,
+            "date": 1590571048
+        },
+        "lowest": {
+            "rating": 1397,
+            "date": 1455544642
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 77,
+            "score": 74
+        }
+    }
+}

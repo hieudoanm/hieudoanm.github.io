@@ -1,0 +1,16 @@
+{
+    "player_id": 8906548,
+    "@id": "https://api.chess.com/pub/player/smoothbaron",
+    "url": "https://www.chess.com/member/SmoothBaron",
+    "username": "smoothbaron",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1733995169,
+    "joined": 1347656963,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

@@ -1,0 +1,82 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/206438141.b377fd42.200x200o.b0d1d3110fd3.jpeg",
+    "player_id": 206438141,
+    "@id": "https://api.chess.com/pub/player/anotherwho",
+    "url": "https://www.chess.com/member/anotherwho",
+    "name": "Vinh Pham",
+    "username": "anotherwho",
+    "title": "FM",
+    "followers": 24,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Schenectady",
+    "last_online": 1731431249,
+    "joined": 1668465970,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1665,
+            "date": 1699165434,
+            "rd": 198
+        },
+        "best": {
+            "rating": 1711,
+            "date": 1673745825,
+            "game": "https://www.chess.com/game/live/88914035193"
+        },
+        "record": {
+            "win": 11,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2490,
+            "date": 1731376019,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2685,
+            "date": 1722737879,
+            "game": "https://www.chess.com/game/live/116214586343"
+        },
+        "record": {
+            "win": 1232,
+            "loss": 1525,
+            "draw": 167
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2209,
+            "date": 1729818447,
+            "rd": 87
+        },
+        "best": {
+            "rating": 2309,
+            "date": 1727917925,
+            "game": "https://www.chess.com/game/live/92175638253"
+        },
+        "record": {
+            "win": 37,
+            "loss": 23,
+            "draw": 5
+        }
+    },
+    "fide": 1881,
+    "tactics": {
+        "highest": {
+            "rating": 1986,
+            "date": 1723950972
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1668465970
+        }
+    },
+    "puzzle_rush": {}
+}

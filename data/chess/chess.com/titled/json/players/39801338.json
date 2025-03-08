@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39801338.fa3948bd.200x200o.67b922df1581.jpeg",
+    "player_id": 39801338,
+    "@id": "https://api.chess.com/pub/player/kuli4ik",
+    "url": "https://www.chess.com/member/kuli4ik",
+    "name": "Mikhail Demidov",
+    "username": "kuli4ik",
+    "title": "GM",
+    "followers": 228,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733941594,
+    "joined": 1509063137,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2555,
+            "date": 1706731676,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2666,
+            "date": 1675462062,
+            "game": "https://www.chess.com/game/live/69526770611"
+        },
+        "record": {
+            "win": 15,
+            "loss": 13,
+            "draw": 22
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2902,
+            "date": 1730583701,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2968,
+            "date": 1688757833,
+            "game": "https://www.chess.com/game/live/82487394753"
+        },
+        "record": {
+            "win": 516,
+            "loss": 469,
+            "draw": 76
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2972,
+            "date": 1733958194,
+            "rd": 28
+        },
+        "best": {
+            "rating": 3007,
+            "date": 1721776891,
+            "game": "https://www.chess.com/game/live/3457346362"
+        },
+        "record": {
+            "win": 2297,
+            "loss": 1961,
+            "draw": 766
+        }
+    },
+    "fide": 2546,
+    "tactics": {
+        "highest": {
+            "rating": 3411,
+            "date": 1688117484
+        },
+        "lowest": {
+            "rating": 810,
+            "date": 1518220180
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "player_id": 44342412,
+    "@id": "https://api.chess.com/pub/player/tiqr777",
+    "url": "https://www.chess.com/member/Tiqr777",
+    "name": "Zaur Bayramov",
+    "username": "tiqr777",
+    "title": "FM",
+    "followers": 185,
+    "country": "https://api.chess.com/pub/country/AZ",
+    "last_online": 1733918734,
+    "joined": 1521230692,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

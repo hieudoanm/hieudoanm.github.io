@@ -1,0 +1,67 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/342269083.816ded3a.200x200o.23cbb41b75b8.jpg",
+    "player_id": 342269083,
+    "@id": "https://api.chess.com/pub/player/krilinkienza",
+    "url": "https://www.chess.com/member/Krilinkienza",
+    "username": "krilinkienza",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/HR",
+    "last_online": 1733267896,
+    "joined": 1706662981,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2486,
+            "date": 1731614561,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2581,
+            "date": 1706832491,
+            "game": "https://www.chess.com/game/live/122708035027"
+        },
+        "record": {
+            "win": 9,
+            "loss": 24,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2692,
+            "date": 1733149947,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2719,
+            "date": 1732229445,
+            "game": "https://www.chess.com/game/live/124417724051"
+        },
+        "record": {
+            "win": 435,
+            "loss": 484,
+            "draw": 73
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2756,
+            "date": 1728968631
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1706662981
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 48
+        }
+    }
+}

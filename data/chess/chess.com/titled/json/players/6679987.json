@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6679987.336bbd84.200x200o.00a815abe667.jpeg",
+    "player_id": 6679987,
+    "@id": "https://api.chess.com/pub/player/akanga001",
+    "url": "https://www.chess.com/member/akanga001",
+    "name": "barte bongo",
+    "username": "akanga001",
+    "title": "CM",
+    "followers": 21,
+    "country": "https://api.chess.com/pub/country/GA",
+    "location": "libreville",
+    "last_online": 1733851574,
+    "joined": 1329410987,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

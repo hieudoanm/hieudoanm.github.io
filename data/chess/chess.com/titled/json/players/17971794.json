@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/17971794.a95bec8d.200x200o.ca38ebd00f3c.jpg",
+    "player_id": 17971794,
+    "@id": "https://api.chess.com/pub/player/elpatodice",
+    "url": "https://www.chess.com/member/elpatodice",
+    "name": "Juan Heinichen",
+    "username": "elpatodice",
+    "title": "CM",
+    "followers": 27,
+    "country": "https://api.chess.com/pub/country/PY",
+    "location": "Asunci\u00f3n",
+    "last_online": 1733375247,
+    "joined": 1404698309,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

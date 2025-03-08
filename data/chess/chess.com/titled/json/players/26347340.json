@@ -1,0 +1,103 @@
+{
+    "player_id": 26347340,
+    "@id": "https://api.chess.com/pub/player/ssunu",
+    "url": "https://www.chess.com/member/ssunu",
+    "name": "Sunwoo Park",
+    "username": "ssunu",
+    "title": "WFM",
+    "followers": 217,
+    "country": "https://api.chess.com/pub/country/KR",
+    "last_online": 1727184957,
+    "joined": 1453796809,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1664,
+            "date": 1732256192,
+            "rd": 100
+        },
+        "best": {
+            "rating": 1753,
+            "date": 1647653905,
+            "game": "https://www.chess.com/game/daily/405882255"
+        },
+        "record": {
+            "win": 75,
+            "loss": 42,
+            "draw": 6,
+            "time_per_move": 49408,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2161,
+            "date": 1727186539,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2196,
+            "date": 1721479524,
+            "game": "https://www.chess.com/game/live/94291382687"
+        },
+        "record": {
+            "win": 203,
+            "loss": 123,
+            "draw": 18
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1973,
+            "date": 1730869957,
+            "rd": 73
+        },
+        "best": {
+            "rating": 2095,
+            "date": 1703929390,
+            "game": "https://www.chess.com/game/live/2307305497"
+        },
+        "record": {
+            "win": 370,
+            "loss": 308,
+            "draw": 22
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1986,
+            "date": 1732257133,
+            "rd": 80
+        },
+        "best": {
+            "rating": 2066,
+            "date": 1712674186,
+            "game": "https://www.chess.com/game/live/22262949757"
+        },
+        "record": {
+            "win": 376,
+            "loss": 309,
+            "draw": 32
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3294,
+            "date": 1708844722
+        },
+        "lowest": {
+            "rating": 1359,
+            "date": 1454670348
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/375174685.6bdf6ebf.200x200o.edf94a98630e.jpg",
+    "player_id": 375174685,
+    "@id": "https://api.chess.com/pub/player/juanlloretramis",
+    "url": "https://www.chess.com/member/JuanLloretRamis",
+    "name": "Juan Jos\u00e9 Lloret Ramis",
+    "username": "juanlloretramis",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "La Vila Joiosa (Alicante)",
+    "last_online": 1733993905,
+    "joined": 1720892910,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2052,
+            "date": 1733225785,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2057,
+            "date": 1733224378,
+            "game": "https://www.chess.com/game/live/118601384793"
+        },
+        "record": {
+            "win": 18,
+            "loss": 11,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2112,
+            "date": 1733227748,
+            "rd": 57
+        },
+        "best": {
+            "rating": 2114,
+            "date": 1728490641,
+            "game": "https://www.chess.com/game/live/122226643421"
+        },
+        "record": {
+            "win": 81,
+            "loss": 29,
+            "draw": 6
+        }
+    },
+    "fide": 2041,
+    "tactics": {
+        "highest": {
+            "rating": 2881,
+            "date": 1724858326
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1720892910
+        }
+    },
+    "puzzle_rush": {}
+}

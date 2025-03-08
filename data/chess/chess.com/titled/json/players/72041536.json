@@ -1,0 +1,85 @@
+{
+    "player_id": 72041536,
+    "@id": "https://api.chess.com/pub/player/josechessgg",
+    "url": "https://www.chess.com/member/Josechessgg",
+    "name": "Jose Escartin Lacasa",
+    "username": "josechessgg",
+    "title": "FM",
+    "followers": 59,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734184454,
+    "joined": 1581434853,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2467,
+            "date": 1722868507,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2499,
+            "date": 1702454967,
+            "game": "https://www.chess.com/game/live/89637037207"
+        },
+        "record": {
+            "win": 44,
+            "loss": 6,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2633,
+            "date": 1732978448,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2649,
+            "date": 1728815071,
+            "game": "https://www.chess.com/game/live/100788786261"
+        },
+        "record": {
+            "win": 632,
+            "loss": 455,
+            "draw": 74
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2535,
+            "date": 1733072185,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2570,
+            "date": 1728814393,
+            "game": "https://www.chess.com/game/live/72453693103"
+        },
+        "record": {
+            "win": 265,
+            "loss": 156,
+            "draw": 25
+        }
+    },
+    "fide": 1234,
+    "tactics": {
+        "highest": {
+            "rating": 3688,
+            "date": 1732552668
+        },
+        "lowest": {
+            "rating": 1015,
+            "date": 1582321960
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 71,
+            "score": 68
+        }
+    }
+}

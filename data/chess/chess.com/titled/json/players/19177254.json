@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19177254.e3c1ca93.200x200o.04df9592cb78.jpeg",
+    "player_id": 19177254,
+    "@id": "https://api.chess.com/pub/player/theox07",
+    "url": "https://www.chess.com/member/theox07",
+    "name": "Bozidar Jovicevic",
+    "username": "theox07",
+    "title": "FM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "New York",
+    "last_online": 1722087139,
+    "joined": 1412511441,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

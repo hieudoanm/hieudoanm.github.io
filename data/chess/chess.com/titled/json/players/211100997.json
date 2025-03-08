@@ -1,0 +1,86 @@
+{
+    "player_id": 211100997,
+    "@id": "https://api.chess.com/pub/player/zohid6",
+    "url": "https://www.chess.com/member/Zohid6",
+    "name": "Mukhammadzokhid Suyarov",
+    "username": "zohid6",
+    "title": "IM",
+    "followers": 98,
+    "country": "https://api.chess.com/pub/country/UZ",
+    "location": "tashkent",
+    "last_online": 1734100140,
+    "joined": 1670422893,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2606,
+            "date": 1727292493,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2881,
+            "date": 1684165643,
+            "game": "https://www.chess.com/game/live/77911407645"
+        },
+        "record": {
+            "win": 22,
+            "loss": 15,
+            "draw": 7
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2837,
+            "date": 1732727322,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2946,
+            "date": 1712424845,
+            "game": "https://www.chess.com/game/live/104350208145"
+        },
+        "record": {
+            "win": 537,
+            "loss": 602,
+            "draw": 64
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2946,
+            "date": 1734099283,
+            "rd": 33
+        },
+        "best": {
+            "rating": 3068,
+            "date": 1730369121,
+            "game": "https://www.chess.com/game/live/124318738723"
+        },
+        "record": {
+            "win": 926,
+            "loss": 838,
+            "draw": 222
+        }
+    },
+    "fide": 2466,
+    "tactics": {
+        "highest": {
+            "rating": 4125,
+            "date": 1723266495
+        },
+        "lowest": {
+            "rating": 2810,
+            "date": 1671705037
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

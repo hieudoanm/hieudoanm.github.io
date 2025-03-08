@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/204035491.6b44f075.200x200o.c79625bdd1c7.jpg",
+    "player_id": 204035491,
+    "@id": "https://api.chess.com/pub/player/yegoryoch",
+    "url": "https://www.chess.com/member/YegoryoCh",
+    "name": "Egor Kurchenko",
+    "username": "yegoryoch",
+    "title": "FM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/KP",
+    "last_online": 1734073656,
+    "joined": 1667163193,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2428,
+            "date": 1720439847,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2428,
+            "date": 1684186353,
+            "game": "https://www.chess.com/game/live/77924477909"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2511,
+            "date": 1729416421,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2626,
+            "date": 1676235263,
+            "game": "https://www.chess.com/game/live/69973611033"
+        },
+        "record": {
+            "win": 94,
+            "loss": 74,
+            "draw": 8
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2506,
+            "date": 1734074810,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2598,
+            "date": 1727213273,
+            "game": "https://www.chess.com/game/live/119740842347"
+        },
+        "record": {
+            "win": 188,
+            "loss": 152,
+            "draw": 15
+        }
+    },
+    "fide": 2258,
+    "tactics": {
+        "highest": {
+            "rating": 3669,
+            "date": 1725948883
+        },
+        "lowest": {
+            "rating": 1012,
+            "date": 1674144840
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 69,
+            "score": 66
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/150936223.9e924ee4.200x200o.230d8edceebc.jpeg",
+    "player_id": 150936223,
+    "@id": "https://api.chess.com/pub/player/sans-fil",
+    "url": "https://www.chess.com/member/SANS-FIL",
+    "username": "sans-fil",
+    "title": "IM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1734103557,
+    "joined": 1628800354,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "tactics": {
+        "highest": {
+            "rating": 3285,
+            "date": 1663017848
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1628801873
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 68,
+            "score": 65
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
+}

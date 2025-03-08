@@ -1,0 +1,17 @@
+{
+    "player_id": 299915717,
+    "@id": "https://api.chess.com/pub/player/xhembulla",
+    "url": "https://www.chess.com/member/xhembulla",
+    "name": "Aleksander Xhembulla",
+    "username": "xhembulla",
+    "title": "FM",
+    "followers": 60,
+    "country": "https://api.chess.com/pub/country/AL",
+    "last_online": 1734036140,
+    "joined": 1689363742,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

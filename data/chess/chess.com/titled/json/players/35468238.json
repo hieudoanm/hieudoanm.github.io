@@ -1,0 +1,85 @@
+{
+    "player_id": 35468238,
+    "@id": "https://api.chess.com/pub/player/misterlamine",
+    "url": "https://www.chess.com/member/misterlamine",
+    "name": "Lamine Brahami",
+    "username": "misterlamine",
+    "title": "IM",
+    "followers": 240,
+    "country": "https://api.chess.com/pub/country/DZ",
+    "last_online": 1734101728,
+    "joined": 1494586025,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2204,
+            "date": 1734045357,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2205,
+            "date": 1705787510,
+            "game": "https://www.chess.com/game/live/52181372651"
+        },
+        "record": {
+            "win": 33,
+            "loss": 24,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2408,
+            "date": 1733696424,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2517,
+            "date": 1705538467,
+            "game": "https://www.chess.com/game/live/99264920025"
+        },
+        "record": {
+            "win": 757,
+            "loss": 734,
+            "draw": 81
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2539,
+            "date": 1734102511,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2604,
+            "date": 1733528015,
+            "game": "https://www.chess.com/game/live/41727604953"
+        },
+        "record": {
+            "win": 3668,
+            "loss": 3735,
+            "draw": 490
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3476,
+            "date": 1725884281
+        },
+        "lowest": {
+            "rating": 819,
+            "date": 1495202466
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 53
+        }
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "player_id": 89341938,
+    "@id": "https://api.chess.com/pub/player/penafiel-josselyne02",
+    "url": "https://www.chess.com/member/Penafiel-Josselyne02",
+    "name": "Josselyne Penafiel Mendoza",
+    "username": "penafiel-josselyne02",
+    "title": "WCM",
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/EC",
+    "last_online": 1733862871,
+    "joined": 1597778920,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1982,
+            "date": 1630690913,
+            "rd": 88
+        },
+        "best": {
+            "rating": 2173,
+            "date": 1607734008,
+            "game": "https://www.chess.com/game/live/5944678870"
+        },
+        "record": {
+            "win": 25,
+            "loss": 15,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1794,
+            "date": 1727488985,
+            "rd": 73
+        },
+        "best": {
+            "rating": 2001,
+            "date": 1609186223,
+            "game": "https://www.chess.com/game/live/6082900962"
+        },
+        "record": {
+            "win": 55,
+            "loss": 55,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2022,
+            "date": 1733265042,
+            "rd": 96
+        },
+        "best": {
+            "rating": 2097,
+            "date": 1702795485,
+            "game": "https://www.chess.com/game/live/103095067439"
+        },
+        "record": {
+            "win": 402,
+            "loss": 311,
+            "draw": 39
+        }
+    },
+    "fide": 1912,
+    "tactics": {
+        "highest": {
+            "rating": 1988,
+            "date": 1700111778
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1597778920
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 37,
+            "score": 34
+        }
+    }
+}

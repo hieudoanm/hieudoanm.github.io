@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/26547538.956d776d.200x200o.d6f9e13fc6ec.jpeg",
+    "player_id": 26547538,
+    "@id": "https://api.chess.com/pub/player/sim06",
+    "url": "https://www.chess.com/member/sim06",
+    "name": "Simon Fule",
+    "username": "sim06",
+    "title": "FM",
+    "followers": 78,
+    "country": "https://api.chess.com/pub/country/HU",
+    "location": "Cegl&eacute;d",
+    "last_online": 1733943515,
+    "joined": 1454744809,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

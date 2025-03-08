@@ -1,0 +1,109 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/60709445.8cfc16d7.200x200o.a63d1d0b2915.jpeg",
+    "player_id": 60709445,
+    "@id": "https://api.chess.com/pub/player/gmaka",
+    "url": "https://www.chess.com/member/GMaka",
+    "name": "Maka Purtseladze",
+    "username": "gmaka",
+    "title": "IM",
+    "followers": 1538,
+    "country": "https://api.chess.com/pub/country/GE",
+    "last_online": 1734166932,
+    "joined": 1557255007,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1834,
+            "date": 1731325375,
+            "rd": 137
+        },
+        "best": {
+            "rating": 2030,
+            "date": 1590058331,
+            "game": "https://www.chess.com/game/daily/261094636"
+        },
+        "record": {
+            "win": 19,
+            "loss": 7,
+            "draw": 1,
+            "time_per_move": 64022,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2259,
+            "date": 1719667390,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2430,
+            "date": 1602414866,
+            "game": "https://www.chess.com/game/live/24830516373"
+        },
+        "record": {
+            "win": 19,
+            "loss": 7,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2527,
+            "date": 1733597975,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2610,
+            "date": 1731176002,
+            "game": "https://www.chess.com/game/live/100119235497"
+        },
+        "record": {
+            "win": 1107,
+            "loss": 1171,
+            "draw": 162
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2451,
+            "date": 1733517319,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2532,
+            "date": 1697561358,
+            "game": "https://www.chess.com/game/live/39284455547"
+        },
+        "record": {
+            "win": 656,
+            "loss": 612,
+            "draw": 112
+        }
+    },
+    "fide": 2274,
+    "tactics": {
+        "highest": {
+            "rating": 3056,
+            "date": 1730822330
+        },
+        "lowest": {
+            "rating": 2310,
+            "date": 1557287904
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 42
+        },
+        "daily": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

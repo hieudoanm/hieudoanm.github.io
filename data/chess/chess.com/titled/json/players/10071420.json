@@ -1,0 +1,17 @@
+{
+    "player_id": 10071420,
+    "@id": "https://api.chess.com/pub/player/chesscoachrachel",
+    "url": "https://www.chess.com/member/ChessCoachRachel",
+    "name": "Rachel Miller",
+    "username": "chesscoachrachel",
+    "title": "CM",
+    "followers": 93,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1733667494,
+    "joined": 1355873458,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

@@ -1,0 +1,86 @@
+{
+    "player_id": 355460359,
+    "@id": "https://api.chess.com/pub/player/vincefm",
+    "url": "https://www.chess.com/member/Vincefm",
+    "name": "Vince Gerg\u0151 Turcs\u00e1nyi",
+    "username": "vincefm",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1734174852,
+    "joined": 1712419743,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1469,
+            "date": 1734174943,
+            "rd": 114
+        },
+        "best": {
+            "rating": 1617,
+            "date": 1712607442,
+            "game": "https://www.chess.com/game/daily/655736031"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 13,
+            "time_per_move": 47493,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2520,
+            "date": 1733859955,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2519,
+            "date": 1713026290,
+            "game": "https://www.chess.com/game/live/108916175721"
+        },
+        "record": {
+            "win": 118,
+            "loss": 111,
+            "draw": 16
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2471,
+            "date": 1733853930,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2509,
+            "date": 1714518266,
+            "game": "https://www.chess.com/game/live/119740842659"
+        },
+        "record": {
+            "win": 55,
+            "loss": 76,
+            "draw": 8
+        }
+    },
+    "fide": 2303,
+    "tactics": {
+        "highest": {
+            "rating": 3340,
+            "date": 1725459580
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1712419743
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 50,
+            "score": 47
+        }
+    }
+}

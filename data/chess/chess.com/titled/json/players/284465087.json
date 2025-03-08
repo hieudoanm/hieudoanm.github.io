@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/284465087.d3d6de45.200x200o.96de5f286535.png",
+    "player_id": 284465087,
+    "@id": "https://api.chess.com/pub/player/xavier_mompel",
+    "url": "https://www.chess.com/member/Xavier_mompel",
+    "name": "Xavier Mompel Ferruz",
+    "username": "xavier_mompel",
+    "title": "FM",
+    "followers": 31,
+    "country": "https://api.chess.com/pub/country/GQ",
+    "last_online": 1733859985,
+    "joined": 1683818893,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

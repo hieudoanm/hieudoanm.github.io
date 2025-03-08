@@ -1,0 +1,83 @@
+{
+    "player_id": 320080129,
+    "@id": "https://api.chess.com/pub/player/danath74",
+    "url": "https://www.chess.com/member/danath74",
+    "username": "danath74",
+    "title": "CM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/VC",
+    "last_online": 1734182125,
+    "joined": 1697530889,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1999,
+            "date": 1733647700,
+            "rd": 84
+        },
+        "best": {
+            "rating": 2008,
+            "date": 1719038037,
+            "game": "https://www.chess.com/game/live/127385435577"
+        },
+        "record": {
+            "win": 11,
+            "loss": 3,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2312,
+            "date": 1734159883,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2332,
+            "date": 1730291784,
+            "game": "https://www.chess.com/game/live/107584924315"
+        },
+        "record": {
+            "win": 487,
+            "loss": 339,
+            "draw": 42
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2428,
+            "date": 1734183041,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2438,
+            "date": 1732200900,
+            "game": "https://www.chess.com/game/live/126759557635"
+        },
+        "record": {
+            "win": 472,
+            "loss": 334,
+            "draw": 53
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2360,
+            "date": 1724042410
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1697530889
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 49,
+            "score": 47
+        }
+    }
+}

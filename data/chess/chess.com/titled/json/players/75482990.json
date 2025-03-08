@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75482990.57bf76d1.200x200o.634981c38fad.jpeg",
+    "player_id": 75482990,
+    "@id": "https://api.chess.com/pub/player/vvg2",
+    "url": "https://www.chess.com/member/vvg2",
+    "username": "vvg2",
+    "title": "FM",
+    "followers": 59,
+    "country": "https://api.chess.com/pub/country/TL",
+    "last_online": 1718381173,
+    "joined": 1585881885,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

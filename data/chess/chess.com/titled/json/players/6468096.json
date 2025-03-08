@@ -1,0 +1,124 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6468096.c3fa5704.200x200o.c277c98fc162.jpeg",
+    "player_id": 6468096,
+    "@id": "https://api.chess.com/pub/player/alqudaimi",
+    "url": "https://www.chess.com/member/alqudaimi",
+    "name": "Basheer Alqudaimi",
+    "username": "alqudaimi",
+    "title": "IM",
+    "followers": 407,
+    "country": "https://api.chess.com/pub/country/YE",
+    "location": "Oman",
+    "last_online": 1729714205,
+    "joined": 1326106607,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2064,
+            "date": 1715202188,
+            "rd": 135
+        },
+        "best": {
+            "rating": 2386,
+            "date": 1574347816,
+            "game": "https://www.chess.com/game/daily/162749394"
+        },
+        "record": {
+            "win": 201,
+            "loss": 30,
+            "draw": 36,
+            "time_per_move": 32900,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1648,
+            "date": 1525921191,
+            "rd": 122
+        },
+        "best": {
+            "rating": 1791,
+            "date": 1504389606,
+            "game": "https://www.chess.com/game/daily/172929236"
+        },
+        "record": {
+            "win": 12,
+            "loss": 5,
+            "draw": 0,
+            "time_per_move": 32900,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1329,
+            "date": 1696577559,
+            "rd": 297
+        },
+        "best": {
+            "rating": 2517,
+            "date": 1681217654,
+            "game": "https://www.chess.com/game/live/2104515679"
+        },
+        "record": {
+            "win": 8,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2418,
+            "date": 1727680352,
+            "rd": 83
+        },
+        "best": {
+            "rating": 2731,
+            "date": 1489373007,
+            "game": "https://www.chess.com/game/live/2208989925"
+        },
+        "record": {
+            "win": 3422,
+            "loss": 3183,
+            "draw": 360
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2455,
+            "date": 1697483405,
+            "rd": 84
+        },
+        "best": {
+            "rating": 2607,
+            "date": 1568939320,
+            "game": "https://www.chess.com/game/live/1992753835"
+        },
+        "record": {
+            "win": 430,
+            "loss": 303,
+            "draw": 44
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3111,
+            "date": 1499346819
+        },
+        "lowest": {
+            "rating": 1086,
+            "date": 1334528473
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

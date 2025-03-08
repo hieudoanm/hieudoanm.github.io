@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23920774.4846f93e.200x200o.9930f1cb0f69.jpeg",
+    "player_id": 23920774,
+    "@id": "https://api.chess.com/pub/player/siniauski",
+    "url": "https://www.chess.com/member/Siniauski",
+    "name": "\u0410\u0440\u0442\u0451\u043c \u0421\u0438\u043d\u044f\u0432\u0441\u043a\u0438\u0439",
+    "username": "siniauski",
+    "title": "FM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/BY",
+    "location": "\u041c\u0438\u043d\u0441\u043a",
+    "last_online": 1731709647,
+    "joined": 1441120056,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

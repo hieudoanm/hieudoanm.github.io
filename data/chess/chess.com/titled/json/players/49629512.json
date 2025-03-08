@@ -1,0 +1,84 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/49629512.db0d2430.200x200o.1786ecae50e5.jpeg",
+    "player_id": 49629512,
+    "@id": "https://api.chess.com/pub/player/lemayvega",
+    "url": "https://www.chess.com/member/lemayvega",
+    "username": "lemayvega",
+    "title": "FM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/CU",
+    "last_online": 1726175177,
+    "joined": 1536636345,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2450,
+            "date": 1693011397,
+            "rd": 105
+        },
+        "best": {
+            "rating": 2452,
+            "date": 1692405902,
+            "game": "https://www.chess.com/game/live/86150306065"
+        },
+        "record": {
+            "win": 7,
+            "loss": 4,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2215,
+            "date": 1726175089,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2343,
+            "date": 1668307513,
+            "game": "https://www.chess.com/game/live/66422429499"
+        },
+        "record": {
+            "win": 988,
+            "loss": 780,
+            "draw": 62
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2523,
+            "date": 1699663283,
+            "rd": 93
+        },
+        "best": {
+            "rating": 2594,
+            "date": 1668300856,
+            "game": "https://www.chess.com/game/live/62040600013"
+        },
+        "record": {
+            "win": 233,
+            "loss": 153,
+            "draw": 30
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2336,
+            "date": 1674857959
+        },
+        "lowest": {
+            "rating": 410,
+            "date": 1618439427
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 34,
+            "score": 32
+        }
+    }
+}

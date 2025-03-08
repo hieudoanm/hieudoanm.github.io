@@ -1,0 +1,17 @@
+{
+    "player_id": 51200900,
+    "@id": "https://api.chess.com/pub/player/worldchampionbulletchess",
+    "url": "https://www.chess.com/member/WorldChampionBulletChess",
+    "name": "Juan Leon Jimenez Molina",
+    "username": "worldchampionbulletchess",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1692982962,
+    "joined": 1540655968,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

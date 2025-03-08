@@ -1,0 +1,105 @@
+{
+    "player_id": 1789328,
+    "@id": "https://api.chess.com/pub/player/malti",
+    "url": "https://www.chess.com/member/malti",
+    "name": "Colin Pace",
+    "username": "malti",
+    "title": "CM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/MT",
+    "location": "Sliema",
+    "last_online": 1734103271,
+    "joined": 1235641360,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2193,
+            "date": 1516613304,
+            "rd": 242
+        },
+        "best": {
+            "rating": 2385,
+            "date": 1262042804,
+            "game": "https://www.chess.com/game/daily/28396807"
+        },
+        "record": {
+            "win": 65,
+            "loss": 30,
+            "draw": 8,
+            "time_per_move": 31184,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2033,
+            "date": 1734107062,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2049,
+            "date": 1733681858,
+            "game": "https://www.chess.com/game/live/127395580121"
+        },
+        "record": {
+            "win": 11,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1728,
+            "date": 1732833361,
+            "rd": 132
+        },
+        "best": {
+            "rating": 2218,
+            "date": 1712088105,
+            "game": "https://www.chess.com/game/live/2853426605"
+        },
+        "record": {
+            "win": 358,
+            "loss": 307,
+            "draw": 17
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2132,
+            "date": 1717542300,
+            "rd": 71
+        },
+        "best": {
+            "rating": 2322,
+            "date": 1700729603,
+            "game": "https://www.chess.com/game/live/111273684233"
+        },
+        "record": {
+            "win": 1600,
+            "loss": 1267,
+            "draw": 123
+        }
+    },
+    "fide": 2150,
+    "tactics": {
+        "highest": {
+            "rating": 2839,
+            "date": 1733768343
+        },
+        "lowest": {
+            "rating": 1246,
+            "date": 1237889645
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 31,
+            "score": 29
+        }
+    }
+}

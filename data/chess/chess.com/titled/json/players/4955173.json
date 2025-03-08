@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/4955173.bbee2e58.200x200o.bffdb9d3452a.jpeg",
+    "player_id": 4955173,
+    "@id": "https://api.chess.com/pub/player/undisputed92",
+    "url": "https://www.chess.com/member/Undisputed92",
+    "name": "Shyaamnikhil P",
+    "username": "undisputed92",
+    "title": "GM",
+    "followers": 25,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "chennai",
+    "last_online": 1734010563,
+    "joined": 1302154199,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2351,
+            "date": 1733601185,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2421,
+            "date": 1604162559,
+            "game": "https://www.chess.com/game/live/116292034817"
+        },
+        "record": {
+            "win": 16,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2356,
+            "date": 1732905465,
+            "rd": 108
+        },
+        "best": {
+            "rating": 2443,
+            "date": 1606369160,
+            "game": "https://www.chess.com/game/live/5823223539"
+        },
+        "record": {
+            "win": 13,
+            "loss": 13,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2607,
+            "date": 1730167898,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2750,
+            "date": 1620151664,
+            "game": "https://www.chess.com/game/live/13890200147"
+        },
+        "record": {
+            "win": 202,
+            "loss": 123,
+            "draw": 64
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3689,
+            "date": 1691739242
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1557835831
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

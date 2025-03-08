@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1699587.6270f251.200x200o.68f113a09b8d.jpeg",
+    "player_id": 1699587,
+    "@id": "https://api.chess.com/pub/player/sqmorr",
+    "url": "https://www.chess.com/member/sqmorr",
+    "name": "Graham Morrison",
+    "username": "sqmorr",
+    "title": "FM",
+    "followers": 35,
+    "country": "https://api.chess.com/pub/country/XS",
+    "location": "Lytham St. Annes",
+    "last_online": 1714408590,
+    "joined": 1231340035,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

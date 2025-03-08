@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/41250892.7c37dd37.200x200o.983b007a3af1.jpg",
+    "player_id": 41250892,
+    "@id": "https://api.chess.com/pub/player/mr_heisenberg13",
+    "url": "https://www.chess.com/member/Mr_Heisenberg13",
+    "name": "Joseph Girel",
+    "username": "mr_heisenberg13",
+    "title": "GM",
+    "followers": 1550,
+    "country": "https://api.chess.com/pub/country/FR",
+    "location": "London",
+    "last_online": 1734124391,
+    "joined": 1513075416,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1891,
+            "date": 1733613613,
+            "rd": 112
+        },
+        "best": {
+            "rating": 1891,
+            "date": 1590710289,
+            "game": "https://www.chess.com/game/daily/208938230"
+        },
+        "record": {
+            "win": 160,
+            "loss": 21,
+            "draw": 5,
+            "time_per_move": 12525,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2403,
+            "date": 1706715552,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2403,
+            "date": 1706715552,
+            "game": "https://www.chess.com/game/live/81147686677"
+        },
+        "record": {
+            "win": 94,
+            "loss": 28,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2742,
+            "date": 1708702542,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2775,
+            "date": 1707271593,
+            "game": "https://www.chess.com/game/live/49598986545"
+        },
+        "record": {
+            "win": 1078,
+            "loss": 692,
+            "draw": 128
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2807,
+            "date": 1729363075,
+            "rd": 46
+        },
+        "best": {
+            "rating": 3000,
+            "date": 1711139933,
+            "game": "https://www.chess.com/game/live/77286118021"
+        },
+        "record": {
+            "win": 6594,
+            "loss": 5530,
+            "draw": 1215
+        }
+    },
+    "fide": 2495,
+    "tactics": {
+        "highest": {
+            "rating": 3733,
+            "date": 1728839441
+        },
+        "lowest": {
+            "rating": 411,
+            "date": 1516653177
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 71,
+            "score": 68
+        }
+    }
+}

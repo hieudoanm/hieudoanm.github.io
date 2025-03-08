@@ -1,0 +1,18 @@
+{
+    "player_id": 276183459,
+    "@id": "https://api.chess.com/pub/player/wisdomin",
+    "url": "https://www.chess.com/member/Wisdomin",
+    "name": "Dominic Wisnet",
+    "username": "wisdomin",
+    "title": "FM",
+    "followers": 70,
+    "country": "https://api.chess.com/pub/country/DE",
+    "location": "Passau",
+    "last_online": 1734166088,
+    "joined": 1681730597,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

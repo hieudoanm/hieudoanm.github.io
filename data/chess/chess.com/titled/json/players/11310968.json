@@ -1,0 +1,103 @@
+{
+    "player_id": 11310968,
+    "@id": "https://api.chess.com/pub/player/eliwood44",
+    "url": "https://www.chess.com/member/Eliwood44",
+    "name": "Ronan Le Goff",
+    "username": "eliwood44",
+    "title": "FM",
+    "followers": 43,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1733867994,
+    "joined": 1364494745,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1960,
+            "date": 1709654297,
+            "rd": 105
+        },
+        "best": {
+            "rating": 2066,
+            "date": 1524419129,
+            "game": "https://www.chess.com/game/daily/192804104"
+        },
+        "record": {
+            "win": 91,
+            "loss": 43,
+            "draw": 10,
+            "time_per_move": 10680,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1898,
+            "date": 1590645578,
+            "rd": 146
+        },
+        "best": {
+            "rating": 2351,
+            "date": 1586530396,
+            "game": "https://www.chess.com/game/live/4703307426"
+        },
+        "record": {
+            "win": 4,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2704,
+            "date": 1732505292,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2704,
+            "date": 1732505292,
+            "game": "https://www.chess.com/game/live/124484945249"
+        },
+        "record": {
+            "win": 3219,
+            "loss": 2890,
+            "draw": 397
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2427,
+            "date": 1733267250,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2596,
+            "date": 1635274423,
+            "game": "https://www.chess.com/game/live/34460354727"
+        },
+        "record": {
+            "win": 893,
+            "loss": 798,
+            "draw": 172
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3024,
+            "date": 1664900466
+        },
+        "lowest": {
+            "rating": 1380,
+            "date": 1365538575
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 50
+        }
+    }
+}

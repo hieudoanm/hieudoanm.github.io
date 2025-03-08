@@ -1,0 +1,79 @@
+{
+    "player_id": 168414329,
+    "@id": "https://api.chess.com/pub/player/fgawkfiv",
+    "url": "https://www.chess.com/member/fgawkfiv",
+    "username": "fgawkfiv",
+    "title": "CM",
+    "followers": 62,
+    "country": "https://api.chess.com/pub/country/CO",
+    "last_online": 1734061067,
+    "joined": 1641866347,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2157,
+            "date": 1724202825,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2204,
+            "date": 1692555781,
+            "game": "https://www.chess.com/game/live/65337082719"
+        },
+        "record": {
+            "win": 32,
+            "loss": 32,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1960,
+            "date": 1733177148,
+            "rd": 62
+        },
+        "best": {
+            "rating": 2150,
+            "date": 1663677803,
+            "game": "https://www.chess.com/game/live/76196624799"
+        },
+        "record": {
+            "win": 169,
+            "loss": 202,
+            "draw": 25
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2215,
+            "date": 1734062756,
+            "rd": 23
+        },
+        "best": {
+            "rating": 2374,
+            "date": 1662780411,
+            "game": "https://www.chess.com/game/live/56938212047"
+        },
+        "record": {
+            "win": 3517,
+            "loss": 4112,
+            "draw": 528
+        }
+    },
+    "fide": 2021,
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1641866347
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1641866347
+        }
+    },
+    "puzzle_rush": {}
+}

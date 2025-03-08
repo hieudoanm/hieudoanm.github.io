@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/2798969.05274c50.200x200o.ace66b42e2bc.jpeg",
+    "player_id": 2798969,
+    "@id": "https://api.chess.com/pub/player/chesscoach4u",
+    "url": "https://www.chess.com/member/chesscoach4u",
+    "name": "Tim Steiner",
+    "username": "chesscoach4u",
+    "title": "CM",
+    "followers": 54,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Dallas",
+    "last_online": 1575523474,
+    "joined": 1272947052,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

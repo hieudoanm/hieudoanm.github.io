@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/14043102.ed770ea3.200x200o.88c73bd95c43.jpeg",
+    "player_id": 14043102,
+    "@id": "https://api.chess.com/pub/player/mf_fraco",
+    "url": "https://www.chess.com/member/MF_fraco",
+    "name": "Estacio Limberg",
+    "username": "mf_fraco",
+    "title": "FM",
+    "followers": 94,
+    "country": "https://api.chess.com/pub/country/BR",
+    "location": "sp",
+    "last_online": 1713659806,
+    "joined": 1382668063,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1298,
+            "date": 1706174897,
+            "rd": 262
+        },
+        "best": {
+            "rating": 1346,
+            "date": 1437667336,
+            "game": "https://www.chess.com/game/daily/114785310"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 144877,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2486,
+            "date": 1676072509,
+            "rd": 137
+        },
+        "best": {
+            "rating": 2520,
+            "date": 1660607081,
+            "game": "https://www.chess.com/game/live/54345012553"
+        },
+        "record": {
+            "win": 136,
+            "loss": 50,
+            "draw": 9
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2757,
+            "date": 1691872825,
+            "rd": 80
+        },
+        "best": {
+            "rating": 2774,
+            "date": 1691858579,
+            "game": "https://www.chess.com/game/live/5512622730"
+        },
+        "record": {
+            "win": 10070,
+            "loss": 4467,
+            "draw": 610
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2641,
+            "date": 1713663441,
+            "rd": 85
+        },
+        "best": {
+            "rating": 2641,
+            "date": 1691858223,
+            "game": "https://www.chess.com/game/live/63859188839"
+        },
+        "record": {
+            "win": 1707,
+            "loss": 896,
+            "draw": 216
+        }
+    },
+    "fide": 400,
+    "tactics": {
+        "highest": {
+            "rating": 2504,
+            "date": 1602112059
+        },
+        "lowest": {
+            "rating": 2411,
+            "date": 1602110879
+        }
+    },
+    "puzzle_rush": {}
+}

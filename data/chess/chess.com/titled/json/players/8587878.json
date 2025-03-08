@@ -1,0 +1,109 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8587878.07418031.200x200o.9e7ba5b03d91.jpg",
+    "player_id": 8587878,
+    "@id": "https://api.chess.com/pub/player/mbojan",
+    "url": "https://www.chess.com/member/mbojan",
+    "name": "Bojan Maksimovi\u0107",
+    "username": "mbojan",
+    "title": "IM",
+    "followers": 1421,
+    "country": "https://api.chess.com/pub/country/BA",
+    "last_online": 1734124624,
+    "joined": 1345283384,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1227,
+            "date": 1725808231,
+            "rd": 259
+        },
+        "best": {
+            "rating": 1330,
+            "date": 1422123586,
+            "game": "https://www.chess.com/game/daily/101212052"
+        },
+        "record": {
+            "win": 3,
+            "loss": 13,
+            "draw": 3,
+            "time_per_move": 73686,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2413,
+            "date": 1732893184,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2413,
+            "date": 1732893184,
+            "game": "https://www.chess.com/game/live/53095262853"
+        },
+        "record": {
+            "win": 54,
+            "loss": 38,
+            "draw": 9
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2897,
+            "date": 1733329843,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2982,
+            "date": 1716202775,
+            "game": "https://www.chess.com/game/live/91653074335"
+        },
+        "record": {
+            "win": 1700,
+            "loss": 1142,
+            "draw": 141
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2929,
+            "date": 1734127224,
+            "rd": 23
+        },
+        "best": {
+            "rating": 3000,
+            "date": 1732575228,
+            "game": "https://www.chess.com/game/live/107970018675"
+        },
+        "record": {
+            "win": 13737,
+            "loss": 13746,
+            "draw": 2994
+        }
+    },
+    "fide": 2497,
+    "tactics": {
+        "highest": {
+            "rating": 3673,
+            "date": 1731505537
+        },
+        "lowest": {
+            "rating": 651,
+            "date": 1345439564
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        },
+        "daily": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

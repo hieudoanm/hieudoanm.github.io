@@ -1,0 +1,100 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/203984067.4be14459.200x200o.710399b4462e.jpg",
+    "player_id": 203984067,
+    "@id": "https://api.chess.com/pub/player/myst2500",
+    "url": "https://www.chess.com/member/Myst2500",
+    "name": "Md Imran",
+    "username": "myst2500",
+    "title": "FM",
+    "followers": 161,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734160387,
+    "joined": 1667136138,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1665,
+            "date": 1727339606,
+            "rd": 87
+        },
+        "best": {
+            "rating": 1825,
+            "date": 1679652848,
+            "game": "https://www.chess.com/game/daily/466654259"
+        },
+        "record": {
+            "win": 39,
+            "loss": 9,
+            "draw": 1,
+            "time_per_move": 23813,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1990,
+            "date": 1730305067,
+            "rd": 49
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2738,
+            "date": 1731903539,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2804,
+            "date": 1731548209,
+            "game": "https://www.chess.com/game/live/125638709421"
+        },
+        "record": {
+            "win": 2010,
+            "loss": 1564,
+            "draw": 149
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2739,
+            "date": 1734074315,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2796,
+            "date": 1729890752,
+            "game": "https://www.chess.com/game/live/68920561813"
+        },
+        "record": {
+            "win": 1116,
+            "loss": 874,
+            "draw": 149
+        }
+    },
+    "fide": 2382,
+    "tactics": {
+        "highest": {
+            "rating": 3400,
+            "date": 1726388750
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1667137264
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 46
+        }
+    }
+}

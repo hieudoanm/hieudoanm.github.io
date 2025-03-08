@@ -1,0 +1,109 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/173103007.29effff3.200x200o.0db6c8b4b996.jpg",
+    "player_id": 173103007,
+    "@id": "https://api.chess.com/pub/player/petr_valerievich",
+    "url": "https://www.chess.com/member/Petr_Valerievich",
+    "name": "\u041f\u0435\u0442\u0440 \u041f\u043e\u043f\u043e\u0432\u043a\u0438\u043d",
+    "username": "petr_valerievich",
+    "title": "FM",
+    "followers": 66,
+    "country": "https://api.chess.com/pub/country/UA",
+    "last_online": 1734115113,
+    "joined": 1644769309,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2191,
+            "date": 1734072113,
+            "rd": 91
+        },
+        "best": {
+            "rating": 2227,
+            "date": 1721307721,
+            "game": "https://www.chess.com/game/daily/591930043"
+        },
+        "record": {
+            "win": 36,
+            "loss": 4,
+            "draw": 14,
+            "time_per_move": 11889,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2482,
+            "date": 1734175407,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2489,
+            "date": 1734115320,
+            "game": "https://www.chess.com/game/live/126829825175"
+        },
+        "record": {
+            "win": 149,
+            "loss": 63,
+            "draw": 18
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2413,
+            "date": 1733116725,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2555,
+            "date": 1729495658,
+            "game": "https://www.chess.com/game/live/122640881725"
+        },
+        "record": {
+            "win": 385,
+            "loss": 300,
+            "draw": 26
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2577,
+            "date": 1730959121,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2630,
+            "date": 1676454107,
+            "game": "https://www.chess.com/game/live/95333453851"
+        },
+        "record": {
+            "win": 4684,
+            "loss": 3646,
+            "draw": 633
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3572,
+            "date": 1699519886
+        },
+        "lowest": {
+            "rating": 1005,
+            "date": 1645107933
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        },
+        "daily": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

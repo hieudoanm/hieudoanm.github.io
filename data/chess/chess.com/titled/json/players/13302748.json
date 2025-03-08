@@ -1,0 +1,83 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13302748.d22f7a99.200x200o.1982fa700580.jpeg",
+    "player_id": 13302748,
+    "@id": "https://api.chess.com/pub/player/ocmoen",
+    "url": "https://www.chess.com/member/ocmoen",
+    "name": "Ole Chr Moen",
+    "username": "ocmoen",
+    "title": "FM",
+    "followers": 36,
+    "country": "https://api.chess.com/pub/country/NO",
+    "location": "Oslo Schakselskap",
+    "last_online": 1733358465,
+    "joined": 1377625237,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1120,
+            "date": 1724591925,
+            "rd": 270
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 50715,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2272,
+            "date": 1732324145,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2319,
+            "date": 1692976388,
+            "game": "https://www.chess.com/game/live/40413067721"
+        },
+        "record": {
+            "win": 170,
+            "loss": 95,
+            "draw": 36
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2108,
+            "date": 1733964836,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2183,
+            "date": 1586380881,
+            "game": "https://www.chess.com/game/live/120786596531"
+        },
+        "record": {
+            "win": 432,
+            "loss": 340,
+            "draw": 51
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2925,
+            "date": 1726057631
+        },
+        "lowest": {
+            "rating": 1213,
+            "date": 1586158843
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 7,
+            "score": 6
+        }
+    }
+}

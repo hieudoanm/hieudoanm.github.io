@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/32901502.58343e18.200x200o.89f44b2adaeb.png",
+    "player_id": 32901502,
+    "@id": "https://api.chess.com/pub/player/youngmegamind",
+    "url": "https://www.chess.com/member/YoungMegaMind",
+    "name": "Marek Mi\u010da",
+    "username": "youngmegamind",
+    "title": "FM",
+    "followers": 54,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "location": "Fr\u00fddek-M\u00edstek",
+    "last_online": 1734018989,
+    "joined": 1486149508,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1942,
+            "date": 1727875338,
+            "rd": 94
+        },
+        "best": {
+            "rating": 1942,
+            "date": 1727875338,
+            "game": "https://www.chess.com/game/daily/670825315"
+        },
+        "record": {
+            "win": 33,
+            "loss": 9,
+            "draw": 2,
+            "time_per_move": 62437,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2317,
+            "date": 1715440796,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2373,
+            "date": 1590423813,
+            "game": "https://www.chess.com/game/live/70975455303"
+        },
+        "record": {
+            "win": 46,
+            "loss": 28,
+            "draw": 11
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2328,
+            "date": 1733312090,
+            "rd": 63
+        },
+        "best": {
+            "rating": 2513,
+            "date": 1684178585,
+            "game": "https://www.chess.com/game/live/82398705451"
+        },
+        "record": {
+            "win": 1161,
+            "loss": 991,
+            "draw": 134
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2619,
+            "date": 1732216361,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2727,
+            "date": 1718141119,
+            "game": "https://www.chess.com/game/live/111483134349"
+        },
+        "record": {
+            "win": 831,
+            "loss": 656,
+            "draw": 139
+        }
+    },
+    "fide": 2384,
+    "tactics": {
+        "highest": {
+            "rating": 3897,
+            "date": 1727339688
+        },
+        "lowest": {
+            "rating": 846,
+            "date": 1486149742
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

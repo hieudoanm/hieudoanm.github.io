@@ -1,0 +1,63 @@
+{
+    "player_id": 21190668,
+    "@id": "https://api.chess.com/pub/player/josechess1994",
+    "url": "https://www.chess.com/member/josechess1994",
+    "name": "Jose Manuel Calvo Quinteiro",
+    "username": "josechess1994",
+    "title": "FM",
+    "followers": 46,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Orlando",
+    "last_online": 1732175495,
+    "joined": 1424481351,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2393,
+            "date": 1707098169,
+            "rd": 140
+        },
+        "best": {
+            "rating": 2537,
+            "date": 1660270548,
+            "game": "https://www.chess.com/game/live/2692808637"
+        },
+        "record": {
+            "win": 1929,
+            "loss": 1926,
+            "draw": 244
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2319,
+            "date": 1707098556,
+            "rd": 119
+        },
+        "best": {
+            "rating": 2484,
+            "date": 1573174434,
+            "game": "https://www.chess.com/game/live/3296634504"
+        },
+        "record": {
+            "win": 1484,
+            "loss": 1583,
+            "draw": 226
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1863,
+            "date": 1593901078
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1569080369
+        }
+    },
+    "puzzle_rush": {}
+}

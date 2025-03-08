@@ -1,0 +1,18 @@
+{
+    "player_id": 61893302,
+    "@id": "https://api.chess.com/pub/player/edendzung06",
+    "url": "https://www.chess.com/member/EdenDzung06",
+    "name": "Duc Dung Nguyen",
+    "username": "edendzung06",
+    "title": "CM",
+    "followers": 79,
+    "country": "https://api.chess.com/pub/country/VN",
+    "location": "West Lafayette",
+    "last_online": 1733881005,
+    "joined": 1559630978,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

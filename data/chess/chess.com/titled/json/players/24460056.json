@@ -1,0 +1,17 @@
+{
+    "player_id": 24460056,
+    "@id": "https://api.chess.com/pub/player/sinisterknight8",
+    "url": "https://www.chess.com/member/SinisterKnight8",
+    "name": "Oleksandr Vasynda",
+    "username": "sinisterknight8",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/UA",
+    "last_online": 1734163892,
+    "joined": 1444195373,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

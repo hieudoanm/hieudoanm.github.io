@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8473762.8e704ed5.200x200o.d9f86375942b.jpeg",
+    "player_id": 8473762,
+    "@id": "https://api.chess.com/pub/player/stoleriu",
+    "url": "https://www.chess.com/member/stoleriu",
+    "name": "George Stoleriu",
+    "username": "stoleriu",
+    "title": "FM",
+    "followers": 137,
+    "country": "https://api.chess.com/pub/country/RO",
+    "location": "Iasi, Romania",
+    "last_online": 1734130662,
+    "joined": 1344412785,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1726,
+            "date": 1731708511,
+            "rd": 221
+        },
+        "best": {
+            "rating": 1895,
+            "date": 1436616492,
+            "game": "https://www.chess.com/game/daily/112709024"
+        },
+        "record": {
+            "win": 73,
+            "loss": 82,
+            "draw": 6,
+            "time_per_move": 16406,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1256,
+            "date": 1436805437,
+            "rd": 191
+        },
+        "best": {
+            "rating": 1480,
+            "date": 1414428659,
+            "game": "https://www.chess.com/game/daily/98591712"
+        },
+        "record": {
+            "win": 1,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 16406,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2230,
+            "date": 1729511585,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2415,
+            "date": 1578940590,
+            "game": "https://www.chess.com/game/live/4783673137"
+        },
+        "record": {
+            "win": 54,
+            "loss": 14,
+            "draw": 18
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2932,
+            "date": 1729856506,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2953,
+            "date": 1718567105,
+            "game": "https://www.chess.com/game/live/112616484609"
+        },
+        "record": {
+            "win": 1716,
+            "loss": 1227,
+            "draw": 296
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2603,
+            "date": 1732823548,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2752,
+            "date": 1641926385,
+            "game": "https://www.chess.com/game/live/45938433695"
+        },
+        "record": {
+            "win": 1541,
+            "loss": 1380,
+            "draw": 352
+        }
+    },
+    "fide": 2419,
+    "tactics": {
+        "highest": {
+            "rating": 3337,
+            "date": 1717946882
+        },
+        "lowest": {
+            "rating": 1361,
+            "date": 1344412889
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

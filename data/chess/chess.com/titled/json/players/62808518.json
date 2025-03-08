@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/62808518.ba2d557c.200x200o.c3ef22590879.png",
+    "player_id": 62808518,
+    "@id": "https://api.chess.com/pub/player/leschebaza",
+    "url": "https://www.chess.com/member/leschebaza",
+    "name": "Alexey Evdokimov",
+    "username": "leschebaza",
+    "title": "FM",
+    "followers": 28,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733747275,
+    "joined": 1561828630,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2333,
+            "date": 1659878233,
+            "rd": 123
+        },
+        "best": {
+            "rating": 2432,
+            "date": 1637874138,
+            "game": "https://www.chess.com/game/live/15277317827"
+        },
+        "record": {
+            "win": 22,
+            "loss": 7,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2436,
+            "date": 1721768072,
+            "rd": 67
+        },
+        "best": {
+            "rating": 2655,
+            "date": 1626908978,
+            "game": "https://www.chess.com/game/live/88624961943"
+        },
+        "record": {
+            "win": 232,
+            "loss": 312,
+            "draw": 25
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2506,
+            "date": 1729023695,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2646,
+            "date": 1623706166,
+            "game": "https://www.chess.com/game/live/16306458665"
+        },
+        "record": {
+            "win": 1147,
+            "loss": 837,
+            "draw": 218
+        }
+    },
+    "fide": 2205,
+    "tactics": {
+        "highest": {
+            "rating": 3034,
+            "date": 1670866970
+        },
+        "lowest": {
+            "rating": 2247,
+            "date": 1616509687
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

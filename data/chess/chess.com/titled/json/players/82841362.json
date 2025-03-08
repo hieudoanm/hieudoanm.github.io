@@ -1,0 +1,103 @@
+{
+    "player_id": 82841362,
+    "@id": "https://api.chess.com/pub/player/spacegirl987",
+    "url": "https://www.chess.com/member/spacegirl987",
+    "name": "Aksithi Eswaran",
+    "username": "spacegirl987",
+    "title": "WCM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1732733813,
+    "joined": 1592263503,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1510,
+            "date": 1722980347,
+            "rd": 216
+        },
+        "best": {
+            "rating": 1510,
+            "date": 1660166403,
+            "game": "https://www.chess.com/game/daily/282737816"
+        },
+        "record": {
+            "win": 9,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 72988,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2109,
+            "date": 1656522077,
+            "rd": 88
+        },
+        "best": {
+            "rating": 2146,
+            "date": 1656109436,
+            "game": "https://www.chess.com/game/live/27476347827"
+        },
+        "record": {
+            "win": 17,
+            "loss": 12,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1937,
+            "date": 1732735240,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2042,
+            "date": 1657902565,
+            "game": "https://www.chess.com/game/live/15741780847"
+        },
+        "record": {
+            "win": 509,
+            "loss": 541,
+            "draw": 37
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2148,
+            "date": 1730692778,
+            "rd": 70
+        },
+        "best": {
+            "rating": 2168,
+            "date": 1730078098,
+            "game": "https://www.chess.com/game/live/75324047509"
+        },
+        "record": {
+            "win": 155,
+            "loss": 211,
+            "draw": 21
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2857,
+            "date": 1650211600
+        },
+        "lowest": {
+            "rating": 1788,
+            "date": 1592591781
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

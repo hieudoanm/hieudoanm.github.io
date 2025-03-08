@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25238360.5ee777f1.200x200o.9d7932815386.jpeg",
+    "player_id": 25238360,
+    "@id": "https://api.chess.com/pub/player/chess64surfer",
+    "url": "https://www.chess.com/member/Chess64Surfer",
+    "name": "Aleksandar Panjkovic",
+    "username": "chess64surfer",
+    "title": "CM",
+    "followers": 69,
+    "country": "https://api.chess.com/pub/country/IT",
+    "location": "Rovereto",
+    "last_online": 1733777404,
+    "joined": 1448394311,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

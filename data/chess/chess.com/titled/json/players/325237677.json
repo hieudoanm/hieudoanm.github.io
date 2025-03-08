@@ -1,0 +1,68 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/325237677.16cab5d1.200x200o.a3a9405d98dc.jpg",
+    "player_id": 325237677,
+    "@id": "https://api.chess.com/pub/player/xiaopuyi",
+    "url": "https://www.chess.com/member/xiaopuyi",
+    "username": "xiaopuyi",
+    "title": "IM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/CN",
+    "last_online": 1734111985,
+    "joined": 1699676061,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2707,
+            "date": 1731694355,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2813,
+            "date": 1712159998,
+            "game": "https://www.chess.com/game/live/99970921275"
+        },
+        "record": {
+            "win": 210,
+            "loss": 149,
+            "draw": 33
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2719,
+            "date": 1734125637,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2884,
+            "date": 1726107659,
+            "game": "https://www.chess.com/game/live/115183723895"
+        },
+        "record": {
+            "win": 1858,
+            "loss": 1321,
+            "draw": 428
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1699676061
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1699676061
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

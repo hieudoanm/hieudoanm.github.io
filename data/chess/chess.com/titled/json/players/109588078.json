@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/109588078.2977008b.200x200o.73ca24673756.jpeg",
+    "player_id": 109588078,
+    "@id": "https://api.chess.com/pub/player/brahianzevich",
+    "url": "https://www.chess.com/member/Brahianzevich",
+    "name": "Brahian Diaz Herquinio",
+    "username": "brahianzevich",
+    "title": "CM",
+    "followers": 27,
+    "country": "https://api.chess.com/pub/country/PE",
+    "last_online": 1733973790,
+    "joined": 1609733889,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2064,
+            "date": 1722526832,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2443,
+            "date": 1703018349,
+            "game": "https://www.chess.com/game/live/96758523735"
+        },
+        "record": {
+            "win": 6,
+            "loss": 2,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2601,
+            "date": 1732335880,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2614,
+            "date": 1711514999,
+            "game": "https://www.chess.com/game/live/111607322933"
+        },
+        "record": {
+            "win": 272,
+            "loss": 302,
+            "draw": 33
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2326,
+            "date": 1733974465,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2547,
+            "date": 1660150447,
+            "game": "https://www.chess.com/game/live/111305461089"
+        },
+        "record": {
+            "win": 701,
+            "loss": 810,
+            "draw": 103
+        }
+    },
+    "fide": 2051,
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1609733889
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1609733889
+        }
+    },
+    "puzzle_rush": {}
+}

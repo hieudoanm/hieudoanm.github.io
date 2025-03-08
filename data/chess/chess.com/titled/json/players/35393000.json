@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35393000.26f16459.200x200o.1f6d3bf4f2d5.jpeg",
+    "player_id": 35393000,
+    "@id": "https://api.chess.com/pub/player/timerkhanov",
+    "url": "https://www.chess.com/member/Timerkhanov",
+    "name": "Alexander Timerkhanov",
+    "username": "timerkhanov",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733274487,
+    "joined": 1494331617,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

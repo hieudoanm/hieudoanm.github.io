@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37244346.fb8900db.200x200o.bac74854f6fe.jpeg",
+    "player_id": 37244346,
+    "@id": "https://api.chess.com/pub/player/barboval",
+    "url": "https://www.chess.com/member/Barboval",
+    "name": "Vladislav Voitovich",
+    "username": "barboval",
+    "title": "FM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/UA",
+    "last_online": 1734152360,
+    "joined": 1500809553,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2600,
+            "date": 1734123331,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2721,
+            "date": 1653856940,
+            "game": "https://www.chess.com/game/live/125360360213"
+        },
+        "record": {
+            "win": 3503,
+            "loss": 4236,
+            "draw": 476
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2488,
+            "date": 1733852697,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2623,
+            "date": 1645965559,
+            "game": "https://www.chess.com/game/live/120928865937"
+        },
+        "record": {
+            "win": 278,
+            "loss": 286,
+            "draw": 52
+        }
+    },
+    "fide": 2319,
+    "tactics": {
+        "highest": {
+            "rating": 3494,
+            "date": 1716326283
+        },
+        "lowest": {
+            "rating": 1215,
+            "date": 1561627772
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 40
+        }
+    }
+}

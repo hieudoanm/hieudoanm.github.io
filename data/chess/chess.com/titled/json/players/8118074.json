@@ -1,0 +1,35 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8118074.75d25c00.200x200o.f434fc484ee0.jpeg",
+    "player_id": 8118074,
+    "@id": "https://api.chess.com/pub/player/roktimb",
+    "url": "https://www.chess.com/member/Roktimb",
+    "name": "Roktim Bandyopadhyay",
+    "username": "roktimb",
+    "title": "IM",
+    "followers": 106,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "Kolkata",
+    "last_online": 1733910982,
+    "joined": 1341637223,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "fide": 2383,
+    "tactics": {
+        "highest": {
+            "rating": 3504,
+            "date": 1472307752
+        },
+        "lowest": {
+            "rating": 1393,
+            "date": 1465237498
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 38,
+            "score": 36
+        }
+    }
+}

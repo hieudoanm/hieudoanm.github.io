@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/66445858.5655f48d.200x200o.67cdaf786054.jpeg",
+    "player_id": 66445858,
+    "@id": "https://api.chess.com/pub/player/wilver92",
+    "url": "https://www.chess.com/member/Wilver92",
+    "name": "Wilver Vargas Rodriguez",
+    "username": "wilver92",
+    "title": "FM",
+    "followers": 61,
+    "country": "https://api.chess.com/pub/country/CU",
+    "location": "San Antonio de los Ba\u00f1os",
+    "last_online": 1734142427,
+    "joined": 1570571438,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

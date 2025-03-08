@@ -1,0 +1,84 @@
+{
+    "player_id": 23370450,
+    "@id": "https://api.chess.com/pub/player/chickencrossroad",
+    "url": "https://www.chess.com/member/chickencrossroad",
+    "name": "Daniel Yeager",
+    "username": "chickencrossroad",
+    "title": "FM",
+    "followers": 875,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734157637,
+    "joined": 1437717621,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2035,
+            "date": 1696739971,
+            "rd": 147
+        },
+        "best": {
+            "rating": 2324,
+            "date": 1534186084,
+            "game": "https://www.chess.com/game/live/3112644930"
+        },
+        "record": {
+            "win": 5,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2117,
+            "date": 1727402261,
+            "rd": 118
+        },
+        "best": {
+            "rating": 2650,
+            "date": 1605761525,
+            "game": "https://www.chess.com/game/live/5795065276"
+        },
+        "record": {
+            "win": 1376,
+            "loss": 1005,
+            "draw": 178
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2542,
+            "date": 1731220347,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2636,
+            "date": 1573616504,
+            "game": "https://www.chess.com/game/live/3926642148"
+        },
+        "record": {
+            "win": 1416,
+            "loss": 1084,
+            "draw": 218
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3057,
+            "date": 1597258185
+        },
+        "lowest": {
+            "rating": 1811,
+            "date": 1442968643
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

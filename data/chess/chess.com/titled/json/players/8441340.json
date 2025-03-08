@@ -1,0 +1,91 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8441340.e6648866.200x200o.81dac4ef7991.jpeg",
+    "player_id": 8441340,
+    "@id": "https://api.chess.com/pub/player/zmeeed67",
+    "url": "https://www.chess.com/member/zmeeed67",
+    "name": "boris abrashkin",
+    "username": "zmeeed67",
+    "title": "IM",
+    "followers": 73,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "samara",
+    "last_online": 1734139192,
+    "joined": 1344161948,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2235,
+            "date": 1611996740,
+            "rd": 205
+        },
+        "best": {
+            "rating": 2375,
+            "date": 1610522361,
+            "game": "https://www.chess.com/game/live/6392949318"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2702,
+            "date": 1733593779,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2744,
+            "date": 1728145736,
+            "game": "https://www.chess.com/game/live/120678601601"
+        },
+        "record": {
+            "win": 322,
+            "loss": 324,
+            "draw": 32
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2574,
+            "date": 1734177779,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2622,
+            "date": 1730237851,
+            "game": "https://www.chess.com/game/live/122160005863"
+        },
+        "record": {
+            "win": 3201,
+            "loss": 3322,
+            "draw": 631
+        }
+    },
+    "fide": 2407,
+    "tactics": {
+        "highest": {
+            "rating": 2455,
+            "date": 1733376458
+        },
+        "lowest": {
+            "rating": 2412,
+            "date": 1588962614
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        },
+        "daily": {
+            "total_attempts": 39,
+            "score": 36
+        }
+    }
+}

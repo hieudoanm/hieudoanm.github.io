@@ -1,0 +1,16 @@
+{
+    "player_id": 22670490,
+    "@id": "https://api.chess.com/pub/player/timeschange",
+    "url": "https://www.chess.com/member/TimesChange",
+    "username": "timeschange",
+    "title": "FM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/NO",
+    "last_online": 1734041884,
+    "joined": 1433365344,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

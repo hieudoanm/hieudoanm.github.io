@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/58872898.6d1df685.200x200o.2fe08ed4298a.jpg",
+    "player_id": 58872898,
+    "@id": "https://api.chess.com/pub/player/tommywx",
+    "url": "https://www.chess.com/member/tommywx",
+    "name": "Tommy Wen",
+    "username": "tommywx",
+    "title": "FM",
+    "followers": 571,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734157944,
+    "joined": 1553296814,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

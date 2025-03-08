@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/56360098.8879fff5.200x200o.249fd45d3101.jpeg",
+    "player_id": 56360098,
+    "@id": "https://api.chess.com/pub/player/pr1105",
+    "url": "https://www.chess.com/member/pr1105",
+    "name": "Peter Keller",
+    "username": "pr1105",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734110929,
+    "joined": 1548147150,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2221,
+            "date": 1625781267,
+            "rd": 328
+        },
+        "best": {
+            "rating": 2221,
+            "date": 1625781267,
+            "game": "https://www.chess.com/game/live/19237030105"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2361,
+            "date": 1625777013,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2483,
+            "date": 1625688555,
+            "game": "https://www.chess.com/game/live/19438619211"
+        },
+        "record": {
+            "win": 82,
+            "loss": 52,
+            "draw": 5
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2291,
+            "date": 1734116338,
+            "rd": 54
+        },
+        "best": {
+            "rating": 2486,
+            "date": 1672785598,
+            "game": "https://www.chess.com/game/live/47769668891"
+        },
+        "record": {
+            "win": 995,
+            "loss": 902,
+            "draw": 112
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2594,
+            "date": 1640301107
+        },
+        "lowest": {
+            "rating": 2195,
+            "date": 1557401671
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 55,
+            "score": 52
+        }
+    }
+}

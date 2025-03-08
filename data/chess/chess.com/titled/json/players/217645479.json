@@ -1,0 +1,63 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/217645479.48e947c0.200x200o.3872c479cc43.jpg",
+    "player_id": 217645479,
+    "@id": "https://api.chess.com/pub/player/soyuztm4",
+    "url": "https://www.chess.com/member/SoyuzTM4",
+    "name": "Ariel Pulido \u00c1lvarez",
+    "username": "soyuztm4",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/CU",
+    "last_online": 1732544345,
+    "joined": 1672249485,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2209,
+            "date": 1689473685,
+            "rd": 167
+        },
+        "best": {
+            "rating": 2379,
+            "date": 1680838359,
+            "game": "https://www.chess.com/game/live/74139733833"
+        },
+        "record": {
+            "win": 6,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2239,
+            "date": 1717520603,
+            "rd": 71
+        },
+        "best": {
+            "rating": 2260,
+            "date": 1717517885,
+            "game": "https://www.chess.com/game/live/110651560119"
+        },
+        "record": {
+            "win": 47,
+            "loss": 43,
+            "draw": 5
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2903,
+            "date": 1717559724
+        },
+        "lowest": {
+            "rating": 1012,
+            "date": 1672251211
+        }
+    },
+    "puzzle_rush": {}
+}

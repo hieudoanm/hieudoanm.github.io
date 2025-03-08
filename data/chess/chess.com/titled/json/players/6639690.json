@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6639690.f0ae7242.200x200o.4b25195b0f9a.jpeg",
+    "player_id": 6639690,
+    "@id": "https://api.chess.com/pub/player/warrenelliott",
+    "url": "https://www.chess.com/member/WarrenElliott",
+    "name": "Warren Elliott",
+    "username": "warrenelliott",
+    "title": "FM",
+    "followers": 322,
+    "country": "https://api.chess.com/pub/country/JM",
+    "last_online": 1734117236,
+    "joined": 1328748510,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

@@ -1,0 +1,53 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/405357381.fcd6b0e1.200x200o.635d56f29a32.jpg",
+    "player_id": 405357381,
+    "@id": "https://api.chess.com/pub/player/elimchesskg",
+    "url": "https://www.chess.com/member/ElimChessKG",
+    "name": "Elim Keneshbekov",
+    "username": "elimchesskg",
+    "title": "CM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/KG",
+    "location": "Karakol city",
+    "last_online": 1734181878,
+    "joined": 1732707115,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2387,
+            "date": 1733891949,
+            "rd": 105
+        },
+        "best": {
+            "rating": 2481,
+            "date": 1733851746,
+            "game": "https://www.chess.com/game/live/127590076655"
+        },
+        "record": {
+            "win": 7,
+            "loss": 8,
+            "draw": 0
+        }
+    },
+    "fide": 1847,
+    "tactics": {
+        "highest": {
+            "rating": 800,
+            "date": 1732707115
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1732707115
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 39,
+            "score": 36
+        }
+    }
+}

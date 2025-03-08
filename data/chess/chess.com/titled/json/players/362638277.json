@@ -1,0 +1,16 @@
+{
+    "player_id": 362638277,
+    "@id": "https://api.chess.com/pub/player/eptsiberia",
+    "url": "https://www.chess.com/member/eptsiberia",
+    "username": "eptsiberia",
+    "title": "CM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/AU",
+    "last_online": 1734136933,
+    "joined": 1715483042,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

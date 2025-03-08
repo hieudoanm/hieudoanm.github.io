@@ -1,0 +1,18 @@
+{
+    "player_id": 13288124,
+    "@id": "https://api.chess.com/pub/player/topmoi",
+    "url": "https://www.chess.com/member/topmoi",
+    "name": "rag lth",
+    "username": "topmoi",
+    "title": "FM",
+    "followers": 23,
+    "country": "https://api.chess.com/pub/country/DK",
+    "location": "danemark",
+    "last_online": 1734112484,
+    "joined": 1377522784,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

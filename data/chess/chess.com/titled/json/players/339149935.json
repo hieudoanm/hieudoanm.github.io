@@ -1,0 +1,68 @@
+{
+    "player_id": 339149935,
+    "@id": "https://api.chess.com/pub/player/revan_2002",
+    "url": "https://www.chess.com/member/Revan_2002",
+    "name": "Ravan Aliyev",
+    "username": "revan_2002",
+    "title": "IM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/AZ",
+    "last_online": 1733948225,
+    "joined": 1705348617,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2720,
+            "date": 1724936741,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2720,
+            "date": 1724936741,
+            "game": "https://www.chess.com/game/live/118349879769"
+        },
+        "record": {
+            "win": 15,
+            "loss": 5,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2782,
+            "date": 1733954321,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2874,
+            "date": 1730415754,
+            "game": "https://www.chess.com/game/live/112465304807"
+        },
+        "record": {
+            "win": 523,
+            "loss": 484,
+            "draw": 115
+        }
+    },
+    "fide": 2311,
+    "tactics": {
+        "highest": {
+            "rating": 2802,
+            "date": 1711857143
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1705348617
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 55
+        }
+    }
+}

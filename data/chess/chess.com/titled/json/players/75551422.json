@@ -1,0 +1,90 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75551422.44450f28.200x200o.06ef96e97246.jpeg",
+    "player_id": 75551422,
+    "@id": "https://api.chess.com/pub/player/jiihart",
+    "url": "https://www.chess.com/member/JiiHart",
+    "name": "Jarmo Hartikainen",
+    "username": "jiihart",
+    "title": "CM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/FI",
+    "last_online": 1734175146,
+    "joined": 1585937317,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1961,
+            "date": 1714752858,
+            "rd": 114
+        },
+        "best": {
+            "rating": 2126,
+            "date": 1657908072,
+            "game": "https://www.chess.com/game/live/82135347251"
+        },
+        "record": {
+            "win": 25,
+            "loss": 64,
+            "draw": 13
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2026,
+            "date": 1726777478,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2347,
+            "date": 1608400930,
+            "game": "https://www.chess.com/game/live/110305956583"
+        },
+        "record": {
+            "win": 298,
+            "loss": 306,
+            "draw": 28
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2243,
+            "date": 1733243919,
+            "rd": 89
+        },
+        "best": {
+            "rating": 2254,
+            "date": 1672163365,
+            "game": "https://www.chess.com/game/live/70152918535"
+        },
+        "record": {
+            "win": 542,
+            "loss": 1474,
+            "draw": 171
+        }
+    },
+    "fide": 2150,
+    "tactics": {
+        "highest": {
+            "rating": 3305,
+            "date": 1712698986
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1589663223
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 49,
+            "score": 47
+        },
+        "daily": {
+            "total_attempts": 36,
+            "score": 35
+        }
+    }
+}

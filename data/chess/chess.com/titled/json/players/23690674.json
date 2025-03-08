@@ -1,0 +1,79 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23690674.62c58fd8.200x200o.a9e05f31dbf6.jpeg",
+    "player_id": 23690674,
+    "@id": "https://api.chess.com/pub/player/noeladricula",
+    "url": "https://www.chess.com/member/noeladricula",
+    "name": "Noel Adricula",
+    "username": "noeladricula",
+    "title": "CM",
+    "followers": 53,
+    "country": "https://api.chess.com/pub/country/FJ",
+    "location": "Suva City",
+    "last_online": 1733566235,
+    "joined": 1439722396,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1656166205,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 27162,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1663,
+            "date": 1722701764,
+            "rd": 163
+        },
+        "best": {
+            "rating": 1821,
+            "date": 1612093676,
+            "game": "https://www.chess.com/game/live/13666919241"
+        },
+        "record": {
+            "win": 643,
+            "loss": 601,
+            "draw": 77
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1511,
+            "date": 1734136123,
+            "rd": 18
+        },
+        "best": {
+            "rating": 1701,
+            "date": 1598095859,
+            "game": "https://www.chess.com/game/live/31215551849"
+        },
+        "record": {
+            "win": 4038,
+            "loss": 3820,
+            "draw": 293
+        }
+    },
+    "fide": 1640,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1439722396
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1439722396
+        }
+    },
+    "puzzle_rush": {}
+}

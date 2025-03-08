@@ -1,0 +1,51 @@
+{
+    "player_id": 385452969,
+    "@id": "https://api.chess.com/pub/player/fomkin_dmitry",
+    "url": "https://www.chess.com/member/Fomkin_Dmitry",
+    "name": "Dmitry Fomkin",
+    "username": "fomkin_dmitry",
+    "title": "CM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/CH",
+    "last_online": 1734145957,
+    "joined": 1725530376,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2630,
+            "date": 1734147005,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2732,
+            "date": 1731673350,
+            "game": "https://www.chess.com/game/live/125168966941"
+        },
+        "record": {
+            "win": 516,
+            "loss": 511,
+            "draw": 77
+        }
+    },
+    "fide": 2156,
+    "tactics": {
+        "highest": {
+            "rating": 3470,
+            "date": 1732938870
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1725530376
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

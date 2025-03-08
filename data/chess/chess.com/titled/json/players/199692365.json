@@ -1,0 +1,102 @@
+{
+    "player_id": 199692365,
+    "@id": "https://api.chess.com/pub/player/meeresgrund",
+    "url": "https://www.chess.com/member/meeresgrund",
+    "username": "meeresgrund",
+    "title": "CM",
+    "followers": 76,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734080992,
+    "joined": 1664627854,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1680,
+            "date": 1730972000,
+            "rd": 240
+        },
+        "best": {
+            "rating": 1738,
+            "date": 1689977552,
+            "game": "https://www.chess.com/game/daily/526767609"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 22328,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1638,
+            "date": 1665340424,
+            "rd": 203
+        },
+        "best": {
+            "rating": 1754,
+            "date": 1664630189,
+            "game": "https://www.chess.com/game/live/58368626277"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1966,
+            "date": 1733643898,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2075,
+            "date": 1727190077,
+            "game": "https://www.chess.com/game/live/93556713341"
+        },
+        "record": {
+            "win": 398,
+            "loss": 280,
+            "draw": 59
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2282,
+            "date": 1734178946,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2345,
+            "date": 1733997122,
+            "game": "https://www.chess.com/game/live/63404885791"
+        },
+        "record": {
+            "win": 2024,
+            "loss": 1567,
+            "draw": 435
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2928,
+            "date": 1727895272
+        },
+        "lowest": {
+            "rating": 1009,
+            "date": 1665074506
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 44,
+            "score": 42
+        }
+    }
+}

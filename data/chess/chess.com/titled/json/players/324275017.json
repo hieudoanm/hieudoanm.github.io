@@ -1,0 +1,68 @@
+{
+    "player_id": 324275017,
+    "@id": "https://api.chess.com/pub/player/elisewu",
+    "url": "https://www.chess.com/member/elisewu",
+    "name": "Elise Wu",
+    "username": "elisewu",
+    "title": "WCM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/SR",
+    "last_online": 1733249842,
+    "joined": 1699292196,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1865,
+            "date": 1733250767,
+            "rd": 69
+        },
+        "best": {
+            "rating": 1865,
+            "date": 1733250767,
+            "game": "https://www.chess.com/game/live/126983397277"
+        },
+        "record": {
+            "win": 27,
+            "loss": 9,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1630,
+            "date": 1730386034,
+            "rd": 73
+        },
+        "best": {
+            "rating": 1630,
+            "date": 1730386034,
+            "game": "https://www.chess.com/game/live/124124442959"
+        },
+        "record": {
+            "win": 13,
+            "loss": 10,
+            "draw": 3
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2990,
+            "date": 1731970658
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1699292196
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 38,
+            "score": 35
+        }
+    }
+}

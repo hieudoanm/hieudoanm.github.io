@@ -1,0 +1,25 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/41641296.612c1043.200x200o.3d1dd029c3ba.jpeg",
+    "player_id": 41641296,
+    "@id": "https://api.chess.com/pub/player/slmctk",
+    "url": "https://www.chess.com/member/Slmctk",
+    "name": "Selim Citak",
+    "username": "slmctk",
+    "title": "FM",
+    "followers": 1201,
+    "country": "https://api.chess.com/pub/country/TR",
+    "location": "\u0130stanbul",
+    "last_online": 1734174243,
+    "joined": 1514142178,
+    "status": "premium",
+    "is_streamer": true,
+    "twitch_url": "https://twitch.tv/slmctk",
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [
+        {
+            "type": "twitch",
+            "channel_url": "https://twitch.tv/slmctk"
+        }
+    ]
+}

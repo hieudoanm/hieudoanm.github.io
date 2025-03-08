@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/4290354.76c0858b.200x200o.5536104354fa.jpg",
+    "player_id": 4290354,
+    "@id": "https://api.chess.com/pub/player/positionalpanther",
+    "url": "https://www.chess.com/member/PositionalPanther",
+    "name": "Samuel Fieberg",
+    "username": "positionalpanther",
+    "title": "FM",
+    "followers": 109,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734176578,
+    "joined": 1290465855,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2502,
+            "date": 1731414575,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2520,
+            "date": 1731358366,
+            "game": "https://www.chess.com/game/live/52149638931"
+        },
+        "record": {
+            "win": 346,
+            "loss": 245,
+            "draw": 86
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2606,
+            "date": 1726340055,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2666,
+            "date": 1716379757,
+            "game": "https://www.chess.com/game/live/109186313935"
+        },
+        "record": {
+            "win": 398,
+            "loss": 285,
+            "draw": 52
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2511,
+            "date": 1734177266,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2697,
+            "date": 1697367078,
+            "game": "https://www.chess.com/game/live/121556987803"
+        },
+        "record": {
+            "win": 6171,
+            "loss": 6142,
+            "draw": 1535
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3125,
+            "date": 1707432824
+        },
+        "lowest": {
+            "rating": 1209,
+            "date": 1618421008
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

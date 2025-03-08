@@ -1,0 +1,68 @@
+{
+    "player_id": 35089234,
+    "@id": "https://api.chess.com/pub/player/bkmzzzzz",
+    "url": "https://www.chess.com/member/Bkmzzzzz",
+    "name": "Ilya Khakhinov",
+    "username": "bkmzzzzz",
+    "title": "CM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734178054,
+    "joined": 1493265922,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2199,
+            "date": 1734179175,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2311,
+            "date": 1732827753,
+            "game": "https://www.chess.com/game/live/122642062997"
+        },
+        "record": {
+            "win": 298,
+            "loss": 151,
+            "draw": 13
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2369,
+            "date": 1733263387,
+            "rd": 62
+        },
+        "best": {
+            "rating": 2439,
+            "date": 1709656323,
+            "game": "https://www.chess.com/game/live/102810691445"
+        },
+        "record": {
+            "win": 983,
+            "loss": 735,
+            "draw": 117
+        }
+    },
+    "fide": 2236,
+    "tactics": {
+        "highest": {
+            "rating": 2770,
+            "date": 1705327386
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1493285974
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 38,
+            "score": 36
+        }
+    }
+}

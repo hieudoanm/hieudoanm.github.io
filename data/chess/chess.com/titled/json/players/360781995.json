@@ -1,0 +1,100 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/360781995.c468487c.200x200o.9459529b683a.jpg",
+    "player_id": 360781995,
+    "@id": "https://api.chess.com/pub/player/champjiguur",
+    "url": "https://www.chess.com/member/ChampJiguur",
+    "name": "Nandinjiguur Chinzorig",
+    "username": "champjiguur",
+    "title": "WCM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/MN",
+    "last_online": 1734078533,
+    "joined": 1714667480,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1734140189,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 4120,
+            "timeout_percent": 50
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1984,
+            "date": 1733029776,
+            "rd": 56
+        },
+        "best": {
+            "rating": 2019,
+            "date": 1727870931,
+            "game": "https://www.chess.com/game/live/121608632997"
+        },
+        "record": {
+            "win": 3,
+            "loss": 5,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1539,
+            "date": 1733999558,
+            "rd": 47
+        },
+        "best": {
+            "rating": 1784,
+            "date": 1728390704,
+            "game": "https://www.chess.com/game/live/127455592873"
+        },
+        "record": {
+            "win": 36,
+            "loss": 67,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1942,
+            "date": 1734001394,
+            "rd": 47
+        },
+        "best": {
+            "rating": 1955,
+            "date": 1729404676,
+            "game": "https://www.chess.com/game/live/122743463939"
+        },
+        "record": {
+            "win": 279,
+            "loss": 270,
+            "draw": 41
+        }
+    },
+    "fide": 1807,
+    "tactics": {
+        "highest": {
+            "rating": 2268,
+            "date": 1729911371
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1714667480
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 38,
+            "score": 36
+        }
+    }
+}

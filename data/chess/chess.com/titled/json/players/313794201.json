@@ -1,0 +1,51 @@
+{
+    "player_id": 313794201,
+    "@id": "https://api.chess.com/pub/player/dark_chess_smg",
+    "url": "https://www.chess.com/member/dark_chess_SMG",
+    "name": "Serafin Moral Garcia",
+    "username": "dark_chess_smg",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734142510,
+    "joined": 1695071356,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2494,
+            "date": 1733270593,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2644,
+            "date": 1718489035,
+            "game": "https://www.chess.com/game/live/120951655061"
+        },
+        "record": {
+            "win": 407,
+            "loss": 294,
+            "draw": 74
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1033,
+            "date": 1696865146
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1695071356
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 71,
+            "score": 68
+        }
+    }
+}

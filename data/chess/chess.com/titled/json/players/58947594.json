@@ -1,0 +1,63 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/58947594.749ad385.200x200o.6e3cf8f86a3d.png",
+    "player_id": 58947594,
+    "@id": "https://api.chess.com/pub/player/atalz0",
+    "url": "https://www.chess.com/member/atalz0",
+    "name": "Andrei Shishkov",
+    "username": "atalz0",
+    "title": "IM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/FM",
+    "last_online": 1734173128,
+    "joined": 1553457425,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2427,
+            "date": 1732990369,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2463,
+            "date": 1701016364,
+            "game": "https://www.chess.com/game/live/125519395083"
+        },
+        "record": {
+            "win": 920,
+            "loss": 755,
+            "draw": 89
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2474,
+            "date": 1733851641,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2634,
+            "date": 1682081257,
+            "game": "https://www.chess.com/game/live/107025175995"
+        },
+        "record": {
+            "win": 1563,
+            "loss": 1498,
+            "draw": 386
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2287,
+            "date": 1557062062
+        },
+        "lowest": {
+            "rating": 2262,
+            "date": 1623094751
+        }
+    },
+    "puzzle_rush": {}
+}

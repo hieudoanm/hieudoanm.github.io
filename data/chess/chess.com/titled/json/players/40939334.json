@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/40939334.3d5a5538.200x200o.78494defb476.png",
+    "player_id": 40939334,
+    "@id": "https://api.chess.com/pub/player/squashmaestro",
+    "url": "https://www.chess.com/member/SquashMaestro",
+    "username": "squashmaestro",
+    "title": "FM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1724110683,
+    "joined": 1512233952,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

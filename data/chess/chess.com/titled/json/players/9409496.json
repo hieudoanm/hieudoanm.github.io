@@ -1,0 +1,124 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/9409496.09853a22.200x200o.a90be7d31c11.jpeg",
+    "player_id": 9409496,
+    "@id": "https://api.chess.com/pub/player/eulero78",
+    "url": "https://www.chess.com/member/eulero78",
+    "name": "Renzo Ramondino",
+    "username": "eulero78",
+    "title": "FM",
+    "followers": 198,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1733901248,
+    "joined": 1351290882,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1896,
+            "date": 1734184645,
+            "rd": 59
+        },
+        "best": {
+            "rating": 2050,
+            "date": 1393780000,
+            "game": "https://www.chess.com/game/daily/86127374"
+        },
+        "record": {
+            "win": 968,
+            "loss": 284,
+            "draw": 106,
+            "time_per_move": 7516,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1540,
+            "date": 1734107111,
+            "rd": 213
+        },
+        "best": {
+            "rating": 1540,
+            "date": 1734107111,
+            "game": "https://www.chess.com/game/daily/730819451"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 7516,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1834,
+            "date": 1732377467,
+            "rd": 234
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1390464000,
+            "game": "https://www.chess.com/game/live/97354172255"
+        },
+        "record": {
+            "win": 2,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1829,
+            "date": 1641212983,
+            "rd": 228
+        },
+        "best": {
+            "rating": 2022,
+            "date": 1397408036,
+            "game": "https://www.chess.com/game/live/778460099"
+        },
+        "record": {
+            "win": 55,
+            "loss": 36,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2191,
+            "date": 1734178688,
+            "rd": 63
+        },
+        "best": {
+            "rating": 2324,
+            "date": 1640131419,
+            "game": "https://www.chess.com/game/live/109247426619"
+        },
+        "record": {
+            "win": 6845,
+            "loss": 5201,
+            "draw": 616
+        }
+    },
+    "fide": 2250,
+    "tactics": {
+        "highest": {
+            "rating": 3125,
+            "date": 1696719888
+        },
+        "lowest": {
+            "rating": 1084,
+            "date": 1351292741
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 30,
+            "score": 28
+        }
+    }
+}

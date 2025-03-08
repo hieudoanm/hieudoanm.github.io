@@ -1,0 +1,137 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/44208064.3b64e245.200x200o.f3722236dbdd.jpg",
+    "player_id": 44208064,
+    "@id": "https://api.chess.com/pub/player/tanitoluwaaps116",
+    "url": "https://www.chess.com/member/TanitoluwaAps116",
+    "name": "Tanitoluwa Adewumi",
+    "username": "tanitoluwaaps116",
+    "title": "FM",
+    "followers": 5428,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "e4 e5 Bc4 Nc6 Qh5 Nf6!!!! Qxf7#",
+    "last_online": 1734126356,
+    "joined": 1520885332,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1438,
+            "date": 1734128672,
+            "rd": 84
+        },
+        "best": {
+            "rating": 1800,
+            "date": 1520885332,
+            "game": "https://www.chess.com/game/daily/567870443"
+        },
+        "record": {
+            "win": 319,
+            "loss": 220,
+            "draw": 25,
+            "time_per_move": 37140,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 1
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1428,
+            "date": 1706526682,
+            "rd": 147
+        },
+        "best": {
+            "rating": 1800,
+            "date": 1520885332,
+            "game": "https://www.chess.com/game/daily/243780690"
+        },
+        "record": {
+            "win": 14,
+            "loss": 10,
+            "draw": 0,
+            "time_per_move": 37140,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 1
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2250,
+            "date": 1727305470,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2290,
+            "date": 1691427073,
+            "game": "https://www.chess.com/game/live/28673980399"
+        },
+        "record": {
+            "win": 549,
+            "loss": 429,
+            "draw": 87
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2842,
+            "date": 1733884321,
+            "rd": 38
+        },
+        "best": {
+            "rating": 3017,
+            "date": 1725934187,
+            "game": "https://www.chess.com/game/live/101329960661"
+        },
+        "record": {
+            "win": 10522,
+            "loss": 9584,
+            "draw": 1074
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2880,
+            "date": 1734049801,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2954,
+            "date": 1727141634,
+            "game": "https://www.chess.com/game/live/5370226151"
+        },
+        "record": {
+            "win": 9776,
+            "loss": 8358,
+            "draw": 1426
+        }
+    },
+    "fide": 2354,
+    "tactics": {
+        "highest": {
+            "rating": 3731,
+            "date": 1709163919
+        },
+        "lowest": {
+            "rating": 1209,
+            "date": 1631067872
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 88,
+            "score": 85
+        }
+    }
+}

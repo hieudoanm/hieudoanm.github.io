@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/180593303.819693b1.200x200o.2dd596c1459e.jpg",
+    "player_id": 180593303,
+    "@id": "https://api.chess.com/pub/player/gaioznigalidze",
+    "url": "https://www.chess.com/member/GaiozNigalidze",
+    "name": "Gaioz Nigalidze",
+    "username": "gaioznigalidze",
+    "title": "IM",
+    "followers": 89,
+    "country": "https://api.chess.com/pub/country/GE",
+    "location": "batumi",
+    "last_online": 1733914756,
+    "joined": 1650104491,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 927,
+            "date": 1730983334,
+            "rd": 234
+        },
+        "best": {
+            "rating": 927,
+            "date": 1730983334,
+            "game": "https://www.chess.com/game/daily/591601793"
+        },
+        "record": {
+            "win": 6,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 20772,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2178,
+            "date": 1732797775,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2401,
+            "date": 1690704652,
+            "game": "https://www.chess.com/game/live/125354317487"
+        },
+        "record": {
+            "win": 20,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2832,
+            "date": 1733308915,
+            "rd": 19
+        },
+        "best": {
+            "rating": 2881,
+            "date": 1731514809,
+            "game": "https://www.chess.com/game/live/107369661883"
+        },
+        "record": {
+            "win": 2584,
+            "loss": 2394,
+            "draw": 326
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2801,
+            "date": 1733249394,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2836,
+            "date": 1726591612,
+            "game": "https://www.chess.com/game/live/120327650917"
+        },
+        "record": {
+            "win": 1152,
+            "loss": 1079,
+            "draw": 164
+        }
+    },
+    "fide": 2373,
+    "tactics": {
+        "highest": {
+            "rating": 2759,
+            "date": 1706386915
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1650104491
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

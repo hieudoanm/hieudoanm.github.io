@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/17694172.3b710d6e.200x200o.0777d00baa7f.jpg",
+    "player_id": 17694172,
+    "@id": "https://api.chess.com/pub/player/richardleyvap",
+    "url": "https://www.chess.com/member/RichardLeyvaP",
+    "name": "Richard Leyva Proenza",
+    "username": "richardleyvap",
+    "title": "IM",
+    "followers": 909,
+    "country": "https://api.chess.com/pub/country/CU",
+    "location": "San Juan",
+    "last_online": 1734103906,
+    "joined": 1402783166,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1381,
+            "date": 1728478928,
+            "rd": 88
+        },
+        "best": {
+            "rating": 1530,
+            "date": 1707596204,
+            "game": "https://www.chess.com/game/daily/577346471"
+        },
+        "record": {
+            "win": 56,
+            "loss": 12,
+            "draw": 3,
+            "time_per_move": 62230,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2046,
+            "date": 1733927603,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2047,
+            "date": 1693850812,
+            "game": "https://www.chess.com/game/live/127664982371"
+        },
+        "record": {
+            "win": 6,
+            "loss": 3,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2519,
+            "date": 1734110370,
+            "rd": 15
+        },
+        "best": {
+            "rating": 2682,
+            "date": 1721672248,
+            "game": "https://www.chess.com/game/live/94594094377"
+        },
+        "record": {
+            "win": 11754,
+            "loss": 7944,
+            "draw": 936
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2650,
+            "date": 1734113040,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2829,
+            "date": 1719761033,
+            "game": "https://www.chess.com/game/live/100719794413"
+        },
+        "record": {
+            "win": 5688,
+            "loss": 5343,
+            "draw": 931
+        }
+    },
+    "fide": 2333,
+    "tactics": {
+        "highest": {
+            "rating": 2917,
+            "date": 1723502816
+        },
+        "lowest": {
+            "rating": 1207,
+            "date": 1507076797
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 40,
+            "score": 38
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "player_id": 7051025,
+    "@id": "https://api.chess.com/pub/player/chessloveyou",
+    "url": "https://www.chess.com/member/chessloveyou",
+    "username": "chessloveyou",
+    "title": "CM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/IQ",
+    "location": "Bergen",
+    "last_online": 1454442814,
+    "joined": 1332426238,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

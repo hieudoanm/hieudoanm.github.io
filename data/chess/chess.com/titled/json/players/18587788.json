@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/18587788.186b7a63.200x200o.b13fc7080aac.jpeg",
+    "player_id": 18587788,
+    "@id": "https://api.chess.com/pub/player/robert_oros",
+    "url": "https://www.chess.com/member/Robert_Oros",
+    "name": "Robert Orosz",
+    "username": "robert_oros",
+    "title": "FM",
+    "followers": 106,
+    "country": "https://api.chess.com/pub/country/HU",
+    "location": "Budapest",
+    "last_online": 1734031564,
+    "joined": 1408630089,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2082,
+            "date": 1655540895,
+            "rd": 63
+        },
+        "best": {
+            "rating": 2082,
+            "date": 1623972800,
+            "game": "https://www.chess.com/game/daily/318712900"
+        },
+        "record": {
+            "win": 49,
+            "loss": 2,
+            "draw": 13,
+            "time_per_move": 26349,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2340,
+            "date": 1721976990,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2436,
+            "date": 1673627014,
+            "game": "https://www.chess.com/game/live/76765402093"
+        },
+        "record": {
+            "win": 97,
+            "loss": 14,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2077,
+            "date": 1721634478,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2375,
+            "date": 1616132822,
+            "game": "https://www.chess.com/game/live/113908845303"
+        },
+        "record": {
+            "win": 143,
+            "loss": 71,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2324,
+            "date": 1733792271,
+            "rd": 67
+        },
+        "best": {
+            "rating": 2451,
+            "date": 1716981632,
+            "game": "https://www.chess.com/game/live/114298861175"
+        },
+        "record": {
+            "win": 486,
+            "loss": 129,
+            "draw": 53
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3571,
+            "date": 1714289081
+        },
+        "lowest": {
+            "rating": 1334,
+            "date": 1408630162
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 76,
+            "score": 73
+        }
+    }
+}

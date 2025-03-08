@@ -1,0 +1,104 @@
+{
+    "player_id": 298096493,
+    "@id": "https://api.chess.com/pub/player/cedchass2006",
+    "url": "https://www.chess.com/member/cedchass2006",
+    "name": "Cedric Chassard",
+    "username": "cedchass2006",
+    "title": "FM",
+    "followers": 27,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734132220,
+    "joined": 1688584072,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1749,
+            "date": 1733003547,
+            "rd": 250
+        },
+        "best": {
+            "rating": 1749,
+            "date": 1733003547,
+            "game": "https://www.chess.com/game/daily/705141075"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 118858,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2302,
+            "date": 1732136090,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2326,
+            "date": 1732134213,
+            "game": "https://www.chess.com/game/live/125872790903"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2453,
+            "date": 1733752271,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2541,
+            "date": 1726698868,
+            "game": "https://www.chess.com/game/live/120436231447"
+        },
+        "record": {
+            "win": 375,
+            "loss": 304,
+            "draw": 55
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2413,
+            "date": 1734114316,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2573,
+            "date": 1729794162,
+            "game": "https://www.chess.com/game/live/119724021151"
+        },
+        "record": {
+            "win": 384,
+            "loss": 380,
+            "draw": 100
+        }
+    },
+    "fide": 2349,
+    "tactics": {
+        "highest": {
+            "rating": 2921,
+            "date": 1726011015
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1688584072
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/18436580.a03a7d8c.200x200o.2d74d5382772.jpeg",
+    "player_id": 18436580,
+    "@id": "https://api.chess.com/pub/player/eltenedor",
+    "url": "https://www.chess.com/member/eltenedor",
+    "name": "David Bennett",
+    "username": "eltenedor",
+    "title": "CM",
+    "followers": 350,
+    "country": "https://api.chess.com/pub/country/XX",
+    "location": "Washington, D.C.",
+    "last_online": 1734054536,
+    "joined": 1407691169,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

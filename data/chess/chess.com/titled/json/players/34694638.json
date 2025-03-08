@@ -1,0 +1,85 @@
+{
+    "player_id": 34694638,
+    "@id": "https://api.chess.com/pub/player/kristof_08",
+    "url": "https://www.chess.com/member/Kristof_08",
+    "name": "Kristof Pal Kolimar",
+    "username": "kristof_08",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1734097456,
+    "joined": 1491922439,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2290,
+            "date": 1713376201,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2331,
+            "date": 1600186672,
+            "game": "https://www.chess.com/game/live/5449615704"
+        },
+        "record": {
+            "win": 71,
+            "loss": 64,
+            "draw": 20
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2367,
+            "date": 1727529021,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2391,
+            "date": 1719475738,
+            "game": "https://www.chess.com/game/live/113482771385"
+        },
+        "record": {
+            "win": 673,
+            "loss": 482,
+            "draw": 51
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2542,
+            "date": 1733848829,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2559,
+            "date": 1733758055,
+            "game": "https://www.chess.com/game/live/127496390797"
+        },
+        "record": {
+            "win": 1807,
+            "loss": 1517,
+            "draw": 241
+        }
+    },
+    "fide": 2304,
+    "tactics": {
+        "highest": {
+            "rating": 2848,
+            "date": 1713294416
+        },
+        "lowest": {
+            "rating": 390,
+            "date": 1496767049
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 39
+        }
+    }
+}

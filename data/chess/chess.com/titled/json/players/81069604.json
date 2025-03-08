@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/81069604.8628603f.200x200o.b18276fff93c.jpeg",
+    "player_id": 81069604,
+    "@id": "https://api.chess.com/pub/player/vd_coach",
+    "url": "https://www.chess.com/member/VD_coach",
+    "name": "Vardan Danielian",
+    "username": "vd_coach",
+    "title": "FM",
+    "followers": 100,
+    "country": "https://api.chess.com/pub/country/AM",
+    "last_online": 1734184720,
+    "joined": 1590945715,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2518,
+            "date": 1734074633,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2526,
+            "date": 1716227645,
+            "game": "https://www.chess.com/game/live/25945148843"
+        },
+        "record": {
+            "win": 567,
+            "loss": 287,
+            "draw": 125
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2615,
+            "date": 1734126442,
+            "rd": 21
+        },
+        "best": {
+            "rating": 2694,
+            "date": 1734072530,
+            "game": "https://www.chess.com/game/live/88629063051"
+        },
+        "record": {
+            "win": 3832,
+            "loss": 4173,
+            "draw": 773
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2705,
+            "date": 1733746076,
+            "rd": 23
+        },
+        "best": {
+            "rating": 2705,
+            "date": 1733746076,
+            "game": "https://www.chess.com/game/live/108250911975"
+        },
+        "record": {
+            "win": 5765,
+            "loss": 5942,
+            "draw": 1782
+        }
+    },
+    "fide": 2230,
+    "tactics": {
+        "highest": {
+            "rating": 3555,
+            "date": 1692729493
+        },
+        "lowest": {
+            "rating": 2300,
+            "date": 1591293139
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

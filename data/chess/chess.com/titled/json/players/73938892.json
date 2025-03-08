@@ -1,0 +1,65 @@
+{
+    "player_id": 73938892,
+    "@id": "https://api.chess.com/pub/player/geraldhb",
+    "url": "https://www.chess.com/member/Geraldhb",
+    "name": "Gerald H Bennett",
+    "username": "geraldhb",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1733684507,
+    "joined": 1584702736,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2193,
+            "date": 1727465704,
+            "rd": 250
+        },
+        "best": {
+            "rating": 2193,
+            "date": 1726831930,
+            "game": "https://www.chess.com/game/daily/700924483"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 52453,
+            "timeout_percent": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1935,
+            "date": 1733766520,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2208,
+            "date": 1709900085,
+            "game": "https://www.chess.com/game/live/118397317009"
+        },
+        "record": {
+            "win": 650,
+            "loss": 690,
+            "draw": 80
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1584702736
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1584702736
+        }
+    },
+    "puzzle_rush": {}
+}

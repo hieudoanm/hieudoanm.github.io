@@ -1,0 +1,17 @@
+{
+    "player_id": 4284146,
+    "@id": "https://api.chess.com/pub/player/tiggerdog",
+    "url": "https://www.chess.com/member/tiggerdog",
+    "name": "Paul Gluckman",
+    "username": "tiggerdog",
+    "title": "FM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/ZA",
+    "last_online": 1733674999,
+    "joined": 1290349297,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/330779979.94d8134b.200x200o.1e0c8c8f4314.jpg",
+    "player_id": 330779979,
+    "@id": "https://api.chess.com/pub/player/javokhir_sindarov05",
+    "url": "https://www.chess.com/member/Javokhir_Sindarov05",
+    "name": "Javokhir Sindarov",
+    "username": "javokhir_sindarov05",
+    "title": "GM",
+    "followers": 241,
+    "country": "https://api.chess.com/pub/country/UZ",
+    "location": "Tashkent",
+    "last_online": 1734160396,
+    "joined": 1701897372,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2585,
+            "date": 1732777553,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2599,
+            "date": 1727709948,
+            "game": "https://www.chess.com/game/live/115055322205"
+        },
+        "record": {
+            "win": 23,
+            "loss": 9,
+            "draw": 23
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2892,
+            "date": 1732787386,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2913,
+            "date": 1719076646,
+            "game": "https://www.chess.com/game/live/112811433799"
+        },
+        "record": {
+            "win": 57,
+            "loss": 21,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 3122,
+            "date": 1733270102,
+            "rd": 41
+        },
+        "best": {
+            "rating": 3163,
+            "date": 1722357988,
+            "game": "https://www.chess.com/game/live/112643474511"
+        },
+        "record": {
+            "win": 359,
+            "loss": 131,
+            "draw": 58
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1202,
+            "date": 1732192204
+        },
+        "lowest": {
+            "rating": 997,
+            "date": 1732123570
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "player_id": 408185521,
+    "@id": "https://api.chess.com/pub/player/titanvibe07",
+    "url": "https://www.chess.com/member/Titanvibe07",
+    "username": "titanvibe07",
+    "title": "IM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734118275,
+    "joined": 1733810141,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2623,
+            "date": 1734125079,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2623,
+            "date": 1734123701,
+            "game": "https://www.chess.com/game/live/127863587617"
+        },
+        "record": {
+            "win": 22,
+            "loss": 4,
+            "draw": 1
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1733810141
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1733810141
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        },
+        "daily": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

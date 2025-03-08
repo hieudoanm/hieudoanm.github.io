@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/52031180.44f1fd61.200x200o.9cb2db4ec64d.jpeg",
+    "player_id": 52031180,
+    "@id": "https://api.chess.com/pub/player/sprinc1",
+    "url": "https://www.chess.com/member/Sprinc1",
+    "name": "Gustav Brejnik",
+    "username": "sprinc1",
+    "title": "FM",
+    "followers": 47,
+    "country": "https://api.chess.com/pub/country/CW",
+    "last_online": 1734109290,
+    "joined": 1542571345,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

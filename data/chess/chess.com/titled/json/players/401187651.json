@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/401187651.a8d386f6.200x200o.ad26aa74173b.png",
+    "player_id": 401187651,
+    "@id": "https://api.chess.com/pub/player/emil-zander",
+    "url": "https://www.chess.com/member/Emil-Zander",
+    "name": "Emil Zander",
+    "username": "emil-zander",
+    "title": "CM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/DK",
+    "location": "On a tree",
+    "last_online": 1734092102,
+    "joined": 1731067387,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

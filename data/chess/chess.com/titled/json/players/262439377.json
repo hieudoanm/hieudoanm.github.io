@@ -1,0 +1,18 @@
+{
+    "player_id": 262439377,
+    "@id": "https://api.chess.com/pub/player/sstojic",
+    "url": "https://www.chess.com/member/SStojic",
+    "name": "Svetozar Stojic",
+    "username": "sstojic",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/AU",
+    "location": "Melbourne",
+    "last_online": 1734001700,
+    "joined": 1678979368,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

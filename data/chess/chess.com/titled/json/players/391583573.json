@@ -1,0 +1,28 @@
+{
+    "player_id": 391583573,
+    "@id": "https://api.chess.com/pub/player/chess2024rk",
+    "url": "https://www.chess.com/member/chess2024rk",
+    "name": "Ramtin Kakavand",
+    "username": "chess2024rk",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/IR",
+    "last_online": 1731619447,
+    "joined": 1727377621,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "fide": 2000,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1727377621
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1727377621
+        }
+    },
+    "puzzle_rush": {}
+}

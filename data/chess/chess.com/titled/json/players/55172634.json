@@ -1,0 +1,100 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/55172634.688d96d2.200x200o.e59c396b5caa.png",
+    "player_id": 55172634,
+    "@id": "https://api.chess.com/pub/player/kimmich_mindset",
+    "url": "https://www.chess.com/member/Kimmich_Mindset",
+    "name": "St\u00f6ttner Lukas",
+    "username": "kimmich_mindset",
+    "title": "CM",
+    "followers": 28,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734165620,
+    "joined": 1545910424,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1094,
+            "date": 1726943974,
+            "rd": 290
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 237516,
+            "timeout_percent": 100
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2202,
+            "date": 1714487707,
+            "rd": 158
+        },
+        "best": {
+            "rating": 1967,
+            "date": 1635510465,
+            "game": "https://www.chess.com/game/live/29248847555"
+        },
+        "record": {
+            "win": 22,
+            "loss": 10,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2202,
+            "date": 1714487707,
+            "rd": 202
+        },
+        "best": {
+            "rating": 1791,
+            "date": 1631534531,
+            "game": "https://www.chess.com/game/live/25273262405"
+        },
+        "record": {
+            "win": 3,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2275,
+            "date": 1734166131,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2378,
+            "date": 1717517924,
+            "game": "https://www.chess.com/game/live/115508276011"
+        },
+        "record": {
+            "win": 472,
+            "loss": 442,
+            "draw": 45
+        }
+    },
+    "fide": 2202,
+    "tactics": {
+        "highest": {
+            "rating": 3052,
+            "date": 1669704796
+        },
+        "lowest": {
+            "rating": 988,
+            "date": 1545910593
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

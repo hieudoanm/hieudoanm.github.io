@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/53335384.00bfe17e.200x200o.c3f962ab17c8.jpg",
+    "player_id": 53335384,
+    "@id": "https://api.chess.com/pub/player/alivodicdario",
+    "url": "https://www.chess.com/member/AlivodicDario",
+    "name": "Dario Alivodic",
+    "username": "alivodicdario",
+    "title": "CM",
+    "followers": 289,
+    "country": "https://api.chess.com/pub/country/ME",
+    "location": "Podgorica",
+    "last_online": 1734019580,
+    "joined": 1544987312,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

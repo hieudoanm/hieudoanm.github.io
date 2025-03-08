@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37555028.6ef0b46e.200x200o.66fc5dc47f30.jpeg",
+    "player_id": 37555028,
+    "@id": "https://api.chess.com/pub/player/borisnavrodskiyy",
+    "url": "https://www.chess.com/member/BorisNavrodskiyy",
+    "name": "Boris Navrodskiy",
+    "username": "borisnavrodskiyy",
+    "title": "FM",
+    "followers": 44,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "Moscow",
+    "last_online": 1730913921,
+    "joined": 1501868191,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2176,
+            "date": 1678303083,
+            "rd": 251
+        },
+        "best": {
+            "rating": 2224,
+            "date": 1611785733,
+            "game": "https://www.chess.com/game/live/6367660240"
+        },
+        "record": {
+            "win": 6,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1947,
+            "date": 1733597663,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2365,
+            "date": 1600035417,
+            "game": "https://www.chess.com/game/live/5328428171"
+        },
+        "record": {
+            "win": 518,
+            "loss": 488,
+            "draw": 33
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2094,
+            "date": 1715182967,
+            "rd": 99
+        },
+        "best": {
+            "rating": 2381,
+            "date": 1591103063,
+            "game": "https://www.chess.com/game/live/4932369475"
+        },
+        "record": {
+            "win": 471,
+            "loss": 401,
+            "draw": 40
+        }
+    },
+    "fide": 2172,
+    "tactics": {
+        "highest": {
+            "rating": 2431,
+            "date": 1588764758
+        },
+        "lowest": {
+            "rating": 1014,
+            "date": 1501944759
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 49,
+            "score": 46
+        }
+    }
+}

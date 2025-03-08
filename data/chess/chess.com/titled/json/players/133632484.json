@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/133632484.1ff106dc.200x200o.26bbe3157cb1.jpg",
+    "player_id": 133632484,
+    "@id": "https://api.chess.com/pub/player/meszarosgyorgy",
+    "url": "https://www.chess.com/member/MeszarosGyorgy",
+    "name": "Gyorgy Meszaros",
+    "username": "meszarosgyorgy",
+    "title": "CM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1734179732,
+    "joined": 1617696599,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2217,
+            "date": 1731245716,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2237,
+            "date": 1672256982,
+            "game": "https://www.chess.com/game/live/66516222921"
+        },
+        "record": {
+            "win": 66,
+            "loss": 48,
+            "draw": 16
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2027,
+            "date": 1734184505,
+            "rd": 21
+        },
+        "best": {
+            "rating": 2263,
+            "date": 1672420962,
+            "game": "https://www.chess.com/game/live/124890566519"
+        },
+        "record": {
+            "win": 2064,
+            "loss": 1423,
+            "draw": 248
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2249,
+            "date": 1733770929,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2411,
+            "date": 1646515950,
+            "game": "https://www.chess.com/game/live/67890848905"
+        },
+        "record": {
+            "win": 2432,
+            "loss": 1896,
+            "draw": 432
+        }
+    },
+    "fide": 2200,
+    "tactics": {
+        "highest": {
+            "rating": 3232,
+            "date": 1730553860
+        },
+        "lowest": {
+            "rating": 1205,
+            "date": 1672038929
+        }
+    },
+    "puzzle_rush": {}
+}

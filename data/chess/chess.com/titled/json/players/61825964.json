@@ -1,0 +1,85 @@
+{
+    "player_id": 61825964,
+    "@id": "https://api.chess.com/pub/player/mokshad1603",
+    "url": "https://www.chess.com/member/MokshAD1603",
+    "name": "Moksh Amit Doshi",
+    "username": "mokshad1603",
+    "title": "IM",
+    "followers": 35,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1733982580,
+    "joined": 1559476043,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2446,
+            "date": 1714757433,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2508,
+            "date": 1676313753,
+            "game": "https://www.chess.com/game/live/70051508991"
+        },
+        "record": {
+            "win": 10,
+            "loss": 5,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2619,
+            "date": 1726218754,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2787,
+            "date": 1674928915,
+            "game": "https://www.chess.com/game/live/68669516319"
+        },
+        "record": {
+            "win": 496,
+            "loss": 326,
+            "draw": 38
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2656,
+            "date": 1732644795,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2703,
+            "date": 1664293687,
+            "game": "https://www.chess.com/game/live/69528261079"
+        },
+        "record": {
+            "win": 305,
+            "loss": 227,
+            "draw": 53
+        }
+    },
+    "fide": 2396,
+    "tactics": {
+        "highest": {
+            "rating": 3466,
+            "date": 1725880381
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1559800678
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 53
+        }
+    }
+}

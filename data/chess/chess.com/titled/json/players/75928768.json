@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75928768.80fabc5f.200x200o.3e5a35c43fc4.webp",
+    "player_id": 75928768,
+    "@id": "https://api.chess.com/pub/player/alblooshi_hamad",
+    "url": "https://www.chess.com/member/Alblooshi_Hamad",
+    "name": "Hamad Alblooshi",
+    "username": "alblooshi_hamad",
+    "title": "CM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/AE",
+    "last_online": 1730727138,
+    "joined": 1586241800,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

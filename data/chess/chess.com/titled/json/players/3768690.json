@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/3768690.dcb5ad2b.200x200o.264cadb1a548.png",
+    "player_id": 3768690,
+    "@id": "https://api.chess.com/pub/player/juniortay",
+    "url": "https://www.chess.com/member/juniortay",
+    "name": "Junior Tay",
+    "username": "juniortay",
+    "title": "CM",
+    "followers": 444,
+    "country": "https://api.chess.com/pub/country/SG",
+    "location": "Balestier",
+    "last_online": 1734150190,
+    "joined": 1280532001,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2144,
+            "date": 1657565268,
+            "rd": 110
+        },
+        "best": {
+            "rating": 2413,
+            "date": 1648016261,
+            "game": "https://www.chess.com/game/live/41754579341"
+        },
+        "record": {
+            "win": 11,
+            "loss": 8,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2313,
+            "date": 1733940175,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2412,
+            "date": 1732451699,
+            "game": "https://www.chess.com/game/live/126122436813"
+        },
+        "record": {
+            "win": 6780,
+            "loss": 6596,
+            "draw": 387
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2508,
+            "date": 1734021905,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2585,
+            "date": 1631280347,
+            "game": "https://www.chess.com/game/live/96135842469"
+        },
+        "record": {
+            "win": 4350,
+            "loss": 3748,
+            "draw": 459
+        }
+    },
+    "fide": 2230,
+    "tactics": {
+        "highest": {
+            "rating": 2607,
+            "date": 1406943343
+        },
+        "lowest": {
+            "rating": 1362,
+            "date": 1385858430
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 39,
+            "score": 36
+        }
+    }
+}

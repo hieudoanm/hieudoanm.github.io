@@ -1,0 +1,16 @@
+{
+    "player_id": 49616052,
+    "@id": "https://api.chess.com/pub/player/simon2049",
+    "url": "https://www.chess.com/member/Simon2049",
+    "name": "Simon Degenhard",
+    "username": "simon2049",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1729717246,
+    "joined": 1536601635,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

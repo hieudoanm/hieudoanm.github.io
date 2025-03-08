@@ -1,0 +1,100 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/18692830.4e97cc57.200x200o.8423b37d698f.jpg",
+    "player_id": 18692830,
+    "@id": "https://api.chess.com/pub/player/hblanco",
+    "url": "https://www.chess.com/member/hblanco",
+    "name": "Humberto L. Blanco Ronquillo",
+    "username": "hblanco",
+    "title": "IM",
+    "followers": 169,
+    "country": "https://api.chess.com/pub/country/CU",
+    "last_online": 1734041945,
+    "joined": 1409342157,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1567,
+            "date": 1732913336,
+            "rd": 157
+        },
+        "best": {
+            "rating": 2015,
+            "date": 1481026013,
+            "game": "https://www.chess.com/game/daily/575245273"
+        },
+        "record": {
+            "win": 3,
+            "loss": 2,
+            "draw": 3,
+            "time_per_move": 51919,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2150,
+            "date": 1730065758,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2295,
+            "date": 1692917659,
+            "game": "https://www.chess.com/game/live/86655545257"
+        },
+        "record": {
+            "win": 7,
+            "loss": 8,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2791,
+            "date": 1730343998,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2816,
+            "date": 1730242643,
+            "game": "https://www.chess.com/game/live/98222731899"
+        },
+        "record": {
+            "win": 837,
+            "loss": 700,
+            "draw": 90
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2780,
+            "date": 1729979333,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2780,
+            "date": 1729979333,
+            "game": "https://www.chess.com/game/live/110072437969"
+        },
+        "record": {
+            "win": 2046,
+            "loss": 1594,
+            "draw": 263
+        }
+    },
+    "fide": 2457,
+    "tactics": {
+        "highest": {
+            "rating": 3740,
+            "date": 1733777526
+        },
+        "lowest": {
+            "rating": 1213,
+            "date": 1594598639
+        }
+    },
+    "puzzle_rush": {}
+}

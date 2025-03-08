@@ -1,0 +1,112 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/60356018.366756f0.200x200o.50913f64fe34.gif",
+    "player_id": 60356018,
+    "@id": "https://api.chess.com/pub/player/radioactivewalrus65",
+    "url": "https://www.chess.com/member/RadioactiveWalrus65",
+    "name": "Dylan Tang",
+    "username": "radioactivewalrus65",
+    "title": "FM",
+    "followers": 106,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Panama Canal",
+    "last_online": 1734018083,
+    "joined": 1556499179,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1479,
+            "date": 1734131068,
+            "rd": 75
+        },
+        "best": {
+            "rating": 1547,
+            "date": 1726934136,
+            "game": "https://www.chess.com/game/daily/472836387"
+        },
+        "record": {
+            "win": 158,
+            "loss": 86,
+            "draw": 20,
+            "time_per_move": 27643,
+            "timeout_percent": 30
+        },
+        "tournament": {
+            "points": 12,
+            "withdraw": 0,
+            "count": 2,
+            "highest_finish": 7
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2235,
+            "date": 1732735095,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2243,
+            "date": 1724539518,
+            "game": "https://www.chess.com/game/live/116984398251"
+        },
+        "record": {
+            "win": 55,
+            "loss": 81,
+            "draw": 7
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2506,
+            "date": 1734155414,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2695,
+            "date": 1726616064,
+            "game": "https://www.chess.com/game/live/120673809575"
+        },
+        "record": {
+            "win": 2355,
+            "loss": 2021,
+            "draw": 350
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2570,
+            "date": 1734141535,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2615,
+            "date": 1734052085,
+            "game": "https://www.chess.com/game/live/119719257233"
+        },
+        "record": {
+            "win": 930,
+            "loss": 780,
+            "draw": 195
+        }
+    },
+    "fide": 2192,
+    "tactics": {
+        "highest": {
+            "rating": 3471,
+            "date": 1729710644
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1631333612
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25716705.a6e7a952.200x200o.13fef66f1875.jpeg",
+    "player_id": 25716705,
+    "@id": "https://api.chess.com/pub/player/zivkovicn",
+    "url": "https://www.chess.com/member/ZivkovicN",
+    "name": "Nemanja Zivkovic",
+    "username": "zivkovicn",
+    "title": "IM",
+    "followers": 3107,
+    "country": "https://api.chess.com/pub/country/RS",
+    "last_online": 1734184646,
+    "joined": 1450871909,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2000,
+            "date": 1733070574,
+            "rd": 289
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1453677648,
+            "game": "https://www.chess.com/game/daily/127218670"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 18489,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2007,
+            "date": 1730152400,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2028,
+            "date": 1679778050,
+            "game": "https://www.chess.com/game/live/73505687265"
+        },
+        "record": {
+            "win": 16,
+            "loss": 17,
+            "draw": 13
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2644,
+            "date": 1734032867,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2766,
+            "date": 1670880851,
+            "game": "https://www.chess.com/game/live/49829976367"
+        },
+        "record": {
+            "win": 763,
+            "loss": 768,
+            "draw": 92
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2623,
+            "date": 1727211276,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2769,
+            "date": 1656890151,
+            "game": "https://www.chess.com/game/live/58114199151"
+        },
+        "record": {
+            "win": 6101,
+            "loss": 6615,
+            "draw": 899
+        }
+    },
+    "fide": 2411,
+    "tactics": {
+        "highest": {
+            "rating": 3156,
+            "date": 1704322050
+        },
+        "lowest": {
+            "rating": 2045,
+            "date": 1460929755
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 40
+        }
+    }
+}

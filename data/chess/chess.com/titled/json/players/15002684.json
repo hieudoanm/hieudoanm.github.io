@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/15002684.ddef81df.200x200o.788da9b524ad.jpeg",
+    "player_id": 15002684,
+    "@id": "https://api.chess.com/pub/player/alejandrocapanegra",
+    "url": "https://www.chess.com/member/alejandrocapanegra",
+    "name": "Alejandro Cardenas",
+    "username": "alejandrocapanegra",
+    "title": "CM",
+    "followers": 82,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "Armenia",
+    "last_online": 1733953348,
+    "joined": 1386907034,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

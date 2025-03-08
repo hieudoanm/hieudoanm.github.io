@@ -1,0 +1,84 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/373242241.657b1e6a.200x200o.bc280a64141a.jpg",
+    "player_id": 373242241,
+    "@id": "https://api.chess.com/pub/player/atomicaxis",
+    "url": "https://www.chess.com/member/AtomicAxis",
+    "username": "atomicaxis",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734099345,
+    "joined": 1720014455,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2271,
+            "date": 1728215545,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2303,
+            "date": 1724081460,
+            "game": "https://www.chess.com/game/live/117708573085"
+        },
+        "record": {
+            "win": 46,
+            "loss": 22,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1896,
+            "date": 1720028365,
+            "rd": 156
+        },
+        "best": {
+            "rating": 1961,
+            "date": 1720028229,
+            "game": "https://www.chess.com/game/live/113767184071"
+        },
+        "record": {
+            "win": 2,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2067,
+            "date": 1729189516,
+            "rd": 77
+        },
+        "best": {
+            "rating": 2090,
+            "date": 1728130631,
+            "game": "https://www.chess.com/game/live/119636414121"
+        },
+        "record": {
+            "win": 14,
+            "loss": 11,
+            "draw": 0
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3056,
+            "date": 1728125900
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1720014455
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 40
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/344321593.bef6c2c4.200x200o.80ba647ab4b1.png",
+    "player_id": 344321593,
+    "@id": "https://api.chess.com/pub/player/theoneandonlydaaevik",
+    "url": "https://www.chess.com/member/theoneandonlydaaevik",
+    "name": "Daaevik Wadhawan",
+    "username": "theoneandonlydaaevik",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1733428235,
+    "joined": 1707499447,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

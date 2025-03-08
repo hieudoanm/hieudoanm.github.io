@@ -1,0 +1,95 @@
+{
+    "player_id": 22863602,
+    "@id": "https://api.chess.com/pub/player/xuyinglun",
+    "url": "https://www.chess.com/member/XuYinglun",
+    "name": "Yinglun Xu",
+    "username": "xuyinglun",
+    "title": "GM",
+    "followers": 96,
+    "country": "https://api.chess.com/pub/country/CN",
+    "location": "Beijing",
+    "last_online": 1733925511,
+    "joined": 1434565024,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1726820913,
+            "rd": 215
+        },
+        "record": {
+            "win": 0,
+            "loss": 0,
+            "draw": 3,
+            "time_per_move": 39194,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2527,
+            "date": 1678735158,
+            "rd": 73
+        },
+        "best": {
+            "rating": 2560,
+            "date": 1654359249,
+            "game": "https://www.chess.com/game/live/72472566271"
+        },
+        "record": {
+            "win": 14,
+            "loss": 13,
+            "draw": 13
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2738,
+            "date": 1727658714,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2787,
+            "date": 1654355942,
+            "game": "https://www.chess.com/game/live/19132637255"
+        },
+        "record": {
+            "win": 518,
+            "loss": 415,
+            "draw": 60
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2908,
+            "date": 1733748371,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2936,
+            "date": 1733747020,
+            "game": "https://www.chess.com/game/live/71325425357"
+        },
+        "record": {
+            "win": 1059,
+            "loss": 703,
+            "draw": 256
+        }
+    },
+    "fide": 2554,
+    "tactics": {
+        "highest": {
+            "rating": 3474,
+            "date": 1576831158
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1528945001
+        }
+    },
+    "puzzle_rush": {}
+}

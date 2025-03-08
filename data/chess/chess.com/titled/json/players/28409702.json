@@ -1,0 +1,110 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/28409702.ea281b14.200x200o.f7cda166fafe.jpeg",
+    "player_id": 28409702,
+    "@id": "https://api.chess.com/pub/player/micheliavelli",
+    "url": "https://www.chess.com/member/Micheliavelli",
+    "name": "Michael Hoffmann",
+    "username": "micheliavelli",
+    "title": "GM",
+    "followers": 158,
+    "country": "https://api.chess.com/pub/country/DO",
+    "location": "Santo Domingo",
+    "last_online": 1734126662,
+    "joined": 1464548543,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2201,
+            "date": 1505118496,
+            "rd": 202
+        },
+        "best": {
+            "rating": 2201,
+            "date": 1473525160,
+            "game": "https://www.chess.com/game/daily/138096158"
+        },
+        "record": {
+            "win": 4,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 31494,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2319,
+            "date": 1707760759,
+            "rd": 256
+        },
+        "best": {
+            "rating": 2319,
+            "date": 1623268803,
+            "game": "https://www.chess.com/game/live/17007715607"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2715,
+            "date": 1721241351,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2715,
+            "date": 1641589196,
+            "game": "https://www.chess.com/game/live/1695565286"
+        },
+        "record": {
+            "win": 826,
+            "loss": 559,
+            "draw": 105
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2718,
+            "date": 1734127380,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2828,
+            "date": 1721847300,
+            "game": "https://www.chess.com/game/live/32390945499"
+        },
+        "record": {
+            "win": 3037,
+            "loss": 1770,
+            "draw": 696
+        }
+    },
+    "fide": 2441,
+    "tactics": {
+        "highest": {
+            "rating": 3393,
+            "date": 1707602994
+        },
+        "lowest": {
+            "rating": 1369,
+            "date": 1464550596
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        },
+        "daily": {
+            "total_attempts": 37,
+            "score": 36
+        }
+    }
+}

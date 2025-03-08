@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/18748732.05c8bac3.200x200o.18ee76faee10.jpeg",
+    "player_id": 18748732,
+    "@id": "https://api.chess.com/pub/player/skiiier",
+    "url": "https://www.chess.com/member/skiiier",
+    "name": "Loren Brigham Laceste",
+    "username": "skiiier",
+    "title": "FM",
+    "followers": 51,
+    "country": "https://api.chess.com/pub/country/CA",
+    "location": "Vancouver",
+    "last_online": 1611616026,
+    "joined": 1409716014,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

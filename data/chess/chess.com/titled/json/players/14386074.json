@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/14386074.4476abea.200x200o.cc61206d3e3c.jpeg",
+    "player_id": 14386074,
+    "@id": "https://api.chess.com/pub/player/capibf4",
+    "url": "https://www.chess.com/member/capibf4",
+    "name": "Jorge Martino",
+    "username": "capibf4",
+    "title": "CM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Buenos Aires",
+    "last_online": 1734104494,
+    "joined": 1384473556,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

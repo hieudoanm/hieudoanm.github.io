@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/93303078.5e3f5dc4.200x200o.3b2e85af7065.jpg",
+    "player_id": 93303078,
+    "@id": "https://api.chess.com/pub/player/howtomoveaknight",
+    "url": "https://www.chess.com/member/howtomoveaknight",
+    "name": "Piotr Sygulski",
+    "username": "howtomoveaknight",
+    "title": "CM",
+    "followers": 69,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734169813,
+    "joined": 1602915515,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1745,
+            "date": 1727881806,
+            "rd": 140
+        },
+        "best": {
+            "rating": 2011,
+            "date": 1632391009,
+            "game": "https://www.chess.com/game/daily/490191709"
+        },
+        "record": {
+            "win": 48,
+            "loss": 9,
+            "draw": 1,
+            "time_per_move": 11445,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2266,
+            "date": 1731354527,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2266,
+            "date": 1731354527,
+            "game": "https://www.chess.com/game/live/125092773021"
+        },
+        "record": {
+            "win": 151,
+            "loss": 46,
+            "draw": 31
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2415,
+            "date": 1733597927,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2606,
+            "date": 1730467231,
+            "game": "https://www.chess.com/game/live/123098995741"
+        },
+        "record": {
+            "win": 3681,
+            "loss": 2285,
+            "draw": 281
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2650,
+            "date": 1734173939,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2655,
+            "date": 1734171943,
+            "game": "https://www.chess.com/game/live/95020129613"
+        },
+        "record": {
+            "win": 5677,
+            "loss": 4124,
+            "draw": 726
+        }
+    },
+    "fide": 2204,
+    "tactics": {
+        "highest": {
+            "rating": 3499,
+            "date": 1732038751
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1604235916
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 73,
+            "score": 70
+        }
+    }
+}

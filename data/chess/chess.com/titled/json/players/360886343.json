@@ -1,0 +1,87 @@
+{
+    "player_id": 360886343,
+    "@id": "https://api.chess.com/pub/player/dangerouscm",
+    "url": "https://www.chess.com/member/dangerousCM",
+    "username": "dangerouscm",
+    "title": "CM",
+    "followers": 24,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734174447,
+    "joined": 1714719777,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2280,
+            "date": 1734116468,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2368,
+            "date": 1733403768,
+            "game": "https://www.chess.com/game/live/126807050285"
+        },
+        "record": {
+            "win": 103,
+            "loss": 71,
+            "draw": 29
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1309,
+            "date": 1733544784,
+            "rd": 57
+        },
+        "best": {
+            "rating": 1723,
+            "date": 1718616215,
+            "game": "https://www.chess.com/game/live/110310164497"
+        },
+        "record": {
+            "win": 59,
+            "loss": 105,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1685,
+            "date": 1734082117,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2001,
+            "date": 1723630277,
+            "game": "https://www.chess.com/game/live/117367804933"
+        },
+        "record": {
+            "win": 120,
+            "loss": 139,
+            "draw": 14
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3174,
+            "date": 1732701602
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1714719777
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        },
+        "daily": {
+            "total_attempts": 24,
+            "score": 21
+        }
+    }
+}

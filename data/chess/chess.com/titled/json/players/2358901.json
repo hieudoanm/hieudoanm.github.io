@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/2358901.bb19fc28.200x200o.6b47cc4010b3.jpg",
+    "player_id": 2358901,
+    "@id": "https://api.chess.com/pub/player/cfjohansson",
+    "url": "https://www.chess.com/member/cfjohansson",
+    "name": "Carl Fredrik Johansson",
+    "username": "cfjohansson",
+    "title": "CM",
+    "followers": 42,
+    "country": "https://api.chess.com/pub/country/SE",
+    "location": "Stockholm, Sweden",
+    "last_online": 1733812691,
+    "joined": 1260223946,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

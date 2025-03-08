@@ -1,0 +1,16 @@
+{
+    "player_id": 167625021,
+    "@id": "https://api.chess.com/pub/player/thelazyanalyst",
+    "url": "https://www.chess.com/member/theLazyAnalyst",
+    "username": "thelazyanalyst",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1727812478,
+    "joined": 1641360964,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

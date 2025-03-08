@@ -1,0 +1,17 @@
+{
+    "player_id": 312970609,
+    "@id": "https://api.chess.com/pub/player/alexandrehouhou",
+    "url": "https://www.chess.com/member/AlexandreHouhou",
+    "name": "Alexandre Houhou",
+    "username": "alexandrehouhou",
+    "title": "CM",
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1734106219,
+    "joined": 1694781873,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

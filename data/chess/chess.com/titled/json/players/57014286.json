@@ -1,0 +1,88 @@
+{
+    "player_id": 57014286,
+    "@id": "https://api.chess.com/pub/player/bizhigitov_zhangir",
+    "url": "https://www.chess.com/member/Bizhigitov_Zhangir",
+    "name": "Zhangir Bizhigitov",
+    "username": "bizhigitov_zhangir",
+    "title": "FM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1734167476,
+    "joined": 1549463291,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2276,
+            "date": 1730986559,
+            "rd": 89
+        },
+        "best": {
+            "rating": 2177,
+            "date": 1590236643,
+            "game": "https://www.chess.com/game/live/5471783904"
+        },
+        "record": {
+            "win": 89,
+            "loss": 28,
+            "draw": 10
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2287,
+            "date": 1676618997,
+            "rd": 54
+        },
+        "best": {
+            "rating": 2194,
+            "date": 1576922321,
+            "game": "https://www.chess.com/game/live/4368047888"
+        },
+        "record": {
+            "win": 199,
+            "loss": 157,
+            "draw": 20
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2451,
+            "date": 1676618997,
+            "rd": 82
+        },
+        "best": {
+            "rating": 2486,
+            "date": 1617549930,
+            "game": "https://www.chess.com/game/live/18276076277"
+        },
+        "record": {
+            "win": 176,
+            "loss": 118,
+            "draw": 27
+        }
+    },
+    "fide": 2276,
+    "tactics": {
+        "highest": {
+            "rating": 1531,
+            "date": 1617878338
+        },
+        "lowest": {
+            "rating": 419,
+            "date": 1549463325
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        },
+        "daily": {
+            "total_attempts": 54,
+            "score": 52
+        }
+    }
+}

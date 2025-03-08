@@ -1,0 +1,17 @@
+{
+    "player_id": 57366408,
+    "@id": "https://api.chess.com/pub/player/workworkzugzug",
+    "url": "https://www.chess.com/member/workworkzugzug",
+    "name": "Matthieu Freeke",
+    "username": "workworkzugzug",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/IL",
+    "last_online": 1711036114,
+    "joined": 1550178035,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

@@ -1,0 +1,124 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/40788206.57abe33d.200x200o.6ed3fb269f56.jpeg",
+    "player_id": 40788206,
+    "@id": "https://api.chess.com/pub/player/hectorfiori",
+    "url": "https://www.chess.com/member/hectorfiori",
+    "name": "Hector Fiori",
+    "username": "hectorfiori",
+    "title": "CM",
+    "followers": 589,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Buenos Aires",
+    "last_online": 1734177338,
+    "joined": 1511817040,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2255,
+            "date": 1733415295,
+            "rd": 107
+        },
+        "best": {
+            "rating": 2316,
+            "date": 1581000715,
+            "game": "https://www.chess.com/game/daily/216333868"
+        },
+        "record": {
+            "win": 44,
+            "loss": 11,
+            "draw": 79,
+            "time_per_move": 74566,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 2126,
+            "date": 1589984402,
+            "rd": 110
+        },
+        "best": {
+            "rating": 2126,
+            "date": 1589984402,
+            "game": "https://www.chess.com/game/daily/255143326"
+        },
+        "record": {
+            "win": 15,
+            "loss": 7,
+            "draw": 6,
+            "time_per_move": 74566,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2537,
+            "date": 1633897304,
+            "rd": 121
+        },
+        "best": {
+            "rating": 2537,
+            "date": 1633897304,
+            "game": "https://www.chess.com/game/live/17357001859"
+        },
+        "record": {
+            "win": 14,
+            "loss": 4,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2284,
+            "date": 1732632448,
+            "rd": 64
+        },
+        "best": {
+            "rating": 2352,
+            "date": 1713963621,
+            "game": "https://www.chess.com/game/live/118276717455"
+        },
+        "record": {
+            "win": 726,
+            "loss": 552,
+            "draw": 71
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2535,
+            "date": 1727216193,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2554,
+            "date": 1693708095,
+            "game": "https://www.chess.com/game/live/3753869114"
+        },
+        "record": {
+            "win": 365,
+            "loss": 203,
+            "draw": 50
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3319,
+            "date": 1710585034
+        },
+        "lowest": {
+            "rating": 1213,
+            "date": 1519570428
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

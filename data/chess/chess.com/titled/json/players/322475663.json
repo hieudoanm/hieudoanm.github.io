@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/322475663.143348e2.200x200o.0c84a7693da1.png",
+    "player_id": 322475663,
+    "@id": "https://api.chess.com/pub/player/skygreatness",
+    "url": "https://www.chess.com/member/SkyGreatness",
+    "name": "Victor Garcia Fernandez",
+    "username": "skygreatness",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734175048,
+    "joined": 1698529871,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

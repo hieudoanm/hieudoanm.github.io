@@ -1,0 +1,28 @@
+{
+    "player_id": 194963387,
+    "@id": "https://api.chess.com/pub/player/alhassadiyousefa4",
+    "url": "https://www.chess.com/member/AlhassadiYousefA4",
+    "name": "Yousef A. Alhassadi",
+    "username": "alhassadiyousefa4",
+    "title": "FM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/PS",
+    "last_online": 1734028557,
+    "joined": 1661631105,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "fide": 2134,
+    "tactics": {
+        "highest": {
+            "rating": 2146,
+            "date": 1722833088
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1661631105
+        }
+    },
+    "puzzle_rush": {}
+}

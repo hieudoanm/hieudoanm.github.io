@@ -1,0 +1,68 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34719464.10dbbac0.200x200o.794dfdf3d4c4.jpeg",
+    "player_id": 34719464,
+    "@id": "https://api.chess.com/pub/player/caleuche",
+    "url": "https://www.chess.com/member/Caleuche",
+    "username": "caleuche",
+    "title": "FM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/CL",
+    "last_online": 1734103519,
+    "joined": 1492008033,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2424,
+            "date": 1733714519,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2572,
+            "date": 1617733331,
+            "game": "https://www.chess.com/game/live/2175802077"
+        },
+        "record": {
+            "win": 6755,
+            "loss": 6844,
+            "draw": 786
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2414,
+            "date": 1637696669,
+            "rd": 79
+        },
+        "best": {
+            "rating": 2614,
+            "date": 1551128253,
+            "game": "https://www.chess.com/game/live/3451117087"
+        },
+        "record": {
+            "win": 470,
+            "loss": 413,
+            "draw": 65
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3373,
+            "date": 1734105516
+        },
+        "lowest": {
+            "rating": 410,
+            "date": 1495939390
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

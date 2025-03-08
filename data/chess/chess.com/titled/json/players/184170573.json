@@ -1,0 +1,67 @@
+{
+    "player_id": 184170573,
+    "@id": "https://api.chess.com/pub/player/whitemirrorninja",
+    "url": "https://www.chess.com/member/whitemirrorninja",
+    "name": "shakked tifferet",
+    "username": "whitemirrorninja",
+    "title": "FM",
+    "followers": 49,
+    "country": "https://api.chess.com/pub/country/IL",
+    "last_online": 1734180348,
+    "joined": 1652950928,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2578,
+            "date": 1734180623,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2667,
+            "date": 1660993849,
+            "game": "https://www.chess.com/game/live/94679359411"
+        },
+        "record": {
+            "win": 851,
+            "loss": 682,
+            "draw": 88
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2519,
+            "date": 1733674038,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2657,
+            "date": 1658245090,
+            "game": "https://www.chess.com/game/live/77407933811"
+        },
+        "record": {
+            "win": 523,
+            "loss": 500,
+            "draw": 80
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3654,
+            "date": 1720688189
+        },
+        "lowest": {
+            "rating": 2210,
+            "date": 1661008825
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

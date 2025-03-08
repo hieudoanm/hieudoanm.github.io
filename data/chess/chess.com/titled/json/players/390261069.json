@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/390261069.171f3681.200x200o.84f3e02ea309.png",
+    "player_id": 390261069,
+    "@id": "https://api.chess.com/pub/player/coach_jacob",
+    "url": "https://www.chess.com/member/coach_jacob",
+    "name": "Jakub Lizak",
+    "username": "coach_jacob",
+    "title": "CM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734119746,
+    "joined": 1726936451,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2471,
+            "date": 1733425441,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2498,
+            "date": 1729516178,
+            "game": "https://www.chess.com/game/live/127162858641"
+        },
+        "record": {
+            "win": 78,
+            "loss": 21,
+            "draw": 11
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2489,
+            "date": 1731759221,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2606,
+            "date": 1728736469,
+            "game": "https://www.chess.com/game/live/122474686195"
+        },
+        "record": {
+            "win": 290,
+            "loss": 245,
+            "draw": 36
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2429,
+            "date": 1734129085,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2530,
+            "date": 1729681005,
+            "game": "https://www.chess.com/game/live/120957620311"
+        },
+        "record": {
+            "win": 267,
+            "loss": 170,
+            "draw": 36
+        }
+    },
+    "fide": 2245,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1726936451
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1726936451
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,85 @@
+{
+    "player_id": 330150933,
+    "@id": "https://api.chess.com/pub/player/alexey_krupko",
+    "url": "https://www.chess.com/member/Alexey_Krupko",
+    "name": "Alexey Krupko",
+    "username": "alexey_krupko",
+    "title": "FM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734163461,
+    "joined": 1701611008,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2369,
+            "date": 1734175400,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2404,
+            "date": 1726603822,
+            "game": "https://www.chess.com/game/live/127603786039"
+        },
+        "record": {
+            "win": 323,
+            "loss": 107,
+            "draw": 45
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2125,
+            "date": 1734175669,
+            "rd": 90
+        },
+        "best": {
+            "rating": 2294,
+            "date": 1719000268,
+            "game": "https://www.chess.com/game/live/110322124861"
+        },
+        "record": {
+            "win": 17,
+            "loss": 9,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2283,
+            "date": 1732052531,
+            "rd": 81
+        },
+        "best": {
+            "rating": 2485,
+            "date": 1727386392,
+            "game": "https://www.chess.com/game/live/121124463487"
+        },
+        "record": {
+            "win": 16,
+            "loss": 12,
+            "draw": 0
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1701611008
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1701611008
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/202295929.017a34a7.200x200o.1da8ec8faee2.jpeg",
+    "player_id": 202295929,
+    "@id": "https://api.chess.com/pub/player/i_am_javi",
+    "url": "https://www.chess.com/member/I_am_Javi",
+    "name": "Ernesto Javier Fernandez Guillen",
+    "username": "i_am_javi",
+    "title": "IM",
+    "followers": 72,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Barcelona",
+    "last_online": 1732720645,
+    "joined": 1666140530,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2161,
+            "date": 1719951039,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2260,
+            "date": 1670885747,
+            "game": "https://www.chess.com/game/live/64623191863"
+        },
+        "record": {
+            "win": 7,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2714,
+            "date": 1730332365,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2801,
+            "date": 1667584909,
+            "game": "https://www.chess.com/game/live/67816931145"
+        },
+        "record": {
+            "win": 243,
+            "loss": 183,
+            "draw": 29
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2739,
+            "date": 1730214341,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2920,
+            "date": 1666715924,
+            "game": "https://www.chess.com/game/live/99522801183"
+        },
+        "record": {
+            "win": 525,
+            "loss": 470,
+            "draw": 79
+        }
+    },
+    "fide": 2478,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1666140530
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1666140530
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

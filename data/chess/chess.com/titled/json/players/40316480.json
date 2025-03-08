@@ -1,0 +1,120 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/40316480.334a248f.200x200o.1031cf832a35.jpg",
+    "player_id": 40316480,
+    "@id": "https://api.chess.com/pub/player/tvjosue",
+    "url": "https://www.chess.com/member/tvjosue",
+    "name": "Josue Araujo Sanchez",
+    "username": "tvjosue",
+    "title": "IM",
+    "followers": 322,
+    "country": "https://api.chess.com/pub/country/DO",
+    "location": "Santo Domingo",
+    "last_online": 1734031553,
+    "joined": 1510537507,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2034,
+            "date": 1733017501,
+            "rd": 102
+        },
+        "best": {
+            "rating": 2066,
+            "date": 1611072699,
+            "game": "https://www.chess.com/game/daily/588586697"
+        },
+        "record": {
+            "win": 49,
+            "loss": 23,
+            "draw": 6,
+            "time_per_move": 30439,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1578,
+            "date": 1713819583,
+            "rd": 349
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 30439,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2179,
+            "date": 1720806957,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2532,
+            "date": 1605404482,
+            "game": "https://www.chess.com/game/live/22255767383"
+        },
+        "record": {
+            "win": 63,
+            "loss": 40,
+            "draw": 21
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2704,
+            "date": 1728407498,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2816,
+            "date": 1720411362,
+            "game": "https://www.chess.com/game/live/48811790561"
+        },
+        "record": {
+            "win": 965,
+            "loss": 747,
+            "draw": 75
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2663,
+            "date": 1734032099,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2749,
+            "date": 1656594783,
+            "game": "https://www.chess.com/game/live/97972305701"
+        },
+        "record": {
+            "win": 3316,
+            "loss": 2296,
+            "draw": 504
+        }
+    },
+    "fide": 2337,
+    "tactics": {
+        "highest": {
+            "rating": 3464,
+            "date": 1723907604
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1517147154
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

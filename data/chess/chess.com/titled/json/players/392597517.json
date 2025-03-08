@@ -1,0 +1,17 @@
+{
+    "player_id": 392597517,
+    "@id": "https://api.chess.com/pub/player/artisticonline",
+    "url": "https://www.chess.com/member/Artisticonline",
+    "name": "Aarav A",
+    "username": "artisticonline",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1733002845,
+    "joined": 1727718846,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

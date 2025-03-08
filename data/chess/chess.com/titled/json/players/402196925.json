@@ -1,0 +1,69 @@
+{
+    "player_id": 402196925,
+    "@id": "https://api.chess.com/pub/player/pille85",
+    "url": "https://www.chess.com/member/Pille85",
+    "name": "Ulrich Zenker",
+    "username": "pille85",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/DE",
+    "location": "Grafing",
+    "last_online": 1734102668,
+    "joined": 1731485355,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2069,
+            "date": 1732381994,
+            "rd": 191
+        },
+        "best": {
+            "rating": 2242,
+            "date": 1732381286,
+            "game": "https://www.chess.com/game/live/126120017827"
+        },
+        "record": {
+            "win": 1,
+            "loss": 7,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2168,
+            "date": 1733875654,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2168,
+            "date": 1733875654,
+            "game": "https://www.chess.com/game/live/126397202045"
+        },
+        "record": {
+            "win": 102,
+            "loss": 82,
+            "draw": 12
+        }
+    },
+    "fide": 2089,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1731485355
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1731485355
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 41,
+            "score": 38
+        }
+    }
+}

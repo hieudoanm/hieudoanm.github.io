@@ -1,0 +1,16 @@
+{
+    "player_id": 7893658,
+    "@id": "https://api.chess.com/pub/player/eduardarbereshi",
+    "url": "https://www.chess.com/member/EduardArbereshi",
+    "username": "eduardarbereshi",
+    "title": "CM",
+    "followers": 28,
+    "country": "https://api.chess.com/pub/country/AL",
+    "last_online": 1734163663,
+    "joined": 1339715237,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

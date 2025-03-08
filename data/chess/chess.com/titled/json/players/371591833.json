@@ -1,0 +1,61 @@
+{
+    "player_id": 371591833,
+    "@id": "https://api.chess.com/pub/player/alcarez-108",
+    "url": "https://www.chess.com/member/alcarez-108",
+    "username": "alcarez-108",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1731692066,
+    "joined": 1719212703,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2160,
+            "date": 1726934573,
+            "rd": 210
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2558,
+            "date": 1730527824,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2677,
+            "date": 1722390989,
+            "game": "https://www.chess.com/game/live/116129424693"
+        },
+        "record": {
+            "win": 301,
+            "loss": 341,
+            "draw": 62
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2547,
+            "date": 1721893418
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1719212703
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 39
+        }
+    }
+}

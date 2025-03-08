@@ -1,0 +1,84 @@
+{
+    "player_id": 35910874,
+    "@id": "https://api.chess.com/pub/player/darkpassenger007",
+    "url": "https://www.chess.com/member/DarkPassenger007",
+    "name": "Frode Elsness",
+    "username": "darkpassenger007",
+    "title": "IM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/NO",
+    "last_online": 1733767122,
+    "joined": 1496083907,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2029,
+            "date": 1693335852,
+            "rd": 218
+        },
+        "best": {
+            "rating": 2108,
+            "date": 1630673090,
+            "game": "https://www.chess.com/game/live/24409355839"
+        },
+        "record": {
+            "win": 2,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2324,
+            "date": 1731780908,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2384,
+            "date": 1729358042,
+            "game": "https://www.chess.com/game/live/115841488557"
+        },
+        "record": {
+            "win": 230,
+            "loss": 428,
+            "draw": 34
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2490,
+            "date": 1727801640,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2528,
+            "date": 1727798659,
+            "game": "https://www.chess.com/game/live/118509574249"
+        },
+        "record": {
+            "win": 154,
+            "loss": 124,
+            "draw": 20
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2313,
+            "date": 1723588546
+        },
+        "lowest": {
+            "rating": 1208,
+            "date": 1496083984
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

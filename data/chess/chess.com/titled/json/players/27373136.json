@@ -1,0 +1,100 @@
+{
+    "player_id": 27373136,
+    "@id": "https://api.chess.com/pub/player/vyotov",
+    "url": "https://www.chess.com/member/vyotov",
+    "name": "Valentin Iotov",
+    "username": "vyotov",
+    "title": "GM",
+    "followers": 122,
+    "country": "https://api.chess.com/pub/country/BG",
+    "location": "Plovdiv",
+    "last_online": 1725789851,
+    "joined": 1458668489,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1423,
+            "date": 1712305723,
+            "rd": 187
+        },
+        "best": {
+            "rating": 2200,
+            "date": 1458668489,
+            "game": "https://www.chess.com/game/daily/155204232"
+        },
+        "record": {
+            "win": 9,
+            "loss": 5,
+            "draw": 1,
+            "time_per_move": 21751,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2446,
+            "date": 1591022212,
+            "rd": 324
+        },
+        "best": {
+            "rating": 2226,
+            "date": 1589999680,
+            "game": "https://www.chess.com/game/live/4883538291"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2595,
+            "date": 1725789835,
+            "rd": 20
+        },
+        "best": {
+            "rating": 2728,
+            "date": 1484284553,
+            "game": "https://www.chess.com/game/live/1525992489"
+        },
+        "record": {
+            "win": 901,
+            "loss": 799,
+            "draw": 138
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2387,
+            "date": 1724398457,
+            "rd": 83
+        },
+        "best": {
+            "rating": 2712,
+            "date": 1637905933,
+            "game": "https://www.chess.com/game/live/31643991275"
+        },
+        "record": {
+            "win": 386,
+            "loss": 315,
+            "draw": 79
+        }
+    },
+    "fide": 2518,
+    "tactics": {
+        "highest": {
+            "rating": 2772,
+            "date": 1483997540
+        },
+        "lowest": {
+            "rating": 1363,
+            "date": 1458742593
+        }
+    },
+    "puzzle_rush": {}
+}

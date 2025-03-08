@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6942597.2e874674.200x200o.1441afef98eb.png",
+    "player_id": 6942597,
+    "@id": "https://api.chess.com/pub/player/josuexp",
+    "url": "https://www.chess.com/member/Josuexp",
+    "name": "Josue Exposito Amaro",
+    "username": "josuexp",
+    "title": "FM",
+    "followers": 15,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Spain",
+    "last_online": 1733954465,
+    "joined": 1331502121,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1574,
+            "date": 1705613382,
+            "rd": 110
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1331502121,
+            "game": "https://www.chess.com/game/daily/183001180"
+        },
+        "record": {
+            "win": 62,
+            "loss": 3,
+            "draw": 1,
+            "time_per_move": 54922,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1054,
+            "date": 1684519394,
+            "rd": 141
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1390377600,
+            "game": "https://www.chess.com/game/live/78258106313"
+        },
+        "record": {
+            "win": 42,
+            "loss": 17,
+            "draw": 33
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2442,
+            "date": 1684520312,
+            "rd": 79
+        },
+        "best": {
+            "rating": 2495,
+            "date": 1684518783,
+            "game": "https://www.chess.com/game/live/822540813"
+        },
+        "record": {
+            "win": 1667,
+            "loss": 1203,
+            "draw": 105
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2210,
+            "date": 1722373713,
+            "rd": 202
+        },
+        "best": {
+            "rating": 2397,
+            "date": 1568267527,
+            "game": "https://www.chess.com/game/live/3951591312"
+        },
+        "record": {
+            "win": 611,
+            "loss": 494,
+            "draw": 49
+        }
+    },
+    "fide": 2350,
+    "tactics": {
+        "highest": {
+            "rating": 2970,
+            "date": 1727733650
+        },
+        "lowest": {
+            "rating": 1313,
+            "date": 1390466784
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 23,
+            "score": 22
+        }
+    }
+}

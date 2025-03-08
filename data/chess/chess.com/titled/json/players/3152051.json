@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/3152051.32b1e811.200x200o.88c5de6580c5.jpeg",
+    "player_id": 3152051,
+    "@id": "https://api.chess.com/pub/player/sigurdurdadi",
+    "url": "https://www.chess.com/member/SigurdurDadi",
+    "name": "Sigurdur Sigfusson",
+    "username": "sigurdurdadi",
+    "title": "FM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/IS",
+    "last_online": 1677881203,
+    "joined": 1220441778,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

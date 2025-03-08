@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/10729592.17eb77d2.200x200o.2b59eb69b313.jpg",
+    "player_id": 10729592,
+    "@id": "https://api.chess.com/pub/player/agibileg",
+    "url": "https://www.chess.com/member/Agibileg",
+    "name": "Uurtsaikh Agibileg",
+    "username": "agibileg",
+    "title": "IM",
+    "followers": 131,
+    "country": "https://api.chess.com/pub/country/MN",
+    "location": "Ulaanbaatar",
+    "last_online": 1733237085,
+    "joined": 1360243286,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1062,
+            "date": 1706275066,
+            "rd": 194
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1360243286,
+            "game": "https://www.chess.com/game/daily/596227405"
+        },
+        "record": {
+            "win": 2,
+            "loss": 3,
+            "draw": 0,
+            "time_per_move": 127264,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2367,
+            "date": 1706757529,
+            "rd": 72
+        },
+        "best": {
+            "rating": 2457,
+            "date": 1609056058,
+            "game": "https://www.chess.com/game/live/18186642319"
+        },
+        "record": {
+            "win": 90,
+            "loss": 51,
+            "draw": 13
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2634,
+            "date": 1716551829,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2650,
+            "date": 1695539089,
+            "game": "https://www.chess.com/game/live/88131531617"
+        },
+        "record": {
+            "win": 411,
+            "loss": 387,
+            "draw": 32
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2710,
+            "date": 1733247012,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2926,
+            "date": 1715673757,
+            "game": "https://www.chess.com/game/live/120328863597"
+        },
+        "record": {
+            "win": 2692,
+            "loss": 2495,
+            "draw": 419
+        }
+    },
+    "fide": 2413,
+    "tactics": {
+        "highest": {
+            "rating": 4128,
+            "date": 1702004867
+        },
+        "lowest": {
+            "rating": 1317,
+            "date": 1361059849
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 87,
+            "score": 83
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/387099527.990b009c.200x200o.63dc2105771d.png",
+    "player_id": 387099527,
+    "@id": "https://api.chess.com/pub/player/springer_fighter2",
+    "url": "https://www.chess.com/member/Springer_Fighter2",
+    "username": "springer_fighter2",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734180508,
+    "joined": 1725873531,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

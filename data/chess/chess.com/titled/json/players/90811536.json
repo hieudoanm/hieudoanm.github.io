@@ -1,0 +1,85 @@
+{
+    "player_id": 90811536,
+    "@id": "https://api.chess.com/pub/player/el-pansas",
+    "url": "https://www.chess.com/member/El-Pansas",
+    "username": "el-pansas",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/CH",
+    "last_online": 1732310437,
+    "joined": 1599580527,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1668,
+            "date": 1721224895,
+            "rd": 142
+        },
+        "best": {
+            "rating": 1671,
+            "date": 1613465460,
+            "game": "https://www.chess.com/game/daily/306854574"
+        },
+        "record": {
+            "win": 6,
+            "loss": 2,
+            "draw": 3,
+            "time_per_move": 30221,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2225,
+            "date": 1640456769,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2230,
+            "date": 1640454875,
+            "game": "https://www.chess.com/game/live/34195146337"
+        },
+        "record": {
+            "win": 399,
+            "loss": 294,
+            "draw": 53
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2379,
+            "date": 1731338757,
+            "rd": 102
+        },
+        "best": {
+            "rating": 2379,
+            "date": 1731338757,
+            "game": "https://www.chess.com/game/live/124555734525"
+        },
+        "record": {
+            "win": 212,
+            "loss": 93,
+            "draw": 17
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2713,
+            "date": 1706277918
+        },
+        "lowest": {
+            "rating": 391,
+            "date": 1599581024
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/32119674.63c5aa4f.200x200o.316cc93fe038.jpeg",
+    "player_id": 32119674,
+    "@id": "https://api.chess.com/pub/player/stephenzinho",
+    "url": "https://www.chess.com/member/Stephenzinho",
+    "name": "Stephen Jessel",
+    "username": "stephenzinho",
+    "title": "FM",
+    "followers": 166,
+    "country": "https://api.chess.com/pub/country/IE",
+    "last_online": 1734094543,
+    "joined": 1483491265,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2392,
+            "date": 1734136496,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2470,
+            "date": 1596876026,
+            "game": "https://www.chess.com/game/live/5263176238"
+        },
+        "record": {
+            "win": 41,
+            "loss": 22,
+            "draw": 10
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2602,
+            "date": 1734085059,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2744,
+            "date": 1665027124,
+            "game": "https://www.chess.com/game/live/73755233349"
+        },
+        "record": {
+            "win": 490,
+            "loss": 488,
+            "draw": 81
+        }
+    },
+    "fide": 2385,
+    "tactics": {
+        "highest": {
+            "rating": 3474,
+            "date": 1679422865
+        },
+        "lowest": {
+            "rating": 1218,
+            "date": 1545104050
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 72,
+            "score": 69
+        }
+    }
+}

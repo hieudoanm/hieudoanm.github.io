@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/62215462.7c9a5bbd.200x200o.078385c88ef0.jpeg",
+    "player_id": 62215462,
+    "@id": "https://api.chess.com/pub/player/slavenok",
+    "url": "https://www.chess.com/member/slavenok",
+    "name": "Alexey Ponikarovsky",
+    "username": "slavenok",
+    "title": "FM",
+    "followers": 15,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1708458153,
+    "joined": 1560379269,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

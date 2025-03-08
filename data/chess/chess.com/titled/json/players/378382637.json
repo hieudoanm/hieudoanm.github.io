@@ -1,0 +1,69 @@
+{
+    "player_id": 378382637,
+    "@id": "https://api.chess.com/pub/player/schlechter1874",
+    "url": "https://www.chess.com/member/Schlechter1874",
+    "username": "schlechter1874",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/AT",
+    "last_online": 1734131985,
+    "joined": 1722438921,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1604,
+            "date": 1734150199,
+            "rd": 345
+        },
+        "best": {
+            "rating": 1604,
+            "date": 1734149324,
+            "game": "https://www.chess.com/game/daily/741462879"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 6565,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 5,
+            "highest_finish": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2221,
+            "date": 1722711733,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2264,
+            "date": 1722708138,
+            "game": "https://www.chess.com/game/live/116443793113"
+        },
+        "record": {
+            "win": 22,
+            "loss": 12,
+            "draw": 3
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2703,
+            "date": 1734150889
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1722438921
+        }
+    },
+    "puzzle_rush": {}
+}

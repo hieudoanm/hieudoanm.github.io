@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/4585282.a6e579cd.200x200o.7a5358859c27.jpeg",
+    "player_id": 4585282,
+    "@id": "https://api.chess.com/pub/player/volcanator",
+    "url": "https://www.chess.com/member/Volcanator",
+    "name": "Alvin L.A. Smith",
+    "username": "volcanator",
+    "title": "FM",
+    "followers": 32,
+    "country": "https://api.chess.com/pub/country/RS",
+    "location": "Swansea",
+    "last_online": 1733080051,
+    "joined": 1295549472,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

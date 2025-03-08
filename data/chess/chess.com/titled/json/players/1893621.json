@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1893621.7f5f4e63.200x200o.93d55b5c69c5.jpeg",
+    "player_id": 1893621,
+    "@id": "https://api.chess.com/pub/player/vuka65",
+    "url": "https://www.chess.com/member/Vuka65",
+    "name": "Goran Ivankovic",
+    "username": "vuka65",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/CA",
+    "location": "Vancouver",
+    "last_online": 1732661480,
+    "joined": 1240886505,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

@@ -1,0 +1,67 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/337484401.73c1a24b.200x200o.05b2ae8e7038.jpg",
+    "player_id": 337484401,
+    "@id": "https://api.chess.com/pub/player/shadowvoyager",
+    "url": "https://www.chess.com/member/shadowvoyager",
+    "username": "shadowvoyager",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/GR",
+    "last_online": 1731233920,
+    "joined": 1704661450,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2272,
+            "date": 1704920927,
+            "rd": 207
+        },
+        "best": {
+            "rating": 2432,
+            "date": 1704917658,
+            "game": "https://www.chess.com/game/live/98656537725"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2627,
+            "date": 1730753755,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2647,
+            "date": 1730134446,
+            "game": "https://www.chess.com/game/live/123777668345"
+        },
+        "record": {
+            "win": 110,
+            "loss": 109,
+            "draw": 31
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1704661450
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1704661450
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

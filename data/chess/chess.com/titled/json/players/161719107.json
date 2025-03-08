@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/161719107.9b67f56f.200x200o.7a9458c6d92a.jpg",
+    "player_id": 161719107,
+    "@id": "https://api.chess.com/pub/player/pospisku",
+    "url": "https://www.chess.com/member/pospisku",
+    "name": "Danila Sutormin",
+    "username": "pospisku",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/RS",
+    "location": "Paracin",
+    "last_online": 1733981560,
+    "joined": 1637201550,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2394,
+            "date": 1732622813,
+            "rd": 100
+        },
+        "best": {
+            "rating": 2442,
+            "date": 1719017313,
+            "game": "https://www.chess.com/game/live/112756172467"
+        },
+        "record": {
+            "win": 16,
+            "loss": 9,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2661,
+            "date": 1733983935,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2748,
+            "date": 1727279296,
+            "game": "https://www.chess.com/game/live/126334147587"
+        },
+        "record": {
+            "win": 287,
+            "loss": 200,
+            "draw": 60
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1637201550
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1637201550
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 55,
+            "score": 52
+        }
+    }
+}

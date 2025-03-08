@@ -1,0 +1,85 @@
+{
+    "player_id": 19952624,
+    "@id": "https://api.chess.com/pub/player/mattovich",
+    "url": "https://www.chess.com/member/Mattovich",
+    "name": "Henry Grob",
+    "username": "mattovich",
+    "title": "FM",
+    "followers": 294,
+    "country": "https://api.chess.com/pub/country/CH",
+    "location": "Zurich",
+    "last_online": 1734182082,
+    "joined": 1417268172,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2000,
+            "date": 1695065000,
+            "rd": 205
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1695065000,
+            "game": "https://www.chess.com/game/live/6014954763"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1774,
+            "date": 1734182303,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2019,
+            "date": 1615473130,
+            "game": "https://www.chess.com/game/live/44562670527"
+        },
+        "record": {
+            "win": 1424,
+            "loss": 1131,
+            "draw": 103
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2185,
+            "date": 1734183366,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2300,
+            "date": 1650022174,
+            "game": "https://www.chess.com/game/live/87392463225"
+        },
+        "record": {
+            "win": 7438,
+            "loss": 6004,
+            "draw": 1150
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2134,
+            "date": 1708977356
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1522789783
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 31,
+            "score": 28
+        }
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "player_id": 63377296,
+    "@id": "https://api.chess.com/pub/player/kyky1232",
+    "url": "https://www.chess.com/member/kyky1232",
+    "username": "kyky1232",
+    "title": "FM",
+    "followers": 67,
+    "country": "https://api.chess.com/pub/country/VN",
+    "last_online": 1734020429,
+    "joined": 1563369591,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1189,
+            "date": 1726836330,
+            "rd": 123
+        },
+        "best": {
+            "rating": 1411,
+            "date": 1695355576,
+            "game": "https://www.chess.com/game/daily/559705277"
+        },
+        "record": {
+            "win": 9,
+            "loss": 8,
+            "draw": 0,
+            "time_per_move": 44035,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2236,
+            "date": 1731658717,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2307,
+            "date": 1728486491,
+            "game": "https://www.chess.com/game/live/122224206537"
+        },
+        "record": {
+            "win": 516,
+            "loss": 320,
+            "draw": 70
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2300,
+            "date": 1726836331,
+            "rd": 126
+        },
+        "best": {
+            "rating": 1323,
+            "date": 1658367970,
+            "game": "https://www.chess.com/game/live/52023033049"
+        },
+        "record": {
+            "win": 63,
+            "loss": 61,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2369,
+            "date": 1732963165,
+            "rd": 79
+        },
+        "best": {
+            "rating": 2369,
+            "date": 1732963165,
+            "game": "https://www.chess.com/game/live/126683353155"
+        },
+        "record": {
+            "win": 430,
+            "loss": 344,
+            "draw": 32
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3047,
+            "date": 1732792433
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1563424918
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

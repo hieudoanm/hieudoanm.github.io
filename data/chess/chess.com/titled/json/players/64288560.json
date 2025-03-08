@@ -1,0 +1,68 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/64288560.9367a1bb.200x200o.649e7d259371.jpeg",
+    "player_id": 64288560,
+    "@id": "https://api.chess.com/pub/player/alphalphazero",
+    "url": "https://www.chess.com/member/AlphalphaZero",
+    "name": "Alejandro Barbero",
+    "username": "alphalphazero",
+    "title": "FM",
+    "followers": 27,
+    "country": "https://api.chess.com/pub/country/UY",
+    "last_online": 1734169806,
+    "joined": 1565775506,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2404,
+            "date": 1590517603,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2267,
+            "date": 1590517435,
+            "game": "https://www.chess.com/game/live/4846461940"
+        },
+        "record": {
+            "win": 64,
+            "loss": 16,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2343,
+            "date": 1734100365,
+            "rd": 110
+        },
+        "best": {
+            "rating": 2619,
+            "date": 1667405688,
+            "game": "https://www.chess.com/game/live/42326442259"
+        },
+        "record": {
+            "win": 855,
+            "loss": 692,
+            "draw": 98
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3456,
+            "date": 1667505294
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1578904609
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

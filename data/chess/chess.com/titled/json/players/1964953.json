@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1964953.a0e5a705.200x200o.21a19466b1b8.png",
+    "player_id": 1964953,
+    "@id": "https://api.chess.com/pub/player/thunder_penguin",
+    "url": "https://www.chess.com/member/Thunder_Penguin",
+    "name": "David Peng",
+    "username": "thunder_penguin",
+    "title": "FM",
+    "followers": 333,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1676590539,
+    "joined": 1244587336,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

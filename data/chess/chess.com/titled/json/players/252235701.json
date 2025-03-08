@@ -1,0 +1,84 @@
+{
+    "player_id": 252235701,
+    "@id": "https://api.chess.com/pub/player/bereal24",
+    "url": "https://www.chess.com/member/BeReal24",
+    "name": "Slav\u00eck",
+    "username": "bereal24",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/EE",
+    "last_online": 1734181437,
+    "joined": 1677263048,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2286,
+            "date": 1733499470,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2446,
+            "date": 1691100106,
+            "game": "https://www.chess.com/game/live/84838451923"
+        },
+        "record": {
+            "win": 4,
+            "loss": 5,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2514,
+            "date": 1733333211,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2655,
+            "date": 1718779075,
+            "game": "https://www.chess.com/game/live/122285379621"
+        },
+        "record": {
+            "win": 163,
+            "loss": 136,
+            "draw": 25
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2669,
+            "date": 1734183701,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2691,
+            "date": 1734089372,
+            "game": "https://www.chess.com/game/live/118535941125"
+        },
+        "record": {
+            "win": 2161,
+            "loss": 1622,
+            "draw": 341
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3471,
+            "date": 1705422108
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1677263048
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 43
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "player_id": 29669470,
+    "@id": "https://api.chess.com/pub/player/shubh_ze_great",
+    "url": "https://www.chess.com/member/Shubh_Ze_Great",
+    "username": "shubh_ze_great",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1728889693,
+    "joined": 1472343077,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

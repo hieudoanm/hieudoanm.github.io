@@ -1,0 +1,84 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/32357184.0b53aff2.200x200o.d5d32f42a6ea.jpeg",
+    "player_id": 32357184,
+    "@id": "https://api.chess.com/pub/player/chesswizard_2007",
+    "url": "https://www.chess.com/member/Chesswizard_2007",
+    "username": "chesswizard_2007",
+    "title": "IM",
+    "followers": 179,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1732957029,
+    "joined": 1484312891,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2275,
+            "date": 1645002607,
+            "rd": 160
+        },
+        "best": {
+            "rating": 2334,
+            "date": 1633354934,
+            "game": "https://www.chess.com/game/live/3893110909"
+        },
+        "record": {
+            "win": 11,
+            "loss": 1,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 3022,
+            "date": 1728645167,
+            "rd": 41
+        },
+        "best": {
+            "rating": 3092,
+            "date": 1691523112,
+            "game": "https://www.chess.com/game/live/105489631535"
+        },
+        "record": {
+            "win": 5137,
+            "loss": 4064,
+            "draw": 629
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 3063,
+            "date": 1730193845,
+            "rd": 42
+        },
+        "best": {
+            "rating": 3071,
+            "date": 1727108104,
+            "game": "https://www.chess.com/game/live/100356188971"
+        },
+        "record": {
+            "win": 1146,
+            "loss": 1057,
+            "draw": 263
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3513,
+            "date": 1669392404
+        },
+        "lowest": {
+            "rating": 1140,
+            "date": 1488608608
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

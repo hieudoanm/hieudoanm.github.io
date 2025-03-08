@@ -1,0 +1,84 @@
+{
+    "player_id": 24319138,
+    "@id": "https://api.chess.com/pub/player/dirk_da_player",
+    "url": "https://www.chess.com/member/dirk_da_player",
+    "name": "Dirk Troltenier",
+    "username": "dirk_da_player",
+    "title": "FM",
+    "followers": 62,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1730833461,
+    "joined": 1443404747,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2328,
+            "date": 1687303591,
+            "rd": 76
+        },
+        "best": {
+            "rating": 2346,
+            "date": 1687194480,
+            "game": "https://www.chess.com/game/live/68002888069"
+        },
+        "record": {
+            "win": 96,
+            "loss": 49,
+            "draw": 21
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2148,
+            "date": 1729000712,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2148,
+            "date": 1729000712,
+            "game": "https://www.chess.com/game/live/121393188507"
+        },
+        "record": {
+            "win": 67,
+            "loss": 26,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2328,
+            "date": 1734147204,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2503,
+            "date": 1703205072,
+            "game": "https://www.chess.com/game/live/96910248631"
+        },
+        "record": {
+            "win": 22088,
+            "loss": 19627,
+            "draw": 3247
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3265,
+            "date": 1730249761
+        },
+        "lowest": {
+            "rating": 1264,
+            "date": 1485990459
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

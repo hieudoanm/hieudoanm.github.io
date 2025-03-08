@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/7153219.280cbd07.200x200o.c13e8de4d740.jpeg",
+    "player_id": 7153219,
+    "@id": "https://api.chess.com/pub/player/timpeterwall",
+    "url": "https://www.chess.com/member/timpeterwall",
+    "name": "Tim Wall",
+    "username": "timpeterwall",
+    "title": "FM",
+    "followers": 119,
+    "country": "https://api.chess.com/pub/country/XE",
+    "location": "UK",
+    "last_online": 1734092180,
+    "joined": 1333287409,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

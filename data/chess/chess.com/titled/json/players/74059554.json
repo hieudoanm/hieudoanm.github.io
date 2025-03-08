@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/74059554.d4b533e7.200x200o.46bd471fe873.jpeg",
+    "player_id": 74059554,
+    "@id": "https://api.chess.com/pub/player/csb7",
+    "url": "https://www.chess.com/member/CSB7",
+    "name": "Bal\u00e1zs Csonka",
+    "username": "csb7",
+    "title": "IM",
+    "followers": 135,
+    "country": "https://api.chess.com/pub/country/HU",
+    "location": "Szeged",
+    "last_online": 1734083011,
+    "joined": 1584809465,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1707,
+            "date": 1734083023,
+            "rd": 228
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 71906,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2479,
+            "date": 1720810221,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2744,
+            "date": 1676305131,
+            "game": "https://www.chess.com/game/live/114539912411"
+        },
+        "record": {
+            "win": 30,
+            "loss": 18,
+            "draw": 15
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2824,
+            "date": 1733592750,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2826,
+            "date": 1719680031,
+            "game": "https://www.chess.com/game/live/113418039225"
+        },
+        "record": {
+            "win": 86,
+            "loss": 27,
+            "draw": 14
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2798,
+            "date": 1733852862,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2817,
+            "date": 1713886188,
+            "game": "https://www.chess.com/game/live/68924147359"
+        },
+        "record": {
+            "win": 1316,
+            "loss": 679,
+            "draw": 414
+        }
+    },
+    "fide": 2480,
+    "tactics": {
+        "highest": {
+            "rating": 3114,
+            "date": 1723479469
+        },
+        "lowest": {
+            "rating": 2205,
+            "date": 1655998644
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

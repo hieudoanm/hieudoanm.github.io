@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/296624453.9e3b40d0.200x200o.6b6ab44a9ed6.jpg",
+    "player_id": 296624453,
+    "@id": "https://api.chess.com/pub/player/mfatigue",
+    "url": "https://www.chess.com/member/MFatigue",
+    "name": "Theo Bressy",
+    "username": "mfatigue",
+    "title": "FM",
+    "followers": 56,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1734019466,
+    "joined": 1687988667,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1619,
+            "date": 1731525043,
+            "rd": 333
+        },
+        "best": {
+            "rating": 1619,
+            "date": 1715122150,
+            "game": "https://www.chess.com/game/daily/644400741"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 15958,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2359,
+            "date": 1715543479,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2421,
+            "date": 1695395857,
+            "game": "https://www.chess.com/game/live/89230798593"
+        },
+        "record": {
+            "win": 22,
+            "loss": 18,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2425,
+            "date": 1726332444,
+            "rd": 85
+        },
+        "best": {
+            "rating": 2513,
+            "date": 1696028289,
+            "game": "https://www.chess.com/game/live/102533407009"
+        },
+        "record": {
+            "win": 98,
+            "loss": 98,
+            "draw": 20
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2500,
+            "date": 1734045726,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2641,
+            "date": 1733252161,
+            "game": "https://www.chess.com/game/live/89479299271"
+        },
+        "record": {
+            "win": 1931,
+            "loss": 2006,
+            "draw": 599
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3556,
+            "date": 1724693904
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1687988667
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

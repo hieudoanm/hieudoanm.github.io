@@ -1,0 +1,68 @@
+{
+    "player_id": 15720298,
+    "@id": "https://api.chess.com/pub/player/gambledore88",
+    "url": "https://www.chess.com/member/Gambledore88",
+    "name": "Top Secret",
+    "username": "gambledore88",
+    "title": "IM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/GP",
+    "location": "Tas-Sliema, Malta",
+    "last_online": 1734027510,
+    "joined": 1390526361,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2510,
+            "date": 1730476498,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2630,
+            "date": 1715276706,
+            "game": "https://www.chess.com/game/live/99318298289"
+        },
+        "record": {
+            "win": 702,
+            "loss": 428,
+            "draw": 74
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2595,
+            "date": 1733963693,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2596,
+            "date": 1733783259,
+            "game": "https://www.chess.com/game/live/119353215921"
+        },
+        "record": {
+            "win": 1756,
+            "loss": 1289,
+            "draw": 194
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3291,
+            "date": 1684189867
+        },
+        "lowest": {
+            "rating": 1214,
+            "date": 1585850182
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 38,
+            "score": 35
+        }
+    }
+}

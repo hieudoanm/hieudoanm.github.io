@@ -1,0 +1,100 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/80460504.33a0d40a.200x200o.c624ce357d32.jpg",
+    "player_id": 80460504,
+    "@id": "https://api.chess.com/pub/player/trahtarbelarus",
+    "url": "https://www.chess.com/member/TrahtarBelarus",
+    "name": "Artiom Stribuk",
+    "username": "trahtarbelarus",
+    "title": "IM",
+    "followers": 59,
+    "country": "https://api.chess.com/pub/country/BY",
+    "location": "Minsk",
+    "last_online": 1733490761,
+    "joined": 1590408994,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2000,
+            "date": 1732202990,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 0,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2423,
+            "date": 1726859005,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2499,
+            "date": 1694452394,
+            "game": "https://www.chess.com/game/live/120588581221"
+        },
+        "record": {
+            "win": 24,
+            "loss": 14,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2916,
+            "date": 1722359984,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2929,
+            "date": 1722359855,
+            "game": "https://www.chess.com/game/live/19909250901"
+        },
+        "record": {
+            "win": 1449,
+            "loss": 1137,
+            "draw": 183
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2896,
+            "date": 1731358369,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2928,
+            "date": 1723562948,
+            "game": "https://www.chess.com/game/live/53684971419"
+        },
+        "record": {
+            "win": 1570,
+            "loss": 1093,
+            "draw": 292
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3895,
+            "date": 1707399821
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1605170365
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

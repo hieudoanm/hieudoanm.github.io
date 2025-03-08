@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23197752.9aa0b4ca.200x200o.6cc88440f801.gif",
+    "player_id": 23197752,
+    "@id": "https://api.chess.com/pub/player/slavkoazaric",
+    "url": "https://www.chess.com/member/slavkoazaric",
+    "name": "Slavko Azaric",
+    "username": "slavkoazaric",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/RS",
+    "last_online": 1684082460,
+    "joined": 1436649029,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

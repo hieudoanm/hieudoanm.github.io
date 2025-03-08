@@ -1,0 +1,16 @@
+{
+    "player_id": 83095500,
+    "@id": "https://api.chess.com/pub/player/tigranhh",
+    "url": "https://www.chess.com/member/TigranHH",
+    "username": "tigranhh",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734038424,
+    "joined": 1592415046,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

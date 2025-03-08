@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/60164634.e79ff142.200x200o.480ea9ee8ce1.jpg",
+    "player_id": 60164634,
+    "@id": "https://api.chess.com/pub/player/divudis17",
+    "url": "https://www.chess.com/member/divudis17",
+    "name": "Jaka Brilej",
+    "username": "divudis17",
+    "title": "FM",
+    "followers": 40,
+    "country": "https://api.chess.com/pub/country/SI",
+    "last_online": 1733392687,
+    "joined": 1556051067,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1525,
+            "date": 1733576338,
+            "rd": 74
+        },
+        "best": {
+            "rating": 1835,
+            "date": 1624379468,
+            "game": "https://www.chess.com/game/daily/339066117"
+        },
+        "record": {
+            "win": 48,
+            "loss": 46,
+            "draw": 2,
+            "time_per_move": 49729,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2447,
+            "date": 1719498753,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2480,
+            "date": 1718113806,
+            "game": "https://www.chess.com/game/live/106513758993"
+        },
+        "record": {
+            "win": 69,
+            "loss": 34,
+            "draw": 18
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2645,
+            "date": 1733241029,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2677,
+            "date": 1715964048,
+            "game": "https://www.chess.com/game/live/109702910393"
+        },
+        "record": {
+            "win": 1572,
+            "loss": 1275,
+            "draw": 221
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2573,
+            "date": 1731434949,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2665,
+            "date": 1726431095,
+            "game": "https://www.chess.com/game/live/89500870577"
+        },
+        "record": {
+            "win": 1266,
+            "loss": 1091,
+            "draw": 284
+        }
+    },
+    "fide": 2300,
+    "tactics": {
+        "highest": {
+            "rating": 3596,
+            "date": 1694265402
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1557574336
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 68,
+            "score": 65
+        }
+    }
+}

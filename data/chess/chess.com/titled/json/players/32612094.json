@@ -1,0 +1,66 @@
+{
+    "player_id": 32612094,
+    "@id": "https://api.chess.com/pub/player/setandgame",
+    "url": "https://www.chess.com/member/setandgame",
+    "username": "setandgame",
+    "title": "GM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1733833794,
+    "joined": 1485185318,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2601,
+            "date": 1733843699,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2733,
+            "date": 1645700281,
+            "game": "https://www.chess.com/game/live/126873571581"
+        },
+        "record": {
+            "win": 895,
+            "loss": 656,
+            "draw": 90
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2566,
+            "date": 1732656450,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2640,
+            "date": 1589622394,
+            "game": "https://www.chess.com/game/live/4855111599"
+        },
+        "record": {
+            "win": 593,
+            "loss": 421,
+            "draw": 71
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1485185318
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1485185318
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

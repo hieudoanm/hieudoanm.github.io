@@ -1,0 +1,51 @@
+{
+    "player_id": 371221327,
+    "@id": "https://api.chess.com/pub/player/julsz08",
+    "url": "https://www.chess.com/member/julsz08",
+    "name": "Julian Leitgeb",
+    "username": "julsz08",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/AT",
+    "last_online": 1733950769,
+    "joined": 1719049274,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2469,
+            "date": 1733952559,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2535,
+            "date": 1733778399,
+            "game": "https://www.chess.com/game/live/114909516767"
+        },
+        "record": {
+            "win": 103,
+            "loss": 78,
+            "draw": 9
+        }
+    },
+    "fide": 2328,
+    "tactics": {
+        "highest": {
+            "rating": 3160,
+            "date": 1721477986
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1719049274
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

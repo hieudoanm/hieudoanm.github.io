@@ -1,0 +1,88 @@
+{
+    "player_id": 19673594,
+    "@id": "https://api.chess.com/pub/player/sergivila",
+    "url": "https://www.chess.com/member/sergivila",
+    "name": "Sergi Mingarro Carceller",
+    "username": "sergivila",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Vila-real",
+    "last_online": 1734008969,
+    "joined": 1415722111,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 756,
+            "date": 1729160591,
+            "rd": 178
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1415722111,
+            "game": "https://www.chess.com/game/daily/687366157"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 2641,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2485,
+            "date": 1726178313,
+            "rd": 133
+        },
+        "best": {
+            "rating": 2556,
+            "date": 1600535123,
+            "game": "https://www.chess.com/game/live/46636197183"
+        },
+        "record": {
+            "win": 43,
+            "loss": 38,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2314,
+            "date": 1729360669,
+            "rd": 73
+        },
+        "best": {
+            "rating": 2464,
+            "date": 1598636898,
+            "game": "https://www.chess.com/game/live/5283514049"
+        },
+        "record": {
+            "win": 866,
+            "loss": 736,
+            "draw": 83
+        }
+    },
+    "fide": 2361,
+    "tactics": {
+        "highest": {
+            "rating": 3297,
+            "date": 1727015574
+        },
+        "lowest": {
+            "rating": 1213,
+            "date": 1533049014
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

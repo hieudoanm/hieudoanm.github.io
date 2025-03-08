@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/74821170.cc0a0724.200x200o.aa23ec3388d0.jpeg",
+    "player_id": 74821170,
+    "@id": "https://api.chess.com/pub/player/vversipellis",
+    "url": "https://www.chess.com/member/Vversipellis",
+    "name": "Teymur Bashirov",
+    "username": "vversipellis",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/AZ",
+    "last_online": 1734096673,
+    "joined": 1585409940,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

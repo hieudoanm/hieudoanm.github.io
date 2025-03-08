@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/2624129.c9b5bffd.200x200o.35f78c5fe7af.gif",
+    "player_id": 2624129,
+    "@id": "https://api.chess.com/pub/player/wlrs",
+    "url": "https://www.chess.com/member/wlrs",
+    "name": "Osmo Kauppila",
+    "username": "wlrs",
+    "title": "FM",
+    "followers": 24,
+    "country": "https://api.chess.com/pub/country/FI",
+    "location": "Oulu",
+    "last_online": 1733648289,
+    "joined": 1268225659,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

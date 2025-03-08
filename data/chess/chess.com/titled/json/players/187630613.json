@@ -1,0 +1,102 @@
+{
+    "player_id": 187630613,
+    "@id": "https://api.chess.com/pub/player/robbertpolgar",
+    "url": "https://www.chess.com/member/Robbertpolgar",
+    "username": "robbertpolgar",
+    "title": "FM",
+    "followers": 49,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1734175002,
+    "joined": 1655845041,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1789,
+            "date": 1720341270,
+            "rd": 182
+        },
+        "best": {
+            "rating": 1814,
+            "date": 1688155984,
+            "game": "https://www.chess.com/game/daily/530264339"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 19059,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2354,
+            "date": 1724006939,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2355,
+            "date": 1723323412,
+            "game": "https://www.chess.com/game/live/117062376327"
+        },
+        "record": {
+            "win": 11,
+            "loss": 2,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2566,
+            "date": 1734175599,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2644,
+            "date": 1732970065,
+            "game": "https://www.chess.com/game/live/72744723829"
+        },
+        "record": {
+            "win": 1403,
+            "loss": 1237,
+            "draw": 215
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2568,
+            "date": 1733610860,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2682,
+            "date": 1693819604,
+            "game": "https://www.chess.com/game/live/69443249621"
+        },
+        "record": {
+            "win": 807,
+            "loss": 736,
+            "draw": 219
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3425,
+            "date": 1715982248
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1655893063
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 44,
+            "score": 41
+        }
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "player_id": 43774446,
+    "@id": "https://api.chess.com/pub/player/kids2010",
+    "url": "https://www.chess.com/member/kids2010",
+    "name": "Pawe\u0142 Sowi\u0144ski",
+    "username": "kids2010",
+    "title": "IM",
+    "followers": 280,
+    "country": "https://api.chess.com/pub/country/PL",
+    "location": "Brzoz\u00f3w",
+    "last_online": 1734168743,
+    "joined": 1519763754,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2379,
+            "date": 1711565935,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2379,
+            "date": 1711565935,
+            "game": "https://www.chess.com/game/live/3477200181"
+        },
+        "record": {
+            "win": 65,
+            "loss": 38,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2872,
+            "date": 1734026733,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2987,
+            "date": 1731269147,
+            "game": "https://www.chess.com/game/live/103825760759"
+        },
+        "record": {
+            "win": 835,
+            "loss": 603,
+            "draw": 114
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2892,
+            "date": 1734169087,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2985,
+            "date": 1732381465,
+            "game": "https://www.chess.com/game/live/126020983973"
+        },
+        "record": {
+            "win": 1508,
+            "loss": 1189,
+            "draw": 234
+        }
+    },
+    "fide": 2469,
+    "tactics": {
+        "highest": {
+            "rating": 3568,
+            "date": 1727865441
+        },
+        "lowest": {
+            "rating": 810,
+            "date": 1520010419
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 50,
+            "score": 47
+        }
+    }
+}

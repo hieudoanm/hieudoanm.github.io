@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/21007862.947dd1bd.200x200o.55d5fa5d1fff.jpg",
+    "player_id": 21007862,
+    "@id": "https://api.chess.com/pub/player/nagatanasata",
+    "url": "https://www.chess.com/member/NagataNasata",
+    "name": "Nagata Nasata",
+    "username": "nagatanasata",
+    "title": "GM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/JP",
+    "last_online": 1734173499,
+    "joined": 1423475743,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1073,
+            "date": 1703531173,
+            "rd": 228
+        },
+        "best": {
+            "rating": 1346,
+            "date": 1425894611,
+            "game": "https://www.chess.com/game/daily/106970016"
+        },
+        "record": {
+            "win": 1,
+            "loss": 4,
+            "draw": 0,
+            "time_per_move": 24,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2881,
+            "date": 1733928302,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2897,
+            "date": 1732447660,
+            "game": "https://www.chess.com/game/live/122390065573"
+        },
+        "record": {
+            "win": 504,
+            "loss": 319,
+            "draw": 56
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2909,
+            "date": 1733998888,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2952,
+            "date": 1729192480,
+            "game": "https://www.chess.com/game/live/99486738471"
+        },
+        "record": {
+            "win": 1122,
+            "loss": 687,
+            "draw": 185
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3731,
+            "date": 1728148959
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1423475743
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 72,
+            "score": 69
+        }
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/120801640.01672857.200x200o.78e23149dc39.jpeg",
+    "player_id": 120801640,
+    "@id": "https://api.chess.com/pub/player/sl4werthanyou",
+    "url": "https://www.chess.com/member/Sl4werThanYou",
+    "name": "Edvin Trost",
+    "username": "sl4werthanyou",
+    "title": "IM",
+    "followers": 90,
+    "country": "https://api.chess.com/pub/country/SE",
+    "last_online": 1734182385,
+    "joined": 1613211278,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2518,
+            "date": 1702922215,
+            "rd": 85
+        },
+        "best": {
+            "rating": 2557,
+            "date": 1695054899,
+            "game": "https://www.chess.com/game/live/80936594935"
+        },
+        "record": {
+            "win": 38,
+            "loss": 9,
+            "draw": 16
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2958,
+            "date": 1733956843,
+            "rd": 31
+        },
+        "best": {
+            "rating": 3257,
+            "date": 1713884023,
+            "game": "https://www.chess.com/game/live/107622730337"
+        },
+        "record": {
+            "win": 3864,
+            "loss": 4278,
+            "draw": 640
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2768,
+            "date": 1733270497,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2846,
+            "date": 1683479267,
+            "game": "https://www.chess.com/game/live/117393056031"
+        },
+        "record": {
+            "win": 801,
+            "loss": 834,
+            "draw": 242
+        }
+    },
+    "fide": 2450,
+    "tactics": {
+        "highest": {
+            "rating": 4094,
+            "date": 1728889062
+        },
+        "lowest": {
+            "rating": 1210,
+            "date": 1623095253
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

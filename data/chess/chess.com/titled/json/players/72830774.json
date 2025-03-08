@@ -1,0 +1,82 @@
+{
+    "player_id": 72830774,
+    "@id": "https://api.chess.com/pub/player/blitzmaster1995",
+    "url": "https://www.chess.com/member/blitzmaster1995",
+    "name": "Zoltan Becskei",
+    "username": "blitzmaster1995",
+    "title": "FM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1734179446,
+    "joined": 1582927490,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2032,
+            "date": 1713805342,
+            "rd": 326
+        },
+        "best": {
+            "rating": 2032,
+            "date": 1713805342,
+            "game": "https://www.chess.com/game/daily/643937377"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 29777,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2101,
+            "date": 1733842922,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2152,
+            "date": 1709911743,
+            "game": "https://www.chess.com/game/live/103564265629"
+        },
+        "record": {
+            "win": 50,
+            "loss": 40,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2446,
+            "date": 1734179604,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2538,
+            "date": 1733162012,
+            "game": "https://www.chess.com/game/live/42041979691"
+        },
+        "record": {
+            "win": 2272,
+            "loss": 2037,
+            "draw": 272
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2153,
+            "date": 1640203759
+        },
+        "lowest": {
+            "rating": 1999,
+            "date": 1640203583
+        }
+    },
+    "puzzle_rush": {}
+}

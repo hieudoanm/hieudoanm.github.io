@@ -1,0 +1,18 @@
+{
+    "player_id": 12211248,
+    "@id": "https://api.chess.com/pub/player/timkett",
+    "url": "https://www.chess.com/member/TimKett",
+    "name": "Tim Kett",
+    "username": "timkett",
+    "title": "FM",
+    "followers": 83,
+    "country": "https://api.chess.com/pub/country/XW",
+    "location": "Cardiff",
+    "last_online": 1734105230,
+    "joined": 1370629036,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/86648124.a769faae.200x200o.14faf9f3b5a6.jpeg",
+    "player_id": 86648124,
+    "@id": "https://api.chess.com/pub/player/diana_omurbekova",
+    "url": "https://www.chess.com/member/Diana_Omurbekova",
+    "name": "Diana Omurbekova",
+    "username": "diana_omurbekova",
+    "title": "WCM",
+    "followers": 18,
+    "country": "https://api.chess.com/pub/country/KG",
+    "last_online": 1733322592,
+    "joined": 1594702975,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1876,
+            "date": 1608191117,
+            "rd": 56
+        },
+        "best": {
+            "rating": 2209,
+            "date": 1597313468,
+            "game": "https://www.chess.com/game/live/5515388354"
+        },
+        "record": {
+            "win": 44,
+            "loss": 56,
+            "draw": 9
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1876,
+            "date": 1601971721,
+            "rd": 60
+        },
+        "best": {
+            "rating": 1899,
+            "date": 1596543803,
+            "game": "https://www.chess.com/game/live/5318493529"
+        },
+        "record": {
+            "win": 22,
+            "loss": 29,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2190,
+            "date": 1733243050,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2220,
+            "date": 1732644668,
+            "game": "https://www.chess.com/game/live/125770798473"
+        },
+        "record": {
+            "win": 118,
+            "loss": 126,
+            "draw": 14
+        }
+    },
+    "fide": 1754,
+    "tactics": {
+        "highest": {
+            "rating": 1542,
+            "date": 1599068264
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1596541225
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 35,
+            "score": 32
+        }
+    }
+}

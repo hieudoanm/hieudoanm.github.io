@@ -1,0 +1,84 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/58328726.a795cb40.200x200o.83bf5e952e6c.jpg",
+    "player_id": 58328726,
+    "@id": "https://api.chess.com/pub/player/heirate_mich",
+    "url": "https://www.chess.com/member/Heirate_Mich",
+    "username": "heirate_mich",
+    "title": "IM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1730397700,
+    "joined": 1552202648,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2223,
+            "date": 1697491396,
+            "rd": 349
+        },
+        "best": {
+            "rating": 2223,
+            "date": 1697485167,
+            "game": "https://www.chess.com/game/live/91229924447"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2457,
+            "date": 1720470847,
+            "rd": 70
+        },
+        "best": {
+            "rating": 2493,
+            "date": 1720470597,
+            "game": "https://www.chess.com/game/live/114208233447"
+        },
+        "record": {
+            "win": 66,
+            "loss": 45,
+            "draw": 11
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2223,
+            "date": 1678905393,
+            "rd": 56
+        },
+        "best": {
+            "rating": 2230,
+            "date": 1678888857,
+            "game": "https://www.chess.com/game/live/72477720345"
+        },
+        "record": {
+            "win": 35,
+            "loss": 11,
+            "draw": 0
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3373,
+            "date": 1721904488
+        },
+        "lowest": {
+            "rating": 401,
+            "date": 1552296450
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

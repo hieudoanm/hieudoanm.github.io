@@ -1,0 +1,111 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/197376859.b63b8b8d.200x200o.0edb00c45217.png",
+    "player_id": 197376859,
+    "@id": "https://api.chess.com/pub/player/tadeaskriebel",
+    "url": "https://www.chess.com/member/TadeasKriebel",
+    "name": "Tadeas Kriebel",
+    "username": "tadeaskriebel",
+    "title": "IM",
+    "followers": 21,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "location": "Prague",
+    "last_online": 1734173925,
+    "joined": 1663263627,
+    "status": "staff",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1835,
+            "date": 1734164291,
+            "rd": 120
+        },
+        "best": {
+            "rating": 1898,
+            "date": 1731939853,
+            "game": "https://www.chess.com/game/daily/729496371"
+        },
+        "record": {
+            "win": 15,
+            "loss": 2,
+            "draw": 4,
+            "time_per_move": 11628,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2555,
+            "date": 1728419564,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2559,
+            "date": 1704392578,
+            "game": "https://www.chess.com/game/live/98130740935"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2598,
+            "date": 1734171050,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2739,
+            "date": 1731048039,
+            "game": "https://www.chess.com/game/live/124700912269"
+        },
+        "record": {
+            "win": 1451,
+            "loss": 1012,
+            "draw": 122
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2582,
+            "date": 1733939838,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2859,
+            "date": 1691182075,
+            "game": "https://www.chess.com/game/live/100788249899"
+        },
+        "record": {
+            "win": 666,
+            "loss": 513,
+            "draw": 132
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3486,
+            "date": 1724504971
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1663263643
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 55,
+            "score": 53
+        }
+    }
+}

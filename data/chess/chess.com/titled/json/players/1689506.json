@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1689506.e9bc8535.200x200o.1ab924a7984c.jpeg",
+    "player_id": 1689506,
+    "@id": "https://api.chess.com/pub/player/chessclassroom64",
+    "url": "https://www.chess.com/member/ChessClassroom64",
+    "name": "Ruslan Ahundov",
+    "username": "chessclassroom64",
+    "title": "FM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "925 W Walters st Port Washington WI",
+    "last_online": 1733769696,
+    "joined": 1230843946,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1982,
+            "date": 1734160108,
+            "rd": 118
+        },
+        "best": {
+            "rating": 2038,
+            "date": 1717707426,
+            "game": "https://www.chess.com/game/daily/257427526"
+        },
+        "record": {
+            "win": 226,
+            "loss": 5,
+            "draw": 4,
+            "time_per_move": 4163,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2229,
+            "date": 1733088966,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2366,
+            "date": 1689895555,
+            "game": "https://www.chess.com/game/live/86973102093"
+        },
+        "record": {
+            "win": 305,
+            "loss": 212,
+            "draw": 22
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1685,
+            "date": 1733495120,
+            "rd": 61
+        },
+        "best": {
+            "rating": 2224,
+            "date": 1291355093,
+            "game": "https://www.chess.com/game/live/73550067"
+        },
+        "record": {
+            "win": 912,
+            "loss": 853,
+            "draw": 10
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2103,
+            "date": 1733770139,
+            "rd": 65
+        },
+        "best": {
+            "rating": 2247,
+            "date": 1707011254,
+            "game": "https://www.chess.com/game/live/3365707187"
+        },
+        "record": {
+            "win": 1086,
+            "loss": 720,
+            "draw": 60
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3613,
+            "date": 1713286906
+        },
+        "lowest": {
+            "rating": 1496,
+            "date": 1249852548
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

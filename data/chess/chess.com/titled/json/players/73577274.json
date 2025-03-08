@@ -1,0 +1,17 @@
+{
+    "player_id": 73577274,
+    "@id": "https://api.chess.com/pub/player/duloi",
+    "url": "https://www.chess.com/member/Duloi",
+    "name": "Dusan Brinovec",
+    "username": "duloi",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/SI",
+    "last_online": 1733861345,
+    "joined": 1584290572,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/65455770.7133b2cd.200x200o.f231c113f47a.jpeg",
+    "player_id": 65455770,
+    "@id": "https://api.chess.com/pub/player/ajedrezinteligente",
+    "url": "https://www.chess.com/member/AjedrezInteligente",
+    "name": "Gumersindo Fernandez Garcia",
+    "username": "ajedrezinteligente",
+    "title": "CM",
+    "followers": 284,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734009335,
+    "joined": 1568384834,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

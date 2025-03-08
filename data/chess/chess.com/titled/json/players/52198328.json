@@ -1,0 +1,103 @@
+{
+    "player_id": 52198328,
+    "@id": "https://api.chess.com/pub/player/gmforgacs",
+    "url": "https://www.chess.com/member/GMForgacs",
+    "name": "Attila Jr. Forgacs",
+    "username": "gmforgacs",
+    "title": "FM",
+    "followers": 89,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1734165595,
+    "joined": 1542904873,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1737,
+            "date": 1713169760,
+            "rd": 72
+        },
+        "best": {
+            "rating": 1820,
+            "date": 1680245503,
+            "game": "https://www.chess.com/game/daily/490176653"
+        },
+        "record": {
+            "win": 159,
+            "loss": 30,
+            "draw": 2,
+            "time_per_move": 222486,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2271,
+            "date": 1734021821,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2340,
+            "date": 1706431124,
+            "game": "https://www.chess.com/game/live/122116787521"
+        },
+        "record": {
+            "win": 173,
+            "loss": 99,
+            "draw": 27
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2463,
+            "date": 1730395860,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2496,
+            "date": 1696347223,
+            "game": "https://www.chess.com/game/live/88019942705"
+        },
+        "record": {
+            "win": 1684,
+            "loss": 1688,
+            "draw": 251
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2263,
+            "date": 1733943822,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2540,
+            "date": 1691866413,
+            "game": "https://www.chess.com/game/live/88291277199"
+        },
+        "record": {
+            "win": 2698,
+            "loss": 2753,
+            "draw": 454
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3578,
+            "date": 1730566015
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1542907064
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

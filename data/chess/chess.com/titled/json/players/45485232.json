@@ -1,0 +1,17 @@
+{
+    "player_id": 45485232,
+    "@id": "https://api.chess.com/pub/player/elengajger",
+    "url": "https://www.chess.com/member/ElenGajger",
+    "name": "Milan Dobrijevic",
+    "username": "elengajger",
+    "title": "CM",
+    "followers": 72,
+    "country": "https://api.chess.com/pub/country/RS",
+    "last_online": 1734066591,
+    "joined": 1524248313,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

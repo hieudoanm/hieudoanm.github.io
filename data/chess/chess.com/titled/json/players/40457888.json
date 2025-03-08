@@ -1,0 +1,17 @@
+{
+    "player_id": 40457888,
+    "@id": "https://api.chess.com/pub/player/sokolov_a_m",
+    "url": "https://www.chess.com/member/Sokolov_A_M",
+    "name": "Andrey M. Sokolov",
+    "username": "sokolov_a_m",
+    "title": "FM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1730748450,
+    "joined": 1510924311,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

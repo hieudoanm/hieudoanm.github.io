@@ -1,0 +1,100 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/69722492.93838c36.200x200o.ac6abbee24a0.jpg",
+    "player_id": 69722492,
+    "@id": "https://api.chess.com/pub/player/puricfm",
+    "url": "https://www.chess.com/member/PuricFM",
+    "name": "Nenad Puri\u0107",
+    "username": "puricfm",
+    "title": "FM",
+    "followers": 113,
+    "country": "https://api.chess.com/pub/country/BA",
+    "last_online": 1734128781,
+    "joined": 1577060987,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 961,
+            "date": 1733636399,
+            "rd": 248
+        },
+        "best": {
+            "rating": 961,
+            "date": 1733636399,
+            "game": "https://www.chess.com/game/daily/722149467"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 26685,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2204,
+            "date": 1729286566,
+            "rd": 131
+        },
+        "best": {
+            "rating": 1387,
+            "date": 1685821954,
+            "game": "https://www.chess.com/game/live/72302067105"
+        },
+        "record": {
+            "win": 20,
+            "loss": 21,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2037,
+            "date": 1733348933,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2222,
+            "date": 1729968633,
+            "game": "https://www.chess.com/game/live/49235396443"
+        },
+        "record": {
+            "win": 3010,
+            "loss": 2569,
+            "draw": 207
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2374,
+            "date": 1734135828,
+            "rd": 19
+        },
+        "best": {
+            "rating": 2528,
+            "date": 1728770796,
+            "game": "https://www.chess.com/game/live/93991272635"
+        },
+        "record": {
+            "win": 13016,
+            "loss": 11634,
+            "draw": 2414
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 882,
+            "date": 1729191539
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1660246564
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/103326926.0aaf388c.200x200o.5fbf19318d41.jpg",
+    "player_id": 103326926,
+    "@id": "https://api.chess.com/pub/player/njal28",
+    "url": "https://www.chess.com/member/Njal28",
+    "name": "Aram Hakobyan",
+    "username": "njal28",
+    "title": "GM",
+    "followers": 509,
+    "country": "https://api.chess.com/pub/country/AM",
+    "location": "Yerevan",
+    "last_online": 1734140794,
+    "joined": 1607624099,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 947,
+            "date": 1726684716,
+            "rd": 335
+        },
+        "best": {
+            "rating": 961,
+            "date": 1696280056,
+            "game": "https://www.chess.com/game/daily/562986433"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 124184,
+            "timeout_percent": 100
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2632,
+            "date": 1727542280,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2682,
+            "date": 1690226440,
+            "game": "https://www.chess.com/game/live/109102187959"
+        },
+        "record": {
+            "win": 129,
+            "loss": 87,
+            "draw": 87
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2986,
+            "date": 1732796839,
+            "rd": 33
+        },
+        "best": {
+            "rating": 3172,
+            "date": 1668413974,
+            "game": "https://www.chess.com/game/live/94024887849"
+        },
+        "record": {
+            "win": 2017,
+            "loss": 1863,
+            "draw": 400
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 3023,
+            "date": 1733074837,
+            "rd": 40
+        },
+        "best": {
+            "rating": 3140,
+            "date": 1714756915,
+            "game": "https://www.chess.com/game/live/95472553041"
+        },
+        "record": {
+            "win": 2577,
+            "loss": 2123,
+            "draw": 772
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3569,
+            "date": 1727362372
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1613006706
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 73,
+            "score": 70
+        }
+    }
+}

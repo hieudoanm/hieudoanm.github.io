@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/58664220.a24724c3.200x200o.b06ff7d390a9.jpeg",
+    "player_id": 58664220,
+    "@id": "https://api.chess.com/pub/player/nikolajborge",
+    "url": "https://www.chess.com/member/nikolajborge",
+    "name": "Nikolaj Borge",
+    "username": "nikolajborge",
+    "title": "IM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/DK",
+    "last_online": 1733865918,
+    "joined": 1552893341,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2373,
+            "date": 1713301954,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2599,
+            "date": 1676139604,
+            "game": "https://www.chess.com/game/live/69876951787"
+        },
+        "record": {
+            "win": 9,
+            "loss": 7,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2385,
+            "date": 1702991777,
+            "rd": 133
+        },
+        "best": {
+            "rating": 2596,
+            "date": 1673182809,
+            "game": "https://www.chess.com/game/live/61284639563"
+        },
+        "record": {
+            "win": 7,
+            "loss": 4,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2337,
+            "date": 1734122971,
+            "rd": 61
+        },
+        "best": {
+            "rating": 2475,
+            "date": 1667375106,
+            "game": "https://www.chess.com/game/live/19383940997"
+        },
+        "record": {
+            "win": 281,
+            "loss": 166,
+            "draw": 8
+        }
+    },
+    "fide": 2385,
+    "tactics": {
+        "highest": {
+            "rating": 1380,
+            "date": 1681240279
+        },
+        "lowest": {
+            "rating": 418,
+            "date": 1552906622
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 35,
+            "score": 35
+        }
+    }
+}

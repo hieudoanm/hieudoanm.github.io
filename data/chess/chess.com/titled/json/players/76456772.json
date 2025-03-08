@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/76456772.837a8240.200x200o.82b6b463391a.jpeg",
+    "player_id": 76456772,
+    "@id": "https://api.chess.com/pub/player/hcmotorcb",
+    "url": "https://www.chess.com/member/HCMotorCB",
+    "name": "Martin Cuhra",
+    "username": "hcmotorcb",
+    "title": "FM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "location": "Praha",
+    "last_online": 1734176937,
+    "joined": 1586687108,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1951,
+            "date": 1623499109,
+            "rd": 149
+        },
+        "best": {
+            "rating": 1951,
+            "date": 1623499109,
+            "game": "https://www.chess.com/game/live/4744088356"
+        },
+        "record": {
+            "win": 5,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2307,
+            "date": 1734177847,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2428,
+            "date": 1614533121,
+            "game": "https://www.chess.com/game/live/4730714748"
+        },
+        "record": {
+            "win": 1965,
+            "loss": 1600,
+            "draw": 283
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3210,
+            "date": 1679211193
+        },
+        "lowest": {
+            "rating": 1012,
+            "date": 1594310642
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 37,
+            "score": 34
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/56677224.510b3957.200x200o.677d68daff2c.png",
+    "player_id": 56677224,
+    "@id": "https://api.chess.com/pub/player/strackedaktonamee",
+    "url": "https://www.chess.com/member/StrackedAktonamee",
+    "name": "Simone Pozzari",
+    "username": "strackedaktonamee",
+    "title": "FM",
+    "followers": 61,
+    "country": "https://api.chess.com/pub/country/IT",
+    "location": "Milano",
+    "last_online": 1734185280,
+    "joined": 1548770313,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2259,
+            "date": 1733477066,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2279,
+            "date": 1722807689,
+            "game": "https://www.chess.com/game/live/77102511511"
+        },
+        "record": {
+            "win": 11,
+            "loss": 6,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2701,
+            "date": 1734183673,
+            "rd": 17
+        },
+        "best": {
+            "rating": 2756,
+            "date": 1721061926,
+            "game": "https://www.chess.com/game/live/104951450455"
+        },
+        "record": {
+            "win": 2569,
+            "loss": 1848,
+            "draw": 267
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2354,
+            "date": 1734185318,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2715,
+            "date": 1725191357,
+            "game": "https://www.chess.com/game/live/120348614939"
+        },
+        "record": {
+            "win": 534,
+            "loss": 427,
+            "draw": 76
+        }
+    },
+    "fide": 2290,
+    "tactics": {
+        "highest": {
+            "rating": 3365,
+            "date": 1718837311
+        },
+        "lowest": {
+            "rating": 1013,
+            "date": 1556026535
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        },
+        "daily": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

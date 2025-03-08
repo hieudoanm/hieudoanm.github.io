@@ -1,0 +1,89 @@
+{
+    "player_id": 56237788,
+    "@id": "https://api.chess.com/pub/player/vm2027",
+    "url": "https://www.chess.com/member/VM2027",
+    "name": "Sergey Eliseev",
+    "username": "vm2027",
+    "title": "FM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/NO",
+    "last_online": 1734115233,
+    "joined": 1547907837,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2292,
+            "date": 1716481139,
+            "rd": 262
+        },
+        "best": {
+            "rating": 2185,
+            "date": 1603983239,
+            "game": "https://www.chess.com/game/live/5653779091"
+        },
+        "record": {
+            "win": 3,
+            "loss": 6,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2426,
+            "date": 1732661750,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2485,
+            "date": 1726350188,
+            "game": "https://www.chess.com/game/live/120511176007"
+        },
+        "record": {
+            "win": 355,
+            "loss": 273,
+            "draw": 56
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2280,
+            "date": 1729033784,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2547,
+            "date": 1709695118,
+            "game": "https://www.chess.com/game/live/4103310337"
+        },
+        "record": {
+            "win": 1320,
+            "loss": 1128,
+            "draw": 181
+        }
+    },
+    "fide": 2292,
+    "tactics": {
+        "highest": {
+            "rating": 2346,
+            "date": 1703543444
+        },
+        "lowest": {
+            "rating": 1202,
+            "date": 1548883016
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        },
+        "daily": {
+            "total_attempts": 10,
+            "score": 8
+        }
+    }
+}

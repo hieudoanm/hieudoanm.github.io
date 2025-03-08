@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/116190770.52aab380.200x200o.1325c6be413f.jpeg",
+    "player_id": 116190770,
+    "@id": "https://api.chess.com/pub/player/a_ccelerator",
+    "url": "https://www.chess.com/member/A_cceleratoR",
+    "name": "Akos Balazs Ronai",
+    "username": "a_ccelerator",
+    "title": "CM",
+    "followers": 18,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1734021017,
+    "joined": 1611753070,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2299,
+            "date": 1726321724,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2300,
+            "date": 1613215508,
+            "game": "https://www.chess.com/game/live/12078785561"
+        },
+        "record": {
+            "win": 131,
+            "loss": 102,
+            "draw": 23
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2382,
+            "date": 1727803104,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2395,
+            "date": 1707164091,
+            "game": "https://www.chess.com/game/live/17676076705"
+        },
+        "record": {
+            "win": 472,
+            "loss": 431,
+            "draw": 66
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2538,
+            "date": 1734023688,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2581,
+            "date": 1733344069,
+            "game": "https://www.chess.com/game/live/107316047201"
+        },
+        "record": {
+            "win": 1094,
+            "loss": 1155,
+            "draw": 222
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3605,
+            "date": 1719936015
+        },
+        "lowest": {
+            "rating": 1210,
+            "date": 1613458082
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19935934.a31206a5.200x200o.bb8605a193de.png",
+    "player_id": 19935934,
+    "@id": "https://api.chess.com/pub/player/matibar",
+    "url": "https://www.chess.com/member/Matibar",
+    "name": "Mateusz Bartel",
+    "username": "matibar",
+    "title": "GM",
+    "followers": 395,
+    "country": "https://api.chess.com/pub/country/PL",
+    "location": "Warszawa",
+    "last_online": 1734182731,
+    "joined": 1417174485,
+    "status": "premium",
+    "is_streamer": true,
+    "twitch_url": "https://twitch.tv/gmmatibar",
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [
+        {
+            "type": "twitch",
+            "channel_url": "https://twitch.tv/gmmatibar"
+        }
+    ]
+}

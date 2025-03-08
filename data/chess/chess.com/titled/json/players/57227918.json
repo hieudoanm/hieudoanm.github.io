@@ -1,0 +1,85 @@
+{
+    "player_id": 57227918,
+    "@id": "https://api.chess.com/pub/player/aexmi",
+    "url": "https://www.chess.com/member/aexmi",
+    "name": "Adri\u00e1n Exp\u00f3sito Mil\u00e1n",
+    "username": "aexmi",
+    "title": "FM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734111879,
+    "joined": 1549898463,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2280,
+            "date": 1720529165,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2280,
+            "date": 1720529165,
+            "game": "https://www.chess.com/game/live/114267008849"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2135,
+            "date": 1733766764,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2247,
+            "date": 1719684446,
+            "game": "https://www.chess.com/game/live/113999981865"
+        },
+        "record": {
+            "win": 120,
+            "loss": 89,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2352,
+            "date": 1731193181,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2368,
+            "date": 1725378083,
+            "game": "https://www.chess.com/game/live/119116775109"
+        },
+        "record": {
+            "win": 230,
+            "loss": 162,
+            "draw": 28
+        }
+    },
+    "fide": 2276,
+    "tactics": {
+        "highest": {
+            "rating": 3286,
+            "date": 1732477518
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1582554409
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

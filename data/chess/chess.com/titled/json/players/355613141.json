@@ -1,0 +1,33 @@
+{
+    "player_id": 355613141,
+    "@id": "https://api.chess.com/pub/player/crtn88",
+    "url": "https://www.chess.com/member/CrtN88",
+    "name": "Halil Ozgun Kerem",
+    "username": "crtn88",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734169791,
+    "joined": 1712486555,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1712486555
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1712486555
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 54
+        }
+    }
+}

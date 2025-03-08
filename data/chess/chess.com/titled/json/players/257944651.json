@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/257944651.bdfee6a0.200x200o.3ac93bb6e42f.png",
+    "player_id": 257944651,
+    "@id": "https://api.chess.com/pub/player/abdurakhmanovvvv",
+    "url": "https://www.chess.com/member/Abdurakhmanovvvv",
+    "name": "Mukhammadali Abdurakhmonov",
+    "username": "abdurakhmanovvvv",
+    "title": "IM",
+    "followers": 20,
+    "country": "https://api.chess.com/pub/country/UZ",
+    "location": "Tashkent, Uzbekistan",
+    "last_online": 1734142664,
+    "joined": 1678192350,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2603,
+            "date": 1726047397,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2611,
+            "date": 1726047308,
+            "game": "https://www.chess.com/game/live/119785812479"
+        },
+        "record": {
+            "win": 5,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2867,
+            "date": 1732039072,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2911,
+            "date": 1727902787,
+            "game": "https://www.chess.com/game/live/123956460475"
+        },
+        "record": {
+            "win": 232,
+            "loss": 138,
+            "draw": 49
+        }
+    },
+    "fide": 2430,
+    "tactics": {
+        "highest": {
+            "rating": 2807,
+            "date": 1731850438
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1678192350
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

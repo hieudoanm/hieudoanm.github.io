@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/5096088.522c2d5a.200x200o.167f513c1fa7.jpeg",
+    "player_id": 5096088,
+    "@id": "https://api.chess.com/pub/player/sportskidirektor",
+    "url": "https://www.chess.com/member/sportskidirektor",
+    "name": "Mateo Ivic",
+    "username": "sportskidirektor",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/HR",
+    "location": "Split",
+    "last_online": 1731257589,
+    "joined": 1304881925,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

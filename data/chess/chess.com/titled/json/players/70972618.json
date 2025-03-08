@@ -1,0 +1,89 @@
+{
+    "player_id": 70972618,
+    "@id": "https://api.chess.com/pub/player/kaiovcfr",
+    "url": "https://www.chess.com/member/KAIOVCFR",
+    "name": "Kaieem Elizee",
+    "username": "kaiovcfr",
+    "title": "CM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/LC",
+    "last_online": 1734183502,
+    "joined": 1579415939,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2102,
+            "date": 1733616445,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2133,
+            "date": 1707009839,
+            "game": "https://www.chess.com/game/live/62986204587"
+        },
+        "record": {
+            "win": 695,
+            "loss": 570,
+            "draw": 85
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2012,
+            "date": 1731779051,
+            "rd": 75
+        },
+        "best": {
+            "rating": 2070,
+            "date": 1731777215,
+            "game": "https://www.chess.com/game/live/125516300655"
+        },
+        "record": {
+            "win": 4785,
+            "loss": 4692,
+            "draw": 257
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2014,
+            "date": 1734185677,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2054,
+            "date": 1732472273,
+            "game": "https://www.chess.com/game/live/98892991785"
+        },
+        "record": {
+            "win": 2817,
+            "loss": 2619,
+            "draw": 344
+        }
+    },
+    "fide": 1786,
+    "tactics": {
+        "highest": {
+            "rating": 2888,
+            "date": 1714304220
+        },
+        "lowest": {
+            "rating": 807,
+            "date": 1597779246
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        },
+        "daily": {
+            "total_attempts": 37,
+            "score": 34
+        }
+    }
+}

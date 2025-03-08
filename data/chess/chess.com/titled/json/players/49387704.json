@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/49387704.3f0daef6.200x200o.a003f1234246.jpeg",
+    "player_id": 49387704,
+    "@id": "https://api.chess.com/pub/player/ajedrezhoy",
+    "url": "https://www.chess.com/member/ajedrezhoy",
+    "name": "Guillermo Jos\u00e9 Llanos",
+    "username": "ajedrezhoy",
+    "title": "IM",
+    "followers": 349,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Buenos Aires",
+    "last_online": 1734175823,
+    "joined": 1535980440,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1975,
+            "date": 1593974634,
+            "rd": 115
+        },
+        "best": {
+            "rating": 2224,
+            "date": 1586036203,
+            "game": "https://www.chess.com/game/live/5105214615"
+        },
+        "record": {
+            "win": 16,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2406,
+            "date": 1703079131,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2496,
+            "date": 1675186869,
+            "game": "https://www.chess.com/game/live/86455263033"
+        },
+        "record": {
+            "win": 459,
+            "loss": 260,
+            "draw": 50
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2584,
+            "date": 1730481008
+        },
+        "lowest": {
+            "rating": 411,
+            "date": 1535980527
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        }
+    }
+}

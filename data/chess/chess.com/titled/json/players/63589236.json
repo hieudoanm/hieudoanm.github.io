@@ -1,0 +1,88 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/63589236.3a3c5be6.200x200o.d25b2ba03d3b.jpg",
+    "player_id": 63589236,
+    "@id": "https://api.chess.com/pub/player/jakubpulpan",
+    "url": "https://www.chess.com/member/JakubPulpan",
+    "name": "Jakub Pulpan",
+    "username": "jakubpulpan",
+    "title": "IM",
+    "followers": 168,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734088802,
+    "joined": 1563920870,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1864,
+            "date": 1728310871,
+            "rd": 219
+        },
+        "best": {
+            "rating": 2010,
+            "date": 1690781160,
+            "game": "https://www.chess.com/game/daily/287920738"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 2,
+            "time_per_move": 127840,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2814,
+            "date": 1732382517,
+            "rd": 44
+        },
+        "best": {
+            "rating": 3115,
+            "date": 1568916625,
+            "game": "https://www.chess.com/game/live/4039194269"
+        },
+        "record": {
+            "win": 5207,
+            "loss": 3307,
+            "draw": 662
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2695,
+            "date": 1733751963,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2876,
+            "date": 1670829562,
+            "game": "https://www.chess.com/game/live/122835280419"
+        },
+        "record": {
+            "win": 1757,
+            "loss": 1328,
+            "draw": 548
+        }
+    },
+    "fide": 2462,
+    "tactics": {
+        "highest": {
+            "rating": 2587,
+            "date": 1726265557
+        },
+        "lowest": {
+            "rating": 2400,
+            "date": 1661741268
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

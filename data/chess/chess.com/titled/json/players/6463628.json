@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6463628.cfd294cf.200x200o.71fac581c171.jpeg",
+    "player_id": 6463628,
+    "@id": "https://api.chess.com/pub/player/ecztery",
+    "url": "https://www.chess.com/member/eCztery",
+    "name": "Damian \u015aliwicki",
+    "username": "ecztery",
+    "title": "CM",
+    "followers": 123,
+    "country": "https://api.chess.com/pub/country/PL",
+    "location": "Toru\u0144",
+    "last_online": 1734148815,
+    "joined": 1326040123,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

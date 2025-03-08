@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/67323488.d5509403.200x200o.687df883ac87.png",
+    "player_id": 67323488,
+    "@id": "https://api.chess.com/pub/player/smirnovalexandra",
+    "url": "https://www.chess.com/member/SmirnovAlexandrA",
+    "name": "Alexandr A Smirnov",
+    "username": "smirnovalexandra",
+    "title": "FM",
+    "followers": 1042,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "\u0421\u0430\u0440\u0430\u0442\u043e\u0432",
+    "last_online": 1733241509,
+    "joined": 1572454356,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

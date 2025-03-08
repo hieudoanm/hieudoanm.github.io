@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/17999356.bb40a15a.200x200o.c86080ecafc0.jpg",
+    "player_id": 17999356,
+    "@id": "https://api.chess.com/pub/player/elbek_jumanov",
+    "url": "https://www.chess.com/member/Elbek_Jumanov",
+    "name": "Elbek Jumanov",
+    "username": "elbek_jumanov",
+    "title": "FM",
+    "followers": 178,
+    "country": "https://api.chess.com/pub/country/UZ",
+    "location": "Gulistan",
+    "last_online": 1734082315,
+    "joined": 1404877301,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess960_daily": {
+        "last": {
+            "rating": 1057,
+            "date": 1405274543,
+            "rd": 253
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 209,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2217,
+            "date": 1728059993,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2489,
+            "date": 1679931659,
+            "game": "https://www.chess.com/game/live/121797638713"
+        },
+        "record": {
+            "win": 5,
+            "loss": 5,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2424,
+            "date": 1728580029,
+            "rd": 82
+        },
+        "best": {
+            "rating": 2545,
+            "date": 1687506284,
+            "game": "https://www.chess.com/game/live/2026938819"
+        },
+        "record": {
+            "win": 163,
+            "loss": 179,
+            "draw": 18
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2545,
+            "date": 1733388760,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2632,
+            "date": 1730388166,
+            "game": "https://www.chess.com/game/live/93716460201"
+        },
+        "record": {
+            "win": 1476,
+            "loss": 1744,
+            "draw": 244
+        }
+    },
+    "fide": 2172,
+    "tactics": {
+        "highest": {
+            "rating": 3622,
+            "date": 1726174181
+        },
+        "lowest": {
+            "rating": 1365,
+            "date": 1427734192
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 32,
+            "score": 29
+        }
+    }
+}

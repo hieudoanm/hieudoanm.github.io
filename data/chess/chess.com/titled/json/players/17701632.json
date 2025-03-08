@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/17701632.36b7b4de.200x200o.22d6b17ee580.jpeg",
+    "player_id": 17701632,
+    "@id": "https://api.chess.com/pub/player/sir_killalot",
+    "url": "https://www.chess.com/member/Sir_Killalot",
+    "username": "sir_killalot",
+    "title": "FM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1709716869,
+    "joined": 1402839004,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

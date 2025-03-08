@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/59790798.de3bcac3.200x200o.e2109c7b2604.jpg",
+    "player_id": 59790798,
+    "@id": "https://api.chess.com/pub/player/nicolik",
+    "url": "https://www.chess.com/member/Nicolik",
+    "name": "Nicola Altini",
+    "username": "nicolik",
+    "title": "IM",
+    "followers": 60,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1734172041,
+    "joined": 1555198165,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2433,
+            "date": 1734130068,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2669,
+            "date": 1647552337,
+            "game": "https://www.chess.com/game/live/127681288721"
+        },
+        "record": {
+            "win": 71,
+            "loss": 22,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2630,
+            "date": 1733594867,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2672,
+            "date": 1732987231,
+            "game": "https://www.chess.com/game/live/126730762133"
+        },
+        "record": {
+            "win": 93,
+            "loss": 67,
+            "draw": 10
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2706,
+            "date": 1734181991,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2757,
+            "date": 1720649089,
+            "game": "https://www.chess.com/game/live/114300618763"
+        },
+        "record": {
+            "win": 4454,
+            "loss": 3359,
+            "draw": 680
+        }
+    },
+    "fide": 2400,
+    "tactics": {
+        "highest": {
+            "rating": 3113,
+            "date": 1718572114
+        },
+        "lowest": {
+            "rating": 2491,
+            "date": 1574940770
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

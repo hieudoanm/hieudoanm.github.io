@@ -1,0 +1,104 @@
+{
+    "player_id": 184853359,
+    "@id": "https://api.chess.com/pub/player/grabspeter",
+    "url": "https://www.chess.com/member/grabspeter",
+    "name": "grabs peter",
+    "username": "grabspeter",
+    "title": "CM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1730128963,
+    "joined": 1653503564,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1611,
+            "date": 1734061154,
+            "rd": 242
+        },
+        "best": {
+            "rating": 1611,
+            "date": 1677848892,
+            "game": "https://www.chess.com/game/daily/479064717"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 20959,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1840,
+            "date": 1687303167,
+            "rd": 72
+        },
+        "best": {
+            "rating": 1840,
+            "date": 1686332155,
+            "game": "https://www.chess.com/game/live/80062336447"
+        },
+        "record": {
+            "win": 28,
+            "loss": 9,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1559,
+            "date": 1689359718,
+            "rd": 52
+        },
+        "best": {
+            "rating": 1640,
+            "date": 1676296925,
+            "game": "https://www.chess.com/game/live/81237549525"
+        },
+        "record": {
+            "win": 53,
+            "loss": 35,
+            "draw": 5
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1669,
+            "date": 1731318133,
+            "rd": 86
+        },
+        "best": {
+            "rating": 1771,
+            "date": 1720717028,
+            "game": "https://www.chess.com/game/live/81037989883"
+        },
+        "record": {
+            "win": 30,
+            "loss": 31,
+            "draw": 3
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3051,
+            "date": 1685966347
+        },
+        "lowest": {
+            "rating": 809,
+            "date": 1656681459
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

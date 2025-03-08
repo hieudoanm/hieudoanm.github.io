@@ -1,0 +1,18 @@
+{
+    "player_id": 29607828,
+    "@id": "https://api.chess.com/pub/player/solofon",
+    "url": "https://www.chess.com/member/solofon",
+    "name": "Joachim Solberg",
+    "username": "solofon",
+    "title": "FM",
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/SE",
+    "location": "Stochkolm",
+    "last_online": 1734105597,
+    "joined": 1471982869,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

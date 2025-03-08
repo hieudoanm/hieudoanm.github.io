@@ -1,0 +1,61 @@
+{
+    "player_id": 393235437,
+    "@id": "https://api.chess.com/pub/player/just2slow",
+    "url": "https://www.chess.com/member/just2slow",
+    "username": "just2slow",
+    "title": "GM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/VC",
+    "last_online": 1734167439,
+    "joined": 1727908094,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 3052,
+            "date": 1730919720,
+            "rd": 36
+        },
+        "best": {
+            "rating": 3052,
+            "date": 1730919720,
+            "game": "https://www.chess.com/game/live/124657110819"
+        },
+        "record": {
+            "win": 124,
+            "loss": 19,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2982,
+            "date": 1734173215,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2986,
+            "date": 1734124408,
+            "game": "https://www.chess.com/game/live/127867751053"
+        },
+        "record": {
+            "win": 142,
+            "loss": 46,
+            "draw": 22
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1727908094
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1727908094
+        }
+    },
+    "puzzle_rush": {}
+}

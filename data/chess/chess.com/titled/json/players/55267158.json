@@ -1,0 +1,103 @@
+{
+    "player_id": 55267158,
+    "@id": "https://api.chess.com/pub/player/carnivoras",
+    "url": "https://www.chess.com/member/Carnivoras",
+    "name": "Quoc Hy Nguyen",
+    "username": "carnivoras",
+    "title": "FM",
+    "followers": 63,
+    "country": "https://api.chess.com/pub/country/VN",
+    "last_online": 1734098428,
+    "joined": 1546096809,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1483,
+            "date": 1734096056,
+            "rd": 242
+        },
+        "best": {
+            "rating": 1607,
+            "date": 1711611881,
+            "game": "https://www.chess.com/game/daily/636698529"
+        },
+        "record": {
+            "win": 1,
+            "loss": 2,
+            "draw": 1,
+            "time_per_move": 65612,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2319,
+            "date": 1658200542,
+            "rd": 90
+        },
+        "best": {
+            "rating": 2415,
+            "date": 1655988203,
+            "game": "https://www.chess.com/game/live/49726233687"
+        },
+        "record": {
+            "win": 19,
+            "loss": 17,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2736,
+            "date": 1729832070,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2809,
+            "date": 1612595915,
+            "game": "https://www.chess.com/game/live/57858014905"
+        },
+        "record": {
+            "win": 407,
+            "loss": 480,
+            "draw": 78
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2820,
+            "date": 1734098857,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2875,
+            "date": 1725859025,
+            "game": "https://www.chess.com/game/live/121890036433"
+        },
+        "record": {
+            "win": 1175,
+            "loss": 1267,
+            "draw": 301
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3877,
+            "date": 1728962395
+        },
+        "lowest": {
+            "rating": 1994,
+            "date": 1552056298
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 96,
+            "score": 94
+        }
+    }
+}

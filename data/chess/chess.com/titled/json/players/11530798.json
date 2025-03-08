@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/11530798.ddf37f0f.200x200o.c97def10e8a2.jpeg",
+    "player_id": 11530798,
+    "@id": "https://api.chess.com/pub/player/ahmedotaleb",
+    "url": "https://www.chess.com/member/ahmedotaleb",
+    "name": "Ahmed Taleb",
+    "username": "ahmedotaleb",
+    "title": "CM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/MR",
+    "location": "Nouakchott",
+    "last_online": 1621049597,
+    "joined": 1366035625,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

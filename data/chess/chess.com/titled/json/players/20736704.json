@@ -1,0 +1,99 @@
+{
+    "player_id": 20736704,
+    "@id": "https://api.chess.com/pub/player/ervanovic",
+    "url": "https://www.chess.com/member/ervanovic",
+    "name": "Mohamad Ervan",
+    "username": "ervanovic",
+    "title": "IM",
+    "followers": 72,
+    "country": "https://api.chess.com/pub/country/ID",
+    "last_online": 1733992458,
+    "joined": 1421892754,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1715899234,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 0,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1607,
+            "date": 1733479828,
+            "rd": 186
+        },
+        "best": {
+            "rating": 2125,
+            "date": 1631266424,
+            "game": "https://www.chess.com/game/live/24481302005"
+        },
+        "record": {
+            "win": 13,
+            "loss": 10,
+            "draw": 12
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2481,
+            "date": 1733481676,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2557,
+            "date": 1707550207,
+            "game": "https://www.chess.com/game/live/101620354663"
+        },
+        "record": {
+            "win": 497,
+            "loss": 309,
+            "draw": 37
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2633,
+            "date": 1733666405,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2654,
+            "date": 1732505297,
+            "game": "https://www.chess.com/game/live/115549702133"
+        },
+        "record": {
+            "win": 572,
+            "loss": 326,
+            "draw": 58
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3752,
+            "date": 1697183076
+        },
+        "lowest": {
+            "rating": 1293,
+            "date": 1425194076
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 73,
+            "score": 70
+        }
+    }
+}

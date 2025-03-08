@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/387208071.4af7168f.200x200o.fbd91ac3cef5.jpg",
+    "player_id": 387208071,
+    "@id": "https://api.chess.com/pub/player/okkotsuyuta03",
+    "url": "https://www.chess.com/member/OkkotsuYuta03",
+    "name": "Santiago Ospina Castro",
+    "username": "okkotsuyuta03",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "Medell\u00edn",
+    "last_online": 1733119268,
+    "joined": 1725903832,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2501,
+            "date": 1729701126,
+            "rd": 65
+        },
+        "best": {
+            "rating": 2501,
+            "date": 1729701126,
+            "game": "https://www.chess.com/game/live/122870666225"
+        },
+        "record": {
+            "win": 30,
+            "loss": 7,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2469,
+            "date": 1731453330,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2503,
+            "date": 1730236658,
+            "game": "https://www.chess.com/game/live/122765666261"
+        },
+        "record": {
+            "win": 66,
+            "loss": 47,
+            "draw": 11
+        }
+    },
+    "fide": 2138,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1725903832
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1725903832
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 39
+        }
+    }
+}

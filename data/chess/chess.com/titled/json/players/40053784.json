@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/40053784.e61bdf00.200x200o.1cd39e71a886.jpeg",
+    "player_id": 40053784,
+    "@id": "https://api.chess.com/pub/player/kladenskyamater",
+    "url": "https://www.chess.com/member/KladenskyAmater",
+    "name": "Adam Cap",
+    "username": "kladenskyamater",
+    "title": "FM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734085019,
+    "joined": 1509809639,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1871,
+            "date": 1726497747,
+            "rd": 157
+        },
+        "best": {
+            "rating": 1871,
+            "date": 1726497747,
+            "game": "https://www.chess.com/game/daily/694078009"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 2,
+            "time_per_move": 6515,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2019,
+            "date": 1610109387,
+            "rd": 331
+        },
+        "best": {
+            "rating": 2019,
+            "date": 1604677871,
+            "game": "https://www.chess.com/game/live/5696811692"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1927,
+            "date": 1638817123,
+            "rd": 114
+        },
+        "best": {
+            "rating": 2055,
+            "date": 1638816225,
+            "game": "https://www.chess.com/game/live/2590804805"
+        },
+        "record": {
+            "win": 1152,
+            "loss": 801,
+            "draw": 75
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2223,
+            "date": 1734087809,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2370,
+            "date": 1698999227,
+            "game": "https://www.chess.com/game/live/92737291929"
+        },
+        "record": {
+            "win": 1714,
+            "loss": 1339,
+            "draw": 278
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2971,
+            "date": 1706188331
+        },
+        "lowest": {
+            "rating": 2200,
+            "date": 1562687584
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 31,
+            "score": 29
+        }
+    }
+}

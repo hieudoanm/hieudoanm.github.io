@@ -1,0 +1,69 @@
+{
+    "player_id": 20273468,
+    "@id": "https://api.chess.com/pub/player/fiend1",
+    "url": "https://www.chess.com/member/fiend1",
+    "name": "Ravindran Shanmugam",
+    "username": "fiend1",
+    "title": "IM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/SG",
+    "location": "Singapore",
+    "last_online": 1723186196,
+    "joined": 1419201836,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2703,
+            "date": 1723185595,
+            "rd": 17
+        },
+        "best": {
+            "rating": 2775,
+            "date": 1708371871,
+            "game": "https://www.chess.com/game/live/103523496837"
+        },
+        "record": {
+            "win": 1475,
+            "loss": 1356,
+            "draw": 307
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2708,
+            "date": 1718142762,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2700,
+            "date": 1713188746,
+            "game": "https://www.chess.com/game/live/105789545201"
+        },
+        "record": {
+            "win": 83,
+            "loss": 43,
+            "draw": 20
+        }
+    },
+    "fide": 2340,
+    "tactics": {
+        "highest": {
+            "rating": 2903,
+            "date": 1722351711
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1419201836
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

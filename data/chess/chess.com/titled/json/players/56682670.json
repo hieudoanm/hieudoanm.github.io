@@ -1,0 +1,17 @@
+{
+    "player_id": 56682670,
+    "@id": "https://api.chess.com/pub/player/sofaceindisguise",
+    "url": "https://www.chess.com/member/sofaceindisguise",
+    "name": "Dmitry Tatarinov",
+    "username": "sofaceindisguise",
+    "title": "FM",
+    "followers": 615,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734176502,
+    "joined": 1548778478,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

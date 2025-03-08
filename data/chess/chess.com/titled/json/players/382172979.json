@@ -1,0 +1,17 @@
+{
+    "player_id": 382172979,
+    "@id": "https://api.chess.com/pub/player/titled_monday",
+    "url": "https://www.chess.com/member/Titled_Monday",
+    "name": "Stephane Sorbe",
+    "username": "titled_monday",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1724599904,
+    "joined": 1724159847,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

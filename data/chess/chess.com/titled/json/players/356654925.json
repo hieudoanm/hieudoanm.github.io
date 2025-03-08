@@ -1,0 +1,26 @@
+{
+    "player_id": 356654925,
+    "@id": "https://api.chess.com/pub/player/thegrimpoteuthis",
+    "url": "https://www.chess.com/member/THEGrimpoteuthis",
+    "username": "thegrimpoteuthis",
+    "title": "WFM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1726215614,
+    "joined": 1712915117,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "tactics": {
+        "highest": {
+            "rating": 2093,
+            "date": 1717406990
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1712915117
+        }
+    },
+    "puzzle_rush": {}
+}

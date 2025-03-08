@@ -1,0 +1,44 @@
+{
+    "player_id": 398479037,
+    "@id": "https://api.chess.com/pub/player/whooopsididitagain",
+    "url": "https://www.chess.com/member/WhooopsIDidItAgain",
+    "username": "whooopsididitagain",
+    "title": "GM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/HT",
+    "last_online": 1733526342,
+    "joined": 1729950684,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2860,
+            "date": 1733528033,
+            "rd": 18
+        },
+        "best": {
+            "rating": 2952,
+            "date": 1732818879,
+            "game": "https://www.chess.com/game/live/126553186299"
+        },
+        "record": {
+            "win": 499,
+            "loss": 224,
+            "draw": 61
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1729950684
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1729950684
+        }
+    },
+    "puzzle_rush": {}
+}

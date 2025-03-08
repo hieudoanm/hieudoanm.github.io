@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/108520120.b86cc966.200x200o.d85a0c84f2ae.jpg",
+    "player_id": 108520120,
+    "@id": "https://api.chess.com/pub/player/nikotheodorou",
+    "url": "https://www.chess.com/member/NikoTheodorou",
+    "name": "Nikolas Theodorou",
+    "username": "nikotheodorou",
+    "title": "GM",
+    "followers": 11033,
+    "country": "https://api.chess.com/pub/country/GR",
+    "last_online": 1734154849,
+    "joined": 1609393492,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2652,
+            "date": 1727462323,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2682,
+            "date": 1675451666,
+            "game": "https://www.chess.com/game/live/83962289889"
+        },
+        "record": {
+            "win": 60,
+            "loss": 30,
+            "draw": 54
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 3070,
+            "date": 1732469076,
+            "rd": 42
+        },
+        "best": {
+            "rating": 3211,
+            "date": 1661749600,
+            "game": "https://www.chess.com/game/live/37501221787"
+        },
+        "record": {
+            "win": 1397,
+            "loss": 1412,
+            "draw": 258
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 3122,
+            "date": 1734122651,
+            "rd": 32
+        },
+        "best": {
+            "rating": 3237,
+            "date": 1733848677,
+            "game": "https://www.chess.com/game/live/95827395251"
+        },
+        "record": {
+            "win": 2924,
+            "loss": 2401,
+            "draw": 900
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1609393492
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1609393492
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 72,
+            "score": 69
+        }
+    }
+}

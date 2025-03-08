@@ -1,0 +1,84 @@
+{
+    "player_id": 78601774,
+    "@id": "https://api.chess.com/pub/player/khalifa_alhefeiti",
+    "url": "https://www.chess.com/member/khalifa_alhefeiti",
+    "name": "Khalifah Khaled Al Hufaiti",
+    "username": "khalifa_alhefeiti",
+    "title": "CM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/AE",
+    "last_online": 1733926798,
+    "joined": 1588631473,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2012,
+            "date": 1636305317,
+            "rd": 61
+        },
+        "best": {
+            "rating": 2012,
+            "date": 1636305317,
+            "game": "https://www.chess.com/game/live/24580868625"
+        },
+        "record": {
+            "win": 85,
+            "loss": 14,
+            "draw": 12
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1982,
+            "date": 1734162401,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2081,
+            "date": 1725887284,
+            "game": "https://www.chess.com/game/live/49582769599"
+        },
+        "record": {
+            "win": 614,
+            "loss": 371,
+            "draw": 41
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2246,
+            "date": 1731928847,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2261,
+            "date": 1727216826,
+            "game": "https://www.chess.com/game/live/122768045533"
+        },
+        "record": {
+            "win": 377,
+            "loss": 234,
+            "draw": 33
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2861,
+            "date": 1733743857
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1655666380
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

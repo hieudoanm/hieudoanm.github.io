@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/22975174.b5a0b07b.200x200o.2f90c1e108fb.jpeg",
+    "player_id": 22975174,
+    "@id": "https://api.chess.com/pub/player/cristiancamilosoto",
+    "url": "https://www.chess.com/member/cristiancamilosoto",
+    "name": "Cristian Camilo Soto",
+    "username": "cristiancamilosoto",
+    "title": "FM",
+    "followers": 46,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "Itagui",
+    "last_online": 1734056445,
+    "joined": 1435253521,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 625,
+            "date": 1598299942,
+            "rd": 231
+        },
+        "record": {
+            "win": 0,
+            "loss": 16,
+            "draw": 0,
+            "time_per_move": 31652,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2010,
+            "date": 1729577673,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2010,
+            "date": 1729577673,
+            "game": "https://www.chess.com/game/live/123316201561"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2422,
+            "date": 1733596670,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2577,
+            "date": 1729626661,
+            "game": "https://www.chess.com/game/live/123364288329"
+        },
+        "record": {
+            "win": 412,
+            "loss": 334,
+            "draw": 46
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2570,
+            "date": 1733868537,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2706,
+            "date": 1732336779,
+            "game": "https://www.chess.com/game/live/127006203659"
+        },
+        "record": {
+            "win": 902,
+            "loss": 708,
+            "draw": 150
+        }
+    },
+    "fide": 2090,
+    "tactics": {
+        "highest": {
+            "rating": 3161,
+            "date": 1728441471
+        },
+        "lowest": {
+            "rating": 1207,
+            "date": 1498617625
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 40,
+            "score": 39
+        }
+    }
+}

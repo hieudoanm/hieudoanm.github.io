@@ -1,0 +1,16 @@
+{
+    "player_id": 395961895,
+    "@id": "https://api.chess.com/pub/player/ashleykrushc",
+    "url": "https://www.chess.com/member/AshleyKrushC",
+    "username": "ashleykrushc",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734147641,
+    "joined": 1728990553,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

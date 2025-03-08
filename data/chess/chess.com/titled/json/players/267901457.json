@@ -1,0 +1,51 @@
+{
+    "player_id": 267901457,
+    "@id": "https://api.chess.com/pub/player/fuzesabonyilaci",
+    "url": "https://www.chess.com/member/Fuzesabonyilaci",
+    "name": "Zsigmond Szajbely",
+    "username": "fuzesabonyilaci",
+    "title": "FM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1733840167,
+    "joined": 1680015272,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2355,
+            "date": 1730842331,
+            "rd": 130
+        },
+        "best": {
+            "rating": 2420,
+            "date": 1692119070,
+            "game": "https://www.chess.com/game/live/75408005025"
+        },
+        "record": {
+            "win": 62,
+            "loss": 87,
+            "draw": 15
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2276,
+            "date": 1698775822
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1680015272
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

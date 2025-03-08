@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/172263169.981a9632.200x200o.8dac5504f634.jpg",
+    "player_id": 172263169,
+    "@id": "https://api.chess.com/pub/player/poseidon5191",
+    "url": "https://www.chess.com/member/poseidon5191",
+    "name": "Luis Lazaro Aguero Jimenez",
+    "username": "poseidon5191",
+    "title": "GM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/CU",
+    "last_online": 1734185191,
+    "joined": 1644150336,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2508,
+            "date": 1732987102,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2530,
+            "date": 1732387894,
+            "game": "https://www.chess.com/game/live/126124804181"
+        },
+        "record": {
+            "win": 24,
+            "loss": 30,
+            "draw": 5
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2711,
+            "date": 1734185487,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2722,
+            "date": 1729717782,
+            "game": "https://www.chess.com/game/live/125552922489"
+        },
+        "record": {
+            "win": 370,
+            "loss": 214,
+            "draw": 58
+        }
+    },
+    "fide": 2479,
+    "tactics": {
+        "highest": {
+            "rating": 2716,
+            "date": 1731885734
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1644150336
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 50,
+            "score": 47
+        }
+    }
+}

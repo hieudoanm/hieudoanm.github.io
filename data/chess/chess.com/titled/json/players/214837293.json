@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/214837293.8c55994e.200x200o.51855e6338b2.jpg",
+    "player_id": 214837293,
+    "@id": "https://api.chess.com/pub/player/charodej1",
+    "url": "https://www.chess.com/member/Charodej1",
+    "name": "Andrey Gonzalez Zharikov",
+    "username": "charodej1",
+    "title": "CM",
+    "followers": 112,
+    "country": "https://api.chess.com/pub/country/MX",
+    "last_online": 1734147691,
+    "joined": 1671549489,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

@@ -1,0 +1,49 @@
+{
+    "player_id": 67283912,
+    "@id": "https://api.chess.com/pub/player/machinegunkelly77",
+    "url": "https://www.chess.com/member/MachineGunKelly77",
+    "username": "machinegunkelly77",
+    "title": "GM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/AT",
+    "last_online": 1733503307,
+    "joined": 1572371093,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2744,
+            "date": 1732731098,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2821,
+            "date": 1731689524,
+            "game": "https://www.chess.com/game/live/93683897045"
+        },
+        "record": {
+            "win": 98,
+            "loss": 59,
+            "draw": 10
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2400,
+            "date": 1664140573
+        },
+        "lowest": {
+            "rating": 2400,
+            "date": 1664140573
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/44055842.34906555.200x200o.61f69afa9de7.jpg",
+    "player_id": 44055842,
+    "@id": "https://api.chess.com/pub/player/sokidze",
+    "url": "https://www.chess.com/member/sokidze",
+    "name": "Ihor Samunenkov",
+    "username": "sokidze",
+    "title": "GM",
+    "followers": 516,
+    "country": "https://api.chess.com/pub/country/UA",
+    "location": "Kyiv",
+    "last_online": 1734090904,
+    "joined": 1520501447,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1854,
+            "date": 1734090357,
+            "rd": 69
+        },
+        "best": {
+            "rating": 2222,
+            "date": 1673454447,
+            "game": "https://www.chess.com/game/daily/445165921"
+        },
+        "record": {
+            "win": 105,
+            "loss": 37,
+            "draw": 7,
+            "time_per_move": 61197,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1905,
+            "date": 1734090357,
+            "rd": 133
+        },
+        "best": {
+            "rating": 1905,
+            "date": 1734090357,
+            "game": "https://www.chess.com/game/daily/715391957"
+        },
+        "record": {
+            "win": 18,
+            "loss": 4,
+            "draw": 5,
+            "time_per_move": 61197,
+            "timeout_percent": 20
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2506,
+            "date": 1727366102,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2520,
+            "date": 1727363895,
+            "game": "https://www.chess.com/game/live/108926457083"
+        },
+        "record": {
+            "win": 61,
+            "loss": 33,
+            "draw": 28
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2540,
+            "date": 1732108003,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2540,
+            "date": 1732104932,
+            "game": "https://www.chess.com/game/live/125843375999"
+        },
+        "record": {
+            "win": 32,
+            "loss": 7,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2860,
+            "date": 1734092612,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2959,
+            "date": 1725287532,
+            "game": "https://www.chess.com/game/live/119118680823"
+        },
+        "record": {
+            "win": 2691,
+            "loss": 1777,
+            "draw": 498
+        }
+    },
+    "fide": 2523,
+    "tactics": {
+        "highest": {
+            "rating": 3965,
+            "date": 1703243566
+        },
+        "lowest": {
+            "rating": 1007,
+            "date": 1526487294
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 58
+        }
+    }
+}

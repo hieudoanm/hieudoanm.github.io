@@ -1,0 +1,119 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34888222.7c8c792e.200x200o.bb3f73727337.png",
+    "player_id": 34888222,
+    "@id": "https://api.chess.com/pub/player/rosh1610",
+    "url": "https://www.chess.com/member/Rosh1610",
+    "name": "Rosh Jain",
+    "username": "rosh1610",
+    "title": "FM",
+    "followers": 357,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734157788,
+    "joined": 1492574405,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1174,
+            "date": 1728313189,
+            "rd": 125
+        },
+        "best": {
+            "rating": 1464,
+            "date": 1564908002,
+            "game": "https://www.chess.com/game/daily/563325015"
+        },
+        "record": {
+            "win": 37,
+            "loss": 55,
+            "draw": 0,
+            "time_per_move": 84150,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 909,
+            "date": 1676000741,
+            "rd": 311
+        },
+        "record": {
+            "win": 2,
+            "loss": 3,
+            "draw": 1,
+            "time_per_move": 84150,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2093,
+            "date": 1730818666,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2122,
+            "date": 1685283041,
+            "game": "https://www.chess.com/game/live/108487301401"
+        },
+        "record": {
+            "win": 555,
+            "loss": 385,
+            "draw": 43
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2401,
+            "date": 1733909640,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2665,
+            "date": 1731393064,
+            "game": "https://www.chess.com/game/live/83186119333"
+        },
+        "record": {
+            "win": 1417,
+            "loss": 1286,
+            "draw": 113
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2687,
+            "date": 1733849732,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2705,
+            "date": 1727971035,
+            "game": "https://www.chess.com/game/live/119118680945"
+        },
+        "record": {
+            "win": 1989,
+            "loss": 1492,
+            "draw": 191
+        }
+    },
+    "fide": 2248,
+    "tactics": {
+        "highest": {
+            "rating": 3338,
+            "date": 1693971309
+        },
+        "lowest": {
+            "rating": 453,
+            "date": 1516466323
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

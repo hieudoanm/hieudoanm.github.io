@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/7309137.a9c4fbdd.200x200o.76264b4287d0.jpeg",
+    "player_id": 7309137,
+    "@id": "https://api.chess.com/pub/player/tonricher",
+    "url": "https://www.chess.com/member/TonRicher",
+    "name": "Eric Th\u00f6rn",
+    "username": "tonricher",
+    "title": "FM",
+    "followers": 21,
+    "country": "https://api.chess.com/pub/country/SE",
+    "location": "\u00c4lvsj\u00f6",
+    "last_online": 1720876827,
+    "joined": 1334574411,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/388746825.8b1a403a.200x200o.d57806c9b3a1.jpg",
+    "player_id": 388746825,
+    "@id": "https://api.chess.com/pub/player/kenjikichiro",
+    "url": "https://www.chess.com/member/KenjiKichiro",
+    "name": "Kenji Kichiro",
+    "username": "kenjikichiro",
+    "title": "FM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/EU",
+    "last_online": 1734031618,
+    "joined": 1726443983,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2220,
+            "date": 1730835639,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2236,
+            "date": 1730834920,
+            "game": "https://www.chess.com/game/live/123970205817"
+        },
+        "record": {
+            "win": 103,
+            "loss": 10,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2465,
+            "date": 1732733705,
+            "rd": 57
+        },
+        "best": {
+            "rating": 2521,
+            "date": 1726679824,
+            "game": "https://www.chess.com/game/live/120350984051"
+        },
+        "record": {
+            "win": 129,
+            "loss": 23,
+            "draw": 5
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2600,
+            "date": 1734143811,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2600,
+            "date": 1734143811,
+            "game": "https://www.chess.com/game/live/127876742617"
+        },
+        "record": {
+            "win": 220,
+            "loss": 26,
+            "draw": 15
+        }
+    },
+    "fide": 2398,
+    "tactics": {
+        "highest": {
+            "rating": 3045,
+            "date": 1729483937
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1726443983
+        }
+    },
+    "puzzle_rush": {}
+}

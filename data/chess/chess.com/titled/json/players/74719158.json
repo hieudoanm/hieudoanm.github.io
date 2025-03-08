@@ -1,0 +1,17 @@
+{
+    "player_id": 74719158,
+    "@id": "https://api.chess.com/pub/player/wimhk",
+    "url": "https://www.chess.com/member/WimHK",
+    "name": "Wim Heemskerk",
+    "username": "wimhk",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/NL",
+    "location": "Bodegraven",
+    "last_online": 1733130850,
+    "joined": 1585333256,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

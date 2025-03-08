@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/10402.39212238.200x200o.6dbc7c96bf68.jpeg",
+    "player_id": 10402,
+    "@id": "https://api.chess.com/pub/player/vpa",
+    "url": "https://www.chess.com/member/VPA",
+    "name": "Viraf Avari",
+    "username": "vpa",
+    "title": "FM",
+    "followers": 329,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "Valsad-Gujarat",
+    "last_online": 1675114174,
+    "joined": 1184785128,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

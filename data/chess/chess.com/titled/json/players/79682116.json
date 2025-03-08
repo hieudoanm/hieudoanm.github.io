@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/79682116.e135ecd9.200x200o.ea308c2e2159.jpeg",
+    "player_id": 79682116,
+    "@id": "https://api.chess.com/pub/player/theefemert",
+    "url": "https://www.chess.com/member/theEfeMert",
+    "name": "Efe Mert K\u0131l\u0131\u00e7",
+    "username": "theefemert",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/TR",
+    "location": "Sakarya",
+    "last_online": 1733241738,
+    "joined": 1589648660,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

@@ -1,0 +1,62 @@
+{
+    "player_id": 73413174,
+    "@id": "https://api.chess.com/pub/player/ecrinella",
+    "url": "https://www.chess.com/member/Ecrinella",
+    "name": "Ecrin Efsa Buyuk",
+    "username": "ecrinella",
+    "title": "WCM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1729801034,
+    "joined": 1584041610,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1976,
+            "date": 1702901610,
+            "rd": 51
+        },
+        "best": {
+            "rating": 1855,
+            "date": 1591697293,
+            "game": "https://www.chess.com/game/live/5025934774"
+        },
+        "record": {
+            "win": 69,
+            "loss": 31,
+            "draw": 17
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1976,
+            "date": 1702901610,
+            "rd": 94
+        },
+        "best": {
+            "rating": 1869,
+            "date": 1593073766,
+            "game": "https://www.chess.com/game/live/5054103570"
+        },
+        "record": {
+            "win": 13,
+            "loss": 6,
+            "draw": 0
+        }
+    },
+    "fide": 1976,
+    "tactics": {
+        "highest": {
+            "rating": 1779,
+            "date": 1593197631
+        },
+        "lowest": {
+            "rating": 1014,
+            "date": 1584267600
+        }
+    },
+    "puzzle_rush": {}
+}

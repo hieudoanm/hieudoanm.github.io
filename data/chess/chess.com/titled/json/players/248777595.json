@@ -1,0 +1,16 @@
+{
+    "player_id": 248777595,
+    "@id": "https://api.chess.com/pub/player/enginity",
+    "url": "https://www.chess.com/member/Enginity",
+    "username": "enginity",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/NL",
+    "last_online": 1693679202,
+    "joined": 1676754886,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

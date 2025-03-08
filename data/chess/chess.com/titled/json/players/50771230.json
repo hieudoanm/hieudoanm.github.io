@@ -1,0 +1,16 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/50771230.699c45ea.200x200o.36946625a152.png",
+    "player_id": 50771230,
+    "@id": "https://api.chess.com/pub/player/thelionking1970",
+    "url": "https://www.chess.com/member/thelionking1970",
+    "username": "thelionking1970",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1556317961,
+    "joined": 1539602502,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

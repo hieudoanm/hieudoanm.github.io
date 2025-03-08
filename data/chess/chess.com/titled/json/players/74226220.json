@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/74226220.cf583426.200x200o.fa675aa438d2.jpeg",
+    "player_id": 74226220,
+    "@id": "https://api.chess.com/pub/player/mjbacojo",
+    "url": "https://www.chess.com/member/mjbacojo",
+    "name": "Mark Jay Bacojo",
+    "username": "mjbacojo",
+    "title": "FM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/PH",
+    "location": "Dasmari\u00f1as City Philippines",
+    "last_online": 1730970258,
+    "joined": 1584939103,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2305,
+            "date": 1696769375,
+            "rd": 108
+        },
+        "best": {
+            "rating": 2335,
+            "date": 1689423235,
+            "game": "https://www.chess.com/game/live/82645813063"
+        },
+        "record": {
+            "win": 27,
+            "loss": 13,
+            "draw": 10
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2499,
+            "date": 1716814121,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2541,
+            "date": 1626842604,
+            "game": "https://www.chess.com/game/live/5891540308"
+        },
+        "record": {
+            "win": 79,
+            "loss": 52,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2587,
+            "date": 1697380961,
+            "rd": 83
+        },
+        "best": {
+            "rating": 2587,
+            "date": 1697380689,
+            "game": "https://www.chess.com/game/live/43940654861"
+        },
+        "record": {
+            "win": 89,
+            "loss": 45,
+            "draw": 10
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3802,
+            "date": 1700563945
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1607253854
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 53,
+            "score": 50
+        }
+    }
+}

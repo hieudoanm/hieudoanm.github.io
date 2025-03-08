@@ -1,0 +1,108 @@
+{
+    "player_id": 2006905,
+    "@id": "https://api.chess.com/pub/player/basicbishop",
+    "url": "https://www.chess.com/member/BasicBishop",
+    "name": "Jonas Muller",
+    "username": "basicbishop",
+    "title": "CM",
+    "followers": 77,
+    "country": "https://api.chess.com/pub/country/AU",
+    "last_online": 1734168217,
+    "joined": 1246501492,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2037,
+            "date": 1715593879,
+            "rd": 242
+        },
+        "best": {
+            "rating": 2037,
+            "date": 1679398230,
+            "game": "https://www.chess.com/game/daily/84450187"
+        },
+        "record": {
+            "win": 63,
+            "loss": 27,
+            "draw": 0,
+            "time_per_move": 69754,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2457,
+            "date": 1679554021,
+            "rd": 92
+        },
+        "best": {
+            "rating": 2457,
+            "date": 1382814712,
+            "game": "https://www.chess.com/game/live/664578431"
+        },
+        "record": {
+            "win": 25,
+            "loss": 5,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2270,
+            "date": 1734096321,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2290,
+            "date": 1475633373,
+            "game": "https://www.chess.com/game/live/84880356601"
+        },
+        "record": {
+            "win": 370,
+            "loss": 324,
+            "draw": 27
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2339,
+            "date": 1734176088,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2446,
+            "date": 1582704212,
+            "game": "https://www.chess.com/game/live/4053871671"
+        },
+        "record": {
+            "win": 6952,
+            "loss": 5865,
+            "draw": 604
+        }
+    },
+    "fide": 2072,
+    "tactics": {
+        "highest": {
+            "rating": 3345,
+            "date": 1725327334
+        },
+        "lowest": {
+            "rating": 1201,
+            "date": 1453856966
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        },
+        "daily": {
+            "total_attempts": 50,
+            "score": 47
+        }
+    }
+}

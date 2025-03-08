@@ -1,0 +1,135 @@
+{
+    "player_id": 5534792,
+    "@id": "https://api.chess.com/pub/player/tripledes",
+    "url": "https://www.chess.com/member/tripledes",
+    "name": "Xavier Povill",
+    "username": "tripledes",
+    "title": "FM",
+    "followers": 24,
+    "country": "https://api.chess.com/pub/country/XC",
+    "location": "Barcelona",
+    "last_online": 1733988717,
+    "joined": 1312129686,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2121,
+            "date": 1734146097,
+            "rd": 79
+        },
+        "best": {
+            "rating": 2201,
+            "date": 1618514566,
+            "game": "https://www.chess.com/game/daily/666326837"
+        },
+        "record": {
+            "win": 312,
+            "loss": 129,
+            "draw": 30,
+            "time_per_move": 28767,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 1
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1058,
+            "date": 1395804730,
+            "rd": 204
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1312129686,
+            "game": "https://www.chess.com/game/daily/55066684"
+        },
+        "record": {
+            "win": 2,
+            "loss": 4,
+            "draw": 0,
+            "time_per_move": 28767,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 1
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2350,
+            "date": 1643482402,
+            "rd": 165
+        },
+        "best": {
+            "rating": 2350,
+            "date": 1627235839,
+            "game": "https://www.chess.com/game/live/4965050942"
+        },
+        "record": {
+            "win": 21,
+            "loss": 11,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2342,
+            "date": 1734013523,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2483,
+            "date": 1617561160,
+            "game": "https://www.chess.com/game/live/124305593685"
+        },
+        "record": {
+            "win": 2227,
+            "loss": 1799,
+            "draw": 251
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2335,
+            "date": 1733880987,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2387,
+            "date": 1732399424,
+            "game": "https://www.chess.com/game/live/122744689899"
+        },
+        "record": {
+            "win": 984,
+            "loss": 899,
+            "draw": 111
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3392,
+            "date": 1696417637
+        },
+        "lowest": {
+            "rating": 1383,
+            "date": 1313233096
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

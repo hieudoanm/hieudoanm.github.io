@@ -1,0 +1,86 @@
+{
+    "player_id": 75623684,
+    "@id": "https://api.chess.com/pub/player/jachymcarostrelec4",
+    "url": "https://www.chess.com/member/jachymcarostrelec4",
+    "name": "J\u00e1chym \u0160mol\u00edk",
+    "username": "jachymcarostrelec4",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "location": "\u0158\u00ed\u010dany",
+    "last_online": 1733847198,
+    "joined": 1586000386,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1878,
+            "date": 1726677706,
+            "rd": 192
+        },
+        "best": {
+            "rating": 1878,
+            "date": 1693898167,
+            "game": "https://www.chess.com/game/live/5840142841"
+        },
+        "record": {
+            "win": 40,
+            "loss": 14,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2254,
+            "date": 1730135372,
+            "rd": 74
+        },
+        "best": {
+            "rating": 2278,
+            "date": 1730135235,
+            "game": "https://www.chess.com/game/live/123799211465"
+        },
+        "record": {
+            "win": 39,
+            "loss": 15,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1898,
+            "date": 1728764178,
+            "rd": 204
+        },
+        "best": {
+            "rating": 2059,
+            "date": 1673263559,
+            "game": "https://www.chess.com/game/live/12416767015"
+        },
+        "record": {
+            "win": 69,
+            "loss": 37,
+            "draw": 3
+        }
+    },
+    "fide": 1856,
+    "tactics": {
+        "highest": {
+            "rating": 3691,
+            "date": 1681734779
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1587397286
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

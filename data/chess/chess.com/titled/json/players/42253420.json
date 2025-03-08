@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/42253420.99c691b3.200x200o.f84a5cbc53f9.jpeg",
+    "player_id": 42253420,
+    "@id": "https://api.chess.com/pub/player/juandiv_chessmood",
+    "url": "https://www.chess.com/member/Juandiv_Chessmood",
+    "name": "Juan Diego Viasus Cuellar",
+    "username": "juandiv_chessmood",
+    "title": "CM",
+    "followers": 121,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "Barranquilla",
+    "last_online": 1734034215,
+    "joined": 1515775413,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1183,
+            "date": 1727988505,
+            "rd": 63
+        },
+        "best": {
+            "rating": 1366,
+            "date": 1692537946,
+            "game": "https://www.chess.com/game/daily/501128693"
+        },
+        "record": {
+            "win": 24,
+            "loss": 26,
+            "draw": 2,
+            "time_per_move": 70910,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1295,
+            "date": 1727200630,
+            "rd": 90
+        },
+        "best": {
+            "rating": 1295,
+            "date": 1726595104,
+            "game": "https://www.chess.com/game/live/86126949261"
+        },
+        "record": {
+            "win": 198,
+            "loss": 103,
+            "draw": 10
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2127,
+            "date": 1734178812,
+            "rd": 52
+        },
+        "best": {
+            "rating": 2178,
+            "date": 1727907160,
+            "game": "https://www.chess.com/game/live/97702182677"
+        },
+        "record": {
+            "win": 529,
+            "loss": 919,
+            "draw": 57
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1809,
+            "date": 1732370143,
+            "rd": 68
+        },
+        "best": {
+            "rating": 1842,
+            "date": 1727213220,
+            "game": "https://www.chess.com/game/live/120951655375"
+        },
+        "record": {
+            "win": 272,
+            "loss": 223,
+            "draw": 18
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3846,
+            "date": 1715291322
+        },
+        "lowest": {
+            "rating": 808,
+            "date": 1515775709
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        }
+    }
+}

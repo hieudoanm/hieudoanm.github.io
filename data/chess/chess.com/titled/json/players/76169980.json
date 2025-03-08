@@ -1,0 +1,100 @@
+{
+    "player_id": 76169980,
+    "@id": "https://api.chess.com/pub/player/cocolino31",
+    "url": "https://www.chess.com/member/Cocolino31",
+    "name": "Teodor-Cosmin Nedelcu",
+    "username": "cocolino31",
+    "title": "FM",
+    "followers": 45,
+    "country": "https://api.chess.com/pub/country/RO",
+    "location": "Braila",
+    "last_online": 1734009215,
+    "joined": 1586450856,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2000,
+            "date": 1721225538,
+            "rd": 350
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 7177,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2256,
+            "date": 1700418309,
+            "rd": 171
+        },
+        "best": {
+            "rating": 2347,
+            "date": 1604955934,
+            "game": "https://www.chess.com/game/live/5625535625"
+        },
+        "record": {
+            "win": 254,
+            "loss": 151,
+            "draw": 44
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2673,
+            "date": 1734006361,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2812,
+            "date": 1724681010,
+            "game": "https://www.chess.com/game/live/124912806299"
+        },
+        "record": {
+            "win": 2262,
+            "loss": 1910,
+            "draw": 250
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2639,
+            "date": 1728386743,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2646,
+            "date": 1721770290,
+            "game": "https://www.chess.com/game/live/115508888469"
+        },
+        "record": {
+            "win": 1155,
+            "loss": 878,
+            "draw": 166
+        }
+    },
+    "fide": 2283,
+    "tactics": {
+        "highest": {
+            "rating": 3549,
+            "date": 1727044086
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1589126070
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 55,
+            "score": 52
+        }
+    }
+}

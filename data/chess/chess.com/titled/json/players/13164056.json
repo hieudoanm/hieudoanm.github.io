@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13164056.dcefb45d.200x200o.298d9ae204e7.jpeg",
+    "player_id": 13164056,
+    "@id": "https://api.chess.com/pub/player/lordiron",
+    "url": "https://www.chess.com/member/LordIron",
+    "name": "Mario Ferro",
+    "username": "lordiron",
+    "title": "FM",
+    "followers": 20,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1734034413,
+    "joined": 1376646398,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2431,
+            "date": 1621620348,
+            "rd": 144
+        },
+        "best": {
+            "rating": 2431,
+            "date": 1621620348,
+            "game": "https://www.chess.com/game/live/15358967807"
+        },
+        "record": {
+            "win": 4,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2163,
+            "date": 1731271407,
+            "rd": 162
+        },
+        "best": {
+            "rating": 2605,
+            "date": 1665592662,
+            "game": "https://www.chess.com/game/live/15355338709"
+        },
+        "record": {
+            "win": 303,
+            "loss": 230,
+            "draw": 14
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2317,
+            "date": 1733875819,
+            "rd": 72
+        },
+        "best": {
+            "rating": 2410,
+            "date": 1704211604,
+            "game": "https://www.chess.com/game/live/97950134435"
+        },
+        "record": {
+            "win": 1508,
+            "loss": 1481,
+            "draw": 149
+        }
+    },
+    "fide": 2272,
+    "tactics": {
+        "highest": {
+            "rating": 3497,
+            "date": 1685643046
+        },
+        "lowest": {
+            "rating": 1368,
+            "date": 1477653414
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 46
+        }
+    }
+}

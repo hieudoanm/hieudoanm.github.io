@@ -1,0 +1,82 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/5733946.7927e6b7.200x200o.0bfe86f17c68.jpg",
+    "player_id": 5733946,
+    "@id": "https://api.chess.com/pub/player/chess_mad35",
+    "url": "https://www.chess.com/member/chess_mad35",
+    "name": "Carlos Alarcia",
+    "username": "chess_mad35",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Madrid",
+    "last_online": 1734109610,
+    "joined": 1315177570,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2244,
+            "date": 1732193951,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2003,
+            "date": 1731613577,
+            "game": "https://www.chess.com/game/live/125354347475"
+        },
+        "record": {
+            "win": 2,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2470,
+            "date": 1734112453,
+            "rd": 20
+        },
+        "best": {
+            "rating": 2715,
+            "date": 1732574605,
+            "game": "https://www.chess.com/game/live/126483564659"
+        },
+        "record": {
+            "win": 366,
+            "loss": 440,
+            "draw": 58
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2491,
+            "date": 1733875520,
+            "rd": 19
+        },
+        "best": {
+            "rating": 2598,
+            "date": 1732558115,
+            "game": "https://www.chess.com/game/live/126295764415"
+        },
+        "record": {
+            "win": 406,
+            "loss": 264,
+            "draw": 39
+        }
+    },
+    "fide": 2244,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1315177570
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1315177570
+        }
+    },
+    "puzzle_rush": {}
+}

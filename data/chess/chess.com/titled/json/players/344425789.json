@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/344425789.06825827.200x200o.46054566b62b.webp",
+    "player_id": 344425789,
+    "@id": "https://api.chess.com/pub/player/shamatava_nick",
+    "url": "https://www.chess.com/member/Shamatava_Nick",
+    "name": "Nikolozi Shamatava",
+    "username": "shamatava_nick",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/GE",
+    "last_online": 1734182936,
+    "joined": 1707544441,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2628,
+            "date": 1733778469,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2650,
+            "date": 1727979705,
+            "game": "https://www.chess.com/game/live/127488573771"
+        },
+        "record": {
+            "win": 46,
+            "loss": 28,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2556,
+            "date": 1733778818,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2594,
+            "date": 1732033066,
+            "game": "https://www.chess.com/game/live/125771404535"
+        },
+        "record": {
+            "win": 53,
+            "loss": 35,
+            "draw": 9
+        }
+    },
+    "fide": 2344,
+    "tactics": {
+        "highest": {
+            "rating": 3368,
+            "date": 1733571731
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1707544441
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

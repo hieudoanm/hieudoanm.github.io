@@ -1,0 +1,111 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/36034948.bd2a0f02.200x200o.5500b4479f69.jpg",
+    "player_id": 36034948,
+    "@id": "https://api.chess.com/pub/player/commando_droid",
+    "url": "https://www.chess.com/member/Commando_Droid",
+    "name": "Eric Yuhan Li",
+    "username": "commando_droid",
+    "title": "IM",
+    "followers": 416,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734157169,
+    "joined": 1496509096,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1854,
+            "date": 1734120845,
+            "rd": 118
+        },
+        "best": {
+            "rating": 1907,
+            "date": 1704160874,
+            "game": "https://www.chess.com/game/daily/567029229"
+        },
+        "record": {
+            "win": 105,
+            "loss": 41,
+            "draw": 15,
+            "time_per_move": 32042,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 1
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2269,
+            "date": 1733818191,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2300,
+            "date": 1733623265,
+            "game": "https://www.chess.com/game/live/127360197735"
+        },
+        "record": {
+            "win": 388,
+            "loss": 122,
+            "draw": 55
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2951,
+            "date": 1734157382,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2952,
+            "date": 1734067976,
+            "game": "https://www.chess.com/game/live/116143840851"
+        },
+        "record": {
+            "win": 829,
+            "loss": 298,
+            "draw": 76
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2803,
+            "date": 1734058912,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2819,
+            "date": 1730424227,
+            "game": "https://www.chess.com/game/live/111253321705"
+        },
+        "record": {
+            "win": 958,
+            "loss": 643,
+            "draw": 156
+        }
+    },
+    "fide": 2400,
+    "tactics": {
+        "highest": {
+            "rating": 3572,
+            "date": 1732640885
+        },
+        "lowest": {
+            "rating": 410,
+            "date": 1510189724
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "player_id": 360172485,
+    "@id": "https://api.chess.com/pub/player/theorydoesnotmatter",
+    "url": "https://www.chess.com/member/TheoryDoesNotMatter",
+    "username": "theorydoesnotmatter",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734100971,
+    "joined": 1714405850,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

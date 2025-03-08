@@ -1,0 +1,17 @@
+{
+    "player_id": 36652868,
+    "@id": "https://api.chess.com/pub/player/too_stupid_to_play",
+    "url": "https://www.chess.com/member/Too_Stupid_To_Play",
+    "name": "Gary Ng",
+    "username": "too_stupid_to_play",
+    "title": "FM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/UA",
+    "last_online": 1734017691,
+    "joined": 1498674511,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

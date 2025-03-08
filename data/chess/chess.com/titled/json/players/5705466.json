@@ -1,0 +1,105 @@
+{
+    "player_id": 5705466,
+    "@id": "https://api.chess.com/pub/player/fish_club",
+    "url": "https://www.chess.com/member/fish_club",
+    "name": "Viesturs Kap\u010de",
+    "username": "fish_club",
+    "title": "CM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/LV",
+    "location": "Riga",
+    "last_online": 1734102944,
+    "joined": 1314726302,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1352,
+            "date": 1734167275,
+            "rd": 50
+        },
+        "best": {
+            "rating": 1946,
+            "date": 1515159611,
+            "game": "https://www.chess.com/game/daily/181914250"
+        },
+        "record": {
+            "win": 1393,
+            "loss": 991,
+            "draw": 42,
+            "time_per_move": 116943,
+            "timeout_percent": 2
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2180,
+            "date": 1661973331,
+            "rd": 116
+        },
+        "best": {
+            "rating": 2180,
+            "date": 1661973331,
+            "game": "https://www.chess.com/game/live/31701016049"
+        },
+        "record": {
+            "win": 44,
+            "loss": 17,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2258,
+            "date": 1616174906,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2259,
+            "date": 1602834246,
+            "game": "https://www.chess.com/game/live/5531767358"
+        },
+        "record": {
+            "win": 6924,
+            "loss": 5423,
+            "draw": 397
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2156,
+            "date": 1734127358,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2237,
+            "date": 1660048740,
+            "game": "https://www.chess.com/game/live/53272761401"
+        },
+        "record": {
+            "win": 4482,
+            "loss": 3550,
+            "draw": 647
+        }
+    },
+    "fide": 2071,
+    "tactics": {
+        "highest": {
+            "rating": 2390,
+            "date": 1720513629
+        },
+        "lowest": {
+            "rating": 1123,
+            "date": 1324486060
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 37,
+            "score": 34
+        }
+    }
+}

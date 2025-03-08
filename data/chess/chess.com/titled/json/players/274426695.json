@@ -1,0 +1,16 @@
+{
+    "player_id": 274426695,
+    "@id": "https://api.chess.com/pub/player/warblingyarbles",
+    "url": "https://www.chess.com/member/WarblingYarbles",
+    "username": "warblingyarbles",
+    "title": "FM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734123501,
+    "joined": 1681360648,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

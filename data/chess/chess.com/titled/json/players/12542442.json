@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/12542442.be387ce1.200x200o.60adaff85aa3.jpeg",
+    "player_id": 12542442,
+    "@id": "https://api.chess.com/pub/player/dzilleruelo",
+    "url": "https://www.chess.com/member/dzilleruelo",
+    "name": "Diego Zilleruelo",
+    "username": "dzilleruelo",
+    "title": "CM",
+    "followers": 89,
+    "country": "https://api.chess.com/pub/country/PR",
+    "location": "Cabo Rojo, Puerto Rico",
+    "last_online": 1728741525,
+    "joined": 1372633755,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

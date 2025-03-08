@@ -1,0 +1,46 @@
+{
+    "player_id": 384803335,
+    "@id": "https://api.chess.com/pub/player/nodrawbeforemove64",
+    "url": "https://www.chess.com/member/NoDrawBeforeMove64",
+    "name": "Louis Vall\u00e9e",
+    "username": "nodrawbeforemove64",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1733850476,
+    "joined": 1725283399,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2507,
+            "date": 1733854005,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2558,
+            "date": 1729009112,
+            "game": "https://www.chess.com/game/live/125172626391"
+        },
+        "record": {
+            "win": 49,
+            "loss": 11,
+            "draw": 4
+        }
+    },
+    "fide": 2289,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1725283399
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1725283399
+        }
+    },
+    "puzzle_rush": {}
+}

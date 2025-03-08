@@ -1,0 +1,123 @@
+{
+    "player_id": 28010704,
+    "@id": "https://api.chess.com/pub/player/puz2010",
+    "url": "https://www.chess.com/member/puz2010",
+    "name": "Semyon Puzyrevsky",
+    "username": "puz2010",
+    "title": "FM",
+    "followers": 52,
+    "country": "https://api.chess.com/pub/country/KR",
+    "last_online": 1734184496,
+    "joined": 1462190781,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1679,
+            "date": 1734110021,
+            "rd": 86
+        },
+        "best": {
+            "rating": 1815,
+            "date": 1623221358,
+            "game": "https://www.chess.com/game/daily/444766475"
+        },
+        "record": {
+            "win": 244,
+            "loss": 160,
+            "draw": 32,
+            "time_per_move": 24648,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1149,
+            "date": 1717361540,
+            "rd": 128
+        },
+        "best": {
+            "rating": 1275,
+            "date": 1592809687,
+            "game": "https://www.chess.com/game/daily/263825378"
+        },
+        "record": {
+            "win": 11,
+            "loss": 7,
+            "draw": 0,
+            "time_per_move": 24648,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2278,
+            "date": 1727370644,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2344,
+            "date": 1676656241,
+            "game": "https://www.chess.com/game/live/120585017895"
+        },
+        "record": {
+            "win": 644,
+            "loss": 477,
+            "draw": 82
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2629,
+            "date": 1734165866,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2778,
+            "date": 1718742032,
+            "game": "https://www.chess.com/game/live/117046233043"
+        },
+        "record": {
+            "win": 637,
+            "loss": 469,
+            "draw": 61
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2866,
+            "date": 1734185188,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2904,
+            "date": 1734108600,
+            "game": "https://www.chess.com/game/live/124880330591"
+        },
+        "record": {
+            "win": 1315,
+            "loss": 1143,
+            "draw": 263
+        }
+    },
+    "fide": 2295,
+    "tactics": {
+        "highest": {
+            "rating": 3827,
+            "date": 1732548103
+        },
+        "lowest": {
+            "rating": 1224,
+            "date": 1462202846
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

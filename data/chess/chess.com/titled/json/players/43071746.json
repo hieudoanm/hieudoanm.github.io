@@ -1,0 +1,59 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/43071746.df60566f.200x200o.47cb1776d711.jpeg",
+    "player_id": 43071746,
+    "@id": "https://api.chess.com/pub/player/asahoffmann",
+    "url": "https://www.chess.com/member/AsaHoffmann",
+    "name": "Asa Hoffmann",
+    "username": "asahoffmann",
+    "title": "FM",
+    "followers": 83,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "New York City",
+    "last_online": 1734132657,
+    "joined": 1517946429,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1807,
+            "date": 1707044430,
+            "rd": 247
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2484,
+            "date": 1734147458,
+            "rd": 23
+        },
+        "best": {
+            "rating": 2543,
+            "date": 1733955081,
+            "game": "https://www.chess.com/game/live/126981055711"
+        },
+        "record": {
+            "win": 14870,
+            "loss": 10260,
+            "draw": 2881
+        }
+    },
+    "fide": 2307,
+    "tactics": {
+        "highest": {
+            "rating": 2012,
+            "date": 1637468914
+        },
+        "lowest": {
+            "rating": 1939,
+            "date": 1637470719
+        }
+    },
+    "puzzle_rush": {}
+}

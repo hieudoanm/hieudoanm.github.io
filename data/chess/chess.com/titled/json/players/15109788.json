@@ -1,0 +1,68 @@
+{
+    "player_id": 15109788,
+    "@id": "https://api.chess.com/pub/player/sakkvilag2",
+    "url": "https://www.chess.com/member/sakkvilag2",
+    "name": "zoltan nemeth",
+    "username": "sakkvilag2",
+    "title": "IM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/HU",
+    "location": "budapest",
+    "last_online": 1715968045,
+    "joined": 1387450185,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2553,
+            "date": 1474456897,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2403,
+            "date": 1455721172,
+            "game": "https://www.chess.com/game/live/1169606499"
+        },
+        "record": {
+            "win": 9180,
+            "loss": 4384,
+            "draw": 626
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2201,
+            "date": 1491576174,
+            "rd": 135
+        },
+        "best": {
+            "rating": 2365,
+            "date": 1405594049,
+            "game": "https://www.chess.com/game/live/1077157049"
+        },
+        "record": {
+            "win": 603,
+            "loss": 418,
+            "draw": 107
+        }
+    },
+    "fide": 2327,
+    "tactics": {
+        "highest": {
+            "rating": 2403,
+            "date": 1445423465
+        },
+        "lowest": {
+            "rating": 1199,
+            "date": 1405404888
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 30,
+            "score": 27
+        }
+    }
+}

@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/66532098.699b8ff2.200x200o.97be24f4465b.jpg",
+    "player_id": 66532098,
+    "@id": "https://api.chess.com/pub/player/ach19",
+    "url": "https://www.chess.com/member/ACH19",
+    "name": "Alejandro Chinchilla",
+    "username": "ach19",
+    "title": "FM",
+    "followers": 118,
+    "country": "https://api.chess.com/pub/country/HN",
+    "location": "Estados Unidos",
+    "last_online": 1734127377,
+    "joined": 1570755729,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1693,
+            "date": 1734180565,
+            "rd": 106
+        },
+        "best": {
+            "rating": 1720,
+            "date": 1595033258,
+            "game": "https://www.chess.com/game/daily/262012182"
+        },
+        "record": {
+            "win": 35,
+            "loss": 41,
+            "draw": 13,
+            "time_per_move": 81804,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2099,
+            "date": 1731696711,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2152,
+            "date": 1617254834,
+            "game": "https://www.chess.com/game/live/5269297432"
+        },
+        "record": {
+            "win": 125,
+            "loss": 98,
+            "draw": 29
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2217,
+            "date": 1731632291,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2234,
+            "date": 1644077987,
+            "game": "https://www.chess.com/game/live/5242501403"
+        },
+        "record": {
+            "win": 366,
+            "loss": 336,
+            "draw": 22
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2334,
+            "date": 1734044015,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2488,
+            "date": 1692850423,
+            "game": "https://www.chess.com/game/live/111881554445"
+        },
+        "record": {
+            "win": 7776,
+            "loss": 7060,
+            "draw": 723
+        }
+    },
+    "fide": 2113,
+    "tactics": {
+        "highest": {
+            "rating": 3512,
+            "date": 1692197504
+        },
+        "lowest": {
+            "rating": 1014,
+            "date": 1570757236
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 68,
+            "score": 65
+        }
+    }
+}

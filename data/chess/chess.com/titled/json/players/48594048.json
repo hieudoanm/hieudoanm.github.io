@@ -1,0 +1,86 @@
+{
+    "player_id": 48594048,
+    "@id": "https://api.chess.com/pub/player/kroonts13",
+    "url": "https://www.chess.com/member/kroonts13",
+    "name": "Andres Escobar",
+    "username": "kroonts13",
+    "title": "FM",
+    "followers": 28,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "antioquia",
+    "last_online": 1734176806,
+    "joined": 1533763559,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2499,
+            "date": 1709538069,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2681,
+            "date": 1600217503,
+            "game": "https://www.chess.com/game/live/5451563013"
+        },
+        "record": {
+            "win": 10,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2323,
+            "date": 1713588541,
+            "rd": 93
+        },
+        "best": {
+            "rating": 2523,
+            "date": 1652997104,
+            "game": "https://www.chess.com/game/live/46727434129"
+        },
+        "record": {
+            "win": 254,
+            "loss": 235,
+            "draw": 18
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2596,
+            "date": 1734177179,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2655,
+            "date": 1661878217,
+            "game": "https://www.chess.com/game/live/3183274901"
+        },
+        "record": {
+            "win": 1383,
+            "loss": 1309,
+            "draw": 219
+        }
+    },
+    "fide": 2322,
+    "tactics": {
+        "highest": {
+            "rating": 1936,
+            "date": 1663943131
+        },
+        "lowest": {
+            "rating": 1208,
+            "date": 1533766339
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 40
+        }
+    }
+}

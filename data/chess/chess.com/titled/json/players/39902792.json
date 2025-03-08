@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39902792.3b5888e2.200x200o.30283eb426ee.jpeg",
+    "player_id": 39902792,
+    "@id": "https://api.chess.com/pub/player/carlosehc",
+    "url": "https://www.chess.com/member/carlosehc",
+    "name": "Carlos Enrique Hernandez Coto",
+    "username": "carlosehc",
+    "title": "CM",
+    "followers": 25,
+    "country": "https://api.chess.com/pub/country/CR",
+    "last_online": 1731589857,
+    "joined": 1509373879,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

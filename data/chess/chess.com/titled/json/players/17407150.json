@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/17407150.15ab7d79.200x200o.28fe60390205.jpeg",
+    "player_id": 17407150,
+    "@id": "https://api.chess.com/pub/player/shineatchess",
+    "url": "https://www.chess.com/member/shineatchess",
+    "name": "Nisha Mohota",
+    "username": "shineatchess",
+    "title": "IM",
+    "followers": 102,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734053838,
+    "joined": 1400839602,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2001,
+            "date": 1676315613,
+            "rd": 153
+        },
+        "best": {
+            "rating": 2213,
+            "date": 1676306781,
+            "game": "https://www.chess.com/game/live/70044742667"
+        },
+        "record": {
+            "win": 2,
+            "loss": 5,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2081,
+            "date": 1709917907,
+            "rd": 159
+        },
+        "best": {
+            "rating": 2167,
+            "date": 1591852272,
+            "game": "https://www.chess.com/game/live/11033001977"
+        },
+        "record": {
+            "win": 208,
+            "loss": 240,
+            "draw": 20
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2338,
+            "date": 1709917592,
+            "rd": 126
+        },
+        "best": {
+            "rating": 2533,
+            "date": 1591117590,
+            "game": "https://www.chess.com/game/live/22174837913"
+        },
+        "record": {
+            "win": 196,
+            "loss": 292,
+            "draw": 43
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2640,
+            "date": 1683387506
+        },
+        "lowest": {
+            "rating": 2011,
+            "date": 1540653397
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

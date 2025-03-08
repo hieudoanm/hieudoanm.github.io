@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/92685536.a0819996.200x200o.f00abdf232ce.jpg",
+    "player_id": 92685536,
+    "@id": "https://api.chess.com/pub/player/ceylonismcw",
+    "url": "https://www.chess.com/member/CeylonismCW",
+    "name": "Chandana Wijekoon",
+    "username": "ceylonismcw",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/LK",
+    "last_online": 1734175733,
+    "joined": 1602122305,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

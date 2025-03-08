@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/4760458.824062e0.200x200o.c2bcccc04413.jpg",
+    "player_id": 4760458,
+    "@id": "https://api.chess.com/pub/player/chesstiger64",
+    "url": "https://www.chess.com/member/Chesstiger64",
+    "name": "Andrin W\u00fcest",
+    "username": "chesstiger64",
+    "title": "CM",
+    "followers": 44,
+    "country": "https://api.chess.com/pub/country/CH",
+    "location": "Kriens",
+    "last_online": 1730222686,
+    "joined": 1298478523,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

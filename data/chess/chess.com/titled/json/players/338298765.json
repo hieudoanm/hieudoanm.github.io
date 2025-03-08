@@ -1,0 +1,88 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/338298765.a5a8ed85.200x200o.bc8d22b10363.png",
+    "player_id": 338298765,
+    "@id": "https://api.chess.com/pub/player/christ_is_alive",
+    "url": "https://www.chess.com/member/Christ_is_alive",
+    "name": "Ram\u00f3n Alberto Hern\u00e1ndez Fern\u00e1ndez",
+    "username": "christ_is_alive",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/RS",
+    "last_online": 1734114052,
+    "joined": 1704999584,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1020,
+            "date": 1711859308,
+            "rd": 349
+        },
+        "best": {
+            "rating": 1020,
+            "date": 1711859308,
+            "game": "https://www.chess.com/game/daily/636074069"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 25226,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2293,
+            "date": 1728847650,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2293,
+            "date": 1728847650,
+            "game": "https://www.chess.com/game/live/122585628981"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2375,
+            "date": 1734114683,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2443,
+            "date": 1730827202,
+            "game": "https://www.chess.com/game/live/121533668837"
+        },
+        "record": {
+            "win": 261,
+            "loss": 191,
+            "draw": 34
+        }
+    },
+    "fide": 2304,
+    "tactics": {
+        "highest": {
+            "rating": 2362,
+            "date": 1725368726
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1704999584
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 36,
+            "score": 35
+        }
+    }
+}

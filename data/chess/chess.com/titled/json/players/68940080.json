@@ -1,0 +1,53 @@
+{
+    "player_id": 68940080,
+    "@id": "https://api.chess.com/pub/player/chessklubhodkonem",
+    "url": "https://www.chess.com/member/ChessKlubHodKonem",
+    "username": "chessklubhodkonem",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/BY",
+    "last_online": 1734118156,
+    "joined": 1575624627,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2031,
+            "date": 1734120918,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2193,
+            "date": 1733426080,
+            "game": "https://www.chess.com/game/live/127164624683"
+        },
+        "record": {
+            "win": 47,
+            "loss": 38,
+            "draw": 6
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2242,
+            "date": 1733739055
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1575624627
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 39
+        },
+        "daily": {
+            "total_attempts": 23,
+            "score": 20
+        }
+    }
+}

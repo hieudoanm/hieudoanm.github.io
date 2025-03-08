@@ -1,0 +1,66 @@
+{
+    "player_id": 4402054,
+    "@id": "https://api.chess.com/pub/player/rdmguy01",
+    "url": "https://www.chess.com/member/RDMGUY01",
+    "username": "rdmguy01",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/XE",
+    "last_online": 1734181904,
+    "joined": 1292535280,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2498,
+            "date": 1608648494,
+            "rd": 66
+        },
+        "best": {
+            "rating": 2512,
+            "date": 1608648228,
+            "game": "https://www.chess.com/game/live/5050772192"
+        },
+        "record": {
+            "win": 288,
+            "loss": 177,
+            "draw": 32
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2497,
+            "date": 1734183211,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2627,
+            "date": 1577030474,
+            "game": "https://www.chess.com/game/live/120983387809"
+        },
+        "record": {
+            "win": 7274,
+            "loss": 5709,
+            "draw": 990
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3378,
+            "date": 1723806787
+        },
+        "lowest": {
+            "rating": 1338,
+            "date": 1293879723
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "player_id": 55170200,
+    "@id": "https://api.chess.com/pub/player/vulcanochess",
+    "url": "https://www.chess.com/member/Vulcanochess",
+    "name": "Jesus Galvan",
+    "username": "vulcanochess",
+    "title": "FM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/HR",
+    "last_online": 1734097440,
+    "joined": 1545904644,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

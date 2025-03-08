@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6547230.67b102e2.200x200o.458d07a3c603.jpeg",
+    "player_id": 6547230,
+    "@id": "https://api.chess.com/pub/player/gmsagor",
+    "url": "https://www.chess.com/member/GMSAGOR",
+    "name": "Mohammad Minhaz Uddin",
+    "username": "gmsagor",
+    "title": "IM",
+    "followers": 237,
+    "country": "https://api.chess.com/pub/country/BD",
+    "location": "Dhaka, Bangladesh",
+    "last_online": 1734175383,
+    "joined": 1327344604,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1618,
+            "date": 1733953113,
+            "rd": 211
+        },
+        "best": {
+            "rating": 1671,
+            "date": 1706222290,
+            "game": "https://www.chess.com/game/daily/282932362"
+        },
+        "record": {
+            "win": 8,
+            "loss": 4,
+            "draw": 0,
+            "time_per_move": 361859,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2227,
+            "date": 1733333777,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2267,
+            "date": 1630658586,
+            "game": "https://www.chess.com/game/live/123782981395"
+        },
+        "record": {
+            "win": 56,
+            "loss": 20,
+            "draw": 18
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2568,
+            "date": 1734170704,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2669,
+            "date": 1537388638,
+            "game": "https://www.chess.com/game/live/121795228587"
+        },
+        "record": {
+            "win": 1326,
+            "loss": 1055,
+            "draw": 133
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2706,
+            "date": 1732634790,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2711,
+            "date": 1730734900,
+            "game": "https://www.chess.com/game/live/113167195981"
+        },
+        "record": {
+            "win": 1418,
+            "loss": 1062,
+            "draw": 236
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3540,
+            "date": 1713199529
+        },
+        "lowest": {
+            "rating": 1389,
+            "date": 1327348148
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

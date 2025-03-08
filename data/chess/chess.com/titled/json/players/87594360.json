@@ -1,0 +1,86 @@
+{
+    "player_id": 87594360,
+    "@id": "https://api.chess.com/pub/player/valio_m1948",
+    "url": "https://www.chess.com/member/Valio_M1948",
+    "name": "Valentin Mitev",
+    "username": "valio_m1948",
+    "title": "FM",
+    "followers": 35,
+    "country": "https://api.chess.com/pub/country/BG",
+    "location": "Pleven",
+    "last_online": 1734002449,
+    "joined": 1595751252,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2261,
+            "date": 1729620161,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2393,
+            "date": 1603112197,
+            "game": "https://www.chess.com/game/live/6013683310"
+        },
+        "record": {
+            "win": 20,
+            "loss": 14,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2487,
+            "date": 1732768812,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2533,
+            "date": 1696511229,
+            "game": "https://www.chess.com/game/live/90245913917"
+        },
+        "record": {
+            "win": 56,
+            "loss": 53,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2401,
+            "date": 1733907491,
+            "rd": 70
+        },
+        "best": {
+            "rating": 2643,
+            "date": 1693085724,
+            "game": "https://www.chess.com/game/live/87001231251"
+        },
+        "record": {
+            "win": 1695,
+            "loss": 1375,
+            "draw": 226
+        }
+    },
+    "fide": 2261,
+    "tactics": {
+        "highest": {
+            "rating": 3131,
+            "date": 1693829235
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1595751252
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

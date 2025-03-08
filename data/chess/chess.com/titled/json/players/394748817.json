@@ -1,0 +1,61 @@
+{
+    "player_id": 394748817,
+    "@id": "https://api.chess.com/pub/player/tzizuki",
+    "url": "https://www.chess.com/member/tzizuki",
+    "username": "tzizuki",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/JP",
+    "last_online": 1733779059,
+    "joined": 1728495641,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2200,
+            "date": 1732540612,
+            "rd": 144
+        },
+        "best": {
+            "rating": 903,
+            "date": 1729100243,
+            "game": "https://www.chess.com/game/live/122837146063"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2488,
+            "date": 1733781631,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2488,
+            "date": 1733781631,
+            "game": "https://www.chess.com/game/live/127519177205"
+        },
+        "record": {
+            "win": 49,
+            "loss": 26,
+            "draw": 7
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2241,
+            "date": 1733615412
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1728495641
+        }
+    },
+    "puzzle_rush": {}
+}

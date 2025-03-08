@@ -1,0 +1,129 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/18511856.3dc91214.200x200o.b2614625c50b.jpeg",
+    "player_id": 18511856,
+    "@id": "https://api.chess.com/pub/player/cyrano-lossi",
+    "url": "https://www.chess.com/member/Cyrano-Lossi",
+    "name": "Cyrano Jose Lossi",
+    "username": "cyrano-lossi",
+    "title": "CM",
+    "followers": 392,
+    "country": "https://api.chess.com/pub/country/GT",
+    "location": "Guatemala",
+    "last_online": 1734185151,
+    "joined": 1408144394,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2155,
+            "date": 1733282150,
+            "rd": 102
+        },
+        "best": {
+            "rating": 2274,
+            "date": 1669972797,
+            "game": "https://www.chess.com/game/daily/458938159"
+        },
+        "record": {
+            "win": 462,
+            "loss": 194,
+            "draw": 60,
+            "time_per_move": 89384,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1743,
+            "date": 1625365204,
+            "rd": 201
+        },
+        "best": {
+            "rating": 1743,
+            "date": 1625365204,
+            "game": "https://www.chess.com/game/daily/224849956"
+        },
+        "record": {
+            "win": 11,
+            "loss": 4,
+            "draw": 1,
+            "time_per_move": 89384,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2384,
+            "date": 1729035647,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2384,
+            "date": 1700247078,
+            "game": "https://www.chess.com/game/live/56861958221"
+        },
+        "record": {
+            "win": 31,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2057,
+            "date": 1733948514,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2182,
+            "date": 1642035620,
+            "game": "https://www.chess.com/game/live/124765758063"
+        },
+        "record": {
+            "win": 530,
+            "loss": 384,
+            "draw": 43
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2325,
+            "date": 1722530493,
+            "rd": 99
+        },
+        "best": {
+            "rating": 2445,
+            "date": 1632248063,
+            "game": "https://www.chess.com/game/live/5080601910"
+        },
+        "record": {
+            "win": 488,
+            "loss": 356,
+            "draw": 47
+        }
+    },
+    "fide": 2032,
+    "tactics": {
+        "highest": {
+            "rating": 3131,
+            "date": 1734101750
+        },
+        "lowest": {
+            "rating": 1328,
+            "date": 1416846035
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 39
+        },
+        "daily": {
+            "total_attempts": 26,
+            "score": 23
+        }
+    }
+}

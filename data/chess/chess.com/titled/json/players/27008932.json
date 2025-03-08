@@ -1,0 +1,65 @@
+{
+    "player_id": 27008932,
+    "@id": "https://api.chess.com/pub/player/alexchess1062",
+    "url": "https://www.chess.com/member/alexchess1062",
+    "username": "alexchess1062",
+    "title": "GM",
+    "followers": 36,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1628116799,
+    "joined": 1456815851,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 3067,
+            "date": 1598653102,
+            "rd": 79
+        },
+        "best": {
+            "rating": 2920,
+            "date": 1585911688,
+            "game": "https://www.chess.com/game/live/4651749024"
+        },
+        "record": {
+            "win": 93,
+            "loss": 49,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 3018,
+            "date": 1628101181,
+            "rd": 107
+        },
+        "best": {
+            "rating": 3103,
+            "date": 1578077387,
+            "game": "https://www.chess.com/game/live/4652907803"
+        },
+        "record": {
+            "win": 462,
+            "loss": 293,
+            "draw": 74
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3107,
+            "date": 1593058244
+        },
+        "lowest": {
+            "rating": 1352,
+            "date": 1456815900
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

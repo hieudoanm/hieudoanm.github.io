@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/47976178.d29dfa77.200x200o.ef63eab34606.jpg",
+    "player_id": 47976178,
+    "@id": "https://api.chess.com/pub/player/duongvuanh",
+    "url": "https://www.chess.com/member/duongvuanh",
+    "name": "V\u0169 Anh D\u01b0\u01a1ng",
+    "username": "duongvuanh",
+    "title": "CM",
+    "followers": 181,
+    "country": "https://api.chess.com/pub/country/VN",
+    "location": "Hanoi",
+    "last_online": 1734008504,
+    "joined": 1531929105,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

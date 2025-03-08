@@ -1,0 +1,90 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/46525076.97ad308e.200x200o.6832d0df94c6.jpg",
+    "player_id": 46525076,
+    "@id": "https://api.chess.com/pub/player/herowilczek",
+    "url": "https://www.chess.com/member/HeroWilczek",
+    "name": "Igor Wilk",
+    "username": "herowilczek",
+    "title": "CM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734183926,
+    "joined": 1527316104,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2228,
+            "date": 1733053865,
+            "rd": 65
+        },
+        "best": {
+            "rating": 2228,
+            "date": 1731762566,
+            "game": "https://www.chess.com/game/live/62683229651"
+        },
+        "record": {
+            "win": 41,
+            "loss": 13,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2626,
+            "date": 1734184308,
+            "rd": 21
+        },
+        "best": {
+            "rating": 2691,
+            "date": 1733594927,
+            "game": "https://www.chess.com/game/live/103749130725"
+        },
+        "record": {
+            "win": 3168,
+            "loss": 3191,
+            "draw": 528
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2671,
+            "date": 1733162783,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2679,
+            "date": 1732643405,
+            "game": "https://www.chess.com/game/live/126379744227"
+        },
+        "record": {
+            "win": 1466,
+            "loss": 1251,
+            "draw": 271
+        }
+    },
+    "fide": 2228,
+    "tactics": {
+        "highest": {
+            "rating": 3643,
+            "date": 1699382108
+        },
+        "lowest": {
+            "rating": 810,
+            "date": 1527316173
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        },
+        "daily": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

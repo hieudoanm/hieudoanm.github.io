@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/41889132.f7172460.200x200o.23b2b70bcb03.jpeg",
+    "player_id": 41889132,
+    "@id": "https://api.chess.com/pub/player/tk22h",
+    "url": "https://www.chess.com/member/tk22h",
+    "name": "Thomas Kahlert",
+    "username": "tk22h",
+    "title": "FM",
+    "followers": 38,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1731609249,
+    "joined": 1514803461,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/321583609.a512556c.200x200o.871b7361ce7a.jpg",
+    "player_id": 321583609,
+    "@id": "https://api.chess.com/pub/player/simplepineapple",
+    "url": "https://www.chess.com/member/Simplepineapple",
+    "username": "simplepineapple",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/AD",
+    "last_online": 1733836182,
+    "joined": 1698152107,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

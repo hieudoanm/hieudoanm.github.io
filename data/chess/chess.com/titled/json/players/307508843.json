@@ -1,0 +1,82 @@
+{
+    "player_id": 307508843,
+    "@id": "https://api.chess.com/pub/player/doublekk14",
+    "url": "https://www.chess.com/member/Doublekk14",
+    "name": "Jesus Alberto Alcazar Jimenez",
+    "username": "doublekk14",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734001711,
+    "joined": 1692718016,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1951,
+            "date": 1733567422,
+            "rd": 215
+        },
+        "best": {
+            "rating": 1951,
+            "date": 1732217201,
+            "game": "https://www.chess.com/game/daily/702035939"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 119993,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2159,
+            "date": 1721664607,
+            "rd": 208
+        },
+        "best": {
+            "rating": 2159,
+            "date": 1721664607,
+            "game": "https://www.chess.com/game/live/115403339865"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2346,
+            "date": 1733583158,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2444,
+            "date": 1710889879,
+            "game": "https://www.chess.com/game/live/102795074403"
+        },
+        "record": {
+            "win": 368,
+            "loss": 435,
+            "draw": 106
+        }
+    },
+    "fide": 2163,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1692718016
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1692718016
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/20375860.590f29bd.200x200o.ffbe6b830316.jpg",
+    "player_id": 20375860,
+    "@id": "https://api.chess.com/pub/player/toavinaraza",
+    "url": "https://www.chess.com/member/toavinaraza",
+    "name": "Toavina Razanadrakotoarisoa",
+    "username": "toavinaraza",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/MG",
+    "location": "Antananarivo",
+    "last_online": 1733897730,
+    "joined": 1419788724,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

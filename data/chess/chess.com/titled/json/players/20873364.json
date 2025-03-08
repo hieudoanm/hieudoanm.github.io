@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/20873364.de1f80fd.200x200o.2a3c49f5ca25.png",
+    "player_id": 20873364,
+    "@id": "https://api.chess.com/pub/player/vojtap",
+    "url": "https://www.chess.com/member/Vojtap",
+    "name": "Vojtech Parizek",
+    "username": "vojtap",
+    "title": "FM",
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "location": "Prague",
+    "last_online": 1734183670,
+    "joined": 1422695402,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

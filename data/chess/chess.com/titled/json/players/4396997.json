@@ -1,0 +1,18 @@
+{
+    "player_id": 4396997,
+    "@id": "https://api.chess.com/pub/player/einherjar521",
+    "url": "https://www.chess.com/member/Einherjar521",
+    "name": "malik lindholdt",
+    "username": "einherjar521",
+    "title": "CM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/DK",
+    "location": "ringsted",
+    "last_online": 1734128452,
+    "joined": 1292449779,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

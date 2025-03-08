@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/114846174.0af711c6.200x200o.3260e8fb00d6.jpg",
+    "player_id": 114846174,
+    "@id": "https://api.chess.com/pub/player/badiudifora",
+    "url": "https://www.chess.com/member/BadiuDiFora",
+    "name": "Patron Revolucion\u00e1rio",
+    "username": "badiudifora",
+    "title": "CM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/CV",
+    "last_online": 1733493976,
+    "joined": 1611341193,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2107,
+            "date": 1732463605,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2176,
+            "date": 1702689013,
+            "game": "https://www.chess.com/game/live/87259834959"
+        },
+        "record": {
+            "win": 141,
+            "loss": 71,
+            "draw": 22
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1974,
+            "date": 1733524061,
+            "rd": 28
+        },
+        "best": {
+            "rating": 1983,
+            "date": 1733516037,
+            "game": "https://www.chess.com/game/live/127178993701"
+        },
+        "record": {
+            "win": 2872,
+            "loss": 2378,
+            "draw": 133
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2013,
+            "date": 1732128519,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2095,
+            "date": 1722110538,
+            "game": "https://www.chess.com/game/live/45171544683"
+        },
+        "record": {
+            "win": 1942,
+            "loss": 1170,
+            "draw": 167
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2226,
+            "date": 1732475661
+        },
+        "lowest": {
+            "rating": 812,
+            "date": 1617376237
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 20,
+            "score": 17
+        }
+    }
+}

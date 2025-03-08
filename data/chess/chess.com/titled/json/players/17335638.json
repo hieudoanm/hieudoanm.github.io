@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/17335638.a81c418e.200x200o.a339f4421767.jpeg",
+    "player_id": 17335638,
+    "@id": "https://api.chess.com/pub/player/sinurat",
+    "url": "https://www.chess.com/member/sinurat",
+    "name": "Tumpak Sinurat",
+    "username": "sinurat",
+    "title": "FM",
+    "followers": 47,
+    "country": "https://api.chess.com/pub/country/ID",
+    "location": "west java",
+    "last_online": 1731752079,
+    "joined": 1400336723,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

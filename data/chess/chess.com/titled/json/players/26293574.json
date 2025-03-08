@@ -1,0 +1,16 @@
+{
+    "player_id": 26293574,
+    "@id": "https://api.chess.com/pub/player/smshk35",
+    "url": "https://www.chess.com/member/smshk35",
+    "username": "smshk35",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1732724928,
+    "joined": 1453557016,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

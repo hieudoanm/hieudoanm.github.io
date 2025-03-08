@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/86792292.fc9ca23b.200x200o.b88a83c5c1bd.jpeg",
+    "player_id": 86792292,
+    "@id": "https://api.chess.com/pub/player/wilsy19",
+    "url": "https://www.chess.com/member/Wilsy19",
+    "name": "Wilsaida Diaz",
+    "username": "wilsy19",
+    "title": "WFM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/DO",
+    "location": "Santo Domingo",
+    "last_online": 1730062044,
+    "joined": 1594851081,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1965,
+            "date": 1733430599,
+            "rd": 52
+        },
+        "best": {
+            "rating": 2132,
+            "date": 1682881899,
+            "game": "https://www.chess.com/game/live/111876212193"
+        },
+        "record": {
+            "win": 206,
+            "loss": 167,
+            "draw": 31
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1884,
+            "date": 1727326457,
+            "rd": 181
+        },
+        "best": {
+            "rating": 1884,
+            "date": 1727326457,
+            "game": "https://www.chess.com/game/live/121065014593"
+        },
+        "record": {
+            "win": 10,
+            "loss": 5,
+            "draw": 1
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2718,
+            "date": 1715622472
+        },
+        "lowest": {
+            "rating": 413,
+            "date": 1595988840
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 35,
+            "score": 32
+        }
+    }
+}

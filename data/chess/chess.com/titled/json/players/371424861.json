@@ -1,0 +1,17 @@
+{
+    "player_id": 371424861,
+    "@id": "https://api.chess.com/pub/player/epicwarrior2015",
+    "url": "https://www.chess.com/member/EpicWarrior2015",
+    "name": "Ethan Pang",
+    "username": "epicwarrior2015",
+    "title": "CM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1729943019,
+    "joined": 1719137069,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

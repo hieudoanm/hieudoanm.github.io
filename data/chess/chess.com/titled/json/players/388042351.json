@@ -1,0 +1,30 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/388042351.8a3862db.200x200o.ac7c4b6dd520.jpg",
+    "player_id": 388042351,
+    "@id": "https://api.chess.com/pub/player/georgexie",
+    "url": "https://www.chess.com/member/GeorgeXie",
+    "name": "George Xie",
+    "username": "georgexie",
+    "title": "IM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/AU",
+    "location": "Sydney",
+    "last_online": 1731026964,
+    "joined": 1726179936,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "fide": 2329,
+    "tactics": {
+        "highest": {
+            "rating": 2334,
+            "date": 1730319916
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1726179936
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/183021803.ff21103c.200x200o.5d0aa1688485.jpeg",
+    "player_id": 183021803,
+    "@id": "https://api.chess.com/pub/player/dwaynejohnson19",
+    "url": "https://www.chess.com/member/DwayneJohnson19",
+    "username": "dwaynejohnson19",
+    "title": "CM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1733938559,
+    "joined": 1652002983,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/368906315.418d09b4.200x200o.2c90984d75cc.jpg",
+    "player_id": 368906315,
+    "@id": "https://api.chess.com/pub/player/finejupiter",
+    "url": "https://www.chess.com/member/Finejupiter",
+    "name": "Ryan Lane",
+    "username": "finejupiter",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/AU",
+    "last_online": 1733639688,
+    "joined": 1718075459,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2145,
+            "date": 1733643321,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2154,
+            "date": 1733643225,
+            "game": "https://www.chess.com/game/live/127381763897"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2056,
+            "date": 1733643590,
+            "rd": 115
+        },
+        "best": {
+            "rating": 2131,
+            "date": 1718600763,
+            "game": "https://www.chess.com/game/live/112339790549"
+        },
+        "record": {
+            "win": 10,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2218,
+            "date": 1733641786,
+            "rd": 115
+        },
+        "best": {
+            "rating": 2218,
+            "date": 1733641786,
+            "game": "https://www.chess.com/game/live/112487476339"
+        },
+        "record": {
+            "win": 6,
+            "loss": 8,
+            "draw": 1
+        }
+    },
+    "fide": 1998,
+    "tactics": {
+        "highest": {
+            "rating": 2282,
+            "date": 1724819118
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1718075459
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

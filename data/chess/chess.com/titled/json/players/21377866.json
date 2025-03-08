@@ -1,0 +1,48 @@
+{
+    "player_id": 21377866,
+    "@id": "https://api.chess.com/pub/player/ispanec",
+    "url": "https://www.chess.com/member/Ispanec",
+    "username": "ispanec",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1733757097,
+    "joined": 1425541689,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 1343,
+            "date": 1425542122,
+            "rd": 290
+        },
+        "best": {
+            "rating": 1343,
+            "date": 1425542122,
+            "game": "https://www.chess.com/game/live/1078937977"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1262,
+            "date": 1732963739
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1425541689
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 41,
+            "score": 38
+        }
+    }
+}

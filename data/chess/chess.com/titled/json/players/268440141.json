@@ -1,0 +1,84 @@
+{
+    "player_id": 268440141,
+    "@id": "https://api.chess.com/pub/player/kazmin_semyon",
+    "url": "https://www.chess.com/member/Kazmin_Semyon",
+    "name": "Semen Kazmin",
+    "username": "kazmin_semyon",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733225183,
+    "joined": 1680113860,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2276,
+            "date": 1692366423,
+            "rd": 176
+        },
+        "best": {
+            "rating": 2276,
+            "date": 1692366423,
+            "game": "https://www.chess.com/game/live/86104718153"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2695,
+            "date": 1713821327,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2790,
+            "date": 1699298176,
+            "game": "https://www.chess.com/game/live/95074760525"
+        },
+        "record": {
+            "win": 36,
+            "loss": 24,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2582,
+            "date": 1727797240,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2617,
+            "date": 1715098220,
+            "game": "https://www.chess.com/game/live/104599310901"
+        },
+        "record": {
+            "win": 80,
+            "loss": 71,
+            "draw": 11
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3735,
+            "date": 1704026991
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1680113860
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

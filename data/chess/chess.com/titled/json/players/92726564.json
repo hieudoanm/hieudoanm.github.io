@@ -1,0 +1,67 @@
+{
+    "player_id": 92726564,
+    "@id": "https://api.chess.com/pub/player/pnaibaf",
+    "url": "https://www.chess.com/member/pnaibaf",
+    "name": "Fabian Platzgummer",
+    "username": "pnaibaf",
+    "title": "IM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/AT",
+    "last_online": 1734019665,
+    "joined": 1602179965,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2681,
+            "date": 1734005229,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2723,
+            "date": 1733000129,
+            "game": "https://www.chess.com/game/live/124915740275"
+        },
+        "record": {
+            "win": 173,
+            "loss": 147,
+            "draw": 27
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2713,
+            "date": 1734019991,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2728,
+            "date": 1730643295,
+            "game": "https://www.chess.com/game/live/125614767907"
+        },
+        "record": {
+            "win": 28,
+            "loss": 16,
+            "draw": 5
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3400,
+            "date": 1733127109
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1602179965
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 23,
+            "score": 20
+        }
+    }
+}

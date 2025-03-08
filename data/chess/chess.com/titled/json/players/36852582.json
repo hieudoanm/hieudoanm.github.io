@@ -1,0 +1,17 @@
+{
+    "player_id": 36852582,
+    "@id": "https://api.chess.com/pub/player/egoryakovlev",
+    "url": "https://www.chess.com/member/EgorYakovlev",
+    "name": "\u0415\u0433\u043e\u0440 \u042f\u043a\u043e\u0432\u043b\u0435\u0432",
+    "username": "egoryakovlev",
+    "title": "CM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734018942,
+    "joined": 1499413451,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

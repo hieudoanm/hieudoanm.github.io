@@ -1,0 +1,17 @@
+{
+    "player_id": 78238140,
+    "@id": "https://api.chess.com/pub/player/vsevolod_ovchinnikov",
+    "url": "https://www.chess.com/member/Vsevolod_Ovchinnikov",
+    "name": "Vsevolod Ovchinnikov",
+    "username": "vsevolod_ovchinnikov",
+    "title": "FM",
+    "followers": 25,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734098677,
+    "joined": 1588269438,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

@@ -1,0 +1,66 @@
+{
+    "player_id": 41439780,
+    "@id": "https://api.chess.com/pub/player/krovavyoryel",
+    "url": "https://www.chess.com/member/KrovavyOryel",
+    "username": "krovavyoryel",
+    "title": "FM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/UY",
+    "last_online": 1734122723,
+    "joined": 1513587716,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2625,
+            "date": 1733899634,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2648,
+            "date": 1731172005,
+            "game": "https://www.chess.com/game/live/124906757731"
+        },
+        "record": {
+            "win": 461,
+            "loss": 468,
+            "draw": 44
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2756,
+            "date": 1733252194,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2803,
+            "date": 1704997622,
+            "game": "https://www.chess.com/game/live/108900057139"
+        },
+        "record": {
+            "win": 3420,
+            "loss": 4025,
+            "draw": 691
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3976,
+            "date": 1699332490
+        },
+        "lowest": {
+            "rating": 416,
+            "date": 1558433122
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

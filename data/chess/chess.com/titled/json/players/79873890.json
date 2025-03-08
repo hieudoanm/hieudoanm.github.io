@@ -1,0 +1,85 @@
+{
+    "player_id": 79873890,
+    "@id": "https://api.chess.com/pub/player/zhalmakhanov_ramazan",
+    "url": "https://www.chess.com/member/Zhalmakhanov_Ramazan",
+    "name": "Ramazan Zhalmakhanov",
+    "username": "zhalmakhanov_ramazan",
+    "title": "GM",
+    "followers": 124,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1732870053,
+    "joined": 1589823986,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2258,
+            "date": 1719439947,
+            "rd": 68
+        },
+        "best": {
+            "rating": 2568,
+            "date": 1601198107,
+            "game": "https://www.chess.com/game/live/5333562583"
+        },
+        "record": {
+            "win": 44,
+            "loss": 11,
+            "draw": 10
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2865,
+            "date": 1729881977,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2957,
+            "date": 1696094157,
+            "game": "https://www.chess.com/game/live/97252324469"
+        },
+        "record": {
+            "win": 102,
+            "loss": 48,
+            "draw": 10
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2960,
+            "date": 1732871376,
+            "rd": 45
+        },
+        "best": {
+            "rating": 3019,
+            "date": 1730099409,
+            "game": "https://www.chess.com/game/live/123351086889"
+        },
+        "record": {
+            "win": 267,
+            "loss": 164,
+            "draw": 35
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2659,
+            "date": 1695886612
+        },
+        "lowest": {
+            "rating": 2385,
+            "date": 1686643189
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 55,
+            "score": 52
+        }
+    }
+}

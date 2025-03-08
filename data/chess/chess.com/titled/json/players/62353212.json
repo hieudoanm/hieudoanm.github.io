@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/62353212.4c8eb0a3.200x200o.838c4a1b4c4f.png",
+    "player_id": 62353212,
+    "@id": "https://api.chess.com/pub/player/worldchessmentor",
+    "url": "https://www.chess.com/member/WorldChessMentor",
+    "name": "Liviu Cerbulenco",
+    "username": "worldchessmentor",
+    "title": "FM",
+    "followers": 495,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734170636,
+    "joined": 1560710821,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

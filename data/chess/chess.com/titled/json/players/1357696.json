@@ -1,0 +1,120 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1357696.54f4a633.200x200o.15d0d23d75bd.jpeg",
+    "player_id": 1357696,
+    "@id": "https://api.chess.com/pub/player/kosmeg",
+    "url": "https://www.chess.com/member/kosmeg",
+    "name": "Konstantinos Megalios",
+    "username": "kosmeg",
+    "title": "IM",
+    "followers": 46,
+    "country": "https://api.chess.com/pub/country/PS",
+    "location": "Athens",
+    "last_online": 1734117162,
+    "joined": 1208204938,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2111,
+            "date": 1553616848,
+            "rd": 67
+        },
+        "best": {
+            "rating": 2355,
+            "date": 1259101929,
+            "game": "https://www.chess.com/game/daily/30948724"
+        },
+        "record": {
+            "win": 195,
+            "loss": 139,
+            "draw": 31,
+            "time_per_move": 124124,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1038,
+            "date": 1272538041,
+            "rd": 290
+        },
+        "record": {
+            "win": 1,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 124124,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2299,
+            "date": 1658758003,
+            "rd": 82
+        },
+        "best": {
+            "rating": 2433,
+            "date": 1590423765,
+            "game": "https://www.chess.com/game/live/52493370535"
+        },
+        "record": {
+            "win": 19,
+            "loss": 15,
+            "draw": 7
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2505,
+            "date": 1731357216,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2555,
+            "date": 1718986025,
+            "game": "https://www.chess.com/game/live/112828202089"
+        },
+        "record": {
+            "win": 401,
+            "loss": 437,
+            "draw": 35
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2474,
+            "date": 1733060067,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2665,
+            "date": 1675790952,
+            "game": "https://www.chess.com/game/live/4081595274"
+        },
+        "record": {
+            "win": 2622,
+            "loss": 2708,
+            "draw": 381
+        }
+    },
+    "fide": 2416,
+    "tactics": {
+        "highest": {
+            "rating": 3761,
+            "date": 1648722433
+        },
+        "lowest": {
+            "rating": 1203,
+            "date": 1211142615
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

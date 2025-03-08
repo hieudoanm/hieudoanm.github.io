@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/52025426.8d70d458.200x200o.b41f521c96d4.jpeg",
+    "player_id": 52025426,
+    "@id": "https://api.chess.com/pub/player/lrjchess",
+    "url": "https://www.chess.com/member/lrjchess",
+    "name": "Ladia Jirasek",
+    "username": "lrjchess",
+    "title": "IM",
+    "followers": 148,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "California",
+    "last_online": 1734148203,
+    "joined": 1542563125,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2505,
+            "date": 1731969581,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2559,
+            "date": 1609782647,
+            "game": "https://www.chess.com/game/live/125708296047"
+        },
+        "record": {
+            "win": 74,
+            "loss": 24,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2705,
+            "date": 1713460786,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2705,
+            "date": 1605063989,
+            "game": "https://www.chess.com/game/live/5284497423"
+        },
+        "record": {
+            "win": 4128,
+            "loss": 3234,
+            "draw": 422
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2710,
+            "date": 1732757519,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2732,
+            "date": 1637595353,
+            "game": "https://www.chess.com/game/live/32638280225"
+        },
+        "record": {
+            "win": 3216,
+            "loss": 2492,
+            "draw": 434
+        }
+    },
+    "fide": 2375,
+    "tactics": {
+        "highest": {
+            "rating": 3258,
+            "date": 1733007056
+        },
+        "lowest": {
+            "rating": 416,
+            "date": 1545874498
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

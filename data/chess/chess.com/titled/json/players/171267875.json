@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/171267875.f2ae0fe7.200x200o.4db55e5315a7.jpg",
+    "player_id": 171267875,
+    "@id": "https://api.chess.com/pub/player/aliniknaddaf",
+    "url": "https://www.chess.com/member/AliNiknaddaf",
+    "name": "Ali Niknaddaf",
+    "username": "aliniknaddaf",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1734020626,
+    "joined": 1643771832,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2440,
+            "date": 1720049185,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2440,
+            "date": 1720049185,
+            "game": "https://www.chess.com/game/live/113173194845"
+        },
+        "record": {
+            "win": 210,
+            "loss": 87,
+            "draw": 27
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2514,
+            "date": 1734184842,
+            "rd": 17
+        },
+        "best": {
+            "rating": 2573,
+            "date": 1731889235,
+            "game": "https://www.chess.com/game/live/110263851395"
+        },
+        "record": {
+            "win": 8812,
+            "loss": 8521,
+            "draw": 1036
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2515,
+            "date": 1705437333,
+            "rd": 20
+        },
+        "best": {
+            "rating": 2610,
+            "date": 1690760804,
+            "game": "https://www.chess.com/game/live/87376293929"
+        },
+        "record": {
+            "win": 2748,
+            "loss": 2665,
+            "draw": 552
+        }
+    },
+    "fide": 2251,
+    "tactics": {
+        "highest": {
+            "rating": 3204,
+            "date": 1704599387
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1643771832
+        }
+    },
+    "puzzle_rush": {}
+}

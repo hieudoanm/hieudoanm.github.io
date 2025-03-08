@@ -1,0 +1,18 @@
+{
+    "player_id": 13921372,
+    "@id": "https://api.chess.com/pub/player/wtfai",
+    "url": "https://www.chess.com/member/wtfai",
+    "name": "Ben Hague",
+    "username": "wtfai",
+    "title": "FM",
+    "followers": 187,
+    "country": "https://api.chess.com/pub/country/NZ",
+    "location": "Whanganui",
+    "last_online": 1733939307,
+    "joined": 1381904349,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

@@ -1,0 +1,16 @@
+{
+    "player_id": 9876584,
+    "@id": "https://api.chess.com/pub/player/simantoff",
+    "url": "https://www.chess.com/member/simantoff",
+    "username": "simantoff",
+    "title": "FM",
+    "followers": 47,
+    "country": "https://api.chess.com/pub/country/IL",
+    "last_online": 1733824090,
+    "joined": 1354528348,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

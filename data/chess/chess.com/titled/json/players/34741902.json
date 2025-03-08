@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34741902.30bd6adb.200x200o.47a6ab6a9bfe.jpg",
+    "player_id": 34741902,
+    "@id": "https://api.chess.com/pub/player/goldenshare",
+    "url": "https://www.chess.com/member/GoldenShare",
+    "name": "Luis Eduardo Ballester Llagaria",
+    "username": "goldenshare",
+    "title": "FM",
+    "followers": 330,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734091393,
+    "joined": 1492088503,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2486,
+            "date": 1734092444,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2522,
+            "date": 1702164884,
+            "game": "https://www.chess.com/game/live/91921727203"
+        },
+        "record": {
+            "win": 83,
+            "loss": 50,
+            "draw": 16
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2724,
+            "date": 1731254228,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2777,
+            "date": 1711314182,
+            "game": "https://www.chess.com/game/live/107698430787"
+        },
+        "record": {
+            "win": 580,
+            "loss": 618,
+            "draw": 88
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2736,
+            "date": 1734148257,
+            "rd": 23
+        },
+        "best": {
+            "rating": 2751,
+            "date": 1734115670,
+            "game": "https://www.chess.com/game/live/127854530329"
+        },
+        "record": {
+            "win": 6504,
+            "loss": 6711,
+            "draw": 1286
+        }
+    },
+    "fide": 2331,
+    "tactics": {
+        "highest": {
+            "rating": 2445,
+            "date": 1684864144
+        },
+        "lowest": {
+            "rating": 1240,
+            "date": 1492190436
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

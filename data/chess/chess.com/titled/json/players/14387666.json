@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/14387666.2e9d5f42.200x200o.90a428550d2d.png",
+    "player_id": 14387666,
+    "@id": "https://api.chess.com/pub/player/sonson28291",
+    "url": "https://www.chess.com/member/sonson28291",
+    "name": "Jorge Alexander Martinez",
+    "username": "sonson28291",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "Bucaramanga",
+    "last_online": 1734019568,
+    "joined": 1384481865,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,17 @@
+{
+    "player_id": 44612452,
+    "@id": "https://api.chess.com/pub/player/skakackonj",
+    "url": "https://www.chess.com/member/skakackonj",
+    "name": "Efim",
+    "username": "skakackonj",
+    "title": "FM",
+    "followers": 67,
+    "country": "https://api.chess.com/pub/country/BA",
+    "location": "Gorazde",
+    "last_online": 1619467491,
+    "joined": 1521920998,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

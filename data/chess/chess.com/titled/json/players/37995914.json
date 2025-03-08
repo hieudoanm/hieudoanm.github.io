@@ -1,0 +1,86 @@
+{
+    "player_id": 37995914,
+    "@id": "https://api.chess.com/pub/player/pilopa",
+    "url": "https://www.chess.com/member/Pilopa",
+    "name": "Pierre Laurent-Paoli",
+    "username": "pilopa",
+    "title": "GM",
+    "followers": 54,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1734079512,
+    "joined": 1503320027,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1875,
+            "date": 1698224798,
+            "rd": 113
+        },
+        "best": {
+            "rating": 2181,
+            "date": 1518869413,
+            "game": "https://www.chess.com/game/daily/186921136"
+        },
+        "record": {
+            "win": 24,
+            "loss": 3,
+            "draw": 2,
+            "time_per_move": 15103,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2692,
+            "date": 1697236837,
+            "rd": 61
+        },
+        "best": {
+            "rating": 2701,
+            "date": 1696786661,
+            "game": "https://www.chess.com/game/live/90523170087"
+        },
+        "record": {
+            "win": 61,
+            "loss": 28,
+            "draw": 15
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2835,
+            "date": 1733907281,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2890,
+            "date": 1733412465,
+            "game": "https://www.chess.com/game/live/123165610905"
+        },
+        "record": {
+            "win": 3660,
+            "loss": 2671,
+            "draw": 603
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 4022,
+            "date": 1725752086
+        },
+        "lowest": {
+            "rating": 1213,
+            "date": 1503494258
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 79,
+            "score": 76
+        }
+    }
+}

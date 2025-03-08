@@ -1,0 +1,85 @@
+{
+    "player_id": 315253897,
+    "@id": "https://api.chess.com/pub/player/flameboard08",
+    "url": "https://www.chess.com/member/Flameboard08",
+    "name": "Lorenzo Perea Fruet",
+    "username": "flameboard08",
+    "title": "FM",
+    "followers": 15,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734181783,
+    "joined": 1695637491,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2199,
+            "date": 1715463340,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2210,
+            "date": 1709834541,
+            "game": "https://www.chess.com/game/live/109201798773"
+        },
+        "record": {
+            "win": 12,
+            "loss": 5,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2557,
+            "date": 1732980212,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2636,
+            "date": 1695731789,
+            "game": "https://www.chess.com/game/live/89470779663"
+        },
+        "record": {
+            "win": 35,
+            "loss": 25,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2705,
+            "date": 1732644792,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2887,
+            "date": 1729353485,
+            "game": "https://www.chess.com/game/live/113763028777"
+        },
+        "record": {
+            "win": 716,
+            "loss": 624,
+            "draw": 128
+        }
+    },
+    "fide": 2411,
+    "tactics": {
+        "highest": {
+            "rating": 3737,
+            "date": 1722756888
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1695637491
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 56
+        }
+    }
+}

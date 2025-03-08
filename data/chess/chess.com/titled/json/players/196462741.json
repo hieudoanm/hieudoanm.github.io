@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/196462741.3c42c934.200x200o.2b250c9e18fe.jpg",
+    "player_id": 196462741,
+    "@id": "https://api.chess.com/pub/player/agustinv04",
+    "url": "https://www.chess.com/member/agustinv04",
+    "name": "Villarreal Agustin",
+    "username": "agustinv04",
+    "title": "FM",
+    "followers": 36,
+    "country": "https://api.chess.com/pub/country/AR",
+    "last_online": 1733527421,
+    "joined": 1662679060,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2031,
+            "date": 1719445675,
+            "rd": 202
+        },
+        "best": {
+            "rating": 2031,
+            "date": 1719445675,
+            "game": "https://www.chess.com/game/live/113184001045"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2570,
+            "date": 1732328865,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2746,
+            "date": 1722215110,
+            "game": "https://www.chess.com/game/live/106766406441"
+        },
+        "record": {
+            "win": 766,
+            "loss": 641,
+            "draw": 107
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2567,
+            "date": 1729317793,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2603,
+            "date": 1725016584,
+            "game": "https://www.chess.com/game/live/113068758945"
+        },
+        "record": {
+            "win": 187,
+            "loss": 151,
+            "draw": 26
+        }
+    },
+    "fide": 2318,
+    "tactics": {
+        "highest": {
+            "rating": 3540,
+            "date": 1728662577
+        },
+        "lowest": {
+            "rating": 2303,
+            "date": 1664937121
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

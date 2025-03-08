@@ -1,0 +1,85 @@
+{
+    "player_id": 351103727,
+    "@id": "https://api.chess.com/pub/player/cakeuvdort",
+    "url": "https://www.chess.com/member/cakeuvdort",
+    "name": "Anh Dung Le",
+    "username": "cakeuvdort",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734121760,
+    "joined": 1710537910,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2209,
+            "date": 1712749419,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2209,
+            "date": 1712749419,
+            "game": "https://www.chess.com/game/live/106487282435"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2231,
+            "date": 1734123804,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2572,
+            "date": 1711044631,
+            "game": "https://www.chess.com/game/live/111001320007"
+        },
+        "record": {
+            "win": 349,
+            "loss": 483,
+            "draw": 40
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2345,
+            "date": 1733169197,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2470,
+            "date": 1715967416,
+            "game": "https://www.chess.com/game/live/111256914039"
+        },
+        "record": {
+            "win": 149,
+            "loss": 184,
+            "draw": 14
+        }
+    },
+    "fide": 2200,
+    "tactics": {
+        "highest": {
+            "rating": 2676,
+            "date": 1733221088
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1710537910
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 19,
+            "score": 18
+        }
+    }
+}

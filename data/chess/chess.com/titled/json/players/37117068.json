@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37117068.09d1fa90.200x200o.cd75e5e35e88.jpg",
+    "player_id": 37117068,
+    "@id": "https://api.chess.com/pub/player/e4evr",
+    "url": "https://www.chess.com/member/e4evr",
+    "name": "Thomas Villiers",
+    "username": "e4evr",
+    "title": "CM",
+    "followers": 120,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1733752488,
+    "joined": 1500361418,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

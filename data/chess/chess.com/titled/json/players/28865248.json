@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/28865248.2b1d1fdc.200x200o.c0dedb42ecaa.jpeg",
+    "player_id": 28865248,
+    "@id": "https://api.chess.com/pub/player/timator",
+    "url": "https://www.chess.com/member/timator",
+    "username": "timator",
+    "title": "FM",
+    "followers": 70,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "madrid",
+    "last_online": 1642518311,
+    "joined": 1467318279,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

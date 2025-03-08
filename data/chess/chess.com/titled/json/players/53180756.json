@@ -1,0 +1,73 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/53180756.bdc0444d.200x200o.73d9caeb0573.jpeg",
+    "player_id": 53180756,
+    "@id": "https://api.chess.com/pub/player/coachvadim",
+    "url": "https://www.chess.com/member/CoachVadim",
+    "name": "Vadim Gorkavij",
+    "username": "coachvadim",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/PR",
+    "location": "Armavir",
+    "last_online": 1734131751,
+    "joined": 1544695141,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2450,
+            "date": 1578614004,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2156,
+            "date": 1544893169,
+            "game": "https://www.chess.com/game/live/3668491323"
+        },
+        "record": {
+            "win": 950,
+            "loss": 529,
+            "draw": 46
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2504,
+            "date": 1733526864,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2513,
+            "date": 1628960286,
+            "game": "https://www.chess.com/game/live/112483884943"
+        },
+        "record": {
+            "win": 331,
+            "loss": 198,
+            "draw": 36
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2876,
+            "date": 1718998330
+        },
+        "lowest": {
+            "rating": 1014,
+            "date": 1544695235
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 50,
+            "score": 48
+        },
+        "daily": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

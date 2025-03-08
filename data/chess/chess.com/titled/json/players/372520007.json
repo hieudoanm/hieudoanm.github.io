@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/372520007.f4244dfd.200x200o.a61b24a4156d.jpg",
+    "player_id": 372520007,
+    "@id": "https://api.chess.com/pub/player/professor_fm",
+    "url": "https://www.chess.com/member/Professor_FM",
+    "name": "Davron Sharipov",
+    "username": "professor_fm",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/UZ",
+    "last_online": 1733835517,
+    "joined": 1719666284,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2259,
+            "date": 1729945348,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2261,
+            "date": 1729941977,
+            "game": "https://www.chess.com/game/live/121074644401"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2175,
+            "date": 1729945580,
+            "rd": 106
+        },
+        "best": {
+            "rating": 2254,
+            "date": 1724516466,
+            "game": "https://www.chess.com/game/live/118049381393"
+        },
+        "record": {
+            "win": 7,
+            "loss": 6,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2389,
+            "date": 1732516668,
+            "rd": 61
+        },
+        "best": {
+            "rating": 2486,
+            "date": 1724173389,
+            "game": "https://www.chess.com/game/live/117907799141"
+        },
+        "record": {
+            "win": 36,
+            "loss": 46,
+            "draw": 2
+        }
+    },
+    "fide": 2246,
+    "tactics": {
+        "highest": {
+            "rating": 2370,
+            "date": 1727201438
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1719666284
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 40,
+            "score": 38
+        }
+    }
+}

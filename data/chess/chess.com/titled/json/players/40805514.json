@@ -1,0 +1,135 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/40805514.a6b8bb6f.200x200o.68b55d2f75c2.png",
+    "player_id": 40805514,
+    "@id": "https://api.chess.com/pub/player/chesswarrior3",
+    "url": "https://www.chess.com/member/ChessWarrior3",
+    "name": "Lucas Foerster-Yialamas",
+    "username": "chesswarrior3",
+    "title": "CM",
+    "followers": 78,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1733845866,
+    "joined": 1511875566,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1584,
+            "date": 1733848126,
+            "rd": 73
+        },
+        "best": {
+            "rating": 1712,
+            "date": 1676056070,
+            "game": "https://www.chess.com/game/daily/552007539"
+        },
+        "record": {
+            "win": 1106,
+            "loss": 640,
+            "draw": 43,
+            "time_per_move": 135987,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 113,
+            "withdraw": 2,
+            "count": 2,
+            "highest_finish": 1
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1017,
+            "date": 1685797854,
+            "rd": 101
+        },
+        "best": {
+            "rating": 1218,
+            "date": 1683848181,
+            "game": "https://www.chess.com/game/daily/510779675"
+        },
+        "record": {
+            "win": 40,
+            "loss": 41,
+            "draw": 0,
+            "time_per_move": 135987,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 113,
+            "withdraw": 2,
+            "count": 2,
+            "highest_finish": 1
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2316,
+            "date": 1714596507,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2345,
+            "date": 1693244334,
+            "game": "https://www.chess.com/game/live/86978423835"
+        },
+        "record": {
+            "win": 80,
+            "loss": 34,
+            "draw": 11
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2419,
+            "date": 1733079954,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2567,
+            "date": 1732317192,
+            "game": "https://www.chess.com/game/live/78757189399"
+        },
+        "record": {
+            "win": 2652,
+            "loss": 2527,
+            "draw": 324
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2408,
+            "date": 1733847980,
+            "rd": 78
+        },
+        "best": {
+            "rating": 2502,
+            "date": 1712824833,
+            "game": "https://www.chess.com/game/live/75127822197"
+        },
+        "record": {
+            "win": 778,
+            "loss": 767,
+            "draw": 93
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2949,
+            "date": 1717880291
+        },
+        "lowest": {
+            "rating": 411,
+            "date": 1512737514
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

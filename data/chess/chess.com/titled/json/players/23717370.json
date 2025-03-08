@@ -1,0 +1,123 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23717370.c94a157b.200x200o.d7ee66d72051.png",
+    "player_id": 23717370,
+    "@id": "https://api.chess.com/pub/player/rushing_mane",
+    "url": "https://www.chess.com/member/rushing_mane",
+    "name": "Wiktoria Cie\u015blak",
+    "username": "rushing_mane",
+    "title": "WCM",
+    "followers": 47,
+    "country": "https://api.chess.com/pub/country/PL",
+    "location": "Pszczyna",
+    "last_online": 1734118447,
+    "joined": 1439884056,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1527,
+            "date": 1732050516,
+            "rd": 108
+        },
+        "best": {
+            "rating": 1805,
+            "date": 1523857678,
+            "game": "https://www.chess.com/game/daily/190131926"
+        },
+        "record": {
+            "win": 240,
+            "loss": 145,
+            "draw": 23,
+            "time_per_move": 38455,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 778,
+            "date": 1621519803,
+            "rd": 342
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 38455,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2068,
+            "date": 1727878371,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2068,
+            "date": 1727878371,
+            "game": "https://www.chess.com/game/live/121617022305"
+        },
+        "record": {
+            "win": 8,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2046,
+            "date": 1733571748,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2167,
+            "date": 1733353125,
+            "game": "https://www.chess.com/game/live/127091981017"
+        },
+        "record": {
+            "win": 750,
+            "loss": 635,
+            "draw": 56
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2147,
+            "date": 1734127427,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2224,
+            "date": 1657062444,
+            "game": "https://www.chess.com/game/live/4678197430"
+        },
+        "record": {
+            "win": 786,
+            "loss": 696,
+            "draw": 82
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3110,
+            "date": 1718537701
+        },
+        "lowest": {
+            "rating": 1358,
+            "date": 1444372489
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 40,
+            "score": 37
+        },
+        "daily": {
+            "total_attempts": 25,
+            "score": 22
+        }
+    }
+}

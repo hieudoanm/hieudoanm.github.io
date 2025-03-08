@@ -1,0 +1,16 @@
+{
+    "player_id": 333283749,
+    "@id": "https://api.chess.com/pub/player/achalachess",
+    "url": "https://www.chess.com/member/Achalachess",
+    "username": "achalachess",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/IE",
+    "last_online": 1734069879,
+    "joined": 1702982188,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

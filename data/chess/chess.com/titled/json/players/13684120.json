@@ -1,0 +1,25 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13684120.9f252ef4.200x200o.8e068caf0623.png",
+    "player_id": 13684120,
+    "@id": "https://api.chess.com/pub/player/markusragger",
+    "url": "https://www.chess.com/member/MarkusRagger",
+    "name": "Markus Ragger",
+    "username": "markusragger",
+    "title": "GM",
+    "followers": 87,
+    "country": "https://api.chess.com/pub/country/AT",
+    "location": "Graz",
+    "last_online": 1734109342,
+    "joined": 1380286178,
+    "status": "premium",
+    "is_streamer": true,
+    "twitch_url": "https://twitch.tv/gmmarkusragger",
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [
+        {
+            "type": "twitch",
+            "channel_url": "https://twitch.tv/gmmarkusragger"
+        }
+    ]
+}

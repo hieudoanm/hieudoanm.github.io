@@ -1,0 +1,95 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/85105618.1e12e24b.200x200o.8930a00b6655.jpg",
+    "player_id": 85105618,
+    "@id": "https://api.chess.com/pub/player/hamedwafa4",
+    "url": "https://www.chess.com/member/HamedWafa4",
+    "name": "Hamed Wafa",
+    "username": "hamedwafa4",
+    "title": "IM",
+    "followers": 186,
+    "country": "https://api.chess.com/pub/country/EG",
+    "last_online": 1734184088,
+    "joined": 1593519622,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 689,
+            "date": 1717172792,
+            "rd": 210
+        },
+        "record": {
+            "win": 0,
+            "loss": 4,
+            "draw": 0,
+            "time_per_move": 117859,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2100,
+            "date": 1679695286,
+            "rd": 315
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2807,
+            "date": 1734028990,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2916,
+            "date": 1729960889,
+            "game": "https://www.chess.com/game/live/91651755761"
+        },
+        "record": {
+            "win": 817,
+            "loss": 949,
+            "draw": 121
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2746,
+            "date": 1733073795,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2905,
+            "date": 1729811758,
+            "game": "https://www.chess.com/game/live/116113279825"
+        },
+        "record": {
+            "win": 2605,
+            "loss": 3001,
+            "draw": 444
+        }
+    },
+    "fide": 2385,
+    "tactics": {
+        "highest": {
+            "rating": 3493,
+            "date": 1704306811
+        },
+        "lowest": {
+            "rating": 818,
+            "date": 1593519743
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

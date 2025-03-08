@@ -1,0 +1,82 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/161699373.89ed1f0e.200x200o.c4523e504989.jpeg",
+    "player_id": 161699373,
+    "@id": "https://api.chess.com/pub/player/josephrov",
+    "url": "https://www.chess.com/member/Josephrov",
+    "name": "Joseph Handiya",
+    "username": "josephrov",
+    "title": "FM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/ZM",
+    "location": "kafue",
+    "last_online": 1733423129,
+    "joined": 1637183805,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2094,
+            "date": 1733685221,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2110,
+            "date": 1653978869,
+            "game": "https://www.chess.com/game/live/47717403073"
+        },
+        "record": {
+            "win": 20,
+            "loss": 18,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2218,
+            "date": 1733334904,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2282,
+            "date": 1732970364,
+            "game": "https://www.chess.com/game/live/126710990751"
+        },
+        "record": {
+            "win": 294,
+            "loss": 248,
+            "draw": 19
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2321,
+            "date": 1732969832,
+            "rd": 52
+        },
+        "best": {
+            "rating": 2475,
+            "date": 1703656102,
+            "game": "https://www.chess.com/game/live/97008579967"
+        },
+        "record": {
+            "win": 284,
+            "loss": 273,
+            "draw": 26
+        }
+    },
+    "fide": 2107,
+    "tactics": {
+        "highest": {
+            "rating": 3538,
+            "date": 1733423341
+        },
+        "lowest": {
+            "rating": 1210,
+            "date": 1661161636
+        }
+    },
+    "puzzle_rush": {}
+}

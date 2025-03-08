@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/17250582.646ef6b4.200x200o.7c9363cdb2ec.jpeg",
+    "player_id": 17250582,
+    "@id": "https://api.chess.com/pub/player/will_graham",
+    "url": "https://www.chess.com/member/will_graham",
+    "name": "Ali Syed Ahmad",
+    "username": "will_graham",
+    "title": "FM",
+    "followers": 35,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734037091,
+    "joined": 1399748337,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

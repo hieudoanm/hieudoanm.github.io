@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6538845.94154532.200x200o.6614a39de130.jpg",
+    "player_id": 6538845,
+    "@id": "https://api.chess.com/pub/player/chessarchitect64",
+    "url": "https://www.chess.com/member/ChessArchitect64",
+    "name": "Christiansen Sava",
+    "username": "chessarchitect64",
+    "title": "FM",
+    "followers": 398,
+    "country": "https://api.chess.com/pub/country/RO",
+    "location": "Bucuresti",
+    "last_online": 1734178984,
+    "joined": 1327213320,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 972,
+            "date": 1734167268,
+            "rd": 185
+        },
+        "best": {
+            "rating": 1899,
+            "date": 1600759202,
+            "game": "https://www.chess.com/game/daily/112651190"
+        },
+        "record": {
+            "win": 70,
+            "loss": 40,
+            "draw": 3,
+            "time_per_move": 36435,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1551,
+            "date": 1406440932,
+            "rd": 115
+        },
+        "best": {
+            "rating": 1609,
+            "date": 1404500505,
+            "game": "https://www.chess.com/game/daily/92975384"
+        },
+        "record": {
+            "win": 16,
+            "loss": 3,
+            "draw": 0,
+            "time_per_move": 36435,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1505,
+            "date": 1727581645,
+            "rd": 253
+        },
+        "best": {
+            "rating": 1757,
+            "date": 1590164013,
+            "game": "https://www.chess.com/game/live/4892153319"
+        },
+        "record": {
+            "win": 3,
+            "loss": 2,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1883,
+            "date": 1733781019,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2124,
+            "date": 1703336112,
+            "game": "https://www.chess.com/game/live/102534099843"
+        },
+        "record": {
+            "win": 4259,
+            "loss": 3875,
+            "draw": 364
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2176,
+            "date": 1732185689,
+            "rd": 70
+        },
+        "best": {
+            "rating": 2299,
+            "date": 1703608736,
+            "game": "https://www.chess.com/game/live/97345315051"
+        },
+        "record": {
+            "win": 1440,
+            "loss": 1115,
+            "draw": 98
+        }
+    },
+    "fide": 2038,
+    "tactics": {
+        "highest": {
+            "rating": 3066,
+            "date": 1709300004
+        },
+        "lowest": {
+            "rating": 1332,
+            "date": 1360688335
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

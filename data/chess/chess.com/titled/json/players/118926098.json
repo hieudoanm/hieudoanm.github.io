@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/118926098.1c18d5bc.200x200o.824d1c01abd0.jpeg",
+    "player_id": 118926098,
+    "@id": "https://api.chess.com/pub/player/thesilmarils",
+    "url": "https://www.chess.com/member/TheSilmarils",
+    "name": "Giorgi Margvelashvili",
+    "username": "thesilmarils",
+    "title": "GM",
+    "followers": 1725,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734130103,
+    "joined": 1612618840,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2486,
+            "date": 1723401294,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2506,
+            "date": 1693160286,
+            "game": "https://www.chess.com/game/live/115927843349"
+        },
+        "record": {
+            "win": 8,
+            "loss": 1,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2909,
+            "date": 1734144125,
+            "rd": 26
+        },
+        "best": {
+            "rating": 3102,
+            "date": 1715981323,
+            "game": "https://www.chess.com/game/live/126124822271"
+        },
+        "record": {
+            "win": 4871,
+            "loss": 3403,
+            "draw": 1061
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2955,
+            "date": 1734128239,
+            "rd": 28
+        },
+        "best": {
+            "rating": 3032,
+            "date": 1732245378,
+            "game": "https://www.chess.com/game/live/80678575685"
+        },
+        "record": {
+            "win": 4857,
+            "loss": 4447,
+            "draw": 1734
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3627,
+            "date": 1700621926
+        },
+        "lowest": {
+            "rating": 2512,
+            "date": 1651415487
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 45
+        }
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/380925009.00dc3ddd.200x200o.45429b064c7f.jpg",
+    "player_id": 380925009,
+    "@id": "https://api.chess.com/pub/player/pikeish",
+    "url": "https://www.chess.com/member/Pikeish",
+    "username": "pikeish",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/AT",
+    "location": "Wien",
+    "last_online": 1734167158,
+    "joined": 1723627375,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2300,
+            "date": 1726581497,
+            "rd": 49
+        },
+        "record": {
+            "win": 0,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2292,
+            "date": 1727090142,
+            "rd": 246
+        },
+        "record": {
+            "win": 0,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2631,
+            "date": 1733925701,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2638,
+            "date": 1732371233,
+            "game": "https://www.chess.com/game/live/120385180855"
+        },
+        "record": {
+            "win": 153,
+            "loss": 123,
+            "draw": 16
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3650,
+            "date": 1730960499
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1723627375
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

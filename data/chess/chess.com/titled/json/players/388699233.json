@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/388699233.1dde1f13.200x200o.5c7a57ba10b9.jpg",
+    "player_id": 388699233,
+    "@id": "https://api.chess.com/pub/player/albadelomass",
+    "url": "https://www.chess.com/member/albadelomass",
+    "name": "Alba De Lomas Busquets",
+    "username": "albadelomass",
+    "title": "WCM",
+    "followers": 23,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734182663,
+    "joined": 1726422737,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2014,
+            "date": 1733227390,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2026,
+            "date": 1727775834,
+            "game": "https://www.chess.com/game/live/122194192469"
+        },
+        "record": {
+            "win": 4,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2316,
+            "date": 1734182778,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2427,
+            "date": 1730464249,
+            "game": "https://www.chess.com/game/live/124666726515"
+        },
+        "record": {
+            "win": 664,
+            "loss": 525,
+            "draw": 70
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2250,
+            "date": 1733996619,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2362,
+            "date": 1732644702,
+            "game": "https://www.chess.com/game/live/120953418165"
+        },
+        "record": {
+            "win": 189,
+            "loss": 177,
+            "draw": 27
+        }
+    },
+    "fide": 2026,
+    "tactics": {
+        "highest": {
+            "rating": 3209,
+            "date": 1732279897
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1726422737
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

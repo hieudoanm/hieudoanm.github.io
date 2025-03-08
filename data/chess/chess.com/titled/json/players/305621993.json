@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/305621993.f6eb8e68.200x200o.823cc8ed3b26.jpg",
+    "player_id": 305621993,
+    "@id": "https://api.chess.com/pub/player/armanghevondyanchess",
+    "url": "https://www.chess.com/member/ArmanGhevondyanchess",
+    "name": "Arman Ghevondyan",
+    "username": "armanghevondyanchess",
+    "title": "CM",
+    "followers": 125,
+    "country": "https://api.chess.com/pub/country/AM",
+    "location": "Erevan",
+    "last_online": 1734172309,
+    "joined": 1691872351,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

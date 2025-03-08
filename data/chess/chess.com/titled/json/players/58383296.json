@@ -1,0 +1,65 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/58383296.ee159618.200x200o.f011c7aadf50.jpeg",
+    "player_id": 58383296,
+    "@id": "https://api.chess.com/pub/player/lenyas66",
+    "url": "https://www.chess.com/member/Lenyas66",
+    "name": "Leonid Sokolin",
+    "username": "lenyas66",
+    "title": "IM",
+    "followers": 21,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Westfield, NJ",
+    "last_online": 1733401318,
+    "joined": 1552319337,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2357,
+            "date": 1704859271,
+            "rd": 224
+        },
+        "best": {
+            "rating": 2357,
+            "date": 1629676217,
+            "game": "https://www.chess.com/game/live/23415027255"
+        },
+        "record": {
+            "win": 1,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2544,
+            "date": 1734182650,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2628,
+            "date": 1718381287,
+            "game": "https://www.chess.com/game/live/32641828571"
+        },
+        "record": {
+            "win": 6047,
+            "loss": 2707,
+            "draw": 713
+        }
+    },
+    "fide": 2497,
+    "tactics": {
+        "highest": {
+            "rating": 3096,
+            "date": 1722594145
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1578107445
+        }
+    },
+    "puzzle_rush": {}
+}

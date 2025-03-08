@@ -1,0 +1,95 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/38843460.87039e25.200x200o.3b28a3a52235.jpeg",
+    "player_id": 38843460,
+    "@id": "https://api.chess.com/pub/player/josemoramoron",
+    "url": "https://www.chess.com/member/josemoramoron",
+    "name": "Jose Mora Moron",
+    "username": "josemoramoron",
+    "title": "FM",
+    "followers": 120,
+    "country": "https://api.chess.com/pub/country/VE",
+    "location": "Caracas",
+    "last_online": 1732724180,
+    "joined": 1506048445,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1297,
+            "date": 1543174713,
+            "rd": 335
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 442134,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1963,
+            "date": 1532302976,
+            "rd": 276
+        },
+        "best": {
+            "rating": 1963,
+            "date": 1532213089,
+            "game": "https://www.chess.com/game/live/2954851216"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2133,
+            "date": 1584804728,
+            "rd": 78
+        },
+        "best": {
+            "rating": 2088,
+            "date": 1516327357,
+            "game": "https://www.chess.com/game/live/2564522774"
+        },
+        "record": {
+            "win": 72,
+            "loss": 59,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2328,
+            "date": 1728660383,
+            "rd": 107
+        },
+        "best": {
+            "rating": 2380,
+            "date": 1582251111,
+            "game": "https://www.chess.com/game/live/4489926537"
+        },
+        "record": {
+            "win": 907,
+            "loss": 856,
+            "draw": 109
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1620,
+            "date": 1519267623
+        },
+        "lowest": {
+            "rating": 1210,
+            "date": 1511284167
+        }
+    },
+    "puzzle_rush": {}
+}

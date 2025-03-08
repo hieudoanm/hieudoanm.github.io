@@ -1,0 +1,48 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/322667065.e39a5130.200x200o.6c53d6a455c7.png",
+    "player_id": 322667065,
+    "@id": "https://api.chess.com/pub/player/christianj2023fm",
+    "url": "https://www.chess.com/member/ChristianJ2023FM",
+    "name": "Krishan Jhunjhnuwala",
+    "username": "christianj2023fm",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Arizona",
+    "last_online": 1734180038,
+    "joined": 1698611464,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2495,
+            "date": 1734025712,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2495,
+            "date": 1734025712,
+            "game": "https://www.chess.com/game/live/127167020235"
+        },
+        "record": {
+            "win": 223,
+            "loss": 130,
+            "draw": 43
+        }
+    },
+    "fide": 2207,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1698611464
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1698611464
+        }
+    },
+    "puzzle_rush": {}
+}

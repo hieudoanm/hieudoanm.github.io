@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/2476763.7576e660.200x200o.bd0d5800746a.jpeg",
+    "player_id": 2476763,
+    "@id": "https://api.chess.com/pub/player/dimwitchess",
+    "url": "https://www.chess.com/member/DimWitChess",
+    "name": "Fabrice Wantiez",
+    "username": "dimwitchess",
+    "title": "FM",
+    "followers": 336,
+    "country": "https://api.chess.com/pub/country/BE",
+    "location": "Brussels",
+    "last_online": 1734011603,
+    "joined": 1263925721,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1563,
+            "date": 1734109699,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2012,
+            "date": 1374685554,
+            "game": "https://www.chess.com/game/daily/238193760"
+        },
+        "record": {
+            "win": 3099,
+            "loss": 2038,
+            "draw": 241,
+            "time_per_move": 34169,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1226,
+            "date": 1732913770,
+            "rd": 91
+        },
+        "best": {
+            "rating": 1847,
+            "date": 1377712791,
+            "game": "https://www.chess.com/game/daily/69904428"
+        },
+        "record": {
+            "win": 84,
+            "loss": 57,
+            "draw": 4,
+            "time_per_move": 34169,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2217,
+            "date": 1711238030,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2292,
+            "date": 1697319210,
+            "game": "https://www.chess.com/game/live/91055440035"
+        },
+        "record": {
+            "win": 11,
+            "loss": 7,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2300,
+            "date": 1721245184,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2487,
+            "date": 1648498449,
+            "game": "https://www.chess.com/game/live/42037237693"
+        },
+        "record": {
+            "win": 825,
+            "loss": 576,
+            "draw": 61
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2533,
+            "date": 1734120268,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2595,
+            "date": 1670518398,
+            "game": "https://www.chess.com/game/live/4597252599"
+        },
+        "record": {
+            "win": 6594,
+            "loss": 5240,
+            "draw": 859
+        }
+    },
+    "fide": 2356,
+    "tactics": {
+        "highest": {
+            "rating": 3551,
+            "date": 1724505910
+        },
+        "lowest": {
+            "rating": 1129,
+            "date": 1263925865
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 44,
+            "score": 41
+        }
+    }
+}

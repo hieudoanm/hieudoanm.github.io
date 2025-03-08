@@ -1,0 +1,86 @@
+{
+    "player_id": 54463922,
+    "@id": "https://api.chess.com/pub/player/fitod",
+    "url": "https://www.chess.com/member/fitod",
+    "name": "Juan Pablo Demar\u00eda",
+    "username": "fitod",
+    "title": "FM",
+    "followers": 18,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Marcos Juarez",
+    "last_online": 1734179088,
+    "joined": 1545515371,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2238,
+            "date": 1730622903,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2238,
+            "date": 1730622903,
+            "game": "https://www.chess.com/game/live/124361324631"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2383,
+            "date": 1734131143,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2383,
+            "date": 1734131143,
+            "game": "https://www.chess.com/game/live/126725993145"
+        },
+        "record": {
+            "win": 174,
+            "loss": 99,
+            "draw": 13
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2484,
+            "date": 1734130260,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2541,
+            "date": 1733264395,
+            "game": "https://www.chess.com/game/live/123975048769"
+        },
+        "record": {
+            "win": 477,
+            "loss": 377,
+            "draw": 71
+        }
+    },
+    "fide": 2215,
+    "tactics": {
+        "highest": {
+            "rating": 3530,
+            "date": 1730689050
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1597097370
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 39,
+            "score": 37
+        }
+    }
+}

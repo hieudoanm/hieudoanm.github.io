@@ -1,0 +1,80 @@
+{
+    "player_id": 337687663,
+    "@id": "https://api.chess.com/pub/player/agentxya",
+    "url": "https://www.chess.com/member/Agentxya",
+    "name": "Aiden Q Liu",
+    "username": "agentxya",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1732636609,
+    "joined": 1704745679,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2290,
+            "date": 1712097522,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2290,
+            "date": 1712097522,
+            "game": "https://www.chess.com/game/live/105835243159"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1942,
+            "date": 1721530784,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2155,
+            "date": 1709519022,
+            "game": "https://www.chess.com/game/live/102061495801"
+        },
+        "record": {
+            "win": 49,
+            "loss": 51,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2274,
+            "date": 1732644736,
+            "rd": 84
+        },
+        "best": {
+            "rating": 2302,
+            "date": 1714181820,
+            "game": "https://www.chess.com/game/live/102185716905"
+        },
+        "record": {
+            "win": 19,
+            "loss": 23,
+            "draw": 4
+        }
+    },
+    "fide": 2285,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1704745679
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1704745679
+        }
+    },
+    "puzzle_rush": {}
+}

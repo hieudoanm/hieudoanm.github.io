@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/314473605.e5eb05af.200x200o.2ee4ebe15744.jpg",
+    "player_id": 314473605,
+    "@id": "https://api.chess.com/pub/player/hakiki_satranc",
+    "url": "https://www.chess.com/member/Hakiki_satranc",
+    "name": "Elnur Aliyev",
+    "username": "hakiki_satranc",
+    "title": "CM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1734104323,
+    "joined": 1695326171,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2434,
+            "date": 1733314043,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2614,
+            "date": 1697748548,
+            "game": "https://www.chess.com/game/live/118531072593"
+        },
+        "record": {
+            "win": 189,
+            "loss": 226,
+            "draw": 40
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2430,
+            "date": 1733257950,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2536,
+            "date": 1729029394,
+            "game": "https://www.chess.com/game/live/112387840763"
+        },
+        "record": {
+            "win": 403,
+            "loss": 473,
+            "draw": 88
+        }
+    },
+    "fide": 2074,
+    "tactics": {
+        "highest": {
+            "rating": 2737,
+            "date": 1732028587
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1695326171
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 30,
+            "score": 27
+        }
+    }
+}

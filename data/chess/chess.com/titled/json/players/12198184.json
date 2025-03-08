@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/12198184.9e2560f0.200x200o.13510312e80a.jpeg",
+    "player_id": 12198184,
+    "@id": "https://api.chess.com/pub/player/joshukid",
+    "url": "https://www.chess.com/member/Joshukid",
+    "name": "Joshua Colas",
+    "username": "joshukid",
+    "title": "FM",
+    "followers": 624,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "New York",
+    "last_online": 1733958225,
+    "joined": 1370550764,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2112,
+            "date": 1734123988,
+            "rd": 248
+        },
+        "best": {
+            "rating": 2145,
+            "date": 1599536738,
+            "game": "https://www.chess.com/game/daily/283038238"
+        },
+        "record": {
+            "win": 48,
+            "loss": 0,
+            "draw": 2,
+            "time_per_move": 39353,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2311,
+            "date": 1704203122,
+            "rd": 106
+        },
+        "best": {
+            "rating": 2672,
+            "date": 1608400947,
+            "game": "https://www.chess.com/game/live/6016772951"
+        },
+        "record": {
+            "win": 11,
+            "loss": 7,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2532,
+            "date": 1721085939,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2771,
+            "date": 1533834637,
+            "game": "https://www.chess.com/game/live/3590590703"
+        },
+        "record": {
+            "win": 5633,
+            "loss": 4657,
+            "draw": 868
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2800,
+            "date": 1733847103,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2860,
+            "date": 1631917628,
+            "game": "https://www.chess.com/game/live/120350980265"
+        },
+        "record": {
+            "win": 9972,
+            "loss": 8544,
+            "draw": 1701
+        }
+    },
+    "fide": 2421,
+    "tactics": {
+        "highest": {
+            "rating": 3549,
+            "date": 1686974640
+        },
+        "lowest": {
+            "rating": 1362,
+            "date": 1459874170
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

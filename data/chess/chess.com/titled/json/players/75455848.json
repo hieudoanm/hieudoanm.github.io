@@ -1,0 +1,108 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75455848.046a20f5.200x200o.9c040aee4bd6.webp",
+    "player_id": 75455848,
+    "@id": "https://api.chess.com/pub/player/fugadelafuga",
+    "url": "https://www.chess.com/member/fugadelafuga",
+    "name": "Pedro Filipe Rego",
+    "username": "fugadelafuga",
+    "title": "FM",
+    "followers": 44,
+    "country": "https://api.chess.com/pub/country/KR",
+    "last_online": 1734110889,
+    "joined": 1585859556,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1454,
+            "date": 1733750244,
+            "rd": 342
+        },
+        "best": {
+            "rating": 2002,
+            "date": 1695906604,
+            "game": "https://www.chess.com/game/daily/539850137"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 182901,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2026,
+            "date": 1734089021,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2037,
+            "date": 1733415579,
+            "game": "https://www.chess.com/game/live/127688464961"
+        },
+        "record": {
+            "win": 21,
+            "loss": 18,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2253,
+            "date": 1731779735,
+            "rd": 56
+        },
+        "best": {
+            "rating": 2361,
+            "date": 1692151163,
+            "game": "https://www.chess.com/game/live/71087221301"
+        },
+        "record": {
+            "win": 103,
+            "loss": 81,
+            "draw": 11
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2454,
+            "date": 1733926361,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2561,
+            "date": 1724440037,
+            "game": "https://www.chess.com/game/live/4721972565"
+        },
+        "record": {
+            "win": 1974,
+            "loss": 2235,
+            "draw": 367
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3169,
+            "date": 1731063731
+        },
+        "lowest": {
+            "rating": 1526,
+            "date": 1671292634
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 74,
+            "score": 71
+        },
+        "daily": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

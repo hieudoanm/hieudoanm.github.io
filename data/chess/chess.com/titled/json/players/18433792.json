@@ -1,0 +1,17 @@
+{
+    "player_id": 18433792,
+    "@id": "https://api.chess.com/pub/player/wonderknight64",
+    "url": "https://www.chess.com/member/wonderknight64",
+    "name": "Asad Rahman",
+    "username": "wonderknight64",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1733941621,
+    "joined": 1407678502,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

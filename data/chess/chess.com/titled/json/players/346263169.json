@@ -1,0 +1,17 @@
+{
+    "player_id": 346263169,
+    "@id": "https://api.chess.com/pub/player/winner_7777",
+    "url": "https://www.chess.com/member/Winner_7777",
+    "name": "Akbarali Abdukhakimov",
+    "username": "winner_7777",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1731004926,
+    "joined": 1708350868,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

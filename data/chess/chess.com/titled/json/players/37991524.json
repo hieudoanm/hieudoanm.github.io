@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37991524.8ff38fd8.200x200o.31a037009f97.jpg",
+    "player_id": 37991524,
+    "@id": "https://api.chess.com/pub/player/nedjulpie",
+    "url": "https://www.chess.com/member/NedJulpie",
+    "name": "Om\u00e1r Eltigani",
+    "username": "nedjulpie",
+    "title": "IM",
+    "followers": 36,
+    "country": "https://api.chess.com/pub/country/SD",
+    "last_online": 1734116121,
+    "joined": 1503304621,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2011,
+            "date": 1733223198,
+            "rd": 346
+        },
+        "best": {
+            "rating": 2011,
+            "date": 1733223198,
+            "game": "https://www.chess.com/game/daily/705849141"
+        },
+        "record": {
+            "win": 11,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 2263,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2530,
+            "date": 1711666428,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2530,
+            "date": 1626446897,
+            "game": "https://www.chess.com/game/live/5240117782"
+        },
+        "record": {
+            "win": 13,
+            "loss": 3,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2509,
+            "date": 1698233257,
+            "rd": 140
+        },
+        "best": {
+            "rating": 2614,
+            "date": 1662639118,
+            "game": "https://www.chess.com/game/live/7925600991"
+        },
+        "record": {
+            "win": 103,
+            "loss": 79,
+            "draw": 12
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2645,
+            "date": 1734117161,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2675,
+            "date": 1732393522,
+            "game": "https://www.chess.com/game/live/4733518081"
+        },
+        "record": {
+            "win": 2067,
+            "loss": 1897,
+            "draw": 300
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3310,
+            "date": 1733338397
+        },
+        "lowest": {
+            "rating": 1210,
+            "date": 1503342866
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

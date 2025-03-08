@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/357833519.ed8039aa.200x200o.de85231f02d5.jpg",
+    "player_id": 357833519,
+    "@id": "https://api.chess.com/pub/player/super_emi_26",
+    "url": "https://www.chess.com/member/super_emi_26",
+    "name": "Nikoloz Petriashvili",
+    "username": "super_emi_26",
+    "title": "IM",
+    "followers": 110,
+    "country": "https://api.chess.com/pub/country/IS",
+    "last_online": 1734183000,
+    "joined": 1713410512,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1342,
+            "date": 1733977393,
+            "rd": 179
+        },
+        "best": {
+            "rating": 1613,
+            "date": 1715676746,
+            "game": "https://www.chess.com/game/daily/655223055"
+        },
+        "record": {
+            "win": 1,
+            "loss": 4,
+            "draw": 1,
+            "time_per_move": 5108,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2468,
+            "date": 1732153084,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2482,
+            "date": 1731559697,
+            "game": "https://www.chess.com/game/live/125296759081"
+        },
+        "record": {
+            "win": 5,
+            "loss": 2,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2912,
+            "date": 1734152153,
+            "rd": 40
+        },
+        "best": {
+            "rating": 3007,
+            "date": 1731973411,
+            "game": "https://www.chess.com/game/live/109184523309"
+        },
+        "record": {
+            "win": 738,
+            "loss": 351,
+            "draw": 75
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2875,
+            "date": 1734150813,
+            "rd": 22
+        },
+        "best": {
+            "rating": 3025,
+            "date": 1732234589,
+            "game": "https://www.chess.com/game/live/127117140213"
+        },
+        "record": {
+            "win": 720,
+            "loss": 517,
+            "draw": 214
+        }
+    },
+    "fide": 2475,
+    "tactics": {
+        "highest": {
+            "rating": 3622,
+            "date": 1715366832
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1713410512
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "player_id": 395269051,
+    "@id": "https://api.chess.com/pub/player/dundiescott",
+    "url": "https://www.chess.com/member/DundieScott",
+    "username": "dundiescott",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734131506,
+    "joined": 1728696471,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2374,
+            "date": 1734071512,
+            "rd": 63
+        },
+        "best": {
+            "rating": 2393,
+            "date": 1734046559,
+            "game": "https://www.chess.com/game/live/122688867175"
+        },
+        "record": {
+            "win": 29,
+            "loss": 18,
+            "draw": 3
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1728696471
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1728696471
+        }
+    },
+    "puzzle_rush": {}
+}

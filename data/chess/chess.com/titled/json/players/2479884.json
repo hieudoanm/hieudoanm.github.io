@@ -1,0 +1,124 @@
+{
+    "player_id": 2479884,
+    "@id": "https://api.chess.com/pub/player/supercheese",
+    "url": "https://www.chess.com/member/SuperCheese",
+    "name": "Zuhao Luke Li",
+    "username": "supercheese",
+    "title": "FM",
+    "followers": 52,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "California",
+    "last_online": 1730197547,
+    "joined": 1264029530,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1598,
+            "date": 1702673539,
+            "rd": 75
+        },
+        "best": {
+            "rating": 1995,
+            "date": 1290705471,
+            "game": "https://www.chess.com/game/daily/42310717"
+        },
+        "record": {
+            "win": 345,
+            "loss": 265,
+            "draw": 34,
+            "time_per_move": 24810,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1564,
+            "date": 1326733327,
+            "rd": 130
+        },
+        "best": {
+            "rating": 1717,
+            "date": 1301650376,
+            "game": "https://www.chess.com/game/daily/31691462"
+        },
+        "record": {
+            "win": 23,
+            "loss": 16,
+            "draw": 0,
+            "time_per_move": 24810,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2237,
+            "date": 1712366077,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2513,
+            "date": 1561263290,
+            "game": "https://www.chess.com/game/live/3800582557"
+        },
+        "record": {
+            "win": 60,
+            "loss": 56,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2487,
+            "date": 1672302734,
+            "rd": 159
+        },
+        "best": {
+            "rating": 2616,
+            "date": 1567210902,
+            "game": "https://www.chess.com/game/live/3992463505"
+        },
+        "record": {
+            "win": 2390,
+            "loss": 1915,
+            "draw": 315
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2605,
+            "date": 1730203287,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2806,
+            "date": 1570602079,
+            "game": "https://www.chess.com/game/live/3622923612"
+        },
+        "record": {
+            "win": 7841,
+            "loss": 6127,
+            "draw": 1417
+        }
+    },
+    "fide": 2330,
+    "tactics": {
+        "highest": {
+            "rating": 2630,
+            "date": 1590641724
+        },
+        "lowest": {
+            "rating": 1311,
+            "date": 1264183734
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 44,
+            "score": 42
+        }
+    }
+}

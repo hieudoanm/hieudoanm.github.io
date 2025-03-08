@@ -1,0 +1,90 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34010070.e6118b01.200x200o.764118daa710.jpeg",
+    "player_id": 34010070,
+    "@id": "https://api.chess.com/pub/player/yanghainan",
+    "url": "https://www.chess.com/member/YangHainan",
+    "name": "Hainan Yang",
+    "username": "yanghainan",
+    "title": "IM",
+    "followers": 99,
+    "country": "https://api.chess.com/pub/country/CN",
+    "last_online": 1734177558,
+    "joined": 1489672636,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2554,
+            "date": 1733369834,
+            "rd": 158
+        },
+        "best": {
+            "rating": 2554,
+            "date": 1688981884,
+            "game": "https://www.chess.com/game/live/82719704891"
+        },
+        "record": {
+            "win": 18,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2505,
+            "date": 1734078119,
+            "rd": 18
+        },
+        "best": {
+            "rating": 2540,
+            "date": 1706323771,
+            "game": "https://www.chess.com/game/live/100013515359"
+        },
+        "record": {
+            "win": 2788,
+            "loss": 2099,
+            "draw": 325
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2524,
+            "date": 1734162718,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2552,
+            "date": 1674002954,
+            "game": "https://www.chess.com/game/live/127900135235"
+        },
+        "record": {
+            "win": 19,
+            "loss": 8,
+            "draw": 3
+        }
+    },
+    "fide": 2418,
+    "tactics": {
+        "highest": {
+            "rating": 3229,
+            "date": 1723859030
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1570709889
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
+}

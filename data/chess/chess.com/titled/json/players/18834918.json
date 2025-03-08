@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/18834918.3cfec8e5.200x200o.9024caa173f4.jpeg",
+    "player_id": 18834918,
+    "@id": "https://api.chess.com/pub/player/hermangrooten",
+    "url": "https://www.chess.com/member/hermangrooten",
+    "name": "Herman Grooten",
+    "username": "hermangrooten",
+    "title": "IM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/NL",
+    "location": "Eindhoven",
+    "last_online": 1734001493,
+    "joined": 1410289884,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1869,
+            "date": 1576512506,
+            "rd": 281
+        },
+        "record": {
+            "win": 0,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2147,
+            "date": 1707769809,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2161,
+            "date": 1707768930,
+            "game": "https://www.chess.com/game/live/101505778321"
+        },
+        "record": {
+            "win": 67,
+            "loss": 45,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2369,
+            "date": 1734017816,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2445,
+            "date": 1729541817,
+            "game": "https://www.chess.com/game/live/123161991071"
+        },
+        "record": {
+            "win": 272,
+            "loss": 190,
+            "draw": 30
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3430,
+            "date": 1731769138
+        },
+        "lowest": {
+            "rating": 1338,
+            "date": 1410290629
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

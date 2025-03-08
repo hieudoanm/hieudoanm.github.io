@@ -1,0 +1,45 @@
+{
+    "player_id": 392576737,
+    "@id": "https://api.chess.com/pub/player/learning_matters",
+    "url": "https://www.chess.com/member/Learning_matters",
+    "username": "learning_matters",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734086993,
+    "joined": 1727713502,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2545,
+            "date": 1734087324,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2582,
+            "date": 1732893443,
+            "game": "https://www.chess.com/game/live/126631143841"
+        },
+        "record": {
+            "win": 79,
+            "loss": 58,
+            "draw": 11
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1727713502
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1727713502
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37866474.df5a5e2b.200x200o.b7af60a2131d.jpeg",
+    "player_id": 37866474,
+    "@id": "https://api.chess.com/pub/player/cm-jorgetobar",
+    "url": "https://www.chess.com/member/CM-JorgeTobar",
+    "name": "Jorge Esteban Tobar Beltran",
+    "username": "cm-jorgetobar",
+    "title": "CM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "Popay\u00e1n",
+    "last_online": 1734041798,
+    "joined": 1502898521,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1806,
+            "date": 1676830534,
+            "rd": 154
+        },
+        "best": {
+            "rating": 1882,
+            "date": 1619918846,
+            "game": "https://www.chess.com/game/live/13649503979"
+        },
+        "record": {
+            "win": 15,
+            "loss": 10,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2450,
+            "date": 1713494750,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2530,
+            "date": 1706231057,
+            "game": "https://www.chess.com/game/live/99672662139"
+        },
+        "record": {
+            "win": 1154,
+            "loss": 555,
+            "draw": 63
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2418,
+            "date": 1733866872,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2471,
+            "date": 1731271214,
+            "game": "https://www.chess.com/game/live/125008128889"
+        },
+        "record": {
+            "win": 518,
+            "loss": 294,
+            "draw": 36
+        }
+    },
+    "fide": 1884,
+    "tactics": {
+        "highest": {
+            "rating": 3294,
+            "date": 1677528286
+        },
+        "lowest": {
+            "rating": 1012,
+            "date": 1557248669
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

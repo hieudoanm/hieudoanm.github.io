@@ -1,0 +1,16 @@
+{
+    "player_id": 139197384,
+    "@id": "https://api.chess.com/pub/player/akhandbharatkijay",
+    "url": "https://www.chess.com/member/AkhandBharatKiJay",
+    "username": "akhandbharatkijay",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734129961,
+    "joined": 1620389698,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

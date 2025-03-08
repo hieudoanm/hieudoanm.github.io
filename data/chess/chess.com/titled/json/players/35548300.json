@@ -1,0 +1,68 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35548300.7edd858b.200x200o.b220eab9eeeb.jpg",
+    "player_id": 35548300,
+    "@id": "https://api.chess.com/pub/player/djager97",
+    "url": "https://www.chess.com/member/Djager97",
+    "name": "Dashgyn Ibadov",
+    "username": "djager97",
+    "title": "IM",
+    "followers": 147,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733904672,
+    "joined": 1494864206,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2463,
+            "date": 1732041089,
+            "rd": 212
+        },
+        "best": {
+            "rating": 2463,
+            "date": 1732041089,
+            "game": "https://www.chess.com/game/live/3401998432"
+        },
+        "record": {
+            "win": 50,
+            "loss": 20,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2517,
+            "date": 1733875819,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2735,
+            "date": 1685966530,
+            "game": "https://www.chess.com/game/live/114298257505"
+        },
+        "record": {
+            "win": 9807,
+            "loss": 10490,
+            "draw": 1538
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2343,
+            "date": 1668673198
+        },
+        "lowest": {
+            "rating": 812,
+            "date": 1516646482
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        }
+    }
+}

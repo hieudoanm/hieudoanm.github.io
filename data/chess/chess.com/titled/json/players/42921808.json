@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/42921808.4622e325.200x200o.693d366f09b2.jpeg",
+    "player_id": 42921808,
+    "@id": "https://api.chess.com/pub/player/chesscoachtaipei",
+    "url": "https://www.chess.com/member/chesscoachtaipei",
+    "name": "Dr. Jeremy Mandelkern",
+    "username": "chesscoachtaipei",
+    "title": "CM",
+    "followers": 2787,
+    "country": "https://api.chess.com/pub/country/TW",
+    "location": "Taipei",
+    "last_online": 1734073055,
+    "joined": 1517544989,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

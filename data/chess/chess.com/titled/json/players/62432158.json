@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/62432158.42d5bea0.200x200o.fa4aa017d468.jpeg",
+    "player_id": 62432158,
+    "@id": "https://api.chess.com/pub/player/barriochess",
+    "url": "https://www.chess.com/member/barriochess",
+    "name": "Pablo Barrionuevo",
+    "username": "barriochess",
+    "title": "IM",
+    "followers": 39,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Merlo",
+    "last_online": 1734004494,
+    "joined": 1560893088,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2391,
+            "date": 1618272763,
+            "rd": 112
+        },
+        "best": {
+            "rating": 2405,
+            "date": 1602289032,
+            "game": "https://www.chess.com/game/live/5242871010"
+        },
+        "record": {
+            "win": 27,
+            "loss": 10,
+            "draw": 10
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2184,
+            "date": 1730294966,
+            "rd": 154
+        },
+        "best": {
+            "rating": 2348,
+            "date": 1730294737,
+            "game": "https://www.chess.com/game/live/4714874886"
+        },
+        "record": {
+            "win": 54,
+            "loss": 28,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2432,
+            "date": 1733854090,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2557,
+            "date": 1587246189,
+            "game": "https://www.chess.com/game/live/5681267851"
+        },
+        "record": {
+            "win": 1078,
+            "loss": 882,
+            "draw": 173
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3272,
+            "date": 1733183889
+        },
+        "lowest": {
+            "rating": 417,
+            "date": 1573833332
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 36,
+            "score": 34
+        }
+    }
+}

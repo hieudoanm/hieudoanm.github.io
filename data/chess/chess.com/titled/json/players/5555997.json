@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/5555997.1d6e4839.200x200o.d5e005c9038a.jpeg",
+    "player_id": 5555997,
+    "@id": "https://api.chess.com/pub/player/ssandersseverino",
+    "url": "https://www.chess.com/member/SsanderSseverino",
+    "name": "Sander Severino",
+    "username": "ssandersseverino",
+    "title": "FM",
+    "followers": 136,
+    "country": "https://api.chess.com/pub/country/PH",
+    "last_online": 1733378999,
+    "joined": 1312461169,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

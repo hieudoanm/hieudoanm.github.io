@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/58001592.8da825a0.200x200o.92c746dec4ce.jpg",
+    "player_id": 58001592,
+    "@id": "https://api.chess.com/pub/player/skatchkov_v",
+    "url": "https://www.chess.com/member/Skatchkov_V",
+    "name": "Valery Skatchkov",
+    "username": "skatchkov_v",
+    "title": "FM",
+    "followers": 62,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734163613,
+    "joined": 1551537346,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

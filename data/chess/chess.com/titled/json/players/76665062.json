@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/76665062.0e180cb1.200x200o.95595c8f3221.jpeg",
+    "player_id": 76665062,
+    "@id": "https://api.chess.com/pub/player/nxrby",
+    "url": "https://www.chess.com/member/nxrby",
+    "name": "Norbert Adrian Kokeny",
+    "username": "nxrby",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/HU",
+    "location": "Taksony",
+    "last_online": 1734143346,
+    "joined": 1586861212,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2420,
+            "date": 1731721997,
+            "rd": 74
+        },
+        "best": {
+            "rating": 2542,
+            "date": 1705601031,
+            "game": "https://www.chess.com/game/live/99160038197"
+        },
+        "record": {
+            "win": 405,
+            "loss": 349,
+            "draw": 69
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2359,
+            "date": 1619191339,
+            "rd": 165
+        },
+        "best": {
+            "rating": 2359,
+            "date": 1619191339,
+            "game": "https://www.chess.com/game/live/4942803468"
+        },
+        "record": {
+            "win": 9,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2911,
+            "date": 1733511721
+        },
+        "lowest": {
+            "rating": 2350,
+            "date": 1611828439
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 33,
+            "score": 30
+        }
+    }
+}

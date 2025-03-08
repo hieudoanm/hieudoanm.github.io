@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/60976502.a300759e.200x200o.5e560326484e.jpeg",
+    "player_id": 60976502,
+    "@id": "https://api.chess.com/pub/player/vova-79",
+    "url": "https://www.chess.com/member/vova-79",
+    "name": "Viktor Romanchuk",
+    "username": "vova-79",
+    "title": "FM",
+    "followers": 93,
+    "country": "https://api.chess.com/pub/country/UA",
+    "location": "\u0427\u0435\u0440\u043a\u0430\u0441\u0438",
+    "last_online": 1733857654,
+    "joined": 1557843242,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

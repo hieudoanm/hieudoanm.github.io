@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/56768654.374cbf0e.200x200o.fc2b42709365.jpg",
+    "player_id": 56768654,
+    "@id": "https://api.chess.com/pub/player/javadovvv",
+    "url": "https://www.chess.com/member/Javadovvv",
+    "name": "Habil Javadov",
+    "username": "javadovvv",
+    "title": "CM",
+    "followers": 18,
+    "country": "https://api.chess.com/pub/country/AZ",
+    "last_online": 1733948554,
+    "joined": 1548952293,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2195,
+            "date": 1713869572,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2161,
+            "date": 1646118985,
+            "game": "https://www.chess.com/game/live/104330988291"
+        },
+        "record": {
+            "win": 7,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2657,
+            "date": 1733351592,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2699,
+            "date": 1731161652,
+            "game": "https://www.chess.com/game/live/124898981791"
+        },
+        "record": {
+            "win": 677,
+            "loss": 562,
+            "draw": 105
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2762,
+            "date": 1733351997,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2813,
+            "date": 1724859629,
+            "game": "https://www.chess.com/game/live/116602837033"
+        },
+        "record": {
+            "win": 8356,
+            "loss": 7492,
+            "draw": 2524
+        }
+    },
+    "fide": 2195,
+    "tactics": {
+        "highest": {
+            "rating": 3200,
+            "date": 1733251537
+        },
+        "lowest": {
+            "rating": 1193,
+            "date": 1570967943
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 37,
+            "score": 34
+        }
+    }
+}

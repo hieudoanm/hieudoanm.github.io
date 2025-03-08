@@ -1,0 +1,17 @@
+{
+    "player_id": 360821167,
+    "@id": "https://api.chess.com/pub/player/bryantman2014",
+    "url": "https://www.chess.com/member/Bryantman2014",
+    "name": "Seyed Kian Ghoreishi Amiri",
+    "username": "bryantman2014",
+    "title": "CM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/IR",
+    "last_online": 1734177587,
+    "joined": 1714680366,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

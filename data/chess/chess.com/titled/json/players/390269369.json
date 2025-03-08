@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/390269369.182a8e90.200x200o.60c856eefc95.png",
+    "player_id": 390269369,
+    "@id": "https://api.chess.com/pub/player/e4lion",
+    "url": "https://www.chess.com/member/E4Lion",
+    "name": "Abdellah Ait Hmidou",
+    "username": "e4lion",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/MA",
+    "last_online": 1734009088,
+    "joined": 1726938634,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

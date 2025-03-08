@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/206832151.b1e17254.200x200o.162d6673e6a8.jpg",
+    "player_id": 206832151,
+    "@id": "https://api.chess.com/pub/player/arturocaceres",
+    "url": "https://www.chess.com/member/ArturoCaceres",
+    "name": "Arturo Benitez",
+    "username": "arturocaceres",
+    "title": "CM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/PY",
+    "last_online": 1733341883,
+    "joined": 1668633253,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

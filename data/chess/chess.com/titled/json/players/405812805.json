@@ -1,0 +1,66 @@
+{
+    "player_id": 405812805,
+    "@id": "https://api.chess.com/pub/player/strength_and_hon0r",
+    "url": "https://www.chess.com/member/Strength_and_hon0r",
+    "username": "strength_and_hon0r",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1733617027,
+    "joined": 1732882410,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2145,
+            "date": 1733574155,
+            "rd": 85
+        },
+        "best": {
+            "rating": 2167,
+            "date": 1732885216,
+            "game": "https://www.chess.com/game/live/126623999167"
+        },
+        "record": {
+            "win": 14,
+            "loss": 3,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2217,
+            "date": 1733617809,
+            "rd": 209
+        },
+        "best": {
+            "rating": 2217,
+            "date": 1733617809,
+            "game": "https://www.chess.com/game/live/127356570403"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2306,
+            "date": 1733573998
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1732882410
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 29,
+            "score": 26
+        }
+    }
+}

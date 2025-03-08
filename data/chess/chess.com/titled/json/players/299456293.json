@@ -1,0 +1,16 @@
+{
+    "player_id": 299456293,
+    "@id": "https://api.chess.com/pub/player/siirk3",
+    "url": "https://www.chess.com/member/SiirK3",
+    "username": "siirk3",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734120124,
+    "joined": 1689163907,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/314860837.b12618ce.200x200o.5313b0c6e6df.jpg",
+    "player_id": 314860837,
+    "@id": "https://api.chess.com/pub/player/luckyswitchback",
+    "url": "https://www.chess.com/member/luckyswitchback",
+    "name": "Daniil Plyasunov",
+    "username": "luckyswitchback",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733997001,
+    "joined": 1695475812,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2807,
+            "date": 1733637541,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2910,
+            "date": 1698515053,
+            "game": "https://www.chess.com/game/live/127332037719"
+        },
+        "record": {
+            "win": 295,
+            "loss": 204,
+            "draw": 40
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2807,
+            "date": 1734000251,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2870,
+            "date": 1718731261,
+            "game": "https://www.chess.com/game/live/90688872475"
+        },
+        "record": {
+            "win": 610,
+            "loss": 536,
+            "draw": 151
+        }
+    },
+    "fide": 2300,
+    "tactics": {
+        "highest": {
+            "rating": 2400,
+            "date": 1696914046
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1695475812
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 53
+        }
+    }
+}

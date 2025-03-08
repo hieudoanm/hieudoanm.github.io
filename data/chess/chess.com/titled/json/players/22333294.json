@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/22333294.0dd91ce7.200x200o.fbe150bb6c33.jpeg",
+    "player_id": 22333294,
+    "@id": "https://api.chess.com/pub/player/egorov_pavel",
+    "url": "https://www.chess.com/member/Egorov_Pavel",
+    "name": "\u041f\u0430\u0432\u0435\u043b \u0415\u0433\u043e\u0440\u043e\u0432",
+    "username": "egorov_pavel",
+    "title": "CM",
+    "followers": 93,
+    "country": "https://api.chess.com/pub/country/LK",
+    "last_online": 1734093599,
+    "joined": 1431284480,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

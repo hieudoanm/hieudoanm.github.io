@@ -1,0 +1,80 @@
+{
+    "player_id": 88979138,
+    "@id": "https://api.chess.com/pub/player/incrediblebubacik",
+    "url": "https://www.chess.com/member/IncredibleBubacik",
+    "name": "Christopher Repka",
+    "username": "incrediblebubacik",
+    "title": "GM",
+    "followers": 18,
+    "country": "https://api.chess.com/pub/country/SK",
+    "last_online": 1733876949,
+    "joined": 1597331330,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2387,
+            "date": 1668384739,
+            "rd": 63
+        },
+        "best": {
+            "rating": 2490,
+            "date": 1609869711,
+            "game": "https://www.chess.com/game/live/62027388333"
+        },
+        "record": {
+            "win": 37,
+            "loss": 12,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2807,
+            "date": 1667677006,
+            "rd": 251
+        },
+        "best": {
+            "rating": 2807,
+            "date": 1667677006,
+            "game": "https://www.chess.com/game/live/61415993417"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2735,
+            "date": 1679158792,
+            "rd": 82
+        },
+        "best": {
+            "rating": 2739,
+            "date": 1679157700,
+            "game": "https://www.chess.com/game/live/72896221863"
+        },
+        "record": {
+            "win": 40,
+            "loss": 20,
+            "draw": 14
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 800,
+            "date": 1597331330
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1597331330
+        }
+    },
+    "puzzle_rush": {}
+}

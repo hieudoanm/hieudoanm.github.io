@@ -1,0 +1,63 @@
+{
+    "player_id": 16934378,
+    "@id": "https://api.chess.com/pub/player/aspaclaria",
+    "url": "https://www.chess.com/member/aspaclaria",
+    "name": "Sergio Markeluk",
+    "username": "aspaclaria",
+    "title": "FM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Argentina",
+    "last_online": 1734113748,
+    "joined": 1397694680,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 1763,
+            "date": 1734116425,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2088,
+            "date": 1673813110,
+            "game": "https://www.chess.com/game/live/79381386245"
+        },
+        "record": {
+            "win": 9987,
+            "loss": 11586,
+            "draw": 450
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1942,
+            "date": 1717014122,
+            "rd": 63
+        },
+        "best": {
+            "rating": 2121,
+            "date": 1658160852,
+            "game": "https://www.chess.com/game/live/50431139979"
+        },
+        "record": {
+            "win": 979,
+            "loss": 1112,
+            "draw": 131
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3011,
+            "date": 1673556375
+        },
+        "lowest": {
+            "rating": 1814,
+            "date": 1438281355
+        }
+    },
+    "puzzle_rush": {}
+}

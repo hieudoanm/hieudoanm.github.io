@@ -1,0 +1,120 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39382918.0ed27738.200x200o.1af181b2e3dc.png",
+    "player_id": 39382918,
+    "@id": "https://api.chess.com/pub/player/maiqmaster",
+    "url": "https://www.chess.com/member/MaiqMaster",
+    "name": "Vidar Grahn",
+    "username": "maiqmaster",
+    "title": "FM",
+    "followers": 43,
+    "country": "https://api.chess.com/pub/country/SE",
+    "location": "vidar1111#0",
+    "last_online": 1734171395,
+    "joined": 1507812490,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1199,
+            "date": 1734171538,
+            "rd": 199
+        },
+        "best": {
+            "rating": 1471,
+            "date": 1547879409,
+            "game": "https://www.chess.com/game/daily/215011842"
+        },
+        "record": {
+            "win": 97,
+            "loss": 100,
+            "draw": 0,
+            "time_per_move": 57678,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1054,
+            "date": 1544344051,
+            "rd": 290
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 57678,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2232,
+            "date": 1723227396,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2240,
+            "date": 1712604014,
+            "game": "https://www.chess.com/game/live/106342055109"
+        },
+        "record": {
+            "win": 54,
+            "loss": 34,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2396,
+            "date": 1734180184,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2538,
+            "date": 1716030932,
+            "game": "https://www.chess.com/game/live/111605565099"
+        },
+        "record": {
+            "win": 517,
+            "loss": 713,
+            "draw": 72
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2419,
+            "date": 1734172271,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2535,
+            "date": 1714747178,
+            "game": "https://www.chess.com/game/live/111856984795"
+        },
+        "record": {
+            "win": 1232,
+            "loss": 1238,
+            "draw": 190
+        }
+    },
+    "fide": 2226,
+    "tactics": {
+        "highest": {
+            "rating": 3089,
+            "date": 1665573682
+        },
+        "lowest": {
+            "rating": 807,
+            "date": 1508257448
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 53,
+            "score": 50
+        }
+    }
+}

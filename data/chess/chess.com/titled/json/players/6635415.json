@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6635415.4ac734b9.200x200o.1fd42c238130.jpeg",
+    "player_id": 6635415,
+    "@id": "https://api.chess.com/pub/player/schmakattack",
+    "url": "https://www.chess.com/member/SchmakAttack",
+    "name": "Sam Schmakel",
+    "username": "schmakattack",
+    "title": "IM",
+    "followers": 160,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "New York",
+    "last_online": 1733796114,
+    "joined": 1328679928,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1926,
+            "date": 1733947013,
+            "rd": 227
+        },
+        "best": {
+            "rating": 2301,
+            "date": 1606895278,
+            "game": "https://www.chess.com/game/daily/296029482"
+        },
+        "record": {
+            "win": 61,
+            "loss": 3,
+            "draw": 2,
+            "time_per_move": 29695,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2373,
+            "date": 1692121427,
+            "rd": 189
+        },
+        "best": {
+            "rating": 2396,
+            "date": 1643487001,
+            "game": "https://www.chess.com/game/live/6160448270"
+        },
+        "record": {
+            "win": 15,
+            "loss": 5,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2814,
+            "date": 1731777139,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2880,
+            "date": 1617206533,
+            "game": "https://www.chess.com/game/live/83184920257"
+        },
+        "record": {
+            "win": 564,
+            "loss": 261,
+            "draw": 51
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2800,
+            "date": 1727820462,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2878,
+            "date": 1721771916,
+            "game": "https://www.chess.com/game/live/119137245191"
+        },
+        "record": {
+            "win": 1813,
+            "loss": 1050,
+            "draw": 224
+        }
+    },
+    "fide": 2457,
+    "tactics": {
+        "highest": {
+            "rating": 3759,
+            "date": 1715825407
+        },
+        "lowest": {
+            "rating": 1465,
+            "date": 1343268663
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

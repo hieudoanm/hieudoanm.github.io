@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/86760368.f7d94590.200x200o.67dfa7ed63f3.jpeg",
+    "player_id": 86760368,
+    "@id": "https://api.chess.com/pub/player/nakanyikem",
+    "url": "https://www.chess.com/member/nakanyikem",
+    "name": "Maria Nakanyike",
+    "username": "nakanyikem",
+    "title": "WCM",
+    "followers": 15,
+    "country": "https://api.chess.com/pub/country/UG",
+    "location": "Kampala",
+    "last_online": 1731871012,
+    "joined": 1594823793,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 933,
+            "date": 1714171116,
+            "rd": 215
+        },
+        "record": {
+            "win": 0,
+            "loss": 5,
+            "draw": 0,
+            "time_per_move": 98139,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1385,
+            "date": 1731873771,
+            "rd": 107
+        },
+        "best": {
+            "rating": 1582,
+            "date": 1658859849,
+            "game": "https://www.chess.com/game/live/53117418975"
+        },
+        "record": {
+            "win": 76,
+            "loss": 81,
+            "draw": 11
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 806,
+            "date": 1731871288,
+            "rd": 153
+        },
+        "best": {
+            "rating": 1264,
+            "date": 1658772146,
+            "game": "https://www.chess.com/game/live/52511488339"
+        },
+        "record": {
+            "win": 3,
+            "loss": 10,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1044,
+            "date": 1731435433,
+            "rd": 94
+        },
+        "best": {
+            "rating": 1367,
+            "date": 1596181894,
+            "game": "https://www.chess.com/game/live/58650719899"
+        },
+        "record": {
+            "win": 11,
+            "loss": 14,
+            "draw": 3
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2283,
+            "date": 1706977397
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1596182245
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 21,
+            "score": 18
+        }
+    }
+}

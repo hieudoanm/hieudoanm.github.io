@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/296161003.0eb72b71.200x200o.912d659438bd.jpg",
+    "player_id": 296161003,
+    "@id": "https://api.chess.com/pub/player/seochesspie",
+    "url": "https://www.chess.com/member/Seochesspie",
+    "name": "Seo Jungmin",
+    "username": "seochesspie",
+    "title": "IM",
+    "followers": 35,
+    "country": "https://api.chess.com/pub/country/SE",
+    "location": "T\u00e4by",
+    "last_online": 1734172827,
+    "joined": 1687797826,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1027,
+            "date": 1725386497,
+            "rd": 257
+        },
+        "best": {
+            "rating": 1027,
+            "date": 1725386497,
+            "game": "https://www.chess.com/game/daily/691695375"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 46391,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2467,
+            "date": 1693683113,
+            "rd": 348
+        },
+        "best": {
+            "rating": 2467,
+            "date": 1693683110,
+            "game": "https://www.chess.com/game/live/87421851343"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2812,
+            "date": 1733391925,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2935,
+            "date": 1700505045,
+            "game": "https://www.chess.com/game/live/94681154217"
+        },
+        "record": {
+            "win": 837,
+            "loss": 568,
+            "draw": 116
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2809,
+            "date": 1734173972,
+            "rd": 27
+        },
+        "best": {
+            "rating": 3011,
+            "date": 1725796347,
+            "game": "https://www.chess.com/game/live/104622721633"
+        },
+        "record": {
+            "win": 3257,
+            "loss": 2130,
+            "draw": 1083
+        }
+    },
+    "fide": 2466,
+    "tactics": {
+        "highest": {
+            "rating": 3609,
+            "date": 1713785290
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1687797826
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 40
+        }
+    }
+}

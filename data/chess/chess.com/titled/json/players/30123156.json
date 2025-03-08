@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/30123156.7bf1471e.200x200o.90b8d60795a1.jpeg",
+    "player_id": 30123156,
+    "@id": "https://api.chess.com/pub/player/winneroleg",
+    "url": "https://www.chess.com/member/WinnerOleg",
+    "name": "Oleg Papayan",
+    "username": "winneroleg",
+    "title": "FM",
+    "followers": 54,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1546780828,
+    "joined": 1474965674,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

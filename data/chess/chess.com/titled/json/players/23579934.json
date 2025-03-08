@@ -1,0 +1,89 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23579934.435e3768.200x200o.3916fc4666f3.jpeg",
+    "player_id": 23579934,
+    "@id": "https://api.chess.com/pub/player/reader777",
+    "url": "https://www.chess.com/member/Reader777",
+    "name": "Read Samadov",
+    "username": "reader777",
+    "title": "IM",
+    "followers": 137,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734176056,
+    "joined": 1439023955,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2602,
+            "date": 1729015091,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2636,
+            "date": 1689003968,
+            "game": "https://www.chess.com/game/live/80335368345"
+        },
+        "record": {
+            "win": 112,
+            "loss": 58,
+            "draw": 53
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2925,
+            "date": 1733659130,
+            "rd": 48
+        },
+        "best": {
+            "rating": 3020,
+            "date": 1721999177,
+            "game": "https://www.chess.com/game/live/80497333771"
+        },
+        "record": {
+            "win": 445,
+            "loss": 378,
+            "draw": 54
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2967,
+            "date": 1734085178,
+            "rd": 30
+        },
+        "best": {
+            "rating": 3045,
+            "date": 1733662210,
+            "game": "https://www.chess.com/game/live/127164037469"
+        },
+        "record": {
+            "win": 3719,
+            "loss": 3384,
+            "draw": 1048
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3996,
+            "date": 1727784283
+        },
+        "lowest": {
+            "rating": 2361,
+            "date": 1588780914
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        },
+        "daily": {
+            "total_attempts": 49,
+            "score": 46
+        }
+    }
+}

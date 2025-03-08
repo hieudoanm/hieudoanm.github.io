@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/62704540.4d3cb4d6.200x200o.8a19905a7672.jpeg",
+    "player_id": 62704540,
+    "@id": "https://api.chess.com/pub/player/arvinrasti",
+    "url": "https://www.chess.com/member/ArvinRasti",
+    "name": "Arvin Rasti",
+    "username": "arvinrasti",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/SE",
+    "last_online": 1733768487,
+    "joined": 1561557271,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2425,
+            "date": 1733508332,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2434,
+            "date": 1733508176,
+            "game": "https://www.chess.com/game/live/127245026651"
+        },
+        "record": {
+            "win": 66,
+            "loss": 42,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2396,
+            "date": 1733268521,
+            "rd": 84
+        },
+        "best": {
+            "rating": 2467,
+            "date": 1733243149,
+            "game": "https://www.chess.com/game/live/127002017171"
+        },
+        "record": {
+            "win": 8,
+            "loss": 13,
+            "draw": 0
+        }
+    },
+    "fide": 2177,
+    "tactics": {
+        "highest": {
+            "rating": 3137,
+            "date": 1733501066
+        },
+        "lowest": {
+            "rating": 1013,
+            "date": 1571743991
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 53
+        }
+    }
+}

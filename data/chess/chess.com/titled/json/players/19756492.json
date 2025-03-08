@@ -1,0 +1,100 @@
+{
+    "player_id": 19756492,
+    "@id": "https://api.chess.com/pub/player/fjal",
+    "url": "https://www.chess.com/member/Fjal",
+    "name": "Juan Manuel Aranda",
+    "username": "fjal",
+    "title": "CM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Buenos Aires",
+    "last_online": 1734081984,
+    "joined": 1416183321,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1706091218,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 83541,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2102,
+            "date": 1706091219,
+            "rd": 167
+        },
+        "best": {
+            "rating": 2019,
+            "date": 1594338655,
+            "game": "https://www.chess.com/game/live/5126365918"
+        },
+        "record": {
+            "win": 5,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2244,
+            "date": 1733880058,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2543,
+            "date": 1723942610,
+            "game": "https://www.chess.com/game/live/118027143677"
+        },
+        "record": {
+            "win": 2439,
+            "loss": 2269,
+            "draw": 188
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2378,
+            "date": 1729617092,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2405,
+            "date": 1720559905,
+            "game": "https://www.chess.com/game/live/114298257751"
+        },
+        "record": {
+            "win": 620,
+            "loss": 655,
+            "draw": 65
+        }
+    },
+    "fide": 2102,
+    "tactics": {
+        "highest": {
+            "rating": 2107,
+            "date": 1712085462
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1416183321
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 25,
+            "score": 23
+        }
+    }
+}

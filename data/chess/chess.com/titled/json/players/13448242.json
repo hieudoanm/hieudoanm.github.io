@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13448242.e260069d.200x200o.4ac5b34ef34e.jpeg",
+    "player_id": 13448242,
+    "@id": "https://api.chess.com/pub/player/warmachine77",
+    "url": "https://www.chess.com/member/warmachine77",
+    "name": "Oliver Queen",
+    "username": "warmachine77",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1659810680,
+    "joined": 1378625158,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

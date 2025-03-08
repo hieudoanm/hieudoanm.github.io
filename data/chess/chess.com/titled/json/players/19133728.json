@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19133728.0be16d38.200x200o.c7848999cb4d.jpeg",
+    "player_id": 19133728,
+    "@id": "https://api.chess.com/pub/player/nakachuk",
+    "url": "https://www.chess.com/member/Nakachuk",
+    "name": "Rahul Srivatshav P",
+    "username": "nakachuk",
+    "title": "GM",
+    "followers": 853,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "xxxxxxxxxx",
+    "last_online": 1734161166,
+    "joined": 1412237535,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1893,
+            "date": 1660725994,
+            "rd": 174
+        },
+        "best": {
+            "rating": 1893,
+            "date": 1607508402,
+            "game": "https://www.chess.com/game/daily/224428446"
+        },
+        "record": {
+            "win": 20,
+            "loss": 20,
+            "draw": 0,
+            "time_per_move": 38944,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2475,
+            "date": 1732395879,
+            "rd": 90
+        },
+        "best": {
+            "rating": 2797,
+            "date": 1601560382,
+            "game": "https://www.chess.com/game/live/58393189017"
+        },
+        "record": {
+            "win": 39,
+            "loss": 25,
+            "draw": 11
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2937,
+            "date": 1722034653,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2964,
+            "date": 1721445728,
+            "game": "https://www.chess.com/game/live/115183112729"
+        },
+        "record": {
+            "win": 840,
+            "loss": 639,
+            "draw": 94
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2859,
+            "date": 1732395445,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2911,
+            "date": 1721150729,
+            "game": "https://www.chess.com/game/live/4809161232"
+        },
+        "record": {
+            "win": 1510,
+            "loss": 1262,
+            "draw": 252
+        }
+    },
+    "fide": 2496,
+    "tactics": {
+        "highest": {
+            "rating": 3199,
+            "date": 1542516016
+        },
+        "lowest": {
+            "rating": 1359,
+            "date": 1412507922
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 78,
+            "score": 75
+        }
+    }
+}

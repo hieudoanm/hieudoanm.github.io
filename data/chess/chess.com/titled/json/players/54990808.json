@@ -1,0 +1,85 @@
+{
+    "player_id": 54990808,
+    "@id": "https://api.chess.com/pub/player/alexg2003",
+    "url": "https://www.chess.com/member/alexg2003",
+    "name": "Alex Golding",
+    "username": "alexg2003",
+    "title": "FM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1734133630,
+    "joined": 1545599752,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2385,
+            "date": 1733771378,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2395,
+            "date": 1733770990,
+            "game": "https://www.chess.com/game/live/117913167899"
+        },
+        "record": {
+            "win": 35,
+            "loss": 6,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2632,
+            "date": 1734135555,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2767,
+            "date": 1732145555,
+            "game": "https://www.chess.com/game/live/110305890201"
+        },
+        "record": {
+            "win": 1196,
+            "loss": 980,
+            "draw": 151
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2675,
+            "date": 1734131070,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2726,
+            "date": 1733848701,
+            "game": "https://www.chess.com/game/live/127586476935"
+        },
+        "record": {
+            "win": 1761,
+            "loss": 1579,
+            "draw": 310
+        }
+    },
+    "fide": 2405,
+    "tactics": {
+        "highest": {
+            "rating": 3427,
+            "date": 1721573731
+        },
+        "lowest": {
+            "rating": 2291,
+            "date": 1639404681
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 41,
+            "score": 38
+        }
+    }
+}

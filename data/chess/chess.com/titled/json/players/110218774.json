@@ -1,0 +1,16 @@
+{
+    "player_id": 110218774,
+    "@id": "https://api.chess.com/pub/player/drherbst",
+    "url": "https://www.chess.com/member/DrHerbst",
+    "username": "drherbst",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1733872301,
+    "joined": 1609943569,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

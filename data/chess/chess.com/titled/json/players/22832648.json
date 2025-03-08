@@ -1,0 +1,87 @@
+{
+    "player_id": 22832648,
+    "@id": "https://api.chess.com/pub/player/jovantodorovic",
+    "url": "https://www.chess.com/member/JovanTodorovic",
+    "name": "Jovan Todorovic",
+    "username": "jovantodorovic",
+    "title": "IM",
+    "followers": 64,
+    "country": "https://api.chess.com/pub/country/RS",
+    "location": "Belgrade",
+    "last_online": 1734173943,
+    "joined": 1434372164,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 777,
+            "date": 1733860152,
+            "rd": 337
+        },
+        "best": {
+            "rating": 2200,
+            "date": 1434372164,
+            "game": "https://www.chess.com/game/daily/708920829"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 189675,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2021,
+            "date": 1670750058,
+            "rd": 206
+        },
+        "best": {
+            "rating": 2480,
+            "date": 1554660761,
+            "game": "https://www.chess.com/game/live/3598480625"
+        },
+        "record": {
+            "win": 6,
+            "loss": 2,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2522,
+            "date": 1733859514,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2532,
+            "date": 1733858284,
+            "game": "https://www.chess.com/game/live/121340442269"
+        },
+        "record": {
+            "win": 586,
+            "loss": 396,
+            "draw": 100
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3200,
+            "date": 1727870734
+        },
+        "lowest": {
+            "rating": 1203,
+            "date": 1535190411
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 34,
+            "score": 32
+        }
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/83851328.34acf719.200x200o.61ba77456639.jpg",
+    "player_id": 83851328,
+    "@id": "https://api.chess.com/pub/player/ccfizz7",
+    "url": "https://www.chess.com/member/ccfizz7",
+    "name": "Chika Pride",
+    "username": "ccfizz7",
+    "title": "WCM",
+    "followers": 18,
+    "country": "https://api.chess.com/pub/country/BS",
+    "last_online": 1733752593,
+    "joined": 1592840710,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1702,
+            "date": 1733703541,
+            "rd": 41
+        },
+        "best": {
+            "rating": 1736,
+            "date": 1731456230,
+            "game": "https://www.chess.com/game/live/127440025227"
+        },
+        "record": {
+            "win": 224,
+            "loss": 159,
+            "draw": 26
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1640,
+            "date": 1730930997,
+            "rd": 63
+        },
+        "best": {
+            "rating": 1640,
+            "date": 1730930997,
+            "game": "https://www.chess.com/game/live/111106832265"
+        },
+        "record": {
+            "win": 214,
+            "loss": 172,
+            "draw": 8
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1571,
+            "date": 1732655404,
+            "rd": 36
+        },
+        "best": {
+            "rating": 1635,
+            "date": 1731075126,
+            "game": "https://www.chess.com/game/live/124905536609"
+        },
+        "record": {
+            "win": 350,
+            "loss": 305,
+            "draw": 22
+        }
+    },
+    "fide": 1640,
+    "tactics": {
+        "highest": {
+            "rating": 2765,
+            "date": 1724680926
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1656372446
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 19,
+            "score": 16
+        }
+    }
+}

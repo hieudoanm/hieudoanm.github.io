@@ -1,0 +1,17 @@
+{
+    "player_id": 75841364,
+    "@id": "https://api.chess.com/pub/player/asatryangor",
+    "url": "https://www.chess.com/member/AsatryanGor",
+    "name": "Gor Asatryan",
+    "username": "asatryangor",
+    "title": "CM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733945747,
+    "joined": 1586170460,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

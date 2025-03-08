@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75276238.98539da8.200x200o.f9b59597d09b.jpeg",
+    "player_id": 75276238,
+    "@id": "https://api.chess.com/pub/player/vikber19611",
+    "url": "https://www.chess.com/member/vikber19611",
+    "name": "Berezin Viktor",
+    "username": "vikber19611",
+    "title": "FM",
+    "followers": 34,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "Dubna",
+    "last_online": 1730027877,
+    "joined": 1585728839,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1541,
+            "date": 1661502544,
+            "rd": 152
+        },
+        "best": {
+            "rating": 1675,
+            "date": 1617384728,
+            "game": "https://www.chess.com/game/daily/320382474"
+        },
+        "record": {
+            "win": 6,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 58877,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1629,
+            "date": 1729958434,
+            "rd": 155
+        },
+        "best": {
+            "rating": 2064,
+            "date": 1617127055,
+            "game": "https://www.chess.com/game/live/10864758703"
+        },
+        "record": {
+            "win": 27,
+            "loss": 7,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1470,
+            "date": 1674322264,
+            "rd": 314
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1604,
+            "date": 1729960074,
+            "rd": 132
+        },
+        "best": {
+            "rating": 2071,
+            "date": 1590080304,
+            "game": "https://www.chess.com/game/live/22962681765"
+        },
+        "record": {
+            "win": 33,
+            "loss": 54,
+            "draw": 2
+        }
+    },
+    "fide": 1924,
+    "tactics": {
+        "highest": {
+            "rating": 2028,
+            "date": 1699897475
+        },
+        "lowest": {
+            "rating": 2000,
+            "date": 1596285895
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 28,
+            "score": 26
+        }
+    }
+}

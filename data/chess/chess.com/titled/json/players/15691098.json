@@ -1,0 +1,112 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/15691098.e298786d.200x200o.b2fe0ac42ee9.jpeg",
+    "player_id": 15691098,
+    "@id": "https://api.chess.com/pub/player/highlama",
+    "url": "https://www.chess.com/member/highlama",
+    "name": "Alex Chua",
+    "username": "highlama",
+    "title": "FM",
+    "followers": 25,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Houston, Texas",
+    "last_online": 1733962887,
+    "joined": 1390360899,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1710,
+            "date": 1711799985,
+            "rd": 82
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1390360899,
+            "game": "https://www.chess.com/game/daily/634729423"
+        },
+        "record": {
+            "win": 42,
+            "loss": 1,
+            "draw": 1,
+            "time_per_move": 6624,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2000,
+            "date": 1582241666,
+            "rd": 142
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1422841868,
+            "game": "https://www.chess.com/game/live/4501528604"
+        },
+        "record": {
+            "win": 1,
+            "loss": 5,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2079,
+            "date": 1730614097,
+            "rd": 76
+        },
+        "best": {
+            "rating": 2320,
+            "date": 1393813487,
+            "game": "https://www.chess.com/game/live/4105234137"
+        },
+        "record": {
+            "win": 2793,
+            "loss": 2616,
+            "draw": 99
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2429,
+            "date": 1733270541,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2461,
+            "date": 1732034399,
+            "game": "https://www.chess.com/game/live/108832902847"
+        },
+        "record": {
+            "win": 1378,
+            "loss": 1243,
+            "draw": 94
+        }
+    },
+    "fide": 2400,
+    "tactics": {
+        "highest": {
+            "rating": 3413,
+            "date": 1733281368
+        },
+        "lowest": {
+            "rating": 1406,
+            "date": 1390361518
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

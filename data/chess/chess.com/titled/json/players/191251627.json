@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/191251627.7cacca63.200x200o.e818eb5ff525.jpeg",
+    "player_id": 191251627,
+    "@id": "https://api.chess.com/pub/player/cixper1968",
+    "url": "https://www.chess.com/member/CixPer1968",
+    "name": "Javier Quispe Santacruz",
+    "username": "cixper1968",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/PE",
+    "last_online": 1734123064,
+    "joined": 1658848602,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2231,
+            "date": 1732827752,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2339,
+            "date": 1703102072,
+            "game": "https://www.chess.com/game/live/96839973457"
+        },
+        "record": {
+            "win": 11,
+            "loss": 14,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1692,
+            "date": 1732681462,
+            "rd": 78
+        },
+        "best": {
+            "rating": 1902,
+            "date": 1711498164,
+            "game": "https://www.chess.com/game/live/105237017227"
+        },
+        "record": {
+            "win": 54,
+            "loss": 56,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1917,
+            "date": 1732740596,
+            "rd": 69
+        },
+        "best": {
+            "rating": 2250,
+            "date": 1681248446,
+            "game": "https://www.chess.com/game/live/87665559671"
+        },
+        "record": {
+            "win": 46,
+            "loss": 146,
+            "draw": 9
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2752,
+            "date": 1731699790
+        },
+        "lowest": {
+            "rating": 2000,
+            "date": 1660922851
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 35,
+            "score": 34
+        }
+    }
+}

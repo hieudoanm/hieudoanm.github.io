@@ -1,0 +1,99 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/222601607.50972e11.200x200o.80036b1f6e73.jpg",
+    "player_id": 222601607,
+    "@id": "https://api.chess.com/pub/player/iamshocked",
+    "url": "https://www.chess.com/member/IAMSHOCKED",
+    "name": "Shahil Dey",
+    "username": "iamshocked",
+    "title": "IM",
+    "followers": 622,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734179320,
+    "joined": 1673281360,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2095,
+            "date": 1734101270,
+            "rd": 140
+        },
+        "best": {
+            "rating": 2095,
+            "date": 1699531747,
+            "game": "https://www.chess.com/game/daily/542650777"
+        },
+        "record": {
+            "win": 5,
+            "loss": 8,
+            "draw": 1,
+            "time_per_move": 15572,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2695,
+            "date": 1707640346,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2695,
+            "date": 1693834635,
+            "game": "https://www.chess.com/game/live/101379074089"
+        },
+        "record": {
+            "win": 4,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2630,
+            "date": 1734105047,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2747,
+            "date": 1731261954,
+            "game": "https://www.chess.com/game/live/71092634623"
+        },
+        "record": {
+            "win": 369,
+            "loss": 347,
+            "draw": 57
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2811,
+            "date": 1734103364,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2841,
+            "date": 1732285373,
+            "game": "https://www.chess.com/game/live/97661441865"
+        },
+        "record": {
+            "win": 459,
+            "loss": 436,
+            "draw": 103
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3720,
+            "date": 1731828918
+        },
+        "lowest": {
+            "rating": 1010,
+            "date": 1673426799
+        }
+    },
+    "puzzle_rush": {}
+}

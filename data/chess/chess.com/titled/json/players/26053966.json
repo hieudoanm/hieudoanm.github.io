@@ -1,0 +1,104 @@
+{
+    "player_id": 26053966,
+    "@id": "https://api.chess.com/pub/player/marekpolska",
+    "url": "https://www.chess.com/member/marekpolska",
+    "name": "Marek Madej",
+    "username": "marekpolska",
+    "title": "FM",
+    "followers": 32,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734174962,
+    "joined": 1452419986,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 641,
+            "date": 1731425482,
+            "rd": 203
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1452419986,
+            "game": "https://www.chess.com/game/daily/440393673"
+        },
+        "record": {
+            "win": 5,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 32248,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2211,
+            "date": 1731425482,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2080,
+            "date": 1704738383,
+            "game": "https://www.chess.com/game/live/98475955027"
+        },
+        "record": {
+            "win": 63,
+            "loss": 27,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2500,
+            "date": 1734182305,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2500,
+            "date": 1734182305,
+            "game": "https://www.chess.com/game/live/124740621397"
+        },
+        "record": {
+            "win": 219,
+            "loss": 165,
+            "draw": 15
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2422,
+            "date": 1734098852,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2475,
+            "date": 1732640392,
+            "game": "https://www.chess.com/game/live/126375623173"
+        },
+        "record": {
+            "win": 651,
+            "loss": 515,
+            "draw": 57
+        }
+    },
+    "fide": 2211,
+    "tactics": {
+        "highest": {
+            "rating": 3374,
+            "date": 1732885903
+        },
+        "lowest": {
+            "rating": 1301,
+            "date": 1452422344
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

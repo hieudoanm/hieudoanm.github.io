@@ -1,0 +1,17 @@
+{
+    "player_id": 34015832,
+    "@id": "https://api.chess.com/pub/player/tolgademirel1",
+    "url": "https://www.chess.com/member/TolgaDemirel1",
+    "name": "Tolga Demirel",
+    "username": "tolgademirel1",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1734026813,
+    "joined": 1489686393,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

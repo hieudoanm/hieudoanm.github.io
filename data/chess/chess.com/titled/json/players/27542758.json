@@ -1,0 +1,97 @@
+{
+    "player_id": 27542758,
+    "@id": "https://api.chess.com/pub/player/kingsman132",
+    "url": "https://www.chess.com/member/Kingsman132",
+    "username": "kingsman132",
+    "title": "FM",
+    "followers": 60,
+    "country": "https://api.chess.com/pub/country/ZM",
+    "last_online": 1695581978,
+    "joined": 1459525631,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1635277888,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 2671,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1769,
+            "date": 1627075895,
+            "rd": 117
+        },
+        "best": {
+            "rating": 1769,
+            "date": 1625404522,
+            "game": "https://www.chess.com/game/live/5615640951"
+        },
+        "record": {
+            "win": 21,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2437,
+            "date": 1651708257,
+            "rd": 80
+        },
+        "best": {
+            "rating": 2484,
+            "date": 1633121115,
+            "game": "https://www.chess.com/game/live/27976783597"
+        },
+        "record": {
+            "win": 516,
+            "loss": 457,
+            "draw": 79
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2484,
+            "date": 1695582539,
+            "rd": 148
+        },
+        "best": {
+            "rating": 2515,
+            "date": 1633622382,
+            "game": "https://www.chess.com/game/live/4726300912"
+        },
+        "record": {
+            "win": 315,
+            "loss": 247,
+            "draw": 47
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3197,
+            "date": 1574638349
+        },
+        "lowest": {
+            "rating": 1342,
+            "date": 1460114571
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

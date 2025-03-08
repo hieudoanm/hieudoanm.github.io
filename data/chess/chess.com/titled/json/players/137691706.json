@@ -1,0 +1,17 @@
+{
+    "player_id": 137691706,
+    "@id": "https://api.chess.com/pub/player/albussevrespotter",
+    "url": "https://www.chess.com/member/AlbusSevresPotter",
+    "name": "Yash Bharadia",
+    "username": "albussevrespotter",
+    "title": "CM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/GR",
+    "last_online": 1733950300,
+    "joined": 1619583025,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

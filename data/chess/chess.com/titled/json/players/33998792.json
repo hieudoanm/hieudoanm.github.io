@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/33998792.d662905e.200x200o.c5d37ec4daad.png",
+    "player_id": 33998792,
+    "@id": "https://api.chess.com/pub/player/apotatointhekitchen",
+    "url": "https://www.chess.com/member/APotatoInthekitchen",
+    "name": "Prateek Mishra",
+    "username": "apotatointhekitchen",
+    "title": "CM",
+    "followers": 159,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "pratikplayer#7416",
+    "last_online": 1734002786,
+    "joined": 1489626742,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1800,
+            "date": 1731526227,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 102981,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2404,
+            "date": 1724785979,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2404,
+            "date": 1672276795,
+            "game": "https://www.chess.com/game/live/36563968747"
+        },
+        "record": {
+            "win": 30,
+            "loss": 4,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2620,
+            "date": 1729218014,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2629,
+            "date": 1729016604,
+            "game": "https://www.chess.com/game/live/116148594661"
+        },
+        "record": {
+            "win": 915,
+            "loss": 663,
+            "draw": 135
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2658,
+            "date": 1732152580,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2658,
+            "date": 1732152580,
+            "game": "https://www.chess.com/game/live/111576138193"
+        },
+        "record": {
+            "win": 1094,
+            "loss": 827,
+            "draw": 189
+        }
+    },
+    "fide": 2152,
+    "tactics": {
+        "highest": {
+            "rating": 3614,
+            "date": 1703808335
+        },
+        "lowest": {
+            "rating": 1247,
+            "date": 1489950795
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 112,
+            "score": 109
+        }
+    }
+}

@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/383231029.e49a9ded.200x200o.b4a95629e4e5.jpg",
+    "player_id": 383231029,
+    "@id": "https://api.chess.com/pub/player/omranalhosani22",
+    "url": "https://www.chess.com/member/Omranalhosani22",
+    "name": "Omran Al Hosani",
+    "username": "omranalhosani22",
+    "title": "IM",
+    "followers": 59,
+    "country": "https://api.chess.com/pub/country/AE",
+    "last_online": 1734181891,
+    "joined": 1724603383,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1615,
+            "date": 1733663077,
+            "rd": 335
+        },
+        "best": {
+            "rating": 1615,
+            "date": 1733663077,
+            "game": "https://www.chess.com/game/daily/720109821"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 114940,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2406,
+            "date": 1732597734,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2406,
+            "date": 1732597734,
+            "game": "https://www.chess.com/game/live/126334757241"
+        },
+        "record": {
+            "win": 6,
+            "loss": 7,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2589,
+            "date": 1734135735,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2720,
+            "date": 1727319602,
+            "game": "https://www.chess.com/game/live/122645728327"
+        },
+        "record": {
+            "win": 363,
+            "loss": 324,
+            "draw": 61
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2768,
+            "date": 1734183279,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2861,
+            "date": 1732585514,
+            "game": "https://www.chess.com/game/live/126323344815"
+        },
+        "record": {
+            "win": 673,
+            "loss": 607,
+            "draw": 177
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1461,
+            "date": 1730060592
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1724603383
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

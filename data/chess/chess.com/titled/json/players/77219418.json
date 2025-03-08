@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/77219418.38e5adc9.200x200o.58ab557c1649.png",
+    "player_id": 77219418,
+    "@id": "https://api.chess.com/pub/player/k_grigoryan",
+    "url": "https://www.chess.com/member/K_GRIGORYAN",
+    "name": "Karen Grigoryan",
+    "username": "k_grigoryan",
+    "title": "GM",
+    "followers": 6120,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734178878,
+    "joined": 1587319849,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1771,
+            "date": 1734069272,
+            "rd": 124
+        },
+        "best": {
+            "rating": 2113,
+            "date": 1626260759,
+            "game": "https://www.chess.com/game/daily/302817078"
+        },
+        "record": {
+            "win": 70,
+            "loss": 5,
+            "draw": 1,
+            "time_per_move": 604782,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2172,
+            "date": 1729366270,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2820,
+            "date": 1599929203,
+            "game": "https://www.chess.com/game/live/112559461905"
+        },
+        "record": {
+            "win": 107,
+            "loss": 5,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2877,
+            "date": 1734143108,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2974,
+            "date": 1701150663,
+            "game": "https://www.chess.com/game/live/94889375755"
+        },
+        "record": {
+            "win": 465,
+            "loss": 132,
+            "draw": 33
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2882,
+            "date": 1732827724,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2987,
+            "date": 1704832907,
+            "game": "https://www.chess.com/game/live/5023441483"
+        },
+        "record": {
+            "win": 475,
+            "loss": 51,
+            "draw": 19
+        }
+    },
+    "fide": 2621,
+    "tactics": {
+        "highest": {
+            "rating": 3155,
+            "date": 1705529940
+        },
+        "lowest": {
+            "rating": 2671,
+            "date": 1614286208
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

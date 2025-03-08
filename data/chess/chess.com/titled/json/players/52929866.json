@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/52929866.86583207.200x200o.cdf9227ae70c.jpeg",
+    "player_id": 52929866,
+    "@id": "https://api.chess.com/pub/player/vuks91",
+    "url": "https://www.chess.com/member/Vuks91",
+    "name": "Vuk Savanovic",
+    "username": "vuks91",
+    "title": "FM",
+    "followers": 90,
+    "country": "https://api.chess.com/pub/country/RS",
+    "location": "Novi Sad",
+    "last_online": 1733873238,
+    "joined": 1544211517,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

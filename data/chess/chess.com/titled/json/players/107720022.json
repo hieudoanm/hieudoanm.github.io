@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/107720022.2797f5eb.200x200o.17b33e399c9e.jpeg",
+    "player_id": 107720022,
+    "@id": "https://api.chess.com/pub/player/agustin_meza",
+    "url": "https://www.chess.com/member/Agustin_Meza",
+    "name": "Agustin Meza Astrada",
+    "username": "agustin_meza",
+    "title": "CM",
+    "followers": 98,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Buenos Aires",
+    "last_online": 1734001586,
+    "joined": 1609128573,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

@@ -1,0 +1,47 @@
+{
+    "player_id": 316592843,
+    "@id": "https://api.chess.com/pub/player/donciao",
+    "url": "https://www.chess.com/member/DonCiao",
+    "name": "Andreas Mende",
+    "username": "donciao",
+    "title": "CM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/DE",
+    "location": "Deutschland",
+    "last_online": 1734013237,
+    "joined": 1696159806,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2149,
+            "date": 1734112479,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2197,
+            "date": 1696256321,
+            "game": "https://www.chess.com/game/live/92503343521"
+        },
+        "record": {
+            "win": 886,
+            "loss": 888,
+            "draw": 130
+        }
+    },
+    "fide": 2100,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1696159806
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1696159806
+        }
+    },
+    "puzzle_rush": {}
+}

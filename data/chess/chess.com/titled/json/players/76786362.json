@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/76786362.8b9d7e63.200x200o.76fc600d72a4.jpg",
+    "player_id": 76786362,
+    "@id": "https://api.chess.com/pub/player/gausal",
+    "url": "https://www.chess.com/member/GAusal",
+    "name": "Jorge Carlos Antonio",
+    "username": "gausal",
+    "title": "FM",
+    "followers": 188,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Buenos Aires",
+    "last_online": 1734179794,
+    "joined": 1586964216,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1991,
+            "date": 1727120067,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2100,
+            "date": 1606575480,
+            "game": "https://www.chess.com/game/live/114741483817"
+        },
+        "record": {
+            "win": 6,
+            "loss": 4,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1682,
+            "date": 1734180164,
+            "rd": 27
+        },
+        "best": {
+            "rating": 1981,
+            "date": 1595210349,
+            "game": "https://www.chess.com/game/live/101393534419"
+        },
+        "record": {
+            "win": 2025,
+            "loss": 2185,
+            "draw": 212
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2192,
+            "date": 1734126684,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2336,
+            "date": 1692744086,
+            "game": "https://www.chess.com/game/live/126984034535"
+        },
+        "record": {
+            "win": 4108,
+            "loss": 4744,
+            "draw": 780
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2617,
+            "date": 1674397722
+        },
+        "lowest": {
+            "rating": 2215,
+            "date": 1597341336
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 26,
+            "score": 24
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6625410.3278ccb9.200x200o.1e1d5a0f97a6.jpeg",
+    "player_id": 6625410,
+    "@id": "https://api.chess.com/pub/player/alex_jose_iraeta",
+    "url": "https://www.chess.com/member/Alex_Jose_Iraeta",
+    "name": "Alex Jos&eacute; Iraeta",
+    "username": "alex_jose_iraeta",
+    "title": "CM",
+    "followers": 18,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Esplugues de Llobregat",
+    "last_online": 1680373404,
+    "joined": 1328528060,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

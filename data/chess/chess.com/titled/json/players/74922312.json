@@ -1,0 +1,61 @@
+{
+    "player_id": 74922312,
+    "@id": "https://api.chess.com/pub/player/metra7",
+    "url": "https://www.chess.com/member/metra7",
+    "username": "metra7",
+    "title": "IM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/FJ",
+    "last_online": 1734183670,
+    "joined": 1585478323,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2508,
+            "date": 1734177414,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2523,
+            "date": 1727981962,
+            "game": "https://www.chess.com/game/live/127775478109"
+        },
+        "record": {
+            "win": 1629,
+            "loss": 1461,
+            "draw": 207
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2300,
+            "date": 1720083959,
+            "rd": 68
+        },
+        "best": {
+            "rating": 2362,
+            "date": 1585486536,
+            "game": "https://www.chess.com/game/live/4655651512"
+        },
+        "record": {
+            "win": 28,
+            "loss": 22,
+            "draw": 2
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1585478323
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1585478323
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/401656251.0267cc5b.200x200o.298357d06351.jpg",
+    "player_id": 401656251,
+    "@id": "https://api.chess.com/pub/player/antigeroiy",
+    "url": "https://www.chess.com/member/antigeroiy",
+    "name": "Alexandr Baranciuc",
+    "username": "antigeroiy",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/MD",
+    "location": "Chisinau",
+    "last_online": 1733905846,
+    "joined": 1731248860,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2617,
+            "date": 1734104096,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2644,
+            "date": 1733567328,
+            "game": "https://www.chess.com/game/live/127300818267"
+        },
+        "record": {
+            "win": 39,
+            "loss": 23,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2542,
+            "date": 1733851822,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2556,
+            "date": 1733847387,
+            "game": "https://www.chess.com/game/live/126987020725"
+        },
+        "record": {
+            "win": 29,
+            "loss": 24,
+            "draw": 2
+        }
+    },
+    "fide": 2273,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1731248860
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1731248860
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 41,
+            "score": 38
+        }
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "player_id": 302271609,
+    "@id": "https://api.chess.com/pub/player/nimzochesser",
+    "url": "https://www.chess.com/member/Nimzochesser",
+    "username": "nimzochesser",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734172729,
+    "joined": 1690444316,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1851,
+            "date": 1731339277,
+            "rd": 207
+        },
+        "best": {
+            "rating": 1884,
+            "date": 1702938423,
+            "game": "https://www.chess.com/game/daily/597499091"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 3,
+            "time_per_move": 4414,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2132,
+            "date": 1725174579,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2132,
+            "date": 1725174579,
+            "game": "https://www.chess.com/game/live/98657047963"
+        },
+        "record": {
+            "win": 24,
+            "loss": 7,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2114,
+            "date": 1733077330,
+            "rd": 54
+        },
+        "best": {
+            "rating": 2150,
+            "date": 1722336762,
+            "game": "https://www.chess.com/game/live/116092795631"
+        },
+        "record": {
+            "win": 322,
+            "loss": 301,
+            "draw": 52
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3280,
+            "date": 1727331945
+        },
+        "lowest": {
+            "rating": 992,
+            "date": 1690450023
+        }
+    },
+    "puzzle_rush": {}
+}

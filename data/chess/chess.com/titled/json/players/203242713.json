@@ -1,0 +1,55 @@
+{
+    "player_id": 203242713,
+    "@id": "https://api.chess.com/pub/player/fm_kappeler",
+    "url": "https://www.chess.com/member/FM_Kappeler",
+    "name": "Kaspar Kappeler",
+    "username": "fm_kappeler",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/CH",
+    "last_online": 1730652546,
+    "joined": 1666703820,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2401,
+            "date": 1730654528,
+            "rd": 65
+        },
+        "best": {
+            "rating": 2401,
+            "date": 1730654528,
+            "game": "https://www.chess.com/game/live/90712230697"
+        },
+        "record": {
+            "win": 70,
+            "loss": 115,
+            "draw": 15
+        }
+    },
+    "fide": 2190,
+    "tactics": {
+        "highest": {
+            "rating": 2349,
+            "date": 1699661632
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1666703820
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 40,
+            "score": 37
+        },
+        "daily": {
+            "total_attempts": 33,
+            "score": 30
+        }
+    }
+}

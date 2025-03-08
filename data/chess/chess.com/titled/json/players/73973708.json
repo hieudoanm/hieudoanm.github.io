@@ -1,0 +1,85 @@
+{
+    "player_id": 73973708,
+    "@id": "https://api.chess.com/pub/player/sgchess01",
+    "url": "https://www.chess.com/member/SGchess01",
+    "name": "Szymon Gumularz",
+    "username": "sgchess01",
+    "title": "GM",
+    "followers": 257,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734087063,
+    "joined": 1584729681,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2435,
+            "date": 1715358722,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2586,
+            "date": 1598553759,
+            "game": "https://www.chess.com/game/live/5359067108"
+        },
+        "record": {
+            "win": 5,
+            "loss": 2,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2855,
+            "date": 1730393153,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2946,
+            "date": 1611359179,
+            "game": "https://www.chess.com/game/live/6225847962"
+        },
+        "record": {
+            "win": 1093,
+            "loss": 688,
+            "draw": 156
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2950,
+            "date": 1734087667,
+            "rd": 39
+        },
+        "best": {
+            "rating": 3002,
+            "date": 1652611862,
+            "game": "https://www.chess.com/game/live/85663279827"
+        },
+        "record": {
+            "win": 6330,
+            "loss": 4344,
+            "draw": 1603
+        }
+    },
+    "fide": 2562,
+    "tactics": {
+        "highest": {
+            "rating": 3459,
+            "date": 1722165018
+        },
+        "lowest": {
+            "rating": 2200,
+            "date": 1593443275
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

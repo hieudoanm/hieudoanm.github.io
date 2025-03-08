@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/43280758.689c47c0.200x200o.fe0ae072ad1b.jpeg",
+    "player_id": 43280758,
+    "@id": "https://api.chess.com/pub/player/piriflillo",
+    "url": "https://www.chess.com/member/Piriflillo",
+    "name": "Juan Alberto Gomez Aguirre",
+    "username": "piriflillo",
+    "title": "FM",
+    "followers": 21,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1733065055,
+    "joined": 1518468893,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2016,
+            "date": 1718381249,
+            "rd": 253
+        },
+        "best": {
+            "rating": 2016,
+            "date": 1718381249,
+            "game": "https://www.chess.com/game/daily/663386213"
+        },
+        "record": {
+            "win": 9,
+            "loss": 4,
+            "draw": 0,
+            "time_per_move": 41095,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2228,
+            "date": 1730060712,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2228,
+            "date": 1730060712,
+            "game": "https://www.chess.com/game/live/99005817657"
+        },
+        "record": {
+            "win": 110,
+            "loss": 46,
+            "draw": 12
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2601,
+            "date": 1731396758,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2607,
+            "date": 1730400588,
+            "game": "https://www.chess.com/game/live/124138289135"
+        },
+        "record": {
+            "win": 476,
+            "loss": 385,
+            "draw": 48
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2557,
+            "date": 1732905868,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2690,
+            "date": 1725733941,
+            "game": "https://www.chess.com/game/live/117999035307"
+        },
+        "record": {
+            "win": 2354,
+            "loss": 2456,
+            "draw": 405
+        }
+    },
+    "fide": 2340,
+    "tactics": {
+        "highest": {
+            "rating": 3483,
+            "date": 1728416029
+        },
+        "lowest": {
+            "rating": 179,
+            "date": 1521902431
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

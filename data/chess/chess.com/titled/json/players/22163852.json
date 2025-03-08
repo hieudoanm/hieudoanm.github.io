@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/22163852.0e9acb1b.200x200o.8ce19d3f7963.jpeg",
+    "player_id": 22163852,
+    "@id": "https://api.chess.com/pub/player/alejandropacheco29",
+    "url": "https://www.chess.com/member/AlejandroPacheco29",
+    "name": "Alejandro Pacheco",
+    "username": "alejandropacheco29",
+    "title": "CM",
+    "followers": 85,
+    "country": "https://api.chess.com/pub/country/VE",
+    "location": "Huancayo, Peru",
+    "last_online": 1728153719,
+    "joined": 1430246258,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

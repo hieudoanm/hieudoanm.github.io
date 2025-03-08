@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/24368050.3d6857dc.200x200o.d7828b5b3146.jpeg",
+    "player_id": 24368050,
+    "@id": "https://api.chess.com/pub/player/sirstrateg",
+    "url": "https://www.chess.com/member/SirStrateg",
+    "name": "Filip Dowgird",
+    "username": "sirstrateg",
+    "title": "FM",
+    "followers": 33,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734107969,
+    "joined": 1443685129,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

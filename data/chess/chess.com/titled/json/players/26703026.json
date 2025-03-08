@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/26703026.97fdbee1.200x200o.b3b04cc130bb.jpeg",
+    "player_id": 26703026,
+    "@id": "https://api.chess.com/pub/player/chessdemon2019",
+    "url": "https://www.chess.com/member/Chessdemon2019",
+    "name": "Dorian Kang",
+    "username": "chessdemon2019",
+    "title": "CM",
+    "followers": 1457,
+    "country": "https://api.chess.com/pub/country/CA",
+    "location": "Canada > America",
+    "last_online": 1731451225,
+    "joined": 1455410406,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

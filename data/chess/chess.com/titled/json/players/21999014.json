@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/21999014.a4e69f32.200x200o.94c12ddebb99.jpeg",
+    "player_id": 21999014,
+    "@id": "https://api.chess.com/pub/player/santoblue",
+    "url": "https://www.chess.com/member/SantoBlue",
+    "name": "Vahap Sanal",
+    "username": "santoblue",
+    "title": "GM",
+    "followers": 2609,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1733924558,
+    "joined": 1429215008,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2510,
+            "date": 1706731971,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2632,
+            "date": 1598027687,
+            "game": "https://www.chess.com/game/live/54148151387"
+        },
+        "record": {
+            "win": 70,
+            "loss": 51,
+            "draw": 23
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2935,
+            "date": 1732384213,
+            "rd": 41
+        },
+        "best": {
+            "rating": 3022,
+            "date": 1673344566,
+            "game": "https://www.chess.com/game/live/42839384443"
+        },
+        "record": {
+            "win": 1440,
+            "loss": 1398,
+            "draw": 163
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2932,
+            "date": 1733924839,
+            "rd": 36
+        },
+        "best": {
+            "rating": 3065,
+            "date": 1675807676,
+            "game": "https://www.chess.com/game/live/61942271491"
+        },
+        "record": {
+            "win": 7905,
+            "loss": 7489,
+            "draw": 1422
+        }
+    },
+    "fide": 2551,
+    "tactics": {
+        "highest": {
+            "rating": 3706,
+            "date": 1709274780
+        },
+        "lowest": {
+            "rating": 2123,
+            "date": 1485047326
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        }
+    }
+}

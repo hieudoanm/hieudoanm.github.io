@@ -1,0 +1,57 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/197796179.1e065689.200x200o.83bd20fb1e39.jpeg",
+    "player_id": 197796179,
+    "@id": "https://api.chess.com/pub/player/manguscalrissian",
+    "url": "https://www.chess.com/member/MangusCalrissian",
+    "username": "manguscalrissian",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/NG",
+    "last_online": 1701470214,
+    "joined": 1663524173,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2147,
+            "date": 1708462895,
+            "rd": 247
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2315,
+            "date": 1698263059,
+            "rd": 107
+        },
+        "best": {
+            "rating": 2441,
+            "date": 1664813828,
+            "game": "https://www.chess.com/game/live/63145865969"
+        },
+        "record": {
+            "win": 8,
+            "loss": 8,
+            "draw": 1
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2758,
+            "date": 1702853573
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1663524173
+        }
+    },
+    "puzzle_rush": {}
+}

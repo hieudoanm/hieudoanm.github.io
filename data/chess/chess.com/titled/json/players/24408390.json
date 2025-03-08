@@ -1,0 +1,84 @@
+{
+    "player_id": 24408390,
+    "@id": "https://api.chess.com/pub/player/mistango",
+    "url": "https://www.chess.com/member/Mistango",
+    "name": "Ruslan Musalov",
+    "username": "mistango",
+    "title": "IM",
+    "followers": 101,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734130939,
+    "joined": 1443901613,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2399,
+            "date": 1622039507,
+            "rd": 229
+        },
+        "best": {
+            "rating": 2399,
+            "date": 1620292744,
+            "game": "https://www.chess.com/game/live/6162010847"
+        },
+        "record": {
+            "win": 6,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2666,
+            "date": 1732824489,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2706,
+            "date": 1732609996,
+            "game": "https://www.chess.com/game/live/115741200027"
+        },
+        "record": {
+            "win": 2964,
+            "loss": 3663,
+            "draw": 498
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2599,
+            "date": 1732648563,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2797,
+            "date": 1562699250,
+            "game": "https://www.chess.com/game/live/110064612381"
+        },
+        "record": {
+            "win": 2911,
+            "loss": 3260,
+            "draw": 626
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3244,
+            "date": 1729974721
+        },
+        "lowest": {
+            "rating": 1345,
+            "date": 1488923812
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

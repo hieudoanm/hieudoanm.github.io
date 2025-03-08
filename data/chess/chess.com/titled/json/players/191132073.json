@@ -1,0 +1,83 @@
+{
+    "player_id": 191132073,
+    "@id": "https://api.chess.com/pub/player/thedrunkmonkey7",
+    "url": "https://www.chess.com/member/TheDrunkMonkey7",
+    "username": "thedrunkmonkey7",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/BH",
+    "last_online": 1734121011,
+    "joined": 1658754406,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2008,
+            "date": 1730741984,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2008,
+            "date": 1730741984,
+            "game": "https://www.chess.com/game/live/124480121147"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2507,
+            "date": 1731612836,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2516,
+            "date": 1730568431,
+            "game": "https://www.chess.com/game/live/124307324443"
+        },
+        "record": {
+            "win": 84,
+            "loss": 69,
+            "draw": 10
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2531,
+            "date": 1733340430,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2626,
+            "date": 1730640983,
+            "game": "https://www.chess.com/game/live/82207288871"
+        },
+        "record": {
+            "win": 404,
+            "loss": 414,
+            "draw": 60
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3104,
+            "date": 1719517934
+        },
+        "lowest": {
+            "rating": 2276,
+            "date": 1670352815
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

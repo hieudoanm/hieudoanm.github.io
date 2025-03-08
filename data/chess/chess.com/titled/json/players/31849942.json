@@ -1,0 +1,17 @@
+{
+    "player_id": 31849942,
+    "@id": "https://api.chess.com/pub/player/silentdeath42",
+    "url": "https://www.chess.com/member/SiLentDeath42",
+    "name": "Alp Tuna",
+    "username": "silentdeath42",
+    "title": "FM",
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1733869536,
+    "joined": 1482607174,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

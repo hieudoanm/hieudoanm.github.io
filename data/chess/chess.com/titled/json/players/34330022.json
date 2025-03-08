@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34330022.1404a854.200x200o.e84d9f23bad7.jpeg",
+    "player_id": 34330022,
+    "@id": "https://api.chess.com/pub/player/stefy02",
+    "url": "https://www.chess.com/member/stefy02",
+    "name": "Viktoriia Kirchei",
+    "username": "stefy02",
+    "title": "WFM",
+    "followers": 86,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1731169175,
+    "joined": 1490710828,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2200,
+            "date": 1730538369,
+            "rd": 153
+        },
+        "best": {
+            "rating": 2200,
+            "date": 1707571501,
+            "game": "https://www.chess.com/game/live/2893796075"
+        },
+        "record": {
+            "win": 6,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2484,
+            "date": 1734091265,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2493,
+            "date": 1733760649,
+            "game": "https://www.chess.com/game/live/4315901838"
+        },
+        "record": {
+            "win": 497,
+            "loss": 533,
+            "draw": 50
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2470,
+            "date": 1733330971,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2573,
+            "date": 1727110221,
+            "game": "https://www.chess.com/game/live/85615785699"
+        },
+        "record": {
+            "win": 1429,
+            "loss": 1585,
+            "draw": 248
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3361,
+            "date": 1660572315
+        },
+        "lowest": {
+            "rating": 845,
+            "date": 1490712881
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 55,
+            "score": 52
+        }
+    }
+}

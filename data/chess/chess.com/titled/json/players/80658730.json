@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/80658730.27aa3601.200x200o.e6800d83c797.jpeg",
+    "player_id": 80658730,
+    "@id": "https://api.chess.com/pub/player/topin8",
+    "url": "https://www.chess.com/member/topin8",
+    "name": "Daniel Pinto",
+    "username": "topin8",
+    "title": "FM",
+    "followers": 40,
+    "country": "https://api.chess.com/pub/country/BO",
+    "last_online": 1734139918,
+    "joined": 1590585698,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

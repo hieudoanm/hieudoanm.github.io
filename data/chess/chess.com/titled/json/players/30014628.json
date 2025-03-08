@@ -1,0 +1,17 @@
+{
+    "player_id": 30014628,
+    "@id": "https://api.chess.com/pub/player/williestew",
+    "url": "https://www.chess.com/member/williestew",
+    "name": "Will Stewart",
+    "username": "williestew",
+    "title": "FM",
+    "followers": 68,
+    "country": "https://api.chess.com/pub/country/CR",
+    "last_online": 1734125616,
+    "joined": 1474333211,
+    "status": "staff",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

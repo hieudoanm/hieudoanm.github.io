@@ -1,0 +1,66 @@
+{
+    "player_id": 341040001,
+    "@id": "https://api.chess.com/pub/player/nf3b31-0",
+    "url": "https://www.chess.com/member/Nf3b31-0",
+    "username": "nf3b31-0",
+    "title": "IM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734177305,
+    "joined": 1706138753,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2582,
+            "date": 1720132968,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2594,
+            "date": 1707518005,
+            "game": "https://www.chess.com/game/live/103848569847"
+        },
+        "record": {
+            "win": 33,
+            "loss": 31,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2717,
+            "date": 1733947756,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2781,
+            "date": 1730051183,
+            "game": "https://www.chess.com/game/live/123622800563"
+        },
+        "record": {
+            "win": 480,
+            "loss": 477,
+            "draw": 112
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3272,
+            "date": 1716654834
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1706138753
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

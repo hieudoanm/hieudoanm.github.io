@@ -1,0 +1,111 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/9449008.e4c7d7c3.200x200o.39adaaff88e3.jpeg",
+    "player_id": 9449008,
+    "@id": "https://api.chess.com/pub/player/manuellarrea",
+    "url": "https://www.chess.com/member/manuellarrea",
+    "name": "GUSTAVO MANUEL LARREA LLORCA",
+    "username": "manuellarrea",
+    "title": "FM",
+    "followers": 234,
+    "country": "https://api.chess.com/pub/country/UY",
+    "location": "San Jos\u00e9 de Mayo",
+    "last_online": 1733923926,
+    "joined": 1351556208,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1728,
+            "date": 1734146676,
+            "rd": 62
+        },
+        "best": {
+            "rating": 2057,
+            "date": 1596576299,
+            "game": "https://www.chess.com/game/daily/265581208"
+        },
+        "record": {
+            "win": 2374,
+            "loss": 536,
+            "draw": 228,
+            "time_per_move": 22708,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 911,
+            "withdraw": 0,
+            "count": 4,
+            "highest_finish": 1
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1921,
+            "date": 1595467731,
+            "rd": 253
+        },
+        "best": {
+            "rating": 1921,
+            "date": 1595467731,
+            "game": "https://www.chess.com/game/live/5190332125"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1975,
+            "date": 1599518041,
+            "rd": 43
+        },
+        "best": {
+            "rating": 1890,
+            "date": 1597419488,
+            "game": "https://www.chess.com/game/live/5261093136"
+        },
+        "record": {
+            "win": 84,
+            "loss": 41,
+            "draw": 5
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2271,
+            "date": 1733405446,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2365,
+            "date": 1665970088,
+            "game": "https://www.chess.com/game/live/4846694976"
+        },
+        "record": {
+            "win": 3095,
+            "loss": 1973,
+            "draw": 449
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3391,
+            "date": 1715085295
+        },
+        "lowest": {
+            "rating": 1307,
+            "date": 1351556257
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 46
+        }
+    }
+}

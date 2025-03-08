@@ -1,0 +1,62 @@
+{
+    "player_id": 304095015,
+    "@id": "https://api.chess.com/pub/player/jackal6469",
+    "url": "https://www.chess.com/member/Jackal6469",
+    "username": "jackal6469",
+    "title": "IM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Cadiz",
+    "last_online": 1734106483,
+    "joined": 1691253740,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2863,
+            "date": 1732651055,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2863,
+            "date": 1732651055,
+            "game": "https://www.chess.com/game/live/126389388287"
+        },
+        "record": {
+            "win": 158,
+            "loss": 22,
+            "draw": 8
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2750,
+            "date": 1733956997,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2750,
+            "date": 1733956997,
+            "game": "https://www.chess.com/game/live/127265447495"
+        },
+        "record": {
+            "win": 40,
+            "loss": 14,
+            "draw": 2
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3155,
+            "date": 1732740285
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1691253740
+        }
+    },
+    "puzzle_rush": {}
+}

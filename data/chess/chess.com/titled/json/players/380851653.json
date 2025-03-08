@@ -1,0 +1,62 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/380851653.7f19930b.200x200o.59c65c9eff72.webp",
+    "player_id": 380851653,
+    "@id": "https://api.chess.com/pub/player/realsteel2008",
+    "url": "https://www.chess.com/member/realsteel2008",
+    "username": "realsteel2008",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1733565631,
+    "joined": 1723584818,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2415,
+            "date": 1733508735,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2446,
+            "date": 1733507806,
+            "game": "https://www.chess.com/game/live/127231870423"
+        },
+        "record": {
+            "win": 47,
+            "loss": 34,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2357,
+            "date": 1732826138,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2451,
+            "date": 1723649984,
+            "game": "https://www.chess.com/game/live/121861187745"
+        },
+        "record": {
+            "win": 66,
+            "loss": 69,
+            "draw": 18
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2741,
+            "date": 1730443267
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1723584818
+        }
+    },
+    "puzzle_rush": {}
+}

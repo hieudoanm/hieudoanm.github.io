@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/60305094.f814b4ea.200x200o.62dc7a04b260.jpg",
+    "player_id": 60305094,
+    "@id": "https://api.chess.com/pub/player/picturesquecheck",
+    "url": "https://www.chess.com/member/picturesquecheck",
+    "name": "Liwia Jarocka",
+    "username": "picturesquecheck",
+    "title": "FM",
+    "followers": 132,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734087547,
+    "joined": 1556377925,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1722,
+            "date": 1681941587,
+            "rd": 214
+        },
+        "best": {
+            "rating": 2215,
+            "date": 1567705715,
+            "game": "https://www.chess.com/game/live/4007989934"
+        },
+        "record": {
+            "win": 12,
+            "loss": 4,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2319,
+            "date": 1727638752,
+            "rd": 73
+        },
+        "best": {
+            "rating": 2423,
+            "date": 1684450195,
+            "game": "https://www.chess.com/game/live/77748260805"
+        },
+        "record": {
+            "win": 607,
+            "loss": 673,
+            "draw": 87
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2458,
+            "date": 1734088235,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2546,
+            "date": 1724184641,
+            "game": "https://www.chess.com/game/live/121731021285"
+        },
+        "record": {
+            "win": 2728,
+            "loss": 2827,
+            "draw": 654
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3106,
+            "date": 1652879270
+        },
+        "lowest": {
+            "rating": 2111,
+            "date": 1566405316
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

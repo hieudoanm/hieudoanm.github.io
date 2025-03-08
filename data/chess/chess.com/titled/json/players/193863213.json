@@ -1,0 +1,51 @@
+{
+    "player_id": 193863213,
+    "@id": "https://api.chess.com/pub/player/small_dragon",
+    "url": "https://www.chess.com/member/small_dragon",
+    "name": "Anna Zhurova",
+    "username": "small_dragon",
+    "title": "WFM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/RS",
+    "last_online": 1733654535,
+    "joined": 1660842443,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2470,
+            "date": 1729414109,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2545,
+            "date": 1690651523,
+            "game": "https://www.chess.com/game/live/111856985133"
+        },
+        "record": {
+            "win": 67,
+            "loss": 45,
+            "draw": 15
+        }
+    },
+    "fide": 2200,
+    "tactics": {
+        "highest": {
+            "rating": 3554,
+            "date": 1731008931
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1660842443
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 39,
+            "score": 36
+        }
+    }
+}

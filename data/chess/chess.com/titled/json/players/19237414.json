@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19237414.c0fe9b42.200x200o.9353cd0b661d.jpeg",
+    "player_id": 19237414,
+    "@id": "https://api.chess.com/pub/player/ylr5000",
+    "url": "https://www.chess.com/member/ylr5000",
+    "name": "Yunier Leyva Rivera",
+    "username": "ylr5000",
+    "title": "IM",
+    "followers": 32,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Miami, Florida",
+    "last_online": 1734095110,
+    "joined": 1412885162,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2387,
+            "date": 1720209504,
+            "rd": 138
+        },
+        "best": {
+            "rating": 2551,
+            "date": 1608403570,
+            "game": "https://www.chess.com/game/live/3094094092"
+        },
+        "record": {
+            "win": 533,
+            "loss": 363,
+            "draw": 54
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2463,
+            "date": 1734095432,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2595,
+            "date": 1538171493,
+            "game": "https://www.chess.com/game/live/91293664149"
+        },
+        "record": {
+            "win": 1199,
+            "loss": 806,
+            "draw": 150
+        }
+    },
+    "fide": 2420,
+    "tactics": {
+        "highest": {
+            "rating": 2835,
+            "date": 1657067695
+        },
+        "lowest": {
+            "rating": 1351,
+            "date": 1463157794
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

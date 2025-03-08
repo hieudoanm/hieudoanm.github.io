@@ -1,0 +1,104 @@
+{
+    "player_id": 336550767,
+    "@id": "https://api.chess.com/pub/player/clayk1ng",
+    "url": "https://www.chess.com/member/ClayK1ng",
+    "name": "Aleksandrs Jazdanovs",
+    "username": "clayk1ng",
+    "title": "CM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/LV",
+    "location": "Riga",
+    "last_online": 1734162923,
+    "joined": 1704300195,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1749,
+            "date": 1733756491,
+            "rd": 281
+        },
+        "best": {
+            "rating": 1749,
+            "date": 1731230016,
+            "game": "https://www.chess.com/game/daily/617130127"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 41341,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2100,
+            "date": 1714921482,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2100,
+            "date": 1714921482,
+            "game": "https://www.chess.com/game/live/108660113111"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2340,
+            "date": 1727885484,
+            "rd": 133
+        },
+        "best": {
+            "rating": 2457,
+            "date": 1707861434,
+            "game": "https://www.chess.com/game/live/101600471119"
+        },
+        "record": {
+            "win": 4,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2324,
+            "date": 1732923539,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2493,
+            "date": 1706640446,
+            "game": "https://www.chess.com/game/live/100301059003"
+        },
+        "record": {
+            "win": 312,
+            "loss": 249,
+            "draw": 60
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3352,
+            "date": 1707465511
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1704300195
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

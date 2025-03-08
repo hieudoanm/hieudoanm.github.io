@@ -1,0 +1,67 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/314832841.dac6cbf8.200x200o.a898c25d2849.jpg",
+    "player_id": 314832841,
+    "@id": "https://api.chess.com/pub/player/i_am_whitebeard",
+    "url": "https://www.chess.com/member/I_Am_Whitebeard",
+    "username": "i_am_whitebeard",
+    "title": "IM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1734135710,
+    "joined": 1695466745,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2831,
+            "date": 1734068984,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2986,
+            "date": 1708247948,
+            "game": "https://www.chess.com/game/live/126604742939"
+        },
+        "record": {
+            "win": 470,
+            "loss": 213,
+            "draw": 36
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2952,
+            "date": 1733879838,
+            "rd": 29
+        },
+        "best": {
+            "rating": 3038,
+            "date": 1707206010,
+            "game": "https://www.chess.com/game/live/100194176303"
+        },
+        "record": {
+            "win": 855,
+            "loss": 490,
+            "draw": 113
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3676,
+            "date": 1708249366
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1695466745
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

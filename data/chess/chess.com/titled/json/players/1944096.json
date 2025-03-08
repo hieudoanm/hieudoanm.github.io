@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1944096.5ad00f5c.200x200o.24b5dbad9cc7.jpg",
+    "player_id": 1944096,
+    "@id": "https://api.chess.com/pub/player/houseofdurin",
+    "url": "https://www.chess.com/member/HouseOfDurin",
+    "name": "Miroslav Simonovic",
+    "username": "houseofdurin",
+    "title": "CM",
+    "followers": 191,
+    "country": "https://api.chess.com/pub/country/RS",
+    "location": "Belgrade",
+    "last_online": 1734059460,
+    "joined": 1243617491,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2175,
+            "date": 1715624952,
+            "rd": 66
+        },
+        "best": {
+            "rating": 2217,
+            "date": 1673528993,
+            "game": "https://www.chess.com/game/daily/402736253"
+        },
+        "record": {
+            "win": 133,
+            "loss": 11,
+            "draw": 87,
+            "time_per_move": 48934,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1948,
+            "date": 1706194467,
+            "rd": 56
+        },
+        "best": {
+            "rating": 1986,
+            "date": 1698327589,
+            "game": "https://www.chess.com/game/daily/484004199"
+        },
+        "record": {
+            "win": 47,
+            "loss": 6,
+            "draw": 5,
+            "time_per_move": 48934,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2180,
+            "date": 1733682144,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2260,
+            "date": 1702759080,
+            "game": "https://www.chess.com/game/live/96496116633"
+        },
+        "record": {
+            "win": 299,
+            "loss": 135,
+            "draw": 58
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2103,
+            "date": 1722103162,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2110,
+            "date": 1709404479,
+            "game": "https://www.chess.com/game/live/103143211263"
+        },
+        "record": {
+            "win": 860,
+            "loss": 585,
+            "draw": 74
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2316,
+            "date": 1727025135,
+            "rd": 57
+        },
+        "best": {
+            "rating": 2354,
+            "date": 1718747940,
+            "game": "https://www.chess.com/game/live/6579393215"
+        },
+        "record": {
+            "win": 3719,
+            "loss": 2440,
+            "draw": 466
+        }
+    },
+    "fide": 2100,
+    "tactics": {
+        "highest": {
+            "rating": 2403,
+            "date": 1651374039
+        },
+        "lowest": {
+            "rating": 1107,
+            "date": 1420897107
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

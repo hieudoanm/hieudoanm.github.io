@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/352890995.ec707c71.200x200o.db2c244a3c3d.jpg",
+    "player_id": 352890995,
+    "@id": "https://api.chess.com/pub/player/waggx",
+    "url": "https://www.chess.com/member/waggx",
+    "username": "waggx",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/AR",
+    "last_online": 1734182703,
+    "joined": 1711304065,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

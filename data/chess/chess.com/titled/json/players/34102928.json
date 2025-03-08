@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34102928.8a14220c.200x200o.6efa644bc723.jpeg",
+    "player_id": 34102928,
+    "@id": "https://api.chess.com/pub/player/willhaven3",
+    "url": "https://www.chess.com/member/Willhaven3",
+    "name": "David Casta\u00f1eda",
+    "username": "willhaven3",
+    "title": "FM",
+    "followers": 84,
+    "country": "https://api.chess.com/pub/country/CO",
+    "last_online": 1733848319,
+    "joined": 1489965665,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

@@ -1,0 +1,88 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/65862844.af338f18.200x200o.ce3be69934d6.jpeg",
+    "player_id": 65862844,
+    "@id": "https://api.chess.com/pub/player/tomescuv",
+    "url": "https://www.chess.com/member/tomescuv",
+    "name": "Vlad Tomescu",
+    "username": "tomescuv",
+    "title": "IM",
+    "followers": 135,
+    "country": "https://api.chess.com/pub/country/RO",
+    "last_online": 1734098199,
+    "joined": 1569306839,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2006,
+            "date": 1717243265,
+            "rd": 344
+        },
+        "best": {
+            "rating": 2006,
+            "date": 1715225893,
+            "game": "https://www.chess.com/game/daily/556273459"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 316753,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2341,
+            "date": 1731659266,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2369,
+            "date": 1680682086,
+            "game": "https://www.chess.com/game/live/73164854029"
+        },
+        "record": {
+            "win": 37,
+            "loss": 10,
+            "draw": 5
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2495,
+            "date": 1733416518,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2581,
+            "date": 1648311848,
+            "game": "https://www.chess.com/game/live/37648303965"
+        },
+        "record": {
+            "win": 7680,
+            "loss": 6208,
+            "draw": 1654
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3207,
+            "date": 1731567716
+        },
+        "lowest": {
+            "rating": 2310,
+            "date": 1587394034
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

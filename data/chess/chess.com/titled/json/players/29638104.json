@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/29638104.742a3f6e.200x200o.9b6712ec66dc.jpeg",
+    "player_id": 29638104,
+    "@id": "https://api.chess.com/pub/player/carlosmoscoso",
+    "url": "https://www.chess.com/member/CarlosMoscoso",
+    "name": "Carlos Moscoso",
+    "username": "carlosmoscoso",
+    "title": "CM",
+    "followers": 20,
+    "country": "https://api.chess.com/pub/country/DO",
+    "last_online": 1733930678,
+    "joined": 1472158124,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

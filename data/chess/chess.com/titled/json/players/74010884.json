@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/74010884.9564d8da.200x200o.c0caa78ccb4e.jpeg",
+    "player_id": 74010884,
+    "@id": "https://api.chess.com/pub/player/alex_yang",
+    "url": "https://www.chess.com/member/Alex_Yang",
+    "name": "Alexander Yang",
+    "username": "alex_yang",
+    "title": "CM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1728058200,
+    "joined": 1584761349,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

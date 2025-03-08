@@ -1,0 +1,58 @@
+{
+    "player_id": 375856971,
+    "@id": "https://api.chess.com/pub/player/breamish1",
+    "url": "https://www.chess.com/member/Breamish1",
+    "name": "David Schernthaner",
+    "username": "breamish1",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/AT",
+    "last_online": 1733830672,
+    "joined": 1721226253,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2144,
+            "date": 1726582580,
+            "rd": 247
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2605,
+            "date": 1733683897,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2619,
+            "date": 1726607251,
+            "game": "https://www.chess.com/game/live/126650397443"
+        },
+        "record": {
+            "win": 226,
+            "loss": 136,
+            "draw": 47
+        }
+    },
+    "fide": 2329,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1721226253
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1721226253
+        }
+    },
+    "puzzle_rush": {}
+}

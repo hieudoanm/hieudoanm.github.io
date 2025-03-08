@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/194443927.7727a650.200x200o.acc20abeb360.jpg",
+    "player_id": 194443927,
+    "@id": "https://api.chess.com/pub/player/kyawlayhtaik8",
+    "url": "https://www.chess.com/member/kyawlayhtaik8",
+    "name": "Ko Htaik",
+    "username": "kyawlayhtaik8",
+    "title": "FM",
+    "followers": 128,
+    "country": "https://api.chess.com/pub/country/MM",
+    "last_online": 1734168945,
+    "joined": 1661271938,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1640,
+            "date": 1713799476,
+            "rd": 319
+        },
+        "best": {
+            "rating": 1640,
+            "date": 1713796670,
+            "game": "https://www.chess.com/game/daily/492495215"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 2933,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2439,
+            "date": 1733102132,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2461,
+            "date": 1712813823,
+            "game": "https://www.chess.com/game/live/88526527153"
+        },
+        "record": {
+            "win": 194,
+            "loss": 90,
+            "draw": 23
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2105,
+            "date": 1731833917,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2161,
+            "date": 1729964114,
+            "game": "https://www.chess.com/game/live/123698433871"
+        },
+        "record": {
+            "win": 372,
+            "loss": 278,
+            "draw": 20
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2299,
+            "date": 1734106576,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2460,
+            "date": 1669349865,
+            "game": "https://www.chess.com/game/live/109843888995"
+        },
+        "record": {
+            "win": 1708,
+            "loss": 1508,
+            "draw": 163
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3396,
+            "date": 1707317845
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1661310233
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 42
+        }
+    }
+}

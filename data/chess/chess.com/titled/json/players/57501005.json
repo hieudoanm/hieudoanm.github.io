@@ -1,0 +1,16 @@
+{
+    "player_id": 57501005,
+    "@id": "https://api.chess.com/pub/player/witcher8",
+    "url": "https://www.chess.com/member/witcher8",
+    "username": "witcher8",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1696435179,
+    "joined": 1550475291,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

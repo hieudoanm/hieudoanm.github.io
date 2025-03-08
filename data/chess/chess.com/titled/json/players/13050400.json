@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13050400.82930b08.200x200o.ad89a324e8a6.jpg",
+    "player_id": 13050400,
+    "@id": "https://api.chess.com/pub/player/malhar9",
+    "url": "https://www.chess.com/member/Malhar9",
+    "name": "Aniruddha Deshpande",
+    "username": "malhar9",
+    "title": "FM",
+    "followers": 121,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "PUNE",
+    "last_online": 1734148076,
+    "joined": 1375859155,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1039,
+            "date": 1707489505,
+            "rd": 275
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1375859155,
+            "game": "https://www.chess.com/game/daily/236610674"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 156805,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2353,
+            "date": 1693360975,
+            "rd": 115
+        },
+        "best": {
+            "rating": 2393,
+            "date": 1614160086,
+            "game": "https://www.chess.com/game/live/10385854625"
+        },
+        "record": {
+            "win": 194,
+            "loss": 40,
+            "draw": 23
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2434,
+            "date": 1733588421,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2561,
+            "date": 1729142413,
+            "game": "https://www.chess.com/game/live/5518037014"
+        },
+        "record": {
+            "win": 305,
+            "loss": 267,
+            "draw": 40
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2324,
+            "date": 1734148898,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2428,
+            "date": 1618667903,
+            "game": "https://www.chess.com/game/live/5148325364"
+        },
+        "record": {
+            "win": 501,
+            "loss": 259,
+            "draw": 53
+        }
+    },
+    "fide": 2301,
+    "tactics": {
+        "highest": {
+            "rating": 3497,
+            "date": 1730355052
+        },
+        "lowest": {
+            "rating": 1215,
+            "date": 1495037983
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23963652.53efde63.200x200o.1be56f3cfb59.jpg",
+    "player_id": 23963652,
+    "@id": "https://api.chess.com/pub/player/rikikits",
+    "url": "https://www.chess.com/member/Rikikits",
+    "name": "Maxime Lagarde",
+    "username": "rikikits",
+    "title": "GM",
+    "followers": 1009,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1733422453,
+    "joined": 1441380914,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2032,
+            "date": 1711065202,
+            "rd": 76
+        },
+        "best": {
+            "rating": 2362,
+            "date": 1511770647,
+            "game": "https://www.chess.com/game/daily/136409774"
+        },
+        "record": {
+            "win": 92,
+            "loss": 37,
+            "draw": 27,
+            "time_per_move": 39971,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2553,
+            "date": 1727292819,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2815,
+            "date": 1590773098,
+            "game": "https://www.chess.com/game/live/121023009143"
+        },
+        "record": {
+            "win": 13,
+            "loss": 12,
+            "draw": 11
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2917,
+            "date": 1702136166,
+            "rd": 67
+        },
+        "best": {
+            "rating": 2956,
+            "date": 1702134279,
+            "game": "https://www.chess.com/game/live/2009341823"
+        },
+        "record": {
+            "win": 6611,
+            "loss": 4525,
+            "draw": 799
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2841,
+            "date": 1733424336,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2911,
+            "date": 1622497986,
+            "game": "https://www.chess.com/game/live/85854048057"
+        },
+        "record": {
+            "win": 2458,
+            "loss": 1704,
+            "draw": 428
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2409,
+            "date": 1727253307
+        },
+        "lowest": {
+            "rating": 1356,
+            "date": 1479478843
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 53,
+            "score": 50
+        }
+    }
+}

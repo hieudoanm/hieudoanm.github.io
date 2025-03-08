@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/94391686.2837b4f2.200x200o.c9cf93a3bd21.jpg",
+    "player_id": 94391686,
+    "@id": "https://api.chess.com/pub/player/warrior_aquiles",
+    "url": "https://www.chess.com/member/Warrior_Aquiles",
+    "username": "warrior_aquiles",
+    "title": "FM",
+    "followers": 96,
+    "country": "https://api.chess.com/pub/country/GR",
+    "last_online": 1734150297,
+    "joined": 1604023061,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

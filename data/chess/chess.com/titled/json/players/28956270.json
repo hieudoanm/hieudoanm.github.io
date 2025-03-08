@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/28956270.3abac371.200x200o.4e0caffec37d.jpeg",
+    "player_id": 28956270,
+    "@id": "https://api.chess.com/pub/player/chessuriel",
+    "url": "https://www.chess.com/member/chessuriel",
+    "name": "Uriel Vazquez Espino",
+    "username": "chessuriel",
+    "title": "CM",
+    "followers": 434,
+    "country": "https://api.chess.com/pub/country/MX",
+    "location": "Queretaro Qro",
+    "last_online": 1734103311,
+    "joined": 1467869943,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/30409510.b95591e5.200x200o.26c0e7dcc386.jpeg",
+    "player_id": 30409510,
+    "@id": "https://api.chess.com/pub/player/sjoerd893",
+    "url": "https://www.chess.com/member/sjoerd893",
+    "name": "Sjoerd van Roon",
+    "username": "sjoerd893",
+    "title": "FM",
+    "followers": 83,
+    "country": "https://api.chess.com/pub/country/NL",
+    "last_online": 1734021285,
+    "joined": 1476546802,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

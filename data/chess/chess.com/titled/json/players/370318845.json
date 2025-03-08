@@ -1,0 +1,90 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/370318845.1e63dcbd.200x200o.cb8c9b1c448e.jpg",
+    "player_id": 370318845,
+    "@id": "https://api.chess.com/pub/player/thecatdoglady",
+    "url": "https://www.chess.com/member/thecatdoglady",
+    "name": "Yilin Li",
+    "username": "thecatdoglady",
+    "title": "WFM",
+    "followers": 18,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1734129070,
+    "joined": 1718650973,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2024,
+            "date": 1720206142,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2039,
+            "date": 1720026591,
+            "game": "https://www.chess.com/game/live/113764761961"
+        },
+        "record": {
+            "win": 1,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1869,
+            "date": 1731433353,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2191,
+            "date": 1723493798,
+            "game": "https://www.chess.com/game/live/117231630127"
+        },
+        "record": {
+            "win": 333,
+            "loss": 325,
+            "draw": 39
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2146,
+            "date": 1725761559,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2192,
+            "date": 1722984249,
+            "game": "https://www.chess.com/game/live/117476469677"
+        },
+        "record": {
+            "win": 25,
+            "loss": 51,
+            "draw": 2
+        }
+    },
+    "fide": 1919,
+    "tactics": {
+        "highest": {
+            "rating": 3236,
+            "date": 1723589127
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1718650973
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        },
+        "daily": {
+            "total_attempts": 38,
+            "score": 35
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23077772.d2e6db55.200x200o.d43e8b968f56.jpg",
+    "player_id": 23077772,
+    "@id": "https://api.chess.com/pub/player/hovik_hayrapetyan",
+    "url": "https://www.chess.com/member/Hovik_Hayrapetyan",
+    "name": "Hovik Hayrapetyan",
+    "username": "hovik_hayrapetyan",
+    "title": "GM",
+    "followers": 283,
+    "country": "https://api.chess.com/pub/country/AM",
+    "location": "Stepanakert",
+    "last_online": 1734006816,
+    "joined": 1435908886,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 764,
+            "date": 1610270896,
+            "rd": 310
+        },
+        "record": {
+            "win": 6,
+            "loss": 6,
+            "draw": 0,
+            "time_per_move": 26576,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2862,
+            "date": 1716638230,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2864,
+            "date": 1708691318,
+            "game": "https://www.chess.com/game/live/101129648813"
+        },
+        "record": {
+            "win": 1417,
+            "loss": 1242,
+            "draw": 128
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2889,
+            "date": 1723062312,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2913,
+            "date": 1708450306,
+            "game": "https://www.chess.com/game/live/100683112937"
+        },
+        "record": {
+            "win": 890,
+            "loss": 659,
+            "draw": 121
+        }
+    },
+    "fide": 2442,
+    "tactics": {
+        "highest": {
+            "rating": 5224,
+            "date": 1573473644
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1516477475
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

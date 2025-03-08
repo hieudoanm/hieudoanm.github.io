@@ -1,0 +1,104 @@
+{
+    "player_id": 99091282,
+    "@id": "https://api.chess.com/pub/player/pacingrope",
+    "url": "https://www.chess.com/member/PacingRope",
+    "name": "Bartlomiej Turski",
+    "username": "pacingrope",
+    "title": "FM",
+    "followers": 63,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734121212,
+    "joined": 1606230742,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2101,
+            "date": 1709371806,
+            "rd": 208
+        },
+        "best": {
+            "rating": 2101,
+            "date": 1677764723,
+            "game": "https://www.chess.com/game/daily/463830633"
+        },
+        "record": {
+            "win": 1,
+            "loss": 3,
+            "draw": 1,
+            "time_per_move": 33872,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2080,
+            "date": 1718909604,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2080,
+            "date": 1718909604,
+            "game": "https://www.chess.com/game/live/99440495687"
+        },
+        "record": {
+            "win": 8,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2814,
+            "date": 1734126297,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2850,
+            "date": 1732727498,
+            "game": "https://www.chess.com/game/live/127859984443"
+        },
+        "record": {
+            "win": 996,
+            "loss": 872,
+            "draw": 167
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2906,
+            "date": 1733872790,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2962,
+            "date": 1693602765,
+            "game": "https://www.chess.com/game/live/96576442349"
+        },
+        "record": {
+            "win": 668,
+            "loss": 781,
+            "draw": 298
+        }
+    },
+    "fide": 2345,
+    "tactics": {
+        "highest": {
+            "rating": 3634,
+            "date": 1655909821
+        },
+        "lowest": {
+            "rating": 1210,
+            "date": 1609353511
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 71,
+            "score": 68
+        }
+    }
+}

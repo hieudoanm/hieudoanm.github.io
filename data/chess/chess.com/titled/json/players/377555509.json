@@ -1,0 +1,34 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/377555509.0651e300.200x200o.3746761fa1f1.jpg",
+    "player_id": 377555509,
+    "@id": "https://api.chess.com/pub/player/superpeach1234",
+    "url": "https://www.chess.com/member/SuperPeach1234",
+    "name": "Luna Yuexiu Xu",
+    "username": "superpeach1234",
+    "title": "WCM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/NZ",
+    "last_online": 1734149698,
+    "joined": 1722034477,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "tactics": {
+        "highest": {
+            "rating": 3728,
+            "date": 1732713098
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1722034477
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

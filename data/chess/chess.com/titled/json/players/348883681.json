@@ -1,0 +1,97 @@
+{
+    "player_id": 348883681,
+    "@id": "https://api.chess.com/pub/player/patatablava123",
+    "url": "https://www.chess.com/member/patatablava123",
+    "username": "patatablava123",
+    "title": "WCM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/MK",
+    "last_online": 1734179771,
+    "joined": 1709564081,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1200,
+            "date": 1726580565,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 3624,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2167,
+            "date": 1725802783,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2174,
+            "date": 1725802125,
+            "game": "https://www.chess.com/game/live/119539871977"
+        },
+        "record": {
+            "win": 3,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2030,
+            "date": 1733093595,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2407,
+            "date": 1726328103,
+            "game": "https://www.chess.com/game/live/106915836855"
+        },
+        "record": {
+            "win": 707,
+            "loss": 585,
+            "draw": 78
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1923,
+            "date": 1734181557,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2350,
+            "date": 1716474216,
+            "game": "https://www.chess.com/game/live/114775719567"
+        },
+        "record": {
+            "win": 741,
+            "loss": 645,
+            "draw": 105
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2005,
+            "date": 1733928565
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1709564081
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 44,
+            "score": 41
+        }
+    }
+}

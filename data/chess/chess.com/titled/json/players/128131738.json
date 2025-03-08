@@ -1,0 +1,84 @@
+{
+    "player_id": 128131738,
+    "@id": "https://api.chess.com/pub/player/skyethestar",
+    "url": "https://www.chess.com/member/skyethestar",
+    "name": "Skye Attieh",
+    "username": "skyethestar",
+    "title": "WCM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/LB",
+    "last_online": 1734171113,
+    "joined": 1615762479,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1294,
+            "date": 1617017218,
+            "rd": 83
+        },
+        "best": {
+            "rating": 1332,
+            "date": 1615974928,
+            "game": "https://www.chess.com/game/live/10432773857"
+        },
+        "record": {
+            "win": 13,
+            "loss": 12,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1655,
+            "date": 1734171581,
+            "rd": 111
+        },
+        "best": {
+            "rating": 1657,
+            "date": 1734171272,
+            "game": "https://www.chess.com/game/live/49924133529"
+        },
+        "record": {
+            "win": 3,
+            "loss": 5,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1845,
+            "date": 1733915269,
+            "rd": 73
+        },
+        "best": {
+            "rating": 1845,
+            "date": 1733915269,
+            "game": "https://www.chess.com/game/live/127605666495"
+        },
+        "record": {
+            "win": 22,
+            "loss": 13,
+            "draw": 1
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 943,
+            "date": 1656352798
+        },
+        "lowest": {
+            "rating": 810,
+            "date": 1615913495
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 24,
+            "score": 22
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "player_id": 51425852,
+    "@id": "https://api.chess.com/pub/player/vpsetter",
+    "url": "https://www.chess.com/member/vpsetter",
+    "name": "Timur Fakhrutdinov",
+    "username": "vpsetter",
+    "title": "FM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "Verknyaya Pyshma",
+    "last_online": 1732838738,
+    "joined": 1541232076,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

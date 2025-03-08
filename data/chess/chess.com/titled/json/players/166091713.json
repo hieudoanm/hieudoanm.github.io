@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/166091713.c6203142.200x200o.b27e255d143b.png",
+    "player_id": 166091713,
+    "@id": "https://api.chess.com/pub/player/eleyah",
+    "url": "https://www.chess.com/member/Eleyah",
+    "name": "Ilija Stanojevic",
+    "username": "eleyah",
+    "title": "FM",
+    "followers": 3447,
+    "country": "https://api.chess.com/pub/country/RS",
+    "location": "Belgrade",
+    "last_online": 1734182579,
+    "joined": 1640347867,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2002,
+            "date": 1731887198,
+            "rd": 348
+        },
+        "best": {
+            "rating": 2002,
+            "date": 1721212508,
+            "game": "https://www.chess.com/game/daily/675584581"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 74551,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2411,
+            "date": 1732535286,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2443,
+            "date": 1679361382,
+            "game": "https://www.chess.com/game/live/73096623055"
+        },
+        "record": {
+            "win": 37,
+            "loss": 31,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2564,
+            "date": 1723680778,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2591,
+            "date": 1718400945,
+            "game": "https://www.chess.com/game/live/66745272647"
+        },
+        "record": {
+            "win": 424,
+            "loss": 395,
+            "draw": 62
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2570,
+            "date": 1732304315,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2680,
+            "date": 1719786577,
+            "game": "https://www.chess.com/game/live/116716842757"
+        },
+        "record": {
+            "win": 986,
+            "loss": 1071,
+            "draw": 157
+        }
+    },
+    "fide": 2317,
+    "tactics": {
+        "highest": {
+            "rating": 3759,
+            "date": 1729332673
+        },
+        "lowest": {
+            "rating": 2010,
+            "date": 1667844074
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 77,
+            "score": 74
+        }
+    }
+}

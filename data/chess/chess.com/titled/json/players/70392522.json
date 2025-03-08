@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/70392522.7aeca439.200x200o.10d6f567fcf6.png",
+    "player_id": 70392522,
+    "@id": "https://api.chess.com/pub/player/turkchess1905",
+    "url": "https://www.chess.com/member/Turkchess1905",
+    "name": "Muhammed Batuhan Dastan",
+    "username": "turkchess1905",
+    "title": "GM",
+    "followers": 545,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1721728184,
+    "joined": 1578334025,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2572,
+            "date": 1659369812,
+            "rd": 349
+        },
+        "best": {
+            "rating": 2572,
+            "date": 1579105718,
+            "game": "https://www.chess.com/game/live/53108452241"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2794,
+            "date": 1718898444,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2847,
+            "date": 1677427157,
+            "game": "https://www.chess.com/game/live/63027586983"
+        },
+        "record": {
+            "win": 189,
+            "loss": 58,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2889,
+            "date": 1669207937,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2931,
+            "date": 1664562480,
+            "game": "https://www.chess.com/game/live/36875444363"
+        },
+        "record": {
+            "win": 1846,
+            "loss": 785,
+            "draw": 343
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3301,
+            "date": 1653837041
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1578334109
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

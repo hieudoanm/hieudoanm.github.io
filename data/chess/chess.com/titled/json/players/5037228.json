@@ -1,0 +1,84 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/5037228.b4b207de.200x200o.de1adac31bc1.jpg",
+    "player_id": 5037228,
+    "@id": "https://api.chess.com/pub/player/ernestoguevaralynch",
+    "url": "https://www.chess.com/member/ErnestoGuevaraLynch",
+    "username": "ernestoguevaralynch",
+    "title": "FM",
+    "followers": 118,
+    "country": "https://api.chess.com/pub/country/CU",
+    "last_online": 1733769467,
+    "joined": 1303750534,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2325,
+            "date": 1680178070,
+            "rd": 136
+        },
+        "best": {
+            "rating": 2378,
+            "date": 1678165506,
+            "game": "https://www.chess.com/game/live/71903007521"
+        },
+        "record": {
+            "win": 6,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2599,
+            "date": 1645936268,
+            "rd": 116
+        },
+        "best": {
+            "rating": 2679,
+            "date": 1606866788,
+            "game": "https://www.chess.com/game/live/1492930431"
+        },
+        "record": {
+            "win": 14560,
+            "loss": 12552,
+            "draw": 1712
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2633,
+            "date": 1733733473,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2755,
+            "date": 1632097033,
+            "game": "https://www.chess.com/game/live/88561279443"
+        },
+        "record": {
+            "win": 29279,
+            "loss": 29508,
+            "draw": 5285
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3262,
+            "date": 1675181708
+        },
+        "lowest": {
+            "rating": 1354,
+            "date": 1451407960
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

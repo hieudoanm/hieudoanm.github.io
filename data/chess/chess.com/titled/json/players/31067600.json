@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/31067600.763efcfd.200x200o.3464ebb11b83.jpeg",
+    "player_id": 31067600,
+    "@id": "https://api.chess.com/pub/player/walter_white777",
+    "url": "https://www.chess.com/member/Walter_White777",
+    "name": "Dan Durham",
+    "username": "walter_white777",
+    "title": "FM",
+    "followers": 77,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Las Vegas",
+    "last_online": 1734125489,
+    "joined": 1479769176,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

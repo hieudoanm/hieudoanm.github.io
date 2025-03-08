@@ -1,0 +1,83 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/41984542.aba4d2e2.200x200o.7a399758a190.png",
+    "player_id": 41984542,
+    "@id": "https://api.chess.com/pub/player/petukhov_dmitry",
+    "url": "https://www.chess.com/member/Petukhov_Dmitry",
+    "name": "Dmitry Petukhov",
+    "username": "petukhov_dmitry",
+    "title": "FM",
+    "followers": 42,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "Khabarovsk",
+    "last_online": 1733020668,
+    "joined": 1515057140,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 741,
+            "date": 1705915726,
+            "rd": 284
+        },
+        "best": {
+            "rating": 800,
+            "date": 1515057140,
+            "game": "https://www.chess.com/game/daily/462526139"
+        },
+        "record": {
+            "win": 11,
+            "loss": 12,
+            "draw": 0,
+            "time_per_move": 51207,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2198,
+            "date": 1707993735,
+            "rd": 64
+        },
+        "best": {
+            "rating": 2218,
+            "date": 1707577353,
+            "game": "https://www.chess.com/game/live/100095140933"
+        },
+        "record": {
+            "win": 41,
+            "loss": 5,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2564,
+            "date": 1734167541,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2673,
+            "date": 1731589094,
+            "game": "https://www.chess.com/game/live/73776192431"
+        },
+        "record": {
+            "win": 2194,
+            "loss": 1871,
+            "draw": 406
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2846,
+            "date": 1574629081
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1515094811
+        }
+    },
+    "puzzle_rush": {}
+}

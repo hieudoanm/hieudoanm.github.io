@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34058604.76bdbd99.200x200o.84120483580f.jpeg",
+    "player_id": 34058604,
+    "@id": "https://api.chess.com/pub/player/dr_thomas_quilter",
+    "url": "https://www.chess.com/member/Dr_Thomas_Quilter",
+    "name": "Tom Quilter",
+    "username": "dr_thomas_quilter",
+    "title": "CM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/GB",
+    "location": "London",
+    "last_online": 1732283388,
+    "joined": 1489831172,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

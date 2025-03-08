@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/288930779.421f7b5a.200x200o.bae1da71b3fd.jpg",
+    "player_id": 288930779,
+    "@id": "https://api.chess.com/pub/player/mindhunter08",
+    "url": "https://www.chess.com/member/Mindhunter08",
+    "name": "Vladimir Kostic",
+    "username": "mindhunter08",
+    "title": "FM",
+    "followers": 48,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734178149,
+    "joined": 1685146939,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1938,
+            "date": 1733250601,
+            "rd": 138
+        },
+        "best": {
+            "rating": 1938,
+            "date": 1716663770,
+            "game": "https://www.chess.com/game/live/104757045413"
+        },
+        "record": {
+            "win": 11,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2802,
+            "date": 1732801701,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2870,
+            "date": 1720717295,
+            "game": "https://www.chess.com/game/live/114389447589"
+        },
+        "record": {
+            "win": 1202,
+            "loss": 995,
+            "draw": 132
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2731,
+            "date": 1734108893,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2803,
+            "date": 1726267196,
+            "game": "https://www.chess.com/game/live/127838346001"
+        },
+        "record": {
+            "win": 614,
+            "loss": 703,
+            "draw": 135
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2326,
+            "date": 1723375400
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1685146939
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

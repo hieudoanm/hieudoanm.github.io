@@ -1,0 +1,17 @@
+{
+    "player_id": 49085974,
+    "@id": "https://api.chess.com/pub/player/martinez1985",
+    "url": "https://www.chess.com/member/martinez1985",
+    "name": "Lelys Stanley Martinez Duany",
+    "username": "martinez1985",
+    "title": "GM",
+    "followers": 23,
+    "country": "https://api.chess.com/pub/country/CU",
+    "last_online": 1734011229,
+    "joined": 1535147015,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

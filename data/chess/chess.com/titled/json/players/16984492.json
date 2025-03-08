@@ -1,0 +1,84 @@
+{
+    "player_id": 16984492,
+    "@id": "https://api.chess.com/pub/player/art10echr",
+    "url": "https://www.chess.com/member/Art10ECHR",
+    "name": "Quentin Fontaine",
+    "username": "art10echr",
+    "title": "FM",
+    "followers": 49,
+    "country": "https://api.chess.com/pub/country/BB",
+    "last_online": 1734084795,
+    "joined": 1398004845,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1437,
+            "date": 1719403938,
+            "rd": 182
+        },
+        "best": {
+            "rating": 1463,
+            "date": 1683881774,
+            "game": "https://www.chess.com/game/live/113142592273"
+        },
+        "record": {
+            "win": 8,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2301,
+            "date": 1733830653,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2493,
+            "date": 1722432534,
+            "game": "https://www.chess.com/game/live/64346467739"
+        },
+        "record": {
+            "win": 847,
+            "loss": 790,
+            "draw": 59
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2488,
+            "date": 1734103767,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2636,
+            "date": 1724625340,
+            "game": "https://www.chess.com/game/live/105458452231"
+        },
+        "record": {
+            "win": 14255,
+            "loss": 12948,
+            "draw": 1628
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2756,
+            "date": 1688062359
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1507308359
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 44
+        }
+    }
+}

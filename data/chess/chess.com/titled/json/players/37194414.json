@@ -1,0 +1,85 @@
+{
+    "player_id": 37194414,
+    "@id": "https://api.chess.com/pub/player/lilleper1",
+    "url": "https://www.chess.com/member/lilleper1",
+    "name": "Jonas Bjerre",
+    "username": "lilleper1",
+    "title": "GM",
+    "followers": 177,
+    "country": "https://api.chess.com/pub/country/DK",
+    "last_online": 1734123218,
+    "joined": 1500638234,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2561,
+            "date": 1715369676,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2580,
+            "date": 1715361588,
+            "game": "https://www.chess.com/game/live/109097550509"
+        },
+        "record": {
+            "win": 44,
+            "loss": 20,
+            "draw": 27
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2730,
+            "date": 1623091402,
+            "rd": 61
+        },
+        "best": {
+            "rating": 2832,
+            "date": 1603792234,
+            "game": "https://www.chess.com/game/live/5421607093"
+        },
+        "record": {
+            "win": 392,
+            "loss": 499,
+            "draw": 73
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2957,
+            "date": 1734098248,
+            "rd": 28
+        },
+        "best": {
+            "rating": 3028,
+            "date": 1732721539,
+            "game": "https://www.chess.com/game/live/123957699043"
+        },
+        "record": {
+            "win": 1971,
+            "loss": 1839,
+            "draw": 549
+        }
+    },
+    "fide": 2350,
+    "tactics": {
+        "highest": {
+            "rating": 3592,
+            "date": 1591865908
+        },
+        "lowest": {
+            "rating": 1209,
+            "date": 1506189263
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 71,
+            "score": 68
+        }
+    }
+}

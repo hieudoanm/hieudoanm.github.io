@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/56680980.fd532c9f.200x200o.1b3738cedd7f.jpeg",
+    "player_id": 56680980,
+    "@id": "https://api.chess.com/pub/player/walter_white_poland",
+    "url": "https://www.chess.com/member/Walter_White_Poland",
+    "name": "Adam Kujawski",
+    "username": "walter_white_poland",
+    "title": "FM",
+    "followers": 15,
+    "country": "https://api.chess.com/pub/country/PL",
+    "location": "Warsaw",
+    "last_online": 1734182435,
+    "joined": 1548776159,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

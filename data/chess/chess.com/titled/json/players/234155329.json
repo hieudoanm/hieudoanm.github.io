@@ -1,0 +1,87 @@
+{
+    "player_id": 234155329,
+    "@id": "https://api.chess.com/pub/player/dawnofepiphany",
+    "url": "https://www.chess.com/member/DawnofEpiphany",
+    "name": "Igor Bjelobrk",
+    "username": "dawnofepiphany",
+    "title": "IM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/MK",
+    "last_online": 1733995650,
+    "joined": 1674904418,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2005,
+            "date": 1734123489,
+            "rd": 110
+        },
+        "best": {
+            "rating": 2005,
+            "date": 1732163398,
+            "game": "https://www.chess.com/game/daily/716043921"
+        },
+        "record": {
+            "win": 90,
+            "loss": 1,
+            "draw": 2,
+            "time_per_move": 30308,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 8,
+            "highest_finish": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2615,
+            "date": 1730360049,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2615,
+            "date": 1717646413,
+            "game": "https://www.chess.com/game/live/111375631805"
+        },
+        "record": {
+            "win": 8,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2656,
+            "date": 1733985444,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2801,
+            "date": 1728788337,
+            "game": "https://www.chess.com/game/live/124095033001"
+        },
+        "record": {
+            "win": 1432,
+            "loss": 1061,
+            "draw": 297
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3393,
+            "date": 1731549799
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1674904418
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,17 @@
+{
+    "player_id": 32758502,
+    "@id": "https://api.chess.com/pub/player/artemiki",
+    "url": "https://www.chess.com/member/Artemiki",
+    "name": "Artemiki Lebedev",
+    "username": "artemiki",
+    "title": "CM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/BM",
+    "last_online": 1732632563,
+    "joined": 1485676967,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

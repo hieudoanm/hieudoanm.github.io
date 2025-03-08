@@ -1,0 +1,84 @@
+{
+    "player_id": 157369379,
+    "@id": "https://api.chess.com/pub/player/chessking0310",
+    "url": "https://www.chess.com/member/chessking0310",
+    "name": "Utsab Chatterjee",
+    "username": "chessking0310",
+    "title": "IM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734002141,
+    "joined": 1633707180,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2296,
+            "date": 1679929307,
+            "rd": 220
+        },
+        "best": {
+            "rating": 2296,
+            "date": 1678364851,
+            "game": "https://www.chess.com/game/live/72102996471"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2711,
+            "date": 1733390312,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2745,
+            "date": 1697472163,
+            "game": "https://www.chess.com/game/live/83964653537"
+        },
+        "record": {
+            "win": 3576,
+            "loss": 4220,
+            "draw": 475
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2783,
+            "date": 1733405601,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2826,
+            "date": 1703259593,
+            "game": "https://www.chess.com/game/live/96732594073"
+        },
+        "record": {
+            "win": 871,
+            "loss": 1030,
+            "draw": 169
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3958,
+            "date": 1710296564
+        },
+        "lowest": {
+            "rating": 999,
+            "date": 1634706204
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 73,
+            "score": 70
+        }
+    }
+}

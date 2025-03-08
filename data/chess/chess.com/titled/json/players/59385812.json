@@ -1,0 +1,89 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/59385812.2c91678d.200x200o.5d5c2a37ed16.jpeg",
+    "player_id": 59385812,
+    "@id": "https://api.chess.com/pub/player/carrotsandpizza",
+    "url": "https://www.chess.com/member/CarrotsandPizza",
+    "name": "Mihael Ankerst",
+    "username": "carrotsandpizza",
+    "title": "FM",
+    "followers": 44,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734122889,
+    "joined": 1554369040,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2331,
+            "date": 1693242444,
+            "rd": 154
+        },
+        "best": {
+            "rating": 2527,
+            "date": 1693238478,
+            "game": "https://www.chess.com/game/live/86977156463"
+        },
+        "record": {
+            "win": 2,
+            "loss": 2,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2321,
+            "date": 1733597918,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2406,
+            "date": 1714420637,
+            "game": "https://www.chess.com/game/live/127335658205"
+        },
+        "record": {
+            "win": 6602,
+            "loss": 6887,
+            "draw": 251
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2550,
+            "date": 1734131007,
+            "rd": 20
+        },
+        "best": {
+            "rating": 2615,
+            "date": 1712092057,
+            "game": "https://www.chess.com/game/live/62017775347"
+        },
+        "record": {
+            "win": 15101,
+            "loss": 16723,
+            "draw": 1393
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2263,
+            "date": 1734133972
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1555143087
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 40,
+            "score": 38
+        },
+        "daily": {
+            "total_attempts": 27,
+            "score": 25
+        }
+    }
+}

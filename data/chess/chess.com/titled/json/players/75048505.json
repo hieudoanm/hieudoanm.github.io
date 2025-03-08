@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75048505.1c19de68.200x200o.6cfc8e7c80a2.jpg",
+    "player_id": 75048505,
+    "@id": "https://api.chess.com/pub/player/osh1ro",
+    "url": "https://www.chess.com/member/osh1ro",
+    "name": "Ochirbat Lkhagvajamts",
+    "username": "osh1ro",
+    "title": "FM",
+    "followers": 72,
+    "country": "https://api.chess.com/pub/country/MN",
+    "last_online": 1734009164,
+    "joined": 1585561839,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2000,
+            "date": 1725287124,
+            "rd": 349
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1641124512,
+            "game": "https://www.chess.com/game/daily/634775503"
+        },
+        "record": {
+            "win": 6,
+            "loss": 17,
+            "draw": 0,
+            "time_per_move": 26178,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2004,
+            "date": 1728193231,
+            "rd": 164
+        },
+        "best": {
+            "rating": 2167,
+            "date": 1589098373,
+            "game": "https://www.chess.com/game/live/37867779047"
+        },
+        "record": {
+            "win": 24,
+            "loss": 5,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2810,
+            "date": 1731120490,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2819,
+            "date": 1731040577,
+            "game": "https://www.chess.com/game/live/97987220297"
+        },
+        "record": {
+            "win": 720,
+            "loss": 443,
+            "draw": 72
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2680,
+            "date": 1731264337,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2703,
+            "date": 1691888897,
+            "game": "https://www.chess.com/game/live/5316025785"
+        },
+        "record": {
+            "win": 256,
+            "loss": 165,
+            "draw": 32
+        }
+    },
+    "fide": 2368,
+    "tactics": {
+        "highest": {
+            "rating": 3651,
+            "date": 1706681951
+        },
+        "lowest": {
+            "rating": 1217,
+            "date": 1585574069
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

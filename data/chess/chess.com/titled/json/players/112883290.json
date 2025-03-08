@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/112883290.55fef386.200x200o.3ea771f09c70.jpg",
+    "player_id": 112883290,
+    "@id": "https://api.chess.com/pub/player/simaopdias",
+    "url": "https://www.chess.com/member/simaopdias",
+    "name": "Simao Poscidonio Dias",
+    "username": "simaopdias",
+    "title": "FM",
+    "followers": 97,
+    "country": "https://api.chess.com/pub/country/BR",
+    "location": "Muzambinho-MG",
+    "last_online": 1734131076,
+    "joined": 1610769314,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

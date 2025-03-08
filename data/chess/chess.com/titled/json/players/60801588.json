@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/60801588.7b4210ab.200x200o.242ba51302c3.jpeg",
+    "player_id": 60801588,
+    "@id": "https://api.chess.com/pub/player/waremblem",
+    "url": "https://www.chess.com/member/WarEmblem",
+    "username": "waremblem",
+    "title": "FM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1733368015,
+    "joined": 1557442814,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

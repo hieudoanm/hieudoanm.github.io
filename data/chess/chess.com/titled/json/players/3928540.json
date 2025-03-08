@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/3928540.d085542f.200x200o.2fc612c800b4.jpeg",
+    "player_id": 3928540,
+    "@id": "https://api.chess.com/pub/player/akhairat",
+    "url": "https://www.chess.com/member/akhairat",
+    "name": "Ahmed Khairat",
+    "username": "akhairat",
+    "title": "CM",
+    "followers": 129,
+    "country": "https://api.chess.com/pub/country/EG",
+    "location": "Riyadh",
+    "last_online": 1734009386,
+    "joined": 1283613618,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

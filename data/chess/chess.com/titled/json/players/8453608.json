@@ -1,0 +1,18 @@
+{
+    "player_id": 8453608,
+    "@id": "https://api.chess.com/pub/player/tojevtip",
+    "url": "https://www.chess.com/member/tojevtip",
+    "name": "EJ Hummel",
+    "username": "tojevtip",
+    "title": "FM",
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/NL",
+    "location": "Groningen",
+    "last_online": 1734111921,
+    "joined": 1344257031,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/65467388.27cfe67d.200x200o.f16fec332938.webp",
+    "player_id": 65467388,
+    "@id": "https://api.chess.com/pub/player/chenxiaoyuer",
+    "url": "https://www.chess.com/member/chenxiaoyuer",
+    "name": "Ryo Chen",
+    "username": "chenxiaoyuer",
+    "title": "IM",
+    "followers": 663,
+    "country": "https://api.chess.com/pub/country/CN",
+    "location": "Earth",
+    "last_online": 1734135101,
+    "joined": 1568401519,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1263,
+            "date": 1732544188,
+            "rd": 92
+        },
+        "best": {
+            "rating": 1955,
+            "date": 1610552957,
+            "game": "https://www.chess.com/game/daily/298090264"
+        },
+        "record": {
+            "win": 59,
+            "loss": 67,
+            "draw": 0,
+            "time_per_move": 37325,
+            "timeout_percent": 91
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2317,
+            "date": 1732672572,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2513,
+            "date": 1609622233,
+            "game": "https://www.chess.com/game/live/10695388251"
+        },
+        "record": {
+            "win": 69,
+            "loss": 43,
+            "draw": 20
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2752,
+            "date": 1734149673,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2936,
+            "date": 1707711988,
+            "game": "https://www.chess.com/game/live/114625740183"
+        },
+        "record": {
+            "win": 2432,
+            "loss": 1678,
+            "draw": 391
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2932,
+            "date": 1734137128,
+            "rd": 34
+        },
+        "best": {
+            "rating": 3013,
+            "date": 1726185988,
+            "game": "https://www.chess.com/game/live/116355671367"
+        },
+        "record": {
+            "win": 1521,
+            "loss": 1020,
+            "draw": 399
+        }
+    },
+    "fide": 2399,
+    "tactics": {
+        "highest": {
+            "rating": 3604,
+            "date": 1727808587
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1592853669
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

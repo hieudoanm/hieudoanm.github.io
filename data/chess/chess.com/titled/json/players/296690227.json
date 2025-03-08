@@ -1,0 +1,104 @@
+{
+    "player_id": 296690227,
+    "@id": "https://api.chess.com/pub/player/gm-2024-gm",
+    "url": "https://www.chess.com/member/GM-2024-GM",
+    "name": "Vladimir Pozdeev",
+    "username": "gm-2024-gm",
+    "title": "CM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734150352,
+    "joined": 1688024308,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2152,
+            "date": 1734150644,
+            "rd": 65
+        },
+        "best": {
+            "rating": 2155,
+            "date": 1733305521,
+            "game": "https://www.chess.com/game/daily/729868195"
+        },
+        "record": {
+            "win": 76,
+            "loss": 33,
+            "draw": 28,
+            "time_per_move": 7693,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2203,
+            "date": 1728809472,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2203,
+            "date": 1720605040,
+            "game": "https://www.chess.com/game/live/114343205771"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2239,
+            "date": 1731346562,
+            "rd": 90
+        },
+        "best": {
+            "rating": 2239,
+            "date": 1731345342,
+            "game": "https://www.chess.com/game/live/98268357193"
+        },
+        "record": {
+            "win": 136,
+            "loss": 168,
+            "draw": 11
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2296,
+            "date": 1721750858,
+            "rd": 65
+        },
+        "best": {
+            "rating": 2347,
+            "date": 1718730358,
+            "game": "https://www.chess.com/game/live/112461682777"
+        },
+        "record": {
+            "win": 52,
+            "loss": 60,
+            "draw": 9
+        }
+    },
+    "fide": 2195,
+    "tactics": {
+        "highest": {
+            "rating": 3193,
+            "date": 1730383827
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1688024308
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

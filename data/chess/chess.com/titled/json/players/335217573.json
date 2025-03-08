@@ -1,0 +1,17 @@
+{
+    "player_id": 335217573,
+    "@id": "https://api.chess.com/pub/player/singenoirrr",
+    "url": "https://www.chess.com/member/singenoirrr",
+    "name": "Batyrkhan Muratov",
+    "username": "singenoirrr",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/PF",
+    "last_online": 1733865909,
+    "joined": 1703769587,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

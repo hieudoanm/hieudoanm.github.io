@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/77865224.071312f3.200x200o.a8704ad42625.jpg",
+    "player_id": 77865224,
+    "@id": "https://api.chess.com/pub/player/tokchess",
+    "url": "https://www.chess.com/member/TokChess",
+    "name": "Ariel Nicolas Tokman",
+    "username": "tokchess",
+    "title": "FM",
+    "followers": 64,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Argentina",
+    "last_online": 1734019241,
+    "joined": 1587913498,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

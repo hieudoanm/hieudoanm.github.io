@@ -1,0 +1,82 @@
+{
+    "player_id": 398307155,
+    "@id": "https://api.chess.com/pub/player/cpor3",
+    "url": "https://www.chess.com/member/CPOR3",
+    "name": "Ren\u00e9 Antonio Pilarte Tijerino",
+    "username": "cpor3",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/NI",
+    "last_online": 1733323169,
+    "joined": 1729881355,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1863,
+            "date": 1732643663,
+            "rd": 210
+        },
+        "best": {
+            "rating": 1863,
+            "date": 1732643663,
+            "game": "https://www.chess.com/game/daily/729644549"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 9782,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2045,
+            "date": 1734143111,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2056,
+            "date": 1732472264,
+            "game": "https://www.chess.com/game/live/126154721495"
+        },
+        "record": {
+            "win": 3,
+            "loss": 2,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2176,
+            "date": 1734144634,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2212,
+            "date": 1733856558,
+            "game": "https://www.chess.com/game/live/127494045851"
+        },
+        "record": {
+            "win": 337,
+            "loss": 282,
+            "draw": 73
+        }
+    },
+    "fide": 2042,
+    "tactics": {
+        "highest": {
+            "rating": 2181,
+            "date": 1733970730
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1729881355
+        }
+    },
+    "puzzle_rush": {}
+}

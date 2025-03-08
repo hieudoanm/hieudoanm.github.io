@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35129788.ad05a36b.200x200o.ad92439bdc95.jpg",
+    "player_id": 35129788,
+    "@id": "https://api.chess.com/pub/player/thee-chessboy",
+    "url": "https://www.chess.com/member/Thee-Chessboy",
+    "username": "thee-chessboy",
+    "title": "FM",
+    "followers": 478,
+    "country": "https://api.chess.com/pub/country/ZA",
+    "last_online": 1734077714,
+    "joined": 1493399553,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

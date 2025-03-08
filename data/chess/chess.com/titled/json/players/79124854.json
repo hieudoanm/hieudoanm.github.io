@@ -1,0 +1,69 @@
+{
+    "player_id": 79124854,
+    "@id": "https://api.chess.com/pub/player/andrey_klymchuk",
+    "url": "https://www.chess.com/member/Andrey_Klymchuk",
+    "name": "Andrey Klymchuk",
+    "username": "andrey_klymchuk",
+    "title": "FM",
+    "followers": 51,
+    "country": "https://api.chess.com/pub/country/UA",
+    "location": "Vinnitsya",
+    "last_online": 1733907264,
+    "joined": 1589134034,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2688,
+            "date": 1706717658,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2688,
+            "date": 1706717658,
+            "game": "https://www.chess.com/game/live/100452193617"
+        },
+        "record": {
+            "win": 43,
+            "loss": 11,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2787,
+            "date": 1733585119,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2897,
+            "date": 1704214586,
+            "game": "https://www.chess.com/game/live/125168311323"
+        },
+        "record": {
+            "win": 479,
+            "loss": 318,
+            "draw": 80
+        }
+    },
+    "fide": 2405,
+    "tactics": {
+        "highest": {
+            "rating": 2743,
+            "date": 1708171100
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1589134034
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

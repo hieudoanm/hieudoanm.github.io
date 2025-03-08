@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/175935309.8185c5e3.200x200o.0953f6dcb260.jpg",
+    "player_id": 175935309,
+    "@id": "https://api.chess.com/pub/player/veganator13",
+    "url": "https://www.chess.com/member/Veganator13",
+    "name": "Nestor Favian Lozano Ramirez",
+    "username": "veganator13",
+    "title": "FM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734111271,
+    "joined": 1646820075,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2065,
+            "date": 1723322346,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2071,
+            "date": 1655405101,
+            "game": "https://www.chess.com/game/live/49143525537"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2500,
+            "date": 1731496595,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2577,
+            "date": 1723480354,
+            "game": "https://www.chess.com/game/live/117219007469"
+        },
+        "record": {
+            "win": 519,
+            "loss": 447,
+            "draw": 27
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2517,
+            "date": 1734111962,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2601,
+            "date": 1723224582,
+            "game": "https://www.chess.com/game/live/123493812209"
+        },
+        "record": {
+            "win": 1838,
+            "loss": 1668,
+            "draw": 174
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3015,
+            "date": 1725087778
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1647275698
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

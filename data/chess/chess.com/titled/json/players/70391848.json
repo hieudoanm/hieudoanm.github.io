@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/70391848.753871a9.200x200o.2a512c53512d.jpg",
+    "player_id": 70391848,
+    "@id": "https://api.chess.com/pub/player/kamilgrycel",
+    "url": "https://www.chess.com/member/KamilGrycel",
+    "name": "Kamil Grycel",
+    "username": "kamilgrycel",
+    "title": "FM",
+    "followers": 175,
+    "country": "https://api.chess.com/pub/country/PL",
+    "location": "Warszawa",
+    "last_online": 1734170460,
+    "joined": 1578333047,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2000,
+            "date": 1717262145,
+            "rd": 349
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1717262145,
+            "game": "https://www.chess.com/game/daily/662295031"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 2149,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2392,
+            "date": 1694458453,
+            "rd": 347
+        },
+        "best": {
+            "rating": 2392,
+            "date": 1694458453,
+            "game": "https://www.chess.com/game/live/88196382969"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2703,
+            "date": 1732808149,
+            "rd": 21
+        },
+        "best": {
+            "rating": 2703,
+            "date": 1732808149,
+            "game": "https://www.chess.com/game/live/89927451275"
+        },
+        "record": {
+            "win": 5506,
+            "loss": 6265,
+            "draw": 759
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2601,
+            "date": 1734178363,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2692,
+            "date": 1731044701,
+            "game": "https://www.chess.com/game/live/60624014747"
+        },
+        "record": {
+            "win": 4483,
+            "loss": 4863,
+            "draw": 823
+        }
+    },
+    "fide": 2315,
+    "tactics": {
+        "highest": {
+            "rating": 2221,
+            "date": 1713246748
+        },
+        "lowest": {
+            "rating": 2200,
+            "date": 1598876123
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 17,
+            "score": 16
+        }
+    }
+}

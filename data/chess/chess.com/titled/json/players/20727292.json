@@ -1,0 +1,85 @@
+{
+    "player_id": 20727292,
+    "@id": "https://api.chess.com/pub/player/yarigo",
+    "url": "https://www.chess.com/member/Yarigo",
+    "name": "Igor Yarmonov",
+    "username": "yarigo",
+    "title": "IM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1734130496,
+    "joined": 1421845523,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2212,
+            "date": 1630232486,
+            "rd": 124
+        },
+        "best": {
+            "rating": 2277,
+            "date": 1630225683,
+            "game": "https://www.chess.com/game/live/23794024239"
+        },
+        "record": {
+            "win": 4,
+            "loss": 4,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2086,
+            "date": 1733146113,
+            "rd": 52
+        },
+        "best": {
+            "rating": 2209,
+            "date": 1727278687,
+            "game": "https://www.chess.com/game/live/120248382619"
+        },
+        "record": {
+            "win": 141,
+            "loss": 108,
+            "draw": 22
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2346,
+            "date": 1734101467,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2506,
+            "date": 1729683291,
+            "game": "https://www.chess.com/game/live/126289159313"
+        },
+        "record": {
+            "win": 2576,
+            "loss": 1504,
+            "draw": 483
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2602,
+            "date": 1721663227
+        },
+        "lowest": {
+            "rating": 1208,
+            "date": 1497518783
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 26,
+            "score": 24
+        }
+    }
+}

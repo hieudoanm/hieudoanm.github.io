@@ -1,0 +1,16 @@
+{
+    "player_id": 204103003,
+    "@id": "https://api.chess.com/pub/player/skkyfall2005",
+    "url": "https://www.chess.com/member/Skkyfall2005",
+    "username": "skkyfall2005",
+    "title": "FM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/VI",
+    "last_online": 1734179631,
+    "joined": 1667219358,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

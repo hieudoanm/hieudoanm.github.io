@@ -1,0 +1,66 @@
+{
+    "player_id": 321507355,
+    "@id": "https://api.chess.com/pub/player/left_shark99",
+    "url": "https://www.chess.com/member/Left_shark99",
+    "username": "left_shark99",
+    "title": "GM",
+    "followers": 275,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734131433,
+    "joined": 1698113698,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2667,
+            "date": 1734131498,
+            "rd": 38
+        },
+        "best": {
+            "rating": 3205,
+            "date": 1706762630,
+            "game": "https://www.chess.com/game/live/100903518487"
+        },
+        "record": {
+            "win": 937,
+            "loss": 716,
+            "draw": 104
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 3030,
+            "date": 1733791151,
+            "rd": 48
+        },
+        "best": {
+            "rating": 3057,
+            "date": 1706043751,
+            "game": "https://www.chess.com/game/live/99924717085"
+        },
+        "record": {
+            "win": 185,
+            "loss": 78,
+            "draw": 31
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 4007,
+            "date": 1733188964
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1698113698
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

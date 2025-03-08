@@ -1,0 +1,48 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/361983157.db9100f7.200x200o.2160d744e893.jpg",
+    "player_id": 361983157,
+    "@id": "https://api.chess.com/pub/player/karstenschulz",
+    "url": "https://www.chess.com/member/KarstenSchulz",
+    "name": "Karsten Schulz",
+    "username": "karstenschulz",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/DE",
+    "location": "Cottbus",
+    "last_online": 1733873091,
+    "joined": 1715201388,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2445,
+            "date": 1733875627,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2517,
+            "date": 1724195229,
+            "game": "https://www.chess.com/game/live/123369650201"
+        },
+        "record": {
+            "win": 146,
+            "loss": 118,
+            "draw": 27
+        }
+    },
+    "fide": 2166,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1715201388
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1715201388
+        }
+    },
+    "puzzle_rush": {}
+}

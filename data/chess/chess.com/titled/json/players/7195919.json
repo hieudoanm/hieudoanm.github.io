@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/7195919.159050ca.200x200o.883e75faf64e.jpg",
+    "player_id": 7195919,
+    "@id": "https://api.chess.com/pub/player/nihalsarin",
+    "url": "https://www.chess.com/member/nihalsarin",
+    "name": "Nihal Sarin",
+    "username": "nihalsarin",
+    "title": "GM",
+    "followers": 16747,
+    "country": "https://api.chess.com/pub/country/CL",
+    "last_online": 1734183696,
+    "joined": 1333645859,
+    "status": "premium",
+    "is_streamer": true,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2734,
+            "date": 1695064294,
+            "rd": 67
+        },
+        "best": {
+            "rating": 2790,
+            "date": 1667497842,
+            "game": "https://www.chess.com/game/live/61320095035"
+        },
+        "record": {
+            "win": 158,
+            "loss": 68,
+            "draw": 57
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 3112,
+            "date": 1732990095,
+            "rd": 42
+        },
+        "best": {
+            "rating": 3402,
+            "date": 1633019792,
+            "game": "https://www.chess.com/game/live/70764127331"
+        },
+        "record": {
+            "win": 13372,
+            "loss": 6689,
+            "draw": 1691
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 3158,
+            "date": 1734118512,
+            "rd": 38
+        },
+        "best": {
+            "rating": 3285,
+            "date": 1723621271,
+            "game": "https://www.chess.com/game/live/121127456549"
+        },
+        "record": {
+            "win": 14593,
+            "loss": 7832,
+            "draw": 2705
+        }
+    },
+    "fide": 2620,
+    "tactics": {
+        "highest": {
+            "rating": 3529,
+            "date": 1727058647
+        },
+        "lowest": {
+            "rating": 1311,
+            "date": 1333646101
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 83,
+            "score": 80
+        }
+    }
+}

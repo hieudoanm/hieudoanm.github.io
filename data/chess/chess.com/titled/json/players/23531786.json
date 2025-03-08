@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23531786.4d300db5.200x200o.4ae867ce7919.gif",
+    "player_id": 23531786,
+    "@id": "https://api.chess.com/pub/player/maitreia",
+    "url": "https://www.chess.com/member/Maitreia",
+    "name": "Tamaz Mgeladze",
+    "username": "maitreia",
+    "title": "IM",
+    "followers": 964,
+    "country": "https://api.chess.com/pub/country/GE",
+    "last_online": 1734182987,
+    "joined": 1438710087,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1829,
+            "date": 1455206997,
+            "rd": 299
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2601,
+            "date": 1725132653,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2643,
+            "date": 1705175725,
+            "game": "https://www.chess.com/game/live/94073493481"
+        },
+        "record": {
+            "win": 1419,
+            "loss": 2102,
+            "draw": 298
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2921,
+            "date": 1733258143,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2921,
+            "date": 1733258143,
+            "game": "https://www.chess.com/game/live/118539511671"
+        },
+        "record": {
+            "win": 16826,
+            "loss": 19705,
+            "draw": 4439
+        }
+    },
+    "fide": 2314,
+    "tactics": {
+        "highest": {
+            "rating": 3470,
+            "date": 1731854323
+        },
+        "lowest": {
+            "rating": 1433,
+            "date": 1439211954
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

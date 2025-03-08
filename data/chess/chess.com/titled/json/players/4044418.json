@@ -1,0 +1,86 @@
+{
+    "player_id": 4044418,
+    "@id": "https://api.chess.com/pub/player/dzil",
+    "url": "https://www.chess.com/member/dzil",
+    "name": "Dmitry Zilberstein",
+    "username": "dzil",
+    "title": "IM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "San Francisco",
+    "last_online": 1734146903,
+    "joined": 1285711703,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1706,
+            "date": 1597365450,
+            "rd": 264
+        },
+        "best": {
+            "rating": 1706,
+            "date": 1597365450,
+            "game": "https://www.chess.com/game/live/5294478260"
+        },
+        "record": {
+            "win": 3,
+            "loss": 2,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2509,
+            "date": 1734149735,
+            "rd": 23
+        },
+        "best": {
+            "rating": 2607,
+            "date": 1733596189,
+            "game": "https://www.chess.com/game/live/126725416065"
+        },
+        "record": {
+            "win": 189,
+            "loss": 189,
+            "draw": 27
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2508,
+            "date": 1733870865,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2540,
+            "date": 1733093320,
+            "game": "https://www.chess.com/game/live/126742780999"
+        },
+        "record": {
+            "win": 88,
+            "loss": 57,
+            "draw": 23
+        }
+    },
+    "fide": 2454,
+    "tactics": {
+        "highest": {
+            "rating": 1941,
+            "date": 1733382136
+        },
+        "lowest": {
+            "rating": 1500,
+            "date": 1293251711
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 1,
+            "score": 0
+        }
+    }
+}

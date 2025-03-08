@@ -1,0 +1,18 @@
+{
+    "player_id": 56247024,
+    "@id": "https://api.chess.com/pub/player/vladmikhel",
+    "url": "https://www.chess.com/member/VladMikhel",
+    "name": "Vladislav Mikhel",
+    "username": "vladmikhel",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "Krasnoyarsk",
+    "last_online": 1650718042,
+    "joined": 1547921663,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

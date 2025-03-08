@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/372309541.c91a6b7f.200x200o.6f7a46b31d70.jpg",
+    "player_id": 372309541,
+    "@id": "https://api.chess.com/pub/player/chessnycm",
+    "url": "https://www.chess.com/member/chessnyCM",
+    "name": "Fabrice Fiol",
+    "username": "chessnycm",
+    "title": "CM",
+    "followers": 112,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "NY",
+    "last_online": 1734151359,
+    "joined": 1719570833,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

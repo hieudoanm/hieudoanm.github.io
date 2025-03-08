@@ -1,0 +1,100 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/11373644.ac5bf8f9.200x200o.b10bc14502f1.jpg",
+    "player_id": 11373644,
+    "@id": "https://api.chess.com/pub/player/brunosten96",
+    "url": "https://www.chess.com/member/brunosten96",
+    "name": "Peter Flermoen",
+    "username": "brunosten96",
+    "title": "CM",
+    "followers": 43,
+    "country": "https://api.chess.com/pub/country/NO",
+    "location": "Harstad",
+    "last_online": 1734183382,
+    "joined": 1364920777,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1971,
+            "date": 1721759516,
+            "rd": 68
+        },
+        "best": {
+            "rating": 2149,
+            "date": 1676294034,
+            "game": "https://www.chess.com/game/daily/636851551"
+        },
+        "record": {
+            "win": 88,
+            "loss": 25,
+            "draw": 12,
+            "time_per_move": 16184,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2352,
+            "date": 1727292326,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2451,
+            "date": 1651872513,
+            "game": "https://www.chess.com/game/live/73575555183"
+        },
+        "record": {
+            "win": 67,
+            "loss": 37,
+            "draw": 14
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2381,
+            "date": 1734032341,
+            "rd": 77
+        },
+        "best": {
+            "rating": 2618,
+            "date": 1682798503,
+            "game": "https://www.chess.com/game/live/45595871181"
+        },
+        "record": {
+            "win": 211,
+            "loss": 142,
+            "draw": 27
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2675,
+            "date": 1734183378,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2701,
+            "date": 1734040530,
+            "game": "https://www.chess.com/game/live/127608044253"
+        },
+        "record": {
+            "win": 1982,
+            "loss": 1331,
+            "draw": 374
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3373,
+            "date": 1706202910
+        },
+        "lowest": {
+            "rating": 1342,
+            "date": 1365433673
+        }
+    },
+    "puzzle_rush": {}
+}

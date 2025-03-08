@@ -1,0 +1,18 @@
+{
+    "player_id": 7936852,
+    "@id": "https://api.chess.com/pub/player/vplotkin",
+    "url": "https://www.chess.com/member/vplotkin",
+    "name": "Victor Plotkin",
+    "username": "vplotkin",
+    "title": "FM",
+    "followers": 20,
+    "country": "https://api.chess.com/pub/country/CA",
+    "location": "Thornhill",
+    "last_online": 1734176908,
+    "joined": 1340062611,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

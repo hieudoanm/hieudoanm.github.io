@@ -1,0 +1,17 @@
+{
+    "player_id": 139263968,
+    "@id": "https://api.chess.com/pub/player/ecksdeeeeeeee",
+    "url": "https://www.chess.com/member/ecksdeeeeeeee",
+    "name": "Brian Diaz",
+    "username": "ecksdeeeeeeee",
+    "title": "CM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/AW",
+    "last_online": 1722430883,
+    "joined": 1620414454,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

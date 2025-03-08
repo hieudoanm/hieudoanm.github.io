@@ -1,0 +1,62 @@
+{
+    "player_id": 28538766,
+    "@id": "https://api.chess.com/pub/player/justintime4gm",
+    "url": "https://www.chess.com/member/JustinTime4GM",
+    "name": "Justin Sarkar",
+    "username": "justintime4gm",
+    "title": "IM",
+    "followers": 153,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1733579428,
+    "joined": 1465340287,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2209,
+            "date": 1734146921,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2511,
+            "date": 1589745932,
+            "game": "https://www.chess.com/game/live/80925791251"
+        },
+        "record": {
+            "win": 526,
+            "loss": 88,
+            "draw": 77
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2333,
+            "date": 1732640540,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2507,
+            "date": 1586887411,
+            "game": "https://www.chess.com/game/live/70129504885"
+        },
+        "record": {
+            "win": 1086,
+            "loss": 1568,
+            "draw": 238
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1465340287
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1465340287
+        }
+    },
+    "puzzle_rush": {}
+}

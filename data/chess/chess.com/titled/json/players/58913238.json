@@ -1,0 +1,104 @@
+{
+    "player_id": 58913238,
+    "@id": "https://api.chess.com/pub/player/rital44",
+    "url": "https://www.chess.com/member/Rital44",
+    "name": "Floryan Eugene",
+    "username": "rital44",
+    "title": "IM",
+    "followers": 55,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1734107066,
+    "joined": 1553380984,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 529,
+            "date": 1707934069,
+            "rd": 280
+        },
+        "best": {
+            "rating": 800,
+            "date": 1553380984,
+            "game": "https://www.chess.com/game/daily/337078767"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 124932,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2385,
+            "date": 1733424643,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2531,
+            "date": 1687459915,
+            "game": "https://www.chess.com/game/live/81198718255"
+        },
+        "record": {
+            "win": 7,
+            "loss": 2,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2701,
+            "date": 1733826360,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2798,
+            "date": 1725637177,
+            "game": "https://www.chess.com/game/live/107785321097"
+        },
+        "record": {
+            "win": 1538,
+            "loss": 1305,
+            "draw": 154
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2701,
+            "date": 1728404667,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2731,
+            "date": 1726588637,
+            "game": "https://www.chess.com/game/live/81617691021"
+        },
+        "record": {
+            "win": 1614,
+            "loss": 1463,
+            "draw": 189
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3258,
+            "date": 1677431603
+        },
+        "lowest": {
+            "rating": 416,
+            "date": 1555956441
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

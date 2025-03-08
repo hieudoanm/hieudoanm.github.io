@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/77197692.085d5e8e.200x200o.9d7ed66b151e.jpg",
+    "player_id": 77197692,
+    "@id": "https://api.chess.com/pub/player/torr79",
+    "url": "https://www.chess.com/member/Torr79",
+    "name": "Viktor Poddubnyi",
+    "username": "torr79",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/XX",
+    "location": "Elista",
+    "last_online": 1733891850,
+    "joined": 1587306454,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

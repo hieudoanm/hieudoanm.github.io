@@ -1,0 +1,17 @@
+{
+    "player_id": 55786438,
+    "@id": "https://api.chess.com/pub/player/mathiaswomacka",
+    "url": "https://www.chess.com/member/MathiasWomacka",
+    "name": "Mathias Womacka",
+    "username": "mathiaswomacka",
+    "title": "GM",
+    "followers": 92,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734039716,
+    "joined": 1547147419,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

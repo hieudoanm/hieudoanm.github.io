@@ -1,0 +1,84 @@
+{
+    "player_id": 265207945,
+    "@id": "https://api.chess.com/pub/player/bpm_90",
+    "url": "https://www.chess.com/member/bpm_90",
+    "name": "Marcel Kutowski",
+    "username": "bpm_90",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734183671,
+    "joined": 1679502831,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2262,
+            "date": 1733437214,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2273,
+            "date": 1715294809,
+            "game": "https://www.chess.com/game/live/109034990345"
+        },
+        "record": {
+            "win": 7,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2760,
+            "date": 1734184856,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2803,
+            "date": 1731513851,
+            "game": "https://www.chess.com/game/live/124236579141"
+        },
+        "record": {
+            "win": 1339,
+            "loss": 969,
+            "draw": 200
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2558,
+            "date": 1733951401,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2650,
+            "date": 1725653010,
+            "game": "https://www.chess.com/game/live/121693789447"
+        },
+        "record": {
+            "win": 273,
+            "loss": 187,
+            "draw": 40
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3355,
+            "date": 1733350185
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1679502831
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "player_id": 58336488,
+    "@id": "https://api.chess.com/pub/player/chemim21",
+    "url": "https://www.chess.com/member/Chemim21",
+    "name": "Justo Reinaldo Chemin",
+    "username": "chemim21",
+    "title": "FM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/BR",
+    "last_online": 1734023334,
+    "joined": 1552221501,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2147,
+            "date": 1672687218,
+            "rd": 128
+        },
+        "best": {
+            "rating": 2147,
+            "date": 1672687218,
+            "game": "https://www.chess.com/game/live/66419575795"
+        },
+        "record": {
+            "win": 37,
+            "loss": 5,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1669,
+            "date": 1732445676,
+            "rd": 87
+        },
+        "best": {
+            "rating": 1891,
+            "date": 1664472481,
+            "game": "https://www.chess.com/game/live/58213246349"
+        },
+        "record": {
+            "win": 416,
+            "loss": 307,
+            "draw": 34
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2171,
+            "date": 1732988306,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2310,
+            "date": 1693343212,
+            "game": "https://www.chess.com/game/live/125793588407"
+        },
+        "record": {
+            "win": 1804,
+            "loss": 1533,
+            "draw": 331
+        }
+    },
+    "fide": 2079,
+    "tactics": {
+        "highest": {
+            "rating": 2132,
+            "date": 1702224037
+        },
+        "lowest": {
+            "rating": 417,
+            "date": 1552817528
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 29,
+            "score": 26
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19676384.98517f25.200x200o.c6922b07cafa.jpeg",
+    "player_id": 19676384,
+    "@id": "https://api.chess.com/pub/player/bathory44",
+    "url": "https://www.chess.com/member/Bathory44",
+    "name": "Piotr Dobrowolski",
+    "username": "bathory44",
+    "title": "IM",
+    "followers": 107,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734117325,
+    "joined": 1415734721,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2526,
+            "date": 1683090788,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2536,
+            "date": 1682201801,
+            "game": "https://www.chess.com/game/live/76708254929"
+        },
+        "record": {
+            "win": 130,
+            "loss": 88,
+            "draw": 11
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2639,
+            "date": 1732389611,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2689,
+            "date": 1658247161,
+            "game": "https://www.chess.com/game/live/51984634277"
+        },
+        "record": {
+            "win": 1845,
+            "loss": 1145,
+            "draw": 376
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3702,
+            "date": 1704409367
+        },
+        "lowest": {
+            "rating": 1364,
+            "date": 1415734870
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
+}

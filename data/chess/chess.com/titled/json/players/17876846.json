@@ -1,0 +1,17 @@
+{
+    "player_id": 17876846,
+    "@id": "https://api.chess.com/pub/player/workhard91",
+    "url": "https://www.chess.com/member/workhard91",
+    "name": "Armin Farmani Anosheh",
+    "username": "workhard91",
+    "title": "FM",
+    "followers": 170,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1693319598,
+    "joined": 1404052887,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

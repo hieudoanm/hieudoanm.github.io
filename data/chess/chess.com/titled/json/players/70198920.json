@@ -1,0 +1,17 @@
+{
+    "player_id": 70198920,
+    "@id": "https://api.chess.com/pub/player/topencik",
+    "url": "https://www.chess.com/member/Topencik",
+    "name": "Bruno Topencik",
+    "username": "topencik",
+    "title": "FM",
+    "followers": 15,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734179287,
+    "joined": 1577972650,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

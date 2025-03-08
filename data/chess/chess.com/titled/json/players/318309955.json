@@ -1,0 +1,84 @@
+{
+    "player_id": 318309955,
+    "@id": "https://api.chess.com/pub/player/the_wildoctopus",
+    "url": "https://www.chess.com/member/The_WildOctopus",
+    "username": "the_wildoctopus",
+    "title": "FM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734077750,
+    "joined": 1696838314,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2090,
+            "date": 1729445540,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2371,
+            "date": 1703075131,
+            "game": "https://www.chess.com/game/live/96813007257"
+        },
+        "record": {
+            "win": 4,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2506,
+            "date": 1733851844,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2506,
+            "date": 1733851844,
+            "game": "https://www.chess.com/game/live/127590646235"
+        },
+        "record": {
+            "win": 190,
+            "loss": 125,
+            "draw": 18
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2514,
+            "date": 1733773661,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2663,
+            "date": 1729788417,
+            "game": "https://www.chess.com/game/live/123495589003"
+        },
+        "record": {
+            "win": 294,
+            "loss": 218,
+            "draw": 42
+        }
+    },
+    "fide": 2292,
+    "tactics": {
+        "highest": {
+            "rating": 3136,
+            "date": 1726667295
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1696838314
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "player_id": 377678687,
+    "@id": "https://api.chess.com/pub/player/frigidussinapis",
+    "url": "https://www.chess.com/member/FrigidusSinapis",
+    "name": "Alexander Herbrig",
+    "username": "frigidussinapis",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734043275,
+    "joined": 1722094334,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2568,
+            "date": 1734135673,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2619,
+            "date": 1729866930,
+            "game": "https://www.chess.com/game/live/120676815979"
+        },
+        "record": {
+            "win": 200,
+            "loss": 245,
+            "draw": 36
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2610,
+            "date": 1734175215,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2636,
+            "date": 1734131964,
+            "game": "https://www.chess.com/game/live/125777401391"
+        },
+        "record": {
+            "win": 434,
+            "loss": 354,
+            "draw": 70
+        }
+    },
+    "fide": 2292,
+    "tactics": {
+        "highest": {
+            "rating": 3445,
+            "date": 1728860424
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1722094334
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        },
+        "daily": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

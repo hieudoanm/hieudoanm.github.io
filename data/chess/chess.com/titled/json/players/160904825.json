@@ -1,0 +1,84 @@
+{
+    "player_id": 160904825,
+    "@id": "https://api.chess.com/pub/player/vat55",
+    "url": "https://www.chess.com/member/VAT55",
+    "name": "Oleg Kozlov",
+    "username": "vat55",
+    "title": "IM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734173599,
+    "joined": 1636560057,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2250,
+            "date": 1655907403,
+            "rd": 79
+        },
+        "best": {
+            "rating": 2224,
+            "date": 1653492460,
+            "game": "https://www.chess.com/game/live/47230311665"
+        },
+        "record": {
+            "win": 12,
+            "loss": 8,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2428,
+            "date": 1720767772,
+            "rd": 72
+        },
+        "best": {
+            "rating": 2455,
+            "date": 1716322119,
+            "game": "https://www.chess.com/game/live/110060453647"
+        },
+        "record": {
+            "win": 39,
+            "loss": 29,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2650,
+            "date": 1734173949,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2675,
+            "date": 1728404985,
+            "game": "https://www.chess.com/game/live/33233359633"
+        },
+        "record": {
+            "win": 1492,
+            "loss": 1667,
+            "draw": 182
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3025,
+            "date": 1653288491
+        },
+        "lowest": {
+            "rating": 1213,
+            "date": 1638301333
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

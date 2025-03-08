@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/21929836.4764f3d5.200x200o.c6b618360e59.jpeg",
+    "player_id": 21929836,
+    "@id": "https://api.chess.com/pub/player/paulvelten",
+    "url": "https://www.chess.com/member/PaulVelten",
+    "name": "Paul Velten",
+    "username": "paulvelten",
+    "title": "GM",
+    "followers": 106,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1733754414,
+    "joined": 1428788238,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2707,
+            "date": 1611946410,
+            "rd": 130
+        },
+        "best": {
+            "rating": 2787,
+            "date": 1602410763,
+            "game": "https://www.chess.com/game/live/5567734361"
+        },
+        "record": {
+            "win": 8,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2800,
+            "date": 1601497371,
+            "rd": 23
+        },
+        "best": {
+            "rating": 2800,
+            "date": 1601497371,
+            "game": "https://www.chess.com/game/live/5508414807"
+        },
+        "record": {
+            "win": 222,
+            "loss": 56,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2861,
+            "date": 1675972329,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2861,
+            "date": 1675972329,
+            "game": "https://www.chess.com/game/live/5523090077"
+        },
+        "record": {
+            "win": 205,
+            "loss": 99,
+            "draw": 18
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3109,
+            "date": 1603880528
+        },
+        "lowest": {
+            "rating": 1209,
+            "date": 1602536593
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 74,
+            "score": 71
+        }
+    }
+}

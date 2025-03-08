@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/36024320.919a244d.200x200o.1b0df2a75505.jpeg",
+    "player_id": 36024320,
+    "@id": "https://api.chess.com/pub/player/tigranmukhutdinov",
+    "url": "https://www.chess.com/member/TigranMukhutdinov",
+    "name": "Tigran Mukhutdinov",
+    "username": "tigranmukhutdinov",
+    "title": "FM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/AM",
+    "location": "Ufa, Russia",
+    "last_online": 1733816600,
+    "joined": 1496470850,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

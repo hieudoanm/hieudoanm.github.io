@@ -1,0 +1,16 @@
+{
+    "player_id": 35821386,
+    "@id": "https://api.chess.com/pub/player/toivonen_alexander",
+    "url": "https://www.chess.com/member/Toivonen_Alexander",
+    "name": "Alexander Toivonen",
+    "username": "toivonen_alexander",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1728550145,
+    "joined": 1495772299,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

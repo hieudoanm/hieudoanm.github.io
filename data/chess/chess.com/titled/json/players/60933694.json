@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/60933694.a7f72b29.200x200o.c4902c33aec1.png",
+    "player_id": 60933694,
+    "@id": "https://api.chess.com/pub/player/khandakeraminul",
+    "url": "https://www.chess.com/member/KhandakerAminul",
+    "name": "Khandaker Aminul Islam",
+    "username": "khandakeraminul",
+    "title": "FM",
+    "followers": 61,
+    "country": "https://api.chess.com/pub/country/BD",
+    "location": "DHAKA",
+    "last_online": 1734183337,
+    "joined": 1557750036,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2066,
+            "date": 1729323145,
+            "rd": 169
+        },
+        "best": {
+            "rating": 2066,
+            "date": 1723271199,
+            "game": "https://www.chess.com/game/daily/668362325"
+        },
+        "record": {
+            "win": 13,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 24698,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1841,
+            "date": 1564486498,
+            "rd": 307
+        },
+        "best": {
+            "rating": 1841,
+            "date": 1564486498,
+            "game": "https://www.chess.com/game/daily/232266902"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 24698,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2194,
+            "date": 1727160274,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2230,
+            "date": 1680367669,
+            "game": "https://www.chess.com/game/live/5494995553"
+        },
+        "record": {
+            "win": 30,
+            "loss": 27,
+            "draw": 7
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1965,
+            "date": 1701962407,
+            "rd": 91
+        },
+        "best": {
+            "rating": 2180,
+            "date": 1661610761,
+            "game": "https://www.chess.com/game/live/55185685891"
+        },
+        "record": {
+            "win": 742,
+            "loss": 500,
+            "draw": 45
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2324,
+            "date": 1733824003,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2472,
+            "date": 1692698909,
+            "game": "https://www.chess.com/game/live/122743463365"
+        },
+        "record": {
+            "win": 6786,
+            "loss": 5544,
+            "draw": 832
+        }
+    },
+    "fide": 2229,
+    "tactics": {
+        "highest": {
+            "rating": 3495,
+            "date": 1653189336
+        },
+        "lowest": {
+            "rating": 2193,
+            "date": 1557852088
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

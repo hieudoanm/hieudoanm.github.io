@@ -1,0 +1,66 @@
+{
+    "player_id": 16181546,
+    "@id": "https://api.chess.com/pub/player/woalaa",
+    "url": "https://www.chess.com/member/woalaa",
+    "username": "woalaa",
+    "title": "IM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/VN",
+    "last_online": 1734149267,
+    "joined": 1393166830,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2770,
+            "date": 1726922620,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2833,
+            "date": 1713196689,
+            "game": "https://www.chess.com/game/live/98849711155"
+        },
+        "record": {
+            "win": 209,
+            "loss": 99,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2825,
+            "date": 1734143298,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2851,
+            "date": 1733289542,
+            "game": "https://www.chess.com/game/live/120167465143"
+        },
+        "record": {
+            "win": 314,
+            "loss": 215,
+            "draw": 38
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3497,
+            "date": 1705479040
+        },
+        "lowest": {
+            "rating": 1406,
+            "date": 1393187863
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

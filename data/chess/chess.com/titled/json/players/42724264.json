@@ -1,0 +1,107 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/42724264.94d438a5.200x200o.68bf6b2bae21.jpg",
+    "player_id": 42724264,
+    "@id": "https://api.chess.com/pub/player/adrianapalao",
+    "url": "https://www.chess.com/member/AdrianaPalao",
+    "name": "Adriana Palao",
+    "username": "adrianapalao",
+    "title": "WCM",
+    "followers": 299,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Valencia",
+    "last_online": 1734166536,
+    "joined": 1517014298,
+    "status": "premium",
+    "is_streamer": true,
+    "twitch_url": "https://twitch.tv/adrianapalao",
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [
+        {
+            "type": "twitch",
+            "channel_url": "https://twitch.tv/adrianapalao"
+        }
+    ],
+    "chess_daily": {
+        "last": {
+            "rating": 1200,
+            "date": 1726190259,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 11,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1911,
+            "date": 1734010011,
+            "rd": 106
+        },
+        "best": {
+            "rating": 2001,
+            "date": 1681339285,
+            "game": "https://www.chess.com/game/live/124569509701"
+        },
+        "record": {
+            "win": 29,
+            "loss": 10,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1902,
+            "date": 1734068731,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2120,
+            "date": 1692637283,
+            "game": "https://www.chess.com/game/live/103059758277"
+        },
+        "record": {
+            "win": 124,
+            "loss": 96,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2051,
+            "date": 1733521872,
+            "rd": 70
+        },
+        "best": {
+            "rating": 2132,
+            "date": 1731449768,
+            "game": "https://www.chess.com/game/live/87665559697"
+        },
+        "record": {
+            "win": 87,
+            "loss": 71,
+            "draw": 3
+        }
+    },
+    "fide": 2001,
+    "tactics": {
+        "highest": {
+            "rating": 3281,
+            "date": 1708892190
+        },
+        "lowest": {
+            "rating": 810,
+            "date": 1665936963
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

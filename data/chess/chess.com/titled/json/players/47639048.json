@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/47639048.0268abbe.200x200o.cbfdb4a2a718.jpeg",
+    "player_id": 47639048,
+    "@id": "https://api.chess.com/pub/player/drunkenstiener",
+    "url": "https://www.chess.com/member/Drunkenstiener",
+    "username": "drunkenstiener",
+    "title": "CM",
+    "followers": 27,
+    "country": "https://api.chess.com/pub/country/XW",
+    "last_online": 1734175603,
+    "joined": 1530811074,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

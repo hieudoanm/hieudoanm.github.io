@@ -1,0 +1,44 @@
+{
+    "player_id": 373097629,
+    "@id": "https://api.chess.com/pub/player/vbbraining",
+    "url": "https://www.chess.com/member/VBBraining",
+    "username": "vbbraining",
+    "title": "GM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/KP",
+    "last_online": 1733844035,
+    "joined": 1719940773,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2564,
+            "date": 1733845966,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2564,
+            "date": 1733845966,
+            "game": "https://www.chess.com/game/live/125767122301"
+        },
+        "record": {
+            "win": 31,
+            "loss": 9,
+            "draw": 2
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1719940773
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1719940773
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39499490.82726b96.200x200o.10669929c912.jpeg",
+    "player_id": 39499490,
+    "@id": "https://api.chess.com/pub/player/sstrb",
+    "url": "https://www.chess.com/member/sstrb",
+    "name": "R. R.",
+    "username": "sstrb",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1732820057,
+    "joined": 1508168045,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

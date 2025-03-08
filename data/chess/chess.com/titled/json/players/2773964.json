@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/2773964.5f8a60bd.200x200o.4f34857a6ae7.jpeg",
+    "player_id": 2773964,
+    "@id": "https://api.chess.com/pub/player/williamschill",
+    "url": "https://www.chess.com/member/WilliamSchill",
+    "name": "William Schill",
+    "username": "williamschill",
+    "title": "FM",
+    "followers": 300,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Seattle",
+    "last_online": 1734146326,
+    "joined": 1272428861,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

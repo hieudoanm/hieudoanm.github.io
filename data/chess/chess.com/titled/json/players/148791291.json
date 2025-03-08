@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/148791291.77a04d63.200x200o.c59c2c0c15d9.webp",
+    "player_id": 148791291,
+    "@id": "https://api.chess.com/pub/player/bright_panda23",
+    "url": "https://www.chess.com/member/Bright_Panda23",
+    "name": "Kanishka Bhatia",
+    "username": "bright_panda23",
+    "title": "WCM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/XS",
+    "last_online": 1733867740,
+    "joined": 1627038790,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1953,
+            "date": 1729289807,
+            "rd": 130
+        },
+        "best": {
+            "rating": 1302,
+            "date": 1713798753,
+            "game": "https://www.chess.com/game/live/37279269505"
+        },
+        "record": {
+            "win": 31,
+            "loss": 14,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2333,
+            "date": 1733596210,
+            "rd": 51
+        },
+        "best": {
+            "rating": 2337,
+            "date": 1733595945,
+            "game": "https://www.chess.com/game/live/127330817813"
+        },
+        "record": {
+            "win": 148,
+            "loss": 92,
+            "draw": 12
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2161,
+            "date": 1733875648,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2186,
+            "date": 1733267235,
+            "game": "https://www.chess.com/game/live/127002625617"
+        },
+        "record": {
+            "win": 361,
+            "loss": 239,
+            "draw": 37
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3313,
+            "date": 1708268161
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1630317552
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/78986426.d3df4f98.200x200o.f94a5526c3c2.jpeg",
+    "player_id": 78986426,
+    "@id": "https://api.chess.com/pub/player/arfan48",
+    "url": "https://www.chess.com/member/Arfan48",
+    "name": "Aditya Bagus Arfan",
+    "username": "arfan48",
+    "title": "IM",
+    "followers": 30,
+    "country": "https://api.chess.com/pub/country/ID",
+    "location": "Bekasi",
+    "last_online": 1732681658,
+    "joined": 1589006290,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2032,
+            "date": 1631944051,
+            "rd": 120
+        },
+        "best": {
+            "rating": 2032,
+            "date": 1631266875,
+            "game": "https://www.chess.com/game/live/25003299077"
+        },
+        "record": {
+            "win": 23,
+            "loss": 11,
+            "draw": 9
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2525,
+            "date": 1721548459,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2529,
+            "date": 1721547917,
+            "game": "https://www.chess.com/game/live/115287484059"
+        },
+        "record": {
+            "win": 33,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2743,
+            "date": 1725250350,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2762,
+            "date": 1714642790,
+            "game": "https://www.chess.com/game/live/106393628713"
+        },
+        "record": {
+            "win": 141,
+            "loss": 81,
+            "draw": 28
+        }
+    },
+    "fide": 2274,
+    "tactics": {
+        "highest": {
+            "rating": 3882,
+            "date": 1716967468
+        },
+        "lowest": {
+            "rating": 415,
+            "date": 1589086197
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

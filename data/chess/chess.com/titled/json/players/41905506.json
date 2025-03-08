@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/41905506.13fd02ff.200x200o.0eb0acec0c2a.jpeg",
+    "player_id": 41905506,
+    "@id": "https://api.chess.com/pub/player/vyprd",
+    "url": "https://www.chess.com/member/vyprd",
+    "name": "David Vyprachticky",
+    "username": "vyprd",
+    "title": "FM",
+    "followers": 37,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734164689,
+    "joined": 1514841068,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

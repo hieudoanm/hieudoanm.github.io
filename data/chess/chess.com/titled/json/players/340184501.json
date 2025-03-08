@@ -1,0 +1,27 @@
+{
+    "player_id": 340184501,
+    "@id": "https://api.chess.com/pub/player/sabrina_ballerina",
+    "url": "https://www.chess.com/member/Sabrina_Ballerina",
+    "username": "sabrina_ballerina",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1725303248,
+    "joined": 1705786124,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1705786124
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1705786124
+        }
+    },
+    "puzzle_rush": {}
+}

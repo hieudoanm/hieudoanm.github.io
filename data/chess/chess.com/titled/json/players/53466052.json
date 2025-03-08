@@ -1,0 +1,85 @@
+{
+    "player_id": 53466052,
+    "@id": "https://api.chess.com/pub/player/josgar05",
+    "url": "https://www.chess.com/member/Josgar05",
+    "name": "Jose Garcia Molina",
+    "username": "josgar05",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734132230,
+    "joined": 1545236346,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2200,
+            "date": 1723032020,
+            "rd": 241
+        },
+        "best": {
+            "rating": 2200,
+            "date": 1684088607,
+            "game": "https://www.chess.com/game/live/4964931564"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2543,
+            "date": 1699389142,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2607,
+            "date": 1699387382,
+            "game": "https://www.chess.com/game/live/93127392523"
+        },
+        "record": {
+            "win": 77,
+            "loss": 73,
+            "draw": 14
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2459,
+            "date": 1731456197,
+            "rd": 71
+        },
+        "best": {
+            "rating": 2488,
+            "date": 1731453617,
+            "game": "https://www.chess.com/game/live/109444314601"
+        },
+        "record": {
+            "win": 113,
+            "loss": 127,
+            "draw": 16
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3242,
+            "date": 1732931930
+        },
+        "lowest": {
+            "rating": 1012,
+            "date": 1545241854
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 53
+        }
+    }
+}

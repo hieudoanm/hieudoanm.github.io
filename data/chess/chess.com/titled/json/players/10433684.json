@@ -1,0 +1,46 @@
+{
+    "player_id": 10433684,
+    "@id": "https://api.chess.com/pub/player/schuivernl",
+    "url": "https://www.chess.com/member/SchuiverNL",
+    "name": "Gaston D\u00f6renberg",
+    "username": "schuivernl",
+    "title": "FM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/NL",
+    "location": "Geleen",
+    "last_online": 1734084312,
+    "joined": 1358250492,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2327,
+            "date": 1734101121,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2406,
+            "date": 1704633015,
+            "game": "https://www.chess.com/game/live/98029794453"
+        },
+        "record": {
+            "win": 10618,
+            "loss": 9766,
+            "draw": 774
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2618,
+            "date": 1692717654
+        },
+        "lowest": {
+            "rating": 1293,
+            "date": 1415879366
+        }
+    },
+    "puzzle_rush": {}
+}

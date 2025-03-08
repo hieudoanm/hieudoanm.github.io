@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/12589998.d478af02.200x200o.e97d78d5ac8e.jpeg",
+    "player_id": 12589998,
+    "@id": "https://api.chess.com/pub/player/dyrizone",
+    "url": "https://www.chess.com/member/Dyrizone",
+    "name": "Anthony Nguyen",
+    "username": "dyrizone",
+    "title": "CM",
+    "followers": 35,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Austin, TX",
+    "last_online": 1734042282,
+    "joined": 1372976366,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

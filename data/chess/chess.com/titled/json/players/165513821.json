@@ -1,0 +1,83 @@
+{
+    "player_id": 165513821,
+    "@id": "https://api.chess.com/pub/player/oiiuuko",
+    "url": "https://www.chess.com/member/oiiuuko",
+    "username": "oiiuuko",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1734105795,
+    "joined": 1639932129,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2265,
+            "date": 1734107216,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2318,
+            "date": 1729271731,
+            "game": "https://www.chess.com/game/live/66727191641"
+        },
+        "record": {
+            "win": 361,
+            "loss": 362,
+            "draw": 58
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1956,
+            "date": 1734017283,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2142,
+            "date": 1725182963,
+            "game": "https://www.chess.com/game/live/121857522903"
+        },
+        "record": {
+            "win": 306,
+            "loss": 289,
+            "draw": 35
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2061,
+            "date": 1733922662,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2221,
+            "date": 1724874378,
+            "game": "https://www.chess.com/game/live/118613276005"
+        },
+        "record": {
+            "win": 202,
+            "loss": 173,
+            "draw": 41
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2230,
+            "date": 1730097160
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1666864411
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 39,
+            "score": 36
+        }
+    }
+}

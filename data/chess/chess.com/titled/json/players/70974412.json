@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/70974412.f1c8d89f.200x200o.45ce188f9a5a.jpg",
+    "player_id": 70974412,
+    "@id": "https://api.chess.com/pub/player/erdnya15",
+    "url": "https://www.chess.com/member/Erdnya15",
+    "name": "Roman Shogdzhiev",
+    "username": "erdnya15",
+    "title": "CM",
+    "followers": 27,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "Moscow",
+    "last_online": 1731434740,
+    "joined": 1579421222,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

@@ -1,0 +1,18 @@
+{
+    "player_id": 57868610,
+    "@id": "https://api.chess.com/pub/player/alisuma",
+    "url": "https://www.chess.com/member/alisuma",
+    "name": "Ali Suleymanov",
+    "username": "alisuma",
+    "title": "CM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/AZ",
+    "location": "Baku, Azerbaijan",
+    "last_online": 1727333044,
+    "joined": 1551261672,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,17 @@
+{
+    "player_id": 305212255,
+    "@id": "https://api.chess.com/pub/player/bulletplayer2024",
+    "url": "https://www.chess.com/member/bulletplayer2024",
+    "name": "Sarp Sahin",
+    "username": "bulletplayer2024",
+    "title": "CM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1734175268,
+    "joined": 1691698238,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

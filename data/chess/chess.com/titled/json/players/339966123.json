@@ -1,0 +1,64 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/339966123.8d209c92.200x200o.6db5acd4790d.jpg",
+    "player_id": 339966123,
+    "@id": "https://api.chess.com/pub/player/cocovitschl77",
+    "url": "https://www.chess.com/member/Cocovitschl77",
+    "name": "Jean-Paul Sebban",
+    "username": "cocovitschl77",
+    "title": "CM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1734008325,
+    "joined": 1705695866,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2000,
+            "date": 1732042724,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1725452656,
+            "game": "https://www.chess.com/game/live/120331778831"
+        },
+        "record": {
+            "win": 6,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2197,
+            "date": 1733945242,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2299,
+            "date": 1713559002,
+            "game": "https://www.chess.com/game/live/106175534535"
+        },
+        "record": {
+            "win": 671,
+            "loss": 473,
+            "draw": 111
+        }
+    },
+    "fide": 2155,
+    "tactics": {
+        "highest": {
+            "rating": 2881,
+            "date": 1732898296
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1705695866
+        }
+    },
+    "puzzle_rush": {}
+}

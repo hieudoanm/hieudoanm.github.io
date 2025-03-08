@@ -1,0 +1,103 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/27728592.a32ae2c7.200x200o.5531535bb0f3.jpeg",
+    "player_id": 27728592,
+    "@id": "https://api.chess.com/pub/player/lestofante90",
+    "url": "https://www.chess.com/member/Lestofante90",
+    "name": "Danyyil Dvirnyy",
+    "username": "lestofante90",
+    "title": "GM",
+    "followers": 1344,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1734182621,
+    "joined": 1460567535,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1597403537,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 32,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2551,
+            "date": 1654969446,
+            "rd": 121
+        },
+        "best": {
+            "rating": 2557,
+            "date": 1597501724,
+            "game": "https://www.chess.com/game/live/14741254631"
+        },
+        "record": {
+            "win": 12,
+            "loss": 7,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 3000,
+            "date": 1727125229,
+            "rd": 30
+        },
+        "best": {
+            "rating": 3000,
+            "date": 1727125229,
+            "game": "https://www.chess.com/game/live/100724707829"
+        },
+        "record": {
+            "win": 1682,
+            "loss": 1082,
+            "draw": 179
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2909,
+            "date": 1734183651,
+            "rd": 20
+        },
+        "best": {
+            "rating": 2981,
+            "date": 1718125044,
+            "game": "https://www.chess.com/game/live/126053359333"
+        },
+        "record": {
+            "win": 2911,
+            "loss": 2028,
+            "draw": 589
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3690,
+            "date": 1721999573
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1460567535
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        },
+        "daily": {
+            "total_attempts": 48,
+            "score": 47
+        }
+    }
+}

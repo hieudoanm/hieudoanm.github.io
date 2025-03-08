@@ -1,0 +1,62 @@
+{
+    "player_id": 385015215,
+    "@id": "https://api.chess.com/pub/player/thechosenone009",
+    "url": "https://www.chess.com/member/TheChosenOne009",
+    "username": "thechosenone009",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1729096559,
+    "joined": 1725375770,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2386,
+            "date": 1727005879,
+            "rd": 201
+        },
+        "best": {
+            "rating": 2496,
+            "date": 1727005731,
+            "game": "https://www.chess.com/game/live/120744624135"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2691,
+            "date": 1729097534,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2829,
+            "date": 1726243619,
+            "game": "https://www.chess.com/game/live/119994651661"
+        },
+        "record": {
+            "win": 19,
+            "loss": 30,
+            "draw": 15
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1725375770
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1725375770
+        }
+    },
+    "puzzle_rush": {}
+}

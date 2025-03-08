@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/204653705.f2b5adf9.200x200o.99f2b4a9727b.jpg",
+    "player_id": 204653705,
+    "@id": "https://api.chess.com/pub/player/tomboov247",
+    "url": "https://www.chess.com/member/Tomboov247",
+    "username": "tomboov247",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/EU",
+    "last_online": 1734141030,
+    "joined": 1667532027,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

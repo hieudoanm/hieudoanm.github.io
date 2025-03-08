@@ -1,0 +1,17 @@
+{
+    "player_id": 51272124,
+    "@id": "https://api.chess.com/pub/player/vojtariha",
+    "url": "https://www.chess.com/member/VojtaRiha",
+    "name": "Vojtech Riha",
+    "username": "vojtariha",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734031569,
+    "joined": 1540841920,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

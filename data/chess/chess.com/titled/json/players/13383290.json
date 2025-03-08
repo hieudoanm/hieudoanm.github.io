@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13383290.94f97673.200x200o.46ec6498bada.jpeg",
+    "player_id": 13383290,
+    "@id": "https://api.chess.com/pub/player/bakapg",
+    "url": "https://www.chess.com/member/BakaPG",
+    "name": "Bla\u017eo Kalezi\u0107",
+    "username": "bakapg",
+    "title": "IM",
+    "followers": 1007,
+    "country": "https://api.chess.com/pub/country/ME",
+    "location": "Podgorica",
+    "last_online": 1733854197,
+    "joined": 1378193558,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2587,
+            "date": 1622708894,
+            "rd": 171
+        },
+        "best": {
+            "rating": 2587,
+            "date": 1591172298,
+            "game": "https://www.chess.com/game/daily/105037492"
+        },
+        "record": {
+            "win": 92,
+            "loss": 3,
+            "draw": 28,
+            "time_per_move": 22930,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 2316,
+            "date": 1601936794,
+            "rd": 203
+        },
+        "best": {
+            "rating": 2316,
+            "date": 1601936794,
+            "game": "https://www.chess.com/game/daily/149806859"
+        },
+        "record": {
+            "win": 34,
+            "loss": 1,
+            "draw": 6,
+            "time_per_move": 22930,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2441,
+            "date": 1630765963,
+            "rd": 126
+        },
+        "best": {
+            "rating": 2494,
+            "date": 1597423413,
+            "game": "https://www.chess.com/game/live/4928901838"
+        },
+        "record": {
+            "win": 72,
+            "loss": 26,
+            "draw": 13
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2700,
+            "date": 1726148282,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2700,
+            "date": 1726148282,
+            "game": "https://www.chess.com/game/live/1522297651"
+        },
+        "record": {
+            "win": 2092,
+            "loss": 1987,
+            "draw": 143
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2795,
+            "date": 1724173558,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2798,
+            "date": 1724172326,
+            "game": "https://www.chess.com/game/live/4846768308"
+        },
+        "record": {
+            "win": 3756,
+            "loss": 2917,
+            "draw": 560
+        }
+    },
+    "fide": 2505,
+    "tactics": {
+        "highest": {
+            "rating": 3598,
+            "date": 1493743530
+        },
+        "lowest": {
+            "rating": 1353,
+            "date": 1379323508
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

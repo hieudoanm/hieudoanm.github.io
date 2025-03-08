@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/7558740.b2f04678.200x200o.26e9c1b6b825.jpeg",
+    "player_id": 7558740,
+    "@id": "https://api.chess.com/pub/player/tinnakrit",
+    "url": "https://www.chess.com/member/tinnakrit",
+    "name": "Tinnakrit Arunnuntapanich",
+    "username": "tinnakrit",
+    "title": "FM",
+    "followers": 84,
+    "country": "https://api.chess.com/pub/country/TH",
+    "last_online": 1734166563,
+    "joined": 1336829723,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

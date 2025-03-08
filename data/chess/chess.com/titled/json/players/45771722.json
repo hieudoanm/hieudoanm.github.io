@@ -1,0 +1,109 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/45771722.dadc7ebc.200x200o.d8dc51e1ad06.jpeg",
+    "player_id": 45771722,
+    "@id": "https://api.chess.com/pub/player/blitzking1729",
+    "url": "https://www.chess.com/member/blitzking1729",
+    "name": "Srihari L R",
+    "username": "blitzking1729",
+    "title": "IM",
+    "followers": 345,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734164365,
+    "joined": 1525099093,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1759,
+            "date": 1643123828,
+            "rd": 203
+        },
+        "best": {
+            "rating": 2005,
+            "date": 1542046274,
+            "game": "https://www.chess.com/game/daily/208603698"
+        },
+        "record": {
+            "win": 1,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 25097,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2467,
+            "date": 1686597567,
+            "rd": 62
+        },
+        "best": {
+            "rating": 2502,
+            "date": 1686585142,
+            "game": "https://www.chess.com/game/live/80322688589"
+        },
+        "record": {
+            "win": 67,
+            "loss": 36,
+            "draw": 20
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2746,
+            "date": 1734116024,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2935,
+            "date": 1725729174,
+            "game": "https://www.chess.com/game/live/118861783677"
+        },
+        "record": {
+            "win": 974,
+            "loss": 1054,
+            "draw": 146
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2854,
+            "date": 1734177357,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2881,
+            "date": 1719238843,
+            "game": "https://www.chess.com/game/live/116094579199"
+        },
+        "record": {
+            "win": 3630,
+            "loss": 3601,
+            "draw": 882
+        }
+    },
+    "fide": 2503,
+    "tactics": {
+        "highest": {
+            "rating": 3513,
+            "date": 1726077664
+        },
+        "lowest": {
+            "rating": 410,
+            "date": 1528614689
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
+}

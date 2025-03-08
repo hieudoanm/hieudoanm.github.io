@@ -1,0 +1,47 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75626502.e1b38373.200x200o.eebde7abb0da.jpeg",
+    "player_id": 75626502,
+    "@id": "https://api.chess.com/pub/player/miljanboro",
+    "url": "https://www.chess.com/member/miljanboro",
+    "name": "Boro Miljanic",
+    "username": "miljanboro",
+    "title": "IM",
+    "followers": 15,
+    "country": "https://api.chess.com/pub/country/ME",
+    "location": "Niksic",
+    "last_online": 1734076343,
+    "joined": 1586002576,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2461,
+            "date": 1734076925,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2483,
+            "date": 1731675773,
+            "game": "https://www.chess.com/game/live/127495276963"
+        },
+        "record": {
+            "win": 168,
+            "loss": 123,
+            "draw": 27
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3568,
+            "date": 1728154821
+        },
+        "lowest": {
+            "rating": 1015,
+            "date": 1586002988
+        }
+    },
+    "puzzle_rush": {}
+}

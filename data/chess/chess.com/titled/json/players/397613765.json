@@ -1,0 +1,17 @@
+{
+    "player_id": 397613765,
+    "@id": "https://api.chess.com/pub/player/chesscular_the_goat",
+    "url": "https://www.chess.com/member/Chesscular_the_GOAT",
+    "name": "Chesscular",
+    "username": "chesscular_the_goat",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1733659061,
+    "joined": 1729625088,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

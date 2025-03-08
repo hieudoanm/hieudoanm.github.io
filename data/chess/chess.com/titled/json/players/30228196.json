@@ -1,0 +1,83 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/30228196.c62810dd.200x200o.fb02170e6c4d.jpg",
+    "player_id": 30228196,
+    "@id": "https://api.chess.com/pub/player/antosha_chekhonte",
+    "url": "https://www.chess.com/member/Antosha_Chekhonte",
+    "name": "Nikolay Pavlov",
+    "username": "antosha_chekhonte",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/XX",
+    "location": "Rostov-on-Don",
+    "last_online": 1733845759,
+    "joined": 1475582913,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1809,
+            "date": 1711536339,
+            "rd": 343
+        },
+        "best": {
+            "rating": 1809,
+            "date": 1511263476,
+            "game": "https://www.chess.com/game/daily/180005064"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 53,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2654,
+            "date": 1731178755,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2666,
+            "date": 1731175378,
+            "game": "https://www.chess.com/game/live/124913972117"
+        },
+        "record": {
+            "win": 159,
+            "loss": 163,
+            "draw": 17
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2587,
+            "date": 1733854007,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2668,
+            "date": 1728405662,
+            "game": "https://www.chess.com/game/live/119114450337"
+        },
+        "record": {
+            "win": 1642,
+            "loss": 1559,
+            "draw": 199
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1792,
+            "date": 1512459878
+        },
+        "lowest": {
+            "rating": 1791,
+            "date": 1512459693
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,84 @@
+{
+    "player_id": 309058353,
+    "@id": "https://api.chess.com/pub/player/deuterio010",
+    "url": "https://www.chess.com/member/Deuterio010",
+    "name": "Jaime Rey Martinez",
+    "username": "deuterio010",
+    "title": "FM",
+    "followers": 30,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734173872,
+    "joined": 1693321102,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2480,
+            "date": 1717789605,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2480,
+            "date": 1717789604,
+            "game": "https://www.chess.com/game/live/108045654921"
+        },
+        "record": {
+            "win": 23,
+            "loss": 3,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2685,
+            "date": 1732205205,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2734,
+            "date": 1728635539,
+            "game": "https://www.chess.com/game/live/123689989337"
+        },
+        "record": {
+            "win": 80,
+            "loss": 78,
+            "draw": 17
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2672,
+            "date": 1732061376,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2764,
+            "date": 1724167669,
+            "game": "https://www.chess.com/game/live/117906028023"
+        },
+        "record": {
+            "win": 188,
+            "loss": 141,
+            "draw": 37
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3662,
+            "date": 1732311648
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1693321102
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

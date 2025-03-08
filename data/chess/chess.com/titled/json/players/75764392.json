@@ -1,0 +1,17 @@
+{
+    "player_id": 75764392,
+    "@id": "https://api.chess.com/pub/player/sorryiris",
+    "url": "https://www.chess.com/member/SorryIris",
+    "name": "\u0412\u0430\u0441\u0438\u043b\u0438\u0439 \u0416\u0430\u0434\u0430\u043d\u043e\u0432",
+    "username": "sorryiris",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "\u043c\u043e\u0441\u043a\u0432\u0430",
+    "last_online": 1607514604,
+    "joined": 1586104348,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

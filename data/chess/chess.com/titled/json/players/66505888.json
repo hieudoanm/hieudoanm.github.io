@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/66505888.d0c7aef8.200x200o.a52cab05558a.jpeg",
+    "player_id": 66505888,
+    "@id": "https://api.chess.com/pub/player/tomasdanada",
+    "url": "https://www.chess.com/member/tomasdanada",
+    "name": "Tomas Danada",
+    "username": "tomasdanada",
+    "title": "FM",
+    "followers": 42,
+    "country": "https://api.chess.com/pub/country/SK",
+    "location": "Senica",
+    "last_online": 1730372250,
+    "joined": 1570710330,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,103 @@
+{
+    "player_id": 132434516,
+    "@id": "https://api.chess.com/pub/player/arvinboy",
+    "url": "https://www.chess.com/member/arvinboy",
+    "username": "arvinboy",
+    "title": "FM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/SE",
+    "last_online": 1722550292,
+    "joined": 1617201477,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1663,
+            "date": 1734174007,
+            "rd": 134
+        },
+        "best": {
+            "rating": 1663,
+            "date": 1734115542,
+            "game": "https://www.chess.com/game/daily/693639713"
+        },
+        "record": {
+            "win": 14,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 18214,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2200,
+            "date": 1732632393,
+            "rd": 134
+        },
+        "best": {
+            "rating": 1946,
+            "date": 1680536264,
+            "game": "https://www.chess.com/game/live/74274843065"
+        },
+        "record": {
+            "win": 12,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2338,
+            "date": 1734127193,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2414,
+            "date": 1733220405,
+            "game": "https://www.chess.com/game/live/127673407119"
+        },
+        "record": {
+            "win": 313,
+            "loss": 132,
+            "draw": 24
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2200,
+            "date": 1733256071,
+            "rd": 201
+        },
+        "best": {
+            "rating": 2200,
+            "date": 1733254786,
+            "game": "https://www.chess.com/game/live/24342172713"
+        },
+        "record": {
+            "win": 3,
+            "loss": 2,
+            "draw": 1
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3511,
+            "date": 1733612911
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1617261059
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

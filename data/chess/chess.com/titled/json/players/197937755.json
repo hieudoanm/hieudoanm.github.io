@@ -1,0 +1,84 @@
+{
+    "player_id": 197937755,
+    "@id": "https://api.chess.com/pub/player/valiantceleb",
+    "url": "https://www.chess.com/member/ValiantCeleb",
+    "name": "Caleb Levi",
+    "username": "valiantceleb",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1733109867,
+    "joined": 1663613583,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2240,
+            "date": 1694453926,
+            "rd": 62
+        },
+        "best": {
+            "rating": 2496,
+            "date": 1684173746,
+            "game": "https://www.chess.com/game/live/81530588253"
+        },
+        "record": {
+            "win": 26,
+            "loss": 23,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2509,
+            "date": 1731178789,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2626,
+            "date": 1729674499,
+            "game": "https://www.chess.com/game/live/124913321553"
+        },
+        "record": {
+            "win": 29,
+            "loss": 45,
+            "draw": 12
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2496,
+            "date": 1732039698,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2643,
+            "date": 1664293784,
+            "game": "https://www.chess.com/game/live/121534884617"
+        },
+        "record": {
+            "win": 144,
+            "loss": 250,
+            "draw": 29
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3582,
+            "date": 1679818689
+        },
+        "lowest": {
+            "rating": 2054,
+            "date": 1673873931
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

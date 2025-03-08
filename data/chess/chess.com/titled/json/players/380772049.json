@@ -1,0 +1,47 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/380772049.67a69da2.200x200o.dd23e3a4687a.jpg",
+    "player_id": 380772049,
+    "@id": "https://api.chess.com/pub/player/hoangcanhhuan",
+    "url": "https://www.chess.com/member/HOANGCANHHUAN",
+    "name": "Canh Huan Hoang",
+    "username": "hoangcanhhuan",
+    "title": "FM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/VN",
+    "last_online": 1734173967,
+    "joined": 1723556168,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2498,
+            "date": 1728531763,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2520,
+            "date": 1724222702,
+            "game": "https://www.chess.com/game/live/117777548919"
+        },
+        "record": {
+            "win": 6,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "fide": 2341,
+    "tactics": {
+        "highest": {
+            "rating": 3325,
+            "date": 1728006300
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1723556168
+        }
+    },
+    "puzzle_rush": {}
+}

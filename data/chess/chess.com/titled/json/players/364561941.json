@@ -1,0 +1,56 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/364561941.948c87e7.200x200o.89964da2fe9e.jpg",
+    "player_id": 364561941,
+    "@id": "https://api.chess.com/pub/player/losingexperience",
+    "url": "https://www.chess.com/member/Losingexperience",
+    "name": "Srihari L",
+    "username": "losingexperience",
+    "title": "IM",
+    "followers": 124,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734145003,
+    "joined": 1716299300,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2742,
+            "date": 1733249228,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2858,
+            "date": 1728393734,
+            "game": "https://www.chess.com/game/live/116091097251"
+        },
+        "record": {
+            "win": 506,
+            "loss": 442,
+            "draw": 91
+        }
+    },
+    "fide": 2400,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1716299300
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1716299300
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 76,
+            "score": 73
+        },
+        "daily": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

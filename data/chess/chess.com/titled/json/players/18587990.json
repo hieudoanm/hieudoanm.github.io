@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/18587990.c4d2a97a.200x200o.3f2066d227b9.jpeg",
+    "player_id": 18587990,
+    "@id": "https://api.chess.com/pub/player/imrichbestest",
+    "url": "https://www.chess.com/member/IMRichbestest",
+    "name": "Richmond Phiri",
+    "username": "imrichbestest",
+    "title": "IM",
+    "followers": 61,
+    "country": "https://api.chess.com/pub/country/ZM",
+    "location": "lusaka",
+    "last_online": 1690218920,
+    "joined": 1408631326,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2168,
+            "date": 1596983950,
+            "rd": 142
+        },
+        "best": {
+            "rating": 2416,
+            "date": 1596894086,
+            "game": "https://www.chess.com/game/live/5264001779"
+        },
+        "record": {
+            "win": 4,
+            "loss": 3,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1892,
+            "date": 1596476642,
+            "rd": 182
+        },
+        "best": {
+            "rating": 2108,
+            "date": 1481118675,
+            "game": "https://www.chess.com/game/live/1842719960"
+        },
+        "record": {
+            "win": 14,
+            "loss": 24,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2408,
+            "date": 1596715225,
+            "rd": 98
+        },
+        "best": {
+            "rating": 2418,
+            "date": 1479392940,
+            "game": "https://www.chess.com/game/live/1810621085"
+        },
+        "record": {
+            "win": 2772,
+            "loss": 2316,
+            "draw": 246
+        }
+    },
+    "fide": 2323,
+    "tactics": {
+        "highest": {
+            "rating": 2781,
+            "date": 1512409657
+        },
+        "lowest": {
+            "rating": 1364,
+            "date": 1457514548
+        }
+    },
+    "puzzle_rush": {}
+}

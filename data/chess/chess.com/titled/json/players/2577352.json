@@ -1,0 +1,129 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/2577352.a790f8f9.200x200o.110c6c14b559.jpg",
+    "player_id": 2577352,
+    "@id": "https://api.chess.com/pub/player/holden-caulfield",
+    "url": "https://www.chess.com/member/Holden-Caulfield",
+    "name": "Mikhail Kuznecov",
+    "username": "holden-caulfield",
+    "title": "FM",
+    "followers": 350,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "Odintsovo",
+    "last_online": 1734160283,
+    "joined": 1266839878,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1669,
+            "date": 1734160297,
+            "rd": 97
+        },
+        "best": {
+            "rating": 2300,
+            "date": 1286190821,
+            "game": "https://www.chess.com/game/daily/41814022"
+        },
+        "record": {
+            "win": 3803,
+            "loss": 1708,
+            "draw": 941,
+            "time_per_move": 29863,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1646,
+            "date": 1658309289,
+            "rd": 109
+        },
+        "best": {
+            "rating": 1992,
+            "date": 1281879511,
+            "game": "https://www.chess.com/game/daily/31408896"
+        },
+        "record": {
+            "win": 429,
+            "loss": 199,
+            "draw": 74,
+            "time_per_move": 29863,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2421,
+            "date": 1589743640,
+            "rd": 99
+        },
+        "best": {
+            "rating": 2586,
+            "date": 1581277645,
+            "game": "https://www.chess.com/game/live/4869992571"
+        },
+        "record": {
+            "win": 17,
+            "loss": 9,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2811,
+            "date": 1732511651,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2957,
+            "date": 1298572651,
+            "game": "https://www.chess.com/game/live/94465796"
+        },
+        "record": {
+            "win": 2566,
+            "loss": 2086,
+            "draw": 365
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2768,
+            "date": 1732888783,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2843,
+            "date": 1725530374,
+            "game": "https://www.chess.com/game/live/123247182545"
+        },
+        "record": {
+            "win": 1517,
+            "loss": 1095,
+            "draw": 311
+        }
+    },
+    "fide": 2378,
+    "tactics": {
+        "highest": {
+            "rating": 3102,
+            "date": 1719553611
+        },
+        "lowest": {
+            "rating": 1467,
+            "date": 1267101118
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 50
+        },
+        "daily": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

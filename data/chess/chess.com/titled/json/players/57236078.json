@@ -1,0 +1,67 @@
+{
+    "player_id": 57236078,
+    "@id": "https://api.chess.com/pub/player/yahav_emanuel",
+    "url": "https://www.chess.com/member/Yahav_Emanuel",
+    "name": "Yahav Emanuel",
+    "username": "yahav_emanuel",
+    "title": "FM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/IL",
+    "last_online": 1734184537,
+    "joined": 1549910202,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2345,
+            "date": 1696156745,
+            "rd": 77
+        },
+        "best": {
+            "rating": 2345,
+            "date": 1696156745,
+            "game": "https://www.chess.com/game/live/89895013617"
+        },
+        "record": {
+            "win": 20,
+            "loss": 9,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2458,
+            "date": 1734185104,
+            "rd": 109
+        },
+        "best": {
+            "rating": 2521,
+            "date": 1696248396,
+            "game": "https://www.chess.com/game/live/90842318221"
+        },
+        "record": {
+            "win": 210,
+            "loss": 155,
+            "draw": 56
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3660,
+            "date": 1698152038
+        },
+        "lowest": {
+            "rating": 1217,
+            "date": 1586646452
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

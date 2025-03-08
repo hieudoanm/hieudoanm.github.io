@@ -1,0 +1,18 @@
+{
+    "player_id": 125092152,
+    "@id": "https://api.chess.com/pub/player/bullhouse14",
+    "url": "https://www.chess.com/member/Bullhouse14",
+    "name": "Bhavik Ahuja",
+    "username": "bullhouse14",
+    "title": "CM",
+    "followers": 223,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "Delhi",
+    "last_online": 1734167232,
+    "joined": 1614692452,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

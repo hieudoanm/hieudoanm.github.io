@@ -1,0 +1,16 @@
+{
+    "player_id": 11694562,
+    "@id": "https://api.chess.com/pub/player/chesschronicles123",
+    "url": "https://www.chess.com/member/ChessChronicles123",
+    "username": "chesschronicles123",
+    "title": "CM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/AU",
+    "last_online": 1731792071,
+    "joined": 1367208537,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

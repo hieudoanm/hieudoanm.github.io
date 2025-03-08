@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/326484241.d797ee6f.200x200o.ea50f04b2ce1.png",
+    "player_id": 326484241,
+    "@id": "https://api.chess.com/pub/player/caracal3000",
+    "url": "https://www.chess.com/member/Caracal3000",
+    "name": "Dariusz Dziewonski",
+    "username": "caracal3000",
+    "title": "FM",
+    "followers": 86,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734003955,
+    "joined": 1700167941,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2519,
+            "date": 1733852591,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2644,
+            "date": 1726433333,
+            "game": "https://www.chess.com/game/live/124754338849"
+        },
+        "record": {
+            "win": 487,
+            "loss": 459,
+            "draw": 130
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2565,
+            "date": 1733262766,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2701,
+            "date": 1700349864,
+            "game": "https://www.chess.com/game/live/109459286281"
+        },
+        "record": {
+            "win": 630,
+            "loss": 563,
+            "draw": 170
+        }
+    },
+    "fide": 2316,
+    "tactics": {
+        "highest": {
+            "rating": 3339,
+            "date": 1732459200
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1700167941
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/36203484.ac512608.200x200o.f708aa7c9483.jpg",
+    "player_id": 36203484,
+    "@id": "https://api.chess.com/pub/player/slovak_fighter2000",
+    "url": "https://www.chess.com/member/Slovak_fighter2000",
+    "name": "Marek Karas",
+    "username": "slovak_fighter2000",
+    "title": "FM",
+    "followers": 231,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734121880,
+    "joined": 1497105207,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

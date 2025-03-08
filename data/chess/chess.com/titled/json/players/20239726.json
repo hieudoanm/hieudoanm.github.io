@@ -1,0 +1,18 @@
+{
+    "player_id": 20239726,
+    "@id": "https://api.chess.com/pub/player/sniper_boy",
+    "url": "https://www.chess.com/member/Sniper_Boy",
+    "name": "Mirai Aoshima",
+    "username": "sniper_boy",
+    "title": "FM",
+    "followers": 48,
+    "country": "https://api.chess.com/pub/country/JP",
+    "location": "Tokyo",
+    "last_online": 1730375161,
+    "joined": 1419004456,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

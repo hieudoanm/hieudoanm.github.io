@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6294550.d57cb51e.200x200o.c9531787b6ee.jpg",
+    "player_id": 6294550,
+    "@id": "https://api.chess.com/pub/player/kiana_arab",
+    "url": "https://www.chess.com/member/kiana_arab",
+    "name": "Kiana Arab",
+    "username": "kiana_arab",
+    "title": "WCM",
+    "followers": 139,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Arizona",
+    "last_online": 1733246006,
+    "joined": 1323656884,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1674325476,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 66,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1905,
+            "date": 1608747999,
+            "rd": 96
+        },
+        "best": {
+            "rating": 1938,
+            "date": 1608100643,
+            "game": "https://www.chess.com/game/live/5978437195"
+        },
+        "record": {
+            "win": 14,
+            "loss": 11,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2305,
+            "date": 1728162895,
+            "rd": 51
+        },
+        "best": {
+            "rating": 2365,
+            "date": 1637219775,
+            "game": "https://www.chess.com/game/live/54191396531"
+        },
+        "record": {
+            "win": 414,
+            "loss": 336,
+            "draw": 57
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2112,
+            "date": 1725811043,
+            "rd": 76
+        },
+        "best": {
+            "rating": 2228,
+            "date": 1614940954,
+            "game": "https://www.chess.com/game/live/8677594031"
+        },
+        "record": {
+            "win": 166,
+            "loss": 113,
+            "draw": 9
+        }
+    },
+    "fide": 2085,
+    "tactics": {
+        "highest": {
+            "rating": 2956,
+            "date": 1729358756
+        },
+        "lowest": {
+            "rating": 1330,
+            "date": 1421413595
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 40
+        }
+    }
+}

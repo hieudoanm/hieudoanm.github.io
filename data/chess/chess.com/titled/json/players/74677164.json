@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/74677164.eab4b540.200x200o.eb012a8ffca7.jpeg",
+    "player_id": 74677164,
+    "@id": "https://api.chess.com/pub/player/tooweak2slow03",
+    "url": "https://www.chess.com/member/Tooweak2slow03",
+    "name": "Bence Leszko",
+    "username": "tooweak2slow03",
+    "title": "FM",
+    "followers": 124,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1617034651,
+    "joined": 1585307599,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

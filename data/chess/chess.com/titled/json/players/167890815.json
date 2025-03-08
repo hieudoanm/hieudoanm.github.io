@@ -1,0 +1,104 @@
+{
+    "player_id": 167890815,
+    "@id": "https://api.chess.com/pub/player/cherneevo_23",
+    "url": "https://www.chess.com/member/Cherneevo_23",
+    "name": "Igor A Gulkov",
+    "username": "cherneevo_23",
+    "title": "IM",
+    "followers": 40,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1732881119,
+    "joined": 1641527862,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2209,
+            "date": 1734123618,
+            "rd": 103
+        },
+        "best": {
+            "rating": 2213,
+            "date": 1729246256,
+            "game": "https://www.chess.com/game/daily/708419097"
+        },
+        "record": {
+            "win": 9,
+            "loss": 0,
+            "draw": 13,
+            "time_per_move": 13140,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2505,
+            "date": 1693026541,
+            "rd": 117
+        },
+        "best": {
+            "rating": 2530,
+            "date": 1693025753,
+            "game": "https://www.chess.com/game/live/80077244409"
+        },
+        "record": {
+            "win": 10,
+            "loss": 0,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2240,
+            "date": 1734066560,
+            "rd": 73
+        },
+        "best": {
+            "rating": 2352,
+            "date": 1642862871,
+            "game": "https://www.chess.com/game/live/44274630107"
+        },
+        "record": {
+            "win": 157,
+            "loss": 61,
+            "draw": 19
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2557,
+            "date": 1723568607,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2563,
+            "date": 1723567771,
+            "game": "https://www.chess.com/game/live/117301283953"
+        },
+        "record": {
+            "win": 317,
+            "loss": 142,
+            "draw": 95
+        }
+    },
+    "fide": 2358,
+    "tactics": {
+        "highest": {
+            "rating": 3348,
+            "date": 1732764479
+        },
+        "lowest": {
+            "rating": 1208,
+            "date": 1641530829
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/40349062.f5d7d157.200x200o.a01c49f073b3.jpeg",
+    "player_id": 40349062,
+    "@id": "https://api.chess.com/pub/player/waldowhereami",
+    "url": "https://www.chess.com/member/waldowhereamI",
+    "name": "Ray Stone",
+    "username": "waldowhereami",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1732474875,
+    "joined": 1510628077,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

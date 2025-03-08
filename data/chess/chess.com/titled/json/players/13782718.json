@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13782718.d5c8eff9.200x200o.a8dedd77553d.jpeg",
+    "player_id": 13782718,
+    "@id": "https://api.chess.com/pub/player/arniechipmunk",
+    "url": "https://www.chess.com/member/ArnieChipmunk",
+    "name": "Arne Moll",
+    "username": "arniechipmunk",
+    "title": "CM",
+    "followers": 171,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1732959807,
+    "joined": 1380976040,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

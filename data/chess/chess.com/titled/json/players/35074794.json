@@ -1,0 +1,16 @@
+{
+    "player_id": 35074794,
+    "@id": "https://api.chess.com/pub/player/chess1student",
+    "url": "https://www.chess.com/member/chess1student",
+    "username": "chess1student",
+    "title": "CM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/SK",
+    "last_online": 1733846354,
+    "joined": 1493220267,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,105 @@
+{
+    "player_id": 2910398,
+    "@id": "https://api.chess.com/pub/player/ritvik1901",
+    "url": "https://www.chess.com/member/ritvik1901",
+    "name": "pendyala ritvik",
+    "username": "ritvik1901",
+    "title": "FM",
+    "followers": 82,
+    "country": "https://api.chess.com/pub/country/KE",
+    "location": "Kenya",
+    "last_online": 1729098765,
+    "joined": 1276434213,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1249,
+            "date": 1597751304,
+            "rd": 168
+        },
+        "best": {
+            "rating": 1677,
+            "date": 1367857941,
+            "game": "https://www.chess.com/game/daily/67830902"
+        },
+        "record": {
+            "win": 4,
+            "loss": 6,
+            "draw": 1,
+            "time_per_move": 85297,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1604,
+            "date": 1711099837,
+            "rd": 76
+        },
+        "best": {
+            "rating": 1721,
+            "date": 1708266667,
+            "game": "https://www.chess.com/game/live/1564906925"
+        },
+        "record": {
+            "win": 247,
+            "loss": 207,
+            "draw": 31
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1438,
+            "date": 1729099525,
+            "rd": 51
+        },
+        "best": {
+            "rating": 1643,
+            "date": 1606151805,
+            "game": "https://www.chess.com/game/live/105291741189"
+        },
+        "record": {
+            "win": 272,
+            "loss": 311,
+            "draw": 14
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1407,
+            "date": 1715209007,
+            "rd": 28
+        },
+        "best": {
+            "rating": 1572,
+            "date": 1611728211,
+            "game": "https://www.chess.com/game/live/104853671003"
+        },
+        "record": {
+            "win": 643,
+            "loss": 630,
+            "draw": 66
+        }
+    },
+    "fide": 1695,
+    "tactics": {
+        "highest": {
+            "rating": 2638,
+            "date": 1714131028
+        },
+        "lowest": {
+            "rating": 771,
+            "date": 1297429435
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39353062.1e597e2c.200x200o.3d0bfd67da7e.jpeg",
+    "player_id": 39353062,
+    "@id": "https://api.chess.com/pub/player/domingosjunior",
+    "url": "https://www.chess.com/member/Domingosjunior",
+    "name": "Domingos Junior",
+    "username": "domingosjunior",
+    "title": "FM",
+    "followers": 73,
+    "country": "https://api.chess.com/pub/country/AO",
+    "last_online": 1733562270,
+    "joined": 1507716872,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 326,
+            "date": 1731257677,
+            "rd": 274
+        },
+        "record": {
+            "win": 4,
+            "loss": 6,
+            "draw": 0,
+            "time_per_move": 315920,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2056,
+            "date": 1630772243,
+            "rd": 87
+        },
+        "best": {
+            "rating": 2082,
+            "date": 1630682628,
+            "game": "https://www.chess.com/game/live/24506540837"
+        },
+        "record": {
+            "win": 22,
+            "loss": 4,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2525,
+            "date": 1732387535,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2533,
+            "date": 1732387378,
+            "game": "https://www.chess.com/game/live/126121770329"
+        },
+        "record": {
+            "win": 126,
+            "loss": 98,
+            "draw": 15
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2508,
+            "date": 1733562778,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2517,
+            "date": 1693497053,
+            "game": "https://www.chess.com/game/live/87235146959"
+        },
+        "record": {
+            "win": 1916,
+            "loss": 936,
+            "draw": 224
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3174,
+            "date": 1714636168
+        },
+        "lowest": {
+            "rating": 413,
+            "date": 1520406449
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 1,
+            "score": 1
+        }
+    }
+}

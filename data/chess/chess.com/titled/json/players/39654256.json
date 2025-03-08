@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39654256.a7d4226c.200x200o.a51069b985b2.jpeg",
+    "player_id": 39654256,
+    "@id": "https://api.chess.com/pub/player/leepday",
+    "url": "https://www.chess.com/member/leepday",
+    "name": "Luigy Lira De Siqueira",
+    "username": "leepday",
+    "title": "CM",
+    "followers": 56,
+    "country": "https://api.chess.com/pub/country/BR",
+    "last_online": 1734177272,
+    "joined": 1508627799,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1668,
+            "date": 1728261313,
+            "rd": 148
+        },
+        "best": {
+            "rating": 1678,
+            "date": 1613249491,
+            "game": "https://www.chess.com/game/live/16055774857"
+        },
+        "record": {
+            "win": 30,
+            "loss": 11,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2226,
+            "date": 1733099825,
+            "rd": 56
+        },
+        "best": {
+            "rating": 2301,
+            "date": 1714615959,
+            "game": "https://www.chess.com/game/live/113112586571"
+        },
+        "record": {
+            "win": 632,
+            "loss": 502,
+            "draw": 47
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2337,
+            "date": 1733099534,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2395,
+            "date": 1732586972,
+            "game": "https://www.chess.com/game/live/109995646659"
+        },
+        "record": {
+            "win": 425,
+            "loss": 326,
+            "draw": 27
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3366,
+            "date": 1688395194
+        },
+        "lowest": {
+            "rating": 395,
+            "date": 1513989623
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

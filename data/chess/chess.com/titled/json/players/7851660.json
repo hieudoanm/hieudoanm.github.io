@@ -1,0 +1,17 @@
+{
+    "player_id": 7851660,
+    "@id": "https://api.chess.com/pub/player/chessablanca",
+    "url": "https://www.chess.com/member/chessablanca",
+    "name": "Nameer Issani",
+    "username": "chessablanca",
+    "title": "CM",
+    "followers": 249,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1734102051,
+    "joined": 1339355133,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

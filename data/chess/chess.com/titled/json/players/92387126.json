@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/92387126.e0e0a67d.200x200o.ec657d10527d.jpeg",
+    "player_id": 92387126,
+    "@id": "https://api.chess.com/pub/player/sous007",
+    "url": "https://www.chess.com/member/SouS007",
+    "name": "Lord Adrian Soderstrom",
+    "username": "sous007",
+    "title": "FM",
+    "followers": 71,
+    "country": "https://api.chess.com/pub/country/SE",
+    "location": "Sundsvall",
+    "last_online": 1733869612,
+    "joined": 1601665521,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

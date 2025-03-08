@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/22871074.0e53699c.200x200o.7b7a219982fb.jpeg",
+    "player_id": 22871074,
+    "@id": "https://api.chess.com/pub/player/mortngabriel",
+    "url": "https://www.chess.com/member/mortngabriel",
+    "name": "Martin Horak",
+    "username": "mortngabriel",
+    "title": "FM",
+    "followers": 48,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734008351,
+    "joined": 1434616136,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1914,
+            "date": 1712996914,
+            "rd": 236
+        },
+        "best": {
+            "rating": 1995,
+            "date": 1547207413,
+            "game": "https://www.chess.com/game/daily/214139914"
+        },
+        "record": {
+            "win": 40,
+            "loss": 18,
+            "draw": 1,
+            "time_per_move": 18566,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2300,
+            "date": 1565352587,
+            "rd": 91
+        },
+        "best": {
+            "rating": 1972,
+            "date": 1495213452,
+            "game": "https://www.chess.com/game/live/2109170935"
+        },
+        "record": {
+            "win": 12,
+            "loss": 6,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2554,
+            "date": 1717853016,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2554,
+            "date": 1717853016,
+            "game": "https://www.chess.com/game/live/22540900169"
+        },
+        "record": {
+            "win": 1656,
+            "loss": 1797,
+            "draw": 157
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2657,
+            "date": 1733270499,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2667,
+            "date": 1731433754,
+            "game": "https://www.chess.com/game/live/123018579109"
+        },
+        "record": {
+            "win": 10833,
+            "loss": 11070,
+            "draw": 1431
+        }
+    },
+    "fide": 2100,
+    "tactics": {
+        "highest": {
+            "rating": 6300,
+            "date": 1558816397
+        },
+        "lowest": {
+            "rating": 1513,
+            "date": 1434616219
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 74,
+            "score": 71
+        }
+    }
+}

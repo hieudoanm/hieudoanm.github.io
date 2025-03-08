@@ -1,0 +1,90 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/72537808.d764dd74.200x200o.882e8813297d.jpg",
+    "player_id": 72537808,
+    "@id": "https://api.chess.com/pub/player/aryan_tamadon",
+    "url": "https://www.chess.com/member/Aryan_Tamadon",
+    "name": "Arian Baradaran Tamadon",
+    "username": "aryan_tamadon",
+    "title": "FM",
+    "followers": 103,
+    "country": "https://api.chess.com/pub/country/IR",
+    "location": "Bandar Anzali",
+    "last_online": 1734163106,
+    "joined": 1582372199,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2289,
+            "date": 1720798104,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2454,
+            "date": 1611687542,
+            "game": "https://www.chess.com/game/live/39299394775"
+        },
+        "record": {
+            "win": 21,
+            "loss": 13,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2725,
+            "date": 1733596799,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2904,
+            "date": 1704561077,
+            "game": "https://www.chess.com/game/live/106769515357"
+        },
+        "record": {
+            "win": 4394,
+            "loss": 5659,
+            "draw": 539
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2636,
+            "date": 1734105591,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2792,
+            "date": 1708697087,
+            "game": "https://www.chess.com/game/live/126467978851"
+        },
+        "record": {
+            "win": 1389,
+            "loss": 1107,
+            "draw": 126
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3746,
+            "date": 1727537267
+        },
+        "lowest": {
+            "rating": 415,
+            "date": 1582578383
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        },
+        "daily": {
+            "total_attempts": 50,
+            "score": 47
+        }
+    }
+}

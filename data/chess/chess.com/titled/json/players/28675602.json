@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/28675602.c5e39f33.200x200o.640e01293634.jpeg",
+    "player_id": 28675602,
+    "@id": "https://api.chess.com/pub/player/namasiku",
+    "url": "https://www.chess.com/member/Namasiku",
+    "name": "Phylis Namasiku Mwilola",
+    "username": "namasiku",
+    "title": "WCM",
+    "followers": 40,
+    "country": "https://api.chess.com/pub/country/ZM",
+    "location": "Livingstone",
+    "last_online": 1733677814,
+    "joined": 1466195044,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1701509316,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 4,
+            "draw": 0,
+            "time_per_move": 1796250,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1528,
+            "date": 1734080425,
+            "rd": 32
+        },
+        "best": {
+            "rating": 1624,
+            "date": 1675890538,
+            "game": "https://www.chess.com/game/live/25814930697"
+        },
+        "record": {
+            "win": 912,
+            "loss": 888,
+            "draw": 66
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 759,
+            "date": 1728412765,
+            "rd": 65
+        },
+        "best": {
+            "rating": 1044,
+            "date": 1637165454,
+            "game": "https://www.chess.com/game/live/97131590267"
+        },
+        "record": {
+            "win": 54,
+            "loss": 54,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1277,
+            "date": 1731604365,
+            "rd": 35
+        },
+        "best": {
+            "rating": 1441,
+            "date": 1538165845,
+            "game": "https://www.chess.com/game/live/124968548093"
+        },
+        "record": {
+            "win": 529,
+            "loss": 505,
+            "draw": 34
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2442,
+            "date": 1720559750
+        },
+        "lowest": {
+            "rating": 1205,
+            "date": 1521024546
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 26,
+            "score": 23
+        }
+    }
+}

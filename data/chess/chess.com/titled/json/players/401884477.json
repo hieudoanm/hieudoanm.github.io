@@ -1,0 +1,51 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/401884477.87af292a.200x200o.15f5f698687a.jpg",
+    "player_id": 401884477,
+    "@id": "https://api.chess.com/pub/player/artistic_attacker",
+    "url": "https://www.chess.com/member/artistic_attacker",
+    "username": "artistic_attacker",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734168960,
+    "joined": 1731346370,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2474,
+            "date": 1734183106,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2498,
+            "date": 1734173999,
+            "game": "https://www.chess.com/game/live/127666181151"
+        },
+        "record": {
+            "win": 48,
+            "loss": 38,
+            "draw": 5
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2561,
+            "date": 1733323682
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1731346370
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

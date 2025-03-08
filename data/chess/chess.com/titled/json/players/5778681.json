@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/5778681.d39be1fd.200x200o.6d18bfa18e87.jpeg",
+    "player_id": 5778681,
+    "@id": "https://api.chess.com/pub/player/larax",
+    "url": "https://www.chess.com/member/Larax",
+    "name": "Alexander Costello",
+    "username": "larax",
+    "title": "IM",
+    "followers": 47,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "San Diego",
+    "last_online": 1733739582,
+    "joined": 1315871051,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1846,
+            "date": 1705245333,
+            "rd": 102
+        },
+        "best": {
+            "rating": 1948,
+            "date": 1513505626,
+            "game": "https://www.chess.com/game/daily/178474022"
+        },
+        "record": {
+            "win": 16,
+            "loss": 33,
+            "draw": 1,
+            "time_per_move": 47535,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1346,
+            "date": 1414605740,
+            "rd": 290
+        },
+        "best": {
+            "rating": 1346,
+            "date": 1414605740,
+            "game": "https://www.chess.com/game/daily/96464350"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 47535,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2395,
+            "date": 1733119945,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2511,
+            "date": 1667445520,
+            "game": "https://www.chess.com/game/live/49143534573"
+        },
+        "record": {
+            "win": 230,
+            "loss": 169,
+            "draw": 26
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2715,
+            "date": 1728621014,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2724,
+            "date": 1725479514,
+            "game": "https://www.chess.com/game/live/121988412627"
+        },
+        "record": {
+            "win": 2921,
+            "loss": 1994,
+            "draw": 308
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2630,
+            "date": 1733740616,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2792,
+            "date": 1725480151,
+            "game": "https://www.chess.com/game/live/62016668929"
+        },
+        "record": {
+            "win": 3661,
+            "loss": 2674,
+            "draw": 428
+        }
+    },
+    "fide": 1942,
+    "tactics": {
+        "highest": {
+            "rating": 3393,
+            "date": 1675131502
+        },
+        "lowest": {
+            "rating": 1071,
+            "date": 1331178792
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "player_id": 60625659,
+    "@id": "https://api.chess.com/pub/player/walinder",
+    "url": "https://www.chess.com/member/Walinder",
+    "name": "Lars W\u00e5linder",
+    "username": "walinder",
+    "title": "FM",
+    "followers": 121,
+    "country": "https://api.chess.com/pub/country/SE",
+    "last_online": 1733945872,
+    "joined": 1557077893,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

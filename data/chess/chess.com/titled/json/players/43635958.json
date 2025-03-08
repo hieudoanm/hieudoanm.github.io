@@ -1,0 +1,45 @@
+{
+    "player_id": 43635958,
+    "@id": "https://api.chess.com/pub/player/ebuhurejra",
+    "url": "https://www.chess.com/member/Ebuhurejra",
+    "username": "ebuhurejra",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/RS",
+    "last_online": 1733940442,
+    "joined": 1519405287,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2355,
+            "date": 1734175532,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2543,
+            "date": 1716904257,
+            "game": "https://www.chess.com/game/live/4295690586"
+        },
+        "record": {
+            "win": 3832,
+            "loss": 3531,
+            "draw": 484
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1519405287
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1519405287
+        }
+    },
+    "puzzle_rush": {}
+}

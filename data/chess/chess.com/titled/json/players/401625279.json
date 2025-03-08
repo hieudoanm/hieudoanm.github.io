@@ -1,0 +1,16 @@
+{
+    "player_id": 401625279,
+    "@id": "https://api.chess.com/pub/player/sommerseller",
+    "url": "https://www.chess.com/member/Sommerseller",
+    "name": "Nils Stukenbrok",
+    "username": "sommerseller",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1731238335,
+    "joined": 1731238310,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

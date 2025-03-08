@@ -1,0 +1,67 @@
+{
+    "player_id": 220177785,
+    "@id": "https://api.chess.com/pub/player/saveliy_golubov",
+    "url": "https://www.chess.com/member/Saveliy_Golubov",
+    "username": "saveliy_golubov",
+    "title": "IM",
+    "followers": 95,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733926698,
+    "joined": 1672846849,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 3083,
+            "date": 1733944433,
+            "rd": 32
+        },
+        "best": {
+            "rating": 3191,
+            "date": 1711869674,
+            "game": "https://www.chess.com/game/live/105875984667"
+        },
+        "record": {
+            "win": 1437,
+            "loss": 409,
+            "draw": 99
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2969,
+            "date": 1733943417,
+            "rd": 44
+        },
+        "best": {
+            "rating": 3184,
+            "date": 1686163186,
+            "game": "https://www.chess.com/game/live/96203001611"
+        },
+        "record": {
+            "win": 233,
+            "loss": 112,
+            "draw": 30
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3697,
+            "date": 1718560266
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1672855723
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 53
+        }
+    }
+}

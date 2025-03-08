@@ -1,0 +1,28 @@
+{
+    "player_id": 405423177,
+    "@id": "https://api.chess.com/pub/player/jonady1",
+    "url": "https://www.chess.com/member/jonady1",
+    "name": "Jonathan Ady",
+    "username": "jonady1",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/GB",
+    "last_online": 1733656553,
+    "joined": 1732726483,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "fide": 2358,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1732726483
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1732726483
+        }
+    },
+    "puzzle_rush": {}
+}

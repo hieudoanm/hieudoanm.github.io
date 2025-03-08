@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/172530943.c5238d64.200x200o.c6416acd7d6e.jpeg",
+    "player_id": 172530943,
+    "@id": "https://api.chess.com/pub/player/wizardattack",
+    "url": "https://www.chess.com/member/wizardattack",
+    "name": "Alvaro",
+    "username": "wizardattack",
+    "title": "FM",
+    "followers": 25,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "New York",
+    "last_online": 1729117911,
+    "joined": 1644344464,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

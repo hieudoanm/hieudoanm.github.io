@@ -1,0 +1,66 @@
+{
+    "player_id": 118271638,
+    "@id": "https://api.chess.com/pub/player/penyulambat",
+    "url": "https://www.chess.com/member/penyulambat",
+    "username": "penyulambat",
+    "title": "IM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1732903028,
+    "joined": 1612397953,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2790,
+            "date": 1720236992,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2790,
+            "date": 1720236992,
+            "game": "https://www.chess.com/game/live/47277597611"
+        },
+        "record": {
+            "win": 18,
+            "loss": 7,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2647,
+            "date": 1732945034,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2779,
+            "date": 1717621984,
+            "game": "https://www.chess.com/game/live/36063543449"
+        },
+        "record": {
+            "win": 236,
+            "loss": 160,
+            "draw": 36
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2200,
+            "date": 1653532963
+        },
+        "lowest": {
+            "rating": 2200,
+            "date": 1653532963
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

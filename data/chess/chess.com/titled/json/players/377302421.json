@@ -1,0 +1,46 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/377302421.07b2e54f.200x200o.7210fad2a1a0.jpg",
+    "player_id": 377302421,
+    "@id": "https://api.chess.com/pub/player/search-of-harmony",
+    "url": "https://www.chess.com/member/Search-of-Harmony",
+    "username": "search-of-harmony",
+    "title": "IM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1722879968,
+    "joined": 1721920246,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2705,
+            "date": 1722523904,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2705,
+            "date": 1722523904,
+            "game": "https://www.chess.com/game/live/116252420459"
+        },
+        "record": {
+            "win": 65,
+            "loss": 27,
+            "draw": 4
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1721920246
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1721920246
+        }
+    },
+    "puzzle_rush": {}
+}

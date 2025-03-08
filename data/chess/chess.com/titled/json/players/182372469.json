@@ -1,0 +1,88 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/182372469.af17852c.200x200o.d7a804423601.jpg",
+    "player_id": 182372469,
+    "@id": "https://api.chess.com/pub/player/avenakhenjoyer",
+    "url": "https://www.chess.com/member/avenakhenjoyer",
+    "name": "Moritz Gressmann",
+    "username": "avenakhenjoyer",
+    "title": "CM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734117705,
+    "joined": 1651489105,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2017,
+            "date": 1673643636,
+            "rd": 337
+        },
+        "best": {
+            "rating": 2017,
+            "date": 1673643636,
+            "game": "https://www.chess.com/game/daily/462761485"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 18915,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2150,
+            "date": 1651776961,
+            "rd": 82
+        },
+        "best": {
+            "rating": 2228,
+            "date": 1651490684,
+            "game": "https://www.chess.com/game/live/45235218787"
+        },
+        "record": {
+            "win": 11,
+            "loss": 7,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2542,
+            "date": 1733955956,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2542,
+            "date": 1733955956,
+            "game": "https://www.chess.com/game/live/68920561851"
+        },
+        "record": {
+            "win": 131,
+            "loss": 84,
+            "draw": 15
+        }
+    },
+    "fide": 2094,
+    "tactics": {
+        "highest": {
+            "rating": 3427,
+            "date": 1724607506
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1654022965
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 38,
+            "score": 35
+        }
+    }
+}

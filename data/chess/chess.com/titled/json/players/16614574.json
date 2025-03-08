@@ -1,0 +1,124 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/16614574.8a8d2848.200x200o.4474b3e9863c.jpeg",
+    "player_id": 16614574,
+    "@id": "https://api.chess.com/pub/player/samolo",
+    "url": "https://www.chess.com/member/samolo",
+    "name": "Samy Shoker",
+    "username": "samolo",
+    "title": "GM",
+    "followers": 3580,
+    "country": "https://api.chess.com/pub/country/EG",
+    "last_online": 1734180145,
+    "joined": 1395778536,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 765,
+            "date": 1734138963,
+            "rd": 302
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1395778536,
+            "game": "https://www.chess.com/game/daily/581697685"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 20810,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 929,
+            "date": 1733819387,
+            "rd": 172
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1395778536,
+            "game": "https://www.chess.com/game/daily/656694881"
+        },
+        "record": {
+            "win": 3,
+            "loss": 3,
+            "draw": 1,
+            "time_per_move": 20810,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2409,
+            "date": 1678798411,
+            "rd": 121
+        },
+        "best": {
+            "rating": 2419,
+            "date": 1678792633,
+            "game": "https://www.chess.com/game/live/61034375711"
+        },
+        "record": {
+            "win": 5,
+            "loss": 3,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2686,
+            "date": 1687432928,
+            "rd": 125
+        },
+        "best": {
+            "rating": 2717,
+            "date": 1647853208,
+            "game": "https://www.chess.com/game/live/35649418935"
+        },
+        "record": {
+            "win": 89,
+            "loss": 63,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2696,
+            "date": 1734139661,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2919,
+            "date": 1683955763,
+            "game": "https://www.chess.com/game/live/55225800937"
+        },
+        "record": {
+            "win": 6834,
+            "loss": 6427,
+            "draw": 1562
+        }
+    },
+    "fide": 2610,
+    "tactics": {
+        "highest": {
+            "rating": 3131,
+            "date": 1702015338
+        },
+        "lowest": {
+            "rating": 1996,
+            "date": 1647604720
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 55,
+            "score": 52
+        }
+    }
+}

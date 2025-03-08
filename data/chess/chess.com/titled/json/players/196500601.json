@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/196500601.ca297a39.200x200o.5be38725a5e2.jpg",
+    "player_id": 196500601,
+    "@id": "https://api.chess.com/pub/player/kashjinx",
+    "url": "https://www.chess.com/member/KashJinx",
+    "name": "Kashish Jain",
+    "username": "kashjinx",
+    "title": "FM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "Pune",
+    "last_online": 1734109563,
+    "joined": 1662711616,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2382,
+            "date": 1731508113,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2584,
+            "date": 1679932149,
+            "game": "https://www.chess.com/game/live/58096785905"
+        },
+        "record": {
+            "win": 22,
+            "loss": 18,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2683,
+            "date": 1732693546,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2746,
+            "date": 1691254914,
+            "game": "https://www.chess.com/game/live/78993774761"
+        },
+        "record": {
+            "win": 412,
+            "loss": 394,
+            "draw": 70
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2658,
+            "date": 1734109924,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2741,
+            "date": 1722958424,
+            "game": "https://www.chess.com/game/live/110647963425"
+        },
+        "record": {
+            "win": 456,
+            "loss": 444,
+            "draw": 76
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3650,
+            "date": 1731582707
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1666350587
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 73,
+            "score": 70
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "player_id": 26675552,
+    "@id": "https://api.chess.com/pub/player/gabrielurbani",
+    "url": "https://www.chess.com/member/GabrielUrbani",
+    "name": "Gabriel Urbani",
+    "username": "gabrielurbani",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1734094775,
+    "joined": 1455298420,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2216,
+            "date": 1733866690,
+            "rd": 70
+        },
+        "best": {
+            "rating": 2216,
+            "date": 1733866409,
+            "game": "https://www.chess.com/game/live/127605045553"
+        },
+        "record": {
+            "win": 41,
+            "loss": 21,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2481,
+            "date": 1733873302,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2515,
+            "date": 1733868558,
+            "game": "https://www.chess.com/game/live/127606839121"
+        },
+        "record": {
+            "win": 27,
+            "loss": 26,
+            "draw": 3
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3106,
+            "date": 1727465731
+        },
+        "lowest": {
+            "rating": 1354,
+            "date": 1457718365
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 72,
+            "score": 69
+        }
+    }
+}

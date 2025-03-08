@@ -1,0 +1,78 @@
+{
+    "player_id": 108378224,
+    "@id": "https://api.chess.com/pub/player/dafny2005",
+    "url": "https://www.chess.com/member/Dafny2005",
+    "username": "dafny2005",
+    "title": "IM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1732347006,
+    "joined": 1609351664,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2500,
+            "date": 1713958083,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2307,
+            "date": 1710613375,
+            "game": "https://www.chess.com/game/live/104350939671"
+        },
+        "record": {
+            "win": 44,
+            "loss": 2,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2500,
+            "date": 1713958083,
+            "rd": 290
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2875,
+            "date": 1729608651,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2951,
+            "date": 1728587396,
+            "game": "https://www.chess.com/game/live/109112500571"
+        },
+        "record": {
+            "win": 461,
+            "loss": 287,
+            "draw": 55
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3815,
+            "date": 1715387363
+        },
+        "lowest": {
+            "rating": 423,
+            "date": 1617082304
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

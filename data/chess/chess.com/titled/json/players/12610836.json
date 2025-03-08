@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/12610836.d502f3a0.200x200o.8533593834ec.jpeg",
+    "player_id": 12610836,
+    "@id": "https://api.chess.com/pub/player/moro182",
+    "url": "https://www.chess.com/member/moro182",
+    "name": "Luca Moroni Jr",
+    "username": "moro182",
+    "title": "GM",
+    "followers": 1084,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1734167560,
+    "joined": 1373128795,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1422,
+            "date": 1630575457,
+            "rd": 141
+        },
+        "best": {
+            "rating": 1422,
+            "date": 1560185809,
+            "game": "https://www.chess.com/game/daily/228111864"
+        },
+        "record": {
+            "win": 10,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 12876,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2514,
+            "date": 1727283050,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2623,
+            "date": 1642335014,
+            "game": "https://www.chess.com/game/live/114972516305"
+        },
+        "record": {
+            "win": 56,
+            "loss": 28,
+            "draw": 13
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2798,
+            "date": 1732381433,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2913,
+            "date": 1720281513,
+            "game": "https://www.chess.com/game/live/39213560131"
+        },
+        "record": {
+            "win": 1335,
+            "loss": 659,
+            "draw": 123
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2875,
+            "date": 1733999214,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2992,
+            "date": 1720462829,
+            "game": "https://www.chess.com/game/live/113699384719"
+        },
+        "record": {
+            "win": 3773,
+            "loss": 2461,
+            "draw": 696
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2969,
+            "date": 1517746222
+        },
+        "lowest": {
+            "rating": 1177,
+            "date": 1375295714
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 82,
+            "score": 79
+        }
+    }
+}

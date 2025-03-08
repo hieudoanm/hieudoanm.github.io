@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/32114860.06c8cd79.200x200o.be5dde3ea4fe.jpeg",
+    "player_id": 32114860,
+    "@id": "https://api.chess.com/pub/player/prascar",
+    "url": "https://www.chess.com/member/PrascaR",
+    "name": "Rafael Prasca",
+    "username": "prascar",
+    "title": "IM",
+    "followers": 34,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "Medellin",
+    "last_online": 1733871345,
+    "joined": 1483476445,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2531,
+            "date": 1580408354,
+            "rd": 101
+        },
+        "best": {
+            "rating": 2411,
+            "date": 1580408318,
+            "game": "https://www.chess.com/game/live/4450216742"
+        },
+        "record": {
+            "win": 11,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2478,
+            "date": 1733030660,
+            "rd": 59
+        },
+        "best": {
+            "rating": 2574,
+            "date": 1543520435,
+            "game": "https://www.chess.com/game/live/3197530047"
+        },
+        "record": {
+            "win": 934,
+            "loss": 716,
+            "draw": 90
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1483476445
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1483476445
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 41
+        }
+    }
+}

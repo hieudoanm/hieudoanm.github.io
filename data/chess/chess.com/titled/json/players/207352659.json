@@ -1,0 +1,84 @@
+{
+    "player_id": 207352659,
+    "@id": "https://api.chess.com/pub/player/traktor666",
+    "url": "https://www.chess.com/member/Traktor666",
+    "username": "traktor666",
+    "title": "IM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734184395,
+    "joined": 1668854215,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2229,
+            "date": 1729020427,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2352,
+            "date": 1669493676,
+            "game": "https://www.chess.com/game/live/103230055353"
+        },
+        "record": {
+            "win": 4,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2468,
+            "date": 1732205631,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2529,
+            "date": 1709721726,
+            "game": "https://www.chess.com/game/live/103460508021"
+        },
+        "record": {
+            "win": 119,
+            "loss": 42,
+            "draw": 8
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2586,
+            "date": 1734134069,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2626,
+            "date": 1731254043,
+            "game": "https://www.chess.com/game/live/108021580633"
+        },
+        "record": {
+            "win": 652,
+            "loss": 456,
+            "draw": 86
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3372,
+            "date": 1697786444
+        },
+        "lowest": {
+            "rating": 2791,
+            "date": 1671867293
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 37,
+            "score": 34
+        }
+    }
+}

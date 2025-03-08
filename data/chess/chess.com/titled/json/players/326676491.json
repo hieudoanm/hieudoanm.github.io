@@ -1,0 +1,17 @@
+{
+    "player_id": 326676491,
+    "@id": "https://api.chess.com/pub/player/xakevicius91",
+    "url": "https://www.chess.com/member/xakevicius91",
+    "name": "Xavier Martinez Pla",
+    "username": "xakevicius91",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/XC",
+    "last_online": 1734099708,
+    "joined": 1700243875,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

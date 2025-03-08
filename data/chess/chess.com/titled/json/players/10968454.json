@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/10968454.907fa29c.200x200o.f5aefc31b13d.jpg",
+    "player_id": 10968454,
+    "@id": "https://api.chess.com/pub/player/marianpetrov",
+    "url": "https://www.chess.com/member/MarianPetrov",
+    "name": "Marian Petrov",
+    "username": "marianpetrov",
+    "title": "GM",
+    "followers": 912,
+    "country": "https://api.chess.com/pub/country/BG",
+    "location": "Burgas",
+    "last_online": 1734103944,
+    "joined": 1361965613,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2147,
+            "date": 1734105711,
+            "rd": 316
+        },
+        "best": {
+            "rating": 2304,
+            "date": 1679048717,
+            "game": "https://www.chess.com/game/daily/77672962"
+        },
+        "record": {
+            "win": 11,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 34701,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2560,
+            "date": 1729953402,
+            "rd": 116
+        },
+        "best": {
+            "rating": 2560,
+            "date": 1702642963,
+            "game": "https://www.chess.com/game/live/12250031381"
+        },
+        "record": {
+            "win": 77,
+            "loss": 24,
+            "draw": 12
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2706,
+            "date": 1733400975,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2706,
+            "date": 1646908909,
+            "game": "https://www.chess.com/game/live/40647612613"
+        },
+        "record": {
+            "win": 856,
+            "loss": 827,
+            "draw": 92
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2703,
+            "date": 1732810237,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2722,
+            "date": 1681664541,
+            "game": "https://www.chess.com/game/live/3756124495"
+        },
+        "record": {
+            "win": 3658,
+            "loss": 3443,
+            "draw": 712
+        }
+    },
+    "fide": 2549,
+    "tactics": {
+        "highest": {
+            "rating": 2875,
+            "date": 1723898338
+        },
+        "lowest": {
+            "rating": 1367,
+            "date": 1420472195
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 50
+        }
+    }
+}

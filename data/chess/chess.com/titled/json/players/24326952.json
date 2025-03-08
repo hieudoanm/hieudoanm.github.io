@@ -1,0 +1,110 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/24326952.683677c2.200x200o.565bd2e918f4.jpeg",
+    "player_id": 24326952,
+    "@id": "https://api.chess.com/pub/player/delqate",
+    "url": "https://www.chess.com/member/delqate",
+    "name": "Paco Rubio Tent",
+    "username": "delqate",
+    "title": "FM",
+    "followers": 42,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Valencia",
+    "last_online": 1734142237,
+    "joined": 1443455816,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 561,
+            "date": 1715723234,
+            "rd": 126
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1443455816,
+            "game": "https://www.chess.com/game/daily/450312757"
+        },
+        "record": {
+            "win": 5,
+            "loss": 6,
+            "draw": 0,
+            "time_per_move": 122848,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1196,
+            "date": 1719701867,
+            "rd": 104
+        },
+        "best": {
+            "rating": 1270,
+            "date": 1664823395,
+            "game": "https://www.chess.com/game/live/58561906499"
+        },
+        "record": {
+            "win": 27,
+            "loss": 24,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2262,
+            "date": 1733263176,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2444,
+            "date": 1689003915,
+            "game": "https://www.chess.com/game/live/104088576149"
+        },
+        "record": {
+            "win": 819,
+            "loss": 602,
+            "draw": 95
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2347,
+            "date": 1734142584,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2575,
+            "date": 1725286772,
+            "game": "https://www.chess.com/game/live/98385316485"
+        },
+        "record": {
+            "win": 2869,
+            "loss": 2238,
+            "draw": 352
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3403,
+            "date": 1707145769
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1650919645
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        },
+        "daily": {
+            "total_attempts": 36,
+            "score": 33
+        }
+    }
+}

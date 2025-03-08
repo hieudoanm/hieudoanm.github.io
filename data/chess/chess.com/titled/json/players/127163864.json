@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/127163864.f49a9969.200x200o.e1c09f491110.jpg",
+    "player_id": 127163864,
+    "@id": "https://api.chess.com/pub/player/antonusss",
+    "url": "https://www.chess.com/member/antonusss",
+    "name": "Anton Frank",
+    "username": "antonusss",
+    "title": "CM",
+    "followers": 55,
+    "country": "https://api.chess.com/pub/country/SE",
+    "last_online": 1734125497,
+    "joined": 1615399224,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2259,
+            "date": 1729455165,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2281,
+            "date": 1683213999,
+            "game": "https://www.chess.com/game/live/84810794061"
+        },
+        "record": {
+            "win": 115,
+            "loss": 80,
+            "draw": 18
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2505,
+            "date": 1731453679,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2528,
+            "date": 1705872602,
+            "game": "https://www.chess.com/game/live/124911586395"
+        },
+        "record": {
+            "win": 4110,
+            "loss": 4043,
+            "draw": 658
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2456,
+            "date": 1733849777,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2484,
+            "date": 1732643413,
+            "game": "https://www.chess.com/game/live/124562322383"
+        },
+        "record": {
+            "win": 2317,
+            "loss": 2173,
+            "draw": 352
+        }
+    },
+    "fide": 2244,
+    "tactics": {
+        "highest": {
+            "rating": 3355,
+            "date": 1731063073
+        },
+        "lowest": {
+            "rating": 984,
+            "date": 1615452686
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 53
+        }
+    }
+}

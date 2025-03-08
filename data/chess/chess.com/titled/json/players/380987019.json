@@ -1,0 +1,72 @@
+{
+    "player_id": 380987019,
+    "@id": "https://api.chess.com/pub/player/blundermaster2335",
+    "url": "https://www.chess.com/member/BlunderMaster2335",
+    "name": "Serdar Murat Yildiz",
+    "username": "blundermaster2335",
+    "title": "CM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1734168026,
+    "joined": 1723648947,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2688,
+            "date": 1734169510,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2775,
+            "date": 1728120482,
+            "game": "https://www.chess.com/game/live/123099027143"
+        },
+        "record": {
+            "win": 294,
+            "loss": 218,
+            "draw": 36
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2546,
+            "date": 1733853987,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2632,
+            "date": 1729008467,
+            "game": "https://www.chess.com/game/live/122142035925"
+        },
+        "record": {
+            "win": 118,
+            "loss": 91,
+            "draw": 16
+        }
+    },
+    "fide": 2182,
+    "tactics": {
+        "highest": {
+            "rating": 3711,
+            "date": 1734180327
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1723648947
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        },
+        "daily": {
+            "total_attempts": 55,
+            "score": 53
+        }
+    }
+}

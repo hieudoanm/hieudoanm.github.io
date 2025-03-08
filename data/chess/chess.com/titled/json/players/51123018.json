@@ -1,0 +1,84 @@
+{
+    "player_id": 51123018,
+    "@id": "https://api.chess.com/pub/player/swiss_fighter",
+    "url": "https://www.chess.com/member/Swiss_Fighter",
+    "name": "Gabriel G\u00e4hwiler",
+    "username": "swiss_fighter",
+    "title": "IM",
+    "followers": 107,
+    "country": "https://api.chess.com/pub/country/CH",
+    "last_online": 1734089981,
+    "joined": 1540469980,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2678,
+            "date": 1733435320,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2733,
+            "date": 1706385693,
+            "game": "https://www.chess.com/game/live/104455213255"
+        },
+        "record": {
+            "win": 596,
+            "loss": 98,
+            "draw": 35
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2855,
+            "date": 1734037568,
+            "rd": 26
+        },
+        "best": {
+            "rating": 3015,
+            "date": 1711308314,
+            "game": "https://www.chess.com/game/live/122410536131"
+        },
+        "record": {
+            "win": 8862,
+            "loss": 2957,
+            "draw": 578
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2801,
+            "date": 1734035874,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2960,
+            "date": 1728924167,
+            "game": "https://www.chess.com/game/live/41702986511"
+        },
+        "record": {
+            "win": 2422,
+            "loss": 1112,
+            "draw": 365
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3831,
+            "date": 1716551437
+        },
+        "lowest": {
+            "rating": 415,
+            "date": 1542236476
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

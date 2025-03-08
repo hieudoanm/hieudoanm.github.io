@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13702924.82496443.200x200o.d563485955de.png",
+    "player_id": 13702924,
+    "@id": "https://api.chess.com/pub/player/elcala",
+    "url": "https://www.chess.com/member/elcala",
+    "name": "Roberto Oscar Villabrille",
+    "username": "elcala",
+    "title": "CM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Pehuajo",
+    "last_online": 1734024162,
+    "joined": 1380410168,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

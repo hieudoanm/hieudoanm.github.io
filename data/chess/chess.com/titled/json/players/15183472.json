@@ -1,0 +1,18 @@
+{
+    "player_id": 15183472,
+    "@id": "https://api.chess.com/pub/player/caterpiller35",
+    "url": "https://www.chess.com/member/Caterpiller35",
+    "name": "Santiago  Rodriguez",
+    "username": "caterpiller35",
+    "title": "CM",
+    "followers": 204,
+    "country": "https://api.chess.com/pub/country/UY",
+    "location": "uruguay",
+    "last_online": 1733889653,
+    "joined": 1387812102,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

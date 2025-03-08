@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/96750486.861166b8.200x200o.12f05f9c8a58.jpg",
+    "player_id": 96750486,
+    "@id": "https://api.chess.com/pub/player/nanditha_chess",
+    "url": "https://www.chess.com/member/Nanditha_Chess",
+    "name": "Nanditha V",
+    "username": "nanditha_chess",
+    "title": "WCM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "Hyderabad",
+    "last_online": 1734152698,
+    "joined": 1605343164,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1519,
+            "date": 1733972145,
+            "rd": 139
+        },
+        "best": {
+            "rating": 1916,
+            "date": 1655269880,
+            "game": "https://www.chess.com/game/live/49007982725"
+        },
+        "record": {
+            "win": 25,
+            "loss": 18,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1824,
+            "date": 1731854838,
+            "rd": 116
+        },
+        "best": {
+            "rating": 2404,
+            "date": 1621435905,
+            "game": "https://www.chess.com/game/live/15256937517"
+        },
+        "record": {
+            "win": 280,
+            "loss": 379,
+            "draw": 37
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2202,
+            "date": 1733851602,
+            "rd": 70
+        },
+        "best": {
+            "rating": 2303,
+            "date": 1641929128,
+            "game": "https://www.chess.com/game/live/117473454539"
+        },
+        "record": {
+            "win": 89,
+            "loss": 117,
+            "draw": 13
+        }
+    },
+    "fide": 1903,
+    "tactics": {
+        "highest": {
+            "rating": 2669,
+            "date": 1640338103
+        },
+        "lowest": {
+            "rating": 1600,
+            "date": 1606796709
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 50,
+            "score": 47
+        }
+    }
+}

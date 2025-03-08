@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/11776292.84990a04.200x200o.48b9f5c9ba49.jpeg",
+    "player_id": 11776292,
+    "@id": "https://api.chess.com/pub/player/silverback96",
+    "url": "https://www.chess.com/member/silverback96",
+    "name": "Roberto De Abreu",
+    "username": "silverback96",
+    "title": "FM",
+    "followers": 52,
+    "country": "https://api.chess.com/pub/country/ZA",
+    "last_online": 1733853450,
+    "joined": 1367789659,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

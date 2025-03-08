@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/31756634.1fa0feff.200x200o.ec1b488744f6.jpeg",
+    "player_id": 31756634,
+    "@id": "https://api.chess.com/pub/player/sergiopatagonia",
+    "url": "https://www.chess.com/member/sergiopatagonia",
+    "name": "Sergio Macagno",
+    "username": "sergiopatagonia",
+    "title": "FM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/AR",
+    "location": "Santa Cruz",
+    "last_online": 1733858736,
+    "joined": 1482263655,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2540,
+            "date": 1689755910,
+            "rd": 211
+        },
+        "best": {
+            "rating": 2540,
+            "date": 1689755910,
+            "game": "https://www.chess.com/game/live/83494521055"
+        },
+        "record": {
+            "win": 4,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2073,
+            "date": 1677901971,
+            "rd": 16
+        },
+        "best": {
+            "rating": 2122,
+            "date": 1666888930,
+            "game": "https://www.chess.com/game/live/60490853423"
+        },
+        "record": {
+            "win": 273,
+            "loss": 257,
+            "draw": 11
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2302,
+            "date": 1733871309,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2439,
+            "date": 1685153216,
+            "game": "https://www.chess.com/game/live/79086735759"
+        },
+        "record": {
+            "win": 1264,
+            "loss": 622,
+            "draw": 105
+        }
+    },
+    "fide": 2320,
+    "tactics": {
+        "highest": {
+            "rating": 3478,
+            "date": 1721621114
+        },
+        "lowest": {
+            "rating": 1252,
+            "date": 1485984705
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 30,
+            "score": 29
+        }
+    }
+}

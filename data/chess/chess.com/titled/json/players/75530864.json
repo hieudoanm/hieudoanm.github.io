@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75530864.be30c27b.200x200o.4a28ea283ae0.png",
+    "player_id": 75530864,
+    "@id": "https://api.chess.com/pub/player/thekarm",
+    "url": "https://www.chess.com/member/Thekarm",
+    "username": "thekarm",
+    "title": "FM",
+    "followers": 37,
+    "country": "https://api.chess.com/pub/country/VE",
+    "last_online": 1734070764,
+    "joined": 1585926021,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

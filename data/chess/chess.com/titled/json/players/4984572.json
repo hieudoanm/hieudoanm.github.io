@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/4984572.50cdf72c.200x200o.668f2b44c831.png",
+    "player_id": 4984572,
+    "@id": "https://api.chess.com/pub/player/thefidetrainer",
+    "url": "https://www.chess.com/member/thefidetrainer",
+    "name": "Peter Long",
+    "username": "thefidetrainer",
+    "title": "FM",
+    "followers": 80,
+    "country": "https://api.chess.com/pub/country/MY",
+    "location": "Kuala Lumpur",
+    "last_online": 1734072256,
+    "joined": 1302757933,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

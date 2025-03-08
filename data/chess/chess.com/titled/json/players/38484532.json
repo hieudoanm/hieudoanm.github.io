@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/38484532.609126a7.200x200o.51ebe2011c04.jpg",
+    "player_id": 38484532,
+    "@id": "https://api.chess.com/pub/player/thox_xo",
+    "url": "https://www.chess.com/member/thox_xo",
+    "name": "Taqwa Hamouri",
+    "username": "thox_xo",
+    "title": "WCM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/PS",
+    "last_online": 1734108942,
+    "joined": 1504897044,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1329,
+            "date": 1718107927,
+            "rd": 142
+        },
+        "best": {
+            "rating": 1329,
+            "date": 1710960199,
+            "game": "https://www.chess.com/game/daily/612495609"
+        },
+        "record": {
+            "win": 11,
+            "loss": 5,
+            "draw": 1,
+            "time_per_move": 20325,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1845,
+            "date": 1732895425,
+            "rd": 99
+        },
+        "best": {
+            "rating": 1845,
+            "date": 1732893893,
+            "game": "https://www.chess.com/game/live/85668551829"
+        },
+        "record": {
+            "win": 15,
+            "loss": 18,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1837,
+            "date": 1728295036,
+            "rd": 77
+        },
+        "best": {
+            "rating": 1837,
+            "date": 1728295036,
+            "game": "https://www.chess.com/game/live/119261966073"
+        },
+        "record": {
+            "win": 44,
+            "loss": 26,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 1989,
+            "date": 1728402741,
+            "rd": 74
+        },
+        "best": {
+            "rating": 1992,
+            "date": 1728401944,
+            "game": "https://www.chess.com/game/live/118511265025"
+        },
+        "record": {
+            "win": 369,
+            "loss": 309,
+            "draw": 41
+        }
+    },
+    "fide": 1845,
+    "tactics": {
+        "highest": {
+            "rating": 2416,
+            "date": 1728294704
+        },
+        "lowest": {
+            "rating": 587,
+            "date": 1536263014
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 33,
+            "score": 30
+        }
+    }
+}

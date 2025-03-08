@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35638370.dcc8c902.200x200o.a5718584cff6.jpg",
+    "player_id": 35638370,
+    "@id": "https://api.chess.com/pub/player/chaitanya1932",
+    "url": "https://www.chess.com/member/Chaitanya1932",
+    "name": "Chaitanya Sai Ram Mogili",
+    "username": "chaitanya1932",
+    "title": "CM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734087022,
+    "joined": 1495161117,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

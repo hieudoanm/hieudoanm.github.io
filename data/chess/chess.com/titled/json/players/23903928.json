@@ -1,0 +1,18 @@
+{
+    "player_id": 23903928,
+    "@id": "https://api.chess.com/pub/player/tomsishere",
+    "url": "https://www.chess.com/member/tomsishere",
+    "name": "Thomas O`Sullivan",
+    "username": "tomsishere",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/FR",
+    "location": "Paris",
+    "last_online": 1734012697,
+    "joined": 1441015527,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

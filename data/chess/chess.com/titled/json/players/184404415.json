@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/184404415.588943e0.200x200o.242aa4187449.jpeg",
+    "player_id": 184404415,
+    "@id": "https://api.chess.com/pub/player/sandwichosaumon",
+    "url": "https://www.chess.com/member/SandwichOSaumon",
+    "name": "Phileas Mathieu",
+    "username": "sandwichosaumon",
+    "title": "FM",
+    "followers": 46,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1734095481,
+    "joined": 1653135181,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1773,
+            "date": 1728124698,
+            "rd": 238
+        },
+        "best": {
+            "rating": 1773,
+            "date": 1703106323,
+            "game": "https://www.chess.com/game/daily/517380757"
+        },
+        "record": {
+            "win": 6,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 49942,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1607,
+            "date": 1730791952,
+            "rd": 71
+        },
+        "best": {
+            "rating": 2588,
+            "date": 1676040838,
+            "game": "https://www.chess.com/game/live/104942403949"
+        },
+        "record": {
+            "win": 42,
+            "loss": 13,
+            "draw": 9
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2582,
+            "date": 1732225492,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2602,
+            "date": 1655740620,
+            "game": "https://www.chess.com/game/live/125246994573"
+        },
+        "record": {
+            "win": 109,
+            "loss": 46,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2588,
+            "date": 1734138764,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2796,
+            "date": 1729202563,
+            "game": "https://www.chess.com/game/live/86476837423"
+        },
+        "record": {
+            "win": 375,
+            "loss": 299,
+            "draw": 50
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3677,
+            "date": 1723314223
+        },
+        "lowest": {
+            "rating": 1010,
+            "date": 1653135859
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

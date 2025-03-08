@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1708404.c9a8c166.200x200o.4a91eec41a21.jpeg",
+    "player_id": 1708404,
+    "@id": "https://api.chess.com/pub/player/soilsurf",
+    "url": "https://www.chess.com/member/Soilsurf",
+    "username": "soilsurf",
+    "title": "FM",
+    "followers": 31,
+    "country": "https://api.chess.com/pub/country/FI",
+    "location": "Jokioinen",
+    "last_online": 1731608668,
+    "joined": 1231788183,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

@@ -1,0 +1,107 @@
+{
+    "player_id": 243442071,
+    "@id": "https://api.chess.com/pub/player/carokannlover213",
+    "url": "https://www.chess.com/member/carokannlover213",
+    "name": "Patryk Cieslak",
+    "username": "carokannlover213",
+    "title": "FM",
+    "followers": 44,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734174871,
+    "joined": 1676048070,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2015,
+            "date": 1717316562,
+            "rd": 166
+        },
+        "best": {
+            "rating": 2108,
+            "date": 1700410600,
+            "game": "https://www.chess.com/game/daily/539692011"
+        },
+        "record": {
+            "win": 2,
+            "loss": 3,
+            "draw": 0,
+            "time_per_move": 146834,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2310,
+            "date": 1688407723,
+            "rd": 66
+        },
+        "best": {
+            "rating": 2346,
+            "date": 1679853679,
+            "game": "https://www.chess.com/game/live/73576347349"
+        },
+        "record": {
+            "win": 23,
+            "loss": 13,
+            "draw": 16
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2858,
+            "date": 1733221542,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2928,
+            "date": 1729940228,
+            "game": "https://www.chess.com/game/live/97099353513"
+        },
+        "record": {
+            "win": 1812,
+            "loss": 1580,
+            "draw": 295
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2850,
+            "date": 1734116858,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2965,
+            "date": 1732643427,
+            "game": "https://www.chess.com/game/live/95558369023"
+        },
+        "record": {
+            "win": 1637,
+            "loss": 1567,
+            "draw": 446
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3715,
+            "date": 1732819523
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1676048070
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        },
+        "daily": {
+            "total_attempts": 44,
+            "score": 41
+        }
+    }
+}

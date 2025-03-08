@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23179388.7c68c592.200x200o.56eb77265076.png",
+    "player_id": 23179388,
+    "@id": "https://api.chess.com/pub/player/miaou33",
+    "url": "https://www.chess.com/member/miaou33",
+    "name": "Mathieu Ternault",
+    "username": "miaou33",
+    "title": "FM",
+    "followers": 45,
+    "country": "https://api.chess.com/pub/country/XS",
+    "last_online": 1732723564,
+    "joined": 1436543950,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2033,
+            "date": 1710461466,
+            "rd": 316
+        },
+        "best": {
+            "rating": 2033,
+            "date": 1516339369,
+            "game": "https://www.chess.com/game/daily/184242004"
+        },
+        "record": {
+            "win": 3,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 2604,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2676,
+            "date": 1730833421,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2719,
+            "date": 1645788284,
+            "game": "https://www.chess.com/game/live/2000952743"
+        },
+        "record": {
+            "win": 6695,
+            "loss": 5355,
+            "draw": 726
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2684,
+            "date": 1734165523,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2770,
+            "date": 1729283561,
+            "game": "https://www.chess.com/game/live/118240092361"
+        },
+        "record": {
+            "win": 3087,
+            "loss": 2384,
+            "draw": 504
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3535,
+            "date": 1720594811
+        },
+        "lowest": {
+            "rating": 1958,
+            "date": 1436544162
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

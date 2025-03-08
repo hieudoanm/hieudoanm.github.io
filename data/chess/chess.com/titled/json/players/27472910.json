@@ -1,0 +1,98 @@
+{
+    "player_id": 27472910,
+    "@id": "https://api.chess.com/pub/player/pasteta13",
+    "url": "https://www.chess.com/member/pasteta13",
+    "name": "Mario Muskardin",
+    "username": "pasteta13",
+    "title": "FM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/HR",
+    "last_online": 1733933761,
+    "joined": 1459158191,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 516,
+            "date": 1714021780,
+            "rd": 299
+        },
+        "record": {
+            "win": 0,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 14000,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2399,
+            "date": 1717242731,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2399,
+            "date": 1717242731,
+            "game": "https://www.chess.com/game/live/110980805555"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2678,
+            "date": 1730566897,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2785,
+            "date": 1729355432,
+            "game": "https://www.chess.com/game/live/109787438125"
+        },
+        "record": {
+            "win": 809,
+            "loss": 756,
+            "draw": 88
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2391,
+            "date": 1713889673,
+            "rd": 80
+        },
+        "best": {
+            "rating": 2468,
+            "date": 1698181648,
+            "game": "https://www.chess.com/game/live/91920037941"
+        },
+        "record": {
+            "win": 48,
+            "loss": 43,
+            "draw": 4
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3577,
+            "date": 1708967370
+        },
+        "lowest": {
+            "rating": 1377,
+            "date": 1471452320
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 41,
+            "score": 39
+        }
+    }
+}

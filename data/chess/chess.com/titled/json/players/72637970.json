@@ -1,0 +1,80 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/72637970.4d70649a.200x200o.d131a50f6b20.jpeg",
+    "player_id": 72637970,
+    "@id": "https://api.chess.com/pub/player/shivananda1964",
+    "url": "https://www.chess.com/member/Shivananda1964",
+    "name": "Roman Goldin",
+    "username": "shivananda1964",
+    "title": "FM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/IL",
+    "last_online": 1733844011,
+    "joined": 1582569559,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1937,
+            "date": 1603531848,
+            "rd": 257
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2281,
+            "date": 1709400573,
+            "rd": 89
+        },
+        "best": {
+            "rating": 2313,
+            "date": 1709399054,
+            "game": "https://www.chess.com/game/live/103137788501"
+        },
+        "record": {
+            "win": 25,
+            "loss": 20,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2342,
+            "date": 1733847513,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2539,
+            "date": 1609619541,
+            "game": "https://www.chess.com/game/live/56219064691"
+        },
+        "record": {
+            "win": 5857,
+            "loss": 5340,
+            "draw": 496
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3387,
+            "date": 1677587532
+        },
+        "lowest": {
+            "rating": 1999,
+            "date": 1582900575
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

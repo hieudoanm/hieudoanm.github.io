@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/12534090.15acec7d.200x200o.8af28428c381.jpeg",
+    "player_id": 12534090,
+    "@id": "https://api.chess.com/pub/player/simon_1986",
+    "url": "https://www.chess.com/member/Simon_1986",
+    "name": "simon mkrtchyan",
+    "username": "simon_1986",
+    "title": "FM",
+    "followers": 23,
+    "country": "https://api.chess.com/pub/country/AM",
+    "location": "yerevan",
+    "last_online": 1733811475,
+    "joined": 1372574216,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

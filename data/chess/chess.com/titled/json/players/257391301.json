@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/257391301.4cda2093.200x200o.b9a625900880.jpg",
+    "player_id": 257391301,
+    "@id": "https://api.chess.com/pub/player/somalianwarrior2006",
+    "url": "https://www.chess.com/member/Somalianwarrior2006",
+    "name": "Saad Abobaker Elmi",
+    "username": "somalianwarrior2006",
+    "title": "FM",
+    "followers": 378,
+    "country": "https://api.chess.com/pub/country/NO",
+    "last_online": 1734027873,
+    "joined": 1678098933,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

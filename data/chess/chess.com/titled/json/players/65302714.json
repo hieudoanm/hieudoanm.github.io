@@ -1,0 +1,67 @@
+{
+    "player_id": 65302714,
+    "@id": "https://api.chess.com/pub/player/maghrebiner",
+    "url": "https://www.chess.com/member/Maghrebiner",
+    "username": "maghrebiner",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734102150,
+    "joined": 1568037135,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2605,
+            "date": 1734183690,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2736,
+            "date": 1732898038,
+            "game": "https://www.chess.com/game/live/120660640771"
+        },
+        "record": {
+            "win": 514,
+            "loss": 348,
+            "draw": 63
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2697,
+            "date": 1734184932,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2716,
+            "date": 1725126448,
+            "game": "https://www.chess.com/game/live/118865381633"
+        },
+        "record": {
+            "win": 1564,
+            "loss": 1116,
+            "draw": 227
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3123,
+            "date": 1731764772
+        },
+        "lowest": {
+            "rating": 1213,
+            "date": 1568473716
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 79,
+            "score": 76
+        }
+    }
+}

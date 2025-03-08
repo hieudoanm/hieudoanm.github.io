@@ -1,0 +1,85 @@
+{
+    "player_id": 40417380,
+    "@id": "https://api.chess.com/pub/player/kasparik_garik",
+    "url": "https://www.chess.com/member/kasparik_garik",
+    "name": "\u0422\u0438\u0441\u0435\u0432\u0438\u0447 \u0420\u043e\u043c\u0430\u043d",
+    "username": "kasparik_garik",
+    "title": "IM",
+    "followers": 43,
+    "country": "https://api.chess.com/pub/country/UA",
+    "last_online": 1734094983,
+    "joined": 1510817407,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2319,
+            "date": 1734104860,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2407,
+            "date": 1711789102,
+            "game": "https://www.chess.com/game/live/105525622127"
+        },
+        "record": {
+            "win": 54,
+            "loss": 10,
+            "draw": 13
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2322,
+            "date": 1730646856,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2322,
+            "date": 1730646055,
+            "game": "https://www.chess.com/game/live/82288317559"
+        },
+        "record": {
+            "win": 44,
+            "loss": 14,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2727,
+            "date": 1722787406,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2809,
+            "date": 1574729471,
+            "game": "https://www.chess.com/game/live/80298689723"
+        },
+        "record": {
+            "win": 7866,
+            "loss": 7715,
+            "draw": 1655
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3356,
+            "date": 1683957605
+        },
+        "lowest": {
+            "rating": 1210,
+            "date": 1510840218
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "player_id": 304755415,
+    "@id": "https://api.chess.com/pub/player/bitter-cikolata",
+    "url": "https://www.chess.com/member/bitter-cikolata",
+    "name": "Dila Baloglu",
+    "username": "bitter-cikolata",
+    "title": "WCM",
+    "followers": 28,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1734168193,
+    "joined": 1691508604,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2730,
+            "date": 1693422348,
+            "rd": 192
+        },
+        "best": {
+            "rating": 2730,
+            "date": 1693422348,
+            "game": "https://www.chess.com/game/live/87159633733"
+        },
+        "record": {
+            "win": 10,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2520,
+            "date": 1734168617,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2630,
+            "date": 1692699330,
+            "game": "https://www.chess.com/game/live/103745498503"
+        },
+        "record": {
+            "win": 648,
+            "loss": 731,
+            "draw": 85
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2508,
+            "date": 1726610867,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2571,
+            "date": 1705427182,
+            "game": "https://www.chess.com/game/live/104620903077"
+        },
+        "record": {
+            "win": 102,
+            "loss": 110,
+            "draw": 20
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3365,
+            "date": 1693417487
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1691508604
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

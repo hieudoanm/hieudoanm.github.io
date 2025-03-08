@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/42427800.809434b5.200x200o.2a5c91a96857.jpg",
+    "player_id": 42427800,
+    "@id": "https://api.chess.com/pub/player/advancedrook",
+    "url": "https://www.chess.com/member/advancedrook",
+    "username": "advancedrook",
+    "title": "CM",
+    "followers": 33,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734137769,
+    "joined": 1516244100,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

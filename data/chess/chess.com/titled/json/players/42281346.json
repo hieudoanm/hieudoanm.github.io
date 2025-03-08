@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/42281346.b8a3471e.200x200o.8c75588281ca.jpg",
+    "player_id": 42281346,
+    "@id": "https://api.chess.com/pub/player/komogro",
+    "url": "https://www.chess.com/member/komogro",
+    "name": "Antonin Ferey",
+    "username": "komogro",
+    "title": "CM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/GR",
+    "last_online": 1734084013,
+    "joined": 1515848370,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1953,
+            "date": 1671807032,
+            "rd": 349
+        },
+        "best": {
+            "rating": 1953,
+            "date": 1671806521,
+            "game": "https://www.chess.com/game/live/65545287835"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2386,
+            "date": 1706191498,
+            "rd": 123
+        },
+        "best": {
+            "rating": 2412,
+            "date": 1689442158,
+            "game": "https://www.chess.com/game/live/83180883215"
+        },
+        "record": {
+            "win": 7,
+            "loss": 13,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2528,
+            "date": 1733871303,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2583,
+            "date": 1689799347,
+            "game": "https://www.chess.com/game/live/108228101415"
+        },
+        "record": {
+            "win": 850,
+            "loss": 815,
+            "draw": 126
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2689,
+            "date": 1687771629
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1677160729
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 50,
+            "score": 47
+        }
+    }
+}

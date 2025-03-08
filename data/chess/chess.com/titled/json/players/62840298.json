@@ -1,0 +1,89 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/62840298.6214a6f5.200x200o.e8c04171c43e.jpg",
+    "player_id": 62840298,
+    "@id": "https://api.chess.com/pub/player/meri-arabidze",
+    "url": "https://www.chess.com/member/Meri-Arabidze",
+    "name": "Meri Arabidze",
+    "username": "meri-arabidze",
+    "title": "IM",
+    "followers": 7932,
+    "country": "https://api.chess.com/pub/country/GE",
+    "last_online": 1734016746,
+    "joined": 1561915276,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2412,
+            "date": 1615472458,
+            "rd": 95
+        },
+        "best": {
+            "rating": 2486,
+            "date": 1602422129,
+            "game": "https://www.chess.com/game/live/5568350708"
+        },
+        "record": {
+            "win": 18,
+            "loss": 12,
+            "draw": 12
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2663,
+            "date": 1732993194,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2782,
+            "date": 1715019521,
+            "game": "https://www.chess.com/game/live/124916312809"
+        },
+        "record": {
+            "win": 2663,
+            "loss": 2676,
+            "draw": 493
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2698,
+            "date": 1733875707,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2785,
+            "date": 1644599489,
+            "game": "https://www.chess.com/game/live/108228719377"
+        },
+        "record": {
+            "win": 3689,
+            "loss": 2654,
+            "draw": 909
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3527,
+            "date": 1711363067
+        },
+        "lowest": {
+            "rating": 1215,
+            "date": 1562346184
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        },
+        "daily": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/315655883.379d14f1.200x200o.b81a545d5c83.png",
+    "player_id": 315655883,
+    "@id": "https://api.chess.com/pub/player/kidzchessacademy",
+    "url": "https://www.chess.com/member/kidzchessacademy",
+    "name": "Vinod Kumar Sharma",
+    "username": "kidzchessacademy",
+    "title": "CM",
+    "followers": 60,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734164438,
+    "joined": 1695798960,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2297,
+            "date": 1733592393,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2300,
+            "date": 1733195123,
+            "game": "https://www.chess.com/game/live/99054372535"
+        },
+        "record": {
+            "win": 14,
+            "loss": 5,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2147,
+            "date": 1734165025,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2199,
+            "date": 1726105776,
+            "game": "https://www.chess.com/game/live/102110093403"
+        },
+        "record": {
+            "win": 747,
+            "loss": 595,
+            "draw": 47
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2310,
+            "date": 1724750202,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2311,
+            "date": 1698292003,
+            "game": "https://www.chess.com/game/live/95154613597"
+        },
+        "record": {
+            "win": 359,
+            "loss": 309,
+            "draw": 64
+        }
+    },
+    "fide": 2226,
+    "tactics": {
+        "highest": {
+            "rating": 3244,
+            "date": 1711508140
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1695798960
+        }
+    },
+    "puzzle_rush": {}
+}

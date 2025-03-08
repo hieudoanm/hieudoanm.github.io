@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/14218364.354794c9.200x200o.cd082813f047.jpg",
+    "player_id": 14218364,
+    "@id": "https://api.chess.com/pub/player/timgrutter03",
+    "url": "https://www.chess.com/member/TimGrutter03",
+    "name": "Tim Grutter",
+    "username": "timgrutter03",
+    "title": "FM",
+    "followers": 60,
+    "country": "https://api.chess.com/pub/country/NL",
+    "last_online": 1734131296,
+    "joined": 1383738067,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

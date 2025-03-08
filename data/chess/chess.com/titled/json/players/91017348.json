@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/91017348.428335c2.200x200o.934bc5454feb.png",
+    "player_id": 91017348,
+    "@id": "https://api.chess.com/pub/player/donkydonkydonkey",
+    "url": "https://www.chess.com/member/DonkyDonkyDonkey",
+    "name": "Eray Kilic",
+    "username": "donkydonkydonkey",
+    "title": "IM",
+    "followers": 1673,
+    "country": "https://api.chess.com/pub/country/TR",
+    "location": "Eskisehir",
+    "last_online": 1734181542,
+    "joined": 1599838508,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2552,
+            "date": 1727366274,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2608,
+            "date": 1676920151,
+            "game": "https://www.chess.com/game/live/70654537405"
+        },
+        "record": {
+            "win": 42,
+            "loss": 16,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2988,
+            "date": 1732992001,
+            "rd": 36
+        },
+        "best": {
+            "rating": 3066,
+            "date": 1707514603,
+            "game": "https://www.chess.com/game/live/100722849785"
+        },
+        "record": {
+            "win": 1457,
+            "loss": 901,
+            "draw": 175
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2977,
+            "date": 1734184360,
+            "rd": 41
+        },
+        "best": {
+            "rating": 3044,
+            "date": 1707659385,
+            "game": "https://www.chess.com/game/live/100887761297"
+        },
+        "record": {
+            "win": 1348,
+            "loss": 1053,
+            "draw": 245
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2467,
+            "date": 1656163212
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1599909006
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

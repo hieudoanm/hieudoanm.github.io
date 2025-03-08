@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/16158372.2926df77.200x200o.c72fd6c60306.jpg",
+    "player_id": 16158372,
+    "@id": "https://api.chess.com/pub/player/silverswords13",
+    "url": "https://www.chess.com/member/SilverSwords13",
+    "name": "Bryan Xie",
+    "username": "silverswords13",
+    "title": "FM",
+    "followers": 145,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "LA",
+    "last_online": 1733897258,
+    "joined": 1393027077,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

@@ -1,0 +1,33 @@
+{
+    "player_id": 314327627,
+    "@id": "https://api.chess.com/pub/player/bloodyeagle_98",
+    "url": "https://www.chess.com/member/BloodyEagle_98",
+    "name": "Mustafokhuja Khusenkhojaev",
+    "username": "bloodyeagle_98",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1701224917,
+    "joined": 1695282979,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "fide": 2295,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1695282979
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1695282979
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 37,
+            "score": 34
+        }
+    }
+}

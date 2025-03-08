@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6625431.a946b920.200x200o.9a36b342078c.jpeg",
+    "player_id": 6625431,
+    "@id": "https://api.chess.com/pub/player/jocmil",
+    "url": "https://www.chess.com/member/jocmil",
+    "name": "Milan Jocev",
+    "username": "jocmil",
+    "title": "FM",
+    "followers": 472,
+    "country": "https://api.chess.com/pub/country/RS",
+    "location": "Belgrade",
+    "last_online": 1734164164,
+    "joined": 1328528581,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2037,
+            "date": 1728462960,
+            "rd": 99
+        },
+        "best": {
+            "rating": 2214,
+            "date": 1564031287,
+            "game": "https://www.chess.com/game/daily/189045964"
+        },
+        "record": {
+            "win": 1624,
+            "loss": 451,
+            "draw": 612,
+            "time_per_move": 52784,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 2073,
+            "date": 1656096004,
+            "rd": 121
+        },
+        "best": {
+            "rating": 2073,
+            "date": 1656096004,
+            "game": "https://www.chess.com/game/daily/219470278"
+        },
+        "record": {
+            "win": 122,
+            "loss": 29,
+            "draw": 45,
+            "time_per_move": 52784,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2310,
+            "date": 1726073705,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2385,
+            "date": 1645224456,
+            "game": "https://www.chess.com/game/live/39824326663"
+        },
+        "record": {
+            "win": 188,
+            "loss": 37,
+            "draw": 32
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2627,
+            "date": 1734089632,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2708,
+            "date": 1731422028,
+            "game": "https://www.chess.com/game/live/122672094859"
+        },
+        "record": {
+            "win": 929,
+            "loss": 454,
+            "draw": 101
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2672,
+            "date": 1732634802,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2803,
+            "date": 1710272891,
+            "game": "https://www.chess.com/game/live/90785504985"
+        },
+        "record": {
+            "win": 1819,
+            "loss": 955,
+            "draw": 385
+        }
+    },
+    "fide": 2297,
+    "tactics": {
+        "highest": {
+            "rating": 3762,
+            "date": 1729520147
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1328528581
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 83,
+            "score": 80
+        }
+    }
+}

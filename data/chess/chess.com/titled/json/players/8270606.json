@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8270606.588a5c37.200x200o.b5b39e9ab937.jpg",
+    "player_id": 8270606,
+    "@id": "https://api.chess.com/pub/player/casparov00000",
+    "url": "https://www.chess.com/member/casparov00000",
+    "name": "Casper Radil",
+    "username": "casparov00000",
+    "title": "CM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/DK",
+    "last_online": 1733424836,
+    "joined": 1342866998,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

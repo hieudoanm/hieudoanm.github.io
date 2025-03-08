@@ -1,0 +1,17 @@
+{
+    "player_id": 22026312,
+    "@id": "https://api.chess.com/pub/player/warre",
+    "url": "https://www.chess.com/member/Warre",
+    "name": "Warre De Waele",
+    "username": "warre",
+    "title": "FM",
+    "followers": 86,
+    "country": "https://api.chess.com/pub/country/BE",
+    "last_online": 1734174462,
+    "joined": 1429378264,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

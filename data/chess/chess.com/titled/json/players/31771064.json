@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/31771064.5b9be83c.200x200o.2b91a7d3c48c.jpg",
+    "player_id": 31771064,
+    "@id": "https://api.chess.com/pub/player/tigranpatagonian",
+    "url": "https://www.chess.com/member/Tigranpatagonian",
+    "name": "Daniel Pacheco",
+    "username": "tigranpatagonian",
+    "title": "FM",
+    "followers": 35,
+    "country": "https://api.chess.com/pub/country/AR",
+    "last_online": 1734124893,
+    "joined": 1482327014,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

@@ -1,0 +1,58 @@
+{
+    "player_id": 317540763,
+    "@id": "https://api.chess.com/pub/player/babarsik1977",
+    "url": "https://www.chess.com/member/Babarsik1977",
+    "name": "Yuri Borisov",
+    "username": "babarsik1977",
+    "title": "FM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1734172727,
+    "joined": 1696540543,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2039,
+            "date": 1701880326,
+            "rd": 235
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2388,
+            "date": 1734176354,
+            "rd": 20
+        },
+        "best": {
+            "rating": 2452,
+            "date": 1731170288,
+            "game": "https://www.chess.com/game/live/104673058933"
+        },
+        "record": {
+            "win": 3059,
+            "loss": 2320,
+            "draw": 430
+        }
+    },
+    "fide": 2275,
+    "tactics": {
+        "highest": {
+            "rating": 2360,
+            "date": 1731152181
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1696540543
+        }
+    },
+    "puzzle_rush": {}
+}

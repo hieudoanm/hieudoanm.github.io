@@ -1,0 +1,17 @@
+{
+    "player_id": 113170798,
+    "@id": "https://api.chess.com/pub/player/skinerd6",
+    "url": "https://www.chess.com/member/skinerd6",
+    "name": "Ilya Kuzmin",
+    "username": "skinerd6",
+    "title": "FM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734160415,
+    "joined": 1610848084,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

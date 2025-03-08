@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/9014954.83c39665.200x200o.97fab32d8c3b.jpeg",
+    "player_id": 9014954,
+    "@id": "https://api.chess.com/pub/player/charly871",
+    "url": "https://www.chess.com/member/charly871",
+    "name": "Carlos Fernandez Madrid",
+    "username": "charly871",
+    "title": "CM",
+    "followers": 216,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Badalona",
+    "last_online": 1734034860,
+    "joined": 1348427607,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

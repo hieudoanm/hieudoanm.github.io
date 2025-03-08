@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/183502283.23ee2c29.200x200o.1921e6a78543.jpeg",
+    "player_id": 183502283,
+    "@id": "https://api.chess.com/pub/player/drsutek",
+    "url": "https://www.chess.com/member/DrSutek",
+    "name": "Steve Kerr",
+    "username": "drsutek",
+    "title": "CM",
+    "followers": 74,
+    "country": "https://api.chess.com/pub/country/AU",
+    "location": "Sydney, Australia",
+    "last_online": 1734032617,
+    "joined": 1652391061,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

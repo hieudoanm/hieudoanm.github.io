@@ -1,0 +1,99 @@
+{
+    "player_id": 15579458,
+    "@id": "https://api.chess.com/pub/player/grecescu",
+    "url": "https://www.chess.com/member/Grecescu",
+    "name": "Gabriel Grecescu",
+    "username": "grecescu",
+    "title": "IM",
+    "followers": 148,
+    "country": "https://api.chess.com/pub/country/RO",
+    "location": "Bucharest",
+    "last_online": 1734174709,
+    "joined": 1389738620,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1698880958,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 573836,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2127,
+            "date": 1710350585,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2308,
+            "date": 1662045857,
+            "game": "https://www.chess.com/game/live/6251485879"
+        },
+        "record": {
+            "win": 50,
+            "loss": 24,
+            "draw": 10
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2154,
+            "date": 1733946467,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2332,
+            "date": 1560899366,
+            "game": "https://www.chess.com/game/live/3794473842"
+        },
+        "record": {
+            "win": 448,
+            "loss": 387,
+            "draw": 27
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2377,
+            "date": 1727435017,
+            "rd": 63
+        },
+        "best": {
+            "rating": 2492,
+            "date": 1580520938,
+            "game": "https://www.chess.com/game/live/3755209346"
+        },
+        "record": {
+            "win": 625,
+            "loss": 489,
+            "draw": 76
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2945,
+            "date": 1655987338
+        },
+        "lowest": {
+            "rating": 1408,
+            "date": 1389745728
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

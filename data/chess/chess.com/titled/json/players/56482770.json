@@ -1,0 +1,16 @@
+{
+    "player_id": 56482770,
+    "@id": "https://api.chess.com/pub/player/wrapbattle",
+    "url": "https://www.chess.com/member/wrapbattle",
+    "username": "wrapbattle",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1715021277,
+    "joined": 1548368020,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6744491.5d6c0765.200x200o.d9bf4f9e0387.jpg",
+    "player_id": 6744491,
+    "@id": "https://api.chess.com/pub/player/engineerspock",
+    "url": "https://www.chess.com/member/EngineerSpock",
+    "name": "Ilia Fofanov",
+    "username": "engineerspock",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/AM",
+    "last_online": 1726057788,
+    "joined": 1329999912,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

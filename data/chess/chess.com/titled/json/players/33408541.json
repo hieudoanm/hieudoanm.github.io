@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/33408541.d07c499a.200x200o.e1c35d039ce2.jpg",
+    "player_id": 33408541,
+    "@id": "https://api.chess.com/pub/player/rabeekongo",
+    "url": "https://www.chess.com/member/rabeekongo",
+    "name": "Rabee Sabah",
+    "username": "rabeekongo",
+    "title": "FM",
+    "followers": 23,
+    "country": "https://api.chess.com/pub/country/IQ",
+    "location": "Baghdad",
+    "last_online": 1734104994,
+    "joined": 1487764579,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1525,
+            "date": 1734104983,
+            "rd": 137
+        },
+        "best": {
+            "rating": 1525,
+            "date": 1732191804,
+            "game": "https://www.chess.com/game/daily/726467693"
+        },
+        "record": {
+            "win": 9,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 28350,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1898,
+            "date": 1630755127,
+            "rd": 121
+        },
+        "best": {
+            "rating": 2238,
+            "date": 1630059667,
+            "game": "https://www.chess.com/game/live/23797627127"
+        },
+        "record": {
+            "win": 7,
+            "loss": 6,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2258,
+            "date": 1734105198,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2266,
+            "date": 1733991024,
+            "game": "https://www.chess.com/game/live/127729804663"
+        },
+        "record": {
+            "win": 415,
+            "loss": 304,
+            "draw": 49
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2421,
+            "date": 1734107335,
+            "rd": 71
+        },
+        "best": {
+            "rating": 2424,
+            "date": 1734106228,
+            "game": "https://www.chess.com/game/live/127846149183"
+        },
+        "record": {
+            "win": 119,
+            "loss": 42,
+            "draw": 15
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1578,
+            "date": 1732759478
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1487764579
+        }
+    },
+    "puzzle_rush": {}
+}

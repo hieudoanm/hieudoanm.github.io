@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/26993178.13253450.200x200o.41dbab8b3738.png",
+    "player_id": 26993178,
+    "@id": "https://api.chess.com/pub/player/wizard_97",
+    "url": "https://www.chess.com/member/Wizard_97",
+    "name": "Apoorv Kamble",
+    "username": "wizard_97",
+    "title": "FM",
+    "followers": 156,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "Bangalore",
+    "last_online": 1734155993,
+    "joined": 1456734313,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

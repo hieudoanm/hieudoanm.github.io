@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/66088224.f03b4c3d.200x200o.b8f88481b714.png",
+    "player_id": 66088224,
+    "@id": "https://api.chess.com/pub/player/ak27002032",
+    "url": "https://www.chess.com/member/AK27002032",
+    "name": "Aaron Noah Koellner",
+    "username": "ak27002032",
+    "title": "CM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734090955,
+    "joined": 1569786844,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

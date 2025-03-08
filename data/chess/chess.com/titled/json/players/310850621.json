@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/310850621.13e854ba.200x200o.6534a7f2965c.jpg",
+    "player_id": 310850621,
+    "@id": "https://api.chess.com/pub/player/silent-killer100",
+    "url": "https://www.chess.com/member/Silent-Killer100",
+    "name": "Jaiveer Mahendru",
+    "username": "silent-killer100",
+    "title": "FM",
+    "followers": 117,
+    "country": "https://api.chess.com/pub/country/BT",
+    "last_online": 1734106945,
+    "joined": 1694007330,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

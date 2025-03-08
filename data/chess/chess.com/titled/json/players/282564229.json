@@ -1,0 +1,66 @@
+{
+    "player_id": 282564229,
+    "@id": "https://api.chess.com/pub/player/bahriletecosmico",
+    "url": "https://www.chess.com/member/BahrileteCosmico",
+    "username": "bahriletecosmico",
+    "title": "IM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/AR",
+    "last_online": 1734084177,
+    "joined": 1683289295,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2454,
+            "date": 1733401635,
+            "rd": 74
+        },
+        "best": {
+            "rating": 2470,
+            "date": 1713621260,
+            "game": "https://www.chess.com/game/live/107362962713"
+        },
+        "record": {
+            "win": 113,
+            "loss": 79,
+            "draw": 12
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2364,
+            "date": 1731084188,
+            "rd": 118
+        },
+        "best": {
+            "rating": 2431,
+            "date": 1730979731,
+            "game": "https://www.chess.com/game/live/78011635615"
+        },
+        "record": {
+            "win": 33,
+            "loss": 10,
+            "draw": 4
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3748,
+            "date": 1693331556
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1683289295
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

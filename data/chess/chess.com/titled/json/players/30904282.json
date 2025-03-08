@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/30904282.06d2a442.200x200o.aeee4f206b36.png",
+    "player_id": 30904282,
+    "@id": "https://api.chess.com/pub/player/jayden5345",
+    "url": "https://www.chess.com/member/Jayden5345",
+    "name": "Jayden Ooi",
+    "username": "jayden5345",
+    "title": "CM",
+    "followers": 82,
+    "country": "https://api.chess.com/pub/country/AU",
+    "location": "?",
+    "last_online": 1734063469,
+    "joined": 1479114512,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1245,
+            "date": 1708602627,
+            "rd": 159
+        },
+        "best": {
+            "rating": 1465,
+            "date": 1534557076,
+            "game": "https://www.chess.com/game/daily/181803284"
+        },
+        "record": {
+            "win": 39,
+            "loss": 24,
+            "draw": 3,
+            "time_per_move": 78460,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2355,
+            "date": 1728728773,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2435,
+            "date": 1701313643,
+            "game": "https://www.chess.com/game/live/96785441065"
+        },
+        "record": {
+            "win": 897,
+            "loss": 805,
+            "draw": 168
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2401,
+            "date": 1728217642,
+            "rd": 52
+        },
+        "best": {
+            "rating": 2475,
+            "date": 1719986832,
+            "game": "https://www.chess.com/game/live/76387314415"
+        },
+        "record": {
+            "win": 586,
+            "loss": 612,
+            "draw": 47
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2348,
+            "date": 1733717159,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2390,
+            "date": 1727244421,
+            "game": "https://www.chess.com/game/live/108994886813"
+        },
+        "record": {
+            "win": 554,
+            "loss": 410,
+            "draw": 62
+        }
+    },
+    "fide": 2012,
+    "tactics": {
+        "highest": {
+            "rating": 3534,
+            "date": 1733580010
+        },
+        "lowest": {
+            "rating": 811,
+            "date": 1540983017
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/49901622.715ee38b.200x200o.d6c9be3311a2.jpeg",
+    "player_id": 49901622,
+    "@id": "https://api.chess.com/pub/player/smyslovsfan",
+    "url": "https://www.chess.com/member/Smyslovsfan",
+    "name": "Dirceu Viana",
+    "username": "smyslovsfan",
+    "title": "FM",
+    "followers": 147,
+    "country": "https://api.chess.com/pub/country/BR",
+    "location": "Rio de Janeiro",
+    "last_online": 1734021273,
+    "joined": 1537370421,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

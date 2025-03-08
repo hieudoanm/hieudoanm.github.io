@@ -1,0 +1,110 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/195047317.9863eddc.200x200o.7263347c0480.jpeg",
+    "player_id": 195047317,
+    "@id": "https://api.chess.com/pub/player/gmfyhr1",
+    "url": "https://www.chess.com/member/GMFYHR1",
+    "name": "Yihe Fu",
+    "username": "gmfyhr1",
+    "title": "FM",
+    "followers": 195,
+    "country": "https://api.chess.com/pub/country/AU",
+    "last_online": 1733405983,
+    "joined": 1661698245,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2070,
+            "date": 1729998010,
+            "rd": 75
+        },
+        "best": {
+            "rating": 2081,
+            "date": 1683237467,
+            "game": "https://www.chess.com/game/daily/490168673"
+        },
+        "record": {
+            "win": 59,
+            "loss": 7,
+            "draw": 0,
+            "time_per_move": 16553,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 336,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 1
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2255,
+            "date": 1678508263,
+            "rd": 80
+        },
+        "best": {
+            "rating": 2274,
+            "date": 1672383322,
+            "game": "https://www.chess.com/game/live/63987686991"
+        },
+        "record": {
+            "win": 24,
+            "loss": 8,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2625,
+            "date": 1732611495,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2788,
+            "date": 1708435285,
+            "game": "https://www.chess.com/game/live/82497734997"
+        },
+        "record": {
+            "win": 2349,
+            "loss": 2629,
+            "draw": 361
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2459,
+            "date": 1715692583,
+            "rd": 90
+        },
+        "best": {
+            "rating": 2524,
+            "date": 1679748020,
+            "game": "https://www.chess.com/game/live/96135842809"
+        },
+        "record": {
+            "win": 176,
+            "loss": 101,
+            "draw": 12
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3499,
+            "date": 1724542483
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1662881222
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

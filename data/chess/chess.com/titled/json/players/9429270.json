@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/9429270.8b6be5a6.200x200o.b226637d283d.jpg",
+    "player_id": 9429270,
+    "@id": "https://api.chess.com/pub/player/checkmatealot",
+    "url": "https://www.chess.com/member/Checkmatealot",
+    "name": "Peter Finn",
+    "username": "checkmatealot",
+    "title": "CM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/GB",
+    "location": "High Wycombe",
+    "last_online": 1732352661,
+    "joined": 1351432704,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

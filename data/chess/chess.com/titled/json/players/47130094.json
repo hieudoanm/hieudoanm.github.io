@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/47130094.24595313.200x200o.d130ce12cc4a.jpeg",
+    "player_id": 47130094,
+    "@id": "https://api.chess.com/pub/player/kian_msh",
+    "url": "https://www.chess.com/member/Kian_msh",
+    "name": "Kian Mashmooli",
+    "username": "kian_msh",
+    "title": "CM",
+    "followers": 36,
+    "country": "https://api.chess.com/pub/country/IR",
+    "location": "Sari",
+    "last_online": 1733922174,
+    "joined": 1529104492,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2093,
+            "date": 1733514173,
+            "rd": 145
+        },
+        "best": {
+            "rating": 2101,
+            "date": 1668713412,
+            "game": "https://www.chess.com/game/daily/392191833"
+        },
+        "record": {
+            "win": 6,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 32801,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2316,
+            "date": 1688328825,
+            "rd": 197
+        },
+        "best": {
+            "rating": 2469,
+            "date": 1688324891,
+            "game": "https://www.chess.com/game/live/82062763055"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2084,
+            "date": 1733922502,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2189,
+            "date": 1713813437,
+            "game": "https://www.chess.com/game/live/82755049937"
+        },
+        "record": {
+            "win": 118,
+            "loss": 76,
+            "draw": 7
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2347,
+            "date": 1734083902,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2393,
+            "date": 1660775839,
+            "game": "https://www.chess.com/game/live/4558633321"
+        },
+        "record": {
+            "win": 541,
+            "loss": 435,
+            "draw": 70
+        }
+    },
+    "fide": 2170,
+    "tactics": {
+        "highest": {
+            "rating": 3137,
+            "date": 1730205770
+        },
+        "lowest": {
+            "rating": 413,
+            "date": 1530881279
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

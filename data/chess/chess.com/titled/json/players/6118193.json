@@ -1,0 +1,103 @@
+{
+    "player_id": 6118193,
+    "@id": "https://api.chess.com/pub/player/jtayar88",
+    "url": "https://www.chess.com/member/jtayar88",
+    "name": "Jonathan Tayar",
+    "username": "jtayar88",
+    "title": "IM",
+    "followers": 96,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1734056302,
+    "joined": 1321210286,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 546,
+            "date": 1705012223,
+            "rd": 290
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1321210286,
+            "game": "https://www.chess.com/game/daily/455733617"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 8000,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2663,
+            "date": 1707020171,
+            "rd": 297
+        },
+        "best": {
+            "rating": 2663,
+            "date": 1681435866,
+            "game": "https://www.chess.com/game/live/75174080561"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2601,
+            "date": 1734083099,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2844,
+            "date": 1714945776,
+            "game": "https://www.chess.com/game/live/117568842157"
+        },
+        "record": {
+            "win": 29346,
+            "loss": 23119,
+            "draw": 2428
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2557,
+            "date": 1728034535,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2689,
+            "date": 1658001813,
+            "game": "https://www.chess.com/game/live/51739781955"
+        },
+        "record": {
+            "win": 1325,
+            "loss": 1021,
+            "draw": 154
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3359,
+            "date": 1718231037
+        },
+        "lowest": {
+            "rating": 1082,
+            "date": 1485474872
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/70820002.7146c197.200x200o.026c978dddb3.jpeg",
+    "player_id": 70820002,
+    "@id": "https://api.chess.com/pub/player/jcvandamme10",
+    "url": "https://www.chess.com/member/JCVanDamme10",
+    "name": "MF Pablo Alexander Ruiz Aguilar",
+    "username": "jcvandamme10",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "SANTANDER",
+    "last_online": 1730329818,
+    "joined": 1579133632,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2342,
+            "date": 1676453837,
+            "rd": 111
+        },
+        "best": {
+            "rating": 2384,
+            "date": 1676452919,
+            "game": "https://www.chess.com/game/live/70189994145"
+        },
+        "record": {
+            "win": 15,
+            "loss": 3,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2395,
+            "date": 1719453662,
+            "rd": 217
+        },
+        "best": {
+            "rating": 2395,
+            "date": 1719453123,
+            "game": "https://www.chess.com/game/live/113190610409"
+        },
+        "record": {
+            "win": 7,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2341,
+            "date": 1726004274,
+            "rd": 76
+        },
+        "best": {
+            "rating": 2484,
+            "date": 1673202469,
+            "game": "https://www.chess.com/game/live/74964884239"
+        },
+        "record": {
+            "win": 261,
+            "loss": 225,
+            "draw": 45
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2932,
+            "date": 1674580691
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1600151163
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 35,
+            "score": 32
+        }
+    }
+}

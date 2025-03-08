@@ -1,0 +1,16 @@
+{
+    "player_id": 372775577,
+    "@id": "https://api.chess.com/pub/player/thuringianfighter",
+    "url": "https://www.chess.com/member/ThuringianFighter",
+    "username": "thuringianfighter",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1724183940,
+    "joined": 1719780330,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

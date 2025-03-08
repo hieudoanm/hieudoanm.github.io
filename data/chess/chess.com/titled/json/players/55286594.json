@@ -1,0 +1,112 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/55286594.58b42919.200x200o.8957a09aa82f.jpg",
+    "player_id": 55286594,
+    "@id": "https://api.chess.com/pub/player/jehubner",
+    "url": "https://www.chess.com/member/JEHUBNER",
+    "name": "J\u00e9ssica Trindade Hubner",
+    "username": "jehubner",
+    "title": "WNM",
+    "followers": 731,
+    "country": "https://api.chess.com/pub/country/BR",
+    "location": "Rio de Janeiro",
+    "last_online": 1734137095,
+    "joined": 1546127772,
+    "status": "premium",
+    "is_streamer": true,
+    "twitch_url": "https://twitch.tv/queenofpatif",
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [
+        {
+            "type": "twitch",
+            "channel_url": "https://twitch.tv/queenofpatif"
+        }
+    ],
+    "chess_daily": {
+        "last": {
+            "rating": 1994,
+            "date": 1718010742,
+            "rd": 113
+        },
+        "best": {
+            "rating": 2015,
+            "date": 1665424145,
+            "game": "https://www.chess.com/game/daily/418384769"
+        },
+        "record": {
+            "win": 8,
+            "loss": 6,
+            "draw": 4,
+            "time_per_move": 8972,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2110,
+            "date": 1692407141,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2110,
+            "date": 1677122022,
+            "game": "https://www.chess.com/game/live/65935878105"
+        },
+        "record": {
+            "win": 272,
+            "loss": 254,
+            "draw": 52
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1901,
+            "date": 1728575494,
+            "rd": 23
+        },
+        "best": {
+            "rating": 2044,
+            "date": 1716935762,
+            "game": "https://www.chess.com/game/live/56522402627"
+        },
+        "record": {
+            "win": 5286,
+            "loss": 6000,
+            "draw": 526
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2018,
+            "date": 1734145714,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2110,
+            "date": 1719955620,
+            "game": "https://www.chess.com/game/live/114276065557"
+        },
+        "record": {
+            "win": 5071,
+            "loss": 5491,
+            "draw": 627
+        }
+    },
+    "fide": 1845,
+    "tactics": {
+        "highest": {
+            "rating": 3100,
+            "date": 1696822977
+        },
+        "lowest": {
+            "rating": 415,
+            "date": 1546543947
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        }
+    }
+}

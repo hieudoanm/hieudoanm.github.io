@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/16317620.9d06b81f.200x200o.bcf8551bce5c.jpeg",
+    "player_id": 16317620,
+    "@id": "https://api.chess.com/pub/player/orest_vovk",
+    "url": "https://www.chess.com/member/Orest_Vovk",
+    "name": "Orest Vovk",
+    "username": "orest_vovk",
+    "title": "FM",
+    "followers": 592,
+    "country": "https://api.chess.com/pub/country/UA",
+    "location": "Kiev",
+    "last_online": 1734170935,
+    "joined": 1393972415,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2152,
+            "date": 1677084202,
+            "rd": 73
+        },
+        "best": {
+            "rating": 2438,
+            "date": 1607174547,
+            "game": "https://www.chess.com/game/live/69967075069"
+        },
+        "record": {
+            "win": 95,
+            "loss": 85,
+            "draw": 21
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2501,
+            "date": 1733593232,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2653,
+            "date": 1625236086,
+            "game": "https://www.chess.com/game/live/119464259811"
+        },
+        "record": {
+            "win": 1470,
+            "loss": 1525,
+            "draw": 243
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2609,
+            "date": 1734135817,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2748,
+            "date": 1715352352,
+            "game": "https://www.chess.com/game/live/84732793809"
+        },
+        "record": {
+            "win": 14141,
+            "loss": 15300,
+            "draw": 3469
+        }
+    },
+    "fide": 2427,
+    "tactics": {
+        "highest": {
+            "rating": 2453,
+            "date": 1729255995
+        },
+        "lowest": {
+            "rating": 1207,
+            "date": 1515241222
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
+}

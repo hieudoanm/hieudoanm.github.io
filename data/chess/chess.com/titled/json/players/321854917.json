@@ -1,0 +1,68 @@
+{
+    "player_id": 321854917,
+    "@id": "https://api.chess.com/pub/player/valerieruchinskaya",
+    "url": "https://www.chess.com/member/ValerieRuchinskaya",
+    "name": "Valerie Ruchinskaya",
+    "username": "valerieruchinskaya",
+    "title": "WCM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1734026955,
+    "joined": 1698269974,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2045,
+            "date": 1715803660,
+            "rd": 182
+        },
+        "best": {
+            "rating": 2045,
+            "date": 1714599760,
+            "game": "https://www.chess.com/game/live/108337891095"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2368,
+            "date": 1732060982,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2369,
+            "date": 1727216854,
+            "game": "https://www.chess.com/game/live/125792379403"
+        },
+        "record": {
+            "win": 36,
+            "loss": 65,
+            "draw": 12
+        }
+    },
+    "fide": 1925,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1698269974
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1698269974
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

@@ -1,0 +1,137 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/51625056.3e26ffca.200x200o.63795ccde90d.jpeg",
+    "player_id": 51625056,
+    "@id": "https://api.chess.com/pub/player/gorgeous1083",
+    "url": "https://www.chess.com/member/gorgeous1083",
+    "name": "in hei henry ho",
+    "username": "gorgeous1083",
+    "title": "FM",
+    "followers": 336,
+    "country": "https://api.chess.com/pub/country/HK",
+    "location": "Kidult Chess Academy",
+    "last_online": 1734144430,
+    "joined": 1541726940,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1739,
+            "date": 1732715506,
+            "rd": 94
+        },
+        "best": {
+            "rating": 1754,
+            "date": 1720860702,
+            "game": "https://www.chess.com/game/daily/631719851"
+        },
+        "record": {
+            "win": 104,
+            "loss": 16,
+            "draw": 5,
+            "time_per_move": 12286,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 44,
+            "withdraw": 0,
+            "count": 2,
+            "highest_finish": 1
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1174,
+            "date": 1723581357,
+            "rd": 169
+        },
+        "best": {
+            "rating": 1174,
+            "date": 1723581357,
+            "game": "https://www.chess.com/game/daily/682070975"
+        },
+        "record": {
+            "win": 14,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 12286,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 44,
+            "withdraw": 0,
+            "count": 2,
+            "highest_finish": 1
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2201,
+            "date": 1732119092,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2283,
+            "date": 1695731577,
+            "game": "https://www.chess.com/game/live/5690126609"
+        },
+        "record": {
+            "win": 858,
+            "loss": 727,
+            "draw": 127
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1818,
+            "date": 1733502850,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2026,
+            "date": 1656954334,
+            "game": "https://www.chess.com/game/live/50693357057"
+        },
+        "record": {
+            "win": 120,
+            "loss": 111,
+            "draw": 10
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2140,
+            "date": 1733553506,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2262,
+            "date": 1712094863,
+            "game": "https://www.chess.com/game/live/105815472241"
+        },
+        "record": {
+            "win": 3466,
+            "loss": 3461,
+            "draw": 374
+        }
+    },
+    "fide": 1762,
+    "tactics": {
+        "highest": {
+            "rating": 3312,
+            "date": 1709642742
+        },
+        "lowest": {
+            "rating": 415,
+            "date": 1542021024
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

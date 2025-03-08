@@ -1,0 +1,63 @@
+{
+    "player_id": 380813231,
+    "@id": "https://api.chess.com/pub/player/tactichunter08",
+    "url": "https://www.chess.com/member/tactichunter08",
+    "name": "Nikolaos Poupalos",
+    "username": "tactichunter08",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/GR",
+    "last_online": 1734010768,
+    "joined": 1723569313,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2723,
+            "date": 1732806091,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2731,
+            "date": 1732806000,
+            "game": "https://www.chess.com/game/live/126544168317"
+        },
+        "record": {
+            "win": 5,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2470,
+            "date": 1733870099,
+            "rd": 82
+        },
+        "best": {
+            "rating": 2492,
+            "date": 1733852000,
+            "game": "https://www.chess.com/game/live/126377337963"
+        },
+        "record": {
+            "win": 15,
+            "loss": 10,
+            "draw": 2
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1022,
+            "date": 1725200614
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1723569313
+        }
+    },
+    "puzzle_rush": {}
+}

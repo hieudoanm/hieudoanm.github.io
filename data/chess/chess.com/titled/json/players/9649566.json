@@ -1,0 +1,119 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/9649566.855968b2.200x200o.c0cd96e4c29a.jpeg",
+    "player_id": 9649566,
+    "@id": "https://api.chess.com/pub/player/itk04",
+    "url": "https://www.chess.com/member/Itk04",
+    "name": "Itgelt Khuyagtsogt",
+    "username": "itk04",
+    "title": "IM",
+    "followers": 62,
+    "country": "https://api.chess.com/pub/country/MN",
+    "location": "Ulaanbaatar,Mongolia",
+    "last_online": 1734169658,
+    "joined": 1352990709,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 899,
+            "date": 1731950892,
+            "rd": 213
+        },
+        "record": {
+            "win": 0,
+            "loss": 4,
+            "draw": 1,
+            "time_per_move": 22292,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1483978205,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 22292,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2444,
+            "date": 1696431504,
+            "rd": 109
+        },
+        "best": {
+            "rating": 2444,
+            "date": 1696431504,
+            "game": "https://www.chess.com/game/live/74787659323"
+        },
+        "record": {
+            "win": 108,
+            "loss": 86,
+            "draw": 14
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2713,
+            "date": 1697947018,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2719,
+            "date": 1697946737,
+            "game": "https://www.chess.com/game/live/89788800169"
+        },
+        "record": {
+            "win": 1063,
+            "loss": 943,
+            "draw": 109
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2826,
+            "date": 1716310103,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2832,
+            "date": 1716309000,
+            "game": "https://www.chess.com/game/live/88270917601"
+        },
+        "record": {
+            "win": 4490,
+            "loss": 3360,
+            "draw": 454
+        }
+    },
+    "fide": 2416,
+    "tactics": {
+        "highest": {
+            "rating": 3804,
+            "date": 1727511113
+        },
+        "lowest": {
+            "rating": 1278,
+            "date": 1365953480
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 71,
+            "score": 68
+        },
+        "daily": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

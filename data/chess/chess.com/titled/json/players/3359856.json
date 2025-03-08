@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/3359856.5782ae5b.200x200o.8f5d00b55656.jpeg",
+    "player_id": 3359856,
+    "@id": "https://api.chess.com/pub/player/charlescandycampbell",
+    "url": "https://www.chess.com/member/charlescandycampbell",
+    "name": "Charles Campbell",
+    "username": "charlescandycampbell",
+    "title": "CM",
+    "followers": 678,
+    "country": "https://api.chess.com/pub/country/NG",
+    "location": "Louisiana",
+    "last_online": 1734013529,
+    "joined": 1232072306,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

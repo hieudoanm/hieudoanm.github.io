@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/10468514.48ab58d4.200x200o.8e5b7c8df5f2.jpeg",
+    "player_id": 10468514,
+    "@id": "https://api.chess.com/pub/player/mattydperrine",
+    "url": "https://www.chess.com/member/MattyDPerrine",
+    "name": "Dalton Perrine",
+    "username": "mattydperrine",
+    "title": "FM",
+    "followers": 2152,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Cleveland, OH",
+    "last_online": 1734169655,
+    "joined": 1358476938,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2192,
+            "date": 1715917931,
+            "rd": 330
+        },
+        "best": {
+            "rating": 2192,
+            "date": 1564722920,
+            "game": "https://www.chess.com/game/daily/89386256"
+        },
+        "record": {
+            "win": 44,
+            "loss": 2,
+            "draw": 1,
+            "time_per_move": 17802,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2268,
+            "date": 1726855977,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2494,
+            "date": 1606692072,
+            "game": "https://www.chess.com/game/live/100026893177"
+        },
+        "record": {
+            "win": 187,
+            "loss": 102,
+            "draw": 23
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2643,
+            "date": 1733772746,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2838,
+            "date": 1723313456,
+            "game": "https://www.chess.com/game/live/106119611407"
+        },
+        "record": {
+            "win": 5397,
+            "loss": 7323,
+            "draw": 527
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2608,
+            "date": 1734173066,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2696,
+            "date": 1710036937,
+            "game": "https://www.chess.com/game/live/103775448597"
+        },
+        "record": {
+            "win": 6691,
+            "loss": 6978,
+            "draw": 755
+        }
+    },
+    "fide": 2286,
+    "tactics": {
+        "highest": {
+            "rating": 3565,
+            "date": 1706327347
+        },
+        "lowest": {
+            "rating": 2160,
+            "date": 1366125194
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

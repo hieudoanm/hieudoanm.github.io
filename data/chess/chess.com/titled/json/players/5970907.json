@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/5970907.c8e2e111.200x200o.111f864a36c5.jpeg",
+    "player_id": 5970907,
+    "@id": "https://api.chess.com/pub/player/jlmanzanares",
+    "url": "https://www.chess.com/member/jlmanzanares",
+    "name": "Jorge Luis Sanchez",
+    "username": "jlmanzanares",
+    "title": "FM",
+    "followers": 45,
+    "country": "https://api.chess.com/pub/country/PA",
+    "last_online": 1734146142,
+    "joined": 1318883402,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1593,
+            "date": 1734118369,
+            "rd": 332
+        },
+        "best": {
+            "rating": 1593,
+            "date": 1707099926,
+            "game": "https://www.chess.com/game/daily/544234055"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 167784,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1685,
+            "date": 1734148190,
+            "rd": 170
+        },
+        "best": {
+            "rating": 2122,
+            "date": 1628981231,
+            "game": "https://www.chess.com/game/live/127886334999"
+        },
+        "record": {
+            "win": 5,
+            "loss": 3,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1971,
+            "date": 1734118796,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2114,
+            "date": 1697167183,
+            "game": "https://www.chess.com/game/live/126731384623"
+        },
+        "record": {
+            "win": 278,
+            "loss": 287,
+            "draw": 26
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2098,
+            "date": 1733849059,
+            "rd": 76
+        },
+        "best": {
+            "rating": 2275,
+            "date": 1597120186,
+            "game": "https://www.chess.com/game/live/100979051783"
+        },
+        "record": {
+            "win": 172,
+            "loss": 154,
+            "draw": 11
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3067,
+            "date": 1714180286
+        },
+        "lowest": {
+            "rating": 1320,
+            "date": 1344835123
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 39
+        }
+    }
+}

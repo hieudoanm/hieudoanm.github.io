@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/42642694.b5f8a112.200x200o.36a41bb25232.jpeg",
+    "player_id": 42642694,
+    "@id": "https://api.chess.com/pub/player/rafaelfiggo",
+    "url": "https://www.chess.com/member/rafaelfiggo",
+    "name": "Rafael Figueiredo de Paula",
+    "username": "rafaelfiggo",
+    "title": "FM",
+    "followers": 155,
+    "country": "https://api.chess.com/pub/country/BR",
+    "last_online": 1734107276,
+    "joined": 1516819924,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2181,
+            "date": 1611443062,
+            "rd": 247
+        },
+        "best": {
+            "rating": 2181,
+            "date": 1611443062,
+            "game": "https://www.chess.com/game/live/6326655004"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2306,
+            "date": 1734102851,
+            "rd": 57
+        },
+        "best": {
+            "rating": 2475,
+            "date": 1694971025,
+            "game": "https://www.chess.com/game/live/10547163673"
+        },
+        "record": {
+            "win": 6807,
+            "loss": 6236,
+            "draw": 731
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2610,
+            "date": 1734106562,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2638,
+            "date": 1732492001,
+            "game": "https://www.chess.com/game/live/81371581111"
+        },
+        "record": {
+            "win": 8183,
+            "loss": 7009,
+            "draw": 1235
+        }
+    },
+    "fide": 2270,
+    "tactics": {
+        "highest": {
+            "rating": 3398,
+            "date": 1732355993
+        },
+        "lowest": {
+            "rating": 807,
+            "date": 1516843623
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 35,
+            "score": 32
+        }
+    }
+}

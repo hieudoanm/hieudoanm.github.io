@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/62311710.cb4ca370.200x200o.02fe2f23ff66.jpeg",
+    "player_id": 62311710,
+    "@id": "https://api.chess.com/pub/player/thepatrick27",
+    "url": "https://www.chess.com/member/ThePatrick27",
+    "name": "Patrick Aizpur\u00faa",
+    "username": "thepatrick27",
+    "title": "FM",
+    "followers": 38,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Ramstein AB",
+    "last_online": 1734166133,
+    "joined": 1560612318,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

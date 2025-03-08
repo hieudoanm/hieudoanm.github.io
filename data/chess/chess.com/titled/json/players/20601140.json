@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/20601140.7fbaae53.200x200o.36101badbda2.jpeg",
+    "player_id": 20601140,
+    "@id": "https://api.chess.com/pub/player/smirnovtimofey2000",
+    "url": "https://www.chess.com/member/SmirnovTimofey2000",
+    "name": "Timofey Smirnov",
+    "username": "smirnovtimofey2000",
+    "title": "FM",
+    "followers": 46,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "\u041c\u043e\u0441\u043a\u0432\u0430",
+    "last_online": 1714033063,
+    "joined": 1421097636,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

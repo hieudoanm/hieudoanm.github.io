@@ -1,0 +1,32 @@
+{
+    "player_id": 31478216,
+    "@id": "https://api.chess.com/pub/player/magnolie",
+    "url": "https://www.chess.com/member/magnolie",
+    "name": "Jonas Lampert",
+    "username": "magnolie",
+    "title": "GM",
+    "followers": 21,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1731338403,
+    "joined": 1481212645,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1481212645
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1481212645
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

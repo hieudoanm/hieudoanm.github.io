@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/122070190.943d7fc7.200x200o.cd468b8950dd.jpg",
+    "player_id": 122070190,
+    "@id": "https://api.chess.com/pub/player/mgl_2009",
+    "url": "https://www.chess.com/member/mgl_2009",
+    "name": "Tuguldur Soninbayar",
+    "username": "mgl_2009",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/MN",
+    "location": "Ulaanbaatar",
+    "last_online": 1733929546,
+    "joined": 1613641825,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2089,
+            "date": 1728310208,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2022,
+            "date": 1708435976,
+            "game": "https://www.chess.com/game/live/102173768747"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2415,
+            "date": 1729322092,
+            "rd": 85
+        },
+        "best": {
+            "rating": 2486,
+            "date": 1728313666,
+            "game": "https://www.chess.com/game/live/106755691739"
+        },
+        "record": {
+            "win": 161,
+            "loss": 51,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2426,
+            "date": 1734112737,
+            "rd": 68
+        },
+        "best": {
+            "rating": 2426,
+            "date": 1734112737,
+            "game": "https://www.chess.com/game/live/123062454465"
+        },
+        "record": {
+            "win": 121,
+            "loss": 32,
+            "draw": 3
+        }
+    },
+    "fide": 2089,
+    "tactics": {
+        "highest": {
+            "rating": 2460,
+            "date": 1733898101
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1613811537
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 39,
+            "score": 36
+        }
+    }
+}

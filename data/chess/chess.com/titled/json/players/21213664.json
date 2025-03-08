@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/21213664.2331c525.200x200o.3d8df14091ed.jpg",
+    "player_id": 21213664,
+    "@id": "https://api.chess.com/pub/player/lagarto93",
+    "url": "https://www.chess.com/member/lagarto93",
+    "name": "David Martinez Lopez",
+    "username": "lagarto93",
+    "title": "FM",
+    "followers": 31,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734016220,
+    "joined": 1424608306,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1772,
+            "date": 1687379750,
+            "rd": 135
+        },
+        "best": {
+            "rating": 1772,
+            "date": 1470563556,
+            "game": "https://www.chess.com/game/daily/140040442"
+        },
+        "record": {
+            "win": 12,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 10167,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2200,
+            "date": 1687379751,
+            "rd": 156
+        },
+        "best": {
+            "rating": 1908,
+            "date": 1441708714,
+            "game": "https://www.chess.com/game/live/1273855355"
+        },
+        "record": {
+            "win": 8,
+            "loss": 2,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2519,
+            "date": 1734020760,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2537,
+            "date": 1689178376,
+            "game": "https://www.chess.com/game/live/1884354222"
+        },
+        "record": {
+            "win": 339,
+            "loss": 272,
+            "draw": 28
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2460,
+            "date": 1734017733,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2611,
+            "date": 1727102873,
+            "game": "https://www.chess.com/game/live/106268809695"
+        },
+        "record": {
+            "win": 2468,
+            "loss": 2015,
+            "draw": 287
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3421,
+            "date": 1711652966
+        },
+        "lowest": {
+            "rating": 1467,
+            "date": 1424724611
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 36,
+            "score": 33
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "player_id": 378060269,
+    "@id": "https://api.chess.com/pub/player/richard-scheftlein",
+    "url": "https://www.chess.com/member/Richard-Scheftlein",
+    "name": "Richard Scheftlein",
+    "username": "richard-scheftlein",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1723568841,
+    "joined": 1722275183,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2463,
+            "date": 1722959836,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2468,
+            "date": 1722958922,
+            "game": "https://www.chess.com/game/live/116254881701"
+        },
+        "record": {
+            "win": 39,
+            "loss": 9,
+            "draw": 3
+        }
+    },
+    "fide": 2322,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1722275183
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1722275183
+        }
+    },
+    "puzzle_rush": {}
+}

@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/91361844.bd58770a.200x200o.01ec30c287b6.jpeg",
+    "player_id": 91361844,
+    "@id": "https://api.chess.com/pub/player/lewanatol",
+    "url": "https://www.chess.com/member/LewAnatol",
+    "name": "Rafa\u0142 Lewandowski",
+    "username": "lewanatol",
+    "title": "CM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/PL",
+    "location": "Zamienie",
+    "last_online": 1734178749,
+    "joined": 1600282169,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1765,
+            "date": 1723629696,
+            "rd": 227
+        },
+        "best": {
+            "rating": 1765,
+            "date": 1723629696,
+            "game": "https://www.chess.com/game/daily/636746437"
+        },
+        "record": {
+            "win": 9,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 12138,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2313,
+            "date": 1733605671,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2313,
+            "date": 1733605671,
+            "game": "https://www.chess.com/game/live/127087796373"
+        },
+        "record": {
+            "win": 123,
+            "loss": 48,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2106,
+            "date": 1718196308,
+            "rd": 74
+        },
+        "best": {
+            "rating": 2015,
+            "date": 1694242932,
+            "game": "https://www.chess.com/game/live/84388157535"
+        },
+        "record": {
+            "win": 63,
+            "loss": 39,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2195,
+            "date": 1734179425,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2297,
+            "date": 1725398340,
+            "game": "https://www.chess.com/game/live/113066447669"
+        },
+        "record": {
+            "win": 1288,
+            "loss": 1022,
+            "draw": 156
+        }
+    },
+    "fide": 2106,
+    "tactics": {
+        "highest": {
+            "rating": 3527,
+            "date": 1711397355
+        },
+        "lowest": {
+            "rating": 1006,
+            "date": 1621458325
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 53,
+            "score": 50
+        }
+    }
+}

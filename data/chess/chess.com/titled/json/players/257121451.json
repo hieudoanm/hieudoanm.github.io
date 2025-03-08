@@ -1,0 +1,50 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/257121451.00067a11.200x200o.c3c786bec584.jpg",
+    "player_id": 257121451,
+    "@id": "https://api.chess.com/pub/player/quemirasboboandaparaalla",
+    "url": "https://www.chess.com/member/quemirasboboandaparaalla",
+    "username": "quemirasboboandaparaalla",
+    "title": "GM",
+    "followers": 105,
+    "country": "https://api.chess.com/pub/country/AR",
+    "last_online": 1734017074,
+    "joined": 1678041648,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 3019,
+            "date": 1734157181,
+            "rd": 30
+        },
+        "best": {
+            "rating": 3098,
+            "date": 1718642258,
+            "game": "https://www.chess.com/game/live/117520811677"
+        },
+        "record": {
+            "win": 1242,
+            "loss": 744,
+            "draw": 257
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3680,
+            "date": 1732255347
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1678041648
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

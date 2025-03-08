@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/2178208.a1f84ab7.200x200o.8412ec31ee6b.jpeg",
+    "player_id": 2178208,
+    "@id": "https://api.chess.com/pub/player/thundersword",
+    "url": "https://www.chess.com/member/ThunderSword",
+    "username": "thundersword",
+    "title": "FM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1714571003,
+    "joined": 1253557012,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

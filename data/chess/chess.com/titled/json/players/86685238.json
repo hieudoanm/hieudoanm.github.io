@@ -1,0 +1,16 @@
+{
+    "player_id": 86685238,
+    "@id": "https://api.chess.com/pub/player/wizarddesert",
+    "url": "https://www.chess.com/member/WizardDesert",
+    "name": "Abdul Wahab Alothman",
+    "username": "wizarddesert",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/KW",
+    "last_online": 1629637087,
+    "joined": 1594743080,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

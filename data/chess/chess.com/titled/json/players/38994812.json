@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/38994812.3669fb51.200x200o.e649a31a1d7e.jpg",
+    "player_id": 38994812,
+    "@id": "https://api.chess.com/pub/player/mrtattaglia",
+    "url": "https://www.chess.com/member/MrTattaglia",
+    "name": "Adam Kozak",
+    "username": "mrtattaglia",
+    "title": "GM",
+    "followers": 331,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1734157312,
+    "joined": 1506539673,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1972,
+            "date": 1731366489,
+            "rd": 246
+        },
+        "best": {
+            "rating": 1972,
+            "date": 1604564767,
+            "game": "https://www.chess.com/game/daily/266124546"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 1,
+            "time_per_move": 87972,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2587,
+            "date": 1715620822,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2732,
+            "date": 1658594409,
+            "game": "https://www.chess.com/game/live/109275690593"
+        },
+        "record": {
+            "win": 56,
+            "loss": 35,
+            "draw": 32
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 3007,
+            "date": 1734097334,
+            "rd": 42
+        },
+        "best": {
+            "rating": 3246,
+            "date": 1669201549,
+            "game": "https://www.chess.com/game/live/43772175857"
+        },
+        "record": {
+            "win": 7369,
+            "loss": 5557,
+            "draw": 727
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 3010,
+            "date": 1734106849,
+            "rd": 27
+        },
+        "best": {
+            "rating": 3084,
+            "date": 1731363595,
+            "game": "https://www.chess.com/game/live/124654114651"
+        },
+        "record": {
+            "win": 4120,
+            "loss": 3232,
+            "draw": 708
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3668,
+            "date": 1730107785
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1513098206
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

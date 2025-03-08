@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/11748712.a547a463.200x200o.d0130fe3d883.png",
+    "player_id": 11748712,
+    "@id": "https://api.chess.com/pub/player/chessisveryfun1264",
+    "url": "https://www.chess.com/member/chessisveryfun1264",
+    "name": "Shaaketh Sivakumar",
+    "username": "chessisveryfun1264",
+    "title": "FM",
+    "followers": 271,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Silicon Valley",
+    "last_online": 1734150733,
+    "joined": 1367605255,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1425,
+            "date": 1731084041,
+            "rd": 180
+        },
+        "best": {
+            "rating": 1465,
+            "date": 1375650229,
+            "game": "https://www.chess.com/game/daily/146503354"
+        },
+        "record": {
+            "win": 18,
+            "loss": 19,
+            "draw": 1,
+            "time_per_move": 20977,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2262,
+            "date": 1733370456,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2531,
+            "date": 1602891681,
+            "game": "https://www.chess.com/game/live/5636163321"
+        },
+        "record": {
+            "win": 1007,
+            "loss": 1449,
+            "draw": 164
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2634,
+            "date": 1731116326,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2748,
+            "date": 1729560938,
+            "game": "https://www.chess.com/game/live/102642646701"
+        },
+        "record": {
+            "win": 3836,
+            "loss": 4096,
+            "draw": 445
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2641,
+            "date": 1734155333,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2860,
+            "date": 1725664178,
+            "game": "https://www.chess.com/game/live/88921274113"
+        },
+        "record": {
+            "win": 8807,
+            "loss": 9283,
+            "draw": 1264
+        }
+    },
+    "fide": 2364,
+    "tactics": {
+        "highest": {
+            "rating": 3674,
+            "date": 1669267493
+        },
+        "lowest": {
+            "rating": 1370,
+            "date": 1423450575
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 80,
+            "score": 77
+        }
+    }
+}

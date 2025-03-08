@@ -1,0 +1,18 @@
+{
+    "player_id": 4839587,
+    "@id": "https://api.chess.com/pub/player/edgalbraith",
+    "url": "https://www.chess.com/member/EdGalbraith",
+    "name": "Anthony Hughes",
+    "username": "edgalbraith",
+    "title": "CM",
+    "followers": 21,
+    "country": "https://api.chess.com/pub/country/XW",
+    "location": "London",
+    "last_online": 1733997956,
+    "joined": 1299881809,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

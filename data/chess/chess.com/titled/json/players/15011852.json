@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/15011852.8c0f47a5.200x200o.3401d78170c1.jpeg",
+    "player_id": 15011852,
+    "@id": "https://api.chess.com/pub/player/viraldus",
+    "url": "https://www.chess.com/member/ViralduS",
+    "name": "Piotr Brodowski",
+    "username": "viraldus",
+    "title": "IM",
+    "followers": 630,
+    "country": "https://api.chess.com/pub/country/PL",
+    "location": "Bydgoszcz",
+    "last_online": 1734106396,
+    "joined": 1386953982,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1240,
+            "date": 1721516667,
+            "rd": 217
+        },
+        "best": {
+            "rating": 1240,
+            "date": 1721516667,
+            "game": "https://www.chess.com/game/daily/498137265"
+        },
+        "record": {
+            "win": 4,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 241398,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2010,
+            "date": 1733419454,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2065,
+            "date": 1638370246,
+            "game": "https://www.chess.com/game/live/26752283519"
+        },
+        "record": {
+            "win": 157,
+            "loss": 118,
+            "draw": 28
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2770,
+            "date": 1733999044,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2838,
+            "date": 1713879984,
+            "game": "https://www.chess.com/game/live/115230486325"
+        },
+        "record": {
+            "win": 1775,
+            "loss": 1631,
+            "draw": 209
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2633,
+            "date": 1734090473,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2797,
+            "date": 1680717732,
+            "game": "https://www.chess.com/game/live/106415210141"
+        },
+        "record": {
+            "win": 1737,
+            "loss": 1425,
+            "draw": 254
+        }
+    },
+    "fide": 2440,
+    "tactics": {
+        "highest": {
+            "rating": 3555,
+            "date": 1727124225
+        },
+        "lowest": {
+            "rating": 1376,
+            "date": 1386954157
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

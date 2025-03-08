@@ -1,0 +1,89 @@
+{
+    "player_id": 263547449,
+    "@id": "https://api.chess.com/pub/player/grnic1",
+    "url": "https://www.chess.com/member/grnic1",
+    "name": "Nikolai Grebennikov",
+    "username": "grnic1",
+    "title": "CM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/BG",
+    "last_online": 1734139112,
+    "joined": 1679177898,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2220,
+            "date": 1732020185,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2005,
+            "date": 1708173478,
+            "game": "https://www.chess.com/game/live/101912124713"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2293,
+            "date": 1734139239,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2390,
+            "date": 1686958175,
+            "game": "https://www.chess.com/game/live/93916780599"
+        },
+        "record": {
+            "win": 1125,
+            "loss": 1008,
+            "draw": 125
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2624,
+            "date": 1709474818,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2624,
+            "date": 1692138232,
+            "game": "https://www.chess.com/game/live/85443721141"
+        },
+        "record": {
+            "win": 48,
+            "loss": 16,
+            "draw": 3
+        }
+    },
+    "fide": 2220,
+    "tactics": {
+        "highest": {
+            "rating": 412,
+            "date": 1679187303
+        },
+        "lowest": {
+            "rating": 387,
+            "date": 1679187294
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
+}

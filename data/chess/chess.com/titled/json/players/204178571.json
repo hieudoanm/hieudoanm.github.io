@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/204178571.f3a6599d.200x200o.2a3fda023caa.jpeg",
+    "player_id": 204178571,
+    "@id": "https://api.chess.com/pub/player/buffypizza",
+    "url": "https://www.chess.com/member/BUFFYPIZZA",
+    "name": "Shiva Kalka",
+    "username": "buffypizza",
+    "title": "CM",
+    "followers": 27,
+    "country": "https://api.chess.com/pub/country/SR",
+    "location": "paramaribo",
+    "last_online": 1734053534,
+    "joined": 1667263146,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2040,
+            "date": 1734027287,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2181,
+            "date": 1731281353,
+            "game": "https://www.chess.com/game/live/126416951917"
+        },
+        "record": {
+            "win": 343,
+            "loss": 274,
+            "draw": 44
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2157,
+            "date": 1733270605,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2167,
+            "date": 1733267109,
+            "game": "https://www.chess.com/game/live/125188189539"
+        },
+        "record": {
+            "win": 64,
+            "loss": 92,
+            "draw": 6
+        }
+    },
+    "fide": 1851,
+    "tactics": {
+        "highest": {
+            "rating": 3006,
+            "date": 1728874942
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1667263146
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 29,
+            "score": 26
+        }
+    }
+}

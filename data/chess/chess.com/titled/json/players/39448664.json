@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39448664.c0e4e21e.200x200o.644b571fa621.jpeg",
+    "player_id": 39448664,
+    "@id": "https://api.chess.com/pub/player/vasskas",
+    "url": "https://www.chess.com/member/VassKas",
+    "name": "Vasilios Kasioumis",
+    "username": "vasskas",
+    "title": "FM",
+    "followers": 28,
+    "country": "https://api.chess.com/pub/country/GR",
+    "last_online": 1734035677,
+    "joined": 1508004082,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1591,
+            "date": 1716452943,
+            "rd": 181
+        },
+        "best": {
+            "rating": 1591,
+            "date": 1684838312,
+            "game": "https://www.chess.com/game/daily/226605958"
+        },
+        "record": {
+            "win": 19,
+            "loss": 1,
+            "draw": 1,
+            "time_per_move": 12008,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2369,
+            "date": 1680635851,
+            "rd": 99
+        },
+        "best": {
+            "rating": 2418,
+            "date": 1680633624,
+            "game": "https://www.chess.com/game/live/72907055429"
+        },
+        "record": {
+            "win": 86,
+            "loss": 27,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2678,
+            "date": 1733997595,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2763,
+            "date": 1728237945,
+            "game": "https://www.chess.com/game/live/121975736975"
+        },
+        "record": {
+            "win": 561,
+            "loss": 396,
+            "draw": 37
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2652,
+            "date": 1731793672,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2695,
+            "date": 1704901978,
+            "game": "https://www.chess.com/game/live/102710471961"
+        },
+        "record": {
+            "win": 1442,
+            "loss": 1093,
+            "draw": 144
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3507,
+            "date": 1731339586
+        },
+        "lowest": {
+            "rating": 413,
+            "date": 1508600151
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

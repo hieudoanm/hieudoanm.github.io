@@ -1,0 +1,70 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/20932598.fe7d8f53.200x200o.b41cd10474fa.png",
+    "player_id": 20932598,
+    "@id": "https://api.chess.com/pub/player/lonesomegeorge1",
+    "url": "https://www.chess.com/member/LonesomeGeorge1",
+    "name": "Max Hess",
+    "username": "lonesomegeorge1",
+    "title": "IM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/DE",
+    "location": "Munich",
+    "last_online": 1733682414,
+    "joined": 1423045037,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2530,
+            "date": 1647385562,
+            "rd": 174
+        },
+        "best": {
+            "rating": 2530,
+            "date": 1647385562,
+            "game": "https://www.chess.com/game/live/1664339009"
+        },
+        "record": {
+            "win": 733,
+            "loss": 631,
+            "draw": 91
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2408,
+            "date": 1727296650,
+            "rd": 117
+        },
+        "best": {
+            "rating": 2629,
+            "date": 1646760244,
+            "game": "https://www.chess.com/game/live/40498846749"
+        },
+        "record": {
+            "win": 948,
+            "loss": 812,
+            "draw": 138
+        }
+    },
+    "fide": 2325,
+    "tactics": {
+        "highest": {
+            "rating": 3062,
+            "date": 1604672596
+        },
+        "lowest": {
+            "rating": 1845,
+            "date": 1467749752
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 58,
+            "score": 55
+        }
+    }
+}

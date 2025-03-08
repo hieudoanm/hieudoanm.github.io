@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/55969800.3d2a6fa7.200x200o.090a119c7062.jpg",
+    "player_id": 55969800,
+    "@id": "https://api.chess.com/pub/player/chessmatenokk17",
+    "url": "https://www.chess.com/member/Chessmatenokk17",
+    "name": "Sergey And. Korshunov",
+    "username": "chessmatenokk17",
+    "title": "FM",
+    "followers": 44,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734009249,
+    "joined": 1547482601,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1783,
+            "date": 1717775218,
+            "rd": 108
+        },
+        "best": {
+            "rating": 1796,
+            "date": 1612590710,
+            "game": "https://www.chess.com/game/daily/304391902"
+        },
+        "record": {
+            "win": 17,
+            "loss": 3,
+            "draw": 0,
+            "time_per_move": 9188,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2349,
+            "date": 1732795513,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2383,
+            "date": 1726744595,
+            "game": "https://www.chess.com/game/live/112350650915"
+        },
+        "record": {
+            "win": 113,
+            "loss": 69,
+            "draw": 10
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2734,
+            "date": 1731093321,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2804,
+            "date": 1728498527,
+            "game": "https://www.chess.com/game/live/121261823179"
+        },
+        "record": {
+            "win": 645,
+            "loss": 512,
+            "draw": 72
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2783,
+            "date": 1733837092,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2894,
+            "date": 1720720827,
+            "game": "https://www.chess.com/game/live/109809083501"
+        },
+        "record": {
+            "win": 3450,
+            "loss": 3168,
+            "draw": 589
+        }
+    },
+    "fide": 2361,
+    "tactics": {
+        "highest": {
+            "rating": 3721,
+            "date": 1733134079
+        },
+        "lowest": {
+            "rating": 1006,
+            "date": 1547571459
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 72,
+            "score": 69
+        }
+    }
+}

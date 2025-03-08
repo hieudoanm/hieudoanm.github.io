@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1971360.dca10605.200x200o.6848f31bd515.jpeg",
+    "player_id": 1971360,
+    "@id": "https://api.chess.com/pub/player/sjevtic",
+    "url": "https://www.chess.com/member/sjevtic",
+    "name": "Sasa Jevtic",
+    "username": "sjevtic",
+    "title": "FM",
+    "followers": 310,
+    "country": "https://api.chess.com/pub/country/RS",
+    "location": "Paracin",
+    "last_online": 1734081502,
+    "joined": 1244877336,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

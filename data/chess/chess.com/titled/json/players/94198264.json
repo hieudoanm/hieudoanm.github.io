@@ -1,0 +1,83 @@
+{
+    "player_id": 94198264,
+    "@id": "https://api.chess.com/pub/player/lemmingsplayer",
+    "url": "https://www.chess.com/member/Lemmingsplayer",
+    "username": "lemmingsplayer",
+    "title": "CM",
+    "followers": 28,
+    "country": "https://api.chess.com/pub/country/NZ",
+    "last_online": 1734080708,
+    "joined": 1603882164,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2200,
+            "date": 1732207290,
+            "rd": 247
+        },
+        "best": {
+            "rating": 966,
+            "date": 1629160267,
+            "game": "https://www.chess.com/game/live/22899034579"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2733,
+            "date": 1715376722,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2736,
+            "date": 1715363063,
+            "game": "https://www.chess.com/game/live/109101645553"
+        },
+        "record": {
+            "win": 3769,
+            "loss": 4307,
+            "draw": 521
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2604,
+            "date": 1734083716,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2632,
+            "date": 1731401464,
+            "game": "https://www.chess.com/game/live/89163609539"
+        },
+        "record": {
+            "win": 1990,
+            "loss": 2016,
+            "draw": 393
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3563,
+            "date": 1732224720
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1604305363
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
+}

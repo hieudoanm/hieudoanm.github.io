@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/10070116.dc266a24.200x200o.4579769fae2e.jpeg",
+    "player_id": 10070116,
+    "@id": "https://api.chess.com/pub/player/stockholmmissile",
+    "url": "https://www.chess.com/member/StockholmMissile",
+    "name": "Hampus Sorensen",
+    "username": "stockholmmissile",
+    "title": "IM",
+    "followers": 54,
+    "country": "https://api.chess.com/pub/country/SE",
+    "last_online": 1734098996,
+    "joined": 1355867364,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1616,
+            "date": 1721315718,
+            "rd": 87
+        },
+        "best": {
+            "rating": 1616,
+            "date": 1625233204,
+            "game": "https://www.chess.com/game/daily/306374886"
+        },
+        "record": {
+            "win": 64,
+            "loss": 17,
+            "draw": 1,
+            "time_per_move": 14848,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2443,
+            "date": 1682443510,
+            "rd": 76
+        },
+        "best": {
+            "rating": 2463,
+            "date": 1681838762,
+            "game": "https://www.chess.com/game/live/75576774169"
+        },
+        "record": {
+            "win": 61,
+            "loss": 41,
+            "draw": 25
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2705,
+            "date": 1727443778,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2706,
+            "date": 1712935437,
+            "game": "https://www.chess.com/game/live/97409986291"
+        },
+        "record": {
+            "win": 189,
+            "loss": 193,
+            "draw": 22
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2676,
+            "date": 1733870415,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2732,
+            "date": 1693471496,
+            "game": "https://www.chess.com/game/live/11468682133"
+        },
+        "record": {
+            "win": 760,
+            "loss": 615,
+            "draw": 147
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3222,
+            "date": 1655839762
+        },
+        "lowest": {
+            "rating": 1237,
+            "date": 1372586720
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

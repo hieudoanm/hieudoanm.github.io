@@ -1,0 +1,84 @@
+{
+    "player_id": 152524915,
+    "@id": "https://api.chess.com/pub/player/dubiousm0ves532",
+    "url": "https://www.chess.com/member/DubiousM0ves532",
+    "name": "Sterling Bacaya",
+    "username": "dubiousm0ves532",
+    "title": "FM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/PH",
+    "last_online": 1734088125,
+    "joined": 1630046453,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2292,
+            "date": 1721110015,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2299,
+            "date": 1630409597,
+            "game": "https://www.chess.com/game/live/77297034629"
+        },
+        "record": {
+            "win": 9,
+            "loss": 6,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2328,
+            "date": 1727922607,
+            "rd": 82
+        },
+        "best": {
+            "rating": 2397,
+            "date": 1703776067,
+            "game": "https://www.chess.com/game/live/75925365307"
+        },
+        "record": {
+            "win": 219,
+            "loss": 136,
+            "draw": 24
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2504,
+            "date": 1727921557,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2540,
+            "date": 1698847048,
+            "game": "https://www.chess.com/game/live/75612039081"
+        },
+        "record": {
+            "win": 293,
+            "loss": 228,
+            "draw": 51
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3010,
+            "date": 1698858450
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1630046453
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

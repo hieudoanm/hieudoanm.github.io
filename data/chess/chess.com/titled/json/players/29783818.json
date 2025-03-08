@@ -1,0 +1,89 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/29783818.d395efd0.200x200o.4aa5df85866c.gif",
+    "player_id": 29783818,
+    "@id": "https://api.chess.com/pub/player/mesa_1",
+    "url": "https://www.chess.com/member/Mesa_1",
+    "name": "Fernando Valenzuela",
+    "username": "mesa_1",
+    "title": "IM",
+    "followers": 54,
+    "country": "https://api.chess.com/pub/country/CL",
+    "location": "Vi&ntilde;a",
+    "last_online": 1734077059,
+    "joined": 1473018814,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 546,
+            "date": 1698363484,
+            "rd": 290
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1473018814,
+            "game": "https://www.chess.com/game/daily/535495443"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 70164,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2700,
+            "date": 1734081750,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2825,
+            "date": 1662803027,
+            "game": "https://www.chess.com/game/live/123698384067"
+        },
+        "record": {
+            "win": 3057,
+            "loss": 2958,
+            "draw": 345
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2683,
+            "date": 1733350744,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2722,
+            "date": 1727795772,
+            "game": "https://www.chess.com/game/live/90084678619"
+        },
+        "record": {
+            "win": 2327,
+            "loss": 2025,
+            "draw": 326
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3515,
+            "date": 1694373213
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1525798474
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 49,
+            "score": 46
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19063044.53373e75.200x200o.be5390f090c1.jpeg",
+    "player_id": 19063044,
+    "@id": "https://api.chess.com/pub/player/sinquefield",
+    "url": "https://www.chess.com/member/Sinquefield",
+    "name": "Alejandro Uzcategui Rodriguez",
+    "username": "sinquefield",
+    "title": "FM",
+    "followers": 72,
+    "country": "https://api.chess.com/pub/country/XA",
+    "location": "Las Palmas De Gran Canaria",
+    "last_online": 1734138721,
+    "joined": 1411768815,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,82 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/32000018.4fcabab3.200x200o.474cd59b17f3.jpeg",
+    "player_id": 32000018,
+    "@id": "https://api.chess.com/pub/player/mrbigtimer",
+    "url": "https://www.chess.com/member/MRBigtimer",
+    "name": "R\u00f3bert Lagerman",
+    "username": "mrbigtimer",
+    "title": "FM",
+    "followers": 49,
+    "country": "https://api.chess.com/pub/country/IS",
+    "location": "Reykjav\u00edk",
+    "last_online": 1734172390,
+    "joined": 1483100633,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1933,
+            "date": 1647676942,
+            "rd": 151
+        },
+        "best": {
+            "rating": 1933,
+            "date": 1647676942,
+            "game": "https://www.chess.com/game/live/4906017950"
+        },
+        "record": {
+            "win": 15,
+            "loss": 8,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2472,
+            "date": 1734175220,
+            "rd": 19
+        },
+        "best": {
+            "rating": 2570,
+            "date": 1726237706,
+            "game": "https://www.chess.com/game/live/26817070075"
+        },
+        "record": {
+            "win": 15368,
+            "loss": 11307,
+            "draw": 1069
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2506,
+            "date": 1728205301,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2549,
+            "date": 1724617689,
+            "game": "https://www.chess.com/game/live/118355939155"
+        },
+        "record": {
+            "win": 477,
+            "loss": 124,
+            "draw": 65
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1668,
+            "date": 1712416899
+        },
+        "lowest": {
+            "rating": 812,
+            "date": 1662286300
+        }
+    },
+    "puzzle_rush": {}
+}

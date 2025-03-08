@@ -1,0 +1,120 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75503786.64c06a95.200x200o.83bc81ad984a.jpg",
+    "player_id": 75503786,
+    "@id": "https://api.chess.com/pub/player/suleyman_chess06",
+    "url": "https://www.chess.com/member/Suleyman_Chess06",
+    "name": "Suleyman Suleymanl\u0131",
+    "username": "suleyman_chess06",
+    "title": "FM",
+    "followers": 234,
+    "country": "https://api.chess.com/pub/country/AZ",
+    "location": "Sheki Azerbaijan",
+    "last_online": 1734181308,
+    "joined": 1585905429,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1529,
+            "date": 1713688197,
+            "rd": 81
+        },
+        "best": {
+            "rating": 1859,
+            "date": 1614243877,
+            "game": "https://www.chess.com/game/daily/306006470"
+        },
+        "record": {
+            "win": 22,
+            "loss": 35,
+            "draw": 7,
+            "time_per_move": 115643,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1759,
+            "date": 1615629338,
+            "rd": 209
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 115643,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2290,
+            "date": 1729704089,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2339,
+            "date": 1622885697,
+            "game": "https://www.chess.com/game/live/118755627837"
+        },
+        "record": {
+            "win": 21,
+            "loss": 5,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2782,
+            "date": 1733593618,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2850,
+            "date": 1707754154,
+            "game": "https://www.chess.com/game/live/112206080907"
+        },
+        "record": {
+            "win": 545,
+            "loss": 453,
+            "draw": 98
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2716,
+            "date": 1734185297,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2861,
+            "date": 1713722095,
+            "game": "https://www.chess.com/game/live/107539921997"
+        },
+        "record": {
+            "win": 912,
+            "loss": 667,
+            "draw": 183
+        }
+    },
+    "fide": 2246,
+    "tactics": {
+        "highest": {
+            "rating": 3650,
+            "date": 1733603625
+        },
+        "lowest": {
+            "rating": 1218,
+            "date": 1586521659
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 64,
+            "score": 61
+        }
+    }
+}

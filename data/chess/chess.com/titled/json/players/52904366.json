@@ -1,0 +1,85 @@
+{
+    "player_id": 52904366,
+    "@id": "https://api.chess.com/pub/player/fonsofan",
+    "url": "https://www.chess.com/member/Fonsofan",
+    "name": "Alfonso Llorente Zaro",
+    "username": "fonsofan",
+    "title": "IM",
+    "followers": 142,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734182434,
+    "joined": 1544174451,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2400,
+            "date": 1548539069,
+            "rd": 247
+        },
+        "best": {
+            "rating": 1966,
+            "date": 1547382952,
+            "game": "https://www.chess.com/game/live/3372891163"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2814,
+            "date": 1733693182,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2865,
+            "date": 1689583449,
+            "game": "https://www.chess.com/game/live/127102804049"
+        },
+        "record": {
+            "win": 993,
+            "loss": 429,
+            "draw": 82
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2802,
+            "date": 1734090095,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2865,
+            "date": 1724882090,
+            "game": "https://www.chess.com/game/live/105229902941"
+        },
+        "record": {
+            "win": 2226,
+            "loss": 1940,
+            "draw": 637
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3048,
+            "date": 1733781879
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1544715929
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

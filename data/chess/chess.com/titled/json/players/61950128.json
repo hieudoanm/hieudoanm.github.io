@@ -1,0 +1,84 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/61950128.8bbaa1b4.200x200o.9160238703c5.jpg",
+    "player_id": 61950128,
+    "@id": "https://api.chess.com/pub/player/gregory_the_illuminator",
+    "url": "https://www.chess.com/member/Gregory_the_Illuminator",
+    "username": "gregory_the_illuminator",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/GE",
+    "last_online": 1734108296,
+    "joined": 1559757363,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2116,
+            "date": 1734095563,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2118,
+            "date": 1734031587,
+            "game": "https://www.chess.com/game/live/127769405953"
+        },
+        "record": {
+            "win": 8,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2136,
+            "date": 1734035277,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2168,
+            "date": 1734034082,
+            "game": "https://www.chess.com/game/live/127773681269"
+        },
+        "record": {
+            "win": 41,
+            "loss": 29,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2265,
+            "date": 1734033939,
+            "rd": 56
+        },
+        "best": {
+            "rating": 2287,
+            "date": 1734024835,
+            "game": "https://www.chess.com/game/live/127599084251"
+        },
+        "record": {
+            "win": 80,
+            "loss": 47,
+            "draw": 1
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3144,
+            "date": 1734111188
+        },
+        "lowest": {
+            "rating": 1014,
+            "date": 1559757421
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 22,
+            "score": 19
+        }
+    }
+}

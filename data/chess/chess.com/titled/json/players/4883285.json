@@ -1,0 +1,124 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/4883285.e55422ef.200x200o.953fb4ca6f85.jpg",
+    "player_id": 4883285,
+    "@id": "https://api.chess.com/pub/player/koncheto",
+    "url": "https://www.chess.com/member/koncheto",
+    "name": "Ivan Kochiev",
+    "username": "koncheto",
+    "title": "CM",
+    "followers": 493,
+    "country": "https://api.chess.com/pub/country/BG",
+    "location": "Plovdiv",
+    "last_online": 1734174872,
+    "joined": 1300730910,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1901,
+            "date": 1730227553,
+            "rd": 132
+        },
+        "best": {
+            "rating": 1992,
+            "date": 1729788277,
+            "game": "https://www.chess.com/game/daily/223034024"
+        },
+        "record": {
+            "win": 539,
+            "loss": 458,
+            "draw": 56,
+            "time_per_move": 21577,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1627,
+            "date": 1527405725,
+            "rd": 159
+        },
+        "best": {
+            "rating": 1627,
+            "date": 1527405725,
+            "game": "https://www.chess.com/game/daily/72038648"
+        },
+        "record": {
+            "win": 39,
+            "loss": 32,
+            "draw": 2,
+            "time_per_move": 21577,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2414,
+            "date": 1734094513,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2414,
+            "date": 1733761551,
+            "game": "https://www.chess.com/game/live/115734689547"
+        },
+        "record": {
+            "win": 307,
+            "loss": 131,
+            "draw": 32
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2681,
+            "date": 1734115064,
+            "rd": 17
+        },
+        "best": {
+            "rating": 2826,
+            "date": 1733498147,
+            "game": "https://www.chess.com/game/live/92859697991"
+        },
+        "record": {
+            "win": 2547,
+            "loss": 2067,
+            "draw": 323
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2582,
+            "date": 1733947321,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2685,
+            "date": 1721338804,
+            "game": "https://www.chess.com/game/live/91920037707"
+        },
+        "record": {
+            "win": 2328,
+            "loss": 1866,
+            "draw": 391
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3318,
+            "date": 1693421315
+        },
+        "lowest": {
+            "rating": 881,
+            "date": 1301031959
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

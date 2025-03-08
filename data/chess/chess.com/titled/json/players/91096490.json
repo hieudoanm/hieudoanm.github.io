@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/91096490.89d1789d.200x200o.e65f021a5ed1.jpg",
+    "player_id": 91096490,
+    "@id": "https://api.chess.com/pub/player/sisis82",
+    "url": "https://www.chess.com/member/sisis82",
+    "name": "Olli Sisatto",
+    "username": "sisis82",
+    "title": "FM",
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/FI",
+    "last_online": 1729807844,
+    "joined": 1599936776,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

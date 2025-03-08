@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/46503884.40b0c19f.200x200o.533c624c6ca6.jpg",
+    "player_id": 46503884,
+    "@id": "https://api.chess.com/pub/player/wiseking_08",
+    "url": "https://www.chess.com/member/WiseKing_08",
+    "name": "Kerem Tinmaz",
+    "username": "wiseking_08",
+    "title": "FM",
+    "followers": 54,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1733847501,
+    "joined": 1527258905,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

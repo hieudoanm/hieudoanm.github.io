@@ -1,0 +1,17 @@
+{
+    "player_id": 174389991,
+    "@id": "https://api.chess.com/pub/player/chessplayer522009",
+    "url": "https://www.chess.com/member/ChessPlayer522009",
+    "name": "Vihaan Dawda",
+    "username": "chessplayer522009",
+    "title": "CM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734165422,
+    "joined": 1645707871,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

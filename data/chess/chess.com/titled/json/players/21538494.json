@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/21538494.c82f9c19.200x200o.709334a7b0d7.png",
+    "player_id": 21538494,
+    "@id": "https://api.chess.com/pub/player/suspiciumchess",
+    "url": "https://www.chess.com/member/suspiciumchess",
+    "name": "Zi Han Goh",
+    "username": "suspiciumchess",
+    "title": "FM",
+    "followers": 41,
+    "country": "https://api.chess.com/pub/country/SG",
+    "location": "Clover",
+    "last_online": 1733647208,
+    "joined": 1426483139,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 795,
+            "date": 1710451784,
+            "rd": 345
+        },
+        "record": {
+            "win": 0,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 257312,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1815,
+            "date": 1685959642,
+            "rd": 110
+        },
+        "best": {
+            "rating": 2005,
+            "date": 1588677549,
+            "game": "https://www.chess.com/game/live/4984123264"
+        },
+        "record": {
+            "win": 67,
+            "loss": 70,
+            "draw": 14
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2208,
+            "date": 1733649047,
+            "rd": 72
+        },
+        "best": {
+            "rating": 2271,
+            "date": 1733141177,
+            "game": "https://www.chess.com/game/live/126879619067"
+        },
+        "record": {
+            "win": 64,
+            "loss": 51,
+            "draw": 8
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2464,
+            "date": 1733649978,
+            "rd": 54
+        },
+        "best": {
+            "rating": 2477,
+            "date": 1720542091,
+            "game": "https://www.chess.com/game/live/99768165229"
+        },
+        "record": {
+            "win": 416,
+            "loss": 490,
+            "draw": 31
+        }
+    },
+    "fide": 2300,
+    "tactics": {
+        "highest": {
+            "rating": 3045,
+            "date": 1671989664
+        },
+        "lowest": {
+            "rating": 997,
+            "date": 1453283794
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

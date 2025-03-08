@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/200572809.79e1fb41.200x200o.d6d301098126.jpg",
+    "player_id": 200572809,
+    "@id": "https://api.chess.com/pub/player/danielsaiz01",
+    "url": "https://www.chess.com/member/DanielSaiz01",
+    "name": "Daniel Evelio Saiz Rodr\u00edguez",
+    "username": "danielsaiz01",
+    "title": "FM",
+    "followers": 107,
+    "country": "https://api.chess.com/pub/country/BR",
+    "location": "Blumenau SC",
+    "last_online": 1734012601,
+    "joined": 1665112995,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1960,
+            "date": 1733667516,
+            "rd": 218
+        },
+        "best": {
+            "rating": 1960,
+            "date": 1733667516,
+            "game": "https://www.chess.com/game/daily/718198709"
+        },
+        "record": {
+            "win": 2,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 12949,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2340,
+            "date": 1734111640,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2483,
+            "date": 1689721707,
+            "game": "https://www.chess.com/game/live/83358398739"
+        },
+        "record": {
+            "win": 55,
+            "loss": 40,
+            "draw": 6
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2403,
+            "date": 1733668961,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2413,
+            "date": 1733668647,
+            "game": "https://www.chess.com/game/live/117010771291"
+        },
+        "record": {
+            "win": 199,
+            "loss": 141,
+            "draw": 18
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2454,
+            "date": 1734109139,
+            "rd": 23
+        },
+        "best": {
+            "rating": 2599,
+            "date": 1733685064,
+            "game": "https://www.chess.com/game/live/127504897019"
+        },
+        "record": {
+            "win": 783,
+            "loss": 619,
+            "draw": 101
+        }
+    },
+    "fide": 2157,
+    "tactics": {
+        "highest": {
+            "rating": 3075,
+            "date": 1733937764
+        },
+        "lowest": {
+            "rating": 1011,
+            "date": 1665114219
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 50,
+            "score": 47
+        }
+    }
+}

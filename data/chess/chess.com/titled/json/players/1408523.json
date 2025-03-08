@@ -1,0 +1,131 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1408523.6d8eea7a.200x200o.2076b28fb2fd.jpg",
+    "player_id": 1408523,
+    "@id": "https://api.chess.com/pub/player/th3chessviking",
+    "url": "https://www.chess.com/member/Th3ChessViking",
+    "name": "Ingvar Thor Johannesson",
+    "username": "th3chessviking",
+    "title": "FM",
+    "followers": 896,
+    "country": "https://api.chess.com/pub/country/IS",
+    "location": "Gardabaer",
+    "last_online": 1733874148,
+    "joined": 1213188012,
+    "status": "premium",
+    "is_streamer": true,
+    "twitch_url": "https://twitch.tv/thechessviking",
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [
+        {
+            "type": "twitch",
+            "channel_url": "https://twitch.tv/thechessviking"
+        }
+    ],
+    "chess_daily": {
+        "last": {
+            "rating": 2152,
+            "date": 1708766890,
+            "rd": 115
+        },
+        "best": {
+            "rating": 2564,
+            "date": 1257612932,
+            "game": "https://www.chess.com/game/daily/29639401"
+        },
+        "record": {
+            "win": 182,
+            "loss": 38,
+            "draw": 22,
+            "time_per_move": 93906,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1526,
+            "date": 1379029622,
+            "rd": 244
+        },
+        "best": {
+            "rating": 1526,
+            "date": 1379029622,
+            "game": "https://www.chess.com/game/daily/74466010"
+        },
+        "record": {
+            "win": 4,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 93906,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2144,
+            "date": 1690311989,
+            "rd": 112
+        },
+        "best": {
+            "rating": 2495,
+            "date": 1413948433,
+            "game": "https://www.chess.com/game/live/4707118221"
+        },
+        "record": {
+            "win": 58,
+            "loss": 11,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2540,
+            "date": 1733266346,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2715,
+            "date": 1705636770,
+            "game": "https://www.chess.com/game/live/109383675471"
+        },
+        "record": {
+            "win": 3867,
+            "loss": 2679,
+            "draw": 361
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2663,
+            "date": 1733874906,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2694,
+            "date": 1723005502,
+            "game": "https://www.chess.com/game/live/1126531329"
+        },
+        "record": {
+            "win": 6112,
+            "loss": 4091,
+            "draw": 879
+        }
+    },
+    "fide": 2371,
+    "tactics": {
+        "highest": {
+            "rating": 3600,
+            "date": 1720357762
+        },
+        "lowest": {
+            "rating": 1875,
+            "date": 1213279889
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 71,
+            "score": 68
+        }
+    }
+}

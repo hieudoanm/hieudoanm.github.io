@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/10956296.cf7a03bb.200x200o.f12d860b0cff.jpeg",
+    "player_id": 10956296,
+    "@id": "https://api.chess.com/pub/player/jcibarra",
+    "url": "https://www.chess.com/member/jcibarra",
+    "name": "Jos\u00e9 Carlos Ibarra Jerez",
+    "username": "jcibarra",
+    "title": "GM",
+    "followers": 6139,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "Totana",
+    "last_online": 1734104602,
+    "joined": 1361875075,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 546,
+            "date": 1732930880,
+            "rd": 290
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1361875075,
+            "game": "https://www.chess.com/game/daily/501579201"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 7610,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2459,
+            "date": 1727282852,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2791,
+            "date": 1653149796,
+            "game": "https://www.chess.com/game/live/52336244197"
+        },
+        "record": {
+            "win": 102,
+            "loss": 75,
+            "draw": 47
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2958,
+            "date": 1733355048,
+            "rd": 34
+        },
+        "best": {
+            "rating": 3048,
+            "date": 1722098868,
+            "game": "https://www.chess.com/game/live/70767130573"
+        },
+        "record": {
+            "win": 3611,
+            "loss": 1887,
+            "draw": 332
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2963,
+            "date": 1733787599,
+            "rd": 32
+        },
+        "best": {
+            "rating": 3070,
+            "date": 1724879992,
+            "game": "https://www.chess.com/game/live/118603663069"
+        },
+        "record": {
+            "win": 5414,
+            "loss": 2178,
+            "draw": 905
+        }
+    },
+    "fide": 2569,
+    "tactics": {
+        "highest": {
+            "rating": 3384,
+            "date": 1733185516
+        },
+        "lowest": {
+            "rating": 1357,
+            "date": 1414497949
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 72,
+            "score": 69
+        }
+    }
+}

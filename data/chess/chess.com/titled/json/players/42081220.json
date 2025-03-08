@@ -1,0 +1,84 @@
+{
+    "player_id": 42081220,
+    "@id": "https://api.chess.com/pub/player/im_arthurdw08",
+    "url": "https://www.chess.com/member/IM_ArthurDW08",
+    "name": "Arthur De Winter",
+    "username": "im_arthurdw08",
+    "title": "IM",
+    "followers": 266,
+    "country": "https://api.chess.com/pub/country/NL",
+    "last_online": 1734117699,
+    "joined": 1515310706,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2378,
+            "date": 1728383734,
+            "rd": 96
+        },
+        "best": {
+            "rating": 2378,
+            "date": 1696327540,
+            "game": "https://www.chess.com/game/live/51288051091"
+        },
+        "record": {
+            "win": 90,
+            "loss": 35,
+            "draw": 7
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2774,
+            "date": 1732986890,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2934,
+            "date": 1693070972,
+            "game": "https://www.chess.com/game/live/91044588273"
+        },
+        "record": {
+            "win": 2694,
+            "loss": 1762,
+            "draw": 206
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2720,
+            "date": 1734103517,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2880,
+            "date": 1726302539,
+            "game": "https://www.chess.com/game/live/97951339741"
+        },
+        "record": {
+            "win": 4271,
+            "loss": 2971,
+            "draw": 418
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3729,
+            "date": 1683974862
+        },
+        "lowest": {
+            "rating": 389,
+            "date": 1516982986
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

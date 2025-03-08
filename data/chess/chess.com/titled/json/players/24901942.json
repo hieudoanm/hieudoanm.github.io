@@ -1,0 +1,100 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/24901942.b4c3bfd0.200x200o.497baaf86192.jpg",
+    "player_id": 24901942,
+    "@id": "https://api.chess.com/pub/player/gianmarcovar",
+    "url": "https://www.chess.com/member/GianmarcoVaR",
+    "name": "Gianmarco Leiva",
+    "username": "gianmarcovar",
+    "title": "IM",
+    "followers": 131,
+    "country": "https://api.chess.com/pub/country/PE",
+    "location": "Trujillo",
+    "last_online": 1733988848,
+    "joined": 1446650469,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1712590542,
+            "rd": 350
+        },
+        "record": {
+            "win": 5,
+            "loss": 17,
+            "draw": 0,
+            "time_per_move": 0,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2393,
+            "date": 1720806401,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2433,
+            "date": 1695057499,
+            "game": "https://www.chess.com/game/live/51888087609"
+        },
+        "record": {
+            "win": 145,
+            "loss": 66,
+            "draw": 23
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2798,
+            "date": 1721498389,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2950,
+            "date": 1672804586,
+            "game": "https://www.chess.com/game/live/91647668043"
+        },
+        "record": {
+            "win": 2840,
+            "loss": 2587,
+            "draw": 393
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2864,
+            "date": 1729706047,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2904,
+            "date": 1722010375,
+            "game": "https://www.chess.com/game/live/115225108201"
+        },
+        "record": {
+            "win": 4295,
+            "loss": 3337,
+            "draw": 702
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3402,
+            "date": 1715130972
+        },
+        "lowest": {
+            "rating": 1239,
+            "date": 1446651421
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 83,
+            "score": 80
+        }
+    }
+}

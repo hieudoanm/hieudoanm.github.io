@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/26835920.512dbd03.200x200o.9709cdcac34c.gif",
+    "player_id": 26835920,
+    "@id": "https://api.chess.com/pub/player/soloderisas",
+    "url": "https://www.chess.com/member/soloderisas",
+    "name": "Sergio Guerrero Olmos",
+    "username": "soloderisas",
+    "title": "FM",
+    "followers": 32,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734097852,
+    "joined": 1456002966,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

@@ -1,0 +1,82 @@
+{
+    "player_id": 55331514,
+    "@id": "https://api.chess.com/pub/player/losersgame",
+    "url": "https://www.chess.com/member/losersgame",
+    "name": "Samson Benen",
+    "username": "losersgame",
+    "title": "FM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734060798,
+    "joined": 1546218652,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2204,
+            "date": 1734184666,
+            "rd": 130
+        },
+        "best": {
+            "rating": 2204,
+            "date": 1733384743,
+            "game": "https://www.chess.com/game/daily/618681207"
+        },
+        "record": {
+            "win": 24,
+            "loss": 1,
+            "draw": 1,
+            "time_per_move": 16079,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2468,
+            "date": 1660596204,
+            "rd": 145
+        },
+        "best": {
+            "rating": 2637,
+            "date": 1620264923,
+            "game": "https://www.chess.com/game/live/13925485865"
+        },
+        "record": {
+            "win": 7,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2495,
+            "date": 1733623522,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2547,
+            "date": 1701187593,
+            "game": "https://www.chess.com/game/live/23135527079"
+        },
+        "record": {
+            "win": 1258,
+            "loss": 938,
+            "draw": 196
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3584,
+            "date": 1723287389
+        },
+        "lowest": {
+            "rating": 1214,
+            "date": 1546218696
+        }
+    },
+    "puzzle_rush": {}
+}

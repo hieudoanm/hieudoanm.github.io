@@ -1,0 +1,84 @@
+{
+    "player_id": 42130732,
+    "@id": "https://api.chess.com/pub/player/yeritsyan_aram",
+    "url": "https://www.chess.com/member/Yeritsyan_Aram",
+    "username": "yeritsyan_aram",
+    "title": "FM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733966911,
+    "joined": 1515442294,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1319,
+            "date": 1732269965,
+            "rd": 71
+        },
+        "best": {
+            "rating": 2300,
+            "date": 1614356519,
+            "game": "https://www.chess.com/game/live/60631800577"
+        },
+        "record": {
+            "win": 107,
+            "loss": 108,
+            "draw": 24
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2525,
+            "date": 1732040216,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2533,
+            "date": 1515793595,
+            "game": "https://www.chess.com/game/live/2891818723"
+        },
+        "record": {
+            "win": 98,
+            "loss": 64,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2492,
+            "date": 1733967296,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2510,
+            "date": 1551804720,
+            "game": "https://www.chess.com/game/live/3501717992"
+        },
+        "record": {
+            "win": 408,
+            "loss": 390,
+            "draw": 68
+        }
+    },
+    "fide": 2299,
+    "tactics": {
+        "highest": {
+            "rating": 3103,
+            "date": 1666112154
+        },
+        "lowest": {
+            "rating": 1209,
+            "date": 1515500768
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/380140705.8e89a2dc.200x200o.9c46fc7d504d.png",
+    "player_id": 380140705,
+    "@id": "https://api.chess.com/pub/player/blunderingpanda01",
+    "url": "https://www.chess.com/member/BlunderingPanda01",
+    "name": "Madhvendra Pratap Sharma",
+    "username": "blunderingpanda01",
+    "title": "CM",
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1733744255,
+    "joined": 1723267081,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2082,
+            "date": 1733744629,
+            "rd": 204
+        },
+        "best": {
+            "rating": 2082,
+            "date": 1733744629,
+            "game": "https://www.chess.com/game/live/127483248753"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2617,
+            "date": 1733717877,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2666,
+            "date": 1730827279,
+            "game": "https://www.chess.com/game/live/120324665817"
+        },
+        "record": {
+            "win": 42,
+            "loss": 34,
+            "draw": 9
+        }
+    },
+    "fide": 2201,
+    "tactics": {
+        "highest": {
+            "rating": 3613,
+            "date": 1730898370
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1723267081
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "player_id": 93504437,
+    "@id": "https://api.chess.com/pub/player/jagadeesh_siddharth",
+    "url": "https://www.chess.com/member/Jagadeesh_Siddharth",
+    "name": "Jagadeesh Siddharth",
+    "username": "jagadeesh_siddharth",
+    "title": "GM",
+    "followers": 48,
+    "country": "https://api.chess.com/pub/country/SG",
+    "last_online": 1734174467,
+    "joined": 1603186678,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1987,
+            "date": 1675143330,
+            "rd": 210
+        },
+        "best": {
+            "rating": 2133,
+            "date": 1606139516,
+            "game": "https://www.chess.com/game/live/5824058872"
+        },
+        "record": {
+            "win": 10,
+            "loss": 5,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2848,
+            "date": 1726549406,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2938,
+            "date": 1702818717,
+            "game": "https://www.chess.com/game/live/37461663985"
+        },
+        "record": {
+            "win": 1370,
+            "loss": 913,
+            "draw": 206
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2876,
+            "date": 1733853154,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2900,
+            "date": 1733652890,
+            "game": "https://www.chess.com/game/live/114927499123"
+        },
+        "record": {
+            "win": 726,
+            "loss": 532,
+            "draw": 191
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3370,
+            "date": 1732438913
+        },
+        "lowest": {
+            "rating": 2198,
+            "date": 1605429089
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 76,
+            "score": 73
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/57249810.04d46dc8.200x200o.1cfd3d268084.jpeg",
+    "player_id": 57249810,
+    "@id": "https://api.chess.com/pub/player/waltereador",
+    "url": "https://www.chess.com/member/waltereador",
+    "name": "Walter Cuevas Araya",
+    "username": "waltereador",
+    "title": "FM",
+    "followers": 24,
+    "country": "https://api.chess.com/pub/country/CL",
+    "last_online": 1733875112,
+    "joined": 1549936885,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

@@ -1,0 +1,104 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/49333228.3e768918.200x200o.b129d6023644.jpg",
+    "player_id": 49333228,
+    "@id": "https://api.chess.com/pub/player/adnan_habib",
+    "url": "https://www.chess.com/member/Adnan_Habib",
+    "name": "Habib Adnan",
+    "username": "adnan_habib",
+    "title": "CM",
+    "followers": 364,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1734137629,
+    "joined": 1535819158,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1487,
+            "date": 1729271837,
+            "rd": 149
+        },
+        "best": {
+            "rating": 2152,
+            "date": 1660490508,
+            "game": "https://www.chess.com/game/daily/293340476"
+        },
+        "record": {
+            "win": 27,
+            "loss": 4,
+            "draw": 0,
+            "time_per_move": 6085,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2416,
+            "date": 1732315593,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2439,
+            "date": 1727441858,
+            "game": "https://www.chess.com/game/live/100892026409"
+        },
+        "record": {
+            "win": 396,
+            "loss": 184,
+            "draw": 41
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2154,
+            "date": 1732581121,
+            "rd": 59
+        },
+        "best": {
+            "rating": 2434,
+            "date": 1707517058,
+            "game": "https://www.chess.com/game/live/49927808261"
+        },
+        "record": {
+            "win": 1601,
+            "loss": 1245,
+            "draw": 86
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2325,
+            "date": 1734103711,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2473,
+            "date": 1713051008,
+            "game": "https://www.chess.com/game/live/51381625529"
+        },
+        "record": {
+            "win": 2410,
+            "loss": 1862,
+            "draw": 172
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3373,
+            "date": 1668433312
+        },
+        "lowest": {
+            "rating": 1209,
+            "date": 1535884259
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        }
+    }
+}

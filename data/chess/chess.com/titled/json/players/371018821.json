@@ -1,0 +1,68 @@
+{
+    "player_id": 371018821,
+    "@id": "https://api.chess.com/pub/player/cocosiukas",
+    "url": "https://www.chess.com/member/Cocosiukas",
+    "name": "Daniel Ser",
+    "username": "cocosiukas",
+    "title": "CM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/JP",
+    "last_online": 1734012747,
+    "joined": 1718960992,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2438,
+            "date": 1732044744,
+            "rd": 52
+        },
+        "best": {
+            "rating": 2449,
+            "date": 1731763102,
+            "game": "https://www.chess.com/game/live/121693830765"
+        },
+        "record": {
+            "win": 53,
+            "loss": 34,
+            "draw": 6
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2554,
+            "date": 1733850596,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2563,
+            "date": 1733848695,
+            "game": "https://www.chess.com/game/live/125773778113"
+        },
+        "record": {
+            "win": 56,
+            "loss": 69,
+            "draw": 10
+        }
+    },
+    "fide": 2008,
+    "tactics": {
+        "highest": {
+            "rating": 2579,
+            "date": 1721897624
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1718960992
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 48,
+            "score": 45
+        }
+    }
+}

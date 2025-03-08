@@ -1,0 +1,105 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19553358.a2ce3673.200x200o.43db0c206fac.png",
+    "player_id": 19553358,
+    "@id": "https://api.chess.com/pub/player/bauxi435",
+    "url": "https://www.chess.com/member/Bauxi435",
+    "name": "Thomas Hofmann",
+    "username": "bauxi435",
+    "title": "FM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/AT",
+    "last_online": 1734114897,
+    "joined": 1414956802,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2216,
+            "date": 1708906137,
+            "rd": 159
+        },
+        "best": {
+            "rating": 2216,
+            "date": 1521392565,
+            "game": "https://www.chess.com/game/daily/186177660"
+        },
+        "record": {
+            "win": 8,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 19586,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2008,
+            "date": 1734115810,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2009,
+            "date": 1734097190,
+            "game": "https://www.chess.com/game/live/127836600377"
+        },
+        "record": {
+            "win": 4,
+            "loss": 3,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2557,
+            "date": 1734106004,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2557,
+            "date": 1734106004,
+            "game": "https://www.chess.com/game/live/2627533482"
+        },
+        "record": {
+            "win": 275,
+            "loss": 198,
+            "draw": 32
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2503,
+            "date": 1734105823,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2532,
+            "date": 1734105150,
+            "game": "https://www.chess.com/game/live/4726300992"
+        },
+        "record": {
+            "win": 706,
+            "loss": 634,
+            "draw": 121
+        }
+    },
+    "fide": 2315,
+    "tactics": {
+        "highest": {
+            "rating": 3250,
+            "date": 1734095805
+        },
+        "lowest": {
+            "rating": 1354,
+            "date": 1470230270
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 39
+        }
+    }
+}

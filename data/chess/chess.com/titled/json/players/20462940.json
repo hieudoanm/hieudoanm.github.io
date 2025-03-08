@@ -1,0 +1,18 @@
+{
+    "player_id": 20462940,
+    "@id": "https://api.chess.com/pub/player/ssdasari",
+    "url": "https://www.chess.com/member/ssdasari",
+    "name": "Sai Srinivas Dasari",
+    "username": "ssdasari",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Minneapolis",
+    "last_online": 1733446517,
+    "joined": 1420293695,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

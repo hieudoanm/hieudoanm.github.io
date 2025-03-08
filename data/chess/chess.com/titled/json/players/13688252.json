@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13688252.6ab541c4.200x200o.4e1824308037.jpeg",
+    "player_id": 13688252,
+    "@id": "https://api.chess.com/pub/player/themagnet",
+    "url": "https://www.chess.com/member/TheMagnet",
+    "name": "Lefong Hua",
+    "username": "themagnet",
+    "title": "FM",
+    "followers": 239,
+    "country": "https://api.chess.com/pub/country/CA",
+    "location": "Montreal",
+    "last_online": 1733667734,
+    "joined": 1380307928,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

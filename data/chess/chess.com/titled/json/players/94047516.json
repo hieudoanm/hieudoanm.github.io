@@ -1,0 +1,17 @@
+{
+    "player_id": 94047516,
+    "@id": "https://api.chess.com/pub/player/slorovel",
+    "url": "https://www.chess.com/member/slorovel",
+    "name": "Rudi Olenik Campa",
+    "username": "slorovel",
+    "title": "FM",
+    "followers": 207,
+    "country": "https://api.chess.com/pub/country/SI",
+    "last_online": 1734035449,
+    "joined": 1603748759,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/267119157.0023f85f.200x200o.62e7bab817f1.jpg",
+    "player_id": 267119157,
+    "@id": "https://api.chess.com/pub/player/jermorgurgeh",
+    "url": "https://www.chess.com/member/JerMorGurgeh",
+    "name": "Damian Justo",
+    "username": "jermorgurgeh",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1734112416,
+    "joined": 1679852352,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2256,
+            "date": 1704666705,
+            "rd": 107
+        },
+        "best": {
+            "rating": 2256,
+            "date": 1704666705,
+            "game": "https://www.chess.com/game/live/77737843473"
+        },
+        "record": {
+            "win": 27,
+            "loss": 5,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2239,
+            "date": 1732924059,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2382,
+            "date": 1684446783,
+            "game": "https://www.chess.com/game/live/124292374995"
+        },
+        "record": {
+            "win": 2201,
+            "loss": 1544,
+            "draw": 167
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2371,
+            "date": 1734125402,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2449,
+            "date": 1731253800,
+            "game": "https://www.chess.com/game/live/86477437667"
+        },
+        "record": {
+            "win": 1054,
+            "loss": 606,
+            "draw": 165
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2560,
+            "date": 1734112885
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1679852352
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 32,
+            "score": 31
+        }
+    }
+}

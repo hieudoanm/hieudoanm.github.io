@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25022954.9d6972ea.200x200o.811bbe4222e2.png",
+    "player_id": 25022954,
+    "@id": "https://api.chess.com/pub/player/skiidiivv",
+    "url": "https://www.chess.com/member/skiidiivv",
+    "name": "Damion Davy",
+    "username": "skiidiivv",
+    "title": "FM",
+    "followers": 24,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1724967710,
+    "joined": 1447288541,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

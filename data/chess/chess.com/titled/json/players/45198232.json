@@ -1,0 +1,85 @@
+{
+    "player_id": 45198232,
+    "@id": "https://api.chess.com/pub/player/drriebert",
+    "url": "https://www.chess.com/member/DrRiebert",
+    "name": "Robert Rieger",
+    "username": "drriebert",
+    "title": "FM",
+    "followers": 20,
+    "country": "https://api.chess.com/pub/country/AT",
+    "last_online": 1734162662,
+    "joined": 1523465916,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2205,
+            "date": 1655923485,
+            "rd": 346
+        },
+        "best": {
+            "rating": 2205,
+            "date": 1558433697,
+            "game": "https://www.chess.com/game/live/3716277035"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2498,
+            "date": 1734182574,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2733,
+            "date": 1709805726,
+            "game": "https://www.chess.com/game/live/103324971863"
+        },
+        "record": {
+            "win": 4564,
+            "loss": 4377,
+            "draw": 409
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2348,
+            "date": 1734168280,
+            "rd": 67
+        },
+        "best": {
+            "rating": 2655,
+            "date": 1523995593,
+            "game": "https://www.chess.com/game/live/3510817132"
+        },
+        "record": {
+            "win": 1256,
+            "loss": 1299,
+            "draw": 107
+        }
+    },
+    "fide": 2296,
+    "tactics": {
+        "highest": {
+            "rating": 3228,
+            "date": 1733574976
+        },
+        "lowest": {
+            "rating": 2206,
+            "date": 1523899825
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 55,
+            "score": 52
+        }
+    }
+}

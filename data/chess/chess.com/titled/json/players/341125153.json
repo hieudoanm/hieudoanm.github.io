@@ -1,0 +1,33 @@
+{
+    "player_id": 341125153,
+    "@id": "https://api.chess.com/pub/player/gloriayepez",
+    "url": "https://www.chess.com/member/GloriaYepez",
+    "name": "Gloria Luz Yepez",
+    "username": "gloriayepez",
+    "title": "WCM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/BO",
+    "last_online": 1734011458,
+    "joined": 1706182677,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "fide": 1883,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1706182677
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1706182677
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

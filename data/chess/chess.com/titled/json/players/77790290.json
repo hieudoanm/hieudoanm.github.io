@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/77790290.b59f81ec.200x200o.697a7c23f1c1.jpg",
+    "player_id": 77790290,
+    "@id": "https://api.chess.com/pub/player/tsaruk_maks",
+    "url": "https://www.chess.com/member/tsaruk_maks",
+    "name": "Maksim Tsaruk",
+    "username": "tsaruk_maks",
+    "title": "IM",
+    "followers": 41,
+    "country": "https://api.chess.com/pub/country/XX",
+    "location": "\u041c\u0438\u043d\u0441\u043a",
+    "last_online": 1734082157,
+    "joined": 1587840582,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2141,
+            "date": 1713958038,
+            "rd": 139
+        },
+        "best": {
+            "rating": 2178,
+            "date": 1636304565,
+            "game": "https://www.chess.com/game/daily/366518367"
+        },
+        "record": {
+            "win": 16,
+            "loss": 2,
+            "draw": 1,
+            "time_per_move": 86216,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2407,
+            "date": 1726859222,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2432,
+            "date": 1590428603,
+            "game": "https://www.chess.com/game/live/4929022359"
+        },
+        "record": {
+            "win": 29,
+            "loss": 8,
+            "draw": 9
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2809,
+            "date": 1728548265,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2834,
+            "date": 1723362317,
+            "game": "https://www.chess.com/game/live/122155138645"
+        },
+        "record": {
+            "win": 189,
+            "loss": 177,
+            "draw": 30
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2871,
+            "date": 1734087023,
+            "rd": 48
+        },
+        "best": {
+            "rating": 3012,
+            "date": 1729611770,
+            "game": "https://www.chess.com/game/live/115843867931"
+        },
+        "record": {
+            "win": 1444,
+            "loss": 1089,
+            "draw": 259
+        }
+    },
+    "fide": 2480,
+    "tactics": {
+        "highest": {
+            "rating": 3839,
+            "date": 1693893861
+        },
+        "lowest": {
+            "rating": 1018,
+            "date": 1587849517
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 75,
+            "score": 72
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "player_id": 15269998,
+    "@id": "https://api.chess.com/pub/player/siri20",
+    "url": "https://www.chess.com/member/Siri20",
+    "name": "Balaji Guttula",
+    "username": "siri20",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "Mumbai",
+    "last_online": 1598431682,
+    "joined": 1388169914,
+    "status": "basic",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

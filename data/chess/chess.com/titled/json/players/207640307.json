@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/207640307.bf60ac62.200x200o.b624a0455b01.jpg",
+    "player_id": 207640307,
+    "@id": "https://api.chess.com/pub/player/bugledxn",
+    "url": "https://www.chess.com/member/bugledxn",
+    "name": "Anthony Lyn",
+    "username": "bugledxn",
+    "title": "CM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/CA",
+    "location": "Mississauga",
+    "last_online": 1733278178,
+    "joined": 1668975042,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

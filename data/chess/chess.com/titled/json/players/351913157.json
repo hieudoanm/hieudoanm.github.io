@@ -1,0 +1,73 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/351913157.752e4006.200x200o.103f3d4a93b8.jpg",
+    "player_id": 351913157,
+    "@id": "https://api.chess.com/pub/player/frankie_badacsonyi",
+    "url": "https://www.chess.com/member/Frankie_Badacsonyi",
+    "name": "Frankie Badacsonyi",
+    "username": "frankie_badacsonyi",
+    "title": "CM",
+    "followers": 35,
+    "country": "https://api.chess.com/pub/country/GB",
+    "location": "London",
+    "last_online": 1734182122,
+    "joined": 1710884688,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2471,
+            "date": 1733854181,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2488,
+            "date": 1718221388,
+            "game": "https://www.chess.com/game/live/111956021259"
+        },
+        "record": {
+            "win": 183,
+            "loss": 144,
+            "draw": 35
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2490,
+            "date": 1733853692,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2603,
+            "date": 1718551875,
+            "game": "https://www.chess.com/game/live/120950453833"
+        },
+        "record": {
+            "win": 966,
+            "loss": 711,
+            "draw": 247
+        }
+    },
+    "fide": 2266,
+    "tactics": {
+        "highest": {
+            "rating": 1759,
+            "date": 1727375140
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1710884688
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        },
+        "daily": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

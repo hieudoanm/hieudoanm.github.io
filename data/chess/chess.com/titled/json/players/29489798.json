@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/29489798.da11e26e.200x200o.0333fafd2957.png",
+    "player_id": 29489798,
+    "@id": "https://api.chess.com/pub/player/pakarma",
+    "url": "https://www.chess.com/member/Pakarma",
+    "name": "Marko Srebrnic",
+    "username": "pakarma",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/SI",
+    "location": "Grosuplje",
+    "last_online": 1733606958,
+    "joined": 1471261013,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2222,
+            "date": 1723319757,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2275,
+            "date": 1691425779,
+            "game": "https://www.chess.com/game/live/85163650981"
+        },
+        "record": {
+            "win": 5,
+            "loss": 10,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2389,
+            "date": 1734029252,
+            "rd": 29
+        },
+        "best": {
+            "rating": 2668,
+            "date": 1725556660,
+            "game": "https://www.chess.com/game/live/89719754747"
+        },
+        "record": {
+            "win": 2313,
+            "loss": 2084,
+            "draw": 316
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2422,
+            "date": 1732640463,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2652,
+            "date": 1674408241,
+            "game": "https://www.chess.com/game/live/65918004305"
+        },
+        "record": {
+            "win": 2077,
+            "loss": 1735,
+            "draw": 299
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2840,
+            "date": 1729615180
+        },
+        "lowest": {
+            "rating": 1202,
+            "date": 1512298875
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

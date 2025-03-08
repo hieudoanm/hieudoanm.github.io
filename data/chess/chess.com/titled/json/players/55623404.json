@@ -1,0 +1,107 @@
+{
+    "player_id": 55623404,
+    "@id": "https://api.chess.com/pub/player/bastiandash",
+    "url": "https://www.chess.com/member/Bastiandash",
+    "name": "Juan Sebastian Melian",
+    "username": "bastiandash",
+    "title": "FM",
+    "followers": 87,
+    "country": "https://api.chess.com/pub/country/PY",
+    "last_online": 1734144194,
+    "joined": 1546820247,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1471,
+            "date": 1716478213,
+            "rd": 204
+        },
+        "best": {
+            "rating": 1557,
+            "date": 1586823004,
+            "game": "https://www.chess.com/game/daily/245065960"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 1,
+            "time_per_move": 105503,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2139,
+            "date": 1726851116,
+            "rd": 123
+        },
+        "best": {
+            "rating": 2139,
+            "date": 1677514948,
+            "game": "https://www.chess.com/game/live/24337346205"
+        },
+        "record": {
+            "win": 80,
+            "loss": 33,
+            "draw": 10
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2634,
+            "date": 1730383660,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2785,
+            "date": 1724521358,
+            "game": "https://www.chess.com/game/live/111003068285"
+        },
+        "record": {
+            "win": 4787,
+            "loss": 4026,
+            "draw": 529
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2624,
+            "date": 1734153814,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2769,
+            "date": 1725565027,
+            "game": "https://www.chess.com/game/live/47748079423"
+        },
+        "record": {
+            "win": 4421,
+            "loss": 3604,
+            "draw": 579
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3477,
+            "date": 1652681947
+        },
+        "lowest": {
+            "rating": 1808,
+            "date": 1559395934
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 61,
+            "score": 58
+        },
+        "daily": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

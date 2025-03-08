@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75516686.2ff7123c.200x200o.c5e9b8fc5dcf.jpg",
+    "player_id": 75516686,
+    "@id": "https://api.chess.com/pub/player/valentindragnev",
+    "url": "https://www.chess.com/member/ValentinDragnev",
+    "name": "Valentin Dragnev",
+    "username": "valentindragnev",
+    "title": "GM",
+    "followers": 143,
+    "country": "https://api.chess.com/pub/country/AT",
+    "last_online": 1734166894,
+    "joined": 1585916426,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2516,
+            "date": 1715190684,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2772,
+            "date": 1678753918,
+            "game": "https://www.chess.com/game/live/80328586571"
+        },
+        "record": {
+            "win": 3,
+            "loss": 5,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2836,
+            "date": 1734111786,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2977,
+            "date": 1724937669,
+            "game": "https://www.chess.com/game/live/95811229399"
+        },
+        "record": {
+            "win": 429,
+            "loss": 387,
+            "draw": 53
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2767,
+            "date": 1734011772,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2903,
+            "date": 1629573960,
+            "game": "https://www.chess.com/game/live/100370680063"
+        },
+        "record": {
+            "win": 983,
+            "loss": 816,
+            "draw": 241
+        }
+    },
+    "fide": 2582,
+    "tactics": {
+        "highest": {
+            "rating": 3851,
+            "date": 1719132965
+        },
+        "lowest": {
+            "rating": 811,
+            "date": 1638118336
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
+}

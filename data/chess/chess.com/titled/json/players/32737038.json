@@ -1,0 +1,53 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/32737038.4a38ffd2.200x200o.acd30f8a5285.jpeg",
+    "player_id": 32737038,
+    "@id": "https://api.chess.com/pub/player/godzillator",
+    "url": "https://www.chess.com/member/Godzillator",
+    "name": "Karsten Schuster",
+    "username": "godzillator",
+    "title": "FM",
+    "followers": 48,
+    "country": "https://api.chess.com/pub/country/DE",
+    "location": "Muniche",
+    "last_online": 1733871835,
+    "joined": 1485608055,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2373,
+            "date": 1733874308,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2477,
+            "date": 1591295787,
+            "game": "https://www.chess.com/game/live/4846648462"
+        },
+        "record": {
+            "win": 3288,
+            "loss": 3780,
+            "draw": 640
+        }
+    },
+    "fide": 2317,
+    "tactics": {
+        "highest": {
+            "rating": 2651,
+            "date": 1697324533
+        },
+        "lowest": {
+            "rating": 1216,
+            "date": 1540498462
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

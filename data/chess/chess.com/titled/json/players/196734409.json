@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/196734409.a46c0bdc.200x200o.d42d1e3b2a5d.jpg",
+    "player_id": 196734409,
+    "@id": "https://api.chess.com/pub/player/willcab71",
+    "url": "https://www.chess.com/member/willcab71",
+    "name": "William Alberto Caballero Roncallo",
+    "username": "willcab71",
+    "title": "FM",
+    "followers": 72,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "Barranquilla",
+    "last_online": 1734036687,
+    "joined": 1662853366,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8211570.9cb46637.200x200o.4cdeb6cc5300.jpeg",
+    "player_id": 8211570,
+    "@id": "https://api.chess.com/pub/player/wallstreetpete",
+    "url": "https://www.chess.com/member/WallStreetPete",
+    "name": "Peter Bergstr\u00f6m",
+    "username": "wallstreetpete",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/SE",
+    "last_online": 1734132312,
+    "joined": 1342385921,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

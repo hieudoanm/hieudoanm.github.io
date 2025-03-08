@@ -1,0 +1,83 @@
+{
+    "player_id": 57640406,
+    "@id": "https://api.chess.com/pub/player/mfschulz",
+    "url": "https://www.chess.com/member/mfschulz",
+    "name": "Michael Schulz",
+    "username": "mfschulz",
+    "title": "FM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/DE",
+    "location": "Falkensee",
+    "last_online": 1733993098,
+    "joined": 1550774278,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1560,
+            "date": 1730843044,
+            "rd": 237
+        },
+        "best": {
+            "rating": 2010,
+            "date": 1730130276,
+            "game": "https://www.chess.com/game/daily/722762713"
+        },
+        "record": {
+            "win": 4,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 10154,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2168,
+            "date": 1704805619,
+            "rd": 215
+        },
+        "best": {
+            "rating": 2111,
+            "date": 1703617106,
+            "game": "https://www.chess.com/game/live/97355974361"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2282,
+            "date": 1733875407,
+            "rd": 62
+        },
+        "best": {
+            "rating": 2355,
+            "date": 1715120043,
+            "game": "https://www.chess.com/game/live/120345640117"
+        },
+        "record": {
+            "win": 90,
+            "loss": 109,
+            "draw": 8
+        }
+    },
+    "fide": 2168,
+    "tactics": {
+        "highest": {
+            "rating": 2343,
+            "date": 1704970815
+        },
+        "lowest": {
+            "rating": 412,
+            "date": 1704283493
+        }
+    },
+    "puzzle_rush": {}
+}

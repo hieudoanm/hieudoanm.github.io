@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13450320.faea5a45.200x200o.1b30365af91c.jpeg",
+    "player_id": 13450320,
+    "@id": "https://api.chess.com/pub/player/bteillet",
+    "url": "https://www.chess.com/member/bteillet",
+    "name": "Benoit TEILLET",
+    "username": "bteillet",
+    "title": "CM",
+    "followers": 25,
+    "country": "https://api.chess.com/pub/country/FR",
+    "location": "PESSAC",
+    "last_online": 1733761061,
+    "joined": 1378641346,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2238,
+            "date": 1687250357,
+            "rd": 250
+        },
+        "best": {
+            "rating": 2238,
+            "date": 1687250357,
+            "game": "https://www.chess.com/game/live/80988618825"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2275,
+            "date": 1732635071,
+            "rd": 25
+        },
+        "best": {
+            "rating": 2282,
+            "date": 1693569720,
+            "game": "https://www.chess.com/game/live/99129867189"
+        },
+        "record": {
+            "win": 6258,
+            "loss": 5919,
+            "draw": 600
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2295,
+            "date": 1726506943,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2295,
+            "date": 1726506943,
+            "game": "https://www.chess.com/game/live/85854048323"
+        },
+        "record": {
+            "win": 2158,
+            "loss": 1960,
+            "draw": 220
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2932,
+            "date": 1693316497
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1663396611
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

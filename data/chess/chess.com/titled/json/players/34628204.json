@@ -1,0 +1,45 @@
+{
+    "player_id": 34628204,
+    "@id": "https://api.chess.com/pub/player/crushernt",
+    "url": "https://www.chess.com/member/crushernt",
+    "name": "Ebru Kaplan",
+    "username": "crushernt",
+    "title": "WNM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/CH",
+    "last_online": 1732458871,
+    "joined": 1491683799,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2121,
+            "date": 1732377675,
+            "rd": 92
+        },
+        "best": {
+            "rating": 2185,
+            "date": 1723585064,
+            "game": "https://www.chess.com/game/live/107644996175"
+        },
+        "record": {
+            "win": 60,
+            "loss": 68,
+            "draw": 7
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1394,
+            "date": 1721746169
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1491683799
+        }
+    },
+    "puzzle_rush": {}
+}

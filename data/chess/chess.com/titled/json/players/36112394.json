@@ -1,0 +1,85 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/36112394.03af17f8.200x200o.7023ba30e99d.png",
+    "player_id": 36112394,
+    "@id": "https://api.chess.com/pub/player/dorpato",
+    "url": "https://www.chess.com/member/dorpato",
+    "name": "Juan Sebastian",
+    "username": "dorpato",
+    "title": "CM",
+    "followers": 23,
+    "country": "https://api.chess.com/pub/country/CO",
+    "last_online": 1734099745,
+    "joined": 1496781638,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1533,
+            "date": 1715797210,
+            "rd": 197
+        },
+        "best": {
+            "rating": 1543,
+            "date": 1604962499,
+            "game": "https://www.chess.com/game/live/5601154125"
+        },
+        "record": {
+            "win": 19,
+            "loss": 12,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1583,
+            "date": 1683673837,
+            "rd": 152
+        },
+        "best": {
+            "rating": 1583,
+            "date": 1680036899,
+            "game": "https://www.chess.com/game/live/73775658855"
+        },
+        "record": {
+            "win": 3,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2068,
+            "date": 1727823573,
+            "rd": 79
+        },
+        "best": {
+            "rating": 2184,
+            "date": 1704233800,
+            "game": "https://www.chess.com/game/live/96746507829"
+        },
+        "record": {
+            "win": 123,
+            "loss": 313,
+            "draw": 10
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3211,
+            "date": 1661730879
+        },
+        "lowest": {
+            "rating": 800,
+            "date": 1572659580
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

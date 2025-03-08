@@ -1,0 +1,18 @@
+{
+    "player_id": 282555345,
+    "@id": "https://api.chess.com/pub/player/jofisch6969",
+    "url": "https://www.chess.com/member/Jofisch6969",
+    "username": "jofisch6969",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/CH",
+    "last_online": 1734180121,
+    "joined": 1683287418,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "code": 0,
+    "message": "User \"jofisch6969\" not found."
+}

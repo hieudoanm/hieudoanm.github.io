@@ -1,0 +1,84 @@
+{
+    "player_id": 22394330,
+    "@id": "https://api.chess.com/pub/player/kanzaww",
+    "url": "https://www.chess.com/member/kanzaww",
+    "name": "Oliwia Kiolbasa",
+    "username": "kanzaww",
+    "title": "IM",
+    "followers": 73,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1734012098,
+    "joined": 1431667477,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2105,
+            "date": 1591007176,
+            "rd": 124
+        },
+        "best": {
+            "rating": 2352,
+            "date": 1590429477,
+            "game": "https://www.chess.com/game/live/4906423487"
+        },
+        "record": {
+            "win": 9,
+            "loss": 4,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2505,
+            "date": 1727522044,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2546,
+            "date": 1646167429,
+            "game": "https://www.chess.com/game/live/16122890999"
+        },
+        "record": {
+            "win": 182,
+            "loss": 164,
+            "draw": 31
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2528,
+            "date": 1715706410,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2548,
+            "date": 1705782985,
+            "game": "https://www.chess.com/game/live/99517450461"
+        },
+        "record": {
+            "win": 956,
+            "loss": 792,
+            "draw": 151
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3509,
+            "date": 1687009558
+        },
+        "lowest": {
+            "rating": 1928,
+            "date": 1449089821
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 55,
+            "score": 52
+        }
+    }
+}

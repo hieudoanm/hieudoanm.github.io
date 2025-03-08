@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/53515684.f8747a23.200x200o.21b08e48340c.jpeg",
+    "player_id": 53515684,
+    "@id": "https://api.chess.com/pub/player/fm_magua",
+    "url": "https://www.chess.com/member/fm_magua",
+    "name": "Jan Havl\u00edk",
+    "username": "fm_magua",
+    "title": "FM",
+    "followers": 45,
+    "country": "https://api.chess.com/pub/country/CZ",
+    "last_online": 1734176223,
+    "joined": 1545323603,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2333,
+            "date": 1721507789,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2339,
+            "date": 1664738945,
+            "game": "https://www.chess.com/game/live/40251598069"
+        },
+        "record": {
+            "win": 72,
+            "loss": 19,
+            "draw": 8
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2431,
+            "date": 1693126673,
+            "rd": 118
+        },
+        "best": {
+            "rating": 2589,
+            "date": 1603652999,
+            "game": "https://www.chess.com/game/live/3590590743"
+        },
+        "record": {
+            "win": 274,
+            "loss": 165,
+            "draw": 22
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2573,
+            "date": 1734077565,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2717,
+            "date": 1648882504,
+            "game": "https://www.chess.com/game/live/5135634988"
+        },
+        "record": {
+            "win": 4858,
+            "loss": 4138,
+            "draw": 1270
+        }
+    },
+    "fide": 2388,
+    "tactics": {
+        "highest": {
+            "rating": 3702,
+            "date": 1720586312
+        },
+        "lowest": {
+            "rating": 419,
+            "date": 1548790044
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 56,
+            "score": 53
+        }
+    }
+}

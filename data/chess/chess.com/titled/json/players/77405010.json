@@ -1,0 +1,17 @@
+{
+    "player_id": 77405010,
+    "@id": "https://api.chess.com/pub/player/top_bu_tz",
+    "url": "https://www.chess.com/member/top_bu_tz",
+    "name": "Adnan Karahmetovic",
+    "username": "top_bu_tz",
+    "title": "FM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/BA",
+    "last_online": 1725904114,
+    "joined": 1587490356,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": []
+}

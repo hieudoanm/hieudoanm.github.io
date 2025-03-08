@@ -1,0 +1,86 @@
+{
+    "player_id": 23580936,
+    "@id": "https://api.chess.com/pub/player/amardeepb",
+    "url": "https://www.chess.com/member/AmardeepB",
+    "name": "Amardeep Bartakke",
+    "username": "amardeepb",
+    "title": "CM",
+    "followers": 95,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "India",
+    "last_online": 1734184278,
+    "joined": 1439030290,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2216,
+            "date": 1733946023,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2236,
+            "date": 1706597699,
+            "game": "https://www.chess.com/game/live/127683686263"
+        },
+        "record": {
+            "win": 94,
+            "loss": 37,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2096,
+            "date": 1733865986,
+            "rd": 61
+        },
+        "best": {
+            "rating": 2096,
+            "date": 1733865986,
+            "game": "https://www.chess.com/game/live/90666563177"
+        },
+        "record": {
+            "win": 319,
+            "loss": 193,
+            "draw": 15
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2202,
+            "date": 1733875572,
+            "rd": 80
+        },
+        "best": {
+            "rating": 2228,
+            "date": 1714474563,
+            "game": "https://www.chess.com/game/live/127608658343"
+        },
+        "record": {
+            "win": 309,
+            "loss": 175,
+            "draw": 23
+        }
+    },
+    "fide": 1965,
+    "tactics": {
+        "highest": {
+            "rating": 3012,
+            "date": 1734097174
+        },
+        "lowest": {
+            "rating": 1201,
+            "date": 1516433612
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        }
+    }
+}

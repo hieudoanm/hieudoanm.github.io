@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/26926796.060243c4.200x200o.5cb365ad010e.jpeg",
+    "player_id": 26926796,
+    "@id": "https://api.chess.com/pub/player/arvids_andrejevs",
+    "url": "https://www.chess.com/member/Arvids_Andrejevs",
+    "name": "Arvids Andrejevs",
+    "username": "arvids_andrejevs",
+    "title": "CM",
+    "followers": 32,
+    "country": "https://api.chess.com/pub/country/LV",
+    "location": "Daugavpils",
+    "last_online": 1733220536,
+    "joined": 1456421933,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

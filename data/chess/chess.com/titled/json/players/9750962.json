@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/9750962.1e3f9f0c.200x200o.646c32e25196.png",
+    "player_id": 9750962,
+    "@id": "https://api.chess.com/pub/player/emmachess",
+    "url": "https://www.chess.com/member/EmmaChess",
+    "name": "Emmanuel Jim\u00e9nez Garc\u00eda",
+    "username": "emmachess",
+    "title": "IM",
+    "followers": 309,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "San Jose",
+    "last_online": 1733355617,
+    "joined": 1353691668,
+    "status": "premium",
+    "is_streamer": true,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1166,
+            "date": 1722436732,
+            "rd": 251
+        },
+        "best": {
+            "rating": 1380,
+            "date": 1555041602,
+            "game": "https://www.chess.com/game/daily/220749842"
+        },
+        "record": {
+            "win": 4,
+            "loss": 18,
+            "draw": 0,
+            "time_per_move": 84725,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2244,
+            "date": 1722476206,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2506,
+            "date": 1600654306,
+            "game": "https://www.chess.com/game/live/5297855726"
+        },
+        "record": {
+            "win": 74,
+            "loss": 28,
+            "draw": 18
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2598,
+            "date": 1717881212,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2705,
+            "date": 1667348771,
+            "game": "https://www.chess.com/game/live/3660896547"
+        },
+        "record": {
+            "win": 603,
+            "loss": 441,
+            "draw": 66
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2659,
+            "date": 1729824306,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2700,
+            "date": 1584746977,
+            "game": "https://www.chess.com/game/live/3756795152"
+        },
+        "record": {
+            "win": 1527,
+            "loss": 1164,
+            "draw": 286
+        }
+    },
+    "fide": 2432,
+    "tactics": {
+        "highest": {
+            "rating": 3631,
+            "date": 1717816817
+        },
+        "lowest": {
+            "rating": 1190,
+            "date": 1549602297
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

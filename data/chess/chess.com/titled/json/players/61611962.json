@@ -1,0 +1,17 @@
+{
+    "player_id": 61611962,
+    "@id": "https://api.chess.com/pub/player/ajedrez1101",
+    "url": "https://www.chess.com/member/ajedrez1101",
+    "name": "Boris Bruned",
+    "username": "ajedrez1101",
+    "title": "CM",
+    "followers": 5,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1716931728,
+    "joined": 1559215580,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

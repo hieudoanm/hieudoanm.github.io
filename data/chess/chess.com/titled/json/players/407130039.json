@@ -1,0 +1,27 @@
+{
+    "player_id": 407130039,
+    "@id": "https://api.chess.com/pub/player/dumbchess95",
+    "url": "https://www.chess.com/member/dumbchess95",
+    "username": "dumbchess95",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734019257,
+    "joined": 1733402217,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1733402217
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1733402217
+        }
+    },
+    "puzzle_rush": {}
+}

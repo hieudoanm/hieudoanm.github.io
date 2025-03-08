@@ -1,0 +1,63 @@
+{
+    "player_id": 34957192,
+    "@id": "https://api.chess.com/pub/player/etesungam",
+    "url": "https://www.chess.com/member/etesungam",
+    "name": "Gast\u00f3n Needleman",
+    "username": "etesungam",
+    "title": "IM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/AR",
+    "last_online": 1734174139,
+    "joined": 1492804607,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2365,
+            "date": 1590659813,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2388,
+            "date": 1588736645,
+            "game": "https://www.chess.com/game/live/4861548032"
+        },
+        "record": {
+            "win": 77,
+            "loss": 87,
+            "draw": 5
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2181,
+            "date": 1678233032,
+            "rd": 105
+        },
+        "best": {
+            "rating": 2492,
+            "date": 1589380320,
+            "game": "https://www.chess.com/game/live/4846931443"
+        },
+        "record": {
+            "win": 107,
+            "loss": 102,
+            "draw": 17
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2386,
+            "date": 1588807043
+        },
+        "lowest": {
+            "rating": 1206,
+            "date": 1522346379
+        }
+    },
+    "puzzle_rush": {}
+}

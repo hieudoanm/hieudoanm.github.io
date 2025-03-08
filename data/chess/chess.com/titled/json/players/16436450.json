@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/16436450.a0126a7a.200x200o.49ababc122c8.jpg",
+    "player_id": 16436450,
+    "@id": "https://api.chess.com/pub/player/hemantsharma",
+    "url": "https://www.chess.com/member/HemantSharma",
+    "name": "Hemant Sharma",
+    "username": "hemantsharma",
+    "title": "IM",
+    "followers": 288,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "New Delhi",
+    "last_online": 1734183069,
+    "joined": 1394697219,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1032,
+            "date": 1729724853,
+            "rd": 218
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1394697219,
+            "game": "https://www.chess.com/game/daily/200931346"
+        },
+        "record": {
+            "win": 1,
+            "loss": 2,
+            "draw": 5,
+            "time_per_move": 83220,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2138,
+            "date": 1701750675,
+            "rd": 157
+        },
+        "best": {
+            "rating": 2393,
+            "date": 1552573169,
+            "game": "https://www.chess.com/game/live/56530229601"
+        },
+        "record": {
+            "win": 79,
+            "loss": 4,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2586,
+            "date": 1729754251,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2657,
+            "date": 1604396579,
+            "game": "https://www.chess.com/game/live/2720000903"
+        },
+        "record": {
+            "win": 712,
+            "loss": 356,
+            "draw": 77
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2537,
+            "date": 1653160376,
+            "rd": 121
+        },
+        "best": {
+            "rating": 2590,
+            "date": 1643451170,
+            "game": "https://www.chess.com/game/live/4726391543"
+        },
+        "record": {
+            "win": 193,
+            "loss": 86,
+            "draw": 20
+        }
+    },
+    "fide": 2334,
+    "tactics": {
+        "highest": {
+            "rating": 3076,
+            "date": 1647105526
+        },
+        "lowest": {
+            "rating": 1377,
+            "date": 1394907746
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/294389023.eee51ed3.200x200o.df72fd85fa8f.png",
+    "player_id": 294389023,
+    "@id": "https://api.chess.com/pub/player/aldobaral56",
+    "url": "https://www.chess.com/member/aldobaral56",
+    "name": "Laurent Denis",
+    "username": "aldobaral56",
+    "title": "CM",
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/FR",
+    "location": "FRANCE,Bretagne",
+    "last_online": 1733231290,
+    "joined": 1687076187,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

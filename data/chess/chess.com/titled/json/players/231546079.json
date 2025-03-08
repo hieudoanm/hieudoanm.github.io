@@ -1,0 +1,67 @@
+{
+    "player_id": 231546079,
+    "@id": "https://api.chess.com/pub/player/bettercallcafu",
+    "url": "https://www.chess.com/member/bettercallcafu",
+    "name": "Facundo Vazquez",
+    "username": "bettercallcafu",
+    "title": "FM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/UY",
+    "last_online": 1734106266,
+    "joined": 1674583160,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2602,
+            "date": 1734058270,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2719,
+            "date": 1731173100,
+            "game": "https://www.chess.com/game/live/97964482343"
+        },
+        "record": {
+            "win": 1198,
+            "loss": 987,
+            "draw": 163
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2717,
+            "date": 1732072977,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2842,
+            "date": 1728937216,
+            "game": "https://www.chess.com/game/live/122167725967"
+        },
+        "record": {
+            "win": 713,
+            "loss": 582,
+            "draw": 164
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2701,
+            "date": 1732362807
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1674583160
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 41
+        }
+    }
+}

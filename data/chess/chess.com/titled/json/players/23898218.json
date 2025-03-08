@@ -1,0 +1,18 @@
+{
+    "player_id": 23898218,
+    "@id": "https://api.chess.com/pub/player/sorito",
+    "url": "https://www.chess.com/member/sorito",
+    "name": "Cristian Aranda Marin",
+    "username": "sorito",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "madrid",
+    "last_online": 1734167546,
+    "joined": 1440973476,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

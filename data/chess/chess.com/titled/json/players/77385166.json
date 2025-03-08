@@ -1,0 +1,17 @@
+{
+    "player_id": 77385166,
+    "@id": "https://api.chess.com/pub/player/thesodabread",
+    "url": "https://www.chess.com/member/TheSodabread",
+    "name": "Peter Carroll",
+    "username": "thesodabread",
+    "title": "FM",
+    "followers": 27,
+    "country": "https://api.chess.com/pub/country/IE",
+    "last_online": 1734015504,
+    "joined": 1587477278,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

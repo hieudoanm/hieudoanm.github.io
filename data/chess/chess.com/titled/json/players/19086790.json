@@ -1,0 +1,17 @@
+{
+    "player_id": 19086790,
+    "@id": "https://api.chess.com/pub/player/spriteball",
+    "url": "https://www.chess.com/member/Spriteball",
+    "name": "Davis Zong",
+    "username": "spriteball",
+    "title": "FM",
+    "followers": 93,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1732937742,
+    "joined": 1411928065,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

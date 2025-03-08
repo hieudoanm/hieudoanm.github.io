@@ -1,0 +1,16 @@
+{
+    "player_id": 92657846,
+    "@id": "https://api.chess.com/pub/player/skat2704",
+    "url": "https://www.chess.com/member/Skat2704",
+    "username": "skat2704",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1696932673,
+    "joined": 1602085540,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

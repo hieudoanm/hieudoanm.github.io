@@ -1,0 +1,84 @@
+{
+    "player_id": 300821381,
+    "@id": "https://api.chess.com/pub/player/knightinshiningarmour16",
+    "url": "https://www.chess.com/member/knightinshiningarmour16",
+    "name": "Sasvatha A",
+    "username": "knightinshiningarmour16",
+    "title": "WCM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1732906074,
+    "joined": 1689778056,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1950,
+            "date": 1692375023,
+            "rd": 249
+        },
+        "best": {
+            "rating": 1950,
+            "date": 1692375023,
+            "game": "https://www.chess.com/game/live/86113234695"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1968,
+            "date": 1725551570,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2067,
+            "date": 1709934282,
+            "game": "https://www.chess.com/game/live/102859787367"
+        },
+        "record": {
+            "win": 723,
+            "loss": 666,
+            "draw": 73
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2295,
+            "date": 1732644095,
+            "rd": 68
+        },
+        "best": {
+            "rating": 2362,
+            "date": 1714496306,
+            "game": "https://www.chess.com/game/live/91901420969"
+        },
+        "record": {
+            "win": 78,
+            "loss": 119,
+            "draw": 13
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3036,
+            "date": 1712774692
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1689778056
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 30,
+            "score": 27
+        }
+    }
+}

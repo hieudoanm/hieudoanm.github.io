@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/197180657.24d47c9c.200x200o.e453fe34fad1.jpeg",
+    "player_id": 197180657,
+    "@id": "https://api.chess.com/pub/player/sprite66",
+    "url": "https://www.chess.com/member/sprite66",
+    "name": "ousa ousa",
+    "username": "sprite66",
+    "title": "FM",
+    "followers": 2,
+    "country": "https://api.chess.com/pub/country/PS",
+    "location": "Alexanderia",
+    "last_online": 1733396830,
+    "joined": 1663154696,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

@@ -1,0 +1,80 @@
+{
+    "player_id": 180880491,
+    "@id": "https://api.chess.com/pub/player/leonidsh29",
+    "url": "https://www.chess.com/member/leonidsh29",
+    "name": "Leonid Schulman",
+    "username": "leonidsh29",
+    "title": "FM",
+    "followers": 20,
+    "country": "https://api.chess.com/pub/country/IL",
+    "last_online": 1734182684,
+    "joined": 1650319680,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2223,
+            "date": 1734121442,
+            "rd": 26
+        },
+        "best": {
+            "rating": 2372,
+            "date": 1708276388,
+            "game": "https://www.chess.com/game/live/105912031809"
+        },
+        "record": {
+            "win": 2010,
+            "loss": 2577,
+            "draw": 891
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1987,
+            "date": 1733355071,
+            "rd": 55
+        },
+        "best": {
+            "rating": 2185,
+            "date": 1697894592,
+            "game": "https://www.chess.com/game/live/104916604815"
+        },
+        "record": {
+            "win": 828,
+            "loss": 763,
+            "draw": 127
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2126,
+            "date": 1734184910,
+            "rd": 19
+        },
+        "best": {
+            "rating": 2272,
+            "date": 1731672779,
+            "game": "https://www.chess.com/game/live/125403504843"
+        },
+        "record": {
+            "win": 2849,
+            "loss": 3306,
+            "draw": 658
+        }
+    },
+    "fide": 2190,
+    "tactics": {
+        "highest": {
+            "rating": 2198,
+            "date": 1713382931
+        },
+        "lowest": {
+            "rating": 1181,
+            "date": 1656157155
+        }
+    },
+    "puzzle_rush": {}
+}

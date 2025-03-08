@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/10369574.f81a8fcd.200x200o.23f859faa846.jpeg",
+    "player_id": 10369574,
+    "@id": "https://api.chess.com/pub/player/torrentec",
+    "url": "https://www.chess.com/member/Torrentec",
+    "name": "Alejandro Torrente",
+    "username": "torrentec",
+    "title": "FM",
+    "followers": 115,
+    "country": "https://api.chess.com/pub/country/CO",
+    "location": "Huila",
+    "last_online": 1734128873,
+    "joined": 1357827919,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

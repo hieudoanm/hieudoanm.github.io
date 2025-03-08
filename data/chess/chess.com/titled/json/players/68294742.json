@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/68294742.8135a46d.200x200o.5d33c46de7ff.jpg",
+    "player_id": 68294742,
+    "@id": "https://api.chess.com/pub/player/vladimirkramnik",
+    "url": "https://www.chess.com/member/VladimirKramnik",
+    "name": "Vladimir Kramnik",
+    "username": "vladimirkramnik",
+    "title": "GM",
+    "followers": 3002,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1734165585,
+    "joined": 1574366455,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2677,
+            "date": 1731872252,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2960,
+            "date": 1656783782,
+            "game": "https://www.chess.com/game/live/69613406237"
+        },
+        "record": {
+            "win": 60,
+            "loss": 39,
+            "draw": 44
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2994,
+            "date": 1733869090,
+            "rd": 39
+        },
+        "best": {
+            "rating": 3073,
+            "date": 1716321257,
+            "game": "https://www.chess.com/game/live/127590076151"
+        },
+        "record": {
+            "win": 1066,
+            "loss": 695,
+            "draw": 354
+        }
+    },
+    "fide": 2753,
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1574366455
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1574366455
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 49,
+            "score": 48
+        }
+    }
+}

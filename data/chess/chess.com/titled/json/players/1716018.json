@@ -1,0 +1,18 @@
+{
+    "player_id": 1716018,
+    "@id": "https://api.chess.com/pub/player/aragon",
+    "url": "https://www.chess.com/member/Aragon",
+    "name": "Richard Persson",
+    "username": "aragon",
+    "title": "CM",
+    "followers": 20,
+    "country": "https://api.chess.com/pub/country/SE",
+    "location": "Malm\u00f6",
+    "last_online": 1733845215,
+    "joined": 1232193575,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

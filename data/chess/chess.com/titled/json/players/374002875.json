@@ -1,0 +1,84 @@
+{
+    "player_id": 374002875,
+    "@id": "https://api.chess.com/pub/player/bim67",
+    "url": "https://www.chess.com/member/BIM67",
+    "username": "bim67",
+    "title": "CM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1733383454,
+    "joined": 1720353178,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2116,
+            "date": 1723711410,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2116,
+            "date": 1723690921,
+            "game": "https://www.chess.com/game/live/117019199907"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2525,
+            "date": 1733277867,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2533,
+            "date": 1732287960,
+            "game": "https://www.chess.com/game/live/126026946431"
+        },
+        "record": {
+            "win": 35,
+            "loss": 25,
+            "draw": 8
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2369,
+            "date": 1723693184,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2417,
+            "date": 1721704792,
+            "game": "https://www.chess.com/game/live/115443486207"
+        },
+        "record": {
+            "win": 41,
+            "loss": 17,
+            "draw": 1
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3463,
+            "date": 1732431183
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1720353178
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

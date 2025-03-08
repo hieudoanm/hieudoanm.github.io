@@ -1,0 +1,17 @@
+{
+    "player_id": 64979706,
+    "@id": "https://api.chess.com/pub/player/snegokhod",
+    "url": "https://www.chess.com/member/Snegokhod",
+    "name": "Anatoly Krutko",
+    "username": "snegokhod",
+    "title": "FM",
+    "followers": 17,
+    "country": "https://api.chess.com/pub/country/EE",
+    "last_online": 1734131646,
+    "joined": 1567328383,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

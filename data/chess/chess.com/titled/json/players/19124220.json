@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19124220.a9e7fd97.200x200o.7550519020e8.jpeg",
+    "player_id": 19124220,
+    "@id": "https://api.chess.com/pub/player/mauricioflores",
+    "url": "https://www.chess.com/member/mauricioflores",
+    "name": "Mauricio Flores Rios",
+    "username": "mauricioflores",
+    "title": "GM",
+    "followers": 840,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "San Jose, California",
+    "last_online": 1734037869,
+    "joined": 1412178384,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1005,
+            "date": 1708904121,
+            "rd": 348
+        },
+        "best": {
+            "rating": 2200,
+            "date": 1412178384,
+            "game": "https://www.chess.com/game/daily/432454695"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 81763,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2594,
+            "date": 1595105825,
+            "rd": 232
+        },
+        "best": {
+            "rating": 2656,
+            "date": 1566145307,
+            "game": "https://www.chess.com/game/live/3958575332"
+        },
+        "record": {
+            "win": 9,
+            "loss": 1,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2808,
+            "date": 1713150745,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2857,
+            "date": 1658972749,
+            "game": "https://www.chess.com/game/live/6584834341"
+        },
+        "record": {
+            "win": 3552,
+            "loss": 1895,
+            "draw": 328
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2785,
+            "date": 1718856209,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2938,
+            "date": 1658976723,
+            "game": "https://www.chess.com/game/live/43827926053"
+        },
+        "record": {
+            "win": 1480,
+            "loss": 985,
+            "draw": 279
+        }
+    },
+    "fide": 2531,
+    "tactics": {
+        "highest": {
+            "rating": 2337,
+            "date": 1733404238
+        },
+        "lowest": {
+            "rating": 1908,
+            "date": 1436212610
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 49,
+            "score": 46
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/21346592.4088e47e.200x200o.a419f4d5f9b4.jpeg",
+    "player_id": 21346592,
+    "@id": "https://api.chess.com/pub/player/sotochess",
+    "url": "https://www.chess.com/member/sotochess",
+    "name": "Jorge Soto Vega",
+    "username": "sotochess",
+    "title": "FM",
+    "followers": 55,
+    "country": "https://api.chess.com/pub/country/PE",
+    "location": "Lima",
+    "last_online": 1733918484,
+    "joined": 1425356149,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

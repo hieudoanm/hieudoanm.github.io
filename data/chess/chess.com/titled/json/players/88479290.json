@@ -1,0 +1,17 @@
+{
+    "player_id": 88479290,
+    "@id": "https://api.chess.com/pub/player/markparagua",
+    "url": "https://www.chess.com/member/MarkParagua",
+    "name": "Mark Paragua",
+    "username": "markparagua",
+    "title": "GM",
+    "followers": 216,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "New York",
+    "last_online": 1624965485,
+    "joined": 1596729462,
+    "status": "basic",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

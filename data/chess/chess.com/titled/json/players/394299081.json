@@ -1,0 +1,17 @@
+{
+    "player_id": 394299081,
+    "@id": "https://api.chess.com/pub/player/egehany09",
+    "url": "https://www.chess.com/member/Egehany09",
+    "name": "Egehan Yildiz",
+    "username": "egehany09",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1734008828,
+    "joined": 1728320594,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

@@ -1,0 +1,17 @@
+{
+    "player_id": 58118860,
+    "@id": "https://api.chess.com/pub/player/toratosa",
+    "url": "https://www.chess.com/member/toratosa",
+    "name": "Torsten Sarbok",
+    "username": "toratosa",
+    "title": "FM",
+    "followers": 0,
+    "country": "https://api.chess.com/pub/country/DE",
+    "location": "Berlin",
+    "last_online": 1734021457,
+    "joined": 1551788119,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

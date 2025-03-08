@@ -1,0 +1,86 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/370357157.2bb4b82c.200x200o.4de46edc49aa.jpg",
+    "player_id": 370357157,
+    "@id": "https://api.chess.com/pub/player/midoriyarachelzanel34",
+    "url": "https://www.chess.com/member/midoriyarachelzaneL34",
+    "name": "Daniel Hidalgo",
+    "username": "midoriyarachelzanel34",
+    "title": "FM",
+    "followers": 72,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1734014019,
+    "joined": 1718669449,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2420,
+            "date": 1732143263,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2420,
+            "date": 1732143262,
+            "game": "https://www.chess.com/game/live/125879354273"
+        },
+        "record": {
+            "win": 4,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2405,
+            "date": 1730820594,
+            "rd": 255
+        },
+        "best": {
+            "rating": 1930,
+            "date": 1729207491,
+            "game": "https://www.chess.com/game/live/122946261983"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2912,
+            "date": 1733841673,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2912,
+            "date": 1733839870,
+            "game": "https://www.chess.com/game/live/126367792015"
+        },
+        "record": {
+            "win": 148,
+            "loss": 54,
+            "draw": 35
+        }
+    },
+    "fide": 2405,
+    "tactics": {
+        "highest": {
+            "rating": 3731,
+            "date": 1731278740
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1718669449
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

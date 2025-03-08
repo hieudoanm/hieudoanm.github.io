@@ -1,0 +1,47 @@
+{
+    "player_id": 352733965,
+    "@id": "https://api.chess.com/pub/player/chess_sharparchitect",
+    "url": "https://www.chess.com/member/chess_sharparchitect",
+    "name": "Oleksandr Yevchenko",
+    "username": "chess_sharparchitect",
+    "title": "CM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/UA",
+    "location": "Kyiv",
+    "last_online": 1734134441,
+    "joined": 1711232745,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2287,
+            "date": 1733875686,
+            "rd": 36
+        },
+        "best": {
+            "rating": 2374,
+            "date": 1716912442,
+            "game": "https://www.chess.com/game/live/109459286851"
+        },
+        "record": {
+            "win": 196,
+            "loss": 242,
+            "draw": 28
+        }
+    },
+    "fide": 2276,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1711232745
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1711232745
+        }
+    },
+    "puzzle_rush": {}
+}

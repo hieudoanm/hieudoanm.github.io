@@ -1,0 +1,136 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1833949.a99279d8.200x200o.2aef8f533c3e.jpeg",
+    "player_id": 1833949,
+    "@id": "https://api.chess.com/pub/player/st-sandavagur",
+    "url": "https://www.chess.com/member/ST-Sandavagur",
+    "name": "H\u00f8gni Egilstoft Nielsen",
+    "username": "st-sandavagur",
+    "title": "IM",
+    "followers": 676,
+    "country": "https://api.chess.com/pub/country/FO",
+    "location": "Sandav&aacute;gur",
+    "last_online": 1734021586,
+    "joined": 1237738138,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2124,
+            "date": 1734183196,
+            "rd": 81
+        },
+        "best": {
+            "rating": 2206,
+            "date": 1599460283,
+            "game": "https://www.chess.com/game/daily/25185621"
+        },
+        "record": {
+            "win": 1770,
+            "loss": 698,
+            "draw": 347,
+            "time_per_move": 22921,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 1
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 2080,
+            "date": 1725279681,
+            "rd": 89
+        },
+        "best": {
+            "rating": 2080,
+            "date": 1725279681,
+            "game": "https://www.chess.com/game/daily/681428557"
+        },
+        "record": {
+            "win": 165,
+            "loss": 71,
+            "draw": 51,
+            "time_per_move": 22921,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 1
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2387,
+            "date": 1733933675,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2387,
+            "date": 1678564577,
+            "game": "https://www.chess.com/game/live/66664948149"
+        },
+        "record": {
+            "win": 84,
+            "loss": 24,
+            "draw": 3
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2802,
+            "date": 1734049102,
+            "rd": 21
+        },
+        "best": {
+            "rating": 2945,
+            "date": 1733270181,
+            "game": "https://www.chess.com/game/live/40468855095"
+        },
+        "record": {
+            "win": 14971,
+            "loss": 9002,
+            "draw": 1079
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2550,
+            "date": 1733928649,
+            "rd": 50
+        },
+        "best": {
+            "rating": 2619,
+            "date": 1634764064,
+            "game": "https://www.chess.com/game/live/36683485599"
+        },
+        "record": {
+            "win": 852,
+            "loss": 409,
+            "draw": 92
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3563,
+            "date": 1716503018
+        },
+        "lowest": {
+            "rating": 1015,
+            "date": 1239206820
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        }
+    }
+}

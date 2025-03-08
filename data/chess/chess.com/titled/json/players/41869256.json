@@ -1,0 +1,68 @@
+{
+    "player_id": 41869256,
+    "@id": "https://api.chess.com/pub/player/colemman",
+    "url": "https://www.chess.com/member/colemman",
+    "name": "David Astasio",
+    "username": "colemman",
+    "title": "FM",
+    "followers": 25,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1733250293,
+    "joined": 1514740738,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2801,
+            "date": 1690483706,
+            "rd": 119
+        },
+        "best": {
+            "rating": 2801,
+            "date": 1690483706,
+            "game": "https://www.chess.com/game/live/84222590303"
+        },
+        "record": {
+            "win": 81,
+            "loss": 69,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2512,
+            "date": 1691287876,
+            "rd": 89
+        },
+        "best": {
+            "rating": 2623,
+            "date": 1555866277,
+            "game": "https://www.chess.com/game/live/37836537781"
+        },
+        "record": {
+            "win": 1000,
+            "loss": 1083,
+            "draw": 167
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2765,
+            "date": 1553444862
+        },
+        "lowest": {
+            "rating": 1188,
+            "date": 1517324107
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 40
+        }
+    }
+}

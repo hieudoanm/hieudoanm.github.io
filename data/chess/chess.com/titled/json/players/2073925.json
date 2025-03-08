@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/2073925.ae50e5a4.200x200o.ec9d8e3ff096.jpg",
+    "player_id": 2073925,
+    "@id": "https://api.chess.com/pub/player/toniv1",
+    "url": "https://www.chess.com/member/toniv1",
+    "name": "Antonio Pedro Freixial Vasques",
+    "username": "toniv1",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/PT",
+    "last_online": 1733148740,
+    "joined": 1249336447,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

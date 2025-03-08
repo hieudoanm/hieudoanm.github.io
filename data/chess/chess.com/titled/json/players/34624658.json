@@ -1,0 +1,16 @@
+{
+    "player_id": 34624658,
+    "@id": "https://api.chess.com/pub/player/tomek45",
+    "url": "https://www.chess.com/member/Tomek45",
+    "username": "tomek45",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1696094730,
+    "joined": 1491674152,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

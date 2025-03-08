@@ -1,0 +1,78 @@
+{
+    "player_id": 58048648,
+    "@id": "https://api.chess.com/pub/player/michael_scofield01",
+    "url": "https://www.chess.com/member/Michael_Scofield01",
+    "username": "michael_scofield01",
+    "title": "GM",
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/MH",
+    "last_online": 1727981418,
+    "joined": 1551635098,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2891,
+            "date": 1713374755,
+            "rd": 349
+        },
+        "best": {
+            "rating": 2891,
+            "date": 1682104549,
+            "game": "https://www.chess.com/game/live/75843731281"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2823,
+            "date": 1724926785,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2960,
+            "date": 1657370344,
+            "game": "https://www.chess.com/game/live/49227620961"
+        },
+        "record": {
+            "win": 984,
+            "loss": 874,
+            "draw": 148
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2819,
+            "date": 1727982819,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2961,
+            "date": 1680182338,
+            "game": "https://www.chess.com/game/live/3736574672"
+        },
+        "record": {
+            "win": 730,
+            "loss": 576,
+            "draw": 194
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3685,
+            "date": 1715334590
+        },
+        "lowest": {
+            "rating": 1211,
+            "date": 1650567269
+        }
+    },
+    "puzzle_rush": {}
+}

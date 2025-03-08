@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/48355704.5a5d4d4b.200x200o.8b18f570d8f7.jpeg",
+    "player_id": 48355704,
+    "@id": "https://api.chess.com/pub/player/tjktiger",
+    "url": "https://www.chess.com/member/Tjktiger",
+    "name": "Daler Vakhidov",
+    "username": "tjktiger",
+    "title": "FM",
+    "followers": 147,
+    "country": "https://api.chess.com/pub/country/MC",
+    "last_online": 1588083148,
+    "joined": 1533064453,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": []
+}

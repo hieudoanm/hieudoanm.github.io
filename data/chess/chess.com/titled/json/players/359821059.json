@@ -1,0 +1,64 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/359821059.5bd9afcd.200x200o.5132167176f9.jpg",
+    "player_id": 359821059,
+    "@id": "https://api.chess.com/pub/player/brouetoscope",
+    "url": "https://www.chess.com/member/brouetoscope",
+    "name": "Thomas Decker",
+    "username": "brouetoscope",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/FR",
+    "last_online": 1733697966,
+    "joined": 1714247376,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2348,
+            "date": 1733075642,
+            "rd": 101
+        },
+        "best": {
+            "rating": 2352,
+            "date": 1714741417,
+            "game": "https://www.chess.com/game/live/108481304945"
+        },
+        "record": {
+            "win": 13,
+            "loss": 8,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2403,
+            "date": 1729272907,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2473,
+            "date": 1724794138,
+            "game": "https://www.chess.com/game/live/118531754043"
+        },
+        "record": {
+            "win": 245,
+            "loss": 105,
+            "draw": 22
+        }
+    },
+    "fide": 2300,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1714247376
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1714247376
+        }
+    },
+    "puzzle_rush": {}
+}

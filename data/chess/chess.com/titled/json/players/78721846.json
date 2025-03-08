@@ -1,0 +1,66 @@
+{
+    "player_id": 78721846,
+    "@id": "https://api.chess.com/pub/player/sacrifices333",
+    "url": "https://www.chess.com/member/Sacrifices333",
+    "username": "sacrifices333",
+    "title": "IM",
+    "followers": 58,
+    "country": "https://api.chess.com/pub/country/SM",
+    "last_online": 1734172766,
+    "joined": 1588754964,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2545,
+            "date": 1734089954,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2749,
+            "date": 1723894265,
+            "game": "https://www.chess.com/game/live/117437401793"
+        },
+        "record": {
+            "win": 2066,
+            "loss": 1788,
+            "draw": 308
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2628,
+            "date": 1734174397,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2727,
+            "date": 1692282348,
+            "game": "https://www.chess.com/game/live/57591067363"
+        },
+        "record": {
+            "win": 2396,
+            "loss": 1953,
+            "draw": 504
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2810,
+            "date": 1663581527
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1630932532
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 53,
+            "score": 50
+        }
+    }
+}

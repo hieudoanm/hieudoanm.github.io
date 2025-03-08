@@ -1,0 +1,68 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/378332961.3a09f181.200x200o.ae904131e5b9.jpg",
+    "player_id": 378332961,
+    "@id": "https://api.chess.com/pub/player/alwaysplayforawin44",
+    "url": "https://www.chess.com/member/AlwaysPlayForAWin44",
+    "name": "Kerem Erten",
+    "username": "alwaysplayforawin44",
+    "title": "FM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1733867470,
+    "joined": 1722418563,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2512,
+            "date": 1722509265,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2512,
+            "date": 1722509265,
+            "game": "https://www.chess.com/game/live/116248214717"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2657,
+            "date": 1733868428,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2722,
+            "date": 1728400682,
+            "game": "https://www.chess.com/game/live/121538482111"
+        },
+        "record": {
+            "win": 138,
+            "loss": 82,
+            "draw": 23
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3761,
+            "date": 1732031242
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1722418563
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/24401134.04f434a2.200x200o.dbe98441b265.jpeg",
+    "player_id": 24401134,
+    "@id": "https://api.chess.com/pub/player/xasid81",
+    "url": "https://www.chess.com/member/xasid81",
+    "name": "Yuri Zhizmer",
+    "username": "xasid81",
+    "title": "IM",
+    "followers": 33,
+    "country": "https://api.chess.com/pub/country/IL",
+    "last_online": 1733924390,
+    "joined": 1443868313,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2617,
+            "date": 1732749436,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2627,
+            "date": 1732749324,
+            "game": "https://www.chess.com/game/live/2238215404"
+        },
+        "record": {
+            "win": 3691,
+            "loss": 2338,
+            "draw": 377
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2725,
+            "date": 1733270839,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2748,
+            "date": 1731616923,
+            "game": "https://www.chess.com/game/live/110650947065"
+        },
+        "record": {
+            "win": 2250,
+            "loss": 2178,
+            "draw": 461
+        }
+    },
+    "fide": 2295,
+    "tactics": {
+        "highest": {
+            "rating": 2451,
+            "date": 1521320502
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1497932327
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 63,
+            "score": 60
+        }
+    }
+}

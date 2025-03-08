@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13527860.5b2132f4.200x200o.b8cf7f9c0ace.jpeg",
+    "player_id": 13527860,
+    "@id": "https://api.chess.com/pub/player/simplerxiao",
+    "url": "https://www.chess.com/member/simplerXiao",
+    "name": "Xiao Cheng",
+    "username": "simplerxiao",
+    "title": "FM",
+    "followers": 222,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Atlanta, GA",
+    "last_online": 1734091466,
+    "joined": 1379182593,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

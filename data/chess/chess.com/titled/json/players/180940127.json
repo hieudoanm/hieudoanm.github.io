@@ -1,0 +1,88 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/180940127.a9b535e4.200x200o.1b8774ebbbf1.jpeg",
+    "player_id": 180940127,
+    "@id": "https://api.chess.com/pub/player/anirudhha33",
+    "url": "https://www.chess.com/member/Anirudhha33",
+    "name": "Anirudhha Potawad",
+    "username": "anirudhha33",
+    "title": "FM",
+    "followers": 33,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1734183287,
+    "joined": 1650374537,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1645,
+            "date": 1734174939,
+            "rd": 308
+        },
+        "best": {
+            "rating": 1645,
+            "date": 1730011234,
+            "game": "https://www.chess.com/game/daily/708104583"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 68338,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2568,
+            "date": 1734073607,
+            "rd": 45
+        },
+        "best": {
+            "rating": 2601,
+            "date": 1730477108,
+            "game": "https://www.chess.com/game/live/125774353775"
+        },
+        "record": {
+            "win": 179,
+            "loss": 73,
+            "draw": 12
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2558,
+            "date": 1731434972,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2589,
+            "date": 1729615845,
+            "game": "https://www.chess.com/game/live/116695257871"
+        },
+        "record": {
+            "win": 87,
+            "loss": 33,
+            "draw": 4
+        }
+    },
+    "fide": 2281,
+    "tactics": {
+        "highest": {
+            "rating": 3918,
+            "date": 1706610473
+        },
+        "lowest": {
+            "rating": 1010,
+            "date": 1658573907
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 74,
+            "score": 71
+        }
+    }
+}

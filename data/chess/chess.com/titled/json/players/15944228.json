@@ -1,0 +1,105 @@
+{
+    "player_id": 15944228,
+    "@id": "https://api.chess.com/pub/player/sharkanto55",
+    "url": "https://www.chess.com/member/SharkAnto55",
+    "name": "Antonio Sebastian Almiron Villalba",
+    "username": "sharkanto55",
+    "title": "FM",
+    "followers": 122,
+    "country": "https://api.chess.com/pub/country/PY",
+    "location": "Asunci\u00f3n",
+    "last_online": 1732991029,
+    "joined": 1391778864,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1816,
+            "date": 1708241914,
+            "rd": 86
+        },
+        "best": {
+            "rating": 2080,
+            "date": 1470279318,
+            "game": "https://www.chess.com/game/daily/163955566"
+        },
+        "record": {
+            "win": 31,
+            "loss": 21,
+            "draw": 6,
+            "time_per_move": 41162,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2536,
+            "date": 1701294701,
+            "rd": 148
+        },
+        "best": {
+            "rating": 2536,
+            "date": 1701294701,
+            "game": "https://www.chess.com/game/live/36708038883"
+        },
+        "record": {
+            "win": 44,
+            "loss": 21,
+            "draw": 14
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2538,
+            "date": 1701294375,
+            "rd": 51
+        },
+        "best": {
+            "rating": 2585,
+            "date": 1642772712,
+            "game": "https://www.chess.com/game/live/36511766045"
+        },
+        "record": {
+            "win": 178,
+            "loss": 118,
+            "draw": 14
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2731,
+            "date": 1725819798,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2731,
+            "date": 1725819798,
+            "game": "https://www.chess.com/game/live/107745194021"
+        },
+        "record": {
+            "win": 2473,
+            "loss": 1988,
+            "draw": 350
+        }
+    },
+    "fide": 2366,
+    "tactics": {
+        "highest": {
+            "rating": 3347,
+            "date": 1696774630
+        },
+        "lowest": {
+            "rating": 1323,
+            "date": 1391918665
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 44,
+            "score": 42
+        }
+    }
+}

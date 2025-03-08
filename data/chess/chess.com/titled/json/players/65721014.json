@@ -1,0 +1,108 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/65721014.db1b6c03.200x200o.61242cde8d96.jpg",
+    "player_id": 65721014,
+    "@id": "https://api.chess.com/pub/player/molecularchemist",
+    "url": "https://www.chess.com/member/MolecularChemist",
+    "name": "Dimitar Mardov",
+    "username": "molecularchemist",
+    "title": "IM",
+    "followers": 887,
+    "country": "https://api.chess.com/pub/country/GR",
+    "last_online": 1734134416,
+    "joined": 1568982064,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2000,
+            "date": 1717367883,
+            "rd": 349
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1680820456,
+            "game": "https://www.chess.com/game/daily/485266313"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 3899,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2410,
+            "date": 1714690146,
+            "rd": 65
+        },
+        "best": {
+            "rating": 2500,
+            "date": 1642972688,
+            "game": "https://www.chess.com/game/live/51303094801"
+        },
+        "record": {
+            "win": 676,
+            "loss": 39,
+            "draw": 34
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 3102,
+            "date": 1725576500,
+            "rd": 46
+        },
+        "best": {
+            "rating": 3138,
+            "date": 1711061538,
+            "game": "https://www.chess.com/game/live/104880580025"
+        },
+        "record": {
+            "win": 3081,
+            "loss": 1527,
+            "draw": 309
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2963,
+            "date": 1734154459,
+            "rd": 30
+        },
+        "best": {
+            "rating": 3023,
+            "date": 1732588406,
+            "game": "https://www.chess.com/game/live/126313185345"
+        },
+        "record": {
+            "win": 2528,
+            "loss": 1653,
+            "draw": 576
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3464,
+            "date": 1681415743
+        },
+        "lowest": {
+            "rating": 1212,
+            "date": 1637600742
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        },
+        "daily": {
+            "total_attempts": 55,
+            "score": 52
+        }
+    }
+}

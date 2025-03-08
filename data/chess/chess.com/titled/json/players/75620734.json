@@ -1,0 +1,17 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75620734.95028fa3.200x200o.07a2863b9220.jpg",
+    "player_id": 75620734,
+    "@id": "https://api.chess.com/pub/player/alik_h228",
+    "url": "https://www.chess.com/member/alik_h228",
+    "username": "alik_h228",
+    "title": "CM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1731468626,
+    "joined": 1585998100,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

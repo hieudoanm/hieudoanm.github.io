@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/79701350.dd7af4c6.200x200o.a2d205c93914.jpg",
+    "player_id": 79701350,
+    "@id": "https://api.chess.com/pub/player/bonantagulo",
+    "url": "https://www.chess.com/member/bonantagulo",
+    "name": "Rustem Gorbenko",
+    "username": "bonantagulo",
+    "title": "CM",
+    "followers": 23,
+    "country": "https://api.chess.com/pub/country/UA",
+    "location": "Odessa",
+    "last_online": 1734006297,
+    "joined": 1589661896,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2216,
+            "date": 1733082977,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2216,
+            "date": 1733082977,
+            "game": "https://www.chess.com/game/live/126817147121"
+        },
+        "record": {
+            "win": 24,
+            "loss": 8,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2406,
+            "date": 1734131228,
+            "rd": 17
+        },
+        "best": {
+            "rating": 2601,
+            "date": 1719391593,
+            "game": "https://www.chess.com/game/live/113129385105"
+        },
+        "record": {
+            "win": 2176,
+            "loss": 1439,
+            "draw": 213
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2373,
+            "date": 1734086352,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2511,
+            "date": 1732225560,
+            "game": "https://www.chess.com/game/live/125794183837"
+        },
+        "record": {
+            "win": 423,
+            "loss": 287,
+            "draw": 41
+        }
+    },
+    "fide": 2210,
+    "tactics": {
+        "highest": {
+            "rating": 3337,
+            "date": 1733560657
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1619015533
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 37,
+            "score": 36
+        }
+    }
+}

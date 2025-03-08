@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/45876030.3bb662b8.200x200o.e88f5c6efc10.png",
+    "player_id": 45876030,
+    "@id": "https://api.chess.com/pub/player/glysend",
+    "url": "https://www.chess.com/member/GlysenD",
+    "name": "Vic Glysen Derotas",
+    "username": "glysend",
+    "title": "WNM",
+    "followers": 25,
+    "country": "https://api.chess.com/pub/country/PH",
+    "location": "Cebu City",
+    "last_online": 1732082985,
+    "joined": 1525399889,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1317,
+            "date": 1665211205,
+            "rd": 238
+        },
+        "best": {
+            "rating": 1317,
+            "date": 1565091004,
+            "game": "https://www.chess.com/game/daily/196775978"
+        },
+        "record": {
+            "win": 3,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 5728,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1877,
+            "date": 1732083943,
+            "rd": 156
+        },
+        "best": {
+            "rating": 1947,
+            "date": 1617454910,
+            "game": "https://www.chess.com/game/live/53026757527"
+        },
+        "record": {
+            "win": 16,
+            "loss": 10,
+            "draw": 4
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2261,
+            "date": 1712283321,
+            "rd": 156
+        },
+        "best": {
+            "rating": 2331,
+            "date": 1656211089,
+            "game": "https://www.chess.com/game/live/53233155879"
+        },
+        "record": {
+            "win": 109,
+            "loss": 69,
+            "draw": 5
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2215,
+            "date": 1710686253,
+            "rd": 85
+        },
+        "best": {
+            "rating": 2239,
+            "date": 1617097230,
+            "game": "https://www.chess.com/game/live/9620159671"
+        },
+        "record": {
+            "win": 176,
+            "loss": 118,
+            "draw": 14
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3150,
+            "date": 1721120938
+        },
+        "lowest": {
+            "rating": 410,
+            "date": 1528157894
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 49,
+            "score": 46
+        }
+    }
+}

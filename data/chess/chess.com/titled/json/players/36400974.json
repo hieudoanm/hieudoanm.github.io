@@ -1,0 +1,16 @@
+{
+    "player_id": 36400974,
+    "@id": "https://api.chess.com/pub/player/tortolla",
+    "url": "https://www.chess.com/member/Tortolla",
+    "username": "tortolla",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/CH",
+    "last_online": 1734097155,
+    "joined": 1497790980,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

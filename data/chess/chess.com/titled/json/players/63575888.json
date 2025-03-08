@@ -1,0 +1,17 @@
+{
+    "player_id": 63575888,
+    "@id": "https://api.chess.com/pub/player/tooclassictooslow",
+    "url": "https://www.chess.com/member/tooclassictooslow",
+    "name": "Lars Goldbeck",
+    "username": "tooclassictooslow",
+    "title": "FM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1733997331,
+    "joined": 1563892396,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

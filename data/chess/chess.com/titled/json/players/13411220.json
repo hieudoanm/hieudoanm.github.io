@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13411220.d07141ed.200x200o.71d7ba6b6676.jpeg",
+    "player_id": 13411220,
+    "@id": "https://api.chess.com/pub/player/kingloek",
+    "url": "https://www.chess.com/member/KingLoek",
+    "name": "Loek van Wely",
+    "username": "kingloek",
+    "title": "GM",
+    "followers": 114,
+    "country": "https://api.chess.com/pub/country/NL",
+    "location": "Tilburg",
+    "last_online": 1715015802,
+    "joined": 1378372580,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2454,
+            "date": 1622299400,
+            "rd": 96
+        },
+        "best": {
+            "rating": 2770,
+            "date": 1608391230,
+            "game": "https://www.chess.com/game/live/6544222139"
+        },
+        "record": {
+            "win": 15,
+            "loss": 6,
+            "draw": 7
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2692,
+            "date": 1590258929,
+            "rd": 136
+        },
+        "best": {
+            "rating": 2580,
+            "date": 1378496359,
+            "game": "https://www.chess.com/game/live/595226225"
+        },
+        "record": {
+            "win": 25,
+            "loss": 13,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2913,
+            "date": 1701010139,
+            "rd": 72
+        },
+        "best": {
+            "rating": 2985,
+            "date": 1701002992,
+            "game": "https://www.chess.com/game/live/25813196243"
+        },
+        "record": {
+            "win": 161,
+            "loss": 96,
+            "draw": 36
+        }
+    },
+    "fide": 2700,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1378372580
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1378372580
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 42,
+            "score": 40
+        }
+    }
+}

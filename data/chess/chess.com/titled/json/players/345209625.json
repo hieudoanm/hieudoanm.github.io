@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/345209625.123efdc2.200x200o.8a8ca863e2a9.png",
+    "player_id": 345209625,
+    "@id": "https://api.chess.com/pub/player/redfirepanda",
+    "url": "https://www.chess.com/member/RedFirePanda",
+    "name": "Hugo Uber Gracia",
+    "username": "redfirepanda",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734174985,
+    "joined": 1707895561,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2579,
+            "date": 1733674269,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2593,
+            "date": 1730030678,
+            "game": "https://www.chess.com/game/live/121885127149"
+        },
+        "record": {
+            "win": 529,
+            "loss": 793,
+            "draw": 87
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2572,
+            "date": 1733732676,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2592,
+            "date": 1732211077,
+            "game": "https://www.chess.com/game/live/124561210461"
+        },
+        "record": {
+            "win": 421,
+            "loss": 428,
+            "draw": 73
+        }
+    },
+    "fide": 2317,
+    "tactics": {
+        "highest": {
+            "rating": 2974,
+            "date": 1724500108
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1707895561
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
+}

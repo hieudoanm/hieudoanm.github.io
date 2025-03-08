@@ -1,0 +1,62 @@
+{
+    "player_id": 86997400,
+    "@id": "https://api.chess.com/pub/player/krishna_2800",
+    "url": "https://www.chess.com/member/KRISHNA_2800",
+    "username": "krishna_2800",
+    "title": "FM",
+    "followers": 3,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1732519440,
+    "joined": 1595080131,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2300,
+            "date": 1730855616,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2300,
+            "date": 1730855616,
+            "game": "https://www.chess.com/game/live/73449078799"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2421,
+            "date": 1730880412,
+            "rd": 53
+        },
+        "best": {
+            "rating": 2478,
+            "date": 1695962723,
+            "game": "https://www.chess.com/game/live/121555251985"
+        },
+        "record": {
+            "win": 38,
+            "loss": 22,
+            "draw": 4
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 2451,
+            "date": 1731541003
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1595080131
+        }
+    },
+    "puzzle_rush": {}
+}

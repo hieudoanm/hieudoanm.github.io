@@ -1,0 +1,100 @@
+{
+    "player_id": 17906306,
+    "@id": "https://api.chess.com/pub/player/magic-nelwyn",
+    "url": "https://www.chess.com/member/Magic-Nelwyn",
+    "name": "Cl\u00e9ment Rabineau",
+    "username": "magic-nelwyn",
+    "title": "FM",
+    "followers": 85,
+    "country": "https://api.chess.com/pub/country/FR",
+    "location": "Clichy",
+    "last_online": 1734011917,
+    "joined": 1404254445,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1715170171,
+            "rd": 350
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 16772,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2281,
+            "date": 1731588897,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2317,
+            "date": 1654296925,
+            "game": "https://www.chess.com/game/live/40945245689"
+        },
+        "record": {
+            "win": 181,
+            "loss": 48,
+            "draw": 14
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2428,
+            "date": 1733428074,
+            "rd": 39
+        },
+        "best": {
+            "rating": 2631,
+            "date": 1709140011,
+            "game": "https://www.chess.com/game/live/106493855665"
+        },
+        "record": {
+            "win": 3164,
+            "loss": 3691,
+            "draw": 528
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2365,
+            "date": 1732099338,
+            "rd": 66
+        },
+        "best": {
+            "rating": 2556,
+            "date": 1644384218,
+            "game": "https://www.chess.com/game/live/42304852449"
+        },
+        "record": {
+            "win": 1410,
+            "loss": 1418,
+            "draw": 246
+        }
+    },
+    "fide": 2238,
+    "tactics": {
+        "highest": {
+            "rating": 3497,
+            "date": 1708268397
+        },
+        "lowest": {
+            "rating": 1207,
+            "date": 1520774861
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 62,
+            "score": 59
+        }
+    }
+}

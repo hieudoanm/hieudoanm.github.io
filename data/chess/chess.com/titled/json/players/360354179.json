@@ -1,0 +1,64 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/360354179.cd040e00.200x200o.b6c4dfc89797.jpg",
+    "player_id": 360354179,
+    "@id": "https://api.chess.com/pub/player/bereceptive",
+    "url": "https://www.chess.com/member/BeReceptive",
+    "name": "Christian Toth",
+    "username": "bereceptive",
+    "title": "IM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/BR",
+    "location": "Rio de Janeiro",
+    "last_online": 1734127166,
+    "joined": 1714486544,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2130,
+            "date": 1733494439,
+            "rd": 79
+        },
+        "best": {
+            "rating": 2181,
+            "date": 1718133685,
+            "game": "https://www.chess.com/game/live/111874418191"
+        },
+        "record": {
+            "win": 55,
+            "loss": 37,
+            "draw": 3
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2292,
+            "date": 1734182302,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2407,
+            "date": 1715646307,
+            "game": "https://www.chess.com/game/live/110042497819"
+        },
+        "record": {
+            "win": 1111,
+            "loss": 991,
+            "draw": 228
+        }
+    },
+    "fide": 2354,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1714486544
+        },
+        "lowest": {
+            "rating": 987,
+            "date": 1715086742
+        }
+    },
+    "puzzle_rush": {}
+}

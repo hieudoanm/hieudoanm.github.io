@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8605918.ca80f64b.200x200o.a47a80783f83.jpeg",
+    "player_id": 8605918,
+    "@id": "https://api.chess.com/pub/player/backreg",
+    "url": "https://www.chess.com/member/backreg",
+    "name": "Val Sau",
+    "username": "backreg",
+    "title": "FM",
+    "followers": 233,
+    "country": "https://api.chess.com/pub/country/LV",
+    "location": "Riga",
+    "last_online": 1726164243,
+    "joined": 1345408785,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2016,
+            "date": 1702228974,
+            "rd": 224
+        },
+        "best": {
+            "rating": 2210,
+            "date": 1625666448,
+            "game": "https://www.chess.com/game/live/19404396327"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2325,
+            "date": 1630270934,
+            "rd": 71
+        },
+        "best": {
+            "rating": 2375,
+            "date": 1384543936,
+            "game": "https://www.chess.com/game/live/552968193"
+        },
+        "record": {
+            "win": 1033,
+            "loss": 736,
+            "draw": 64
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2587,
+            "date": 1726173069,
+            "rd": 44
+        },
+        "best": {
+            "rating": 2621,
+            "date": 1635094937,
+            "game": "https://www.chess.com/game/live/2235561698"
+        },
+        "record": {
+            "win": 10251,
+            "loss": 7551,
+            "draw": 1052
+        }
+    },
+    "fide": 2334,
+    "tactics": {
+        "highest": {
+            "rating": 3281,
+            "date": 1625682143
+        },
+        "lowest": {
+            "rating": 2060,
+            "date": 1369234881
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 43
+        }
+    }
+}

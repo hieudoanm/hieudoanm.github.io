@@ -1,0 +1,110 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19488876.8b09ea47.200x200o.a5afa8bbb575.jpg",
+    "player_id": 19488876,
+    "@id": "https://api.chess.com/pub/player/ar4uha",
+    "url": "https://www.chess.com/member/Ar4uha",
+    "name": "Arturs Bernotas",
+    "username": "ar4uha",
+    "title": "FM",
+    "followers": 169,
+    "country": "https://api.chess.com/pub/country/LV",
+    "location": "Riga",
+    "last_online": 1734159182,
+    "joined": 1414522959,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1508,
+            "date": 1734176248,
+            "rd": 186
+        },
+        "best": {
+            "rating": 1575,
+            "date": 1573615263,
+            "game": "https://www.chess.com/game/daily/241395086"
+        },
+        "record": {
+            "win": 20,
+            "loss": 2,
+            "draw": 3,
+            "time_per_move": 15458,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2294,
+            "date": 1733161823,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2452,
+            "date": 1584110630,
+            "game": "https://www.chess.com/game/live/123414588817"
+        },
+        "record": {
+            "win": 44,
+            "loss": 7,
+            "draw": 5
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2541,
+            "date": 1729441300,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2717,
+            "date": 1482771832,
+            "game": "https://www.chess.com/game/live/2499386323"
+        },
+        "record": {
+            "win": 1768,
+            "loss": 1246,
+            "draw": 229
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2681,
+            "date": 1733953743,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2713,
+            "date": 1586466704,
+            "game": "https://www.chess.com/game/live/3197645342"
+        },
+        "record": {
+            "win": 3144,
+            "loss": 2253,
+            "draw": 535
+        }
+    },
+    "fide": 2366,
+    "tactics": {
+        "highest": {
+            "rating": 3447,
+            "date": 1712107262
+        },
+        "lowest": {
+            "rating": 1326,
+            "date": 1414690925
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 57,
+            "score": 54
+        },
+        "daily": {
+            "total_attempts": 46,
+            "score": 43
+        }
+    }
+}

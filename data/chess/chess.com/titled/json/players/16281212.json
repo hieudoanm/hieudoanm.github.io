@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/16281212.4ef09654.200x200o.44163e6b94b5.jpg",
+    "player_id": 16281212,
+    "@id": "https://api.chess.com/pub/player/snekkerandersen",
+    "url": "https://www.chess.com/member/SnekkerAndersen",
+    "name": "Gunnar Lund",
+    "username": "snekkerandersen",
+    "title": "FM",
+    "followers": 96,
+    "country": "https://api.chess.com/pub/country/NO",
+    "last_online": 1733085800,
+    "joined": 1393757644,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": []
+}

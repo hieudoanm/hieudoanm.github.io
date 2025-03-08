@@ -1,0 +1,62 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/399754125.ff4ebea1.200x200o.b43e4d79eead.jpg",
+    "player_id": 399754125,
+    "@id": "https://api.chess.com/pub/player/ace-from-space",
+    "url": "https://www.chess.com/member/Ace-From-Space",
+    "username": "ace-from-space",
+    "title": "CM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/LT",
+    "last_online": 1734128438,
+    "joined": 1730462750,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2504,
+            "date": 1733955439,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2504,
+            "date": 1733955439,
+            "game": "https://www.chess.com/game/live/127692626911"
+        },
+        "record": {
+            "win": 38,
+            "loss": 28,
+            "draw": 8
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2380,
+            "date": 1734069001,
+            "rd": 31
+        },
+        "best": {
+            "rating": 2402,
+            "date": 1733173420,
+            "game": "https://www.chess.com/game/live/126833994865"
+        },
+        "record": {
+            "win": 130,
+            "loss": 113,
+            "draw": 20
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1730462750
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1730462750
+        }
+    },
+    "puzzle_rush": {}
+}

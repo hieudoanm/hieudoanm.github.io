@@ -1,0 +1,112 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/62612572.c52516e3.200x200o.953e67de39e1.jpeg",
+    "player_id": 62612572,
+    "@id": "https://api.chess.com/pub/player/stouuf",
+    "url": "https://www.chess.com/member/Stouuf",
+    "name": "St\u00e9phane Bressac",
+    "username": "stouuf",
+    "title": "IM",
+    "followers": 1399,
+    "country": "https://api.chess.com/pub/country/FR",
+    "location": "Cannes",
+    "last_online": 1734077652,
+    "joined": 1561319418,
+    "status": "premium",
+    "is_streamer": true,
+    "twitch_url": "https://twitch.tv/stouuf",
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [
+        {
+            "type": "twitch",
+            "channel_url": "https://twitch.tv/stouuf"
+        }
+    ],
+    "chess_daily": {
+        "last": {
+            "rating": 1977,
+            "date": 1733120034,
+            "rd": 166
+        },
+        "best": {
+            "rating": 2032,
+            "date": 1636374785,
+            "game": "https://www.chess.com/game/daily/362725039"
+        },
+        "record": {
+            "win": 13,
+            "loss": 1,
+            "draw": 2,
+            "time_per_move": 9615,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2413,
+            "date": 1725043507,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2528,
+            "date": 1616714683,
+            "game": "https://www.chess.com/game/live/8191469681"
+        },
+        "record": {
+            "win": 126,
+            "loss": 15,
+            "draw": 11
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2653,
+            "date": 1732959086,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2792,
+            "date": 1659536956,
+            "game": "https://www.chess.com/game/live/107976607333"
+        },
+        "record": {
+            "win": 1379,
+            "loss": 1105,
+            "draw": 229
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2617,
+            "date": 1733168901,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2845,
+            "date": 1716135602,
+            "game": "https://www.chess.com/game/live/45838858273"
+        },
+        "record": {
+            "win": 4695,
+            "loss": 3510,
+            "draw": 809
+        }
+    },
+    "fide": 2382,
+    "tactics": {
+        "highest": {
+            "rating": 3411,
+            "date": 1716973235
+        },
+        "lowest": {
+            "rating": 2301,
+            "date": 1563448823
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 80,
+            "score": 77
+        }
+    }
+}

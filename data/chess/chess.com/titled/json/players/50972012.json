@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/50972012.d30006f4.200x200o.819c0f48fad4.jpg",
+    "player_id": 50972012,
+    "@id": "https://api.chess.com/pub/player/almaguerjm",
+    "url": "https://www.chess.com/member/almaguerjm",
+    "name": "Juan Manuel Garcia Almaguer",
+    "username": "almaguerjm",
+    "title": "CM",
+    "followers": 254,
+    "country": "https://api.chess.com/pub/country/MX",
+    "location": "Mexico",
+    "last_online": 1734184868,
+    "joined": 1540073968,
+    "status": "staff",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1490,
+            "date": 1732683780,
+            "rd": 101
+        },
+        "best": {
+            "rating": 2012,
+            "date": 1673012643,
+            "game": "https://www.chess.com/game/daily/504712047"
+        },
+        "record": {
+            "win": 34,
+            "loss": 18,
+            "draw": 6,
+            "time_per_move": 19508,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 2042,
+            "date": 1732683780,
+            "rd": 315
+        },
+        "best": {
+            "rating": 2042,
+            "date": 1732683780,
+            "game": "https://www.chess.com/game/daily/725702767"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 19508,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2335,
+            "date": 1732478472,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2375,
+            "date": 1705020653,
+            "game": "https://www.chess.com/game/live/73066605715"
+        },
+        "record": {
+            "win": 60,
+            "loss": 18,
+            "draw": 7
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2488,
+            "date": 1734151656,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2784,
+            "date": 1730740233,
+            "game": "https://www.chess.com/game/live/96493118661"
+        },
+        "record": {
+            "win": 3125,
+            "loss": 2311,
+            "draw": 279
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2463,
+            "date": 1733846682,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2545,
+            "date": 1718477624,
+            "game": "https://www.chess.com/game/live/4466628421"
+        },
+        "record": {
+            "win": 1482,
+            "loss": 1126,
+            "draw": 151
+        }
+    },
+    "fide": 2161,
+    "tactics": {
+        "highest": {
+            "rating": 3348,
+            "date": 1731355070
+        },
+        "lowest": {
+            "rating": 1198,
+            "date": 1542775211
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 49
+        }
+    }
+}

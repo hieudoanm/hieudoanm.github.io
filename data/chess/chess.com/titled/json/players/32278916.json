@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/32278916.4ad91249.200x200o.d20d0f44206a.jpeg",
+    "player_id": 32278916,
+    "@id": "https://api.chess.com/pub/player/timonrostov",
+    "url": "https://www.chess.com/member/TimonRostov",
+    "name": "Elizarov Dmitry",
+    "username": "timonrostov",
+    "title": "FM",
+    "followers": 61,
+    "country": "https://api.chess.com/pub/country/RU",
+    "location": "Rostov-on-Don",
+    "last_online": 1733990877,
+    "joined": 1484037593,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

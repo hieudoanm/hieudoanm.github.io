@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/26629088.317edf46.200x200o.cf2475fecb20.jpeg",
+    "player_id": 26629088,
+    "@id": "https://api.chess.com/pub/player/capatilla",
+    "url": "https://www.chess.com/member/capatilla",
+    "name": "Atilla K\u00f6ksal Y\u00fcksel",
+    "username": "capatilla",
+    "title": "CM",
+    "followers": 21,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1721761023,
+    "joined": 1455096593,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Wood",
+    "streaming_platforms": []
+}

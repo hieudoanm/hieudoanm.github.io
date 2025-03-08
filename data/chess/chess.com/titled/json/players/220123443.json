@@ -1,0 +1,87 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/220123443.07ed90b2.200x200o.0bdf0126e548.jpg",
+    "player_id": 220123443,
+    "@id": "https://api.chess.com/pub/player/ahmedkandiliii",
+    "url": "https://www.chess.com/member/ahmedkandiliii",
+    "name": "Ahmed Kandil",
+    "username": "ahmedkandiliii",
+    "title": "FM",
+    "followers": 34,
+    "country": "https://api.chess.com/pub/country/PS",
+    "last_online": 1733170546,
+    "joined": 1672838486,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1163,
+            "date": 1727886817,
+            "rd": 293
+        },
+        "best": {
+            "rating": 1600,
+            "date": 1672838486,
+            "game": "https://www.chess.com/game/daily/609078227"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 43682,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2439,
+            "date": 1732987088,
+            "rd": 43
+        },
+        "best": {
+            "rating": 2567,
+            "date": 1731173788,
+            "game": "https://www.chess.com/game/live/124912739947"
+        },
+        "record": {
+            "win": 191,
+            "loss": 186,
+            "draw": 20
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2559,
+            "date": 1732964548,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2680,
+            "date": 1729860251,
+            "game": "https://www.chess.com/game/live/102183872601"
+        },
+        "record": {
+            "win": 1182,
+            "loss": 1388,
+            "draw": 177
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2912,
+            "date": 1724942897
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1672838486
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 59,
+            "score": 56
+        }
+    }
+}

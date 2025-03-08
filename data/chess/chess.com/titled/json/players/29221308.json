@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/29221308.a63808e4.200x200o.191d1747f761.jpg",
+    "player_id": 29221308,
+    "@id": "https://api.chess.com/pub/player/chessmotives",
+    "url": "https://www.chess.com/member/chessmotives",
+    "name": "Lakshmi Narayan mv",
+    "username": "chessmotives",
+    "title": "CM",
+    "followers": 78,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "kodaikanal",
+    "last_online": 1733766977,
+    "joined": 1469535836,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

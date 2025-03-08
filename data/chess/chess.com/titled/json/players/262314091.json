@@ -1,0 +1,17 @@
+{
+    "player_id": 262314091,
+    "@id": "https://api.chess.com/pub/player/wolkzy01",
+    "url": "https://www.chess.com/member/wolkzy01",
+    "name": "Tam\u00e1s Tancsa",
+    "username": "wolkzy01",
+    "title": "FM",
+    "followers": 6,
+    "country": "https://api.chess.com/pub/country/CO",
+    "last_online": 1733818057,
+    "joined": 1678961404,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": []
+}

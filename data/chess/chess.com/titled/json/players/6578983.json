@@ -1,0 +1,18 @@
+{
+    "player_id": 6578983,
+    "@id": "https://api.chess.com/pub/player/soloctavian",
+    "url": "https://www.chess.com/member/Soloctavian",
+    "name": "Stein Aarland",
+    "username": "soloctavian",
+    "title": "FM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/NO",
+    "location": "Oslo",
+    "last_online": 1733872961,
+    "joined": 1327862528,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

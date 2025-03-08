@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/1070241.0cf415b7.200x200o.f16a9ca6a131.jpeg",
+    "player_id": 1070241,
+    "@id": "https://api.chess.com/pub/player/ecwinslow",
+    "url": "https://www.chess.com/member/ecwinslow",
+    "name": "Elliott Winslow",
+    "username": "ecwinslow",
+    "title": "IM",
+    "followers": 210,
+    "country": "https://api.chess.com/pub/country/US",
+    "location": "Alameda",
+    "last_online": 1734183900,
+    "joined": 1201754882,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1319,
+            "date": 1711686188,
+            "rd": 265
+        },
+        "best": {
+            "rating": 1319,
+            "date": 1303762240,
+            "game": "https://www.chess.com/game/daily/44364712"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 113260,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 1944,
+            "date": 1733204665,
+            "rd": 78
+        },
+        "best": {
+            "rating": 2329,
+            "date": 1571189662,
+            "game": "https://www.chess.com/game/live/6221431728"
+        },
+        "record": {
+            "win": 275,
+            "loss": 103,
+            "draw": 36
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1509,
+            "date": 1731171764,
+            "rd": 190
+        },
+        "best": {
+            "rating": 1763,
+            "date": 1369355000,
+            "game": "https://www.chess.com/game/live/521183189"
+        },
+        "record": {
+            "win": 18,
+            "loss": 11,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2292,
+            "date": 1734184508,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2385,
+            "date": 1672776495,
+            "game": "https://www.chess.com/game/live/4806750117"
+        },
+        "record": {
+            "win": 5090,
+            "loss": 3574,
+            "draw": 754
+        }
+    },
+    "fide": 2250,
+    "tactics": {
+        "highest": {
+            "rating": 3285,
+            "date": 1714152786
+        },
+        "lowest": {
+            "rating": 1308,
+            "date": 1303019788
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 33,
+            "score": 31
+        }
+    }
+}

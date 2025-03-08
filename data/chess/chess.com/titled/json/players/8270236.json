@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8270236.ec3da403.200x200o.949f902977ac.jpg",
+    "player_id": 8270236,
+    "@id": "https://api.chess.com/pub/player/sifisoncube01",
+    "url": "https://www.chess.com/member/sifisoncube01",
+    "name": "Sifiso Ncube",
+    "username": "sifisoncube01",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/ZW",
+    "location": "Poland",
+    "last_online": 1733614968,
+    "joined": 1342863727,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

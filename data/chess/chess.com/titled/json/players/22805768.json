@@ -1,0 +1,125 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/22805768.dcdefaec.200x200o.ab60b51c4779.jpg",
+    "player_id": 22805768,
+    "@id": "https://api.chess.com/pub/player/grunbergmihai",
+    "url": "https://www.chess.com/member/grunbergmihai",
+    "name": "Mihai-Lucian Grunberg",
+    "username": "grunbergmihai",
+    "title": "IM",
+    "followers": 309,
+    "country": "https://api.chess.com/pub/country/RO",
+    "location": "Timisoara",
+    "last_online": 1734163167,
+    "joined": 1434201388,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1652,
+            "date": 1734075271,
+            "rd": 103
+        },
+        "best": {
+            "rating": 1652,
+            "date": 1733148258,
+            "game": "https://www.chess.com/game/daily/703867849"
+        },
+        "record": {
+            "win": 50,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 17163,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1351,
+            "date": 1686031983,
+            "rd": 283
+        },
+        "best": {
+            "rating": 1351,
+            "date": 1686031983,
+            "game": "https://www.chess.com/game/daily/524183279"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 17163,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2283,
+            "date": 1720976996,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2511,
+            "date": 1590778730,
+            "game": "https://www.chess.com/game/live/5597084914"
+        },
+        "record": {
+            "win": 136,
+            "loss": 61,
+            "draw": 26
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2497,
+            "date": 1718475032,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2537,
+            "date": 1685210688,
+            "game": "https://www.chess.com/game/live/104354506681"
+        },
+        "record": {
+            "win": 734,
+            "loss": 535,
+            "draw": 103
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2554,
+            "date": 1734163395,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2682,
+            "date": 1702822641,
+            "game": "https://www.chess.com/game/live/75234749343"
+        },
+        "record": {
+            "win": 17274,
+            "loss": 15748,
+            "draw": 3856
+        }
+    },
+    "fide": 2403,
+    "tactics": {
+        "highest": {
+            "rating": 2550,
+            "date": 1707994269
+        },
+        "lowest": {
+            "rating": 1215,
+            "date": 1588874984
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 44
+        }
+    }
+}

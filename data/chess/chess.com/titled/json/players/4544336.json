@@ -1,0 +1,89 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/4544336.dc3d8e96.200x200o.8b5151c3d77e.jpeg",
+    "player_id": 4544336,
+    "@id": "https://api.chess.com/pub/player/elvital",
+    "url": "https://www.chess.com/member/ElVital",
+    "name": "Tommi Luukkonen",
+    "username": "elvital",
+    "title": "FM",
+    "followers": 19,
+    "country": "https://api.chess.com/pub/country/FI",
+    "location": "Jyvaskyla",
+    "last_online": 1734077106,
+    "joined": 1294854711,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 990,
+            "date": 1690320145,
+            "rd": 213
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1294854711,
+            "game": "https://www.chess.com/game/daily/43028464"
+        },
+        "record": {
+            "win": 1,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 17333,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2414,
+            "date": 1724571599,
+            "rd": 116
+        },
+        "best": {
+            "rating": 2548,
+            "date": 1586518855,
+            "game": "https://www.chess.com/game/live/4707765431"
+        },
+        "record": {
+            "win": 9,
+            "loss": 5,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2479,
+            "date": 1733001409,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2507,
+            "date": 1700584179,
+            "game": "https://www.chess.com/game/live/125771404681"
+        },
+        "record": {
+            "win": 165,
+            "loss": 130,
+            "draw": 20
+        }
+    },
+    "fide": 2310,
+    "tactics": {
+        "highest": {
+            "rating": 2305,
+            "date": 1716746846
+        },
+        "lowest": {
+            "rating": 1356,
+            "date": 1294941975
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 69,
+            "score": 66
+        }
+    }
+}

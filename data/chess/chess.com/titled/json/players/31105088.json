@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/31105088.84a3badf.200x200o.01afda42dd2c.jpeg",
+    "player_id": 31105088,
+    "@id": "https://api.chess.com/pub/player/dragonwizard02",
+    "url": "https://www.chess.com/member/DragonWizard02",
+    "name": "Vaseegaran Nandhakumar",
+    "username": "dragonwizard02",
+    "title": "CM",
+    "followers": 58,
+    "country": "https://api.chess.com/pub/country/IN",
+    "location": "Stew City",
+    "last_online": 1705931475,
+    "joined": 1479916890,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

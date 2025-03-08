@@ -1,0 +1,80 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34299522.a3850d46.200x200o.0c899f6527e8.jpeg",
+    "player_id": 34299522,
+    "@id": "https://api.chess.com/pub/player/berkardus",
+    "url": "https://www.chess.com/member/Berkardus",
+    "name": "Berk Ardus",
+    "username": "berkardus",
+    "title": "IM",
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/TR",
+    "last_online": 1728378315,
+    "joined": 1490617006,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Bronze",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1973,
+            "date": 1542117144,
+            "rd": 247
+        },
+        "best": {
+            "rating": 1973,
+            "date": 1542117144,
+            "game": "https://www.chess.com/game/live/3213373887"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2309,
+            "date": 1696415314,
+            "rd": 188
+        },
+        "best": {
+            "rating": 2591,
+            "date": 1696415064,
+            "game": "https://www.chess.com/game/live/4327238584"
+        },
+        "record": {
+            "win": 21,
+            "loss": 11,
+            "draw": 2
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2618,
+            "date": 1700315576,
+            "rd": 140
+        },
+        "best": {
+            "rating": 2666,
+            "date": 1570538350,
+            "game": "https://www.chess.com/game/live/4019672080"
+        },
+        "record": {
+            "win": 192,
+            "loss": 134,
+            "draw": 27
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1200,
+            "date": 1490617006
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1490617006
+        }
+    },
+    "puzzle_rush": {}
+}

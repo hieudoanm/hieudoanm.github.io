@@ -1,0 +1,61 @@
+{
+    "player_id": 366986885,
+    "@id": "https://api.chess.com/pub/player/kasparov_from_the_future",
+    "url": "https://www.chess.com/member/Kasparov_from_the_future",
+    "username": "kasparov_from_the_future",
+    "title": "IM",
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/CV",
+    "last_online": 1734088086,
+    "joined": 1717331659,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2531,
+            "date": 1732822429,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2531,
+            "date": 1732822429,
+            "game": "https://www.chess.com/game/live/126561522453"
+        },
+        "record": {
+            "win": 5,
+            "loss": 4,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2733,
+            "date": 1734088295,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2759,
+            "date": 1719154977,
+            "game": "https://www.chess.com/game/live/113133021437"
+        },
+        "record": {
+            "win": 144,
+            "loss": 103,
+            "draw": 11
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3227,
+            "date": 1734028726
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1717331659
+        }
+    },
+    "puzzle_rush": {}
+}

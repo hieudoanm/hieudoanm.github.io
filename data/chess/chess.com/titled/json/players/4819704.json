@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/4819704.573d93c0.200x200o.52c867c6b864.jpeg",
+    "player_id": 4819704,
+    "@id": "https://api.chess.com/pub/player/chessmatic242",
+    "url": "https://www.chess.com/member/Chessmatic242",
+    "name": "Kendrick Knowles",
+    "username": "chessmatic242",
+    "title": "CM",
+    "followers": 109,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1733666635,
+    "joined": 1299514385,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

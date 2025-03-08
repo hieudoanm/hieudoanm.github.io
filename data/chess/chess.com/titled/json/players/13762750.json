@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13762750.93e8e767.200x200o.9cb6053303a7.jpeg",
+    "player_id": 13762750,
+    "@id": "https://api.chess.com/pub/player/rmichiels",
+    "url": "https://www.chess.com/member/rmichiels",
+    "name": "Rob Michiels",
+    "username": "rmichiels",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/BE",
+    "location": "Brugge, Belgium",
+    "last_online": 1734115182,
+    "joined": 1380831461,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2466,
+            "date": 1734115281,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2554,
+            "date": 1727096014,
+            "game": "https://www.chess.com/game/live/120335387241"
+        },
+        "record": {
+            "win": 957,
+            "loss": 762,
+            "draw": 68
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2069,
+            "date": 1733950696,
+            "rd": 176
+        },
+        "best": {
+            "rating": 2241,
+            "date": 1713045270,
+            "game": "https://www.chess.com/game/live/639421557"
+        },
+        "record": {
+            "win": 138,
+            "loss": 99,
+            "draw": 16
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2833,
+            "date": 1726086189
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1380831461
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 40
+        }
+    }
+}

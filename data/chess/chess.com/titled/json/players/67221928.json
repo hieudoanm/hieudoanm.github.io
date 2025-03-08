@@ -1,0 +1,65 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/67221928.fc712010.200x200o.84bf7842cf0f.jpg",
+    "player_id": 67221928,
+    "@id": "https://api.chess.com/pub/player/jan939519",
+    "url": "https://www.chess.com/member/Jan939519",
+    "name": "Jani Bogoevski",
+    "username": "jan939519",
+    "title": "FM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/MK",
+    "location": "Skopje",
+    "last_online": 1733815810,
+    "joined": 1572247619,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2057,
+            "date": 1733691849,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2167,
+            "date": 1729001326,
+            "game": "https://www.chess.com/game/live/124845556595"
+        },
+        "record": {
+            "win": 347,
+            "loss": 270,
+            "draw": 30
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2358,
+            "date": 1732134550,
+            "rd": 147
+        },
+        "best": {
+            "rating": 2358,
+            "date": 1732134550,
+            "game": "https://www.chess.com/game/live/4241801825"
+        },
+        "record": {
+            "win": 76,
+            "loss": 32,
+            "draw": 4
+        }
+    },
+    "fide": 2160,
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1572247619
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1572247619
+        }
+    },
+    "puzzle_rush": {}
+}

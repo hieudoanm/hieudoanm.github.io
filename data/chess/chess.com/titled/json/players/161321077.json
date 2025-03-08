@@ -1,0 +1,63 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/161321077.0eef8ab5.200x200o.6e52e8ec0f0b.jpg",
+    "player_id": 161321077,
+    "@id": "https://api.chess.com/pub/player/randomnoob04",
+    "url": "https://www.chess.com/member/RandomNoob04",
+    "name": "Moritz Weish\u00e4utel",
+    "username": "randomnoob04",
+    "title": "FM",
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1733845104,
+    "joined": 1636893442,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2718,
+            "date": 1732037031,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2930,
+            "date": 1698063530,
+            "game": "https://www.chess.com/game/live/125521110007"
+        },
+        "record": {
+            "win": 53,
+            "loss": 50,
+            "draw": 11
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2709,
+            "date": 1733854132,
+            "rd": 41
+        },
+        "best": {
+            "rating": 2845,
+            "date": 1718122718,
+            "game": "https://www.chess.com/game/live/113068157613"
+        },
+        "record": {
+            "win": 557,
+            "loss": 365,
+            "draw": 86
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3700,
+            "date": 1705397511
+        },
+        "lowest": {
+            "rating": 1207,
+            "date": 1669298544
+        }
+    },
+    "puzzle_rush": {}
+}

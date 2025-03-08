@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23882590.e5eeab36.200x200o.0cd92618b1ee.jpeg",
+    "player_id": 23882590,
+    "@id": "https://api.chess.com/pub/player/aleksandar-topalov",
+    "url": "https://www.chess.com/member/Aleksandar-Topalov",
+    "name": "Aleksandar Topalov",
+    "username": "aleksandar-topalov",
+    "title": "CM",
+    "followers": 38,
+    "country": "https://api.chess.com/pub/country/RS",
+    "last_online": 1729012288,
+    "joined": 1440882260,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

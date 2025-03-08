@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/11820782.430c5b3b.200x200o.5c17b46880ec.jpeg",
+    "player_id": 11820782,
+    "@id": "https://api.chess.com/pub/player/cchipanga1",
+    "url": "https://www.chess.com/member/cchipanga1",
+    "name": "Chilly Chipanga",
+    "username": "cchipanga1",
+    "title": "CM",
+    "followers": 14,
+    "country": "https://api.chess.com/pub/country/MW",
+    "location": "Zomba, Malawi",
+    "last_online": 1727068069,
+    "joined": 1368118483,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

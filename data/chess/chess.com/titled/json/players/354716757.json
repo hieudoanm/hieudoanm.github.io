@@ -1,0 +1,101 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/354716757.d6ff70f5.200x200o.d49321ffb763.jpg",
+    "player_id": 354716757,
+    "@id": "https://api.chess.com/pub/player/tenthplanet",
+    "url": "https://www.chess.com/member/TenthPlanet",
+    "name": "Ylon Schwartz",
+    "username": "tenthplanet",
+    "title": "FM",
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/BS",
+    "location": "Shade Tree",
+    "last_online": 1734137430,
+    "joined": 1712104593,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1177,
+            "date": 1727370354,
+            "rd": 294
+        },
+        "best": {
+            "rating": 1177,
+            "date": 1727370354,
+            "game": "https://www.chess.com/game/daily/702642861"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 6563,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2217,
+            "date": 1731727441,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2217,
+            "date": 1720840390,
+            "game": "https://www.chess.com/game/live/119331587143"
+        },
+        "record": {
+            "win": 55,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2333,
+            "date": 1734185171,
+            "rd": 21
+        },
+        "best": {
+            "rating": 2480,
+            "date": 1730305451,
+            "game": "https://www.chess.com/game/live/109908651427"
+        },
+        "record": {
+            "win": 2475,
+            "loss": 1954,
+            "draw": 127
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2500,
+            "date": 1731726045,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2500,
+            "date": 1714782228,
+            "game": "https://www.chess.com/game/live/108454254975"
+        },
+        "record": {
+            "win": 243,
+            "loss": 68,
+            "draw": 8
+        }
+    },
+    "fide": 2217,
+    "tactics": {
+        "highest": {
+            "rating": 3402,
+            "date": 1732336113
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1712104593
+        }
+    },
+    "puzzle_rush": {}
+}

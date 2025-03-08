@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/90694156.d7f4a91f.200x200o.3294240b1eb6.jpg",
+    "player_id": 90694156,
+    "@id": "https://api.chess.com/pub/player/capitan-a",
+    "url": "https://www.chess.com/member/Capitan-A",
+    "name": "Amin Kabilov",
+    "username": "capitan-a",
+    "title": "CM",
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1731688588,
+    "joined": 1599422460,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Stone",
+    "streaming_platforms": []
+}

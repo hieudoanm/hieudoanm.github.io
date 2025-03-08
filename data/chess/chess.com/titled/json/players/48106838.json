@@ -1,0 +1,19 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/48106838.618142b1.200x200o.bfc729cbe747.jpeg",
+    "player_id": 48106838,
+    "@id": "https://api.chess.com/pub/player/slowdgehammer",
+    "url": "https://www.chess.com/member/slowdgehammer",
+    "name": "Eduardo Marra",
+    "username": "slowdgehammer",
+    "title": "FM",
+    "followers": 252,
+    "country": "https://api.chess.com/pub/country/BR",
+    "location": "SP",
+    "last_online": 1734178629,
+    "joined": 1532344123,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Elite",
+    "streaming_platforms": []
+}

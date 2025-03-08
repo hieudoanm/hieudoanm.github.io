@@ -1,0 +1,111 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6611779.af28f3af.200x200o.b428d675d594.jpeg",
+    "player_id": 6611779,
+    "@id": "https://api.chess.com/pub/player/renzogm",
+    "url": "https://www.chess.com/member/renzogm",
+    "name": "Renzo Gutierrez",
+    "username": "renzogm",
+    "title": "FM",
+    "followers": 132,
+    "country": "https://api.chess.com/pub/country/CA",
+    "location": "Montreal",
+    "last_online": 1734108553,
+    "joined": 1328328498,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2070,
+            "date": 1728030494,
+            "rd": 62
+        },
+        "best": {
+            "rating": 2070,
+            "date": 1696460356,
+            "game": "https://www.chess.com/game/daily/487418233"
+        },
+        "record": {
+            "win": 173,
+            "loss": 11,
+            "draw": 4,
+            "time_per_move": 29305,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 932,
+            "date": 1633913469,
+            "rd": 232
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1328328498,
+            "game": "https://www.chess.com/game/daily/359668199"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 29305,
+            "timeout_percent": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2703,
+            "date": 1722825542,
+            "rd": 19
+        },
+        "best": {
+            "rating": 2728,
+            "date": 1722614884,
+            "game": "https://www.chess.com/game/live/55968350001"
+        },
+        "record": {
+            "win": 3595,
+            "loss": 2567,
+            "draw": 526
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2704,
+            "date": 1679719287,
+            "rd": 90
+        },
+        "best": {
+            "rating": 2704,
+            "date": 1679719287,
+            "game": "https://www.chess.com/game/live/30082114563"
+        },
+        "record": {
+            "win": 607,
+            "loss": 480,
+            "draw": 114
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 3333,
+            "date": 1723664234
+        },
+        "lowest": {
+            "rating": 1200,
+            "date": 1610840904
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 54,
+            "score": 51
+        },
+        "daily": {
+            "total_attempts": 38,
+            "score": 35
+        }
+    }
+}

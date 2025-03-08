@@ -1,0 +1,106 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/71145212.f945c1db.200x200o.8f98cbf502eb.jpg",
+    "player_id": 71145212,
+    "@id": "https://api.chess.com/pub/player/fm-davidsonr",
+    "url": "https://www.chess.com/member/FM-DavidsonR",
+    "name": "Davidson Gabriel",
+    "username": "fm-davidsonr",
+    "title": "CM",
+    "followers": 40,
+    "country": "https://api.chess.com/pub/country/HT",
+    "location": "centre",
+    "last_online": 1734018018,
+    "joined": 1579739963,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1596,
+            "date": 1730483334,
+            "rd": 127
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1602017468,
+            "game": "https://www.chess.com/game/daily/542638377"
+        },
+        "record": {
+            "win": 7,
+            "loss": 28,
+            "draw": 0,
+            "time_per_move": 9728,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2313,
+            "date": 1732976229,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2356,
+            "date": 1723743178,
+            "game": "https://www.chess.com/game/live/109200014629"
+        },
+        "record": {
+            "win": 127,
+            "loss": 139,
+            "draw": 24
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2160,
+            "date": 1733594204,
+            "rd": 34
+        },
+        "best": {
+            "rating": 2344,
+            "date": 1716248998,
+            "game": "https://www.chess.com/game/live/126120609151"
+        },
+        "record": {
+            "win": 1108,
+            "loss": 1150,
+            "draw": 118
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2511,
+            "date": 1734180183,
+            "rd": 24
+        },
+        "best": {
+            "rating": 2627,
+            "date": 1715604716,
+            "game": "https://www.chess.com/game/live/127431023009"
+        },
+        "record": {
+            "win": 3930,
+            "loss": 4282,
+            "draw": 625
+        }
+    },
+    "fide": 2073,
+    "tactics": {
+        "highest": {
+            "rating": 3536,
+            "date": 1719777880
+        },
+        "lowest": {
+            "rating": 1216,
+            "date": 1579743488
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 39,
+            "score": 36
+        }
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/188954925.2a8e66a8.200x200o.a38594ce8a7a.jpg",
+    "player_id": 188954925,
+    "@id": "https://api.chess.com/pub/player/jueies",
+    "url": "https://www.chess.com/member/JueIes",
+    "name": "Julius Ohler",
+    "username": "jueies",
+    "title": "FM",
+    "followers": 29,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1734114758,
+    "joined": 1656953811,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2594,
+            "date": 1732788818,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2627,
+            "date": 1720974443,
+            "game": "https://www.chess.com/game/live/114719934177"
+        },
+        "record": {
+            "win": 29,
+            "loss": 4,
+            "draw": 2
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2509,
+            "date": 1733512213,
+            "rd": 38
+        },
+        "best": {
+            "rating": 2558,
+            "date": 1726594293,
+            "game": "https://www.chess.com/game/live/118426761893"
+        },
+        "record": {
+            "win": 324,
+            "loss": 232,
+            "draw": 29
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2568,
+            "date": 1734115718,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2614,
+            "date": 1732808462,
+            "game": "https://www.chess.com/game/live/116092794961"
+        },
+        "record": {
+            "win": 1037,
+            "loss": 825,
+            "draw": 172
+        }
+    },
+    "fide": 2273,
+    "tactics": {
+        "highest": {
+            "rating": 3554,
+            "date": 1734179707
+        },
+        "lowest": {
+            "rating": 1010,
+            "date": 1662804119
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 64
+        },
+        "daily": {
+            "total_attempts": 51,
+            "score": 48
+        }
+    }
+}

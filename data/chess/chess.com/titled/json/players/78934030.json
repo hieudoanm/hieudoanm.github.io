@@ -1,0 +1,85 @@
+{
+    "player_id": 78934030,
+    "@id": "https://api.chess.com/pub/player/joliyroger",
+    "url": "https://www.chess.com/member/JoliyRoger",
+    "name": "Aleksandr Devaev",
+    "username": "joliyroger",
+    "title": "FM",
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/RU",
+    "last_online": 1733844858,
+    "joined": 1588957295,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2512,
+            "date": 1621432949,
+            "rd": 263
+        },
+        "best": {
+            "rating": 2512,
+            "date": 1621432949,
+            "game": "https://www.chess.com/game/live/5610637712"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2432,
+            "date": 1608408066,
+            "rd": 58
+        },
+        "best": {
+            "rating": 2517,
+            "date": 1608402975,
+            "game": "https://www.chess.com/game/live/6007558880"
+        },
+        "record": {
+            "win": 82,
+            "loss": 62,
+            "draw": 8
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2471,
+            "date": 1733852793,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2564,
+            "date": 1722964852,
+            "game": "https://www.chess.com/game/live/17515397279"
+        },
+        "record": {
+            "win": 1182,
+            "loss": 1368,
+            "draw": 155
+        }
+    },
+    "fide": 2325,
+    "tactics": {
+        "highest": {
+            "rating": 2424,
+            "date": 1674460730
+        },
+        "lowest": {
+            "rating": 2293,
+            "date": 1674451094
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 33,
+            "score": 30
+        }
+    }
+}

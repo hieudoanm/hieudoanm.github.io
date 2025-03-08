@@ -1,0 +1,67 @@
+{
+    "player_id": 144156285,
+    "@id": "https://api.chess.com/pub/player/feuervogel1000000",
+    "url": "https://www.chess.com/member/feuervogel1000000",
+    "name": "Hussain Besou",
+    "username": "feuervogel1000000",
+    "title": "FM",
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/DE",
+    "last_online": 1726158397,
+    "joined": 1623429239,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Crystal",
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2335,
+            "date": 1722102884,
+            "rd": 95
+        },
+        "best": {
+            "rating": 2449,
+            "date": 1682787735,
+            "game": "https://www.chess.com/game/live/82151547369"
+        },
+        "record": {
+            "win": 14,
+            "loss": 12,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2537,
+            "date": 1722101442,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2606,
+            "date": 1697033688,
+            "game": "https://www.chess.com/game/live/90711045945"
+        },
+        "record": {
+            "win": 198,
+            "loss": 154,
+            "draw": 24
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2418,
+            "date": 1682075337
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1623429239
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 47,
+            "score": 45
+        }
+    }
+}

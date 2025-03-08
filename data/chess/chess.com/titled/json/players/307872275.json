@@ -1,0 +1,104 @@
+{
+    "player_id": 307872275,
+    "@id": "https://api.chess.com/pub/player/najdorfplayerc5",
+    "url": "https://www.chess.com/member/NajdorfPlayerc5",
+    "name": "Piotr Brzezina",
+    "username": "najdorfplayerc5",
+    "title": "FM",
+    "followers": 47,
+    "country": "https://api.chess.com/pub/country/PL",
+    "last_online": 1733866077,
+    "joined": 1692878002,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Champion",
+    "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1912,
+            "date": 1734025723,
+            "rd": 195
+        },
+        "best": {
+            "rating": 1912,
+            "date": 1734025723,
+            "game": "https://www.chess.com/game/daily/705932673"
+        },
+        "record": {
+            "win": 4,
+            "loss": 0,
+            "draw": 1,
+            "time_per_move": 40259,
+            "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2355,
+            "date": 1729235072,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2362,
+            "date": 1728939731,
+            "game": "https://www.chess.com/game/live/122677527669"
+        },
+        "record": {
+            "win": 2,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2603,
+            "date": 1733315390,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2727,
+            "date": 1730412613,
+            "game": "https://www.chess.com/game/live/120073189529"
+        },
+        "record": {
+            "win": 429,
+            "loss": 451,
+            "draw": 103
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2710,
+            "date": 1732038910,
+            "rd": 30
+        },
+        "best": {
+            "rating": 2873,
+            "date": 1730819304,
+            "game": "https://www.chess.com/game/live/124401579601"
+        },
+        "record": {
+            "win": 533,
+            "loss": 510,
+            "draw": 131
+        }
+    },
+    "fide": 2346,
+    "tactics": {
+        "highest": {
+            "rating": 3423,
+            "date": 1727527703
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1692878002
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 66,
+            "score": 63
+        }
+    }
+}

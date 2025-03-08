@@ -1,0 +1,81 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/17127200.afe15854.200x200o.e63f32443e53.jpg",
+    "player_id": 17127200,
+    "@id": "https://api.chess.com/pub/player/kuruguru",
+    "url": "https://www.chess.com/member/kuruguru",
+    "name": "Daniel Romero Castej\u00f3n",
+    "username": "kuruguru",
+    "title": "CM",
+    "followers": 30,
+    "country": "https://api.chess.com/pub/country/ES",
+    "location": "El Prat de Llobregat",
+    "last_online": 1734173950,
+    "joined": 1398938486,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2210,
+            "date": 1729702330,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2271,
+            "date": 1703614713,
+            "game": "https://www.chess.com/game/live/97353073565"
+        },
+        "record": {
+            "win": 70,
+            "loss": 6,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2144,
+            "date": 1731676831,
+            "rd": 35
+        },
+        "best": {
+            "rating": 2383,
+            "date": 1713176968,
+            "game": "https://www.chess.com/game/live/105303044517"
+        },
+        "record": {
+            "win": 726,
+            "loss": 537,
+            "draw": 67
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2303,
+            "date": 1734175416,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2414,
+            "date": 1703414833,
+            "game": "https://www.chess.com/game/live/95645421157"
+        },
+        "record": {
+            "win": 1776,
+            "loss": 1321,
+            "draw": 208
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2867,
+            "date": 1723668394
+        },
+        "lowest": {
+            "rating": 1297,
+            "date": 1398941192
+        }
+    },
+    "puzzle_rush": {}
+}

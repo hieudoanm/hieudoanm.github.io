@@ -1,0 +1,17 @@
+{
+    "player_id": 12773666,
+    "@id": "https://api.chess.com/pub/player/chessfannm",
+    "url": "https://www.chess.com/member/ChessFanNM",
+    "name": "Roman Jiganchine",
+    "username": "chessfannm",
+    "title": "CM",
+    "followers": 22,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1733770791,
+    "joined": 1374243608,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": []
+}

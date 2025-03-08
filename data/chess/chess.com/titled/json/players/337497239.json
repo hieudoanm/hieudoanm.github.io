@@ -1,0 +1,85 @@
+{
+    "player_id": 337497239,
+    "@id": "https://api.chess.com/pub/player/acollins05",
+    "url": "https://www.chess.com/member/ACollins05",
+    "name": "Adam Collins",
+    "username": "acollins05",
+    "title": "CM",
+    "followers": 15,
+    "country": "https://api.chess.com/pub/country/IE",
+    "last_online": 1734083579,
+    "joined": 1704666410,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2336,
+            "date": 1732877410,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2343,
+            "date": 1728035937,
+            "game": "https://www.chess.com/game/live/121773585433"
+        },
+        "record": {
+            "win": 23,
+            "loss": 4,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2569,
+            "date": 1729007622,
+            "rd": 40
+        },
+        "best": {
+            "rating": 2708,
+            "date": 1704929545,
+            "game": "https://www.chess.com/game/live/120678689579"
+        },
+        "record": {
+            "win": 111,
+            "loss": 136,
+            "draw": 18
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2524,
+            "date": 1734114257,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2676,
+            "date": 1709512518,
+            "game": "https://www.chess.com/game/live/108228101451"
+        },
+        "record": {
+            "win": 660,
+            "loss": 659,
+            "draw": 192
+        }
+    },
+    "fide": 2192,
+    "tactics": {
+        "highest": {
+            "rating": 2923,
+            "date": 1734150227
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1704666410
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 10,
+            "score": 9
+        }
+    }
+}

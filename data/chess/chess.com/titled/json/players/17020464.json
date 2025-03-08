@@ -1,0 +1,18 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/17020464.c7cec1ba.200x200o.e9a9a2936bb2.jpg",
+    "player_id": 17020464,
+    "@id": "https://api.chess.com/pub/player/cool64chess",
+    "url": "https://www.chess.com/member/cool64chess",
+    "name": "Rajarishi Karthi",
+    "username": "cool64chess",
+    "title": "CM",
+    "followers": 1782,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1734156753,
+    "joined": 1398240542,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}

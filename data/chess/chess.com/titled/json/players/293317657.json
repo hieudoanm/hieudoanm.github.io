@@ -1,0 +1,47 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/293317657.a729c16f.200x200o.39e289e939b0.jpg",
+    "player_id": 293317657,
+    "@id": "https://api.chess.com/pub/player/trajkonedev",
+    "url": "https://www.chess.com/member/TrajkoNedev",
+    "name": "Trajko Nedev",
+    "username": "trajkonedev",
+    "title": "GM",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/MK",
+    "last_online": 1734109806,
+    "joined": 1686680190,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2530,
+            "date": 1696957302,
+            "rd": 64
+        },
+        "best": {
+            "rating": 2530,
+            "date": 1696957302,
+            "game": "https://www.chess.com/game/live/90695986743"
+        },
+        "record": {
+            "win": 39,
+            "loss": 2,
+            "draw": 2
+        }
+    },
+    "fide": 2474,
+    "tactics": {
+        "highest": {
+            "rating": 3106,
+            "date": 1732524740
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1686680190
+        }
+    },
+    "puzzle_rush": {}
+}

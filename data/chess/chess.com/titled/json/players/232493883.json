@@ -1,0 +1,69 @@
+{
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/232493883.dbba51e6.200x200o.b71d35794f10.jpg",
+    "player_id": 232493883,
+    "@id": "https://api.chess.com/pub/player/el_luiso96",
+    "url": "https://www.chess.com/member/el_luiso96",
+    "name": "Luis Hernandez",
+    "username": "el_luiso96",
+    "title": "IM",
+    "followers": 26,
+    "country": "https://api.chess.com/pub/country/CU",
+    "last_online": 1724381250,
+    "joined": 1674706142,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Silver",
+    "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2153,
+            "date": 1693013072,
+            "rd": 149
+        },
+        "best": {
+            "rating": 2423,
+            "date": 1693006912,
+            "game": "https://www.chess.com/game/live/86745015473"
+        },
+        "record": {
+            "win": 3,
+            "loss": 4,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2635,
+            "date": 1732652839,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2705,
+            "date": 1677515779,
+            "game": "https://www.chess.com/game/live/81028852797"
+        },
+        "record": {
+            "win": 78,
+            "loss": 73,
+            "draw": 8
+        }
+    },
+    "fide": 0,
+    "tactics": {
+        "highest": {
+            "rating": 3314,
+            "date": 1680635815
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1674706142
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 44,
+            "score": 42
+        }
+    }
+}

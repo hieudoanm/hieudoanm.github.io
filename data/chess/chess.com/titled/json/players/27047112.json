@@ -1,0 +1,18 @@
+{
+    "player_id": 27047112,
+    "@id": "https://api.chess.com/pub/player/spotbet",
+    "url": "https://www.chess.com/member/spotbet",
+    "name": "Vilmos Balint",
+    "username": "spotbet",
+    "title": "FM",
+    "followers": 44,
+    "country": "https://api.chess.com/pub/country/HU",
+    "location": "Budapest",
+    "last_online": 1734138625,
+    "joined": 1457019338,
+    "status": "premium",
+    "is_streamer": false,
+    "verified": false,
+    "league": "Legend",
+    "streaming_platforms": []
+}
