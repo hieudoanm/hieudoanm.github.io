@@ -1,0 +1,11 @@
+services:
+  nothing-stockfish:
+    container_name: nothing-stockfish
+    build: .
+    ports:
+      - '10000:10000'
+    deploy:
+      resources:
+        limits:
+          cpus: 0.1
+          memory: 512M
