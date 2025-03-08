@@ -15,7 +15,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@oclif/core": "4.2.8",
+    "@oclif/core": "4.2.9",
     "uuid": "11.1.0"
   },
   "devDependencies": {

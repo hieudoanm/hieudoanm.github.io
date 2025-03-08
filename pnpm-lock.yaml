@@ -338,8 +338,8 @@ importers:
   packages/cli/ts:
     dependencies:
       '@oclif/core':
-        specifier: 4.2.8
-        version: 4.2.8
+        specifier: 4.2.9
+        version: 4.2.9
       uuid:
         specifier: 11.1.0
         version: 11.1.0
@@ -2235,8 +2235,8 @@ packages:
     resolution: {integrity: sha512-NCcr1uQo1k5U+SYlnIrbAh3cxy+OQT1VtqiAbxdymSlptbzBb62AjH2xXgjNCoP073hoa1CfCAcwoZ8k96C4nA==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  '@oclif/core@4.2.8':
-    resolution: {integrity: sha512-OWv4Va6bERxIhrYcnUGzyhGRqktc64lJO6cZ3UwkzJDpfR8ZrbCxRfKRBBah1i8kzUlOAeAXnpbMBMah3skKwA==}
+  '@oclif/core@4.2.9':
+    resolution: {integrity: sha512-cIlvpefLtorcyvnvJiOmYBqn6J6qdp/06tk54p2MddGEr0gnA7EIaQXM2UtRjf4ryDVCbIo+8IFRsW8Flt0uGA==}
     engines: {node: '>=18.0.0'}
 
   '@oclif/plugin-help@6.2.26':
@@ -10514,7 +10514,7 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@oclif/core@4.2.8':
+  '@oclif/core@4.2.9':
     dependencies:
       ansi-escapes: 4.3.2
       ansis: 3.17.0
@@ -10537,12 +10537,12 @@ snapshots:
 
   '@oclif/plugin-help@6.2.26':
     dependencies:
-      '@oclif/core': 4.2.8
+      '@oclif/core': 4.2.9
 
   '@oclif/plugin-not-found@3.2.44(@types/node@22.13.9)':
     dependencies:
       '@inquirer/prompts': 7.3.2(@types/node@22.13.9)
-      '@oclif/core': 4.2.8
+      '@oclif/core': 4.2.9
       ansis: 3.17.0
       fast-levenshtein: 3.0.0
     transitivePeerDependencies:
@@ -10550,7 +10550,7 @@ snapshots:
 
   '@oclif/plugin-warn-if-update-available@3.1.35':
     dependencies:
-      '@oclif/core': 4.2.8
+      '@oclif/core': 4.2.9
       ansis: 3.17.0
       debug: 4.4.0(supports-color@8.1.1)
       http-call: 5.3.0
@@ -13053,7 +13053,7 @@ snapshots:
       '@typescript-eslint/parser': 8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
       eslint: 9.22.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.8.3(eslint-plugin-import@2.31.0)(eslint@9.22.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2))
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-typescript@3.8.3)(eslint@9.22.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.22.0(jiti@2.4.2))
       eslint-plugin-react: 7.37.4(eslint@9.22.0(jiti@2.4.2))
@@ -13073,7 +13073,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0)(eslint@9.22.0(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.0(supports-color@8.1.1)
@@ -13088,14 +13088,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.3)(eslint@9.22.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
       eslint: 9.22.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.8.3(eslint-plugin-import@2.31.0)(eslint@9.22.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -13110,7 +13110,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.22.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.3)(eslint@9.22.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -15472,7 +15472,7 @@ snapshots:
       '@inquirer/confirm': 3.2.0
       '@inquirer/input': 2.3.0
       '@inquirer/select': 2.5.0
-      '@oclif/core': 4.2.8
+      '@oclif/core': 4.2.9
       '@oclif/plugin-help': 6.2.26
       '@oclif/plugin-not-found': 3.2.44(@types/node@22.13.9)
       '@oclif/plugin-warn-if-update-available': 3.1.35
