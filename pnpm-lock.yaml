@@ -389,7 +389,7 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
-  packages/server/instagram:
+  packages/server/node.js/instagram:
     dependencies:
       puppeteer:
         specifier: 24.4.0
@@ -429,7 +429,7 @@ importers:
         specifier: 8.26.0
         version: 8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
 
-  packages/server/youtube:
+  packages/server/node.js/youtube:
     dependencies:
       '@distube/ytdl-core':
         specifier: 4.16.4
