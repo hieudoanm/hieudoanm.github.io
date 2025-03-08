@@ -60,9 +60,9 @@
 | 20  | DevOps    | Containerisation |                    | [Docker][docker]                            |
 | 21  | DevOps    | Version Control  |                    | [GitHub][gh]                                |
 | 22  | DevOps    | CI/CD            |                    | [GitHub Actions][gh-actions]                |
-| 23  | DevOps    | Hosting          | Web                | [Vercel][vercel]                            |
-| 24  | DevOps    | Hosting          | Server             | [Render][render]                            |
-| 25  |           |                  |                    |                                             |
+| 23  | DevOps    | IaC              |                    | [Terraform][terraform]                      |
+| 24  | DevOps    | Hosting          | Web                | [Vercel][vercel]                            |
+| 25  | DevOps    | Hosting          | Server             | [Render][render]                            |
 | 26  |           |                  |                    |                                             |
 | 27  |           |                  |                    |                                             |
 | 28  |           |                  |                    |                                             |
@@ -99,5 +99,6 @@
 [tailwindcss]: https://tailwindcss.com/
 [tensorflow]: https://www.tensorflow.org/
 [tauri]: https://v2.tauri.app/
+[terraform]: https://www.terraform.io
 [typescript]: https://www.typescriptlang.org/
 [vercel]: https://vercel.com/
