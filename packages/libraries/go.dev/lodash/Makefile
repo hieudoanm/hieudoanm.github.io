@@ -1,11 +1,8 @@
 format:
-	go fmt
+	go fmt ./...
 
 vet:
-	go vet main.go
+	go vet ./...
 
 lint:
-	find . -type d | xargs -L 1 golint
-
-test:
-		go test ./...
+	golint ./...

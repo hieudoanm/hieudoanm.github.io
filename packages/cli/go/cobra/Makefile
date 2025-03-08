@@ -1,15 +1,15 @@
 format:
-	go fmt
+	go fmt ./...
 
 vet:
-	go vet main.go
+	go vet ./...
 
 lint:
-	find . -type d | xargs -L 1 golint
+	golint ./...
 
 build:
-	go fmt
-	go vet main.go
-	find . -type d | xargs -L 1 golint
+	go fmt ./...
+	go vet ./...
+	golint ./...
 	go build -o ./bin/nothing ./main.go
 	sudo cp ./bin/nothing /usr/local/bin/
