@@ -1,8 +1,8 @@
-# [Nothing](https://hieudoanm.github.io/nothing)
+# [Hieu Doan](https://hieudoanm.github.io)
 
 ## Table of Content
 
-- [Nothing](#nothing)
+- [Hieu Doan](#hieu-doan)
   - [Table of Content](#table-of-content)
   - [Downloads](#downloads)
   - [Favourites](#favourites)
@@ -33,11 +33,11 @@
 
 ## Favourites
 
-- ⭐ [Apps](https://hieudoanm.github.io/nothing/apps)
-  - ⭐ [Chess](https://hieudoanm.github.io/nothing/apps/chess)
-    - ⭐ [Chess960](https://hieudoanm.github.io/nothing/apps/chess/books/chess960)
-    - ⭐ [Openings](https://hieudoanm.github.io/nothing/apps/chess/books/openings)
-  - ⭐ [Instagram](https://hieudoanm.github.io/nothing/apps/instagram)
+- ⭐ [Apps](https://hieudoanm.github.io/apps)
+  - ⭐ [Chess](https://hieudoanm.github.io/apps/chess)
+    - ⭐ [Chess960](https://hieudoanm.github.io/apps/chess/books/chess960)
+    - ⭐ [Openings](https://hieudoanm.github.io/apps/chess/books/openings)
+  - ⭐ [Instagram](https://hieudoanm.github.io/apps/instagram)
 
 ## Tech Stack
 
