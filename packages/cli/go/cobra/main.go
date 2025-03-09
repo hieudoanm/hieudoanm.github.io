@@ -1,7 +1,7 @@
 // Package cmd ...
 package main
 
-import "nothing-cli/cmd"
+import "hieudoanm-cli/cmd"
 
 func main() {
 	cmd.Execute()

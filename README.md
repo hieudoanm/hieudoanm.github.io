@@ -17,8 +17,8 @@
 ## Downloads
 
 - CLI
-  - [x] `nothing.bash` - Download [here](./packages/cli/bash/dist/nothing.bash)
-  - [x] `nothing.binary` - Download [here](./packages/cli/go/cobra/bin/nothing)
+  - [x] `hieudoanm.bash` - Download [here](./packages/cli/bash/dist/hieudoanm.bash)
+  - [x] `hieudoanm.binary` - Download [here](./packages/cli/go/cobra/bin/hieudoanm)
   - [x] [GitHub CLI - Extensions](https://cli.github.com/manual/gh_extension)
     - [x] `gh-coc` - Download [here](./packages/cli/go/github/extensions/gh-coc/bin/gh-coc)
     - [x] `gh-ignore` - Download [here](./packages/cli/go/github/extensions/gh-ignore/bin/gh-ignore)
