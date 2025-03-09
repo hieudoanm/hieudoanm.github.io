@@ -20,32 +20,37 @@ const HomePage: NextPage = () => {
               href: '/apps',
               name: 'Apps',
               icon: <FaAppStoreIos />,
+              target: '_self',
             },
             {
               id: 'github',
               href: 'https://github.com/hieudoanm',
               name: 'GitHub',
               icon: <FaSquareGithub />,
+              target: '_blank',
             },
             {
               id: 'twitter',
               href: 'https://x.com/hieudoanm',
               name: 'Twitter',
               icon: <FaSquareTwitter />,
+              target: '_blank',
             },
             {
               id: 'linkedin',
               href: 'https://www.linkedin.com/in/hieudoanm',
               name: 'LinkedIn',
               icon: <FaLinkedin />,
+              target: '_blank',
             },
             {
               id: 'instagram',
               href: 'https://instagram.com/hieudoanm',
               name: 'Instagram',
               icon: <FaSquareInstagram />,
+              target: '_blank',
             },
-          ].map(({ id, href, name, icon }) => {
+          ].map(({ id, href, name, icon, target = '_self' }) => {
             return (
               <div
                 key={id}
@@ -53,7 +58,7 @@ const HomePage: NextPage = () => {
                 {icon}
                 <Link
                   href={href}
-                  target="_blank"
+                  target={target}
                   className="tracking-wide lowercase">
                   {name}
                 </Link>
