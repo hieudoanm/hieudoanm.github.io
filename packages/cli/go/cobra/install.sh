@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Define variables
-BIN_NAME="hieu"  # Change this to your binary name
-GITHUB_RAW_URL="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/cli/go/cobra/bin/hieu"  # Update this URL
-
-# Destination path
-DEST_PATH="/usr/local/bin/$BIN_NAME"
-
 # Ensure the script is run with sudo
 if [[ $EUID -ne 0 ]]; then
     echo "This script requires sudo privileges. Re-running with sudo..."
@@ -14,8 +7,21 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
+# Define variables
+BIN_NAME="hieu"  # Change this to your binary name
+GITHUB_RAW_URL="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/cli/go/cobra/bin/hieu"  # Update this URL
+
+# Ensure BIN_NAME is not empty
+if [[ -z "$BIN_NAME" ]]; then
+    echo "Error: BIN_NAME is empty!"
+    exit 1
+fi
+
+# Destination path
+DEST_PATH="/usr/local/bin/$BIN_NAME"
+
 # Download the binary
-echo "Downloading $BIN_NAME..."
+echo "Downloading $BIN_NAME to $DEST_PATH..."
 sudo rm -rf "$DEST_PATH"
 echo "$DEST_PATH"
 curl -L -o "$DEST_PATH" "$GITHUB_RAW_URL"
