@@ -17,6 +17,7 @@ fi
 # Download the binary
 echo "Downloading $BIN_NAME..."
 sudo rm -rf "$DEST_PATH"
+echo "$DEST_PATH"
 curl -L -o "$DEST_PATH" "$GITHUB_RAW_URL"
 
 # Make it executable
