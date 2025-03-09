@@ -124,4 +124,6 @@ const ChessBookmarks: NextPage = () => {
   );
 };
 
+export const dynamic = 'force-static';
+
 export default ChessBookmarks;

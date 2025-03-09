@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Nothing</title>
+        <title>HIEU</title>
         <link
           rel="icon"
           type="image/x-icon"
