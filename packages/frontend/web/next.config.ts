@@ -8,7 +8,7 @@ const withPWA = nextPWA({
   dest: 'public',
   disable: NODE_ENV === 'development',
   register: NODE_ENV !== 'development',
-  scope: NODE_ENV === 'development' ? '/' : '/nothing',
+  scope: '/',
 });
 
 const nextConfig: NextConfig = {
@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: { unoptimized: true },
   experimental: { turbo: { treeShaking: true } },
-  basePath: NODE_ENV === 'development' ? '' : '/nothing',
+  basePath: '',
   distDir: NODE_ENV === 'development' ? '.next' : '../../../docs',
   webpack: (config) => {
     config.experiments = {
