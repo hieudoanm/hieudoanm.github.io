@@ -1,4 +1,4 @@
-import { WidgetTasks } from '@nothing/widgets/tasks/WidgetTasks';
+import { WidgetTasks } from '@web/widgets/tasks/WidgetTasks';
 import { NextPage } from 'next';
 
 const TasksPage: NextPage = () => {

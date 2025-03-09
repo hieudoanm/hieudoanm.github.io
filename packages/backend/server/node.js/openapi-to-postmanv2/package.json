@@ -1,0 +1,47 @@
+{
+  "name": "@hieudoanm/openapi-to-postmanv2",
+  "version": "0.0.1",
+  "description": "OpenAPI to PostmanV2",
+  "main": "dist/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io#readme",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.6.1",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --fix .",
+    "format": "prettier --cache --write .",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "dev": "nodemon",
+    "start": "node ./dist/server.js"
+  },
+  "dependencies": {
+    "openapi-to-postmanv2": "5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.22.0",
+    "@types/figlet": "1.7.0",
+    "@types/node": "22.13.10",
+    "@types/openapi-to-postmanv2": "^3.2.4",
+    "eslint": "9.22.0",
+    "globals": "16.0.0",
+    "nodemon": "3.1.9",
+    "prettier": "3.5.3",
+    "rimraf": "6.0.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.8.2",
+    "typescript-eslint": "8.26.0"
+  },
+  "keywords": [
+    "swagger2",
+    "postmanv2"
+  ]
+}

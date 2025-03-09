@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { downloadImage } from '@nothing/utils/download';
+import { downloadImage } from '@web/utils/download';
 import { NextPage } from 'next';
 import { useState } from 'react';
 

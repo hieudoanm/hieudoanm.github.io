@@ -1,5 +1,5 @@
-import { WidgetWeatherDescription } from '@nothing/widgets/weather/WidgetWeatherDescription';
-import { WidgetWeatherTemperature } from '@nothing/widgets/weather/WidgetWeatherTemperature';
+import { WidgetWeatherDescription } from '@web/widgets/weather/WidgetWeatherDescription';
+import { WidgetWeatherTemperature } from '@web/widgets/weather/WidgetWeatherTemperature';
 import { NextPage } from 'next';
 
 const WeatherPage: NextPage = () => {

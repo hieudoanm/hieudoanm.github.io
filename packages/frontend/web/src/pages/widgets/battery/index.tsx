@@ -1,4 +1,4 @@
-import { WidgetBattery } from '@nothing/widgets/battery/WidgetBattery';
+import { WidgetBattery } from '@web/widgets/battery/WidgetBattery';
 import { NextPage } from 'next';
 
 const BatteryPage: NextPage = () => {

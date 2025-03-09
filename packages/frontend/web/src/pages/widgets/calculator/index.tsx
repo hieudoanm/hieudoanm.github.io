@@ -1,7 +1,7 @@
-import { WidgetCalculatorConvertWeight } from '@nothing/widgets';
-import { WidgetCalculatorBasic } from '@nothing/widgets/calculator/WidgetCalculatorBasic';
-import { WidgetCalculatorConvertForex } from '@nothing/widgets/calculator/WidgetCalculatorConvertForex';
-import { WidgetCalculatorConvertLength } from '@nothing/widgets/calculator/WidgetCalculatorConvertLength';
+import { WidgetCalculatorConvertWeight } from '@web/widgets';
+import { WidgetCalculatorBasic } from '@web/widgets/calculator/WidgetCalculatorBasic';
+import { WidgetCalculatorConvertForex } from '@web/widgets/calculator/WidgetCalculatorConvertForex';
+import { WidgetCalculatorConvertLength } from '@web/widgets/calculator/WidgetCalculatorConvertLength';
 import { NextPage } from 'next';
 
 const CalculatorPage: NextPage = () => {

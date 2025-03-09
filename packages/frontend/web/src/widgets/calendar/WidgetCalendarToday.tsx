@@ -1,4 +1,4 @@
-import { months, weekdays } from '@nothing/constants';
+import { months, weekdays } from '@web/constants';
 import { FC, useEffect, useState } from 'react';
 
 export const WidgetCalendarToday: FC = () => {

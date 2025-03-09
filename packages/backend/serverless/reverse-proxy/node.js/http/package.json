@@ -1,20 +1,26 @@
 {
-  "name": "@nothing/reverse-proxy-http",
+  "name": "@hieudoanm/reverse-proxy-http",
   "version": "0.0.1",
-  "description": "Nothing - Reverse Proxy - Node.js - HTTP",
+  "description": "Reverse Proxy - Node.js - HTTP",
   "main": "dist/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io#readme",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.6.1",
+  "private": true,
   "scripts": {
     "build": "rimraf dist && tsc",
     "start": "node",
     "format": "prettier --cache --write .",
     "dev": "nodemon"
   },
-  "keywords": [
-    "reverse",
-    "proxy"
-  ],
-  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
-  "license": "GPL-3.0",
   "devDependencies": {
     "@eslint/js": "9.22.0",
     "@types/node": "22.13.10",
@@ -27,5 +33,9 @@
     "ts-node": "10.9.2",
     "typescript": "5.8.2",
     "typescript-eslint": "8.26.0"
-  }
+  },
+  "keywords": [
+    "reverse",
+    "proxy"
+  ]
 }

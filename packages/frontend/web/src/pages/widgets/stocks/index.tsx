@@ -1,5 +1,5 @@
-import { WidgetStocksIndexes } from '@nothing/widgets/stocks/WidgetStocksIndexes';
-import { WidgetStocksSymbols } from '@nothing/widgets/stocks/WidgetStocksSymbols';
+import { WidgetStocksIndexes } from '@web/widgets/stocks/WidgetStocksIndexes';
+import { WidgetStocksSymbols } from '@web/widgets/stocks/WidgetStocksSymbols';
 import { NextPage } from 'next';
 
 const StocksPage: NextPage = () => {

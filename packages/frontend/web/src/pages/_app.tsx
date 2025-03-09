@@ -1,5 +1,5 @@
-import { BASE_PATH } from '@nothing/environments/environments';
-import '@nothing/styles/globals.css';
+import { BASE_PATH } from '@web/environments/environments';
+import '@web/styles/globals.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import 'github-markdown-css/github-markdown.css';
 import type { AppProps } from 'next/app';

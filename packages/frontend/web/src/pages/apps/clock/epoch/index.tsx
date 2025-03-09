@@ -1,5 +1,5 @@
-import { months, weekdays } from '@nothing/constants';
-import { addZero } from '@nothing/utils/number';
+import { months, weekdays } from '@web/constants';
+import { addZero } from '@web/utils/number';
 import { NextPage } from 'next';
 import { useState } from 'react';
 

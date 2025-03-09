@@ -1,4 +1,4 @@
-import instagram from '@nothing/assets/instagram.svg';
+import instagram from '@web/assets/instagram.svg';
 import html2canvas from 'html2canvas-pro';
 import { NextPage } from 'next';
 import { useRef, useState } from 'react';

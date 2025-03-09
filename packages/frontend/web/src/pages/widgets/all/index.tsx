@@ -51,8 +51,8 @@ import {
   WidgetWalletPay,
   WidgetWeatherDescription,
   WidgetWeatherTemperature,
-} from '@nothing/widgets';
-import { WidgetFitnessRun } from '@nothing/widgets/fitness/WidgetFitnessRun';
+} from '@web/widgets';
+import { WidgetFitnessRun } from '@web/widgets/fitness/WidgetFitnessRun';
 import { NextPage } from 'next';
 
 const WidgetsAllPage: NextPage = () => {

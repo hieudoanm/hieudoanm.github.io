@@ -1,4 +1,4 @@
-import { WidgetNews } from '@nothing/widgets/news/WidgetNews';
+import { WidgetNews } from '@web/widgets/news/WidgetNews';
 import { NextPage } from 'next';
 
 const NewsPage: NextPage = () => {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Chessboard } from '@nothing/components/Chessboard';
-import { getMovesFromPGN } from '@nothing/utils/chess';
+import { Chessboard } from '@web/components/Chessboard';
+import { getMovesFromPGN } from '@web/utils/chess';
 import { Chess } from 'chess.js';
 import GIF from 'gif.js';
 import html2canvas from 'html2canvas-pro';

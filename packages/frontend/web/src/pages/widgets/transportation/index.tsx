@@ -1,4 +1,4 @@
-import { WidgetTransportation } from '@nothing/widgets/transportation/WidgetTransportation';
+import { WidgetTransportation } from '@web/widgets/transportation/WidgetTransportation';
 import { NextPage } from 'next';
 
 const DevicesPage: NextPage = () => {

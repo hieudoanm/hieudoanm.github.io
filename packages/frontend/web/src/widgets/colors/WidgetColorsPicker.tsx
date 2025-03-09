@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { rgbToHex } from '@nothing/utils/colors';
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { rgbToHex } from '@web/utils/colors';
+import { copyToClipboard } from '@web/utils/navigator';
 import React, { FC, useState } from 'react';
 
 export const WidgetColorsPicker: FC = () => {

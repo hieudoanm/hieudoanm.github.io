@@ -1,4 +1,4 @@
-import { WidgetCrypto } from '@nothing/widgets/crypto/WidgetCrypto';
+import { WidgetCrypto } from '@web/widgets/crypto/WidgetCrypto';
 import { NextPage } from 'next';
 
 const CryptoPage: NextPage = () => {

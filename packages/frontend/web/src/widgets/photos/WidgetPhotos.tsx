@@ -1,4 +1,4 @@
-import image from '@nothing/assets/image.jpg';
+import image from '@web/assets/image.jpg';
 
 export const WidgetPhotos = () => {
   return (

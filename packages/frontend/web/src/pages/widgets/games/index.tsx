@@ -1,6 +1,6 @@
-import { WidgetGamesFlipism } from '@nothing/widgets/games/WidgetGamesFlipism';
-import { WidgetGamesRockPaperScissors } from '@nothing/widgets/games/WidgetGamesRockPaperScissors';
-import { WidgetGamesWheelOfFortune } from '@nothing/widgets/games/WidgetGamesWheelOfFortune';
+import { WidgetGamesFlipism } from '@web/widgets/games/WidgetGamesFlipism';
+import { WidgetGamesRockPaperScissors } from '@web/widgets/games/WidgetGamesRockPaperScissors';
+import { WidgetGamesWheelOfFortune } from '@web/widgets/games/WidgetGamesWheelOfFortune';
 import { NextPage } from 'next';
 
 const GamesPage: NextPage = () => {

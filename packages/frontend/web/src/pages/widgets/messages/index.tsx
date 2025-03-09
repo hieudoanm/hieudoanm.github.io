@@ -1,4 +1,4 @@
-import { WidgetMessages } from '@nothing/widgets/messages';
+import { WidgetMessages } from '@web/widgets/messages';
 import { NextPage } from 'next';
 
 const MessagesPage: NextPage = () => {

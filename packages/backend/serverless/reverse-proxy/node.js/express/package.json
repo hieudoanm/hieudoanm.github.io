@@ -1,18 +1,24 @@
 {
-  "name": "@nothing/reverse-proxy-express",
+  "name": "@hieudoanm/reverse-proxy-express",
   "version": "0.0.1",
-  "description": "Nothing - Reverse Proxy - Express.js",
+  "description": "Reverse Proxy - Express.js",
   "main": "dist/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io#readme",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.6.1",
+  "private": true,
   "scripts": {
     "build": "rimraf dist && tsc",
     "dev": "nodemon"
   },
-  "keywords": [
-    "reverse",
-    "proxy"
-  ],
-  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
-  "license": "GPL-3.0",
   "dependencies": {
     "express": "4.21.2"
   },
@@ -29,5 +35,9 @@
     "typescript": "5.8.2",
     "typescript-eslint": "8.26.0",
     "wrangler": "3.114.0"
-  }
+  },
+  "keywords": [
+    "reverse",
+    "proxy"
+  ]
 }

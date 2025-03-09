@@ -1,5 +1,5 @@
-import { hexToRgb, randomHexColorCode, rgbToHex } from '@nothing/utils/colors';
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { hexToRgb, randomHexColorCode, rgbToHex } from '@web/utils/colors';
+import { copyToClipboard } from '@web/utils/navigator';
 import { ChangeEvent, useState } from 'react';
 import { FaArrowRotateLeft, FaCopy } from 'react-icons/fa6';
 

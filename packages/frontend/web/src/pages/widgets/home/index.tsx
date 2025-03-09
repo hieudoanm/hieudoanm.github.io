@@ -1,4 +1,4 @@
-import { WidgetHome } from '@nothing/widgets/home/WidgetHome';
+import { WidgetHome } from '@web/widgets/home/WidgetHome';
 import { NextPage } from 'next';
 
 const HousePage: NextPage = () => {

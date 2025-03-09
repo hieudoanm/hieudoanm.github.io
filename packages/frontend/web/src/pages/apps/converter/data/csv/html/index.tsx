@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { BASE_PATH } from '@nothing/environments/environments';
-import { csv2json, csv2md, csv2sql } from '@nothing/utils/csv';
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { BASE_PATH } from '@web/environments/environments';
+import { csv2json, csv2md, csv2sql } from '@web/utils/csv';
+import { copyToClipboard } from '@web/utils/navigator';
 import type { NextPage } from 'next';
 import { ChangeEvent, FC, useState } from 'react';
 

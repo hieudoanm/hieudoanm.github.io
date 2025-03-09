@@ -1,4 +1,4 @@
-import { WidgetMail } from '@nothing/widgets/mail/WidgetMail';
+import { WidgetMail } from '@web/widgets/mail/WidgetMail';
 import { NextPage } from 'next';
 
 const MailPage: NextPage = () => {

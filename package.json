@@ -11,7 +11,7 @@
     "prepare": "husky || true"
   },
   "keywords": [],
-  "repository": "git@github.com:hieudoanm/nothing.git",
+  "repository": "git@github.com:hieudoanm/hieudoanm.github.io.git",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
   "devDependencies": {

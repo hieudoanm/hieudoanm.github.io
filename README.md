@@ -163,6 +163,8 @@
 ## Todo
 
 - [ ] Build Mobile App with [Expo](https://expo.dev)
+- [ ] Build Native App with [Lynx](https://lynxjs.org/)
+- [ ] Convert Swagger to Postman V2
 
 [alpine]: https://alpinelinux.org/
 [android-studio]: https://developer.android.com/studio

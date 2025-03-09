@@ -1,4 +1,4 @@
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { copyToClipboard } from '@web/utils/navigator';
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import { FaArrowRotateLeft } from 'react-icons/fa6';

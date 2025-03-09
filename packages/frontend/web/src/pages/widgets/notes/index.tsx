@@ -1,4 +1,4 @@
-import { WidgetNotes } from '@nothing/widgets/notes/WidgetNotes';
+import { WidgetNotes } from '@web/widgets/notes/WidgetNotes';
 import { NextPage } from 'next';
 
 const NotesPage: NextPage = () => {

@@ -1,9 +1,5 @@
-import {
-  getBrightness,
-  hexToRgb,
-  randomHexColorCode,
-} from '@nothing/utils/colors';
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { getBrightness, hexToRgb, randomHexColorCode } from '@web/utils/colors';
+import { copyToClipboard } from '@web/utils/navigator';
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 

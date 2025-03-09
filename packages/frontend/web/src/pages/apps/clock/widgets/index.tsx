@@ -1,7 +1,7 @@
-import { WidgetClockAnalog } from '@nothing/widgets/clock/WidgetClockAnalog';
-import { WidgetClockDigital } from '@nothing/widgets/clock/WidgetClockDigital';
-import { WidgetClockPomodoro } from '@nothing/widgets/clock/WidgetClockPomodoro';
-import { WidgetClockTimeZone } from '@nothing/widgets/clock/WidgetClockTimeZone';
+import { WidgetClockAnalog } from '@web/widgets/clock/WidgetClockAnalog';
+import { WidgetClockDigital } from '@web/widgets/clock/WidgetClockDigital';
+import { WidgetClockPomodoro } from '@web/widgets/clock/WidgetClockPomodoro';
+import { WidgetClockTimeZone } from '@web/widgets/clock/WidgetClockTimeZone';
 import { NextPage } from 'next';
 
 const ClockPage: NextPage = () => {

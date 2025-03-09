@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextPage } from 'next';
-import languages from '@nothing/json/github/languages.json';
+import languages from '@web/json/github/languages.json';
 import { useQuery } from '@tanstack/react-query';
 import { useRef, useState } from 'react';
 import html2canvas from 'html2canvas-pro';

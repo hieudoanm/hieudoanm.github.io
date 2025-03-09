@@ -1,5 +1,5 @@
-import { WidgetHealthBodyTemperature } from '@nothing/widgets';
-import { WidgetHealthBloodPressure } from '@nothing/widgets/health/WidgetHealthBloodPressure';
+import { WidgetHealthBodyTemperature } from '@web/widgets';
+import { WidgetHealthBloodPressure } from '@web/widgets/health/WidgetHealthBloodPressure';
 import { NextPage } from 'next';
 
 const HealthPage: NextPage = () => {

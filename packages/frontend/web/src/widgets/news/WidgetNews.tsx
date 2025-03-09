@@ -1,4 +1,4 @@
-import { shortMonths } from '@nothing/constants';
+import { shortMonths } from '@web/constants';
 
 export const WidgetNews = () => {
   const articles = [

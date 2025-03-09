@@ -1,4 +1,4 @@
-import { WidgetGoogleTrends } from '@nothing/widgets/google';
+import { WidgetGoogleTrends } from '@web/widgets/google';
 import { NextPage } from 'next';
 
 const GoogleWidgetsPage: NextPage = () => {

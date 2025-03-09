@@ -1,4 +1,4 @@
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { copyToClipboard } from '@web/utils/navigator';
 import { NextPage } from 'next';
 import { ChangeEvent, useState } from 'react';
 

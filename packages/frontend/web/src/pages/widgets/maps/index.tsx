@@ -1,5 +1,5 @@
-import { WidgetMapsCoordinates } from '@nothing/widgets/maps/WidgetMapsCoordinates';
-import { WidgetMapsEmbedded } from '@nothing/widgets/maps/WidgetMapsEmbedded';
+import { WidgetMapsCoordinates } from '@web/widgets/maps/WidgetMapsCoordinates';
+import { WidgetMapsEmbedded } from '@web/widgets/maps/WidgetMapsEmbedded';
 import { NextPage } from 'next';
 
 const MapsPage: NextPage = () => {

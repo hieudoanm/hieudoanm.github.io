@@ -1,5 +1,5 @@
-import { csv2json } from '@nothing/utils/csv';
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { csv2json } from '@web/utils/csv';
+import { copyToClipboard } from '@web/utils/navigator';
 import { NextPage } from 'next';
 import { useState } from 'react';
 

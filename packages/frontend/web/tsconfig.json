@@ -14,13 +14,9 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@nothing/*": ["./src/*"]
+      "@web/*": ["./src/*"]
     },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "plugins": [{ "name": "next" }]
   },
   "include": [
     "**/*.ts",

@@ -1,20 +1,20 @@
 {
-  "name": "@nothing/youtube",
+  "name": "@hieudoanm/youtube",
   "version": "0.0.1",
-  "description": "Nothing - YouTube",
+  "description": "YouTube",
   "main": "./dist/server.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/hieudoanm/nothing.git"
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
   },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io#readme",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
-  "private": true,
   "packageManager": "pnpm@10.6.1",
-  "bugs": {
-    "url": "https://github.com/hieudoanm/nothing/issues"
-  },
-  "homepage": "https://github.com/hieudoanm/nothing#readme",
+  "private": true,
   "scripts": {
     "lint": "eslint --fix .",
     "format": "prettier --cache --write .",

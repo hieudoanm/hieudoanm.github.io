@@ -1,6 +1,6 @@
-import { TanStackTable } from '@nothing/components/TanStackTable';
-import countriesJSON from '@nothing/json/countries.json';
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { TanStackTable } from '@web/components/TanStackTable';
+import countriesJSON from '@web/json/countries.json';
+import { copyToClipboard } from '@web/utils/navigator';
 import { createColumnHelper } from '@tanstack/react-table';
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';

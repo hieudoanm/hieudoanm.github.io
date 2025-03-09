@@ -1,5 +1,5 @@
-import { useBrowser } from '@nothing/hooks/use-browser';
-import { useScreenSize } from '@nothing/hooks/use-screen-size';
+import { useBrowser } from '@web/hooks/use-browser';
+import { useScreenSize } from '@web/hooks/use-screen-size';
 import { NextPage } from 'next';
 
 const ScreenPage: NextPage = () => {

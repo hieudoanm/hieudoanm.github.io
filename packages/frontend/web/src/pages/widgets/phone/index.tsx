@@ -1,5 +1,5 @@
-import { WidgetPhoneContacts } from '@nothing/widgets/phone/WidgetPhoneContacts';
-import { WidgetPhoneDialer } from '@nothing/widgets/phone/WidgetPhoneDialer';
+import { WidgetPhoneContacts } from '@web/widgets/phone/WidgetPhoneContacts';
+import { WidgetPhoneDialer } from '@web/widgets/phone/WidgetPhoneDialer';
 import { NextPage } from 'next';
 
 const PhonePage: NextPage = () => {

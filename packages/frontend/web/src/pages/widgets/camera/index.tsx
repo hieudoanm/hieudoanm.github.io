@@ -1,4 +1,4 @@
-import { WidgetCamera } from '@nothing/widgets/camera/WidgetCamera';
+import { WidgetCamera } from '@web/widgets/camera/WidgetCamera';
 import { NextPage } from 'next';
 
 const CameraPage: NextPage = () => {

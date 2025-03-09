@@ -1,5 +1,5 @@
-import { WidgetColorsPicker } from '@nothing/widgets/colors';
-import { WidgetColorsConverter } from '@nothing/widgets/colors/WidgetColorsConverter';
+import { WidgetColorsPicker } from '@web/widgets/colors';
+import { WidgetColorsConverter } from '@web/widgets/colors/WidgetColorsConverter';
 import { NextPage } from 'next';
 
 const ColorsPage: NextPage = () => {

@@ -1,5 +1,5 @@
-import { WidgetCompassCompact } from '@nothing/widgets';
-import { WidgetCompassFull } from '@nothing/widgets/compass/WidgetCompassFull';
+import { WidgetCompassCompact } from '@web/widgets';
+import { WidgetCompassFull } from '@web/widgets/compass/WidgetCompassFull';
 import { NextPage } from 'next';
 
 const CompassPage: NextPage = () => {

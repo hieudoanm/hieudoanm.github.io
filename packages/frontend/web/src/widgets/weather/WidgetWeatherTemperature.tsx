@@ -1,7 +1,4 @@
-import {
-  convertTemperature,
-  TemperatureUnit,
-} from '@nothing/utils/temperature';
+import { convertTemperature, TemperatureUnit } from '@web/utils/temperature';
 import { FC, useState } from 'react';
 
 export const WidgetWeatherTemperature: FC = () => {

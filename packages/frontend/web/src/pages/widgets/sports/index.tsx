@@ -1,4 +1,4 @@
-import { WidgetSports } from '@nothing/widgets/sports/WidgetSports';
+import { WidgetSports } from '@web/widgets/sports/WidgetSports';
 import { NextPage } from 'next';
 
 const SportsPage: NextPage = () => {

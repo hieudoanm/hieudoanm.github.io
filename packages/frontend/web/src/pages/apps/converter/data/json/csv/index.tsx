@@ -1,7 +1,7 @@
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { copyToClipboard } from '@web/utils/navigator';
 import { NextPage } from 'next';
 import { useState } from 'react';
-import { json2csv } from '@nothing/utils/json';
+import { json2csv } from '@web/utils/json';
 
 const JsonToYamlPage: NextPage = () => {
   const [{ json = '[]', csv = '' }, setState] = useState<{

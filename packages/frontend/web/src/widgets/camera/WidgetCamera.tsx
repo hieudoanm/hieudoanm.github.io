@@ -1,4 +1,4 @@
-import { useCamera } from '@nothing/hooks/use-camera';
+import { useCamera } from '@web/hooks/use-camera';
 import { useEffect, useRef, useState } from 'react';
 import { FaCamera } from 'react-icons/fa6';
 

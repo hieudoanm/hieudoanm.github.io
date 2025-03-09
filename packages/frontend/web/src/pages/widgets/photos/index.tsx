@@ -1,4 +1,4 @@
-import { WidgetPhotos } from '@nothing/widgets/photos/WidgetPhotos';
+import { WidgetPhotos } from '@web/widgets/photos/WidgetPhotos';
 import { NextPage } from 'next';
 
 const PhotosPage: NextPage = () => {

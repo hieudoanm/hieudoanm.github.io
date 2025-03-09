@@ -1,7 +1,7 @@
-import { Chessboard } from '@nothing/components/Chessboard';
-import openings from '@nothing/json/chess/openings.json';
-import { getMovesFromPGN } from '@nothing/utils/chess';
-import { sleep } from '@nothing/utils/sleep';
+import { Chessboard } from '@web/components/Chessboard';
+import openings from '@web/json/chess/openings.json';
+import { getMovesFromPGN } from '@web/utils/chess';
+import { sleep } from '@web/utils/sleep';
 import { Chess } from 'chess.js';
 import { NextPage } from 'next';
 import { useState } from 'react';

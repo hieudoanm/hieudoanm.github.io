@@ -1,4 +1,4 @@
-import { addZero } from '@nothing/utils/number';
+import { addZero } from '@web/utils/number';
 import { FC, useEffect, useState } from 'react';
 
 export const WidgetClockTimeZone: FC = () => {

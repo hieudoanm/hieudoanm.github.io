@@ -1,4 +1,4 @@
-import film from '@nothing/assets/film.jpg';
+import film from '@web/assets/film.jpg';
 import html2canvas from 'html2canvas-pro';
 import { NextPage } from 'next';
 import { useRef, useState } from 'react';

@@ -1,4 +1,4 @@
-import { downloadImage } from '@nothing/utils/download';
+import { downloadImage } from '@web/utils/download';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { toDataURL } from 'qrcode';

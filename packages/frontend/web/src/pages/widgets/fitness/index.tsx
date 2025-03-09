@@ -1,5 +1,5 @@
-import { WidgetFitnessRun } from '@nothing/widgets/fitness/WidgetFitnessRun';
-import { WidgetFitnessStepCount } from '@nothing/widgets/fitness/WidgetFitnessStepCount';
+import { WidgetFitnessRun } from '@web/widgets/fitness/WidgetFitnessRun';
+import { WidgetFitnessStepCount } from '@web/widgets/fitness/WidgetFitnessStepCount';
 import { NextPage } from 'next';
 
 const FitnessPage: NextPage = () => {

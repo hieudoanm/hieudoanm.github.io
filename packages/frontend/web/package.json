@@ -1,22 +1,19 @@
 {
-  "name": "@nothing/web",
+  "name": "@hieudoanm/web",
   "version": "0.0.1",
-  "description": "Nothing Web",
-  "keywords": [
-    "apps",
-    "nothing"
-  ],
-  "homepage": "https://github.com/hieudoanm/nothing#readme",
-  "bugs": {
-    "url": "https://github.com/hieudoanm/nothing/issues"
-  },
+  "description": "Web",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/hieudoanm/nothing.git"
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
   },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io#readme",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io/)",
   "license": "GPL-3.0",
-  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
-  "main": "index.js",
+  "packageManager": "pnpm@10.6.1",
   "private": true,
   "scripts": {
     "format": "prettier --cache --write .",
@@ -82,5 +79,8 @@
     "ts-jest": "29.2.6",
     "ts-node": "10.9.2",
     "typescript": "5.8.2"
-  }
+  },
+  "keywords": [
+    "apps"
+  ]
 }

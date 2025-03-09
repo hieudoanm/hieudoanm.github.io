@@ -1,5 +1,5 @@
-import { downloadText } from '@nothing/utils/download';
-import { copyToClipboard } from '@nothing/utils/navigator';
+import { downloadText } from '@web/utils/download';
+import { copyToClipboard } from '@web/utils/navigator';
 import { NextPage } from 'next';
 import { ChangeEvent, useState } from 'react';
 

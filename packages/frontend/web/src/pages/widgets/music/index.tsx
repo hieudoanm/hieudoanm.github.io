@@ -1,5 +1,5 @@
-import { WidgetMusicApps } from '@nothing/widgets/music/WidgetMusicApps';
-import { WidgetMusicPlayer } from '@nothing/widgets/music/WidgetMusicPlayer';
+import { WidgetMusicApps } from '@web/widgets/music/WidgetMusicApps';
+import { WidgetMusicPlayer } from '@web/widgets/music/WidgetMusicPlayer';
 import { NextPage } from 'next';
 
 const MusicPage: NextPage = () => {

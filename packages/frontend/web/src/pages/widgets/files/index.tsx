@@ -1,4 +1,4 @@
-import { WidgetFiles } from '@nothing/widgets/files/WidgetFiles';
+import { WidgetFiles } from '@web/widgets/files/WidgetFiles';
 import { NextPage } from 'next';
 
 const FilesPage: NextPage = () => {

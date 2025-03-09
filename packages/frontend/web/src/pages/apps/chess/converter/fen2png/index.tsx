@@ -1,8 +1,8 @@
 import {
   CloudEvaluation,
   getCloudEvaluation,
-} from '@nothing/clients/lichess.org/lichess.client';
-import { Chessboard } from '@nothing/components/Chessboard';
+} from '@web/clients/lichess.org/lichess.client';
+import { Chessboard } from '@web/components/Chessboard';
 import { useQuery } from '@tanstack/react-query';
 import { Chess } from 'chess.js';
 import html2canvas from 'html2canvas-pro';

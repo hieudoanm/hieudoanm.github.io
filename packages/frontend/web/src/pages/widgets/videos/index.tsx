@@ -1,4 +1,4 @@
-import { WidgetVideos } from '@nothing/widgets/videos/WidgetVideos';
+import { WidgetVideos } from '@web/widgets/videos/WidgetVideos';
 import { NextPage } from 'next';
 
 const WalletPage: NextPage = () => {

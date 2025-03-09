@@ -1,4 +1,4 @@
-import { NothingApp } from '@nothing/types';
+import { NothingApp } from '@web/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { FaCalculator, FaClock, FaWindowRestore } from 'react-icons/fa6';

@@ -1,6 +1,6 @@
-import { WidgetWalletBank } from '@nothing/widgets/wallet/WidgetWalletBank';
-import { WidgetWalletForex } from '@nothing/widgets/wallet/WidgetWalletForex';
-import { WidgetWalletPay } from '@nothing/widgets/wallet/WidgetWalletPay';
+import { WidgetWalletBank } from '@web/widgets/wallet/WidgetWalletBank';
+import { WidgetWalletForex } from '@web/widgets/wallet/WidgetWalletForex';
+import { WidgetWalletPay } from '@web/widgets/wallet/WidgetWalletPay';
 import { NextPage } from 'next';
 
 const WalletPage: NextPage = () => {

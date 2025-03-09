@@ -1,4 +1,4 @@
-import { WidgetTranslate } from '@nothing/widgets/translate/WidgetTranslate';
+import { WidgetTranslate } from '@web/widgets/translate/WidgetTranslate';
 import { NextPage } from 'next';
 
 const TranslatePage: NextPage = () => {

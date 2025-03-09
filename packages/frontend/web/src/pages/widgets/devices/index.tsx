@@ -1,4 +1,4 @@
-import { WidgetDevices } from '@nothing/widgets/devices/WidgetDevices';
+import { WidgetDevices } from '@web/widgets/devices/WidgetDevices';
 import { NextPage } from 'next';
 
 const DevicesPage: NextPage = () => {

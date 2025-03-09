@@ -1,5 +1,5 @@
-import { WidgetBrowser } from '@nothing/widgets/browser/WidgetBrowser';
-import { WidgetBrowsers } from '@nothing/widgets/browser/WidgetBrowserS';
+import { WidgetBrowser } from '@web/widgets/browser/WidgetBrowser';
+import { WidgetBrowsers } from '@web/widgets/browser/WidgetBrowserS';
 
 import { NextPage } from 'next';
 

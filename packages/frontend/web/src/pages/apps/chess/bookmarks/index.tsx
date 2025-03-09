@@ -1,4 +1,4 @@
-import { addZero } from '@nothing/utils/number';
+import { addZero } from '@web/utils/number';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { ReactNode } from 'react';

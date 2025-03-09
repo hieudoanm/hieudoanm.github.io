@@ -1,6 +1,6 @@
-import { WidgetCalendarEvents } from '@nothing/widgets/calendar/WidgetCalendarEvents';
-import { WidgetCalendarMonthly } from '@nothing/widgets/calendar/WidgetCalendarMonthly';
-import { WidgetCalendarToday } from '@nothing/widgets/calendar/WidgetCalendarToday';
+import { WidgetCalendarEvents } from '@web/widgets/calendar/WidgetCalendarEvents';
+import { WidgetCalendarMonthly } from '@web/widgets/calendar/WidgetCalendarMonthly';
+import { WidgetCalendarToday } from '@web/widgets/calendar/WidgetCalendarToday';
 import { NextPage } from 'next';
 
 const CalendarPage: NextPage = () => {
