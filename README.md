@@ -17,9 +17,9 @@
 ## Downloads
 
 - CLI
-  - [x] `hieudoanm.bash` - Download [here](./packages/cli/bash/dist/hieudoanm.bash)
-  - [x] `hieudoanm.binary` - Download [here](./packages/cli/go/cobra/bin/hieudoanm)
-    - [x] `curl -o- https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/cli/go/install.sh | bash`
+  - [x] `hieu.bash` - Download [here](./packages/cli/bash/dist/hieu.bash)
+  - [x] `hieu.binary` - Download [here](./packages/cli/go/cobra/bin/hieu)
+    - [x] `curl -o- https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/cli/go/cobra/install.sh | bash`
   - [x] [GitHub CLI - Extensions](https://cli.github.com/manual/gh_extension)
     - [x] `gh-coc` - Download [here](./packages/cli/go/github/extensions/gh-coc/bin/gh-coc)
     - [x] `gh-ignore` - Download [here](./packages/cli/go/github/extensions/gh-ignore/bin/gh-ignore)

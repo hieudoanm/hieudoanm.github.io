@@ -4,7 +4,7 @@ package cmd
 import (
 	"encoding/hex"
 	"fmt"
-	"hieudoanm-cli/utils"
+	"hieu-cli/utils"
 	"log"
 
 	"github.com/spf13/cobra"

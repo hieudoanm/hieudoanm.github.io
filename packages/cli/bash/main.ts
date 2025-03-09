@@ -28,7 +28,7 @@ ${markdownContent}
 
 ${bashContent}
 `;
-  writeFileSync('dist/hieudoanm.bash', bash);
+  writeFileSync('dist/hieu.bash', bash);
 };
 
 main();

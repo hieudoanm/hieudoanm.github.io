@@ -4,7 +4,7 @@ package cmd
 import (
 	"fmt"
 
-	"hieudoanm-cli/utils"
+	"hieu-cli/utils"
 
 	"github.com/spf13/cobra"
 )

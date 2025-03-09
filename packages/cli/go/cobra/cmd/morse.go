@@ -3,7 +3,7 @@ package cmd
 
 import (
 	"fmt"
-	"hieudoanm-cli/utils"
+	"hieu-cli/utils"
 	"strings"
 
 	"github.com/spf13/cobra"

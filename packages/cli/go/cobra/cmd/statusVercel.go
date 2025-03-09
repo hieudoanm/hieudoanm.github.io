@@ -4,7 +4,7 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"hieudoanm-cli/utils"
+	"hieu-cli/utils"
 
 	"github.com/spf13/cobra"
 )

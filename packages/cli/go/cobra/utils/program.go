@@ -9,6 +9,6 @@ import (
 // LogProgramName ...
 func LogProgramName() {
 	ascii := figlet4go.NewAsciiRender()
-	programString, _ := ascii.Render("NOTHING")
+	programString, _ := ascii.Render("HIEU")
 	fmt.Println(programString)
 }

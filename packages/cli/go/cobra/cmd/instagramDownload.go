@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"hieudoanm-cli/utils"
+	"hieu-cli/utils"
 	"os"
 	"regexp"
 
@@ -35,9 +35,9 @@ to quickly create a Cobra application.`,
 		fmt.Scanln(&url)
 		// Download Images
 		fmt.Println("Downloading")
-		var downloadUrl string = "https://nothing-instagram.onrender.com/download"
+		var downloadURL string = "https://nothing-instagram.onrender.com/download"
 		requestBody := map[string]string{"url": url}
-		responseByte, postError := utils.Post(downloadUrl, requestBody)
+		responseByte, postError := utils.Post(downloadURL, requestBody)
 		if postError != nil {
 			fmt.Println("Error: ", postError)
 			return
