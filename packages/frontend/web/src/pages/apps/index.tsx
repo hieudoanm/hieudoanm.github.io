@@ -83,10 +83,10 @@ const AppsPage: NextPage = () => {
       icon: <FaJs className="text-xl md:text-2xl" />,
     },
     {
-      id: 'converter-data-yaml-json',
-      href: 'converter/data/yaml/json',
-      name: 'YAML to JSON',
-      shortName: 'yaml2json',
+      id: 'converter-data-yaml',
+      href: 'converter/data/yaml',
+      name: 'YAML',
+      shortName: 'yaml',
       icon: <FaY className="text-xl md:text-2xl" />,
     },
     {
