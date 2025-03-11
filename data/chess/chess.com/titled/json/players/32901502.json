@@ -6,10 +6,10 @@
     "name": "Marek Mi\u010da",
     "username": "youngmegamind",
     "title": "FM",
-    "followers": 54,
+    "followers": 57,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Fr\u00fddek-M\u00edstek",
-    "last_online": 1734018989,
+    "last_online": 1741649788,
     "joined": 1486149508,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2317,
-            "date": 1715440796,
+            "rating": 2318,
+            "date": 1735636593,
             "rd": 49
         },
         "best": {
@@ -47,43 +47,43 @@
             "game": "https://www.chess.com/game/live/70975455303"
         },
         "record": {
-            "win": 46,
+            "win": 47,
             "loss": 28,
             "draw": 11
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2328,
-            "date": 1733312090,
-            "rd": 63
+            "rating": 2603,
+            "date": 1741644603,
+            "rd": 26
         },
         "best": {
-            "rating": 2513,
-            "date": 1684178585,
+            "rating": 2523,
+            "date": 1739537765,
             "game": "https://www.chess.com/game/live/82398705451"
         },
         "record": {
-            "win": 1161,
-            "loss": 991,
-            "draw": 134
+            "win": 1377,
+            "loss": 1171,
+            "draw": 163
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2619,
-            "date": 1732216361,
-            "rd": 41
+            "rating": 2738,
+            "date": 1741681225,
+            "rd": 38
         },
         "best": {
-            "rating": 2727,
-            "date": 1718141119,
-            "game": "https://www.chess.com/game/live/111483134349"
+            "rating": 2743,
+            "date": 1739639797,
+            "game": "https://www.chess.com/game/live/132928155129"
         },
         "record": {
-            "win": 831,
-            "loss": 656,
-            "draw": 139
+            "win": 880,
+            "loss": 689,
+            "draw": 148
         }
     },
     "fide": 2384,

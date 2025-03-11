@@ -6,15 +6,15 @@
     "name": "Aleksandar Tomic",
     "username": "velemajstor767276",
     "title": "IM",
-    "followers": 214,
+    "followers": 221,
     "country": "https://api.chess.com/pub/country/ME",
     "location": "Niksic/Podgorica",
-    "last_online": 1733420879,
+    "last_online": 1741547787,
     "joined": 1518542871,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2603,
-            "date": 1706376101,
-            "rd": 49
+            "rating": 2618,
+            "date": 1740955679,
+            "rd": 35
         },
         "best": {
             "rating": 2793,
             "date": 1700051151,
-            "game": "https://www.chess.com/game/live/3754005545"
+            "game": "https://www.chess.com/game/live/129472436127"
         },
         "record": {
-            "win": 4036,
-            "loss": 3892,
-            "draw": 400
+            "win": 4177,
+            "loss": 3996,
+            "draw": 407
         }
     },
     "fide": 2415,

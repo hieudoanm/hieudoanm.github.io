@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 40,
     "country": "https://api.chess.com/pub/country/SI",
-    "last_online": 1733392687,
+    "last_online": 1741676355,
     "joined": 1556051067,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1525,
-            "date": 1733576338,
-            "rd": 74
+            "rating": 1313,
+            "date": 1740778539,
+            "rd": 98
         },
         "best": {
             "rating": 1835,
@@ -28,10 +28,10 @@
         },
         "record": {
             "win": 48,
-            "loss": 46,
+            "loss": 52,
             "draw": 2,
-            "time_per_move": 49729,
-            "timeout_percent": 0
+            "time_per_move": 49487,
+            "timeout_percent": 85
         }
     },
     "chess_rapid": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2645,
-            "date": 1733241029,
-            "rd": 49
+            "rating": 2621,
+            "date": 1740332114,
+            "rd": 47
         },
         "best": {
             "rating": 2677,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/109702910393"
         },
         "record": {
-            "win": 1572,
-            "loss": 1275,
-            "draw": 221
+            "win": 1576,
+            "loss": 1282,
+            "draw": 222
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2573,
-            "date": 1731434949,
-            "rd": 46
+            "rating": 2559,
+            "date": 1741695650,
+            "rd": 40
         },
         "best": {
             "rating": 2665,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/89500870577"
         },
         "record": {
-            "win": 1266,
-            "loss": 1091,
-            "draw": 284
+            "win": 1312,
+            "loss": 1134,
+            "draw": 295
         }
     },
     "fide": 2300,

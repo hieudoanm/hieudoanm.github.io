@@ -6,10 +6,10 @@
     "name": "\u0410\u043d\u0434\u0440\u0456\u0439 \u0428\u0430\u043d\u043a\u043e\u0432\u0441\u044c\u043a\u0438\u0439",
     "username": "shankovskyi",
     "title": "IM",
-    "followers": 42,
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a",
-    "last_online": 1734018667,
+    "last_online": 1741534417,
     "joined": 1588667372,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2167,
-            "date": 1682438719,
+            "date": 1735573301,
             "rd": 347
         },
         "best": {
@@ -65,8 +65,8 @@
     "fide": 2406,
     "tactics": {
         "highest": {
-            "rating": 2635,
-            "date": 1733180450
+            "rating": 2648,
+            "date": 1736097738
         },
         "lowest": {
             "rating": 2407,

@@ -5,19 +5,19 @@
     "name": "Joseph Jimenez",
     "username": "josjimal",
     "title": "CM",
-    "followers": 27,
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1733270227,
+    "last_online": 1741387234,
     "joined": 1484455608,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1256,
-            "date": 1730656653,
+            "date": 1740965938,
             "rd": 251
         },
         "best": {
@@ -29,48 +29,48 @@
             "win": 1,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 31525,
+            "time_per_move": 124274,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2183,
-            "date": 1733528592,
-            "rd": 49
+            "rating": 2354,
+            "date": 1740867760,
+            "rd": 43
         },
         "best": {
-            "rating": 2207,
-            "date": 1722445979,
-            "game": "https://www.chess.com/game/live/116095794615"
+            "rating": 2316,
+            "date": 1739122191,
+            "game": "https://www.chess.com/game/live/132858621779"
         },
         "record": {
-            "win": 33,
-            "loss": 7,
-            "draw": 8
+            "win": 63,
+            "loss": 11,
+            "draw": 10
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2503,
-            "date": 1734185558,
-            "rd": 19
+            "rating": 2607,
+            "date": 1741590000,
+            "rd": 20
         },
         "best": {
-            "rating": 2624,
-            "date": 1716493161,
-            "game": "https://www.chess.com/game/live/109548710807"
+            "rating": 2697,
+            "date": 1736721978,
+            "game": "https://www.chess.com/game/live/131674184837"
         },
         "record": {
-            "win": 1407,
-            "loss": 1106,
-            "draw": 110
+            "win": 3208,
+            "loss": 2613,
+            "draw": 258
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2369,
-            "date": 1728615780,
+            "date": 1738708058,
             "rd": 52
         },
         "best": {
@@ -96,8 +96,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 46,
-            "score": 43
+            "total_attempts": 49,
+            "score": 47
         }
     }
 }

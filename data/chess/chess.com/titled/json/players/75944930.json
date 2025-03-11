@@ -8,7 +8,7 @@
     "followers": 31,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Gij\u00f3n",
-    "last_online": 1733995827,
+    "last_online": 1741697262,
     "joined": 1586258571,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2437,
-            "date": 1730240181,
-            "rd": 73
+            "rating": 2440,
+            "date": 1736294586,
+            "rd": 72
         },
         "best": {
             "rating": 2589,
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/4783981430"
         },
         "record": {
-            "win": 62,
-            "loss": 101,
+            "win": 67,
+            "loss": 106,
             "draw": 18
         }
     },

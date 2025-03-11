@@ -1,19 +1,19 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25980638.84700af5.200x200o.bac1559b7513.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25980638.bd235dc1.200x200o.f0d65bd499fd.webp",
     "player_id": 25980638,
-    "@id": "https://api.chess.com/pub/player/marianov_podstavnikov",
-    "url": "https://www.chess.com/member/Marianov_Podstavnikov",
+    "@id": "https://api.chess.com/pub/player/youngmarcus03",
+    "url": "https://www.chess.com/member/YoungMarcus03",
     "name": "Marek Pniaczek",
-    "username": "marianov_podstavnikov",
+    "username": "youngmarcus03",
     "title": "FM",
-    "followers": 40,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733302290,
+    "last_online": 1741635750,
     "joined": 1452092713,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -70,8 +70,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2501,
-            "date": 1733302480,
+            "rating": 2458,
+            "date": 1740659866,
             "rd": 49
         },
         "best": {
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/102206653993"
         },
         "record": {
-            "win": 1043,
-            "loss": 981,
-            "draw": 139
+            "win": 1071,
+            "loss": 1015,
+            "draw": 140
         }
     },
     "fide": 2199,

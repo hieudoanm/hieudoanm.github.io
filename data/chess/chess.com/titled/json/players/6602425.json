@@ -5,10 +5,10 @@
     "name": "Ernesto Iannaccone",
     "username": "ercoleiaccone",
     "title": "FM",
-    "followers": 136,
+    "followers": 150,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Roma",
-    "last_online": 1734128107,
+    "last_online": 1741638662,
     "joined": 1328203493,
     "status": "premium",
     "is_streamer": false,
@@ -36,17 +36,17 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2032,
-            "date": 1717263340,
+            "rating": 2049,
+            "date": 1736014903,
             "rd": 49
         },
         "best": {
-            "rating": 2032,
-            "date": 1669154148,
-            "game": "https://www.chess.com/game/live/50596213471"
+            "rating": 2049,
+            "date": 1736014903,
+            "game": "https://www.chess.com/game/live/129753596275"
         },
         "record": {
-            "win": 17,
+            "win": 19,
             "loss": 1,
             "draw": 0
         }
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2323,
-            "date": 1734157088,
-            "rd": 22
+            "rating": 2400,
+            "date": 1741699423,
+            "rd": 21
         },
         "best": {
             "rating": 2527,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/71230011385"
         },
         "record": {
-            "win": 12596,
-            "loss": 9333,
-            "draw": 2717
+            "win": 13497,
+            "loss": 10015,
+            "draw": 2924
         }
     },
     "fide": 2375,
     "tactics": {
         "highest": {
-            "rating": 1957,
-            "date": 1731828221
+            "rating": 2218,
+            "date": 1736630646
         },
         "lowest": {
             "rating": 1209,

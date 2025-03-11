@@ -6,10 +6,10 @@
     "name": "Avik Sarker",
     "username": "aviksarkershubha",
     "title": "CM",
-    "followers": 69,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Dhaka city",
-    "last_online": 1732743216,
+    "last_online": 1741394920,
     "joined": 1447310083,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1969,
-            "date": 1695798017,
-            "rd": 133
+            "rating": 1870,
+            "date": 1741254789,
+            "rd": 187
         },
         "best": {
             "rating": 2071,
@@ -49,14 +49,14 @@
         "record": {
             "win": 118,
             "loss": 41,
-            "draw": 34
+            "draw": 35
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1697,
-            "date": 1698325865,
-            "rd": 163
+            "rating": 1601,
+            "date": 1739949044,
+            "rd": 177
         },
         "best": {
             "rating": 1953,
@@ -65,7 +65,7 @@
         },
         "record": {
             "win": 315,
-            "loss": 305,
+            "loss": 306,
             "draw": 19
         }
     },

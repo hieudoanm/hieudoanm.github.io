@@ -6,9 +6,9 @@
     "name": "Artin Ashraf",
     "username": "artin10862",
     "title": "FM",
-    "followers": 761,
+    "followers": 796,
     "country": "https://api.chess.com/pub/country/IR",
-    "last_online": 1734174691,
+    "last_online": 1741702414,
     "joined": 1549717857,
     "status": "premium",
     "is_streamer": false,
@@ -17,18 +17,18 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2331,
-            "date": 1715882927,
-            "rd": 146
+            "rating": 2349,
+            "date": 1739729472,
+            "rd": 48
         },
         "best": {
             "rating": 2379,
             "date": 1674937737,
-            "game": "https://www.chess.com/game/live/68675609131"
+            "game": "https://www.chess.com/game/live/133465772821"
         },
         "record": {
-            "win": 8,
-            "loss": 2,
+            "win": 12,
+            "loss": 4,
             "draw": 1
         }
     },
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3056,
-            "date": 1734180449,
-            "rd": 33
+            "rating": 2988,
+            "date": 1741704034,
+            "rd": 25
         },
         "best": {
             "rating": 3132,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/116808616271"
         },
         "record": {
-            "win": 3023,
-            "loss": 3121,
-            "draw": 444
+            "win": 3456,
+            "loss": 3557,
+            "draw": 506
         }
     },
     "fide": 2359,
@@ -83,8 +83,8 @@
             "score": 77
         },
         "daily": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 54,
+            "score": 51
         }
     }
 }

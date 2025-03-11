@@ -6,10 +6,10 @@
     "name": "Ant\u00fa Amigo Quintana",
     "username": "amiqu",
     "title": "FM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/CL",
     "location": "Santiago",
-    "last_online": 1733829507,
+    "last_online": 1741105256,
     "joined": 1572996110,
     "status": "premium",
     "is_streamer": false,
@@ -67,7 +67,7 @@
             "draw": 19
         }
     },
-    "fide": 2040,
+    "fide": 2293,
     "tactics": {
         "highest": {
             "rating": 2056,

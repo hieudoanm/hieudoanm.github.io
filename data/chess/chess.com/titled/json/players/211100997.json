@@ -5,10 +5,10 @@
     "name": "Mukhammadzokhid Suyarov",
     "username": "zohid6",
     "title": "IM",
-    "followers": 98,
+    "followers": 116,
     "country": "https://api.chess.com/pub/country/UZ",
     "location": "tashkent",
-    "last_online": 1734100140,
+    "last_online": 1741692100,
     "joined": 1670422893,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2606,
-            "date": 1727292493,
-            "rd": 46
+            "rating": 2609,
+            "date": 1739819189,
+            "rd": 44
         },
         "best": {
             "rating": 2881,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/77911407645"
         },
         "record": {
-            "win": 22,
-            "loss": 15,
-            "draw": 7
+            "win": 30,
+            "loss": 18,
+            "draw": 14
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2837,
-            "date": 1732727322,
-            "rd": 49
+            "rating": 2826,
+            "date": 1735409828,
+            "rd": 47
         },
         "best": {
             "rating": 2946,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/104350208145"
         },
         "record": {
-            "win": 537,
-            "loss": 602,
-            "draw": 64
+            "win": 548,
+            "loss": 604,
+            "draw": 65
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2946,
-            "date": 1734099283,
-            "rd": 33
+            "rating": 2899,
+            "date": 1741620863,
+            "rd": 42
         },
         "best": {
             "rating": 3068,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/124318738723"
         },
         "record": {
-            "win": 926,
-            "loss": 838,
-            "draw": 222
+            "win": 1011,
+            "loss": 920,
+            "draw": 237
         }
     },
     "fide": 2466,

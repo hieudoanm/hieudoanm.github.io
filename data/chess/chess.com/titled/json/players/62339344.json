@@ -5,9 +5,9 @@
     "name": "Casper Liu",
     "username": "casper",
     "title": "FM",
-    "followers": 19,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/DK",
-    "last_online": 1734161198,
+    "last_online": 1741687448,
     "joined": 1560681213,
     "status": "premium",
     "is_streamer": false,
@@ -52,26 +52,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2724,
-            "date": 1734091914,
-            "rd": 30
+            "rating": 2738,
+            "date": 1738858627
         },
         "best": {
             "rating": 2768,
             "date": 1732878544,
-            "game": "https://www.chess.com/game/live/126964766131"
+            "game": "https://www.chess.com/game/live/130717825513"
         },
         "record": {
-            "win": 352,
-            "loss": 163,
-            "draw": 20
+            "win": 387,
+            "loss": 196,
+            "draw": 28
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2518,
-            "date": 1733853953,
-            "rd": 41
+            "rating": 2565,
+            "date": 1741109232,
+            "rd": 48
         },
         "best": {
             "rating": 2602,
@@ -79,9 +78,9 @@
             "game": "https://www.chess.com/game/live/99764592601"
         },
         "record": {
-            "win": 785,
-            "loss": 799,
-            "draw": 106
+            "win": 825,
+            "loss": 829,
+            "draw": 114
         }
     },
     "tactics": {
@@ -98,6 +97,10 @@
         "best": {
             "total_attempts": 57,
             "score": 54
+        },
+        "daily": {
+            "total_attempts": 3,
+            "score": 1
         }
     }
 }

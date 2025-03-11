@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1895,
-            "date": 1731158669,
+            "date": 1738433848,
             "rd": 110
         },
         "best": {
@@ -29,10 +29,10 @@
         },
         "record": {
             "win": 294,
-            "loss": 156,
+            "loss": 170,
             "draw": 105,
             "time_per_move": 42993,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess960_daily": {

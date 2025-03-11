@@ -6,10 +6,10 @@
     "name": "James Schuyler",
     "username": "malachi1971",
     "title": "FM",
-    "followers": 857,
+    "followers": 858,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Newport News, VA",
-    "last_online": 1733771891,
+    "last_online": 1740586552,
     "joined": 1310820033,
     "status": "premium",
     "is_streamer": false,
@@ -91,17 +91,17 @@
     "chess_blitz": {
         "last": {
             "rating": 2620,
-            "date": 1731527476,
-            "rd": 119
+            "date": 1740586941,
+            "rd": 49
         },
         "best": {
-            "rating": 2620,
-            "date": 1697203413,
+            "rating": 2626,
+            "date": 1738196114,
             "game": "https://www.chess.com/game/live/68484704963"
         },
         "record": {
-            "win": 12206,
-            "loss": 2200,
+            "win": 12208,
+            "loss": 2201,
             "draw": 501
         }
     },

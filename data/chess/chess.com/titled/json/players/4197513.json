@@ -6,9 +6,9 @@
     "name": "Leon Kempen",
     "username": "batsford",
     "title": "CM",
-    "followers": 113,
+    "followers": 116,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734184635,
+    "last_online": 1741677117,
     "joined": 1288674073,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2168,
-            "date": 1706830067,
-            "rd": 57
+            "rating": 2078,
+            "date": 1741694919,
+            "rd": 97
         },
         "best": {
             "rating": 2453,
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/80289948"
         },
         "record": {
-            "win": 523,
-            "loss": 112,
-            "draw": 240,
-            "time_per_move": 78426,
+            "win": 545,
+            "loss": 115,
+            "draw": 243,
+            "time_per_move": 77337,
             "timeout_percent": 0
         },
         "tournament": {
@@ -55,7 +55,7 @@
             "win": 15,
             "loss": 3,
             "draw": 6,
-            "time_per_move": 78426,
+            "time_per_move": 77337,
             "timeout_percent": 0
         },
         "tournament": {
@@ -67,9 +67,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1810,
-            "date": 1733030782,
-            "rd": 123
+            "rating": 1830,
+            "date": 1735176304,
+            "rd": 120
         },
         "best": {
             "rating": 2418,
@@ -77,7 +77,7 @@
             "game": "https://www.chess.com/game/live/37164053309"
         },
         "record": {
-            "win": 5854,
+            "win": 5856,
             "loss": 640,
             "draw": 170
         }
@@ -101,9 +101,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1612,
-            "date": 1733636339,
-            "rd": 25
+            "rating": 1724,
+            "date": 1740920094
         },
         "best": {
             "rating": 1974,
@@ -111,16 +110,16 @@
             "game": "https://www.chess.com/game/live/40724923499"
         },
         "record": {
-            "win": 42808,
-            "loss": 12503,
-            "draw": 3698
+            "win": 43260,
+            "loss": 12654,
+            "draw": 3737
         }
     },
     "fide": 1871,
     "tactics": {
         "highest": {
-            "rating": 2530,
-            "date": 1657195196
+            "rating": 2595,
+            "date": 1738671907
         },
         "lowest": {
             "rating": 1207,

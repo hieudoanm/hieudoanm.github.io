@@ -5,10 +5,10 @@
     "name": "Epameinondas Kourousis",
     "username": "diamantidis_13",
     "title": "IM",
-    "followers": 43,
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Prague",
-    "last_online": 1733952140,
+    "last_online": 1741642366,
     "joined": 1586895176,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2503,
-            "date": 1733958885,
-            "rd": 36
+            "rating": 2565,
+            "date": 1741650928,
+            "rd": 34
         },
         "best": {
-            "rating": 2533,
-            "date": 1612819244,
+            "rating": 2543,
+            "date": 1735059413,
             "game": "https://www.chess.com/game/live/4770407161"
         },
         "record": {
-            "win": 3197,
-            "loss": 2762,
-            "draw": 501
+            "win": 3307,
+            "loss": 2836,
+            "draw": 523
         }
     },
     "tactics": {

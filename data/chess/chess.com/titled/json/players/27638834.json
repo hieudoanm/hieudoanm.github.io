@@ -6,10 +6,10 @@
     "name": "Mauricio Ramirez",
     "username": "cmmauricio",
     "title": "FM",
-    "followers": 940,
+    "followers": 949,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "Caracas venezuela",
-    "last_online": 1733525994,
+    "last_online": 1741390655,
     "joined": 1460055483,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2869,
-            "date": 1732652577,
-            "rd": 39
+            "rating": 2845,
+            "date": 1740717856,
+            "rd": 44
         },
         "best": {
             "rating": 3068,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/110844716285"
         },
         "record": {
-            "win": 4248,
-            "loss": 3532,
-            "draw": 491
+            "win": 4255,
+            "loss": 3543,
+            "draw": 493
         }
     },
     "chess_blitz": {

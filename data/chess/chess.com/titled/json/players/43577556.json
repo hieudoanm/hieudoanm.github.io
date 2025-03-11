@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/JozefKneht",
     "username": "jozefkneht",
     "title": "IM",
-    "followers": 141,
+    "followers": 148,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734075539,
+    "last_online": 1741619377,
     "joined": 1519249729,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 2010,
-            "date": 1693654697,
+            "date": 1738940791,
             "rd": 342
         },
         "best": {
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2440,
-            "date": 1704850197,
-            "rd": 31
+            "rating": 2328,
+            "date": 1738450725,
+            "rd": 35
         },
         "best": {
             "rating": 2613,
@@ -62,26 +62,26 @@
             "game": "https://www.chess.com/game/live/60296497035"
         },
         "record": {
-            "win": 541,
-            "loss": 627,
-            "draw": 88
+            "win": 582,
+            "loss": 679,
+            "draw": 89
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2538,
-            "date": 1734037114,
-            "rd": 26
+            "rating": 2554,
+            "date": 1741548136,
+            "rd": 25
         },
         "best": {
-            "rating": 2689,
-            "date": 1702806487,
+            "rating": 2692,
+            "date": 1734819238,
             "game": "https://www.chess.com/game/live/2991038447"
         },
         "record": {
-            "win": 9645,
-            "loss": 9760,
-            "draw": 1858
+            "win": 10079,
+            "loss": 10163,
+            "draw": 1936
         }
     },
     "tactics": {

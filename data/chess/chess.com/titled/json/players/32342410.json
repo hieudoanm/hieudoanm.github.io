@@ -6,10 +6,10 @@
     "name": "Artem Koval",
     "username": "artem_koval",
     "title": "FM",
-    "followers": 72,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Kryviy Rih, Kyiv",
-    "last_online": 1734174210,
+    "last_online": 1741700179,
     "joined": 1484253256,
     "status": "premium",
     "is_streamer": false,
@@ -33,7 +33,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2022,
-            "date": 1723553833,
+            "date": 1738532650,
             "rd": 142
         },
         "best": {
@@ -49,36 +49,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2607,
-            "date": 1732385628,
-            "rd": 45
+            "rating": 2698,
+            "date": 1739646000,
+            "rd": 36
         },
         "best": {
-            "rating": 2609,
-            "date": 1716579937,
-            "game": "https://www.chess.com/game/live/110317875507"
+            "rating": 2709,
+            "date": 1739645245,
+            "game": "https://www.chess.com/game/live/133384150957"
         },
         "record": {
-            "win": 764,
-            "loss": 329,
-            "draw": 37
+            "win": 795,
+            "loss": 353,
+            "draw": 42
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2597,
-            "date": 1733265622,
-            "rd": 47
+            "rating": 2626,
+            "date": 1741107391,
+            "rd": 48
         },
         "best": {
-            "rating": 2628,
-            "date": 1732641103,
+            "rating": 2640,
+            "date": 1739900999,
             "game": "https://www.chess.com/game/live/126379744279"
         },
         "record": {
-            "win": 1489,
-            "loss": 885,
-            "draw": 121
+            "win": 1507,
+            "loss": 901,
+            "draw": 124
         }
     },
     "fide": 2261,
@@ -94,8 +94,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 54,
-            "score": 51
+            "total_attempts": 73,
+            "score": 70
         }
     }
 }

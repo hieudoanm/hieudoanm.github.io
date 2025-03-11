@@ -6,9 +6,9 @@
     "name": "Jeigoth Pastor Carvajal",
     "username": "jeigoth",
     "title": "CM",
-    "followers": 56,
+    "followers": 57,
     "country": "https://api.chess.com/pub/country/CR",
-    "last_online": 1733800491,
+    "last_online": 1741503721,
     "joined": 1499143736,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2156,
-            "date": 1733800590,
-            "rd": 81
+            "rating": 2036,
+            "date": 1741054529,
+            "rd": 74
         },
         "best": {
             "rating": 2313,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/93755954623"
         },
         "record": {
-            "win": 224,
-            "loss": 177,
+            "win": 226,
+            "loss": 185,
             "draw": 33
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2307,
-            "date": 1721794305,
-            "rd": 94
+            "rating": 2312,
+            "date": 1736268991,
+            "rd": 104
         },
         "best": {
             "rating": 2343,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/111274283377"
         },
         "record": {
-            "win": 197,
-            "loss": 105,
+            "win": 198,
+            "loss": 108,
             "draw": 23
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2369,
-            "date": 1721345826
+            "rating": 2810,
+            "date": 1739899858
         },
         "lowest": {
             "rating": 1001,

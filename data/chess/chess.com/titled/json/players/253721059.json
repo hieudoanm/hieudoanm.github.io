@@ -5,14 +5,14 @@
     "name": "Don\u00e1t Dar\u00f3czi",
     "username": "drdaro",
     "title": "FM",
-    "followers": 15,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733846239,
+    "last_online": 1741634354,
     "joined": 1677510033,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -47,26 +47,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2407,
-            "date": 1731692562,
-            "rd": 34
+            "rating": 2487,
+            "date": 1741178425,
+            "rd": 30
         },
         "best": {
-            "rating": 2514,
-            "date": 1726313965,
-            "game": "https://www.chess.com/game/live/120052249973"
+            "rating": 2593,
+            "date": 1739542701,
+            "game": "https://www.chess.com/game/live/133214354023"
         },
         "record": {
-            "win": 266,
-            "loss": 295,
-            "draw": 43
+            "win": 400,
+            "loss": 467,
+            "draw": 65
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2391,
-            "date": 1733846973,
-            "rd": 48
+            "rating": 2459,
+            "date": 1741176638,
+            "rd": 36
         },
         "best": {
             "rating": 2609,
@@ -74,15 +74,15 @@
             "game": "https://www.chess.com/game/live/117325208367"
         },
         "record": {
-            "win": 366,
-            "loss": 527,
-            "draw": 56
+            "win": 478,
+            "loss": 659,
+            "draw": 82
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3412,
-            "date": 1720775825
+            "rating": 3431,
+            "date": 1737758983
         },
         "lowest": {
             "rating": 1000,

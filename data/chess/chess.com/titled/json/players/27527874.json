@@ -6,14 +6,14 @@
     "name": "Evan Park",
     "username": "krazypawns",
     "title": "IM",
-    "followers": 82,
+    "followers": 83,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734182363,
+    "last_online": 1741525891,
     "joined": 1459443471,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2790,
-            "date": 1734112039,
-            "rd": 28
+            "rating": 2749,
+            "date": 1740780003,
+            "rd": 41
         },
         "best": {
             "rating": 2858,
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/127753831831"
         },
         "record": {
-            "win": 1367,
-            "loss": 892,
-            "draw": 144
+            "win": 1395,
+            "loss": 940,
+            "draw": 148
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2649,
-            "date": 1733938657,
-            "rd": 49
+            "rating": 2706,
+            "date": 1740600557,
+            "rd": 41
         },
         "best": {
-            "rating": 2658,
-            "date": 1733849978,
-            "game": "https://www.chess.com/game/live/107451765661"
+            "rating": 2765,
+            "date": 1739759926,
+            "game": "https://www.chess.com/game/live/133128544051"
         },
         "record": {
-            "win": 843,
-            "loss": 581,
-            "draw": 97
+            "win": 887,
+            "loss": 626,
+            "draw": 108
         }
     },
     "fide": 601,

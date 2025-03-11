@@ -6,10 +6,10 @@
     "name": "Vitorio Chemin",
     "username": "donjuanegenaro",
     "title": "FM",
-    "followers": 95,
+    "followers": 108,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Curitiba",
-    "last_online": 1734098331,
+    "last_online": 1741659722,
     "joined": 1557361724,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1997,
-            "date": 1734099079,
-            "rd": 34
+            "rating": 1931,
+            "date": 1741661311,
+            "rd": 40
         },
         "best": {
             "rating": 2209,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/102211403753"
         },
         "record": {
-            "win": 2288,
-            "loss": 2046,
-            "draw": 100
+            "win": 2328,
+            "loss": 2128,
+            "draw": 102
         }
     },
     "tactics": {

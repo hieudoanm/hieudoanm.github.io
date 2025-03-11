@@ -8,7 +8,7 @@
     "followers": 63,
     "country": "https://api.chess.com/pub/country/XX",
     "location": "Djibuti",
-    "last_online": 1733937376,
+    "last_online": 1739985466,
     "joined": 1373051564,
     "status": "premium",
     "is_streamer": false,
@@ -89,9 +89,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2422,
-            "date": 1733937800,
-            "rd": 62
+            "rating": 2429,
+            "date": 1738787758,
+            "rd": 73
         },
         "best": {
             "rating": 2456,
@@ -99,15 +99,15 @@
             "game": "https://www.chess.com/game/live/6343817589"
         },
         "record": {
-            "win": 11419,
-            "loss": 7759,
+            "win": 11420,
+            "loss": 7760,
             "draw": 1114
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3039,
-            "date": 1727812476
+            "rating": 3070,
+            "date": 1738075227
         },
         "lowest": {
             "rating": 1342,

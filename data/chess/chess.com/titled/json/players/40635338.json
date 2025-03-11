@@ -6,10 +6,10 @@
     "name": "Olivier Simon",
     "username": "saymone",
     "title": "IM",
-    "followers": 74,
+    "followers": 79,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Paris",
-    "last_online": 1734085793,
+    "last_online": 1741691245,
     "joined": 1511383190,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2400,
-            "date": 1692202258,
-            "rd": 349
+            "date": 1741109214,
+            "rd": 50
         },
         "best": {
             "rating": 2400,
@@ -28,7 +28,7 @@
             "game": "https://www.chess.com/game/live/8973436953"
         },
         "record": {
-            "win": 1,
+            "win": 3,
             "loss": 0,
             "draw": 0
         }
@@ -53,8 +53,8 @@
     "fide": 2300,
     "tactics": {
         "highest": {
-            "rating": 2780,
-            "date": 1674863332
+            "rating": 2782,
+            "date": 1740680212
         },
         "lowest": {
             "rating": 2314,

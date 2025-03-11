@@ -6,10 +6,10 @@
     "name": "Bjorn Ivar Karlsson",
     "username": "bivark",
     "title": "FM",
-    "followers": 112,
+    "followers": 114,
     "country": "https://api.chess.com/pub/country/IS",
     "location": "Reykjav&iacute;k",
-    "last_online": 1734081033,
+    "last_online": 1741701516,
     "joined": 1260929659,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2459,
-            "date": 1734025247,
-            "rd": 41
+            "rating": 2454,
+            "date": 1735056594,
+            "rd": 44
         },
         "best": {
             "rating": 2646,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/88471226833"
         },
         "record": {
-            "win": 172,
-            "loss": 106,
+            "win": 175,
+            "loss": 109,
             "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2566,
-            "date": 1734106965,
-            "rd": 26
+            "rating": 2558,
+            "date": 1737383186,
+            "rd": 42
         },
         "best": {
             "rating": 2653,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/123980419697"
         },
         "record": {
-            "win": 1162,
-            "loss": 822,
-            "draw": 155
+            "win": 1175,
+            "loss": 833,
+            "draw": 156
         }
     },
     "fide": 2339,

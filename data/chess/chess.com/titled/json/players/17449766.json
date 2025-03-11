@@ -5,9 +5,9 @@
     "name": "lipauska3",
     "username": "lipauska3",
     "title": "IM",
-    "followers": 65,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/HR",
-    "last_online": 1734016826,
+    "last_online": 1741637665,
     "joined": 1401128915,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 400,
-            "date": 1720336785,
+            "date": 1737480216,
             "rd": 350
         },
         "record": {
@@ -42,25 +42,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2364,
-            "date": 1734020504,
-            "rd": 47
+            "rating": 2441,
+            "date": 1740919654,
+            "rd": 55
         },
         "best": {
             "rating": 2465,
             "date": 1715108697,
-            "game": "https://www.chess.com/game/live/82327194739"
+            "game": "https://www.chess.com/game/live/128457787185"
         },
         "record": {
-            "win": 1214,
-            "loss": 805,
-            "draw": 72
+            "win": 1257,
+            "loss": 832,
+            "draw": 74
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2642,
-            "date": 1734031583,
+            "rating": 2702,
+            "date": 1741638541,
             "rd": 23
         },
         "best": {
@@ -69,9 +69,9 @@
             "game": "https://www.chess.com/game/live/106499867859"
         },
         "record": {
-            "win": 7542,
-            "loss": 5690,
-            "draw": 1394
+            "win": 8157,
+            "loss": 6194,
+            "draw": 1566
         }
     },
     "tactics": {

@@ -6,14 +6,14 @@
     "name": "Guillermo Camacho Mart\u00ednez",
     "username": "gcamachomartinez",
     "title": "FM",
-    "followers": 54,
+    "followers": 66,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1733843682,
+    "last_online": 1741619640,
     "joined": 1510525788,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -29,36 +29,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2162,
-            "date": 1579553382,
-            "rd": 119
+            "rating": 2070,
+            "date": 1739412551,
+            "rd": 220
         },
         "best": {
-            "rating": 2095,
-            "date": 1537487811,
+            "rating": 2155,
+            "date": 1736619345,
             "game": "https://www.chess.com/game/live/3086027719"
         },
         "record": {
             "win": 63,
-            "loss": 25,
+            "loss": 27,
             "draw": 6
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2473,
-            "date": 1733872744,
+            "rating": 2599,
+            "date": 1741619923,
             "rd": 44
         },
         "best": {
-            "rating": 2576,
-            "date": 1585198211,
-            "game": "https://www.chess.com/game/live/127586477075"
+            "rating": 2654,
+            "date": 1738713714,
+            "game": "https://www.chess.com/game/live/132452395335"
         },
         "record": {
-            "win": 2372,
-            "loss": 1996,
-            "draw": 563
+            "win": 2500,
+            "loss": 2092,
+            "draw": 606
         }
     },
     "fide": 2307,

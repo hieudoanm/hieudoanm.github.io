@@ -6,9 +6,9 @@
     "name": "Lars Stark",
     "username": "goldihouse",
     "title": "IM",
-    "followers": 55,
+    "followers": 61,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734021377,
+    "last_online": 1741544724,
     "joined": 1204818770,
     "status": "premium",
     "is_streamer": false,
@@ -17,38 +17,38 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1930,
-            "date": 1734180433,
-            "rd": 39
+            "rating": 2027,
+            "date": 1741700654,
+            "rd": 51
         },
         "best": {
-            "rating": 1980,
-            "date": 1733683312,
-            "game": "https://www.chess.com/game/daily/727373905"
+            "rating": 2037,
+            "date": 1741457931,
+            "game": "https://www.chess.com/game/daily/763180689"
         },
         "record": {
-            "win": 136,
-            "loss": 28,
-            "draw": 11,
-            "time_per_move": 5045,
+            "win": 181,
+            "loss": 51,
+            "draw": 25,
+            "time_per_move": 8114,
             "timeout_percent": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2735,
-            "date": 1732557629,
-            "rd": 38
+            "rating": 2800,
+            "date": 1741108505,
+            "rd": 45
         },
         "best": {
-            "rating": 2745,
-            "date": 1728404194,
+            "rating": 2802,
+            "date": 1739468557,
             "game": "https://www.chess.com/game/live/9059219471"
         },
         "record": {
-            "win": 546,
-            "loss": 345,
-            "draw": 94
+            "win": 599,
+            "loss": 388,
+            "draw": 99
         }
     },
     "tactics": {
@@ -65,6 +65,10 @@
         "best": {
             "total_attempts": 62,
             "score": 59
+        },
+        "daily": {
+            "total_attempts": 50,
+            "score": 47
         }
     }
 }

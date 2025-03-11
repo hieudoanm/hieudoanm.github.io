@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/GPT5-1",
     "username": "gpt5-1",
     "title": "FM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/XC",
-    "last_online": 1733835354,
+    "last_online": 1741521766,
     "joined": 1682176813,
     "status": "premium",
     "is_streamer": false,
@@ -40,11 +40,23 @@
             "draw": 0
         }
     },
+    "chess_bullet": {
+        "last": {
+            "rating": 2072,
+            "date": 1736723359,
+            "rd": 251
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
     "chess_blitz": {
         "last": {
-            "rating": 2304,
-            "date": 1734163679,
-            "rd": 22
+            "rating": 2269,
+            "date": 1741624799,
+            "rd": 25
         },
         "best": {
             "rating": 2416,
@@ -52,9 +64,9 @@
             "game": "https://www.chess.com/game/live/108858672451"
         },
         "record": {
-            "win": 3005,
-            "loss": 3635,
-            "draw": 558
+            "win": 3373,
+            "loss": 4070,
+            "draw": 645
         }
     },
     "tactics": {

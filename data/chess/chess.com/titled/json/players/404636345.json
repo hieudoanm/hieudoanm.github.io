@@ -4,20 +4,20 @@
     "url": "https://www.chess.com/member/Yellow_Orangee",
     "username": "yellow_orangee",
     "title": "WFM",
-    "followers": 0,
+    "followers": 1,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734112085,
+    "last_online": 1741634119,
     "joined": 1732452319,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2129,
-            "date": 1734114143,
-            "rd": 100
+            "rating": 2134,
+            "date": 1741111123,
+            "rd": 75
         },
         "best": {
             "rating": 2233,
@@ -25,15 +25,15 @@
             "game": "https://www.chess.com/game/live/127497637609"
         },
         "record": {
-            "win": 7,
-            "loss": 4,
-            "draw": 1
+            "win": 18,
+            "loss": 12,
+            "draw": 2
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2231,
-            "date": 1734102803
+            "rating": 2780,
+            "date": 1735853140
         },
         "lowest": {
             "rating": 1000,

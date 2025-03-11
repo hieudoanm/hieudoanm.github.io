@@ -6,9 +6,9 @@
     "name": "Oyunchimeg Genden",
     "username": "mglmgl2017",
     "title": "WNM",
-    "followers": 3,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/MN",
-    "last_online": 1734175359,
+    "last_online": 1741269546,
     "joined": 1500176441,
     "status": "premium",
     "is_streamer": false,
@@ -17,17 +17,17 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1877,
-            "date": 1681999811,
-            "rd": 106
+            "rating": 1955,
+            "date": 1737900034,
+            "rd": 160
         },
         "best": {
-            "rating": 1936,
-            "date": 1681910866,
-            "game": "https://www.chess.com/game/live/75390016243"
+            "rating": 1955,
+            "date": 1737900034,
+            "game": "https://www.chess.com/game/live/131638814229"
         },
         "record": {
-            "win": 6,
+            "win": 7,
             "loss": 4,
             "draw": 0
         }

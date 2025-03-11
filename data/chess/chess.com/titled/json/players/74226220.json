@@ -6,10 +6,10 @@
     "name": "Mark Jay Bacojo",
     "username": "mjbacojo",
     "title": "FM",
-    "followers": 26,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Dasmari\u00f1as City Philippines",
-    "last_online": 1730970258,
+    "last_online": 1739634153,
     "joined": 1584939103,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2305,
-            "date": 1696769375,
-            "rd": 108
+            "rating": 2297,
+            "date": 1739109415,
+            "rd": 49
         },
         "best": {
             "rating": 2335,
@@ -29,42 +29,42 @@
         },
         "record": {
             "win": 27,
-            "loss": 13,
-            "draw": 10
+            "loss": 14,
+            "draw": 11
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2499,
-            "date": 1716814121,
-            "rd": 48
+            "rating": 2526,
+            "date": 1737013966,
+            "rd": 96
         },
         "best": {
             "rating": 2541,
             "date": 1626842604,
-            "game": "https://www.chess.com/game/live/5891540308"
+            "game": "https://www.chess.com/game/live/130752646935"
         },
         "record": {
-            "win": 79,
+            "win": 80,
             "loss": 52,
             "draw": 7
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2587,
-            "date": 1697380961,
-            "rd": 83
+            "rating": 2674,
+            "date": 1739638395,
+            "rd": 47
         },
         "best": {
-            "rating": 2587,
-            "date": 1697380689,
-            "game": "https://www.chess.com/game/live/43940654861"
+            "rating": 2678,
+            "date": 1739032901,
+            "game": "https://www.chess.com/game/live/131242812803"
         },
         "record": {
-            "win": 89,
-            "loss": 45,
-            "draw": 10
+            "win": 131,
+            "loss": 60,
+            "draw": 15
         }
     },
     "tactics": {

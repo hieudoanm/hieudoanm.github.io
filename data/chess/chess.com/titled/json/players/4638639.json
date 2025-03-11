@@ -6,9 +6,9 @@
     "name": "Zhanibek Amanov",
     "username": "zhani-z",
     "title": "IM",
-    "followers": 115,
+    "followers": 117,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734180343,
+    "last_online": 1741697635,
     "joined": 1296446688,
     "status": "premium",
     "is_streamer": false,
@@ -55,9 +55,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1599,
-            "date": 1730014477,
-            "rd": 119
+            "rating": 1388,
+            "date": 1740206525,
+            "rd": 98
         },
         "best": {
             "rating": 2623,
@@ -66,7 +66,7 @@
         },
         "record": {
             "win": 43,
-            "loss": 40,
+            "loss": 46,
             "draw": 11
         }
     },
@@ -110,8 +110,8 @@
             "date": 1492356351
         },
         "lowest": {
-            "rating": 1363,
-            "date": 1297659483
+            "rating": 1287,
+            "date": 1740758351
         }
     },
     "puzzle_rush": {
@@ -120,8 +120,8 @@
             "score": 69
         },
         "daily": {
-            "total_attempts": 39,
-            "score": 36
+            "total_attempts": 47,
+            "score": 44
         }
     }
 }

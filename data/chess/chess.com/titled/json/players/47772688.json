@@ -6,9 +6,9 @@
     "name": "Andjela Dimitrijevic",
     "username": "andjela_djidjika",
     "title": "WCM",
-    "followers": 37,
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734045654,
+    "last_online": 1741640614,
     "joined": 1531248333,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     "chess_rapid": {
         "last": {
             "rating": 1782,
-            "date": 1700386390,
-            "rd": 98
+            "date": 1737561954,
+            "rd": 154
         },
         "best": {
             "rating": 1861,
@@ -46,7 +46,7 @@
             "game": "https://www.chess.com/game/live/94086752507"
         },
         "record": {
-            "win": 7,
+            "win": 8,
             "loss": 9,
             "draw": 2
         }
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2034,
-            "date": 1734046770,
-            "rd": 68
+            "rating": 2011,
+            "date": 1736899346,
+            "rd": 62
         },
         "best": {
             "rating": 2154,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/101605344673"
         },
         "record": {
-            "win": 462,
-            "loss": 517,
+            "win": 466,
+            "loss": 536,
             "draw": 51
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2623,
-            "date": 1732316591
+            "rating": 2636,
+            "date": 1738456000
         },
         "lowest": {
             "rating": 1213,

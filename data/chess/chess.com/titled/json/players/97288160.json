@@ -5,10 +5,10 @@
     "name": "Patryk \u0141agowski",
     "username": "szcz0015",
     "title": "IM",
-    "followers": 23,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Warszawa",
-    "last_online": 1733941443,
+    "last_online": 1741341753,
     "joined": 1605561612,
     "status": "premium",
     "is_streamer": false,
@@ -29,9 +29,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2441,
-            "date": 1732051612,
-            "rd": 29
+            "rating": 2370,
+            "date": 1740688783,
+            "rd": 41
         },
         "best": {
             "rating": 2585,
@@ -39,9 +39,9 @@
             "game": "https://www.chess.com/game/live/27996019735"
         },
         "record": {
-            "win": 9728,
-            "loss": 7281,
-            "draw": 939
+            "win": 9782,
+            "loss": 7331,
+            "draw": 942
         }
     },
     "chess_blitz": {

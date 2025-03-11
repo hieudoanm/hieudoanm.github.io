@@ -6,15 +6,15 @@
     "name": "Egor Lashkin",
     "username": "honestgames",
     "title": "FM",
-    "followers": 118,
+    "followers": 123,
     "country": "https://api.chess.com/pub/country/MD",
     "location": "Tiraspol",
-    "last_online": 1734178356,
+    "last_online": 1740691837,
     "joined": 1597066776,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -52,22 +52,22 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2952,
-            "date": 1734126431,
-            "rd": 28
+            "rating": 2799,
+            "date": 1740505030,
+            "rd": 35
         },
         "best": {
-            "rating": 2952,
-            "date": 1734126431,
+            "rating": 2961,
+            "date": 1734282267,
             "game": "https://www.chess.com/game/live/97972925673"
         },
         "record": {
-            "win": 1194,
-            "loss": 932,
-            "draw": 222
+            "win": 1400,
+            "loss": 1104,
+            "draw": 261
         }
     },
-    "fide": 2449,
+    "fide": 2517,
     "tactics": {
         "highest": {
             "rating": 3952,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 71,
-            "score": 68
+            "total_attempts": 76,
+            "score": 73
         }
     }
 }

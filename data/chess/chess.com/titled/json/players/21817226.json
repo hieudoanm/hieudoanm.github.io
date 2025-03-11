@@ -6,10 +6,10 @@
     "name": "Gislason ,Gudmundur",
     "username": "gummigisla",
     "title": "FM",
-    "followers": 18,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/IS",
     "location": "Isafjordur  Iceland",
-    "last_online": 1734165813,
+    "last_online": 1741439647,
     "joined": 1428136390,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2399,
-            "date": 1733508898,
-            "rd": 43
+            "rating": 2356,
+            "date": 1741539121,
+            "rd": 31
         },
         "best": {
             "rating": 2512,
@@ -62,15 +62,15 @@
             "game": "https://www.chess.com/game/live/118770599431"
         },
         "record": {
-            "win": 1694,
-            "loss": 992,
-            "draw": 192
+            "win": 1861,
+            "loss": 1114,
+            "draw": 212
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3213,
-            "date": 1734166610
+            "rating": 3366,
+            "date": 1739711541
         },
         "lowest": {
             "rating": 1320,

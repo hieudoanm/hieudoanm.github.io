@@ -7,7 +7,7 @@
     "title": "WFM",
     "followers": 5,
     "country": "https://api.chess.com/pub/country/HK",
-    "last_online": 1734167023,
+    "last_online": 1740479496,
     "joined": 1513672453,
     "status": "premium",
     "is_streamer": false,
@@ -79,10 +79,6 @@
         "best": {
             "total_attempts": 58,
             "score": 55
-        },
-        "daily": {
-            "total_attempts": 35,
-            "score": 32
         }
     }
 }

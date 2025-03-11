@@ -8,7 +8,7 @@
     "followers": 32,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "C\u00f3rdoba",
-    "last_online": 1733689239,
+    "last_online": 1741442644,
     "joined": 1591903204,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2025,
-            "date": 1726679908,
-            "rd": 110
+            "rating": 2282,
+            "date": 1737133222,
+            "rd": 67
         },
         "best": {
             "rating": 2679,
@@ -58,9 +58,9 @@
             "game": "https://www.chess.com/game/live/48216563705"
         },
         "record": {
-            "win": 651,
-            "loss": 646,
-            "draw": 119
+            "win": 667,
+            "loss": 649,
+            "draw": 120
         }
     },
     "chess_blitz": {

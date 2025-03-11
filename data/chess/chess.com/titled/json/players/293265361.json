@@ -5,9 +5,9 @@
     "name": "Koby Kalavannan",
     "username": "brown_mamba24",
     "title": "FM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734163899,
+    "last_online": 1741691691,
     "joined": 1686666396,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2735,
-            "date": 1729028787,
-            "rd": 28
+            "rating": 2626,
+            "date": 1741548031,
+            "rd": 36
         },
         "best": {
             "rating": 2797,
@@ -60,16 +60,16 @@
             "game": "https://www.chess.com/game/live/121462838723"
         },
         "record": {
-            "win": 857,
-            "loss": 920,
-            "draw": 169
+            "win": 932,
+            "loss": 1021,
+            "draw": 200
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3860,
-            "date": 1730972042
+            "rating": 3861,
+            "date": 1737464181
         },
         "lowest": {
             "rating": 1000,

@@ -6,10 +6,10 @@
     "name": "Jesus Arturo Silva Hern\u00e1ndez",
     "username": "jarshh95",
     "title": "CM",
-    "followers": 96,
+    "followers": 99,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Veracruz",
-    "last_online": 1733954223,
+    "last_online": 1741192502,
     "joined": 1487909528,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2412,
-            "date": 1733954701,
-            "rd": 52
+            "rating": 2183,
+            "date": 1741565915,
+            "rd": 34
         },
         "best": {
             "rating": 2427,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/91817945941"
         },
         "record": {
-            "win": 12128,
-            "loss": 13817,
-            "draw": 1020
+            "win": 12330,
+            "loss": 14085,
+            "draw": 1038
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2323,
-            "date": 1733875493,
-            "rd": 52
+            "rating": 2304,
+            "date": 1740528262,
+            "rd": 44
         },
         "best": {
             "rating": 2392,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/96261253793"
         },
         "record": {
-            "win": 960,
-            "loss": 1006,
-            "draw": 86
+            "win": 992,
+            "loss": 1050,
+            "draw": 92
         }
     },
     "tactics": {

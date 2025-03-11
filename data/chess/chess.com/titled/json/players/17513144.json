@@ -5,9 +5,9 @@
     "name": "Oliver Stork",
     "username": "03revilo",
     "title": "FM",
-    "followers": 22,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734019234,
+    "last_online": 1741623169,
     "joined": 1401551849,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2516,
-            "date": 1733005831,
-            "rd": 47
+            "date": 1737375782,
+            "rd": 49
         },
         "best": {
             "rating": 2544,
@@ -45,50 +45,50 @@
             "game": "https://www.chess.com/game/live/101351486863"
         },
         "record": {
-            "win": 108,
-            "loss": 58,
+            "win": 110,
+            "loss": 59,
             "draw": 20
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2413,
-            "date": 1716891548,
-            "rd": 29
+            "rating": 2515,
+            "date": 1734366840,
+            "rd": 49
         },
         "best": {
             "rating": 2519,
             "date": 1608401121,
-            "game": "https://www.chess.com/game/live/6007644276"
+            "game": "https://www.chess.com/game/live/128105465053"
         },
         "record": {
-            "win": 426,
-            "loss": 339,
+            "win": 439,
+            "loss": 342,
             "draw": 29
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2488,
-            "date": 1722981219,
-            "rd": 48
+            "rating": 2606,
+            "date": 1735067076,
+            "rd": 43
         },
         "best": {
-            "rating": 2565,
-            "date": 1715543382,
+            "rating": 2606,
+            "date": 1735067076,
             "game": "https://www.chess.com/game/live/87667899111"
         },
         "record": {
-            "win": 861,
-            "loss": 678,
+            "win": 883,
+            "loss": 683,
             "draw": 109
         }
     },
-    "fide": 2370,
+    "fide": 2396,
     "tactics": {
         "highest": {
-            "rating": 3139,
-            "date": 1733009407
+            "rating": 3251,
+            "date": 1740698150
         },
         "lowest": {
             "rating": 1208,

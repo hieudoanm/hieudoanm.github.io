@@ -6,9 +6,9 @@
     "name": "Tymur Keleberda",
     "username": "defend1r",
     "title": "FM",
-    "followers": 430,
+    "followers": 449,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1734154498,
+    "last_online": 1741635341,
     "joined": 1435406249,
     "status": "premium",
     "is_streamer": false,
@@ -56,8 +56,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2264,
-            "date": 1734062383,
-            "rd": 49
+            "date": 1738110482,
+            "rd": 50
         },
         "best": {
             "rating": 2264,
@@ -65,33 +65,33 @@
             "game": "https://www.chess.com/game/live/97046356075"
         },
         "record": {
-            "win": 35,
+            "win": 36,
             "loss": 8,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2649,
-            "date": 1729961291,
+            "rating": 2682,
+            "date": 1740598162,
             "rd": 49
         },
         "best": {
-            "rating": 2690,
-            "date": 1680476068,
-            "game": "https://www.chess.com/game/live/103140050437"
+            "rating": 2714,
+            "date": 1738431834,
+            "game": "https://www.chess.com/game/live/132169247131"
         },
         "record": {
-            "win": 781,
-            "loss": 791,
-            "draw": 96
+            "win": 800,
+            "loss": 805,
+            "draw": 97
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2735,
-            "date": 1734154822,
-            "rd": 25
+            "rating": 2701,
+            "date": 1741662379,
+            "rd": 27
         },
         "best": {
             "rating": 2899,
@@ -99,15 +99,15 @@
             "game": "https://www.chess.com/game/live/116826616333"
         },
         "record": {
-            "win": 3188,
-            "loss": 3383,
-            "draw": 552
+            "win": 3389,
+            "loss": 3616,
+            "draw": 586
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3850,
-            "date": 1732817628
+            "rating": 3867,
+            "date": 1740502404
         },
         "lowest": {
             "rating": 1300,
@@ -116,12 +116,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 67,
-            "score": 64
-        },
-        "daily": {
-            "total_attempts": 52,
-            "score": 49
+            "total_attempts": 70,
+            "score": 67
         }
     }
 }

@@ -5,10 +5,10 @@
     "name": "Siddhant Gaikwad",
     "username": "sconko",
     "title": "FM",
-    "followers": 52,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "in",
-    "last_online": 1734010682,
+    "last_online": 1741691934,
     "joined": 1474736227,
     "status": "premium",
     "is_streamer": false,
@@ -71,7 +71,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2344,
-            "date": 1721771836,
+            "date": 1739695471,
             "rd": 89
         },
         "best": {
@@ -87,8 +87,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3503,
-            "date": 1706370344
+            "rating": 3508,
+            "date": 1740581616
         },
         "lowest": {
             "rating": 1007,

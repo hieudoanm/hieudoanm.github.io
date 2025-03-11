@@ -9,7 +9,7 @@
     "followers": 41,
     "country": "https://api.chess.com/pub/country/PE",
     "location": "Lima",
-    "last_online": 1734131188,
+    "last_online": 1741667623,
     "joined": 1468537824,
     "status": "premium",
     "is_streamer": false,
@@ -30,19 +30,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2780,
-            "date": 1734136481,
-            "rd": 38
+            "rating": 2857,
+            "date": 1736026690,
+            "rd": 36
         },
         "best": {
-            "rating": 2811,
-            "date": 1733757700,
+            "rating": 2857,
+            "date": 1736026690,
             "game": "https://www.chess.com/game/live/80043024677"
         },
         "record": {
-            "win": 516,
-            "loss": 354,
-            "draw": 120
+            "win": 555,
+            "loss": 382,
+            "draw": 125
         }
     },
     "tactics": {

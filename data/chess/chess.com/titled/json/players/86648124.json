@@ -6,14 +6,14 @@
     "name": "Diana Omurbekova",
     "username": "diana_omurbekova",
     "title": "WCM",
-    "followers": 18,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/KG",
-    "last_online": 1733322592,
+    "last_online": 1741360126,
     "joined": 1594702975,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -51,26 +51,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2190,
-            "date": 1733243050,
-            "rd": 42
+            "rating": 2203,
+            "date": 1741361020,
+            "rd": 40
         },
         "best": {
-            "rating": 2220,
-            "date": 1732644668,
+            "rating": 2230,
+            "date": 1734457709,
             "game": "https://www.chess.com/game/live/125770798473"
         },
         "record": {
-            "win": 118,
-            "loss": 126,
-            "draw": 14
+            "win": 150,
+            "loss": 175,
+            "draw": 20
         }
     },
     "fide": 1754,
     "tactics": {
         "highest": {
-            "rating": 1542,
-            "date": 1599068264
+            "rating": 3049,
+            "date": 1735378035
         },
         "lowest": {
             "rating": 1200,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 35,
-            "score": 32
+            "total_attempts": 58,
+            "score": 55
         }
     }
 }

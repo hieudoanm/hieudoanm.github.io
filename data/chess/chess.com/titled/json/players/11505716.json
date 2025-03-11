@@ -6,10 +6,10 @@
     "name": "Camilo Corredor Castellanos",
     "username": "camilocorredor",
     "title": "FM",
-    "followers": 25,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "tunja",
-    "last_online": 1734133555,
+    "last_online": 1741658375,
     "joined": 1365862746,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1219,
-            "date": 1661733808,
-            "rd": 202
+            "rating": 1814,
+            "date": 1740605326,
+            "rd": 95
         },
         "best": {
             "rating": 1617,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/5399336750"
         },
         "record": {
-            "win": 4,
-            "loss": 4,
-            "draw": 1
+            "win": 14,
+            "loss": 5,
+            "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2282,
-            "date": 1684000768,
-            "rd": 84
+            "rating": 2377,
+            "date": 1740424026,
+            "rd": 42
         },
         "best": {
             "rating": 2333,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/77739150577"
         },
         "record": {
-            "win": 52,
-            "loss": 22,
-            "draw": 3
+            "win": 80,
+            "loss": 53,
+            "draw": 8
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2169,
-            "date": 1733972878,
-            "rd": 35
+            "rating": 2266,
+            "date": 1741217264,
+            "rd": 42
         },
         "best": {
             "rating": 2496,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/84560719135"
         },
         "record": {
-            "win": 2093,
-            "loss": 2036,
-            "draw": 233
+            "win": 2139,
+            "loss": 2076,
+            "draw": 241
         }
     },
     "tactics": {

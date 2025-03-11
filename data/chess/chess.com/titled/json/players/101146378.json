@@ -5,9 +5,9 @@
     "name": "Antoine Flick",
     "username": "masteryolo29",
     "title": "FM",
-    "followers": 13,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734113078,
+    "last_online": 1741675286,
     "joined": 1606921354,
     "status": "premium",
     "is_streamer": false,
@@ -63,6 +63,10 @@
         "best": {
             "total_attempts": 66,
             "score": 63
+        },
+        "daily": {
+            "total_attempts": 39,
+            "score": 36
         }
     }
 }

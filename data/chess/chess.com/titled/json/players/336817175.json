@@ -6,9 +6,9 @@
     "name": "Erik Golubovic",
     "username": "gryffindorac8",
     "title": "CM",
-    "followers": 17,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/EU",
-    "last_online": 1734007945,
+    "last_online": 1741630228,
     "joined": 1704402608,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2510,
-            "date": 1733854103,
-            "rd": 45
+            "rating": 2460,
+            "date": 1741111759,
+            "rd": 48
         },
         "best": {
             "rating": 2562,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/104604149037"
         },
         "record": {
-            "win": 213,
-            "loss": 203,
-            "draw": 33
+            "win": 240,
+            "loss": 227,
+            "draw": 45
         }
     },
     "fide": 2025,

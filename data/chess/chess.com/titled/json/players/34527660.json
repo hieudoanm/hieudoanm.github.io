@@ -6,9 +6,9 @@
     "name": "Martin Martinez",
     "username": "martinmartinez95",
     "title": "IM",
-    "followers": 66,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1730328459,
+    "last_online": 1740008024,
     "joined": 1491354249,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2072,
-            "date": 1724073668,
+            "rating": 2063,
+            "date": 1738253638,
             "rd": 49
         },
         "best": {
@@ -47,7 +47,7 @@
         },
         "record": {
             "win": 12,
-            "loss": 6,
+            "loss": 7,
             "draw": 3
         }
     },
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2475,
-            "date": 1675827458,
-            "rd": 42
+            "rating": 2409,
+            "date": 1739230977,
+            "rd": 100
         },
         "best": {
             "rating": 2617,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/3510856380"
         },
         "record": {
-            "win": 1023,
-            "loss": 730,
+            "win": 1027,
+            "loss": 736,
             "draw": 131
         }
     },

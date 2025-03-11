@@ -6,9 +6,9 @@
     "name": "Alex Astaneh Lopez",
     "username": "astaneh",
     "title": "IM",
-    "followers": 200,
+    "followers": 202,
     "country": "https://api.chess.com/pub/country/IE",
-    "last_online": 1731360343,
+    "last_online": 1741667346,
     "joined": 1284134851,
     "status": "premium",
     "is_streamer": false,
@@ -81,6 +81,10 @@
         "best": {
             "total_attempts": 68,
             "score": 65
+        },
+        "daily": {
+            "total_attempts": 49,
+            "score": 48
         }
     }
 }

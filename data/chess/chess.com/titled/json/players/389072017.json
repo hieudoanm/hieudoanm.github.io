@@ -6,31 +6,31 @@
     "name": "Albert Castillo Dalmau",
     "username": "albert-castillo",
     "title": "FM",
-    "followers": 4,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Barcelona",
-    "last_online": 1734167210,
+    "last_online": 1741540451,
     "joined": 1726575463,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2519,
-            "date": 1734039964,
-            "rd": 22
+            "rating": 2559,
+            "date": 1741286728,
+            "rd": 24
         },
         "best": {
             "rating": 2664,
             "date": 1732041873,
-            "game": "https://www.chess.com/game/live/123972615521"
+            "game": "https://www.chess.com/game/live/131668191975"
         },
         "record": {
-            "win": 602,
-            "loss": 518,
-            "draw": 58
+            "win": 838,
+            "loss": 796,
+            "draw": 83
         }
     },
     "chess_blitz": {
@@ -53,8 +53,8 @@
     "fide": 2318,
     "tactics": {
         "highest": {
-            "rating": 2853,
-            "date": 1734006620
+            "rating": 3201,
+            "date": 1737998678
         },
         "lowest": {
             "rating": 400,
@@ -63,8 +63,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 51,
-            "score": 49
+            "total_attempts": 52,
+            "score": 50
         }
     }
 }

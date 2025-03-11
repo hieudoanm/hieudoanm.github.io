@@ -4,10 +4,10 @@
     "url": "https://www.chess.com/member/ukchessbomber",
     "name": "Aaravamudhan Balaji",
     "username": "ukchessbomber",
-    "title": "FM",
-    "followers": 119,
+    "title": "IM",
+    "followers": 120,
     "country": "https://api.chess.com/pub/country/XE",
-    "last_online": 1733650895,
+    "last_online": 1741694928,
     "joined": 1231583230,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1208,
-            "date": 1733650903,
-            "rd": 191
+            "rating": 1048,
+            "date": 1737661138,
+            "rd": 317
         },
         "best": {
             "rating": 1208,
@@ -28,15 +28,15 @@
         "record": {
             "win": 14,
             "loss": 35,
-            "draw": 0,
-            "time_per_move": 62519,
+            "draw": 1,
+            "time_per_move": 65448,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2384,
-            "date": 1733661578,
+            "date": 1741525010,
             "rd": 49
         },
         "best": {
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/125610501401"
         },
         "record": {
-            "win": 148,
-            "loss": 110,
+            "win": 151,
+            "loss": 111,
             "draw": 21
         }
     },
@@ -69,25 +69,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2678,
-            "date": 1728425156,
-            "rd": 44
+            "rating": 2794,
+            "date": 1741370166,
+            "rd": 42
         },
         "best": {
-            "rating": 2789,
-            "date": 1704558570,
+            "rating": 2816,
+            "date": 1739472904,
             "game": "https://www.chess.com/game/live/121555870407"
         },
         "record": {
-            "win": 2586,
-            "loss": 2383,
-            "draw": 343
+            "win": 2630,
+            "loss": 2415,
+            "draw": 351
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3505,
-            "date": 1728810234
+            "rating": 3603,
+            "date": 1741349597
         },
         "lowest": {
             "rating": 1206,

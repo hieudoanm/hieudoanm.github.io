@@ -6,10 +6,10 @@
     "name": "Igor Kowalski",
     "username": "igor_kowalski",
     "title": "IM",
-    "followers": 332,
+    "followers": 337,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Warsaw",
-    "last_online": 1734173373,
+    "last_online": 1741695576,
     "joined": 1583255698,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2486,
-            "date": 1730832522,
+            "date": 1734460345,
             "rd": 205
         },
         "best": {
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3008,
-            "date": 1733495741,
-            "rd": 42
+            "rating": 3029,
+            "date": 1738695588,
+            "rd": 35
         },
         "best": {
             "rating": 3110,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/75108044901"
         },
         "record": {
-            "win": 8690,
-            "loss": 4201,
-            "draw": 672
+            "win": 8716,
+            "loss": 4230,
+            "draw": 674
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2901,
-            "date": 1733856874,
-            "rd": 49
+            "rating": 2900,
+            "date": 1741114443,
+            "rd": 42
         },
         "best": {
-            "rating": 2905,
-            "date": 1705246457,
+            "rating": 2910,
+            "date": 1738321903,
             "game": "https://www.chess.com/game/live/55028748507"
         },
         "record": {
-            "win": 1235,
-            "loss": 782,
-            "draw": 210
+            "win": 1258,
+            "loss": 802,
+            "draw": 219
         }
     },
     "tactics": {

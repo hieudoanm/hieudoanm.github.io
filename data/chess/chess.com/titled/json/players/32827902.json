@@ -6,9 +6,9 @@
     "name": "Vanessa Gazola",
     "username": "vanessagazola",
     "title": "WCM",
-    "followers": 180,
+    "followers": 179,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734093867,
+    "last_online": 1740510516,
     "joined": 1485901174,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3390,
-            "date": 1695989899
+            "rating": 3394,
+            "date": 1736784903
         },
         "lowest": {
             "rating": 1914,

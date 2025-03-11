@@ -6,10 +6,10 @@
     "name": "Jon Jacobs",
     "username": "fishthatroared",
     "title": "FM",
-    "followers": 147,
+    "followers": 149,
     "country": "https://api.chess.com/pub/country/US",
     "location": "NY",
-    "last_online": 1733898110,
+    "last_online": 1741580798,
     "joined": 1455685281,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2000,
-            "date": 1733905188,
-            "rd": 27
+            "rating": 2020,
+            "date": 1741589743,
+            "rd": 30
         },
         "best": {
             "rating": 2155,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/109581025685"
         },
         "record": {
-            "win": 7599,
-            "loss": 6381,
-            "draw": 428
+            "win": 7799,
+            "loss": 6526,
+            "draw": 441
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2327,
-            "date": 1727930174,
-            "rd": 75
+            "rating": 2284,
+            "date": 1740387173,
+            "rd": 40
         },
         "best": {
             "rating": 2327,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/112463997103"
         },
         "record": {
-            "win": 10050,
-            "loss": 8348,
-            "draw": 894
+            "win": 10086,
+            "loss": 8374,
+            "draw": 901
         }
     },
     "fide": 2237,

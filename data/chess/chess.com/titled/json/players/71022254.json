@@ -6,9 +6,9 @@
     "name": "Nana Ioseliani",
     "username": "nanaioseliani",
     "title": "IM",
-    "followers": 23,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1734015973,
+    "last_online": 1740906996,
     "joined": 1579518417,
     "status": "premium",
     "is_streamer": false,
@@ -51,8 +51,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3409,
-            "date": 1707394731
+            "rating": 3442,
+            "date": 1740908136
         },
         "lowest": {
             "rating": 1216,

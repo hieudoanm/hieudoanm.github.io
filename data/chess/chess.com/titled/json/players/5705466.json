@@ -5,10 +5,10 @@
     "name": "Viesturs Kap\u010de",
     "username": "fish_club",
     "title": "CM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/LV",
     "location": "Riga",
-    "last_online": 1734102944,
+    "last_online": 1741630696,
     "joined": 1314726302,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1352,
-            "date": 1734167275,
-            "rd": 50
+            "rating": 1574,
+            "date": 1741696372,
+            "rd": 52
         },
         "best": {
             "rating": 1946,
@@ -27,18 +27,18 @@
             "game": "https://www.chess.com/game/daily/181914250"
         },
         "record": {
-            "win": 1393,
-            "loss": 991,
-            "draw": 42,
-            "time_per_move": 116943,
-            "timeout_percent": 2
+            "win": 1491,
+            "loss": 999,
+            "draw": 44,
+            "time_per_move": 112751,
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2180,
-            "date": 1661973331,
-            "rd": 116
+            "date": 1739210352,
+            "rd": 49
         },
         "best": {
             "rating": 2180,
@@ -46,7 +46,7 @@
             "game": "https://www.chess.com/game/live/31701016049"
         },
         "record": {
-            "win": 44,
+            "win": 45,
             "loss": 17,
             "draw": 3
         }
@@ -54,7 +54,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2258,
-            "date": 1616174906,
+            "date": 1740317627,
             "rd": 36
         },
         "best": {
@@ -70,9 +70,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2156,
-            "date": 1734127358,
-            "rd": 32
+            "rating": 2211,
+            "date": 1740317473
         },
         "best": {
             "rating": 2237,
@@ -80,9 +79,9 @@
             "game": "https://www.chess.com/game/live/53272761401"
         },
         "record": {
-            "win": 4482,
-            "loss": 3550,
-            "draw": 647
+            "win": 4572,
+            "loss": 3622,
+            "draw": 662
         }
     },
     "fide": 2071,

@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/rinisal8833",
     "username": "rinisal8833",
     "title": "WCM",
-    "followers": 154,
+    "followers": 155,
     "country": "https://api.chess.com/pub/country/XE",
-    "last_online": 1734048555,
+    "last_online": 1741503165,
     "joined": 1477976602,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1632,
-            "date": 1708958362,
+            "date": 1737883729,
             "rd": 96
         },
         "best": {
@@ -54,8 +54,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2083,
-            "date": 1734158935,
+            "rating": 2064,
+            "date": 1741508145,
             "rd": 49
         },
         "best": {
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/98627792057"
         },
         "record": {
-            "win": 1298,
-            "loss": 1030,
-            "draw": 123
+            "win": 1313,
+            "loss": 1044,
+            "draw": 125
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1613,
-            "date": 1734049543,
-            "rd": 37
+            "rating": 1446,
+            "date": 1740127954,
+            "rd": 43
         },
         "best": {
             "rating": 1830,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/104005286843"
         },
         "record": {
-            "win": 895,
-            "loss": 822,
-            "draw": 37
+            "win": 918,
+            "loss": 863,
+            "draw": 40
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1835,
-            "date": 1733765121,
-            "rd": 55
+            "rating": 1763,
+            "date": 1741427567,
+            "rd": 44
         },
         "best": {
             "rating": 1934,
@@ -98,15 +98,15 @@
             "game": "https://www.chess.com/game/live/113152751199"
         },
         "record": {
-            "win": 581,
-            "loss": 477,
-            "draw": 36
+            "win": 630,
+            "loss": 535,
+            "draw": 39
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3153,
-            "date": 1718885624
+            "rating": 3161,
+            "date": 1739975915
         },
         "lowest": {
             "rating": 1027,
@@ -115,8 +115,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 53,
-            "score": 50
+            "total_attempts": 54,
+            "score": 51
         }
     }
 }

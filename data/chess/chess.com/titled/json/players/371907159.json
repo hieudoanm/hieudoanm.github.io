@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/371907159.30c53842.200x200o.900ad191c309.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/371907159.7a349dd5.200x200o.73781dbd3cfc.png",
     "player_id": 371907159,
     "@id": "https://api.chess.com/pub/player/andrewisasian31",
     "url": "https://www.chess.com/member/andrewisasian31",
     "name": "Andrew Guo",
     "username": "andrewisasian31",
     "title": "FM",
-    "followers": 31,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/US",
     "location": "CA",
-    "last_online": 1733342624,
+    "last_online": 1741578755,
     "joined": 1719356418,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2238,
-            "date": 1726256429,
+            "date": 1741126306,
             "rd": 49
         },
         "best": {
@@ -54,8 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2611,
-            "date": 1730835812,
+            "rating": 2565,
+            "date": 1740940170,
             "rd": 49
         },
         "best": {
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/114536889975"
         },
         "record": {
-            "win": 247,
-            "loss": 176,
+            "win": 248,
+            "loss": 182,
             "draw": 33
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2638,
-            "date": 1728786275,
-            "rd": 31
+            "rating": 2628,
+            "date": 1741579599,
+            "rd": 49
         },
         "best": {
             "rating": 2705,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/115555114133"
         },
         "record": {
-            "win": 121,
-            "loss": 67,
-            "draw": 16
+            "win": 131,
+            "loss": 77,
+            "draw": 20
         }
     },
     "fide": 2331,

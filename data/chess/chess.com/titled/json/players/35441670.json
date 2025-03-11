@@ -1,19 +1,20 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35441670.bf57a975.200x200o.133107ded4ab.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35441670.1cf7b74e.200x200o.e7a2a7da775e.jpg",
     "player_id": 35441670,
     "@id": "https://api.chess.com/pub/player/colonelcassad",
     "url": "https://www.chess.com/member/colonelcassad",
     "name": "Boris Rozhin",
     "username": "colonelcassad",
     "title": "FM",
-    "followers": 15,
-    "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1670560310,
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/YE",
+    "location": "Moscow",
+    "last_online": 1738057581,
     "joined": 1494496283,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2542,
-            "date": 1670549689,
-            "rd": 77
+            "rating": 2445,
+            "date": 1738059019,
+            "rd": 45
         },
         "best": {
             "rating": 2542,
             "date": 1670549689,
-            "game": "https://www.chess.com/game/live/64287599255"
+            "game": "https://www.chess.com/game/live/131136046425"
         },
         "record": {
-            "win": 19,
-            "loss": 5,
+            "win": 22,
+            "loss": 20,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2550,
-            "date": 1670551594,
-            "rd": 47
+            "rating": 2559,
+            "date": 1737074376,
+            "rd": 49
         },
         "best": {
             "rating": 2567,
@@ -61,7 +62,7 @@
             "game": "https://www.chess.com/game/live/4879183977"
         },
         "record": {
-            "win": 167,
+            "win": 168,
             "loss": 120,
             "draw": 15
         }
@@ -79,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 26,
-            "score": 23
+            "total_attempts": 52,
+            "score": 49
         }
     }
 }

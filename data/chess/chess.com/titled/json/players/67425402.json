@@ -6,14 +6,14 @@
     "name": "Christoph Kuberczyk",
     "username": "sharpcube",
     "title": "FM",
-    "followers": 190,
+    "followers": 214,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734173916,
+    "last_online": 1741686583,
     "joined": 1572650714,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -53,42 +53,42 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2457,
-            "date": 1734110317,
-            "rd": 31
+            "rating": 2567,
+            "date": 1739732843,
+            "rd": 18
         },
         "best": {
-            "rating": 2603,
-            "date": 1734019477,
+            "rating": 2650,
+            "date": 1739021086,
             "game": "https://www.chess.com/game/live/87329524957"
         },
         "record": {
-            "win": 1854,
-            "loss": 1467,
-            "draw": 187
+            "win": 2209,
+            "loss": 1750,
+            "draw": 218
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2470,
-            "date": 1734121169,
-            "rd": 30
+            "rating": 2429,
+            "date": 1741692161,
+            "rd": 24
         },
         "best": {
-            "rating": 2609,
-            "date": 1732733082,
-            "game": "https://www.chess.com/game/live/14416684537"
+            "rating": 2636,
+            "date": 1738358545,
+            "game": "https://www.chess.com/game/live/131489421445"
         },
         "record": {
-            "win": 890,
-            "loss": 665,
-            "draw": 140
+            "win": 1223,
+            "loss": 953,
+            "draw": 189
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3288,
-            "date": 1731960263
+            "rating": 3326,
+            "date": 1740507889
         },
         "lowest": {
             "rating": 2314,

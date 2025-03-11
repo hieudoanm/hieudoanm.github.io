@@ -6,10 +6,10 @@
     "name": "Srdjan Jefic",
     "username": "princecharming92",
     "title": "FM",
-    "followers": 157,
+    "followers": 158,
     "country": "https://api.chess.com/pub/country/BA",
     "location": "Banja Luka",
-    "last_online": 1734130712,
+    "last_online": 1741672271,
     "joined": 1448099544,
     "status": "premium",
     "is_streamer": false,
@@ -108,8 +108,8 @@
     "fide": 2312,
     "tactics": {
         "highest": {
-            "rating": 2597,
-            "date": 1675127687
+            "rating": 2728,
+            "date": 1741168075
         },
         "lowest": {
             "rating": 1819,

@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/44566494.2c86da39.200x200o.e2d5c65028af.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/44566494.403a2865.200x200o.006d92c10cef.jpg",
     "player_id": 44566494,
     "@id": "https://api.chess.com/pub/player/widbifs",
     "url": "https://www.chess.com/member/WIDBIFS",
     "name": "Erik Obgolts",
     "username": "widbifs",
     "title": "IM",
-    "followers": 98,
+    "followers": 105,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734178512,
+    "last_online": 1741689437,
     "joined": 1521812065,
     "status": "premium",
     "is_streamer": false,
@@ -34,36 +34,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2971,
-            "date": 1734181298,
-            "rd": 26
+            "rating": 3031,
+            "date": 1738311054,
+            "rd": 27
         },
         "best": {
-            "rating": 3025,
-            "date": 1705952726,
+            "rating": 3033,
+            "date": 1734970873,
             "game": "https://www.chess.com/game/live/117298878571"
         },
         "record": {
-            "win": 3798,
-            "loss": 3022,
-            "draw": 561
+            "win": 4138,
+            "loss": 3261,
+            "draw": 615
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2948,
-            "date": 1721574072,
-            "rd": 48
+            "rating": 2939,
+            "date": 1741690833,
+            "rd": 27
         },
         "best": {
-            "rating": 2949,
-            "date": 1720616193,
+            "rating": 2978,
+            "date": 1738928069,
             "game": "https://www.chess.com/game/live/83602490045"
         },
         "record": {
-            "win": 5677,
-            "loss": 6006,
-            "draw": 1423
+            "win": 5793,
+            "loss": 6134,
+            "draw": 1466
         }
     },
     "tactics": {

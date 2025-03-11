@@ -6,10 +6,10 @@
     "name": "Vitalii Gryshko",
     "username": "crasyhealer",
     "title": "FM",
-    "followers": 35,
-    "country": "https://api.chess.com/pub/country/FR",
+    "followers": 40,
+    "country": "https://api.chess.com/pub/country/UA",
     "location": "Nancy",
-    "last_online": 1733773647,
+    "last_online": 1741702468,
     "joined": 1543939081,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2572,
-            "date": 1725378148,
-            "rd": 48
+            "rating": 2542,
+            "date": 1741119441,
+            "rd": 47
         },
         "best": {
-            "rating": 2597,
-            "date": 1721769549,
+            "rating": 2605,
+            "date": 1734478248,
             "game": "https://www.chess.com/game/live/115485588611"
         },
         "record": {
-            "win": 300,
-            "loss": 214,
-            "draw": 39
+            "win": 317,
+            "loss": 237,
+            "draw": 40
         }
     },
     "fide": 2272,

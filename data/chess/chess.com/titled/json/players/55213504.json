@@ -5,9 +5,9 @@
     "name": "Aleksandr Usov",
     "username": "dolphin_2010",
     "title": "FM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/TC",
-    "last_online": 1734170919,
+    "last_online": 1741695523,
     "joined": 1545989921,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3003,
-            "date": 1733597970,
-            "rd": 35
+            "rating": 2999,
+            "date": 1740063756,
+            "rd": 49
         },
         "best": {
             "rating": 3042,
@@ -82,25 +82,25 @@
         },
         "record": {
             "win": 432,
-            "loss": 248,
+            "loss": 249,
             "draw": 34
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2809,
-            "date": 1734002740,
-            "rd": 40
+            "rating": 2869,
+            "date": 1740528375,
+            "rd": 39
         },
         "best": {
-            "rating": 2847,
-            "date": 1725432004,
+            "rating": 2881,
+            "date": 1740524820,
             "game": "https://www.chess.com/game/live/120346849225"
         },
         "record": {
-            "win": 344,
-            "loss": 160,
-            "draw": 26
+            "win": 433,
+            "loss": 207,
+            "draw": 34
         }
     },
     "fide": 2270,

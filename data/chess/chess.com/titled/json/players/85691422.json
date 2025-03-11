@@ -6,7 +6,7 @@
     "name": "Zakia Sultana",
     "username": "zakiasultana",
     "title": "WFM",
-    "followers": 65,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Narayanganj City",
     "last_online": 1716668033,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1915,
-            "date": 1734048271,
-            "rd": 54
+            "rating": 2053,
+            "date": 1741454915,
+            "rd": 41
         },
         "best": {
             "rating": 2154,
@@ -28,9 +28,9 @@
             "game": "https://www.chess.com/game/live/98653602237"
         },
         "record": {
-            "win": 1685,
-            "loss": 1543,
-            "draw": 502
+            "win": 1745,
+            "loss": 1581,
+            "draw": 515
         }
     },
     "chess_bullet": {

@@ -6,9 +6,9 @@
     "name": "Alekhine Nouri",
     "username": "babyking1205",
     "title": "FM",
-    "followers": 282,
+    "followers": 283,
     "country": "https://api.chess.com/pub/country/PH",
-    "last_online": 1734157415,
+    "last_online": 1741432299,
     "joined": 1382058701,
     "status": "premium",
     "is_streamer": false,
@@ -84,18 +84,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2844,
-            "date": 1733824508,
-            "rd": 42
+            "rating": 2856,
+            "date": 1741275802,
+            "rd": 47
         },
         "best": {
-            "rating": 2849,
-            "date": 1733823468,
+            "rating": 2880,
+            "date": 1738717675,
             "game": "https://www.chess.com/game/live/122672116761"
         },
         "record": {
-            "win": 2777,
-            "loss": 2588,
+            "win": 2793,
+            "loss": 2602,
             "draw": 325
         }
     },

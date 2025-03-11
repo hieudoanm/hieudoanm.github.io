@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/BG",
-    "last_online": 1733275490,
+    "last_online": 1737264044,
     "joined": 1721229030,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2411,
-            "date": 1728331437,
-            "rd": 176
+            "rating": 2305,
+            "date": 1736996128,
+            "rd": 165
         },
         "best": {
             "rating": 2479,
@@ -27,7 +27,7 @@
         },
         "record": {
             "win": 2,
-            "loss": 1,
+            "loss": 2,
             "draw": 0
         }
     },

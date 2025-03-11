@@ -5,10 +5,10 @@
     "name": "Elmir Huseynov",
     "username": "elmirhuseynov",
     "title": "IM",
-    "followers": 21,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Washington DC",
-    "last_online": 1734167120,
+    "last_online": 1741666183,
     "joined": 1340083400,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1578,
-            "date": 1719067114,
+            "date": 1740155350,
             "rd": 272
         },
         "best": {
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2415,
-            "date": 1733982577,
-            "rd": 31
+            "rating": 2505,
+            "date": 1741633533,
+            "rd": 30
         },
         "best": {
             "rating": 2713,
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/100964628593"
         },
         "record": {
-            "win": 1283,
-            "loss": 1049,
-            "draw": 74
+            "win": 1433,
+            "loss": 1173,
+            "draw": 84
         }
     },
     "chess_blitz": {
@@ -83,10 +83,6 @@
         "best": {
             "total_attempts": 37,
             "score": 35
-        },
-        "daily": {
-            "total_attempts": 11,
-            "score": 10
         }
     }
 }

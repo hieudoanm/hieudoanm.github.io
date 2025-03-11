@@ -5,10 +5,10 @@
     "name": "Farid Tamer",
     "username": "faridov2010",
     "title": "FM",
-    "followers": 36,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/EG",
     "location": "Cairo",
-    "last_online": 1734114081,
+    "last_online": 1740059717,
     "joined": 1700858270,
     "status": "premium",
     "is_streamer": false,
@@ -34,6 +34,23 @@
             "timeout_percent": 0
         }
     },
+    "chess_rapid": {
+        "last": {
+            "rating": 2122,
+            "date": 1740060015,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2122,
+            "date": 1723362777,
+            "game": "https://www.chess.com/game/live/133798748053"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 2276,
@@ -53,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2433,
-            "date": 1734089367,
-            "rd": 60
+            "rating": 2399,
+            "date": 1738951868,
+            "rd": 70
         },
         "best": {
             "rating": 2542,
@@ -63,8 +80,8 @@
             "game": "https://www.chess.com/game/live/119136036443"
         },
         "record": {
-            "win": 187,
-            "loss": 144,
+            "win": 188,
+            "loss": 146,
             "draw": 25
         }
     },

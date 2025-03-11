@@ -6,10 +6,10 @@
     "name": "Carlos Sandoval Mercado",
     "username": "wejbimoo",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Mexico City",
-    "last_online": 1734147523,
+    "last_online": 1741668213,
     "joined": 1431832802,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2538,
-            "date": 1733875707,
-            "rd": 44
+            "rating": 2536,
+            "date": 1740528289,
+            "rd": 47
         },
         "best": {
             "rating": 2554,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/127588227585"
         },
         "record": {
-            "win": 656,
-            "loss": 439,
-            "draw": 49
+            "win": 686,
+            "loss": 470,
+            "draw": 51
         }
     },
     "fide": 2052,

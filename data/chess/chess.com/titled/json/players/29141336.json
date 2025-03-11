@@ -4,10 +4,10 @@
     "url": "https://www.chess.com/member/Steegersee",
     "name": "Marius Deuer",
     "username": "steegersee",
-    "title": "FM",
+    "title": "IM",
     "followers": 8,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1730402345,
+    "last_online": 1740490347,
     "joined": 1469030010,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 673,
-            "date": 1619762319,
+            "date": 1735075868,
             "rd": 120
         },
         "best": {
@@ -69,25 +69,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2400,
-            "date": 1706726745,
-            "rd": 87
+            "rating": 2610,
+            "date": 1739707433,
+            "rd": 42
         },
         "best": {
-            "rating": 2481,
-            "date": 1706725699,
+            "rating": 2610,
+            "date": 1739707433,
             "game": "https://www.chess.com/game/live/86361657369"
         },
         "record": {
-            "win": 287,
-            "loss": 283,
-            "draw": 25
+            "win": 307,
+            "loss": 286,
+            "draw": 27
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2608,
-            "date": 1647620461
+            "rating": 2719,
+            "date": 1739628581
         },
         "lowest": {
             "rating": 1212,

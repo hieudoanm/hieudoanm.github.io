@@ -8,12 +8,12 @@
     "followers": 6,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Bucharest",
-    "last_online": 1733776348,
+    "last_online": 1741114690,
     "joined": 1557137283,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -46,9 +46,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2435,
-            "date": 1733779243,
-            "rd": 90
+            "rating": 2508,
+            "date": 1741116162,
+            "rd": 49
         },
         "best": {
             "rating": 2688,
@@ -56,16 +56,16 @@
             "game": "https://www.chess.com/game/live/5803200447"
         },
         "record": {
-            "win": 22,
-            "loss": 11,
-            "draw": 3
+            "win": 34,
+            "loss": 18,
+            "draw": 4
         }
     },
     "fide": 2427,
     "tactics": {
         "highest": {
-            "rating": 1000,
-            "date": 1557137283
+            "rating": 2500,
+            "date": 1740052768
         },
         "lowest": {
             "rating": 1000,

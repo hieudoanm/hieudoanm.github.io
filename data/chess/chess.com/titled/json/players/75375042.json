@@ -6,10 +6,10 @@
     "name": "Lucas Liascovich",
     "username": "lucliasco",
     "title": "IM",
-    "followers": 632,
+    "followers": 666,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Buenos Aires",
-    "last_online": 1734183393,
+    "last_online": 1741636600,
     "joined": 1585800105,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1940,
-            "date": 1730778925,
+            "date": 1741663126,
             "rd": 68
         },
         "best": {
@@ -33,36 +33,30 @@
             "draw": 21,
             "time_per_move": 20645,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2864,
-            "date": 1734184702,
-            "rd": 21
+            "rating": 2873,
+            "date": 1741668634,
+            "rd": 19
         },
         "best": {
-            "rating": 2937,
-            "date": 1715778558,
+            "rating": 2984,
+            "date": 1741214815,
             "game": "https://www.chess.com/game/live/120968430431"
         },
         "record": {
-            "win": 3923,
-            "loss": 2969,
-            "draw": 534
+            "win": 4691,
+            "loss": 3367,
+            "draw": 606
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2859,
-            "date": 1733872798,
-            "rd": 47
+            "rating": 2860,
+            "date": 1739327607,
+            "rd": 46
         },
         "best": {
             "rating": 2966,
@@ -70,15 +64,15 @@
             "game": "https://www.chess.com/game/live/123977418991"
         },
         "record": {
-            "win": 535,
-            "loss": 189,
-            "draw": 153
+            "win": 568,
+            "loss": 202,
+            "draw": 157
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3580,
-            "date": 1715524919
+            "rating": 3616,
+            "date": 1740254047
         },
         "lowest": {
             "rating": 1211,

@@ -9,7 +9,7 @@
     "followers": 27,
     "country": "https://api.chess.com/pub/country/NZ",
     "location": "Tauranga",
-    "last_online": 1727327679,
+    "last_online": 1738065488,
     "joined": 1362549121,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2116,
-            "date": 1727333904,
-            "rd": 36
+            "rating": 2153,
+            "date": 1737281197,
+            "rd": 63
         },
         "best": {
             "rating": 2287,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/113393988137"
         },
         "record": {
-            "win": 11306,
-            "loss": 8510,
-            "draw": 1704
+            "win": 11311,
+            "loss": 8511,
+            "draw": 1705
         }
     },
     "tactics": {

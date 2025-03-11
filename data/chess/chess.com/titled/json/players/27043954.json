@@ -9,7 +9,7 @@
     "followers": 39,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Hamburg",
-    "last_online": 1734002872,
+    "last_online": 1740002286,
     "joined": 1457004021,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1259,
-            "date": 1734002907,
-            "rd": 212
+            "rating": 996,
+            "date": 1739759898,
+            "rd": 280
         },
         "best": {
             "rating": 1346,
@@ -29,10 +29,10 @@
         },
         "record": {
             "win": 1,
-            "loss": 1,
-            "draw": 1,
-            "time_per_move": 125091,
-            "timeout_percent": 0
+            "loss": 2,
+            "draw": 2,
+            "time_per_move": 162984,
+            "timeout_percent": 50
         }
     },
     "chess_rapid": {

@@ -7,7 +7,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/XC",
     "location": "Bli",
-    "last_online": 1734091957,
+    "last_online": 1735826521,
     "joined": 1349162611,
     "status": "premium",
     "is_streamer": false,
@@ -64,8 +64,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2608,
-            "date": 1734092721,
+            "rating": 2600,
+            "date": 1734462569,
             "rd": 49
         },
         "best": {
@@ -75,7 +75,7 @@
         },
         "record": {
             "win": 1331,
-            "loss": 965,
+            "loss": 966,
             "draw": 166
         }
     },

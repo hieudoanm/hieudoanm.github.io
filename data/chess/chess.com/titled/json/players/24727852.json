@@ -6,9 +6,9 @@
     "name": "samarth Rao 1664 Leavud Rating",
     "username": "jraosam",
     "title": "CM",
-    "followers": 316,
+    "followers": 317,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733667332,
+    "last_online": 1740229562,
     "joined": 1445686740,
     "status": "premium",
     "is_streamer": false,
@@ -89,9 +89,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1941,
-            "date": 1733681488,
-            "rd": 37
+            "rating": 1919,
+            "date": 1740594846,
+            "rd": 57
         },
         "best": {
             "rating": 2413,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/61054285057"
         },
         "record": {
-            "win": 2405,
-            "loss": 2496,
-            "draw": 259
+            "win": 2418,
+            "loss": 2509,
+            "draw": 260
         }
     },
     "fide": 1664,

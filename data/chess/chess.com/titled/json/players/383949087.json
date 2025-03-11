@@ -5,47 +5,47 @@
     "name": "Behzad Salimiyan",
     "username": "behzsa",
     "title": "CM",
-    "followers": 5,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/IR",
-    "last_online": 1734081205,
+    "last_online": 1741516799,
     "joined": 1724922985,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2577,
-            "date": 1734081862,
-            "rd": 34
+            "rating": 2612,
+            "date": 1741114687,
+            "rd": 35
         },
         "best": {
             "rating": 2769,
             "date": 1732014717,
-            "game": "https://www.chess.com/game/live/126955797933"
+            "game": "https://www.chess.com/game/live/132169279975"
         },
         "record": {
-            "win": 303,
-            "loss": 155,
-            "draw": 18
+            "win": 416,
+            "loss": 261,
+            "draw": 32
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2638,
-            "date": 1733269854,
-            "rd": 42
+            "rating": 2620,
+            "date": 1741130393,
+            "rd": 44
         },
         "best": {
-            "rating": 2644,
-            "date": 1733267687,
-            "game": "https://www.chess.com/game/live/127003231319"
+            "rating": 2766,
+            "date": 1737475643,
+            "game": "https://www.chess.com/game/live/130638022207"
         },
         "record": {
-            "win": 44,
-            "loss": 14,
-            "draw": 5
+            "win": 139,
+            "loss": 58,
+            "draw": 15
         }
     },
     "fide": 2254,

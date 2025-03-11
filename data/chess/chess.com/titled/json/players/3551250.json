@@ -6,10 +6,10 @@
     "name": "Tomas Kapitanchuk",
     "username": "tomaskapitanchuk",
     "title": "FM",
-    "followers": 306,
+    "followers": 309,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Buenos Aires",
-    "last_online": 1734044388,
+    "last_online": 1740254065,
     "joined": 1272322572,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2584,
-            "date": 1723592089,
-            "rd": 46
+            "rating": 2593,
+            "date": 1734385897,
+            "rd": 49
         },
         "best": {
             "rating": 2710,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/50885415981"
         },
         "record": {
-            "win": 1252,
+            "win": 1253,
             "loss": 922,
             "draw": 151
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2523,
-            "date": 1723258470,
+            "rating": 2518,
+            "date": 1737938531,
             "rd": 49
         },
         "best": {
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/4721929267"
         },
         "record": {
-            "win": 1762,
-            "loss": 1332,
+            "win": 1771,
+            "loss": 1337,
             "draw": 230
         }
     },

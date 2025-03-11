@@ -8,7 +8,7 @@
     "followers": 16,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1733920116,
+    "last_online": 1741608531,
     "joined": 1477423034,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3584,
-            "date": 1732003891
+            "rating": 3602,
+            "date": 1736409885
         },
         "lowest": {
             "rating": 1979,

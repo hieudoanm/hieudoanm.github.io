@@ -5,10 +5,10 @@
     "name": "Ben Magana",
     "username": "bmagnum2002",
     "title": "CM",
-    "followers": 152,
+    "followers": 162,
     "country": "https://api.chess.com/pub/country/KE",
     "location": "Chulaimbo",
-    "last_online": 1733920976,
+    "last_online": 1738472176,
     "joined": 1317308236,
     "status": "premium",
     "is_streamer": false,
@@ -89,9 +89,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2029,
-            "date": 1732491587,
-            "rd": 131
+            "rating": 1982,
+            "date": 1740417347,
+            "rd": 132
         },
         "best": {
             "rating": 2069,
@@ -100,7 +100,7 @@
         },
         "record": {
             "win": 5955,
-            "loss": 6130,
+            "loss": 6131,
             "draw": 742
         }
     },

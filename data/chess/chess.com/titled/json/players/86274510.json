@@ -9,7 +9,7 @@
     "followers": 36,
     "country": "https://api.chess.com/pub/country/BW",
     "location": "Moshupa",
-    "last_online": 1719213383,
+    "last_online": 1740893523,
     "joined": 1594323394,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1869,
-            "date": 1719213792,
-            "rd": 164
+            "rating": 1976,
+            "date": 1740370566,
+            "rd": 113
         },
         "best": {
             "rating": 1928,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/24007678597"
         },
         "record": {
-            "win": 105,
-            "loss": 81,
-            "draw": 10
+            "win": 109,
+            "loss": 82,
+            "draw": 11
         }
     },
     "tactics": {

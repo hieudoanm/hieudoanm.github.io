@@ -6,9 +6,9 @@
     "name": "slay all day",
     "username": "not_najdorfs_player",
     "title": "WCM",
-    "followers": 91,
+    "followers": 101,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734118880,
+    "last_online": 1741647609,
     "joined": 1579985504,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "chess_daily": {
         "last": {
             "rating": 1968,
-            "date": 1734118915,
-            "rd": 178
+            "date": 1740763064,
+            "rd": 186
         },
         "best": {
             "rating": 1990,
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/380161805"
         },
         "record": {
-            "win": 32,
+            "win": 34,
             "loss": 3,
             "draw": 3,
-            "time_per_move": 46747,
+            "time_per_move": 48377,
             "timeout_percent": 0
         }
     },
@@ -49,14 +49,14 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 46747,
+            "time_per_move": 48377,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2355,
-            "date": 1732571434,
+            "rating": 2347,
+            "date": 1741283850,
             "rd": 49
         },
         "best": {
@@ -65,33 +65,33 @@
             "game": "https://www.chess.com/game/live/10681015165"
         },
         "record": {
-            "win": 22,
-            "loss": 7,
+            "win": 26,
+            "loss": 8,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2329,
-            "date": 1732220938,
-            "rd": 57
+            "rating": 2418,
+            "date": 1741287064,
+            "rd": 33
         },
         "best": {
-            "rating": 2544,
-            "date": 1650276669,
+            "rating": 2558,
+            "date": 1739179830,
             "game": "https://www.chess.com/game/live/82665705593"
         },
         "record": {
-            "win": 1569,
-            "loss": 1770,
-            "draw": 237
+            "win": 1690,
+            "loss": 1888,
+            "draw": 253
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2433,
-            "date": 1734093013,
-            "rd": 37
+            "rating": 2453,
+            "date": 1741284145,
+            "rd": 46
         },
         "best": {
             "rating": 2571,
@@ -99,15 +99,15 @@
             "game": "https://www.chess.com/game/live/35288805035"
         },
         "record": {
-            "win": 1069,
-            "loss": 1041,
-            "draw": 210
+            "win": 1110,
+            "loss": 1084,
+            "draw": 219
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3347,
-            "date": 1700564996
+            "rating": 3437,
+            "date": 1739626944
         },
         "lowest": {
             "rating": 414,
@@ -116,7 +116,7 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 52,
+            "total_attempts": 50,
             "score": 49
         }
     }

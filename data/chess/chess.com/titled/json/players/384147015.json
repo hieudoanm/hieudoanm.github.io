@@ -5,30 +5,30 @@
     "name": "Martin Stukan",
     "username": "stukanmartin",
     "title": "IM",
-    "followers": 0,
+    "followers": 5,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1725975485,
+    "last_online": 1740577265,
     "joined": 1725006889,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2522,
-            "date": 1725982548,
-            "rd": 49
+            "rating": 2864,
+            "date": 1740562260,
+            "rd": 27
         },
         "best": {
-            "rating": 2532,
-            "date": 1725980804,
-            "game": "https://www.chess.com/game/live/119719257495"
+            "rating": 3005,
+            "date": 1739031059,
+            "game": "https://www.chess.com/game/live/132769766407"
         },
         "record": {
-            "win": 6,
-            "loss": 2,
-            "draw": 0
+            "win": 205,
+            "loss": 137,
+            "draw": 52
         }
     },
     "fide": 2437,
@@ -42,5 +42,10 @@
             "date": 1725006889
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 67,
+            "score": 65
+        }
+    }
 }

@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 3,
     "country": "https://api.chess.com/pub/country/NI",
-    "last_online": 1733323169,
+    "last_online": 1741092078,
     "joined": 1729881355,
     "status": "premium",
     "is_streamer": false,
@@ -35,43 +35,60 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2045,
-            "date": 1734143111,
+            "rating": 2092,
+            "date": 1741181662,
             "rd": 49
         },
         "best": {
-            "rating": 2056,
-            "date": 1732472264,
+            "rating": 2095,
+            "date": 1741092835,
             "game": "https://www.chess.com/game/live/126154721495"
         },
         "record": {
-            "win": 3,
-            "loss": 2,
-            "draw": 3
+            "win": 15,
+            "loss": 5,
+            "draw": 7
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1816,
+            "date": 1741179978,
+            "rd": 81
+        },
+        "best": {
+            "rating": 1949,
+            "date": 1735092009,
+            "game": "https://www.chess.com/game/live/128886196643"
+        },
+        "record": {
+            "win": 9,
+            "loss": 9,
+            "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2176,
-            "date": 1734144634,
-            "rd": 25
+            "rating": 2099,
+            "date": 1741699785,
+            "rd": 29
         },
         "best": {
-            "rating": 2212,
-            "date": 1733856558,
-            "game": "https://www.chess.com/game/live/127494045851"
+            "rating": 2341,
+            "date": 1735436835,
+            "game": "https://www.chess.com/game/live/129172978781"
         },
         "record": {
-            "win": 337,
-            "loss": 282,
-            "draw": 73
+            "win": 609,
+            "loss": 512,
+            "draw": 148
         }
     },
     "fide": 2042,
     "tactics": {
         "highest": {
-            "rating": 2181,
-            "date": 1733970730
+            "rating": 2965,
+            "date": 1741530081
         },
         "lowest": {
             "rating": 1000,

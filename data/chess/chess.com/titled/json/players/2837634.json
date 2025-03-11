@@ -6,10 +6,10 @@
     "name": "Venkatachalam Saravanan",
     "username": "vsaravanan",
     "title": "IM",
-    "followers": 1113,
+    "followers": 1114,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734177184,
+    "last_online": 1741674934,
     "joined": 1274104881,
     "status": "staff",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2251,
-            "date": 1718957342,
-            "rd": 122
+            "rating": 2288,
+            "date": 1738656618,
+            "rd": 121
         },
         "best": {
             "rating": 2470,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/12015206643"
         },
         "record": {
-            "win": 2027,
-            "loss": 1636,
+            "win": 2029,
+            "loss": 1637,
             "draw": 264
         }
     },

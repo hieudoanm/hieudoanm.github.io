@@ -6,10 +6,10 @@
     "name": "Brandon Jiang",
     "username": "brandonjiang123456",
     "title": "CM",
-    "followers": 97,
+    "followers": 98,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Bellevue",
-    "last_online": 1732995143,
+    "last_online": 1735335180,
     "joined": 1390685277,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1761,
-            "date": 1731008354,
-            "rd": 58
+            "rating": 1778,
+            "date": 1735335327,
+            "rd": 69
         },
         "best": {
             "rating": 2185,
@@ -64,7 +64,7 @@
             "game": "https://www.chess.com/game/live/86683109491"
         },
         "record": {
-            "win": 534,
+            "win": 535,
             "loss": 444,
             "draw": 25
         }

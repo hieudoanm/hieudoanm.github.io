@@ -1,25 +1,26 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/196462741.3c42c934.200x200o.2b250c9e18fe.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/196462741.6b5f184b.200x200o.7a940498c398.jpg",
     "player_id": 196462741,
     "@id": "https://api.chess.com/pub/player/agustinv04",
     "url": "https://www.chess.com/member/agustinv04",
     "name": "Villarreal Agustin",
     "username": "agustinv04",
     "title": "FM",
-    "followers": 36,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1733527421,
+    "location": "Buenos Aires",
+    "last_online": 1741631001,
     "joined": 1662679060,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 2031,
-            "date": 1719445675,
-            "rd": 202
+            "date": 1737561533,
+            "rd": 49
         },
         "best": {
             "rating": 2031,
@@ -27,16 +28,16 @@
             "game": "https://www.chess.com/game/live/113184001045"
         },
         "record": {
-            "win": 2,
+            "win": 5,
             "loss": 1,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2570,
-            "date": 1732328865,
-            "rd": 39
+            "rating": 2646,
+            "date": 1741689283,
+            "rd": 26
         },
         "best": {
             "rating": 2746,
@@ -44,26 +45,26 @@
             "game": "https://www.chess.com/game/live/106766406441"
         },
         "record": {
-            "win": 766,
-            "loss": 641,
-            "draw": 107
+            "win": 916,
+            "loss": 794,
+            "draw": 119
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2567,
-            "date": 1729317793,
-            "rd": 49
+            "rating": 2698,
+            "date": 1741632414,
+            "rd": 35
         },
         "best": {
-            "rating": 2603,
-            "date": 1725016584,
+            "rating": 2743,
+            "date": 1739229038,
             "game": "https://www.chess.com/game/live/113068758945"
         },
         "record": {
-            "win": 187,
-            "loss": 151,
-            "draw": 26
+            "win": 336,
+            "loss": 279,
+            "draw": 50
         }
     },
     "fide": 2318,

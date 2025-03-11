@@ -5,9 +5,9 @@
     "name": "Jorge Zamorano",
     "username": "obito24",
     "title": "FM",
-    "followers": 73,
+    "followers": 74,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734122787,
+    "last_online": 1740678796,
     "joined": 1521941380,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2732,
-            "date": 1734139358,
-            "rd": 23
+            "rating": 2765,
+            "date": 1741663464,
+            "rd": 26
         },
         "best": {
             "rating": 2893,
@@ -60,15 +60,15 @@
             "game": "https://www.chess.com/game/live/61247436713"
         },
         "record": {
-            "win": 9120,
-            "loss": 6456,
-            "draw": 2138
+            "win": 9464,
+            "loss": 6691,
+            "draw": 2222
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3273,
-            "date": 1734095768
+            "rating": 3300,
+            "date": 1734254856
         },
         "lowest": {
             "rating": 1209,

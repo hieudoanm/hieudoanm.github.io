@@ -6,9 +6,9 @@
     "name": "Ali Elier",
     "username": "alielier",
     "title": "CM",
-    "followers": 33,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/LY",
-    "last_online": 1733846014,
+    "last_online": 1739311092,
     "joined": 1533035488,
     "status": "premium",
     "is_streamer": false,
@@ -70,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2561,
-            "date": 1733854204,
-            "rd": 44
+            "rating": 2605,
+            "date": 1739312251,
+            "rd": 49
         },
         "best": {
-            "rating": 2583,
-            "date": 1727821897,
+            "rating": 2636,
+            "date": 1737477536,
             "game": "https://www.chess.com/game/live/125770797529"
         },
         "record": {
-            "win": 246,
-            "loss": 195,
-            "draw": 14
+            "win": 259,
+            "loss": 206,
+            "draw": 16
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Providence Oatlhotse",
     "username": "improvidence",
     "title": "IM",
-    "followers": 235,
+    "followers": 236,
     "country": "https://api.chess.com/pub/country/ZA",
     "location": "Johannesburg",
-    "last_online": 1733498745,
+    "last_online": 1741606695,
     "joined": 1380207864,
     "status": "premium",
     "is_streamer": false,
@@ -18,15 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 400,
-            "date": 1733289955,
-            "rd": 350
+            "rating": 621,
+            "date": 1741267885,
+            "rd": 268
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1380207864,
+            "game": "https://www.chess.com/game/daily/724971649"
         },
         "record": {
-            "win": 0,
+            "win": 1,
             "loss": 20,
             "draw": 0,
-            "time_per_move": 208868,
+            "time_per_move": 314240,
             "timeout_percent": 0
         }
     },
@@ -49,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2445,
-            "date": 1730837146,
-            "rd": 27
+            "rating": 2413,
+            "date": 1741274308,
+            "rd": 63
         },
         "best": {
             "rating": 2445,
@@ -59,8 +64,8 @@
             "game": "https://www.chess.com/game/live/122708073767"
         },
         "record": {
-            "win": 278,
-            "loss": 250,
+            "win": 279,
+            "loss": 254,
             "draw": 31
         }
     },
@@ -84,8 +89,8 @@
     "fide": 2326,
     "tactics": {
         "highest": {
-            "rating": 3378,
-            "date": 1733339251
+            "rating": 3423,
+            "date": 1741294478
         },
         "lowest": {
             "rating": 1357,

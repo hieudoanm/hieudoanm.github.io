@@ -6,10 +6,10 @@
     "name": "Andrij Zazuliak",
     "username": "zazuliak",
     "title": "FM",
-    "followers": 122,
+    "followers": 123,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Lviv",
-    "last_online": 1734089045,
+    "last_online": 1741689005,
     "joined": 1303124917,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2691,
-            "date": 1720676582,
+            "rating": 2677,
+            "date": 1738851617,
             "rd": 49
         },
         "best": {
@@ -48,7 +48,7 @@
         },
         "record": {
             "win": 12,
-            "loss": 2,
+            "loss": 3,
             "draw": 1
         }
     },

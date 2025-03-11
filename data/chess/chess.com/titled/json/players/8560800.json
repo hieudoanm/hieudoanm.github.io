@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 52,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734113830,
+    "last_online": 1739819623,
     "joined": 1345083095,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2174,
-            "date": 1734171736,
-            "rd": 75
+            "rating": 2105,
+            "date": 1739820464,
+            "rd": 80
         },
         "best": {
             "rating": 2261,
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/588226601"
         },
         "record": {
-            "win": 130,
-            "loss": 75,
+            "win": 131,
+            "loss": 82,
             "draw": 53,
-            "time_per_move": 18201,
+            "time_per_move": 18276,
             "timeout_percent": 0
         }
     },
@@ -49,15 +49,15 @@
             "win": 11,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 18201,
+            "time_per_move": 18276,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2486,
-            "date": 1734117420,
-            "rd": 47
+            "rating": 2452,
+            "date": 1739907309,
+            "rd": 49
         },
         "best": {
             "rating": 2546,
@@ -65,9 +65,9 @@
             "game": "https://www.chess.com/game/live/105391256669"
         },
         "record": {
-            "win": 719,
-            "loss": 295,
-            "draw": 336
+            "win": 724,
+            "loss": 301,
+            "draw": 340
         }
     },
     "chess_bullet": {

@@ -6,10 +6,10 @@
     "name": "Gordon Xu",
     "username": "gordonzyxu",
     "title": "CM",
-    "followers": 92,
+    "followers": 97,
     "country": "https://api.chess.com/pub/country/US",
     "location": "California, Us",
-    "last_online": 1734052528,
+    "last_online": 1741536416,
     "joined": 1572415224,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1695,
-            "date": 1734105411,
-            "rd": 98
+            "rating": 1688,
+            "date": 1741642288,
+            "rd": 91
         },
         "best": {
             "rating": 1705,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/347346817"
         },
         "record": {
-            "win": 179,
-            "loss": 81,
-            "draw": 7,
-            "time_per_move": 23718,
+            "win": 186,
+            "loss": 83,
+            "draw": 8,
+            "time_per_move": 24969,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 8,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 23718,
+            "time_per_move": 24969,
             "timeout_percent": 0
         }
     },
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1976,
-            "date": 1731520706,
-            "rd": 94
+            "rating": 1901,
+            "date": 1735028372,
+            "rd": 69
         },
         "best": {
             "rating": 2014,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/36391211433"
         },
         "record": {
-            "win": 287,
-            "loss": 201,
-            "draw": 31
+            "win": 298,
+            "loss": 208,
+            "draw": 32
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2319,
-            "date": 1731714943,
-            "rd": 55
+            "date": 1735258014,
+            "rd": 65
         },
         "best": {
             "rating": 2325,
@@ -100,7 +100,7 @@
             "game": "https://www.chess.com/game/live/87082854871"
         },
         "record": {
-            "win": 897,
+            "win": 898,
             "loss": 446,
             "draw": 59
         }

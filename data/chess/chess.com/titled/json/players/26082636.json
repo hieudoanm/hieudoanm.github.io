@@ -5,9 +5,9 @@
     "name": "Marcin Smolka",
     "username": "marsmol",
     "title": "CM",
-    "followers": 6,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734174546,
+    "last_online": 1741629069,
     "joined": 1452546243,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2378,
-            "date": 1734181271,
-            "rd": 39
+            "rating": 2331,
+            "date": 1741629037,
+            "rd": 38
         },
         "best": {
             "rating": 2576,
@@ -26,9 +26,9 @@
             "game": "https://www.chess.com/game/live/120085249359"
         },
         "record": {
-            "win": 1303,
-            "loss": 1083,
-            "draw": 134
+            "win": 1374,
+            "loss": 1150,
+            "draw": 143
         }
     },
     "chess_blitz": {

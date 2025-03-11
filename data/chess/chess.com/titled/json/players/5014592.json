@@ -9,7 +9,7 @@
     "followers": 53,
     "country": "https://api.chess.com/pub/country/TT",
     "location": "Trinidad / Port of Spain",
-    "last_online": 1734062519,
+    "last_online": 1740870602,
     "joined": 1303351176,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2267,
-            "date": 1733849998,
-            "rd": 52
+            "rating": 2288,
+            "date": 1735409076,
+            "rd": 46
         },
         "best": {
             "rating": 2444,
             "date": 1697346003,
-            "game": "https://www.chess.com/game/live/2134214225"
+            "game": "https://www.chess.com/game/live/129147171965"
         },
         "record": {
-            "win": 6634,
-            "loss": 7087,
-            "draw": 574
+            "win": 6646,
+            "loss": 7106,
+            "draw": 576
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2307,
-            "date": 1734063645,
-            "rd": 53
+            "rating": 2356,
+            "date": 1740872697,
+            "rd": 55
         },
         "best": {
             "rating": 2453,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/5610987893"
         },
         "record": {
-            "win": 2859,
-            "loss": 3004,
-            "draw": 323
+            "win": 2872,
+            "loss": 3016,
+            "draw": 324
         }
     },
     "fide": 2250,

@@ -9,7 +9,7 @@
     "followers": 51,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Kiskunhalas",
-    "last_online": 1733981625,
+    "last_online": 1741527321,
     "joined": 1541020358,
     "status": "premium",
     "is_streamer": false,
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2356,
-            "date": 1733249064,
-            "rd": 77
+            "rating": 2403,
+            "date": 1740501723,
+            "rd": 72
         },
         "best": {
-            "rating": 2428,
-            "date": 1684272450,
+            "rating": 2481,
+            "date": 1739318713,
             "game": "https://www.chess.com/game/live/78009779267"
         },
         "record": {
-            "win": 547,
-            "loss": 526,
-            "draw": 73
+            "win": 552,
+            "loss": 534,
+            "draw": 75
         }
     },
     "fide": 2296,

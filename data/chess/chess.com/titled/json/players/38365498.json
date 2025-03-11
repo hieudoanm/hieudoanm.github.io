@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 53,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1732055589,
+    "last_online": 1741703602,
     "joined": 1504518453,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2006,
-            "date": 1730230783,
+            "rating": 1998,
+            "date": 1740822208,
             "rd": 49
         },
         "best": {
@@ -47,15 +47,15 @@
         },
         "record": {
             "win": 1,
-            "loss": 0,
+            "loss": 1,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2524,
-            "date": 1704372053,
-            "rd": 58
+            "rating": 2540,
+            "date": 1741507744,
+            "rd": 49
         },
         "best": {
             "rating": 2722,
@@ -63,32 +63,32 @@
             "game": "https://www.chess.com/game/live/2524154208"
         },
         "record": {
-            "win": 712,
+            "win": 714,
             "loss": 712,
             "draw": 86
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2737,
-            "date": 1704464294,
-            "rd": 58
+            "rating": 2787,
+            "date": 1741133052,
+            "rd": 43
         },
         "best": {
-            "rating": 2737,
-            "date": 1704464294,
-            "game": "https://www.chess.com/game/live/27198632505"
+            "rating": 2800,
+            "date": 1741129121,
+            "game": "https://www.chess.com/game/live/134239739389"
         },
         "record": {
-            "win": 1236,
-            "loss": 1249,
-            "draw": 239
+            "win": 1255,
+            "loss": 1260,
+            "draw": 242
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2842,
-            "date": 1674834633
+            "rating": 2924,
+            "date": 1741507227
         },
         "lowest": {
             "rating": 1207,
@@ -99,6 +99,10 @@
         "best": {
             "total_attempts": 59,
             "score": 56
+        },
+        "daily": {
+            "total_attempts": 41,
+            "score": 39
         }
     }
 }

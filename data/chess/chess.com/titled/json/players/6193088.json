@@ -6,9 +6,9 @@
     "name": "Himal Lama",
     "username": "himallama",
     "title": "CM",
-    "followers": 129,
+    "followers": 137,
     "country": "https://api.chess.com/pub/country/NP",
-    "last_online": 1734163711,
+    "last_online": 1741455944,
     "joined": 1322288629,
     "status": "premium",
     "is_streamer": false,
@@ -55,9 +55,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1817,
-            "date": 1728211151,
-            "rd": 64
+            "rating": 1738,
+            "date": 1738596947,
+            "rd": 55
         },
         "best": {
             "rating": 1912,
@@ -65,16 +65,16 @@
             "game": "https://www.chess.com/game/live/1944312320"
         },
         "record": {
-            "win": 170,
-            "loss": 154,
-            "draw": 20
+            "win": 179,
+            "loss": 170,
+            "draw": 23
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1810,
-            "date": 1733929923,
-            "rd": 66
+            "rating": 1919,
+            "date": 1741418196,
+            "rd": 70
         },
         "best": {
             "rating": 2106,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/2227649557"
         },
         "record": {
-            "win": 686,
-            "loss": 659,
+            "win": 696,
+            "loss": 661,
             "draw": 39
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2548,
-            "date": 1734170190,
-            "rd": 25
+            "rating": 2593,
+            "date": 1741460439,
+            "rd": 36
         },
         "best": {
             "rating": 2711,
@@ -99,16 +99,16 @@
             "game": "https://www.chess.com/game/live/126375622781"
         },
         "record": {
-            "win": 8371,
-            "loss": 8999,
-            "draw": 760
+            "win": 8487,
+            "loss": 9126,
+            "draw": 786
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2951,
-            "date": 1733145562
+            "rating": 3229,
+            "date": 1740485534
         },
         "lowest": {
             "rating": 1283,

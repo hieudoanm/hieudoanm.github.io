@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37502750.95cbd36b.200x200o.5c7e21dcd3bb.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37502750.17d89331.200x200o.7f3ea6974015.jpg",
     "player_id": 37502750,
     "@id": "https://api.chess.com/pub/player/26andrej26",
     "url": "https://www.chess.com/member/26andrej26",
     "name": "Andrej Sukovic",
     "username": "26andrej26",
     "title": "FM",
-    "followers": 160,
+    "followers": 169,
     "country": "https://api.chess.com/pub/country/ME",
     "location": "PodgoricA",
-    "last_online": 1734171908,
+    "last_online": 1739020836,
     "joined": 1501692110,
     "status": "premium",
     "is_streamer": false,
@@ -35,19 +35,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2774,
-            "date": 1733747719,
-            "rd": 23
+            "rating": 2732,
+            "date": 1736905817,
+            "rd": 29
         },
         "best": {
             "rating": 2821,
             "date": 1732908187,
-            "game": "https://www.chess.com/game/live/111608012379"
+            "game": "https://www.chess.com/game/live/129906571045"
         },
         "record": {
-            "win": 1699,
-            "loss": 1942,
-            "draw": 252
+            "win": 1909,
+            "loss": 2145,
+            "draw": 277
         }
     },
     "chess_blitz": {

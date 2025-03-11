@@ -5,19 +5,19 @@
     "name": "Silvia Scarpa",
     "username": "silviascarpa",
     "title": "WFM",
-    "followers": 34,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1732885452,
+    "last_online": 1741096015,
     "joined": 1509391055,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 1636,
-            "date": 1716289376,
+            "date": 1739724973,
             "rd": 184
         },
         "best": {
@@ -50,17 +50,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2106,
-            "date": 1722769828,
-            "rd": 204
+            "rating": 2173,
+            "date": 1734556051,
+            "rd": 200
         },
         "best": {
-            "rating": 2106,
-            "date": 1700131940,
+            "rating": 2173,
+            "date": 1734556051,
             "game": "https://www.chess.com/game/live/4784656416"
         },
         "record": {
-            "win": 30,
+            "win": 31,
             "loss": 11,
             "draw": 6
         }
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 41,
-            "score": 38
+            "total_attempts": 54,
+            "score": 51
         }
     }
 }

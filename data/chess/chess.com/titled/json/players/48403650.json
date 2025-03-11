@@ -5,14 +5,14 @@
     "url": "https://www.chess.com/member/el-roedor",
     "username": "el-roedor",
     "title": "IM",
-    "followers": 38,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1732832789,
+    "last_online": 1741339504,
     "joined": 1533211893,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -33,17 +33,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2706,
-            "date": 1679944786,
-            "rd": 145
+            "rating": 2717,
+            "date": 1737131587,
+            "rd": 49
         },
         "best": {
-            "rating": 2706,
-            "date": 1679944786,
-            "game": "https://www.chess.com/game/live/3925893581"
+            "rating": 2717,
+            "date": 1737131587,
+            "game": "https://www.chess.com/game/live/130870245389"
         },
         "record": {
-            "win": 1129,
+            "win": 1130,
             "loss": 1121,
             "draw": 262
         }

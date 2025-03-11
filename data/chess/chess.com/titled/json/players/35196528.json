@@ -9,7 +9,7 @@
     "followers": 27,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "bahamas",
-    "last_online": 1734089603,
+    "last_online": 1741692083,
     "joined": 1493643549,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2315,
-            "date": 1730799409,
-            "rd": 77
+            "rating": 2272,
+            "date": 1740824890,
+            "rd": 88
         },
         "best": {
             "rating": 2413,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/15096571701"
         },
         "record": {
-            "win": 893,
-            "loss": 709,
+            "win": 894,
+            "loss": 712,
             "draw": 126
         }
     },
@@ -101,6 +101,10 @@
         "best": {
             "total_attempts": 65,
             "score": 63
+        },
+        "daily": {
+            "total_attempts": 43,
+            "score": 41
         }
     }
 }

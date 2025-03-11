@@ -5,10 +5,10 @@
     "url": "https://www.chess.com/member/minty_bubbles",
     "username": "minty_bubbles",
     "title": "WCM",
-    "followers": 35,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Over the rainbow . \u2040\u27b7",
-    "last_online": 1734037195,
+    "last_online": 1741199800,
     "joined": 1606596962,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1578,
-            "date": 1734051501,
+            "date": 1741199915,
             "rd": 97
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 32,
             "loss": 8,
             "draw": 3,
-            "time_per_move": 94832,
+            "time_per_move": 97551,
             "timeout_percent": 0
         }
     },

@@ -5,9 +5,9 @@
     "name": "Javier Vallejo Diaz",
     "username": "stewie_89",
     "title": "FM",
-    "followers": 3,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734032916,
+    "last_online": 1741619653,
     "joined": 1552215749,
     "status": "premium",
     "is_streamer": false,
@@ -33,25 +33,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2687,
-            "date": 1734080532,
-            "rd": 42
+            "rating": 2715,
+            "date": 1741689496,
+            "rd": 48
         },
         "best": {
-            "rating": 2711,
-            "date": 1569059612,
+            "rating": 2735,
+            "date": 1735984990,
             "game": "https://www.chess.com/game/live/123091808675"
         },
         "record": {
-            "win": 423,
-            "loss": 361,
-            "draw": 103
+            "win": 455,
+            "loss": 391,
+            "draw": 119
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3320,
-            "date": 1702066785
+            "rating": 3511,
+            "date": 1737444941
         },
         "lowest": {
             "rating": 1012,

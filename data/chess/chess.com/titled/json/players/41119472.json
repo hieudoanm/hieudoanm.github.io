@@ -6,9 +6,9 @@
     "name": "Henry Robert Steel",
     "username": "moonlight89",
     "title": "IM",
-    "followers": 169,
+    "followers": 182,
     "country": "https://api.chess.com/pub/country/ZA",
-    "last_online": 1734160165,
+    "last_online": 1741664376,
     "joined": 1512710389,
     "status": "premium",
     "is_streamer": false,
@@ -82,8 +82,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2079,
-            "date": 1674247116
+            "rating": 3071,
+            "date": 1740422765
         },
         "lowest": {
             "rating": 805,

@@ -9,7 +9,7 @@
     "followers": 37,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Tenk",
-    "last_online": 1734032018,
+    "last_online": 1735685732,
     "joined": 1286949543,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3399,
-            "date": 1726755098
+            "rating": 3421,
+            "date": 1734524008
         },
         "lowest": {
             "rating": 1210,

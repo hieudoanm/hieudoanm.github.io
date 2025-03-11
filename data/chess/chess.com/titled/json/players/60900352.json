@@ -6,10 +6,10 @@
     "name": "Drasko Boskovic",
     "username": "draksbg",
     "title": "IM",
-    "followers": 107,
+    "followers": 111,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Belgrade",
-    "last_online": 1734180575,
+    "last_online": 1738996596,
     "joined": 1557666940,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2008,
-            "date": 1731932656,
-            "rd": 349
+            "rating": 1613,
+            "date": 1734361769,
+            "rd": 295
         },
         "best": {
             "rating": 2008,
@@ -29,10 +29,10 @@
         },
         "record": {
             "win": 5,
-            "loss": 0,
+            "loss": 2,
             "draw": 0,
             "time_per_move": 21364,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2615,
-            "date": 1734181461,
-            "rd": 40
+            "rating": 2636,
+            "date": 1740733569,
+            "rd": 44
         },
         "best": {
             "rating": 2709,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/91899057985"
         },
         "record": {
-            "win": 1505,
-            "loss": 1177,
-            "draw": 278
+            "win": 1543,
+            "loss": 1204,
+            "draw": 280
         }
     },
     "fide": 2453,

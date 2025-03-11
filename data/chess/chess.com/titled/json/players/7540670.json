@@ -6,10 +6,10 @@
     "name": "Abel Mathewos Tilahun",
     "username": "abelmat",
     "title": "CM",
-    "followers": 105,
+    "followers": 121,
     "country": "https://api.chess.com/pub/country/ET",
     "location": "Shanghai",
-    "last_online": 1734148799,
+    "last_online": 1741701607,
     "joined": 1336664176,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 400,
-            "date": 1731926319,
+            "date": 1736289505,
             "rd": 350
         },
         "record": {
@@ -28,19 +28,13 @@
             "draw": 0,
             "time_per_move": 592388,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2230,
-            "date": 1732326058,
-            "rd": 40
+            "rating": 2213,
+            "date": 1741693219,
+            "rd": 47
         },
         "best": {
             "rating": 2321,
@@ -48,16 +42,16 @@
             "game": "https://www.chess.com/game/live/121771744007"
         },
         "record": {
-            "win": 206,
-            "loss": 228,
-            "draw": 46
+            "win": 217,
+            "loss": 244,
+            "draw": 47
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1773,
-            "date": 1726213546,
-            "rd": 59
+            "rating": 1690,
+            "date": 1738747126,
+            "rd": 75
         },
         "best": {
             "rating": 1983,
@@ -65,16 +59,16 @@
             "game": "https://www.chess.com/game/live/100371229923"
         },
         "record": {
-            "win": 47,
-            "loss": 52,
+            "win": 48,
+            "loss": 58,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2062,
-            "date": 1734080158,
-            "rd": 26
+            "rating": 2075,
+            "date": 1741583077,
+            "rd": 28
         },
         "best": {
             "rating": 2236,
@@ -82,9 +76,9 @@
             "game": "https://www.chess.com/game/live/110042497983"
         },
         "record": {
-            "win": 670,
-            "loss": 1033,
-            "draw": 70
+            "win": 893,
+            "loss": 1385,
+            "draw": 104
         }
     },
     "fide": 2074,
@@ -102,10 +96,6 @@
         "best": {
             "total_attempts": 42,
             "score": 39
-        },
-        "daily": {
-            "total_attempts": 21,
-            "score": 18
         }
     }
 }

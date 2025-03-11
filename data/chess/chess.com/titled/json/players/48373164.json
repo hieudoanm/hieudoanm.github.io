@@ -6,20 +6,20 @@
     "name": "Malyi Viacheslav",
     "username": "viacheslav92",
     "title": "FM",
-    "followers": 63,
-    "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734124168,
+    "followers": 67,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1741533976,
     "joined": 1533122844,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2340,
-            "date": 1706634609,
-            "rd": 75
+            "rating": 2347,
+            "date": 1737675410,
+            "rd": 49
         },
         "best": {
             "rating": 2381,
@@ -27,43 +27,43 @@
             "game": "https://www.chess.com/game/live/6492110597"
         },
         "record": {
-            "win": 122,
+            "win": 123,
             "loss": 63,
             "draw": 21
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2701,
-            "date": 1727943804,
-            "rd": 33
+            "rating": 2532,
+            "date": 1741581319,
+            "rd": 24
         },
         "best": {
-            "rating": 2701,
-            "date": 1721253180,
+            "rating": 2721,
+            "date": 1734392990,
             "game": "https://www.chess.com/game/live/23129411903"
         },
         "record": {
-            "win": 16146,
-            "loss": 13506,
-            "draw": 2493
+            "win": 17214,
+            "loss": 14297,
+            "draw": 2659
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2566,
-            "date": 1734124423,
-            "rd": 43
+            "rating": 2651,
+            "date": 1737672083,
+            "rd": 44
         },
         "best": {
-            "rating": 2637,
-            "date": 1622556358,
-            "game": "https://www.chess.com/game/live/59847690807"
+            "rating": 2673,
+            "date": 1735762411,
+            "game": "https://www.chess.com/game/live/128910814117"
         },
         "record": {
-            "win": 4655,
-            "loss": 4083,
-            "draw": 1170
+            "win": 4691,
+            "loss": 4099,
+            "draw": 1177
         }
     },
     "tactics": {

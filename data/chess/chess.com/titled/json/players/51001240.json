@@ -6,10 +6,10 @@
     "name": "Ivan Stankovic",
     "username": "stankovicivan",
     "title": "FM",
-    "followers": 343,
+    "followers": 642,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Belgrade",
-    "last_online": 1734185287,
+    "last_online": 1741698019,
     "joined": 1540153597,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2503,
-            "date": 1711789297,
-            "rd": 28
+            "rating": 2611,
+            "date": 1741031119,
+            "rd": 34
         },
         "best": {
             "rating": 2585,
@@ -45,29 +45,29 @@
             "game": "https://www.chess.com/game/live/105157214333"
         },
         "record": {
-            "win": 392,
-            "loss": 333,
-            "draw": 38
+            "win": 425,
+            "loss": 356,
+            "draw": 44
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2579,
-            "date": 1734127129,
-            "rd": 39
+            "rating": 2557,
+            "date": 1741670300,
+            "rd": 27
         },
         "best": {
-            "rating": 2609,
-            "date": 1691943524,
-            "game": "https://www.chess.com/game/live/103393379363"
+            "rating": 2732,
+            "date": 1738568834,
+            "game": "https://www.chess.com/game/live/130529440735"
         },
         "record": {
-            "win": 4059,
-            "loss": 3613,
-            "draw": 545
+            "win": 4492,
+            "loss": 4138,
+            "draw": 610
         }
     },
-    "fide": 2928,
+    "fide": 2308,
     "tactics": {
         "highest": {
             "rating": 3500,

@@ -6,15 +6,15 @@
     "name": "Dushyant Sharma",
     "username": "triumphmate",
     "title": "IM",
-    "followers": 145,
+    "followers": 150,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Jalandhar, Punjab",
-    "last_online": 1734175031,
+    "last_online": 1741678876,
     "joined": 1498563547,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2643,
-            "date": 1733826632,
-            "rd": 39
+            "rating": 2900,
+            "date": 1741165896,
+            "rd": 17
         },
         "best": {
             "rating": 2882,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/101931952439"
         },
         "record": {
-            "win": 6821,
-            "loss": 6116,
-            "draw": 692
+            "win": 7604,
+            "loss": 6841,
+            "draw": 782
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2522,
-            "date": 1732641117,
-            "rd": 48
+            "rating": 2660,
+            "date": 1741680073,
+            "rd": 37
         },
         "best": {
             "rating": 2717,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/95627522467"
         },
         "record": {
-            "win": 2123,
-            "loss": 1447,
-            "draw": 288
+            "win": 2212,
+            "loss": 1510,
+            "draw": 302
         }
     },
     "fide": 2370,
     "tactics": {
         "highest": {
-            "rating": 3552,
-            "date": 1694799363
+            "rating": 3557,
+            "date": 1736775993
         },
         "lowest": {
             "rating": 410,
@@ -99,8 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 71,
-            "score": 68
+            "total_attempts": 72,
+            "score": 69
         }
     }
 }

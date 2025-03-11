@@ -5,9 +5,9 @@
     "name": "Licael Ticona",
     "username": "stockfisher_hbk",
     "title": "IM",
-    "followers": 28,
+    "followers": 33,
     "country": "https://api.chess.com/pub/country/BO",
-    "last_online": 1734127262,
+    "last_online": 1741552298,
     "joined": 1689813271,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2647,
-            "date": 1733875819,
-            "rd": 49
+            "rating": 2735,
+            "date": 1739386772
         },
         "best": {
             "rating": 2740,
@@ -60,9 +59,9 @@
             "game": "https://www.chess.com/game/live/90717527363"
         },
         "record": {
-            "win": 183,
-            "loss": 154,
-            "draw": 22
+            "win": 202,
+            "loss": 161,
+            "draw": 25
         }
     },
     "tactics": {

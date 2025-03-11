@@ -5,9 +5,9 @@
     "name": "Sandor Kustar",
     "username": "sanyassin2",
     "title": "IM",
-    "followers": 11,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734175034,
+    "last_online": 1741274802,
     "joined": 1666651809,
     "status": "premium",
     "is_streamer": false,
@@ -45,19 +45,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2387,
-            "date": 1727110198,
-            "rd": 30
+            "rating": 2384,
+            "date": 1741167226,
+            "rd": 28
         },
         "best": {
-            "rating": 2516,
-            "date": 1667966952,
+            "rating": 2570,
+            "date": 1738546788,
             "game": "https://www.chess.com/game/live/93738031085"
         },
         "record": {
-            "win": 1246,
-            "loss": 943,
-            "draw": 104
+            "win": 1500,
+            "loss": 1148,
+            "draw": 141
         }
     },
     "fide": 2347,

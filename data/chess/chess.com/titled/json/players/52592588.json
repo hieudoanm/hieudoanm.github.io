@@ -5,9 +5,9 @@
     "name": "Dimitris Alexakis",
     "username": "tacticthunder",
     "title": "IM",
-    "followers": 115,
+    "followers": 118,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1734008227,
+    "last_online": 1741459052,
     "joined": 1543610573,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2586,
-            "date": 1706464578,
-            "rd": 42
+            "rating": 2565,
+            "date": 1739730496,
+            "rd": 48
         },
         "best": {
             "rating": 2621,
@@ -26,43 +26,43 @@
             "game": "https://www.chess.com/game/live/4929022427"
         },
         "record": {
-            "win": 268,
-            "loss": 73,
-            "draw": 25
+            "win": 272,
+            "loss": 75,
+            "draw": 26
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2863,
-            "date": 1730378295,
-            "rd": 49
+            "rating": 2900,
+            "date": 1739643042,
+            "rd": 35
         },
         "best": {
-            "rating": 2877,
-            "date": 1728322540,
+            "rating": 2912,
+            "date": 1737223996,
             "game": "https://www.chess.com/game/live/76528385797"
         },
         "record": {
-            "win": 788,
-            "loss": 694,
-            "draw": 70
+            "win": 867,
+            "loss": 745,
+            "draw": 74
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2835,
-            "date": 1732665264,
-            "rd": 46
+            "rating": 2971,
+            "date": 1740254860,
+            "rd": 42
         },
         "best": {
-            "rating": 2867,
-            "date": 1681584227,
-            "game": "https://www.chess.com/game/live/64687405013"
+            "rating": 2971,
+            "date": 1740254860,
+            "game": "https://www.chess.com/game/live/133053569261"
         },
         "record": {
-            "win": 409,
-            "loss": 268,
-            "draw": 51
+            "win": 493,
+            "loss": 286,
+            "draw": 59
         }
     },
     "fide": 2450,
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 60,
-            "score": 57
+            "total_attempts": 68,
+            "score": 64
         }
     }
 }

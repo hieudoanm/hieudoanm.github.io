@@ -1,14 +1,15 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23640166.b83c12d5.200x200o.f0187b5279ef.webp",
     "player_id": 23640166,
     "@id": "https://api.chess.com/pub/player/gurvich_vitaly",
     "url": "https://www.chess.com/member/Gurvich_Vitaly",
     "name": "\u0413\u0443\u0440\u0432\u0438\u0447 \u0412\u0438\u0442\u0430\u043b\u0438\u0439",
     "username": "gurvich_vitaly",
     "title": "FM",
-    "followers": 18,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/IL",
     "location": "\u041c\u043e\u0441\u043a\u0432\u0430",
-    "last_online": 1730740283,
+    "last_online": 1741703653,
     "joined": 1439401128,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2555,
-            "date": 1731833202,
-            "rd": 49
+            "rating": 2630,
+            "date": 1740861563,
+            "rd": 47
         },
         "best": {
             "rating": 2623,
             "date": 1609360410,
-            "game": "https://www.chess.com/game/live/125572114807"
+            "game": "https://www.chess.com/game/live/130966194251"
         },
         "record": {
-            "win": 301,
-            "loss": 179,
-            "draw": 14
+            "win": 312,
+            "loss": 180,
+            "draw": 15
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2709,
-            "date": 1733666807,
-            "rd": 49
+            "rating": 2701,
+            "date": 1741638312,
+            "rd": 44
         },
         "best": {
             "rating": 2760,
@@ -61,12 +62,11 @@
             "game": "https://www.chess.com/game/live/105208874259"
         },
         "record": {
-            "win": 950,
-            "loss": 686,
-            "draw": 133
+            "win": 979,
+            "loss": 709,
+            "draw": 134
         }
     },
-    "fide": 0,
     "tactics": {
         "highest": {
             "rating": 3258,

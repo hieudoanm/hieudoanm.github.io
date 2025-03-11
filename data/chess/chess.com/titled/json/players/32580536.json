@@ -6,9 +6,9 @@
     "name": "Richard Tur\u010dan",
     "username": "richardmaster",
     "title": "FM",
-    "followers": 59,
+    "followers": 62,
     "country": "https://api.chess.com/pub/country/SK",
-    "last_online": 1734161843,
+    "last_online": 1741620542,
     "joined": 1485066405,
     "status": "premium",
     "is_streamer": false,
@@ -73,7 +73,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2452,
-            "date": 1733311953,
+            "date": 1741280465,
             "rd": 62
         },
         "best": {
@@ -89,8 +89,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2536,
-            "date": 1721145924,
+            "rating": 2541,
+            "date": 1741279205,
             "rd": 48
         },
         "best": {
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/114303604767"
         },
         "record": {
-            "win": 1182,
-            "loss": 1206,
-            "draw": 133
+            "win": 1184,
+            "loss": 1207,
+            "draw": 134
         }
     },
     "fide": 2393,

@@ -5,9 +5,9 @@
     "name": "Facundo Vazquez",
     "username": "bettercallcafu",
     "title": "FM",
-    "followers": 22,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/UY",
-    "last_online": 1734106266,
+    "last_online": 1741628008,
     "joined": 1674583160,
     "status": "premium",
     "is_streamer": false,
@@ -16,26 +16,26 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2602,
-            "date": 1734058270,
-            "rd": 24
+            "rating": 2711,
+            "date": 1741358364,
+            "rd": 26
         },
         "best": {
-            "rating": 2719,
-            "date": 1731173100,
-            "game": "https://www.chess.com/game/live/97964482343"
+            "rating": 2790,
+            "date": 1740246827,
+            "game": "https://www.chess.com/game/live/130818605873"
         },
         "record": {
-            "win": 1198,
-            "loss": 987,
-            "draw": 163
+            "win": 1526,
+            "loss": 1276,
+            "draw": 209
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2717,
-            "date": 1732072977,
-            "rd": 33
+            "rating": 2708,
+            "date": 1741375806,
+            "rd": 40
         },
         "best": {
             "rating": 2842,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/122167725967"
         },
         "record": {
-            "win": 713,
-            "loss": 582,
-            "draw": 164
+            "win": 788,
+            "loss": 645,
+            "draw": 185
         }
     },
     "tactics": {

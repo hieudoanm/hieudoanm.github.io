@@ -6,9 +6,9 @@
     "name": "Ilya Gutkin",
     "username": "ilushka",
     "title": "FM",
-    "followers": 102,
+    "followers": 111,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734132998,
+    "last_online": 1741681081,
     "joined": 1347377103,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2256,
-            "date": 1733499809,
-            "rd": 90
+            "rating": 2261,
+            "date": 1739191704,
+            "rd": 95
         },
         "best": {
             "rating": 2279,
@@ -58,26 +58,26 @@
             "game": "https://www.chess.com/game/live/127238414519"
         },
         "record": {
-            "win": 170,
-            "loss": 125,
+            "win": 171,
+            "loss": 126,
             "draw": 9
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2502,
-            "date": 1734136966,
+            "rating": 2474,
+            "date": 1741599473,
             "rd": 24
         },
         "best": {
-            "rating": 2612,
-            "date": 1719340110,
-            "game": "https://www.chess.com/game/live/121555870745"
+            "rating": 2658,
+            "date": 1739750685,
+            "game": "https://www.chess.com/game/live/133655350761"
         },
         "record": {
-            "win": 10366,
-            "loss": 9617,
-            "draw": 1275
+            "win": 11044,
+            "loss": 10274,
+            "draw": 1380
         }
     },
     "fide": 2240,

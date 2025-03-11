@@ -6,10 +6,10 @@
     "name": "Arthur Calugar",
     "username": "chessaintfun",
     "title": "IM",
-    "followers": 471,
+    "followers": 484,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto, Ontario",
-    "last_online": 1733365590,
+    "last_online": 1741115732,
     "joined": 1277254639,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2719,
-            "date": 1724512977,
-            "rd": 49
+            "rating": 2747,
+            "date": 1741068024,
+            "rd": 41
         },
         "best": {
             "rating": 2775,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/72515650889"
         },
         "record": {
-            "win": 513,
-            "loss": 612,
-            "draw": 80
+            "win": 533,
+            "loss": 630,
+            "draw": 83
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2664,
-            "date": 1733365958,
-            "rd": 49
+            "rating": 2852,
+            "date": 1741563994,
+            "rd": 35
         },
         "best": {
             "rating": 2780,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/43022424235"
         },
         "record": {
-            "win": 4118,
-            "loss": 4150,
-            "draw": 910
+            "win": 4190,
+            "loss": 4199,
+            "draw": 933
         }
     },
     "fide": 2369,

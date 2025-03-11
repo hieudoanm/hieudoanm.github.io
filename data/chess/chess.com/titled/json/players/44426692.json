@@ -5,9 +5,9 @@
     "name": "Iwo Godzwon",
     "username": "iwkooo",
     "title": "FM",
-    "followers": 71,
+    "followers": 72,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734183615,
+    "last_online": 1741684073,
     "joined": 1521461063,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2348,
-            "date": 1722181199,
+            "date": 1737662744,
             "rd": 50
         },
         "best": {
@@ -52,8 +52,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2762,
-            "date": 1733861270,
+            "rating": 2753,
+            "date": 1740246297,
             "rd": 49
         },
         "best": {
@@ -63,25 +63,25 @@
         },
         "record": {
             "win": 1883,
-            "loss": 1431,
+            "loss": 1432,
             "draw": 267
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2786,
-            "date": 1734183911,
-            "rd": 28
+            "rating": 2697,
+            "date": 1741684450,
+            "rd": 33
         },
         "best": {
-            "rating": 2851,
-            "date": 1719134032,
+            "rating": 2866,
+            "date": 1736376480,
             "game": "https://www.chess.com/game/live/75321167667"
         },
         "record": {
-            "win": 4699,
-            "loss": 3761,
-            "draw": 986
+            "win": 4888,
+            "loss": 3902,
+            "draw": 1026
         }
     },
     "tactics": {

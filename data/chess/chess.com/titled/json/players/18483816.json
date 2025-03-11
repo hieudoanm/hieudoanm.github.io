@@ -6,9 +6,9 @@
     "name": "Igor Tokuichi Kikuchi Cadilhac",
     "username": "igorcadilhac",
     "title": "FM",
-    "followers": 212,
+    "followers": 215,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734040536,
+    "last_online": 1741388486,
     "joined": 1407973296,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2479,
-            "date": 1730337269,
-            "rd": 90
+            "rating": 2485,
+            "date": 1740703415,
+            "rd": 49
         },
         "best": {
             "rating": 2547,
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/37491691611"
         },
         "record": {
-            "win": 895,
-            "loss": 663,
+            "win": 898,
+            "loss": 667,
             "draw": 99
         }
     },

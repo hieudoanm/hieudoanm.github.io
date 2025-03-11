@@ -6,10 +6,10 @@
     "name": "Peter Kokol",
     "username": "perimir",
     "title": "FM",
-    "followers": 249,
+    "followers": 255,
     "country": "https://api.chess.com/pub/country/SI",
     "location": "Maribor",
-    "last_online": 1734128839,
+    "last_online": 1741101115,
     "joined": 1336976424,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2107,
-            "date": 1732308465,
-            "rd": 99
+            "rating": 2139,
+            "date": 1741160869,
+            "rd": 121
         },
         "best": {
             "rating": 2169,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/274795720"
         },
         "record": {
-            "win": 161,
+            "win": 162,
             "loss": 39,
             "draw": 26,
-            "time_per_move": 8750,
+            "time_per_move": 8761,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 12,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 8750,
+            "time_per_move": 8761,
             "timeout_percent": 0
         }
     },
@@ -73,8 +73,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2340,
-            "date": 1726169699,
+            "rating": 2381,
+            "date": 1740338401,
             "rd": 112
         },
         "best": {
@@ -83,8 +83,8 @@
             "game": "https://www.chess.com/game/live/54239468865"
         },
         "record": {
-            "win": 1055,
-            "loss": 575,
+            "win": 1057,
+            "loss": 576,
             "draw": 50
         }
     },
@@ -105,7 +105,7 @@
             "draw": 752
         }
     },
-    "fide": 2347,
+    "fide": 2313,
     "tactics": {
         "highest": {
             "rating": 3173,

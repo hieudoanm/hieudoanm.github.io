@@ -6,9 +6,9 @@
     "name": "Harshad S",
     "username": "rubinstein_akiba",
     "title": "FM",
-    "followers": 1865,
+    "followers": 1876,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1732982463,
+    "last_online": 1740992186,
     "joined": 1582008989,
     "status": "premium",
     "is_streamer": false,
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2748,
-            "date": 1729874758,
-            "rd": 35
+            "rating": 2811,
+            "date": 1740901467,
+            "rd": 23
         },
         "best": {
             "rating": 2947,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/90961857513"
         },
         "record": {
-            "win": 7998,
-            "loss": 9095,
-            "draw": 1036
+            "win": 8145,
+            "loss": 9248,
+            "draw": 1060
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2766,
-            "date": 1726920343,
-            "rd": 49
+            "rating": 2779,
+            "date": 1740644235,
+            "rd": 40
         },
         "best": {
             "rating": 2869,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/55952023019"
         },
         "record": {
-            "win": 1250,
-            "loss": 1519,
-            "draw": 257
+            "win": 1269,
+            "loss": 1544,
+            "draw": 260
         }
     },
     "tactics": {

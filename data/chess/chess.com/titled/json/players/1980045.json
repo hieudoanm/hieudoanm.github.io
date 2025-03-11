@@ -6,10 +6,10 @@
     "name": "Casper Dahl Rasmussen",
     "username": "crasmus",
     "title": "FM",
-    "followers": 413,
+    "followers": 415,
     "country": "https://api.chess.com/pub/country/DK",
     "location": "Copenhagen",
-    "last_online": 1733325679,
+    "last_online": 1740399812,
     "joined": 1245279727,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2218,
-            "date": 1696409780,
-            "rd": 82
+            "rating": 2215,
+            "date": 1740402768,
+            "rd": 49
         },
         "best": {
             "rating": 2270,
@@ -30,7 +30,7 @@
         "record": {
             "win": 31,
             "loss": 7,
-            "draw": 1
+            "draw": 2
         }
     },
     "chess_bullet": {

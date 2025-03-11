@@ -5,9 +5,9 @@
     "name": "Martijn Maddens",
     "username": "marreuh",
     "title": "CM",
-    "followers": 26,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/SZ",
-    "last_online": 1734119399,
+    "last_online": 1741518512,
     "joined": 1283950969,
     "status": "premium",
     "is_streamer": false,
@@ -70,7 +70,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2235,
-            "date": 1661196380,
+            "date": 1736348169,
             "rd": 86
         },
         "best": {
@@ -98,10 +98,6 @@
         "best": {
             "total_attempts": 54,
             "score": 51
-        },
-        "daily": {
-            "total_attempts": 34,
-            "score": 32
         }
     }
 }

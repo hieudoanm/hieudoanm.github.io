@@ -6,10 +6,10 @@
     "name": "John Derek Heinichen",
     "username": "heinichesspy",
     "title": "CM",
-    "followers": 206,
+    "followers": 213,
     "country": "https://api.chess.com/pub/country/PY",
     "location": "Asuncion",
-    "last_online": 1734082776,
+    "last_online": 1741682926,
     "joined": 1396319792,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1506,
-            "date": 1733700765,
-            "rd": 88
+            "rating": 1517,
+            "date": 1741603988,
+            "rd": 102
         },
         "best": {
             "rating": 1707,
@@ -28,17 +28,11 @@
             "game": "https://www.chess.com/game/daily/619907067"
         },
         "record": {
-            "win": 146,
+            "win": 149,
             "loss": 146,
             "draw": 8,
-            "time_per_move": 43730,
+            "time_per_move": 44187,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 3,
-            "count": 1,
-            "highest_finish": 22
         }
     },
     "chess960_daily": {
@@ -56,14 +50,8 @@
             "win": 2,
             "loss": 4,
             "draw": 0,
-            "time_per_move": 43730,
+            "time_per_move": 44187,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 3,
-            "count": 1,
-            "highest_finish": 22
         }
     },
     "chess_rapid": {
@@ -102,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2247,
-            "date": 1732308226,
-            "rd": 45
+            "rating": 2219,
+            "date": 1740477212,
+            "rd": 54
         },
         "best": {
             "rating": 2390,
@@ -112,9 +100,9 @@
             "game": "https://www.chess.com/game/live/111274283097"
         },
         "record": {
-            "win": 2612,
-            "loss": 2364,
-            "draw": 361
+            "win": 2627,
+            "loss": 2378,
+            "draw": 364
         }
     },
     "fide": 1972,

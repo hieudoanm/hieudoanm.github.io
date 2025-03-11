@@ -6,10 +6,10 @@
     "name": "Luis Fern\u00e1ndez Siles",
     "username": "luisfsiles",
     "title": "FM",
-    "followers": 25061,
+    "followers": 25489,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Granada",
-    "last_online": 1734135372,
+    "last_online": 1741703395,
     "joined": 1449787708,
     "status": "premium",
     "is_streamer": true,
@@ -96,9 +96,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2486,
-            "date": 1734134594,
-            "rd": 34
+            "rating": 2294,
+            "date": 1741694383,
+            "rd": 35
         },
         "best": {
             "rating": 2512,
@@ -106,16 +106,16 @@
             "game": "https://www.chess.com/game/live/4801559202"
         },
         "record": {
-            "win": 4922,
-            "loss": 4862,
-            "draw": 738
+            "win": 5046,
+            "loss": 5036,
+            "draw": 770
         }
     },
     "fide": 2275,
     "tactics": {
         "highest": {
-            "rating": 3059,
-            "date": 1725289946
+            "rating": 3139,
+            "date": 1736123277
         },
         "lowest": {
             "rating": 1388,

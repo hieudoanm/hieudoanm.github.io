@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 167,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1731078731,
+    "last_online": 1741415669,
     "joined": 1560187533,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +16,7 @@
     "chess_daily": {
         "last": {
             "rating": 2063,
-            "date": 1729435372,
+            "date": 1741083994,
             "rd": 228
         },
         "best": {
@@ -28,7 +28,7 @@
             "win": 53,
             "loss": 2,
             "draw": 7,
-            "time_per_move": 13885,
+            "time_per_move": 17007,
             "timeout_percent": 0
         }
     },

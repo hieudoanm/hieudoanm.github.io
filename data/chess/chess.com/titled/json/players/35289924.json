@@ -6,11 +6,11 @@
     "name": "Maung Maung Kyaw Zaw Hein",
     "username": "mmkzh22",
     "title": "FM",
-    "followers": 236,
+    "followers": 237,
     "country": "https://api.chess.com/pub/country/MM",
-    "last_online": 1733124006,
+    "last_online": 1741689291,
     "joined": 1493964913,
-    "status": "premium",
+    "status": "closed",
     "is_streamer": false,
     "verified": false,
     "league": "Legend",
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2360,
-            "date": 1727794501,
-            "rd": 66
+            "rating": 2406,
+            "date": 1741611208,
+            "rd": 46
         },
         "best": {
             "rating": 2408,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/38039423929"
         },
         "record": {
-            "win": 1551,
-            "loss": 1497,
-            "draw": 170
+            "win": 1574,
+            "loss": 1516,
+            "draw": 172
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2485,
-            "date": 1727803845,
-            "rd": 36
+            "rating": 2470,
+            "date": 1741688519,
+            "rd": 38
         },
         "best": {
             "rating": 2513,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/102789114655"
         },
         "record": {
-            "win": 3321,
-            "loss": 3452,
-            "draw": 588
+            "win": 3354,
+            "loss": 3492,
+            "draw": 594
         }
     },
     "fide": 2121,

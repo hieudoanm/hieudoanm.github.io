@@ -5,10 +5,10 @@
     "name": "Daniel Jere",
     "username": "mwamba1409",
     "title": "IM",
-    "followers": 328,
+    "followers": 335,
     "country": "https://api.chess.com/pub/country/ZM",
     "location": "USA",
-    "last_online": 1734128235,
+    "last_online": 1741645709,
     "joined": 1508808242,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2755,
-            "date": 1734054774,
-            "rd": 46
+            "rating": 2724,
+            "date": 1741496785,
+            "rd": 49
         },
         "best": {
             "rating": 2827,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/44337009355"
         },
         "record": {
-            "win": 2173,
-            "loss": 1508,
-            "draw": 364
+            "win": 2177,
+            "loss": 1514,
+            "draw": 366
         }
     },
     "fide": 0,
@@ -98,12 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 53,
-            "score": 50
-        },
-        "daily": {
-            "total_attempts": 36,
-            "score": 33
+            "total_attempts": 59,
+            "score": 56
         }
     }
 }

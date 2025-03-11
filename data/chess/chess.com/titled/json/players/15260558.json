@@ -6,10 +6,10 @@
     "name": "hafez bakr",
     "username": "hafez_bakr",
     "title": "IM",
-    "followers": 738,
+    "followers": 761,
     "country": "https://api.chess.com/pub/country/PS",
     "location": "Amman",
-    "last_online": 1734107398,
+    "last_online": 1741624652,
     "joined": 1388128148,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1646,
-            "date": 1734107849,
-            "rd": 52
+            "rating": 1659,
+            "date": 1741642580,
+            "rd": 54
         },
         "best": {
             "rating": 2000,
@@ -28,24 +28,18 @@
             "game": "https://www.chess.com/game/daily/149921576"
         },
         "record": {
-            "win": 4438,
-            "loss": 2635,
-            "draw": 566,
-            "time_per_move": 25711,
+            "win": 4471,
+            "loss": 2652,
+            "draw": 568,
+            "time_per_move": 25981,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 566,
-            "withdraw": 0,
-            "count": 7,
-            "highest_finish": 1
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1548,
-            "date": 1730136937,
-            "rd": 95
+            "rating": 1607,
+            "date": 1740862085,
+            "rd": 96
         },
         "best": {
             "rating": 1730,
@@ -53,24 +47,18 @@
             "game": "https://www.chess.com/game/daily/140195463"
         },
         "record": {
-            "win": 185,
-            "loss": 119,
+            "win": 189,
+            "loss": 120,
             "draw": 29,
-            "time_per_move": 25711,
+            "time_per_move": 25981,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 566,
-            "withdraw": 0,
-            "count": 7,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1553,
-            "date": 1731929659,
-            "rd": 108
+            "rating": 1514,
+            "date": 1741126232,
+            "rd": 116
         },
         "best": {
             "rating": 2365,
@@ -79,15 +67,15 @@
         },
         "record": {
             "win": 400,
-            "loss": 151,
+            "loss": 152,
             "draw": 34
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1651,
-            "date": 1717075789,
-            "rd": 64
+            "rating": 1578,
+            "date": 1741290928,
+            "rd": 115
         },
         "best": {
             "rating": 1993,
@@ -96,15 +84,15 @@
         },
         "record": {
             "win": 734,
-            "loss": 572,
+            "loss": 573,
             "draw": 39
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1784,
-            "date": 1731936767,
-            "rd": 55
+            "rating": 1816,
+            "date": 1741550999,
+            "rd": 73
         },
         "best": {
             "rating": 2032,
@@ -112,8 +100,8 @@
             "game": "https://www.chess.com/game/live/1446593509"
         },
         "record": {
-            "win": 4362,
-            "loss": 3482,
+            "win": 4369,
+            "loss": 3487,
             "draw": 307
         }
     },

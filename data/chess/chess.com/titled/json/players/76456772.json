@@ -9,12 +9,12 @@
     "followers": 11,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Praha",
-    "last_online": 1734176937,
+    "last_online": 1741614016,
     "joined": 1586687108,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,25 +35,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2307,
-            "date": 1734177847,
-            "rd": 33
+            "rating": 2324,
+            "date": 1741676354,
+            "rd": 28
         },
         "best": {
-            "rating": 2428,
-            "date": 1614533121,
+            "rating": 2436,
+            "date": 1739620345,
             "game": "https://www.chess.com/game/live/4730714748"
         },
         "record": {
-            "win": 1965,
-            "loss": 1600,
-            "draw": 283
+            "win": 2260,
+            "loss": 1852,
+            "draw": 326
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3210,
-            "date": 1679211193
+            "rating": 3403,
+            "date": 1734991282
         },
         "lowest": {
             "rating": 1012,

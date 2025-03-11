@@ -6,9 +6,9 @@
     "name": "James Eden",
     "username": "facillll94",
     "title": "IM",
-    "followers": 106,
+    "followers": 110,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734019052,
+    "last_online": 1741634755,
     "joined": 1397118463,
     "status": "premium",
     "is_streamer": false,
@@ -89,9 +89,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2586,
-            "date": 1734019476,
-            "rd": 34
+            "rating": 2674,
+            "date": 1741355491,
+            "rd": 26
         },
         "best": {
             "rating": 2703,
@@ -99,15 +99,15 @@
             "game": "https://www.chess.com/game/live/15187981143"
         },
         "record": {
-            "win": 4875,
-            "loss": 3975,
-            "draw": 755
+            "win": 4969,
+            "loss": 4047,
+            "draw": 769
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3444,
-            "date": 1730024807
+            "rating": 3453,
+            "date": 1737029476
         },
         "lowest": {
             "rating": 2162,

@@ -9,7 +9,7 @@
     "followers": 120,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Bogota",
-    "last_online": 1734141833,
+    "last_online": 1741563756,
     "joined": 1337048239,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1778,
-            "date": 1723753961,
-            "rd": 93
+            "rating": 1795,
+            "date": 1740746302,
+            "rd": 104
         },
         "best": {
             "rating": 1906,
@@ -28,18 +28,18 @@
             "game": "https://www.chess.com/game/daily/604256253"
         },
         "record": {
-            "win": 29,
-            "loss": 9,
+            "win": 31,
+            "loss": 10,
             "draw": 2,
-            "time_per_move": 4617,
+            "time_per_move": 4835,
             "timeout_percent": 0
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1071,
-            "date": 1683637910,
-            "rd": 238
+            "rating": 1043,
+            "date": 1740746302,
+            "rd": 265
         },
         "best": {
             "rating": 1200,
@@ -48,9 +48,9 @@
         },
         "record": {
             "win": 2,
-            "loss": 0,
+            "loss": 1,
             "draw": 0,
-            "time_per_move": 4617,
+            "time_per_move": 4835,
             "timeout_percent": 0
         }
     },
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1451,
-            "date": 1733963370,
-            "rd": 61
+            "rating": 1469,
+            "date": 1741655958,
+            "rd": 79
         },
         "best": {
             "rating": 1676,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/58981744781"
         },
         "record": {
-            "win": 406,
+            "win": 407,
             "loss": 413,
             "draw": 25
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1817,
-            "date": 1734142731,
-            "rd": 39
+            "rating": 1768,
+            "date": 1741664655,
+            "rd": 34
         },
         "best": {
             "rating": 2020,
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/107487176513"
         },
         "record": {
-            "win": 3296,
-            "loss": 3186,
-            "draw": 282
+            "win": 3424,
+            "loss": 3317,
+            "draw": 291
         }
     },
     "fide": 1995,
     "tactics": {
         "highest": {
-            "rating": 2732,
-            "date": 1654140829
+            "rating": 2810,
+            "date": 1734619633
         },
         "lowest": {
             "rating": 1382,

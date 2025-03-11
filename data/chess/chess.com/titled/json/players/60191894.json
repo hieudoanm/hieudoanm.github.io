@@ -6,10 +6,10 @@
     "name": "Javier Antonio Contreras Torres",
     "username": "jactorres",
     "title": "FM",
-    "followers": 88,
+    "followers": 92,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Cunduacan, Tabasco, M\u00e9xico.",
-    "last_online": 1734005401,
+    "last_online": 1741467384,
     "joined": 1556120969,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2507,
-            "date": 1728794141,
-            "rd": 49
+            "rating": 2349,
+            "date": 1740526964,
+            "rd": 52
         },
         "best": {
             "rating": 2619,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/4624692921"
         },
         "record": {
-            "win": 1185,
-            "loss": 742,
-            "draw": 139
+            "win": 1210,
+            "loss": 777,
+            "draw": 140
         }
     },
     "fide": 2296,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 35,
-            "score": 32
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

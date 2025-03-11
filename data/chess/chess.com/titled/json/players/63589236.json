@@ -6,14 +6,14 @@
     "name": "Jakub Pulpan",
     "username": "jakubpulpan",
     "title": "IM",
-    "followers": 168,
+    "followers": 175,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1734088802,
+    "last_online": 1741691784,
     "joined": 1563920870,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2814,
-            "date": 1732382517,
-            "rd": 44
+            "rating": 2954,
+            "date": 1741458890,
+            "rd": 29
         },
         "best": {
             "rating": 3115,
@@ -46,29 +46,29 @@
             "game": "https://www.chess.com/game/live/4039194269"
         },
         "record": {
-            "win": 5207,
-            "loss": 3307,
-            "draw": 662
+            "win": 5369,
+            "loss": 3417,
+            "draw": 681
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2695,
-            "date": 1733751963,
-            "rd": 45
+            "rating": 2782,
+            "date": 1741699852,
+            "rd": 34
         },
         "best": {
-            "rating": 2876,
-            "date": 1670829562,
-            "game": "https://www.chess.com/game/live/122835280419"
+            "rating": 2911,
+            "date": 1737572380,
+            "game": "https://www.chess.com/game/live/131304620787"
         },
         "record": {
-            "win": 1757,
-            "loss": 1328,
-            "draw": 548
+            "win": 1983,
+            "loss": 1467,
+            "draw": 583
         }
     },
-    "fide": 2462,
+    "fide": 2530,
     "tactics": {
         "highest": {
             "rating": 2587,

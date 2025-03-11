@@ -5,9 +5,9 @@
     "name": "Vinzent Spitzl",
     "username": "vinzentspitzl",
     "title": "FM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/BM",
-    "last_online": 1734134696,
+    "last_online": 1741563390,
     "joined": 1479761490,
     "status": "premium",
     "is_streamer": false,
@@ -30,8 +30,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2181,
-            "date": 1706877021,
+            "rating": 2171,
+            "date": 1740418405,
             "rd": 49
         },
         "best": {
@@ -41,15 +41,15 @@
         },
         "record": {
             "win": 8,
-            "loss": 6,
+            "loss": 7,
             "draw": 8
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2230,
-            "date": 1717085295,
-            "rd": 76
+            "rating": 2421,
+            "date": 1741457574,
+            "rd": 55
         },
         "best": {
             "rating": 2564,
@@ -57,26 +57,26 @@
             "game": "https://www.chess.com/game/live/110823770683"
         },
         "record": {
-            "win": 102,
-            "loss": 100,
-            "draw": 18
+            "win": 123,
+            "loss": 120,
+            "draw": 23
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2507,
-            "date": 1734134572,
-            "rd": 37
+            "rating": 2539,
+            "date": 1741655269,
+            "rd": 35
         },
         "best": {
             "rating": 2653,
             "date": 1684582609,
-            "game": "https://www.chess.com/game/live/78595910219"
+            "game": "https://www.chess.com/game/live/130634425275"
         },
         "record": {
-            "win": 2150,
-            "loss": 1914,
-            "draw": 581
+            "win": 2309,
+            "loss": 2040,
+            "draw": 622
         }
     },
     "fide": 2344,
@@ -94,10 +94,6 @@
         "best": {
             "total_attempts": 62,
             "score": 59
-        },
-        "daily": {
-            "total_attempts": 50,
-            "score": 47
         }
     }
 }

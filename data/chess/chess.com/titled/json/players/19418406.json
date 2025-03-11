@@ -6,10 +6,10 @@
     "name": "Nikolay Plamenov Yordanov",
     "username": "ludogoretz",
     "title": "FM",
-    "followers": 324,
+    "followers": 327,
     "country": "https://api.chess.com/pub/country/BG",
     "location": "Ruse",
-    "last_online": 1734172891,
+    "last_online": 1741622376,
     "joined": 1414052087,
     "status": "premium",
     "is_streamer": false,
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2309,
-            "date": 1733849955,
-            "rd": 46
+            "rating": 2314,
+            "date": 1741622621,
+            "rd": 33
         },
         "best": {
             "rating": 2503,
             "date": 1422466041,
-            "game": "https://www.chess.com/game/live/118938671095"
+            "game": "https://www.chess.com/game/live/130110516399"
         },
         "record": {
-            "win": 1838,
-            "loss": 2245,
-            "draw": 218
+            "win": 1999,
+            "loss": 2435,
+            "draw": 231
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2352,
-            "date": 1733936455,
-            "rd": 43
+            "rating": 2346,
+            "date": 1741126719,
+            "rd": 59
         },
         "best": {
             "rating": 2587,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/10146731167"
         },
         "record": {
-            "win": 6129,
-            "loss": 6482,
-            "draw": 929
+            "win": 6134,
+            "loss": 6501,
+            "draw": 931
         }
     },
     "fide": 2286,
     "tactics": {
         "highest": {
-            "rating": 2857,
-            "date": 1728035601
+            "rating": 2872,
+            "date": 1737477361
         },
         "lowest": {
             "rating": 1362,

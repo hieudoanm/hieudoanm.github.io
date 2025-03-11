@@ -9,7 +9,7 @@
     "followers": 44,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Chicago",
-    "last_online": 1734123535,
+    "last_online": 1739897137,
     "joined": 1364506413,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2621,
-            "date": 1715136277,
-            "rd": 48
+            "rating": 2619,
+            "date": 1734729102,
+            "rd": 41
         },
         "best": {
             "rating": 2676,
@@ -59,15 +59,15 @@
             "game": "https://www.chess.com/game/live/58486221685"
         },
         "record": {
-            "win": 201,
-            "loss": 133,
-            "draw": 15
+            "win": 214,
+            "loss": 145,
+            "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2489,
-            "date": 1734148668,
+            "rating": 2515,
+            "date": 1735334596,
             "rd": 38
         },
         "best": {
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/109295425721"
         },
         "record": {
-            "win": 744,
-            "loss": 567,
-            "draw": 68
+            "win": 758,
+            "loss": 574,
+            "draw": 69
         }
     },
     "tactics": {
@@ -93,8 +93,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 61,
-            "score": 58
+            "total_attempts": 64,
+            "score": 61
         }
     }
 }

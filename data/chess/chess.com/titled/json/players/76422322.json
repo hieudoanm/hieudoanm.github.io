@@ -5,9 +5,9 @@
     "name": "Jos\u00e9 Daniel Gemy",
     "username": "stiffmaster1",
     "title": "IM",
-    "followers": 60,
+    "followers": 63,
     "country": "https://api.chess.com/pub/country/BO",
-    "last_online": 1734005882,
+    "last_online": 1741464581,
     "joined": 1586649432,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 2000,
-            "date": 1704262101,
+            "date": 1737560686,
             "rd": 350
         },
         "record": {
@@ -26,12 +26,6 @@
             "draw": 0,
             "time_per_move": 0,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {

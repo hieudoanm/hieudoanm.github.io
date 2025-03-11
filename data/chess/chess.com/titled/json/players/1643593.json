@@ -9,7 +9,7 @@
     "followers": 188,
     "country": "https://api.chess.com/pub/country/IS",
     "location": "Akureyri",
-    "last_online": 1729644687,
+    "last_online": 1740780098,
     "joined": 1228808280,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1953,
-            "date": 1734181018,
-            "rd": 73
+            "rating": 1999,
+            "date": 1741051545,
+            "rd": 86
         },
         "best": {
             "rating": 2082,
@@ -28,24 +28,18 @@
             "game": "https://www.chess.com/game/daily/199631322"
         },
         "record": {
-            "win": 4169,
+            "win": 4174,
             "loss": 2092,
             "draw": 439,
-            "time_per_move": 44566,
-            "timeout_percent": 22
-        },
-        "tournament": {
-            "points": 132,
-            "withdraw": 3,
-            "count": 2,
-            "highest_finish": 1
+            "time_per_move": 44574,
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1848,
-            "date": 1734168237,
-            "rd": 165
+            "rating": 1872,
+            "date": 1740035825,
+            "rd": 160
         },
         "best": {
             "rating": 1903,
@@ -53,17 +47,11 @@
             "game": "https://www.chess.com/game/daily/98321236"
         },
         "record": {
-            "win": 446,
+            "win": 449,
             "loss": 192,
             "draw": 45,
-            "time_per_move": 44566,
+            "time_per_move": 44574,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 132,
-            "withdraw": 3,
-            "count": 2,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
@@ -85,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2769,
-            "date": 1734181104,
-            "rd": 46
+            "rating": 2775,
+            "date": 1738967721,
+            "rd": 49
         },
         "best": {
             "rating": 2821,
@@ -95,15 +83,15 @@
             "game": "https://www.chess.com/game/live/121574413271"
         },
         "record": {
-            "win": 3853,
+            "win": 3854,
             "loss": 2444,
             "draw": 258
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2660,
-            "date": 1709517177,
+            "rating": 2651,
+            "date": 1737508100,
             "rd": 49
         },
         "best": {
@@ -113,7 +101,7 @@
         },
         "record": {
             "win": 894,
-            "loss": 479,
+            "loss": 480,
             "draw": 80
         }
     },
@@ -130,12 +118,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 67,
-            "score": 64
-        },
-        "daily": {
-            "total_attempts": 64,
-            "score": 61
+            "total_attempts": 71,
+            "score": 68
         }
     }
 }

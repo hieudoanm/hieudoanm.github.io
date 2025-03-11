@@ -6,10 +6,10 @@
     "name": "Novak Pezelj",
     "username": "novak_pezelj",
     "title": "IM",
-    "followers": 219,
+    "followers": 225,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Sombor",
-    "last_online": 1734112430,
+    "last_online": 1741514134,
     "joined": 1351754968,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2078,
-            "date": 1733935777,
+            "date": 1735565558,
             "rd": 134
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 25,
             "loss": 6,
             "draw": 8,
-            "time_per_move": 35588,
+            "time_per_move": 35587,
             "timeout_percent": 0
         }
     },
@@ -50,31 +50,31 @@
             "win": 7,
             "loss": 0,
             "draw": 1,
-            "time_per_move": 35588,
+            "time_per_move": 35587,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2456,
-            "date": 1733683472,
-            "rd": 46
+            "date": 1739125696,
+            "rd": 49
         },
         "best": {
-            "rating": 2456,
-            "date": 1733683472,
+            "rating": 2468,
+            "date": 1739124048,
             "game": "https://www.chess.com/game/live/125540913279"
         },
         "record": {
-            "win": 73,
-            "loss": 19,
+            "win": 76,
+            "loss": 20,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
             "rating": 2737,
-            "date": 1612270345,
+            "date": 1738731187,
             "rd": 102
         },
         "best": {

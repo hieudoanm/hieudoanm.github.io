@@ -6,10 +6,10 @@
     "name": "Sebasti&aacute;n Mar&iacute;n",
     "username": "sebastianmarinp",
     "title": "FM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Medell&iacute;n, Antioquia",
-    "last_online": 1733934249,
+    "last_online": 1741357632,
     "joined": 1420240322,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2408,
-            "date": 1733870375,
-            "rd": 84
+            "rating": 2389,
+            "date": 1740526299,
+            "rd": 61
         },
         "best": {
             "rating": 2478,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/91899058281"
         },
         "record": {
-            "win": 430,
-            "loss": 412,
-            "draw": 68
+            "win": 439,
+            "loss": 443,
+            "draw": 76
         }
     },
     "fide": 0,

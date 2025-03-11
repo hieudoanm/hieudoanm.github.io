@@ -6,10 +6,10 @@
     "name": "Vinh Pham",
     "username": "anotherwho",
     "title": "FM",
-    "followers": 24,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Schenectady",
-    "last_online": 1731431249,
+    "last_online": 1741630838,
     "joined": 1668465970,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2490,
-            "date": 1731376019,
-            "rd": 35
+            "rating": 2467,
+            "date": 1741631381,
+            "rd": 62
         },
         "best": {
             "rating": 2685,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/116214586343"
         },
         "record": {
-            "win": 1232,
-            "loss": 1525,
-            "draw": 167
+            "win": 1234,
+            "loss": 1530,
+            "draw": 168
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2209,
-            "date": 1729818447,
-            "rd": 87
+            "rating": 2183,
+            "date": 1736831967,
+            "rd": 80
         },
         "best": {
             "rating": 2309,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/92175638253"
         },
         "record": {
-            "win": 37,
-            "loss": 23,
+            "win": 40,
+            "loss": 27,
             "draw": 5
         }
     },

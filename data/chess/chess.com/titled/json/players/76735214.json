@@ -6,9 +6,9 @@
     "name": "Joshua Adrian Avila Rodriguez",
     "username": "joshuagk27",
     "title": "CM",
-    "followers": 17,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1734050149,
+    "last_online": 1741671592,
     "joined": 1586913500,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2611,
-            "date": 1733436608,
-            "rd": 23
+            "rating": 2651,
+            "date": 1740956570,
+            "rd": 28
         },
         "best": {
-            "rating": 2643,
-            "date": 1731138943,
+            "rating": 2665,
+            "date": 1734980970,
             "game": "https://www.chess.com/game/live/125767789245"
         },
         "record": {
-            "win": 1414,
-            "loss": 1318,
-            "draw": 183
+            "win": 1814,
+            "loss": 1768,
+            "draw": 263
         }
     },
     "tactics": {
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 75,
-            "score": 72
+            "total_attempts": 76,
+            "score": 73
         }
     }
 }

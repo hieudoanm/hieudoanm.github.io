@@ -28,12 +28,6 @@
             "draw": 0,
             "time_per_move": 134068,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 3,
-            "withdraw": 0,
-            "count": 2,
-            "highest_finish": 106
         }
     },
     "chess_rapid": {

@@ -9,7 +9,7 @@
     "followers": 296,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Torreilles",
-    "last_online": 1734165855,
+    "last_online": 1741542882,
     "joined": 1351173830,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2220,
-            "date": 1734167560,
+            "rating": 2157,
+            "date": 1741622250,
             "rd": 25
         },
         "best": {
@@ -28,9 +28,9 @@
             "game": "https://www.chess.com/game/live/117649247117"
         },
         "record": {
-            "win": 24595,
-            "loss": 18690,
-            "draw": 4765
+            "win": 24987,
+            "loss": 19013,
+            "draw": 4838
         }
     },
     "tactics": {

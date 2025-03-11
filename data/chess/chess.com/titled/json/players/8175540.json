@@ -8,12 +8,12 @@
     "followers": 12,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Eberdingen",
-    "last_online": 1734110014,
+    "last_online": 1741225278,
     "joined": 1342109871,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -51,17 +51,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2378,
-            "date": 1462958843,
-            "rd": 147
+            "rating": 2560,
+            "date": 1738221726,
+            "rd": 248
         },
         "best": {
-            "rating": 2378,
-            "date": 1462958843,
-            "game": "https://www.chess.com/game/live/1573742182"
+            "rating": 2560,
+            "date": 1738221726,
+            "game": "https://www.chess.com/game/live/131959820851"
         },
         "record": {
-            "win": 376,
+            "win": 377,
             "loss": 202,
             "draw": 63
         }

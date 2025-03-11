@@ -6,14 +6,14 @@
     "name": "David George Samir",
     "username": "david_george21",
     "title": "FM",
-    "followers": 28,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/EG",
-    "last_online": 1734183420,
+    "last_online": 1741627190,
     "joined": 1565128839,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -48,36 +48,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2329,
-            "date": 1734184201,
-            "rd": 26
+            "rating": 2607,
+            "date": 1740569895,
+            "rd": 30
         },
         "best": {
-            "rating": 2442,
-            "date": 1731323606,
+            "rating": 2604,
+            "date": 1736533046,
             "game": "https://www.chess.com/game/live/127766410055"
         },
         "record": {
-            "win": 721,
-            "loss": 564,
-            "draw": 70
+            "win": 1353,
+            "loss": 1044,
+            "draw": 153
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2392,
-            "date": 1733778430,
-            "rd": 45
+            "rating": 2671,
+            "date": 1741632940,
+            "rd": 25
         },
         "best": {
-            "rating": 2502,
-            "date": 1722354979,
-            "game": "https://www.chess.com/game/live/116090466403"
+            "rating": 2623,
+            "date": 1740505836,
+            "game": "https://www.chess.com/game/live/128191266047"
         },
         "record": {
-            "win": 505,
-            "loss": 414,
-            "draw": 47
+            "win": 694,
+            "loss": 550,
+            "draw": 74
         }
     },
     "fide": 2090,

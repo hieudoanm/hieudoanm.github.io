@@ -5,9 +5,9 @@
     "name": "Cristi Machidon",
     "username": "machidon",
     "title": "FM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/MD",
-    "last_online": 1733867941,
+    "last_online": 1741302539,
     "joined": 1589756411,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2373,
-            "date": 1682884451,
+            "date": 1740325884,
             "rd": 98
         },
         "best": {
@@ -33,8 +33,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2629,
-            "date": 1733875636,
+            "rating": 2590,
+            "date": 1740528372,
             "rd": 46
         },
         "best": {
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/60471098857"
         },
         "record": {
-            "win": 354,
-            "loss": 278,
-            "draw": 54
+            "win": 370,
+            "loss": 292,
+            "draw": 55
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Zozek Salah Mohammed Mohammed",
     "username": "zozik",
     "title": "FM",
-    "followers": 229,
+    "followers": 241,
     "country": "https://api.chess.com/pub/country/IQ",
     "location": "iraq",
-    "last_online": 1734011106,
+    "last_online": 1741676641,
     "joined": 1294250567,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2347,
-            "date": 1731432707,
-            "rd": 51
+            "rating": 2292,
+            "date": 1740577457,
+            "rd": 49
         },
         "best": {
             "rating": 2509,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/94322599363"
         },
         "record": {
-            "win": 593,
-            "loss": 516,
-            "draw": 100
+            "win": 620,
+            "loss": 541,
+            "draw": 104
         }
     },
     "tactics": {

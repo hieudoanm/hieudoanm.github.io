@@ -1,5 +1,5 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/91961178.8f290a4a.200x200o.a56095ae9d19.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/91961178.1b1cae57.200x200o.21eaee25c659.jpg",
     "player_id": 91961178,
     "@id": "https://api.chess.com/pub/player/kingside_rook",
     "url": "https://www.chess.com/member/kingside_rook",
@@ -8,7 +8,7 @@
     "title": "CM",
     "followers": 83,
     "country": "https://api.chess.com/pub/country/XE",
-    "last_online": 1733170008,
+    "last_online": 1741602682,
     "joined": 1601060162,
     "status": "premium",
     "is_streamer": false,
@@ -53,39 +53,39 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2517,
-            "date": 1728755897,
-            "rd": 36
+            "rating": 2681,
+            "date": 1741561685,
+            "rd": 29
         },
         "best": {
-            "rating": 2692,
-            "date": 1671901292,
-            "game": "https://www.chess.com/game/live/121885133813"
+            "rating": 2882,
+            "date": 1739488227,
+            "game": "https://www.chess.com/game/live/133287552219"
         },
         "record": {
-            "win": 2642,
-            "loss": 2748,
-            "draw": 406
+            "win": 3046,
+            "loss": 3205,
+            "draw": 491
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2409,
-            "date": 1730216243,
-            "rd": 55
+            "rating": 2372,
+            "date": 1738867906,
+            "rd": 56
         },
         "best": {
-            "rating": 2442,
-            "date": 1726608648,
+            "rating": 2476,
+            "date": 1736198944,
             "game": "https://www.chess.com/game/live/69013899187"
         },
         "record": {
-            "win": 1245,
-            "loss": 1156,
-            "draw": 208
+            "win": 1253,
+            "loss": 1170,
+            "draw": 210
         }
     },
-    "fide": 2217,
+    "fide": 2180,
     "tactics": {
         "highest": {
             "rating": 3242,
@@ -98,8 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 41
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

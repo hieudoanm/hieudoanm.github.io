@@ -1,59 +1,60 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/10018468.276ef641.200x200o.cdd8d65d4ec8.jpg",
     "player_id": 10018468,
     "@id": "https://api.chess.com/pub/player/optikbaskan",
     "url": "https://www.chess.com/member/optikbaskan",
     "name": "Umut Atakisi",
     "username": "optikbaskan",
     "title": "IM",
-    "followers": 4,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Kadikoy / Istanbul",
-    "last_online": 1734153618,
+    "last_online": 1741035631,
     "joined": 1355521885,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2526,
-            "date": 1733883531,
-            "rd": 49
+            "rating": 2450,
+            "date": 1736603285,
+            "rd": 30
         },
         "best": {
-            "rating": 2533,
-            "date": 1733883316,
-            "game": "https://www.chess.com/game/live/125278771851"
+            "rating": 2562,
+            "date": 1735509647,
+            "game": "https://www.chess.com/game/live/128817787363"
         },
         "record": {
-            "win": 4,
-            "loss": 1,
-            "draw": 2
+            "win": 50,
+            "loss": 66,
+            "draw": 20
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2463,
-            "date": 1733978276,
-            "rd": 40
+            "rating": 2557,
+            "date": 1738626292,
+            "rd": 39
         },
         "best": {
-            "rating": 2511,
-            "date": 1733974956,
-            "game": "https://www.chess.com/game/live/127627189301"
+            "rating": 2566,
+            "date": 1736713009,
+            "game": "https://www.chess.com/game/live/128243391981"
         },
         "record": {
-            "win": 43,
-            "loss": 28,
-            "draw": 12
+            "win": 124,
+            "loss": 111,
+            "draw": 48
         }
     },
     "fide": 2308,
     "tactics": {
         "highest": {
-            "rating": 2824,
-            "date": 1732119079
+            "rating": 2865,
+            "date": 1736465074
         },
         "lowest": {
             "rating": 1356,
@@ -62,11 +63,7 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 51,
-            "score": 48
-        },
-        "daily": {
-            "total_attempts": 51,
+            "total_attempts": 50,
             "score": 48
         }
     }

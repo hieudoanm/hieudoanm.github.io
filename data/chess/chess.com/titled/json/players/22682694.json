@@ -6,10 +6,10 @@
     "name": "Michael Rahal",
     "username": "mikerahal",
     "title": "IM",
-    "followers": 535,
+    "followers": 548,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Barcelona",
-    "last_online": 1734010034,
+    "last_online": 1741629103,
     "joined": 1433444084,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2305,
-            "date": 1728766716,
-            "rd": 41
+            "rating": 2325,
+            "date": 1735595134,
+            "rd": 58
         },
         "best": {
             "rating": 2358,
@@ -62,15 +62,15 @@
             "game": "https://www.chess.com/game/live/87060694907"
         },
         "record": {
-            "win": 170,
-            "loss": 95,
+            "win": 174,
+            "loss": 98,
             "draw": 33
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3483,
-            "date": 1704104668
+            "rating": 3484,
+            "date": 1736554546
         },
         "lowest": {
             "rating": 2131,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 36,
-            "score": 34
+            "total_attempts": 42,
+            "score": 41
         }
     }
 }

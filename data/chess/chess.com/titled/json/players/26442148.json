@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 40,
     "country": "https://api.chess.com/pub/country/SE",
-    "last_online": 1734029575,
+    "last_online": 1741538313,
     "joined": 1454254434,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1298,
-            "date": 1716501656,
+            "date": 1735118924,
             "rd": 96
         },
         "best": {

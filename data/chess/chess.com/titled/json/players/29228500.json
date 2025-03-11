@@ -6,10 +6,10 @@
     "name": "Samm Samm",
     "username": "sonenanguyen",
     "title": "WFM",
-    "followers": 44,
+    "followers": 46,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Ha Noi",
-    "last_online": 1734172350,
+    "last_online": 1741695305,
     "joined": 1469575928,
     "status": "premium",
     "is_streamer": false,
@@ -18,26 +18,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1544,
-            "date": 1734174610,
-            "rd": 96
+            "rating": 1553,
+            "date": 1739964240,
+            "rd": 72
         },
         "best": {
             "rating": 1954,
             "date": 1592968700,
-            "game": "https://www.chess.com/game/live/127307431269"
+            "game": "https://www.chess.com/game/live/132725370879"
         },
         "record": {
-            "win": 24,
-            "loss": 11,
+            "win": 31,
+            "loss": 17,
             "draw": 6
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2097,
-            "date": 1726886765,
-            "rd": 79
+            "rating": 2067,
+            "date": 1739625051,
+            "rd": 101
         },
         "best": {
             "rating": 2149,
@@ -46,7 +46,7 @@
         },
         "record": {
             "win": 659,
-            "loss": 568,
+            "loss": 569,
             "draw": 45
         }
     },
@@ -79,8 +79,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 60,
-            "score": 57
+            "total_attempts": 63,
+            "score": 60
+        },
+        "daily": {
+            "total_attempts": 31,
+            "score": 29
         }
     }
 }

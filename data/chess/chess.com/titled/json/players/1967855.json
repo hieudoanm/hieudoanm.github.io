@@ -6,10 +6,10 @@
     "name": "Charles Schulien",
     "username": "cschess",
     "title": "FM",
-    "followers": 285,
+    "followers": 291,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Portland, OR",
-    "last_online": 1734039088,
+    "last_online": 1741668562,
     "joined": 1244723951,
     "status": "premium",
     "is_streamer": false,
@@ -33,12 +33,6 @@
             "draw": 23,
             "time_per_move": 139361,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {

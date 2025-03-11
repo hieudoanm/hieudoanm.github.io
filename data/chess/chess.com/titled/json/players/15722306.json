@@ -5,9 +5,9 @@
     "name": "Alfeu Junior Varela Bueno",
     "username": "laico",
     "title": "FM",
-    "followers": 92,
+    "followers": 106,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734152129,
+    "last_online": 1741658457,
     "joined": 1390539599,
     "status": "premium",
     "is_streamer": false,
@@ -50,19 +50,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2399,
-            "date": 1733875621,
-            "rd": 36
+            "rating": 2438,
+            "date": 1741133052,
+            "rd": 28
         },
         "best": {
-            "rating": 2519,
-            "date": 1728401275,
+            "rating": 2573,
+            "date": 1739896744,
             "game": "https://www.chess.com/game/live/88968780657"
         },
         "record": {
-            "win": 4243,
-            "loss": 3611,
-            "draw": 430
+            "win": 4420,
+            "loss": 3782,
+            "draw": 451
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Dimitrios Ladopoulos",
     "username": "jimis98",
     "title": "FM",
-    "followers": 2209,
+    "followers": 2222,
     "country": "https://api.chess.com/pub/country/GR",
     "location": "serres",
-    "last_online": 1734163958,
+    "last_online": 1741442609,
     "joined": 1336136353,
     "status": "premium",
     "is_streamer": false,
@@ -53,7 +53,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2635,
-            "date": 1728492604,
+            "date": 1739126992,
             "rd": 46
         },
         "best": {

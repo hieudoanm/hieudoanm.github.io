@@ -6,9 +6,9 @@
     "name": "Talgat Gubaydulin",
     "username": "truetellerfromkz",
     "title": "IM",
-    "followers": 33,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734015706,
+    "last_online": 1741617893,
     "joined": 1479926908,
     "status": "premium",
     "is_streamer": false,
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2743,
-            "date": 1733414532,
+            "date": 1741622687,
             "rd": 49
         },
         "best": {

@@ -5,9 +5,9 @@
     "name": "Jakub Seemann",
     "username": "mr_gustavo",
     "title": "IM",
-    "followers": 56,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733946239,
+    "last_online": 1741637004,
     "joined": 1599243190,
     "status": "premium",
     "is_streamer": false,
@@ -31,7 +31,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2205,
-            "date": 1652526235,
+            "date": 1740003835,
             "rd": 116
         },
         "best": {
@@ -64,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2832,
-            "date": 1733911279,
-            "rd": 33
+            "rating": 2845,
+            "date": 1741637629,
+            "rd": 37
         },
         "best": {
             "rating": 2872,
@@ -74,15 +74,15 @@
             "game": "https://www.chess.com/game/live/113673552523"
         },
         "record": {
-            "win": 1085,
-            "loss": 1195,
-            "draw": 220
+            "win": 1160,
+            "loss": 1283,
+            "draw": 236
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3767,
-            "date": 1727724917
+            "rating": 3779,
+            "date": 1739558964
         },
         "lowest": {
             "rating": 2351,

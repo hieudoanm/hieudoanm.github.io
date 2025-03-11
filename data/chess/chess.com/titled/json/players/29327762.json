@@ -6,10 +6,10 @@
     "name": "Samy Robin",
     "username": "robin-side",
     "title": "FM",
-    "followers": 1302,
+    "followers": 1353,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Mende",
-    "last_online": 1734177848,
+    "last_online": 1741680270,
     "joined": 1470222860,
     "status": "staff",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2123,
-            "date": 1734044900,
-            "rd": 175
+            "rating": 2026,
+            "date": 1741686630,
+            "rd": 146
         },
         "best": {
             "rating": 2123,
@@ -28,11 +28,17 @@
             "game": "https://www.chess.com/game/daily/572714081"
         },
         "record": {
-            "win": 137,
+            "win": 144,
             "loss": 1,
-            "draw": 1,
-            "time_per_move": 7392,
+            "draw": 4,
+            "time_per_move": 8049,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 0
         }
     },
     "chess960_daily": {
@@ -50,14 +56,20 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 7392,
+            "time_per_move": 8049,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2155,
-            "date": 1731506333,
+            "date": 1741267168,
             "rd": 135
         },
         "best": {
@@ -90,9 +102,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2605,
-            "date": 1719678645,
-            "rd": 29
+            "rating": 2606,
+            "date": 1741275200,
+            "rd": 42
         },
         "best": {
             "rating": 2654,
@@ -100,15 +112,15 @@
             "game": "https://www.chess.com/game/live/2334172962"
         },
         "record": {
-            "win": 2110,
-            "loss": 1642,
+            "win": 2121,
+            "loss": 1653,
             "draw": 315
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3323,
-            "date": 1732648081
+            "rating": 3397,
+            "date": 1740909679
         },
         "lowest": {
             "rating": 1405,
@@ -119,10 +131,6 @@
         "best": {
             "total_attempts": 64,
             "score": 61
-        },
-        "daily": {
-            "total_attempts": 52,
-            "score": 49
         }
     }
 }

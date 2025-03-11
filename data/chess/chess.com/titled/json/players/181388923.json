@@ -5,9 +5,9 @@
     "name": "Enkhrii Enkh-Amgalan",
     "username": "kyuotbi",
     "title": "WCM",
-    "followers": 6,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/MN",
-    "last_online": 1734009047,
+    "last_online": 1741588459,
     "joined": 1650704966,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2231,
-            "date": 1728381710,
-            "rd": 26
+            "rating": 2145,
+            "date": 1741166529,
+            "rd": 48
         },
         "best": {
             "rating": 2241,
@@ -26,16 +26,16 @@
             "game": "https://www.chess.com/game/live/121952923047"
         },
         "record": {
-            "win": 107,
-            "loss": 83,
-            "draw": 9
+            "win": 155,
+            "loss": 133,
+            "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2439,
-            "date": 1733849752,
-            "rd": 52
+            "rating": 2375,
+            "date": 1741589134,
+            "rd": 41
         },
         "best": {
             "rating": 2508,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/127585258549"
         },
         "record": {
-            "win": 537,
-            "loss": 343,
-            "draw": 49
+            "win": 610,
+            "loss": 417,
+            "draw": 65
         }
     },
     "fide": 1844,
@@ -61,8 +61,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 41
+            "total_attempts": 45,
+            "score": 42
         }
     }
 }

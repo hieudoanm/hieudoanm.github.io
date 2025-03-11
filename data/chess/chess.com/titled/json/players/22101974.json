@@ -6,10 +6,10 @@
     "name": "Franklin Esquivia",
     "username": "esquivia",
     "title": "FM",
-    "followers": 22,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Barranquilla",
-    "last_online": 1734103275,
+    "last_online": 1741657516,
     "joined": 1429847321,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3570,
-            "date": 1719933925
+            "rating": 3592,
+            "date": 1739327458
         },
         "lowest": {
             "rating": 1200,

@@ -6,9 +6,9 @@
     "name": "Igor Musia\u0142",
     "username": "igorm2008",
     "title": "FM",
-    "followers": 44,
+    "followers": 48,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734171899,
+    "last_online": 1741631413,
     "joined": 1477864472,
     "status": "premium",
     "is_streamer": false,
@@ -31,8 +31,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2374,
-            "date": 1734136496,
+            "rating": 2366,
+            "date": 1734355076,
             "rd": 49
         },
         "best": {
@@ -42,15 +42,15 @@
         },
         "record": {
             "win": 184,
-            "loss": 143,
+            "loss": 144,
             "draw": 21
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2571,
-            "date": 1733826116,
-            "rd": 35
+            "rating": 2635,
+            "date": 1741640117,
+            "rd": 30
         },
         "best": {
             "rating": 2761,
@@ -58,26 +58,26 @@
             "game": "https://www.chess.com/game/live/123765584739"
         },
         "record": {
-            "win": 1444,
-            "loss": 1602,
-            "draw": 203
+            "win": 1535,
+            "loss": 1702,
+            "draw": 223
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2635,
-            "date": 1734176624,
-            "rd": 27
+            "rating": 2601,
+            "date": 1741130407,
+            "rd": 35
         },
         "best": {
             "rating": 2656,
             "date": 1734034517,
-            "game": "https://www.chess.com/game/live/126376242807"
+            "game": "https://www.chess.com/game/live/130609889969"
         },
         "record": {
-            "win": 774,
-            "loss": 608,
-            "draw": 94
+            "win": 892,
+            "loss": 750,
+            "draw": 113
         }
     },
     "fide": 2304,

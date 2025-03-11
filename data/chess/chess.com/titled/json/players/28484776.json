@@ -5,10 +5,10 @@
     "name": "Jacob Chudnovsky",
     "username": "chuddog",
     "title": "FM",
-    "followers": 344,
+    "followers": 345,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Boston, MA",
-    "last_online": 1733696862,
+    "last_online": 1741403866,
     "joined": 1465009795,
     "status": "premium",
     "is_streamer": false,
@@ -31,13 +31,7 @@
             "loss": 122,
             "draw": 132,
             "time_per_move": 31570,
-            "timeout_percent": 80
-        },
-        "tournament": {
-            "points": 154,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 1
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
@@ -76,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2323,
-            "date": 1733698696,
-            "rd": 51
+            "rating": 2313,
+            "date": 1739204878,
+            "rd": 66
         },
         "best": {
             "rating": 2618,
@@ -87,8 +81,8 @@
         },
         "record": {
             "win": 9837,
-            "loss": 11142,
-            "draw": 1869
+            "loss": 11143,
+            "draw": 1870
         }
     },
     "fide": 2456,

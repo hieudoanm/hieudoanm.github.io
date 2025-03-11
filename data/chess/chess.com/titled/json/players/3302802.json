@@ -5,9 +5,9 @@
     "name": "Mario Andres Fern\u00e1ndez S\u00e1nchez",
     "username": "mf_malo",
     "title": "FM",
-    "followers": 45,
-    "country": "https://api.chess.com/pub/country/TD",
-    "last_online": 1734125303,
+    "followers": 46,
+    "country": "https://api.chess.com/pub/country/CR",
+    "last_online": 1740684590,
     "joined": 1255311739,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2131,
-            "date": 1709737604,
-            "rd": 78
+            "rating": 2116,
+            "date": 1736392458,
+            "rd": 123
         },
         "best": {
             "rating": 2299,
@@ -63,15 +63,15 @@
         },
         "record": {
             "win": 41,
-            "loss": 32,
+            "loss": 33,
             "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2143,
-            "date": 1734125942,
-            "rd": 31
+            "rating": 2288,
+            "date": 1741634633,
+            "rd": 28
         },
         "best": {
             "rating": 2365,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/74384545241"
         },
         "record": {
-            "win": 2655,
-            "loss": 2080,
-            "draw": 516
+            "win": 2928,
+            "loss": 2304,
+            "draw": 557
         }
     },
     "tactics": {

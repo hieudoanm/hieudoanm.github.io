@@ -9,7 +9,7 @@
     "followers": 170,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Ha Noi",
-    "last_online": 1729389695,
+    "last_online": 1738774268,
     "joined": 1408693172,
     "status": "premium",
     "is_streamer": false,
@@ -66,8 +66,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2569,
-            "date": 1729390498,
+            "rating": 2592,
+            "date": 1741264363,
             "rd": 49
         },
         "best": {
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/4486720478"
         },
         "record": {
-            "win": 1489,
-            "loss": 999,
-            "draw": 185
+            "win": 1506,
+            "loss": 1010,
+            "draw": 186
         }
     },
     "fide": 2352,

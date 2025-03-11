@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/MindCoach",
     "username": "mindcoach",
     "title": "IM",
-    "followers": 89,
+    "followers": 88,
     "country": "https://api.chess.com/pub/country/MY",
-    "last_online": 1733376856,
+    "last_online": 1741317749,
     "joined": 1375455852,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2000,
-            "date": 1707562931,
+            "date": 1738134739,
             "rd": 165
         },
         "best": {

@@ -6,12 +6,12 @@
     "title": "CM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1732310437,
+    "last_online": 1741437400,
     "joined": 1599580527,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -34,36 +34,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2225,
-            "date": 1640456769,
-            "rd": 44
+            "rating": 2513,
+            "date": 1737649447,
+            "rd": 40
         },
         "best": {
-            "rating": 2230,
-            "date": 1640454875,
-            "game": "https://www.chess.com/game/live/34195146337"
+            "rating": 2527,
+            "date": 1737648580,
+            "game": "https://www.chess.com/game/live/131386157765"
         },
         "record": {
-            "win": 399,
-            "loss": 294,
-            "draw": 53
+            "win": 413,
+            "loss": 307,
+            "draw": 54
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2379,
-            "date": 1731338757,
-            "rd": 102
+            "rating": 2539,
+            "date": 1741108571,
+            "rd": 42
         },
         "best": {
-            "rating": 2379,
-            "date": 1731338757,
-            "game": "https://www.chess.com/game/live/124555734525"
+            "rating": 2595,
+            "date": 1738007564,
+            "game": "https://www.chess.com/game/live/131994615251"
         },
         "record": {
-            "win": 212,
-            "loss": 93,
-            "draw": 17
+            "win": 272,
+            "loss": 152,
+            "draw": 23
         }
     },
     "tactics": {

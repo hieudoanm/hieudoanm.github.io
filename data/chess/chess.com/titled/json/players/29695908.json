@@ -5,10 +5,10 @@
     "name": "Luiz Alexandre Gomes",
     "username": "kingstar70",
     "title": "FM",
-    "followers": 279,
+    "followers": 305,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "bh city",
-    "last_online": 1734114552,
+    "last_online": 1741691940,
     "joined": 1472499571,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 400,
-            "date": 1730652022,
+            "date": 1737560530,
             "rd": 350
         },
         "record": {
@@ -27,19 +27,12 @@
             "draw": 0,
             "time_per_move": 0,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2225,
-            "date": 1726084271,
-            "rd": 49
+            "rating": 2420,
+            "date": 1741703480
         },
         "best": {
             "rating": 2446,
@@ -47,16 +40,16 @@
             "game": "https://www.chess.com/game/live/36172188291"
         },
         "record": {
-            "win": 615,
-            "loss": 214,
-            "draw": 75
+            "win": 722,
+            "loss": 319,
+            "draw": 114
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2280,
-            "date": 1733914917,
-            "rd": 35
+            "rating": 2430,
+            "date": 1741350600,
+            "rd": 28
         },
         "best": {
             "rating": 2401,
@@ -64,16 +57,16 @@
             "game": "https://www.chess.com/game/live/90159531569"
         },
         "record": {
-            "win": 3344,
-            "loss": 2691,
-            "draw": 423
+            "win": 3478,
+            "loss": 2813,
+            "draw": 447
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2605,
-            "date": 1734142888,
-            "rd": 20
+            "rating": 2617,
+            "date": 1741170659,
+            "rd": 22
         },
         "best": {
             "rating": 2605,
@@ -81,9 +74,9 @@
             "game": "https://www.chess.com/game/live/123952866703"
         },
         "record": {
-            "win": 17475,
-            "loss": 14987,
-            "draw": 3101
+            "win": 17625,
+            "loss": 15142,
+            "draw": 3137
         }
     },
     "fide": 0,

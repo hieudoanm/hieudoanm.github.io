@@ -5,9 +5,9 @@
     "name": "Thomas",
     "username": "philos_85",
     "title": "FM",
-    "followers": 68,
+    "followers": 69,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734175058,
+    "last_online": 1741686132,
     "joined": 1557261432,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 2289,
-            "date": 1733305001,
+            "date": 1741432991,
             "rd": 87
         },
         "best": {
@@ -29,7 +29,7 @@
             "win": 132,
             "loss": 19,
             "draw": 110,
-            "time_per_move": 43175,
+            "time_per_move": 43165,
             "timeout_percent": 0
         }
     },
@@ -84,8 +84,8 @@
             "score": 67
         },
         "daily": {
-            "total_attempts": 56,
-            "score": 53
+            "total_attempts": 57,
+            "score": 54
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Dov Gorman",
     "username": "runno",
     "title": "FM",
-    "followers": 204,
+    "followers": 208,
     "country": "https://api.chess.com/pub/country/US",
     "location": "South New Jersey",
-    "last_online": 1734117425,
+    "last_online": 1741703737,
     "joined": 1254856497,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2332,
-            "date": 1732843393,
+            "date": 1741661412,
             "rd": 223
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 54,
             "loss": 0,
             "draw": 4,
-            "time_per_move": 7839,
+            "time_per_move": 7858,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 7839,
+            "time_per_move": 7858,
             "timeout_percent": 0
         }
     },
@@ -90,19 +90,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2280,
-            "date": 1734141699,
-            "rd": 22
+            "rating": 2360,
+            "date": 1741662820,
+            "rd": 23
         },
         "best": {
-            "rating": 2468,
-            "date": 1641412479,
+            "rating": 2565,
+            "date": 1739649377,
             "game": "https://www.chess.com/game/live/94598419619"
         },
         "record": {
-            "win": 12516,
-            "loss": 12544,
-            "draw": 1174
+            "win": 13003,
+            "loss": 13100,
+            "draw": 1241
         }
     },
     "tactics": {

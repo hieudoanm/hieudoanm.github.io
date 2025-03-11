@@ -6,10 +6,10 @@
     "name": "Purushothaman Thirumalai",
     "username": "purush64",
     "title": "FM",
-    "followers": 76,
+    "followers": 79,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734151160,
+    "last_online": 1741697503,
     "joined": 1442835199,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1592,
-            "date": 1730787312,
+            "date": 1740559391,
             "rd": 238
         },
         "best": {
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2025,
-            "date": 1733912658,
-            "rd": 49
+            "rating": 1905,
+            "date": 1741089555,
+            "rd": 56
         },
         "best": {
             "rating": 2198,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/82244499315"
         },
         "record": {
-            "win": 985,
-            "loss": 922,
-            "draw": 111
+            "win": 1044,
+            "loss": 941,
+            "draw": 118
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1983,
-            "date": 1734004155,
-            "rd": 22
+            "rating": 1905,
+            "date": 1741093584,
+            "rd": 44
         },
         "best": {
             "rating": 2391,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/38980745589"
         },
         "record": {
-            "win": 1508,
-            "loss": 1040,
-            "draw": 198
+            "win": 1554,
+            "loss": 1084,
+            "draw": 202
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2150,
-            "date": 1734080891,
-            "rd": 29
+            "rating": 2065,
+            "date": 1740572713,
+            "rd": 52
         },
         "best": {
             "rating": 2421,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/4956524499"
         },
         "record": {
-            "win": 1004,
-            "loss": 601,
-            "draw": 178
+            "win": 1033,
+            "loss": 609,
+            "draw": 182
         }
     },
     "fide": 2027,
     "tactics": {
         "highest": {
-            "rating": 2402,
-            "date": 1730414018
+            "rating": 2467,
+            "date": 1735525862
         },
         "lowest": {
             "rating": 1031,

@@ -6,15 +6,15 @@
     "name": "Hugo Van Hengel",
     "username": "hugo_amsterdam",
     "title": "FM",
-    "followers": 49,
+    "followers": 61,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Stockholm, Sweden",
-    "last_online": 1731865874,
+    "last_online": 1740169285,
     "joined": 1392288985,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -91,7 +91,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2367,
-            "date": 1732912732,
+            "date": 1741536908,
             "rd": 94
         },
         "best": {

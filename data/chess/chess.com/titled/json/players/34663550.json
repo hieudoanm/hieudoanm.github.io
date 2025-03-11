@@ -6,9 +6,9 @@
     "name": "Gerasimenyuk Mikhail",
     "username": "gerasimenyuk_miha",
     "title": "FM",
-    "followers": 865,
+    "followers": 894,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734167447,
+    "last_online": 1741619353,
     "joined": 1491817254,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1606,
-            "date": 1731668951,
+            "date": 1741441315,
             "rd": 141
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 66,
             "loss": 26,
             "draw": 8,
-            "time_per_move": 15012,
+            "time_per_move": 15113,
             "timeout_percent": 0
         }
     },
@@ -49,7 +49,7 @@
             "win": 2,
             "loss": 4,
             "draw": 2,
-            "time_per_move": 15012,
+            "time_per_move": 15113,
             "timeout_percent": 0
         }
     },
@@ -72,26 +72,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2558,
-            "date": 1734111678,
-            "rd": 20
+            "rating": 2474,
+            "date": 1741702051,
+            "rd": 19
         },
         "best": {
-            "rating": 2711,
-            "date": 1693087581,
+            "rating": 2721,
+            "date": 1739781956,
             "game": "https://www.chess.com/game/live/86042489621"
         },
         "record": {
-            "win": 17817,
-            "loss": 22683,
-            "draw": 1825
+            "win": 18663,
+            "loss": 23726,
+            "draw": 1881
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2517,
-            "date": 1733944546,
-            "rd": 48
+            "rating": 2405,
+            "date": 1740678551,
+            "rd": 25
         },
         "best": {
             "rating": 2729,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/50824773063"
         },
         "record": {
-            "win": 7608,
-            "loss": 8691,
-            "draw": 894
+            "win": 7800,
+            "loss": 8933,
+            "draw": 909
         }
     },
     "fide": 2400,

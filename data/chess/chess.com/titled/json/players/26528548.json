@@ -6,15 +6,15 @@
     "name": "Muhammad Waqar",
     "username": "muhammad-waqar",
     "title": "FM",
-    "followers": 110,
+    "followers": 141,
     "country": "https://api.chess.com/pub/country/PK",
     "location": "FB Area - Karachi",
-    "last_online": 1732890121,
+    "last_online": 1741701937,
     "joined": 1454669862,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -33,7 +33,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1465,
-            "date": 1732896038,
+            "date": 1735314844,
             "rd": 246
         },
         "best": {
@@ -66,9 +66,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2166,
-            "date": 1732032115,
-            "rd": 41
+            "rating": 2152,
+            "date": 1741703600
         },
         "best": {
             "rating": 2251,
@@ -76,16 +75,16 @@
             "game": "https://www.chess.com/game/live/63534423223"
         },
         "record": {
-            "win": 5906,
-            "loss": 5323,
-            "draw": 352
+            "win": 6209,
+            "loss": 5581,
+            "draw": 383
         }
     },
     "fide": 2270,
     "tactics": {
         "highest": {
-            "rating": 2663,
-            "date": 1684178751
+            "rating": 3063,
+            "date": 1737626730
         },
         "lowest": {
             "rating": 1206,

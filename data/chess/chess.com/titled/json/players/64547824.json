@@ -6,15 +6,15 @@
     "name": "\u0414\u0430\u0432\u0438\u0434 \u0417\u0430\u043a\u0430\u0440\u044f\u043d",
     "username": "zakaryan_david",
     "title": "IM",
-    "followers": 19,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "\u0421\u043e\u0447\u0438",
-    "last_online": 1734094334,
+    "last_online": 1741028131,
     "joined": 1566402432,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -49,36 +49,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2562,
-            "date": 1730918305,
-            "rd": 43
+            "rating": 2726,
+            "date": 1740929298,
+            "rd": 22
         },
         "best": {
-            "rating": 2634,
-            "date": 1566423877,
-            "game": "https://www.chess.com/game/live/3972945874"
+            "rating": 2827,
+            "date": 1740249698,
+            "game": "https://www.chess.com/game/live/133988341745"
         },
         "record": {
-            "win": 75,
-            "loss": 93,
-            "draw": 7
+            "win": 302,
+            "loss": 284,
+            "draw": 35
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2705,
-            "date": 1732061003,
-            "rd": 44
+            "rating": 2710,
+            "date": 1741031102,
+            "rd": 29
         },
         "best": {
-            "rating": 2736,
-            "date": 1577633024,
-            "game": "https://www.chess.com/game/live/125796535855"
+            "rating": 2739,
+            "date": 1739899899,
+            "game": "https://www.chess.com/game/live/133636157439"
         },
         "record": {
-            "win": 544,
-            "loss": 495,
-            "draw": 98
+            "win": 601,
+            "loss": 547,
+            "draw": 107
         }
     },
     "fide": 2339,

@@ -1,12 +1,12 @@
 {
     "player_id": 32459822,
-    "@id": "https://api.chess.com/pub/player/icegolem01",
-    "url": "https://www.chess.com/member/icegolem01",
-    "username": "icegolem01",
+    "@id": "https://api.chess.com/pub/player/winterblitz23",
+    "url": "https://www.chess.com/member/WinterBlitz23",
+    "username": "winterblitz23",
     "title": "FM",
     "followers": 28,
-    "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1725768622,
+    "country": "https://api.chess.com/pub/country/CA",
+    "last_online": 1740016890,
     "joined": 1484660529,
     "status": "premium",
     "is_streamer": false,
@@ -59,8 +59,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 52,
+            "score": 49
         }
     }
 }

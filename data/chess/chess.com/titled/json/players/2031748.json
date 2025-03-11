@@ -6,9 +6,9 @@
     "name": "Thomas Wolski",
     "username": "gauranga",
     "title": "FM",
-    "followers": 61,
+    "followers": 62,
     "country": "https://api.chess.com/pub/country/PH",
-    "last_online": 1734163538,
+    "last_online": 1741652529,
     "joined": 1247612319,
     "status": "premium",
     "is_streamer": false,
@@ -100,10 +100,6 @@
         "best": {
             "total_attempts": 54,
             "score": 51
-        },
-        "daily": {
-            "total_attempts": 41,
-            "score": 38
         }
     }
 }

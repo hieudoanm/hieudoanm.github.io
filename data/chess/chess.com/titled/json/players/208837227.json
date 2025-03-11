@@ -6,9 +6,9 @@
     "name": "Henry Soto Hernandez",
     "username": "hsh1987",
     "title": "IM",
-    "followers": 429,
+    "followers": 438,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734051504,
+    "last_online": 1741641635,
     "joined": 1669517978,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2687,
-            "date": 1734055490,
-            "rd": 40
+            "rating": 2724,
+            "date": 1741641920,
+            "rd": 37
         },
         "best": {
             "rating": 2847,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/82300891701"
         },
         "record": {
-            "win": 2916,
-            "loss": 2447,
-            "draw": 758
+            "win": 3017,
+            "loss": 2532,
+            "draw": 779
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3615,
-            "date": 1698497188
+            "rating": 3629,
+            "date": 1740620772
         },
         "lowest": {
             "rating": 1009,

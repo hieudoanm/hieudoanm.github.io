@@ -6,7 +6,7 @@
     "title": "IM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/FJ",
-    "last_online": 1734183670,
+    "last_online": 1741536360,
     "joined": 1585478323,
     "status": "premium",
     "is_streamer": false,
@@ -15,19 +15,19 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2508,
-            "date": 1734177414,
+            "rating": 2446,
+            "date": 1741639419,
             "rd": 27
         },
         "best": {
-            "rating": 2523,
-            "date": 1727981962,
-            "game": "https://www.chess.com/game/live/127775478109"
+            "rating": 2642,
+            "date": 1738098846,
+            "game": "https://www.chess.com/game/live/129826164423"
         },
         "record": {
-            "win": 1629,
-            "loss": 1461,
-            "draw": 207
+            "win": 2061,
+            "loss": 1892,
+            "draw": 257
         }
     },
     "chess_blitz": {

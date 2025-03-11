@@ -6,10 +6,10 @@
     "name": "Jose Lisandro Munoz Santana",
     "username": "filpo413",
     "title": "IM",
-    "followers": 56,
+    "followers": 55,
     "country": "https://api.chess.com/pub/country/DO",
     "location": "Santo Domingo",
-    "last_online": 1727624787,
+    "last_online": 1740982161,
     "joined": 1448825225,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2671,
-            "date": 1676535549,
-            "rd": 91
+            "rating": 2667,
+            "date": 1740616814,
+            "rd": 49
         },
         "best": {
             "rating": 2540,
@@ -65,7 +65,7 @@
         },
         "record": {
             "win": 99,
-            "loss": 77,
+            "loss": 78,
             "draw": 12
         }
     },

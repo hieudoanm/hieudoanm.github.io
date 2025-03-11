@@ -6,9 +6,9 @@
     "name": "Juan Camilo Arango Arenas",
     "username": "destroyer305",
     "title": "FM",
-    "followers": 129,
+    "followers": 144,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1730073824,
+    "last_online": 1741693575,
     "joined": 1276477311,
     "status": "premium",
     "is_streamer": false,
@@ -53,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2589,
-            "date": 1730077103,
-            "rd": 41
+            "rating": 2571,
+            "date": 1741622744,
+            "rd": 36
         },
         "best": {
             "rating": 2613,
             "date": 1730075966,
-            "game": "https://www.chess.com/game/live/123813628623"
+            "game": "https://www.chess.com/game/live/132355845501"
         },
         "record": {
-            "win": 1984,
-            "loss": 1722,
-            "draw": 173
+            "win": 2211,
+            "loss": 1900,
+            "draw": 191
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2467,
-            "date": 1728425699,
-            "rd": 50
+            "rating": 2453,
+            "date": 1740700545,
+            "rd": 36
         },
         "best": {
             "rating": 2546,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/119115067507"
         },
         "record": {
-            "win": 4165,
-            "loss": 3461,
-            "draw": 443
+            "win": 4288,
+            "loss": 3565,
+            "draw": 458
         }
     },
     "fide": 2234,

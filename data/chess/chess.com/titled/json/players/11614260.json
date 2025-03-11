@@ -6,10 +6,10 @@
     "name": "H L",
     "username": "chesslee0420",
     "title": "FM",
-    "followers": 123,
+    "followers": 125,
     "country": "https://api.chess.com/pub/country/CN",
     "location": "Beijing",
-    "last_online": 1734166839,
+    "last_online": 1741085255,
     "joined": 1366632206,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1320,
-            "date": 1732872504,
+            "date": 1740048743,
             "rd": 208
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 2,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 31426,
+            "time_per_move": 32915,
             "timeout_percent": 0
         }
     },
@@ -50,15 +50,15 @@
             "win": 1,
             "loss": 0,
             "draw": 1,
-            "time_per_move": 31426,
+            "time_per_move": 32915,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2369,
-            "date": 1733745835,
-            "rd": 48
+            "rating": 2330,
+            "date": 1736044435,
+            "rd": 49
         },
         "best": {
             "rating": 2369,
@@ -66,33 +66,33 @@
             "game": "https://www.chess.com/game/live/80206181387"
         },
         "record": {
-            "win": 54,
-            "loss": 16,
-            "draw": 8
+            "win": 55,
+            "loss": 19,
+            "draw": 9
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2612,
-            "date": 1732795824,
+            "rating": 2428,
+            "date": 1737988144,
             "rd": 35
         },
         "best": {
-            "rating": 2616,
-            "date": 1732795720,
-            "game": "https://www.chess.com/game/live/124962527179"
+            "rating": 2627,
+            "date": 1735726836,
+            "game": "https://www.chess.com/game/live/129784789671"
         },
         "record": {
-            "win": 3682,
-            "loss": 3210,
-            "draw": 412
+            "win": 3726,
+            "loss": 3271,
+            "draw": 421
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2522,
-            "date": 1734167686,
-            "rd": 29
+            "date": 1740543097,
+            "rd": 47
         },
         "best": {
             "rating": 2633,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/34366839067"
         },
         "record": {
-            "win": 4306,
-            "loss": 3914,
-            "draw": 644
+            "win": 4367,
+            "loss": 3964,
+            "draw": 651
         }
     },
     "fide": 0,

@@ -6,10 +6,10 @@
     "name": "Jaroslav Bure\u0161",
     "username": "brnoteacher",
     "title": "IM",
-    "followers": 91,
+    "followers": 92,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Brno",
-    "last_online": 1704473270,
+    "last_online": 1741248413,
     "joined": 1586801932,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2299,
-            "date": 1671392986,
-            "rd": 126
+            "rating": 2391,
+            "date": 1739264186,
+            "rd": 176
         },
         "best": {
             "rating": 2416,
@@ -81,7 +81,7 @@
             "game": "https://www.chess.com/game/live/12420412319"
         },
         "record": {
-            "win": 149,
+            "win": 150,
             "loss": 92,
             "draw": 38
         }

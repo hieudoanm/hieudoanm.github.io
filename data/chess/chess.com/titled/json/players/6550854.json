@@ -6,10 +6,10 @@
     "name": "Bibek Thing",
     "username": "biveklama",
     "title": "FM",
-    "followers": 610,
+    "followers": 755,
     "country": "https://api.chess.com/pub/country/NP",
     "location": "Sydney",
-    "last_online": 1734168168,
+    "last_online": 1741683885,
     "joined": 1327405609,
     "status": "premium",
     "is_streamer": false,
@@ -68,9 +68,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2530,
-            "date": 1734170190,
-            "rd": 19
+            "rating": 2471,
+            "date": 1741588309,
+            "rd": 25
         },
         "best": {
             "rating": 2632,
@@ -78,33 +78,33 @@
             "game": "https://www.chess.com/game/live/126506968993"
         },
         "record": {
-            "win": 3415,
-            "loss": 4003,
-            "draw": 365
+            "win": 3878,
+            "loss": 4567,
+            "draw": 427
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2553,
-            "date": 1734125458,
-            "rd": 35
+            "rating": 2637,
+            "date": 1741678962,
+            "rd": 24
         },
         "best": {
-            "rating": 2741,
-            "date": 1721069069,
-            "game": "https://www.chess.com/game/live/99061609233"
+            "rating": 2753,
+            "date": 1738506197,
+            "game": "https://www.chess.com/game/live/132208189973"
         },
         "record": {
-            "win": 8217,
-            "loss": 9222,
-            "draw": 1032
+            "win": 8607,
+            "loss": 9709,
+            "draw": 1102
         }
     },
     "fide": 2269,
     "tactics": {
         "highest": {
-            "rating": 3203,
-            "date": 1720810217
+            "rating": 3216,
+            "date": 1740987480
         },
         "lowest": {
             "rating": 1070,

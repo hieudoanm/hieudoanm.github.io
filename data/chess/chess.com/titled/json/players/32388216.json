@@ -6,9 +6,9 @@
     "name": "Rafael Antonio Mendoza Vega",
     "username": "tigre2020",
     "title": "IM",
-    "followers": 279,
+    "followers": 281,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1733984912,
+    "last_online": 1741557276,
     "joined": 1484411601,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 800,
-            "date": 1714037896,
+            "date": 1734385127,
             "rd": 350
         },
         "record": {
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2453,
-            "date": 1731240407,
-            "rd": 50
+            "rating": 2464,
+            "date": 1741531861,
+            "rd": 68
         },
         "best": {
             "rating": 2583,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/97938135051"
         },
         "record": {
-            "win": 646,
-            "loss": 312,
-            "draw": 82
+            "win": 652,
+            "loss": 316,
+            "draw": 83
         }
     },
     "fide": 0,

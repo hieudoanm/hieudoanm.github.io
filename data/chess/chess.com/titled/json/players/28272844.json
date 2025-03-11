@@ -6,10 +6,10 @@
     "name": "Filip Kumic",
     "username": "confer77",
     "title": "FM",
-    "followers": 46,
+    "followers": 47,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Backa Topola",
-    "last_online": 1731939315,
+    "last_online": 1741614858,
     "joined": 1463748291,
     "status": "premium",
     "is_streamer": false,
@@ -35,11 +35,28 @@
             "timeout_percent": 0
         }
     },
+    "chess_rapid": {
+        "last": {
+            "rating": 2000,
+            "date": 1738606850,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1738606850,
+            "game": "https://www.chess.com/game/live/132345645237"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
     "chess_bullet": {
         "last": {
-            "rating": 2520,
-            "date": 1662888871,
-            "rd": 69
+            "rating": 2515,
+            "date": 1738608540,
+            "rd": 48
         },
         "best": {
             "rating": 2541,
@@ -47,16 +64,16 @@
             "game": "https://www.chess.com/game/live/56625620583"
         },
         "record": {
-            "win": 40,
-            "loss": 10,
+            "win": 53,
+            "loss": 11,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2560,
-            "date": 1729890387,
-            "rd": 40
+            "rating": 2566,
+            "date": 1738610137,
+            "rd": 49
         },
         "best": {
             "rating": 2619,
@@ -64,9 +81,9 @@
             "game": "https://www.chess.com/game/live/4783843851"
         },
         "record": {
-            "win": 1676,
-            "loss": 1720,
-            "draw": 429
+            "win": 1679,
+            "loss": 1723,
+            "draw": 431
         }
     },
     "fide": 2333,

@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Rubinstein_Student",
     "username": "rubinstein_student",
     "title": "FM",
-    "followers": 464,
+    "followers": 493,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734185073,
+    "last_online": 1741695383,
     "joined": 1631219296,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2768,
-            "date": 1733842198,
-            "rd": 47
+            "rating": 2453,
+            "date": 1741044612,
+            "rd": 19
         },
         "best": {
             "rating": 2911,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/117319822981"
         },
         "record": {
-            "win": 3434,
-            "loss": 3307,
-            "draw": 821
+            "win": 3646,
+            "loss": 3511,
+            "draw": 885
         }
     },
     "tactics": {

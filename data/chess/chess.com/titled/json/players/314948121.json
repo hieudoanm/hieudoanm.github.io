@@ -9,7 +9,7 @@
     "followers": 10,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Zoquetelandia",
-    "last_online": 1733741273,
+    "last_online": 1741043551,
     "joined": 1695501854,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2395,
-            "date": 1732403610,
-            "rd": 48
+            "rating": 2435,
+            "date": 1737236403,
+            "rd": 57
         },
         "best": {
             "rating": 2552,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/118151353759"
         },
         "record": {
-            "win": 327,
-            "loss": 262,
+            "win": 334,
+            "loss": 265,
             "draw": 61
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2335,
-            "date": 1732659952,
-            "rd": 71
+            "rating": 2391,
+            "date": 1741043938,
+            "rd": 82
         },
         "best": {
             "rating": 2596,
@@ -64,8 +64,8 @@
             "game": "https://www.chess.com/game/live/98558133665"
         },
         "record": {
-            "win": 27,
-            "loss": 46,
+            "win": 34,
+            "loss": 47,
             "draw": 6
         }
     },

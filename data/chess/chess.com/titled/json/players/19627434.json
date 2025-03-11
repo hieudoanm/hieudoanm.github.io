@@ -6,10 +6,10 @@
     "name": "Dejan Dinev",
     "username": "dinevmk",
     "title": "FM",
-    "followers": 340,
+    "followers": 360,
     "country": "https://api.chess.com/pub/country/MK",
     "location": "Skopje",
-    "last_online": 1734177095,
+    "last_online": 1741701378,
     "joined": 1415441462,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2286,
-            "date": 1734179733,
-            "rd": 19
+            "rating": 2281,
+            "date": 1741703896,
+            "rd": 16
         },
         "best": {
             "rating": 2501,
@@ -59,26 +59,26 @@
             "game": "https://www.chess.com/game/live/69172989087"
         },
         "record": {
-            "win": 48414,
-            "loss": 49740,
-            "draw": 3462
+            "win": 50308,
+            "loss": 51559,
+            "draw": 3594
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2524,
-            "date": 1732039838,
+            "rating": 2530,
+            "date": 1738692961,
             "rd": 45
         },
         "best": {
-            "rating": 2537,
-            "date": 1731433746,
+            "rating": 2538,
+            "date": 1734457686,
             "game": "https://www.chess.com/game/live/125166012123"
         },
         "record": {
-            "win": 1509,
-            "loss": 1460,
-            "draw": 156
+            "win": 1528,
+            "loss": 1478,
+            "draw": 159
         }
     },
     "tactics": {

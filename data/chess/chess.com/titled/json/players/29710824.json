@@ -9,7 +9,7 @@
     "followers": 62,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Iasi",
-    "last_online": 1733843274,
+    "last_online": 1740300621,
     "joined": 1472587720,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2338,
-            "date": 1733853923,
-            "rd": 40
+            "rating": 2334,
+            "date": 1740300976,
+            "rd": 59
         },
         "best": {
             "rating": 2467,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/80028657907"
         },
         "record": {
-            "win": 2199,
-            "loss": 2265,
-            "draw": 285
+            "win": 2203,
+            "loss": 2268,
+            "draw": 286
         }
     },
     "fide": 2331,

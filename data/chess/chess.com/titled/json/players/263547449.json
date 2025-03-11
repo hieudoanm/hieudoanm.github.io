@@ -5,9 +5,9 @@
     "name": "Nikolai Grebennikov",
     "username": "grnic1",
     "title": "CM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/BG",
-    "last_online": 1734139112,
+    "last_online": 1741650136,
     "joined": 1679177898,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2293,
-            "date": 1734139239,
-            "rd": 34
+            "rating": 2279,
+            "date": 1741654242,
+            "rd": 37
         },
         "best": {
             "rating": 2390,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/93916780599"
         },
         "record": {
-            "win": 1125,
-            "loss": 1008,
-            "draw": 125
+            "win": 1373,
+            "loss": 1216,
+            "draw": 155
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2624,
-            "date": 1709474818,
-            "rd": 49
+            "rating": 2552,
+            "date": 1741304870,
+            "rd": 45
         },
         "best": {
             "rating": 2624,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/85443721141"
         },
         "record": {
-            "win": 48,
-            "loss": 16,
-            "draw": 3
+            "win": 95,
+            "loss": 54,
+            "draw": 19
         }
     },
     "fide": 2220,
@@ -80,10 +80,6 @@
         "best": {
             "total_attempts": 52,
             "score": 49
-        },
-        "daily": {
-            "total_attempts": 40,
-            "score": 37
         }
     }
 }

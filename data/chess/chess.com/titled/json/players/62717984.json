@@ -6,9 +6,9 @@
     "name": "Yaleika Chung Hurtado",
     "username": "yaleikachung",
     "title": "WFM",
-    "followers": 63,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/PA",
-    "last_online": 1729866626,
+    "last_online": 1737240301,
     "joined": 1561585603,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1650,
-            "date": 1700014538,
-            "rd": 188
+            "rating": 1394,
+            "date": 1740334086,
+            "rd": 221
         },
         "best": {
             "rating": 1743,
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/23822824679"
         },
         "record": {
-            "win": 24,
+            "win": 26,
             "loss": 13,
-            "draw": 7
+            "draw": 9
         }
     },
     "chess_bullet": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1786,
-            "date": 1718916272,
-            "rd": 138
+            "rating": 1943,
+            "date": 1741296880,
+            "rd": 132
         },
         "best": {
             "rating": 1988,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/14776653077"
         },
         "record": {
-            "win": 42,
+            "win": 50,
             "loss": 17,
             "draw": 9
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2409,
-            "date": 1712465669
+            "rating": 2464,
+            "date": 1737842163
         },
         "lowest": {
             "rating": 1680,

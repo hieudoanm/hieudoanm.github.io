@@ -9,7 +9,7 @@
     "followers": 42,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York City",
-    "last_online": 1734164846,
+    "last_online": 1735698268,
     "joined": 1297306662,
     "status": "premium",
     "is_streamer": false,
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2649,
-            "date": 1734132432,
-            "rd": 24
+            "rating": 2376,
+            "date": 1741649756,
+            "rd": 25
         },
         "best": {
-            "rating": 2649,
-            "date": 1734132432,
+            "rating": 2660,
+            "date": 1734397714,
             "game": "https://www.chess.com/game/live/46241995947"
         },
         "record": {
-            "win": 31459,
-            "loss": 30391,
-            "draw": 3821
+            "win": 31838,
+            "loss": 30838,
+            "draw": 3880
         }
     },
     "fide": 2310,

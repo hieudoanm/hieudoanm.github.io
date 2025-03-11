@@ -5,9 +5,9 @@
     "name": "Georgios Papidakis",
     "username": "georgpapi",
     "title": "CM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1733583168,
+    "last_online": 1741449141,
     "joined": 1703972437,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2398,
-            "date": 1731065649,
-            "rd": 53
+            "rating": 2366,
+            "date": 1740267542,
+            "rd": 73
         },
         "best": {
             "rating": 2521,
@@ -40,16 +40,16 @@
             "game": "https://www.chess.com/game/live/99342266181"
         },
         "record": {
-            "win": 143,
-            "loss": 132,
+            "win": 146,
+            "loss": 136,
             "draw": 26
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2342,
-            "date": 1732662846,
-            "rd": 56
+            "rating": 2336,
+            "date": 1740267851,
+            "rd": 54
         },
         "best": {
             "rating": 2417,
@@ -57,16 +57,16 @@
             "game": "https://www.chess.com/game/live/123370256995"
         },
         "record": {
-            "win": 63,
-            "loss": 69,
-            "draw": 9
+            "win": 87,
+            "loss": 90,
+            "draw": 12
         }
     },
     "fide": 2106,
     "tactics": {
         "highest": {
-            "rating": 3137,
-            "date": 1731966417
+            "rating": 3370,
+            "date": 1739320240
         },
         "lowest": {
             "rating": 1000,

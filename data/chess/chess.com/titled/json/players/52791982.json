@@ -6,9 +6,9 @@
     "name": "Marcin Sieciechowicz",
     "username": "nocnypako",
     "title": "IM",
-    "followers": 259,
+    "followers": 266,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734118876,
+    "last_online": 1741636624,
     "joined": 1543968229,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2834,
-            "date": 1733853861,
-            "rd": 31
+            "rating": 2769,
+            "date": 1738711023,
+            "rd": 35
         },
         "best": {
-            "rating": 2865,
-            "date": 1684525167,
+            "rating": 2891,
+            "date": 1736267927,
             "game": "https://www.chess.com/game/live/76175686355"
         },
         "record": {
-            "win": 2657,
-            "loss": 2131,
-            "draw": 766
+            "win": 2737,
+            "loss": 2189,
+            "draw": 792
         }
     },
     "tactics": {
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 34,
-            "score": 33
+            "total_attempts": 41,
+            "score": 38
         }
     }
 }

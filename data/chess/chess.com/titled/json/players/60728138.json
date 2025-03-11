@@ -6,9 +6,9 @@
     "name": "Nebojsa Djokic",
     "username": "fmribac",
     "title": "FM",
-    "followers": 63,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734131752,
+    "last_online": 1741692760,
     "joined": 1557301616,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2042,
-            "date": 1734180664,
-            "rd": 25
+            "rating": 2113,
+            "date": 1741643588,
+            "rd": 23
         },
         "best": {
             "rating": 2323,
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/12016999829"
         },
         "record": {
-            "win": 5458,
-            "loss": 6097,
-            "draw": 1449
+            "win": 5868,
+            "loss": 6561,
+            "draw": 1585
         }
     },
     "tactics": {

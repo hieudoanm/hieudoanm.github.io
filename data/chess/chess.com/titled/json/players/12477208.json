@@ -9,7 +9,7 @@
     "followers": 70,
     "country": "https://api.chess.com/pub/country/PR",
     "location": "Puerto Rico",
-    "last_online": 1729629232,
+    "last_online": 1737759321,
     "joined": 1372197196,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1969,
-            "date": 1699240629,
-            "rd": 40
+            "rating": 1925,
+            "date": 1737757899,
+            "rd": 120
         },
         "best": {
             "rating": 2378,
@@ -60,7 +60,7 @@
         },
         "record": {
             "win": 8106,
-            "loss": 8544,
+            "loss": 8545,
             "draw": 858
         }
     },

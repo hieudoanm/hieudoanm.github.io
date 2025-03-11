@@ -6,9 +6,9 @@
     "name": "Andreas Rupprecht",
     "username": "struppi",
     "title": "IM",
-    "followers": 38,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733043712,
+    "last_online": 1740909251,
     "joined": 1504102193,
     "status": "premium",
     "is_streamer": false,
@@ -35,7 +35,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2603,
-            "date": 1718101514,
+            "date": 1740057360,
             "rd": 28
         },
         "best": {

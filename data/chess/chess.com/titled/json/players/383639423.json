@@ -5,10 +5,10 @@
     "name": "Zoran Petronijevic",
     "username": "zoranpe",
     "title": "IM",
-    "followers": 19,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Nis",
-    "last_online": 1734169778,
+    "last_online": 1741703101,
     "joined": 1724780180,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2556,
-            "date": 1726310086,
-            "rd": 17
+            "rating": 2539,
+            "date": 1741670282,
+            "rd": 31
         },
         "best": {
             "rating": 2636,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/119980168639"
         },
         "record": {
-            "win": 462,
-            "loss": 309,
-            "draw": 48
+            "win": 497,
+            "loss": 353,
+            "draw": 52
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2729,
-            "date": 1734040042,
-            "rd": 32
+            "rating": 2702,
+            "date": 1741630939,
+            "rd": 29
         },
         "best": {
             "rating": 2799,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/121794641817"
         },
         "record": {
-            "win": 972,
-            "loss": 759,
-            "draw": 215
+            "win": 1099,
+            "loss": 872,
+            "draw": 248
         }
     },
     "fide": 2406,
     "tactics": {
         "highest": {
-            "rating": 1134,
-            "date": 1730022965
+            "rating": 1852,
+            "date": 1741348683
         },
         "lowest": {
             "rating": 1000,

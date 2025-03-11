@@ -5,10 +5,10 @@
     "name": "J\u00e1chym \u0160mol\u00edk",
     "username": "jachymcarostrelec4",
     "title": "FM",
-    "followers": 19,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "\u0158\u00ed\u010dany",
-    "last_online": 1733847198,
+    "last_online": 1740664482,
     "joined": 1586000386,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1878,
-            "date": 1726677706,
+            "date": 1738750351,
             "rd": 192
         },
         "best": {
@@ -34,25 +34,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2254,
-            "date": 1730135372,
-            "rd": 74
+            "rating": 2323,
+            "date": 1734556419,
+            "rd": 75
         },
         "best": {
-            "rating": 2278,
-            "date": 1730135235,
-            "game": "https://www.chess.com/game/live/123799211465"
+            "rating": 2324,
+            "date": 1734551588,
+            "game": "https://www.chess.com/game/live/128290199399"
         },
         "record": {
-            "win": 39,
-            "loss": 15,
+            "win": 43,
+            "loss": 16,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 1898,
-            "date": 1728764178,
+            "date": 1740072798,
             "rd": 204
         },
         "best": {

@@ -6,7 +6,7 @@
     "name": "Benjamin Haldorsen",
     "username": "benhal",
     "title": "IM",
-    "followers": 48,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/NO",
     "last_online": 1730143946,
     "joined": 1372797837,
@@ -17,20 +17,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2057,
-            "date": 1734163977,
-            "rd": 190
+            "rating": 2060,
+            "date": 1735493243,
+            "rd": 234
         },
         "best": {
-            "rating": 2057,
-            "date": 1684435831,
+            "rating": 2060,
+            "date": 1735493243,
             "game": "https://www.chess.com/game/daily/212789904"
         },
         "record": {
-            "win": 133,
+            "win": 134,
             "loss": 31,
             "draw": 5,
-            "time_per_move": 11632,
+            "time_per_move": 11706,
             "timeout_percent": 0
         }
     },
@@ -49,7 +49,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 11632,
+            "time_per_move": 11706,
             "timeout_percent": 0
         }
     },
@@ -89,18 +89,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2546,
-            "date": 1733871171,
-            "rd": 48
+            "rating": 2565,
+            "date": 1741630331,
+            "rd": 49
         },
         "best": {
-            "rating": 2563,
-            "date": 1594390045,
+            "rating": 2570,
+            "date": 1738429311,
             "game": "https://www.chess.com/game/live/4376821849"
         },
         "record": {
-            "win": 2631,
-            "loss": 1925,
+            "win": 2638,
+            "loss": 1927,
             "draw": 339
         }
     },

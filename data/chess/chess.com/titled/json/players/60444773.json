@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 72,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734076851,
+    "last_online": 1741414125,
     "joined": 1556708270,
     "status": "premium",
     "is_streamer": false,
@@ -50,8 +50,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2526,
-            "date": 1734078196,
+            "rating": 2508,
+            "date": 1734900409,
             "rd": 48
         },
         "best": {
@@ -61,8 +61,8 @@
         },
         "record": {
             "win": 2712,
-            "loss": 2976,
-            "draw": 520
+            "loss": 2979,
+            "draw": 521
         }
     },
     "tactics": {

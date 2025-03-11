@@ -9,7 +9,7 @@
     "followers": 32,
     "country": "https://api.chess.com/pub/country/CU",
     "location": "Chicago",
-    "last_online": 1732708117,
+    "last_online": 1740270137,
     "joined": 1414430305,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2510,
-            "date": 1724081258,
-            "rd": 58
+            "date": 1740270515,
+            "rd": 49
         },
         "best": {
             "rating": 2677,
@@ -80,7 +80,7 @@
         "record": {
             "win": 735,
             "loss": 699,
-            "draw": 86
+            "draw": 87
         }
     },
     "fide": 2404,

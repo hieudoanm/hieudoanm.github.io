@@ -13,5 +13,33 @@
     "is_streamer": false,
     "verified": false,
     "league": "Wood",
-    "streaming_platforms": []
+    "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2373,
+            "date": 1724600292,
+            "rd": 60
+        },
+        "best": {
+            "rating": 2373,
+            "date": 1724600292,
+            "game": "https://www.chess.com/game/live/118339084355"
+        },
+        "record": {
+            "win": 29,
+            "loss": 3,
+            "draw": 3
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 1000,
+            "date": 1724159847
+        },
+        "lowest": {
+            "rating": 1000,
+            "date": 1724159847
+        }
+    },
+    "puzzle_rush": {}
 }

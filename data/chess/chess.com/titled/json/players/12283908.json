@@ -6,10 +6,10 @@
     "name": "Maziar Bagheri",
     "username": "maziarbagheri",
     "title": "FM",
-    "followers": 99,
+    "followers": 102,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Shirvan, Khorasan, Iran",
-    "last_online": 1734009697,
+    "last_online": 1741699082,
     "joined": 1371044412,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2480,
-            "date": 1734010487,
-            "rd": 48
+            "rating": 2464,
+            "date": 1739578634,
+            "rd": 45
         },
         "best": {
             "rating": 2554,
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/3110064855"
         },
         "record": {
-            "win": 3279,
-            "loss": 3168,
-            "draw": 489
+            "win": 3316,
+            "loss": 3217,
+            "draw": 499
         }
     },
     "fide": 2297,
     "tactics": {
         "highest": {
-            "rating": 3065,
-            "date": 1713638264
+            "rating": 3106,
+            "date": 1741515205
         },
         "lowest": {
             "rating": 400,
@@ -120,6 +120,10 @@
         "best": {
             "total_attempts": 78,
             "score": 75
+        },
+        "daily": {
+            "total_attempts": 36,
+            "score": 33
         }
     }
 }

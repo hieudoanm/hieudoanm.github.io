@@ -6,9 +6,9 @@
     "name": "Nawin JJ",
     "username": "fighter031",
     "title": "FM",
-    "followers": 21,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734019939,
+    "last_online": 1740033830,
     "joined": 1672833026,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2370,
-            "date": 1733986270,
+            "date": 1740034583,
             "rd": 49
         },
         "best": {
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2381,
-            "date": 1733986984,
+            "date": 1740035173,
             "rd": 131
         },
         "best": {

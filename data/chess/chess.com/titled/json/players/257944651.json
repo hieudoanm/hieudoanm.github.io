@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/257944651.bdfee6a0.200x200o.3ac93bb6e42f.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/257944651.1a744053.200x200o.c81caa0d69f5.jpg",
     "player_id": 257944651,
-    "@id": "https://api.chess.com/pub/player/abdurakhmanovvvv",
-    "url": "https://www.chess.com/member/Abdurakhmanovvvv",
+    "@id": "https://api.chess.com/pub/player/monsterchess_uz",
+    "url": "https://www.chess.com/member/MonsterChess_uz",
     "name": "Mukhammadali Abdurakhmonov",
-    "username": "abdurakhmanovvvv",
+    "username": "monsterchess_uz",
     "title": "IM",
-    "followers": 20,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/UZ",
     "location": "Tashkent, Uzbekistan",
-    "last_online": 1734142664,
+    "last_online": 1741668858,
     "joined": 1678192350,
     "status": "premium",
     "is_streamer": false,
@@ -18,36 +18,36 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2603,
-            "date": 1726047397,
-            "rd": 47
+            "rating": 2615,
+            "date": 1740072639,
+            "rd": 49
         },
         "best": {
-            "rating": 2611,
-            "date": 1726047308,
+            "rating": 2635,
+            "date": 1736102294,
             "game": "https://www.chess.com/game/live/119785812479"
         },
         "record": {
-            "win": 5,
-            "loss": 4,
+            "win": 77,
+            "loss": 6,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2867,
-            "date": 1732039072,
-            "rd": 35
+            "rating": 2844,
+            "date": 1741627443,
+            "rd": 36
         },
         "best": {
-            "rating": 2911,
-            "date": 1727902787,
-            "game": "https://www.chess.com/game/live/123956460475"
+            "rating": 2915,
+            "date": 1736267923,
+            "game": "https://www.chess.com/game/live/131110747685"
         },
         "record": {
-            "win": 232,
-            "loss": 138,
-            "draw": 49
+            "win": 377,
+            "loss": 260,
+            "draw": 85
         }
     },
     "fide": 2430,

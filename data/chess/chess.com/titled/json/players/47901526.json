@@ -6,9 +6,9 @@
     "name": "Nikolas Wachinger",
     "username": "washmachine",
     "title": "IM",
-    "followers": 29,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734001903,
+    "last_online": 1734562034,
     "joined": 1531682623,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2612,
-            "date": 1734170624,
-            "rd": 28
+            "rating": 2616,
+            "date": 1741554475,
+            "rd": 30
         },
         "best": {
             "rating": 2801,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/104693391203"
         },
         "record": {
-            "win": 3807,
-            "loss": 3005,
-            "draw": 636
+            "win": 4004,
+            "loss": 3160,
+            "draw": 660
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3232,
-            "date": 1730974114
+            "rating": 3279,
+            "date": 1740214631
         },
         "lowest": {
             "rating": 412,

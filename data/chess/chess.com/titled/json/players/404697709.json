@@ -5,14 +5,14 @@
     "url": "https://www.chess.com/member/Ignathor",
     "username": "ignathor",
     "title": "IM",
-    "followers": 1,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/IM",
-    "last_online": 1734106500,
+    "last_online": 1738985009,
     "joined": 1732471643,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -33,19 +33,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2828,
-            "date": 1734062298,
-            "rd": 25
+            "rating": 2867,
+            "date": 1738987537,
+            "rd": 44
         },
         "best": {
-            "rating": 2838,
-            "date": 1733564145,
+            "rating": 2878,
+            "date": 1738985820,
             "game": "https://www.chess.com/game/live/127302642999"
         },
         "record": {
-            "win": 218,
-            "loss": 53,
-            "draw": 14
+            "win": 244,
+            "loss": 64,
+            "draw": 17
         }
     },
     "tactics": {

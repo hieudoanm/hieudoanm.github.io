@@ -6,10 +6,10 @@
     "name": "Gulnar Mammadova",
     "username": "korona_91",
     "title": "IM",
-    "followers": 88,
+    "followers": 90,
     "country": "https://api.chess.com/pub/country/AZ",
     "location": "Baku",
-    "last_online": 1733464036,
+    "last_online": 1741359302,
     "joined": 1577650895,
     "status": "premium",
     "is_streamer": false,
@@ -99,12 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 58,
+            "total_attempts": 57,
             "score": 55
-        },
-        "daily": {
-            "total_attempts": 44,
-            "score": 41
         }
     }
 }

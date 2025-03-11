@@ -6,9 +6,9 @@
     "name": "Alex Nagorski",
     "username": "aln276",
     "title": "CM",
-    "followers": 52,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/NZ",
-    "last_online": 1733942342,
+    "last_online": 1740170291,
     "joined": 1469265831,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2004,
-            "date": 1733971977,
-            "rd": 100
+            "rating": 1982,
+            "date": 1736627232,
+            "rd": 105
         },
         "best": {
             "rating": 2004,
@@ -28,9 +28,9 @@
         },
         "record": {
             "win": 743,
-            "loss": 278,
+            "loss": 279,
             "draw": 232,
-            "time_per_move": 24428,
+            "time_per_move": 24443,
             "timeout_percent": 0
         }
     },

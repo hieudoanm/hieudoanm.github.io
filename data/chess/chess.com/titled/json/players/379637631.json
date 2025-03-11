@@ -7,18 +7,18 @@
     "title": "CM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/SC",
-    "last_online": 1729703655,
+    "last_online": 1741530601,
     "joined": 1723036579,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2533,
-            "date": 1724579135,
-            "rd": 28
+            "rating": 2452,
+            "date": 1741605475,
+            "rd": 45
         },
         "best": {
             "rating": 2645,
@@ -26,16 +26,16 @@
             "game": "https://www.chess.com/game/live/117165618589"
         },
         "record": {
-            "win": 133,
-            "loss": 106,
-            "draw": 37
+            "win": 147,
+            "loss": 129,
+            "draw": 43
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2212,
-            "date": 1723557373,
-            "rd": 72
+            "rating": 2534,
+            "date": 1741530984,
+            "rd": 32
         },
         "best": {
             "rating": 2241,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/116954387125"
         },
         "record": {
-            "win": 21,
-            "loss": 2,
-            "draw": 0
+            "win": 89,
+            "loss": 44,
+            "draw": 6
         }
     },
     "tactics": {

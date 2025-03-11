@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2298,
-            "date": 1710684847,
+            "date": 1739626500,
             "rd": 61
         },
         "best": {
@@ -29,16 +29,10 @@
         },
         "record": {
             "win": 870,
-            "loss": 58,
+            "loss": 60,
             "draw": 131,
             "time_per_move": 60778,
-            "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 152,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 1
+            "timeout_percent": 100
         }
     },
     "chess960_daily": {
@@ -58,12 +52,6 @@
             "draw": 6,
             "time_per_move": 60778,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 152,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {

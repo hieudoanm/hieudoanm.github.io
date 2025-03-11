@@ -6,9 +6,9 @@
     "name": "Jerzy Jes\u00fas Perez Leiva",
     "username": "chessiteration",
     "title": "IM",
-    "followers": 253,
+    "followers": 257,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1734162496,
+    "last_online": 1741666549,
     "joined": 1524767441,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2602,
-            "date": 1721001340,
-            "rd": 47
+            "rating": 2600,
+            "date": 1740359264,
+            "rd": 48
         },
         "best": {
             "rating": 2725,
@@ -44,26 +44,26 @@
             "game": "https://www.chess.com/game/live/94680588331"
         },
         "record": {
-            "win": 94,
-            "loss": 105,
+            "win": 96,
+            "loss": 108,
             "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2540,
-            "date": 1731798751,
+            "rating": 2561,
+            "date": 1740085412,
             "rd": 49
         },
         "best": {
             "rating": 2642,
             "date": 1693172529,
-            "game": "https://www.chess.com/game/live/74726539159"
+            "game": "https://www.chess.com/game/live/131818853997"
         },
         "record": {
-            "win": 1907,
-            "loss": 2124,
-            "draw": 208
+            "win": 1918,
+            "loss": 2137,
+            "draw": 209
         }
     },
     "fide": 2394,

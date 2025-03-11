@@ -6,9 +6,9 @@
     "name": "Marcus Joseph",
     "username": "essequamvideris",
     "title": "FM",
-    "followers": 145,
+    "followers": 158,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1732748576,
+    "last_online": 1740965457,
     "joined": 1337971663,
     "status": "premium",
     "is_streamer": false,
@@ -36,26 +36,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2381,
-            "date": 1721619039,
+            "rating": 2393,
+            "date": 1737697976,
             "rd": 49
         },
         "best": {
-            "rating": 2381,
-            "date": 1721619039,
-            "game": "https://www.chess.com/game/live/115357084089"
+            "rating": 2393,
+            "date": 1737697976,
+            "game": "https://www.chess.com/game/live/131436003841"
         },
         "record": {
-            "win": 51,
+            "win": 62,
             "loss": 8,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2320,
-            "date": 1722914158,
-            "rd": 18
+            "rating": 2305,
+            "date": 1740764653,
+            "rd": 30
         },
         "best": {
             "rating": 2616,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/50359197017"
         },
         "record": {
-            "win": 3483,
-            "loss": 3506,
-            "draw": 234
+            "win": 3572,
+            "loss": 3602,
+            "draw": 243
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2413,
-            "date": 1722838527,
-            "rd": 24
+            "rating": 2402,
+            "date": 1740977734,
+            "rd": 31
         },
         "best": {
             "rating": 2472,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/103834262895"
         },
         "record": {
-            "win": 4934,
-            "loss": 5037,
-            "draw": 438
+            "win": 5243,
+            "loss": 5359,
+            "draw": 474
         }
     },
     "tactics": {

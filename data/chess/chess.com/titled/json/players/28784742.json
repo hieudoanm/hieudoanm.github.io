@@ -6,10 +6,10 @@
     "name": "Gevorg Alaverdyan",
     "username": "gevo1990",
     "title": "FM",
-    "followers": 8,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan",
-    "last_online": 1732475012,
+    "last_online": 1741034412,
     "joined": 1466846141,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2509,
-            "date": 1730814125,
+            "rating": 2526,
+            "date": 1740512562,
             "rd": 49
         },
         "best": {
@@ -28,25 +28,25 @@
             "game": "https://www.chess.com/game/live/122319011547"
         },
         "record": {
-            "win": 50,
+            "win": 52,
             "loss": 18,
             "draw": 2
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2637,
-            "date": 1732475690,
+            "rating": 2660,
+            "date": 1741035118,
             "rd": 48
         },
         "best": {
-            "rating": 2655,
-            "date": 1732467299,
+            "rating": 2660,
+            "date": 1735469556,
             "game": "https://www.chess.com/game/live/117927015239"
         },
         "record": {
-            "win": 212,
-            "loss": 139,
+            "win": 216,
+            "loss": 140,
             "draw": 29
         }
     },

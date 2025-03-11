@@ -6,10 +6,10 @@
     "name": "Andrija Obad",
     "username": "andro2",
     "title": "FM",
-    "followers": 109,
+    "followers": 113,
     "country": "https://api.chess.com/pub/country/BA",
     "location": "Tuzla",
-    "last_online": 1733769441,
+    "last_online": 1741370657,
     "joined": 1307822602,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3238,
-            "date": 1685549454
+            "rating": 3261,
+            "date": 1737744595
         },
         "lowest": {
             "rating": 1356,

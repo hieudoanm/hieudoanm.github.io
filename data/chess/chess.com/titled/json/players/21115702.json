@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2092,
-            "date": 1725997148,
-            "rd": 48
+            "rating": 2084,
+            "date": 1739890772,
+            "rd": 49
         },
         "best": {
             "rating": 2399,
@@ -48,8 +48,8 @@
         },
         "record": {
             "win": 62,
-            "loss": 44,
-            "draw": 10
+            "loss": 45,
+            "draw": 11
         }
     },
     "chess_bullet": {

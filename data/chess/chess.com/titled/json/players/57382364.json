@@ -5,9 +5,9 @@
     "name": "Oliver Kurmann",
     "username": "orkan85",
     "title": "IM",
-    "followers": 7,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1734171139,
+    "last_online": 1741167673,
     "joined": 1550221706,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2508,
-            "date": 1722019983,
-            "rd": 37
+            "rating": 2494,
+            "date": 1739621653,
+            "rd": 46
         },
         "best": {
             "rating": 2694,
@@ -43,8 +43,8 @@
             "game": "https://www.chess.com/game/live/60597546915"
         },
         "record": {
-            "win": 1800,
-            "loss": 1472,
+            "win": 1804,
+            "loss": 1477,
             "draw": 134
         }
     },
@@ -79,10 +79,6 @@
         "best": {
             "total_attempts": 61,
             "score": 58
-        },
-        "daily": {
-            "total_attempts": 53,
-            "score": 50
         }
     }
 }

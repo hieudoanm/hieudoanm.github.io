@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/RrainlessBobot",
     "username": "rrainlessbobot",
     "title": "FM",
-    "followers": 9,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/UZ",
-    "last_online": 1734009290,
+    "last_online": 1741118261,
     "joined": 1691749446,
     "status": "premium",
     "is_streamer": false,
@@ -16,26 +16,26 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2809,
-            "date": 1715861171,
-            "rd": 37
+            "rating": 2803,
+            "date": 1735777476,
+            "rd": 23
         },
         "best": {
-            "rating": 2880,
-            "date": 1715457830,
-            "game": "https://www.chess.com/game/live/109196477521"
+            "rating": 2968,
+            "date": 1734981668,
+            "game": "https://www.chess.com/game/live/128720011537"
         },
         "record": {
-            "win": 130,
-            "loss": 91,
-            "draw": 17
+            "win": 294,
+            "loss": 191,
+            "draw": 41
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2821,
-            "date": 1730761171,
-            "rd": 43
+            "rating": 2825,
+            "date": 1735168782,
+            "rd": 33
         },
         "best": {
             "rating": 2933,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/94437723249"
         },
         "record": {
-            "win": 422,
-            "loss": 440,
-            "draw": 86
+            "win": 456,
+            "loss": 483,
+            "draw": 89
         }
     },
     "tactics": {

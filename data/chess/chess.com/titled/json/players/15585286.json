@@ -6,10 +6,10 @@
     "name": "Ivan Kalajzic",
     "username": "kale36",
     "title": "CM",
-    "followers": 22,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/HR",
     "location": "Vrgorac",
-    "last_online": 1733052635,
+    "last_online": 1741434641,
     "joined": 1389775211,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2164,
-            "date": 1733054444,
-            "rd": 18
+            "rating": 2276,
+            "date": 1741439251,
+            "rd": 15
         },
         "best": {
-            "rating": 2390,
-            "date": 1678039371,
-            "game": "https://www.chess.com/game/live/36770438809"
+            "rating": 2501,
+            "date": 1737120172,
+            "game": "https://www.chess.com/game/live/128539418129"
         },
         "record": {
-            "win": 1913,
-            "loss": 1762,
-            "draw": 295
+            "win": 4571,
+            "loss": 4711,
+            "draw": 717
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2304,
-            "date": 1732798252,
-            "rd": 25
+            "rating": 2300,
+            "date": 1741150828,
+            "rd": 58
         },
         "best": {
             "rating": 2551,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/48353454879"
         },
         "record": {
-            "win": 12614,
-            "loss": 12649,
-            "draw": 2428
+            "win": 12628,
+            "loss": 12663,
+            "draw": 2430
         }
     },
     "fide": 2200,

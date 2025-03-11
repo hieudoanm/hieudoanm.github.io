@@ -6,9 +6,9 @@
     "name": "Ivan Vihor Krsnik Cohar",
     "username": "eddiemarsalla",
     "title": "FM",
-    "followers": 43,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/HR",
-    "last_online": 1734177668,
+    "last_online": 1741640600,
     "joined": 1407163686,
     "status": "premium",
     "is_streamer": false,
@@ -34,36 +34,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2753,
-            "date": 1732993157,
+            "rating": 2784,
+            "date": 1741614611,
             "rd": 25
         },
         "best": {
-            "rating": 2853,
-            "date": 1643651416,
-            "game": "https://www.chess.com/game/live/123093592873"
+            "rating": 2856,
+            "date": 1734805140,
+            "game": "https://www.chess.com/game/live/132174659701"
         },
         "record": {
-            "win": 360,
-            "loss": 280,
-            "draw": 37
+            "win": 707,
+            "loss": 605,
+            "draw": 96
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2819,
-            "date": 1734180148,
-            "rd": 21
+            "rating": 2868,
+            "date": 1741616346,
+            "rd": 23
         },
         "best": {
-            "rating": 2896,
-            "date": 1731093063,
-            "game": "https://www.chess.com/game/live/124977601907"
+            "rating": 2907,
+            "date": 1739478371,
+            "game": "https://www.chess.com/game/live/133118956289"
         },
         "record": {
-            "win": 1322,
-            "loss": 1183,
-            "draw": 311
+            "win": 1723,
+            "loss": 1678,
+            "draw": 419
         }
     },
     "fide": 2340,

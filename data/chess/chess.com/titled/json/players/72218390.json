@@ -6,10 +6,10 @@
     "name": "Manuel Crist\u00f3bal",
     "username": "ticondriul",
     "title": "FM",
-    "followers": 680,
+    "followers": 757,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Mar del Plata",
-    "last_online": 1734125162,
+    "last_online": 1741699373,
     "joined": 1581764360,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2458,
-            "date": 1733872292,
+            "date": 1741413121,
             "rd": 49
         },
         "best": {
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/50563150231"
         },
         "record": {
-            "win": 46,
+            "win": 51,
             "loss": 9,
             "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2632,
-            "date": 1734044903,
-            "rd": 48
+            "rating": 2616,
+            "date": 1740656715,
+            "rd": 26
         },
         "best": {
             "rating": 2892,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/110512306921"
         },
         "record": {
-            "win": 2691,
-            "loss": 2013,
-            "draw": 268
+            "win": 3239,
+            "loss": 2586,
+            "draw": 308
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2643,
-            "date": 1731452153,
-            "rd": 50
+            "rating": 2623,
+            "date": 1741702649,
+            "rd": 48
         },
         "best": {
             "rating": 2813,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/61537776223"
         },
         "record": {
-            "win": 1297,
-            "loss": 732,
-            "draw": 198
+            "win": 1304,
+            "loss": 739,
+            "draw": 199
         }
     },
     "tactics": {
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 46,
-            "score": 43
+            "total_attempts": 50,
+            "score": 47
         }
     }
 }

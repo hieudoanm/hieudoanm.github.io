@@ -6,10 +6,10 @@
     "name": "Thanh Nha Duong",
     "username": "dtn70",
     "title": "IM",
-    "followers": 248,
+    "followers": 249,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Montreal",
-    "last_online": 1733018640,
+    "last_online": 1739327105,
     "joined": 1459380005,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2056,
-            "date": 1734131786,
-            "rd": 81
+            "rating": 2075,
+            "date": 1741608609,
+            "rd": 76
         },
         "best": {
             "rating": 2446,
@@ -28,11 +28,11 @@
             "game": "https://www.chess.com/game/daily/378853141"
         },
         "record": {
-            "win": 346,
-            "loss": 166,
-            "draw": 141,
-            "time_per_move": 27895,
-            "timeout_percent": 0
+            "win": 351,
+            "loss": 172,
+            "draw": 142,
+            "time_per_move": 27845,
+            "timeout_percent": 25
         }
     },
     "chess960_daily": {
@@ -50,7 +50,7 @@
             "win": 117,
             "loss": 91,
             "draw": 32,
-            "time_per_move": 27895,
+            "time_per_move": 27845,
             "timeout_percent": 0
         }
     },

@@ -6,14 +6,14 @@
     "name": "Szapper Jol\u00e1n",
     "username": "lekurnyikovszvetozar",
     "title": "IM",
-    "followers": 29,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734074289,
+    "last_online": 1741624378,
     "joined": 1586339633,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2554,
-            "date": 1732786238,
-            "rd": 47
+            "rating": 2650,
+            "date": 1741619705,
+            "rd": 33
         },
         "best": {
             "rating": 2736,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/95422827955"
         },
         "record": {
-            "win": 2760,
-            "loss": 2270,
-            "draw": 444
+            "win": 2894,
+            "loss": 2366,
+            "draw": 473
         }
     },
     "tactics": {

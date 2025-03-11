@@ -6,9 +6,9 @@
     "name": "Imed Abdelnabbi",
     "username": "imedabdelnabii",
     "title": "IM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/EG",
-    "last_online": 1734008704,
+    "last_online": 1741314358,
     "joined": 1699658238,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     "fide": 2393,
     "tactics": {
         "highest": {
-            "rating": 3222,
-            "date": 1726337564
+            "rating": 3233,
+            "date": 1734777509
         },
         "lowest": {
             "rating": 400,

@@ -6,10 +6,10 @@
     "name": "Ruslan Kashtanov",
     "username": "chesstrainer1",
     "title": "IM",
-    "followers": 71,
+    "followers": 72,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Saint-Petersburg,Russia",
-    "last_online": 1734147621,
+    "last_online": 1741331417,
     "joined": 1284121627,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1733850396,
-            "rd": 49
+            "rating": 2473,
+            "date": 1740762923,
+            "rd": 50
         },
         "best": {
-            "rating": 2516,
-            "date": 1706026483,
+            "rating": 2525,
+            "date": 1734453410,
             "game": "https://www.chess.com/game/live/109633311703"
         },
         "record": {
-            "win": 795,
-            "loss": 669,
-            "draw": 121
+            "win": 807,
+            "loss": 694,
+            "draw": 123
         }
     },
     "fide": 2475,

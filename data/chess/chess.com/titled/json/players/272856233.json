@@ -5,9 +5,9 @@
     "name": "Hugues Magnier",
     "username": "hmag76",
     "title": "FM",
-    "followers": 56,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733572742,
+    "last_online": 1741526209,
     "joined": 1681025733,
     "status": "premium",
     "is_streamer": false,
@@ -64,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2334,
-            "date": 1733573106,
-            "rd": 40
+            "rating": 2358,
+            "date": 1738868612,
+            "rd": 51
         },
         "best": {
             "rating": 2510,
@@ -74,9 +74,9 @@
             "game": "https://www.chess.com/game/live/122733253463"
         },
         "record": {
-            "win": 3185,
-            "loss": 3315,
-            "draw": 430
+            "win": 3194,
+            "loss": 3321,
+            "draw": 432
         }
     },
     "fide": 2262,

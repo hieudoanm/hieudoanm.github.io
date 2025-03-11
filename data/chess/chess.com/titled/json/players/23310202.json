@@ -8,7 +8,7 @@
     "followers": 4,
     "country": "https://api.chess.com/pub/country/IS",
     "location": "Reykjavik",
-    "last_online": 1734109740,
+    "last_online": 1740778358,
     "joined": 1437340374,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2478,
-            "date": 1734110248,
-            "rd": 48
+            "rating": 2446,
+            "date": 1740778777,
+            "rd": 51
         },
         "best": {
             "rating": 2553,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/4721929428"
         },
         "record": {
-            "win": 730,
-            "loss": 525,
-            "draw": 143
+            "win": 754,
+            "loss": 545,
+            "draw": 151
         }
     },
     "fide": 2430,

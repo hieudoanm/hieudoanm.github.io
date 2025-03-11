@@ -6,9 +6,9 @@
     "name": "Juan Luis Ramiro",
     "username": "cherone",
     "title": "IM",
-    "followers": 89,
+    "followers": 90,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733776968,
+    "last_online": 1741545401,
     "joined": 1503763003,
     "status": "premium",
     "is_streamer": false,
@@ -17,19 +17,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2607,
-            "date": 1733080808,
-            "rd": 30
+            "rating": 2594,
+            "date": 1741548384,
+            "rd": 31
         },
         "best": {
-            "rating": 2614,
-            "date": 1699640674,
-            "game": "https://www.chess.com/game/live/116093495253"
+            "rating": 2669,
+            "date": 1739719616,
+            "game": "https://www.chess.com/game/live/131311783953"
         },
         "record": {
-            "win": 6240,
-            "loss": 5270,
-            "draw": 1151
+            "win": 6345,
+            "loss": 5360,
+            "draw": 1166
         }
     },
     "tactics": {

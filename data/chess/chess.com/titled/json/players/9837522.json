@@ -9,7 +9,7 @@
     "followers": 4,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Ahlen",
-    "last_online": 1733509102,
+    "last_online": 1738858323,
     "joined": 1354274953,
     "status": "premium",
     "is_streamer": false,
@@ -18,26 +18,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2310,
-            "date": 1707928461,
+            "rating": 2364,
+            "date": 1739297814,
             "rd": 49
         },
         "best": {
             "rating": 2408,
             "date": 1704637681,
-            "game": "https://www.chess.com/game/live/98372699763"
+            "game": "https://www.chess.com/game/live/130021837525"
         },
         "record": {
-            "win": 9,
-            "loss": 6,
-            "draw": 0
+            "win": 23,
+            "loss": 8,
+            "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2213,
-            "date": 1733509466,
-            "rd": 70
+            "rating": 2319,
+            "date": 1739192998,
+            "rd": 67
         },
         "best": {
             "rating": 2403,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/6031467989"
         },
         "record": {
-            "win": 1795,
+            "win": 1805,
             "loss": 747,
-            "draw": 223
+            "draw": 226
         }
     },
     "tactics": {

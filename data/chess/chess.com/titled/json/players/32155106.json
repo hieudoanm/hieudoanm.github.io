@@ -6,9 +6,9 @@
     "name": "Pierre Mehdi Ouakhir",
     "username": "leclash",
     "title": "FM",
-    "followers": 78,
+    "followers": 79,
     "country": "https://api.chess.com/pub/country/MA",
-    "last_online": 1734125852,
+    "last_online": 1741688868,
     "joined": 1483620190,
     "status": "premium",
     "is_streamer": false,
@@ -61,8 +61,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2508,
-            "date": 1733972312,
-            "rd": 30
+            "date": 1741696660,
+            "rd": 23
         },
         "best": {
             "rating": 2617,
@@ -70,9 +70,9 @@
             "game": "https://www.chess.com/game/live/52192773253"
         },
         "record": {
-            "win": 12716,
-            "loss": 10053,
-            "draw": 2072
+            "win": 13158,
+            "loss": 10407,
+            "draw": 2139
         }
     },
     "fide": 2300,

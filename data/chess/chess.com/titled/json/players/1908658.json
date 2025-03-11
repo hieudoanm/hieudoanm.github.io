@@ -8,7 +8,7 @@
     "followers": 54,
     "country": "https://api.chess.com/pub/country/JO",
     "location": "Irbed",
-    "last_online": 1726235139,
+    "last_online": 1739521570,
     "joined": 1241727880,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1770,
-            "date": 1685738401,
-            "rd": 185
+            "rating": 2010,
+            "date": 1739527814,
+            "rd": 154
         },
         "best": {
             "rating": 2046,
@@ -80,7 +80,7 @@
             "game": "https://www.chess.com/game/live/373086089"
         },
         "record": {
-            "win": 560,
+            "win": 563,
             "loss": 590,
             "draw": 35
         }

@@ -5,10 +5,10 @@
     "name": "David Okike",
     "username": "davigator",
     "title": "CM",
-    "followers": 226,
+    "followers": 227,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "London",
-    "last_online": 1734131397,
+    "last_online": 1741698258,
     "joined": 1210197034,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2022,
-            "date": 1609689535,
-            "rd": 218
+            "rating": 2014,
+            "date": 1741091459,
+            "rd": 49
         },
         "best": {
             "rating": 2022,
@@ -47,7 +47,7 @@
         },
         "record": {
             "win": 5,
-            "loss": 2,
+            "loss": 3,
             "draw": 2
         }
     },

@@ -6,9 +6,9 @@
     "name": "Rita Rosalia Torres Rosas",
     "username": "ritatorres",
     "title": "WCM",
-    "followers": 115,
+    "followers": 114,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1733795815,
+    "last_online": 1739926219,
     "joined": 1511739300,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1921,
-            "date": 1732593610,
-            "rd": 79
+            "rating": 1905,
+            "date": 1738720693,
+            "rd": 86
         },
         "best": {
             "rating": 2098,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/4887469630"
         },
         "record": {
-            "win": 364,
-            "loss": 328,
+            "win": 365,
+            "loss": 330,
             "draw": 43
         }
     },

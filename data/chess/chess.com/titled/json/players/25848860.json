@@ -6,10 +6,10 @@
     "name": "Gheorghiu Calin",
     "username": "calingheorghiu",
     "title": "FM",
-    "followers": 262,
+    "followers": 271,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Iasi",
-    "last_online": 1734165324,
+    "last_online": 1741692953,
     "joined": 1451474174,
     "status": "premium",
     "is_streamer": false,
@@ -18,27 +18,27 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1510,
-            "date": 1734033084,
-            "rd": 156
+            "rating": 1622,
+            "date": 1740990647,
+            "rd": 232
         },
         "best": {
-            "rating": 1608,
-            "date": 1586534914,
+            "rating": 1622,
+            "date": 1736448257,
             "game": "https://www.chess.com/game/daily/255026278"
         },
         "record": {
-            "win": 29,
+            "win": 30,
             "loss": 5,
             "draw": 0,
-            "time_per_move": 15657,
+            "time_per_move": 17321,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2079,
-            "date": 1733411293,
+            "date": 1737583312,
             "rd": 49
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2533,
-            "date": 1732659562,
-            "rd": 36
+            "rating": 2529,
+            "date": 1741639535,
+            "rd": 45
         },
         "best": {
             "rating": 2757,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/61075257077"
         },
         "record": {
-            "win": 2267,
-            "loss": 2194,
-            "draw": 311
+            "win": 2288,
+            "loss": 2220,
+            "draw": 317
         }
     },
     "fide": 2322,
     "tactics": {
         "highest": {
-            "rating": 3454,
-            "date": 1725281572
+            "rating": 3533,
+            "date": 1740759383
         },
         "lowest": {
             "rating": 1361,

@@ -6,9 +6,9 @@
     "name": "Kavin Venkatesan",
     "username": "dubs123",
     "title": "FM",
-    "followers": 115,
+    "followers": 117,
     "country": "https://api.chess.com/pub/country/IE",
-    "last_online": 1734003430,
+    "last_online": 1741461137,
     "joined": 1507971135,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1311,
-            "date": 1733993917,
-            "rd": 89
+            "rating": 1298,
+            "date": 1737560376,
+            "rd": 91
         },
         "best": {
             "rating": 1644,
@@ -27,17 +27,11 @@
             "game": "https://www.chess.com/game/daily/191976736"
         },
         "record": {
-            "win": 286,
-            "loss": 228,
+            "win": 294,
+            "loss": 246,
             "draw": 10,
-            "time_per_move": 108766,
-            "timeout_percent": 20
-        },
-        "tournament": {
-            "points": 52,
-            "withdraw": 1,
-            "count": 3,
-            "highest_finish": 5
+            "time_per_move": 108629,
+            "timeout_percent": 73
         }
     },
     "chess960_daily": {
@@ -55,14 +49,8 @@
             "win": 1,
             "loss": 17,
             "draw": 0,
-            "time_per_move": 108766,
+            "time_per_move": 108629,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 52,
-            "withdraw": 1,
-            "count": 3,
-            "highest_finish": 5
         }
     },
     "chess_rapid": {
@@ -84,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2575,
-            "date": 1733834922,
-            "rd": 36
+            "rating": 2649,
+            "date": 1736187327,
+            "rd": 41
         },
         "best": {
             "rating": 2692,
@@ -94,26 +82,26 @@
             "game": "https://www.chess.com/game/live/111603139957"
         },
         "record": {
-            "win": 3392,
-            "loss": 3016,
-            "draw": 376
+            "win": 3411,
+            "loss": 3028,
+            "draw": 378
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2515,
-            "date": 1733853459,
-            "rd": 44
+            "rating": 2555,
+            "date": 1737483147,
+            "rd": 46
         },
         "best": {
-            "rating": 2537,
-            "date": 1730816569,
+            "rating": 2565,
+            "date": 1737480097,
             "game": "https://www.chess.com/game/live/111856984875"
         },
         "record": {
-            "win": 1864,
-            "loss": 1274,
-            "draw": 150
+            "win": 1869,
+            "loss": 1278,
+            "draw": 151
         }
     },
     "fide": 2313,

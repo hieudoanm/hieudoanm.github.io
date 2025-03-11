@@ -6,10 +6,10 @@
     "name": "John Oyeyemi Fawole",
     "username": "fawolizzo",
     "title": "FM",
-    "followers": 206,
+    "followers": 210,
     "country": "https://api.chess.com/pub/country/NG",
     "location": "Abuja, London, New York",
-    "last_online": 1733277499,
+    "last_online": 1741392913,
     "joined": 1265455285,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1937,
-            "date": 1730162779,
-            "rd": 66
+            "rating": 2061,
+            "date": 1741523952,
+            "rd": 59
         },
         "best": {
             "rating": 2138,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/5489080101"
         },
         "record": {
-            "win": 351,
-            "loss": 270,
-            "draw": 32
+            "win": 367,
+            "loss": 276,
+            "draw": 33
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2250,
-            "date": 1733277938,
-            "rd": 81
+            "rating": 2244,
+            "date": 1741394572,
+            "rd": 83
         },
         "best": {
             "rating": 2315,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/72120781435"
         },
         "record": {
-            "win": 1216,
-            "loss": 1016,
-            "draw": 111
+            "win": 1218,
+            "loss": 1018,
+            "draw": 112
         }
     },
     "fide": 2214,

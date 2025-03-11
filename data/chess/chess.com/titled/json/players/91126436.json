@@ -5,9 +5,9 @@
     "name": "Yuxin Song",
     "username": "flawlessfightersyx",
     "title": "IM",
-    "followers": 8,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734176027,
+    "last_online": 1741598818,
     "joined": 1599982064,
     "status": "premium",
     "is_streamer": false,
@@ -33,19 +33,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2706,
-            "date": 1725093528,
-            "rd": 43
+            "rating": 2708,
+            "date": 1737885694,
+            "rd": 45
         },
         "best": {
-            "rating": 2706,
-            "date": 1725093528,
+            "rating": 2708,
+            "date": 1737885694,
             "game": "https://www.chess.com/game/live/118831804105"
         },
         "record": {
-            "win": 24,
-            "loss": 6,
-            "draw": 4
+            "win": 35,
+            "loss": 10,
+            "draw": 5
         }
     },
     "tactics": {
@@ -60,11 +60,7 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 59,
-            "score": 57
-        },
-        "daily": {
-            "total_attempts": 59,
+            "total_attempts": 60,
             "score": 57
         }
     }

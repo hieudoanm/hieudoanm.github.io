@@ -6,14 +6,14 @@
     "name": "Andre Mendez Machado",
     "username": "r2d2pty",
     "title": "FM",
-    "followers": 17,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/XB",
-    "last_online": 1734026899,
+    "last_online": 1741367817,
     "joined": 1406402745,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,8 +36,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2100,
-            "date": 1715305194,
+            "rating": 2108,
+            "date": 1740355233,
             "rd": 49
         },
         "best": {
@@ -46,49 +46,49 @@
             "game": "https://www.chess.com/game/live/109043956881"
         },
         "record": {
-            "win": 520,
+            "win": 521,
             "loss": 347,
             "draw": 79
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2443,
-            "date": 1733867827,
-            "rd": 53
+            "rating": 2613,
+            "date": 1741540472,
+            "rd": 19
         },
         "best": {
-            "rating": 2500,
-            "date": 1708887798,
-            "game": "https://www.chess.com/game/live/112055539627"
+            "rating": 2539,
+            "date": 1739749940,
+            "game": "https://www.chess.com/game/live/133294783949"
         },
         "record": {
-            "win": 421,
-            "loss": 285,
-            "draw": 44
+            "win": 666,
+            "loss": 497,
+            "draw": 83
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2420,
-            "date": 1734027680,
-            "rd": 41
+            "rating": 2481,
+            "date": 1741646791,
+            "rd": 34
         },
         "best": {
-            "rating": 2437,
-            "date": 1733853421,
+            "rating": 2482,
+            "date": 1740506505,
             "game": "https://www.chess.com/game/live/122765666133"
         },
         "record": {
-            "win": 540,
-            "loss": 439,
-            "draw": 58
+            "win": 598,
+            "loss": 492,
+            "draw": 73
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3300,
-            "date": 1714261958
+            "rating": 3461,
+            "date": 1740709900
         },
         "lowest": {
             "rating": 932,
@@ -97,8 +97,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 49,
+            "score": 46
+        },
+        "daily": {
+            "total_attempts": 49,
+            "score": 46
         }
     }
 }

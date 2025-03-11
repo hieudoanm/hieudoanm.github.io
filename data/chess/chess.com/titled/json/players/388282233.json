@@ -4,14 +4,14 @@
     "url": "https://www.chess.com/member/Zankyou-2024",
     "username": "zankyou-2024",
     "title": "WCM",
-    "followers": 0,
+    "followers": 1,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1733682786,
+    "last_online": 1739348765,
     "joined": 1726262041,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -24,7 +24,7 @@
             "loss": 1,
             "draw": 0,
             "time_per_move": 10966,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_bullet": {
@@ -46,19 +46,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1948,
-            "date": 1733579352,
-            "rd": 47
+            "rating": 1954,
+            "date": 1739052922,
+            "rd": 41
         },
         "best": {
             "rating": 1959,
             "date": 1729700152,
-            "game": "https://www.chess.com/game/live/122666152793"
+            "game": "https://www.chess.com/game/live/132148869683"
         },
         "record": {
-            "win": 101,
-            "loss": 65,
-            "draw": 7
+            "win": 130,
+            "loss": 91,
+            "draw": 9
         }
     },
     "tactics": {

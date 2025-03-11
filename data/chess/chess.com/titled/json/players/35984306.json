@@ -6,10 +6,10 @@
     "name": "Oleg Orlov",
     "username": "chess_coach_2024",
     "title": "FM",
-    "followers": 97,
+    "followers": 99,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Saint-Petersburg, Russia",
-    "last_online": 1732383330,
+    "last_online": 1741441097,
     "joined": 1496334097,
     "status": "premium",
     "is_streamer": false,
@@ -56,9 +56,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2375,
-            "date": 1696658051,
-            "rd": 91
+            "rating": 2379,
+            "date": 1741441005,
+            "rd": 49
         },
         "best": {
             "rating": 2411,
@@ -66,16 +66,16 @@
             "game": "https://www.chess.com/game/live/29010616249"
         },
         "record": {
-            "win": 177,
-            "loss": 102,
+            "win": 181,
+            "loss": 104,
             "draw": 24
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2608,
-            "date": 1692882869,
-            "rd": 31
+            "rating": 2612,
+            "date": 1741439662,
+            "rd": 49
         },
         "best": {
             "rating": 2840,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/38862664869"
         },
         "record": {
-            "win": 563,
-            "loss": 432,
+            "win": 568,
+            "loss": 435,
             "draw": 69
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2585,
-            "date": 1695914359,
-            "rd": 66
+            "rating": 2582,
+            "date": 1741439951,
+            "rd": 49
         },
         "best": {
             "rating": 2649,
@@ -100,8 +100,8 @@
             "game": "https://www.chess.com/game/live/87668531149"
         },
         "record": {
-            "win": 206,
-            "loss": 136,
+            "win": 208,
+            "loss": 138,
             "draw": 28
         }
     },

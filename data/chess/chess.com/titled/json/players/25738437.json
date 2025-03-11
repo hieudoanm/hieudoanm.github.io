@@ -6,10 +6,10 @@
     "name": "Ludvig Carlsson",
     "username": "carlssonludvig",
     "title": "IM",
-    "followers": 116,
+    "followers": 120,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "v&auml;ster&aring;s",
-    "last_online": 1734127615,
+    "last_online": 1741356875,
     "joined": 1450977214,
     "status": "premium",
     "is_streamer": false,
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2762,
-            "date": 1731550346,
-            "rd": 37
+            "rating": 2765,
+            "date": 1737406292,
+            "rd": 43
         },
         "best": {
-            "rating": 2794,
-            "date": 1731549912,
+            "rating": 2820,
+            "date": 1734547391,
             "game": "https://www.chess.com/game/live/125288907925"
         },
         "record": {
-            "win": 1847,
-            "loss": 1332,
-            "draw": 174
+            "win": 1889,
+            "loss": 1362,
+            "draw": 181
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2709,
-            "date": 1733145227,
-            "rd": 28
+            "rating": 2674,
+            "date": 1739918427,
+            "rd": 48
         },
         "best": {
             "rating": 2872,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/125468917597"
         },
         "record": {
-            "win": 6648,
-            "loss": 5213,
-            "draw": 992
+            "win": 6665,
+            "loss": 5226,
+            "draw": 995
         }
     },
     "fide": 2418,

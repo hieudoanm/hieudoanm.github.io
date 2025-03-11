@@ -6,10 +6,10 @@
     "name": "Daniel Barria",
     "username": "manitodeplomo",
     "title": "IM",
-    "followers": 719,
+    "followers": 735,
     "country": "https://api.chess.com/pub/country/CL",
-    "location": "madrid",
-    "last_online": 1734159118,
+    "location": "santiago",
+    "last_online": 1741678305,
     "joined": 1295733314,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2720,
-            "date": 1733875597,
-            "rd": 27
+            "rating": 2576,
+            "date": 1741683484,
+            "rd": 33
         },
         "best": {
             "rating": 2742,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/46560636961"
         },
         "record": {
-            "win": 4205,
-            "loss": 3620,
-            "draw": 787
+            "win": 4354,
+            "loss": 3753,
+            "draw": 819
         }
     },
     "fide": 2452,

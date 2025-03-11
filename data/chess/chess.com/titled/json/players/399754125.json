@@ -7,35 +7,35 @@
     "title": "CM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/LT",
-    "last_online": 1734128438,
+    "last_online": 1741645066,
     "joined": 1730462750,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2504,
-            "date": 1733955439,
-            "rd": 38
+            "rating": 2521,
+            "date": 1741645758,
+            "rd": 47
         },
         "best": {
-            "rating": 2504,
-            "date": 1733955439,
-            "game": "https://www.chess.com/game/live/127692626911"
+            "rating": 2610,
+            "date": 1734708899,
+            "game": "https://www.chess.com/game/live/128392161307"
         },
         "record": {
-            "win": 38,
-            "loss": 28,
-            "draw": 8
+            "win": 118,
+            "loss": 105,
+            "draw": 19
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2380,
-            "date": 1734069001,
-            "rd": 31
+            "rating": 2369,
+            "date": 1741383498,
+            "rd": 43
         },
         "best": {
             "rating": 2402,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/126833994865"
         },
         "record": {
-            "win": 130,
-            "loss": 113,
-            "draw": 20
+            "win": 197,
+            "loss": 175,
+            "draw": 29
         }
     },
     "tactics": {
@@ -58,5 +58,10 @@
             "date": 1730462750
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 40
+        }
+    }
 }

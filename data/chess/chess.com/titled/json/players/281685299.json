@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Early_Morning_Coffee",
     "username": "early_morning_coffee",
     "title": "IM",
-    "followers": 214,
+    "followers": 234,
     "country": "https://api.chess.com/pub/country/LC",
-    "last_online": 1734179690,
+    "last_online": 1741656878,
     "joined": 1683069943,
     "status": "staff",
     "is_streamer": false,
@@ -16,20 +16,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1908,
-            "date": 1734180394,
-            "rd": 111
+            "rating": 1943,
+            "date": 1741674170,
+            "rd": 88
         },
         "best": {
-            "rating": 1908,
-            "date": 1732910435,
+            "rating": 1976,
+            "date": 1739860728,
             "game": "https://www.chess.com/game/daily/664350263"
         },
         "record": {
-            "win": 65,
-            "loss": 4,
-            "draw": 3,
-            "time_per_move": 52462,
+            "win": 91,
+            "loss": 7,
+            "draw": 6,
+            "time_per_move": 46095,
             "timeout_percent": 0
         },
         "tournament": {
@@ -41,8 +41,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2770,
-            "date": 1733335092,
+            "rating": 2772,
+            "date": 1737566576,
             "rd": 49
         },
         "best": {
@@ -51,32 +51,32 @@
             "game": "https://www.chess.com/game/live/109590084767"
         },
         "record": {
-            "win": 297,
-            "loss": 203,
+            "win": 298,
+            "loss": 204,
             "draw": 38
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2803,
-            "date": 1733939597,
-            "rd": 38
+            "rating": 2877,
+            "date": 1737594423,
+            "rd": 37
         },
         "best": {
-            "rating": 2898,
-            "date": 1730759152,
+            "rating": 2914,
+            "date": 1734990470,
             "game": "https://www.chess.com/game/live/88840874549"
         },
         "record": {
-            "win": 351,
-            "loss": 313,
-            "draw": 80
+            "win": 411,
+            "loss": 360,
+            "draw": 93
         }
     },
     "tactics": {
         "highest": {
-            "rating": 1000,
-            "date": 1683069943
+            "rating": 1997,
+            "date": 1737782141
         },
         "lowest": {
             "rating": 1000,

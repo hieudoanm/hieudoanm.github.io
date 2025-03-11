@@ -9,7 +9,7 @@
     "followers": 56,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan, Armenia",
-    "last_online": 1733236201,
+    "last_online": 1739029286,
     "joined": 1692017401,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2797,
-            "date": 1733242086,
-            "rd": 48
+            "rating": 2789,
+            "date": 1739029620,
+            "rd": 49
         },
         "best": {
             "rating": 2890,
@@ -60,7 +60,7 @@
         },
         "record": {
             "win": 422,
-            "loss": 266,
+            "loss": 267,
             "draw": 65
         }
     },

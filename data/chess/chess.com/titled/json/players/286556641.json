@@ -6,7 +6,7 @@
     "name": "Sergey Strelnikov",
     "username": "chessmanplayer15",
     "title": "IM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Lugansk",
     "last_online": 1708967244,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1729630705,
-            "rd": 69
+            "rating": 2514,
+            "date": 1738710962,
+            "rd": 44
         },
         "best": {
-            "rating": 2505,
-            "date": 1729630705,
-            "game": "https://www.chess.com/game/live/123367869537"
+            "rating": 2540,
+            "date": 1738707038,
+            "game": "https://www.chess.com/game/live/132443481335"
         },
         "record": {
-            "win": 229,
-            "loss": 42,
-            "draw": 14
+            "win": 241,
+            "loss": 47,
+            "draw": 15
         }
     },
     "fide": 2293,

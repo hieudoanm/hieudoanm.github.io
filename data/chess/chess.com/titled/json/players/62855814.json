@@ -6,9 +6,9 @@
     "name": "Thi Dieu Ai Vu",
     "username": "sharon1407",
     "title": "WFM",
-    "followers": 63,
+    "followers": 70,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1733296247,
+    "last_online": 1741612172,
     "joined": 1561956078,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1888,
-            "date": 1733928128,
-            "rd": 106
+            "rating": 1922,
+            "date": 1740234925,
+            "rd": 68
         },
         "best": {
             "rating": 1981,
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/40652980165"
         },
         "record": {
-            "win": 18,
-            "loss": 6,
-            "draw": 4
+            "win": 40,
+            "loss": 13,
+            "draw": 5
         }
     },
     "chess_bullet": {

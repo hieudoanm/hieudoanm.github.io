@@ -6,10 +6,10 @@
     "name": "Alexey Ustinov",
     "username": "alexey_ustinov",
     "title": "FM",
-    "followers": 101,
+    "followers": 103,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u041c\u043e\u0441\u043a\u0432\u0430",
-    "last_online": 1733298212,
+    "last_online": 1740920539,
     "joined": 1486682038,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2539,
-            "date": 1734042857,
-            "rd": 39
+            "rating": 2603,
+            "date": 1737541375,
+            "rd": 42
         },
         "best": {
             "rating": 2640,
@@ -47,15 +47,15 @@
             "game": "https://www.chess.com/game/live/126961752699"
         },
         "record": {
-            "win": 3151,
-            "loss": 1274,
-            "draw": 305
+            "win": 3182,
+            "loss": 1286,
+            "draw": 308
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2549,
-            "date": 1733435911,
+            "rating": 2603,
+            "date": 1737539566,
             "rd": 48
         },
         "best": {
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/3498605343"
         },
         "record": {
-            "win": 536,
-            "loss": 260,
+            "win": 544,
+            "loss": 261,
             "draw": 101
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3163,
-            "date": 1733298180
+            "rating": 3192,
+            "date": 1737103788
         },
         "lowest": {
             "rating": 454,

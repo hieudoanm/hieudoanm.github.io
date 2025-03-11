@@ -9,7 +9,7 @@
     "followers": 54,
     "country": "https://api.chess.com/pub/country/PE",
     "location": "Lima",
-    "last_online": 1734133666,
+    "last_online": 1741660805,
     "joined": 1456588108,
     "status": "premium",
     "is_streamer": false,
@@ -89,8 +89,8 @@
     "fide": 2416,
     "tactics": {
         "highest": {
-            "rating": 2908,
-            "date": 1726180885
+            "rating": 2955,
+            "date": 1739818366
         },
         "lowest": {
             "rating": 1363,
@@ -101,6 +101,10 @@
         "best": {
             "total_attempts": 67,
             "score": 64
+        },
+        "daily": {
+            "total_attempts": 14,
+            "score": 12
         }
     }
 }

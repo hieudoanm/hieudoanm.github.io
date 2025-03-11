@@ -6,9 +6,9 @@
     "name": "Srihari L R",
     "username": "blitzking1729",
     "title": "IM",
-    "followers": 345,
+    "followers": 354,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734164365,
+    "last_online": 1741701121,
     "joined": 1525099093,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2467,
-            "date": 1686597567,
-            "rd": 62
+            "rating": 2478,
+            "date": 1739733502,
+            "rd": 46
         },
         "best": {
             "rating": 2502,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/80322688589"
         },
         "record": {
-            "win": 67,
-            "loss": 36,
-            "draw": 20
+            "win": 72,
+            "loss": 38,
+            "draw": 22
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2746,
-            "date": 1734116024,
-            "rd": 33
+            "rating": 2803,
+            "date": 1741632126,
+            "rd": 38
         },
         "best": {
             "rating": 2935,
@@ -63,33 +63,33 @@
             "game": "https://www.chess.com/game/live/118861783677"
         },
         "record": {
-            "win": 974,
-            "loss": 1054,
-            "draw": 146
+            "win": 1150,
+            "loss": 1194,
+            "draw": 160
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2854,
-            "date": 1734177357,
-            "rd": 33
+            "rating": 2859,
+            "date": 1741698648,
+            "rd": 36
         },
         "best": {
-            "rating": 2881,
-            "date": 1719238843,
-            "game": "https://www.chess.com/game/live/116094579199"
+            "rating": 2930,
+            "date": 1734452949,
+            "game": "https://www.chess.com/game/live/127982989149"
         },
         "record": {
-            "win": 3630,
-            "loss": 3601,
-            "draw": 882
+            "win": 3803,
+            "loss": 3718,
+            "draw": 907
         }
     },
     "fide": 2503,
     "tactics": {
         "highest": {
-            "rating": 3513,
-            "date": 1726077664
+            "rating": 3570,
+            "date": 1735902268
         },
         "lowest": {
             "rating": 410,
@@ -102,8 +102,8 @@
             "score": 60
         },
         "daily": {
-            "total_attempts": 40,
-            "score": 37
+            "total_attempts": 50,
+            "score": 47
         }
     }
 }

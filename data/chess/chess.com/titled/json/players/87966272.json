@@ -6,10 +6,10 @@
     "name": "Robert W\u0142odarczyk",
     "username": "miltony1410",
     "title": "FM",
-    "followers": 16,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Wroc\u0142aw",
-    "last_online": 1731415985,
+    "last_online": 1740899180,
     "joined": 1596178917,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2101,
-            "date": 1726228347,
-            "rd": 48
+            "rating": 2166,
+            "date": 1740685001,
+            "rd": 77
         },
         "best": {
             "rating": 2218,
@@ -28,9 +28,9 @@
             "game": "https://www.chess.com/game/live/99349452381"
         },
         "record": {
-            "win": 704,
-            "loss": 566,
-            "draw": 56
+            "win": 710,
+            "loss": 567,
+            "draw": 58
         }
     },
     "fide": 2245,

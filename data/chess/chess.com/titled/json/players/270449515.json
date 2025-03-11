@@ -5,9 +5,9 @@
     "name": "David Blanco Diez",
     "username": "inepton_fermion",
     "title": "FM",
-    "followers": 15,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/EU",
-    "last_online": 1733867956,
+    "last_online": 1738706303,
     "joined": 1680518160,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2434,
-            "date": 1733329348,
-            "rd": 56
+            "rating": 2424,
+            "date": 1736383723,
+            "rd": 57
         },
         "best": {
             "rating": 2484,
@@ -62,26 +62,26 @@
             "game": "https://www.chess.com/game/live/102905990613"
         },
         "record": {
-            "win": 170,
-            "loss": 89,
+            "win": 259,
+            "loss": 107,
             "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2506,
-            "date": 1733875618,
-            "rd": 31
+            "rating": 2499,
+            "date": 1738713680,
+            "rd": 43
         },
         "best": {
-            "rating": 2545,
-            "date": 1733267215,
-            "game": "https://www.chess.com/game/live/105830470443"
+            "rating": 2546,
+            "date": 1736272683,
+            "game": "https://www.chess.com/game/live/130004428715"
         },
         "record": {
-            "win": 386,
-            "loss": 369,
-            "draw": 67
+            "win": 418,
+            "loss": 394,
+            "draw": 70
         }
     },
     "tactics": {

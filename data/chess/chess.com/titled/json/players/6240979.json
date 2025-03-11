@@ -9,7 +9,7 @@
     "followers": 11,
     "country": "https://api.chess.com/pub/country/DK",
     "location": "Odense",
-    "last_online": 1733321991,
+    "last_online": 1735043542,
     "joined": 1322926845,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1703,
-            "date": 1734159359,
-            "rd": 69
+            "rating": 1756,
+            "date": 1741630084,
+            "rd": 70
         },
         "best": {
-            "rating": 1710,
-            "date": 1733431166,
+            "rating": 1763,
+            "date": 1739629375,
             "game": "https://www.chess.com/game/daily/715675233"
         },
         "record": {
-            "win": 100,
-            "loss": 7,
-            "draw": 7,
-            "time_per_move": 20757,
+            "win": 112,
+            "loss": 11,
+            "draw": 9,
+            "time_per_move": 21603,
             "timeout_percent": 0
         }
     },
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1607,
-            "date": 1729281086,
-            "rd": 92
+            "rating": 1605,
+            "date": 1735127155,
+            "rd": 95
         },
         "best": {
             "rating": 2034,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/6341640365"
         },
         "record": {
-            "win": 54,
-            "loss": 56,
+            "win": 55,
+            "loss": 57,
             "draw": 6
         }
     },

@@ -5,9 +5,9 @@
     "name": "Bora Yarar",
     "username": "chocolate_cookie02",
     "title": "FM",
-    "followers": 20,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734160263,
+    "last_online": 1741519052,
     "joined": 1643738366,
     "status": "premium",
     "is_streamer": false,
@@ -33,8 +33,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2750,
-            "date": 1733428623,
+            "rating": 2746,
+            "date": 1735535197,
             "rd": 46
         },
         "best": {
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/94498432347"
         },
         "record": {
-            "win": 393,
-            "loss": 282,
-            "draw": 50
+            "win": 395,
+            "loss": 285,
+            "draw": 52
         }
     },
     "chess_blitz": {
@@ -67,8 +67,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3890,
-            "date": 1734150804
+            "rating": 4000,
+            "date": 1738691249
         },
         "lowest": {
             "rating": 412,
@@ -79,10 +79,6 @@
         "best": {
             "total_attempts": 72,
             "score": 69
-        },
-        "daily": {
-            "total_attempts": 53,
-            "score": 50
         }
     }
 }

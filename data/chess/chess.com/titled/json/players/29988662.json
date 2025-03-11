@@ -5,10 +5,10 @@
     "name": "Andras Orosz",
     "username": "mrbadbeat",
     "title": "FM",
-    "followers": 64,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Gy\u0151r&uacute;jfalu",
-    "last_online": 1734012234,
+    "last_online": 1739065275,
     "joined": 1474187365,
     "status": "premium",
     "is_streamer": false,
@@ -70,26 +70,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2481,
-            "date": 1726755600,
-            "rd": 42
+            "rating": 2504,
+            "date": 1739065670,
+            "rd": 49
         },
         "best": {
-            "rating": 2513,
-            "date": 1725354114,
+            "rating": 2514,
+            "date": 1738741929,
             "game": "https://www.chess.com/game/live/3333389966"
         },
         "record": {
-            "win": 758,
-            "loss": 545,
-            "draw": 115
+            "win": 762,
+            "loss": 546,
+            "draw": 116
         }
     },
     "fide": 2320,
     "tactics": {
         "highest": {
-            "rating": 3279,
-            "date": 1723444099
+            "rating": 3328,
+            "date": 1734274970
         },
         "lowest": {
             "rating": 1985,

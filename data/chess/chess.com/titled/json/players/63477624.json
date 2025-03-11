@@ -6,7 +6,7 @@
     "title": "IM",
     "followers": 33,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1734089400,
+    "last_online": 1738422672,
     "joined": 1563633018,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +15,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1829,
-            "date": 1729844972,
-            "rd": 48
+            "rating": 1782,
+            "date": 1738485433,
+            "rd": 125
         },
         "best": {
             "rating": 1842,
@@ -26,10 +26,10 @@
         },
         "record": {
             "win": 128,
-            "loss": 16,
+            "loss": 17,
             "draw": 6,
             "time_per_move": 11222,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
@@ -97,10 +97,6 @@
         "best": {
             "total_attempts": 59,
             "score": 55
-        },
-        "daily": {
-            "total_attempts": 31,
-            "score": 28
         }
     }
 }

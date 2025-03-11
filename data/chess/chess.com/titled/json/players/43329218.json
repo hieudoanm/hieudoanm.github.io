@@ -5,9 +5,9 @@
     "name": "Thore Perske",
     "username": "thjop",
     "title": "IM",
-    "followers": 22,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734045856,
+    "last_online": 1741641807,
     "joined": 1518603886,
     "status": "premium",
     "is_streamer": false,
@@ -88,26 +88,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2797,
-            "date": 1734044834,
-            "rd": 30
+            "rating": 2618,
+            "date": 1741598008,
+            "rd": 37
         },
         "best": {
             "rating": 2840,
             "date": 1732486969,
-            "game": "https://www.chess.com/game/live/66525117567"
+            "game": "https://www.chess.com/game/live/128191265115"
         },
         "record": {
-            "win": 1978,
-            "loss": 1672,
-            "draw": 471
+            "win": 2098,
+            "loss": 1813,
+            "draw": 504
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3518,
-            "date": 1705700892
+            "rating": 3538,
+            "date": 1741643960
         },
         "lowest": {
             "rating": 1213,

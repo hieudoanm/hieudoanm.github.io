@@ -6,10 +6,10 @@
     "name": "Monalisha khamboo",
     "username": "yashami",
     "title": "WCM",
-    "followers": 72,
+    "followers": 76,
     "country": "https://api.chess.com/pub/country/NP",
     "location": "Kathmandu",
-    "last_online": 1732946676,
+    "last_online": 1737984676,
     "joined": 1474135436,
     "status": "premium",
     "is_streamer": false,
@@ -63,8 +63,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 31,
-            "score": 28
+            "total_attempts": 39,
+            "score": 36
         }
     }
 }

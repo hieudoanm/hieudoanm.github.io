@@ -6,10 +6,10 @@
     "name": "Mikhail Kuznecov",
     "username": "holden-caulfield",
     "title": "FM",
-    "followers": 350,
+    "followers": 389,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Odintsovo",
-    "last_online": 1734160283,
+    "last_online": 1741664145,
     "joined": 1266839878,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1669,
-            "date": 1734160297,
-            "rd": 97
+            "rating": 1884,
+            "date": 1741690508,
+            "rd": 79
         },
         "best": {
             "rating": 2300,
@@ -28,18 +28,24 @@
             "game": "https://www.chess.com/game/daily/41814022"
         },
         "record": {
-            "win": 3803,
-            "loss": 1708,
-            "draw": 941,
-            "time_per_move": 29863,
+            "win": 3828,
+            "loss": 1710,
+            "draw": 943,
+            "time_per_move": 29754,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 112,
+            "withdraw": 0,
+            "count": 2,
+            "highest_finish": 1
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1646,
-            "date": 1658309289,
-            "rd": 109
+            "rating": 1684,
+            "date": 1739345331,
+            "rd": 122
         },
         "best": {
             "rating": 1992,
@@ -47,11 +53,17 @@
             "game": "https://www.chess.com/game/daily/31408896"
         },
         "record": {
-            "win": 429,
-            "loss": 199,
+            "win": 434,
+            "loss": 202,
             "draw": 74,
-            "time_per_move": 29863,
+            "time_per_move": 29754,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 112,
+            "withdraw": 0,
+            "count": 2,
+            "highest_finish": 1
         }
     },
     "chess_rapid": {
@@ -73,26 +85,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2811,
-            "date": 1732511651,
-            "rd": 29
+            "rating": 2787,
+            "date": 1740916145,
+            "rd": 23
         },
         "best": {
             "rating": 2957,
             "date": 1298572651,
-            "game": "https://www.chess.com/game/live/94465796"
+            "game": "https://www.chess.com/game/live/130690828391"
         },
         "record": {
-            "win": 2566,
-            "loss": 2086,
-            "draw": 365
+            "win": 2787,
+            "loss": 2365,
+            "draw": 407
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2768,
-            "date": 1732888783,
-            "rd": 40
+            "rating": 2746,
+            "date": 1741664819,
+            "rd": 29
         },
         "best": {
             "rating": 2843,
@@ -100,9 +112,9 @@
             "game": "https://www.chess.com/game/live/123247182545"
         },
         "record": {
-            "win": 1517,
-            "loss": 1095,
-            "draw": 311
+            "win": 1669,
+            "loss": 1283,
+            "draw": 361
         }
     },
     "fide": 2378,
@@ -120,10 +132,6 @@
         "best": {
             "total_attempts": 52,
             "score": 50
-        },
-        "daily": {
-            "total_attempts": 48,
-            "score": 45
         }
     }
 }

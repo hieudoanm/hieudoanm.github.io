@@ -9,7 +9,7 @@
     "followers": 30,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Palma de Mallorca",
-    "last_online": 1734078348,
+    "last_online": 1741335459,
     "joined": 1339188171,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2139,
-            "date": 1734078465,
-            "rd": 31
+            "rating": 2109,
+            "date": 1741680574,
+            "rd": 33
         },
         "best": {
             "rating": 2284,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/55008419583"
         },
         "record": {
-            "win": 5435,
-            "loss": 5503,
-            "draw": 443
+            "win": 5555,
+            "loss": 5644,
+            "draw": 452
         }
     },
     "chess_blitz": {

@@ -6,9 +6,9 @@
     "name": "Luca Silva",
     "username": "viktoker",
     "title": "FM",
-    "followers": 14,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734100118,
+    "last_online": 1741703523,
     "joined": 1693180227,
     "status": "premium",
     "is_streamer": false,
@@ -31,43 +31,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2450,
-            "date": 1733805442,
-            "rd": 56
+            "rating": 2443,
+            "date": 1740971490,
+            "rd": 49
         },
         "best": {
             "rating": 2486,
             "date": 1733072428,
-            "game": "https://www.chess.com/game/live/127543216991"
+            "game": "https://www.chess.com/game/live/130800597925"
         },
         "record": {
-            "win": 92,
-            "loss": 94,
-            "draw": 12
+            "win": 104,
+            "loss": 112,
+            "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2524,
-            "date": 1733875649,
-            "rd": 27
+            "rating": 2686,
+            "date": 1741659218,
+            "rd": 26
         },
         "best": {
-            "rating": 2634,
-            "date": 1723417574,
-            "game": "https://www.chess.com/game/live/124044692331"
+            "rating": 2679,
+            "date": 1741131972,
+            "game": "https://www.chess.com/game/live/133050574857"
         },
         "record": {
-            "win": 998,
-            "loss": 1096,
-            "draw": 228
+            "win": 1321,
+            "loss": 1437,
+            "draw": 292
         }
     },
     "fide": 2246,
     "tactics": {
         "highest": {
-            "rating": 3011,
-            "date": 1730416724
+            "rating": 3040,
+            "date": 1736284667
         },
         "lowest": {
             "rating": 1000,
@@ -76,8 +76,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 60,
-            "score": 57
+            "total_attempts": 68,
+            "score": 65
         }
     }
 }

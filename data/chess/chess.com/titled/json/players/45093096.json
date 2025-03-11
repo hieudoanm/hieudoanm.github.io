@@ -1,22 +1,23 @@
 {
     "player_id": 45093096,
-    "@id": "https://api.chess.com/pub/player/raffael89",
-    "url": "https://www.chess.com/member/Raffael89",
-    "username": "raffael89",
+    "@id": "https://api.chess.com/pub/player/kingofattack555",
+    "url": "https://www.chess.com/member/KINGoFattacK555",
+    "name": "Amro El Jawich",
+    "username": "kingofattack555",
     "title": "FM",
-    "followers": 10,
-    "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733846576,
+    "followers": 8,
+    "country": "https://api.chess.com/pub/country/AX",
+    "last_online": 1741697512,
     "joined": 1523182473,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1783,
-            "date": 1612171706,
+            "date": 1737722757,
             "rd": 106
         },
         "best": {
@@ -34,53 +35,53 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1651,
-            "date": 1642092987,
-            "rd": 282
+            "rating": 2015,
+            "date": 1737710619,
+            "rd": 204
         },
         "best": {
-            "rating": 2000,
-            "date": 1576177130,
-            "game": "https://www.chess.com/game/live/7844711283"
+            "rating": 2015,
+            "date": 1737710619,
+            "game": "https://www.chess.com/game/live/131448579759"
         },
         "record": {
-            "win": 4,
+            "win": 6,
             "loss": 2,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1655,
-            "date": 1704483627,
-            "rd": 53
+            "rating": 2030,
+            "date": 1739690332,
+            "rd": 23
         },
         "best": {
-            "rating": 2044,
-            "date": 1607604081,
-            "game": "https://www.chess.com/game/live/51712799463"
+            "rating": 2053,
+            "date": 1739261074,
+            "game": "https://www.chess.com/game/live/133307938689"
         },
         "record": {
-            "win": 31,
-            "loss": 35,
-            "draw": 4
+            "win": 260,
+            "loss": 259,
+            "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1816,
-            "date": 1715778734,
-            "rd": 75
+            "rating": 2204,
+            "date": 1739902301,
+            "rd": 38
         },
         "best": {
             "rating": 2320,
             "date": 1600592017,
-            "game": "https://www.chess.com/game/live/5931894492"
+            "game": "https://www.chess.com/game/live/133052333039"
         },
         "record": {
-            "win": 809,
-            "loss": 746,
-            "draw": 99
+            "win": 864,
+            "loss": 814,
+            "draw": 105
         }
     },
     "tactics": {
@@ -95,8 +96,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 37,
-            "score": 35
+            "total_attempts": 42,
+            "score": 39
         }
     }
 }

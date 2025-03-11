@@ -6,10 +6,10 @@
     "name": "Mohsen Ghorbani",
     "username": "mohsenghorbani",
     "title": "IM",
-    "followers": 537,
+    "followers": 601,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Tehran",
-    "last_online": 1734163462,
+    "last_online": 1741688872,
     "joined": 1585895341,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2048,
-            "date": 1733668328,
-            "rd": 169
+            "rating": 2037,
+            "date": 1741160869,
+            "rd": 148
         },
         "best": {
             "rating": 2190,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/688735463"
         },
         "record": {
-            "win": 60,
-            "loss": 18,
+            "win": 71,
+            "loss": 19,
             "draw": 3,
-            "time_per_move": 11586,
+            "time_per_move": 11466,
             "timeout_percent": 0
         }
     },
@@ -50,14 +50,14 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 11586,
+            "time_per_move": 11466,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2328,
-            "date": 1732459147,
+            "rating": 2335,
+            "date": 1740925769,
             "rd": 49
         },
         "best": {
@@ -66,16 +66,16 @@
             "game": "https://www.chess.com/game/live/6112560822"
         },
         "record": {
-            "win": 42,
-            "loss": 45,
+            "win": 53,
+            "loss": 46,
             "draw": 8
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2029,
-            "date": 1731908228,
-            "rd": 57
+            "rating": 1949,
+            "date": 1741451967,
+            "rd": 64
         },
         "best": {
             "rating": 2300,
@@ -83,33 +83,33 @@
             "game": "https://www.chess.com/game/live/91048124659"
         },
         "record": {
-            "win": 137,
-            "loss": 159,
+            "win": 145,
+            "loss": 174,
             "draw": 6
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2422,
-            "date": 1734164584,
-            "rd": 32
+            "rating": 2414,
+            "date": 1741635999,
+            "rd": 25
         },
         "best": {
-            "rating": 2536,
-            "date": 1714246229,
+            "rating": 2553,
+            "date": 1737572559,
             "game": "https://www.chess.com/game/live/13516314769"
         },
         "record": {
-            "win": 4551,
-            "loss": 4919,
-            "draw": 615
+            "win": 4862,
+            "loss": 5250,
+            "draw": 654
         }
     },
     "fide": 2285,
     "tactics": {
         "highest": {
-            "rating": 2934,
-            "date": 1730550703
+            "rating": 2958,
+            "date": 1735070876
         },
         "lowest": {
             "rating": 1215,

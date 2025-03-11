@@ -5,9 +5,9 @@
     "name": "Giulia Sala",
     "username": "supergiuly",
     "title": "WFM",
-    "followers": 44,
+    "followers": 46,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1732053347,
+    "last_online": 1737496502,
     "joined": 1556741568,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2310,
-            "date": 1732055878,
-            "rd": 68
+            "rating": 2293,
+            "date": 1737498483,
+            "rd": 78
         },
         "best": {
             "rating": 2391,
@@ -61,7 +61,7 @@
         },
         "record": {
             "win": 165,
-            "loss": 277,
+            "loss": 280,
             "draw": 21
         }
     },

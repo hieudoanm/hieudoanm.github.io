@@ -5,9 +5,9 @@
     "name": "Toivo Kein\u00e4nen",
     "username": "toivok3",
     "title": "IM",
-    "followers": 266,
+    "followers": 270,
     "country": "https://api.chess.com/pub/country/FI",
-    "last_online": 1733513750,
+    "last_online": 1741619777,
     "joined": 1500882011,
     "status": "premium",
     "is_streamer": false,
@@ -52,25 +52,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3037,
-            "date": 1730126616,
-            "rd": 31
+            "rating": 3127,
+            "date": 1739041166,
+            "rd": 34
         },
         "best": {
-            "rating": 3136,
-            "date": 1617095629,
+            "rating": 3154,
+            "date": 1736010127,
             "game": "https://www.chess.com/game/live/5861381364"
         },
         "record": {
-            "win": 2994,
-            "loss": 1872,
-            "draw": 380
+            "win": 3186,
+            "loss": 1925,
+            "draw": 387
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2876,
-            "date": 1712946556,
+            "rating": 2892,
+            "date": 1738685158,
             "rd": 49
         },
         "best": {
@@ -79,8 +79,8 @@
             "game": "https://www.chess.com/game/live/4652010962"
         },
         "record": {
-            "win": 654,
-            "loss": 469,
+            "win": 659,
+            "loss": 470,
             "draw": 179
         }
     },

@@ -9,7 +9,7 @@
     "followers": 2,
     "country": "https://api.chess.com/pub/country/UZ",
     "location": "Tashkent",
-    "last_online": 1726318554,
+    "last_online": 1740992885,
     "joined": 1510562993,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2375,
-            "date": 1726415730,
-            "rd": 89
+            "rating": 2376,
+            "date": 1741004072,
+            "rd": 97
         },
         "best": {
             "rating": 2562,
@@ -40,8 +40,8 @@
             "game": "https://www.chess.com/game/live/75739943195"
         },
         "record": {
-            "win": 611,
-            "loss": 551,
+            "win": 613,
+            "loss": 553,
             "draw": 71
         }
     },

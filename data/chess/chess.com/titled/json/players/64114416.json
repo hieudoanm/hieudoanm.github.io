@@ -6,9 +6,9 @@
     "name": "Francesco Seresin",
     "username": "serefra99",
     "title": "FM",
-    "followers": 135,
+    "followers": 141,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1734177922,
+    "last_online": 1740835701,
     "joined": 1565333145,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2540,
-            "date": 1734178942,
+            "rating": 2538,
+            "date": 1741676139,
             "rd": 33
         },
         "best": {
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/61646419173"
         },
         "record": {
-            "win": 3706,
-            "loss": 3073,
-            "draw": 551
+            "win": 3918,
+            "loss": 3245,
+            "draw": 585
         }
     },
     "tactics": {

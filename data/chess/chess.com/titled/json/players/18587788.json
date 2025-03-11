@@ -6,10 +6,10 @@
     "name": "Robert Orosz",
     "username": "robert_oros",
     "title": "FM",
-    "followers": 106,
+    "followers": 108,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734031564,
+    "last_online": 1741632890,
     "joined": 1408630089,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2082,
-            "date": 1655540895,
+            "date": 1739460774,
             "rd": 63
         },
         "best": {
@@ -31,14 +31,14 @@
             "win": 49,
             "loss": 2,
             "draw": 13,
-            "time_per_move": 26349,
+            "time_per_move": 25585,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2340,
-            "date": 1721976990,
+            "rating": 2348,
+            "date": 1737144654,
             "rd": 49
         },
         "best": {
@@ -47,7 +47,7 @@
             "game": "https://www.chess.com/game/live/76765402093"
         },
         "record": {
-            "win": 97,
+            "win": 105,
             "loss": 14,
             "draw": 4
         }
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2324,
-            "date": 1733792271,
-            "rd": 67
+            "rating": 2316,
+            "date": 1737228316,
+            "rd": 72
         },
         "best": {
             "rating": 2451,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/114298861175"
         },
         "record": {
-            "win": 486,
-            "loss": 129,
+            "win": 487,
+            "loss": 130,
             "draw": 53
         }
     },

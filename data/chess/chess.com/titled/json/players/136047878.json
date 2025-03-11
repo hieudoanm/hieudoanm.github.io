@@ -8,7 +8,7 @@
     "title": "WCM",
     "followers": 49,
     "country": "https://api.chess.com/pub/country/CI",
-    "last_online": 1731900814,
+    "last_online": 1739893217,
     "joined": 1618769810,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 839,
-            "date": 1705210692,
+            "date": 1736760692,
             "rd": 91
         },
         "best": {

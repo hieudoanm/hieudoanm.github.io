@@ -6,10 +6,10 @@
     "name": "Antonio Nunez Ravelo",
     "username": "nunezravelo",
     "title": "FM",
-    "followers": 105,
+    "followers": 107,
     "country": "https://api.chess.com/pub/country/CU",
     "location": "Quito",
-    "last_online": 1734008087,
+    "last_online": 1740453792,
     "joined": 1373083487,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2142,
-            "date": 1733939372,
-            "rd": 32
+            "rating": 2159,
+            "date": 1740453758,
+            "rd": 47
         },
         "best": {
             "rating": 2504,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/33984555047"
         },
         "record": {
-            "win": 708,
-            "loss": 289,
-            "draw": 51
+            "win": 783,
+            "loss": 316,
+            "draw": 56
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2177,
-            "date": 1733497031,
-            "rd": 50
+            "rating": 2203,
+            "date": 1740454162,
+            "rd": 63
         },
         "best": {
             "rating": 2516,
             "date": 1701367011,
-            "game": "https://www.chess.com/game/live/99619982207"
+            "game": "https://www.chess.com/game/live/129317588815"
         },
         "record": {
-            "win": 1571,
-            "loss": 452,
-            "draw": 118
+            "win": 1600,
+            "loss": 458,
+            "draw": 119
         }
     },
     "tactics": {

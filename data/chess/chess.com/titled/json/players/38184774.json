@@ -5,9 +5,9 @@
     "name": "Michal Provaznik",
     "username": "cmunda",
     "title": "CM",
-    "followers": 37,
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1734181471,
+    "last_online": 1741640252,
     "joined": 1503941994,
     "status": "premium",
     "is_streamer": false,
@@ -69,19 +69,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2154,
-            "date": 1734181727,
-            "rd": 27
+            "rating": 2196,
+            "date": 1741589677,
+            "rd": 29
         },
         "best": {
-            "rating": 2286,
-            "date": 1650698981,
+            "rating": 2313,
+            "date": 1737476988,
             "game": "https://www.chess.com/game/live/25728046377"
         },
         "record": {
-            "win": 7318,
-            "loss": 7205,
-            "draw": 710
+            "win": 7564,
+            "loss": 7420,
+            "draw": 729
         }
     },
     "tactics": {

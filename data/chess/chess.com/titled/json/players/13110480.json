@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/novakdjokovic142",
     "username": "novakdjokovic142",
     "title": "IM",
-    "followers": 64,
+    "followers": 72,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734183432,
+    "last_online": 1741633839,
     "joined": 1376276485,
     "status": "premium",
     "is_streamer": false,
@@ -68,19 +68,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2752,
-            "date": 1734061800,
-            "rd": 40
+            "rating": 2823,
+            "date": 1741572089,
+            "rd": 35
         },
         "best": {
-            "rating": 2850,
-            "date": 1589581588,
-            "game": "https://www.chess.com/game/live/4861486885"
+            "rating": 2857,
+            "date": 1738889637,
+            "game": "https://www.chess.com/game/live/127939208253"
         },
         "record": {
-            "win": 2554,
-            "loss": 2108,
-            "draw": 477
+            "win": 2636,
+            "loss": 2192,
+            "draw": 493
         }
     },
     "fide": 0,

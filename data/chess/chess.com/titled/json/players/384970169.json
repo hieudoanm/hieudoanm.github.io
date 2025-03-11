@@ -6,9 +6,9 @@
     "name": "Tianhao Xue",
     "username": "xuetianhao",
     "title": "WCM",
-    "followers": 8,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734052449,
+    "last_online": 1741658473,
     "joined": 1725361289,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "fide": 1835,
     "tactics": {
         "highest": {
-            "rating": 3412,
-            "date": 1733020749
+            "rating": 3526,
+            "date": 1737672367
         },
         "lowest": {
             "rating": 1000,
@@ -27,12 +27,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 51,
-            "score": 50
+            "total_attempts": 57,
+            "score": 54
         },
         "daily": {
-            "total_attempts": 40,
-            "score": 40
+            "total_attempts": 46,
+            "score": 43
         }
     }
 }

@@ -6,9 +6,9 @@
     "name": "I U Basnayake",
     "username": "irisqueen",
     "title": "WCM",
-    "followers": 245,
+    "followers": 247,
     "country": "https://api.chess.com/pub/country/XE",
-    "last_online": 1734183606,
+    "last_online": 1741643346,
     "joined": 1465903477,
     "status": "premium",
     "is_streamer": false,
@@ -68,7 +68,7 @@
     "chess_bullet": {
         "last": {
             "rating": 1951,
-            "date": 1734131545,
+            "date": 1740427074,
             "rd": 145
         },
         "best": {
@@ -85,7 +85,7 @@
     "chess_blitz": {
         "last": {
             "rating": 1920,
-            "date": 1734131434,
+            "date": 1740163116,
             "rd": 84
         },
         "best": {
@@ -113,10 +113,6 @@
         "best": {
             "total_attempts": 41,
             "score": 38
-        },
-        "daily": {
-            "total_attempts": 33,
-            "score": 31
         }
     }
 }

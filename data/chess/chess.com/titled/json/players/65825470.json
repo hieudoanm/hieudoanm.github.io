@@ -6,9 +6,9 @@
     "name": "Sean Vibbert",
     "username": "checksumme",
     "title": "FM",
-    "followers": 77,
+    "followers": 76,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733719763,
+    "last_online": 1741501897,
     "joined": 1569221748,
     "status": "premium",
     "is_streamer": false,
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2571,
-            "date": 1730427934,
+            "date": 1739857704,
             "rd": 46
         },
         "best": {
@@ -69,8 +69,8 @@
     "fide": 2390,
     "tactics": {
         "highest": {
-            "rating": 3339,
-            "date": 1708587156
+            "rating": 3361,
+            "date": 1735796488
         },
         "lowest": {
             "rating": 2305,

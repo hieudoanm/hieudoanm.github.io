@@ -6,9 +6,9 @@
     "name": "Read Samadov",
     "username": "reader777",
     "title": "IM",
-    "followers": 137,
-    "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734176056,
+    "followers": 152,
+    "country": "https://api.chess.com/pub/country/SE",
+    "last_online": 1741547735,
     "joined": 1439023955,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2602,
-            "date": 1729015091,
-            "rd": 49
+            "rating": 2615,
+            "date": 1739872611,
+            "rd": 44
         },
         "best": {
             "rating": 2636,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/80335368345"
         },
         "record": {
-            "win": 112,
-            "loss": 58,
-            "draw": 53
+            "win": 124,
+            "loss": 61,
+            "draw": 57
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2925,
-            "date": 1733659130,
-            "rd": 48
+            "rating": 2946,
+            "date": 1739549479,
+            "rd": 49
         },
         "best": {
             "rating": 3020,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/80497333771"
         },
         "record": {
-            "win": 445,
-            "loss": 378,
-            "draw": 54
+            "win": 458,
+            "loss": 381,
+            "draw": 56
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2967,
-            "date": 1734085178,
-            "rd": 30
+            "rating": 2976,
+            "date": 1741548120,
+            "rd": 33
         },
         "best": {
             "rating": 3045,
@@ -61,15 +61,16 @@
             "game": "https://www.chess.com/game/live/127164037469"
         },
         "record": {
-            "win": 3719,
-            "loss": 3384,
-            "draw": 1048
+            "win": 3867,
+            "loss": 3488,
+            "draw": 1067
         }
     },
+    "fide": 2501,
     "tactics": {
         "highest": {
-            "rating": 3996,
-            "date": 1727784283
+            "rating": 4070,
+            "date": 1737102282
         },
         "lowest": {
             "rating": 2361,
@@ -78,12 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 66,
-            "score": 63
-        },
-        "daily": {
-            "total_attempts": 49,
-            "score": 46
+            "total_attempts": 67,
+            "score": 64
         }
     }
 }

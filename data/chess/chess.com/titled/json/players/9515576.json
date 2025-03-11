@@ -6,9 +6,9 @@
     "name": "Daniel Tabuenca Mendataurigoitia",
     "username": "arenal72",
     "title": "FM",
-    "followers": 49,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734181905,
+    "last_online": 1741624888,
     "joined": 1352041842,
     "status": "premium",
     "is_streamer": false,
@@ -72,36 +72,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2762,
-            "date": 1732742622,
-            "rd": 21
+            "rating": 2801,
+            "date": 1740945566,
+            "rd": 28
         },
         "best": {
-            "rating": 2850,
-            "date": 1732472537,
+            "rating": 2878,
+            "date": 1735303089,
             "game": "https://www.chess.com/game/live/123098984971"
         },
         "record": {
-            "win": 1320,
-            "loss": 797,
-            "draw": 194
+            "win": 1624,
+            "loss": 991,
+            "draw": 241
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2691,
-            "date": 1733176881,
-            "rd": 49
+            "rating": 2816,
+            "date": 1741552897,
+            "rd": 44
         },
         "best": {
-            "rating": 2798,
-            "date": 1723474697,
-            "game": "https://www.chess.com/game/live/104599925149"
+            "rating": 2820,
+            "date": 1739484278,
+            "game": "https://www.chess.com/game/live/131820074259"
         },
         "record": {
-            "win": 1507,
-            "loss": 1134,
-            "draw": 189
+            "win": 1597,
+            "loss": 1186,
+            "draw": 204
         }
     },
     "fide": 2431,

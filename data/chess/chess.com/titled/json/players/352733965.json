@@ -1,35 +1,52 @@
 {
     "player_id": 352733965,
-    "@id": "https://api.chess.com/pub/player/chess_sharparchitect",
-    "url": "https://www.chess.com/member/chess_sharparchitect",
+    "@id": "https://api.chess.com/pub/player/kyiv-volvo",
+    "url": "https://www.chess.com/member/kyiv-volvo",
     "name": "Oleksandr Yevchenko",
-    "username": "chess_sharparchitect",
+    "username": "kyiv-volvo",
     "title": "CM",
-    "followers": 3,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Kyiv",
-    "last_online": 1734134441,
+    "last_online": 1741701803,
     "joined": 1711232745,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Silver",
     "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2180,
+            "date": 1739041143,
+            "rd": 32
+        },
+        "best": {
+            "rating": 2653,
+            "date": 1738429938,
+            "game": "https://www.chess.com/game/live/132774662903"
+        },
+        "record": {
+            "win": 29,
+            "loss": 90,
+            "draw": 3
+        }
+    },
     "chess_blitz": {
         "last": {
-            "rating": 2287,
-            "date": 1733875686,
+            "rating": 2350,
+            "date": 1741132892,
             "rd": 36
         },
         "best": {
-            "rating": 2374,
-            "date": 1716912442,
-            "game": "https://www.chess.com/game/live/109459286851"
+            "rating": 2404,
+            "date": 1740527642,
+            "game": "https://www.chess.com/game/live/131214679681"
         },
         "record": {
-            "win": 196,
-            "loss": 242,
-            "draw": 28
+            "win": 282,
+            "loss": 374,
+            "draw": 50
         }
     },
     "fide": 2276,

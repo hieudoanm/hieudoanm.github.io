@@ -6,9 +6,9 @@
     "name": "Rustam Rustamov",
     "username": "ilqar_74",
     "title": "FM",
-    "followers": 38,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/AZ",
-    "last_online": 1734178301,
+    "last_online": 1741642678,
     "joined": 1685356016,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2780,
-            "date": 1730820024,
-            "rd": 36
+            "rating": 2938,
+            "date": 1741524614,
+            "rd": 32
         },
         "best": {
-            "rating": 2866,
-            "date": 1708681058,
-            "game": "https://www.chess.com/game/live/98794502283"
+            "rating": 2952,
+            "date": 1739037144,
+            "game": "https://www.chess.com/game/live/134588362155"
         },
         "record": {
-            "win": 238,
-            "loss": 148,
-            "draw": 39
+            "win": 430,
+            "loss": 251,
+            "draw": 72
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2905,
-            "date": 1734110828,
-            "rd": 27
+            "rating": 2858,
+            "date": 1741531279,
+            "rd": 35
         },
         "best": {
             "rating": 2981,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/117908401249"
         },
         "record": {
-            "win": 1928,
-            "loss": 1156,
-            "draw": 536
+            "win": 2166,
+            "loss": 1318,
+            "draw": 583
         }
     },
     "tactics": {
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 14,
-            "score": 11
+            "total_attempts": 46,
+            "score": 43
         }
     }
 }

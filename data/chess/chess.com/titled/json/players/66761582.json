@@ -5,9 +5,9 @@
     "name": "Matthias Dann",
     "username": "maus7",
     "title": "IM",
-    "followers": 5,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734080445,
+    "last_online": 1741702462,
     "joined": 1571261063,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2725,
-            "date": 1732644831,
-            "rd": 43
+            "rating": 2678,
+            "date": 1736895360,
+            "rd": 47
         },
         "best": {
             "rating": 2735,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/114904074063"
         },
         "record": {
-            "win": 276,
-            "loss": 129,
-            "draw": 33
+            "win": 288,
+            "loss": 138,
+            "draw": 35
         }
     },
     "fide": 2477,
@@ -63,6 +63,10 @@
         "best": {
             "total_attempts": 68,
             "score": 65
+        },
+        "daily": {
+            "total_attempts": 46,
+            "score": 43
         }
     }
 }

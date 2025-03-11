@@ -6,10 +6,10 @@
     "name": "Ciorgovean Iustin",
     "username": "iustin106",
     "title": "FM",
-    "followers": 58,
+    "followers": 57,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Alba Iulia",
-    "last_online": 1734171801,
+    "last_online": 1741701246,
     "joined": 1493554984,
     "status": "premium",
     "is_streamer": false,
@@ -86,7 +86,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2776,
-            "date": 1727118281,
+            "date": 1736182655,
             "rd": 42
         },
         "best": {

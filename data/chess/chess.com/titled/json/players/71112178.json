@@ -5,9 +5,9 @@
     "name": "Erdem Khubukshanov",
     "username": "hatsummei",
     "title": "IM",
-    "followers": 29,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733901461,
+    "last_online": 1740555802,
     "joined": 1579690931,
     "status": "premium",
     "is_streamer": false,
@@ -33,36 +33,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2601,
-            "date": 1712777870,
-            "rd": 45
+            "rating": 2655,
+            "date": 1738937682,
+            "rd": 44
         },
         "best": {
             "rating": 2655,
             "date": 1618723039,
-            "game": "https://www.chess.com/game/live/12050089421"
+            "game": "https://www.chess.com/game/live/132676175715"
         },
         "record": {
-            "win": 64,
-            "loss": 39,
+            "win": 74,
+            "loss": 42,
             "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2875,
-            "date": 1733498311,
-            "rd": 44
+            "rating": 3017,
+            "date": 1737170225,
+            "rd": 38
         },
         "best": {
-            "rating": 2990,
-            "date": 1717335818,
+            "rating": 3017,
+            "date": 1737170225,
             "game": "https://www.chess.com/game/live/111074453521"
         },
         "record": {
-            "win": 1539,
-            "loss": 1421,
-            "draw": 241
+            "win": 1604,
+            "loss": 1466,
+            "draw": 246
         }
     },
     "tactics": {
@@ -77,8 +77,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 61,
-            "score": 58
+            "total_attempts": 62,
+            "score": 59
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "slaven",
     "username": "drsmrt",
     "title": "FM",
-    "followers": 187,
+    "followers": 201,
     "country": "https://api.chess.com/pub/country/CD",
     "location": "congo",
-    "last_online": 1734098368,
+    "last_online": 1741687270,
     "joined": 1233847369,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1961,
-            "date": 1727438501,
-            "rd": 54
+            "rating": 1915,
+            "date": 1741421057,
+            "rd": 72
         },
         "best": {
             "rating": 2178,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/103625428923"
         },
         "record": {
-            "win": 3429,
-            "loss": 619,
+            "win": 3459,
+            "loss": 625,
             "draw": 110
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2180,
-            "date": 1734101694,
-            "rd": 27
+            "rating": 2302,
+            "date": 1741696678,
+            "rd": 21
         },
         "best": {
             "rating": 2505,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/37035595657"
         },
         "record": {
-            "win": 45091,
-            "loss": 17662,
-            "draw": 2522
+            "win": 47930,
+            "loss": 18194,
+            "draw": 2622
         }
     },
     "tactics": {

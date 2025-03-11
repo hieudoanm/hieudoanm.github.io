@@ -4,14 +4,14 @@
     "url": "https://www.chess.com/member/KRISHNA_2800",
     "username": "krishna_2800",
     "title": "FM",
-    "followers": 3,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1732519440,
+    "last_online": 1741615513,
     "joined": 1595080131,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -30,11 +30,28 @@
             "draw": 0
         }
     },
+    "chess_bullet": {
+        "last": {
+            "rating": 2272,
+            "date": 1741333587,
+            "rd": 42
+        },
+        "best": {
+            "rating": 2336,
+            "date": 1739774717,
+            "game": "https://www.chess.com/game/live/133513145999"
+        },
+        "record": {
+            "win": 44,
+            "loss": 35,
+            "draw": 2
+        }
+    },
     "chess_blitz": {
         "last": {
-            "rating": 2421,
-            "date": 1730880412,
-            "rd": 53
+            "rating": 2379,
+            "date": 1741616063,
+            "rd": 44
         },
         "best": {
             "rating": 2478,
@@ -42,21 +59,26 @@
             "game": "https://www.chess.com/game/live/121555251985"
         },
         "record": {
-            "win": 38,
-            "loss": 22,
-            "draw": 4
+            "win": 74,
+            "loss": 50,
+            "draw": 7
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2451,
-            "date": 1731541003
+            "rating": 2888,
+            "date": 1741325898
         },
         "lowest": {
             "rating": 1200,
             "date": 1595080131
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 33,
+            "score": 30
+        }
+    }
 }

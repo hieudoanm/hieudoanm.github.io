@@ -9,7 +9,7 @@
     "followers": 169,
     "country": "https://api.chess.com/pub/country/LV",
     "location": "Riga",
-    "last_online": 1734159182,
+    "last_online": 1741702787,
     "joined": 1414522959,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_daily": {
         "last": {
             "rating": 1508,
-            "date": 1734176248,
-            "rd": 186
+            "date": 1736449233,
+            "rd": 189
         },
         "best": {
             "rating": 1575,
@@ -28,18 +28,18 @@
             "game": "https://www.chess.com/game/daily/241395086"
         },
         "record": {
-            "win": 20,
+            "win": 22,
             "loss": 2,
             "draw": 3,
-            "time_per_move": 15458,
+            "time_per_move": 15555,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2294,
-            "date": 1733161823,
-            "rd": 48
+            "rating": 2296,
+            "date": 1739989916,
+            "rd": 49
         },
         "best": {
             "rating": 2452,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/123414588817"
         },
         "record": {
-            "win": 44,
-            "loss": 7,
-            "draw": 5
+            "win": 46,
+            "loss": 8,
+            "draw": 7
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2541,
-            "date": 1729441300,
-            "rd": 49
+            "rating": 2557,
+            "date": 1740182388,
+            "rd": 48
         },
         "best": {
             "rating": 2717,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/2499386323"
         },
         "record": {
-            "win": 1768,
-            "loss": 1246,
-            "draw": 229
+            "win": 1777,
+            "loss": 1253,
+            "draw": 230
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2681,
-            "date": 1733953743,
-            "rd": 38
+            "rating": 2719,
+            "date": 1740771359,
+            "rd": 46
         },
         "best": {
-            "rating": 2713,
-            "date": 1586466704,
+            "rating": 2744,
+            "date": 1734653410,
             "game": "https://www.chess.com/game/live/3197645342"
         },
         "record": {
-            "win": 3144,
-            "loss": 2253,
-            "draw": 535
+            "win": 3169,
+            "loss": 2269,
+            "draw": 540
         }
     },
     "fide": 2366,
@@ -101,10 +101,6 @@
         "best": {
             "total_attempts": 57,
             "score": 54
-        },
-        "daily": {
-            "total_attempts": 46,
-            "score": 43
         }
     }
 }

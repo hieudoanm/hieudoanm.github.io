@@ -6,10 +6,10 @@
     "name": "Sekk",
     "username": "sekar24",
     "title": "FM",
-    "followers": 546,
+    "followers": 549,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734184816,
+    "last_online": 1741694980,
     "joined": 1411780831,
     "status": "basic",
     "is_streamer": false,
@@ -49,8 +49,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2419,
-            "date": 1729649396,
+            "rating": 2509,
+            "date": 1741695085,
             "rd": 36
         },
         "best": {
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/25456915989"
         },
         "record": {
-            "win": 2453,
-            "loss": 2900,
-            "draw": 279
+            "win": 2539,
+            "loss": 2982,
+            "draw": 292
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2574,
-            "date": 1734185155,
-            "rd": 37
+            "rating": 2615,
+            "date": 1741698242,
+            "rd": 30
         },
         "best": {
             "rating": 2715,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/37023651935"
         },
         "record": {
-            "win": 13392,
-            "loss": 15355,
-            "draw": 2067
+            "win": 13532,
+            "loss": 15505,
+            "draw": 2087
         }
     },
     "tactics": {

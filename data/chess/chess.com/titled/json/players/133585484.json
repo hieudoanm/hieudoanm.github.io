@@ -6,9 +6,9 @@
     "name": "Hugo Mu\u00f1oz Sotomayor",
     "username": "hugomunozsotomayor",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/EC",
-    "last_online": 1734181393,
+    "last_online": 1741532557,
     "joined": 1617669830,
     "status": "premium",
     "is_streamer": false,
@@ -34,19 +34,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2246,
-            "date": 1734181919,
-            "rd": 34
+            "rating": 2208,
+            "date": 1741646089,
+            "rd": 27
         },
         "best": {
-            "rating": 2331,
-            "date": 1720225024,
-            "game": "https://www.chess.com/game/live/87409847859"
+            "rating": 2349,
+            "date": 1737401791,
+            "game": "https://www.chess.com/game/live/130879255669"
         },
         "record": {
-            "win": 944,
-            "loss": 939,
-            "draw": 150
+            "win": 1145,
+            "loss": 1155,
+            "draw": 175
         }
     },
     "fide": 0,

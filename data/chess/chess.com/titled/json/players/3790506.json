@@ -5,10 +5,10 @@
     "name": "Doug McClintock",
     "username": "dmac9999",
     "title": "FM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Orange County",
-    "last_online": 1728691302,
+    "last_online": 1735360952,
     "joined": 1280968905,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1148,
-            "date": 1726281574,
-            "rd": 157
+            "rating": 1215,
+            "date": 1736734517,
+            "rd": 152
         },
         "best": {
             "rating": 2000,
@@ -46,7 +46,7 @@
             "game": "https://www.chess.com/game/live/96165821583"
         },
         "record": {
-            "win": 5,
+            "win": 6,
             "loss": 6,
             "draw": 0
         }
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2143,
-            "date": 1734068601,
-            "rd": 29
+            "rating": 2122,
+            "date": 1741660821,
+            "rd": 31
         },
         "best": {
             "rating": 2255,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/38983124021"
         },
         "record": {
-            "win": 8601,
-            "loss": 7397,
-            "draw": 289
+            "win": 8713,
+            "loss": 7498,
+            "draw": 292
         }
     },
     "tactics": {

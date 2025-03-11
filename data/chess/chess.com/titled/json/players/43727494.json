@@ -6,10 +6,10 @@
     "name": "Tor Fredrik Kaasen",
     "username": "torfredrikkaasen",
     "title": "IM",
-    "followers": 80,
+    "followers": 86,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Oslo",
-    "last_online": 1734098695,
+    "last_online": 1741612191,
     "joined": 1519649953,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2829,
-            "date": 1734099279,
-            "rd": 37
+            "rating": 2823,
+            "date": 1741607112,
+            "rd": 36
         },
         "best": {
             "rating": 2953,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/53156376619"
         },
         "record": {
-            "win": 2662,
-            "loss": 2629,
-            "draw": 694
+            "win": 2735,
+            "loss": 2694,
+            "draw": 716
         }
     },
     "fide": 2496,

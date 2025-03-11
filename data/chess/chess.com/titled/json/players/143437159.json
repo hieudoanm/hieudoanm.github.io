@@ -6,9 +6,9 @@
     "name": "Esteban Murillo",
     "username": "teba49",
     "title": "FM",
-    "followers": 20,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/CR",
-    "last_online": 1730921677,
+    "last_online": 1741336132,
     "joined": 1622969284,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2185,
-            "date": 1730921833,
-            "rd": 69
+            "rating": 2239,
+            "date": 1741441145,
+            "rd": 32
         },
         "best": {
             "rating": 2431,
@@ -27,15 +27,15 @@
             "game": "https://www.chess.com/game/live/38430872225"
         },
         "record": {
-            "win": 346,
-            "loss": 207,
-            "draw": 27
+            "win": 552,
+            "loss": 370,
+            "draw": 44
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2119,
-            "date": 1730159421,
+            "rating": 2085,
+            "date": 1740760119,
             "rd": 100
         },
         "best": {
@@ -44,8 +44,8 @@
             "game": "https://www.chess.com/game/live/30320911963"
         },
         "record": {
-            "win": 391,
-            "loss": 289,
+            "win": 392,
+            "loss": 294,
             "draw": 37
         }
     },

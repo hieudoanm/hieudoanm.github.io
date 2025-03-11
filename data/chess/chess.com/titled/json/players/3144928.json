@@ -6,9 +6,9 @@
     "name": "Stevan Jovic",
     "username": "stevanjovic",
     "title": "FM",
-    "followers": 338,
+    "followers": 344,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734113171,
+    "last_online": 1741615992,
     "joined": 1219315643,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1642,
-            "date": 1734119119,
-            "rd": 125
+            "rating": 1616,
+            "date": 1740657707,
+            "rd": 131
         },
         "best": {
             "rating": 2104,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/64710128069"
         },
         "record": {
-            "win": 117,
+            "win": 127,
             "loss": 31,
-            "draw": 42
+            "draw": 43
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2175,
-            "date": 1714981120,
-            "rd": 50
+            "rating": 1977,
+            "date": 1741246225,
+            "rd": 128
         },
         "best": {
             "rating": 2396,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/9936114317"
         },
         "record": {
-            "win": 1528,
-            "loss": 1279,
+            "win": 1546,
+            "loss": 1283,
             "draw": 79
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2418,
-            "date": 1734114630,
-            "rd": 32
+            "rating": 2428,
+            "date": 1741616363,
+            "rd": 28
         },
         "best": {
             "rating": 2546,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/2847291811"
         },
         "record": {
-            "win": 3047,
-            "loss": 2507,
-            "draw": 417
+            "win": 3266,
+            "loss": 2693,
+            "draw": 445
         }
     },
     "fide": 2319,
     "tactics": {
         "highest": {
-            "rating": 2920,
-            "date": 1705181419
+            "rating": 2930,
+            "date": 1738270365
         },
         "lowest": {
             "rating": 1819,

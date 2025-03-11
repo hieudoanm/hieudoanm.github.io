@@ -6,7 +6,7 @@
     "name": "Laszlo Dr. Hazai",
     "username": "coachleslie",
     "title": "IM",
-    "followers": 0,
+    "followers": 1,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
     "last_online": 1730648978,
@@ -14,5 +14,21 @@
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "streaming_platforms": []
+    "streaming_platforms": [],
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1462698189
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1462698189
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 9,
+            "score": 9
+        }
+    }
 }

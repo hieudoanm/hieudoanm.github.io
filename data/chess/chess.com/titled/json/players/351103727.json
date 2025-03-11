@@ -5,9 +5,9 @@
     "name": "Anh Dung Le",
     "username": "cakeuvdort",
     "title": "CM",
-    "followers": 1,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1734121760,
+    "last_online": 1741626263,
     "joined": 1710537910,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2231,
-            "date": 1734123804,
-            "rd": 37
+            "rating": 2224,
+            "date": 1741633707,
+            "rd": 27
         },
         "best": {
             "rating": 2572,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/111001320007"
         },
         "record": {
-            "win": 349,
-            "loss": 483,
-            "draw": 40
+            "win": 507,
+            "loss": 663,
+            "draw": 51
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2345,
-            "date": 1733169197,
-            "rd": 33
+            "rating": 2340,
+            "date": 1741111461,
+            "rd": 49
         },
         "best": {
             "rating": 2470,
@@ -60,16 +60,16 @@
             "game": "https://www.chess.com/game/live/111256914039"
         },
         "record": {
-            "win": 149,
-            "loss": 184,
-            "draw": 14
+            "win": 228,
+            "loss": 271,
+            "draw": 28
         }
     },
     "fide": 2200,
     "tactics": {
         "highest": {
-            "rating": 2676,
-            "date": 1733221088
+            "rating": 2755,
+            "date": 1738927177
         },
         "lowest": {
             "rating": 1000,

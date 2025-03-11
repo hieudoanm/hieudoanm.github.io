@@ -5,10 +5,10 @@
     "name": "Joa Max Bornholdt",
     "username": "archibaldcerveza29",
     "title": "FM",
-    "followers": 65,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Munich",
-    "last_online": 1733496954,
+    "last_online": 1741646306,
     "joined": 1605128120,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1258,
-            "date": 1713437671,
+            "date": 1736242246,
             "rd": 84
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2559,
-            "date": 1732987919,
-            "rd": 48
+            "rating": 2546,
+            "date": 1738431214,
+            "rd": 39
         },
         "best": {
             "rating": 2589,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/118261114541"
         },
         "record": {
-            "win": 1965,
-            "loss": 852,
+            "win": 1996,
+            "loss": 884,
             "draw": 147
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2541,
-            "date": 1727184381,
-            "rd": 29
+            "rating": 2551,
+            "date": 1741646475,
+            "rd": 47
         },
         "best": {
             "rating": 2560,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/70734275349"
         },
         "record": {
-            "win": 848,
-            "loss": 614,
+            "win": 852,
+            "loss": 619,
             "draw": 105
         }
     },
@@ -99,6 +99,10 @@
         "best": {
             "total_attempts": 81,
             "score": 78
+        },
+        "daily": {
+            "total_attempts": 41,
+            "score": 38
         }
     }
 }

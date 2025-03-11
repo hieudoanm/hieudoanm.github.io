@@ -5,9 +5,9 @@
     "name": "Attila Jr. Forgacs",
     "username": "gmforgacs",
     "title": "FM",
-    "followers": 89,
+    "followers": 96,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734165595,
+    "last_online": 1741557722,
     "joined": 1542904873,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2271,
-            "date": 1734021821,
-            "rd": 47
+            "rating": 2314,
+            "date": 1739885625,
+            "rd": 46
         },
         "best": {
             "rating": 2340,
             "date": 1706431124,
-            "game": "https://www.chess.com/game/live/122116787521"
+            "game": "https://www.chess.com/game/live/131484617475"
         },
         "record": {
-            "win": 173,
-            "loss": 99,
-            "draw": 27
+            "win": 198,
+            "loss": 117,
+            "draw": 29
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2463,
-            "date": 1730395860,
-            "rd": 28
+            "rating": 2392,
+            "date": 1740852262,
+            "rd": 56
         },
         "best": {
             "rating": 2496,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/88019942705"
         },
         "record": {
-            "win": 1684,
-            "loss": 1688,
-            "draw": 251
+            "win": 1698,
+            "loss": 1708,
+            "draw": 252
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2263,
-            "date": 1733943822,
-            "rd": 35
+            "rating": 2383,
+            "date": 1741559358,
+            "rd": 36
         },
         "best": {
             "rating": 2540,
@@ -79,15 +79,15 @@
             "game": "https://www.chess.com/game/live/88291277199"
         },
         "record": {
-            "win": 2698,
-            "loss": 2753,
-            "draw": 454
+            "win": 2831,
+            "loss": 2864,
+            "draw": 481
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3578,
-            "date": 1730566015
+            "rating": 3638,
+            "date": 1737402351
         },
         "lowest": {
             "rating": 412,

@@ -5,10 +5,10 @@
     "name": "Miguel Herrera",
     "username": "miguelho67",
     "title": "IM",
-    "followers": 20,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Ciudad de Mexico",
-    "last_online": 1733700020,
+    "last_online": 1741488316,
     "joined": 1609347461,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2451,
-            "date": 1694148003,
-            "rd": 68
+            "rating": 2462,
+            "date": 1741055750,
+            "rd": 40
         },
         "best": {
             "rating": 2575,
@@ -44,26 +44,26 @@
             "game": "https://www.chess.com/game/live/60928729643"
         },
         "record": {
-            "win": 481,
-            "loss": 370,
-            "draw": 39
+            "win": 518,
+            "loss": 407,
+            "draw": 43
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2658,
-            "date": 1729397841,
-            "rd": 47
+            "rating": 2603,
+            "date": 1741494709,
+            "rd": 22
         },
         "best": {
-            "rating": 2681,
-            "date": 1728178790,
+            "rating": 2701,
+            "date": 1738207475,
             "game": "https://www.chess.com/game/live/65085659441"
         },
         "record": {
-            "win": 3758,
-            "loss": 2702,
-            "draw": 696
+            "win": 3993,
+            "loss": 2864,
+            "draw": 728
         }
     },
     "tactics": {

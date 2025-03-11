@@ -6,9 +6,9 @@
     "name": "Bozidar Kisic",
     "username": "ronartest77",
     "title": "FM",
-    "followers": 55,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/ME",
-    "last_online": 1731968213,
+    "last_online": 1741644490,
     "joined": 1523526644,
     "status": "premium",
     "is_streamer": false,
@@ -29,9 +29,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2516,
-            "date": 1731974659,
-            "rd": 29
+            "rating": 2591,
+            "date": 1741647893,
+            "rd": 22
         },
         "best": {
             "rating": 2720,
@@ -39,15 +39,15 @@
             "game": "https://www.chess.com/game/live/5927214963"
         },
         "record": {
-            "win": 5675,
-            "loss": 5843,
-            "draw": 845
+            "win": 5980,
+            "loss": 6184,
+            "draw": 894
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2457,
-            "date": 1729030634,
+            "rating": 2496,
+            "date": 1735083750,
             "rd": 49
         },
         "best": {
@@ -56,9 +56,9 @@
             "game": "https://www.chess.com/game/live/120928865811"
         },
         "record": {
-            "win": 987,
-            "loss": 842,
-            "draw": 132
+            "win": 991,
+            "loss": 846,
+            "draw": 133
         }
     },
     "tactics": {

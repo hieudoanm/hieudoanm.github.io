@@ -6,9 +6,9 @@
     "name": "Theo Bressy",
     "username": "mfatigue",
     "title": "FM",
-    "followers": 56,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734019466,
+    "last_online": 1741624942,
     "joined": 1687988667,
     "status": "premium",
     "is_streamer": false,
@@ -17,27 +17,27 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1619,
-            "date": 1731525043,
-            "rd": 333
+            "rating": 1868,
+            "date": 1737456154,
+            "rd": 167
         },
         "best": {
-            "rating": 1619,
-            "date": 1715122150,
-            "game": "https://www.chess.com/game/daily/644400741"
+            "rating": 1868,
+            "date": 1737456154,
+            "game": "https://www.chess.com/game/daily/750654961"
         },
         "record": {
-            "win": 3,
+            "win": 25,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 15958,
+            "time_per_move": 13351,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2359,
-            "date": 1715543479,
+            "date": 1736426978,
             "rd": 48
         },
         "best": {
@@ -53,36 +53,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2425,
-            "date": 1726332444,
-            "rd": 85
+            "rating": 2576,
+            "date": 1741448586,
+            "rd": 45
         },
         "best": {
-            "rating": 2513,
-            "date": 1696028289,
+            "rating": 2554,
+            "date": 1735406979,
             "game": "https://www.chess.com/game/live/102533407009"
         },
         "record": {
-            "win": 98,
-            "loss": 98,
-            "draw": 20
+            "win": 119,
+            "loss": 107,
+            "draw": 21
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2500,
-            "date": 1734045726,
-            "rd": 24
+            "rating": 2532,
+            "date": 1741440540,
+            "rd": 31
         },
         "best": {
-            "rating": 2641,
-            "date": 1733252161,
+            "rating": 2672,
+            "date": 1735853392,
             "game": "https://www.chess.com/game/live/89479299271"
         },
         "record": {
-            "win": 1931,
-            "loss": 2006,
-            "draw": 599
+            "win": 2261,
+            "loss": 2369,
+            "draw": 694
         }
     },
     "fide": 0,
@@ -98,8 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 62,
-            "score": 59
+            "total_attempts": 67,
+            "score": 64
         }
     }
 }

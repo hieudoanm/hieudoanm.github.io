@@ -6,7 +6,7 @@
     "title": "IM",
     "followers": 172,
     "country": "https://api.chess.com/pub/country/PG",
-    "last_online": 1733847157,
+    "last_online": 1741248196,
     "joined": 1499519452,
     "status": "premium",
     "is_streamer": false,
@@ -63,8 +63,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2662,
-            "date": 1728031118,
+            "rating": 2652,
+            "date": 1738427963,
             "rd": 49
         },
         "best": {
@@ -74,14 +74,14 @@
         },
         "record": {
             "win": 3400,
-            "loss": 2716,
+            "loss": 2717,
             "draw": 621
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3452,
-            "date": 1692608108
+            "rating": 3520,
+            "date": 1740481047
         },
         "lowest": {
             "rating": 410,

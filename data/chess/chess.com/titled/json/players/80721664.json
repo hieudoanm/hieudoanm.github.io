@@ -6,10 +6,10 @@
     "name": "Christian Troyke",
     "username": "vanimpe",
     "title": "IM",
-    "followers": 2,
+    "followers": 3,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Erfurt",
-    "last_online": 1734091058,
+    "last_online": 1739711455,
     "joined": 1590634796,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2629,
-            "date": 1730317664,
-            "rd": 48
+            "rating": 2557,
+            "date": 1738601692,
+            "rd": 38
         },
         "best": {
             "rating": 2647,
@@ -40,9 +40,9 @@
             "game": "https://www.chess.com/game/live/59844078425"
         },
         "record": {
-            "win": 449,
-            "loss": 372,
-            "draw": 120
+            "win": 476,
+            "loss": 409,
+            "draw": 127
         }
     },
     "fide": 2319,

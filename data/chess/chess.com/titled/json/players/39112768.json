@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 8,
     "country": "https://api.chess.com/pub/country/BY",
-    "last_online": 1723888948,
+    "last_online": 1735842450,
     "joined": 1506942691,
     "status": "premium",
     "is_streamer": false,
@@ -62,8 +62,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3304,
-            "date": 1723890527
+            "rating": 3348,
+            "date": 1735843361
         },
         "lowest": {
             "rating": 416,

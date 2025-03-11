@@ -1,14 +1,14 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23145468.1277d95f.200x200o.743747ae4f1f.jpeg",
     "player_id": 23145468,
-    "@id": "https://api.chess.com/pub/player/xluring1",
-    "url": "https://www.chess.com/member/xLuring1",
+    "@id": "https://api.chess.com/pub/player/xtrx5",
+    "url": "https://www.chess.com/member/xTrx5",
     "name": "Trygve Dahl",
-    "username": "xluring1",
+    "username": "xtrx5",
     "title": "FM",
     "followers": 17,
-    "country": "https://api.chess.com/pub/country/NO",
-    "last_online": 1734012748,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1741540188,
     "joined": 1436340281,
     "status": "premium",
     "is_streamer": false,
@@ -70,18 +70,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2458,
-            "date": 1733940827,
-            "rd": 43
+            "rating": 2504,
+            "date": 1736357418,
+            "rd": 42
         },
         "best": {
-            "rating": 2458,
-            "date": 1733940827,
+            "rating": 2504,
+            "date": 1736357418,
             "game": "https://www.chess.com/game/live/5720499035"
         },
         "record": {
-            "win": 720,
-            "loss": 584,
+            "win": 742,
+            "loss": 598,
             "draw": 80
         }
     },

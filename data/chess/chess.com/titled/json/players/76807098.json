@@ -6,9 +6,9 @@
     "name": "Srinath Rao",
     "username": "chesspreceptor",
     "title": "IM",
-    "followers": 140,
+    "followers": 144,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734166185,
+    "last_online": 1741690426,
     "joined": 1586975908,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2575,
-            "date": 1723562804,
-            "rd": 49
+            "rating": 2648,
+            "date": 1739681133,
+            "rd": 43
         },
         "best": {
             "rating": 2660,
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/73776774329"
         },
         "record": {
-            "win": 344,
-            "loss": 346,
+            "win": 359,
+            "loss": 351,
             "draw": 48
         }
     },
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 59,
+            "score": 56
         }
     }
 }

@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 13,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733992730,
+    "last_online": 1741577744,
     "joined": 1585205090,
     "status": "premium",
     "is_streamer": false,
@@ -14,8 +14,8 @@
     "streaming_platforms": [],
     "tactics": {
         "highest": {
-            "rating": 3053,
-            "date": 1729792663
+            "rating": 3078,
+            "date": 1734214033
         },
         "lowest": {
             "rating": 1200,

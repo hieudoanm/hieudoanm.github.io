@@ -9,7 +9,7 @@
     "followers": 10,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Warsaw",
-    "last_online": 1733861929,
+    "last_online": 1739560755,
     "joined": 1381720061,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2070,
-            "date": 1733862351,
-            "rd": 39
+            "rating": 2000,
+            "date": 1741385953,
+            "rd": 53
         },
         "best": {
             "rating": 2181,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/79714933717"
         },
         "record": {
-            "win": 12346,
-            "loss": 12311,
-            "draw": 860
+            "win": 12365,
+            "loss": 12344,
+            "draw": 862
         }
     },
     "chess_blitz": {

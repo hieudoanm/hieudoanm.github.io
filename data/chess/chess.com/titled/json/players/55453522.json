@@ -5,9 +5,9 @@
     "name": "Bastien Dubessay",
     "username": "thabarwa",
     "title": "FM",
-    "followers": 35,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/MM",
-    "last_online": 1734040229,
+    "last_online": 1740054075,
     "joined": 1546482777,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1766,
-            "date": 1708981642,
+            "date": 1740562162,
             "rd": 109
         },
         "best": {
@@ -29,15 +29,14 @@
             "win": 9,
             "loss": 5,
             "draw": 0,
-            "time_per_move": 29645,
+            "time_per_move": 29797,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2532,
-            "date": 1733446782,
-            "rd": 49
+            "rating": 2535,
+            "date": 1738806662
         },
         "best": {
             "rating": 2538,
@@ -45,43 +44,43 @@
             "game": "https://www.chess.com/game/live/88866137853"
         },
         "record": {
-            "win": 128,
-            "loss": 38,
+            "win": 129,
+            "loss": 39,
             "draw": 7
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2569,
-            "date": 1734041739,
-            "rd": 32
+            "rating": 2548,
+            "date": 1738936983,
+            "rd": 29
         },
         "best": {
-            "rating": 2604,
-            "date": 1733439307,
+            "rating": 2618,
+            "date": 1738804609,
             "game": "https://www.chess.com/game/live/122760914907"
         },
         "record": {
-            "win": 2697,
-            "loss": 2044,
-            "draw": 389
+            "win": 2831,
+            "loss": 2158,
+            "draw": 414
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2537,
-            "date": 1733484526,
-            "rd": 47
+            "rating": 2500,
+            "date": 1738931896,
+            "rd": 43
         },
         "best": {
-            "rating": 2540,
-            "date": 1733445504,
+            "rating": 2548,
+            "date": 1736857472,
             "game": "https://www.chess.com/game/live/99186286979"
         },
         "record": {
-            "win": 1276,
-            "loss": 962,
-            "draw": 187
+            "win": 1294,
+            "loss": 978,
+            "draw": 193
         }
     },
     "tactics": {

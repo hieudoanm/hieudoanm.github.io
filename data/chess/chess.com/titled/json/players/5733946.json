@@ -6,15 +6,15 @@
     "name": "Carlos Alarcia",
     "username": "chess_mad35",
     "title": "FM",
-    "followers": 4,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1734109610,
+    "last_online": 1741551801,
     "joined": 1315177570,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,43 +35,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2470,
-            "date": 1734112453,
-            "rd": 20
+            "rating": 2559,
+            "date": 1741553736,
+            "rd": 18
         },
         "best": {
-            "rating": 2715,
-            "date": 1732574605,
+            "rating": 2716,
+            "date": 1736715502,
             "game": "https://www.chess.com/game/live/126483564659"
         },
         "record": {
-            "win": 366,
-            "loss": 440,
-            "draw": 58
+            "win": 1314,
+            "loss": 1412,
+            "draw": 220
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2491,
-            "date": 1733875520,
-            "rd": 19
+            "rating": 2523,
+            "date": 1741217640,
+            "rd": 27
         },
         "best": {
-            "rating": 2598,
-            "date": 1732558115,
-            "game": "https://www.chess.com/game/live/126295764415"
+            "rating": 2640,
+            "date": 1739573634,
+            "game": "https://www.chess.com/game/live/130026606607"
         },
         "record": {
-            "win": 406,
-            "loss": 264,
-            "draw": 39
+            "win": 910,
+            "loss": 837,
+            "draw": 124
         }
     },
     "fide": 2244,
     "tactics": {
         "highest": {
-            "rating": 400,
-            "date": 1315177570
+            "rating": 2983,
+            "date": 1740177763
         },
         "lowest": {
             "rating": 400,

@@ -5,9 +5,9 @@
     "name": "Xavier Avila Jimenez",
     "username": "candela2013",
     "title": "FM",
-    "followers": 23,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734015623,
+    "last_online": 1741418354,
     "joined": 1485803531,
     "status": "premium",
     "is_streamer": false,
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2423,
-            "date": 1733648670,
-            "rd": 90
+            "rating": 2433,
+            "date": 1741335609,
+            "rd": 92
         },
         "best": {
             "rating": 2488,
@@ -79,15 +79,15 @@
             "game": "https://www.chess.com/game/live/82830673239"
         },
         "record": {
-            "win": 2121,
-            "loss": 1874,
-            "draw": 146
+            "win": 2123,
+            "loss": 1875,
+            "draw": 147
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3514,
-            "date": 1708511415
+            "rating": 3526,
+            "date": 1736321257
         },
         "lowest": {
             "rating": 1009,

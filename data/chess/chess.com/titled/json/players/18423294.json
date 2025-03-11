@@ -6,20 +6,20 @@
     "name": "Camilita Becerra Fonseca",
     "username": "camilita-becerra",
     "title": "WCM",
-    "followers": 145,
+    "followers": 146,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Colombia",
-    "last_online": 1730134218,
+    "last_online": 1740101861,
     "joined": 1407612825,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 532,
-            "date": 1708280619,
+            "date": 1735946849,
             "rd": 127
         },
         "best": {
@@ -56,9 +56,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 945,
-            "date": 1730348326,
-            "rd": 58
+            "rating": 865,
+            "date": 1741671626,
+            "rd": 38
         },
         "best": {
             "rating": 1213,
@@ -66,9 +66,9 @@
             "game": "https://www.chess.com/game/live/121645238067"
         },
         "record": {
-            "win": 115,
-            "loss": 141,
-            "draw": 7
+            "win": 181,
+            "loss": 212,
+            "draw": 12
         }
     },
     "chess_bullet": {
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 779,
-            "date": 1731829364,
-            "rd": 42
+            "rating": 765,
+            "date": 1735271028,
+            "rd": 43
         },
         "best": {
             "rating": 1281,
@@ -100,8 +100,8 @@
             "game": "https://www.chess.com/game/live/3352370103"
         },
         "record": {
-            "win": 4673,
-            "loss": 4869,
+            "win": 4679,
+            "loss": 4877,
             "draw": 212
         }
     },

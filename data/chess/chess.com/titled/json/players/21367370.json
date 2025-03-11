@@ -6,9 +6,9 @@
     "name": "Trevelyn Varden",
     "username": "cipherc0dex",
     "title": "FM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/ZA",
-    "last_online": 1734158375,
+    "last_online": 1740327383,
     "joined": 1425484555,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     "fide": 1421,
     "tactics": {
         "highest": {
-            "rating": 2845,
-            "date": 1720164467
+            "rating": 2878,
+            "date": 1740127389
         },
         "lowest": {
             "rating": 1238,

@@ -6,10 +6,10 @@
     "name": "Asa Hoffmann",
     "username": "asahoffmann",
     "title": "FM",
-    "followers": 83,
+    "followers": 88,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York City",
-    "last_online": 1734132657,
+    "last_online": 1741702699,
     "joined": 1517946429,
     "status": "premium",
     "is_streamer": false,
@@ -29,19 +29,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2484,
-            "date": 1734147458,
+            "rating": 2413,
+            "date": 1741663870,
             "rd": 23
         },
         "best": {
-            "rating": 2543,
-            "date": 1733955081,
+            "rating": 2546,
+            "date": 1739726636,
             "game": "https://www.chess.com/game/live/126981055711"
         },
         "record": {
-            "win": 14870,
-            "loss": 10260,
-            "draw": 2881
+            "win": 15609,
+            "loss": 10776,
+            "draw": 3020
         }
     },
     "fide": 2307,

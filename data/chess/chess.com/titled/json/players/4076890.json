@@ -8,7 +8,7 @@
     "followers": 13,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "Melbourne",
-    "last_online": 1734070882,
+    "last_online": 1741596825,
     "joined": 1286259046,
     "status": "premium",
     "is_streamer": false,
@@ -34,13 +34,18 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2533,
-            "date": 1726217374
+            "rating": 3114,
+            "date": 1737607767
         },
         "lowest": {
             "rating": 1211,
             "date": 1592291389
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 27,
+            "score": 25
+        }
+    }
 }

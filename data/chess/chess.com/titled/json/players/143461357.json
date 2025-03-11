@@ -9,7 +9,7 @@
     "followers": 37,
     "country": "https://api.chess.com/pub/country/TH",
     "location": "SEA",
-    "last_online": 1734059861,
+    "last_online": 1741489691,
     "joined": 1622984748,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2530,
-            "date": 1733249220,
-            "rd": 47
+            "rating": 2499,
+            "date": 1738687153,
+            "rd": 48
         },
         "best": {
             "rating": 2541,
@@ -82,8 +82,8 @@
         },
         "record": {
             "win": 208,
-            "loss": 174,
-            "draw": 31
+            "loss": 177,
+            "draw": 32
         }
     },
     "fide": 2384,

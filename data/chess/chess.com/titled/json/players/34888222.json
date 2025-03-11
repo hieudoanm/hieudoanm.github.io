@@ -6,9 +6,9 @@
     "name": "Rosh Jain",
     "username": "rosh1610",
     "title": "FM",
-    "followers": 357,
+    "followers": 381,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734157788,
+    "last_online": 1741683708,
     "joined": 1492574405,
     "status": "premium",
     "is_streamer": false,
@@ -50,26 +50,25 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2093,
-            "date": 1730818666,
+            "rating": 2126,
+            "date": 1740589720,
             "rd": 49
         },
         "best": {
-            "rating": 2122,
-            "date": 1685283041,
+            "rating": 2137,
+            "date": 1739725271,
             "game": "https://www.chess.com/game/live/108487301401"
         },
         "record": {
-            "win": 555,
-            "loss": 385,
-            "draw": 43
+            "win": 570,
+            "loss": 387,
+            "draw": 44
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2401,
-            "date": 1733909640,
-            "rd": 30
+            "rating": 2710,
+            "date": 1741684006
         },
         "best": {
             "rating": 2665,
@@ -77,16 +76,16 @@
             "game": "https://www.chess.com/game/live/83186119333"
         },
         "record": {
-            "win": 1417,
-            "loss": 1286,
-            "draw": 113
+            "win": 1672,
+            "loss": 1478,
+            "draw": 146
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2687,
-            "date": 1733849732,
-            "rd": 41
+            "rating": 2658,
+            "date": 1741365498,
+            "rd": 43
         },
         "best": {
             "rating": 2705,
@@ -94,16 +93,16 @@
             "game": "https://www.chess.com/game/live/119118680945"
         },
         "record": {
-            "win": 1989,
-            "loss": 1492,
-            "draw": 191
+            "win": 2025,
+            "loss": 1522,
+            "draw": 194
         }
     },
     "fide": 2248,
     "tactics": {
         "highest": {
-            "rating": 3338,
-            "date": 1693971309
+            "rating": 3360,
+            "date": 1738054149
         },
         "lowest": {
             "rating": 453,

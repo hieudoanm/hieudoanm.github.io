@@ -6,7 +6,7 @@
     "title": "WCM",
     "followers": 4,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734055974,
+    "last_online": 1741531182,
     "joined": 1649659449,
     "status": "premium",
     "is_streamer": false,
@@ -59,6 +59,10 @@
         "best": {
             "total_attempts": 43,
             "score": 41
+        },
+        "daily": {
+            "total_attempts": 27,
+            "score": 24
         }
     }
 }

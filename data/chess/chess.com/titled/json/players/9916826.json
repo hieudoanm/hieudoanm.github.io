@@ -6,15 +6,15 @@
     "name": "R\u00f3bert Torma",
     "username": "vizafogo",
     "title": "IM",
-    "followers": 110,
+    "followers": 112,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734086100,
+    "last_online": 1741643007,
     "joined": 1354824515,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -56,9 +56,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2516,
-            "date": 1734089911,
-            "rd": 39
+            "rating": 2440,
+            "date": 1741386292,
+            "rd": 46
         },
         "best": {
             "rating": 2603,
@@ -66,9 +66,9 @@
             "game": "https://www.chess.com/game/live/124637977859"
         },
         "record": {
-            "win": 223,
-            "loss": 61,
-            "draw": 31
+            "win": 271,
+            "loss": 80,
+            "draw": 37
         }
     },
     "chess_bullet": {
@@ -90,19 +90,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2553,
-            "date": 1734041249,
-            "rd": 30
+            "rating": 2479,
+            "date": 1741643935,
+            "rd": 31
         },
         "best": {
-            "rating": 2690,
-            "date": 1642617033,
+            "rating": 2695,
+            "date": 1737280097,
             "game": "https://www.chess.com/game/live/53333343059"
         },
         "record": {
-            "win": 5625,
-            "loss": 3694,
-            "draw": 987
+            "win": 5856,
+            "loss": 3880,
+            "draw": 1035
         }
     },
     "fide": 2400,

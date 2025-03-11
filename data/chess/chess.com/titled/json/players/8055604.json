@@ -6,10 +6,10 @@
     "name": "Ismael Karim",
     "username": "imkarimismael",
     "title": "IM",
-    "followers": 89,
+    "followers": 95,
     "country": "https://api.chess.com/pub/country/MA",
     "location": "Muscat",
-    "last_online": 1732380551,
+    "last_online": 1740575550,
     "joined": 1341091104,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2520,
-            "date": 1705779391,
-            "rd": 42
+            "rating": 2549,
+            "date": 1740412388,
+            "rd": 41
         },
         "best": {
             "rating": 2530,
@@ -64,8 +64,8 @@
             "game": "https://www.chess.com/game/live/13170122119"
         },
         "record": {
-            "win": 194,
-            "loss": 174,
+            "win": 211,
+            "loss": 189,
             "draw": 25
         }
     },

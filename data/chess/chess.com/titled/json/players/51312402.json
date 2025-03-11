@@ -8,7 +8,7 @@
     "followers": 6,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Krak\u00f3w",
-    "last_online": 1734178679,
+    "last_online": 1741634982,
     "joined": 1540942014,
     "status": "premium",
     "is_streamer": false,
@@ -80,10 +80,6 @@
         "best": {
             "total_attempts": 55,
             "score": 52
-        },
-        "daily": {
-            "total_attempts": 41,
-            "score": 38
         }
     }
 }

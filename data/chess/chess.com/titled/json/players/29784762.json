@@ -9,7 +9,7 @@
     "followers": 94,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Prague",
-    "last_online": 1734184518,
+    "last_online": 1741389693,
     "joined": 1473023589,
     "status": "premium",
     "is_streamer": false,
@@ -101,10 +101,6 @@
         "best": {
             "total_attempts": 69,
             "score": 66
-        },
-        "daily": {
-            "total_attempts": 46,
-            "score": 46
         }
     }
 }

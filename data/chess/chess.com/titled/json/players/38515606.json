@@ -3,12 +3,12 @@
     "player_id": 38515606,
     "@id": "https://api.chess.com/pub/player/jarming",
     "url": "https://www.chess.com/member/Jarming",
-    "name": "Julian Anotnio Rojas Alarcon",
+    "name": "Julian Antonio Rojas Alarcon",
     "username": "jarming",
     "title": "FM",
-    "followers": 415,
+    "followers": 458,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1734123910,
+    "last_online": 1741659904,
     "joined": 1505012862,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1440,
-            "date": 1717242653,
+            "date": 1736950380,
             "rd": 177
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2703,
-            "date": 1623033639,
-            "rd": 140
+            "rating": 2687,
+            "date": 1737345287,
+            "rd": 49
         },
         "best": {
             "rating": 2776,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/8297654463"
         },
         "record": {
-            "win": 11,
-            "loss": 1,
+            "win": 12,
+            "loss": 2,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2732,
-            "date": 1734148863,
-            "rd": 28
+            "rating": 2824,
+            "date": 1741673237,
+            "rd": 23
         },
         "best": {
             "rating": 2886,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/123037222875"
         },
         "record": {
-            "win": 3056,
-            "loss": 2057,
-            "draw": 479
+            "win": 3676,
+            "loss": 2497,
+            "draw": 587
         }
     },
     "tactics": {

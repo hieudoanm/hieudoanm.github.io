@@ -8,12 +8,12 @@
     "followers": 52,
     "country": "https://api.chess.com/pub/country/US",
     "location": "California",
-    "last_online": 1730197547,
+    "last_online": 1740896912,
     "joined": 1264029530,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2487,
-            "date": 1672302734,
-            "rd": 159
+            "rating": 2540,
+            "date": 1741526456,
+            "rd": 46
         },
         "best": {
             "rating": 2616,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/3992463505"
         },
         "record": {
-            "win": 2390,
-            "loss": 1915,
-            "draw": 315
+            "win": 2400,
+            "loss": 1923,
+            "draw": 318
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2605,
-            "date": 1730203287,
-            "rd": 43
+            "rating": 2590,
+            "date": 1740898356,
+            "rd": 45
         },
         "best": {
             "rating": 2806,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/3622923612"
         },
         "record": {
-            "win": 7841,
-            "loss": 6127,
-            "draw": 1417
+            "win": 7860,
+            "loss": 6145,
+            "draw": 1419
         }
     },
     "fide": 2330,

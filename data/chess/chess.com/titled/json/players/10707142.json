@@ -6,9 +6,9 @@
     "name": "Mihnea Costachi",
     "username": "jacky72",
     "title": "IM",
-    "followers": 311,
+    "followers": 336,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1734122521,
+    "last_online": 1741703820,
     "joined": 1360074641,
     "status": "premium",
     "is_streamer": false,
@@ -34,42 +34,42 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2857,
-            "date": 1733226153,
-            "rd": 42
+            "rating": 2932,
+            "date": 1740733636,
+            "rd": 20
         },
         "best": {
-            "rating": 2940,
-            "date": 1611237382,
+            "rating": 3062,
+            "date": 1739717435,
             "game": "https://www.chess.com/game/live/71091991137"
         },
         "record": {
-            "win": 2574,
-            "loss": 2438,
-            "draw": 397
+            "win": 3710,
+            "loss": 3146,
+            "draw": 556
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2769,
-            "date": 1733224276,
-            "rd": 42
+            "rating": 2864,
+            "date": 1740162215,
+            "rd": 32
         },
         "best": {
-            "rating": 2922,
-            "date": 1679682851,
+            "rating": 2970,
+            "date": 1738222991,
             "game": "https://www.chess.com/game/live/89566240457"
         },
         "record": {
-            "win": 4441,
-            "loss": 4091,
-            "draw": 1024
+            "win": 4672,
+            "loss": 4288,
+            "draw": 1076
         }
     },
     "tactics": {
         "highest": {
-            "rating": 4215,
-            "date": 1706083488
+            "rating": 4225,
+            "date": 1734376896
         },
         "lowest": {
             "rating": 1351,
@@ -80,6 +80,10 @@
         "best": {
             "total_attempts": 94,
             "score": 91
+        },
+        "daily": {
+            "total_attempts": 30,
+            "score": 27
         }
     }
 }

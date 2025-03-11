@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 22,
     "country": "https://api.chess.com/pub/country/PA",
-    "last_online": 1733058569,
+    "last_online": 1739071252,
     "joined": 1350848210,
     "status": "premium",
     "is_streamer": false,
@@ -96,8 +96,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 43,
-            "score": 40
+            "total_attempts": 44,
+            "score": 43
         }
     }
 }

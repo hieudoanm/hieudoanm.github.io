@@ -6,10 +6,10 @@
     "name": "Pavel Plotnikov",
     "username": "plotnikovpavel",
     "title": "FM",
-    "followers": 82,
+    "followers": 83,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Moscow",
-    "last_online": 1733868811,
+    "last_online": 1741386458,
     "joined": 1436545321,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2353,
-            "date": 1653194196,
-            "rd": 137
+            "rating": 2254,
+            "date": 1738071117,
+            "rd": 190
         },
         "best": {
             "rating": 2447,
@@ -41,15 +41,15 @@
         },
         "record": {
             "win": 105,
-            "loss": 91,
+            "loss": 92,
             "draw": 12
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2413,
-            "date": 1730844466,
-            "rd": 89
+            "rating": 2546,
+            "date": 1739917029,
+            "rd": 49
         },
         "best": {
             "rating": 2643,
@@ -57,16 +57,16 @@
             "game": "https://www.chess.com/game/live/42909656919"
         },
         "record": {
-            "win": 2026,
-            "loss": 1943,
-            "draw": 337
+            "win": 2049,
+            "loss": 1959,
+            "draw": 338
         }
     },
     "fide": 2297,
     "tactics": {
         "highest": {
-            "rating": 3103,
-            "date": 1651894140
+            "rating": 3136,
+            "date": 1737733132
         },
         "lowest": {
             "rating": 1003,

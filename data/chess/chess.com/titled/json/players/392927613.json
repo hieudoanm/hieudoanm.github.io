@@ -6,9 +6,9 @@
     "name": "Frederico Jardim",
     "username": "fred_jardim",
     "title": "CM",
-    "followers": 18,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1733920152,
+    "last_online": 1741556793,
     "joined": 1727800786,
     "status": "premium",
     "is_streamer": false,
@@ -34,8 +34,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3246,
-            "date": 1733751621
+            "rating": 3268,
+            "date": 1739532383
         },
         "lowest": {
             "rating": 800,

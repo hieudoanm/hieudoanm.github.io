@@ -3,11 +3,12 @@
     "player_id": 64650972,
     "@id": "https://api.chess.com/pub/player/yfchess",
     "url": "https://www.chess.com/member/YFchess",
+    "name": "Yang-Fan Zhou",
     "username": "yfchess",
     "title": "IM",
-    "followers": 57,
+    "followers": 86,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1734157814,
+    "last_online": 1741618485,
     "joined": 1566651413,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2452,
-            "date": 1623185875,
+            "date": 1736953675,
             "rd": 348
         },
         "best": {
@@ -33,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2424,
-            "date": 1719868328,
-            "rd": 76
+            "rating": 2600,
+            "date": 1738069971,
+            "rd": 43
         },
         "best": {
             "rating": 2631,
@@ -43,16 +44,16 @@
             "game": "https://www.chess.com/game/live/13813993763"
         },
         "record": {
-            "win": 218,
-            "loss": 137,
-            "draw": 20
+            "win": 249,
+            "loss": 145,
+            "draw": 22
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2503,
-            "date": 1720738013,
-            "rd": 33
+            "date": 1741106404,
+            "rd": 48
         },
         "best": {
             "rating": 2527,
@@ -60,9 +61,9 @@
             "game": "https://www.chess.com/game/live/114473378487"
         },
         "record": {
-            "win": 508,
-            "loss": 337,
-            "draw": 65
+            "win": 511,
+            "loss": 338,
+            "draw": 66
         }
     },
     "fide": 0,
@@ -78,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 65,
-            "score": 62
+            "total_attempts": 66,
+            "score": 63
         }
     }
 }

@@ -5,10 +5,10 @@
     "name": "Alexey Duilger",
     "username": "dulger",
     "title": "IM",
-    "followers": 236,
+    "followers": 237,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Tucson",
-    "last_online": 1732480497,
+    "last_online": 1740020156,
     "joined": 1427407778,
     "status": "premium",
     "is_streamer": false,
@@ -89,9 +89,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2036,
-            "date": 1732807442,
-            "rd": 77
+            "rating": 1896,
+            "date": 1739934696,
+            "rd": 64
         },
         "best": {
             "rating": 2350,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/2044721514"
         },
         "record": {
-            "win": 6172,
-            "loss": 5521,
-            "draw": 1101
+            "win": 6175,
+            "loss": 5533,
+            "draw": 1102
         }
     },
     "tactics": {

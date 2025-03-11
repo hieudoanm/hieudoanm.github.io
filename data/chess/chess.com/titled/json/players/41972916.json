@@ -6,9 +6,9 @@
     "name": "Gaute Bergan",
     "username": "bernt42",
     "title": "CM",
-    "followers": 53,
+    "followers": 54,
     "country": "https://api.chess.com/pub/country/NO",
-    "last_online": 1730893189,
+    "last_online": 1741357919,
     "joined": 1515017306,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1811,
-            "date": 1733588519,
+            "date": 1740414528,
             "rd": 198
         },
         "best": {
@@ -30,15 +30,15 @@
             "win": 9,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 111912,
+            "time_per_move": 117000,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1996,
-            "date": 1730117827,
-            "rd": 49
+            "rating": 1961,
+            "date": 1739540134,
+            "rd": 77
         },
         "best": {
             "rating": 2078,
@@ -47,7 +47,7 @@
         },
         "record": {
             "win": 29,
-            "loss": 9,
+            "loss": 10,
             "draw": 5
         }
     },
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2211,
-            "date": 1730893549,
-            "rd": 52
+            "rating": 2200,
+            "date": 1739701418,
+            "rd": 39
         },
         "best": {
             "rating": 2326,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/100522884365"
         },
         "record": {
-            "win": 751,
-            "loss": 612,
-            "draw": 108
+            "win": 794,
+            "loss": 650,
+            "draw": 120
         }
     },
     "fide": 2004,

@@ -6,21 +6,38 @@
     "name": "Senthil Maran",
     "username": "hackingkid98",
     "title": "IM",
-    "followers": 24,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734085015,
+    "last_online": 1741486084,
     "joined": 1598968572,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Champion",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2000,
+            "date": 1740093481,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1740093481,
+            "game": "https://www.chess.com/game/live/133831743699"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
     "chess_bullet": {
         "last": {
-            "rating": 2623,
-            "date": 1730573457,
-            "rd": 28
+            "rating": 2582,
+            "date": 1741488480,
+            "rd": 42
         },
         "best": {
             "rating": 2723,
@@ -28,9 +45,9 @@
             "game": "https://www.chess.com/game/live/124302600837"
         },
         "record": {
-            "win": 2545,
-            "loss": 2055,
-            "draw": 344
+            "win": 2558,
+            "loss": 2073,
+            "draw": 345
         }
     },
     "chess_blitz": {

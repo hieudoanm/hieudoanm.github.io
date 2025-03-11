@@ -6,10 +6,10 @@
     "name": "Aansh Nandan Nerurkar",
     "username": "juniormvl",
     "title": "CM",
-    "followers": 26,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Mumbai",
-    "last_online": 1733934344,
+    "last_online": 1741362438,
     "joined": 1586787790,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2576,
-            "date": 1733644797,
-            "rd": 40
+            "rating": 2672,
+            "date": 1741277734,
+            "rd": 49
         },
         "best": {
-            "rating": 2615,
-            "date": 1730347561,
-            "game": "https://www.chess.com/game/live/124640914427"
+            "rating": 2695,
+            "date": 1738489211,
+            "game": "https://www.chess.com/game/live/130528257487"
         },
         "record": {
-            "win": 430,
-            "loss": 217,
-            "draw": 73
+            "win": 488,
+            "loss": 234,
+            "draw": 81
         }
     },
     "tactics": {
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 50,
+            "score": 47
         }
     }
 }

@@ -6,9 +6,9 @@
     "name": "Soham Kamotra",
     "username": "papipapita",
     "title": "IM",
-    "followers": 49,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734172484,
+    "last_online": 1741642571,
     "joined": 1648149765,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1815,
-            "date": 1731950721,
+            "date": 1737560159,
             "rd": 239
         },
         "best": {
@@ -32,18 +32,12 @@
             "draw": 2,
             "time_per_move": 21725,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 1718,
-            "date": 1727453350,
+            "date": 1739376912,
             "rd": 109
         },
         "best": {
@@ -59,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2645,
-            "date": 1734176047,
-            "rd": 23
+            "rating": 2597,
+            "date": 1740244826,
+            "rd": 32
         },
         "best": {
             "rating": 2786,
@@ -69,16 +63,16 @@
             "game": "https://www.chess.com/game/live/123683991155"
         },
         "record": {
-            "win": 1299,
-            "loss": 1299,
-            "draw": 152
+            "win": 1715,
+            "loss": 1696,
+            "draw": 210
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2519,
-            "date": 1733848029,
-            "rd": 49
+            "rating": 2580,
+            "date": 1740420401,
+            "rd": 47
         },
         "best": {
             "rating": 2722,
@@ -86,9 +80,9 @@
             "game": "https://www.chess.com/game/live/90175903151"
         },
         "record": {
-            "win": 894,
-            "loss": 927,
-            "draw": 146
+            "win": 910,
+            "loss": 946,
+            "draw": 148
         }
     },
     "tactics": {
@@ -105,10 +99,6 @@
         "best": {
             "total_attempts": 80,
             "score": 77
-        },
-        "daily": {
-            "total_attempts": 48,
-            "score": 45
         }
     }
 }

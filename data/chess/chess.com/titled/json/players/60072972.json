@@ -6,10 +6,10 @@
     "name": "Tarik Selbes",
     "username": "konradrutkowski",
     "title": "FM",
-    "followers": 69,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Istanbul",
-    "last_online": 1733867938,
+    "last_online": 1741593753,
     "joined": 1555845557,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1925,
-            "date": 1678733046,
-            "rd": 235
+            "rating": 1882,
+            "date": 1739721949,
+            "rd": 249
         },
         "best": {
             "rating": 2393,
@@ -29,7 +29,7 @@
         },
         "record": {
             "win": 6,
-            "loss": 3,
+            "loss": 4,
             "draw": 1
         }
     },
@@ -52,8 +52,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2508,
-            "date": 1733875819,
+            "rating": 2505,
+            "date": 1741104383,
             "rd": 49
         },
         "best": {
@@ -63,7 +63,7 @@
         },
         "record": {
             "win": 245,
-            "loss": 266,
+            "loss": 268,
             "draw": 38
         }
     },

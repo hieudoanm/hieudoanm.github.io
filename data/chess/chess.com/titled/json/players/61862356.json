@@ -9,11 +9,12 @@
     "followers": 13,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "Karaganda",
-    "last_online": 1734163897,
+    "last_online": 1738337693,
     "joined": 1559563729,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Wood",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {

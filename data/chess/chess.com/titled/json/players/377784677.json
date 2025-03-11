@@ -6,9 +6,9 @@
     "name": "Petr Matyukov",
     "username": "hamurrapi",
     "title": "FM",
-    "followers": 9,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/SI",
-    "last_online": 1734129489,
+    "last_online": 1741681776,
     "joined": 1722147030,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +34,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2425,
-            "date": 1734086940,
-            "rd": 24
+            "rating": 2519,
+            "date": 1741685193,
+            "rd": 26
         },
         "best": {
-            "rating": 2544,
-            "date": 1733911470,
+            "rating": 2609,
+            "date": 1737706892,
             "game": "https://www.chess.com/game/live/120324666375"
         },
         "record": {
-            "win": 717,
-            "loss": 749,
-            "draw": 121
+            "win": 1028,
+            "loss": 1109,
+            "draw": 180
         }
     },
     "fide": 2315,
     "tactics": {
         "highest": {
-            "rating": 3123,
-            "date": 1733957504
+            "rating": 3163,
+            "date": 1734389495
         },
         "lowest": {
             "rating": 1000,
@@ -62,8 +62,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 41,
-            "score": 38
+            "total_attempts": 43,
+            "score": 42
+        },
+        "daily": {
+            "total_attempts": 45,
+            "score": 42
         }
     }
 }

@@ -6,9 +6,9 @@
     "name": "Kacper Ugorek",
     "username": "neonninja73",
     "title": "CM",
-    "followers": 14,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733937868,
+    "last_online": 1741636331,
     "joined": 1719851835,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2523,
-            "date": 1724958017,
-            "rd": 35
+            "rating": 2531,
+            "date": 1740692016,
+            "rd": 49
         },
         "best": {
             "rating": 2585,
@@ -44,33 +44,33 @@
             "game": "https://www.chess.com/game/live/118589334941"
         },
         "record": {
-            "win": 47,
+            "win": 48,
             "loss": 56,
             "draw": 11
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2579,
-            "date": 1733853929,
-            "rd": 35
+            "rating": 2563,
+            "date": 1740863121,
+            "rd": 33
         },
         "best": {
-            "rating": 2606,
-            "date": 1733848839,
+            "rating": 2652,
+            "date": 1737482267,
             "game": "https://www.chess.com/game/live/124561210095"
         },
         "record": {
-            "win": 564,
-            "loss": 533,
-            "draw": 182
+            "win": 668,
+            "loss": 625,
+            "draw": 212
         }
     },
     "fide": 2236,
     "tactics": {
         "highest": {
-            "rating": 3556,
-            "date": 1731505922
+            "rating": 3567,
+            "date": 1740863773
         },
         "lowest": {
             "rating": 1000,

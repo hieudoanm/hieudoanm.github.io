@@ -6,10 +6,10 @@
     "name": "lwebuga ronald",
     "username": "knightly_king1",
     "title": "CM",
-    "followers": 121,
+    "followers": 134,
     "country": "https://api.chess.com/pub/country/SL",
     "location": "kampala",
-    "last_online": 1733829124,
+    "last_online": 1740981426,
     "joined": 1353657365,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1239,
-            "date": 1723019303,
+            "date": 1738193897,
             "rd": 143
         },
         "best": {
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1511,
-            "date": 1732981202,
-            "rd": 66
+            "rating": 1464,
+            "date": 1739990007,
+            "rd": 68
         },
         "best": {
             "rating": 1665,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/113375988377"
         },
         "record": {
-            "win": 77,
-            "loss": 83,
+            "win": 82,
+            "loss": 91,
             "draw": 8
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1679,
-            "date": 1728360006,
-            "rd": 50
+            "rating": 1685,
+            "date": 1734642449,
+            "rd": 69
         },
         "best": {
             "rating": 1778,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/24693094699"
         },
         "record": {
-            "win": 452,
+            "win": 453,
             "loss": 374,
             "draw": 27
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1833,
-            "date": 1734127115,
+            "rating": 1856,
+            "date": 1741670461,
             "rd": 25
         },
         "best": {
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/64623128915"
         },
         "record": {
-            "win": 3820,
-            "loss": 3954,
-            "draw": 344
+            "win": 4213,
+            "loss": 4382,
+            "draw": 376
         }
     },
     "tactics": {

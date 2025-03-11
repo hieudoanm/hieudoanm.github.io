@@ -5,10 +5,10 @@
     "name": "Eunus Hasan",
     "username": "younus64",
     "title": "FM",
-    "followers": 18,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Khulna",
-    "last_online": 1734083685,
+    "last_online": 1741410622,
     "joined": 1576783870,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1568,
-            "date": 1731671681,
+            "date": 1739081875,
             "rd": 250
         },
         "best": {
@@ -27,18 +27,18 @@
             "game": "https://www.chess.com/game/daily/633258109"
         },
         "record": {
-            "win": 2,
+            "win": 6,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 115038,
+            "time_per_move": 90734,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1670,
-            "date": 1730978700,
-            "rd": 81
+            "rating": 1481,
+            "date": 1741414960,
+            "rd": 67
         },
         "best": {
             "rating": 2123,
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/6149798136"
         },
         "record": {
-            "win": 161,
-            "loss": 118,
-            "draw": 23
+            "win": 180,
+            "loss": 128,
+            "draw": 29
         }
     },
     "chess_bullet": {

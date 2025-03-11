@@ -5,9 +5,9 @@
     "name": "Oliwia Kiolbasa",
     "username": "kanzaww",
     "title": "IM",
-    "followers": 73,
+    "followers": 77,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734012098,
+    "last_online": 1741624965,
     "joined": 1431667477,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2505,
-            "date": 1727522044,
-            "rd": 49
+            "rating": 2461,
+            "date": 1740157411,
+            "rd": 45
         },
         "best": {
             "rating": 2546,
@@ -43,26 +43,26 @@
             "game": "https://www.chess.com/game/live/16122890999"
         },
         "record": {
-            "win": 182,
-            "loss": 164,
+            "win": 201,
+            "loss": 190,
             "draw": 31
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2528,
-            "date": 1715706410,
-            "rd": 45
+            "rating": 2530,
+            "date": 1741105044,
+            "rd": 49
         },
         "best": {
-            "rating": 2548,
-            "date": 1705782985,
+            "rating": 2560,
+            "date": 1736873923,
             "game": "https://www.chess.com/game/live/99517450461"
         },
         "record": {
-            "win": 956,
-            "loss": 792,
-            "draw": 151
+            "win": 974,
+            "loss": 816,
+            "draw": 158
         }
     },
     "tactics": {

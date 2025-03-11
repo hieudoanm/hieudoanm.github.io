@@ -6,10 +6,10 @@
     "name": "Sergey Fazulyanov",
     "username": "s-fazulyanov",
     "title": "FM",
-    "followers": 51,
+    "followers": 50,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Kislovodsk",
-    "last_online": 1733928728,
+    "last_online": 1741435907,
     "joined": 1230053090,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1089,
-            "date": 1718278020,
-            "rd": 132
+            "rating": 1113,
+            "date": 1741380914,
+            "rd": 211
         },
         "best": {
             "rating": 2499,
@@ -61,7 +61,7 @@
             "game": "https://www.chess.com/game/live/26296808251"
         },
         "record": {
-            "win": 40,
+            "win": 41,
             "loss": 9,
             "draw": 2
         }
@@ -85,9 +85,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2471,
-            "date": 1694559599,
-            "rd": 57
+            "rating": 2467,
+            "date": 1741129800,
+            "rd": 124
         },
         "best": {
             "rating": 2790,
@@ -97,7 +97,7 @@
         "record": {
             "win": 321,
             "loss": 219,
-            "draw": 49
+            "draw": 51
         }
     },
     "fide": 2350,

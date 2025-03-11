@@ -6,10 +6,10 @@
     "name": "Gahan MG",
     "username": "gahan-mg",
     "title": "FM",
-    "followers": 720,
+    "followers": 726,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Mangalore. Currently in Warsaw/Poland",
-    "last_online": 1733834945,
+    "last_online": 1741025988,
     "joined": 1533011053,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2754,
-            "date": 1733855229,
-            "rd": 46
+            "rating": 2750,
+            "date": 1739736034,
+            "rd": 49
         },
         "best": {
             "rating": 2807,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/7790574771"
         },
         "record": {
-            "win": 3223,
-            "loss": 3161,
+            "win": 3224,
+            "loss": 3163,
             "draw": 634
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2645,
-            "date": 1707619805,
+            "date": 1739736843,
             "rd": 49
         },
         "best": {
@@ -81,7 +81,7 @@
             "game": "https://www.chess.com/game/live/4783981351"
         },
         "record": {
-            "win": 1302,
+            "win": 1304,
             "loss": 1059,
             "draw": 306
         }

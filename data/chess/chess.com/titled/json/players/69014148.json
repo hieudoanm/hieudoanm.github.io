@@ -5,9 +5,9 @@
     "name": "Giovanni Marchesich",
     "username": "giomar27",
     "title": "CM",
-    "followers": 65,
+    "followers": 66,
     "country": "https://api.chess.com/pub/country/HR",
-    "last_online": 1734116828,
+    "last_online": 1741611037,
     "joined": 1575749303,
     "status": "premium",
     "is_streamer": false,
@@ -50,19 +50,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2507,
-            "date": 1733872029,
-            "rd": 44
+            "rating": 2344,
+            "date": 1741129724,
+            "rd": 43
         },
         "best": {
-            "rating": 2522,
-            "date": 1733870403,
+            "rating": 2533,
+            "date": 1735056928,
             "game": "https://www.chess.com/game/live/93117679233"
         },
         "record": {
-            "win": 518,
-            "loss": 586,
-            "draw": 81
+            "win": 563,
+            "loss": 665,
+            "draw": 90
         }
     },
     "tactics": {

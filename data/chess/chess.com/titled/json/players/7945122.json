@@ -6,9 +6,9 @@
     "name": "Michal Koziorowicz",
     "username": "koziororo",
     "title": "FM",
-    "followers": 135,
+    "followers": 142,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734133395,
+    "last_online": 1741636883,
     "joined": 1340132724,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2194,
-            "date": 1731625547,
-            "rd": 48
+            "rating": 2208,
+            "date": 1741200995,
+            "rd": 47
         },
         "best": {
             "rating": 2224,
@@ -46,33 +46,33 @@
             "game": "https://www.chess.com/game/live/123272999265"
         },
         "record": {
-            "win": 233,
-            "loss": 153,
+            "win": 238,
+            "loss": 156,
             "draw": 19
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2601,
-            "date": 1731534937,
-            "rd": 49
+            "rating": 2732,
+            "date": 1741193090,
+            "rd": 26
         },
         "best": {
-            "rating": 2740,
-            "date": 1673562100,
-            "game": "https://www.chess.com/game/live/5846012235"
+            "rating": 2808,
+            "date": 1739225658,
+            "game": "https://www.chess.com/game/live/132958777321"
         },
         "record": {
-            "win": 1851,
-            "loss": 1866,
-            "draw": 221
+            "win": 2065,
+            "loss": 2018,
+            "draw": 248
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2528,
-            "date": 1732814431,
-            "rd": 49
+            "rating": 2554,
+            "date": 1740081242,
+            "rd": 46
         },
         "best": {
             "rating": 2788,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/59866875775"
         },
         "record": {
-            "win": 1349,
-            "loss": 1097,
-            "draw": 185
+            "win": 1400,
+            "loss": 1139,
+            "draw": 188
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3665,
-            "date": 1711126122
+            "rating": 3692,
+            "date": 1741479944
         },
         "lowest": {
             "rating": 1149,
@@ -97,8 +97,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 51,
-            "score": 50
+            "total_attempts": 56,
+            "score": 53
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Rathanvel VS",
     "username": "fighter2jz",
     "title": "IM",
-    "followers": 155,
+    "followers": 158,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "India",
-    "last_online": 1734166768,
+    "last_online": 1740927943,
     "joined": 1439863239,
     "status": "premium",
     "is_streamer": false,
@@ -82,10 +82,6 @@
         "best": {
             "total_attempts": 71,
             "score": 68
-        },
-        "daily": {
-            "total_attempts": 23,
-            "score": 20
         }
     }
 }

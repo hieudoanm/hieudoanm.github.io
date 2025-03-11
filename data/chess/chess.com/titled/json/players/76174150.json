@@ -2,11 +2,12 @@
     "player_id": 76174150,
     "@id": "https://api.chess.com/pub/player/murtazin_ruslan",
     "url": "https://www.chess.com/member/Murtazin_Ruslan",
+    "name": "Ruslan Murtazin",
     "username": "murtazin_ruslan",
     "title": "FM",
-    "followers": 20,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1700063492,
+    "last_online": 1736660131,
     "joined": 1586453303,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2376,
-            "date": 1693344540,
-            "rd": 90
+            "rating": 2525,
+            "date": 1735689304,
+            "rd": 48
         },
         "best": {
             "rating": 2586,
@@ -59,9 +60,9 @@
             "game": "https://www.chess.com/game/live/58051279391"
         },
         "record": {
-            "win": 313,
-            "loss": 224,
-            "draw": 72
+            "win": 316,
+            "loss": 229,
+            "draw": 75
         }
     },
     "fide": 0,
@@ -77,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 50,
-            "score": 47
+            "total_attempts": 61,
+            "score": 58
         }
     }
 }

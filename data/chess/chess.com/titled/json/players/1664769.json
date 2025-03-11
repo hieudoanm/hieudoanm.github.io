@@ -8,12 +8,12 @@
     "followers": 8,
     "country": "https://api.chess.com/pub/country/HR",
     "location": "Zagreb",
-    "last_online": 1732309109,
+    "last_online": 1741538621,
     "joined": 1229717248,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2423,
-            "date": 1732311999,
-            "rd": 78
+            "rating": 2438,
+            "date": 1741543091,
+            "rd": 95
         },
         "best": {
             "rating": 2423,
@@ -44,7 +44,7 @@
             "game": "https://www.chess.com/game/live/3251797342"
         },
         "record": {
-            "win": 1048,
+            "win": 1058,
             "loss": 925,
             "draw": 222
         }

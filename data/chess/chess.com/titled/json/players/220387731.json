@@ -6,9 +6,9 @@
     "name": "Avery Yu",
     "username": "yujiarun18",
     "title": "WCM",
-    "followers": 26,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734156094,
+    "last_online": 1741668388,
     "joined": 1672879713,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1376,
-            "date": 1732583883,
+            "date": 1741557639,
             "rd": 168
         },
         "best": {
@@ -28,10 +28,10 @@
         },
         "record": {
             "win": 5,
-            "loss": 3,
+            "loss": 4,
             "draw": 1,
-            "time_per_move": 87522,
-            "timeout_percent": 0
+            "time_per_move": 85096,
+            "timeout_percent": 100
         }
     },
     "chess960_daily": {
@@ -49,7 +49,7 @@
             "win": 2,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 87522,
+            "time_per_move": 85096,
             "timeout_percent": 0
         }
     },
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2067,
-            "date": 1733906103,
-            "rd": 56
+            "rating": 2057,
+            "date": 1741674063,
+            "rd": 43
         },
         "best": {
             "rating": 2153,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/104221231781"
         },
         "record": {
-            "win": 525,
-            "loss": 469,
-            "draw": 26
+            "win": 567,
+            "loss": 512,
+            "draw": 30
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2180,
-            "date": 1734157414,
-            "rd": 42
+            "rating": 2156,
+            "date": 1741673821,
+            "rd": 33
         },
         "best": {
             "rating": 2313,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/114297644923"
         },
         "record": {
-            "win": 1191,
-            "loss": 1152,
-            "draw": 67
+            "win": 1376,
+            "loss": 1331,
+            "draw": 79
         }
     },
     "fide": 1861,
@@ -118,6 +118,10 @@
     "puzzle_rush": {
         "best": {
             "total_attempts": 42,
+            "score": 40
+        },
+        "daily": {
+            "total_attempts": 43,
             "score": 40
         }
     }

@@ -5,10 +5,10 @@
     "name": "David Pons Carreras",
     "username": "ciutadella",
     "title": "FM",
-    "followers": 17,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Ciutadella de Menorca",
-    "last_online": 1733331269,
+    "last_online": 1741157962,
     "joined": 1410845930,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2511,
-            "date": 1733331596,
-            "rd": 36
+            "rating": 2512,
+            "date": 1740402435,
+            "rd": 48
         },
         "best": {
             "rating": 2619,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/117932956591"
         },
         "record": {
-            "win": 484,
-            "loss": 399,
-            "draw": 95
+            "win": 539,
+            "loss": 448,
+            "draw": 114
         }
     },
     "fide": 2306,

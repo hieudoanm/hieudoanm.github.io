@@ -6,10 +6,10 @@
     "name": "Sujana Lohani",
     "username": "sujanalohani",
     "title": "WFM",
-    "followers": 450,
+    "followers": 452,
     "country": "https://api.chess.com/pub/country/NP",
     "location": "Kathmandu",
-    "last_online": 1734066021,
+    "last_online": 1741687526,
     "joined": 1503454312,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1764,
-            "date": 1724498906,
-            "rd": 161
+            "rating": 1724,
+            "date": 1740480782,
+            "rd": 166
         },
         "best": {
             "rating": 1854,
@@ -62,15 +62,15 @@
         },
         "record": {
             "win": 73,
-            "loss": 49,
+            "loss": 51,
             "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1949,
-            "date": 1720533215,
-            "rd": 75
+            "rating": 1919,
+            "date": 1741245003,
+            "rd": 110
         },
         "best": {
             "rating": 2226,
@@ -79,15 +79,15 @@
         },
         "record": {
             "win": 763,
-            "loss": 1055,
+            "loss": 1056,
             "draw": 41
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2445,
-            "date": 1732958979,
-            "rd": 48
+            "rating": 2401,
+            "date": 1741688409,
+            "rd": 87
         },
         "best": {
             "rating": 2460,
@@ -96,7 +96,7 @@
         },
         "record": {
             "win": 1160,
-            "loss": 1499,
+            "loss": 1500,
             "draw": 104
         }
     },
@@ -114,6 +114,10 @@
         "best": {
             "total_attempts": 62,
             "score": 59
+        },
+        "daily": {
+            "total_attempts": 30,
+            "score": 27
         }
     }
 }

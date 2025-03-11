@@ -6,10 +6,10 @@
     "name": "Alex Arias Igual",
     "username": "alejandroarias",
     "title": "FM",
-    "followers": 48,
+    "followers": 50,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Elche",
-    "last_online": 1734154999,
+    "last_online": 1741674708,
     "joined": 1387226804,
     "status": "premium",
     "is_streamer": false,
@@ -52,18 +52,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2372,
-            "date": 1732660066,
-            "rd": 73
+            "rating": 2333,
+            "date": 1738085241,
+            "rd": 76
         },
         "best": {
             "rating": 2429,
             "date": 1712698854,
-            "game": "https://www.chess.com/game/live/106435579467"
+            "game": "https://www.chess.com/game/live/131214679895"
         },
         "record": {
-            "win": 3482,
-            "loss": 3121,
+            "win": 3485,
+            "loss": 3126,
             "draw": 399
         }
     },

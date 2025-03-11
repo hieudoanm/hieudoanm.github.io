@@ -5,9 +5,9 @@
     "name": "Anton Konaplev",
     "username": "fmantonio",
     "title": "FM",
-    "followers": 46,
+    "followers": 50,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1734020024,
+    "last_online": 1741523003,
     "joined": 1489609131,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1442,
-            "date": 1731935789,
+            "date": 1736809780,
             "rd": 305
         },
         "best": {
@@ -29,14 +29,14 @@
             "win": 2,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 70214,
+            "time_per_move": 99494,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2237,
-            "date": 1694985138,
+            "date": 1737400328,
             "rd": 161
         },
         "best": {
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2477,
-            "date": 1732408075,
-            "rd": 43
+            "rating": 2509,
+            "date": 1737211525,
+            "rd": 49
         },
         "best": {
             "rating": 2546,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/3545243323"
         },
         "record": {
-            "win": 305,
-            "loss": 315,
-            "draw": 22
+            "win": 315,
+            "loss": 326,
+            "draw": 24
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2547,
-            "date": 1733498891,
-            "rd": 42
+            "rating": 2508,
+            "date": 1737211959,
+            "rd": 49
         },
         "best": {
             "rating": 2605,
@@ -79,8 +79,8 @@
             "game": "https://www.chess.com/game/live/4691779345"
         },
         "record": {
-            "win": 897,
-            "loss": 860,
+            "win": 905,
+            "loss": 872,
             "draw": 128
         }
     },

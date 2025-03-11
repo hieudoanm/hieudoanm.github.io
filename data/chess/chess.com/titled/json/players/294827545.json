@@ -5,37 +5,37 @@
     "name": "Randi-Ioan Gales",
     "username": "chill_out112",
     "title": "CM",
-    "followers": 7,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1734165198,
+    "last_online": 1741628468,
     "joined": 1687251524,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2579,
-            "date": 1734181354,
-            "rd": 31
+            "rating": 2753,
+            "date": 1741631426,
+            "rd": 26
         },
         "best": {
-            "rating": 2731,
-            "date": 1731779237,
-            "game": "https://www.chess.com/game/live/124280985667"
+            "rating": 2787,
+            "date": 1738862261,
+            "game": "https://www.chess.com/game/live/134588362449"
         },
         "record": {
-            "win": 314,
-            "loss": 313,
-            "draw": 55
+            "win": 785,
+            "loss": 793,
+            "draw": 138
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2611,
-            "date": 1734180894,
-            "rd": 27
+            "rating": 2600,
+            "date": 1741628999,
+            "rd": 33
         },
         "best": {
             "rating": 2718,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/125257127567"
         },
         "record": {
-            "win": 239,
-            "loss": 208,
-            "draw": 37
+            "win": 382,
+            "loss": 354,
+            "draw": 59
         }
     },
     "fide": 2206,

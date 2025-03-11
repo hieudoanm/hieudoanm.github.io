@@ -4,10 +4,10 @@
     "url": "https://www.chess.com/member/rest007",
     "username": "rest007",
     "title": "FM",
-    "followers": 0,
+    "followers": 1,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
-    "last_online": 1734181010,
+    "last_online": 1741700164,
     "joined": 1406357290,
     "status": "premium",
     "is_streamer": false,
@@ -51,8 +51,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3635,
-            "date": 1734012667
+            "rating": 3637,
+            "date": 1736163952
         },
         "lowest": {
             "rating": 1348,

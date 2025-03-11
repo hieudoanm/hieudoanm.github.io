@@ -5,9 +5,9 @@
     "name": "Tuna Onat Nalbant",
     "username": "tunadrol",
     "title": "IM",
-    "followers": 43,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1733951783,
+    "last_online": 1740440188,
     "joined": 1538677012,
     "status": "premium",
     "is_streamer": false,
@@ -51,7 +51,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2612,
-            "date": 1731339116,
+            "date": 1741089082,
             "rd": 73
         },
         "best": {

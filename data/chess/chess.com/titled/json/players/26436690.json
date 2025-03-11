@@ -9,7 +9,7 @@
     "followers": 51,
     "country": "https://api.chess.com/pub/country/NP",
     "location": "Bhaktapur",
-    "last_online": 1731933837,
+    "last_online": 1738161573,
     "joined": 1454225214,
     "status": "premium",
     "is_streamer": false,
@@ -61,9 +61,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2124,
-            "date": 1731935856,
-            "rd": 59
+            "rating": 2154,
+            "date": 1741294738,
+            "rd": 42
         },
         "best": {
             "rating": 2221,
@@ -71,9 +71,9 @@
             "game": "https://www.chess.com/game/live/4121312506"
         },
         "record": {
-            "win": 1192,
-            "loss": 1096,
-            "draw": 89
+            "win": 1227,
+            "loss": 1120,
+            "draw": 96
         }
     },
     "fide": 0,

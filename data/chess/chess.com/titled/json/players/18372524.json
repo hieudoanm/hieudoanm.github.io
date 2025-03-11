@@ -6,14 +6,14 @@
     "name": "Alejandro Jardines Rabilero",
     "username": "jardy79",
     "title": "FM",
-    "followers": 189,
+    "followers": 201,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1734144468,
+    "last_online": 1741639778,
     "joined": 1407286757,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2151,
-            "date": 1734149291,
-            "rd": 19
+            "rating": 2042,
+            "date": 1741654152,
+            "rd": 22
         },
         "best": {
             "rating": 2280,
@@ -58,9 +58,9 @@
             "game": "https://www.chess.com/game/live/2272483927"
         },
         "record": {
-            "win": 7654,
-            "loss": 7654,
-            "draw": 617
+            "win": 8618,
+            "loss": 8542,
+            "draw": 679
         }
     },
     "chess_blitz": {
@@ -93,8 +93,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 45,
-            "score": 42
+            "total_attempts": 51,
+            "score": 48
         }
     }
 }

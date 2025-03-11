@@ -6,9 +6,9 @@
     "name": "Erzhan Zhakshylykov",
     "username": "unfazed7777",
     "title": "IM",
-    "followers": 9,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/KG",
-    "last_online": 1733980286,
+    "last_online": 1741351095,
     "joined": 1718041953,
     "status": "premium",
     "is_streamer": false,
@@ -34,19 +34,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2682,
-            "date": 1733980839,
-            "rd": 46
+            "rating": 2640,
+            "date": 1739544626,
+            "rd": 47
         },
         "best": {
-            "rating": 2682,
-            "date": 1733850319,
+            "rating": 2699,
+            "date": 1735056437,
             "game": "https://www.chess.com/game/live/113678350193"
         },
         "record": {
-            "win": 119,
-            "loss": 68,
-            "draw": 14
+            "win": 141,
+            "loss": 87,
+            "draw": 18
         }
     },
     "fide": 2261,

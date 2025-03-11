@@ -6,9 +6,9 @@
     "name": "Benedikt Huber",
     "username": "ineverlikedyou",
     "title": "FM",
-    "followers": 21,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734105732,
+    "last_online": 1741695844,
     "joined": 1651244518,
     "status": "premium",
     "is_streamer": false,
@@ -18,22 +18,22 @@
     "chess_daily": {
         "last": {
             "rating": 2000,
-            "date": 1729585431,
+            "date": 1740416574,
             "rd": 350
         },
         "record": {
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 9446,
+            "time_per_move": 4338,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2326,
-            "date": 1731772893,
-            "rd": 49
+            "rating": 2336,
+            "date": 1735156367,
+            "rd": 48
         },
         "best": {
             "rating": 2348,
@@ -41,16 +41,16 @@
             "game": "https://www.chess.com/game/live/117992340829"
         },
         "record": {
-            "win": 66,
-            "loss": 33,
+            "win": 69,
+            "loss": 34,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2483,
-            "date": 1733526036,
-            "rd": 38
+            "rating": 2504,
+            "date": 1741696372,
+            "rd": 41
         },
         "best": {
             "rating": 2588,
@@ -58,26 +58,26 @@
             "game": "https://www.chess.com/game/live/114883748761"
         },
         "record": {
-            "win": 610,
-            "loss": 459,
-            "draw": 49
+            "win": 702,
+            "loss": 532,
+            "draw": 56
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2584,
-            "date": 1733847130,
-            "rd": 49
+            "rating": 2613,
+            "date": 1740523149,
+            "rd": 48
         },
         "best": {
-            "rating": 2612,
-            "date": 1722373482,
+            "rating": 2616,
+            "date": 1738711595,
             "game": "https://www.chess.com/game/live/77988214641"
         },
         "record": {
-            "win": 191,
-            "loss": 186,
-            "draw": 19
+            "win": 215,
+            "loss": 206,
+            "draw": 20
         }
     },
     "tactics": {

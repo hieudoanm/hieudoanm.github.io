@@ -6,9 +6,9 @@
     "name": "Diego De Dios",
     "username": "diegoddios",
     "title": "CM",
-    "followers": 36,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1733788738,
+    "last_online": 1741652451,
     "joined": 1510699644,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2036,
-            "date": 1733792809,
-            "rd": 30
+            "rating": 2058,
+            "date": 1741654073,
+            "rd": 32
         },
         "best": {
             "rating": 2235,
@@ -58,16 +58,16 @@
             "game": "https://www.chess.com/game/live/76295398899"
         },
         "record": {
-            "win": 2041,
-            "loss": 1761,
-            "draw": 175
+            "win": 2143,
+            "loss": 1851,
+            "draw": 181
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1979,
-            "date": 1730453933,
-            "rd": 75
+            "rating": 2005,
+            "date": 1741057617,
+            "rd": 73
         },
         "best": {
             "rating": 2086,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/5203096965"
         },
         "record": {
-            "win": 391,
-            "loss": 301,
-            "draw": 47
+            "win": 396,
+            "loss": 305,
+            "draw": 48
         }
     },
     "tactics": {

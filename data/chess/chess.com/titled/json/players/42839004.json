@@ -5,15 +5,32 @@
     "name": "Hans Moehn",
     "username": "3sp15-2",
     "title": "FM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734011947,
+    "last_online": 1741532265,
     "joined": 1517329530,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Legend",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2000,
+            "date": 1741533909,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1734205727,
+            "game": "https://www.chess.com/game/live/127943946711"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 2485,

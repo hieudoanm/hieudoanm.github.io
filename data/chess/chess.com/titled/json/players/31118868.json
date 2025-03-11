@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/KarlyDX",
     "username": "karlydx",
     "title": "WCM",
-    "followers": 43,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1734129319,
+    "last_online": 1741647092,
     "joined": 1479966325,
     "status": "premium",
     "is_streamer": false,
@@ -35,43 +35,43 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1848,
-            "date": 1625625306,
-            "rd": 62
+            "rating": 2011,
+            "date": 1735757413,
+            "rd": 162
         },
         "best": {
-            "rating": 1888,
-            "date": 1614282151,
+            "rating": 2011,
+            "date": 1735757413,
             "game": "https://www.chess.com/game/live/10603082283"
         },
         "record": {
-            "win": 183,
+            "win": 185,
             "loss": 137,
             "draw": 33
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1650,
-            "date": 1587161077,
-            "rd": 31
+            "rating": 1700,
+            "date": 1736559347,
+            "rd": 131
         },
         "best": {
-            "rating": 1601,
-            "date": 1585515939,
+            "rating": 1700,
+            "date": 1736559347,
             "game": "https://www.chess.com/game/live/4654086644"
         },
         "record": {
-            "win": 101,
-            "loss": 92,
-            "draw": 11
+            "win": 104,
+            "loss": 93,
+            "draw": 12
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1752,
-            "date": 1683734996,
-            "rd": 49
+            "rating": 1797,
+            "date": 1736560517,
+            "rd": 108
         },
         "best": {
             "rating": 1858,
@@ -79,8 +79,8 @@
             "game": "https://www.chess.com/game/live/4790026167"
         },
         "record": {
-            "win": 2420,
-            "loss": 2322,
+            "win": 2423,
+            "loss": 2324,
             "draw": 269
         }
     },

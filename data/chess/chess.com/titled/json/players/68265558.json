@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 14,
     "country": "https://api.chess.com/pub/country/XA",
-    "last_online": 1734174401,
+    "last_online": 1741091509,
     "joined": 1574319180,
     "status": "premium",
     "is_streamer": false,
@@ -91,8 +91,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 57,
-            "score": 54
+            "total_attempts": 59,
+            "score": 56
         }
     }
 }

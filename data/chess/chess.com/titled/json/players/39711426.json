@@ -6,10 +6,10 @@
     "name": "Alexander Reprintsev",
     "username": "ural58",
     "title": "IM",
-    "followers": 41,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Kiev",
-    "last_online": 1734045919,
+    "last_online": 1741362396,
     "joined": 1508803904,
     "status": "premium",
     "is_streamer": false,
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2571,
-            "date": 1733875703,
-            "rd": 36
+            "rating": 2519,
+            "date": 1741370261,
+            "rd": 39
         },
         "best": {
-            "rating": 2632,
-            "date": 1733244066,
+            "rating": 2638,
+            "date": 1736895375,
             "game": "https://www.chess.com/game/live/95552455777"
         },
         "record": {
-            "win": 1678,
-            "loss": 1683,
-            "draw": 319
+            "win": 1782,
+            "loss": 1774,
+            "draw": 336
         }
     },
     "fide": 2353,

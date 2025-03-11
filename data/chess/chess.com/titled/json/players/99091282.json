@@ -1,13 +1,13 @@
 {
     "player_id": 99091282,
-    "@id": "https://api.chess.com/pub/player/pacingrope",
-    "url": "https://www.chess.com/member/PacingRope",
+    "@id": "https://api.chess.com/pub/player/bartek_turski",
+    "url": "https://www.chess.com/member/Bartek_Turski",
     "name": "Bartlomiej Turski",
-    "username": "pacingrope",
+    "username": "bartek_turski",
     "title": "FM",
-    "followers": 63,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734121212,
+    "last_online": 1741699783,
     "joined": 1606230742,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2080,
-            "date": 1718909604,
+            "date": 1741281933,
             "rd": 49
         },
         "best": {
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2814,
-            "date": 1734126297,
-            "rd": 32
+            "rating": 2851,
+            "date": 1741637723,
+            "rd": 41
         },
         "best": {
             "rating": 2850,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/127859984443"
         },
         "record": {
-            "win": 996,
-            "loss": 872,
-            "draw": 167
+            "win": 1050,
+            "loss": 925,
+            "draw": 177
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2906,
-            "date": 1733872790,
-            "rd": 46
+            "rating": 2899,
+            "date": 1741185046,
+            "rd": 47
         },
         "best": {
             "rating": 2962,
@@ -79,12 +79,12 @@
             "game": "https://www.chess.com/game/live/96576442349"
         },
         "record": {
-            "win": 668,
-            "loss": 781,
-            "draw": 298
+            "win": 683,
+            "loss": 802,
+            "draw": 309
         }
     },
-    "fide": 2345,
+    "fide": 2369,
     "tactics": {
         "highest": {
             "rating": 3634,

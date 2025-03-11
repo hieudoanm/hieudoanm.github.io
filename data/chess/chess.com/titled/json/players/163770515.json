@@ -5,9 +5,9 @@
     "name": "Danil Kuzuev",
     "username": "kuzuevdanil",
     "title": "IM",
-    "followers": 46,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1730746206,
+    "last_online": 1741102185,
     "joined": 1638794927,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2678,
-            "date": 1734118178,
-            "rd": 23
+            "rating": 2700,
+            "date": 1739562367,
+            "rd": 26
         },
         "best": {
             "rating": 2740,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/102283532661"
         },
         "record": {
-            "win": 1375,
-            "loss": 1192,
-            "draw": 167
+            "win": 1699,
+            "loss": 1485,
+            "draw": 217
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2541,
-            "date": 1727966224,
-            "rd": 45
+            "rating": 2620,
+            "date": 1741111732,
+            "rd": 43
         },
         "best": {
             "rating": 2703,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/46185037669"
         },
         "record": {
-            "win": 842,
-            "loss": 759,
-            "draw": 236
+            "win": 874,
+            "loss": 784,
+            "draw": 240
         }
     },
     "fide": 2436,

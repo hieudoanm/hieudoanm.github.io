@@ -6,10 +6,10 @@
     "name": "H\u00e9ctor Elissalt Cardenas",
     "username": "helissalt",
     "title": "IM",
-    "followers": 40,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid, Spain",
-    "last_online": 1734174319,
+    "last_online": 1741629490,
     "joined": 1399074429,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2289,
-            "date": 1725989929,
-            "rd": 50
+            "rating": 2349,
+            "date": 1738713468,
+            "rd": 65
         },
         "best": {
             "rating": 2471,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/39306041999"
         },
         "record": {
-            "win": 316,
-            "loss": 277,
-            "draw": 67
+            "win": 321,
+            "loss": 288,
+            "draw": 71
         }
     },
     "fide": 2338,

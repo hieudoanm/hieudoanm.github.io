@@ -6,9 +6,9 @@
     "name": "Cristi Coca",
     "username": "cristi_coca",
     "title": "FM",
-    "followers": 77,
+    "followers": 79,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1733930079,
+    "last_online": 1741620681,
     "joined": 1693908614,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2248,
-            "date": 1733155866,
+            "date": 1739809771,
             "rd": 49
         },
         "best": {

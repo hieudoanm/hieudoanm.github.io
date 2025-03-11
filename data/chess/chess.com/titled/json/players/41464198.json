@@ -6,14 +6,14 @@
     "name": "Rosana Hoyos Garces ( Cartagena-Bolivar)",
     "username": "pelonacongarapata",
     "title": "WCM",
-    "followers": 78,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1733363003,
+    "last_online": 1740317510,
     "joined": 1513647333,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1869,
-            "date": 1733366197,
-            "rd": 151
+            "rating": 1712,
+            "date": 1741396008,
+            "rd": 134
         },
         "best": {
             "rating": 1961,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/66071542167"
         },
         "record": {
-            "win": 47,
-            "loss": 21,
-            "draw": 8
+            "win": 50,
+            "loss": 23,
+            "draw": 9
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1449,
-            "date": 1731697538,
-            "rd": 86
+            "rating": 1412,
+            "date": 1741475871,
+            "rd": 91
         },
         "best": {
             "rating": 1982,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/18322180389"
         },
         "record": {
-            "win": 488,
-            "loss": 445,
-            "draw": 29
+            "win": 489,
+            "loss": 447,
+            "draw": 30
         }
     },
     "chess_blitz": {

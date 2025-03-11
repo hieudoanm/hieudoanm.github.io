@@ -6,10 +6,10 @@
     "name": "Arruebarrena Rafael",
     "username": "arrueba",
     "title": "CM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Edmonton",
-    "last_online": 1734117739,
+    "last_online": 1741660346,
     "joined": 1319467607,
     "status": "premium",
     "is_streamer": false,
@@ -53,8 +53,8 @@
     "fide": 2200,
     "tactics": {
         "highest": {
-            "rating": 3565,
-            "date": 1732679144
+            "rating": 3570,
+            "date": 1739141880
         },
         "lowest": {
             "rating": 1200,
@@ -65,6 +65,10 @@
         "best": {
             "total_attempts": 49,
             "score": 46
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
         }
     }
 }

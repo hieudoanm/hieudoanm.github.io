@@ -6,14 +6,14 @@
     "name": "Paulius Juknis",
     "username": "benkoni_kid",
     "title": "CM",
-    "followers": 51,
+    "followers": 56,
     "country": "https://api.chess.com/pub/country/LT",
-    "last_online": 1734095158,
+    "last_online": 1741701213,
     "joined": 1273147097,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -53,19 +53,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2352,
-            "date": 1732031235,
-            "rd": 45
+            "rating": 2324,
+            "date": 1741016897,
+            "rd": 58
         },
         "best": {
-            "rating": 2369,
-            "date": 1675532682,
+            "rating": 2422,
+            "date": 1735229323,
             "game": "https://www.chess.com/game/live/77988822907"
         },
         "record": {
-            "win": 2016,
-            "loss": 1337,
-            "draw": 262
+            "win": 2058,
+            "loss": 1372,
+            "draw": 273
         }
     },
     "fide": 2199,

@@ -6,10 +6,10 @@
     "name": "Cristian Adrian Barros Rivadeneira",
     "username": "megaraptor1",
     "title": "IM",
-    "followers": 81,
+    "followers": 86,
     "country": "https://api.chess.com/pub/country/EC",
     "location": "Morona Santiago",
-    "last_online": 1734060686,
+    "last_online": 1740610455,
     "joined": 1381879171,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1589,
-            "date": 1732966692,
+            "date": 1741455530,
             "rd": 105
         },
         "best": {
@@ -29,10 +29,10 @@
         },
         "record": {
             "win": 65,
-            "loss": 26,
+            "loss": 28,
             "draw": 1,
-            "time_per_move": 48682,
-            "timeout_percent": 100
+            "time_per_move": 48743,
+            "timeout_percent": 50
         }
     },
     "chess960_daily": {
@@ -50,7 +50,7 @@
             "win": 6,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 48682,
+            "time_per_move": 48743,
             "timeout_percent": 0
         }
     },
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2698,
-            "date": 1734060923,
-            "rd": 47
+            "rating": 2699,
+            "date": 1739490052,
+            "rd": 49
         },
         "best": {
             "rating": 2773,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/100168915233"
         },
         "record": {
-            "win": 2178,
+            "win": 2179,
             "loss": 1267,
             "draw": 116
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2541,
-            "date": 1714880090,
-            "rd": 49
+            "rating": 2551,
+            "date": 1737939563,
+            "rd": 48
         },
         "best": {
             "rating": 2646,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/3777140435"
         },
         "record": {
-            "win": 447,
+            "win": 466,
             "loss": 176,
-            "draw": 37
+            "draw": 38
         }
     },
     "tactics": {

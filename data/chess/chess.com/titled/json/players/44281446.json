@@ -6,9 +6,9 @@
     "name": "Diogo Duarte Guimaraes",
     "username": "mfguimaraes",
     "title": "FM",
-    "followers": 198,
+    "followers": 213,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734183533,
+    "last_online": 1741555491,
     "joined": 1521075496,
     "status": "premium",
     "is_streamer": false,
@@ -53,43 +53,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2544,
-            "date": 1734133636,
-            "rd": 29
+            "rating": 2450,
+            "date": 1741031969,
+            "rd": 41
         },
         "best": {
             "rating": 2610,
             "date": 1602224597,
-            "game": "https://www.chess.com/game/live/126726022895"
+            "game": "https://www.chess.com/game/live/134593752451"
         },
         "record": {
-            "win": 6277,
-            "loss": 5264,
-            "draw": 849
+            "win": 6343,
+            "loss": 5361,
+            "draw": 869
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2615,
-            "date": 1734183353,
-            "rd": 18
+            "rating": 2429,
+            "date": 1741580068,
+            "rd": 28
         },
         "best": {
-            "rating": 2615,
-            "date": 1734183353,
+            "rating": 2652,
+            "date": 1734284280,
             "game": "https://www.chess.com/game/live/127160353347"
         },
         "record": {
-            "win": 4583,
-            "loss": 4227,
-            "draw": 902
+            "win": 5052,
+            "loss": 4837,
+            "draw": 994
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3544,
-            "date": 1681257872
+            "rating": 3546,
+            "date": 1739581025
         },
         "lowest": {
             "rating": 2201,

@@ -5,10 +5,10 @@
     "name": "Maria Jose Rosado Perez",
     "username": "chessmon527",
     "title": "WCM",
-    "followers": 6,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Liga de Bolivar",
-    "last_online": 1718799390,
+    "last_online": 1741387333,
     "joined": 1471638157,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2010,
-            "date": 1694393740,
-            "rd": 209
+            "date": 1735319644,
+            "rd": 49
         },
         "best": {
             "rating": 2288,
@@ -27,25 +27,25 @@
             "game": "https://www.chess.com/game/live/5456403166"
         },
         "record": {
-            "win": 13,
+            "win": 14,
             "loss": 3,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1546,
-            "date": 1676617270,
-            "rd": 54
+            "rating": 1846,
+            "date": 1737269754,
+            "rd": 135
         },
         "best": {
-            "rating": 1884,
-            "date": 1553020336,
-            "game": "https://www.chess.com/game/live/3547898395"
+            "rating": 1893,
+            "date": 1737268770,
+            "game": "https://www.chess.com/game/live/131007578827"
         },
         "record": {
-            "win": 13,
-            "loss": 34,
+            "win": 17,
+            "loss": 35,
             "draw": 1
         }
     },

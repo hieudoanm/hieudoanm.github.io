@@ -9,7 +9,7 @@
     "followers": 65,
     "country": "https://api.chess.com/pub/country/NI",
     "location": "Managua",
-    "last_online": 1733866001,
+    "last_online": 1741578612,
     "joined": 1527977176,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2298,
-            "date": 1732424225,
+            "rating": 2276,
+            "date": 1739088402,
             "rd": 49
         },
         "best": {
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/69710633813"
         },
         "record": {
-            "win": 239,
-            "loss": 94,
-            "draw": 31
+            "win": 240,
+            "loss": 98,
+            "draw": 32
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2297,
-            "date": 1733156314,
-            "rd": 91
+            "rating": 2340,
+            "date": 1736011128,
+            "rd": 82
         },
         "best": {
             "rating": 2434,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/35525765291"
         },
         "record": {
-            "win": 1576,
-            "loss": 1143,
+            "win": 1579,
+            "loss": 1147,
             "draw": 128
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2391,
-            "date": 1733268476,
-            "rd": 69
+            "rating": 2447,
+            "date": 1741580827,
+            "rd": 61
         },
         "best": {
             "rating": 2518,
             "date": 1676084784,
-            "game": "https://www.chess.com/game/live/127002017139"
+            "game": "https://www.chess.com/game/live/128191265371"
         },
         "record": {
-            "win": 1215,
-            "loss": 866,
-            "draw": 153
+            "win": 1236,
+            "loss": 891,
+            "draw": 157
         }
     },
     "fide": 2152,

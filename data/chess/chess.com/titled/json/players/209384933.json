@@ -6,9 +6,9 @@
     "name": "Alberto Martin Fuentes",
     "username": "mklose11",
     "title": "FM",
-    "followers": 80,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734113963,
+    "last_online": 1741625573,
     "joined": 1669760274,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2737,
-            "date": 1734115085,
-            "rd": 28
+            "rating": 2705,
+            "date": 1741367743,
+            "rd": 29
         },
         "best": {
-            "rating": 2772,
-            "date": 1730150956,
-            "game": "https://www.chess.com/game/live/121534269251"
+            "rating": 2829,
+            "date": 1734976581,
+            "game": "https://www.chess.com/game/live/127936812085"
         },
         "record": {
-            "win": 1648,
-            "loss": 1681,
-            "draw": 399
+            "win": 1893,
+            "loss": 1948,
+            "draw": 472
         }
     },
     "tactics": {

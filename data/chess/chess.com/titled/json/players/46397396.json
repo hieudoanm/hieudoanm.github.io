@@ -5,10 +5,10 @@
     "name": "Carlos Frey",
     "username": "tehuelchess",
     "title": "FM",
-    "followers": 9,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/CL",
     "location": "Punta Arenas",
-    "last_online": 1733857986,
+    "last_online": 1739124920,
     "joined": 1526954178,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2489,
-            "date": 1687552307,
-            "rd": 176
+            "rating": 2398,
+            "date": 1739736813,
+            "rd": 190
         },
         "best": {
             "rating": 2489,
@@ -45,7 +45,7 @@
         },
         "record": {
             "win": 1026,
-            "loss": 1057,
+            "loss": 1058,
             "draw": 119
         }
     },
@@ -59,5 +59,10 @@
             "date": 1530274303
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 20,
+            "score": 17
+        }
+    }
 }

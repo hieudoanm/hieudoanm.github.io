@@ -6,10 +6,10 @@
     "name": "daniel seleljo",
     "username": "capatoday",
     "title": "FM",
-    "followers": 32,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Prague",
-    "last_online": 1734104947,
+    "last_online": 1741701533,
     "joined": 1257930417,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2375,
-            "date": 1734107378,
-            "rd": 35
+            "rating": 2259,
+            "date": 1741702010,
+            "rd": 30
         },
         "best": {
             "rating": 2553,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/116206844421"
         },
         "record": {
-            "win": 21948,
-            "loss": 23063,
-            "draw": 3528
+            "win": 22265,
+            "loss": 23414,
+            "draw": 3595
         }
     },
     "fide": 2250,

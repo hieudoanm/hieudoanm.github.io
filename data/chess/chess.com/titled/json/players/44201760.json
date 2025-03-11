@@ -5,9 +5,9 @@
     "name": "Sophie Milliet",
     "username": "chebi34",
     "title": "IM",
-    "followers": 74,
+    "followers": 81,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734179098,
+    "last_online": 1741703809,
     "joined": 1520873494,
     "status": "premium",
     "is_streamer": false,
@@ -66,8 +66,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2313,
-            "date": 1675194871
+            "rating": 3157,
+            "date": 1740137387
         },
         "lowest": {
             "rating": 1211,
@@ -80,8 +80,8 @@
             "score": 59
         },
         "daily": {
-            "total_attempts": 34,
-            "score": 34
+            "total_attempts": 42,
+            "score": 39
         }
     }
 }

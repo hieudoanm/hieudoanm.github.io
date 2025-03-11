@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/szabadaba",
     "username": "szabadaba",
     "title": "FM",
-    "followers": 39,
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/NP",
-    "last_online": 1734012058,
+    "last_online": 1741441366,
     "joined": 1529808434,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2791,
-            "date": 1734172173,
+            "rating": 2724,
+            "date": 1741699185,
             "rd": 24
         },
         "best": {
@@ -78,9 +78,9 @@
             "game": "https://www.chess.com/game/live/4495227070"
         },
         "record": {
-            "win": 9162,
-            "loss": 9807,
-            "draw": 1571
+            "win": 9578,
+            "loss": 10268,
+            "draw": 1641
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Robert Ris",
     "username": "robertris",
     "title": "IM",
-    "followers": 754,
+    "followers": 766,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Amsterdam",
-    "last_online": 1734037848,
+    "last_online": 1741700204,
     "joined": 1341190848,
     "status": "premium",
     "is_streamer": false,
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2696,
-            "date": 1734052165,
-            "rd": 40
+            "rating": 2734,
+            "date": 1741700599,
+            "rd": 44
         },
         "best": {
-            "rating": 2782,
-            "date": 1657556628,
+            "rating": 2815,
+            "date": 1739541959,
             "game": "https://www.chess.com/game/live/114885512323"
         },
         "record": {
-            "win": 4578,
-            "loss": 2982,
-            "draw": 833
+            "win": 4654,
+            "loss": 3034,
+            "draw": 855
         }
     },
     "fide": 2464,

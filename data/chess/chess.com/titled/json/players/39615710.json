@@ -6,10 +6,10 @@
     "name": "Vasiliy Korchmar",
     "username": "korchmar_vasiliy",
     "title": "IM",
-    "followers": 559,
+    "followers": 560,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Saratov",
-    "last_online": 1733860391,
+    "last_online": 1741380135,
     "joined": 1508518416,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2671,
-            "date": 1733875617,
-            "rd": 36
+            "rating": 2708,
+            "date": 1739902398,
+            "rd": 37
         },
         "best": {
             "rating": 2868,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/87665558873"
         },
         "record": {
-            "win": 5625,
-            "loss": 4746,
-            "draw": 774
+            "win": 5719,
+            "loss": 4807,
+            "draw": 787
         }
     },
     "fide": 2451,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 69,
-            "score": 66
+            "total_attempts": 74,
+            "score": 71
         }
     }
 }

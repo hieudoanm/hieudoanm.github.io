@@ -9,7 +9,7 @@
     "followers": 247,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "battle",
-    "last_online": 1733940104,
+    "last_online": 1741284248,
     "joined": 1489089689,
     "status": "premium",
     "is_streamer": false,
@@ -90,8 +90,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2458,
-            "date": 1728133866,
+            "rating": 2424,
+            "date": 1737061240,
             "rd": 43
         },
         "best": {
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/4052749797"
         },
         "record": {
-            "win": 3879,
-            "loss": 1700,
+            "win": 3904,
+            "loss": 1725,
             "draw": 259
         }
     },
     "fide": 2391,
     "tactics": {
         "highest": {
-            "rating": 3685,
-            "date": 1727415081
+            "rating": 3713,
+            "date": 1741343594
         },
         "lowest": {
             "rating": 1210,
@@ -120,6 +120,10 @@
         "best": {
             "total_attempts": 76,
             "score": 73
+        },
+        "daily": {
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

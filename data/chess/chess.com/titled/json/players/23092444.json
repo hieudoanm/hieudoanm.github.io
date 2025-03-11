@@ -5,9 +5,9 @@
     "name": "Joyce Ndirangu",
     "username": "happyushindi",
     "title": "WCM",
-    "followers": 97,
+    "followers": 99,
     "country": "https://api.chess.com/pub/country/KE",
-    "last_online": 1734155556,
+    "last_online": 1741342233,
     "joined": 1436004021,
     "status": "premium",
     "is_streamer": false,
@@ -16,28 +16,28 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1218,
-            "date": 1734173717,
-            "rd": 217
+            "rating": 1257,
+            "date": 1734984315,
+            "rd": 149
         },
         "best": {
-            "rating": 1218,
-            "date": 1732873883,
+            "rating": 1257,
+            "date": 1734984315,
             "game": "https://www.chess.com/game/daily/728359401"
         },
         "record": {
-            "win": 1,
-            "loss": 2,
+            "win": 3,
+            "loss": 3,
             "draw": 0,
-            "time_per_move": 31257,
+            "time_per_move": 29677,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2031,
-            "date": 1734013853,
-            "rd": 36
+            "rating": 1986,
+            "date": 1738691564,
+            "rd": 45
         },
         "best": {
             "rating": 2156,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/118428561493"
         },
         "record": {
-            "win": 254,
-            "loss": 234,
-            "draw": 37
+            "win": 264,
+            "loss": 250,
+            "draw": 39
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1771,
-            "date": 1729599039,
-            "rd": 57
+            "rating": 1859,
+            "date": 1741342165,
+            "rd": 58
         },
         "best": {
             "rating": 1968,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/3589200205"
         },
         "record": {
-            "win": 972,
-            "loss": 1043,
+            "win": 987,
+            "loss": 1052,
             "draw": 64
         }
     },

@@ -9,7 +9,7 @@
     "followers": 104,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Novyi Urengoy",
-    "last_online": 1733504262,
+    "last_online": 1741601509,
     "joined": 1503439894,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2262,
-            "date": 1728728964,
-            "rd": 72
+            "rating": 2063,
+            "date": 1741358707,
+            "rd": 61
         },
         "best": {
             "rating": 2328,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/98558798825"
         },
         "record": {
-            "win": 2467,
-            "loss": 1861,
-            "draw": 229
+            "win": 2483,
+            "loss": 1875,
+            "draw": 232
         }
     },
     "fide": 2160,

@@ -6,10 +6,10 @@
     "name": "Omar Garcia Blanco",
     "username": "attacksparrow",
     "title": "FM",
-    "followers": 342,
+    "followers": 345,
     "country": "https://api.chess.com/pub/country/XA",
     "location": "Las Palmas de Gran Canaria",
-    "last_online": 1732918506,
+    "last_online": 1741626523,
     "joined": 1367344825,
     "status": "premium",
     "is_streamer": false,
@@ -72,7 +72,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2646,
-            "date": 1718143490,
+            "date": 1737133125,
             "rd": 49
         },
         "best": {

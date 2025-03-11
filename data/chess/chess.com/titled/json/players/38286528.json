@@ -9,12 +9,12 @@
     "followers": 14,
     "country": "https://api.chess.com/pub/country/BY",
     "location": "Minsk",
-    "last_online": 1734148413,
+    "last_online": 1741635026,
     "joined": 1504271269,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
@@ -36,8 +36,8 @@
     "fide": 2402,
     "tactics": {
         "highest": {
-            "rating": 1200,
-            "date": 1656266494
+            "rating": 1611,
+            "date": 1738521190
         },
         "lowest": {
             "rating": 1200,

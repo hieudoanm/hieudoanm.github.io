@@ -9,7 +9,7 @@
     "followers": 54,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Astrakhan",
-    "last_online": 1733216971,
+    "last_online": 1741683897,
     "joined": 1462722259,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2672,
-            "date": 1713122905,
-            "rd": 47
+            "rating": 2677,
+            "date": 1740663734,
+            "rd": 49
         },
         "best": {
             "rating": 2723,
@@ -62,7 +62,7 @@
             "game": "https://www.chess.com/game/live/3585556732"
         },
         "record": {
-            "win": 1843,
+            "win": 1844,
             "loss": 1854,
             "draw": 219
         }
@@ -70,8 +70,8 @@
     "fide": 2315,
     "tactics": {
         "highest": {
-            "rating": 3613,
-            "date": 1709182213
+            "rating": 3642,
+            "date": 1739201234
         },
         "lowest": {
             "rating": 1357,

@@ -6,9 +6,9 @@
     "name": "Javier Izuzquiza",
     "username": "javichuela2789",
     "title": "CM",
-    "followers": 16,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/PR",
-    "last_online": 1733782518,
+    "last_online": 1741670171,
     "joined": 1538117962,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2303,
-            "date": 1719551512,
-            "rd": 23
+            "rating": 2403,
+            "date": 1740460851,
+            "rd": 75
         },
         "best": {
             "rating": 2309,
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/14787981307"
         },
         "record": {
-            "win": 187,
-            "loss": 154,
-            "draw": 17
+            "win": 202,
+            "loss": 158,
+            "draw": 18
         }
     },
     "chess_blitz": {

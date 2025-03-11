@@ -6,20 +6,20 @@
     "name": "Akeem Brown",
     "username": "chesswithakeem",
     "title": "CM",
-    "followers": 906,
+    "followers": 2145,
     "country": "https://api.chess.com/pub/country/JM",
-    "last_online": 1734178423,
+    "last_online": 1741700186,
     "joined": 1598011031,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1400,
-            "date": 1730449816,
-            "rd": 137
+            "rating": 1413,
+            "date": 1736721502,
+            "rd": 177
         },
         "best": {
             "rating": 1537,
@@ -27,35 +27,34 @@
             "game": "https://www.chess.com/game/daily/513859113"
         },
         "record": {
-            "win": 14,
+            "win": 16,
             "loss": 3,
             "draw": 0,
-            "time_per_move": 17718,
+            "time_per_move": 17322,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2116,
-            "date": 1733800364,
-            "rd": 41
+            "rating": 2278,
+            "date": 1741641052
         },
         "best": {
-            "rating": 2118,
-            "date": 1733799344,
-            "game": "https://www.chess.com/game/live/127441778793"
+            "rating": 2284,
+            "date": 1737237372,
+            "game": "https://www.chess.com/game/live/128300363463"
         },
         "record": {
-            "win": 201,
-            "loss": 102,
-            "draw": 11
+            "win": 244,
+            "loss": 117,
+            "draw": 18
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2530,
-            "date": 1733887455,
-            "rd": 20
+            "rating": 2528,
+            "date": 1741648451,
+            "rd": 23
         },
         "best": {
             "rating": 2632,
@@ -63,26 +62,26 @@
             "game": "https://www.chess.com/game/live/9017855719"
         },
         "record": {
-            "win": 2917,
-            "loss": 2852,
-            "draw": 287
+            "win": 3241,
+            "loss": 3160,
+            "draw": 316
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2268,
-            "date": 1734122439,
-            "rd": 41
+            "rating": 2382,
+            "date": 1741700837,
+            "rd": 32
         },
         "best": {
-            "rating": 2407,
-            "date": 1692315505,
-            "game": "https://www.chess.com/game/live/6537483036"
+            "rating": 2458,
+            "date": 1738104326,
+            "game": "https://www.chess.com/game/live/129422608655"
         },
         "record": {
-            "win": 206,
-            "loss": 111,
-            "draw": 11
+            "win": 410,
+            "loss": 264,
+            "draw": 33
         }
     },
     "tactics": {

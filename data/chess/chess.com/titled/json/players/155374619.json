@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/s1mple_007",
     "username": "s1mple_007",
     "title": "IM",
-    "followers": 176,
+    "followers": 174,
     "country": "https://api.chess.com/pub/country/GL",
-    "last_online": 1734010970,
+    "last_online": 1741538048,
     "joined": 1632219207,
     "status": "premium",
     "is_streamer": false,
@@ -33,18 +33,17 @@
     "chess_blitz": {
         "last": {
             "rating": 2662,
-            "date": 1734178362,
-            "rd": 23
+            "date": 1741642229
         },
         "best": {
-            "rating": 2802,
-            "date": 1722190724,
-            "game": "https://www.chess.com/game/live/78739904341"
+            "rating": 2815,
+            "date": 1738164250,
+            "game": "https://www.chess.com/game/live/131491795539"
         },
         "record": {
-            "win": 3418,
-            "loss": 4067,
-            "draw": 837
+            "win": 4186,
+            "loss": 4917,
+            "draw": 1017
         }
     },
     "tactics": {

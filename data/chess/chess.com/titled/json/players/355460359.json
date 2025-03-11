@@ -5,9 +5,9 @@
     "name": "Vince Gerg\u0151 Turcs\u00e1nyi",
     "username": "vincefm",
     "title": "FM",
-    "followers": 5,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734174852,
+    "last_online": 1741541257,
     "joined": 1712419743,
     "status": "premium",
     "is_streamer": false,
@@ -16,8 +16,8 @@
     "chess_daily": {
         "last": {
             "rating": 1469,
-            "date": 1734174943,
-            "rd": 114
+            "date": 1741521954,
+            "rd": 98
         },
         "best": {
             "rating": 1617,
@@ -27,50 +27,50 @@
         "record": {
             "win": 2,
             "loss": 0,
-            "draw": 13,
-            "time_per_move": 47493,
+            "draw": 19,
+            "time_per_move": 49251,
             "timeout_percent": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2520,
-            "date": 1733859955,
-            "rd": 44
+            "rating": 2522,
+            "date": 1741526277,
+            "rd": 37
         },
         "best": {
-            "rating": 2519,
-            "date": 1713026290,
+            "rating": 2523,
+            "date": 1738963905,
             "game": "https://www.chess.com/game/live/108916175721"
         },
         "record": {
-            "win": 118,
-            "loss": 111,
-            "draw": 16
+            "win": 174,
+            "loss": 164,
+            "draw": 25
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2471,
-            "date": 1733853930,
-            "rd": 58
+            "rating": 2487,
+            "date": 1741106352,
+            "rd": 50
         },
         "best": {
-            "rating": 2509,
-            "date": 1714518266,
-            "game": "https://www.chess.com/game/live/119740842659"
+            "rating": 2511,
+            "date": 1739296240,
+            "game": "https://www.chess.com/game/live/133028386233"
         },
         "record": {
-            "win": 55,
-            "loss": 76,
-            "draw": 8
+            "win": 67,
+            "loss": 93,
+            "draw": 11
         }
     },
     "fide": 2303,
     "tactics": {
         "highest": {
-            "rating": 3340,
-            "date": 1725459580
+            "rating": 3583,
+            "date": 1739738585
         },
         "lowest": {
             "rating": 1000,

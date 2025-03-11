@@ -9,7 +9,7 @@
     "followers": 9,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "Karaganda",
-    "last_online": 1734157087,
+    "last_online": 1741692875,
     "joined": 1585308901,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2233,
-            "date": 1722761892,
-            "rd": 84
+            "rating": 2236,
+            "date": 1740733201,
+            "rd": 112
         },
         "best": {
             "rating": 2403,
@@ -47,7 +47,7 @@
         "record": {
             "win": 91,
             "loss": 73,
-            "draw": 20
+            "draw": 21
         }
     },
     "chess_blitz": {
@@ -82,10 +82,6 @@
         "best": {
             "total_attempts": 36,
             "score": 33
-        },
-        "daily": {
-            "total_attempts": 26,
-            "score": 23
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Sameh Sadek",
     "username": "samehsadek",
     "title": "FM",
-    "followers": 59,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/EG",
     "location": "Cairo",
-    "last_online": 1731206133,
+    "last_online": 1741114878,
     "joined": 1463339180,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2316,
-            "date": 1724252179,
-            "rd": 69
+            "rating": 2216,
+            "date": 1740942436,
+            "rd": 62
         },
         "best": {
             "rating": 2353,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/117990626899"
         },
         "record": {
-            "win": 193,
-            "loss": 198,
-            "draw": 11
+            "win": 200,
+            "loss": 214,
+            "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2512,
-            "date": 1724392021,
-            "rd": 40
+            "rating": 2558,
+            "date": 1741567376,
+            "rd": 39
         },
         "best": {
             "rating": 2561,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/118073408439"
         },
         "record": {
-            "win": 95,
-            "loss": 76,
-            "draw": 22
+            "win": 127,
+            "loss": 108,
+            "draw": 36
         }
     },
     "tactics": {
         "highest": {
-            "rating": 1915,
-            "date": 1690693608
+            "rating": 2109,
+            "date": 1739036731
         },
         "lowest": {
             "rating": 1211,
@@ -98,8 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 34,
-            "score": 33
+            "total_attempts": 37,
+            "score": 36
         }
     }
 }

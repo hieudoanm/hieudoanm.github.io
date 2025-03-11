@@ -1,13 +1,14 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/282752873.c0439010.200x200o.a8904a1f12bc.png",
     "player_id": 282752873,
     "@id": "https://api.chess.com/pub/player/dr_troll",
     "url": "https://www.chess.com/member/Dr_troll",
     "name": "Sandeep Sethuraman",
     "username": "dr_troll",
     "title": "IM",
-    "followers": 31,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733807157,
+    "last_online": 1741682080,
     "joined": 1683325788,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +34,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2675,
-            "date": 1733556842,
-            "rd": 38
+            "rating": 2633,
+            "date": 1741422658
         },
         "best": {
             "rating": 2833,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/111096610839"
         },
         "record": {
-            "win": 767,
-            "loss": 576,
-            "draw": 107
+            "win": 786,
+            "loss": 596,
+            "draw": 110
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2616,
-            "date": 1733807472,
-            "rd": 44
+            "rating": 2697,
+            "date": 1741685137,
+            "rd": 35
         },
         "best": {
             "rating": 2788,
@@ -60,15 +60,16 @@
             "game": "https://www.chess.com/game/live/104620902643"
         },
         "record": {
-            "win": 514,
-            "loss": 392,
-            "draw": 97
+            "win": 611,
+            "loss": 462,
+            "draw": 116
         }
     },
+    "fide": 2417,
     "tactics": {
         "highest": {
-            "rating": 3028,
-            "date": 1722018692
+            "rating": 3202,
+            "date": 1734571906
         },
         "lowest": {
             "rating": 400,
@@ -77,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 49,
-            "score": 46
+            "total_attempts": 64,
+            "score": 61
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Kushagra Mohan",
     "username": "kushagramohan",
     "title": "IM",
-    "followers": 124,
+    "followers": 130,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "hyderabad",
-    "last_online": 1734147305,
+    "last_online": 1741695318,
     "joined": 1314253223,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2898,
-            "date": 1734152904,
-            "rd": 29
+            "rating": 2922,
+            "date": 1741698960,
+            "rd": 36
         },
         "best": {
             "rating": 2964,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/111940442165"
         },
         "record": {
-            "win": 3360,
-            "loss": 3331,
-            "draw": 1030
+            "win": 3420,
+            "loss": 3390,
+            "draw": 1056
         }
     },
     "tactics": {

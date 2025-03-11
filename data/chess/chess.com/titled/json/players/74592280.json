@@ -9,7 +9,7 @@
     "followers": 8,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Dormagen",
-    "last_online": 1734027529,
+    "last_online": 1741358986,
     "joined": 1585239080,
     "status": "premium",
     "is_streamer": false,
@@ -47,26 +47,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2546,
-            "date": 1734028719,
-            "rd": 39
+            "rating": 2610,
+            "date": 1741387754,
+            "rd": 48
         },
         "best": {
             "rating": 2660,
             "date": 1726688876,
-            "game": "https://www.chess.com/game/live/119008186213"
+            "game": "https://www.chess.com/game/live/128473431353"
         },
         "record": {
-            "win": 670,
-            "loss": 442,
-            "draw": 114
+            "win": 702,
+            "loss": 459,
+            "draw": 124
         }
     },
     "fide": 2318,
     "tactics": {
         "highest": {
-            "rating": 2833,
-            "date": 1729036221
+            "rating": 2845,
+            "date": 1736965076
         },
         "lowest": {
             "rating": 1210,

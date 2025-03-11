@@ -5,14 +5,14 @@
     "name": "Mohamad Ervan",
     "username": "ervanovic",
     "title": "IM",
-    "followers": 72,
+    "followers": 78,
     "country": "https://api.chess.com/pub/country/ID",
-    "last_online": 1733992458,
+    "last_online": 1741683598,
     "joined": 1421892754,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -31,7 +31,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1607,
-            "date": 1733479828,
+            "date": 1737714462,
             "rd": 186
         },
         "best": {
@@ -47,9 +47,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2481,
-            "date": 1733481676,
-            "rd": 53
+            "rating": 2621,
+            "date": 1741689353,
+            "rd": 24
         },
         "best": {
             "rating": 2557,
@@ -57,16 +57,16 @@
             "game": "https://www.chess.com/game/live/101620354663"
         },
         "record": {
-            "win": 497,
-            "loss": 309,
-            "draw": 37
+            "win": 647,
+            "loss": 409,
+            "draw": 48
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2633,
-            "date": 1733666405,
-            "rd": 48
+            "rating": 2631,
+            "date": 1738508212,
+            "rd": 49
         },
         "best": {
             "rating": 2654,
@@ -74,8 +74,8 @@
             "game": "https://www.chess.com/game/live/115549702133"
         },
         "record": {
-            "win": 572,
-            "loss": 326,
+            "win": 576,
+            "loss": 330,
             "draw": 58
         }
     },

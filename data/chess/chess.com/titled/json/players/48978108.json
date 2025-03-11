@@ -6,19 +6,19 @@
     "name": "Maria Angelica Carrillo Marval",
     "username": "mariangie523",
     "title": "WCM",
-    "followers": 413,
+    "followers": 421,
     "country": "https://api.chess.com/pub/country/PA",
-    "last_online": 1734131151,
+    "last_online": 1741699622,
     "joined": 1534863369,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1772,
-            "date": 1724159027,
+            "date": 1740818295,
             "rd": 90
         },
         "best": {
@@ -28,16 +28,16 @@
         },
         "record": {
             "win": 132,
-            "loss": 18,
+            "loss": 19,
             "draw": 3,
-            "time_per_move": 100287,
-            "timeout_percent": 0
+            "time_per_move": 100598,
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2000,
-            "date": 1733443671,
+            "rating": 1999,
+            "date": 1740439800,
             "rd": 49
         },
         "best": {
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/103383137785"
         },
         "record": {
-            "win": 32,
+            "win": 39,
             "loss": 7,
-            "draw": 6
+            "draw": 7
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2066,
-            "date": 1721941375,
-            "rd": 54
+            "rating": 2130,
+            "date": 1741653796,
+            "rd": 20
         },
         "best": {
             "rating": 2212,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/101929546777"
         },
         "record": {
-            "win": 2486,
-            "loss": 2251,
-            "draw": 259
+            "win": 2810,
+            "loss": 2545,
+            "draw": 289
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2170,
-            "date": 1732149932,
-            "rd": 84
+            "rating": 2074,
+            "date": 1741140887,
+            "rd": 42
         },
         "best": {
             "rating": 2184,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/5183522316"
         },
         "record": {
-            "win": 362,
-            "loss": 302,
-            "draw": 35
+            "win": 392,
+            "loss": 335,
+            "draw": 40
         }
     },
     "fide": 0,

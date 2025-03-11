@@ -6,9 +6,9 @@
     "name": "Chuck Adelman",
     "username": "golfbeforechess",
     "title": "FM",
-    "followers": 113,
+    "followers": 121,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734112710,
+    "last_online": 1741703067,
     "joined": 1532541288,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2071,
-            "date": 1734125520,
-            "rd": 33
+            "rating": 2098,
+            "date": 1741703453,
+            "rd": 29
         },
         "best": {
             "rating": 2400,
@@ -46,26 +46,26 @@
             "game": "https://www.chess.com/game/live/68393116829"
         },
         "record": {
-            "win": 3639,
-            "loss": 1965,
-            "draw": 440
+            "win": 3883,
+            "loss": 2137,
+            "draw": 494
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2301,
-            "date": 1733967380,
-            "rd": 88
+            "rating": 2451,
+            "date": 1740015891,
+            "rd": 51
         },
         "best": {
             "rating": 2581,
             "date": 1618335087,
-            "game": "https://www.chess.com/game/live/97956071989"
+            "game": "https://www.chess.com/game/live/130027818729"
         },
         "record": {
-            "win": 99,
-            "loss": 101,
-            "draw": 33
+            "win": 116,
+            "loss": 120,
+            "draw": 38
         }
     },
     "fide": 2265,

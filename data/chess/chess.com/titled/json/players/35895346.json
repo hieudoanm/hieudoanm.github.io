@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35895346.fe0b6126.200x200o.3047eeb6619d.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35895346.3571bef9.200x200o.a1ca3885e2f9.png",
     "player_id": 35895346,
     "@id": "https://api.chess.com/pub/player/mykola-bortnyk",
     "url": "https://www.chess.com/member/Mykola-Bortnyk",
     "name": "Mykola Bortnyk",
     "username": "mykola-bortnyk",
     "title": "IM",
-    "followers": 2085,
+    "followers": 2126,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York",
-    "last_online": 1734151317,
+    "last_online": 1741661291,
     "joined": 1496033802,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2989,
-            "date": 1732990370,
-            "rd": 40
+            "rating": 2982,
+            "date": 1740461634,
+            "rd": 26
         },
         "best": {
             "rating": 3250,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/6007429486"
         },
         "record": {
-            "win": 5811,
-            "loss": 4862,
-            "draw": 841
+            "win": 5922,
+            "loss": 4968,
+            "draw": 867
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3027,
-            "date": 1733982029,
-            "rd": 28
+            "rating": 3055,
+            "date": 1741674792,
+            "rd": 31
         },
         "best": {
-            "rating": 3092,
-            "date": 1701759440,
+            "rating": 3147,
+            "date": 1738295137,
             "game": "https://www.chess.com/game/live/94348380945"
         },
         "record": {
-            "win": 6991,
-            "loss": 5586,
-            "draw": 1648
+            "win": 7149,
+            "loss": 5740,
+            "draw": 1679
         }
     },
     "fide": 2482,
@@ -82,6 +82,10 @@
         "best": {
             "total_attempts": 70,
             "score": 67
+        },
+        "daily": {
+            "total_attempts": 2,
+            "score": 0
         }
     }
 }

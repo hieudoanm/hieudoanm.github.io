@@ -5,14 +5,14 @@
     "name": "Serghei Gostev",
     "username": "sergeygostev1984",
     "title": "FM",
-    "followers": 4,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/MD",
-    "last_online": 1733843573,
+    "last_online": 1741180861,
     "joined": 1727622025,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -33,36 +33,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2262,
-            "date": 1727794198,
-            "rd": 214
+            "rating": 2229,
+            "date": 1738151496,
+            "rd": 150
         },
         "best": {
-            "rating": 2198,
-            "date": 1727769406,
-            "game": "https://www.chess.com/game/live/121507855211"
+            "rating": 2353,
+            "date": 1737723513,
+            "game": "https://www.chess.com/game/live/131462405661"
         },
         "record": {
-            "win": 12,
-            "loss": 0,
+            "win": 13,
+            "loss": 2,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2447,
-            "date": 1733854078,
-            "rd": 45
+            "rating": 2455,
+            "date": 1741181156,
+            "rd": 41
         },
         "best": {
-            "rating": 2483,
-            "date": 1733850381,
+            "rating": 2494,
+            "date": 1735057816,
             "game": "https://www.chess.com/game/live/126981055737"
         },
         "record": {
-            "win": 71,
-            "loss": 62,
-            "draw": 5
+            "win": 135,
+            "loss": 137,
+            "draw": 11
         }
     },
     "fide": 2262,
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 45
+            "total_attempts": 67,
+            "score": 64
         }
     }
 }

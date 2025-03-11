@@ -5,9 +5,9 @@
     "name": "Safal Bora",
     "username": "want2lose",
     "title": "IM",
-    "followers": 303,
+    "followers": 307,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734155357,
+    "last_online": 1741665079,
     "joined": 1292734667,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1873,
-            "date": 1724450287,
+            "date": 1738391038,
             "rd": 181
         },
         "best": {
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3055,
-            "date": 1717019697,
-            "rd": 38
+            "rating": 3067,
+            "date": 1736294928,
+            "rd": 49
         },
         "best": {
-            "rating": 3055,
-            "date": 1717019697,
+            "rating": 3067,
+            "date": 1736294928,
             "game": "https://www.chess.com/game/live/57956492643"
         },
         "record": {
-            "win": 15034,
+            "win": 15037,
             "loss": 8861,
             "draw": 1770
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2903,
-            "date": 1734155737,
-            "rd": 29
+            "rating": 2803,
+            "date": 1741668182,
+            "rd": 25
         },
         "best": {
             "rating": 3007,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/116109576285"
         },
         "record": {
-            "win": 19820,
-            "loss": 11560,
-            "draw": 3471
+            "win": 20445,
+            "loss": 11931,
+            "draw": 3572
         }
     },
     "tactics": {

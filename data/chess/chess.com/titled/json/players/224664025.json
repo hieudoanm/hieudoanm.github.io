@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Jake_jortles97",
     "username": "jake_jortles97",
     "title": "IM",
-    "followers": 30,
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/BB",
-    "last_online": 1734140506,
+    "last_online": 1741692611,
     "joined": 1673599906,
     "status": "premium",
     "is_streamer": false,
@@ -32,19 +32,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2772,
-            "date": 1734159990,
-            "rd": 27
+            "rating": 2761,
+            "date": 1741703566,
+            "rd": 28
         },
         "best": {
-            "rating": 2855,
-            "date": 1733651036,
-            "game": "https://www.chess.com/game/live/120957647105"
+            "rating": 2892,
+            "date": 1736826142,
+            "game": "https://www.chess.com/game/live/130256463637"
         },
         "record": {
-            "win": 506,
-            "loss": 326,
-            "draw": 61
+            "win": 814,
+            "loss": 577,
+            "draw": 109
         }
     },
     "tactics": {

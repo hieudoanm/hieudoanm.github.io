@@ -6,10 +6,10 @@
     "name": "Fabrice Wantiez",
     "username": "dimwitchess",
     "title": "FM",
-    "followers": 336,
+    "followers": 356,
     "country": "https://api.chess.com/pub/country/BE",
     "location": "Brussels",
-    "last_online": 1734011603,
+    "last_online": 1740948212,
     "joined": 1263925721,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1563,
-            "date": 1734109699,
-            "rd": 47
+            "rating": 1543,
+            "date": 1741640077,
+            "rd": 56
         },
         "best": {
             "rating": 2012,
@@ -28,18 +28,18 @@
             "game": "https://www.chess.com/game/daily/238193760"
         },
         "record": {
-            "win": 3099,
-            "loss": 2038,
-            "draw": 241,
-            "time_per_move": 34169,
+            "win": 3152,
+            "loss": 2059,
+            "draw": 244,
+            "time_per_move": 34279,
             "timeout_percent": 0
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1226,
-            "date": 1732913770,
-            "rd": 91
+            "rating": 1195,
+            "date": 1736286967,
+            "rd": 78
         },
         "best": {
             "rating": 1847,
@@ -47,10 +47,10 @@
             "game": "https://www.chess.com/game/daily/69904428"
         },
         "record": {
-            "win": 84,
-            "loss": 57,
-            "draw": 4,
-            "time_per_move": 34169,
+            "win": 86,
+            "loss": 63,
+            "draw": 6,
+            "time_per_move": 34279,
             "timeout_percent": 0
         }
     },
@@ -90,19 +90,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2533,
-            "date": 1734120268,
-            "rd": 25
+            "rating": 2472,
+            "date": 1741531466,
+            "rd": 40
         },
         "best": {
-            "rating": 2595,
-            "date": 1670518398,
+            "rating": 2626,
+            "date": 1734798913,
             "game": "https://www.chess.com/game/live/4597252599"
         },
         "record": {
-            "win": 6594,
-            "loss": 5240,
-            "draw": 859
+            "win": 6725,
+            "loss": 5352,
+            "draw": 874
         }
     },
     "fide": 2356,
@@ -118,8 +118,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 41
+            "total_attempts": 45,
+            "score": 43
         }
     }
 }

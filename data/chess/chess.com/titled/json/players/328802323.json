@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/NE",
-    "last_online": 1732738170,
+    "last_online": 1739281077,
     "joined": 1701080586,
     "status": "premium",
     "is_streamer": false,
@@ -17,26 +17,26 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 1914,
-            "date": 1732744530,
-            "rd": 78
+            "rating": 1987,
+            "date": 1738390382,
+            "rd": 52
         },
         "best": {
             "rating": 2095,
             "date": 1723062620,
-            "game": "https://www.chess.com/game/live/116801422749"
+            "game": "https://www.chess.com/game/live/130706496321"
         },
         "record": {
-            "win": 14,
-            "loss": 10,
+            "win": 39,
+            "loss": 31,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2263,
-            "date": 1733149574,
-            "rd": 40
+            "rating": 2173,
+            "date": 1740941445,
+            "rd": 42
         },
         "best": {
             "rating": 2563,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/123952867171"
         },
         "record": {
-            "win": 243,
-            "loss": 303,
-            "draw": 30
+            "win": 284,
+            "loss": 359,
+            "draw": 39
         }
     },
     "fide": 2172,
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 40,
-            "score": 37
+            "total_attempts": 46,
+            "score": 43
         }
     }
 }

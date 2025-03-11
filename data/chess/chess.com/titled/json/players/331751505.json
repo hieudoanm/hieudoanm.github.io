@@ -6,9 +6,9 @@
     "name": "Matheus Mendes Domingues Ribeiro",
     "username": "calmdowncalabreso",
     "title": "CM",
-    "followers": 35,
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734103918,
+    "last_online": 1741701907,
     "joined": 1702313442,
     "status": "premium",
     "is_streamer": false,
@@ -34,36 +34,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2687,
-            "date": 1733148876,
-            "rd": 28
+            "rating": 2619,
+            "date": 1741575363,
+            "rd": 34
         },
         "best": {
             "rating": 2894,
             "date": 1703530149,
-            "game": "https://www.chess.com/game/live/126380398913"
+            "game": "https://www.chess.com/game/live/130307431419"
         },
         "record": {
-            "win": 675,
-            "loss": 682,
-            "draw": 120
+            "win": 1026,
+            "loss": 1041,
+            "draw": 176
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2510,
-            "date": 1732658767,
-            "rd": 38
+            "rating": 2692,
+            "date": 1741703477,
+            "rd": 21
         },
         "best": {
             "rating": 2805,
             "date": 1704434638,
-            "game": "https://www.chess.com/game/live/106507631719"
+            "game": "https://www.chess.com/game/live/130609278083"
         },
         "record": {
-            "win": 1506,
-            "loss": 1444,
-            "draw": 354
+            "win": 1698,
+            "loss": 1624,
+            "draw": 405
         }
     },
     "tactics": {
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 46,
-            "score": 43
+            "total_attempts": 52,
+            "score": 49
         }
     }
 }

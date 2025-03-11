@@ -6,9 +6,9 @@
     "name": "Rajat Makkar",
     "username": "indfraeng",
     "title": "IM",
-    "followers": 46,
+    "followers": 47,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733998706,
+    "last_online": 1741682558,
     "joined": 1331279361,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1436,
-            "date": 1723732258,
+            "date": 1741626430,
             "rd": 172
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 20,
             "loss": 28,
             "draw": 1,
-            "time_per_move": 44387,
+            "time_per_move": 44267,
             "timeout_percent": 0
         }
     },
@@ -53,8 +53,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2446,
-            "date": 1733868811,
+            "rating": 2476,
+            "date": 1735512966,
             "rd": 93
         },
         "best": {
@@ -63,7 +63,7 @@
             "game": "https://www.chess.com/game/live/6007300366"
         },
         "record": {
-            "win": 543,
+            "win": 544,
             "loss": 477,
             "draw": 64
         }
@@ -87,8 +87,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3651,
-            "date": 1724924373
+            "rating": 3813,
+            "date": 1741202272
         },
         "lowest": {
             "rating": 747,
@@ -97,8 +97,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 67,
-            "score": 64
+            "total_attempts": 71,
+            "score": 68
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Pavel Sevostianov",
     "username": "imcoach",
     "title": "IM",
-    "followers": 277,
+    "followers": 291,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Kyiv",
-    "last_online": 1734119041,
+    "last_online": 1741692593,
     "joined": 1412971828,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1406,
-            "date": 1733969682,
-            "rd": 184
+            "rating": 1390,
+            "date": 1734267282,
+            "rd": 151
         },
         "best": {
             "rating": 1535,
             "date": 1733060908,
-            "game": "https://www.chess.com/game/daily/726587111"
+            "game": "https://www.chess.com/game/daily/728291807"
         },
         "record": {
-            "win": 3,
-            "loss": 1,
+            "win": 4,
+            "loss": 2,
             "draw": 1,
-            "time_per_move": 41711,
+            "time_per_move": 42823,
             "timeout_percent": 0
         }
     },
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2588,
-            "date": 1733813176,
-            "rd": 28
+            "rating": 2561,
+            "date": 1741520626,
+            "rd": 25
         },
         "best": {
             "rating": 2669,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/68685879903"
         },
         "record": {
-            "win": 16636,
-            "loss": 12516,
-            "draw": 1614
+            "win": 17120,
+            "loss": 12836,
+            "draw": 1672
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2606,
-            "date": 1732289638,
-            "rd": 45
+            "rating": 2565,
+            "date": 1741624486,
+            "rd": 36
         },
         "best": {
             "rating": 2623,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/78661301223"
         },
         "record": {
-            "win": 3539,
-            "loss": 3005,
-            "draw": 802
+            "win": 3656,
+            "loss": 3092,
+            "draw": 853
         }
     },
     "fide": 2401,

@@ -5,9 +5,9 @@
     "name": "Swara Lakshmi Nair",
     "username": "mirchi_26",
     "title": "WCM",
-    "followers": 14,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734162991,
+    "last_online": 1741596305,
     "joined": 1406992690,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2047,
-            "date": 1732535955,
+            "date": 1740756776,
             "rd": 49
         },
         "best": {
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2043,
-            "date": 1733843689,
-            "rd": 49
+            "rating": 2038,
+            "date": 1741597432,
+            "rd": 54
         },
         "best": {
             "rating": 2077,
@@ -43,33 +43,33 @@
             "game": "https://www.chess.com/game/live/121278597793"
         },
         "record": {
-            "win": 256,
-            "loss": 260,
+            "win": 267,
+            "loss": 271,
             "draw": 22
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2342,
-            "date": 1733875488,
-            "rd": 35
+            "rating": 2310,
+            "date": 1741598425,
+            "rd": 36
         },
         "best": {
-            "rating": 2404,
-            "date": 1726022949,
-            "game": "https://www.chess.com/game/live/119139617771"
+            "rating": 2432,
+            "date": 1736294232,
+            "game": "https://www.chess.com/game/live/129399802283"
         },
         "record": {
-            "win": 660,
-            "loss": 804,
-            "draw": 93
+            "win": 760,
+            "loss": 956,
+            "draw": 115
         }
     },
     "fide": 2018,
     "tactics": {
         "highest": {
-            "rating": 3185,
-            "date": 1723793159
+            "rating": 3210,
+            "date": 1738648600
         },
         "lowest": {
             "rating": 1199,

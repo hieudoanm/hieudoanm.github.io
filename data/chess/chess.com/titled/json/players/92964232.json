@@ -6,9 +6,9 @@
     "name": "2305",
     "username": "ilvip11x02",
     "title": "FM",
-    "followers": 10,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1733241598,
+    "last_online": 1737394609,
     "joined": 1602505741,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2276,
-            "date": 1733241929,
+            "date": 1737395943,
             "rd": 129
         },
         "best": {

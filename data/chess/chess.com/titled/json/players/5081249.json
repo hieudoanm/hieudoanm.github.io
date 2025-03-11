@@ -6,10 +6,10 @@
     "name": "Mark Plotkin",
     "username": "littleplotkin",
     "title": "IM",
-    "followers": 1221,
+    "followers": 1273,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Canada",
-    "last_online": 1734113106,
+    "last_online": 1741673733,
     "joined": 1304607022,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1998,
-            "date": 1705559005,
+            "date": 1737106092,
             "rd": 160
         },
         "best": {
@@ -71,26 +71,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2922,
-            "date": 1732520733,
-            "rd": 47
+            "rating": 3000,
+            "date": 1741497396,
+            "rd": 37
         },
         "best": {
-            "rating": 2949,
-            "date": 1727061529,
+            "rating": 3000,
+            "date": 1738911806,
             "game": "https://www.chess.com/game/live/100071799323"
         },
         "record": {
-            "win": 5326,
-            "loss": 4775,
-            "draw": 1039
+            "win": 5349,
+            "loss": 4788,
+            "draw": 1046
         }
     },
     "fide": 2435,
     "tactics": {
         "highest": {
-            "rating": 3008,
-            "date": 1732674812
+            "rating": 3045,
+            "date": 1741316076
         },
         "lowest": {
             "rating": 1358,

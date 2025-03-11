@@ -6,10 +6,10 @@
     "name": "Enzo Leto",
     "username": "flomarechot",
     "title": "CM",
-    "followers": 78,
+    "followers": 82,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Junin",
-    "last_online": 1734034455,
+    "last_online": 1741672597,
     "joined": 1546635441,
     "status": "premium",
     "is_streamer": false,
@@ -90,19 +90,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2412,
-            "date": 1719345056,
-            "rd": 28
+            "rating": 2446,
+            "date": 1736219050,
+            "rd": 30
         },
         "best": {
-            "rating": 2403,
-            "date": 1719095495,
+            "rating": 2446,
+            "date": 1736219050,
             "game": "https://www.chess.com/game/live/4145639622"
         },
         "record": {
-            "win": 782,
-            "loss": 611,
-            "draw": 173
+            "win": 853,
+            "loss": 671,
+            "draw": 185
         }
     },
     "fide": 2214,

@@ -6,10 +6,10 @@
     "name": "Maurizio Brancaleoni",
     "username": "pinelone",
     "title": "FM",
-    "followers": 94,
+    "followers": 97,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Riccione",
-    "last_online": 1733851876,
+    "last_online": 1741212463,
     "joined": 1417811090,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1910,
-            "date": 1647096040,
+            "date": 1736009885,
             "rd": 113
         },
         "best": {
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2421,
-            "date": 1733245430,
-            "rd": 44
+            "rating": 2431,
+            "date": 1741178891,
+            "rd": 45
         },
         "best": {
             "rating": 2484,
             "date": 1718723809,
-            "game": "https://www.chess.com/game/live/125168311695"
+            "game": "https://www.chess.com/game/live/130004428989"
         },
         "record": {
-            "win": 1048,
-            "loss": 685,
-            "draw": 161
+            "win": 1083,
+            "loss": 731,
+            "draw": 173
         }
     },
     "fide": 2278,

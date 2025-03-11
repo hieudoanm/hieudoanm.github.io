@@ -6,10 +6,10 @@
     "name": "Artem Gilevych",
     "username": "metra93",
     "title": "IM",
-    "followers": 214,
+    "followers": 222,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Bologna",
-    "last_online": 1734166844,
+    "last_online": 1741702081,
     "joined": 1343578296,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2185,
-            "date": 1733478965,
+            "date": 1740061289,
             "rd": 233
         },
         "best": {

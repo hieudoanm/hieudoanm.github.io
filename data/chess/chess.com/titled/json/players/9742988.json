@@ -5,15 +5,15 @@
     "name": "Frederico Matsuura",
     "username": "fredymatsuura",
     "title": "FM",
-    "followers": 86,
+    "followers": 88,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Curitiba/Pr",
-    "last_online": 1734161590,
+    "last_online": 1741524614,
     "joined": 1353633350,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2221,
-            "date": 1734113634,
-            "rd": 25
+            "rating": 2129,
+            "date": 1741703582,
+            "rd": 18
         },
         "best": {
             "rating": 2359,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/49669134891"
         },
         "record": {
-            "win": 6866,
-            "loss": 6496,
-            "draw": 316
+            "win": 7537,
+            "loss": 7202,
+            "draw": 340
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2324,
-            "date": 1734163588,
-            "rd": 39
+            "rating": 2426,
+            "date": 1741631267,
+            "rd": 37
         },
         "best": {
             "rating": 2435,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/5610940619"
         },
         "record": {
-            "win": 9341,
-            "loss": 7554,
-            "draw": 1102
+            "win": 9447,
+            "loss": 7657,
+            "draw": 1114
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3006,
-            "date": 1719859287
+            "rating": 3068,
+            "date": 1740661385
         },
         "lowest": {
             "rating": 1401,

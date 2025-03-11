@@ -5,10 +5,10 @@
     "name": "Roger Derichs",
     "username": "hurghada",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Berlin",
-    "last_online": 1734167912,
+    "last_online": 1741629865,
     "joined": 1410636294,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2389,
-            "date": 1734103233,
-            "rd": 27
+            "rating": 2449,
+            "date": 1741639408,
+            "rd": 29
         },
         "best": {
-            "rating": 2519,
-            "date": 1658088305,
+            "rating": 2534,
+            "date": 1734472532,
             "game": "https://www.chess.com/game/live/120223239293"
         },
         "record": {
-            "win": 2300,
-            "loss": 1741,
-            "draw": 421
+            "win": 2387,
+            "loss": 1811,
+            "draw": 442
         }
     },
     "tactics": {

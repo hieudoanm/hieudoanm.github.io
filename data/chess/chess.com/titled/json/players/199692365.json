@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/meeresgrund",
     "username": "meeresgrund",
     "title": "CM",
-    "followers": 76,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734080992,
+    "last_online": 1741613391,
     "joined": 1664627854,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +16,7 @@
     "chess_daily": {
         "last": {
             "rating": 1680,
-            "date": 1730972000,
+            "date": 1739754576,
             "rd": 240
         },
         "best": {
@@ -28,7 +28,26 @@
             "win": 2,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 22328,
+            "time_per_move": 24259,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1666,
+            "date": 1739754576,
+            "rd": 285
+        },
+        "best": {
+            "rating": 1666,
+            "date": 1739754576,
+            "game": "https://www.chess.com/game/daily/771832917"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 24259,
             "timeout_percent": 0
         }
     },
@@ -51,9 +70,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1966,
-            "date": 1733643898,
-            "rd": 42
+            "rating": 2054,
+            "date": 1741549869,
+            "rd": 37
         },
         "best": {
             "rating": 2075,
@@ -61,16 +80,16 @@
             "game": "https://www.chess.com/game/live/93556713341"
         },
         "record": {
-            "win": 398,
-            "loss": 280,
-            "draw": 59
+            "win": 454,
+            "loss": 316,
+            "draw": 69
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2282,
-            "date": 1734178946,
-            "rd": 27
+            "rating": 2283,
+            "date": 1741637490,
+            "rd": 26
         },
         "best": {
             "rating": 2345,
@@ -78,9 +97,9 @@
             "game": "https://www.chess.com/game/live/63404885791"
         },
         "record": {
-            "win": 2024,
-            "loss": 1567,
-            "draw": 435
+            "win": 2328,
+            "loss": 1822,
+            "draw": 512
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Dusan Radovanovic",
     "username": "shepa2017",
     "title": "IM",
-    "followers": 232,
+    "followers": 246,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Belgrade",
-    "last_online": 1734175249,
+    "last_online": 1741223586,
     "joined": 1494373102,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2395,
-            "date": 1734103624,
-            "rd": 22
+            "rating": 2304,
+            "date": 1741661662,
+            "rd": 23
         },
         "best": {
             "rating": 2608,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/102633076837"
         },
         "record": {
-            "win": 2965,
-            "loss": 3285,
-            "draw": 294
+            "win": 3809,
+            "loss": 4226,
+            "draw": 391
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2520,
-            "date": 1734015475,
-            "rd": 23
+            "rating": 2543,
+            "date": 1741642668,
+            "rd": 34
         },
         "best": {
             "rating": 2662,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/112711195209"
         },
         "record": {
-            "win": 4795,
-            "loss": 4576,
-            "draw": 610
+            "win": 4934,
+            "loss": 4736,
+            "draw": 631
         }
     },
     "fide": 2321,

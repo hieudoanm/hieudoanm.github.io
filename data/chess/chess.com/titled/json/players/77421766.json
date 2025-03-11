@@ -1,14 +1,13 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/77421766.199aa651.200x200o.c25200a7ea3b.png",
     "player_id": 77421766,
-    "@id": "https://api.chess.com/pub/player/avocadoiris",
-    "url": "https://www.chess.com/member/avocadoiris",
-    "username": "avocadoiris",
+    "@id": "https://api.chess.com/pub/player/short_exact_sequence",
+    "url": "https://www.chess.com/member/short_exact_sequence",
+    "username": "short_exact_sequence",
     "title": "WCM",
     "followers": 43,
     "country": "https://api.chess.com/pub/country/US",
-    "location": "stl, misery",
-    "last_online": 1722053709,
+    "last_online": 1737406798,
     "joined": 1587501395,
     "status": "premium",
     "is_streamer": false,
@@ -66,7 +65,6 @@
             "draw": 0
         }
     },
-    "fide": 2071,
     "tactics": {
         "highest": {
             "rating": 3001,

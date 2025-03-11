@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/MangusCalrissian",
     "username": "manguscalrissian",
     "title": "FM",
-    "followers": 2,
+    "followers": 3,
     "country": "https://api.chess.com/pub/country/NG",
-    "last_online": 1701470214,
+    "last_online": 1735063118,
     "joined": 1663524173,
     "status": "premium",
     "is_streamer": false,
@@ -28,19 +28,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2315,
-            "date": 1698263059,
+            "rating": 2489,
+            "date": 1734884847,
             "rd": 107
         },
         "best": {
-            "rating": 2441,
-            "date": 1664813828,
-            "game": "https://www.chess.com/game/live/63145865969"
+            "rating": 2490,
+            "date": 1734883554,
+            "game": "https://www.chess.com/game/live/128622223713"
         },
         "record": {
-            "win": 8,
-            "loss": 8,
-            "draw": 1
+            "win": 12,
+            "loss": 9,
+            "draw": 2
         }
     },
     "tactics": {
@@ -53,5 +53,10 @@
             "date": 1663524173
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 42
+        }
+    }
 }

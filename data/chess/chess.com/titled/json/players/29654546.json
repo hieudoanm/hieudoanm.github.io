@@ -8,7 +8,7 @@
     "followers": 42,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Nice",
-    "last_online": 1734175654,
+    "last_online": 1741602191,
     "joined": 1472254952,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2427,
-            "date": 1726260078,
-            "rd": 84
+            "rating": 2499,
+            "date": 1739058928,
+            "rd": 96
         },
         "best": {
             "rating": 2639,
@@ -58,9 +58,9 @@
             "game": "https://www.chess.com/game/live/38096455701"
         },
         "record": {
-            "win": 5108,
+            "win": 5110,
             "loss": 5094,
-            "draw": 1039
+            "draw": 1040
         }
     },
     "tactics": {

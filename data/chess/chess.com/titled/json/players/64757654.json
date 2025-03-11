@@ -5,9 +5,9 @@
     "name": "Juan Jacobo Bolanos Lopez",
     "username": "jjbolanos",
     "title": "CM",
-    "followers": 19,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1732823962,
+    "last_online": 1739415667,
     "joined": 1566872541,
     "status": "premium",
     "is_streamer": false,
@@ -69,18 +69,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2280,
-            "date": 1732039721,
-            "rd": 91
+            "rating": 2225,
+            "date": 1735755735,
+            "rd": 69
         },
         "best": {
-            "rating": 2280,
-            "date": 1732039721,
+            "rating": 2302,
+            "date": 1734471961,
             "game": "https://www.chess.com/game/live/99789109291"
         },
         "record": {
-            "win": 931,
-            "loss": 903,
+            "win": 937,
+            "loss": 913,
             "draw": 89
         }
     },

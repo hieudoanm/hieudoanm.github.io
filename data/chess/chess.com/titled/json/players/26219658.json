@@ -6,10 +6,10 @@
     "name": "David Gochelashvili",
     "username": "kudesnik84",
     "title": "IM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Sochi",
-    "last_online": 1724804505,
+    "last_online": 1739001810,
     "joined": 1453209828,
     "status": "premium",
     "is_streamer": false,
@@ -71,18 +71,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2287,
-            "date": 1707580365,
-            "rd": 156
+            "rating": 2447,
+            "date": 1738081246,
+            "rd": 112
         },
         "best": {
-            "rating": 2449,
-            "date": 1624992380,
-            "game": "https://www.chess.com/game/live/18729638487"
+            "rating": 2494,
+            "date": 1737477471,
+            "game": "https://www.chess.com/game/live/131216348661"
         },
         "record": {
-            "win": 146,
-            "loss": 75,
+            "win": 150,
+            "loss": 82,
             "draw": 10
         }
     },

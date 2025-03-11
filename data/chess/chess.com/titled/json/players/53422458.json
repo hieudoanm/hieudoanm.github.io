@@ -6,10 +6,10 @@
     "name": "Tamerlan Bekturov",
     "username": "lagravesamuell",
     "title": "FM",
-    "followers": 65,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "Pavlodar",
-    "last_online": 1734137190,
+    "last_online": 1741618625,
     "joined": 1545154012,
     "status": "premium",
     "is_streamer": false,
@@ -53,7 +53,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2714,
-            "date": 1722717395,
+            "date": 1741106142,
             "rd": 49
         },
         "best": {

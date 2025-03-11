@@ -6,10 +6,10 @@
     "name": "Daniel Titichoca Daza",
     "username": "danieltitichoca",
     "title": "CM",
-    "followers": 139,
+    "followers": 141,
     "country": "https://api.chess.com/pub/country/BO",
     "location": "Oruro",
-    "last_online": 1733857517,
+    "last_online": 1739288764,
     "joined": 1583693158,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2414,
-            "date": 1721245890,
-            "rd": 98
+            "rating": 2416,
+            "date": 1739647684,
+            "rd": 115
         },
         "best": {
             "rating": 2526,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/11033125083"
         },
         "record": {
-            "win": 120,
-            "loss": 93,
+            "win": 121,
+            "loss": 94,
             "draw": 7
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2466,
-            "date": 1733798741,
-            "rd": 48
+            "rating": 2431,
+            "date": 1741228931,
+            "rd": 50
         },
         "best": {
             "rating": 2648,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/91899669803"
         },
         "record": {
-            "win": 2619,
-            "loss": 2908,
-            "draw": 427
+            "win": 2634,
+            "loss": 2928,
+            "draw": 429
         }
     },
     "fide": 2250,

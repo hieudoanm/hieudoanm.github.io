@@ -5,10 +5,10 @@
     "name": "Kim Yew Chan",
     "username": "vasily85",
     "title": "FM",
-    "followers": 84,
+    "followers": 88,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "London",
-    "last_online": 1734182674,
+    "last_online": 1741263788,
     "joined": 1474894588,
     "status": "premium",
     "is_streamer": false,
@@ -51,26 +51,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2540,
-            "date": 1728402048,
-            "rd": 49
+            "rating": 2585,
+            "date": 1741106449,
+            "rd": 48
         },
         "best": {
-            "rating": 2548,
-            "date": 1718214303,
+            "rating": 2590,
+            "date": 1740506435,
             "game": "https://www.chess.com/game/live/102810091307"
         },
         "record": {
-            "win": 642,
-            "loss": 589,
-            "draw": 113
+            "win": 650,
+            "loss": 594,
+            "draw": 114
         }
     },
     "fide": 2311,
     "tactics": {
         "highest": {
-            "rating": 3693,
-            "date": 1733907698
+            "rating": 3735,
+            "date": 1735224321
         },
         "lowest": {
             "rating": 1354,

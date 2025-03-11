@@ -6,10 +6,10 @@
     "name": "Leonid Starozhilov",
     "username": "leonid_starozhilov",
     "title": "FM",
-    "followers": 1225,
+    "followers": 1238,
     "country": "https://api.chess.com/pub/country/UA",
-    "location": "Kherson",
-    "last_online": 1734156836,
+    "location": "Kyiv",
+    "last_online": 1741702431,
     "joined": 1486135498,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2211,
-            "date": 1733982597,
-            "rd": 91
+            "rating": 2145,
+            "date": 1741624932,
+            "rd": 92
         },
         "best": {
             "rating": 2391,
@@ -28,17 +28,11 @@
             "game": "https://www.chess.com/game/daily/353237343"
         },
         "record": {
-            "win": 236,
-            "loss": 20,
-            "draw": 40,
-            "time_per_move": 4463,
+            "win": 260,
+            "loss": 22,
+            "draw": 42,
+            "time_per_move": 4420,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 3
         }
     },
     "chess960_daily": {
@@ -56,14 +50,8 @@
             "win": 15,
             "loss": 2,
             "draw": 5,
-            "time_per_move": 4463,
+            "time_per_move": 4420,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 3
         }
     },
     "chess_rapid": {
@@ -85,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2745,
-            "date": 1734118584,
-            "rd": 30
+            "rating": 2760,
+            "date": 1741446374,
+            "rd": 38
         },
         "best": {
             "rating": 2842,
@@ -95,16 +83,16 @@
             "game": "https://www.chess.com/game/live/89835607753"
         },
         "record": {
-            "win": 6106,
-            "loss": 3896,
-            "draw": 1094
+            "win": 6162,
+            "loss": 3930,
+            "draw": 1111
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2778,
-            "date": 1734116643,
-            "rd": 38
+            "rating": 2740,
+            "date": 1741625968,
+            "rd": 43
         },
         "best": {
             "rating": 2838,
@@ -112,9 +100,9 @@
             "game": "https://www.chess.com/game/live/4721972259"
         },
         "record": {
-            "win": 11799,
-            "loss": 8972,
-            "draw": 3247
+            "win": 11886,
+            "loss": 9029,
+            "draw": 3266
         }
     },
     "fide": 2400,

@@ -6,10 +6,10 @@
     "name": "Mohamed Nader",
     "username": "mohamednader3",
     "title": "IM",
-    "followers": 23,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/EG",
     "location": "Giza",
-    "last_online": 1733748730,
+    "last_online": 1741427229,
     "joined": 1268248177,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1948,
-            "date": 1729593128,
+            "date": 1740161596,
             "rd": 253
         },
         "best": {
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1809,
-            "date": 1726252579,
-            "rd": 130
+            "rating": 1811,
+            "date": 1740138213,
+            "rd": 103
         },
         "best": {
             "rating": 2025,
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/49307394807"
         },
         "record": {
-            "win": 93,
-            "loss": 86,
+            "win": 96,
+            "loss": 89,
             "draw": 11
         }
     },

@@ -6,10 +6,10 @@
     "name": "Aniruddha Deshpande",
     "username": "malhar9",
     "title": "FM",
-    "followers": 121,
+    "followers": 125,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "PUNE",
-    "last_online": 1734148076,
+    "last_online": 1741432917,
     "joined": 1375859155,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2353,
-            "date": 1693360975,
+            "date": 1736566572,
             "rd": 115
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2434,
-            "date": 1733588421,
-            "rd": 48
+            "rating": 2444,
+            "date": 1738146896,
+            "rd": 57
         },
         "best": {
             "rating": 2561,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/5518037014"
         },
         "record": {
-            "win": 305,
-            "loss": 267,
+            "win": 309,
+            "loss": 270,
             "draw": 40
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2324,
-            "date": 1734148898,
-            "rd": 60
+            "rating": 2293,
+            "date": 1736872412,
+            "rd": 61
         },
         "best": {
             "rating": 2428,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/5148325364"
         },
         "record": {
-            "win": 501,
-            "loss": 259,
-            "draw": 53
+            "win": 504,
+            "loss": 266,
+            "draw": 54
         }
     },
     "fide": 2301,
     "tactics": {
         "highest": {
-            "rating": 3497,
-            "date": 1730355052
+            "rating": 3528,
+            "date": 1738304242
         },
         "lowest": {
             "rating": 1215,

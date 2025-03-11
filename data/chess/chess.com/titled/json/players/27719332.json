@@ -6,9 +6,9 @@
     "name": "Nathan Hinds",
     "username": "d4ismine",
     "title": "CM",
-    "followers": 84,
+    "followers": 86,
     "country": "https://api.chess.com/pub/country/JM",
-    "last_online": 1734185578,
+    "last_online": 1741681047,
     "joined": 1460510424,
     "status": "premium",
     "is_streamer": false,
@@ -101,8 +101,8 @@
             "score": 49
         },
         "daily": {
-            "total_attempts": 32,
-            "score": 29
+            "total_attempts": 36,
+            "score": 33
         }
     }
 }

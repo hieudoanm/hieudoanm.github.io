@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/141967017.3aa6d7cc.200x200o.6bf7a4b76cfe.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/141967017.7094f89b.200x200o.363ca0143a8b.jpg",
     "player_id": 141967017,
     "@id": "https://api.chess.com/pub/player/secretroses",
     "url": "https://www.chess.com/member/secretroses",
     "name": "Irene Xie",
     "username": "secretroses",
     "title": "WCM",
-    "followers": 9,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Ontario",
-    "last_online": 1734134169,
+    "last_online": 1741575399,
     "joined": 1622029341,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1236,
-            "date": 1734134536,
-            "rd": 132
+            "rating": 1349,
+            "date": 1740234778,
+            "rd": 110
         },
         "best": {
-            "rating": 1236,
-            "date": 1733523533,
-            "game": "https://www.chess.com/game/daily/718882447"
+            "rating": 1349,
+            "date": 1740234777,
+            "game": "https://www.chess.com/game/daily/748219945"
         },
         "record": {
-            "win": 9,
-            "loss": 1,
+            "win": 16,
+            "loss": 2,
             "draw": 0,
-            "time_per_move": 33585,
+            "time_per_move": 39417,
             "timeout_percent": 0
         }
     },
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1985,
-            "date": 1734139446,
-            "rd": 34
+            "rating": 1957,
+            "date": 1739919765,
+            "rd": 53
         },
         "best": {
             "rating": 2020,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/125704750775"
         },
         "record": {
-            "win": 265,
-            "loss": 136,
-            "draw": 24
+            "win": 285,
+            "loss": 157,
+            "draw": 27
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2156,
-            "date": 1733690033,
-            "rd": 35
+            "rating": 2201,
+            "date": 1740525380,
+            "rd": 53
         },
         "best": {
             "rating": 2222,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/117910795719"
         },
         "record": {
-            "win": 186,
-            "loss": 156,
-            "draw": 44
+            "win": 200,
+            "loss": 167,
+            "draw": 48
         }
     },
     "fide": 2145,

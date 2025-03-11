@@ -6,10 +6,10 @@
     "name": "Dr. Norbert Barth",
     "username": "zumpili",
     "title": "FM",
-    "followers": 97,
+    "followers": 103,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Regensburg",
-    "last_online": 1734053133,
+    "last_online": 1741702705,
     "joined": 1293136436,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2311,
-            "date": 1734056960,
-            "rd": 14
+            "rating": 2481,
+            "date": 1741703675,
+            "rd": 15
         },
         "best": {
             "rating": 2782,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/103923678"
         },
         "record": {
-            "win": 44846,
-            "loss": 31349,
-            "draw": 3714
+            "win": 47768,
+            "loss": 33702,
+            "draw": 4063
         }
     },
     "chess_blitz": {

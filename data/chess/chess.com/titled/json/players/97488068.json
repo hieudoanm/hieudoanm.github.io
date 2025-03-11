@@ -6,9 +6,9 @@
     "name": "M Nubairshah Shaikh",
     "username": "nubairyt",
     "title": "IM",
-    "followers": 124,
+    "followers": 127,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1730898972,
+    "last_online": 1740971725,
     "joined": 1605642018,
     "status": "premium",
     "is_streamer": true,
@@ -39,9 +39,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2825,
-            "date": 1676849233,
-            "rd": 87
+            "rating": 2832,
+            "date": 1736340350,
+            "rd": 49
         },
         "best": {
             "rating": 2905,
@@ -49,7 +49,7 @@
             "game": "https://www.chess.com/game/live/6316928661"
         },
         "record": {
-            "win": 379,
+            "win": 380,
             "loss": 322,
             "draw": 53
         }
@@ -74,8 +74,8 @@
     "fide": 2440,
     "tactics": {
         "highest": {
-            "rating": 3587,
-            "date": 1730184458
+            "rating": 3653,
+            "date": 1740972530
         },
         "lowest": {
             "rating": 2459,

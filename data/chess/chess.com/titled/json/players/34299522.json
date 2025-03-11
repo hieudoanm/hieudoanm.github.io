@@ -6,54 +6,53 @@
     "name": "Berk Ardus",
     "username": "berkardus",
     "title": "IM",
-    "followers": 16,
+    "followers": 200,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1728378315,
+    "last_online": 1741698397,
     "joined": 1490617006,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1973,
-            "date": 1542117144,
-            "rd": 247
+            "rating": 2254,
+            "date": 1741524240,
+            "rd": 49
         },
         "best": {
-            "rating": 1973,
-            "date": 1542117144,
-            "game": "https://www.chess.com/game/live/3213373887"
+            "rating": 2228,
+            "date": 1739618253,
+            "game": "https://www.chess.com/game/live/133167537885"
         },
         "record": {
-            "win": 1,
-            "loss": 0,
+            "win": 17,
+            "loss": 1,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2309,
-            "date": 1696415314,
-            "rd": 188
+            "rating": 2514,
+            "date": 1741538339
         },
         "best": {
             "rating": 2591,
             "date": 1696415064,
-            "game": "https://www.chess.com/game/live/4327238584"
+            "game": "https://www.chess.com/game/live/132476447013"
         },
         "record": {
-            "win": 21,
-            "loss": 11,
-            "draw": 2
+            "win": 1503,
+            "loss": 227,
+            "draw": 51
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2618,
-            "date": 1700315576,
-            "rd": 140
+            "rating": 2605,
+            "date": 1741508577,
+            "rd": 49
         },
         "best": {
             "rating": 2666,
@@ -61,9 +60,9 @@
             "game": "https://www.chess.com/game/live/4019672080"
         },
         "record": {
-            "win": 192,
-            "loss": 134,
-            "draw": 27
+            "win": 262,
+            "loss": 136,
+            "draw": 28
         }
     },
     "tactics": {

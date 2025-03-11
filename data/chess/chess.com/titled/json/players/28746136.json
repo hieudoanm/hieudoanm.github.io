@@ -8,7 +8,7 @@
     "followers": 107,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Zielona G\u00f3ra",
-    "last_online": 1734159390,
+    "last_online": 1741631749,
     "joined": 1466621650,
     "status": "premium",
     "is_streamer": false,
@@ -87,8 +87,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3636,
-            "date": 1731263467
+            "rating": 3906,
+            "date": 1741243517
         },
         "lowest": {
             "rating": 1348,

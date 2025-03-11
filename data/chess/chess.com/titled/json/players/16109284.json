@@ -1,5 +1,4 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/16109284.2cdbbd0a.200x200o.6bad5d9265d5.jpg",
     "player_id": 16109284,
     "@id": "https://api.chess.com/pub/player/kritipatel",
     "url": "https://www.chess.com/member/kritipatel",
@@ -7,9 +6,8 @@
     "username": "kritipatel",
     "title": "WCM",
     "followers": 60,
-    "country": "https://api.chess.com/pub/country/IN",
-    "location": "Mumbai",
-    "last_online": 1733473820,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1740661132,
     "joined": 1392727176,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2104,
-            "date": 1730647886,
-            "rd": 31
+            "rating": 2115,
+            "date": 1740727171,
+            "rd": 68
         },
         "best": {
             "rating": 2209,
@@ -45,7 +43,7 @@
             "game": "https://www.chess.com/game/live/113244001619"
         },
         "record": {
-            "win": 3983,
+            "win": 3984,
             "loss": 3276,
             "draw": 295
         }
@@ -67,7 +65,6 @@
             "draw": 83
         }
     },
-    "fide": 0,
     "tactics": {
         "highest": {
             "rating": 3067,

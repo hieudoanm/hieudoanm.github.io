@@ -5,15 +5,15 @@
     "name": "Colin Pace",
     "username": "malti",
     "title": "CM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/MT",
     "location": "Sliema",
-    "last_online": 1734103271,
+    "last_online": 1740763779,
     "joined": 1235641360,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2033,
-            "date": 1734107062,
-            "rd": 47
+            "rating": 2040,
+            "date": 1734454953,
+            "rd": 48
         },
         "best": {
             "rating": 2049,
@@ -46,33 +46,33 @@
             "game": "https://www.chess.com/game/live/127395580121"
         },
         "record": {
-            "win": 11,
+            "win": 12,
             "loss": 4,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1728,
-            "date": 1732833361,
-            "rd": 132
+            "rating": 2067,
+            "date": 1739737978,
+            "rd": 32
         },
         "best": {
             "rating": 2218,
             "date": 1712088105,
-            "game": "https://www.chess.com/game/live/2853426605"
+            "game": "https://www.chess.com/game/live/133473578975"
         },
         "record": {
-            "win": 358,
-            "loss": 307,
-            "draw": 17
+            "win": 624,
+            "loss": 523,
+            "draw": 33
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2132,
-            "date": 1717542300,
-            "rd": 71
+            "rating": 2085,
+            "date": 1734527694,
+            "rd": 64
         },
         "best": {
             "rating": 2322,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/111273684233"
         },
         "record": {
-            "win": 1600,
-            "loss": 1267,
-            "draw": 123
+            "win": 1616,
+            "loss": 1274,
+            "draw": 127
         }
     },
     "fide": 2150,

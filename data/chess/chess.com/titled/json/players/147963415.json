@@ -6,9 +6,9 @@
     "name": "Jan Andrej Bohacek",
     "username": "destroyerjohny",
     "title": "CM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1733592016,
+    "last_online": 1741373796,
     "joined": 1626372279,
     "status": "premium",
     "is_streamer": false,
@@ -17,28 +17,28 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1289,
-            "date": 1733592040,
-            "rd": 194
+            "rating": 1334,
+            "date": 1735228699,
+            "rd": 196
         },
         "best": {
-            "rating": 1289,
-            "date": 1717183934,
+            "rating": 1334,
+            "date": 1735228699,
             "game": "https://www.chess.com/game/daily/627321393"
         },
         "record": {
-            "win": 5,
+            "win": 6,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 63015,
+            "time_per_move": 64774,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2193,
-            "date": 1706193654,
-            "rd": 135
+            "rating": 2185,
+            "date": 1740394482,
+            "rd": 49
         },
         "best": {
             "rating": 1791,
@@ -47,15 +47,15 @@
         },
         "record": {
             "win": 4,
-            "loss": 2,
+            "loss": 3,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2192,
-            "date": 1727680290,
-            "rd": 84
+            "rating": 2079,
+            "date": 1740394828,
+            "rd": 90
         },
         "best": {
             "rating": 2281,
@@ -63,12 +63,11 @@
             "game": "https://www.chess.com/game/live/100125151141"
         },
         "record": {
-            "win": 215,
-            "loss": 125,
+            "win": 216,
+            "loss": 131,
             "draw": 13
         }
     },
-    "fide": 2193,
     "tactics": {
         "highest": {
             "rating": 3196,

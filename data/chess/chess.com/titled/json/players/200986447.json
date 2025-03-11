@@ -6,9 +6,9 @@
     "name": "Tuna Tuncer",
     "username": "htopia",
     "title": "FM",
-    "followers": 35,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1733849591,
+    "last_online": 1741516785,
     "joined": 1665349648,
     "status": "premium",
     "is_streamer": false,
@@ -35,8 +35,8 @@
     "fide": 2328,
     "tactics": {
         "highest": {
-            "rating": 3158,
-            "date": 1727599903
+            "rating": 3446,
+            "date": 1740912584
         },
         "lowest": {
             "rating": 2411,
@@ -47,6 +47,10 @@
         "best": {
             "total_attempts": 64,
             "score": 61
+        },
+        "daily": {
+            "total_attempts": 47,
+            "score": 45
         }
     }
 }

@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/44905886.901f942b.200x200o.f76b9be1139c.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/44905886.61bc5a2a.200x200o.445d1bebe7ef.jpg",
     "player_id": 44905886,
     "@id": "https://api.chess.com/pub/player/freefresh",
     "url": "https://www.chess.com/member/Freefresh",
     "name": "Ilia Martinovici",
     "username": "freefresh",
     "title": "IM",
-    "followers": 28,
-    "country": "https://api.chess.com/pub/country/JP",
-    "last_online": 1734131043,
+    "followers": 45,
+    "country": "https://api.chess.com/pub/country/IT",
+    "last_online": 1741701162,
     "joined": 1522689207,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2169,
-            "date": 1615651737,
+            "date": 1736548017,
             "rd": 178
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2631,
-            "date": 1734134104,
-            "rd": 49
+            "rating": 2688,
+            "date": 1741686652,
+            "rd": 47
         },
         "best": {
             "rating": 2789,
@@ -63,32 +63,32 @@
             "game": "https://www.chess.com/game/live/54041400229"
         },
         "record": {
-            "win": 1278,
-            "loss": 1083,
-            "draw": 152
+            "win": 1291,
+            "loss": 1089,
+            "draw": 154
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2728,
-            "date": 1734131381,
-            "rd": 42
+            "rating": 2780,
+            "date": 1741698678,
+            "rd": 28
         },
         "best": {
-            "rating": 2816,
-            "date": 1695846149,
-            "game": "https://www.chess.com/game/live/38075483979"
+            "rating": 2854,
+            "date": 1739749891,
+            "game": "https://www.chess.com/game/live/132964150857"
         },
         "record": {
-            "win": 1265,
-            "loss": 1187,
-            "draw": 253
+            "win": 1455,
+            "loss": 1396,
+            "draw": 309
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3279,
-            "date": 1666322113
+            "rating": 3405,
+            "date": 1739785245
         },
         "lowest": {
             "rating": 805,

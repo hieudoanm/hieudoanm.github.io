@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 9,
     "country": "https://api.chess.com/pub/country/MK",
-    "last_online": 1733995650,
+    "last_online": 1741486083,
     "joined": 1674904418,
     "status": "premium",
     "is_streamer": false,
@@ -16,27 +16,21 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2005,
-            "date": 1734123489,
-            "rd": 110
+            "rating": 1997,
+            "date": 1741692346,
+            "rd": 109
         },
         "best": {
-            "rating": 2005,
-            "date": 1732163398,
+            "rating": 2057,
+            "date": 1741026202,
             "game": "https://www.chess.com/game/daily/716043921"
         },
         "record": {
-            "win": 90,
-            "loss": 1,
+            "win": 118,
+            "loss": 2,
             "draw": 2,
-            "time_per_move": 30308,
+            "time_per_move": 29236,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 8,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
@@ -58,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2656,
-            "date": 1733985444,
-            "rd": 33
+            "rating": 2688,
+            "date": 1741470767,
+            "rd": 36
         },
         "best": {
             "rating": 2801,
@@ -68,15 +62,15 @@
             "game": "https://www.chess.com/game/live/124095033001"
         },
         "record": {
-            "win": 1432,
-            "loss": 1061,
-            "draw": 297
+            "win": 1605,
+            "loss": 1193,
+            "draw": 328
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3393,
-            "date": 1731549799
+            "rating": 3486,
+            "date": 1739954632
         },
         "lowest": {
             "rating": 1000,

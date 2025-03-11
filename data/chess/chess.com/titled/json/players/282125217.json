@@ -6,19 +6,19 @@
     "name": "Dang Minh Quang Tran",
     "username": "minhquang_chesscoach",
     "title": "FM",
-    "followers": 6,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734008747,
+    "last_online": 1741679840,
     "joined": 1683179845,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 1788,
-            "date": 1727963906,
+            "date": 1738767797,
             "rd": 186
         },
         "best": {
@@ -34,36 +34,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2775,
-            "date": 1732212625,
-            "rd": 49
+            "rating": 2727,
+            "date": 1741695522,
+            "rd": 29
         },
         "best": {
-            "rating": 2842,
-            "date": 1723433309,
+            "rating": 2849,
+            "date": 1738865681,
             "game": "https://www.chess.com/game/live/115983658407"
         },
         "record": {
-            "win": 449,
-            "loss": 247,
-            "draw": 51
+            "win": 684,
+            "loss": 438,
+            "draw": 79
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2534,
-            "date": 1732869521,
-            "rd": 49
+            "rating": 2687,
+            "date": 1740043484,
+            "rd": 35
         },
         "best": {
-            "rating": 2548,
-            "date": 1732265313,
-            "game": "https://www.chess.com/game/live/117112820599"
+            "rating": 2718,
+            "date": 1738406312,
+            "game": "https://www.chess.com/game/live/132145843169"
         },
         "record": {
-            "win": 144,
-            "loss": 44,
-            "draw": 7
+            "win": 234,
+            "loss": 99,
+            "draw": 24
         }
     },
     "fide": 2248,

@@ -6,10 +6,10 @@
     "name": "Daniel Romero Castej\u00f3n",
     "username": "kuruguru",
     "title": "CM",
-    "followers": 30,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "El Prat de Llobregat",
-    "last_online": 1734173950,
+    "last_online": 1741612142,
     "joined": 1398938486,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2210,
-            "date": 1729702330,
+            "rating": 2205,
+            "date": 1739189448,
             "rd": 49
         },
         "best": {
@@ -28,33 +28,33 @@
             "game": "https://www.chess.com/game/live/97353073565"
         },
         "record": {
-            "win": 70,
-            "loss": 6,
+            "win": 71,
+            "loss": 7,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2144,
-            "date": 1731676831,
-            "rd": 35
+            "rating": 2210,
+            "date": 1739037416,
+            "rd": 24
         },
         "best": {
             "rating": 2383,
             "date": 1713176968,
-            "game": "https://www.chess.com/game/live/105303044517"
+            "game": "https://www.chess.com/game/live/132274227437"
         },
         "record": {
-            "win": 726,
-            "loss": 537,
-            "draw": 67
+            "win": 877,
+            "loss": 653,
+            "draw": 82
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2303,
-            "date": 1734175416,
-            "rd": 33
+            "rating": 2334,
+            "date": 1741615785,
+            "rd": 35
         },
         "best": {
             "rating": 2414,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/95645421157"
         },
         "record": {
-            "win": 1776,
-            "loss": 1321,
-            "draw": 208
+            "win": 1898,
+            "loss": 1421,
+            "draw": 228
         }
     },
     "tactics": {

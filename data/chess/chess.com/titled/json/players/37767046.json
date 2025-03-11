@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37767046.b2805065.200x200o.a78dbb4e4389.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37767046.db601f43.200x200o.964980710ce4.jpg",
     "player_id": 37767046,
     "@id": "https://api.chess.com/pub/player/obidobad",
     "url": "https://www.chess.com/member/ObidObad",
     "name": "Gal Drnov\u0161ek",
     "username": "obidobad",
     "title": "IM",
-    "followers": 58,
+    "followers": 61,
     "country": "https://api.chess.com/pub/country/SI",
-    "last_online": 1734123814,
+    "last_online": 1741628682,
     "joined": 1502568391,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2453,
-            "date": 1733258443,
-            "rd": 46
+            "rating": 2450,
+            "date": 1738359214,
+            "rd": 47
         },
         "best": {
             "rating": 2578,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/91128053631"
         },
         "record": {
-            "win": 228,
-            "loss": 188,
-            "draw": 38
+            "win": 264,
+            "loss": 219,
+            "draw": 46
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2441,
-            "date": 1733588228,
-            "rd": 33
+            "rating": 2368,
+            "date": 1741634584,
+            "rd": 32
         },
         "best": {
             "rating": 2569,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/85607353419"
         },
         "record": {
-            "win": 3193,
-            "loss": 2724,
-            "draw": 668
+            "win": 3383,
+            "loss": 2879,
+            "draw": 726
         }
     },
     "tactics": {
@@ -99,6 +99,10 @@
         "best": {
             "total_attempts": 57,
             "score": 54
+        },
+        "daily": {
+            "total_attempts": 43,
+            "score": 40
         }
     }
 }

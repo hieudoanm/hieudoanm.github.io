@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 5,
     "country": "https://api.chess.com/pub/country/IM",
-    "last_online": 1731845413,
+    "last_online": 1741298082,
     "joined": 1588625181,
     "status": "basic",
     "is_streamer": false,
@@ -29,7 +29,7 @@
             "loss": 1,
             "draw": 0,
             "time_per_move": 39389,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_blitz": {

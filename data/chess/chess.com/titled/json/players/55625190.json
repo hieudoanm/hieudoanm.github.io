@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/haoTang007",
     "username": "haotang007",
     "title": "CM",
-    "followers": 92,
+    "followers": 95,
     "country": "https://api.chess.com/pub/country/MY",
-    "last_online": 1734144573,
+    "last_online": 1741571041,
     "joined": 1546824480,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +34,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2065,
-            "date": 1734181606,
-            "rd": 45
+            "rating": 2225,
+            "date": 1740810473,
+            "rd": 26
         },
         "best": {
-            "rating": 2069,
-            "date": 1734087241,
-            "game": "https://www.chess.com/game/live/5676334155"
+            "rating": 2265,
+            "date": 1737698049,
+            "game": "https://www.chess.com/game/live/132144048903"
         },
         "record": {
-            "win": 916,
-            "loss": 632,
-            "draw": 96
+            "win": 1189,
+            "loss": 819,
+            "draw": 163
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1966,
-            "date": 1732274002,
-            "rd": 88
+            "rating": 1869,
+            "date": 1738714578,
+            "rd": 45
         },
         "best": {
             "rating": 2050,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/96116598857"
         },
         "record": {
-            "win": 999,
-            "loss": 880,
-            "draw": 81
+            "win": 1025,
+            "loss": 909,
+            "draw": 85
         }
     },
     "tactics": {

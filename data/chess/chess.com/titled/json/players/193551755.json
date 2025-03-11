@@ -5,9 +5,9 @@
     "name": "Henry Richard Vasquez Vargas",
     "username": "lordplayer64",
     "title": "FM",
-    "followers": 32,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/PE",
-    "last_online": 1734120661,
+    "last_online": 1741590915,
     "joined": 1660613158,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2504,
-            "date": 1731391037,
-            "rd": 31
+            "rating": 2475,
+            "date": 1734992194,
+            "rd": 42
         },
         "best": {
             "rating": 2554,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/125126965201"
         },
         "record": {
-            "win": 245,
-            "loss": 143,
-            "draw": 29
+            "win": 253,
+            "loss": 151,
+            "draw": 32
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2611,
-            "date": 1734122700,
-            "rd": 29
+            "rating": 2434,
+            "date": 1737347532,
+            "rd": 27
         },
         "best": {
             "rating": 2667,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/95053745629"
         },
         "record": {
-            "win": 1210,
-            "loss": 878,
-            "draw": 173
+            "win": 1320,
+            "loss": 982,
+            "draw": 188
         }
     },
     "fide": 2142,

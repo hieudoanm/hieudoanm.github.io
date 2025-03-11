@@ -6,10 +6,10 @@
     "name": "H\u00f8gni Egilstoft Nielsen",
     "username": "st-sandavagur",
     "title": "IM",
-    "followers": 676,
+    "followers": 700,
     "country": "https://api.chess.com/pub/country/FO",
     "location": "Sandav&aacute;gur",
-    "last_online": 1734021586,
+    "last_online": 1741504721,
     "joined": 1237738138,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2124,
-            "date": 1734183196,
-            "rd": 81
+            "rating": 2108,
+            "date": 1741677836,
+            "rd": 83
         },
         "best": {
             "rating": 2206,
@@ -28,24 +28,18 @@
             "game": "https://www.chess.com/game/daily/25185621"
         },
         "record": {
-            "win": 1770,
-            "loss": 698,
-            "draw": 347,
-            "time_per_move": 22921,
+            "win": 1771,
+            "loss": 699,
+            "draw": 353,
+            "time_per_move": 22920,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 2080,
-            "date": 1725279681,
-            "rd": 89
+            "rating": 2067,
+            "date": 1740653093,
+            "rd": 107
         },
         "best": {
             "rating": 2080,
@@ -53,17 +47,11 @@
             "game": "https://www.chess.com/game/daily/681428557"
         },
         "record": {
-            "win": 165,
-            "loss": 71,
+            "win": 166,
+            "loss": 72,
             "draw": 51,
-            "time_per_move": 22921,
+            "time_per_move": 22920,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
@@ -85,36 +73,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2802,
-            "date": 1734049102,
-            "rd": 21
+            "rating": 2869,
+            "date": 1741504484,
+            "rd": 26
         },
         "best": {
-            "rating": 2945,
-            "date": 1733270181,
+            "rating": 2955,
+            "date": 1736033549,
             "game": "https://www.chess.com/game/live/40468855095"
         },
         "record": {
-            "win": 14971,
-            "loss": 9002,
-            "draw": 1079
+            "win": 15580,
+            "loss": 9364,
+            "draw": 1119
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2550,
-            "date": 1733928649,
-            "rd": 50
+            "rating": 2615,
+            "date": 1735668552,
+            "rd": 46
         },
         "best": {
             "rating": 2619,
             "date": 1634764064,
-            "game": "https://www.chess.com/game/live/36683485599"
+            "game": "https://www.chess.com/game/live/129404027425"
         },
         "record": {
-            "win": 852,
-            "loss": 409,
-            "draw": 92
+            "win": 868,
+            "loss": 412,
+            "draw": 93
         }
     },
     "tactics": {

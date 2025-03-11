@@ -6,9 +6,9 @@
     "name": "Djuro Skaric",
     "username": "veleamater",
     "title": "FM",
-    "followers": 97,
+    "followers": 105,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734019796,
+    "last_online": 1741278337,
     "joined": 1345222606,
     "status": "premium",
     "is_streamer": false,
@@ -72,36 +72,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2407,
-            "date": 1733597941,
-            "rd": 27
+            "rating": 2436,
+            "date": 1740855600,
+            "rd": 28
         },
         "best": {
-            "rating": 2475,
-            "date": 1702064063,
+            "rating": 2493,
+            "date": 1735409497,
             "game": "https://www.chess.com/game/live/94069454545"
         },
         "record": {
-            "win": 3848,
-            "loss": 4541,
-            "draw": 386
+            "win": 4030,
+            "loss": 4833,
+            "draw": 416
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2579,
-            "date": 1734177387,
-            "rd": 30
+            "rating": 2394,
+            "date": 1741693419,
+            "rd": 29
         },
         "best": {
-            "rating": 2586,
-            "date": 1734163590,
+            "rating": 2589,
+            "date": 1734269352,
             "game": "https://www.chess.com/game/live/124563536735"
         },
         "record": {
-            "win": 3288,
-            "loss": 3406,
-            "draw": 469
+            "win": 3463,
+            "loss": 3609,
+            "draw": 500
         }
     },
     "fide": 2295,

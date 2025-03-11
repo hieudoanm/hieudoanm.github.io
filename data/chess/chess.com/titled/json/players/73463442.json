@@ -6,9 +6,9 @@
     "name": "Michal Jare\u0161",
     "username": "michelangelo111",
     "title": "FM",
-    "followers": 540,
+    "followers": 551,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1734044200,
+    "last_online": 1741592610,
     "joined": 1584124245,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2123,
-            "date": 1734113772,
-            "rd": 68
+            "rating": 2089,
+            "date": 1741677491,
+            "rd": 76
         },
         "best": {
             "rating": 2175,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/daily/382391575"
         },
         "record": {
-            "win": 538,
-            "loss": 65,
-            "draw": 189,
-            "time_per_move": 44533,
+            "win": 547,
+            "loss": 68,
+            "draw": 192,
+            "time_per_move": 48599,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 502,
+            "points": 0,
             "withdraw": 0,
-            "count": 2,
+            "count": 1,
             "highest_finish": 1
         }
     },
@@ -59,25 +59,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2427,
-            "date": 1728852697,
-            "rd": 75
+            "rating": 2463,
+            "date": 1741678234,
+            "rd": 89
         },
         "best": {
-            "rating": 2450,
-            "date": 1616348102,
+            "rating": 2475,
+            "date": 1734968675,
             "game": "https://www.chess.com/game/live/49899026533"
         },
         "record": {
-            "win": 292,
-            "loss": 195,
-            "draw": 45
+            "win": 296,
+            "loss": 197,
+            "draw": 46
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2525,
-            "date": 1733081514,
+            "rating": 2524,
+            "date": 1741678096,
             "rd": 49
         },
         "best": {
@@ -86,12 +86,12 @@
             "game": "https://www.chess.com/game/live/112881589433"
         },
         "record": {
-            "win": 789,
-            "loss": 251,
+            "win": 790,
+            "loss": 252,
             "draw": 138
         }
     },
-    "fide": 2298,
+    "fide": 2284,
     "tactics": {
         "highest": {
             "rating": 3224,

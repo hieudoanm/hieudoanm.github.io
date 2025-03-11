@@ -6,9 +6,9 @@
     "name": "Georgios Kanakaris",
     "username": "pelopidass",
     "title": "IM",
-    "followers": 269,
+    "followers": 289,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1734178241,
+    "last_online": 1741637879,
     "joined": 1576158242,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2516,
-            "date": 1734125793,
-            "rd": 35
+            "rating": 2551,
+            "date": 1741555639,
+            "rd": 39
         },
         "best": {
             "rating": 2706,
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/108396740251"
         },
         "record": {
-            "win": 404,
-            "loss": 435,
-            "draw": 67
+            "win": 537,
+            "loss": 568,
+            "draw": 85
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2566,
-            "date": 1733961087,
-            "rd": 43
+            "rating": 2570,
+            "date": 1741133113,
+            "rd": 39
         },
         "best": {
             "rating": 2915,
             "date": 1586971768,
-            "game": "https://www.chess.com/game/live/68942161191"
+            "game": "https://www.chess.com/game/live/130027202451"
         },
         "record": {
-            "win": 1273,
-            "loss": 1346,
-            "draw": 340
+            "win": 1357,
+            "loss": 1434,
+            "draw": 353
         }
     },
     "fide": 2396,

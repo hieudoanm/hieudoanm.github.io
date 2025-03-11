@@ -9,7 +9,7 @@
     "followers": 101,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "dem rockies",
-    "last_online": 1729996078,
+    "last_online": 1738086528,
     "joined": 1385337863,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2332,
-            "date": 1727969986,
-            "rd": 133
+            "rating": 2427,
+            "date": 1738462803,
+            "rd": 106
         },
         "best": {
             "rating": 2541,
@@ -83,9 +83,9 @@
             "game": "https://www.chess.com/game/live/6430644005"
         },
         "record": {
-            "win": 393,
+            "win": 397,
             "loss": 351,
-            "draw": 29
+            "draw": 31
         }
     },
     "chess_blitz": {
@@ -107,8 +107,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2995,
-            "date": 1729985218
+            "rating": 3037,
+            "date": 1737860601
         },
         "lowest": {
             "rating": 1240,

@@ -6,9 +6,9 @@
     "name": "Jan Rube\u0161",
     "username": "honzarubes95",
     "title": "IM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1733933737,
+    "last_online": 1738003500,
     "joined": 1509573316,
     "status": "premium",
     "is_streamer": false,
@@ -65,19 +65,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2625,
-            "date": 1733854059,
-            "rd": 31
+            "rating": 2624,
+            "date": 1737140768,
+            "rd": 37
         },
         "best": {
             "rating": 2652,
             "date": 1733648510,
-            "game": "https://www.chess.com/game/live/127344611949"
+            "game": "https://www.chess.com/game/live/128198997047"
         },
         "record": {
-            "win": 694,
-            "loss": 551,
-            "draw": 86
+            "win": 723,
+            "loss": 570,
+            "draw": 90
         }
     },
     "fide": 2446,

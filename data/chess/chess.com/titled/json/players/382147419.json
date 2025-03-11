@@ -6,9 +6,9 @@
     "name": "Kumaresh A",
     "username": "kumareshayyachamy",
     "title": "CM",
-    "followers": 14,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733278665,
+    "last_online": 1739627370,
     "joined": 1724150534,
     "status": "premium",
     "is_streamer": false,
@@ -35,8 +35,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3194,
-            "date": 1731818777
+            "rating": 3250,
+            "date": 1740650699
         },
         "lowest": {
             "rating": 400,

@@ -8,7 +8,7 @@
     "followers": 1,
     "country": "https://api.chess.com/pub/country/FI",
     "location": "Vantaa",
-    "last_online": 1734161077,
+    "last_online": 1741278174,
     "joined": 1559927985,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     "fide": 1995,
     "tactics": {
         "highest": {
-            "rating": 2970,
-            "date": 1712681409
+            "rating": 3005,
+            "date": 1734283035
         },
         "lowest": {
             "rating": 798,

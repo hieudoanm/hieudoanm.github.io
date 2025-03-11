@@ -8,7 +8,7 @@
     "followers": 3,
     "country": "https://api.chess.com/pub/country/KG",
     "location": "Bishkek",
-    "last_online": 1733911475,
+    "last_online": 1741684175,
     "joined": 1452569962,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2292,
-            "date": 1733690439,
-            "rd": 56
+            "rating": 2315,
+            "date": 1741547299,
+            "rd": 74
         },
         "best": {
             "rating": 2414,
@@ -58,16 +58,16 @@
             "game": "https://www.chess.com/game/live/103657334503"
         },
         "record": {
-            "win": 198,
-            "loss": 125,
+            "win": 202,
+            "loss": 127,
             "draw": 15
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2464,
-            "date": 1733847544,
-            "rd": 50
+            "rating": 2461,
+            "date": 1741423699,
+            "rd": 69
         },
         "best": {
             "rating": 2521,
@@ -75,8 +75,8 @@
             "game": "https://www.chess.com/game/live/3706069491"
         },
         "record": {
-            "win": 800,
-            "loss": 564,
+            "win": 803,
+            "loss": 566,
             "draw": 97
         }
     },
@@ -93,8 +93,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 57,
-            "score": 54
+            "total_attempts": 60,
+            "score": 57
+        },
+        "daily": {
+            "total_attempts": 54,
+            "score": 52
         }
     }
 }

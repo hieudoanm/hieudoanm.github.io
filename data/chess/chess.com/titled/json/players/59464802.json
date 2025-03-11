@@ -8,7 +8,7 @@
     "followers": 6,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Burlington, ON",
-    "last_online": 1732732437,
+    "last_online": 1741471275,
     "joined": 1554514625,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2452,
-            "date": 1619833157,
+            "date": 1739654454,
             "rd": 347
         },
         "best": {

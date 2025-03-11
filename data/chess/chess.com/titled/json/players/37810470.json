@@ -6,9 +6,9 @@
     "name": "Nikoloz Kumsiashvili",
     "username": "bad_left_hook",
     "title": "IM",
-    "followers": 265,
+    "followers": 270,
     "country": "https://api.chess.com/pub/country/FJ",
-    "last_online": 1733984879,
+    "last_online": 1741530144,
     "joined": 1502718404,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2716,
-            "date": 1728819190,
-            "rd": 31
+            "rating": 2614,
+            "date": 1739643641,
+            "rd": 34
         },
         "best": {
             "rating": 2765,
@@ -63,15 +63,15 @@
             "game": "https://www.chess.com/game/live/31572001957"
         },
         "record": {
-            "win": 3894,
-            "loss": 4023,
-            "draw": 672
+            "win": 3938,
+            "loss": 4096,
+            "draw": 677
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2640,
-            "date": 1733223075,
+            "rating": 2711,
+            "date": 1741443831,
             "rd": 49
         },
         "best": {
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/98203575283"
         },
         "record": {
-            "win": 3828,
-            "loss": 3719,
-            "draw": 840
+            "win": 3916,
+            "loss": 3765,
+            "draw": 849
         }
     },
     "tactics": {

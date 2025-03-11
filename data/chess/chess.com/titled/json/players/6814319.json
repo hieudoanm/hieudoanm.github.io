@@ -6,10 +6,10 @@
     "name": "Balind Nadj Hedjesi",
     "username": "lindba",
     "title": "IM",
-    "followers": 269,
+    "followers": 274,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Tavankut",
-    "last_online": 1733964004,
+    "last_online": 1741562964,
     "joined": 1330566293,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1258,
-            "date": 1711715954,
+            "date": 1741614237,
             "rd": 141
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 14,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 35589,
+            "time_per_move": 36334,
             "timeout_percent": 0
         }
     },

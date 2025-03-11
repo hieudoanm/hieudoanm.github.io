@@ -1,24 +1,24 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/206960003.bee5a030.200x200o.c543f630f87f.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/206960003.4f62065d.200x200o.9f47bd200854.jpg",
     "player_id": 206960003,
-    "@id": "https://api.chess.com/pub/player/barcelona-99",
-    "url": "https://www.chess.com/member/Barcelona-99",
-    "username": "barcelona-99",
+    "@id": "https://api.chess.com/pub/player/swordsman_17",
+    "url": "https://www.chess.com/member/Swordsman_17",
+    "username": "swordsman_17",
     "title": "FM",
-    "followers": 14,
-    "country": "https://api.chess.com/pub/country/SE",
-    "last_online": 1730031915,
+    "followers": 16,
+    "country": "https://api.chess.com/pub/country/UZ",
+    "last_online": 1741641222,
     "joined": 1668695367,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2578,
-            "date": 1730032224,
-            "rd": 49
+            "rating": 2741,
+            "date": 1741642198,
+            "rd": 40
         },
         "best": {
             "rating": 2857,
@@ -26,9 +26,9 @@
             "game": "https://www.chess.com/game/live/68547706757"
         },
         "record": {
-            "win": 148,
-            "loss": 171,
-            "draw": 51
+            "win": 200,
+            "loss": 198,
+            "draw": 64
         }
     },
     "tactics": {
@@ -41,5 +41,10 @@
             "date": 1668695367
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 53,
+            "score": 50
+        }
+    }
 }

@@ -6,10 +6,10 @@
     "name": "Mark Ginsburg",
     "username": "nezhmet",
     "title": "IM",
-    "followers": 180,
+    "followers": 187,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Tucson, AZ",
-    "last_online": 1734131716,
+    "last_online": 1739902564,
     "joined": 1184901543,
     "status": "premium",
     "is_streamer": false,
@@ -54,8 +54,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2563,
-            "date": 1734134178,
+            "rating": 2586,
+            "date": 1734466029,
             "rd": 34
         },
         "best": {
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/4744853584"
         },
         "record": {
-            "win": 7295,
-            "loss": 2315,
-            "draw": 1631
+            "win": 7300,
+            "loss": 2316,
+            "draw": 1638
         }
     },
     "fide": 2435,
     "tactics": {
         "highest": {
-            "rating": 1948,
-            "date": 1285778665
+            "rating": 2008,
+            "date": 1734657402
         },
         "lowest": {
             "rating": 1114,

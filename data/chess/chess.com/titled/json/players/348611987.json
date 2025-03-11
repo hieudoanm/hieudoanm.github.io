@@ -6,54 +6,66 @@
     "name": "Aram Chekh Adam Khedr",
     "username": "aram7adam",
     "title": "FM",
-    "followers": 19,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/SY",
-    "last_online": 1733251409,
+    "last_online": 1740521826,
     "joined": 1709424531,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Elite",
     "streaming_platforms": [],
-    "chess_bullet": {
+    "chess_rapid": {
         "last": {
-            "rating": 2296,
-            "date": 1725149316,
-            "rd": 88
-        },
-        "best": {
-            "rating": 2380,
-            "date": 1710468007,
-            "game": "https://www.chess.com/game/live/104233196769"
+            "rating": 2108,
+            "date": 1740353095,
+            "rd": 49
         },
         "record": {
-            "win": 14,
-            "loss": 12,
-            "draw": 4
+            "win": 0,
+            "loss": 0,
+            "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2429,
+            "date": 1740662376,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2524,
+            "date": 1739562052,
+            "game": "https://www.chess.com/game/live/132493800639"
+        },
+        "record": {
+            "win": 86,
+            "loss": 100,
+            "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2584,
-            "date": 1732081543,
-            "rd": 44
+            "rating": 2539,
+            "date": 1741127368,
+            "rd": 27
         },
         "best": {
-            "rating": 2632,
-            "date": 1718706903,
+            "rating": 2637,
+            "date": 1738970844,
             "game": "https://www.chess.com/game/live/111879777785"
         },
         "record": {
-            "win": 155,
-            "loss": 129,
-            "draw": 30
+            "win": 273,
+            "loss": 285,
+            "draw": 67
         }
     },
     "fide": 2108,
     "tactics": {
         "highest": {
-            "rating": 2178,
-            "date": 1718284746
+            "rating": 2824,
+            "date": 1740835862
         },
         "lowest": {
             "rating": 1000,

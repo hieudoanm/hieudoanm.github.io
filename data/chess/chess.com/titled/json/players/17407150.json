@@ -6,14 +6,14 @@
     "name": "Nisha Mohota",
     "username": "shineatchess",
     "title": "IM",
-    "followers": 102,
+    "followers": 104,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734053838,
+    "last_online": 1741623803,
     "joined": 1400839602,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,26 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2081,
-            "date": 1709917907,
-            "rd": 159
+            "rating": 2013,
+            "date": 1735412364,
+            "rd": 42
         },
         "best": {
             "rating": 2167,
             "date": 1591852272,
-            "game": "https://www.chess.com/game/live/11033001977"
+            "game": "https://www.chess.com/game/live/129145969687"
         },
         "record": {
-            "win": 208,
-            "loss": 240,
-            "draw": 20
+            "win": 251,
+            "loss": 305,
+            "draw": 21
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2338,
-            "date": 1709917592,
-            "rd": 126
+            "rating": 2346,
+            "date": 1735668565,
+            "rd": 97
         },
         "best": {
             "rating": 2533,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/22174837913"
         },
         "record": {
-            "win": 196,
-            "loss": 292,
+            "win": 200,
+            "loss": 299,
             "draw": 43
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2640,
-            "date": 1683387506
+            "rating": 2694,
+            "date": 1739705388
         },
         "lowest": {
             "rating": 2011,

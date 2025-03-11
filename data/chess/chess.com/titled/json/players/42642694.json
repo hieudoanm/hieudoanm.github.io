@@ -6,9 +6,9 @@
     "name": "Rafael Figueiredo de Paula",
     "username": "rafaelfiggo",
     "title": "FM",
-    "followers": 155,
+    "followers": 157,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734107276,
+    "last_online": 1738539154,
     "joined": 1516819924,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2306,
-            "date": 1734102851,
-            "rd": 57
+            "rating": 2330,
+            "date": 1738371784,
+            "rd": 54
         },
         "best": {
             "rating": 2475,
@@ -44,33 +44,33 @@
             "game": "https://www.chess.com/game/live/10547163673"
         },
         "record": {
-            "win": 6807,
-            "loss": 6236,
+            "win": 6818,
+            "loss": 6245,
             "draw": 731
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2610,
-            "date": 1734106562,
-            "rd": 32
+            "rating": 2553,
+            "date": 1738523577,
+            "rd": 35
         },
         "best": {
-            "rating": 2638,
-            "date": 1732492001,
+            "rating": 2650,
+            "date": 1735656390,
             "game": "https://www.chess.com/game/live/81371581111"
         },
         "record": {
-            "win": 8183,
-            "loss": 7009,
-            "draw": 1235
+            "win": 8230,
+            "loss": 7067,
+            "draw": 1246
         }
     },
     "fide": 2270,
     "tactics": {
         "highest": {
-            "rating": 3398,
-            "date": 1732355993
+            "rating": 3472,
+            "date": 1735666168
         },
         "lowest": {
             "rating": 807,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 35,
-            "score": 32
+            "total_attempts": 37,
+            "score": 34
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Witalis Sapis",
     "username": "witaliss",
     "title": "IM",
-    "followers": 156,
+    "followers": 166,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "S\u0142upsk",
-    "last_online": 1733157958,
+    "last_online": 1741031979,
     "joined": 1503692595,
     "status": "premium",
     "is_streamer": false,
@@ -55,7 +55,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2562,
-            "date": 1696978907,
+            "date": 1739739030,
             "rd": 84
         },
         "best": {

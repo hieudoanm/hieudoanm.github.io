@@ -6,9 +6,9 @@
     "name": "Amir Hossein Doroodgar",
     "username": "evan_attaker",
     "title": "FM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/IR",
-    "last_online": 1733241793,
+    "last_online": 1741423637,
     "joined": 1712214390,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2697,
-            "date": 1725983330,
+            "rating": 2693,
+            "date": 1740420846,
             "rd": 49
         },
         "best": {
             "rating": 2768,
             "date": 1721146630,
-            "game": "https://www.chess.com/game/live/111879777643"
+            "game": "https://www.chess.com/game/live/130008030015"
         },
         "record": {
-            "win": 98,
-            "loss": 64,
-            "draw": 20
+            "win": 114,
+            "loss": 73,
+            "draw": 22
         }
     },
     "fide": 2302,

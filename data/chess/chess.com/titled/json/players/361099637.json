@@ -1,26 +1,26 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/361099637.1f19e2e8.200x200o.9d95275baa58.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/361099637.c616b344.200x200o.1376257f2881.jpg",
     "player_id": 361099637,
     "@id": "https://api.chess.com/pub/player/jethrovv",
     "url": "https://www.chess.com/member/jethrovv",
     "name": "Jethro Dino Aquino",
     "username": "jethrovv",
     "title": "FM",
-    "followers": 9,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Lucena",
-    "last_online": 1734179741,
+    "last_online": 1741354724,
     "joined": 1714811118,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2570,
-            "date": 1733932779,
-            "rd": 45
+            "rating": 2568,
+            "date": 1741253253,
+            "rd": 42
         },
         "best": {
             "rating": 2729,
@@ -28,15 +28,15 @@
             "game": "https://www.chess.com/game/live/120410380443"
         },
         "record": {
-            "win": 493,
-            "loss": 632,
-            "draw": 67
+            "win": 572,
+            "loss": 714,
+            "draw": 83
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2666,
-            "date": 1734183128,
+            "rating": 2684,
+            "date": 1740926155,
             "rd": 41
         },
         "best": {
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/115652349781"
         },
         "record": {
-            "win": 129,
-            "loss": 118,
-            "draw": 35
+            "win": 187,
+            "loss": 180,
+            "draw": 43
         }
     },
-    "fide": 2316,
+    "fide": 2323,
     "tactics": {
         "highest": {
-            "rating": 3052,
-            "date": 1721819685
+            "rating": 3159,
+            "date": 1738324190
         },
         "lowest": {
             "rating": 1000,
@@ -63,8 +63,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 49,
-            "score": 46
+            "total_attempts": 72,
+            "score": 69
         }
     }
 }

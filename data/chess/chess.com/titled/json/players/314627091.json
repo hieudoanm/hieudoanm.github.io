@@ -6,9 +6,9 @@
     "name": "Vincent Riff",
     "username": "secretworker2027",
     "title": "FM",
-    "followers": 111,
+    "followers": 124,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734165675,
+    "last_online": 1741682713,
     "joined": 1695391121,
     "status": "premium",
     "is_streamer": false,
@@ -31,9 +31,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2382,
-            "date": 1706480941,
-            "rd": 211
+            "rating": 2386,
+            "date": 1738679534,
+            "rd": 49
         },
         "best": {
             "rating": 2512,
@@ -41,7 +41,7 @@
             "game": "https://www.chess.com/game/live/98891735425"
         },
         "record": {
-            "win": 1,
+            "win": 3,
             "loss": 1,
             "draw": 0
         }
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2733,
-            "date": 1734166491,
-            "rd": 25
+            "rating": 2719,
+            "date": 1741683013,
+            "rd": 29
         },
         "best": {
             "rating": 2853,
@@ -75,16 +75,16 @@
             "game": "https://www.chess.com/game/live/127318845677"
         },
         "record": {
-            "win": 1721,
-            "loss": 1293,
-            "draw": 438
+            "win": 2019,
+            "loss": 1519,
+            "draw": 510
         }
     },
     "fide": 2372,
     "tactics": {
         "highest": {
-            "rating": 3016,
-            "date": 1733923868
+            "rating": 3080,
+            "date": 1738786641
         },
         "lowest": {
             "rating": 1000,

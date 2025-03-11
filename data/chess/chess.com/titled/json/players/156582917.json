@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/OneEyedGuest",
     "username": "oneeyedguest",
     "title": "FM",
-    "followers": 146,
+    "followers": 154,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734095195,
+    "last_online": 1741631767,
     "joined": 1633109251,
     "status": "premium",
     "is_streamer": false,
@@ -50,19 +50,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2557,
-            "date": 1734180352,
-            "rd": 24
+            "rating": 2647,
+            "date": 1741697903,
+            "rd": 27
         },
         "best": {
-            "rating": 2680,
-            "date": 1733946722,
+            "rating": 2693,
+            "date": 1738352302,
             "game": "https://www.chess.com/game/live/127300838569"
         },
         "record": {
-            "win": 6694,
-            "loss": 5919,
-            "draw": 1144
+            "win": 7466,
+            "loss": 6624,
+            "draw": 1298
         }
     },
     "fide": 0,

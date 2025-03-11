@@ -8,7 +8,7 @@
     "followers": 12,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Kiev",
-    "last_online": 1734098673,
+    "last_online": 1741670708,
     "joined": 1587307784,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2389,
-            "date": 1733137101,
-            "rd": 45
+            "rating": 2565,
+            "date": 1740651755,
+            "rd": 28
         },
         "best": {
-            "rating": 2529,
-            "date": 1642695611,
+            "rating": 2544,
+            "date": 1739269763,
             "game": "https://www.chess.com/game/live/81638660505"
         },
         "record": {
-            "win": 1352,
-            "loss": 1421,
-            "draw": 204
+            "win": 1521,
+            "loss": 1574,
+            "draw": 237
         }
     },
     "fide": 2481,

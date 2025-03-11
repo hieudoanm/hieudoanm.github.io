@@ -5,9 +5,9 @@
     "name": "Anselm Wagner",
     "username": "benecyrill",
     "title": "FM",
-    "followers": 105,
+    "followers": 109,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734029017,
+    "last_online": 1741457039,
     "joined": 1488640133,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2947,
-            "date": 1724337063,
-            "rd": 50
+            "date": 1740912138,
+            "rd": 49
         },
         "best": {
             "rating": 2947,
@@ -26,33 +26,33 @@
             "game": "https://www.chess.com/game/live/77643693769"
         },
         "record": {
-            "win": 2,
+            "win": 4,
             "loss": 0,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2746,
-            "date": 1734184726,
-            "rd": 17
+            "rating": 2583,
+            "date": 1741642057,
+            "rd": 15
         },
         "best": {
             "rating": 2790,
             "date": 1729196517,
-            "game": "https://www.chess.com/game/live/127350573007"
+            "game": "https://www.chess.com/game/live/134590748023"
         },
         "record": {
-            "win": 68664,
-            "loss": 56933,
-            "draw": 7458
+            "win": 71172,
+            "loss": 59068,
+            "draw": 7701
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2768,
-            "date": 1719483559,
-            "rd": 49
+            "rating": 2778,
+            "date": 1741111707,
+            "rd": 48
         },
         "best": {
             "rating": 2881,
@@ -60,7 +60,7 @@
             "game": "https://www.chess.com/game/live/4916140024"
         },
         "record": {
-            "win": 240,
+            "win": 246,
             "loss": 169,
             "draw": 27
         }
@@ -80,10 +80,6 @@
         "best": {
             "total_attempts": 66,
             "score": 63
-        },
-        "daily": {
-            "total_attempts": 45,
-            "score": 42
         }
     }
 }

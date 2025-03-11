@@ -6,9 +6,9 @@
     "name": "Shinya Kojima",
     "username": "shinya_kojima",
     "title": "IM",
-    "followers": 210,
+    "followers": 215,
     "country": "https://api.chess.com/pub/country/JP",
-    "last_online": 1734134382,
+    "last_online": 1741689198,
     "joined": 1317395995,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2131,
-            "date": 1708334888,
+            "date": 1741698395,
             "rd": 319
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 162,
             "loss": 43,
             "draw": 40,
-            "time_per_move": 42511,
+            "time_per_move": 42371,
             "timeout_percent": 0
         }
     },
@@ -49,14 +49,14 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 42511,
+            "time_per_move": 42371,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2510,
-            "date": 1729924660,
+            "date": 1741053474,
             "rd": 253
         },
         "best": {
@@ -107,8 +107,8 @@
     "fide": 2400,
     "tactics": {
         "highest": {
-            "rating": 3358,
-            "date": 1657716212
+            "rating": 3453,
+            "date": 1738333384
         },
         "lowest": {
             "rating": 1025,

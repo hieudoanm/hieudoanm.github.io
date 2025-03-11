@@ -6,9 +6,9 @@
     "name": "Ben Li",
     "username": "papapizza",
     "title": "IM",
-    "followers": 241,
+    "followers": 249,
     "country": "https://api.chess.com/pub/country/VA",
-    "last_online": 1733889801,
+    "last_online": 1741637837,
     "joined": 1555373043,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1898,
-            "date": 1725147970,
+            "date": 1741487238,
             "rd": 90
         },
         "best": {
@@ -30,14 +30,14 @@
             "win": 142,
             "loss": 35,
             "draw": 19,
-            "time_per_move": 27036,
+            "time_per_move": 27060,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2433,
-            "date": 1718677395,
+            "date": 1737796000,
             "rd": 86
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2683,
-            "date": 1720988356,
-            "rd": 36
+            "rating": 2727,
+            "date": 1737168519,
+            "rd": 47
         },
         "best": {
             "rating": 2804,
@@ -63,33 +63,33 @@
             "game": "https://www.chess.com/game/live/68671438271"
         },
         "record": {
-            "win": 699,
-            "loss": 405,
+            "win": 706,
+            "loss": 407,
             "draw": 82
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2682,
-            "date": 1711220504,
-            "rd": 49
+            "rating": 2731,
+            "date": 1741464603,
+            "rd": 47
         },
         "best": {
             "rating": 2802,
             "date": 1649562615,
-            "game": "https://www.chess.com/game/live/74389383349"
+            "game": "https://www.chess.com/game/live/131574588137"
         },
         "record": {
-            "win": 910,
-            "loss": 495,
-            "draw": 123
+            "win": 931,
+            "loss": 497,
+            "draw": 130
         }
     },
-    "fide": 0,
+    "fide": 2400,
     "tactics": {
         "highest": {
-            "rating": 3446,
-            "date": 1691031196
+            "rating": 3624,
+            "date": 1738394315
         },
         "lowest": {
             "rating": 400,
@@ -98,8 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 57,
-            "score": 56
+            "total_attempts": 60,
+            "score": 57
         }
     }
 }

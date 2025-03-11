@@ -6,10 +6,10 @@
     "name": "Artemy Gogolev",
     "username": "gogolev_artemy",
     "title": "IM",
-    "followers": 97,
+    "followers": 104,
     "country": "https://api.chess.com/pub/country/XX",
     "location": "Cherepovets",
-    "last_online": 1732932380,
+    "last_online": 1741627741,
     "joined": 1463736269,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2501,
-            "date": 1706189884,
-            "rd": 48
+            "rating": 2567,
+            "date": 1738976739,
+            "rd": 49
         },
         "best": {
             "rating": 2647,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/88629049169"
         },
         "record": {
-            "win": 740,
-            "loss": 735,
-            "draw": 106
+            "win": 754,
+            "loss": 743,
+            "draw": 107
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2426,
-            "date": 1732022210,
-            "rd": 65
+            "rating": 2593,
+            "date": 1741252110,
+            "rd": 46
         },
         "best": {
             "rating": 2601,
@@ -76,16 +76,16 @@
             "game": "https://www.chess.com/game/live/86476837631"
         },
         "record": {
-            "win": 1161,
-            "loss": 1090,
-            "draw": 241
+            "win": 1216,
+            "loss": 1117,
+            "draw": 253
         }
     },
     "fide": 2383,
     "tactics": {
         "highest": {
-            "rating": 3252,
-            "date": 1682241954
+            "rating": 3312,
+            "date": 1739308989
         },
         "lowest": {
             "rating": 1383,
@@ -94,8 +94,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 64,
-            "score": 61
+            "total_attempts": 66,
+            "score": 63
         }
     }
 }

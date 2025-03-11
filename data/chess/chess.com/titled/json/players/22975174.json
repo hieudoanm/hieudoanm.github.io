@@ -6,10 +6,10 @@
     "name": "Cristian Camilo Soto",
     "username": "cristiancamilosoto",
     "title": "FM",
-    "followers": 46,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Itagui",
-    "last_online": 1734056445,
+    "last_online": 1741103491,
     "joined": 1435253521,
     "status": "premium",
     "is_streamer": false,
@@ -33,7 +33,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2010,
-            "date": 1729577673,
+            "date": 1736444927,
             "rd": 49
         },
         "best": {
@@ -42,16 +42,16 @@
             "game": "https://www.chess.com/game/live/123316201561"
         },
         "record": {
-            "win": 1,
+            "win": 3,
             "loss": 0,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2422,
-            "date": 1733596670,
-            "rd": 34
+            "rating": 2381,
+            "date": 1737501994,
+            "rd": 41
         },
         "best": {
             "rating": 2577,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/123364288329"
         },
         "record": {
-            "win": 412,
-            "loss": 334,
-            "draw": 46
+            "win": 434,
+            "loss": 372,
+            "draw": 48
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2570,
-            "date": 1733868537,
-            "rd": 29
+            "rating": 2593,
+            "date": 1741111950,
+            "rd": 36
         },
         "best": {
             "rating": 2706,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/127006203659"
         },
         "record": {
-            "win": 902,
-            "loss": 708,
-            "draw": 150
+            "win": 978,
+            "loss": 779,
+            "draw": 175
         }
     },
     "fide": 2090,

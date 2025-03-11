@@ -1,43 +1,43 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/61176452.30f7a988.200x200o.968d1ae1065a.jpeg",
     "player_id": 61176452,
-    "@id": "https://api.chess.com/pub/player/blackgod93",
-    "url": "https://www.chess.com/member/BlackGod93",
+    "@id": "https://api.chess.com/pub/player/grigordilanyan",
+    "url": "https://www.chess.com/member/GrigorDilanyan",
     "name": "Grigor Dilanyan",
-    "username": "blackgod93",
+    "username": "grigordilanyan",
     "title": "FM",
-    "followers": 98,
+    "followers": 117,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan",
-    "last_online": 1734007552,
+    "last_online": 1741693568,
     "joined": 1558276442,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1971,
-            "date": 1731395622,
-            "rd": 150
+            "rating": 2123,
+            "date": 1739733575,
+            "rd": 47
         },
         "best": {
             "rating": 2155,
             "date": 1600001441,
-            "game": "https://www.chess.com/game/live/39725378097"
+            "game": "https://www.chess.com/game/live/133461577893"
         },
         "record": {
-            "win": 11,
-            "loss": 5,
+            "win": 16,
+            "loss": 9,
             "draw": 6
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2720,
-            "date": 1731783589,
-            "rd": 34
+            "rating": 2706,
+            "date": 1741582279,
+            "rd": 49
         },
         "best": {
             "rating": 2731,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/125520557299"
         },
         "record": {
-            "win": 291,
-            "loss": 277,
-            "draw": 39
+            "win": 307,
+            "loss": 290,
+            "draw": 40
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2648,
-            "date": 1733556156,
-            "rd": 30
+            "rating": 2706,
+            "date": 1741700599,
+            "rd": 23
         },
         "best": {
             "rating": 2784,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/57425803201"
         },
         "record": {
-            "win": 572,
-            "loss": 533,
-            "draw": 71
+            "win": 724,
+            "loss": 658,
+            "draw": 97
         }
     },
     "fide": 2300,

@@ -6,10 +6,10 @@
     "name": "Bruno Morado Rodrigues",
     "username": "brunomorado",
     "title": "CM",
-    "followers": 279,
+    "followers": 281,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Carapicu\u00edba/SP",
-    "last_online": 1734002186,
+    "last_online": 1741567649,
     "joined": 1465858235,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2251,
-            "date": 1724790831,
-            "rd": 43
+            "rating": 2258,
+            "date": 1739330274,
+            "rd": 75
         },
         "best": {
             "rating": 2475,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/16571192769"
         },
         "record": {
-            "win": 1191,
-            "loss": 1050,
+            "win": 1194,
+            "loss": 1052,
             "draw": 104
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2371,
-            "date": 1733775920,
-            "rd": 34
+            "rating": 2337,
+            "date": 1741662681,
+            "rd": 36
         },
         "best": {
             "rating": 2601,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/66500575315"
         },
         "record": {
-            "win": 7621,
-            "loss": 7846,
-            "draw": 1091
+            "win": 7702,
+            "loss": 7932,
+            "draw": 1100
         }
     },
     "fide": 2054,

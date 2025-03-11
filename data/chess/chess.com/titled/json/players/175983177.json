@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 5,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1733843198,
+    "last_online": 1741547262,
     "joined": 1646847412,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3478,
-            "date": 1698416861
+            "rating": 3491,
+            "date": 1735137857
         },
         "lowest": {
             "rating": 1000,

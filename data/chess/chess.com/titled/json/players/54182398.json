@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/letsgoband",
     "username": "letsgoband",
     "title": "FM",
-    "followers": 35,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733546862,
+    "last_online": 1740841323,
     "joined": 1545496172,
     "status": "premium",
     "is_streamer": false,
@@ -32,36 +32,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2667,
-            "date": 1726770574,
-            "rd": 39
+            "rating": 2672,
+            "date": 1738898330,
+            "rd": 45
         },
         "best": {
-            "rating": 2667,
-            "date": 1726770574,
+            "rating": 2695,
+            "date": 1738682069,
             "game": "https://www.chess.com/game/live/119491770249"
         },
         "record": {
-            "win": 2233,
-            "loss": 1849,
+            "win": 2239,
+            "loss": 1855,
             "draw": 187
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2705,
-            "date": 1734152455,
-            "rd": 27
+            "rating": 2668,
+            "date": 1741677391,
+            "rd": 28
         },
         "best": {
-            "rating": 2753,
-            "date": 1732217826,
+            "rating": 2757,
+            "date": 1737839425,
             "game": "https://www.chess.com/game/live/125643541619"
         },
         "record": {
-            "win": 3825,
-            "loss": 3502,
-            "draw": 527
+            "win": 4126,
+            "loss": 3838,
+            "draw": 592
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Christopher Ball",
     "username": "christopher800",
     "title": "CM",
-    "followers": 79,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734010452,
+    "last_online": 1741645701,
     "joined": 1438744523,
     "status": "premium",
     "is_streamer": false,
@@ -107,8 +107,8 @@
     "fide": 1945,
     "tactics": {
         "highest": {
-            "rating": 2796,
-            "date": 1729813800
+            "rating": 2976,
+            "date": 1741674396
         },
         "lowest": {
             "rating": 1244,
@@ -119,6 +119,10 @@
         "best": {
             "total_attempts": 51,
             "score": 48
+        },
+        "daily": {
+            "total_attempts": 32,
+            "score": 29
         }
     }
 }

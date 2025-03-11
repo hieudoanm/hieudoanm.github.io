@@ -8,7 +8,7 @@
     "followers": 41,
     "country": "https://api.chess.com/pub/country/SD",
     "location": "KHARTOUM",
-    "last_online": 1733665235,
+    "last_online": 1738254581,
     "joined": 1341615202,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2150,
-            "date": 1712441712,
-            "rd": 70
+            "rating": 2057,
+            "date": 1741034298,
+            "rd": 80
         },
         "best": {
             "rating": 2319,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/76626165165"
         },
         "record": {
-            "win": 4051,
-            "loss": 4438,
-            "draw": 332
+            "win": 4055,
+            "loss": 4444,
+            "draw": 334
         }
     },
     "fide": 0,

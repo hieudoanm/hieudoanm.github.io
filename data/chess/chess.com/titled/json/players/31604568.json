@@ -6,10 +6,10 @@
     "name": "Sauravh Kherdekar",
     "username": "zeebraa",
     "title": "FM",
-    "followers": 122,
+    "followers": 125,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Nagpur",
-    "last_online": 1734174172,
+    "last_online": 1741687068,
     "joined": 1481685765,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2413,
-            "date": 1732275966,
-            "rd": 91
+            "rating": 2372,
+            "date": 1740889508,
+            "rd": 67
         },
         "best": {
             "rating": 2413,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/91903227449"
         },
         "record": {
-            "win": 280,
-            "loss": 199,
-            "draw": 43
+            "win": 291,
+            "loss": 207,
+            "draw": 44
         }
     },
     "fide": 2041,

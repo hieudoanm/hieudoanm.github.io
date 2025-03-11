@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/thelegend759",
     "username": "thelegend759",
     "title": "IM",
-    "followers": 371,
+    "followers": 375,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1733579333,
+    "last_online": 1741651877,
     "joined": 1495028940,
     "status": "premium",
     "is_streamer": false,
@@ -16,20 +16,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2125,
-            "date": 1733579653,
-            "rd": 85
+            "rating": 2130,
+            "date": 1741619050,
+            "rd": 150
         },
         "best": {
-            "rating": 2125,
-            "date": 1696432054,
+            "rating": 2130,
+            "date": 1738080314,
             "game": "https://www.chess.com/game/daily/363257427"
         },
         "record": {
-            "win": 112,
+            "win": 114,
             "loss": 10,
             "draw": 5,
-            "time_per_move": 30386,
+            "time_per_move": 32656,
             "timeout_percent": 0
         }
     },
@@ -53,8 +53,8 @@
     "chess_bullet": {
         "last": {
             "rating": 2691,
-            "date": 1728570981,
-            "rd": 34
+            "date": 1737903707,
+            "rd": 48
         },
         "best": {
             "rating": 2775,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/34859425207"
         },
         "record": {
-            "win": 11865,
-            "loss": 10302,
+            "win": 11867,
+            "loss": 10304,
             "draw": 1147
         }
     },
@@ -99,6 +99,10 @@
         "best": {
             "total_attempts": 74,
             "score": 71
+        },
+        "daily": {
+            "total_attempts": 10,
+            "score": 9
         }
     }
 }

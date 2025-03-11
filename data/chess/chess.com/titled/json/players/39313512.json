@@ -6,9 +6,9 @@
     "name": "Robert Eames",
     "username": "bobbybunny",
     "title": "FM",
-    "followers": 22,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1734014869,
+    "last_online": 1741638637,
     "joined": 1507578170,
     "status": "premium",
     "is_streamer": false,
@@ -34,42 +34,42 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1674,
-            "date": 1732051150,
-            "rd": 98
+            "rating": 1709,
+            "date": 1739041194,
+            "rd": 89
         },
         "best": {
             "rating": 1911,
             "date": 1732049887,
-            "game": "https://www.chess.com/game/live/125789348333"
+            "game": "https://www.chess.com/game/live/132776382605"
         },
         "record": {
-            "win": 3,
-            "loss": 9,
+            "win": 5,
+            "loss": 73,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2274,
-            "date": 1734015328,
-            "rd": 24
+            "rating": 2305,
+            "date": 1741639071,
+            "rd": 23
         },
         "best": {
             "rating": 2349,
             "date": 1730148149,
-            "game": "https://www.chess.com/game/live/125798915013"
+            "game": "https://www.chess.com/game/live/129403414455"
         },
         "record": {
-            "win": 6218,
-            "loss": 5101,
-            "draw": 784
+            "win": 6939,
+            "loss": 5723,
+            "draw": 887
         }
     },
     "tactics": {
         "highest": {
-            "rating": 1200,
-            "date": 1507578170
+            "rating": 2205,
+            "date": 1736232231
         },
         "lowest": {
             "rating": 1200,

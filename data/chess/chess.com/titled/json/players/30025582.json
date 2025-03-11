@@ -6,10 +6,10 @@
     "name": "Kevin TERRIEUX",
     "username": "profterrieux",
     "title": "IM",
-    "followers": 582,
+    "followers": 605,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "La Meziere",
-    "last_online": 1734088775,
+    "last_online": 1741593163,
     "joined": 1474397022,
     "status": "premium",
     "is_streamer": true,
@@ -58,8 +58,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2642,
-            "date": 1726160696,
+            "rating": 2631,
+            "date": 1741010009,
             "rd": 49
         },
         "best": {
@@ -69,15 +69,15 @@
         },
         "record": {
             "win": 3830,
-            "loss": 3889,
+            "loss": 3890,
             "draw": 832
         }
     },
     "fide": 2448,
     "tactics": {
         "highest": {
-            "rating": 3569,
-            "date": 1733829382
+            "rating": 3628,
+            "date": 1741195048
         },
         "lowest": {
             "rating": 1223,
@@ -88,6 +88,10 @@
         "best": {
             "total_attempts": 73,
             "score": 70
+        },
+        "daily": {
+            "total_attempts": 41,
+            "score": 38
         }
     }
 }

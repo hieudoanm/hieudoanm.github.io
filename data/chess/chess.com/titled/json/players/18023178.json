@@ -6,10 +6,10 @@
     "name": "Juan Fernando Aguilar Novoa",
     "username": "fmaguilar1",
     "title": "FM",
-    "followers": 60,
+    "followers": 63,
     "country": "https://api.chess.com/pub/country/PE",
     "location": "Lima",
-    "last_online": 1734033462,
+    "last_online": 1740871379,
     "joined": 1405045161,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2284,
-            "date": 1734033723,
-            "rd": 36
+            "rating": 2282,
+            "date": 1740871650,
+            "rd": 44
         },
         "best": {
             "rating": 2430,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/84416336995"
         },
         "record": {
-            "win": 3856,
-            "loss": 3483,
-            "draw": 442
+            "win": 3904,
+            "loss": 3523,
+            "draw": 446
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2494,
-            "date": 1731796339,
-            "rd": 48
+            "rating": 2467,
+            "date": 1738117512,
+            "rd": 71
         },
         "best": {
             "rating": 2544,
@@ -82,7 +82,7 @@
         },
         "record": {
             "win": 333,
-            "loss": 265,
+            "loss": 267,
             "draw": 57
         }
     },

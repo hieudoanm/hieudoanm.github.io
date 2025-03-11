@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2147,
-            "date": 1733975395,
-            "rd": 74
+            "rating": 2179,
+            "date": 1741413537,
+            "rd": 43
         },
         "best": {
             "rating": 2268,
@@ -59,26 +59,26 @@
             "game": "https://www.chess.com/game/live/10945572333"
         },
         "record": {
-            "win": 155,
-            "loss": 131,
-            "draw": 26
+            "win": 179,
+            "loss": 156,
+            "draw": 32
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2321,
-            "date": 1734071697,
-            "rd": 38
+            "rating": 2326,
+            "date": 1741685622,
+            "rd": 37
         },
         "best": {
-            "rating": 2350,
-            "date": 1733881858,
+            "rating": 2412,
+            "date": 1739363953,
             "game": "https://www.chess.com/game/live/4003145914"
         },
         "record": {
-            "win": 619,
-            "loss": 702,
-            "draw": 76
+            "win": 710,
+            "loss": 805,
+            "draw": 93
         }
     },
     "tactics": {

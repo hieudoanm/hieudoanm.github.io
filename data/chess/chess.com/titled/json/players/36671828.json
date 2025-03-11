@@ -9,7 +9,7 @@
     "followers": 16,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Ludhiana",
-    "last_online": 1733848933,
+    "last_online": 1741409527,
     "joined": 1498747127,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2127,
-            "date": 1733848943,
-            "rd": 44
+            "rating": 2135,
+            "date": 1738568710,
+            "rd": 59
         },
         "best": {
             "rating": 2360,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/76782248221"
         },
         "record": {
-            "win": 390,
-            "loss": 324,
+            "win": 392,
+            "loss": 325,
             "draw": 32
         }
     },
     "fide": 2106,
     "tactics": {
         "highest": {
-            "rating": 3190,
-            "date": 1729419891
+            "rating": 3205,
+            "date": 1741408519
         },
         "lowest": {
             "rating": 1198,
@@ -65,6 +65,10 @@
         "best": {
             "total_attempts": 61,
             "score": 58
+        },
+        "daily": {
+            "total_attempts": 41,
+            "score": 38
         }
     }
 }

@@ -8,7 +8,7 @@
     "followers": 13,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Mumbai",
-    "last_online": 1733994589,
+    "last_online": 1734616231,
     "joined": 1585039667,
     "status": "premium",
     "is_streamer": false,
@@ -32,7 +32,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2355,
-            "date": 1722092984,
+            "date": 1738354817,
             "rd": 346
         },
         "best": {
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2401,
-            "date": 1731325650,
-            "rd": 74
+            "rating": 2382,
+            "date": 1738355522,
+            "rd": 84
         },
         "best": {
             "rating": 2573,
@@ -75,8 +75,8 @@
             "game": "https://www.chess.com/game/live/48794927977"
         },
         "record": {
-            "win": 125,
-            "loss": 96,
+            "win": 128,
+            "loss": 98,
             "draw": 18
         }
     },

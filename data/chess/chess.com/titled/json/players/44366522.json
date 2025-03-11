@@ -8,7 +8,7 @@
     "followers": 48,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Gaziantep",
-    "last_online": 1734179109,
+    "last_online": 1741599408,
     "joined": 1521299249,
     "status": "premium",
     "is_streamer": false,
@@ -35,7 +35,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2849,
-            "date": 1732443583,
+            "date": 1740477528,
             "rd": 44
         },
         "best": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2890,
-            "date": 1734027205,
-            "rd": 48
+            "rating": 2865,
+            "date": 1741616587,
+            "rd": 32
         },
         "best": {
             "rating": 2936,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/125511580021"
         },
         "record": {
-            "win": 1082,
-            "loss": 1023,
-            "draw": 288
+            "win": 1133,
+            "loss": 1079,
+            "draw": 307
         }
     },
     "fide": 2238,

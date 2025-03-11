@@ -6,37 +6,54 @@
     "name": "Jurica Srbis",
     "username": "beatles_22",
     "title": "IM",
-    "followers": 191,
+    "followers": 222,
     "country": "https://api.chess.com/pub/country/HR",
-    "last_online": 1733747351,
+    "last_online": 1741684853,
     "joined": 1507457903,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Elite",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1995,
+            "date": 1739991891,
+            "rd": 67
+        },
+        "best": {
+            "rating": 1995,
+            "date": 1739991891,
+            "game": "https://www.chess.com/game/live/133729759009"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 1
+        }
+    },
     "chess_bullet": {
         "last": {
-            "rating": 2818,
-            "date": 1654690468,
-            "rd": 121
+            "rating": 2836,
+            "date": 1741277437,
+            "rd": 41
         },
         "best": {
             "rating": 2853,
             "date": 1654690393,
-            "game": "https://www.chess.com/game/live/3825832832"
+            "game": "https://www.chess.com/game/live/133125597991"
         },
         "record": {
-            "win": 445,
-            "loss": 437,
-            "draw": 80
+            "win": 464,
+            "loss": 454,
+            "draw": 84
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2766,
-            "date": 1723568806,
-            "rd": 46
+            "rating": 2773,
+            "date": 1741543129,
+            "rd": 48
         },
         "best": {
             "rating": 2895,
@@ -44,9 +61,9 @@
             "game": "https://www.chess.com/game/live/80634649049"
         },
         "record": {
-            "win": 3429,
-            "loss": 3475,
-            "draw": 831
+            "win": 3432,
+            "loss": 3480,
+            "draw": 833
         }
     },
     "tactics": {

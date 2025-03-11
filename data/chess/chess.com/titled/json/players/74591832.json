@@ -6,10 +6,10 @@
     "name": "Vedant Goswami",
     "username": "vedantgoswami",
     "title": "FM",
-    "followers": 30,
+    "followers": 33,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Bangalore",
-    "last_online": 1734075196,
+    "last_online": 1741697247,
     "joined": 1585238844,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1989,
-            "date": 1733188913,
-            "rd": 42
+            "rating": 2000,
+            "date": 1736259588,
+            "rd": 52
         },
         "best": {
             "rating": 2092,
@@ -45,15 +45,15 @@
             "game": "https://www.chess.com/game/live/82984858201"
         },
         "record": {
-            "win": 268,
-            "loss": 161,
+            "win": 271,
+            "loss": 162,
             "draw": 29
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2317,
-            "date": 1731435085,
+            "date": 1739376501,
             "rd": 59
         },
         "best": {

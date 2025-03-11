@@ -6,10 +6,10 @@
     "name": "Alexander Katz",
     "username": "sacsacmate",
     "title": "IM",
-    "followers": 230,
+    "followers": 265,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Los Angeles, California",
-    "last_online": 1732909679,
+    "last_online": 1740596268,
     "joined": 1345685805,
     "status": "premium",
     "is_streamer": true,
@@ -43,9 +43,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2553,
-            "date": 1715997228,
-            "rd": 49
+            "rating": 2542,
+            "date": 1739343280,
+            "rd": 47
         },
         "best": {
             "rating": 2607,
@@ -53,16 +53,16 @@
             "game": "https://www.chess.com/game/live/70058685293"
         },
         "record": {
-            "win": 25,
-            "loss": 5,
-            "draw": 3
+            "win": 31,
+            "loss": 7,
+            "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2870,
-            "date": 1729468143,
-            "rd": 41
+            "rating": 2854,
+            "date": 1740459864,
+            "rd": 49
         },
         "best": {
             "rating": 2953,
@@ -70,33 +70,33 @@
             "game": "https://www.chess.com/game/live/82362100791"
         },
         "record": {
-            "win": 744,
-            "loss": 630,
+            "win": 745,
+            "loss": 632,
             "draw": 93
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2682,
-            "date": 1733340894,
-            "rd": 34
+            "rating": 2751,
+            "date": 1741662393,
+            "rd": 31
         },
         "best": {
-            "rating": 2832,
-            "date": 1714616791,
-            "game": "https://www.chess.com/game/live/3102830515"
+            "rating": 2851,
+            "date": 1739250397,
+            "game": "https://www.chess.com/game/live/132446457519"
         },
         "record": {
-            "win": 3040,
-            "loss": 2038,
-            "draw": 599
+            "win": 3290,
+            "loss": 2214,
+            "draw": 642
         }
     },
     "fide": 2470,
     "tactics": {
         "highest": {
-            "rating": 3660,
-            "date": 1689525412
+            "rating": 3678,
+            "date": 1741554659
         },
         "lowest": {
             "rating": 1391,

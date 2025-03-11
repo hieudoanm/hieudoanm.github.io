@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/PG",
-    "last_online": 1731098973,
+    "last_online": 1739652477,
     "joined": 1707598117,
     "status": "premium",
     "is_streamer": false,
@@ -66,8 +66,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 1000,
-            "date": 1707598117
+            "rating": 2891,
+            "date": 1738519547
         },
         "lowest": {
             "rating": 1000,
@@ -76,8 +76,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 2,
-            "score": 0
+            "total_attempts": 57,
+            "score": 54
         }
     }
 }

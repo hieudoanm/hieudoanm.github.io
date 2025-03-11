@@ -5,9 +5,9 @@
     "name": "Tristan Remille",
     "username": "abdalagathos",
     "title": "FM",
-    "followers": 81,
+    "followers": 84,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734144446,
+    "last_online": 1741692828,
     "joined": 1463574487,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2425,
-            "date": 1734096477,
-            "rd": 21
+            "rating": 2396,
+            "date": 1741615595,
+            "rd": 24
         },
         "best": {
             "rating": 2567,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/97700988017"
         },
         "record": {
-            "win": 10639,
-            "loss": 8131,
-            "draw": 1090
+            "win": 11273,
+            "loss": 8623,
+            "draw": 1153
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2490,
-            "date": 1733492015,
-            "rd": 59
+            "rating": 2520,
+            "date": 1740346008,
+            "rd": 48
         },
         "best": {
             "rating": 2582,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/76840168941"
         },
         "record": {
-            "win": 1896,
-            "loss": 1546,
-            "draw": 339
+            "win": 1905,
+            "loss": 1549,
+            "draw": 340
         }
     },
     "fide": 2276,

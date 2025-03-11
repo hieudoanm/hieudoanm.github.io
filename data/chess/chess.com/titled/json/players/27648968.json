@@ -6,10 +6,10 @@
     "name": "Leopold Le Ruyet",
     "username": "llrchess",
     "title": "FM",
-    "followers": 242,
+    "followers": 246,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Guangzhou",
-    "last_online": 1734150268,
+    "last_online": 1741700935,
     "joined": 1460118872,
     "status": "premium",
     "is_streamer": false,
@@ -37,19 +37,19 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2554,
-            "date": 1734082005,
+            "rating": 2543,
+            "date": 1737462612,
             "rd": 49
         },
         "best": {
-            "rating": 2554,
-            "date": 1725366989,
+            "rating": 2561,
+            "date": 1735011841,
             "game": "https://www.chess.com/game/live/112097403663"
         },
         "record": {
-            "win": 79,
-            "loss": 37,
-            "draw": 20
+            "win": 80,
+            "loss": 39,
+            "draw": 22
         }
     },
     "chess_bullet": {

@@ -5,9 +5,9 @@
     "name": "Ridvan Sakir",
     "username": "cosmosx",
     "title": "FM",
-    "followers": 24,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1731762383,
+    "last_online": 1738528183,
     "joined": 1401530221,
     "status": "premium",
     "is_streamer": false,
@@ -51,7 +51,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2329,
-            "date": 1709900223,
+            "date": 1738001946,
             "rd": 97
         },
         "best": {

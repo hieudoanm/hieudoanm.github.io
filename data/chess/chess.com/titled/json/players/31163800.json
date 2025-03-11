@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/31163800.b0fecac8.200x200o.00f3df043f37.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/31163800.d41e59f1.200x200o.046bece8c7bf.jpg",
     "player_id": 31163800,
     "@id": "https://api.chess.com/pub/player/newyorkmouse",
     "url": "https://www.chess.com/member/newyorkmouse",
     "name": "Avi Kaplan",
     "username": "newyorkmouse",
     "title": "FM",
-    "followers": 237,
+    "followers": 242,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734150019,
+    "last_online": 1741666626,
     "joined": 1480120213,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2050,
-            "date": 1725971519,
+            "date": 1741150622,
             "rd": 72
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 100,
             "loss": 27,
             "draw": 8,
-            "time_per_move": 24986,
+            "time_per_move": 25158,
             "timeout_percent": 0
         }
     },
@@ -53,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2838,
-            "date": 1730059392,
-            "rd": 29
+            "rating": 2842,
+            "date": 1741489100,
+            "rd": 34
         },
         "best": {
-            "rating": 2838,
-            "date": 1730059392,
+            "rating": 2857,
+            "date": 1739419078,
             "game": "https://www.chess.com/game/live/84389373685"
         },
         "record": {
-            "win": 9851,
-            "loss": 6844,
-            "draw": 1084
+            "win": 9926,
+            "loss": 6904,
+            "draw": 1089
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2619,
-            "date": 1734150879,
-            "rd": 36
+            "rating": 2787,
+            "date": 1741193950,
+            "rd": 28
         },
         "best": {
             "rating": 2751,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/111879172387"
         },
         "record": {
-            "win": 2632,
-            "loss": 2120,
-            "draw": 391
+            "win": 2818,
+            "loss": 2256,
+            "draw": 411
         }
     },
     "fide": 2046,

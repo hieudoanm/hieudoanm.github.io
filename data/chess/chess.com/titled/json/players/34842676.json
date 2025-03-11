@@ -6,9 +6,9 @@
     "name": "Luis Chan",
     "username": "luizzy",
     "title": "FM",
-    "followers": 149,
+    "followers": 150,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734152189,
+    "last_online": 1741669706,
     "joined": 1492425546,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2786,
-            "date": 1734005469,
-            "rd": 49
+            "rating": 2766,
+            "date": 1735352213,
+            "rd": 48
         },
         "best": {
             "rating": 2786,
@@ -64,15 +64,15 @@
         },
         "record": {
             "win": 2620,
-            "loss": 1912,
-            "draw": 291
+            "loss": 1914,
+            "draw": 292
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2739,
-            "date": 1730961690,
-            "rd": 22
+            "rating": 2715,
+            "date": 1741681271,
+            "rd": 40
         },
         "best": {
             "rating": 2739,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/56215457357"
         },
         "record": {
-            "win": 3950,
-            "loss": 3144,
-            "draw": 517
+            "win": 3981,
+            "loss": 3179,
+            "draw": 521
         }
     },
     "tactics": {

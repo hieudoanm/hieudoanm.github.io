@@ -8,11 +8,12 @@
     "title": "WCM",
     "followers": 16,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1730576978,
+    "last_online": 1741421113,
     "joined": 1536351838,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Wood",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,8 +37,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2014,
-            "date": 1622705955,
-            "rd": 101
+            "date": 1741368487,
+            "rd": 49
         },
         "best": {
             "rating": 2014,
@@ -45,7 +46,7 @@
             "game": "https://www.chess.com/game/live/6250066349"
         },
         "record": {
-            "win": 19,
+            "win": 21,
             "loss": 6,
             "draw": 1
         }

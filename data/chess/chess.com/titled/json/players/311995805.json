@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 2,
     "country": "https://api.chess.com/pub/country/IL",
-    "last_online": 1732851463,
+    "last_online": 1738219331,
     "joined": 1694423107,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2285,
-            "date": 1732866504,
-            "rd": 49
+            "rating": 2248,
+            "date": 1738219795,
+            "rd": 62
         },
         "best": {
             "rating": 2457,
@@ -44,8 +44,8 @@
         },
         "record": {
             "win": 245,
-            "loss": 289,
-            "draw": 70
+            "loss": 293,
+            "draw": 71
         }
     },
     "tactics": {

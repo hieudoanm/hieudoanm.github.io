@@ -5,9 +5,9 @@
     "name": "Wynn Zaw Htun",
     "username": "wynnzawhtun82",
     "title": "IM",
-    "followers": 141,
+    "followers": 143,
     "country": "https://api.chess.com/pub/country/MM",
-    "last_online": 1734183252,
+    "last_online": 1741602520,
     "joined": 1583151380,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2333,
-            "date": 1733076688,
-            "rd": 31
+            "rating": 2343,
+            "date": 1741578125,
+            "rd": 45
         },
         "best": {
             "rating": 2791,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/106940454347"
         },
         "record": {
-            "win": 2942,
-            "loss": 2389,
-            "draw": 204
+            "win": 2995,
+            "loss": 2445,
+            "draw": 209
         }
     },
     "chess_blitz": {

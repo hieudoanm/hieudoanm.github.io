@@ -9,7 +9,7 @@
     "followers": 16,
     "country": "https://api.chess.com/pub/country/BY",
     "location": "Minsk",
-    "last_online": 1734127538,
+    "last_online": 1741202443,
     "joined": 1688471961,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1460,
-            "date": 1733841081,
+            "date": 1741113278,
             "rd": 207
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 3,
             "loss": 1,
             "draw": 1,
-            "time_per_move": 27987,
+            "time_per_move": 38534,
             "timeout_percent": 0
         }
     },
@@ -49,9 +49,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2287,
-            "date": 1734157918,
-            "rd": 27
+            "rating": 2334,
+            "date": 1741202789,
+            "rd": 34
         },
         "best": {
             "rating": 2427,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/99845477169"
         },
         "record": {
-            "win": 823,
-            "loss": 666,
-            "draw": 134
+            "win": 917,
+            "loss": 738,
+            "draw": 155
         }
     },
     "fide": 2229,

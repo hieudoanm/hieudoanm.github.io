@@ -6,10 +6,10 @@
     "name": "Vlad-Victor Barnaure",
     "username": "fmcmt",
     "title": "IM",
-    "followers": 34,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "London",
-    "last_online": 1734162699,
+    "last_online": 1741676217,
     "joined": 1509231365,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2570,
-            "date": 1734162852,
-            "rd": 21
+            "rating": 2543,
+            "date": 1741685137,
+            "rd": 28
         },
         "best": {
             "rating": 2696,
@@ -40,9 +40,9 @@
             "game": "https://www.chess.com/game/live/45752393601"
         },
         "record": {
-            "win": 10218,
-            "loss": 11321,
-            "draw": 1655
+            "win": 10634,
+            "loss": 11767,
+            "draw": 1732
         }
     },
     "fide": 2480,

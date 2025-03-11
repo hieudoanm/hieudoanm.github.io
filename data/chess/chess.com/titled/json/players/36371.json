@@ -6,10 +6,10 @@
     "name": "Thomas Rendle",
     "username": "trendle",
     "title": "IM",
-    "followers": 476,
+    "followers": 480,
     "country": "https://api.chess.com/pub/country/XE",
     "location": "Shepherd's Bush, London",
-    "last_online": 1734098698,
+    "last_online": 1741682236,
     "joined": 1188645365,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2714,
-            "date": 1733853861,
-            "rd": 47
+            "rating": 2693,
+            "date": 1741285293,
+            "rd": 49
         },
         "best": {
             "rating": 2789,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/127588227531"
         },
         "record": {
-            "win": 2681,
-            "loss": 1134,
-            "draw": 310
+            "win": 2704,
+            "loss": 1139,
+            "draw": 313
         }
     },
     "fide": 2396,

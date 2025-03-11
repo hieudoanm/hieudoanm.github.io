@@ -6,10 +6,10 @@
     "name": "Tadeas Kriebel",
     "username": "tadeaskriebel",
     "title": "IM",
-    "followers": 21,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Prague",
-    "last_online": 1734173925,
+    "last_online": 1741686612,
     "joined": 1663263627,
     "status": "staff",
     "is_streamer": false,
@@ -18,27 +18,21 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1835,
-            "date": 1734164291,
-            "rd": 120
+            "rating": 1927,
+            "date": 1739586901,
+            "rd": 109
         },
         "best": {
-            "rating": 1898,
-            "date": 1731939853,
+            "rating": 1927,
+            "date": 1739586901,
             "game": "https://www.chess.com/game/daily/729496371"
         },
         "record": {
-            "win": 15,
+            "win": 18,
             "loss": 2,
-            "draw": 4,
-            "time_per_move": 11628,
+            "draw": 5,
+            "time_per_move": 12487,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
@@ -60,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2598,
-            "date": 1734171050,
-            "rd": 25
+            "rating": 2551,
+            "date": 1741598561,
+            "rd": 34
         },
         "best": {
             "rating": 2739,
@@ -70,16 +64,16 @@
             "game": "https://www.chess.com/game/live/124700912269"
         },
         "record": {
-            "win": 1451,
-            "loss": 1012,
-            "draw": 122
+            "win": 1623,
+            "loss": 1152,
+            "draw": 135
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2582,
-            "date": 1733939838,
-            "rd": 44
+            "rating": 2679,
+            "date": 1741691392,
+            "rd": 30
         },
         "best": {
             "rating": 2859,
@@ -87,15 +81,15 @@
             "game": "https://www.chess.com/game/live/100788249899"
         },
         "record": {
-            "win": 666,
-            "loss": 513,
-            "draw": 132
+            "win": 880,
+            "loss": 666,
+            "draw": 171
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3486,
-            "date": 1724504971
+            "rating": 3502,
+            "date": 1736298918
         },
         "lowest": {
             "rating": 412,

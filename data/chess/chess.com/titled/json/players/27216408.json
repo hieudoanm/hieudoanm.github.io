@@ -6,10 +6,10 @@
     "name": "Coralys Michelle Alvarado P\u00e9rez",
     "username": "coraa29",
     "title": "WCM",
-    "followers": 49,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/PR",
     "location": "Ponce",
-    "last_online": 1732371443,
+    "last_online": 1741563465,
     "joined": 1457883146,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1947,
-            "date": 1733869585,
-            "rd": 34
+            "rating": 1884,
+            "date": 1734736185,
+            "rd": 35
         },
         "best": {
             "rating": 2087,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/112581587723"
         },
         "record": {
-            "win": 2003,
-            "loss": 2141,
-            "draw": 171
+            "win": 2006,
+            "loss": 2153,
+            "draw": 172
         }
     },
     "chess_blitz": {

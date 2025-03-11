@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/GuyTaf",
     "username": "guytaf",
     "title": "CM",
-    "followers": 80,
+    "followers": 81,
     "country": "https://api.chess.com/pub/country/ZW",
-    "last_online": 1733061893,
+    "last_online": 1740868259,
     "joined": 1419032187,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +16,7 @@
     "chess_daily": {
         "last": {
             "rating": 1690,
-            "date": 1732460921,
+            "date": 1737560159,
             "rd": 28
         },
         "best": {
@@ -29,13 +29,7 @@
             "loss": 586,
             "draw": 66,
             "time_per_move": 11696,
-            "timeout_percent": 100
-        },
-        "tournament": {
-            "points": 322,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 1
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {
@@ -50,12 +44,6 @@
             "draw": 0,
             "time_per_move": 11696,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 322,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {

@@ -6,7 +6,7 @@
     "title": "WFM",
     "followers": 11,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734068497,
+    "last_online": 1741694791,
     "joined": 1453820838,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2051,
-            "date": 1733822978,
-            "rd": 47
+            "rating": 2046,
+            "date": 1734486715,
+            "rd": 46
         },
         "best": {
             "rating": 2085,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/126070756077"
         },
         "record": {
-            "win": 512,
-            "loss": 445,
-            "draw": 26
+            "win": 515,
+            "loss": 449,
+            "draw": 27
         }
     },
     "chess_blitz": {
@@ -85,8 +85,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2824,
-            "date": 1732798972
+            "rating": 2832,
+            "date": 1734305050
         },
         "lowest": {
             "rating": 578,

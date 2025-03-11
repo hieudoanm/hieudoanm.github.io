@@ -6,9 +6,9 @@
     "name": "Joaquin Fiorito",
     "username": "lamomiajunior",
     "title": "IM",
-    "followers": 81,
+    "followers": 82,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734107159,
+    "last_online": 1741694950,
     "joined": 1614022091,
     "status": "premium",
     "is_streamer": false,
@@ -36,26 +36,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2298,
-            "date": 1689610977,
-            "rd": 178
+            "rating": 2340,
+            "date": 1739732650,
+            "rd": 47
         },
         "best": {
             "rating": 2408,
             "date": 1689610199,
-            "game": "https://www.chess.com/game/live/83346501839"
+            "game": "https://www.chess.com/game/live/133461577867"
         },
         "record": {
-            "win": 2,
-            "loss": 3,
-            "draw": 0
+            "win": 7,
+            "loss": 6,
+            "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2800,
-            "date": 1732981425,
-            "rd": 26
+            "rating": 2874,
+            "date": 1741699360,
+            "rd": 30
         },
         "best": {
             "rating": 2953,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/122492098621"
         },
         "record": {
-            "win": 2605,
-            "loss": 2018,
-            "draw": 230
+            "win": 2712,
+            "loss": 2101,
+            "draw": 238
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2763,
-            "date": 1734122348,
-            "rd": 32
+            "rating": 2904,
+            "date": 1741399742,
+            "rd": 22
         },
         "best": {
             "rating": 2909,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/111879172349"
         },
         "record": {
-            "win": 2751,
-            "loss": 1956,
-            "draw": 304
+            "win": 3150,
+            "loss": 2240,
+            "draw": 348
         }
     },
     "tactics": {

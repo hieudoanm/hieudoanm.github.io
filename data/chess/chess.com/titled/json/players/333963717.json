@@ -4,10 +4,10 @@
     "url": "https://www.chess.com/member/todimensionelle",
     "username": "todimensionelle",
     "title": "WFM",
-    "followers": 4,
+    "followers": 5,
     "country": "https://api.chess.com/pub/country/DK",
     "location": "K\u00f8benhavn",
-    "last_online": 1734094452,
+    "last_online": 1741609749,
     "joined": 1703268148,
     "status": "premium",
     "is_streamer": false,
@@ -64,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2024,
-            "date": 1734094840,
-            "rd": 41
+            "rating": 2079,
+            "date": 1740860649,
+            "rd": 39
         },
         "best": {
             "rating": 2186,
@@ -74,15 +74,15 @@
             "game": "https://www.chess.com/game/live/97187454281"
         },
         "record": {
-            "win": 152,
-            "loss": 139,
-            "draw": 18
+            "win": 199,
+            "loss": 173,
+            "draw": 22
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2995,
-            "date": 1732563722
+            "rating": 3001,
+            "date": 1738859323
         },
         "lowest": {
             "rating": 1000,

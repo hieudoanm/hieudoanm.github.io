@@ -6,10 +6,10 @@
     "name": "M\u00e1ximo Iack Miranda de Macedo",
     "username": "miackm",
     "title": "IM",
-    "followers": 18,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Natal/RN",
-    "last_online": 1734000276,
+    "last_online": 1740744972,
     "joined": 1623258488,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2266,
-            "date": 1729964582,
-            "rd": 101
+            "rating": 2298,
+            "date": 1740000193,
+            "rd": 98
         },
         "best": {
             "rating": 2298,
@@ -28,9 +28,9 @@
             "game": "https://www.chess.com/game/live/123555006465"
         },
         "record": {
-            "win": 17,
-            "loss": 11,
-            "draw": 0
+            "win": 19,
+            "loss": 12,
+            "draw": 1
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Yinn Long Wong",
     "username": "bangchess21",
     "title": "FM",
-    "followers": 211,
+    "followers": 214,
     "country": "https://api.chess.com/pub/country/MY",
-    "last_online": 1734147548,
+    "last_online": 1741693285,
     "joined": 1421553208,
     "status": "premium",
     "is_streamer": false,
@@ -56,7 +56,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2371,
-            "date": 1708607701,
+            "date": 1740583979,
             "rd": 116
         },
         "best": {
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2793,
-            "date": 1731913567,
-            "rd": 48
+            "rating": 2781,
+            "date": 1736695306,
+            "rd": 47
         },
         "best": {
             "rating": 2886,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/78951269585"
         },
         "record": {
-            "win": 1546,
-            "loss": 1355,
+            "win": 1548,
+            "loss": 1358,
             "draw": 158
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2783,
-            "date": 1734079891,
-            "rd": 37
+            "rating": 2815,
+            "date": 1741695025,
+            "rd": 42
         },
         "best": {
             "rating": 2904,
@@ -99,15 +99,15 @@
             "game": "https://www.chess.com/game/live/42964201239"
         },
         "record": {
-            "win": 5038,
-            "loss": 4249,
-            "draw": 843
+            "win": 5102,
+            "loss": 4305,
+            "draw": 862
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3457,
-            "date": 1722501142
+            "rating": 3689,
+            "date": 1741266304
         },
         "lowest": {
             "rating": 1363,
@@ -118,10 +118,6 @@
         "best": {
             "total_attempts": 63,
             "score": 60
-        },
-        "daily": {
-            "total_attempts": 43,
-            "score": 40
         }
     }
 }

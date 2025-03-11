@@ -6,10 +6,10 @@
     "name": "Michael Kraitsberg",
     "username": "randomoracle",
     "title": "FM",
-    "followers": 66,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/IL",
     "location": "Israel",
-    "last_online": 1734122255,
+    "last_online": 1741535491,
     "joined": 1290252113,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2129,
-            "date": 1727720587,
-            "rd": 41
+            "rating": 2142,
+            "date": 1739953891,
+            "rd": 19
         },
         "best": {
             "rating": 2467,
@@ -40,16 +40,16 @@
             "game": "https://www.chess.com/game/live/37672791231"
         },
         "record": {
-            "win": 7052,
-            "loss": 5808,
-            "draw": 337
+            "win": 7425,
+            "loss": 6118,
+            "draw": 357
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2348,
-            "date": 1734127266,
-            "rd": 18
+            "rating": 2411,
+            "date": 1741662493,
+            "rd": 19
         },
         "best": {
             "rating": 2590,
@@ -57,9 +57,9 @@
             "game": "https://www.chess.com/game/live/100216373019"
         },
         "record": {
-            "win": 8852,
-            "loss": 6933,
-            "draw": 838
+            "win": 10095,
+            "loss": 7958,
+            "draw": 973
         }
     },
     "fide": 0,

@@ -6,9 +6,9 @@
     "name": "Jose Avelino Alvarez Calzadilla",
     "username": "jaac2002",
     "title": "FM",
-    "followers": 37,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1734105667,
+    "last_online": 1741375151,
     "joined": 1606795568,
     "status": "premium",
     "is_streamer": false,
@@ -34,19 +34,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2667,
-            "date": 1733061001,
-            "rd": 47
+            "rating": 2713,
+            "date": 1737479488,
+            "rd": 44
         },
         "best": {
-            "rating": 2669,
-            "date": 1733060394,
-            "game": "https://www.chess.com/game/live/68884344757"
+            "rating": 2721,
+            "date": 1737477681,
+            "game": "https://www.chess.com/game/live/131216347741"
         },
         "record": {
-            "win": 309,
-            "loss": 170,
-            "draw": 44
+            "win": 327,
+            "loss": 180,
+            "draw": 50
         }
     },
     "tactics": {
@@ -61,8 +61,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 41,
-            "score": 40
+            "total_attempts": 45,
+            "score": 42
         }
     }
 }

@@ -9,7 +9,7 @@
     "followers": 87,
     "country": "https://api.chess.com/pub/country/JP",
     "location": "Japan",
-    "last_online": 1734171903,
+    "last_online": 1741637757,
     "joined": 1415622522,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1999,
-            "date": 1733340377,
-            "rd": 68
+            "rating": 2010,
+            "date": 1741638854,
+            "rd": 113
         },
         "best": {
             "rating": 2208,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/357443267"
         },
         "record": {
-            "win": 203,
+            "win": 225,
             "loss": 35,
             "draw": 10,
-            "time_per_move": 80610,
+            "time_per_move": 77635,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 27,
             "loss": 3,
             "draw": 3,
-            "time_per_move": 80610,
+            "time_per_move": 77635,
             "timeout_percent": 0
         }
     },
@@ -108,8 +108,8 @@
     "fide": 2346,
     "tactics": {
         "highest": {
-            "rating": 3415,
-            "date": 1717315063
+            "rating": 3491,
+            "date": 1738310923
         },
         "lowest": {
             "rating": 412,

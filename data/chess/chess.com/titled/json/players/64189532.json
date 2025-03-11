@@ -1,13 +1,14 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/64189532.3638dc40.200x200o.b9b2e13f2cd2.jpg",
     "player_id": 64189532,
     "@id": "https://api.chess.com/pub/player/honiex",
     "url": "https://www.chess.com/member/Honiex",
     "name": "Vladyslav Fishchuk",
     "username": "honiex",
     "title": "FM",
-    "followers": 29,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734167231,
+    "last_online": 1741669309,
     "joined": 1565530088,
     "status": "premium",
     "is_streamer": false,
@@ -69,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2650,
-            "date": 1728306807,
-            "rd": 45
+            "rating": 2632,
+            "date": 1740499740,
+            "rd": 48
         },
         "best": {
             "rating": 2739,
@@ -79,9 +80,9 @@
             "game": "https://www.chess.com/game/live/120346245641"
         },
         "record": {
-            "win": 1315,
-            "loss": 1183,
-            "draw": 178
+            "win": 1325,
+            "loss": 1191,
+            "draw": 179
         }
     },
     "tactics": {

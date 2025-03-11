@@ -8,7 +8,7 @@
     "followers": 28,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Cambridge, MA",
-    "last_online": 1734140203,
+    "last_online": 1741666202,
     "joined": 1315373889,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2378,
-            "date": 1734146033,
-            "rd": 44
+            "rating": 2385,
+            "date": 1734808994,
+            "rd": 38
         },
         "best": {
             "rating": 2480,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/122765666223"
         },
         "record": {
-            "win": 660,
-            "loss": 583,
-            "draw": 133
+            "win": 677,
+            "loss": 600,
+            "draw": 135
         }
     },
     "fide": 2345,

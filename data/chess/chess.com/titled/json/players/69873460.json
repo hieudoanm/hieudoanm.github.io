@@ -6,9 +6,9 @@
     "name": "Michal Tworuszka",
     "username": "czasnaszachy",
     "title": "FM",
-    "followers": 65,
+    "followers": 69,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733846601,
+    "last_online": 1741509572,
     "joined": 1577357320,
     "status": "premium",
     "is_streamer": false,
@@ -53,8 +53,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2526,
-            "date": 1731456191,
+            "rating": 2518,
+            "date": 1739944576,
             "rd": 49
         },
         "best": {
@@ -64,7 +64,7 @@
         },
         "record": {
             "win": 708,
-            "loss": 739,
+            "loss": 740,
             "draw": 145
         }
     },

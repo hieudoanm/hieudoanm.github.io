@@ -5,9 +5,9 @@
     "name": "Bertalan Szikszai",
     "username": "mystery2007",
     "title": "FM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734011744,
+    "last_online": 1741692740,
     "joined": 1695054562,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2284,
-            "date": 1728386264,
-            "rd": 116
+            "rating": 2276,
+            "date": 1734434410,
+            "rd": 49
         },
         "best": {
             "rating": 2284,
@@ -28,7 +28,7 @@
         "record": {
             "win": 5,
             "loss": 3,
-            "draw": 1
+            "draw": 2
         }
     },
     "chess_bullet": {
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2518,
-            "date": 1733388440,
-            "rd": 48
+            "rating": 2493,
+            "date": 1741693184,
+            "rd": 50
         },
         "best": {
             "rating": 2697,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/89479299319"
         },
         "record": {
-            "win": 315,
-            "loss": 325,
-            "draw": 49
+            "win": 329,
+            "loss": 340,
+            "draw": 53
         }
     },
     "tactics": {
@@ -77,8 +77,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 32,
-            "score": 29
+            "total_attempts": 57,
+            "score": 54
         }
     }
 }

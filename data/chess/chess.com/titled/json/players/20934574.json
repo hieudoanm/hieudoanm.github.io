@@ -6,10 +6,10 @@
     "name": "Marton Braun",
     "username": "fmbraunmarton",
     "title": "FM",
-    "followers": 170,
+    "followers": 176,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Hajd&uacute;szoboszl&oacute;",
-    "last_online": 1731332949,
+    "last_online": 1738873132,
     "joined": 1423057611,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2404,
-            "date": 1734160779,
-            "rd": 25
+            "rating": 2466,
+            "date": 1741702498,
+            "rd": 22
         },
         "best": {
             "rating": 2536,
@@ -83,9 +83,9 @@
             "game": "https://www.chess.com/game/live/118182480139"
         },
         "record": {
-            "win": 13931,
-            "loss": 11815,
-            "draw": 2738
+            "win": 14494,
+            "loss": 12280,
+            "draw": 2845
         }
     },
     "tactics": {

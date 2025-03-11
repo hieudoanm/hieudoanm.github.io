@@ -6,9 +6,9 @@
     "name": "Benjamin Lim",
     "username": "nivra4300971",
     "title": "CM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734062063,
+    "last_online": 1741420620,
     "joined": 1572779399,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2104,
-            "date": 1734164405,
-            "rd": 33
+            "rating": 2123,
+            "date": 1741674300,
+            "rd": 48
         },
         "best": {
             "rating": 2231,
@@ -27,21 +27,26 @@
             "game": "https://www.chess.com/game/live/94196509895"
         },
         "record": {
-            "win": 3449,
-            "loss": 3025,
-            "draw": 468
+            "win": 3492,
+            "loss": 3057,
+            "draw": 482
         }
     },
     "chess_blitz": {
         "last": {
+            "rating": 1773,
+            "date": 1741585008,
+            "rd": 42
+        },
+        "best": {
             "rating": 1821,
             "date": 1628245048,
-            "rd": 321
+            "game": "https://www.chess.com/game/live/132710984611"
         },
         "record": {
-            "win": 0,
-            "loss": 1,
-            "draw": 0
+            "win": 73,
+            "loss": 42,
+            "draw": 5
         }
     },
     "tactics": {

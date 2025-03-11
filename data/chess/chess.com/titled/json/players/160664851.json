@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/INZLF",
     "username": "inzlf",
     "title": "FM",
-    "followers": 78,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734178176,
+    "last_online": 1741630222,
     "joined": 1636372592,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2377,
-            "date": 1731185677,
+            "date": 1736715370,
             "rd": 49
         },
         "best": {
@@ -34,7 +34,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2626,
-            "date": 1722700653,
+            "date": 1736716017,
             "rd": 48
         },
         "best": {

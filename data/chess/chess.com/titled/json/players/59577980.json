@@ -6,71 +6,71 @@
     "name": "mohamadmiran khademi",
     "username": "iri_cheetah",
     "title": "FM",
-    "followers": 41,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/IR",
-    "last_online": 1734115001,
+    "last_online": 1741638210,
     "joined": 1554761588,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2036,
-            "date": 1719167370,
+            "rating": 2044,
+            "date": 1740932456,
             "rd": 49
         },
         "best": {
-            "rating": 2036,
-            "date": 1583698016,
+            "rating": 2044,
+            "date": 1740932456,
             "game": "https://www.chess.com/game/live/5819919366"
         },
         "record": {
-            "win": 13,
+            "win": 15,
             "loss": 7,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2736,
-            "date": 1734128984,
-            "rd": 30
+            "rating": 2746,
+            "date": 1741398217,
+            "rd": 28
         },
         "best": {
-            "rating": 2769,
-            "date": 1734126066,
-            "game": "https://www.chess.com/game/live/52575576519"
+            "rating": 2781,
+            "date": 1734818596,
+            "game": "https://www.chess.com/game/live/129153236361"
         },
         "record": {
-            "win": 726,
-            "loss": 635,
-            "draw": 52
+            "win": 1096,
+            "loss": 964,
+            "draw": 89
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2520,
-            "date": 1733424900,
-            "rd": 49
+            "rating": 2564,
+            "date": 1741641780,
+            "rd": 39
         },
         "best": {
-            "rating": 2549,
-            "date": 1600627220,
-            "game": "https://www.chess.com/game/live/4691779429"
+            "rating": 2651,
+            "date": 1738430870,
+            "game": "https://www.chess.com/game/live/131823062685"
         },
         "record": {
-            "win": 150,
-            "loss": 90,
-            "draw": 19
+            "win": 223,
+            "loss": 146,
+            "draw": 22
         }
     },
     "fide": 2315,
     "tactics": {
         "highest": {
-            "rating": 3481,
-            "date": 1693232176
+            "rating": 3671,
+            "date": 1736220647
         },
         "lowest": {
             "rating": 415,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 69,
-            "score": 66
+            "total_attempts": 72,
+            "score": 69
         }
     }
 }

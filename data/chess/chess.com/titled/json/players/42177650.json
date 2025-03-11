@@ -6,9 +6,9 @@
     "name": "Roman Komov",
     "username": "saint_666",
     "title": "FM",
-    "followers": 16,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/DJ",
-    "last_online": 1734156577,
+    "last_online": 1741701434,
     "joined": 1515577977,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2824,
-            "date": 1734175036,
-            "rd": 24
+            "rating": 2844,
+            "date": 1740487684,
+            "rd": 28
         },
         "best": {
-            "rating": 2882,
-            "date": 1733127157,
-            "game": "https://www.chess.com/game/live/99765195855"
+            "rating": 2964,
+            "date": 1739783867,
+            "game": "https://www.chess.com/game/live/128959375559"
         },
         "record": {
-            "win": 1425,
-            "loss": 1399,
-            "draw": 218
+            "win": 1560,
+            "loss": 1546,
+            "draw": 259
         }
     },
     "tactics": {

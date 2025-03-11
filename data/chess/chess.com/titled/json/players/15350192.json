@@ -8,7 +8,7 @@
     "followers": 3,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u0421\u0430\u043c\u0430\u0440\u0430",
-    "last_online": 1733400776,
+    "last_online": 1741363531,
     "joined": 1388562654,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2498,
-            "date": 1732752466,
+            "date": 1741365618,
             "rd": 49
         },
         "best": {

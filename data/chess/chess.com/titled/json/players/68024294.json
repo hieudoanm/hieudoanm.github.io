@@ -6,10 +6,10 @@
     "name": "Safiye Oyku Ince",
     "username": "oykuince",
     "title": "WCM",
-    "followers": 93,
+    "followers": 94,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "France",
-    "last_online": 1733655862,
+    "last_online": 1740600144,
     "joined": 1573836182,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1837,
-            "date": 1733260460,
+            "date": 1740602829,
             "rd": 226
         },
         "best": {
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2088,
-            "date": 1732783524,
-            "rd": 83
+            "rating": 2068,
+            "date": 1736181298,
+            "rd": 88
         },
         "best": {
             "rating": 2189,
@@ -101,7 +101,7 @@
         },
         "record": {
             "win": 250,
-            "loss": 298,
+            "loss": 299,
             "draw": 30
         }
     },

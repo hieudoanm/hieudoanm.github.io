@@ -8,7 +8,7 @@
     "title": "WCM",
     "followers": 72,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1734007441,
+    "last_online": 1741570409,
     "joined": 1535098905,
     "status": "premium",
     "is_streamer": false,
@@ -31,26 +31,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2112,
-            "date": 1671020663,
-            "rd": 252
+            "rating": 2120,
+            "date": 1736243092,
+            "rd": 49
         },
         "best": {
             "rating": 2122,
             "date": 1578473509,
-            "game": "https://www.chess.com/game/live/4308088568"
+            "game": "https://www.chess.com/game/live/129979177411"
         },
         "record": {
-            "win": 3,
+            "win": 4,
             "loss": 0,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2175,
-            "date": 1733597941,
-            "rd": 32
+            "rating": 2196,
+            "date": 1739201981,
+            "rd": 41
         },
         "best": {
             "rating": 2393,
@@ -58,16 +58,16 @@
             "game": "https://www.chess.com/game/live/126728979217"
         },
         "record": {
-            "win": 1162,
-            "loss": 1398,
+            "win": 1169,
+            "loss": 1403,
             "draw": 117
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2327,
-            "date": 1733852660,
-            "rd": 53
+            "rating": 2330,
+            "date": 1736268656,
+            "rd": 56
         },
         "best": {
             "rating": 2516,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/5466103839"
         },
         "record": {
-            "win": 1475,
-            "loss": 1818,
-            "draw": 300
+            "win": 1479,
+            "loss": 1825,
+            "draw": 301
         }
     },
     "tactics": {

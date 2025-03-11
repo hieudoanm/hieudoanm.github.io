@@ -6,10 +6,10 @@
     "name": "Alejandro Garcia Garcia",
     "username": "alejogarcia1999",
     "title": "FM",
-    "followers": 462,
+    "followers": 475,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Miami",
-    "last_online": 1734125602,
+    "last_online": 1741639938,
     "joined": 1537567693,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2054,
-            "date": 1734121777,
+            "date": 1741647231,
             "rd": 244
         },
         "best": {
@@ -31,14 +31,14 @@
             "win": 5,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 19935,
+            "time_per_move": 22711,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2433,
-            "date": 1734129373,
+            "date": 1741490052,
             "rd": 49
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2607,
-            "date": 1731034876,
-            "rd": 40
+            "rating": 2606,
+            "date": 1740437187,
+            "rd": 49
         },
         "best": {
             "rating": 2616,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/31978246923"
         },
         "record": {
-            "win": 478,
-            "loss": 354,
+            "win": 479,
+            "loss": 355,
             "draw": 71
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2624,
-            "date": 1734145358,
+            "date": 1741399241,
             "rd": 50
         },
         "best": {
@@ -89,8 +89,8 @@
     "fide": 2288,
     "tactics": {
         "highest": {
-            "rating": 3399,
-            "date": 1732652658
+            "rating": 3456,
+            "date": 1741628088
         },
         "lowest": {
             "rating": 2296,

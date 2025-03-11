@@ -6,9 +6,9 @@
     "name": "Francisco Hernandez",
     "username": "ticokiller",
     "title": "IM",
-    "followers": 23,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/CR",
-    "last_online": 1734109128,
+    "last_online": 1741652516,
     "joined": 1282766898,
     "status": "premium",
     "is_streamer": false,
@@ -70,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2150,
-            "date": 1734150150,
-            "rd": 45
+            "rating": 2141,
+            "date": 1740619090,
+            "rd": 52
         },
         "best": {
             "rating": 2231,
             "date": 1507058991,
-            "game": "https://www.chess.com/game/live/2307523708"
+            "game": "https://www.chess.com/game/live/130026009083"
         },
         "record": {
-            "win": 949,
-            "loss": 789,
-            "draw": 135
+            "win": 974,
+            "loss": 819,
+            "draw": 143
         }
     },
     "tactics": {

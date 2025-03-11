@@ -6,10 +6,10 @@
     "name": "Jacques Muller Luxama",
     "username": "ljm509",
     "title": "CM",
-    "followers": 104,
+    "followers": 106,
     "country": "https://api.chess.com/pub/country/HT",
     "location": "Port-au-Prince",
-    "last_online": 1732817855,
+    "last_online": 1741445261,
     "joined": 1280863867,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2015,
-            "date": 1732225824,
-            "rd": 41
+            "rating": 2002,
+            "date": 1740980848,
+            "rd": 69
         },
         "best": {
             "rating": 2386,
@@ -82,7 +82,7 @@
         },
         "record": {
             "win": 690,
-            "loss": 843,
+            "loss": 844,
             "draw": 91
         }
     },

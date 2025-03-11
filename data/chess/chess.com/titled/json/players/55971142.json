@@ -1,19 +1,18 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/55971142.59e66acf.200x200o.cef8105eb2ec.jpeg",
     "player_id": 55971142,
     "@id": "https://api.chess.com/pub/player/weaintsurepal",
     "url": "https://www.chess.com/member/WeAintSurePal",
     "name": "Joakim Nilsson",
     "username": "weaintsurepal",
     "title": "FM",
-    "followers": 18,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/SE",
-    "last_online": 1733858774,
+    "last_online": 1741628215,
     "joined": 1547484287,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -53,43 +52,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2521,
-            "date": 1703552580,
-            "rd": 36
+            "rating": 2424,
+            "date": 1741635040,
+            "rd": 34
         },
         "best": {
-            "rating": 2567,
-            "date": 1701633523,
-            "game": "https://www.chess.com/game/live/39560370149"
+            "rating": 2593,
+            "date": 1736959790,
+            "game": "https://www.chess.com/game/live/133304359243"
         },
         "record": {
-            "win": 1126,
-            "loss": 988,
-            "draw": 134
+            "win": 1266,
+            "loss": 1160,
+            "draw": 160
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2553,
-            "date": 1733860349,
-            "rd": 33
+            "rating": 2513,
+            "date": 1741632940,
+            "rd": 31
         },
         "best": {
-            "rating": 2587,
-            "date": 1733656484,
+            "rating": 2594,
+            "date": 1734289944,
             "game": "https://www.chess.com/game/live/97345314131"
         },
         "record": {
-            "win": 1904,
-            "loss": 1755,
-            "draw": 320
+            "win": 1999,
+            "loss": 1867,
+            "draw": 339
         }
     },
     "fide": 2215,
     "tactics": {
         "highest": {
-            "rating": 3209,
-            "date": 1733861426
+            "rating": 3229,
+            "date": 1739095435
         },
         "lowest": {
             "rating": 244,

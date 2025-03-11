@@ -9,7 +9,7 @@
     "followers": 40,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Moscow, Russia",
-    "last_online": 1733484239,
+    "last_online": 1740057231,
     "joined": 1420309046,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 838,
-            "date": 1685967092,
+            "date": 1737924215,
             "rd": 305
         },
         "best": {

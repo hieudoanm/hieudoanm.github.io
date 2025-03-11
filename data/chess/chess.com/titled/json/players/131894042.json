@@ -6,9 +6,9 @@
     "name": "Arda Altun",
     "username": "francesco_bernoulli",
     "title": "FM",
-    "followers": 6,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734009280,
+    "last_online": 1741249803,
     "joined": 1616998340,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2418,
-            "date": 1722958238,
-            "rd": 80
+            "rating": 2295,
+            "date": 1741128017,
+            "rd": 63
         },
         "best": {
             "rating": 2464,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/116695258443"
         },
         "record": {
-            "win": 30,
-            "loss": 49,
-            "draw": 9
+            "win": 40,
+            "loss": 72,
+            "draw": 12
         }
     },
     "tactics": {
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 65,
-            "score": 62
+            "total_attempts": 66,
+            "score": 63
         }
     }
 }

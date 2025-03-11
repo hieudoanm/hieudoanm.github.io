@@ -6,15 +6,15 @@
     "name": "Oscar Gerardo Sanchez Enriquez",
     "username": "crazyluzhinth3",
     "title": "IM",
-    "followers": 43,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Distrito Federal",
-    "last_online": 1734116116,
+    "last_online": 1741634320,
     "joined": 1385749885,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,36 +35,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2683,
-            "date": 1732235640,
-            "rd": 47
+            "rating": 2653,
+            "date": 1741403559,
+            "rd": 25
         },
         "best": {
-            "rating": 2781,
-            "date": 1714707450,
-            "game": "https://www.chess.com/game/live/110308897137"
+            "rating": 2838,
+            "date": 1736636668,
+            "game": "https://www.chess.com/game/live/132775166075"
         },
         "record": {
-            "win": 287,
-            "loss": 257,
-            "draw": 36
+            "win": 569,
+            "loss": 544,
+            "draw": 68
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2605,
-            "date": 1733943505,
-            "rd": 43
+            "rating": 2650,
+            "date": 1741440284,
+            "rd": 40
         },
         "best": {
-            "rating": 2611,
-            "date": 1733942727,
-            "game": "https://www.chess.com/game/live/96157430531"
+            "rating": 2706,
+            "date": 1736963060,
+            "game": "https://www.chess.com/game/live/130026606481"
         },
         "record": {
-            "win": 627,
-            "loss": 431,
-            "draw": 78
+            "win": 695,
+            "loss": 488,
+            "draw": 82
         }
     },
     "fide": 0,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 41
+            "total_attempts": 50,
+            "score": 47
         }
     }
 }

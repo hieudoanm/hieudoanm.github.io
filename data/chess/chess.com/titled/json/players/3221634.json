@@ -6,10 +6,10 @@
     "name": "Vaso Blesic",
     "username": "vasilijevladacki",
     "title": "IM",
-    "followers": 250,
+    "followers": 255,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Obrenovac",
-    "last_online": 1734022265,
+    "last_online": 1741387964,
     "joined": 1228397764,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1959,
-            "date": 1721730527,
+            "date": 1736328490,
             "rd": 56
         },
         "best": {
@@ -73,34 +73,34 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2566,
-            "date": 1732313596,
-            "rd": 39
+            "rating": 2576,
+            "date": 1739011970,
+            "rd": 49
         },
         "best": {
-            "rating": 2566,
-            "date": 1732313596,
+            "rating": 2576,
+            "date": 1739011970,
             "game": "https://www.chess.com/game/live/46627782729"
         },
         "record": {
-            "win": 125,
+            "win": 126,
             "loss": 124,
             "draw": 14
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2727,
-            "date": 1726168280,
-            "rd": 22
+            "rating": 2739,
+            "date": 1741115303,
+            "rd": 49
         },
         "best": {
-            "rating": 2736,
-            "date": 1726164674,
+            "rating": 2739,
+            "date": 1741112324,
             "game": "https://www.chess.com/game/live/116376034609"
         },
         "record": {
-            "win": 1680,
+            "win": 1681,
             "loss": 1504,
             "draw": 285
         }

@@ -6,9 +6,9 @@
     "name": "Nenad Puri\u0107",
     "username": "puricfm",
     "title": "FM",
-    "followers": 113,
+    "followers": 148,
     "country": "https://api.chess.com/pub/country/BA",
-    "last_online": 1734128781,
+    "last_online": 1740781325,
     "joined": 1577060987,
     "status": "premium",
     "is_streamer": false,
@@ -17,20 +17,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 961,
-            "date": 1733636399,
-            "rd": 248
+            "rating": 1207,
+            "date": 1737290343,
+            "rd": 166
         },
         "best": {
-            "rating": 961,
-            "date": 1733636399,
+            "rating": 1207,
+            "date": 1737290343,
             "game": "https://www.chess.com/game/daily/722149467"
         },
         "record": {
-            "win": 5,
+            "win": 8,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 26685,
+            "time_per_move": 24932,
             "timeout_percent": 0
         }
     },
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2037,
-            "date": 1733348933,
-            "rd": 55
+            "rating": 2021,
+            "date": 1734989675,
+            "rd": 54
         },
         "best": {
             "rating": 2222,
@@ -64,32 +64,32 @@
         },
         "record": {
             "win": 3010,
-            "loss": 2569,
-            "draw": 207
+            "loss": 2571,
+            "draw": 208
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2374,
-            "date": 1734135828,
-            "rd": 19
+            "rating": 2337,
+            "date": 1741700826,
+            "rd": 22
         },
         "best": {
-            "rating": 2528,
-            "date": 1728770796,
+            "rating": 2559,
+            "date": 1738702635,
             "game": "https://www.chess.com/game/live/93991272635"
         },
         "record": {
-            "win": 13016,
-            "loss": 11634,
-            "draw": 2414
+            "win": 14199,
+            "loss": 12666,
+            "draw": 2622
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 882,
-            "date": 1729191539
+            "rating": 2533,
+            "date": 1739291145
         },
         "lowest": {
             "rating": 412,

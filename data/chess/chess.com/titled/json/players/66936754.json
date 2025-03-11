@@ -6,10 +6,10 @@
     "name": "Anastasios Tzoumpas",
     "username": "tzoumpasanastasis",
     "title": "FM",
-    "followers": 358,
+    "followers": 359,
     "country": "https://api.chess.com/pub/country/GR",
     "location": "Athens",
-    "last_online": 1732543855,
+    "last_online": 1737713348,
     "joined": 1571639191,
     "status": "premium",
     "is_streamer": false,
@@ -85,9 +85,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2421,
-            "date": 1725383389,
-            "rd": 94
+            "rating": 2147,
+            "date": 1735668706,
+            "rd": 71
         },
         "best": {
             "rating": 2444,
@@ -95,8 +95,8 @@
             "game": "https://www.chess.com/game/live/4783887922"
         },
         "record": {
-            "win": 234,
-            "loss": 59,
+            "win": 238,
+            "loss": 78,
             "draw": 11
         }
     },

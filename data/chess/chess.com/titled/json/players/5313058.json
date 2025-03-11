@@ -6,7 +6,7 @@
     "name": "Krzysztof Jasik",
     "username": "fafqulec",
     "title": "FM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Wroc\u0142aw",
     "last_online": 1660400905,
@@ -31,7 +31,7 @@
             "loss": 126,
             "draw": 55,
             "time_per_move": 30473,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {

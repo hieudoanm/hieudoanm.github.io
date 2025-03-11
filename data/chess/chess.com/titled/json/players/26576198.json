@@ -5,9 +5,9 @@
     "name": "Gunay Mammadzada",
     "username": "themind1hunter",
     "title": "IM",
-    "followers": 185,
+    "followers": 186,
     "country": "https://api.chess.com/pub/country/AZ",
-    "last_online": 1733747346,
+    "last_online": 1741350283,
     "joined": 1454861735,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2389,
-            "date": 1677515847,
-            "rd": 90
+            "date": 1740756829,
+            "rd": 50
         },
         "best": {
             "rating": 2593,
@@ -26,7 +26,7 @@
             "game": "https://www.chess.com/game/live/70049841865"
         },
         "record": {
-            "win": 20,
+            "win": 21,
             "loss": 10,
             "draw": 8
         }

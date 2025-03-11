@@ -8,17 +8,17 @@
     "followers": 11,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Utrecht",
-    "last_online": 1734129920,
+    "last_online": 1741554364,
     "joined": 1411662330,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1965,
-            "date": 1708385557,
+            "date": 1736276606,
             "rd": 147
         },
         "best": {
@@ -70,26 +70,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2575,
-            "date": 1734130150,
+            "rating": 2745,
+            "date": 1741555014,
             "rd": 34
         },
         "best": {
-            "rating": 2690,
-            "date": 1681126240,
+            "rating": 2789,
+            "date": 1735808842,
             "game": "https://www.chess.com/game/live/73755233431"
         },
         "record": {
-            "win": 2776,
-            "loss": 2155,
-            "draw": 565
+            "win": 3064,
+            "loss": 2362,
+            "draw": 621
         }
     },
     "fide": 2363,
     "tactics": {
         "highest": {
-            "rating": 3113,
-            "date": 1674669090
+            "rating": 3157,
+            "date": 1739286967
         },
         "lowest": {
             "rating": 1358,
@@ -98,8 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 67,
+            "score": 64
         }
     }
 }

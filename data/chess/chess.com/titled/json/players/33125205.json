@@ -6,9 +6,9 @@
     "name": "Carles Mart\u00edn Barcel\u00f3",
     "username": "carlitus2004",
     "title": "FM",
-    "followers": 71,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/XC",
-    "last_online": 1734004975,
+    "last_online": 1741433794,
     "joined": 1486849357,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2538,
-            "date": 1733230769,
-            "rd": 32
+            "rating": 2552,
+            "date": 1736023993,
+            "rd": 43
         },
         "best": {
             "rating": 2622,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/124917549669"
         },
         "record": {
-            "win": 963,
-            "loss": 876,
-            "draw": 137
+            "win": 967,
+            "loss": 878,
+            "draw": 138
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2453,
-            "date": 1732563015,
-            "rd": 40
+            "rating": 2441,
+            "date": 1740008766,
+            "rd": 54
         },
         "best": {
             "rating": 2564,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/85872698861"
         },
         "record": {
-            "win": 1200,
-            "loss": 1146,
-            "draw": 258
+            "win": 1217,
+            "loss": 1164,
+            "draw": 264
         }
     },
     "tactics": {

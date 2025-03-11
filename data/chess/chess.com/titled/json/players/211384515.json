@@ -6,10 +6,10 @@
     "name": "Ashot Nadanian",
     "username": "ordekalog",
     "title": "IM",
-    "followers": 13,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan",
-    "last_online": 1734094454,
+    "last_online": 1741640780,
     "joined": 1670514465,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2777,
-            "date": 1729452511,
-            "rd": 26
+            "date": 1741276336,
+            "rd": 33
         },
         "best": {
             "rating": 2865,
@@ -28,9 +28,9 @@
             "game": "https://www.chess.com/game/live/121880927483"
         },
         "record": {
-            "win": 454,
-            "loss": 416,
-            "draw": 97
+            "win": 520,
+            "loss": 467,
+            "draw": 112
         }
     },
     "fide": 2655,

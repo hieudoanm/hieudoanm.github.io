@@ -6,9 +6,9 @@
     "name": "Maxim Korobkin",
     "username": "magek0",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733828628,
+    "last_online": 1741696918,
     "joined": 1425282353,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2296,
-            "date": 1728314504,
-            "rd": 48
+            "rating": 2314,
+            "date": 1740148370,
+            "rd": 49
         },
         "best": {
             "rating": 2334,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/28044069241"
         },
         "record": {
-            "win": 47,
-            "loss": 14,
-            "draw": 4
+            "win": 51,
+            "loss": 16,
+            "draw": 6
         }
     },
     "chess_bullet": {
@@ -69,8 +69,8 @@
     "fide": 2394,
     "tactics": {
         "highest": {
-            "rating": 3334,
-            "date": 1733494932
+            "rating": 3340,
+            "date": 1737123028
         },
         "lowest": {
             "rating": 1359,

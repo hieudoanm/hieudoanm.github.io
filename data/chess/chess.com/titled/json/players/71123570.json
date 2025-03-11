@@ -6,9 +6,9 @@
     "name": "Sharvesh Deviprasath",
     "username": "karatebaby",
     "title": "FM",
-    "followers": 420,
+    "followers": 423,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734126066,
+    "last_online": 1741637152,
     "joined": 1579708453,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1663,
-            "date": 1734126134,
+            "date": 1741637164,
             "rd": 209
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 15,
             "loss": 0,
             "draw": 2,
-            "time_per_move": 26413,
+            "time_per_move": 33570,
             "timeout_percent": 0
         }
     },
@@ -71,7 +71,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2558,
-            "date": 1721962271,
+            "date": 1740251193,
             "rd": 36
         },
         "best": {
@@ -99,6 +99,10 @@
         "best": {
             "total_attempts": 56,
             "score": 53
+        },
+        "daily": {
+            "total_attempts": 33,
+            "score": 31
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Gilea Lucian",
     "username": "lucian_gl",
     "title": "FM",
-    "followers": 59,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "galati",
-    "last_online": 1734116960,
+    "last_online": 1741458388,
     "joined": 1398089015,
     "status": "premium",
     "is_streamer": false,
@@ -66,19 +66,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2366,
-            "date": 1734119619,
-            "rd": 38
+            "rating": 2294,
+            "date": 1741458892,
+            "rd": 40
         },
         "best": {
-            "rating": 2372,
-            "date": 1734119343,
+            "rating": 2386,
+            "date": 1734635344,
             "game": "https://www.chess.com/game/live/4704135964"
         },
         "record": {
-            "win": 1275,
-            "loss": 900,
-            "draw": 209
+            "win": 1374,
+            "loss": 985,
+            "draw": 230
         }
     },
     "fide": 2281,

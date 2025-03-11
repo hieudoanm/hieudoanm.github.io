@@ -9,7 +9,7 @@
     "followers": 7,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "Goteborg",
-    "last_online": 1733672676,
+    "last_online": 1741189908,
     "joined": 1293207865,
     "status": "premium",
     "is_streamer": false,
@@ -75,8 +75,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 30,
-            "score": 29
+            "total_attempts": 33,
+            "score": 30
         }
     }
 }

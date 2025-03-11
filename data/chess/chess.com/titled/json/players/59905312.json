@@ -6,10 +6,10 @@
     "name": "Igor Goldenberg",
     "username": "i_gold",
     "title": "IM",
-    "followers": 63,
+    "followers": 64,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "Melbourne",
-    "last_online": 1734031773,
+    "last_online": 1741680259,
     "joined": 1555456575,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2341,
-            "date": 1729054858,
+            "rating": 2338,
+            "date": 1735979099,
             "rd": 49
         },
         "best": {
@@ -30,27 +30,27 @@
         "record": {
             "win": 27,
             "loss": 16,
-            "draw": 10
+            "draw": 11
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2523,
-            "date": 1732247566,
-            "rd": 49
+            "rating": 2536,
+            "date": 1735279048,
+            "rd": 48
         },
         "best": {
-            "rating": 2526,
-            "date": 1728106567,
+            "rating": 2536,
+            "date": 1735279048,
             "game": "https://www.chess.com/game/live/5034292628"
         },
         "record": {
-            "win": 385,
+            "win": 387,
             "loss": 245,
-            "draw": 92
+            "draw": 93
         }
     },
-    "fide": 2351,
+    "fide": 2333,
     "tactics": {
         "highest": {
             "rating": 3264,

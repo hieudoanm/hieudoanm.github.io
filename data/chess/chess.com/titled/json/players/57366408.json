@@ -13,5 +13,50 @@
     "is_streamer": false,
     "verified": false,
     "league": "Crystal",
-    "streaming_platforms": []
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2512,
+            "date": 1709489429,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2527,
+            "date": 1709221262,
+            "game": "https://www.chess.com/game/live/102237894525"
+        },
+        "record": {
+            "win": 44,
+            "loss": 26,
+            "draw": 4
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2578,
+            "date": 1709486429,
+            "rd": 37
+        },
+        "best": {
+            "rating": 2712,
+            "date": 1654089625,
+            "game": "https://www.chess.com/game/live/46608652571"
+        },
+        "record": {
+            "win": 421,
+            "loss": 233,
+            "draw": 31
+        }
+    },
+    "tactics": {
+        "highest": {
+            "rating": 2268,
+            "date": 1553466007
+        },
+        "lowest": {
+            "rating": 1989,
+            "date": 1553455753
+        }
+    },
+    "puzzle_rush": {}
 }

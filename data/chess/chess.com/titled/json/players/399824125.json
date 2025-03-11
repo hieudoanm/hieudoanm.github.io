@@ -5,19 +5,19 @@
     "username": "mcbpjerm",
     "title": "IM",
     "followers": 0,
-    "country": "https://api.chess.com/pub/country/IM",
-    "last_online": 1732739380,
+    "country": "https://api.chess.com/pub/country/XX",
+    "last_online": 1741620158,
     "joined": 1730482056,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2345,
-            "date": 1732740544,
-            "rd": 53
+            "rating": 2344,
+            "date": 1741618968,
+            "rd": 77
         },
         "best": {
             "rating": 2345,
@@ -27,7 +27,7 @@
         "record": {
             "win": 41,
             "loss": 13,
-            "draw": 2
+            "draw": 3
         }
     },
     "tactics": {

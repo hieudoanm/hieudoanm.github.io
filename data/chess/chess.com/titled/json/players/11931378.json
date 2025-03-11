@@ -6,10 +6,10 @@
     "name": "Bosko Tomic",
     "username": "krsolomac",
     "title": "IM",
-    "followers": 27,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/BA",
     "location": "tuzla",
-    "last_online": 1734117342,
+    "last_online": 1741700549,
     "joined": 1368896170,
     "status": "premium",
     "is_streamer": false,
@@ -18,19 +18,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2687,
-            "date": 1734117628,
-            "rd": 29
+            "rating": 2592,
+            "date": 1741700895,
+            "rd": 40
         },
         "best": {
             "rating": 2702,
             "date": 1733862205,
-            "game": "https://www.chess.com/game/live/120436797569"
+            "game": "https://www.chess.com/game/live/129671442661"
         },
         "record": {
-            "win": 702,
-            "loss": 558,
-            "draw": 135
+            "win": 790,
+            "loss": 642,
+            "draw": 152
         }
     },
     "tactics": {

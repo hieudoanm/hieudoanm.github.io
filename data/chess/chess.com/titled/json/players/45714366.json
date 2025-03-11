@@ -6,10 +6,10 @@
     "name": "M\u00e1t\u00e9 Egresi",
     "username": "whitebishop99",
     "title": "FM",
-    "followers": 37,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Ajka",
-    "last_online": 1733494372,
+    "last_online": 1741360667,
     "joined": 1524923276,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1994,
-            "date": 1724793916,
+            "date": 1737209253,
             "rd": 76
         },
         "best": {

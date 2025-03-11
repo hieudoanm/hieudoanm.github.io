@@ -6,9 +6,9 @@
     "name": "Oriol Serra Canals",
     "username": "jamal-jamal-jamal",
     "title": "CM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/XC",
-    "last_online": 1734170509,
+    "last_online": 1741183829,
     "joined": 1698745840,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2111,
-            "date": 1730754309,
-            "rd": 45
+            "rating": 2014,
+            "date": 1741636345,
+            "rd": 48
         },
         "best": {
             "rating": 2397,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/99856915403"
         },
         "record": {
-            "win": 95,
-            "loss": 107,
+            "win": 110,
+            "loss": 129,
             "draw": 14
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2291,
-            "date": 1732035820,
-            "rd": 56
+            "rating": 2400,
+            "date": 1741285049,
+            "rd": 52
         },
         "best": {
             "rating": 2506,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/93744538631"
         },
         "record": {
-            "win": 98,
-            "loss": 158,
-            "draw": 17
+            "win": 123,
+            "loss": 189,
+            "draw": 21
         }
     },
     "fide": 2158,
     "tactics": {
         "highest": {
-            "rating": 2393,
-            "date": 1724165085
+            "rating": 2548,
+            "date": 1741275267
         },
         "lowest": {
             "rating": 400,

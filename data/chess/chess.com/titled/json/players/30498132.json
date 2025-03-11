@@ -6,10 +6,10 @@
     "name": "Abdelazeez Mohamed 12202576",
     "username": "abdelazeez-m",
     "title": "FM",
-    "followers": 159,
+    "followers": 160,
     "country": "https://api.chess.com/pub/country/SD",
     "location": "Khartoum",
-    "last_online": 1732953361,
+    "last_online": 1736937630,
     "joined": 1476984648,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2228,
-            "date": 1733557784,
-            "rd": 44
+            "rating": 2221,
+            "date": 1738484032,
+            "rd": 39
         },
         "best": {
             "rating": 2393,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/1884542829"
         },
         "record": {
-            "win": 5049,
-            "loss": 4616,
-            "draw": 585
+            "win": 5078,
+            "loss": 4648,
+            "draw": 587
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Paulo Bersamina",
     "username": "fastestmindalive",
     "title": "IM",
-    "followers": 877,
+    "followers": 885,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Manila",
-    "last_online": 1734137727,
+    "last_online": 1741654833,
     "joined": 1383374969,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2839,
-            "date": 1714215635,
-            "rd": 49
+            "rating": 2822,
+            "date": 1737356916,
+            "rd": 48
         },
         "best": {
             "rating": 2839,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/50042332269"
         },
         "record": {
-            "win": 1061,
-            "loss": 780,
+            "win": 1062,
+            "loss": 782,
             "draw": 99
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2741,
-            "date": 1730901096,
-            "rd": 48
+            "rating": 2784,
+            "date": 1738223268,
+            "rd": 43
         },
         "best": {
             "rating": 2920,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/3590180120"
         },
         "record": {
-            "win": 933,
-            "loss": 603,
+            "win": 945,
+            "loss": 609,
             "draw": 161
         }
     },

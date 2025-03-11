@@ -5,9 +5,9 @@
     "name": "Azumi Sakai",
     "username": "azumi_214",
     "title": "WCM",
-    "followers": 136,
+    "followers": 137,
     "country": "https://api.chess.com/pub/country/JP",
-    "last_online": 1734017763,
+    "last_online": 1740832875,
     "joined": 1360281822,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1945,
-            "date": 1731678158,
+            "date": 1739705732,
             "rd": 105
         },
         "best": {
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1638,
-            "date": 1732183814,
-            "rd": 16
+            "rating": 1555,
+            "date": 1739610557,
+            "rd": 39
         },
         "best": {
             "rating": 1805,
@@ -62,26 +62,26 @@
             "game": "https://www.chess.com/game/live/99635515315"
         },
         "record": {
-            "win": 12484,
-            "loss": 12106,
+            "win": 12535,
+            "loss": 12165,
             "draw": 920
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1818,
-            "date": 1733573410,
+            "rating": 1806,
+            "date": 1740834842,
             "rd": 39
         },
         "best": {
-            "rating": 1860,
-            "date": 1730903711,
+            "rating": 1894,
+            "date": 1739713755,
             "game": "https://www.chess.com/game/live/67096895185"
         },
         "record": {
-            "win": 3602,
-            "loss": 3145,
-            "draw": 280
+            "win": 3649,
+            "loss": 3191,
+            "draw": 285
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Lucas Foerster-Yialamas",
     "username": "chesswarrior3",
     "title": "CM",
-    "followers": 78,
+    "followers": 79,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733845866,
+    "last_online": 1741687731,
     "joined": 1511875566,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1584,
-            "date": 1733848126,
-            "rd": 73
+            "rating": 1410,
+            "date": 1741687862,
+            "rd": 75
         },
         "best": {
             "rating": 1712,
@@ -27,17 +27,11 @@
             "game": "https://www.chess.com/game/daily/552007539"
         },
         "record": {
-            "win": 1106,
-            "loss": 640,
+            "win": 1112,
+            "loss": 654,
             "draw": 43,
-            "time_per_move": 135987,
-            "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 113,
-            "withdraw": 2,
-            "count": 2,
-            "highest_finish": 1
+            "time_per_move": 135370,
+            "timeout_percent": 57
         }
     },
     "chess960_daily": {
@@ -55,14 +49,8 @@
             "win": 40,
             "loss": 41,
             "draw": 0,
-            "time_per_move": 135987,
+            "time_per_move": 135370,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 113,
-            "withdraw": 2,
-            "count": 2,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
@@ -84,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2419,
-            "date": 1733079954,
-            "rd": 29
+            "rating": 2406,
+            "date": 1741452702,
+            "rd": 39
         },
         "best": {
             "rating": 2567,
@@ -94,16 +82,16 @@
             "game": "https://www.chess.com/game/live/78757189399"
         },
         "record": {
-            "win": 2652,
-            "loss": 2527,
-            "draw": 324
+            "win": 2727,
+            "loss": 2588,
+            "draw": 334
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2408,
-            "date": 1733847980,
-            "rd": 78
+            "rating": 2397,
+            "date": 1741689229,
+            "rd": 75
         },
         "best": {
             "rating": 2502,
@@ -111,15 +99,15 @@
             "game": "https://www.chess.com/game/live/75127822197"
         },
         "record": {
-            "win": 778,
-            "loss": 767,
+            "win": 781,
+            "loss": 770,
             "draw": 93
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2949,
-            "date": 1717880291
+            "rating": 3071,
+            "date": 1739553111
         },
         "lowest": {
             "rating": 411,

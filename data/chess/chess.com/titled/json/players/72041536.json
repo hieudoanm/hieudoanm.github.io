@@ -5,9 +5,9 @@
     "name": "Jose Escartin Lacasa",
     "username": "josechessgg",
     "title": "FM",
-    "followers": 59,
+    "followers": 61,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734184454,
+    "last_online": 1741688273,
     "joined": 1581434853,
     "status": "premium",
     "is_streamer": false,
@@ -33,8 +33,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2633,
-            "date": 1732978448,
+            "rating": 2608,
+            "date": 1740431507,
             "rd": 45
         },
         "best": {
@@ -43,26 +43,26 @@
             "game": "https://www.chess.com/game/live/100788786261"
         },
         "record": {
-            "win": 632,
-            "loss": 455,
-            "draw": 74
+            "win": 640,
+            "loss": 463,
+            "draw": 75
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2535,
-            "date": 1733072185,
-            "rd": 49
+            "rating": 2620,
+            "date": 1740599245,
+            "rd": 48
         },
         "best": {
-            "rating": 2570,
-            "date": 1728814393,
-            "game": "https://www.chess.com/game/live/72453693103"
+            "rating": 2634,
+            "date": 1739217126,
+            "game": "https://www.chess.com/game/live/132954590169"
         },
         "record": {
-            "win": 265,
-            "loss": 156,
-            "draw": 25
+            "win": 310,
+            "loss": 182,
+            "draw": 34
         }
     },
     "fide": 1234,
@@ -80,6 +80,10 @@
         "best": {
             "total_attempts": 71,
             "score": 68
+        },
+        "daily": {
+            "total_attempts": 56,
+            "score": 54
         }
     }
 }

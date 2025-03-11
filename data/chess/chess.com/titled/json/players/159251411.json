@@ -8,7 +8,7 @@
     "title": "IM",
     "followers": 14,
     "country": "https://api.chess.com/pub/country/HK",
-    "last_online": 1734010875,
+    "last_online": 1741702580,
     "joined": 1635231047,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2441,
-            "date": 1733453942,
-            "rd": 67
+            "rating": 2362,
+            "date": 1741105715,
+            "rd": 53
         },
         "best": {
             "rating": 2542,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/93716459685"
         },
         "record": {
-            "win": 149,
-            "loss": 158,
-            "draw": 24
+            "win": 172,
+            "loss": 195,
+            "draw": 27
         }
     },
     "fide": 0,

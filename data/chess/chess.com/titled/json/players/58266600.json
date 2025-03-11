@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/58266600.384afd24.200x200o.4372e5a31185.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/58266600.504690b1.200x200o.bca11eff70d5.jpg",
     "player_id": 58266600,
-    "@id": "https://api.chess.com/pub/player/may_goose",
-    "url": "https://www.chess.com/member/may_goose",
-    "name": "Marina Guseva",
-    "username": "may_goose",
+    "@id": "https://api.chess.com/pub/player/root_m5",
+    "url": "https://www.chess.com/member/Root_M5",
+    "name": "Marina Korneva",
+    "username": "root_m5",
     "title": "IM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1714804422,
+    "last_online": 1740920081,
     "joined": 1552073459,
     "status": "premium",
     "is_streamer": false,
@@ -17,19 +17,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2371,
-            "date": 1655218985,
-            "rd": 44
+            "rating": 2545,
+            "date": 1738692688,
+            "rd": 47
         },
         "best": {
-            "rating": 2533,
-            "date": 1640716459,
+            "rating": 2548,
+            "date": 1738692104,
             "game": "https://www.chess.com/game/live/33849686259"
         },
         "record": {
-            "win": 399,
-            "loss": 271,
-            "draw": 44
+            "win": 405,
+            "loss": 275,
+            "draw": 45
         }
     },
     "tactics": {

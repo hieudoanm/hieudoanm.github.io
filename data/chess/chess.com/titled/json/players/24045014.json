@@ -5,9 +5,9 @@
     "name": "Mohammad Fahad Rahman",
     "username": "fahad",
     "title": "IM",
-    "followers": 217,
+    "followers": 225,
     "country": "https://api.chess.com/pub/country/BD",
-    "last_online": 1734183315,
+    "last_online": 1741511627,
     "joined": 1441864102,
     "status": "premium",
     "is_streamer": false,
@@ -71,36 +71,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2777,
-            "date": 1714760382,
-            "rd": 46
+            "rating": 2776,
+            "date": 1739545073,
+            "rd": 34
         },
         "best": {
-            "rating": 2815,
-            "date": 1642328113,
+            "rating": 2849,
+            "date": 1736359676,
             "game": "https://www.chess.com/game/live/33907853283"
         },
         "record": {
-            "win": 4270,
-            "loss": 4085,
-            "draw": 506
+            "win": 4353,
+            "loss": 4147,
+            "draw": 513
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2624,
-            "date": 1732805869,
-            "rd": 49
+            "rating": 2779,
+            "date": 1739548438,
+            "rd": 41
         },
         "best": {
-            "rating": 2798,
-            "date": 1702988816,
+            "rating": 2807,
+            "date": 1739545885,
             "game": "https://www.chess.com/game/live/13889591343"
         },
         "record": {
-            "win": 3371,
-            "loss": 3563,
-            "draw": 585
+            "win": 3435,
+            "loss": 3602,
+            "draw": 591
         }
     },
     "tactics": {
@@ -117,10 +117,6 @@
         "best": {
             "total_attempts": 66,
             "score": 63
-        },
-        "daily": {
-            "total_attempts": 51,
-            "score": 49
         }
     }
 }

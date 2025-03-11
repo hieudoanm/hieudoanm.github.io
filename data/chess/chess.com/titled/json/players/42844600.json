@@ -6,9 +6,9 @@
     "name": "Alexei Tapia Ostolaza",
     "username": "bluejay1897",
     "title": "FM",
-    "followers": 41,
+    "followers": 48,
     "country": "https://api.chess.com/pub/country/PA",
-    "last_online": 1734148259,
+    "last_online": 1741446417,
     "joined": 1517339560,
     "status": "premium",
     "is_streamer": false,
@@ -53,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2233,
-            "date": 1717184125,
-            "rd": 80
+            "rating": 2429,
+            "date": 1740852669,
+            "rd": 54
         },
         "best": {
-            "rating": 2430,
-            "date": 1605224515,
-            "game": "https://www.chess.com/game/live/5734571330"
+            "rating": 2466,
+            "date": 1740850843,
+            "game": "https://www.chess.com/game/live/134588940987"
         },
         "record": {
-            "win": 314,
-            "loss": 221,
-            "draw": 28
+            "win": 329,
+            "loss": 244,
+            "draw": 32
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2405,
-            "date": 1731952656,
-            "rd": 51
+            "rating": 2422,
+            "date": 1739297623,
+            "rd": 62
         },
         "best": {
             "rating": 2478,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/4376144977"
         },
         "record": {
-            "win": 578,
-            "loss": 436,
-            "draw": 75
+            "win": 588,
+            "loss": 441,
+            "draw": 78
         }
     },
     "tactics": {
@@ -99,10 +99,6 @@
         "best": {
             "total_attempts": 61,
             "score": 58
-        },
-        "daily": {
-            "total_attempts": 39,
-            "score": 38
         }
     }
 }

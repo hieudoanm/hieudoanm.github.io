@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/192865683.89bb24fe.200x200o.033be11390e9.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/192865683.3209bafd.200x200o.fe5e6ced5082.jpg",
     "player_id": 192865683,
-    "@id": "https://api.chess.com/pub/player/tientranmanh",
-    "url": "https://www.chess.com/member/TienTranManh",
+    "@id": "https://api.chess.com/pub/player/greenviper2025",
+    "url": "https://www.chess.com/member/GreenViper2025",
     "name": "Ti\u1ebfn Tr\u1ea7n M\u1ea1nh",
-    "username": "tientranmanh",
+    "username": "greenviper2025",
     "title": "FM",
-    "followers": 28,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Ha Noi",
-    "last_online": 1734153449,
+    "last_online": 1741702724,
     "joined": 1660096785,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2401,
-            "date": 1734088827,
-            "rd": 59
+            "rating": 2546,
+            "date": 1741671256,
+            "rd": 47
         },
         "best": {
             "rating": 2576,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/108749543023"
         },
         "record": {
-            "win": 92,
-            "loss": 98,
+            "win": 117,
+            "loss": 109,
             "draw": 9
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2509,
-            "date": 1731731651,
-            "rd": 47
+            "rating": 2526,
+            "date": 1741528037,
+            "rd": 30
         },
         "best": {
             "rating": 2609,
             "date": 1723229939,
-            "game": "https://www.chess.com/game/live/116964579669"
+            "game": "https://www.chess.com/game/live/133639159449"
         },
         "record": {
-            "win": 466,
-            "loss": 421,
-            "draw": 62
+            "win": 586,
+            "loss": 551,
+            "draw": 77
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Vasilios Kasioumis",
     "username": "vasskas",
     "title": "FM",
-    "followers": 28,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1734035677,
+    "last_online": 1741592410,
     "joined": 1508004082,
     "status": "premium",
     "is_streamer": false,
@@ -53,25 +53,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2678,
-            "date": 1733997595,
-            "rd": 48
+            "rating": 2728,
+            "date": 1740512917,
+            "rd": 33
         },
         "best": {
-            "rating": 2763,
-            "date": 1728237945,
+            "rating": 2770,
+            "date": 1737631165,
             "game": "https://www.chess.com/game/live/121975736975"
         },
         "record": {
-            "win": 561,
-            "loss": 396,
-            "draw": 37
+            "win": 625,
+            "loss": 440,
+            "draw": 47
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2652,
-            "date": 1731793672,
+            "rating": 2610,
+            "date": 1741383296,
             "rd": 48
         },
         "best": {
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/102710471961"
         },
         "record": {
-            "win": 1442,
-            "loss": 1093,
-            "draw": 144
+            "win": 1452,
+            "loss": 1096,
+            "draw": 145
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3507,
-            "date": 1731339586
+            "rating": 3512,
+            "date": 1737364749
         },
         "lowest": {
             "rating": 413,

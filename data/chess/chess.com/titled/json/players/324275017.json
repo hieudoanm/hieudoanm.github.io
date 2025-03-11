@@ -5,54 +5,53 @@
     "name": "Elise Wu",
     "username": "elisewu",
     "title": "WCM",
-    "followers": 3,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/SR",
-    "last_online": 1733249842,
+    "last_online": 1741646147,
     "joined": 1699292196,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1865,
-            "date": 1733250767,
-            "rd": 69
+            "rating": 2002,
+            "date": 1741214275
         },
         "best": {
-            "rating": 1865,
-            "date": 1733250767,
-            "game": "https://www.chess.com/game/live/126983397277"
+            "rating": 1973,
+            "date": 1736542395,
+            "game": "https://www.chess.com/game/live/130279898589"
         },
         "record": {
-            "win": 27,
-            "loss": 9,
-            "draw": 1
+            "win": 46,
+            "loss": 18,
+            "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1630,
-            "date": 1730386034,
-            "rd": 73
+            "rating": 1761,
+            "date": 1741133169,
+            "rd": 62
         },
         "best": {
-            "rating": 1630,
-            "date": 1730386034,
-            "game": "https://www.chess.com/game/live/124124442959"
+            "rating": 1764,
+            "date": 1741131893,
+            "game": "https://www.chess.com/game/live/134870344107"
         },
         "record": {
-            "win": 13,
-            "loss": 10,
-            "draw": 3
+            "win": 33,
+            "loss": 28,
+            "draw": 4
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2990,
-            "date": 1731970658
+            "rating": 3039,
+            "date": 1736550019
         },
         "lowest": {
             "rating": 400,

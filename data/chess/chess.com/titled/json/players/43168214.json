@@ -6,9 +6,9 @@
     "name": "Oleg Yaksin",
     "username": "vazabanga",
     "title": "FM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734109473,
+    "last_online": 1741634895,
     "joined": 1518192849,
     "status": "premium",
     "is_streamer": false,
@@ -34,19 +34,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2643,
-            "date": 1734120154,
-            "rd": 34
+            "rating": 2731,
+            "date": 1741635261,
+            "rd": 40
         },
         "best": {
-            "rating": 2753,
-            "date": 1704730017,
+            "rating": 2779,
+            "date": 1737065054,
             "game": "https://www.chess.com/game/live/109586480667"
         },
         "record": {
-            "win": 2299,
-            "loss": 2283,
-            "draw": 376
+            "win": 2424,
+            "loss": 2397,
+            "draw": 395
         }
     },
     "tactics": {

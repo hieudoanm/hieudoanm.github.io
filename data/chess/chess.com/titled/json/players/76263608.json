@@ -5,9 +5,9 @@
     "name": "Ethan Vaz",
     "username": "jumpingknight20",
     "title": "IM",
-    "followers": 660,
+    "followers": 707,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734022129,
+    "last_online": 1741681908,
     "joined": 1586529390,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2890,
-            "date": 1724504524,
-            "rd": 49
+            "rating": 2910,
+            "date": 1739640440,
+            "rd": 45
         },
         "best": {
             "rating": 2922,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/98911592389"
         },
         "record": {
-            "win": 2143,
-            "loss": 441,
-            "draw": 117
+            "win": 2156,
+            "loss": 447,
+            "draw": 118
         }
     },
     "chess_blitz": {
@@ -65,7 +65,7 @@
             "draw": 106
         }
     },
-    "fide": 2411,
+    "fide": 2430,
     "tactics": {
         "highest": {
             "rating": 5077,

@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/donotreadit",
     "username": "donotreadit",
     "title": "IM",
-    "followers": 131,
+    "followers": 141,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734137544,
+    "last_online": 1741541326,
     "joined": 1346855556,
     "status": "premium",
     "is_streamer": false,
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2809,
-            "date": 1731260569,
-            "rd": 49
+            "rating": 2840,
+            "date": 1740856120,
+            "rd": 30
         },
         "best": {
-            "rating": 2885,
-            "date": 1718552607,
+            "rating": 2909,
+            "date": 1740848009,
             "game": "https://www.chess.com/game/live/115342102149"
         },
         "record": {
-            "win": 365,
-            "loss": 251,
-            "draw": 37
+            "win": 440,
+            "loss": 285,
+            "draw": 42
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2800,
-            "date": 1729929955,
-            "rd": 49
+            "rating": 2811,
+            "date": 1741620593,
+            "rd": 42
         },
         "best": {
             "rating": 2877,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/3603290236"
         },
         "record": {
-            "win": 967,
-            "loss": 696,
-            "draw": 179
+            "win": 991,
+            "loss": 715,
+            "draw": 185
         }
     },
     "tactics": {

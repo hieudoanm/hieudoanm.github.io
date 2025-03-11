@@ -5,20 +5,20 @@
     "name": "Maximillian Lu",
     "username": "waterisgood1",
     "title": "IM",
-    "followers": 16,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1732832417,
+    "last_online": 1741496972,
     "joined": 1594073800,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1624,
-            "date": 1733907948,
-            "rd": 195
+            "rating": 1691,
+            "date": 1741568932,
+            "rd": 167
         },
         "best": {
             "rating": 2007,
@@ -26,11 +26,11 @@
             "game": "https://www.chess.com/game/daily/726054727"
         },
         "record": {
-            "win": 5,
+            "win": 10,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 24532,
-            "timeout_percent": 16
+            "time_per_move": 19957,
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
@@ -52,36 +52,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2679,
-            "date": 1726897950,
-            "rd": 38
+            "rating": 2677,
+            "date": 1741498319,
+            "rd": 46
         },
         "best": {
-            "rating": 2679,
-            "date": 1726897950,
-            "game": "https://www.chess.com/game/live/120633041021"
+            "rating": 2706,
+            "date": 1734845849,
+            "game": "https://www.chess.com/game/live/128494372633"
         },
         "record": {
-            "win": 28,
-            "loss": 10,
-            "draw": 0
+            "win": 130,
+            "loss": 46,
+            "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2740,
-            "date": 1731787425,
-            "rd": 48
+            "rating": 2677,
+            "date": 1741318156,
+            "rd": 47
         },
         "best": {
             "rating": 2750,
             "date": 1731784962,
-            "game": "https://www.chess.com/game/live/122499923789"
+            "game": "https://www.chess.com/game/live/131649566491"
         },
         "record": {
-            "win": 45,
-            "loss": 23,
-            "draw": 4
+            "win": 51,
+            "loss": 40,
+            "draw": 6
         }
     },
     "fide": 2404,

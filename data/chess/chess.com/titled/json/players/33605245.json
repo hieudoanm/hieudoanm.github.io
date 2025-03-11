@@ -6,10 +6,10 @@
     "name": "Shantanu Bhambure",
     "username": "indianpowerkid",
     "title": "IM",
-    "followers": 216,
+    "followers": 225,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Mumbai, India",
-    "last_online": 1733675712,
+    "last_online": 1741309984,
     "joined": 1488387788,
     "status": "premium",
     "is_streamer": false,
@@ -18,12 +18,17 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 800,
-            "date": 1727776972,
-            "rd": 350
+            "rating": 1050,
+            "date": 1734858478,
+            "rd": 220
+        },
+        "best": {
+            "rating": 1050,
+            "date": 1734858478,
+            "game": "https://www.chess.com/game/daily/707887039"
         },
         "record": {
-            "win": 3,
+            "win": 6,
             "loss": 0,
             "draw": 0,
             "time_per_move": 87290,
@@ -33,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1488,
-            "date": 1733678372,
+            "date": 1741311599,
             "rd": 95
         },
         "best": {
@@ -67,7 +72,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2535,
-            "date": 1724916266,
+            "date": 1734604092,
             "rd": 49
         },
         "best": {

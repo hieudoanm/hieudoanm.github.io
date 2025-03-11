@@ -6,10 +6,10 @@
     "name": "Ylon Schwartz",
     "username": "tenthplanet",
     "title": "FM",
-    "followers": 9,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/BS",
     "location": "Shade Tree",
-    "last_online": 1734137430,
+    "last_online": 1741491055,
     "joined": 1712104593,
     "status": "premium",
     "is_streamer": false,
@@ -18,27 +18,27 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1177,
-            "date": 1727370354,
-            "rd": 294
+            "rating": 1300,
+            "date": 1737324232,
+            "rd": 260
         },
         "best": {
-            "rating": 1177,
-            "date": 1727370354,
+            "rating": 1300,
+            "date": 1737324232,
             "game": "https://www.chess.com/game/daily/702642861"
         },
         "record": {
-            "win": 1,
+            "win": 2,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 6563,
+            "time_per_move": 5962,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2217,
-            "date": 1731727441,
+            "date": 1740880566,
             "rd": 49
         },
         "best": {
@@ -47,50 +47,50 @@
             "game": "https://www.chess.com/game/live/119331587143"
         },
         "record": {
-            "win": 55,
+            "win": 66,
             "loss": 0,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2333,
-            "date": 1734185171,
-            "rd": 21
+            "rating": 2205,
+            "date": 1741641708,
+            "rd": 17
         },
         "best": {
-            "rating": 2480,
-            "date": 1730305451,
-            "game": "https://www.chess.com/game/live/109908651427"
+            "rating": 2516,
+            "date": 1736352197,
+            "game": "https://www.chess.com/game/live/133232338315"
         },
         "record": {
-            "win": 2475,
-            "loss": 1954,
-            "draw": 127
+            "win": 4090,
+            "loss": 3371,
+            "draw": 205
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2500,
-            "date": 1731726045,
+            "rating": 2502,
+            "date": 1740881069,
             "rd": 49
         },
         "best": {
-            "rating": 2500,
-            "date": 1714782228,
+            "rating": 2502,
+            "date": 1735080035,
             "game": "https://www.chess.com/game/live/108454254975"
         },
         "record": {
-            "win": 243,
-            "loss": 68,
+            "win": 249,
+            "loss": 70,
             "draw": 8
         }
     },
     "fide": 2217,
     "tactics": {
         "highest": {
-            "rating": 3402,
-            "date": 1732336113
+            "rating": 3408,
+            "date": 1734224350
         },
         "lowest": {
             "rating": 400,

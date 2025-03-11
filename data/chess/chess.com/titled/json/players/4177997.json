@@ -6,10 +6,10 @@
     "name": "Kostya Kavutskiy",
     "username": "hellokostya",
     "title": "IM",
-    "followers": 1465,
+    "followers": 1486,
     "country": "https://api.chess.com/pub/country/US",
     "location": "403639644887056406",
-    "last_online": 1734012204,
+    "last_online": 1741656696,
     "joined": 1288284938,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2404,
-            "date": 1730871985,
+            "date": 1736737505,
             "rd": 48
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2653,
-            "date": 1732665881,
-            "rd": 40
+            "rating": 2578,
+            "date": 1741130921,
+            "rd": 47
         },
         "best": {
             "rating": 2705,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/73415621891"
         },
         "record": {
-            "win": 2985,
-            "loss": 2733,
-            "draw": 575
+            "win": 3006,
+            "loss": 2753,
+            "draw": 576
         }
     },
     "fide": 2412,

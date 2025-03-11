@@ -6,9 +6,9 @@
     "name": "Shreyas Seshadri Nallore",
     "username": "brainbuzz08",
     "title": "FM",
-    "followers": 46,
+    "followers": 47,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734173600,
+    "last_online": 1741702952,
     "joined": 1570457311,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2115,
-            "date": 1733930212,
+            "date": 1738735754,
             "rd": 49
         },
         "best": {
@@ -53,26 +53,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2524,
-            "date": 1734123096,
-            "rd": 34
+            "rating": 2602,
+            "date": 1739173582
         },
         "best": {
-            "rating": 2590,
-            "date": 1722891316,
-            "game": "https://www.chess.com/game/live/116633458571"
+            "rating": 2609,
+            "date": 1738833207,
+            "game": "https://www.chess.com/game/live/132444690607"
         },
         "record": {
-            "win": 1105,
-            "loss": 1418,
-            "draw": 186
+            "win": 1240,
+            "loss": 1584,
+            "draw": 212
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2421,
-            "date": 1733138833,
-            "rd": 54
+            "rating": 2365,
+            "date": 1741386588,
+            "rd": 67
         },
         "best": {
             "rating": 2512,
@@ -80,16 +79,16 @@
             "game": "https://www.chess.com/game/live/30458311665"
         },
         "record": {
-            "win": 2340,
-            "loss": 2522,
-            "draw": 450
+            "win": 2345,
+            "loss": 2533,
+            "draw": 451
         }
     },
     "fide": 2303,
     "tactics": {
         "highest": {
-            "rating": 7306,
-            "date": 1673346776
+            "rating": 7310,
+            "date": 1741158619
         },
         "lowest": {
             "rating": 1217,

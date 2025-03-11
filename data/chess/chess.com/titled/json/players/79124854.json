@@ -8,7 +8,7 @@
     "followers": 51,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Vinnitsya",
-    "last_online": 1733907264,
+    "last_online": 1741673512,
     "joined": 1589134034,
     "status": "premium",
     "is_streamer": false,
@@ -17,36 +17,36 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2688,
-            "date": 1706717658,
-            "rd": 41
+            "rating": 2706,
+            "date": 1734897828,
+            "rd": 48
         },
         "best": {
-            "rating": 2688,
-            "date": 1706717658,
+            "rating": 2706,
+            "date": 1734897828,
             "game": "https://www.chess.com/game/live/100452193617"
         },
         "record": {
-            "win": 43,
-            "loss": 11,
+            "win": 46,
+            "loss": 12,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2787,
-            "date": 1733585119,
-            "rd": 45
+            "rating": 2802,
+            "date": 1741674469,
+            "rd": 42
         },
         "best": {
             "rating": 2897,
             "date": 1704214586,
-            "game": "https://www.chess.com/game/live/125168311323"
+            "game": "https://www.chess.com/game/live/134845753985"
         },
         "record": {
-            "win": 479,
-            "loss": 318,
-            "draw": 80
+            "win": 557,
+            "loss": 362,
+            "draw": 93
         }
     },
     "fide": 2405,
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

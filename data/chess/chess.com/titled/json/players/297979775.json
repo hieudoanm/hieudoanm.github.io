@@ -6,9 +6,9 @@
     "name": "Dominick Orzech",
     "username": "gmaneta",
     "title": "IM",
-    "followers": 27,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734155107,
+    "last_online": 1741703865,
     "joined": 1688545301,
     "status": "premium",
     "is_streamer": false,
@@ -29,36 +29,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2607,
-            "date": 1731761518,
-            "rd": 49
+            "rating": 2562,
+            "date": 1737826307,
+            "rd": 45
         },
         "best": {
-            "rating": 2613,
-            "date": 1707583394,
-            "game": "https://www.chess.com/game/live/101322206279"
+            "rating": 2623,
+            "date": 1737824760,
+            "game": "https://www.chess.com/game/live/131563766365"
         },
         "record": {
-            "win": 3,
-            "loss": 1,
-            "draw": 0
+            "win": 9,
+            "loss": 10,
+            "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2653,
-            "date": 1734155252,
-            "rd": 28
+            "rating": 2554,
+            "date": 1741693285,
+            "rd": 42
         },
         "best": {
-            "rating": 2720,
-            "date": 1710543915,
+            "rating": 2770,
+            "date": 1735404843,
             "game": "https://www.chess.com/game/live/120324058075"
         },
         "record": {
-            "win": 1681,
-            "loss": 1251,
-            "draw": 218
+            "win": 1828,
+            "loss": 1368,
+            "draw": 256
         }
     },
     "fide": 0,
@@ -76,10 +76,6 @@
         "best": {
             "total_attempts": 51,
             "score": 49
-        },
-        "daily": {
-            "total_attempts": 41,
-            "score": 38
         }
     }
 }

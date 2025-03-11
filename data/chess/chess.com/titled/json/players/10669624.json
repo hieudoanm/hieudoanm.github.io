@@ -6,10 +6,10 @@
     "name": "Rohith Krishna",
     "username": "whiteknight2612",
     "title": "IM",
-    "followers": 864,
+    "followers": 873,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "chennai",
-    "last_online": 1734144416,
+    "last_online": 1741422894,
     "joined": 1359806167,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1558,
-            "date": 1707902896,
+            "date": 1735885106,
             "rd": 85
         },
         "best": {
@@ -28,11 +28,11 @@
             "game": "https://www.chess.com/game/daily/239381970"
         },
         "record": {
-            "win": 240,
-            "loss": 58,
+            "win": 243,
+            "loss": 77,
             "draw": 16,
-            "time_per_move": 42651,
-            "timeout_percent": 0
+            "time_per_move": 42647,
+            "timeout_percent": 95
         }
     },
     "chess960_daily": {
@@ -50,14 +50,14 @@
             "win": 2,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 42651,
+            "time_per_move": 42647,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2225,
-            "date": 1732957782,
+            "date": 1734364705,
             "rd": 49
         },
         "best": {
@@ -73,36 +73,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2844,
-            "date": 1733406195,
-            "rd": 45
+            "rating": 2836,
+            "date": 1739631319,
+            "rd": 42
         },
         "best": {
-            "rating": 2850,
-            "date": 1728230320,
-            "game": "https://www.chess.com/game/live/26907686509"
+            "rating": 2903,
+            "date": 1734622441,
+            "game": "https://www.chess.com/game/live/133289350257"
         },
         "record": {
-            "win": 1736,
-            "loss": 1718,
-            "draw": 229
+            "win": 1753,
+            "loss": 1739,
+            "draw": 232
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2942,
-            "date": 1734104326,
-            "rd": 28
+            "rating": 2904,
+            "date": 1739548174,
+            "rd": 32
         },
         "best": {
-            "rating": 2942,
-            "date": 1734104326,
+            "rating": 2995,
+            "date": 1734367051,
             "game": "https://www.chess.com/game/live/90563972573"
         },
         "record": {
-            "win": 4208,
-            "loss": 4001,
-            "draw": 655
+            "win": 4301,
+            "loss": 4088,
+            "draw": 664
         }
     },
     "tactics": {
@@ -117,12 +117,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 65,
-            "score": 62
+            "total_attempts": 66,
+            "score": 63
         },
         "daily": {
-            "total_attempts": 32,
-            "score": 29
+            "total_attempts": 47,
+            "score": 44
         }
     }
 }

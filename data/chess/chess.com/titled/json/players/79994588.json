@@ -5,10 +5,10 @@
     "name": "Alvaro Garcia Alarcon",
     "username": "dejavu-69",
     "title": "FM",
-    "followers": 307,
+    "followers": 317,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Bogota",
-    "last_online": 1733864655,
+    "last_online": 1739902454,
     "joined": 1589931996,
     "status": "premium",
     "is_streamer": false,
@@ -48,36 +48,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1934,
-            "date": 1734141231,
-            "rd": 22
+            "rating": 2102,
+            "date": 1741667037,
+            "rd": 23
         },
         "best": {
-            "rating": 2149,
-            "date": 1630130421,
-            "game": "https://www.chess.com/game/live/86671133297"
+            "rating": 2163,
+            "date": 1738643690,
+            "game": "https://www.chess.com/game/live/129582750081"
         },
         "record": {
-            "win": 27579,
-            "loss": 21496,
-            "draw": 1321
+            "win": 28903,
+            "loss": 22575,
+            "draw": 1396
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2037,
-            "date": 1730933965,
-            "rd": 152
+            "rating": 2205,
+            "date": 1739902293,
+            "rd": 62
         },
         "best": {
-            "rating": 2220,
-            "date": 1653543083,
-            "game": "https://www.chess.com/game/live/47323327049"
+            "rating": 2271,
+            "date": 1738111032,
+            "game": "https://www.chess.com/game/live/131845228393"
         },
         "record": {
-            "win": 616,
-            "loss": 464,
-            "draw": 32
+            "win": 630,
+            "loss": 487,
+            "draw": 39
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Zurab Tqebuchava",
     "username": "zuratqebuchava",
     "title": "IM",
-    "followers": 283,
+    "followers": 305,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1734110804,
+    "last_online": 1741475241,
     "joined": 1591878477,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1200,
-            "date": 1704824525,
+            "date": 1738633100,
             "rd": 350
         },
         "record": {
@@ -31,9 +31,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2345,
-            "date": 1734136496,
-            "rd": 45
+            "rating": 2333,
+            "date": 1741474445,
+            "rd": 47
         },
         "best": {
             "rating": 2432,
@@ -41,9 +41,9 @@
             "game": "https://www.chess.com/game/live/119999375919"
         },
         "record": {
-            "win": 727,
-            "loss": 793,
-            "draw": 257
+            "win": 755,
+            "loss": 831,
+            "draw": 265
         }
     },
     "chess_bullet": {
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2259,
-            "date": 1734040089,
-            "rd": 46
+            "rating": 2275,
+            "date": 1740511928,
+            "rd": 47
         },
         "best": {
             "rating": 2383,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/84641045769"
         },
         "record": {
-            "win": 1294,
-            "loss": 1584,
-            "draw": 332
+            "win": 1319,
+            "loss": 1616,
+            "draw": 337
         }
     },
     "tactics": {

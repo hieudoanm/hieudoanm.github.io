@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/GumisGLHF",
     "username": "gumisglhf",
     "title": "FM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1724482748,
+    "last_online": 1735600337,
     "joined": 1536706678,
     "status": "premium",
     "is_streamer": false,
@@ -50,7 +50,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2391,
-            "date": 1649116003,
+            "date": 1735427601,
             "rd": 101
         },
         "best": {

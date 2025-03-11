@@ -5,10 +5,10 @@
     "name": "Guliskhan Nakhbayeva",
     "username": "boxerandchessplayer",
     "title": "IM",
-    "followers": 22,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "Shymkent city",
-    "last_online": 1734085997,
+    "last_online": 1741622660,
     "joined": 1540033909,
     "status": "premium",
     "is_streamer": false,
@@ -31,8 +31,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2105,
-            "date": 1722668523,
+            "rating": 2113,
+            "date": 1737559698,
             "rd": 49
         },
         "best": {
@@ -41,7 +41,7 @@
             "game": "https://www.chess.com/game/live/5333984690"
         },
         "record": {
-            "win": 9,
+            "win": 10,
             "loss": 6,
             "draw": 3
         }
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2425,
-            "date": 1734026800,
-            "rd": 44
+            "rating": 2353,
+            "date": 1741276845,
+            "rd": 35
         },
         "best": {
             "rating": 2564,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/4199100627"
         },
         "record": {
-            "win": 287,
-            "loss": 319,
-            "draw": 62
+            "win": 337,
+            "loss": 387,
+            "draw": 72
         }
     },
     "fide": 2328,

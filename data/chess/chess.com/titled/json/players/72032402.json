@@ -5,9 +5,9 @@
     "name": "Dimitris Makridis",
     "username": "greekplayer1",
     "title": "FM",
-    "followers": 102,
+    "followers": 103,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1733678180,
+    "last_online": 1741617986,
     "joined": 1581419376,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2372,
-            "date": 1733681228,
+            "date": 1739122742,
             "rd": 49
         },
         "best": {
@@ -26,7 +26,7 @@
             "game": "https://www.chess.com/game/live/26141492215"
         },
         "record": {
-            "win": 35,
+            "win": 44,
             "loss": 10,
             "draw": 5
         }

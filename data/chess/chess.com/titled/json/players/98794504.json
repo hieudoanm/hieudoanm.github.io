@@ -5,14 +5,14 @@
     "name": "Chinguun Sumiya",
     "username": "chinguunsu",
     "title": "FM",
-    "followers": 15,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/MN",
-    "last_online": 1734160867,
+    "last_online": 1741363815,
     "joined": 1606138901,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -40,27 +40,44 @@
             "draw": 1
         }
     },
-    "chess_blitz": {
+    "chess_bullet": {
         "last": {
-            "rating": 2772,
-            "date": 1734160398,
-            "rd": 32
+            "rating": 2528,
+            "date": 1737297665,
+            "rd": 49
         },
         "best": {
-            "rating": 2772,
-            "date": 1734160398,
+            "rating": 2607,
+            "date": 1698053158,
+            "game": "https://www.chess.com/game/live/129428001227"
+        },
+        "record": {
+            "win": 6,
+            "loss": 5,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2766,
+            "date": 1739368313,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2839,
+            "date": 1735692148,
             "game": "https://www.chess.com/game/live/92503952629"
         },
         "record": {
-            "win": 271,
-            "loss": 262,
-            "draw": 60
+            "win": 341,
+            "loss": 331,
+            "draw": 71
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2681,
-            "date": 1716695008
+            "rating": 2805,
+            "date": 1734851754
         },
         "lowest": {
             "rating": 1200,
@@ -69,12 +86,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 45,
-            "score": 42
-        },
-        "daily": {
             "total_attempts": 43,
-            "score": 40
+            "score": 42
         }
     }
 }

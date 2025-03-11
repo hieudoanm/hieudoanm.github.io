@@ -6,9 +6,9 @@
     "name": "Braulio Fernando Ramirez Reyes",
     "username": "reyesbraulio",
     "title": "FM",
-    "followers": 31,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/DO",
-    "last_online": 1734173927,
+    "last_online": 1738445051,
     "joined": 1585427237,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2182,
-            "date": 1722220757,
-            "rd": 104
+            "rating": 2116,
+            "date": 1738445342,
+            "rd": 116
         },
         "best": {
             "rating": 2297,
@@ -45,15 +45,15 @@
         },
         "record": {
             "win": 550,
-            "loss": 424,
+            "loss": 426,
             "draw": 62
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2528,
-            "date": 1723278174
+            "rating": 2611,
+            "date": 1734493691
         },
         "lowest": {
             "rating": 1013,

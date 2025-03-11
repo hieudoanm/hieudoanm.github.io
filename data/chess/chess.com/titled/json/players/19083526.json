@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19083526.c62bae27.200x200o.dfb8ce92887d.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19083526.8e26fdf3.200x200o.74264c5963c5.jpg",
     "player_id": 19083526,
     "@id": "https://api.chess.com/pub/player/loruf",
     "url": "https://www.chess.com/member/LoruF",
     "name": "Ruben Fernandez Lopez",
     "username": "loruf",
     "title": "FM",
-    "followers": 49,
+    "followers": 50,
     "country": "https://api.chess.com/pub/country/XG",
     "location": "Sensa1593",
-    "last_online": 1734022110,
+    "last_online": 1741683038,
     "joined": 1411909691,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1790,
-            "date": 1731873520,
-            "rd": 116
+            "rating": 1605,
+            "date": 1736083598,
+            "rd": 145
         },
         "best": {
             "rating": 2136,
@@ -28,11 +28,11 @@
             "game": "https://www.chess.com/game/daily/441365469"
         },
         "record": {
-            "win": 28,
-            "loss": 66,
+            "win": 31,
+            "loss": 85,
             "draw": 1,
-            "time_per_move": 55938,
-            "timeout_percent": 0
+            "time_per_move": 55413,
+            "timeout_percent": 85
         }
     },
     "chess960_daily": {
@@ -50,14 +50,14 @@
             "win": 2,
             "loss": 5,
             "draw": 0,
-            "time_per_move": 55938,
+            "time_per_move": 55413,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2230,
-            "date": 1728987316,
+            "rating": 2215,
+            "date": 1737908774,
             "rd": 49
         },
         "best": {
@@ -67,8 +67,8 @@
         },
         "record": {
             "win": 28,
-            "loss": 7,
-            "draw": 3
+            "loss": 8,
+            "draw": 5
         }
     },
     "chess_bullet": {
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2399,
-            "date": 1733231866,
-            "rd": 48
+            "rating": 2396,
+            "date": 1740916733,
+            "rd": 42
         },
         "best": {
             "rating": 2606,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/86476837643"
         },
         "record": {
-            "win": 499,
-            "loss": 363,
-            "draw": 50
+            "win": 545,
+            "loss": 399,
+            "draw": 52
         }
     },
     "fide": 2272,

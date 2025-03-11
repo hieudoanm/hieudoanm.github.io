@@ -9,7 +9,7 @@
     "followers": 29,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u041c\u043e\u0441\u043a\u0432\u0430",
-    "last_online": 1734036722,
+    "last_online": 1741111136,
     "joined": 1377782111,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2715,
-            "date": 1732034429,
-            "rd": 48
+            "rating": 2702,
+            "date": 1740501645,
+            "rd": 49
         },
         "best": {
             "rating": 2736,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/87665558901"
         },
         "record": {
-            "win": 395,
-            "loss": 287,
+            "win": 404,
+            "loss": 293,
             "draw": 46
         }
     },
     "fide": 2405,
     "tactics": {
         "highest": {
-            "rating": 2453,
-            "date": 1712253625
+            "rating": 2630,
+            "date": 1737153156
         },
         "lowest": {
             "rating": 2156,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 49,
-            "score": 46
+            "total_attempts": 50,
+            "score": 47
         }
     }
 }

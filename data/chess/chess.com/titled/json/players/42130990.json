@@ -1,14 +1,14 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/42130990.5bea074c.200x200o.fa6c160cb5db.jpeg",
     "player_id": 42130990,
-    "@id": "https://api.chess.com/pub/player/jooonaaas1996",
-    "url": "https://www.chess.com/member/Jooonaaas1996",
+    "@id": "https://api.chess.com/pub/player/jonas_hacker",
+    "url": "https://www.chess.com/member/Jonas_Hacker",
     "name": "Jonas Hacker",
-    "username": "jooonaaas1996",
+    "username": "jonas_hacker",
     "title": "IM",
-    "followers": 98,
+    "followers": 101,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734001671,
+    "last_online": 1741695596,
     "joined": 1515442836,
     "status": "premium",
     "is_streamer": false,
@@ -53,26 +53,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2441,
-            "date": 1713913115,
-            "rd": 73
+            "rating": 2506,
+            "date": 1738689673,
+            "rd": 47
         },
         "best": {
-            "rating": 2456,
-            "date": 1693472913,
-            "game": "https://www.chess.com/game/live/84663835901"
+            "rating": 2546,
+            "date": 1736871414,
+            "game": "https://www.chess.com/game/live/130609278283"
         },
         "record": {
-            "win": 422,
-            "loss": 338,
-            "draw": 69
+            "win": 440,
+            "loss": 356,
+            "draw": 77
         }
     },
     "fide": 2469,
     "tactics": {
         "highest": {
-            "rating": 3655,
-            "date": 1730442600
+            "rating": 3679,
+            "date": 1738337010
         },
         "lowest": {
             "rating": 1207,

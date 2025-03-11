@@ -6,9 +6,9 @@
     "name": "Mikko Alava",
     "username": "drmikko",
     "title": "FM",
-    "followers": 255,
+    "followers": 272,
     "country": "https://api.chess.com/pub/country/FI",
-    "last_online": 1734172840,
+    "last_online": 1741672395,
     "joined": 1347651031,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2002,
-            "date": 1734177436,
-            "rd": 22
+            "rating": 2074,
+            "date": 1741699651,
+            "rd": 19
         },
         "best": {
             "rating": 2303,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/41677845185"
         },
         "record": {
-            "win": 53948,
-            "loss": 44886,
-            "draw": 3259
+            "win": 54917,
+            "loss": 45739,
+            "draw": 3317
         }
     },
     "chess_blitz": {

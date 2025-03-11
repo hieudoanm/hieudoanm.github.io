@@ -6,9 +6,9 @@
     "name": "Lucy Wanjiru",
     "username": "vulcan_o",
     "title": "WCM",
-    "followers": 60,
+    "followers": 62,
     "country": "https://api.chess.com/pub/country/KE",
-    "last_online": 1729104531,
+    "last_online": 1741676616,
     "joined": 1594287321,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1234,
-            "date": 1716798607,
+            "date": 1741518200,
             "rd": 177
         },
         "best": {
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1617,
-            "date": 1689950681,
-            "rd": 75
+            "rating": 1667,
+            "date": 1741279825,
+            "rd": 97
         },
         "best": {
             "rating": 1781,
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/31509657311"
         },
         "record": {
-            "win": 97,
-            "loss": 84,
-            "draw": 7
+            "win": 101,
+            "loss": 87,
+            "draw": 8
         }
     },
     "chess_bullet": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1427,
-            "date": 1727130355,
-            "rd": 67
+            "rating": 1455,
+            "date": 1741225422,
+            "rd": 68
         },
         "best": {
             "rating": 1660,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/47130625019"
         },
         "record": {
-            "win": 1057,
-            "loss": 1011,
-            "draw": 117
+            "win": 1064,
+            "loss": 1017,
+            "draw": 118
         }
     },
     "fide": 1623,

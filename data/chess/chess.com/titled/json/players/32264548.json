@@ -5,10 +5,10 @@
     "name": "Carlos Souza",
     "username": "axlbvrr",
     "title": "CM",
-    "followers": 22,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "RR",
-    "last_online": 1734033880,
+    "last_online": 1741551315,
     "joined": 1483984278,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1810,
-            "date": 1733962568,
-            "rd": 23
+            "rating": 1713,
+            "date": 1741552372,
+            "rd": 25
         },
         "best": {
             "rating": 2107,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/57182889199"
         },
         "record": {
-            "win": 2821,
-            "loss": 2689,
-            "draw": 149
+            "win": 3165,
+            "loss": 3029,
+            "draw": 163
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1931,
-            "date": 1734037612,
-            "rd": 27
+            "rating": 1861,
+            "date": 1736640351,
+            "rd": 39
         },
         "best": {
             "rating": 2090,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/113692830341"
         },
         "record": {
-            "win": 2758,
-            "loss": 2705,
-            "draw": 205
+            "win": 2766,
+            "loss": 2720,
+            "draw": 206
         }
     },
     "fide": 2051,

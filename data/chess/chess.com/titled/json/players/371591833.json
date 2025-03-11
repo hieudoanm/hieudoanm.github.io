@@ -1,17 +1,17 @@
 {
     "player_id": 371591833,
-    "@id": "https://api.chess.com/pub/player/alcarez-108",
-    "url": "https://www.chess.com/member/alcarez-108",
-    "username": "alcarez-108",
+    "@id": "https://api.chess.com/pub/player/vinijr1207",
+    "url": "https://www.chess.com/member/vinijr1207",
+    "username": "vinijr1207",
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1731692066,
+    "last_online": 1740567895,
     "joined": 1719212703,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -27,19 +27,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2558,
-            "date": 1730527824,
-            "rd": 30
+            "rating": 2672,
+            "date": 1740568603,
+            "rd": 31
         },
         "best": {
-            "rating": 2677,
-            "date": 1722390989,
+            "rating": 2710,
+            "date": 1739082510,
             "game": "https://www.chess.com/game/live/116129424693"
         },
         "record": {
-            "win": 301,
-            "loss": 341,
-            "draw": 62
+            "win": 413,
+            "loss": 450,
+            "draw": 91
         }
     },
     "tactics": {
@@ -54,8 +54,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 42,
-            "score": 39
+            "total_attempts": 45,
+            "score": 42
         }
     }
 }

@@ -8,7 +8,7 @@
     "title": "IM",
     "followers": 43,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1733185291,
+    "last_online": 1741657881,
     "joined": 1375631463,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2805,
-            "date": 1731556446,
-            "rd": 46
+            "rating": 2812,
+            "date": 1739843667,
+            "rd": 44
         },
         "best": {
             "rating": 2832,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/10956991359"
         },
         "record": {
-            "win": 314,
-            "loss": 317,
-            "draw": 54
+            "win": 331,
+            "loss": 330,
+            "draw": 56
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2711,
-            "date": 1733687987,
-            "rd": 40
+            "rating": 2784,
+            "date": 1741661348,
+            "rd": 36
         },
         "best": {
             "rating": 2800,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/32125878461"
         },
         "record": {
-            "win": 841,
-            "loss": 729,
-            "draw": 119
+            "win": 941,
+            "loss": 817,
+            "draw": 139
         }
     },
     "tactics": {

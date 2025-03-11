@@ -6,10 +6,10 @@
     "name": "Matta Vinaykumar",
     "username": "vkmatta",
     "title": "FM",
-    "followers": 77,
+    "followers": 82,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "hyderabad",
-    "last_online": 1734144445,
+    "last_online": 1741490073,
     "joined": 1519740368,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2411,
-            "date": 1730864012,
-            "rd": 49
+            "date": 1739363359,
+            "rd": 50
         },
         "best": {
             "rating": 2493,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/17682059157"
         },
         "record": {
-            "win": 11,
+            "win": 15,
             "loss": 1,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1899,
-            "date": 1734145532,
-            "rd": 36
+            "rating": 1932,
+            "date": 1740755942,
+            "rd": 45
         },
         "best": {
             "rating": 2321,
@@ -45,15 +45,15 @@
             "game": "https://www.chess.com/game/live/4706273105"
         },
         "record": {
-            "win": 2721,
-            "loss": 2485,
-            "draw": 161
+            "win": 2750,
+            "loss": 2509,
+            "draw": 163
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2480,
-            "date": 1731598082,
+            "date": 1738553562,
             "rd": 72
         },
         "best": {
@@ -70,8 +70,8 @@
     "fide": 2305,
     "tactics": {
         "highest": {
-            "rating": 3008,
-            "date": 1720594584
+            "rating": 3042,
+            "date": 1738387756
         },
         "lowest": {
             "rating": 1212,

@@ -5,9 +5,9 @@
     "name": "Cristian Silva Lucena",
     "username": "colegiodemadrid",
     "title": "FM",
-    "followers": 102,
+    "followers": 104,
     "country": "https://api.chess.com/pub/country/CR",
-    "last_online": 1733695709,
+    "last_online": 1741698045,
     "joined": 1522426980,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1888,
-            "date": 1699402542,
+            "date": 1741700205,
             "rd": 302
         },
         "best": {
@@ -29,7 +29,7 @@
             "win": 4,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 32560,
+            "time_per_move": 31585,
             "timeout_percent": 0
         }
     },
@@ -69,19 +69,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2510,
-            "date": 1733696104,
-            "rd": 48
+            "rating": 2565,
+            "date": 1741650090,
+            "rd": 41
         },
         "best": {
-            "rating": 2593,
-            "date": 1714496310,
+            "rating": 2615,
+            "date": 1737480283,
             "game": "https://www.chess.com/game/live/93111758685"
         },
         "record": {
-            "win": 3711,
-            "loss": 3238,
-            "draw": 461
+            "win": 3776,
+            "loss": 3308,
+            "draw": 468
         }
     },
     "tactics": {
@@ -98,6 +98,10 @@
         "best": {
             "total_attempts": 66,
             "score": 63
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
         }
     }
 }

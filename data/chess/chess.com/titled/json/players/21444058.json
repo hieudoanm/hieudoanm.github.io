@@ -9,7 +9,7 @@
     "followers": 21,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Bologna",
-    "last_online": 1727475552,
+    "last_online": 1739619223,
     "joined": 1425925897,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1065,
-            "date": 1724694334,
+            "date": 1737019713,
             "rd": 264
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2443,
-            "date": 1733521272,
-            "rd": 44
+            "rating": 2361,
+            "date": 1741360052,
+            "rd": 45
         },
         "best": {
             "rating": 2519,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/118509574099"
         },
         "record": {
-            "win": 1134,
-            "loss": 874,
+            "win": 1159,
+            "loss": 909,
             "draw": 98
         }
     },

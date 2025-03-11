@@ -6,10 +6,10 @@
     "name": "Daiana De Leon",
     "username": "daia93",
     "title": "WCM",
-    "followers": 149,
+    "followers": 151,
     "country": "https://api.chess.com/pub/country/UY",
     "location": "J. E. Rodo",
-    "last_online": 1734003805,
+    "last_online": 1740660884,
     "joined": 1354577200,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1525,
-            "date": 1733970185,
-            "rd": 113
+            "rating": 1472,
+            "date": 1741288568,
+            "rd": 112
         },
         "best": {
             "rating": 1525,
@@ -29,17 +29,17 @@
         },
         "record": {
             "win": 27,
-            "loss": 2,
+            "loss": 3,
             "draw": 2,
-            "time_per_move": 39507,
+            "time_per_move": 40423,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1491,
-            "date": 1732059171,
-            "rd": 147
+            "rating": 1428,
+            "date": 1740492376,
+            "rd": 144
         },
         "best": {
             "rating": 1752,
@@ -48,7 +48,7 @@
         },
         "record": {
             "win": 19,
-            "loss": 15,
+            "loss": 16,
             "draw": 7
         }
     },
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1606,
-            "date": 1733092479,
-            "rd": 93
+            "rating": 1613,
+            "date": 1736353495,
+            "rd": 81
         },
         "best": {
             "rating": 1671,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/19618894645"
         },
         "record": {
-            "win": 237,
-            "loss": 209,
+            "win": 241,
+            "loss": 213,
             "draw": 30
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2565,
-            "date": 1732447475
+            "rating": 2702,
+            "date": 1735874027
         },
         "lowest": {
             "rating": 1213,

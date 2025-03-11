@@ -5,9 +5,9 @@
     "name": "Mateus Costamilan Tomiello",
     "username": "peixe64",
     "title": "FM",
-    "followers": 130,
+    "followers": 132,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734149055,
+    "last_online": 1741557034,
     "joined": 1387161109,
     "status": "premium",
     "is_streamer": false,
@@ -69,25 +69,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2420,
-            "date": 1733961779,
-            "rd": 24
+            "rating": 2618,
+            "date": 1741406269,
+            "rd": 27
         },
         "best": {
-            "rating": 2654,
-            "date": 1685409608,
-            "game": "https://www.chess.com/game/live/39896387927"
+            "rating": 2674,
+            "date": 1736892434,
+            "game": "https://www.chess.com/game/live/132982740941"
         },
         "record": {
-            "win": 15025,
-            "loss": 13707,
-            "draw": 1571
+            "win": 15432,
+            "loss": 14068,
+            "draw": 1619
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3006,
-            "date": 1691607396
+            "rating": 3597,
+            "date": 1741483814
         },
         "lowest": {
             "rating": 841,

@@ -5,10 +5,10 @@
     "name": "Vrej Ordian",
     "username": "arlil",
     "title": "FM",
-    "followers": 21,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan",
-    "last_online": 1734156923,
+    "last_online": 1741670837,
     "joined": 1358081093,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2230,
-            "date": 1680969712,
-            "rd": 154
+            "rating": 2225,
+            "date": 1734808887,
+            "rd": 49
         },
         "best": {
             "rating": 2451,
@@ -27,8 +27,8 @@
             "game": "https://www.chess.com/game/live/61924276377"
         },
         "record": {
-            "win": 5,
-            "loss": 4,
+            "win": 6,
+            "loss": 5,
             "draw": 0
         }
     },
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2368,
-            "date": 1734157682,
-            "rd": 28
+            "rating": 2343,
+            "date": 1741603690,
+            "rd": 29
         },
         "best": {
             "rating": 2467,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/56794228387"
         },
         "record": {
-            "win": 6864,
-            "loss": 5649,
-            "draw": 765
+            "win": 7115,
+            "loss": 5864,
+            "draw": 790
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2916,
-            "date": 1721045030
+            "rating": 2975,
+            "date": 1739036862
         },
         "lowest": {
             "rating": 2324,

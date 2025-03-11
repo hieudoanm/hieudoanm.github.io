@@ -8,7 +8,7 @@
     "followers": 20,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Nancy",
-    "last_online": 1733209162,
+    "last_online": 1740502982,
     "joined": 1606081466,
     "status": "premium",
     "is_streamer": false,
@@ -29,26 +29,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2524,
-            "date": 1723920447,
-            "rd": 40
+            "rating": 2424,
+            "date": 1736013103,
+            "rd": 28
         },
         "best": {
             "rating": 2548,
             "date": 1704727488,
-            "game": "https://www.chess.com/game/live/117655790199"
+            "game": "https://www.chess.com/game/live/129149578621"
         },
         "record": {
-            "win": 4373,
-            "loss": 4516,
-            "draw": 772
+            "win": 4432,
+            "loss": 4602,
+            "draw": 786
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2510,
-            "date": 1722978460,
-            "rd": 49
+            "rating": 2504,
+            "date": 1740501653,
+            "rd": 48
         },
         "best": {
             "rating": 2522,
@@ -56,9 +56,9 @@
             "game": "https://www.chess.com/game/live/28142448691"
         },
         "record": {
-            "win": 415,
-            "loss": 340,
-            "draw": 133
+            "win": 416,
+            "loss": 343,
+            "draw": 134
         }
     },
     "fide": 2286,

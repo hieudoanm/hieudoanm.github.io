@@ -5,9 +5,9 @@
     "name": "Bulat Murtazin",
     "username": "argentum049",
     "title": "FM",
-    "followers": 10,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1728884505,
+    "last_online": 1741593183,
     "joined": 1460945065,
     "status": "premium",
     "is_streamer": false,
@@ -50,25 +50,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2507,
-            "date": 1725301518,
-            "rd": 89
+            "rating": 2455,
+            "date": 1741370252,
+            "rd": 54
         },
         "best": {
             "rating": 2573,
             "date": 1703012935,
-            "game": "https://www.chess.com/game/live/98582662977"
+            "game": "https://www.chess.com/game/live/130004428821"
         },
         "record": {
-            "win": 121,
-            "loss": 98,
-            "draw": 11
+            "win": 141,
+            "loss": 122,
+            "draw": 12
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3575,
-            "date": 1708671525
+            "rating": 3605,
+            "date": 1741435840
         },
         "lowest": {
             "rating": 1962,

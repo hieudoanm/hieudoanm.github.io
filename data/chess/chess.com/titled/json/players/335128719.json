@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 3,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733073648,
+    "last_online": 1737304381,
     "joined": 1703726384,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2839,
-            "date": 1723767825,
+            "date": 1737308703,
             "rd": 46
         },
         "best": {

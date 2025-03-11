@@ -5,9 +5,9 @@
     "name": "Rastko Svicevic",
     "username": "svilson23",
     "title": "FM",
-    "followers": 31,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734178476,
+    "last_online": 1741637025,
     "joined": 1326294314,
     "status": "premium",
     "is_streamer": false,
@@ -69,19 +69,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2181,
-            "date": 1734179016,
-            "rd": 45
+            "rating": 2300,
+            "date": 1741637806,
+            "rd": 34
         },
         "best": {
-            "rating": 2393,
-            "date": 1601506431,
+            "rating": 2424,
+            "date": 1737753724,
             "game": "https://www.chess.com/game/live/41722278317"
         },
         "record": {
-            "win": 3306,
-            "loss": 4159,
-            "draw": 481
+            "win": 3448,
+            "loss": 4311,
+            "draw": 501
         }
     },
     "tactics": {

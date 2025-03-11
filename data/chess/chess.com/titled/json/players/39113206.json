@@ -6,10 +6,10 @@
     "name": "\u0418\u0433\u043e\u0440\u044c \u041a\u043d\u044f\u0437\u0435\u0432",
     "username": "igorknyazev",
     "title": "FM",
-    "followers": 20,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u041d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u044b\u0435 \u0427\u0435\u043b\u043d\u044b",
-    "last_online": 1730229559,
+    "last_online": 1741370005,
     "joined": 1506944370,
     "status": "premium",
     "is_streamer": false,
@@ -72,7 +72,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2283,
-            "date": 1724794014,
+            "date": 1741370433,
             "rd": 53
         },
         "best": {

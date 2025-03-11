@@ -6,9 +6,9 @@
     "name": "Vlad Tomescu",
     "username": "tomescuv",
     "title": "IM",
-    "followers": 135,
+    "followers": 146,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1734098199,
+    "last_online": 1741686460,
     "joined": 1569306839,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2341,
-            "date": 1731659266,
+            "rating": 2293,
+            "date": 1741594048,
             "rd": 49
         },
         "best": {
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/73164854029"
         },
         "record": {
-            "win": 37,
-            "loss": 10,
+            "win": 62,
+            "loss": 17,
             "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2495,
-            "date": 1733416518,
-            "rd": 29
+            "rating": 2506,
+            "date": 1741439514,
+            "rd": 49
         },
         "best": {
             "rating": 2581,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/37648303965"
         },
         "record": {
-            "win": 7680,
-            "loss": 6208,
-            "draw": 1654
+            "win": 7693,
+            "loss": 6214,
+            "draw": 1657
         }
     },
     "fide": 0,

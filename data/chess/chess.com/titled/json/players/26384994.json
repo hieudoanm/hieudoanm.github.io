@@ -6,10 +6,10 @@
     "name": "Watu Kobese",
     "username": "umngqusho",
     "title": "IM",
-    "followers": 133,
+    "followers": 135,
     "country": "https://api.chess.com/pub/country/ZA",
     "location": "Cape town",
-    "last_online": 1733496990,
+    "last_online": 1740767668,
     "joined": 1453981729,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2047,
-            "date": 1603031592,
-            "rd": 168
+            "rating": 2032,
+            "date": 1738878467,
+            "rd": 47
         },
         "best": {
             "rating": 2160,
@@ -47,25 +47,25 @@
             "game": "https://www.chess.com/game/live/5600009202"
         },
         "record": {
-            "win": 8,
-            "loss": 2,
-            "draw": 2
+            "win": 10,
+            "loss": 8,
+            "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2625,
-            "date": 1733469092,
-            "rd": 28
+            "rating": 2633,
+            "date": 1740733679,
+            "rd": 49
         },
         "best": {
-            "rating": 2633,
-            "date": 1733468961,
+            "rating": 2638,
+            "date": 1738606666,
             "game": "https://www.chess.com/game/live/57581360903"
         },
         "record": {
             "win": 12671,
-            "loss": 13342,
+            "loss": 13344,
             "draw": 920
         }
     },

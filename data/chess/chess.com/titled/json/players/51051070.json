@@ -6,9 +6,9 @@
     "name": "Igor Saric",
     "username": "igor0073",
     "title": "FM",
-    "followers": 106,
+    "followers": 110,
     "country": "https://api.chess.com/pub/country/ME",
-    "last_online": 1734035861,
+    "last_online": 1740855468,
     "joined": 1540292821,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2450,
-            "date": 1734183570,
-            "rd": 23
+            "rating": 2383,
+            "date": 1741646143,
+            "rd": 25
         },
         "best": {
             "rating": 2590,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/89920852709"
         },
         "record": {
-            "win": 5716,
-            "loss": 5123,
-            "draw": 622
+            "win": 6175,
+            "loss": 5561,
+            "draw": 678
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2526,
-            "date": 1734034542,
-            "rd": 32
+            "rating": 2536,
+            "date": 1741703795,
+            "rd": 40
         },
         "best": {
             "rating": 2689,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/109759257883"
         },
         "record": {
-            "win": 3731,
-            "loss": 3381,
-            "draw": 702
+            "win": 3801,
+            "loss": 3445,
+            "draw": 718
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3321,
-            "date": 1733693412
+            "rating": 3369,
+            "date": 1734263289
         },
         "lowest": {
             "rating": 1200,

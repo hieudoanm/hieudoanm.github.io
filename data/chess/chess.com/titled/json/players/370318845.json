@@ -6,47 +6,47 @@
     "name": "Yilin Li",
     "username": "thecatdoglady",
     "title": "WFM",
-    "followers": 18,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1734129070,
+    "last_online": 1741687838,
     "joined": 1718650973,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2024,
-            "date": 1720206142,
-            "rd": 49
+            "rating": 2042,
+            "date": 1740089270,
+            "rd": 47
         },
         "best": {
-            "rating": 2039,
-            "date": 1720026591,
-            "game": "https://www.chess.com/game/live/113764761961"
+            "rating": 2042,
+            "date": 1739733509,
+            "game": "https://www.chess.com/game/live/133471168455"
         },
         "record": {
-            "win": 1,
-            "loss": 2,
-            "draw": 0
+            "win": 4,
+            "loss": 5,
+            "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1869,
-            "date": 1731433353,
-            "rd": 49
+            "rating": 2035,
+            "date": 1741569757,
+            "rd": 30
         },
         "best": {
             "rating": 2191,
             "date": 1723493798,
-            "game": "https://www.chess.com/game/live/117231630127"
+            "game": "https://www.chess.com/game/live/133379354425"
         },
         "record": {
-            "win": 333,
-            "loss": 325,
-            "draw": 39
+            "win": 438,
+            "loss": 457,
+            "draw": 57
         }
     },
     "chess_blitz": {
@@ -69,8 +69,8 @@
     "fide": 1919,
     "tactics": {
         "highest": {
-            "rating": 3236,
-            "date": 1723589127
+            "rating": 3305,
+            "date": 1738111534
         },
         "lowest": {
             "rating": 400,
@@ -81,10 +81,6 @@
         "best": {
             "total_attempts": 51,
             "score": 48
-        },
-        "daily": {
-            "total_attempts": 38,
-            "score": 35
         }
     }
 }

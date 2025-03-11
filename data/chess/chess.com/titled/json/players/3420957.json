@@ -6,10 +6,10 @@
     "name": "Azahari Aliuddin",
     "username": "dindiamond",
     "title": "FM",
-    "followers": 182,
+    "followers": 185,
     "country": "https://api.chess.com/pub/country/BN",
     "location": "Bandar Seri Begawan, Brunei",
-    "last_online": 1734156956,
+    "last_online": 1739843989,
     "joined": 1269768490,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2232,
-            "date": 1728972563,
-            "rd": 141
+            "rating": 2204,
+            "date": 1734401020,
+            "rd": 139
         },
         "best": {
             "rating": 2232,
@@ -83,7 +83,7 @@
         "record": {
             "win": 280,
             "loss": 116,
-            "draw": 32
+            "draw": 33
         }
     },
     "tactics": {

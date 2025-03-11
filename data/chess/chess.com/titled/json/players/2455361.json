@@ -6,10 +6,10 @@
     "name": "Mikhail Pesotskiy",
     "username": "dennisodessa",
     "title": "FM",
-    "followers": 86,
+    "followers": 88,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Moscow",
-    "last_online": 1733084045,
+    "last_online": 1741103973,
     "joined": 1263203348,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2512,
-            "date": 1718916465,
-            "rd": 42
+            "rating": 2522,
+            "date": 1738450910,
+            "rd": 49
         },
         "best": {
             "rating": 2562,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/110827938835"
         },
         "record": {
-            "win": 222,
-            "loss": 191,
-            "draw": 27
+            "win": 225,
+            "loss": 193,
+            "draw": 28
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2605,
-            "date": 1733992516,
-            "rd": 40
+            "rating": 2675,
+            "date": 1741390587,
+            "rd": 32
         },
         "best": {
-            "rating": 2756,
-            "date": 1718924073,
-            "game": "https://www.chess.com/game/live/99765196077"
+            "rating": 2804,
+            "date": 1739916377,
+            "game": "https://www.chess.com/game/live/132788404859"
         },
         "record": {
-            "win": 2963,
-            "loss": 2867,
-            "draw": 568
+            "win": 3156,
+            "loss": 3055,
+            "draw": 618
         }
     },
     "tactics": {
@@ -98,7 +98,7 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
+            "total_attempts": 43,
             "score": 41
         }
     }

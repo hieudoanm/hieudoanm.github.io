@@ -6,18 +6,18 @@
     "title": "WCM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1728744485,
+    "last_online": 1741697452,
     "joined": 1722412720,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 1920,
-            "date": 1728745594,
-            "rd": 144
+            "rating": 1769,
+            "date": 1741434715,
+            "rd": 56
         },
         "best": {
             "rating": 1970,
@@ -25,9 +25,9 @@
             "game": "https://www.chess.com/game/live/122483642329"
         },
         "record": {
-            "win": 3,
-            "loss": 2,
-            "draw": 0
+            "win": 15,
+            "loss": 25,
+            "draw": 1
         }
     },
     "tactics": {

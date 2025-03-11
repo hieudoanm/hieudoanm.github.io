@@ -9,7 +9,7 @@
     "followers": 130,
     "country": "https://api.chess.com/pub/country/XX",
     "location": "Villa Clara",
-    "last_online": 1734066359,
+    "last_online": 1738785798,
     "joined": 1559495487,
     "status": "premium",
     "is_streamer": false,
@@ -53,8 +53,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2205,
-            "date": 1732384709,
-            "rd": 42
+            "date": 1736675884,
+            "rd": 57
         },
         "best": {
             "rating": 2339,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/105572936917"
         },
         "record": {
-            "win": 9907,
-            "loss": 9094,
+            "win": 9908,
+            "loss": 9095,
             "draw": 1936
         }
     },

@@ -6,10 +6,10 @@
     "name": "Jarod Bryan",
     "username": "mainemanfm",
     "title": "FM",
-    "followers": 110,
+    "followers": 114,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Maine",
-    "last_online": 1734160715,
+    "last_online": 1741662921,
     "joined": 1648774967,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2096,
-            "date": 1726921741,
-            "rd": 117
+            "rating": 2114,
+            "date": 1741638442,
+            "rd": 132
         },
         "best": {
-            "rating": 2096,
-            "date": 1726921741,
+            "rating": 2114,
+            "date": 1741237498,
             "game": "https://www.chess.com/game/daily/467849105"
         },
         "record": {
-            "win": 51,
+            "win": 52,
             "loss": 2,
             "draw": 2,
-            "time_per_move": 62077,
+            "time_per_move": 63030,
             "timeout_percent": 0
         }
     },
@@ -50,15 +50,15 @@
             "win": 72,
             "loss": 1,
             "draw": 5,
-            "time_per_move": 62077,
+            "time_per_move": 63030,
             "timeout_percent": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2088,
-            "date": 1734157654,
-            "rd": 29
+            "rating": 1848,
+            "date": 1740121440,
+            "rd": 34
         },
         "best": {
             "rating": 2175,
@@ -66,15 +66,15 @@
             "game": "https://www.chess.com/game/live/122095167691"
         },
         "record": {
-            "win": 5554,
-            "loss": 3529,
-            "draw": 459
+            "win": 5725,
+            "loss": 3653,
+            "draw": 468
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2102,
-            "date": 1732946092,
+            "date": 1741664651,
             "rd": 92
         },
         "best": {

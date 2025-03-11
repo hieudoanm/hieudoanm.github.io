@@ -5,10 +5,10 @@
     "name": "Cailin Chetty",
     "username": "cailinchetty",
     "title": "FM",
-    "followers": 23,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/ZA",
     "location": "Cape Town",
-    "last_online": 1727965543,
+    "last_online": 1737373543,
     "joined": 1466506026,
     "status": "premium",
     "is_streamer": false,
@@ -31,9 +31,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2272,
-            "date": 1687628994,
-            "rd": 86
+            "rating": 2256,
+            "date": 1740747083,
+            "rd": 49
         },
         "best": {
             "rating": 2272,
@@ -41,8 +41,8 @@
             "game": "https://www.chess.com/game/live/61222186651"
         },
         "record": {
-            "win": 29,
-            "loss": 25,
+            "win": 31,
+            "loss": 26,
             "draw": 4
         }
     },
@@ -82,8 +82,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2946,
-            "date": 1727965745
+            "rating": 3052,
+            "date": 1737879238
         },
         "lowest": {
             "rating": 1802,

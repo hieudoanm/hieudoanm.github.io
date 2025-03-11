@@ -6,20 +6,20 @@
     "name": "Daniel Kozusek",
     "username": "chesss1r",
     "title": "FM",
-    "followers": 1098,
+    "followers": 1106,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "Cardiff",
-    "last_online": 1734102781,
+    "last_online": 1741687150,
     "joined": 1563472333,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 2014,
-            "date": 1706174947,
+            "date": 1738597256,
             "rd": 342
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 4,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 26222,
+            "time_per_move": 28544,
             "timeout_percent": 0
         }
     },
@@ -71,8 +71,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2580,
-            "date": 1733757141,
+            "rating": 2551,
+            "date": 1741492786,
             "rd": 47
         },
         "best": {
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/120351630155"
         },
         "record": {
-            "win": 2127,
-            "loss": 1784,
+            "win": 2129,
+            "loss": 1789,
             "draw": 292
         }
     },

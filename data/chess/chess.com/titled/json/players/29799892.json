@@ -9,7 +9,7 @@
     "followers": 42,
     "country": "https://api.chess.com/pub/country/GE",
     "location": "Tbilisi",
-    "last_online": 1734111738,
+    "last_online": 1740157257,
     "joined": 1473111732,
     "status": "premium",
     "is_streamer": false,
@@ -50,7 +50,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2448,
-            "date": 1692602016,
+            "date": 1737137620,
             "rd": 59
         },
         "best": {
@@ -67,7 +67,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2646,
-            "date": 1734112031,
+            "date": 1740157844,
             "rd": 204
         },
         "best": {

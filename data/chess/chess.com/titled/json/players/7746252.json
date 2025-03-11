@@ -6,10 +6,10 @@
     "name": "Kassa Korley",
     "username": "kassablanca",
     "title": "IM",
-    "followers": 241,
+    "followers": 250,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York City",
-    "last_online": 1734108866,
+    "last_online": 1741356041,
     "joined": 1338488056,
     "status": "staff",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2608,
-            "date": 1733429254,
-            "rd": 49
+            "rating": 2604,
+            "date": 1734636423,
+            "rd": 48
         },
         "best": {
             "rating": 2622,
@@ -64,8 +64,8 @@
             "game": "https://www.chess.com/game/live/1896040163"
         },
         "record": {
-            "win": 178,
-            "loss": 144,
+            "win": 181,
+            "loss": 145,
             "draw": 13
         }
     },

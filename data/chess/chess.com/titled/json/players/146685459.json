@@ -7,7 +7,7 @@
     "title": "WCM",
     "followers": 2,
     "country": "https://api.chess.com/pub/country/KG",
-    "last_online": 1733318123,
+    "last_online": 1740197827,
     "joined": 1625319532,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     "fide": 1804,
     "tactics": {
         "highest": {
-            "rating": 2890,
-            "date": 1723996854
+            "rating": 2913,
+            "date": 1736870559
         },
         "lowest": {
             "rating": 410,

@@ -5,14 +5,14 @@
     "name": "Ingemars Jesse",
     "username": "jesse_james1989",
     "title": "FM",
-    "followers": 16,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/LV",
-    "last_online": 1733396254,
+    "last_online": 1739894884,
     "joined": 1272840784,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -50,19 +50,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2558,
-            "date": 1732529187,
-            "rd": 47
+            "rating": 2648,
+            "date": 1739442813,
+            "rd": 31
         },
         "best": {
-            "rating": 2676,
-            "date": 1598170187,
-            "game": "https://www.chess.com/game/live/5337639099"
+            "rating": 2683,
+            "date": 1739390243,
+            "game": "https://www.chess.com/game/live/132831017053"
         },
         "record": {
-            "win": 1399,
-            "loss": 1236,
-            "draw": 344
+            "win": 1482,
+            "loss": 1312,
+            "draw": 368
         }
     },
     "tactics": {

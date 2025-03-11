@@ -5,9 +5,9 @@
     "name": "\u0411\u043e\u0433\u0434\u0430\u043d",
     "username": "gbg10",
     "title": "FM",
-    "followers": 37,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734177431,
+    "last_online": 1740135627,
     "joined": 1514455376,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1541,
-            "date": 1720416727,
+            "date": 1736755484,
             "rd": 111
         },
         "best": {
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2060,
-            "date": 1734164151,
+            "date": 1740390043,
             "rd": 261
         },
         "best": {
@@ -53,7 +53,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2474,
-            "date": 1729573706,
+            "date": 1741164287,
             "rd": 44
         },
         "best": {
@@ -69,19 +69,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2602,
-            "date": 1734184654,
+            "rating": 2557,
+            "date": 1741696706,
             "rd": 24
         },
         "best": {
-            "rating": 2661,
-            "date": 1733781867,
+            "rating": 2669,
+            "date": 1738439362,
             "game": "https://www.chess.com/game/live/99854632039"
         },
         "record": {
-            "win": 2839,
-            "loss": 2982,
-            "draw": 481
+            "win": 3171,
+            "loss": 3342,
+            "draw": 536
         }
     },
     "fide": 0,

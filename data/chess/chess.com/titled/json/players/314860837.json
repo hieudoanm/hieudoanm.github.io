@@ -6,9 +6,9 @@
     "name": "Daniil Plyasunov",
     "username": "luckyswitchback",
     "title": "FM",
-    "followers": 4,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733997001,
+    "last_online": 1741701183,
     "joined": 1695475812,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2807,
-            "date": 1733637541,
-            "rd": 30
+            "rating": 2809,
+            "date": 1739120264,
+            "rd": 34
         },
         "best": {
             "rating": 2910,
@@ -27,33 +27,33 @@
             "game": "https://www.chess.com/game/live/127332037719"
         },
         "record": {
-            "win": 295,
-            "loss": 204,
-            "draw": 40
+            "win": 354,
+            "loss": 228,
+            "draw": 42
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2807,
-            "date": 1734000251,
-            "rd": 35
+            "rating": 2856,
+            "date": 1741703257,
+            "rd": 29
         },
         "best": {
-            "rating": 2870,
-            "date": 1718731261,
+            "rating": 2909,
+            "date": 1739291285,
             "game": "https://www.chess.com/game/live/90688872475"
         },
         "record": {
-            "win": 610,
-            "loss": 536,
-            "draw": 151
+            "win": 883,
+            "loss": 821,
+            "draw": 230
         }
     },
     "fide": 2300,
     "tactics": {
         "highest": {
-            "rating": 2400,
-            "date": 1696914046
+            "rating": 3201,
+            "date": 1740142251
         },
         "lowest": {
             "rating": 1000,
@@ -62,8 +62,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 56,
-            "score": 53
+            "total_attempts": 58,
+            "score": 55
+        },
+        "daily": {
+            "total_attempts": 37,
+            "score": 35
         }
     }
 }

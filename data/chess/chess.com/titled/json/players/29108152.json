@@ -6,9 +6,9 @@
     "name": "Alex Huang",
     "username": "dracomaniac",
     "title": "CM",
-    "followers": 420,
+    "followers": 427,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734164110,
+    "last_online": 1741677446,
     "joined": 1468812738,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1834,
-            "date": 1734183830,
-            "rd": 50
+            "rating": 1806,
+            "date": 1736069620,
+            "rd": 52
         },
         "best": {
             "rating": 2094,
@@ -27,17 +27,11 @@
             "game": "https://www.chess.com/game/daily/191875618"
         },
         "record": {
-            "win": 1967,
-            "loss": 1252,
+            "win": 1970,
+            "loss": 1259,
             "draw": 158,
-            "time_per_move": 52073,
+            "time_per_move": 52052,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 196,
-            "withdraw": 184,
-            "count": 32,
-            "highest_finish": 1
         }
     },
     "chess960_daily": {
@@ -55,14 +49,8 @@
             "win": 42,
             "loss": 30,
             "draw": 4,
-            "time_per_move": 52073,
+            "time_per_move": 52052,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 196,
-            "withdraw": 184,
-            "count": 32,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
@@ -84,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2308,
-            "date": 1731020775,
-            "rd": 35
+            "rating": 2305,
+            "date": 1736070151,
+            "rd": 54
         },
         "best": {
             "rating": 2417,
@@ -94,8 +82,8 @@
             "game": "https://www.chess.com/game/live/124499361921"
         },
         "record": {
-            "win": 268,
-            "loss": 211,
+            "win": 270,
+            "loss": 213,
             "draw": 39
         }
     },
@@ -118,8 +106,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3373,
-            "date": 1724998249
+            "rating": 3409,
+            "date": 1739837803
         },
         "lowest": {
             "rating": 1991,
@@ -130,6 +118,10 @@
         "best": {
             "total_attempts": 63,
             "score": 60
+        },
+        "daily": {
+            "total_attempts": 52,
+            "score": 49
         }
     }
 }

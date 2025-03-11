@@ -6,10 +6,10 @@
     "name": "Inguh Kim",
     "username": "backtothebeginning",
     "title": "CM",
-    "followers": 250,
+    "followers": 254,
     "country": "https://api.chess.com/pub/country/KR",
     "location": "Seoul",
-    "last_online": 1734160871,
+    "last_online": 1741692762,
     "joined": 1398152484,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1918,
-            "date": 1734178128,
-            "rd": 27
+            "rating": 1915,
+            "date": 1741694489,
+            "rd": 23
         },
         "best": {
             "rating": 2268,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/49635039489"
         },
         "record": {
-            "win": 4163,
-            "loss": 4032,
-            "draw": 559
+            "win": 4956,
+            "loss": 4842,
+            "draw": 683
         }
     },
     "chess_blitz": {

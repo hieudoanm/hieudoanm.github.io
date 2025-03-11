@@ -5,7 +5,7 @@
     "url": "https://www.chess.com/member/lilyofthefield",
     "username": "lilyofthefield",
     "title": "WCM",
-    "followers": 2181,
+    "followers": 2175,
     "country": "https://api.chess.com/pub/country/BR",
     "last_online": 1730076941,
     "joined": 1422232348,
@@ -88,9 +88,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1925,
-            "date": 1733886165,
-            "rd": 72
+            "rating": 1947,
+            "date": 1738969087,
+            "rd": 82
         },
         "best": {
             "rating": 2110,
@@ -98,7 +98,7 @@
             "game": "https://www.chess.com/game/live/20501977315"
         },
         "record": {
-            "win": 1144,
+            "win": 1145,
             "loss": 891,
             "draw": 180
         }

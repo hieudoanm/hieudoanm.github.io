@@ -6,10 +6,10 @@
     "name": "Ismael Khadour",
     "username": "ismael-khadour",
     "title": "FM",
-    "followers": 43,
+    "followers": 46,
     "country": "https://api.chess.com/pub/country/SY",
     "location": "UAE",
-    "last_online": 1734086536,
+    "last_online": 1741686769,
     "joined": 1587651566,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2000,
-            "date": 1729288133,
+            "date": 1739470055,
             "rd": 350
         },
         "record": {
@@ -32,8 +32,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2262,
-            "date": 1733390123,
+            "rating": 2246,
+            "date": 1741024675,
             "rd": 49
         },
         "best": {
@@ -43,15 +43,15 @@
         },
         "record": {
             "win": 9,
-            "loss": 4,
+            "loss": 5,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2239,
-            "date": 1734087393,
-            "rd": 36
+            "rating": 2109,
+            "date": 1740823116,
+            "rd": 51
         },
         "best": {
             "rating": 2269,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/123929382867"
         },
         "record": {
-            "win": 970,
-            "loss": 882,
-            "draw": 53
+            "win": 991,
+            "loss": 924,
+            "draw": 55
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2313,
-            "date": 1731832211,
-            "rd": 55
+            "rating": 2178,
+            "date": 1741674751,
+            "rd": 54
         },
         "best": {
             "rating": 2338,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/124833569261"
         },
         "record": {
-            "win": 188,
-            "loss": 131,
-            "draw": 17
+            "win": 196,
+            "loss": 153,
+            "draw": 18
         }
     },
     "fide": 2008,

@@ -4,10 +4,10 @@
     "@id": "https://api.chess.com/pub/player/f4sterthanyou",
     "url": "https://www.chess.com/member/F4sterThanYou",
     "username": "f4sterthanyou",
-    "title": "FM",
+    "title": "IM",
     "followers": 26,
     "country": "https://api.chess.com/pub/country/BS",
-    "last_online": 1731870443,
+    "last_online": 1740730921,
     "joined": 1609274098,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2780,
-            "date": 1731871208,
-            "rd": 49
+            "rating": 2804,
+            "date": 1740732559,
+            "rd": 48
         },
         "best": {
             "rating": 2784,
@@ -60,7 +60,7 @@
             "game": "https://www.chess.com/game/live/63022138411"
         },
         "record": {
-            "win": 166,
+            "win": 170,
             "loss": 95,
             "draw": 26
         }

@@ -6,10 +6,10 @@
     "name": "Kirill Shcherbinin",
     "username": "kirillgenius",
     "title": "CM",
-    "followers": 879,
+    "followers": 886,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Moscow",
-    "last_online": 1734100887,
+    "last_online": 1741000992,
     "joined": 1301302036,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2161,
-            "date": 1730457155,
-            "rd": 69
+            "rating": 2171,
+            "date": 1741667576,
+            "rd": 93
         },
         "best": {
             "rating": 2220,
@@ -28,17 +28,11 @@
             "game": "https://www.chess.com/game/daily/119337246"
         },
         "record": {
-            "win": 3373,
+            "win": 3377,
             "loss": 564,
             "draw": 785,
             "time_per_move": 21449,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 241,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess960_daily": {
@@ -58,12 +52,6 @@
             "draw": 29,
             "time_per_move": 21449,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 241,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
@@ -85,8 +73,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2505,
-            "date": 1730975903,
+            "rating": 2509,
+            "date": 1741015200,
             "rd": 49
         },
         "best": {
@@ -95,7 +83,7 @@
             "game": "https://www.chess.com/game/live/35795229115"
         },
         "record": {
-            "win": 7605,
+            "win": 7618,
             "loss": 5427,
             "draw": 607
         }

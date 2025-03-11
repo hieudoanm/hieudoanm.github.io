@@ -6,9 +6,9 @@
     "name": "Conrad Thake",
     "username": "cthake",
     "title": "CM",
-    "followers": 50,
+    "followers": 54,
     "country": "https://api.chess.com/pub/country/MT",
-    "last_online": 1734004089,
+    "last_online": 1741628736,
     "joined": 1375735625,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1842,
-            "date": 1731446403,
-            "rd": 75
+            "date": 1739138251
         },
         "best": {
             "rating": 1916,
@@ -47,15 +46,15 @@
         },
         "record": {
             "win": 123,
-            "loss": 71,
+            "loss": 72,
             "draw": 40
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1828,
-            "date": 1733831516,
-            "rd": 36
+            "rating": 1727,
+            "date": 1741629227,
+            "rd": 29
         },
         "best": {
             "rating": 1992,
@@ -63,16 +62,16 @@
             "game": "https://www.chess.com/game/live/114907153959"
         },
         "record": {
-            "win": 1068,
-            "loss": 1325,
-            "draw": 238
+            "win": 1232,
+            "loss": 1542,
+            "draw": 276
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2675,
-            "date": 1727033572
+            "rating": 2748,
+            "date": 1737064624
         },
         "lowest": {
             "rating": 1295,

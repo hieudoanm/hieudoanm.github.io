@@ -2,11 +2,12 @@
     "player_id": 22743716,
     "@id": "https://api.chess.com/pub/player/david_alex",
     "url": "https://www.chess.com/member/david_alex",
+    "name": "David-Alexandru Botea",
     "username": "david_alex",
     "title": "CM",
     "followers": 34,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1734164445,
+    "last_online": 1741694786,
     "joined": 1433828659,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1628,
-            "date": 1695240967,
+            "date": 1736274524,
             "rd": 81
         },
         "best": {
@@ -54,7 +55,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2155,
-            "date": 1729247510,
+            "date": 1738442040,
             "rd": 49
         },
         "best": {
@@ -63,7 +64,7 @@
             "game": "https://www.chess.com/game/live/29240401059"
         },
         "record": {
-            "win": 94,
+            "win": 96,
             "loss": 59,
             "draw": 16
         }
@@ -87,19 +88,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2357,
-            "date": 1726049435,
-            "rd": 112
+            "rating": 2409,
+            "date": 1739083966,
+            "rd": 62
         },
         "best": {
-            "rating": 2384,
-            "date": 1702398409,
+            "rating": 2468,
+            "date": 1737817216,
             "game": "https://www.chess.com/game/live/96137052475"
         },
         "record": {
-            "win": 849,
-            "loss": 705,
-            "draw": 108
+            "win": 865,
+            "loss": 720,
+            "draw": 111
         }
     },
     "tactics": {
@@ -114,8 +115,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 64,
-            "score": 61
+            "total_attempts": 68,
+            "score": 65
         }
     }
 }

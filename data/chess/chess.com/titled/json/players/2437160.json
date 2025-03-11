@@ -6,10 +6,10 @@
     "name": "Persson Abrantes",
     "username": "cm_perligero",
     "title": "CM",
-    "followers": 146,
+    "followers": 147,
     "country": "https://api.chess.com/pub/country/MZ",
     "location": "Beira",
-    "last_online": 1731692275,
+    "last_online": 1738851594,
     "joined": 1197748544,
     "status": "premium",
     "is_streamer": false,
@@ -68,9 +68,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1527,
-            "date": 1731697556,
-            "rd": 62
+            "rating": 1565,
+            "date": 1737981982,
+            "rd": 61
         },
         "best": {
             "rating": 2121,
@@ -78,8 +78,8 @@
             "game": "https://www.chess.com/game/live/2313837842"
         },
         "record": {
-            "win": 3888,
-            "loss": 4252,
+            "win": 3898,
+            "loss": 4259,
             "draw": 89
         }
     },

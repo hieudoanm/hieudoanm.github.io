@@ -6,10 +6,10 @@
     "name": "Luis Torres",
     "username": "ltorresr",
     "title": "IM",
-    "followers": 279,
+    "followers": 287,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Lubbock, TX",
-    "last_online": 1733646734,
+    "last_online": 1741642842,
     "joined": 1330226217,
     "status": "premium",
     "is_streamer": false,
@@ -19,14 +19,14 @@
     "chess_daily": {
         "last": {
             "rating": 400,
-            "date": 1732637957,
+            "date": 1740436573,
             "rd": 350
         },
         "record": {
             "win": 0,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 122597,
+            "time_per_move": 187693,
             "timeout_percent": 0
         }
     },
@@ -67,7 +67,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2701,
-            "date": 1726529933,
+            "date": 1741643878,
             "rd": 33
         },
         "best": {

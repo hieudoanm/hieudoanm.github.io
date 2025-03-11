@@ -14,5 +14,17 @@
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "streaming_platforms": []
+    "streaming_platforms": [],
+    "fide": 2288,
+    "tactics": {
+        "highest": {
+            "rating": 400,
+            "date": 1346214421
+        },
+        "lowest": {
+            "rating": 400,
+            "date": 1346214421
+        }
+    },
+    "puzzle_rush": {}
 }

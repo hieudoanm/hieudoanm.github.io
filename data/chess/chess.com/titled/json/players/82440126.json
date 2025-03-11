@@ -6,10 +6,10 @@
     "name": "Anderson Esmeraldas",
     "username": "esmeraldasanderson03",
     "title": "FM",
-    "followers": 72,
+    "followers": 77,
     "country": "https://api.chess.com/pub/country/EC",
     "location": "Sucumbios",
-    "last_online": 1734154710,
+    "last_online": 1741692378,
     "joined": 1592005048,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2549,
-            "date": 1733597879,
-            "rd": 30
+            "rating": 2569,
+            "date": 1739039689,
+            "rd": 32
         },
         "best": {
             "rating": 2710,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/126729607589"
         },
         "record": {
-            "win": 1102,
-            "loss": 1027,
-            "draw": 123
+            "win": 1165,
+            "loss": 1090,
+            "draw": 130
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1733869764,
-            "rd": 48
+            "rating": 2517,
+            "date": 1741650617,
+            "rd": 42
         },
         "best": {
             "rating": 2612,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/87085813229"
         },
         "record": {
-            "win": 1220,
-            "loss": 916,
-            "draw": 176
+            "win": 1264,
+            "loss": 958,
+            "draw": 183
         }
     },
     "fide": 2148,

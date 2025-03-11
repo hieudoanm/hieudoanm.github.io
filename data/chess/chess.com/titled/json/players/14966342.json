@@ -6,15 +6,15 @@
     "name": "Jonathan Carlstedt",
     "username": "imjonathancarlstedt",
     "title": "IM",
-    "followers": 62,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Bremen",
-    "last_online": 1733852876,
+    "last_online": 1741611703,
     "joined": 1386716209,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,25 +35,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2462,
-            "date": 1608408883,
-            "rd": 54
+            "rating": 2327,
+            "date": 1737226703,
+            "rd": 52
         },
         "best": {
             "rating": 2479,
             "date": 1608408482,
-            "game": "https://www.chess.com/game/live/6007951905"
+            "game": "https://www.chess.com/game/live/130965030863"
         },
         "record": {
-            "win": 31,
-            "loss": 32,
-            "draw": 4
+            "win": 52,
+            "loss": 74,
+            "draw": 8
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2554,
-            "date": 1731192112,
+            "rating": 2552,
+            "date": 1738449667,
             "rd": 49
         },
         "best": {
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/117323453579"
         },
         "record": {
-            "win": 299,
-            "loss": 223,
+            "win": 301,
+            "loss": 225,
             "draw": 52
         }
     },

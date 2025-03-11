@@ -6,10 +6,10 @@
     "name": "Darvi Abraham Crispin Ferreras",
     "username": "dacf2905",
     "title": "CM",
-    "followers": 141,
+    "followers": 144,
     "country": "https://api.chess.com/pub/country/DO",
     "location": "Santo Domingo, Dominican Republic",
-    "last_online": 1734015383,
+    "last_online": 1741703679,
     "joined": 1322182946,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1589,
-            "date": 1724875225,
-            "rd": 110
+            "rating": 1502,
+            "date": 1740600189,
+            "rd": 118
         },
         "best": {
             "rating": 2257,
@@ -48,14 +48,14 @@
         },
         "record": {
             "win": 16,
-            "loss": 12,
+            "loss": 14,
             "draw": 13
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2238,
-            "date": 1731634184,
+            "rating": 2276,
+            "date": 1735311764,
             "rd": 45
         },
         "best": {
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/118104574865"
         },
         "record": {
-            "win": 449,
-            "loss": 443,
-            "draw": 56
+            "win": 461,
+            "loss": 452,
+            "draw": 61
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2329,
-            "date": 1720808517,
-            "rd": 34
+            "rating": 2440,
+            "date": 1741133046,
+            "rd": 47
         },
         "best": {
-            "rating": 2450,
-            "date": 1715103097,
-            "game": "https://www.chess.com/game/live/3585766628"
+            "rating": 2472,
+            "date": 1739315860,
+            "game": "https://www.chess.com/game/live/134260151983"
         },
         "record": {
-            "win": 962,
-            "loss": 918,
-            "draw": 138
+            "win": 992,
+            "loss": 960,
+            "draw": 144
         }
     },
     "fide": 2190,

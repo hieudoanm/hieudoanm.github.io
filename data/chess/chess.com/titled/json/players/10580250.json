@@ -6,10 +6,10 @@
     "name": "Jonas Hilwerda",
     "username": "jonashilwerda",
     "title": "FM",
-    "followers": 66,
+    "followers": 73,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Groningen",
-    "last_online": 1734144099,
+    "last_online": 1741699778,
     "joined": 1359202669,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2313,
-            "date": 1680124714,
-            "rd": 200
+            "rating": 2298,
+            "date": 1737825869,
+            "rd": 203
         },
         "best": {
             "rating": 2420,
@@ -85,22 +85,22 @@
         "record": {
             "win": 550,
             "loss": 237,
-            "draw": 29
+            "draw": 30
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2221,
-            "date": 1732357442,
-            "rd": 144
+            "rating": 2310,
+            "date": 1741169743,
+            "rd": 188
         },
         "best": {
-            "rating": 2292,
-            "date": 1573046235,
+            "rating": 2310,
+            "date": 1741169743,
             "game": "https://www.chess.com/game/live/3392668503"
         },
         "record": {
-            "win": 382,
+            "win": 386,
             "loss": 140,
             "draw": 27
         }

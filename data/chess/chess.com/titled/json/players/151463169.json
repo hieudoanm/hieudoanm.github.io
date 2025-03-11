@@ -9,7 +9,7 @@
     "followers": 52,
     "country": "https://api.chess.com/pub/country/CU",
     "location": "Havana",
-    "last_online": 1734023147,
+    "last_online": 1740572950,
     "joined": 1629237033,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2474,
-            "date": 1733851624,
-            "rd": 35
+            "rating": 2429,
+            "date": 1740526679,
+            "rd": 55
         },
         "best": {
             "rating": 2685,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/118256363837"
         },
         "record": {
-            "win": 575,
-            "loss": 739,
-            "draw": 48
+            "win": 588,
+            "loss": 760,
+            "draw": 49
         }
     },
     "chess_blitz": {

@@ -6,10 +6,10 @@
     "name": "Rados\u0142aw Barski",
     "username": "chesterf",
     "title": "IM",
-    "followers": 64,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Chrzan\u00f3w",
-    "last_online": 1733251980,
+    "last_online": 1740753416,
     "joined": 1456858068,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2508,
-            "date": 1719955405,
+            "date": 1740509501,
             "rd": 49
         },
         "best": {
@@ -45,7 +45,7 @@
             "game": "https://www.chess.com/game/live/4726486747"
         },
         "record": {
-            "win": 1055,
+            "win": 1063,
             "loss": 827,
             "draw": 118
         }

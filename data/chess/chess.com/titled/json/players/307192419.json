@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Pavan_Putra_Maruthi",
     "username": "pavan_putra_maruthi",
     "title": "FM",
-    "followers": 146,
+    "followers": 185,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734101733,
+    "last_online": 1741693219,
     "joined": 1692568303,
     "status": "premium",
     "is_streamer": false,
@@ -32,19 +32,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2807,
-            "date": 1734151318,
-            "rd": 29
+            "rating": 2784,
+            "date": 1741486996,
+            "rd": 28
         },
         "best": {
-            "rating": 2810,
-            "date": 1734148283,
-            "game": "https://www.chess.com/game/live/127886389961"
+            "rating": 2870,
+            "date": 1737771725,
+            "game": "https://www.chess.com/game/live/131080755473"
         },
         "record": {
-            "win": 1795,
-            "loss": 1745,
-            "draw": 407
+            "win": 2043,
+            "loss": 1985,
+            "draw": 478
         }
     },
     "tactics": {
@@ -63,8 +63,8 @@
             "score": 67
         },
         "daily": {
-            "total_attempts": 31,
-            "score": 29
+            "total_attempts": 49,
+            "score": 46
         }
     }
 }

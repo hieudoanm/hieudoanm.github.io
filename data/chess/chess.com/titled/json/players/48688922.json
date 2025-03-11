@@ -6,10 +6,10 @@
     "name": "Bui Huy Phuoc",
     "username": "buihuyphuoc",
     "title": "CM",
-    "followers": 1385,
+    "followers": 1394,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Bac Ninh",
-    "last_online": 1729377506,
+    "last_online": 1739715066,
     "joined": 1534039142,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1415,
-            "date": 1716230322,
+            "date": 1740000174,
             "rd": 84
         },
         "best": {
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1535,
-            "date": 1717198626,
-            "rd": 77
+            "rating": 1509,
+            "date": 1739607475,
+            "rd": 73
         },
         "best": {
             "rating": 2572,
@@ -83,8 +83,8 @@
             "game": "https://www.chess.com/game/live/39965979175"
         },
         "record": {
-            "win": 2525,
-            "loss": 2207,
+            "win": 2535,
+            "loss": 2216,
             "draw": 274
         }
     },

@@ -6,10 +6,10 @@
     "name": "Parmen Gelazonia",
     "username": "parmen_gelazonia",
     "title": "FM",
-    "followers": 39,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/GE",
     "location": "Tbilisi",
-    "last_online": 1733377256,
+    "last_online": 1740233636,
     "joined": 1586167864,
     "status": "premium",
     "is_streamer": false,
@@ -35,19 +35,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2629,
-            "date": 1730302041,
-            "rd": 43
+            "rating": 2553,
+            "date": 1735280366,
+            "rd": 41
         },
         "best": {
-            "rating": 2629,
-            "date": 1730302041,
-            "game": "https://www.chess.com/game/live/124041009119"
+            "rating": 2641,
+            "date": 1734717980,
+            "game": "https://www.chess.com/game/live/128458386223"
         },
         "record": {
-            "win": 453,
-            "loss": 294,
-            "draw": 74
+            "win": 463,
+            "loss": 314,
+            "draw": 75
         }
     },
     "chess_blitz": {

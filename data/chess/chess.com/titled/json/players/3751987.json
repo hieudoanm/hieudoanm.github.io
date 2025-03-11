@@ -1,14 +1,13 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/3751987.339adf77.200x200o.cf2f1354d93f.jpg",
     "player_id": 3751987,
     "@id": "https://api.chess.com/pub/player/jamengrand",
     "url": "https://www.chess.com/member/jamengrand",
     "name": "Julien Dubreuil",
     "username": "jamengrand",
     "title": "FM",
-    "followers": 50,
+    "followers": 56,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734182992,
+    "last_online": 1741645133,
     "joined": 1280185256,
     "status": "premium",
     "is_streamer": false,
@@ -70,25 +69,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2287,
-            "date": 1734183608,
-            "rd": 22
+            "rating": 2401,
+            "date": 1741697679,
+            "rd": 19
         },
         "best": {
             "rating": 2520,
             "date": 1709669916,
-            "game": "https://www.chess.com/game/live/102792065395"
+            "game": "https://www.chess.com/game/live/133658348587"
         },
         "record": {
-            "win": 12162,
-            "loss": 11912,
-            "draw": 1143
+            "win": 12823,
+            "loss": 12565,
+            "draw": 1208
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2934,
-            "date": 1731274930
+            "rating": 3047,
+            "date": 1741631631
         },
         "lowest": {
             "rating": 1340,

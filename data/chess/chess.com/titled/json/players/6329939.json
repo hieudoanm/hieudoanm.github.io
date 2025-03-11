@@ -6,10 +6,10 @@
     "name": "Mulenga Prince Daniel",
     "username": "2900tactinhos",
     "title": "FM",
-    "followers": 548,
+    "followers": 576,
     "country": "https://api.chess.com/pub/country/ZM",
     "location": "Ndola",
-    "last_online": 1733922647,
+    "last_online": 1741628907,
     "joined": 1324161798,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2341,
-            "date": 1720625868,
+            "date": 1740929526,
             "rd": 49
         },
         "best": {
@@ -47,7 +47,7 @@
             "game": "https://www.chess.com/game/live/43316347407"
         },
         "record": {
-            "win": 26,
+            "win": 27,
             "loss": 15,
             "draw": 1
         }

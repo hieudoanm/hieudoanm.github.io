@@ -9,7 +9,7 @@
     "followers": 24,
     "country": "https://api.chess.com/pub/country/XE",
     "location": "London",
-    "last_online": 1733867748,
+    "last_online": 1741365507,
     "joined": 1341411467,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2593,
-            "date": 1733871320,
-            "rd": 48
+            "rating": 2563,
+            "date": 1737635965,
+            "rd": 47
         },
         "best": {
             "rating": 2664,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/4266627925"
         },
         "record": {
-            "win": 554,
-            "loss": 528,
-            "draw": 96
+            "win": 567,
+            "loss": 542,
+            "draw": 99
         }
     },
     "fide": 2435,

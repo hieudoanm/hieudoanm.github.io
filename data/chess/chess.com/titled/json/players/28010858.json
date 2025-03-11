@@ -8,7 +8,7 @@
     "followers": 61,
     "country": "https://api.chess.com/pub/country/SI",
     "location": "Kranj",
-    "last_online": 1734095816,
+    "last_online": 1741602090,
     "joined": 1462191683,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2808,
-            "date": 1572772315
+            "rating": 2811,
+            "date": 1737281308
         },
         "lowest": {
             "rating": 1351,

@@ -1,13 +1,13 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/240058805.765987cf.200x200o.3124b8c19683.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/240058805.49a84c9b.200x200o.a070df08ebb3.jpg",
     "player_id": 240058805,
     "@id": "https://api.chess.com/pub/player/queentrapmcc",
     "url": "https://www.chess.com/member/QueentrapMCC",
     "username": "queentrapmcc",
     "title": "FM",
-    "followers": 12,
-    "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734156531,
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/AU",
+    "last_online": 1741563187,
     "joined": 1675631019,
     "status": "premium",
     "is_streamer": false,
@@ -33,8 +33,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2416,
-            "date": 1733474866,
+            "rating": 2417,
+            "date": 1741683715,
             "rd": 47
         },
         "best": {
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/89806798717"
         },
         "record": {
-            "win": 700,
-            "loss": 652,
-            "draw": 110
+            "win": 778,
+            "loss": 725,
+            "draw": 121
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2301,
-            "date": 1734168376,
-            "rd": 34
+            "rating": 2422,
+            "date": 1741682753,
+            "rd": 48
         },
         "best": {
             "rating": 2450,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/97204157261"
         },
         "record": {
-            "win": 1278,
-            "loss": 1102,
-            "draw": 201
+            "win": 1349,
+            "loss": 1154,
+            "draw": 215
         }
     },
     "tactics": {

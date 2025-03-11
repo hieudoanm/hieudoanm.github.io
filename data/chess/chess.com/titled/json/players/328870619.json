@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 3,
     "country": "https://api.chess.com/pub/country/AZ",
-    "last_online": 1723098452,
+    "last_online": 1741011266,
     "joined": 1701103240,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2310,
-            "date": 1716195740,
-            "rd": 47
+            "rating": 2317,
+            "date": 1741013128,
+            "rd": 49
         },
         "best": {
             "rating": 2318,
@@ -26,7 +26,7 @@
             "game": "https://www.chess.com/game/live/104350783321"
         },
         "record": {
-            "win": 50,
+            "win": 51,
             "loss": 21,
             "draw": 6
         }

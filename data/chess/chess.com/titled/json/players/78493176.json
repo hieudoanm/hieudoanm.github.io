@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 15,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734159338,
+    "last_online": 1741703144,
     "joined": 1588523156,
     "status": "premium",
     "is_streamer": false,
@@ -49,8 +49,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3132,
-            "date": 1734173642
+            "rating": 2264,
+            "date": 1741628581
         },
         "lowest": {
             "rating": 1000,
@@ -59,12 +59,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 76,
-            "score": 73
-        },
-        "daily": {
-            "total_attempts": 76,
-            "score": 73
+            "total_attempts": 73,
+            "score": 70
         }
     }
 }

@@ -8,7 +8,7 @@
     "title": "IM",
     "followers": 32,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734016495,
+    "last_online": 1739750270,
     "joined": 1541027118,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1866,
-            "date": 1706667608,
+            "date": 1738229363,
             "rd": 137
         },
         "best": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2281,
-            "date": 1710350630,
-            "rd": 73
+            "rating": 2406,
+            "date": 1735856704,
+            "rd": 80
         },
         "best": {
             "rating": 2529,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/39313172111"
         },
         "record": {
-            "win": 1249,
-            "loss": 1242,
-            "draw": 275
+            "win": 1257,
+            "loss": 1244,
+            "draw": 276
         }
     },
     "fide": 2351,

@@ -6,10 +6,10 @@
     "name": "Sergei Terentiev",
     "username": "transnet",
     "title": "FM",
-    "followers": 31,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/LV",
     "location": "Cyprus",
-    "last_online": 1733784904,
+    "last_online": 1739438968,
     "joined": 1523069721,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2374,
-            "date": 1733795532,
-            "rd": 31
+            "rating": 2490,
+            "date": 1738613028,
+            "rd": 39
         },
         "best": {
             "rating": 2546,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/96418209865"
         },
         "record": {
-            "win": 8040,
-            "loss": 7004,
-            "draw": 1098
+            "win": 8086,
+            "loss": 7044,
+            "draw": 1108
         }
     },
     "fide": 2296,

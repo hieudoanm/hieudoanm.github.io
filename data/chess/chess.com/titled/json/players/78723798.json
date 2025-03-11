@@ -8,7 +8,7 @@
     "followers": 21,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Gniezno",
-    "last_online": 1734117622,
+    "last_online": 1741622315,
     "joined": 1588757280,
     "status": "premium",
     "is_streamer": false,
@@ -49,8 +49,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2223,
-            "date": 1734119878,
-            "rd": 49
+            "date": 1741622740,
+            "rd": 47
         },
         "best": {
             "rating": 2327,
@@ -58,9 +58,9 @@
             "game": "https://www.chess.com/game/live/4880980149"
         },
         "record": {
-            "win": 1109,
-            "loss": 745,
-            "draw": 151
+            "win": 1139,
+            "loss": 772,
+            "draw": 152
         }
     },
     "tactics": {

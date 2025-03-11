@@ -5,9 +5,9 @@
     "name": "Rodolfo Garbarino",
     "username": "garbaranza",
     "title": "IM",
-    "followers": 198,
+    "followers": 204,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734058913,
+    "last_online": 1741623533,
     "joined": 1507744337,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2400,
-            "date": 1733603398,
+            "date": 1741545234,
             "rd": 49
         },
         "best": {
@@ -45,7 +45,7 @@
             "game": "https://www.chess.com/game/live/43620027629"
         },
         "record": {
-            "win": 562,
+            "win": 574,
             "loss": 83,
             "draw": 55
         }
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2443,
-            "date": 1734060913,
-            "rd": 30
+            "rating": 2507,
+            "date": 1741470133,
+            "rd": 34
         },
         "best": {
             "rating": 2528,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/99159890001"
         },
         "record": {
-            "win": 2404,
-            "loss": 875,
-            "draw": 279
+            "win": 2595,
+            "loss": 963,
+            "draw": 310
         }
     },
     "fide": 2345,

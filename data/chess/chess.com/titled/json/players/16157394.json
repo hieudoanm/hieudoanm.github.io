@@ -5,14 +5,14 @@
     "name": "Manuel Bijaoui",
     "username": "manubibi",
     "title": "IM",
-    "followers": 563,
+    "followers": 577,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734075564,
+    "last_online": 1739339249,
     "joined": 1393021951,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2598,
-            "date": 1726787609,
-            "rd": 27
+            "rating": 2614,
+            "date": 1735858111,
+            "rd": 44
         },
         "best": {
             "rating": 2712,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/1522431708"
         },
         "record": {
-            "win": 4507,
-            "loss": 4291,
+            "win": 4515,
+            "loss": 4298,
             "draw": 512
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2476,
-            "date": 1734113399,
-            "rd": 30
+            "rating": 2625,
+            "date": 1741680461,
+            "rd": 26
         },
         "best": {
             "rating": 2761,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/31102777311"
         },
         "record": {
-            "win": 17615,
-            "loss": 13600,
-            "draw": 2853
+            "win": 18017,
+            "loss": 13901,
+            "draw": 2914
         }
     },
     "tactics": {

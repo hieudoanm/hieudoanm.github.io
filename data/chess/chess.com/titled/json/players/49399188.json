@@ -9,7 +9,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/BS",
     "location": "Bahamas",
-    "last_online": 1734046977,
+    "last_online": 1741548483,
     "joined": 1536006250,
     "status": "premium",
     "is_streamer": false,
@@ -37,26 +37,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2339,
-            "date": 1706026948,
+            "rating": 2350,
+            "date": 1737545906,
             "rd": 49
         },
         "best": {
-            "rating": 2339,
-            "date": 1706026948,
-            "game": "https://www.chess.com/game/live/99764688251"
+            "rating": 2350,
+            "date": 1737545906,
+            "game": "https://www.chess.com/game/live/131284222831"
         },
         "record": {
-            "win": 21,
+            "win": 22,
             "loss": 0,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2394,
-            "date": 1729667185,
-            "rd": 51
+            "rating": 2404,
+            "date": 1737448892,
+            "rd": 73
         },
         "best": {
             "rating": 2442,
@@ -64,32 +64,32 @@
             "game": "https://www.chess.com/game/live/121655999207"
         },
         "record": {
-            "win": 643,
+            "win": 644,
             "loss": 489,
             "draw": 49
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2393,
-            "date": 1729783712,
+            "rating": 2338,
+            "date": 1740660561,
             "rd": 89
         },
         "best": {
-            "rating": 2436,
-            "date": 1711534976,
+            "rating": 2448,
+            "date": 1737543592,
             "game": "https://www.chess.com/game/live/98640297571"
         },
         "record": {
-            "win": 306,
-            "loss": 209,
+            "win": 309,
+            "loss": 213,
             "draw": 37
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3270,
-            "date": 1714223985
+            "rating": 3310,
+            "date": 1738955124
         },
         "lowest": {
             "rating": 412,
@@ -98,8 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 63,
-            "score": 60
+            "total_attempts": 64,
+            "score": 61
         }
     }
 }

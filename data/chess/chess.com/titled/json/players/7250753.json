@@ -6,9 +6,9 @@
     "name": "Anastasia Avramidou",
     "username": "anasta10",
     "title": "FM",
-    "followers": 153,
+    "followers": 155,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1733501069,
+    "last_online": 1741687058,
     "joined": 1334082613,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2018,
-            "date": 1719830795,
+            "date": 1740964426,
             "rd": 64
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2679,
-            "date": 1732993178,
-            "rd": 24
+            "rating": 2698,
+            "date": 1741460364,
+            "rd": 28
         },
         "best": {
             "rating": 2804,
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/100119731419"
         },
         "record": {
-            "win": 4665,
-            "loss": 3791,
-            "draw": 836
+            "win": 4982,
+            "loss": 4102,
+            "draw": 896
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2625,
-            "date": 1733268894,
-            "rd": 31
+            "rating": 2693,
+            "date": 1741179455,
+            "rd": 30
         },
         "best": {
-            "rating": 2695,
-            "date": 1730235980,
+            "rating": 2711,
+            "date": 1740500260,
             "game": "https://www.chess.com/game/live/111880391281"
         },
         "record": {
-            "win": 1258,
-            "loss": 979,
-            "draw": 290
+            "win": 1385,
+            "loss": 1072,
+            "draw": 311
         }
     },
     "fide": 0,

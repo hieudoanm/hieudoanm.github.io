@@ -5,53 +5,65 @@
     "name": "Hussain Besou",
     "username": "feuervogel1000000",
     "title": "FM",
-    "followers": 11,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1726158397,
+    "last_online": 1741690388,
     "joined": 1623429239,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
-    "chess_bullet": {
+    "chess_rapid": {
         "last": {
-            "rating": 2335,
-            "date": 1722102884,
-            "rd": 95
-        },
-        "best": {
-            "rating": 2449,
-            "date": 1682787735,
-            "game": "https://www.chess.com/game/live/82151547369"
+            "rating": 2108,
+            "date": 1740242318,
+            "rd": 49
         },
         "record": {
-            "win": 14,
-            "loss": 12,
-            "draw": 1
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2788,
+            "date": 1741691352,
+            "rd": 22
+        },
+        "best": {
+            "rating": 2774,
+            "date": 1740927394,
+            "game": "https://www.chess.com/game/live/132501021377"
+        },
+        "record": {
+            "win": 490,
+            "loss": 407,
+            "draw": 57
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2537,
-            "date": 1722101442,
-            "rd": 49
+            "rating": 2713,
+            "date": 1741088356,
+            "rd": 40
         },
         "best": {
-            "rating": 2606,
-            "date": 1697033688,
+            "rating": 2709,
+            "date": 1739026327,
             "game": "https://www.chess.com/game/live/90711045945"
         },
         "record": {
-            "win": 198,
-            "loss": 154,
-            "draw": 24
+            "win": 269,
+            "loss": 200,
+            "draw": 28
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2418,
-            "date": 1682075337
+            "rating": 2499,
+            "date": 1739964819
         },
         "lowest": {
             "rating": 1000,
@@ -60,8 +72,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 45
+            "total_attempts": 50,
+            "score": 48
+        },
+        "daily": {
+            "total_attempts": 44,
+            "score": 41
         }
     }
 }

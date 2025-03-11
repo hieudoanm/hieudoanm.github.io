@@ -5,10 +5,10 @@
     "url": "https://www.chess.com/member/zimmm36",
     "name": "Simon Lamaze",
     "username": "zimmm36",
-    "title": "FM",
-    "followers": 36,
+    "title": "IM",
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734132720,
+    "last_online": 1741702800,
     "joined": 1548764141,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1748,
-            "date": 1710080833,
+            "date": 1737560319,
             "rd": 77
         },
         "best": {
@@ -32,12 +32,6 @@
             "draw": 6,
             "time_per_move": 9543,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 50
         }
     },
     "chess960_daily": {
@@ -57,12 +51,6 @@
             "draw": 3,
             "time_per_move": 9543,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 50
         }
     },
     "chess_rapid": {
@@ -101,26 +89,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2714,
-            "date": 1734134577,
-            "rd": 27
+            "rating": 2801,
+            "date": 1741703440,
+            "rd": 31
         },
         "best": {
-            "rating": 2881,
-            "date": 1710010647,
-            "game": "https://www.chess.com/game/live/123763259593"
+            "rating": 2893,
+            "date": 1739048349,
+            "game": "https://www.chess.com/game/live/128796221803"
         },
         "record": {
-            "win": 3044,
-            "loss": 2678,
-            "draw": 446
+            "win": 3455,
+            "loss": 3010,
+            "draw": 493
         }
     },
     "fide": 1789,
     "tactics": {
         "highest": {
-            "rating": 3845,
-            "date": 1733401179
+            "rating": 3862,
+            "date": 1739895940
         },
         "lowest": {
             "rating": 1013,
@@ -131,10 +119,6 @@
         "best": {
             "total_attempts": 68,
             "score": 66
-        },
-        "daily": {
-            "total_attempts": 49,
-            "score": 46
         }
     }
 }

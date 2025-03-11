@@ -6,10 +6,10 @@
     "name": "T S S Peiris",
     "username": "sajith_peiris",
     "title": "FM",
-    "followers": 161,
+    "followers": 164,
     "country": "https://api.chess.com/pub/country/LK",
     "location": "colombo",
-    "last_online": 1734148163,
+    "last_online": 1741617871,
     "joined": 1401426124,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1828,
-            "date": 1733894569,
-            "rd": 41
+            "rating": 1813,
+            "date": 1735790575,
+            "rd": 48
         },
         "best": {
             "rating": 2231,
@@ -65,7 +65,7 @@
         },
         "record": {
             "win": 329,
-            "loss": 290,
+            "loss": 292,
             "draw": 26
         }
     },
@@ -99,12 +99,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 41
+            "total_attempts": 45,
+            "score": 42
         },
         "daily": {
-            "total_attempts": 37,
-            "score": 34
+            "total_attempts": 38,
+            "score": 35
         }
     }
 }

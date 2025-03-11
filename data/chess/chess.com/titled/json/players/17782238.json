@@ -9,7 +9,7 @@
     "followers": 63,
     "country": "https://api.chess.com/pub/country/US",
     "location": "DragonLand",
-    "last_online": 1717963780,
+    "last_online": 1740266242,
     "joined": 1403402355,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1774,
-            "date": 1715255677,
+            "date": 1737192510,
             "rd": 204
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1567,
-            "date": 1708142213,
-            "rd": 113
+            "rating": 1508,
+            "date": 1736653025,
+            "rd": 141
         },
         "best": {
             "rating": 1817,
@@ -65,7 +65,7 @@
         },
         "record": {
             "win": 555,
-            "loss": 510,
+            "loss": 511,
             "draw": 23
         }
     },
@@ -88,8 +88,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2483,
-            "date": 1497843646
+            "rating": 2502,
+            "date": 1740266888
         },
         "lowest": {
             "rating": 1173,

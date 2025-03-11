@@ -6,10 +6,10 @@
     "name": "Nhat Minh To",
     "username": "dragonb70",
     "title": "IM",
-    "followers": 377,
+    "followers": 387,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734132594,
+    "last_online": 1741687113,
     "joined": 1341760183,
     "status": "premium",
     "is_streamer": false,
@@ -56,9 +56,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2444,
-            "date": 1717775356,
-            "rd": 47
+            "rating": 2447,
+            "date": 1740586077,
+            "rd": 49
         },
         "best": {
             "rating": 2473,
@@ -66,33 +66,33 @@
             "game": "https://www.chess.com/game/live/106024829127"
         },
         "record": {
-            "win": 1222,
-            "loss": 180,
+            "win": 1223,
+            "loss": 181,
             "draw": 144
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2892,
-            "date": 1733732564,
-            "rd": 22
+            "rating": 3006,
+            "date": 1739742540,
+            "rd": 16
         },
         "best": {
-            "rating": 2916,
-            "date": 1733254106,
+            "rating": 3006,
+            "date": 1739742540,
             "game": "https://www.chess.com/game/live/110996491247"
         },
         "record": {
-            "win": 9371,
-            "loss": 5285,
-            "draw": 644
+            "win": 11275,
+            "loss": 6614,
+            "draw": 837
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2839,
-            "date": 1731063278,
-            "rd": 29
+            "rating": 2865,
+            "date": 1741610738,
+            "rd": 40
         },
         "best": {
             "rating": 2846,
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/109529491989"
         },
         "record": {
-            "win": 6907,
-            "loss": 4681,
-            "draw": 903
+            "win": 6976,
+            "loss": 4736,
+            "draw": 919
         }
     },
     "fide": 2353,
     "tactics": {
         "highest": {
-            "rating": 3719,
-            "date": 1733816239
+            "rating": 3764,
+            "date": 1739954573
         },
         "lowest": {
             "rating": 399,

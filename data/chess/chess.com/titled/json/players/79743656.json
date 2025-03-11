@@ -6,9 +6,9 @@
     "name": "Peter Drost",
     "username": "b777w",
     "title": "CM",
-    "followers": 26,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1733774575,
+    "last_online": 1740986449,
     "joined": 1589708473,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1728627056,
-            "rd": 22
+            "rating": 2426,
+            "date": 1741697550,
+            "rd": 34
         },
         "best": {
             "rating": 2571,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/114635881121"
         },
         "record": {
-            "win": 2416,
-            "loss": 1692,
-            "draw": 438
+            "win": 2467,
+            "loss": 1745,
+            "draw": 447
         }
     },
     "tactics": {

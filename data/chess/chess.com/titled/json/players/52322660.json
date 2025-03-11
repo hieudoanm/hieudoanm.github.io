@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/52322660.a03edf35.200x200o.5fcf24101b6e.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/52322660.565afe30.200x200o.b5c999cc4f1d.jpg",
     "player_id": 52322660,
     "@id": "https://api.chess.com/pub/player/unclear15",
     "url": "https://www.chess.com/member/unclear15",
     "name": "Mushini Ajay",
     "username": "unclear15",
     "title": "FM",
-    "followers": 103,
+    "followers": 107,
     "country": "https://api.chess.com/pub/country/IN",
-    "location": "amalapuram",
-    "last_online": 1734138874,
+    "location": "Andhra Pradesh",
+    "last_online": 1741659407,
     "joined": 1543158438,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1912,
-            "date": 1694606227,
-            "rd": 105
+            "rating": 1913,
+            "date": 1737621718,
+            "rd": 222
         },
         "best": {
             "rating": 2017,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/16428959333"
         },
         "record": {
-            "win": 25,
+            "win": 26,
             "loss": 9,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2290,
-            "date": 1716569968,
-            "rd": 67
+            "rating": 2228,
+            "date": 1741454830,
+            "rd": 75
         },
         "best": {
             "rating": 2556,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/5760902694"
         },
         "record": {
-            "win": 515,
-            "loss": 397,
-            "draw": 48
+            "win": 523,
+            "loss": 419,
+            "draw": 49
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2447,
-            "date": 1714661257,
-            "rd": 68
+            "rating": 2417,
+            "date": 1735663383,
+            "rd": 108
         },
         "best": {
             "rating": 2503,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/70134373113"
         },
         "record": {
-            "win": 386,
-            "loss": 357,
+            "win": 388,
+            "loss": 359,
             "draw": 43
         }
     },
-    "fide": 2310,
+    "fide": 2384,
     "tactics": {
         "highest": {
-            "rating": 3304,
-            "date": 1714923541
+            "rating": 3324,
+            "date": 1734268947
         },
         "lowest": {
             "rating": 1015,
@@ -99,8 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 64,
-            "score": 61
+            "total_attempts": 68,
+            "score": 65
         }
     }
 }

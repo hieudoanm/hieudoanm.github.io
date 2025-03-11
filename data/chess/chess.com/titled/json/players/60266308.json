@@ -6,18 +6,18 @@
     "title": "IM",
     "followers": 33,
     "country": "https://api.chess.com/pub/country/IE",
-    "last_online": 1734122039,
+    "last_online": 1741605384,
     "joined": 1556289670,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2067,
-            "date": 1642968948,
-            "rd": 101
+            "rating": 2059,
+            "date": 1735645059,
+            "rd": 49
         },
         "best": {
             "rating": 2253,
@@ -25,16 +25,16 @@
             "game": "https://www.chess.com/game/live/28474804911"
         },
         "record": {
-            "win": 55,
+            "win": 56,
             "loss": 7,
-            "draw": 2
+            "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2119,
-            "date": 1724192810,
-            "rd": 131
+            "rating": 2069,
+            "date": 1738196730,
+            "rd": 99
         },
         "best": {
             "rating": 2293,
@@ -42,16 +42,16 @@
             "game": "https://www.chess.com/game/live/27020414331"
         },
         "record": {
-            "win": 54,
-            "loss": 45,
-            "draw": 6
+            "win": 56,
+            "loss": 49,
+            "draw": 7
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2338,
-            "date": 1724940573,
-            "rd": 90
+            "rating": 2377,
+            "date": 1741606148,
+            "rd": 111
         },
         "best": {
             "rating": 2427,
@@ -59,7 +59,7 @@
             "game": "https://www.chess.com/game/live/3727775991"
         },
         "record": {
-            "win": 458,
+            "win": 459,
             "loss": 407,
             "draw": 22
         }

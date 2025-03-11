@@ -6,9 +6,9 @@
     "name": "Batbold Nyamsuren",
     "username": "50tugrik",
     "title": "FM",
-    "followers": 22,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/MN",
-    "last_online": 1731796123,
+    "last_online": 1740675419,
     "joined": 1590065373,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2000,
-            "date": 1721220987,
+            "date": 1737560443,
             "rd": 350
         },
         "record": {
@@ -27,12 +27,6 @@
             "draw": 0,
             "time_per_move": 0,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
@@ -54,26 +48,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2568,
-            "date": 1728329775,
-            "rd": 48
+            "rating": 2518,
+            "date": 1736693189,
+            "rd": 46
         },
         "best": {
-            "rating": 2575,
-            "date": 1728316970,
+            "rating": 2580,
+            "date": 1735649140,
             "game": "https://www.chess.com/game/live/105434347443"
         },
         "record": {
-            "win": 269,
-            "loss": 144,
+            "win": 274,
+            "loss": 158,
             "draw": 20
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2370,
-            "date": 1727164588,
-            "rd": 92
+            "rating": 2521,
+            "date": 1736238576,
+            "rd": 48
         },
         "best": {
             "rating": 2548,
@@ -81,8 +75,8 @@
             "game": "https://www.chess.com/game/live/48945614111"
         },
         "record": {
-            "win": 190,
-            "loss": 165,
+            "win": 201,
+            "loss": 170,
             "draw": 27
         }
     },

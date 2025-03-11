@@ -6,21 +6,21 @@
     "name": "Jacques Kolly",
     "username": "jkolly",
     "title": "FM",
-    "followers": 28,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/CH",
     "location": "Fribourg",
-    "last_online": 1733078414,
+    "last_online": 1734939713,
     "joined": 1416427953,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1458,
-            "date": 1732738124,
-            "rd": 226
+            "rating": 1372,
+            "date": 1735958305,
+            "rd": 200
         },
         "best": {
             "rating": 1458,
@@ -29,10 +29,10 @@
         },
         "record": {
             "win": 5,
-            "loss": 1,
+            "loss": 2,
             "draw": 0,
             "time_per_move": 98051,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2564,
-            "date": 1732644645,
-            "rd": 19
+            "rating": 2304,
+            "date": 1741371997,
+            "rd": 18
         },
         "best": {
             "rating": 2572,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/126212376977"
         },
         "record": {
-            "win": 11557,
-            "loss": 9542,
-            "draw": 1355
+            "win": 11943,
+            "loss": 10033,
+            "draw": 1411
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2533,
-            "date": 1734093670,
-            "rd": 36
+            "rating": 2484,
+            "date": 1737592094,
+            "rd": 34
         },
         "best": {
             "rating": 2635,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/126624025735"
         },
         "record": {
-            "win": 4546,
-            "loss": 3595,
-            "draw": 564
+            "win": 4593,
+            "loss": 3659,
+            "draw": 580
         }
     },
     "fide": 0,

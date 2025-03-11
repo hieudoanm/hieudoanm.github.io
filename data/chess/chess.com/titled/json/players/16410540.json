@@ -6,9 +6,9 @@
     "name": "Benjamin Defromont",
     "username": "chess3054",
     "title": "IM",
-    "followers": 96,
+    "followers": 98,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734184195,
+    "last_online": 1741683715,
     "joined": 1394538382,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1472,
-            "date": 1733923325,
-            "rd": 78
+            "rating": 1510,
+            "date": 1741339824,
+            "rd": 86
         },
         "best": {
             "rating": 1994,
@@ -27,17 +27,11 @@
             "game": "https://www.chess.com/game/daily/224111902"
         },
         "record": {
-            "win": 793,
-            "loss": 398,
+            "win": 801,
+            "loss": 399,
             "draw": 99,
-            "time_per_move": 27448,
+            "time_per_move": 27582,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 185,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess960_daily": {
@@ -55,14 +49,8 @@
             "win": 73,
             "loss": 45,
             "draw": 1,
-            "time_per_move": 27448,
+            "time_per_move": 27582,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 185,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
@@ -84,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2726,
-            "date": 1723194450,
-            "rd": 49
+            "rating": 2635,
+            "date": 1741113997,
+            "rd": 38
         },
         "best": {
             "rating": 2726,
@@ -94,15 +82,15 @@
             "game": "https://www.chess.com/game/live/116933373607"
         },
         "record": {
-            "win": 1248,
-            "loss": 1141,
-            "draw": 186
+            "win": 1266,
+            "loss": 1161,
+            "draw": 191
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2629,
-            "date": 1733875500,
+            "rating": 2636,
+            "date": 1740790860,
             "rd": 46
         },
         "best": {
@@ -111,15 +99,15 @@
             "game": "https://www.chess.com/game/live/4003145851"
         },
         "record": {
-            "win": 959,
-            "loss": 716,
-            "draw": 157
+            "win": 973,
+            "loss": 728,
+            "draw": 158
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3477,
-            "date": 1681219934
+            "rating": 3548,
+            "date": 1736858800
         },
         "lowest": {
             "rating": 1107,

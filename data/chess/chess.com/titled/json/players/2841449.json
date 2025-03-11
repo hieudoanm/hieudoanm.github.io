@@ -6,10 +6,10 @@
     "name": "Mike Klein",
     "username": "mikeklein",
     "title": "FM",
-    "followers": 95803,
+    "followers": 95844,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Charlotte",
-    "last_online": 1733986442,
+    "last_online": 1741696938,
     "joined": 1274214391,
     "status": "staff",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2069,
-            "date": 1734147753,
-            "rd": 110
+            "rating": 2073,
+            "date": 1739806461,
+            "rd": 115
         },
         "best": {
             "rating": 2377,
@@ -28,11 +28,11 @@
             "game": "https://www.chess.com/game/daily/160664698"
         },
         "record": {
-            "win": 127,
+            "win": 128,
             "loss": 17,
-            "draw": 13,
-            "time_per_move": 78876,
-            "timeout_percent": 66
+            "draw": 14,
+            "time_per_move": 79063,
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {
@@ -50,7 +50,7 @@
             "win": 22,
             "loss": 3,
             "draw": 3,
-            "time_per_move": 78876,
+            "time_per_move": 79063,
             "timeout_percent": 0
         }
     },

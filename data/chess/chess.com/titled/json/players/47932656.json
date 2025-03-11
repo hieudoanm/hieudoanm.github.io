@@ -6,14 +6,14 @@
     "name": "Victor Labussiere",
     "username": "angryhorse9",
     "title": "FM",
-    "followers": 223,
+    "followers": 224,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1733834517,
+    "last_online": 1741210648,
     "joined": 1531785959,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2334,
-            "date": 1733834997,
-            "rd": 33
+            "rating": 2480,
+            "date": 1740786160,
+            "rd": 40
         },
         "best": {
             "rating": 2603,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/4119232762"
         },
         "record": {
-            "win": 5657,
-            "loss": 5815,
-            "draw": 937
+            "win": 5772,
+            "loss": 5922,
+            "draw": 954
         }
     },
     "fide": 2332,
     "tactics": {
         "highest": {
-            "rating": 3250,
-            "date": 1672413512
+            "rating": 3294,
+            "date": 1735761304
         },
         "lowest": {
             "rating": 815,

@@ -5,10 +5,10 @@
     "name": "Levon Altounian",
     "username": "imlevaltounian",
     "title": "IM",
-    "followers": 137,
+    "followers": 139,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Los Angeles",
-    "last_online": 1734151365,
+    "last_online": 1741648217,
     "joined": 1389981700,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2278,
-            "date": 1698016564,
+            "date": 1741545085,
             "rd": 137
         },
         "best": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2758,
-            "date": 1733941139,
-            "rd": 38
+            "rating": 2721,
+            "date": 1739394114,
+            "rd": 40
         },
         "best": {
             "rating": 2823,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/84311474335"
         },
         "record": {
-            "win": 2224,
-            "loss": 1030,
-            "draw": 246
+            "win": 2245,
+            "loss": 1046,
+            "draw": 250
         }
     },
     "chess_blitz": {
@@ -69,8 +69,8 @@
     "fide": 2550,
     "tactics": {
         "highest": {
-            "rating": 3490,
-            "date": 1731123736
+            "rating": 3503,
+            "date": 1736565895
         },
         "lowest": {
             "rating": 1197,

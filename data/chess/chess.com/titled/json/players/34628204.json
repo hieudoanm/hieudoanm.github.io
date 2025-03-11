@@ -7,7 +7,7 @@
     "title": "WNM",
     "followers": 2,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1732458871,
+    "last_online": 1741684914,
     "joined": 1491683799,
     "status": "premium",
     "is_streamer": false,
@@ -16,19 +16,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2121,
-            "date": 1732377675,
-            "rd": 92
+            "rating": 2170,
+            "date": 1740524664,
+            "rd": 73
         },
         "best": {
-            "rating": 2185,
-            "date": 1723585064,
-            "game": "https://www.chess.com/game/live/107644996175"
+            "rating": 2247,
+            "date": 1739290815,
+            "game": "https://www.chess.com/game/live/131818855371"
         },
         "record": {
-            "win": 60,
-            "loss": 68,
-            "draw": 7
+            "win": 64,
+            "loss": 85,
+            "draw": 8
         }
     },
     "tactics": {

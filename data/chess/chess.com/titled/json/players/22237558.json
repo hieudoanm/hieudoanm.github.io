@@ -5,15 +5,15 @@
     "name": "Ian D MacKay",
     "username": "jimmymac77",
     "title": "FM",
-    "followers": 33,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "BC",
-    "last_online": 1733384810,
+    "last_online": 1740296080,
     "joined": 1430679424,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -90,7 +90,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2319,
-            "date": 1659173135,
+            "date": 1740218986,
             "rd": 96
         },
         "best": {

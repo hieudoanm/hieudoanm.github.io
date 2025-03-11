@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/A_Morgunov",
     "username": "a_morgunov",
     "title": "FM",
-    "followers": 26,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734170590,
+    "last_online": 1741701895,
     "joined": 1522742247,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2507,
-            "date": 1730654666,
-            "rd": 39
+            "rating": 2499,
+            "date": 1737132506,
+            "rd": 49
         },
         "best": {
             "rating": 2597,
@@ -27,7 +27,7 @@
         },
         "record": {
             "win": 5997,
-            "loss": 6112,
+            "loss": 6113,
             "draw": 1650
         }
     },

@@ -6,9 +6,9 @@
     "name": "Julia Alboredo",
     "username": "julinha97",
     "title": "FM",
-    "followers": 2172,
+    "followers": 2259,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734122351,
+    "last_online": 1741639080,
     "joined": 1380645873,
     "status": "premium",
     "is_streamer": true,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2449,
-            "date": 1730501001,
-            "rd": 63
+            "rating": 2500,
+            "date": 1737948644,
+            "rd": 49
         },
         "best": {
             "rating": 2630,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/105157249851"
         },
         "record": {
-            "win": 539,
-            "loss": 472,
-            "draw": 75
+            "win": 549,
+            "loss": 482,
+            "draw": 76
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2466,
-            "date": 1734124405,
-            "rd": 32
+            "rating": 2448,
+            "date": 1741298890,
+            "rd": 33
         },
         "best": {
             "rating": 2621,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/5918536131"
         },
         "record": {
-            "win": 4782,
-            "loss": 4017,
-            "draw": 773
+            "win": 4985,
+            "loss": 4245,
+            "draw": 811
         }
     },
     "tactics": {

@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/fxntxsticfrog",
     "username": "fxntxsticfrog",
     "title": "WCM",
-    "followers": 23,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733967580,
+    "last_online": 1741647607,
     "joined": 1660164764,
     "status": "premium",
     "is_streamer": false,
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2114,
-            "date": 1731245274,
-            "rd": 43
+            "rating": 2159,
+            "date": 1741655878,
+            "rd": 27
         },
         "best": {
-            "rating": 2224,
-            "date": 1726091393,
+            "rating": 2225,
+            "date": 1739736143,
             "game": "https://www.chess.com/game/live/88914683295"
         },
         "record": {
-            "win": 497,
-            "loss": 531,
-            "draw": 80
+            "win": 697,
+            "loss": 753,
+            "draw": 113
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2122,
-            "date": 1733968108,
-            "rd": 34
+            "rating": 2155,
+            "date": 1741571744,
+            "rd": 47
         },
         "best": {
             "rating": 2269,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/123901782485"
         },
         "record": {
-            "win": 896,
-            "loss": 980,
-            "draw": 127
+            "win": 934,
+            "loss": 1021,
+            "draw": 140
         }
     },
     "tactics": {

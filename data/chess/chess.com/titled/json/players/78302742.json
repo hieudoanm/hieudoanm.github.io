@@ -9,7 +9,7 @@
     "followers": 83,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Paris",
-    "last_online": 1734176772,
+    "last_online": 1741600163,
     "joined": 1588338727,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2469,
-            "date": 1732971708,
-            "rd": 55
+            "rating": 2528,
+            "date": 1740077150
         },
         "best": {
             "rating": 2565,
@@ -62,16 +61,16 @@
             "game": "https://www.chess.com/game/live/47408372749"
         },
         "record": {
-            "win": 10902,
-            "loss": 11712,
-            "draw": 1770
+            "win": 10940,
+            "loss": 11748,
+            "draw": 1778
         }
     },
     "fide": 2263,
     "tactics": {
         "highest": {
-            "rating": 3189,
-            "date": 1731680225
+            "rating": 3361,
+            "date": 1737498330
         },
         "lowest": {
             "rating": 822,

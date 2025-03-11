@@ -7,17 +7,17 @@
     "title": "IM",
     "followers": 2,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1734006198,
+    "last_online": 1741600792,
     "joined": 1592327104,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
             "rating": 2552,
-            "date": 1733240322,
+            "date": 1741704058,
             "rd": 49
         },
         "best": {

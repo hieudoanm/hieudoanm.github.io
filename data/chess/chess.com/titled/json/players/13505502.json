@@ -8,12 +8,12 @@
     "followers": 10,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1734008974,
+    "last_online": 1739183081,
     "joined": 1379032969,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2192,
-            "date": 1705400045,
-            "rd": 131
+            "rating": 2191,
+            "date": 1738604583,
+            "rd": 142
         },
         "best": {
             "rating": 2383,
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/6161908876"
         },
         "record": {
-            "win": 206,
-            "loss": 167,
+            "win": 207,
+            "loss": 168,
             "draw": 7
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2411,
-            "date": 1695164763,
-            "rd": 100
+            "rating": 2210,
+            "date": 1739827839,
+            "rd": 38
         },
         "best": {
-            "rating": 2411,
-            "date": 1695164763,
+            "rating": 2462,
+            "date": 1738626752,
             "game": "https://www.chess.com/game/live/4558119648"
         },
         "record": {
-            "win": 1012,
-            "loss": 997,
-            "draw": 155
+            "win": 1051,
+            "loss": 1049,
+            "draw": 157
         }
     },
     "fide": 0,

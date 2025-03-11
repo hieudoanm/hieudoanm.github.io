@@ -6,10 +6,10 @@
     "name": "Xiahan (Luna) Lu",
     "username": "lunathetuna2013",
     "title": "WCM",
-    "followers": 106,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/NZ",
     "location": "Auckland",
-    "last_online": 1734164961,
+    "last_online": 1741678039,
     "joined": 1718089915,
     "status": "premium",
     "is_streamer": false,
@@ -66,8 +66,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1928,
-            "date": 1733874303,
+            "rating": 1924,
+            "date": 1736293931,
             "rd": 74
         },
         "best": {
@@ -77,15 +77,15 @@
         },
         "record": {
             "win": 10,
-            "loss": 38,
-            "draw": 1
+            "loss": 45,
+            "draw": 3
         }
     },
     "fide": 1859,
     "tactics": {
         "highest": {
-            "rating": 3709,
-            "date": 1732765362
+            "rating": 2985,
+            "date": 1738481068
         },
         "lowest": {
             "rating": 1000,

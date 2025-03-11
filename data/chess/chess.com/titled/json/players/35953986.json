@@ -6,10 +6,10 @@
     "name": "Marcin Molenda",
     "username": "marcin",
     "title": "FM",
-    "followers": 224,
+    "followers": 234,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Tomasz\u00f3w Lubelski",
-    "last_online": 1734102227,
+    "last_online": 1741686984,
     "joined": 1496235064,
     "status": "premium",
     "is_streamer": true,
@@ -25,7 +25,7 @@
     "chess_daily": {
         "last": {
             "rating": 1604,
-            "date": 1734023357,
+            "date": 1734707091,
             "rd": 245
         },
         "best": {
@@ -37,15 +37,15 @@
             "win": 3,
             "loss": 0,
             "draw": 1,
-            "time_per_move": 91629,
+            "time_per_move": 92279,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2376,
-            "date": 1716227415,
-            "rd": 49
+            "date": 1739298448,
+            "rd": 50
         },
         "best": {
             "rating": 2390,
@@ -53,16 +53,16 @@
             "game": "https://www.chess.com/game/live/76849396975"
         },
         "record": {
-            "win": 83,
+            "win": 84,
             "loss": 32,
             "draw": 10
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2583,
-            "date": 1734025550,
-            "rd": 43
+            "rating": 2525,
+            "date": 1741013232,
+            "rd": 39
         },
         "best": {
             "rating": 2637,
@@ -70,16 +70,16 @@
             "game": "https://www.chess.com/game/live/65562264893"
         },
         "record": {
-            "win": 1015,
-            "loss": 900,
-            "draw": 94
+            "win": 1064,
+            "loss": 952,
+            "draw": 98
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2553,
-            "date": 1734114310,
-            "rd": 41
+            "rating": 2649,
+            "date": 1741688435,
+            "rd": 35
         },
         "best": {
             "rating": 2703,
@@ -87,9 +87,9 @@
             "game": "https://www.chess.com/game/live/71965452661"
         },
         "record": {
-            "win": 3711,
-            "loss": 2983,
-            "draw": 425
+            "win": 3850,
+            "loss": 3077,
+            "draw": 443
         }
     },
     "fide": 2406,

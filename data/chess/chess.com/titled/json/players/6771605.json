@@ -6,10 +6,10 @@
     "name": "Abubaker Tagelsir",
     "username": "abubakrtagelsir",
     "title": "FM",
-    "followers": 400,
+    "followers": 430,
     "country": "https://api.chess.com/pub/country/SD",
     "location": "khartoum",
-    "last_online": 1734087191,
+    "last_online": 1741557634,
     "joined": 1330211438,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2195,
-            "date": 1728410390,
-            "rd": 58
+            "rating": 2158,
+            "date": 1739132352,
+            "rd": 72
         },
         "best": {
             "rating": 2339,
@@ -59,8 +59,8 @@
             "game": "https://www.chess.com/game/live/5225975224"
         },
         "record": {
-            "win": 15117,
-            "loss": 16504,
+            "win": 15120,
+            "loss": 16509,
             "draw": 622
         }
     },

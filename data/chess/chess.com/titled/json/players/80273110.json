@@ -6,10 +6,10 @@
     "name": "\ua9c1\u0f3a\u0256\u01df\u0266\u01df\u028d\u0256\u0268 \u0586\u01df\u057c\u028a\u0256\u028a\u029f\u01df\u0f3b\ua9c2",
     "username": "dahamdi_sanudula",
     "title": "WCM",
-    "followers": 302,
+    "followers": 303,
     "country": "https://api.chess.com/pub/country/LK",
     "location": "Colombo",
-    "last_online": 1730820425,
+    "last_online": 1738845794,
     "joined": 1590224984,
     "status": "premium",
     "is_streamer": false,
@@ -38,8 +38,8 @@
     "chess_rapid": {
         "last": {
             "rating": 1775,
-            "date": 1703615693,
-            "rd": 114
+            "date": 1735807572,
+            "rd": 205
         },
         "best": {
             "rating": 1809,
@@ -47,7 +47,7 @@
             "game": "https://www.chess.com/game/live/23790448361"
         },
         "record": {
-            "win": 52,
+            "win": 53,
             "loss": 12,
             "draw": 5
         }
@@ -71,22 +71,22 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2133,
-            "date": 1721149341,
-            "rd": 88
+            "rating": 2145,
+            "date": 1736273063,
+            "rd": 89
         },
         "best": {
-            "rating": 2204,
-            "date": 1684861527,
+            "rating": 2225,
+            "date": 1736267968,
             "game": "https://www.chess.com/game/live/29006461535"
         },
         "record": {
-            "win": 101,
-            "loss": 75,
+            "win": 103,
+            "loss": 83,
             "draw": 12
         }
     },
-    "fide": 1744,
+    "fide": 2052,
     "tactics": {
         "highest": {
             "rating": 884,

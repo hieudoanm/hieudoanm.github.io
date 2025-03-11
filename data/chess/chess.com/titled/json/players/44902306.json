@@ -6,10 +6,10 @@
     "name": "Bj\u00f6rn Ahlander",
     "username": "bjornahlander",
     "title": "IM",
-    "followers": 496,
+    "followers": 510,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "Malm\u00f6/Lund",
-    "last_online": 1734109972,
+    "last_online": 1741680212,
     "joined": 1522682944,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2472,
-            "date": 1733865190,
-            "rd": 135
+            "rating": 2424,
+            "date": 1741539308,
+            "rd": 144
         },
         "best": {
             "rating": 2472,
@@ -30,8 +30,8 @@
         "record": {
             "win": 393,
             "loss": 3,
-            "draw": 13,
-            "time_per_move": 94503,
+            "draw": 14,
+            "time_per_move": 95263,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 5,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 94503,
+            "time_per_move": 95263,
             "timeout_percent": 0
         }
     },

@@ -6,9 +6,9 @@
     "name": "Nenad I Todorovic",
     "username": "attacker88",
     "title": "FM",
-    "followers": 29,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1733680834,
+    "last_online": 1741622207,
     "joined": 1346688582,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2317,
-            "date": 1732645501,
-            "rd": 34
+            "rating": 2366,
+            "date": 1741622631,
+            "rd": 61
         },
         "best": {
             "rating": 2522,
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/107624017713"
         },
         "record": {
-            "win": 2161,
-            "loss": 1911,
+            "win": 2169,
+            "loss": 1913,
             "draw": 230
         }
     },

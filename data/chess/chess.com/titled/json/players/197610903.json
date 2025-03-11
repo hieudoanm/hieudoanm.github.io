@@ -6,9 +6,9 @@
     "name": "Ulrich Schulze",
     "username": "jimmy-schlumpf",
     "title": "IM",
-    "followers": 63,
+    "followers": 78,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734180680,
+    "last_online": 1741685076,
     "joined": 1663406161,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1373,
-            "date": 1729666304,
+            "date": 1738399200,
             "rd": 215
         },
         "record": {
@@ -31,8 +31,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2391,
-            "date": 1729608611,
+            "rating": 2389,
+            "date": 1736501365,
             "rd": 49
         },
         "best": {
@@ -43,7 +43,7 @@
         "record": {
             "win": 38,
             "loss": 15,
-            "draw": 6
+            "draw": 7
         }
     },
     "chess_bullet": {
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2283,
-            "date": 1734181309,
-            "rd": 24
+            "rating": 2319,
+            "date": 1741685625,
+            "rd": 22
         },
         "best": {
             "rating": 2475,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/88270917767"
         },
         "record": {
-            "win": 4138,
-            "loss": 4040,
-            "draw": 913
+            "win": 4719,
+            "loss": 4607,
+            "draw": 1029
         }
     },
     "fide": 2308,

@@ -6,20 +6,20 @@
     "name": "Ian Dzhumagaliev",
     "username": "dzhumagaliev",
     "title": "IM",
-    "followers": 812,
+    "followers": 844,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u041d\u043e\u0432\u043e\u0441\u0438\u0431\u0438\u0440\u0441\u043a",
-    "last_online": 1734159948,
+    "last_online": 1741598604,
     "joined": 1441255229,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 2227,
-            "date": 1707683883,
+            "date": 1739266112,
             "rd": 175
         },
         "best": {
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2490,
-            "date": 1676805541,
+            "date": 1740844602,
             "rd": 96
         },
         "best": {
@@ -73,8 +73,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2778,
-            "date": 1730267967,
+            "rating": 2764,
+            "date": 1736347222,
             "rd": 49
         },
         "best": {
@@ -84,25 +84,25 @@
         },
         "record": {
             "win": 3732,
-            "loss": 3094,
+            "loss": 3096,
             "draw": 353
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2854,
-            "date": 1734160584,
-            "rd": 25
+            "rating": 2771,
+            "date": 1741697825,
+            "rd": 26
         },
         "best": {
-            "rating": 2915,
-            "date": 1724122807,
+            "rating": 2921,
+            "date": 1739693966,
             "game": "https://www.chess.com/game/live/116128238937"
         },
         "record": {
-            "win": 7299,
-            "loss": 6305,
-            "draw": 945
+            "win": 7479,
+            "loss": 6479,
+            "draw": 969
         }
     },
     "fide": 2410,

@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/19Andi73",
     "username": "19andi73",
     "title": "CM",
-    "followers": 253,
+    "followers": 133,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1734182644,
+    "last_online": 1741703344,
     "joined": 1566380405,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2282,
-            "date": 1734063927,
-            "rd": 36
+            "rating": 2317,
+            "date": 1741702016,
+            "rd": 33
         },
         "best": {
             "rating": 2397,
@@ -26,9 +26,9 @@
             "game": "https://www.chess.com/game/live/5685971130"
         },
         "record": {
-            "win": 4272,
-            "loss": 2506,
-            "draw": 681
+            "win": 4428,
+            "loss": 2603,
+            "draw": 718
         }
     },
     "chess_blitz": {

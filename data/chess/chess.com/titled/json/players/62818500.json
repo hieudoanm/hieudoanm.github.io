@@ -6,10 +6,10 @@
     "name": "Robert D\u00edaz Villagr\u00e1n",
     "username": "doons21",
     "title": "FM",
-    "followers": 106,
+    "followers": 107,
     "country": "https://api.chess.com/pub/country/CL",
     "location": "Santiago",
-    "last_online": 1733769801,
+    "last_online": 1741566006,
     "joined": 1561852300,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2800,
-            "date": 1726194199,
-            "rd": 39
+            "rating": 2807,
+            "date": 1741442178,
+            "rd": 49
         },
         "best": {
             "rating": 2817,
@@ -45,15 +45,15 @@
             "game": "https://www.chess.com/game/live/6540286383"
         },
         "record": {
-            "win": 706,
+            "win": 707,
             "loss": 674,
             "draw": 104
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2702,
-            "date": 1726178220,
+            "rating": 2709,
+            "date": 1741532824,
             "rd": 49
         },
         "best": {
@@ -62,7 +62,7 @@
             "game": "https://www.chess.com/game/live/5149523083"
         },
         "record": {
-            "win": 956,
+            "win": 957,
             "loss": 778,
             "draw": 197
         }
@@ -70,8 +70,8 @@
     "fide": 2315,
     "tactics": {
         "highest": {
-            "rating": 2856,
-            "date": 1726101953
+            "rating": 2869,
+            "date": 1735787183
         },
         "lowest": {
             "rating": 417,

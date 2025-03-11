@@ -5,10 +5,10 @@
     "name": "Antonio Sebastian Almiron Villalba",
     "username": "sharkanto55",
     "title": "FM",
-    "followers": 122,
+    "followers": 125,
     "country": "https://api.chess.com/pub/country/PY",
     "location": "Asunci\u00f3n",
-    "last_online": 1732991029,
+    "last_online": 1741656786,
     "joined": 1391778864,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1816,
-            "date": 1708241914,
+            "date": 1739525316,
             "rd": 86
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2538,
-            "date": 1701294375,
-            "rd": 51
+            "rating": 2515,
+            "date": 1741129691,
+            "rd": 49
         },
         "best": {
             "rating": 2585,
@@ -64,32 +64,32 @@
         },
         "record": {
             "win": 178,
-            "loss": 118,
+            "loss": 120,
             "draw": 14
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2731,
-            "date": 1725819798,
-            "rd": 49
+            "rating": 2734,
+            "date": 1735317867,
+            "rd": 48
         },
         "best": {
-            "rating": 2731,
-            "date": 1725819798,
+            "rating": 2734,
+            "date": 1735317867,
             "game": "https://www.chess.com/game/live/107745194021"
         },
         "record": {
-            "win": 2473,
-            "loss": 1988,
+            "win": 2475,
+            "loss": 1989,
             "draw": 350
         }
     },
     "fide": 2366,
     "tactics": {
         "highest": {
-            "rating": 3347,
-            "date": 1696774630
+            "rating": 3354,
+            "date": 1740085615
         },
         "lowest": {
             "rating": 1323,

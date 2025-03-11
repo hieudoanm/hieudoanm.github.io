@@ -6,21 +6,21 @@
     "name": "Muhittin B\u00fcker",
     "username": "muhittinbuker",
     "title": "CM",
-    "followers": 30,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "ANKARA",
-    "last_online": 1733947837,
+    "last_online": 1741633557,
     "joined": 1589205234,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1649,
-            "date": 1733947930,
-            "rd": 77
+            "rating": 1739,
+            "date": 1741361042,
+            "rd": 156
         },
         "best": {
             "rating": 1787,
@@ -28,23 +28,17 @@
             "game": "https://www.chess.com/game/daily/391165001"
         },
         "record": {
-            "win": 35,
+            "win": 47,
             "loss": 11,
             "draw": 2,
-            "time_per_move": 18900,
+            "time_per_move": 27574,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 75
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 1769,
-            "date": 1722272522,
+            "date": 1740427200,
             "rd": 211
         },
         "best": {
@@ -77,8 +71,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2263,
-            "date": 1732053317,
+            "rating": 2216,
+            "date": 1739909741,
             "rd": 62
         },
         "best": {
@@ -87,9 +81,9 @@
             "game": "https://www.chess.com/game/live/5260589517"
         },
         "record": {
-            "win": 669,
-            "loss": 631,
-            "draw": 72
+            "win": 683,
+            "loss": 641,
+            "draw": 76
         }
     },
     "tactics": {

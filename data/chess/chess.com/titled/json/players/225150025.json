@@ -6,9 +6,9 @@
     "name": "Jacob D Yoon",
     "username": "ayellowlemon7",
     "title": "CM",
-    "followers": 27,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/NU",
-    "last_online": 1733140343,
+    "last_online": 1741366327,
     "joined": 1673653534,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1740,
-            "date": 1731965125,
+            "date": 1738444770,
             "rd": 235
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 5,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 56777,
+            "time_per_move": 79957,
             "timeout_percent": 0
         }
     },
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2432,
-            "date": 1731089721,
-            "rd": 46
+            "rating": 2403,
+            "date": 1739103272,
+            "rd": 63
         },
         "best": {
             "rating": 2576,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/68330759673"
         },
         "record": {
-            "win": 553,
-            "loss": 499,
-            "draw": 55
+            "win": 555,
+            "loss": 503,
+            "draw": 56
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2433,
-            "date": 1733016345,
-            "rd": 57
+            "rating": 2384,
+            "date": 1741276149,
+            "rd": 60
         },
         "best": {
             "rating": 2503,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/112726820045"
         },
         "record": {
-            "win": 549,
-            "loss": 501,
-            "draw": 63
+            "win": 561,
+            "loss": 517,
+            "draw": 65
         }
     },
     "tactics": {

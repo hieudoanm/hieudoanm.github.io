@@ -6,10 +6,10 @@
     "name": "Sebastian Mihajlov",
     "username": "captaincasanova",
     "title": "IM",
-    "followers": 314,
+    "followers": 313,
     "country": "https://api.chess.com/pub/country/MH",
     "location": "Oslo",
-    "last_online": 1720492360,
+    "last_online": 1737236336,
     "joined": 1433180729,
     "status": "staff",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1660,
-            "date": 1711662686,
+            "date": 1738747712,
             "rd": 78
         },
         "best": {

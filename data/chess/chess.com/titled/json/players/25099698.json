@@ -9,7 +9,7 @@
     "followers": 51,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Myrhorod",
-    "last_online": 1734112521,
+    "last_online": 1741689737,
     "joined": 1447697949,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2065,
-            "date": 1734113189,
+            "rating": 2064,
+            "date": 1735495163,
             "rd": 49
         },
         "best": {
@@ -28,8 +28,8 @@
             "game": "https://www.chess.com/game/live/110397120229"
         },
         "record": {
-            "win": 16,
-            "loss": 1,
+            "win": 18,
+            "loss": 3,
             "draw": 0
         }
     },

@@ -6,10 +6,10 @@
     "name": "MEHDI HASAN PARAG",
     "username": "mehdi_hasanparag",
     "title": "FM",
-    "followers": 122,
+    "followers": 129,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Dhaka",
-    "last_online": 1734156395,
+    "last_online": 1741674991,
     "joined": 1406530821,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2326,
-            "date": 1700152048,
+            "date": 1740116499,
             "rd": 151
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2389,
-            "date": 1734071126,
-            "rd": 39
+            "rating": 2339,
+            "date": 1740847286,
+            "rd": 43
         },
         "best": {
             "rating": 2552,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/4268942389"
         },
         "record": {
-            "win": 6004,
-            "loss": 6532,
-            "draw": 783
+            "win": 6046,
+            "loss": 6575,
+            "draw": 788
         }
     },
     "fide": 2357,

@@ -5,10 +5,10 @@
     "name": "Dorel Oltean",
     "username": "odcj",
     "title": "IM",
-    "followers": 16,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Cluj-Napoca",
-    "last_online": 1734151311,
+    "last_online": 1741621439,
     "joined": 1665815709,
     "status": "premium",
     "is_streamer": false,
@@ -29,9 +29,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2316,
-            "date": 1734152085,
-            "rd": 24
+            "rating": 2423,
+            "date": 1741680615,
+            "rd": 29
         },
         "best": {
             "rating": 2525,
@@ -39,15 +39,15 @@
             "game": "https://www.chess.com/game/live/94636177733"
         },
         "record": {
-            "win": 3669,
-            "loss": 2854,
-            "draw": 385
+            "win": 3885,
+            "loss": 3024,
+            "draw": 404
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3225,
-            "date": 1731779977
+            "rating": 3283,
+            "date": 1741463096
         },
         "lowest": {
             "rating": 985,

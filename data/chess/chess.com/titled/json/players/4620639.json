@@ -8,7 +8,7 @@
     "followers": 64,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Bastia",
-    "last_online": 1734080527,
+    "last_online": 1740687233,
     "joined": 1296150809,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2618,
-            "date": 1677936621,
-            "rd": 164
+            "rating": 2608,
+            "date": 1738596485,
+            "rd": 49
         },
         "best": {
             "rating": 2618,
@@ -81,7 +81,7 @@
         },
         "record": {
             "win": 585,
-            "loss": 247,
+            "loss": 248,
             "draw": 39
         }
     },

@@ -6,7 +6,7 @@
     "name": "Hernan Catelli",
     "username": "hernancatelli",
     "title": "CM",
-    "followers": 23,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Junin",
     "last_online": 1734132449,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2536,
-            "date": 1734135196,
-            "rd": 46
+            "rating": 2404,
+            "date": 1741688480,
+            "rd": 36
         },
         "best": {
             "rating": 2625,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/80862159457"
         },
         "record": {
-            "win": 2540,
-            "loss": 2401,
-            "draw": 328
+            "win": 2625,
+            "loss": 2496,
+            "draw": 335
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3270,
-            "date": 1679828165
+            "rating": 3306,
+            "date": 1734493026
         },
         "lowest": {
             "rating": 1211,

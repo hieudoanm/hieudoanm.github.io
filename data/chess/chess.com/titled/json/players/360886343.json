@@ -2,11 +2,12 @@
     "player_id": 360886343,
     "@id": "https://api.chess.com/pub/player/dangerouscm",
     "url": "https://www.chess.com/member/dangerousCM",
+    "name": "Odongo Lwanga",
     "username": "dangerouscm",
     "title": "CM",
-    "followers": 24,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734174447,
+    "last_online": 1736265769,
     "joined": 1714719777,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2280,
-            "date": 1734116468,
-            "rd": 33
+            "rating": 2300,
+            "date": 1735995032,
+            "rd": 36
         },
         "best": {
             "rating": 2368,
@@ -25,16 +26,16 @@
             "game": "https://www.chess.com/game/live/126807050285"
         },
         "record": {
-            "win": 103,
-            "loss": 71,
-            "draw": 29
+            "win": 118,
+            "loss": 80,
+            "draw": 40
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1309,
-            "date": 1733544784,
-            "rd": 57
+            "rating": 1330,
+            "date": 1735570057,
+            "rd": 61
         },
         "best": {
             "rating": 1723,
@@ -42,26 +43,26 @@
             "game": "https://www.chess.com/game/live/110310164497"
         },
         "record": {
-            "win": 59,
+            "win": 61,
             "loss": 105,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1685,
-            "date": 1734082117,
-            "rd": 39
+            "rating": 1735,
+            "date": 1736273343,
+            "rd": 47
         },
         "best": {
             "rating": 2001,
             "date": 1723630277,
-            "game": "https://www.chess.com/game/live/117367804933"
+            "game": "https://www.chess.com/game/live/130007419723"
         },
         "record": {
-            "win": 120,
-            "loss": 139,
-            "draw": 14
+            "win": 124,
+            "loss": 143,
+            "draw": 15
         }
     },
     "tactics": {
@@ -78,10 +79,6 @@
         "best": {
             "total_attempts": 47,
             "score": 44
-        },
-        "daily": {
-            "total_attempts": 24,
-            "score": 21
         }
     }
 }

@@ -6,14 +6,14 @@
     "name": "Valery Kazantsev",
     "username": "kazancev_valerij_m",
     "title": "FM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/HN",
-    "last_online": 1732627996,
+    "last_online": 1739416176,
     "joined": 1501754571,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess960_daily": {
         "last": {
@@ -70,9 +70,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2420,
-            "date": 1715704243,
-            "rd": 66
+            "rating": 2515,
+            "date": 1739626954
         },
         "best": {
             "rating": 2574,
@@ -80,9 +79,9 @@
             "game": "https://www.chess.com/game/live/37651223569"
         },
         "record": {
-            "win": 1418,
-            "loss": 705,
-            "draw": 88
+            "win": 1478,
+            "loss": 715,
+            "draw": 93
         }
     },
     "fide": 2313,

@@ -7,7 +7,7 @@
     "followers": 10,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Arizona",
-    "last_online": 1734049197,
+    "last_online": 1735346866,
     "joined": 1246037100,
     "status": "premium",
     "is_streamer": false,
@@ -86,8 +86,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3144,
-            "date": 1734052196
+            "rating": 3277,
+            "date": 1741146584
         },
         "lowest": {
             "rating": 1373,

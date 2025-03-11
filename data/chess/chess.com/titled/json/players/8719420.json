@@ -6,10 +6,10 @@
     "name": "Kazim Gulamali",
     "username": "gulamalirises",
     "title": "FM",
-    "followers": 466,
+    "followers": 488,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Georgia",
-    "last_online": 1734068487,
+    "last_online": 1741660129,
     "joined": 1346268913,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2816,
-            "date": 1733097985,
-            "rd": 41
+            "rating": 2818,
+            "date": 1736614915,
+            "rd": 45
         },
         "best": {
             "rating": 2955,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/124912122201"
         },
         "record": {
-            "win": 3182,
-            "loss": 3207,
+            "win": 3189,
+            "loss": 3214,
             "draw": 417
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2833,
-            "date": 1733879435,
-            "rd": 24
+            "rating": 2800,
+            "date": 1741511131,
+            "rd": 41
         },
         "best": {
-            "rating": 2876,
-            "date": 1732033071,
+            "rating": 2877,
+            "date": 1737854456,
             "game": "https://www.chess.com/game/live/115656002275"
         },
         "record": {
-            "win": 2499,
-            "loss": 2652,
-            "draw": 367
+            "win": 2675,
+            "loss": 2831,
+            "draw": 402
         }
     },
     "fide": 2419,

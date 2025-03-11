@@ -5,9 +5,9 @@
     "name": "Daniel Centron Antuna",
     "username": "dacean99",
     "title": "FM",
-    "followers": 57,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734113017,
+    "last_online": 1741703389,
     "joined": 1504778037,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2253,
-            "date": 1730229034,
+            "date": 1737288095,
             "rd": 49
         },
         "best": {
@@ -45,7 +45,7 @@
             "game": "https://www.chess.com/game/live/45430173685"
         },
         "record": {
-            "win": 43,
+            "win": 45,
             "loss": 14,
             "draw": 7
         }
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2590,
-            "date": 1725379597,
-            "rd": 49
+            "rating": 2627,
+            "date": 1741111950,
+            "rd": 42
         },
         "best": {
             "rating": 2715,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/110670745509"
         },
         "record": {
-            "win": 1079,
-            "loss": 887,
-            "draw": 172
+            "win": 1127,
+            "loss": 912,
+            "draw": 174
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "\u041e\u043b\u0435\u0433 \u041a\u0438\u0441\u043b\u043e\u0432",
     "username": "kislov_oleg",
     "title": "FM",
-    "followers": 192,
+    "followers": 191,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u0411\u0440\u044e\u0441\u0441\u0435\u043b\u044c",
-    "last_online": 1733915678,
+    "last_online": 1741543819,
     "joined": 1454181125,
     "status": "premium",
     "is_streamer": false,
@@ -57,8 +57,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2332,
-            "date": 1697400351,
-            "rd": 136
+            "date": 1740466898,
+            "rd": 49
         },
         "best": {
             "rating": 2437,
@@ -66,7 +66,7 @@
             "game": "https://www.chess.com/game/live/41428794471"
         },
         "record": {
-            "win": 188,
+            "win": 189,
             "loss": 65,
             "draw": 23
         }
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2509,
-            "date": 1724778611,
-            "rd": 44
+            "rating": 2490,
+            "date": 1739899373,
+            "rd": 47
         },
         "best": {
             "rating": 2609,
@@ -100,8 +100,8 @@
             "game": "https://www.chess.com/game/live/6578966057"
         },
         "record": {
-            "win": 1491,
-            "loss": 1015,
+            "win": 1493,
+            "loss": 1020,
             "draw": 308
         }
     },

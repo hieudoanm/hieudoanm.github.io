@@ -6,10 +6,10 @@
     "name": "Maksim Tsaruk",
     "username": "tsaruk_maks",
     "title": "IM",
-    "followers": 41,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/XX",
     "location": "\u041c\u0438\u043d\u0441\u043a",
-    "last_online": 1734082157,
+    "last_online": 1741683814,
     "joined": 1587840582,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2407,
-            "date": 1726859222,
-            "rd": 46
+            "rating": 2433,
+            "date": 1740949162,
+            "rd": 49
         },
         "best": {
             "rating": 2432,
@@ -47,50 +47,50 @@
             "game": "https://www.chess.com/game/live/4929022359"
         },
         "record": {
-            "win": 29,
-            "loss": 8,
-            "draw": 9
+            "win": 35,
+            "loss": 9,
+            "draw": 13
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2809,
-            "date": 1728548265,
-            "rd": 39
+            "rating": 2901,
+            "date": 1738063384,
+            "rd": 35
         },
         "best": {
-            "rating": 2834,
-            "date": 1723362317,
+            "rating": 2910,
+            "date": 1737541922,
             "game": "https://www.chess.com/game/live/122155138645"
         },
         "record": {
-            "win": 189,
-            "loss": 177,
-            "draw": 30
+            "win": 239,
+            "loss": 199,
+            "draw": 31
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2871,
-            "date": 1734087023,
-            "rd": 48
+            "rating": 2926,
+            "date": 1738084478,
+            "rd": 39
         },
         "best": {
             "rating": 3012,
             "date": 1729611770,
-            "game": "https://www.chess.com/game/live/115843867931"
+            "game": "https://www.chess.com/game/live/129703151817"
         },
         "record": {
-            "win": 1444,
-            "loss": 1089,
-            "draw": 259
+            "win": 1510,
+            "loss": 1135,
+            "draw": 266
         }
     },
     "fide": 2480,
     "tactics": {
         "highest": {
-            "rating": 3839,
-            "date": 1693893861
+            "rating": 4030,
+            "date": 1737903906
         },
         "lowest": {
             "rating": 1018,

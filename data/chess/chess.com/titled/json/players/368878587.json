@@ -5,9 +5,9 @@
     "name": "Vitaliy Garbuz",
     "username": "cochess777",
     "title": "CM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1732053226,
+    "last_online": 1740592154,
     "joined": 1718060081,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2390,
-            "date": 1732060845,
-            "rd": 49
+            "rating": 2408,
+            "date": 1735085101,
+            "rd": 54
         },
         "best": {
             "rating": 2474,
@@ -43,8 +43,8 @@
             "game": "https://www.chess.com/game/live/119136036465"
         },
         "record": {
-            "win": 89,
-            "loss": 74,
+            "win": 94,
+            "loss": 80,
             "draw": 6
         }
     },

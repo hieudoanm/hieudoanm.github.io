@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23696936.7c348318.200x200o.4cdb3d5e9275.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23696936.642ff798.200x200o.607dfca3ba09.png",
     "player_id": 23696936,
-    "@id": "https://api.chess.com/pub/player/axel_legend",
-    "url": "https://www.chess.com/member/Axel_Legend",
+    "@id": "https://api.chess.com/pub/player/lucasmito",
+    "url": "https://www.chess.com/member/lucasmito",
     "name": "Lucas Do Valle Cardoso",
-    "username": "axel_legend",
+    "username": "lucasmito",
     "title": "FM",
-    "followers": 806,
-    "country": "https://api.chess.com/pub/country/PY",
-    "location": "Ciudad del Este",
-    "last_online": 1733716469,
+    "followers": 840,
+    "country": "https://api.chess.com/pub/country/BR",
+    "location": "Brasil",
+    "last_online": 1741660133,
     "joined": 1439753855,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1755,
-            "date": 1704638317,
+            "date": 1736242122,
             "rd": 125
         },
         "best": {
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2764,
-            "date": 1730986788,
-            "rd": 16
+            "rating": 2860,
+            "date": 1741661667,
+            "rd": 21
         },
         "best": {
-            "rating": 2955,
-            "date": 1730538902,
-            "game": "https://www.chess.com/game/live/111001919213"
+            "rating": 2956,
+            "date": 1740687572,
+            "game": "https://www.chess.com/game/live/134538541557"
         },
         "record": {
-            "win": 17539,
-            "loss": 13623,
-            "draw": 1449
+            "win": 17989,
+            "loss": 14148,
+            "draw": 1488
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2729,
-            "date": 1732107888,
-            "rd": 28
+            "rating": 2769,
+            "date": 1741662718,
+            "rd": 27
         },
         "best": {
             "rating": 2899,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/109459898005"
         },
         "record": {
-            "win": 15564,
-            "loss": 13958,
-            "draw": 2042
+            "win": 15774,
+            "loss": 14179,
+            "draw": 2081
         }
     },
     "fide": 2341,

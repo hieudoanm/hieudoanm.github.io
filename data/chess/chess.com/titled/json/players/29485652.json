@@ -6,9 +6,9 @@
     "name": "Fahid Mohammad",
     "username": "staz_staz",
     "title": "FM",
-    "followers": 53,
+    "followers": 54,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734142998,
+    "last_online": 1740511981,
     "joined": 1471230893,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2268,
-            "date": 1733342118,
-            "rd": 57
+            "rating": 2239,
+            "date": 1738092784,
+            "rd": 63
         },
         "best": {
             "rating": 2440,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/3119436658"
         },
         "record": {
-            "win": 463,
-            "loss": 432,
+            "win": 465,
+            "loss": 436,
             "draw": 56
         }
     },

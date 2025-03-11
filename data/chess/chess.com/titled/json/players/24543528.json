@@ -6,10 +6,10 @@
     "name": "Sascha Grimm",
     "username": "hornsounder",
     "title": "FM",
-    "followers": 36,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "K&ouml;ln",
-    "last_online": 1734002244,
+    "last_online": 1741427332,
     "joined": 1444666058,
     "status": "premium",
     "is_streamer": false,
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2502,
-            "date": 1733330182,
-            "rd": 38
+            "rating": 2474,
+            "date": 1741702965,
+            "rd": 46
         },
         "best": {
-            "rating": 2532,
-            "date": 1716118721,
+            "rating": 2544,
+            "date": 1735303969,
             "game": "https://www.chess.com/game/live/108552021573"
         },
         "record": {
-            "win": 2390,
-            "loss": 1840,
-            "draw": 295
+            "win": 2405,
+            "loss": 1855,
+            "draw": 297
         }
     },
     "fide": 2358,

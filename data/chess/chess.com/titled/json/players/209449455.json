@@ -5,9 +5,9 @@
     "name": "Yerkin Kozganbay",
     "username": "yerkinio",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734120745,
+    "last_online": 1741672386,
     "joined": 1669795241,
     "status": "premium",
     "is_streamer": false,
@@ -26,21 +26,38 @@
             "draw": 1
         }
     },
+    "chess_bullet": {
+        "last": {
+            "rating": 2458,
+            "date": 1738324895,
+            "rd": 246
+        },
+        "best": {
+            "rating": 2458,
+            "date": 1738324895,
+            "game": "https://www.chess.com/game/live/132063660135"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
     "chess_blitz": {
         "last": {
-            "rating": 2711,
-            "date": 1734091634,
-            "rd": 30
+            "rating": 2709,
+            "date": 1741694120,
+            "rd": 23
         },
         "best": {
             "rating": 2877,
             "date": 1692029537,
-            "game": "https://www.chess.com/game/live/108231709441"
+            "game": "https://www.chess.com/game/live/130007418299"
         },
         "record": {
-            "win": 1888,
-            "loss": 1621,
-            "draw": 377
+            "win": 2248,
+            "loss": 1930,
+            "draw": 464
         }
     },
     "fide": 2282,
@@ -56,8 +73,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 62,
-            "score": 59
+            "total_attempts": 64,
+            "score": 61
         }
     }
 }

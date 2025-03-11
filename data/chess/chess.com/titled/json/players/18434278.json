@@ -6,9 +6,9 @@
     "name": "Joseph Zeltsan",
     "username": "thecavemanchess",
     "title": "IM",
-    "followers": 101,
+    "followers": 104,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734051687,
+    "last_online": 1741702504,
     "joined": 1407680783,
     "status": "premium",
     "is_streamer": false,
@@ -53,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2597,
-            "date": 1721768288,
-            "rd": 49
+            "rating": 2614,
+            "date": 1738023695,
+            "rd": 37
         },
         "best": {
-            "rating": 2597,
-            "date": 1709683475,
-            "game": "https://www.chess.com/game/live/99858657427"
+            "rating": 2639,
+            "date": 1738007514,
+            "game": "https://www.chess.com/game/live/131745653361"
         },
         "record": {
-            "win": 1014,
-            "loss": 732,
-            "draw": 50
+            "win": 1044,
+            "loss": 759,
+            "draw": 51
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2636,
-            "date": 1734078487,
-            "rd": 33
+            "rating": 2746,
+            "date": 1741703747,
+            "rd": 38
         },
         "best": {
             "rating": 2864,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/107754116365"
         },
         "record": {
-            "win": 11366,
-            "loss": 10685,
-            "draw": 1016
+            "win": 11796,
+            "loss": 11096,
+            "draw": 1067
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3629,
-            "date": 1713742805
+            "rating": 3640,
+            "date": 1738192396
         },
         "lowest": {
             "rating": 1306,

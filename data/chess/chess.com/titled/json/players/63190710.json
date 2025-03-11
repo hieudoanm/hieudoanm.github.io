@@ -6,9 +6,9 @@
     "name": "Ana-Maria Sava",
     "username": "bushonica",
     "title": "WCM",
-    "followers": 27,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1732121901,
+    "last_online": 1735398221,
     "joined": 1562866167,
     "status": "premium",
     "is_streamer": false,
@@ -31,9 +31,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1977,
-            "date": 1707520231,
-            "rd": 154
+            "rating": 1796,
+            "date": 1738704887,
+            "rd": 187
         },
         "best": {
             "rating": 1977,
@@ -41,8 +41,8 @@
             "game": "https://www.chess.com/game/live/98512448777"
         },
         "record": {
-            "win": 7,
-            "loss": 1,
+            "win": 15,
+            "loss": 2,
             "draw": 0
         }
     },

@@ -6,10 +6,10 @@
     "name": "Vaclav Finek",
     "username": "vasblesk",
     "title": "IM",
-    "followers": 117,
+    "followers": 120,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Liberec",
-    "last_online": 1734027938,
+    "last_online": 1739729780,
     "joined": 1524713127,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2099,
-            "date": 1734041990,
-            "rd": 94
+            "rating": 2101,
+            "date": 1741618075,
+            "rd": 104
         },
         "best": {
-            "rating": 2099,
-            "date": 1733724248,
+            "rating": 2101,
+            "date": 1739111835,
             "game": "https://www.chess.com/game/daily/269849914"
         },
         "record": {
-            "win": 696,
+            "win": 699,
             "loss": 179,
             "draw": 88,
-            "time_per_move": 51866,
+            "time_per_move": 51812,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 38,
             "loss": 18,
             "draw": 2,
-            "time_per_move": 51866,
+            "time_per_move": 51812,
             "timeout_percent": 0
         }
     },

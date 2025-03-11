@@ -6,10 +6,10 @@
     "name": "Steve Berger",
     "username": "drbergerberger",
     "title": "IM",
-    "followers": 1044,
+    "followers": 1094,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Berlin",
-    "last_online": 1734101027,
+    "last_online": 1741625356,
     "joined": 1540193768,
     "status": "staff",
     "is_streamer": true,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2543,
-            "date": 1734102904,
-            "rd": 27
+            "rating": 2602,
+            "date": 1741626323,
+            "rd": 18
         },
         "best": {
             "rating": 2682,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/56297659985"
         },
         "record": {
-            "win": 11783,
-            "loss": 10990,
-            "draw": 1783
+            "win": 12684,
+            "loss": 11843,
+            "draw": 1940
         }
     },
     "fide": 2408,
     "tactics": {
         "highest": {
-            "rating": 3760,
-            "date": 1727100949
+            "rating": 3910,
+            "date": 1740419252
         },
         "lowest": {
             "rating": 1215,

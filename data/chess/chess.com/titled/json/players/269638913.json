@@ -5,9 +5,9 @@
     "name": "Sebastian  Zsombor Peczely",
     "username": "zsizsi99",
     "title": "FM",
-    "followers": 1,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1733241359,
+    "last_online": 1740520619,
     "joined": 1680343324,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2532,
-            "date": 1733246282,
-            "rd": 47
+            "rating": 2559,
+            "date": 1740524689,
+            "rd": 48
         },
         "best": {
             "rating": 2592,
@@ -26,9 +26,9 @@
             "game": "https://www.chess.com/game/live/122160005881"
         },
         "record": {
-            "win": 82,
-            "loss": 108,
-            "draw": 11
+            "win": 93,
+            "loss": 118,
+            "draw": 12
         }
     },
     "fide": 0,

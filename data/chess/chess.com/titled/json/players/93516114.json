@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Josey_Wales2020",
     "username": "josey_wales2020",
     "title": "FM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1733777897,
+    "last_online": 1741542558,
     "joined": 1603201451,
     "status": "premium",
     "is_streamer": false,
@@ -15,8 +15,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2367,
-            "date": 1719521205,
+            "rating": 2387,
+            "date": 1739307093,
             "rd": 49
         },
         "best": {
@@ -25,7 +25,7 @@
             "game": "https://www.chess.com/game/live/101596387715"
         },
         "record": {
-            "win": 22,
+            "win": 25,
             "loss": 18,
             "draw": 0
         }
@@ -49,9 +49,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2061,
-            "date": 1733746236,
-            "rd": 37
+            "rating": 2092,
+            "date": 1741545698,
+            "rd": 44
         },
         "best": {
             "rating": 2306,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/108655772889"
         },
         "record": {
-            "win": 1075,
-            "loss": 970,
-            "draw": 52
+            "win": 1143,
+            "loss": 1027,
+            "draw": 55
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3392,
-            "date": 1718382850
+            "rating": 3398,
+            "date": 1739307331
         },
         "lowest": {
             "rating": 1209,

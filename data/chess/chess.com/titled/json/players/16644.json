@@ -6,10 +6,10 @@
     "name": "Sunil Weeramantry",
     "username": "sunil",
     "title": "FM",
-    "followers": 179,
+    "followers": 205,
     "country": "https://api.chess.com/pub/country/US",
     "location": "White Plains, New York",
-    "last_online": 1734154642,
+    "last_online": 1741668553,
     "joined": 1185954947,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2054,
-            "date": 1734021590,
+            "date": 1740490440,
             "rd": 293
         },
         "best": {
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1658,
-            "date": 1734155306,
-            "rd": 19
+            "rating": 1386,
+            "date": 1741670153,
+            "rd": 15
         },
         "best": {
             "rating": 2058,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/79585801261"
         },
         "record": {
-            "win": 35666,
-            "loss": 33852,
-            "draw": 1400
+            "win": 39019,
+            "loss": 37172,
+            "draw": 1500
         }
     },
     "chess_blitz": {

@@ -6,9 +6,9 @@
     "name": "Jacob Templen Grave",
     "username": "jacksterthepro",
     "title": "FM",
-    "followers": 132,
+    "followers": 134,
     "country": "https://api.chess.com/pub/country/NO",
-    "last_online": 1733922077,
+    "last_online": 1741624851,
     "joined": 1478010533,
     "status": "premium",
     "is_streamer": false,
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2558,
-            "date": 1732993029,
-            "rd": 44
+            "rating": 2523,
+            "date": 1741460348,
+            "rd": 48
         },
         "best": {
             "rating": 2607,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/126731970775"
         },
         "record": {
-            "win": 2875,
-            "loss": 2705,
-            "draw": 271
+            "win": 2888,
+            "loss": 2717,
+            "draw": 274
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2481,
-            "date": 1733850455,
-            "rd": 53
+            "rating": 2427,
+            "date": 1740495344,
+            "rd": 63
         },
         "best": {
             "rating": 2613,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/4070231150"
         },
         "record": {
-            "win": 4190,
-            "loss": 3721,
-            "draw": 732
+            "win": 4195,
+            "loss": 3728,
+            "draw": 734
         }
     },
     "fide": 0,

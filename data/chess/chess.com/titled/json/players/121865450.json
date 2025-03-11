@@ -5,9 +5,9 @@
     "name": "Marius Fromm",
     "username": "bescmelasti",
     "title": "IM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734045790,
+    "last_online": 1741287315,
     "joined": 1613575616,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2632,
-            "date": 1726162080,
-            "rd": 42
+            "rating": 2641,
+            "date": 1737132869,
+            "rd": 47
         },
         "best": {
             "rating": 2986,
@@ -26,16 +26,16 @@
             "game": "https://www.chess.com/game/live/81336135887"
         },
         "record": {
-            "win": 23,
-            "loss": 27,
-            "draw": 2
+            "win": 26,
+            "loss": 29,
+            "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2732,
-            "date": 1734047335,
-            "rd": 42
+            "rating": 2611,
+            "date": 1740174725,
+            "rd": 40
         },
         "best": {
             "rating": 2808,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/119992869967"
         },
         "record": {
-            "win": 460,
-            "loss": 400,
-            "draw": 96
+            "win": 523,
+            "loss": 467,
+            "draw": 108
         }
     },
     "fide": 0,

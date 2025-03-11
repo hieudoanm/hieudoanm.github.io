@@ -6,9 +6,9 @@
     "name": "Sergey Rodchenkov",
     "username": "sergey85rodchenkov",
     "title": "IM",
-    "followers": 94,
+    "followers": 95,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1729861701,
+    "last_online": 1740481790,
     "joined": 1575324045,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2561,
-            "date": 1729360350,
-            "rd": 45
+            "rating": 2536,
+            "date": 1736268472,
+            "rd": 48
         },
         "best": {
             "rating": 2621,
@@ -58,8 +58,8 @@
             "game": "https://www.chess.com/game/live/81617068879"
         },
         "record": {
-            "win": 1364,
-            "loss": 1331,
+            "win": 1365,
+            "loss": 1336,
             "draw": 282
         }
     },

@@ -6,9 +6,9 @@
     "name": "Nurgyul Salimova",
     "username": "nurgyulsalimova",
     "title": "IM",
-    "followers": 2113,
+    "followers": 2143,
     "country": "https://api.chess.com/pub/country/BG",
-    "last_online": 1734165231,
+    "last_online": 1741700072,
     "joined": 1481749130,
     "status": "premium",
     "is_streamer": false,
@@ -53,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2879,
-            "date": 1734049748,
-            "rd": 26
+            "rating": 2812,
+            "date": 1739314492,
+            "rd": 24
         },
         "best": {
-            "rating": 2884,
-            "date": 1727291520,
+            "rating": 2915,
+            "date": 1736368656,
             "game": "https://www.chess.com/game/live/81970182899"
         },
         "record": {
-            "win": 1846,
-            "loss": 1503,
-            "draw": 284
+            "win": 1968,
+            "loss": 1593,
+            "draw": 301
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2735,
-            "date": 1733603955,
-            "rd": 42
+            "rating": 2759,
+            "date": 1741685700,
+            "rd": 33
         },
         "best": {
             "rating": 2836,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/84060627583"
         },
         "record": {
-            "win": 2582,
-            "loss": 2651,
-            "draw": 635
+            "win": 2704,
+            "loss": 2739,
+            "draw": 657
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3703,
-            "date": 1733614432
+            "rating": 3725,
+            "date": 1739406370
         },
         "lowest": {
             "rating": 1044,

@@ -8,18 +8,18 @@
     "title": "WCM",
     "followers": 27,
     "country": "https://api.chess.com/pub/country/AE",
-    "last_online": 1734173453,
+    "last_online": 1740908033,
     "joined": 1588087620,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1000,
-            "date": 1733710082,
-            "rd": 100
+            "rating": 1080,
+            "date": 1739673680,
+            "rd": 86
         },
         "best": {
             "rating": 1399,
@@ -27,8 +27,8 @@
             "game": "https://www.chess.com/game/live/5158042426"
         },
         "record": {
-            "win": 44,
-            "loss": 31,
+            "win": 49,
+            "loss": 33,
             "draw": 7
         }
     },
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1131,
-            "date": 1728411083,
-            "rd": 121
+            "rating": 1222,
+            "date": 1741632283,
+            "rd": 44
         },
         "best": {
             "rating": 1652,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/13282406411"
         },
         "record": {
-            "win": 135,
-            "loss": 118,
-            "draw": 12
+            "win": 174,
+            "loss": 155,
+            "draw": 17
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2133,
-            "date": 1733968396
+            "rating": 2241,
+            "date": 1740465789
         },
         "lowest": {
             "rating": 818,

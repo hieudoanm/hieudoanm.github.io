@@ -6,9 +6,9 @@
     "name": "Hugo de Melo Lux",
     "username": "aymiteck",
     "title": "FM",
-    "followers": 44,
+    "followers": 46,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734009788,
+    "last_online": 1741538149,
     "joined": 1461008979,
     "status": "premium",
     "is_streamer": false,
@@ -35,7 +35,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2507,
-            "date": 1730729535,
+            "date": 1740155222,
             "rd": 46
         },
         "best": {
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2607,
-            "date": 1731535237,
+            "date": 1740155484,
             "rd": 49
         },
         "best": {

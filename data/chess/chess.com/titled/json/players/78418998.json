@@ -6,9 +6,9 @@
     "name": "Dachey Lin",
     "username": "1800_strength",
     "title": "FM",
-    "followers": 413,
+    "followers": 420,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733955108,
+    "last_online": 1741629098,
     "joined": 1588446399,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2932,
-            "date": 1733957142,
-            "rd": 30
+            "rating": 3015,
+            "date": 1740179236,
+            "rd": 25
         },
         "best": {
             "rating": 3014,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/85600194685"
         },
         "record": {
-            "win": 7620,
-            "loss": 4853,
-            "draw": 746
+            "win": 7930,
+            "loss": 5082,
+            "draw": 775
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2831,
-            "date": 1733628330,
-            "rd": 28
+            "rating": 2752,
+            "date": 1741629667,
+            "rd": 30
         },
         "best": {
             "rating": 2959,
@@ -79,16 +79,16 @@
             "game": "https://www.chess.com/game/live/121833568363"
         },
         "record": {
-            "win": 5080,
-            "loss": 3496,
-            "draw": 669
+            "win": 5388,
+            "loss": 3662,
+            "draw": 709
         }
     },
-    "fide": 2303,
+    "fide": 2307,
     "tactics": {
         "highest": {
-            "rating": 3672,
-            "date": 1728018416
+            "rating": 3728,
+            "date": 1739494615
         },
         "lowest": {
             "rating": 415,

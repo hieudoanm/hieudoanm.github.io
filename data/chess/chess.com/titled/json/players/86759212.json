@@ -6,9 +6,9 @@
     "name": "Vicy",
     "username": "victoria_kaslan",
     "title": "WCM",
-    "followers": 24,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/SR",
-    "last_online": 1734178632,
+    "last_online": 1741663251,
     "joined": 1594822800,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1630,
-            "date": 1711538639,
-            "rd": 97
+            "rating": 1665,
+            "date": 1737340319,
+            "rd": 130
         },
         "best": {
             "rating": 1774,
@@ -63,7 +63,7 @@
             "game": "https://www.chess.com/game/live/67818750293"
         },
         "record": {
-            "win": 32,
+            "win": 33,
             "loss": 44,
             "draw": 2
         }

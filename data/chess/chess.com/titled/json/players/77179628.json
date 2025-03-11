@@ -6,9 +6,9 @@
     "name": "Aleksandar Topalov",
     "username": "bobbyfischer1508",
     "title": "CM",
-    "followers": 10,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/EC",
-    "last_online": 1734170160,
+    "last_online": 1741374418,
     "joined": 1587292310,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2543,
-            "date": 1721403423,
+            "rating": 2531,
+            "date": 1736466717,
             "rd": 49
         },
         "best": {
@@ -28,25 +28,25 @@
         },
         "record": {
             "win": 1,
-            "loss": 1,
+            "loss": 2,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2402,
-            "date": 1734039911,
-            "rd": 44
+            "rating": 2398,
+            "date": 1740292483,
+            "rd": 42
         },
         "best": {
             "rating": 2538,
             "date": 1720172477,
-            "game": "https://www.chess.com/game/live/110875223829"
+            "game": "https://www.chess.com/game/live/131236235881"
         },
         "record": {
-            "win": 793,
-            "loss": 771,
-            "draw": 195
+            "win": 843,
+            "loss": 838,
+            "draw": 212
         }
     },
     "tactics": {

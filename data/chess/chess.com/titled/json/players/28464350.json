@@ -6,10 +6,10 @@
     "name": "Julijan Plen\u010da",
     "username": "julijanplenca",
     "title": "IM",
-    "followers": 40,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Hamburg",
-    "last_online": 1734036737,
+    "last_online": 1739907283,
     "joined": 1464885726,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2674,
-            "date": 1734135250,
-            "rd": 29
+            "rating": 2682,
+            "date": 1741032234,
+            "rd": 42
         },
         "best": {
             "rating": 2798,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/123288047785"
         },
         "record": {
-            "win": 1276,
-            "loss": 1173,
-            "draw": 201
+            "win": 1324,
+            "loss": 1219,
+            "draw": 211
         }
     },
     "fide": 2405,

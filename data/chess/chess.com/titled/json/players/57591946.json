@@ -1,24 +1,26 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/57591946.3b04e975.200x200o.3ec4bf8f7e1b.jpg",
     "player_id": 57591946,
     "@id": "https://api.chess.com/pub/player/asianmaster2501",
     "url": "https://www.chess.com/member/AsianMaster2501",
     "name": "Aayush Bhattacherjee",
     "username": "asianmaster2501",
     "title": "FM",
-    "followers": 143,
+    "followers": 162,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734009889,
+    "location": "Kolkata",
+    "last_online": 1741589037,
     "joined": 1550676615,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1295,
-            "date": 1733844425,
-            "rd": 117
+            "rating": 1407,
+            "date": 1741536614,
+            "rd": 148
         },
         "best": {
             "rating": 1800,
@@ -26,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/233063316"
         },
         "record": {
-            "win": 10,
+            "win": 15,
             "loss": 12,
             "draw": 2,
-            "time_per_move": 85479,
+            "time_per_move": 93859,
             "timeout_percent": 0
         }
     },
@@ -43,15 +45,15 @@
             "win": 0,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 85479,
+            "time_per_move": 93859,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1656,
-            "date": 1733789727,
-            "rd": 169
+            "rating": 1657,
+            "date": 1741458767,
+            "rd": 204
         },
         "best": {
             "rating": 1764,
@@ -59,46 +61,46 @@
             "game": "https://www.chess.com/game/live/4040449383"
         },
         "record": {
-            "win": 13,
+            "win": 14,
             "loss": 10,
             "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2383,
-            "date": 1729528350,
-            "rd": 75
+            "rating": 2458,
+            "date": 1741511842,
+            "rd": 41
         },
         "best": {
-            "rating": 2451,
-            "date": 1710652629,
+            "rating": 2474,
+            "date": 1737291467,
             "game": "https://www.chess.com/game/live/101650996773"
         },
         "record": {
-            "win": 577,
-            "loss": 365,
-            "draw": 56
+            "win": 648,
+            "loss": 415,
+            "draw": 62
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2223,
-            "date": 1733848487,
-            "rd": 126
+            "rating": 2300,
+            "date": 1740616406,
+            "rd": 108
         },
         "best": {
-            "rating": 2322,
-            "date": 1712678140,
+            "rating": 2323,
+            "date": 1737476341,
             "game": "https://www.chess.com/game/live/106416546997"
         },
         "record": {
-            "win": 83,
-            "loss": 46,
-            "draw": 6
+            "win": 84,
+            "loss": 48,
+            "draw": 9
         }
     },
-    "fide": 2410,
+    "fide": 2360,
     "tactics": {
         "highest": {
             "rating": 3314,

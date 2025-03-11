@@ -5,14 +5,14 @@
     "name": "Marco Materia",
     "username": "scarabee43",
     "title": "IM",
-    "followers": 22,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734110424,
+    "last_online": 1741551756,
     "joined": 1586530999,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -35,9 +35,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2676,
-            "date": 1603651000,
-            "rd": 204
+            "rating": 2655,
+            "date": 1739733471,
+            "rd": 48
         },
         "best": {
             "rating": 2676,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/5634526357"
         },
         "record": {
-            "win": 2,
-            "loss": 0,
-            "draw": 0
+            "win": 7,
+            "loss": 1,
+            "draw": 3
         }
     },
     "chess_bullet": {
@@ -69,25 +69,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2941,
-            "date": 1733854094,
+            "rating": 2945,
+            "date": 1741555116,
             "rd": 46
         },
         "best": {
-            "rating": 2991,
-            "date": 1725989397,
+            "rating": 3015,
+            "date": 1735084506,
             "game": "https://www.chess.com/game/live/119119282467"
         },
         "record": {
-            "win": 564,
-            "loss": 277,
-            "draw": 109
+            "win": 631,
+            "loss": 306,
+            "draw": 123
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3857,
-            "date": 1636459122
+            "rating": 4164,
+            "date": 1740922261
         },
         "lowest": {
             "rating": 1216,

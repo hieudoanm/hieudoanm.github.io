@@ -6,9 +6,9 @@
     "name": "GO A HEAD",
     "username": "mohssenbinaddi",
     "title": "CM",
-    "followers": 558,
+    "followers": 613,
     "country": "https://api.chess.com/pub/country/MA",
-    "last_online": 1734119598,
+    "last_online": 1741388479,
     "joined": 1566823262,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2006,
-            "date": 1727901377,
-            "rd": 47
+            "rating": 2027,
+            "date": 1739983439,
+            "rd": 41
         },
         "best": {
             "rating": 2114,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/96331413779"
         },
         "record": {
-            "win": 292,
-            "loss": 308,
-            "draw": 15
+            "win": 344,
+            "loss": 370,
+            "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2207,
-            "date": 1734185827,
-            "rd": 20
+            "rating": 2165,
+            "date": 1741695592,
+            "rd": 22
         },
         "best": {
             "rating": 2423,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/71361297621"
         },
         "record": {
-            "win": 13975,
-            "loss": 15961,
-            "draw": 1388
+            "win": 14746,
+            "loss": 16853,
+            "draw": 1472
         }
     },
     "fide": 2114,

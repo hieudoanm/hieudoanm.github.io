@@ -6,10 +6,10 @@
     "name": "Yaaqov Vaingorten",
     "username": "jackvino",
     "title": "FM",
-    "followers": 71,
+    "followers": 73,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto",
-    "last_online": 1733743366,
+    "last_online": 1741506615,
     "joined": 1378993999,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2370,
-            "date": 1733315981,
-            "rd": 71
+            "rating": 2323,
+            "date": 1739161446,
+            "rd": 74
         },
         "best": {
             "rating": 2391,
             "date": 1733315637,
-            "game": "https://www.chess.com/game/live/3688531704"
+            "game": "https://www.chess.com/game/live/132899946969"
         },
         "record": {
-            "win": 3559,
-            "loss": 2606,
-            "draw": 445
+            "win": 3562,
+            "loss": 2611,
+            "draw": 446
         }
     },
     "fide": 2289,

@@ -5,10 +5,10 @@
     "url": "https://www.chess.com/member/bombermanul",
     "username": "bombermanul",
     "title": "IM",
-    "followers": 186,
+    "followers": 187,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Bucharest",
-    "last_online": 1733155624,
+    "last_online": 1740126532,
     "joined": 1364661966,
     "status": "premium",
     "is_streamer": false,
@@ -56,7 +56,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2341,
-            "date": 1732959161,
+            "date": 1737302047,
             "rd": 49
         },
         "best": {
@@ -65,8 +65,8 @@
             "game": "https://www.chess.com/game/live/48154188607"
         },
         "record": {
-            "win": 145,
-            "loss": 71,
+            "win": 146,
+            "loss": 72,
             "draw": 18
         }
     },
@@ -107,8 +107,8 @@
     "fide": 2431,
     "tactics": {
         "highest": {
-            "rating": 3560,
-            "date": 1732956964
+            "rating": 3567,
+            "date": 1734956958
         },
         "lowest": {
             "rating": 1329,

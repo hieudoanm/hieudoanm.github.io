@@ -6,10 +6,10 @@
     "name": "Adegboyega Joel ADEBAYO",
     "username": "dabee",
     "title": "FM",
-    "followers": 911,
+    "followers": 923,
     "country": "https://api.chess.com/pub/country/NG",
     "location": "Ibadan",
-    "last_online": 1733970899,
+    "last_online": 1741531101,
     "joined": 1312897474,
     "status": "premium",
     "is_streamer": false,
@@ -56,17 +56,17 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2266,
-            "date": 1455023105,
-            "rd": 253
+            "rating": 2277,
+            "date": 1739632977,
+            "rd": 49
         },
         "best": {
             "rating": 2409,
             "date": 1441925666,
-            "game": "https://www.chess.com/game/live/1236262702"
+            "game": "https://www.chess.com/game/live/133370970801"
         },
         "record": {
-            "win": 5,
+            "win": 7,
             "loss": 1,
             "draw": 1
         }
@@ -90,26 +90,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2575,
-            "date": 1732212033,
-            "rd": 48
+            "rating": 2603,
+            "date": 1736294503,
+            "rd": 38
         },
         "best": {
-            "rating": 2613,
-            "date": 1586632944,
+            "rating": 2626,
+            "date": 1735606544,
             "game": "https://www.chess.com/game/live/5030109883"
         },
         "record": {
-            "win": 19889,
-            "loss": 15132,
-            "draw": 2475
+            "win": 19927,
+            "loss": 15155,
+            "draw": 2480
         }
     },
     "fide": 2272,
     "tactics": {
         "highest": {
-            "rating": 3312,
-            "date": 1724427808
+            "rating": 3472,
+            "date": 1740241123
         },
         "lowest": {
             "rating": 1818,

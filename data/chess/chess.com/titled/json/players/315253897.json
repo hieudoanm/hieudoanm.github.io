@@ -5,15 +5,34 @@
     "name": "Lorenzo Perea Fruet",
     "username": "flameboard08",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734181783,
+    "last_online": 1741634339,
     "joined": 1695637491,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Legend",
     "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 860,
+            "date": 1740925696,
+            "rd": 160
+        },
+        "best": {
+            "rating": 1600,
+            "date": 1695637491,
+            "game": "https://www.chess.com/game/daily/763238839"
+        },
+        "record": {
+            "win": 17,
+            "loss": 6,
+            "draw": 0,
+            "time_per_move": 24173,
+            "timeout_percent": 33
+        }
+    },
     "chess_rapid": {
         "last": {
             "rating": 2199,
@@ -33,26 +52,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2557,
-            "date": 1732980212,
-            "rd": 49
+            "rating": 2636,
+            "date": 1741083604,
+            "rd": 36
         },
         "best": {
-            "rating": 2636,
-            "date": 1695731789,
-            "game": "https://www.chess.com/game/live/89470779663"
+            "rating": 2667,
+            "date": 1740851534,
+            "game": "https://www.chess.com/game/live/134591941001"
         },
         "record": {
-            "win": 35,
-            "loss": 25,
-            "draw": 3
+            "win": 83,
+            "loss": 73,
+            "draw": 8
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2705,
-            "date": 1732644792,
-            "rd": 25
+            "rating": 2840,
+            "date": 1741637630
         },
         "best": {
             "rating": 2887,
@@ -60,9 +78,9 @@
             "game": "https://www.chess.com/game/live/113763028777"
         },
         "record": {
-            "win": 716,
-            "loss": 624,
-            "draw": 128
+            "win": 958,
+            "loss": 790,
+            "draw": 158
         }
     },
     "fide": 2411,

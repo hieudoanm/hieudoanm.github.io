@@ -9,7 +9,7 @@
     "followers": 8,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "T\u00fcrkiye",
-    "last_online": 1723991084,
+    "last_online": 1740769043,
     "joined": 1462999208,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 1835,
-            "date": 1698346823,
-            "rd": 80
+            "rating": 1885,
+            "date": 1740770327,
+            "rd": 89
         },
         "best": {
             "rating": 2028,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/5030590122"
         },
         "record": {
-            "win": 100,
-            "loss": 107,
-            "draw": 16
+            "win": 105,
+            "loss": 111,
+            "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1992,
-            "date": 1702396850,
-            "rd": 138
+            "rating": 1984,
+            "date": 1740767216,
+            "rd": 163
         },
         "best": {
             "rating": 2161,
@@ -47,7 +47,7 @@
         "record": {
             "win": 100,
             "loss": 78,
-            "draw": 12
+            "draw": 13
         }
     },
     "fide": 1912,

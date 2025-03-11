@@ -9,7 +9,7 @@
     "followers": 17,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Kamen",
-    "last_online": 1734030048,
+    "last_online": 1740086841,
     "joined": 1459967290,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2010,
-            "date": 1703006994,
+            "date": 1734600516,
             "rd": 61
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2387,
-            "date": 1733853253,
-            "rd": 53
+            "rating": 2335,
+            "date": 1739318820,
+            "rd": 48
         },
         "best": {
             "rating": 2448,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/108229342087"
         },
         "record": {
-            "win": 1539,
-            "loss": 1309,
-            "draw": 196
+            "win": 1560,
+            "loss": 1341,
+            "draw": 198
         }
     },
     "fide": 2170,

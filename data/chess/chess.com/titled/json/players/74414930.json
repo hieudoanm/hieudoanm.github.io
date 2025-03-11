@@ -16,19 +16,36 @@
     "verified": false,
     "league": "Bronze",
     "streaming_platforms": [],
-    "chess_blitz": {
+    "chess_rapid": {
         "last": {
-            "rating": 2192,
-            "date": 1667715761,
-            "rd": 86
+            "rating": 2001,
+            "date": 1734317181,
+            "rd": 49
         },
         "best": {
-            "rating": 2274,
-            "date": 1598927076,
+            "rating": 2001,
+            "date": 1734317181,
+            "game": "https://www.chess.com/game/live/128054991983"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2343,
+            "date": 1735209865,
+            "rd": 137
+        },
+        "best": {
+            "rating": 2343,
+            "date": 1735209865,
             "game": "https://www.chess.com/game/live/5385418245"
         },
         "record": {
-            "win": 1102,
+            "win": 1105,
             "loss": 741,
             "draw": 197
         }
@@ -36,8 +53,8 @@
     "fide": 2167,
     "tactics": {
         "highest": {
-            "rating": 2334,
-            "date": 1628826585
+            "rating": 2492,
+            "date": 1735691442
         },
         "lowest": {
             "rating": 814,

@@ -8,7 +8,7 @@
     "title": "CM",
     "followers": 39,
     "country": "https://api.chess.com/pub/country/XG",
-    "last_online": 1733696457,
+    "last_online": 1740555402,
     "joined": 1652349720,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2086,
-            "date": 1734118943,
+            "rating": 2119,
+            "date": 1741692033,
             "rd": 93
         },
         "best": {
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/650488317"
         },
         "record": {
-            "win": 299,
-            "loss": 7,
+            "win": 316,
+            "loss": 8,
             "draw": 7,
-            "time_per_move": 21722,
+            "time_per_move": 22479,
             "timeout_percent": 0
         }
     },
@@ -49,7 +49,7 @@
             "win": 8,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 21722,
+            "time_per_move": 22479,
             "timeout_percent": 0
         }
     },
@@ -117,8 +117,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 60,
-            "score": 57
+            "total_attempts": 69,
+            "score": 66
         }
     }
 }

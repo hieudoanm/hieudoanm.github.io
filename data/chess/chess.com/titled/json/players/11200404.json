@@ -6,10 +6,10 @@
     "name": "Jason Morefield",
     "username": "chessicallyinclined",
     "title": "FM",
-    "followers": 283,
+    "followers": 286,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Virginia",
-    "last_online": 1734128482,
+    "last_online": 1741620751,
     "joined": 1363704894,
     "status": "premium",
     "is_streamer": true,
@@ -63,7 +63,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2501,
-            "date": 1732340441,
+            "date": 1741048398,
             "rd": 50
         },
         "best": {
@@ -79,9 +79,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2800,
-            "date": 1728335021,
-            "rd": 23
+            "rating": 2793,
+            "date": 1740439741,
+            "rd": 44
         },
         "best": {
             "rating": 2974,
@@ -89,16 +89,16 @@
             "game": "https://www.chess.com/game/live/121889434307"
         },
         "record": {
-            "win": 7261,
-            "loss": 6101,
-            "draw": 820
+            "win": 7282,
+            "loss": 6117,
+            "draw": 823
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2801,
-            "date": 1734116665,
-            "rd": 35
+            "rating": 2747,
+            "date": 1741317935,
+            "rd": 42
         },
         "best": {
             "rating": 2895,
@@ -106,9 +106,9 @@
             "game": "https://www.chess.com/game/live/49930758049"
         },
         "record": {
-            "win": 4897,
-            "loss": 3903,
-            "draw": 773
+            "win": 4964,
+            "loss": 3953,
+            "draw": 789
         }
     },
     "fide": 2376,

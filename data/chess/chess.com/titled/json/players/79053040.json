@@ -1,12 +1,12 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/79053040.b65dedd9.200x200o.2799797ff76d.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/79053040.a0f99e8d.200x200o.2fadffd86eed.jpg",
     "player_id": 79053040,
     "@id": "https://api.chess.com/pub/player/danielarias00",
     "url": "https://www.chess.com/member/danielarias00",
     "name": "Daniel Arias",
     "username": "danielarias00",
     "title": "FM",
-    "followers": 7,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/SV",
     "last_online": 1733880916,
     "joined": 1589064464,
@@ -34,19 +34,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2470,
-            "date": 1734166950,
-            "rd": 21
+            "rating": 2469,
+            "date": 1738827019,
+            "rd": 22
         },
         "best": {
-            "rating": 2539,
-            "date": 1734045549,
-            "game": "https://www.chess.com/game/live/125687979243"
+            "rating": 2558,
+            "date": 1734556156,
+            "game": "https://www.chess.com/game/live/131319008093"
         },
         "record": {
-            "win": 1791,
-            "loss": 1037,
-            "draw": 130
+            "win": 2237,
+            "loss": 1399,
+            "draw": 164
         }
     },
     "chess_blitz": {

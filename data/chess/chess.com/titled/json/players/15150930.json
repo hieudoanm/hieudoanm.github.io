@@ -6,10 +6,10 @@
     "name": "Vishal Sareen",
     "username": "vishalsareen",
     "title": "IM",
-    "followers": 51,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Delhi, India",
-    "last_online": 1733672851,
+    "last_online": 1741226546,
     "joined": 1387655911,
     "status": "premium",
     "is_streamer": false,
@@ -18,17 +18,17 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1554,
-            "date": 1700481187,
-            "rd": 129
+            "rating": 1697,
+            "date": 1734447514,
+            "rd": 166
         },
         "best": {
             "rating": 2400,
             "date": 1602746744,
-            "game": "https://www.chess.com/game/live/5816598197"
+            "game": "https://www.chess.com/game/live/128185148211"
         },
         "record": {
-            "win": 28,
+            "win": 29,
             "loss": 28,
             "draw": 5
         }

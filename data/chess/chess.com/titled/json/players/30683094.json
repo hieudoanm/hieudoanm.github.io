@@ -6,9 +6,9 @@
     "name": "Enis Zuferi",
     "username": "terrortoast",
     "title": "FM",
-    "followers": 28,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733386447,
+    "last_online": 1741637776,
     "joined": 1477940902,
     "status": "premium",
     "is_streamer": false,
@@ -49,11 +49,11 @@
             "draw": 73
         }
     },
-    "fide": 2331,
+    "fide": 2375,
     "tactics": {
         "highest": {
-            "rating": 3714,
-            "date": 1714649237
+            "rating": 3759,
+            "date": 1738582412
         },
         "lowest": {
             "rating": 1556,

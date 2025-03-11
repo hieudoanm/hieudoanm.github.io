@@ -6,9 +6,9 @@
     "name": "Armin Kekic",
     "username": "kekic76",
     "title": "CM",
-    "followers": 169,
+    "followers": 171,
     "country": "https://api.chess.com/pub/country/BA",
-    "last_online": 1733238083,
+    "last_online": 1741293690,
     "joined": 1346597745,
     "status": "premium",
     "is_streamer": false,
@@ -89,9 +89,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2224,
-            "date": 1728406531,
-            "rd": 63
+            "rating": 2360,
+            "date": 1736871532,
+            "rd": 70
         },
         "best": {
             "rating": 2419,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/33848469445"
         },
         "record": {
-            "win": 934,
-            "loss": 568,
-            "draw": 197
+            "win": 940,
+            "loss": 575,
+            "draw": 199
         }
     },
     "tactics": {

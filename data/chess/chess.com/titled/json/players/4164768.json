@@ -6,10 +6,10 @@
     "name": "Raghunandan Kaumandur Srihari",
     "username": "raghunandan",
     "title": "IM",
-    "followers": 891,
+    "followers": 190,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Bangalore",
-    "last_online": 1734151506,
+    "last_online": 1741683712,
     "joined": 1288020551,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2864,
-            "date": 1722795688,
-            "rd": 22
+            "rating": 2953,
+            "date": 1741216211,
+            "rd": 26
         },
         "best": {
             "rating": 2908,
@@ -45,33 +45,33 @@
             "game": "https://www.chess.com/game/live/29835489415"
         },
         "record": {
-            "win": 2553,
-            "loss": 2685,
-            "draw": 376
+            "win": 2623,
+            "loss": 2732,
+            "draw": 390
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2850,
-            "date": 1734013084,
-            "rd": 34
+            "rating": 2951,
+            "date": 1737137546,
+            "rd": 29
         },
         "best": {
-            "rating": 2886,
-            "date": 1713098882,
+            "rating": 2951,
+            "date": 1737137546,
             "game": "https://www.chess.com/game/live/3222656221"
         },
         "record": {
-            "win": 2696,
-            "loss": 2760,
-            "draw": 533
+            "win": 2754,
+            "loss": 2810,
+            "draw": 545
         }
     },
     "fide": 2441,
     "tactics": {
         "highest": {
-            "rating": 3857,
-            "date": 1732731106
+            "rating": 4014,
+            "date": 1734733564
         },
         "lowest": {
             "rating": 1354,

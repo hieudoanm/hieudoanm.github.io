@@ -5,9 +5,9 @@
     "name": "Semen Kazmin",
     "username": "kazmin_semyon",
     "title": "FM",
-    "followers": 4,
+    "followers": 5,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733225183,
+    "last_online": 1740905297,
     "joined": 1680113860,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2695,
-            "date": 1713821327,
-            "rd": 49
+            "rating": 2702,
+            "date": 1735152061,
+            "rd": 47
         },
         "best": {
             "rating": 2790,
@@ -43,26 +43,26 @@
             "game": "https://www.chess.com/game/live/95074760525"
         },
         "record": {
-            "win": 36,
-            "loss": 24,
+            "win": 40,
+            "loss": 27,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2582,
-            "date": 1727797240,
-            "rd": 48
+            "rating": 2691,
+            "date": 1739894814,
+            "rd": 49
         },
         "best": {
-            "rating": 2617,
-            "date": 1715098220,
+            "rating": 2713,
+            "date": 1736267975,
             "game": "https://www.chess.com/game/live/104599310901"
         },
         "record": {
-            "win": 80,
-            "loss": 71,
-            "draw": 11
+            "win": 119,
+            "loss": 95,
+            "draw": 14
         }
     },
     "tactics": {

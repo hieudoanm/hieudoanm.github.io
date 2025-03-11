@@ -6,10 +6,10 @@
     "name": "Heritiana Andrianiaina",
     "username": "heritiana_andria",
     "title": "CM",
-    "followers": 11,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/MG",
     "location": "Antananarive",
-    "last_online": 1733920931,
+    "last_online": 1741629329,
     "joined": 1703080397,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2174,
-            "date": 1733908274,
-            "rd": 38
+            "rating": 2281,
+            "date": 1741698504,
+            "rd": 28
         },
         "best": {
             "rating": 2340,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/104589724301"
         },
         "record": {
-            "win": 264,
-            "loss": 169,
-            "draw": 32
+            "win": 458,
+            "loss": 311,
+            "draw": 48
         }
     },
     "fide": 2157,
     "tactics": {
         "highest": {
-            "rating": 2928,
-            "date": 1721656350
+            "rating": 2943,
+            "date": 1737987819
         },
         "lowest": {
             "rating": 400,

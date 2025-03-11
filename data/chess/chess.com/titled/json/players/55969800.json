@@ -6,9 +6,9 @@
     "name": "Sergey And. Korshunov",
     "username": "chessmatenokk17",
     "title": "FM",
-    "followers": 44,
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734009249,
+    "last_online": 1741644986,
     "joined": 1547482601,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2349,
-            "date": 1732795513,
-            "rd": 49
+            "rating": 2529,
+            "date": 1741646200,
+            "rd": 36
         },
         "best": {
             "rating": 2383,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/112350650915"
         },
         "record": {
-            "win": 113,
-            "loss": 69,
-            "draw": 10
+            "win": 152,
+            "loss": 84,
+            "draw": 16
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2734,
-            "date": 1731093321,
-            "rd": 47
+            "rating": 2736,
+            "date": 1736880101,
+            "rd": 46
         },
         "best": {
             "rating": 2804,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/121261823179"
         },
         "record": {
-            "win": 645,
-            "loss": 512,
+            "win": 649,
+            "loss": 516,
             "draw": 72
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2783,
-            "date": 1733837092,
-            "rd": 22
+            "rating": 2701,
+            "date": 1741699206,
+            "rd": 28
         },
         "best": {
             "rating": 2894,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/109809083501"
         },
         "record": {
-            "win": 3450,
-            "loss": 3168,
-            "draw": 589
+            "win": 3864,
+            "loss": 3571,
+            "draw": 683
         }
     },
     "fide": 2361,
@@ -100,6 +100,10 @@
         "best": {
             "total_attempts": 72,
             "score": 69
+        },
+        "daily": {
+            "total_attempts": 52,
+            "score": 49
         }
     }
 }

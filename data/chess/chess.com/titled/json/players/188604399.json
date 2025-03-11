@@ -6,9 +6,9 @@
     "name": "Ondrej Toman",
     "username": "foxontherun97",
     "title": "FM",
-    "followers": 104,
+    "followers": 114,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1734166763,
+    "last_online": 1741688350,
     "joined": 1656658062,
     "status": "premium",
     "is_streamer": false,
@@ -17,28 +17,28 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2283,
-            "date": 1724938781,
-            "rd": 109
+            "rating": 2349,
+            "date": 1740780260,
+            "rd": 112
         },
         "best": {
-            "rating": 2287,
-            "date": 1666607393,
-            "game": "https://www.chess.com/game/daily/414819403"
+            "rating": 2349,
+            "date": 1740297316,
+            "game": "https://www.chess.com/game/daily/769847489"
         },
         "record": {
-            "win": 14,
-            "loss": 7,
+            "win": 18,
+            "loss": 8,
             "draw": 8,
-            "time_per_move": 4543,
+            "time_per_move": 4538,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2551,
-            "date": 1734172687,
-            "rd": 35
+            "rating": 2563,
+            "date": 1741606142,
+            "rd": 37
         },
         "best": {
             "rating": 2634,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/124981196335"
         },
         "record": {
-            "win": 1678,
-            "loss": 464,
-            "draw": 230
+            "win": 1904,
+            "loss": 517,
+            "draw": 272
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2671,
-            "date": 1734023084,
-            "rd": 32
+            "rating": 2719,
+            "date": 1740476701,
+            "rd": 22
         },
         "best": {
             "rating": 2723,
@@ -63,29 +63,29 @@
             "game": "https://www.chess.com/game/live/93468639253"
         },
         "record": {
-            "win": 756,
-            "loss": 666,
-            "draw": 118
+            "win": 901,
+            "loss": 818,
+            "draw": 147
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2650,
-            "date": 1734076661,
-            "rd": 29
+            "rating": 2739,
+            "date": 1740568145,
+            "rd": 28
         },
         "best": {
-            "rating": 2700,
-            "date": 1721302920,
+            "rating": 2762,
+            "date": 1737106751,
             "game": "https://www.chess.com/game/live/113239245847"
         },
         "record": {
-            "win": 1764,
-            "loss": 1273,
-            "draw": 283
+            "win": 1936,
+            "loss": 1423,
+            "draw": 326
         }
     },
-    "fide": 2288,
+    "fide": 2283,
     "tactics": {
         "highest": {
             "rating": 3488,

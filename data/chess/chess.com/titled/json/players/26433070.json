@@ -6,9 +6,9 @@
     "name": "Ruiyang Yan",
     "username": "jij2018",
     "title": "FM",
-    "followers": 167,
+    "followers": 168,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733931398,
+    "last_online": 1741506584,
     "joined": 1454203241,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2216,
-            "date": 1717358309,
+            "date": 1734236889,
             "rd": 47
         },
         "best": {
@@ -88,8 +88,8 @@
     "fide": 3000,
     "tactics": {
         "highest": {
-            "rating": 3735,
-            "date": 1702924667
+            "rating": 3743,
+            "date": 1739465700
         },
         "lowest": {
             "rating": 1208,

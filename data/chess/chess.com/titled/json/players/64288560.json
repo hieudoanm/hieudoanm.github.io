@@ -6,37 +6,37 @@
     "name": "Alejandro Barbero",
     "username": "alphalphazero",
     "title": "FM",
-    "followers": 27,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/UY",
-    "last_online": 1734169806,
+    "last_online": 1740954060,
     "joined": 1565775506,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2404,
-            "date": 1590517603,
-            "rd": 47
+            "rating": 2443,
+            "date": 1734303577,
+            "rd": 41
         },
         "best": {
-            "rating": 2267,
-            "date": 1590517435,
-            "game": "https://www.chess.com/game/live/4846461940"
+            "rating": 2509,
+            "date": 1734300977,
+            "game": "https://www.chess.com/game/live/128039957675"
         },
         "record": {
-            "win": 64,
-            "loss": 16,
+            "win": 73,
+            "loss": 30,
             "draw": 2
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2343,
-            "date": 1734100365,
-            "rd": 110
+            "rating": 2458,
+            "date": 1740954303,
+            "rd": 50
         },
         "best": {
             "rating": 2619,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/42326442259"
         },
         "record": {
-            "win": 855,
-            "loss": 692,
-            "draw": 98
+            "win": 891,
+            "loss": 729,
+            "draw": 106
         }
     },
     "tactics": {

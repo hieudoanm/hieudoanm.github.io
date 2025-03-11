@@ -9,7 +9,7 @@
     "followers": 5,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "CORNELLA DE LLOBREGAT",
-    "last_online": 1734043002,
+    "last_online": 1741507371,
     "joined": 1590845650,
     "status": "premium",
     "is_streamer": false,
@@ -56,9 +56,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2394,
-            "date": 1734044209,
-            "rd": 40
+            "rating": 2333,
+            "date": 1741460166,
+            "rd": 32
         },
         "best": {
             "rating": 2457,
@@ -66,16 +66,16 @@
             "game": "https://www.chess.com/game/live/124582785533"
         },
         "record": {
-            "win": 198,
-            "loss": 211,
-            "draw": 17
+            "win": 301,
+            "loss": 338,
+            "draw": 28
         }
     },
     "fide": 2177,
     "tactics": {
         "highest": {
-            "rating": 2635,
-            "date": 1732004663
+            "rating": 2767,
+            "date": 1739472195
         },
         "lowest": {
             "rating": 1007,

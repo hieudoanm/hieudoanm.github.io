@@ -6,10 +6,10 @@
     "name": "Petar Benkovic",
     "username": "benko_008",
     "title": "IM",
-    "followers": 123,
+    "followers": 126,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Sremska Mitrovica",
-    "last_online": 1733767359,
+    "last_online": 1741542830,
     "joined": 1485075289,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2339,
-            "date": 1729082770,
+            "date": 1741548185,
             "rd": 125
         },
         "best": {
@@ -72,7 +72,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2483,
-            "date": 1730726190,
+            "date": 1741036107,
             "rd": 76
         },
         "best": {

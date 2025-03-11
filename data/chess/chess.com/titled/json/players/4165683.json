@@ -8,7 +8,7 @@
     "followers": 12,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "sweeeeeden",
-    "last_online": 1732705336,
+    "last_online": 1736430400,
     "joined": 1288036802,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1991,
-            "date": 1714689154,
+            "date": 1738056489,
             "rd": 105
         },
         "best": {

@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 4,
     "country": "https://api.chess.com/pub/country/ZM",
-    "last_online": 1726299857,
+    "last_online": 1737350002,
     "joined": 1594050745,
     "status": "premium",
     "is_streamer": false,
@@ -33,8 +33,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2549,
-            "date": 1726689684
+            "rating": 2575,
+            "date": 1734478858
         },
         "lowest": {
             "rating": 400,

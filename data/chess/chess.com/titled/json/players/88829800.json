@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/winguselessking",
     "username": "winguselessking",
     "title": "IM",
-    "followers": 67,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/ME",
-    "last_online": 1734135624,
+    "last_online": 1741686656,
     "joined": 1597151582,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +15,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2542,
-            "date": 1700931656,
-            "rd": 147
+            "rating": 2562,
+            "date": 1740002818,
+            "rd": 49
         },
         "best": {
             "rating": 2674,
@@ -25,16 +25,16 @@
             "game": "https://www.chess.com/game/live/11718193241"
         },
         "record": {
-            "win": 205,
-            "loss": 217,
+            "win": 208,
+            "loss": 218,
             "draw": 20
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2806,
-            "date": 1734136396,
-            "rd": 29
+            "rating": 2721,
+            "date": 1741638625,
+            "rd": 35
         },
         "best": {
             "rating": 2890,
@@ -42,9 +42,9 @@
             "game": "https://www.chess.com/game/live/126621011559"
         },
         "record": {
-            "win": 7004,
-            "loss": 7604,
-            "draw": 955
+            "win": 7309,
+            "loss": 7919,
+            "draw": 988
         }
     },
     "tactics": {

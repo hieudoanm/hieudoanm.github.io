@@ -5,9 +5,9 @@
     "name": "Michael Fernandez",
     "username": "hackwithblack",
     "title": "FM",
-    "followers": 54,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/XE",
-    "last_online": 1734108198,
+    "last_online": 1741624536,
     "joined": 1415962402,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2295,
-            "date": 1681149004,
+            "date": 1740391414,
             "rd": 75
         },
         "best": {
@@ -52,35 +52,35 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2603,
-            "date": 1734108977,
-            "rd": 31
+            "rating": 2628,
+            "date": 1741625360,
+            "rd": 25
         },
         "best": {
-            "rating": 2707,
-            "date": 1644223571,
-            "game": "https://www.chess.com/game/live/38487868115"
+            "rating": 2728,
+            "date": 1738097382,
+            "game": "https://www.chess.com/game/live/131835549021"
         },
         "record": {
-            "win": 2709,
-            "loss": 1428,
-            "draw": 275
+            "win": 3063,
+            "loss": 1696,
+            "draw": 333
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2461,
-            "date": 1730998122,
-            "rd": 52
+            "rating": 2504,
+            "date": 1741355199,
+            "rd": 49
         },
         "best": {
-            "rating": 2509,
-            "date": 1677007245,
+            "rating": 2514,
+            "date": 1738086431,
             "game": "https://www.chess.com/game/live/21750074793"
         },
         "record": {
-            "win": 995,
-            "loss": 754,
+            "win": 1001,
+            "loss": 759,
             "draw": 130
         }
     },

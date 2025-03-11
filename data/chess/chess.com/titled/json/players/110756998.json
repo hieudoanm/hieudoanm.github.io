@@ -6,9 +6,9 @@
     "name": "Yeonhee Cho",
     "username": "choyeonhee",
     "title": "WCM",
-    "followers": 18,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/KR",
-    "last_online": 1733330896,
+    "last_online": 1740391245,
     "joined": 1610120821,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3060,
-            "date": 1722786063
+            "rating": 3089,
+            "date": 1735154557
         },
         "lowest": {
             "rating": 809,

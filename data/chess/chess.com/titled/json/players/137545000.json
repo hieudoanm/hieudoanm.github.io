@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 12,
     "country": "https://api.chess.com/pub/country/UZ",
-    "last_online": 1734000628,
+    "last_online": 1741532988,
     "joined": 1619514702,
     "status": "premium",
     "is_streamer": false,
@@ -67,8 +67,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3674,
-            "date": 1661757025
+            "rating": 3753,
+            "date": 1735852316
         },
         "lowest": {
             "rating": 1199,

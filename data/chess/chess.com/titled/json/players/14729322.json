@@ -6,9 +6,9 @@
     "name": "R\u00f3gvi Egilstoft",
     "username": "egilstoft1992",
     "title": "FM",
-    "followers": 59,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/FO",
-    "last_online": 1734178575,
+    "last_online": 1741620298,
     "joined": 1385649145,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2554,
-            "date": 1734173233,
-            "rd": 24
+            "rating": 2494,
+            "date": 1741620415,
+            "rd": 33
         },
         "best": {
             "rating": 2681,
@@ -63,32 +63,32 @@
             "game": "https://www.chess.com/game/live/16443892923"
         },
         "record": {
-            "win": 8691,
-            "loss": 6956,
-            "draw": 1177
+            "win": 8936,
+            "loss": 7164,
+            "draw": 1206
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2452,
-            "date": 1734178690,
-            "rd": 56
+            "rating": 2567,
+            "date": 1741123565,
+            "rd": 29
         },
         "best": {
-            "rating": 2590,
-            "date": 1629898414,
+            "rating": 2710,
+            "date": 1739058073,
             "game": "https://www.chess.com/game/live/3406281959"
         },
         "record": {
-            "win": 1479,
-            "loss": 1112,
-            "draw": 214
+            "win": 1694,
+            "loss": 1269,
+            "draw": 247
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3089,
-            "date": 1723846390
+            "rating": 3196,
+            "date": 1739016866
         },
         "lowest": {
             "rating": 1367,

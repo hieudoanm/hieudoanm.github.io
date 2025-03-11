@@ -8,7 +8,7 @@
     "title": "IM",
     "followers": 80,
     "country": "https://api.chess.com/pub/country/XE",
-    "last_online": 1733895814,
+    "last_online": 1741614950,
     "joined": 1299805931,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2690,
-            "date": 1733872761,
+            "rating": 2715,
+            "date": 1741128210,
             "rd": 48
         },
         "best": {
-            "rating": 2734,
-            "date": 1703631379,
+            "rating": 2742,
+            "date": 1736287661,
             "game": "https://www.chess.com/game/live/85851692965"
         },
         "record": {
-            "win": 1504,
-            "loss": 984,
-            "draw": 300
+            "win": 1522,
+            "loss": 992,
+            "draw": 303
         }
     },
     "tactics": {

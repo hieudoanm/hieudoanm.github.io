@@ -6,10 +6,10 @@
     "name": "Chinedu Benjamin Enemchukwu",
     "username": "optimus_prime120",
     "title": "FM",
-    "followers": 48,
+    "followers": 112,
     "country": "https://api.chess.com/pub/country/VC",
     "location": "Kingstown",
-    "last_online": 1734153152,
+    "last_online": 1741659476,
     "joined": 1586380714,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2038,
-            "date": 1724084930,
-            "rd": 49
+            "rating": 2065,
+            "date": 1741703845,
+            "rd": 33
         },
         "best": {
             "rating": 2161,
@@ -28,33 +28,33 @@
             "game": "https://www.chess.com/game/live/49862349807"
         },
         "record": {
-            "win": 13,
-            "loss": 3,
-            "draw": 2
+            "win": 56,
+            "loss": 35,
+            "draw": 11
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2018,
-            "date": 1734159032,
-            "rd": 26
+            "rating": 2211,
+            "date": 1741079360,
+            "rd": 16
         },
         "best": {
-            "rating": 2131,
-            "date": 1725573104,
-            "game": "https://www.chess.com/game/live/123469787189"
+            "rating": 2149,
+            "date": 1735969735,
+            "game": "https://www.chess.com/game/live/128328577539"
         },
         "record": {
-            "win": 760,
-            "loss": 462,
-            "draw": 32
+            "win": 2398,
+            "loss": 1915,
+            "draw": 161
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2115,
-            "date": 1728428356,
-            "rd": 71
+            "rating": 2207,
+            "date": 1741188750,
+            "rd": 40
         },
         "best": {
             "rating": 2127,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/78936886573"
         },
         "record": {
-            "win": 242,
-            "loss": 98,
-            "draw": 18
+            "win": 291,
+            "loss": 123,
+            "draw": 20
         }
     },
     "fide": 2001,

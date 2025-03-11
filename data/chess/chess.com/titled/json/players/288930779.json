@@ -6,9 +6,9 @@
     "name": "Vladimir Kostic",
     "username": "mindhunter08",
     "title": "FM",
-    "followers": 48,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734178149,
+    "last_online": 1741694728,
     "joined": 1685146939,
     "status": "premium",
     "is_streamer": false,
@@ -17,26 +17,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1938,
-            "date": 1733250601,
-            "rd": 138
+            "rating": 2158,
+            "date": 1740339420,
+            "rd": 49
         },
         "best": {
-            "rating": 1938,
-            "date": 1716663770,
-            "game": "https://www.chess.com/game/live/104757045413"
+            "rating": 2168,
+            "date": 1737571724,
+            "game": "https://www.chess.com/game/live/131309346873"
         },
         "record": {
-            "win": 11,
-            "loss": 1,
+            "win": 37,
+            "loss": 4,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2802,
-            "date": 1732801701,
-            "rd": 22
+            "rating": 2901,
+            "date": 1741278980,
+            "rd": 19
         },
         "best": {
             "rating": 2870,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/114389447589"
         },
         "record": {
-            "win": 1202,
-            "loss": 995,
-            "draw": 132
+            "win": 1814,
+            "loss": 1437,
+            "draw": 200
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2731,
-            "date": 1734108893,
-            "rd": 28
+            "rating": 2658,
+            "date": 1741613552,
+            "rd": 33
         },
         "best": {
             "rating": 2803,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/127838346001"
         },
         "record": {
-            "win": 614,
-            "loss": 703,
-            "draw": 135
+            "win": 684,
+            "loss": 806,
+            "draw": 154
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2326,
-            "date": 1723375400
+            "rating": 2524,
+            "date": 1739646242
         },
         "lowest": {
             "rating": 1000,

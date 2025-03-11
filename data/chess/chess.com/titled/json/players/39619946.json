@@ -6,13 +6,30 @@
     "title": "IM",
     "followers": 3,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1673380725,
+    "last_online": 1739455148,
     "joined": 1508526619,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Wood",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1422,
+            "date": 1739456679,
+            "rd": 327
+        },
+        "best": {
+            "rating": 1422,
+            "date": 1739456679,
+            "game": "https://www.chess.com/game/live/133195148355"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
     "chess_blitz": {
         "last": {
             "rating": 2177,

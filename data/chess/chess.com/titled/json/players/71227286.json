@@ -6,10 +6,10 @@
     "name": "Marckens Jean Louis",
     "username": "jeloma",
     "title": "FM",
-    "followers": 20,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/HT",
     "location": "saint marc",
-    "last_online": 1733758549,
+    "last_online": 1740620945,
     "joined": 1579890346,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1096,
-            "date": 1708695516,
+            "date": 1740303016,
             "rd": 262
         },
         "record": {

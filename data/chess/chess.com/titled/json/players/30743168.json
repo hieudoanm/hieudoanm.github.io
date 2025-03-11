@@ -6,9 +6,9 @@
     "name": "Nikita Fedotov",
     "username": "feegus",
     "title": "FM",
-    "followers": 89,
-    "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734156011,
+    "followers": 91,
+    "country": "https://api.chess.com/pub/country/RS",
+    "last_online": 1741672929,
     "joined": 1478273080,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2005,
-            "date": 1705583633,
+            "date": 1738852466,
             "rd": 344
         },
         "best": {
@@ -36,17 +36,17 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2292,
-            "date": 1721308495,
+            "rating": 2310,
+            "date": 1739198228,
             "rd": 49
         },
         "best": {
-            "rating": 2300,
-            "date": 1721160683,
+            "rating": 2310,
+            "date": 1737474010,
             "game": "https://www.chess.com/game/live/114457277573"
         },
         "record": {
-            "win": 53,
+            "win": 55,
             "loss": 20,
             "draw": 5
         }
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2585,
-            "date": 1734161844,
-            "rd": 43
+            "rating": 2507,
+            "date": 1741673497,
+            "rd": 38
         },
         "best": {
             "rating": 2767,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/112462294497"
         },
         "record": {
-            "win": 3312,
-            "loss": 3359,
-            "draw": 464
+            "win": 3421,
+            "loss": 3487,
+            "draw": 483
         }
     },
     "fide": 2345,
     "tactics": {
         "highest": {
-            "rating": 3146,
-            "date": 1708777805
+            "rating": 3244,
+            "date": 1736934895
         },
         "lowest": {
             "rating": 1948,

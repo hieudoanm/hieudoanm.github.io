@@ -6,10 +6,10 @@
     "name": "Denyefa Callistus Eyetonghan",
     "username": "linesman39",
     "title": "FM",
-    "followers": 56,
+    "followers": 76,
     "country": "https://api.chess.com/pub/country/NG",
     "location": "Udu LGA Delta state",
-    "last_online": 1733806150,
+    "last_online": 1740846589,
     "joined": 1580790186,
     "status": "premium",
     "is_streamer": false,
@@ -35,19 +35,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2209,
-            "date": 1729828202,
-            "rd": 74
+            "rating": 2114,
+            "date": 1740851306,
+            "rd": 68
         },
         "best": {
             "rating": 2248,
             "date": 1729827646,
-            "game": "https://www.chess.com/game/live/123566398711"
+            "game": "https://www.chess.com/game/live/134588347723"
         },
         "record": {
-            "win": 124,
-            "loss": 73,
-            "draw": 4
+            "win": 128,
+            "loss": 92,
+            "draw": 5
         }
     },
     "chess_blitz": {
@@ -70,8 +70,8 @@
     "fide": 2252,
     "tactics": {
         "highest": {
-            "rating": 3297,
-            "date": 1730663451
+            "rating": 3356,
+            "date": 1739363287
         },
         "lowest": {
             "rating": 1014,

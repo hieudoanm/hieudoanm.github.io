@@ -6,10 +6,10 @@
     "name": "Nicos Com",
     "username": "cienfuegos07",
     "title": "CM",
-    "followers": 35,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/GR",
     "location": "Athens",
-    "last_online": 1734167364,
+    "last_online": 1741362035,
     "joined": 1300829113,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2157,
-            "date": 1734170094,
-            "rd": 29
+            "rating": 2083,
+            "date": 1741365046,
+            "rd": 32
         },
         "best": {
             "rating": 2262,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/92429573793"
         },
         "record": {
-            "win": 5049,
-            "loss": 4654,
-            "draw": 692
+            "win": 5265,
+            "loss": 4867,
+            "draw": 723
         }
     },
     "tactics": {

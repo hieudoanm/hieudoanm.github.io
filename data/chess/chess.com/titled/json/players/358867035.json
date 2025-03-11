@@ -6,14 +6,14 @@
     "name": "Thet Naung",
     "username": "thetnaung291",
     "title": "FM",
-    "followers": 19,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/MM",
-    "last_online": 1734181591,
+    "last_online": 1741701165,
     "joined": 1713858620,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2261,
-            "date": 1732522303,
-            "rd": 80
+            "rating": 2218,
+            "date": 1740471190,
+            "rd": 86
         },
         "best": {
             "rating": 2534,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/109788029775"
         },
         "record": {
-            "win": 14,
-            "loss": 38,
+            "win": 15,
+            "loss": 41,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2343,
-            "date": 1732520949,
-            "rd": 57
+            "rating": 2531,
+            "date": 1741701144,
+            "rd": 28
         },
         "best": {
             "rating": 2468,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/111858216861"
         },
         "record": {
-            "win": 288,
-            "loss": 198,
-            "draw": 36
+            "win": 486,
+            "loss": 344,
+            "draw": 56
         }
     },
     "fide": 2270,
@@ -81,6 +81,10 @@
         "best": {
             "total_attempts": 68,
             "score": 65
+        },
+        "daily": {
+            "total_attempts": 51,
+            "score": 48
         }
     }
 }

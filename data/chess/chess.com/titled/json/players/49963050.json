@@ -6,9 +6,9 @@
     "name": "Georges Leruste",
     "username": "gleruste",
     "title": "CM",
-    "followers": 27,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1721211722,
+    "last_online": 1735323630,
     "joined": 1537528891,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2630,
-            "date": 1721215610,
-            "rd": 44
+            "rating": 2621,
+            "date": 1735325637,
+            "rd": 47
         },
         "best": {
             "rating": 2677,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/84115843297"
         },
         "record": {
-            "win": 962,
-            "loss": 814,
-            "draw": 209
+            "win": 964,
+            "loss": 817,
+            "draw": 210
         }
     },
     "tactics": {

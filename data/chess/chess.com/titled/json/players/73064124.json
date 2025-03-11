@@ -6,10 +6,10 @@
     "name": "Saksham Rautela",
     "username": "kcnock2004",
     "title": "IM",
-    "followers": 245,
+    "followers": 255,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Dallas",
-    "last_online": 1734116468,
+    "last_online": 1741018291,
     "joined": 1583392157,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2360,
-            "date": 1734127004,
-            "rd": 31
+            "rating": 2330,
+            "date": 1741540373,
+            "rd": 44
         },
         "best": {
             "rating": 2611,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/36760202447"
         },
         "record": {
-            "win": 3772,
-            "loss": 4264,
-            "draw": 590
+            "win": 3880,
+            "loss": 4385,
+            "draw": 605
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2504,
-            "date": 1734128137,
-            "rd": 43
+            "rating": 2502,
+            "date": 1741019855,
+            "rd": 49
         },
         "best": {
             "rating": 2637,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/4802200616"
         },
         "record": {
-            "win": 3137,
-            "loss": 3353,
-            "draw": 742
+            "win": 3152,
+            "loss": 3370,
+            "draw": 747
         }
     },
     "fide": 2401,

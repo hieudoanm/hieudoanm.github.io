@@ -5,10 +5,10 @@
     "name": "Dejan Djordjevic",
     "username": "midedu",
     "title": "FM",
-    "followers": 62,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Nis",
-    "last_online": 1734127276,
+    "last_online": 1741633649,
     "joined": 1426544972,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1850,
-            "date": 1734135459,
-            "rd": 23
+            "rating": 1861,
+            "date": 1741295400,
+            "rd": 28
         },
         "best": {
             "rating": 2204,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/126731944827"
         },
         "record": {
-            "win": 6957,
-            "loss": 3486,
-            "draw": 190
+            "win": 7512,
+            "loss": 3889,
+            "draw": 205
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2005,
-            "date": 1734130697,
-            "rd": 33
+            "rating": 2010,
+            "date": 1741636577,
+            "rd": 25
         },
         "best": {
             "rating": 2337,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/25724442465"
         },
         "record": {
-            "win": 6626,
-            "loss": 2298,
-            "draw": 308
+            "win": 7867,
+            "loss": 2573,
+            "draw": 340
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2304,
-            "date": 1673951098
+            "rating": 2489,
+            "date": 1741539170
         },
         "lowest": {
             "rating": 1217,

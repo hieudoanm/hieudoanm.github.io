@@ -6,10 +6,10 @@
     "name": "Alexander Flaata",
     "username": "moodynorway76",
     "title": "FM",
-    "followers": 3,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Oslo",
-    "last_online": 1729526755,
+    "last_online": 1738961668,
     "joined": 1672942771,
     "status": "premium",
     "is_streamer": false,
@@ -71,18 +71,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2001,
-            "date": 1726156056,
-            "rd": 55
+            "rating": 2097,
+            "date": 1736294782,
+            "rd": 74
         },
         "best": {
             "rating": 2130,
             "date": 1710449931,
-            "game": "https://www.chess.com/game/live/104531387147"
+            "game": "https://www.chess.com/game/live/130026009223"
         },
         "record": {
-            "win": 49,
-            "loss": 37,
+            "win": 53,
+            "loss": 44,
             "draw": 4
         }
     },

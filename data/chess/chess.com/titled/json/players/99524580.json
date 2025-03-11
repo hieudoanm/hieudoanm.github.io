@@ -6,10 +6,10 @@
     "name": "Lazaro Alberto Gonzalez Arredondo",
     "username": "zaro1309",
     "title": "FM",
-    "followers": 21,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/CU",
     "location": "M\u00e9rida",
-    "last_online": 1731553773,
+    "last_online": 1740968802,
     "joined": 1606356288,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1952,
-            "date": 1731202522,
-            "rd": 121
+            "rating": 2023,
+            "date": 1737688913,
+            "rd": 106
         },
         "best": {
             "rating": 2319,
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/89528365171"
         },
         "record": {
-            "win": 13,
-            "loss": 8,
+            "win": 16,
+            "loss": 9,
             "draw": 0
         }
     },

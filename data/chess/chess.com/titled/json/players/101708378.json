@@ -5,14 +5,14 @@
     "name": "Kaan Kucuksari",
     "username": "eagleclaw07",
     "title": "IM",
-    "followers": 90,
+    "followers": 96,
     "country": "https://api.chess.com/pub/country/SE",
-    "last_online": 1733590307,
+    "last_online": 1741103636,
     "joined": 1607103659,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -64,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2862,
-            "date": 1733165394,
-            "rd": 39
+            "rating": 2806,
+            "date": 1741111665,
+            "rd": 35
         },
         "best": {
             "rating": 2895,
@@ -74,9 +74,9 @@
             "game": "https://www.chess.com/game/live/118320554935"
         },
         "record": {
-            "win": 931,
-            "loss": 788,
-            "draw": 152
+            "win": 1030,
+            "loss": 882,
+            "draw": 167
         }
     },
     "tactics": {

@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Shaina-Sif",
     "username": "shaina-sif",
     "title": "WFM",
-    "followers": 7,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734174794,
+    "last_online": 1741686457,
     "joined": 1636307749,
     "status": "premium",
     "is_streamer": false,
@@ -27,26 +27,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2142,
-            "date": 1643582164,
-            "rd": 36
+            "rating": 2279,
+            "date": 1737409675,
+            "rd": 168
         },
         "best": {
-            "rating": 2195,
-            "date": 1641923397,
+            "rating": 2317,
+            "date": 1737409511,
             "game": "https://www.chess.com/game/live/35503017701"
         },
         "record": {
-            "win": 107,
-            "loss": 69,
+            "win": 108,
+            "loss": 70,
             "draw": 12
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2221,
-            "date": 1729689099,
-            "rd": 113
+            "rating": 2243,
+            "date": 1740662501,
+            "rd": 105
         },
         "best": {
             "rating": 2414,
@@ -54,15 +54,15 @@
             "game": "https://www.chess.com/game/live/123427812473"
         },
         "record": {
-            "win": 95,
-            "loss": 46,
+            "win": 101,
+            "loss": 48,
             "draw": 5
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3417,
-            "date": 1733079504
+            "rating": 3500,
+            "date": 1737450964
         },
         "lowest": {
             "rating": 1210,
@@ -73,6 +73,10 @@
         "best": {
             "total_attempts": 53,
             "score": 50
+        },
+        "daily": {
+            "total_attempts": 49,
+            "score": 46
         }
     }
 }

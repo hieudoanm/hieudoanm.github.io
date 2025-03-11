@@ -6,10 +6,10 @@
     "name": "Georgi Filev",
     "username": "morphy1984",
     "title": "FM",
-    "followers": 1775,
+    "followers": 1888,
     "country": "https://api.chess.com/pub/country/BG",
     "location": "Sofia",
-    "last_online": 1734159359,
+    "last_online": 1741691589,
     "joined": 1459353742,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2755,
-            "date": 1733504431,
-            "rd": 47
+            "rating": 2754,
+            "date": 1741540470,
+            "rd": 37
         },
         "best": {
             "rating": 2801,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/62107221525"
         },
         "record": {
-            "win": 2434,
-            "loss": 2550,
-            "draw": 629
+            "win": 2488,
+            "loss": 2612,
+            "draw": 654
         }
     },
     "fide": 2189,

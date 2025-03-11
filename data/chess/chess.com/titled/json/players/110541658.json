@@ -6,15 +6,15 @@
     "name": "Samuel Malka",
     "username": "samatsa",
     "title": "FM",
-    "followers": 241,
+    "followers": 257,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733924360,
+    "last_online": 1741651279,
     "joined": 1610046148,
     "status": "premium",
     "is_streamer": true,
     "twitch_url": "https://twitch.tv/samatsa_",
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [
         {
             "type": "twitch",
@@ -59,42 +59,42 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2552,
-            "date": 1689603379,
-            "rd": 96
+            "rating": 2580,
+            "date": 1738973670,
+            "rd": 44
         },
         "best": {
-            "rating": 2552,
-            "date": 1652131851,
-            "game": "https://www.chess.com/game/live/17815310491"
+            "rating": 2580,
+            "date": 1738972853,
+            "game": "https://www.chess.com/game/live/132710983541"
         },
         "record": {
-            "win": 85,
-            "loss": 40,
-            "draw": 8
+            "win": 93,
+            "loss": 44,
+            "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2519,
-            "date": 1713257095,
-            "rd": 49
+            "rating": 2572,
+            "date": 1740860877,
+            "rd": 28
         },
         "best": {
-            "rating": 2561,
-            "date": 1652216817,
+            "rating": 2577,
+            "date": 1739054626,
             "game": "https://www.chess.com/game/live/53796068451"
         },
         "record": {
-            "win": 1120,
-            "loss": 1046,
-            "draw": 217
+            "win": 1214,
+            "loss": 1131,
+            "draw": 234
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3656,
-            "date": 1719127067
+            "rating": 3747,
+            "date": 1738113333
         },
         "lowest": {
             "rating": 412,

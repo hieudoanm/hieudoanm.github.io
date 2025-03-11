@@ -6,10 +6,10 @@
     "name": "John Bartholomew",
     "username": "fins0905",
     "title": "IM",
-    "followers": 7820,
+    "followers": 7920,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Minneapolis, MN",
-    "last_online": 1733796425,
+    "last_online": 1741635818,
     "joined": 1234395308,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2601,
-            "date": 1719024881,
+            "date": 1738029265,
             "rd": 49
         },
         "best": {
@@ -90,8 +90,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2815,
-            "date": 1728937327,
+            "rating": 2802,
+            "date": 1735499072,
             "rd": 47
         },
         "best": {
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/67050052987"
         },
         "record": {
-            "win": 2764,
-            "loss": 1165,
-            "draw": 360
+            "win": 2773,
+            "loss": 1171,
+            "draw": 361
         }
     },
     "fide": 2534,

@@ -9,7 +9,7 @@
     "followers": 34,
     "country": "https://api.chess.com/pub/country/ZA",
     "location": "South Africa",
-    "last_online": 1715588479,
+    "last_online": 1741679478,
     "joined": 1583079993,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1409,
-            "date": 1704948597,
+            "date": 1736501382,
             "rd": 172
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1469,
-            "date": 1707669508,
-            "rd": 80
+            "rating": 1337,
+            "date": 1741669417,
+            "rd": 114
         },
         "best": {
             "rating": 1576,
@@ -82,7 +82,7 @@
         },
         "record": {
             "win": 227,
-            "loss": 310,
+            "loss": 313,
             "draw": 20
         }
     },

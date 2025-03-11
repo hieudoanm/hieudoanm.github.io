@@ -5,10 +5,10 @@
     "name": "Stephen G Lukey",
     "username": "flukeynz",
     "title": "FM",
-    "followers": 117,
+    "followers": 118,
     "country": "https://api.chess.com/pub/country/NZ",
     "location": "Christchurch",
-    "last_online": 1734164010,
+    "last_online": 1741653234,
     "joined": 1510271157,
     "status": "premium",
     "is_streamer": false,
@@ -72,9 +72,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2088,
-            "date": 1732706376,
-            "rd": 48
+            "rating": 2159,
+            "date": 1740365302
         },
         "best": {
             "rating": 2172,
@@ -82,26 +81,26 @@
             "game": "https://www.chess.com/game/live/111849165283"
         },
         "record": {
-            "win": 12080,
-            "loss": 9759,
-            "draw": 859
+            "win": 12209,
+            "loss": 9828,
+            "draw": 868
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2217,
-            "date": 1719227247,
-            "rd": 48
+            "rating": 2308,
+            "date": 1736843333,
+            "rd": 67
         },
         "best": {
-            "rating": 2284,
-            "date": 1696387021,
+            "rating": 2308,
+            "date": 1736843333,
             "game": "https://www.chess.com/game/live/90107458019"
         },
         "record": {
-            "win": 445,
-            "loss": 312,
-            "draw": 47
+            "win": 455,
+            "loss": 315,
+            "draw": 49
         }
     },
     "tactics": {

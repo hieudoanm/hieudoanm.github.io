@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 7,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734168789,
+    "last_online": 1741684156,
     "joined": 1525461470,
     "status": "premium",
     "is_streamer": false,
@@ -16,42 +16,42 @@
     "chess_rapid": {
         "last": {
             "rating": 2300,
-            "date": 1727438515,
+            "date": 1739955396,
             "rd": 49
         },
         "best": {
-            "rating": 2012,
-            "date": 1693563643,
+            "rating": 2300,
+            "date": 1739954685,
             "game": "https://www.chess.com/game/live/87301957753"
         },
         "record": {
-            "win": 225,
+            "win": 227,
             "loss": 91,
             "draw": 8
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2470,
-            "date": 1733913848,
-            "rd": 42
+            "rating": 2510,
+            "date": 1741347632,
+            "rd": 49
         },
         "best": {
-            "rating": 2500,
-            "date": 1733478044,
-            "game": "https://www.chess.com/game/live/127652442753"
+            "rating": 2502,
+            "date": 1738917162,
+            "game": "https://www.chess.com/game/live/128078947545"
         },
         "record": {
-            "win": 202,
-            "loss": 127,
-            "draw": 10
+            "win": 236,
+            "loss": 141,
+            "draw": 15
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2172,
-            "date": 1733142820,
-            "rd": 70
+            "rating": 2248,
+            "date": 1741341643,
+            "rd": 63
         },
         "best": {
             "rating": 2278,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/122198380701"
         },
         "record": {
-            "win": 72,
-            "loss": 48,
-            "draw": 8
+            "win": 84,
+            "loss": 53,
+            "draw": 10
         }
     },
     "fide": 0,
@@ -77,12 +77,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 52,
-            "score": 49
+            "total_attempts": 63,
+            "score": 60
         },
         "daily": {
-            "total_attempts": 41,
-            "score": 38
+            "total_attempts": 47,
+            "score": 45
         }
     }
 }

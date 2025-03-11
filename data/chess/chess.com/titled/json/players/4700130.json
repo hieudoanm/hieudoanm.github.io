@@ -6,10 +6,10 @@
     "name": "Vladimir Abrosimov",
     "username": "ava1411",
     "title": "FM",
-    "followers": 29,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/TC",
     "location": "Tula",
-    "last_online": 1733999872,
+    "last_online": 1741619576,
     "joined": 1297506873,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1987,
-            "date": 1734165265,
+            "rating": 2014,
+            "date": 1741703665,
             "rd": 57
         },
         "best": {
@@ -28,24 +28,24 @@
             "game": "https://www.chess.com/game/daily/273809008"
         },
         "record": {
-            "win": 1314,
-            "loss": 356,
-            "draw": 1062,
-            "time_per_move": 23287,
+            "win": 1338,
+            "loss": 361,
+            "draw": 1068,
+            "time_per_move": 23182,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 1302,
+            "points": 91,
             "withdraw": 0,
-            "count": 23,
+            "count": 3,
             "highest_finish": 1
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 2095,
-            "date": 1733263892,
-            "rd": 77
+            "rating": 2039,
+            "date": 1740590522,
+            "rd": 81
         },
         "best": {
             "rating": 2222,
@@ -54,15 +54,15 @@
         },
         "record": {
             "win": 229,
-            "loss": 39,
-            "draw": 123,
-            "time_per_move": 23287,
+            "loss": 42,
+            "draw": 126,
+            "time_per_move": 23182,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 1302,
+            "points": 91,
             "withdraw": 0,
-            "count": 23,
+            "count": 3,
             "highest_finish": 1
         }
     },
@@ -85,36 +85,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2223,
-            "date": 1687975801,
-            "rd": 74
+            "rating": 2334,
+            "date": 1738703796,
+            "rd": 94
         },
         "best": {
-            "rating": 2338,
-            "date": 1677866545,
+            "rating": 2381,
+            "date": 1738703270,
             "game": "https://www.chess.com/game/live/73507220937"
         },
         "record": {
-            "win": 36,
-            "loss": 50,
-            "draw": 5
+            "win": 41,
+            "loss": 52,
+            "draw": 7
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2253,
-            "date": 1716311292,
-            "rd": 85
+            "rating": 2494,
+            "date": 1738713565,
+            "rd": 48
         },
         "best": {
-            "rating": 2412,
-            "date": 1677869876,
-            "game": "https://www.chess.com/game/live/110044829485"
+            "rating": 2505,
+            "date": 1738712498,
+            "game": "https://www.chess.com/game/live/132428386673"
         },
         "record": {
-            "win": 113,
-            "loss": 126,
-            "draw": 15
+            "win": 122,
+            "loss": 135,
+            "draw": 19
         }
     },
     "tactics": {

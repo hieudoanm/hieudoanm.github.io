@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/BabyAnton",
     "username": "babyanton",
     "title": "FM",
-    "followers": 6,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1734011179,
+    "last_online": 1740316247,
     "joined": 1648153103,
     "status": "premium",
     "is_streamer": false,
@@ -50,8 +50,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2563,
-            "date": 1733823824,
+            "rating": 2554,
+            "date": 1735071900,
             "rd": 49
         },
         "best": {
@@ -61,7 +61,7 @@
         },
         "record": {
             "win": 509,
-            "loss": 415,
+            "loss": 416,
             "draw": 82
         }
     },

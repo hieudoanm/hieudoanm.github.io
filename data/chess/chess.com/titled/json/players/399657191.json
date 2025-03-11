@@ -9,13 +9,27 @@
     "followers": 2,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Miami FL",
-    "last_online": 1732997055,
+    "last_online": 1741148220,
     "joined": 1730410817,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Stone",
     "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1600,
+            "date": 1734561503,
+            "rd": 350
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 545,
+            "timeout_percent": 100
+        }
+    },
     "chess_blitz": {
         "last": {
             "rating": 2426,
@@ -36,8 +50,8 @@
     "fide": 2423,
     "tactics": {
         "highest": {
-            "rating": 2428,
-            "date": 1730833909
+            "rating": 2470,
+            "date": 1740118106
         },
         "lowest": {
             "rating": 1000,

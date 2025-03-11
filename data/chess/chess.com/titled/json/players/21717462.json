@@ -6,9 +6,9 @@
     "name": "Aron Pasti",
     "username": "perecke",
     "title": "IM",
-    "followers": 512,
+    "followers": 527,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734120393,
+    "last_online": 1741434545,
     "joined": 1427552997,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1326,
-            "date": 1734103847,
+            "date": 1741594316,
             "rd": 128
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 132,
             "loss": 153,
             "draw": 11,
-            "time_per_move": 52766,
+            "time_per_move": 52816,
             "timeout_percent": 0
         }
     },
@@ -49,7 +49,7 @@
             "win": 6,
             "loss": 8,
             "draw": 0,
-            "time_per_move": 52766,
+            "time_per_move": 52816,
             "timeout_percent": 0
         }
     },
@@ -72,8 +72,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2678,
-            "date": 1733587866,
+            "rating": 2594,
+            "date": 1741525396,
             "rd": 38
         },
         "best": {
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/110997026177"
         },
         "record": {
-            "win": 800,
-            "loss": 746,
-            "draw": 75
+            "win": 876,
+            "loss": 827,
+            "draw": 81
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2602,
-            "date": 1734121627,
-            "rd": 41
+            "rating": 2554,
+            "date": 1740524096,
+            "rd": 46
         },
         "best": {
             "rating": 2767,
@@ -99,16 +99,16 @@
             "game": "https://www.chess.com/game/live/100369406923"
         },
         "record": {
-            "win": 3261,
-            "loss": 2891,
-            "draw": 392
+            "win": 3318,
+            "loss": 2942,
+            "draw": 398
         }
     },
     "fide": 2223,
     "tactics": {
         "highest": {
-            "rating": 3724,
-            "date": 1726295317
+            "rating": 3760,
+            "date": 1735995267
         },
         "lowest": {
             "rating": 1100,

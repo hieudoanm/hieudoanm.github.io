@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/chess_286",
     "username": "chess_286",
     "title": "FM",
-    "followers": 5,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/NE",
-    "last_online": 1734162281,
+    "last_online": 1741683677,
     "joined": 1717738707,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2734,
-            "date": 1734165903,
-            "rd": 24
+            "rating": 2703,
+            "date": 1741515419,
+            "rd": 35
         },
         "best": {
             "rating": 2822,
@@ -42,15 +42,15 @@
             "game": "https://www.chess.com/game/live/125570301829"
         },
         "record": {
-            "win": 457,
-            "loss": 549,
-            "draw": 95
+            "win": 659,
+            "loss": 804,
+            "draw": 131
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3676,
-            "date": 1723624279
+            "rating": 3756,
+            "date": 1738379338
         },
         "lowest": {
             "rating": 1000,
@@ -61,6 +61,10 @@
         "best": {
             "total_attempts": 69,
             "score": 66
+        },
+        "daily": {
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

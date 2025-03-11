@@ -6,9 +6,9 @@
     "name": "Sandi Stojanovski",
     "username": "patzer-reloaded",
     "title": "FM",
-    "followers": 70,
+    "followers": 81,
     "country": "https://api.chess.com/pub/country/EU",
-    "last_online": 1734163823,
+    "last_online": 1741682957,
     "joined": 1670932260,
     "status": "premium",
     "is_streamer": false,
@@ -51,25 +51,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2374,
-            "date": 1734174019,
-            "rd": 15
+            "rating": 2507,
+            "date": 1741699096,
+            "rd": 16
         },
         "best": {
-            "rating": 2608,
-            "date": 1724665543,
+            "rating": 2609,
+            "date": 1739899986,
             "game": "https://www.chess.com/game/live/110064089031"
         },
         "record": {
-            "win": 11757,
-            "loss": 14267,
-            "draw": 2118
+            "win": 13087,
+            "loss": 15730,
+            "draw": 2369
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3220,
-            "date": 1706869638
+            "rating": 3226,
+            "date": 1740306077
         },
         "lowest": {
             "rating": 1000,

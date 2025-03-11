@@ -8,18 +8,18 @@
     "followers": 5,
     "country": "https://api.chess.com/pub/country/XW",
     "location": "Wales",
-    "last_online": 1727181823,
+    "last_online": 1737827833,
     "joined": 1594497509,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1724,
-            "date": 1727630195,
-            "rd": 80
+            "rating": 1776,
+            "date": 1740761767,
+            "rd": 92
         },
         "best": {
             "rating": 1928,
@@ -27,8 +27,8 @@
             "game": "https://www.chess.com/game/live/69022281657"
         },
         "record": {
-            "win": 38,
-            "loss": 35,
+            "win": 41,
+            "loss": 36,
             "draw": 6
         }
     },
@@ -46,9 +46,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1593,
-            "date": 1702049341,
-            "rd": 92
+            "rating": 1557,
+            "date": 1741028947,
+            "rd": 116
         },
         "best": {
             "rating": 2030,
@@ -56,9 +56,9 @@
             "game": "https://www.chess.com/game/live/5207355630"
         },
         "record": {
-            "win": 8,
-            "loss": 19,
-            "draw": 5
+            "win": 9,
+            "loss": 21,
+            "draw": 6
         }
     },
     "tactics": {

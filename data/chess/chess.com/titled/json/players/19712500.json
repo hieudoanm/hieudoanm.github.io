@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 26,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734165859,
+    "last_online": 1741628786,
     "joined": 1415950717,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1888,
-            "date": 1734165903,
-            "rd": 66
+            "rating": 1880,
+            "date": 1741694514,
+            "rd": 68
         },
         "best": {
             "rating": 1946,
@@ -26,10 +26,10 @@
             "game": "https://www.chess.com/game/daily/718808421"
         },
         "record": {
-            "win": 375,
-            "loss": 234,
-            "draw": 66,
-            "time_per_move": 25343,
+            "win": 381,
+            "loss": 238,
+            "draw": 68,
+            "time_per_move": 25457,
             "timeout_percent": 0
         }
     },
@@ -48,14 +48,14 @@
             "win": 43,
             "loss": 31,
             "draw": 10,
-            "time_per_move": 25343,
+            "time_per_move": 25457,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2300,
-            "date": 1729201456,
+            "date": 1735221151,
             "rd": 79
         },
         "best": {
@@ -88,19 +88,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2606,
-            "date": 1730576582,
-            "rd": 49
+            "rating": 2601,
+            "date": 1739040124,
+            "rd": 46
         },
         "best": {
-            "rating": 2609,
-            "date": 1703343364,
+            "rating": 2616,
+            "date": 1739031380,
             "game": "https://www.chess.com/game/live/92254905343"
         },
         "record": {
-            "win": 1590,
-            "loss": 1174,
-            "draw": 170
+            "win": 1592,
+            "loss": 1177,
+            "draw": 172
         }
     },
     "tactics": {

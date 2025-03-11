@@ -6,9 +6,9 @@
     "name": "Dariusz Dziewonski",
     "username": "caracal3000",
     "title": "FM",
-    "followers": 86,
+    "followers": 95,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734003955,
+    "last_online": 1741625132,
     "joined": 1700167941,
     "status": "premium",
     "is_streamer": false,
@@ -17,26 +17,26 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2519,
-            "date": 1733852591,
-            "rd": 33
+            "rating": 2499,
+            "date": 1740835342,
+            "rd": 40
         },
         "best": {
             "rating": 2644,
             "date": 1726433333,
-            "game": "https://www.chess.com/game/live/124754338849"
+            "game": "https://www.chess.com/game/live/128450562703"
         },
         "record": {
-            "win": 487,
-            "loss": 459,
-            "draw": 130
+            "win": 601,
+            "loss": 579,
+            "draw": 156
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2565,
-            "date": 1733262766,
-            "rd": 33
+            "rating": 2531,
+            "date": 1740781354,
+            "rd": 32
         },
         "best": {
             "rating": 2701,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/109459286281"
         },
         "record": {
-            "win": 630,
-            "loss": 563,
-            "draw": 170
+            "win": 722,
+            "loss": 657,
+            "draw": 200
         }
     },
     "fide": 2316,
     "tactics": {
         "highest": {
-            "rating": 3339,
-            "date": 1732459200
+            "rating": 3575,
+            "date": 1739471205
         },
         "lowest": {
             "rating": 1200,
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 51,
-            "score": 48
+            "total_attempts": 57,
+            "score": 54
         }
     }
 }

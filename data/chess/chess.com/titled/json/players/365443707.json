@@ -5,54 +5,54 @@
     "name": "Jan Zienkiewicz",
     "username": "hattori-hanzo78",
     "title": "FM",
-    "followers": 4,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734086780,
+    "last_online": 1741675933,
     "joined": 1716661234,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2242,
-            "date": 1734090744,
-            "rd": 108
+            "rating": 2681,
+            "date": 1740248790,
+            "rd": 39
         },
         "best": {
-            "rating": 2271,
-            "date": 1726156928,
-            "game": "https://www.chess.com/game/live/119896207179"
+            "rating": 2752,
+            "date": 1737830543,
+            "game": "https://www.chess.com/game/live/130359705467"
         },
         "record": {
-            "win": 7,
-            "loss": 4,
-            "draw": 0
+            "win": 112,
+            "loss": 95,
+            "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2585,
-            "date": 1733854204,
-            "rd": 45
+            "rating": 2624,
+            "date": 1741126356,
+            "rd": 44
         },
         "best": {
-            "rating": 2614,
-            "date": 1721148699,
+            "rating": 2673,
+            "date": 1739290909,
             "game": "https://www.chess.com/game/live/113671244715"
         },
         "record": {
-            "win": 92,
-            "loss": 78,
-            "draw": 16
+            "win": 154,
+            "loss": 122,
+            "draw": 21
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2696,
-            "date": 1725986739
+            "rating": 3584,
+            "date": 1741628745
         },
         "lowest": {
             "rating": 1000,
@@ -61,8 +61,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 68,
-            "score": 65
+            "total_attempts": 77,
+            "score": 73
         }
     }
 }

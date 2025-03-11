@@ -6,15 +6,15 @@
     "name": "Oliver Dimakiling",
     "username": "chargemax23",
     "title": "IM",
-    "followers": 205,
+    "followers": 281,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Dubai",
-    "last_online": 1732543405,
+    "last_online": 1741623078,
     "joined": 1461598920,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -54,43 +54,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2641,
-            "date": 1612791185,
-            "rd": 65
+            "rating": 2619,
+            "date": 1738857079,
+            "rd": 26
         },
         "best": {
-            "rating": 2648,
-            "date": 1612371198,
-            "game": "https://www.chess.com/game/live/6438675676"
+            "rating": 2727,
+            "date": 1738448137,
+            "game": "https://www.chess.com/game/live/132179464021"
         },
         "record": {
-            "win": 628,
-            "loss": 500,
-            "draw": 43
+            "win": 717,
+            "loss": 573,
+            "draw": 51
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2722,
-            "date": 1698330484,
-            "rd": 51
+            "rating": 2808,
+            "date": 1741388155,
+            "rd": 20
         },
         "best": {
-            "rating": 2808,
-            "date": 1642505911,
-            "game": "https://www.chess.com/game/live/4726391353"
+            "rating": 2918,
+            "date": 1738967280,
+            "game": "https://www.chess.com/game/live/132803358707"
         },
         "record": {
-            "win": 2237,
-            "loss": 1416,
-            "draw": 281
+            "win": 3041,
+            "loss": 1992,
+            "draw": 383
         }
     },
     "fide": 2400,
     "tactics": {
         "highest": {
-            "rating": 2538,
-            "date": 1729770505
+            "rating": 2937,
+            "date": 1740585151
         },
         "lowest": {
             "rating": 1205,

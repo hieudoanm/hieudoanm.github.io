@@ -5,9 +5,9 @@
     "name": "Alex Garrido Outon",
     "username": "alexgo05",
     "title": "FM",
-    "followers": 25,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734117123,
+    "last_online": 1741702287,
     "joined": 1379079327,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1391,
-            "date": 1716325831,
-            "rd": 117
+            "rating": 1497,
+            "date": 1741678144,
+            "rd": 210
         },
         "best": {
             "rating": 1656,
@@ -26,10 +26,10 @@
             "game": "https://www.chess.com/game/daily/107611038"
         },
         "record": {
-            "win": 19,
+            "win": 21,
             "loss": 23,
             "draw": 0,
-            "time_per_move": 79257,
+            "time_per_move": 73798,
             "timeout_percent": 0
         }
     },
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2572,
-            "date": 1733237126,
-            "rd": 44
+            "rating": 2556,
+            "date": 1739454251,
+            "rd": 49
         },
         "best": {
             "rating": 2611,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/126976159781"
         },
         "record": {
-            "win": 58,
-            "loss": 34,
-            "draw": 5
+            "win": 70,
+            "loss": 50,
+            "draw": 7
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2488,
-            "date": 1731279394,
-            "rd": 84
+            "rating": 2490,
+            "date": 1738240788,
+            "rd": 49
         },
         "best": {
             "rating": 2543,
@@ -79,8 +79,8 @@
             "game": "https://www.chess.com/game/live/6090686127"
         },
         "record": {
-            "win": 515,
-            "loss": 449,
+            "win": 516,
+            "loss": 450,
             "draw": 69
         }
     },

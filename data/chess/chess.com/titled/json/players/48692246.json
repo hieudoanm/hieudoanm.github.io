@@ -6,9 +6,9 @@
     "name": "Azat Nurmammedov",
     "username": "azatnew",
     "title": "FM",
-    "followers": 333,
+    "followers": 340,
     "country": "https://api.chess.com/pub/country/TM",
-    "last_online": 1733946175,
+    "last_online": 1741289283,
     "joined": 1534051836,
     "status": "premium",
     "is_streamer": false,
@@ -79,9 +79,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2858,
-            "date": 1733230987,
-            "rd": 47
+            "rating": 2822,
+            "date": 1741290066,
+            "rd": 48
         },
         "best": {
             "rating": 2868,
@@ -89,9 +89,9 @@
             "game": "https://www.chess.com/game/live/121657799393"
         },
         "record": {
-            "win": 2411,
-            "loss": 2548,
-            "draw": 493
+            "win": 2427,
+            "loss": 2568,
+            "draw": 496
         }
     },
     "tactics": {

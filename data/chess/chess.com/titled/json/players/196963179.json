@@ -5,10 +5,10 @@
     "name": "Ritviz Parab",
     "username": "rutvij09",
     "title": "IM",
-    "followers": 21,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Goa",
-    "last_online": 1734173838,
+    "last_online": 1741186477,
     "joined": 1663010175,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2524,
-            "date": 1734154055,
-            "rd": 29
+            "rating": 2641,
+            "date": 1739471231,
+            "rd": 35
         },
         "best": {
             "rating": 2892,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/96057864411"
         },
         "record": {
-            "win": 6549,
-            "loss": 5735,
-            "draw": 509
+            "win": 6759,
+            "loss": 5966,
+            "draw": 521
         }
     },
     "chess_blitz": {
@@ -80,10 +80,6 @@
         "best": {
             "total_attempts": 65,
             "score": 62
-        },
-        "daily": {
-            "total_attempts": 51,
-            "score": 48
         }
     }
 }

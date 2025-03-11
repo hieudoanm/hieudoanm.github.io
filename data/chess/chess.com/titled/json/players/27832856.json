@@ -9,7 +9,7 @@
     "followers": 21,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Medellin",
-    "last_online": 1734009302,
+    "last_online": 1735297546,
     "joined": 1461166505,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2147,
-            "date": 1727103198,
-            "rd": 123
+            "rating": 2175,
+            "date": 1740030984,
+            "rd": 133
         },
         "best": {
             "rating": 2419,
@@ -45,7 +45,7 @@
             "game": "https://www.chess.com/game/live/5611591848"
         },
         "record": {
-            "win": 1491,
+            "win": 1492,
             "loss": 1214,
             "draw": 103
         }

@@ -6,9 +6,9 @@
     "name": "Luyse Victoria Gomes Acioli",
     "username": "luachess1",
     "title": "WNM",
-    "followers": 40,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/TO",
-    "last_online": 1734013861,
+    "last_online": 1741699454,
     "joined": 1572729924,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1854,
-            "date": 1733748442,
-            "rd": 82
+            "rating": 1849,
+            "date": 1738097844,
+            "rd": 91
         },
         "best": {
             "rating": 1930,
@@ -76,7 +76,7 @@
         },
         "record": {
             "win": 427,
-            "loss": 372,
+            "loss": 373,
             "draw": 47
         }
     },

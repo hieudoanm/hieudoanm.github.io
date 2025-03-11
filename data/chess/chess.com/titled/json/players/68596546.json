@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 52,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1734184549,
+    "last_online": 1741667660,
     "joined": 1574966181,
     "status": "premium",
     "is_streamer": false,
@@ -31,8 +31,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2089,
-            "date": 1733670326,
+            "rating": 2081,
+            "date": 1739717150,
             "rd": 49
         },
         "best": {
@@ -43,48 +43,48 @@
         "record": {
             "win": 10,
             "loss": 3,
-            "draw": 1
+            "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2807,
-            "date": 1733632690,
-            "rd": 33
+            "rating": 2801,
+            "date": 1741461316,
+            "rd": 48
         },
         "best": {
-            "rating": 2816,
-            "date": 1733485752,
+            "rating": 2831,
+            "date": 1735722227,
             "game": "https://www.chess.com/game/live/122408641345"
         },
         "record": {
-            "win": 1517,
-            "loss": 1685,
-            "draw": 236
+            "win": 1566,
+            "loss": 1738,
+            "draw": 244
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2779,
-            "date": 1733902395,
-            "rd": 32
+            "rating": 2695,
+            "date": 1741598802,
+            "rd": 35
         },
         "best": {
-            "rating": 2799,
-            "date": 1723893233,
-            "game": "https://www.chess.com/game/live/106066230081"
+            "rating": 2815,
+            "date": 1737794950,
+            "game": "https://www.chess.com/game/live/130145327319"
         },
         "record": {
-            "win": 936,
-            "loss": 887,
-            "draw": 203
+            "win": 1044,
+            "loss": 1012,
+            "draw": 220
         }
     },
-    "fide": 2359,
+    "fide": 2378,
     "tactics": {
         "highest": {
-            "rating": 3672,
-            "date": 1733954150
+            "rating": 3706,
+            "date": 1740064718
         },
         "lowest": {
             "rating": 1216,
@@ -93,8 +93,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 51,
-            "score": 48
+            "total_attempts": 54,
+            "score": 51
         }
     }
 }

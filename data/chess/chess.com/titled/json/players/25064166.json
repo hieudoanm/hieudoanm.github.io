@@ -1,5 +1,5 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25064166.abeab704.200x200o.efa45ca41e75.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25064166.2b7f353d.200x200o.2747f26a8260.jpg",
     "player_id": 25064166,
     "@id": "https://api.chess.com/pub/player/dino_ballecer",
     "url": "https://www.chess.com/member/Dino_Ballecer",
@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 165,
     "country": "https://api.chess.com/pub/country/PH",
-    "last_online": 1734051868,
+    "last_online": 1741694985,
     "joined": 1447512622,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2329,
-            "date": 1724346438,
-            "rd": 59
+            "rating": 2455,
+            "date": 1740148782,
+            "rd": 46
         },
         "best": {
             "rating": 2565,
@@ -63,25 +63,25 @@
             "game": "https://www.chess.com/game/live/3577178256"
         },
         "record": {
-            "win": 4723,
-            "loss": 3582,
-            "draw": 409
+            "win": 4780,
+            "loss": 3620,
+            "draw": 415
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2509,
-            "date": 1729886446,
-            "rd": 49
+            "rating": 2522,
+            "date": 1736273349,
+            "rd": 46
         },
         "best": {
             "rating": 2761,
             "date": 1600717198,
-            "game": "https://www.chess.com/game/live/5470699322"
+            "game": "https://www.chess.com/game/live/130004428729"
         },
         "record": {
-            "win": 1769,
-            "loss": 1320,
+            "win": 1774,
+            "loss": 1326,
             "draw": 285
         }
     },

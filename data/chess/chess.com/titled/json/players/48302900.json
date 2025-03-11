@@ -6,9 +6,9 @@
     "name": "Santiago Guevara",
     "username": "santig8",
     "title": "FM",
-    "followers": 26,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/SV",
-    "last_online": 1734138330,
+    "last_online": 1741465779,
     "joined": 1532909687,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2092,
-            "date": 1728786440,
-            "rd": 96
+            "rating": 2089,
+            "date": 1739034187,
+            "rd": 114
         },
         "best": {
             "rating": 2092,
@@ -64,25 +64,25 @@
         },
         "record": {
             "win": 37,
-            "loss": 45,
+            "loss": 46,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2501,
-            "date": 1734142386,
-            "rd": 26
+            "rating": 2324,
+            "date": 1740528255,
+            "rd": 37
         },
         "best": {
-            "rating": 2501,
-            "date": 1734142386,
+            "rating": 2516,
+            "date": 1734187147,
             "game": "https://www.chess.com/game/live/113671858639"
         },
         "record": {
-            "win": 2214,
-            "loss": 2293,
-            "draw": 199
+            "win": 2318,
+            "loss": 2449,
+            "draw": 204
         }
     },
     "fide": 2066,
@@ -98,8 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 43,
-            "score": 40
+            "total_attempts": 47,
+            "score": 44
         }
     }
 }

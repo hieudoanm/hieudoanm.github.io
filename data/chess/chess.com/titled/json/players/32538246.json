@@ -6,8 +6,8 @@
     "username": "littlemooo",
     "title": "WCM",
     "followers": 18,
-    "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1727679198,
+    "country": "https://api.chess.com/pub/country/TW",
+    "last_online": 1737998950,
     "joined": 1484926158,
     "status": "premium",
     "is_streamer": false,
@@ -30,7 +30,7 @@
             "loss": 2,
             "draw": 0,
             "time_per_move": 46689,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {

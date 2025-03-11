@@ -5,9 +5,9 @@
     "name": "Pablo Mart\u00ednez",
     "username": "pabmar70",
     "title": "FM",
-    "followers": 30,
+    "followers": 33,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734016151,
+    "last_online": 1740499025,
     "joined": 1584178339,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2210,
-            "date": 1734034471,
-            "rd": 20
+            "rating": 2125,
+            "date": 1741648184,
+            "rd": 19
         },
         "best": {
             "rating": 2407,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/124096231369"
         },
         "record": {
-            "win": 1585,
-            "loss": 1394,
-            "draw": 206
+            "win": 2896,
+            "loss": 2632,
+            "draw": 379
         }
     },
     "chess_blitz": {
@@ -97,8 +97,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 39,
-            "score": 37
+            "total_attempts": 41,
+            "score": 39
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "MF Pablo Alexander Ruiz Aguilar",
     "username": "jcvandamme10",
     "title": "FM",
-    "followers": 10,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "SANTANDER",
-    "last_online": 1730329818,
+    "last_online": 1741451713,
     "joined": 1579133632,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2395,
-            "date": 1719453662,
-            "rd": 217
+            "rating": 2479,
+            "date": 1739558861,
+            "rd": 48
         },
         "best": {
-            "rating": 2395,
-            "date": 1719453123,
-            "game": "https://www.chess.com/game/live/113190610409"
+            "rating": 2504,
+            "date": 1737473512,
+            "game": "https://www.chess.com/game/live/133297743413"
         },
         "record": {
-            "win": 7,
-            "loss": 0,
+            "win": 9,
+            "loss": 3,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2341,
-            "date": 1726004274,
-            "rd": 76
+            "rating": 2326,
+            "date": 1741237584,
+            "rd": 57
         },
         "best": {
             "rating": 2484,
@@ -62,15 +62,15 @@
             "game": "https://www.chess.com/game/live/74964884239"
         },
         "record": {
-            "win": 261,
-            "loss": 225,
-            "draw": 45
+            "win": 277,
+            "loss": 245,
+            "draw": 51
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2932,
-            "date": 1674580691
+            "rating": 3044,
+            "date": 1741234384
         },
         "lowest": {
             "rating": 1211,

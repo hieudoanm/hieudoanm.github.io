@@ -6,9 +6,9 @@
     "name": "Luuk Baselmans",
     "username": "deballer",
     "title": "FM",
-    "followers": 93,
+    "followers": 96,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734181073,
+    "last_online": 1741611083,
     "joined": 1498473645,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1952,
-            "date": 1730222004,
+            "date": 1741352813,
             "rd": 111
         },
         "best": {
@@ -89,9 +89,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2613,
-            "date": 1730672475,
-            "rd": 49
+            "rating": 2603,
+            "date": 1741530395,
+            "rd": 35
         },
         "best": {
             "rating": 2660,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/32039454543"
         },
         "record": {
-            "win": 1962,
-            "loss": 1090,
-            "draw": 271
+            "win": 1986,
+            "loss": 1113,
+            "draw": 277
         }
     },
     "tactics": {

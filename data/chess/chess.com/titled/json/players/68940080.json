@@ -4,20 +4,37 @@
     "url": "https://www.chess.com/member/ChessKlubHodKonem",
     "username": "chessklubhodkonem",
     "title": "FM",
-    "followers": 0,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/BY",
-    "last_online": 1734118156,
+    "last_online": 1741698403,
     "joined": 1575624627,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Crystal",
     "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 1912,
+            "date": 1735235554,
+            "rd": 67
+        },
+        "best": {
+            "rating": 2000,
+            "date": 1735127122,
+            "game": "https://www.chess.com/game/live/128892766471"
+        },
+        "record": {
+            "win": 13,
+            "loss": 12,
+            "draw": 1
+        }
+    },
     "chess_blitz": {
         "last": {
-            "rating": 2031,
-            "date": 1734120918,
-            "rd": 41
+            "rating": 2095,
+            "date": 1741541294,
+            "rd": 45
         },
         "best": {
             "rating": 2193,
@@ -25,15 +42,15 @@
             "game": "https://www.chess.com/game/live/127164624683"
         },
         "record": {
-            "win": 47,
-            "loss": 38,
-            "draw": 6
+            "win": 110,
+            "loss": 80,
+            "draw": 12
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2242,
-            "date": 1733739055
+            "rating": 2305,
+            "date": 1740683283
         },
         "lowest": {
             "rating": 1200,
@@ -44,10 +61,6 @@
         "best": {
             "total_attempts": 42,
             "score": 39
-        },
-        "daily": {
-            "total_attempts": 23,
-            "score": 20
         }
     }
 }

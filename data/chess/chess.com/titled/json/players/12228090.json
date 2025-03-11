@@ -6,10 +6,10 @@
     "name": "Alexej Cherepov",
     "username": "cherepov_alexej",
     "title": "CM",
-    "followers": 180,
+    "followers": 189,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "Minsk",
-    "last_online": 1734118790,
+    "last_online": 1741634308,
     "joined": 1370728480,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1675,
-            "date": 1734118864,
-            "rd": 58
+            "rating": 1746,
+            "date": 1741646368,
+            "rd": 69
         },
         "best": {
             "rating": 2192,
@@ -28,17 +28,11 @@
             "game": "https://www.chess.com/game/daily/256290048"
         },
         "record": {
-            "win": 1496,
-            "loss": 457,
-            "draw": 235,
-            "time_per_move": 55277,
-            "timeout_percent": 52
-        },
-        "tournament": {
-            "points": 358,
-            "withdraw": 2,
-            "count": 1,
-            "highest_finish": 1
+            "win": 1504,
+            "loss": 458,
+            "draw": 237,
+            "time_per_move": 55916,
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {
@@ -56,21 +50,15 @@
             "win": 26,
             "loss": 16,
             "draw": 11,
-            "time_per_move": 55277,
+            "time_per_move": 55916,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 358,
-            "withdraw": 2,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2289,
-            "date": 1688719322,
-            "rd": 102
+            "rating": 2292,
+            "date": 1738436263,
+            "rd": 49
         },
         "best": {
             "rating": 2316,
@@ -78,7 +66,7 @@
             "game": "https://www.chess.com/game/live/24609658217"
         },
         "record": {
-            "win": 91,
+            "win": 100,
             "loss": 51,
             "draw": 14
         }
@@ -102,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2471,
-            "date": 1731356072,
-            "rd": 63
+            "rating": 2494,
+            "date": 1737876713,
+            "rd": 53
         },
         "best": {
             "rating": 2520,
@@ -112,9 +100,9 @@
             "game": "https://www.chess.com/game/live/95359285399"
         },
         "record": {
-            "win": 1028,
-            "loss": 500,
-            "draw": 108
+            "win": 1044,
+            "loss": 511,
+            "draw": 110
         }
     },
     "fide": 2087,
@@ -130,8 +118,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 64,
-            "score": 61
+            "total_attempts": 66,
+            "score": 63
         }
     }
 }

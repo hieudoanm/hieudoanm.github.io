@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/lazaro25",
     "username": "lazaro25",
     "title": "FM",
-    "followers": 16,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734116928,
+    "last_online": 1741475681,
     "joined": 1504546552,
     "status": "premium",
     "is_streamer": false,
@@ -80,8 +80,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3381,
-            "date": 1727963832
+            "rating": 3418,
+            "date": 1740068697
         },
         "lowest": {
             "rating": 1209,

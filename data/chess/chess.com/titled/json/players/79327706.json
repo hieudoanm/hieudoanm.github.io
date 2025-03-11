@@ -5,10 +5,10 @@
     "name": "Leonid Gerzhoy",
     "username": "leonidtoronto",
     "title": "IM",
-    "followers": 88,
+    "followers": 113,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto",
-    "last_online": 1734125437,
+    "last_online": 1741578510,
     "joined": 1589321092,
     "status": "premium",
     "is_streamer": false,
@@ -34,19 +34,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2703,
-            "date": 1734131552,
-            "rd": 27
+            "rating": 2676,
+            "date": 1741669226,
+            "rd": 17
         },
         "best": {
-            "rating": 2808,
-            "date": 1706396817,
+            "rating": 2834,
+            "date": 1739664490,
             "game": "https://www.chess.com/game/live/100125744361"
         },
         "record": {
-            "win": 7634,
-            "loss": 5862,
-            "draw": 2970
+            "win": 8680,
+            "loss": 6656,
+            "draw": 3277
         }
     },
     "fide": 2348,

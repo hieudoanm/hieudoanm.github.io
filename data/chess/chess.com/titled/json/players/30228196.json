@@ -1,20 +1,20 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/30228196.c62810dd.200x200o.fb02170e6c4d.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/30228196.3e7dd815.200x200o.0c6f613bfef2.jpg",
     "player_id": 30228196,
     "@id": "https://api.chess.com/pub/player/antosha_chekhonte",
     "url": "https://www.chess.com/member/Antosha_Chekhonte",
     "name": "Nikolay Pavlov",
     "username": "antosha_chekhonte",
     "title": "FM",
-    "followers": 8,
-    "country": "https://api.chess.com/pub/country/XX",
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/MC",
     "location": "Rostov-on-Don",
-    "last_online": 1733845759,
+    "last_online": 1741362631,
     "joined": 1475582913,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -37,47 +37,53 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2654,
-            "date": 1731178755,
-            "rd": 32
+            "rating": 2691,
+            "date": 1741103352,
+            "rd": 33
         },
         "best": {
-            "rating": 2666,
-            "date": 1731175378,
-            "game": "https://www.chess.com/game/live/124913972117"
+            "rating": 2717,
+            "date": 1740248415,
+            "game": "https://www.chess.com/game/live/133985956269"
         },
         "record": {
-            "win": 159,
-            "loss": 163,
-            "draw": 17
+            "win": 213,
+            "loss": 213,
+            "draw": 24
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2587,
-            "date": 1733854007,
-            "rd": 42
+            "rating": 2622,
+            "date": 1741370307,
+            "rd": 25
         },
         "best": {
-            "rating": 2668,
-            "date": 1728405662,
+            "rating": 2679,
+            "date": 1740501623,
             "game": "https://www.chess.com/game/live/119114450337"
         },
         "record": {
-            "win": 1642,
-            "loss": 1559,
-            "draw": 199
+            "win": 1809,
+            "loss": 1691,
+            "draw": 220
         }
     },
+    "fide": 1900,
     "tactics": {
         "highest": {
-            "rating": 1792,
-            "date": 1512459878
+            "rating": 2343,
+            "date": 1737646389
         },
         "lowest": {
             "rating": 1791,
             "date": 1512459693
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 41,
+            "score": 38
+        }
+    }
 }

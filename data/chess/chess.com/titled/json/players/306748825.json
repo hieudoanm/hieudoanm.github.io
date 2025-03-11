@@ -6,7 +6,7 @@
     "title": "CM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1732008944,
+    "last_online": 1736774295,
     "joined": 1692376556,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2193,
-            "date": 1732009236,
-            "rd": 105
+            "rating": 2157,
+            "date": 1736774599,
+            "rd": 108
         },
         "best": {
             "rating": 2249,
@@ -43,7 +43,7 @@
         },
         "record": {
             "win": 56,
-            "loss": 46,
+            "loss": 47,
             "draw": 2
         }
     },

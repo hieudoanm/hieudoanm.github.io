@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/65721014.db1b6c03.200x200o.61242cde8d96.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/65721014.9727a9f5.200x200o.52d8ac558f2a.jpg",
     "player_id": 65721014,
     "@id": "https://api.chess.com/pub/player/molecularchemist",
     "url": "https://www.chess.com/member/MolecularChemist",
     "name": "Dimitar Mardov",
     "username": "molecularchemist",
     "title": "IM",
-    "followers": 887,
+    "followers": 990,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1734134416,
+    "last_online": 1741581722,
     "joined": 1568982064,
     "status": "premium",
     "is_streamer": false,
@@ -53,36 +53,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3102,
-            "date": 1725576500,
-            "rd": 46
+            "rating": 3200,
+            "date": 1736713230,
+            "rd": 31
         },
         "best": {
-            "rating": 3138,
-            "date": 1711061538,
+            "rating": 3201,
+            "date": 1736711049,
             "game": "https://www.chess.com/game/live/104880580025"
         },
         "record": {
-            "win": 3081,
-            "loss": 1527,
-            "draw": 309
+            "win": 3149,
+            "loss": 1553,
+            "draw": 317
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2963,
-            "date": 1734154459,
-            "rd": 30
+            "rating": 2975,
+            "date": 1739657964,
+            "rd": 25
         },
         "best": {
-            "rating": 3023,
-            "date": 1732588406,
-            "game": "https://www.chess.com/game/live/126313185345"
+            "rating": 3054,
+            "date": 1735330619,
+            "game": "https://www.chess.com/game/live/129689916453"
         },
         "record": {
-            "win": 2528,
-            "loss": 1653,
-            "draw": 576
+            "win": 2816,
+            "loss": 1901,
+            "draw": 662
         }
     },
     "tactics": {
@@ -99,10 +99,6 @@
         "best": {
             "total_attempts": 66,
             "score": 63
-        },
-        "daily": {
-            "total_attempts": 55,
-            "score": 52
         }
     }
 }

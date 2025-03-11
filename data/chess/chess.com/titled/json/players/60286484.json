@@ -6,9 +6,9 @@
     "name": "Jason Hu",
     "username": "burgersarebetter",
     "title": "FM",
-    "followers": 90,
+    "followers": 92,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734155621,
+    "last_online": 1741684358,
     "joined": 1556325307,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2312,
-            "date": 1730514150,
+            "rating": 2354,
+            "date": 1740663045,
             "rd": 49
         },
         "best": {
@@ -46,33 +46,33 @@
             "game": "https://www.chess.com/game/live/35719639797"
         },
         "record": {
-            "win": 170,
-            "loss": 47,
+            "win": 177,
+            "loss": 49,
             "draw": 19
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2546,
-            "date": 1733970373,
-            "rd": 35
+            "rating": 2701,
+            "date": 1741677086,
+            "rd": 25
         },
         "best": {
-            "rating": 2632,
-            "date": 1724062251,
+            "rating": 2701,
+            "date": 1741139775,
             "game": "https://www.chess.com/game/live/10378592157"
         },
         "record": {
-            "win": 739,
-            "loss": 670,
-            "draw": 78
+            "win": 958,
+            "loss": 830,
+            "draw": 104
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2439,
-            "date": 1734156990,
-            "rd": 33
+            "rating": 2515,
+            "date": 1741690394,
+            "rd": 27
         },
         "best": {
             "rating": 2643,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/38054425523"
         },
         "record": {
-            "win": 5659,
-            "loss": 4041,
-            "draw": 806
+            "win": 5853,
+            "loss": 4177,
+            "draw": 844
         }
     },
     "tactics": {

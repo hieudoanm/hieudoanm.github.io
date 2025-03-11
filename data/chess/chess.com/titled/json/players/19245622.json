@@ -9,7 +9,7 @@
     "followers": 4,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "London",
-    "last_online": 1734113949,
+    "last_online": 1741537293,
     "joined": 1412943958,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     "fide": 2330,
     "tactics": {
         "highest": {
-            "rating": 2818,
-            "date": 1734114112
+            "rating": 3214,
+            "date": 1741537952
         },
         "lowest": {
             "rating": 1343,

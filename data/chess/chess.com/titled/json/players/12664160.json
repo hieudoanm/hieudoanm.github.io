@@ -9,7 +9,7 @@
     "followers": 17,
     "country": "https://api.chess.com/pub/country/LT",
     "location": "Kaunas",
-    "last_online": 1721761741,
+    "last_online": 1737911663,
     "joined": 1373485186,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2073,
-            "date": 1734111110,
-            "rd": 35
+            "rating": 2168,
+            "date": 1741611384,
+            "rd": 33
         },
         "best": {
             "rating": 2435,
@@ -28,9 +28,9 @@
             "game": "https://www.chess.com/game/live/55430971903"
         },
         "record": {
-            "win": 3469,
-            "loss": 3035,
-            "draw": 183
+            "win": 3565,
+            "loss": 3114,
+            "draw": 188
         }
     },
     "chess_blitz": {

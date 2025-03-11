@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/49424890.dd3531a4.200x200o.3e1727cde19c.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/49424890.5ce1345f.200x200o.d67a147f305a.png",
     "player_id": 49424890,
     "@id": "https://api.chess.com/pub/player/imivangalic",
     "url": "https://www.chess.com/member/imivangalic",
     "name": "Ivan Galic",
     "username": "imivangalic",
     "title": "IM",
-    "followers": 120,
+    "followers": 124,
     "country": "https://api.chess.com/pub/country/BA",
-    "last_online": 1734179418,
+    "last_online": 1741689397,
     "joined": 1536080676,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2281,
-            "date": 1733597896,
+            "date": 1740856245,
             "rd": 104
         },
         "best": {

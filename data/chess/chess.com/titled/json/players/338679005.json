@@ -6,9 +6,9 @@
     "name": "Helvert Hern\u00e1ndez",
     "username": "helverthernandez",
     "title": "CM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1733488927,
+    "last_online": 1740761958,
     "joined": 1705155389,
     "status": "premium",
     "is_streamer": false,
@@ -17,26 +17,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2313,
-            "date": 1734111795,
-            "rd": 32
+            "rating": 2180,
+            "date": 1741691085,
+            "rd": 25
         },
         "best": {
             "rating": 2346,
             "date": 1733972099,
-            "game": "https://www.chess.com/game/live/127596039045"
+            "game": "https://www.chess.com/game/live/128515951431"
         },
         "record": {
-            "win": 1111,
-            "loss": 761,
-            "draw": 216
+            "win": 1406,
+            "loss": 1019,
+            "draw": 303
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1524,
-            "date": 1734165657,
-            "rd": 24
+            "rating": 1367,
+            "date": 1735809407,
+            "rd": 17
         },
         "best": {
             "rating": 2116,
@@ -44,26 +44,26 @@
             "game": "https://www.chess.com/game/live/111980589119"
         },
         "record": {
-            "win": 528,
-            "loss": 551,
-            "draw": 43
+            "win": 740,
+            "loss": 773,
+            "draw": 59
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2039,
-            "date": 1734160671,
-            "rd": 25
+            "rating": 2018,
+            "date": 1740358586,
+            "rd": 45
         },
         "best": {
             "rating": 2118,
             "date": 1732476888,
-            "game": "https://www.chess.com/game/live/101584999633"
+            "game": "https://www.chess.com/game/live/128192347867"
         },
         "record": {
-            "win": 510,
-            "loss": 489,
-            "draw": 74
+            "win": 613,
+            "loss": 599,
+            "draw": 93
         }
     },
     "fide": 1928,

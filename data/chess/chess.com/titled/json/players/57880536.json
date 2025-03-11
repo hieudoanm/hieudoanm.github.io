@@ -6,10 +6,10 @@
     "name": "Rados\u0142aw Dzier\u017cak",
     "username": "sajkochess",
     "title": "FM",
-    "followers": 210,
+    "followers": 212,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Katowice",
-    "last_online": 1734105410,
+    "last_online": 1741680209,
     "joined": 1551284181,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2409,
-            "date": 1733611114,
-            "rd": 46
+            "rating": 2402,
+            "date": 1735247311,
+            "rd": 51
         },
         "best": {
             "rating": 2553,
@@ -82,7 +82,7 @@
         },
         "record": {
             "win": 2978,
-            "loss": 2765,
+            "loss": 2766,
             "draw": 461
         }
     },

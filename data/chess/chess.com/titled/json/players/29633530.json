@@ -8,7 +8,7 @@
     "followers": 3,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Tarragona",
-    "last_online": 1728660858,
+    "last_online": 1740382587,
     "joined": 1472136860,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2465,
-            "date": 1703075549,
-            "rd": 84
+            "rating": 2463,
+            "date": 1739312803,
+            "rd": 132
         },
         "best": {
             "rating": 2560,
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/94951767109"
         },
         "record": {
-            "win": 1051,
-            "loss": 783,
+            "win": 1052,
+            "loss": 784,
             "draw": 165
         }
     },

@@ -6,10 +6,10 @@
     "name": "Alisa Melekhina",
     "username": "alisa_melekhina",
     "title": "FM",
-    "followers": 221,
+    "followers": 225,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York City",
-    "last_online": 1732916330,
+    "last_online": 1740861050,
     "joined": 1273703486,
     "status": "premium",
     "is_streamer": false,
@@ -35,17 +35,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2162,
-            "date": 1731025106,
-            "rd": 179
+            "rating": 2199,
+            "date": 1740609102,
+            "rd": 171
         },
         "best": {
-            "rating": 2162,
-            "date": 1731025106,
+            "rating": 2199,
+            "date": 1740609051,
             "game": "https://www.chess.com/game/live/9242668017"
         },
         "record": {
-            "win": 23,
+            "win": 27,
             "loss": 2,
             "draw": 1
         }
@@ -65,6 +65,10 @@
         "best": {
             "total_attempts": 44,
             "score": 42
+        },
+        "daily": {
+            "total_attempts": 37,
+            "score": 35
         }
     }
 }

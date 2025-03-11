@@ -5,14 +5,14 @@
     "url": "https://www.chess.com/member/realsteel2008",
     "username": "realsteel2008",
     "title": "FM",
-    "followers": 1,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733565631,
+    "last_online": 1741697106,
     "joined": 1723584818,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2357,
-            "date": 1732826138,
-            "rd": 43
+            "rating": 2354,
+            "date": 1734997584,
+            "rd": 48
         },
         "best": {
             "rating": 2451,
@@ -43,15 +43,15 @@
             "game": "https://www.chess.com/game/live/121861187745"
         },
         "record": {
-            "win": 66,
-            "loss": 69,
-            "draw": 18
+            "win": 74,
+            "loss": 79,
+            "draw": 19
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2741,
-            "date": 1730443267
+            "rating": 2789,
+            "date": 1735234799
         },
         "lowest": {
             "rating": 1000,

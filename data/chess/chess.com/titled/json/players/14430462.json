@@ -9,7 +9,7 @@
     "followers": 35,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Coimbra",
-    "last_online": 1734004713,
+    "last_online": 1741558942,
     "joined": 1384635189,
     "status": "premium",
     "is_streamer": false,
@@ -74,7 +74,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2415,
-            "date": 1733527092,
+            "date": 1741476290,
             "rd": 156
         },
         "best": {
@@ -91,7 +91,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2576,
-            "date": 1720308397,
+            "date": 1741562403,
             "rd": 49
         },
         "best": {
@@ -108,8 +108,8 @@
     "fide": 2355,
     "tactics": {
         "highest": {
-            "rating": 2705,
-            "date": 1733742898
+            "rating": 2712,
+            "date": 1736723700
         },
         "lowest": {
             "rating": 1361,

@@ -6,9 +6,9 @@
     "name": "Serban Cristian",
     "username": "cristianserban1",
     "title": "CM",
-    "followers": 29,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1734021612,
+    "last_online": 1741171194,
     "joined": 1530538581,
     "status": "premium",
     "is_streamer": false,
@@ -48,36 +48,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2573,
-            "date": 1733877115,
-            "rd": 44
+            "rating": 2639,
+            "date": 1740906786,
+            "rd": 38
         },
         "best": {
-            "rating": 2638,
-            "date": 1730587491,
-            "game": "https://www.chess.com/game/live/123174662801"
+            "rating": 2653,
+            "date": 1739197475,
+            "game": "https://www.chess.com/game/live/132933605867"
         },
         "record": {
-            "win": 342,
-            "loss": 232,
-            "draw": 28
+            "win": 407,
+            "loss": 292,
+            "draw": 38
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2650,
-            "date": 1734022457,
-            "rd": 22
+            "rating": 2623,
+            "date": 1741533600,
+            "rd": 24
         },
         "best": {
             "rating": 2755,
             "date": 1726492839,
-            "game": "https://www.chess.com/game/live/96762077683"
+            "game": "https://www.chess.com/game/live/134240340499"
         },
         "record": {
-            "win": 2552,
-            "loss": 2089,
-            "draw": 380
+            "win": 2753,
+            "loss": 2249,
+            "draw": 408
         }
     },
     "tactics": {

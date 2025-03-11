@@ -6,9 +6,9 @@
     "name": "Antonin Ferey",
     "username": "komogro",
     "title": "CM",
-    "followers": 14,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1734084013,
+    "last_online": 1741363117,
     "joined": 1515848370,
     "status": "premium",
     "is_streamer": false,
@@ -17,18 +17,18 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1953,
-            "date": 1671807032,
-            "rd": 349
+            "rating": 2345,
+            "date": 1740523126,
+            "rd": 50
         },
         "best": {
-            "rating": 1953,
-            "date": 1671806521,
-            "game": "https://www.chess.com/game/live/65545287835"
+            "rating": 2373,
+            "date": 1739722706,
+            "game": "https://www.chess.com/game/live/133460373021"
         },
         "record": {
-            "win": 3,
-            "loss": 0,
+            "win": 14,
+            "loss": 3,
             "draw": 0
         }
     },
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2528,
-            "date": 1733871303,
-            "rd": 48
+            "rating": 2527,
+            "date": 1741104776,
+            "rd": 49
         },
         "best": {
             "rating": 2583,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/108228101415"
         },
         "record": {
-            "win": 850,
-            "loss": 815,
-            "draw": 126
+            "win": 884,
+            "loss": 852,
+            "draw": 129
         }
     },
     "tactics": {

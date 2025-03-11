@@ -6,10 +6,10 @@
     "name": "Chafik Talbi",
     "username": "zoltanchef",
     "title": "FM",
-    "followers": 46,
-    "country": "https://api.chess.com/pub/country/XX",
+    "followers": 47,
+    "country": "https://api.chess.com/pub/country/DZ",
     "location": "algeria",
-    "last_online": 1734115686,
+    "last_online": 1741658343,
     "joined": 1308775762,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1548,
-            "date": 1695141320,
+            "date": 1739497180,
             "rd": 228
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2061,
-            "date": 1719690938,
-            "rd": 57
+            "rating": 2008,
+            "date": 1740260838,
+            "rd": 63
         },
         "best": {
             "rating": 2271,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/2171111254"
         },
         "record": {
-            "win": 281,
-            "loss": 254,
-            "draw": 19
+            "win": 295,
+            "loss": 263,
+            "draw": 21
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2330,
-            "date": 1734114233,
-            "rd": 44
+            "rating": 2363,
+            "date": 1741632572,
+            "rd": 31
         },
         "best": {
             "rating": 2427,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/79219387873"
         },
         "record": {
-            "win": 4551,
-            "loss": 4333,
-            "draw": 576
+            "win": 4854,
+            "loss": 4631,
+            "draw": 637
         }
     },
     "fide": 2200,

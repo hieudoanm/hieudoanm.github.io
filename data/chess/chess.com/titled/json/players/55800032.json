@@ -1,24 +1,24 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/55800032.12dd54f3.200x200o.6b0fdd2784e5.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/55800032.8070f423.200x200o.6fe2f916b67a.jpg",
     "player_id": 55800032,
-    "@id": "https://api.chess.com/pub/player/eloquentspeaker2010",
-    "url": "https://www.chess.com/member/EloquentSpeaker2010",
+    "@id": "https://api.chess.com/pub/player/americanfighter_2010",
+    "url": "https://www.chess.com/member/AmericanFighter_2010",
     "name": "Narayan Venkatesh",
-    "username": "eloquentspeaker2010",
-    "title": "CM",
-    "followers": 72,
-    "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734125870,
+    "username": "americanfighter_2010",
+    "title": "FM",
+    "followers": 96,
+    "country": "https://api.chess.com/pub/country/KP",
+    "last_online": 1741704013,
     "joined": 1547172123,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1076,
-            "date": 1726600224,
+            "date": 1738153373,
             "rd": 157
         },
         "best": {
@@ -53,43 +53,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2419,
-            "date": 1733596930,
-            "rd": 39
+            "rating": 2495,
+            "date": 1741627504,
+            "rd": 26
         },
         "best": {
-            "rating": 2438,
-            "date": 1733596677,
-            "game": "https://www.chess.com/game/live/118256912545"
+            "rating": 2555,
+            "date": 1740888621,
+            "game": "https://www.chess.com/game/live/129752939895"
         },
         "record": {
-            "win": 283,
-            "loss": 358,
-            "draw": 39
+            "win": 445,
+            "loss": 550,
+            "draw": 72
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2499,
-            "date": 1733875328,
-            "rd": 33
+            "rating": 2601,
+            "date": 1741662914,
+            "rd": 28
         },
         "best": {
-            "rating": 2530,
-            "date": 1733802432,
-            "game": "https://www.chess.com/game/live/105834629065"
+            "rating": 2686,
+            "date": 1739070161,
+            "game": "https://www.chess.com/game/live/128816585379"
         },
         "record": {
-            "win": 409,
-            "loss": 421,
-            "draw": 58
+            "win": 754,
+            "loss": 782,
+            "draw": 129
         }
     },
-    "fide": 2173,
+    "fide": 2203,
     "tactics": {
         "highest": {
-            "rating": 3385,
-            "date": 1730816936
+            "rating": 3486,
+            "date": 1735318995
         },
         "lowest": {
             "rating": 391,
@@ -100,6 +100,10 @@
         "best": {
             "total_attempts": 49,
             "score": 46
+        },
+        "daily": {
+            "total_attempts": 30,
+            "score": 27
         }
     }
 }

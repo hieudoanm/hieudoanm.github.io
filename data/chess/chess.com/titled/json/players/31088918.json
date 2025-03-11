@@ -6,10 +6,10 @@
     "name": "Jacob Flynn",
     "username": "jlf287",
     "title": "CM",
-    "followers": 41,
+    "followers": 46,
     "country": "https://api.chess.com/pub/country/IE",
     "location": "Co Dublin",
-    "last_online": 1734114591,
+    "last_online": 1741638410,
     "joined": 1479847636,
     "status": "premium",
     "is_streamer": false,
@@ -37,19 +37,19 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2155,
-            "date": 1705593851,
-            "rd": 190
+            "rating": 2173,
+            "date": 1739724073,
+            "rd": 49
         },
         "best": {
-            "rating": 2155,
-            "date": 1674313324,
-            "game": "https://www.chess.com/game/live/5066025220"
+            "rating": 2173,
+            "date": 1739724045,
+            "game": "https://www.chess.com/game/live/133460372959"
         },
         "record": {
-            "win": 12,
+            "win": 13,
             "loss": 3,
-            "draw": 3
+            "draw": 4
         }
     },
     "chess_bullet": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2435,
-            "date": 1734119783,
-            "rd": 68
+            "rating": 2465,
+            "date": 1741127259,
+            "rd": 71
         },
         "best": {
             "rating": 2568,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/103414946609"
         },
         "record": {
-            "win": 420,
-            "loss": 428,
-            "draw": 64
+            "win": 428,
+            "loss": 437,
+            "draw": 66
         }
     },
     "fide": 2190,
     "tactics": {
         "highest": {
-            "rating": 1977,
-            "date": 1579955132
+            "rating": 2101,
+            "date": 1735661002
         },
         "lowest": {
             "rating": 1188,

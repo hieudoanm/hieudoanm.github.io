@@ -6,9 +6,9 @@
     "name": "Radoslaw Szczepanek",
     "username": "kanalszachowy",
     "title": "CM",
-    "followers": 77,
+    "followers": 87,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734001791,
+    "last_online": 1741624180,
     "joined": 1617442334,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2398,
-            "date": 1732313284,
-            "rd": 69
+            "rating": 2380,
+            "date": 1741300663,
+            "rd": 66
         },
         "best": {
             "rating": 2506,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/112462915111"
         },
         "record": {
-            "win": 409,
-            "loss": 340,
+            "win": 415,
+            "loss": 347,
             "draw": 65
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3435,
-            "date": 1721141861
+            "rating": 3441,
+            "date": 1741296951
         },
         "lowest": {
             "rating": 606,

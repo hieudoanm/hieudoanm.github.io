@@ -6,10 +6,10 @@
     "name": "Radoslaw Gajek",
     "username": "radekgajek",
     "title": "IM",
-    "followers": 231,
+    "followers": 235,
     "country": "https://api.chess.com/pub/country/AT",
     "location": "Grudziadz, Poland",
-    "last_online": 1734130171,
+    "last_online": 1741675412,
     "joined": 1467302192,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1633,
-            "date": 1726177696,
+            "date": 1737133862,
             "rd": 291
         },
         "best": {

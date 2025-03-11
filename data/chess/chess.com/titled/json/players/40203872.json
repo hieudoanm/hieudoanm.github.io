@@ -9,7 +9,7 @@
     "followers": 62,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Dinslaken",
-    "last_online": 1734184005,
+    "last_online": 1741683959,
     "joined": 1510243137,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1731871564,
-            "rd": 24
+            "rating": 2542,
+            "date": 1739131380
         },
         "best": {
             "rating": 2670,
@@ -62,8 +61,8 @@
             "game": "https://www.chess.com/game/live/118575494901"
         },
         "record": {
-            "win": 3650,
-            "loss": 3340,
+            "win": 3656,
+            "loss": 3342,
             "draw": 691
         }
     },

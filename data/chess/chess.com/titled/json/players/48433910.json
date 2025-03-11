@@ -8,7 +8,7 @@
     "followers": 13,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Pancevo",
-    "last_online": 1733948389,
+    "last_online": 1741457592,
     "joined": 1533300249,
     "status": "premium",
     "is_streamer": false,
@@ -51,8 +51,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2574,
-            "date": 1724068487,
+            "rating": 2567,
+            "date": 1736621651,
             "rd": 49
         },
         "best": {
@@ -62,14 +62,14 @@
         },
         "record": {
             "win": 70,
-            "loss": 34,
+            "loss": 35,
             "draw": 6
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3436,
-            "date": 1726263272
+            "rating": 3476,
+            "date": 1738772630
         },
         "lowest": {
             "rating": 2307,

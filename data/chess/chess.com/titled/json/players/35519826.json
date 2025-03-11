@@ -6,9 +6,9 @@
     "name": "Florian Schwabeneder",
     "username": "florianschwabeneder",
     "title": "IM",
-    "followers": 39,
+    "followers": 40,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1733851894,
+    "last_online": 1740246718,
     "joined": 1494761311,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2705,
-            "date": 1732205061,
-            "rd": 38
+            "rating": 2719,
+            "date": 1738951487,
+            "rd": 45
         },
         "best": {
             "rating": 2743,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/82827752895"
         },
         "record": {
-            "win": 3237,
-            "loss": 2904,
-            "draw": 580
+            "win": 3249,
+            "loss": 2912,
+            "draw": 581
         }
     },
     "fide": 0,

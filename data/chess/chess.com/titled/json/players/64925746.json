@@ -6,9 +6,9 @@
     "name": "Rudik Makarian",
     "username": "rud_makarian",
     "title": "IM",
-    "followers": 393,
+    "followers": 448,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734169583,
+    "last_online": 1741700564,
     "joined": 1567201328,
     "status": "premium",
     "is_streamer": false,
@@ -34,8 +34,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2927,
-            "date": 1733670471,
+            "rating": 2914,
+            "date": 1734199894,
             "rd": 40
         },
         "best": {
@@ -44,33 +44,33 @@
             "game": "https://www.chess.com/game/live/82401084839"
         },
         "record": {
-            "win": 167,
-            "loss": 116,
-            "draw": 26
+            "win": 183,
+            "loss": 119,
+            "draw": 27
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3121,
-            "date": 1734121675,
-            "rd": 19
+            "rating": 3058,
+            "date": 1741629114,
+            "rd": 26
         },
         "best": {
-            "rating": 3122,
-            "date": 1725734408,
+            "rating": 3149,
+            "date": 1735770603,
             "game": "https://www.chess.com/game/live/102726617553"
         },
         "record": {
-            "win": 11137,
-            "loss": 8277,
-            "draw": 2965
+            "win": 11976,
+            "loss": 8729,
+            "draw": 3204
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3286,
-            "date": 1610686667
+            "rating": 3389,
+            "date": 1738995178
         },
         "lowest": {
             "rating": 1212,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 56,
-            "score": 53
+            "total_attempts": 59,
+            "score": 56
         }
     }
 }

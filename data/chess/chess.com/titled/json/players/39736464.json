@@ -6,9 +6,9 @@
     "name": "Svyatoslav Korneev Leskova",
     "username": "koshkamatrioshka",
     "title": "CM",
-    "followers": 259,
+    "followers": 266,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734046658,
+    "last_online": 1741549823,
     "joined": 1508876599,
     "status": "premium",
     "is_streamer": true,
@@ -40,26 +40,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2605,
-            "date": 1715457343,
-            "rd": 28
+            "rating": 2622,
+            "date": 1735413077,
+            "rd": 36
         },
         "best": {
             "rating": 2647,
             "date": 1715444763,
-            "game": "https://www.chess.com/game/live/109183262013"
+            "game": "https://www.chess.com/game/live/129151945007"
         },
         "record": {
-            "win": 745,
-            "loss": 302,
-            "draw": 72
+            "win": 774,
+            "loss": 326,
+            "draw": 75
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2602,
-            "date": 1732671124,
-            "rd": 27
+            "rating": 2618,
+            "date": 1741111693,
+            "rd": 36
         },
         "best": {
             "rating": 2737,
@@ -67,9 +67,9 @@
             "game": "https://www.chess.com/game/live/6210226294"
         },
         "record": {
-            "win": 3772,
-            "loss": 2539,
-            "draw": 586
+            "win": 3857,
+            "loss": 2607,
+            "draw": 610
         }
     },
     "tactics": {

@@ -8,7 +8,7 @@
     "title": "WFM",
     "followers": 16,
     "country": "https://api.chess.com/pub/country/PT",
-    "last_online": 1725466214,
+    "last_online": 1737471246,
     "joined": 1213050937,
     "status": "premium",
     "is_streamer": false,
@@ -71,7 +71,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2004,
-            "date": 1721158606,
+            "date": 1737472004,
             "rd": 221
         },
         "best": {

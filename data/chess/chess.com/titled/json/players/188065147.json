@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/CrazyKillingAttack",
     "username": "crazykillingattack",
     "title": "CM",
-    "followers": 22,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734123575,
+    "last_online": 1741606602,
     "joined": 1656203087,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +16,7 @@
     "chess_daily": {
         "last": {
             "rating": 1802,
-            "date": 1733529105,
+            "date": 1739663638,
             "rd": 136
         },
         "best": {
@@ -26,23 +26,17 @@
         },
         "record": {
             "win": 33,
-            "loss": 15,
+            "loss": 25,
             "draw": 2,
             "time_per_move": 59737,
-            "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 17,
-            "withdraw": 0,
-            "count": 3,
-            "highest_finish": 13
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2374,
-            "date": 1726393572,
-            "rd": 49
+            "rating": 2381,
+            "date": 1737441883,
+            "rd": 48
         },
         "best": {
             "rating": 2412,
@@ -50,8 +44,8 @@
             "game": "https://www.chess.com/game/live/75008002031"
         },
         "record": {
-            "win": 321,
-            "loss": 396,
+            "win": 323,
+            "loss": 398,
             "draw": 75
         }
     },
@@ -74,9 +68,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2242,
-            "date": 1734168294,
-            "rd": 37
+            "rating": 2291,
+            "date": 1741676975,
+            "rd": 29
         },
         "best": {
             "rating": 2424,
@@ -84,9 +78,9 @@
             "game": "https://www.chess.com/game/live/113221813717"
         },
         "record": {
-            "win": 752,
-            "loss": 791,
-            "draw": 114
+            "win": 935,
+            "loss": 958,
+            "draw": 147
         }
     },
     "tactics": {

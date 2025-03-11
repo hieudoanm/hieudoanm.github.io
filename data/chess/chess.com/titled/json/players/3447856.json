@@ -6,10 +6,10 @@
     "name": "Efren Andres Ramos Espinoza",
     "username": "efrenramos1",
     "title": "FM",
-    "followers": 212,
+    "followers": 218,
     "country": "https://api.chess.com/pub/country/PA",
     "location": "Panam\u00e1, Panama",
-    "last_online": 1733858354,
+    "last_online": 1741527510,
     "joined": 1272306221,
     "status": "premium",
     "is_streamer": false,
@@ -56,8 +56,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2292,
-            "date": 1707414340,
+            "rating": 2285,
+            "date": 1737350529,
             "rd": 49
         },
         "best": {
@@ -66,43 +66,43 @@
             "game": "https://www.chess.com/game/live/36625771901"
         },
         "record": {
-            "win": 23,
-            "loss": 6,
+            "win": 24,
+            "loss": 7,
             "draw": 11
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2101,
-            "date": 1734025952,
-            "rd": 29
+            "rating": 2274,
+            "date": 1741691603,
+            "rd": 35
         },
         "best": {
-            "rating": 2271,
-            "date": 1716645310,
+            "rating": 2312,
+            "date": 1737994148,
             "game": "https://www.chess.com/game/live/96144905519"
         },
         "record": {
-            "win": 1417,
-            "loss": 1372,
-            "draw": 149
+            "win": 1645,
+            "loss": 1588,
+            "draw": 170
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2443,
-            "date": 1733024426,
-            "rd": 49
+            "rating": 2484,
+            "date": 1738813517,
+            "rd": 55
         },
         "best": {
-            "rating": 2475,
-            "date": 1729614230,
-            "game": "https://www.chess.com/game/live/3679471643"
+            "rating": 2484,
+            "date": 1738813517,
+            "game": "https://www.chess.com/game/live/128218191941"
         },
         "record": {
-            "win": 915,
-            "loss": 834,
-            "draw": 196
+            "win": 934,
+            "loss": 843,
+            "draw": 199
         }
     },
     "fide": 2241,

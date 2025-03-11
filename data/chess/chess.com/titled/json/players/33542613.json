@@ -6,10 +6,10 @@
     "name": "Matiss Mustaps",
     "username": "matiss90",
     "title": "FM",
-    "followers": 147,
+    "followers": 157,
     "country": "https://api.chess.com/pub/country/LV",
     "location": "RIGA",
-    "last_online": 1734086724,
+    "last_online": 1741680326,
     "joined": 1488189533,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2632,
-            "date": 1734086858,
-            "rd": 45
+            "rating": 2672,
+            "date": 1741177407,
+            "rd": 44
         },
         "best": {
             "rating": 2652,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/2958010065"
         },
         "record": {
-            "win": 2088,
-            "loss": 2326,
-            "draw": 337
+            "win": 2098,
+            "loss": 2332,
+            "draw": 339
         }
     },
     "chess_blitz": {

@@ -6,9 +6,9 @@
     "name": "Austin Yang",
     "username": "c_minusminus",
     "title": "FM",
-    "followers": 48,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/XT",
-    "last_online": 1734141529,
+    "last_online": 1741687566,
     "joined": 1627642098,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 944,
-            "date": 1732702670,
+            "date": 1741620952,
             "rd": 277
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 2,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 93860,
+            "time_per_move": 90198,
             "timeout_percent": 0
         }
     },
@@ -71,7 +71,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2159,
-            "date": 1712138972,
+            "date": 1738247502,
             "rd": 130
         },
         "best": {
@@ -100,10 +100,6 @@
         "best": {
             "total_attempts": 62,
             "score": 59
-        },
-        "daily": {
-            "total_attempts": 16,
-            "score": 15
         }
     }
 }

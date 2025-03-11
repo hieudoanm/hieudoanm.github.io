@@ -6,10 +6,10 @@
     "name": "Mariano Ortega Amarelle",
     "username": "marianokar",
     "title": "IM",
-    "followers": 191,
+    "followers": 198,
     "country": "https://api.chess.com/pub/country/CV",
     "location": "Spain",
-    "last_online": 1734159958,
+    "last_online": 1741348233,
     "joined": 1486766147,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1822,
-            "date": 1704291655,
+            "date": 1737560644,
             "rd": 212
         },
         "best": {
@@ -33,12 +33,6 @@
             "draw": 0,
             "time_per_move": 81739,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess960_daily": {
@@ -58,12 +52,6 @@
             "draw": 0,
             "time_per_move": 81739,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
@@ -85,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2488,
-            "date": 1732730132,
-            "rd": 45
+            "rating": 2507,
+            "date": 1736690195,
+            "rd": 58
         },
         "best": {
             "rating": 2530,
@@ -95,16 +83,16 @@
             "game": "https://www.chess.com/game/live/8783796381"
         },
         "record": {
-            "win": 542,
+            "win": 544,
             "loss": 552,
             "draw": 36
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2485,
-            "date": 1733242434,
-            "rd": 49
+            "rating": 2479,
+            "date": 1739894889,
+            "rd": 69
         },
         "best": {
             "rating": 2585,
@@ -113,7 +101,7 @@
         },
         "record": {
             "win": 2724,
-            "loss": 3000,
+            "loss": 3002,
             "draw": 357
         }
     },

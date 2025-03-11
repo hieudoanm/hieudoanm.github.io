@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/324298683.652f8e03.200x200o.271be9fb2377.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/324298683.ba45e24e.200x200o.7ee14b59e206.jpg",
     "player_id": 324298683,
     "@id": "https://api.chess.com/pub/player/poaslan",
     "url": "https://www.chess.com/member/PoAslan",
     "name": "Atilla Kuru",
     "username": "poaslan",
     "title": "FM",
-    "followers": 42,
+    "followers": 61,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734162119,
+    "last_online": 1736503736,
     "joined": 1699299663,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2769,
-            "date": 1733949157,
-            "rd": 27
+            "rating": 2664,
+            "date": 1736364717,
+            "rd": 35
         },
         "best": {
             "rating": 2845,
@@ -58,16 +58,16 @@
             "game": "https://www.chess.com/game/live/123697296719"
         },
         "record": {
-            "win": 263,
-            "loss": 228,
-            "draw": 25
+            "win": 295,
+            "loss": 265,
+            "draw": 30
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2878,
-            "date": 1734166604,
-            "rd": 22
+            "rating": 2952,
+            "date": 1736368937,
+            "rd": 21
         },
         "best": {
             "rating": 3042,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/127324798479"
         },
         "record": {
-            "win": 1427,
-            "loss": 1429,
-            "draw": 258
+            "win": 1546,
+            "loss": 1563,
+            "draw": 280
         }
     },
     "fide": 2418,

@@ -6,10 +6,10 @@
     "name": "Rustem Gorbenko",
     "username": "bonantagulo",
     "title": "CM",
-    "followers": 23,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Odessa",
-    "last_online": 1734006297,
+    "last_online": 1741604169,
     "joined": 1589661896,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2216,
-            "date": 1733082977,
-            "rd": 48
+            "date": 1734557214,
+            "rd": 49
         },
         "best": {
             "rating": 2216,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/126817147121"
         },
         "record": {
-            "win": 24,
+            "win": 26,
             "loss": 8,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2406,
-            "date": 1734131228,
-            "rd": 17
+            "rating": 2409,
+            "date": 1740138769,
+            "rd": 40
         },
         "best": {
             "rating": 2601,
@@ -45,33 +45,33 @@
             "game": "https://www.chess.com/game/live/113129385105"
         },
         "record": {
-            "win": 2176,
-            "loss": 1439,
-            "draw": 213
+            "win": 2298,
+            "loss": 1505,
+            "draw": 232
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2373,
-            "date": 1734086352,
-            "rd": 24
+            "rating": 2305,
+            "date": 1741202215,
+            "rd": 30
         },
         "best": {
             "rating": 2511,
             "date": 1732225560,
-            "game": "https://www.chess.com/game/live/125794183837"
+            "game": "https://www.chess.com/game/live/132445857507"
         },
         "record": {
-            "win": 423,
-            "loss": 287,
-            "draw": 41
+            "win": 579,
+            "loss": 443,
+            "draw": 74
         }
     },
     "fide": 2210,
     "tactics": {
         "highest": {
-            "rating": 3337,
-            "date": 1733560657
+            "rating": 3422,
+            "date": 1741342708
         },
         "lowest": {
             "rating": 400,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 37,
-            "score": 36
+            "total_attempts": 41,
+            "score": 39
         }
     }
 }

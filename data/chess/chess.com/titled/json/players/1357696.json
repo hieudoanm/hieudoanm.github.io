@@ -9,7 +9,7 @@
     "followers": 46,
     "country": "https://api.chess.com/pub/country/PS",
     "location": "Athens",
-    "last_online": 1734117162,
+    "last_online": 1741366936,
     "joined": 1208204938,
     "status": "premium",
     "is_streamer": false,
@@ -68,26 +68,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2505,
-            "date": 1731357216,
-            "rd": 47
+            "rating": 2585,
+            "date": 1741367428,
+            "rd": 32
         },
         "best": {
-            "rating": 2555,
-            "date": 1718986025,
-            "game": "https://www.chess.com/game/live/112828202089"
+            "rating": 2644,
+            "date": 1738190314,
+            "game": "https://www.chess.com/game/live/131980182231"
         },
         "record": {
-            "win": 401,
-            "loss": 437,
-            "draw": 35
+            "win": 585,
+            "loss": 610,
+            "draw": 60
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2474,
-            "date": 1733060067,
-            "rd": 38
+            "rating": 2545,
+            "date": 1739297513,
+            "rd": 47
         },
         "best": {
             "rating": 2665,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/4081595274"
         },
         "record": {
-            "win": 2622,
-            "loss": 2708,
-            "draw": 381
+            "win": 2628,
+            "loss": 2713,
+            "draw": 383
         }
     },
     "fide": 2416,

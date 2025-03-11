@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/173793213.9ab66298.200x200o.aa5e017f7673.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/173793213.bc3bca6e.200x200o.cb6b9c300895.jpg",
     "player_id": 173793213,
     "@id": "https://api.chess.com/pub/player/rdarruda",
     "url": "https://www.chess.com/member/rdarruda",
     "name": "Ricardo D Darruda",
     "username": "rdarruda",
     "title": "FM",
-    "followers": 23,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Miami, Florida",
-    "last_online": 1733867913,
+    "last_online": 1740520753,
     "joined": 1645274924,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2490,
-            "date": 1733875819,
-            "rd": 41
+            "rating": 2557,
+            "date": 1740528281,
+            "rd": 39
         },
         "best": {
             "rating": 2594,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/99787382419"
         },
         "record": {
-            "win": 1017,
-            "loss": 1071,
-            "draw": 300
+            "win": 1125,
+            "loss": 1175,
+            "draw": 335
         }
     },
     "fide": 2271,

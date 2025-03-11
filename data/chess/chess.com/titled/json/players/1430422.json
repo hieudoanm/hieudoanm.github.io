@@ -6,10 +6,10 @@
     "name": "Bjorn Thorfinnsson",
     "username": "hunninn",
     "title": "IM",
-    "followers": 557,
+    "followers": 595,
     "country": "https://api.chess.com/pub/country/IS",
     "location": "Gardabaer",
-    "last_online": 1734171284,
+    "last_online": 1741546118,
     "joined": 1215190779,
     "status": "premium",
     "is_streamer": false,
@@ -54,36 +54,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2453,
-            "date": 1725521719,
-            "rd": 112
+            "rating": 2534,
+            "date": 1741085062,
+            "rd": 42
         },
         "best": {
-            "rating": 2693,
-            "date": 1523999889,
-            "game": "https://www.chess.com/game/live/2507895159"
+            "rating": 2715,
+            "date": 1735220757,
+            "game": "https://www.chess.com/game/live/128730771957"
         },
         "record": {
-            "win": 4862,
-            "loss": 3109,
-            "draw": 518
+            "win": 5104,
+            "loss": 3305,
+            "draw": 561
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2662,
-            "date": 1734172523,
-            "rd": 28
+            "rating": 2681,
+            "date": 1741676211,
+            "rd": 27
         },
         "best": {
             "rating": 2797,
             "date": 1705100833,
-            "game": "https://www.chess.com/game/live/108751158975"
+            "game": "https://www.chess.com/game/live/131841031917"
         },
         "record": {
-            "win": 11634,
-            "loss": 8224,
-            "draw": 2532
+            "win": 12130,
+            "loss": 8607,
+            "draw": 2663
         }
     },
     "tactics": {

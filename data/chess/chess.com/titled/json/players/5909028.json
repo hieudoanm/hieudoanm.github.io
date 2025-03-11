@@ -6,10 +6,10 @@
     "name": "Farzad Bolourchifard",
     "username": "farzadbfd",
     "title": "FM",
-    "followers": 511,
+    "followers": 535,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Tehran",
-    "last_online": 1734038515,
+    "last_online": 1741696501,
     "joined": 1317906792,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1125,
-            "date": 1709146470,
-            "rd": 276
+            "rating": 1285,
+            "date": 1736606470,
+            "rd": 235
         },
         "best": {
-            "rating": 1200,
-            "date": 1317906792,
+            "rating": 1285,
+            "date": 1736606469,
             "game": "https://www.chess.com/game/daily/611610419"
         },
         "record": {
-            "win": 2,
+            "win": 3,
             "loss": 2,
             "draw": 1,
-            "time_per_move": 3976,
+            "time_per_move": 3745,
             "timeout_percent": 0
         }
     },
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2703,
-            "date": 1707214904,
-            "rd": 49
+            "rating": 2683,
+            "date": 1738436390,
+            "rd": 34
         },
         "best": {
             "rating": 2840,
             "date": 1682788578,
-            "game": "https://www.chess.com/game/live/76528291347"
+            "game": "https://www.chess.com/game/live/132171067645"
         },
         "record": {
-            "win": 398,
-            "loss": 421,
-            "draw": 45
+            "win": 431,
+            "loss": 449,
+            "draw": 50
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2803,
-            "date": 1733939543,
-            "rd": 33
+            "rating": 2777,
+            "date": 1741626298,
+            "rd": 32
         },
         "best": {
             "rating": 2855,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/74835787309"
         },
         "record": {
-            "win": 2797,
-            "loss": 2608,
-            "draw": 547
+            "win": 2922,
+            "loss": 2718,
+            "draw": 569
         }
     },
     "fide": 2292,

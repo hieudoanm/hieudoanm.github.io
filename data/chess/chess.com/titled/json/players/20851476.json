@@ -6,10 +6,10 @@
     "name": "Graham Jurgensen",
     "username": "kcfpatzer",
     "title": "CM",
-    "followers": 98,
+    "followers": 97,
     "country": "https://api.chess.com/pub/country/ZA",
     "location": "Johannesburg, Gauteng",
-    "last_online": 1734180867,
+    "last_online": 1741507718,
     "joined": 1422562574,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2155,
-            "date": 1734173645,
-            "rd": 45
+            "rating": 2178,
+            "date": 1741508048,
+            "rd": 47
         },
         "best": {
             "rating": 2307,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/80144985467"
         },
         "record": {
-            "win": 1122,
-            "loss": 797,
-            "draw": 131
+            "win": 1194,
+            "loss": 858,
+            "draw": 133
         }
     },
     "fide": 0,

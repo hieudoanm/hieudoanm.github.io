@@ -7,7 +7,7 @@
     "title": "WCM",
     "followers": 5,
     "country": "https://api.chess.com/pub/country/TG",
-    "last_online": 1726322088,
+    "last_online": 1741456212,
     "joined": 1516189868,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 847,
-            "date": 1709995120,
+            "date": 1741595347,
             "rd": 66
         },
         "best": {

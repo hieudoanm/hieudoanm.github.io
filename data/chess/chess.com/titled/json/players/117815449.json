@@ -6,9 +6,9 @@
     "name": "Mohamed Ilias Saim",
     "username": "bozekat",
     "title": "FM",
-    "followers": 103,
+    "followers": 107,
     "country": "https://api.chess.com/pub/country/PS",
-    "last_online": 1734150917,
+    "last_online": 1738683729,
     "joined": 1612254785,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1555,
-            "date": 1713358553,
+            "date": 1738768650,
             "rd": 116
         },
         "best": {
@@ -32,18 +32,12 @@
             "draw": 0,
             "time_per_move": 7542,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2251,
-            "date": 1713820768,
+            "date": 1734617059,
             "rd": 49
         },
         "best": {
@@ -59,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2050,
-            "date": 1734153133,
-            "rd": 30
+            "rating": 2103,
+            "date": 1734660997,
+            "rd": 21
         },
         "best": {
-            "rating": 2075,
-            "date": 1721527833,
-            "game": "https://www.chess.com/game/live/126332986465"
+            "rating": 2103,
+            "date": 1734660997,
+            "game": "https://www.chess.com/game/live/128112032473"
         },
         "record": {
-            "win": 597,
-            "loss": 615,
-            "draw": 42
+            "win": 678,
+            "loss": 702,
+            "draw": 48
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2070,
-            "date": 1733848738,
-            "rd": 49
+            "rating": 2048,
+            "date": 1738724611,
+            "rd": 38
         },
         "best": {
             "rating": 2177,
@@ -86,9 +80,9 @@
             "game": "https://www.chess.com/game/live/94344752553"
         },
         "record": {
-            "win": 1043,
-            "loss": 1414,
-            "draw": 144
+            "win": 1065,
+            "loss": 1455,
+            "draw": 147
         }
     },
     "tactics": {

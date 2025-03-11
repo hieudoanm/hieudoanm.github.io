@@ -5,11 +5,11 @@
     "url": "https://www.chess.com/member/Missigirl",
     "name": "Laksshana Deepak",
     "username": "missigirl",
-    "title": "WCM",
-    "followers": 101,
+    "title": "WFM",
+    "followers": 111,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Pickering",
-    "last_online": 1734118936,
+    "last_online": 1741569400,
     "joined": 1533221589,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 833,
-            "date": 1727987203,
+            "date": 1738246251,
             "rd": 143
         },
         "best": {
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2118,
-            "date": 1729206340,
+            "date": 1740162489,
             "rd": 49
         },
         "best": {
@@ -47,43 +47,43 @@
             "game": "https://www.chess.com/game/live/80000467959"
         },
         "record": {
-            "win": 584,
+            "win": 588,
             "loss": 441,
             "draw": 49
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2023,
-            "date": 1733030996,
-            "rd": 88
+            "rating": 2187,
+            "date": 1740010128,
+            "rd": 49
         },
         "best": {
-            "rating": 2023,
-            "date": 1733029222,
-            "game": "https://www.chess.com/game/live/79560183851"
+            "rating": 2199,
+            "date": 1737755581,
+            "game": "https://www.chess.com/game/live/131494259453"
         },
         "record": {
-            "win": 159,
-            "loss": 120,
-            "draw": 18
+            "win": 195,
+            "loss": 140,
+            "draw": 24
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1919,
-            "date": 1734119421,
-            "rd": 84
+            "rating": 2083,
+            "date": 1740270144,
+            "rd": 60
         },
         "best": {
-            "rating": 1983,
-            "date": 1723713605,
+            "rating": 2065,
+            "date": 1737749307,
             "game": "https://www.chess.com/game/live/104622117917"
         },
         "record": {
-            "win": 225,
-            "loss": 176,
-            "draw": 16
+            "win": 249,
+            "loss": 185,
+            "draw": 17
         }
     },
     "fide": 1889,
@@ -99,8 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 62,
-            "score": 59
+            "total_attempts": 66,
+            "score": 63
         }
     }
 }

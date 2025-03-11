@@ -6,9 +6,9 @@
     "name": "Alana Meenakshi Kolagatla",
     "username": "toxic_haste21",
     "title": "WFM",
-    "followers": 111,
+    "followers": 117,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733987924,
+    "last_online": 1741664073,
     "joined": 1617094663,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1657,
-            "date": 1728046420,
+            "date": 1739938399,
             "rd": 66
         },
         "best": {
@@ -70,22 +70,22 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1461,
-            "date": 1693207829,
-            "rd": 80
+            "rating": 1644,
+            "date": 1739297637,
+            "rd": 149
         },
         "best": {
             "rating": 1732,
             "date": 1654669994,
-            "game": "https://www.chess.com/game/live/72699768609"
+            "game": "https://www.chess.com/game/live/133032536249"
         },
         "record": {
-            "win": 50,
-            "loss": 43,
-            "draw": 3
+            "win": 51,
+            "loss": 50,
+            "draw": 4
         }
     },
-    "fide": 2194,
+    "fide": 2260,
     "tactics": {
         "highest": {
             "rating": 3329,

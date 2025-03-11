@@ -8,7 +8,7 @@
     "title": "CM",
     "followers": 585,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1730960835,
+    "last_online": 1740520429,
     "joined": 1504230699,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1510,
-            "date": 1727481768,
+            "date": 1734859732,
             "rd": 140
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2553,
-            "date": 1725224928,
-            "rd": 49
+            "rating": 2618,
+            "date": 1740493336,
+            "rd": 24
         },
         "best": {
             "rating": 2741,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/84504208323"
         },
         "record": {
-            "win": 8426,
-            "loss": 6697,
-            "draw": 1053
+            "win": 8524,
+            "loss": 6794,
+            "draw": 1071
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1732058932,
-            "rd": 41
+            "rating": 2496,
+            "date": 1736263031,
+            "rd": 49
         },
         "best": {
             "rating": 2707,
@@ -81,7 +81,7 @@
         },
         "record": {
             "win": 8989,
-            "loss": 7226,
+            "loss": 7227,
             "draw": 1619
         }
     },

@@ -6,20 +6,21 @@
     "name": "Alma Jaqueline Mora Velasco",
     "username": "almaj98",
     "title": "WCM",
-    "followers": 135,
+    "followers": 167,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1734130569,
+    "location": "CDMX",
+    "last_online": 1741687595,
     "joined": 1534272165,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1377,
-            "date": 1734132712,
-            "rd": 123
+            "rating": 1437,
+            "date": 1741548918,
+            "rd": 112
         },
         "best": {
             "rating": 2018,
@@ -27,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/232470098"
         },
         "record": {
-            "win": 70,
-            "loss": 25,
+            "win": 73,
+            "loss": 26,
             "draw": 9,
-            "time_per_move": 61456,
+            "time_per_move": 62560,
             "timeout_percent": 0
         }
     },
@@ -49,7 +50,7 @@
             "win": 5,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 61456,
+            "time_per_move": 62560,
             "timeout_percent": 0
         }
     },
@@ -72,36 +73,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2305,
-            "date": 1734132458,
-            "rd": 34
+            "rating": 2301,
+            "date": 1741394493,
+            "rd": 17
         },
         "best": {
-            "rating": 2331,
-            "date": 1707362347,
+            "rating": 2452,
+            "date": 1740244514,
             "game": "https://www.chess.com/game/live/11422973613"
         },
         "record": {
-            "win": 3993,
-            "loss": 4233,
-            "draw": 278
+            "win": 4407,
+            "loss": 4735,
+            "draw": 325
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2303,
-            "date": 1733875620,
-            "rd": 34
+            "rating": 2406,
+            "date": 1740530710,
+            "rd": 28
         },
         "best": {
             "rating": 2400,
             "date": 1705975921,
-            "game": "https://www.chess.com/game/live/125792379435"
+            "game": "https://www.chess.com/game/live/130008031309"
         },
         "record": {
-            "win": 2393,
-            "loss": 2679,
-            "draw": 314
+            "win": 2584,
+            "loss": 2892,
+            "draw": 331
         }
     },
     "tactics": {

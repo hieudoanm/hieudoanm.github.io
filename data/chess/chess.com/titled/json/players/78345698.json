@@ -6,9 +6,9 @@
     "name": "Ismael Amador Garc\u00eda",
     "username": "ismaelamadorgarcia",
     "title": "FM",
-    "followers": 4,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1730829696,
+    "last_online": 1741427562,
     "joined": 1588371299,
     "status": "premium",
     "is_streamer": false,
@@ -37,12 +37,12 @@
     "chess_rapid": {
         "last": {
             "rating": 2223,
-            "date": 1711472002,
+            "date": 1741107322,
             "rd": 206
         },
         "best": {
-            "rating": 1917,
-            "date": 1590164180,
+            "rating": 2223,
+            "date": 1741107322,
             "game": "https://www.chess.com/game/live/4892153351"
         },
         "record": {
@@ -71,8 +71,8 @@
     "fide": 2223,
     "tactics": {
         "highest": {
-            "rating": 3674,
-            "date": 1724143210
+            "rating": 3677,
+            "date": 1741269886
         },
         "lowest": {
             "rating": 1000,

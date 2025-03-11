@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/shellymilly",
     "username": "shellymilly",
     "title": "WCM",
-    "followers": 63,
+    "followers": 64,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733803551,
+    "last_online": 1741560630,
     "joined": 1337560510,
     "status": "premium",
     "is_streamer": false,
@@ -88,19 +88,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2106,
-            "date": 1731786692,
-            "rd": 42
+            "rating": 2115,
+            "date": 1741564870,
+            "rd": 56
         },
         "best": {
             "rating": 2182,
             "date": 1729178202,
-            "game": "https://www.chess.com/game/live/37823990363"
+            "game": "https://www.chess.com/game/live/130901949477"
         },
         "record": {
-            "win": 3453,
-            "loss": 3007,
-            "draw": 322
+            "win": 3480,
+            "loss": 3016,
+            "draw": 329
         }
     },
     "tactics": {

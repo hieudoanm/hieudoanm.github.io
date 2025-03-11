@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 15,
     "country": "https://api.chess.com/pub/country/VA",
-    "last_online": 1734102526,
+    "last_online": 1741543235,
     "joined": 1587222435,
     "status": "premium",
     "is_streamer": false,
@@ -33,8 +33,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2545,
-            "date": 1733687378,
+            "rating": 2549,
+            "date": 1738870080,
             "rd": 49
         },
         "best": {
@@ -43,15 +43,15 @@
             "game": "https://www.chess.com/game/live/117725989497"
         },
         "record": {
-            "win": 72,
-            "loss": 54,
+            "win": 79,
+            "loss": 61,
             "draw": 9
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2489,
-            "date": 1733930844,
+            "rating": 2546,
+            "date": 1741187444,
             "rd": 40
         },
         "best": {
@@ -60,15 +60,15 @@
             "game": "https://www.chess.com/game/live/114881391471"
         },
         "record": {
-            "win": 819,
-            "loss": 694,
-            "draw": 137
+            "win": 868,
+            "loss": 733,
+            "draw": 145
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3111,
-            "date": 1733757299
+            "rating": 3129,
+            "date": 1738935838
         },
         "lowest": {
             "rating": 1000,

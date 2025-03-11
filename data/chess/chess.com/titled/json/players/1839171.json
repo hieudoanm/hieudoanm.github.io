@@ -9,7 +9,7 @@
     "followers": 16,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Girardot",
-    "last_online": 1730002029,
+    "last_online": 1737605334,
     "joined": 1238003177,
     "status": "premium",
     "is_streamer": false,
@@ -35,8 +35,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2320,
-            "date": 1730262207,
+            "rating": 2383,
+            "date": 1736659487,
             "rd": 88
         },
         "best": {
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/50719152237"
         },
         "record": {
-            "win": 1316,
-            "loss": 1367,
+            "win": 1319,
+            "loss": 1368,
             "draw": 122
         }
     },

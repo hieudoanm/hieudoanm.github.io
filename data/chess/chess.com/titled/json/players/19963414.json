@@ -6,10 +6,10 @@
     "name": "Flavio Wisniacki",
     "username": "corvachesky",
     "title": "FM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Bs As",
-    "last_online": 1734087197,
+    "last_online": 1741352504,
     "joined": 1417321209,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2433,
-            "date": 1734087590,
-            "rd": 30
+            "rating": 2476,
+            "date": 1738080494,
+            "rd": 45
         },
         "best": {
             "rating": 2545,
@@ -62,15 +62,15 @@
             "game": "https://www.chess.com/game/live/124565926153"
         },
         "record": {
-            "win": 3668,
-            "loss": 2939,
-            "draw": 653
+            "win": 3685,
+            "loss": 2953,
+            "draw": 658
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2712,
-            "date": 1726088883
+            "rating": 2802,
+            "date": 1734625327
         },
         "lowest": {
             "rating": 400,

@@ -5,9 +5,9 @@
     "name": "Philippe Linster",
     "username": "philippelinster",
     "title": "FM",
-    "followers": 5,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/LU",
-    "last_online": 1734114795,
+    "last_online": 1741641656,
     "joined": 1508667838,
     "status": "premium",
     "is_streamer": false,
@@ -33,25 +33,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2349,
-            "date": 1733400785,
-            "rd": 54
+            "rating": 2407,
+            "date": 1741638552,
+            "rd": 36
         },
         "best": {
             "rating": 2428,
             "date": 1724079270,
-            "game": "https://www.chess.com/game/live/116508587747"
+            "game": "https://www.chess.com/game/live/131826065245"
         },
         "record": {
-            "win": 481,
-            "loss": 335,
-            "draw": 91
+            "win": 569,
+            "loss": 406,
+            "draw": 108
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3584,
-            "date": 1731250214
+            "rating": 3612,
+            "date": 1741641958
         },
         "lowest": {
             "rating": 1009,

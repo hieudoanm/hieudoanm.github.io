@@ -5,11 +5,11 @@
     "url": "https://www.chess.com/member/Manon-reja",
     "name": "Manon Reja Neer",
     "username": "manon-reja",
-    "title": "CM",
-    "followers": 161,
+    "title": "IM",
+    "followers": 185,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Narayanganj",
-    "last_online": 1731526654,
+    "last_online": 1739125746,
     "joined": 1584679254,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1773,
-            "date": 1724920185,
+            "date": 1735075649,
             "rd": 184
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2377,
-            "date": 1707157265,
-            "rd": 73
+            "rating": 2397,
+            "date": 1739125706,
+            "rd": 54
         },
         "best": {
             "rating": 2518,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/46882783539"
         },
         "record": {
-            "win": 1521,
-            "loss": 1654,
-            "draw": 201
+            "win": 1550,
+            "loss": 1669,
+            "draw": 204
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2332,
-            "date": 1726866718,
-            "rd": 105
+            "rating": 2437,
+            "date": 1738341247,
+            "rd": 64
         },
         "best": {
-            "rating": 2439,
-            "date": 1648551487,
+            "rating": 2458,
+            "date": 1737732094,
             "game": "https://www.chess.com/game/live/75749708155"
         },
         "record": {
-            "win": 765,
-            "loss": 711,
-            "draw": 108
+            "win": 782,
+            "loss": 721,
+            "draw": 109
         }
     },
     "fide": 2197,

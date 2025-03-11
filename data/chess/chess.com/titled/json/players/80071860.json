@@ -6,9 +6,9 @@
     "name": "Reyson Ricardo Rodr\u00edguez Basulto",
     "username": "reyson01",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1733925152,
+    "last_online": 1740422766,
     "joined": 1590010558,
     "status": "premium",
     "is_streamer": false,
@@ -71,7 +71,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2512,
-            "date": 1729312160,
+            "date": 1740423102,
             "rd": 49
         },
         "best": {

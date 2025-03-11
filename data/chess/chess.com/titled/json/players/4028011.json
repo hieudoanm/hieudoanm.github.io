@@ -6,10 +6,10 @@
     "name": "Matthieu BISSIERES",
     "username": "bibiii",
     "title": "IM",
-    "followers": 84,
+    "followers": 85,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "LYON",
-    "last_online": 1734013487,
+    "last_online": 1740516036,
     "joined": 1285428998,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1497,
-            "date": 1733927365,
-            "rd": 154
+            "rating": 1620,
+            "date": 1740469285,
+            "rd": 243
         },
         "best": {
-            "rating": 1497,
-            "date": 1605343156,
-            "game": "https://www.chess.com/game/daily/260183524"
+            "rating": 1620,
+            "date": 1738862469,
+            "game": "https://www.chess.com/game/daily/714186397"
         },
         "record": {
-            "win": 8,
+            "win": 9,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 157189,
+            "time_per_move": 150279,
             "timeout_percent": 0
         }
     },
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2521,
-            "date": 1733775680,
-            "rd": 42
+            "rating": 2548,
+            "date": 1741639287,
+            "rd": 48
         },
         "best": {
             "rating": 2659,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/4591239024"
         },
         "record": {
-            "win": 890,
-            "loss": 483,
-            "draw": 65
+            "win": 905,
+            "loss": 493,
+            "draw": 69
         }
     },
     "chess_blitz": {
@@ -101,6 +101,10 @@
         "best": {
             "total_attempts": 66,
             "score": 63
+        },
+        "daily": {
+            "total_attempts": 43,
+            "score": 42
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Daniel Baratosi",
     "username": "danesz22",
     "title": "IM",
-    "followers": 702,
+    "followers": 719,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Targu Mures",
-    "last_online": 1734164770,
+    "last_online": 1741672943,
     "joined": 1387893907,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1693,
-            "date": 1734127465,
-            "rd": 89
+            "rating": 1772,
+            "date": 1741692833,
+            "rd": 78
         },
         "best": {
             "rating": 2450,
@@ -28,17 +28,11 @@
             "game": "https://www.chess.com/game/daily/110876078"
         },
         "record": {
-            "win": 4472,
-            "loss": 1469,
-            "draw": 721,
-            "time_per_move": 302350,
+            "win": 4511,
+            "loss": 1471,
+            "draw": 722,
+            "time_per_move": 301217,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 39,
-            "withdraw": 24,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess960_daily": {
@@ -56,14 +50,8 @@
             "win": 35,
             "loss": 32,
             "draw": 3,
-            "time_per_move": 302350,
+            "time_per_move": 301217,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 39,
-            "withdraw": 24,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {

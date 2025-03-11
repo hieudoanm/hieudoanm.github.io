@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/AshTrainer",
     "username": "ashtrainer",
     "title": "FM",
-    "followers": 88,
+    "followers": 90,
     "country": "https://api.chess.com/pub/country/MV",
-    "last_online": 1734008405,
+    "last_online": 1738350625,
     "joined": 1552483993,
     "status": "premium",
     "is_streamer": false,
@@ -59,8 +59,8 @@
     "chess_blitz": {
         "last": {
             "rating": 1684,
-            "date": 1730035485,
-            "rd": 43
+            "date": 1736529507,
+            "rd": 66
         },
         "best": {
             "rating": 2073,
@@ -68,7 +68,7 @@
             "game": "https://www.chess.com/game/live/4416472266"
         },
         "record": {
-            "win": 624,
+            "win": 625,
             "loss": 538,
             "draw": 45
         }

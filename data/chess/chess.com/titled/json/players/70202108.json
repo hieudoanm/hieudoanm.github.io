@@ -5,15 +5,34 @@
     "name": "J\u00e1nos K\u00f6nny\u0171",
     "username": "jkonnyu",
     "title": "IM",
-    "followers": 4,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1733948603,
+    "last_online": 1737800321,
     "joined": 1577977929,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Stone",
     "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1867,
+            "date": 1741642542,
+            "rd": 104
+        },
+        "best": {
+            "rating": 2002,
+            "date": 1735775504,
+            "game": "https://www.chess.com/game/daily/755044973"
+        },
+        "record": {
+            "win": 27,
+            "loss": 8,
+            "draw": 0,
+            "time_per_move": 8083,
+            "timeout_percent": 0
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 2313,

@@ -5,14 +5,14 @@
     "name": "Roman Kezin",
     "username": "kezin_roman",
     "title": "IM",
-    "followers": 20,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733932031,
+    "last_online": 1739289503,
     "joined": 1586494985,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -64,26 +64,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2907,
-            "date": 1733943584,
-            "rd": 38
+            "rating": 2955,
+            "date": 1741264930,
+            "rd": 47
         },
         "best": {
-            "rating": 2959,
-            "date": 1727452701,
+            "rating": 2963,
+            "date": 1739377061,
             "game": "https://www.chess.com/game/live/122025574339"
         },
         "record": {
-            "win": 940,
-            "loss": 532,
-            "draw": 100
+            "win": 1000,
+            "loss": 566,
+            "draw": 108
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3664,
-            "date": 1722220564
+            "rating": 3782,
+            "date": 1738305262
         },
         "lowest": {
             "rating": 2500,

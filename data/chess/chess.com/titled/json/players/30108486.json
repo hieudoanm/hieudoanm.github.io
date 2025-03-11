@@ -6,10 +6,10 @@
     "name": "Volkan Sevgi",
     "username": "jagerrmeisterr",
     "title": "FM",
-    "followers": 175,
+    "followers": 176,
     "country": "https://api.chess.com/pub/country/CY",
     "location": "Ma\u011fusa",
-    "last_online": 1734021963,
+    "last_online": 1738498588,
     "joined": 1474876575,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2852,
-            "date": 1704383299,
-            "rd": 59
+            "rating": 2884,
+            "date": 1735383760,
+            "rd": 47
         },
         "best": {
             "rating": 3045,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/35941718337"
         },
         "record": {
-            "win": 2280,
+            "win": 2286,
             "loss": 1823,
-            "draw": 240
+            "draw": 241
         }
     },
     "chess_blitz": {

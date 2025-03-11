@@ -6,10 +6,10 @@
     "name": "Tejas Rama",
     "username": "tejas_rama",
     "title": "FM",
-    "followers": 104,
+    "followers": 106,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New Jersey",
-    "last_online": 1734146295,
+    "last_online": 1741696745,
     "joined": 1377536316,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2651,
-            "date": 1733899869,
-            "rd": 33
+            "rating": 2628,
+            "date": 1741653223,
+            "rd": 41
         },
         "best": {
             "rating": 2767,
@@ -64,29 +64,29 @@
             "game": "https://www.chess.com/game/live/124864158953"
         },
         "record": {
-            "win": 4577,
-            "loss": 4433,
-            "draw": 608
+            "win": 4671,
+            "loss": 4516,
+            "draw": 620
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2513,
-            "date": 1734147977,
-            "rd": 42
+            "rating": 2484,
+            "date": 1741697103,
+            "rd": 33
         },
         "best": {
-            "rating": 2678,
-            "date": 1706290998,
-            "game": "https://www.chess.com/game/live/99164207695"
+            "rating": 2693,
+            "date": 1736036863,
+            "game": "https://www.chess.com/game/live/129604961497"
         },
         "record": {
-            "win": 3903,
-            "loss": 3810,
-            "draw": 682
+            "win": 4232,
+            "loss": 4125,
+            "draw": 739
         }
     },
-    "fide": 2277,
+    "fide": 2282,
     "tactics": {
         "highest": {
             "rating": 4116,

@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/I_Am_Whitebeard",
     "username": "i_am_whitebeard",
     "title": "IM",
-    "followers": 13,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1734135710,
+    "last_online": 1741452082,
     "joined": 1695466745,
     "status": "premium",
     "is_streamer": false,
@@ -16,42 +16,42 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2831,
-            "date": 1734068984,
-            "rd": 35
+            "rating": 2939,
+            "date": 1740012702,
+            "rd": 47
         },
         "best": {
             "rating": 2986,
             "date": 1708247948,
-            "game": "https://www.chess.com/game/live/126604742939"
+            "game": "https://www.chess.com/game/live/132879614929"
         },
         "record": {
-            "win": 470,
-            "loss": 213,
-            "draw": 36
+            "win": 497,
+            "loss": 222,
+            "draw": 37
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2952,
-            "date": 1733879838,
-            "rd": 29
+            "rating": 3008,
+            "date": 1741653756,
+            "rd": 28
         },
         "best": {
             "rating": 3038,
             "date": 1707206010,
-            "game": "https://www.chess.com/game/live/100194176303"
+            "game": "https://www.chess.com/game/live/133975141537"
         },
         "record": {
-            "win": 855,
-            "loss": 490,
-            "draw": 113
+            "win": 1112,
+            "loss": 665,
+            "draw": 152
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3676,
-            "date": 1708249366
+            "rating": 3837,
+            "date": 1741654156
         },
         "lowest": {
             "rating": 1000,
@@ -60,8 +60,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 58,
-            "score": 55
+            "total_attempts": 65,
+            "score": 62
         }
     }
 }

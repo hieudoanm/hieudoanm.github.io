@@ -6,10 +6,10 @@
     "name": "Alberto Lopez Rodr\u00edguez",
     "username": "fm_deuteronomio32",
     "title": "FM",
-    "followers": 113,
+    "followers": 119,
     "country": "https://api.chess.com/pub/country/PE",
     "location": "Lima - Per\u00fa",
-    "last_online": 1734123742,
+    "last_online": 1741702168,
     "joined": 1481315417,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2142,
-            "date": 1733960413,
+            "rating": 2135,
+            "date": 1734735201,
             "rd": 49
         },
         "best": {
@@ -48,7 +48,7 @@
         },
         "record": {
             "win": 23,
-            "loss": 14,
+            "loss": 15,
             "draw": 5
         }
     },
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2446,
-            "date": 1734142270,
-            "rd": 28
+            "rating": 2503,
+            "date": 1741644142,
+            "rd": 36
         },
         "best": {
-            "rating": 2535,
-            "date": 1715708563,
+            "rating": 2539,
+            "date": 1738437078,
             "game": "https://www.chess.com/game/live/91772359547"
         },
         "record": {
-            "win": 5341,
-            "loss": 4561,
-            "draw": 846
+            "win": 5474,
+            "loss": 4664,
+            "draw": 862
         }
     },
     "fide": 2303,
@@ -103,8 +103,8 @@
             "score": 57
         },
         "daily": {
-            "total_attempts": 14,
-            "score": 11
+            "total_attempts": 18,
+            "score": 15
         }
     }
 }

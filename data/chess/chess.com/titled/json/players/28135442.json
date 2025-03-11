@@ -6,10 +6,10 @@
     "name": "Iv\u00e1n Gonz\u00e1lez Men\u00e9ndez",
     "username": "starkast",
     "title": "FM",
-    "followers": 82,
+    "followers": 91,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Asturias",
-    "last_online": 1734174407,
+    "last_online": 1741630266,
     "joined": 1462946824,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2550,
-            "date": 1734177787,
-            "rd": 28
+            "rating": 2706,
+            "date": 1741674658,
+            "rd": 23
         },
         "best": {
-            "rating": 2691,
-            "date": 1716583216,
+            "rating": 2767,
+            "date": 1735382883,
             "game": "https://www.chess.com/game/live/90501006535"
         },
         "record": {
-            "win": 4664,
-            "loss": 4157,
-            "draw": 616
+            "win": 5122,
+            "loss": 4643,
+            "draw": 688
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2583,
-            "date": 1734176867,
-            "rd": 36
+            "rating": 2527,
+            "date": 1741293425,
+            "rd": 43
         },
         "best": {
             "rating": 2659,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/85858346707"
         },
         "record": {
-            "win": 2325,
-            "loss": 1944,
-            "draw": 390
+            "win": 2358,
+            "loss": 1985,
+            "draw": 393
         }
     },
     "fide": 2403,

@@ -6,10 +6,10 @@
     "name": "Franciszek Sernecki",
     "username": "frankshar",
     "title": "FM",
-    "followers": 46,
+    "followers": 47,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Wroc\u0142aw",
-    "last_online": 1733591390,
+    "last_online": 1741435350,
     "joined": 1561576494,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2458,
-            "date": 1733245448,
-            "rd": 48
+            "rating": 2432,
+            "date": 1741108542,
+            "rd": 49
         },
         "best": {
             "rating": 2641,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/123974455037"
         },
         "record": {
-            "win": 323,
-            "loss": 279,
-            "draw": 65
+            "win": 351,
+            "loss": 328,
+            "draw": 74
         }
     },
     "tactics": {

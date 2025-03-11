@@ -6,10 +6,10 @@
     "name": "Okara Andrey",
     "username": "langusto",
     "title": "IM",
-    "followers": 178,
+    "followers": 186,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Poltava",
-    "last_online": 1734178024,
+    "last_online": 1741701853,
     "joined": 1376333646,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1862,
-            "date": 1733671771,
+            "date": 1741702249,
             "rd": 151
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 298,
             "loss": 92,
             "draw": 10,
-            "time_per_move": 30612,
+            "time_per_move": 31369,
             "timeout_percent": 0
         }
     },
@@ -54,36 +54,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2708,
-            "date": 1732530785,
-            "rd": 49
+            "rating": 2679,
+            "date": 1741637184,
+            "rd": 25
         },
         "best": {
-            "rating": 2708,
-            "date": 1732530785,
+            "rating": 2748,
+            "date": 1739733898,
             "game": "https://www.chess.com/game/live/104521789583"
         },
         "record": {
-            "win": 701,
-            "loss": 496,
-            "draw": 66
+            "win": 831,
+            "loss": 619,
+            "draw": 83
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2700,
-            "date": 1721912558,
-            "rd": 47
+            "rating": 2704,
+            "date": 1741686220,
+            "rd": 43
         },
         "best": {
-            "rating": 2700,
-            "date": 1721912558,
+            "rating": 2760,
+            "date": 1739547009,
             "game": "https://www.chess.com/game/live/103994502959"
         },
         "record": {
-            "win": 3442,
-            "loss": 2765,
-            "draw": 311
+            "win": 3477,
+            "loss": 2796,
+            "draw": 313
         }
     },
     "fide": 2340,

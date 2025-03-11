@@ -5,9 +5,9 @@
     "name": "Pawel Flis",
     "username": "fischerkasparow",
     "title": "CM",
-    "followers": 21,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734063550,
+    "last_online": 1741702456,
     "joined": 1584556539,
     "status": "premium",
     "is_streamer": false,
@@ -16,19 +16,19 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1635,
-            "date": 1640188889,
-            "rd": 182
+            "rating": 1931,
+            "date": 1736802744,
+            "rd": 152
         },
         "best": {
-            "rating": 1909,
-            "date": 1590164722,
-            "game": "https://www.chess.com/game/live/4892153347"
+            "rating": 1931,
+            "date": 1736802744,
+            "game": "https://www.chess.com/game/live/130539645905"
         },
         "record": {
-            "win": 3,
-            "loss": 4,
-            "draw": 1
+            "win": 7,
+            "loss": 5,
+            "draw": 2
         }
     },
     "chess_bullet": {
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2049,
-            "date": 1733852934,
-            "rd": 63
+            "rating": 2149,
+            "date": 1738692568,
+            "rd": 67
         },
         "best": {
             "rating": 2152,
@@ -60,15 +60,15 @@
             "game": "https://www.chess.com/game/live/37470105265"
         },
         "record": {
-            "win": 418,
-            "loss": 614,
+            "win": 424,
+            "loss": 625,
             "draw": 79
         }
     },
     "tactics": {
         "highest": {
-            "rating": 1474,
-            "date": 1732782972
+            "rating": 1488,
+            "date": 1738824902
         },
         "lowest": {
             "rating": 1013,

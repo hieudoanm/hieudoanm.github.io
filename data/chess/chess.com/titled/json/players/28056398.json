@@ -6,10 +6,10 @@
     "name": "Alexander A. Chernov",
     "username": "chernov_alexander_a",
     "title": "FM",
-    "followers": 52,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Barnaul",
-    "last_online": 1733769593,
+    "last_online": 1739207261,
     "joined": 1462464820,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2305,
-            "date": 1733776195,
-            "rd": 38
+            "rating": 2280,
+            "date": 1736878111,
+            "rd": 44
         },
         "best": {
             "rating": 2367,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/115513140671"
         },
         "record": {
-            "win": 2969,
-            "loss": 2847,
-            "draw": 476
+            "win": 2979,
+            "loss": 2862,
+            "draw": 479
         }
     },
     "fide": 2314,

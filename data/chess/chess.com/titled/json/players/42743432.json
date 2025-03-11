@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Not_2dayy",
     "username": "not_2dayy",
     "title": "FM",
-    "followers": 15,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/VU",
-    "last_online": 1734038698,
+    "last_online": 1741700010,
     "joined": 1517070946,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2338,
-            "date": 1704049729,
+            "date": 1735145743,
             "rd": 107
         },
         "best": {
@@ -69,19 +69,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2518,
-            "date": 1734051454,
-            "rd": 29
+            "rating": 2554,
+            "date": 1741703660,
+            "rd": 20
         },
         "best": {
-            "rating": 2600,
-            "date": 1730048903,
-            "game": "https://www.chess.com/game/live/120852640705"
+            "rating": 2662,
+            "date": 1739568513,
+            "game": "https://www.chess.com/game/live/133303766213"
         },
         "record": {
-            "win": 4401,
-            "loss": 3595,
-            "draw": 400
+            "win": 4907,
+            "loss": 4007,
+            "draw": 459
         }
     },
     "tactics": {
@@ -96,12 +96,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 58,
-            "score": 55
-        },
-        "daily": {
-            "total_attempts": 40,
-            "score": 37
+            "total_attempts": 59,
+            "score": 56
         }
     }
 }

@@ -6,9 +6,9 @@
     "name": "Zara La Fleur",
     "username": "sofie1010",
     "title": "WCM",
-    "followers": 29,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/TT",
-    "last_online": 1733769061,
+    "last_online": 1739142792,
     "joined": 1546602563,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1790,
-            "date": 1733965159,
-            "rd": 87
+            "rating": 1776,
+            "date": 1734393071,
+            "rd": 81
         },
         "best": {
             "rating": 1882,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/114388177961"
         },
         "record": {
-            "win": 83,
-            "loss": 64,
+            "win": 84,
+            "loss": 66,
             "draw": 10
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1474,
-            "date": 1733963210,
-            "rd": 34
+            "rating": 1402,
+            "date": 1741019134,
+            "rd": 41
         },
         "best": {
             "rating": 1868,
@@ -44,26 +44,26 @@
             "game": "https://www.chess.com/game/live/114037247609"
         },
         "record": {
-            "win": 594,
-            "loss": 534,
+            "win": 649,
+            "loss": 592,
             "draw": 21
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1907,
-            "date": 1730951983,
-            "rd": 74
+            "rating": 1864,
+            "date": 1740236998,
+            "rd": 58
         },
         "best": {
-            "rating": 1907,
-            "date": 1730951983,
+            "rating": 1943,
+            "date": 1735560115,
             "game": "https://www.chess.com/game/live/118003180743"
         },
         "record": {
-            "win": 527,
-            "loss": 457,
-            "draw": 18
+            "win": 542,
+            "loss": 475,
+            "draw": 19
         }
     },
     "fide": 1874,

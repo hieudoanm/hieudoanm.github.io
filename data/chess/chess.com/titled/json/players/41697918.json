@@ -6,9 +6,9 @@
     "name": "Evsuld Myagmarsuren",
     "username": "nigirisushies",
     "title": "CM",
-    "followers": 38,
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/GH",
-    "last_online": 1734013047,
+    "last_online": 1741702148,
     "joined": 1514297381,
     "status": "premium",
     "is_streamer": false,
@@ -70,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2458,
-            "date": 1732644593,
-            "rd": 44
+            "rating": 2545,
+            "date": 1741111706,
+            "rd": 43
         },
         "best": {
-            "rating": 2513,
-            "date": 1729613381,
+            "rating": 2554,
+            "date": 1741108688,
             "game": "https://www.chess.com/game/live/123349779601"
         },
         "record": {
-            "win": 919,
-            "loss": 638,
-            "draw": 82
+            "win": 974,
+            "loss": 695,
+            "draw": 91
         }
     },
     "fide": 2138,

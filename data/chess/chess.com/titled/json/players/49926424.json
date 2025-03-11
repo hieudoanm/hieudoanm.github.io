@@ -6,9 +6,9 @@
     "name": "Kacper Grela",
     "username": "qwaserpl",
     "title": "FM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733327961,
+    "last_online": 1740506842,
     "joined": 1537438175,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1996,
-            "date": 1730151114,
-            "rd": 201
+            "rating": 1999,
+            "date": 1739210453,
+            "rd": 270
         },
         "best": {
             "rating": 2044,
@@ -46,7 +46,7 @@
             "game": "https://www.chess.com/game/live/4906560237"
         },
         "record": {
-            "win": 7,
+            "win": 8,
             "loss": 3,
             "draw": 1
         }
@@ -54,8 +54,8 @@
     "chess_bullet": {
         "last": {
             "rating": 2250,
-            "date": 1733328145,
-            "rd": 79
+            "date": 1739210276,
+            "rd": 92
         },
         "best": {
             "rating": 2467,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/59656781051"
         },
         "record": {
-            "win": 198,
+            "win": 202,
             "loss": 155,
             "draw": 21
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1724252722,
-            "rd": 69
+            "rating": 2497,
+            "date": 1738880548,
+            "rd": 49
         },
         "best": {
             "rating": 2505,
@@ -81,7 +81,7 @@
         },
         "record": {
             "win": 666,
-            "loss": 544,
+            "loss": 545,
             "draw": 163
         }
     },

@@ -1,14 +1,13 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/46119492.95bb2efe.200x200o.6fd63fa217bd.jpeg",
     "player_id": 46119492,
-    "@id": "https://api.chess.com/pub/player/gjakantati",
-    "url": "https://www.chess.com/member/GjakanTati",
+    "@id": "https://api.chess.com/pub/player/artur_hoghmrtsyan",
+    "url": "https://www.chess.com/member/Artur_Hoghmrtsyan",
     "name": "Artur Hoghmrtsyan",
-    "username": "gjakantati",
+    "username": "artur_hoghmrtsyan",
     "title": "FM",
-    "followers": 36,
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1734077515,
+    "last_online": 1741432113,
     "joined": 1526135307,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2650,
-            "date": 1734078019,
-            "rd": 42
+            "rating": 2603,
+            "date": 1741338764,
+            "rd": 41
         },
         "best": {
             "rating": 2738,
@@ -75,9 +74,9 @@
             "game": "https://www.chess.com/game/live/5149348077"
         },
         "record": {
-            "win": 2414,
-            "loss": 2835,
-            "draw": 442
+            "win": 2464,
+            "loss": 2898,
+            "draw": 450
         }
     },
     "fide": 2450,

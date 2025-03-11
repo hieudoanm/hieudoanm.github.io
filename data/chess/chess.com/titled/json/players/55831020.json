@@ -8,7 +8,7 @@
     "title": "WFM",
     "followers": 43,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734167459,
+    "last_online": 1741640624,
     "joined": 1547233978,
     "status": "premium",
     "is_streamer": false,
@@ -54,8 +54,8 @@
     "chess_bullet": {
         "last": {
             "rating": 2435,
-            "date": 1733063214,
-            "rd": 30
+            "date": 1740766169,
+            "rd": 33
         },
         "best": {
             "rating": 2591,
@@ -63,33 +63,33 @@
             "game": "https://www.chess.com/game/live/107869845457"
         },
         "record": {
-            "win": 2630,
-            "loss": 2412,
-            "draw": 316
+            "win": 2791,
+            "loss": 2608,
+            "draw": 336
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2338,
-            "date": 1734169141,
-            "rd": 67
+            "rating": 2361,
+            "date": 1739118718,
+            "rd": 42
         },
         "best": {
-            "rating": 2349,
-            "date": 1732988962,
+            "rating": 2406,
+            "date": 1737901375,
             "game": "https://www.chess.com/game/live/100369409581"
         },
         "record": {
-            "win": 1414,
-            "loss": 1074,
-            "draw": 117
+            "win": 1468,
+            "loss": 1111,
+            "draw": 123
         }
     },
     "fide": 2223,
     "tactics": {
         "highest": {
-            "rating": 3825,
-            "date": 1720188018
+            "rating": 3842,
+            "date": 1741078718
         },
         "lowest": {
             "rating": 389,

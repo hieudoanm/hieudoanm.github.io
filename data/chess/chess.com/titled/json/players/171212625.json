@@ -5,9 +5,9 @@
     "name": "Viacheslav Mikhailov",
     "username": "miferz44",
     "title": "IM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1730305012,
+    "last_online": 1741131557,
     "joined": 1643735095,
     "status": "premium",
     "is_streamer": false,
@@ -15,36 +15,36 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2841,
-            "date": 1733693228,
+            "rating": 2847,
+            "date": 1734483200,
             "rd": 49
         },
         "best": {
-            "rating": 2841,
-            "date": 1733693228,
+            "rating": 2847,
+            "date": 1734483200,
             "game": "https://www.chess.com/game/live/98307368533"
         },
         "record": {
-            "win": 265,
+            "win": 266,
             "loss": 181,
             "draw": 29
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2810,
-            "date": 1733965351,
-            "rd": 35
+            "rating": 2850,
+            "date": 1735004851,
+            "rd": 38
         },
         "best": {
-            "rating": 2844,
-            "date": 1732554593,
+            "rating": 2854,
+            "date": 1735004503,
             "game": "https://www.chess.com/game/live/125260141039"
         },
         "record": {
-            "win": 587,
-            "loss": 428,
-            "draw": 89
+            "win": 593,
+            "loss": 432,
+            "draw": 90
         }
     },
     "fide": 0,

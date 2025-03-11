@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23360784.8b1080dc.200x200o.f0b144e6f663.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/23360784.f7a123ea.200x200o.d93bf14cdc66.jpg",
     "player_id": 23360784,
     "@id": "https://api.chess.com/pub/player/gilbertelroy",
     "url": "https://www.chess.com/member/GilbertElroy",
     "name": "Gilbert Elroy Tarigan",
     "username": "gilbertelroy",
     "title": "IM",
-    "followers": 228,
+    "followers": 254,
     "country": "https://api.chess.com/pub/country/ID",
     "location": "Jakarta",
-    "last_online": 1734147591,
+    "last_online": 1741704089,
     "joined": 1437659100,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2886,
-            "date": 1731661350,
-            "rd": 43
+            "rating": 2920,
+            "date": 1738604071,
+            "rd": 38
         },
         "best": {
             "rating": 3009,
@@ -59,26 +59,26 @@
             "game": "https://www.chess.com/game/live/71022205569"
         },
         "record": {
-            "win": 3133,
-            "loss": 2662,
-            "draw": 446
+            "win": 3195,
+            "loss": 2702,
+            "draw": 452
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2858,
-            "date": 1734178079,
-            "rd": 26
+            "rating": 2963,
+            "date": 1741691242,
+            "rd": 24
         },
         "best": {
-            "rating": 2984,
-            "date": 1731654278,
+            "rating": 3026,
+            "date": 1738355798,
             "game": "https://www.chess.com/game/live/125179760509"
         },
         "record": {
-            "win": 6906,
-            "loss": 5409,
-            "draw": 1824
+            "win": 7298,
+            "loss": 5670,
+            "draw": 1978
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Nahun Gavarrete",
     "username": "emanjdj",
     "title": "FM",
-    "followers": 113,
+    "followers": 120,
     "country": "https://api.chess.com/pub/country/HN",
     "location": "Espa\u00f1a",
-    "last_online": 1734135060,
+    "last_online": 1741601635,
     "joined": 1345150941,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1279,
-            "date": 1729557464,
-            "rd": 170
+            "rating": 1101,
+            "date": 1741601884,
+            "rd": 103
         },
         "best": {
             "rating": 1508,
@@ -28,18 +28,18 @@
             "game": "https://www.chess.com/game/daily/274464480"
         },
         "record": {
-            "win": 32,
-            "loss": 9,
-            "draw": 2,
-            "time_per_move": 25840,
+            "win": 35,
+            "loss": 12,
+            "draw": 11,
+            "time_per_move": 22530,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1743,
-            "date": 1709240822,
-            "rd": 175
+            "rating": 1624,
+            "date": 1738187189,
+            "rd": 204
         },
         "best": {
             "rating": 2241,
@@ -49,14 +49,14 @@
         "record": {
             "win": 27,
             "loss": 16,
-            "draw": 16
+            "draw": 17
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2466,
-            "date": 1733574918,
-            "rd": 58
+            "rating": 2456,
+            "date": 1738788171,
+            "rd": 72
         },
         "best": {
             "rating": 2468,
@@ -66,14 +66,14 @@
         "record": {
             "win": 486,
             "loss": 257,
-            "draw": 25
+            "draw": 26
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2354,
-            "date": 1719309063,
-            "rd": 55
+            "rating": 2317,
+            "date": 1740764805,
+            "rd": 102
         },
         "best": {
             "rating": 2451,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/20168444339"
         },
         "record": {
-            "win": 2073,
-            "loss": 1720,
+            "win": 2074,
+            "loss": 1721,
             "draw": 181
         }
     },

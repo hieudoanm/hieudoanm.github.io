@@ -8,12 +8,12 @@
     "followers": 30,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Porsgrunn",
-    "last_online": 1721772266,
+    "last_online": 1740498436,
     "joined": 1397676587,
     "status": "premium",
     "is_streamer": true,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2464,
-            "date": 1721132217,
-            "rd": 86
+            "rating": 2499,
+            "date": 1740869519,
+            "rd": 46
         },
         "best": {
             "rating": 2564,
@@ -63,26 +63,25 @@
             "game": "https://www.chess.com/game/live/74458357273"
         },
         "record": {
-            "win": 90,
-            "loss": 53,
+            "win": 95,
+            "loss": 58,
             "draw": 7
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2711,
-            "date": 1734015900,
-            "rd": 31
+            "rating": 2709,
+            "date": 1741418060
         },
         "best": {
-            "rating": 2718,
-            "date": 1733918439,
-            "game": "https://www.chess.com/game/live/90713958457"
+            "rating": 2743,
+            "date": 1739783341,
+            "game": "https://www.chess.com/game/live/134240956669"
         },
         "record": {
-            "win": 1242,
-            "loss": 898,
-            "draw": 149
+            "win": 1319,
+            "loss": 959,
+            "draw": 162
         }
     },
     "fide": 0,

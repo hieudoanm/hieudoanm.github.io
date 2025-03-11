@@ -6,10 +6,10 @@
     "name": "Satbek Akhmedinov",
     "username": "nekotyanof",
     "title": "IM",
-    "followers": 34,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "\u041d\u0443\u0440-\u0421\u0443\u043b\u0442\u0430\u043d",
-    "last_online": 1733851435,
+    "last_online": 1741247207,
     "joined": 1496122612,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1330,
-            "date": 1728936790,
+            "date": 1741339727,
             "rd": 306
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2776,
-            "date": 1733249189,
-            "rd": 46
+            "rating": 2724,
+            "date": 1740504050,
+            "rd": 47
         },
         "best": {
             "rating": 2789,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/90690090721"
         },
         "record": {
-            "win": 439,
-            "loss": 280,
-            "draw": 54
+            "win": 459,
+            "loss": 295,
+            "draw": 56
         }
     },
     "fide": 2319,

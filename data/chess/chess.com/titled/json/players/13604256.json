@@ -9,7 +9,7 @@
     "followers": 23,
     "country": "https://api.chess.com/pub/country/ID",
     "location": "Jakarta",
-    "last_online": 1730822246,
+    "last_online": 1741355931,
     "joined": 1379722107,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2213,
-            "date": 1730825231,
-            "rd": 116
+            "rating": 2246,
+            "date": 1741366399,
+            "rd": 117
         },
         "best": {
             "rating": 2350,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/124562322795"
         },
         "record": {
-            "win": 132,
+            "win": 133,
             "loss": 92,
-            "draw": 19
+            "draw": 20
         }
     },
     "fide": 2153,

@@ -1,5 +1,5 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13025742.1005a99d.200x200o.3581fb3847dd.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13025742.6a730d49.200x200o.fb077d9398fa.jpg",
     "player_id": 13025742,
     "@id": "https://api.chess.com/pub/player/a-druckenthaner",
     "url": "https://www.chess.com/member/a-druckenthaner",
@@ -9,7 +9,7 @@
     "followers": 21,
     "country": "https://api.chess.com/pub/country/AT",
     "location": "Wels",
-    "last_online": 1734177295,
+    "last_online": 1741679450,
     "joined": 1375697779,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2391,
-            "date": 1734178462,
-            "rd": 26
+            "rating": 2484,
+            "date": 1741596837
         },
         "best": {
             "rating": 2535,
@@ -45,9 +44,9 @@
             "game": "https://www.chess.com/game/live/119194217571"
         },
         "record": {
-            "win": 14986,
-            "loss": 9507,
-            "draw": 2992
+            "win": 15463,
+            "loss": 9808,
+            "draw": 3118
         }
     },
     "tactics": {

@@ -5,10 +5,10 @@
     "name": "Li Wenliang",
     "username": "liwenliang",
     "title": "IM",
-    "followers": 276,
+    "followers": 286,
     "country": "https://api.chess.com/pub/country/US",
     "location": "CA",
-    "last_online": 1734150448,
+    "last_online": 1741659293,
     "joined": 1531284371,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2021,
-            "date": 1734135144,
+            "date": 1741545389,
             "rd": 49
         },
         "best": {
@@ -35,7 +35,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2252,
-            "date": 1701670245,
+            "date": 1734670618,
             "rd": 121
         },
         "best": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2502,
-            "date": 1733460903,
-            "rd": 49
+            "rating": 2505,
+            "date": 1737960795,
+            "rd": 44
         },
         "best": {
             "rating": 2571,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/15285152713"
         },
         "record": {
-            "win": 3358,
-            "loss": 2965,
-            "draw": 771
+            "win": 3374,
+            "loss": 2973,
+            "draw": 774
         }
     },
     "fide": 2450,

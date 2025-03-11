@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1707618854,
+    "last_online": 1735463718,
     "joined": 1679574449,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2830,
-            "date": 1702697098,
-            "rd": 81
+            "rating": 2836,
+            "date": 1735407217,
+            "rd": 49
         },
         "best": {
             "rating": 2899,
@@ -26,7 +26,7 @@
             "game": "https://www.chess.com/game/live/92814122621"
         },
         "record": {
-            "win": 14,
+            "win": 15,
             "loss": 27,
             "draw": 4
         }

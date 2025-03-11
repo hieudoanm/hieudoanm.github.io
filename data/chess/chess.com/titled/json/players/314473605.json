@@ -6,20 +6,32 @@
     "name": "Elnur Aliyev",
     "username": "hakiki_satranc",
     "title": "CM",
-    "followers": 9,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734104323,
+    "last_online": 1741468550,
     "joined": 1695326171,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Champion",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2060,
+            "date": 1739918661,
+            "rd": 49
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
+        }
+    },
     "chess_bullet": {
         "last": {
-            "rating": 2434,
-            "date": 1733314043,
-            "rd": 39
+            "rating": 2409,
+            "date": 1741557187,
+            "rd": 32
         },
         "best": {
             "rating": 2614,
@@ -27,16 +39,16 @@
             "game": "https://www.chess.com/game/live/118531072593"
         },
         "record": {
-            "win": 189,
-            "loss": 226,
-            "draw": 40
+            "win": 240,
+            "loss": 287,
+            "draw": 53
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2430,
-            "date": 1733257950,
-            "rd": 44
+            "rating": 2483,
+            "date": 1741305172,
+            "rd": 34
         },
         "best": {
             "rating": 2536,
@@ -44,16 +56,16 @@
             "game": "https://www.chess.com/game/live/112387840763"
         },
         "record": {
-            "win": 403,
-            "loss": 473,
-            "draw": 88
+            "win": 465,
+            "loss": 542,
+            "draw": 97
         }
     },
     "fide": 2074,
     "tactics": {
         "highest": {
-            "rating": 2737,
-            "date": 1732028587
+            "rating": 2780,
+            "date": 1735499767
         },
         "lowest": {
             "rating": 1000,

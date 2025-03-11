@@ -9,7 +9,7 @@
     "followers": 243,
     "country": "https://api.chess.com/pub/country/SG",
     "location": "Singapore",
-    "last_online": 1733968273,
+    "last_online": 1741443204,
     "joined": 1455615845,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2120,
-            "date": 1721309891,
+            "date": 1741440085,
             "rd": 119
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 275,
             "loss": 21,
             "draw": 4,
-            "time_per_move": 17950,
+            "time_per_move": 18159,
             "timeout_percent": 0
         }
     },
@@ -89,8 +89,8 @@
     "fide": 2284,
     "tactics": {
         "highest": {
-            "rating": 3161,
-            "date": 1661655479
+            "rating": 3214,
+            "date": 1740414424
         },
         "lowest": {
             "rating": 1964,

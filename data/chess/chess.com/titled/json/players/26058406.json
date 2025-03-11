@@ -9,7 +9,7 @@
     "followers": 19,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Hyderabad",
-    "last_online": 1733660277,
+    "last_online": 1740503063,
     "joined": 1452440906,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2251,
-            "date": 1704823926,
-            "rd": 70
+            "rating": 2254,
+            "date": 1739899095,
+            "rd": 94
         },
         "best": {
             "rating": 2318,
@@ -76,8 +76,8 @@
             "game": "https://www.chess.com/game/live/26932900707"
         },
         "record": {
-            "win": 778,
-            "loss": 736,
+            "win": 781,
+            "loss": 744,
             "draw": 73
         }
     },

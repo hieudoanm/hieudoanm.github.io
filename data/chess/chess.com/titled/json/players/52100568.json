@@ -5,9 +5,9 @@
     "name": "Alen Yeremyan",
     "username": "salva-dali",
     "title": "FM",
-    "followers": 242,
-    "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733912211,
+    "followers": 244,
+    "country": "https://api.chess.com/pub/country/AM",
+    "last_online": 1740504820,
     "joined": 1542717966,
     "status": "premium",
     "is_streamer": false,
@@ -42,9 +42,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2832,
-            "date": 1725694120,
-            "rd": 49
+            "rating": 2817,
+            "date": 1736959199,
+            "rd": 37
         },
         "best": {
             "rating": 2929,
@@ -52,26 +52,26 @@
             "game": "https://www.chess.com/game/live/33991234379"
         },
         "record": {
-            "win": 1582,
-            "loss": 1344,
-            "draw": 181
+            "win": 1617,
+            "loss": 1371,
+            "draw": 182
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2820,
-            "date": 1733244902,
-            "rd": 43
+            "rating": 2792,
+            "date": 1740504091,
+            "rd": 49
         },
         "best": {
-            "rating": 2842,
-            "date": 1581444045,
+            "rating": 2854,
+            "date": 1735031014,
             "game": "https://www.chess.com/game/live/4250452632"
         },
         "record": {
-            "win": 2409,
-            "loss": 2421,
-            "draw": 469
+            "win": 2441,
+            "loss": 2439,
+            "draw": 474
         }
     },
     "fide": 2302,

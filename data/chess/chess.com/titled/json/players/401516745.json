@@ -1,59 +1,58 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/401516745.a235c206.200x200o.83b334e0fc9a.jpg",
     "player_id": 401516745,
     "@id": "https://api.chess.com/pub/player/funny_man1234",
     "url": "https://www.chess.com/member/FUNNY_MAN1234",
     "name": "Seyed Abolfazl Moosavifar",
     "username": "funny_man1234",
     "title": "FM",
-    "followers": 2,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734029731,
+    "last_online": 1741598096,
     "joined": 1731186757,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2514,
-            "date": 1734014775,
-            "rd": 46
+            "rating": 2614,
+            "date": 1740849203,
+            "rd": 45
         },
         "best": {
-            "rating": 2539,
-            "date": 1734013676,
-            "game": "https://www.chess.com/game/live/127752054075"
+            "rating": 2752,
+            "date": 1736011500,
+            "game": "https://www.chess.com/game/live/128539962679"
         },
         "record": {
-            "win": 8,
-            "loss": 9,
-            "draw": 2
+            "win": 120,
+            "loss": 100,
+            "draw": 15
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2546,
-            "date": 1732730042,
-            "rd": 46
+            "rating": 2728,
+            "date": 1740259235,
+            "rd": 45
         },
         "best": {
-            "rating": 2546,
-            "date": 1732730042,
-            "game": "https://www.chess.com/game/live/126397201461"
+            "rating": 2700,
+            "date": 1736897244,
+            "game": "https://www.chess.com/game/live/128099969525"
         },
         "record": {
-            "win": 9,
-            "loss": 7,
-            "draw": 1
+            "win": 65,
+            "loss": 51,
+            "draw": 5
         }
     },
     "fide": 2308,
     "tactics": {
         "highest": {
-            "rating": 3777,
-            "date": 1732348481
+            "rating": 3836,
+            "date": 1734691840
         },
         "lowest": {
             "rating": 1000,

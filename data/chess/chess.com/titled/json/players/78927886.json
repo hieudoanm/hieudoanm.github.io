@@ -9,7 +9,7 @@
     "followers": 4,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "ISTANBUL",
-    "last_online": 1722962165,
+    "last_online": 1741273992,
     "joined": 1588953075,
     "status": "premium",
     "is_streamer": false,
@@ -53,7 +53,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2228,
-            "date": 1710883214,
+            "date": 1739289984,
             "rd": 130
         },
         "best": {

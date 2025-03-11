@@ -8,7 +8,7 @@
     "title": "WCM",
     "followers": 2,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1731686263,
+    "last_online": 1737484721,
     "joined": 1586783783,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1842,
-            "date": 1731032033,
-            "rd": 73
+            "rating": 1778,
+            "date": 1737486461,
+            "rd": 156
         },
         "best": {
             "rating": 1852,
@@ -64,15 +64,15 @@
         },
         "record": {
             "win": 59,
-            "loss": 36,
+            "loss": 37,
             "draw": 3
         }
     },
     "fide": 1833,
     "tactics": {
         "highest": {
-            "rating": 3244,
-            "date": 1677257926
+            "rating": 3249,
+            "date": 1737485756
         },
         "lowest": {
             "rating": 811,

@@ -6,10 +6,10 @@
     "name": "Mihai-Lucian Grunberg",
     "username": "grunbergmihai",
     "title": "IM",
-    "followers": 309,
+    "followers": 316,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Timisoara",
-    "last_online": 1734163167,
+    "last_online": 1741693040,
     "joined": 1434201388,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1652,
-            "date": 1734075271,
-            "rd": 103
+            "rating": 1650,
+            "date": 1741355576,
+            "rd": 114
         },
         "best": {
-            "rating": 1652,
-            "date": 1733148258,
+            "rating": 1658,
+            "date": 1734622053,
             "game": "https://www.chess.com/game/daily/703867849"
         },
         "record": {
-            "win": 50,
-            "loss": 2,
+            "win": 52,
+            "loss": 3,
             "draw": 0,
-            "time_per_move": 17163,
+            "time_per_move": 17165,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 2,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 17163,
+            "time_per_move": 17165,
             "timeout_percent": 0
         }
     },
@@ -90,26 +90,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2554,
-            "date": 1734163395,
-            "rd": 28
+            "rating": 2479,
+            "date": 1741694220,
+            "rd": 21
         },
         "best": {
-            "rating": 2682,
-            "date": 1702822641,
+            "rating": 2701,
+            "date": 1739735285,
             "game": "https://www.chess.com/game/live/75234749343"
         },
         "record": {
-            "win": 17274,
-            "loss": 15748,
-            "draw": 3856
+            "win": 17874,
+            "loss": 16287,
+            "draw": 4002
         }
     },
     "fide": 2403,
     "tactics": {
         "highest": {
-            "rating": 2550,
-            "date": 1707994269
+            "rating": 2563,
+            "date": 1738514454
         },
         "lowest": {
             "rating": 1215,

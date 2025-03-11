@@ -6,10 +6,10 @@
     "name": "Gb Mister",
     "username": "cisterciense",
     "title": "CM",
-    "followers": 46,
+    "followers": 47,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Sn",
-    "last_online": 1733060412,
+    "last_online": 1741637413,
     "joined": 1391742169,
     "status": "premium",
     "is_streamer": false,
@@ -83,8 +83,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3030,
-            "date": 1725734981
+            "rating": 3045,
+            "date": 1740886506
         },
         "lowest": {
             "rating": 1398,
@@ -93,8 +93,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 39,
-            "score": 37
+            "total_attempts": 45,
+            "score": 42
         }
     }
 }

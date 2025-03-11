@@ -7,12 +7,12 @@
     "title": "FM",
     "followers": 22,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1718464162,
+    "last_online": 1737225178,
     "joined": 1505591669,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -34,7 +34,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2972,
-            "date": 1683406072,
+            "date": 1740500387,
             "rd": 163
         },
         "best": {

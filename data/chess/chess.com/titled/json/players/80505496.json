@@ -6,10 +6,10 @@
     "name": "Ignacio Fernandez Mazzetti",
     "username": "maazzetti",
     "title": "FM",
-    "followers": 70,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Mar del Plata",
-    "last_online": 1733844918,
+    "last_online": 1741384012,
     "joined": 1590442644,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2544,
-            "date": 1732318942,
+            "rating": 2507,
+            "date": 1741224600,
             "rd": 48
         },
         "best": {
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/5062912653"
         },
         "record": {
-            "win": 367,
-            "loss": 342,
-            "draw": 51
+            "win": 382,
+            "loss": 346,
+            "draw": 52
         }
     },
     "tactics": {

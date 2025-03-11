@@ -6,10 +6,10 @@
     "name": "Angel Ivan Quiroga Jaquez",
     "username": "ivanquiroga",
     "title": "CM",
-    "followers": 78,
+    "followers": 82,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Rating Fide 2151",
-    "last_online": 1733927123,
+    "last_online": 1741389746,
     "joined": 1460736401,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2525,
-            "date": 1733861372,
-            "rd": 44
+            "rating": 2559,
+            "date": 1739812527,
+            "rd": 48
         },
         "best": {
             "rating": 2624,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/114370824787"
         },
         "record": {
-            "win": 1783,
-            "loss": 1281,
-            "draw": 288
+            "win": 1796,
+            "loss": 1289,
+            "draw": 292
         }
     },
     "fide": 2118,

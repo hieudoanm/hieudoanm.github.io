@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Moiphatlakanyi",
     "username": "moiphatlakanyi",
     "title": "CM",
-    "followers": 44,
+    "followers": 48,
     "country": "https://api.chess.com/pub/country/BW",
-    "last_online": 1731749301,
+    "last_online": 1739029110,
     "joined": 1541698855,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2054,
-            "date": 1731688410,
-            "rd": 74
+            "rating": 2099,
+            "date": 1735921970,
+            "rd": 73
         },
         "best": {
             "rating": 2299,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/38680465143"
         },
         "record": {
-            "win": 641,
-            "loss": 502,
-            "draw": 69
+            "win": 648,
+            "loss": 503,
+            "draw": 70
         }
     },
     "tactics": {

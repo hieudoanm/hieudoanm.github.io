@@ -9,7 +9,7 @@
     "followers": 108,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Milwaukee",
-    "last_online": 1733595654,
+    "last_online": 1740499467,
     "joined": 1360779438,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2306,
-            "date": 1705512747,
+            "date": 1738261647,
             "rd": 320
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 11,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 26510,
+            "time_per_move": 25771,
             "timeout_percent": 0
         }
     },

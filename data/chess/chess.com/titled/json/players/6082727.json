@@ -9,7 +9,7 @@
     "followers": 18,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Valencia, Spain",
-    "last_online": 1733088080,
+    "last_online": 1738318388,
     "joined": 1320679071,
     "status": "premium",
     "is_streamer": false,
@@ -52,13 +52,18 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3399,
-            "date": 1733828944
+            "rating": 3415,
+            "date": 1739396087
         },
         "lowest": {
             "rating": 1361,
             "date": 1461611955
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 30,
+            "score": 30
+        }
+    }
 }

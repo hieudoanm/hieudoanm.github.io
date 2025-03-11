@@ -6,9 +6,9 @@
     "name": "Bertalan Buz\u00e1s",
     "username": "bertalan1126",
     "title": "FM",
-    "followers": 9,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734009062,
+    "last_online": 1741646492,
     "joined": 1725385888,
     "status": "premium",
     "is_streamer": false,
@@ -17,19 +17,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2490,
-            "date": 1734018768,
-            "rd": 28
+            "rating": 2435,
+            "date": 1741543036,
+            "rd": 30
         },
         "best": {
-            "rating": 2573,
-            "date": 1727447420,
-            "game": "https://www.chess.com/game/live/123348067925"
+            "rating": 2614,
+            "date": 1736601173,
+            "game": "https://www.chess.com/game/live/129421381833"
         },
         "record": {
-            "win": 543,
-            "loss": 432,
-            "draw": 70
+            "win": 782,
+            "loss": 652,
+            "draw": 100
         }
     },
     "fide": 2300,

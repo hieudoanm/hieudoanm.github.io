@@ -6,10 +6,10 @@
     "name": "Hope Mkhumba",
     "username": "hoplex",
     "title": "CM",
-    "followers": 277,
+    "followers": 280,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "Manchester",
-    "last_online": 1734178231,
+    "last_online": 1741657971,
     "joined": 1267779499,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1502,
-            "date": 1707773120,
+            "date": 1739352490,
             "rd": 286
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1954,
-            "date": 1734139893,
-            "rd": 27
+            "rating": 1868,
+            "date": 1741669172,
+            "rd": 31
         },
         "best": {
             "rating": 2143,
@@ -64,24 +64,24 @@
             "game": "https://www.chess.com/game/live/5722102542"
         },
         "record": {
-            "win": 21050,
-            "loss": 18705,
-            "draw": 793
+            "win": 21152,
+            "loss": 18814,
+            "draw": 796
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2234,
-            "date": 1713914255,
-            "rd": 130
+            "rating": 2300,
+            "date": 1737500041,
+            "rd": 146
         },
         "best": {
-            "rating": 2234,
-            "date": 1713914255,
+            "rating": 2300,
+            "date": 1737500041,
             "game": "https://www.chess.com/game/live/39989399947"
         },
         "record": {
-            "win": 816,
+            "win": 817,
             "loss": 541,
             "draw": 64
         }

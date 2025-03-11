@@ -9,7 +9,7 @@
     "followers": 744,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Kisujszallas",
-    "last_online": 1734172017,
+    "last_online": 1741213133,
     "joined": 1393442167,
     "status": "premium",
     "is_streamer": false,
@@ -105,7 +105,7 @@
             "draw": 652
         }
     },
-    "fide": 2214,
+    "fide": 2199,
     "tactics": {
         "highest": {
             "rating": 3033,

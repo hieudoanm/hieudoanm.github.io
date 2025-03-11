@@ -5,9 +5,9 @@
     "name": "Qilin Bao",
     "username": "buzhizhebuguai",
     "title": "IM",
-    "followers": 117,
+    "followers": 121,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734180350,
+    "last_online": 1741619311,
     "joined": 1415620721,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2394,
-            "date": 1731373552,
+            "date": 1741584435,
             "rd": 49
         },
         "best": {
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2703,
-            "date": 1729614492,
-            "rd": 46
+            "rating": 2682,
+            "date": 1740968552,
+            "rd": 49
         },
         "best": {
             "rating": 2806,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/99166501929"
         },
         "record": {
-            "win": 3580,
-            "loss": 2636,
-            "draw": 496
+            "win": 3601,
+            "loss": 2652,
+            "draw": 504
         }
     },
     "tactics": {
@@ -100,8 +100,8 @@
             "score": 52
         },
         "daily": {
-            "total_attempts": 29,
-            "score": 26
+            "total_attempts": 35,
+            "score": 32
         }
     }
 }

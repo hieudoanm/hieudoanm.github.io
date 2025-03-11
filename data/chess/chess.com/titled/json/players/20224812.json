@@ -6,15 +6,15 @@
     "name": "Praveen Kumar C",
     "username": "cholzan",
     "title": "IM",
-    "followers": 56,
+    "followers": 55,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734002669,
+    "last_online": 1741412403,
     "joined": 1418912039,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2679,
-            "date": 1733812928,
-            "rd": 33
+            "rating": 2666,
+            "date": 1741689483,
+            "rd": 40
         },
         "best": {
-            "rating": 2704,
-            "date": 1733591453,
-            "game": "https://www.chess.com/game/live/4465796535"
+            "rating": 2707,
+            "date": 1735493921,
+            "game": "https://www.chess.com/game/live/129231875317"
         },
         "record": {
-            "win": 1271,
-            "loss": 994,
-            "draw": 183
+            "win": 1357,
+            "loss": 1065,
+            "draw": 202
         }
     },
     "fide": 2233,

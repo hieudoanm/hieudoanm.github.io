@@ -6,9 +6,9 @@
     "name": "Jorge A Gonz\u00e1lez Rodr\u00edguez",
     "username": "jordigon",
     "title": "IM",
-    "followers": 14,
+    "followers": 15,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734124003,
+    "last_online": 1741701938,
     "joined": 1684232609,
     "status": "premium",
     "is_streamer": false,
@@ -46,9 +46,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2381,
-            "date": 1734132101,
-            "rd": 18
+            "rating": 2338,
+            "date": 1741702477,
+            "rd": 20
         },
         "best": {
             "rating": 2469,
@@ -56,16 +56,16 @@
             "game": "https://www.chess.com/game/live/86303339273"
         },
         "record": {
-            "win": 11070,
-            "loss": 7123,
-            "draw": 1111
+            "win": 12327,
+            "loss": 8112,
+            "draw": 1243
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2338,
-            "date": 1717953776
+            "rating": 2382,
+            "date": 1737470130
         },
         "lowest": {
             "rating": 1000,

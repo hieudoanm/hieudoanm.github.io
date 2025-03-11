@@ -6,9 +6,9 @@
     "name": "Tigran Sarkisyan",
     "username": "advanceguard4",
     "title": "FM",
-    "followers": 26,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1734172179,
+    "last_online": 1741691854,
     "joined": 1602780505,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2672,
-            "date": 1734177871,
-            "rd": 29
+            "rating": 2804,
+            "date": 1735064943,
+            "rd": 26
         },
         "best": {
-            "rating": 2719,
-            "date": 1733565852,
-            "game": "https://www.chess.com/game/live/125950122743"
+            "rating": 2804,
+            "date": 1735064943,
+            "game": "https://www.chess.com/game/live/128802826037"
         },
         "record": {
-            "win": 250,
-            "loss": 229,
-            "draw": 31
+            "win": 308,
+            "loss": 267,
+            "draw": 35
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2613,
-            "date": 1733861255,
-            "rd": 46
+            "rating": 2639,
+            "date": 1741441736,
+            "rd": 47
         },
         "best": {
             "rating": 2710,
@@ -61,15 +61,16 @@
             "game": "https://www.chess.com/game/live/60794976849"
         },
         "record": {
-            "win": 601,
-            "loss": 706,
-            "draw": 135
+            "win": 630,
+            "loss": 734,
+            "draw": 143
         }
     },
+    "fide": 2265,
     "tactics": {
         "highest": {
-            "rating": 3556,
-            "date": 1703323384
+            "rating": 3568,
+            "date": 1737657927
         },
         "lowest": {
             "rating": 1211,
@@ -78,7 +79,7 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 52,
+            "total_attempts": 51,
             "score": 49
         }
     }

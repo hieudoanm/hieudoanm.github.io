@@ -6,10 +6,10 @@
     "name": "Prateek Mishra",
     "username": "apotatointhekitchen",
     "title": "CM",
-    "followers": 159,
+    "followers": 165,
     "country": "https://api.chess.com/pub/country/US",
     "location": "pratikplayer#7416",
-    "last_online": 1734002786,
+    "last_online": 1741696860,
     "joined": 1489626742,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1800,
-            "date": 1731526227,
+            "date": 1738231788,
             "rd": 350
         },
         "record": {
@@ -49,36 +49,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2620,
-            "date": 1729218014,
-            "rd": 48
+            "rating": 2597,
+            "date": 1741662787,
+            "rd": 38
         },
         "best": {
-            "rating": 2629,
-            "date": 1729016604,
+            "rating": 2676,
+            "date": 1737798360,
             "game": "https://www.chess.com/game/live/116148594661"
         },
         "record": {
-            "win": 915,
-            "loss": 663,
-            "draw": 135
+            "win": 967,
+            "loss": 716,
+            "draw": 152
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2658,
-            "date": 1732152580,
-            "rd": 46
+            "rating": 2727,
+            "date": 1741662597,
+            "rd": 40
         },
         "best": {
-            "rating": 2658,
-            "date": 1732152580,
-            "game": "https://www.chess.com/game/live/111576138193"
+            "rating": 2675,
+            "date": 1736324859,
+            "game": "https://www.chess.com/game/live/130063194419"
         },
         "record": {
-            "win": 1094,
-            "loss": 827,
-            "draw": 189
+            "win": 1117,
+            "loss": 841,
+            "draw": 195
         }
     },
     "fide": 2152,

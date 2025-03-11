@@ -4,19 +4,19 @@
     "url": "https://www.chess.com/member/Lionking2009",
     "username": "lionking2009",
     "title": "FM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733666644,
+    "last_online": 1741080254,
     "joined": 1592641917,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 2381,
-            "date": 1728402225,
+            "date": 1737923088,
             "rd": 49
         },
         "record": {
@@ -27,9 +27,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2535,
-            "date": 1729966976,
-            "rd": 46
+            "rating": 2529,
+            "date": 1734513784,
+            "rd": 49
         },
         "best": {
             "rating": 2535,
@@ -38,14 +38,14 @@
         },
         "record": {
             "win": 101,
-            "loss": 77,
+            "loss": 78,
             "draw": 15
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2344,
-            "date": 1728062329,
+            "date": 1736787763,
             "rd": 164
         },
         "best": {

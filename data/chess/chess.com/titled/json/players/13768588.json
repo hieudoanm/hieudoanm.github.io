@@ -8,7 +8,7 @@
     "followers": 86,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Satu Mare",
-    "last_online": 1734161942,
+    "last_online": 1741701104,
     "joined": 1380878257,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2771,
-            "date": 1731621672,
-            "rd": 48
+            "rating": 2774,
+            "date": 1741638400,
+            "rd": 49
         },
         "best": {
-            "rating": 2781,
-            "date": 1672768636,
+            "rating": 2783,
+            "date": 1734610396,
             "game": "https://www.chess.com/game/live/14494137729"
         },
         "record": {
-            "win": 391,
-            "loss": 253,
-            "draw": 74
+            "win": 396,
+            "loss": 257,
+            "draw": 75
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Daniel Beletic",
     "username": "beletko",
     "title": "FM",
-    "followers": 59,
+    "followers": 74,
     "country": "https://api.chess.com/pub/country/SI",
     "location": "ilirska bistrica",
-    "last_online": 1734117984,
+    "last_online": 1741696167,
     "joined": 1294928526,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2182,
-            "date": 1733823615,
-            "rd": 36
+            "rating": 2220,
+            "date": 1735435650,
+            "rd": 31
         },
         "best": {
             "rating": 2298,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/125330999587"
         },
         "record": {
-            "win": 127,
-            "loss": 108,
-            "draw": 2
+            "win": 160,
+            "loss": 137,
+            "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2237,
-            "date": 1734120656,
-            "rd": 27
+            "rating": 2366,
+            "date": 1741700909,
+            "rd": 42
         },
         "best": {
             "rating": 2648,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/122061645079"
         },
         "record": {
-            "win": 1598,
-            "loss": 1508,
-            "draw": 230
+            "win": 1840,
+            "loss": 1729,
+            "draw": 257
         }
     },
     "tactics": {

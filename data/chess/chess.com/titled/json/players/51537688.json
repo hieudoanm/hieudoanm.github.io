@@ -6,9 +6,9 @@
     "name": "Okan Ozsakallioglu",
     "username": "justwatch000",
     "title": "IM",
-    "followers": 62,
+    "followers": 61,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734109324,
+    "last_online": 1741371860,
     "joined": 1541522118,
     "status": "premium",
     "is_streamer": false,
@@ -89,10 +89,6 @@
         "best": {
             "total_attempts": 66,
             "score": 63
-        },
-        "daily": {
-            "total_attempts": 26,
-            "score": 23
         }
     }
 }

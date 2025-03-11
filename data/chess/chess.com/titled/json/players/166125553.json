@@ -6,10 +6,10 @@
     "name": "Alexandr Provotorov",
     "username": "provotorov_alexandr",
     "title": "IM",
-    "followers": 0,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Kaluga",
-    "last_online": 1733902617,
+    "last_online": 1741678925,
     "joined": 1640367504,
     "status": "premium",
     "is_streamer": false,
@@ -51,26 +51,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2273,
-            "date": 1733270542,
-            "rd": 41
+            "rating": 2436,
+            "date": 1741111566,
+            "rd": 42
         },
         "best": {
-            "rating": 2277,
-            "date": 1733269518,
-            "game": "https://www.chess.com/game/live/126982140229"
+            "rating": 2465,
+            "date": 1738084011,
+            "game": "https://www.chess.com/game/live/131215743861"
         },
         "record": {
-            "win": 51,
-            "loss": 55,
-            "draw": 13
+            "win": 114,
+            "loss": 130,
+            "draw": 32
         }
     },
     "fide": 2212,
     "tactics": {
         "highest": {
-            "rating": 822,
-            "date": 1642270259
+            "rating": 3257,
+            "date": 1734983362
         },
         "lowest": {
             "rating": 812,

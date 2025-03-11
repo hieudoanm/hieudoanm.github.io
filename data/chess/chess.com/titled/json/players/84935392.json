@@ -5,9 +5,9 @@
     "name": "Bryan Enming Lin",
     "username": "bryanl106",
     "title": "FM",
-    "followers": 26,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734183681,
+    "last_online": 1741652572,
     "joined": 1593397548,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1578,
-            "date": 1734063775,
-            "rd": 136
+            "rating": 1619,
+            "date": 1741644290,
+            "rd": 122
         },
         "best": {
             "rating": 1834,
@@ -26,10 +26,10 @@
             "game": "https://www.chess.com/game/daily/579613051"
         },
         "record": {
-            "win": 19,
+            "win": 23,
             "loss": 2,
-            "draw": 4,
-            "time_per_move": 60239,
+            "draw": 5,
+            "time_per_move": 54061,
             "timeout_percent": 0
         }
     },
@@ -52,39 +52,39 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2668,
-            "date": 1732937053,
-            "rd": 35
+            "rating": 2747,
+            "date": 1740324984,
+            "rd": 43
         },
         "best": {
-            "rating": 2709,
-            "date": 1732384983,
+            "rating": 2718,
+            "date": 1738173205,
             "game": "https://www.chess.com/game/live/126123581357"
         },
         "record": {
-            "win": 550,
-            "loss": 316,
-            "draw": 41
+            "win": 580,
+            "loss": 324,
+            "draw": 46
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2804,
-            "date": 1733875819,
-            "rd": 43
+            "rating": 2883,
+            "date": 1740528319,
+            "rd": 42
         },
         "best": {
-            "rating": 2824,
-            "date": 1733270678,
-            "game": "https://www.chess.com/game/live/125795939361"
+            "rating": 2885,
+            "date": 1740527103,
+            "game": "https://www.chess.com/game/live/133660744093"
         },
         "record": {
-            "win": 647,
-            "loss": 282,
-            "draw": 84
+            "win": 704,
+            "loss": 312,
+            "draw": 100
         }
     },
-    "fide": 2373,
+    "fide": 2316,
     "tactics": {
         "highest": {
             "rating": 3639,

@@ -8,7 +8,7 @@
     "followers": 13,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "CM",
-    "last_online": 1734015847,
+    "last_online": 1741640944,
     "joined": 1445813711,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2091,
-            "date": 1727822964,
-            "rd": 121
+            "rating": 1943,
+            "date": 1734625422,
+            "rd": 77
         },
         "best": {
             "rating": 2381,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/5283514266"
         },
         "record": {
-            "win": 329,
-            "loss": 218,
+            "win": 333,
+            "loss": 228,
             "draw": 39
         }
     },
     "fide": 2253,
     "tactics": {
         "highest": {
-            "rating": 3161,
-            "date": 1732278081
+            "rating": 3240,
+            "date": 1736347816
         },
         "lowest": {
             "rating": 1180,

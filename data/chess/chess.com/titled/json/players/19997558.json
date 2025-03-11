@@ -6,10 +6,10 @@
     "name": "Yevhenii Yelisieiev",
     "username": "journey_to_grandmaster_yt",
     "title": "IM",
-    "followers": 700,
+    "followers": 769,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Germany",
-    "last_online": 1734023464,
+    "last_online": 1741694593,
     "joined": 1417528057,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2347,
-            "date": 1723139874,
-            "rd": 49
+            "rating": 2379,
+            "date": 1741700732,
+            "rd": 48
         },
         "best": {
             "rating": 2434,
@@ -28,15 +28,15 @@
             "game": "https://www.chess.com/game/live/71585555525"
         },
         "record": {
-            "win": 81,
-            "loss": 44,
-            "draw": 11
+            "win": 99,
+            "loss": 46,
+            "draw": 13
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2538,
-            "date": 1731424894,
+            "rating": 2528,
+            "date": 1734519552,
             "rd": 49
         },
         "best": {
@@ -46,15 +46,15 @@
         },
         "record": {
             "win": 3271,
-            "loss": 2957,
+            "loss": 2958,
             "draw": 371
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2650,
-            "date": 1731929782,
-            "rd": 37
+            "rating": 2705,
+            "date": 1741175365,
+            "rd": 32
         },
         "best": {
             "rating": 2756,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/109437703195"
         },
         "record": {
-            "win": 2439,
-            "loss": 1949,
-            "draw": 351
+            "win": 2529,
+            "loss": 2009,
+            "draw": 362
         }
     },
     "fide": 2407,

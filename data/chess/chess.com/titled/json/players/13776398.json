@@ -6,10 +6,10 @@
     "name": "Mykhaylo Kepeshchuk",
     "username": "dolynachess",
     "title": "CM",
-    "followers": 147,
+    "followers": 148,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Dolyna",
-    "last_online": 1734178176,
+    "last_online": 1741627655,
     "joined": 1380925540,
     "status": "premium",
     "is_streamer": false,
@@ -56,8 +56,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2104,
-            "date": 1732992431,
+            "rating": 2096,
+            "date": 1741462280,
             "rd": 49
         },
         "best": {
@@ -68,7 +68,7 @@
         "record": {
             "win": 28,
             "loss": 7,
-            "draw": 7
+            "draw": 8
         }
     },
     "chess_bullet": {
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2587,
-            "date": 1733872687,
-            "rd": 43
+            "rating": 2563,
+            "date": 1741291960,
+            "rd": 48
         },
         "best": {
             "rating": 2609,
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/127002625417"
         },
         "record": {
-            "win": 8398,
-            "loss": 7592,
-            "draw": 1428
+            "win": 8425,
+            "loss": 7618,
+            "draw": 1431
         }
     },
     "fide": 2269,
     "tactics": {
         "highest": {
-            "rating": 2816,
-            "date": 1725043764
+            "rating": 2824,
+            "date": 1735121569
         },
         "lowest": {
             "rating": 1572,
@@ -120,10 +120,6 @@
         "best": {
             "total_attempts": 44,
             "score": 41
-        },
-        "daily": {
-            "total_attempts": 31,
-            "score": 30
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Luis Lorenzo",
     "username": "l_lorenzo",
     "title": "FM",
-    "followers": 202,
+    "followers": 207,
     "country": "https://api.chess.com/pub/country/DO",
     "location": "San cristobal",
-    "last_online": 1732459076,
+    "last_online": 1740433489,
     "joined": 1512872550,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1727,
-            "date": 1718743087,
+            "date": 1741336730,
             "rd": 57
         },
         "best": {
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/405247581"
         },
         "record": {
-            "win": 128,
+            "win": 129,
             "loss": 19,
             "draw": 10,
-            "time_per_move": 14733,
+            "time_per_move": 14730,
             "timeout_percent": 0
         }
     },
@@ -71,8 +71,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2079,
-            "date": 1734158829,
+            "rating": 2078,
+            "date": 1741697676,
             "rd": 27
         },
         "best": {
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/4879324569"
         },
         "record": {
-            "win": 11056,
-            "loss": 9977,
-            "draw": 720
+            "win": 11283,
+            "loss": 10179,
+            "draw": 747
         }
     },
     "fide": 2132,

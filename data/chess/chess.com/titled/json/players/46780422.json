@@ -8,12 +8,12 @@
     "title": "CM",
     "followers": 23,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1732536741,
+    "last_online": 1741549989,
     "joined": 1528055662,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -56,8 +56,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2406,
-            "date": 1662042580,
-            "rd": 344
+            "date": 1735577852,
+            "rd": 49
         },
         "best": {
             "rating": 2406,
@@ -65,7 +65,7 @@
             "game": "https://www.chess.com/game/live/55781086053"
         },
         "record": {
-            "win": 1,
+            "win": 2,
             "loss": 0,
             "draw": 0
         }
@@ -89,9 +89,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2535,
-            "date": 1722445296,
-            "rd": 48
+            "rating": 2521,
+            "date": 1741510261,
+            "rd": 49
         },
         "best": {
             "rating": 2654,
@@ -99,16 +99,16 @@
             "game": "https://www.chess.com/game/live/116182871483"
         },
         "record": {
-            "win": 1293,
-            "loss": 1000,
-            "draw": 198
+            "win": 1295,
+            "loss": 1003,
+            "draw": 199
         }
     },
     "fide": 2040,
     "tactics": {
         "highest": {
-            "rating": 3267,
-            "date": 1729086057
+            "rating": 3351,
+            "date": 1736156846
         },
         "lowest": {
             "rating": 1212,

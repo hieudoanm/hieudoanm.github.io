@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39546920.edc735cb.200x200o.e5273e46d2bd.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/39546920.f49b01bb.200x200o.e0245d56812b.jpg",
     "player_id": 39546920,
     "@id": "https://api.chess.com/pub/player/alex_terzi",
     "url": "https://www.chess.com/member/Alex_Terzi",
     "name": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0422\u0435\u0440\u0437\u0438",
     "username": "alex_terzi",
     "title": "FM",
-    "followers": 599,
+    "followers": 601,
     "country": "https://api.chess.com/pub/country/BY",
     "location": "\u041c\u0438\u043d\u0441\u043a",
-    "last_online": 1734167832,
+    "last_online": 1741629180,
     "joined": 1508312570,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2359,
-            "date": 1722719708,
+            "date": 1738489282,
             "rd": 49
         },
         "best": {
@@ -71,8 +71,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2611,
-            "date": 1734029976,
+            "rating": 2629,
+            "date": 1739695312,
             "rd": 49
         },
         "best": {
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/58032109713"
         },
         "record": {
-            "win": 3288,
-            "loss": 3031,
-            "draw": 669
+            "win": 3293,
+            "loss": 3033,
+            "draw": 671
         }
     },
     "fide": 2322,
@@ -101,10 +101,6 @@
         "best": {
             "total_attempts": 63,
             "score": 60
-        },
-        "daily": {
-            "total_attempts": 7,
-            "score": 4
         }
     }
 }

@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/22393922.f4a96140.200x200o.d0eec351814f.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/22393922.c757930c.200x200o.e46b22804813.jpg",
     "player_id": 22393922,
     "@id": "https://api.chess.com/pub/player/kaslask",
     "url": "https://www.chess.com/member/Kaslask",
     "name": "Alvaro Blanco Fernandez",
     "username": "kaslask",
     "title": "IM",
-    "followers": 860,
+    "followers": 912,
     "country": "https://api.chess.com/pub/country/MX",
-    "location": "M&eacute;xico",
-    "last_online": 1734152024,
+    "location": "GDL-Mexico",
+    "last_online": 1741570824,
     "joined": 1431664028,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1395,
-            "date": 1720540287,
-            "rd": 126
+            "rating": 1630,
+            "date": 1741280597,
+            "rd": 103
         },
         "best": {
-            "rating": 1395,
-            "date": 1720540287,
-            "game": "https://www.chess.com/game/daily/651900099"
+            "rating": 1630,
+            "date": 1741280596,
+            "game": "https://www.chess.com/game/daily/750355583"
         },
         "record": {
-            "win": 11,
-            "loss": 0,
+            "win": 36,
+            "loss": 1,
             "draw": 0,
-            "time_per_move": 45062,
+            "time_per_move": 18852,
             "timeout_percent": 0
         }
     },
@@ -71,25 +71,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2280,
-            "date": 1734047847,
-            "rd": 62
+            "rating": 2300,
+            "date": 1741303781,
+            "rd": 54
         },
         "best": {
             "rating": 2396,
             "date": 1605455560,
-            "game": "https://www.chess.com/game/live/5644223387"
+            "game": "https://www.chess.com/game/live/130026606811"
         },
         "record": {
-            "win": 8481,
-            "loss": 6750,
-            "draw": 1230
+            "win": 8592,
+            "loss": 6798,
+            "draw": 1240
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3189,
-            "date": 1733268088
+            "rating": 3276,
+            "date": 1740602378
         },
         "lowest": {
             "rating": 1214,

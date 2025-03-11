@@ -5,35 +5,36 @@
     "name": "Nikolaj Mikkelsen",
     "username": "urhopeless",
     "title": "IM",
-    "followers": 3,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/DK",
-    "last_online": 1722078811,
+    "last_online": 1741637826,
     "joined": 1333139308,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2086,
-            "date": 1511334149,
-            "rd": 159
+            "rating": 2530,
+            "date": 1741700467,
+            "rd": 49
         },
         "best": {
-            "rating": 2295,
-            "date": 1386630774,
-            "game": "https://www.chess.com/game/live/882003441"
+            "rating": 2550,
+            "date": 1738007061,
+            "game": "https://www.chess.com/game/live/130540866023"
         },
         "record": {
-            "win": 163,
-            "loss": 84,
+            "win": 181,
+            "loss": 95,
             "draw": 14
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2588,
-            "date": 1693813236
+            "rating": 3414,
+            "date": 1741612500
         },
         "lowest": {
             "rating": 1242,
@@ -42,8 +43,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 51,
-            "score": 48
+            "total_attempts": 52,
+            "score": 49
         }
     }
 }

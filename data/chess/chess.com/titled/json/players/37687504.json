@@ -6,10 +6,10 @@
     "name": "Santiago Velasco",
     "username": "palombie",
     "title": "FM",
-    "followers": 142,
+    "followers": 157,
     "country": "https://api.chess.com/pub/country/PR",
     "location": "Chiquito",
-    "last_online": 1734017121,
+    "last_online": 1741686993,
     "joined": 1502302501,
     "status": "premium",
     "is_streamer": false,
@@ -37,25 +37,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2639,
-            "date": 1733839339,
-            "rd": 24
+            "rating": 2649,
+            "date": 1741689850,
+            "rd": 17
         },
         "best": {
             "rating": 2738,
             "date": 1730651984,
-            "game": "https://www.chess.com/game/live/126891657591"
+            "game": "https://www.chess.com/game/live/128358063033"
         },
         "record": {
-            "win": 3805,
-            "loss": 3158,
-            "draw": 539
+            "win": 4641,
+            "loss": 3953,
+            "draw": 666
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2542,
-            "date": 1732874033,
+            "rating": 2569,
+            "date": 1736267517,
             "rd": 47
         },
         "best": {
@@ -64,8 +64,8 @@
             "game": "https://www.chess.com/game/live/87088180983"
         },
         "record": {
-            "win": 8520,
-            "loss": 7570,
+            "win": 8526,
+            "loss": 7571,
             "draw": 1558
         }
     },

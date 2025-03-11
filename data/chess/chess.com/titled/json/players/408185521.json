@@ -6,28 +6,28 @@
     "title": "IM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734118275,
+    "last_online": 1741702369,
     "joined": 1733810141,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2623,
-            "date": 1734125079,
-            "rd": 41
+            "rating": 2692,
+            "date": 1741642026,
+            "rd": 45
         },
         "best": {
-            "rating": 2623,
-            "date": 1734123701,
-            "game": "https://www.chess.com/game/live/127863587617"
+            "rating": 2650,
+            "date": 1735629902,
+            "game": "https://www.chess.com/game/live/129368005387"
         },
         "record": {
-            "win": 22,
-            "loss": 4,
-            "draw": 1
+            "win": 64,
+            "loss": 36,
+            "draw": 9
         }
     },
     "tactics": {
@@ -42,12 +42,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 54,
+            "score": 51
         },
         "daily": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 54,
+            "score": 51
         }
     }
 }

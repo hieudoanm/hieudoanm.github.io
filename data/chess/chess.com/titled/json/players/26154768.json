@@ -6,10 +6,10 @@
     "name": "Vidal Rodriguez",
     "username": "vidalnovich",
     "title": "FM",
-    "followers": 709,
+    "followers": 713,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Barcelona",
-    "last_online": 1733973432,
+    "last_online": 1741456650,
     "joined": 1452889929,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1692,
-            "date": 1733607583,
+            "date": 1740334266,
             "rd": 159
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 104,
             "loss": 14,
             "draw": 8,
-            "time_per_move": 18748,
+            "time_per_move": 18967,
             "timeout_percent": 0
         }
     },
@@ -50,15 +50,15 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 18748,
+            "time_per_move": 18967,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2134,
-            "date": 1733283353,
-            "rd": 45
+            "rating": 2122,
+            "date": 1734649887,
+            "rd": 49
         },
         "best": {
             "rating": 2137,
@@ -67,7 +67,7 @@
         },
         "record": {
             "win": 66,
-            "loss": 27,
+            "loss": 28,
             "draw": 4
         }
     },
@@ -85,9 +85,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2223,
-            "date": 1734103423,
-            "rd": 27
+            "rating": 2200,
+            "date": 1736736118,
+            "rd": 41
         },
         "best": {
             "rating": 2365,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/4215241069"
         },
         "record": {
-            "win": 620,
-            "loss": 487,
-            "draw": 81
+            "win": 623,
+            "loss": 492,
+            "draw": 82
         }
     },
     "fide": 2275,

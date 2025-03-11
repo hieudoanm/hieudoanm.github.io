@@ -6,10 +6,10 @@
     "name": "Adam Popovics",
     "username": "padam19",
     "title": "IM",
-    "followers": 441,
+    "followers": 455,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734020037,
+    "last_online": 1741675899,
     "joined": 1348952395,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2668,
-            "date": 1732734788,
-            "rd": 21
+            "rating": 2739,
+            "date": 1741677523,
+            "rd": 19
         },
         "best": {
             "rating": 2835,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/46893658441"
         },
         "record": {
-            "win": 16005,
-            "loss": 14995,
-            "draw": 1965
+            "win": 16327,
+            "loss": 15398,
+            "draw": 2011
         }
     },
     "fide": 2402,

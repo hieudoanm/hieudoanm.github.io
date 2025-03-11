@@ -5,30 +5,30 @@
     "name": "Daniel Kopylov",
     "username": "danykopy",
     "title": "FM",
-    "followers": 7,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734088560,
+    "last_online": 1741695871,
     "joined": 1504815833,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2346,
-            "date": 1684834035,
-            "rd": 136
+            "rating": 2550,
+            "date": 1740861796,
+            "rd": 44
         },
         "best": {
-            "rating": 2079,
-            "date": 1590431117,
-            "game": "https://www.chess.com/game/live/4906560190"
+            "rating": 2540,
+            "date": 1739705851,
+            "game": "https://www.chess.com/game/live/133286943001"
         },
         "record": {
-            "win": 7,
-            "loss": 3,
-            "draw": 1
+            "win": 73,
+            "loss": 12,
+            "draw": 10
         }
     },
     "chess_bullet": {
@@ -50,19 +50,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2652,
-            "date": 1732822341,
-            "rd": 38
+            "rating": 2682,
+            "date": 1741111777,
+            "rd": 46
         },
         "best": {
-            "rating": 2652,
-            "date": 1732822341,
-            "game": "https://www.chess.com/game/live/122139020521"
+            "rating": 2702,
+            "date": 1739294449,
+            "game": "https://www.chess.com/game/live/131819465131"
         },
         "record": {
-            "win": 344,
-            "loss": 218,
-            "draw": 46
+            "win": 365,
+            "loss": 229,
+            "draw": 49
         }
     },
     "tactics": {

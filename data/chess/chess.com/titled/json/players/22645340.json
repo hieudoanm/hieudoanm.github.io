@@ -6,9 +6,9 @@
     "name": "Sriram Krishnakumar",
     "username": "2008king",
     "title": "FM",
-    "followers": 56,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734038260,
+    "last_online": 1740964987,
     "joined": 1433207689,
     "status": "premium",
     "is_streamer": false,
@@ -56,7 +56,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2413,
-            "date": 1730056238,
+            "date": 1739255474,
             "rd": 49
         },
         "best": {
@@ -72,36 +72,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2247,
-            "date": 1729353877,
-            "rd": 111
+            "rating": 2638,
+            "date": 1740965287,
+            "rd": 32
         },
         "best": {
-            "rating": 2491,
-            "date": 1704308879,
-            "game": "https://www.chess.com/game/live/35005777967"
+            "rating": 2696,
+            "date": 1738805593,
+            "game": "https://www.chess.com/game/live/132911390231"
         },
         "record": {
-            "win": 825,
-            "loss": 584,
-            "draw": 113
+            "win": 1034,
+            "loss": 757,
+            "draw": 152
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2540,
-            "date": 1732595486,
-            "rd": 29
+            "rating": 2625,
+            "date": 1740341042,
+            "rd": 37
         },
         "best": {
-            "rating": 2619,
-            "date": 1728175448,
+            "rating": 2659,
+            "date": 1739592974,
             "game": "https://www.chess.com/game/live/5303325444"
         },
         "record": {
-            "win": 1169,
-            "loss": 814,
-            "draw": 173
+            "win": 1262,
+            "loss": 885,
+            "draw": 191
         }
     },
     "tactics": {

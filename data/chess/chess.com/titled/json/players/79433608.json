@@ -5,9 +5,9 @@
     "name": "Jorge Sosa Harrison",
     "username": "josoha",
     "title": "FM",
-    "followers": 26,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/PY",
-    "last_online": 1733882883,
+    "last_online": 1741698331,
     "joined": 1589417154,
     "status": "premium",
     "is_streamer": false,
@@ -16,43 +16,43 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2540,
-            "date": 1731364864,
-            "rd": 48
+            "rating": 2484,
+            "date": 1741699430,
+            "rd": 30
         },
         "best": {
-            "rating": 2550,
-            "date": 1728165086,
-            "game": "https://www.chess.com/game/live/94516896197"
+            "rating": 2582,
+            "date": 1739713275,
+            "game": "https://www.chess.com/game/live/130899560789"
         },
         "record": {
-            "win": 1098,
-            "loss": 559,
-            "draw": 396
+            "win": 1280,
+            "loss": 671,
+            "draw": 477
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2282,
-            "date": 1698348010,
-            "rd": 69
+            "rating": 2440,
+            "date": 1741701939,
+            "rd": 42
         },
         "best": {
-            "rating": 2382,
-            "date": 1600889989,
-            "game": "https://www.chess.com/game/live/27528578735"
+            "rating": 2410,
+            "date": 1739719411,
+            "game": "https://www.chess.com/game/live/132160817291"
         },
         "record": {
-            "win": 284,
-            "loss": 147,
-            "draw": 65
+            "win": 392,
+            "loss": 199,
+            "draw": 85
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2540,
-            "date": 1734163374,
-            "rd": 27
+            "rating": 2559,
+            "date": 1734572807,
+            "rd": 25
         },
         "best": {
             "rating": 2559,
@@ -60,15 +60,15 @@
             "game": "https://www.chess.com/game/live/46299522117"
         },
         "record": {
-            "win": 1679,
-            "loss": 1002,
-            "draw": 445
+            "win": 1718,
+            "loss": 1022,
+            "draw": 454
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2840,
-            "date": 1710284321
+            "rating": 2916,
+            "date": 1739669360
         },
         "lowest": {
             "rating": 1016,

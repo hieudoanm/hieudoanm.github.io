@@ -8,12 +8,12 @@
     "followers": 12,
     "country": "https://api.chess.com/pub/country/MD",
     "location": "CHISINEU",
-    "last_online": 1734159511,
+    "last_online": 1741672093,
     "joined": 1379432498,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -65,19 +65,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2629,
-            "date": 1733875614,
-            "rd": 35
+            "rating": 2641,
+            "date": 1739924176,
+            "rd": 29
         },
         "best": {
-            "rating": 2639,
-            "date": 1733869717,
+            "rating": 2712,
+            "date": 1737482506,
             "game": "https://www.chess.com/game/live/123975048719"
         },
         "record": {
-            "win": 488,
-            "loss": 382,
-            "draw": 46
+            "win": 676,
+            "loss": 577,
+            "draw": 75
         }
     },
     "fide": 2000,
@@ -97,8 +97,8 @@
             "score": 67
         },
         "daily": {
-            "total_attempts": 49,
-            "score": 46
+            "total_attempts": 47,
+            "score": 44
         }
     }
 }

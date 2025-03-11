@@ -8,7 +8,7 @@
     "followers": 72,
     "country": "https://api.chess.com/pub/country/KP",
     "location": "Nausori",
-    "last_online": 1731566057,
+    "last_online": 1741555619,
     "joined": 1262407743,
     "status": "premium",
     "is_streamer": false,
@@ -67,9 +67,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1873,
-            "date": 1727074101,
-            "rd": 139
+            "rating": 1917,
+            "date": 1735538537,
+            "rd": 104
         },
         "best": {
             "rating": 2039,
@@ -77,8 +77,8 @@
             "game": "https://www.chess.com/game/live/10330587063"
         },
         "record": {
-            "win": 11520,
-            "loss": 11862,
+            "win": 11523,
+            "loss": 11865,
             "draw": 611
         }
     },

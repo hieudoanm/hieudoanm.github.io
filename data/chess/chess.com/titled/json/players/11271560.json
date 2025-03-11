@@ -6,10 +6,10 @@
     "name": "Bence Pribelszky",
     "username": "bencus12",
     "title": "IM",
-    "followers": 84,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Miskolc",
-    "last_online": 1734122159,
+    "last_online": 1741701999,
     "joined": 1364215225,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2016,
-            "date": 1724600894,
+            "date": 1741604338,
             "rd": 112
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 589,
             "loss": 445,
             "draw": 71,
-            "time_per_move": 165465,
+            "time_per_move": 165362,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 70,
             "loss": 60,
             "draw": 1,
-            "time_per_move": 165465,
+            "time_per_move": 165362,
             "timeout_percent": 0
         }
     },
@@ -73,43 +73,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2662,
-            "date": 1734022563,
-            "rd": 45
+            "rating": 2598,
+            "date": 1741634592,
+            "rd": 37
         },
         "best": {
-            "rating": 2662,
-            "date": 1734022563,
+            "rating": 2671,
+            "date": 1736126877,
             "game": "https://www.chess.com/game/live/127707625175"
         },
         "record": {
-            "win": 454,
-            "loss": 232,
-            "draw": 29
+            "win": 530,
+            "loss": 295,
+            "draw": 39
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2567,
-            "date": 1733875466,
-            "rd": 40
+            "rating": 2554,
+            "date": 1741451132,
+            "rd": 31
         },
         "best": {
             "rating": 2623,
             "date": 1732637233,
-            "game": "https://www.chess.com/game/live/118510178889"
+            "game": "https://www.chess.com/game/live/130609278231"
         },
         "record": {
-            "win": 442,
-            "loss": 262,
-            "draw": 38
+            "win": 622,
+            "loss": 426,
+            "draw": 70
         }
     },
-    "fide": 2408,
+    "fide": 2400,
     "tactics": {
         "highest": {
-            "rating": 2773,
-            "date": 1577640927
+            "rating": 3229,
+            "date": 1740405994
         },
         "lowest": {
             "rating": 1344,
@@ -118,8 +118,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 49,
-            "score": 46
+            "total_attempts": 58,
+            "score": 55
         }
     }
 }

@@ -5,9 +5,9 @@
     "name": "Jessica Callender",
     "username": "lelouch_brittainia",
     "title": "WCM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/GY",
-    "last_online": 1733879238,
+    "last_online": 1741603255,
     "joined": 1555816846,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1166,
-            "date": 1734001690,
-            "rd": 214
+            "rating": 1020,
+            "date": 1741651840,
+            "rd": 170
         },
         "best": {
             "rating": 1194,
@@ -27,42 +27,42 @@
         },
         "record": {
             "win": 1,
-            "loss": 0,
+            "loss": 3,
             "draw": 2,
-            "time_per_move": 23098,
+            "time_per_move": 33791,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1579,
-            "date": 1718974964,
-            "rd": 178
+            "rating": 1502,
+            "date": 1739206725,
+            "rd": 172
         },
         "best": {
-            "rating": 1338,
-            "date": 1629484313,
+            "rating": 1502,
+            "date": 1739206725,
             "game": "https://www.chess.com/game/live/23217708055"
         },
         "record": {
             "win": 6,
-            "loss": 11,
+            "loss": 12,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1648,
-            "date": 1732498802,
+            "rating": 1694,
+            "date": 1739021846,
             "rd": 125
         },
         "best": {
-            "rating": 1683,
-            "date": 1720216292,
+            "rating": 1694,
+            "date": 1739021846,
             "game": "https://www.chess.com/game/live/126237560343"
         },
         "record": {
-            "win": 5,
+            "win": 6,
             "loss": 10,
             "draw": 0
         }
@@ -87,8 +87,8 @@
     "fide": 1579,
     "tactics": {
         "highest": {
-            "rating": 2041,
-            "date": 1730590152
+            "rating": 2303,
+            "date": 1741443928
         },
         "lowest": {
             "rating": 410,

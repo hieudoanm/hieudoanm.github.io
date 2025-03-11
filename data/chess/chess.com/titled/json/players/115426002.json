@@ -6,9 +6,9 @@
     "name": "Supratit Banerjee",
     "username": "mightysmasher",
     "title": "CM",
-    "followers": 22,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1734178474,
+    "last_online": 1741621666,
     "joined": 1611516790,
     "status": "premium",
     "is_streamer": false,
@@ -51,26 +51,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2630,
-            "date": 1732666000,
-            "rd": 44
+            "rating": 2686,
+            "date": 1739318826,
+            "rd": 46
         },
         "best": {
-            "rating": 2653,
-            "date": 1731450958,
+            "rating": 2693,
+            "date": 1739317498,
             "game": "https://www.chess.com/game/live/109437703215"
         },
         "record": {
-            "win": 409,
-            "loss": 268,
-            "draw": 58
+            "win": 434,
+            "loss": 283,
+            "draw": 62
         }
     },
     "fide": 2141,
     "tactics": {
         "highest": {
-            "rating": 3771,
-            "date": 1734101023
+            "rating": 4014,
+            "date": 1740506241
         },
         "lowest": {
             "rating": 786,
@@ -81,10 +81,6 @@
         "best": {
             "total_attempts": 66,
             "score": 63
-        },
-        "daily": {
-            "total_attempts": 28,
-            "score": 25
         }
     }
 }

@@ -8,12 +8,12 @@
     "title": "IM",
     "followers": 18,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1733513774,
+    "last_online": 1738911035,
     "joined": 1522331506,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2404,
-            "date": 1733514237,
-            "rd": 163
+            "rating": 2407,
+            "date": 1735581991,
+            "rd": 137
         },
         "best": {
             "rating": 2556,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/5025912402"
         },
         "record": {
-            "win": 8,
-            "loss": 6,
+            "win": 9,
+            "loss": 7,
             "draw": 1
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2700,
-            "date": 1711905885
+            "rating": 2813,
+            "date": 1735498399
         },
         "lowest": {
             "rating": 2377,

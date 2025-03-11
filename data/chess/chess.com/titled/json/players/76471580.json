@@ -5,9 +5,9 @@
     "name": "Eytan Rozen",
     "username": "moultino06",
     "title": "IM",
-    "followers": 345,
+    "followers": 353,
     "country": "https://api.chess.com/pub/country/MA",
-    "last_online": 1733772738,
+    "last_online": 1741684227,
     "joined": 1586698511,
     "status": "premium",
     "is_streamer": false,
@@ -31,7 +31,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2502,
-            "date": 1725371896,
+            "date": 1741512158,
             "rd": 40
         },
         "best": {
@@ -47,9 +47,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2901,
-            "date": 1733249088,
-            "rd": 46
+            "rating": 2880,
+            "date": 1740500359,
+            "rd": 49
         },
         "best": {
             "rating": 3051,
@@ -57,15 +57,15 @@
             "game": "https://www.chess.com/game/live/116252466047"
         },
         "record": {
-            "win": 1125,
-            "loss": 817,
+            "win": 1126,
+            "loss": 819,
             "draw": 189
         }
     },
     "tactics": {
         "highest": {
-            "rating": 4290,
-            "date": 1733045903
+            "rating": 4379,
+            "date": 1736410841
         },
         "lowest": {
             "rating": 400,

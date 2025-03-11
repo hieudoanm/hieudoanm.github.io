@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 89,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1733596327,
+    "last_online": 1741620458,
     "joined": 1568319654,
     "status": "premium",
     "is_streamer": false,
@@ -89,7 +89,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2547,
-            "date": 1689519498,
+            "date": 1741621514,
             "rd": 92
         },
         "best": {
@@ -106,8 +106,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2376,
-            "date": 1577285241
+            "rating": 2383,
+            "date": 1739658870
         },
         "lowest": {
             "rating": 1214,
@@ -116,8 +116,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 51,
+            "score": 48
         }
     }
 }

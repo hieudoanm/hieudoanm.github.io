@@ -6,9 +6,9 @@
     "name": "Jim Dean",
     "username": "coachdean78",
     "title": "FM",
-    "followers": 234,
+    "followers": 245,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734140597,
+    "last_online": 1741663014,
     "joined": 1585675049,
     "status": "premium",
     "is_streamer": false,
@@ -36,26 +36,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2315,
-            "date": 1733732089,
-            "rd": 49
+            "rating": 2342,
+            "date": 1741628120,
+            "rd": 41
         },
         "best": {
-            "rating": 2315,
-            "date": 1733732089,
-            "game": "https://www.chess.com/game/live/122617442867"
+            "rating": 2385,
+            "date": 1738877208,
+            "game": "https://www.chess.com/game/live/131691552161"
         },
         "record": {
-            "win": 68,
-            "loss": 26,
-            "draw": 3
+            "win": 122,
+            "loss": 52,
+            "draw": 12
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2224,
-            "date": 1734120987,
-            "rd": 27
+            "rating": 2312,
+            "date": 1739906974,
+            "rd": 24
         },
         "best": {
             "rating": 2410,
@@ -63,15 +63,15 @@
             "game": "https://www.chess.com/game/live/5711527601"
         },
         "record": {
-            "win": 893,
-            "loss": 625,
-            "draw": 76
+            "win": 1611,
+            "loss": 1008,
+            "draw": 139
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2405,
-            "date": 1731012586,
+            "date": 1736535765,
             "rd": 28
         },
         "best": {
@@ -87,8 +87,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3247,
-            "date": 1728777511
+            "rating": 3373,
+            "date": 1739243044
         },
         "lowest": {
             "rating": 2173,

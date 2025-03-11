@@ -6,20 +6,20 @@
     "name": "Seth Homa",
     "username": "michiganeagle",
     "title": "FM",
-    "followers": 628,
+    "followers": 650,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Michigan",
-    "last_online": 1734162966,
+    "last_online": 1741653657,
     "joined": 1349056998,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 2238,
-            "date": 1731526607,
+            "date": 1739466731,
             "rd": 232
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 229,
             "loss": 4,
             "draw": 13,
-            "time_per_move": 93180,
+            "time_per_move": 93031,
             "timeout_percent": 0
         }
     },
@@ -50,25 +50,24 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 93180,
+            "time_per_move": 93031,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2257,
-            "date": 1728232744,
-            "rd": 174
+            "rating": 2390,
+            "date": 1740537579
         },
         "best": {
             "rating": 2394,
             "date": 1604166052,
-            "game": "https://www.chess.com/game/live/5631562340"
+            "game": "https://www.chess.com/game/live/132988161047"
         },
         "record": {
-            "win": 40,
-            "loss": 87,
-            "draw": 25
+            "win": 61,
+            "loss": 90,
+            "draw": 27
         }
     },
     "chess_bullet": {
@@ -91,7 +90,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2421,
-            "date": 1728111791,
+            "date": 1734661355,
             "rd": 52
         },
         "best": {
@@ -119,6 +118,10 @@
         "best": {
             "total_attempts": 56,
             "score": 53
+        },
+        "daily": {
+            "total_attempts": 38,
+            "score": 35
         }
     }
 }

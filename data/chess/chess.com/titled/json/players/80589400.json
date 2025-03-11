@@ -5,9 +5,9 @@
     "name": "Julian Victor",
     "username": "protectivecarrot",
     "title": "FM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/BE",
-    "last_online": 1734080377,
+    "last_online": 1741641472,
     "joined": 1590519087,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2263,
-            "date": 1734084038,
-            "rd": 50
+            "rating": 2383,
+            "date": 1741116002,
+            "rd": 51
         },
         "best": {
             "rating": 2528,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/107630082881"
         },
         "record": {
-            "win": 344,
-            "loss": 354,
-            "draw": 47
+            "win": 366,
+            "loss": 376,
+            "draw": 49
         }
     },
     "fide": 2308,

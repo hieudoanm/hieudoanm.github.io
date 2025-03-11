@@ -6,10 +6,10 @@
     "name": "Slaven Pastar",
     "username": "slavenpastar",
     "title": "IM",
-    "followers": 298,
+    "followers": 313,
     "country": "https://api.chess.com/pub/country/BA",
     "location": "Mrkonji\u0107 Grad",
-    "last_online": 1734166435,
+    "last_online": 1741693147,
     "joined": 1342896238,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2263,
-            "date": 1729347182,
+            "rating": 2265,
+            "date": 1741153443,
             "rd": 49
         },
         "best": {
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/120585017897"
         },
         "record": {
-            "win": 104,
+            "win": 113,
             "loss": 13,
             "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2644,
-            "date": 1734019615,
-            "rd": 29
+            "rating": 2627,
+            "date": 1741344300,
+            "rd": 28
         },
         "best": {
             "rating": 2750,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/97098097925"
         },
         "record": {
-            "win": 1332,
-            "loss": 1254,
-            "draw": 203
+            "win": 1474,
+            "loss": 1383,
+            "draw": 221
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2625,
-            "date": 1734037215,
-            "rd": 36
+            "rating": 2706,
+            "date": 1741155281,
+            "rd": 35
         },
         "best": {
-            "rating": 2682,
-            "date": 1713980877,
+            "rating": 2706,
+            "date": 1741155281,
             "game": "https://www.chess.com/game/live/106510057487"
         },
         "record": {
-            "win": 2729,
-            "loss": 2782,
-            "draw": 469
+            "win": 2804,
+            "loss": 2837,
+            "draw": 483
         }
     },
     "fide": 2365,

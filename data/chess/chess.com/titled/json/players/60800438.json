@@ -6,9 +6,9 @@
     "name": "Nathaniel Mathurin",
     "username": "johndoe698",
     "title": "CM",
-    "followers": 31,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/LC",
-    "last_online": 1734148344,
+    "last_online": 1741659358,
     "joined": 1557440407,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1776,
-            "date": 1734168150,
-            "rd": 86
+            "rating": 1779,
+            "date": 1741471179,
+            "rd": 85
         },
         "best": {
             "rating": 1985,
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/259361726"
         },
         "record": {
-            "win": 920,
-            "loss": 679,
-            "draw": 96,
-            "time_per_move": 11799,
+            "win": 923,
+            "loss": 680,
+            "draw": 97,
+            "time_per_move": 11817,
             "timeout_percent": 0
         }
     },
@@ -49,7 +49,7 @@
             "win": 1,
             "loss": 6,
             "draw": 0,
-            "time_per_move": 11799,
+            "time_per_move": 11817,
             "timeout_percent": 0
         }
     },
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2318,
-            "date": 1732314165,
-            "rd": 83
+            "rating": 2248,
+            "date": 1739114333,
+            "rd": 61
         },
         "best": {
             "rating": 2392,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/124911546523"
         },
         "record": {
-            "win": 146,
-            "loss": 86,
+            "win": 160,
+            "loss": 102,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2550,
-            "date": 1734134319,
-            "rd": 23
+            "rating": 2504,
+            "date": 1741664909,
+            "rd": 36
         },
         "best": {
             "rating": 2665,
@@ -99,16 +99,16 @@
             "game": "https://www.chess.com/game/live/125866130841"
         },
         "record": {
-            "win": 3797,
-            "loss": 2974,
-            "draw": 270
+            "win": 4046,
+            "loss": 3196,
+            "draw": 299
         }
     },
     "fide": 2001,
     "tactics": {
         "highest": {
-            "rating": 3526,
-            "date": 1732017798
+            "rating": 3546,
+            "date": 1739214457
         },
         "lowest": {
             "rating": 907,

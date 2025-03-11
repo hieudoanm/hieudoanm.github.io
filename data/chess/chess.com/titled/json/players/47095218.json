@@ -5,9 +5,9 @@
     "name": "Glen De Schampheleire",
     "username": "twiceblessed",
     "title": "IM",
-    "followers": 69,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/BE",
-    "last_online": 1731192578,
+    "last_online": 1741424886,
     "joined": 1528998052,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     "fide": 2387,
     "tactics": {
         "highest": {
-            "rating": 3233,
-            "date": 1726145390
+            "rating": 3772,
+            "date": 1739140625
         },
         "lowest": {
             "rating": 1207,
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 58,
-            "score": 55
+            "total_attempts": 59,
+            "score": 56
         }
     }
 }

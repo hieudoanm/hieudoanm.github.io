@@ -6,9 +6,9 @@
     "name": "Jordi Quesada",
     "username": "jordiqc",
     "title": "CM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/CR",
-    "last_online": 1733859269,
+    "last_online": 1740893160,
     "joined": 1496337029,
     "status": "premium",
     "is_streamer": false,
@@ -65,18 +65,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2109,
-            "date": 1720855586,
-            "rd": 49
+            "rating": 2160,
+            "date": 1736322306,
+            "rd": 81
         },
         "best": {
-            "rating": 2109,
-            "date": 1720854317,
+            "rating": 2160,
+            "date": 1736322306,
             "game": "https://www.chess.com/game/live/2527354145"
         },
         "record": {
-            "win": 517,
-            "loss": 398,
+            "win": 520,
+            "loss": 399,
             "draw": 40
         }
     },

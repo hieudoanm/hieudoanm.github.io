@@ -6,7 +6,7 @@
     "name": "Arturo Augusto Fernandez Hernandez",
     "username": "tuti2500",
     "title": "FM",
-    "followers": 204,
+    "followers": 205,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Durango",
     "last_online": 1645665059,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2265,
-            "date": 1696536605,
+            "date": 1734654446,
             "rd": 82
         },
         "best": {

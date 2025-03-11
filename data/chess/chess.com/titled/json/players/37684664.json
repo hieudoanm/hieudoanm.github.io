@@ -6,10 +6,10 @@
     "name": "Irakli Beradze",
     "username": "beradze",
     "title": "IM",
-    "followers": 140,
+    "followers": 142,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Texas",
-    "last_online": 1734142429,
+    "last_online": 1741623686,
     "joined": 1502295055,
     "status": "premium",
     "is_streamer": false,
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2864,
-            "date": 1733325549,
-            "rd": 42
+            "rating": 2871,
+            "date": 1739753761,
+            "rd": 49
         },
         "best": {
             "rating": 2891,
             "date": 1731643054,
-            "game": "https://www.chess.com/game/live/125379507853"
+            "game": "https://www.chess.com/game/live/131146768495"
         },
         "record": {
-            "win": 1799,
-            "loss": 1368,
+            "win": 1810,
+            "loss": 1377,
             "draw": 157
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2750,
-            "date": 1730343870,
-            "rd": 47
+            "rating": 2749,
+            "date": 1741318845,
+            "rd": 46
         },
         "best": {
             "rating": 2854,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/123464980851"
         },
         "record": {
-            "win": 808,
-            "loss": 645,
-            "draw": 102
+            "win": 811,
+            "loss": 648,
+            "draw": 107
         }
     },
     "fide": 2495,

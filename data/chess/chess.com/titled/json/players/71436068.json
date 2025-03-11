@@ -5,14 +5,14 @@
     "url": "https://www.chess.com/member/i_fink_u_freeky",
     "username": "i_fink_u_freeky",
     "title": "IM",
-    "followers": 37,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/KP",
-    "last_online": 1734183063,
+    "last_online": 1741634510,
     "joined": 1580303433,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2792,
-            "date": 1734183367,
-            "rd": 34
+            "rating": 2755,
+            "date": 1741637313,
+            "rd": 36
         },
         "best": {
             "rating": 2889,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/70354386729"
         },
         "record": {
-            "win": 959,
-            "loss": 1079,
-            "draw": 204
+            "win": 1069,
+            "loss": 1226,
+            "draw": 231
         }
     },
     "tactics": {

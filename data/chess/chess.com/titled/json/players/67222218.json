@@ -6,9 +6,9 @@
     "name": "Garv Gaur",
     "username": "chessdragon7161",
     "title": "FM",
-    "followers": 411,
+    "followers": 416,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734071842,
+    "last_online": 1741598273,
     "joined": 1572248561,
     "status": "premium",
     "is_streamer": false,
@@ -53,36 +53,35 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2355,
-            "date": 1729174495,
-            "rd": 134
+            "rating": 2415,
+            "date": 1737561045,
+            "rd": 118
         },
         "best": {
-            "rating": 2355,
-            "date": 1729174495,
-            "game": "https://www.chess.com/game/live/10948133667"
+            "rating": 2423,
+            "date": 1737560749,
+            "game": "https://www.chess.com/game/live/131299765731"
         },
         "record": {
-            "win": 201,
-            "loss": 226,
+            "win": 203,
+            "loss": 227,
             "draw": 19
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2662,
-            "date": 1734072946,
-            "rd": 45
+            "rating": 2633,
+            "date": 1740719347
         },
         "best": {
-            "rating": 2673,
-            "date": 1730373492,
+            "rating": 2697,
+            "date": 1736359201,
             "game": "https://www.chess.com/game/live/68919958891"
         },
         "record": {
-            "win": 1551,
-            "loss": 1659,
-            "draw": 336
+            "win": 1614,
+            "loss": 1711,
+            "draw": 350
         }
     },
     "fide": 2388,

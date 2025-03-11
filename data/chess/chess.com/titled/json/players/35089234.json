@@ -5,9 +5,9 @@
     "name": "Ilya Khakhinov",
     "username": "bkmzzzzz",
     "title": "CM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734178054,
+    "last_online": 1741384706,
     "joined": 1493265922,
     "status": "premium",
     "is_streamer": false,
@@ -16,25 +16,25 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2199,
-            "date": 1734179175,
+            "rating": 2204,
+            "date": 1741690382,
             "rd": 37
         },
         "best": {
-            "rating": 2311,
-            "date": 1732827753,
+            "rating": 2318,
+            "date": 1736861143,
             "game": "https://www.chess.com/game/live/122642062997"
         },
         "record": {
-            "win": 298,
-            "loss": 151,
-            "draw": 13
+            "win": 424,
+            "loss": 258,
+            "draw": 26
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2369,
-            "date": 1733263387,
+            "date": 1734280580,
             "rd": 62
         },
         "best": {

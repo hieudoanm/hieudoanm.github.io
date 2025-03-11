@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/GM_Waskiri",
     "username": "gm_waskiri",
     "title": "CM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734115603,
+    "last_online": 1741559777,
     "joined": 1572520065,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2105,
-            "date": 1731543360,
-            "rd": 88
+            "rating": 2070,
+            "date": 1739134791,
+            "rd": 90
         },
         "best": {
             "rating": 2382,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/59268572067"
         },
         "record": {
-            "win": 654,
-            "loss": 672,
+            "win": 655,
+            "loss": 675,
             "draw": 78
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2291,
-            "date": 1734120277,
-            "rd": 44
+            "rating": 2306,
+            "date": 1740785886,
+            "rd": 48
         },
         "best": {
             "rating": 2373,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/103685959805"
         },
         "record": {
-            "win": 634,
-            "loss": 488,
-            "draw": 58
+            "win": 660,
+            "loss": 512,
+            "draw": 60
         }
     },
     "tactics": {
@@ -77,8 +77,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 53,
-            "score": 50
+            "total_attempts": 55,
+            "score": 52
         }
     }
 }

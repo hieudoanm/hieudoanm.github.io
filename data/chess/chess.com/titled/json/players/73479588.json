@@ -6,9 +6,9 @@
     "name": "Teddie Wen",
     "username": "super_sharky1",
     "title": "FM",
-    "followers": 29,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734138143,
+    "last_online": 1741641730,
     "joined": 1584144562,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3008,
-            "date": 1734139055
+            "rating": 3020,
+            "date": 1740111713
         },
         "lowest": {
             "rating": 2015,

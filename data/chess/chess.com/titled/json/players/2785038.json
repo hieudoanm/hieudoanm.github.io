@@ -6,10 +6,10 @@
     "name": "Paul Cornelison",
     "username": "cornelison",
     "title": "CM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Columbia, MO",
-    "last_online": 1734147692,
+    "last_online": 1741578425,
     "joined": 1272658078,
     "status": "premium",
     "is_streamer": false,
@@ -35,8 +35,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1800,
-            "date": 1734151773,
+            "rating": 1768,
+            "date": 1741579227,
             "rd": 25
         },
         "best": {
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/127112378065"
         },
         "record": {
-            "win": 821,
-            "loss": 696,
-            "draw": 64
+            "win": 1119,
+            "loss": 956,
+            "draw": 86
         }
     },
     "chess_blitz": {
@@ -70,8 +70,8 @@
     "fide": 2245,
     "tactics": {
         "highest": {
-            "rating": 1729,
-            "date": 1301017366
+            "rating": 2260,
+            "date": 1734412510
         },
         "lowest": {
             "rating": 1354,

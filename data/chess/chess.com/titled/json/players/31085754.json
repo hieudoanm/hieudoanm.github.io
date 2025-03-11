@@ -5,9 +5,9 @@
     "name": "Florian Daeschler",
     "username": "stayflow",
     "title": "FM",
-    "followers": 20,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1725375064,
+    "last_online": 1739289103,
     "joined": 1479839072,
     "status": "premium",
     "is_streamer": false,
@@ -64,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2407,
-            "date": 1725380268,
-            "rd": 87
+            "rating": 2421,
+            "date": 1739291481,
+            "rd": 107
         },
         "best": {
             "rating": 2506,
@@ -75,8 +75,8 @@
         },
         "record": {
             "win": 895,
-            "loss": 654,
-            "draw": 128
+            "loss": 655,
+            "draw": 129
         }
     },
     "fide": 2305,

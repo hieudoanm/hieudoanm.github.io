@@ -5,14 +5,14 @@
     "name": "Sargis Vach. Sargsyan",
     "username": "sargis_06",
     "title": "FM",
-    "followers": 7,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1733919072,
+    "last_online": 1741701453,
     "joined": 1566985906,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -50,26 +50,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2470,
-            "date": 1732473308,
-            "rd": 48
+            "rating": 2663,
+            "date": 1741453986
         },
         "best": {
-            "rating": 2485,
-            "date": 1732470965,
-            "game": "https://www.chess.com/game/live/4072339767"
+            "rating": 2655,
+            "date": 1737823705,
+            "game": "https://www.chess.com/game/live/130027818505"
         },
         "record": {
-            "win": 224,
-            "loss": 161,
-            "draw": 29
+            "win": 269,
+            "loss": 169,
+            "draw": 32
         }
     },
     "fide": 2321,
     "tactics": {
         "highest": {
-            "rating": 2600,
-            "date": 1729345188
+            "rating": 3176,
+            "date": 1736370851
         },
         "lowest": {
             "rating": 1212,
@@ -78,8 +77,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 69,
-            "score": 66
+            "total_attempts": 71,
+            "score": 68
         }
     }
 }

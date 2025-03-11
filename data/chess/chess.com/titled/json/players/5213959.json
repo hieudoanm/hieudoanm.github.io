@@ -6,10 +6,10 @@
     "name": "Julian Landaw",
     "username": "jlandaw",
     "title": "FM",
-    "followers": 981,
+    "followers": 982,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Massachusetts",
-    "last_online": 1734011496,
+    "last_online": 1740316802,
     "joined": 1307003011,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2613,
-            "date": 1733710222,
-            "rd": 44
+            "rating": 2620,
+            "date": 1740263555,
+            "rd": 49
         },
         "best": {
             "rating": 2820,
@@ -83,7 +83,7 @@
             "game": "https://www.chess.com/game/live/6117874379"
         },
         "record": {
-            "win": 38385,
+            "win": 38386,
             "loss": 18133,
             "draw": 2469
         }
@@ -108,8 +108,8 @@
     "fide": 2318,
     "tactics": {
         "highest": {
-            "rating": 3148,
-            "date": 1638068422
+            "rating": 3280,
+            "date": 1734231735
         },
         "lowest": {
             "rating": 1396,

@@ -9,7 +9,7 @@
     "followers": 51,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Calgary, Alberta",
-    "last_online": 1734114543,
+    "last_online": 1741509708,
     "joined": 1276667517,
     "status": "premium",
     "is_streamer": false,
@@ -96,10 +96,6 @@
         "best": {
             "total_attempts": 75,
             "score": 72
-        },
-        "daily": {
-            "total_attempts": 41,
-            "score": 39
         }
     }
 }

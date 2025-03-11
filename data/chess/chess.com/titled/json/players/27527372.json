@@ -5,10 +5,10 @@
     "name": "Marcelo Ripari",
     "username": "usurpov",
     "title": "FM",
-    "followers": 314,
+    "followers": 313,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Buenos Aires",
-    "last_online": 1734182873,
+    "last_online": 1739640503,
     "joined": 1459441380,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2388,
-            "date": 1733175542,
-            "rd": 56
+            "rating": 2377,
+            "date": 1736307841,
+            "rd": 63
         },
         "best": {
             "rating": 2517,
@@ -63,8 +63,8 @@
             "game": "https://www.chess.com/game/live/46475319033"
         },
         "record": {
-            "win": 25116,
-            "loss": 12554,
+            "win": 25118,
+            "loss": 12556,
             "draw": 1180
         }
     },

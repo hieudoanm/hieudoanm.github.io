@@ -5,9 +5,9 @@
     "name": "Ori Taichman",
     "username": "oritaichman",
     "title": "FM",
-    "followers": 46,
+    "followers": 48,
     "country": "https://api.chess.com/pub/country/IL",
-    "last_online": 1734123723,
+    "last_online": 1741695993,
     "joined": 1474269048,
     "status": "premium",
     "is_streamer": false,
@@ -47,9 +47,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2615,
-            "date": 1733931946,
-            "rd": 36
+            "rating": 2686,
+            "date": 1741549717,
+            "rd": 33
         },
         "best": {
             "rating": 2687,
@@ -57,16 +57,16 @@
             "game": "https://www.chess.com/game/live/34289349411"
         },
         "record": {
-            "win": 5255,
-            "loss": 3502,
-            "draw": 497
+            "win": 5352,
+            "loss": 3570,
+            "draw": 507
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2658,
-            "date": 1733428633,
-            "rd": 45
+            "rating": 2618,
+            "date": 1740499732,
+            "rd": 47
         },
         "best": {
             "rating": 2729,
@@ -74,9 +74,9 @@
             "game": "https://www.chess.com/game/live/110064683289"
         },
         "record": {
-            "win": 2796,
-            "loss": 1968,
-            "draw": 398
+            "win": 2834,
+            "loss": 2001,
+            "draw": 403
         }
     },
     "fide": 2370,

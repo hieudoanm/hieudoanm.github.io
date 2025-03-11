@@ -6,9 +6,9 @@
     "name": "Marlon Javier La Villa Rivas",
     "username": "javylavilla",
     "title": "FM",
-    "followers": 27,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1733243000,
+    "last_online": 1741101493,
     "joined": 1584924268,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2218,
-            "date": 1725671091,
-            "rd": 72
+            "rating": 2232,
+            "date": 1741039726,
+            "rd": 102
         },
         "best": {
             "rating": 2364,
@@ -46,26 +46,26 @@
             "game": "https://www.chess.com/game/live/105991311653"
         },
         "record": {
-            "win": 54,
+            "win": 55,
             "loss": 47,
             "draw": 8
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2391,
-            "date": 1732643444,
-            "rd": 60
+            "rating": 2454,
+            "date": 1740506864,
+            "rd": 55
         },
         "best": {
-            "rating": 2434,
-            "date": 1729631779,
+            "rating": 2460,
+            "date": 1740506493,
             "game": "https://www.chess.com/game/live/110739199055"
         },
         "record": {
-            "win": 266,
-            "loss": 288,
-            "draw": 24
+            "win": 284,
+            "loss": 314,
+            "draw": 26
         }
     },
     "fide": 2246,

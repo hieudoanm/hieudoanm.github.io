@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/donwhitenoise",
     "username": "donwhitenoise",
     "title": "CM",
-    "followers": 87,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734122313,
+    "last_online": 1741301713,
     "joined": 1560034053,
     "status": "premium",
     "is_streamer": false,
@@ -33,19 +33,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2689,
-            "date": 1734132610,
-            "rd": 25
+            "rating": 2805,
+            "date": 1741211453,
+            "rd": 26
         },
         "best": {
-            "rating": 2785,
-            "date": 1635201720,
+            "rating": 2805,
+            "date": 1736125596,
             "game": "https://www.chess.com/game/live/94861723773"
         },
         "record": {
-            "win": 4435,
-            "loss": 3399,
-            "draw": 594
+            "win": 4530,
+            "loss": 3454,
+            "draw": 605
         }
     },
     "chess_blitz": {

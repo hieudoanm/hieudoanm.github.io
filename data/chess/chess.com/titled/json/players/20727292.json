@@ -5,9 +5,9 @@
     "name": "Igor Yarmonov",
     "username": "yarigo",
     "title": "IM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734130496,
+    "last_online": 1741640212,
     "joined": 1421845523,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2086,
-            "date": 1733146113,
-            "rd": 52
+            "rating": 2071,
+            "date": 1740838226,
+            "rd": 73
         },
         "best": {
             "rating": 2209,
@@ -44,25 +44,25 @@
         },
         "record": {
             "win": 141,
-            "loss": 108,
+            "loss": 109,
             "draw": 22
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2346,
-            "date": 1734101467,
-            "rd": 26
+            "rating": 2477,
+            "date": 1741646476,
+            "rd": 29
         },
         "best": {
-            "rating": 2506,
-            "date": 1729683291,
-            "game": "https://www.chess.com/game/live/126289159313"
+            "rating": 2571,
+            "date": 1739378447,
+            "game": "https://www.chess.com/game/live/132343324593"
         },
         "record": {
-            "win": 2576,
-            "loss": 1504,
-            "draw": 483
+            "win": 2813,
+            "loss": 1672,
+            "draw": 564
         }
     },
     "fide": 0,

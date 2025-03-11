@@ -6,15 +6,15 @@
     "name": "Luis Esquivel Golcher",
     "username": "ezkybel",
     "title": "FM",
-    "followers": 41,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/PA",
     "location": "Panama",
-    "last_online": 1734137210,
+    "last_online": 1741619294,
     "joined": 1489848579,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2404,
-            "date": 1734137511,
-            "rd": 33
+            "rating": 2329,
+            "date": 1741013563,
+            "rd": 23
         },
         "best": {
-            "rating": 2451,
-            "date": 1639495238,
-            "game": "https://www.chess.com/game/live/5547636208"
+            "rating": 2464,
+            "date": 1739575176,
+            "game": "https://www.chess.com/game/live/133313953355"
         },
         "record": {
-            "win": 2491,
-            "loss": 2005,
-            "draw": 238
+            "win": 2792,
+            "loss": 2267,
+            "draw": 263
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2374,
-            "date": 1733959315,
-            "rd": 36
+            "rating": 2433,
+            "date": 1741619435,
+            "rd": 45
         },
         "best": {
             "rating": 2587,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/3387384294"
         },
         "record": {
-            "win": 1097,
-            "loss": 920,
-            "draw": 130
+            "win": 1150,
+            "loss": 960,
+            "draw": 135
         }
     },
     "fide": 2200,

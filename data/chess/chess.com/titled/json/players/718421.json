@@ -6,10 +6,10 @@
     "name": "David Pruess",
     "username": "dpruess",
     "title": "IM",
-    "followers": 2521,
+    "followers": 2601,
     "country": "https://api.chess.com/pub/country/US",
     "location": "@dpruess on Twitch/Twitter/YouTube",
-    "last_online": 1734147811,
+    "last_online": 1741630874,
     "joined": 1198088403,
     "status": "premium",
     "is_streamer": true,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2452,
-            "date": 1734045304,
-            "rd": 42
+            "rating": 2479,
+            "date": 1741644567,
+            "rd": 52
         },
         "best": {
             "rating": 2510,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/46386001127"
         },
         "record": {
-            "win": 2715,
-            "loss": 1534,
-            "draw": 195
+            "win": 2733,
+            "loss": 1543,
+            "draw": 198
         }
     },
     "tactics": {

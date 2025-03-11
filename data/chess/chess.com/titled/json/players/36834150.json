@@ -6,20 +6,20 @@
     "name": "Ahmed Bouzidi",
     "username": "bouzidian",
     "title": "CM",
-    "followers": 76,
+    "followers": 101,
     "country": "https://api.chess.com/pub/country/TN",
     "location": "tunis",
-    "last_online": 1734108102,
+    "last_online": 1741179661,
     "joined": 1499347259,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 2001,
-            "date": 1732169791,
+            "date": 1740255768,
             "rd": 349
         },
         "best": {
@@ -54,43 +54,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2062,
-            "date": 1733408003,
-            "rd": 73
+            "rating": 2169,
+            "date": 1740363280,
+            "rd": 51
         },
         "best": {
             "rating": 2397,
             "date": 1611652696,
-            "game": "https://www.chess.com/game/live/6350629765"
+            "game": "https://www.chess.com/game/live/130607449683"
         },
         "record": {
-            "win": 66,
-            "loss": 64,
-            "draw": 1
+            "win": 85,
+            "loss": 83,
+            "draw": 2
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2419,
-            "date": 1734089865,
-            "rd": 40
+            "rating": 2560,
+            "date": 1741180098,
+            "rd": 27
         },
         "best": {
-            "rating": 2480,
-            "date": 1727136136,
-            "game": "https://www.chess.com/game/live/120702016701"
+            "rating": 2625,
+            "date": 1738430534,
+            "game": "https://www.chess.com/game/live/131998187277"
         },
         "record": {
-            "win": 436,
-            "loss": 397,
-            "draw": 34
+            "win": 672,
+            "loss": 653,
+            "draw": 59
         }
     },
     "fide": 2243,
     "tactics": {
         "highest": {
-            "rating": 2511,
-            "date": 1732817283
+            "rating": 3073,
+            "date": 1740255987
         },
         "lowest": {
             "rating": 1200,

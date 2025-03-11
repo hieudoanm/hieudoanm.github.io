@@ -1,26 +1,26 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6083387.534063f0.200x200o.0271fae34b5c.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6083387.32cc3529.200x200o.5d390ac869f0.jpg",
     "player_id": 6083387,
     "@id": "https://api.chess.com/pub/player/manudavid2910",
     "url": "https://www.chess.com/member/ManuDavid2910",
     "name": "Manu David",
     "username": "manudavid2910",
     "title": "FM",
-    "followers": 4430,
+    "followers": 5576,
     "country": "https://api.chess.com/pub/country/IN",
-    "location": "Tamil Nadu",
-    "last_online": 1734074762,
+    "location": "Chennai",
+    "last_online": 1741676580,
     "joined": 1320689006,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1491,
-            "date": 1734097940,
-            "rd": 69
+            "rating": 1492,
+            "date": 1741498103,
+            "rd": 78
         },
         "best": {
             "rating": 1875,
@@ -28,11 +28,11 @@
             "game": "https://www.chess.com/game/daily/226750270"
         },
         "record": {
-            "win": 657,
+            "win": 658,
             "loss": 240,
             "draw": 40,
-            "time_per_move": 57920,
-            "timeout_percent": 1
+            "time_per_move": 57952,
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {
@@ -50,14 +50,14 @@
             "win": 5,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 57920,
+            "time_per_move": 57952,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2966,
-            "date": 1731750307,
+            "date": 1737444619,
             "rd": 202
         },
         "best": {
@@ -73,25 +73,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3007,
-            "date": 1734185113,
-            "rd": 21
+            "rating": 3025,
+            "date": 1741678501,
+            "rd": 25
         },
         "best": {
-            "rating": 3149,
-            "date": 1588613084,
+            "rating": 3159,
+            "date": 1739470315,
             "game": "https://www.chess.com/game/live/105659948883"
         },
         "record": {
-            "win": 15914,
-            "loss": 13976,
-            "draw": 1533
+            "win": 18285,
+            "loss": 14868,
+            "draw": 1738
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3047,
-            "date": 1734118512,
+            "rating": 3037,
+            "date": 1741510475,
             "rd": 33
         },
         "best": {
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/65344874777"
         },
         "record": {
-            "win": 5267,
-            "loss": 6340,
-            "draw": 893
+            "win": 5399,
+            "loss": 6527,
+            "draw": 951
         }
     },
     "tactics": {

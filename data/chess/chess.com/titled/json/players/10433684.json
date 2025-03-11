@@ -8,7 +8,7 @@
     "followers": 11,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Geleen",
-    "last_online": 1734084312,
+    "last_online": 1741678013,
     "joined": 1358250492,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2327,
-            "date": 1734101121,
-            "rd": 26
+            "rating": 2180,
+            "date": 1741686652,
+            "rd": 28
         },
         "best": {
             "rating": 2406,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/98029794453"
         },
         "record": {
-            "win": 10618,
-            "loss": 9766,
-            "draw": 774
+            "win": 10834,
+            "loss": 9982,
+            "draw": 781
         }
     },
     "tactics": {

@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 14,
     "country": "https://api.chess.com/pub/country/EC",
-    "last_online": 1729013034,
+    "last_online": 1741307900,
     "joined": 1579894220,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1707,
-            "date": 1724159027,
+            "date": 1740818295,
             "rd": 221
         },
         "best": {
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/633377509"
         },
         "record": {
-            "win": 1,
+            "win": 2,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 41804,
+            "time_per_move": 40986,
             "timeout_percent": 0
         }
     },
@@ -70,26 +70,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2408,
-            "date": 1733635760,
-            "rd": 59
+            "rating": 2407,
+            "date": 1741364978,
+            "rd": 43
         },
         "best": {
-            "rating": 2439,
-            "date": 1729011527,
+            "rating": 2506,
+            "date": 1738087748,
             "game": "https://www.chess.com/game/live/83433340549"
         },
         "record": {
-            "win": 1138,
-            "loss": 1506,
-            "draw": 150
+            "win": 1176,
+            "loss": 1545,
+            "draw": 152
         }
     },
     "fide": 2320,
     "tactics": {
         "highest": {
-            "rating": 2609,
-            "date": 1731796096
+            "rating": 2665,
+            "date": 1739379220
         },
         "lowest": {
             "rating": 412,

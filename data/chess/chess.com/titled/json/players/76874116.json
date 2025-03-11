@@ -1,13 +1,14 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/76874116.7de80cd6.200x200o.57aee4fd552f.jpg",
     "player_id": 76874116,
     "@id": "https://api.chess.com/pub/player/chessacademia",
     "url": "https://www.chess.com/member/Chessacademia",
     "name": "Vugar Asgarov",
     "username": "chessacademia",
     "title": "FM",
-    "followers": 25,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734180232,
+    "last_online": 1741421273,
     "joined": 1587036924,
     "status": "premium",
     "is_streamer": false,
@@ -16,17 +17,17 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1996,
-            "date": 1734112737,
-            "rd": 49
+            "rating": 2000,
+            "date": 1735462620,
+            "rd": 50
         },
         "best": {
             "rating": 2300,
             "date": 1671204078,
-            "game": "https://www.chess.com/game/live/127067369845"
+            "game": "https://www.chess.com/game/live/128278175189"
         },
         "record": {
-            "win": 14,
+            "win": 15,
             "loss": 3,
             "draw": 1
         }

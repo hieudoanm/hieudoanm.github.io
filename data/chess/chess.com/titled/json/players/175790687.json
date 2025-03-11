@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/xhlc",
     "username": "xhlc",
     "title": "WCM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1733736741,
+    "last_online": 1741489789,
     "joined": 1646713242,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +16,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2087,
-            "date": 1711014319,
+            "date": 1740287288,
             "rd": 118
         },
         "best": {
@@ -32,9 +32,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2033,
-            "date": 1733739393,
-            "rd": 49
+            "rating": 2042,
+            "date": 1740629753,
+            "rd": 48
         },
         "best": {
             "rating": 2205,
@@ -42,15 +42,15 @@
             "game": "https://www.chess.com/game/live/104851330639"
         },
         "record": {
-            "win": 694,
-            "loss": 614,
-            "draw": 44
+            "win": 712,
+            "loss": 633,
+            "draw": 45
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2161,
-            "date": 1732690636,
+            "date": 1740284283,
             "rd": 116
         },
         "best": {

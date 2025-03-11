@@ -6,9 +6,9 @@
     "name": "Julian Estrada",
     "username": "dosto07",
     "title": "IM",
-    "followers": 224,
+    "followers": 225,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1733989630,
+    "last_online": 1741662966,
     "joined": 1588447506,
     "status": "premium",
     "is_streamer": false,
@@ -31,8 +31,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2204,
-            "date": 1732498985,
+            "rating": 2203,
+            "date": 1736734350,
             "rd": 48
         },
         "best": {
@@ -41,16 +41,16 @@
             "game": "https://www.chess.com/game/live/25122121857"
         },
         "record": {
-            "win": 178,
-            "loss": 102,
-            "draw": 83
+            "win": 188,
+            "loss": 109,
+            "draw": 87
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2250,
-            "date": 1732993157,
-            "rd": 48
+            "rating": 2141,
+            "date": 1737831563,
+            "rd": 35
         },
         "best": {
             "rating": 2351,
@@ -58,26 +58,26 @@
             "game": "https://www.chess.com/game/live/101931927533"
         },
         "record": {
-            "win": 981,
-            "loss": 1455,
-            "draw": 114
+            "win": 1015,
+            "loss": 1537,
+            "draw": 118
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2551,
-            "date": 1733906876,
-            "rd": 24
+            "rating": 2514,
+            "date": 1741667680,
+            "rd": 26
         },
         "best": {
-            "rating": 2625,
-            "date": 1718729889,
+            "rating": 2646,
+            "date": 1740504684,
             "game": "https://www.chess.com/game/live/90696023815"
         },
         "record": {
-            "win": 9704,
-            "loss": 11771,
-            "draw": 2468
+            "win": 10002,
+            "loss": 12102,
+            "draw": 2532
         }
     },
     "tactics": {

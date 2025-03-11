@@ -5,20 +5,20 @@
     "name": "Jorge De Jesus Perez Marimon",
     "username": "grifo2003",
     "title": "FM",
-    "followers": 7,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1728873639,
+    "last_online": 1741287799,
     "joined": 1701194680,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2477,
-            "date": 1722959927,
-            "rd": 46
+            "rating": 2514,
+            "date": 1741291433,
+            "rd": 38
         },
         "best": {
             "rating": 2505,
@@ -26,9 +26,9 @@
             "game": "https://www.chess.com/game/live/113693430373"
         },
         "record": {
-            "win": 79,
-            "loss": 36,
-            "draw": 8
+            "win": 113,
+            "loss": 63,
+            "draw": 9
         }
     },
     "fide": 2281,

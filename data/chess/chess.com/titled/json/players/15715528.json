@@ -5,10 +5,10 @@
     "name": "Zolt\u00e1n Papp",
     "username": "pzcs",
     "title": "FM",
-    "followers": 61,
+    "followers": 64,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Szeged",
-    "last_online": 1734169550,
+    "last_online": 1741700105,
     "joined": 1390503527,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1983,
-            "date": 1697211198,
-            "rd": 134
+            "rating": 1939,
+            "date": 1737637026,
+            "rd": 173
         },
         "best": {
             "rating": 2194,
@@ -76,7 +76,7 @@
         },
         "record": {
             "win": 52,
-            "loss": 18,
+            "loss": 19,
             "draw": 5
         }
     },

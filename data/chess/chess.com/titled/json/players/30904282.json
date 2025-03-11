@@ -5,11 +5,11 @@
     "url": "https://www.chess.com/member/Jayden5345",
     "name": "Jayden Ooi",
     "username": "jayden5345",
-    "title": "CM",
-    "followers": 82,
+    "title": "FM",
+    "followers": 87,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "?",
-    "last_online": 1734063469,
+    "last_online": 1741693368,
     "joined": 1479114512,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1245,
-            "date": 1708602627,
+            "date": 1741087261,
             "rd": 159
         },
         "best": {
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2355,
-            "date": 1728728773,
+            "rating": 2349,
+            "date": 1741238827,
             "rd": 48
         },
         "best": {
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/96785441065"
         },
         "record": {
-            "win": 897,
-            "loss": 805,
-            "draw": 168
+            "win": 913,
+            "loss": 815,
+            "draw": 170
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2401,
-            "date": 1728217642,
-            "rd": 52
+            "rating": 2264,
+            "date": 1741693492,
+            "rd": 62
         },
         "best": {
             "rating": 2475,
@@ -64,33 +64,33 @@
             "game": "https://www.chess.com/game/live/76387314415"
         },
         "record": {
-            "win": 586,
-            "loss": 612,
+            "win": 597,
+            "loss": 629,
             "draw": 47
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2348,
-            "date": 1733717159,
-            "rd": 58
+            "rating": 2409,
+            "date": 1741694431,
+            "rd": 55
         },
         "best": {
-            "rating": 2390,
-            "date": 1727244421,
-            "game": "https://www.chess.com/game/live/108994886813"
+            "rating": 2421,
+            "date": 1737879724,
+            "game": "https://www.chess.com/game/live/130906186571"
         },
         "record": {
-            "win": 554,
-            "loss": 410,
-            "draw": 62
+            "win": 588,
+            "loss": 429,
+            "draw": 68
         }
     },
-    "fide": 2012,
+    "fide": 2189,
     "tactics": {
         "highest": {
-            "rating": 3534,
-            "date": 1733580010
+            "rating": 3540,
+            "date": 1739253723
         },
         "lowest": {
             "rating": 811,

@@ -5,9 +5,9 @@
     "name": "Dorian Micottis",
     "username": "doritos57",
     "title": "FM",
-    "followers": 74,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733255920,
+    "last_online": 1739882107,
     "joined": 1429704740,
     "status": "premium",
     "is_streamer": false,
@@ -71,19 +71,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2461,
-            "date": 1733955247,
-            "rd": 41
+            "rating": 2454,
+            "date": 1741547308,
+            "rd": 38
         },
         "best": {
             "rating": 2559,
             "date": 1720967053,
-            "game": "https://www.chess.com/game/live/113518209653"
+            "game": "https://www.chess.com/game/live/131563794625"
         },
         "record": {
-            "win": 2848,
-            "loss": 2254,
-            "draw": 380
+            "win": 2906,
+            "loss": 2309,
+            "draw": 383
         }
     },
     "chess_blitz": {

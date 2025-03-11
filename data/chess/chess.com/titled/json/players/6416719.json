@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 68,
     "country": "https://api.chess.com/pub/country/XE",
-    "last_online": 1733903536,
+    "last_online": 1741564511,
     "joined": 1325319469,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1906,
-            "date": 1733320836,
+            "date": 1741218891,
             "rd": 109
         },
         "best": {
@@ -29,7 +29,7 @@
             "win": 27,
             "loss": 27,
             "draw": 2,
-            "time_per_move": 73010,
+            "time_per_move": 75404,
             "timeout_percent": 0
         }
     },
@@ -43,7 +43,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 73010,
+            "time_per_move": 75404,
             "timeout_percent": 0
         }
     },

@@ -8,7 +8,7 @@
     "followers": 0,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1733854225,
+    "last_online": 1741702603,
     "joined": 1350832284,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1790,
-            "date": 1711705614,
+            "date": 1741695035,
             "rd": 183
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 3,
             "loss": 3,
             "draw": 0,
-            "time_per_move": 357,
+            "time_per_move": 356,
             "timeout_percent": 0
         }
     },
@@ -70,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2528,
-            "date": 1733853995,
-            "rd": 48
+            "rating": 2490,
+            "date": 1741192218,
+            "rd": 42
         },
         "best": {
             "rating": 2539,
             "date": 1733851753,
-            "game": "https://www.chess.com/game/live/127585860137"
+            "game": "https://www.chess.com/game/live/133654751309"
         },
         "record": {
-            "win": 412,
-            "loss": 184,
-            "draw": 20
+            "win": 433,
+            "loss": 205,
+            "draw": 21
         }
     },
     "fide": 2311,

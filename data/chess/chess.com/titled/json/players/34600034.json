@@ -5,9 +5,9 @@
     "name": "Johannes Rappazzo",
     "username": "jofisch10",
     "title": "FM",
-    "followers": 35,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1734183815,
+    "last_online": 1740675372,
     "joined": 1491591434,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2317,
-            "date": 1733833120,
+            "date": 1736769660,
             "rd": 49
         },
         "best": {
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1949,
-            "date": 1726480390,
-            "rd": 80
+            "rating": 2422,
+            "date": 1739642720,
+            "rd": 58
         },
         "best": {
-            "rating": 1967,
-            "date": 1726480341,
-            "game": "https://www.chess.com/game/live/120218443505"
+            "rating": 2424,
+            "date": 1739642199,
+            "game": "https://www.chess.com/game/live/133380541937"
         },
         "record": {
-            "win": 92,
-            "loss": 72,
-            "draw": 2
+            "win": 108,
+            "loss": 91,
+            "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2352,
-            "date": 1734180049,
-            "rd": 66
+            "date": 1734695930,
+            "rd": 67
         },
         "best": {
             "rating": 2354,
@@ -79,7 +79,7 @@
             "game": "https://www.chess.com/game/live/122746471545"
         },
         "record": {
-            "win": 318,
+            "win": 319,
             "loss": 232,
             "draw": 27
         }

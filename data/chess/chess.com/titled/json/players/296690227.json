@@ -5,31 +5,31 @@
     "name": "Vladimir Pozdeev",
     "username": "gm-2024-gm",
     "title": "CM",
-    "followers": 29,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734150352,
+    "last_online": 1741665737,
     "joined": 1688024308,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2152,
-            "date": 1734150644,
-            "rd": 65
+            "rating": 2178,
+            "date": 1741668098,
+            "rd": 69
         },
         "best": {
-            "rating": 2155,
-            "date": 1733305521,
-            "game": "https://www.chess.com/game/daily/729868195"
+            "rating": 2188,
+            "date": 1740107777,
+            "game": "https://www.chess.com/game/daily/774208265"
         },
         "record": {
-            "win": 76,
-            "loss": 33,
-            "draw": 28,
-            "time_per_move": 7693,
+            "win": 82,
+            "loss": 37,
+            "draw": 33,
+            "time_per_move": 8131,
             "timeout_percent": 0
         }
     },
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2239,
-            "date": 1731346562,
-            "rd": 90
+            "rating": 2006,
+            "date": 1741454101,
+            "rd": 43
         },
         "best": {
-            "rating": 2239,
-            "date": 1731345342,
-            "game": "https://www.chess.com/game/live/98268357193"
+            "rating": 2274,
+            "date": 1734197402,
+            "game": "https://www.chess.com/game/live/133984159249"
         },
         "record": {
-            "win": 136,
-            "loss": 168,
-            "draw": 11
+            "win": 240,
+            "loss": 395,
+            "draw": 18
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2296,
-            "date": 1721750858,
-            "rd": 65
+            "rating": 2209,
+            "date": 1738687154,
+            "rd": 68
         },
         "best": {
             "rating": 2347,
@@ -79,8 +79,8 @@
             "game": "https://www.chess.com/game/live/112461682777"
         },
         "record": {
-            "win": 52,
-            "loss": 60,
+            "win": 56,
+            "loss": 87,
             "draw": 9
         }
     },
@@ -99,6 +99,10 @@
         "best": {
             "total_attempts": 54,
             "score": 51
+        },
+        "daily": {
+            "total_attempts": 43,
+            "score": 40
         }
     }
 }

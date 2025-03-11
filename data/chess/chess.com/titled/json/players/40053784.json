@@ -6,19 +6,19 @@
     "name": "Adam Cap",
     "username": "kladenskyamater",
     "title": "FM",
-    "followers": 11,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1734085019,
+    "last_online": 1741447754,
     "joined": 1509809639,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1871,
-            "date": 1726497747,
+            "date": 1741110155,
             "rd": 157
         },
         "best": {
@@ -28,9 +28,9 @@
         },
         "record": {
             "win": 5,
-            "loss": 0,
+            "loss": 1,
             "draw": 2,
-            "time_per_move": 6515,
+            "time_per_move": 7165,
             "timeout_percent": 0
         }
     },
@@ -53,36 +53,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1927,
-            "date": 1638817123,
-            "rd": 114
+            "rating": 2167,
+            "date": 1739037646,
+            "rd": 66
         },
         "best": {
-            "rating": 2055,
-            "date": 1638816225,
-            "game": "https://www.chess.com/game/live/2590804805"
+            "rating": 2219,
+            "date": 1739035577,
+            "game": "https://www.chess.com/game/live/132773448885"
         },
         "record": {
-            "win": 1152,
-            "loss": 801,
+            "win": 1165,
+            "loss": 823,
             "draw": 75
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2223,
-            "date": 1734087809,
-            "rd": 39
+            "rating": 2239,
+            "date": 1741451346,
+            "rd": 29
         },
         "best": {
             "rating": 2370,
             "date": 1698999227,
-            "game": "https://www.chess.com/game/live/92737291929"
+            "game": "https://www.chess.com/game/live/131812826355"
         },
         "record": {
-            "win": 1714,
-            "loss": 1339,
-            "draw": 278
+            "win": 1848,
+            "loss": 1452,
+            "draw": 302
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Lisandro Fernandez Reyes",
     "username": "fernandezl1983",
     "title": "IM",
-    "followers": 120,
+    "followers": 129,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "M\u00e9xico",
-    "last_online": 1734038410,
+    "last_online": 1740016679,
     "joined": 1304028855,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2069,
-            "date": 1731549214,
-            "rd": 49
+            "rating": 2082,
+            "date": 1740018887,
+            "rd": 47
         },
         "best": {
             "rating": 2529,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/5944917122"
         },
         "record": {
-            "win": 18,
+            "win": 22,
             "loss": 7,
-            "draw": 5
+            "draw": 8
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2359,
-            "date": 1732914373,
-            "rd": 68
+            "rating": 2365,
+            "date": 1734965311,
+            "rd": 55
         },
         "best": {
             "rating": 2499,
@@ -64,32 +64,32 @@
             "game": "https://www.chess.com/game/live/64699386993"
         },
         "record": {
-            "win": 991,
-            "loss": 727,
-            "draw": 83
+            "win": 1001,
+            "loss": 734,
+            "draw": 85
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2600,
-            "date": 1734184246,
-            "rd": 20
+            "rating": 2563,
+            "date": 1741700659,
+            "rd": 42
         },
         "best": {
-            "rating": 2712,
-            "date": 1700421134,
+            "rating": 2732,
+            "date": 1736005301,
             "game": "https://www.chess.com/game/live/93742185561"
         },
         "record": {
-            "win": 2692,
-            "loss": 2073,
-            "draw": 318
+            "win": 2953,
+            "loss": 2283,
+            "draw": 365
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3255,
-            "date": 1733611455
+            "rating": 3267,
+            "date": 1735518091
         },
         "lowest": {
             "rating": 1749,

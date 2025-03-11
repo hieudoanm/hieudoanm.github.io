@@ -6,10 +6,10 @@
     "name": "\ud83d\udc1f\ud83e\udd88\ud83d\udc20\ud83e\udd88\ud83d\udc21\ud83e\udd88",
     "username": "cathateme",
     "title": "WCM",
-    "followers": 91,
+    "followers": 95,
     "country": "https://api.chess.com/pub/country/FI",
     "location": "Helsinki",
-    "last_online": 1734168348,
+    "last_online": 1741505608,
     "joined": 1569669271,
     "status": "premium",
     "is_streamer": false,
@@ -54,8 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1758,
-            "date": 1732850444,
+            "rating": 1802,
+            "date": 1740818655,
             "rd": 31
         },
         "best": {
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/101472677997"
         },
         "record": {
-            "win": 5126,
-            "loss": 5132,
-            "draw": 383
+            "win": 5214,
+            "loss": 5230,
+            "draw": 394
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1893,
-            "date": 1734170626,
-            "rd": 30
+            "rating": 1928,
+            "date": 1741675941,
+            "rd": 27
         },
         "best": {
             "rating": 2042,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/100172532019"
         },
         "record": {
-            "win": 2595,
-            "loss": 2744,
-            "draw": 206
+            "win": 2796,
+            "loss": 2999,
+            "draw": 228
         }
     },
     "tactics": {
@@ -98,8 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 52,
-            "score": 49
+            "total_attempts": 56,
+            "score": 53
         }
     }
 }

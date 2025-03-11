@@ -5,9 +5,9 @@
     "name": "Satria Duta Cahaya",
     "username": "knightduta",
     "title": "FM",
-    "followers": 233,
+    "followers": 239,
     "country": "https://api.chess.com/pub/country/ID",
-    "last_online": 1734146308,
+    "last_online": 1741698179,
     "joined": 1492138426,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2616,
-            "date": 1734151487,
-            "rd": 45
+            "rating": 2789,
+            "date": 1741703586,
+            "rd": 38
         },
         "best": {
             "rating": 2716,
@@ -62,33 +62,33 @@
             "game": "https://www.chess.com/game/live/27739795031"
         },
         "record": {
-            "win": 1050,
-            "loss": 768,
-            "draw": 73
+            "win": 1096,
+            "loss": 784,
+            "draw": 76
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2720,
-            "date": 1730221600,
-            "rd": 44
+            "rating": 2786,
+            "date": 1741111681,
+            "rd": 34
         },
         "best": {
-            "rating": 2833,
-            "date": 1689081068,
+            "rating": 2915,
+            "date": 1738118720,
             "game": "https://www.chess.com/game/live/111255706867"
         },
         "record": {
-            "win": 6194,
-            "loss": 4856,
-            "draw": 632
+            "win": 6320,
+            "loss": 4944,
+            "draw": 651
         }
     },
     "fide": 2184,
     "tactics": {
         "highest": {
-            "rating": 3754,
-            "date": 1733294280
+            "rating": 3759,
+            "date": 1738287530
         },
         "lowest": {
             "rating": 453,
@@ -99,6 +99,10 @@
         "best": {
             "total_attempts": 72,
             "score": 69
+        },
+        "daily": {
+            "total_attempts": 52,
+            "score": 49
         }
     }
 }

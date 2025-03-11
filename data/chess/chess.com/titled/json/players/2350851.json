@@ -6,10 +6,10 @@
     "name": "Marcin Krysztofiak",
     "username": "mkrysz",
     "title": "IM",
-    "followers": 29,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Warsaw",
-    "last_online": 1734129986,
+    "last_online": 1741543437,
     "joined": 1259946495,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1895,
-            "date": 1730580891,
+            "date": 1741036945,
             "rd": 258
         },
         "best": {
@@ -91,7 +91,7 @@
     "chess_blitz": {
         "last": {
             "rating": 1552,
-            "date": 1733174311,
+            "date": 1734732888,
             "rd": 153
         },
         "best": {

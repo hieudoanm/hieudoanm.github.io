@@ -6,10 +6,10 @@
     "name": "Herman Grooten",
     "username": "hermangrooten",
     "title": "IM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Eindhoven",
-    "last_online": 1734001493,
+    "last_online": 1741189722,
     "joined": 1410289884,
     "status": "premium",
     "is_streamer": false,
@@ -47,25 +47,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2369,
-            "date": 1734017816,
-            "rd": 58
+            "rating": 2424,
+            "date": 1740415782,
+            "rd": 52
         },
         "best": {
             "rating": 2445,
             "date": 1729541817,
-            "game": "https://www.chess.com/game/live/123161991071"
+            "game": "https://www.chess.com/game/live/130351823815"
         },
         "record": {
-            "win": 272,
-            "loss": 190,
-            "draw": 30
+            "win": 300,
+            "loss": 209,
+            "draw": 32
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3430,
-            "date": 1731769138
+            "rating": 3478,
+            "date": 1739709749
         },
         "lowest": {
             "rating": 1338,

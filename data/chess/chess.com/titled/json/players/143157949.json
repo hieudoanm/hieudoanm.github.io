@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 145,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733620763,
+    "last_online": 1739851142,
     "joined": 1622785975,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1447,
-            "date": 1733561863,
-            "rd": 102
+            "rating": 1442,
+            "date": 1738537213,
+            "rd": 109
         },
         "best": {
             "rating": 1865,
@@ -26,10 +26,10 @@
             "game": "https://www.chess.com/game/daily/379197447"
         },
         "record": {
-            "win": 124,
-            "loss": 53,
+            "win": 125,
+            "loss": 54,
             "draw": 8,
-            "time_per_move": 63133,
+            "time_per_move": 64878,
             "timeout_percent": 0
         }
     },
@@ -48,15 +48,15 @@
             "win": 1,
             "loss": 2,
             "draw": 1,
-            "time_per_move": 63133,
+            "time_per_move": 64878,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2418,
-            "date": 1730075510,
-            "rd": 49
+            "rating": 2364,
+            "date": 1737498440,
+            "rd": 46
         },
         "best": {
             "rating": 2459,
@@ -64,8 +64,8 @@
             "game": "https://www.chess.com/game/live/85387234759"
         },
         "record": {
-            "win": 647,
-            "loss": 395,
+            "win": 654,
+            "loss": 405,
             "draw": 130
         }
     },

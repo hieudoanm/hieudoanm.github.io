@@ -6,10 +6,10 @@
     "name": "Joachim B Nilsen",
     "username": "joachimbn",
     "title": "IM",
-    "followers": 119,
+    "followers": 120,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Oslo",
-    "last_online": 1733934722,
+    "last_online": 1741556056,
     "joined": 1318853373,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1603,
-            "date": 1730586545,
+            "date": 1736587692,
             "rd": 189
         },
         "best": {
@@ -71,18 +71,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2720,
-            "date": 1733936143,
-            "rd": 38
+            "rating": 2713,
+            "date": 1738436888,
+            "rd": 50
         },
         "best": {
-            "rating": 2720,
-            "date": 1733936143,
+            "rating": 2750,
+            "date": 1734526240,
             "game": "https://www.chess.com/game/live/2255911538"
         },
         "record": {
-            "win": 1865,
-            "loss": 1269,
+            "win": 1875,
+            "loss": 1276,
             "draw": 273
         }
     },

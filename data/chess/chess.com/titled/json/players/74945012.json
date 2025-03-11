@@ -6,10 +6,10 @@
     "name": "Alexander Hernandez Jimenez",
     "username": "fmalexhdez",
     "title": "FM",
-    "followers": 73,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "Chihuahua",
-    "last_online": 1734112361,
+    "last_online": 1741703023,
     "joined": 1585491721,
     "status": "premium",
     "is_streamer": false,
@@ -37,38 +37,43 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2327,
-            "date": 1729555936,
+            "rating": 2339,
+            "date": 1736707098,
             "rd": 49
         },
         "best": {
             "rating": 2343,
             "date": 1672956340,
-            "game": "https://www.chess.com/game/live/47949640129"
+            "game": "https://www.chess.com/game/live/129670189609"
         },
         "record": {
-            "win": 51,
+            "win": 57,
             "loss": 1,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2103,
-            "date": 1729211310,
-            "rd": 247
+            "rating": 2104,
+            "date": 1734802134,
+            "rd": 251
+        },
+        "best": {
+            "rating": 2104,
+            "date": 1734802134,
+            "game": "https://www.chess.com/game/live/128541157583"
         },
         "record": {
-            "win": 0,
+            "win": 1,
             "loss": 1,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2303,
-            "date": 1734115562,
-            "rd": 42
+            "rating": 2373,
+            "date": 1741130279,
+            "rd": 40
         },
         "best": {
             "rating": 2404,
@@ -76,9 +81,9 @@
             "game": "https://www.chess.com/game/live/5863548093"
         },
         "record": {
-            "win": 851,
-            "loss": 1076,
-            "draw": 163
+            "win": 908,
+            "loss": 1167,
+            "draw": 176
         }
     },
     "tactics": {

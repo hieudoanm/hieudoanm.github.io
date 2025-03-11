@@ -6,9 +6,10 @@
     "name": "fda fadf",
     "username": "idiot33333",
     "title": "IM",
-    "followers": 5,
-    "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1734083035,
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/GB",
+    "location": "London",
+    "last_online": 1741582185,
     "joined": 1549335666,
     "status": "premium",
     "is_streamer": false,
@@ -17,36 +18,35 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2669,
-            "date": 1734097171,
-            "rd": 18
+            "rating": 2809,
+            "date": 1736251767
         },
         "best": {
-            "rating": 2767,
-            "date": 1728924479,
+            "rating": 2799,
+            "date": 1736251671,
             "game": "https://www.chess.com/game/live/123679225315"
         },
         "record": {
-            "win": 2965,
-            "loss": 3095,
-            "draw": 785
+            "win": 3378,
+            "loss": 3533,
+            "draw": 905
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2569,
-            "date": 1726130980,
-            "rd": 37
+            "rating": 2751,
+            "date": 1740559954,
+            "rd": 23
         },
         "best": {
-            "rating": 2703,
-            "date": 1723285304,
-            "game": "https://www.chess.com/game/live/117205255809"
+            "rating": 2787,
+            "date": 1737380248,
+            "game": "https://www.chess.com/game/live/133094341411"
         },
         "record": {
-            "win": 158,
-            "loss": 119,
-            "draw": 49
+            "win": 423,
+            "loss": 392,
+            "draw": 138
         }
     },
     "tactics": {

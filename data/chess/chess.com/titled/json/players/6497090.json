@@ -8,7 +8,7 @@
     "followers": 36,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "Goteborg",
-    "last_online": 1733835209,
+    "last_online": 1741684071,
     "joined": 1326568473,
     "status": "premium",
     "is_streamer": false,
@@ -46,9 +46,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2410,
-            "date": 1733863766,
-            "rd": 48
+            "rating": 2376,
+            "date": 1739354246,
+            "rd": 64
         },
         "best": {
             "rating": 2433,
@@ -57,7 +57,7 @@
         },
         "record": {
             "win": 641,
-            "loss": 480,
+            "loss": 482,
             "draw": 151
         }
     },

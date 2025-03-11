@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/78559606.687698c9.200x200o.8ef36ee863e8.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/78559606.627f5f49.200x200o.49ba9c13e2ac.jpg",
     "player_id": 78559606,
     "@id": "https://api.chess.com/pub/player/denielsafarov",
     "url": "https://www.chess.com/member/DenielSafarov",
     "name": "Deniel Safarov",
     "username": "denielsafarov",
     "title": "FM",
-    "followers": 601,
+    "followers": 697,
     "country": "https://api.chess.com/pub/country/GE",
     "location": "Tbilisi",
-    "last_online": 1734080293,
+    "last_online": 1741697758,
     "joined": 1588595932,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2539,
-            "date": 1731924397,
+            "date": 1739093840,
             "rd": 48
         },
         "best": {
@@ -54,39 +54,38 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2675,
-            "date": 1733866451,
-            "rd": 37
+            "rating": 2802,
+            "date": 1741699758,
+            "rd": 27
         },
         "best": {
-            "rating": 2811,
-            "date": 1724954628,
+            "rating": 2846,
+            "date": 1740577927,
             "game": "https://www.chess.com/game/live/101848430101"
         },
         "record": {
-            "win": 4239,
-            "loss": 3498,
-            "draw": 505
+            "win": 4588,
+            "loss": 3723,
+            "draw": 545
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2756,
-            "date": 1733871741,
-            "rd": 27
+            "rating": 2803,
+            "date": 1741698877,
+            "rd": 29
         },
         "best": {
-            "rating": 2872,
-            "date": 1724685004,
+            "rating": 2892,
+            "date": 1737993458,
             "game": "https://www.chess.com/game/live/125652512175"
         },
         "record": {
-            "win": 1841,
-            "loss": 1458,
-            "draw": 300
+            "win": 1985,
+            "loss": 1565,
+            "draw": 331
         }
     },
-    "fide": 2319,
     "tactics": {
         "highest": {
             "rating": 3602,
@@ -101,6 +100,10 @@
         "best": {
             "total_attempts": 66,
             "score": 63
+        },
+        "daily": {
+            "total_attempts": 51,
+            "score": 48
         }
     }
 }

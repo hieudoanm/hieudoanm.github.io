@@ -6,10 +6,10 @@
     "name": "Isaac Okeke",
     "username": "nigerianprodigy",
     "title": "IM",
-    "followers": 147,
+    "followers": 149,
     "country": "https://api.chess.com/pub/country/NG",
     "location": "lagos",
-    "last_online": 1734175220,
+    "last_online": 1741703718,
     "joined": 1531735602,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2414,
-            "date": 1729965966,
-            "rd": 59
+            "rating": 2404,
+            "date": 1738445442,
+            "rd": 66
         },
         "best": {
             "rating": 2549,
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/80034595863"
         },
         "record": {
-            "win": 1323,
-            "loss": 1245,
+            "win": 1327,
+            "loss": 1251,
             "draw": 135
         }
     },
@@ -70,8 +70,8 @@
     "fide": 2153,
     "tactics": {
         "highest": {
-            "rating": 3229,
-            "date": 1731241049
+            "rating": 3245,
+            "date": 1737114444
         },
         "lowest": {
             "rating": 808,

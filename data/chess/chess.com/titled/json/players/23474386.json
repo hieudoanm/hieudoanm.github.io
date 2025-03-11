@@ -8,7 +8,7 @@
     "followers": 11,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "Sydney",
-    "last_online": 1733310588,
+    "last_online": 1739187136,
     "joined": 1438348868,
     "status": "premium",
     "is_streamer": false,
@@ -88,8 +88,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3251,
-            "date": 1732364434
+            "rating": 3259,
+            "date": 1739411851
         },
         "lowest": {
             "rating": 1320,

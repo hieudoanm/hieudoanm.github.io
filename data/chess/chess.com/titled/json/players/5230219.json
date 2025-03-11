@@ -6,15 +6,15 @@
     "name": "Justus Williams",
     "username": "jwillz14",
     "title": "IM",
-    "followers": 136,
+    "followers": 143,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York",
-    "last_online": 1726188755,
+    "last_online": 1740171400,
     "joined": 1307287132,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2388,
-            "date": 1691434610,
-            "rd": 81
+            "rating": 2389,
+            "date": 1739729044,
+            "rd": 48
         },
         "best": {
             "rating": 2671,
@@ -47,9 +47,9 @@
             "game": "https://www.chess.com/game/live/85170686407"
         },
         "record": {
-            "win": 18,
-            "loss": 7,
-            "draw": 5
+            "win": 27,
+            "loss": 9,
+            "draw": 9
         }
     },
     "chess_bullet": {
@@ -98,8 +98,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 46,
-            "score": 43
+            "total_attempts": 50,
+            "score": 47
         }
     }
 }

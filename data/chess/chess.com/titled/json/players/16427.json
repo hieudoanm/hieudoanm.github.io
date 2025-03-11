@@ -6,10 +6,10 @@
     "name": "Attila Turzo",
     "username": "attilaturzo",
     "title": "IM",
-    "followers": 4310,
+    "followers": 4142,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Solymar",
-    "last_online": 1734064080,
+    "last_online": 1741703180,
     "joined": 1185921640,
     "status": "premium",
     "is_streamer": true,
@@ -44,7 +44,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2269,
-            "date": 1732274726,
+            "date": 1740132538,
             "rd": 49
         },
         "best": {
@@ -53,7 +53,7 @@
             "game": "https://www.chess.com/game/live/53098149565"
         },
         "record": {
-            "win": 304,
+            "win": 305,
             "loss": 117,
             "draw": 50
         }
@@ -77,9 +77,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2546,
-            "date": 1732277344,
-            "rd": 44
+            "rating": 2526,
+            "date": 1741114697,
+            "rd": 42
         },
         "best": {
             "rating": 2619,
@@ -87,9 +87,9 @@
             "game": "https://www.chess.com/game/live/3465024332"
         },
         "record": {
-            "win": 1976,
-            "loss": 1691,
-            "draw": 382
+            "win": 2003,
+            "loss": 1722,
+            "draw": 388
         }
     },
     "fide": 2279,

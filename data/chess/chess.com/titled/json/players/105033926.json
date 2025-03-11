@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/JodyMiddleton",
     "username": "jodymiddleton",
     "title": "WCM",
-    "followers": 54,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734151256,
+    "last_online": 1741403727,
     "joined": 1608213395,
     "status": "premium",
     "is_streamer": false,
@@ -67,8 +67,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 45
+            "total_attempts": 61,
+            "score": 58
         }
     }
 }

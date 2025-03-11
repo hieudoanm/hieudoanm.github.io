@@ -6,9 +6,9 @@
     "name": "Mikhail Korovin",
     "username": "mikekorovin",
     "title": "FM",
-    "followers": 54,
+    "followers": 55,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733898636,
+    "last_online": 1741679965,
     "joined": 1525030950,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2402,
-            "date": 1733900018,
+            "rating": 2368,
+            "date": 1741588896,
             "rd": 49
         },
         "best": {
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/122623490595"
         },
         "record": {
-            "win": 77,
-            "loss": 19,
-            "draw": 1
+            "win": 82,
+            "loss": 25,
+            "draw": 5
         }
     },
     "chess_bullet": {

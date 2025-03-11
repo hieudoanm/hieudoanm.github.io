@@ -6,9 +6,9 @@
     "name": "Alfredo R. Aguilera Rodriguez",
     "username": "alfredoaguilera3000",
     "title": "FM",
-    "followers": 10,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1733440764,
+    "last_online": 1740500440,
     "joined": 1671311222,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2479,
-            "date": 1725134195,
-            "rd": 49
+            "rating": 2519,
+            "date": 1739850349,
+            "rd": 84
         },
         "best": {
             "rating": 2503,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/117729626327"
         },
         "record": {
-            "win": 8,
+            "win": 10,
             "loss": 4,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1732464566,
-            "rd": 45
+            "rating": 2508,
+            "date": 1739850019,
+            "rd": 49
         },
         "best": {
             "rating": 2586,
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/118514902323"
         },
         "record": {
-            "win": 310,
-            "loss": 199,
+            "win": 320,
+            "loss": 207,
             "draw": 40
         }
     },

@@ -8,7 +8,7 @@
     "title": "CM",
     "followers": 18,
     "country": "https://api.chess.com/pub/country/AZ",
-    "last_online": 1733948554,
+    "last_online": 1741627709,
     "joined": 1548952293,
     "status": "premium",
     "is_streamer": false,
@@ -34,36 +34,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2657,
-            "date": 1733351592,
-            "rd": 40
+            "rating": 2761,
+            "date": 1741702889,
+            "rd": 21
         },
         "best": {
-            "rating": 2699,
-            "date": 1731161652,
+            "rating": 2773,
+            "date": 1739647170,
             "game": "https://www.chess.com/game/live/124898981791"
         },
         "record": {
-            "win": 677,
-            "loss": 562,
-            "draw": 105
+            "win": 1657,
+            "loss": 1295,
+            "draw": 258
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2762,
-            "date": 1733351997,
-            "rd": 25
+            "rating": 2804,
+            "date": 1741370495,
+            "rd": 41
         },
         "best": {
-            "rating": 2813,
-            "date": 1724859629,
+            "rating": 2855,
+            "date": 1736878105,
             "game": "https://www.chess.com/game/live/116602837033"
         },
         "record": {
-            "win": 8356,
-            "loss": 7492,
-            "draw": 2524
+            "win": 8447,
+            "loss": 7549,
+            "draw": 2542
         }
     },
     "fide": 2195,

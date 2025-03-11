@@ -6,10 +6,10 @@
     "name": "Martin Matthiesen",
     "username": "martinmatthiesen",
     "title": "FM",
-    "followers": 286,
+    "followers": 294,
     "country": "https://api.chess.com/pub/country/DK",
     "location": "Aarhus",
-    "last_online": 1734170521,
+    "last_online": 1740292484,
     "joined": 1275567411,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2453,
-            "date": 1733933559,
-            "rd": 97
+            "rating": 2476,
+            "date": 1735329911,
+            "rd": 99
         },
         "best": {
             "rating": 2532,
             "date": 1656322352,
-            "game": "https://www.chess.com/game/daily/671171323"
+            "game": "https://www.chess.com/game/daily/668876125"
         },
         "record": {
-            "win": 114,
+            "win": 115,
             "loss": 24,
             "draw": 27,
-            "time_per_move": 70572,
+            "time_per_move": 70537,
             "timeout_percent": 0
         }
     },

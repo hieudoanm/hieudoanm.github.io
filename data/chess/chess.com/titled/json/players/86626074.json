@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/86626074.4dc6c83c.200x200o.5dc62d3e68ae.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/86626074.7e95d8f4.200x200o.9d4ae084a95e.png",
     "player_id": 86626074,
     "@id": "https://api.chess.com/pub/player/nodrawnub",
     "url": "https://www.chess.com/member/nodrawnub",
     "name": "Sergio Duran Vega",
     "username": "nodrawnub",
     "title": "IM",
-    "followers": 52,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/CR",
-    "last_online": 1723220328,
+    "last_online": 1741301177,
     "joined": 1594677892,
     "status": "premium",
     "is_streamer": false,
@@ -49,10 +49,11 @@
             "draw": 375
         }
     },
+    "fide": 2312,
     "tactics": {
         "highest": {
-            "rating": 2678,
-            "date": 1666311062
+            "rating": 2708,
+            "date": 1741301368
         },
         "lowest": {
             "rating": 2406,

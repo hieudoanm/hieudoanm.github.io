@@ -5,9 +5,9 @@
     "name": "Pablo Diaz Mino",
     "username": "estrategia_vs_tactica",
     "title": "FM",
-    "followers": 17,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734039093,
+    "last_online": 1741619941,
     "joined": 1689264930,
     "status": "premium",
     "is_streamer": false,
@@ -16,26 +16,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2234,
-            "date": 1718366434,
+            "rating": 2239,
+            "date": 1739788996,
             "rd": 49
         },
         "best": {
-            "rating": 2236,
-            "date": 1695153670,
-            "game": "https://www.chess.com/game/live/94430503675"
+            "rating": 2239,
+            "date": 1739788996,
+            "game": "https://www.chess.com/game/live/133526966899"
         },
         "record": {
-            "win": 4,
+            "win": 5,
             "loss": 0,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2339,
-            "date": 1724024139,
-            "rd": 100
+            "rating": 2268,
+            "date": 1738862614,
+            "rd": 60
         },
         "best": {
             "rating": 2386,
@@ -43,33 +43,33 @@
             "game": "https://www.chess.com/game/live/92006998007"
         },
         "record": {
-            "win": 14,
-            "loss": 12,
-            "draw": 1
+            "win": 28,
+            "loss": 25,
+            "draw": 2
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2325,
-            "date": 1732618889,
-            "rd": 68
+            "rating": 2456,
+            "date": 1739789206,
+            "rd": 50
         },
         "best": {
-            "rating": 2436,
-            "date": 1716505750,
+            "rating": 2537,
+            "date": 1737156778,
             "game": "https://www.chess.com/game/live/94345881069"
         },
         "record": {
-            "win": 212,
-            "loss": 195,
-            "draw": 35
+            "win": 240,
+            "loss": 212,
+            "draw": 41
         }
     },
     "fide": 2234,
     "tactics": {
         "highest": {
-            "rating": 2640,
-            "date": 1699109770
+            "rating": 2926,
+            "date": 1738574024
         },
         "lowest": {
             "rating": 1000,

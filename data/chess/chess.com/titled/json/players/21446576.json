@@ -7,9 +7,9 @@
     "username": "ufuktuncer",
     "title": "FM",
     "followers": 12,
-    "country": "https://api.chess.com/pub/country/CH",
-    "location": "Z\u00fcrich",
-    "last_online": 1733957758,
+    "country": "https://api.chess.com/pub/country/DE",
+    "location": "Frankfurt am Main",
+    "last_online": 1741619409,
     "joined": 1425937728,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2275,
-            "date": 1733959398,
+            "date": 1741123085,
             "rd": 205
         },
         "best": {
@@ -70,8 +70,8 @@
     "fide": 2351,
     "tactics": {
         "highest": {
-            "rating": 3383,
-            "date": 1732822375
+            "rating": 3417,
+            "date": 1734974365
         },
         "lowest": {
             "rating": 1215,

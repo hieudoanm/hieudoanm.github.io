@@ -6,10 +6,10 @@
     "name": "Krish Bhandari",
     "username": "freeeeeeeeeeeeeeeeee",
     "title": "CM",
-    "followers": 65,
+    "followers": 69,
     "country": "https://api.chess.com/pub/country/TV",
     "location": "Somewhere around here",
-    "last_online": 1734138934,
+    "last_online": 1741213785,
     "joined": 1470059633,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1758,
-            "date": 1706218695,
+            "date": 1737278921,
             "rd": 77
         },
         "best": {
@@ -56,9 +56,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2039,
-            "date": 1733462854,
-            "rd": 49
+            "rating": 2079,
+            "date": 1740601975,
+            "rd": 45
         },
         "best": {
             "rating": 2098,
@@ -66,16 +66,16 @@
             "game": "https://www.chess.com/game/live/58232956375"
         },
         "record": {
-            "win": 101,
-            "loss": 84,
-            "draw": 3
+            "win": 119,
+            "loss": 96,
+            "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2138,
-            "date": 1734155288,
-            "rd": 27
+            "rating": 2049,
+            "date": 1740332667,
+            "rd": 39
         },
         "best": {
             "rating": 2553,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/125461110173"
         },
         "record": {
-            "win": 5859,
-            "loss": 5624,
-            "draw": 448
+            "win": 6036,
+            "loss": 5792,
+            "draw": 452
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1862,
-            "date": 1734131839,
-            "rd": 38
+            "rating": 1797,
+            "date": 1741131825,
+            "rd": 45
         },
         "best": {
             "rating": 2310,
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/3061401082"
         },
         "record": {
-            "win": 3186,
-            "loss": 2985,
-            "draw": 223
+            "win": 3233,
+            "loss": 3036,
+            "draw": 227
         }
     },
     "fide": 1980,
     "tactics": {
         "highest": {
-            "rating": 3366,
-            "date": 1704064511
+            "rating": 3404,
+            "date": 1735227147
         },
         "lowest": {
             "rating": 1046,

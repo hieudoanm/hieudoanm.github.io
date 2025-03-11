@@ -6,9 +6,9 @@
     "name": "Patryk Chylewski",
     "username": "masnyszachistaaa",
     "title": "IM",
-    "followers": 64,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733959204,
+    "last_online": 1741697614,
     "joined": 1620071360,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2802,
-            "date": 1726163286,
-            "rd": 26
+            "rating": 2740,
+            "date": 1741646002,
+            "rd": 28
         },
         "best": {
-            "rating": 2802,
-            "date": 1719061614,
-            "game": "https://www.chess.com/game/live/111783845909"
+            "rating": 2835,
+            "date": 1737412986,
+            "game": "https://www.chess.com/game/live/131472047019"
         },
         "record": {
-            "win": 2545,
-            "loss": 2193,
-            "draw": 463
+            "win": 2786,
+            "loss": 2454,
+            "draw": 525
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2654,
-            "date": 1733871968,
-            "rd": 41
+            "rating": 2611,
+            "date": 1741197240,
+            "rd": 44
         },
         "best": {
             "rating": 2704,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/79197811121"
         },
         "record": {
-            "win": 846,
-            "loss": 555,
-            "draw": 124
+            "win": 899,
+            "loss": 605,
+            "draw": 134
         }
     },
     "tactics": {

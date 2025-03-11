@@ -6,10 +6,10 @@
     "name": "Md.abu Hanif",
     "username": "mahanif",
     "title": "CM",
-    "followers": 435,
+    "followers": 470,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Bhuighor, Narayangonj",
-    "last_online": 1733994913,
+    "last_online": 1741678563,
     "joined": 1310298171,
     "status": "premium",
     "is_streamer": false,
@@ -56,8 +56,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2297,
-            "date": 1729696363,
+            "rating": 2299,
+            "date": 1738864377,
             "rd": 49
         },
         "best": {
@@ -66,33 +66,33 @@
             "game": "https://www.chess.com/game/live/5652679600"
         },
         "record": {
-            "win": 313,
+            "win": 317,
             "loss": 132,
-            "draw": 64
+            "draw": 65
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2174,
-            "date": 1731737354,
-            "rd": 89
+            "rating": 2234,
+            "date": 1739598100,
+            "rd": 50
         },
         "best": {
-            "rating": 2260,
-            "date": 1680851065,
-            "game": "https://www.chess.com/game/live/86000435189"
+            "rating": 2265,
+            "date": 1739552129,
+            "game": "https://www.chess.com/game/live/133336146735"
         },
         "record": {
-            "win": 1455,
-            "loss": 852,
-            "draw": 111
+            "win": 1478,
+            "loss": 871,
+            "draw": 112
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2353,
-            "date": 1732909103,
-            "rd": 57
+            "rating": 2331,
+            "date": 1737437033,
+            "rd": 63
         },
         "best": {
             "rating": 2447,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/82221748583"
         },
         "record": {
-            "win": 4352,
-            "loss": 2167,
-            "draw": 446
+            "win": 4354,
+            "loss": 2170,
+            "draw": 447
         }
     },
     "fide": 2066,

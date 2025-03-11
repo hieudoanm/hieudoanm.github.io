@@ -6,10 +6,10 @@
     "name": "Cristian Maidana",
     "username": "bmt011",
     "title": "FM",
-    "followers": 17,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Rosario",
-    "last_online": 1727391845,
+    "last_online": 1738428368,
     "joined": 1369604069,
     "status": "premium",
     "is_streamer": false,
@@ -35,36 +35,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1834,
-            "date": 1732753666,
-            "rd": 51
+            "rating": 1897,
+            "date": 1738432386,
+            "rd": 56
         },
         "best": {
             "rating": 2137,
             "date": 1398468020,
-            "game": "https://www.chess.com/game/live/107960967575"
+            "game": "https://www.chess.com/game/live/132169900323"
         },
         "record": {
-            "win": 111,
-            "loss": 105,
+            "win": 121,
+            "loss": 130,
             "draw": 2
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2067,
-            "date": 1651534798,
-            "rd": 98
+            "rating": 2110,
+            "date": 1737481923,
+            "rd": 134
         },
         "best": {
-            "rating": 2178,
-            "date": 1573586320,
+            "rating": 2191,
+            "date": 1737479426,
             "game": "https://www.chess.com/game/live/5149348471"
         },
         "record": {
-            "win": 438,
-            "loss": 416,
-            "draw": 39
+            "win": 439,
+            "loss": 419,
+            "draw": 40
         }
     },
     "fide": 2296,

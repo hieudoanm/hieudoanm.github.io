@@ -6,10 +6,10 @@
     "name": "ali alghasra",
     "username": "abuhanan",
     "title": "CM",
-    "followers": 547,
+    "followers": 618,
     "country": "https://api.chess.com/pub/country/BH",
     "location": "manama",
-    "last_online": 1734084095,
+    "last_online": 1741687827,
     "joined": 1264867633,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1581,
-            "date": 1734120694,
-            "rd": 16
+            "rating": 1690,
+            "date": 1741463397,
+            "rd": 17
         },
         "best": {
             "rating": 2059,
@@ -59,15 +59,15 @@
             "game": "https://www.chess.com/game/live/6471447745"
         },
         "record": {
-            "win": 17507,
-            "loss": 18234,
-            "draw": 614
+            "win": 19818,
+            "loss": 20536,
+            "draw": 687
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2075,
-            "date": 1727385314,
+            "rating": 2005,
+            "date": 1741688449,
             "rd": 39
         },
         "best": {
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/59931664075"
         },
         "record": {
-            "win": 19588,
-            "loss": 18584,
-            "draw": 1998
+            "win": 19616,
+            "loss": 18615,
+            "draw": 2002
         }
     },
     "tactics": {

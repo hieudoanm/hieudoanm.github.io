@@ -6,14 +6,15 @@
     "name": "Dean Ippolito",
     "username": "deanofchess",
     "title": "IM",
-    "followers": 42,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New Jersey",
-    "last_online": 1734053405,
+    "last_online": 1741657630,
     "joined": 1337279123,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -51,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2432,
-            "date": 1612541086,
-            "rd": 84
+            "rating": 2542,
+            "date": 1741400247,
+            "rd": 49
         },
         "best": {
-            "rating": 2500,
-            "date": 1611931342,
-            "game": "https://www.chess.com/game/live/366873373"
+            "rating": 2547,
+            "date": 1738940689,
+            "game": "https://www.chess.com/game/live/132679218875"
         },
         "record": {
-            "win": 50,
-            "loss": 21,
-            "draw": 10
+            "win": 59,
+            "loss": 26,
+            "draw": 13
         }
     },
     "fide": 2450,
@@ -81,6 +82,10 @@
         "best": {
             "total_attempts": 56,
             "score": 54
+        },
+        "daily": {
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

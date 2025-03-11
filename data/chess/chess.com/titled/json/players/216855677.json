@@ -5,10 +5,10 @@
     "name": "Kevin Haack",
     "username": "kev4444444444",
     "title": "FM",
-    "followers": 22,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Frankfurt",
-    "last_online": 1733851833,
+    "last_online": 1741459635,
     "joined": 1672047555,
     "status": "premium",
     "is_streamer": false,
@@ -88,8 +88,8 @@
     "fide": 2311,
     "tactics": {
         "highest": {
-            "rating": 3615,
-            "date": 1733266246
+            "rating": 3632,
+            "date": 1734880211
         },
         "lowest": {
             "rating": 412,

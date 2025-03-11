@@ -1,26 +1,26 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/161719107.9b67f56f.200x200o.7a9458c6d92a.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/161719107.d39d25e6.200x200o.2bf387a6fed1.jpg",
     "player_id": 161719107,
     "@id": "https://api.chess.com/pub/player/pospisku",
     "url": "https://www.chess.com/member/pospisku",
     "name": "Danila Sutormin",
     "username": "pospisku",
     "title": "FM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/RS",
-    "location": "Paracin",
-    "last_online": 1733981560,
+    "location": "Belgrade",
+    "last_online": 1741692275,
     "joined": 1637201550,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2394,
-            "date": 1732622813,
-            "rd": 100
+            "rating": 2453,
+            "date": 1740810602,
+            "rd": 104
         },
         "best": {
             "rating": 2442,
@@ -28,29 +28,29 @@
             "game": "https://www.chess.com/game/live/112756172467"
         },
         "record": {
-            "win": 16,
+            "win": 18,
             "loss": 9,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2661,
-            "date": 1733983935,
-            "rd": 34
+            "rating": 2665,
+            "date": 1741160915,
+            "rd": 40
         },
         "best": {
-            "rating": 2748,
-            "date": 1727279296,
+            "rating": 2754,
+            "date": 1737557013,
             "game": "https://www.chess.com/game/live/126334147587"
         },
         "record": {
-            "win": 287,
-            "loss": 200,
-            "draw": 60
+            "win": 421,
+            "loss": 325,
+            "draw": 84
         }
     },
-    "fide": 0,
+    "fide": 2381,
     "tactics": {
         "highest": {
             "rating": 1000,

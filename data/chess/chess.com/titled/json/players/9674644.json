@@ -6,9 +6,9 @@
     "name": "Konstantinos Michaelides",
     "username": "chessknight02",
     "title": "FM",
-    "followers": 23,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733433660,
+    "last_online": 1741633168,
     "joined": 1353165395,
     "status": "premium",
     "is_streamer": false,
@@ -87,8 +87,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3607,
-            "date": 1733434773
+            "rating": 3665,
+            "date": 1741276721
         },
         "lowest": {
             "rating": 1130,

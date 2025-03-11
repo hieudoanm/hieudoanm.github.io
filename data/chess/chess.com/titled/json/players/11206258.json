@@ -6,10 +6,10 @@
     "name": "Mehdi MahdaviRad",
     "username": "iranchesstrainer",
     "title": "FM",
-    "followers": 2888,
+    "followers": 3249,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Tehran",
-    "last_online": 1734168348,
+    "last_online": 1741669832,
     "joined": 1363742079,
     "status": "premium",
     "is_streamer": false,
@@ -73,7 +73,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2754,
-            "date": 1626982826,
+            "date": 1737837768,
             "rd": 20
         },
         "best": {
@@ -89,19 +89,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2615,
-            "date": 1722709799,
-            "rd": 49
+            "rating": 2614,
+            "date": 1738435577
         },
         "best": {
             "rating": 2668,
             "date": 1690317045,
-            "game": "https://www.chess.com/game/live/1597825468"
+            "game": "https://www.chess.com/game/live/131841032005"
         },
         "record": {
-            "win": 5152,
-            "loss": 5988,
-            "draw": 860
+            "win": 5323,
+            "loss": 6208,
+            "draw": 893
         }
     },
     "fide": 2212,

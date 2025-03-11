@@ -6,10 +6,10 @@
     "name": "Ankit Gajwa",
     "username": "ankitgajwa",
     "title": "FM",
-    "followers": 342,
+    "followers": 370,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Bengaluru",
-    "last_online": 1734160120,
+    "last_online": 1741667229,
     "joined": 1396436552,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2326,
-            "date": 1731178781,
-            "rd": 59
+            "rating": 2345,
+            "date": 1740573729,
+            "rd": 82
         },
         "best": {
             "rating": 2586,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/124911029123"
         },
         "record": {
-            "win": 748,
+            "win": 749,
             "loss": 598,
             "draw": 48
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2601,
-            "date": 1734176528,
-            "rd": 32
+            "rating": 2645,
+            "date": 1741695957,
+            "rd": 27
         },
         "best": {
             "rating": 2738,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/125166618573"
         },
         "record": {
-            "win": 2197,
-            "loss": 1838,
-            "draw": 254
+            "win": 2484,
+            "loss": 2065,
+            "draw": 291
         }
     },
     "fide": 2335,

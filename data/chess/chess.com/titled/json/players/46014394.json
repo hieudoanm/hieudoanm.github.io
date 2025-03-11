@@ -6,10 +6,10 @@
     "name": "Adriano Valle",
     "username": "xadrezvalle",
     "title": "FM",
-    "followers": 519,
+    "followers": 532,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Bras\u00edlia",
-    "last_online": 1734012667,
+    "last_online": 1741612710,
     "joined": 1525821708,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     "fide": 2238,
     "tactics": {
         "highest": {
-            "rating": 3049,
-            "date": 1727115384
+            "rating": 3064,
+            "date": 1734829409
         },
         "lowest": {
             "rating": 410,

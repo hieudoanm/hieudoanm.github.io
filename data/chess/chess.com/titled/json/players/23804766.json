@@ -6,10 +6,10 @@
     "name": "Murad Nuri",
     "username": "muradnuri",
     "title": "FM",
-    "followers": 107,
+    "followers": 108,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Istanbul",
-    "last_online": 1734175344,
+    "last_online": 1741537985,
     "joined": 1440416296,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2743,
-            "date": 1733230138,
-            "rd": 48
+            "rating": 2811,
+            "date": 1741024158,
+            "rd": 42
         },
         "best": {
             "rating": 2760,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/113487648745"
         },
         "record": {
-            "win": 1165,
-            "loss": 949,
-            "draw": 114
+            "win": 1179,
+            "loss": 955,
+            "draw": 115
         }
     },
     "fide": 2416,

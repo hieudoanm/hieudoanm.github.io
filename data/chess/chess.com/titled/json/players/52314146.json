@@ -6,10 +6,10 @@
     "name": "Alexander Gelman",
     "username": "gelmanalexander",
     "title": "IM",
-    "followers": 911,
+    "followers": 1013,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Berlin",
-    "last_online": 1734159701,
+    "last_online": 1741689515,
     "joined": 1543141296,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2365,
-            "date": 1734160558,
+            "rating": 2341,
+            "date": 1741507950,
             "rd": 49
         },
         "best": {
@@ -28,33 +28,32 @@
             "game": "https://www.chess.com/game/live/118824627247"
         },
         "record": {
-            "win": 72,
-            "loss": 14,
-            "draw": 4
+            "win": 96,
+            "loss": 15,
+            "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2735,
-            "date": 1733597954,
-            "rd": 29
+            "rating": 2723,
+            "date": 1737279922,
+            "rd": 32
         },
         "best": {
-            "rating": 2747,
-            "date": 1711214023,
+            "rating": 2775,
+            "date": 1737222008,
             "game": "https://www.chess.com/game/live/106160406483"
         },
         "record": {
-            "win": 1292,
-            "loss": 820,
-            "draw": 111
+            "win": 1332,
+            "loss": 856,
+            "draw": 116
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2667,
-            "date": 1733941253,
-            "rd": 33
+            "rating": 2745,
+            "date": 1741197547
         },
         "best": {
             "rating": 2804,
@@ -62,9 +61,9 @@
             "game": "https://www.chess.com/game/live/125167709909"
         },
         "record": {
-            "win": 2388,
-            "loss": 1733,
-            "draw": 340
+            "win": 2606,
+            "loss": 1872,
+            "draw": 358
         }
     },
     "tactics": {

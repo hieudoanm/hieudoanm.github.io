@@ -6,10 +6,10 @@
     "name": "Muhammad Lutfi Ali",
     "username": "sippp",
     "title": "IM",
-    "followers": 168,
+    "followers": 169,
     "country": "https://api.chess.com/pub/country/ID",
     "location": "Purbalingga",
-    "last_online": 1733908804,
+    "last_online": 1740926380,
     "joined": 1293247640,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2828,
-            "date": 1733909657,
-            "rd": 29
+            "rating": 2731,
+            "date": 1741664590,
+            "rd": 30
         },
         "best": {
             "rating": 2976,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/105379353403"
         },
         "record": {
-            "win": 3952,
-            "loss": 2823,
-            "draw": 436
+            "win": 4190,
+            "loss": 2997,
+            "draw": 455
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2787,
-            "date": 1731398422,
-            "rd": 38
+            "rating": 2773,
+            "date": 1737468792,
+            "rd": 45
         },
         "best": {
             "rating": 2912,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/106377994599"
         },
         "record": {
-            "win": 1690,
-            "loss": 1286,
-            "draw": 256
+            "win": 1704,
+            "loss": 1298,
+            "draw": 257
         }
     },
     "tactics": {

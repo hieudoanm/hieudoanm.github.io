@@ -6,9 +6,9 @@
     "name": "Linus Olsson",
     "username": "midnightfox",
     "title": "FM",
-    "followers": 437,
+    "followers": 451,
     "country": "https://api.chess.com/pub/country/SE",
-    "last_online": 1734155250,
+    "last_online": 1741697693,
     "joined": 1251458907,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1685,
-            "date": 1714667473,
+            "date": 1737560160,
             "rd": 154
         },
         "best": {
@@ -32,12 +32,6 @@
             "draw": 0,
             "time_per_move": 5989,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
@@ -76,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2547,
-            "date": 1729012260,
-            "rd": 45
+            "rating": 2490,
+            "date": 1741464603,
+            "rd": 43
         },
         "best": {
-            "rating": 2552,
-            "date": 1729011479,
+            "rating": 2563,
+            "date": 1735664895,
             "game": "https://www.chess.com/game/live/98555098547"
         },
         "record": {
-            "win": 772,
-            "loss": 575,
-            "draw": 95
+            "win": 806,
+            "loss": 622,
+            "draw": 99
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Ho Cheung Wong",
     "username": "brianmsk",
     "title": "FM",
-    "followers": 406,
+    "followers": 413,
     "country": "https://api.chess.com/pub/country/HK",
     "location": "Eastern District",
-    "last_online": 1734172633,
+    "last_online": 1741687186,
     "joined": 1270613430,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1778,
-            "date": 1734075890,
-            "rd": 153
+            "rating": 1784,
+            "date": 1741168588,
+            "rd": 160
         },
         "best": {
             "rating": 1896,
@@ -28,35 +28,35 @@
             "game": "https://www.chess.com/game/daily/31313363"
         },
         "record": {
-            "win": 57,
+            "win": 59,
             "loss": 5,
             "draw": 2,
-            "time_per_move": 44126,
+            "time_per_move": 45159,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2256,
-            "date": 1734149101,
-            "rd": 45
+            "rating": 2317,
+            "date": 1741682301,
+            "rd": 47
         },
         "best": {
-            "rating": 2305,
-            "date": 1730015184,
+            "rating": 2310,
+            "date": 1737464671,
             "game": "https://www.chess.com/game/live/70530788593"
         },
         "record": {
-            "win": 531,
-            "loss": 274,
-            "draw": 45
+            "win": 560,
+            "loss": 288,
+            "draw": 53
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2169,
-            "date": 1731813566,
-            "rd": 62
+            "rating": 2120,
+            "date": 1740842040,
+            "rd": 74
         },
         "best": {
             "rating": 2261,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/111523330299"
         },
         "record": {
-            "win": 495,
-            "loss": 401,
+            "win": 498,
+            "loss": 407,
             "draw": 36
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2198,
-            "date": 1734026000,
-            "rd": 42
+            "rating": 2266,
+            "date": 1741703487,
+            "rd": 43
         },
         "best": {
             "rating": 2302,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/67883603119"
         },
         "record": {
-            "win": 1963,
-            "loss": 1428,
-            "draw": 195
+            "win": 2041,
+            "loss": 1485,
+            "draw": 202
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3453,
-            "date": 1733640198
+            "rating": 3510,
+            "date": 1739112789
         },
         "lowest": {
             "rating": 1131,

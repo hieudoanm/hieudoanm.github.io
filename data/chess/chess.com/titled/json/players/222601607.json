@@ -6,9 +6,9 @@
     "name": "Shahil Dey",
     "username": "iamshocked",
     "title": "IM",
-    "followers": 622,
+    "followers": 698,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734179320,
+    "last_online": 1741670972,
     "joined": 1673281360,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2095,
-            "date": 1734101270,
-            "rd": 140
+            "rating": 1046,
+            "date": 1740665763,
+            "rd": 105
         },
         "best": {
             "rating": 2095,
@@ -27,11 +27,11 @@
             "game": "https://www.chess.com/game/daily/542650777"
         },
         "record": {
-            "win": 5,
-            "loss": 8,
-            "draw": 1,
-            "time_per_move": 15572,
-            "timeout_percent": 0
+            "win": 12,
+            "loss": 25,
+            "draw": 3,
+            "time_per_move": 19150,
+            "timeout_percent": 64
         }
     },
     "chess_rapid": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2630,
-            "date": 1734105047,
-            "rd": 35
+            "rating": 2642,
+            "date": 1741281235,
+            "rd": 45
         },
         "best": {
             "rating": 2747,
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/71092634623"
         },
         "record": {
-            "win": 369,
-            "loss": 347,
-            "draw": 57
+            "win": 398,
+            "loss": 377,
+            "draw": 59
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2811,
-            "date": 1734103364,
-            "rd": 33
+            "rating": 2866,
+            "date": 1741629148,
+            "rd": 37
         },
         "best": {
-            "rating": 2841,
-            "date": 1732285373,
+            "rating": 2870,
+            "date": 1737319027,
             "game": "https://www.chess.com/game/live/97661441865"
         },
         "record": {
-            "win": 459,
-            "loss": 436,
-            "draw": 103
+            "win": 529,
+            "loss": 499,
+            "draw": 117
         }
     },
     "tactics": {
@@ -95,5 +95,10 @@
             "date": 1673426799
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 40,
+            "score": 37
+        }
+    }
 }

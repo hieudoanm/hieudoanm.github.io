@@ -5,9 +5,9 @@
     "name": "Roman Dehtiarov",
     "username": "galaxyroman",
     "title": "FM",
-    "followers": 26,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734155062,
+    "last_online": 1739789264,
     "joined": 1650867789,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2750,
-            "date": 1734109293,
-            "rd": 30
+            "rating": 2771,
+            "date": 1739432543,
+            "rd": 39
         },
         "best": {
             "rating": 2895,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/120934892809"
         },
         "record": {
-            "win": 2362,
-            "loss": 2157,
-            "draw": 412
+            "win": 2398,
+            "loss": 2191,
+            "draw": 419
         }
     },
     "fide": 2319,
@@ -80,10 +80,6 @@
         "best": {
             "total_attempts": 61,
             "score": 58
-        },
-        "daily": {
-            "total_attempts": 54,
-            "score": 51
         }
     }
 }

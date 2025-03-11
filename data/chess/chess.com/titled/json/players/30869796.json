@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 10,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1732534042,
+    "last_online": 1740570684,
     "joined": 1478948406,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2229,
-            "date": 1720977058,
-            "rd": 42
+            "rating": 2145,
+            "date": 1740571280,
+            "rd": 86
         },
         "best": {
             "rating": 2354,
@@ -60,7 +60,7 @@
         },
         "record": {
             "win": 7410,
-            "loss": 6696,
+            "loss": 6700,
             "draw": 794
         }
     },

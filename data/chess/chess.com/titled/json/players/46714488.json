@@ -5,9 +5,9 @@
     "name": "Abdulla Kashwani Faisa",
     "username": "whyme85",
     "title": "FM",
-    "followers": 159,
+    "followers": 161,
     "country": "https://api.chess.com/pub/country/AE",
-    "last_online": 1734072092,
+    "last_online": 1739715865,
     "joined": 1527867481,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2383,
-            "date": 1734183203,
-            "rd": 26
+            "rating": 2387,
+            "date": 1741699952,
+            "rd": 25
         },
         "best": {
             "rating": 2584,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/93471571111"
         },
         "record": {
-            "win": 21341,
-            "loss": 17806,
-            "draw": 2529
+            "win": 21708,
+            "loss": 18146,
+            "draw": 2574
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2556,
-            "date": 1731518101,
-            "rd": 26
+            "rating": 2717,
+            "date": 1741608238,
+            "rd": 25
         },
         "best": {
             "rating": 2672,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/123402631063"
         },
         "record": {
-            "win": 4418,
-            "loss": 4938,
-            "draw": 1073
+            "win": 4775,
+            "loss": 5315,
+            "draw": 1169
         }
     },
     "fide": 0,

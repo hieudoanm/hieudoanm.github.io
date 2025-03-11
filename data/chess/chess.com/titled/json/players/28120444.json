@@ -6,10 +6,10 @@
     "name": "S\u01a1n \u0110\u1eb7ng",
     "username": "ntbt_dhs",
     "title": "FM",
-    "followers": 510,
+    "followers": 512,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Ho Chi Minh City",
-    "last_online": 1733992236,
+    "last_online": 1740475445,
     "joined": 1462854814,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2674,
-            "date": 1721814641,
+            "rating": 2672,
+            "date": 1740507377,
             "rd": 45
         },
         "best": {
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/5046134721"
         },
         "record": {
-            "win": 3533,
-            "loss": 3188,
-            "draw": 389
+            "win": 3544,
+            "loss": 3197,
+            "draw": 391
         }
     },
     "tactics": {

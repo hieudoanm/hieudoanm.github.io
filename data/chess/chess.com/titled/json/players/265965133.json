@@ -8,7 +8,7 @@
     "followers": 0,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Bergheim",
-    "last_online": 1733720820,
+    "last_online": 1736264417,
     "joined": 1679645699,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2265,
-            "date": 1715848712,
-            "rd": 33
+            "rating": 2263,
+            "date": 1736269059,
+            "rd": 85
         },
         "best": {
             "rating": 2440,
@@ -28,15 +28,15 @@
         },
         "record": {
             "win": 393,
-            "loss": 323,
-            "draw": 72
+            "loss": 326,
+            "draw": 74
         }
     },
     "fide": 2260,
     "tactics": {
         "highest": {
-            "rating": 3396,
-            "date": 1717175096
+            "rating": 3458,
+            "date": 1739112826
         },
         "lowest": {
             "rating": 1000,

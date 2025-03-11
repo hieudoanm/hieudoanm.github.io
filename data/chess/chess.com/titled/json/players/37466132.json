@@ -9,7 +9,7 @@
     "followers": 222,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Manila",
-    "last_online": 1734050799,
+    "last_online": 1741405717,
     "joined": 1501565334,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2706,
-            "date": 1730891446,
-            "rd": 39
+            "rating": 2700,
+            "date": 1734195235,
+            "rd": 44
         },
         "best": {
             "rating": 2712,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/74514001321"
         },
         "record": {
-            "win": 778,
-            "loss": 391,
-            "draw": 185
+            "win": 785,
+            "loss": 397,
+            "draw": 186
         }
     },
     "fide": 2281,

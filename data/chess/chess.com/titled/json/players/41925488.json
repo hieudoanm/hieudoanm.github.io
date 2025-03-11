@@ -5,9 +5,9 @@
     "name": "Sergey Dmitriev",
     "username": "knjazj",
     "title": "FM",
-    "followers": 64,
+    "followers": 77,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734173430,
+    "last_online": 1741703291,
     "joined": 1514902631,
     "status": "premium",
     "is_streamer": false,
@@ -17,32 +17,38 @@
     "chess_daily": {
         "last": {
             "rating": 1600,
-            "date": 1712696249,
+            "date": 1740146012,
             "rd": 350
         },
         "record": {
-            "win": 0,
-            "loss": 10,
+            "win": 10,
+            "loss": 36,
             "draw": 0,
             "time_per_move": 0,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 2,
+            "count": 2,
+            "highest_finish": 132
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2001,
-            "date": 1734176600,
-            "rd": 26
+            "rating": 2018,
+            "date": 1741685941,
+            "rd": 27
         },
         "best": {
-            "rating": 2146,
-            "date": 1722932780,
+            "rating": 2175,
+            "date": 1737304460,
             "game": "https://www.chess.com/game/live/117418195871"
         },
         "record": {
-            "win": 1635,
-            "loss": 1963,
-            "draw": 341
+            "win": 1907,
+            "loss": 2277,
+            "draw": 394
         }
     },
     "chess_bullet": {
@@ -64,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1909,
-            "date": 1732493206,
-            "rd": 63
+            "rating": 1958,
+            "date": 1741474351,
+            "rd": 64
         },
         "best": {
             "rating": 2164,
@@ -74,9 +80,9 @@
             "game": "https://www.chess.com/game/live/78009779509"
         },
         "record": {
-            "win": 8284,
-            "loss": 9173,
-            "draw": 1410
+            "win": 8301,
+            "loss": 9200,
+            "draw": 1413
         }
     },
     "tactics": {

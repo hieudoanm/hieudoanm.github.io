@@ -6,55 +6,69 @@
     "name": "Agil Pirverdiyev",
     "username": "agilpirverdiyev777",
     "title": "FM",
-    "followers": 95,
+    "followers": 99,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Miami Beach, Florida",
-    "last_online": 1734181190,
+    "last_online": 1741685298,
     "joined": 1561722619,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Crystal",
     "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 400,
+            "date": 1741625105,
+            "rd": 350
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 17668,
+            "timeout_percent": 0
+        }
+    },
     "chess_rapid": {
         "last": {
-            "rating": 2388,
-            "date": 1733724445,
+            "rating": 2391,
+            "date": 1736762970,
             "rd": 49
         },
         "best": {
             "rating": 2404,
             "date": 1701497768,
-            "game": "https://www.chess.com/game/live/123139211833"
+            "game": "https://www.chess.com/game/live/130500649843"
         },
         "record": {
-            "win": 13,
+            "win": 15,
             "loss": 0,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2542,
-            "date": 1733846557,
-            "rd": 31
+            "rating": 2379,
+            "date": 1741156248,
+            "rd": 27
         },
         "best": {
-            "rating": 2623,
-            "date": 1711879082,
+            "rating": 2641,
+            "date": 1738445465,
             "game": "https://www.chess.com/game/live/94129297909"
         },
         "record": {
-            "win": 377,
-            "loss": 264,
-            "draw": 31
+            "win": 645,
+            "loss": 509,
+            "draw": 57
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2159,
-            "date": 1732978719,
-            "rd": 228
+            "rating": 2151,
+            "date": 1739912077,
+            "rd": 195
         },
         "best": {
             "rating": 2511,
@@ -64,14 +78,14 @@
         "record": {
             "win": 31,
             "loss": 2,
-            "draw": 1
+            "draw": 2
         }
     },
     "fide": 2700,
     "tactics": {
         "highest": {
-            "rating": 3119,
-            "date": 1726943587
+            "rating": 3310,
+            "date": 1740506213
         },
         "lowest": {
             "rating": 417,

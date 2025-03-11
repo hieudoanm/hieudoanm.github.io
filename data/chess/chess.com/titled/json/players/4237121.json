@@ -9,7 +9,7 @@
     "followers": 336,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York, New York",
-    "last_online": 1733702486,
+    "last_online": 1741617825,
     "joined": 1289451942,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2131,
-            "date": 1733702524,
-            "rd": 207
+            "rating": 2172,
+            "date": 1741383338,
+            "rd": 196
         },
         "best": {
             "rating": 2450,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/46159980"
         },
         "record": {
-            "win": 94,
+            "win": 95,
             "loss": 34,
             "draw": 28,
-            "time_per_move": 50787,
+            "time_per_move": 52556,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 19,
             "loss": 2,
             "draw": 1,
-            "time_per_move": 50787,
+            "time_per_move": 52556,
             "timeout_percent": 0
         }
     },

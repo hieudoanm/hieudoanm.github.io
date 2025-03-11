@@ -6,10 +6,10 @@
     "name": "Sariatullah Md",
     "username": "finally_i_won",
     "title": "CM",
-    "followers": 285,
+    "followers": 290,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Dhaka",
-    "last_online": 1733472752,
+    "last_online": 1741646149,
     "joined": 1457970386,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2211,
-            "date": 1729928294,
-            "rd": 66
+            "rating": 2207,
+            "date": 1736266147,
+            "rd": 82
         },
         "best": {
             "rating": 2446,
@@ -82,7 +82,7 @@
         },
         "record": {
             "win": 9401,
-            "loss": 7888,
+            "loss": 7889,
             "draw": 830
         }
     },

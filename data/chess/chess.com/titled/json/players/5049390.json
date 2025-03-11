@@ -6,9 +6,9 @@
     "name": "Arif Abdul Hafiz",
     "username": "siciliannaga",
     "title": "IM",
-    "followers": 2265,
+    "followers": 2380,
     "country": "https://api.chess.com/pub/country/ID",
-    "last_online": 1734170525,
+    "last_online": 1741632901,
     "joined": 1303980284,
     "status": "premium",
     "is_streamer": false,
@@ -55,53 +55,53 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2246,
-            "date": 1722835358,
-            "rd": 142
+            "rating": 2251,
+            "date": 1737976376,
+            "rd": 49
         },
         "best": {
-            "rating": 2246,
-            "date": 1659946746,
+            "rating": 2251,
+            "date": 1737976376,
             "game": "https://www.chess.com/game/live/6086516570"
         },
         "record": {
-            "win": 10,
+            "win": 11,
             "loss": 4,
             "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2822,
-            "date": 1727768104,
-            "rd": 43
+            "rating": 2921,
+            "date": 1741460813,
+            "rd": 40
         },
         "best": {
             "rating": 2902,
             "date": 1722009156,
-            "game": "https://www.chess.com/game/live/49570265943"
+            "game": "https://www.chess.com/game/live/132451848429"
         },
         "record": {
-            "win": 4097,
-            "loss": 3327,
-            "draw": 398
+            "win": 4138,
+            "loss": 3344,
+            "draw": 402
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2853,
-            "date": 1734092825,
-            "rd": 26
+            "rating": 3004,
+            "date": 1741424409,
+            "rd": 23
         },
         "best": {
-            "rating": 2939,
-            "date": 1722423830,
+            "rating": 2989,
+            "date": 1741179704,
             "game": "https://www.chess.com/game/live/80035217873"
         },
         "record": {
-            "win": 6421,
-            "loss": 4940,
-            "draw": 842
+            "win": 6958,
+            "loss": 5326,
+            "draw": 905
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Yanori Morera",
     "username": "yamoca",
     "title": "WCM",
-    "followers": 48,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/CR",
-    "last_online": 1732281153,
+    "last_online": 1741465550,
     "joined": 1600649950,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1706,
-            "date": 1707297642,
+            "date": 1738834230,
             "rd": 88
         },
         "best": {

@@ -6,10 +6,10 @@
     "name": "Abdu Al Badani",
     "username": "abdualbadani1973",
     "title": "FM",
-    "followers": 211,
+    "followers": 212,
     "country": "https://api.chess.com/pub/country/YE",
     "location": "taiz",
-    "last_online": 1733412464,
+    "last_online": 1741393631,
     "joined": 1410288961,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1302,
-            "date": 1730997332,
+            "date": 1739880215,
             "rd": 138
         },
         "best": {
@@ -28,17 +28,11 @@
             "game": "https://www.chess.com/game/daily/245712104"
         },
         "record": {
-            "win": 22,
+            "win": 23,
             "loss": 14,
             "draw": 0,
-            "time_per_move": 98855,
+            "time_per_move": 98019,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
@@ -60,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2080,
-            "date": 1733178723,
-            "rd": 42
+            "rating": 2087,
+            "date": 1741396660,
+            "rd": 50
         },
         "best": {
             "rating": 2442,
@@ -70,8 +64,8 @@
             "game": "https://www.chess.com/game/live/55812828111"
         },
         "record": {
-            "win": 11485,
-            "loss": 10332,
+            "win": 11499,
+            "loss": 10345,
             "draw": 658
         }
     },

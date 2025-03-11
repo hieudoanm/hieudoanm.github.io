@@ -6,10 +6,10 @@
     "name": "Rashad Zeynalli",
     "username": "rashad_zeynalli",
     "title": "FM",
-    "followers": 191,
+    "followers": 190,
     "country": "https://api.chess.com/pub/country/PS",
     "location": "Baku, Azerbaijan",
-    "last_online": 1734158642,
+    "last_online": 1741696167,
     "joined": 1356820919,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 962,
-            "date": 1733739207,
-            "rd": 92
+            "rating": 967,
+            "date": 1734631037,
+            "rd": 101
         },
         "best": {
             "rating": 1793,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/203476742"
         },
         "record": {
-            "win": 401,
+            "win": 402,
             "loss": 407,
             "draw": 13,
-            "time_per_move": 35231,
+            "time_per_move": 35226,
             "timeout_percent": 0
         }
     },
@@ -45,7 +45,7 @@
             "win": 0,
             "loss": 3,
             "draw": 0,
-            "time_per_move": 35231,
+            "time_per_move": 35226,
             "timeout_percent": 0
         }
     },
@@ -68,9 +68,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2564,
-            "date": 1734013121,
-            "rd": 39
+            "rating": 2569,
+            "date": 1736678299,
+            "rd": 47
         },
         "best": {
             "rating": 2607,
@@ -78,16 +78,16 @@
             "game": "https://www.chess.com/game/live/3161867680"
         },
         "record": {
-            "win": 2294,
-            "loss": 1490,
+            "win": 2297,
+            "loss": 1492,
             "draw": 215
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2707,
-            "date": 1734105331,
-            "rd": 32
+            "rating": 2709,
+            "date": 1741680956,
+            "rd": 36
         },
         "best": {
             "rating": 2807,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/3221622914"
         },
         "record": {
-            "win": 6711,
-            "loss": 4274,
-            "draw": 1063
+            "win": 6740,
+            "loss": 4301,
+            "draw": 1071
         }
     },
     "fide": 2200,

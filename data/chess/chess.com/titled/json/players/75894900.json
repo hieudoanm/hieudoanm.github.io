@@ -8,7 +8,7 @@
     "title": "IM",
     "followers": 49,
     "country": "https://api.chess.com/pub/country/AZ",
-    "last_online": 1734027359,
+    "last_online": 1739639747,
     "joined": 1586205546,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2482,
-            "date": 1725992351,
-            "rd": 39
+            "rating": 2451,
+            "date": 1739122883,
+            "rd": 77
         },
         "best": {
             "rating": 2632,
@@ -62,7 +62,7 @@
         },
         "record": {
             "win": 2092,
-            "loss": 2559,
+            "loss": 2561,
             "draw": 378
         }
     },

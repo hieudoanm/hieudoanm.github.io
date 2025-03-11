@@ -6,9 +6,9 @@
     "name": "David Ross",
     "username": "daveross60",
     "title": "IM",
-    "followers": 99,
+    "followers": 104,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1734183379,
+    "last_online": 1741697272,
     "joined": 1639320076,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2000,
-            "date": 1733093180,
+            "date": 1741052267,
             "rd": 349
         },
         "best": {
@@ -30,14 +30,14 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 37908,
+            "time_per_move": 28415,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2088,
-            "date": 1733963984,
+            "date": 1741558184,
             "rd": 279
         },
         "best": {
@@ -54,8 +54,8 @@
     "fide": 2381,
     "tactics": {
         "highest": {
-            "rating": 3623,
-            "date": 1733173375
+            "rating": 3628,
+            "date": 1734917935
         },
         "lowest": {
             "rating": 1212,
@@ -64,12 +64,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 37,
-            "score": 36
-        },
-        "daily": {
-            "total_attempts": 35,
-            "score": 32
+            "total_attempts": 57,
+            "score": 54
         }
     }
 }

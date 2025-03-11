@@ -6,10 +6,10 @@
     "name": "Rub\u00e9n Domingo N\u00fa\u00f1ez",
     "username": "rutricks",
     "title": "IM",
-    "followers": 295,
+    "followers": 317,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Granada",
-    "last_online": 1734120938,
+    "last_online": 1741590767,
     "joined": 1648641028,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2794,
-            "date": 1731125182,
-            "rd": 37
+            "rating": 2821,
+            "date": 1739163121,
+            "rd": 33
         },
         "best": {
             "rating": 2942,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/82581188095"
         },
         "record": {
-            "win": 1632,
-            "loss": 1538,
-            "draw": 143
+            "win": 1668,
+            "loss": 1565,
+            "draw": 148
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2636,
-            "date": 1732748164,
-            "rd": 42
+            "rating": 2803,
+            "date": 1741662166,
+            "rd": 27
         },
         "best": {
             "rating": 2839,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/77988822627"
         },
         "record": {
-            "win": 1428,
-            "loss": 1229,
-            "draw": 177
+            "win": 1629,
+            "loss": 1381,
+            "draw": 198
         }
     },
     "fide": 2446,
     "tactics": {
         "highest": {
-            "rating": 1807,
-            "date": 1702223027
+            "rating": 2420,
+            "date": 1740417404
         },
         "lowest": {
             "rating": 1200,

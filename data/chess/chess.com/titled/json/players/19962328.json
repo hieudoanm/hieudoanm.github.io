@@ -6,10 +6,10 @@
     "name": "Ryan Amburgy",
     "username": "rychessmaster1",
     "title": "FM",
-    "followers": 2156,
+    "followers": 2238,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Oklahoma",
-    "last_online": 1734085807,
+    "last_online": 1741652575,
     "joined": 1417314193,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2702,
-            "date": 1719625277,
-            "rd": 38
+            "rating": 2640,
+            "date": 1741309734,
+            "rd": 46
         },
         "best": {
             "rating": 2762,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/76527669543"
         },
         "record": {
-            "win": 3102,
-            "loss": 2100,
-            "draw": 536
+            "win": 3103,
+            "loss": 2107,
+            "draw": 537
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2855,
-            "date": 1733875717,
-            "rd": 42
+            "rating": 2848,
+            "date": 1741639826,
+            "rd": 27
         },
         "best": {
             "rating": 2908,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/59455237359"
         },
         "record": {
-            "win": 6543,
-            "loss": 5082,
-            "draw": 1610
+            "win": 6764,
+            "loss": 5229,
+            "draw": 1661
         }
     },
     "fide": 2250,
@@ -120,10 +120,6 @@
         "best": {
             "total_attempts": 68,
             "score": 65
-        },
-        "daily": {
-            "total_attempts": 42,
-            "score": 39
         }
     }
 }

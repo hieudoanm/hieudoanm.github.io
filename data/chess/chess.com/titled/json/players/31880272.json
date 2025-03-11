@@ -5,10 +5,10 @@
     "name": "Raheem Glaves",
     "username": "daddystrength",
     "title": "FM",
-    "followers": 42,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/JM",
     "location": "Kingston",
-    "last_online": 1733607768,
+    "last_online": 1741637178,
     "joined": 1482704308,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2307,
-            "date": 1733608573,
+            "rating": 2310,
+            "date": 1741366281,
             "rd": 49
         },
         "best": {
@@ -46,7 +46,7 @@
             "game": "https://www.chess.com/game/live/73791582167"
         },
         "record": {
-            "win": 373,
+            "win": 374,
             "loss": 253,
             "draw": 47
         }
@@ -71,7 +71,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2483,
-            "date": 1733945317,
+            "date": 1738773802,
             "rd": 42
         },
         "best": {

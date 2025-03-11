@@ -9,7 +9,7 @@
     "followers": 49,
     "country": "https://api.chess.com/pub/country/ID",
     "location": "Bekasi",
-    "last_online": 1734015675,
+    "last_online": 1741621866,
     "joined": 1422261841,
     "status": "premium",
     "is_streamer": false,
@@ -85,9 +85,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2687,
-            "date": 1733497249,
-            "rd": 39
+            "rating": 2685,
+            "date": 1741623690,
+            "rd": 46
         },
         "best": {
             "rating": 2707,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/126351538085"
         },
         "record": {
-            "win": 485,
-            "loss": 332,
-            "draw": 51
+            "win": 510,
+            "loss": 352,
+            "draw": 55
         }
     },
     "tactics": {

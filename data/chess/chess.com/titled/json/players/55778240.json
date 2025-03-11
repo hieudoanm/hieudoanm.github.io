@@ -5,9 +5,9 @@
     "name": "Joseph Redpath",
     "username": "xscotlandx",
     "title": "FM",
-    "followers": 26,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/XS",
-    "last_online": 1734182712,
+    "last_online": 1738376492,
     "joined": 1547137105,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2500,
-            "date": 1734109602,
+            "date": 1735348088,
             "rd": 48
         },
         "best": {

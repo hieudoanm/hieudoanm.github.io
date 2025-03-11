@@ -1,13 +1,14 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75618602.d69cc328.200x200o.8925dee7df0c.jpg",
     "player_id": 75618602,
     "@id": "https://api.chess.com/pub/player/kapibara_warri0r",
     "url": "https://www.chess.com/member/Kapibara_Warri0r",
     "name": "Martyna Starosta",
     "username": "kapibara_warri0r",
     "title": "WCM",
-    "followers": 117,
+    "followers": 121,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734008404,
+    "last_online": 1741638403,
     "joined": 1585996482,
     "status": "premium",
     "is_streamer": false,
@@ -31,8 +32,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2095,
-            "date": 1728145581,
-            "rd": 82
+            "date": 1740345818,
+            "rd": 49
         },
         "best": {
             "rating": 2206,
@@ -40,33 +41,33 @@
             "game": "https://www.chess.com/game/live/14842603917"
         },
         "record": {
-            "win": 36,
+            "win": 40,
             "loss": 11,
             "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2157,
-            "date": 1622390824,
-            "rd": 55
+            "rating": 2252,
+            "date": 1737370969,
+            "rd": 78
         },
         "best": {
-            "rating": 2176,
-            "date": 1622384371,
+            "rating": 2301,
+            "date": 1735314531,
             "game": "https://www.chess.com/game/live/16122891099"
         },
         "record": {
-            "win": 89,
-            "loss": 80,
+            "win": 102,
+            "loss": 88,
             "draw": 12
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2441,
-            "date": 1733513008,
-            "rd": 49
+            "rating": 2476,
+            "date": 1740326896,
+            "rd": 52
         },
         "best": {
             "rating": 2513,
@@ -74,9 +75,9 @@
             "game": "https://www.chess.com/game/live/61665663699"
         },
         "record": {
-            "win": 212,
-            "loss": 329,
-            "draw": 40
+            "win": 235,
+            "loss": 345,
+            "draw": 45
         }
     },
     "tactics": {

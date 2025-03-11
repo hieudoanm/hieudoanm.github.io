@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734099345,
+    "last_online": 1740937848,
     "joined": 1720014455,
     "status": "premium",
     "is_streamer": false,
@@ -16,19 +16,19 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2271,
-            "date": 1728215545,
-            "rd": 48
+            "rating": 2303,
+            "date": 1739615552,
+            "rd": 49
         },
         "best": {
-            "rating": 2303,
-            "date": 1724081460,
-            "game": "https://www.chess.com/game/live/117708573085"
+            "rating": 2317,
+            "date": 1738171371,
+            "game": "https://www.chess.com/game/live/131027340831"
         },
         "record": {
-            "win": 46,
-            "loss": 22,
-            "draw": 4
+            "win": 52,
+            "loss": 27,
+            "draw": 5
         }
     },
     "chess_bullet": {
@@ -50,25 +50,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2067,
-            "date": 1729189516,
-            "rd": 77
+            "rating": 2076,
+            "date": 1740769201,
+            "rd": 78
         },
         "best": {
-            "rating": 2090,
-            "date": 1728130631,
-            "game": "https://www.chess.com/game/live/119636414121"
+            "rating": 2109,
+            "date": 1734717152,
+            "game": "https://www.chess.com/game/live/128455999619"
         },
         "record": {
-            "win": 14,
-            "loss": 11,
-            "draw": 0
+            "win": 19,
+            "loss": 16,
+            "draw": 2
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3056,
-            "date": 1728125900
+            "rating": 3429,
+            "date": 1738948893
         },
         "lowest": {
             "rating": 1000,

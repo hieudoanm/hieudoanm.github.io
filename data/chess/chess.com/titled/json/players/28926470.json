@@ -6,10 +6,10 @@
     "name": "Isabelle Ning",
     "username": "squishyminions",
     "title": "WCM",
-    "followers": 102,
+    "followers": 103,
     "country": "https://api.chess.com/pub/country/NZ",
     "location": "Auckland",
-    "last_online": 1734130537,
+    "last_online": 1741337700,
     "joined": 1467683743,
     "status": "premium",
     "is_streamer": false,
@@ -100,10 +100,6 @@
         "best": {
             "total_attempts": 53,
             "score": 50
-        },
-        "daily": {
-            "total_attempts": 43,
-            "score": 40
         }
     }
 }

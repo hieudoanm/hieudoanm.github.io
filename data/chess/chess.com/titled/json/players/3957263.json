@@ -6,9 +6,9 @@
     "name": "Dusan Stojic",
     "username": "gliga",
     "title": "FM",
-    "followers": 56,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734040219,
+    "last_online": 1741653917,
     "joined": 1284130273,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2090,
-            "date": 1727589274,
-            "rd": 72
+            "rating": 2040,
+            "date": 1737766229,
+            "rd": 76
         },
         "best": {
             "rating": 2460,
@@ -63,15 +63,15 @@
             "game": "https://www.chess.com/game/live/3528237808"
         },
         "record": {
-            "win": 54,
-            "loss": 32,
+            "win": 57,
+            "loss": 37,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2556,
-            "date": 1727671761,
+            "date": 1739394725,
             "rd": 49
         },
         "best": {

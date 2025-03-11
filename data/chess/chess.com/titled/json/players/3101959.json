@@ -5,10 +5,10 @@
     "name": "Andrew Samuelson",
     "username": "andrewsamuelson",
     "title": "FM",
-    "followers": 54,
+    "followers": 55,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Virginia",
-    "last_online": 1734060932,
+    "last_online": 1741652187,
     "joined": 1211784314,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2525,
-            "date": 1731297917,
-            "rd": 42
+            "rating": 2503,
+            "date": 1737341681,
+            "rd": 36
         },
         "best": {
             "rating": 2557,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/63955155381"
         },
         "record": {
-            "win": 1067,
-            "loss": 747,
-            "draw": 194
+            "win": 1090,
+            "loss": 767,
+            "draw": 199
         }
     },
     "tactics": {

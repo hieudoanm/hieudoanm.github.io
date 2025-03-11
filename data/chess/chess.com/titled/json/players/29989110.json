@@ -6,10 +6,10 @@
     "name": "Tadej Sakelsek",
     "username": "tadejsakelsek",
     "title": "IM",
-    "followers": 29,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/SI",
     "location": "Maribor",
-    "last_online": 1734030700,
+    "last_online": 1741354410,
     "joined": 1474190426,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1549,
-            "date": 1733840834,
+            "date": 1739284106,
             "rd": 297
         },
         "best": {

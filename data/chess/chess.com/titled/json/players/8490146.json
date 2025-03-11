@@ -6,20 +6,20 @@
     "name": "Luke Harmon-Vellotti",
     "username": "vellottiwizard",
     "title": "IM",
-    "followers": 79,
+    "followers": 78,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Los Angeles",
-    "last_online": 1733277761,
+    "last_online": 1741552862,
     "joined": 1344537959,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 2528,
-            "date": 1733282176,
+            "date": 1740791653,
             "rd": 299
         },
         "best": {

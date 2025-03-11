@@ -6,9 +6,9 @@
     "name": "Becca Lampman",
     "username": "blampman",
     "title": "WCM",
-    "followers": 62,
+    "followers": 63,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733968087,
+    "last_online": 1741675294,
     "joined": 1379127078,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1788,
-            "date": 1731284768,
-            "rd": 55
+            "rating": 1814,
+            "date": 1736729764,
+            "rd": 96
         },
         "best": {
             "rating": 1935,
@@ -27,17 +27,11 @@
             "game": "https://www.chess.com/game/daily/104098356"
         },
         "record": {
-            "win": 567,
+            "win": 568,
             "loss": 321,
             "draw": 64,
-            "time_per_move": 14157,
+            "time_per_move": 14167,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 254,
-            "withdraw": 0,
-            "count": 2,
-            "highest_finish": 2
         }
     },
     "chess960_daily": {
@@ -55,14 +49,8 @@
             "win": 17,
             "loss": 7,
             "draw": 0,
-            "time_per_move": 14157,
+            "time_per_move": 14167,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 254,
-            "withdraw": 0,
-            "count": 2,
-            "highest_finish": 2
         }
     },
     "chess_rapid": {
@@ -101,18 +89,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2438,
-            "date": 1732503596,
-            "rd": 54
+            "rating": 2511,
+            "date": 1735668322,
+            "rd": 46
         },
         "best": {
-            "rating": 2455,
-            "date": 1682017746,
+            "rating": 2533,
+            "date": 1735666231,
             "game": "https://www.chess.com/game/live/108250296579"
         },
         "record": {
-            "win": 4363,
-            "loss": 3576,
+            "win": 4373,
+            "loss": 3588,
             "draw": 492
         }
     },

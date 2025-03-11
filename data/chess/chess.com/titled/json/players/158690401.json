@@ -9,7 +9,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Italy",
-    "last_online": 1730830401,
+    "last_online": 1741190025,
     "joined": 1634765622,
     "status": "premium",
     "is_streamer": false,
@@ -72,7 +72,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2363,
-            "date": 1721313467,
+            "date": 1741193907,
             "rd": 104
         },
         "best": {
@@ -88,8 +88,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2642,
-            "date": 1678451099
+            "rating": 2653,
+            "date": 1741113462
         },
         "lowest": {
             "rating": 1209,

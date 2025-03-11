@@ -9,7 +9,7 @@
     "followers": 47,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Rio de Janeiro",
-    "last_online": 1734042763,
+    "last_online": 1741701729,
     "joined": 1413476723,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2066,
-            "date": 1734059456,
-            "rd": 38
+            "rating": 2198,
+            "date": 1741703289,
+            "rd": 31
         },
         "best": {
             "rating": 2401,
@@ -62,15 +62,15 @@
             "game": "https://www.chess.com/game/live/15702218745"
         },
         "record": {
-            "win": 7835,
-            "loss": 6704,
-            "draw": 1306
+            "win": 7980,
+            "loss": 6805,
+            "draw": 1323
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2926,
-            "date": 1707351427
+            "rating": 3183,
+            "date": 1738371797
         },
         "lowest": {
             "rating": 2014,

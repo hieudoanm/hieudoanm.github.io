@@ -6,9 +6,9 @@
     "name": "Jamshed Isaev",
     "username": "jamik13",
     "title": "IM",
-    "followers": 72,
+    "followers": 73,
     "country": "https://api.chess.com/pub/country/TJ",
-    "last_online": 1731602598,
+    "last_online": 1739545765,
     "joined": 1586446955,
     "status": "premium",
     "is_streamer": false,
@@ -51,18 +51,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2362,
-            "date": 1731175431,
-            "rd": 84
+            "rating": 2371,
+            "date": 1737134021
         },
         "best": {
-            "rating": 2385,
-            "date": 1663172466,
+            "rating": 2386,
+            "date": 1736005729,
             "game": "https://www.chess.com/game/live/5417027371"
         },
         "record": {
-            "win": 440,
-            "loss": 207,
+            "win": 443,
+            "loss": 209,
             "draw": 42
         }
     },

@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/youngtal123",
     "username": "youngtal123",
     "title": "FM",
-    "followers": 135,
+    "followers": 139,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733907232,
+    "last_online": 1741689090,
     "joined": 1501646251,
     "status": "premium",
     "is_streamer": false,
@@ -68,19 +68,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2634,
-            "date": 1733472651,
-            "rd": 47
+            "rating": 2631,
+            "date": 1741600394,
+            "rd": 40
         },
         "best": {
-            "rating": 2683,
-            "date": 1724692640,
-            "game": "https://www.chess.com/game/live/123774681409"
+            "rating": 2694,
+            "date": 1735411164,
+            "game": "https://www.chess.com/game/live/129150156263"
         },
         "record": {
-            "win": 597,
-            "loss": 405,
-            "draw": 70
+            "win": 626,
+            "loss": 436,
+            "draw": 77
         }
     },
     "tactics": {
@@ -97,6 +97,10 @@
         "best": {
             "total_attempts": 57,
             "score": 54
+        },
+        "daily": {
+            "total_attempts": 35,
+            "score": 32
         }
     }
 }

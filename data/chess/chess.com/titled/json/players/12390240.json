@@ -6,10 +6,10 @@
     "name": "Rowelyn-Joy Acedo",
     "username": "kajoyskie",
     "title": "WNM",
-    "followers": 172,
+    "followers": 176,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Dubai, UAE",
-    "last_online": 1734168720,
+    "last_online": 1741607859,
     "joined": 1371661105,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2017,
-            "date": 1733392809,
+            "rating": 2027,
+            "date": 1741682530,
             "rd": 49
         },
         "best": {
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/15767088039"
         },
         "record": {
-            "win": 126,
+            "win": 127,
             "loss": 46,
             "draw": 42
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2062,
-            "date": 1731426668,
-            "rd": 95
+            "rating": 2033,
+            "date": 1739603704,
+            "rd": 105
         },
         "best": {
             "rating": 2221,
@@ -65,14 +65,14 @@
         },
         "record": {
             "win": 152,
-            "loss": 92,
+            "loss": 93,
             "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2260,
-            "date": 1731471519,
+            "date": 1737031882,
             "rd": 59
         },
         "best": {

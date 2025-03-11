@@ -5,20 +5,20 @@
     "name": "Petar Gojkovi\u0107",
     "username": "fantom64",
     "title": "IM",
-    "followers": 125,
+    "followers": 136,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Montenegro",
-    "last_online": 1734161642,
+    "last_online": 1741681799,
     "joined": 1318336875,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1260,
-            "date": 1732136417,
+            "date": 1737841121,
             "rd": 316
         },
         "best": {
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2382,
-            "date": 1733676464,
-            "rd": 16
+            "rating": 2372,
+            "date": 1740249674,
+            "rd": 28
         },
         "best": {
             "rating": 2384,
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/87673976327"
         },
         "record": {
-            "win": 2583,
-            "loss": 2767,
-            "draw": 117
+            "win": 3299,
+            "loss": 3535,
+            "draw": 167
         }
     },
     "chess_blitz": {

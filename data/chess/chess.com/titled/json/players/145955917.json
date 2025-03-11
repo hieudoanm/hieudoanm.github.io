@@ -9,7 +9,7 @@
     "followers": 15,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "Devon",
-    "last_online": 1734134914,
+    "last_online": 1741643683,
     "joined": 1624715493,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1886,
-            "date": 1734178974,
-            "rd": 26
+            "rating": 1848,
+            "date": 1741678162,
+            "rd": 23
         },
         "best": {
             "rating": 2062,
@@ -45,33 +45,33 @@
             "game": "https://www.chess.com/game/live/44837387635"
         },
         "record": {
-            "win": 3856,
-            "loss": 4927,
-            "draw": 496
+            "win": 4281,
+            "loss": 5469,
+            "draw": 539
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2093,
-            "date": 1733266696,
-            "rd": 64
+            "rating": 2221,
+            "date": 1741385663,
+            "rd": 43
         },
         "best": {
             "rating": 2314,
             "date": 1653570753,
-            "game": "https://www.chess.com/game/live/38679854659"
+            "game": "https://www.chess.com/game/live/133633156939"
         },
         "record": {
-            "win": 1082,
-            "loss": 1221,
-            "draw": 150
+            "win": 1126,
+            "loss": 1282,
+            "draw": 156
         }
     },
     "fide": 2056,
     "tactics": {
         "highest": {
-            "rating": 3098,
-            "date": 1676874629
+            "rating": 3132,
+            "date": 1737893645
         },
         "lowest": {
             "rating": 412,

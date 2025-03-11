@@ -9,7 +9,7 @@
     "followers": 11,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Balears",
-    "last_online": 1734169004,
+    "last_online": 1737993415,
     "joined": 1671969551,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2526,
-            "date": 1733063381,
-            "rd": 42
+            "rating": 2552,
+            "date": 1735121103,
+            "rd": 45
         },
         "best": {
             "rating": 2613,
@@ -64,8 +64,8 @@
             "game": "https://www.chess.com/game/live/107185319343"
         },
         "record": {
-            "win": 378,
-            "loss": 257,
+            "win": 386,
+            "loss": 261,
             "draw": 56
         }
     },

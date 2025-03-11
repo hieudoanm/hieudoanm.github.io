@@ -9,7 +9,7 @@
     "followers": 3,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Olomouc",
-    "last_online": 1733897156,
+    "last_online": 1737232815,
     "joined": 1565802757,
     "status": "premium",
     "is_streamer": false,
@@ -30,19 +30,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2068,
-            "date": 1731444492,
-            "rd": 56
+            "rating": 2025,
+            "date": 1737233127,
+            "rd": 51
         },
         "best": {
-            "rating": 2068,
-            "date": 1731444492,
+            "rating": 2107,
+            "date": 1736779126,
             "game": "https://www.chess.com/game/live/114462070397"
         },
         "record": {
-            "win": 399,
-            "loss": 314,
-            "draw": 53
+            "win": 408,
+            "loss": 328,
+            "draw": 56
         }
     },
     "fide": 2150,

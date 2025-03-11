@@ -5,9 +5,9 @@
     "name": "cecil moncur",
     "username": "bahamapapa",
     "title": "FM",
-    "followers": 57,
+    "followers": 66,
     "country": "https://api.chess.com/pub/country/BS",
-    "last_online": 1734182887,
+    "last_online": 1741653388,
     "joined": 1417236599,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1875,
-            "date": 1734155173,
-            "rd": 24
+            "rating": 1920,
+            "date": 1741673977,
+            "rd": 25
         },
         "best": {
             "rating": 2083,
@@ -26,9 +26,9 @@
             "game": "https://www.chess.com/game/live/59077290365"
         },
         "record": {
-            "win": 3273,
-            "loss": 4408,
-            "draw": 970
+            "win": 3540,
+            "loss": 4785,
+            "draw": 1096
         }
     },
     "chess_blitz": {

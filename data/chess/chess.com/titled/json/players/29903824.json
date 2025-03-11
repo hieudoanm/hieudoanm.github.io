@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/29903824.a56ea156.200x200o.e6b041f21c13.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/29903824.e981cbf6.200x200o.5ab6e363bc7f.jpg",
     "player_id": 29903824,
     "@id": "https://api.chess.com/pub/player/assellesbekova",
     "url": "https://www.chess.com/member/AsselLesbekova",
     "name": "Assel Lesbekova",
     "username": "assellesbekova",
     "title": "WCM",
-    "followers": 92,
+    "followers": 90,
     "country": "https://api.chess.com/pub/country/KG",
-    "last_online": 1733702872,
+    "last_online": 1741668258,
     "joined": 1473703042,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2322,
-            "date": 1733888412,
-            "rd": 57
+            "rating": 2248,
+            "date": 1741540487,
+            "rd": 54
         },
         "best": {
             "rating": 2507,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/107370117263"
         },
         "record": {
-            "win": 1211,
-            "loss": 1286,
-            "draw": 165
+            "win": 1230,
+            "loss": 1310,
+            "draw": 167
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2404,
-            "date": 1727756195,
-            "rd": 51
+            "rating": 2392,
+            "date": 1736892456,
+            "rd": 76
         },
         "best": {
             "rating": 2517,
@@ -81,7 +81,7 @@
         },
         "record": {
             "win": 1040,
-            "loss": 936,
+            "loss": 938,
             "draw": 160
         }
     },

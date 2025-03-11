@@ -5,14 +5,14 @@
     "name": "Alfonso Llorente Zaro",
     "username": "fonsofan",
     "title": "IM",
-    "followers": 142,
+    "followers": 155,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734182434,
+    "last_online": 1741699892,
     "joined": 1544174451,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -33,8 +33,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2814,
-            "date": 1733693182,
+            "rating": 2876,
+            "date": 1741311425,
             "rd": 35
         },
         "best": {
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/127102804049"
         },
         "record": {
-            "win": 993,
-            "loss": 429,
-            "draw": 82
+            "win": 1077,
+            "loss": 511,
+            "draw": 97
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2802,
-            "date": 1734090095,
-            "rd": 31
+            "rating": 2832,
+            "date": 1741703451,
+            "rd": 42
         },
         "best": {
             "rating": 2865,
@@ -60,16 +60,16 @@
             "game": "https://www.chess.com/game/live/105229902941"
         },
         "record": {
-            "win": 2226,
-            "loss": 1940,
-            "draw": 637
+            "win": 2296,
+            "loss": 2002,
+            "draw": 644
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3048,
-            "date": 1733781879
+            "rating": 3059,
+            "date": 1737244671
         },
         "lowest": {
             "rating": 1211,

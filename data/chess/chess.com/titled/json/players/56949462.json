@@ -6,10 +6,10 @@
     "name": "Marat Denishev",
     "username": "denishevm",
     "title": "FM",
-    "followers": 151,
+    "followers": 156,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Moscow",
-    "last_online": 1734079790,
+    "last_online": 1741610259,
     "joined": 1549320840,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1820,
-            "date": 1698955207,
+            "date": 1739968909,
             "rd": 333
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2730,
-            "date": 1730804798,
-            "rd": 48
+            "rating": 2722,
+            "date": 1741097073,
+            "rd": 47
         },
         "best": {
             "rating": 2937,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/4009293533"
         },
         "record": {
-            "win": 8633,
-            "loss": 6826,
-            "draw": 1174
+            "win": 8684,
+            "loss": 6861,
+            "draw": 1187
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2664,
-            "date": 1733848793,
+            "rating": 2670,
+            "date": 1741107835,
             "rd": 48
         },
         "best": {
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/127585859665"
         },
         "record": {
-            "win": 3029,
-            "loss": 2292,
-            "draw": 507
+            "win": 3040,
+            "loss": 2300,
+            "draw": 509
         }
     },
     "tactics": {

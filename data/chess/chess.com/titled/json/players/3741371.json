@@ -6,10 +6,10 @@
     "name": "Stepan Papacek",
     "username": "step007",
     "title": "FM",
-    "followers": 33,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Trebon",
-    "last_online": 1734178410,
+    "last_online": 1741694212,
     "joined": 1279974901,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2318,
-            "date": 1733857170,
-            "rd": 43
+            "rating": 2319,
+            "date": 1741450542,
+            "rd": 49
         },
         "best": {
             "rating": 2348,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/125089153951"
         },
         "record": {
-            "win": 94,
-            "loss": 42,
-            "draw": 25
+            "win": 100,
+            "loss": 45,
+            "draw": 27
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1814,
-            "date": 1734185068,
-            "rd": 55
+            "rating": 1806,
+            "date": 1741094066,
+            "rd": 30
         },
         "best": {
             "rating": 2000,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/97453863799"
         },
         "record": {
-            "win": 1222,
-            "loss": 1054,
-            "draw": 27
+            "win": 1354,
+            "loss": 1143,
+            "draw": 32
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2238,
-            "date": 1734170704,
+            "rating": 2149,
+            "date": 1741107974,
             "rd": 27
         },
         "best": {
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/98032785103"
         },
         "record": {
-            "win": 5530,
-            "loss": 4183,
-            "draw": 508
+            "win": 5841,
+            "loss": 4454,
+            "draw": 536
         }
     },
     "fide": 2245,
     "tactics": {
         "highest": {
-            "rating": 3513,
-            "date": 1725478711
+            "rating": 3522,
+            "date": 1739647770
         },
         "lowest": {
             "rating": 1334,

@@ -9,7 +9,7 @@
     "followers": 15,
     "country": "https://api.chess.com/pub/country/SK",
     "location": "Banska Bystrica",
-    "last_online": 1710094373,
+    "last_online": 1740487776,
     "joined": 1509374215,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2042,
-            "date": 1670929702,
-            "rd": 107
+            "rating": 2128,
+            "date": 1740489273,
+            "rd": 170
         },
         "best": {
             "rating": 2182,
@@ -62,7 +62,7 @@
             "game": "https://www.chess.com/game/live/4691027624"
         },
         "record": {
-            "win": 202,
+            "win": 203,
             "loss": 184,
             "draw": 10
         }

@@ -6,9 +6,9 @@
     "name": "Milan Maros",
     "username": "killer64sk",
     "title": "FM",
-    "followers": 41,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/SK",
-    "last_online": 1734121370,
+    "last_online": 1740655957,
     "joined": 1504102494,
     "status": "premium",
     "is_streamer": false,
@@ -71,8 +71,8 @@
     "fide": 2303,
     "tactics": {
         "highest": {
-            "rating": 3507,
-            "date": 1711998856
+            "rating": 3551,
+            "date": 1738959789
         },
         "lowest": {
             "rating": 2179,

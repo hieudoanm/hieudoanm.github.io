@@ -6,9 +6,9 @@
     "name": "Vladimir Lukovic",
     "username": "woolworthsmanly",
     "title": "IM",
-    "followers": 39,
+    "followers": 40,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734036116,
+    "last_online": 1739958781,
     "joined": 1476835791,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2660,
-            "date": 1731935258,
-            "rd": 48
+            "rating": 2667,
+            "date": 1738924842,
+            "rd": 49
         },
         "best": {
             "rating": 2839,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/4726552395"
         },
         "record": {
-            "win": 1232,
+            "win": 1233,
             "loss": 928,
-            "draw": 387
+            "draw": 388
         }
     },
     "tactics": {

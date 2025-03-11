@@ -5,9 +5,9 @@
     "name": "Jean Meunier-Pion",
     "username": "jmpion",
     "title": "CM",
-    "followers": 36,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734011165,
+    "last_online": 1741598810,
     "joined": 1461428589,
     "status": "premium",
     "is_streamer": false,
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2462,
-            "date": 1729029547,
-            "rd": 52
+            "rating": 2399,
+            "date": 1739688868,
+            "rd": 67
         },
         "best": {
             "rating": 2569,
@@ -79,15 +79,15 @@
             "game": "https://www.chess.com/game/live/74380993987"
         },
         "record": {
-            "win": 767,
-            "loss": 701,
+            "win": 777,
+            "loss": 714,
             "draw": 104
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3530,
-            "date": 1733651305
+            "rating": 3661,
+            "date": 1735732442
         },
         "lowest": {
             "rating": 1358,
@@ -96,8 +96,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 52,
-            "score": 49
+            "total_attempts": 55,
+            "score": 52
         }
     }
 }

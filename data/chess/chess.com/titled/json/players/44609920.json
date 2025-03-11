@@ -5,9 +5,9 @@
     "name": "Artem Dobrosmyslov",
     "username": "dobrosmys",
     "title": "FM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734006749,
+    "last_online": 1741622916,
     "joined": 1521916398,
     "status": "premium",
     "is_streamer": false,
@@ -51,7 +51,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2431,
-            "date": 1730243290,
+            "date": 1735056121,
             "rd": 72
         },
         "best": {

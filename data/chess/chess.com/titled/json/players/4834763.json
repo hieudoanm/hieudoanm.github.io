@@ -8,7 +8,7 @@
     "followers": 13,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Rosario",
-    "last_online": 1734020523,
+    "last_online": 1740971441,
     "joined": 1299793039,
     "status": "premium",
     "is_streamer": false,
@@ -34,8 +34,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2538,
-            "date": 1733367437,
+            "rating": 2529,
+            "date": 1741010822,
             "rd": 49
         },
         "best": {
@@ -44,8 +44,8 @@
             "game": "https://www.chess.com/game/live/59689886707"
         },
         "record": {
-            "win": 191,
-            "loss": 141,
+            "win": 192,
+            "loss": 143,
             "draw": 18
         }
     },

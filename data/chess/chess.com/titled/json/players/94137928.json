@@ -5,9 +5,9 @@
     "name": "Mykola Korchynskyi",
     "username": "gunner214",
     "title": "FM",
-    "followers": 51,
+    "followers": 57,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734039583,
+    "last_online": 1741610961,
     "joined": 1603826925,
     "status": "premium",
     "is_streamer": false,
@@ -33,36 +33,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2819,
-            "date": 1732273600,
-            "rd": 45
+            "rating": 2811,
+            "date": 1738429221,
+            "rd": 49
         },
         "best": {
-            "rating": 2819,
-            "date": 1732273600,
+            "rating": 2835,
+            "date": 1736015834,
             "game": "https://www.chess.com/game/live/95883863159"
         },
         "record": {
-            "win": 649,
-            "loss": 506,
+            "win": 658,
+            "loss": 512,
             "draw": 62
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2736,
-            "date": 1733950393,
-            "rd": 37
+            "rating": 2802,
+            "date": 1740603780,
+            "rd": 32
         },
         "best": {
-            "rating": 2754,
-            "date": 1730850262,
-            "game": "https://www.chess.com/game/live/111882162323"
+            "rating": 2835,
+            "date": 1740506523,
+            "game": "https://www.chess.com/game/live/133036137817"
         },
         "record": {
-            "win": 905,
-            "loss": 726,
-            "draw": 130
+            "win": 996,
+            "loss": 788,
+            "draw": 137
         }
     },
     "fide": 2206,

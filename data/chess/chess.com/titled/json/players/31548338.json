@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 15,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734105994,
+    "last_online": 1739896845,
     "joined": 1481473606,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2436,
-            "date": 1734106120,
-            "rd": 34
+            "rating": 2430,
+            "date": 1737432665,
+            "rd": 43
         },
         "best": {
             "rating": 2459,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/38618624001"
         },
         "record": {
-            "win": 1284,
-            "loss": 1038,
-            "draw": 149
+            "win": 1294,
+            "loss": 1046,
+            "draw": 153
         }
     },
     "chess_blitz": {

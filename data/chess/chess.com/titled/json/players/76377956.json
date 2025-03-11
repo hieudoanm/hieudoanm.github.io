@@ -9,7 +9,7 @@
     "followers": 50,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Rio Cuarto",
-    "last_online": 1734133304,
+    "last_online": 1741525141,
     "joined": 1586620214,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2218,
-            "date": 1729634114,
-            "rd": 85
+            "rating": 2271,
+            "date": 1735664054,
+            "rd": 79
         },
         "best": {
             "rating": 2421,
@@ -47,8 +47,8 @@
             "game": "https://www.chess.com/game/live/81035644881"
         },
         "record": {
-            "win": 209,
-            "loss": 163,
+            "win": 214,
+            "loss": 165,
             "draw": 29
         }
     },

@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 5,
     "country": "https://api.chess.com/pub/country/SI",
-    "last_online": 1731193238,
+    "last_online": 1741633001,
     "joined": 1692642382,
     "status": "premium",
     "is_streamer": false,
@@ -34,8 +34,8 @@
     "fide": 2458,
     "tactics": {
         "highest": {
-            "rating": 2472,
-            "date": 1694443581
+            "rating": 2672,
+            "date": 1741634258
         },
         "lowest": {
             "rating": 1000,
@@ -46,6 +46,10 @@
         "best": {
             "total_attempts": 31,
             "score": 28
+        },
+        "daily": {
+            "total_attempts": 23,
+            "score": 20
         }
     }
 }

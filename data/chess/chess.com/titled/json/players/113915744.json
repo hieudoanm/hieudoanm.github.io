@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Brundeen",
     "username": "brundeen",
     "title": "IM",
-    "followers": 21,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/SE",
-    "last_online": 1732521330,
+    "last_online": 1741441570,
     "joined": 1611074476,
     "status": "premium",
     "is_streamer": false,
@@ -48,7 +48,6 @@
             "draw": 5
         }
     },
-    "fide": 2500,
     "tactics": {
         "highest": {
             "rating": 3624,

@@ -5,9 +5,9 @@
     "name": "Hoang Thai Ngoc Nguyen",
     "username": "gamma42016",
     "title": "WCM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733134872,
+    "last_online": 1741660788,
     "joined": 1463236037,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1855,
-            "date": 1680622165,
+            "date": 1736629945,
             "rd": 134
         },
         "best": {
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1691,
-            "date": 1729703423,
-            "rd": 79
+            "rating": 1650,
+            "date": 1737328065,
+            "rd": 60
         },
         "best": {
             "rating": 1815,
@@ -43,8 +43,8 @@
             "game": "https://www.chess.com/game/live/86836784631"
         },
         "record": {
-            "win": 275,
-            "loss": 267,
+            "win": 284,
+            "loss": 279,
             "draw": 10
         }
     },
@@ -80,6 +80,10 @@
         "best": {
             "total_attempts": 46,
             "score": 43
+        },
+        "daily": {
+            "total_attempts": 26,
+            "score": 23
         }
     }
 }

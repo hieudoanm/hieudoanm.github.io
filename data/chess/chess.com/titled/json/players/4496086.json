@@ -6,9 +6,9 @@
     "name": "Michael Shahade",
     "username": "michaelshahade",
     "title": "FM",
-    "followers": 180,
+    "followers": 188,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734139988,
+    "last_online": 1741673345,
     "joined": 1294039117,
     "status": "premium",
     "is_streamer": false,
@@ -17,29 +17,23 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 400,
-            "date": 1733905624,
-            "rd": 350
+            "rating": 353,
+            "date": 1737841093,
+            "rd": 302
         },
         "record": {
             "win": 7,
-            "loss": 37,
+            "loss": 39,
             "draw": 0,
-            "time_per_move": 292552,
-            "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 2052
+            "time_per_move": 296562,
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2204,
-            "date": 1734141055,
-            "rd": 31
+            "rating": 2158,
+            "date": 1741674523,
+            "rd": 36
         },
         "best": {
             "rating": 2323,
@@ -47,9 +41,9 @@
             "game": "https://www.chess.com/game/live/82498922669"
         },
         "record": {
-            "win": 1498,
-            "loss": 952,
-            "draw": 1048
+            "win": 1616,
+            "loss": 1039,
+            "draw": 1150
         }
     },
     "chess_bullet": {

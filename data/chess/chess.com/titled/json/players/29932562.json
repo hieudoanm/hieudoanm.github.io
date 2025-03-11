@@ -6,10 +6,10 @@
     "name": "Eneasz Wiewi\u00f3ra",
     "username": "eneasz",
     "title": "FM",
-    "followers": 2716,
+    "followers": 2759,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Bielsko-Bia\u0142a",
-    "last_online": 1734166848,
+    "last_online": 1741630720,
     "joined": 1473868968,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1862,
-            "date": 1734110091,
+            "date": 1741623433,
             "rd": 184
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 10,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 18840,
+            "time_per_move": 20211,
             "timeout_percent": 0
         }
     },
@@ -50,14 +50,14 @@
             "win": 2,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 18840,
+            "time_per_move": 20211,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2209,
-            "date": 1734110935,
+            "date": 1741629188,
             "rd": 49
         },
         "best": {
@@ -74,7 +74,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2656,
-            "date": 1733511454,
+            "date": 1741373960,
             "rd": 49
         },
         "best": {
@@ -91,7 +91,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2697,
-            "date": 1734116155,
+            "date": 1741634923,
             "rd": 57
         },
         "best": {

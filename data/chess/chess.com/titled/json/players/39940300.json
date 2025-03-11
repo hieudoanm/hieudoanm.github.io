@@ -6,19 +6,19 @@
     "name": "Kelvin S\u00e1nchez",
     "username": "francescols",
     "title": "FM",
-    "followers": 500,
+    "followers": 514,
     "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1733938033,
+    "last_online": 1740194456,
     "joined": 1509476976,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1983,
-            "date": 1705665450,
+            "date": 1737560208,
             "rd": 66
         },
         "best": {
@@ -32,12 +32,6 @@
             "draw": 11,
             "time_per_move": 20700,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 19
         }
     },
     "chess_rapid": {
@@ -59,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2527,
-            "date": 1733946815,
-            "rd": 25
+            "rating": 2700,
+            "date": 1736670674,
+            "rd": 11
         },
         "best": {
-            "rating": 2678,
-            "date": 1725231799,
-            "game": "https://www.chess.com/game/live/108672104227"
+            "rating": 2776,
+            "date": 1736126138,
+            "game": "https://www.chess.com/game/live/129864580465"
         },
         "record": {
-            "win": 1387,
-            "loss": 1237,
-            "draw": 161
+            "win": 2344,
+            "loss": 2071,
+            "draw": 286
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2567,
-            "date": 1733854160,
-            "rd": 45
+            "rating": 2702,
+            "date": 1737945181,
+            "rd": 37
         },
         "best": {
             "rating": 2703,
@@ -86,9 +80,9 @@
             "game": "https://www.chess.com/game/live/5812908490"
         },
         "record": {
-            "win": 3306,
-            "loss": 2966,
-            "draw": 614
+            "win": 3427,
+            "loss": 3042,
+            "draw": 633
         }
     },
     "fide": 2318,

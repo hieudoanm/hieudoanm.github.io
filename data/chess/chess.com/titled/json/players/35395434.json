@@ -8,7 +8,7 @@
     "title": "WFM",
     "followers": 14,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734159599,
+    "last_online": 1741623432,
     "joined": 1494338852,
     "status": "premium",
     "is_streamer": false,
@@ -81,10 +81,6 @@
         "best": {
             "total_attempts": 56,
             "score": 53
-        },
-        "daily": {
-            "total_attempts": 17,
-            "score": 16
         }
     }
 }

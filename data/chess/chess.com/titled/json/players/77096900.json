@@ -6,10 +6,10 @@
     "name": "Nayem haque",
     "username": "nayemhaque22",
     "title": "FM",
-    "followers": 475,
+    "followers": 771,
     "country": "https://api.chess.com/pub/country/BD",
-    "location": "Dhaka",
-    "last_online": 1734108467,
+    "location": "Sirajganj",
+    "last_online": 1741561662,
     "joined": 1587222548,
     "status": "premium",
     "is_streamer": false,
@@ -68,26 +68,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2265,
-            "date": 1734109124,
-            "rd": 56
+            "rating": 2368,
+            "date": 1741457768,
+            "rd": 30
         },
         "best": {
-            "rating": 2282,
-            "date": 1732989609,
-            "game": "https://www.chess.com/game/live/126727217901"
+            "rating": 2438,
+            "date": 1740248838,
+            "game": "https://www.chess.com/game/live/130959001293"
         },
         "record": {
-            "win": 402,
-            "loss": 349,
-            "draw": 37
+            "win": 505,
+            "loss": 519,
+            "draw": 48
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2278,
-            "date": 1734110347,
-            "rd": 39
+            "rating": 2374,
+            "date": 1741109535,
+            "rd": 48
         },
         "best": {
             "rating": 2495,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/12677165307"
         },
         "record": {
-            "win": 1410,
-            "loss": 1448,
-            "draw": 186
+            "win": 1443,
+            "loss": 1499,
+            "draw": 188
         }
     },
     "fide": 2190,

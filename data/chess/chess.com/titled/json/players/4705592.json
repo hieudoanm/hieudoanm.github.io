@@ -6,9 +6,9 @@
     "name": "Axel Scheffner",
     "username": "fq-system",
     "title": "FM",
-    "followers": 433,
+    "followers": 490,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733727810,
+    "last_online": 1741673004,
     "joined": 1297595960,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2102,
-            "date": 1730029061,
-            "rd": 48
+            "rating": 2093,
+            "date": 1741673481,
+            "rd": 49
         },
         "best": {
             "rating": 2279,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/36270542711"
         },
         "record": {
-            "win": 252,
-            "loss": 58,
+            "win": 270,
+            "loss": 61,
             "draw": 15
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2102,
-            "date": 1734113228,
-            "rd": 56
+            "rating": 2361,
+            "date": 1741636221,
+            "rd": 35
         },
         "best": {
             "rating": 2551,
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/133272944"
         },
         "record": {
-            "win": 10007,
-            "loss": 5664,
-            "draw": 538
+            "win": 10205,
+            "loss": 5766,
+            "draw": 559
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2279,
-            "date": 1734178173,
-            "rd": 27
+            "rating": 2272,
+            "date": 1741605908,
+            "rd": 32
         },
         "best": {
-            "rating": 2453,
-            "date": 1560081307,
+            "rating": 2515,
+            "date": 1737353097,
             "game": "https://www.chess.com/game/live/37350607789"
         },
         "record": {
-            "win": 10686,
-            "loss": 6266,
-            "draw": 907
+            "win": 11181,
+            "loss": 6474,
+            "draw": 950
         }
     },
     "tactics": {

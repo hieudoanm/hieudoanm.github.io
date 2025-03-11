@@ -6,9 +6,9 @@
     "name": "Carlos Godoy",
     "username": "carlos-godoy",
     "title": "CM",
-    "followers": 52,
+    "followers": 55,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734034054,
+    "last_online": 1741204223,
     "joined": 1600109825,
     "status": "premium",
     "is_streamer": false,
@@ -36,19 +36,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2085,
-            "date": 1733846967,
-            "rd": 52
+            "rating": 2198,
+            "date": 1741104762,
+            "rd": 47
         },
         "best": {
-            "rating": 2194,
-            "date": 1601724055,
-            "game": "https://www.chess.com/game/live/110043144703"
+            "rating": 2201,
+            "date": 1738948462,
+            "game": "https://www.chess.com/game/live/134240341029"
         },
         "record": {
-            "win": 233,
-            "loss": 183,
-            "draw": 25
+            "win": 266,
+            "loss": 233,
+            "draw": 33
         }
     },
     "tactics": {

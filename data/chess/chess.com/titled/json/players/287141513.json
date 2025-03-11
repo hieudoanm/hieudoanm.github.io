@@ -6,14 +6,14 @@
     "name": "Ronniel Abraham Ramirez Cabreja",
     "username": "tacticator29",
     "title": "FM",
-    "followers": 49,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1732973267,
+    "last_online": 1741062801,
     "joined": 1684592646,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -51,19 +51,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2729,
-            "date": 1731812059,
-            "rd": 38
+            "rating": 2813,
+            "date": 1737402859
         },
         "best": {
-            "rating": 2800,
-            "date": 1720549408,
+            "rating": 2805,
+            "date": 1737162470,
             "game": "https://www.chess.com/game/live/116128831379"
         },
         "record": {
-            "win": 338,
-            "loss": 361,
-            "draw": 82
+            "win": 378,
+            "loss": 392,
+            "draw": 91
         }
     },
     "fide": 2271,

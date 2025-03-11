@@ -5,9 +5,9 @@
     "name": "Ravan Aliyev",
     "username": "revan_2002",
     "title": "IM",
-    "followers": 11,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/AZ",
-    "last_online": 1733948225,
+    "last_online": 1741535396,
     "joined": 1705348617,
     "status": "premium",
     "is_streamer": false,
@@ -33,26 +33,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2782,
-            "date": 1733954321,
-            "rd": 37
+            "rating": 2801,
+            "date": 1741537149,
+            "rd": 35
         },
         "best": {
             "rating": 2874,
             "date": 1730415754,
-            "game": "https://www.chess.com/game/live/112465304807"
+            "game": "https://www.chess.com/game/live/132450031623"
         },
         "record": {
-            "win": 523,
-            "loss": 484,
-            "draw": 115
+            "win": 698,
+            "loss": 692,
+            "draw": 155
         }
     },
     "fide": 2311,
     "tactics": {
         "highest": {
-            "rating": 2802,
-            "date": 1711857143
+            "rating": 3004,
+            "date": 1739020019
         },
         "lowest": {
             "rating": 1000,
@@ -61,8 +61,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 57,
-            "score": 55
+            "total_attempts": 71,
+            "score": 68
         }
     }
 }

@@ -5,10 +5,10 @@
     "name": "Wagner Martins Madeira",
     "username": "quincasborb",
     "title": "FM",
-    "followers": 31,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "S\u00e3o Paulo",
-    "last_online": 1733492859,
+    "last_online": 1740075782,
     "joined": 1402228398,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2179,
-            "date": 1734014721,
-            "rd": 33
+            "rating": 2217,
+            "date": 1741530281
         },
         "best": {
             "rating": 2313,
@@ -61,9 +60,9 @@
             "game": "https://www.chess.com/game/live/116039998363"
         },
         "record": {
-            "win": 6153,
-            "loss": 5296,
-            "draw": 776
+            "win": 6312,
+            "loss": 5435,
+            "draw": 798
         }
     },
     "tactics": {

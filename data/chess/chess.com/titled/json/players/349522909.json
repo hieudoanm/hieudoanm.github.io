@@ -6,9 +6,9 @@
     "name": "David Ale Hernandez Santos",
     "username": "davidalhesa2007",
     "title": "CM",
-    "followers": 44,
+    "followers": 56,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1734145445,
+    "last_online": 1741627016,
     "joined": 1709853617,
     "status": "premium",
     "is_streamer": false,
@@ -54,35 +54,35 @@
     "chess_bullet": {
         "last": {
             "rating": 2101,
-            "date": 1733894024,
-            "rd": 22
+            "date": 1741481552,
+            "rd": 28
         },
         "best": {
-            "rating": 2208,
-            "date": 1724083643,
+            "rating": 2244,
+            "date": 1738386202,
             "game": "https://www.chess.com/game/live/126122352411"
         },
         "record": {
-            "win": 1354,
-            "loss": 1256,
-            "draw": 141
+            "win": 1563,
+            "loss": 1531,
+            "draw": 167
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2015,
-            "date": 1734146733,
-            "rd": 26
+            "rating": 2102,
+            "date": 1741575690,
+            "rd": 29
         },
         "best": {
             "rating": 2141,
             "date": 1725507783,
-            "game": "https://www.chess.com/game/live/108252665419"
+            "game": "https://www.chess.com/game/live/131236235857"
         },
         "record": {
-            "win": 602,
-            "loss": 593,
-            "draw": 87
+            "win": 756,
+            "loss": 745,
+            "draw": 102
         }
     },
     "tactics": {
@@ -99,10 +99,6 @@
         "best": {
             "total_attempts": 60,
             "score": 57
-        },
-        "daily": {
-            "total_attempts": 35,
-            "score": 34
         }
     }
 }

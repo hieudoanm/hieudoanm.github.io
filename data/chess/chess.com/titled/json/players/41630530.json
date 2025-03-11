@@ -5,9 +5,9 @@
     "name": "Roberto Carlos Gomez Ledo",
     "username": "elcandado",
     "title": "IM",
-    "followers": 63,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734109267,
+    "last_online": 1741622782,
     "joined": 1514118768,
     "status": "premium",
     "is_streamer": false,
@@ -73,8 +73,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 88,
-            "score": 85
+            "total_attempts": 89,
+            "score": 86
         }
     }
 }

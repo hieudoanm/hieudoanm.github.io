@@ -5,9 +5,9 @@
     "name": "Flawian Krawczyk",
     "username": "flawian2008",
     "title": "CM",
-    "followers": 42,
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734171356,
+    "last_online": 1740245902,
     "joined": 1585495082,
     "status": "premium",
     "is_streamer": false,
@@ -16,8 +16,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2341,
-            "date": 1733512954,
+            "rating": 2301,
+            "date": 1737748025,
             "rd": 49
         },
         "best": {
@@ -26,43 +26,42 @@
             "game": "https://www.chess.com/game/live/4892280447"
         },
         "record": {
-            "win": 34,
-            "loss": 15,
-            "draw": 6
+            "win": 39,
+            "loss": 17,
+            "draw": 7
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2671,
-            "date": 1734181625,
-            "rd": 33
+            "rating": 2663,
+            "date": 1738761479
         },
         "best": {
-            "rating": 2671,
-            "date": 1734181625,
-            "game": "https://www.chess.com/game/live/105558105471"
+            "rating": 2707,
+            "date": 1734547585,
+            "game": "https://www.chess.com/game/live/128211535285"
         },
         "record": {
-            "win": 348,
-            "loss": 263,
-            "draw": 39
+            "win": 377,
+            "loss": 287,
+            "draw": 40
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2588,
-            "date": 1733172721,
-            "rd": 48
+            "rating": 2659,
+            "date": 1740250134,
+            "rd": 38
         },
         "best": {
-            "rating": 2658,
-            "date": 1723638456,
+            "rating": 2675,
+            "date": 1739092780,
             "game": "https://www.chess.com/game/live/122743462803"
         },
         "record": {
-            "win": 476,
-            "loss": 381,
-            "draw": 55
+            "win": 549,
+            "loss": 428,
+            "draw": 62
         }
     },
     "tactics": {
@@ -79,10 +78,6 @@
         "best": {
             "total_attempts": 56,
             "score": 53
-        },
-        "daily": {
-            "total_attempts": 16,
-            "score": 15
         }
     }
 }

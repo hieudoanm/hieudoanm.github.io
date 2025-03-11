@@ -6,9 +6,9 @@
     "name": "Agustin Bonaveri",
     "username": "joselito22",
     "title": "FM",
-    "followers": 31,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1733590044,
+    "last_online": 1741128250,
     "joined": 1418081658,
     "status": "premium",
     "is_streamer": false,
@@ -34,25 +34,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2166,
-            "date": 1733176521,
-            "rd": 77
+            "rating": 2272,
+            "date": 1741133171,
+            "rd": 53
         },
         "best": {
             "rating": 2365,
             "date": 1712098790,
-            "game": "https://www.chess.com/game/live/105813089753"
+            "game": "https://www.chess.com/game/live/134237956823"
         },
         "record": {
-            "win": 2795,
-            "loss": 1965,
-            "draw": 404
+            "win": 2810,
+            "loss": 1986,
+            "draw": 407
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2498,
-            "date": 1729008057
+            "rating": 2631,
+            "date": 1738692768
         },
         "lowest": {
             "rating": 1362,

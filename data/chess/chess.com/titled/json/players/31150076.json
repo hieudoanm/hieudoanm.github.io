@@ -6,10 +6,10 @@
     "name": "Lukas Dotzer",
     "username": "lukas2010",
     "title": "FM",
-    "followers": 25,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/AT",
     "location": "Vienna",
-    "last_online": 1734165027,
+    "last_online": 1741701380,
     "joined": 1480081354,
     "status": "premium",
     "is_streamer": false,
@@ -32,42 +32,42 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2224,
-            "date": 1733953067,
+            "rating": 2245,
+            "date": 1735126785,
             "rd": 49
         },
         "best": {
-            "rating": 2228,
-            "date": 1731603418,
-            "game": "https://www.chess.com/game/live/125340536095"
+            "rating": 2245,
+            "date": 1735126785,
+            "game": "https://www.chess.com/game/live/128552549297"
         },
         "record": {
-            "win": 450,
+            "win": 453,
             "loss": 232,
             "draw": 24
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2819,
-            "date": 1732657383,
-            "rd": 45
+            "rating": 2826,
+            "date": 1738082549,
+            "rd": 47
         },
         "best": {
-            "rating": 2819,
-            "date": 1732657383,
+            "rating": 2846,
+            "date": 1734905452,
             "game": "https://www.chess.com/game/live/122468064319"
         },
         "record": {
-            "win": 407,
-            "loss": 164,
-            "draw": 32
+            "win": 422,
+            "loss": 171,
+            "draw": 34
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2524,
-            "date": 1680022923,
+            "date": 1738134472,
             "rd": 75
         },
         "best": {

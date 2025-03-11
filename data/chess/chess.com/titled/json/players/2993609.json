@@ -6,9 +6,9 @@
     "name": "Jack Rudd",
     "username": "jackrudd",
     "title": "IM",
-    "followers": 482,
+    "followers": 502,
     "country": "https://api.chess.com/pub/country/TT",
-    "last_online": 1734184389,
+    "last_online": 1741669277,
     "joined": 1211782828,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2035,
-            "date": 1734184566,
-            "rd": 79
+            "rating": 2043,
+            "date": 1741696084,
+            "rd": 84
         },
         "best": {
             "rating": 2181,
@@ -27,17 +27,30 @@
             "game": "https://www.chess.com/game/daily/412861183"
         },
         "record": {
-            "win": 780,
-            "loss": 49,
-            "draw": 11,
-            "time_per_move": 10541,
+            "win": 801,
+            "loss": 51,
+            "draw": 14,
+            "time_per_move": 10614,
             "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 497,
+            "date": 1736971263,
+            "rd": 265
         },
-        "tournament": {
-            "points": 457,
-            "withdraw": 0,
-            "count": 3,
-            "highest_finish": 1
+        "best": {
+            "rating": 1200,
+            "date": 1211782828,
+            "game": "https://www.chess.com/game/daily/718865475"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 10614,
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {

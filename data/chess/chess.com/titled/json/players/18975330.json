@@ -9,7 +9,7 @@
     "followers": 33,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Oslo",
-    "last_online": 1734150417,
+    "last_online": 1741646890,
     "joined": 1411207923,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1936,
-            "date": 1734151334,
-            "rd": 25
+            "rating": 2071,
+            "date": 1741633755,
+            "rd": 38
         },
         "best": {
             "rating": 2261,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/5448135832"
         },
         "record": {
-            "win": 4610,
-            "loss": 3750,
-            "draw": 185
+            "win": 4762,
+            "loss": 3846,
+            "draw": 193
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2200,
-            "date": 1733177204,
-            "rd": 38
+            "rating": 2183,
+            "date": 1741647142,
+            "rd": 48
         },
         "best": {
             "rating": 2323,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/4726552558"
         },
         "record": {
-            "win": 5020,
-            "loss": 4495,
-            "draw": 456
+            "win": 5033,
+            "loss": 4508,
+            "draw": 459
         }
     },
     "fide": 2335,
     "tactics": {
         "highest": {
-            "rating": 3231,
-            "date": 1704516250
+            "rating": 3235,
+            "date": 1738702286
         },
         "lowest": {
             "rating": 1361,

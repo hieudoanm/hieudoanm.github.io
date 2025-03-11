@@ -6,9 +6,9 @@
     "name": "Liwia Jarocka",
     "username": "picturesquecheck",
     "title": "FM",
-    "followers": 132,
+    "followers": 138,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734087547,
+    "last_online": 1741622619,
     "joined": 1556377925,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1722,
-            "date": 1681941587,
-            "rd": 214
+            "rating": 1751,
+            "date": 1741210660,
+            "rd": 240
         },
         "best": {
             "rating": 2215,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/4007989934"
         },
         "record": {
-            "win": 12,
+            "win": 14,
             "loss": 4,
             "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2319,
-            "date": 1727638752,
-            "rd": 73
+            "rating": 2265,
+            "date": 1734197296,
+            "rd": 85
         },
         "best": {
             "rating": 2423,
@@ -45,25 +45,25 @@
         },
         "record": {
             "win": 607,
-            "loss": 673,
+            "loss": 675,
             "draw": 87
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2458,
-            "date": 1734088235,
-            "rd": 40
+            "rating": 2496,
+            "date": 1741130879,
+            "rd": 39
         },
         "best": {
-            "rating": 2546,
-            "date": 1724184641,
+            "rating": 2549,
+            "date": 1738364416,
             "game": "https://www.chess.com/game/live/121731021285"
         },
         "record": {
-            "win": 2728,
-            "loss": 2827,
-            "draw": 654
+            "win": 2818,
+            "loss": 2942,
+            "draw": 679
         }
     },
     "tactics": {

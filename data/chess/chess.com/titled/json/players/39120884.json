@@ -6,14 +6,14 @@
     "name": "Ras Malaku Lorne",
     "username": "rassanti",
     "title": "FM",
-    "followers": 106,
+    "followers": 107,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1733576368,
+    "last_online": 1741654601,
     "joined": 1506964973,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1986,
-            "date": 1732755839,
-            "rd": 111
+            "rating": 1944,
+            "date": 1736034553,
+            "rd": 63
         },
         "best": {
             "rating": 2198,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/5488535485"
         },
         "record": {
-            "win": 348,
-            "loss": 279,
+            "win": 367,
+            "loss": 291,
             "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2355,
-            "date": 1732773619,
-            "rd": 42
+            "rating": 2315,
+            "date": 1736037713,
+            "rd": 54
         },
         "best": {
             "rating": 2670,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/5449940321"
         },
         "record": {
-            "win": 299,
-            "loss": 171,
-            "draw": 29
+            "win": 304,
+            "loss": 173,
+            "draw": 30
         }
     },
     "fide": 2117,
     "tactics": {
         "highest": {
-            "rating": 3053,
-            "date": 1718327149
+            "rating": 3089,
+            "date": 1740864373
         },
         "lowest": {
             "rating": 1216,

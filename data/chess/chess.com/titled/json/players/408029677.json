@@ -5,10 +5,10 @@
     "name": "Debaraj Chatterjee",
     "username": "bolu-2022",
     "title": "FM",
-    "followers": 0,
+    "followers": 1,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Barishal",
-    "last_online": 1733932975,
+    "last_online": 1738418973,
     "joined": 1733749043,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "fide": 2147,
     "tactics": {
         "highest": {
-            "rating": 2338,
-            "date": 1733934651
+            "rating": 3571,
+            "date": 1736106751
         },
         "lowest": {
             "rating": 1000,

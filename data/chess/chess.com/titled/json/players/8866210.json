@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/kuenkuen1989",
     "username": "kuenkuen1989",
     "title": "CM",
-    "followers": 172,
+    "followers": 176,
     "country": "https://api.chess.com/pub/country/HK",
-    "last_online": 1734163586,
+    "last_online": 1741592828,
     "joined": 1347363607,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1199,
-            "date": 1734163232,
-            "rd": 81
+            "rating": 1108,
+            "date": 1741596813,
+            "rd": 92
         },
         "best": {
             "rating": 2229,
@@ -41,8 +41,8 @@
         },
         "record": {
             "win": 195,
-            "loss": 207,
-            "draw": 31
+            "loss": 210,
+            "draw": 32
         }
     },
     "chess_bullet": {
@@ -64,19 +64,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2401,
-            "date": 1734176182,
-            "rd": 18
+            "rating": 2471,
+            "date": 1741691013,
+            "rd": 21
         },
         "best": {
-            "rating": 2548,
-            "date": 1720613866,
+            "rating": 2597,
+            "date": 1739147416,
             "game": "https://www.chess.com/game/live/125206725857"
         },
         "record": {
-            "win": 23846,
-            "loss": 29974,
-            "draw": 5089
+            "win": 24487,
+            "loss": 30700,
+            "draw": 5233
         }
     },
     "tactics": {
@@ -93,10 +93,6 @@
         "best": {
             "total_attempts": 53,
             "score": 50
-        },
-        "daily": {
-            "total_attempts": 12,
-            "score": 9
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Arman Erzhanov",
     "username": "chessdreamer2020",
     "title": "FM",
-    "followers": 97,
+    "followers": 99,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "Moscow",
-    "last_online": 1733845403,
+    "last_online": 1741539154,
     "joined": 1592172949,
     "status": "premium",
     "is_streamer": false,
@@ -27,7 +27,7 @@
             "loss": 6,
             "draw": 0,
             "time_per_move": 64095,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2517,
-            "date": 1733895127,
-            "rd": 34
+            "rating": 2535,
+            "date": 1740528583,
+            "rd": 31
         },
         "best": {
             "rating": 2654,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/102788517035"
         },
         "record": {
-            "win": 1154,
-            "loss": 897,
-            "draw": 185
+            "win": 1301,
+            "loss": 1028,
+            "draw": 204
         }
     },
     "tactics": {
@@ -95,10 +95,6 @@
         "best": {
             "total_attempts": 74,
             "score": 71
-        },
-        "daily": {
-            "total_attempts": 44,
-            "score": 41
         }
     }
 }

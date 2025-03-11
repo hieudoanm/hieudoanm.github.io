@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 10,
     "country": "https://api.chess.com/pub/country/MG",
-    "last_online": 1733956455,
+    "last_online": 1741702909,
     "joined": 1530209840,
     "status": "premium",
     "is_streamer": false,
@@ -64,19 +64,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2609,
-            "date": 1726592815,
-            "rd": 39
+            "rating": 2570,
+            "date": 1741133043,
+            "rd": 44
         },
         "best": {
-            "rating": 2609,
-            "date": 1726592815,
-            "game": "https://www.chess.com/game/live/120331249591"
+            "rating": 2641,
+            "date": 1739899789,
+            "game": "https://www.chess.com/game/live/132446457663"
         },
         "record": {
-            "win": 348,
-            "loss": 223,
-            "draw": 26
+            "win": 373,
+            "loss": 242,
+            "draw": 31
         }
     },
     "fide": 2217,
@@ -94,6 +94,10 @@
         "best": {
             "total_attempts": 75,
             "score": 72
+        },
+        "daily": {
+            "total_attempts": 63,
+            "score": 60
         }
     }
 }

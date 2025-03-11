@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/kvissv",
     "username": "kvissv",
     "title": "WCM",
-    "followers": 17,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/CL",
-    "last_online": 1734107923,
+    "last_online": 1741041192,
     "joined": 1586640776,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2178,
-            "date": 1673810392,
-            "rd": 48
+            "rating": 2105,
+            "date": 1737504956,
+            "rd": 148
         },
         "best": {
             "rating": 2191,
@@ -60,7 +60,7 @@
         },
         "record": {
             "win": 83,
-            "loss": 59,
+            "loss": 60,
             "draw": 7
         }
     },
@@ -77,8 +77,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 59,
+            "score": 56
         }
     }
 }

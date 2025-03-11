@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/TG",
-    "last_online": 1734174955,
+    "last_online": 1741521771,
     "joined": 1587029243,
     "status": "premium",
     "is_streamer": false,
@@ -68,9 +68,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2389,
-            "date": 1734175530,
-            "rd": 50
+            "rating": 2401,
+            "date": 1741467496,
+            "rd": 42
         },
         "best": {
             "rating": 2570,
@@ -78,9 +78,9 @@
             "game": "https://www.chess.com/game/live/116345472985"
         },
         "record": {
-            "win": 305,
-            "loss": 271,
-            "draw": 48
+            "win": 346,
+            "loss": 310,
+            "draw": 54
         }
     },
     "tactics": {

@@ -1,13 +1,14 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/296487955.20901d09.200x200o.c8aa1676faeb.jpg",
     "player_id": 296487955,
     "@id": "https://api.chess.com/pub/player/legit",
     "url": "https://www.chess.com/member/Legit",
     "name": "Krzysztof Raczek",
     "username": "legit",
     "title": "IM",
-    "followers": 131,
+    "followers": 136,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734131828,
+    "last_online": 1739663818,
     "joined": 1687941252,
     "status": "premium",
     "is_streamer": false,
@@ -16,8 +17,8 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1802,
-            "date": 1733775292,
+            "rating": 1635,
+            "date": 1740590783,
             "rd": 127
         },
         "best": {
@@ -27,16 +28,16 @@
         },
         "record": {
             "win": 10,
-            "loss": 1,
+            "loss": 4,
             "draw": 2,
-            "time_per_move": 83167,
-            "timeout_percent": 0
+            "time_per_move": 81788,
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2472,
-            "date": 1716759091,
+            "date": 1739182605,
             "rd": 49
         },
         "best": {
@@ -52,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2836,
-            "date": 1733825867,
-            "rd": 28
+            "rating": 2901,
+            "date": 1739537314,
+            "rd": 33
         },
         "best": {
             "rating": 2991,
@@ -62,33 +63,33 @@
             "game": "https://www.chess.com/game/live/88280480035"
         },
         "record": {
-            "win": 754,
-            "loss": 414,
-            "draw": 80
+            "win": 884,
+            "loss": 459,
+            "draw": 96
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2817,
-            "date": 1733932283,
-            "rd": 26
+            "rating": 3000,
+            "date": 1739173493,
+            "rd": 30
         },
         "best": {
-            "rating": 2918,
-            "date": 1709499528,
-            "game": "https://www.chess.com/game/live/119140820583"
+            "rating": 3000,
+            "date": 1738881219,
+            "game": "https://www.chess.com/game/live/132450031645"
         },
         "record": {
-            "win": 690,
-            "loss": 430,
-            "draw": 138
+            "win": 789,
+            "loss": 474,
+            "draw": 160
         }
     },
-    "fide": 2442,
+    "fide": 2428,
     "tactics": {
         "highest": {
-            "rating": 3455,
-            "date": 1709981134
+            "rating": 3570,
+            "date": 1738883488
         },
         "lowest": {
             "rating": 1000,

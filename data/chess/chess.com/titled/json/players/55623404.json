@@ -5,9 +5,9 @@
     "name": "Juan Sebastian Melian",
     "username": "bastiandash",
     "title": "FM",
-    "followers": 87,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/PY",
-    "last_online": 1734144194,
+    "last_online": 1741629537,
     "joined": 1546820247,
     "status": "premium",
     "is_streamer": false,
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2634,
-            "date": 1730383660,
-            "rd": 40
+            "rating": 2702,
+            "date": 1741119550,
+            "rd": 32
         },
         "best": {
             "rating": 2785,
             "date": 1724521358,
-            "game": "https://www.chess.com/game/live/111003068285"
+            "game": "https://www.chess.com/game/live/133986553895"
         },
         "record": {
-            "win": 4787,
-            "loss": 4026,
-            "draw": 529
+            "win": 4925,
+            "loss": 4153,
+            "draw": 542
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2624,
-            "date": 1734153814,
-            "rd": 37
+            "rating": 2666,
+            "date": 1741104013,
+            "rd": 29
         },
         "best": {
             "rating": 2769,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/47748079423"
         },
         "record": {
-            "win": 4421,
-            "loss": 3604,
-            "draw": 579
+            "win": 4603,
+            "loss": 3752,
+            "draw": 603
         }
     },
     "tactics": {
@@ -96,12 +96,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 61,
-            "score": 58
-        },
-        "daily": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 65,
+            "score": 62
         }
     }
 }

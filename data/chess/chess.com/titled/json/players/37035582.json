@@ -7,26 +7,26 @@
     "title": "FM",
     "followers": 21,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1729085412,
+    "last_online": 1740349650,
     "joined": 1500065099,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2370,
-            "date": 1716661192,
-            "rd": 155
+            "rating": 2518,
+            "date": 1737323331,
+            "rd": 146
         },
         "best": {
-            "rating": 2370,
-            "date": 1716661192,
+            "rating": 2518,
+            "date": 1737323331,
             "game": "https://www.chess.com/game/live/3047304607"
         },
         "record": {
-            "win": 2563,
+            "win": 2565,
             "loss": 2643,
             "draw": 460
         }

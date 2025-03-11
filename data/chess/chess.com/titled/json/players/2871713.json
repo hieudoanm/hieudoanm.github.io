@@ -8,7 +8,7 @@
     "followers": 40,
     "country": "https://api.chess.com/pub/country/CH",
     "location": "Zurich",
-    "last_online": 1733859945,
+    "last_online": 1739809910,
     "joined": 1275170472,
     "status": "premium",
     "is_streamer": false,
@@ -89,19 +89,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2389,
-            "date": 1722433286,
-            "rd": 96
+            "rating": 2366,
+            "date": 1736886054,
+            "rd": 86
         },
         "best": {
             "rating": 2432,
             "date": 1700593399,
-            "game": "https://www.chess.com/game/live/4201517636"
+            "game": "https://www.chess.com/game/live/130623110733"
         },
         "record": {
-            "win": 847,
-            "loss": 608,
-            "draw": 85
+            "win": 850,
+            "loss": 612,
+            "draw": 87
         }
     },
     "fide": 2335,

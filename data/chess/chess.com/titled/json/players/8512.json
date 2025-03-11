@@ -6,10 +6,10 @@
     "name": "Roberto Costantini",
     "username": "thinkdifferent",
     "title": "FM",
-    "followers": 27,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Rimini,Italy",
-    "last_online": 1734109010,
+    "last_online": 1741376304,
     "joined": 1184405734,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2426,
-            "date": 1730319520,
-            "rd": 30
+            "rating": 2425,
+            "date": 1737740578,
+            "rd": 44
         },
         "best": {
             "rating": 2567,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/120308393389"
         },
         "record": {
-            "win": 2564,
-            "loss": 1919,
-            "draw": 222
+            "win": 2581,
+            "loss": 1932,
+            "draw": 224
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2541,
-            "date": 1733930357,
-            "rd": 39
+            "rating": 2548,
+            "date": 1741691324,
+            "rd": 27
         },
         "best": {
             "rating": 2670,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/121689616041"
         },
         "record": {
-            "win": 1617,
-            "loss": 1257,
-            "draw": 200
+            "win": 1925,
+            "loss": 1506,
+            "draw": 242
         }
     },
     "fide": 2305,

@@ -6,10 +6,10 @@
     "name": "Umut Erdem G\u00fcnd\u00fcz",
     "username": "umuterdemgunduz",
     "title": "IM",
-    "followers": 74,
+    "followers": 76,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "\u0130zmir",
-    "last_online": 1734164839,
+    "last_online": 1741370361,
     "joined": 1562786095,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     "fide": 2387,
     "tactics": {
         "highest": {
-            "rating": 3462,
-            "date": 1729173392
+            "rating": 3467,
+            "date": 1740501018
         },
         "lowest": {
             "rating": 2300,

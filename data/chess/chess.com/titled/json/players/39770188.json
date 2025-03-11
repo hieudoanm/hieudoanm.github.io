@@ -6,9 +6,9 @@
     "name": "Mikhael Garakov",
     "username": "mikedannnn",
     "title": "IM",
-    "followers": 62,
+    "followers": 61,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733730621,
+    "last_online": 1741470478,
     "joined": 1508974661,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2522,
-            "date": 1716580687,
-            "rd": 38
+            "rating": 2542,
+            "date": 1738659493,
+            "rd": 37
         },
         "best": {
             "rating": 2627,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/95284272681"
         },
         "record": {
-            "win": 707,
-            "loss": 793,
-            "draw": 87
+            "win": 725,
+            "loss": 810,
+            "draw": 90
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2674,
-            "date": 1733736000,
-            "rd": 29
+            "rating": 2656,
+            "date": 1741476137,
+            "rd": 36
         },
         "best": {
             "rating": 2740,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/79219387637"
         },
         "record": {
-            "win": 2590,
-            "loss": 2640,
-            "draw": 490
+            "win": 2648,
+            "loss": 2707,
+            "draw": 501
         }
     },
     "tactics": {

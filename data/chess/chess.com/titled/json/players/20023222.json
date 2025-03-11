@@ -8,7 +8,7 @@
     "followers": 11,
     "country": "https://api.chess.com/pub/country/HR",
     "location": "Split",
-    "last_online": 1734127707,
+    "last_online": 1741646174,
     "joined": 1417679519,
     "status": "premium",
     "is_streamer": false,
@@ -35,7 +35,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2424,
-            "date": 1725954832,
+            "date": 1741518367,
             "rd": 203
         },
         "best": {
@@ -51,8 +51,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 400,
-            "date": 1417679519
+            "rating": 2209,
+            "date": 1736026685
         },
         "lowest": {
             "rating": 400,

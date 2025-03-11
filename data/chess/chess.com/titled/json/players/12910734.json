@@ -6,10 +6,10 @@
     "name": "Vania Vindy Chandra",
     "username": "vaniavindy",
     "title": "WNM",
-    "followers": 81,
+    "followers": 83,
     "country": "https://api.chess.com/pub/country/ID",
     "location": "Bogor",
-    "last_online": 1733261276,
+    "last_online": 1741416234,
     "joined": 1374972622,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2081,
-            "date": 1731941072,
+            "date": 1740184145,
             "rd": 127
         },
         "best": {

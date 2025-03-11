@@ -6,10 +6,10 @@
     "name": "Steffi Schirmbeck",
     "username": "chessscoutgirl",
     "title": "WCM",
-    "followers": 4,
+    "followers": 5,
     "country": "https://api.chess.com/pub/country/AT",
     "location": "Stockerau",
-    "last_online": 1728049824,
+    "last_online": 1741243252,
     "joined": 1586380297,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1680,
-            "date": 1717353287,
-            "rd": 196
+            "rating": 1770,
+            "date": 1736166722,
+            "rd": 182
         },
         "best": {
             "rating": 2021,
@@ -45,15 +45,15 @@
             "game": "https://www.chess.com/game/live/4696388595"
         },
         "record": {
-            "win": 8,
+            "win": 9,
             "loss": 15,
             "draw": 3
         }
     },
     "tactics": {
         "highest": {
-            "rating": 1938,
-            "date": 1717307369
+            "rating": 3000,
+            "date": 1736604507
         },
         "lowest": {
             "rating": 800,
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 41,
-            "score": 38
+            "total_attempts": 44,
+            "score": 41
         }
     }
 }

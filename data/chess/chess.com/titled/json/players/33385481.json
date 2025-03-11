@@ -6,9 +6,9 @@
     "name": "Jadranko Plenca",
     "username": "jadro9",
     "title": "IM",
-    "followers": 73,
+    "followers": 78,
     "country": "https://api.chess.com/pub/country/HR",
-    "last_online": 1734162092,
+    "last_online": 1741680448,
     "joined": 1487690718,
     "status": "premium",
     "is_streamer": false,
@@ -34,8 +34,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2626,
-            "date": 1732893108,
+            "rating": 2656,
+            "date": 1741127415,
             "rd": 49
         },
         "best": {
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/4722170929"
         },
         "record": {
-            "win": 586,
-            "loss": 477,
-            "draw": 90
+            "win": 610,
+            "loss": 488,
+            "draw": 96
         }
     },
     "tactics": {

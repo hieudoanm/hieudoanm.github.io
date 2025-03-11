@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 4,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1733961322,
+    "last_online": 1740729407,
     "joined": 1440324642,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2037,
-            "date": 1732611714,
-            "rd": 75
+            "rating": 2036,
+            "date": 1741078933,
+            "rd": 84
         },
         "best": {
             "rating": 2274,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/68895811379"
         },
         "record": {
-            "win": 443,
-            "loss": 342,
-            "draw": 26
+            "win": 444,
+            "loss": 344,
+            "draw": 27
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2244,
-            "date": 1730236044,
-            "rd": 58
+            "rating": 2228,
+            "date": 1741682605,
+            "rd": 40
         },
         "best": {
             "rating": 2346,
@@ -60,15 +60,15 @@
             "game": "https://www.chess.com/game/live/49192150163"
         },
         "record": {
-            "win": 1209,
-            "loss": 874,
-            "draw": 195
+            "win": 1247,
+            "loss": 912,
+            "draw": 202
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2932,
-            "date": 1717801134
+            "rating": 2988,
+            "date": 1739785167
         },
         "lowest": {
             "rating": 1933,

@@ -6,9 +6,9 @@
     "name": "Giorgio Pasini",
     "username": "dersteinadler1ch",
     "title": "FM",
-    "followers": 31,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1733760468,
+    "last_online": 1741276730,
     "joined": 1702820053,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2356,
-            "date": 1731285063,
+            "date": 1734881088,
             "rd": 49
         },
         "best": {

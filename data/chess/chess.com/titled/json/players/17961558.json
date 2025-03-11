@@ -6,9 +6,9 @@
     "name": "Jakub Kosakowski",
     "username": "kosak12",
     "title": "IM",
-    "followers": 174,
+    "followers": 192,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734110874,
+    "last_online": 1741702556,
     "joined": 1404638693,
     "status": "premium",
     "is_streamer": false,
@@ -32,7 +32,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2525,
-            "date": 1711053134,
+            "date": 1741466873,
             "rd": 48
         },
         "best": {
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2906,
-            "date": 1730570260,
-            "rd": 33
+            "rating": 2982,
+            "date": 1741459483,
+            "rd": 48
         },
         "best": {
             "rating": 2986,
@@ -58,26 +58,26 @@
             "game": "https://www.chess.com/game/live/124303196355"
         },
         "record": {
-            "win": 652,
-            "loss": 332,
-            "draw": 57
+            "win": 690,
+            "loss": 347,
+            "draw": 61
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2865,
-            "date": 1732644729,
-            "rd": 44
+            "rating": 2915,
+            "date": 1741469914,
+            "rd": 35
         },
         "best": {
             "rating": 2944,
             "date": 1730573950,
-            "game": "https://www.chess.com/game/live/101601756569"
+            "game": "https://www.chess.com/game/live/134244538765"
         },
         "record": {
-            "win": 1402,
-            "loss": 796,
-            "draw": 187
+            "win": 1540,
+            "loss": 866,
+            "draw": 210
         }
     },
     "tactics": {

@@ -6,14 +6,14 @@
     "name": "Ishvi Aggarwal",
     "username": "geminithegreat",
     "title": "WCM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734066100,
+    "last_online": 1741600753,
     "joined": 1719046320,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2109,
-            "date": 1733922795,
-            "rd": 45
+            "rating": 2112,
+            "date": 1741328734,
+            "rd": 37
         },
         "best": {
             "rating": 2386,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/126124789375"
         },
         "record": {
-            "win": 77,
-            "loss": 354,
-            "draw": 13
+            "win": 189,
+            "loss": 552,
+            "draw": 22
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2287,
-            "date": 1733854005,
-            "rd": 48
+            "rating": 2279,
+            "date": 1741370458,
+            "rd": 43
         },
         "best": {
             "rating": 2356,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/124561210985"
         },
         "record": {
-            "win": 71,
-            "loss": 154,
-            "draw": 6
+            "win": 106,
+            "loss": 217,
+            "draw": 12
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2135,
-            "date": 1727721434
+            "rating": 2728,
+            "date": 1741676715
         },
         "lowest": {
             "rating": 1000,

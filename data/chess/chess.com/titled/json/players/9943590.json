@@ -6,10 +6,10 @@
     "name": "Niraj Saripalli",
     "username": "niraj619",
     "title": "CM",
-    "followers": 147,
+    "followers": 149,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Margao",
-    "last_online": 1732182025,
+    "last_online": 1741387758,
     "joined": 1355000627,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2438,
-            "date": 1719789030,
-            "rd": 132
+            "rating": 2478,
+            "date": 1741404950,
+            "rd": 92
         },
         "best": {
             "rating": 2495,
@@ -59,8 +59,8 @@
             "game": "https://www.chess.com/game/live/31430360605"
         },
         "record": {
-            "win": 398,
-            "loss": 297,
+            "win": 405,
+            "loss": 300,
             "draw": 68
         }
     },

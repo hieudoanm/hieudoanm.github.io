@@ -6,10 +6,10 @@
     "name": "Andrew Green",
     "username": "andrewdgreen",
     "title": "CM",
-    "followers": 51,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/XS",
     "location": "Edinburgh",
-    "last_online": 1733859369,
+    "last_online": 1741683327,
     "joined": 1479072233,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1863,
-            "date": 1733772779,
+            "date": 1741693185,
             "rd": 183
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 16,
             "loss": 1,
             "draw": 3,
-            "time_per_move": 101442,
+            "time_per_move": 110417,
             "timeout_percent": 0
         }
     },

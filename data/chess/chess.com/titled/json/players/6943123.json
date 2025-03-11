@@ -6,10 +6,10 @@
     "name": "Anthony Drayton",
     "username": "anthonydrayton",
     "title": "FM",
-    "followers": 49,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/GY",
     "location": "Guyana",
-    "last_online": 1733685335,
+    "last_online": 1741560706,
     "joined": 1331506017,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1796,
-            "date": 1688735355,
+            "date": 1740067895,
             "rd": 180
         },
         "best": {
@@ -88,8 +88,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2880,
-            "date": 1719358556
+            "rating": 3017,
+            "date": 1740000064
         },
         "lowest": {
             "rating": 977,

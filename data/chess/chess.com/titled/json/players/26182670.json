@@ -9,7 +9,7 @@
     "followers": 45,
     "country": "https://api.chess.com/pub/country/DK",
     "location": "Copenhagen",
-    "last_online": 1734180194,
+    "last_online": 1741673461,
     "joined": 1453031228,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2360,
-            "date": 1732467181,
-            "rd": 44
+            "rating": 2372,
+            "date": 1736269733,
+            "rd": 55
         },
         "best": {
             "rating": 2395,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/6428957079"
         },
         "record": {
-            "win": 2222,
-            "loss": 1417,
+            "win": 2225,
+            "loss": 1419,
             "draw": 356
         }
     },
@@ -84,8 +84,8 @@
             "score": 58
         },
         "daily": {
-            "total_attempts": 35,
-            "score": 32
+            "total_attempts": 24,
+            "score": 21
         }
     }
 }

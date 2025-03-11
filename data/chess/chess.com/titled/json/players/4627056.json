@@ -6,10 +6,10 @@
     "name": "Louie Jiang",
     "username": "ushalnotpass",
     "title": "FM",
-    "followers": 130,
+    "followers": 134,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Montreal",
-    "last_online": 1734120779,
+    "last_online": 1741541524,
     "joined": 1296262171,
     "status": "premium",
     "is_streamer": false,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 40,
-            "score": 37
+            "total_attempts": 56,
+            "score": 55
         }
     }
 }

@@ -6,9 +6,9 @@
     "name": "Kanan Heydarli",
     "username": "heydarli77",
     "title": "IM",
-    "followers": 91,
+    "followers": 109,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1733564442,
+    "last_online": 1741442278,
     "joined": 1690662870,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1412,
-            "date": 1733336979,
-            "rd": 179
+            "rating": 1332,
+            "date": 1737791342,
+            "rd": 170
         },
         "best": {
             "rating": 1412,
@@ -27,24 +27,18 @@
             "game": "https://www.chess.com/game/daily/631024139"
         },
         "record": {
-            "win": 6,
-            "loss": 0,
+            "win": 7,
+            "loss": 1,
             "draw": 0,
-            "time_per_move": 58208,
+            "time_per_move": 59479,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2284,
-            "date": 1734024435,
-            "rd": 45
+            "rating": 2135,
+            "date": 1741628746,
+            "rd": 48
         },
         "best": {
             "rating": 2300,
@@ -52,9 +46,9 @@
             "game": "https://www.chess.com/game/live/122145613137"
         },
         "record": {
-            "win": 219,
-            "loss": 89,
-            "draw": 62
+            "win": 241,
+            "loss": 119,
+            "draw": 72
         }
     },
     "chess_bullet": {
@@ -71,19 +65,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2468,
-            "date": 1731397579,
-            "rd": 61
+            "rating": 2519,
+            "date": 1739650460,
+            "rd": 42
         },
         "best": {
-            "rating": 2482,
-            "date": 1722802904,
+            "rating": 2522,
+            "date": 1738644265,
             "game": "https://www.chess.com/game/live/117932354067"
         },
         "record": {
-            "win": 338,
-            "loss": 215,
-            "draw": 72
+            "win": 371,
+            "loss": 233,
+            "draw": 77
         }
     },
     "tactics": {

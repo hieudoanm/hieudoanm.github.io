@@ -8,7 +8,7 @@
     "followers": 11,
     "country": "https://api.chess.com/pub/country/PE",
     "location": "Callao",
-    "last_online": 1733897935,
+    "last_online": 1739510119,
     "joined": 1498607929,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2496,
-            "date": 1731555553,
-            "rd": 76
+            "rating": 2477,
+            "date": 1738019964,
+            "rd": 88
         },
         "best": {
             "rating": 2673,
@@ -28,15 +28,15 @@
         },
         "record": {
             "win": 445,
-            "loss": 427,
+            "loss": 428,
             "draw": 44
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2487,
-            "date": 1731440041,
-            "rd": 59
+            "rating": 2499,
+            "date": 1738891299,
+            "rd": 49
         },
         "best": {
             "rating": 2610,
@@ -44,8 +44,8 @@
             "game": "https://www.chess.com/game/live/5850106098"
         },
         "record": {
-            "win": 449,
-            "loss": 394,
+            "win": 450,
+            "loss": 395,
             "draw": 52
         }
     },

@@ -6,9 +6,9 @@
     "name": "Teemu Virtanen",
     "username": "nurmitv",
     "title": "FM",
-    "followers": 50,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733778856,
+    "last_online": 1740277868,
     "joined": 1482280593,
     "status": "premium",
     "is_streamer": false,
@@ -35,12 +35,12 @@
     "chess_bullet": {
         "last": {
             "rating": 2701,
-            "date": 1545358864,
+            "date": 1740278244,
             "rd": 15
         },
         "best": {
-            "rating": 2660,
-            "date": 1544858694,
+            "rating": 2701,
+            "date": 1740278244,
             "game": "https://www.chess.com/game/live/3294700866"
         },
         "record": {
@@ -68,8 +68,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 1000,
-            "date": 1482280593
+            "rating": 2141,
+            "date": 1740280381
         },
         "lowest": {
             "rating": 1000,
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 55,
+            "score": 52
         }
     }
 }

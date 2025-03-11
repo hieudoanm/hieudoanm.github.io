@@ -9,7 +9,7 @@
     "followers": 26,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u041a\u0438\u0435\u0432",
-    "last_online": 1734108282,
+    "last_online": 1738516609,
     "joined": 1586809426,
     "status": "premium",
     "is_streamer": false,
@@ -84,8 +84,8 @@
     "fide": 2311,
     "tactics": {
         "highest": {
-            "rating": 3570,
-            "date": 1734108714
+            "rating": 3600,
+            "date": 1735854165
         },
         "lowest": {
             "rating": 1200,

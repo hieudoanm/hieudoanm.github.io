@@ -9,7 +9,7 @@
     "followers": 66,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Buenos Aires",
-    "last_online": 1733801172,
+    "last_online": 1741455735,
     "joined": 1525635590,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2592,
-            "date": 1733286001,
-            "rd": 45
+            "rating": 2679,
+            "date": 1741665986,
+            "rd": 31
         },
         "best": {
             "rating": 2706,
             "date": 1705254293,
-            "game": "https://www.chess.com/game/live/103998072939"
+            "game": "https://www.chess.com/game/live/130615282175"
         },
         "record": {
-            "win": 731,
-            "loss": 573,
-            "draw": 122
+            "win": 830,
+            "loss": 659,
+            "draw": 134
         }
     },
     "fide": 2295,

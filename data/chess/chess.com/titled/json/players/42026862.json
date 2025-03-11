@@ -9,7 +9,7 @@
     "followers": 24,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Ukraine.Lviv",
-    "last_online": 1734010646,
+    "last_online": 1741471209,
     "joined": 1515168055,
     "status": "premium",
     "is_streamer": false,
@@ -33,7 +33,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2100,
-            "date": 1685220788,
+            "date": 1741474461,
             "rd": 331
         },
         "best": {
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2433,
-            "date": 1732450191,
-            "rd": 42
+            "rating": 2431,
+            "date": 1741476025,
+            "rd": 55
         },
         "best": {
             "rating": 2580,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/79969273411"
         },
         "record": {
-            "win": 583,
-            "loss": 567,
-            "draw": 61
+            "win": 591,
+            "loss": 575,
+            "draw": 62
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2469,
-            "date": 1715961426,
-            "rd": 89
+            "rating": 2509,
+            "date": 1740745087,
+            "rd": 49
         },
         "best": {
             "rating": 2656,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/81033772555"
         },
         "record": {
-            "win": 549,
-            "loss": 460,
-            "draw": 71
+            "win": 555,
+            "loss": 465,
+            "draw": 72
         }
     },
     "tactics": {

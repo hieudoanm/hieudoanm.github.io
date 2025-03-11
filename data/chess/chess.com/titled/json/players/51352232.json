@@ -6,9 +6,9 @@
     "name": "David Shahinyan",
     "username": "shahinyan_chessmood",
     "title": "IM",
-    "followers": 1464,
+    "followers": 1504,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1734181279,
+    "last_online": 1741702538,
     "joined": 1541053636,
     "status": "premium",
     "is_streamer": false,
@@ -51,8 +51,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2892,
-            "date": 1730993117,
+            "rating": 2845,
+            "date": 1735909220,
             "rd": 46
         },
         "best": {
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/120145819447"
         },
         "record": {
-            "win": 946,
-            "loss": 910,
-            "draw": 208
+            "win": 951,
+            "loss": 923,
+            "draw": 209
         }
     },
     "fide": 2479,

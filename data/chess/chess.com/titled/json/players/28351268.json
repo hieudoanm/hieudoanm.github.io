@@ -5,10 +5,10 @@
     "name": "Ali Ekber Do\u011fan",
     "username": "deeper44",
     "title": "CM",
-    "followers": 216,
+    "followers": 233,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Malatya",
-    "last_online": 1734038866,
+    "last_online": 1741533508,
     "joined": 1464201597,
     "status": "premium",
     "is_streamer": false,
@@ -17,36 +17,36 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2182,
-            "date": 1694524665,
-            "rd": 206
+            "rating": 2153,
+            "date": 1736462234,
+            "rd": 180
         },
         "best": {
-            "rating": 1708,
-            "date": 1549318351,
-            "game": "https://www.chess.com/game/live/3432940615"
+            "rating": 2249,
+            "date": 1734566195,
+            "game": "https://www.chess.com/game/live/128305153745"
         },
         "record": {
-            "win": 2,
-            "loss": 0,
+            "win": 3,
+            "loss": 1,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2657,
-            "date": 1734177609,
-            "rd": 18
+            "rating": 2555,
+            "date": 1741560423,
+            "rd": 23
         },
         "best": {
-            "rating": 2718,
-            "date": 1734120973,
+            "rating": 2772,
+            "date": 1734384681,
             "game": "https://www.chess.com/game/live/127603276621"
         },
         "record": {
-            "win": 4370,
-            "loss": 5269,
-            "draw": 733
+            "win": 5011,
+            "loss": 6079,
+            "draw": 856
         }
     },
     "fide": 2182,

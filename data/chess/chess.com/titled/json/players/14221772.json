@@ -5,9 +5,9 @@
     "name": "Vasily Volovich",
     "username": "blackboarder",
     "title": "FM",
-    "followers": 202,
+    "followers": 203,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1734034772,
+    "last_online": 1741280359,
     "joined": 1383754736,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2745,
-            "date": 1731529272,
-            "rd": 41
+            "rating": 2757,
+            "date": 1741281316,
+            "rd": 46
         },
         "best": {
             "rating": 2915,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/86814061983"
         },
         "record": {
-            "win": 2168,
-            "loss": 1953,
-            "draw": 334
+            "win": 2189,
+            "loss": 1969,
+            "draw": 338
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2751,
-            "date": 1734037003,
-            "rd": 47
+            "rating": 2731,
+            "date": 1741285510,
+            "rd": 46
         },
         "best": {
             "rating": 2782,
@@ -98,9 +98,9 @@
             "game": "https://www.chess.com/game/live/84669760627"
         },
         "record": {
-            "win": 1514,
-            "loss": 1303,
-            "draw": 320
+            "win": 1518,
+            "loss": 1309,
+            "draw": 322
         }
     },
     "fide": 2177,

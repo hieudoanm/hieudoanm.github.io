@@ -5,19 +5,19 @@
     "name": "Dila Baloglu",
     "username": "bitter-cikolata",
     "title": "WCM",
-    "followers": 28,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734168193,
+    "last_online": 1741286836,
     "joined": 1691508604,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 2730,
-            "date": 1693422348,
+            "date": 1738832065,
             "rd": 192
         },
         "best": {
@@ -33,36 +33,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2520,
-            "date": 1734168617,
-            "rd": 49
+            "rating": 2600,
+            "date": 1740852175,
+            "rd": 35
         },
         "best": {
-            "rating": 2630,
-            "date": 1692699330,
+            "rating": 2709,
+            "date": 1736621963,
             "game": "https://www.chess.com/game/live/103745498503"
         },
         "record": {
-            "win": 648,
-            "loss": 731,
-            "draw": 85
+            "win": 749,
+            "loss": 834,
+            "draw": 97
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2508,
-            "date": 1726610867,
-            "rd": 48
+            "rating": 2559,
+            "date": 1741111739,
+            "rd": 42
         },
         "best": {
-            "rating": 2571,
-            "date": 1705427182,
-            "game": "https://www.chess.com/game/live/104620903077"
+            "rating": 2585,
+            "date": 1739899849,
+            "game": "https://www.chess.com/game/live/129422608391"
         },
         "record": {
-            "win": 102,
-            "loss": 110,
-            "draw": 20
+            "win": 154,
+            "loss": 169,
+            "draw": 30
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "D\u00e1vid Haszon De",
     "username": "kombinator01",
     "title": "FM",
-    "followers": 354,
+    "followers": 359,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Si\u00f3fok",
-    "last_online": 1734181709,
+    "last_online": 1741652734,
     "joined": 1522694836,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1067,
-            "date": 1734080891,
-            "rd": 81
+            "rating": 1099,
+            "date": 1739263251,
+            "rd": 94
         },
         "best": {
             "rating": 1568,
@@ -28,18 +28,18 @@
             "game": "https://www.chess.com/game/daily/531569671"
         },
         "record": {
-            "win": 42,
+            "win": 43,
             "loss": 48,
             "draw": 2,
             "time_per_move": 97246,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2200,
-            "date": 1733451899,
-            "rd": 49
+            "rating": 2180,
+            "date": 1740099528,
+            "rd": 47
         },
         "best": {
             "rating": 2331,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/111285610723"
         },
         "record": {
-            "win": 203,
-            "loss": 82,
+            "win": 212,
+            "loss": 88,
             "draw": 33
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2620,
-            "date": 1734098470,
-            "rd": 40
+            "rating": 2664,
+            "date": 1741525209,
+            "rd": 23
         },
         "best": {
             "rating": 2776,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/127333838461"
         },
         "record": {
-            "win": 2216,
-            "loss": 1417,
-            "draw": 253
+            "win": 2520,
+            "loss": 1665,
+            "draw": 305
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2359,
-            "date": 1734182997,
-            "rd": 23
+            "rating": 2444,
+            "date": 1741660013,
+            "rd": 26
         },
         "best": {
             "rating": 2607,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/81040910415"
         },
         "record": {
-            "win": 2992,
-            "loss": 2045,
-            "draw": 483
+            "win": 3350,
+            "loss": 2344,
+            "draw": 561
         }
     },
     "tactics": {

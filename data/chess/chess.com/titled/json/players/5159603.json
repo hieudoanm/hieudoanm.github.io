@@ -5,9 +5,9 @@
     "name": "Ryosuke Nanjo",
     "username": "rnanjo",
     "title": "IM",
-    "followers": 159,
+    "followers": 165,
     "country": "https://api.chess.com/pub/country/JP",
-    "last_online": 1734011251,
+    "last_online": 1741072528,
     "joined": 1306064209,
     "status": "premium",
     "is_streamer": false,
@@ -69,9 +69,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2472,
-            "date": 1734175753,
-            "rd": 25
+            "rating": 2564,
+            "date": 1741700264
         },
         "best": {
             "rating": 2716,
@@ -79,9 +78,9 @@
             "game": "https://www.chess.com/game/live/122971215027"
         },
         "record": {
-            "win": 8962,
-            "loss": 6640,
-            "draw": 1021
+            "win": 9842,
+            "loss": 7309,
+            "draw": 1089
         }
     },
     "fide": 2400,
@@ -99,6 +98,10 @@
         "best": {
             "total_attempts": 55,
             "score": 55
+        },
+        "daily": {
+            "total_attempts": 51,
+            "score": 49
         }
     }
 }

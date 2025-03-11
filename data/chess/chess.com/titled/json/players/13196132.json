@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/AchilleHeel",
     "username": "achilleheel",
     "title": "FM",
-    "followers": 16,
+    "followers": 15,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734116418,
+    "last_online": 1741372700,
     "joined": 1376862557,
     "status": "premium",
     "is_streamer": false,
@@ -63,9 +63,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2405,
-            "date": 1734118371,
-            "rd": 61
+            "rating": 2437,
+            "date": 1741373618,
+            "rd": 68
         },
         "best": {
             "rating": 2483,
@@ -73,8 +73,8 @@
             "game": "https://www.chess.com/game/live/4977834483"
         },
         "record": {
-            "win": 2758,
-            "loss": 1738,
+            "win": 2768,
+            "loss": 1742,
             "draw": 465
         }
     },

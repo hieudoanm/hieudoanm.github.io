@@ -6,21 +6,15 @@
     "name": "Marcos Vinicius Torsani",
     "username": "lovinski",
     "title": "FM",
-    "followers": 615,
+    "followers": 624,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734008689,
+    "last_online": 1741702937,
     "joined": 1359304517,
     "status": "premium",
     "is_streamer": true,
-    "twitch_url": "https://twitch.tv/mftorsani",
     "verified": false,
     "league": "Elite",
-    "streaming_platforms": [
-        {
-            "type": "twitch",
-            "channel_url": "https://twitch.tv/mftorsani"
-        }
-    ],
+    "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 2273,

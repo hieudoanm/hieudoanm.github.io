@@ -5,9 +5,9 @@
     "name": "Robert Rieger",
     "username": "drriebert",
     "title": "FM",
-    "followers": 20,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1734162662,
+    "last_online": 1741542276,
     "joined": 1523465916,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2498,
-            "date": 1734182574,
-            "rd": 36
+            "rating": 2496,
+            "date": 1741543690,
+            "rd": 28
         },
         "best": {
             "rating": 2733,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/103324971863"
         },
         "record": {
-            "win": 4564,
-            "loss": 4377,
-            "draw": 409
+            "win": 4853,
+            "loss": 4655,
+            "draw": 435
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2348,
-            "date": 1734168280,
-            "rd": 67
+            "rating": 2396,
+            "date": 1741347217,
+            "rd": 55
         },
         "best": {
             "rating": 2655,
@@ -60,16 +60,16 @@
             "game": "https://www.chess.com/game/live/3510817132"
         },
         "record": {
-            "win": 1256,
-            "loss": 1299,
-            "draw": 107
+            "win": 1316,
+            "loss": 1356,
+            "draw": 111
         }
     },
     "fide": 2296,
     "tactics": {
         "highest": {
-            "rating": 3228,
-            "date": 1733574976
+            "rating": 3285,
+            "date": 1740227777
         },
         "lowest": {
             "rating": 2206,

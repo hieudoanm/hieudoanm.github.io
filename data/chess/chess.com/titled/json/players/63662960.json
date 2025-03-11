@@ -6,10 +6,10 @@
     "name": "Lars Meyer",
     "username": "chessteacherpalms",
     "title": "FM",
-    "followers": 201,
+    "followers": 212,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Coachella",
-    "last_online": 1734103695,
+    "last_online": 1741675237,
     "joined": 1564124507,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2211,
-            "date": 1731281875,
+            "date": 1737411894,
             "rd": 168
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2112,
-            "date": 1734151324,
-            "rd": 29
+            "rating": 2066,
+            "date": 1741557439,
+            "rd": 33
         },
         "best": {
             "rating": 2269,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/6211541832"
         },
         "record": {
-            "win": 3312,
-            "loss": 2325,
-            "draw": 277
+            "win": 3480,
+            "loss": 2457,
+            "draw": 290
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2371,
-            "date": 1734157074,
-            "rd": 23
+            "rating": 2375,
+            "date": 1741577881,
+            "rd": 26
         },
         "best": {
             "rating": 2486,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/8447059287"
         },
         "record": {
-            "win": 12472,
-            "loss": 9257,
-            "draw": 2225
+            "win": 13119,
+            "loss": 9745,
+            "draw": 2339
         }
     },
     "fide": 2250,

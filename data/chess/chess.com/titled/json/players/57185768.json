@@ -6,7 +6,7 @@
     "name": "\u0412\u0430\u0441\u0438\u043b\u0438\u0439 \u0418\u0431\u0440\u0430\u0435\u0432",
     "username": "ibraev_vasilj",
     "title": "FM",
-    "followers": 7,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u0419\u043e\u0448\u043a\u0430\u0440-\u041e\u0430",
     "last_online": 1722621698,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2018,
-            "date": 1733458449,
-            "rd": 43
+            "rating": 1818,
+            "date": 1741357394,
+            "rd": 36
         },
         "best": {
             "rating": 2147,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/122762702821"
         },
         "record": {
-            "win": 201,
-            "loss": 142,
-            "draw": 17
+            "win": 343,
+            "loss": 288,
+            "draw": 32
         }
     },
     "chess_blitz": {

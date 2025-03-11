@@ -6,10 +6,10 @@
     "name": "Hector Fiori",
     "username": "hectorfiori",
     "title": "CM",
-    "followers": 589,
+    "followers": 632,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Buenos Aires",
-    "last_online": 1734177338,
+    "last_online": 1741692797,
     "joined": 1511817040,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2255,
-            "date": 1733415295,
-            "rd": 107
+            "rating": 2300,
+            "date": 1739348804,
+            "rd": 110
         },
         "best": {
             "rating": 2316,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/216333868"
         },
         "record": {
-            "win": 44,
+            "win": 46,
             "loss": 11,
             "draw": 79,
-            "time_per_move": 74566,
+            "time_per_move": 74508,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 15,
             "loss": 7,
             "draw": 6,
-            "time_per_move": 74566,
+            "time_per_move": 74508,
             "timeout_percent": 0
         }
     },
@@ -73,35 +73,35 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2284,
-            "date": 1732632448,
-            "rd": 64
+            "rating": 2297,
+            "date": 1739794615,
+            "rd": 69
         },
         "best": {
-            "rating": 2352,
-            "date": 1713963621,
+            "rating": 2360,
+            "date": 1736080476,
             "game": "https://www.chess.com/game/live/118276717455"
         },
         "record": {
-            "win": 726,
-            "loss": 552,
+            "win": 741,
+            "loss": 557,
             "draw": 71
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2535,
-            "date": 1727216193,
-            "rd": 48
+            "rating": 2557,
+            "date": 1736292682,
+            "rd": 47
         },
         "best": {
-            "rating": 2554,
-            "date": 1693708095,
+            "rating": 2557,
+            "date": 1736292407,
             "game": "https://www.chess.com/game/live/3753869114"
         },
         "record": {
-            "win": 365,
-            "loss": 203,
+            "win": 370,
+            "loss": 206,
             "draw": 50
         }
     },

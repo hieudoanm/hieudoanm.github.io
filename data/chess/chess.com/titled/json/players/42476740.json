@@ -5,10 +5,10 @@
     "name": "Shadow",
     "username": "kingpanda13",
     "title": "CM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/XE",
     "location": "London",
-    "last_online": 1734118259,
+    "last_online": 1741627067,
     "joined": 1516378848,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2521,
-            "date": 1733896830,
-            "rd": 48
+            "rating": 2535,
+            "date": 1741430160,
+            "rd": 49
         },
         "best": {
             "rating": 2660,
@@ -63,32 +63,32 @@
             "game": "https://www.chess.com/game/live/41155110839"
         },
         "record": {
-            "win": 3188,
-            "loss": 3768,
-            "draw": 557
+            "win": 3194,
+            "loss": 3773,
+            "draw": 558
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2594,
-            "date": 1734118721,
-            "rd": 39
+            "rating": 2719,
+            "date": 1741624373,
+            "rd": 35
         },
         "best": {
             "rating": 2744,
             "date": 1730380988,
-            "game": "https://www.chess.com/game/live/113653240813"
+            "game": "https://www.chess.com/game/live/132318643117"
         },
         "record": {
-            "win": 2225,
-            "loss": 2273,
-            "draw": 540
+            "win": 2313,
+            "loss": 2351,
+            "draw": 560
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3591,
-            "date": 1729171473
+            "rating": 3592,
+            "date": 1737900944
         },
         "lowest": {
             "rating": 934,

@@ -6,10 +6,10 @@
     "name": "Roman Cherevatenko",
     "username": "roman_2112",
     "title": "IM",
-    "followers": 321,
+    "followers": 328,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Kharkov, Ukraine",
-    "last_online": 1734165797,
+    "last_online": 1740677663,
     "joined": 1378382334,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1463,
-            "date": 1727512104,
+            "date": 1736085033,
             "rd": 222
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2252,
-            "date": 1734184540,
-            "rd": 21
+            "rating": 2360,
+            "date": 1740683260,
+            "rd": 25
         },
         "best": {
             "rating": 2508,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/70896051665"
         },
         "record": {
-            "win": 15842,
-            "loss": 16957,
-            "draw": 729
+            "win": 16532,
+            "loss": 17757,
+            "draw": 747
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2593,
-            "date": 1734172883,
-            "rd": 35
+            "rating": 2479,
+            "date": 1740685105,
+            "rd": 33
         },
         "best": {
             "rating": 2638,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/126796757129"
         },
         "record": {
-            "win": 16411,
-            "loss": 14782,
-            "draw": 1788
+            "win": 16539,
+            "loss": 14946,
+            "draw": 1806
         }
     },
     "tactics": {

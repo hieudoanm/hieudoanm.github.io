@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 6,
     "country": "https://api.chess.com/pub/country/KG",
-    "last_online": 1734077439,
+    "last_online": 1741641807,
     "joined": 1718440377,
     "status": "premium",
     "is_streamer": false,
@@ -33,19 +33,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2722,
-            "date": 1733853915,
+            "rating": 2664,
+            "date": 1741370405,
             "rd": 44
         },
         "best": {
-            "rating": 2731,
-            "date": 1732639387,
+            "rating": 2781,
+            "date": 1736875209,
             "game": "https://www.chess.com/game/live/125771404257"
         },
         "record": {
-            "win": 168,
-            "loss": 109,
-            "draw": 17
+            "win": 200,
+            "loss": 134,
+            "draw": 27
         }
     },
     "fide": 2268,

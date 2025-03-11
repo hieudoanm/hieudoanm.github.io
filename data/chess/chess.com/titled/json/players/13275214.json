@@ -6,10 +6,10 @@
     "name": "Dragomirescu Robin",
     "username": "lupta_robin",
     "title": "IM",
-    "followers": 133,
+    "followers": 139,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Timisoara",
-    "last_online": 1734126663,
+    "last_online": 1741334999,
     "joined": 1377431408,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1927,
-            "date": 1734184174,
-            "rd": 85
+            "rating": 2064,
+            "date": 1741702396,
+            "rd": 69
         },
         "best": {
             "rating": 2150,
             "date": 1424876529,
-            "game": "https://www.chess.com/game/daily/733298295"
+            "game": "https://www.chess.com/game/daily/733045839"
         },
         "record": {
-            "win": 113,
-            "loss": 95,
-            "draw": 10,
-            "time_per_move": 53528,
+            "win": 138,
+            "loss": 97,
+            "draw": 17,
+            "time_per_move": 63209,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 5,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 53528,
+            "time_per_move": 63209,
             "timeout_percent": 0
         }
     },
@@ -73,36 +73,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2611,
-            "date": 1729957284,
-            "rd": 49
+            "rating": 2641,
+            "date": 1740933857,
+            "rd": 41
         },
         "best": {
-            "rating": 2674,
-            "date": 1717164246,
-            "game": "https://www.chess.com/game/live/109686753243"
+            "rating": 2742,
+            "date": 1739379426,
+            "game": "https://www.chess.com/game/live/133118330181"
         },
         "record": {
-            "win": 297,
-            "loss": 160,
+            "win": 336,
+            "loss": 184,
             "draw": 58
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2586,
-            "date": 1734164054,
-            "rd": 38
+            "rating": 2819,
+            "date": 1741355274,
+            "rd": 39
         },
         "best": {
-            "rating": 2766,
-            "date": 1729509810,
+            "rating": 2838,
+            "date": 1739317486,
             "game": "https://www.chess.com/game/live/109023653411"
         },
         "record": {
-            "win": 5903,
-            "loss": 4113,
-            "draw": 1349
+            "win": 6025,
+            "loss": 4178,
+            "draw": 1392
         }
     },
     "fide": 2369,

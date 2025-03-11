@@ -5,9 +5,9 @@
     "name": "Anna \u015alusarczyk",
     "username": "aslu",
     "title": "WCM",
-    "followers": 78,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734179351,
+    "last_online": 1741508418,
     "joined": 1467999732,
     "status": "premium",
     "is_streamer": false,
@@ -53,7 +53,7 @@
     "chess_bullet": {
         "last": {
             "rating": 1941,
-            "date": 1728668210,
+            "date": 1740688276,
             "rd": 122
         },
         "best": {
@@ -70,7 +70,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2267,
-            "date": 1734179580,
+            "date": 1740683218,
             "rd": 115
         },
         "best": {
@@ -97,12 +97,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 45,
-            "score": 43
-        },
-        "daily": {
-            "total_attempts": 15,
-            "score": 13
+            "total_attempts": 46,
+            "score": 44
         }
     }
 }

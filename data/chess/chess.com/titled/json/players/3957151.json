@@ -6,9 +6,9 @@
     "name": "Allan Munro",
     "username": "ark_in",
     "title": "FM",
-    "followers": 52,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/TT",
-    "last_online": 1733226590,
+    "last_online": 1739910800,
     "joined": 1284129357,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2253,
-            "date": 1729284593,
-            "rd": 56
+            "rating": 2232,
+            "date": 1739911489,
+            "rd": 83
         },
         "best": {
             "rating": 2336,
@@ -62,7 +62,7 @@
         },
         "record": {
             "win": 2153,
-            "loss": 2107,
+            "loss": 2108,
             "draw": 351
         }
     },

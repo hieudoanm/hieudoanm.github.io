@@ -6,14 +6,14 @@
     "name": "Jacob Dreelinck",
     "username": "gambitgiesbergen",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/BE",
-    "last_online": 1733846249,
+    "last_online": 1740947586,
     "joined": 1590081846,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2337,
-            "date": 1733853999,
-            "rd": 45
+            "rating": 2402,
+            "date": 1739902233,
+            "rd": 37
         },
         "best": {
             "rating": 2411,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/109439992257"
         },
         "record": {
-            "win": 177,
-            "loss": 161,
-            "draw": 24
+            "win": 243,
+            "loss": 234,
+            "draw": 27
         }
     },
     "fide": 2319,
     "tactics": {
         "highest": {
-            "rating": 3334,
-            "date": 1727115939
+            "rating": 3389,
+            "date": 1739217491
         },
         "lowest": {
             "rating": 817,

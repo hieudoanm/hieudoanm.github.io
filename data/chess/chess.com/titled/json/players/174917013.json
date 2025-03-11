@@ -5,28 +5,45 @@
     "url": "https://www.chess.com/member/JafarTheParrot",
     "username": "jafartheparrot",
     "title": "FM",
-    "followers": 7,
-    "country": "https://api.chess.com/pub/country/GA",
-    "last_online": 1717047640,
+    "followers": 11,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1741178660,
     "joined": 1646085647,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Champion",
     "streaming_platforms": [],
-    "chess_bullet": {
+    "chess_rapid": {
         "last": {
-            "rating": 2588,
-            "date": 1703187053,
-            "rd": 59
+            "rating": 2000,
+            "date": 1739910120,
+            "rd": 49
         },
         "best": {
-            "rating": 2588,
-            "date": 1703187053,
+            "rating": 2655,
+            "date": 1692386584,
+            "game": "https://www.chess.com/game/live/133648153435"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2600,
+            "date": 1736185243,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2600,
+            "date": 1736185243,
             "game": "https://www.chess.com/game/live/42118789483"
         },
         "record": {
-            "win": 121,
+            "win": 123,
             "loss": 58,
             "draw": 5
         }
@@ -34,8 +51,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2524,
-            "date": 1706472555,
-            "rd": 32
+            "date": 1741683695,
+            "rd": 42
         },
         "best": {
             "rating": 2690,
@@ -43,9 +60,9 @@
             "game": "https://www.chess.com/game/live/74964252995"
         },
         "record": {
-            "win": 708,
-            "loss": 548,
-            "draw": 71
+            "win": 773,
+            "loss": 598,
+            "draw": 73
         }
     },
     "fide": 0,

@@ -1,4 +1,5 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/89839062.3562177d.200x200o.35f06234c618.jpg",
     "player_id": 89839062,
     "@id": "https://api.chess.com/pub/player/nicollem13",
     "url": "https://www.chess.com/member/NicolleM13",
@@ -8,12 +9,12 @@
     "followers": 15,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Valle",
-    "last_online": 1730859294,
+    "last_online": 1741108576,
     "joined": 1598392135,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -51,18 +52,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1796,
-            "date": 1609988925,
-            "rd": 55
+            "rating": 2262,
+            "date": 1741111699,
+            "rd": 101
         },
         "best": {
-            "rating": 1830,
-            "date": 1603927872,
-            "game": "https://www.chess.com/game/live/6164491842"
+            "rating": 2357,
+            "date": 1741108024,
+            "game": "https://www.chess.com/game/live/134846356107"
         },
         "record": {
-            "win": 67,
-            "loss": 34,
+            "win": 72,
+            "loss": 48,
             "draw": 5
         }
     },

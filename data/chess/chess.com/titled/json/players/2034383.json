@@ -6,10 +6,10 @@
     "name": "Giulio Calavalle",
     "username": "ilgiux",
     "title": "FM",
-    "followers": 105,
+    "followers": 114,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Bologna",
-    "last_online": 1734008834,
+    "last_online": 1741616573,
     "joined": 1247730666,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_bullet": {
         "last": {
             "rating": 1808,
-            "date": 1706120618,
+            "date": 1739904489,
             "rd": 74
         },
         "best": {
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2294,
-            "date": 1734132174,
-            "rd": 28
+            "rating": 2112,
+            "date": 1741627171,
+            "rd": 29
         },
         "best": {
             "rating": 2407,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/126998957673"
         },
         "record": {
-            "win": 843,
-            "loss": 687,
-            "draw": 91
+            "win": 1109,
+            "loss": 953,
+            "draw": 121
         }
     },
     "fide": 2227,

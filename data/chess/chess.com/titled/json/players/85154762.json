@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/85154762.43cfbf5c.200x200o.c0103cc1f35e.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/85154762.9564a1a0.200x200o.d87bfd46d016.jpg",
     "player_id": 85154762,
     "@id": "https://api.chess.com/pub/player/rv0-nsr",
     "url": "https://www.chess.com/member/rv0-nsr",
     "name": "Ryma Nassr",
     "username": "rv0-nsr",
     "title": "WCM",
-    "followers": 9,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/DZ",
-    "last_online": 1734178435,
+    "last_online": 1740063630,
     "joined": 1593548715,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1866,
-            "date": 1734169357,
-            "rd": 74
+            "rating": 1850,
+            "date": 1736979660,
+            "rd": 79
         },
         "best": {
             "rating": 1888,
@@ -62,7 +62,7 @@
         },
         "record": {
             "win": 46,
-            "loss": 32,
+            "loss": 33,
             "draw": 7
         }
     },
@@ -78,12 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 63,
-            "score": 60
-        },
-        "daily": {
-            "total_attempts": 54,
-            "score": 51
+            "total_attempts": 68,
+            "score": 65
         }
     }
 }

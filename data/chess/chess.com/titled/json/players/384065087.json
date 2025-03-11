@@ -6,51 +6,51 @@
     "name": "Uliana Dudkina",
     "username": "dudkinau2010",
     "title": "WCM",
-    "followers": 2,
+    "followers": 3,
     "country": "https://api.chess.com/pub/country/XX",
     "location": "Saint Petersburg",
-    "last_online": 1734164888,
+    "last_online": 1741702250,
     "joined": 1724961032,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2504,
-            "date": 1733940056,
-            "rd": 47
+            "rating": 2600,
+            "date": 1740853439,
+            "rd": 35
         },
         "best": {
-            "rating": 2532,
-            "date": 1731778988,
-            "game": "https://www.chess.com/game/live/125346522911"
+            "rating": 2632,
+            "date": 1740850291,
+            "game": "https://www.chess.com/game/live/133987753429"
         },
         "record": {
-            "win": 46,
-            "loss": 26,
-            "draw": 2
+            "win": 82,
+            "loss": 53,
+            "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2567,
-            "date": 1734184015,
-            "rd": 39
+            "rating": 2568,
+            "date": 1741111723,
+            "rd": 42
         },
         "best": {
-            "rating": 2591,
-            "date": 1731433726,
+            "rating": 2643,
+            "date": 1739688837,
             "game": "https://www.chess.com/game/live/121540242369"
         },
         "record": {
-            "win": 197,
-            "loss": 119,
-            "draw": 15
+            "win": 249,
+            "loss": 162,
+            "draw": 22
         }
     },
-    "fide": 2001,
+    "fide": 2027,
     "tactics": {
         "highest": {
             "rating": 2333,

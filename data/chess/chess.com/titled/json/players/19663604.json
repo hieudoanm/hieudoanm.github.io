@@ -9,7 +9,7 @@
     "followers": 2,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Cantabria",
-    "last_online": 1734040776,
+    "last_online": 1741703180,
     "joined": 1415655951,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2448,
-            "date": 1731450916,
-            "rd": 58
+            "rating": 2435,
+            "date": 1739916535,
+            "rd": 77
         },
         "best": {
             "rating": 2661,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/125189384047"
         },
         "record": {
-            "win": 11,
-            "loss": 28,
-            "draw": 4
+            "win": 12,
+            "loss": 32,
+            "draw": 5
         }
     },
     "fide": 2197,
     "tactics": {
         "highest": {
-            "rating": 3241,
-            "date": 1734044437
+            "rating": 3252,
+            "date": 1734245287
         },
         "lowest": {
             "rating": 400,

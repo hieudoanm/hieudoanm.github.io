@@ -6,9 +6,9 @@
     "name": "Harshal Shahi",
     "username": "underthebridge1999",
     "title": "FM",
-    "followers": 52,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734110789,
+    "last_online": 1741145965,
     "joined": 1516519966,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2319,
-            "date": 1733705936,
-            "rd": 59
+            "rating": 2350,
+            "date": 1736303048,
+            "rd": 50
         },
         "best": {
             "rating": 2514,
@@ -58,15 +58,15 @@
             "game": "https://www.chess.com/game/live/58491603407"
         },
         "record": {
-            "win": 1226,
-            "loss": 1019,
+            "win": 1241,
+            "loss": 1026,
             "draw": 53
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2245,
-            "date": 1733527843,
+            "rating": 2204,
+            "date": 1740204008,
             "rd": 114
         },
         "best": {
@@ -75,8 +75,8 @@
             "game": "https://www.chess.com/game/live/4805460786"
         },
         "record": {
-            "win": 94,
-            "loss": 87,
+            "win": 95,
+            "loss": 90,
             "draw": 4
         }
     },

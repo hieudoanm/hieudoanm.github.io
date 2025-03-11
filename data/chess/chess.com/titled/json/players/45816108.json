@@ -6,9 +6,9 @@
     "name": "Mat\u00edas P\u00e9rez Gormaz",
     "username": "matychess1",
     "title": "IM",
-    "followers": 1082,
+    "followers": 1125,
     "country": "https://api.chess.com/pub/country/CL",
-    "last_online": 1734041883,
+    "last_online": 1741383993,
     "joined": 1525218503,
     "status": "premium",
     "is_streamer": true,
@@ -58,26 +58,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2796,
-            "date": 1722103157,
-            "rd": 31
+            "rating": 2812,
+            "date": 1741133486,
+            "rd": 37
         },
         "best": {
-            "rating": 2798,
-            "date": 1722103119,
+            "rating": 2842,
+            "date": 1738956965,
             "game": "https://www.chess.com/game/live/115237172451"
         },
         "record": {
-            "win": 607,
-            "loss": 414,
-            "draw": 49
+            "win": 692,
+            "loss": 476,
+            "draw": 53
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2746,
-            "date": 1734051006,
-            "rd": 31
+            "rating": 2772,
+            "date": 1741138642
         },
         "best": {
             "rating": 2820,
@@ -85,9 +84,9 @@
             "game": "https://www.chess.com/game/live/116091097253"
         },
         "record": {
-            "win": 4983,
-            "loss": 3197,
-            "draw": 631
+            "win": 5251,
+            "loss": 3375,
+            "draw": 672
         }
     },
     "fide": 2393,

@@ -6,9 +6,9 @@
     "name": "Yamac Samani",
     "username": "problematique_99",
     "title": "FM",
-    "followers": 96,
+    "followers": 101,
     "country": "https://api.chess.com/pub/country/CY",
-    "last_online": 1734087348,
+    "last_online": 1741100354,
     "joined": 1581883062,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2539,
-            "date": 1733599564,
-            "rd": 48
+            "rating": 2521,
+            "date": 1736979937,
+            "rd": 49
         },
         "best": {
             "rating": 2545,
@@ -45,15 +45,15 @@
         },
         "record": {
             "win": 197,
-            "loss": 188,
+            "loss": 190,
             "draw": 23
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2648,
-            "date": 1733597145,
-            "rd": 47
+            "rating": 2639,
+            "date": 1735838968,
+            "rd": 49
         },
         "best": {
             "rating": 2693,
@@ -62,15 +62,15 @@
         },
         "record": {
             "win": 2466,
-            "loss": 2458,
-            "draw": 394
+            "loss": 2459,
+            "draw": 395
         }
     },
     "fide": 2321,
     "tactics": {
         "highest": {
-            "rating": 3529,
-            "date": 1729801102
+            "rating": 3610,
+            "date": 1735663859
         },
         "lowest": {
             "rating": 1216,

@@ -6,9 +6,9 @@
     "name": "Rafael Baltazar",
     "username": "baltazar1958",
     "title": "IM",
-    "followers": 69,
+    "followers": 74,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1734138942,
+    "last_online": 1741578797,
     "joined": 1586129612,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1794,
-            "date": 1720615113,
+            "date": 1736528178,
             "rd": 161
         },
         "best": {
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2089,
-            "date": 1734141045,
-            "rd": 49
+            "rating": 2071,
+            "date": 1739586405,
+            "rd": 48
         },
         "best": {
             "rating": 2172,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/124246717207"
         },
         "record": {
-            "win": 707,
-            "loss": 165,
-            "draw": 92
+            "win": 708,
+            "loss": 174,
+            "draw": 98
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1991,
-            "date": 1734134324,
-            "rd": 42
+            "rating": 2015,
+            "date": 1741578427,
+            "rd": 48
         },
         "best": {
             "rating": 2246,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/55053922247"
         },
         "record": {
-            "win": 1454,
-            "loss": 1185,
-            "draw": 197
+            "win": 1489,
+            "loss": 1211,
+            "draw": 201
         }
     },
     "tactics": {

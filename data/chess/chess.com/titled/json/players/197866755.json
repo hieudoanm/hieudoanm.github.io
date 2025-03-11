@@ -6,10 +6,10 @@
     "name": "Deyan Kostov",
     "username": "deyankostov",
     "title": "FM",
-    "followers": 39,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/BG",
     "location": "Rotterdam",
-    "last_online": 1734182199,
+    "last_online": 1741523380,
     "joined": 1663578826,
     "status": "premium",
     "is_streamer": false,
@@ -18,19 +18,19 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2346,
-            "date": 1734184036,
-            "rd": 49
+            "rating": 2445,
+            "date": 1741440336,
+            "rd": 48
         },
         "best": {
-            "rating": 2387,
-            "date": 1726160282,
-            "game": "https://www.chess.com/game/live/123508848903"
+            "rating": 2458,
+            "date": 1739034718,
+            "game": "https://www.chess.com/game/live/129754807563"
         },
         "record": {
-            "win": 159,
-            "loss": 50,
-            "draw": 28
+            "win": 222,
+            "loss": 73,
+            "draw": 44
         }
     },
     "chess_bullet": {
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2702,
-            "date": 1734179406,
-            "rd": 45
+            "rating": 2603,
+            "date": 1741632655,
+            "rd": 32
         },
         "best": {
-            "rating": 2702,
-            "date": 1734178636,
-            "game": "https://www.chess.com/game/live/110043144121"
+            "rating": 2759,
+            "date": 1737239244,
+            "game": "https://www.chess.com/game/live/130030796767"
         },
         "record": {
-            "win": 724,
-            "loss": 423,
-            "draw": 178
+            "win": 819,
+            "loss": 504,
+            "draw": 221
         }
     },
     "fide": 2334,

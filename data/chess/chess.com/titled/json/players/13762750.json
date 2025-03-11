@@ -6,21 +6,21 @@
     "name": "Rob Michiels",
     "username": "rmichiels",
     "title": "FM",
-    "followers": 4,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/BE",
     "location": "Brugge, Belgium",
-    "last_online": 1734115182,
+    "last_online": 1741640454,
     "joined": 1380831461,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2466,
-            "date": 1734115281,
-            "rd": 27
+            "rating": 2447,
+            "date": 1741644832,
+            "rd": 35
         },
         "best": {
             "rating": 2554,
@@ -28,32 +28,32 @@
             "game": "https://www.chess.com/game/live/120335387241"
         },
         "record": {
-            "win": 957,
-            "loss": 762,
-            "draw": 68
+            "win": 1152,
+            "loss": 937,
+            "draw": 80
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2069,
-            "date": 1733950696,
-            "rd": 176
+            "rating": 2270,
+            "date": 1741641148,
+            "rd": 94
         },
         "best": {
             "rating": 2241,
             "date": 1713045270,
-            "game": "https://www.chess.com/game/live/639421557"
+            "game": "https://www.chess.com/game/live/132925757557"
         },
         "record": {
-            "win": 138,
-            "loss": 99,
+            "win": 146,
+            "loss": 102,
             "draw": 16
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2833,
-            "date": 1726086189
+            "rating": 2894,
+            "date": 1736083204
         },
         "lowest": {
             "rating": 400,

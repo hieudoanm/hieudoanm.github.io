@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 22,
     "country": "https://api.chess.com/pub/country/XW",
-    "last_online": 1731442385,
+    "last_online": 1738828075,
     "joined": 1550182839,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1883,
-            "date": 1734093883,
+            "date": 1741394320,
             "rd": 106
         },
         "best": {
@@ -29,7 +29,7 @@
             "win": 267,
             "loss": 79,
             "draw": 48,
-            "time_per_move": 39580,
+            "time_per_move": 39544,
             "timeout_percent": 0
         }
     },
@@ -48,7 +48,7 @@
             "win": 1,
             "loss": 2,
             "draw": 1,
-            "time_per_move": 39580,
+            "time_per_move": 39544,
             "timeout_percent": 0
         }
     },
@@ -88,9 +88,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2313,
-            "date": 1731449702,
-            "rd": 70
+            "rating": 2270,
+            "date": 1741011478,
+            "rd": 87
         },
         "best": {
             "rating": 2369,
@@ -99,14 +99,14 @@
         },
         "record": {
             "win": 637,
-            "loss": 716,
+            "loss": 718,
             "draw": 102
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3316,
-            "date": 1723581579
+            "rating": 3322,
+            "date": 1736525600
         },
         "lowest": {
             "rating": 1797,

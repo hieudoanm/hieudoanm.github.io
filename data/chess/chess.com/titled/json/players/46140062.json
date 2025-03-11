@@ -5,9 +5,9 @@
     "name": "Artem Dyachuk",
     "username": "artemdyachuk",
     "title": "FM",
-    "followers": 281,
+    "followers": 282,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1733879970,
+    "last_online": 1741702042,
     "joined": 1526198461,
     "status": "premium",
     "is_streamer": false,
@@ -88,9 +88,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2642,
-            "date": 1733872592,
-            "rd": 36
+            "rating": 2689,
+            "date": 1741700879,
+            "rd": 42
         },
         "best": {
             "rating": 2844,
@@ -98,9 +98,9 @@
             "game": "https://www.chess.com/game/live/102813651361"
         },
         "record": {
-            "win": 3014,
-            "loss": 2656,
-            "draw": 314
+            "win": 3085,
+            "loss": 2717,
+            "draw": 316
         }
     },
     "tactics": {

@@ -6,20 +6,20 @@
     "name": "Azel Chua",
     "username": "advicecabinet",
     "title": "CM",
-    "followers": 611,
+    "followers": 623,
     "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1733885782,
+    "last_online": 1741656883,
     "joined": 1535364764,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2036,
-            "date": 1733886450,
-            "rd": 49
+            "rating": 2126,
+            "date": 1739190473,
+            "rd": 45
         },
         "best": {
             "rating": 2350,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/44160922011"
         },
         "record": {
-            "win": 56,
-            "loss": 9,
-            "draw": 2
+            "win": 139,
+            "loss": 14,
+            "draw": 4
         }
     },
     "chess_bullet": {
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2491,
-            "date": 1729952080,
-            "rd": 198
+            "rating": 2499,
+            "date": 1739017649,
+            "rd": 49
         },
         "best": {
-            "rating": 2496,
-            "date": 1645282893,
+            "rating": 2509,
+            "date": 1737618793,
             "game": "https://www.chess.com/game/live/39020968637"
         },
         "record": {
-            "win": 59,
-            "loss": 11,
-            "draw": 5
+            "win": 100,
+            "loss": 13,
+            "draw": 8
         }
     },
     "tactics": {

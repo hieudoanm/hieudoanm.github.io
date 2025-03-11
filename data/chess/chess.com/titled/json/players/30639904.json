@@ -6,15 +6,15 @@
     "name": "Amir hosein Kashefi",
     "username": "ahkashefi2800",
     "title": "FM",
-    "followers": 290,
+    "followers": 315,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Tehran",
-    "last_online": 1734178810,
+    "last_online": 1741692108,
     "joined": 1477700074,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -32,25 +32,25 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2369,
-            "date": 1733676552,
+            "rating": 2365,
+            "date": 1741542939,
             "rd": 49
         },
         "best": {
-            "rating": 2369,
-            "date": 1733676552,
-            "game": "https://www.chess.com/game/live/72984842281"
+            "rating": 2373,
+            "date": 1736700097,
+            "game": "https://www.chess.com/game/live/133905559389"
         },
         "record": {
-            "win": 52,
-            "loss": 13,
-            "draw": 12
+            "win": 64,
+            "loss": 15,
+            "draw": 14
         }
     },
     "chess_bullet": {
         "last": {
             "rating": 2356,
-            "date": 1732392378,
+            "date": 1740009922,
             "rd": 50
         },
         "best": {
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2521,
-            "date": 1733875476,
-            "rd": 42
+            "rating": 2546,
+            "date": 1740502536,
+            "rd": 48
         },
         "best": {
             "rating": 2654,
@@ -76,16 +76,16 @@
             "game": "https://www.chess.com/game/live/102205459759"
         },
         "record": {
-            "win": 659,
-            "loss": 615,
-            "draw": 88
+            "win": 717,
+            "loss": 667,
+            "draw": 94
         }
     },
     "fide": 2300,
     "tactics": {
         "highest": {
-            "rating": 3660,
-            "date": 1708191844
+            "rating": 3743,
+            "date": 1738153544
         },
         "lowest": {
             "rating": 1211,

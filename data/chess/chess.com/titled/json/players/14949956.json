@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/14949956.7b031427.200x200o.2031525bfbac.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/14949956.dd2b15de.200x200o.7938417c0594.jpg",
     "player_id": 14949956,
     "@id": "https://api.chess.com/pub/player/fitnesstraining",
     "url": "https://www.chess.com/member/fitnesstraining",
     "name": "Alexander Dehlinger",
     "username": "fitnesstraining",
     "title": "FM",
-    "followers": 138,
+    "followers": 139,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733760243,
+    "last_online": 1741634726,
     "joined": 1386633628,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2564,
-            "date": 1732556835,
-            "rd": 40
+            "rating": 2635,
+            "date": 1741637878,
+            "rd": 43
         },
         "best": {
             "rating": 2678,
@@ -61,12 +61,12 @@
             "game": "https://www.chess.com/game/live/81801325167"
         },
         "record": {
-            "win": 7032,
-            "loss": 5344,
-            "draw": 2367
+            "win": 7102,
+            "loss": 5392,
+            "draw": 2393
         }
     },
-    "fide": 2276,
+    "fide": 2271,
     "tactics": {
         "highest": {
             "rating": 2472,
@@ -81,6 +81,10 @@
         "best": {
             "total_attempts": 69,
             "score": 66
+        },
+        "daily": {
+            "total_attempts": 52,
+            "score": 50
         }
     }
 }

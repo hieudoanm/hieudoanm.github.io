@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Snorlax",
     "username": "snorlax",
     "title": "IM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1730906170,
+    "last_online": 1739540373,
     "joined": 1580136224,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2632,
-            "date": 1724683705,
-            "rd": 45
+            "rating": 2700,
+            "date": 1739547421,
+            "rd": 47
         },
         "best": {
             "rating": 2747,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/118172361339"
         },
         "record": {
-            "win": 332,
-            "loss": 237,
-            "draw": 44
+            "win": 341,
+            "loss": 239,
+            "draw": 48
         }
     },
     "tactics": {

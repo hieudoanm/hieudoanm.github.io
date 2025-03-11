@@ -8,7 +8,7 @@
     "followers": 16,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Baltimore",
-    "last_online": 1717265668,
+    "last_online": 1741147968,
     "joined": 1294525321,
     "status": "premium",
     "is_streamer": false,
@@ -88,8 +88,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3460,
-            "date": 1687725192
+            "rating": 3472,
+            "date": 1741148026
         },
         "lowest": {
             "rating": 1374,

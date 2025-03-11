@@ -8,7 +8,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Monter\u00eda",
-    "last_online": 1734009487,
+    "last_online": 1739133082,
     "joined": 1363968803,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2185,
-            "date": 1733542402,
-            "rd": 91
+            "rating": 2236,
+            "date": 1739824770,
+            "rd": 90
         },
         "best": {
             "rating": 2315,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/33781827877"
         },
         "record": {
-            "win": 814,
-            "loss": 633,
+            "win": 817,
+            "loss": 634,
             "draw": 96
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2840,
-            "date": 1709170904
+            "rating": 3037,
+            "date": 1740835025
         },
         "lowest": {
             "rating": 1203,

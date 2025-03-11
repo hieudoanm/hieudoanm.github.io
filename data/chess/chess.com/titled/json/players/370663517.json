@@ -6,10 +6,10 @@
     "name": "\u0415\u0432\u0433\u0435\u043d\u0438\u0439 \u0414\u0435\u043c\u0438\u0434\u044e\u043a\u043e\u0432",
     "username": "yevhen_demydiukov",
     "title": "FM",
-    "followers": 13,
+    "followers": 15,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Odessa",
-    "last_online": 1734167853,
+    "last_online": 1741614612,
     "joined": 1718803739,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2203,
-            "date": 1734112724,
-            "rd": 47
+            "rating": 2257,
+            "date": 1741469960,
+            "rd": 44
         },
         "best": {
             "rating": 2384,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/115567775139"
         },
         "record": {
-            "win": 161,
-            "loss": 117,
-            "draw": 12
+            "win": 205,
+            "loss": 147,
+            "draw": 14
         }
     },
     "fide": 2228,

@@ -6,10 +6,10 @@
     "name": "Migchiel de Jong",
     "username": "migchiel",
     "title": "IM",
-    "followers": 264,
+    "followers": 267,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Leeuwarden",
-    "last_online": 1733659439,
+    "last_online": 1741511490,
     "joined": 1413980077,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2115,
-            "date": 1733752104,
+            "date": 1741512123,
             "rd": 111
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 189,
             "loss": 17,
             "draw": 12,
-            "time_per_move": 9037,
+            "time_per_move": 9245,
             "timeout_percent": 0
         }
     },
@@ -50,15 +50,15 @@
             "win": 2,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 9037,
+            "time_per_move": 9245,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1888,
-            "date": 1733561799,
-            "rd": 61
+            "rating": 1874,
+            "date": 1738488663,
+            "rd": 74
         },
         "best": {
             "rating": 2553,
@@ -66,9 +66,9 @@
             "game": "https://www.chess.com/game/live/6006025718"
         },
         "record": {
-            "win": 54,
+            "win": 55,
             "loss": 27,
-            "draw": 27
+            "draw": 28
         }
     },
     "chess_bullet": {
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2501,
-            "date": 1733661330,
-            "rd": 27
+            "rating": 2502,
+            "date": 1740438109,
+            "rd": 49
         },
         "best": {
             "rating": 2646,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/46956636045"
         },
         "record": {
-            "win": 15375,
-            "loss": 11908,
-            "draw": 2536
+            "win": 15388,
+            "loss": 11917,
+            "draw": 2543
         }
     },
     "fide": 2321,

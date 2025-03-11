@@ -6,10 +6,10 @@
     "name": "Xenophon Makris",
     "username": "fondasmakris",
     "title": "CM",
-    "followers": 128,
+    "followers": 129,
     "country": "https://api.chess.com/pub/country/GR",
     "location": "Corfu, Kerkira, Greece",
-    "last_online": 1727368506,
+    "last_online": 1741692289,
     "joined": 1323081888,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2002,
-            "date": 1672770654,
-            "rd": 141
+            "rating": 1875,
+            "date": 1741695773,
+            "rd": 54
         },
         "best": {
             "rating": 2072,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/5307476825"
         },
         "record": {
-            "win": 10104,
-            "loss": 8341,
-            "draw": 1072
+            "win": 10122,
+            "loss": 8360,
+            "draw": 1075
         }
     },
     "fide": 1967,

@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Sparkleflame",
     "username": "sparkleflame",
     "title": "WCM",
-    "followers": 49,
-    "country": "https://api.chess.com/pub/country/VA",
-    "last_online": 1734015212,
+    "followers": 51,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1741700250,
     "joined": 1524622640,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +16,7 @@
     "chess_daily": {
         "last": {
             "rating": 1560,
-            "date": 1725311742,
+            "date": 1737560138,
             "rd": 68
         },
         "best": {
@@ -30,12 +30,6 @@
             "draw": 19,
             "time_per_move": 45184,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 92,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 4
         }
     },
     "chess960_daily": {
@@ -55,18 +49,12 @@
             "draw": 0,
             "time_per_move": 45184,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 92,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 4
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2326,
-            "date": 1731540613,
+            "rating": 2312,
+            "date": 1740779316,
             "rd": 49
         },
         "best": {
@@ -75,16 +63,16 @@
             "game": "https://www.chess.com/game/live/114986281429"
         },
         "record": {
-            "win": 449,
-            "loss": 249,
-            "draw": 101
+            "win": 451,
+            "loss": 252,
+            "draw": 103
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2195,
-            "date": 1733885843,
-            "rd": 29
+            "rating": 2259,
+            "date": 1741642331,
+            "rd": 33
         },
         "best": {
             "rating": 2344,
@@ -92,16 +80,16 @@
             "game": "https://www.chess.com/game/live/19320445543"
         },
         "record": {
-            "win": 1525,
-            "loss": 1336,
-            "draw": 136
+            "win": 1662,
+            "loss": 1454,
+            "draw": 149
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2187,
-            "date": 1733783621,
-            "rd": 43
+            "rating": 2260,
+            "date": 1741642636,
+            "rd": 53
         },
         "best": {
             "rating": 2299,
@@ -109,9 +97,9 @@
             "game": "https://www.chess.com/game/live/118776049309"
         },
         "record": {
-            "win": 1060,
-            "loss": 816,
-            "draw": 189
+            "win": 1078,
+            "loss": 824,
+            "draw": 194
         }
     },
     "tactics": {

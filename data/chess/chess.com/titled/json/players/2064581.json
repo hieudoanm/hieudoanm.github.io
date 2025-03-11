@@ -6,10 +6,10 @@
     "name": "Thomas Bartell",
     "username": "spinaltap",
     "title": "IM",
-    "followers": 652,
+    "followers": 667,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Paoli",
-    "last_online": 1734161780,
+    "last_online": 1741679181,
     "joined": 1248957933,
     "status": "premium",
     "is_streamer": false,
@@ -56,8 +56,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2228,
-            "date": 1732744772,
+            "rating": 2217,
+            "date": 1741131848,
             "rd": 49
         },
         "best": {
@@ -66,8 +66,8 @@
             "game": "https://www.chess.com/game/live/107301603999"
         },
         "record": {
-            "win": 121,
-            "loss": 72,
+            "win": 123,
+            "loss": 74,
             "draw": 24
         }
     },

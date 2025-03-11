@@ -6,9 +6,9 @@
     "name": "Alain Prieto Aranguren",
     "username": "fredddiecroderg",
     "title": "FM",
-    "followers": 61,
+    "followers": 62,
     "country": "https://api.chess.com/pub/country/XB",
-    "last_online": 1733998439,
+    "last_online": 1741131208,
     "joined": 1559945750,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2171,
-            "date": 1733905432,
-            "rd": 43
+            "rating": 2230,
+            "date": 1741663778,
+            "rd": 31
         },
         "best": {
             "rating": 2455,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/99789108809"
         },
         "record": {
-            "win": 2100,
-            "loss": 2226,
-            "draw": 306
+            "win": 2318,
+            "loss": 2432,
+            "draw": 333
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Isak Sjoberg",
     "username": "isaks",
     "title": "FM",
-    "followers": 136,
+    "followers": 156,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Oslo",
-    "last_online": 1734169195,
+    "last_online": 1741623150,
     "joined": 1323094889,
     "status": "premium",
     "is_streamer": false,
@@ -54,8 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2407,
-            "date": 1733934351,
+            "rating": 2501,
+            "date": 1740995076,
             "rd": 49
         },
         "best": {
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/6493488676"
         },
         "record": {
-            "win": 1081,
-            "loss": 936,
+            "win": 1097,
+            "loss": 940,
             "draw": 103
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2616,
-            "date": 1734179631,
-            "rd": 24
+            "rating": 2575,
+            "date": 1741628614,
+            "rd": 49
         },
         "best": {
             "rating": 2720,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/108500967817"
         },
         "record": {
-            "win": 4216,
-            "loss": 3808,
-            "draw": 496
+            "win": 4268,
+            "loss": 3857,
+            "draw": 507
         }
     },
     "fide": 2342,
     "tactics": {
         "highest": {
-            "rating": 3568,
-            "date": 1729089419
+            "rating": 3601,
+            "date": 1738784865
         },
         "lowest": {
             "rating": 1105,
@@ -99,8 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 69,
-            "score": 66
+            "total_attempts": 71,
+            "score": 68
         }
     }
 }

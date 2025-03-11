@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/resolute31524",
     "username": "resolute31524",
     "title": "WNM",
-    "followers": 14,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1732474744,
+    "last_online": 1740257254,
     "joined": 1705177372,
     "status": "premium",
     "is_streamer": false,
@@ -45,7 +45,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2142,
-            "date": 1730827994,
+            "date": 1740261122,
             "rd": 47
         },
         "best": {

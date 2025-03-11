@@ -6,10 +6,10 @@
     "name": "Lawrence Cooper",
     "username": "lawrencecooper",
     "title": "IM",
-    "followers": 57,
+    "followers": 59,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "Stafford",
-    "last_online": 1734170362,
+    "last_online": 1741674662,
     "joined": 1484761796,
     "status": "premium",
     "is_streamer": false,
@@ -53,7 +53,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2373,
-            "date": 1731247454,
+            "date": 1738354686,
             "rd": 118
         },
         "best": {

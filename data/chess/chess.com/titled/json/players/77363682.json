@@ -6,10 +6,10 @@
     "name": "Tahsin Tajwar Zia",
     "username": "extremelearner",
     "title": "FM",
-    "followers": 967,
+    "followers": 985,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Dhaka",
-    "last_online": 1734001171,
+    "last_online": 1741528598,
     "joined": 1587457760,
     "status": "premium",
     "is_streamer": true,
@@ -24,9 +24,9 @@
     ],
     "chess_daily": {
         "last": {
-            "rating": 1350,
-            "date": 1734091980,
-            "rd": 88
+            "rating": 1132,
+            "date": 1738854572,
+            "rd": 109
         },
         "best": {
             "rating": 2335,
@@ -34,17 +34,11 @@
             "game": "https://www.chess.com/game/daily/265949012"
         },
         "record": {
-            "win": 111,
-            "loss": 115,
+            "win": 121,
+            "loss": 127,
             "draw": 7,
-            "time_per_move": 66349,
-            "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 41,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 7
+            "time_per_move": 65738,
+            "timeout_percent": 66
         }
     },
     "chess960_daily": {
@@ -62,14 +56,8 @@
             "win": 1,
             "loss": 3,
             "draw": 4,
-            "time_per_move": 66349,
+            "time_per_move": 65738,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 41,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 7
         }
     },
     "chess_rapid": {
@@ -91,9 +79,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2612,
-            "date": 1732388394,
-            "rd": 33
+            "rating": 2606,
+            "date": 1739606485,
+            "rd": 41
         },
         "best": {
             "rating": 2646,
@@ -101,33 +89,33 @@
             "game": "https://www.chess.com/game/live/126125412673"
         },
         "record": {
-            "win": 3943,
-            "loss": 3607,
-            "draw": 430
+            "win": 3971,
+            "loss": 3631,
+            "draw": 433
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2700,
-            "date": 1733654907,
-            "rd": 25
+            "rating": 2671,
+            "date": 1740507090,
+            "rd": 34
         },
         "best": {
             "rating": 2745,
             "date": 1732442299,
-            "game": "https://www.chess.com/game/live/126119349977"
+            "game": "https://www.chess.com/game/live/128795610581"
         },
         "record": {
-            "win": 2889,
-            "loss": 2960,
-            "draw": 501
+            "win": 3033,
+            "loss": 3088,
+            "draw": 524
         }
     },
     "fide": 2244,
     "tactics": {
         "highest": {
-            "rating": 3385,
-            "date": 1726175634
+            "rating": 3406,
+            "date": 1736445700
         },
         "lowest": {
             "rating": 1215,

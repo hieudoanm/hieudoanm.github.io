@@ -6,9 +6,9 @@
     "name": "Yoon-Young Kim",
     "username": "doraemon7",
     "title": "FM",
-    "followers": 190,
+    "followers": 204,
     "country": "https://api.chess.com/pub/country/KR",
-    "last_online": 1734099752,
+    "last_online": 1741552158,
     "joined": 1516563230,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2435,
-            "date": 1709096577,
+            "date": 1741556762,
             "rd": 49
         },
         "best": {
@@ -53,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2818,
-            "date": 1732492999,
-            "rd": 45
+            "rating": 2821,
+            "date": 1741240451,
+            "rd": 23
         },
         "best": {
-            "rating": 2939,
-            "date": 1719805160,
+            "rating": 3004,
+            "date": 1739746639,
             "game": "https://www.chess.com/game/live/5753460612"
         },
         "record": {
-            "win": 3286,
-            "loss": 3711,
-            "draw": 421
+            "win": 3445,
+            "loss": 3830,
+            "draw": 440
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2740,
-            "date": 1734158881,
-            "rd": 30
+            "rating": 2653,
+            "date": 1741559099,
+            "rd": 28
         },
         "best": {
             "rating": 2891,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/82998626003"
         },
         "record": {
-            "win": 7511,
-            "loss": 8368,
-            "draw": 1192
+            "win": 7829,
+            "loss": 8701,
+            "draw": 1256
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3480,
-            "date": 1706712141
+            "rating": 3553,
+            "date": 1740578358
         },
         "lowest": {
             "rating": 1193,

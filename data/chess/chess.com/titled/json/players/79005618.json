@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/79005618.c5d49e70.200x200o.a22540d39a58.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/79005618.7592510e.200x200o.e8ca37d39337.jpg",
     "player_id": 79005618,
     "@id": "https://api.chess.com/pub/player/edgarhay012",
     "url": "https://www.chess.com/member/edgarhay012",
     "name": "Edgar Hayrapetyan",
     "username": "edgarhay012",
     "title": "FM",
-    "followers": 54,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1734171414,
+    "last_online": 1741703138,
     "joined": 1589026826,
     "status": "premium",
     "is_streamer": false,
@@ -17,26 +17,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2343,
-            "date": 1707139158,
-            "rd": 84
+            "rating": 2327,
+            "date": 1739727703,
+            "rd": 48
         },
         "best": {
-            "rating": 2274,
-            "date": 1645553676,
+            "rating": 2346,
+            "date": 1739722476,
             "game": "https://www.chess.com/game/live/37830592495"
         },
         "record": {
-            "win": 26,
-            "loss": 6,
-            "draw": 2
+            "win": 28,
+            "loss": 8,
+            "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2794,
-            "date": 1733933947,
-            "rd": 39
+            "rating": 2805,
+            "date": 1741516233,
+            "rd": 30
         },
         "best": {
             "rating": 2878,
@@ -44,33 +44,33 @@
             "game": "https://www.chess.com/game/live/111606726767"
         },
         "record": {
-            "win": 257,
-            "loss": 126,
-            "draw": 11
+            "win": 371,
+            "loss": 231,
+            "draw": 31
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2703,
-            "date": 1733854007,
-            "rd": 39
+            "rating": 2756,
+            "date": 1741368202,
+            "rd": 41
         },
         "best": {
-            "rating": 2746,
-            "date": 1719328752,
+            "rating": 2767,
+            "date": 1741107971,
             "game": "https://www.chess.com/game/live/111879172365"
         },
         "record": {
-            "win": 509,
-            "loss": 345,
-            "draw": 76
+            "win": 589,
+            "loss": 411,
+            "draw": 86
         }
     },
-    "fide": 2216,
+    "fide": 2137,
     "tactics": {
         "highest": {
-            "rating": 2415,
-            "date": 1707251071
+            "rating": 2784,
+            "date": 1738323378
         },
         "lowest": {
             "rating": 816,

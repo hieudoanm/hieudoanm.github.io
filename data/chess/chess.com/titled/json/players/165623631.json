@@ -5,9 +5,9 @@
     "name": "Deise Pereira",
     "username": "deisepereira",
     "title": "WCM",
-    "followers": 11,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/CV",
-    "last_online": 1734143309,
+    "last_online": 1741625453,
     "joined": 1640013647,
     "status": "premium",
     "is_streamer": false,
@@ -35,30 +35,30 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1692,
-            "date": 1730745745,
-            "rd": 49
+            "rating": 1674,
+            "date": 1741352696,
+            "rd": 76
         },
         "best": {
-            "rating": 1575,
-            "date": 1720723622,
+            "rating": 1701,
+            "date": 1735343561,
             "game": "https://www.chess.com/game/live/114698263523"
         },
         "record": {
-            "win": 1294,
-            "loss": 1140,
+            "win": 1298,
+            "loss": 1142,
             "draw": 115
         }
     },
     "chess_bullet": {
         "last": {
             "rating": 1692,
-            "date": 1730745745,
+            "date": 1736014212,
             "rd": 62
         },
         "best": {
-            "rating": 1233,
-            "date": 1725155957,
+            "rating": 1692,
+            "date": 1736013202,
             "game": "https://www.chess.com/game/live/118954763903"
         },
         "record": {
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1665,
-            "date": 1731181039,
-            "rd": 30
+            "rating": 1375,
+            "date": 1741649100,
+            "rd": 26
         },
         "best": {
             "rating": 1682,
@@ -79,16 +79,16 @@
             "game": "https://www.chess.com/game/live/124919316873"
         },
         "record": {
-            "win": 1369,
-            "loss": 1327,
-            "draw": 106
+            "win": 1592,
+            "loss": 1584,
+            "draw": 134
         }
     },
     "fide": 1692,
     "tactics": {
         "highest": {
-            "rating": 2380,
-            "date": 1730843599
+            "rating": 2415,
+            "date": 1738879485
         },
         "lowest": {
             "rating": 703,

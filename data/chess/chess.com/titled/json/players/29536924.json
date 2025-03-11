@@ -5,9 +5,9 @@
     "name": "Endre Csiki",
     "username": "imthegod666",
     "title": "IM",
-    "followers": 31,
-    "country": "https://api.chess.com/pub/country/LT",
-    "last_online": 1734094984,
+    "followers": 33,
+    "country": "https://api.chess.com/pub/country/HU",
+    "last_online": 1739528077,
     "joined": 1471546965,
     "status": "premium",
     "is_streamer": false,
@@ -47,9 +47,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2452,
-            "date": 1734100141,
-            "rd": 29
+            "rating": 2414,
+            "date": 1741275871,
+            "rd": 33
         },
         "best": {
             "rating": 2677,
@@ -57,16 +57,16 @@
             "game": "https://www.chess.com/game/live/107266296953"
         },
         "record": {
-            "win": 4652,
-            "loss": 4082,
-            "draw": 557
+            "win": 4908,
+            "loss": 4311,
+            "draw": 594
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2427,
-            "date": 1707303623,
-            "rd": 77
+            "rating": 2480,
+            "date": 1739348568,
+            "rd": 126
         },
         "best": {
             "rating": 2595,
@@ -74,7 +74,7 @@
             "game": "https://www.chess.com/game/live/8068385521"
         },
         "record": {
-            "win": 1462,
+            "win": 1463,
             "loss": 1173,
             "draw": 180
         }

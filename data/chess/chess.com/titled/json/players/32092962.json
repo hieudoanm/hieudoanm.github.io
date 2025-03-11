@@ -5,9 +5,9 @@
     "name": "Jay Bonin",
     "username": "boninknights",
     "title": "IM",
-    "followers": 111,
+    "followers": 115,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733896703,
+    "last_online": 1741375778,
     "joined": 1483404269,
     "status": "premium",
     "is_streamer": false,
@@ -64,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2420,
-            "date": 1733172746,
-            "rd": 37
+            "rating": 2514,
+            "date": 1741381141,
+            "rd": 26
         },
         "best": {
             "rating": 2523,
@@ -74,9 +74,9 @@
             "game": "https://www.chess.com/game/live/117322247009"
         },
         "record": {
-            "win": 25222,
-            "loss": 13417,
-            "draw": 5036
+            "win": 25416,
+            "loss": 13543,
+            "draw": 5083
         }
     },
     "fide": 0,

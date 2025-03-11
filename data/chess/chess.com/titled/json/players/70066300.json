@@ -6,9 +6,9 @@
     "name": "Lila Rzadkowska",
     "username": "princesslila",
     "title": "WCM",
-    "followers": 31,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733850218,
+    "last_online": 1735682279,
     "joined": 1577712249,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1769,
-            "date": 1733850320,
-            "rd": 56
+            "rating": 1767,
+            "date": 1735685784,
+            "rd": 70
         },
         "best": {
             "rating": 1771,
@@ -59,7 +59,7 @@
         },
         "record": {
             "win": 114,
-            "loss": 141,
+            "loss": 144,
             "draw": 8
         }
     },

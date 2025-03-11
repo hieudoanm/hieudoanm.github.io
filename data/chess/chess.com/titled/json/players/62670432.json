@@ -6,9 +6,9 @@
     "name": "V\u0169 Th\u1ecb Di\u1ec7u Uy\u00ean",
     "username": "vtdulmh",
     "title": "WFM",
-    "followers": 141,
+    "followers": 143,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1734168042,
+    "last_online": 1741600524,
     "joined": 1561471208,
     "status": "premium",
     "is_streamer": false,
@@ -32,8 +32,8 @@
     "chess_rapid": {
         "last": {
             "rating": 1306,
-            "date": 1730003708,
-            "rd": 74
+            "date": 1741351072,
+            "rd": 88
         },
         "best": {
             "rating": 1570,
@@ -41,7 +41,7 @@
             "game": "https://www.chess.com/game/live/5590202003"
         },
         "record": {
-            "win": 37,
+            "win": 39,
             "loss": 25,
             "draw": 7
         }
@@ -66,8 +66,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2100,
-            "date": 1733832333,
-            "rd": 72
+            "date": 1737363807,
+            "rd": 77
         },
         "best": {
             "rating": 2161,
@@ -75,7 +75,7 @@
             "game": "https://www.chess.com/game/live/28473649287"
         },
         "record": {
-            "win": 386,
+            "win": 387,
             "loss": 298,
             "draw": 64
         }

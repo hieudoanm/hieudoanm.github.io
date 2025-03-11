@@ -6,10 +6,10 @@
     "name": "Jason Garcia",
     "username": "jagllan",
     "title": "FM",
-    "followers": 36,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/XW",
     "location": "Wales",
-    "last_online": 1734012161,
+    "last_online": 1741292896,
     "joined": 1260052351,
     "status": "premium",
     "is_streamer": false,
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1993,
-            "date": 1733398793,
-            "rd": 70
+            "rating": 1911,
+            "date": 1741680501,
+            "rd": 61
         },
         "best": {
-            "rating": 1868,
-            "date": 1680287192,
+            "rating": 2005,
+            "date": 1739622310,
             "game": "https://www.chess.com/game/live/109367397671"
         },
         "record": {
-            "win": 134,
-            "loss": 173,
+            "win": 144,
+            "loss": 187,
             "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2037,
-            "date": 1734182816,
-            "rd": 21
+            "rating": 1976,
+            "date": 1741703383,
+            "rd": 22
         },
         "best": {
             "rating": 2140,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/100029835337"
         },
         "record": {
-            "win": 24924,
-            "loss": 22042,
-            "draw": 3407
+            "win": 25573,
+            "loss": 22628,
+            "draw": 3516
         }
     },
     "fide": 1993,

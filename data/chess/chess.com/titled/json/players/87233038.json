@@ -5,9 +5,9 @@
     "name": "Joshua Christie",
     "username": "fmjchristie",
     "title": "FM",
-    "followers": 105,
+    "followers": 110,
     "country": "https://api.chess.com/pub/country/JM",
-    "last_online": 1733130217,
+    "last_online": 1741703728,
     "joined": 1595337006,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2295,
-            "date": 1706220234,
+            "date": 1740958852,
             "rd": 115
         },
         "best": {
@@ -69,25 +69,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2564,
-            "date": 1719758342,
-            "rd": 99
+            "rating": 2689,
+            "date": 1740243645,
+            "rd": 46
         },
         "best": {
-            "rating": 2676,
-            "date": 1668598011,
-            "game": "https://www.chess.com/game/live/39912023291"
+            "rating": 2689,
+            "date": 1739901634,
+            "game": "https://www.chess.com/game/live/133030132139"
         },
         "record": {
-            "win": 121,
-            "loss": 77,
-            "draw": 17
+            "win": 154,
+            "loss": 91,
+            "draw": 26
         }
     },
+    "fide": 2272,
     "tactics": {
         "highest": {
-            "rating": 3326,
-            "date": 1729888545
+            "rating": 3344,
+            "date": 1738182209
         },
         "lowest": {
             "rating": 2193,

@@ -1,13 +1,13 @@
 {
     "player_id": 18118846,
-    "@id": "https://api.chess.com/pub/player/kaanadayhamle",
-    "url": "https://www.chess.com/member/kaanadayhamle",
+    "@id": "https://api.chess.com/pub/player/kaanozcan006",
+    "url": "https://www.chess.com/member/kaanozcan006",
     "name": "Kaan Ozcan",
-    "username": "kaanadayhamle",
+    "username": "kaanozcan006",
     "title": "FM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1733867506,
+    "last_online": 1741467542,
     "joined": 1405673426,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2174,
-            "date": 1697015045,
-            "rd": 180
+            "rating": 2171,
+            "date": 1739722650,
+            "rd": 49
         },
         "best": {
             "rating": 2174,
@@ -46,14 +46,14 @@
         },
         "record": {
             "win": 216,
-            "loss": 198,
+            "loss": 199,
             "draw": 42
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2638,
-            "date": 1733826811,
+            "rating": 2639,
+            "date": 1740243709,
             "rd": 49
         },
         "best": {
@@ -62,26 +62,26 @@
             "game": "https://www.chess.com/game/live/124912159625"
         },
         "record": {
-            "win": 1132,
-            "loss": 897,
+            "win": 1134,
+            "loss": 899,
             "draw": 183
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2455,
-            "date": 1733875942,
-            "rd": 40
+            "rating": 2558,
+            "date": 1741366731,
+            "rd": 41
         },
         "best": {
-            "rating": 2502,
-            "date": 1728515645,
+            "rating": 2603,
+            "date": 1740521891,
             "game": "https://www.chess.com/game/live/90689481315"
         },
         "record": {
-            "win": 696,
-            "loss": 690,
-            "draw": 155
+            "win": 764,
+            "loss": 742,
+            "draw": 165
         }
     },
     "fide": 0,
@@ -97,8 +97,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 50,
-            "score": 47
+            "total_attempts": 51,
+            "score": 48
         }
     }
 }

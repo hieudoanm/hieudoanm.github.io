@@ -6,10 +6,10 @@
     "name": "Tom Bus",
     "username": "nemonescio",
     "title": "CM",
-    "followers": 32,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Dieren",
-    "last_online": 1733913594,
+    "last_online": 1741604819,
     "joined": 1420303780,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2188,
-            "date": 1720014534,
+            "rating": 2185,
+            "date": 1741102425,
             "rd": 49
         },
         "best": {
@@ -47,9 +47,9 @@
             "game": "https://www.chess.com/game/live/102380630583"
         },
         "record": {
-            "win": 52,
-            "loss": 21,
-            "draw": 4
+            "win": 54,
+            "loss": 24,
+            "draw": 5
         }
     },
     "chess_bullet": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2257,
-            "date": 1732276313,
-            "rd": 54
+            "rating": 2260,
+            "date": 1741422573,
+            "rd": 43
         },
         "best": {
             "rating": 2330,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/125193525891"
         },
         "record": {
-            "win": 8797,
-            "loss": 7388,
-            "draw": 888
+            "win": 8833,
+            "loss": 7448,
+            "draw": 899
         }
     },
     "fide": 2082,
     "tactics": {
         "highest": {
-            "rating": 3230,
-            "date": 1733668487
+            "rating": 3236,
+            "date": 1734891514
         },
         "lowest": {
             "rating": 1227,

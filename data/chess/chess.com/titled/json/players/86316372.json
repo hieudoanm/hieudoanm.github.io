@@ -6,10 +6,10 @@
     "name": "Jamshid Shodikulov",
     "username": "jo_black1990",
     "title": "CM",
-    "followers": 57,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/UZ",
     "location": "Sirdaryo viloyati",
-    "last_online": 1732725389,
+    "last_online": 1739889824,
     "joined": 1594369978,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2324,
-            "date": 1720687965,
+            "rating": 2317,
+            "date": 1738683354,
             "rd": 49
         },
         "best": {
@@ -47,8 +47,8 @@
             "game": "https://www.chess.com/game/live/91714169625"
         },
         "record": {
-            "win": 130,
-            "loss": 91,
+            "win": 131,
+            "loss": 92,
             "draw": 13
         }
     },

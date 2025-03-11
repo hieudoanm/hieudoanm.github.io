@@ -6,10 +6,10 @@
     "name": "Javier Ruiz Vazquez",
     "username": "javierruizvazquez",
     "title": "CM",
-    "followers": 23,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1733932666,
+    "last_online": 1741634648,
     "joined": 1717004331,
     "status": "premium",
     "is_streamer": false,
@@ -18,26 +18,26 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2406,
-            "date": 1732384724,
-            "rd": 39
+            "rating": 2424,
+            "date": 1741635806,
+            "rd": 35
         },
         "best": {
             "rating": 2496,
             "date": 1718874048,
-            "game": "https://www.chess.com/game/live/117652841077"
+            "game": "https://www.chess.com/game/live/130961956927"
         },
         "record": {
-            "win": 206,
-            "loss": 315,
-            "draw": 34
+            "win": 297,
+            "loss": 444,
+            "draw": 45
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2450,
-            "date": 1733853980,
-            "rd": 49
+            "rating": 2600,
+            "date": 1741388894,
+            "rd": 29
         },
         "best": {
             "rating": 2529,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/117905416235"
         },
         "record": {
-            "win": 213,
-            "loss": 245,
-            "draw": 35
+            "win": 325,
+            "loss": 357,
+            "draw": 53
         }
     },
     "fide": 2237,

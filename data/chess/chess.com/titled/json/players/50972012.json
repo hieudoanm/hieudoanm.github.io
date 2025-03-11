@@ -6,10 +6,10 @@
     "name": "Juan Manuel Garcia Almaguer",
     "username": "almaguerjm",
     "title": "CM",
-    "followers": 254,
+    "followers": 271,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Mexico",
-    "last_online": 1734184868,
+    "last_online": 1741700997,
     "joined": 1540073968,
     "status": "staff",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1490,
-            "date": 1732683780,
+            "date": 1740512296,
             "rd": 101
         },
         "best": {
@@ -37,17 +37,17 @@
     },
     "chess960_daily": {
         "last": {
-            "rating": 2042,
-            "date": 1732683780,
-            "rd": 315
+            "rating": 2054,
+            "date": 1740512296,
+            "rd": 310
         },
         "best": {
-            "rating": 2042,
-            "date": 1732683780,
+            "rating": 2054,
+            "date": 1740512296,
             "game": "https://www.chess.com/game/daily/725702767"
         },
         "record": {
-            "win": 3,
+            "win": 4,
             "loss": 0,
             "draw": 0,
             "time_per_move": 19508,
@@ -56,8 +56,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2335,
-            "date": 1732478472,
+            "rating": 2349,
+            "date": 1739922975,
             "rd": 49
         },
         "best": {
@@ -66,16 +66,16 @@
             "game": "https://www.chess.com/game/live/73066605715"
         },
         "record": {
-            "win": 60,
+            "win": 63,
             "loss": 18,
             "draw": 7
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2488,
-            "date": 1734151656,
-            "rd": 22
+            "rating": 2606,
+            "date": 1741701886,
+            "rd": 23
         },
         "best": {
             "rating": 2784,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/96493118661"
         },
         "record": {
-            "win": 3125,
-            "loss": 2311,
-            "draw": 279
+            "win": 3904,
+            "loss": 2884,
+            "draw": 343
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2463,
-            "date": 1733846682,
-            "rd": 47
+            "rating": 2506,
+            "date": 1741287681,
+            "rd": 51
         },
         "best": {
             "rating": 2545,
@@ -100,8 +100,8 @@
             "game": "https://www.chess.com/game/live/4466628421"
         },
         "record": {
-            "win": 1482,
-            "loss": 1126,
+            "win": 1501,
+            "loss": 1140,
             "draw": 151
         }
     },

@@ -1,5 +1,5 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/369189719.5fe94c0e.200x200o.8c055c3d8f7c.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/369189719.6750f71e.200x200o.6a167ad66bb9.jpg",
     "player_id": 369189719,
     "@id": "https://api.chess.com/pub/player/blitz_monster2910",
     "url": "https://www.chess.com/member/Blitz_Monster2910",
@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734010772,
+    "last_online": 1741252059,
     "joined": 1718193422,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2274,
-            "date": 1726521419,
-            "rd": 48
+            "rating": 2266,
+            "date": 1736272624,
+            "rd": 49
         },
         "best": {
             "rating": 2282,
@@ -28,7 +28,7 @@
         },
         "record": {
             "win": 5,
-            "loss": 1,
+            "loss": 2,
             "draw": 1
         }
     },
@@ -51,8 +51,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2492,
-            "date": 1733923388,
+            "rating": 2415,
+            "date": 1740563129,
             "rd": 49
         },
         "best": {
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/113694035997"
         },
         "record": {
-            "win": 158,
-            "loss": 116,
-            "draw": 46
+            "win": 171,
+            "loss": 141,
+            "draw": 50
         }
     },
     "fide": 2247,
     "tactics": {
         "highest": {
-            "rating": 3567,
-            "date": 1732368602
+            "rating": 3734,
+            "date": 1735826691
         },
         "lowest": {
             "rating": 1000,

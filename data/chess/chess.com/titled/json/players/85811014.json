@@ -6,10 +6,10 @@
     "name": "Lubuuto Mulwale Bwalya",
     "username": "bwalya3",
     "title": "WCM",
-    "followers": 15,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/ZM",
     "location": "Zambia",
-    "last_online": 1733055814,
+    "last_online": 1735757714,
     "joined": 1593965345,
     "status": "premium",
     "is_streamer": false,
@@ -84,8 +84,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2683,
-            "date": 1723554990
+            "rating": 2812,
+            "date": 1735833913
         },
         "lowest": {
             "rating": 1738,
@@ -94,8 +94,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 29,
-            "score": 26
+            "total_attempts": 30,
+            "score": 27
         }
     }
 }

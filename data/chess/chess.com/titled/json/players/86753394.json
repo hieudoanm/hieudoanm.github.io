@@ -9,7 +9,7 @@
     "followers": 177,
     "country": "https://api.chess.com/pub/country/MM",
     "location": "Yangon",
-    "last_online": 1734005208,
+    "last_online": 1741444457,
     "joined": 1594817284,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2430,
-            "date": 1734154087,
-            "rd": 26
+            "rating": 2427,
+            "date": 1741697825,
+            "rd": 24
         },
         "best": {
             "rating": 2568,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/52286399161"
         },
         "record": {
-            "win": 14818,
-            "loss": 8746,
-            "draw": 1456
+            "win": 15265,
+            "loss": 9092,
+            "draw": 1483
         }
     },
     "fide": 2319,

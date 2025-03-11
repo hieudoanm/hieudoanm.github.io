@@ -6,9 +6,9 @@
     "name": "Ankush Khandelwal",
     "username": "gameking51",
     "title": "FM",
-    "followers": 58,
+    "followers": 62,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1734131697,
+    "last_online": 1741643857,
     "joined": 1281979697,
     "status": "premium",
     "is_streamer": false,
@@ -63,10 +63,6 @@
         "best": {
             "total_attempts": 71,
             "score": 68
-        },
-        "daily": {
-            "total_attempts": 57,
-            "score": 54
         }
     }
 }

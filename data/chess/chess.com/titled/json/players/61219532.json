@@ -6,15 +6,15 @@
     "name": "Kemel Antonio Gallo Garc\u00eda",
     "username": "kemelgallo",
     "title": "FM",
-    "followers": 590,
+    "followers": 643,
     "country": "https://api.chess.com/pub/country/CU",
     "location": "Sancti Sp\u00edritus",
-    "last_online": 1734111677,
+    "last_online": 1741570174,
     "joined": 1558373715,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -51,25 +51,25 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2393,
-            "date": 1719525714,
+            "rating": 2365,
+            "date": 1739115276,
             "rd": 49
         },
         "best": {
-            "rating": 2393,
-            "date": 1719525714,
+            "rating": 2394,
+            "date": 1739113929,
             "game": "https://www.chess.com/game/live/86746807169"
         },
         "record": {
-            "win": 24,
-            "loss": 8,
+            "win": 25,
+            "loss": 10,
             "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2762,
-            "date": 1723908914,
+            "rating": 2745,
+            "date": 1736146159,
             "rd": 48
         },
         "best": {
@@ -78,16 +78,16 @@
             "game": "https://www.chess.com/game/live/112815014291"
         },
         "record": {
-            "win": 299,
-            "loss": 251,
+            "win": 300,
+            "loss": 253,
             "draw": 36
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2819,
-            "date": 1731451111,
-            "rd": 48
+            "rating": 2808,
+            "date": 1741570167,
+            "rd": 42
         },
         "best": {
             "rating": 2858,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/108833953723"
         },
         "record": {
-            "win": 1829,
-            "loss": 1862,
-            "draw": 356
+            "win": 1982,
+            "loss": 2024,
+            "draw": 381
         }
     },
     "fide": 2385,

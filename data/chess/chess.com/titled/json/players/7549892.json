@@ -6,10 +6,10 @@
     "name": "Geoffrey Borg",
     "username": "grobdeg",
     "title": "FM",
-    "followers": 46,
+    "followers": 63,
     "country": "https://api.chess.com/pub/country/MT",
     "location": "Malta",
-    "last_online": 1734091022,
+    "last_online": 1741431715,
     "joined": 1336749912,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2542,
-            "date": 1732679335,
-            "rd": 111
+            "date": 1735832355,
+            "rd": 50
         },
         "best": {
             "rating": 2542,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/5272936674"
         },
         "record": {
-            "win": 7,
+            "win": 8,
             "loss": 3,
             "draw": 7
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2443,
-            "date": 1734091165,
-            "rd": 20
+            "rating": 2360,
+            "date": 1741679807,
+            "rd": 19
         },
         "best": {
             "rating": 2667,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/112596043793"
         },
         "record": {
-            "win": 5067,
-            "loss": 3799,
-            "draw": 557
+            "win": 6789,
+            "loss": 5150,
+            "draw": 710
         }
     },
     "chess_blitz": {

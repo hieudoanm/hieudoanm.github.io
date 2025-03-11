@@ -6,10 +6,10 @@
     "name": "Jon Viktor Gunnarsson",
     "username": "morfius",
     "title": "IM",
-    "followers": 61,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/IS",
     "location": "Reykjavik",
-    "last_online": 1731948999,
+    "last_online": 1741649889,
     "joined": 1215805425,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2631,
-            "date": 1728781485,
-            "rd": 48
+            "rating": 2711,
+            "date": 1741650228,
+            "rd": 28
         },
         "best": {
-            "rating": 2756,
-            "date": 1674696248,
-            "game": "https://www.chess.com/game/live/4784140203"
+            "rating": 2776,
+            "date": 1741107259,
+            "game": "https://www.chess.com/game/live/134260752449"
         },
         "record": {
-            "win": 808,
-            "loss": 611,
-            "draw": 182
+            "win": 992,
+            "loss": 746,
+            "draw": 230
         }
     },
     "fide": 2468,

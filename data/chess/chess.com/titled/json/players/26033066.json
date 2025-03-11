@@ -6,9 +6,9 @@
     "name": "Namitbir Singh Walia",
     "username": "mr_ruthless",
     "title": "FM",
-    "followers": 115,
+    "followers": 128,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734118401,
+    "last_online": 1741699338,
     "joined": 1452327537,
     "status": "premium",
     "is_streamer": true,
@@ -27,9 +27,9 @@
     ],
     "chess_daily": {
         "last": {
-            "rating": 1376,
-            "date": 1708447505,
-            "rd": 141
+            "rating": 694,
+            "date": 1736187629,
+            "rd": 151
         },
         "best": {
             "rating": 1505,
@@ -37,52 +37,51 @@
             "game": "https://www.chess.com/game/daily/376551707"
         },
         "record": {
-            "win": 29,
-            "loss": 14,
+            "win": 40,
+            "loss": 25,
             "draw": 1,
-            "time_per_move": 12596,
-            "timeout_percent": 0
+            "time_per_move": 16983,
+            "timeout_percent": 57
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2249,
-            "date": 1683560540,
-            "rd": 100
+            "rating": 2292,
+            "date": 1739732487,
+            "rd": 47
         },
         "best": {
-            "rating": 2249,
-            "date": 1683560278,
-            "game": "https://www.chess.com/game/live/15572588791"
+            "rating": 2296,
+            "date": 1739732103,
+            "game": "https://www.chess.com/game/live/133469964215"
         },
         "record": {
-            "win": 56,
-            "loss": 34,
-            "draw": 8
+            "win": 61,
+            "loss": 37,
+            "draw": 9
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2290,
-            "date": 1733412691,
-            "rd": 70
+            "rating": 2496,
+            "date": 1739156718,
+            "rd": 31
         },
         "best": {
-            "rating": 2552,
-            "date": 1719073799,
-            "game": "https://www.chess.com/game/live/117046867195"
+            "rating": 2606,
+            "date": 1737309643,
+            "game": "https://www.chess.com/game/live/132170393107"
         },
         "record": {
-            "win": 1259,
-            "loss": 989,
-            "draw": 78
+            "win": 1415,
+            "loss": 1165,
+            "draw": 95
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2534,
-            "date": 1733853973,
-            "rd": 40
+            "rating": 2636,
+            "date": 1740719163
         },
         "best": {
             "rating": 2651,
@@ -90,9 +89,9 @@
             "game": "https://www.chess.com/game/live/24427339339"
         },
         "record": {
-            "win": 3381,
-            "loss": 2676,
-            "draw": 364
+            "win": 3454,
+            "loss": 2724,
+            "draw": 379
         }
     },
     "fide": 2351,

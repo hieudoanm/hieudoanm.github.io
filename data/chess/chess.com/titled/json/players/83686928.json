@@ -6,9 +6,9 @@
     "name": "Tran Minh Thang",
     "username": "marcsimsl",
     "title": "IM",
-    "followers": 115,
+    "followers": 116,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1726506036,
+    "last_online": 1741249613,
     "joined": 1592746655,
     "status": "premium",
     "is_streamer": false,
@@ -51,8 +51,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2637,
-            "date": 1722000979,
+            "rating": 2629,
+            "date": 1741250054,
             "rd": 49
         },
         "best": {
@@ -62,7 +62,7 @@
         },
         "record": {
             "win": 456,
-            "loss": 326,
+            "loss": 327,
             "draw": 60
         }
     },

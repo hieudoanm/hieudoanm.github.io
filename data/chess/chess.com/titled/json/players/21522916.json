@@ -7,7 +7,7 @@
     "title": "WCM",
     "followers": 55,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734023218,
+    "last_online": 1739558914,
     "joined": 1426391443,
     "status": "premium",
     "is_streamer": false,
@@ -47,19 +47,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1326,
-            "date": 1734023212,
-            "rd": 31
+            "rating": 1493,
+            "date": 1741390965,
+            "rd": 22
         },
         "best": {
-            "rating": 1404,
-            "date": 1718548505,
-            "game": "https://www.chess.com/game/live/127612191643"
+            "rating": 1449,
+            "date": 1739047647,
+            "game": "https://www.chess.com/game/live/132784195941"
         },
         "record": {
-            "win": 168,
-            "loss": 161,
-            "draw": 7
+            "win": 473,
+            "loss": 444,
+            "draw": 20
         }
     },
     "chess_blitz": {

@@ -6,20 +6,20 @@
     "name": "Enes Tanriverdi",
     "username": "enestnrvrd",
     "title": "IM",
-    "followers": 67,
+    "followers": 68,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734170663,
+    "last_online": 1741703222,
     "joined": 1507835724,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 2292,
-            "date": 1719752436,
-            "rd": 47
+            "date": 1739878567,
+            "rd": 49
         },
         "best": {
             "rating": 2416,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/113489453393"
         },
         "record": {
-            "win": 8,
+            "win": 9,
             "loss": 4,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2763,
-            "date": 1734094586,
-            "rd": 42
+            "rating": 2717,
+            "date": 1741699964,
+            "rd": 34
         },
         "best": {
             "rating": 2888,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/97347149831"
         },
         "record": {
-            "win": 1071,
-            "loss": 909,
-            "draw": 167
+            "win": 1130,
+            "loss": 986,
+            "draw": 176
         }
     },
     "tactics": {

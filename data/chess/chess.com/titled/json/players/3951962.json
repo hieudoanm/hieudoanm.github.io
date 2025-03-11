@@ -6,9 +6,9 @@
     "name": "Nick Maatman",
     "username": "babbelbox",
     "title": "IM",
-    "followers": 89,
+    "followers": 92,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734094148,
+    "last_online": 1739649678,
     "joined": 1284043965,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2706,
-            "date": 1734096341,
-            "rd": 32
+            "rating": 2696,
+            "date": 1736074215,
+            "rd": 39
         },
         "best": {
             "rating": 2781,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/86605728611"
         },
         "record": {
-            "win": 5604,
-            "loss": 4027,
-            "draw": 946
+            "win": 5611,
+            "loss": 4034,
+            "draw": 947
         }
     },
     "tactics": {

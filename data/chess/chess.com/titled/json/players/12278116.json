@@ -6,10 +6,10 @@
     "name": "Carlos Burgos",
     "username": "eyeofeagle",
     "title": "IM",
-    "followers": 54,
+    "followers": 57,
     "country": "https://api.chess.com/pub/country/SV",
     "location": "Santa Tecla",
-    "last_online": 1733974544,
+    "last_online": 1741402678,
     "joined": 1371008011,
     "status": "premium",
     "is_streamer": false,
@@ -53,7 +53,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2358,
-            "date": 1726158528,
+            "date": 1737475770,
             "rd": 88
         },
         "best": {

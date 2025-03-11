@@ -6,10 +6,10 @@
     "name": "Kunal M",
     "username": "kunalm64",
     "title": "FM",
-    "followers": 6,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734012126,
+    "last_online": 1741685912,
     "joined": 1705248679,
     "status": "premium",
     "is_streamer": false,
@@ -33,11 +33,11 @@
             "draw": 16
         }
     },
-    "fide": 2245,
+    "fide": 2303,
     "tactics": {
         "highest": {
-            "rating": 2815,
-            "date": 1715618656
+            "rating": 2841,
+            "date": 1737559860
         },
         "lowest": {
             "rating": 1000,
@@ -48,6 +48,10 @@
         "best": {
             "total_attempts": 59,
             "score": 56
+        },
+        "daily": {
+            "total_attempts": 55,
+            "score": 52
         }
     }
 }

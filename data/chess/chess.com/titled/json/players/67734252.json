@@ -5,9 +5,9 @@
     "name": "Paulo Jodorcovsky Werjivker",
     "username": "chuchofrio1",
     "title": "CM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1718840542,
+    "last_online": 1736264634,
     "joined": 1573250902,
     "status": "premium",
     "is_streamer": false,
@@ -45,9 +45,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2238,
-            "date": 1703995078,
-            "rd": 36
+            "rating": 2459,
+            "date": 1736273286,
+            "rd": 92
         },
         "best": {
             "rating": 2544,
@@ -55,9 +55,9 @@
             "game": "https://www.chess.com/game/live/5217623293"
         },
         "record": {
-            "win": 4179,
-            "loss": 5208,
-            "draw": 798
+            "win": 4185,
+            "loss": 5212,
+            "draw": 799
         }
     },
     "tactics": {

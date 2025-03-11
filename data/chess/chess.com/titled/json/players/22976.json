@@ -9,7 +9,7 @@
     "followers": 116,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Zwolle",
-    "last_online": 1723742066,
+    "last_online": 1739007611,
     "joined": 1186849944,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2106,
-            "date": 1733759119,
-            "rd": 113
+            "rating": 2119,
+            "date": 1734991043,
+            "rd": 119
         },
         "best": {
             "rating": 2343,
@@ -30,8 +30,8 @@
         "record": {
             "win": 1690,
             "loss": 449,
-            "draw": 296,
-            "time_per_move": 6295,
+            "draw": 297,
+            "time_per_move": 6303,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 237,
             "loss": 63,
             "draw": 18,
-            "time_per_move": 6295,
+            "time_per_move": 6303,
             "timeout_percent": 0
         }
     },

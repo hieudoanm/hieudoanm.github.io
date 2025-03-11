@@ -5,9 +5,9 @@
     "name": "Sim Maerevoet",
     "username": "minisim",
     "title": "IM",
-    "followers": 73,
+    "followers": 77,
     "country": "https://api.chess.com/pub/country/BE",
-    "last_online": 1734024515,
+    "last_online": 1741354761,
     "joined": 1431018191,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2672,
-            "date": 1728331801,
-            "rd": 47
+            "rating": 2668,
+            "date": 1738904980,
+            "rd": 45
         },
         "best": {
             "rating": 2730,
@@ -62,26 +62,26 @@
             "game": "https://www.chess.com/game/live/112050793989"
         },
         "record": {
-            "win": 472,
-            "loss": 281,
-            "draw": 32
+            "win": 480,
+            "loss": 289,
+            "draw": 33
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2752,
-            "date": 1733869677,
-            "rd": 27
+            "rating": 2711,
+            "date": 1739463978,
+            "rd": 31
         },
         "best": {
-            "rating": 2855,
-            "date": 1726827050,
+            "rating": 2860,
+            "date": 1736979124,
             "game": "https://www.chess.com/game/live/127007976169"
         },
         "record": {
-            "win": 1650,
-            "loss": 1114,
-            "draw": 260
+            "win": 1799,
+            "loss": 1219,
+            "draw": 286
         }
     },
     "fide": 2432,

@@ -8,7 +8,7 @@
     "followers": 38,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734163922,
+    "last_online": 1741589392,
     "joined": 1358070926,
     "status": "premium",
     "is_streamer": false,
@@ -70,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2335,
-            "date": 1734175760,
-            "rd": 40
+            "rating": 2347,
+            "date": 1741592517,
+            "rd": 38
         },
         "best": {
-            "rating": 2352,
-            "date": 1732969828,
+            "rating": 2361,
+            "date": 1734771668,
             "game": "https://www.chess.com/game/live/48148169955"
         },
         "record": {
-            "win": 278,
-            "loss": 139,
-            "draw": 19
+            "win": 374,
+            "loss": 204,
+            "draw": 31
         }
     },
     "fide": 2374,

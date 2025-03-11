@@ -1,5 +1,5 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/112880744.d2c6b50b.200x200o.f877fdf77d48.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/112880744.2f539484.200x200o.d36ec8275b44.jpg",
     "player_id": 112880744,
     "@id": "https://api.chess.com/pub/player/mtempone",
     "url": "https://www.chess.com/member/MTempone",
@@ -7,9 +7,8 @@
     "username": "mtempone",
     "title": "IM",
     "followers": 0,
-    "country": "https://api.chess.com/pub/country/AR",
-    "location": "Buenos Aires",
-    "last_online": 1634004285,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1739859226,
     "joined": 1610768461,
     "status": "premium",
     "is_streamer": false,

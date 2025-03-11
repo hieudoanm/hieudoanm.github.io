@@ -5,14 +5,14 @@
     "name": "Vadim Bobkov",
     "username": "bob_2004",
     "title": "FM",
-    "followers": 31,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733851684,
+    "last_online": 1741523733,
     "joined": 1514992153,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2713,
-            "date": 1721139167,
-            "rd": 49
+            "rating": 2722,
+            "date": 1735853284,
+            "rd": 46
         },
         "best": {
             "rating": 2750,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/112208479241"
         },
         "record": {
-            "win": 189,
-            "loss": 154,
+            "win": 194,
+            "loss": 159,
             "draw": 21
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2669,
-            "date": 1733854204,
-            "rd": 36
+            "rating": 2510,
+            "date": 1741268240,
+            "rd": 41
         },
         "best": {
             "rating": 2866,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/117927620163"
         },
         "record": {
-            "win": 1671,
-            "loss": 1368,
-            "draw": 250
+            "win": 1832,
+            "loss": 1511,
+            "draw": 275
         }
     },
     "fide": 2341,

@@ -8,7 +8,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Eindhoven",
-    "last_online": 1734111720,
+    "last_online": 1741520224,
     "joined": 1186328770,
     "status": "premium",
     "is_streamer": false,
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2679,
-            "date": 1734137639,
-            "rd": 28
+            "rating": 2661,
+            "date": 1739493067,
+            "rd": 49
         },
         "best": {
             "rating": 2777,
@@ -82,9 +82,9 @@
             "game": "https://www.chess.com/game/live/125368711981"
         },
         "record": {
-            "win": 737,
-            "loss": 545,
-            "draw": 113
+            "win": 753,
+            "loss": 562,
+            "draw": 118
         }
     },
     "chess_blitz": {

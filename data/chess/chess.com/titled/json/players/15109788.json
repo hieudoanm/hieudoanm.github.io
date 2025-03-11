@@ -8,11 +8,12 @@
     "followers": 4,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "budapest",
-    "last_online": 1715968045,
+    "last_online": 1739261359,
     "joined": 1387450185,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Wood",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -33,18 +34,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2201,
-            "date": 1491576174,
-            "rd": 135
+            "rating": 2114,
+            "date": 1739262552,
+            "rd": 177
         },
         "best": {
-            "rating": 2365,
-            "date": 1405594049,
+            "rating": 2378,
+            "date": 1739261757,
             "game": "https://www.chess.com/game/live/1077157049"
         },
         "record": {
-            "win": 603,
-            "loss": 418,
+            "win": 604,
+            "loss": 420,
             "draw": 107
         }
     },

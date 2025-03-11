@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 59,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1734121867,
+    "last_online": 1741603049,
     "joined": 1468066010,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1970,
-            "date": 1734119346,
-            "rd": 244
+            "rating": 1868,
+            "date": 1741360127,
+            "rd": 210
         },
         "best": {
             "rating": 1970,
@@ -28,9 +28,9 @@
         },
         "record": {
             "win": 15,
-            "loss": 2,
+            "loss": 3,
             "draw": 2,
-            "time_per_move": 23014,
+            "time_per_move": 25096,
             "timeout_percent": 0
         }
     },
@@ -54,7 +54,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2708,
-            "date": 1675622794,
+            "date": 1735926697,
             "rd": 132
         },
         "best": {

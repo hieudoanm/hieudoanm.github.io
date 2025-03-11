@@ -6,9 +6,9 @@
     "name": "Theo Stijve",
     "username": "gradualismunleashed",
     "title": "IM",
-    "followers": 423,
+    "followers": 431,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1734037400,
+    "last_online": 1741471926,
     "joined": 1667945434,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2571,
-            "date": 1734038118,
-            "rd": 27
+            "rating": 2487,
+            "date": 1741704041,
+            "rd": 30
         },
         "best": {
             "rating": 2790,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/124573748827"
         },
         "record": {
-            "win": 5470,
-            "loss": 6553,
-            "draw": 1068
+            "win": 5726,
+            "loss": 6873,
+            "draw": 1106
         }
     },
     "fide": 2384,

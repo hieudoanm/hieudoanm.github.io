@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Indian_Tactician",
     "username": "indian_tactician",
     "title": "FM",
-    "followers": 0,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1731926427,
+    "last_online": 1736500752,
     "joined": 1597560661,
     "status": "premium",
     "is_streamer": false,
@@ -33,19 +33,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2571,
-            "date": 1727509808,
-            "rd": 49
+            "rating": 2748,
+            "date": 1736505328,
+            "rd": 31
         },
         "best": {
-            "rating": 2571,
-            "date": 1727509808,
-            "game": "https://www.chess.com/game/live/100605833179"
+            "rating": 2761,
+            "date": 1736501625,
+            "game": "https://www.chess.com/game/live/129905415769"
         },
         "record": {
-            "win": 34,
-            "loss": 17,
-            "draw": 2
+            "win": 92,
+            "loss": 62,
+            "draw": 11
         }
     },
     "chess_blitz": {

@@ -6,10 +6,10 @@
     "name": "Kamil Grycel",
     "username": "kamilgrycel",
     "title": "FM",
-    "followers": 175,
+    "followers": 180,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Warszawa",
-    "last_online": 1734170460,
+    "last_online": 1741591430,
     "joined": 1578333047,
     "status": "premium",
     "is_streamer": false,
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2703,
-            "date": 1732808149,
-            "rd": 21
+            "rating": 2626,
+            "date": 1741576261,
+            "rd": 29
         },
         "best": {
-            "rating": 2703,
-            "date": 1732808149,
-            "game": "https://www.chess.com/game/live/89927451275"
+            "rating": 2711,
+            "date": 1735735291,
+            "game": "https://www.chess.com/game/live/131783408373"
         },
         "record": {
-            "win": 5506,
-            "loss": 6265,
-            "draw": 759
+            "win": 5654,
+            "loss": 6436,
+            "draw": 785
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2601,
-            "date": 1734178363,
-            "rd": 25
+            "rating": 2559,
+            "date": 1741575520,
+            "rd": 29
         },
         "best": {
             "rating": 2692,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/60624014747"
         },
         "record": {
-            "win": 4483,
-            "loss": 4863,
-            "draw": 823
+            "win": 4655,
+            "loss": 5058,
+            "draw": 855
         }
     },
     "fide": 2315,
@@ -99,8 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 17,
-            "score": 16
+            "total_attempts": 39,
+            "score": 36
         }
     }
 }

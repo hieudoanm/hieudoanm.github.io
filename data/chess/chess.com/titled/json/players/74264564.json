@@ -5,10 +5,10 @@
     "name": "Hamidreza Ebrahimi Herab",
     "username": "readyskate",
     "title": "FM",
-    "followers": 58,
+    "followers": 82,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Tabriz",
-    "last_online": 1734171055,
+    "last_online": 1741702286,
     "joined": 1584978006,
     "status": "premium",
     "is_streamer": false,
@@ -31,9 +31,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2373,
-            "date": 1732710185,
-            "rd": 48
+            "rating": 2357,
+            "date": 1739729357
         },
         "best": {
             "rating": 2373,
@@ -41,50 +40,50 @@
             "game": "https://www.chess.com/game/live/126448803761"
         },
         "record": {
-            "win": 63,
-            "loss": 20,
+            "win": 69,
+            "loss": 26,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2805,
-            "date": 1733036943,
-            "rd": 41
+            "rating": 2916,
+            "date": 1740247239,
+            "rd": 28
         },
         "best": {
-            "rating": 2929,
-            "date": 1727598224,
-            "game": "https://www.chess.com/game/live/121272018645"
+            "rating": 2952,
+            "date": 1740246449,
+            "game": "https://www.chess.com/game/live/133984749691"
         },
         "record": {
-            "win": 555,
-            "loss": 477,
-            "draw": 55
+            "win": 789,
+            "loss": 653,
+            "draw": 70
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2903,
-            "date": 1734177312,
-            "rd": 27
+            "rating": 2937,
+            "date": 1741689878,
+            "rd": 26
         },
         "best": {
             "rating": 3006,
             "date": 1729421014,
-            "game": "https://www.chess.com/game/live/122158806903"
+            "game": "https://www.chess.com/game/live/133976943601"
         },
         "record": {
-            "win": 2045,
-            "loss": 1745,
-            "draw": 307
+            "win": 2944,
+            "loss": 2462,
+            "draw": 445
         }
     },
     "fide": 2331,
     "tactics": {
         "highest": {
-            "rating": 3384,
-            "date": 1728392867
+            "rating": 3647,
+            "date": 1736961937
         },
         "lowest": {
             "rating": 415,
@@ -93,12 +92,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 66,
-            "score": 63
+            "total_attempts": 68,
+            "score": 65
         },
         "daily": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 54,
+            "score": 51
         }
     }
 }

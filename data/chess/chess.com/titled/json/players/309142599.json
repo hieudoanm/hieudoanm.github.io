@@ -5,10 +5,10 @@
     "name": "Miguel Bestard Borras",
     "username": "miguelbestard1981",
     "title": "CM",
-    "followers": 25,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Palma",
-    "last_online": 1734099363,
+    "last_online": 1741304151,
     "joined": 1693346690,
     "status": "premium",
     "is_streamer": false,
@@ -35,7 +35,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2101,
-            "date": 1724925196,
+            "date": 1737801033,
             "rd": 74
         },
         "best": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2236,
-            "date": 1734184175,
-            "rd": 32
+            "rating": 2224,
+            "date": 1741525718,
+            "rd": 35
         },
         "best": {
             "rating": 2406,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/117476995113"
         },
         "record": {
-            "win": 1348,
-            "loss": 1360,
-            "draw": 341
+            "win": 1440,
+            "loss": 1483,
+            "draw": 365
         }
     },
     "fide": 2107,

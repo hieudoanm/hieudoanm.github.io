@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/ununinspiriert",
     "username": "ununinspiriert",
     "title": "FM",
-    "followers": 3,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734081934,
+    "last_online": 1741537917,
     "joined": 1655633097,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2225,
-            "date": 1733613381,
-            "rd": 57
+            "rating": 2227,
+            "date": 1741624623,
+            "rd": 54
         },
         "best": {
             "rating": 2319,
@@ -42,9 +42,9 @@
             "game": "https://www.chess.com/game/live/110547758045"
         },
         "record": {
-            "win": 234,
-            "loss": 183,
-            "draw": 28
+            "win": 252,
+            "loss": 195,
+            "draw": 34
         }
     },
     "chess_blitz": {

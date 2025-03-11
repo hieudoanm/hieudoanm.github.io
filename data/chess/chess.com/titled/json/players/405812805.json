@@ -6,35 +6,35 @@
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733617027,
+    "last_online": 1741648008,
     "joined": 1732882410,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2145,
-            "date": 1733574155,
-            "rd": 85
+            "rating": 2578,
+            "date": 1741648353,
+            "rd": 35
         },
         "best": {
-            "rating": 2167,
-            "date": 1732885216,
-            "game": "https://www.chess.com/game/live/126623999167"
+            "rating": 2427,
+            "date": 1739492103,
+            "game": "https://www.chess.com/game/live/133013932629"
         },
         "record": {
-            "win": 14,
-            "loss": 3,
-            "draw": 0
+            "win": 101,
+            "loss": 49,
+            "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2217,
-            "date": 1733617809,
-            "rd": 209
+            "rating": 2528,
+            "date": 1740084115,
+            "rd": 48
         },
         "best": {
             "rating": 2217,
@@ -42,15 +42,15 @@
             "game": "https://www.chess.com/game/live/127356570403"
         },
         "record": {
-            "win": 1,
+            "win": 7,
             "loss": 1,
-            "draw": 0
+            "draw": 1
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2306,
-            "date": 1733573998
+            "rating": 2447,
+            "date": 1739280732
         },
         "lowest": {
             "rating": 1000,
@@ -59,8 +59,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 29,
-            "score": 26
+            "total_attempts": 63,
+            "score": 60
         }
     }
 }

@@ -6,9 +6,9 @@
     "name": "Darko R Mitrovic",
     "username": "mmdarko",
     "title": "FM",
-    "followers": 879,
+    "followers": 913,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734168397,
+    "last_online": 1741647964,
     "joined": 1559808129,
     "status": "premium",
     "is_streamer": false,
@@ -56,7 +56,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2445,
-            "date": 1734105444,
+            "date": 1738922190,
             "rd": 49
         },
         "best": {
@@ -90,7 +90,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2334,
-            "date": 1729261961,
+            "date": 1741530884,
             "rd": 56
         },
         "best": {

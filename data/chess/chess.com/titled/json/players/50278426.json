@@ -6,9 +6,9 @@
     "name": "Roberto Navarro Segura",
     "username": "chesster2500",
     "title": "IM",
-    "followers": 63,
+    "followers": 64,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1714535464,
+    "last_online": 1741364387,
     "joined": 1538342985,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1910,
-            "date": 1734148051,
-            "rd": 21
+            "rating": 1952,
+            "date": 1741627440,
+            "rd": 26
         },
         "best": {
-            "rating": 2094,
-            "date": 1698200760,
-            "game": "https://www.chess.com/game/live/95099999001"
+            "rating": 2096,
+            "date": 1738621133,
+            "game": "https://www.chess.com/game/live/129503611655"
         },
         "record": {
-            "win": 5988,
-            "loss": 4478,
-            "draw": 399
+            "win": 6442,
+            "loss": 4817,
+            "draw": 422
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2016,
-            "date": 1732241107,
-            "rd": 68
+            "rating": 2042,
+            "date": 1736193955,
+            "rd": 50
         },
         "best": {
             "rating": 2249,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/19417566843"
         },
         "record": {
-            "win": 1607,
-            "loss": 1162,
-            "draw": 211
+            "win": 1625,
+            "loss": 1174,
+            "draw": 212
         }
     },
     "fide": 0,

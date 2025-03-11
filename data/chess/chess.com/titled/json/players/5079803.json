@@ -6,9 +6,9 @@
     "name": "Hariharan Nilavoli",
     "username": "vignesh2809",
     "title": "WFM",
-    "followers": 54,
+    "followers": 56,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734129400,
+    "last_online": 1741630302,
     "joined": 1304577977,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2162,
-            "date": 1734159749,
-            "rd": 22
+            "rating": 2127,
+            "date": 1741573596,
+            "rd": 28
         },
         "best": {
             "rating": 2268,
@@ -75,16 +75,16 @@
             "game": "https://www.chess.com/game/live/108002365329"
         },
         "record": {
-            "win": 16973,
-            "loss": 15114,
-            "draw": 1853
+            "win": 17334,
+            "loss": 15416,
+            "draw": 1902
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2772,
-            "date": 1728253659
+            "rating": 2789,
+            "date": 1738976945
         },
         "lowest": {
             "rating": 1052,

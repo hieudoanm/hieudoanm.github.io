@@ -6,10 +6,10 @@
     "name": "Tyler B Hughes",
     "username": "ralfwin",
     "title": "FM",
-    "followers": 25,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Denver, Colorado",
-    "last_online": 1734066626,
+    "last_online": 1741390299,
     "joined": 1596779257,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     "chess_bullet": {
         "last": {
             "rating": 2373,
-            "date": 1733144610,
-            "rd": 42
+            "date": 1734974205,
+            "rd": 48
         },
         "best": {
             "rating": 2437,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/125665704771"
         },
         "record": {
-            "win": 169,
-            "loss": 194,
+            "win": 170,
+            "loss": 195,
             "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2391,
-            "date": 1734144438,
-            "rd": 23
+            "rating": 2396,
+            "date": 1741390375,
+            "rd": 38
         },
         "best": {
             "rating": 2685,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/123952866729"
         },
         "record": {
-            "win": 4917,
-            "loss": 5812,
-            "draw": 706
+            "win": 5136,
+            "loss": 6074,
+            "draw": 738
         }
     },
     "tactics": {

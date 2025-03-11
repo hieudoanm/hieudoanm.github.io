@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/36197178.3e5aed0a.200x200o.c7ffba2aaf61.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/36197178.36cf2fcd.200x200o.49a898168039.png",
     "player_id": 36197178,
     "@id": "https://api.chess.com/pub/player/keithonsky",
     "url": "https://www.chess.com/member/Keithonsky",
     "name": "Keith Jeffrey Khumalo",
     "username": "keithonsky",
     "title": "CM",
-    "followers": 1468,
+    "followers": 1569,
     "country": "https://api.chess.com/pub/country/ZA",
     "location": "Johannesburg",
-    "last_online": 1734102303,
+    "last_online": 1741703048,
     "joined": 1497081633,
     "status": "premium",
     "is_streamer": true,
@@ -63,7 +63,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2175,
-            "date": 1733843149,
+            "date": 1736856824,
             "rd": 110
         },
         "best": {
@@ -79,26 +79,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2673,
-            "date": 1734028856,
-            "rd": 41
+            "rating": 2645,
+            "date": 1741701884,
+            "rd": 31
         },
         "best": {
             "rating": 2794,
             "date": 1721742541,
-            "game": "https://www.chess.com/game/live/114991675327"
+            "game": "https://www.chess.com/game/live/132853241671"
         },
         "record": {
-            "win": 4629,
-            "loss": 5510,
-            "draw": 477
+            "win": 4720,
+            "loss": 5650,
+            "draw": 484
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2685,
-            "date": 1734095448,
-            "rd": 35
+            "rating": 2750,
+            "date": 1741691792,
+            "rd": 30
         },
         "best": {
             "rating": 2772,
@@ -106,16 +106,16 @@
             "game": "https://www.chess.com/game/live/96747104339"
         },
         "record": {
-            "win": 6548,
-            "loss": 6767,
-            "draw": 910
+            "win": 6693,
+            "loss": 6932,
+            "draw": 930
         }
     },
-    "fide": 2164,
+    "fide": 2142,
     "tactics": {
         "highest": {
-            "rating": 3500,
-            "date": 1717497453
+            "rating": 3539,
+            "date": 1740684768
         },
         "lowest": {
             "rating": 412,

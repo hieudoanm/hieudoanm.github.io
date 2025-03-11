@@ -6,9 +6,9 @@
     "name": "Qu\u1ef3nh Nh\u01b0",
     "username": "bii128",
     "title": "WCM",
-    "followers": 167,
+    "followers": 173,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1734172303,
+    "last_online": 1741428967,
     "joined": 1564499190,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1200,
-            "date": 1677754133,
+            "date": 1735053082,
             "rd": 350
         },
         "record": {
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1992,
-            "date": 1726224287,
-            "rd": 56
+            "rating": 1975,
+            "date": 1735300800,
+            "rd": 79
         },
         "best": {
             "rating": 2193,
@@ -76,7 +76,7 @@
         },
         "record": {
             "win": 1398,
-            "loss": 865,
+            "loss": 866,
             "draw": 83
         }
     },

@@ -6,10 +6,10 @@
     "name": "Bahadir Ozen",
     "username": "bahadirozen",
     "title": "IM",
-    "followers": 802,
+    "followers": 814,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Istanbul",
-    "last_online": 1734172710,
+    "last_online": 1741685650,
     "joined": 1447945902,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1615,
-            "date": 1733661026,
+            "date": 1741670815,
             "rd": 99
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 3521,
             "loss": 1227,
             "draw": 921,
-            "time_per_move": 202334,
+            "time_per_move": 202529,
             "timeout_percent": 0
         }
     },
@@ -50,14 +50,14 @@
             "win": 140,
             "loss": 70,
             "draw": 28,
-            "time_per_move": 202334,
+            "time_per_move": 202529,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2456,
-            "date": 1733560284,
+            "date": 1734855854,
             "rd": 132
         },
         "best": {
@@ -108,8 +108,8 @@
     "fide": 2400,
     "tactics": {
         "highest": {
-            "rating": 3309,
-            "date": 1733412531
+            "rating": 3402,
+            "date": 1735397695
         },
         "lowest": {
             "rating": 1363,

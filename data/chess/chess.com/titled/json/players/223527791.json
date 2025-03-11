@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/MadderRose",
     "username": "madderrose",
     "title": "FM",
-    "followers": 7,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734182454,
+    "last_online": 1741639146,
     "joined": 1673433265,
     "status": "premium",
     "is_streamer": false,
@@ -16,19 +16,18 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2612,
-            "date": 1732283028,
-            "rd": 32
+            "rating": 2693,
+            "date": 1738841634
         },
         "best": {
-            "rating": 2612,
-            "date": 1732283028,
+            "rating": 2651,
+            "date": 1738841634,
             "game": "https://www.chess.com/game/live/109344119003"
         },
         "record": {
-            "win": 287,
-            "loss": 101,
-            "draw": 92
+            "win": 362,
+            "loss": 116,
+            "draw": 107
         }
     },
     "chess_blitz": {

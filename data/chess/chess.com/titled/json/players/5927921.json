@@ -6,9 +6,9 @@
     "name": "Niusha Afshar",
     "username": "niusha",
     "title": "WCM",
-    "followers": 261,
+    "followers": 342,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1733224216,
+    "last_online": 1741609110,
     "joined": 1318188549,
     "status": "premium",
     "is_streamer": false,
@@ -17,59 +17,59 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1312,
-            "date": 1731012747,
-            "rd": 109
+            "rating": 1603,
+            "date": 1739475003,
+            "rd": 122
         },
         "best": {
-            "rating": 1447,
-            "date": 1667163665,
-            "game": "https://www.chess.com/game/live/39724864093"
+            "rating": 1603,
+            "date": 1738533060,
+            "game": "https://www.chess.com/game/live/132271821767"
         },
         "record": {
-            "win": 43,
+            "win": 48,
             "loss": 6,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1978,
-            "date": 1727278254,
-            "rd": 152
+            "rating": 1793,
+            "date": 1741201239,
+            "rd": 30
         },
         "best": {
             "rating": 2159,
             "date": 1604673204,
-            "game": "https://www.chess.com/game/live/39383379377"
+            "game": "https://www.chess.com/game/live/134225942307"
         },
         "record": {
-            "win": 132,
-            "loss": 88,
-            "draw": 12
+            "win": 212,
+            "loss": 173,
+            "draw": 18
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1965,
-            "date": 1721246619,
-            "rd": 112
+            "rating": 2058,
+            "date": 1740172171,
+            "rd": 109
         },
         "best": {
-            "rating": 2070,
-            "date": 1604672430,
+            "rating": 2129,
+            "date": 1739535197,
             "game": "https://www.chess.com/game/live/13813437867"
         },
         "record": {
-            "win": 154,
-            "loss": 98,
+            "win": 164,
+            "loss": 102,
             "draw": 17
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2727,
-            "date": 1677677389
+            "rating": 2730,
+            "date": 1738171137
         },
         "lowest": {
             "rating": 1211,

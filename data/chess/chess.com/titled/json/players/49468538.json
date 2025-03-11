@@ -6,9 +6,9 @@
     "name": "Gabriel Anton Salazar Olchowski",
     "username": "gabosalazar2001",
     "title": "FM",
-    "followers": 279,
+    "followers": 295,
     "country": "https://api.chess.com/pub/country/VE",
-    "last_online": 1734097091,
+    "last_online": 1741691064,
     "joined": 1536196966,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2118,
-            "date": 1726173833,
+            "date": 1738677068,
             "rd": 199
         },
         "best": {

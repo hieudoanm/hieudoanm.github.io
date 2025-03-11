@@ -5,9 +5,9 @@
     "name": "Zhi Yang Ooi",
     "username": "littleozy",
     "title": "IM",
-    "followers": 173,
+    "followers": 174,
     "country": "https://api.chess.com/pub/country/MY",
-    "last_online": 1734101707,
+    "last_online": 1740997859,
     "joined": 1278769272,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2236,
-            "date": 1733655757,
-            "rd": 127
+            "rating": 2423,
+            "date": 1738245631,
+            "rd": 76
         },
         "best": {
             "rating": 2573,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/5577477950"
         },
         "record": {
-            "win": 2076,
-            "loss": 2136,
-            "draw": 211
+            "win": 2090,
+            "loss": 2140,
+            "draw": 213
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2524,
-            "date": 1729005450,
-            "rd": 49
+            "rating": 2523,
+            "date": 1738245162,
+            "rd": 47
         },
         "best": {
             "rating": 2647,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/34236574405"
         },
         "record": {
-            "win": 1648,
-            "loss": 1572,
-            "draw": 289
+            "win": 1664,
+            "loss": 1586,
+            "draw": 290
         }
     },
     "tactics": {

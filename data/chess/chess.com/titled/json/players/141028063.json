@@ -5,9 +5,9 @@
     "name": "Oda Kofoed Skramstad",
     "username": "odaskramstad",
     "title": "WCM",
-    "followers": 2,
+    "followers": 3,
     "country": "https://api.chess.com/pub/country/NO",
-    "last_online": 1734184116,
+    "last_online": 1741028293,
     "joined": 1621449213,
     "status": "premium",
     "is_streamer": false,
@@ -33,19 +33,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2208,
-            "date": 1732705793,
-            "rd": 57
+            "rating": 2247,
+            "date": 1736294920,
+            "rd": 50
         },
         "best": {
-            "rating": 2221,
-            "date": 1730823655,
-            "game": "https://www.chess.com/game/live/124562322763"
+            "rating": 2258,
+            "date": 1736291710,
+            "game": "https://www.chess.com/game/live/128820175969"
         },
         "record": {
-            "win": 33,
-            "loss": 33,
-            "draw": 3
+            "win": 46,
+            "loss": 61,
+            "draw": 6
         }
     },
     "fide": 1955,

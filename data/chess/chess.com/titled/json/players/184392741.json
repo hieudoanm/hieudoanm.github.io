@@ -8,7 +8,7 @@
     "followers": 29,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Novi Sad",
-    "last_online": 1734171912,
+    "last_online": 1741620852,
     "joined": 1653124924,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2054,
-            "date": 1733442715,
-            "rd": 46
+            "rating": 2012,
+            "date": 1741129829,
+            "rd": 49
         },
         "best": {
             "rating": 2349,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/82935117359"
         },
         "record": {
-            "win": 300,
-            "loss": 51,
-            "draw": 33
+            "win": 324,
+            "loss": 60,
+            "draw": 34
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2369,
-            "date": 1734151447,
-            "rd": 26
+            "rating": 2484,
+            "date": 1741582963,
+            "rd": 25
         },
         "best": {
             "rating": 2606,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/100214553775"
         },
         "record": {
-            "win": 5585,
-            "loss": 5044,
-            "draw": 555
+            "win": 5917,
+            "loss": 5408,
+            "draw": 603
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2401,
-            "date": 1733248980,
-            "rd": 46
+            "rating": 2434,
+            "date": 1740602655,
+            "rd": 51
         },
         "best": {
             "rating": 2564,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/49186157917"
         },
         "record": {
-            "win": 1088,
-            "loss": 817,
-            "draw": 120
+            "win": 1106,
+            "loss": 832,
+            "draw": 122
         }
     },
     "fide": 2063,

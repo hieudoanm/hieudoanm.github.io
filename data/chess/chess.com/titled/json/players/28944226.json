@@ -6,9 +6,9 @@
     "name": "Pierre Villegas",
     "username": "pastouche06",
     "title": "IM",
-    "followers": 151,
+    "followers": 154,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733924073,
+    "last_online": 1741378158,
     "joined": 1467798716,
     "status": "premium",
     "is_streamer": false,
@@ -87,8 +87,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3560,
-            "date": 1732381002
+            "rating": 3565,
+            "date": 1737131447
         },
         "lowest": {
             "rating": 1347,

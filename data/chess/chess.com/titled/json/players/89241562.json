@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/biscuitsnatcher",
     "username": "biscuitsnatcher",
     "title": "FM",
-    "followers": 18,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/XW",
-    "last_online": 1734174924,
+    "last_online": 1741703331,
     "joined": 1597660536,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2276,
-            "date": 1733408964,
-            "rd": 55
+            "rating": 2271,
+            "date": 1738712411,
+            "rd": 37
         },
         "best": {
             "rating": 2366,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/79308651817"
         },
         "record": {
-            "win": 1384,
-            "loss": 1101,
-            "draw": 81
+            "win": 1437,
+            "loss": 1148,
+            "draw": 84
         }
     },
     "tactics": {
@@ -79,10 +79,6 @@
         "best": {
             "total_attempts": 77,
             "score": 74
-        },
-        "daily": {
-            "total_attempts": 56,
-            "score": 54
         }
     }
 }

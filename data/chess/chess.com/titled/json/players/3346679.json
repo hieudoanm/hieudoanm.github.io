@@ -6,10 +6,10 @@
     "name": "Lali Bibilashvili",
     "username": "lali-rustavi",
     "title": "WCM",
-    "followers": 391,
+    "followers": 398,
     "country": "https://api.chess.com/pub/country/GE",
     "location": "Rustavi",
-    "last_online": 1734100120,
+    "last_online": 1741107347,
     "joined": 1211783653,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1907,
-            "date": 1730752592,
-            "rd": 58
+            "rating": 1890,
+            "date": 1736872452,
+            "rd": 57
         },
         "best": {
             "rating": 2148,
@@ -100,8 +100,8 @@
             "game": "https://www.chess.com/game/live/61662098579"
         },
         "record": {
-            "win": 714,
-            "loss": 811,
+            "win": 723,
+            "loss": 821,
             "draw": 89
         }
     },

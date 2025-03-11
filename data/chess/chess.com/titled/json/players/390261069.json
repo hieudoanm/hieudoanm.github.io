@@ -6,20 +6,21 @@
     "name": "Jakub Lizak",
     "username": "coach_jacob",
     "title": "CM",
-    "followers": 17,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734119746,
+    "location": "Katowice, Poland",
+    "last_online": 1741688529,
     "joined": 1726936451,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2471,
-            "date": 1733425441,
-            "rd": 46
+            "rating": 2377,
+            "date": 1741209372,
+            "rd": 49
         },
         "best": {
             "rating": 2498,
@@ -27,43 +28,43 @@
             "game": "https://www.chess.com/game/live/127162858641"
         },
         "record": {
-            "win": 78,
-            "loss": 21,
-            "draw": 11
+            "win": 92,
+            "loss": 41,
+            "draw": 13
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2489,
-            "date": 1731759221,
-            "rd": 30
+            "rating": 2492,
+            "date": 1741172185,
+            "rd": 24
         },
         "best": {
-            "rating": 2606,
-            "date": 1728736469,
-            "game": "https://www.chess.com/game/live/122474686195"
+            "rating": 2653,
+            "date": 1739483231,
+            "game": "https://www.chess.com/game/live/133379354423"
         },
         "record": {
-            "win": 290,
-            "loss": 245,
-            "draw": 36
+            "win": 566,
+            "loss": 467,
+            "draw": 66
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2429,
-            "date": 1734129085,
-            "rd": 31
+            "rating": 2570,
+            "date": 1741700825,
+            "rd": 26
         },
         "best": {
-            "rating": 2530,
-            "date": 1729681005,
-            "game": "https://www.chess.com/game/live/120957620311"
+            "rating": 2606,
+            "date": 1735121760,
+            "game": "https://www.chess.com/game/live/130609278079"
         },
         "record": {
-            "win": 267,
-            "loss": 170,
-            "draw": 36
+            "win": 740,
+            "loss": 534,
+            "draw": 102
         }
     },
     "fide": 2245,

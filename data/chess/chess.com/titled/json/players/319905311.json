@@ -5,15 +5,32 @@
     "name": "Ulugbek Tillyaev",
     "username": "mortred777",
     "title": "FM",
-    "followers": 7,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/UZ",
-    "last_online": 1733749545,
+    "last_online": 1741513814,
     "joined": 1697456638,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2302,
+            "date": 1739733575,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2302,
+            "date": 1739733575,
+            "game": "https://www.chess.com/game/live/133464541159"
+        },
+        "record": {
+            "win": 6,
+            "loss": 2,
+            "draw": 1
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 2470,
@@ -33,19 +50,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2711,
-            "date": 1725982608,
-            "rd": 49
+            "rating": 2731,
+            "date": 1740507221,
+            "rd": 45
         },
         "best": {
             "rating": 2761,
             "date": 1700072577,
-            "game": "https://www.chess.com/game/live/93810639273"
+            "game": "https://www.chess.com/game/live/134245143419"
         },
         "record": {
-            "win": 18,
-            "loss": 8,
-            "draw": 1
+            "win": 31,
+            "loss": 15,
+            "draw": 3
         }
     },
     "fide": 2248,

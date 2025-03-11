@@ -9,7 +9,7 @@
     "followers": 85,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Salvador",
-    "last_online": 1731184136,
+    "last_online": 1741636409,
     "joined": 1343577347,
     "status": "premium",
     "is_streamer": false,
@@ -82,6 +82,10 @@
         "best": {
             "total_attempts": 56,
             "score": 53
+        },
+        "daily": {
+            "total_attempts": 42,
+            "score": 39
         }
     }
 }

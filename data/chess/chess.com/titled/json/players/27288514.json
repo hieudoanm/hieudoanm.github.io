@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/27288514.467a18b5.200x200o.7b9b69c8c5e7.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/27288514.de6bbf25.200x200o.269e47cb7894.jpg",
     "player_id": 27288514,
-    "@id": "https://api.chess.com/pub/player/yygogo99",
-    "url": "https://www.chess.com/member/yygogo99",
+    "@id": "https://api.chess.com/pub/player/mangofish594",
+    "url": "https://www.chess.com/member/mangofish594",
     "name": "Shi Yuan Tian",
-    "username": "yygogo99",
+    "username": "mangofish594",
     "title": "WFM",
-    "followers": 495,
+    "followers": 505,
     "country": "https://api.chess.com/pub/country/CA",
-    "location": "Metro Vancouver",
-    "last_online": 1733797121,
+    "location": "Greater Vancouver",
+    "last_online": 1741105022,
     "joined": 1458248065,
     "status": "premium",
     "is_streamer": false,
@@ -86,7 +86,7 @@
             "draw": 17
         }
     },
-    "fide": 2050,
+    "fide": 1921,
     "tactics": {
         "highest": {
             "rating": 3455,

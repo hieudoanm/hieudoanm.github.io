@@ -1,13 +1,14 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/2006905.d5ea5e75.200x200o.0cbad79fd36c.jpg",
     "player_id": 2006905,
     "@id": "https://api.chess.com/pub/player/basicbishop",
     "url": "https://www.chess.com/member/BasicBishop",
     "name": "Jonas Muller",
     "username": "basicbishop",
     "title": "CM",
-    "followers": 77,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734168217,
+    "last_online": 1740193465,
     "joined": 1246501492,
     "status": "premium",
     "is_streamer": false,
@@ -52,36 +53,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2270,
-            "date": 1734096321,
-            "rd": 41
+            "rating": 2322,
+            "date": 1740138634,
+            "rd": 37
         },
         "best": {
-            "rating": 2290,
-            "date": 1475633373,
-            "game": "https://www.chess.com/game/live/84880356601"
+            "rating": 2302,
+            "date": 1739714026,
+            "game": "https://www.chess.com/game/live/133452578701"
         },
         "record": {
-            "win": 370,
-            "loss": 324,
-            "draw": 27
+            "win": 428,
+            "loss": 366,
+            "draw": 34
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2339,
-            "date": 1734176088,
-            "rd": 22
+            "rating": 2260,
+            "date": 1740047478,
+            "rd": 32
         },
         "best": {
-            "rating": 2446,
-            "date": 1582704212,
+            "rating": 2461,
+            "date": 1734769221,
             "game": "https://www.chess.com/game/live/4053871671"
         },
         "record": {
-            "win": 6952,
-            "loss": 5865,
-            "draw": 604
+            "win": 7202,
+            "loss": 6085,
+            "draw": 630
         }
     },
     "fide": 2072,
@@ -99,10 +100,6 @@
         "best": {
             "total_attempts": 60,
             "score": 57
-        },
-        "daily": {
-            "total_attempts": 50,
-            "score": 47
         }
     }
 }

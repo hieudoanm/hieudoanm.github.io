@@ -6,9 +6,9 @@
     "name": "Sravan Renjith",
     "username": "slipperyspeedster",
     "title": "IM",
-    "followers": 476,
+    "followers": 487,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734085866,
+    "last_online": 1741672197,
     "joined": 1367279002,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1685,
-            "date": 1734046544,
-            "rd": 121
+            "rating": 1730,
+            "date": 1741591647,
+            "rd": 126
         },
         "best": {
             "rating": 1863,
@@ -27,11 +27,11 @@
             "game": "https://www.chess.com/game/daily/210450964"
         },
         "record": {
-            "win": 431,
+            "win": 433,
             "loss": 347,
             "draw": 27,
-            "time_per_move": 70777,
-            "timeout_percent": 100
+            "time_per_move": 71543,
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {
@@ -49,15 +49,15 @@
             "win": 7,
             "loss": 7,
             "draw": 1,
-            "time_per_move": 70777,
+            "time_per_move": 71543,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2124,
-            "date": 1727213678,
-            "rd": 50
+            "rating": 2153,
+            "date": 1736160209,
+            "rd": 49
         },
         "best": {
             "rating": 2412,
@@ -65,16 +65,16 @@
             "game": "https://www.chess.com/game/live/35818155527"
         },
         "record": {
-            "win": 1199,
+            "win": 1203,
             "loss": 466,
-            "draw": 79
+            "draw": 80
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2829,
-            "date": 1728194013,
-            "rd": 49
+            "rating": 2836,
+            "date": 1741347280,
+            "rd": 34
         },
         "best": {
             "rating": 2942,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/32236760517"
         },
         "record": {
-            "win": 10774,
-            "loss": 9514,
-            "draw": 758
+            "win": 10860,
+            "loss": 9589,
+            "draw": 765
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2763,
-            "date": 1734122123,
-            "rd": 41
+            "rating": 2722,
+            "date": 1739778435,
+            "rd": 48
         },
         "best": {
             "rating": 2770,
@@ -99,15 +99,15 @@
             "game": "https://www.chess.com/game/live/123897595425"
         },
         "record": {
-            "win": 7099,
-            "loss": 5473,
-            "draw": 767
+            "win": 7104,
+            "loss": 5480,
+            "draw": 769
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3523,
-            "date": 1732098873
+            "rating": 3528,
+            "date": 1740739592
         },
         "lowest": {
             "rating": 1282,

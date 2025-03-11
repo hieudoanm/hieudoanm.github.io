@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/GZQSH07",
     "username": "gzqsh07",
     "title": "IM",
-    "followers": 5,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734181225,
+    "last_online": 1741579348,
     "joined": 1672556123,
     "status": "premium",
     "is_streamer": false,
@@ -32,25 +32,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2906,
-            "date": 1734184497,
-            "rd": 37
+            "rating": 2826,
+            "date": 1741588930,
+            "rd": 23
         },
         "best": {
-            "rating": 2956,
-            "date": 1729457382,
-            "game": "https://www.chess.com/game/live/125616583351"
+            "rating": 3004,
+            "date": 1736768643,
+            "game": "https://www.chess.com/game/live/127924834689"
         },
         "record": {
-            "win": 346,
-            "loss": 322,
-            "draw": 75
+            "win": 768,
+            "loss": 713,
+            "draw": 162
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3605,
-            "date": 1731873700
+            "rating": 3822,
+            "date": 1737913345
         },
         "lowest": {
             "rating": 1012,

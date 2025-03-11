@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1966,
-            "date": 1731504768,
+            "date": 1737560099,
             "rd": 42
         },
         "best": {
@@ -32,12 +32,6 @@
             "draw": 8,
             "time_per_move": 94412,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 105,
-            "withdraw": 33,
-            "count": 1,
-            "highest_finish": 7
         }
     },
     "chess_rapid": {

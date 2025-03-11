@@ -6,9 +6,9 @@
     "name": "Martin Chlp\u00edk",
     "username": "martinez_95",
     "title": "FM",
-    "followers": 70,
+    "followers": 79,
     "country": "https://api.chess.com/pub/country/SK",
-    "last_online": 1734104407,
+    "last_online": 1741682313,
     "joined": 1593772484,
     "status": "premium",
     "is_streamer": false,
@@ -36,26 +36,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2406,
-            "date": 1734098399,
-            "rd": 30
+            "rating": 2412,
+            "date": 1741682662,
+            "rd": 28
         },
         "best": {
-            "rating": 2461,
-            "date": 1718145977,
+            "rating": 2470,
+            "date": 1738192139,
             "game": "https://www.chess.com/game/live/38871598091"
         },
         "record": {
-            "win": 1229,
-            "loss": 823,
-            "draw": 149
+            "win": 1524,
+            "loss": 1024,
+            "draw": 195
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2246,
-            "date": 1730061943,
-            "rd": 41
+            "rating": 2243,
+            "date": 1740350652,
+            "rd": 67
         },
         "best": {
             "rating": 2376,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/5530093776"
         },
         "record": {
-            "win": 303,
-            "loss": 226,
+            "win": 306,
+            "loss": 229,
             "draw": 19
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2308,
-            "date": 1734171432,
-            "rd": 29
+            "rating": 2325,
+            "date": 1741638003,
+            "rd": 34
         },
         "best": {
             "rating": 2487,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/61684276627"
         },
         "record": {
-            "win": 3143,
-            "loss": 2581,
-            "draw": 313
+            "win": 3375,
+            "loss": 2760,
+            "draw": 346
         }
     },
     "fide": 2317,
     "tactics": {
         "highest": {
-            "rating": 3697,
-            "date": 1732317271
+            "rating": 3749,
+            "date": 1738365742
         },
         "lowest": {
             "rating": 1217,

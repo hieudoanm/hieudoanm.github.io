@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 18,
     "country": "https://api.chess.com/pub/country/ER",
-    "last_online": 1734080914,
+    "last_online": 1741020070,
     "joined": 1530791770,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2137,
-            "date": 1731844395,
-            "rd": 45
+            "rating": 2129,
+            "date": 1734462011,
+            "rd": 49
         },
         "best": {
             "rating": 2270,
@@ -27,32 +27,32 @@
         },
         "record": {
             "win": 94,
-            "loss": 69,
+            "loss": 70,
             "draw": 12
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1665,
-            "date": 1733517687,
-            "rd": 29
+            "rating": 1643,
+            "date": 1741683080,
+            "rd": 19
         },
         "best": {
-            "rating": 1718,
-            "date": 1731404719,
+            "rating": 1860,
+            "date": 1739188180,
             "game": "https://www.chess.com/game/live/124913926119"
         },
         "record": {
-            "win": 207,
-            "loss": 235,
-            "draw": 10
+            "win": 775,
+            "loss": 894,
+            "draw": 24
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1900,
-            "date": 1734104020,
-            "rd": 26
+            "rating": 2040,
+            "date": 1741678237,
+            "rd": 34
         },
         "best": {
             "rating": 2146,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/101603515141"
         },
         "record": {
-            "win": 1616,
-            "loss": 1807,
-            "draw": 113
+            "win": 1836,
+            "loss": 2048,
+            "draw": 130
         }
     },
     "fide": 0,

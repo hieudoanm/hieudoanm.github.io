@@ -6,20 +6,20 @@
     "name": "Deniz Arman",
     "username": "fedamaster",
     "title": "FM",
-    "followers": 804,
+    "followers": 806,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "Nybro",
-    "last_online": 1733667395,
+    "last_online": 1741683330,
     "joined": 1357242883,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1096,
-            "date": 1727789402,
+            "date": 1735220390,
             "rd": 165
         },
         "best": {
@@ -71,8 +71,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2649,
-            "date": 1732637702,
+            "rating": 2590,
+            "date": 1741091605,
             "rd": 49
         },
         "best": {
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/124583399185"
         },
         "record": {
-            "win": 7625,
-            "loss": 6954,
-            "draw": 967
+            "win": 7650,
+            "loss": 6972,
+            "draw": 970
         }
     },
     "fide": 2348,
@@ -101,6 +101,10 @@
         "best": {
             "total_attempts": 83,
             "score": 80
+        },
+        "daily": {
+            "total_attempts": 43,
+            "score": 40
         }
     }
 }

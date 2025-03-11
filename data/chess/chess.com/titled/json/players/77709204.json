@@ -9,7 +9,7 @@
     "followers": 35,
     "country": "https://api.chess.com/pub/country/BO",
     "location": "El Alto",
-    "last_online": 1733691345,
+    "last_online": 1737560279,
     "joined": 1587765726,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2076,
-            "date": 1731632908,
-            "rd": 51
+            "rating": 2064,
+            "date": 1736721698,
+            "rd": 53
         },
         "best": {
             "rating": 2350,
@@ -64,8 +64,8 @@
             "game": "https://www.chess.com/game/live/4892901695"
         },
         "record": {
-            "win": 4198,
-            "loss": 3546,
+            "win": 4206,
+            "loss": 3555,
             "draw": 578
         }
     },

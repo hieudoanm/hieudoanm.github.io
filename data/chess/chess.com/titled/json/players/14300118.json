@@ -6,15 +6,15 @@
     "name": "Pablo Lalanne",
     "username": "acertijo08",
     "title": "CM",
-    "followers": 63,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Moreno",
-    "last_online": 1734145728,
+    "last_online": 1741631143,
     "joined": 1384121552,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2410,
-            "date": 1734146080,
-            "rd": 25
+            "rating": 2262,
+            "date": 1741660876,
+            "rd": 26
         },
         "best": {
             "rating": 2486,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/80428940131"
         },
         "record": {
-            "win": 4971,
-            "loss": 4771,
-            "draw": 843
+            "win": 5359,
+            "loss": 5149,
+            "draw": 903
         }
     },
     "tactics": {
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 58,
-            "score": 55
+            "total_attempts": 61,
+            "score": 58
         }
     }
 }

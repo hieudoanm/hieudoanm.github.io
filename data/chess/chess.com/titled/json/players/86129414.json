@@ -5,9 +5,9 @@
     "name": "Ndriqona Saraci",
     "username": "ndriqonasaraci",
     "title": "WCM",
-    "followers": 9,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/XK",
-    "last_online": 1734128354,
+    "last_online": 1737150089,
     "joined": 1594202719,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1394,
-            "date": 1732995965,
-            "rd": 40
+            "rating": 1401,
+            "date": 1737151124,
+            "rd": 54
         },
         "best": {
             "rating": 1611,
@@ -43,8 +43,8 @@
             "game": "https://www.chess.com/game/live/9733187639"
         },
         "record": {
-            "win": 211,
-            "loss": 198,
+            "win": 213,
+            "loss": 199,
             "draw": 24
         }
     },
@@ -62,10 +62,6 @@
         "best": {
             "total_attempts": 47,
             "score": 44
-        },
-        "daily": {
-            "total_attempts": 26,
-            "score": 24
         }
     }
 }

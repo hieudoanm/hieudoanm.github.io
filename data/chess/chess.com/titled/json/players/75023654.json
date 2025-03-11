@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Cigocavernoso11",
     "username": "cigocavernoso11",
     "title": "WCM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1728794255,
+    "last_online": 1739328955,
     "joined": 1585536136,
     "status": "premium",
     "is_streamer": false,
@@ -25,7 +25,7 @@
             "loss": 3,
             "draw": 0,
             "time_per_move": 139208,
-            "timeout_percent": 50
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
@@ -47,9 +47,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1785,
-            "date": 1732415393,
-            "rd": 50
+            "rating": 1801,
+            "date": 1741658267,
+            "rd": 63
         },
         "best": {
             "rating": 2048,
@@ -57,16 +57,16 @@
             "game": "https://www.chess.com/game/live/5551531596"
         },
         "record": {
-            "win": 469,
-            "loss": 404,
+            "win": 479,
+            "loss": 410,
             "draw": 60
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1937,
-            "date": 1733886943,
-            "rd": 94
+            "rating": 1908,
+            "date": 1737810514,
+            "rd": 83
         },
         "best": {
             "rating": 1970,
@@ -74,9 +74,9 @@
             "game": "https://www.chess.com/game/live/127624832295"
         },
         "record": {
-            "win": 216,
-            "loss": 147,
-            "draw": 23
+            "win": 218,
+            "loss": 150,
+            "draw": 24
         }
     },
     "fide": 0,
@@ -94,6 +94,10 @@
         "best": {
             "total_attempts": 43,
             "score": 41
+        },
+        "daily": {
+            "total_attempts": 25,
+            "score": 22
         }
     }
 }

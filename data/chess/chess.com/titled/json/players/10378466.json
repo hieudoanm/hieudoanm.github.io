@@ -6,7 +6,7 @@
     "name": "Not today",
     "username": "fannysyeraunt",
     "title": "FM",
-    "followers": 35,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/EH",
     "last_online": 1726217444,
     "joined": 1357880051,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1756,
-            "date": 1705510904,
+            "date": 1736501301,
             "rd": 105
         },
         "best": {

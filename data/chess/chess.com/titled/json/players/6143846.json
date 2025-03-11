@@ -9,7 +9,7 @@
     "followers": 30,
     "country": "https://api.chess.com/pub/country/IS",
     "location": "Reykjav\u00edk",
-    "last_online": 1734024559,
+    "last_online": 1741124907,
     "joined": 1321610232,
     "status": "premium",
     "is_streamer": false,
@@ -35,19 +35,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2253,
-            "date": 1734043985,
-            "rd": 29
+            "rating": 2366,
+            "date": 1741526869,
+            "rd": 31
         },
         "best": {
-            "rating": 2343,
-            "date": 1685055038,
+            "rating": 2362,
+            "date": 1737307416,
             "game": "https://www.chess.com/game/live/105448870207"
         },
         "record": {
-            "win": 2671,
-            "loss": 2331,
-            "draw": 274
+            "win": 2853,
+            "loss": 2509,
+            "draw": 294
         }
     },
     "tactics": {

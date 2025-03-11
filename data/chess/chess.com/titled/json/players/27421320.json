@@ -6,9 +6,9 @@
     "name": "Mayank Chakraborty",
     "username": "monomita",
     "title": "IM",
-    "followers": 73,
+    "followers": 74,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734094981,
+    "last_online": 1741681262,
     "joined": 1458908811,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2857,
-            "date": 1730830323,
-            "rd": 43
+            "rating": 2854,
+            "date": 1740512337,
+            "rd": 45
         },
         "best": {
             "rating": 2912,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/86900470211"
         },
         "record": {
-            "win": 866,
-            "loss": 785,
-            "draw": 197
+            "win": 876,
+            "loss": 793,
+            "draw": 200
         }
     },
     "tactics": {

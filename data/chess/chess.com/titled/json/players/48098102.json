@@ -6,10 +6,10 @@
     "name": "Nicholas Ilic",
     "username": "nicholas_ilic",
     "title": "FM",
-    "followers": 117,
+    "followers": 121,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "Melbourne",
-    "last_online": 1734072841,
+    "last_online": 1741663502,
     "joined": 1532309121,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1724,
-            "date": 1734010144,
-            "rd": 132
+            "rating": 1661,
+            "date": 1741533028,
+            "rd": 135
         },
         "best": {
             "rating": 2107,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/258364924"
         },
         "record": {
-            "win": 27,
-            "loss": 9,
+            "win": 37,
+            "loss": 10,
             "draw": 3,
-            "time_per_move": 58576,
+            "time_per_move": 63725,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 58576,
+            "time_per_move": 63725,
             "timeout_percent": 0
         }
     },
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2387,
-            "date": 1734185153,
-            "rd": 46
+            "rating": 2361,
+            "date": 1741356284,
+            "rd": 47
         },
         "best": {
             "rating": 2554,
@@ -83,26 +83,26 @@
             "game": "https://www.chess.com/game/live/55430487583"
         },
         "record": {
-            "win": 1688,
-            "loss": 1884,
-            "draw": 148
+            "win": 1713,
+            "loss": 1914,
+            "draw": 151
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2423,
-            "date": 1734073537,
-            "rd": 68
+            "rating": 2472,
+            "date": 1740968168,
+            "rd": 50
         },
         "best": {
-            "rating": 2475,
-            "date": 1725085347,
+            "rating": 2485,
+            "date": 1735986547,
             "game": "https://www.chess.com/game/live/90713357349"
         },
         "record": {
-            "win": 599,
-            "loss": 557,
-            "draw": 86
+            "win": 615,
+            "loss": 571,
+            "draw": 89
         }
     },
     "fide": 1977,

@@ -5,9 +5,9 @@
     "name": "Somak Palit",
     "username": "utsavp",
     "title": "IM",
-    "followers": 64,
+    "followers": 66,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734152754,
+    "last_online": 1741638204,
     "joined": 1385120719,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2049,
-            "date": 1734017537,
+            "date": 1741520947,
             "rd": 49
         },
         "best": {
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2151,
-            "date": 1733857721,
-            "rd": 41
+            "rating": 2204,
+            "date": 1741550395,
+            "rd": 32
         },
         "best": {
             "rating": 2402,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/6408072062"
         },
         "record": {
-            "win": 2929,
-            "loss": 2532,
-            "draw": 222
+            "win": 3001,
+            "loss": 2598,
+            "draw": 226
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2356,
-            "date": 1733688883,
-            "rd": 43
+            "rating": 2400,
+            "date": 1741639437,
+            "rd": 37
         },
         "best": {
             "rating": 2494,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/36044361997"
         },
         "record": {
-            "win": 771,
-            "loss": 540,
-            "draw": 96
+            "win": 827,
+            "loss": 585,
+            "draw": 102
         }
     },
     "fide": 0,

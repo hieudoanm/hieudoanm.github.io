@@ -6,10 +6,10 @@
     "name": "Benjamin Gongora Montes",
     "username": "mexpaisano",
     "title": "IM",
-    "followers": 148,
+    "followers": 164,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "mexico city",
-    "last_online": 1733119311,
+    "last_online": 1741702260,
     "joined": 1505696475,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2312,
-            "date": 1734126697,
-            "rd": 33
+            "rating": 2315,
+            "date": 1741674292,
+            "rd": 35
         },
         "best": {
             "rating": 2428,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/121063223061"
         },
         "record": {
-            "win": 3022,
-            "loss": 2548,
-            "draw": 393
+            "win": 3104,
+            "loss": 2654,
+            "draw": 404
         }
     },
     "fide": 2198,

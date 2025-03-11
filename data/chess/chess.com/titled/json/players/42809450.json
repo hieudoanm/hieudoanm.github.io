@@ -6,10 +6,10 @@
     "name": "Cristhian Montero",
     "username": "veritolinda",
     "title": "FM",
-    "followers": 19,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/CL",
     "location": "Regi\u00f3n Metropolitana - Santiago",
-    "last_online": 1734041290,
+    "last_online": 1741121664,
     "joined": 1517248926,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2174,
-            "date": 1733875512,
-            "rd": 38
+            "rating": 2143,
+            "date": 1741133020,
+            "rd": 49
         },
         "best": {
             "rating": 2224,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/115511276451"
         },
         "record": {
-            "win": 176,
-            "loss": 290,
-            "draw": 32
+            "win": 190,
+            "loss": 330,
+            "draw": 37
         }
     },
     "fide": 2004,

@@ -6,10 +6,10 @@
     "name": "Paul Cristian Rusan",
     "username": "paulrusan",
     "title": "FM",
-    "followers": 138,
+    "followers": 142,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Bistrita",
-    "last_online": 1734066620,
+    "last_online": 1740290252,
     "joined": 1509204538,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2126,
-            "date": 1734179818,
-            "rd": 35
+            "rating": 2113,
+            "date": 1741642632,
+            "rd": 36
         },
         "best": {
             "rating": 2377,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/6091459810"
         },
         "record": {
-            "win": 5974,
-            "loss": 5412,
-            "draw": 978
+            "win": 6168,
+            "loss": 5575,
+            "draw": 1007
         }
     },
     "tactics": {

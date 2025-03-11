@@ -6,10 +6,10 @@
     "name": "Wiktoria Cie\u015blak",
     "username": "rushing_mane",
     "title": "WCM",
-    "followers": 47,
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Pszczyna",
-    "last_online": 1734118447,
+    "last_online": 1741349588,
     "joined": 1439884056,
     "status": "premium",
     "is_streamer": false,
@@ -52,7 +52,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2068,
-            "date": 1727878371,
+            "date": 1738881104,
             "rd": 49
         },
         "best": {
@@ -62,42 +62,42 @@
         },
         "record": {
             "win": 8,
-            "loss": 0,
+            "loss": 1,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2046,
-            "date": 1733571748,
-            "rd": 33
+            "rating": 2107,
+            "date": 1740692995,
+            "rd": 48
         },
         "best": {
             "rating": 2167,
             "date": 1733353125,
-            "game": "https://www.chess.com/game/live/127091981017"
+            "game": "https://www.chess.com/game/live/129752409667"
         },
         "record": {
-            "win": 750,
-            "loss": 635,
-            "draw": 56
+            "win": 783,
+            "loss": 684,
+            "draw": 58
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2147,
-            "date": 1734127427,
-            "rd": 41
+            "rating": 2340,
+            "date": 1741217323,
+            "rd": 36
         },
         "best": {
-            "rating": 2224,
-            "date": 1657062444,
-            "game": "https://www.chess.com/game/live/4678197430"
+            "rating": 2289,
+            "date": 1736811311,
+            "game": "https://www.chess.com/game/live/131235622961"
         },
         "record": {
-            "win": 786,
-            "loss": 696,
-            "draw": 82
+            "win": 889,
+            "loss": 798,
+            "draw": 96
         }
     },
     "tactics": {
@@ -114,10 +114,6 @@
         "best": {
             "total_attempts": 40,
             "score": 37
-        },
-        "daily": {
-            "total_attempts": 25,
-            "score": 22
         }
     }
 }

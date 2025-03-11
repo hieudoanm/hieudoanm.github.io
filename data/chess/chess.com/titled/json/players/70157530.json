@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 11,
     "country": "https://api.chess.com/pub/country/SV",
-    "last_online": 1734112243,
+    "last_online": 1741627630,
     "joined": 1577892090,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2072,
-            "date": 1734136799,
-            "rd": 22
+            "rating": 2036,
+            "date": 1741651779,
+            "rd": 27
         },
         "best": {
             "rating": 2215,
@@ -44,25 +44,25 @@
             "game": "https://www.chess.com/game/live/15830648297"
         },
         "record": {
-            "win": 5322,
-            "loss": 4825,
-            "draw": 629
+            "win": 5614,
+            "loss": 5104,
+            "draw": 664
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2241,
-            "date": 1726438794,
-            "rd": 162
+            "rating": 2258,
+            "date": 1738425216,
+            "rd": 126
         },
         "best": {
-            "rating": 2276,
-            "date": 1636839101,
-            "game": "https://www.chess.com/game/live/39749947229"
+            "rating": 2318,
+            "date": 1734823953,
+            "game": "https://www.chess.com/game/live/128562751511"
         },
         "record": {
-            "win": 75,
-            "loss": 47,
+            "win": 77,
+            "loss": 49,
             "draw": 15
         }
     },
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 29,
-            "score": 26
+            "total_attempts": 32,
+            "score": 30
         }
     }
 }

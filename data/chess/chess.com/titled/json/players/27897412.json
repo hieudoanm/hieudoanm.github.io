@@ -6,9 +6,9 @@
     "name": "Mariano Madrigal",
     "username": "gmtalentoso",
     "title": "IM",
-    "followers": 175,
+    "followers": 172,
     "country": "https://api.chess.com/pub/country/NI",
-    "last_online": 1734012187,
+    "last_online": 1741093472,
     "joined": 1461530488,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1725,
-            "date": 1731078795,
+            "date": 1741635374,
             "rd": 233
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 204,
             "loss": 62,
             "draw": 9,
-            "time_per_move": 105577,
+            "time_per_move": 105347,
             "timeout_percent": 0
         }
     },
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2411,
-            "date": 1733912274,
-            "rd": 55
+            "rating": 2408,
+            "date": 1741185685,
+            "rd": 71
         },
         "best": {
             "rating": 2556,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/102482389943"
         },
         "record": {
-            "win": 238,
-            "loss": 206,
-            "draw": 24
+            "win": 240,
+            "loss": 208,
+            "draw": 25
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2489,
-            "date": 1733128694,
-            "rd": 43
+            "rating": 2462,
+            "date": 1736683452,
+            "rd": 48
         },
         "best": {
             "rating": 2548,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/124322403375"
         },
         "record": {
-            "win": 752,
-            "loss": 685,
-            "draw": 131
+            "win": 758,
+            "loss": 696,
+            "draw": 132
         }
     },
     "tactics": {

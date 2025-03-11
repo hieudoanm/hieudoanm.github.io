@@ -9,7 +9,7 @@
     "followers": 21,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Kolkata",
-    "last_online": 1733938078,
+    "last_online": 1741531799,
     "joined": 1586927262,
     "status": "premium",
     "is_streamer": false,
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 41,
-            "score": 38
+            "total_attempts": 47,
+            "score": 44
         }
     }
 }

@@ -5,9 +5,9 @@
     "name": "Marek Madej",
     "username": "marekpolska",
     "title": "FM",
-    "followers": 32,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734174962,
+    "last_online": 1741627929,
     "joined": 1452419986,
     "status": "premium",
     "is_streamer": false,
@@ -36,12 +36,12 @@
     "chess_rapid": {
         "last": {
             "rating": 2211,
-            "date": 1731425482,
+            "date": 1736964249,
             "rd": 49
         },
         "best": {
-            "rating": 2080,
-            "date": 1704738383,
+            "rating": 2211,
+            "date": 1734516182,
             "game": "https://www.chess.com/game/live/98475955027"
         },
         "record": {
@@ -52,43 +52,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2500,
-            "date": 1734182305,
-            "rd": 37
+            "rating": 2545,
+            "date": 1738507989,
+            "rd": 34
         },
         "best": {
-            "rating": 2500,
-            "date": 1734182305,
-            "game": "https://www.chess.com/game/live/124740621397"
+            "rating": 2589,
+            "date": 1738254359,
+            "game": "https://www.chess.com/game/live/131291412543"
         },
         "record": {
-            "win": 219,
-            "loss": 165,
-            "draw": 15
+            "win": 301,
+            "loss": 230,
+            "draw": 26
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2422,
-            "date": 1734098852,
-            "rd": 53
+            "rating": 2446,
+            "date": 1740501821,
+            "rd": 50
         },
         "best": {
             "rating": 2475,
             "date": 1732640392,
-            "game": "https://www.chess.com/game/live/126375623173"
+            "game": "https://www.chess.com/game/live/134237956459"
         },
         "record": {
-            "win": 651,
-            "loss": 515,
-            "draw": 57
+            "win": 676,
+            "loss": 555,
+            "draw": 62
         }
     },
     "fide": 2211,
     "tactics": {
         "highest": {
-            "rating": 3374,
-            "date": 1732885903
+            "rating": 3419,
+            "date": 1737648859
         },
         "lowest": {
             "rating": 1301,

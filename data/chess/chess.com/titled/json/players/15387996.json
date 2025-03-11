@@ -7,7 +7,7 @@
     "title": "CM",
     "followers": 42,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1733667033,
+    "last_online": 1741381678,
     "joined": 1388754101,
     "status": "premium",
     "is_streamer": false,
@@ -67,8 +67,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3433,
-            "date": 1733614950
+            "rating": 3519,
+            "date": 1734610052
         },
         "lowest": {
             "rating": 1407,

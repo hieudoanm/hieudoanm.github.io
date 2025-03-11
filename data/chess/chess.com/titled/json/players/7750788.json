@@ -6,10 +6,10 @@
     "name": "Roland Feng",
     "username": "dragon1249",
     "title": "FM",
-    "followers": 121,
+    "followers": 122,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Seattle",
-    "last_online": 1733888913,
+    "last_online": 1741677144,
     "joined": 1338524232,
     "status": "premium",
     "is_streamer": false,
@@ -101,6 +101,10 @@
         "best": {
             "total_attempts": 66,
             "score": 63
+        },
+        "daily": {
+            "total_attempts": 49,
+            "score": 46
         }
     }
 }

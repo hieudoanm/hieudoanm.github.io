@@ -1,51 +1,52 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/400868935.d9ecfd86.200x200o.006d5a26a8b5.png",
     "player_id": 400868935,
     "@id": "https://api.chess.com/pub/player/paimpolexpress",
     "url": "https://www.chess.com/member/PaimpolExpress",
     "name": "Loic Travadon",
     "username": "paimpolexpress",
     "title": "IM",
-    "followers": 1,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733948291,
+    "last_online": 1741623648,
     "joined": 1730927719,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2786,
-            "date": 1733793679,
-            "rd": 27
+            "rating": 2737,
+            "date": 1741391797,
+            "rd": 42
         },
         "best": {
-            "rating": 2819,
-            "date": 1732489881,
-            "game": "https://www.chess.com/game/live/127250966395"
+            "rating": 2848,
+            "date": 1736008678,
+            "game": "https://www.chess.com/game/live/130256498805"
         },
         "record": {
-            "win": 215,
-            "loss": 137,
-            "draw": 21
+            "win": 453,
+            "loss": 333,
+            "draw": 43
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2602,
-            "date": 1733949000,
-            "rd": 22
+            "rating": 2520,
+            "date": 1741474129,
+            "rd": 31
         },
         "best": {
-            "rating": 2681,
-            "date": 1733062658,
-            "game": "https://www.chess.com/game/live/126801546445"
+            "rating": 2874,
+            "date": 1737321529,
+            "game": "https://www.chess.com/game/live/130610497725"
         },
         "record": {
-            "win": 285,
-            "loss": 184,
-            "draw": 22
+            "win": 712,
+            "loss": 527,
+            "draw": 81
         }
     },
     "fide": 0,
@@ -59,5 +60,10 @@
             "date": 1730927719
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 44,
+            "score": 41
+        }
+    }
 }

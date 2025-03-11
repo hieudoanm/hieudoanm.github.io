@@ -6,67 +6,72 @@
     "name": "Arun Kataria",
     "username": "arun-kataria",
     "title": "FM",
-    "followers": 7,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Udaipur",
-    "last_online": 1734167420,
+    "last_online": 1741691024,
     "joined": 1725147730,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 2376,
-            "date": 1726732148,
-            "rd": 50
+            "date": 1740190804,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2376,
+            "date": 1726072025,
+            "game": "https://www.chess.com/game/live/133928943563"
         },
         "record": {
-            "win": 0,
+            "win": 1,
             "loss": 0,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2362,
-            "date": 1726212432,
-            "rd": 40
+            "rating": 2249,
+            "date": 1741455275,
+            "rd": 44
         },
         "best": {
             "rating": 2405,
             "date": 1726136760,
-            "game": "https://www.chess.com/game/live/119875228573"
+            "game": "https://www.chess.com/game/live/134587760421"
         },
         "record": {
-            "win": 68,
-            "loss": 12,
-            "draw": 0
+            "win": 107,
+            "loss": 79,
+            "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2507,
-            "date": 1728721291,
-            "rd": 46
+            "rating": 2574,
+            "date": 1741368978,
+            "rd": 45
         },
         "best": {
-            "rating": 2559,
-            "date": 1726325891,
-            "game": "https://www.chess.com/game/live/120028776605"
+            "rating": 2595,
+            "date": 1741106252,
+            "game": "https://www.chess.com/game/live/132423681383"
         },
         "record": {
-            "win": 32,
-            "loss": 30,
-            "draw": 4
+            "win": 72,
+            "loss": 73,
+            "draw": 16
         }
     },
     "fide": 2384,
     "tactics": {
         "highest": {
-            "rating": 400,
-            "date": 1725147730
+            "rating": 2460,
+            "date": 1739644664
         },
         "lowest": {
             "rating": 400,

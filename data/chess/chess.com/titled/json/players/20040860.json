@@ -6,10 +6,10 @@
     "name": "Yi Lin",
     "username": "lychess666",
     "title": "IM",
-    "followers": 160,
+    "followers": 180,
     "country": "https://api.chess.com/pub/country/CN",
     "location": "Shen Zhen",
-    "last_online": 1734180563,
+    "last_online": 1741700481,
     "joined": 1417789785,
     "status": "premium",
     "is_streamer": false,
@@ -33,7 +33,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2564,
-            "date": 1723906256,
+            "date": 1734192743,
             "rd": 49
         },
         "best": {
@@ -42,7 +42,7 @@
             "game": "https://www.chess.com/game/live/107361167203"
         },
         "record": {
-            "win": 7,
+            "win": 8,
             "loss": 0,
             "draw": 0
         }
@@ -83,8 +83,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3421,
-            "date": 1725089175
+            "rating": 3499,
+            "date": 1738562914
         },
         "lowest": {
             "rating": 1208,

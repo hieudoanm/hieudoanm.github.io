@@ -5,9 +5,9 @@
     "name": "Goran Galiot",
     "username": "goran_galiot",
     "title": "FM",
-    "followers": 100,
+    "followers": 103,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1733950488,
+    "last_online": 1741637492,
     "joined": 1370371989,
     "status": "premium",
     "is_streamer": false,
@@ -33,8 +33,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2342,
-            "date": 1733352351,
+            "rating": 2265,
+            "date": 1741642499,
             "rd": 14
         },
         "best": {
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/43094940629"
         },
         "record": {
-            "win": 19381,
-            "loss": 18249,
-            "draw": 1172
+            "win": 20541,
+            "loss": 19359,
+            "draw": 1254
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2710,
-            "date": 1707669701,
-            "rd": 30
+            "rating": 2716,
+            "date": 1740585437,
+            "rd": 49
         },
         "best": {
             "rating": 2700,
@@ -60,7 +60,7 @@
             "game": "https://www.chess.com/game/live/31706403571"
         },
         "record": {
-            "win": 40800,
+            "win": 40801,
             "loss": 35649,
             "draw": 4106
         }

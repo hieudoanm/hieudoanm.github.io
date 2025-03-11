@@ -6,10 +6,10 @@
     "name": "Plamen Mladenov",
     "username": "levski-sofia",
     "title": "IM",
-    "followers": 35,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "Stoke on Trent",
-    "last_online": 1730673459,
+    "last_online": 1739741382,
     "joined": 1475056020,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1298,
-            "date": 1579912351,
+            "date": 1738399812,
             "rd": 212
         },
         "best": {
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2620,
-            "date": 1734126547,
-            "rd": 27
+            "rating": 2495,
+            "date": 1741687041,
+            "rd": 28
         },
         "best": {
-            "rating": 2685,
-            "date": 1732912984,
-            "game": "https://www.chess.com/game/live/45472770491"
+            "rating": 2706,
+            "date": 1737797680,
+            "game": "https://www.chess.com/game/live/131284807231"
         },
         "record": {
-            "win": 8543,
-            "loss": 8701,
-            "draw": 1964
+            "win": 8949,
+            "loss": 9103,
+            "draw": 2054
         }
     },
     "fide": 2370,

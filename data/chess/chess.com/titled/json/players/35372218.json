@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 29,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734016607,
+    "last_online": 1737517414,
     "joined": 1494257381,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3217,
-            "date": 1700737443
+            "rating": 3244,
+            "date": 1738576862
         },
         "lowest": {
             "rating": 1204,

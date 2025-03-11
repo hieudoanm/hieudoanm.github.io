@@ -5,9 +5,9 @@
     "name": "Denis Pershin",
     "username": "crazy_machine",
     "title": "IM",
-    "followers": 9,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1733867669,
+    "last_online": 1741125405,
     "joined": 1571920995,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2664,
-            "date": 1733871989,
-            "rd": 48
+            "rating": 2616,
+            "date": 1741126836,
+            "rd": 49
         },
         "best": {
             "rating": 2782,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/121555870447"
         },
         "record": {
-            "win": 483,
-            "loss": 452,
-            "draw": 116
+            "win": 497,
+            "loss": 466,
+            "draw": 119
         }
     },
     "tactics": {

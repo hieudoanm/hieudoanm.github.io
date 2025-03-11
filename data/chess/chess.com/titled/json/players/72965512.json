@@ -6,9 +6,9 @@
     "name": "Bryan Solano",
     "username": "elchiricr",
     "title": "IM",
-    "followers": 28,
+    "followers": 30,
     "country": "https://api.chess.com/pub/country/CR",
-    "last_online": 1733117301,
+    "last_online": 1739127336,
     "joined": 1583197650,
     "status": "premium",
     "is_streamer": false,
@@ -34,36 +34,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2620,
-            "date": 1721269711,
-            "rd": 49
+            "rating": 2439,
+            "date": 1740846488,
+            "rd": 40
         },
         "best": {
             "rating": 2626,
             "date": 1702767509,
-            "game": "https://www.chess.com/game/live/76485639883"
+            "game": "https://www.chess.com/game/live/130869666133"
         },
         "record": {
-            "win": 47,
-            "loss": 17,
-            "draw": 3
+            "win": 83,
+            "loss": 71,
+            "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2407,
-            "date": 1734037222,
+            "rating": 2389,
+            "date": 1740842239,
             "rd": 48
         },
         "best": {
-            "rating": 2460,
-            "date": 1650273146,
+            "rating": 2464,
+            "date": 1735281463,
             "game": "https://www.chess.com/game/live/5312685583"
         },
         "record": {
-            "win": 525,
-            "loss": 407,
-            "draw": 49
+            "win": 555,
+            "loss": 433,
+            "draw": 51
         }
     },
     "tactics": {

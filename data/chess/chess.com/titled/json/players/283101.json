@@ -5,10 +5,10 @@
     "name": "David Haydon",
     "username": "dhaydon19",
     "title": "FM",
-    "followers": 441,
+    "followers": 471,
     "country": "https://api.chess.com/pub/country/XE",
     "location": "Grays, England",
-    "last_online": 1734124607,
+    "last_online": 1741689391,
     "joined": 1193331178,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 400,
-            "date": 1713960593,
+            "date": 1741433237,
             "rd": 350
         },
         "record": {
@@ -32,7 +32,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2626,
-            "date": 1694684121,
+            "date": 1740870746,
             "rd": 349
         },
         "best": {
@@ -48,36 +48,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2789,
-            "date": 1734184856,
-            "rd": 27
+            "rating": 2810,
+            "date": 1741006896,
+            "rd": 24
         },
         "best": {
             "rating": 2950,
             "date": 1663096193,
-            "game": "https://www.chess.com/game/live/2306144533"
+            "game": "https://www.chess.com/game/live/132168627755"
         },
         "record": {
-            "win": 5808,
-            "loss": 4309,
-            "draw": 775
+            "win": 6509,
+            "loss": 4797,
+            "draw": 877
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2660,
-            "date": 1733958939,
-            "rd": 33
+            "rating": 2761,
+            "date": 1741697967,
+            "rd": 27
         },
         "best": {
-            "rating": 2889,
-            "date": 1687714534,
+            "rating": 2936,
+            "date": 1739574537,
             "game": "https://www.chess.com/game/live/3858511129"
         },
         "record": {
-            "win": 5533,
-            "loss": 4192,
-            "draw": 1031
+            "win": 5811,
+            "loss": 4376,
+            "draw": 1077
         }
     },
     "fide": 2294,

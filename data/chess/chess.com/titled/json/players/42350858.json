@@ -1,13 +1,14 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/42350858.d311f859.200x200o.22ae4efd941f.jpg",
     "player_id": 42350858,
     "@id": "https://api.chess.com/pub/player/jojozp",
     "url": "https://www.chess.com/member/JoJoZP",
     "name": "John Heinrich",
     "username": "jojozp",
     "title": "FM",
-    "followers": 38,
+    "followers": 41,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734176960,
+    "last_online": 1741621497,
     "joined": 1516036424,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2372,
-            "date": 1734078127,
-            "rd": 48
+            "rating": 2377,
+            "date": 1738921390,
+            "rd": 49
         },
         "best": {
             "rating": 2414,
@@ -45,16 +46,16 @@
             "game": "https://www.chess.com/game/live/119091624945"
         },
         "record": {
-            "win": 193,
-            "loss": 88,
-            "draw": 27
+            "win": 201,
+            "loss": 91,
+            "draw": 29
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2497,
-            "date": 1733857971,
-            "rd": 31
+            "rating": 2511,
+            "date": 1741351510,
+            "rd": 34
         },
         "best": {
             "rating": 2629,
@@ -62,29 +63,29 @@
             "game": "https://www.chess.com/game/live/122561097905"
         },
         "record": {
-            "win": 955,
-            "loss": 686,
-            "draw": 104
+            "win": 1056,
+            "loss": 767,
+            "draw": 117
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2668,
-            "date": 1734179482,
-            "rd": 28
+            "rating": 2670,
+            "date": 1741624940,
+            "rd": 31
         },
         "best": {
-            "rating": 2683,
-            "date": 1734039106,
+            "rating": 2743,
+            "date": 1739616129,
             "game": "https://www.chess.com/game/live/114297644385"
         },
         "record": {
-            "win": 3533,
-            "loss": 2731,
-            "draw": 555
+            "win": 3838,
+            "loss": 2987,
+            "draw": 631
         }
     },
-    "fide": 2259,
+    "fide": 2285,
     "tactics": {
         "highest": {
             "rating": 3487,

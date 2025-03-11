@@ -8,7 +8,7 @@
     "title": "CM",
     "followers": 12,
     "country": "https://api.chess.com/pub/country/UY",
-    "last_online": 1734086702,
+    "last_online": 1741038307,
     "joined": 1430368256,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2193,
-            "date": 1733789168,
-            "rd": 31
+            "rating": 2203,
+            "date": 1741647021,
+            "rd": 24
         },
         "best": {
             "rating": 2304,
@@ -44,32 +44,32 @@
             "game": "https://www.chess.com/game/live/41635879379"
         },
         "record": {
-            "win": 5603,
-            "loss": 6789,
-            "draw": 444
+            "win": 5943,
+            "loss": 7178,
+            "draw": 476
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2306,
-            "date": 1729175705,
-            "rd": 58
+            "rating": 2381,
+            "date": 1739624744,
+            "rd": 59
         },
         "best": {
-            "rating": 2333,
-            "date": 1721002506,
+            "rating": 2381,
+            "date": 1738264764,
             "game": "https://www.chess.com/game/live/120574842037"
         },
         "record": {
-            "win": 531,
-            "loss": 517,
-            "draw": 59
+            "win": 543,
+            "loss": 525,
+            "draw": 63
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3391,
-            "date": 1716837218
+            "rating": 3416,
+            "date": 1741610416
         },
         "lowest": {
             "rating": 1704,

@@ -1,13 +1,13 @@
 {
     "player_id": 11572140,
-    "@id": "https://api.chess.com/pub/player/machingun",
-    "url": "https://www.chess.com/member/machingun",
+    "@id": "https://api.chess.com/pub/player/sermarkpr",
+    "url": "https://www.chess.com/member/SerMarkPR",
     "name": "Mark Machin Rivera",
-    "username": "machingun",
+    "username": "sermarkpr",
     "title": "IM",
-    "followers": 47,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/PR",
-    "last_online": 1731206080,
+    "last_online": 1741297676,
     "joined": 1366332632,
     "status": "premium",
     "is_streamer": false,
@@ -33,36 +33,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2522,
-            "date": 1733709529,
-            "rd": 28
+            "rating": 2485,
+            "date": 1741574208,
+            "rd": 21
         },
         "best": {
-            "rating": 2555,
-            "date": 1724635922,
+            "rating": 2595,
+            "date": 1735055743,
             "game": "https://www.chess.com/game/live/38790040641"
         },
         "record": {
-            "win": 10394,
-            "loss": 10462,
-            "draw": 1062
+            "win": 10920,
+            "loss": 11040,
+            "draw": 1142
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2536,
-            "date": 1724550884,
-            "rd": 46
+            "rating": 2601,
+            "date": 1738806467,
+            "rd": 49
         },
         "best": {
-            "rating": 2563,
-            "date": 1687055450,
+            "rating": 2601,
+            "date": 1738806467,
             "game": "https://www.chess.com/game/live/3255431851"
         },
         "record": {
-            "win": 896,
-            "loss": 906,
-            "draw": 132
+            "win": 908,
+            "loss": 910,
+            "draw": 133
         }
     },
     "tactics": {
@@ -75,5 +75,10 @@
             "date": 1550802035
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 45,
+            "score": 43
+        }
+    }
 }

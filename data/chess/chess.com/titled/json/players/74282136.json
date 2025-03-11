@@ -5,9 +5,9 @@
     "name": "Julian Colville",
     "username": "junjicol",
     "title": "FM",
-    "followers": 76,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734139436,
+    "last_online": 1741645158,
     "joined": 1584987753,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1496,
-            "date": 1727041111,
-            "rd": 113
+            "rating": 1441,
+            "date": 1739889899,
+            "rd": 118
         },
         "best": {
             "rating": 1509,
@@ -26,10 +26,10 @@
             "game": "https://www.chess.com/game/daily/630240599"
         },
         "record": {
-            "win": 15,
-            "loss": 6,
-            "draw": 1,
-            "time_per_move": 16410,
+            "win": 16,
+            "loss": 7,
+            "draw": 2,
+            "time_per_move": 15530,
             "timeout_percent": 0
         }
     },
@@ -48,7 +48,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 16410,
+            "time_per_move": 15530,
             "timeout_percent": 0
         }
     },
@@ -71,9 +71,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2260,
-            "date": 1733867881,
-            "rd": 41
+            "rating": 2330,
+            "date": 1738782583,
+            "rd": 51
         },
         "best": {
             "rating": 2610,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/114733077569"
         },
         "record": {
-            "win": 4714,
-            "loss": 4391,
+            "win": 4725,
+            "loss": 4394,
             "draw": 324
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1733867753,
-            "rd": 35
+            "rating": 2583,
+            "date": 1741288952,
+            "rd": 49
         },
         "best": {
             "rating": 2665,
@@ -98,9 +98,9 @@
             "game": "https://www.chess.com/game/live/116700080645"
         },
         "record": {
-            "win": 1684,
-            "loss": 1484,
-            "draw": 162
+            "win": 1715,
+            "loss": 1515,
+            "draw": 164
         }
     },
     "fide": 2067,
@@ -118,6 +118,10 @@
         "best": {
             "total_attempts": 62,
             "score": 59
+        },
+        "daily": {
+            "total_attempts": 57,
+            "score": 54
         }
     }
 }

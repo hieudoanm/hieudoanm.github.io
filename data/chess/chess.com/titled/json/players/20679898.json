@@ -6,10 +6,10 @@
     "name": "Erik Kislik",
     "username": "ekislik",
     "title": "IM",
-    "followers": 350,
+    "followers": 353,
     "country": "https://api.chess.com/pub/country/US",
     "location": "San Francisco",
-    "last_online": 1733064842,
+    "last_online": 1737259370,
     "joined": 1421549391,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1854,
-            "date": 1645068455,
+            "date": 1734934215,
             "rd": 272
         },
         "best": {
@@ -55,7 +55,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2102,
-            "date": 1592161134,
+            "date": 1736349457,
             "rd": 348
         },
         "best": {

@@ -6,10 +6,10 @@
     "name": "Dmitry Petukhov",
     "username": "petukhov_dmitry",
     "title": "FM",
-    "followers": 42,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Khabarovsk",
-    "last_online": 1733020668,
+    "last_online": 1740226823,
     "joined": 1515057140,
     "status": "premium",
     "is_streamer": false,
@@ -35,38 +35,55 @@
             "timeout_percent": 0
         }
     },
-    "chess_bullet": {
+    "chess_rapid": {
         "last": {
-            "rating": 2198,
-            "date": 1707993735,
-            "rd": 64
+            "rating": 2007,
+            "date": 1736259667,
+            "rd": 49
         },
         "best": {
-            "rating": 2218,
-            "date": 1707577353,
-            "game": "https://www.chess.com/game/live/100095140933"
+            "rating": 2007,
+            "date": 1736259667,
+            "game": "https://www.chess.com/game/live/129997751759"
         },
         "record": {
-            "win": 41,
-            "loss": 5,
+            "win": 1,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2247,
+            "date": 1735797332,
+            "rd": 88
+        },
+        "best": {
+            "rating": 2292,
+            "date": 1734833602,
+            "game": "https://www.chess.com/game/live/128572380607"
+        },
+        "record": {
+            "win": 46,
+            "loss": 8,
             "draw": 2
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2564,
-            "date": 1734167541,
-            "rd": 25
+            "rating": 2596,
+            "date": 1741605027,
+            "rd": 28
         },
         "best": {
             "rating": 2673,
             "date": 1731589094,
-            "game": "https://www.chess.com/game/live/73776192431"
+            "game": "https://www.chess.com/game/live/130026606549"
         },
         "record": {
-            "win": 2194,
-            "loss": 1871,
-            "draw": 406
+            "win": 2387,
+            "loss": 2046,
+            "draw": 448
         }
     },
     "tactics": {

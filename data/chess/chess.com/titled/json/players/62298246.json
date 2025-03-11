@@ -6,9 +6,9 @@
     "name": "Michel Saucey",
     "username": "fraler15",
     "title": "FM",
-    "followers": 47,
+    "followers": 48,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734166651,
+    "last_online": 1740169729,
     "joined": 1560576874,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2354,
-            "date": 1734168381,
-            "rd": 31
+            "rating": 2336,
+            "date": 1739136851,
+            "rd": 50
         },
         "best": {
             "rating": 2416,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/82246286523"
         },
         "record": {
-            "win": 4369,
-            "loss": 3043,
-            "draw": 673
+            "win": 4381,
+            "loss": 3053,
+            "draw": 678
         }
     },
     "fide": 2249,

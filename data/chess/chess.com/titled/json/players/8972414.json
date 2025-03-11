@@ -6,9 +6,9 @@
     "name": "Maximilian Mostbauer",
     "username": "mostii",
     "title": "CM",
-    "followers": 150,
+    "followers": 156,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1733874699,
+    "last_online": 1741462066,
     "joined": 1348139947,
     "status": "premium",
     "is_streamer": false,
@@ -36,36 +36,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2662,
-            "date": 1733597961,
-            "rd": 34
+            "rating": 2706,
+            "date": 1740244902,
+            "rd": 37
         },
         "best": {
             "rating": 2833,
             "date": 1672674332,
-            "game": "https://www.chess.com/game/live/127335682259"
+            "game": "https://www.chess.com/game/live/133379952419"
         },
         "record": {
-            "win": 12899,
-            "loss": 7886,
-            "draw": 1777
+            "win": 12977,
+            "loss": 7949,
+            "draw": 1792
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2500,
-            "date": 1733874766,
-            "rd": 49
+            "rating": 2606,
+            "date": 1739918475,
+            "rd": 47
         },
         "best": {
-            "rating": 2574,
-            "date": 1579023690,
-            "game": "https://www.chess.com/game/live/3510781742"
+            "rating": 2630,
+            "date": 1738688470,
+            "game": "https://www.chess.com/game/live/130609278197"
         },
         "record": {
-            "win": 3638,
-            "loss": 2808,
-            "draw": 716
+            "win": 3665,
+            "loss": 2828,
+            "draw": 727
         }
     },
     "fide": 2209,

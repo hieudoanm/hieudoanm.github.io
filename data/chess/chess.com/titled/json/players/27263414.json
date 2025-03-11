@@ -8,7 +8,7 @@
     "followers": 58,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Belgrade",
-    "last_online": 1733868950,
+    "last_online": 1741529781,
     "joined": 1458125035,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2327,
-            "date": 1733869116,
-            "rd": 59
+            "rating": 2351,
+            "date": 1737133467,
+            "rd": 66
         },
         "best": {
             "rating": 2381,
@@ -61,7 +61,7 @@
             "game": "https://www.chess.com/game/live/3537462394"
         },
         "record": {
-            "win": 6528,
+            "win": 6531,
             "loss": 5337,
             "draw": 864
         }

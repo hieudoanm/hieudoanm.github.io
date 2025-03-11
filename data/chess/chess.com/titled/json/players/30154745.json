@@ -7,18 +7,18 @@
     "title": "IM",
     "followers": 4,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1733823960,
+    "last_online": 1741534479,
     "joined": 1475154280,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 2445,
-            "date": 1647763777,
-            "rd": 310
+            "date": 1740995511,
+            "rd": 49
         },
         "best": {
             "rating": 2445,
@@ -26,7 +26,7 @@
             "game": "https://www.chess.com/game/live/41500803287"
         },
         "record": {
-            "win": 5,
+            "win": 6,
             "loss": 0,
             "draw": 0
         }

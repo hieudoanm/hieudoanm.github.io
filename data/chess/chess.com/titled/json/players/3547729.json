@@ -6,10 +6,10 @@
     "name": "Matija Ivic",
     "username": "matijaolimpiakosivic",
     "title": "FM",
-    "followers": 230,
+    "followers": 239,
     "country": "https://api.chess.com/pub/country/RS",
-    "location": "Nis",
-    "last_online": 1734165690,
+    "location": "Jagodina",
+    "last_online": 1741703816,
     "joined": 1265926638,
     "status": "premium",
     "is_streamer": false,
@@ -54,8 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2684,
-            "date": 1707832096,
+            "rating": 2649,
+            "date": 1738972178,
             "rd": 44
         },
         "best": {
@@ -64,16 +64,15 @@
             "game": "https://www.chess.com/game/live/5976222668"
         },
         "record": {
-            "win": 2064,
-            "loss": 1344,
+            "win": 2068,
+            "loss": 1352,
             "draw": 194
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2529,
-            "date": 1724324506,
-            "rd": 47
+            "rating": 2626,
+            "date": 1741628937
         },
         "best": {
             "rating": 2864,
@@ -81,11 +80,12 @@
             "game": "https://www.chess.com/game/live/4739514670"
         },
         "record": {
-            "win": 1554,
-            "loss": 1206,
-            "draw": 217
+            "win": 1585,
+            "loss": 1217,
+            "draw": 221
         }
     },
+    "fide": 2216,
     "tactics": {
         "highest": {
             "rating": 3370,

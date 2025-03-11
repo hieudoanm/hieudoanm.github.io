@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/phonySallly",
     "username": "phonysallly",
     "title": "FM",
-    "followers": 220,
+    "followers": 231,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1734074854,
+    "last_online": 1741606582,
     "joined": 1588597282,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +15,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2558,
-            "date": 1734104102,
-            "rd": 47
+            "rating": 2534,
+            "date": 1737464635
         },
         "best": {
             "rating": 2569,
@@ -25,9 +24,9 @@
             "game": "https://www.chess.com/game/live/54823623491"
         },
         "record": {
-            "win": 200,
-            "loss": 57,
-            "draw": 48
+            "win": 204,
+            "loss": 62,
+            "draw": 50
         }
     },
     "chess_bullet": {
@@ -49,9 +48,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2561,
-            "date": 1734181344,
-            "rd": 20
+            "rating": 2637,
+            "date": 1741691556,
+            "rd": 21
         },
         "best": {
             "rating": 2723,
@@ -59,9 +58,9 @@
             "game": "https://www.chess.com/game/live/97150293801"
         },
         "record": {
-            "win": 19033,
-            "loss": 16276,
-            "draw": 6105
+            "win": 19771,
+            "loss": 16873,
+            "draw": 6354
         }
     },
     "fide": 0,

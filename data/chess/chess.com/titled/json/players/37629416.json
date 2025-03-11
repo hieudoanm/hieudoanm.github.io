@@ -6,9 +6,9 @@
     "name": "Sameer Kath",
     "username": "sameer555",
     "title": "IM",
-    "followers": 175,
+    "followers": 182,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734090526,
+    "last_online": 1741443539,
     "joined": 1502114729,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2342,
-            "date": 1733829073,
+            "rating": 2346,
+            "date": 1739243743,
             "rd": 49
         },
         "best": {
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/5730926962"
         },
         "record": {
-            "win": 91,
+            "win": 99,
             "loss": 12,
-            "draw": 8
+            "draw": 9
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2378,
-            "date": 1729653967,
-            "rd": 114
+            "rating": 2286,
+            "date": 1737388434,
+            "rd": 77
         },
         "best": {
             "rating": 2615,
@@ -44,15 +44,15 @@
             "game": "https://www.chess.com/game/live/5628176082"
         },
         "record": {
-            "win": 1085,
-            "loss": 673,
+            "win": 1091,
+            "loss": 680,
             "draw": 108
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2518,
-            "date": 1734003061,
+            "rating": 2504,
+            "date": 1741260648,
             "rd": 49
         },
         "best": {
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/5234330633"
         },
         "record": {
-            "win": 1186,
-            "loss": 608,
-            "draw": 145
+            "win": 1196,
+            "loss": 613,
+            "draw": 146
         }
     },
     "fide": 2330,

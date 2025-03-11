@@ -5,10 +5,10 @@
     "name": "Fabio Saccone",
     "username": "drstephenstrange",
     "title": "FM",
-    "followers": 758,
+    "followers": 844,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Napoli",
-    "last_online": 1734010837,
+    "last_online": 1741252698,
     "joined": 1523909305,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2110,
-            "date": 1716480665,
+            "date": 1739990091,
             "rd": 49
         },
         "best": {
@@ -53,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2039,
-            "date": 1732906346,
-            "rd": 30
+            "rating": 2047,
+            "date": 1741697948,
+            "rd": 19
         },
         "best": {
-            "rating": 2048,
-            "date": 1523915406,
+            "rating": 2099,
+            "date": 1739309019,
             "game": "https://www.chess.com/game/live/116094590873"
         },
         "record": {
-            "win": 5364,
-            "loss": 5412,
-            "draw": 207
+            "win": 6293,
+            "loss": 6296,
+            "draw": 249
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2147,
-            "date": 1733752948,
-            "rd": 54
+            "rating": 2179,
+            "date": 1739272247,
+            "rd": 62
         },
         "best": {
             "rating": 2212,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/58612193699"
         },
         "record": {
-            "win": 2230,
-            "loss": 1952,
+            "win": 2240,
+            "loss": 1958,
             "draw": 235
         }
     },

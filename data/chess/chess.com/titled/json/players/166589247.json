@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/166589247.87a875ab.200x200o.d198b865e501.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/166589247.bfa525ed.200x200o.ffaa2a67a556.jpg",
     "player_id": 166589247,
     "@id": "https://api.chess.com/pub/player/nikajurisnicolas",
     "url": "https://www.chess.com/member/NikaJurisNicolas",
     "name": "Nika Juris Nicolas",
     "username": "nikajurisnicolas",
     "title": "WNM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/PH",
-    "last_online": 1734153297,
+    "last_online": 1741697561,
     "joined": 1640661994,
     "status": "premium",
     "is_streamer": false,
@@ -79,7 +79,7 @@
     "puzzle_rush": {
         "best": {
             "total_attempts": 52,
-            "score": 48
+            "score": 49
         }
     }
 }

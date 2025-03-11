@@ -1,13 +1,13 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/202101453.ad240da6.200x200o.899b898dbbd9.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/202101453.1ee664d7.200x200o.f35197968f0e.jpg",
     "player_id": 202101453,
     "@id": "https://api.chess.com/pub/player/hiddenmachinations",
     "url": "https://www.chess.com/member/HiddenMachinations",
     "username": "hiddenmachinations",
     "title": "CM",
-    "followers": 6,
-    "country": "https://api.chess.com/pub/country/AG",
-    "last_online": 1734155759,
+    "followers": 10,
+    "country": "https://api.chess.com/pub/country/TT",
+    "last_online": 1740965832,
     "joined": 1666027050,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1466,
-            "date": 1733886917,
-            "rd": 24
+            "rating": 1558,
+            "date": 1741146994,
+            "rd": 51
         },
         "best": {
             "rating": 1645,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/125590111177"
         },
         "record": {
-            "win": 362,
-            "loss": 367,
-            "draw": 12
+            "win": 435,
+            "loss": 426,
+            "draw": 16
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2025,
-            "date": 1734157034,
-            "rd": 26
+            "rating": 2027,
+            "date": 1741236190,
+            "rd": 19
         },
         "best": {
             "rating": 2074,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/109039771839"
         },
         "record": {
-            "win": 902,
-            "loss": 769,
-            "draw": 70
+            "win": 1203,
+            "loss": 1045,
+            "draw": 98
         }
     },
     "tactics": {

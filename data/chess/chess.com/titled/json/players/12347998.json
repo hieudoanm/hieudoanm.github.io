@@ -6,10 +6,10 @@
     "name": "Dragan Popadic",
     "username": "dpopadic",
     "title": "FM",
-    "followers": 47,
+    "followers": 48,
     "country": "https://api.chess.com/pub/country/ME",
     "location": "Tivat",
-    "last_online": 1734105129,
+    "last_online": 1741619783,
     "joined": 1371398383,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2570,
-            "date": 1734122853,
-            "rd": 22
+            "rating": 2547,
+            "date": 1741627593,
+            "rd": 25
         },
         "best": {
             "rating": 2579,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/32035287861"
         },
         "record": {
-            "win": 29678,
-            "loss": 31045,
-            "draw": 6419
+            "win": 30137,
+            "loss": 31365,
+            "draw": 6544
         }
     },
     "tactics": {

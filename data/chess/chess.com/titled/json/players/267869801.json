@@ -6,9 +6,9 @@
     "name": "Artem Pingin",
     "username": "morphozis",
     "title": "IM",
-    "followers": 6,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/MG",
-    "last_online": 1734101318,
+    "last_online": 1741532922,
     "joined": 1680010991,
     "status": "premium",
     "is_streamer": false,
@@ -34,17 +34,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2789,
-            "date": 1734105255,
-            "rd": 40
+            "rating": 2791,
+            "date": 1738080485,
+            "rd": 49
         },
         "best": {
-            "rating": 2789,
-            "date": 1734104664,
+            "rating": 2791,
+            "date": 1738080456,
             "game": "https://www.chess.com/game/live/127298365249"
         },
         "record": {
-            "win": 126,
+            "win": 127,
             "loss": 51,
             "draw": 14
         }

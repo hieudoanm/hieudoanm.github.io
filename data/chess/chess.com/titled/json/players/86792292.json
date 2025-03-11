@@ -1,36 +1,36 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/86792292.fc9ca23b.200x200o.b88a83c5c1bd.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/86792292.715327bd.200x200o.3341606b3d93.jpg",
     "player_id": 86792292,
     "@id": "https://api.chess.com/pub/player/wilsy19",
     "url": "https://www.chess.com/member/Wilsy19",
     "name": "Wilsaida Diaz",
     "username": "wilsy19",
     "title": "WFM",
-    "followers": 14,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/DO",
     "location": "Santo Domingo",
-    "last_online": 1730062044,
+    "last_online": 1741697383,
     "joined": 1594851081,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1965,
-            "date": 1733430599,
-            "rd": 52
+            "rating": 2201,
+            "date": 1741663006,
+            "rd": 25
         },
         "best": {
-            "rating": 2132,
-            "date": 1682881899,
-            "game": "https://www.chess.com/game/live/111876212193"
+            "rating": 2159,
+            "date": 1739726056,
+            "game": "https://www.chess.com/game/live/131659257159"
         },
         "record": {
-            "win": 206,
-            "loss": 167,
-            "draw": 31
+            "win": 448,
+            "loss": 420,
+            "draw": 59
         }
     },
     "chess_blitz": {
@@ -52,8 +52,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2718,
-            "date": 1715622472
+            "rating": 2781,
+            "date": 1737231875
         },
         "lowest": {
             "rating": 413,
@@ -62,8 +62,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 35,
-            "score": 32
+            "total_attempts": 39,
+            "score": 38
+        },
+        "daily": {
+            "total_attempts": 23,
+            "score": 20
         }
     }
 }

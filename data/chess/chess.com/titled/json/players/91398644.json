@@ -5,9 +5,9 @@
     "name": "Balaji Guttula",
     "username": "aash20",
     "title": "FM",
-    "followers": 64,
+    "followers": 66,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734003253,
+    "last_online": 1741488907,
     "joined": 1600338231,
     "status": "premium",
     "is_streamer": false,
@@ -47,26 +47,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2296,
-            "date": 1734104092,
-            "rd": 50
+            "rating": 2614,
+            "date": 1739265822,
+            "rd": 32
         },
         "best": {
-            "rating": 2584,
-            "date": 1690919714,
-            "game": "https://www.chess.com/game/live/84659013361"
+            "rating": 2638,
+            "date": 1737580614,
+            "game": "https://www.chess.com/game/live/131061588989"
         },
         "record": {
-            "win": 318,
-            "loss": 286,
-            "draw": 21
+            "win": 501,
+            "loss": 455,
+            "draw": 45
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2456,
-            "date": 1722980734,
-            "rd": 66
+            "rating": 2459,
+            "date": 1737235651,
+            "rd": 92
         },
         "best": {
             "rating": 2594,
@@ -74,15 +74,15 @@
             "game": "https://www.chess.com/game/live/116717446959"
         },
         "record": {
-            "win": 225,
-            "loss": 149,
+            "win": 226,
+            "loss": 150,
             "draw": 31
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2558,
-            "date": 1690929526
+            "rating": 2724,
+            "date": 1739265144
         },
         "lowest": {
             "rating": 400,
@@ -91,8 +91,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 55,
+            "score": 52
         }
     }
 }

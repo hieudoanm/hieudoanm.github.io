@@ -6,9 +6,9 @@
     "name": "Vitus Bondo Medhus",
     "username": "myburger",
     "title": "FM",
-    "followers": 40,
+    "followers": 63,
     "country": "https://api.chess.com/pub/country/DK",
-    "last_online": 1734182834,
+    "last_online": 1741682192,
     "joined": 1586257743,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2216,
-            "date": 1734170363,
-            "rd": 234
+            "rating": 2140,
+            "date": 1741691768,
+            "rd": 202
         },
         "best": {
             "rating": 2216,
@@ -28,53 +28,53 @@
         },
         "record": {
             "win": 8,
-            "loss": 0,
+            "loss": 1,
             "draw": 0,
-            "time_per_move": 12854,
+            "time_per_move": 18490,
             "timeout_percent": 0
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 2161,
-            "date": 1732863591,
-            "rd": 253
+            "rating": 2190,
+            "date": 1735661661,
+            "rd": 236
         },
         "best": {
-            "rating": 2161,
-            "date": 1732863591,
+            "rating": 2190,
+            "date": 1735661661,
             "game": "https://www.chess.com/game/daily/726339063"
         },
         "record": {
-            "win": 1,
+            "win": 2,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 12854,
+            "time_per_move": 18490,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2329,
-            "date": 1732546762,
+            "rating": 2331,
+            "date": 1739276974,
             "rd": 49
         },
         "best": {
             "rating": 2340,
             "date": 1726850474,
-            "game": "https://www.chess.com/game/live/120588581245"
+            "game": "https://www.chess.com/game/live/131635206935"
         },
         "record": {
-            "win": 18,
-            "loss": 8,
-            "draw": 0
+            "win": 19,
+            "loss": 10,
+            "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2644,
-            "date": 1734175772,
-            "rd": 29
+            "rating": 2652,
+            "date": 1741454334,
+            "rd": 33
         },
         "best": {
             "rating": 2740,
@@ -82,26 +82,26 @@
             "game": "https://www.chess.com/game/live/117045590367"
         },
         "record": {
-            "win": 726,
-            "loss": 598,
-            "draw": 106
+            "win": 842,
+            "loss": 710,
+            "draw": 126
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2669,
-            "date": 1734183583,
-            "rd": 27
+            "rating": 2773,
+            "date": 1741641656,
+            "rd": 25
         },
         "best": {
-            "rating": 2738,
-            "date": 1734172250,
-            "game": "https://www.chess.com/game/live/123274305815"
+            "rating": 2777,
+            "date": 1737571059,
+            "game": "https://www.chess.com/game/live/131823062707"
         },
         "record": {
-            "win": 642,
-            "loss": 493,
-            "draw": 105
+            "win": 886,
+            "loss": 737,
+            "draw": 141
         }
     },
     "fide": 2310,

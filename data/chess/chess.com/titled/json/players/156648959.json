@@ -6,10 +6,10 @@
     "name": "Aleksa Alimpic",
     "username": "alimpic",
     "title": "FM",
-    "followers": 20,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Belgrade",
-    "last_online": 1734034438,
+    "last_online": 1741622419,
     "joined": 1633164469,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2571,
-            "date": 1732702087,
-            "rd": 48
+            "rating": 2556,
+            "date": 1740408356,
+            "rd": 49
         },
         "best": {
             "rating": 2581,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/38830785003"
         },
         "record": {
-            "win": 123,
-            "loss": 111,
-            "draw": 25
+            "win": 124,
+            "loss": 114,
+            "draw": 28
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2493,
-            "date": 1733848940,
-            "rd": 84
+            "rating": 2554,
+            "date": 1738102639,
+            "rd": 49
         },
         "best": {
-            "rating": 2533,
-            "date": 1698394347,
-            "game": "https://www.chess.com/game/live/99161132129"
+            "rating": 2557,
+            "date": 1738101785,
+            "game": "https://www.chess.com/game/live/131235622179"
         },
         "record": {
-            "win": 153,
-            "loss": 117,
-            "draw": 38
+            "win": 159,
+            "loss": 121,
+            "draw": 39
         }
     },
     "fide": 2313,

@@ -1,5 +1,5 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/278543513.fbc6b146.200x200o.0031c113a283.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/278543513.0ab48a21.200x200o.d09b3483fa48.gif",
     "player_id": 278543513,
     "@id": "https://api.chess.com/pub/player/backhomeinmexico",
     "url": "https://www.chess.com/member/BackHomeInMexico",
@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 18,
     "country": "https://api.chess.com/pub/country/PS",
-    "last_online": 1734183919,
+    "last_online": 1740072800,
     "joined": 1682285152,
     "status": "premium",
     "is_streamer": false,
@@ -16,25 +16,25 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2555,
-            "date": 1734018510,
-            "rd": 39
+            "rating": 2602,
+            "date": 1740073626,
+            "rd": 30
         },
         "best": {
-            "rating": 2663,
-            "date": 1712925474,
+            "rating": 2686,
+            "date": 1736865720,
             "game": "https://www.chess.com/game/live/117653343717"
         },
         "record": {
-            "win": 1050,
-            "loss": 955,
-            "draw": 153
+            "win": 1181,
+            "loss": 1071,
+            "draw": 170
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2555,
-            "date": 1733838719,
+            "rating": 2542,
+            "date": 1739570968,
             "rd": 49
         },
         "best": {
@@ -43,8 +43,8 @@
             "game": "https://www.chess.com/game/live/106499874119"
         },
         "record": {
-            "win": 321,
-            "loss": 222,
+            "win": 322,
+            "loss": 224,
             "draw": 41
         }
     },

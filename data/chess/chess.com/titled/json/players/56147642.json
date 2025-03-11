@@ -9,7 +9,7 @@
     "followers": 46,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Paolino De Ceglie",
-    "last_online": 1733779186,
+    "last_online": 1741017546,
     "joined": 1547750712,
     "status": "premium",
     "is_streamer": false,
@@ -18,27 +18,27 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1617,
-            "date": 1734164945,
-            "rd": 162
+            "rating": 1748,
+            "date": 1741687196,
+            "rd": 140
         },
         "best": {
             "rating": 1816,
             "date": 1729060111,
-            "game": "https://www.chess.com/game/daily/707653867"
+            "game": "https://www.chess.com/game/daily/715349355"
         },
         "record": {
-            "win": 15,
+            "win": 25,
             "loss": 4,
             "draw": 0,
-            "time_per_move": 42160,
+            "time_per_move": 32745,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2232,
-            "date": 1730201229,
+            "rating": 2238,
+            "date": 1740761971,
             "rd": 49
         },
         "best": {
@@ -47,7 +47,7 @@
             "game": "https://www.chess.com/game/live/78309781139"
         },
         "record": {
-            "win": 11,
+            "win": 12,
             "loss": 7,
             "draw": 1
         }
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2454,
-            "date": 1734165716,
-            "rd": 38
+            "rating": 2378,
+            "date": 1741635958,
+            "rd": 37
         },
         "best": {
             "rating": 2517,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/78994983817"
         },
         "record": {
-            "win": 546,
-            "loss": 445,
-            "draw": 55
+            "win": 627,
+            "loss": 520,
+            "draw": 66
         }
     },
     "fide": 2200,
     "tactics": {
         "highest": {
-            "rating": 3206,
-            "date": 1727631382
+            "rating": 3308,
+            "date": 1740302110
         },
         "lowest": {
             "rating": 1207,

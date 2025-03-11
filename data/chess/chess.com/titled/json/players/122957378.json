@@ -6,9 +6,9 @@
     "name": "Sascha Wiegmann",
     "username": "schachsensei_yt",
     "title": "FM",
-    "followers": 23,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734043526,
+    "last_online": 1740954449,
     "joined": 1613939143,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2223,
-            "date": 1679752659,
-            "rd": 68
+            "rating": 2157,
+            "date": 1734476403,
+            "rd": 145
         },
         "best": {
             "rating": 2336,
@@ -45,25 +45,25 @@
         },
         "record": {
             "win": 638,
-            "loss": 427,
+            "loss": 428,
             "draw": 35
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2531,
-            "date": 1734044007,
-            "rd": 38
+            "rating": 2557,
+            "date": 1741083909,
+            "rd": 45
         },
         "best": {
-            "rating": 2539,
-            "date": 1733957636,
-            "game": "https://www.chess.com/game/live/56841663243"
+            "rating": 2551,
+            "date": 1734305096,
+            "game": "https://www.chess.com/game/live/132855622917"
         },
         "record": {
-            "win": 701,
-            "loss": 464,
-            "draw": 85
+            "win": 744,
+            "loss": 490,
+            "draw": 90
         }
     },
     "fide": 2280,

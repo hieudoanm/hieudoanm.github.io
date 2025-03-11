@@ -6,10 +6,10 @@
     "name": "Joseph Mwale",
     "username": "josephymwale33",
     "title": "FM",
-    "followers": 188,
+    "followers": 197,
     "country": "https://api.chess.com/pub/country/MW",
     "location": "Durban, KwaZulu-Natal",
-    "last_online": 1733333373,
+    "last_online": 1741693204,
     "joined": 1412323709,
     "status": "premium",
     "is_streamer": false,
@@ -85,8 +85,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2489,
-            "date": 1733333835,
+            "rating": 2524,
+            "date": 1738922988,
             "rd": 49
         },
         "best": {
@@ -95,7 +95,7 @@
             "game": "https://www.chess.com/game/live/103994503131"
         },
         "record": {
-            "win": 2441,
+            "win": 2443,
             "loss": 1910,
             "draw": 254
         }

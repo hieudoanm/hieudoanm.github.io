@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/jungleman82",
     "username": "jungleman82",
     "title": "IM",
-    "followers": 17,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734025945,
+    "last_online": 1741359927,
     "joined": 1260874334,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +15,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2169,
-            "date": 1734161472,
-            "rd": 83
+            "rating": 2119,
+            "date": 1741683310,
+            "rd": 80
         },
         "best": {
             "rating": 2340,
@@ -25,10 +25,10 @@
             "game": "https://www.chess.com/game/daily/278492830"
         },
         "record": {
-            "win": 661,
-            "loss": 271,
-            "draw": 322,
-            "time_per_move": 14977,
+            "win": 668,
+            "loss": 274,
+            "draw": 323,
+            "time_per_move": 15046,
             "timeout_percent": 0
         }
     },
@@ -47,7 +47,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 14977,
+            "time_per_move": 15046,
             "timeout_percent": 0
         }
     },

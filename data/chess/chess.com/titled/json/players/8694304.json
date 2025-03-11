@@ -5,9 +5,9 @@
     "name": "Joshua Johnson",
     "username": "champ1000",
     "title": "FM",
-    "followers": 118,
+    "followers": 120,
     "country": "https://api.chess.com/pub/country/TT",
-    "last_online": 1734119460,
+    "last_online": 1741428604,
     "joined": 1346081787,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2187,
-            "date": 1695156969,
-            "rd": 162
+            "rating": 2199,
+            "date": 1741025959,
+            "rd": 49
         },
         "best": {
             "rating": 2213,
@@ -40,9 +40,9 @@
             "game": "https://www.chess.com/game/live/4772238045"
         },
         "record": {
-            "win": 59,
-            "loss": 18,
-            "draw": 19
+            "win": 61,
+            "loss": 19,
+            "draw": 20
         }
     },
     "chess_bullet": {
@@ -81,8 +81,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3670,
-            "date": 1723929245
+            "rating": 3746,
+            "date": 1738365109
         },
         "lowest": {
             "rating": 1366,

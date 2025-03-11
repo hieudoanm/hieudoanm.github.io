@@ -6,38 +6,55 @@
     "name": "Jerzy Slaby",
     "username": "jslaby",
     "title": "IM",
-    "followers": 209,
+    "followers": 247,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "United Kingdom",
-    "last_online": 1734085446,
+    "last_online": 1741419070,
     "joined": 1401732327,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Crystal",
     "streaming_platforms": [],
-    "chess_bullet": {
+    "chess_rapid": {
         "last": {
-            "rating": 2202,
-            "date": 1733835333,
-            "rd": 35
+            "rating": 2017,
+            "date": 1737224131,
+            "rd": 49
         },
         "best": {
-            "rating": 2661,
-            "date": 1649440979,
-            "game": "https://www.chess.com/game/live/104002919043"
+            "rating": 2017,
+            "date": 1737224131,
+            "game": "https://www.chess.com/game/live/130962615403"
         },
         "record": {
-            "win": 24781,
-            "loss": 24570,
-            "draw": 2041
+            "win": 2,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2592,
+            "date": 1741458943,
+            "rd": 27
+        },
+        "best": {
+            "rating": 2787,
+            "date": 1737465699,
+            "game": "https://www.chess.com/game/live/131568020775"
+        },
+        "record": {
+            "win": 25195,
+            "loss": 24975,
+            "draw": 2103
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2615,
-            "date": 1734182768,
-            "rd": 19
+            "rating": 2683,
+            "date": 1741702978,
+            "rd": 22
         },
         "best": {
             "rating": 2812,
@@ -45,16 +62,16 @@
             "game": "https://www.chess.com/game/live/126477572253"
         },
         "record": {
-            "win": 3256,
-            "loss": 3365,
-            "draw": 583
+            "win": 4312,
+            "loss": 4561,
+            "draw": 833
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3289,
-            "date": 1679705871
+            "rating": 3459,
+            "date": 1739271863
         },
         "lowest": {
             "rating": 1200,

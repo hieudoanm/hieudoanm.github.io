@@ -8,7 +8,7 @@
     "followers": 31,
     "country": "https://api.chess.com/pub/country/BA",
     "location": "Mostar",
-    "last_online": 1734074096,
+    "last_online": 1741343840,
     "joined": 1414419005,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2279,
-            "date": 1733902739,
-            "rd": 28
+            "rating": 2298,
+            "date": 1741133131,
+            "rd": 51
         },
         "best": {
             "rating": 2413,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/107647973013"
         },
         "record": {
-            "win": 3515,
-            "loss": 3417,
-            "draw": 502
+            "win": 3523,
+            "loss": 3429,
+            "draw": 506
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2599,
-            "date": 1679334454
+            "rating": 3230,
+            "date": 1740961494
         },
         "lowest": {
             "rating": 1349,

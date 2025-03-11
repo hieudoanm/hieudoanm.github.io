@@ -5,10 +5,10 @@
     "name": "Malcolm Pein",
     "username": "malcolmpein",
     "title": "IM",
-    "followers": 41,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Florida",
-    "last_online": 1734167124,
+    "last_online": 1741534291,
     "joined": 1206523363,
     "status": "premium",
     "is_streamer": false,
@@ -17,20 +17,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1857,
-            "date": 1734167200,
-            "rd": 167
+            "rating": 1863,
+            "date": 1741534304,
+            "rd": 170
         },
         "best": {
-            "rating": 1857,
-            "date": 1733619244,
+            "rating": 1863,
+            "date": 1739742233,
             "game": "https://www.chess.com/game/daily/196366806"
         },
         "record": {
-            "win": 117,
+            "win": 122,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 17362,
+            "time_per_move": 17628,
             "timeout_percent": 0
         }
     },

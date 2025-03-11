@@ -6,10 +6,10 @@
     "name": "Maud Benson",
     "username": "ghanabenson",
     "title": "WCM",
-    "followers": 10,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/GH",
     "location": "Tema",
-    "last_online": 1733769186,
+    "last_online": 1741261382,
     "joined": 1607934486,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1655,
-            "date": 1730485363,
-            "rd": 47
+            "rating": 1457,
+            "date": 1741125053,
+            "rd": 45
         },
         "best": {
             "rating": 1592,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/114518940573"
         },
         "record": {
-            "win": 97,
-            "loss": 93,
-            "draw": 7
+            "win": 106,
+            "loss": 122,
+            "draw": 8
         }
     },
     "chess_blitz": {

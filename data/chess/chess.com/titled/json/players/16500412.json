@@ -6,10 +6,10 @@
     "name": "Ben Purton",
     "username": "purton",
     "title": "FM",
-    "followers": 34,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "Grantham Sharks",
-    "last_online": 1734131752,
+    "last_online": 1736893833,
     "joined": 1395089288,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1782,
-            "date": 1734183685,
-            "rd": 70
+            "rating": 1707,
+            "date": 1741629676,
+            "rd": 48
         },
         "best": {
             "rating": 1888,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/341790973"
         },
         "record": {
-            "win": 196,
-            "loss": 96,
-            "draw": 28,
-            "time_per_move": 8347,
+            "win": 228,
+            "loss": 148,
+            "draw": 36,
+            "time_per_move": 10679,
             "timeout_percent": 0
         }
     },

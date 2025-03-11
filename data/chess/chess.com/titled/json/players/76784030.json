@@ -5,10 +5,10 @@
     "name": "Bogdan-Gabriel Vioreanu",
     "username": "zaviob",
     "title": "IM",
-    "followers": 34,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York",
-    "last_online": 1734008521,
+    "last_online": 1740504617,
     "joined": 1586962665,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1930,
-            "date": 1733806532,
-            "rd": 125
+            "rating": 1936,
+            "date": 1741698441,
+            "rd": 145
         },
         "best": {
             "rating": 2405,
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/387989921"
         },
         "record": {
-            "win": 31,
+            "win": 34,
             "loss": 15,
             "draw": 1,
-            "time_per_move": 84006,
+            "time_per_move": 80994,
             "timeout_percent": 0
         }
     },
@@ -49,7 +49,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 84006,
+            "time_per_move": 80994,
             "timeout_percent": 0
         }
     },

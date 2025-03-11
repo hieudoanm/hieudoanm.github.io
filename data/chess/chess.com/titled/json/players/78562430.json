@@ -1,20 +1,20 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/78562430.799aecd9.200x200o.3900669704af.jpeg",
     "player_id": 78562430,
-    "@id": "https://api.chess.com/pub/player/ankit23201",
-    "url": "https://www.chess.com/member/Ankit23201",
+    "@id": "https://api.chess.com/pub/player/the_risk_taker100",
+    "url": "https://www.chess.com/member/The_risk_taker100",
     "name": "Ankit Ray",
-    "username": "ankit23201",
+    "username": "the_risk_taker100",
     "title": "FM",
-    "followers": 57,
-    "country": "https://api.chess.com/pub/country/IN",
-    "location": "Kolkata",
-    "last_online": 1734171540,
+    "followers": 60,
+    "country": "https://api.chess.com/pub/country/PW",
+    "location": "Koror",
+    "last_online": 1741703638,
     "joined": 1588598655,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -54,36 +54,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2350,
-            "date": 1729963865,
-            "rd": 72
+            "rating": 2451,
+            "date": 1738430610,
+            "rd": 69
         },
         "best": {
-            "rating": 2355,
-            "date": 1729963727,
-            "game": "https://www.chess.com/game/live/123702619527"
+            "rating": 2469,
+            "date": 1738430308,
+            "game": "https://www.chess.com/game/live/132169201655"
         },
         "record": {
-            "win": 41,
-            "loss": 30,
+            "win": 51,
+            "loss": 41,
             "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2479,
-            "date": 1731434924,
-            "rd": 47
+            "rating": 2563,
+            "date": 1741369050,
+            "rd": 34
         },
         "best": {
-            "rating": 2514,
-            "date": 1729009681,
-            "game": "https://www.chess.com/game/live/122746471045"
+            "rating": 2584,
+            "date": 1740506579,
+            "game": "https://www.chess.com/game/live/133633156311"
         },
         "record": {
-            "win": 387,
-            "loss": 307,
-            "draw": 70
+            "win": 486,
+            "loss": 409,
+            "draw": 98
         }
     },
     "fide": 2320,

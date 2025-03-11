@@ -6,9 +6,9 @@
     "name": "Jakob Weihrauch",
     "username": "loonsdekoeben",
     "title": "FM",
-    "followers": 8,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733962769,
+    "last_online": 1741685129,
     "joined": 1544470209,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2499,
-            "date": 1730885375,
-            "rd": 32
+            "rating": 2492,
+            "date": 1735208445,
+            "rd": 51
         },
         "best": {
             "rating": 2519,
@@ -59,15 +59,15 @@
         },
         "record": {
             "win": 145,
-            "loss": 150,
+            "loss": 151,
             "draw": 26
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2472,
-            "date": 1733759330,
-            "rd": 39
+            "rating": 2484,
+            "date": 1741682063,
+            "rd": 45
         },
         "best": {
             "rating": 2556,
@@ -75,16 +75,16 @@
             "game": "https://www.chess.com/game/live/112483884835"
         },
         "record": {
-            "win": 518,
-            "loss": 552,
-            "draw": 77
+            "win": 565,
+            "loss": 604,
+            "draw": 84
         }
     },
     "fide": 2272,
     "tactics": {
         "highest": {
-            "rating": 3246,
-            "date": 1722431443
+            "rating": 3271,
+            "date": 1741685267
         },
         "lowest": {
             "rating": 1009,
@@ -93,8 +93,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 50,
+            "score": 47
+        },
+        "daily": {
+            "total_attempts": 28,
+            "score": 25
         }
     }
 }

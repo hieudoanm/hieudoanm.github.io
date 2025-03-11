@@ -1,15 +1,15 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/50468838.c33f30fa.200x200o.8c280d85b8de.jpeg",
     "player_id": 50468838,
-    "@id": "https://api.chess.com/pub/player/trikal24",
-    "url": "https://www.chess.com/member/Trikal24",
+    "@id": "https://api.chess.com/pub/player/octachamp",
+    "url": "https://www.chess.com/member/OctaChamp",
     "name": "Rahul Sangma",
-    "username": "trikal24",
+    "username": "octachamp",
     "title": "IM",
-    "followers": 40,
+    "followers": 41,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "India",
-    "last_online": 1733027002,
+    "last_online": 1737122766,
     "joined": 1538831027,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3421,
-            "date": 1713703372
+            "rating": 3481,
+            "date": 1737086897
         },
         "lowest": {
             "rating": 1215,

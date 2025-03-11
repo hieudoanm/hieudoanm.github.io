@@ -6,10 +6,10 @@
     "name": "Ranveer Mohite",
     "username": "glenelco",
     "title": "CM",
-    "followers": 30,
+    "followers": 33,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Pune City",
-    "last_online": 1733232408,
+    "last_online": 1741689944,
     "joined": 1417617995,
     "status": "premium",
     "is_streamer": false,
@@ -89,8 +89,8 @@
     "fide": 2277,
     "tactics": {
         "highest": {
-            "rating": 2859,
-            "date": 1564858605
+            "rating": 2906,
+            "date": 1739605256
         },
         "lowest": {
             "rating": 1336,

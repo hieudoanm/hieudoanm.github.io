@@ -5,11 +5,11 @@
     "url": "https://www.chess.com/member/AspiazuMarlon2001",
     "name": "Marlon Steven Aspiazu Sibri",
     "username": "aspiazumarlon2001",
-    "title": "CM",
-    "followers": 217,
+    "title": "FM",
+    "followers": 220,
     "country": "https://api.chess.com/pub/country/EC",
     "location": "Guayaquil",
-    "last_online": 1733842517,
+    "last_online": 1741570676,
     "joined": 1590448167,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1613,
-            "date": 1712352466,
+            "date": 1735257883,
             "rd": 337
         },
         "best": {
@@ -86,7 +86,7 @@
             "draw": 969
         }
     },
-    "fide": 2098,
+    "fide": 2102,
     "tactics": {
         "highest": {
             "rating": 3306,
@@ -101,6 +101,10 @@
         "best": {
             "total_attempts": 68,
             "score": 65
+        },
+        "daily": {
+            "total_attempts": 37,
+            "score": 36
         }
     }
 }

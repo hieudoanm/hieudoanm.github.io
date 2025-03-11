@@ -5,9 +5,9 @@
     "name": "Jeffery Sarwer",
     "username": "loveumore",
     "title": "FM",
-    "followers": 28,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734085132,
+    "last_online": 1740505169,
     "joined": 1374250437,
     "status": "premium",
     "is_streamer": false,
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2620,
-            "date": 1731525224,
-            "rd": 25
+            "rating": 2626,
+            "date": 1740160592,
+            "rd": 22
         },
         "best": {
             "rating": 2679,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/123498592007"
         },
         "record": {
-            "win": 9272,
-            "loss": 7384,
-            "draw": 1620
+            "win": 9768,
+            "loss": 7857,
+            "draw": 1719
         }
     },
     "tactics": {
@@ -98,10 +98,6 @@
         "best": {
             "total_attempts": 46,
             "score": 43
-        },
-        "daily": {
-            "total_attempts": 20,
-            "score": 17
         }
     }
 }

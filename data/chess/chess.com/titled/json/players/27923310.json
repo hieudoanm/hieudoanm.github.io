@@ -5,9 +5,9 @@
     "name": "Marius Zainea",
     "username": "lhuron",
     "title": "FM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/LU",
-    "last_online": 1733165328,
+    "last_online": 1736229677,
     "joined": 1461686096,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2182,
-            "date": 1734176767,
-            "rd": 93
+            "rating": 2222,
+            "date": 1741703087,
+            "rd": 87
         },
         "best": {
             "rating": 2243,
@@ -26,10 +26,10 @@
             "game": "https://www.chess.com/game/daily/440301337"
         },
         "record": {
-            "win": 88,
-            "loss": 15,
+            "win": 93,
+            "loss": 18,
             "draw": 23,
-            "time_per_move": 10476,
+            "time_per_move": 10895,
             "timeout_percent": 0
         }
     },

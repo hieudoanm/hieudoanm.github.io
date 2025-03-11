@@ -6,15 +6,15 @@
     "name": "Marko Srebrnic",
     "username": "pakarma",
     "title": "FM",
-    "followers": 4,
+    "followers": 5,
     "country": "https://api.chess.com/pub/country/SI",
     "location": "Grosuplje",
-    "last_online": 1733606958,
+    "last_online": 1741626386,
     "joined": 1471261013,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2389,
-            "date": 1734029252,
-            "rd": 29
+            "rating": 2539,
+            "date": 1741634412,
+            "rd": 28
         },
         "best": {
             "rating": 2668,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/89719754747"
         },
         "record": {
-            "win": 2313,
-            "loss": 2084,
-            "draw": 316
+            "win": 2648,
+            "loss": 2381,
+            "draw": 363
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2422,
-            "date": 1732640463,
-            "rd": 47
+            "rating": 2542,
+            "date": 1738493159,
+            "rd": 35
         },
         "best": {
             "rating": 2652,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/65918004305"
         },
         "record": {
-            "win": 2077,
-            "loss": 1735,
-            "draw": 299
+            "win": 2245,
+            "loss": 1880,
+            "draw": 336
         }
     },
     "fide": 0,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 46,
-            "score": 43
+            "total_attempts": 52,
+            "score": 49
         }
     }
 }

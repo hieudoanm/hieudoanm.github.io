@@ -6,10 +6,10 @@
     "name": "Sathvik Adiga",
     "username": "sathvikadiga",
     "title": "FM",
-    "followers": 40,
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Karnataka",
-    "last_online": 1734183420,
+    "last_online": 1741437061,
     "joined": 1586436270,
     "status": "premium",
     "is_streamer": false,
@@ -18,78 +18,72 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1492,
-            "date": 1734161974,
-            "rd": 227
+            "rating": 1684,
+            "date": 1741437077,
+            "rd": 134
         },
         "best": {
             "rating": 1703,
             "date": 1728054231,
-            "game": "https://www.chess.com/game/daily/671604623"
+            "game": "https://www.chess.com/game/daily/763307559"
         },
         "record": {
-            "win": 5,
-            "loss": 1,
-            "draw": 0,
-            "time_per_move": 57201,
-            "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 2,
-            "highest_finish": 0
+            "win": 14,
+            "loss": 19,
+            "draw": 1,
+            "time_per_move": 49427,
+            "timeout_percent": 43
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2445,
-            "date": 1708597457,
-            "rd": 116
+            "rating": 2454,
+            "date": 1738469828,
+            "rd": 49
         },
         "best": {
-            "rating": 2133,
-            "date": 1700983791,
-            "game": "https://www.chess.com/game/live/9459963739"
+            "rating": 2454,
+            "date": 1738469828,
+            "game": "https://www.chess.com/game/live/132208784563"
         },
         "record": {
-            "win": 220,
+            "win": 221,
             "loss": 88,
             "draw": 47
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2611,
-            "date": 1732692221,
+            "rating": 2629,
+            "date": 1740847126,
             "rd": 49
         },
         "best": {
-            "rating": 2618,
-            "date": 1727790379,
+            "rating": 2622,
+            "date": 1738930465,
             "game": "https://www.chess.com/game/live/116443174421"
         },
         "record": {
-            "win": 714,
-            "loss": 669,
-            "draw": 65
+            "win": 717,
+            "loss": 671,
+            "draw": 66
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2784,
-            "date": 1734184301,
-            "rd": 35
+            "rating": 2818,
+            "date": 1741438108,
+            "rd": 36
         },
         "best": {
-            "rating": 2844,
-            "date": 1729243645,
+            "rating": 2879,
+            "date": 1735564909,
             "game": "https://www.chess.com/game/live/123958869105"
         },
         "record": {
-            "win": 873,
-            "loss": 535,
-            "draw": 126
+            "win": 977,
+            "loss": 635,
+            "draw": 152
         }
     },
     "fide": 2408,
@@ -105,8 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 46,
-            "score": 42
+            "total_attempts": 50,
+            "score": 49
         }
     }
 }

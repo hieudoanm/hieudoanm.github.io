@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1729629317,
+    "last_online": 1741638395,
     "joined": 1721770135,
     "status": "premium",
     "is_streamer": false,
@@ -60,8 +60,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 36,
-            "score": 33
+            "total_attempts": 39,
+            "score": 36
+        },
+        "daily": {
+            "total_attempts": 39,
+            "score": 36
         }
     }
 }

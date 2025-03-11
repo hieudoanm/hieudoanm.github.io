@@ -6,9 +6,9 @@
     "name": "Christian Cacco",
     "username": "kriscacco",
     "title": "FM",
-    "followers": 57,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1733869489,
+    "last_online": 1737684802,
     "joined": 1508055617,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2424,
-            "date": 1734046461,
-            "rd": 37
+            "rating": 2284,
+            "date": 1737685443
         },
         "best": {
             "rating": 2581,
@@ -75,9 +74,9 @@
             "game": "https://www.chess.com/game/live/104621514151"
         },
         "record": {
-            "win": 4526,
-            "loss": 3371,
-            "draw": 543
+            "win": 4569,
+            "loss": 3421,
+            "draw": 548
         }
     },
     "fide": 0,

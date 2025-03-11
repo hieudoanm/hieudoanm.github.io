@@ -6,10 +6,10 @@
     "name": "Kiana Arab",
     "username": "kiana_arab",
     "title": "WCM",
-    "followers": 139,
+    "followers": 145,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Arizona",
-    "last_online": 1733246006,
+    "last_online": 1737746684,
     "joined": 1323656884,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 400,
-            "date": 1674325476,
+            "date": 1739952250,
             "rd": 350
         },
         "record": {
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2305,
-            "date": 1728162895,
-            "rd": 51
+            "rating": 2270,
+            "date": 1737697545,
+            "rd": 59
         },
         "best": {
             "rating": 2365,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/54191396531"
         },
         "record": {
-            "win": 414,
-            "loss": 336,
-            "draw": 57
+            "win": 419,
+            "loss": 343,
+            "draw": 60
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2112,
-            "date": 1725811043,
-            "rd": 76
+            "rating": 2111,
+            "date": 1737668497,
+            "rd": 95
         },
         "best": {
             "rating": 2228,
@@ -76,8 +76,8 @@
             "game": "https://www.chess.com/game/live/8677594031"
         },
         "record": {
-            "win": 166,
-            "loss": 113,
+            "win": 169,
+            "loss": 114,
             "draw": 9
         }
     },

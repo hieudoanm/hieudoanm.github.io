@@ -4,30 +4,29 @@
     "url": "https://www.chess.com/member/Learning_matters",
     "username": "learning_matters",
     "title": "FM",
-    "followers": 0,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734086993,
+    "last_online": 1740548374,
     "joined": 1727713502,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2545,
-            "date": 1734087324,
-            "rd": 37
+            "rating": 2651,
+            "date": 1740548781
         },
         "best": {
-            "rating": 2582,
-            "date": 1732893443,
-            "game": "https://www.chess.com/game/live/126631143841"
+            "rating": 2692,
+            "date": 1735674365,
+            "game": "https://www.chess.com/game/live/129498820725"
         },
         "record": {
-            "win": 79,
-            "loss": 58,
-            "draw": 11
+            "win": 232,
+            "loss": 224,
+            "draw": 38
         }
     },
     "fide": 0,

@@ -6,10 +6,10 @@
     "name": "\u0412\u0430\u0441\u0438\u043b\u044c \u0411\u0443\u0440\u0438\u0448\u0438\u043d",
     "username": "buryshin_vasyl",
     "title": "FM",
-    "followers": 168,
+    "followers": 172,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u041a\u0438\u0457\u0432",
-    "last_online": 1733764105,
+    "last_online": 1741619027,
     "joined": 1424795244,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 962,
-            "date": 1712707526,
+            "date": 1734514112,
             "rd": 278
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2429,
-            "date": 1723606029,
-            "rd": 86
+            "rating": 2324,
+            "date": 1737132664,
+            "rd": 100
         },
         "best": {
             "rating": 2458,
@@ -82,7 +82,7 @@
         },
         "record": {
             "win": 3336,
-            "loss": 3309,
+            "loss": 3312,
             "draw": 454
         }
     },

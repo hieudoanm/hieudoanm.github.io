@@ -5,9 +5,9 @@
     "name": "Michal Mazurkiewicz",
     "username": "cthulhuuu",
     "title": "CM",
-    "followers": 47,
+    "followers": 50,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734017859,
+    "last_online": 1735647032,
     "joined": 1451928425,
     "status": "premium",
     "is_streamer": false,
@@ -31,7 +31,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2031,
-            "date": 1670255018,
+            "date": 1735328009,
             "rd": 184
         },
         "best": {
@@ -64,8 +64,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2414,
-            "date": 1734107710,
+            "rating": 2455,
+            "date": 1741698791,
             "rd": 25
         },
         "best": {
@@ -74,16 +74,16 @@
             "game": "https://www.chess.com/game/live/60540142703"
         },
         "record": {
-            "win": 7389,
-            "loss": 6362,
-            "draw": 883
+            "win": 7852,
+            "loss": 6748,
+            "draw": 932
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3628,
-            "date": 1717504806
+            "rating": 3657,
+            "date": 1737677806
         },
         "lowest": {
             "rating": 1363,

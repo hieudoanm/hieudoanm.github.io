@@ -6,9 +6,9 @@
     "name": "Md. Taibur Rahman",
     "username": "trsumonchess",
     "title": "FM",
-    "followers": 71,
+    "followers": 77,
     "country": "https://api.chess.com/pub/country/BD",
-    "last_online": 1734173275,
+    "last_online": 1741373413,
     "joined": 1535212670,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1887,
-            "date": 1734172758,
-            "rd": 20
+            "rating": 2108,
+            "date": 1738778124,
+            "rd": 24
         },
         "best": {
-            "rating": 2108,
-            "date": 1597169522,
+            "rating": 2140,
+            "date": 1738151066,
             "game": "https://www.chess.com/game/live/89090516627"
         },
         "record": {
-            "win": 14758,
-            "loss": 15729,
-            "draw": 764
+            "win": 15704,
+            "loss": 16676,
+            "draw": 802
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2334,
-            "date": 1723742994,
-            "rd": 111
+            "rating": 2254,
+            "date": 1741702782,
+            "rd": 23
         },
         "best": {
             "rating": 2431,
@@ -61,20 +61,25 @@
             "game": "https://www.chess.com/game/live/86538002855"
         },
         "record": {
-            "win": 3452,
-            "loss": 3784,
-            "draw": 413
+            "win": 3709,
+            "loss": 4047,
+            "draw": 444
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3080,
-            "date": 1661276751
+            "rating": 3236,
+            "date": 1738302599
         },
         "lowest": {
             "rating": 1215,
             "date": 1586115462
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 39,
+            "score": 37
+        }
+    }
 }

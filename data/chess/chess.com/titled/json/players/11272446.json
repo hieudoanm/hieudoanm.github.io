@@ -6,10 +6,10 @@
     "name": "Kacper Tomaszewski",
     "username": "kacprekt",
     "title": "FM",
-    "followers": 84,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Jarocin",
-    "last_online": 1734091431,
+    "last_online": 1741696855,
     "joined": 1364220840,
     "status": "premium",
     "is_streamer": false,
@@ -52,7 +52,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2445,
-            "date": 1733150561,
+            "date": 1737130656,
             "rd": 49
         },
         "best": {
@@ -61,33 +61,32 @@
             "game": "https://www.chess.com/game/live/116978442727"
         },
         "record": {
-            "win": 10,
+            "win": 12,
             "loss": 0,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2497,
-            "date": 1733922336,
-            "rd": 48
+            "rating": 2515,
+            "date": 1736104282
         },
         "best": {
-            "rating": 2560,
-            "date": 1714338935,
+            "rating": 2581,
+            "date": 1735600975,
             "game": "https://www.chess.com/game/live/108033570447"
         },
         "record": {
-            "win": 339,
-            "loss": 318,
-            "draw": 43
+            "win": 385,
+            "loss": 350,
+            "draw": 51
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2412,
-            "date": 1733874262,
-            "rd": 43
+            "rating": 2568,
+            "date": 1741515706,
+            "rd": 34
         },
         "best": {
             "rating": 2605,
@@ -95,9 +94,9 @@
             "game": "https://www.chess.com/game/live/32638861677"
         },
         "record": {
-            "win": 3573,
-            "loss": 3080,
-            "draw": 644
+            "win": 3664,
+            "loss": 3137,
+            "draw": 659
         }
     },
     "fide": 2363,

@@ -5,15 +5,15 @@
     "name": "Lemnys Antonio Arias",
     "username": "lemures27",
     "title": "IM",
-    "followers": 38,
+    "followers": 41,
     "country": "https://api.chess.com/pub/country/SV",
     "location": "san salvador",
-    "last_online": 1734070928,
+    "last_online": 1741667491,
     "joined": 1510779761,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,19 +34,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2371,
-            "date": 1734073503,
-            "rd": 30
+            "rating": 2572,
+            "date": 1741669919,
+            "rd": 27
         },
         "best": {
-            "rating": 2618,
-            "date": 1713367452,
-            "game": "https://www.chess.com/game/live/90964851541"
+            "rating": 2667,
+            "date": 1738200951,
+            "game": "https://www.chess.com/game/live/131219396631"
         },
         "record": {
-            "win": 2592,
-            "loss": 1985,
-            "draw": 263
+            "win": 3213,
+            "loss": 2474,
+            "draw": 332
         }
     },
     "tactics": {

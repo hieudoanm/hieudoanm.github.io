@@ -6,15 +6,15 @@
     "name": "Lucas Ranaldi",
     "username": "lucasran",
     "title": "FM",
-    "followers": 247,
+    "followers": 256,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Oslo",
-    "last_online": 1733008232,
+    "last_online": 1741693033,
     "joined": 1352018901,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -90,19 +90,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2678,
-            "date": 1734125410,
+            "rating": 2738,
+            "date": 1741624240,
             "rd": 35
         },
         "best": {
             "rating": 2807,
             "date": 1694274374,
-            "game": "https://www.chess.com/game/live/127004998923"
+            "game": "https://www.chess.com/game/live/134238558575"
         },
         "record": {
-            "win": 1806,
-            "loss": 1243,
-            "draw": 335
+            "win": 1852,
+            "loss": 1272,
+            "draw": 347
         }
     },
     "fide": 2353,

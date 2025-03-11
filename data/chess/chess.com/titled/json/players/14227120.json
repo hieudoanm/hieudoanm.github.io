@@ -6,10 +6,10 @@
     "name": "Jose Diaz Velandia",
     "username": "velandiasaurio",
     "title": "FM",
-    "followers": 24,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "Madrid, Spain",
-    "last_online": 1734105535,
+    "last_online": 1741607896,
     "joined": 1383779571,
     "status": "premium",
     "is_streamer": false,
@@ -18,19 +18,19 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2696,
-            "date": 1734106127,
-            "rd": 24
+            "rating": 2731,
+            "date": 1741293077,
+            "rd": 27
         },
         "best": {
-            "rating": 2821,
-            "date": 1714509540,
+            "rating": 2847,
+            "date": 1739787494,
             "game": "https://www.chess.com/game/live/108233956327"
         },
         "record": {
-            "win": 1130,
-            "loss": 660,
-            "draw": 133
+            "win": 1569,
+            "loss": 930,
+            "draw": 181
         }
     },
     "chess_blitz": {

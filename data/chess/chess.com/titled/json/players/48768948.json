@@ -6,9 +6,9 @@
     "name": "Kacper Karwowski",
     "username": "kacperkarwowski",
     "title": "CM",
-    "followers": 80,
+    "followers": 76,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734175860,
+    "last_online": 1741681015,
     "joined": 1534269565,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2562,
-            "date": 1733750141,
-            "rd": 49
+            "rating": 2570,
+            "date": 1739965088,
+            "rd": 47
         },
         "best": {
             "rating": 2645,
@@ -63,12 +63,12 @@
             "game": "https://www.chess.com/game/live/114276064263"
         },
         "record": {
-            "win": 1975,
-            "loss": 1713,
-            "draw": 466
+            "win": 1989,
+            "loss": 1726,
+            "draw": 470
         }
     },
-    "fide": 2230,
+    "fide": 2262,
     "tactics": {
         "highest": {
             "rating": 3655,

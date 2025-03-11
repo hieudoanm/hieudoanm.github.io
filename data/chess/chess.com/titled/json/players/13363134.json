@@ -5,14 +5,14 @@
     "url": "https://www.chess.com/member/SkilmirF",
     "username": "skilmirf",
     "title": "IM",
-    "followers": 77,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/IS",
-    "last_online": 1734014465,
+    "last_online": 1741555810,
     "joined": 1378047808,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -52,39 +52,39 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2540,
-            "date": 1585000977,
-            "rd": 93
+            "rating": 2733,
+            "date": 1741473561,
+            "rd": 25
         },
         "best": {
-            "rating": 2422,
-            "date": 1510600419,
-            "game": "https://www.chess.com/game/live/1397330783"
+            "rating": 2610,
+            "date": 1739737891,
+            "game": "https://www.chess.com/game/live/133399763085"
         },
         "record": {
-            "win": 913,
-            "loss": 936,
-            "draw": 113
+            "win": 1026,
+            "loss": 1030,
+            "draw": 124
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2514,
-            "date": 1728256955,
-            "rd": 47
+            "rating": 2656,
+            "date": 1741559000,
+            "rd": 32
         },
         "best": {
-            "rating": 2626,
-            "date": 1560725210,
+            "rating": 2633,
+            "date": 1739483157,
             "game": "https://www.chess.com/game/live/3744389303"
         },
         "record": {
-            "win": 1813,
-            "loss": 1524,
-            "draw": 295
+            "win": 1891,
+            "loss": 1588,
+            "draw": 316
         }
     },
-    "fide": 2350,
+    "fide": 2400,
     "tactics": {
         "highest": {
             "rating": 3263,

@@ -9,7 +9,7 @@
     "followers": 4,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Hieflau",
-    "last_online": 1734017605,
+    "last_online": 1741460445,
     "joined": 1660249994,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2724,
-            "date": 1710230419,
-            "rd": 24
+            "rating": 2711,
+            "date": 1734382511,
+            "rd": 47
         },
         "best": {
             "rating": 2842,
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/103795841629"
         },
         "record": {
-            "win": 317,
-            "loss": 192,
+            "win": 320,
+            "loss": 195,
             "draw": 31
         }
     },

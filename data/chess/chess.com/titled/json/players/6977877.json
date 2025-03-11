@@ -6,10 +6,10 @@
     "name": "Florescu Codrut Constantin",
     "username": "korbul",
     "title": "IM",
-    "followers": 354,
+    "followers": 358,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Bucuresti",
-    "last_online": 1734171710,
+    "last_online": 1741674713,
     "joined": 1331815573,
     "status": "premium",
     "is_streamer": false,
@@ -28,12 +28,6 @@
             "draw": 1,
             "time_per_move": 34263,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
@@ -72,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2570,
-            "date": 1734074977,
-            "rd": 27
+            "rating": 2590,
+            "date": 1741700672,
+            "rd": 29
         },
         "best": {
             "rating": 2726,
@@ -82,9 +76,9 @@
             "game": "https://www.chess.com/game/live/110648565707"
         },
         "record": {
-            "win": 14335,
-            "loss": 16277,
-            "draw": 2996
+            "win": 14522,
+            "loss": 16485,
+            "draw": 3039
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Filip Barg\u0142owski",
     "username": "perunbarglowski",
     "title": "FM",
-    "followers": 83,
+    "followers": 86,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Warsaw",
-    "last_online": 1734108480,
+    "last_online": 1741635562,
     "joined": 1564646995,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2573,
-            "date": 1733964143,
-            "rd": 33
+            "rating": 2662,
+            "date": 1741638342,
+            "rd": 32
         },
         "best": {
-            "rating": 2753,
-            "date": 1729543439,
+            "rating": 2790,
+            "date": 1737494298,
             "game": "https://www.chess.com/game/live/67297879277"
         },
         "record": {
-            "win": 1149,
-            "loss": 889,
-            "draw": 286
+            "win": 1396,
+            "loss": 1082,
+            "draw": 345
         }
     },
     "tactics": {

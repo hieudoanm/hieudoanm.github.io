@@ -6,9 +6,9 @@
     "name": "Yihe Fu",
     "username": "gmfyhr1",
     "title": "FM",
-    "followers": 195,
+    "followers": 198,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1733405983,
+    "last_online": 1741617026,
     "joined": 1661698245,
     "status": "premium",
     "is_streamer": false,
@@ -32,12 +32,6 @@
             "draw": 0,
             "time_per_move": 16553,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 336,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
@@ -59,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2625,
-            "date": 1732611495,
-            "rd": 35
+            "rating": 2670,
+            "date": 1741459865,
+            "rd": 26
         },
         "best": {
             "rating": 2788,
@@ -69,25 +63,25 @@
             "game": "https://www.chess.com/game/live/82497734997"
         },
         "record": {
-            "win": 2349,
-            "loss": 2629,
-            "draw": 361
+            "win": 2463,
+            "loss": 2737,
+            "draw": 374
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2459,
-            "date": 1715692583,
-            "rd": 90
+            "rating": 2526,
+            "date": 1741110829,
+            "rd": 46
         },
         "best": {
-            "rating": 2524,
-            "date": 1679748020,
-            "game": "https://www.chess.com/game/live/96135842809"
+            "rating": 2546,
+            "date": 1741108482,
+            "game": "https://www.chess.com/game/live/134842754091"
         },
         "record": {
-            "win": 176,
-            "loss": 101,
+            "win": 184,
+            "loss": 111,
             "draw": 12
         }
     },

@@ -6,9 +6,9 @@
     "name": "Muhammed Shuaau",
     "username": "mshuaau0",
     "title": "FM",
-    "followers": 175,
+    "followers": 179,
     "country": "https://api.chess.com/pub/country/MV",
-    "last_online": 1734100602,
+    "last_online": 1741441665,
     "joined": 1571396679,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2247,
-            "date": 1721588979,
-            "rd": 49
+            "date": 1739645194,
+            "rd": 50
         },
         "best": {
             "rating": 2392,
@@ -46,7 +46,7 @@
             "game": "https://www.chess.com/game/live/50687997601"
         },
         "record": {
-            "win": 77,
+            "win": 79,
             "loss": 68,
             "draw": 18
         }
@@ -54,7 +54,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2102,
-            "date": 1702068837,
+            "date": 1741442436,
             "rd": 83
         },
         "best": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2258,
-            "date": 1734073368,
-            "rd": 27
+            "rating": 2165,
+            "date": 1741458554,
+            "rd": 32
         },
         "best": {
             "rating": 2441,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/98531048439"
         },
         "record": {
-            "win": 4564,
-            "loss": 5560,
-            "draw": 761
+            "win": 4635,
+            "loss": 5658,
+            "draw": 769
         }
     },
     "tactics": {

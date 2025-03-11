@@ -6,10 +6,10 @@
     "name": "Georgios Alexandros Kouskoutis",
     "username": "alexkous2000",
     "title": "FM",
-    "followers": 282,
+    "followers": 281,
     "country": "https://api.chess.com/pub/country/GR",
     "location": "Athens",
-    "last_online": 1733851236,
+    "last_online": 1740771464,
     "joined": 1348919983,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1699,
-            "date": 1731802490,
+            "date": 1734813493,
             "rd": 222
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2451,
-            "date": 1730217831,
-            "rd": 78
+            "rating": 2407,
+            "date": 1741632158,
+            "rd": 86
         },
         "best": {
             "rating": 2659,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/70735534077"
         },
         "record": {
-            "win": 6300,
-            "loss": 5134,
-            "draw": 899
+            "win": 6301,
+            "loss": 5137,
+            "draw": 900
         }
     },
     "fide": 2308,

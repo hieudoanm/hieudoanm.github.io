@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/kopyciarz",
     "username": "kopyciarz",
     "title": "IM",
-    "followers": 50,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734105971,
+    "last_online": 1741700108,
     "joined": 1546220204,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1661,
-            "date": 1716056526,
+            "date": 1738402152,
             "rd": 292
         },
         "best": {

@@ -4,10 +4,10 @@
     "url": "https://www.chess.com/member/Nostradamus123",
     "username": "nostradamus123",
     "title": "FM",
-    "followers": 38,
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/BE",
     "location": "Bruxelles",
-    "last_online": 1734017947,
+    "last_online": 1741443295,
     "joined": 1376140969,
     "status": "premium",
     "is_streamer": false,
@@ -69,25 +69,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2534,
-            "date": 1734163556,
+            "rating": 2473,
+            "date": 1741688581,
             "rd": 25
         },
         "best": {
-            "rating": 2604,
-            "date": 1732803569,
+            "rating": 2643,
+            "date": 1737550390,
             "game": "https://www.chess.com/game/live/68638500801"
         },
         "record": {
-            "win": 6809,
-            "loss": 7536,
-            "draw": 1357
+            "win": 7099,
+            "loss": 7884,
+            "draw": 1420
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2983,
-            "date": 1703453138
+            "rating": 3434,
+            "date": 1739679000
         },
         "lowest": {
             "rating": 1374,

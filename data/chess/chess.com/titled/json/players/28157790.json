@@ -6,10 +6,10 @@
     "name": "Airat Sadubayev",
     "username": "hope_6",
     "title": "FM",
-    "followers": 1008,
+    "followers": 1074,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "Astana",
-    "last_online": 1734161348,
+    "last_online": 1741694156,
     "joined": 1463076705,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1667,
-            "date": 1710150671,
+            "date": 1739093321,
             "rd": 154
         },
         "best": {
@@ -85,19 +85,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2761,
-            "date": 1734162589,
-            "rd": 27
+            "rating": 2735,
+            "date": 1741331838,
+            "rd": 20
         },
         "best": {
-            "rating": 2882,
-            "date": 1731274766,
+            "rating": 2919,
+            "date": 1738517478,
             "game": "https://www.chess.com/game/live/127817948153"
         },
         "record": {
-            "win": 10695,
-            "loss": 11024,
-            "draw": 2334
+            "win": 11072,
+            "loss": 11476,
+            "draw": 2425
         }
     },
     "fide": 2317,

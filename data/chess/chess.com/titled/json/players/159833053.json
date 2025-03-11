@@ -1,4 +1,5 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/159833053.50aa2da4.200x200o.8a7468ec18e1.jpg",
     "player_id": 159833053,
     "@id": "https://api.chess.com/pub/player/rahmanadel",
     "url": "https://www.chess.com/member/RahmanAdel",
@@ -8,7 +9,7 @@
     "followers": 70,
     "country": "https://api.chess.com/pub/country/UZ",
     "location": "Tashkent",
-    "last_online": 1734010361,
+    "last_online": 1741703779,
     "joined": 1635684521,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2608,
-            "date": 1730884061,
-            "rd": 49
+            "rating": 2619,
+            "date": 1741614335,
+            "rd": 48
         },
         "best": {
             "rating": 2755,
@@ -61,8 +62,8 @@
             "game": "https://www.chess.com/game/live/115110505383"
         },
         "record": {
-            "win": 882,
-            "loss": 832,
+            "win": 885,
+            "loss": 833,
             "draw": 109
         }
     },
@@ -81,6 +82,10 @@
         "best": {
             "total_attempts": 70,
             "score": 67
+        },
+        "daily": {
+            "total_attempts": 38,
+            "score": 35
         }
     }
 }

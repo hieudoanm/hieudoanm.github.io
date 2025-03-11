@@ -5,10 +5,10 @@
     "name": "Stanis\u0142aw Osiecki",
     "username": "fmstan15",
     "title": "FM",
-    "followers": 53,
+    "followers": 54,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Sochaczew",
-    "last_online": 1734088323,
+    "last_online": 1741674529,
     "joined": 1365068185,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1849,
-            "date": 1706460386,
+            "date": 1734805848,
             "rd": 124
         },
         "best": {
@@ -70,26 +70,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2159,
-            "date": 1733592969,
-            "rd": 44
+            "rating": 2200,
+            "date": 1739451119,
+            "rd": 39
         },
         "best": {
             "rating": 2233,
             "date": 1611224613,
-            "game": "https://www.chess.com/game/live/117300064943"
+            "game": "https://www.chess.com/game/live/133028386895"
         },
         "record": {
-            "win": 6321,
-            "loss": 4216,
-            "draw": 734
+            "win": 6382,
+            "loss": 4291,
+            "draw": 744
         }
     },
     "fide": 2055,
     "tactics": {
         "highest": {
-            "rating": 3061,
-            "date": 1697175053
+            "rating": 3088,
+            "date": 1740818498
         },
         "lowest": {
             "rating": 1404,

@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/24487620.a89c8e3b.200x200o.b9e8c9e61edc.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/24487620.7d5d5428.200x200o.4cd6ec5765de.jpg",
     "player_id": 24487620,
     "@id": "https://api.chess.com/pub/player/maicolbenavides",
     "url": "https://www.chess.com/member/maicolbenavides",
     "name": "Maicol Benavides",
     "username": "maicolbenavides",
     "title": "FM",
-    "followers": 141,
+    "followers": 147,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Bogota",
-    "last_online": 1734127828,
+    "last_online": 1741644404,
     "joined": 1444348304,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1994,
-            "date": 1726191267,
+            "date": 1740790641,
             "rd": 311
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2508,
-            "date": 1732157871,
-            "rd": 49
+            "rating": 2480,
+            "date": 1734412492,
+            "rd": 47
         },
         "best": {
             "rating": 2679,
@@ -65,7 +65,7 @@
         },
         "record": {
             "win": 425,
-            "loss": 392,
+            "loss": 397,
             "draw": 25
         }
     },

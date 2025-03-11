@@ -5,9 +5,9 @@
     "name": "Aivars Raudive",
     "username": "sahs66",
     "title": "FM",
-    "followers": 85,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/LV",
-    "last_online": 1734185163,
+    "last_online": 1741673396,
     "joined": 1472338988,
     "status": "premium",
     "is_streamer": false,
@@ -65,6 +65,7 @@
             "draw": 106
         }
     },
+    "fide": 2288,
     "tactics": {
         "highest": {
             "rating": 1646,
@@ -77,7 +78,7 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 48,
+            "total_attempts": 46,
             "score": 45
         }
     }

@@ -12,7 +12,7 @@
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2373,
-            "date": 1733684942,
-            "rd": 62
+            "rating": 2521,
+            "date": 1741453187,
+            "rd": 36
         },
         "best": {
             "rating": 2725,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/35056221177"
         },
         "record": {
-            "win": 3030,
-            "loss": 2198,
-            "draw": 461
+            "win": 3139,
+            "loss": 2267,
+            "draw": 474
         }
     },
     "tactics": {

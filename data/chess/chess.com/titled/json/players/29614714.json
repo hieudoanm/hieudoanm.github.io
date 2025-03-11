@@ -6,10 +6,10 @@
     "name": "Felix Kuznetsov",
     "username": "maikrosoft63",
     "title": "FM",
-    "followers": 154,
+    "followers": 156,
     "country": "https://api.chess.com/pub/country/XX",
     "location": "Saint-Petersburg",
-    "last_online": 1734112736,
+    "last_online": 1741690859,
     "joined": 1472030436,
     "status": "premium",
     "is_streamer": false,
@@ -89,8 +89,8 @@
     "fide": 2335,
     "tactics": {
         "highest": {
-            "rating": 3672,
-            "date": 1728200235
+            "rating": 3674,
+            "date": 1740171447
         },
         "lowest": {
             "rating": 1507,

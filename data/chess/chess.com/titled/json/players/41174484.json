@@ -8,11 +8,12 @@
     "title": "CM",
     "followers": 9,
     "country": "https://api.chess.com/pub/country/GY",
-    "last_online": 1633386191,
+    "last_online": 1738191096,
     "joined": 1512850873,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -50,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1819,
-            "date": 1628709715,
-            "rd": 37
+            "rating": 2161,
+            "date": 1739895815,
+            "rd": 80
         },
         "best": {
             "rating": 2156,
@@ -60,8 +61,8 @@
             "game": "https://www.chess.com/game/live/4903441989"
         },
         "record": {
-            "win": 410,
-            "loss": 300,
+            "win": 424,
+            "loss": 304,
             "draw": 39
         }
     },

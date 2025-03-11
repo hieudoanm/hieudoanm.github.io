@@ -9,7 +9,7 @@
     "followers": 28,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Brno",
-    "last_online": 1734039199,
+    "last_online": 1739641898,
     "joined": 1587055833,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2383,
-            "date": 1734040457,
+            "rating": 2381,
+            "date": 1739643534,
             "rd": 49
         },
         "best": {
@@ -47,9 +47,9 @@
             "game": "https://www.chess.com/game/live/32546378647"
         },
         "record": {
-            "win": 1063,
-            "loss": 319,
-            "draw": 218
+            "win": 1072,
+            "loss": 324,
+            "draw": 220
         }
     },
     "chess_bullet": {

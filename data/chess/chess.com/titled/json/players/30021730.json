@@ -6,10 +6,10 @@
     "name": "Gleb Apryshko",
     "username": "liga_stavok",
     "title": "IM",
-    "followers": 90,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Moscow",
-    "last_online": 1733549472,
+    "last_online": 1741523846,
     "joined": 1474381430,
     "status": "premium",
     "is_streamer": false,
@@ -53,7 +53,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2684,
-            "date": 1626285612,
+            "date": 1741525149,
             "rd": 93
         },
         "best": {

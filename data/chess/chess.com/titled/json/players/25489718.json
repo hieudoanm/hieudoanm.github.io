@@ -6,9 +6,9 @@
     "name": "Dawid Niekra\u015b",
     "username": "dawid498",
     "title": "FM",
-    "followers": 51,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734084790,
+    "last_online": 1741552367,
     "joined": 1449687463,
     "status": "premium",
     "is_streamer": false,
@@ -55,8 +55,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2480,
-            "date": 1727724616,
+            "rating": 2486,
+            "date": 1734988018,
             "rd": 49
         },
         "best": {
@@ -65,16 +65,16 @@
             "game": "https://www.chess.com/game/live/30925785233"
         },
         "record": {
-            "win": 43,
+            "win": 45,
             "loss": 8,
             "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2887,
-            "date": 1734086104,
-            "rd": 30
+            "rating": 2890,
+            "date": 1741695966,
+            "rd": 36
         },
         "best": {
             "rating": 2919,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/104949759569"
         },
         "record": {
-            "win": 8129,
-            "loss": 2987,
-            "draw": 767
+            "win": 8240,
+            "loss": 3030,
+            "draw": 777
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2680,
-            "date": 1734085814,
-            "rd": 43
+            "rating": 2693,
+            "date": 1741429409,
+            "rd": 49
         },
         "best": {
             "rating": 2765,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/88899067593"
         },
         "record": {
-            "win": 1391,
-            "loss": 788,
-            "draw": 239
+            "win": 1416,
+            "loss": 805,
+            "draw": 247
         }
     },
     "fide": 2358,

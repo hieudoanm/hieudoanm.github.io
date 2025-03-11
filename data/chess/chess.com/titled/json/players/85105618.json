@@ -6,9 +6,9 @@
     "name": "Hamed Wafa",
     "username": "hamedwafa4",
     "title": "IM",
-    "followers": 186,
+    "followers": 215,
     "country": "https://api.chess.com/pub/country/EG",
-    "last_online": 1734184088,
+    "last_online": 1741650954,
     "joined": 1593519622,
     "status": "premium",
     "is_streamer": false,
@@ -18,51 +18,56 @@
     "chess_daily": {
         "last": {
             "rating": 689,
-            "date": 1717172792,
+            "date": 1741041755,
             "rd": 210
         },
         "record": {
             "win": 0,
             "loss": 4,
             "draw": 0,
-            "time_per_move": 117859,
+            "time_per_move": 120067,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2100,
-            "date": 1679695286,
-            "rd": 315
+            "rating": 2172,
+            "date": 1739733575,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2172,
+            "date": 1739732532,
+            "game": "https://www.chess.com/game/live/133468182079"
         },
         "record": {
-            "win": 0,
-            "loss": 2,
+            "win": 6,
+            "loss": 5,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2807,
-            "date": 1734028990,
-            "rd": 33
+            "rating": 2824,
+            "date": 1739739130,
+            "rd": 23
         },
         "best": {
-            "rating": 2916,
-            "date": 1729960889,
-            "game": "https://www.chess.com/game/live/91651755761"
+            "rating": 2962,
+            "date": 1738166975,
+            "game": "https://www.chess.com/game/live/132170394971"
         },
         "record": {
-            "win": 817,
-            "loss": 949,
-            "draw": 121
+            "win": 1169,
+            "loss": 1312,
+            "draw": 158
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2746,
-            "date": 1733073795,
-            "rd": 30
+            "rating": 2773,
+            "date": 1741302329,
+            "rd": 35
         },
         "best": {
             "rating": 2905,
@@ -70,9 +75,9 @@
             "game": "https://www.chess.com/game/live/116113279825"
         },
         "record": {
-            "win": 2605,
-            "loss": 3001,
-            "draw": 444
+            "win": 2803,
+            "loss": 3214,
+            "draw": 481
         }
     },
     "fide": 2385,
@@ -88,8 +93,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 45,
-            "score": 42
+            "total_attempts": 46,
+            "score": 43
         }
     }
 }

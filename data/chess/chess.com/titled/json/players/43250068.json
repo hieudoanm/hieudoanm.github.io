@@ -5,10 +5,10 @@
     "url": "https://www.chess.com/member/Nikithebest",
     "username": "nikithebest",
     "title": "FM",
-    "followers": 118,
+    "followers": 119,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Spain",
-    "last_online": 1733997991,
+    "last_online": 1741697475,
     "joined": 1518389818,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1704,
-            "date": 1734007013,
-            "rd": 136
+            "rating": 1909,
+            "date": 1741358908,
+            "rd": 78
         },
         "best": {
             "rating": 2264,
@@ -46,8 +46,8 @@
             "game": "https://www.chess.com/game/live/4925199807"
         },
         "record": {
-            "win": 37,
-            "loss": 24,
+            "win": 50,
+            "loss": 26,
             "draw": 47
         }
     },

@@ -6,10 +6,10 @@
     "name": "Stefan Mladenovic",
     "username": "stefan_95",
     "title": "FM",
-    "followers": 561,
+    "followers": 582,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Nis",
-    "last_online": 1734157401,
+    "last_online": 1741597870,
     "joined": 1230848082,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2493,
-            "date": 1722062254,
+            "date": 1736284557,
             "rd": 49
         },
         "best": {
@@ -90,26 +90,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2700,
-            "date": 1732351188,
-            "rd": 38
+            "rating": 2711,
+            "date": 1741130391,
+            "rd": 37
         },
         "best": {
-            "rating": 2738,
-            "date": 1697579695,
+            "rating": 2798,
+            "date": 1737215958,
             "game": "https://www.chess.com/game/live/4752771434"
         },
         "record": {
-            "win": 3128,
-            "loss": 2738,
-            "draw": 573
+            "win": 3265,
+            "loss": 2858,
+            "draw": 605
         }
     },
     "fide": 2365,
     "tactics": {
         "highest": {
-            "rating": 3014,
-            "date": 1641585732
+            "rating": 3299,
+            "date": 1741385943
         },
         "lowest": {
             "rating": 1261,

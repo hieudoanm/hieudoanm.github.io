@@ -6,10 +6,10 @@
     "name": "Dimitrios Papakonstantinou",
     "username": "papakwnnov",
     "title": "FM",
-    "followers": 9,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/GR",
     "location": "Thessalon&iacute;ki",
-    "last_online": 1733240975,
+    "last_online": 1741353313,
     "joined": 1424476431,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     "fide": 2282,
     "tactics": {
         "highest": {
-            "rating": 2301,
-            "date": 1728417149
+            "rating": 2840,
+            "date": 1736250017
         },
         "lowest": {
             "rating": 400,

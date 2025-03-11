@@ -9,7 +9,7 @@
     "followers": 5,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Pfarrkirchen",
-    "last_online": 1734007464,
+    "last_online": 1741426094,
     "joined": 1560437617,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2034,
-            "date": 1732998395,
-            "rd": 120
+            "rating": 2025,
+            "date": 1741418176,
+            "rd": 67
         },
         "best": {
             "rating": 2126,
             "date": 1729365823,
-            "game": "https://www.chess.com/game/live/4851601624"
+            "game": "https://www.chess.com/game/live/129557001633"
         },
         "record": {
-            "win": 17,
-            "loss": 27,
+            "win": 32,
+            "loss": 39,
             "draw": 3
         }
     },
     "fide": 2091,
     "tactics": {
         "highest": {
-            "rating": 3065,
-            "date": 1733563682
+            "rating": 3163,
+            "date": 1739365616
         },
         "lowest": {
             "rating": 1200,

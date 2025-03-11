@@ -6,10 +6,10 @@
     "name": "Krishna CRG",
     "username": "crgkrishna",
     "title": "IM",
-    "followers": 387,
+    "followers": 396,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Hyderabad, Telangana",
-    "last_online": 1734129393,
+    "last_online": 1741571500,
     "joined": 1462203151,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 944,
-            "date": 1672738104,
+            "date": 1740916268,
             "rd": 206
         },
         "record": {
@@ -33,8 +33,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2223,
-            "date": 1733040415,
-            "rd": 130
+            "date": 1735739908,
+            "rd": 49
         },
         "best": {
             "rating": 2327,
@@ -42,16 +42,16 @@
             "game": "https://www.chess.com/game/live/22702880833"
         },
         "record": {
-            "win": 25,
+            "win": 26,
             "loss": 9,
             "draw": 6
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2532,
-            "date": 1734043906,
-            "rd": 43
+            "rating": 2535,
+            "date": 1740916416,
+            "rd": 49
         },
         "best": {
             "rating": 2667,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/26896262655"
         },
         "record": {
-            "win": 343,
-            "loss": 271,
-            "draw": 42
+            "win": 348,
+            "loss": 275,
+            "draw": 43
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2680,
-            "date": 1734041951,
-            "rd": 42
+            "date": 1740930055,
+            "rd": 44
         },
         "best": {
             "rating": 2794,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/46540266353"
         },
         "record": {
-            "win": 736,
-            "loss": 496,
-            "draw": 106
+            "win": 743,
+            "loss": 502,
+            "draw": 107
         }
     },
     "fide": 2478,

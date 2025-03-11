@@ -6,17 +6,17 @@
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1734170518,
+    "last_online": 1740817218,
     "joined": 1720183951,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 2318,
-            "date": 1721239404,
+            "date": 1736237922,
             "rd": 49
         },
         "best": {
@@ -32,25 +32,24 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2708,
-            "date": 1734183813,
-            "rd": 38
+            "rating": 2745,
+            "date": 1736192495
         },
         "best": {
-            "rating": 2761,
-            "date": 1722441958,
-            "game": "https://www.chess.com/game/live/116180463727"
+            "rating": 2771,
+            "date": 1734874113,
+            "game": "https://www.chess.com/game/live/128704364897"
         },
         "record": {
-            "win": 220,
-            "loss": 189,
-            "draw": 41
+            "win": 260,
+            "loss": 231,
+            "draw": 51
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3066,
-            "date": 1726044669
+            "rating": 3311,
+            "date": 1738871943
         },
         "lowest": {
             "rating": 1000,
@@ -61,10 +60,6 @@
         "best": {
             "total_attempts": 49,
             "score": 46
-        },
-        "daily": {
-            "total_attempts": 44,
-            "score": 41
         }
     }
 }

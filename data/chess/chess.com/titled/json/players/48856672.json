@@ -1,13 +1,14 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/48856672.31515186.200x200o.066d7cf34451.png",
     "player_id": 48856672,
     "@id": "https://api.chess.com/pub/player/kushbhagat2009",
     "url": "https://www.chess.com/member/kushbhagat2009",
     "name": "Kush Bhagat",
     "username": "kushbhagat2009",
     "title": "FM",
-    "followers": 80,
+    "followers": 88,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734052089,
+    "last_online": 1741631105,
     "joined": 1534515855,
     "status": "premium",
     "is_streamer": false,
@@ -52,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2637,
-            "date": 1731699769,
-            "rd": 40
+            "rating": 2780,
+            "date": 1740748989,
+            "rd": 29
         },
         "best": {
-            "rating": 2658,
-            "date": 1730290308,
-            "game": "https://www.chess.com/game/live/84711784985"
+            "rating": 2860,
+            "date": 1738361289,
+            "game": "https://www.chess.com/game/live/132104472025"
         },
         "record": {
-            "win": 372,
-            "loss": 276,
-            "draw": 36
+            "win": 598,
+            "loss": 418,
+            "draw": 60
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2785,
-            "date": 1733074147,
-            "rd": 36
+            "rating": 2606,
+            "date": 1741631401,
+            "rd": 49
         },
         "best": {
             "rating": 2857,
@@ -79,9 +80,9 @@
             "game": "https://www.chess.com/game/live/123954098351"
         },
         "record": {
-            "win": 880,
-            "loss": 636,
-            "draw": 145
+            "win": 966,
+            "loss": 731,
+            "draw": 170
         }
     },
     "fide": 2209,

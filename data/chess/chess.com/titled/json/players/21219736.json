@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/21219736.3809994c.200x200o.3af66fd6aefb.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/21219736.c675f075.200x200o.7fcdda329949.jpg",
     "player_id": 21219736,
     "@id": "https://api.chess.com/pub/player/gammagramma",
     "url": "https://www.chess.com/member/gammagramma",
     "name": "Vasily Usmanov",
     "username": "gammagramma",
     "title": "IM",
-    "followers": 160,
+    "followers": 168,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Saint Petersburg, Russia",
-    "last_online": 1734015114,
+    "last_online": 1741618707,
     "joined": 1424635705,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1352,
-            "date": 1713519141,
+            "date": 1735736827,
             "rd": 234
         },
         "best": {
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2604,
-            "date": 1729269721,
+            "date": 1738919825,
             "rd": 49
         },
         "best": {
@@ -55,7 +55,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2701,
-            "date": 1613581549,
+            "date": 1735567929,
             "rd": 98
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2702,
-            "date": 1731369709,
-            "rd": 39
+            "rating": 2701,
+            "date": 1738108948,
+            "rd": 47
         },
         "best": {
             "rating": 2729,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/65293884657"
         },
         "record": {
-            "win": 1192,
-            "loss": 861,
-            "draw": 219
+            "win": 1210,
+            "loss": 878,
+            "draw": 223
         }
     },
     "fide": 2450,
     "tactics": {
         "highest": {
-            "rating": 2777,
-            "date": 1609296669
+            "rating": 2841,
+            "date": 1739005593
         },
         "lowest": {
             "rating": 2191,

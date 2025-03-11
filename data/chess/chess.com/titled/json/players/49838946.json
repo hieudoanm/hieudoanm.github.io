@@ -9,7 +9,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Vala\u0161sk\u00e1 Byst\u0159ice",
-    "last_online": 1734170802,
+    "last_online": 1741645024,
     "joined": 1537203363,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2458,
-            "date": 1733763223,
+            "rating": 2453,
+            "date": 1741549348,
             "rd": 49
         },
         "best": {
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/10341408555"
         },
         "record": {
-            "win": 455,
-            "loss": 198,
-            "draw": 98
+            "win": 464,
+            "loss": 201,
+            "draw": 101
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2099,
-            "date": 1734171993,
-            "rd": 26
+            "rating": 2057,
+            "date": 1741646644,
+            "rd": 24
         },
         "best": {
             "rating": 2291,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/7913728561"
         },
         "record": {
-            "win": 3830,
-            "loss": 2316,
-            "draw": 329
+            "win": 4220,
+            "loss": 2590,
+            "draw": 364
         }
     },
     "chess_blitz": {

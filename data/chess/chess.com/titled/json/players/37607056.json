@@ -5,19 +5,19 @@
     "name": "Denis Khayrullin",
     "username": "topalovkramnik",
     "title": "IM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734022367,
+    "last_online": 1740773099,
     "joined": 1502038452,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2520,
-            "date": 1733941310,
+            "rating": 2523,
+            "date": 1740160540,
             "rd": 41
         },
         "best": {
@@ -26,16 +26,16 @@
             "game": "https://www.chess.com/game/live/100393964791"
         },
         "record": {
-            "win": 520,
-            "loss": 480,
-            "draw": 64
+            "win": 579,
+            "loss": 550,
+            "draw": 77
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 996,
-            "date": 1727265828
+            "rating": 1001,
+            "date": 1738778781
         },
         "lowest": {
             "rating": 816,

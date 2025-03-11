@@ -6,20 +6,20 @@
     "name": "Jonathan Torres Santiago",
     "username": "cyber-alekhine2",
     "title": "CM",
-    "followers": 282,
+    "followers": 290,
     "country": "https://api.chess.com/pub/country/PR",
     "location": "san juan",
-    "last_online": 1734062162,
+    "last_online": 1741662580,
     "joined": 1439845650,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1370,
-            "date": 1731829116,
+            "date": 1741462123,
             "rd": 148
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 35,
             "loss": 9,
             "draw": 5,
-            "time_per_move": 27408,
+            "time_per_move": 27961,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 27408,
+            "time_per_move": 27961,
             "timeout_percent": 0
         }
     },
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2333,
-            "date": 1734063075,
-            "rd": 35
+            "rating": 2413,
+            "date": 1741662807,
+            "rd": 23
         },
         "best": {
             "rating": 2535,
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/34978201383"
         },
         "record": {
-            "win": 9177,
-            "loss": 9737,
-            "draw": 740
+            "win": 9396,
+            "loss": 9981,
+            "draw": 755
         }
     },
     "fide": 2126,
     "tactics": {
         "highest": {
-            "rating": 3005,
-            "date": 1723688663
+            "rating": 3029,
+            "date": 1739161341
         },
         "lowest": {
             "rating": 1345,

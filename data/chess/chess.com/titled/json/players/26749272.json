@@ -6,9 +6,9 @@
     "name": "David Stevani\u0107",
     "username": "davidstevanic",
     "title": "FM",
-    "followers": 48,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/SI",
-    "last_online": 1734020743,
+    "last_online": 1741344460,
     "joined": 1455631321,
     "status": "premium",
     "is_streamer": false,
@@ -56,7 +56,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2062,
-            "date": 1729117416,
+            "date": 1734853862,
             "rd": 49
         },
         "best": {
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2490,
-            "date": 1733578892,
-            "rd": 36
+            "rating": 2473,
+            "date": 1738109534,
+            "rd": 54
         },
         "best": {
             "rating": 2603,
@@ -83,15 +83,15 @@
         },
         "record": {
             "win": 994,
-            "loss": 859,
+            "loss": 861,
             "draw": 114
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2412,
-            "date": 1732996482,
-            "rd": 37
+            "rating": 2363,
+            "date": 1739048737,
+            "rd": 52
         },
         "best": {
             "rating": 2500,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/124582785507"
         },
         "record": {
-            "win": 326,
-            "loss": 243,
-            "draw": 36
+            "win": 340,
+            "loss": 271,
+            "draw": 38
         }
     },
     "fide": 2300,

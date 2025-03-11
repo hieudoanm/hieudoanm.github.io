@@ -6,10 +6,10 @@
     "name": "Olga Yushko",
     "username": "yushko_olga",
     "title": "WFM",
-    "followers": 22,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u0423\u0436\u0433\u043e\u0440\u043e\u0434",
-    "last_online": 1733937100,
+    "last_online": 1737565082,
     "joined": 1418844500,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2159,
-            "date": 1733159096,
-            "rd": 59
+            "rating": 2213,
+            "date": 1737572391,
+            "rd": 42
         },
         "best": {
             "rating": 2358,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/91319394481"
         },
         "record": {
-            "win": 1089,
-            "loss": 1198,
-            "draw": 99
+            "win": 1130,
+            "loss": 1231,
+            "draw": 102
         }
     },
     "fide": 2100,

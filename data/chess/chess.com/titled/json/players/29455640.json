@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Blitzfanboy",
     "username": "blitzfanboy",
     "title": "IM",
-    "followers": 24,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734171645,
+    "last_online": 1741612377,
     "joined": 1471045080,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +16,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2518,
-            "date": 1725631107,
+            "date": 1736957043,
             "rd": 119
         },
         "best": {
@@ -32,9 +32,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2473,
-            "date": 1733945760,
-            "rd": 26
+            "rating": 2419,
+            "date": 1740411066,
+            "rd": 50
         },
         "best": {
             "rating": 2758,
@@ -42,16 +42,16 @@
             "game": "https://www.chess.com/game/live/2019470694"
         },
         "record": {
-            "win": 1736,
-            "loss": 1258,
-            "draw": 121
+            "win": 1748,
+            "loss": 1279,
+            "draw": 124
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2315,
-            "date": 1734171790,
-            "rd": 21
+            "rating": 2217,
+            "date": 1739371185,
+            "rd": 39
         },
         "best": {
             "rating": 2581,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/104866961901"
         },
         "record": {
-            "win": 1854,
-            "loss": 1655,
-            "draw": 157
+            "win": 1872,
+            "loss": 1690,
+            "draw": 163
         }
     },
     "tactics": {

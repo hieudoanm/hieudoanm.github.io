@@ -5,10 +5,10 @@
     "url": "https://www.chess.com/member/StarBrightStarLight101",
     "username": "starbrightstarlight101",
     "title": "FM",
-    "followers": 157,
-    "country": "https://api.chess.com/pub/country/DE",
+    "followers": 162,
+    "country": "https://api.chess.com/pub/country/TH",
     "location": "Bangkok, Thailand",
-    "last_online": 1734156339,
+    "last_online": 1741679159,
     "joined": 1574236476,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1853,
-            "date": 1733908003,
+            "date": 1739588995,
             "rd": 245
         },
         "best": {
@@ -30,14 +30,14 @@
             "win": 11,
             "loss": 0,
             "draw": 1,
-            "time_per_move": 80087,
+            "time_per_move": 92010,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2183,
-            "date": 1731678216,
+            "rating": 2166,
+            "date": 1740832069,
             "rd": 49
         },
         "best": {
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/6499939179"
         },
         "record": {
-            "win": 26,
-            "loss": 8,
+            "win": 27,
+            "loss": 10,
             "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2107,
-            "date": 1733928327,
-            "rd": 45
+            "rating": 2122,
+            "date": 1741524831,
+            "rd": 44
         },
         "best": {
             "rating": 2311,
@@ -63,15 +63,15 @@
             "game": "https://www.chess.com/game/live/83089056403"
         },
         "record": {
-            "win": 2423,
-            "loss": 1704,
-            "draw": 130
+            "win": 2450,
+            "loss": 1727,
+            "draw": 132
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2414,
-            "date": 1730164644,
+            "date": 1739790308,
             "rd": 84
         },
         "best": {
@@ -99,10 +99,6 @@
         "best": {
             "total_attempts": 66,
             "score": 63
-        },
-        "daily": {
-            "total_attempts": 18,
-            "score": 15
         }
     }
 }

@@ -5,9 +5,9 @@
     "name": "Eric Sos Andreu",
     "username": "ericovski",
     "title": "IM",
-    "followers": 35,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734036924,
+    "last_online": 1741622317,
     "joined": 1507115852,
     "status": "premium",
     "is_streamer": false,
@@ -79,6 +79,10 @@
         "best": {
             "total_attempts": 58,
             "score": 55
+        },
+        "daily": {
+            "total_attempts": 44,
+            "score": 41
         }
     }
 }

@@ -6,9 +6,9 @@
     "name": "Ivan Kubatko",
     "username": "vanyakuba",
     "title": "FM",
-    "followers": 123,
+    "followers": 126,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734023748,
+    "last_online": 1741527551,
     "joined": 1440589620,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1788,
-            "date": 1733681600,
+            "rating": 1749,
+            "date": 1738960762,
             "rd": 117
         },
         "best": {
@@ -28,16 +28,16 @@
         },
         "record": {
             "win": 43,
-            "loss": 1,
+            "loss": 2,
             "draw": 10,
-            "time_per_move": 68514,
+            "time_per_move": 69310,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2200,
-            "date": 1733413052,
+            "date": 1734287419,
             "rd": 106
         },
         "best": {
@@ -70,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2493,
-            "date": 1733680788,
-            "rd": 47
+            "rating": 2496,
+            "date": 1741133026,
+            "rd": 43
         },
         "best": {
-            "rating": 2520,
-            "date": 1603822785,
+            "rating": 2543,
+            "date": 1735667253,
             "game": "https://www.chess.com/game/live/75144251881"
         },
         "record": {
-            "win": 2321,
-            "loss": 1792,
-            "draw": 451
+            "win": 2343,
+            "loss": 1817,
+            "draw": 459
         }
     },
     "fide": 2300,

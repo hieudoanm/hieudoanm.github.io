@@ -6,15 +6,15 @@
     "name": "Berezin Viktor",
     "username": "vikber19611",
     "title": "FM",
-    "followers": 34,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Dubna",
-    "last_online": 1730027877,
+    "last_online": 1741362393,
     "joined": 1585728839,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1629,
-            "date": 1729958434,
-            "rd": 155
+            "rating": 1657,
+            "date": 1739729324,
+            "rd": 132
         },
         "best": {
             "rating": 2064,
@@ -47,9 +47,9 @@
             "game": "https://www.chess.com/game/live/10864758703"
         },
         "record": {
-            "win": 27,
-            "loss": 7,
-            "draw": 4
+            "win": 28,
+            "loss": 11,
+            "draw": 5
         }
     },
     "chess_bullet": {
@@ -66,19 +66,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1604,
-            "date": 1729960074,
-            "rd": 132
+            "rating": 1917,
+            "date": 1741368245,
+            "rd": 96
         },
         "best": {
             "rating": 2071,
             "date": 1590080304,
-            "game": "https://www.chess.com/game/live/22962681765"
+            "game": "https://www.chess.com/game/live/133639159957"
         },
         "record": {
-            "win": 33,
-            "loss": 54,
-            "draw": 2
+            "win": 36,
+            "loss": 77,
+            "draw": 6
         }
     },
     "fide": 1924,

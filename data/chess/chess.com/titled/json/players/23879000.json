@@ -9,7 +9,7 @@
     "followers": 20,
     "country": "https://api.chess.com/pub/country/PR",
     "location": "San Juan",
-    "last_online": 1734111726,
+    "last_online": 1741615614,
     "joined": 1440864384,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3451,
-            "date": 1724468027
+            "rating": 3473,
+            "date": 1734933854
         },
         "lowest": {
             "rating": 1207,
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 61,
-            "score": 58
+            "total_attempts": 68,
+            "score": 65
         }
     }
 }

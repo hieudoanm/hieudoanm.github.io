@@ -5,9 +5,9 @@
     "name": "Alice Lee",
     "username": "powerofapoint",
     "title": "IM",
-    "followers": 226,
+    "followers": 254,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734150757,
+    "last_online": 1741554056,
     "joined": 1594835104,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2333,
-            "date": 1731700372,
+            "rating": 2345,
+            "date": 1741040814,
             "rd": 49
         },
         "best": {
-            "rating": 2337,
-            "date": 1678981074,
+            "rating": 2345,
+            "date": 1741040814,
             "game": "https://www.chess.com/game/live/125433512829"
         },
         "record": {
-            "win": 18,
+            "win": 19,
             "loss": 22,
             "draw": 8
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2874,
-            "date": 1734151203,
-            "rd": 48
+            "rating": 2844,
+            "date": 1741569807,
+            "rd": 22
         },
         "best": {
             "rating": 2964,
@@ -62,26 +62,26 @@
             "game": "https://www.chess.com/game/live/127889935553"
         },
         "record": {
-            "win": 1476,
-            "loss": 1111,
-            "draw": 290
+            "win": 1730,
+            "loss": 1354,
+            "draw": 336
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2731,
-            "date": 1728151710,
-            "rd": 41
+            "rating": 2810,
+            "date": 1741568585,
+            "rd": 45
         },
         "best": {
             "rating": 2842,
             "date": 1722566447,
-            "game": "https://www.chess.com/game/live/116737187795"
+            "game": "https://www.chess.com/game/live/128820769843"
         },
         "record": {
-            "win": 470,
-            "loss": 368,
-            "draw": 96
+            "win": 518,
+            "loss": 408,
+            "draw": 106
         }
     },
     "tactics": {
@@ -98,10 +98,6 @@
         "best": {
             "total_attempts": 76,
             "score": 73
-        },
-        "daily": {
-            "total_attempts": 66,
-            "score": 63
         }
     }
 }

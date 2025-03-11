@@ -9,17 +9,18 @@
     "followers": 18,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Grodzisk Mazowiecki",
-    "last_online": 1728669294,
+    "last_online": 1741379623,
     "joined": 1594721875,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Wood",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2021,
-            "date": 1605279676,
-            "rd": 141
+            "rating": 2012,
+            "date": 1738003587,
+            "rd": 49
         },
         "best": {
             "rating": 2094,
@@ -28,7 +29,7 @@
         },
         "record": {
             "win": 2,
-            "loss": 5,
+            "loss": 6,
             "draw": 0
         }
     },
@@ -51,8 +52,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2142,
-            "date": 1713342613
+            "rating": 2941,
+            "date": 1737753229
         },
         "lowest": {
             "rating": 1200,

@@ -6,20 +6,20 @@
     "name": "Mahan Ramezani",
     "username": "mahan_83",
     "title": "FM",
-    "followers": 166,
+    "followers": 167,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Guilan",
-    "last_online": 1731616806,
+    "last_online": 1741610382,
     "joined": 1554466606,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1522,
-            "date": 1704475057,
+            "date": 1737560456,
             "rd": 109
         },
         "best": {
@@ -33,12 +33,6 @@
             "draw": 1,
             "time_per_move": 15346,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 4
         }
     },
     "chess_rapid": {
@@ -77,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2749,
-            "date": 1730205883,
-            "rd": 47
+            "rating": 2812,
+            "date": 1741249430,
+            "rd": 39
         },
         "best": {
-            "rating": 2808,
-            "date": 1705506043,
-            "game": "https://www.chess.com/game/live/120776479451"
+            "rating": 2847,
+            "date": 1739711615,
+            "game": "https://www.chess.com/game/live/128444550191"
         },
         "record": {
-            "win": 1240,
-            "loss": 1052,
-            "draw": 161
+            "win": 1344,
+            "loss": 1164,
+            "draw": 179
         }
     },
     "tactics": {

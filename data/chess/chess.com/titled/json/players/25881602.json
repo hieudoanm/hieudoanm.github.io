@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25881602.e9eb1feb.200x200o.f0e18c7cd937.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25881602.9aab3acb.200x200o.84bcc2d895bb.jpg",
     "player_id": 25881602,
     "@id": "https://api.chess.com/pub/player/klimkoj",
     "url": "https://www.chess.com/member/klimkoj",
     "name": "Jan Klimkowski",
     "username": "klimkoj",
     "title": "IM",
-    "followers": 127,
+    "followers": 131,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734165557,
+    "last_online": 1741630108,
     "joined": 1451644223,
     "status": "premium",
     "is_streamer": false,
@@ -36,26 +36,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2178,
-            "date": 1652526235,
-            "rd": 108
+            "rating": 2220,
+            "date": 1737304415,
+            "rd": 49
         },
         "best": {
             "rating": 2256,
             "date": 1633776835,
-            "game": "https://www.chess.com/game/live/4924544304"
+            "game": "https://www.chess.com/game/live/131039442413"
         },
         "record": {
-            "win": 41,
+            "win": 43,
             "loss": 25,
-            "draw": 13
+            "draw": 15
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2781,
-            "date": 1716578650,
-            "rd": 41
+            "rating": 2707,
+            "date": 1737396922,
+            "rd": 45
         },
         "best": {
             "rating": 2814,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/100303447205"
         },
         "record": {
-            "win": 242,
-            "loss": 153,
-            "draw": 29
+            "win": 245,
+            "loss": 163,
+            "draw": 30
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2879,
-            "date": 1734166311,
-            "rd": 48
+            "rating": 2851,
+            "date": 1741380925,
+            "rd": 42
         },
         "best": {
             "rating": 2997,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/98213048525"
         },
         "record": {
-            "win": 2189,
-            "loss": 1520,
-            "draw": 368
+            "win": 2253,
+            "loss": 1582,
+            "draw": 380
         }
     },
     "tactics": {

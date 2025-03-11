@@ -6,10 +6,10 @@
     "name": "Peter Large",
     "username": "plimsol",
     "title": "IM",
-    "followers": 1197,
+    "followers": 1254,
     "country": "https://api.chess.com/pub/country/XE",
     "location": "Epsom",
-    "last_online": 1734183906,
+    "last_online": 1741695630,
     "joined": 1327837190,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1901,
-            "date": 1734184737,
-            "rd": 33
+            "rating": 1021,
+            "date": 1741515134,
+            "rd": 24
         },
         "best": {
             "rating": 2329,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/daily/86238034"
         },
         "record": {
-            "win": 15232,
-            "loss": 5124,
-            "draw": 1650,
-            "time_per_move": 14446,
-            "timeout_percent": 0
+            "win": 15667,
+            "loss": 5424,
+            "draw": 1675,
+            "time_per_move": 14223,
+            "timeout_percent": 1
         },
         "tournament": {
-            "points": 1444,
-            "withdraw": 11,
-            "count": 116,
+            "points": 1539,
+            "withdraw": 183,
+            "count": 62,
             "highest_finish": 1
         }
     },
@@ -56,13 +56,13 @@
             "win": 579,
             "loss": 200,
             "draw": 77,
-            "time_per_move": 14446,
+            "time_per_move": 14223,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 1444,
-            "withdraw": 11,
-            "count": 116,
+            "points": 1539,
+            "withdraw": 183,
+            "count": 62,
             "highest_finish": 1
         }
     },
@@ -85,9 +85,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2174,
-            "date": 1734106266,
-            "rd": 26
+            "rating": 2077,
+            "date": 1741653666,
+            "rd": 24
         },
         "best": {
             "rating": 2442,
@@ -95,16 +95,16 @@
             "game": "https://www.chess.com/game/live/82485732683"
         },
         "record": {
-            "win": 39468,
-            "loss": 31768,
-            "draw": 2034
+            "win": 40092,
+            "loss": 32302,
+            "draw": 2067
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2404,
-            "date": 1733854204,
-            "rd": 68
+            "rating": 2409,
+            "date": 1739016122,
+            "rd": 67
         },
         "best": {
             "rating": 2508,
@@ -112,15 +112,15 @@
             "game": "https://www.chess.com/game/live/59844714457"
         },
         "record": {
-            "win": 11044,
-            "loss": 7849,
+            "win": 11046,
+            "loss": 7852,
             "draw": 816
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3559,
-            "date": 1730400478
+            "rating": 3560,
+            "date": 1735364527
         },
         "lowest": {
             "rating": 1325,

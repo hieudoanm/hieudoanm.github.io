@@ -6,31 +6,60 @@
     "name": "Not as good As you",
     "username": "just_worse_than_u",
     "title": "FM",
-    "followers": 2,
+    "followers": 1,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Spain",
-    "last_online": 1730165266,
+    "last_online": 1738886877,
     "joined": 1721097834,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Silver",
     "streaming_platforms": [],
-    "chess_bullet": {
+    "chess_rapid": {
         "last": {
-            "rating": 2945,
-            "date": 1730166515,
-            "rd": 47
-        },
-        "best": {
-            "rating": 3033,
-            "date": 1724126184,
-            "game": "https://www.chess.com/game/live/116810406927"
+            "rating": 2301,
+            "date": 1738791429,
+            "rd": 49
         },
         "record": {
-            "win": 455,
-            "loss": 198,
-            "draw": 37
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2949,
+            "date": 1738891721,
+            "rd": 27
+        },
+        "best": {
+            "rating": 3120,
+            "date": 1735853336,
+            "game": "https://www.chess.com/game/live/129582770519"
+        },
+        "record": {
+            "win": 585,
+            "loss": 389,
+            "draw": 62
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2602,
+            "date": 1735841487,
+            "rd": 48
+        },
+        "best": {
+            "rating": 2602,
+            "date": 1735841487,
+            "game": "https://www.chess.com/game/live/129504745097"
+        },
+        "record": {
+            "win": 5,
+            "loss": 0,
+            "draw": 0
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Klendi Zeneli",
     "username": "klendi",
     "title": "CM",
-    "followers": 19,
+    "followers": 33,
     "country": "https://api.chess.com/pub/country/AL",
-    "last_online": 1734119911,
+    "last_online": 1741384911,
     "joined": 1633878964,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2376,
-            "date": 1729001295,
-            "rd": 67
+            "rating": 2418,
+            "date": 1734197968,
+            "rd": 58
         },
         "best": {
             "rating": 2450,
@@ -44,33 +44,33 @@
             "game": "https://www.chess.com/game/live/105553811927"
         },
         "record": {
-            "win": 171,
-            "loss": 398,
-            "draw": 32
+            "win": 180,
+            "loss": 409,
+            "draw": 35
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2603,
-            "date": 1734120841,
-            "rd": 21
+            "rating": 2577,
+            "date": 1741130776,
+            "rd": 43
         },
         "best": {
-            "rating": 2638,
-            "date": 1733930019,
+            "rating": 2688,
+            "date": 1736209800,
             "game": "https://www.chess.com/game/live/99181478299"
         },
         "record": {
-            "win": 1172,
-            "loss": 1360,
-            "draw": 160
+            "win": 1371,
+            "loss": 1594,
+            "draw": 174
         }
     },
     "fide": 2231,
     "tactics": {
         "highest": {
-            "rating": 3109,
-            "date": 1733997082
+            "rating": 3140,
+            "date": 1736415527
         },
         "lowest": {
             "rating": 1008,

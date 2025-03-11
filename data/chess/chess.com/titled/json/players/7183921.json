@@ -6,10 +6,10 @@
     "name": "Georgios Souleidis",
     "username": "georgiossouleidis",
     "title": "IM",
-    "followers": 1700,
+    "followers": 1762,
     "country": "https://api.chess.com/pub/country/GR",
     "location": "\"Hamburg\"",
-    "last_online": 1734160908,
+    "last_online": 1741674766,
     "joined": 1333545845,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2586,
-            "date": 1734179059,
-            "rd": 26
+            "rating": 2710,
+            "date": 1741133176,
+            "rd": 27
         },
         "best": {
             "rating": 2748,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/53888433795"
         },
         "record": {
-            "win": 7438,
-            "loss": 5219,
-            "draw": 1551
+            "win": 7640,
+            "loss": 5350,
+            "draw": 1600
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3408,
-            "date": 1727081132
+            "rating": 3468,
+            "date": 1741537107
         },
         "lowest": {
             "rating": 1375,
@@ -100,6 +100,10 @@
         "best": {
             "total_attempts": 63,
             "score": 60
+        },
+        "daily": {
+            "total_attempts": 42,
+            "score": 40
         }
     }
 }

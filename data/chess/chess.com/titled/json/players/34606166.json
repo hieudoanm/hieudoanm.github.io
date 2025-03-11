@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34606166.aded17f7.200x200o.adb84e4bf100.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/34606166.d34039d5.200x200o.48c7671f22b6.jpg",
     "player_id": 34606166,
     "@id": "https://api.chess.com/pub/player/hanschut",
     "url": "https://www.chess.com/member/HanSchut",
     "name": "Han Schut",
     "username": "hanschut",
     "title": "CM",
-    "followers": 512,
+    "followers": 527,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734185419,
+    "last_online": 1741634664,
     "joined": 1491608911,
     "status": "premium",
     "is_streamer": false,
@@ -53,36 +53,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2333,
-            "date": 1733956589,
-            "rd": 35
+            "rating": 2201,
+            "date": 1741470061,
+            "rd": 24
         },
         "best": {
-            "rating": 2353,
-            "date": 1700336621,
-            "game": "https://www.chess.com/game/live/68672523665"
+            "rating": 2389,
+            "date": 1736016893,
+            "game": "https://www.chess.com/game/live/129755936393"
         },
         "record": {
-            "win": 3250,
-            "loss": 3437,
-            "draw": 355
+            "win": 3382,
+            "loss": 3639,
+            "draw": 371
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2283,
-            "date": 1734131800,
-            "rd": 33
+            "rating": 2304,
+            "date": 1741114315,
+            "rd": 31
         },
         "best": {
             "rating": 2404,
             "date": 1715116619,
-            "game": "https://www.chess.com/game/live/117323454025"
+            "game": "https://www.chess.com/game/live/133633759945"
         },
         "record": {
-            "win": 3414,
-            "loss": 3588,
-            "draw": 556
+            "win": 3507,
+            "loss": 3714,
+            "draw": 577
         }
     },
     "tactics": {

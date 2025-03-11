@@ -4,14 +4,14 @@
     "url": "https://www.chess.com/member/Lemmingsplayer",
     "username": "lemmingsplayer",
     "title": "CM",
-    "followers": 28,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/NZ",
-    "last_online": 1734080708,
+    "last_online": 1741677342,
     "joined": 1603882164,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -32,26 +32,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2733,
-            "date": 1715376722,
-            "rd": 39
+            "rating": 2677,
+            "date": 1740212326,
+            "rd": 23
         },
         "best": {
-            "rating": 2736,
-            "date": 1715363063,
+            "rating": 2745,
+            "date": 1736007772,
             "game": "https://www.chess.com/game/live/109101645553"
         },
         "record": {
-            "win": 3769,
-            "loss": 4307,
-            "draw": 521
+            "win": 4083,
+            "loss": 4620,
+            "draw": 562
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2604,
-            "date": 1734083716,
-            "rd": 34
+            "rating": 2596,
+            "date": 1741686079,
+            "rd": 40
         },
         "best": {
             "rating": 2632,
@@ -59,15 +59,15 @@
             "game": "https://www.chess.com/game/live/89163609539"
         },
         "record": {
-            "win": 1990,
-            "loss": 2016,
-            "draw": 393
+            "win": 2030,
+            "loss": 2056,
+            "draw": 395
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3563,
-            "date": 1732224720
+            "rating": 3619,
+            "date": 1736191863
         },
         "lowest": {
             "rating": 412,

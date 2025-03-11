@@ -6,9 +6,9 @@
     "name": "Iljya Grigorjev",
     "username": "ilyagrigorjev",
     "title": "IM",
-    "followers": 180,
+    "followers": 183,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734122850,
+    "last_online": 1740330538,
     "joined": 1649362764,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2929,
-            "date": 1733993864,
-            "rd": 28
+            "rating": 2866,
+            "date": 1738294222,
+            "rd": 36
         },
         "best": {
             "rating": 2974,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/127724365755"
         },
         "record": {
-            "win": 727,
-            "loss": 473,
-            "draw": 160
+            "win": 780,
+            "loss": 508,
+            "draw": 182
         }
     },
     "tactics": {

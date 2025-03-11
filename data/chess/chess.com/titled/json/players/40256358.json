@@ -6,10 +6,10 @@
     "name": "Aryan Gutla",
     "username": "mrhalvaraj",
     "title": "FM",
-    "followers": 345,
+    "followers": 351,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Burbank Disney HQ",
-    "last_online": 1734017772,
+    "last_online": 1741616547,
     "joined": 1510374772,
     "status": "premium",
     "is_streamer": false,
@@ -72,8 +72,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2514,
-            "date": 1711671542,
-            "rd": 43
+            "date": 1740955846,
+            "rd": 49
         },
         "best": {
             "rating": 2579,
@@ -81,7 +81,7 @@
             "game": "https://www.chess.com/game/live/84572108973"
         },
         "record": {
-            "win": 659,
+            "win": 660,
             "loss": 419,
             "draw": 74
         }

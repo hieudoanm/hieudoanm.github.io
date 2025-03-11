@@ -9,7 +9,7 @@
     "followers": 15,
     "country": "https://api.chess.com/pub/country/ME",
     "location": "Niksic",
-    "last_online": 1734076343,
+    "last_online": 1741695478,
     "joined": 1586002576,
     "status": "premium",
     "is_streamer": false,
@@ -18,19 +18,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2461,
-            "date": 1734076925,
-            "rd": 48
+            "rating": 2484,
+            "date": 1741696282,
+            "rd": 49
         },
         "best": {
-            "rating": 2483,
-            "date": 1731675773,
-            "game": "https://www.chess.com/game/live/127495276963"
+            "rating": 2542,
+            "date": 1738528952,
+            "game": "https://www.chess.com/game/live/132336067973"
         },
         "record": {
-            "win": 168,
-            "loss": 123,
-            "draw": 27
+            "win": 212,
+            "loss": 172,
+            "draw": 45
         }
     },
     "tactics": {

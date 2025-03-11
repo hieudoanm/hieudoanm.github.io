@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/bajna",
     "username": "bajna",
     "title": "CM",
-    "followers": 25,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734089196,
+    "last_online": 1741407964,
     "joined": 1479839132,
     "status": "premium",
     "is_streamer": false,
@@ -68,9 +68,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2317,
-            "date": 1731042017,
-            "rd": 31
+            "rating": 2331,
+            "date": 1740079566,
+            "rd": 65
         },
         "best": {
             "rating": 2405,
@@ -78,7 +78,7 @@
             "game": "https://www.chess.com/game/live/46524603457"
         },
         "record": {
-            "win": 4413,
+            "win": 4414,
             "loss": 3195,
             "draw": 693
         }

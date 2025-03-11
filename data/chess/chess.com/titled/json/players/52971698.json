@@ -6,9 +6,9 @@
     "name": "Yuriy Dovzik",
     "username": "yuriydovzik",
     "title": "IM",
-    "followers": 6,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734004819,
+    "last_online": 1741186955,
     "joined": 1544294648,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2181,
-            "date": 1733869762,
-            "rd": 56
+            "rating": 2146,
+            "date": 1741133279,
+            "rd": 49
         },
         "best": {
             "rating": 2297,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/104620904213"
         },
         "record": {
-            "win": 157,
-            "loss": 342,
-            "draw": 24
+            "win": 193,
+            "loss": 424,
+            "draw": 31
         }
     },
     "fide": 2237,

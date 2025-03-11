@@ -6,10 +6,10 @@
     "name": "Marcos Lianes",
     "username": "ulises2013",
     "title": "IM",
-    "followers": 202,
+    "followers": 212,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1734173263,
+    "last_online": 1741685300,
     "joined": 1375643357,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2923,
-            "date": 1726828503,
-            "rd": 46
+            "rating": 2878,
+            "date": 1740744000,
+            "rd": 28
         },
         "best": {
             "rating": 3034,
@@ -83,26 +83,26 @@
             "game": "https://www.chess.com/game/live/101934294773"
         },
         "record": {
-            "win": 3424,
-            "loss": 2410,
-            "draw": 436
+            "win": 3517,
+            "loss": 2472,
+            "draw": 452
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2803,
-            "date": 1723561646,
-            "rd": 31
+            "rating": 2900,
+            "date": 1741694614,
+            "rd": 23
         },
         "best": {
-            "rating": 2947,
-            "date": 1714989681,
-            "game": "https://www.chess.com/game/live/109531331333"
+            "rating": 3030,
+            "date": 1739379959,
+            "game": "https://www.chess.com/game/live/131361565141"
         },
         "record": {
-            "win": 1264,
-            "loss": 794,
-            "draw": 229
+            "win": 1767,
+            "loss": 1052,
+            "draw": 358
         }
     },
     "tactics": {
@@ -119,10 +119,6 @@
         "best": {
             "total_attempts": 62,
             "score": 59
-        },
-        "daily": {
-            "total_attempts": 57,
-            "score": 54
         }
     }
 }

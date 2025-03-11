@@ -6,10 +6,10 @@
     "name": "Dewar B. Feliz Dotel",
     "username": "dewarfd",
     "title": "CM",
-    "followers": 36,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/DO",
     "location": "Santiago",
-    "last_online": 1734006768,
+    "last_online": 1741692948,
     "joined": 1585338454,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 800,
-            "date": 1731257679,
+            "date": 1739278595,
             "rd": 350
         },
         "record": {
@@ -32,17 +32,17 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2230,
-            "date": 1731982801,
+            "rating": 2235,
+            "date": 1741057104,
             "rd": 49
         },
         "best": {
-            "rating": 2230,
-            "date": 1731982801,
+            "rating": 2235,
+            "date": 1736991707,
             "game": "https://www.chess.com/game/live/75433186303"
         },
         "record": {
-            "win": 16,
+            "win": 18,
             "loss": 8,
             "draw": 6
         }
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2192,
-            "date": 1732615515,
-            "rd": 23
+            "rating": 2235,
+            "date": 1741687662,
+            "rd": 29
         },
         "best": {
             "rating": 2372,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/86482719119"
         },
         "record": {
-            "win": 3087,
-            "loss": 3303,
-            "draw": 533
+            "win": 3372,
+            "loss": 3542,
+            "draw": 580
         }
     },
     "tactics": {

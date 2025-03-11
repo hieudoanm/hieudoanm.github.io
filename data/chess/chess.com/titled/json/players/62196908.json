@@ -1,18 +1,19 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/62196908.1b86aa3b.200x200o.15bf2726c5c6.jpg",
     "player_id": 62196908,
     "@id": "https://api.chess.com/pub/player/blitzking642",
     "url": "https://www.chess.com/member/Blitzking642",
     "name": "Gerardo Antonio Gracia Alvarez",
     "username": "blitzking642",
     "title": "FM",
-    "followers": 56,
+    "followers": 57,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1732825096,
+    "last_online": 1741701583,
     "joined": 1560344439,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -50,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2509,
-            "date": 1725979170,
-            "rd": 49
+            "rating": 2461,
+            "date": 1740682832,
+            "rd": 40
         },
         "best": {
-            "rating": 2598,
-            "date": 1703992976,
+            "rating": 2625,
+            "date": 1736267243,
             "game": "https://www.chess.com/game/live/39306041917"
         },
         "record": {
-            "win": 1349,
-            "loss": 1167,
-            "draw": 256
+            "win": 1453,
+            "loss": 1258,
+            "draw": 277
         }
     },
     "fide": 2308,

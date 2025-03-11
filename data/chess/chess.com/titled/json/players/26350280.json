@@ -6,10 +6,10 @@
     "name": "Lennis Martinez Ramirez",
     "username": "lennis93",
     "title": "IM",
-    "followers": 1102,
+    "followers": 1179,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Guantanamo",
-    "last_online": 1734161617,
+    "last_online": 1741641853,
     "joined": 1453814422,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1363,
-            "date": 1729546971,
+            "date": 1741092187,
             "rd": 235
         },
         "best": {
@@ -33,18 +33,12 @@
             "draw": 1,
             "time_per_move": 12822,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 2,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2500,
-            "date": 1732756233,
+            "date": 1735332023,
             "rd": 49
         },
         "best": {
@@ -60,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2661,
-            "date": 1733313801,
-            "rd": 24
+            "rating": 2706,
+            "date": 1741633257,
+            "rd": 37
         },
         "best": {
             "rating": 2890,
@@ -70,16 +64,16 @@
             "game": "https://www.chess.com/game/live/110308900061"
         },
         "record": {
-            "win": 2157,
-            "loss": 1795,
-            "draw": 213
+            "win": 2313,
+            "loss": 1962,
+            "draw": 230
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2762,
-            "date": 1734012164,
-            "rd": 25
+            "rating": 2730,
+            "date": 1741632538,
+            "rd": 27
         },
         "best": {
             "rating": 2863,
@@ -87,9 +81,9 @@
             "game": "https://www.chess.com/game/live/109438942703"
         },
         "record": {
-            "win": 9684,
-            "loss": 9087,
-            "draw": 1467
+            "win": 10011,
+            "loss": 9423,
+            "draw": 1518
         }
     },
     "fide": 2450,
@@ -107,10 +101,6 @@
         "best": {
             "total_attempts": 85,
             "score": 82
-        },
-        "daily": {
-            "total_attempts": 36,
-            "score": 34
         }
     }
 }

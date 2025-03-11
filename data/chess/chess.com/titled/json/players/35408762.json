@@ -6,10 +6,10 @@
     "name": "Stefana Milutinovic",
     "username": "stefanamilutinovic",
     "title": "WFM",
-    "followers": 1492,
+    "followers": 1486,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Belgrade",
-    "last_online": 1734182682,
+    "last_online": 1741343618,
     "joined": 1494373795,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2303,
-            "date": 1734127150,
-            "rd": 56
+            "rating": 2342,
+            "date": 1741546084,
+            "rd": 44
         },
         "best": {
             "rating": 2397,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/97150907629"
         },
         "record": {
-            "win": 733,
-            "loss": 629,
-            "draw": 76
+            "win": 763,
+            "loss": 654,
+            "draw": 82
         }
     },
     "chess_blitz": {

@@ -6,10 +6,10 @@
     "name": "Radoslav Karanovic",
     "username": "radoslavkaranovic",
     "title": "FM",
-    "followers": 33,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/BA",
     "location": "Drvar",
-    "last_online": 1734043775,
+    "last_online": 1739910572,
     "joined": 1559938504,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2214,
-            "date": 1734176141,
-            "rd": 23
+            "rating": 2244,
+            "date": 1741647108,
+            "rd": 22
         },
         "best": {
             "rating": 2399,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/97182627937"
         },
         "record": {
-            "win": 12942,
-            "loss": 10144,
-            "draw": 1202
+            "win": 14006,
+            "loss": 11080,
+            "draw": 1288
         }
     },
     "fide": 2312,

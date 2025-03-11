@@ -6,10 +6,10 @@
     "name": "Borys Tofil",
     "username": "juzekarbuzek",
     "title": "CM",
-    "followers": 17,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Ko\u0142obrzeg",
-    "last_online": 1734173712,
+    "last_online": 1741639980,
     "joined": 1419511539,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 862,
-            "date": 1733927482,
+            "date": 1738260464,
             "rd": 255
         },
         "best": {
@@ -31,32 +31,32 @@
             "win": 2,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 35731,
+            "time_per_move": 54435,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2170,
-            "date": 1734102478,
+            "rating": 2144,
+            "date": 1738695823,
             "rd": 49
         },
         "best": {
             "rating": 2189,
             "date": 1730411524,
-            "game": "https://www.chess.com/game/live/123889271285"
+            "game": "https://www.chess.com/game/live/132001191705"
         },
         "record": {
-            "win": 52,
-            "loss": 26,
+            "win": 53,
+            "loss": 31,
             "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2453,
-            "date": 1733352149,
-            "rd": 23
+            "rating": 2501,
+            "date": 1741354713,
+            "rd": 24
         },
         "best": {
             "rating": 2525,
@@ -64,33 +64,33 @@
             "game": "https://www.chess.com/game/live/123276610017"
         },
         "record": {
-            "win": 825,
-            "loss": 892,
-            "draw": 99
+            "win": 1090,
+            "loss": 1210,
+            "draw": 143
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2404,
-            "date": 1734046067,
-            "rd": 31
+            "rating": 2411,
+            "date": 1741642086,
+            "rd": 22
         },
         "best": {
-            "rating": 2431,
-            "date": 1698792717,
+            "rating": 2517,
+            "date": 1735481594,
             "game": "https://www.chess.com/game/live/53469663949"
         },
         "record": {
-            "win": 600,
-            "loss": 599,
-            "draw": 91
+            "win": 887,
+            "loss": 935,
+            "draw": 136
         }
     },
     "fide": 2177,
     "tactics": {
         "highest": {
-            "rating": 2303,
-            "date": 1734099340
+            "rating": 2344,
+            "date": 1740003624
         },
         "lowest": {
             "rating": 1200,

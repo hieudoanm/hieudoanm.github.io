@@ -6,9 +6,9 @@
     "name": "Bartlomiej Niedbala",
     "username": "megagigahiper3345",
     "title": "IM",
-    "followers": 118,
+    "followers": 119,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734133217,
+    "last_online": 1737918998,
     "joined": 1532987247,
     "status": "premium",
     "is_streamer": false,
@@ -53,8 +53,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2543,
-            "date": 1730664166,
+            "rating": 2527,
+            "date": 1737920039,
             "rd": 49
         },
         "best": {
@@ -63,24 +63,24 @@
             "game": "https://www.chess.com/game/live/3603620073"
         },
         "record": {
-            "win": 1390,
+            "win": 1402,
             "loss": 1197,
-            "draw": 120
+            "draw": 122
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2815,
-            "date": 1732564395,
-            "rd": 34
+            "rating": 2823,
+            "date": 1737919176,
+            "rd": 49
         },
         "best": {
-            "rating": 2815,
-            "date": 1732564395,
+            "rating": 2823,
+            "date": 1737190938,
             "game": "https://www.chess.com/game/live/5139520210"
         },
         "record": {
-            "win": 6139,
+            "win": 6140,
             "loss": 5949,
             "draw": 725
         }

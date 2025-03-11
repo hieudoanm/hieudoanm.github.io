@@ -6,14 +6,14 @@
     "name": "Beksultan Moldagali",
     "username": "bekaeasycool",
     "title": "FM",
-    "followers": 75,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734176015,
+    "last_online": 1741618571,
     "joined": 1514802990,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -72,36 +72,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2553,
-            "date": 1733593625,
-            "rd": 35
+            "rating": 2622,
+            "date": 1740849902,
+            "rd": 38
         },
         "best": {
-            "rating": 2691,
-            "date": 1725727739,
+            "rating": 2714,
+            "date": 1740250658,
             "game": "https://www.chess.com/game/live/122494465285"
         },
         "record": {
-            "win": 2058,
-            "loss": 1646,
-            "draw": 260
+            "win": 2198,
+            "loss": 1742,
+            "draw": 278
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2757,
-            "date": 1734167535,
-            "rd": 29
+            "rating": 2719,
+            "date": 1741632011,
+            "rd": 31
         },
         "best": {
-            "rating": 2772,
-            "date": 1731487482,
-            "game": "https://www.chess.com/game/live/127843186117"
+            "rating": 2874,
+            "date": 1736671812,
+            "game": "https://www.chess.com/game/live/133036770723"
         },
         "record": {
-            "win": 1857,
-            "loss": 1428,
-            "draw": 293
+            "win": 2064,
+            "loss": 1600,
+            "draw": 335
         }
     },
     "tactics": {
@@ -118,10 +118,6 @@
         "best": {
             "total_attempts": 67,
             "score": 64
-        },
-        "daily": {
-            "total_attempts": 60,
-            "score": 57
         }
     }
 }

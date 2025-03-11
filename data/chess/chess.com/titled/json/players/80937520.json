@@ -8,7 +8,7 @@
     "followers": 37,
     "country": "https://api.chess.com/pub/country/CN",
     "location": "China",
-    "last_online": 1734161888,
+    "last_online": 1741160675,
     "joined": 1590827509,
     "status": "premium",
     "is_streamer": false,
@@ -81,10 +81,6 @@
         "best": {
             "total_attempts": 56,
             "score": 53
-        },
-        "daily": {
-            "total_attempts": 32,
-            "score": 29
         }
     }
 }

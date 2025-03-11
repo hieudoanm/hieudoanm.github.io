@@ -6,9 +6,9 @@
     "name": "Tomasz G\u0142uszko",
     "username": "kmpk",
     "title": "CM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/BB",
-    "last_online": 1732472460,
+    "last_online": 1741457637,
     "joined": 1463533455,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2537,
-            "date": 1732475792,
-            "rd": 42
+            "rating": 2534,
+            "date": 1741460375,
+            "rd": 45
         },
         "best": {
             "rating": 2571,
@@ -58,9 +58,9 @@
             "game": "https://www.chess.com/game/live/1670529833"
         },
         "record": {
-            "win": 993,
-            "loss": 679,
-            "draw": 108
+            "win": 1005,
+            "loss": 691,
+            "draw": 110
         }
     },
     "chess_blitz": {

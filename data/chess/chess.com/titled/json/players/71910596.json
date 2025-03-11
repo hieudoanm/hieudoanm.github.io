@@ -6,9 +6,9 @@
     "name": "Sivanesan Nithyalakshmi",
     "username": "vision_64",
     "title": "WCM",
-    "followers": 74,
+    "followers": 78,
     "country": "https://api.chess.com/pub/country/MY",
-    "last_online": 1734071526,
+    "last_online": 1741695484,
     "joined": 1581181937,
     "status": "premium",
     "is_streamer": false,
@@ -34,21 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2005,
-            "date": 1592662136,
-            "rd": 233
+            "rating": 2006,
+            "date": 1737107334,
+            "rd": 331
+        },
+        "best": {
+            "rating": 2006,
+            "date": 1737107334,
+            "game": "https://www.chess.com/game/live/130846184633"
         },
         "record": {
-            "win": 0,
+            "win": 1,
             "loss": 2,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2313,
-            "date": 1733854041,
-            "rd": 44
+            "rating": 2353,
+            "date": 1741111668,
+            "rd": 36
         },
         "best": {
             "rating": 2418,
@@ -56,9 +61,9 @@
             "game": "https://www.chess.com/game/live/24776452035"
         },
         "record": {
-            "win": 300,
-            "loss": 429,
-            "draw": 53
+            "win": 383,
+            "loss": 534,
+            "draw": 64
         }
     },
     "tactics": {
@@ -73,8 +78,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 66,
-            "score": 62
+            "total_attempts": 67,
+            "score": 64
+        },
+        "daily": {
+            "total_attempts": 35,
+            "score": 32
         }
     }
 }

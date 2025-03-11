@@ -6,38 +6,55 @@
     "name": "Elim Keneshbekov",
     "username": "elimchesskg",
     "title": "CM",
-    "followers": 4,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/KG",
     "location": "Karakol city",
-    "last_online": 1734181878,
+    "last_online": 1741699615,
     "joined": 1732707115,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Crystal",
     "streaming_platforms": [],
-    "chess_blitz": {
+    "chess_bullet": {
         "last": {
-            "rating": 2387,
-            "date": 1733891949,
-            "rd": 105
+            "rating": 2419,
+            "date": 1741700157,
+            "rd": 41
         },
         "best": {
-            "rating": 2481,
-            "date": 1733851746,
-            "game": "https://www.chess.com/game/live/127590076655"
+            "rating": 2409,
+            "date": 1738423181,
+            "game": "https://www.chess.com/game/live/132234649127"
         },
         "record": {
-            "win": 7,
-            "loss": 8,
-            "draw": 0
+            "win": 73,
+            "loss": 42,
+            "draw": 9
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2455,
+            "date": 1741370256,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2509,
+            "date": 1734672366,
+            "game": "https://www.chess.com/game/live/129401045377"
+        },
+        "record": {
+            "win": 68,
+            "loss": 61,
+            "draw": 17
         }
     },
     "fide": 1847,
     "tactics": {
         "highest": {
-            "rating": 800,
-            "date": 1732707115
+            "rating": 2020,
+            "date": 1735307662
         },
         "lowest": {
             "rating": 800,

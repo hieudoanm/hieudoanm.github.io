@@ -6,10 +6,10 @@
     "name": "Lawrence Trent",
     "username": "lawrencetrent",
     "title": "IM",
-    "followers": 601,
+    "followers": 612,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "London",
-    "last_online": 1733514059,
+    "last_online": 1741546837,
     "joined": 1358260635,
     "status": "premium",
     "is_streamer": true,
@@ -60,9 +60,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2585,
-            "date": 1730494763,
-            "rd": 48
+            "rating": 2587,
+            "date": 1739987392,
+            "rd": 49
         },
         "best": {
             "rating": 2720,
@@ -70,7 +70,7 @@
             "game": "https://www.chess.com/game/live/2988784942"
         },
         "record": {
-            "win": 473,
+            "win": 474,
             "loss": 377,
             "draw": 53
         }

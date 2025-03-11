@@ -5,10 +5,10 @@
     "name": "chak man chan",
     "username": "chanchakman",
     "title": "CM",
-    "followers": 224,
+    "followers": 228,
     "country": "https://api.chess.com/pub/country/HK",
     "location": "hong kong",
-    "last_online": 1734174219,
+    "last_online": 1741621820,
     "joined": 1353002080,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1233,
-            "date": 1587716891,
+            "date": 1740271232,
             "rd": 148
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1974,
-            "date": 1734167122,
-            "rd": 26
+            "rating": 2007,
+            "date": 1741616339,
+            "rd": 21
         },
         "best": {
             "rating": 2111,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/3817924277"
         },
         "record": {
-            "win": 790,
-            "loss": 632,
-            "draw": 45
+            "win": 1392,
+            "loss": 1128,
+            "draw": 74
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2237,
-            "date": 1724757786,
-            "rd": 24
+            "rating": 2251,
+            "date": 1737646990,
+            "rd": 68
         },
         "best": {
             "rating": 2350,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/86450475049"
         },
         "record": {
-            "win": 12121,
-            "loss": 11025,
-            "draw": 870
+            "win": 12123,
+            "loss": 11026,
+            "draw": 871
         }
     },
     "fide": 0,

@@ -6,14 +6,14 @@
     "name": "Nikolai Vlassov",
     "username": "bazar-wokzal",
     "title": "IM",
-    "followers": 403,
+    "followers": 422,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1729264774,
+    "last_online": 1741296048,
     "joined": 1498812366,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2386,
-            "date": 1727283878,
-            "rd": 48
+            "rating": 2330,
+            "date": 1741095293,
+            "rd": 49
         },
         "best": {
             "rating": 2446,
@@ -46,33 +46,33 @@
             "game": "https://www.chess.com/game/live/121017090711"
         },
         "record": {
-            "win": 80,
-            "loss": 37,
+            "win": 89,
+            "loss": 42,
             "draw": 11
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2475,
-            "date": 1611335323,
-            "rd": 41
+            "rating": 2508,
+            "date": 1736621964,
+            "rd": 31
         },
         "best": {
-            "rating": 2487,
-            "date": 1611333960,
-            "game": "https://www.chess.com/game/live/6313311840"
+            "rating": 2551,
+            "date": 1736616039,
+            "game": "https://www.chess.com/game/live/129755383471"
         },
         "record": {
-            "win": 162,
-            "loss": 90,
-            "draw": 7
+            "win": 219,
+            "loss": 155,
+            "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2642,
-            "date": 1733875535,
-            "rd": 36
+            "rating": 2562,
+            "date": 1741370431,
+            "rd": 35
         },
         "best": {
             "rating": 2727,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/66522782515"
         },
         "record": {
-            "win": 3980,
-            "loss": 3337,
-            "draw": 717
+            "win": 4107,
+            "loss": 3438,
+            "draw": 749
         }
     },
     "tactics": {

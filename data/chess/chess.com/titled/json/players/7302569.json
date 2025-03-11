@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/bricolageur",
     "username": "bricolageur",
     "title": "IM",
-    "followers": 30,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733861687,
+    "last_online": 1740399805,
     "joined": 1334515770,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2598,
-            "date": 1734185613,
-            "rd": 25
+            "rating": 2549,
+            "date": 1741637479,
+            "rd": 30
         },
         "best": {
             "rating": 2726,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/123636629515"
         },
         "record": {
-            "win": 4150,
-            "loss": 4602,
-            "draw": 448
+            "win": 4372,
+            "loss": 4876,
+            "draw": 480
         }
     },
     "fide": 2393,

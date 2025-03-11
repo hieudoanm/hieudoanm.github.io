@@ -6,10 +6,10 @@
     "name": "Yevhen Odnorozhenko",
     "username": "zheka1980",
     "title": "IM",
-    "followers": 3347,
+    "followers": 3491,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Kharkiv",
-    "last_online": 1734164542,
+    "last_online": 1741691342,
     "joined": 1555463278,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2322,
-            "date": 1734177171,
-            "rd": 76
+            "rating": 2289,
+            "date": 1741703562,
+            "rd": 78
         },
         "best": {
             "rating": 2353,
@@ -28,36 +28,36 @@
             "game": "https://www.chess.com/game/daily/337959749"
         },
         "record": {
-            "win": 2543,
-            "loss": 53,
-            "draw": 99,
-            "time_per_move": 25524,
+            "win": 2669,
+            "loss": 54,
+            "draw": 103,
+            "time_per_move": 25979,
             "timeout_percent": 0
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 2074,
-            "date": 1733756238,
-            "rd": 282
+            "rating": 2234,
+            "date": 1738105650,
+            "rd": 198
         },
         "best": {
-            "rating": 2074,
-            "date": 1733756238,
-            "game": "https://www.chess.com/game/daily/734065639"
+            "rating": 2234,
+            "date": 1738105650,
+            "game": "https://www.chess.com/game/daily/740937601"
         },
         "record": {
-            "win": 2,
+            "win": 6,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 25524,
+            "time_per_move": 25979,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2302,
-            "date": 1699035658,
+            "date": 1738006160,
             "rd": 270
         },
         "best": {
@@ -91,7 +91,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2488,
-            "date": 1731630276,
+            "date": 1739118252,
             "rd": 135
         },
         "best": {

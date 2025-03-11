@@ -5,9 +5,9 @@
     "name": "David Astasio",
     "username": "colemman",
     "title": "FM",
-    "followers": 25,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733250293,
+    "last_online": 1739973390,
     "joined": 1514740738,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2801,
-            "date": 1690483706,
-            "rd": 119
+            "rating": 2701,
+            "date": 1739982699,
+            "rd": 34
         },
         "best": {
             "rating": 2801,
@@ -26,16 +26,16 @@
             "game": "https://www.chess.com/game/live/84222590303"
         },
         "record": {
-            "win": 81,
-            "loss": 69,
-            "draw": 9
+            "win": 97,
+            "loss": 100,
+            "draw": 18
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2512,
-            "date": 1691287876,
-            "rd": 89
+            "rating": 2650,
+            "date": 1739992601,
+            "rd": 29
         },
         "best": {
             "rating": 2623,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/37836537781"
         },
         "record": {
-            "win": 1000,
-            "loss": 1083,
-            "draw": 167
+            "win": 1050,
+            "loss": 1122,
+            "draw": 178
         }
     },
     "fide": 0,

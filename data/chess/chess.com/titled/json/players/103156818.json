@@ -9,7 +9,7 @@
     "followers": 53,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Novi Sad",
-    "last_online": 1734086109,
+    "last_online": 1741479107,
     "joined": 1607561316,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2808,
-            "date": 1726174277,
-            "rd": 49
+            "rating": 2834,
+            "date": 1738539973,
+            "rd": 45
         },
         "best": {
             "rating": 3084,
@@ -27,8 +27,8 @@
             "game": "https://www.chess.com/game/live/71191585793"
         },
         "record": {
-            "win": 707,
-            "loss": 557,
+            "win": 718,
+            "loss": 559,
             "draw": 48
         }
     },

@@ -9,7 +9,7 @@
     "followers": 12,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Ujo",
-    "last_online": 1734024306,
+    "last_online": 1739740387,
     "joined": 1383782687,
     "status": "premium",
     "is_streamer": false,
@@ -35,18 +35,18 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2511,
-            "date": 1718470815,
-            "rd": 47
+            "rating": 2512,
+            "date": 1737673374,
+            "rd": 49
         },
         "best": {
-            "rating": 2511,
-            "date": 1718470815,
-            "game": "https://www.chess.com/game/live/112204234041"
+            "rating": 2513,
+            "date": 1736113923,
+            "game": "https://www.chess.com/game/live/128736216135"
         },
         "record": {
-            "win": 186,
-            "loss": 105,
+            "win": 196,
+            "loss": 112,
             "draw": 20
         }
     },

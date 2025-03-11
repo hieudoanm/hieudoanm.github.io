@@ -6,20 +6,20 @@
     "name": "Giorgi Bakhtadze",
     "username": "giorgichess",
     "title": "IM",
-    "followers": 93,
+    "followers": 98,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1734184109,
+    "last_online": 1741308970,
     "joined": 1323314641,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1970,
-            "date": 1734109984,
-            "rd": 155
+            "rating": 1980,
+            "date": 1741223672,
+            "rd": 157
         },
         "best": {
             "rating": 2047,
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/256417916"
         },
         "record": {
-            "win": 197,
+            "win": 198,
             "loss": 12,
             "draw": 66,
-            "time_per_move": 50317,
+            "time_per_move": 50704,
             "timeout_percent": 0
         }
     },
@@ -49,14 +49,14 @@
             "win": 3,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 50317,
+            "time_per_move": 50704,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2420,
-            "date": 1730036262,
+            "rating": 2429,
+            "date": 1737899004,
             "rd": 49
         },
         "best": {
@@ -65,33 +65,33 @@
             "game": "https://www.chess.com/game/live/115156096639"
         },
         "record": {
-            "win": 53,
+            "win": 56,
             "loss": 16,
             "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2390,
-            "date": 1732894654,
-            "rd": 51
+            "rating": 2514,
+            "date": 1740529033,
+            "rd": 47
         },
         "best": {
-            "rating": 2485,
-            "date": 1655053894,
+            "rating": 2516,
+            "date": 1737897385,
             "game": "https://www.chess.com/game/live/110847737369"
         },
         "record": {
-            "win": 1146,
-            "loss": 765,
-            "draw": 101
+            "win": 1183,
+            "loss": 782,
+            "draw": 105
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2537,
-            "date": 1732660038,
-            "rd": 49
+            "rating": 2535,
+            "date": 1739552558,
+            "rd": 48
         },
         "best": {
             "rating": 2561,
@@ -99,8 +99,8 @@
             "game": "https://www.chess.com/game/live/54497500527"
         },
         "record": {
-            "win": 548,
-            "loss": 342,
+            "win": 551,
+            "loss": 344,
             "draw": 62
         }
     },

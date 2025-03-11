@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/28234418.0869b61d.200x200o.692d5cc76347.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/28234418.cfdc2769.200x200o.f0d7a3ce17e3.jpg",
     "player_id": 28234418,
-    "@id": "https://api.chess.com/pub/player/amb3rowl",
-    "url": "https://www.chess.com/member/Amb3rOwl",
+    "@id": "https://api.chess.com/pub/player/echoingquake",
+    "url": "https://www.chess.com/member/EchoingQuake",
     "name": "Evelyn Qiao",
-    "username": "amb3rowl",
+    "username": "echoingquake",
     "title": "WCM",
-    "followers": 206,
+    "followers": 207,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Nowhere and everywhere",
-    "last_online": 1734056982,
+    "last_online": 1741656234,
     "joined": 1463516205,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1847,
-            "date": 1728422343,
-            "rd": 137
+            "rating": 1954,
+            "date": 1741656320,
+            "rd": 129
         },
         "best": {
-            "rating": 1847,
-            "date": 1728422343,
-            "game": "https://www.chess.com/game/daily/167522612"
+            "rating": 1954,
+            "date": 1736811839,
+            "game": "https://www.chess.com/game/daily/692156287"
         },
         "record": {
-            "win": 26,
+            "win": 28,
             "loss": 24,
             "draw": 2,
-            "time_per_move": 54943,
+            "time_per_move": 64441,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 54943,
+            "time_per_move": 64441,
             "timeout_percent": 0
         }
     },
@@ -119,6 +119,10 @@
         "best": {
             "total_attempts": 66,
             "score": 63
+        },
+        "daily": {
+            "total_attempts": 31,
+            "score": 28
         }
     }
 }

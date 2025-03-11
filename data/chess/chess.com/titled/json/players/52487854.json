@@ -8,7 +8,7 @@
     "followers": 16,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Jacksonville, Florida",
-    "last_online": 1734052426,
+    "last_online": 1737342716,
     "joined": 1543439912,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2701,
-            "date": 1734053604,
-            "rd": 48
+            "date": 1737343045,
+            "rd": 49
         },
         "best": {
             "rating": 2727,
@@ -61,7 +61,7 @@
             "game": "https://www.chess.com/game/live/58934368277"
         },
         "record": {
-            "win": 2004,
+            "win": 2012,
             "loss": 1370,
             "draw": 271
         }

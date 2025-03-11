@@ -6,9 +6,9 @@
     "name": "Spade",
     "username": "sayspade4vip",
     "title": "IM",
-    "followers": 26,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1731483351,
+    "last_online": 1735089100,
     "joined": 1481692717,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2612,
-            "date": 1730941193,
-            "rd": 49
+            "rating": 2605,
+            "date": 1735098818,
+            "rd": 47
         },
         "best": {
             "rating": 2820,
@@ -44,8 +44,8 @@
             "game": "https://www.chess.com/game/live/76919496321"
         },
         "record": {
-            "win": 2695,
-            "loss": 2066,
+            "win": 2698,
+            "loss": 2070,
             "draw": 350
         }
     },

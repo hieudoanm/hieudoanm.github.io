@@ -6,10 +6,10 @@
     "name": "Charles Storey",
     "username": "storeysniper",
     "title": "FM",
-    "followers": 440,
+    "followers": 445,
     "country": "https://api.chess.com/pub/country/AE",
     "location": "Dubai",
-    "last_online": 1734174389,
+    "last_online": 1738174091,
     "joined": 1245231023,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2261,
-            "date": 1665497689,
-            "rd": 111
+            "rating": 2322,
+            "date": 1734988004,
+            "rd": 34
         },
         "best": {
             "rating": 2457,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/5158301026"
         },
         "record": {
-            "win": 5307,
-            "loss": 5839,
-            "draw": 417
+            "win": 5358,
+            "loss": 5888,
+            "draw": 418
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2506,
-            "date": 1734176401,
-            "rd": 36
+            "rating": 2380,
+            "date": 1738177139,
+            "rd": 35
         },
         "best": {
             "rating": 2606,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/115087731603"
         },
         "record": {
-            "win": 8100,
-            "loss": 9140,
-            "draw": 1117
+            "win": 8199,
+            "loss": 9274,
+            "draw": 1135
         }
     },
     "fide": 2300,

@@ -8,7 +8,7 @@
     "followers": 23,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Katowice",
-    "last_online": 1732982584,
+    "last_online": 1739740400,
     "joined": 1597824828,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2313,
-            "date": 1732867808,
-            "rd": 49
+            "rating": 2300,
+            "date": 1736506429,
+            "rd": 48
         },
         "best": {
             "rating": 2322,
@@ -46,8 +46,8 @@
             "game": "https://www.chess.com/game/live/73816966449"
         },
         "record": {
-            "win": 139,
-            "loss": 130,
+            "win": 141,
+            "loss": 134,
             "draw": 26
         }
     },
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2522,
-            "date": 1732909489,
-            "rd": 45
+            "rating": 2493,
+            "date": 1739740787,
+            "rd": 49
         },
         "best": {
             "rating": 2531,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/64268987633"
         },
         "record": {
-            "win": 897,
-            "loss": 873,
+            "win": 898,
+            "loss": 878,
             "draw": 144
         }
     },

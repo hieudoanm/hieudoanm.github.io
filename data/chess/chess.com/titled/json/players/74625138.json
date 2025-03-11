@@ -6,7 +6,7 @@
     "name": "Dolgan Nyudleev",
     "username": "chameleon_94",
     "title": "IM",
-    "followers": 644,
+    "followers": 664,
     "country": "https://api.chess.com/pub/country/XX",
     "last_online": 1727965220,
     "joined": 1585256558,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1438,
-            "date": 1709906609,
+            "date": 1740216608,
             "rd": 175
         },
         "best": {
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1244,
-            "date": 1734113606,
+            "date": 1736174034,
             "rd": 318
         },
         "best": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2834,
-            "date": 1734183370,
-            "rd": 36
+            "rating": 2897,
+            "date": 1741703420,
+            "rd": 26
         },
         "best": {
             "rating": 2957,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/117862185569"
         },
         "record": {
-            "win": 4596,
-            "loss": 4423,
-            "draw": 1118
+            "win": 4797,
+            "loss": 4621,
+            "draw": 1172
         }
     },
     "fide": 2500,

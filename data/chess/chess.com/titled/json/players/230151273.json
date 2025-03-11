@@ -5,9 +5,9 @@
     "name": "Jonas Gallasch",
     "username": "jonasgallasch",
     "title": "FM",
-    "followers": 6,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734121564,
+    "last_online": 1741182160,
     "joined": 1674405080,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2506,
-            "date": 1729638075,
-            "rd": 46
+            "rating": 2503,
+            "date": 1736270704,
+            "rd": 48
         },
         "best": {
             "rating": 2539,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/123369650177"
         },
         "record": {
-            "win": 213,
-            "loss": 175,
-            "draw": 45
+            "win": 216,
+            "loss": 181,
+            "draw": 46
         }
     },
     "tactics": {

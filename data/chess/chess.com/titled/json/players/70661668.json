@@ -6,10 +6,10 @@
     "name": "Boris Grbac",
     "username": "mr_november18",
     "title": "FM",
-    "followers": 609,
+    "followers": 628,
     "country": "https://api.chess.com/pub/country/HR",
     "location": "Pore\u010d",
-    "last_online": 1734177695,
+    "last_online": 1741674016,
     "joined": 1578840482,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1976,
-            "date": 1733518913,
-            "rd": 142
+            "rating": 2072,
+            "date": 1740424741,
+            "rd": 114
         },
         "best": {
-            "rating": 1976,
-            "date": 1733297628,
-            "game": "https://www.chess.com/game/daily/686656865"
+            "rating": 2074,
+            "date": 1737319767,
+            "game": "https://www.chess.com/game/daily/750245811"
         },
         "record": {
-            "win": 25,
+            "win": 60,
             "loss": 10,
-            "draw": 0,
-            "time_per_move": 17864,
+            "draw": 1,
+            "time_per_move": 24205,
             "timeout_percent": 0
         }
     },
@@ -54,8 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1931,
-            "date": 1733573161,
+            "rating": 2028,
+            "date": 1738493306,
             "rd": 21
         },
         "best": {
@@ -64,33 +64,33 @@
             "game": "https://www.chess.com/game/live/106825799453"
         },
         "record": {
-            "win": 2874,
-            "loss": 2362,
-            "draw": 187
+            "win": 3282,
+            "loss": 2808,
+            "draw": 215
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2126,
-            "date": 1734179596,
-            "rd": 26
+            "rating": 2182,
+            "date": 1739269951,
+            "rd": 31
         },
         "best": {
-            "rating": 2221,
-            "date": 1731933079,
+            "rating": 2223,
+            "date": 1738584442,
             "game": "https://www.chess.com/game/live/99181479473"
         },
         "record": {
-            "win": 3869,
-            "loss": 2099,
-            "draw": 306
+            "win": 3934,
+            "loss": 2166,
+            "draw": 319
         }
     },
     "fide": 2016,
     "tactics": {
         "highest": {
-            "rating": 3134,
-            "date": 1729053488
+            "rating": 3155,
+            "date": 1737104615
         },
         "lowest": {
             "rating": 986,

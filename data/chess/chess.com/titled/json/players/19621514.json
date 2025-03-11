@@ -5,9 +5,9 @@
     "name": "Nahuel Diaz Hollemaert",
     "username": "nahueldiazh",
     "title": "IM",
-    "followers": 73,
+    "followers": 72,
     "country": "https://api.chess.com/pub/country/UY",
-    "last_online": 1732551880,
+    "last_online": 1739666548,
     "joined": 1415399231,
     "status": "premium",
     "is_streamer": false,
@@ -67,8 +67,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3358,
-            "date": 1716940546
+            "rating": 3428,
+            "date": 1739208855
         },
         "lowest": {
             "rating": 2187,

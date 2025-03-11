@@ -8,7 +8,7 @@
     "followers": 1,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Falkensee",
-    "last_online": 1733993098,
+    "last_online": 1741278223,
     "joined": 1550774278,
     "status": "premium",
     "is_streamer": false,
@@ -36,26 +36,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2168,
-            "date": 1704805619,
-            "rd": 215
+            "rating": 2176,
+            "date": 1738339818,
+            "rd": 49
         },
         "best": {
-            "rating": 2111,
-            "date": 1703617106,
-            "game": "https://www.chess.com/game/live/97355974361"
+            "rating": 2176,
+            "date": 1738339818,
+            "game": "https://www.chess.com/game/live/132078045817"
         },
         "record": {
-            "win": 1,
+            "win": 2,
             "loss": 1,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2282,
-            "date": 1733875407,
-            "rd": 62
+            "rating": 2220,
+            "date": 1737504509,
+            "rd": 54
         },
         "best": {
             "rating": 2355,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/120345640117"
         },
         "record": {
-            "win": 90,
-            "loss": 109,
-            "draw": 8
+            "win": 96,
+            "loss": 131,
+            "draw": 13
         }
     },
     "fide": 2168,

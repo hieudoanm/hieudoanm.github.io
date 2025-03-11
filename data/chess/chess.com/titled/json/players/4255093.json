@@ -6,10 +6,10 @@
     "name": "Shreya Mangalam",
     "username": "confused_3",
     "title": "WCM",
-    "followers": 54,
+    "followers": 55,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Chicago, IL",
-    "last_online": 1734032121,
+    "last_online": 1741581038,
     "joined": 1289789690,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1922,
-            "date": 1734032498,
-            "rd": 58
+            "rating": 1941,
+            "date": 1741545858,
+            "rd": 51
         },
         "best": {
             "rating": 2219,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/8877431003"
         },
         "record": {
-            "win": 1562,
-            "loss": 1453,
-            "draw": 206
+            "win": 1589,
+            "loss": 1476,
+            "draw": 207
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2019,
-            "date": 1733815721,
-            "rd": 64
+            "rating": 2041,
+            "date": 1739424643,
+            "rd": 58
         },
         "best": {
             "rating": 2275,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/6328405999"
         },
         "record": {
-            "win": 1418,
-            "loss": 1294,
+            "win": 1430,
+            "loss": 1306,
             "draw": 190
         }
     },
     "fide": 2169,
     "tactics": {
         "highest": {
-            "rating": 3412,
-            "date": 1729917356
+            "rating": 3430,
+            "date": 1739937816
         },
         "lowest": {
             "rating": 1162,

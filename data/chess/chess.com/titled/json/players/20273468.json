@@ -6,9 +6,9 @@
     "username": "fiend1",
     "title": "IM",
     "followers": 1,
-    "country": "https://api.chess.com/pub/country/SG",
-    "location": "Singapore",
-    "last_online": 1723186196,
+    "country": "https://api.chess.com/pub/country/GB",
+    "location": "London",
+    "last_online": 1741700276,
     "joined": 1419201836,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2703,
-            "date": 1723185595,
-            "rd": 17
+            "rating": 2805,
+            "date": 1741679039,
+            "rd": 18
         },
         "best": {
             "rating": 2775,
@@ -27,26 +27,26 @@
             "game": "https://www.chess.com/game/live/103523496837"
         },
         "record": {
-            "win": 1475,
-            "loss": 1356,
-            "draw": 307
+            "win": 1745,
+            "loss": 1620,
+            "draw": 375
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2708,
-            "date": 1718142762,
-            "rd": 30
+            "rating": 2753,
+            "date": 1737360294,
+            "rd": 34
         },
         "best": {
-            "rating": 2700,
-            "date": 1713188746,
-            "game": "https://www.chess.com/game/live/105789545201"
+            "rating": 2753,
+            "date": 1737360294,
+            "game": "https://www.chess.com/game/live/131096965281"
         },
         "record": {
-            "win": 83,
-            "loss": 43,
-            "draw": 20
+            "win": 112,
+            "loss": 66,
+            "draw": 25
         }
     },
     "fide": 2340,

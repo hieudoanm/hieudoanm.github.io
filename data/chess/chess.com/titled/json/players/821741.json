@@ -6,10 +6,10 @@
     "name": "Jim Oglethorpe",
     "username": "jbj",
     "title": "FM",
-    "followers": 34,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Texas",
-    "last_online": 1734147015,
+    "last_online": 1741666873,
     "joined": 1199233730,
     "status": "premium",
     "is_streamer": false,
@@ -54,8 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2554,
-            "date": 1722904335,
+            "rating": 2560,
+            "date": 1734928038,
             "rd": 49
         },
         "best": {
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/35260593091"
         },
         "record": {
-            "win": 537,
+            "win": 538,
             "loss": 265,
             "draw": 57
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2755,
-            "date": 1730433640,
-            "rd": 49
+            "rating": 2814,
+            "date": 1741498382,
+            "rd": 48
         },
         "best": {
-            "rating": 2771,
-            "date": 1719640664,
-            "game": "https://www.chess.com/game/live/37087817671"
+            "rating": 2847,
+            "date": 1738816016,
+            "game": "https://www.chess.com/game/live/132554394509"
         },
         "record": {
-            "win": 1880,
-            "loss": 1502,
-            "draw": 410
+            "win": 1915,
+            "loss": 1527,
+            "draw": 414
         }
     },
     "tactics": {

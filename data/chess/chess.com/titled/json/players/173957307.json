@@ -6,9 +6,9 @@
     "name": "jozko branko",
     "username": "speed4fun",
     "title": "IM",
-    "followers": 9,
+    "followers": 15,
     "country": "https://api.chess.com/pub/country/SK",
-    "last_online": 1733695412,
+    "last_online": 1737929690,
     "joined": 1645391640,
     "status": "premium",
     "is_streamer": false,
@@ -51,26 +51,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2850,
-            "date": 1734110379,
-            "rd": 41
+            "rating": 2900,
+            "date": 1736567385,
+            "rd": 38
         },
         "best": {
-            "rating": 2861,
-            "date": 1720468988,
+            "rating": 2900,
+            "date": 1736567385,
             "game": "https://www.chess.com/game/live/93454154985"
         },
         "record": {
-            "win": 330,
-            "loss": 264,
-            "draw": 51
+            "win": 373,
+            "loss": 279,
+            "draw": 52
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3515,
-            "date": 1733840227
+            "rating": 3800,
+            "date": 1735416508
         },
         "lowest": {
             "rating": 1209,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 56,
-            "score": 53
+            "total_attempts": 61,
+            "score": 58
         }
     }
 }

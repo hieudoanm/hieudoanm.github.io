@@ -6,18 +6,35 @@
     "title": "IM",
     "followers": 2,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734078793,
+    "last_online": 1741679011,
     "joined": 1689661359,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Legend",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2416,
+            "date": 1741353856,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2409,
+            "date": 1735212582,
+            "game": "https://www.chess.com/game/live/128951543641"
+        },
+        "record": {
+            "win": 16,
+            "loss": 0,
+            "draw": 0
+        }
+    },
     "chess_bullet": {
         "last": {
-            "rating": 2621,
-            "date": 1730141444,
-            "rd": 44
+            "rating": 2626,
+            "date": 1739810406,
+            "rd": 48
         },
         "best": {
             "rating": 2759,
@@ -25,16 +42,16 @@
             "game": "https://www.chess.com/game/live/90595139775"
         },
         "record": {
-            "win": 380,
-            "loss": 241,
-            "draw": 66
+            "win": 383,
+            "loss": 243,
+            "draw": 67
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2655,
-            "date": 1734113689,
-            "rd": 24
+            "rating": 2747,
+            "date": 1741697922,
+            "rd": 23
         },
         "best": {
             "rating": 2759,
@@ -42,9 +59,9 @@
             "game": "https://www.chess.com/game/live/112981217625"
         },
         "record": {
-            "win": 2069,
-            "loss": 1584,
-            "draw": 433
+            "win": 2303,
+            "loss": 1756,
+            "draw": 482
         }
     },
     "tactics": {
@@ -59,8 +76,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 58,
-            "score": 55
+            "total_attempts": 60,
+            "score": 57
         }
     }
 }

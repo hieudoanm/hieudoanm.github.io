@@ -5,36 +5,48 @@
     "name": "Mirko Sajin",
     "username": "gospodarsaha07",
     "title": "FM",
-    "followers": 6,
-    "country": "https://api.chess.com/pub/country/GF",
-    "last_online": 1734182788,
+    "followers": 7,
+    "country": "https://api.chess.com/pub/country/BA",
+    "last_online": 1741675670,
     "joined": 1714469376,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
-    "chess_bullet": {
+    "chess_rapid": {
         "last": {
-            "rating": 2504,
-            "date": 1733944782,
-            "rd": 33
-        },
-        "best": {
-            "rating": 2592,
-            "date": 1714771282,
-            "game": "https://www.chess.com/game/live/127322967135"
+            "rating": 2284,
+            "date": 1738169859,
+            "rd": 49
         },
         "record": {
-            "win": 142,
-            "loss": 154,
-            "draw": 33
+            "win": 0,
+            "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2649,
+            "date": 1741676365,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2735,
+            "date": 1736964206,
+            "game": "https://www.chess.com/game/live/130118336733"
+        },
+        "record": {
+            "win": 417,
+            "loss": 443,
+            "draw": 76
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2477,
-            "date": 1733944134,
+            "rating": 2510,
+            "date": 1741615300,
             "rd": 43
         },
         "best": {
@@ -43,9 +55,9 @@
             "game": "https://www.chess.com/game/live/120259769811"
         },
         "record": {
-            "win": 260,
-            "loss": 299,
-            "draw": 64
+            "win": 316,
+            "loss": 355,
+            "draw": 76
         }
     },
     "fide": 2294,

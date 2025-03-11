@@ -6,9 +6,9 @@
     "name": "Deniel Causo",
     "username": "twofoxniel",
     "title": "FM",
-    "followers": 1866,
+    "followers": 1941,
     "country": "https://api.chess.com/pub/country/PH",
-    "last_online": 1734106822,
+    "last_online": 1741696969,
     "joined": 1298609058,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2722,
-            "date": 1734093721,
-            "rd": 48
+            "rating": 2591,
+            "date": 1740755732,
+            "rd": 30
         },
         "best": {
             "rating": 2726,
@@ -63,32 +63,32 @@
             "game": "https://www.chess.com/game/live/111606772117"
         },
         "record": {
-            "win": 2770,
-            "loss": 2968,
-            "draw": 298
+            "win": 2958,
+            "loss": 3165,
+            "draw": 321
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2800,
-            "date": 1733707331,
-            "rd": 47
+            "rating": 2677,
+            "date": 1741700661,
+            "rd": 24
         },
         "best": {
-            "rating": 2814,
-            "date": 1728554406,
+            "rating": 2833,
+            "date": 1734524485,
             "game": "https://www.chess.com/game/live/88270318835"
         },
         "record": {
-            "win": 3164,
-            "loss": 3045,
-            "draw": 583
+            "win": 3386,
+            "loss": 3287,
+            "draw": 631
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3400,
-            "date": 1718862441
+            "rating": 3410,
+            "date": 1737790793
         },
         "lowest": {
             "rating": 1201,
@@ -101,8 +101,8 @@
             "score": 60
         },
         "daily": {
-            "total_attempts": 38,
-            "score": 38
+            "total_attempts": 31,
+            "score": 28
         }
     }
 }

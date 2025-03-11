@@ -6,10 +6,10 @@
     "name": "Rushan Bogaudinov",
     "username": "wild3000",
     "title": "FM",
-    "followers": 94,
+    "followers": 104,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Moscow",
-    "last_online": 1733867463,
+    "last_online": 1741701915,
     "joined": 1347563488,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2400,
-            "date": 1734184973,
-            "rd": 37
+            "rating": 2292,
+            "date": 1741700468,
+            "rd": 23
         },
         "best": {
             "rating": 2496,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/126121199799"
         },
         "record": {
-            "win": 7698,
-            "loss": 6681,
-            "draw": 796
+            "win": 8069,
+            "loss": 7121,
+            "draw": 850
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2522,
-            "date": 1734174651,
-            "rd": 19
+            "rating": 2401,
+            "date": 1741690854,
+            "rd": 21
         },
         "best": {
             "rating": 2641,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/119741442563"
         },
         "record": {
-            "win": 21580,
-            "loss": 22058,
-            "draw": 3369
+            "win": 22312,
+            "loss": 22865,
+            "draw": 3542
         }
     },
     "fide": 0,

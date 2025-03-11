@@ -8,7 +8,7 @@
     "followers": 12,
     "country": "https://api.chess.com/pub/country/HR",
     "location": "\u0160enkovec",
-    "last_online": 1732706036,
+    "last_online": 1741628024,
     "joined": 1587242069,
     "status": "premium",
     "is_streamer": false,
@@ -29,9 +29,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2488,
-            "date": 1730613215,
-            "rd": 38
+            "rating": 2445,
+            "date": 1738308285,
+            "rd": 44
         },
         "best": {
             "rating": 2533,
@@ -39,9 +39,9 @@
             "game": "https://www.chess.com/game/live/6007951900"
         },
         "record": {
-            "win": 1139,
-            "loss": 837,
-            "draw": 97
+            "win": 1171,
+            "loss": 867,
+            "draw": 103
         }
     },
     "chess_blitz": {

@@ -5,10 +5,10 @@
     "name": "Hernan Ramon Filgueira",
     "username": "ninguno46",
     "title": "IM",
-    "followers": 294,
+    "followers": 318,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Buenos Aires",
-    "last_online": 1734170003,
+    "last_online": 1741687777,
     "joined": 1469973244,
     "status": "premium",
     "is_streamer": false,
@@ -48,8 +48,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2402,
-            "date": 1734174760,
+            "rating": 2496,
+            "date": 1741694425,
             "rd": 19
         },
         "best": {
@@ -58,15 +58,15 @@
             "game": "https://www.chess.com/game/live/100721014313"
         },
         "record": {
-            "win": 12203,
-            "loss": 11044,
-            "draw": 993
+            "win": 13357,
+            "loss": 12203,
+            "draw": 1087
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2555,
-            "date": 1733962539,
+            "rating": 2645,
+            "date": 1741201200,
             "rd": 32
         },
         "best": {
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/126470969117"
         },
         "record": {
-            "win": 4922,
-            "loss": 3752,
-            "draw": 754
+            "win": 5077,
+            "loss": 3865,
+            "draw": 780
         }
     },
     "tactics": {
@@ -92,12 +92,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 50,
-            "score": 47
+            "total_attempts": 53,
+            "score": 50
         },
         "daily": {
-            "total_attempts": 41,
-            "score": 38
+            "total_attempts": 35,
+            "score": 32
         }
     }
 }

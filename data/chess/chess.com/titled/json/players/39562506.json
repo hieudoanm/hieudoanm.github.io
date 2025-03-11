@@ -6,15 +6,15 @@
     "name": "Alvaro Rodriguez",
     "username": "alvarorodriguezavila",
     "title": "CM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1734167021,
+    "last_online": 1741698844,
     "joined": 1508354994,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -54,43 +54,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2200,
-            "date": 1733072264,
-            "rd": 78
+            "rating": 2305,
+            "date": 1740136264,
+            "rd": 66
         },
         "best": {
-            "rating": 2326,
-            "date": 1725381726,
-            "game": "https://www.chess.com/game/live/47744470449"
+            "rating": 2334,
+            "date": 1735916817,
+            "game": "https://www.chess.com/game/live/129655195813"
         },
         "record": {
-            "win": 447,
-            "loss": 275,
-            "draw": 25
+            "win": 464,
+            "loss": 283,
+            "draw": 26
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2255,
-            "date": 1734169337,
-            "rd": 50
+            "rating": 2519,
+            "date": 1741703561,
+            "rd": 28
         },
         "best": {
-            "rating": 2385,
-            "date": 1707235455,
-            "game": "https://www.chess.com/game/live/120325269217"
+            "rating": 2488,
+            "date": 1740506579,
+            "game": "https://www.chess.com/game/live/134237956483"
         },
         "record": {
-            "win": 954,
-            "loss": 816,
-            "draw": 78
+            "win": 1131,
+            "loss": 964,
+            "draw": 118
         }
     },
     "fide": 2190,
     "tactics": {
         "highest": {
-            "rating": 3392,
-            "date": 1697182019
+            "rating": 3531,
+            "date": 1736509503
         },
         "lowest": {
             "rating": 410,
@@ -101,10 +101,6 @@
         "best": {
             "total_attempts": 60,
             "score": 57
-        },
-        "daily": {
-            "total_attempts": 34,
-            "score": 31
         }
     }
 }

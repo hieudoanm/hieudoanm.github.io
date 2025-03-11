@@ -6,9 +6,9 @@
     "name": "Jurij Khalakhan",
     "username": "aklan10n",
     "title": "CM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1733469117,
+    "last_online": 1740941145,
     "joined": 1681008904,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2500,
-            "date": 1733321039,
-            "rd": 30
+            "rating": 2463,
+            "date": 1741372998,
+            "rd": 31
         },
         "best": {
             "rating": 2523,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/105307910175"
         },
         "record": {
-            "win": 2213,
-            "loss": 1774,
-            "draw": 215
+            "win": 2277,
+            "loss": 1845,
+            "draw": 227
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2355,
-            "date": 1733243290,
-            "rd": 34
+            "rating": 2387,
+            "date": 1741376394,
+            "rd": 46
         },
         "best": {
             "rating": 2421,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/122145602573"
         },
         "record": {
-            "win": 220,
-            "loss": 194,
-            "draw": 19
+            "win": 238,
+            "loss": 210,
+            "draw": 22
         }
     },
     "fide": 2174,

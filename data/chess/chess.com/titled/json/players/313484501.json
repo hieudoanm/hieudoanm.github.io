@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/PerplexingPerfection",
     "username": "perplexingperfection",
     "title": "FM",
-    "followers": 39,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734142973,
+    "last_online": 1741646193,
     "joined": 1694959382,
     "status": "premium",
     "is_streamer": false,
@@ -32,36 +32,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3153,
-            "date": 1734151547,
-            "rd": 18
+            "rating": 2984,
+            "date": 1741631578,
+            "rd": 26
         },
         "best": {
-            "rating": 3153,
-            "date": 1734140268,
+            "rating": 3194,
+            "date": 1735836673,
             "game": "https://www.chess.com/game/live/103244552127"
         },
         "record": {
-            "win": 5025,
-            "loss": 3163,
-            "draw": 676
+            "win": 5918,
+            "loss": 3597,
+            "draw": 791
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2965,
-            "date": 1734047213,
-            "rd": 28
+            "rating": 3015,
+            "date": 1741567298,
+            "rd": 32
         },
         "best": {
-            "rating": 3022,
-            "date": 1733689284,
-            "game": "https://www.chess.com/game/live/127432776285"
+            "rating": 3071,
+            "date": 1735515446,
+            "game": "https://www.chess.com/game/live/129509588073"
         },
         "record": {
-            "win": 758,
-            "loss": 482,
-            "draw": 199
+            "win": 1101,
+            "loss": 702,
+            "draw": 258
         }
     },
     "tactics": {

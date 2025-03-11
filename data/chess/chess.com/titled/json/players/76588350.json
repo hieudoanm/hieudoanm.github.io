@@ -6,9 +6,9 @@
     "name": "Zuzanna Sieka\u0144ska",
     "username": "zuzannaklara",
     "title": "WCM",
-    "followers": 12,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1732658344,
+    "last_online": 1741639771,
     "joined": 1586792203,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2012,
-            "date": 1732303673,
-            "rd": 45
+            "rating": 1944,
+            "date": 1739665621,
+            "rd": 48
         },
         "best": {
             "rating": 2044,
@@ -27,33 +27,33 @@
             "game": "https://www.chess.com/game/live/126041401945"
         },
         "record": {
-            "win": 121,
-            "loss": 94,
-            "draw": 10
+            "win": 150,
+            "loss": 127,
+            "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1899,
-            "date": 1732660736,
-            "rd": 62
+            "rating": 1976,
+            "date": 1741128078,
+            "rd": 57
         },
         "best": {
-            "rating": 1905,
-            "date": 1697638549,
-            "game": "https://www.chess.com/game/live/125798915169"
+            "rating": 2013,
+            "date": 1738106907,
+            "game": "https://www.chess.com/game/live/134260152193"
         },
         "record": {
-            "win": 62,
-            "loss": 59,
+            "win": 77,
+            "loss": 100,
             "draw": 6
         }
     },
     "fide": 1881,
     "tactics": {
         "highest": {
-            "rating": 1377,
-            "date": 1716143545
+            "rating": 1936,
+            "date": 1740486461
         },
         "lowest": {
             "rating": 1009,
@@ -64,6 +64,10 @@
         "best": {
             "total_attempts": 51,
             "score": 48
+        },
+        "daily": {
+            "total_attempts": 35,
+            "score": 32
         }
     }
 }

@@ -9,7 +9,7 @@
     "followers": 80,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Kragujevac",
-    "last_online": 1734123737,
+    "last_online": 1740948135,
     "joined": 1447087951,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2443,
-            "date": 1730576889,
-            "rd": 85
+            "rating": 2429,
+            "date": 1735668404,
+            "rd": 76
         },
         "best": {
             "rating": 2496,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/19934531347"
         },
         "record": {
-            "win": 996,
-            "loss": 487,
-            "draw": 94
+            "win": 1000,
+            "loss": 493,
+            "draw": 95
         }
     },
     "fide": 0,

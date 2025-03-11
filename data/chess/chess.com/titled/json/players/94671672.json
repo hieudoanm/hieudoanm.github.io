@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/94671672.2c8d99d5.200x200o.afc3feb75390.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/94671672.a376d266.200x200o.c9ff6a055276.jpg",
     "player_id": 94671672,
     "@id": "https://api.chess.com/pub/player/aistrel",
     "url": "https://www.chess.com/member/aistrel",
     "name": "Alexey Streltsov",
     "username": "aistrel",
     "title": "FM",
-    "followers": 128,
+    "followers": 127,
     "country": "https://api.chess.com/pub/country/IL",
     "location": "Jerusalem",
-    "last_online": 1734085206,
+    "last_online": 1741683386,
     "joined": 1604238467,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2642,
-            "date": 1726707361,
+            "rating": 2728,
+            "date": 1741184904,
             "rd": 45
         },
         "best": {
-            "rating": 2702,
-            "date": 1715530987,
+            "rating": 2719,
+            "date": 1739405182,
             "game": "https://www.chess.com/game/live/109219793191"
         },
         "record": {
-            "win": 389,
-            "loss": 376,
-            "draw": 69
+            "win": 441,
+            "loss": 411,
+            "draw": 74
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2657,
-            "date": 1729037358,
-            "rd": 41
+            "rating": 2702,
+            "date": 1737666910,
+            "rd": 32
         },
         "best": {
             "rating": 2755,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/94321996227"
         },
         "record": {
-            "win": 1650,
-            "loss": 1660,
-            "draw": 335
+            "win": 1687,
+            "loss": 1687,
+            "draw": 344
         }
     },
     "fide": 2313,

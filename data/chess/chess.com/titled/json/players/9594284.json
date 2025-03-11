@@ -6,10 +6,10 @@
     "name": "Sim\u00f3n Alejandro Languidey",
     "username": "elpepinillo14",
     "title": "IM",
-    "followers": 344,
+    "followers": 348,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Tucum\u00e1n",
-    "last_online": 1734103127,
+    "last_online": 1740759865,
     "joined": 1352593687,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1407,
-            "date": 1734175447,
+            "date": 1741703955,
             "rd": 246
         },
         "best": {
@@ -31,15 +31,15 @@
             "win": 5,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 16919,
+            "time_per_move": 23758,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2125,
-            "date": 1726182934,
-            "rd": 186
+            "date": 1740370051,
+            "rd": 49
         },
         "best": {
             "rating": 2316,
@@ -47,7 +47,7 @@
             "game": "https://www.chess.com/game/live/5001284271"
         },
         "record": {
-            "win": 38,
+            "win": 39,
             "loss": 1,
             "draw": 1
         }
@@ -89,8 +89,8 @@
     "fide": 2416,
     "tactics": {
         "highest": {
-            "rating": 3277,
-            "date": 1633378576
+            "rating": 3297,
+            "date": 1737159475
         },
         "lowest": {
             "rating": 2152,

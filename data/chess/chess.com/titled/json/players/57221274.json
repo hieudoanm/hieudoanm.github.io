@@ -6,10 +6,10 @@
     "name": "Goltsev Dmitry",
     "username": "goltsevdmitry2000",
     "title": "FM",
-    "followers": 178,
+    "followers": 183,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434",
-    "last_online": 1734013251,
+    "last_online": 1741122080,
     "joined": 1549885504,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2258,
-            "date": 1733836417,
+            "date": 1741518904,
             "rd": 157
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 15,
             "loss": 1,
             "draw": 1,
-            "time_per_move": 48156,
+            "time_per_move": 54480,
             "timeout_percent": 0
         }
     },
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2945,
-            "date": 1732457337,
-            "rd": 25
+            "rating": 2941,
+            "date": 1741460371,
+            "rd": 27
         },
         "best": {
-            "rating": 2997,
-            "date": 1668635931,
+            "rating": 3008,
+            "date": 1735390785,
             "game": "https://www.chess.com/game/live/104349756757"
         },
         "record": {
-            "win": 15023,
-            "loss": 9854,
-            "draw": 1621
+            "win": 15453,
+            "loss": 10094,
+            "draw": 1672
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2816,
-            "date": 1733868609,
-            "rd": 31
+            "rating": 2826,
+            "date": 1741518637,
+            "rd": 32
         },
         "best": {
             "rating": 2985,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/97441219341"
         },
         "record": {
-            "win": 5862,
-            "loss": 3574,
-            "draw": 1019
+            "win": 6182,
+            "loss": 3743,
+            "draw": 1104
         }
     },
     "fide": 2297,
@@ -99,8 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 57,
-            "score": 55
+            "total_attempts": 62,
+            "score": 59
         }
     }
 }

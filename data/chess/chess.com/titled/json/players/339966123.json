@@ -6,9 +6,9 @@
     "name": "Jean-Paul Sebban",
     "username": "cocovitschl77",
     "title": "CM",
-    "followers": 5,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734008325,
+    "last_online": 1740072018,
     "joined": 1705695866,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2000,
-            "date": 1732042724,
+            "rating": 1984,
+            "date": 1739545416,
             "rd": 49
         },
         "best": {
@@ -28,25 +28,25 @@
         },
         "record": {
             "win": 6,
-            "loss": 0,
+            "loss": 1,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2197,
-            "date": 1733945242,
-            "rd": 37
+            "rating": 2204,
+            "date": 1741629669,
+            "rd": 36
         },
         "best": {
-            "rating": 2299,
-            "date": 1713559002,
-            "game": "https://www.chess.com/game/live/106175534535"
+            "rating": 2314,
+            "date": 1739297471,
+            "game": "https://www.chess.com/game/live/128613145605"
         },
         "record": {
-            "win": 671,
-            "loss": 473,
-            "draw": 111
+            "win": 746,
+            "loss": 540,
+            "draw": 123
         }
     },
     "fide": 2155,

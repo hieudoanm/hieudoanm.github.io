@@ -1,20 +1,20 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/41992126.feff1ad3.200x200o.eca75ffe304a.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/41992126.7496cf2c.200x200o.18d5b17a6c6b.jpg",
     "player_id": 41992126,
     "@id": "https://api.chess.com/pub/player/sganerdene",
     "url": "https://www.chess.com/member/sganerdene",
     "name": "Gan-Erdene Sugar",
     "username": "sganerdene",
     "title": "IM",
-    "followers": 113,
+    "followers": 156,
     "country": "https://api.chess.com/pub/country/MN",
     "location": "Ulaanbaatar",
-    "last_online": 1734014260,
+    "last_online": 1741534666,
     "joined": 1515077408,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,39 +35,39 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2755,
-            "date": 1675433493,
-            "rd": 111
+            "rating": 2901,
+            "date": 1741277860,
+            "rd": 44
         },
         "best": {
-            "rating": 2806,
-            "date": 1617293447,
-            "game": "https://www.chess.com/game/live/11040270637"
+            "rating": 2929,
+            "date": 1738841413,
+            "game": "https://www.chess.com/game/live/130581053003"
         },
         "record": {
-            "win": 862,
-            "loss": 593,
-            "draw": 94
+            "win": 925,
+            "loss": 619,
+            "draw": 97
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2806,
-            "date": 1730215759,
-            "rd": 44
+            "rating": 2965,
+            "date": 1741267391,
+            "rd": 39
         },
         "best": {
-            "rating": 2823,
-            "date": 1727801153,
+            "rating": 2964,
+            "date": 1739013032,
             "game": "https://www.chess.com/game/live/119726385959"
         },
         "record": {
-            "win": 430,
-            "loss": 215,
-            "draw": 50
+            "win": 549,
+            "loss": 283,
+            "draw": 73
         }
     },
-    "fide": 2419,
+    "fide": 2440,
     "tactics": {
         "highest": {
             "rating": 2740,

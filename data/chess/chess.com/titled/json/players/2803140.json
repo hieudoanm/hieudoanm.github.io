@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 25,
     "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1734154602,
+    "last_online": 1741686427,
     "joined": 1273065056,
     "status": "premium",
     "is_streamer": false,
@@ -64,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2627,
-            "date": 1734166484,
-            "rd": 44
+            "rating": 2621,
+            "date": 1740920762,
+            "rd": 49
         },
         "best": {
             "rating": 2700,
@@ -74,8 +74,8 @@
             "game": "https://www.chess.com/game/live/78685209099"
         },
         "record": {
-            "win": 292,
-            "loss": 250,
+            "win": 294,
+            "loss": 253,
             "draw": 35
         }
     },
@@ -93,10 +93,6 @@
         "best": {
             "total_attempts": 51,
             "score": 48
-        },
-        "daily": {
-            "total_attempts": 50,
-            "score": 47
         }
     }
 }

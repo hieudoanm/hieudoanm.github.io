@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/misshrank",
     "username": "misshrank",
     "title": "IM",
-    "followers": 2,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1732642531,
+    "last_online": 1740938089,
     "joined": 1664901730,
     "status": "premium",
     "is_streamer": false,
@@ -50,8 +50,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 1000,
-            "date": 1664901730
+            "rating": 2333,
+            "date": 1741364170
         },
         "lowest": {
             "rating": 1000,

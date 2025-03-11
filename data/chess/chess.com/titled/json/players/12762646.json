@@ -9,11 +9,12 @@
     "followers": 12,
     "country": "https://api.chess.com/pub/country/SI",
     "location": "Ljubljana",
-    "last_online": 1732637356,
+    "last_online": 1740857560,
     "joined": 1374178187,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Wood",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,19 +35,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2432,
-            "date": 1614475504,
-            "rd": 52
+            "rating": 2564,
+            "date": 1738109239,
+            "rd": 43
         },
         "best": {
-            "rating": 2514,
-            "date": 1604912425,
-            "game": "https://www.chess.com/game/live/5960355392"
+            "rating": 2564,
+            "date": 1738084070,
+            "game": "https://www.chess.com/game/live/131821850889"
         },
         "record": {
-            "win": 703,
-            "loss": 422,
-            "draw": 109
+            "win": 738,
+            "loss": 453,
+            "draw": 117
         }
     },
     "fide": 0,

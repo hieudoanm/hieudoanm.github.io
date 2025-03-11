@@ -6,9 +6,9 @@
     "name": "Frederic Decoster",
     "username": "moventog",
     "title": "FM",
-    "followers": 21,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/BE",
-    "last_online": 1733992035,
+    "last_online": 1740731184,
     "joined": 1387709852,
     "status": "premium",
     "is_streamer": false,
@@ -70,25 +70,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2432,
-            "date": 1733930179,
-            "rd": 110
+            "rating": 2460,
+            "date": 1734341520,
+            "rd": 105
         },
         "best": {
-            "rating": 2432,
-            "date": 1733930179,
+            "rating": 2460,
+            "date": 1734341520,
             "game": "https://www.chess.com/game/live/3801669074"
         },
         "record": {
-            "win": 1743,
+            "win": 1744,
             "loss": 1355,
             "draw": 231
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3525,
-            "date": 1707159327
+            "rating": 3548,
+            "date": 1739216018
         },
         "lowest": {
             "rating": 1358,
@@ -97,8 +97,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 63,
+            "score": 60
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Zoran Majeri\u0107",
     "username": "fuderercro",
     "title": "IM",
-    "followers": 106,
+    "followers": 115,
     "country": "https://api.chess.com/pub/country/HR",
     "location": "Zagreb",
-    "last_online": 1734172507,
+    "last_online": 1741643939,
     "joined": 1445543887,
     "status": "premium",
     "is_streamer": false,
@@ -47,8 +47,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1957,
-            "date": 1734109991,
+            "rating": 1825,
+            "date": 1741646014,
             "rd": 29
         },
         "best": {
@@ -57,9 +57,9 @@
             "game": "https://www.chess.com/game/live/4943563907"
         },
         "record": {
-            "win": 5304,
-            "loss": 5174,
-            "draw": 478
+            "win": 5470,
+            "loss": 5341,
+            "draw": 498
         }
     },
     "fide": 2237,

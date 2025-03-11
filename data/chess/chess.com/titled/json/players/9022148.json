@@ -8,7 +8,7 @@
     "title": "IM",
     "followers": 89,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734093818,
+    "last_online": 1741299426,
     "joined": 1348487654,
     "status": "premium",
     "is_streamer": false,
@@ -17,20 +17,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2100,
-            "date": 1734175112,
-            "rd": 194
+            "rating": 1722,
+            "date": 1741701304,
+            "rd": 129
         },
         "best": {
             "rating": 2100,
             "date": 1734122204,
-            "game": "https://www.chess.com/game/daily/514891405"
+            "game": "https://www.chess.com/game/daily/717005333"
         },
         "record": {
-            "win": 52,
-            "loss": 1,
-            "draw": 3,
-            "time_per_move": 11791,
+            "win": 55,
+            "loss": 7,
+            "draw": 4,
+            "time_per_move": 10925,
             "timeout_percent": 0
         }
     },
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2398,
-            "date": 1734166230,
-            "rd": 63
+            "rating": 2293,
+            "date": 1741701625,
+            "rd": 28
         },
         "best": {
             "rating": 2615,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/3587924285"
         },
         "record": {
-            "win": 7402,
-            "loss": 5895,
-            "draw": 706
+            "win": 7767,
+            "loss": 6219,
+            "draw": 728
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2433,
-            "date": 1733864039,
-            "rd": 116
+            "rating": 2481,
+            "date": 1737656459,
+            "rd": 111
         },
         "best": {
             "rating": 2567,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/4309098756"
         },
         "record": {
-            "win": 2006,
+            "win": 2007,
             "loss": 1605,
-            "draw": 284
+            "draw": 285
         }
     },
     "tactics": {

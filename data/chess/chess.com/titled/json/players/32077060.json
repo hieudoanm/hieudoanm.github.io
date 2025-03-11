@@ -6,39 +6,39 @@
     "name": "Talu Mircea",
     "username": "mirciulica14",
     "title": "FM",
-    "followers": 195,
+    "followers": 214,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Cluj-Napoca",
-    "last_online": 1734002797,
+    "last_online": 1740840923,
     "joined": 1483364953,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2039,
-            "date": 1714868206,
-            "rd": 222
+            "rating": 2070,
+            "date": 1740905234,
+            "rd": 247
         },
         "best": {
-            "rating": 2039,
-            "date": 1681714876,
+            "rating": 2070,
+            "date": 1738326016,
             "game": "https://www.chess.com/game/daily/427239279"
         },
         "record": {
-            "win": 11,
+            "win": 12,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 20786,
+            "time_per_move": 17992,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2410,
-            "date": 1727555824,
+            "date": 1740841655,
             "rd": 49
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2762,
-            "date": 1678560096,
-            "rd": 124
+            "rating": 2769,
+            "date": 1737736161,
+            "rd": 49
         },
         "best": {
             "rating": 2823,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/5621991466"
         },
         "record": {
-            "win": 963,
+            "win": 964,
             "loss": 711,
             "draw": 131
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2638,
-            "date": 1730990659,
-            "rd": 41
+            "rating": 2702,
+            "date": 1738007478,
+            "rd": 32
         },
         "best": {
-            "rating": 2687,
-            "date": 1686518928,
+            "rating": 2720,
+            "date": 1737814773,
             "game": "https://www.chess.com/game/live/55617616657"
         },
         "record": {
-            "win": 1220,
-            "loss": 940,
-            "draw": 198
+            "win": 1270,
+            "loss": 974,
+            "draw": 209
         }
     },
     "fide": 2337,

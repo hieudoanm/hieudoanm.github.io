@@ -5,10 +5,10 @@
     "name": "Uffe Vinther-Schou",
     "username": "imuffevinther-schou",
     "title": "IM",
-    "followers": 67,
+    "followers": 68,
     "country": "https://api.chess.com/pub/country/DK",
     "location": "Denmark",
-    "last_online": 1734030076,
+    "last_online": 1741694927,
     "joined": 1566137715,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2398,
-            "date": 1734040870,
-            "rd": 80
+            "rating": 2379,
+            "date": 1741584628,
+            "rd": 87
         },
         "best": {
             "rating": 2572,
@@ -27,18 +27,18 @@
             "game": "https://www.chess.com/game/daily/273809102"
         },
         "record": {
-            "win": 274,
-            "loss": 25,
-            "draw": 49,
-            "time_per_move": 29215,
+            "win": 275,
+            "loss": 27,
+            "draw": 50,
+            "time_per_move": 29602,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2092,
-            "date": 1628794850,
-            "rd": 226
+            "rating": 2087,
+            "date": 1740402768,
+            "rd": 49
         },
         "best": {
             "rating": 2092,
@@ -47,8 +47,8 @@
         },
         "record": {
             "win": 2,
-            "loss": 1,
-            "draw": 0
+            "loss": 2,
+            "draw": 1
         }
     },
     "chess_bullet": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2403,
-            "date": 1733747176,
-            "rd": 40
+            "rating": 2422,
+            "date": 1741026051,
+            "rd": 25
         },
         "best": {
             "rating": 2479,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/5250751989"
         },
         "record": {
-            "win": 2551,
-            "loss": 1789,
-            "draw": 271
+            "win": 2854,
+            "loss": 2014,
+            "draw": 320
         }
     },
     "fide": 0,

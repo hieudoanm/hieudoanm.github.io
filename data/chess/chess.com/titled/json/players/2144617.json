@@ -5,9 +5,9 @@
     "name": "Dhanush Bharadwaj",
     "username": "dhanushbharadwaj",
     "title": "FM",
-    "followers": 141,
+    "followers": 142,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733786084,
+    "last_online": 1741657255,
     "joined": 1252178332,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2731,
-            "date": 1731786036,
-            "rd": 34
+            "rating": 2713,
+            "date": 1741628241,
+            "rd": 38
         },
         "best": {
             "rating": 2807,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/123097863833"
         },
         "record": {
-            "win": 4070,
-            "loss": 3673,
-            "draw": 499
+            "win": 4162,
+            "loss": 3753,
+            "draw": 512
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2654,
-            "date": 1732225093,
-            "rd": 42
+            "rating": 2625,
+            "date": 1738791416,
+            "rd": 49
         },
         "best": {
             "rating": 2679,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/119496585589"
         },
         "record": {
-            "win": 3410,
-            "loss": 2965,
-            "draw": 613
+            "win": 3417,
+            "loss": 2975,
+            "draw": 615
         }
     },
     "tactics": {

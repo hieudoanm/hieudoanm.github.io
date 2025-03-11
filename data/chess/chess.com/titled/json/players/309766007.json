@@ -6,14 +6,14 @@
     "name": "Anishka Vikram",
     "username": "dumbernugget",
     "title": "WCM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734176895,
+    "last_online": 1741621082,
     "joined": 1693590001,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -31,60 +31,60 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1734,
-            "date": 1734110724,
-            "rd": 330
+            "rating": 1866,
+            "date": 1741531110,
+            "rd": 192
         },
         "best": {
-            "rating": 1734,
-            "date": 1734110724,
-            "game": "https://www.chess.com/game/live/127846772127"
+            "rating": 1974,
+            "date": 1735389947,
+            "game": "https://www.chess.com/game/live/128592165441"
         },
         "record": {
-            "win": 6,
-            "loss": 0,
+            "win": 28,
+            "loss": 1,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1904,
-            "date": 1734177458,
-            "rd": 44
+            "rating": 2047,
+            "date": 1741623462,
+            "rd": 21
         },
         "best": {
-            "rating": 1927,
-            "date": 1694548525,
-            "game": "https://www.chess.com/game/live/126648545643"
+            "rating": 2152,
+            "date": 1740853755,
+            "game": "https://www.chess.com/game/live/134587756655"
         },
         "record": {
-            "win": 136,
-            "loss": 105,
-            "draw": 7
+            "win": 620,
+            "loss": 578,
+            "draw": 33
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2338,
-            "date": 1730242375,
-            "rd": 73
+            "rating": 2316,
+            "date": 1741623100,
+            "rd": 50
         },
         "best": {
-            "rating": 2384,
-            "date": 1705221902,
+            "rating": 2392,
+            "date": 1740500049,
             "game": "https://www.chess.com/game/live/119744427625"
         },
         "record": {
-            "win": 65,
-            "loss": 78,
-            "draw": 12
+            "win": 87,
+            "loss": 115,
+            "draw": 16
         }
     },
-    "fide": 1712,
+    "fide": 1885,
     "tactics": {
         "highest": {
-            "rating": 2877,
-            "date": 1714022506
+            "rating": 2898,
+            "date": 1737641707
         },
         "lowest": {
             "rating": 1000,
@@ -93,8 +93,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 42
+            "total_attempts": 50,
+            "score": 47
         }
     }
 }

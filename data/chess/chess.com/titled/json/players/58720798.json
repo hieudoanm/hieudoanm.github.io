@@ -8,7 +8,7 @@
     "followers": 20,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Ha Noi",
-    "last_online": 1731765235,
+    "last_online": 1741572948,
     "joined": 1553009934,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     "fide": 2037,
     "tactics": {
         "highest": {
-            "rating": 3040,
-            "date": 1680409343
+            "rating": 3094,
+            "date": 1740279594
         },
         "lowest": {
             "rating": 2198,

@@ -6,10 +6,10 @@
     "name": "Daouda Ethmane",
     "username": "doudou2015",
     "title": "CM",
-    "followers": 166,
+    "followers": 176,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York",
-    "last_online": 1734131510,
+    "last_online": 1738632529,
     "joined": 1379095857,
     "status": "premium",
     "is_streamer": false,
@@ -37,26 +37,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2211,
-            "date": 1730139112,
+            "rating": 2215,
+            "date": 1739776658,
             "rd": 49
         },
         "best": {
-            "rating": 2214,
-            "date": 1709434421,
+            "rating": 2215,
+            "date": 1739776658,
             "game": "https://www.chess.com/game/live/36281983697"
         },
         "record": {
-            "win": 354,
-            "loss": 114,
+            "win": 355,
+            "loss": 115,
             "draw": 30
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1875,
-            "date": 1734164978,
-            "rd": 27
+            "rating": 1807,
+            "date": 1741661571,
+            "rd": 24
         },
         "best": {
             "rating": 2110,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/85623567007"
         },
         "record": {
-            "win": 3678,
-            "loss": 4128,
-            "draw": 315
+            "win": 4147,
+            "loss": 4669,
+            "draw": 359
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2122,
-            "date": 1730850249,
+            "rating": 2135,
+            "date": 1735085143,
             "rd": 74
         },
         "best": {
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/90109180061"
         },
         "record": {
-            "win": 1469,
-            "loss": 1599,
+            "win": 1473,
+            "loss": 1603,
             "draw": 153
         }
     },
@@ -99,8 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 52,
-            "score": 49
+            "total_attempts": 59,
+            "score": 56
         }
     }
 }

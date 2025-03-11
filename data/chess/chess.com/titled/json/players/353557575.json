@@ -5,9 +5,9 @@
     "name": "Aiaru Altynbek",
     "username": "aiaru-01",
     "title": "WCM",
-    "followers": 2,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1733819871,
+    "last_online": 1741689385,
     "joined": 1711612767,
     "status": "premium",
     "is_streamer": false,
@@ -32,19 +32,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2429,
-            "date": 1732644921,
-            "rd": 33
+            "rating": 2400,
+            "date": 1741107792,
+            "rd": 40
         },
         "best": {
-            "rating": 2458,
-            "date": 1731842892,
-            "game": "https://www.chess.com/game/live/119721658071"
+            "rating": 2497,
+            "date": 1736788383,
+            "game": "https://www.chess.com/game/live/133633156523"
         },
         "record": {
-            "win": 117,
-            "loss": 122,
-            "draw": 13
+            "win": 168,
+            "loss": 178,
+            "draw": 22
         }
     },
     "tactics": {
@@ -61,6 +61,10 @@
         "best": {
             "total_attempts": 58,
             "score": 55
+        },
+        "daily": {
+            "total_attempts": 32,
+            "score": 32
         }
     }
 }

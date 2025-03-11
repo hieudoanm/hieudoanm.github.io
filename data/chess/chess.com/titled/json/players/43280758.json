@@ -6,9 +6,9 @@
     "name": "Juan Alberto Gomez Aguirre",
     "username": "piriflillo",
     "title": "FM",
-    "followers": 21,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733065055,
+    "last_online": 1741460594,
     "joined": 1518468893,
     "status": "premium",
     "is_streamer": false,
@@ -53,26 +53,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2601,
-            "date": 1731396758,
-            "rd": 40
+            "rating": 2618,
+            "date": 1740597068,
+            "rd": 49
         },
         "best": {
-            "rating": 2607,
-            "date": 1730400588,
+            "rating": 2620,
+            "date": 1739036519,
             "game": "https://www.chess.com/game/live/124138289135"
         },
         "record": {
-            "win": 476,
-            "loss": 385,
-            "draw": 48
+            "win": 484,
+            "loss": 392,
+            "draw": 51
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2557,
-            "date": 1732905868,
-            "rd": 41
+            "rating": 2626,
+            "date": 1740504686,
+            "rd": 33
         },
         "best": {
             "rating": 2690,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/117999035307"
         },
         "record": {
-            "win": 2354,
-            "loss": 2456,
-            "draw": 405
+            "win": 2430,
+            "loss": 2529,
+            "draw": 422
         }
     },
     "fide": 2340,
     "tactics": {
         "highest": {
-            "rating": 3483,
-            "date": 1728416029
+            "rating": 3584,
+            "date": 1740489006
         },
         "lowest": {
             "rating": 179,

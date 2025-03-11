@@ -6,9 +6,9 @@
     "name": "Jesper Lauridsen",
     "username": "politeplayer",
     "title": "FM",
-    "followers": 98,
+    "followers": 101,
     "country": "https://api.chess.com/pub/country/DK",
-    "last_online": 1733987203,
+    "last_online": 1741691369,
     "joined": 1486486325,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2016,
-            "date": 1711268933,
+            "date": 1741675870,
             "rd": 116
         },
         "best": {
@@ -30,15 +30,14 @@
             "win": 9,
             "loss": 2,
             "draw": 3,
-            "time_per_move": 28446,
+            "time_per_move": 28811,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2351,
-            "date": 1733937178,
-            "rd": 39
+            "rating": 2475,
+            "date": 1741698578
         },
         "best": {
             "rating": 2414,
@@ -46,9 +45,9 @@
             "game": "https://www.chess.com/game/live/36679294263"
         },
         "record": {
-            "win": 507,
-            "loss": 506,
-            "draw": 147
+            "win": 595,
+            "loss": 579,
+            "draw": 163
         }
     },
     "chess_bullet": {
@@ -70,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2354,
-            "date": 1733998418,
-            "rd": 24
+            "rating": 2207,
+            "date": 1741681373,
+            "rd": 34
         },
         "best": {
             "rating": 2400,
@@ -80,9 +79,9 @@
             "game": "https://www.chess.com/game/live/19935772863"
         },
         "record": {
-            "win": 7276,
-            "loss": 7308,
-            "draw": 1232
+            "win": 7463,
+            "loss": 7502,
+            "draw": 1274
         }
     },
     "fide": 0,

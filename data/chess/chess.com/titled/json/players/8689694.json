@@ -6,10 +6,10 @@
     "name": "Craig Hilby",
     "username": "thenomnomfactor",
     "title": "IM",
-    "followers": 234,
+    "followers": 235,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Texas",
-    "last_online": 1729831931,
+    "last_online": 1741482668,
     "joined": 1346044171,
     "status": "premium",
     "is_streamer": false,
@@ -91,7 +91,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2571,
-            "date": 1727219093,
+            "date": 1740772860,
             "rd": 49
         },
         "best": {
@@ -108,8 +108,8 @@
     "fide": 2405,
     "tactics": {
         "highest": {
-            "rating": 3646,
-            "date": 1727279854
+            "rating": 3691,
+            "date": 1738008284
         },
         "lowest": {
             "rating": 1355,

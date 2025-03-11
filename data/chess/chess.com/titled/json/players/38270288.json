@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Juanman96",
     "username": "juanman96",
     "title": "FM",
-    "followers": 1,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734104623,
+    "last_online": 1741630901,
     "joined": 1504211386,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2205,
-            "date": 1731709092,
-            "rd": 78
+            "rating": 2232,
+            "date": 1739828402,
+            "rd": 87
         },
         "best": {
             "rating": 2287,
@@ -26,16 +26,16 @@
             "game": "https://www.chess.com/game/live/99514978669"
         },
         "record": {
-            "win": 14,
-            "loss": 13,
+            "win": 16,
+            "loss": 14,
             "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2366,
-            "date": 1734105185,
-            "rd": 51
+            "rating": 2383,
+            "date": 1741689276,
+            "rd": 38
         },
         "best": {
             "rating": 2458,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/122483666117"
         },
         "record": {
-            "win": 112,
-            "loss": 97,
-            "draw": 13
+            "win": 168,
+            "loss": 153,
+            "draw": 31
         }
     },
     "fide": 0,

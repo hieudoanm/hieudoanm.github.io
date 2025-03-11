@@ -6,10 +6,10 @@
     "name": "Mateusz Ko\u0142osowski",
     "username": "mat_kolosowski",
     "title": "IM",
-    "followers": 1586,
+    "followers": 1612,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Wroclaw",
-    "last_online": 1734115932,
+    "last_online": 1741693881,
     "joined": 1351344897,
     "status": "premium",
     "is_streamer": true,
@@ -25,7 +25,7 @@
     "chess_daily": {
         "last": {
             "rating": 2179,
-            "date": 1727422690,
+            "date": 1741670469,
             "rd": 97
         },
         "best": {
@@ -37,15 +37,15 @@
             "win": 636,
             "loss": 105,
             "draw": 71,
-            "time_per_move": 48787,
-            "timeout_percent": 100
+            "time_per_move": 48570,
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1882,
-            "date": 1726323358,
-            "rd": 102
+            "rating": 1959,
+            "date": 1741552204,
+            "rd": 110
         },
         "best": {
             "rating": 1975,
@@ -53,18 +53,18 @@
             "game": "https://www.chess.com/game/daily/609674855"
         },
         "record": {
-            "win": 18,
+            "win": 22,
             "loss": 5,
             "draw": 3,
-            "time_per_move": 48787,
+            "time_per_move": 48570,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2486,
-            "date": 1720783933,
-            "rd": 108
+            "date": 1736114322,
+            "rd": 50
         },
         "best": {
             "rating": 2687,
@@ -72,7 +72,7 @@
             "game": "https://www.chess.com/game/live/43617058117"
         },
         "record": {
-            "win": 220,
+            "win": 221,
             "loss": 20,
             "draw": 9
         }
@@ -96,19 +96,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2771,
-            "date": 1731881076,
-            "rd": 49
+            "rating": 2833,
+            "date": 1740590617,
+            "rd": 35
         },
         "best": {
-            "rating": 2811,
-            "date": 1617830191,
+            "rating": 2828,
+            "date": 1737117629,
             "game": "https://www.chess.com/game/live/31515688649"
         },
         "record": {
-            "win": 5739,
-            "loss": 2795,
-            "draw": 677
+            "win": 5812,
+            "loss": 2838,
+            "draw": 696
         }
     },
     "fide": 2469,

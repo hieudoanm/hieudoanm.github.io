@@ -5,14 +5,14 @@
     "name": "Sharvesh Deviprasath",
     "username": "1g60-1",
     "title": "FM",
-    "followers": 96,
+    "followers": 97,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733633748,
+    "last_online": 1741637120,
     "joined": 1611870457,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -53,7 +53,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2059,
-            "date": 1733354329,
+            "date": 1741386772,
             "rd": 111
         },
         "best": {
@@ -69,19 +69,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2469,
-            "date": 1732478985,
-            "rd": 50
+            "rating": 2605,
+            "date": 1741126650,
+            "rd": 39
         },
         "best": {
-            "rating": 2504,
-            "date": 1729967679,
-            "game": "https://www.chess.com/game/live/113088030959"
+            "rating": 2633,
+            "date": 1740254411,
+            "game": "https://www.chess.com/game/live/130205955605"
         },
         "record": {
-            "win": 150,
-            "loss": 149,
-            "draw": 30
+            "win": 228,
+            "loss": 206,
+            "draw": 38
         }
     },
     "fide": 2510,

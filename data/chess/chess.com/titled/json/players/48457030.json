@@ -5,9 +5,9 @@
     "name": "Jan Vykouk",
     "username": "dont_be_a_c0unt",
     "title": "IM",
-    "followers": 163,
+    "followers": 164,
     "country": "https://api.chess.com/pub/country/TD",
-    "last_online": 1734119373,
+    "last_online": 1741644019,
     "joined": 1533367359,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2768,
-            "date": 1733430796,
-            "rd": 34
+            "rating": 2727,
+            "date": 1739217735,
+            "rd": 47
         },
         "best": {
             "rating": 2866,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/4691819388"
         },
         "record": {
-            "win": 4290,
-            "loss": 4581,
-            "draw": 1059
+            "win": 4307,
+            "loss": 4607,
+            "draw": 1065
         }
     },
     "fide": 2423,

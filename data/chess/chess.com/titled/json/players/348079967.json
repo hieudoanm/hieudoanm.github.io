@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/348079967.58390ae1.200x200o.9692931f6260.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/348079967.8eed73c9.200x200o.7a786bfe5217.jpg",
     "player_id": 348079967,
-    "@id": "https://api.chess.com/pub/player/pineapplehhh",
-    "url": "https://www.chess.com/member/pineapplehhh",
+    "@id": "https://api.chess.com/pub/player/whatisbynavshde",
+    "url": "https://www.chess.com/member/whatisbynavshde",
     "name": "Buyankhishig Batpelden",
-    "username": "pineapplehhh",
+    "username": "whatisbynavshde",
     "title": "WCM",
-    "followers": 16,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/MN",
     "location": "ulaanbaatar",
-    "last_online": 1734183274,
+    "last_online": 1741692000,
     "joined": 1709193917,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2007,
-            "date": 1733643822,
-            "rd": 222
+            "rating": 1995,
+            "date": 1736740153,
+            "rd": 49
         },
         "best": {
             "rating": 2007,
@@ -28,50 +28,50 @@
             "game": "https://www.chess.com/game/live/127382402013"
         },
         "record": {
-            "win": 1,
-            "loss": 1,
+            "win": 2,
+            "loss": 3,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2133,
-            "date": 1733789510,
-            "rd": 39
+            "rating": 2179,
+            "date": 1741692336,
+            "rd": 48
         },
         "best": {
-            "rating": 2164,
-            "date": 1733651534,
-            "game": "https://www.chess.com/game/live/127360792827"
+            "rating": 2258,
+            "date": 1735569809,
+            "game": "https://www.chess.com/game/live/129307971895"
         },
         "record": {
-            "win": 111,
-            "loss": 74,
-            "draw": 12
+            "win": 159,
+            "loss": 130,
+            "draw": 15
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2305,
-            "date": 1734185599,
-            "rd": 42
+            "rating": 2353,
+            "date": 1741619605,
+            "rd": 33
         },
         "best": {
-            "rating": 2337,
-            "date": 1728530442,
-            "game": "https://www.chess.com/game/live/119121070979"
+            "rating": 2368,
+            "date": 1736872837,
+            "game": "https://www.chess.com/game/live/128795001533"
         },
         "record": {
-            "win": 567,
-            "loss": 479,
-            "draw": 91
+            "win": 654,
+            "loss": 591,
+            "draw": 106
         }
     },
     "fide": 1871,
     "tactics": {
         "highest": {
-            "rating": 3162,
-            "date": 1727787059
+            "rating": 3239,
+            "date": 1741275623
         },
         "lowest": {
             "rating": 400,

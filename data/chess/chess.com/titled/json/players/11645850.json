@@ -8,7 +8,7 @@
     "followers": 21,
     "country": "https://api.chess.com/pub/country/JM",
     "location": "kingston",
-    "last_online": 1732549908,
+    "last_online": 1741554174,
     "joined": 1366855677,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1921,
-            "date": 1734162182,
-            "rd": 93
+            "rating": 1969,
+            "date": 1741670198,
+            "rd": 95
         },
         "best": {
             "rating": 2000,
@@ -27,18 +27,18 @@
             "game": "https://www.chess.com/game/daily/598747973"
         },
         "record": {
-            "win": 59,
+            "win": 74,
             "loss": 5,
             "draw": 7,
-            "time_per_move": 23126,
+            "time_per_move": 23191,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2183,
-            "date": 1673118069,
-            "rd": 148
+            "rating": 2189,
+            "date": 1736753179,
+            "rd": 49
         },
         "best": {
             "rating": 2509,
@@ -46,7 +46,7 @@
             "game": "https://www.chess.com/game/live/66733810661"
         },
         "record": {
-            "win": 27,
+            "win": 28,
             "loss": 20,
             "draw": 3
         }
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1995,
-            "date": 1734025756,
-            "rd": 42
+            "rating": 2035,
+            "date": 1741589737,
+            "rd": 45
         },
         "best": {
             "rating": 2088,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/1807126335"
         },
         "record": {
-            "win": 4713,
-            "loss": 4122,
-            "draw": 502
+            "win": 4783,
+            "loss": 4176,
+            "draw": 510
         }
     },
     "tactics": {

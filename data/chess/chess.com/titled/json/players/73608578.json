@@ -5,9 +5,9 @@
     "name": "Justin Wang",
     "username": "justinwang1234",
     "title": "IM",
-    "followers": 363,
+    "followers": 435,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734132049,
+    "last_online": 1737524905,
     "joined": 1584326337,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2991,
-            "date": 1734073627,
-            "rd": 29
+            "rating": 2940,
+            "date": 1737353646,
+            "rd": 22
         },
         "best": {
             "rating": 3022,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/108241197831"
         },
         "record": {
-            "win": 516,
-            "loss": 348,
-            "draw": 171
+            "win": 705,
+            "loss": 480,
+            "draw": 231
         }
     },
     "tactics": {

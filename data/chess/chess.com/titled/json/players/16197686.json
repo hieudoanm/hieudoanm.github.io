@@ -6,10 +6,10 @@
     "name": "Lukasz Nowak",
     "username": "lunow",
     "title": "IM",
-    "followers": 22,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Warszawa",
-    "last_online": 1734174147,
+    "last_online": 1741686186,
     "joined": 1393265203,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 838,
-            "date": 1710577709,
-            "rd": 216
+            "rating": 1034,
+            "date": 1741606274,
+            "rd": 159
         },
         "best": {
             "rating": 1200,
             "date": 1393265203,
-            "game": "https://www.chess.com/game/daily/488730505"
+            "game": "https://www.chess.com/game/daily/767656611"
         },
         "record": {
-            "win": 3,
+            "win": 8,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 16265,
+            "time_per_move": 14544,
             "timeout_percent": 0
         }
     },
@@ -54,9 +54,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1728,
-            "date": 1734184438,
-            "rd": 21
+            "rating": 1851,
+            "date": 1741034986,
+            "rd": 18
         },
         "best": {
             "rating": 2377,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/4678197419"
         },
         "record": {
-            "win": 2819,
-            "loss": 3241,
-            "draw": 379
+            "win": 3906,
+            "loss": 4397,
+            "draw": 515
         }
     },
     "fide": 2382,

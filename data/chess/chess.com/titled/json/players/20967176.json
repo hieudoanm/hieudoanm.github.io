@@ -6,9 +6,9 @@
     "name": "David Camacho",
     "username": "carlsencamacho",
     "title": "FM",
-    "followers": 70,
+    "followers": 77,
     "country": "https://api.chess.com/pub/country/DO",
-    "last_online": 1733657872,
+    "last_online": 1741049601,
     "joined": 1423243952,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1541,
-            "date": 1704330669,
-            "rd": 170
+            "rating": 1552,
+            "date": 1738673925,
+            "rd": 226
         },
         "best": {
             "rating": 1727,
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/182154530"
         },
         "record": {
-            "win": 11,
+            "win": 13,
             "loss": 16,
             "draw": 0,
-            "time_per_move": 18497,
+            "time_per_move": 19895,
             "timeout_percent": 0
         }
     },
@@ -49,7 +49,7 @@
             "win": 1,
             "loss": 2,
             "draw": 1,
-            "time_per_move": 18497,
+            "time_per_move": 19895,
             "timeout_percent": 0
         }
     },
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2175,
-            "date": 1717086312,
-            "rd": 38
+            "rating": 2115,
+            "date": 1741050731,
+            "rd": 50
         },
         "best": {
             "rating": 2233,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/110824355375"
         },
         "record": {
-            "win": 192,
-            "loss": 167,
-            "draw": 20
+            "win": 217,
+            "loss": 195,
+            "draw": 24
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2294,
-            "date": 1733688072,
-            "rd": 49
+            "rating": 2313,
+            "date": 1741051741,
+            "rd": 37
         },
         "best": {
             "rating": 2465,
@@ -99,16 +99,16 @@
             "game": "https://www.chess.com/game/live/105297021365"
         },
         "record": {
-            "win": 1394,
-            "loss": 1189,
-            "draw": 177
+            "win": 1477,
+            "loss": 1259,
+            "draw": 192
         }
     },
     "fide": 2219,
     "tactics": {
         "highest": {
-            "rating": 3148,
-            "date": 1710738362
+            "rating": 3181,
+            "date": 1739936560
         },
         "lowest": {
             "rating": 1511,

@@ -6,10 +6,10 @@
     "name": "Fabian Vivas",
     "username": "fabianvivasz",
     "title": "FM",
-    "followers": 315,
+    "followers": 323,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "Lima, Per\u00fa",
-    "last_online": 1734184569,
+    "last_online": 1741454047,
     "joined": 1446500877,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2320,
-            "date": 1726157791,
+            "rating": 2330,
+            "date": 1738347437,
             "rd": 49
         },
         "best": {
@@ -47,33 +47,33 @@
             "game": "https://www.chess.com/game/live/12978292271"
         },
         "record": {
-            "win": 23,
+            "win": 25,
             "loss": 8,
             "draw": 9
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2526,
-            "date": 1733521702,
-            "rd": 47
+            "rating": 2616,
+            "date": 1740677988,
+            "rd": 41
         },
         "best": {
-            "rating": 2602,
-            "date": 1714518428,
-            "game": "https://www.chess.com/game/live/28323570595"
+            "rating": 2610,
+            "date": 1738030538,
+            "game": "https://www.chess.com/game/live/131697583353"
         },
         "record": {
-            "win": 822,
-            "loss": 841,
-            "draw": 92
+            "win": 869,
+            "loss": 890,
+            "draw": 101
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2506,
-            "date": 1731974347,
-            "rd": 42
+            "rating": 2523,
+            "date": 1737131809,
+            "rd": 44
         },
         "best": {
             "rating": 2612,
@@ -81,12 +81,12 @@
             "game": "https://www.chess.com/game/live/4752827656"
         },
         "record": {
-            "win": 2387,
-            "loss": 2462,
+            "win": 2395,
+            "loss": 2469,
             "draw": 236
         }
     },
-    "fide": 2408,
+    "fide": 2393,
     "tactics": {
         "highest": {
             "rating": 3547,

@@ -9,7 +9,7 @@
     "followers": 5,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Helsinki",
-    "last_online": 1733208809,
+    "last_online": 1741508617,
     "joined": 1677748913,
     "status": "premium",
     "is_streamer": false,
@@ -35,19 +35,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2700,
-            "date": 1732980115,
-            "rd": 23
+            "rating": 2609,
+            "date": 1741100374,
+            "rd": 27
         },
         "best": {
-            "rating": 2700,
-            "date": 1732980115,
-            "game": "https://www.chess.com/game/live/105810095653"
+            "rating": 2712,
+            "date": 1735666204,
+            "game": "https://www.chess.com/game/live/134239739449"
         },
         "record": {
-            "win": 1663,
-            "loss": 1516,
-            "draw": 235
+            "win": 1749,
+            "loss": 1602,
+            "draw": 256
         }
     },
     "fide": 2314,

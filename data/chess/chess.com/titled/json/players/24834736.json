@@ -9,7 +9,7 @@
     "followers": 51,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Pune",
-    "last_online": 1732773446,
+    "last_online": 1741612292,
     "joined": 1446263881,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2101,
-            "date": 1634406839,
+            "date": 1740723256,
             "rd": 165
         },
         "best": {

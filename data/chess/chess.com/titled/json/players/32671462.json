@@ -6,10 +6,10 @@
     "name": "Francisco Javier Mu\u00f1oz",
     "username": "franmu14",
     "title": "FM",
-    "followers": 78,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Rosario",
-    "last_online": 1734136945,
+    "last_online": 1741696995,
     "joined": 1485384242,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2679,
-            "date": 1734133401,
-            "rd": 30
+            "rating": 2702,
+            "date": 1741697109,
+            "rd": 32
         },
         "best": {
             "rating": 2788,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/117928723989"
         },
         "record": {
-            "win": 1465,
-            "loss": 1150,
-            "draw": 218
+            "win": 1629,
+            "loss": 1270,
+            "draw": 246
         }
     },
     "tactics": {

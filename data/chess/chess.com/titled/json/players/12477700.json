@@ -6,10 +6,10 @@
     "name": "Eduardo Serrano",
     "username": "bajecny",
     "title": "FM",
-    "followers": 59,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid-Praha",
-    "last_online": 1733785787,
+    "last_online": 1741685589,
     "joined": 1372200011,
     "status": "premium",
     "is_streamer": false,
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 62,
+            "score": 59
         }
     }
 }

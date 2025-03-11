@@ -6,10 +6,10 @@
     "name": "Jan van Mechelen",
     "username": "countofmontecristo",
     "title": "FM",
-    "followers": 281,
+    "followers": 286,
     "country": "https://api.chess.com/pub/country/BE",
     "location": "Kessel-Lo",
-    "last_online": 1734108445,
+    "last_online": 1741688584,
     "joined": 1270373522,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1949,
-            "date": 1734111974,
-            "rd": 40
+            "rating": 1919,
+            "date": 1741701490,
+            "rd": 43
         },
         "best": {
             "rating": 2205,
@@ -28,24 +28,24 @@
             "game": "https://www.chess.com/game/daily/44187460"
         },
         "record": {
-            "win": 6938,
-            "loss": 5649,
-            "draw": 2314,
-            "time_per_move": 46969,
+            "win": 7010,
+            "loss": 5701,
+            "draw": 2343,
+            "time_per_move": 47048,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 1336,
+            "points": 243,
             "withdraw": 4,
-            "count": 32,
+            "count": 13,
             "highest_finish": 1
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1381,
-            "date": 1726566446,
-            "rd": 76
+            "rating": 1519,
+            "date": 1741701489,
+            "rd": 82
         },
         "best": {
             "rating": 1640,
@@ -53,16 +53,16 @@
             "game": "https://www.chess.com/game/daily/161811572"
         },
         "record": {
-            "win": 109,
+            "win": 140,
             "loss": 78,
             "draw": 17,
-            "time_per_move": 46969,
+            "time_per_move": 47048,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 1336,
+            "points": 243,
             "withdraw": 4,
-            "count": 32,
+            "count": 13,
             "highest_finish": 1
         }
     },

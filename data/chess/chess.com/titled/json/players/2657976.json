@@ -6,10 +6,10 @@
     "name": "Samir Hadzimustafic",
     "username": "samirliberec",
     "title": "FM",
-    "followers": 27,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/BA",
-    "location": "Baku, Azerbaijan",
-    "last_online": 1734011320,
+    "location": "Torremolinos, Spain",
+    "last_online": 1741104258,
     "joined": 1269259912,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_daily": {
         "last": {
             "rating": 1808,
-            "date": 1733918297,
-            "rd": 145
+            "date": 1740254794,
+            "rd": 153
         },
         "best": {
             "rating": 1808,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/511122799"
         },
         "record": {
-            "win": 18,
+            "win": 19,
             "loss": 1,
             "draw": 1,
-            "time_per_move": 23722,
+            "time_per_move": 30419,
             "timeout_percent": 0
         }
     },
@@ -67,8 +67,8 @@
     "fide": 2334,
     "tactics": {
         "highest": {
-            "rating": 3034,
-            "date": 1727443165
+            "rating": 3038,
+            "date": 1735031087
         },
         "lowest": {
             "rating": 400,

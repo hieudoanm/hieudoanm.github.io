@@ -9,7 +9,7 @@
     "followers": 98,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Odessa",
-    "last_online": 1734033231,
+    "last_online": 1738740419,
     "joined": 1347121807,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2721,
-            "date": 1733939065,
-            "rd": 47
+            "rating": 2785,
+            "date": 1735689652,
+            "rd": 43
         },
         "best": {
-            "rating": 2742,
-            "date": 1673978844,
-            "game": "https://www.chess.com/game/live/23564504077"
+            "rating": 2787,
+            "date": 1735688539,
+            "game": "https://www.chess.com/game/live/128820175595"
         },
         "record": {
-            "win": 937,
-            "loss": 685,
-            "draw": 292
+            "win": 956,
+            "loss": 696,
+            "draw": 297
         }
     },
     "fide": 2487,

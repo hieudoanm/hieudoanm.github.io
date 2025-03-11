@@ -6,10 +6,10 @@
     "name": "Kobe Smeets",
     "username": "koningkobe",
     "title": "FM",
-    "followers": 87,
+    "followers": 90,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Utrecht",
-    "last_online": 1734027046,
+    "last_online": 1741549820,
     "joined": 1459027154,
     "status": "premium",
     "is_streamer": false,
@@ -56,26 +56,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2257,
-            "date": 1709048730,
-            "rd": 116
+            "rating": 2272,
+            "date": 1738762034,
+            "rd": 48
         },
         "best": {
-            "rating": 2199,
-            "date": 1643481383,
+            "rating": 2278,
+            "date": 1738599278,
             "game": "https://www.chess.com/game/live/5600517511"
         },
         "record": {
-            "win": 614,
-            "loss": 459,
+            "win": 617,
+            "loss": 460,
             "draw": 80
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2534,
-            "date": 1734027280,
-            "rd": 29
+            "rating": 2449,
+            "date": 1740858201,
+            "rd": 45
         },
         "best": {
             "rating": 2662,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/126734369067"
         },
         "record": {
-            "win": 1846,
-            "loss": 1537,
-            "draw": 217
+            "win": 1913,
+            "loss": 1608,
+            "draw": 229
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2412,
-            "date": 1734035652,
-            "rd": 33
+            "rating": 2444,
+            "date": 1740700204,
+            "rd": 48
         },
         "best": {
             "rating": 2546,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/127512664697"
         },
         "record": {
-            "win": 3279,
-            "loss": 2611,
-            "draw": 511
+            "win": 3296,
+            "loss": 2615,
+            "draw": 514
         }
     },
     "fide": 2322,

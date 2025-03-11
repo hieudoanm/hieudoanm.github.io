@@ -6,10 +6,10 @@
     "name": "Charles Galofre",
     "username": "charlie101",
     "title": "FM",
-    "followers": 350,
+    "followers": 407,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Miami",
-    "last_online": 1734153276,
+    "last_online": 1741643580,
     "joined": 1217307197,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2124,
-            "date": 1724019890,
+            "date": 1738789864,
             "rd": 169
         },
         "best": {
@@ -55,7 +55,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2424,
-            "date": 1720457884,
+            "date": 1736555790,
             "rd": 124
         },
         "best": {
@@ -89,8 +89,8 @@
     "fide": 2320,
     "tactics": {
         "highest": {
-            "rating": 3448,
-            "date": 1734148667
+            "rating": 3462,
+            "date": 1736200170
         },
         "lowest": {
             "rating": 1102,

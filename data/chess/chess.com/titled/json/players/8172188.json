@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 45,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734173525,
+    "last_online": 1741661013,
     "joined": 1342083811,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2234,
-            "date": 1639445152,
+            "date": 1737018781,
             "rd": 96
         },
         "best": {

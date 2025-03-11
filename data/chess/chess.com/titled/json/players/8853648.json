@@ -8,7 +8,7 @@
     "followers": 1,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Mumbai",
-    "last_online": 1734006669,
+    "last_online": 1741489909,
     "joined": 1347270150,
     "status": "premium",
     "is_streamer": false,
@@ -17,13 +17,13 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1811,
-            "date": 1677220747,
-            "rd": 247
+            "rating": 2127,
+            "date": 1741685529,
+            "rd": 44
         },
         "record": {
-            "win": 0,
-            "loss": 1,
+            "win": 13,
+            "loss": 5,
             "draw": 0
         }
     },

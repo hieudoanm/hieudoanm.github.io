@@ -6,9 +6,9 @@
     "name": "Gus Huston",
     "username": "blue_capybara",
     "title": "IM",
-    "followers": 172,
+    "followers": 197,
     "country": "https://api.chess.com/pub/country/SC",
-    "last_online": 1734029698,
+    "last_online": 1741661402,
     "joined": 1460159075,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2076,
-            "date": 1683917913,
-            "rd": 126
+            "date": 1737675878,
+            "rd": 49
         },
         "best": {
             "rating": 2080,
@@ -46,7 +46,7 @@
             "game": "https://www.chess.com/game/live/39050930049"
         },
         "record": {
-            "win": 231,
+            "win": 232,
             "loss": 141,
             "draw": 29
         }
@@ -70,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2696,
-            "date": 1734151204,
+            "rating": 2584,
+            "date": 1741704198,
             "rd": 20
         },
         "best": {
-            "rating": 2753,
-            "date": 1733937382,
+            "rating": 2786,
+            "date": 1738813516,
             "game": "https://www.chess.com/game/live/59613626393"
         },
         "record": {
-            "win": 12506,
-            "loss": 10551,
-            "draw": 1800
+            "win": 13409,
+            "loss": 11306,
+            "draw": 1923
         }
     },
     "tactics": {

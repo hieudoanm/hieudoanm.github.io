@@ -5,9 +5,9 @@
     "name": "Dincer Tasdogen",
     "username": "yavrukurt40",
     "title": "FM",
-    "followers": 206,
+    "followers": 210,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734031434,
+    "last_online": 1741469729,
     "joined": 1529017954,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2931,
-            "date": 1729820132,
-            "rd": 39
+            "rating": 2894,
+            "date": 1740172910,
+            "rd": 49
         },
         "best": {
             "rating": 3101,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/5709479924"
         },
         "record": {
-            "win": 2430,
-            "loss": 1895,
+            "win": 2443,
+            "loss": 1900,
             "draw": 349
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2926,
-            "date": 1719506416,
-            "rd": 47
+            "rating": 2930,
+            "date": 1738678674,
+            "rd": 48
         },
         "best": {
             "rating": 2975,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/28925413409"
         },
         "record": {
-            "win": 452,
-            "loss": 418,
+            "win": 454,
+            "loss": 419,
             "draw": 101
         }
     },

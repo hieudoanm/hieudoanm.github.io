@@ -6,10 +6,10 @@
     "name": "Joey Jojo",
     "username": "joeyjojo_09",
     "title": "WCM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto, ON",
-    "last_online": 1727620801,
+    "last_online": 1738297382,
     "joined": 1515854875,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1847,
-            "date": 1707421414,
-            "rd": 172
+            "rating": 1699,
+            "date": 1738298723,
+            "rd": 155
         },
         "best": {
             "rating": 1847,
@@ -63,14 +63,14 @@
         },
         "record": {
             "win": 8,
-            "loss": 8,
+            "loss": 10,
             "draw": 1
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3194,
-            "date": 1705847420
+            "rating": 3214,
+            "date": 1737646456
         },
         "lowest": {
             "rating": 810,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 41,
-            "score": 38
+            "total_attempts": 43,
+            "score": 40
         }
     }
 }

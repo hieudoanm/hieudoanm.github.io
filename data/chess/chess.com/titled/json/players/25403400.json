@@ -5,9 +5,9 @@
     "name": "Sambit Panda",
     "username": "caroexpert",
     "title": "IM",
-    "followers": 41,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734175073,
+    "last_online": 1741241627,
     "joined": 1449241110,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2517,
-            "date": 1734176629,
-            "rd": 44
+            "rating": 2680,
+            "date": 1740729073,
+            "rd": 27
         },
         "best": {
             "rating": 2719,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/71690211311"
         },
         "record": {
-            "win": 2571,
-            "loss": 2342,
-            "draw": 287
+            "win": 2796,
+            "loss": 2559,
+            "draw": 309
         }
     },
     "tactics": {

@@ -9,7 +9,7 @@
     "followers": 28,
     "country": "https://api.chess.com/pub/country/EG",
     "location": "Riyadh",
-    "last_online": 1733400443,
+    "last_online": 1739307927,
     "joined": 1500321890,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2509,
-            "date": 1733312526,
-            "rd": 77
+            "rating": 2501,
+            "date": 1737708422,
+            "rd": 49
         },
         "best": {
             "rating": 2509,
@@ -29,15 +29,15 @@
         },
         "record": {
             "win": 628,
-            "loss": 422,
+            "loss": 423,
             "draw": 42
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2452,
-            "date": 1732133486,
-            "rd": 74
+            "rating": 2487,
+            "date": 1741221976,
+            "rd": 51
         },
         "best": {
             "rating": 2533,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/108858053971"
         },
         "record": {
-            "win": 156,
-            "loss": 119,
-            "draw": 21
+            "win": 165,
+            "loss": 130,
+            "draw": 24
         }
     },
     "tactics": {

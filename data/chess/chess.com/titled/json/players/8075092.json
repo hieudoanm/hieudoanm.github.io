@@ -6,10 +6,10 @@
     "name": "Bolivar Gonzalez",
     "username": "bolivargonzalez",
     "title": "FM",
-    "followers": 312,
+    "followers": 317,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Curitiba",
-    "last_online": 1734015264,
+    "last_online": 1741377190,
     "joined": 1341268740,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2344,
-            "date": 1675907390,
-            "rd": 78
+            "rating": 2409,
+            "date": 1734662360,
+            "rd": 152
         },
         "best": {
             "rating": 2456,
@@ -83,7 +83,7 @@
             "game": "https://www.chess.com/game/live/2141176676"
         },
         "record": {
-            "win": 1429,
+            "win": 1430,
             "loss": 1523,
             "draw": 104
         }
@@ -105,6 +105,7 @@
             "draw": 127
         }
     },
+    "fide": 2213,
     "tactics": {
         "highest": {
             "rating": 3731,

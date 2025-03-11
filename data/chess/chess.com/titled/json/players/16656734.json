@@ -6,10 +6,10 @@
     "name": "Nikolay Milchev",
     "username": "milchone1",
     "title": "IM",
-    "followers": 1100,
+    "followers": 1116,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "Stoke on Trent",
-    "last_online": 1734183307,
+    "last_online": 1741700606,
     "joined": 1396038017,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2339,
-            "date": 1734172344,
+            "rating": 2334,
+            "date": 1741700667,
             "rd": 106
         },
         "best": {
@@ -28,17 +28,11 @@
             "game": "https://www.chess.com/game/daily/374440933"
         },
         "record": {
-            "win": 373,
-            "loss": 10,
+            "win": 390,
+            "loss": 11,
             "draw": 28,
-            "time_per_move": 18846,
-            "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 47,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 1
+            "time_per_move": 19494,
+            "timeout_percent": 5
         }
     },
     "chess960_daily": {
@@ -51,14 +45,8 @@
             "win": 0,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 18846,
+            "time_per_move": 19494,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 47,
-            "withdraw": 1,
-            "count": 1,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {
@@ -97,19 +85,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2577,
-            "date": 1733796191,
-            "rd": 48
+            "rating": 2633,
+            "date": 1741133110,
+            "rd": 46
         },
         "best": {
-            "rating": 2632,
-            "date": 1639352665,
+            "rating": 2633,
+            "date": 1741133110,
             "game": "https://www.chess.com/game/live/120952256165"
         },
         "record": {
-            "win": 4757,
-            "loss": 3363,
-            "draw": 838
+            "win": 4777,
+            "loss": 3375,
+            "draw": 844
         }
     },
     "fide": 2417,

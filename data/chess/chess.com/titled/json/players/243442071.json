@@ -5,9 +5,9 @@
     "name": "Patryk Cieslak",
     "username": "carokannlover213",
     "title": "FM",
-    "followers": 44,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734174871,
+    "last_online": 1741622243,
     "joined": 1676048070,
     "status": "premium",
     "is_streamer": false,
@@ -52,36 +52,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2858,
-            "date": 1733221542,
-            "rd": 24
+            "rating": 2786,
+            "date": 1741523573,
+            "rd": 29
         },
         "best": {
-            "rating": 2928,
-            "date": 1729940228,
-            "game": "https://www.chess.com/game/live/97099353513"
+            "rating": 3011,
+            "date": 1737128577,
+            "game": "https://www.chess.com/game/live/130360185541"
         },
         "record": {
-            "win": 1812,
-            "loss": 1580,
-            "draw": 295
+            "win": 2186,
+            "loss": 1864,
+            "draw": 366
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2850,
-            "date": 1734116858,
-            "rd": 33
+            "rating": 2950,
+            "date": 1741474046,
+            "rd": 31
         },
         "best": {
-            "rating": 2965,
-            "date": 1732643427,
-            "game": "https://www.chess.com/game/live/95558369023"
+            "rating": 2985,
+            "date": 1737822171,
+            "game": "https://www.chess.com/game/live/131239830647"
         },
         "record": {
-            "win": 1637,
-            "loss": 1567,
-            "draw": 446
+            "win": 1842,
+            "loss": 1708,
+            "draw": 512
         }
     },
     "tactics": {
@@ -100,8 +100,8 @@
             "score": 64
         },
         "daily": {
-            "total_attempts": 44,
-            "score": 41
+            "total_attempts": 43,
+            "score": 40
         }
     }
 }

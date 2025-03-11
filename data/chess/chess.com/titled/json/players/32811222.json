@@ -5,10 +5,10 @@
     "url": "https://www.chess.com/member/Eagle_2019",
     "name": "Mamedov Edgar",
     "username": "eagle_2019",
-    "title": "FM",
-    "followers": 37,
+    "title": "IM",
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1733950875,
+    "last_online": 1741668871,
     "joined": 1485858606,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1162,
-            "date": 1696863050,
+            "date": 1739373565,
             "rd": 155
         },
         "best": {
@@ -84,9 +84,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2873,
-            "date": 1732060886,
-            "rd": 39
+            "rating": 2869,
+            "date": 1739297513,
+            "rd": 46
         },
         "best": {
             "rating": 2995,
@@ -94,9 +94,9 @@
             "game": "https://www.chess.com/game/live/119726385875"
         },
         "record": {
-            "win": 1640,
-            "loss": 1008,
-            "draw": 161
+            "win": 1691,
+            "loss": 1033,
+            "draw": 173
         }
     },
     "tactics": {
@@ -111,8 +111,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 62,
-            "score": 59
+            "total_attempts": 77,
+            "score": 74
+        },
+        "daily": {
+            "total_attempts": 77,
+            "score": 74
         }
     }
 }

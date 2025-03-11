@@ -6,10 +6,10 @@
     "name": "Alejandro Chinchilla",
     "username": "ach19",
     "title": "FM",
-    "followers": 118,
+    "followers": 129,
     "country": "https://api.chess.com/pub/country/HN",
     "location": "Estados Unidos",
-    "last_online": 1734127377,
+    "last_online": 1741703682,
     "joined": 1570755729,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1693,
-            "date": 1734180565,
-            "rd": 106
+            "rating": 1581,
+            "date": 1741656726,
+            "rd": 101
         },
         "best": {
             "rating": 1720,
@@ -28,17 +28,17 @@
             "game": "https://www.chess.com/game/daily/262012182"
         },
         "record": {
-            "win": 35,
-            "loss": 41,
-            "draw": 13,
-            "time_per_move": 81804,
+            "win": 47,
+            "loss": 46,
+            "draw": 14,
+            "time_per_move": 70976,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2099,
-            "date": 1731696711,
+            "rating": 2101,
+            "date": 1741671207,
             "rd": 49
         },
         "best": {
@@ -47,33 +47,33 @@
             "game": "https://www.chess.com/game/live/5269297432"
         },
         "record": {
-            "win": 125,
-            "loss": 98,
-            "draw": 29
+            "win": 127,
+            "loss": 101,
+            "draw": 31
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2217,
-            "date": 1731632291,
-            "rd": 35
+            "rating": 2197,
+            "date": 1737861787,
+            "rd": 42
         },
         "best": {
-            "rating": 2234,
-            "date": 1644077987,
-            "game": "https://www.chess.com/game/live/5242501403"
+            "rating": 2236,
+            "date": 1737344298,
+            "game": "https://www.chess.com/game/live/131083168011"
         },
         "record": {
-            "win": 366,
-            "loss": 336,
+            "win": 385,
+            "loss": 359,
             "draw": 22
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2334,
-            "date": 1734044015,
-            "rd": 22
+            "rating": 2130,
+            "date": 1741656817,
+            "rd": 28
         },
         "best": {
             "rating": 2488,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/111881554445"
         },
         "record": {
-            "win": 7776,
-            "loss": 7060,
-            "draw": 723
+            "win": 8093,
+            "loss": 7420,
+            "draw": 760
         }
     },
     "fide": 2113,

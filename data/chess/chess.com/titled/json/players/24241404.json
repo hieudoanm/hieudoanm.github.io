@@ -5,10 +5,10 @@
     "name": "Claudio C\u00f3ppola",
     "username": "ccoppola",
     "title": "IM",
-    "followers": 213,
+    "followers": 218,
     "country": "https://api.chess.com/pub/country/UY",
     "location": "Montevideo",
-    "last_online": 1734140810,
+    "last_online": 1741656307,
     "joined": 1442976664,
     "status": "premium",
     "is_streamer": false,
@@ -17,20 +17,20 @@
     "streaming_platforms": [],
     "chess960_daily": {
         "last": {
-            "rating": 1523,
-            "date": 1732718264,
-            "rd": 87
+            "rating": 1602,
+            "date": 1739911576,
+            "rd": 91
         },
         "best": {
-            "rating": 1523,
-            "date": 1732718264,
+            "rating": 1602,
+            "date": 1739487061,
             "game": "https://www.chess.com/game/daily/715577487"
         },
         "record": {
-            "win": 38,
+            "win": 47,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 43656,
+            "time_per_move": 43226,
             "timeout_percent": 0
         }
     },
@@ -70,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2422,
-            "date": 1734150123,
-            "rd": 38
+            "rating": 2352,
+            "date": 1741673214,
+            "rd": 37
         },
         "best": {
-            "rating": 2483,
-            "date": 1585015863,
+            "rating": 2513,
+            "date": 1736271870,
             "game": "https://www.chess.com/game/live/4825765565"
         },
         "record": {
-            "win": 961,
-            "loss": 715,
-            "draw": 73
+            "win": 1035,
+            "loss": 791,
+            "draw": 84
         }
     },
     "fide": 0,

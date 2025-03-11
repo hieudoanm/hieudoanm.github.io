@@ -6,8 +6,8 @@
     "username": "angel_lys_66",
     "title": "WCM",
     "followers": 31,
-    "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1732646523,
+    "country": "https://api.chess.com/pub/country/SI",
+    "last_online": 1741107759,
     "joined": 1610790613,
     "status": "premium",
     "is_streamer": false,
@@ -67,8 +67,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3288,
-            "date": 1732647213
+            "rating": 3301,
+            "date": 1740938913
         },
         "lowest": {
             "rating": 1212,

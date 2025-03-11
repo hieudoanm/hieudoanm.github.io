@@ -8,12 +8,12 @@
     "followers": 15,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Moscow",
-    "last_online": 1728141947,
+    "last_online": 1737407052,
     "joined": 1586100954,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2709,
-            "date": 1728717409,
-            "rd": 39
+            "rating": 2700,
+            "date": 1741674018,
+            "rd": 49
         },
         "best": {
             "rating": 2717,
@@ -44,8 +44,8 @@
             "game": "https://www.chess.com/game/live/5974649158"
         },
         "record": {
-            "win": 687,
-            "loss": 563,
+            "win": 688,
+            "loss": 566,
             "draw": 144
         }
     },

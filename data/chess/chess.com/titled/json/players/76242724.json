@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/76242724.ab3156de.200x200o.ea52adb8d003.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/76242724.40b148ac.200x200o.bda447c7d880.jpg",
     "player_id": 76242724,
     "@id": "https://api.chess.com/pub/player/jesper_kjaergaard-jensen",
     "url": "https://www.chess.com/member/Jesper_Kjaergaard-Jensen",
     "name": "Jesper Kjaergaard-Jensen",
     "username": "jesper_kjaergaard-jensen",
     "title": "CM",
-    "followers": 13,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/DK",
     "location": "Basel",
-    "last_online": 1733846178,
+    "last_online": 1741672456,
     "joined": 1586514111,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1784,
-            "date": 1728486036,
-            "rd": 72
+            "rating": 1533,
+            "date": 1741702035,
+            "rd": 97
         },
         "best": {
             "rating": 2023,
@@ -28,11 +28,17 @@
             "game": "https://www.chess.com/game/daily/318705198"
         },
         "record": {
-            "win": 106,
-            "loss": 45,
+            "win": 129,
+            "loss": 50,
             "draw": 20,
-            "time_per_move": 9351,
-            "timeout_percent": 0
+            "time_per_move": 9210,
+            "timeout_percent": 3
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 10
         }
     },
     "chess960_daily": {
@@ -50,32 +56,38 @@
             "win": 15,
             "loss": 10,
             "draw": 1,
-            "time_per_move": 9351,
+            "time_per_move": 9210,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 10
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2083,
-            "date": 1629758947,
-            "rd": 101
+            "rating": 2100,
+            "date": 1740261448,
+            "rd": 48
         },
         "best": {
-            "rating": 2083,
-            "date": 1629758947,
-            "game": "https://www.chess.com/game/live/6198534398"
+            "rating": 2108,
+            "date": 1739732247,
+            "game": "https://www.chess.com/game/live/133465772891"
         },
         "record": {
-            "win": 34,
-            "loss": 8,
+            "win": 40,
+            "loss": 14,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2139,
-            "date": 1730815830,
-            "rd": 101
+            "rating": 1940,
+            "date": 1741462264,
+            "rd": 66
         },
         "best": {
             "rating": 2351,
@@ -83,16 +95,16 @@
             "game": "https://www.chess.com/game/live/8247216087"
         },
         "record": {
-            "win": 115,
-            "loss": 83,
+            "win": 126,
+            "loss": 105,
             "draw": 11
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2315,
-            "date": 1733875609,
-            "rd": 35
+            "rating": 2294,
+            "date": 1741696451,
+            "rd": 37
         },
         "best": {
             "rating": 2389,
@@ -100,9 +112,9 @@
             "game": "https://www.chess.com/game/live/124565321765"
         },
         "record": {
-            "win": 891,
-            "loss": 867,
-            "draw": 147
+            "win": 954,
+            "loss": 1000,
+            "draw": 161
         }
     },
     "fide": 2081,

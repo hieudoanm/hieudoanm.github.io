@@ -9,7 +9,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Cebu City",
-    "last_online": 1732082985,
+    "last_online": 1741450116,
     "joined": 1525399889,
     "status": "premium",
     "is_streamer": false,
@@ -54,43 +54,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2261,
-            "date": 1712283321,
-            "rd": 156
+            "rating": 2228,
+            "date": 1737512455,
+            "rd": 69
         },
         "best": {
-            "rating": 2331,
-            "date": 1656211089,
-            "game": "https://www.chess.com/game/live/53233155879"
+            "rating": 2434,
+            "date": 1736604702,
+            "game": "https://www.chess.com/game/live/130343438945"
         },
         "record": {
-            "win": 109,
-            "loss": 69,
-            "draw": 5
+            "win": 118,
+            "loss": 81,
+            "draw": 7
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2215,
-            "date": 1710686253,
-            "rd": 85
+            "rating": 2226,
+            "date": 1741453693,
+            "rd": 94
         },
         "best": {
-            "rating": 2239,
-            "date": 1617097230,
-            "game": "https://www.chess.com/game/live/9620159671"
+            "rating": 2280,
+            "date": 1739033790,
+            "game": "https://www.chess.com/game/live/132772211087"
         },
         "record": {
-            "win": 176,
-            "loss": 118,
-            "draw": 14
+            "win": 182,
+            "loss": 123,
+            "draw": 15
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3150,
-            "date": 1721120938
+            "rating": 3152,
+            "date": 1735939881
         },
         "lowest": {
             "rating": 410,

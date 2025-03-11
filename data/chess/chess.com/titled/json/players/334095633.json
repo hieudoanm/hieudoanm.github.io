@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734155010,
+    "last_online": 1741678783,
     "joined": 1703329692,
     "status": "premium",
     "is_streamer": false,
@@ -32,25 +32,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2782,
-            "date": 1718007728,
-            "rd": 39
+            "rating": 2855,
+            "date": 1737133159,
+            "rd": 45
         },
         "best": {
-            "rating": 2812,
-            "date": 1718007142,
-            "game": "https://www.chess.com/game/live/110826750993"
+            "rating": 2858,
+            "date": 1736246034,
+            "game": "https://www.chess.com/game/live/129984523773"
         },
         "record": {
-            "win": 69,
-            "loss": 29,
-            "draw": 5
+            "win": 82,
+            "loss": 35,
+            "draw": 9
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2788,
-            "date": 1728403861,
+            "rating": 2790,
+            "date": 1738919546,
             "rd": 49
         },
         "best": {
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/110484140525"
         },
         "record": {
-            "win": 115,
-            "loss": 68,
-            "draw": 15
+            "win": 117,
+            "loss": 70,
+            "draw": 16
         }
     },
     "tactics": {
@@ -78,10 +78,6 @@
         "best": {
             "total_attempts": 59,
             "score": 56
-        },
-        "daily": {
-            "total_attempts": 51,
-            "score": 48
         }
     }
 }

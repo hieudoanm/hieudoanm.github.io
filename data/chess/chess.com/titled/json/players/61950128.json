@@ -5,70 +5,70 @@
     "url": "https://www.chess.com/member/Gregory_the_Illuminator",
     "username": "gregory_the_illuminator",
     "title": "CM",
-    "followers": 0,
+    "followers": 1,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1734108296,
+    "last_online": 1741281167,
     "joined": 1559757363,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2116,
-            "date": 1734095563,
-            "rd": 47
+            "rating": 2205,
+            "date": 1740670950,
+            "rd": 48
         },
         "best": {
-            "rating": 2118,
-            "date": 1734031587,
-            "game": "https://www.chess.com/game/live/127769405953"
+            "rating": 2217,
+            "date": 1738087483,
+            "game": "https://www.chess.com/game/live/129892764271"
         },
         "record": {
-            "win": 8,
-            "loss": 4,
-            "draw": 0
+            "win": 32,
+            "loss": 15,
+            "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2136,
-            "date": 1734035277,
+            "rating": 2152,
+            "date": 1735231892,
             "rd": 41
         },
         "best": {
-            "rating": 2168,
-            "date": 1734034082,
-            "game": "https://www.chess.com/game/live/127773681269"
+            "rating": 2190,
+            "date": 1735231348,
+            "game": "https://www.chess.com/game/live/128970183177"
         },
         "record": {
-            "win": 41,
-            "loss": 29,
+            "win": 50,
+            "loss": 35,
             "draw": 6
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2265,
-            "date": 1734033939,
-            "rd": 56
+            "rating": 2318,
+            "date": 1739219395,
+            "rd": 53
         },
         "best": {
-            "rating": 2287,
-            "date": 1734024835,
-            "game": "https://www.chess.com/game/live/127599084251"
+            "rating": 2335,
+            "date": 1737903250,
+            "game": "https://www.chess.com/game/live/128883756791"
         },
         "record": {
-            "win": 80,
-            "loss": 47,
-            "draw": 1
+            "win": 101,
+            "loss": 58,
+            "draw": 3
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3144,
-            "date": 1734111188
+            "rating": 3410,
+            "date": 1738250633
         },
         "lowest": {
             "rating": 1014,
@@ -77,8 +77,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 22,
-            "score": 19
+            "total_attempts": 54,
+            "score": 51
         }
     }
 }

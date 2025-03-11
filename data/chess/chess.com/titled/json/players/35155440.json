@@ -5,10 +5,10 @@
     "name": "Cheila Andre",
     "username": "cheilaandre",
     "title": "WCM",
-    "followers": 25,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/MZ",
     "location": "Mozambique",
-    "last_online": 1734105314,
+    "last_online": 1741587645,
     "joined": 1493489316,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1741,
-            "date": 1734165282,
-            "rd": 54
+            "rating": 1736,
+            "date": 1741245676,
+            "rd": 57
         },
         "best": {
             "rating": 1862,
@@ -46,8 +46,8 @@
             "game": "https://www.chess.com/game/live/48845332289"
         },
         "record": {
-            "win": 415,
-            "loss": 414,
+            "win": 425,
+            "loss": 426,
             "draw": 18
         }
     },
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1512,
-            "date": 1682174098,
-            "rd": 134
+            "rating": 1444,
+            "date": 1741671025,
+            "rd": 41
         },
         "best": {
             "rating": 1613,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/2444149420"
         },
         "record": {
-            "win": 876,
-            "loss": 796,
-            "draw": 28
+            "win": 927,
+            "loss": 837,
+            "draw": 31
         }
     },
     "tactics": {

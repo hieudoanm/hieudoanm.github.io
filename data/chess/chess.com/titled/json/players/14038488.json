@@ -5,14 +5,15 @@
     "name": "Feh\u00e9r \u00c1d\u00e1m",
     "username": "elchess27",
     "title": "FM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budakeszi",
-    "last_online": 1616008501,
+    "last_online": 1741637022,
     "joined": 1382640130,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -64,26 +65,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2241,
-            "date": 1470383026,
-            "rd": 67
+            "rating": 2539,
+            "date": 1741639506,
+            "rd": 46
         },
         "best": {
-            "rating": 2267,
-            "date": 1470335007,
+            "rating": 2507,
+            "date": 1738495592,
             "game": "https://www.chess.com/game/live/1178089092"
         },
         "record": {
-            "win": 227,
-            "loss": 194,
-            "draw": 17
+            "win": 241,
+            "loss": 197,
+            "draw": 20
         }
     },
     "fide": 2300,
     "tactics": {
         "highest": {
-            "rating": 2080,
-            "date": 1614883254
+            "rating": 2212,
+            "date": 1741103518
         },
         "lowest": {
             "rating": 1053,

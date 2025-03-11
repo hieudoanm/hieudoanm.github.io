@@ -6,38 +6,38 @@
     "name": "Sergey Pogorelskikh",
     "username": "green_chesss",
     "title": "FM",
-    "followers": 2,
+    "followers": 3,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Serbia",
-    "last_online": 1734030975,
+    "last_online": 1741599401,
     "joined": 1727172642,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2342,
-            "date": 1729200718,
-            "rd": 56
+            "rating": 2405,
+            "date": 1738007900,
+            "rd": 44
         },
         "best": {
-            "rating": 2360,
-            "date": 1729199605,
-            "game": "https://www.chess.com/game/live/121086057157"
+            "rating": 2414,
+            "date": 1737300830,
+            "game": "https://www.chess.com/game/live/131407144831"
         },
         "record": {
-            "win": 26,
-            "loss": 14,
-            "draw": 3
+            "win": 48,
+            "loss": 35,
+            "draw": 9
         }
     },
     "fide": 2180,
     "tactics": {
         "highest": {
-            "rating": 3160,
-            "date": 1733930961
+            "rating": 3236,
+            "date": 1736954030
         },
         "lowest": {
             "rating": 1000,

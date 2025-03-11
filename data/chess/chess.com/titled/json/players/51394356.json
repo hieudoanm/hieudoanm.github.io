@@ -5,10 +5,10 @@
     "name": "\u041f\u0430\u0432\u0435\u043b \u0422\u043e\u0440\u043e\u043f\u043e\u0432",
     "username": "emp3rador",
     "title": "FM",
-    "followers": 26,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u041a\u0430\u0437\u0430\u043d\u044c",
-    "last_online": 1734013429,
+    "last_online": 1739199047,
     "joined": 1541160987,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2631,
-            "date": 1734014301,
-            "rd": 48
+            "rating": 2618,
+            "date": 1738710313,
+            "rd": 45
         },
         "best": {
             "rating": 2696,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/103415552651"
         },
         "record": {
-            "win": 792,
-            "loss": 837,
-            "draw": 172
+            "win": 798,
+            "loss": 846,
+            "draw": 174
         }
     },
     "fide": 2336,

@@ -6,10 +6,10 @@
     "name": "Arnar Erwin Gunnarsson",
     "username": "xtrmntr78",
     "title": "IM",
-    "followers": 564,
+    "followers": 644,
     "country": "https://api.chess.com/pub/country/IS",
     "location": "Reykjavik",
-    "last_online": 1734180000,
+    "last_online": 1741652960,
     "joined": 1323311101,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 612,
-            "date": 1731129997,
-            "rd": 253
+            "rating": 839,
+            "date": 1741622633,
+            "rd": 231
         },
         "best": {
             "rating": 1200,
             "date": 1323311101,
-            "game": "https://www.chess.com/game/daily/525487491"
+            "game": "https://www.chess.com/game/daily/781597263"
         },
         "record": {
-            "win": 1,
-            "loss": 2,
+            "win": 2,
+            "loss": 3,
             "draw": 0,
-            "time_per_move": 55984,
+            "time_per_move": 24281,
             "timeout_percent": 0
         }
     },
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2764,
-            "date": 1734183185,
-            "rd": 16
+            "rating": 2795,
+            "date": 1741675571,
+            "rd": 24
         },
         "best": {
             "rating": 2845,
@@ -64,33 +64,32 @@
             "game": "https://www.chess.com/game/live/55055149477"
         },
         "record": {
-            "win": 15750,
-            "loss": 15672,
-            "draw": 1590
+            "win": 17292,
+            "loss": 17273,
+            "draw": 1761
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2752,
-            "date": 1734129543,
-            "rd": 43
+            "rating": 2766,
+            "date": 1741682437
         },
         "best": {
-            "rating": 2876,
-            "date": 1707613737,
+            "rating": 2886,
+            "date": 1738976450,
             "game": "https://www.chess.com/game/live/92714423205"
         },
         "record": {
-            "win": 3361,
-            "loss": 3223,
-            "draw": 558
+            "win": 3648,
+            "loss": 3559,
+            "draw": 622
         }
     },
     "fide": 2420,
     "tactics": {
         "highest": {
-            "rating": 400,
-            "date": 1323311101
+            "rating": 3545,
+            "date": 1739654561
         },
         "lowest": {
             "rating": 400,

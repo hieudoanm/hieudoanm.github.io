@@ -6,10 +6,10 @@
     "name": "Juan Armando R\u00f6hl Montes",
     "username": "juanarmandorohl",
     "title": "IM",
-    "followers": 221,
+    "followers": 223,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "Caracas",
-    "last_online": 1722744639,
+    "last_online": 1738096873,
     "joined": 1588298520,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2674,
-            "date": 1726187799,
-            "rd": 44
+            "rating": 2707,
+            "date": 1738007985,
+            "rd": 48
         },
         "best": {
             "rating": 2781,
@@ -64,8 +64,8 @@
             "game": "https://www.chess.com/game/live/109282306793"
         },
         "record": {
-            "win": 3335,
-            "loss": 2183,
+            "win": 3342,
+            "loss": 2185,
             "draw": 545
         }
     },

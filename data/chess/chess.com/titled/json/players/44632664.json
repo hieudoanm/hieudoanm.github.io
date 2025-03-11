@@ -9,7 +9,7 @@
     "followers": 68,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u0427\u043e\u0440\u0442\u043a\u0456\u0432",
-    "last_online": 1734127940,
+    "last_online": 1741694812,
     "joined": 1521981183,
     "status": "premium",
     "is_streamer": false,
@@ -56,9 +56,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2439,
-            "date": 1726859003,
-            "rd": 47
+            "rating": 2464,
+            "date": 1739733575,
+            "rd": 46
         },
         "best": {
             "rating": 2509,
@@ -66,33 +66,33 @@
             "game": "https://www.chess.com/game/live/45262143207"
         },
         "record": {
-            "win": 357,
-            "loss": 182,
-            "draw": 59
+            "win": 363,
+            "loss": 184,
+            "draw": 60
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2709,
-            "date": 1726577099,
-            "rd": 45
+            "rating": 2712,
+            "date": 1738269543,
+            "rd": 35
         },
         "best": {
-            "rating": 2709,
-            "date": 1726577099,
-            "game": "https://www.chess.com/game/live/5751010236"
+            "rating": 2759,
+            "date": 1736029617,
+            "game": "https://www.chess.com/game/live/130963189731"
         },
         "record": {
-            "win": 1461,
-            "loss": 1741,
-            "draw": 198
+            "win": 1530,
+            "loss": 1796,
+            "draw": 208
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2875,
-            "date": 1733249235,
-            "rd": 46
+            "rating": 2905,
+            "date": 1739564920,
+            "rd": 34
         },
         "best": {
             "rating": 2920,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/90064175163"
         },
         "record": {
-            "win": 3674,
-            "loss": 4435,
-            "draw": 809
+            "win": 3714,
+            "loss": 4474,
+            "draw": 817
         }
     },
     "fide": 2258,

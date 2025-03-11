@@ -6,9 +6,9 @@
     "name": "Gabriel Voiteanu",
     "username": "petrolulsah",
     "title": "FM",
-    "followers": 61,
+    "followers": 62,
     "country": "https://api.chess.com/pub/country/RO",
-    "last_online": 1726922169,
+    "last_online": 1741696492,
     "joined": 1585842079,
     "status": "premium",
     "is_streamer": false,
@@ -31,9 +31,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1965,
-            "date": 1706690936,
-            "rd": 151
+            "rating": 1975,
+            "date": 1741699174,
+            "rd": 185
         },
         "best": {
             "rating": 2238,
@@ -41,7 +41,7 @@
             "game": "https://www.chess.com/game/live/35977175199"
         },
         "record": {
-            "win": 294,
+            "win": 296,
             "loss": 30,
             "draw": 21
         }

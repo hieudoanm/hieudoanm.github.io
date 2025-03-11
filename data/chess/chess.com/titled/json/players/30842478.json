@@ -6,10 +6,10 @@
     "name": "Dobre Claudiu Cristian",
     "username": "imdvb6307",
     "title": "IM",
-    "followers": 66,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Ploiesti",
-    "last_online": 1733195718,
+    "last_online": 1741324164,
     "joined": 1478808523,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2490,
-            "date": 1732060862,
-            "rd": 47
+            "rating": 2444,
+            "date": 1739292252,
+            "rd": 64
         },
         "best": {
             "rating": 2592,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/95552455933"
         },
         "record": {
-            "win": 878,
-            "loss": 614,
-            "draw": 180
+            "win": 882,
+            "loss": 621,
+            "draw": 181
         }
     },
     "fide": 2302,
     "tactics": {
         "highest": {
-            "rating": 3547,
-            "date": 1726746486
+            "rating": 3601,
+            "date": 1741331244
         },
         "lowest": {
             "rating": 2312,

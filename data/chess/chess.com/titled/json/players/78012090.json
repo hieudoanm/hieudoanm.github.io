@@ -8,7 +8,7 @@
     "title": "CM",
     "followers": 10,
     "country": "https://api.chess.com/pub/country/MD",
-    "last_online": 1734065526,
+    "last_online": 1741615811,
     "joined": 1588052402,
     "status": "premium",
     "is_streamer": false,
@@ -17,16 +17,21 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2000,
-            "date": 1717034498,
-            "rd": 350
+            "rating": 821,
+            "date": 1739434693,
+            "rd": 142
+        },
+        "best": {
+            "rating": 2007,
+            "date": 1736013439,
+            "game": "https://www.chess.com/game/daily/750310489"
         },
         "record": {
-            "win": 1,
-            "loss": 1,
+            "win": 12,
+            "loss": 12,
             "draw": 0,
-            "time_per_move": 0,
-            "timeout_percent": 0
+            "time_per_move": 25980,
+            "timeout_percent": 55
         }
     },
     "chess_rapid": {
@@ -65,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2350,
-            "date": 1732054768,
-            "rd": 54
+            "rating": 2310,
+            "date": 1740528405,
+            "rd": 62
         },
         "best": {
-            "rating": 2378,
-            "date": 1727212493,
+            "rating": 2399,
+            "date": 1735667152,
             "game": "https://www.chess.com/game/live/120324058811"
         },
         "record": {
-            "win": 137,
-            "loss": 140,
-            "draw": 19
+            "win": 145,
+            "loss": 154,
+            "draw": 22
         }
     },
     "fide": 2177,
@@ -95,6 +100,10 @@
         "best": {
             "total_attempts": 64,
             "score": 61
+        },
+        "daily": {
+            "total_attempts": 13,
+            "score": 10
         }
     }
 }

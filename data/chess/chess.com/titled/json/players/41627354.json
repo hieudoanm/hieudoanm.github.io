@@ -5,9 +5,9 @@
     "name": "Georgios Gkoumas",
     "username": "gg91",
     "title": "IM",
-    "followers": 19,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1734106997,
+    "last_online": 1741634359,
     "joined": 1514108578,
     "status": "premium",
     "is_streamer": false,
@@ -33,17 +33,17 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2643,
-            "date": 1730230811,
+            "rating": 2654,
+            "date": 1738698877,
             "rd": 49
         },
         "best": {
-            "rating": 2643,
-            "date": 1730230811,
+            "rating": 2654,
+            "date": 1738698877,
             "game": "https://www.chess.com/game/live/3323060834"
         },
         "record": {
-            "win": 409,
+            "win": 416,
             "loss": 215,
             "draw": 22
         }
@@ -67,8 +67,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2835,
-            "date": 1701268457
+            "rating": 2845,
+            "date": 1734611232
         },
         "lowest": {
             "rating": 1211,

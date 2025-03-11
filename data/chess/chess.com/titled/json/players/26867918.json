@@ -6,10 +6,10 @@
     "name": "Mikhail Bilous",
     "username": "misha_bilous",
     "title": "IM",
-    "followers": 212,
+    "followers": 217,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Originally from Ukraine, based in Vienna",
-    "last_online": 1734092106,
+    "last_online": 1741693943,
     "joined": 1456154637,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1409,
-            "date": 1731950634,
+            "date": 1738557431,
             "rd": 212
         },
         "best": {
@@ -32,7 +32,7 @@
             "loss": 1,
             "draw": 0,
             "time_per_move": 107559,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
@@ -54,8 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2562,
-            "date": 1730465188,
+            "rating": 2547,
+            "date": 1736271166,
             "rd": 49
         },
         "best": {
@@ -65,14 +65,14 @@
         },
         "record": {
             "win": 380,
-            "loss": 350,
+            "loss": 352,
             "draw": 43
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2532,
-            "date": 1731449248,
+            "rating": 2530,
+            "date": 1741363474,
             "rd": 49
         },
         "best": {
@@ -82,7 +82,7 @@
         },
         "record": {
             "win": 788,
-            "loss": 771,
+            "loss": 773,
             "draw": 118
         }
     },

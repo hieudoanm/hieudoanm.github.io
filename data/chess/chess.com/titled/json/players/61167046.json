@@ -6,10 +6,10 @@
     "name": "Vrushali Deodhar",
     "username": "vrush_1310",
     "title": "WFM",
-    "followers": 357,
+    "followers": 361,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Mumbai",
-    "last_online": 1734178718,
+    "last_online": 1741616201,
     "joined": 1558253122,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1629,
-            "date": 1734146924,
+            "date": 1741433608,
             "rd": 179
         },
         "best": {
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2475,
-            "date": 1734180915,
-            "rd": 30
+            "rating": 2584,
+            "date": 1741685823,
+            "rd": 26
         },
         "best": {
             "rating": 2624,
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/23546466839"
         },
         "record": {
-            "win": 9686,
-            "loss": 9378,
-            "draw": 1127
+            "win": 9940,
+            "loss": 9615,
+            "draw": 1166
         }
     },
     "fide": 2120,
     "tactics": {
         "highest": {
-            "rating": 3226,
-            "date": 1727297777
+            "rating": 3314,
+            "date": 1738086242
         },
         "lowest": {
             "rating": 1000,
@@ -118,12 +118,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 70,
-            "score": 67
-        },
-        "daily": {
-            "total_attempts": 48,
-            "score": 45
+            "total_attempts": 74,
+            "score": 71
         }
     }
 }

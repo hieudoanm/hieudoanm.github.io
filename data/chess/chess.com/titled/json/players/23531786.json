@@ -6,9 +6,9 @@
     "name": "Tamaz Mgeladze",
     "username": "maitreia",
     "title": "IM",
-    "followers": 964,
+    "followers": 994,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1734182987,
+    "last_online": 1741632262,
     "joined": 1438710087,
     "status": "premium",
     "is_streamer": false,
@@ -29,26 +29,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2601,
-            "date": 1725132653,
-            "rd": 40
+            "rating": 2666,
+            "date": 1741633590,
+            "rd": 24
         },
         "best": {
-            "rating": 2643,
-            "date": 1705175725,
+            "rating": 2667,
+            "date": 1739567263,
             "game": "https://www.chess.com/game/live/94073493481"
         },
         "record": {
-            "win": 1419,
-            "loss": 2102,
-            "draw": 298
+            "win": 1680,
+            "loss": 2392,
+            "draw": 343
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2921,
-            "date": 1733258143,
-            "rd": 49
+            "rating": 2912,
+            "date": 1740674841,
+            "rd": 48
         },
         "best": {
             "rating": 2921,
@@ -57,15 +57,15 @@
         },
         "record": {
             "win": 16826,
-            "loss": 19705,
-            "draw": 4439
+            "loss": 19714,
+            "draw": 4440
         }
     },
     "fide": 2314,
     "tactics": {
         "highest": {
-            "rating": 3470,
-            "date": 1731854323
+            "rating": 3547,
+            "date": 1735751334
         },
         "lowest": {
             "rating": 1433,
@@ -75,7 +75,11 @@
     "puzzle_rush": {
         "best": {
             "total_attempts": 51,
-            "score": 48
+            "score": 49
+        },
+        "daily": {
+            "total_attempts": 33,
+            "score": 30
         }
     }
 }

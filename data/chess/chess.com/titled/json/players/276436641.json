@@ -7,7 +7,7 @@
     "title": "WCM",
     "followers": 4,
     "country": "https://api.chess.com/pub/country/KP",
-    "last_online": 1734177861,
+    "last_online": 1741693776,
     "joined": 1681783765,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1113,
-            "date": 1733922974,
+            "date": 1737560361,
             "rd": 181
         },
         "best": {
@@ -31,12 +31,6 @@
             "draw": 0,
             "time_per_move": 32883,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {

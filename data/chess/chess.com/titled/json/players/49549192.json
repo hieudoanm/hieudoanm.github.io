@@ -5,9 +5,9 @@
     "name": "Pierre Barbot",
     "username": "barbix1",
     "title": "IM",
-    "followers": 70,
+    "followers": 73,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734010809,
+    "last_online": 1741629299,
     "joined": 1536416806,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2031,
-            "date": 1726865052,
-            "rd": 245
+            "date": 1741034859,
+            "rd": 49
         },
         "best": {
             "rating": 2180,
@@ -45,7 +45,7 @@
             "game": "https://www.chess.com/game/live/11215462537"
         },
         "record": {
-            "win": 7,
+            "win": 10,
             "loss": 1,
             "draw": 0
         }
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2233,
-            "date": 1728404327,
-            "rd": 58
+            "rating": 2298,
+            "date": 1741111768,
+            "rd": 65
         },
         "best": {
             "rating": 2694,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/10489620059"
         },
         "record": {
-            "win": 998,
-            "loss": 752,
-            "draw": 209
+            "win": 1006,
+            "loss": 764,
+            "draw": 211
         }
     },
     "fide": 0,

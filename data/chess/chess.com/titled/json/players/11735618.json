@@ -8,7 +8,7 @@
     "followers": 24,
     "country": "https://api.chess.com/pub/country/BE",
     "location": "Brugge",
-    "last_online": 1733733081,
+    "last_online": 1741593950,
     "joined": 1367514801,
     "status": "premium",
     "is_streamer": false,
@@ -88,8 +88,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2425,
-            "date": 1608064846
+            "rating": 2576,
+            "date": 1739459080
         },
         "lowest": {
             "rating": 1357,

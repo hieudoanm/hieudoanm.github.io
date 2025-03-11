@@ -1,14 +1,15 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/9164966.38add816.200x200o.31fc5ec56d1c.jpg",
     "player_id": 9164966,
-    "@id": "https://api.chess.com/pub/player/nikolan98",
-    "url": "https://www.chess.com/member/NikolaN98",
+    "@id": "https://api.chess.com/pub/player/nikola-fiveminuteschess",
+    "url": "https://www.chess.com/member/Nikola-FiveMinutesChess",
     "name": "Nikola Nikolovski",
-    "username": "nikolan98",
+    "username": "nikola-fiveminuteschess",
     "title": "IM",
-    "followers": 76,
+    "followers": 82,
     "country": "https://api.chess.com/pub/country/MK",
     "location": "Skopje",
-    "last_online": 1728324929,
+    "last_online": 1741615040,
     "joined": 1349553389,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2750,
-            "date": 1664579322,
-            "rd": 105
+            "rating": 2738,
+            "date": 1740008325,
+            "rd": 48
         },
         "best": {
             "rating": 2766,
@@ -61,12 +62,12 @@
             "game": "https://www.chess.com/game/live/9495262863"
         },
         "record": {
-            "win": 587,
-            "loss": 451,
-            "draw": 66
+            "win": 588,
+            "loss": 452,
+            "draw": 68
         }
     },
-    "fide": 2454,
+    "fide": 2398,
     "tactics": {
         "highest": {
             "rating": 3148,

@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/arnacman",
     "username": "arnacman",
     "title": "FM",
-    "followers": 102,
+    "followers": 103,
     "country": "https://api.chess.com/pub/country/BE",
-    "last_online": 1733843183,
+    "last_online": 1741514539,
     "joined": 1297185046,
     "status": "premium",
     "is_streamer": false,
@@ -44,19 +44,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2538,
-            "date": 1734171672,
-            "rd": 28
+            "rating": 2471,
+            "date": 1741703890,
+            "rd": 29
         },
         "best": {
-            "rating": 2597,
-            "date": 1602873929,
-            "game": "https://www.chess.com/game/live/127261858895"
+            "rating": 2599,
+            "date": 1735138310,
+            "game": "https://www.chess.com/game/live/129327147341"
         },
         "record": {
-            "win": 9366,
-            "loss": 7386,
-            "draw": 1035
+            "win": 9645,
+            "loss": 7624,
+            "draw": 1072
         }
     },
     "tactics": {

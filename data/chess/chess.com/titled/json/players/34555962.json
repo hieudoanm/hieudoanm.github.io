@@ -6,10 +6,10 @@
     "name": "Kien Le",
     "username": "kien05",
     "title": "CM",
-    "followers": 204,
+    "followers": 208,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Sydney",
-    "last_online": 1733739885,
+    "last_online": 1741680521,
     "joined": 1491454339,
     "status": "premium",
     "is_streamer": false,
@@ -73,25 +73,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2847,
-            "date": 1727776400,
-            "rd": 45
+            "rating": 2830,
+            "date": 1741003708,
+            "rd": 40
         },
         "best": {
-            "rating": 2866,
-            "date": 1721059092,
+            "rating": 2919,
+            "date": 1738446081,
             "game": "https://www.chess.com/game/live/104504501333"
         },
         "record": {
-            "win": 793,
-            "loss": 492,
-            "draw": 61
+            "win": 844,
+            "loss": 534,
+            "draw": 71
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2834,
-            "date": 1728531978,
+            "rating": 2825,
+            "date": 1740143564,
             "rd": 49
         },
         "best": {
@@ -101,7 +101,7 @@
         },
         "record": {
             "win": 933,
-            "loss": 578,
+            "loss": 579,
             "draw": 129
         }
     },

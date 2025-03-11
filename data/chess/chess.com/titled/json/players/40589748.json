@@ -5,10 +5,10 @@
     "name": "Barath Kalyan M",
     "username": "barath1308",
     "title": "CM",
-    "followers": 20,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "pattukottai",
-    "last_online": 1733736265,
+    "last_online": 1741103792,
     "joined": 1511271127,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2096,
-            "date": 1732112330,
-            "rd": 54
+            "rating": 2065,
+            "date": 1741068887,
+            "rd": 53
         },
         "best": {
             "rating": 2154,
@@ -63,33 +63,33 @@
             "game": "https://www.chess.com/game/live/123050380561"
         },
         "record": {
-            "win": 49,
-            "loss": 36,
-            "draw": 3
+            "win": 62,
+            "loss": 50,
+            "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2527,
-            "date": 1729861127,
-            "rd": 37
+            "rating": 2569,
+            "date": 1741111639,
+            "rd": 44
         },
         "best": {
-            "rating": 2570,
-            "date": 1716903515,
-            "game": "https://www.chess.com/game/live/106413980969"
+            "rating": 2572,
+            "date": 1741109362,
+            "game": "https://www.chess.com/game/live/134842754049"
         },
         "record": {
-            "win": 230,
-            "loss": 159,
+            "win": 253,
+            "loss": 179,
             "draw": 22
         }
     },
     "fide": 2086,
     "tactics": {
         "highest": {
-            "rating": 3470,
-            "date": 1723210255
+            "rating": 3487,
+            "date": 1739508377
         },
         "lowest": {
             "rating": 1212,

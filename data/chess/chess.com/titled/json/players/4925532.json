@@ -9,7 +9,7 @@
     "followers": 92,
     "country": "https://api.chess.com/pub/country/PR",
     "location": "Puerto Rico",
-    "last_online": 1734017404,
+    "last_online": 1740515055,
     "joined": 1301541816,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2345,
-            "date": 1733177388,
-            "rd": 36
+            "rating": 2321,
+            "date": 1741619782,
+            "rd": 48
         },
         "best": {
             "rating": 2413,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/125770798121"
         },
         "record": {
-            "win": 8247,
-            "loss": 6442,
-            "draw": 1074
+            "win": 8286,
+            "loss": 6481,
+            "draw": 1084
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3351,
-            "date": 1705111710
+            "rating": 3381,
+            "date": 1741653608
         },
         "lowest": {
             "rating": 1211,
@@ -100,10 +100,6 @@
         "best": {
             "total_attempts": 51,
             "score": 48
-        },
-        "daily": {
-            "total_attempts": 39,
-            "score": 37
         }
     }
 }

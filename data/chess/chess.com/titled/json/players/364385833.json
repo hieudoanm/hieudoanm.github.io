@@ -5,9 +5,9 @@
     "name": "Jeppe Hald Falkesgaard",
     "username": "jeppesen08",
     "title": "FM",
-    "followers": 4,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/DK",
-    "last_online": 1734164223,
+    "last_online": 1741426426,
     "joined": 1716220722,
     "status": "premium",
     "is_streamer": false,
@@ -16,19 +16,19 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2579,
-            "date": 1732734264,
-            "rd": 41
+            "rating": 2551,
+            "date": 1739553343,
+            "rd": 34
         },
         "best": {
-            "rating": 2641,
-            "date": 1731517592,
-            "game": "https://www.chess.com/game/live/125255947495"
+            "rating": 2706,
+            "date": 1734449937,
+            "game": "https://www.chess.com/game/live/128125172313"
         },
         "record": {
-            "win": 142,
-            "loss": 115,
-            "draw": 17
+            "win": 246,
+            "loss": 207,
+            "draw": 27
         }
     },
     "chess_blitz": {
@@ -51,8 +51,8 @@
     "fide": 2353,
     "tactics": {
         "highest": {
-            "rating": 3718,
-            "date": 1727293321
+            "rating": 3743,
+            "date": 1734806612
         },
         "lowest": {
             "rating": 1000,

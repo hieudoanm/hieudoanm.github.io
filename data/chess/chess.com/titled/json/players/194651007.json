@@ -5,14 +5,14 @@
     "name": "Dinmukhammed Tulendinov",
     "username": "dinnukhammedtulendinov",
     "title": "FM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734002687,
+    "last_online": 1741195783,
     "joined": 1661421411,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -45,26 +45,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2407,
-            "date": 1734003392,
-            "rd": 35
+            "rating": 2486,
+            "date": 1741133128,
+            "rd": 33
         },
         "best": {
-            "rating": 2435,
-            "date": 1732547617,
-            "game": "https://www.chess.com/game/live/124583399511"
+            "rating": 2486,
+            "date": 1741133128,
+            "game": "https://www.chess.com/game/live/134869149613"
         },
         "record": {
-            "win": 238,
-            "loss": 244,
-            "draw": 34
+            "win": 313,
+            "loss": 345,
+            "draw": 44
         }
     },
     "fide": 2303,
     "tactics": {
         "highest": {
-            "rating": 2785,
-            "date": 1732894240
+            "rating": 3388,
+            "date": 1738562515
         },
         "lowest": {
             "rating": 1000,

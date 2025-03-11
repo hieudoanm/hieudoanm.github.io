@@ -9,7 +9,7 @@
     "followers": 39,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1734041047,
+    "last_online": 1740926012,
     "joined": 1545240094,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2407,
-            "date": 1733947986,
-            "rd": 43
+            "rating": 2346,
+            "date": 1740680386,
+            "rd": 56
         },
         "best": {
             "rating": 2466,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/114298257889"
         },
         "record": {
-            "win": 1862,
-            "loss": 2210,
-            "draw": 275
+            "win": 1871,
+            "loss": 2228,
+            "draw": 278
         }
     },
     "fide": 0,

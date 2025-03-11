@@ -2,11 +2,12 @@
     "player_id": 37022608,
     "@id": "https://api.chess.com/pub/player/stronger1799",
     "url": "https://www.chess.com/member/Stronger1799",
+    "name": "Egor Kovalev",
     "username": "stronger1799",
     "title": "FM",
     "followers": 21,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1728476980,
+    "last_online": 1734634053,
     "joined": 1500027922,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2635,
-            "date": 1731535424,
-            "rd": 49
+            "rating": 2600,
+            "date": 1736638952,
+            "rd": 41
         },
         "best": {
             "rating": 2782,
@@ -59,9 +60,9 @@
             "game": "https://www.chess.com/game/live/36268242961"
         },
         "record": {
-            "win": 3252,
-            "loss": 2593,
-            "draw": 355
+            "win": 3269,
+            "loss": 2613,
+            "draw": 356
         }
     },
     "tactics": {

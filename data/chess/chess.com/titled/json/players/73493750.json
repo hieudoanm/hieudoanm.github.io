@@ -5,10 +5,10 @@
     "name": "Zuhair Ahmad",
     "username": "alkaser1962",
     "title": "FM",
-    "followers": 48,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/AE",
     "location": "Abu Dhabi",
-    "last_online": 1734009924,
+    "last_online": 1740374386,
     "joined": 1584176851,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1938,
-            "date": 1668354967,
-            "rd": 128
+            "rating": 2025,
+            "date": 1735851194,
+            "rd": 172
         },
         "best": {
             "rating": 2043,
@@ -27,7 +27,7 @@
             "game": "https://www.chess.com/game/live/10396045205"
         },
         "record": {
-            "win": 9,
+            "win": 11,
             "loss": 5,
             "draw": 0
         }
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2080,
-            "date": 1733855396,
-            "rd": 37
+            "rating": 2015,
+            "date": 1740375318,
+            "rd": 48
         },
         "best": {
             "rating": 2300,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/63787794863"
         },
         "record": {
-            "win": 4216,
-            "loss": 3738,
-            "draw": 467
+            "win": 4231,
+            "loss": 3766,
+            "draw": 472
         }
     },
     "fide": 2333,
     "tactics": {
         "highest": {
-            "rating": 1427,
-            "date": 1664212251
+            "rating": 1442,
+            "date": 1735850873
         },
         "lowest": {
             "rating": 1017,

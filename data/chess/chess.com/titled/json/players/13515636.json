@@ -9,7 +9,7 @@
     "followers": 15,
     "country": "https://api.chess.com/pub/country/LT",
     "location": "Vilnius",
-    "last_online": 1732548226,
+    "last_online": 1741014881,
     "joined": 1379099731,
     "status": "premium",
     "is_streamer": false,
@@ -89,8 +89,8 @@
     "fide": 2335,
     "tactics": {
         "highest": {
-            "rating": 3214,
-            "date": 1730615977
+            "rating": 3357,
+            "date": 1741113333
         },
         "lowest": {
             "rating": 1185,

@@ -6,9 +6,9 @@
     "name": "Konstantin Popov",
     "username": "bauman_guy",
     "title": "FM",
-    "followers": 66,
+    "followers": 86,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734120169,
+    "last_online": 1741700871,
     "joined": 1687177916,
     "status": "premium",
     "is_streamer": false,
@@ -53,19 +53,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2901,
-            "date": 1734133536,
-            "rd": 22
+            "rating": 3005,
+            "date": 1740507150,
+            "rd": 33
         },
         "best": {
-            "rating": 3048,
-            "date": 1732229688,
+            "rating": 3074,
+            "date": 1739289875,
             "game": "https://www.chess.com/game/live/112538436313"
         },
         "record": {
-            "win": 919,
-            "loss": 663,
-            "draw": 231
+            "win": 1244,
+            "loss": 935,
+            "draw": 313
         }
     },
     "tactics": {
@@ -80,8 +80,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 61,
-            "score": 59
+            "total_attempts": 64,
+            "score": 61
+        },
+        "daily": {
+            "total_attempts": 64,
+            "score": 61
         }
     }
 }

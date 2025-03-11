@@ -9,7 +9,7 @@
     "followers": 39,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Goes",
-    "last_online": 1734149447,
+    "last_online": 1740595807,
     "joined": 1523791947,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2570,
-            "date": 1734151139,
-            "rd": 32
+            "rating": 2636,
+            "date": 1741646739,
+            "rd": 34
         },
         "best": {
             "rating": 2683,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/20539268621"
         },
         "record": {
-            "win": 4564,
-            "loss": 3199,
-            "draw": 936
+            "win": 4744,
+            "loss": 3333,
+            "draw": 978
         }
     },
     "fide": 2335,

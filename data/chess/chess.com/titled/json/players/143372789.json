@@ -1,19 +1,19 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/143372789.516b3ec1.200x200o.8a459c999ac8.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/143372789.0c9cf41e.200x200o.e498ccbca8a9.jpg",
     "player_id": 143372789,
     "@id": "https://api.chess.com/pub/player/stelasfw",
     "url": "https://www.chess.com/member/StelaSfw",
     "name": "Stela Farhat Willemstein",
     "username": "stelasfw",
     "title": "WFM",
-    "followers": 32,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1734177618,
+    "last_online": 1741553919,
     "joined": 1622919216,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1509,
-            "date": 1734018002,
-            "rd": 69
+            "rating": 1400,
+            "date": 1737377956,
+            "rd": 18
         },
         "best": {
             "rating": 1700,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/109060856849"
         },
         "record": {
-            "win": 305,
-            "loss": 363,
-            "draw": 29
+            "win": 644,
+            "loss": 702,
+            "draw": 63
         }
     },
     "chess_blitz": {

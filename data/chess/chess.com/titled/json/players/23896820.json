@@ -6,14 +6,14 @@
     "name": "Anar Aliakbarov",
     "username": "anar_aliakbarov",
     "title": "FM",
-    "followers": 225,
+    "followers": 240,
     "country": "https://api.chess.com/pub/country/BE",
-    "last_online": 1734100934,
+    "last_online": 1741505782,
     "joined": 1440966504,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,43 +36,43 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2515,
-            "date": 1708471938,
-            "rd": 107
+            "rating": 2521,
+            "date": 1740232288,
+            "rd": 49
         },
         "best": {
-            "rating": 2515,
-            "date": 1705346650,
+            "rating": 2521,
+            "date": 1735295440,
             "game": "https://www.chess.com/game/live/99084416501"
         },
         "record": {
-            "win": 33,
+            "win": 34,
             "loss": 14,
             "draw": 6
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2655,
-            "date": 1734035381,
-            "rd": 27
+            "rating": 2665,
+            "date": 1736105946,
+            "rd": 21
         },
         "best": {
-            "rating": 2724,
-            "date": 1730641772,
-            "game": "https://www.chess.com/game/live/124390823267"
+            "rating": 2774,
+            "date": 1735250766,
+            "game": "https://www.chess.com/game/live/129063246105"
         },
         "record": {
-            "win": 2094,
-            "loss": 2071,
-            "draw": 256
+            "win": 2247,
+            "loss": 2215,
+            "draw": 283
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2621,
-            "date": 1734183727,
-            "rd": 45
+            "rating": 2696,
+            "date": 1739629294,
+            "rd": 29
         },
         "best": {
             "rating": 2764,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/98984222071"
         },
         "record": {
-            "win": 2110,
-            "loss": 1904,
-            "draw": 382
+            "win": 2182,
+            "loss": 1962,
+            "draw": 400
         }
     },
     "tactics": {

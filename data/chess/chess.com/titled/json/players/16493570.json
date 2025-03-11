@@ -6,10 +6,10 @@
     "name": "Joachim Mouhamad",
     "username": "joachimmouhamad",
     "title": "FM",
-    "followers": 1674,
+    "followers": 1693,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Paris, France",
-    "last_online": 1733836676,
+    "last_online": 1741612053,
     "joined": 1395051077,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2488,
-            "date": 1721758039,
-            "rd": 116
+            "rating": 2355,
+            "date": 1735918917,
+            "rd": 114
         },
         "best": {
             "rating": 2488,
@@ -60,15 +60,15 @@
         },
         "record": {
             "win": 315,
-            "loss": 186,
+            "loss": 189,
             "draw": 25
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2389,
-            "date": 1733261233,
-            "rd": 66
+            "rating": 2489,
+            "date": 1741027695,
+            "rd": 50
         },
         "best": {
             "rating": 2605,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/84735893109"
         },
         "record": {
-            "win": 5345,
-            "loss": 4578,
-            "draw": 728
+            "win": 5390,
+            "loss": 4617,
+            "draw": 733
         }
     },
     "tactics": {

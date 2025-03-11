@@ -6,10 +6,10 @@
     "name": "Manish Hamal",
     "username": "shivakaka",
     "title": "FM",
-    "followers": 162,
+    "followers": 163,
     "country": "https://api.chess.com/pub/country/NP",
     "location": "Kathmandu",
-    "last_online": 1730513023,
+    "last_online": 1741687492,
     "joined": 1293768444,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2104,
-            "date": 1730874691,
+            "rating": 2108,
+            "date": 1740480782,
             "rd": 49
         },
         "best": {
@@ -47,7 +47,7 @@
             "game": "https://www.chess.com/game/live/23358604507"
         },
         "record": {
-            "win": 25,
+            "win": 27,
             "loss": 11,
             "draw": 2
         }
@@ -71,8 +71,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2038,
-            "date": 1734149302,
+            "rating": 2288,
+            "date": 1741688409,
             "rd": 31
         },
         "best": {
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/51182375393"
         },
         "record": {
-            "win": 5396,
-            "loss": 4196,
-            "draw": 650
+            "win": 5599,
+            "loss": 4334,
+            "draw": 679
         }
     },
     "fide": 2021,
     "tactics": {
         "highest": {
-            "rating": 2751,
-            "date": 1730628182
+            "rating": 2763,
+            "date": 1740201550
         },
         "lowest": {
             "rating": 775,

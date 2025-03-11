@@ -6,15 +6,15 @@
     "name": "Jose Vicente Jim\u00e9nez Mart\u00ednez",
     "username": "gmskorpion",
     "title": "FM",
-    "followers": 80,
+    "followers": 81,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Albacete",
-    "last_online": 1734124738,
+    "last_online": 1739985875,
     "joined": 1347965251,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2387,
-            "date": 1733077465,
-            "rd": 53
+            "rating": 2522,
+            "date": 1740508984,
+            "rd": 23
         },
         "best": {
             "rating": 2644,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/6066647243"
         },
         "record": {
-            "win": 1050,
-            "loss": 1262,
-            "draw": 118
+            "win": 1210,
+            "loss": 1430,
+            "draw": 138
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2589,
-            "date": 1719356749,
+            "rating": 2566,
+            "date": 1739923603,
             "rd": 47
         },
         "best": {
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/3662098930"
         },
         "record": {
-            "win": 488,
-            "loss": 446,
-            "draw": 82
+            "win": 499,
+            "loss": 455,
+            "draw": 84
         }
     },
     "tactics": {

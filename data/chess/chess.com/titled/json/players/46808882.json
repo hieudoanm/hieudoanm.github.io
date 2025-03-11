@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/46808882.07769428.200x200o.25a3e874dcb5.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/46808882.7a9cffa2.200x200o.330c5702458f.jpg",
     "player_id": 46808882,
-    "@id": "https://api.chess.com/pub/player/ducksparadise",
-    "url": "https://www.chess.com/member/DucksParadise",
+    "@id": "https://api.chess.com/pub/player/oliver_wartiovaara",
+    "url": "https://www.chess.com/member/Oliver_Wartiovaara",
     "name": "Oliver Wartiovaara",
-    "username": "ducksparadise",
+    "username": "oliver_wartiovaara",
     "title": "FM",
-    "followers": 157,
+    "followers": 163,
     "country": "https://api.chess.com/pub/country/FI",
-    "last_online": 1734132522,
+    "last_online": 1741703467,
     "joined": 1528139907,
     "status": "premium",
     "is_streamer": false,
@@ -32,7 +32,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2120,
-            "date": 1729181210,
+            "date": 1740589062,
             "rd": 198
         },
         "best": {
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2471,
-            "date": 1734129867,
-            "rd": 40
+            "rating": 2538,
+            "date": 1740498922,
+            "rd": 38
         },
         "best": {
             "rating": 2634,
@@ -58,26 +58,26 @@
             "game": "https://www.chess.com/game/live/114021685783"
         },
         "record": {
-            "win": 2176,
-            "loss": 1814,
-            "draw": 258
+            "win": 2259,
+            "loss": 1893,
+            "draw": 265
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2579,
-            "date": 1734131381,
+            "rating": 2598,
+            "date": 1741703708,
             "rd": 21
         },
         "best": {
-            "rating": 2690,
-            "date": 1732307267,
+            "rating": 2720,
+            "date": 1738965858,
             "game": "https://www.chess.com/game/live/53283014895"
         },
         "record": {
-            "win": 5094,
-            "loss": 4222,
-            "draw": 821
+            "win": 6005,
+            "loss": 4931,
+            "draw": 982
         }
     },
     "fide": 2325,

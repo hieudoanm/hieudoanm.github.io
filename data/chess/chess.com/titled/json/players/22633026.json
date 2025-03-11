@@ -6,9 +6,9 @@
     "name": "Kevin Pan",
     "username": "petearrpan",
     "title": "FM",
-    "followers": 86,
+    "followers": 91,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734114920,
+    "last_online": 1741449817,
     "joined": 1433129600,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1602,
-            "date": 1734036694,
-            "rd": 92
+            "rating": 1323,
+            "date": 1740886131,
+            "rd": 84
         },
         "best": {
             "rating": 1631,
@@ -27,11 +27,11 @@
             "game": "https://www.chess.com/game/daily/154759336"
         },
         "record": {
-            "win": 57,
-            "loss": 57,
+            "win": 69,
+            "loss": 70,
             "draw": 9,
-            "time_per_move": 53601,
-            "timeout_percent": 0
+            "time_per_move": 54021,
+            "timeout_percent": 52
         }
     },
     "chess960_daily": {
@@ -44,7 +44,7 @@
             "win": 0,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 53601,
+            "time_per_move": 54021,
             "timeout_percent": 0
         }
     },
@@ -67,9 +67,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2551,
-            "date": 1734115060,
-            "rd": 36
+            "rating": 2543,
+            "date": 1740886240,
+            "rd": 44
         },
         "best": {
             "rating": 2703,
@@ -77,16 +77,16 @@
             "game": "https://www.chess.com/game/live/15094739369"
         },
         "record": {
-            "win": 3205,
-            "loss": 3220,
-            "draw": 522
+            "win": 3289,
+            "loss": 3295,
+            "draw": 537
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2441,
-            "date": 1733885414,
-            "rd": 41
+            "rating": 2378,
+            "date": 1741453640,
+            "rd": 55
         },
         "best": {
             "rating": 2537,
@@ -94,15 +94,15 @@
             "game": "https://www.chess.com/game/live/62893860511"
         },
         "record": {
-            "win": 923,
-            "loss": 796,
-            "draw": 127
+            "win": 946,
+            "loss": 810,
+            "draw": 134
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3172,
-            "date": 1730675742
+            "rating": 3180,
+            "date": 1739639493
         },
         "lowest": {
             "rating": 1348,

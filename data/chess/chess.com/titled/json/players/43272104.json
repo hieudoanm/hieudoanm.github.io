@@ -6,10 +6,10 @@
     "name": "Agustin Nieto",
     "username": "aska538",
     "title": "FM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Manizales",
-    "last_online": 1734132755,
+    "last_online": 1739304752,
     "joined": 1518453261,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2381,
-            "date": 1734139354,
-            "rd": 38
+            "rating": 2378,
+            "date": 1739297637,
+            "rd": 58
         },
         "best": {
             "rating": 2463,
@@ -63,7 +63,7 @@
         },
         "record": {
             "win": 362,
-            "loss": 296,
+            "loss": 297,
             "draw": 36
         }
     },

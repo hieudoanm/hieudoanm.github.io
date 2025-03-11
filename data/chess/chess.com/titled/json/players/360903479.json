@@ -6,9 +6,9 @@
     "name": "Dan Poleg",
     "username": "nomadknights",
     "title": "FM",
-    "followers": 0,
+    "followers": 1,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1733646673,
+    "last_online": 1741446456,
     "joined": 1714727620,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2432,
-            "date": 1734106193,
-            "rd": 35
+            "rating": 2653,
+            "date": 1741641779,
+            "rd": 25
         },
         "best": {
             "rating": 2628,
@@ -27,26 +27,26 @@
             "game": "https://www.chess.com/game/live/112292467799"
         },
         "record": {
-            "win": 1058,
-            "loss": 855,
-            "draw": 125
+            "win": 1290,
+            "loss": 1033,
+            "draw": 146
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2472,
-            "date": 1733828998,
-            "rd": 47
+            "rating": 2570,
+            "date": 1741627037,
+            "rd": 38
         },
         "best": {
-            "rating": 2553,
-            "date": 1725982656,
+            "rating": 2638,
+            "date": 1736101604,
             "game": "https://www.chess.com/game/live/126355180035"
         },
         "record": {
-            "win": 72,
-            "loss": 59,
-            "draw": 6
+            "win": 142,
+            "loss": 109,
+            "draw": 18
         }
     },
     "fide": 0,

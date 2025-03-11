@@ -6,9 +6,9 @@
     "name": "Vitalii Chaika",
     "username": "vitaliychayka",
     "title": "IM",
-    "followers": 3,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1733919637,
+    "last_online": 1738126210,
     "joined": 1484755125,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     "fide": 2111,
     "tactics": {
         "highest": {
-            "rating": 2129,
-            "date": 1703551119
+            "rating": 2137,
+            "date": 1737787285
         },
         "lowest": {
             "rating": 1200,

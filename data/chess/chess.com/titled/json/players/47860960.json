@@ -5,9 +5,9 @@
     "name": "Polivanov Anatoliy",
     "username": "playchesssimple",
     "title": "IM",
-    "followers": 110,
+    "followers": 112,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734114839,
+    "last_online": 1741674268,
     "joined": 1531553261,
     "status": "premium",
     "is_streamer": false,
@@ -86,8 +86,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2565,
-            "date": 1682965826
+            "rating": 2577,
+            "date": 1739262053
         },
         "lowest": {
             "rating": 1211,

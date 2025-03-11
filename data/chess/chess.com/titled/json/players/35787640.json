@@ -7,7 +7,7 @@
     "title": "WCM",
     "followers": 8,
     "country": "https://api.chess.com/pub/country/ZW",
-    "last_online": 1733734069,
+    "last_online": 1739261808,
     "joined": 1495659015,
     "status": "premium",
     "is_streamer": false,
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 41
+            "total_attempts": 45,
+            "score": 42
         }
     }
 }

@@ -6,15 +6,15 @@
     "name": "Khanim Ismayilova",
     "username": "rose107",
     "title": "WCM",
-    "followers": 45,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/AZ",
     "location": "Baku",
-    "last_online": 1734113773,
+    "last_online": 1741571919,
     "joined": 1585151038,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1913,
-            "date": 1733839243,
-            "rd": 60
+            "rating": 2213,
+            "date": 1741654627,
+            "rd": 28
         },
         "best": {
-            "rating": 1913,
-            "date": 1733839243,
-            "game": "https://www.chess.com/game/live/99195850679"
+            "rating": 2224,
+            "date": 1740958642,
+            "game": "https://www.chess.com/game/live/134683750955"
         },
         "record": {
-            "win": 104,
-            "loss": 57,
-            "draw": 10
+            "win": 232,
+            "loss": 171,
+            "draw": 30
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2110,
-            "date": 1733374095,
-            "rd": 56
+            "rating": 2168,
+            "date": 1739319060,
+            "rd": 59
         },
         "best": {
             "rating": 2232,
@@ -81,11 +81,12 @@
             "game": "https://www.chess.com/game/live/89507948955"
         },
         "record": {
-            "win": 423,
-            "loss": 327,
-            "draw": 69
+            "win": 431,
+            "loss": 340,
+            "draw": 71
         }
     },
+    "fide": 1900,
     "tactics": {
         "highest": {
             "rating": 3096,

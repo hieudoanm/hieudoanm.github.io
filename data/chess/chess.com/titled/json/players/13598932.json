@@ -6,10 +6,10 @@
     "name": "Julius Joseph De Ramos",
     "username": "shukran0131",
     "title": "FM",
-    "followers": 50,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Calapan",
-    "last_online": 1733491840,
+    "last_online": 1741629677,
     "joined": 1379691638,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2574,
-            "date": 1700309724,
-            "rd": 135
+            "rating": 2615,
+            "date": 1741532124,
+            "rd": 47
         },
         "best": {
-            "rating": 2574,
-            "date": 1700309724,
-            "game": "https://www.chess.com/game/live/57960705865"
+            "rating": 2603,
+            "date": 1738786277,
+            "game": "https://www.chess.com/game/live/132525015223"
         },
         "record": {
-            "win": 555,
-            "loss": 462,
-            "draw": 30
+            "win": 561,
+            "loss": 464,
+            "draw": 31
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2647,
-            "date": 1729941207,
-            "rd": 49
+            "rating": 2579,
+            "date": 1741631053,
+            "rd": 45
         },
         "best": {
             "rating": 2647,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/52054254511"
         },
         "record": {
-            "win": 606,
-            "loss": 349,
+            "win": 612,
+            "loss": 365,
             "draw": 86
         }
     },

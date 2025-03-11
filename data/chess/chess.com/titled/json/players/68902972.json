@@ -6,10 +6,10 @@
     "name": "Nusrat Jahan Alo",
     "username": "nusratalo",
     "title": "WCM",
-    "followers": 249,
+    "followers": 257,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Dhaka, Bangladesh",
-    "last_online": 1734159618,
+    "last_online": 1741702388,
     "joined": 1575560379,
     "status": "premium",
     "is_streamer": false,
@@ -56,9 +56,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1814,
-            "date": 1728674338,
-            "rd": 143
+            "rating": 1950,
+            "date": 1740428059,
+            "rd": 135
         },
         "best": {
             "rating": 2018,
@@ -66,50 +66,50 @@
             "game": "https://www.chess.com/game/live/4365340483"
         },
         "record": {
-            "win": 177,
+            "win": 179,
             "loss": 122,
             "draw": 32
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1789,
-            "date": 1707483047,
-            "rd": 73
+            "rating": 2029,
+            "date": 1741455967,
+            "rd": 93
         },
         "best": {
-            "rating": 1725,
-            "date": 1575885823,
+            "rating": 1816,
+            "date": 1740225845,
             "game": "https://www.chess.com/game/live/4283603323"
         },
         "record": {
-            "win": 87,
-            "loss": 101,
-            "draw": 11
+            "win": 92,
+            "loss": 118,
+            "draw": 14
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1964,
-            "date": 1733898929,
-            "rd": 79
+            "rating": 2012,
+            "date": 1741367030,
+            "rd": 74
         },
         "best": {
-            "rating": 1964,
-            "date": 1733121275,
+            "rating": 2023,
+            "date": 1741107447,
             "game": "https://www.chess.com/game/live/107020371659"
         },
         "record": {
-            "win": 268,
-            "loss": 159,
-            "draw": 30
+            "win": 273,
+            "loss": 172,
+            "draw": 33
         }
     },
     "fide": 2033,
     "tactics": {
         "highest": {
-            "rating": 3739,
-            "date": 1714571907
+            "rating": 3784,
+            "date": 1741540528
         },
         "lowest": {
             "rating": 993,

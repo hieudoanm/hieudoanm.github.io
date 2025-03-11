@@ -6,10 +6,10 @@
     "name": "Juan Manuel Minaya  Molano",
     "username": "zipa5",
     "title": "FM",
-    "followers": 16,
+    "followers": 15,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Bogota",
-    "last_online": 1733564990,
+    "last_online": 1740774274,
     "joined": 1525964179,
     "status": "premium",
     "is_streamer": false,
@@ -32,8 +32,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2038,
-            "date": 1733243388,
+            "rating": 2040,
+            "date": 1740775683,
             "rd": 49
         },
         "best": {
@@ -42,8 +42,8 @@
             "game": "https://www.chess.com/game/live/50971788189"
         },
         "record": {
-            "win": 89,
-            "loss": 65,
+            "win": 90,
+            "loss": 66,
             "draw": 3
         }
     },

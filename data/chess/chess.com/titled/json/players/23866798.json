@@ -5,10 +5,10 @@
     "name": "Ivan Gil Biag",
     "username": "ivanooob",
     "title": "FM",
-    "followers": 53,
+    "followers": 55,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York",
-    "last_online": 1733843273,
+    "last_online": 1741307439,
     "joined": 1440789096,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 946,
-            "date": 1726181693,
+            "date": 1736614284,
             "rd": 290
         },
         "best": {
@@ -30,8 +30,22 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 297461,
+            "time_per_move": 319675,
             "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 254,
+            "date": 1736614284,
+            "rd": 290
+        },
+        "record": {
+            "win": 0,
+            "loss": 1,
+            "draw": 0,
+            "time_per_move": 319675,
+            "timeout_percent": 100
         }
     },
     "chess_bullet": {

@@ -6,65 +6,65 @@
     "name": "Val Sau",
     "username": "backreg",
     "title": "FM",
-    "followers": 233,
+    "followers": 281,
     "country": "https://api.chess.com/pub/country/LV",
     "location": "Riga",
-    "last_online": 1726164243,
+    "last_online": 1741701300,
     "joined": 1345408785,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2016,
-            "date": 1702228974,
-            "rd": 224
+            "rating": 2478,
+            "date": 1741700670,
+            "rd": 34
         },
         "best": {
-            "rating": 2210,
-            "date": 1625666448,
-            "game": "https://www.chess.com/game/live/19404396327"
+            "rating": 2303,
+            "date": 1739978652,
+            "game": "https://www.chess.com/game/live/133561146025"
         },
         "record": {
-            "win": 2,
-            "loss": 1,
-            "draw": 0
+            "win": 91,
+            "loss": 14,
+            "draw": 10
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2325,
-            "date": 1630270934,
-            "rd": 71
+            "rating": 2464,
+            "date": 1740311019,
+            "rd": 147
         },
         "best": {
-            "rating": 2375,
-            "date": 1384543936,
+            "rating": 2432,
+            "date": 1738406020,
             "game": "https://www.chess.com/game/live/552968193"
         },
         "record": {
-            "win": 1033,
-            "loss": 736,
+            "win": 1037,
+            "loss": 737,
             "draw": 64
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2587,
-            "date": 1726173069,
-            "rd": 44
+            "rating": 2599,
+            "date": 1741703642,
+            "rd": 21
         },
         "best": {
-            "rating": 2621,
-            "date": 1635094937,
-            "game": "https://www.chess.com/game/live/2235561698"
+            "rating": 2683,
+            "date": 1739393374,
+            "game": "https://www.chess.com/game/live/133129184909"
         },
         "record": {
-            "win": 10251,
-            "loss": 7551,
-            "draw": 1052
+            "win": 10698,
+            "loss": 7905,
+            "draw": 1104
         }
     },
     "fide": 2334,

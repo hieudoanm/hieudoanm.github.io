@@ -6,10 +6,10 @@
     "name": "Janus Christensen",
     "username": "king_of_the_wing",
     "title": "CM",
-    "followers": 217,
+    "followers": 216,
     "country": "https://api.chess.com/pub/country/DK",
     "location": "Copenhagen",
-    "last_online": 1734129119,
+    "last_online": 1741301997,
     "joined": 1345841545,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2146,
-            "date": 1689365904,
-            "rd": 79
+            "rating": 2145,
+            "date": 1736992139,
+            "rd": 49
         },
         "best": {
             "rating": 2196,
@@ -49,7 +49,7 @@
         "record": {
             "win": 856,
             "loss": 701,
-            "draw": 153
+            "draw": 154
         }
     },
     "chess_bullet": {
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2346,
-            "date": 1665586511,
-            "rd": 102
+            "rating": 2400,
+            "date": 1735043690,
+            "rd": 70
         },
         "best": {
-            "rating": 2371,
-            "date": 1542806654,
+            "rating": 2425,
+            "date": 1734979296,
             "game": "https://www.chess.com/game/live/3170860626"
         },
         "record": {
-            "win": 16067,
-            "loss": 13647,
-            "draw": 2010
+            "win": 16080,
+            "loss": 13654,
+            "draw": 2012
         }
     },
     "tactics": {

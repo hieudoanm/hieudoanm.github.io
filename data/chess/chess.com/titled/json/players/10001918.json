@@ -6,10 +6,10 @@
     "name": "Kim Steven Yap",
     "username": "kimstevenyap",
     "title": "IM",
-    "followers": 244,
+    "followers": 247,
     "country": "https://api.chess.com/pub/country/SG",
     "location": "Singapore",
-    "last_online": 1734007736,
+    "last_online": 1741525842,
     "joined": 1355409327,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2576,
-            "date": 1731968291,
-            "rd": 49
+            "rating": 2583,
+            "date": 1739748147,
+            "rd": 48
         },
         "best": {
             "rating": 2750,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/14945851065"
         },
         "record": {
-            "win": 3106,
-            "loss": 2143,
+            "win": 3113,
+            "loss": 2148,
             "draw": 317
         }
     },

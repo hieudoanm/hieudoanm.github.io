@@ -8,7 +8,7 @@
     "followers": 42,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "\u010cesk\u00e9 Bud\u011bjovice",
-    "last_online": 1734169176,
+    "last_online": 1741644001,
     "joined": 1470593646,
     "status": "premium",
     "is_streamer": false,
@@ -65,19 +65,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2551,
-            "date": 1733870373,
-            "rd": 48
+            "rating": 2558,
+            "date": 1741104355,
+            "rd": 49
         },
         "best": {
-            "rating": 2557,
-            "date": 1576706362,
+            "rating": 2575,
+            "date": 1735076902,
             "game": "https://www.chess.com/game/live/125770797593"
         },
         "record": {
-            "win": 1977,
-            "loss": 1778,
-            "draw": 256
+            "win": 1989,
+            "loss": 1794,
+            "draw": 260
         }
     },
     "fide": 2303,
@@ -93,12 +93,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 54,
-            "score": 51
-        },
-        "daily": {
-            "total_attempts": 45,
-            "score": 42
+            "total_attempts": 55,
+            "score": 52
         }
     }
 }

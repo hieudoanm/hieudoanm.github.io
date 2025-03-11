@@ -5,9 +5,9 @@
     "name": "Aleksandar Danilovic",
     "username": "jedipredator",
     "title": "IM",
-    "followers": 139,
+    "followers": 147,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734163813,
+    "last_online": 1741625131,
     "joined": 1462268472,
     "status": "premium",
     "is_streamer": false,
@@ -16,20 +16,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1841,
-            "date": 1734163840,
-            "rd": 167
+            "rating": 1856,
+            "date": 1740933056,
+            "rd": 166
         },
         "best": {
-            "rating": 1841,
-            "date": 1732840893,
+            "rating": 1856,
+            "date": 1738539953,
             "game": "https://www.chess.com/game/daily/426081995"
         },
         "record": {
-            "win": 15,
+            "win": 20,
             "loss": 0,
             "draw": 2,
-            "time_per_move": 34925,
+            "time_per_move": 32176,
             "timeout_percent": 0
         }
     },
@@ -69,9 +69,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2538,
-            "date": 1734164472,
-            "rd": 30
+            "rating": 2521,
+            "date": 1741636426
         },
         "best": {
             "rating": 2723,
@@ -79,9 +78,9 @@
             "game": "https://www.chess.com/game/live/3453063612"
         },
         "record": {
-            "win": 6772,
-            "loss": 5835,
-            "draw": 987
+            "win": 7046,
+            "loss": 6060,
+            "draw": 1038
         }
     },
     "fide": 0,

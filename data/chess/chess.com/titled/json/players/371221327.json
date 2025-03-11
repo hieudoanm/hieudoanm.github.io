@@ -5,30 +5,30 @@
     "name": "Julian Leitgeb",
     "username": "julsz08",
     "title": "FM",
-    "followers": 0,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1733950769,
+    "last_online": 1741685844,
     "joined": 1719049274,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2469,
-            "date": 1733952559,
-            "rd": 39
+            "rating": 2557,
+            "date": 1741349708,
+            "rd": 40
         },
         "best": {
-            "rating": 2535,
-            "date": 1733778399,
-            "game": "https://www.chess.com/game/live/114909516767"
+            "rating": 2624,
+            "date": 1736183623,
+            "game": "https://www.chess.com/game/live/129919172927"
         },
         "record": {
-            "win": 103,
-            "loss": 78,
-            "draw": 9
+            "win": 191,
+            "loss": 163,
+            "draw": 23
         }
     },
     "fide": 2328,

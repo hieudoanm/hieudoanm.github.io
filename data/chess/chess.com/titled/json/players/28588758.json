@@ -6,9 +6,9 @@
     "name": "Rebecca Selkirk",
     "username": "beccrajoy",
     "title": "WCM",
-    "followers": 6046,
+    "followers": 6216,
     "country": "https://api.chess.com/pub/country/ZA",
-    "last_online": 1734166994,
+    "last_online": 1741672429,
     "joined": 1465656034,
     "status": "premium",
     "is_streamer": true,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1730,
-            "date": 1713276698,
-            "rd": 58
+            "rating": 1760,
+            "date": 1737560107,
+            "rd": 103
         },
         "best": {
             "rating": 1906,
@@ -27,17 +27,11 @@
             "game": "https://www.chess.com/game/daily/253946582"
         },
         "record": {
-            "win": 463,
+            "win": 485,
             "loss": 201,
             "draw": 50,
-            "time_per_move": 23096,
+            "time_per_move": 23100,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 2
         }
     },
     "chess960_daily": {
@@ -50,14 +44,8 @@
             "win": 0,
             "loss": 3,
             "draw": 0,
-            "time_per_move": 23096,
+            "time_per_move": 23100,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 2
         }
     },
     "chess_rapid": {
@@ -97,7 +85,7 @@
     "chess_blitz": {
         "last": {
             "rating": 1998,
-            "date": 1730663878,
+            "date": 1740942000,
             "rd": 63
         },
         "best": {

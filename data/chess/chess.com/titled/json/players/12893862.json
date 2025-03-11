@@ -6,9 +6,9 @@
     "name": "Jonny Cueto",
     "username": "matagordo",
     "title": "IM",
-    "followers": 22,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/BO",
-    "last_online": 1734144286,
+    "last_online": 1741576313,
     "joined": 1374882959,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2312,
-            "date": 1720014822,
-            "rd": 20
+            "rating": 2329,
+            "date": 1735058948,
+            "rd": 77
         },
         "best": {
             "rating": 2506,
@@ -44,26 +44,26 @@
             "game": "https://www.chess.com/game/live/103140222555"
         },
         "record": {
-            "win": 2578,
+            "win": 2579,
             "loss": 3017,
             "draw": 217
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2393,
-            "date": 1719423551,
-            "rd": 44
+            "rating": 2486,
+            "date": 1740945964,
+            "rd": 20
         },
         "best": {
-            "rating": 2412,
-            "date": 1718747860,
+            "rating": 2504,
+            "date": 1737211814,
             "game": "https://www.chess.com/game/live/103998685857"
         },
         "record": {
-            "win": 357,
-            "loss": 429,
-            "draw": 35
+            "win": 534,
+            "loss": 643,
+            "draw": 73
         }
     },
     "tactics": {

@@ -5,9 +5,9 @@
     "name": "Florian Fuchs",
     "username": "shcufnairolf",
     "title": "FM",
-    "followers": 45,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733899641,
+    "last_online": 1741586622,
     "joined": 1569517761,
     "status": "premium",
     "is_streamer": false,
@@ -35,8 +35,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2469,
-            "date": 1730004139,
+            "rating": 2405,
+            "date": 1741556007,
             "rd": 49
         },
         "best": {
@@ -45,41 +45,41 @@
             "game": "https://www.chess.com/game/live/99726716105"
         },
         "record": {
-            "win": 299,
-            "loss": 201,
-            "draw": 50
+            "win": 331,
+            "loss": 231,
+            "draw": 56
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2386,
-            "date": 1708710308,
-            "rd": 68
+            "rating": 2432,
+            "date": 1738405527,
+            "rd": 63
         },
         "best": {
-            "rating": 2450,
-            "date": 1695971956,
+            "rating": 2476,
+            "date": 1738393846,
             "game": "https://www.chess.com/game/live/101245384503"
         },
         "record": {
-            "win": 38,
-            "loss": 22,
+            "win": 52,
+            "loss": 32,
             "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2390,
-            "date": 1733899958,
-            "rd": 178
+            "rating": 2431,
+            "date": 1736059141,
+            "rd": 164
         },
         "best": {
-            "rating": 2394,
-            "date": 1614109486,
+            "rating": 2431,
+            "date": 1736059141,
             "game": "https://www.chess.com/game/live/5610987959"
         },
         "record": {
-            "win": 147,
+            "win": 148,
             "loss": 62,
             "draw": 8
         }

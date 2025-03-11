@@ -6,9 +6,9 @@
     "name": "Prince Bajaj",
     "username": "princec7",
     "title": "IM",
-    "followers": 132,
+    "followers": 147,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734178949,
+    "last_online": 1741694307,
     "joined": 1511820476,
     "status": "premium",
     "is_streamer": false,
@@ -67,11 +67,11 @@
             "draw": 23
         }
     },
-    "fide": 2396,
+    "fide": 2411,
     "tactics": {
         "highest": {
-            "rating": 3801,
-            "date": 1728221111
+            "rating": 3814,
+            "date": 1737971335
         },
         "lowest": {
             "rating": 1213,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 68,
-            "score": 65
+            "total_attempts": 80,
+            "score": 77
         }
     }
 }

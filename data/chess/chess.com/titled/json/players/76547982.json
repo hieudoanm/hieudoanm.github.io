@@ -1,13 +1,13 @@
 {
     "player_id": 76547982,
-    "@id": "https://api.chess.com/pub/player/bobo0880",
-    "url": "https://www.chess.com/member/Bobo0880",
+    "@id": "https://api.chess.com/pub/player/frank_ocean2",
+    "url": "https://www.chess.com/member/Frank_Ocean2",
     "name": "Bobo Bobo",
-    "username": "bobo0880",
+    "username": "frank_ocean2",
     "title": "WCM",
-    "followers": 14,
-    "country": "https://api.chess.com/pub/country/MN",
-    "last_online": 1733400351,
+    "followers": 9,
+    "country": "https://api.chess.com/pub/country/US",
+    "last_online": 1740727974,
     "joined": 1586758819,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2129,
-            "date": 1726988204,
-            "rd": 100
+            "rating": 2064,
+            "date": 1736858194,
+            "rd": 116
         },
         "best": {
             "rating": 2167,
@@ -60,12 +60,11 @@
             "game": "https://www.chess.com/game/live/37194598253"
         },
         "record": {
-            "win": 141,
-            "loss": 93,
+            "win": 145,
+            "loss": 94,
             "draw": 10
         }
     },
-    "fide": 0,
     "tactics": {
         "highest": {
             "rating": 3209,

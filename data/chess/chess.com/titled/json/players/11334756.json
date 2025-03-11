@@ -6,9 +6,9 @@
     "name": "Guus Bollen",
     "username": "guubol",
     "title": "CM",
-    "followers": 21,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1732472696,
+    "last_online": 1740078196,
     "joined": 1364656208,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2358,
-            "date": 1707774000,
-            "rd": 100
+            "rating": 2309,
+            "date": 1737819145,
+            "rd": 135
         },
         "best": {
             "rating": 2399,
@@ -64,7 +64,7 @@
         },
         "record": {
             "win": 213,
-            "loss": 119,
+            "loss": 120,
             "draw": 12
         }
     },

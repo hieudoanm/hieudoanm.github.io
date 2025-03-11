@@ -1,13 +1,13 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/78823920.075d1e52.200x200o.fcdf610671bc.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/78823920.a2fc6470.200x200o.3545749c8fee.jpg",
     "player_id": 78823920,
-    "@id": "https://api.chess.com/pub/player/fortestchess",
-    "url": "https://www.chess.com/member/Fortestchess",
-    "username": "fortestchess",
+    "@id": "https://api.chess.com/pub/player/darkshadoowv",
+    "url": "https://www.chess.com/member/DarkShadoowv",
+    "username": "darkshadoowv",
     "title": "CM",
-    "followers": 6,
-    "country": "https://api.chess.com/pub/country/MN",
-    "last_online": 1733102988,
+    "followers": 4,
+    "country": "https://api.chess.com/pub/country/NO",
+    "last_online": 1741528147,
     "joined": 1588857488,
     "status": "premium",
     "is_streamer": false,
@@ -52,36 +52,35 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2509,
-            "date": 1733037712,
-            "rd": 48
+            "rating": 2736,
+            "date": 1738868497
         },
         "best": {
-            "rating": 2658,
-            "date": 1723126650,
-            "game": "https://www.chess.com/game/live/123093040185"
+            "rating": 2719,
+            "date": 1738865218,
+            "game": "https://www.chess.com/game/live/132601845075"
         },
         "record": {
-            "win": 901,
-            "loss": 797,
-            "draw": 102
+            "win": 1016,
+            "loss": 910,
+            "draw": 120
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2571,
-            "date": 1733220180,
-            "rd": 49
+            "rating": 2702,
+            "date": 1739690273,
+            "rd": 35
         },
         "best": {
-            "rating": 2663,
-            "date": 1723048594,
+            "rating": 2721,
+            "date": 1738914315,
             "game": "https://www.chess.com/game/live/116785878363"
         },
         "record": {
-            "win": 665,
-            "loss": 505,
-            "draw": 81
+            "win": 755,
+            "loss": 595,
+            "draw": 93
         }
     },
     "tactics": {

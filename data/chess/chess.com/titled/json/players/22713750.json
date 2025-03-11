@@ -6,10 +6,10 @@
     "name": "Sahil Sinha",
     "username": "snail28",
     "title": "IM",
-    "followers": 273,
+    "followers": 281,
     "country": "https://api.chess.com/pub/country/US",
     "location": "MD",
-    "last_online": 1734156529,
+    "last_online": 1741663707,
     "joined": 1433636273,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2428,
-            "date": 1734157084,
+            "date": 1735539194,
             "rd": 49
         },
         "best": {
@@ -74,7 +74,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2589,
-            "date": 1731351855,
+            "date": 1736562666,
             "rd": 48
         },
         "best": {
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2215,
-            "date": 1733882817,
-            "rd": 43
+            "rating": 2194,
+            "date": 1741668229,
+            "rd": 31
         },
         "best": {
             "rating": 2678,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/36047341669"
         },
         "record": {
-            "win": 2277,
-            "loss": 2677,
-            "draw": 356
+            "win": 2401,
+            "loss": 2825,
+            "draw": 376
         }
     },
     "fide": 2450,

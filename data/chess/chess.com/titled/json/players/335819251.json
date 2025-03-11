@@ -6,9 +6,9 @@
     "name": "Syang Zhou",
     "username": "funnyselfmate",
     "title": "CM",
-    "followers": 17,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1733735435,
+    "last_online": 1741425439,
     "joined": 1704007887,
     "status": "premium",
     "is_streamer": false,
@@ -29,8 +29,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2411,
-            "date": 1733739362,
+            "rating": 2412,
+            "date": 1741675386,
             "rd": 34
         },
         "best": {
@@ -39,9 +39,9 @@
             "game": "https://www.chess.com/game/live/99764593157"
         },
         "record": {
-            "win": 1581,
-            "loss": 1327,
-            "draw": 423
+            "win": 1679,
+            "loss": 1407,
+            "draw": 447
         }
     },
     "fide": 2263,

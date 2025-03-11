@@ -6,10 +6,10 @@
     "name": "Carina D'Souza",
     "username": "icaughtacrab",
     "title": "WNM",
-    "followers": 42,
+    "followers": 40,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto",
-    "last_online": 1734066553,
+    "last_online": 1741453161,
     "joined": 1702862266,
     "status": "premium",
     "is_streamer": false,
@@ -18,26 +18,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2206,
-            "date": 1730044049,
-            "rd": 49
+            "rating": 2195,
+            "date": 1737420066,
+            "rd": 48
         },
         "best": {
             "rating": 2261,
             "date": 1704084687,
-            "game": "https://www.chess.com/game/live/123005441587"
+            "game": "https://www.chess.com/game/live/129519141965"
         },
         "record": {
-            "win": 6,
-            "loss": 6,
+            "win": 9,
+            "loss": 10,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1872,
-            "date": 1729490329,
-            "rd": 81
+            "rating": 1850,
+            "date": 1736136629,
+            "rd": 68
         },
         "best": {
             "rating": 1972,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/97886469221"
         },
         "record": {
-            "win": 109,
-            "loss": 36,
+            "win": 116,
+            "loss": 43,
             "draw": 8
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1950,
-            "date": 1734068848,
-            "rd": 41
+            "rating": 1953,
+            "date": 1741453685,
+            "rd": 46
         },
         "best": {
             "rating": 2192,
@@ -62,12 +62,12 @@
             "game": "https://www.chess.com/game/live/127606839771"
         },
         "record": {
-            "win": 186,
-            "loss": 232,
-            "draw": 37
+            "win": 265,
+            "loss": 325,
+            "draw": 56
         }
     },
-    "fide": 1847,
+    "fide": 2033,
     "tactics": {
         "highest": {
             "rating": 2794,

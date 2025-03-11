@@ -9,7 +9,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "LAVAL",
-    "last_online": 1734133395,
+    "last_online": 1741655192,
     "joined": 1535654733,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2073,
-            "date": 1726859152,
-            "rd": 47
+            "rating": 2059,
+            "date": 1739726487,
+            "rd": 48
         },
         "best": {
             "rating": 2246,
@@ -28,8 +28,8 @@
             "game": "https://www.chess.com/game/live/120585017935"
         },
         "record": {
-            "win": 70,
-            "loss": 65,
+            "win": 74,
+            "loss": 72,
             "draw": 22
         }
     },
@@ -52,25 +52,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1914,
-            "date": 1731466041,
-            "rd": 54
+            "rating": 2032,
+            "date": 1741442029,
+            "rd": 50
         },
         "best": {
             "rating": 2173,
             "date": 1537888480,
-            "game": "https://www.chess.com/game/live/108253866303"
+            "game": "https://www.chess.com/game/live/133655351209"
         },
         "record": {
-            "win": 1845,
-            "loss": 1922,
-            "draw": 210
+            "win": 1885,
+            "loss": 1960,
+            "draw": 216
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2967,
-            "date": 1718330428
+            "rating": 3011,
+            "date": 1738348767
         },
         "lowest": {
             "rating": 2177,

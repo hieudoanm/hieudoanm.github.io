@@ -6,10 +6,10 @@
     "name": "Stefan du Toit",
     "username": "lstefl",
     "title": "FM",
-    "followers": 34,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/ZA",
     "location": "Stellenbosch",
-    "last_online": 1734000865,
+    "last_online": 1741602695,
     "joined": 1441551592,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1888,
-            "date": 1703843152,
+            "date": 1735464518,
             "rd": 87
         },
         "best": {
@@ -56,8 +56,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2254,
-            "date": 1733800955,
+            "rating": 2235,
+            "date": 1735562625,
             "rd": 49
         },
         "best": {
@@ -66,16 +66,16 @@
             "game": "https://www.chess.com/game/live/120719424191"
         },
         "record": {
-            "win": 62,
-            "loss": 35,
-            "draw": 16
+            "win": 65,
+            "loss": 39,
+            "draw": 20
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2003,
-            "date": 1732264012,
-            "rd": 37
+            "rating": 2018,
+            "date": 1738578432,
+            "rd": 35
         },
         "best": {
             "rating": 2157,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/42186549993"
         },
         "record": {
-            "win": 3141,
-            "loss": 2685,
-            "draw": 231
+            "win": 3195,
+            "loss": 2729,
+            "draw": 239
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1908,
-            "date": 1727128249,
-            "rd": 98
+            "rating": 1992,
+            "date": 1739680308,
+            "rd": 76
         },
         "best": {
             "rating": 2241,
@@ -100,15 +100,15 @@
             "game": "https://www.chess.com/game/live/1673330140"
         },
         "record": {
-            "win": 362,
-            "loss": 245,
-            "draw": 42
+            "win": 370,
+            "loss": 249,
+            "draw": 44
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3262,
-            "date": 1714237471
+            "rating": 3315,
+            "date": 1740512225
         },
         "lowest": {
             "rating": 1347,

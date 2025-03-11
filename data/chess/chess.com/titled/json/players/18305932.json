@@ -6,9 +6,9 @@
     "name": "Alexis Vargas Arteaga",
     "username": "lexisvar",
     "title": "FM",
-    "followers": 709,
+    "followers": 710,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1733864656,
+    "last_online": 1741287181,
     "joined": 1406855378,
     "status": "premium",
     "is_streamer": false,
@@ -90,8 +90,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2594,
-            "date": 1716473059,
-            "rd": 48
+            "date": 1735086845,
+            "rd": 49
         },
         "best": {
             "rating": 2681,
@@ -99,16 +99,16 @@
             "game": "https://www.chess.com/game/live/3181314006"
         },
         "record": {
-            "win": 1932,
-            "loss": 821,
+            "win": 1935,
+            "loss": 824,
             "draw": 132
         }
     },
     "fide": 2222,
     "tactics": {
         "highest": {
-            "rating": 2996,
-            "date": 1733710210
+            "rating": 3001,
+            "date": 1734495280
         },
         "lowest": {
             "rating": 413,

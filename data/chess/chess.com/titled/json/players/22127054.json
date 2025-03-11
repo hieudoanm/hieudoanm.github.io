@@ -8,7 +8,7 @@
     "followers": 9,
     "country": "https://api.chess.com/pub/country/UY",
     "location": "Montevideo",
-    "last_online": 1734033718,
+    "last_online": 1741399875,
     "joined": 1430001090,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2009,
-            "date": 1734174652,
-            "rd": 34
+            "rating": 1998,
+            "date": 1741676513,
+            "rd": 33
         },
         "best": {
             "rating": 2177,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/66316805263"
         },
         "record": {
-            "win": 3493,
-            "loss": 3167,
-            "draw": 414
+            "win": 3661,
+            "loss": 3321,
+            "draw": 446
         }
     },
     "fide": 0,

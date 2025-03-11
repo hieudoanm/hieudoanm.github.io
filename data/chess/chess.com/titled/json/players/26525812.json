@@ -6,9 +6,9 @@
     "name": "David Silva",
     "username": "mestresilva",
     "title": "IM",
-    "followers": 106,
+    "followers": 109,
     "country": "https://api.chess.com/pub/country/AO",
-    "last_online": 1732382028,
+    "last_online": 1740567938,
     "joined": 1454653279,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2616,
-            "date": 1732388212,
-            "rd": 40
+            "rating": 2601,
+            "date": 1741583803,
+            "rd": 49
         },
         "best": {
             "rating": 2625,
@@ -64,7 +64,7 @@
         },
         "record": {
             "win": 23,
-            "loss": 14,
+            "loss": 16,
             "draw": 1
         }
     },

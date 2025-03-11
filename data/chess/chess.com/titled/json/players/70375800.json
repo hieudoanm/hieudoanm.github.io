@@ -6,9 +6,9 @@
     "name": "kyaw myat aung",
     "username": "kyawmyataung2005",
     "title": "FM",
-    "followers": 295,
+    "followers": 303,
     "country": "https://api.chess.com/pub/country/MM",
-    "last_online": 1733615405,
+    "last_online": 1741444260,
     "joined": 1578306752,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1745,
-            "date": 1734165746,
-            "rd": 130
+            "rating": 1757,
+            "date": 1741691394,
+            "rd": 131
         },
         "best": {
             "rating": 2009,
@@ -27,17 +27,48 @@
             "game": "https://www.chess.com/game/daily/445263019"
         },
         "record": {
-            "win": 52,
+            "win": 54,
             "loss": 21,
             "draw": 0,
-            "time_per_move": 67079,
+            "time_per_move": 57940,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 4
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 1420,
+            "date": 1741492065,
+            "rd": 199
+        },
+        "best": {
+            "rating": 1420,
+            "date": 1741492065,
+            "game": "https://www.chess.com/game/daily/776712069"
+        },
+        "record": {
+            "win": 10,
+            "loss": 2,
+            "draw": 0,
+            "time_per_move": 57940,
+            "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 4
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2351,
-            "date": 1731504839,
+            "rating": 2338,
+            "date": 1738590136,
             "rd": 49
         },
         "best": {
@@ -46,16 +77,16 @@
             "game": "https://www.chess.com/game/live/118318087277"
         },
         "record": {
-            "win": 620,
-            "loss": 267,
-            "draw": 126
+            "win": 627,
+            "loss": 268,
+            "draw": 128
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2170,
-            "date": 1733615553,
-            "rd": 49
+            "rating": 2219,
+            "date": 1740750316,
+            "rd": 53
         },
         "best": {
             "rating": 2330,
@@ -63,26 +94,26 @@
             "game": "https://www.chess.com/game/live/119521773891"
         },
         "record": {
-            "win": 975,
-            "loss": 813,
-            "draw": 79
+            "win": 993,
+            "loss": 828,
+            "draw": 80
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2434,
-            "date": 1734058018,
-            "rd": 36
+            "rating": 2424,
+            "date": 1741449112,
+            "rd": 34
         },
         "best": {
             "rating": 2494,
             "date": 1727625072,
-            "game": "https://www.chess.com/game/live/36773988709"
+            "game": "https://www.chess.com/game/live/132423681987"
         },
         "record": {
-            "win": 2761,
-            "loss": 1566,
-            "draw": 371
+            "win": 2974,
+            "loss": 1667,
+            "draw": 398
         }
     },
     "tactics": {

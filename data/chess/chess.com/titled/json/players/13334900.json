@@ -3,13 +3,13 @@
     "player_id": 13334900,
     "@id": "https://api.chess.com/pub/player/rockstar0902",
     "url": "https://www.chess.com/member/rockstar0902",
-    "name": "raahul",
+    "name": "Raahul V S",
     "username": "rockstar0902",
     "title": "IM",
-    "followers": 114,
+    "followers": 121,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "chennai",
-    "last_online": 1734183407,
+    "last_online": 1741598486,
     "joined": 1377856742,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1175,
-            "date": 1702805301,
-            "rd": 231
+            "rating": 1184,
+            "date": 1741511894,
+            "rd": 342
         },
         "best": {
             "rating": 1200,
@@ -28,18 +28,18 @@
             "game": "https://www.chess.com/game/daily/88671026"
         },
         "record": {
-            "win": 3,
+            "win": 4,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 75739,
+            "time_per_move": 56061,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2224,
-            "date": 1726899962,
-            "rd": 97
+            "date": 1740430533,
+            "rd": 50
         },
         "best": {
             "rating": 2224,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/6225514683"
         },
         "record": {
-            "win": 12,
+            "win": 14,
             "loss": 14,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2456,
-            "date": 1733594548,
-            "rd": 50
+            "rating": 2483,
+            "date": 1741328857,
+            "rd": 71
         },
         "best": {
             "rating": 2477,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/127331997677"
         },
         "record": {
-            "win": 429,
+            "win": 431,
             "loss": 326,
             "draw": 19
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2707,
-            "date": 1732479697,
-            "rd": 47
+            "rating": 2687,
+            "date": 1740769356,
+            "rd": 48
         },
         "best": {
-            "rating": 2713,
-            "date": 1732478723,
+            "rating": 2714,
+            "date": 1739647638,
             "game": "https://www.chess.com/game/live/61662098119"
         },
         "record": {
-            "win": 258,
-            "loss": 208,
-            "draw": 25
+            "win": 263,
+            "loss": 210,
+            "draw": 29
         }
     },
     "tactics": {

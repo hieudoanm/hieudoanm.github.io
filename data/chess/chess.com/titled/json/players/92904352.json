@@ -6,10 +6,10 @@
     "name": "Lefong Hua",
     "username": "lefonghua",
     "title": "FM",
-    "followers": 170,
+    "followers": 173,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Montreal",
-    "last_online": 1734137623,
+    "last_online": 1741624952,
     "joined": 1602425088,
     "status": "premium",
     "is_streamer": false,
@@ -53,7 +53,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2561,
-            "date": 1734016750,
+            "date": 1734447764,
             "rd": 46
         },
         "best": {

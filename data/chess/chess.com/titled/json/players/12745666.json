@@ -6,10 +6,10 @@
     "name": "Ming Lu",
     "username": "chesskid1220",
     "title": "IM",
-    "followers": 373,
+    "followers": 378,
     "country": "https://api.chess.com/pub/country/US",
     "location": "California",
-    "last_online": 1734134798,
+    "last_online": 1741638787,
     "joined": 1374081127,
     "status": "premium",
     "is_streamer": false,
@@ -57,8 +57,8 @@
     "chess_rapid": {
         "last": {
             "rating": 1950,
-            "date": 1727632770,
-            "rd": 122
+            "date": 1737177902,
+            "rd": 167
         },
         "best": {
             "rating": 2144,
@@ -66,16 +66,16 @@
             "game": "https://www.chess.com/game/live/42071330887"
         },
         "record": {
-            "win": 687,
+            "win": 688,
             "loss": 583,
             "draw": 74
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2255,
-            "date": 1718277371,
-            "rd": 113
+            "rating": 2228,
+            "date": 1741087628,
+            "rd": 130
         },
         "best": {
             "rating": 2566,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/19949473889"
         },
         "record": {
-            "win": 971,
-            "loss": 864,
+            "win": 972,
+            "loss": 865,
             "draw": 99
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1962,
-            "date": 1730051450,
-            "rd": 140
+            "rating": 2199,
+            "date": 1740968648,
+            "rd": 133
         },
         "best": {
             "rating": 2384,
@@ -100,8 +100,8 @@
             "game": "https://www.chess.com/game/live/5625175336"
         },
         "record": {
-            "win": 763,
-            "loss": 794,
+            "win": 766,
+            "loss": 796,
             "draw": 97
         }
     },
@@ -118,12 +118,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 54,
-            "score": 51
-        },
-        "daily": {
-            "total_attempts": 42,
-            "score": 41
+            "total_attempts": 57,
+            "score": 54
         }
     }
 }

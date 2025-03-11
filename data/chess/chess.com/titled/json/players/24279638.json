@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 116,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733846270,
+    "last_online": 1741701463,
     "joined": 1443194044,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1860,
-            "date": 1711067046,
+            "date": 1741595320,
             "rd": 168
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2372,
-            "date": 1731633209,
-            "rd": 105
+            "rating": 2545,
+            "date": 1741273560,
+            "rd": 41
         },
         "best": {
             "rating": 2706,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/6007343116"
         },
         "record": {
-            "win": 1016,
-            "loss": 585,
-            "draw": 102
+            "win": 1068,
+            "loss": 621,
+            "draw": 110
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2467,
-            "date": 1733846792,
-            "rd": 47
+            "rating": 2613,
+            "date": 1741691516,
+            "rd": 30
         },
         "best": {
             "rating": 2645,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/102205459941"
         },
         "record": {
-            "win": 1837,
-            "loss": 1513,
-            "draw": 323
+            "win": 1985,
+            "loss": 1623,
+            "draw": 342
         }
     },
     "fide": 2410,
@@ -98,8 +98,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 46,
-            "score": 43
+            "total_attempts": 49,
+            "score": 46
+        },
+        "daily": {
+            "total_attempts": 49,
+            "score": 46
         }
     }
 }

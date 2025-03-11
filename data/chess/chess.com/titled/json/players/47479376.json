@@ -5,9 +5,9 @@
     "name": "Jakub Suder",
     "username": "bipe137",
     "title": "FM",
-    "followers": 38,
+    "followers": 41,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734173827,
+    "last_online": 1741702763,
     "joined": 1530269764,
     "status": "premium",
     "is_streamer": false,
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2671,
-            "date": 1734181968,
-            "rd": 27
+            "rating": 2701,
+            "date": 1741683839,
+            "rd": 25
         },
         "best": {
-            "rating": 2852,
-            "date": 1729767331,
-            "game": "https://www.chess.com/game/live/123030004009"
+            "rating": 2906,
+            "date": 1738619556,
+            "game": "https://www.chess.com/game/live/132881993017"
         },
         "record": {
-            "win": 5684,
-            "loss": 4867,
-            "draw": 704
+            "win": 6770,
+            "loss": 5918,
+            "draw": 881
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2602,
-            "date": 1734011942,
-            "rd": 41
+            "rating": 2627,
+            "date": 1741643910,
+            "rd": 36
         },
         "best": {
             "rating": 2752,
@@ -79,15 +79,15 @@
             "game": "https://www.chess.com/game/live/122765665917"
         },
         "record": {
-            "win": 6845,
-            "loss": 5916,
-            "draw": 1324
+            "win": 6938,
+            "loss": 6007,
+            "draw": 1342
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3532,
-            "date": 1733917298
+            "rating": 3564,
+            "date": 1738592951
         },
         "lowest": {
             "rating": 1007,
@@ -100,8 +100,8 @@
             "score": 66
         },
         "daily": {
-            "total_attempts": 40,
-            "score": 37
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

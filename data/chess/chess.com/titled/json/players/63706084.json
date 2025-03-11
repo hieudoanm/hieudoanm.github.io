@@ -1,5 +1,4 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/63706084.88bfccfa.200x200o.59b273714354.jpg",
     "player_id": 63706084,
     "@id": "https://api.chess.com/pub/player/unbreakable7",
     "url": "https://www.chess.com/member/unbreakable7",
@@ -8,12 +7,12 @@
     "title": "WFM",
     "followers": 20,
     "country": "https://api.chess.com/pub/country/HR",
-    "last_online": 1733245463,
+    "last_online": 1741178070,
     "joined": 1564241716,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -65,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2020,
-            "date": 1725814729,
-            "rd": 77
+            "rating": 2062,
+            "date": 1741179274,
+            "rd": 90
         },
         "best": {
             "rating": 2184,
@@ -75,8 +74,8 @@
             "game": "https://www.chess.com/game/live/55011394787"
         },
         "record": {
-            "win": 126,
-            "loss": 102,
+            "win": 131,
+            "loss": 106,
             "draw": 21
         }
     },

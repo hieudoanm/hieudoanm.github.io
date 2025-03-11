@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/80994690.e1d197af.200x200o.38fab15d5b43.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/80994690.b4cf9a71.200x200o.14ae099ead7c.jpg",
     "player_id": 80994690,
     "@id": "https://api.chess.com/pub/player/faustinooro",
     "url": "https://www.chess.com/member/FaustinoOro",
     "name": "Faustino Oro",
     "username": "faustinooro",
     "title": "IM",
-    "followers": 5232,
+    "followers": 5753,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Badalona, Barcelona - Espa\u00f1a",
-    "last_online": 1734182420,
+    "last_online": 1741630505,
     "joined": 1590874408,
     "status": "premium",
     "is_streamer": false,
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2938,
-            "date": 1733597913,
-            "rd": 30
+            "rating": 2972,
+            "date": 1741460371,
+            "rd": 33
         },
         "best": {
-            "rating": 3039,
-            "date": 1726335148,
+            "rating": 3075,
+            "date": 1736617057,
             "game": "https://www.chess.com/game/live/104953239005"
         },
         "record": {
-            "win": 2209,
-            "loss": 1405,
-            "draw": 221
+            "win": 2478,
+            "loss": 1519,
+            "draw": 245
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2970,
-            "date": 1734088803,
-            "rd": 27
+            "rating": 3101,
+            "date": 1741370328,
+            "rd": 34
         },
         "best": {
             "rating": 3146,
@@ -81,12 +81,12 @@
             "game": "https://www.chess.com/game/live/125688576901"
         },
         "record": {
-            "win": 5870,
-            "loss": 4846,
-            "draw": 911
+            "win": 6078,
+            "loss": 4982,
+            "draw": 937
         }
     },
-    "fide": 2434,
+    "fide": 2447,
     "tactics": {
         "highest": {
             "rating": 4407,

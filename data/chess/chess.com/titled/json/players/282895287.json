@@ -6,9 +6,9 @@
     "name": "Mohammed Seder",
     "username": "der_balak_3halak",
     "title": "FM",
-    "followers": 12,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/PS",
-    "last_online": 1734165551,
+    "last_online": 1741702346,
     "joined": 1683373047,
     "status": "premium",
     "is_streamer": false,
@@ -34,36 +34,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2505,
-            "date": 1724683064,
-            "rd": 39
+            "rating": 2633,
+            "date": 1741702838,
+            "rd": 16
         },
         "best": {
-            "rating": 2572,
-            "date": 1708088394,
-            "game": "https://www.chess.com/game/live/101823922479"
+            "rating": 2759,
+            "date": 1741202192,
+            "game": "https://www.chess.com/game/live/131305200189"
         },
         "record": {
-            "win": 279,
-            "loss": 332,
-            "draw": 40
+            "win": 1351,
+            "loss": 1689,
+            "draw": 230
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2531,
-            "date": 1734166094,
-            "rd": 39
+            "rating": 2548,
+            "date": 1741546388,
+            "rd": 27
         },
         "best": {
             "rating": 2618,
             "date": 1689694062,
-            "game": "https://www.chess.com/game/live/109438943063"
+            "game": "https://www.chess.com/game/live/132423681719"
         },
         "record": {
-            "win": 668,
-            "loss": 845,
-            "draw": 144
+            "win": 831,
+            "loss": 1033,
+            "draw": 187
         }
     },
     "tactics": {

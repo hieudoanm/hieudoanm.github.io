@@ -4,10 +4,10 @@
     "url": "https://www.chess.com/member/Kaliopa",
     "name": "Beloslava Krasteva",
     "username": "kaliopa",
-    "title": "FM",
-    "followers": 86,
+    "title": "WGM",
+    "followers": 92,
     "country": "https://api.chess.com/pub/country/BG",
-    "last_online": 1733948487,
+    "last_online": 1741288989,
     "joined": 1454398916,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 400,
-            "date": 1695389896,
+            "date": 1734655237,
             "rd": 350
         },
         "record": {
@@ -64,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2141,
-            "date": 1728491552,
-            "rd": 75
+            "rating": 2158,
+            "date": 1736810045,
+            "rd": 45
         },
         "best": {
             "rating": 2334,
@@ -74,9 +74,9 @@
             "game": "https://www.chess.com/game/live/10259003417"
         },
         "record": {
-            "win": 481,
-            "loss": 517,
-            "draw": 83
+            "win": 512,
+            "loss": 539,
+            "draw": 87
         }
     },
     "tactics": {

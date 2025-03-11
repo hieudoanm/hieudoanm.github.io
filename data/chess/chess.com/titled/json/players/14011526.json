@@ -6,10 +6,10 @@
     "name": "Levan Bregadze",
     "username": "daeneryst",
     "title": "IM",
-    "followers": 286,
+    "followers": 289,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Durham, NC",
-    "last_online": 1734113796,
+    "last_online": 1741623780,
     "joined": 1382464385,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2042,
-            "date": 1732975668,
+            "date": 1740632550,
             "rd": 310
         },
         "best": {
@@ -31,14 +31,14 @@
             "win": 3,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 24437,
+            "time_per_move": 22111,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2532,
-            "date": 1730656585,
+            "date": 1741136427,
             "rd": 236
         },
         "best": {
@@ -54,8 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2839,
-            "date": 1734115075,
+            "rating": 2827,
+            "date": 1740678760,
             "rd": 43
         },
         "best": {
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/1537497043"
         },
         "record": {
-            "win": 5869,
-            "loss": 5623,
-            "draw": 970
+            "win": 5895,
+            "loss": 5659,
+            "draw": 979
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2745,
-            "date": 1729454625,
+            "date": 1739030525,
             "rd": 49
         },
         "best": {

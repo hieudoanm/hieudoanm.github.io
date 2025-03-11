@@ -6,7 +6,7 @@
     "title": "CM",
     "followers": 7,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734081213,
+    "last_online": 1741632950,
     "joined": 1637864301,
     "status": "premium",
     "is_streamer": false,
@@ -15,36 +15,36 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2149,
-            "date": 1734166762,
-            "rd": 106
+            "rating": 2154,
+            "date": 1741695822,
+            "rd": 75
         },
         "best": {
-            "rating": 2149,
-            "date": 1734092076,
-            "game": "https://www.chess.com/game/daily/431867955"
+            "rating": 2213,
+            "date": 1737471278,
+            "game": "https://www.chess.com/game/daily/734573933"
         },
         "record": {
-            "win": 104,
-            "loss": 17,
-            "draw": 9,
-            "time_per_move": 56030,
+            "win": 119,
+            "loss": 23,
+            "draw": 12,
+            "time_per_move": 63367,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2098,
-            "date": 1677833813,
-            "rd": 175
+            "rating": 2104,
+            "date": 1739728550,
+            "rd": 49
         },
         "best": {
-            "rating": 1865,
-            "date": 1640148889,
-            "game": "https://www.chess.com/game/live/33886762849"
+            "rating": 2104,
+            "date": 1739728550,
+            "game": "https://www.chess.com/game/live/133466385343"
         },
         "record": {
-            "win": 3,
+            "win": 4,
             "loss": 0,
             "draw": 0
         }
@@ -68,9 +68,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2036,
-            "date": 1733504340,
-            "rd": 70
+            "rating": 2050,
+            "date": 1739566054,
+            "rd": 59
         },
         "best": {
             "rating": 2107,
@@ -78,8 +78,8 @@
             "game": "https://www.chess.com/game/live/38417661479"
         },
         "record": {
-            "win": 314,
-            "loss": 195,
+            "win": 329,
+            "loss": 206,
             "draw": 15
         }
     },

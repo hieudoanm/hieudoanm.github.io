@@ -6,9 +6,9 @@
     "name": "Oliver Organdziev - Hren",
     "username": "organdzievhren",
     "title": "FM",
-    "followers": 378,
+    "followers": 399,
     "country": "https://api.chess.com/pub/country/MK",
-    "last_online": 1734178960,
+    "last_online": 1741674279,
     "joined": 1377803209,
     "status": "premium",
     "is_streamer": false,
@@ -32,19 +32,13 @@
             "draw": 0,
             "time_per_move": 18860,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1797,
-            "date": 1732101144,
-            "rd": 93
+            "rating": 1858,
+            "date": 1737029581,
+            "rd": 87
         },
         "best": {
             "rating": 2004,
@@ -52,9 +46,9 @@
             "game": "https://www.chess.com/game/live/4471256652"
         },
         "record": {
-            "win": 47,
+            "win": 50,
             "loss": 33,
-            "draw": 10
+            "draw": 12
         }
     },
     "chess_bullet": {
@@ -76,25 +70,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2436,
-            "date": 1734170056,
-            "rd": 22
+            "rating": 2426,
+            "date": 1741695111,
+            "rd": 23
         },
         "best": {
             "rating": 2637,
             "date": 1564659814,
-            "game": "https://www.chess.com/game/live/80550009025"
+            "game": "https://www.chess.com/game/live/129399835669"
         },
         "record": {
-            "win": 15001,
-            "loss": 11392,
-            "draw": 2567
+            "win": 15549,
+            "loss": 11841,
+            "draw": 2656
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3256,
-            "date": 1730784164
+            "rating": 3267,
+            "date": 1739166861
         },
         "lowest": {
             "rating": 1190,

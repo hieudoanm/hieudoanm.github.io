@@ -6,10 +6,10 @@
     "name": "Ihor Vypkhaniuk",
     "username": "chessmasterzt",
     "title": "IM",
-    "followers": 58,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Zhytomyr",
-    "last_online": 1734166737,
+    "last_online": 1741616559,
     "joined": 1559894133,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2615,
-            "date": 1627238042,
-            "rd": 131
+            "rating": 2620,
+            "date": 1740865924,
+            "rd": 49
         },
         "best": {
             "rating": 2615,
@@ -45,7 +45,7 @@
             "game": "https://www.chess.com/game/live/4789387552"
         },
         "record": {
-            "win": 35,
+            "win": 36,
             "loss": 21,
             "draw": 5
         }
@@ -53,7 +53,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2700,
-            "date": 1728425920,
+            "date": 1740818215,
             "rd": 49
         },
         "best": {
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/4879393291"
         },
         "record": {
-            "win": 2357,
-            "loss": 1599,
-            "draw": 543
+            "win": 2363,
+            "loss": 1602,
+            "draw": 545
         }
     },
     "fide": 2425,
     "tactics": {
         "highest": {
-            "rating": 3243,
-            "date": 1682885180
+            "rating": 3262,
+            "date": 1739237083
         },
         "lowest": {
             "rating": 2415,
@@ -82,10 +82,6 @@
         "best": {
             "total_attempts": 63,
             "score": 60
-        },
-        "daily": {
-            "total_attempts": 47,
-            "score": 44
         }
     }
 }

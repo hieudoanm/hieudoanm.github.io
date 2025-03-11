@@ -6,10 +6,10 @@
     "name": "Hartmuth Beck",
     "username": "viennarocket",
     "title": "FM",
-    "followers": 62,
+    "followers": 63,
     "country": "https://api.chess.com/pub/country/AT",
     "location": "Vienna",
-    "last_online": 1734154722,
+    "last_online": 1741678897,
     "joined": 1249480947,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2485,
-            "date": 1734154890,
-            "rd": 31
+            "rating": 2362,
+            "date": 1741699788,
+            "rd": 25
         },
         "best": {
             "rating": 2562,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/32596761637"
         },
         "record": {
-            "win": 19878,
-            "loss": 19310,
-            "draw": 3437
+            "win": 20181,
+            "loss": 19606,
+            "draw": 3494
         }
     },
     "fide": 2300,

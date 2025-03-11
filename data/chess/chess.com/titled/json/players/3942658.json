@@ -6,10 +6,10 @@
     "name": "Norman Weinstein",
     "username": "normweinstein",
     "title": "IM",
-    "followers": 23,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York City",
-    "last_online": 1734147651,
+    "last_online": 1741580588,
     "joined": 1283873360,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2489,
-            "date": 1734152894,
-            "rd": 18
+            "rating": 2463,
+            "date": 1741702964,
+            "rd": 19
         },
         "best": {
             "rating": 2605,
@@ -40,9 +40,9 @@
             "game": "https://www.chess.com/game/live/5250751858"
         },
         "record": {
-            "win": 9526,
-            "loss": 9798,
-            "draw": 1510
+            "win": 10888,
+            "loss": 11424,
+            "draw": 1722
         }
     },
     "fide": 2450,

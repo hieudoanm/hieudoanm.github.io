@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 14,
     "country": "https://api.chess.com/pub/country/CY",
-    "last_online": 1734009560,
+    "last_online": 1741551616,
     "joined": 1600287473,
     "status": "premium",
     "is_streamer": false,
@@ -46,9 +46,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1980,
-            "date": 1733917099,
-            "rd": 53
+            "rating": 2021,
+            "date": 1741558151,
+            "rd": 57
         },
         "best": {
             "rating": 2315,
@@ -56,9 +56,9 @@
             "game": "https://www.chess.com/game/live/19935772937"
         },
         "record": {
-            "win": 987,
-            "loss": 902,
-            "draw": 138
+            "win": 1009,
+            "loss": 919,
+            "draw": 140
         }
     },
     "fide": 0,

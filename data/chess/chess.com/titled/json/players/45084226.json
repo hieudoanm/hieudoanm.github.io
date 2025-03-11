@@ -6,114 +6,114 @@
     "name": "Eric Liu",
     "username": "el008",
     "title": "IM",
-    "followers": 1673,
+    "followers": 1930,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734139689,
+    "last_online": 1741704129,
     "joined": 1523151783,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1704,
-            "date": 1734139698,
-            "rd": 67
+            "rating": 1865,
+            "date": 1741704203,
+            "rd": 60
         },
         "best": {
-            "rating": 1796,
-            "date": 1648702343,
+            "rating": 1873,
+            "date": 1741454176,
             "game": "https://www.chess.com/game/daily/350752191"
         },
         "record": {
-            "win": 571,
-            "loss": 533,
-            "draw": 53,
-            "time_per_move": 37665,
+            "win": 660,
+            "loss": 539,
+            "draw": 55,
+            "time_per_move": 34826,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 120,
+            "points": 144,
             "withdraw": 20,
-            "count": 8,
+            "count": 9,
             "highest_finish": 1
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1594,
-            "date": 1733093579,
-            "rd": 135
+            "rating": 1742,
+            "date": 1741656153,
+            "rd": 108
         },
         "best": {
-            "rating": 1636,
-            "date": 1690479012,
+            "rating": 1742,
+            "date": 1741656153,
             "game": "https://www.chess.com/game/daily/262359672"
         },
         "record": {
-            "win": 126,
+            "win": 144,
             "loss": 84,
             "draw": 5,
-            "time_per_move": 37665,
+            "time_per_move": 34826,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 120,
+            "points": 144,
             "withdraw": 20,
-            "count": 8,
+            "count": 9,
             "highest_finish": 1
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2376,
-            "date": 1713118651,
-            "rd": 49
+            "rating": 2380,
+            "date": 1736631066,
+            "rd": 48
         },
         "best": {
-            "rating": 2376,
-            "date": 1713112441,
+            "rating": 2384,
+            "date": 1736624328,
             "game": "https://www.chess.com/game/live/6237403015"
         },
         "record": {
-            "win": 244,
+            "win": 248,
             "loss": 171,
-            "draw": 61
+            "draw": 62
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2875,
-            "date": 1733111103,
-            "rd": 40
+            "rating": 2931,
+            "date": 1741554911,
+            "rd": 33
         },
         "best": {
-            "rating": 2915,
-            "date": 1730648675,
+            "rating": 2925,
+            "date": 1734296168,
             "game": "https://www.chess.com/game/live/101517110715"
         },
         "record": {
-            "win": 2169,
-            "loss": 1808,
-            "draw": 245
+            "win": 2502,
+            "loss": 2037,
+            "draw": 274
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2700,
-            "date": 1733430164,
-            "rd": 48
+            "rating": 2690,
+            "date": 1740955846,
+            "rd": 46
         },
         "best": {
-            "rating": 2700,
-            "date": 1733430164,
+            "rating": 2727,
+            "date": 1734757445,
             "game": "https://www.chess.com/game/live/103994502909"
         },
         "record": {
-            "win": 489,
-            "loss": 324,
-            "draw": 67
+            "win": 496,
+            "loss": 333,
+            "draw": 68
         }
     },
     "fide": 2455,
@@ -131,10 +131,6 @@
         "best": {
             "total_attempts": 192,
             "score": 189
-        },
-        "daily": {
-            "total_attempts": 65,
-            "score": 63
         }
     }
 }

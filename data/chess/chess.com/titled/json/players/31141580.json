@@ -6,9 +6,9 @@
     "name": "Jorge Ernesto Giron",
     "username": "lquerella",
     "title": "IM",
-    "followers": 50,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/SV",
-    "last_online": 1734023918,
+    "last_online": 1739814690,
     "joined": 1480043705,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2239,
-            "date": 1734106456,
-            "rd": 50
+            "rating": 2252,
+            "date": 1738978681,
+            "rd": 57
         },
         "best": {
             "rating": 2494,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/84758665085"
         },
         "record": {
-            "win": 667,
-            "loss": 331,
+            "win": 677,
+            "loss": 337,
             "draw": 44
         }
     },

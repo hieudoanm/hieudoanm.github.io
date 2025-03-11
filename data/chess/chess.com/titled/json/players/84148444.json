@@ -6,10 +6,10 @@
     "name": "Saadat Bashirli",
     "username": "bashirlisaadat",
     "title": "WCM",
-    "followers": 42,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/AZ",
     "location": "Ganja",
-    "last_online": 1733240976,
+    "last_online": 1741452843,
     "joined": 1592993137,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2454,
-            "date": 1733249104,
-            "rd": 43
+            "rating": 2448,
+            "date": 1741111699,
+            "rd": 44
         },
         "best": {
-            "rating": 2504,
-            "date": 1731431432,
+            "rating": 2508,
+            "date": 1740504190,
             "game": "https://www.chess.com/game/live/117300064367"
         },
         "record": {
-            "win": 301,
-            "loss": 435,
-            "draw": 63
+            "win": 336,
+            "loss": 483,
+            "draw": 75
         }
     },
     "fide": 1925,

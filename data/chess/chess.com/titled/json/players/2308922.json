@@ -6,10 +6,10 @@
     "name": "Deniz Ozen",
     "username": "denizozen",
     "title": "IM",
-    "followers": 574,
+    "followers": 591,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "izmir",
-    "last_online": 1734171380,
+    "last_online": 1738610053,
     "joined": 1258531305,
     "status": "premium",
     "is_streamer": false,
@@ -52,17 +52,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2946,
-            "date": 1719218277,
+            "rating": 2954,
+            "date": 1736312165,
             "rd": 49
         },
         "best": {
-            "rating": 2946,
-            "date": 1719218277,
+            "rating": 2954,
+            "date": 1736312165,
             "game": "https://www.chess.com/game/live/96692267621"
         },
         "record": {
-            "win": 875,
+            "win": 876,
             "loss": 703,
             "draw": 218
         }

@@ -6,10 +6,10 @@
     "name": "Adriano Rodrigues",
     "username": "drinbet",
     "title": "FM",
-    "followers": 95,
+    "followers": 97,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Niter&oacute;i",
-    "last_online": 1734182588,
+    "last_online": 1741688580,
     "joined": 1392815632,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1932,
-            "date": 1734183628,
-            "rd": 24
+            "rating": 2022,
+            "date": 1741693687,
+            "rd": 26
         },
         "best": {
             "rating": 2261,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/39301843193"
         },
         "record": {
-            "win": 8841,
-            "loss": 8175,
-            "draw": 330
+            "win": 9241,
+            "loss": 8542,
+            "draw": 345
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2173,
-            "date": 1733589273,
-            "rd": 50
+            "rating": 2124,
+            "date": 1739917460,
+            "rd": 64
         },
         "best": {
             "rating": 2416,
@@ -76,8 +76,8 @@
             "game": "https://www.chess.com/game/live/87688370479"
         },
         "record": {
-            "win": 2844,
-            "loss": 2354,
+            "win": 2846,
+            "loss": 2362,
             "draw": 291
         }
     },

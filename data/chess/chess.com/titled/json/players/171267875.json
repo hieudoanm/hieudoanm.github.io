@@ -6,9 +6,9 @@
     "name": "Ali Niknaddaf",
     "username": "aliniknaddaf",
     "title": "FM",
-    "followers": 3,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1734020626,
+    "last_online": 1741286518,
     "joined": 1643771832,
     "status": "premium",
     "is_streamer": false,
@@ -34,8 +34,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2514,
-            "date": 1734184842,
+            "rating": 2379,
+            "date": 1741696659,
             "rd": 17
         },
         "best": {
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/110263851395"
         },
         "record": {
-            "win": 8812,
-            "loss": 8521,
-            "draw": 1036
+            "win": 10691,
+            "loss": 10264,
+            "draw": 1253
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2515,
-            "date": 1705437333,
-            "rd": 20
+            "rating": 2507,
+            "date": 1737139963,
+            "rd": 49
         },
         "best": {
             "rating": 2610,
@@ -62,7 +62,7 @@
         },
         "record": {
             "win": 2748,
-            "loss": 2665,
+            "loss": 2666,
             "draw": 552
         }
     },

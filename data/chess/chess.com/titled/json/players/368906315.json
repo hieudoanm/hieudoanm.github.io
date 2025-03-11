@@ -6,14 +6,14 @@
     "name": "Ryan Lane",
     "username": "finejupiter",
     "title": "CM",
-    "followers": 0,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1733639688,
+    "last_online": 1741548662,
     "joined": 1718075459,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2056,
-            "date": 1733643590,
-            "rd": 115
+            "rating": 2225,
+            "date": 1740960939,
+            "rd": 79
         },
         "best": {
             "rating": 2131,
@@ -44,33 +44,33 @@
             "game": "https://www.chess.com/game/live/112339790549"
         },
         "record": {
-            "win": 10,
-            "loss": 4,
+            "win": 20,
+            "loss": 6,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2218,
-            "date": 1733641786,
-            "rd": 115
+            "rating": 2378,
+            "date": 1741132845,
+            "rd": 48
         },
         "best": {
-            "rating": 2218,
-            "date": 1733641786,
-            "game": "https://www.chess.com/game/live/112487476339"
+            "rating": 2463,
+            "date": 1738106913,
+            "game": "https://www.chess.com/game/live/131841032209"
         },
         "record": {
-            "win": 6,
-            "loss": 8,
-            "draw": 1
+            "win": 37,
+            "loss": 56,
+            "draw": 5
         }
     },
     "fide": 1998,
     "tactics": {
         "highest": {
-            "rating": 2282,
-            "date": 1724819118
+            "rating": 2398,
+            "date": 1740757052
         },
         "lowest": {
             "rating": 1000,

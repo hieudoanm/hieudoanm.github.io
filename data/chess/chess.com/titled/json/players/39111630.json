@@ -5,9 +5,9 @@
     "name": "Robert Kreisl",
     "username": "robertkreisl",
     "title": "IM",
-    "followers": 14,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1734009667,
+    "last_online": 1741353865,
     "joined": 1506938444,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2216,
-            "date": 1598549812,
+            "date": 1736019043,
             "rd": 76
         },
         "best": {
@@ -87,8 +87,8 @@
     "fide": 2500,
     "tactics": {
         "highest": {
-            "rating": 3456,
-            "date": 1734107676
+            "rating": 3625,
+            "date": 1739174444
         },
         "lowest": {
             "rating": 1218,

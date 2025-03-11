@@ -5,9 +5,9 @@
     "name": "Mikayel Manvelyan",
     "username": "manmish2",
     "title": "CM",
-    "followers": 10,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1734103815,
+    "last_online": 1741098201,
     "joined": 1673529126,
     "status": "premium",
     "is_streamer": false,
@@ -45,19 +45,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2705,
-            "date": 1734107779,
-            "rd": 26
+            "rating": 2737,
+            "date": 1741352897,
+            "rd": 30
         },
         "best": {
-            "rating": 2841,
-            "date": 1729084061,
-            "game": "https://www.chess.com/game/live/113092210351"
+            "rating": 2904,
+            "date": 1735661263,
+            "game": "https://www.chess.com/game/live/134239739247"
         },
         "record": {
-            "win": 879,
-            "loss": 712,
-            "draw": 139
+            "win": 1172,
+            "loss": 960,
+            "draw": 200
         }
     },
     "fide": 2289,

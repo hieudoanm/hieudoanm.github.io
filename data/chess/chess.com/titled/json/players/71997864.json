@@ -6,9 +6,9 @@
     "name": "Rudolf Pashikyan",
     "username": "rud_2008",
     "title": "FM",
-    "followers": 14,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1733588028,
+    "last_online": 1741633605,
     "joined": 1581351068,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2796,
-            "date": 1719932761,
-            "rd": 49
+            "rating": 2801,
+            "date": 1740579798,
+            "rd": 44
         },
         "best": {
             "rating": 2816,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/102811309365"
         },
         "record": {
-            "win": 165,
-            "loss": 116,
+            "win": 172,
+            "loss": 123,
             "draw": 24
         }
     },
     "fide": 2286,
     "tactics": {
         "highest": {
-            "rating": 3689,
-            "date": 1733416771
+            "rating": 3697,
+            "date": 1734610874
         },
         "lowest": {
             "rating": 1200,

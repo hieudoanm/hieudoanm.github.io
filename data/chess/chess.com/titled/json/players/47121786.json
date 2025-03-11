@@ -5,9 +5,9 @@
     "name": "Kesaria Mgeladze",
     "username": "tolia123",
     "title": "WFM",
-    "followers": 149,
+    "followers": 151,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1734029683,
+    "last_online": 1741605936,
     "joined": 1529079884,
     "status": "premium",
     "is_streamer": false,
@@ -64,18 +64,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2366,
-            "date": 1732644697,
-            "rd": 87
+            "rating": 2425,
+            "date": 1734457849,
+            "rd": 78
         },
         "best": {
-            "rating": 2366,
-            "date": 1732644697,
+            "rating": 2446,
+            "date": 1734456193,
             "game": "https://www.chess.com/game/live/100376112671"
         },
         "record": {
-            "win": 321,
-            "loss": 263,
+            "win": 325,
+            "loss": 266,
             "draw": 35
         }
     },

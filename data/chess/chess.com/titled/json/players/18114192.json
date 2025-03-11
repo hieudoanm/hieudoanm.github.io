@@ -6,9 +6,9 @@
     "name": "Alexander Velikanov",
     "username": "likewater",
     "title": "IM",
-    "followers": 155,
+    "followers": 157,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734152028,
+    "last_online": 1741457733,
     "joined": 1405640642,
     "status": "premium",
     "is_streamer": false,
@@ -55,8 +55,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2415,
-            "date": 1731883071,
+            "rating": 2434,
+            "date": 1740192581,
             "rd": 49
         },
         "best": {
@@ -65,16 +65,16 @@
             "game": "https://www.chess.com/game/live/120467368203"
         },
         "record": {
-            "win": 36,
+            "win": 39,
             "loss": 12,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2847,
-            "date": 1734143192,
-            "rd": 29
+            "rating": 2855,
+            "date": 1741630499,
+            "rd": 33
         },
         "best": {
             "rating": 3020,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/3447192571"
         },
         "record": {
-            "win": 5903,
-            "loss": 5073,
-            "draw": 744
+            "win": 6199,
+            "loss": 5332,
+            "draw": 780
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2781,
-            "date": 1734011882,
-            "rd": 34
+            "rating": 2714,
+            "date": 1741668772,
+            "rd": 29
         },
         "best": {
             "rating": 2857,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/98184902571"
         },
         "record": {
-            "win": 4660,
-            "loss": 3851,
-            "draw": 590
+            "win": 4903,
+            "loss": 4042,
+            "draw": 623
         }
     },
     "tactics": {

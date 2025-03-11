@@ -6,10 +6,10 @@
     "name": "John Curtis",
     "username": "themagician",
     "title": "FM",
-    "followers": 3094,
+    "followers": 3205,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "Sydney",
-    "last_online": 1734121786,
+    "last_online": 1741694100,
     "joined": 1234409632,
     "status": "premium",
     "is_streamer": true,
@@ -25,7 +25,7 @@
     "chess_daily": {
         "last": {
             "rating": 2017,
-            "date": 1733832298,
+            "date": 1740653504,
             "rd": 152
         },
         "best": {
@@ -43,9 +43,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2122,
-            "date": 1734137607,
-            "rd": 45
+            "rating": 2149,
+            "date": 1741333386,
+            "rd": 49
         },
         "best": {
             "rating": 2315,
@@ -53,33 +53,33 @@
             "game": "https://www.chess.com/game/live/26779824803"
         },
         "record": {
-            "win": 1582,
-            "loss": 201,
-            "draw": 82
+            "win": 1609,
+            "loss": 209,
+            "draw": 84
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1516,
-            "date": 1734137995,
-            "rd": 25
+            "rating": 1725,
+            "date": 1741338289,
+            "rd": 26
         },
         "best": {
             "rating": 2177,
             "date": 1299460432,
-            "game": "https://www.chess.com/game/live/61807779261"
+            "game": "https://www.chess.com/game/live/132490854659"
         },
         "record": {
-            "win": 29730,
-            "loss": 25099,
-            "draw": 912
+            "win": 30044,
+            "loss": 25335,
+            "draw": 923
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2095,
-            "date": 1734137251,
-            "rd": 24
+            "rating": 2346,
+            "date": 1741612877,
+            "rd": 26
         },
         "best": {
             "rating": 2374,
@@ -87,9 +87,9 @@
             "game": "https://www.chess.com/game/live/45955840433"
         },
         "record": {
-            "win": 51317,
-            "loss": 30594,
-            "draw": 5115
+            "win": 51995,
+            "loss": 31053,
+            "draw": 5209
         }
     },
     "fide": 2250,

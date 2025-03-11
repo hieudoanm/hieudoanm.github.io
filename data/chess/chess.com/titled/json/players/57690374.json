@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/donsuos",
     "username": "donsuos",
     "title": "FM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/SI",
-    "last_online": 1732099732,
+    "last_online": 1741629659,
     "joined": 1550871175,
     "status": "premium",
     "is_streamer": false,
@@ -44,9 +44,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2228,
-            "date": 1734180273,
-            "rd": 24
+            "rating": 2132,
+            "date": 1741686249,
+            "rd": 28
         },
         "best": {
             "rating": 2511,
@@ -54,9 +54,9 @@
             "game": "https://www.chess.com/game/live/4534803735"
         },
         "record": {
-            "win": 7739,
-            "loss": 6365,
-            "draw": 762
+            "win": 8091,
+            "loss": 6661,
+            "draw": 799
         }
     },
     "fide": 0,

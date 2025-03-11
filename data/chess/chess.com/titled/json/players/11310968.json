@@ -5,9 +5,9 @@
     "name": "Ronan Le Goff",
     "username": "eliwood44",
     "title": "FM",
-    "followers": 43,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733867994,
+    "last_online": 1741536127,
     "joined": 1364494745,
     "status": "premium",
     "is_streamer": false,
@@ -36,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1898,
-            "date": 1590645578,
+            "date": 1738664956,
             "rd": 146
         },
         "best": {
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2704,
-            "date": 1732505292,
-            "rd": 45
+            "rating": 2684,
+            "date": 1738111954,
+            "rd": 41
         },
         "best": {
-            "rating": 2704,
-            "date": 1732505292,
+            "rating": 2721,
+            "date": 1738109569,
             "game": "https://www.chess.com/game/live/124484945249"
         },
         "record": {
-            "win": 3219,
-            "loss": 2890,
-            "draw": 397
+            "win": 3228,
+            "loss": 2903,
+            "draw": 398
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2427,
-            "date": 1733267250,
-            "rd": 44
+            "rating": 2438,
+            "date": 1738109228,
+            "rd": 53
         },
         "best": {
             "rating": 2596,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/34460354727"
         },
         "record": {
-            "win": 893,
-            "loss": 798,
-            "draw": 172
+            "win": 901,
+            "loss": 808,
+            "draw": 173
         }
     },
     "tactics": {

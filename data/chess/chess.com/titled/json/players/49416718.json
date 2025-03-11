@@ -5,10 +5,10 @@
     "name": "Fabian Fiorito",
     "username": "lamomiablanca",
     "title": "IM",
-    "followers": 20,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "buenos aires",
-    "last_online": 1734131414,
+    "last_online": 1741524326,
     "joined": 1536062862,
     "status": "premium",
     "is_streamer": false,
@@ -46,9 +46,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2560,
-            "date": 1734043109,
-            "rd": 49
+            "rating": 2576,
+            "date": 1741464789,
+            "rd": 48
         },
         "best": {
             "rating": 2659,
@@ -56,8 +56,8 @@
             "game": "https://www.chess.com/game/live/24772924267"
         },
         "record": {
-            "win": 313,
-            "loss": 306,
+            "win": 320,
+            "loss": 310,
             "draw": 46
         }
     },

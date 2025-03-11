@@ -6,20 +6,20 @@
     "name": "Rasmus Skytte",
     "username": "erlesfar",
     "title": "IM",
-    "followers": 28,
+    "followers": 62,
     "country": "https://api.chess.com/pub/country/DK",
-    "last_online": 1734179469,
+    "last_online": 1741675735,
     "joined": 1255209494,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1443,
-            "date": 1703669290,
-            "rd": 277
+            "rating": 1005,
+            "date": 1741675811,
+            "rd": 220
         },
         "best": {
             "rating": 2451,
@@ -28,16 +28,35 @@
         },
         "record": {
             "win": 28,
-            "loss": 49,
+            "loss": 52,
             "draw": 9,
-            "time_per_move": 26249,
+            "time_per_move": 26820,
+            "timeout_percent": 0
+        }
+    },
+    "chess960_daily": {
+        "last": {
+            "rating": 807,
+            "date": 1739057495,
+            "rd": 223
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1255209494,
+            "game": "https://www.chess.com/game/daily/766577595"
+        },
+        "record": {
+            "win": 2,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 26820,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 1953,
-            "date": 1731951445,
+            "date": 1738071586,
             "rd": 147
         },
         "best": {
@@ -53,43 +72,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2038,
-            "date": 1734179895,
-            "rd": 41
+            "rating": 2249,
+            "date": 1741519585,
+            "rd": 27
         },
         "best": {
-            "rating": 2113,
-            "date": 1732385026,
-            "game": "https://www.chess.com/game/live/124910424969"
+            "rating": 2251,
+            "date": 1739100644,
+            "game": "https://www.chess.com/game/live/132779456815"
         },
         "record": {
-            "win": 210,
-            "loss": 317,
-            "draw": 24
+            "win": 548,
+            "loss": 890,
+            "draw": 86
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2231,
-            "date": 1734162833,
-            "rd": 41
+            "rating": 2555,
+            "date": 1741368938,
+            "rd": 24
         },
         "best": {
-            "rating": 2572,
-            "date": 1612907272,
+            "rating": 2587,
+            "date": 1741105647,
             "game": "https://www.chess.com/game/live/4814908143"
         },
         "record": {
-            "win": 602,
-            "loss": 559,
-            "draw": 128
+            "win": 873,
+            "loss": 803,
+            "draw": 191
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2139,
-            "date": 1734162860
+            "rating": 2228,
+            "date": 1739215664
         },
         "lowest": {
             "rating": 1190,

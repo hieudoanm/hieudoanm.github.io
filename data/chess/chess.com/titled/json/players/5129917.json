@@ -6,10 +6,10 @@
     "name": "Bindi Cheng",
     "username": "bobbylow",
     "title": "IM",
-    "followers": 138,
+    "followers": 152,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Coquitlam",
-    "last_online": 1734138916,
+    "last_online": 1741658456,
     "joined": 1305526954,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1871,
-            "date": 1730518818,
+            "date": 1741637379,
             "rd": 140
         },
         "best": {
@@ -31,14 +31,14 @@
             "win": 137,
             "loss": 46,
             "draw": 12,
-            "time_per_move": 27643,
+            "time_per_move": 28476,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2543,
-            "date": 1733535112,
+            "rating": 2528,
+            "date": 1735372317,
             "rd": 49
         },
         "best": {
@@ -48,7 +48,7 @@
         },
         "record": {
             "win": 4,
-            "loss": 2,
+            "loss": 3,
             "draw": 0
         }
     },
@@ -71,8 +71,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2560,
-            "date": 1733367402,
+            "rating": 2530,
+            "date": 1740791976,
             "rd": 49
         },
         "best": {
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/100756915689"
         },
         "record": {
-            "win": 59,
-            "loss": 15,
-            "draw": 5
+            "win": 75,
+            "loss": 31,
+            "draw": 8
         }
     },
     "fide": 2397,

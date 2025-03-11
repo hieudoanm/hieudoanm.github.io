@@ -6,10 +6,10 @@
     "name": "Maxim Omariev",
     "username": "maxleto",
     "title": "FM",
-    "followers": 4266,
+    "followers": 4506,
     "country": "https://api.chess.com/pub/country/IM",
     "location": "\u041c\u043e\u0441\u043a\u0432\u0430",
-    "last_online": 1734155163,
+    "last_online": 1741347963,
     "joined": 1463656803,
     "status": "premium",
     "is_streamer": false,
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2485,
-            "date": 1734171133,
-            "rd": 29
+            "rating": 2563,
+            "date": 1741631593,
+            "rd": 34
         },
         "best": {
-            "rating": 2575,
-            "date": 1708445819,
+            "rating": 2598,
+            "date": 1735063399,
             "game": "https://www.chess.com/game/live/125770797531"
         },
         "record": {
-            "win": 6095,
-            "loss": 5324,
-            "draw": 608
+            "win": 6274,
+            "loss": 5488,
+            "draw": 631
         }
     },
     "fide": 2304,

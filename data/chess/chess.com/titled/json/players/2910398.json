@@ -5,10 +5,10 @@
     "name": "pendyala ritvik",
     "username": "ritvik1901",
     "title": "FM",
-    "followers": 82,
+    "followers": 87,
     "country": "https://api.chess.com/pub/country/KE",
     "location": "Kenya",
-    "last_online": 1729098765,
+    "last_online": 1741283141,
     "joined": 1276434213,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1604,
-            "date": 1711099837,
+            "date": 1735187380,
             "rd": 76
         },
         "best": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1438,
-            "date": 1729099525,
-            "rd": 51
+            "rating": 1418,
+            "date": 1741283100,
+            "rd": 40
         },
         "best": {
             "rating": 1643,
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/105291741189"
         },
         "record": {
-            "win": 272,
-            "loss": 311,
-            "draw": 14
+            "win": 332,
+            "loss": 379,
+            "draw": 20
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1407,
-            "date": 1715209007,
-            "rd": 28
+            "rating": 1626,
+            "date": 1741280400,
+            "rd": 68
         },
         "best": {
-            "rating": 1572,
-            "date": 1611728211,
-            "game": "https://www.chess.com/game/live/104853671003"
+            "rating": 1641,
+            "date": 1741280079,
+            "game": "https://www.chess.com/game/live/135017355831"
         },
         "record": {
-            "win": 643,
-            "loss": 630,
-            "draw": 66
+            "win": 663,
+            "loss": 641,
+            "draw": 73
         }
     },
     "fide": 1695,

@@ -6,10 +6,10 @@
     "name": "Oskar Og\u0142aza",
     "username": "oglazaoskar2005",
     "title": "FM",
-    "followers": 148,
+    "followers": 149,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Opole",
-    "last_online": 1733344174,
+    "last_online": 1741620407,
     "joined": 1528526855,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1613,
-            "date": 1708700334,
+            "date": 1740302967,
             "rd": 177
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2515,
-            "date": 1723837043,
-            "rd": 49
+            "rating": 2574,
+            "date": 1741621156,
+            "rd": 41
         },
         "best": {
             "rating": 2657,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/84995498887"
         },
         "record": {
-            "win": 1249,
-            "loss": 1500,
-            "draw": 191
+            "win": 1299,
+            "loss": 1556,
+            "draw": 197
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2465,
-            "date": 1733345122,
-            "rd": 56
+            "rating": 2490,
+            "date": 1741553752,
+            "rd": 72
         },
         "best": {
             "rating": 2731,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/113524188813"
         },
         "record": {
-            "win": 1613,
-            "loss": 1911,
+            "win": 1616,
+            "loss": 1913,
             "draw": 336
         }
     },
     "fide": 2322,
     "tactics": {
         "highest": {
-            "rating": 3560,
-            "date": 1726660676
+            "rating": 3585,
+            "date": 1739569078
         },
         "lowest": {
             "rating": 2289,

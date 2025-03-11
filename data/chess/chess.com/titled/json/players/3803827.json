@@ -6,10 +6,10 @@
     "name": "Reyna Frijde",
     "username": "reyna_fr",
     "title": "WCM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/SR",
     "location": "Paramaribo",
-    "last_online": 1732595784,
+    "last_online": 1740970677,
     "joined": 1281237126,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1096,
-            "date": 1732201526,
-            "rd": 97
+            "rating": 1048,
+            "date": 1741344256,
+            "rd": 88
         },
         "best": {
             "rating": 1488,
@@ -76,15 +76,15 @@
             "game": "https://www.chess.com/game/live/14088149795"
         },
         "record": {
-            "win": 80,
-            "loss": 97,
-            "draw": 13
+            "win": 83,
+            "loss": 102,
+            "draw": 14
         }
     },
     "tactics": {
         "highest": {
-            "rating": 1434,
-            "date": 1707530393
+            "rating": 1679,
+            "date": 1736649269
         },
         "lowest": {
             "rating": 946,

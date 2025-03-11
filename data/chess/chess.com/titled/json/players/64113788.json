@@ -3,12 +3,12 @@
     "player_id": 64113788,
     "@id": "https://api.chess.com/pub/player/the_titan_15",
     "url": "https://www.chess.com/member/THE_TITAN_15",
-    "name": "carlsen 1001",
+    "name": "Mohamed Anees M",
     "username": "the_titan_15",
     "title": "FM",
-    "followers": 76,
+    "followers": 78,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734173148,
+    "last_online": 1741703320,
     "joined": 1565330737,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2601,
-            "date": 1702919625,
-            "rd": 63
+            "rating": 2605,
+            "date": 1738022649,
+            "rd": 49
         },
         "best": {
             "rating": 2665,
@@ -44,33 +44,33 @@
             "game": "https://www.chess.com/game/live/83827840743"
         },
         "record": {
-            "win": 163,
-            "loss": 113,
+            "win": 165,
+            "loss": 114,
             "draw": 19
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2764,
-            "date": 1733647762,
-            "rd": 35
+            "rating": 2870,
+            "date": 1741695704,
+            "rd": 31
         },
         "best": {
-            "rating": 2819,
-            "date": 1731058436,
+            "rating": 2850,
+            "date": 1739333919,
             "game": "https://www.chess.com/game/live/121886936659"
         },
         "record": {
-            "win": 2131,
-            "loss": 1603,
-            "draw": 301
+            "win": 2253,
+            "loss": 1702,
+            "draw": 321
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3713,
-            "date": 1733912451
+            "rating": 3910,
+            "date": 1737891298
         },
         "lowest": {
             "rating": 414,

@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 9,
     "country": "https://api.chess.com/pub/country/MK",
-    "last_online": 1725906378,
+    "last_online": 1739452260,
     "joined": 1591433651,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2002,
-            "date": 1727443862,
-            "rd": 71
+            "rating": 2057,
+            "date": 1735167959,
+            "rd": 82
         },
         "best": {
             "rating": 2356,
@@ -42,7 +42,7 @@
             "game": "https://www.chess.com/game/live/5997953908"
         },
         "record": {
-            "win": 2587,
+            "win": 2590,
             "loss": 2397,
             "draw": 262
         }
@@ -59,8 +59,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 55,
-            "score": 52
+            "total_attempts": 57,
+            "score": 54
         }
     }
 }

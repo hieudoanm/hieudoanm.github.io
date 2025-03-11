@@ -6,9 +6,9 @@
     "name": "Rakesh Kulkarni",
     "username": "rakesh",
     "title": "IM",
-    "followers": 6193,
+    "followers": 6567,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734158541,
+    "last_online": 1741674690,
     "joined": 1479819228,
     "status": "staff",
     "is_streamer": true,
@@ -23,9 +23,9 @@
     ],
     "chess_daily": {
         "last": {
-            "rating": 1839,
-            "date": 1734161304,
-            "rd": 89
+            "rating": 1849,
+            "date": 1741685463,
+            "rd": 115
         },
         "best": {
             "rating": 2300,
@@ -35,9 +35,15 @@
         "record": {
             "win": 95,
             "loss": 56,
-            "draw": 18,
-            "time_per_move": 80067,
+            "draw": 19,
+            "time_per_move": 82120,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 6
         }
     },
     "chess960_daily": {
@@ -55,14 +61,20 @@
             "win": 18,
             "loss": 13,
             "draw": 3,
-            "time_per_move": 80067,
+            "time_per_move": 82120,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 6
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2110,
-            "date": 1707580117,
+            "date": 1740246969,
             "rd": 49
         },
         "best": {
@@ -78,9 +90,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2522,
-            "date": 1732193492,
-            "rd": 42
+            "rating": 2489,
+            "date": 1740892776,
+            "rd": 35
         },
         "best": {
             "rating": 2703,
@@ -88,15 +100,15 @@
             "game": "https://www.chess.com/game/live/41919597005"
         },
         "record": {
-            "win": 6568,
-            "loss": 5728,
-            "draw": 649
+            "win": 6742,
+            "loss": 5802,
+            "draw": 668
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2508,
-            "date": 1721454056,
+            "rating": 2507,
+            "date": 1738979929,
             "rd": 49
         },
         "best": {
@@ -106,7 +118,7 @@
         },
         "record": {
             "win": 609,
-            "loss": 446,
+            "loss": 447,
             "draw": 94
         }
     },

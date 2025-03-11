@@ -8,45 +8,45 @@
     "title": "FM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1733981281,
+    "last_online": 1741679234,
     "joined": 1732633223,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2787,
-            "date": 1734067828,
-            "rd": 28
+            "rating": 2858,
+            "date": 1739546190,
+            "rd": 31
         },
         "best": {
-            "rating": 2843,
-            "date": 1733509875,
+            "rating": 2916,
+            "date": 1739376211,
             "game": "https://www.chess.com/game/live/127332069441"
         },
         "record": {
-            "win": 115,
-            "loss": 71,
-            "draw": 9
+            "win": 265,
+            "loss": 178,
+            "draw": 26
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2672,
-            "date": 1733852696,
-            "rd": 43
+            "rating": 2772,
+            "date": 1741159680,
+            "rd": 42
         },
         "best": {
-            "rating": 2696,
-            "date": 1733848558,
+            "rating": 2785,
+            "date": 1741111854,
             "game": "https://www.chess.com/game/live/127587078205"
         },
         "record": {
-            "win": 16,
-            "loss": 12,
-            "draw": 1
+            "win": 59,
+            "loss": 33,
+            "draw": 11
         }
     },
     "fide": 2198,
@@ -62,6 +62,10 @@
     },
     "puzzle_rush": {
         "best": {
+            "total_attempts": 48,
+            "score": 45
+        },
+        "daily": {
             "total_attempts": 46,
             "score": 43
         }

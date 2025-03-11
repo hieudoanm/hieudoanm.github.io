@@ -6,10 +6,10 @@
     "name": "Yang Shen",
     "username": "u690025571",
     "title": "IM",
-    "followers": 71,
+    "followers": 73,
     "country": "https://api.chess.com/pub/country/CN",
     "location": "Beijing",
-    "last_online": 1734169361,
+    "last_online": 1741647389,
     "joined": 1473464393,
     "status": "premium",
     "is_streamer": false,
@@ -33,7 +33,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1926,
-            "date": 1724112535,
+            "date": 1734397451,
             "rd": 110
         },
         "best": {
@@ -83,8 +83,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3437,
-            "date": 1688543351
+            "rating": 3489,
+            "date": 1738827210
         },
         "lowest": {
             "rating": 1350,

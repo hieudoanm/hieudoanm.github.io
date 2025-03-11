@@ -6,9 +6,9 @@
     "name": "Nemanja Zivkovic",
     "username": "zivkovicn",
     "title": "IM",
-    "followers": 3107,
+    "followers": 3583,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734184646,
+    "last_online": 1741700830,
     "joined": 1450871909,
     "status": "premium",
     "is_streamer": false,
@@ -53,8 +53,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2644,
-            "date": 1734032867,
+            "rating": 2641,
+            "date": 1739579194,
             "rd": 49
         },
         "best": {
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/49829976367"
         },
         "record": {
-            "win": 763,
-            "loss": 768,
-            "draw": 92
+            "win": 775,
+            "loss": 781,
+            "draw": 94
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2623,
-            "date": 1727211276,
-            "rd": 50
+            "rating": 2619,
+            "date": 1741599961,
+            "rd": 49
         },
         "best": {
             "rating": 2769,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/58114199151"
         },
         "record": {
-            "win": 6101,
-            "loss": 6615,
+            "win": 6109,
+            "loss": 6623,
             "draw": 899
         }
     },

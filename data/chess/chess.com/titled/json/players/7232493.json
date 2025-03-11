@@ -6,10 +6,10 @@
     "name": "Kwabena Adu-Poku",
     "username": "bn1462",
     "title": "CM",
-    "followers": 221,
+    "followers": 234,
     "country": "https://api.chess.com/pub/country/GH",
     "location": "Kumasi",
-    "last_online": 1734163038,
+    "last_online": 1741669044,
     "joined": 1333928573,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1940,
-            "date": 1726006112,
-            "rd": 43
+            "rating": 1921,
+            "date": 1740046692,
+            "rd": 50
         },
         "best": {
             "rating": 2033,
@@ -83,33 +83,33 @@
             "game": "https://www.chess.com/game/live/82554135063"
         },
         "record": {
-            "win": 822,
-            "loss": 846,
+            "win": 837,
+            "loss": 863,
             "draw": 41
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2083,
-            "date": 1733035037,
-            "rd": 67
+            "rating": 2070,
+            "date": 1739947398,
+            "rd": 37
         },
         "best": {
-            "rating": 2083,
-            "date": 1733035037,
+            "rating": 2098,
+            "date": 1736565614,
             "game": "https://www.chess.com/game/live/100396917631"
         },
         "record": {
-            "win": 1196,
-            "loss": 1071,
-            "draw": 105
+            "win": 1238,
+            "loss": 1127,
+            "draw": 107
         }
     },
     "fide": 2004,
     "tactics": {
         "highest": {
-            "rating": 2707,
-            "date": 1728870816
+            "rating": 2746,
+            "date": 1741453875
         },
         "lowest": {
             "rating": 1118,
@@ -118,8 +118,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 57,
-            "score": 54
+            "total_attempts": 62,
+            "score": 59
         }
     }
 }

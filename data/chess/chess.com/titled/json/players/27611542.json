@@ -6,10 +6,10 @@
     "name": "Milos Stankovic",
     "username": "neimar24",
     "title": "IM",
-    "followers": 254,
+    "followers": 262,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Beograd",
-    "last_online": 1734130039,
+    "last_online": 1741550563,
     "joined": 1459899015,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2305,
-            "date": 1731872086,
+            "rating": 2307,
+            "date": 1741545845,
             "rd": 49
         },
         "best": {
@@ -28,8 +28,8 @@
             "game": "https://www.chess.com/game/live/122487931111"
         },
         "record": {
-            "win": 20,
-            "loss": 3,
+            "win": 24,
+            "loss": 5,
             "draw": 4
         }
     },
@@ -52,26 +52,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2602,
-            "date": 1734038095,
-            "rd": 40
+            "rating": 2632,
+            "date": 1739297469,
+            "rd": 43
         },
         "best": {
             "rating": 2718,
             "date": 1619785244,
-            "game": "https://www.chess.com/game/live/4752554017"
+            "game": "https://www.chess.com/game/live/131221186447"
         },
         "record": {
-            "win": 1039,
-            "loss": 715,
-            "draw": 156
+            "win": 1071,
+            "loss": 733,
+            "draw": 165
         }
     },
     "fide": 2435,
     "tactics": {
         "highest": {
-            "rating": 3623,
-            "date": 1720176055
+            "rating": 3636,
+            "date": 1738583739
         },
         "lowest": {
             "rating": 2006,

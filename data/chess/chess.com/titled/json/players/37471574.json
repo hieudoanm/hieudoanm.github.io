@@ -6,9 +6,9 @@
     "name": "Konstantin Yayloyan",
     "username": "konstantin_yayloyan",
     "title": "FM",
-    "followers": 27,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1733991886,
+    "last_online": 1739353140,
     "joined": 1501587772,
     "status": "premium",
     "is_streamer": false,
@@ -29,26 +29,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2588,
-            "date": 1734021641,
-            "rd": 34
+            "rating": 2628,
+            "date": 1741676039,
+            "rd": 44
         },
         "best": {
-            "rating": 2687,
-            "date": 1729433302,
+            "rating": 2756,
+            "date": 1736087257,
             "game": "https://www.chess.com/game/live/122502329711"
         },
         "record": {
-            "win": 1830,
-            "loss": 1658,
-            "draw": 210
+            "win": 1905,
+            "loss": 1722,
+            "draw": 222
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2359,
-            "date": 1733406495,
-            "rd": 80
+            "rating": 2388,
+            "date": 1740844052,
+            "rd": 66
         },
         "best": {
             "rating": 2462,
@@ -56,15 +56,15 @@
             "game": "https://www.chess.com/game/live/3464581805"
         },
         "record": {
-            "win": 619,
-            "loss": 541,
+            "win": 628,
+            "loss": 548,
             "draw": 67
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2680,
-            "date": 1732105434
+            "rating": 3475,
+            "date": 1741173452
         },
         "lowest": {
             "rating": 410,

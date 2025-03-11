@@ -6,10 +6,10 @@
     "name": "Dawid Czerw",
     "username": "dawidczerw",
     "title": "IM",
-    "followers": 4303,
+    "followers": 4764,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Lublin",
-    "last_online": 1734170391,
+    "last_online": 1741681981,
     "joined": 1444579154,
     "status": "staff",
     "is_streamer": true,
@@ -79,9 +79,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2469,
-            "date": 1732106656,
-            "rd": 58
+            "rating": 2433,
+            "date": 1740900933,
+            "rd": 62
         },
         "best": {
             "rating": 2569,
@@ -89,16 +89,16 @@
             "game": "https://www.chess.com/game/live/98909152047"
         },
         "record": {
-            "win": 2339,
-            "loss": 1988,
-            "draw": 200
+            "win": 2346,
+            "loss": 1999,
+            "draw": 203
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2461,
-            "date": 1733941254,
-            "rd": 51
+            "rating": 2481,
+            "date": 1738515774,
+            "rd": 59
         },
         "best": {
             "rating": 2617,
@@ -106,16 +106,16 @@
             "game": "https://www.chess.com/game/live/59335213091"
         },
         "record": {
-            "win": 6363,
-            "loss": 4528,
+            "win": 6367,
+            "loss": 4531,
             "draw": 809
         }
     },
     "fide": 2401,
     "tactics": {
         "highest": {
-            "rating": 3701,
-            "date": 1700127565
+            "rating": 3714,
+            "date": 1741431248
         },
         "lowest": {
             "rating": 1358,

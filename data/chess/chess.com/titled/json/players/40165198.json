@@ -6,9 +6,9 @@
     "name": "Ayan Akhmetov",
     "username": "ayanakhmetov",
     "title": "IM",
-    "followers": 61,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1732728556,
+    "last_online": 1739723699,
     "joined": 1510140179,
     "status": "premium",
     "is_streamer": false,
@@ -51,8 +51,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2697,
-            "date": 1732728895,
+            "rating": 2691,
+            "date": 1739723957,
             "rd": 49
         },
         "best": {
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/84266988837"
         },
         "record": {
-            "win": 836,
-            "loss": 657,
-            "draw": 124
+            "win": 839,
+            "loss": 661,
+            "draw": 125
         }
     },
     "fide": 2429,

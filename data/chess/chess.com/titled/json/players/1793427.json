@@ -6,9 +6,9 @@
     "name": "Greg Shahade",
     "username": "gregshahade",
     "title": "IM",
-    "followers": 344,
+    "followers": 349,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734122723,
+    "last_online": 1741673590,
     "joined": 1235802920,
     "status": "staff",
     "is_streamer": false,
@@ -17,21 +17,27 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1851,
-            "date": 1679041690,
-            "rd": 127
+            "rating": 1995,
+            "date": 1741660923,
+            "rd": 156
         },
         "best": {
-            "rating": 1851,
-            "date": 1643009458,
+            "rating": 1995,
+            "date": 1740883659,
             "game": "https://www.chess.com/game/daily/298091566"
         },
         "record": {
-            "win": 43,
+            "win": 76,
             "loss": 22,
             "draw": 1,
-            "time_per_move": 44535,
+            "time_per_move": 26161,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 84
         }
     },
     "chess960_daily": {
@@ -44,8 +50,14 @@
             "win": 0,
             "loss": 0,
             "draw": 1,
-            "time_per_move": 44535,
+            "time_per_move": 26161,
             "timeout_percent": 0
+        },
+        "tournament": {
+            "points": 0,
+            "withdraw": 0,
+            "count": 1,
+            "highest_finish": 84
         }
     },
     "chess_rapid": {
@@ -84,25 +96,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2692,
-            "date": 1734122806,
-            "rd": 45
+            "rating": 2744,
+            "date": 1741669699,
+            "rd": 38
         },
         "best": {
             "rating": 2792,
             "date": 1615755944,
-            "game": "https://www.chess.com/game/live/5080697842"
+            "game": "https://www.chess.com/game/live/129423159997"
         },
         "record": {
-            "win": 2652,
-            "loss": 1776,
-            "draw": 662
+            "win": 2721,
+            "loss": 1823,
+            "draw": 682
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3029,
-            "date": 1350702708
+            "rating": 3478,
+            "date": 1740680647
         },
         "lowest": {
             "rating": 1358,

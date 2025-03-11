@@ -6,10 +6,10 @@
     "name": "Emilio Viera",
     "username": "gmelviro",
     "title": "CM",
-    "followers": 161,
+    "followers": 171,
     "country": "https://api.chess.com/pub/country/UY",
     "location": "Maldonado",
-    "last_online": 1734012819,
+    "last_online": 1741127736,
     "joined": 1391785658,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2229,
-            "date": 1723134461,
-            "rd": 71
+            "rating": 2204,
+            "date": 1739362430,
+            "rd": 101
         },
         "best": {
             "rating": 2229,
@@ -48,15 +48,15 @@
         },
         "record": {
             "win": 608,
-            "loss": 600,
+            "loss": 601,
             "draw": 36
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2264,
-            "date": 1734140019,
-            "rd": 22
+            "rating": 2374,
+            "date": 1741695469,
+            "rd": 21
         },
         "best": {
             "rating": 2460,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/100738370847"
         },
         "record": {
-            "win": 10048,
-            "loss": 11096,
-            "draw": 1753
+            "win": 10534,
+            "loss": 11637,
+            "draw": 1848
         }
     },
     "tactics": {

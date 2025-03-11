@@ -15,9 +15,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1535,
-            "date": 1733884718,
-            "rd": 112
+            "rating": 1462,
+            "date": 1741580683,
+            "rd": 105
         },
         "best": {
             "rating": 2027,
@@ -26,9 +26,9 @@
         },
         "record": {
             "win": 9,
-            "loss": 7,
+            "loss": 9,
             "draw": 4,
-            "time_per_move": 163118,
+            "time_per_move": 165335,
             "timeout_percent": 100
         }
     },

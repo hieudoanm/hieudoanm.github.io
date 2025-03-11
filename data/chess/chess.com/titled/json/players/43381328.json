@@ -6,10 +6,10 @@
     "name": "Angel Gabriel Cordoba Roa",
     "username": "angelgab3",
     "title": "FM",
-    "followers": 37,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Medell\u00edn",
-    "last_online": 1734139741,
+    "last_online": 1741701413,
     "joined": 1518730799,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2823,
-            "date": 1722787101,
-            "rd": 47
+            "rating": 2756,
+            "date": 1739460363,
+            "rd": 37
         },
         "best": {
             "rating": 2933,
@@ -45,33 +45,33 @@
             "game": "https://www.chess.com/game/live/109651802353"
         },
         "record": {
-            "win": 635,
-            "loss": 521,
-            "draw": 88
+            "win": 688,
+            "loss": 571,
+            "draw": 96
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2760,
-            "date": 1734041087,
-            "rd": 34
+            "rating": 2716,
+            "date": 1739902374,
+            "rd": 38
         },
         "best": {
-            "rating": 2810,
-            "date": 1730838107,
+            "rating": 2821,
+            "date": 1736270273,
             "game": "https://www.chess.com/game/live/99786771109"
         },
         "record": {
-            "win": 1042,
-            "loss": 888,
-            "draw": 200
+            "win": 1129,
+            "loss": 955,
+            "draw": 214
         }
     },
     "fide": 2367,
     "tactics": {
         "highest": {
-            "rating": 3153,
-            "date": 1707488353
+            "rating": 3155,
+            "date": 1735333420
         },
         "lowest": {
             "rating": 1009,

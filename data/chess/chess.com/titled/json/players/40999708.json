@@ -6,9 +6,9 @@
     "name": "Jose Camacho Collados",
     "username": "pedrada88",
     "title": "IM",
-    "followers": 16,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/XW",
-    "last_online": 1733999419,
+    "last_online": 1741360670,
     "joined": 1512404228,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2572,
-            "date": 1732640346,
-            "rd": 48
+            "rating": 2546,
+            "date": 1740500988,
+            "rd": 49
         },
         "best": {
             "rating": 2618,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/111252093431"
         },
         "record": {
-            "win": 171,
-            "loss": 143,
-            "draw": 29
+            "win": 183,
+            "loss": 156,
+            "draw": 30
         }
     },
     "fide": 2400,

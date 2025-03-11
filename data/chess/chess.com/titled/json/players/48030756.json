@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/48030756.d263a41c.200x200o.9320f79af8b7.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/48030756.8841c468.200x200o.c78a22494de3.jpg",
     "player_id": 48030756,
     "@id": "https://api.chess.com/pub/player/ulia_escha",
     "url": "https://www.chess.com/member/ulia_escha",
     "name": "Uliana Yeshchenko",
     "username": "ulia_escha",
     "title": "WFM",
-    "followers": 88,
+    "followers": 94,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Kyiv",
-    "last_online": 1733174683,
+    "last_online": 1741649171,
     "joined": 1532102392,
     "status": "premium",
     "is_streamer": false,
@@ -52,18 +52,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2205,
-            "date": 1699899677,
-            "rd": 97
+            "rating": 2585,
+            "date": 1735080932,
+            "rd": 49
         },
         "best": {
-            "rating": 2342,
-            "date": 1686764368,
-            "game": "https://www.chess.com/game/live/41116840013"
+            "rating": 2586,
+            "date": 1735079956,
+            "game": "https://www.chess.com/game/live/128818408593"
         },
         "record": {
-            "win": 108,
-            "loss": 109,
+            "win": 112,
+            "loss": 110,
             "draw": 20
         }
     },

@@ -6,10 +6,10 @@
     "name": "Sandro Trindade",
     "username": "sandrodf",
     "title": "IM",
-    "followers": 266,
+    "followers": 271,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Brasilia",
-    "last_online": 1734028655,
+    "last_online": 1741647624,
     "joined": 1247327373,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2360,
-            "date": 1734016431,
-            "rd": 23
+            "rating": 2293,
+            "date": 1741659006,
+            "rd": 32
         },
         "best": {
             "rating": 2500,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/124547330007"
         },
         "record": {
-            "win": 39027,
-            "loss": 33608,
-            "draw": 1773
+            "win": 39308,
+            "loss": 33880,
+            "draw": 1787
         }
     },
     "chess_blitz": {

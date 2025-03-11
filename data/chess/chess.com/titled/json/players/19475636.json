@@ -9,7 +9,7 @@
     "followers": 71,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "San Luis Potosi",
-    "last_online": 1728633261,
+    "last_online": 1736269003,
     "joined": 1414434136,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2165,
-            "date": 1734121468,
-            "rd": 30
+            "rating": 2125,
+            "date": 1741634597,
+            "rd": 38
         },
         "best": {
             "rating": 2307,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/5546627562"
         },
         "record": {
-            "win": 4789,
-            "loss": 5093,
-            "draw": 508
+            "win": 4903,
+            "loss": 5231,
+            "draw": 516
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3009,
-            "date": 1733193579
+            "rating": 3010,
+            "date": 1740586289
         },
         "lowest": {
             "rating": 1355,

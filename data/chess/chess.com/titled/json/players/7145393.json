@@ -6,9 +6,9 @@
     "name": "MF \u00c1lvaro Aranha",
     "username": "alvarov79",
     "title": "FM",
-    "followers": 199,
+    "followers": 203,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1733879008,
+    "last_online": 1741377858,
     "joined": 1333220871,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3640,
-            "date": 1730809623
+            "rating": 3675,
+            "date": 1741101085
         },
         "lowest": {
             "rating": 1347,

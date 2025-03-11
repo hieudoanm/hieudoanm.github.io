@@ -9,7 +9,7 @@
     "followers": 9,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Kassel",
-    "last_online": 1733266785,
+    "last_online": 1739565730,
     "joined": 1369760283,
     "status": "premium",
     "is_streamer": false,
@@ -54,19 +54,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2220,
-            "date": 1733270443,
-            "rd": 95
+            "rating": 2384,
+            "date": 1734480448,
+            "rd": 80
         },
         "best": {
-            "rating": 2301,
-            "date": 1456653007,
-            "game": "https://www.chess.com/game/live/87664957303"
+            "rating": 2386,
+            "date": 1734479061,
+            "game": "https://www.chess.com/game/live/128215213875"
         },
         "record": {
-            "win": 2495,
-            "loss": 2105,
-            "draw": 269
+            "win": 2500,
+            "loss": 2108,
+            "draw": 270
         }
     },
     "tactics": {

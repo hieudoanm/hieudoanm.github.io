@@ -6,10 +6,10 @@
     "name": "Michael P. Hofmann",
     "username": "mphofmann",
     "title": "FM",
-    "followers": 30,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/CH",
     "location": "Zurich",
-    "last_online": 1734166976,
+    "last_online": 1741599058,
     "joined": 1404538844,
     "status": "premium",
     "is_streamer": false,
@@ -37,19 +37,19 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2055,
-            "date": 1665471842,
-            "rd": 140
+            "rating": 2264,
+            "date": 1741609416,
+            "rd": 38
         },
         "best": {
-            "rating": 2105,
-            "date": 1664793650,
-            "game": "https://www.chess.com/game/live/58532382645"
+            "rating": 2126,
+            "date": 1739635050,
+            "game": "https://www.chess.com/game/live/132740940531"
         },
         "record": {
-            "win": 62,
-            "loss": 25,
-            "draw": 14
+            "win": 110,
+            "loss": 42,
+            "draw": 23
         }
     },
     "chess_bullet": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2303,
-            "date": 1734174931,
-            "rd": 32
+            "rating": 2388,
+            "date": 1738868335,
+            "rd": 30
         },
         "best": {
             "rating": 2402,
@@ -81,11 +81,12 @@
             "game": "https://www.chess.com/game/live/43428677979"
         },
         "record": {
-            "win": 3809,
-            "loss": 2704,
-            "draw": 634
+            "win": 3929,
+            "loss": 2785,
+            "draw": 666
         }
     },
+    "fide": 2300,
     "tactics": {
         "highest": {
             "rating": 2962,
@@ -100,6 +101,10 @@
         "best": {
             "total_attempts": 38,
             "score": 36
+        },
+        "daily": {
+            "total_attempts": 34,
+            "score": 32
         }
     }
 }

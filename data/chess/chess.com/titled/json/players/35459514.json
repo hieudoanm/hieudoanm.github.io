@@ -6,9 +6,9 @@
     "name": "Adri\u00e1n Villuendas Valero",
     "username": "adrivillu",
     "title": "FM",
-    "followers": 18,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733907078,
+    "last_online": 1741636331,
     "joined": 1494545924,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2388,
-            "date": 1722375713,
-            "rd": 50
+            "rating": 2432,
+            "date": 1739751918,
+            "rd": 61
         },
         "best": {
             "rating": 2488,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/112053162873"
         },
         "record": {
-            "win": 454,
-            "loss": 329,
-            "draw": 46
+            "win": 465,
+            "loss": 339,
+            "draw": 48
         }
     },
     "tactics": {

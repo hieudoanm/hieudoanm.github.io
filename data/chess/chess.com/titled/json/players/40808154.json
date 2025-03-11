@@ -6,10 +6,10 @@
     "name": "Valentyn Prokofiev",
     "username": "valik3504",
     "title": "FM",
-    "followers": 96,
+    "followers": 97,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Karvina, CZ",
-    "last_online": 1734168097,
+    "last_online": 1741695429,
     "joined": 1511881588,
     "status": "premium",
     "is_streamer": false,
@@ -90,22 +90,22 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2684,
-            "date": 1734096372,
-            "rd": 42
+            "rating": 2732,
+            "date": 1741106197,
+            "rd": 47
         },
         "best": {
-            "rating": 2705,
-            "date": 1660058382,
-            "game": "https://www.chess.com/game/live/105810095643"
+            "rating": 2760,
+            "date": 1740505739,
+            "game": "https://www.chess.com/game/live/131214678993"
         },
         "record": {
-            "win": 861,
-            "loss": 518,
-            "draw": 110
+            "win": 885,
+            "loss": 534,
+            "draw": 113
         }
     },
-    "fide": 2411,
+    "fide": 2424,
     "tactics": {
         "highest": {
             "rating": 4002,

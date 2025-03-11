@@ -6,10 +6,10 @@
     "name": "\u0410rt\u0435m Od\u0435g\u043ev",
     "username": "artem_0degov",
     "title": "FM",
-    "followers": 82,
+    "followers": 86,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Yekaterinburg",
-    "last_online": 1733845196,
+    "last_online": 1741674060,
     "joined": 1568569504,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2853,
-            "date": 1733597970,
-            "rd": 35
+            "rating": 2856,
+            "date": 1739577173,
+            "rd": 49
         },
         "best": {
             "rating": 2878,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/78947678641"
         },
         "record": {
-            "win": 1057,
+            "win": 1058,
             "loss": 540,
             "draw": 96
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2812,
-            "date": 1733854108,
-            "rd": 38
+            "rating": 2803,
+            "date": 1741679419,
+            "rd": 44
         },
         "best": {
-            "rating": 2830,
-            "date": 1733268485,
+            "rating": 2832,
+            "date": 1741109268,
             "game": "https://www.chess.com/game/live/125188787501"
         },
         "record": {
-            "win": 871,
-            "loss": 624,
-            "draw": 140
+            "win": 903,
+            "loss": 644,
+            "draw": 146
         }
     },
     "fide": 2428,

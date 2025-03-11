@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 29,
     "country": "https://api.chess.com/pub/country/IR",
-    "last_online": 1734080832,
+    "last_online": 1741692478,
     "joined": 1580159692,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2036,
-            "date": 1727285052,
-            "rd": 58
+            "rating": 2016,
+            "date": 1736624895,
+            "rd": 81
         },
         "best": {
             "rating": 2515,
@@ -59,15 +59,15 @@
         },
         "record": {
             "win": 81,
-            "loss": 65,
+            "loss": 66,
             "draw": 9
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2225,
-            "date": 1733902927,
-            "rd": 53
+            "rating": 2219,
+            "date": 1737786612,
+            "rd": 61
         },
         "best": {
             "rating": 2674,
@@ -75,8 +75,8 @@
             "game": "https://www.chess.com/game/live/78352373341"
         },
         "record": {
-            "win": 125,
-            "loss": 162,
+            "win": 130,
+            "loss": 165,
             "draw": 17
         }
     },

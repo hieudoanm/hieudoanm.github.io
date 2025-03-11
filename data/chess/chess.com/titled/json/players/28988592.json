@@ -6,9 +6,9 @@
     "name": "Karlen Petrosian",
     "username": "forge13",
     "title": "FM",
-    "followers": 50,
+    "followers": 52,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733844595,
+    "last_online": 1741692219,
     "joined": 1468070722,
     "status": "premium",
     "is_streamer": false,
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2701,
-            "date": 1729962753,
+            "date": 1741639331,
             "rd": 31
         },
         "best": {

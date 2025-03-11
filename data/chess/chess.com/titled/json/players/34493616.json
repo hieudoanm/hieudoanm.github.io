@@ -6,10 +6,10 @@
     "name": "Amir Mohammad Hamidi",
     "username": "blackmind96",
     "title": "FM",
-    "followers": 3984,
+    "followers": 4363,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Arak",
-    "last_online": 1734108729,
+    "last_online": 1741652074,
     "joined": 1491242669,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2006,
-            "date": 1704721796,
+            "date": 1736328528,
             "rd": 112
         },
         "best": {
@@ -52,7 +52,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2136,
-            "date": 1732898541,
+            "date": 1736019544,
             "rd": 49
         },
         "best": {
@@ -68,26 +68,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3083,
-            "date": 1733682451,
-            "rd": 48
+            "rating": 3204,
+            "date": 1741653087,
+            "rd": 30
         },
         "best": {
-            "rating": 3182,
-            "date": 1712630224,
+            "rating": 3204,
+            "date": 1740868451,
             "game": "https://www.chess.com/game/live/80457676603"
         },
         "record": {
-            "win": 12375,
-            "loss": 11725,
-            "draw": 1884
+            "win": 12790,
+            "loss": 12158,
+            "draw": 1942
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2928,
-            "date": 1732278285,
-            "rd": 49
+            "rating": 2913,
+            "date": 1741651197,
+            "rd": 41
         },
         "best": {
             "rating": 2944,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/77463672289"
         },
         "record": {
-            "win": 2101,
-            "loss": 1582,
-            "draw": 481
+            "win": 2147,
+            "loss": 1609,
+            "draw": 485
         }
     },
     "fide": 2299,
@@ -113,8 +113,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 73,
-            "score": 69
+            "total_attempts": 74,
+            "score": 71
         }
     }
 }

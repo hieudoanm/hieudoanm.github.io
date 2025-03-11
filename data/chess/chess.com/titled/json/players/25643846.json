@@ -5,9 +5,9 @@
     "name": "Jakub Borawski",
     "username": "konzip22",
     "title": "CM",
-    "followers": 41,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734035112,
+    "last_online": 1741642040,
     "joined": 1450479743,
     "status": "premium",
     "is_streamer": false,
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2308,
-            "date": 1734037716,
-            "rd": 43
+            "rating": 2276,
+            "date": 1741645333,
+            "rd": 41
         },
         "best": {
             "rating": 2429,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/14497126569"
         },
         "record": {
-            "win": 2157,
-            "loss": 2036,
-            "draw": 317
+            "win": 2201,
+            "loss": 2081,
+            "draw": 324
         }
     },
     "fide": 2222,
@@ -99,6 +99,10 @@
         "best": {
             "total_attempts": 61,
             "score": 58
+        },
+        "daily": {
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

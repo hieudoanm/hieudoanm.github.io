@@ -6,10 +6,10 @@
     "name": "Eivind Olav Risting",
     "username": "ristingho",
     "title": "FM",
-    "followers": 62,
+    "followers": 63,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Oslo",
-    "last_online": 1731808979,
+    "last_online": 1739650773,
     "joined": 1303804935,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2382,
-            "date": 1719472816,
+            "date": 1739650938,
             "rd": 49
         },
         "best": {

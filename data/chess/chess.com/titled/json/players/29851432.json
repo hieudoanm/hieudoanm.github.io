@@ -6,9 +6,9 @@
     "name": "Alexey Reshetnikov",
     "username": "resha1988",
     "title": "IM",
-    "followers": 40,
+    "followers": 41,
     "country": "https://api.chess.com/pub/country/AE",
-    "last_online": 1734102428,
+    "last_online": 1741358786,
     "joined": 1473415119,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2645,
-            "date": 1731780060,
-            "rd": 41
+            "rating": 2653,
+            "date": 1734846653,
+            "rd": 47
         },
         "best": {
             "rating": 2785,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/4487265620"
         },
         "record": {
-            "win": 372,
-            "loss": 318,
-            "draw": 38
+            "win": 376,
+            "loss": 319,
+            "draw": 39
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2773,
-            "date": 1733854044,
-            "rd": 40
+            "rating": 2740,
+            "date": 1741370403,
+            "rd": 42
         },
         "best": {
             "rating": 2851,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/3500867102"
         },
         "record": {
-            "win": 2827,
-            "loss": 2032,
-            "draw": 571
+            "win": 2927,
+            "loss": 2103,
+            "draw": 586
         }
     },
     "fide": 2492,
     "tactics": {
         "highest": {
-            "rating": 3179,
-            "date": 1665768342
+            "rating": 3214,
+            "date": 1739894324
         },
         "lowest": {
             "rating": 2007,

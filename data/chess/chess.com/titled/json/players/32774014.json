@@ -6,10 +6,10 @@
     "name": "Bernardo Roselli",
     "username": "bernardoroselli",
     "title": "IM",
-    "followers": 470,
+    "followers": 480,
     "country": "https://api.chess.com/pub/country/UY",
     "location": "MONTEVIDEO",
-    "last_online": 1734134403,
+    "last_online": 1741522792,
     "joined": 1485723713,
     "status": "premium",
     "is_streamer": false,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 62,
-            "score": 59
+            "total_attempts": 65,
+            "score": 62
         }
     }
 }

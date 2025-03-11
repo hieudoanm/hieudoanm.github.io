@@ -6,20 +6,20 @@
     "name": "Rick Frischmann",
     "username": "richy_94",
     "title": "FM",
-    "followers": 3,
+    "followers": 5,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Saarbr\u00fccken",
-    "last_online": 1734007750,
+    "last_online": 1741599003,
     "joined": 1242221277,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1832,
-            "date": 1734169256,
+            "date": 1738326419,
             "rd": 83
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 317,
             "loss": 160,
             "draw": 29,
-            "time_per_move": 20180,
+            "time_per_move": 20319,
             "timeout_percent": 0
         }
     },
@@ -50,42 +50,59 @@
             "win": 36,
             "loss": 16,
             "draw": 2,
-            "time_per_move": 20180,
+            "time_per_move": 20319,
             "timeout_percent": 0
+        }
+    },
+    "chess_rapid": {
+        "last": {
+            "rating": 2360,
+            "date": 1737578620,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2360,
+            "date": 1737578620,
+            "game": "https://www.chess.com/game/live/131316631703"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2661,
-            "date": 1731517016,
-            "rd": 48
+            "rating": 2651,
+            "date": 1741135636,
+            "rd": 42
         },
         "best": {
             "rating": 2676,
             "date": 1731516795,
-            "game": "https://www.chess.com/game/live/1762926726"
+            "game": "https://www.chess.com/game/live/131318423059"
         },
         "record": {
-            "win": 237,
-            "loss": 111,
-            "draw": 7
+            "win": 252,
+            "loss": 123,
+            "draw": 9
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2390,
-            "date": 1541969231,
-            "rd": 142
+            "rating": 2568,
+            "date": 1741133072,
+            "rd": 43
         },
         "best": {
-            "rating": 2442,
-            "date": 1476109581,
-            "game": "https://www.chess.com/game/live/1762533922"
+            "rating": 2742,
+            "date": 1737497824,
+            "game": "https://www.chess.com/game/live/133036137965"
         },
         "record": {
-            "win": 277,
-            "loss": 175,
-            "draw": 37
+            "win": 316,
+            "loss": 211,
+            "draw": 42
         }
     },
     "fide": 2364,

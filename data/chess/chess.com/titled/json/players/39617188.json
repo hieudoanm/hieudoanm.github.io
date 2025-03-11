@@ -8,7 +8,7 @@
     "followers": 30,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "London",
-    "last_online": 1733993528,
+    "last_online": 1740497351,
     "joined": 1508521170,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2314,
-            "date": 1733249087,
-            "rd": 56
+            "rating": 2302,
+            "date": 1740528257,
+            "rd": 53
         },
         "best": {
-            "rating": 2319,
-            "date": 1733246956,
-            "game": "https://www.chess.com/game/live/126984034421"
+            "rating": 2331,
+            "date": 1740507202,
+            "game": "https://www.chess.com/game/live/134241561919"
         },
         "record": {
-            "win": 91,
-            "loss": 86,
-            "draw": 17
+            "win": 102,
+            "loss": 102,
+            "draw": 21
         }
     },
     "tactics": {

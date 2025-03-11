@@ -5,10 +5,10 @@
     "name": "Ognean Mihnea",
     "username": "mihnea2017",
     "title": "FM",
-    "followers": 46,
+    "followers": 47,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Reghin City",
-    "last_online": 1734010606,
+    "last_online": 1740689210,
     "joined": 1459924954,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2209,
-            "date": 1684757168,
+            "date": 1740690145,
             "rd": 172
         },
         "best": {

@@ -6,10 +6,10 @@
     "name": "Nate Solon",
     "username": "natesolon",
     "title": "FM",
-    "followers": 179,
+    "followers": 182,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Omaha",
-    "last_online": 1733973753,
+    "last_online": 1741400441,
     "joined": 1211781833,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2571,
-            "date": 1733854064,
-            "rd": 31
+            "rating": 2582,
+            "date": 1741401535,
+            "rd": 49
         },
         "best": {
             "rating": 2727,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/70151655449"
         },
         "record": {
-            "win": 2554,
-            "loss": 1725,
-            "draw": 248
+            "win": 2579,
+            "loss": 1743,
+            "draw": 252
         }
     },
     "tactics": {

@@ -6,48 +6,48 @@
     "name": "Bart\u0142omiej R\u00f3g",
     "username": "fajnafokaofficial",
     "title": "FM",
-    "followers": 4,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Chocian\u00f3w",
-    "last_online": 1733950827,
+    "last_online": 1741683522,
     "joined": 1728212139,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2526,
-            "date": 1731887296,
-            "rd": 33
+            "rating": 2480,
+            "date": 1740784859,
+            "rd": 31
         },
         "best": {
-            "rating": 2541,
-            "date": 1731885954,
-            "game": "https://www.chess.com/game/live/124304972231"
+            "rating": 2608,
+            "date": 1739643736,
+            "game": "https://www.chess.com/game/live/133382340137"
         },
         "record": {
-            "win": 47,
-            "loss": 50,
-            "draw": 6
+            "win": 128,
+            "loss": 156,
+            "draw": 15
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2512,
-            "date": 1733953533,
-            "rd": 43
+            "rating": 2618,
+            "date": 1740507035,
+            "rd": 37
         },
         "best": {
-            "rating": 2568,
-            "date": 1732039004,
-            "game": "https://www.chess.com/game/live/125168311405"
+            "rating": 2631,
+            "date": 1738107877,
+            "game": "https://www.chess.com/game/live/128190038711"
         },
         "record": {
-            "win": 67,
-            "loss": 39,
-            "draw": 7
+            "win": 167,
+            "loss": 114,
+            "draw": 23
         }
     },
     "fide": 2257,

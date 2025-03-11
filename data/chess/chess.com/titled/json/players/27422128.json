@@ -6,9 +6,9 @@
     "name": "Saar Drori",
     "username": "watchurclock",
     "title": "IM",
-    "followers": 14,
+    "followers": 15,
     "country": "https://api.chess.com/pub/country/IL",
-    "last_online": 1733901333,
+    "last_online": 1741348957,
     "joined": 1458912536,
     "status": "premium",
     "is_streamer": false,
@@ -31,9 +31,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2522,
-            "date": 1731852642,
-            "rd": 48
+            "rating": 2528,
+            "date": 1735666088,
+            "rd": 49
         },
         "best": {
             "rating": 2745,
@@ -41,16 +41,16 @@
             "game": "https://www.chess.com/game/live/31807174365"
         },
         "record": {
-            "win": 1656,
-            "loss": 1351,
+            "win": 1657,
+            "loss": 1352,
             "draw": 168
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2383,
-            "date": 1733901536,
-            "rd": 70
+            "rating": 2432,
+            "date": 1741349326,
+            "rd": 58
         },
         "best": {
             "rating": 2719,
@@ -58,9 +58,9 @@
             "game": "https://www.chess.com/game/live/71896484271"
         },
         "record": {
-            "win": 899,
-            "loss": 660,
-            "draw": 87
+            "win": 924,
+            "loss": 675,
+            "draw": 91
         }
     },
     "tactics": {
@@ -75,8 +75,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 67,
-            "score": 64
+            "total_attempts": 68,
+            "score": 65
         }
     }
 }

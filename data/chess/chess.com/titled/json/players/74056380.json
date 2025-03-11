@@ -8,7 +8,7 @@
     "followers": 8,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u041a\u0438\u0435\u0432",
-    "last_online": 1734105742,
+    "last_online": 1741646454,
     "joined": 1584807693,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3731,
-            "date": 1729345185
+            "rating": 3777,
+            "date": 1736505100
         },
         "lowest": {
             "rating": 818,
@@ -80,6 +80,10 @@
         "best": {
             "total_attempts": 77,
             "score": 74
+        },
+        "daily": {
+            "total_attempts": 63,
+            "score": 60
         }
     }
 }

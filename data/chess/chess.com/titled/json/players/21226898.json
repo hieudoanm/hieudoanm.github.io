@@ -5,9 +5,9 @@
     "name": "Odin Blikra Vea",
     "username": "gwr2024",
     "title": "CM",
-    "followers": 18,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/NO",
-    "last_online": 1734140668,
+    "last_online": 1740655646,
     "joined": 1424679342,
     "status": "premium",
     "is_streamer": false,
@@ -33,19 +33,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2274,
-            "date": 1734160462,
-            "rd": 25
+            "rating": 2236,
+            "date": 1741637059,
+            "rd": 40
         },
         "best": {
-            "rating": 2310,
-            "date": 1732481708,
+            "rating": 2324,
+            "date": 1734981462,
             "game": "https://www.chess.com/game/live/127006203881"
         },
         "record": {
-            "win": 407,
-            "loss": 330,
-            "draw": 45
+            "win": 473,
+            "loss": 388,
+            "draw": 47
         }
     },
     "fide": 2157,

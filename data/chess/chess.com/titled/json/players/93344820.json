@@ -5,9 +5,9 @@
     "name": "Mario Yber Lopez",
     "username": "milop27",
     "title": "FM",
-    "followers": 128,
+    "followers": 148,
     "country": "https://api.chess.com/pub/country/BO",
-    "last_online": 1734130559,
+    "last_online": 1741475739,
     "joined": 1602967060,
     "status": "premium",
     "is_streamer": false,
@@ -33,26 +33,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2138,
-            "date": 1734132250,
-            "rd": 29
+            "rating": 2203,
+            "date": 1741476491,
+            "rd": 32
         },
         "best": {
             "rating": 2188,
             "date": 1727295511,
-            "game": "https://www.chess.com/game/live/122855627255"
+            "game": "https://www.chess.com/game/live/133059527593"
         },
         "record": {
-            "win": 870,
-            "loss": 787,
-            "draw": 91
+            "win": 1069,
+            "loss": 964,
+            "draw": 112
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2349,
-            "date": 1731456027,
-            "rd": 57
+            "rating": 2408,
+            "date": 1741132979,
+            "rd": 54
         },
         "best": {
             "rating": 2524,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/110647963793"
         },
         "record": {
-            "win": 506,
-            "loss": 408,
-            "draw": 87
+            "win": 525,
+            "loss": 429,
+            "draw": 89
         }
     },
     "fide": 0,

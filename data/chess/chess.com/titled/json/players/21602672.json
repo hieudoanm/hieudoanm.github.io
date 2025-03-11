@@ -6,9 +6,9 @@
     "name": "Jens E Ingebretsen",
     "username": "jens1102",
     "title": "IM",
-    "followers": 69,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/NO",
-    "last_online": 1734034759,
+    "last_online": 1741690620,
     "joined": 1426875645,
     "status": "premium",
     "is_streamer": false,
@@ -67,9 +67,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2494,
-            "date": 1734015275,
-            "rd": 49
+            "rating": 2463,
+            "date": 1738011778,
+            "rd": 74
         },
         "best": {
             "rating": 2680,
@@ -78,15 +78,15 @@
         },
         "record": {
             "win": 1099,
-            "loss": 882,
+            "loss": 884,
             "draw": 150
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2630,
-            "date": 1734035747,
-            "rd": 31
+            "rating": 2654,
+            "date": 1741700952,
+            "rd": 35
         },
         "best": {
             "rating": 2761,
@@ -94,9 +94,9 @@
             "game": "https://www.chess.com/game/live/58392110659"
         },
         "record": {
-            "win": 5498,
-            "loss": 4965,
-            "draw": 897
+            "win": 5648,
+            "loss": 5102,
+            "draw": 919
         }
     },
     "tactics": {

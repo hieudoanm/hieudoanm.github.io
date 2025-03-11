@@ -6,20 +6,20 @@
     "name": "\u0635\u0644\u0627\u062d \u0627\u0644\u062f\u064a\u0646 \u0623\u0633\u0639\u062f",
     "username": "salahdinasaad",
     "title": "FM",
-    "followers": 54,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/PS",
     "location": "Damascus",
-    "last_online": 1734101860,
+    "last_online": 1741678166,
     "joined": 1334967594,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1661,
-            "date": 1730735461,
+            "date": 1736528178,
             "rd": 129
         },
         "best": {
@@ -33,12 +33,6 @@
             "draw": 2,
             "time_per_move": 9645,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 1,
-            "count": 2,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
@@ -60,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1861,
-            "date": 1733252708,
-            "rd": 88
+            "rating": 1797,
+            "date": 1739127063,
+            "rd": 77
         },
         "best": {
             "rating": 2102,
@@ -70,26 +64,26 @@
             "game": "https://www.chess.com/game/live/105603619109"
         },
         "record": {
-            "win": 69,
-            "loss": 59,
-            "draw": 2
+            "win": 72,
+            "loss": 64,
+            "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2043,
-            "date": 1734102522,
-            "rd": 34
+            "rating": 1866,
+            "date": 1741678763,
+            "rd": 29
         },
         "best": {
             "rating": 2139,
             "date": 1711711886,
-            "game": "https://www.chess.com/game/live/96990747233"
+            "game": "https://www.chess.com/game/live/129065561173"
         },
         "record": {
-            "win": 583,
-            "loss": 516,
-            "draw": 53
+            "win": 750,
+            "loss": 682,
+            "draw": 70
         }
     },
     "fide": 2116,

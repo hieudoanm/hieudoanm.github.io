@@ -4,20 +4,20 @@
     "url": "https://www.chess.com/member/RAPT1958",
     "username": "rapt1958",
     "title": "FM",
-    "followers": 0,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1734052144,
+    "last_online": 1741303597,
     "joined": 1730906097,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 1903,
-            "date": 1734156458,
-            "rd": 30
+            "rating": 1905,
+            "date": 1741697906,
+            "rd": 26
         },
         "best": {
             "rating": 2053,
@@ -25,15 +25,15 @@
             "game": "https://www.chess.com/game/live/127490449693"
         },
         "record": {
-            "win": 74,
-            "loss": 70,
-            "draw": 7
+            "win": 545,
+            "loss": 528,
+            "draw": 100
         }
     },
     "tactics": {
         "highest": {
-            "rating": 1000,
-            "date": 1730906097
+            "rating": 2438,
+            "date": 1738673434
         },
         "lowest": {
             "rating": 1000,

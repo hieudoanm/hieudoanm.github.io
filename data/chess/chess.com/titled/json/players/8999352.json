@@ -5,10 +5,10 @@
     "name": "uboldi alejandro",
     "username": "ubochess",
     "title": "FM",
-    "followers": 42,
+    "followers": 50,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "buenos aires",
-    "last_online": 1732281533,
+    "last_online": 1741452802,
     "joined": 1348323954,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2402,
-            "date": 1732282422,
-            "rd": 73
+            "rating": 2383,
+            "date": 1738000641,
+            "rd": 61
         },
         "best": {
             "rating": 2444,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/428856952"
         },
         "record": {
-            "win": 3968,
-            "loss": 1429,
-            "draw": 273
+            "win": 4001,
+            "loss": 1437,
+            "draw": 274
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2173,
-            "date": 1521759563,
-            "rd": 142
+            "rating": 2065,
+            "date": 1738007985,
+            "rd": 103
         },
         "best": {
             "rating": 2341,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/441595652"
         },
         "record": {
-            "win": 107,
-            "loss": 40,
-            "draw": 12
+            "win": 141,
+            "loss": 45,
+            "draw": 15
         }
     },
     "fide": 0,

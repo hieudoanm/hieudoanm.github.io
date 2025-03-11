@@ -9,7 +9,7 @@
     "followers": 36,
     "country": "https://api.chess.com/pub/country/GT",
     "location": "Guatemala",
-    "last_online": 1728259205,
+    "last_online": 1741554651,
     "joined": 1287425753,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2332,
-            "date": 1713279906,
-            "rd": 107
+            "rating": 2327,
+            "date": 1741554818,
+            "rd": 137
         },
         "best": {
             "rating": 2450,
@@ -64,7 +64,7 @@
         "record": {
             "win": 17213,
             "loss": 12505,
-            "draw": 1402
+            "draw": 1403
         }
     },
     "tactics": {

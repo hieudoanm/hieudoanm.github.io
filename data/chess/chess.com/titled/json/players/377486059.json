@@ -13,6 +13,18 @@
     "verified": false,
     "league": "Silver",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2278,
+            "date": 1737814445,
+            "rd": 48
+        },
+        "record": {
+            "win": 0,
+            "loss": 3,
+            "draw": 0
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 2591,
@@ -61,10 +73,6 @@
         "best": {
             "total_attempts": 41,
             "score": 38
-        },
-        "daily": {
-            "total_attempts": 20,
-            "score": 17
         }
     }
 }

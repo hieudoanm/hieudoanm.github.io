@@ -6,10 +6,10 @@
     "name": "Pablo Urriza Iricibar",
     "username": "apuwins",
     "title": "FM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Pamplona",
-    "last_online": 1734166186,
+    "last_online": 1741186615,
     "joined": 1346597037,
     "status": "premium",
     "is_streamer": false,
@@ -85,9 +85,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2388,
-            "date": 1734171844,
-            "rd": 30
+            "rating": 2359,
+            "date": 1741703781,
+            "rd": 31
         },
         "best": {
             "rating": 2480,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/106252039657"
         },
         "record": {
-            "win": 1322,
-            "loss": 1432,
-            "draw": 161
+            "win": 1495,
+            "loss": 1642,
+            "draw": 179
         }
     },
     "fide": 2207,

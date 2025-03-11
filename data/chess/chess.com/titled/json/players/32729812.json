@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1969,
-            "date": 1706191528,
+            "date": 1737797324,
             "rd": 237
         },
         "best": {
@@ -71,26 +71,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2276,
-            "date": 1708187780,
-            "rd": 53
+            "rating": 2370,
+            "date": 1735668706,
+            "rd": 69
         },
         "best": {
-            "rating": 2436,
-            "date": 1637092469,
-            "game": "https://www.chess.com/game/live/6354639946"
+            "rating": 2496,
+            "date": 1734459137,
+            "game": "https://www.chess.com/game/live/129399802329"
         },
         "record": {
-            "win": 379,
-            "loss": 253,
+            "win": 389,
+            "loss": 268,
             "draw": 72
         }
     },
     "fide": 2297,
     "tactics": {
         "highest": {
-            "rating": 3277,
-            "date": 1732686275
+            "rating": 3310,
+            "date": 1739770617
         },
         "lowest": {
             "rating": 1208,
@@ -101,10 +101,6 @@
         "best": {
             "total_attempts": 56,
             "score": 53
-        },
-        "daily": {
-            "total_attempts": 19,
-            "score": 16
         }
     }
 }

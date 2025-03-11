@@ -5,20 +5,20 @@
     "name": "Roy Vagman",
     "username": "moncler08",
     "title": "FM",
-    "followers": 3,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/IL",
-    "last_online": 1734115203,
+    "last_online": 1741640868,
     "joined": 1723415610,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2626,
-            "date": 1734047370,
-            "rd": 49
+            "rating": 2677,
+            "date": 1736636072,
+            "rd": 41
         },
         "best": {
             "rating": 2708,
@@ -26,32 +26,32 @@
             "game": "https://www.chess.com/game/live/119485813255"
         },
         "record": {
-            "win": 100,
-            "loss": 72,
-            "draw": 11
+            "win": 111,
+            "loss": 85,
+            "draw": 14
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2589,
-            "date": 1734047223,
-            "rd": 43
+            "rating": 2554,
+            "date": 1741389514,
+            "rd": 48
         },
         "best": {
             "rating": 2656,
             "date": 1727457112,
-            "game": "https://www.chess.com/game/live/119746233375"
+            "game": "https://www.chess.com/game/live/129833391501"
         },
         "record": {
-            "win": 107,
-            "loss": 86,
-            "draw": 27
+            "win": 146,
+            "loss": 120,
+            "draw": 32
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3364,
-            "date": 1733145227
+            "rating": 3533,
+            "date": 1736782545
         },
         "lowest": {
             "rating": 1000,

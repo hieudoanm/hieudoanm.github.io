@@ -6,10 +6,10 @@
     "name": "Yulian Malovanyi",
     "username": "gcgeek",
     "title": "FM",
-    "followers": 78,
+    "followers": 81,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Kyiv",
-    "last_online": 1733749072,
+    "last_online": 1741609196,
     "joined": 1496330140,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2475,
-            "date": 1721220429,
+            "date": 1741366687,
             "rd": 50
         },
         "best": {
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/63503865511"
         },
         "record": {
-            "win": 129,
+            "win": 130,
             "loss": 53,
             "draw": 12
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2614,
-            "date": 1730819517,
-            "rd": 46
+            "rating": 2654,
+            "date": 1737814148,
+            "rd": 43
         },
         "best": {
             "rating": 2669,
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/53739546803"
         },
         "record": {
-            "win": 2327,
-            "loss": 1532,
+            "win": 2339,
+            "loss": 1536,
             "draw": 185
         }
     },

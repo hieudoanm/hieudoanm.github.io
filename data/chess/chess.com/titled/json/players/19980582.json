@@ -6,10 +6,10 @@
     "name": "Dmitry Ponomarev",
     "username": "dmitry_ponomarev",
     "title": "IM",
-    "followers": 88,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u041f\u0435\u043d\u0437\u0430",
-    "last_online": 1733982150,
+    "last_online": 1740748649,
     "joined": 1417422010,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2149,
-            "date": 1734148188,
-            "rd": 57
+            "rating": 2162,
+            "date": 1741240477,
+            "rd": 55
         },
         "best": {
             "rating": 2470,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/3603651182"
         },
         "record": {
-            "win": 23,
-            "loss": 35,
-            "draw": 7
+            "win": 34,
+            "loss": 45,
+            "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2347,
-            "date": 1734070712,
-            "rd": 29
+            "rating": 2305,
+            "date": 1741450067,
+            "rd": 39
         },
         "best": {
             "rating": 2781,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/117303048593"
         },
         "record": {
-            "win": 459,
-            "loss": 572,
-            "draw": 105
+            "win": 511,
+            "loss": 650,
+            "draw": 116
         }
     },
     "fide": 2417,

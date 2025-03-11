@@ -9,7 +9,7 @@
     "followers": 58,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Vlasotince",
-    "last_online": 1733513720,
+    "last_online": 1736007112,
     "joined": 1440321927,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2321,
-            "date": 1733514371,
-            "rd": 40
+            "rating": 2361,
+            "date": 1736009144,
+            "rd": 37
         },
         "best": {
             "rating": 2550,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/35031065209"
         },
         "record": {
-            "win": 4944,
-            "loss": 5138,
-            "draw": 914
+            "win": 4974,
+            "loss": 5166,
+            "draw": 916
         }
     },
     "tactics": {

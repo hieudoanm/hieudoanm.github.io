@@ -5,9 +5,9 @@
     "name": "Dimitrios Loutragotis",
     "username": "dimitrisl",
     "title": "FM",
-    "followers": 50,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1734077138,
+    "last_online": 1740219010,
     "joined": 1399385697,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2638,
-            "date": 1729881993,
-            "rd": 47
+            "rating": 2670,
+            "date": 1741249843,
+            "rd": 42
         },
         "best": {
             "rating": 2756,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/108514269275"
         },
         "record": {
-            "win": 98,
-            "loss": 70,
-            "draw": 6
+            "win": 116,
+            "loss": 88,
+            "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2610,
-            "date": 1734178380,
-            "rd": 23
+            "rating": 2619,
+            "date": 1741700777,
+            "rd": 27
         },
         "best": {
             "rating": 2719,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/88861855037"
         },
         "record": {
-            "win": 2730,
-            "loss": 3332,
-            "draw": 695
+            "win": 3020,
+            "loss": 3696,
+            "draw": 781
         }
     },
     "fide": 2329,

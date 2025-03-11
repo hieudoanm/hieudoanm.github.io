@@ -6,10 +6,10 @@
     "name": "Micha\u0142 Luch",
     "username": "im_michal_luch",
     "title": "IM",
-    "followers": 601,
+    "followers": 607,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Polska",
-    "last_online": 1734164219,
+    "last_online": 1741679342,
     "joined": 1350859738,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1886,
-            "date": 1733322592,
-            "rd": 90
+            "rating": 1847,
+            "date": 1741611358,
+            "rd": 94
         },
         "best": {
             "rating": 2416,
@@ -28,11 +28,11 @@
             "game": "https://www.chess.com/game/daily/208461502"
         },
         "record": {
-            "win": 1623,
-            "loss": 703,
+            "win": 1625,
+            "loss": 705,
             "draw": 272,
-            "time_per_move": 54539,
-            "timeout_percent": 0
+            "time_per_move": 55064,
+            "timeout_percent": 25
         }
     },
     "chess960_daily": {
@@ -50,14 +50,14 @@
             "win": 7,
             "loss": 0,
             "draw": 1,
-            "time_per_move": 54539,
+            "time_per_move": 55064,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2428,
-            "date": 1732878313,
+            "date": 1741346473,
             "rd": 49
         },
         "best": {
@@ -91,7 +91,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2710,
-            "date": 1733484538,
+            "date": 1741346943,
             "rd": 49
         },
         "best": {
@@ -108,8 +108,8 @@
     "fide": 2447,
     "tactics": {
         "highest": {
-            "rating": 3444,
-            "date": 1663536566
+            "rating": 3470,
+            "date": 1737074508
         },
         "lowest": {
             "rating": 2169,

@@ -6,10 +6,10 @@
     "name": "Ristic Nebojsa",
     "username": "dulerile",
     "title": "IM",
-    "followers": 39,
+    "followers": 41,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Smederevska Palanka",
-    "last_online": 1734002242,
+    "last_online": 1741695711,
     "joined": 1475516399,
     "status": "premium",
     "is_streamer": false,
@@ -47,9 +47,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2406,
-            "date": 1734006462,
-            "rd": 18
+            "rating": 2454,
+            "date": 1741697465,
+            "rd": 39
         },
         "best": {
             "rating": 2668,
@@ -57,9 +57,9 @@
             "game": "https://www.chess.com/game/live/94897190313"
         },
         "record": {
-            "win": 12692,
-            "loss": 13870,
-            "draw": 2586
+            "win": 13155,
+            "loss": 14366,
+            "draw": 2678
         }
     },
     "fide": 0,

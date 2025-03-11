@@ -6,10 +6,10 @@
     "name": "Dias Issabayev",
     "username": "diaschess88",
     "title": "FM",
-    "followers": 104,
+    "followers": 111,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "\u0410\u0441\u0442\u0430\u043d\u0430",
-    "last_online": 1734085571,
+    "last_online": 1741693062,
     "joined": 1428004064,
     "status": "premium",
     "is_streamer": false,
@@ -33,7 +33,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1653,
-            "date": 1733477624,
+            "date": 1739869797,
             "rd": 212
         },
         "best": {
@@ -50,7 +50,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2572,
-            "date": 1733997851,
+            "date": 1740138703,
             "rd": 38
         },
         "best": {
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2418,
-            "date": 1733997950,
-            "rd": 38
+            "rating": 2419,
+            "date": 1741693904,
+            "rd": 55
         },
         "best": {
             "rating": 2719,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/123780047665"
         },
         "record": {
-            "win": 705,
-            "loss": 629,
-            "draw": 184
+            "win": 716,
+            "loss": 640,
+            "draw": 185
         }
     },
     "fide": 2251,
@@ -96,6 +96,10 @@
         "best": {
             "total_attempts": 61,
             "score": 58
+        },
+        "daily": {
+            "total_attempts": 31,
+            "score": 28
         }
     }
 }

@@ -6,9 +6,9 @@
     "name": "Jorge Luis Sanchez",
     "username": "jlmanzanares",
     "title": "FM",
-    "followers": 45,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/PA",
-    "last_online": 1734146142,
+    "last_online": 1741581039,
     "joined": 1318883402,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1593,
-            "date": 1734118369,
+            "date": 1738661291,
             "rd": 332
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 3,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 167784,
+            "time_per_move": 188969,
             "timeout_percent": 0
         }
     },
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1971,
-            "date": 1734118796,
-            "rd": 31
+            "rating": 1872,
+            "date": 1741581005,
+            "rd": 41
         },
         "best": {
             "rating": 2114,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/126731384623"
         },
         "record": {
-            "win": 278,
-            "loss": 287,
-            "draw": 26
+            "win": 315,
+            "loss": 383,
+            "draw": 28
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2098,
-            "date": 1733849059,
-            "rd": 76
+            "rating": 2226,
+            "date": 1739923785,
+            "rd": 74
         },
         "best": {
             "rating": 2275,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/100979051783"
         },
         "record": {
-            "win": 172,
-            "loss": 154,
+            "win": 179,
+            "loss": 164,
             "draw": 11
         }
     },

@@ -5,9 +5,9 @@
     "name": "Boris Ferrufino",
     "username": "ferrufino64",
     "title": "CM",
-    "followers": 17,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/BO",
-    "last_online": 1733544035,
+    "last_online": 1739988287,
     "joined": 1542648071,
     "status": "premium",
     "is_streamer": false,
@@ -30,9 +30,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1977,
-            "date": 1727296237,
-            "rd": 88
+            "rating": 1989,
+            "date": 1738198238,
+            "rd": 108
         },
         "best": {
             "rating": 2234,
@@ -40,7 +40,7 @@
             "game": "https://www.chess.com/game/live/93695327037"
         },
         "record": {
-            "win": 19,
+            "win": 20,
             "loss": 16,
             "draw": 6
         }
@@ -64,18 +64,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2325,
-            "date": 1732637807,
-            "rd": 65
+            "rating": 2361,
+            "date": 1737504471,
+            "rd": 70
         },
         "best": {
-            "rating": 2356,
-            "date": 1727797039,
+            "rating": 2361,
+            "date": 1737504471,
             "game": "https://www.chess.com/game/live/116697582729"
         },
         "record": {
-            "win": 345,
-            "loss": 375,
+            "win": 350,
+            "loss": 376,
             "draw": 44
         }
     },

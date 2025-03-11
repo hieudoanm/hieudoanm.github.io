@@ -6,10 +6,10 @@
     "name": "Jaloliddin Ilkhomi",
     "username": "jaloliddinilkhomi",
     "title": "FM",
-    "followers": 68,
+    "followers": 74,
     "country": "https://api.chess.com/pub/country/TJ",
     "location": "Dushanbe",
-    "last_online": 1734122453,
+    "last_online": 1741630316,
     "joined": 1546837229,
     "status": "premium",
     "is_streamer": false,
@@ -33,7 +33,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2269,
-            "date": 1714763117,
+            "date": 1735137113,
             "rd": 47
         },
         "best": {
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2856,
-            "date": 1733909958,
-            "rd": 33
+            "rating": 2763,
+            "date": 1740855486,
+            "rd": 32
         },
         "best": {
             "rating": 2958,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/125263200281"
         },
         "record": {
-            "win": 2355,
-            "loss": 2903,
-            "draw": 631
+            "win": 2603,
+            "loss": 3223,
+            "draw": 679
         }
     },
     "fide": 2288,

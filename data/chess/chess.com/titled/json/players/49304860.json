@@ -6,9 +6,9 @@
     "name": "Nikhil Dixit",
     "username": "dixit_nikhil",
     "title": "FM",
-    "followers": 929,
+    "followers": 941,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734174849,
+    "last_online": 1741697461,
     "joined": 1535738336,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2415,
-            "date": 1732043789,
+            "date": 1741115380,
             "rd": 48
         },
         "best": {
@@ -54,8 +54,8 @@
     "chess_bullet": {
         "last": {
             "rating": 2607,
-            "date": 1731265133,
-            "rd": 44
+            "date": 1739203410,
+            "rd": 49
         },
         "best": {
             "rating": 2728,
@@ -65,14 +65,14 @@
         "record": {
             "win": 1537,
             "loss": 1723,
-            "draw": 321
+            "draw": 322
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2635,
-            "date": 1732787729,
-            "rd": 42
+            "rating": 2617,
+            "date": 1741620482,
+            "rd": 41
         },
         "best": {
             "rating": 2748,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/115487878283"
         },
         "record": {
-            "win": 1459,
-            "loss": 1330,
-            "draw": 380
+            "win": 1483,
+            "loss": 1356,
+            "draw": 390
         }
     },
     "fide": 2382,

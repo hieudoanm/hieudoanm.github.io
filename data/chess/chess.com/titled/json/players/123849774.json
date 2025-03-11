@@ -6,14 +6,15 @@
     "name": "Rose Atwell",
     "username": "roseatwell",
     "title": "FM",
-    "followers": 126,
+    "followers": 136,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Valencia, California",
-    "last_online": 1734180980,
+    "last_online": 1741696044,
     "joined": 1614236497,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Wood",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -37,7 +38,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2410,
-            "date": 1640007328,
+            "date": 1741370405,
             "rd": 82
         },
         "best": {

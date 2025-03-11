@@ -9,7 +9,7 @@
     "followers": 15,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Lviv",
-    "last_online": 1726274764,
+    "last_online": 1741552652,
     "joined": 1481065450,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     "fide": 2300,
     "tactics": {
         "highest": {
-            "rating": 3221,
-            "date": 1585871085
+            "rating": 3275,
+            "date": 1737225190
         },
         "lowest": {
             "rating": 1252,

@@ -5,7 +5,7 @@
     "name": "Raehanna Brown",
     "username": "prxcess_brownie",
     "title": "WCM",
-    "followers": 38,
+    "followers": 40,
     "country": "https://api.chess.com/pub/country/LU",
     "last_online": 1734150994,
     "joined": 1434419130,
@@ -98,10 +98,6 @@
         "best": {
             "total_attempts": 46,
             "score": 44
-        },
-        "daily": {
-            "total_attempts": 41,
-            "score": 38
         }
     }
 }

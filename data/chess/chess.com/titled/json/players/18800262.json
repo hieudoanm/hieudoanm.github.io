@@ -9,7 +9,7 @@
     "followers": 61,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Milan",
-    "last_online": 1732061073,
+    "last_online": 1741562285,
     "joined": 1410056747,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2528,
-            "date": 1680035699,
-            "rd": 165
+            "rating": 2512,
+            "date": 1736898466,
+            "rd": 49
         },
         "best": {
             "rating": 2655,
@@ -82,7 +82,7 @@
         },
         "record": {
             "win": 6010,
-            "loss": 6742,
+            "loss": 6743,
             "draw": 1487
         }
     },

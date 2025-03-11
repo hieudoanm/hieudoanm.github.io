@@ -1,5 +1,5 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19311220.42631961.200x200o.a4c61e7a12aa.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/19311220.96b42755.200x200o.982173fe0e84.jpg",
     "player_id": 19311220,
     "@id": "https://api.chess.com/pub/player/cancrushyou",
     "url": "https://www.chess.com/member/cancrushyou",
@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 140,
     "country": "https://api.chess.com/pub/country/MT",
-    "last_online": 1732540682,
+    "last_online": 1741650403,
     "joined": 1413372925,
     "status": "premium",
     "is_streamer": false,
@@ -89,26 +89,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2578,
-            "date": 1731520594,
-            "rd": 49
+            "rating": 2582,
+            "date": 1741129751,
+            "rd": 48
         },
         "best": {
-            "rating": 2598,
-            "date": 1727784612,
+            "rating": 2606,
+            "date": 1741126854,
             "game": "https://www.chess.com/game/live/57945700617"
         },
         "record": {
-            "win": 5469,
-            "loss": 4226,
-            "draw": 821
+            "win": 5477,
+            "loss": 4230,
+            "draw": 822
         }
     },
     "fide": 2346,
     "tactics": {
         "highest": {
-            "rating": 3271,
-            "date": 1720624392
+            "rating": 3301,
+            "date": 1738080949
         },
         "lowest": {
             "rating": 886,

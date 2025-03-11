@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/47333906.d1c62756.200x200o.90d2fedcda02.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/47333906.960356dd.200x200o.90ea15ac8a79.webp",
     "player_id": 47333906,
     "@id": "https://api.chess.com/pub/player/bimaniv",
     "url": "https://www.chess.com/member/Bimaniv",
     "name": "Mikhail Gusev",
     "username": "bimaniv",
     "title": "CM",
-    "followers": 97,
+    "followers": 100,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "\u041d\u043e\u0432\u0438 \u0421\u0430\u0434",
-    "last_online": 1734098517,
+    "last_online": 1741680631,
     "joined": 1529778978,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1673,
-            "date": 1734169603,
-            "rd": 67
+            "rating": 1699,
+            "date": 1741691528,
+            "rd": 85
         },
         "best": {
             "rating": 1916,
@@ -28,17 +28,11 @@
             "game": "https://www.chess.com/game/daily/510786737"
         },
         "record": {
-            "win": 322,
+            "win": 327,
             "loss": 111,
             "draw": 39,
-            "time_per_move": 29894,
+            "time_per_move": 30300,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 200,
-            "withdraw": 0,
-            "count": 2,
-            "highest_finish": 5
         }
     },
     "chess960_daily": {
@@ -56,20 +50,14 @@
             "win": 9,
             "loss": 8,
             "draw": 1,
-            "time_per_move": 29894,
+            "time_per_move": 30300,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 200,
-            "withdraw": 0,
-            "count": 2,
-            "highest_finish": 5
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2247,
-            "date": 1730813281,
+            "date": 1738162250,
             "rd": 49
         },
         "best": {
@@ -78,43 +66,43 @@
             "game": "https://www.chess.com/game/live/6488649680"
         },
         "record": {
-            "win": 105,
+            "win": 109,
             "loss": 141,
             "draw": 24
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2232,
-            "date": 1733402175,
-            "rd": 61
+            "rating": 2297,
+            "date": 1738329201,
+            "rd": 58
         },
         "best": {
-            "rating": 2269,
-            "date": 1725609688,
+            "rating": 2297,
+            "date": 1738329201,
             "game": "https://www.chess.com/game/live/119348418833"
         },
         "record": {
-            "win": 253,
-            "loss": 139,
-            "draw": 21
+            "win": 265,
+            "loss": 143,
+            "draw": 25
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2382,
-            "date": 1733854028,
-            "rd": 53
+            "rating": 2462,
+            "date": 1741691475,
+            "rd": 38
         },
         "best": {
-            "rating": 2421,
-            "date": 1727823567,
-            "game": "https://www.chess.com/game/live/118001985459"
+            "rating": 2515,
+            "date": 1739194723,
+            "game": "https://www.chess.com/game/live/131819465677"
         },
         "record": {
-            "win": 1022,
-            "loss": 458,
-            "draw": 102
+            "win": 1119,
+            "loss": 568,
+            "draw": 125
         }
     },
     "fide": 2239,

@@ -4,20 +4,20 @@
     "url": "https://www.chess.com/member/KrovavyOryel",
     "username": "krovavyoryel",
     "title": "FM",
-    "followers": 12,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/UY",
-    "last_online": 1734122723,
+    "last_online": 1741672916,
     "joined": 1513587716,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2625,
-            "date": 1733899634,
-            "rd": 37
+            "rating": 2503,
+            "date": 1741535902,
+            "rd": 31
         },
         "best": {
             "rating": 2648,
@@ -25,26 +25,26 @@
             "game": "https://www.chess.com/game/live/124906757731"
         },
         "record": {
-            "win": 461,
-            "loss": 468,
-            "draw": 44
+            "win": 506,
+            "loss": 541,
+            "draw": 51
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2756,
-            "date": 1733252194,
-            "rd": 33
+            "rating": 2780,
+            "date": 1741606580,
+            "rd": 28
         },
         "best": {
-            "rating": 2803,
-            "date": 1704997622,
-            "game": "https://www.chess.com/game/live/108900057139"
+            "rating": 2859,
+            "date": 1738316393,
+            "game": "https://www.chess.com/game/live/131651346219"
         },
         "record": {
-            "win": 3420,
-            "loss": 4025,
-            "draw": 691
+            "win": 3696,
+            "loss": 4355,
+            "draw": 764
         }
     },
     "tactics": {
@@ -59,8 +59,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 51,
+            "score": 48
+        },
+        "daily": {
+            "total_attempts": 42,
+            "score": 40
         }
     }
 }

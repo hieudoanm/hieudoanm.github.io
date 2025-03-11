@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 18,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1732388693,
+    "last_online": 1739966689,
     "joined": 1528729977,
     "status": "premium",
     "is_streamer": false,
@@ -99,10 +99,6 @@
         "best": {
             "total_attempts": 71,
             "score": 68
-        },
-        "daily": {
-            "total_attempts": 49,
-            "score": 48
         }
     }
 }

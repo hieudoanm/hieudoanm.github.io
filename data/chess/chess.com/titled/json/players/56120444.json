@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/sam1189",
     "username": "sam1189",
     "title": "FM",
-    "followers": 35,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733479215,
+    "last_online": 1741691661,
     "joined": 1547701307,
     "status": "premium",
     "is_streamer": false,
@@ -16,19 +16,19 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2136,
-            "date": 1733482028,
-            "rd": 49
+            "rating": 2124,
+            "date": 1741611481,
+            "rd": 48
         },
         "best": {
-            "rating": 2136,
-            "date": 1701671453,
+            "rating": 2137,
+            "date": 1738845569,
             "game": "https://www.chess.com/game/live/95408350733"
         },
         "record": {
             "win": 16,
-            "loss": 11,
-            "draw": 3
+            "loss": 13,
+            "draw": 4
         }
     },
     "chess_bullet": {
@@ -50,8 +50,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2879,
-            "date": 1733482547,
+            "rating": 2860,
+            "date": 1741623823,
             "rd": 49
         },
         "best": {
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/87640867609"
         },
         "record": {
-            "win": 320,
-            "loss": 209,
-            "draw": 48
+            "win": 323,
+            "loss": 212,
+            "draw": 49
         }
     },
     "fide": 0,
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 35,
-            "score": 32
+            "total_attempts": 42,
+            "score": 39
         }
     }
 }

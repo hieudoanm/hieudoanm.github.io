@@ -6,65 +6,65 @@
     "name": "Kevin George",
     "username": "kevingeorgemicheal",
     "title": "IM",
-    "followers": 60,
+    "followers": 72,
     "country": "https://api.chess.com/pub/country/EG",
     "location": "Cairo",
-    "last_online": 1734127036,
+    "last_online": 1741704079,
     "joined": 1564681030,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1954,
-            "date": 1714921691,
-            "rd": 192
+            "rating": 2102,
+            "date": 1739733502,
+            "rd": 47
         },
         "best": {
-            "rating": 1954,
-            "date": 1714921690,
-            "game": "https://www.chess.com/game/live/31407607515"
+            "rating": 2106,
+            "date": 1739731812,
+            "game": "https://www.chess.com/game/live/133466977325"
         },
         "record": {
-            "win": 151,
-            "loss": 96,
-            "draw": 8
+            "win": 157,
+            "loss": 98,
+            "draw": 10
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2646,
-            "date": 1726336778,
-            "rd": 35
+            "rating": 2687,
+            "date": 1741384077,
+            "rd": 39
         },
         "best": {
-            "rating": 2653,
-            "date": 1726336732,
-            "game": "https://www.chess.com/game/live/120075005481"
+            "rating": 2789,
+            "date": 1737822356,
+            "game": "https://www.chess.com/game/live/131471465367"
         },
         "record": {
-            "win": 485,
-            "loss": 334,
-            "draw": 59
+            "win": 576,
+            "loss": 416,
+            "draw": 79
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2618,
-            "date": 1733585312,
-            "rd": 40
+            "rating": 2664,
+            "date": 1741660602,
+            "rd": 37
         },
         "best": {
-            "rating": 2666,
-            "date": 1731362383,
-            "game": "https://www.chess.com/game/live/122160607091"
+            "rating": 2723,
+            "date": 1737478785,
+            "game": "https://www.chess.com/game/live/131214679019"
         },
         "record": {
-            "win": 1547,
-            "loss": 1216,
-            "draw": 174
+            "win": 1699,
+            "loss": 1302,
+            "draw": 227
         }
     },
     "fide": 2253,

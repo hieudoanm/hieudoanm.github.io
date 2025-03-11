@@ -5,28 +5,28 @@
     "name": "Quoc Hy Nguyen",
     "username": "carnivoras",
     "title": "FM",
-    "followers": 63,
+    "followers": 74,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1734098428,
+    "last_online": 1741672327,
     "joined": 1546096809,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1483,
-            "date": 1734096056,
-            "rd": 242
+            "rating": 1690,
+            "date": 1735753121,
+            "rd": 200
         },
         "best": {
-            "rating": 1607,
-            "date": 1711611881,
+            "rating": 1690,
+            "date": 1735753121,
             "game": "https://www.chess.com/game/daily/636698529"
         },
         "record": {
-            "win": 1,
+            "win": 3,
             "loss": 2,
             "draw": 1,
             "time_per_move": 65612,
@@ -52,36 +52,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2736,
-            "date": 1729832070,
-            "rd": 48
+            "rating": 2729,
+            "date": 1741450335,
+            "rd": 49
         },
         "best": {
-            "rating": 2809,
-            "date": 1612595915,
-            "game": "https://www.chess.com/game/live/57858014905"
+            "rating": 2838,
+            "date": 1737829272,
+            "game": "https://www.chess.com/game/live/131568006503"
         },
         "record": {
-            "win": 407,
-            "loss": 480,
-            "draw": 78
+            "win": 464,
+            "loss": 513,
+            "draw": 82
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2820,
-            "date": 1734098857,
-            "rd": 49
+            "rating": 2830,
+            "date": 1741672697,
+            "rd": 43
         },
         "best": {
-            "rating": 2875,
-            "date": 1725859025,
+            "rating": 2927,
+            "date": 1737965052,
             "game": "https://www.chess.com/game/live/121890036433"
         },
         "record": {
-            "win": 1175,
-            "loss": 1267,
-            "draw": 301
+            "win": 1231,
+            "loss": 1320,
+            "draw": 310
         }
     },
     "tactics": {
@@ -98,6 +98,10 @@
         "best": {
             "total_attempts": 96,
             "score": 94
+        },
+        "daily": {
+            "total_attempts": 49,
+            "score": 47
         }
     }
 }

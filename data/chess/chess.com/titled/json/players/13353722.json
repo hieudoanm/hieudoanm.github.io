@@ -6,10 +6,10 @@
     "name": "Roberto Carlos Sanchez Alvarez",
     "username": "rcsa007",
     "title": "IM",
-    "followers": 112,
+    "followers": 116,
     "country": "https://api.chess.com/pub/country/PA",
     "location": "Panam\u00e1",
-    "last_online": 1734124847,
+    "last_online": 1741452386,
     "joined": 1377979365,
     "status": "premium",
     "is_streamer": false,
@@ -82,10 +82,6 @@
         "best": {
             "total_attempts": 64,
             "score": 61
-        },
-        "daily": {
-            "total_attempts": 45,
-            "score": 42
         }
     }
 }

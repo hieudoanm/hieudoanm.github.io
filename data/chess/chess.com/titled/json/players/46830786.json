@@ -6,10 +6,10 @@
     "name": "Sargis Manukyan",
     "username": "sargismv",
     "title": "FM",
-    "followers": 153,
+    "followers": 155,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan",
-    "last_online": 1734159047,
+    "last_online": 1741661490,
     "joined": 1528211196,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2435,
-            "date": 1734159414,
-            "rd": 52
+            "rating": 2489,
+            "date": 1738640861,
+            "rd": 47
         },
         "best": {
             "rating": 2552,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/32899173429"
         },
         "record": {
-            "win": 1225,
-            "loss": 1403,
-            "draw": 146
+            "win": 1245,
+            "loss": 1419,
+            "draw": 154
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2454,
-            "date": 1734148584,
-            "rd": 41
+            "rating": 2516,
+            "date": 1741661820,
+            "rd": 49
         },
         "best": {
             "rating": 2663,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/4035548014"
         },
         "record": {
-            "win": 2168,
-            "loss": 2341,
-            "draw": 396
+            "win": 2209,
+            "loss": 2385,
+            "draw": 406
         }
     },
     "fide": 2276,

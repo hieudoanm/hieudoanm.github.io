@@ -6,10 +6,10 @@
     "name": "Erik R\u00f6nk\u00e4",
     "username": "erikronka",
     "title": "FM",
-    "followers": 151,
+    "followers": 153,
     "country": "https://api.chess.com/pub/country/FI",
     "location": "Turku",
-    "last_online": 1734173633,
+    "last_online": 1741103611,
     "joined": 1270134391,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2552,
-            "date": 1733923305,
-            "rd": 36
+            "rating": 2529,
+            "date": 1737925064,
+            "rd": 41
         },
         "best": {
             "rating": 2667,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/82398212053"
         },
         "record": {
-            "win": 385,
-            "loss": 395,
-            "draw": 47
+            "win": 409,
+            "loss": 424,
+            "draw": 51
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2450,
-            "date": 1732127518,
-            "rd": 36
+            "rating": 2496,
+            "date": 1739991600,
+            "rd": 31
         },
         "best": {
             "rating": 2593,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/45933666921"
         },
         "record": {
-            "win": 4258,
-            "loss": 4275,
-            "draw": 761
+            "win": 4363,
+            "loss": 4379,
+            "draw": 782
         }
     },
     "fide": 2305,

@@ -6,10 +6,10 @@
     "name": "Kim Sergey",
     "username": "sergeikim",
     "title": "FM",
-    "followers": 101,
+    "followers": 102,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "Almaty",
-    "last_online": 1734094941,
+    "last_online": 1741102837,
     "joined": 1494795910,
     "status": "premium",
     "is_streamer": false,
@@ -35,19 +35,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2650,
-            "date": 1734115050,
+            "rating": 2649,
+            "date": 1741113221,
             "rd": 25
         },
         "best": {
-            "rating": 2669,
-            "date": 1718244764,
+            "rating": 2684,
+            "date": 1736872864,
             "game": "https://www.chess.com/game/live/110649177611"
         },
         "record": {
-            "win": 19308,
-            "loss": 20506,
-            "draw": 3875
+            "win": 19536,
+            "loss": 20708,
+            "draw": 3914
         }
     },
     "fide": 2295,

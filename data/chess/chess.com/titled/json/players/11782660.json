@@ -9,7 +9,7 @@
     "followers": 197,
     "country": "https://api.chess.com/pub/country/NG",
     "location": "Ondo",
-    "last_online": 1734163961,
+    "last_online": 1741510177,
     "joined": 1367841496,
     "status": "premium",
     "is_streamer": false,
@@ -90,8 +90,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1913,
-            "date": 1732034486,
+            "rating": 1944,
+            "date": 1735472286,
             "rd": 111
         },
         "best": {
@@ -100,7 +100,7 @@
             "game": "https://www.chess.com/game/live/102789115969"
         },
         "record": {
-            "win": 757,
+            "win": 758,
             "loss": 738,
             "draw": 136
         }

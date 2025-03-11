@@ -6,10 +6,10 @@
     "name": "Clive Ng",
     "username": "white_phoenix",
     "title": "FM",
-    "followers": 260,
+    "followers": 263,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "Sydney",
-    "last_online": 1733900315,
+    "last_online": 1741648952,
     "joined": 1237201184,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2239,
-            "date": 1733806921,
+            "rating": 2220,
+            "date": 1741680744,
             "rd": 49
         },
         "best": {
@@ -47,9 +47,9 @@
             "game": "https://www.chess.com/game/live/116489413633"
         },
         "record": {
-            "win": 290,
-            "loss": 172,
-            "draw": 10
+            "win": 295,
+            "loss": 174,
+            "draw": 11
         }
     },
     "chess_bullet": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2349,
-            "date": 1733730333,
-            "rd": 52
+            "rating": 2372,
+            "date": 1740992872,
+            "rd": 69
         },
         "best": {
             "rating": 2508,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/35968160157"
         },
         "record": {
-            "win": 2283,
-            "loss": 3210,
+            "win": 2290,
+            "loss": 3213,
             "draw": 320
         }
     },

@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/30564602.141e1f4e.200x200o.5d4169ca8a1b.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/30564602.63c07728.200x200o.5272996fc2b9.png",
     "player_id": 30564602,
     "@id": "https://api.chess.com/pub/player/grandmaster2b",
     "url": "https://www.chess.com/member/Grandmaster2B",
     "name": "Grayson Rorrer",
     "username": "grandmaster2b",
     "title": "FM",
-    "followers": 1656,
+    "followers": 1783,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Lockhart, Texas",
-    "last_online": 1734167889,
+    "last_online": 1741014475,
     "joined": 1477322832,
     "status": "premium",
     "is_streamer": false,
@@ -73,19 +73,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2814,
-            "date": 1715193959,
-            "rd": 23
+            "rating": 2828,
+            "date": 1738615349,
+            "rd": 26
         },
         "best": {
-            "rating": 2904,
-            "date": 1674432845,
+            "rating": 2913,
+            "date": 1737939176,
             "game": "https://www.chess.com/game/live/68671555793"
         },
         "record": {
-            "win": 7703,
-            "loss": 3311,
-            "draw": 282
+            "win": 7969,
+            "loss": 3436,
+            "draw": 307
         }
     },
     "chess_blitz": {

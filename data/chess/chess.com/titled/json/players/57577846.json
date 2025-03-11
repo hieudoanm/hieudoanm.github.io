@@ -6,9 +6,9 @@
     "name": "Danis Kuandykuly",
     "username": "kuandan",
     "title": "CM",
-    "followers": 25,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1733999918,
+    "last_online": 1741503552,
     "joined": 1550643626,
     "status": "premium",
     "is_streamer": false,
@@ -18,14 +18,14 @@
     "chess_daily": {
         "last": {
             "rating": 1600,
-            "date": 1731658579,
+            "date": 1735924045,
             "rd": 350
         },
         "record": {
-            "win": 0,
+            "win": 1,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 751,
+            "time_per_move": 982372,
             "timeout_percent": 0
         }
     },
@@ -48,35 +48,35 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2157,
-            "date": 1715533953,
-            "rd": 53
+            "rating": 2476,
+            "date": 1740137670,
+            "rd": 34
         },
         "best": {
-            "rating": 2160,
-            "date": 1712941230,
-            "game": "https://www.chess.com/game/live/106678830937"
+            "rating": 2557,
+            "date": 1738657874,
+            "game": "https://www.chess.com/game/live/132418806341"
         },
         "record": {
-            "win": 58,
-            "loss": 15,
-            "draw": 3
+            "win": 158,
+            "loss": 72,
+            "draw": 15
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2471,
-            "date": 1733249394,
-            "rd": 53
+            "rating": 2436,
+            "date": 1739902522,
+            "rd": 63
         },
         "best": {
             "rating": 2485,
             "date": 1730827181,
-            "game": "https://www.chess.com/game/live/123349779697"
+            "game": "https://www.chess.com/game/live/131818854547"
         },
         "record": {
-            "win": 220,
-            "loss": 153,
+            "win": 230,
+            "loss": 169,
             "draw": 11
         }
     },

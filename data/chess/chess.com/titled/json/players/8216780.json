@@ -6,10 +6,10 @@
     "name": "Hatem Ibrahim",
     "username": "hatmov",
     "title": "IM",
-    "followers": 77,
+    "followers": 103,
     "country": "https://api.chess.com/pub/country/EG",
     "location": "Cairo",
-    "last_online": 1734092362,
+    "last_online": 1741623378,
     "joined": 1342432706,
     "status": "premium",
     "is_streamer": false,
@@ -18,60 +18,60 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2199,
-            "date": 1730314403,
-            "rd": 49
+            "rating": 2203,
+            "date": 1736692005,
+            "rd": 48
         },
         "best": {
             "rating": 2222,
             "date": 1687091800,
-            "game": "https://www.chess.com/game/live/122932471669"
+            "game": "https://www.chess.com/game/live/129841792565"
         },
         "record": {
-            "win": 18,
-            "loss": 3,
-            "draw": 5
+            "win": 22,
+            "loss": 7,
+            "draw": 6
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2005,
-            "date": 1733946582,
+            "rating": 2154,
+            "date": 1741382333,
             "rd": 17
         },
         "best": {
-            "rating": 2042,
-            "date": 1733529455,
-            "game": "https://www.chess.com/game/live/126220146119"
+            "rating": 2283,
+            "date": 1736372423,
+            "game": "https://www.chess.com/game/live/130716015835"
         },
         "record": {
-            "win": 453,
-            "loss": 411,
-            "draw": 24
+            "win": 1444,
+            "loss": 1433,
+            "draw": 87
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2336,
-            "date": 1734118350,
-            "rd": 31
+            "rating": 2405,
+            "date": 1741642279,
+            "rd": 20
         },
         "best": {
-            "rating": 2394,
-            "date": 1731248385,
-            "game": "https://www.chess.com/game/live/125432318541"
+            "rating": 2437,
+            "date": 1734713761,
+            "game": "https://www.chess.com/game/live/129139982983"
         },
         "record": {
-            "win": 1583,
-            "loss": 1566,
-            "draw": 199
+            "win": 1769,
+            "loss": 1741,
+            "draw": 232
         }
     },
     "fide": 2334,
     "tactics": {
         "highest": {
-            "rating": 2600,
-            "date": 1364468008
+            "rating": 2602,
+            "date": 1736085249
         },
         "lowest": {
             "rating": 1356,

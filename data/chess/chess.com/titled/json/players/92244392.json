@@ -5,37 +5,48 @@
     "name": "Ravi Gopal Hegde",
     "username": "ravihegde989",
     "title": "IM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734106632,
+    "last_online": 1741460486,
     "joined": 1601467876,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2310,
-            "date": 1734114315,
-            "rd": 45
+            "rating": 2378,
+            "date": 1741020626,
+            "rd": 37
         },
         "best": {
-            "rating": 2344,
-            "date": 1731679352,
-            "game": "https://www.chess.com/game/live/127845604255"
+            "rating": 2390,
+            "date": 1739729767,
+            "game": "https://www.chess.com/game/live/129406360877"
         },
         "record": {
-            "win": 167,
-            "loss": 95,
-            "draw": 13
+            "win": 219,
+            "loss": 123,
+            "draw": 30
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 1780,
+            "date": 1739896416,
+            "rd": 101
+        },
+        "record": {
+            "win": 3,
+            "loss": 8,
+            "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2181,
-            "date": 1718470774,
-            "rd": 160
+            "rating": 2293,
+            "date": 1741636474
         },
         "best": {
             "rating": 2477,
@@ -43,9 +54,9 @@
             "game": "https://www.chess.com/game/live/5518645869"
         },
         "record": {
-            "win": 4,
-            "loss": 8,
-            "draw": 1
+            "win": 177,
+            "loss": 138,
+            "draw": 20
         }
     },
     "fide": 0,

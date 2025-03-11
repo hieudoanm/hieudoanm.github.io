@@ -6,10 +6,10 @@
     "name": "Dalson Holanda",
     "username": "guillan",
     "title": "CM",
-    "followers": 31,
+    "followers": 33,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "caruaru",
-    "last_online": 1726184719,
+    "last_online": 1741648584,
     "joined": 1232459661,
     "status": "premium",
     "is_streamer": false,
@@ -49,19 +49,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2165,
-            "date": 1700141354,
-            "rd": 83
+            "rating": 2213,
+            "date": 1738182037,
+            "rd": 104
         },
         "best": {
-            "rating": 2208,
-            "date": 1697025136,
+            "rating": 2258,
+            "date": 1735589792,
             "game": "https://www.chess.com/game/live/75573214703"
         },
         "record": {
-            "win": 151,
-            "loss": 86,
-            "draw": 15
+            "win": 154,
+            "loss": 88,
+            "draw": 16
         }
     },
     "fide": 2000,

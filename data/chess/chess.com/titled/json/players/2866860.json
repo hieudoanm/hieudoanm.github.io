@@ -6,9 +6,9 @@
     "name": "Dragan Stamenkovic",
     "username": "stameny",
     "title": "IM",
-    "followers": 94,
+    "followers": 97,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734021326,
+    "last_online": 1741646227,
     "joined": 1275014636,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2088,
-            "date": 1733162766,
+            "date": 1741024236,
             "rd": 233
         },
         "best": {

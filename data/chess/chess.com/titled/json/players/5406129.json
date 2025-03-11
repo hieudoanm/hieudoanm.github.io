@@ -6,10 +6,10 @@
     "name": "Cedomir Micic",
     "username": "chedimir",
     "title": "IM",
-    "followers": 22,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Niagara Falls",
-    "last_online": 1734008725,
+    "last_online": 1741552609,
     "joined": 1310136239,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     "fide": 2366,
     "tactics": {
         "highest": {
-            "rating": 1216,
-            "date": 1545941644
+            "rating": 2584,
+            "date": 1735727975
         },
         "lowest": {
             "rating": 1216,

@@ -6,14 +6,14 @@
     "name": "Cagatay Burcu",
     "username": "katheksis",
     "title": "FM",
-    "followers": 70,
+    "followers": 73,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734167761,
+    "last_online": 1741439194,
     "joined": 1475588343,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -48,26 +48,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2358,
-            "date": 1599940796,
-            "rd": 100
+            "rating": 2585,
+            "date": 1737749368,
+            "rd": 48
         },
         "best": {
-            "rating": 2382,
-            "date": 1599939588,
-            "game": "https://www.chess.com/game/live/3506958527"
+            "rating": 2585,
+            "date": 1737749368,
+            "game": "https://www.chess.com/game/live/131488182333"
         },
         "record": {
-            "win": 32,
-            "loss": 11,
+            "win": 36,
+            "loss": 12,
             "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2675,
-            "date": 1696520227,
-            "rd": 120
+            "rating": 2667,
+            "date": 1736592670,
+            "rd": 49
         },
         "best": {
             "rating": 2721,
@@ -76,7 +76,7 @@
         },
         "record": {
             "win": 604,
-            "loss": 364,
+            "loss": 365,
             "draw": 79
         }
     },

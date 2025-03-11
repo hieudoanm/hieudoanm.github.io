@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/41603536.ecfaf281.200x200o.2972f4400f16.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/41603536.1443e9ef.200x200o.e95e821a40d5.jpg",
     "player_id": 41603536,
-    "@id": "https://api.chess.com/pub/player/flaming_flare",
-    "url": "https://www.chess.com/member/Flaming_Flare",
+    "@id": "https://api.chess.com/pub/player/bubeliang",
+    "url": "https://www.chess.com/member/bubeliang",
     "name": "Havard Haug",
-    "username": "flaming_flare",
+    "username": "bubeliang",
     "title": "FM",
-    "followers": 517,
-    "country": "https://api.chess.com/pub/country/SM",
-    "last_online": 1733843860,
+    "followers": 536,
+    "country": "https://api.chess.com/pub/country/NO",
+    "last_online": 1741703878,
     "joined": 1514040538,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1560,
-            "date": 1713986428,
+            "date": 1741696928,
             "rd": 134
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 38,
             "loss": 10,
             "draw": 2,
-            "time_per_move": 52023,
+            "time_per_move": 51598,
             "timeout_percent": 0
         }
     },
@@ -49,14 +49,14 @@
             "win": 2,
             "loss": 2,
             "draw": 1,
-            "time_per_move": 52023,
+            "time_per_move": 51598,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2400,
-            "date": 1726399331,
+            "date": 1734775322,
             "rd": 110
         },
         "best": {
@@ -72,9 +72,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2765,
-            "date": 1732383491,
-            "rd": 43
+            "rating": 2752,
+            "date": 1741455481,
+            "rd": 49
         },
         "best": {
             "rating": 3009,
@@ -82,16 +82,16 @@
             "game": "https://www.chess.com/game/live/103143149337"
         },
         "record": {
-            "win": 11519,
-            "loss": 6117,
-            "draw": 1251
+            "win": 11524,
+            "loss": 6120,
+            "draw": 1252
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2866,
-            "date": 1733875538,
-            "rd": 37
+            "rating": 2924,
+            "date": 1740507050,
+            "rd": 44
         },
         "best": {
             "rating": 2937,
@@ -99,11 +99,12 @@
             "game": "https://www.chess.com/game/live/98312074941"
         },
         "record": {
-            "win": 5647,
-            "loss": 2882,
-            "draw": 858
+            "win": 5718,
+            "loss": 2919,
+            "draw": 874
         }
     },
+    "fide": 2300,
     "tactics": {
         "highest": {
             "rating": 3756,

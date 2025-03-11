@@ -8,7 +8,7 @@
     "followers": 4,
     "country": "https://api.chess.com/pub/country/FI",
     "location": "Turku",
-    "last_online": 1733442977,
+    "last_online": 1736530914,
     "joined": 1560194167,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2161,
-            "date": 1731611749,
+            "rating": 2187,
+            "date": 1736533721,
             "rd": 72
         },
         "best": {
@@ -27,15 +27,15 @@
             "game": "https://www.chess.com/game/live/30919832245"
         },
         "record": {
-            "win": 142,
-            "loss": 89,
+            "win": 147,
+            "loss": 91,
             "draw": 13
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3384,
-            "date": 1732301512
+            "rating": 3401,
+            "date": 1736450955
         },
         "lowest": {
             "rating": 1219,

@@ -5,10 +5,10 @@
     "name": "Ferenc Arnold",
     "username": "arnoldpetra",
     "title": "FM",
-    "followers": 48,
+    "followers": 55,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Szentendre",
-    "last_online": 1733985980,
+    "last_online": 1741677006,
     "joined": 1688577478,
     "status": "premium",
     "is_streamer": false,
@@ -29,9 +29,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2352,
-            "date": 1733988855,
-            "rd": 14
+            "rating": 2460,
+            "date": 1741578990,
+            "rd": 20
         },
         "best": {
             "rating": 2645,
@@ -39,9 +39,9 @@
             "game": "https://www.chess.com/game/live/108573026205"
         },
         "record": {
-            "win": 16307,
-            "loss": 15099,
-            "draw": 2792
+            "win": 17308,
+            "loss": 16003,
+            "draw": 2988
         }
     },
     "chess_blitz": {

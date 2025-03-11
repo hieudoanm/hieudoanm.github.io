@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/MasterLeif",
     "username": "masterleif",
     "title": "FM",
-    "followers": 96,
+    "followers": 100,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734179525,
+    "last_online": 1741699809,
     "joined": 1345078407,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2726,
-            "date": 1733706649,
-            "rd": 43
+            "rating": 2719,
+            "date": 1734568790,
+            "rd": 46
         },
         "best": {
             "rating": 2764,
@@ -43,25 +43,25 @@
         },
         "record": {
             "win": 19397,
-            "loss": 18465,
+            "loss": 18466,
             "draw": 3244
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2680,
-            "date": 1733871025,
-            "rd": 31
+            "rating": 2586,
+            "date": 1741667121,
+            "rd": 30
         },
         "best": {
-            "rating": 2708,
-            "date": 1723177780,
+            "rating": 2717,
+            "date": 1734849446,
             "game": "https://www.chess.com/game/live/3647658376"
         },
         "record": {
-            "win": 3559,
-            "loss": 4282,
-            "draw": 973
+            "win": 3774,
+            "loss": 4561,
+            "draw": 1026
         }
     },
     "fide": 0,

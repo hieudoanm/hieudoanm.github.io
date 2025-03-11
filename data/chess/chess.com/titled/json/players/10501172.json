@@ -9,7 +9,7 @@
     "followers": 9,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "San Escobar",
-    "last_online": 1733958556,
+    "last_online": 1740948030,
     "joined": 1358687825,
     "status": "premium",
     "is_streamer": false,
@@ -89,8 +89,8 @@
     "fide": 2307,
     "tactics": {
         "highest": {
-            "rating": 2956,
-            "date": 1712514878
+            "rating": 3002,
+            "date": 1739397917
         },
         "lowest": {
             "rating": 412,

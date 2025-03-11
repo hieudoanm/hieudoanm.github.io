@@ -9,7 +9,7 @@
     "followers": 2,
     "country": "https://api.chess.com/pub/country/UG",
     "location": "kampala",
-    "last_online": 1732999256,
+    "last_online": 1740265481,
     "joined": 1369561437,
     "status": "premium",
     "is_streamer": false,
@@ -31,7 +31,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2261,
-            "date": 1721311782,
+            "date": 1737480347,
             "rd": 92
         },
         "best": {

@@ -6,19 +6,19 @@
     "name": "Siar Yaran",
     "username": "psychokiller48",
     "title": "FM",
-    "followers": 274,
+    "followers": 275,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1733407702,
+    "last_online": 1741690254,
     "joined": 1401211541,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1906,
-            "date": 1725918112,
+            "date": 1741433635,
             "rd": 160
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 62,
             "loss": 15,
             "draw": 4,
-            "time_per_move": 31791,
+            "time_per_move": 32043,
             "timeout_percent": 0
         }
     },
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2700,
-            "date": 1733415988,
-            "rd": 32
+            "rating": 2724,
+            "date": 1741658660,
+            "rd": 25
         },
         "best": {
             "rating": 2817,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/125074764069"
         },
         "record": {
-            "win": 8554,
-            "loss": 6458,
-            "draw": 905
+            "win": 8695,
+            "loss": 6570,
+            "draw": 921
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3417,
-            "date": 1729278073
+            "rating": 3471,
+            "date": 1738327138
         },
         "lowest": {
             "rating": 1340,

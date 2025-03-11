@@ -6,10 +6,10 @@
     "name": "Alejandro S\u00e1ez",
     "username": "al_sa_co",
     "title": "CM",
-    "followers": 156,
+    "followers": 160,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Barcelona",
-    "last_online": 1733781737,
+    "last_online": 1741312976,
     "joined": 1523104386,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2676,
-            "date": 1733790445,
-            "rd": 24
+            "rating": 2525,
+            "date": 1741618694
         },
         "best": {
             "rating": 2872,
@@ -64,16 +63,16 @@
             "game": "https://www.chess.com/game/live/29562612603"
         },
         "record": {
-            "win": 10871,
-            "loss": 11621,
-            "draw": 1628
+            "win": 11239,
+            "loss": 12014,
+            "draw": 1665
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2459,
-            "date": 1732820368,
-            "rd": 58
+            "rating": 2456,
+            "date": 1737764404,
+            "rd": 69
         },
         "best": {
             "rating": 2561,
@@ -81,8 +80,8 @@
             "game": "https://www.chess.com/game/live/57184004153"
         },
         "record": {
-            "win": 1503,
-            "loss": 1580,
+            "win": 1504,
+            "loss": 1581,
             "draw": 270
         }
     },

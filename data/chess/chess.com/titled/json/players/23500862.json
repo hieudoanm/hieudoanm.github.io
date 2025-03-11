@@ -6,9 +6,9 @@
     "name": "Sammed Shete",
     "username": "sammed_shete",
     "title": "IM",
-    "followers": 246,
+    "followers": 247,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734014493,
+    "last_online": 1741703107,
     "joined": 1438516122,
     "status": "premium",
     "is_streamer": false,
@@ -79,8 +79,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2669,
-            "date": 1734015466,
+            "rating": 2631,
+            "date": 1739896950,
             "rd": 49
         },
         "best": {
@@ -89,8 +89,8 @@
             "game": "https://www.chess.com/game/live/76403511751"
         },
         "record": {
-            "win": 2763,
-            "loss": 2995,
+            "win": 2776,
+            "loss": 3012,
             "draw": 461
         }
     },

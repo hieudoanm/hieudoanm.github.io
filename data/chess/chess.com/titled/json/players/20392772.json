@@ -4,7 +4,7 @@
     "url": "https://www.chess.com/member/chessczar11",
     "username": "chessczar11",
     "title": "FM",
-    "followers": 143,
+    "followers": 142,
     "country": "https://api.chess.com/pub/country/US",
     "last_online": 1733191062,
     "joined": 1419881149,
@@ -51,9 +51,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1823,
-            "date": 1733272029,
-            "rd": 60
+            "rating": 1825,
+            "date": 1741225954,
+            "rd": 74
         },
         "best": {
             "rating": 2089,
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/5700320535"
         },
         "record": {
-            "win": 8201,
-            "loss": 5548,
+            "win": 8204,
+            "loss": 5550,
             "draw": 329
         }
     },
@@ -85,8 +85,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2916,
-            "date": 1727292640
+            "rating": 2994,
+            "date": 1741425992
         },
         "lowest": {
             "rating": 1231,

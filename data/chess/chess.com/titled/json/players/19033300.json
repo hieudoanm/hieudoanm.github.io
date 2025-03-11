@@ -6,10 +6,10 @@
     "name": "Michael Kopylov",
     "username": "malysch",
     "title": "IM",
-    "followers": 30,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Neum\u00fcnster",
-    "last_online": 1726426032,
+    "last_online": 1741099821,
     "joined": 1411580320,
     "status": "premium",
     "is_streamer": false,
@@ -84,8 +84,8 @@
     "fide": 2429,
     "tactics": {
         "highest": {
-            "rating": 2030,
-            "date": 1687705535
+            "rating": 2049,
+            "date": 1739000644
         },
         "lowest": {
             "rating": 1359,

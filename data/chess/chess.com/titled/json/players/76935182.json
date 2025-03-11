@@ -5,10 +5,10 @@
     "name": "MI Marcelo Playa",
     "username": "marceloplaya",
     "title": "IM",
-    "followers": 17,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Rosario",
-    "last_online": 1733261551,
+    "last_online": 1741123873,
     "joined": 1587079109,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2400,
-            "date": 1733270325,
-            "rd": 45
+            "rating": 2357,
+            "date": 1741133145,
+            "rd": 42
         },
         "best": {
             "rating": 2498,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/111885152733"
         },
         "record": {
-            "win": 940,
-            "loss": 1018,
-            "draw": 197
+            "win": 975,
+            "loss": 1069,
+            "draw": 206
         }
     },
     "fide": 2376,

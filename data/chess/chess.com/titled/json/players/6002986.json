@@ -6,10 +6,10 @@
     "name": "Yoseph Theolifus Taher",
     "username": "yosephtaher",
     "title": "IM",
-    "followers": 1661,
+    "followers": 1992,
     "country": "https://api.chess.com/pub/country/ID",
     "location": "Tangerang",
-    "last_online": 1734182414,
+    "last_online": 1741699002,
     "joined": 1319411834,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3000,
-            "date": 1733669910,
-            "rd": 28
+            "rating": 3107,
+            "date": 1741460159,
+            "rd": 29
         },
         "best": {
             "rating": 3147,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/106764621467"
         },
         "record": {
-            "win": 5014,
-            "loss": 2116,
-            "draw": 294
+            "win": 5483,
+            "loss": 2243,
+            "draw": 315
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3013,
-            "date": 1733943577,
-            "rd": 31
+            "rating": 3050,
+            "date": 1741201198,
+            "rd": 34
         },
         "best": {
-            "rating": 3035,
-            "date": 1733338113,
+            "rating": 3066,
+            "date": 1741200802,
             "game": "https://www.chess.com/game/live/122833522925"
         },
         "record": {
-            "win": 2026,
-            "loss": 784,
-            "draw": 281
+            "win": 2314,
+            "loss": 861,
+            "draw": 318
         }
     },
     "fide": 2455,
@@ -103,8 +103,8 @@
             "score": 67
         },
         "daily": {
-            "total_attempts": 57,
-            "score": 56
+            "total_attempts": 59,
+            "score": 57
         }
     }
 }

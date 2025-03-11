@@ -6,20 +6,20 @@
     "name": "Miragha Aghayev",
     "username": "miragha_yev",
     "title": "IM",
-    "followers": 853,
+    "followers": 890,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Roma",
-    "last_online": 1734175983,
+    "last_online": 1741692711,
     "joined": 1333671740,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1660,
-            "date": 1734108289,
+            "date": 1738788820,
             "rd": 129
         },
         "best": {
@@ -31,14 +31,14 @@
             "win": 52,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 16493,
+            "time_per_move": 16678,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2637,
-            "date": 1680810198,
+            "date": 1741213430,
             "rd": 125
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2792,
-            "date": 1734031163,
-            "rd": 49
+            "rating": 2812,
+            "date": 1737979460,
+            "rd": 47
         },
         "best": {
             "rating": 2838,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/114746911391"
         },
         "record": {
-            "win": 704,
-            "loss": 541,
-            "draw": 177
+            "win": 715,
+            "loss": 548,
+            "draw": 180
         }
     },
     "fide": 2433,

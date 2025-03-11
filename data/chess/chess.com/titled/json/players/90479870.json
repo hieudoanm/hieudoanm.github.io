@@ -6,7 +6,7 @@
     "title": "IM",
     "followers": 5,
     "country": "https://api.chess.com/pub/country/JM",
-    "last_online": 1734104625,
+    "last_online": 1739383128,
     "joined": 1599150419,
     "status": "premium",
     "is_streamer": false,
@@ -32,26 +32,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2622,
-            "date": 1733413409,
-            "rd": 39
+            "rating": 2619,
+            "date": 1741702619,
+            "rd": 38
         },
         "best": {
-            "rating": 2626,
-            "date": 1733413310,
-            "game": "https://www.chess.com/game/live/6034367092"
+            "rating": 2687,
+            "date": 1739535911,
+            "game": "https://www.chess.com/game/live/133226941673"
         },
         "record": {
-            "win": 220,
-            "loss": 134,
-            "draw": 25
+            "win": 285,
+            "loss": 184,
+            "draw": 30
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2634,
-            "date": 1734108290,
-            "rd": 33
+            "rating": 2653,
+            "date": 1741544694,
+            "rd": 35
         },
         "best": {
             "rating": 2791,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/124049425477"
         },
         "record": {
-            "win": 797,
-            "loss": 552,
-            "draw": 126
+            "win": 906,
+            "loss": 628,
+            "draw": 148
         }
     },
     "tactics": {

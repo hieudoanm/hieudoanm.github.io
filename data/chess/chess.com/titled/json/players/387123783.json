@@ -6,7 +6,7 @@
     "title": "CM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1733034970,
+    "last_online": 1740348929,
     "joined": 1725881051,
     "status": "premium",
     "is_streamer": false,
@@ -33,8 +33,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 1000,
-            "date": 1725881051
+            "rating": 2215,
+            "date": 1740349052
         },
         "lowest": {
             "rating": 1000,

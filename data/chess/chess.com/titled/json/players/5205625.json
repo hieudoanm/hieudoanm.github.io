@@ -7,7 +7,7 @@
     "followers": 21,
     "country": "https://api.chess.com/pub/country/AT",
     "location": "Vienna",
-    "last_online": 1731072507,
+    "last_online": 1739200882,
     "joined": 1306859351,
     "status": "premium",
     "is_streamer": false,
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2919,
-            "date": 1731074536,
-            "rd": 44
+            "rating": 2932,
+            "date": 1739200330,
+            "rd": 47
         },
         "best": {
-            "rating": 2925,
-            "date": 1731073836,
+            "rating": 2935,
+            "date": 1739199933,
             "game": "https://www.chess.com/game/live/96047584189"
         },
         "record": {
-            "win": 655,
+            "win": 658,
             "loss": 393,
-            "draw": 206
+            "draw": 208
         }
     },
     "tactics": {

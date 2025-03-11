@@ -6,15 +6,15 @@
     "name": "Ernesto Javier Fernandez Guillen",
     "username": "i_am_javi",
     "title": "IM",
-    "followers": 72,
-    "country": "https://api.chess.com/pub/country/ES",
-    "location": "Barcelona",
-    "last_online": 1732720645,
+    "followers": 76,
+    "country": "https://api.chess.com/pub/country/CU",
+    "location": "Zaragoza Espa\u00f1a",
+    "last_online": 1740778274,
     "joined": 1666140530,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2714,
-            "date": 1730332365,
-            "rd": 45
+            "rating": 2833,
+            "date": 1739218563,
+            "rd": 41
         },
         "best": {
-            "rating": 2801,
-            "date": 1667584909,
+            "rating": 2906,
+            "date": 1736089230,
             "game": "https://www.chess.com/game/live/67816931145"
         },
         "record": {
-            "win": 243,
-            "loss": 183,
-            "draw": 29
+            "win": 343,
+            "loss": 251,
+            "draw": 40
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2739,
-            "date": 1730214341,
-            "rd": 48
+            "rating": 2797,
+            "date": 1736510792,
+            "rd": 42
         },
         "best": {
             "rating": 2920,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/99522801183"
         },
         "record": {
-            "win": 525,
-            "loss": 470,
-            "draw": 79
+            "win": 544,
+            "loss": 479,
+            "draw": 81
         }
     },
     "fide": 2478,
     "tactics": {
         "highest": {
-            "rating": 1000,
-            "date": 1666140530
+            "rating": 2135,
+            "date": 1739498809
         },
         "lowest": {
             "rating": 1000,

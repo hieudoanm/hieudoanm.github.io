@@ -5,9 +5,9 @@
     "name": "Artavazd Hayrapetyan",
     "username": "artooooo",
     "title": "FM",
-    "followers": 379,
+    "followers": 397,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1734095024,
+    "last_online": 1740511025,
     "joined": 1386872091,
     "status": "premium",
     "is_streamer": false,
@@ -47,9 +47,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2872,
-            "date": 1734074737,
-            "rd": 26
+            "rating": 2838,
+            "date": 1740511959,
+            "rd": 38
         },
         "best": {
             "rating": 3033,
@@ -57,32 +57,32 @@
             "game": "https://www.chess.com/game/live/111605016117"
         },
         "record": {
-            "win": 13504,
-            "loss": 8049,
-            "draw": 926
+            "win": 13689,
+            "loss": 8141,
+            "draw": 935
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3011,
-            "date": 1734173788,
-            "rd": 28
+            "rating": 2914,
+            "date": 1740423554,
+            "rd": 44
         },
         "best": {
-            "rating": 3044,
-            "date": 1733991754,
+            "rating": 3045,
+            "date": 1734541216,
             "game": "https://www.chess.com/game/live/4479248365"
         },
         "record": {
-            "win": 5852,
-            "loss": 3715,
-            "draw": 555
+            "win": 5980,
+            "loss": 3825,
+            "draw": 564
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3818,
-            "date": 1719406918
+            "rating": 3834,
+            "date": 1737061197
         },
         "lowest": {
             "rating": 1299,

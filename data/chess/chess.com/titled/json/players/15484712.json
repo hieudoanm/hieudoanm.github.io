@@ -6,10 +6,10 @@
     "name": "Nick Matta",
     "username": "nickmatta",
     "title": "FM",
-    "followers": 510,
+    "followers": 517,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New Orleans, Louisiana",
-    "last_online": 1733934745,
+    "last_online": 1741637056,
     "joined": 1389243996,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1382,
-            "date": 1721637511,
+            "date": 1741383138,
             "rd": 136
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 82,
             "loss": 24,
             "draw": 4,
-            "time_per_move": 68311,
+            "time_per_move": 68468,
             "timeout_percent": 0
         }
     },
@@ -50,14 +50,14 @@
             "win": 5,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 68311,
+            "time_per_move": 68468,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 1641,
-            "date": 1733935356,
+            "date": 1740436255,
             "rd": 134
         },
         "best": {
@@ -90,8 +90,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2544,
-            "date": 1732054181,
+            "rating": 2549,
+            "date": 1741104365,
             "rd": 49
         },
         "best": {
@@ -100,8 +100,8 @@
             "game": "https://www.chess.com/game/live/34313353619"
         },
         "record": {
-            "win": 5447,
-            "loss": 4688,
+            "win": 5448,
+            "loss": 4689,
             "draw": 678
         }
     },

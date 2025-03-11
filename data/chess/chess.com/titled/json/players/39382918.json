@@ -6,10 +6,10 @@
     "name": "Vidar Grahn",
     "username": "maiqmaster",
     "title": "FM",
-    "followers": 43,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/SE",
-    "location": "vidar1111#0",
-    "last_online": 1734171395,
+    "location": "Stockholm",
+    "last_online": 1741527488,
     "joined": 1507812490,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1199,
-            "date": 1734171538,
-            "rd": 199
+            "rating": 1332,
+            "date": 1736277158,
+            "rd": 174
         },
         "best": {
             "rating": 1471,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/215011842"
         },
         "record": {
-            "win": 97,
+            "win": 99,
             "loss": 100,
             "draw": 0,
-            "time_per_move": 57678,
+            "time_per_move": 57532,
             "timeout_percent": 0
         }
     },
@@ -45,7 +45,7 @@
             "win": 0,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 57678,
+            "time_per_move": 57532,
             "timeout_percent": 0
         }
     },
@@ -68,9 +68,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2396,
-            "date": 1734180184,
-            "rd": 50
+            "rating": 2422,
+            "date": 1741454765,
+            "rd": 51
         },
         "best": {
             "rating": 2538,
@@ -78,26 +78,26 @@
             "game": "https://www.chess.com/game/live/111605565099"
         },
         "record": {
-            "win": 517,
-            "loss": 713,
-            "draw": 72
+            "win": 543,
+            "loss": 753,
+            "draw": 74
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2419,
-            "date": 1734172271,
-            "rd": 36
+            "rating": 2555,
+            "date": 1741104453,
+            "rd": 32
         },
         "best": {
-            "rating": 2535,
-            "date": 1714747178,
+            "rating": 2589,
+            "date": 1735063601,
             "game": "https://www.chess.com/game/live/111856984795"
         },
         "record": {
-            "win": 1232,
-            "loss": 1238,
-            "draw": 190
+            "win": 1329,
+            "loss": 1345,
+            "draw": 209
         }
     },
     "fide": 2226,

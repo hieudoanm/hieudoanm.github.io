@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/GL",
-    "last_online": 1730205120,
+    "last_online": 1741536423,
     "joined": 1645812227,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2603,
-            "date": 1655401821,
-            "rd": 118
+            "rating": 2624,
+            "date": 1739522004,
+            "rd": 47
         },
         "best": {
             "rating": 2703,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/42355131389"
         },
         "record": {
-            "win": 7,
-            "loss": 4,
+            "win": 11,
+            "loss": 5,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2440,
-            "date": 1729354887,
-            "rd": 56
+            "rating": 2500,
+            "date": 1739520832,
+            "rd": 55
         },
         "best": {
             "rating": 2535,
@@ -60,8 +60,8 @@
             "game": "https://www.chess.com/game/live/45635378305"
         },
         "record": {
-            "win": 303,
-            "loss": 362,
+            "win": 325,
+            "loss": 377,
             "draw": 46
         }
     },

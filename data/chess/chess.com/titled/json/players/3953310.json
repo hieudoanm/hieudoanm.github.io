@@ -6,10 +6,10 @@
     "name": "Clement Cristian Daianu",
     "username": "kasparicy",
     "title": "FM",
-    "followers": 205,
+    "followers": 217,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Galati",
-    "last_online": 1734176054,
+    "last_online": 1741679343,
     "joined": 1284064497,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2267,
-            "date": 1699694891,
-            "rd": 143
+            "rating": 2268,
+            "date": 1741702657,
+            "rd": 220
         },
         "best": {
             "rating": 2269,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/403907529"
         },
         "record": {
-            "win": 57,
+            "win": 58,
             "loss": 5,
             "draw": 11,
-            "time_per_move": 38208,
+            "time_per_move": 37707,
             "timeout_percent": 0
         }
     },
@@ -50,14 +50,14 @@
             "win": 1,
             "loss": 0,
             "draw": 1,
-            "time_per_move": 38208,
+            "time_per_move": 37707,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2224,
-            "date": 1647646575,
+            "date": 1741629681,
             "rd": 123
         },
         "best": {
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1882,
-            "date": 1717548563,
-            "rd": 57
+            "rating": 1964,
+            "date": 1741651558,
+            "rd": 53
         },
         "best": {
             "rating": 2244,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/4920614833"
         },
         "record": {
-            "win": 1651,
-            "loss": 1104,
+            "win": 1710,
+            "loss": 1123,
             "draw": 88
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2485,
-            "date": 1733940724,
-            "rd": 47
+            "rating": 2440,
+            "date": 1738712569,
+            "rd": 53
         },
         "best": {
             "rating": 2509,
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/4833550090"
         },
         "record": {
-            "win": 2124,
-            "loss": 1904,
+            "win": 2136,
+            "loss": 1916,
             "draw": 333
         }
     },
     "fide": 2224,
     "tactics": {
         "highest": {
-            "rating": 3476,
-            "date": 1717069163
+            "rating": 3544,
+            "date": 1741621093
         },
         "lowest": {
             "rating": 1363,
@@ -120,6 +120,10 @@
         "best": {
             "total_attempts": 65,
             "score": 62
+        },
+        "daily": {
+            "total_attempts": 33,
+            "score": 32
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Armin Juhasz",
     "username": "centrumsakkiskola",
     "title": "IM",
-    "followers": 239,
+    "followers": 270,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734107096,
+    "last_online": 1741677383,
     "joined": 1526547804,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2449,
-            "date": 1733672156,
+            "date": 1740412346,
             "rd": 49
         },
         "best": {
@@ -53,8 +53,8 @@
     "fide": 2388,
     "tactics": {
         "highest": {
-            "rating": 3602,
-            "date": 1710781644
+            "rating": 3607,
+            "date": 1740418982
         },
         "lowest": {
             "rating": 1201,
@@ -63,8 +63,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 54,
-            "score": 51
+            "total_attempts": 69,
+            "score": 67
         }
     }
 }

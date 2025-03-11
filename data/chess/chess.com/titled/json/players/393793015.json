@@ -1,43 +1,43 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/393793015.bcf7039a.200x200o.2a49daa6d61c.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/393793015.a732f17b.200x200o.e1cf16d736b9.jpg",
     "player_id": 393793015,
     "@id": "https://api.chess.com/pub/player/lhundrupmdorji",
     "url": "https://www.chess.com/member/LhundrupMDorji",
     "name": "Lhundrup M Dorji",
     "username": "lhundrupmdorji",
     "title": "CM",
-    "followers": 2,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/BT",
     "location": "Thimphu",
-    "last_online": 1733326781,
+    "last_online": 1740376991,
     "joined": 1728119612,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1766,
-            "date": 1728804551,
-            "rd": 134
+            "rating": 2016,
+            "date": 1739862926,
+            "rd": 47
         },
         "best": {
-            "rating": 1766,
-            "date": 1728804551,
-            "game": "https://www.chess.com/game/live/122543026891"
+            "rating": 2016,
+            "date": 1739862770,
+            "game": "https://www.chess.com/game/live/133384147233"
         },
         "record": {
-            "win": 6,
-            "loss": 0,
+            "win": 16,
+            "loss": 2,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2595,
-            "date": 1730300600,
-            "rd": 45
+            "rating": 2594,
+            "date": 1739860598,
+            "rd": 49
         },
         "best": {
             "rating": 2705,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/124032677721"
         },
         "record": {
-            "win": 6,
-            "loss": 12,
+            "win": 7,
+            "loss": 13,
             "draw": 3
         }
     },
     "fide": 1728,
     "tactics": {
         "highest": {
-            "rating": 2409,
-            "date": 1732467479
+            "rating": 2414,
+            "date": 1738557935
         },
         "lowest": {
             "rating": 400,

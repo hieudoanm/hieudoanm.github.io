@@ -6,9 +6,9 @@
     "name": "Oniel Josue Revilla Moron",
     "username": "milignus",
     "title": "CM",
-    "followers": 5,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/VE",
-    "last_online": 1734108372,
+    "last_online": 1740686363,
     "joined": 1440607855,
     "status": "premium",
     "is_streamer": false,
@@ -88,8 +88,8 @@
     "fide": 2171,
     "tactics": {
         "highest": {
-            "rating": 2765,
-            "date": 1723090618
+            "rating": 2865,
+            "date": 1740698679
         },
         "lowest": {
             "rating": 1352,

@@ -1,18 +1,19 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/32631824.fe3ed8e6.200x200o.9ec79690287f.png",
     "player_id": 32631824,
     "@id": "https://api.chess.com/pub/player/andrejljepic",
     "url": "https://www.chess.com/member/andrejljepic",
     "name": "Andrej Ljepic",
     "username": "andrejljepic",
     "title": "FM",
-    "followers": 15,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734130731,
+    "last_online": 1741692972,
     "joined": 1485258718,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -47,36 +48,35 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2495,
-            "date": 1725135904,
+            "rating": 2513,
+            "date": 1736553075,
             "rd": 49
         },
         "best": {
-            "rating": 2525,
-            "date": 1716994638,
-            "game": "https://www.chess.com/game/live/111175295867"
+            "rating": 2531,
+            "date": 1735403122,
+            "game": "https://www.chess.com/game/live/129141742435"
         },
         "record": {
-            "win": 145,
-            "loss": 116,
+            "win": 150,
+            "loss": 121,
             "draw": 16
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2614,
-            "date": 1734132432,
-            "rd": 38
+            "rating": 2720,
+            "date": 1740145155
         },
         "best": {
-            "rating": 2720,
-            "date": 1722294931,
+            "rating": 2735,
+            "date": 1736899836,
             "game": "https://www.chess.com/game/live/116112667721"
         },
         "record": {
-            "win": 585,
-            "loss": 430,
-            "draw": 46
+            "win": 776,
+            "loss": 655,
+            "draw": 86
         }
     },
     "fide": 2267,

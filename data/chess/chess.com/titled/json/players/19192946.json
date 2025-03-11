@@ -5,10 +5,10 @@
     "name": "Tapani Sammalvuo",
     "username": "sammalvuo",
     "title": "IM",
-    "followers": 17,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/FI",
     "location": "Vantaa",
-    "last_online": 1732995952,
+    "last_online": 1740686673,
     "joined": 1412609468,
     "status": "premium",
     "is_streamer": false,
@@ -53,19 +53,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2432,
-            "date": 1728094573,
-            "rd": 103
+            "rating": 2434,
+            "date": 1736433688,
+            "rd": 44
         },
         "best": {
             "rating": 2467,
             "date": 1706938146,
-            "game": "https://www.chess.com/game/live/5596045577"
+            "game": "https://www.chess.com/game/live/129561214061"
         },
         "record": {
-            "win": 140,
-            "loss": 45,
-            "draw": 12
+            "win": 186,
+            "loss": 65,
+            "draw": 17
         }
     },
     "fide": 2370,

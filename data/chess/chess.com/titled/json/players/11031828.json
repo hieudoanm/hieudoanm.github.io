@@ -5,10 +5,10 @@
     "name": "Jairo Moreira Romero",
     "username": "playatchesscom",
     "title": "FM",
-    "followers": 9,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Home",
-    "last_online": 1733861948,
+    "last_online": 1741129230,
     "joined": 1362434164,
     "status": "premium",
     "is_streamer": false,
@@ -17,19 +17,19 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2000,
-            "date": 1548992967,
-            "rd": 129
+            "rating": 1992,
+            "date": 1741129789,
+            "rd": 49
         },
         "best": {
-            "rating": 1312,
-            "date": 1537644009,
+            "rating": 1992,
+            "date": 1741129789,
             "game": "https://www.chess.com/game/live/3157200798"
         },
         "record": {
             "win": 5,
             "loss": 5,
-            "draw": 0
+            "draw": 1
         }
     },
     "chess_bullet": {

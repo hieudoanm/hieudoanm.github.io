@@ -6,10 +6,10 @@
     "name": "Rupesh Jaiswal",
     "username": "rupeshjswl7",
     "title": "FM",
-    "followers": 651,
+    "followers": 717,
     "country": "https://api.chess.com/pub/country/NP",
     "location": "Kathmandu",
-    "last_online": 1733941189,
+    "last_online": 1741359330,
     "joined": 1474287707,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1416,
-            "date": 1728074784,
-            "rd": 119
+            "rating": 1079,
+            "date": 1741194244,
+            "rd": 269
         },
         "best": {
             "rating": 1858,
@@ -29,7 +29,7 @@
         },
         "record": {
             "win": 15,
-            "loss": 3,
+            "loss": 4,
             "draw": 5,
             "time_per_move": 7089,
             "timeout_percent": 0
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2369,
-            "date": 1731429536,
-            "rd": 51
+            "rating": 2479,
+            "date": 1741558515,
+            "rd": 43
         },
         "best": {
             "rating": 2537,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/113674237457"
         },
         "record": {
-            "win": 1015,
-            "loss": 950,
-            "draw": 134
+            "win": 1043,
+            "loss": 970,
+            "draw": 138
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3521,
-            "date": 1729962750
+            "rating": 3559,
+            "date": 1740828459
         },
         "lowest": {
             "rating": 1379,

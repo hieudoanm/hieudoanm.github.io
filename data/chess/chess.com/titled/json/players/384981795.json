@@ -1,13 +1,13 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/384981795.e1063ad2.200x200o.1e504443de2c.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/384981795.a6b54f95.200x200o.a81c41dc1b9b.webp",
     "player_id": 384981795,
-    "@id": "https://api.chess.com/pub/player/fritzenderfritzer",
-    "url": "https://www.chess.com/member/FRITZENDERFRITZER",
-    "username": "fritzenderfritzer",
+    "@id": "https://api.chess.com/pub/player/midnighthorizon",
+    "url": "https://www.chess.com/member/MidnightHorizon",
+    "username": "midnighthorizon",
     "title": "FM",
-    "followers": 0,
-    "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1732887895,
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/IM",
+    "last_online": 1741703855,
     "joined": 1725365523,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2927,
-            "date": 1729326264,
-            "rd": 31
+            "rating": 3000,
+            "date": 1741640197,
+            "rd": 34
         },
         "best": {
             "rating": 2965,
@@ -26,9 +26,9 @@
             "game": "https://www.chess.com/game/live/122670842125"
         },
         "record": {
-            "win": 198,
-            "loss": 99,
-            "draw": 36
+            "win": 240,
+            "loss": 126,
+            "draw": 46
         }
     },
     "tactics": {
@@ -41,5 +41,10 @@
             "date": 1725365523
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 52,
+            "score": 50
+        }
+    }
 }

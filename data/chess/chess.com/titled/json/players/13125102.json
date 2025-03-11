@@ -6,10 +6,10 @@
     "name": "Chanchal Kumer Ghosh",
     "username": "c_k_g",
     "title": "CM",
-    "followers": 678,
+    "followers": 750,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Dhaka",
-    "last_online": 1734183960,
+    "last_online": 1741198683,
     "joined": 1376378583,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1477,
-            "date": 1731933472,
-            "rd": 89
+            "rating": 1564,
+            "date": 1738778628,
+            "rd": 84
         },
         "best": {
             "rating": 1708,
@@ -28,23 +28,17 @@
             "game": "https://www.chess.com/game/daily/587354489"
         },
         "record": {
-            "win": 88,
+            "win": 110,
             "loss": 51,
             "draw": 7,
-            "time_per_move": 24575,
-            "timeout_percent": 25
-        },
-        "tournament": {
-            "points": 40,
-            "withdraw": 0,
-            "count": 2,
-            "highest_finish": 7
+            "time_per_move": 23678,
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2028,
-            "date": 1732122030,
+            "date": 1739726277,
             "rd": 49
         },
         "best": {
@@ -60,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1833,
-            "date": 1733418434,
-            "rd": 33
+            "rating": 1883,
+            "date": 1739645978,
+            "rd": 43
         },
         "best": {
             "rating": 2102,
             "date": 1729879565,
-            "game": "https://www.chess.com/game/live/123093683669"
+            "game": "https://www.chess.com/game/live/133381170679"
         },
         "record": {
-            "win": 3860,
-            "loss": 3403,
+            "win": 3893,
+            "loss": 3459,
             "draw": 167
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2328,
-            "date": 1733423003,
-            "rd": 37
+            "rating": 2147,
+            "date": 1741199483,
+            "rd": 30
         },
         "best": {
             "rating": 2341,
@@ -87,9 +81,9 @@
             "game": "https://www.chess.com/game/live/97972926671"
         },
         "record": {
-            "win": 5079,
-            "loss": 3582,
-            "draw": 298
+            "win": 5339,
+            "loss": 3873,
+            "draw": 326
         }
     },
     "fide": 2160,

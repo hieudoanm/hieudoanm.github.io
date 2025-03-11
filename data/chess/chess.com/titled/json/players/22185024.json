@@ -1,14 +1,14 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/22185024.f6ec0563.200x200o.256d99053fe5.jpg",
     "player_id": 22185024,
-    "@id": "https://api.chess.com/pub/player/sicosico23",
-    "url": "https://www.chess.com/member/SicoSico23",
+    "@id": "https://api.chess.com/pub/player/loaysameer",
+    "url": "https://www.chess.com/member/LoaySameer",
     "name": "Loay Sameer",
-    "username": "sicosico23",
+    "username": "loaysameer",
     "title": "IM",
-    "followers": 262,
+    "followers": 291,
     "country": "https://api.chess.com/pub/country/JO",
-    "last_online": 1734181770,
+    "last_online": 1741550467,
     "joined": 1430373321,
     "status": "premium",
     "is_streamer": false,
@@ -36,53 +36,53 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2312,
-            "date": 1725033766,
-            "rd": 48
+            "rating": 2320,
+            "date": 1740946550,
+            "rd": 49
         },
         "best": {
-            "rating": 2312,
-            "date": 1725033766,
+            "rating": 2318,
+            "date": 1739090429,
             "game": "https://www.chess.com/game/live/118765765977"
         },
         "record": {
-            "win": 37,
-            "loss": 13,
+            "win": 41,
+            "loss": 15,
             "draw": 9
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2562,
-            "date": 1733840384,
-            "rd": 43
+            "rating": 2478,
+            "date": 1741310727,
+            "rd": 33
         },
         "best": {
-            "rating": 2635,
-            "date": 1659628791,
-            "game": "https://www.chess.com/game/live/53974143879"
+            "rating": 2716,
+            "date": 1738611910,
+            "game": "https://www.chess.com/game/live/133989543591"
         },
         "record": {
-            "win": 744,
-            "loss": 484,
-            "draw": 64
+            "win": 892,
+            "loss": 632,
+            "draw": 89
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2578,
-            "date": 1733818913,
-            "rd": 39
+            "rating": 2639,
+            "date": 1741551242,
+            "rd": 33
         },
         "best": {
-            "rating": 2668,
-            "date": 1725805670,
+            "rating": 2703,
+            "date": 1739568834,
             "game": "https://www.chess.com/game/live/85872698751"
         },
         "record": {
-            "win": 4627,
-            "loss": 3938,
-            "draw": 425
+            "win": 4716,
+            "loss": 4004,
+            "draw": 438
         }
     },
     "fide": 2273,

@@ -6,10 +6,10 @@
     "name": "Mohammad Mehdi Abbasi Abeluie",
     "username": "mmahdi2013",
     "title": "CM",
-    "followers": 29,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Rasht,Iran",
-    "last_online": 1734181095,
+    "last_online": 1740630602,
     "joined": 1559254695,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1007,
-            "date": 1734036888,
-            "rd": 254
+            "rating": 1305,
+            "date": 1740407599,
+            "rd": 155
         },
         "best": {
-            "rating": 1007,
-            "date": 1726830615,
-            "game": "https://www.chess.com/game/daily/694941779"
+            "rating": 1305,
+            "date": 1740407598,
+            "game": "https://www.chess.com/game/daily/718717693"
         },
         "record": {
-            "win": 2,
+            "win": 6,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 180349,
+            "time_per_move": 237031,
             "timeout_percent": 0
         }
     },

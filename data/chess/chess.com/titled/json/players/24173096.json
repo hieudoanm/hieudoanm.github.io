@@ -6,10 +6,10 @@
     "name": "Artiom Samsonkin",
     "username": "c63_amg",
     "title": "IM",
-    "followers": 791,
+    "followers": 802,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "toronto",
-    "last_online": 1733693167,
+    "last_online": 1741703344,
     "joined": 1442599751,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1002,
-            "date": 1733666357,
-            "rd": 43
+            "rating": 1079,
+            "date": 1741687641,
+            "rd": 54
         },
         "best": {
             "rating": 1899,
@@ -28,11 +28,11 @@
             "game": "https://www.chess.com/game/daily/252920638"
         },
         "record": {
-            "win": 589,
-            "loss": 436,
+            "win": 615,
+            "loss": 461,
             "draw": 69,
-            "time_per_move": 127019,
-            "timeout_percent": 65
+            "time_per_move": 129143,
+            "timeout_percent": 43
         }
     },
     "chess960_daily": {
@@ -50,15 +50,14 @@
             "win": 2,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 127019,
+            "time_per_move": 129143,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2471,
-            "date": 1733430822,
-            "rd": 49
+            "rating": 2484,
+            "date": 1741698578
         },
         "best": {
             "rating": 2742,
@@ -66,16 +65,16 @@
             "game": "https://www.chess.com/game/live/112827594269"
         },
         "record": {
-            "win": 72,
-            "loss": 45,
-            "draw": 66
+            "win": 74,
+            "loss": 46,
+            "draw": 67
         }
     },
     "chess_bullet": {
         "last": {
             "rating": 2907,
-            "date": 1728781562,
-            "rd": 19
+            "date": 1739582335,
+            "rd": 49
         },
         "best": {
             "rating": 2930,
@@ -83,16 +82,16 @@
             "game": "https://www.chess.com/game/live/93468020293"
         },
         "record": {
-            "win": 5092,
+            "win": 5094,
             "loss": 4449,
             "draw": 659
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2903,
-            "date": 1733534857,
-            "rd": 49
+            "rating": 2851,
+            "date": 1741688852,
+            "rd": 38
         },
         "best": {
             "rating": 2915,
@@ -100,9 +99,9 @@
             "game": "https://www.chess.com/game/live/93503967513"
         },
         "record": {
-            "win": 10324,
-            "loss": 9544,
-            "draw": 1605
+            "win": 10508,
+            "loss": 9704,
+            "draw": 1625
         }
     },
     "fide": 2564,
@@ -120,6 +119,10 @@
         "best": {
             "total_attempts": 70,
             "score": 67
+        },
+        "daily": {
+            "total_attempts": 48,
+            "score": 46
         }
     }
 }

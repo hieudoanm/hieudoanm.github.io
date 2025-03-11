@@ -6,10 +6,10 @@
     "name": "Davit Davtyan",
     "username": "davechessmate",
     "title": "FM",
-    "followers": 3,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Valencia, Spain",
-    "last_online": 1732565539,
+    "last_online": 1741573377,
     "joined": 1720247820,
     "status": "premium",
     "is_streamer": false,
@@ -18,25 +18,25 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2448,
-            "date": 1722812532,
-            "rd": 55
+            "rating": 2447,
+            "date": 1741574084,
+            "rd": 74
         },
         "best": {
-            "rating": 2465,
-            "date": 1722366964,
+            "rating": 2472,
+            "date": 1738942995,
             "game": "https://www.chess.com/game/live/116078988277"
         },
         "record": {
-            "win": 28,
-            "loss": 14,
-            "draw": 4
+            "win": 39,
+            "loss": 19,
+            "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2505,
-            "date": 1732566230,
+            "date": 1735314876,
             "rd": 47
         },
         "best": {

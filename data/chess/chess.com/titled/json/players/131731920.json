@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/Rochefort_10",
     "username": "rochefort_10",
     "title": "FM",
-    "followers": 44,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/MH",
-    "last_online": 1734084852,
+    "last_online": 1741693627,
     "joined": 1616937184,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2563,
-            "date": 1734095006,
-            "rd": 40
+            "rating": 2537,
+            "date": 1741639794
         },
         "best": {
             "rating": 2574,
@@ -26,16 +25,16 @@
             "game": "https://www.chess.com/game/live/110583175409"
         },
         "record": {
-            "win": 446,
-            "loss": 300,
-            "draw": 133
+            "win": 590,
+            "loss": 434,
+            "draw": 195
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2607,
-            "date": 1734107357,
-            "rd": 30
+            "rating": 2605,
+            "date": 1741548321,
+            "rd": 29
         },
         "best": {
             "rating": 2699,
@@ -43,9 +42,9 @@
             "game": "https://www.chess.com/game/live/120342021717"
         },
         "record": {
-            "win": 681,
-            "loss": 637,
-            "draw": 155
+            "win": 1042,
+            "loss": 997,
+            "draw": 274
         }
     },
     "tactics": {

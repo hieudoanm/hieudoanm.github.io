@@ -5,9 +5,9 @@
     "name": "Alimzhan Amirkul",
     "username": "d0br0v01skiy",
     "title": "FM",
-    "followers": 11,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1733683962,
+    "last_online": 1738622590,
     "joined": 1584511298,
     "status": "premium",
     "is_streamer": false,
@@ -30,43 +30,43 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1984,
-            "date": 1672516301,
-            "rd": 98
+            "rating": 2399,
+            "date": 1734384620,
+            "rd": 50
         },
         "best": {
-            "rating": 1984,
-            "date": 1607535081,
+            "rating": 2399,
+            "date": 1734384121,
             "game": "https://www.chess.com/game/live/5924668075"
         },
         "record": {
-            "win": 11,
+            "win": 13,
             "loss": 7,
             "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2812,
-            "date": 1733061528,
-            "rd": 33
+            "rating": 2801,
+            "date": 1739679556,
+            "rd": 43
         },
         "best": {
-            "rating": 2824,
-            "date": 1732555114,
+            "rating": 2825,
+            "date": 1739597472,
             "game": "https://www.chess.com/game/live/126121216693"
         },
         "record": {
-            "win": 279,
-            "loss": 191,
+            "win": 287,
+            "loss": 200,
             "draw": 25
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2541,
-            "date": 1733528347,
-            "rd": 48
+            "rating": 2526,
+            "date": 1741104928,
+            "rd": 49
         },
         "best": {
             "rating": 2556,
@@ -74,8 +74,8 @@
             "game": "https://www.chess.com/game/live/125770797913"
         },
         "record": {
-            "win": 149,
-            "loss": 93,
+            "win": 153,
+            "loss": 95,
             "draw": 14
         }
     },

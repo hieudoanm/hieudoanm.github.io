@@ -9,7 +9,7 @@
     "followers": 85,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Manaus",
-    "last_online": 1724064383,
+    "last_online": 1738688521,
     "joined": 1240072143,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1953,
-            "date": 1705212655,
+            "date": 1736760490,
             "rd": 113
         },
         "best": {
@@ -90,19 +90,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2180,
-            "date": 1720285069,
-            "rd": 145
+            "rating": 2343,
+            "date": 1738689761,
+            "rd": 128
         },
         "best": {
             "rating": 2366,
             "date": 1644951224,
-            "game": "https://www.chess.com/game/live/4721972765"
+            "game": "https://www.chess.com/game/live/132428387777"
         },
         "record": {
-            "win": 1765,
+            "win": 1768,
             "loss": 1344,
-            "draw": 116
+            "draw": 117
         }
     },
     "fide": 2250,

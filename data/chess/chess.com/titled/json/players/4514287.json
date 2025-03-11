@@ -6,10 +6,10 @@
     "name": "Ryan Harper",
     "username": "harperchesstt",
     "title": "FM",
-    "followers": 101,
+    "followers": 105,
     "country": "https://api.chess.com/pub/country/TT",
     "location": "Port-Of-Spain",
-    "last_online": 1734100692,
+    "last_online": 1741111815,
     "joined": 1294354803,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2256,
-            "date": 1734052509,
-            "rd": 32
+            "rating": 2291,
+            "date": 1741123945,
+            "rd": 44
         },
         "best": {
             "rating": 2402,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/5383253379"
         },
         "record": {
-            "win": 6384,
-            "loss": 5852,
-            "draw": 456
+            "win": 6410,
+            "loss": 5873,
+            "draw": 457
         }
     },
     "fide": 2249,

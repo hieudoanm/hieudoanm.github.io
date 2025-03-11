@@ -9,7 +9,7 @@
     "followers": 49,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Pirot",
-    "last_online": 1733484189,
+    "last_online": 1741370481,
     "joined": 1446136319,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2304,
-            "date": 1718476967,
-            "rd": 110
+            "rating": 2289,
+            "date": 1741105705,
+            "rd": 138
         },
         "best": {
             "rating": 2405,
@@ -63,7 +63,7 @@
         },
         "record": {
             "win": 1421,
-            "loss": 477,
+            "loss": 478,
             "draw": 83
         }
     },

@@ -6,10 +6,10 @@
     "name": "Dusan Colovic",
     "username": "otrovnipacov2405",
     "title": "FM",
-    "followers": 162,
+    "followers": 165,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Belgrade",
-    "last_online": 1734172575,
+    "last_online": 1741676272,
     "joined": 1531938853,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2364,
-            "date": 1733609950,
-            "rd": 98
+            "rating": 2361,
+            "date": 1734562428,
+            "rd": 71
         },
         "best": {
             "rating": 2436,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/4482287290"
         },
         "record": {
-            "win": 160,
-            "loss": 94,
+            "win": 166,
+            "loss": 100,
             "draw": 36
         }
     },

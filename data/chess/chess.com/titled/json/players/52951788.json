@@ -6,9 +6,9 @@
     "name": "Ahn Hongjin",
     "username": "hongjin",
     "title": "IM",
-    "followers": 1749,
+    "followers": 2233,
     "country": "https://api.chess.com/pub/country/KR",
-    "last_online": 1734169936,
+    "last_online": 1741691810,
     "joined": 1544258029,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2242,
-            "date": 1733904133,
-            "rd": 49
+            "rating": 2307,
+            "date": 1741686544,
+            "rd": 45
         },
         "best": {
             "rating": 2543,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/77841657833"
         },
         "record": {
-            "win": 145,
-            "loss": 49,
-            "draw": 23
+            "win": 172,
+            "loss": 58,
+            "draw": 24
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2790,
-            "date": 1734137804,
-            "rd": 20
+            "rating": 2727,
+            "date": 1741479739,
+            "rd": 26
         },
         "best": {
             "rating": 2923,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/122488494039"
         },
         "record": {
-            "win": 3427,
-            "loss": 3063,
-            "draw": 325
+            "win": 4003,
+            "loss": 3479,
+            "draw": 362
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2528,
-            "date": 1732034340,
-            "rd": 49
+            "rating": 2463,
+            "date": 1741269534,
+            "rd": 51
         },
         "best": {
             "rating": 2846,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/100230703889"
         },
         "record": {
-            "win": 1796,
-            "loss": 1458,
+            "win": 1804,
+            "loss": 1473,
             "draw": 190
         }
     },

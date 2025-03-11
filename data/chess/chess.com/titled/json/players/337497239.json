@@ -5,9 +5,9 @@
     "name": "Adam Collins",
     "username": "acollins05",
     "title": "CM",
-    "followers": 15,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/IE",
-    "last_online": 1734083579,
+    "last_online": 1741655576,
     "joined": 1704666410,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2569,
-            "date": 1729007622,
-            "rd": 40
+            "rating": 2512,
+            "date": 1741453783,
+            "rd": 48
         },
         "best": {
             "rating": 2708,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/120678689579"
         },
         "record": {
-            "win": 111,
-            "loss": 136,
+            "win": 119,
+            "loss": 147,
             "draw": 18
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2524,
-            "date": 1734114257,
-            "rd": 37
+            "rating": 2495,
+            "date": 1741663873,
+            "rd": 40
         },
         "best": {
             "rating": 2676,
@@ -60,16 +60,16 @@
             "game": "https://www.chess.com/game/live/108228101451"
         },
         "record": {
-            "win": 660,
-            "loss": 659,
-            "draw": 192
+            "win": 732,
+            "loss": 729,
+            "draw": 208
         }
     },
     "fide": 2192,
     "tactics": {
         "highest": {
-            "rating": 2923,
-            "date": 1734150227
+            "rating": 3020,
+            "date": 1739286784
         },
         "lowest": {
             "rating": 1000,

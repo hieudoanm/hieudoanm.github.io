@@ -6,10 +6,10 @@
     "name": "Luis Enrique Valle Maytin",
     "username": "levallem",
     "title": "FM",
-    "followers": 392,
+    "followers": 402,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Girona",
-    "last_online": 1734112420,
+    "last_online": 1741547028,
     "joined": 1409313282,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2409,
-            "date": 1734113570,
-            "rd": 33
+            "rating": 2393,
+            "date": 1741549430,
+            "rd": 29
         },
         "best": {
             "rating": 2471,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/66504262445"
         },
         "record": {
-            "win": 6672,
-            "loss": 5858,
-            "draw": 947
+            "win": 6918,
+            "loss": 6116,
+            "draw": 984
         }
     },
     "fide": 2284,

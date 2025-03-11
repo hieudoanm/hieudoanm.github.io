@@ -5,9 +5,9 @@
     "name": "Raphael Lagunow",
     "username": "raphcamora",
     "title": "IM",
-    "followers": 31,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734022620,
+    "last_online": 1741624343,
     "joined": 1546627226,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2543,
-            "date": 1728644925,
-            "rd": 49
+            "rating": 2527,
+            "date": 1735160112,
+            "rd": 48
         },
         "best": {
             "rating": 2583,
@@ -43,8 +43,8 @@
             "game": "https://www.chess.com/game/live/20539268629"
         },
         "record": {
-            "win": 863,
-            "loss": 675,
+            "win": 865,
+            "loss": 677,
             "draw": 154
         }
     },

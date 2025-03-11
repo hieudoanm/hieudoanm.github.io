@@ -7,11 +7,12 @@
     "title": "WCM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1723467572,
+    "last_online": 1737284028,
     "joined": 1571151458,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Wood",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -27,6 +28,18 @@
         "record": {
             "win": 1,
             "loss": 1,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2044,
+            "date": 1734459136,
+            "rd": 135
+        },
+        "record": {
+            "win": 2,
+            "loss": 8,
             "draw": 0
         }
     },

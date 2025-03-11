@@ -6,9 +6,9 @@
     "name": "Vinod Kumar Sharma",
     "username": "kidzchessacademy",
     "title": "CM",
-    "followers": 60,
+    "followers": 87,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734164438,
+    "last_online": 1741680702,
     "joined": 1695798960,
     "status": "premium",
     "is_streamer": false,
@@ -17,26 +17,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2297,
-            "date": 1733592393,
-            "rd": 49
+            "rating": 2311,
+            "date": 1741453302,
+            "rd": 48
         },
         "best": {
-            "rating": 2300,
-            "date": 1733195123,
-            "game": "https://www.chess.com/game/live/99054372535"
+            "rating": 2315,
+            "date": 1736310019,
+            "game": "https://www.chess.com/game/live/128014183191"
         },
         "record": {
-            "win": 14,
-            "loss": 5,
-            "draw": 0
+            "win": 26,
+            "loss": 12,
+            "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2147,
-            "date": 1734165025,
-            "rd": 25
+            "rating": 2074,
+            "date": 1741702841,
+            "rd": 24
         },
         "best": {
             "rating": 2199,
@@ -44,33 +44,33 @@
             "game": "https://www.chess.com/game/live/102110093403"
         },
         "record": {
-            "win": 747,
-            "loss": 595,
-            "draw": 47
+            "win": 1501,
+            "loss": 1243,
+            "draw": 124
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2310,
-            "date": 1724750202,
-            "rd": 30
+            "rating": 2374,
+            "date": 1738088050,
+            "rd": 53
         },
         "best": {
-            "rating": 2311,
-            "date": 1698292003,
+            "rating": 2393,
+            "date": 1736875812,
             "game": "https://www.chess.com/game/live/95154613597"
         },
         "record": {
-            "win": 359,
-            "loss": 309,
-            "draw": 64
+            "win": 373,
+            "loss": 327,
+            "draw": 66
         }
     },
     "fide": 2226,
     "tactics": {
         "highest": {
-            "rating": 3244,
-            "date": 1711508140
+            "rating": 3273,
+            "date": 1734757831
         },
         "lowest": {
             "rating": 1000,

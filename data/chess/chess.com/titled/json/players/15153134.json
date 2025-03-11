@@ -1,15 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/15153134.127b7917.200x200o.2e98536d7db9.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/15153134.247733bb.200x200o.e4db615ba843.png",
     "player_id": 15153134,
     "@id": "https://api.chess.com/pub/player/im_chessbrain",
     "url": "https://www.chess.com/member/IM_Chessbrain",
     "name": "Pawel Weichhold",
     "username": "im_chessbrain",
     "title": "IM",
-    "followers": 8249,
+    "followers": 8454,
     "country": "https://api.chess.com/pub/country/PL",
-    "location": "Gdansk",
-    "last_online": 1734184643,
+    "last_online": 1741695775,
     "joined": 1387665384,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2110,
-            "date": 1734179531,
+            "date": 1741696794,
             "rd": 152
         },
         "best": {
@@ -31,7 +30,7 @@
             "win": 121,
             "loss": 24,
             "draw": 7,
-            "time_per_move": 25130,
+            "time_per_move": 26946,
             "timeout_percent": 0
         }
     },
@@ -71,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2757,
-            "date": 1733823895,
-            "rd": 28
+            "rating": 2774,
+            "date": 1739042528,
+            "rd": 43
         },
         "best": {
             "rating": 2843,
@@ -81,9 +80,9 @@
             "game": "https://www.chess.com/game/live/59928096197"
         },
         "record": {
-            "win": 1317,
-            "loss": 919,
-            "draw": 195
+            "win": 1328,
+            "loss": 923,
+            "draw": 197
         }
     },
     "fide": 2431,

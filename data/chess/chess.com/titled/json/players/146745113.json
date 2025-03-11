@@ -6,9 +6,9 @@
     "name": "Fede Garcia Lemos",
     "username": "buenamor1972",
     "title": "CM",
-    "followers": 80,
+    "followers": 88,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734110914,
+    "last_online": 1741291140,
     "joined": 1625365443,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2270,
-            "date": 1734111367,
-            "rd": 30
+            "rating": 2264,
+            "date": 1741291432,
+            "rd": 37
         },
         "best": {
             "rating": 2381,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/108801003549"
         },
         "record": {
-            "win": 480,
-            "loss": 362,
-            "draw": 39
+            "win": 630,
+            "loss": 495,
+            "draw": 50
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2355,
-            "date": 1733679472,
-            "rd": 32
+            "rating": 2302,
+            "date": 1739308715,
+            "rd": 45
         },
         "best": {
             "rating": 2494,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/98320555273"
         },
         "record": {
-            "win": 1691,
-            "loss": 1323,
-            "draw": 190
+            "win": 1717,
+            "loss": 1351,
+            "draw": 192
         }
     },
     "tactics": {

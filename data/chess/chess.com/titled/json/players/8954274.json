@@ -6,10 +6,10 @@
     "name": "David Martinez",
     "username": "eldivis",
     "title": "IM",
-    "followers": 1267,
+    "followers": 1584,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1734168218,
+    "last_online": 1741677774,
     "joined": 1348002067,
     "status": "staff",
     "is_streamer": true,
@@ -28,33 +28,27 @@
     ],
     "chess_daily": {
         "last": {
-            "rating": 1655,
-            "date": 1734136385,
-            "rd": 94
+            "rating": 1772,
+            "date": 1739441113,
+            "rd": 83
         },
         "best": {
-            "rating": 1685,
-            "date": 1708997796,
+            "rating": 1772,
+            "date": 1739441113,
             "game": "https://www.chess.com/game/daily/729497001"
         },
         "record": {
-            "win": 75,
-            "loss": 14,
-            "draw": 6,
-            "time_per_move": 23846,
+            "win": 80,
+            "loss": 16,
+            "draw": 9,
+            "time_per_move": 24770,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 40,
-            "withdraw": 3,
-            "count": 6,
-            "highest_finish": 34
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2000,
-            "date": 1729284955,
+            "date": 1740344517,
             "rd": 198
         },
         "best": {
@@ -70,9 +64,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2552,
-            "date": 1731723112,
-            "rd": 44
+            "rating": 2500,
+            "date": 1740185164,
+            "rd": 46
         },
         "best": {
             "rating": 2659,
@@ -80,16 +74,16 @@
             "game": "https://www.chess.com/game/live/111852764637"
         },
         "record": {
-            "win": 889,
-            "loss": 886,
+            "win": 897,
+            "loss": 897,
             "draw": 138
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2519,
-            "date": 1733846851,
-            "rd": 43
+            "rating": 2492,
+            "date": 1740184711,
+            "rd": 49
         },
         "best": {
             "rating": 2616,
@@ -97,9 +91,9 @@
             "game": "https://www.chess.com/game/live/114880781451"
         },
         "record": {
-            "win": 762,
-            "loss": 695,
-            "draw": 147
+            "win": 773,
+            "loss": 702,
+            "draw": 150
         }
     },
     "tactics": {

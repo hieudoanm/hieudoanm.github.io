@@ -6,10 +6,10 @@
     "name": "Ardian Jashari",
     "username": "jashariardian",
     "title": "FM",
-    "followers": 27,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/XK",
     "location": "Prishtine",
-    "last_online": 1734177001,
+    "last_online": 1739748856,
     "joined": 1641688015,
     "status": "premium",
     "is_streamer": false,
@@ -35,19 +35,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2456,
-            "date": 1734177351,
-            "rd": 36
+            "rating": 2459,
+            "date": 1741611356,
+            "rd": 49
         },
         "best": {
             "rating": 2523,
             "date": 1732274254,
-            "game": "https://www.chess.com/game/live/47562583511"
+            "game": "https://www.chess.com/game/live/128741544299"
         },
         "record": {
-            "win": 255,
-            "loss": 265,
-            "draw": 45
+            "win": 278,
+            "loss": 294,
+            "draw": 48
         }
     },
     "fide": 2089,

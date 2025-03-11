@@ -5,10 +5,10 @@
     "name": "Lachezar Yordanov",
     "username": "ly4o",
     "title": "FM",
-    "followers": 57,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/BG",
     "location": "varna",
-    "last_online": 1734161098,
+    "last_online": 1741431726,
     "joined": 1386700659,
     "status": "premium",
     "is_streamer": false,
@@ -80,10 +80,6 @@
         "best": {
             "total_attempts": 56,
             "score": 54
-        },
-        "daily": {
-            "total_attempts": 45,
-            "score": 42
         }
     }
 }

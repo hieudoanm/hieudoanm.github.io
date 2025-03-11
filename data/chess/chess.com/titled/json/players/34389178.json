@@ -6,10 +6,10 @@
     "name": "Egor Bykov",
     "username": "bykov_egor",
     "title": "FM",
-    "followers": 234,
+    "followers": 239,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Szeged",
-    "last_online": 1734128592,
+    "last_online": 1741567259,
     "joined": 1490896478,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2714,
-            "date": 1734027875,
-            "rd": 30
+            "rating": 2722,
+            "date": 1734561063,
+            "rd": 33
         },
         "best": {
             "rating": 2801,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/110305937663"
         },
         "record": {
-            "win": 434,
-            "loss": 431,
+            "win": 436,
+            "loss": 432,
             "draw": 59
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2693,
-            "date": 1734134116,
-            "rd": 35
+            "rating": 2688,
+            "date": 1739923625,
+            "rd": 37
         },
         "best": {
             "rating": 2787,
@@ -81,12 +81,12 @@
             "game": "https://www.chess.com/game/live/58217399905"
         },
         "record": {
-            "win": 3176,
-            "loss": 3152,
-            "draw": 536
+            "win": 3281,
+            "loss": 3247,
+            "draw": 550
         }
     },
-    "fide": 2430,
+    "fide": 2441,
     "tactics": {
         "highest": {
             "rating": 3413,

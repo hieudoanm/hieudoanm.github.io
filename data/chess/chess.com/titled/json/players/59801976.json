@@ -5,9 +5,9 @@
     "name": "Teimur Toktomushev",
     "username": "dearron_fox",
     "title": "FM",
-    "followers": 47,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734101983,
+    "last_online": 1741465605,
     "joined": 1555231926,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2362,
-            "date": 1732120169,
-            "rd": 46
+            "rating": 2345,
+            "date": 1739732884,
+            "rd": 47
         },
         "best": {
             "rating": 2429,
@@ -26,43 +26,43 @@
             "game": "https://www.chess.com/game/live/88791644869"
         },
         "record": {
-            "win": 41,
-            "loss": 24,
+            "win": 46,
+            "loss": 28,
             "draw": 11
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2736,
-            "date": 1734103232,
-            "rd": 22
+            "rating": 2778,
+            "date": 1741636222,
+            "rd": 20
         },
         "best": {
-            "rating": 2824,
-            "date": 1728682521,
+            "rating": 2883,
+            "date": 1736273756,
             "game": "https://www.chess.com/game/live/125519902443"
         },
         "record": {
-            "win": 5311,
-            "loss": 3819,
-            "draw": 636
+            "win": 6182,
+            "loss": 4451,
+            "draw": 769
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2598,
-            "date": 1733936601,
-            "rd": 32
+            "rating": 2675,
+            "date": 1741466477,
+            "rd": 35
         },
         "best": {
-            "rating": 2691,
-            "date": 1727561785,
-            "game": "https://www.chess.com/game/live/119719257131"
+            "rating": 2738,
+            "date": 1736793484,
+            "game": "https://www.chess.com/game/live/134260151705"
         },
         "record": {
-            "win": 1227,
-            "loss": 902,
-            "draw": 150
+            "win": 1433,
+            "loss": 1039,
+            "draw": 176
         }
     },
     "fide": 1990,

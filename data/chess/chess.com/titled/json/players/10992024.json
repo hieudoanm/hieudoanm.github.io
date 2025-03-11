@@ -6,10 +6,10 @@
     "name": "Dirk Paulsen",
     "username": "0815original",
     "title": "FM",
-    "followers": 53,
+    "followers": 74,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Berlin",
-    "last_online": 1734074118,
+    "last_online": 1741537841,
     "joined": 1362144991,
     "status": "premium",
     "is_streamer": false,
@@ -56,9 +56,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2392,
-            "date": 1733435152,
-            "rd": 32
+            "rating": 2449,
+            "date": 1740921010
         },
         "best": {
             "rating": 2456,
@@ -66,9 +65,9 @@
             "game": "https://www.chess.com/game/live/125578140497"
         },
         "record": {
-            "win": 181,
-            "loss": 72,
-            "draw": 21
+            "win": 201,
+            "loss": 78,
+            "draw": 26
         }
     },
     "chess_bullet": {
@@ -90,19 +89,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2430,
-            "date": 1733338593,
-            "rd": 33
+            "rating": 2480,
+            "date": 1741111752,
+            "rd": 43
         },
         "best": {
-            "rating": 2435,
-            "date": 1687295214,
-            "game": "https://www.chess.com/game/live/127072214669"
+            "rating": 2506,
+            "date": 1738709717,
+            "game": "https://www.chess.com/game/live/133049970703"
         },
         "record": {
-            "win": 520,
-            "loss": 297,
-            "draw": 51
+            "win": 565,
+            "loss": 350,
+            "draw": 62
         }
     },
     "fide": 2313,

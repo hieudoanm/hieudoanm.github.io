@@ -6,10 +6,10 @@
     "name": "Nancy Flores Mirabal",
     "username": "nannn9",
     "title": "WCM",
-    "followers": 36,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Buenos Aires",
-    "last_online": 1734012403,
+    "last_online": 1739461871,
     "joined": 1394848280,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2226,
-            "date": 1732665862,
-            "rd": 52
+            "rating": 2209,
+            "date": 1736294736,
+            "rd": 58
         },
         "best": {
             "rating": 2338,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/124582785827"
         },
         "record": {
-            "win": 67,
-            "loss": 125,
-            "draw": 8
+            "win": 69,
+            "loss": 132,
+            "draw": 9
         }
     },
     "fide": 1974,

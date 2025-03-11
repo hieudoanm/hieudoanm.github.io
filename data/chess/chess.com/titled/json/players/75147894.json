@@ -8,7 +8,7 @@
     "title": "WCM",
     "followers": 11,
     "country": "https://api.chess.com/pub/country/AE",
-    "last_online": 1648414324,
+    "last_online": 1741340276,
     "joined": 1585627015,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 400,
-            "date": 1585627015
+            "rating": 1716,
+            "date": 1735392770
         },
         "lowest": {
             "rating": 400,

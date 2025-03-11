@@ -2,11 +2,12 @@
     "player_id": 9275702,
     "@id": "https://api.chess.com/pub/player/korason34",
     "url": "https://www.chess.com/member/korason34",
+    "name": "Ariel Erenberg",
     "username": "korason34",
     "title": "IM",
-    "followers": 59,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/NO",
-    "last_online": 1733235860,
+    "last_online": 1741625581,
     "joined": 1350395238,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1298,
-            "date": 1632270259,
+            "date": 1738337971,
             "rd": 155
         },
         "best": {
@@ -35,7 +36,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2286,
-            "date": 1733236371,
+            "date": 1739925412,
             "rd": 49
         },
         "best": {
@@ -51,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2663,
-            "date": 1697844792,
-            "rd": 75
+            "rating": 2651,
+            "date": 1737226150,
+            "rd": 49
         },
         "best": {
             "rating": 2789,
@@ -62,14 +63,14 @@
         },
         "record": {
             "win": 204,
-            "loss": 176,
+            "loss": 177,
             "draw": 22
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2639,
-            "date": 1727712308,
+            "date": 1736095523,
             "rd": 49
         },
         "best": {
@@ -86,8 +87,8 @@
     "fide": 2340,
     "tactics": {
         "highest": {
-            "rating": 3367,
-            "date": 1724463006
+            "rating": 3387,
+            "date": 1737226516
         },
         "lowest": {
             "rating": 1005,

@@ -6,10 +6,10 @@
     "name": "Le Thao Nguyen Pham",
     "username": "fh2411",
     "title": "IM",
-    "followers": 226,
+    "followers": 233,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Hochiminh",
-    "last_online": 1732904836,
+    "last_online": 1741604190,
     "joined": 1399131579,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2624,
-            "date": 1732665906,
+            "rating": 2644,
+            "date": 1741133154,
             "rd": 42
         },
         "best": {
             "rating": 2672,
             "date": 1710283423,
-            "game": "https://www.chess.com/game/live/97366889369"
+            "game": "https://www.chess.com/game/live/134867949605"
         },
         "record": {
-            "win": 1063,
-            "loss": 981,
-            "draw": 226
+            "win": 1152,
+            "loss": 1047,
+            "draw": 242
         }
     },
     "tactics": {

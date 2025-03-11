@@ -6,10 +6,10 @@
     "name": "Julio Benedetti",
     "username": "julbenn",
     "title": "IM",
-    "followers": 288,
+    "followers": 320,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Barcelona",
-    "last_online": 1734161264,
+    "last_online": 1741691587,
     "joined": 1621007054,
     "status": "premium",
     "is_streamer": true,
@@ -59,7 +59,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2572,
-            "date": 1733040381,
+            "date": 1736329643,
             "rd": 50
         },
         "best": {

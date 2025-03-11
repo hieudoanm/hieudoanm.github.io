@@ -6,9 +6,9 @@
     "name": "Dmitri Shevelev",
     "username": "russiantenor",
     "title": "FM",
-    "followers": 102,
+    "followers": 104,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733883865,
+    "last_online": 1741452633,
     "joined": 1509306126,
     "status": "premium",
     "is_streamer": false,
@@ -55,26 +55,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2406,
-            "date": 1733884165,
+            "rating": 2411,
+            "date": 1734381841,
             "rd": 49
         },
         "best": {
-            "rating": 2406,
-            "date": 1733884165,
+            "rating": 2411,
+            "date": 1734381841,
             "game": "https://www.chess.com/game/live/127622979247"
         },
         "record": {
-            "win": 29,
+            "win": 30,
             "loss": 3,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2521,
-            "date": 1732455618,
-            "rd": 38
+            "rating": 2602,
+            "date": 1737354657,
+            "rd": 17
         },
         "best": {
             "rating": 2635,
@@ -82,33 +82,33 @@
             "game": "https://www.chess.com/game/live/107160063333"
         },
         "record": {
-            "win": 23368,
-            "loss": 18052,
-            "draw": 2216
+            "win": 23791,
+            "loss": 18381,
+            "draw": 2254
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2626,
-            "date": 1699030354,
-            "rd": 116
+            "rating": 2598,
+            "date": 1740799699,
+            "rd": 41
         },
         "best": {
-            "rating": 2626,
-            "date": 1699030354,
-            "game": "https://www.chess.com/game/live/19936362767"
+            "rating": 2630,
+            "date": 1734723242,
+            "game": "https://www.chess.com/game/live/132948624607"
         },
         "record": {
-            "win": 2359,
-            "loss": 1742,
-            "draw": 240
+            "win": 2402,
+            "loss": 1779,
+            "draw": 243
         }
     },
     "fide": 2255,
     "tactics": {
         "highest": {
-            "rating": 3031,
-            "date": 1733885346
+            "rating": 3160,
+            "date": 1739211313
         },
         "lowest": {
             "rating": 1212,

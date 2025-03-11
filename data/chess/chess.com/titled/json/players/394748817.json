@@ -4,14 +4,14 @@
     "url": "https://www.chess.com/member/tzizuki",
     "username": "tzizuki",
     "title": "FM",
-    "followers": 0,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/JP",
-    "last_online": 1733779059,
+    "last_online": 1740859621,
     "joined": 1728495641,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -30,32 +30,54 @@
             "draw": 0
         }
     },
-    "chess_blitz": {
+    "chess_bullet": {
         "last": {
-            "rating": 2488,
-            "date": 1733781631,
-            "rd": 39
+            "rating": 2619,
+            "date": 1738800589,
+            "rd": 34
         },
         "best": {
-            "rating": 2488,
-            "date": 1733781631,
-            "game": "https://www.chess.com/game/live/127519177205"
+            "rating": 2619,
+            "date": 1738800589,
+            "game": "https://www.chess.com/game/live/131155163915"
         },
         "record": {
-            "win": 49,
-            "loss": 26,
-            "draw": 7
+            "win": 81,
+            "loss": 78,
+            "draw": 12
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2642,
+            "date": 1740155323,
+            "rd": 28
+        },
+        "best": {
+            "rating": 2662,
+            "date": 1737235660,
+            "game": "https://www.chess.com/game/live/132015586221"
+        },
+        "record": {
+            "win": 230,
+            "loss": 207,
+            "draw": 40
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2241,
-            "date": 1733615412
+            "rating": 2517,
+            "date": 1740148590
         },
         "lowest": {
             "rating": 400,
             "date": 1728495641
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 32,
+            "score": 29
+        }
+    }
 }

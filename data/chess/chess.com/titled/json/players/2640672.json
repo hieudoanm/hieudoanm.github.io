@@ -8,7 +8,7 @@
     "followers": 112,
     "country": "https://api.chess.com/pub/country/BB",
     "location": "Christ church",
-    "last_online": 1734051183,
+    "last_online": 1741355205,
     "joined": 1268692174,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1913,
-            "date": 1714044785,
+            "date": 1741339690,
             "rd": 69
         },
         "best": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2228,
-            "date": 1734052736,
-            "rd": 33
+            "rating": 2213,
+            "date": 1741364424,
+            "rd": 41
         },
         "best": {
             "rating": 2310,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/4318729698"
         },
         "record": {
-            "win": 2937,
-            "loss": 2634,
-            "draw": 178
+            "win": 3015,
+            "loss": 2695,
+            "draw": 182
         }
     },
     "fide": 2039,

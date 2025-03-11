@@ -6,10 +6,10 @@
     "name": "Pierluigi Piscopo",
     "username": "piscopower",
     "title": "IM",
-    "followers": 445,
+    "followers": 511,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Livorno",
-    "last_online": 1734108773,
+    "last_online": 1741593220,
     "joined": 1411381342,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2071,
-            "date": 1728924831,
+            "date": 1738343112,
             "rd": 49
         },
         "best": {
@@ -90,8 +90,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2657,
-            "date": 1728324437
+            "rating": 2705,
+            "date": 1738833541
         },
         "lowest": {
             "rating": 1354,

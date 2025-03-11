@@ -6,9 +6,9 @@
     "name": "Pavel Martynov",
     "username": "pavelchessyoutube",
     "title": "FM",
-    "followers": 58,
+    "followers": 65,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734166135,
+    "last_online": 1741683231,
     "joined": 1713282358,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2418,
-            "date": 1733081432,
-            "rd": 45
+            "rating": 2517,
+            "date": 1741691030,
+            "rd": 28
         },
         "best": {
             "rating": 2618,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/112482680993"
         },
         "record": {
-            "win": 913,
-            "loss": 749,
-            "draw": 118
+            "win": 988,
+            "loss": 804,
+            "draw": 128
         }
     },
     "chess_blitz": {

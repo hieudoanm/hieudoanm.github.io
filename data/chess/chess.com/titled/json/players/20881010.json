@@ -6,10 +6,10 @@
     "name": "Pavel Vavric",
     "username": "pavelvavric",
     "title": "FM",
-    "followers": 39,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/MD",
     "location": "Chisinau, Moldova",
-    "last_online": 1734092277,
+    "last_online": 1741688209,
     "joined": 1422735008,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2418,
-            "date": 1730674261,
-            "rd": 40
+            "rating": 2387,
+            "date": 1740937498,
+            "rd": 68
         },
         "best": {
             "rating": 2608,
@@ -63,7 +63,7 @@
         },
         "record": {
             "win": 2476,
-            "loss": 2147,
+            "loss": 2150,
             "draw": 324
         }
     },

@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/BegusDrasko",
     "username": "begusdrasko",
     "title": "FM",
-    "followers": 100,
+    "followers": 103,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734079573,
+    "last_online": 1741697747,
     "joined": 1488486920,
     "status": "premium",
     "is_streamer": false,
@@ -46,9 +46,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2449,
-            "date": 1719172219,
-            "rd": 75
+            "rating": 2525,
+            "date": 1741537644,
+            "rd": 96
         },
         "best": {
             "rating": 2495,
@@ -56,16 +56,16 @@
             "game": "https://www.chess.com/game/live/96329712751"
         },
         "record": {
-            "win": 201,
-            "loss": 120,
+            "win": 205,
+            "loss": 121,
             "draw": 23
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2595,
-            "date": 1734109333,
-            "rd": 28
+            "rating": 2620,
+            "date": 1741602482,
+            "rd": 24
         },
         "best": {
             "rating": 2713,
@@ -73,9 +73,9 @@
             "game": "https://www.chess.com/game/live/43056547783"
         },
         "record": {
-            "win": 7292,
-            "loss": 6205,
-            "draw": 1732
+            "win": 7695,
+            "loss": 6573,
+            "draw": 1835
         }
     },
     "fide": 0,

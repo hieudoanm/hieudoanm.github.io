@@ -6,10 +6,10 @@
     "name": "Maroun Tomb",
     "username": "gameoverbro",
     "title": "CM",
-    "followers": 690,
-    "country": "https://api.chess.com/pub/country/LB",
+    "followers": 705,
+    "country": "https://api.chess.com/pub/country/CA",
     "location": "Montreal",
-    "last_online": 1733867631,
+    "last_online": 1741661738,
     "joined": 1348459392,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2607,
-            "date": 1733256223,
-            "rd": 42
+            "rating": 2643,
+            "date": 1739907076,
+            "rd": 30
         },
         "best": {
             "rating": 2696,
@@ -83,26 +83,26 @@
             "game": "https://www.chess.com/game/live/104955031985"
         },
         "record": {
-            "win": 5821,
-            "loss": 4844,
-            "draw": 556
+            "win": 5962,
+            "loss": 4955,
+            "draw": 569
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2622,
-            "date": 1734053040,
-            "rd": 32
+            "rating": 2464,
+            "date": 1741661946,
+            "rd": 25
         },
         "best": {
-            "rating": 2683,
-            "date": 1630639347,
+            "rating": 2784,
+            "date": 1736797411,
             "game": "https://www.chess.com/game/live/106413980443"
         },
         "record": {
-            "win": 12159,
-            "loss": 10286,
-            "draw": 1815
+            "win": 12480,
+            "loss": 10612,
+            "draw": 1880
         }
     },
     "fide": 2177,

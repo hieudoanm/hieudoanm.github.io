@@ -6,9 +6,9 @@
     "name": "Kesav Viswanadha",
     "username": "man_of_ai",
     "title": "IM",
-    "followers": 30,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734017659,
+    "last_online": 1741553257,
     "joined": 1487346223,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2542,
-            "date": 1733808037,
-            "rd": 42
+            "rating": 2649,
+            "date": 1741589815,
+            "rd": 30
         },
         "best": {
             "rating": 2734,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/6173602539"
         },
         "record": {
-            "win": 2538,
-            "loss": 1646,
-            "draw": 342
+            "win": 2659,
+            "loss": 1732,
+            "draw": 359
         }
     },
     "fide": 2367,

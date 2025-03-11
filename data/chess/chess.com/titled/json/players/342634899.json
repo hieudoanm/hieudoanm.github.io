@@ -5,10 +5,10 @@
     "name": "Shahin Valiyev",
     "username": "valiyev_shahin",
     "title": "FM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/AZ",
     "location": "Baku",
-    "last_online": 1734008720,
+    "last_online": 1738691111,
     "joined": 1706815378,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2324,
-            "date": 1717052914,
+            "date": 1736284028,
             "rd": 49
         },
         "best": {
@@ -27,7 +27,7 @@
             "game": "https://www.chess.com/game/live/108192034705"
         },
         "record": {
-            "win": 17,
+            "win": 18,
             "loss": 0,
             "draw": 0
         }

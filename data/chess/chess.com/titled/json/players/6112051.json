@@ -9,12 +9,12 @@
     "followers": 83,
     "country": "https://api.chess.com/pub/country/IT",
     "location": "Milano?!",
-    "last_online": 1734110719,
+    "last_online": 1741700006,
     "joined": 1321121944,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,8 +35,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2096,
-            "date": 1734111889,
+            "rating": 1929,
+            "date": 1735243826,
             "rd": 22
         },
         "best": {
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/83341098361"
         },
         "record": {
-            "win": 16626,
-            "loss": 13578,
-            "draw": 1034
+            "win": 16710,
+            "loss": 13654,
+            "draw": 1040
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2070,
-            "date": 1728902882,
-            "rd": 34
+            "rating": 2217,
+            "date": 1741700300,
+            "rd": 25
         },
         "best": {
             "rating": 2325,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/32197240895"
         },
         "record": {
-            "win": 4372,
-            "loss": 4362,
-            "draw": 307
+            "win": 4782,
+            "loss": 4686,
+            "draw": 351
         }
     },
     "fide": 0,

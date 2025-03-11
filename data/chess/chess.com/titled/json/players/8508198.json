@@ -5,10 +5,10 @@
     "url": "https://www.chess.com/member/Fortizio",
     "name": "Ezio Righi",
     "username": "fortizio",
-    "title": "CM",
-    "followers": 44,
+    "title": "FM",
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/SM",
-    "last_online": 1734013119,
+    "last_online": 1736842940,
     "joined": 1344676192,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2111,
-            "date": 1629480342,
+            "date": 1734374827,
             "rd": 74
         },
         "best": {

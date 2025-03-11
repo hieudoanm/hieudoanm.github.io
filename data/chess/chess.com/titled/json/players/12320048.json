@@ -6,10 +6,10 @@
     "name": "Mary Kuhner",
     "username": "mkkuhner",
     "title": "WCM",
-    "followers": 1354,
+    "followers": 1381,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Seattle, Washington",
-    "last_online": 1734135968,
+    "last_online": 1741672970,
     "joined": 1371230160,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1823,
-            "date": 1734022953,
-            "rd": 82
+            "rating": 1793,
+            "date": 1741624153,
+            "rd": 89
         },
         "best": {
             "rating": 2119,
@@ -28,18 +28,18 @@
             "game": "https://www.chess.com/game/daily/128603878"
         },
         "record": {
-            "win": 1098,
-            "loss": 241,
-            "draw": 121,
-            "time_per_move": 27676,
+            "win": 1106,
+            "loss": 242,
+            "draw": 123,
+            "time_per_move": 28329,
             "timeout_percent": 0
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1887,
-            "date": 1733263884,
-            "rd": 170
+            "rating": 1890,
+            "date": 1735109140,
+            "rd": 171
         },
         "best": {
             "rating": 2011,
@@ -47,18 +47,18 @@
             "game": "https://www.chess.com/game/daily/385845833"
         },
         "record": {
-            "win": 14,
+            "win": 15,
             "loss": 2,
             "draw": 1,
-            "time_per_move": 27676,
+            "time_per_move": 28329,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1802,
-            "date": 1731131335,
-            "rd": 106
+            "rating": 1742,
+            "date": 1739989242,
+            "rd": 109
         },
         "best": {
             "rating": 2075,
@@ -67,7 +67,7 @@
         },
         "record": {
             "win": 185,
-            "loss": 83,
+            "loss": 85,
             "draw": 22
         }
     },
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1833,
-            "date": 1734132143,
-            "rd": 31
+            "rating": 1847,
+            "date": 1741674185,
+            "rd": 33
         },
         "best": {
             "rating": 2037,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/3189501409"
         },
         "record": {
-            "win": 4348,
-            "loss": 3686,
-            "draw": 547
+            "win": 4513,
+            "loss": 3841,
+            "draw": 570
         }
     },
     "fide": 1908,
@@ -120,10 +120,6 @@
         "best": {
             "total_attempts": 63,
             "score": 60
-        },
-        "daily": {
-            "total_attempts": 48,
-            "score": 45
         }
     }
 }

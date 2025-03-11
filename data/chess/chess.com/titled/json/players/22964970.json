@@ -6,9 +6,9 @@
     "name": "Niilo Man Nissinen",
     "username": "niilo1",
     "title": "CM",
-    "followers": 67,
+    "followers": 68,
     "country": "https://api.chess.com/pub/country/HK",
-    "last_online": 1734069644,
+    "last_online": 1741526079,
     "joined": 1435187828,
     "status": "premium",
     "is_streamer": false,
@@ -56,7 +56,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2039,
-            "date": 1716266738,
+            "date": 1734701335,
             "rd": 126
         },
         "best": {
@@ -72,35 +72,35 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2279,
-            "date": 1720286195,
-            "rd": 91
+            "rating": 2321,
+            "date": 1735806726,
+            "rd": 108
         },
         "best": {
-            "rating": 2292,
-            "date": 1720283912,
+            "rating": 2321,
+            "date": 1735806726,
             "game": "https://www.chess.com/game/live/114022816107"
         },
         "record": {
-            "win": 931,
+            "win": 934,
             "loss": 779,
             "draw": 59
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2331,
-            "date": 1733480562,
-            "rd": 56
+            "rating": 2409,
+            "date": 1739459412,
+            "rd": 55
         },
         "best": {
-            "rating": 2377,
-            "date": 1715706459,
+            "rating": 2433,
+            "date": 1737235464,
             "game": "https://www.chess.com/game/live/77387575071"
         },
         "record": {
-            "win": 2774,
-            "loss": 2537,
+            "win": 2790,
+            "loss": 2546,
             "draw": 322
         }
     },

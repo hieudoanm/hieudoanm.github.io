@@ -6,9 +6,9 @@
     "name": "Carlos Martins",
     "username": "martins-br",
     "title": "FM",
-    "followers": 156,
+    "followers": 158,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1733921180,
+    "last_online": 1741043299,
     "joined": 1441202794,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     "fide": 2187,
     "tactics": {
         "highest": {
-            "rating": 3437,
-            "date": 1634514413
+            "rating": 3525,
+            "date": 1736911975
         },
         "lowest": {
             "rating": 1206,

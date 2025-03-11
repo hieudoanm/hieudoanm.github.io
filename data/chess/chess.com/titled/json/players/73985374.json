@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 23,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733820028,
+    "last_online": 1741676137,
     "joined": 1584737011,
     "status": "premium",
     "is_streamer": false,
@@ -62,6 +62,10 @@
         "best": {
             "total_attempts": 68,
             "score": 65
+        },
+        "daily": {
+            "total_attempts": 65,
+            "score": 62
         }
     }
 }

@@ -9,12 +9,12 @@
     "followers": 12,
     "country": "https://api.chess.com/pub/country/CM",
     "location": "Yaounde",
-    "last_online": 1727692856,
+    "last_online": 1737485577,
     "joined": 1439032724,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -71,9 +71,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2026,
-            "date": 1726275449,
-            "rd": 61
+            "rating": 2093,
+            "date": 1740302212
         },
         "best": {
             "rating": 2262,
@@ -81,9 +80,9 @@
             "game": "https://www.chess.com/game/live/61830039231"
         },
         "record": {
-            "win": 4110,
-            "loss": 3714,
-            "draw": 386
+            "win": 4228,
+            "loss": 3812,
+            "draw": 403
         }
     },
     "fide": 1911,

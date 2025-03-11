@@ -6,10 +6,10 @@
     "name": "Kshatriya Vekhande",
     "username": "whiteking2009",
     "title": "FM",
-    "followers": 193,
+    "followers": 203,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Maharashtra",
-    "last_online": 1734092120,
+    "last_online": 1741703658,
     "joined": 1585422411,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2363,
-            "date": 1727505557,
+            "date": 1737923088,
             "rd": 44
         },
         "best": {
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2622,
-            "date": 1734160299,
-            "rd": 29
+            "rating": 2664,
+            "date": 1738079378,
+            "rd": 47
         },
         "best": {
             "rating": 2694,
@@ -45,15 +45,15 @@
             "game": "https://www.chess.com/game/live/117651524797"
         },
         "record": {
-            "win": 1171,
-            "loss": 1268,
+            "win": 1181,
+            "loss": 1273,
             "draw": 200
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2588,
-            "date": 1734177603,
+            "rating": 2572,
+            "date": 1741111839,
             "rd": 41
         },
         "best": {
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/125771404297"
         },
         "record": {
-            "win": 1072,
-            "loss": 1223,
-            "draw": 253
+            "win": 1155,
+            "loss": 1310,
+            "draw": 275
         }
     },
     "fide": 2292,

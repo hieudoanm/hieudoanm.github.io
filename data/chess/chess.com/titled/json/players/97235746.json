@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 21,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1733774698,
+    "last_online": 1741549955,
     "joined": 1605548732,
     "status": "premium",
     "is_streamer": false,
@@ -16,7 +16,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2162,
-            "date": 1733777493,
+            "date": 1741552284,
             "rd": 49
         },
         "best": {

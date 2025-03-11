@@ -6,10 +6,10 @@
     "name": "Ognjen Matko",
     "username": "oggy1984",
     "title": "FM",
-    "followers": 617,
+    "followers": 655,
     "country": "https://api.chess.com/pub/country/HR",
     "location": "Brestovac",
-    "last_online": 1734018039,
+    "last_online": 1741279805,
     "joined": 1352321705,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2523,
-            "date": 1728067847,
-            "rd": 29
+            "rating": 2503,
+            "date": 1735408201,
+            "rd": 30
         },
         "best": {
             "rating": 2581,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/39897635041"
         },
         "record": {
-            "win": 7581,
-            "loss": 8981,
-            "draw": 1054
+            "win": 7628,
+            "loss": 9043,
+            "draw": 1060
         }
     },
     "fide": 2308,

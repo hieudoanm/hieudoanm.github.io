@@ -5,9 +5,9 @@
     "name": "Miko\u0142aj Gbiorczyk",
     "username": "miki_gb",
     "title": "CM",
-    "followers": 26,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733923810,
+    "last_online": 1741362938,
     "joined": 1560428041,
     "status": "premium",
     "is_streamer": false,
@@ -72,7 +72,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2536,
-            "date": 1731698224,
+            "date": 1738412702,
             "rd": 48
         },
         "best": {
@@ -88,25 +88,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2442,
-            "date": 1732644722,
+            "rating": 2473,
+            "date": 1740507141,
             "rd": 46
         },
         "best": {
-            "rating": 2452,
-            "date": 1732643509,
-            "game": "https://www.chess.com/game/live/124568311081"
+            "rating": 2497,
+            "date": 1739296624,
+            "game": "https://www.chess.com/game/live/134237956381"
         },
         "record": {
-            "win": 1229,
-            "loss": 1089,
-            "draw": 134
+            "win": 1265,
+            "loss": 1128,
+            "draw": 138
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3201,
-            "date": 1732708849
+            "rating": 3248,
+            "date": 1740128233
         },
         "lowest": {
             "rating": 336,

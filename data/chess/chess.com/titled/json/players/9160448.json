@@ -6,10 +6,10 @@
     "name": "Jakub Chy\u017cy",
     "username": "kuba2006",
     "title": "FM",
-    "followers": 56,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Gorz&oacute;w Wlkp.",
-    "last_online": 1733406557,
+    "last_online": 1737565514,
     "joined": 1349527882,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2460,
-            "date": 1734172462,
-            "rd": 39
+            "rating": 2468,
+            "date": 1737855373,
+            "rd": 34
         },
         "best": {
             "rating": 2648,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/57786655015"
         },
         "record": {
-            "win": 2242,
-            "loss": 2045,
-            "draw": 190
+            "win": 2335,
+            "loss": 2129,
+            "draw": 198
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2538,
-            "date": 1729613449,
-            "rd": 48
+            "rating": 2542,
+            "date": 1736169703,
+            "rd": 47
         },
         "best": {
             "rating": 2624,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/86462440423"
         },
         "record": {
-            "win": 730,
-            "loss": 556,
-            "draw": 78
+            "win": 734,
+            "loss": 559,
+            "draw": 79
         }
     },
     "fide": 2276,

@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/mismaly",
     "username": "mismaly",
     "title": "CM",
-    "followers": 0,
-    "country": "https://api.chess.com/pub/country/XB",
-    "last_online": 1733582087,
+    "followers": 1,
+    "country": "https://api.chess.com/pub/country/SC",
+    "last_online": 1740499013,
     "joined": 1719743171,
     "status": "premium",
     "is_streamer": false,
@@ -15,42 +15,42 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2211,
-            "date": 1732287665,
-            "rd": 83
+            "rating": 2345,
+            "date": 1735823924,
+            "rd": 52
         },
         "best": {
-            "rating": 2287,
-            "date": 1732287009,
-            "game": "https://www.chess.com/game/live/113506831253"
+            "rating": 2358,
+            "date": 1735823708,
+            "game": "https://www.chess.com/game/live/129220387569"
         },
         "record": {
-            "win": 15,
-            "loss": 11,
-            "draw": 3
+            "win": 39,
+            "loss": 20,
+            "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2316,
-            "date": 1733582152,
-            "rd": 44
+            "rating": 2277,
+            "date": 1739827880,
+            "rd": 42
         },
         "best": {
             "rating": 2352,
             "date": 1720252915,
-            "game": "https://www.chess.com/game/live/125085522009"
+            "game": "https://www.chess.com/game/live/128444565409"
         },
         "record": {
-            "win": 175,
-            "loss": 117,
-            "draw": 23
+            "win": 212,
+            "loss": 159,
+            "draw": 25
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3031,
-            "date": 1732276185
+            "rating": 3093,
+            "date": 1738352906
         },
         "lowest": {
             "rating": 1000,

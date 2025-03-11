@@ -5,14 +5,14 @@
     "name": "Erdenepurev Boldoo",
     "username": "keeper0416",
     "title": "FM",
-    "followers": 22,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/MN",
-    "last_online": 1734160008,
+    "last_online": 1741403271,
     "joined": 1538835888,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -47,25 +47,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2700,
-            "date": 1734159779,
-            "rd": 33
+            "rating": 2731,
+            "date": 1741364685,
+            "rd": 43
         },
         "best": {
-            "rating": 2711,
-            "date": 1734152519,
+            "rating": 2721,
+            "date": 1735984992,
             "game": "https://www.chess.com/game/live/82987275153"
         },
         "record": {
-            "win": 431,
-            "loss": 315,
-            "draw": 40
+            "win": 500,
+            "loss": 368,
+            "draw": 54
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2553,
-            "date": 1732457602,
+            "rating": 2546,
+            "date": 1734783299,
             "rd": 49
         },
         "best": {
@@ -75,7 +75,7 @@
         },
         "record": {
             "win": 203,
-            "loss": 151,
+            "loss": 152,
             "draw": 37
         }
     },

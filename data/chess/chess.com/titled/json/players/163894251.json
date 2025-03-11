@@ -6,14 +6,14 @@
     "name": "Jeandre du Randt",
     "username": "jeandredr",
     "title": "CM",
-    "followers": 58,
+    "followers": 59,
     "country": "https://api.chess.com/pub/country/ZA",
-    "last_online": 1733739893,
+    "last_online": 1741682143,
     "joined": 1638881586,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1738,
-            "date": 1733740213,
-            "rd": 76
+            "rating": 1770,
+            "date": 1741682580,
+            "rd": 34
         },
         "best": {
             "rating": 1945,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/37640342583"
         },
         "record": {
-            "win": 854,
-            "loss": 682,
-            "draw": 116
+            "win": 924,
+            "loss": 749,
+            "draw": 124
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3047,
-            "date": 1643539096
+            "rating": 3056,
+            "date": 1739938875
         },
         "lowest": {
             "rating": 811,

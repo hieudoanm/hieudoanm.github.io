@@ -16,8 +16,8 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2608,
-            "date": 1732351668,
+            "rating": 2603,
+            "date": 1741603284,
             "rd": 48
         },
         "best": {
@@ -26,16 +26,16 @@
             "game": "https://www.chess.com/game/live/10946265387"
         },
         "record": {
-            "win": 175,
-            "loss": 140,
+            "win": 179,
+            "loss": 147,
             "draw": 26
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2360,
-            "date": 1725691632,
-            "rd": 79
+            "rating": 2343,
+            "date": 1736095976,
+            "rd": 91
         },
         "best": {
             "rating": 2527,
@@ -43,8 +43,8 @@
             "game": "https://www.chess.com/game/live/54220213015"
         },
         "record": {
-            "win": 126,
-            "loss": 116,
+            "win": 127,
+            "loss": 118,
             "draw": 33
         }
     },

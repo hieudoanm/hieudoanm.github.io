@@ -7,28 +7,28 @@
     "title": "FM",
     "followers": 5,
     "country": "https://api.chess.com/pub/country/KP",
-    "last_online": 1734117375,
+    "last_online": 1741333229,
     "joined": 1639244501,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2645,
-            "date": 1733923639,
-            "rd": 48
+            "rating": 2642,
+            "date": 1741296979,
+            "rd": 49
         },
         "best": {
-            "rating": 2645,
-            "date": 1733923639,
+            "rating": 2648,
+            "date": 1738671704,
             "game": "https://www.chess.com/game/live/102865814407"
         },
         "record": {
-            "win": 125,
-            "loss": 43,
-            "draw": 19
+            "win": 131,
+            "loss": 46,
+            "draw": 21
         }
     },
     "chess_bullet": {
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2547,
-            "date": 1728332393,
-            "rd": 47
+            "rating": 2700,
+            "date": 1740507985,
+            "rd": 34
         },
         "best": {
             "rating": 2796,
@@ -60,15 +60,15 @@
             "game": "https://www.chess.com/game/live/68077939415"
         },
         "record": {
-            "win": 974,
-            "loss": 769,
-            "draw": 137
+            "win": 1029,
+            "loss": 790,
+            "draw": 141
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3485,
-            "date": 1680871891
+            "rating": 3486,
+            "date": 1739609449
         },
         "lowest": {
             "rating": 1209,

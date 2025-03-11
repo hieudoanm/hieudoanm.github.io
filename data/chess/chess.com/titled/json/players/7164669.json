@@ -6,10 +6,10 @@
     "name": "Baptiste Roux",
     "username": "mugiwara2b",
     "title": "FM",
-    "followers": 86,
+    "followers": 89,
     "country": "https://api.chess.com/pub/country/PS",
     "location": "nowhere",
-    "last_online": 1734182083,
+    "last_online": 1741654660,
     "joined": 1333383257,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2134,
-            "date": 1729503967,
+            "date": 1741253993,
             "rd": 118
         },
         "best": {
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2453,
-            "date": 1734123617,
-            "rd": 37
+            "rating": 2412,
+            "date": 1741685437,
+            "rd": 32
         },
         "best": {
             "rating": 2572,
@@ -83,26 +83,26 @@
             "game": "https://www.chess.com/game/live/118954828361"
         },
         "record": {
-            "win": 1675,
-            "loss": 1424,
-            "draw": 121
+            "win": 1818,
+            "loss": 1600,
+            "draw": 130
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2629,
-            "date": 1734184986,
-            "rd": 28
+            "rating": 2550,
+            "date": 1741654337,
+            "rd": 26
         },
         "best": {
-            "rating": 2678,
-            "date": 1680773635,
+            "rating": 2693,
+            "date": 1736362915,
             "game": "https://www.chess.com/game/live/110515320243"
         },
         "record": {
-            "win": 5967,
-            "loss": 6639,
-            "draw": 893
+            "win": 6214,
+            "loss": 6936,
+            "draw": 939
         }
     },
     "tactics": {

@@ -6,21 +6,16 @@
     "name": "Julien Song",
     "username": "mijuliensong",
     "title": "IM",
-    "followers": 2113,
+    "followers": 3499,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Paris",
-    "last_online": 1734160578,
+    "last_online": 1741704085,
     "joined": 1630407743,
     "status": "premium",
     "is_streamer": true,
-    "twitch_url": "https://twitch.tv/juliensong",
     "verified": false,
     "league": "Elite",
     "streaming_platforms": [
-        {
-            "type": "twitch",
-            "channel_url": "https://twitch.tv/juliensong"
-        },
         {
             "type": "youtube",
             "channel_url": "https://youtube.com/@juliensong"
@@ -42,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1497,
-            "date": 1731852894,
-            "rd": 150
+            "rating": 1437,
+            "date": 1741627028,
+            "rd": 147
         },
         "best": {
             "rating": 1561,
@@ -53,15 +48,15 @@
         },
         "record": {
             "win": 66,
-            "loss": 20,
+            "loss": 21,
             "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1697,
-            "date": 1695069014,
-            "rd": 108
+            "rating": 1314,
+            "date": 1741625870,
+            "rd": 120
         },
         "best": {
             "rating": 1697,
@@ -70,32 +65,32 @@
         },
         "record": {
             "win": 22,
-            "loss": 3,
+            "loss": 9,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2617,
-            "date": 1729713113,
+            "rating": 2613,
+            "date": 1741608550,
             "rd": 49
         },
         "best": {
-            "rating": 2617,
-            "date": 1689536191,
+            "rating": 2622,
+            "date": 1737471009,
             "game": "https://www.chess.com/game/live/57425188091"
         },
         "record": {
-            "win": 597,
-            "loss": 324,
-            "draw": 79
+            "win": 604,
+            "loss": 330,
+            "draw": 80
         }
     },
     "fide": 2388,
     "tactics": {
         "highest": {
-            "rating": 3741,
-            "date": 1715672838
+            "rating": 3744,
+            "date": 1738326211
         },
         "lowest": {
             "rating": 412,

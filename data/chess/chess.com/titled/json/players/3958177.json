@@ -6,14 +6,14 @@
     "name": "Vladimir Seliverstov",
     "username": "keranke",
     "title": "IM",
-    "followers": 1879,
+    "followers": 1972,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734168214,
+    "last_online": 1741473233,
     "joined": 1284134580,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2888,
-            "date": 1733729318,
-            "rd": 41
+            "rating": 2872,
+            "date": 1740755259,
+            "rd": 48
         },
         "best": {
             "rating": 2931,
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/1628853576"
         },
         "record": {
-            "win": 8600,
-            "loss": 7138,
-            "draw": 896
+            "win": 8633,
+            "loss": 7177,
+            "draw": 900
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2966,
-            "date": 1734177243,
-            "rd": 26
+            "rating": 2942,
+            "date": 1741474085,
+            "rd": 41
         },
         "best": {
             "rating": 3045,
             "date": 1727469968,
-            "game": "https://www.chess.com/game/live/127821572603"
+            "game": "https://www.chess.com/game/live/128424805243"
         },
         "record": {
-            "win": 7177,
-            "loss": 6208,
-            "draw": 1209
+            "win": 7271,
+            "loss": 6317,
+            "draw": 1221
         }
     },
     "fide": 2455,

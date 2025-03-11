@@ -6,9 +6,9 @@
     "name": "Wian Schutte",
     "username": "hittingrookbottom",
     "title": "FM",
-    "followers": 86,
+    "followers": 88,
     "country": "https://api.chess.com/pub/country/ZA",
-    "last_online": 1727439424,
+    "last_online": 1741339533,
     "joined": 1601741360,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2004,
-            "date": 1717700715,
+            "date": 1740413402,
             "rd": 49
         },
         "best": {
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2031,
-            "date": 1714496775,
+            "date": 1741019741,
             "rd": 72
         },
         "best": {

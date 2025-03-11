@@ -6,14 +6,15 @@
     "name": "Richmond Phiri",
     "username": "imrichbestest",
     "title": "IM",
-    "followers": 61,
+    "followers": 62,
     "country": "https://api.chess.com/pub/country/ZM",
     "location": "lusaka",
-    "last_online": 1690218920,
+    "last_online": 1740484169,
     "joined": 1408631326,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,43 +35,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1892,
-            "date": 1596476642,
-            "rd": 182
+            "rating": 2259,
+            "date": 1739218744,
+            "rd": 101
         },
         "best": {
-            "rating": 2108,
-            "date": 1481118675,
-            "game": "https://www.chess.com/game/live/1842719960"
+            "rating": 2291,
+            "date": 1739217937,
+            "game": "https://www.chess.com/game/live/132956356295"
         },
         "record": {
-            "win": 14,
-            "loss": 24,
-            "draw": 1
+            "win": 22,
+            "loss": 26,
+            "draw": 2
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2408,
-            "date": 1596715225,
-            "rd": 98
+            "rating": 2330,
+            "date": 1740494925,
+            "rd": 31
         },
         "best": {
-            "rating": 2418,
-            "date": 1479392940,
-            "game": "https://www.chess.com/game/live/1810621085"
+            "rating": 2523,
+            "date": 1739019270,
+            "game": "https://www.chess.com/game/live/132836403167"
         },
         "record": {
-            "win": 2772,
-            "loss": 2316,
-            "draw": 246
+            "win": 2839,
+            "loss": 2387,
+            "draw": 251
         }
     },
     "fide": 2323,
     "tactics": {
         "highest": {
-            "rating": 2781,
-            "date": 1512409657
+            "rating": 2958,
+            "date": 1738698624
         },
         "lowest": {
             "rating": 1364,

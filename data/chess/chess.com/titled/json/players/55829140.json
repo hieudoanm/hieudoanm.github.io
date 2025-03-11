@@ -6,9 +6,9 @@
     "name": "Giannis Kalogeris",
     "username": "skoularikii",
     "title": "IM",
-    "followers": 130,
+    "followers": 132,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1733757064,
+    "last_online": 1741702543,
     "joined": 1547231666,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2602,
-            "date": 1733766931,
-            "rd": 44
+            "rating": 2710,
+            "date": 1741299255,
+            "rd": 35
         },
         "best": {
-            "rating": 2873,
-            "date": 1721603955,
+            "rating": 2889,
+            "date": 1737655829,
             "game": "https://www.chess.com/game/live/112890662637"
         },
         "record": {
-            "win": 3452,
-            "loss": 3187,
-            "draw": 414
+            "win": 3729,
+            "loss": 3462,
+            "draw": 455
         }
     },
     "tactics": {

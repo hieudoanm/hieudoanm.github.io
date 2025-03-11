@@ -6,10 +6,10 @@
     "name": "Patrascu Catalin",
     "username": "catalin009",
     "title": "FM",
-    "followers": 54,
+    "followers": 56,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "focsani",
-    "last_online": 1734119023,
+    "last_online": 1740988519,
     "joined": 1403030784,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2532,
-            "date": 1733676482,
-            "rd": 36
+            "rating": 2547,
+            "date": 1741700462,
+            "rd": 34
         },
         "best": {
             "rating": 2657,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/126982139799"
         },
         "record": {
-            "win": 2523,
-            "loss": 2053,
-            "draw": 335
+            "win": 2641,
+            "loss": 2143,
+            "draw": 358
         }
     },
     "tactics": {

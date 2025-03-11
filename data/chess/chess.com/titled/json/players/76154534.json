@@ -6,10 +6,10 @@
     "name": "Yekaterina Kusluvan",
     "username": "yek94",
     "title": "WFM",
-    "followers": 78,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "\u0421\u0442\u0430\u043c\u0431\u0443\u043b",
-    "last_online": 1734099670,
+    "last_online": 1741690908,
     "joined": 1586440979,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1897,
-            "date": 1732428888,
-            "rd": 65
+            "rating": 1906,
+            "date": 1734621366,
+            "rd": 70
         },
         "best": {
             "rating": 1920,
@@ -64,7 +64,7 @@
             "game": "https://www.chess.com/game/live/101055231167"
         },
         "record": {
-            "win": 344,
+            "win": 345,
             "loss": 163,
             "draw": 19
         }

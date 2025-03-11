@@ -6,9 +6,9 @@
     "name": "Egor Kurchenko",
     "username": "yegoryoch",
     "title": "FM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/KP",
-    "last_online": 1734073656,
+    "last_online": 1738684756,
     "joined": 1667163193,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2511,
-            "date": 1729416421,
-            "rd": 49
+            "rating": 2489,
+            "date": 1741331301,
+            "rd": 53
         },
         "best": {
             "rating": 2626,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/69973611033"
         },
         "record": {
-            "win": 94,
-            "loss": 74,
+            "win": 96,
+            "loss": 78,
             "draw": 8
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2506,
-            "date": 1734074810,
-            "rd": 48
+            "rating": 2597,
+            "date": 1741522623,
+            "rd": 46
         },
         "best": {
             "rating": 2598,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/119740842347"
         },
         "record": {
-            "win": 188,
-            "loss": 152,
-            "draw": 15
+            "win": 217,
+            "loss": 173,
+            "draw": 19
         }
     },
     "fide": 2258,
     "tactics": {
         "highest": {
-            "rating": 3669,
-            "date": 1725948883
+            "rating": 3722,
+            "date": 1737640134
         },
         "lowest": {
             "rating": 1012,

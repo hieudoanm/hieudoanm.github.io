@@ -6,10 +6,10 @@
     "name": "Wojtek Sochacki",
     "username": "mylenefarmer",
     "title": "IM",
-    "followers": 94,
+    "followers": 100,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Villejuif",
-    "last_online": 1722015944,
+    "last_online": 1741446948,
     "joined": 1306791757,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2501,
-            "date": 1721610620,
-            "rd": 44
+            "rating": 2545,
+            "date": 1741478366,
+            "rd": 40
         },
         "best": {
             "rating": 2689,
@@ -76,16 +76,16 @@
             "game": "https://www.chess.com/game/live/76517421145"
         },
         "record": {
-            "win": 1657,
-            "loss": 1357,
-            "draw": 210
+            "win": 1706,
+            "loss": 1397,
+            "draw": 218
         }
     },
     "fide": 2320,
     "tactics": {
         "highest": {
-            "rating": 3245,
-            "date": 1721532156
+            "rating": 3247,
+            "date": 1741475851
         },
         "lowest": {
             "rating": 746,

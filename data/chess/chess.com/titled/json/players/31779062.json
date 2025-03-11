@@ -6,10 +6,10 @@
     "name": "Daniel Gong",
     "username": "itheonlyme",
     "title": "FM",
-    "followers": 285,
+    "followers": 299,
     "country": "https://api.chess.com/pub/country/NZ",
     "location": "Auckland",
-    "last_online": 1734155656,
+    "last_online": 1741698509,
     "joined": 1482349728,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2367,
-            "date": 1731342476,
-            "rd": 84
+            "rating": 2371,
+            "date": 1737596954,
+            "rd": 82
         },
         "best": {
             "rating": 2575,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/84857586701"
         },
         "record": {
-            "win": 1674,
-            "loss": 1763,
-            "draw": 141
+            "win": 1676,
+            "loss": 1765,
+            "draw": 142
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2552,
-            "date": 1734068846,
-            "rd": 36
+            "rating": 2481,
+            "date": 1741698872,
+            "rd": 34
         },
         "best": {
             "rating": 2593,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/93440964685"
         },
         "record": {
-            "win": 3494,
-            "loss": 3654,
-            "draw": 582
+            "win": 3606,
+            "loss": 3782,
+            "draw": 613
         }
     },
     "tactics": {

@@ -8,7 +8,7 @@
     "title": "CM",
     "followers": 57,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733379635,
+    "last_online": 1741571435,
     "joined": 1483392479,
     "status": "premium",
     "is_streamer": false,
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2526,
-            "date": 1731905221,
+            "date": 1741577812,
             "rd": 49
         },
         "best": {

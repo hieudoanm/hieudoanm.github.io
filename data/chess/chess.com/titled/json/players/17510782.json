@@ -6,31 +6,30 @@
     "name": "Gabriel Berrios Echevarria",
     "username": "lightx3d",
     "title": "FM",
-    "followers": 25,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/PR",
     "location": "Dallas",
-    "last_online": 1734139521,
+    "last_online": 1737209234,
     "joined": 1401537471,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
             "rating": 2567,
-            "date": 1734184147,
-            "rd": 37
+            "date": 1736121068
         },
         "best": {
-            "rating": 2580,
-            "date": 1734183706,
-            "game": "https://www.chess.com/game/live/127922418305"
+            "rating": 2624,
+            "date": 1736107823,
+            "game": "https://www.chess.com/game/live/127957139831"
         },
         "record": {
-            "win": 207,
-            "loss": 133,
-            "draw": 12
+            "win": 295,
+            "loss": 253,
+            "draw": 24
         }
     },
     "chess_blitz": {
@@ -53,8 +52,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2825,
-            "date": 1609696330
+            "rating": 3518,
+            "date": 1736037108
         },
         "lowest": {
             "rating": 410,

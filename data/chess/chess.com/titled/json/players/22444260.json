@@ -6,10 +6,10 @@
     "name": "Marcelo Villalba",
     "username": "boasovietica",
     "title": "IM",
-    "followers": 564,
+    "followers": 571,
     "country": "https://api.chess.com/pub/country/PY",
     "location": "Asuncion",
-    "last_online": 1734029072,
+    "last_online": 1740957642,
     "joined": 1431972449,
     "status": "premium",
     "is_streamer": true,
@@ -61,7 +61,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2346,
-            "date": 1730786861,
+            "date": 1736560874,
             "rd": 82
         },
         "best": {
@@ -77,9 +77,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2512,
-            "date": 1734029298,
-            "rd": 31
+            "rating": 2499,
+            "date": 1740959869,
+            "rd": 41
         },
         "best": {
             "rating": 2728,
@@ -87,9 +87,9 @@
             "game": "https://www.chess.com/game/live/90688872547"
         },
         "record": {
-            "win": 4863,
-            "loss": 4293,
-            "draw": 857
+            "win": 4906,
+            "loss": 4335,
+            "draw": 869
         }
     },
     "fide": 0,

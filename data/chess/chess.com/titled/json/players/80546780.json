@@ -6,9 +6,9 @@
     "name": "Svitlana Gonchar",
     "username": "telez66",
     "title": "WCM",
-    "followers": 1,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1725692182,
+    "last_online": 1741266921,
     "joined": 1590485786,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1382,
-            "date": 1720563087,
-            "rd": 131
+            "rating": 1457,
+            "date": 1741276532,
+            "rd": 107
         },
         "best": {
             "rating": 1712,
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/16904844765"
         },
         "record": {
-            "win": 123,
-            "loss": 100,
+            "win": 127,
+            "loss": 102,
             "draw": 17
         }
     },

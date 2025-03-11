@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/thebalernobull",
     "username": "thebalernobull",
     "title": "FM",
-    "followers": 110,
+    "followers": 114,
     "country": "https://api.chess.com/pub/country/XS",
-    "last_online": 1734115645,
+    "last_online": 1741454560,
     "joined": 1310023289,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2093,
-            "date": 1734180907,
-            "rd": 65
+            "rating": 2120,
+            "date": 1741693603,
+            "rd": 61
         },
         "best": {
             "rating": 2350,
@@ -26,16 +26,16 @@
             "game": "https://www.chess.com/game/daily/222173452"
         },
         "record": {
-            "win": 2177,
-            "loss": 682,
-            "draw": 1086,
-            "time_per_move": 165443,
-            "timeout_percent": 4
+            "win": 2195,
+            "loss": 688,
+            "draw": 1091,
+            "time_per_move": 165811,
+            "timeout_percent": 3
         },
         "tournament": {
-            "points": 425,
+            "points": 57,
             "withdraw": 0,
-            "count": 6,
+            "count": 3,
             "highest_finish": 1
         }
     },
@@ -54,13 +54,13 @@
             "win": 34,
             "loss": 8,
             "draw": 3,
-            "time_per_move": 165443,
+            "time_per_move": 165811,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 425,
+            "points": 57,
             "withdraw": 0,
-            "count": 6,
+            "count": 3,
             "highest_finish": 1
         }
     },

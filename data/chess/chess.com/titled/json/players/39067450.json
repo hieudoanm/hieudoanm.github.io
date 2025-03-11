@@ -8,7 +8,7 @@
     "title": "FM",
     "followers": 18,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733526010,
+    "last_online": 1741603045,
     "joined": 1506786507,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1371,
-            "date": 1734009161,
-            "rd": 76
+            "rating": 1376,
+            "date": 1738148058,
+            "rd": 272
         },
         "best": {
             "rating": 1600,
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/206449400"
         },
         "record": {
-            "win": 75,
+            "win": 76,
             "loss": 40,
             "draw": 1,
-            "time_per_move": 107017,
+            "time_per_move": 105819,
             "timeout_percent": 0
         }
     },
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2627,
-            "date": 1732190067,
-            "rd": 45
+            "rating": 2631,
+            "date": 1736333987,
+            "rd": 49
         },
         "best": {
             "rating": 2709,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/107546578437"
         },
         "record": {
-            "win": 1262,
-            "loss": 1230,
+            "win": 1263,
+            "loss": 1231,
             "draw": 173
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2569,
-            "date": 1733528015,
-            "rd": 36
+            "rating": 2645,
+            "date": 1741603678,
+            "rd": 42
         },
         "best": {
             "rating": 2729,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/118613864815"
         },
         "record": {
-            "win": 2771,
-            "loss": 2915,
-            "draw": 492
+            "win": 2818,
+            "loss": 2955,
+            "draw": 502
         }
     },
     "fide": 2357,

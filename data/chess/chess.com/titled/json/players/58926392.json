@@ -6,7 +6,7 @@
     "name": "Antoni Radzimski",
     "username": "antek_radzimski",
     "title": "CM",
-    "followers": 114,
+    "followers": 115,
     "country": "https://api.chess.com/pub/country/PL",
     "last_online": 1727212142,
     "joined": 1553418011,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 948,
-            "date": 1722945834,
+            "date": 1738661360,
             "rd": 97
         },
         "best": {

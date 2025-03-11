@@ -6,7 +6,7 @@
     "title": "WCM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733679265,
+    "last_online": 1735848326,
     "joined": 1703850813,
     "status": "premium",
     "is_streamer": false,
@@ -49,8 +49,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2406,
-            "date": 1730901357
+            "rating": 2419,
+            "date": 1735776730
         },
         "lowest": {
             "rating": 800,
@@ -59,8 +59,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 37,
-            "score": 34
+            "total_attempts": 44,
+            "score": 42
         }
     }
 }

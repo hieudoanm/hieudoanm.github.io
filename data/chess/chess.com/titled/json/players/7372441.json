@@ -9,7 +9,7 @@
     "followers": 39,
     "country": "https://api.chess.com/pub/country/TH",
     "location": "Bangkok",
-    "last_online": 1730347514,
+    "last_online": 1741336643,
     "joined": 1335109610,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2415,
-            "date": 1704634862,
-            "rd": 129
+            "rating": 2438,
+            "date": 1739904143,
+            "rd": 88
         },
         "best": {
             "rating": 2458,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/13432384749"
         },
         "record": {
-            "win": 2096,
-            "loss": 1741,
-            "draw": 271
+            "win": 2100,
+            "loss": 1747,
+            "draw": 273
         }
     },
     "fide": 2306,

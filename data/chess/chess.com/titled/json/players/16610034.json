@@ -1,15 +1,13 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/16610034.e7a5f56b.200x200o.fbe5565a2c32.jpg",
     "player_id": 16610034,
     "@id": "https://api.chess.com/pub/player/alex1531",
     "url": "https://www.chess.com/member/alex1531",
     "name": "Alexandru Calin",
     "username": "alex1531",
     "title": "FM",
-    "followers": 70,
-    "country": "https://api.chess.com/pub/country/IN",
-    "location": "Bangalore",
-    "last_online": 1734179554,
+    "followers": 72,
+    "country": "https://api.chess.com/pub/country/RO",
+    "last_online": 1741176638,
     "joined": 1395755655,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +50,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2494,
-            "date": 1721218967,
-            "rd": 55
+            "rating": 2499,
+            "date": 1741104933,
+            "rd": 48
         },
         "best": {
             "rating": 2573,
             "date": 1614715152,
-            "game": "https://www.chess.com/game/live/14492188865"
+            "game": "https://www.chess.com/game/live/131818854349"
         },
         "record": {
-            "win": 398,
-            "loss": 327,
-            "draw": 70
+            "win": 423,
+            "loss": 361,
+            "draw": 74
         }
     },
     "fide": 2200,
@@ -80,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 56,
-            "score": 53
+            "total_attempts": 66,
+            "score": 63
         }
     }
 }

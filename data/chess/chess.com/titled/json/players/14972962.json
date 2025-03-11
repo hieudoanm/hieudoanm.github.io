@@ -5,9 +5,9 @@
     "name": "Matthia Bach",
     "username": "mbneu",
     "title": "FM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734114697,
+    "last_online": 1741629701,
     "joined": 1386757456,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2263,
-            "date": 1734037094,
-            "rd": 36
+            "rating": 2250,
+            "date": 1741640352,
+            "rd": 29
         },
         "best": {
             "rating": 2478,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/21233490613"
         },
         "record": {
-            "win": 10847,
-            "loss": 10880,
-            "draw": 1474
+            "win": 11194,
+            "loss": 11202,
+            "draw": 1515
         }
     },
     "tactics": {

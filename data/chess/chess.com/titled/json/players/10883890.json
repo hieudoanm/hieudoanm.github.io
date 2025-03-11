@@ -8,7 +8,7 @@
     "followers": 5,
     "country": "https://api.chess.com/pub/country/BE",
     "location": "Antwerp",
-    "last_online": 1734121327,
+    "last_online": 1737496089,
     "joined": 1361343752,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2306,
-            "date": 1733270839,
-            "rd": 99
+            "rating": 2318,
+            "date": 1737499057,
+            "rd": 90
         },
         "best": {
             "rating": 2569,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/5080601758"
         },
         "record": {
-            "win": 56,
-            "loss": 85,
-            "draw": 14
+            "win": 57,
+            "loss": 90,
+            "draw": 15
         }
     },
     "tactics": {

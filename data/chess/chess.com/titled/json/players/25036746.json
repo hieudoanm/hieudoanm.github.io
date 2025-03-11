@@ -5,10 +5,10 @@
     "name": "Ganbold Odondoo",
     "username": "toligor",
     "title": "IM",
-    "followers": 17,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/MN",
     "location": "San Francisco",
-    "last_online": 1733787178,
+    "last_online": 1738778619,
     "joined": 1447362117,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1945,
-            "date": 1569658714,
-            "rd": 65
+            "rating": 2178,
+            "date": 1737242929,
+            "rd": 37
         },
         "best": {
-            "rating": 1795,
-            "date": 1569658714,
-            "game": "https://www.chess.com/game/live/3510880147"
+            "rating": 2193,
+            "date": 1737169785,
+            "game": "https://www.chess.com/game/live/130973385945"
         },
         "record": {
-            "win": 91,
-            "loss": 35,
-            "draw": 1
+            "win": 144,
+            "loss": 72,
+            "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2594,
-            "date": 1734162741,
-            "rd": 29
+            "rating": 2638,
+            "date": 1741545830,
+            "rd": 28
         },
         "best": {
             "rating": 2638,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/4538865837"
         },
         "record": {
-            "win": 7202,
-            "loss": 5959,
-            "draw": 1024
+            "win": 7415,
+            "loss": 6159,
+            "draw": 1077
         }
     },
     "fide": 0,

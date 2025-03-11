@@ -6,9 +6,9 @@
     "name": "Jakub Luberanski",
     "username": "kubal123",
     "title": "CM",
-    "followers": 28,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733137879,
+    "last_online": 1739963220,
     "joined": 1584718774,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 983,
-            "date": 1733904146,
+            "date": 1736498263,
             "rd": 276
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 98435,
+            "time_per_move": 120344,
             "timeout_percent": 0
         }
     },
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2406,
-            "date": 1733904438,
-            "rd": 66
+            "rating": 2321,
+            "date": 1737649856,
+            "rd": 48
         },
         "best": {
             "rating": 2580,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/94926661013"
         },
         "record": {
-            "win": 428,
-            "loss": 434,
-            "draw": 81
+            "win": 445,
+            "loss": 452,
+            "draw": 85
         }
     },
     "tactics": {

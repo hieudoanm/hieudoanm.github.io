@@ -9,7 +9,7 @@
     "followers": 45,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Medford, MA",
-    "last_online": 1733648269,
+    "last_online": 1741510881,
     "joined": 1237286464,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2415,
-            "date": 1733653647,
+            "date": 1741516150,
             "rd": 220
         },
         "best": {

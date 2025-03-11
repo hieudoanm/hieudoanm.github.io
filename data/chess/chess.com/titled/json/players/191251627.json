@@ -6,9 +6,9 @@
     "name": "Javier Quispe Santacruz",
     "username": "cixper1968",
     "title": "FM",
-    "followers": 3,
+    "followers": 5,
     "country": "https://api.chess.com/pub/country/PE",
-    "last_online": 1734123064,
+    "last_online": 1741646297,
     "joined": 1658848602,
     "status": "premium",
     "is_streamer": false,
@@ -17,26 +17,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2231,
-            "date": 1732827752,
-            "rd": 47
+            "rating": 2157,
+            "date": 1738683423,
+            "rd": 49
         },
         "best": {
             "rating": 2339,
             "date": 1703102072,
-            "game": "https://www.chess.com/game/live/96839973457"
+            "game": "https://www.chess.com/game/live/129591146165"
         },
         "record": {
-            "win": 11,
-            "loss": 14,
-            "draw": 2
+            "win": 13,
+            "loss": 21,
+            "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1692,
-            "date": 1732681462,
-            "rd": 78
+            "rating": 1687,
+            "date": 1739288329,
+            "rd": 92
         },
         "best": {
             "rating": 1902,
@@ -45,31 +45,31 @@
         },
         "record": {
             "win": 54,
-            "loss": 56,
+            "loss": 57,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1917,
-            "date": 1732740596,
-            "rd": 69
+            "rating": 1827,
+            "date": 1741133097,
+            "rd": 58
         },
         "best": {
             "rating": 2250,
             "date": 1681248446,
-            "game": "https://www.chess.com/game/live/87665559671"
+            "game": "https://www.chess.com/game/live/133635541677"
         },
         "record": {
-            "win": 46,
-            "loss": 146,
-            "draw": 9
+            "win": 51,
+            "loss": 226,
+            "draw": 10
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2752,
-            "date": 1731699790
+            "rating": 2917,
+            "date": 1741646343
         },
         "lowest": {
             "rating": 2000,

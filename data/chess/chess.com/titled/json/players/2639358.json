@@ -9,7 +9,7 @@
     "followers": 31,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Kanpur",
-    "last_online": 1734174135,
+    "last_online": 1740142308,
     "joined": 1268654639,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2269,
-            "date": 1711388407,
-            "rd": 81
+            "rating": 2227,
+            "date": 1738948482,
+            "rd": 95
         },
         "best": {
             "rating": 2293,
@@ -83,8 +83,8 @@
             "game": "https://www.chess.com/game/live/87271724425"
         },
         "record": {
-            "win": 234,
-            "loss": 142,
+            "win": 238,
+            "loss": 145,
             "draw": 10
         }
     },
@@ -108,8 +108,8 @@
     "fide": 2390,
     "tactics": {
         "highest": {
-            "rating": 3531,
-            "date": 1724134113
+            "rating": 3536,
+            "date": 1735841533
         },
         "lowest": {
             "rating": 1324,

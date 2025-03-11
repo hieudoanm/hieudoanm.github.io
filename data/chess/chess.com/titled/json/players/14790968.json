@@ -6,10 +6,10 @@
     "name": "Bence Szab\u00f3",
     "username": "fitnessben",
     "title": "IM",
-    "followers": 319,
+    "followers": 326,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734159273,
+    "last_online": 1741595868,
     "joined": 1385899841,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1542,
-            "date": 1703435165,
+            "date": 1735032505,
             "rd": 175
         },
         "best": {
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2225,
-            "date": 1718018709,
+            "date": 1739884296,
             "rd": 274
         },
         "best": {
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2636,
-            "date": 1733776890,
-            "rd": 49
+            "rating": 2572,
+            "date": 1740752751,
+            "rd": 38
         },
         "best": {
             "rating": 2716,
@@ -83,15 +83,15 @@
             "game": "https://www.chess.com/game/live/122293154617"
         },
         "record": {
-            "win": 4246,
-            "loss": 3186,
-            "draw": 424
+            "win": 4277,
+            "loss": 3221,
+            "draw": 427
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2637,
-            "date": 1733233904,
+            "rating": 2645,
+            "date": 1740753557,
             "rd": 49
         },
         "best": {
@@ -100,15 +100,15 @@
             "game": "https://www.chess.com/game/live/78922235179"
         },
         "record": {
-            "win": 710,
+            "win": 711,
             "loss": 422,
-            "draw": 119
+            "draw": 120
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3080,
-            "date": 1728827077
+            "rating": 3167,
+            "date": 1736121458
         },
         "lowest": {
             "rating": 1363,

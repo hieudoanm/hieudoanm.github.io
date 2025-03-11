@@ -6,9 +6,9 @@
     "name": "Roee Aroesti",
     "username": "crazy_eight",
     "title": "FM",
-    "followers": 361,
+    "followers": 386,
     "country": "https://api.chess.com/pub/country/IL",
-    "last_online": 1734095267,
+    "last_online": 1741703911,
     "joined": 1474488214,
     "status": "premium",
     "is_streamer": false,
@@ -35,7 +35,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2553,
-            "date": 1728236013,
+            "date": 1741696491,
             "rd": 49
         },
         "best": {
@@ -51,8 +51,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3043,
-            "date": 1729356289
+            "rating": 3057,
+            "date": 1736354058
         },
         "lowest": {
             "rating": 1404,

@@ -6,9 +6,9 @@
     "name": "Jun Hyeok Lee",
     "username": "leejunhyeok",
     "title": "IM",
-    "followers": 566,
+    "followers": 583,
     "country": "https://api.chess.com/pub/country/KR",
-    "last_online": 1734159279,
+    "last_online": 1741580883,
     "joined": 1336599381,
     "status": "premium",
     "is_streamer": false,
@@ -54,7 +54,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2817,
-            "date": 1725196237,
+            "date": 1740660029,
             "rd": 49
         },
         "best": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2726,
-            "date": 1731818572,
-            "rd": 36
+            "rating": 2781,
+            "date": 1740706876,
+            "rd": 39
         },
         "best": {
             "rating": 2847,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/52115989481"
         },
         "record": {
-            "win": 3508,
-            "loss": 2625,
-            "draw": 763
+            "win": 3550,
+            "loss": 2652,
+            "draw": 772
         }
     },
     "fide": 2426,

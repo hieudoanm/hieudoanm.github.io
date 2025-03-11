@@ -6,10 +6,10 @@
     "name": "Roberto Ignacio Alarcon Bahamondez",
     "username": "pelusiansky",
     "title": "FM",
-    "followers": 139,
+    "followers": 138,
     "country": "https://api.chess.com/pub/country/CL",
     "location": "Talca",
-    "last_online": 1733507280,
+    "last_online": 1738958915,
     "joined": 1457934384,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 723,
-            "date": 1729003033,
+            "date": 1734997171,
             "rd": 197
         },
         "best": {

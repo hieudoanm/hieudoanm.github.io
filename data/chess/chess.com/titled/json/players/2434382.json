@@ -5,9 +5,9 @@
     "name": "Alik Tikranian",
     "username": "alik",
     "title": "FM",
-    "followers": 95,
+    "followers": 99,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734127126,
+    "last_online": 1739658898,
     "joined": 1262532916,
     "status": "premium",
     "is_streamer": false,
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2727,
-            "date": 1725821278,
-            "rd": 32
+            "rating": 2731,
+            "date": 1737058598,
+            "rd": 49
         },
         "best": {
-            "rating": 2727,
-            "date": 1725821278,
+            "rating": 2731,
+            "date": 1737058598,
             "game": "https://www.chess.com/game/live/99625362171"
         },
         "record": {
-            "win": 4227,
+            "win": 4228,
             "loss": 3375,
             "draw": 517
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2550,
-            "date": 1734127469,
-            "rd": 44
+            "rating": 2597,
+            "date": 1741622771,
+            "rd": 47
         },
         "best": {
             "rating": 2588,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/79134702083"
         },
         "record": {
-            "win": 772,
-            "loss": 575,
-            "draw": 95
+            "win": 795,
+            "loss": 589,
+            "draw": 98
         }
     },
     "tactics": {

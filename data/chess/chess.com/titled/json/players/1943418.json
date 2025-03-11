@@ -6,10 +6,10 @@
     "name": "Geordie Derraugh",
     "username": "geordie_derraugh",
     "title": "CM",
-    "followers": 125,
+    "followers": 128,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto",
-    "last_online": 1733989510,
+    "last_online": 1739052047,
     "joined": 1243584213,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2535,
-            "date": 1733446373,
-            "rd": 47
+            "rating": 2536,
+            "date": 1740195227,
+            "rd": 49
         },
         "best": {
             "rating": 2633,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/8283899271"
         },
         "record": {
-            "win": 798,
-            "loss": 627,
+            "win": 800,
+            "loss": 628,
             "draw": 71
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2464,
-            "date": 1733582519,
-            "rd": 39
+            "rating": 2481,
+            "date": 1739053551,
+            "rd": 58
         },
         "best": {
             "rating": 2540,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/21144085719"
         },
         "record": {
-            "win": 728,
-            "loss": 630,
+            "win": 731,
+            "loss": 632,
             "draw": 100
         }
     },

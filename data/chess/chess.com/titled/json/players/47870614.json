@@ -6,10 +6,10 @@
     "name": "Carlos Arturo Fonseca",
     "username": "chescont",
     "title": "FM",
-    "followers": 59,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Boyac\u00e1",
-    "last_online": 1731990058,
+    "last_online": 1741459030,
     "joined": 1531584231,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1770,
-            "date": 1725159121,
-            "rd": 35
+            "rating": 1727,
+            "date": 1734712345,
+            "rd": 67
         },
         "best": {
             "rating": 2098,
@@ -46,15 +46,15 @@
         },
         "record": {
             "win": 89,
-            "loss": 86,
+            "loss": 89,
             "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2081,
-            "date": 1734129860,
-            "rd": 29
+            "rating": 2275,
+            "date": 1741697783,
+            "rd": 31
         },
         "best": {
             "rating": 2320,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/102020135621"
         },
         "record": {
-            "win": 5216,
-            "loss": 3792,
-            "draw": 607
+            "win": 5431,
+            "loss": 3950,
+            "draw": 628
         }
     },
     "tactics": {

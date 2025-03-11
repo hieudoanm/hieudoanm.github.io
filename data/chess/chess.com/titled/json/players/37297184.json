@@ -6,7 +6,7 @@
     "title": "CM",
     "followers": 3,
     "country": "https://api.chess.com/pub/country/CL",
-    "last_online": 1726177429,
+    "last_online": 1737131885,
     "joined": 1500991296,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +15,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1714,
-            "date": 1645738738,
-            "rd": 84
+            "rating": 1563,
+            "date": 1737133852,
+            "rd": 158
         },
         "best": {
             "rating": 1756,
@@ -26,7 +26,7 @@
         },
         "record": {
             "win": 15,
-            "loss": 9,
+            "loss": 11,
             "draw": 0
         }
     },

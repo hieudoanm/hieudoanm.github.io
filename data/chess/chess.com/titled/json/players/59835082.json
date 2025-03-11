@@ -8,7 +8,7 @@
     "title": "CM",
     "followers": 123,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733022332,
+    "last_online": 1740544443,
     "joined": 1555300939,
     "status": "premium",
     "is_streamer": false,
@@ -64,10 +64,6 @@
         "best": {
             "total_attempts": 58,
             "score": 55
-        },
-        "daily": {
-            "total_attempts": 49,
-            "score": 47
         }
     }
 }

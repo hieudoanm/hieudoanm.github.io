@@ -6,9 +6,9 @@
     "name": "Isuru Alahakoon",
     "username": "isurualahakoon",
     "title": "FM",
-    "followers": 369,
+    "followers": 391,
     "country": "https://api.chess.com/pub/country/LK",
-    "last_online": 1734099633,
+    "last_online": 1741669986,
     "joined": 1242363635,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2496,
-            "date": 1733854693,
-            "rd": 26
+            "rating": 2483,
+            "date": 1741638265,
+            "rd": 28
         },
         "best": {
             "rating": 2617,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/118532864183"
         },
         "record": {
-            "win": 2306,
-            "loss": 2183,
-            "draw": 183
+            "win": 2654,
+            "loss": 2520,
+            "draw": 204
         }
     },
     "tactics": {

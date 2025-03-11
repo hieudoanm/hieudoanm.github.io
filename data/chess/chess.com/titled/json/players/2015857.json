@@ -9,7 +9,7 @@
     "followers": 68,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Bergen",
-    "last_online": 1733483990,
+    "last_online": 1739896075,
     "joined": 1246912940,
     "status": "premium",
     "is_streamer": false,
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2195,
-            "date": 1734033015,
-            "rd": 57
+            "rating": 2200,
+            "date": 1741636805,
+            "rd": 37
         },
         "best": {
             "rating": 2346,
@@ -100,16 +100,16 @@
             "game": "https://www.chess.com/game/live/35575678673"
         },
         "record": {
-            "win": 4858,
-            "loss": 3563,
-            "draw": 639
+            "win": 4938,
+            "loss": 3628,
+            "draw": 647
         }
     },
     "fide": 2307,
     "tactics": {
         "highest": {
-            "rating": 3029,
-            "date": 1728118756
+            "rating": 3033,
+            "date": 1735209108
         },
         "lowest": {
             "rating": 1142,

@@ -6,10 +6,10 @@
     "name": "Jorge Leon Oquendo",
     "username": "amateurchess20",
     "title": "FM",
-    "followers": 97,
+    "followers": 98,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Jacksonville",
-    "last_online": 1734127414,
+    "last_online": 1741571931,
     "joined": 1458749586,
     "status": "premium",
     "is_streamer": false,
@@ -55,8 +55,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2627,
-            "date": 1734129892,
-            "rd": 41
+            "date": 1741663220,
+            "rd": 45
         },
         "best": {
             "rating": 2741,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/83454944127"
         },
         "record": {
-            "win": 4757,
-            "loss": 3696,
-            "draw": 574
+            "win": 4862,
+            "loss": 3782,
+            "draw": 592
         }
     },
     "fide": 2387,

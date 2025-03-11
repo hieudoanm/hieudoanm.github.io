@@ -6,9 +6,9 @@
     "name": "Jose Sande",
     "username": "josesande",
     "title": "FM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733171201,
+    "last_online": 1741548322,
     "joined": 1480437491,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2064,
-            "date": 1730294518,
-            "rd": 57
+            "rating": 2097,
+            "date": 1740697832,
+            "rd": 48
         },
         "best": {
             "rating": 2185,
@@ -27,26 +27,26 @@
             "game": "https://www.chess.com/game/live/114989951129"
         },
         "record": {
-            "win": 105,
-            "loss": 99,
+            "win": 127,
+            "loss": 116,
             "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2287,
-            "date": 1734040857,
-            "rd": 28
+            "rating": 2371,
+            "date": 1741647282,
+            "rd": 26
         },
         "best": {
-            "rating": 2429,
-            "date": 1683033279,
-            "game": "https://www.chess.com/game/live/121211440887"
+            "rating": 2528,
+            "date": 1735570573,
+            "game": "https://www.chess.com/game/live/128988796827"
         },
         "record": {
-            "win": 2215,
-            "loss": 2063,
-            "draw": 310
+            "win": 2520,
+            "loss": 2365,
+            "draw": 358
         }
     },
     "tactics": {

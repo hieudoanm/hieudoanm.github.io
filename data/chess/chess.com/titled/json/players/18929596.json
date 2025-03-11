@@ -6,10 +6,10 @@
     "name": "Ama Edoh",
     "username": "michou228",
     "title": "WCM",
-    "followers": 72,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/TG",
     "location": "Lom\u00e9",
-    "last_online": 1734023365,
+    "last_online": 1737414280,
     "joined": 1410901381,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1170,
-            "date": 1734185729,
-            "rd": 103
+            "rating": 1149,
+            "date": 1741556545,
+            "rd": 106
         },
         "best": {
             "rating": 1403,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/571756765"
         },
         "record": {
-            "win": 84,
-            "loss": 70,
+            "win": 88,
+            "loss": 71,
             "draw": 8,
-            "time_per_move": 95580,
+            "time_per_move": 93908,
             "timeout_percent": 0
         }
     },
@@ -45,7 +45,7 @@
             "win": 0,
             "loss": 2,
             "draw": 2,
-            "time_per_move": 95580,
+            "time_per_move": 93908,
             "timeout_percent": 0
         }
     },
@@ -68,9 +68,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 797,
-            "date": 1734185863,
-            "rd": 17
+            "rating": 877,
+            "date": 1741697148,
+            "rd": 23
         },
         "best": {
             "rating": 1409,
@@ -78,16 +78,16 @@
             "game": "https://www.chess.com/game/live/5638673672"
         },
         "record": {
-            "win": 4480,
-            "loss": 4494,
-            "draw": 292
+            "win": 5736,
+            "loss": 5735,
+            "draw": 415
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 895,
-            "date": 1729120441,
-            "rd": 31
+            "rating": 903,
+            "date": 1739041422,
+            "rd": 57
         },
         "best": {
             "rating": 1223,
@@ -96,7 +96,7 @@
         },
         "record": {
             "win": 737,
-            "loss": 715,
+            "loss": 716,
             "draw": 61
         }
     },

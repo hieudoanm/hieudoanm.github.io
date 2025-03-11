@@ -7,7 +7,7 @@
     "title": "WCM",
     "followers": 16,
     "country": "https://api.chess.com/pub/country/EC",
-    "last_online": 1733862871,
+    "last_online": 1741661888,
     "joined": 1597778920,
     "status": "premium",
     "is_streamer": false,
@@ -33,43 +33,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1794,
-            "date": 1727488985,
-            "rd": 73
+            "rating": 2011,
+            "date": 1741662011,
+            "rd": 32
         },
         "best": {
-            "rating": 2001,
-            "date": 1609186223,
-            "game": "https://www.chess.com/game/live/6082900962"
+            "rating": 2187,
+            "date": 1738292392,
+            "game": "https://www.chess.com/game/live/130960744503"
         },
         "record": {
-            "win": 55,
-            "loss": 55,
-            "draw": 2
+            "win": 214,
+            "loss": 275,
+            "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2022,
-            "date": 1733265042,
-            "rd": 96
+            "rating": 2065,
+            "date": 1740712647,
+            "rd": 55
         },
         "best": {
-            "rating": 2097,
-            "date": 1702795485,
+            "rating": 2103,
+            "date": 1738081664,
             "game": "https://www.chess.com/game/live/103095067439"
         },
         "record": {
-            "win": 402,
-            "loss": 311,
+            "win": 426,
+            "loss": 344,
             "draw": 39
         }
     },
     "fide": 1912,
     "tactics": {
         "highest": {
-            "rating": 1988,
-            "date": 1700111778
+            "rating": 2435,
+            "date": 1740096564
         },
         "lowest": {
             "rating": 1000,
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 37,
-            "score": 34
+            "total_attempts": 40,
+            "score": 37
         }
     }
 }

@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/211149691.94a2b671.200x200o.526f53c355c5.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/211149691.d9d7185b.200x200o.500e7db728d9.jpg",
     "player_id": 211149691,
     "@id": "https://api.chess.com/pub/player/root_21",
     "url": "https://www.chess.com/member/Root_21",
     "name": "Rohit S",
     "username": "root_21",
     "title": "FM",
-    "followers": 17,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1732764071,
+    "last_online": 1741591183,
     "joined": 1670434662,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2538,
-            "date": 1730303454,
-            "rd": 49
+            "rating": 2590,
+            "date": 1741015389,
+            "rd": 42
         },
         "best": {
             "rating": 2728,
@@ -44,26 +44,26 @@
             "game": "https://www.chess.com/game/live/68236991153"
         },
         "record": {
-            "win": 255,
-            "loss": 251,
-            "draw": 40
+            "win": 273,
+            "loss": 263,
+            "draw": 41
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2601,
-            "date": 1730823494,
-            "rd": 49
+            "rating": 2761,
+            "date": 1741606557,
+            "rd": 25
         },
         "best": {
-            "rating": 2764,
-            "date": 1716699264,
-            "game": "https://www.chess.com/game/live/113089231289"
+            "rating": 2851,
+            "date": 1739454679,
+            "game": "https://www.chess.com/game/live/133033751969"
         },
         "record": {
-            "win": 663,
-            "loss": 638,
-            "draw": 108
+            "win": 875,
+            "loss": 852,
+            "draw": 144
         }
     },
     "tactics": {

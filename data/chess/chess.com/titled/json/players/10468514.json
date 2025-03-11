@@ -6,10 +6,10 @@
     "name": "Dalton Perrine",
     "username": "mattydperrine",
     "title": "FM",
-    "followers": 2152,
+    "followers": 2246,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Cleveland, OH",
-    "last_online": 1734169655,
+    "last_online": 1741658332,
     "joined": 1358476938,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2192,
-            "date": 1715917931,
+            "date": 1741656436,
             "rd": 330
         },
         "best": {
@@ -31,14 +31,14 @@
             "win": 44,
             "loss": 2,
             "draw": 1,
-            "time_per_move": 17802,
+            "time_per_move": 17790,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2268,
-            "date": 1726855977,
+            "date": 1735266977,
             "rd": 47
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2643,
-            "date": 1733772746,
-            "rd": 33
+            "rating": 2618,
+            "date": 1735798830,
+            "rd": 39
         },
         "best": {
             "rating": 2838,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/106119611407"
         },
         "record": {
-            "win": 5397,
-            "loss": 7323,
-            "draw": 527
+            "win": 5401,
+            "loss": 7331,
+            "draw": 528
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2608,
-            "date": 1734173066,
-            "rd": 26
+            "rating": 2548,
+            "date": 1741608098,
+            "rd": 22
         },
         "best": {
             "rating": 2696,
             "date": 1710036937,
-            "game": "https://www.chess.com/game/live/103775448597"
+            "game": "https://www.chess.com/game/live/128194142339"
         },
         "record": {
-            "win": 6691,
-            "loss": 6978,
-            "draw": 755
+            "win": 7121,
+            "loss": 7459,
+            "draw": 830
         }
     },
     "fide": 2286,

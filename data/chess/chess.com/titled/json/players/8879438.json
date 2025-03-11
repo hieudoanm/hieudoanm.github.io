@@ -6,10 +6,10 @@
     "name": "Amir Hossein Jamshidi",
     "username": "djamir",
     "title": "FM",
-    "followers": 667,
+    "followers": 666,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Tehran",
-    "last_online": 1734008129,
+    "last_online": 1741637487,
     "joined": 1347458233,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2635,
-            "date": 1733772343,
+            "date": 1737995433,
             "rd": 132
         },
         "best": {
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2902,
-            "date": 1733485230,
-            "rd": 46
+            "rating": 2855,
+            "date": 1739529091,
+            "rd": 39
         },
         "best": {
             "rating": 2966,
@@ -83,15 +83,15 @@
             "game": "https://www.chess.com/game/live/96718212511"
         },
         "record": {
-            "win": 12219,
-            "loss": 11027,
-            "draw": 1727
+            "win": 12276,
+            "loss": 11072,
+            "draw": 1736
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2911,
-            "date": 1733948235,
+            "date": 1737996530,
             "rd": 151
         },
         "best": {

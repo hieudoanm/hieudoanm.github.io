@@ -6,10 +6,10 @@
     "name": "Foong Yin Wong",
     "username": "fywong2",
     "title": "FM",
-    "followers": 33,
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Derwood, MD",
-    "last_online": 1734163573,
+    "last_online": 1741664196,
     "joined": 1355103164,
     "status": "premium",
     "is_streamer": false,
@@ -53,8 +53,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2379,
-            "date": 1724283870
+            "rating": 2402,
+            "date": 1739294454
         },
         "lowest": {
             "rating": 2002,
@@ -65,6 +65,10 @@
         "best": {
             "total_attempts": 38,
             "score": 37
+        },
+        "daily": {
+            "total_attempts": 11,
+            "score": 8
         }
     }
 }

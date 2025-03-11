@@ -6,10 +6,10 @@
     "name": "Josue Exposito Amaro",
     "username": "josuexp",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Spain",
-    "last_online": 1733954465,
+    "last_online": 1741192496,
     "joined": 1331502121,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1054,
-            "date": 1684519394,
-            "rd": 141
+            "rating": 1233,
+            "date": 1741193301,
+            "rd": 191
         },
         "best": {
             "rating": 2000,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/78258106313"
         },
         "record": {
-            "win": 42,
+            "win": 43,
             "loss": 17,
             "draw": 33
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2442,
-            "date": 1684520312,
-            "rd": 79
+            "rating": 2355,
+            "date": 1734879207,
+            "rd": 136
         },
         "best": {
             "rating": 2495,
@@ -65,15 +65,15 @@
         },
         "record": {
             "win": 1667,
-            "loss": 1203,
-            "draw": 105
+            "loss": 1204,
+            "draw": 106
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2210,
-            "date": 1722373713,
-            "rd": 202
+            "rating": 2227,
+            "date": 1735999220,
+            "rd": 162
         },
         "best": {
             "rating": 2397,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/3951591312"
         },
         "record": {
-            "win": 611,
-            "loss": 494,
+            "win": 612,
+            "loss": 495,
             "draw": 49
         }
     },
@@ -99,8 +99,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 23,
-            "score": 22
+            "total_attempts": 30,
+            "score": 29
         }
     }
 }

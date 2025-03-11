@@ -6,10 +6,10 @@
     "name": "Teodor Anton",
     "username": "tudoranton",
     "title": "IM",
-    "followers": 110,
+    "followers": 113,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Cluj-Napoca",
-    "last_online": 1734008989,
+    "last_online": 1740318966,
     "joined": 1313510327,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1389,
-            "date": 1704279482,
+            "date": 1739699088,
             "rd": 229
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 3,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 97159,
+            "time_per_move": 96622,
             "timeout_percent": 0
         }
     },
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2512,
-            "date": 1706652404,
-            "rd": 49
+            "rating": 2477,
+            "date": 1736931268,
+            "rd": 48
         },
         "best": {
             "rating": 2637,
@@ -82,7 +82,7 @@
         },
         "record": {
             "win": 3420,
-            "loss": 2633,
+            "loss": 2637,
             "draw": 516
         }
     },

@@ -6,10 +6,10 @@
     "name": "MYRA OLLET",
     "username": "molletgcf",
     "title": "WCM",
-    "followers": 613,
+    "followers": 610,
     "country": "https://api.chess.com/pub/country/GU",
     "location": "Guam",
-    "last_online": 1734053699,
+    "last_online": 1740306218,
     "joined": 1594174452,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1889,
-            "date": 1719709795,
-            "rd": 62
+            "rating": 1814,
+            "date": 1740320853,
+            "rd": 68
         },
         "best": {
             "rating": 1941,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/86443806943"
         },
         "record": {
-            "win": 2247,
-            "loss": 2137,
-            "draw": 360
+            "win": 2252,
+            "loss": 2146,
+            "draw": 362
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1509,
-            "date": 1710582806,
-            "rd": 48
+            "rating": 1488,
+            "date": 1740791881,
+            "rd": 98
         },
         "best": {
             "rating": 1691,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/73133079547"
         },
         "record": {
-            "win": 159,
-            "loss": 125,
-            "draw": 16
+            "win": 160,
+            "loss": 127,
+            "draw": 17
         }
     },
     "tactics": {

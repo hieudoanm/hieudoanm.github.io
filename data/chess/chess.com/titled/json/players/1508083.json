@@ -9,7 +9,7 @@
     "followers": 9,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Miskolc",
-    "last_online": 1734125537,
+    "last_online": 1741463105,
     "joined": 1221763318,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1483,
-            "date": 1734127566,
-            "rd": 59
+            "rating": 1452,
+            "date": 1738860422,
+            "rd": 60
         },
         "best": {
             "rating": 1837,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/3387580593"
         },
         "record": {
-            "win": 118,
-            "loss": 100,
-            "draw": 23
+            "win": 126,
+            "loss": 109,
+            "draw": 24
         }
     },
     "tactics": {

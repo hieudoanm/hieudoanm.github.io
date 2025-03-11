@@ -8,7 +8,7 @@
     "followers": 42,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Hyderabad",
-    "last_online": 1734009629,
+    "last_online": 1741664728,
     "joined": 1522057942,
     "status": "premium",
     "is_streamer": false,
@@ -81,6 +81,10 @@
         "best": {
             "total_attempts": 71,
             "score": 68
+        },
+        "daily": {
+            "total_attempts": 47,
+            "score": 44
         }
     }
 }

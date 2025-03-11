@@ -1,20 +1,20 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75503786.64c06a95.200x200o.83bc81ad984a.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/75503786.994f2b94.200x200o.37196ad2b271.jpg",
     "player_id": 75503786,
     "@id": "https://api.chess.com/pub/player/suleyman_chess06",
     "url": "https://www.chess.com/member/Suleyman_Chess06",
     "name": "Suleyman Suleymanl\u0131",
     "username": "suleyman_chess06",
     "title": "FM",
-    "followers": 234,
+    "followers": 267,
     "country": "https://api.chess.com/pub/country/AZ",
     "location": "Sheki Azerbaijan",
-    "last_online": 1734181308,
+    "last_online": 1741611047,
     "joined": 1585905429,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -68,43 +68,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2782,
-            "date": 1733593618,
-            "rd": 42
+            "rating": 2832,
+            "date": 1740854391,
+            "rd": 28
         },
         "best": {
-            "rating": 2850,
-            "date": 1707754154,
-            "game": "https://www.chess.com/game/live/112206080907"
+            "rating": 2912,
+            "date": 1739041027,
+            "game": "https://www.chess.com/game/live/132779407459"
         },
         "record": {
-            "win": 545,
-            "loss": 453,
-            "draw": 98
+            "win": 679,
+            "loss": 533,
+            "draw": 114
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2716,
-            "date": 1734185297,
-            "rd": 33
+            "rating": 2821,
+            "date": 1741537516,
+            "rd": 27
         },
         "best": {
-            "rating": 2861,
-            "date": 1713722095,
-            "game": "https://www.chess.com/game/live/107539921997"
+            "rating": 2951,
+            "date": 1737029431,
+            "game": "https://www.chess.com/game/live/133437540049"
         },
         "record": {
-            "win": 912,
-            "loss": 667,
-            "draw": 183
+            "win": 1128,
+            "loss": 846,
+            "draw": 230
         }
     },
-    "fide": 2246,
+    "fide": 2305,
     "tactics": {
         "highest": {
-            "rating": 3650,
-            "date": 1733603625
+            "rating": 3666,
+            "date": 1734691866
         },
         "lowest": {
             "rating": 1218,

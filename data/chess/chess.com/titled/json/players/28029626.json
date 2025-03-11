@@ -5,9 +5,9 @@
     "name": "Dmitry Minko",
     "username": "dimonbanan",
     "title": "CM",
-    "followers": 45,
+    "followers": 47,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1734183311,
+    "last_online": 1741527938,
     "joined": 1462297590,
     "status": "premium",
     "is_streamer": false,
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2589,
-            "date": 1734183603,
-            "rd": 37
+            "rating": 2668,
+            "date": 1740931389,
+            "rd": 26
         },
         "best": {
-            "rating": 2699,
-            "date": 1708305314,
+            "rating": 2710,
+            "date": 1740851571,
             "game": "https://www.chess.com/game/live/100725742629"
         },
         "record": {
-            "win": 1928,
-            "loss": 1688,
-            "draw": 338
+            "win": 2043,
+            "loss": 1796,
+            "draw": 358
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2611,
-            "date": 1734120696,
-            "rd": 35
+            "rating": 2607,
+            "date": 1741111629,
+            "rd": 36
         },
         "best": {
             "rating": 2650,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/101578974825"
         },
         "record": {
-            "win": 2116,
-            "loss": 1741,
-            "draw": 356
+            "win": 2189,
+            "loss": 1813,
+            "draw": 373
         }
     },
     "fide": 2247,

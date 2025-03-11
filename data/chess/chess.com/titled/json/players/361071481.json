@@ -4,10 +4,10 @@
     "url": "https://www.chess.com/member/Failinghabit",
     "username": "failinghabit",
     "title": "IM",
-    "followers": 11,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Paris",
-    "last_online": 1734057014,
+    "last_online": 1741165160,
     "joined": 1714795501,
     "status": "premium",
     "is_streamer": false,
@@ -33,19 +33,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2713,
-            "date": 1734061952,
-            "rd": 25
+            "rating": 2782,
+            "date": 1740902802,
+            "rd": 24
         },
         "best": {
-            "rating": 2779,
-            "date": 1732452187,
+            "rating": 2850,
+            "date": 1739435500,
             "game": "https://www.chess.com/game/live/126068967209"
         },
         "record": {
-            "win": 460,
-            "loss": 421,
-            "draw": 67
+            "win": 619,
+            "loss": 570,
+            "draw": 85
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Joel Banawa",
     "username": "jb2mix",
     "title": "IM",
-    "followers": 167,
+    "followers": 169,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York",
-    "last_online": 1734135240,
+    "last_online": 1741554102,
     "joined": 1263174048,
     "status": "premium",
     "is_streamer": false,
@@ -55,7 +55,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2730,
-            "date": 1714215748,
+            "date": 1741554843,
             "rd": 49
         },
         "best": {
@@ -72,7 +72,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2681,
-            "date": 1733848606,
+            "date": 1741554715,
             "rd": 46
         },
         "best": {

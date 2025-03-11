@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/ht1010",
     "username": "ht1010",
     "title": "CM",
-    "followers": 83,
+    "followers": 85,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1732702544,
+    "last_online": 1741422806,
     "joined": 1476881630,
     "status": "premium",
     "is_streamer": false,
@@ -77,8 +77,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 41,
-            "score": 40
+            "total_attempts": 45,
+            "score": 43
         }
     }
 }

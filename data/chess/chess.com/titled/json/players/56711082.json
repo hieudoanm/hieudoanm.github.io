@@ -6,10 +6,10 @@
     "name": "Szidonia Lazarne Vajda",
     "username": "cidonka",
     "title": "IM",
-    "followers": 289,
+    "followers": 288,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1733943345,
+    "last_online": 1741679368,
     "joined": 1548836532,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2307,
-            "date": 1733944999,
-            "rd": 74
+            "rating": 2317,
+            "date": 1741681993,
+            "rd": 47
         },
         "best": {
             "rating": 2406,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/95532101151"
         },
         "record": {
-            "win": 1187,
-            "loss": 958,
-            "draw": 341
+            "win": 1209,
+            "loss": 981,
+            "draw": 344
         }
     },
     "fide": 2360,

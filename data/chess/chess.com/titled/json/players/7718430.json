@@ -8,7 +8,7 @@
     "followers": 163,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "Austin",
-    "last_online": 1734028784,
+    "last_online": 1741623405,
     "joined": 1338256398,
     "status": "premium",
     "is_streamer": false,
@@ -65,8 +65,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2616,
-            "date": 1724352474,
+            "rating": 2631,
+            "date": 1737172454,
             "rd": 48
         },
         "best": {
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/21414664531"
         },
         "record": {
-            "win": 9791,
+            "win": 9792,
             "loss": 9030,
-            "draw": 2130
+            "draw": 2132
         }
     },
     "fide": 2295,

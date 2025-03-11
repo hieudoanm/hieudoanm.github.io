@@ -5,11 +5,11 @@
     "url": "https://www.chess.com/member/Frankie_Badacsonyi",
     "name": "Frankie Badacsonyi",
     "username": "frankie_badacsonyi",
-    "title": "CM",
-    "followers": 35,
+    "title": "FM",
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "London",
-    "last_online": 1734182122,
+    "last_online": 1741647139,
     "joined": 1710884688,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2490,
-            "date": 1733853692,
-            "rd": 33
+            "rating": 2504,
+            "date": 1737485832,
+            "rd": 32
         },
         "best": {
             "rating": 2603,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/120950453833"
         },
         "record": {
-            "win": 966,
-            "loss": 711,
-            "draw": 247
+            "win": 1006,
+            "loss": 742,
+            "draw": 258
         }
     },
     "fide": 2266,
     "tactics": {
         "highest": {
-            "rating": 1759,
-            "date": 1727375140
+            "rating": 2850,
+            "date": 1740319605
         },
         "lowest": {
             "rating": 1000,
@@ -64,10 +64,6 @@
         "best": {
             "total_attempts": 63,
             "score": 60
-        },
-        "daily": {
-            "total_attempts": 52,
-            "score": 49
         }
     }
 }

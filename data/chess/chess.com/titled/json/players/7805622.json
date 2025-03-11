@@ -5,10 +5,10 @@
     "name": "Konstantinos Markidis",
     "username": "nafania1",
     "title": "FM",
-    "followers": 195,
+    "followers": 197,
     "country": "https://api.chess.com/pub/country/GR",
     "location": "Komotini",
-    "last_online": 1734184728,
+    "last_online": 1741638882,
     "joined": 1338972736,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2172,
-            "date": 1608657220,
-            "rd": 347
+            "date": 1741342437,
+            "rd": 49
         },
         "best": {
             "rating": 2172,
@@ -27,7 +27,7 @@
             "game": "https://www.chess.com/game/live/530244802"
         },
         "record": {
-            "win": 10,
+            "win": 11,
             "loss": 1,
             "draw": 0
         }

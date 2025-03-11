@@ -5,10 +5,10 @@
     "name": "Swayangsu Satyapragyan",
     "username": "ulysees",
     "title": "IM",
-    "followers": 240,
+    "followers": 247,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Bhubaneswar",
-    "last_online": 1734138577,
+    "last_online": 1741694921,
     "joined": 1320474633,
     "status": "premium",
     "is_streamer": false,
@@ -87,8 +87,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3285,
-            "date": 1658402159
+            "rating": 3372,
+            "date": 1740859082
         },
         "lowest": {
             "rating": 1946,
@@ -97,8 +97,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 37,
-            "score": 36
+            "total_attempts": 40,
+            "score": 37
         }
     }
 }

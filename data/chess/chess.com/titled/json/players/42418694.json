@@ -1,13 +1,13 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/42418694.42c2ad67.200x200o.91f8ef03b36b.jpg",
     "player_id": 42418694,
-    "@id": "https://api.chess.com/pub/player/me1010",
-    "url": "https://www.chess.com/member/ME1010",
-    "username": "me1010",
+    "@id": "https://api.chess.com/pub/player/toogoodatspellchess",
+    "url": "https://www.chess.com/member/TooGoodAtSpellChess",
+    "username": "toogoodatspellchess",
     "title": "CM",
     "followers": 3,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734090841,
+    "last_online": 1741648718,
     "joined": 1516219074,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1576,
-            "date": 1733467340,
-            "rd": 109
+            "rating": 1580,
+            "date": 1741648749,
+            "rd": 111
         },
         "best": {
             "rating": 1654,
@@ -26,10 +26,10 @@
             "game": "https://www.chess.com/game/daily/230697278"
         },
         "record": {
-            "win": 379,
-            "loss": 291,
+            "win": 380,
+            "loss": 292,
             "draw": 19,
-            "time_per_move": 59122,
+            "time_per_move": 60200,
             "timeout_percent": 0
         }
     },
@@ -48,15 +48,15 @@
             "win": 2,
             "loss": 8,
             "draw": 0,
-            "time_per_move": 59122,
+            "time_per_move": 60200,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2206,
-            "date": 1733364682,
-            "rd": 49
+            "rating": 2110,
+            "date": 1741649630,
+            "rd": 46
         },
         "best": {
             "rating": 2338,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/87196785135"
         },
         "record": {
-            "win": 1049,
-            "loss": 974,
-            "draw": 149
+            "win": 1064,
+            "loss": 997,
+            "draw": 153
         }
     },
     "chess_bullet": {
@@ -89,7 +89,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2311,
-            "date": 1725950685,
+            "date": 1741512970,
             "rd": 56
         },
         "best": {

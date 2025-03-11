@@ -6,10 +6,10 @@
     "name": "Din Djarin",
     "username": "themandaiorian",
     "title": "IM",
-    "followers": 47,
+    "followers": 70,
     "country": "https://api.chess.com/pub/country/XX",
     "location": "Mines of Mandalore",
-    "last_online": 1734176184,
+    "last_online": 1741283833,
     "joined": 1662033142,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2757,
-            "date": 1676463450,
-            "rd": 119
+            "rating": 2792,
+            "date": 1734956469,
+            "rd": 47
         },
         "best": {
             "rating": 2860,
@@ -28,26 +28,26 @@
             "game": "https://www.chess.com/game/live/64098842011"
         },
         "record": {
-            "win": 7,
+            "win": 13,
             "loss": 3,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3088,
-            "date": 1733075689,
-            "rd": 43
+            "rating": 2967,
+            "date": 1741284125,
+            "rd": 31
         },
         "best": {
-            "rating": 3088,
-            "date": 1733075689,
+            "rating": 3110,
+            "date": 1735513854,
             "game": "https://www.chess.com/game/live/122834743685"
         },
         "record": {
-            "win": 588,
-            "loss": 554,
-            "draw": 125
+            "win": 809,
+            "loss": 740,
+            "draw": 188
         }
     },
     "tactics": {
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 50,
-            "score": 50
+            "total_attempts": 54,
+            "score": 51
         }
     }
 }

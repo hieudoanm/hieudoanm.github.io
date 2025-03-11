@@ -6,10 +6,10 @@
     "name": "Njili Kamel",
     "username": "kimonji",
     "title": "IM",
-    "followers": 197,
+    "followers": 200,
     "country": "https://api.chess.com/pub/country/TN",
     "location": "France",
-    "last_online": 1733960467,
+    "last_online": 1739100923,
     "joined": 1365079046,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 665,
-            "date": 1708461495,
+            "date": 1735205303,
             "rd": 296
         },
         "best": {
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1424,
-            "date": 1731661807,
-            "rd": 51
+            "rating": 1397,
+            "date": 1735204143,
+            "rd": 61
         },
         "best": {
             "rating": 2011,
@@ -48,7 +48,7 @@
         },
         "record": {
             "win": 47,
-            "loss": 55,
+            "loss": 57,
             "draw": 4
         }
     },

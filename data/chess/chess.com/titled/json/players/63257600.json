@@ -5,9 +5,9 @@
     "name": "Alain Fayard",
     "username": "alainbruxelles",
     "title": "FM",
-    "followers": 17,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/BE",
-    "last_online": 1734174147,
+    "last_online": 1741600227,
     "joined": 1563045026,
     "status": "premium",
     "is_streamer": false,
@@ -50,8 +50,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2343,
-            "date": 1734116255,
+            "rating": 2333,
+            "date": 1741619411,
             "rd": 24
         },
         "best": {
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/119719257523"
         },
         "record": {
-            "win": 1302,
-            "loss": 1215,
-            "draw": 203
+            "win": 1643,
+            "loss": 1609,
+            "draw": 262
         }
     },
     "fide": 2147,

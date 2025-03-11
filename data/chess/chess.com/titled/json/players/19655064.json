@@ -8,7 +8,7 @@
     "followers": 4,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Clemant Ferand",
-    "last_online": 1678433677,
+    "last_online": 1737923560,
     "joined": 1415604792,
     "status": "premium",
     "is_streamer": false,
@@ -30,7 +30,7 @@
             "loss": 278,
             "draw": 2,
             "time_per_move": 67195,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {
@@ -88,8 +88,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 1676,
-            "date": 1621151324
+            "rating": 2230,
+            "date": 1737759521
         },
         "lowest": {
             "rating": 1294,

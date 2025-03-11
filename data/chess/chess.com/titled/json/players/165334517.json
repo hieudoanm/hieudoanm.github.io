@@ -5,9 +5,9 @@
     "name": "Yash Jyoti Bir",
     "username": "ychess6",
     "title": "WFM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734158872,
+    "last_online": 1740476873,
     "joined": 1639793246,
     "status": "premium",
     "is_streamer": false,
@@ -33,26 +33,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1665,
-            "date": 1734154670,
-            "rd": 79
+            "rating": 1697,
+            "date": 1737081433,
+            "rd": 55
         },
         "best": {
             "rating": 1708,
             "date": 1733154202,
-            "game": "https://www.chess.com/game/live/78304203767"
+            "game": "https://www.chess.com/game/live/130820390991"
         },
         "record": {
-            "win": 61,
-            "loss": 49,
-            "draw": 7
+            "win": 77,
+            "loss": 60,
+            "draw": 8
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1994,
-            "date": 1729398533,
-            "rd": 136
+            "rating": 1986,
+            "date": 1736267407,
+            "rd": 75
         },
         "best": {
             "rating": 2052,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/57253702409"
         },
         "record": {
-            "win": 89,
-            "loss": 49,
-            "draw": 17
+            "win": 96,
+            "loss": 56,
+            "draw": 19
         }
     },
     "fide": 0,
@@ -80,10 +80,6 @@
         "best": {
             "total_attempts": 45,
             "score": 42
-        },
-        "daily": {
-            "total_attempts": 26,
-            "score": 23
         }
     }
 }

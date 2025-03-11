@@ -6,9 +6,9 @@
     "name": "Derek Wu",
     "username": "chessswole",
     "title": "FM",
-    "followers": 117,
+    "followers": 122,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734163601,
+    "last_online": 1741655727,
     "joined": 1585267420,
     "status": "premium",
     "is_streamer": true,
@@ -24,7 +24,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2457,
-            "date": 1727757901,
+            "date": 1741387669,
             "rd": 177
         },
         "best": {
@@ -57,9 +57,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2702,
-            "date": 1733875652,
-            "rd": 40
+            "rating": 2706,
+            "date": 1741386118,
+            "rd": 39
         },
         "best": {
             "rating": 2805,
@@ -67,9 +67,9 @@
             "game": "https://www.chess.com/game/live/114300618771"
         },
         "record": {
-            "win": 2042,
-            "loss": 1300,
-            "draw": 303
+            "win": 2181,
+            "loss": 1363,
+            "draw": 316
         }
     },
     "tactics": {

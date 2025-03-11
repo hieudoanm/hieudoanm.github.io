@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/watermelonclash",
     "username": "watermelonclash",
     "title": "IM",
-    "followers": 21,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1733050442,
+    "last_online": 1739709885,
     "joined": 1687942012,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2823,
-            "date": 1733066499,
-            "rd": 33
+            "rating": 2791,
+            "date": 1739711172,
+            "rd": 24
         },
         "best": {
             "rating": 2912,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/126743424725"
         },
         "record": {
-            "win": 829,
-            "loss": 518,
-            "draw": 168
+            "win": 1014,
+            "loss": 660,
+            "draw": 214
         }
     },
     "tactics": {

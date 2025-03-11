@@ -6,10 +6,10 @@
     "name": "Oleg Zujev",
     "username": "hercog",
     "title": "FM",
-    "followers": 80,
+    "followers": 82,
     "country": "https://api.chess.com/pub/country/LT",
     "location": "Vilnius",
-    "last_online": 1732962317,
+    "last_online": 1740837965,
     "joined": 1200334494,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1887,
-            "date": 1734176714,
-            "rd": 56
+            "rating": 1909,
+            "date": 1741698967,
+            "rd": 51
         },
         "best": {
             "rating": 2332,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/daily/22081848"
         },
         "record": {
-            "win": 2213,
-            "loss": 901,
-            "draw": 691,
-            "time_per_move": 16885,
-            "timeout_percent": 1
+            "win": 2290,
+            "loss": 913,
+            "draw": 705,
+            "time_per_move": 16726,
+            "timeout_percent": 0
         },
         "tournament": {
-            "points": 407,
+            "points": 243,
             "withdraw": 0,
-            "count": 20,
+            "count": 4,
             "highest_finish": 1
         }
     },
@@ -56,13 +56,13 @@
             "win": 13,
             "loss": 7,
             "draw": 0,
-            "time_per_move": 16885,
+            "time_per_move": 16726,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 407,
+            "points": 243,
             "withdraw": 0,
-            "count": 20,
+            "count": 4,
             "highest_finish": 1
         }
     },
@@ -85,9 +85,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2200,
-            "date": 1734152352,
-            "rd": 51
+            "rating": 2169,
+            "date": 1739608511,
+            "rd": 60
         },
         "best": {
             "rating": 2511,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/5756632990"
         },
         "record": {
-            "win": 290,
-            "loss": 121,
-            "draw": 44
+            "win": 299,
+            "loss": 128,
+            "draw": 49
         }
     },
     "chess_blitz": {

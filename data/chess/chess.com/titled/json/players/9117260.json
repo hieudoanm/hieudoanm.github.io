@@ -6,10 +6,10 @@
     "name": "Fy Antenaina Rakotomaharo",
     "username": "fy_rakotomaharo",
     "title": "IM",
-    "followers": 418,
+    "followers": 458,
     "country": "https://api.chess.com/pub/country/MG",
     "location": "Antananarivo",
-    "last_online": 1734025358,
+    "last_online": 1741700866,
     "joined": 1349200139,
     "status": "premium",
     "is_streamer": false,
@@ -55,7 +55,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2747,
-            "date": 1734025526,
+            "date": 1734886125,
             "rd": 49
         },
         "best": {
@@ -71,18 +71,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2804,
-            "date": 1733249239,
-            "rd": 45
+            "rating": 2785,
+            "date": 1735667049,
+            "rd": 47
         },
         "best": {
             "rating": 2807,
             "date": 1733248621,
-            "game": "https://www.chess.com/game/live/126987020405"
+            "game": "https://www.chess.com/game/live/129401045075"
         },
         "record": {
-            "win": 2326,
-            "loss": 2176,
+            "win": 2335,
+            "loss": 2183,
             "draw": 418
         }
     },

@@ -9,7 +9,7 @@
     "followers": 2,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Cottbus",
-    "last_online": 1733873091,
+    "last_online": 1740520525,
     "joined": 1715201388,
     "status": "premium",
     "is_streamer": false,
@@ -18,19 +18,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2445,
-            "date": 1733875627,
-            "rd": 42
+            "rating": 2509,
+            "date": 1740528372,
+            "rd": 43
         },
         "best": {
-            "rating": 2517,
-            "date": 1724195229,
-            "game": "https://www.chess.com/game/live/123369650201"
+            "rating": 2562,
+            "date": 1739919994,
+            "game": "https://www.chess.com/game/live/131238620357"
         },
         "record": {
-            "win": 146,
-            "loss": 118,
-            "draw": 27
+            "win": 197,
+            "loss": 169,
+            "draw": 46
         }
     },
     "fide": 2166,

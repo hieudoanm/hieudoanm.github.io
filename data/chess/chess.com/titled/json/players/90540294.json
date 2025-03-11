@@ -6,9 +6,9 @@
     "name": "Yichen Han",
     "username": "professorchess101",
     "title": "IM",
-    "followers": 227,
+    "followers": 241,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734170700,
+    "last_online": 1741676561,
     "joined": 1599226930,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2935,
-            "date": 1733695938,
-            "rd": 49
+            "rating": 3015,
+            "date": 1737402571,
+            "rd": 16
         },
         "best": {
             "rating": 3051,
@@ -44,26 +44,26 @@
             "game": "https://www.chess.com/game/live/17222583665"
         },
         "record": {
-            "win": 2664,
-            "loss": 2116,
-            "draw": 298
+            "win": 3314,
+            "loss": 2470,
+            "draw": 360
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2830,
-            "date": 1734110991,
-            "rd": 27
+            "rating": 2812,
+            "date": 1741599354,
+            "rd": 37
         },
         "best": {
-            "rating": 2830,
-            "date": 1734110991,
-            "game": "https://www.chess.com/game/live/101471584569"
+            "rating": 2947,
+            "date": 1737198074,
+            "game": "https://www.chess.com/game/live/131407186801"
         },
         "record": {
-            "win": 1194,
-            "loss": 908,
-            "draw": 201
+            "win": 1275,
+            "loss": 966,
+            "draw": 210
         }
     },
     "fide": 2430,

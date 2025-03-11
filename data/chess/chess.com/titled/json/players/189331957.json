@@ -6,9 +6,9 @@
     "name": "Roger Bernad\u00f3 Lopez",
     "username": "rochaaaaaaaaaa",
     "title": "FM",
-    "followers": 13,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/XC",
-    "last_online": 1734095413,
+    "last_online": 1741617646,
     "joined": 1657274660,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1725,
-            "date": 1734099209,
-            "rd": 102
+            "rating": 1143,
+            "date": 1741683719,
+            "rd": 83
         },
         "best": {
             "rating": 1849,
@@ -27,18 +27,18 @@
             "game": "https://www.chess.com/game/daily/566103573"
         },
         "record": {
-            "win": 51,
-            "loss": 9,
+            "win": 57,
+            "loss": 25,
             "draw": 4,
-            "time_per_move": 51645,
-            "timeout_percent": 0
+            "time_per_move": 52850,
+            "timeout_percent": 80
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2188,
-            "date": 1726678241,
-            "rd": 80
+            "rating": 2226,
+            "date": 1740677473,
+            "rd": 49
         },
         "best": {
             "rating": 2466,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/79893674633"
         },
         "record": {
-            "win": 16,
-            "loss": 10,
+            "win": 25,
+            "loss": 12,
             "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2280,
-            "date": 1724922610,
-            "rd": 64
+            "rating": 2304,
+            "date": 1741688981,
+            "rd": 95
         },
         "best": {
             "rating": 2465,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/106266480759"
         },
         "record": {
-            "win": 63,
+            "win": 64,
             "loss": 48,
-            "draw": 5
+            "draw": 6
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2376,
-            "date": 1734095939,
-            "rd": 34
+            "rating": 2403,
+            "date": 1741551289,
+            "rd": 29
         },
         "best": {
             "rating": 2428,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/127607443379"
         },
         "record": {
-            "win": 1923,
-            "loss": 1661,
-            "draw": 203
+            "win": 2231,
+            "loss": 1921,
+            "draw": 240
         }
     },
     "tactics": {
@@ -97,8 +97,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 64,
-            "score": 61
+            "total_attempts": 97,
+            "score": 94
         }
     }
 }

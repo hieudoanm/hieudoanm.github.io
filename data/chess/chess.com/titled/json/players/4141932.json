@@ -6,10 +6,10 @@
     "name": "Warren Harper",
     "username": "checkamunky",
     "title": "FM",
-    "followers": 108,
+    "followers": 109,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Houston, TX",
-    "last_online": 1732324273,
+    "last_online": 1741639314,
     "joined": 1287546066,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2739,
-            "date": 1732685671,
-            "rd": 40
+            "rating": 2738,
+            "date": 1741018663,
+            "rd": 37
         },
         "best": {
             "rating": 2856,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/99759813"
         },
         "record": {
-            "win": 1422,
-            "loss": 1025,
-            "draw": 198
+            "win": 1539,
+            "loss": 1119,
+            "draw": 214
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2875,
-            "date": 1732687018,
-            "rd": 48
+            "rating": 2884,
+            "date": 1741034778,
+            "rd": 47
         },
         "best": {
             "rating": 2885,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/126424785011"
         },
         "record": {
-            "win": 2837,
-            "loss": 1876,
-            "draw": 445
+            "win": 2843,
+            "loss": 1879,
+            "draw": 446
         }
     },
     "fide": 2356,
     "tactics": {
         "highest": {
-            "rating": 2958,
-            "date": 1721790099
+            "rating": 2971,
+            "date": 1737345075
         },
         "lowest": {
             "rating": 1395,

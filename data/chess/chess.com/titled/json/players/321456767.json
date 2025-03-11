@@ -6,16 +6,35 @@
     "name": "Dao Minh Nhat",
     "username": "mndapoetzz04",
     "title": "IM",
-    "followers": 27,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Ha Noi City",
-    "last_online": 1734099208,
+    "last_online": 1741682430,
     "joined": 1698085924,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Silver",
     "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1837,
+            "date": 1741682504,
+            "rd": 242
+        },
+        "best": {
+            "rating": 1837,
+            "date": 1741461542,
+            "game": "https://www.chess.com/game/daily/705990447"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 175089,
+            "timeout_percent": 0
+        }
+    },
     "chess_rapid": {
         "last": {
             "rating": 2328,
@@ -35,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2559,
-            "date": 1733646337,
-            "rd": 49
+            "rating": 2555,
+            "date": 1741089892,
+            "rd": 47
         },
         "best": {
             "rating": 2631,
@@ -45,16 +64,15 @@
             "game": "https://www.chess.com/game/live/95441971147"
         },
         "record": {
-            "win": 196,
-            "loss": 99,
-            "draw": 13
+            "win": 208,
+            "loss": 108,
+            "draw": 14
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2687,
-            "date": 1727481903,
-            "rd": 49
+            "date": 1740674200
         },
         "best": {
             "rating": 2779,
@@ -63,7 +81,7 @@
         },
         "record": {
             "win": 24,
-            "loss": 13,
+            "loss": 14,
             "draw": 3
         }
     },

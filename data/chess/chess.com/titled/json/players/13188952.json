@@ -6,10 +6,10 @@
     "name": "Tania Sachdev",
     "username": "tania_s",
     "title": "IM",
-    "followers": 2490,
+    "followers": 2606,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "New delhi",
-    "last_online": 1733656682,
+    "last_online": 1741615344,
     "joined": 1376818459,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2499,
-            "date": 1733420448,
-            "rd": 49
+            "rating": 2478,
+            "date": 1736624094,
+            "rd": 43
         },
         "best": {
             "rating": 2521,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/47157055739"
         },
         "record": {
-            "win": 365,
-            "loss": 281,
-            "draw": 35
+            "win": 373,
+            "loss": 291,
+            "draw": 36
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2546,
-            "date": 1712060575,
-            "rd": 40
+            "rating": 2556,
+            "date": 1738354155,
+            "rd": 48
         },
         "best": {
             "rating": 2567,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/37471797913"
         },
         "record": {
-            "win": 274,
-            "loss": 211,
-            "draw": 52
+            "win": 277,
+            "loss": 212,
+            "draw": 53
         }
     },
     "fide": 2385,

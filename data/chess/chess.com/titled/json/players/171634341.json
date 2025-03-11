@@ -5,9 +5,9 @@
     "name": "Brendan Anderson",
     "username": "baxyq",
     "title": "CM",
-    "followers": 18,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734137537,
+    "last_online": 1741597407,
     "joined": 1644023075,
     "status": "premium",
     "is_streamer": false,
@@ -36,8 +36,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2241,
-            "date": 1706576544,
-            "rd": 49
+            "date": 1735475932,
+            "rd": 50
         },
         "best": {
             "rating": 2283,
@@ -45,7 +45,7 @@
             "game": "https://www.chess.com/game/live/39878315433"
         },
         "record": {
-            "win": 211,
+            "win": 212,
             "loss": 151,
             "draw": 33
         }
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2201,
-            "date": 1733817022,
-            "rd": 58
+            "rating": 2195,
+            "date": 1741600665,
+            "rd": 53
         },
         "best": {
             "rating": 2391,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/62290836329"
         },
         "record": {
-            "win": 1880,
-            "loss": 1517,
-            "draw": 286
+            "win": 1908,
+            "loss": 1527,
+            "draw": 288
         }
     },
     "fide": 1985,

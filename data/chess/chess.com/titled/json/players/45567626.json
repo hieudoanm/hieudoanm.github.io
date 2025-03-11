@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/fidichess",
     "username": "fidichess",
     "title": "WCM",
-    "followers": 106,
+    "followers": 114,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734072542,
+    "last_online": 1741372720,
     "joined": 1524499849,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2128,
-            "date": 1733974736,
-            "rd": 53
+            "rating": 2212,
+            "date": 1741372886,
+            "rd": 52
         },
         "best": {
             "rating": 2450,
@@ -42,26 +42,26 @@
             "game": "https://www.chess.com/game/live/39639609935"
         },
         "record": {
-            "win": 7960,
-            "loss": 7785,
-            "draw": 1328
+            "win": 8007,
+            "loss": 7816,
+            "draw": 1331
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2098,
-            "date": 1726458696,
-            "rd": 85
+            "rating": 2137,
+            "date": 1737921942,
+            "rd": 98
         },
         "best": {
-            "rating": 2102,
-            "date": 1711060503,
+            "rating": 2137,
+            "date": 1737921942,
             "game": "https://www.chess.com/game/live/104798989911"
         },
         "record": {
-            "win": 289,
-            "loss": 225,
-            "draw": 32
+            "win": 292,
+            "loss": 226,
+            "draw": 33
         }
     },
     "tactics": {

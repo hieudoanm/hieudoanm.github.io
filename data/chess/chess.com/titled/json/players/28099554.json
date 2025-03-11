@@ -6,10 +6,10 @@
     "name": "Savetha CH",
     "username": "savethach",
     "title": "WCM",
-    "followers": 47,
+    "followers": 54,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "New Jersey",
-    "last_online": 1730773074,
+    "last_online": 1741647887,
     "joined": 1462726513,
     "status": "premium",
     "is_streamer": false,
@@ -37,43 +37,43 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1959,
-            "date": 1699606854,
-            "rd": 166
+            "rating": 2059,
+            "date": 1738029782,
+            "rd": 49
         },
         "best": {
-            "rating": 1669,
-            "date": 1605654148,
-            "game": "https://www.chess.com/game/live/3671414326"
+            "rating": 2059,
+            "date": 1738029782,
+            "game": "https://www.chess.com/game/live/131767780939"
         },
         "record": {
-            "win": 8,
+            "win": 10,
             "loss": 3,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2012,
-            "date": 1710311769,
-            "rd": 85
+            "rating": 2150,
+            "date": 1738638564,
+            "rd": 118
         },
         "best": {
-            "rating": 2032,
-            "date": 1704164967,
-            "game": "https://www.chess.com/game/live/97902571465"
+            "rating": 2150,
+            "date": 1738638564,
+            "game": "https://www.chess.com/game/live/129952123927"
         },
         "record": {
-            "win": 222,
+            "win": 225,
             "loss": 244,
             "draw": 23
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1962,
-            "date": 1729013821,
-            "rd": 74
+            "rating": 2047,
+            "date": 1739147108,
+            "rd": 61
         },
         "best": {
             "rating": 2072,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/3748727284"
         },
         "record": {
-            "win": 187,
-            "loss": 173,
-            "draw": 23
+            "win": 199,
+            "loss": 181,
+            "draw": 25
         }
     },
     "fide": 2129,
     "tactics": {
         "highest": {
-            "rating": 1404,
-            "date": 1655526520
+            "rating": 3079,
+            "date": 1738684185
         },
         "lowest": {
             "rating": 1217,

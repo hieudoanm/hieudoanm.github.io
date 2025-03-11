@@ -6,21 +6,21 @@
     "name": "Jani Bogoevski",
     "username": "jan939519",
     "title": "FM",
-    "followers": 8,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/MK",
     "location": "Skopje",
-    "last_online": 1733815810,
+    "last_online": 1741703504,
     "joined": 1572247619,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2057,
-            "date": 1733691849,
-            "rd": 28
+            "rating": 2118,
+            "date": 1741703783,
+            "rd": 51
         },
         "best": {
             "rating": 2167,
@@ -28,26 +28,26 @@
             "game": "https://www.chess.com/game/live/124845556595"
         },
         "record": {
-            "win": 347,
-            "loss": 270,
+            "win": 363,
+            "loss": 276,
             "draw": 30
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2358,
-            "date": 1732134550,
-            "rd": 147
+            "rating": 2376,
+            "date": 1741133113,
+            "rd": 36
         },
         "best": {
-            "rating": 2358,
-            "date": 1732134550,
-            "game": "https://www.chess.com/game/live/4241801825"
+            "rating": 2380,
+            "date": 1741132446,
+            "game": "https://www.chess.com/game/live/133661946917"
         },
         "record": {
-            "win": 76,
-            "loss": 32,
-            "draw": 4
+            "win": 158,
+            "loss": 100,
+            "draw": 10
         }
     },
     "fide": 2160,

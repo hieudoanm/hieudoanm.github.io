@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/87984132.65e0bd28.200x200o.30023672a419.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/87984132.f1024f17.200x200o.80790658a202.png",
     "player_id": 87984132,
     "@id": "https://api.chess.com/pub/player/kuku33riya",
     "url": "https://www.chess.com/member/KuKu33Riya",
     "name": "Rajanya Datta",
     "username": "kuku33riya",
     "title": "WCM",
-    "followers": 132,
+    "followers": 137,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734172280,
+    "last_online": 1741665954,
     "joined": 1596200812,
     "status": "premium",
     "is_streamer": false,
@@ -71,7 +71,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2071,
-            "date": 1733245539,
+            "date": 1737827326,
             "rd": 82
         },
         "best": {

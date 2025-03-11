@@ -6,9 +6,9 @@
     "name": "Lilit Mkrtchian",
     "username": "tekushka",
     "title": "IM",
-    "followers": 344,
+    "followers": 345,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1733991033,
+    "last_online": 1741596587,
     "joined": 1535557999,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2174,
-            "date": 1732973196,
+            "date": 1737132322,
             "rd": 116
         },
         "best": {
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2451,
-            "date": 1731849189,
+            "date": 1739626658,
             "rd": 63
         },
         "best": {

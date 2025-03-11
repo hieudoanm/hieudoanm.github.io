@@ -6,10 +6,10 @@
     "name": "Calvin John Klaasen",
     "username": "shadyh9",
     "title": "FM",
-    "followers": 35,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/ZA",
     "location": "Cape Town",
-    "last_online": 1733759342,
+    "last_online": 1740942798,
     "joined": 1373011353,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2347,
-            "date": 1728402153,
-            "rd": 120
+            "rating": 2377,
+            "date": 1735854159,
+            "rd": 82
         },
         "best": {
             "rating": 2477,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/3435485681"
         },
         "record": {
-            "win": 1684,
-            "loss": 1610,
+            "win": 1691,
+            "loss": 1617,
             "draw": 278
         }
     },

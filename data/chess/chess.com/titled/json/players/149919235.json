@@ -6,10 +6,10 @@
     "name": "Danila Bilan",
     "username": "bilan_danila",
     "title": "FM",
-    "followers": 19,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/XX",
     "location": "Obninsk",
-    "last_online": 1734104603,
+    "last_online": 1741672149,
     "joined": 1627965439,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2742,
-            "date": 1732893981,
-            "rd": 35
+            "rating": 2719,
+            "date": 1741454926,
+            "rd": 44
         },
         "best": {
             "rating": 2742,
@@ -45,33 +45,33 @@
             "game": "https://www.chess.com/game/live/114024690335"
         },
         "record": {
-            "win": 717,
-            "loss": 732,
-            "draw": 119
+            "win": 724,
+            "loss": 739,
+            "draw": 120
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2709,
-            "date": 1734021351,
-            "rd": 40
+            "rating": 2734,
+            "date": 1741277177,
+            "rd": 24
         },
         "best": {
-            "rating": 2709,
-            "date": 1734021351,
+            "rating": 2716,
+            "date": 1734186533,
             "game": "https://www.chess.com/game/live/90175872097"
         },
         "record": {
-            "win": 3919,
-            "loss": 3837,
-            "draw": 699
+            "win": 4399,
+            "loss": 4338,
+            "draw": 804
         }
     },
     "fide": 2303,
     "tactics": {
         "highest": {
-            "rating": 3154,
-            "date": 1685213598
+            "rating": 3185,
+            "date": 1739288698
         },
         "lowest": {
             "rating": 1211,

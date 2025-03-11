@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/77594788.1a4dfcdb.200x200o.32c95d38f7a6.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/77594788.e6b8a41b.200x200o.139dc6052dfe.jpg",
     "player_id": 77594788,
     "@id": "https://api.chess.com/pub/player/monluis",
     "url": "https://www.chess.com/member/Monluis",
     "name": "Luis S\u00e1nchez",
     "username": "monluis",
     "title": "CM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733469281,
+    "last_online": 1740778826,
     "joined": 1587663794,
     "status": "premium",
     "is_streamer": false,
@@ -17,43 +17,43 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 1683,
-            "date": 1588712285,
-            "rd": 103
+            "rating": 1930,
+            "date": 1741285593,
+            "rd": 67
         },
         "best": {
-            "rating": 1533,
-            "date": 1588712285,
+            "rating": 2008,
+            "date": 1737924389,
             "game": "https://www.chess.com/game/live/4815239448"
         },
         "record": {
-            "win": 8,
-            "loss": 3,
-            "draw": 0
+            "win": 16,
+            "loss": 13,
+            "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2100,
-            "date": 1734162666,
-            "rd": 30
+            "rating": 2143,
+            "date": 1741686850,
+            "rd": 26
         },
         "best": {
-            "rating": 2168,
-            "date": 1733332181,
-            "game": "https://www.chess.com/game/live/126024539515"
+            "rating": 2224,
+            "date": 1739686954,
+            "game": "https://www.chess.com/game/live/133338547393"
         },
         "record": {
-            "win": 525,
-            "loss": 471,
-            "draw": 110
+            "win": 777,
+            "loss": 682,
+            "draw": 162
         }
     },
     "fide": 2071,
     "tactics": {
         "highest": {
-            "rating": 3115,
-            "date": 1733295374
+            "rating": 3139,
+            "date": 1740174850
         },
         "lowest": {
             "rating": 800,

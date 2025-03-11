@@ -6,9 +6,9 @@
     "name": "Vetle Bjorge Strand",
     "username": "bjorgestrand",
     "title": "CM",
-    "followers": 78,
+    "followers": 79,
     "country": "https://api.chess.com/pub/country/NO",
-    "last_online": 1734077986,
+    "last_online": 1741679168,
     "joined": 1480592735,
     "status": "premium",
     "is_streamer": false,
@@ -36,42 +36,42 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2365,
-            "date": 1734008460,
-            "rd": 49
+            "rating": 2407,
+            "date": 1741684858,
+            "rd": 46
         },
         "best": {
-            "rating": 2365,
-            "date": 1734008460,
-            "game": "https://www.chess.com/game/live/127746063265"
+            "rating": 2413,
+            "date": 1734682057,
+            "game": "https://www.chess.com/game/live/128167750859"
         },
         "record": {
-            "win": 99,
+            "win": 107,
             "loss": 11,
-            "draw": 12
+            "draw": 14
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2601,
-            "date": 1732897530,
-            "rd": 32
+            "rating": 2617,
+            "date": 1737405185,
+            "rd": 40
         },
         "best": {
-            "rating": 2603,
-            "date": 1732897380,
+            "rating": 2625,
+            "date": 1734786147,
             "game": "https://www.chess.com/game/live/123447666747"
         },
         "record": {
-            "win": 1032,
-            "loss": 468,
+            "win": 1036,
+            "loss": 470,
             "draw": 110
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2505,
-            "date": 1732786263,
+            "date": 1741681788,
             "rd": 43
         },
         "best": {

@@ -6,14 +6,14 @@
     "name": "Monserrat Morales F.",
     "username": "chiwii",
     "title": "WCM",
-    "followers": 371,
+    "followers": 374,
     "country": "https://api.chess.com/pub/country/CL",
-    "last_online": 1733263618,
+    "last_online": 1741300109,
     "joined": 1493150495,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -37,8 +37,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2016,
-            "date": 1630781282,
-            "rd": 93
+            "date": 1738470695,
+            "rd": 49
         },
         "best": {
             "rating": 2052,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/24427374781"
         },
         "record": {
-            "win": 21,
+            "win": 24,
             "loss": 13,
             "draw": 10
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2267,
-            "date": 1731197496,
-            "rd": 70
+            "rating": 2343,
+            "date": 1738696292,
+            "rd": 39
         },
         "best": {
             "rating": 2439,
@@ -63,15 +63,15 @@
             "game": "https://www.chess.com/game/live/104347829233"
         },
         "record": {
-            "win": 501,
-            "loss": 369,
-            "draw": 54
+            "win": 564,
+            "loss": 439,
+            "draw": 64
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2255,
-            "date": 1671749619,
+            "date": 1738870794,
             "rd": 85
         },
         "best": {

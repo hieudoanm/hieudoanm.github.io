@@ -6,14 +6,14 @@
     "name": "Matthew Wadsworth",
     "username": "wadsy27",
     "title": "IM",
-    "followers": 155,
+    "followers": 158,
     "country": "https://api.chess.com/pub/country/XE",
-    "last_online": 1734030901,
+    "last_online": 1741692750,
     "joined": 1439456099,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -67,26 +67,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2702,
-            "date": 1734009573,
-            "rd": 41
+            "rating": 2679,
+            "date": 1741622753,
+            "rd": 48
         },
         "best": {
-            "rating": 2727,
-            "date": 1733871239,
-            "game": "https://www.chess.com/game/live/127330822145"
+            "rating": 2740,
+            "date": 1734198835,
+            "game": "https://www.chess.com/game/live/127935579157"
         },
         "record": {
-            "win": 1009,
-            "loss": 701,
-            "draw": 155
+            "win": 1055,
+            "loss": 738,
+            "draw": 164
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2724,
-            "date": 1734173928,
-            "rd": 34
+            "rating": 2704,
+            "date": 1741639548,
+            "rd": 48
         },
         "best": {
             "rating": 2817,
@@ -94,12 +94,12 @@
             "game": "https://www.chess.com/game/live/4752510793"
         },
         "record": {
-            "win": 5081,
-            "loss": 3999,
-            "draw": 771
+            "win": 5111,
+            "loss": 4023,
+            "draw": 782
         }
     },
-    "fide": 2461,
+    "fide": 2473,
     "tactics": {
         "highest": {
             "rating": 3680,

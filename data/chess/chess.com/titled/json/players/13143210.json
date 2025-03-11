@@ -5,10 +5,10 @@
     "name": "Ariel Barrett",
     "username": "wcmariel",
     "title": "WCM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/JM",
     "location": "Kingston",
-    "last_online": 1720352096,
+    "last_online": 1736437003,
     "joined": 1376498301,
     "status": "premium",
     "is_streamer": false,
@@ -65,8 +65,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2748,
-            "date": 1717090280
+            "rating": 2763,
+            "date": 1736878655
         },
         "lowest": {
             "rating": 1355,

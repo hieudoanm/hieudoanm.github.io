@@ -5,20 +5,20 @@
     "name": "Veueza Tjipura",
     "username": "veueza9808",
     "title": "WCM",
-    "followers": 4,
+    "followers": 5,
     "country": "https://api.chess.com/pub/country/NA",
-    "last_online": 1730999749,
+    "last_online": 1736280470,
     "joined": 1629059477,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1409,
-            "date": 1731441071,
-            "rd": 124
+            "rating": 1347,
+            "date": 1736967789,
+            "rd": 89
         },
         "best": {
             "rating": 1594,
@@ -26,8 +26,8 @@
             "game": "https://www.chess.com/game/live/81458576269"
         },
         "record": {
-            "win": 10,
-            "loss": 10,
+            "win": 14,
+            "loss": 15,
             "draw": 3
         }
     },

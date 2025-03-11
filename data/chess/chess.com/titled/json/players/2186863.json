@@ -6,10 +6,10 @@
     "name": "Luka Vojinovic",
     "username": "luka95",
     "title": "FM",
-    "followers": 182,
+    "followers": 194,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Arandjelovac",
-    "last_online": 1734112760,
+    "last_online": 1741701183,
     "joined": 1253883936,
     "status": "premium",
     "is_streamer": false,
@@ -57,8 +57,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2041,
-            "date": 1684665255,
-            "rd": 101
+            "date": 1735810698,
+            "rd": 49
         },
         "best": {
             "rating": 2239,
@@ -66,7 +66,7 @@
             "game": "https://www.chess.com/game/live/76590070631"
         },
         "record": {
-            "win": 4,
+            "win": 11,
             "loss": 10,
             "draw": 0
         }
@@ -90,19 +90,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2605,
-            "date": 1734113097,
-            "rd": 22
+            "rating": 2585,
+            "date": 1741703148,
+            "rd": 27
         },
         "best": {
-            "rating": 2685,
-            "date": 1733674195,
+            "rating": 2716,
+            "date": 1736837861,
             "game": "https://www.chess.com/game/live/119078969617"
         },
         "record": {
-            "win": 11354,
-            "loss": 9697,
-            "draw": 1391
+            "win": 11678,
+            "loss": 9960,
+            "draw": 1446
         }
     },
     "fide": 2302,

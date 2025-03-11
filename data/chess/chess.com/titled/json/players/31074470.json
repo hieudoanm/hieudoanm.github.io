@@ -9,7 +9,7 @@
     "followers": 740,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Mumbai",
-    "last_online": 1734152630,
+    "last_online": 1741680006,
     "joined": 1479802555,
     "status": "premium",
     "is_streamer": false,
@@ -89,8 +89,8 @@
     "fide": 2432,
     "tactics": {
         "highest": {
-            "rating": 3768,
-            "date": 1704756349
+            "rating": 3769,
+            "date": 1734369838
         },
         "lowest": {
             "rating": 1209,

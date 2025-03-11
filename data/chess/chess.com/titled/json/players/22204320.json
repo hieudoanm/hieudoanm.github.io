@@ -6,15 +6,15 @@
     "name": "Aran K\u00f6hler",
     "username": "aranibos",
     "title": "FM",
-    "followers": 127,
+    "followers": 135,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Amsterdam",
-    "last_online": 1734155462,
+    "last_online": 1741363476,
     "joined": 1430484047,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2004,
-            "date": 1725153124,
-            "rd": 56
+            "rating": 1961,
+            "date": 1737494047,
+            "rd": 54
         },
         "best": {
             "rating": 2193,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/89838013305"
         },
         "record": {
-            "win": 483,
-            "loss": 691,
-            "draw": 54
+            "win": 507,
+            "loss": 737,
+            "draw": 55
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2326,
-            "date": 1733851176,
-            "rd": 55
+            "rating": 2204,
+            "date": 1739901626,
+            "rd": 42
         },
         "best": {
             "rating": 2408,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/77387575075"
         },
         "record": {
-            "win": 2072,
-            "loss": 1492,
-            "draw": 255
+            "win": 2143,
+            "loss": 1573,
+            "draw": 271
         }
     },
     "fide": 2124,

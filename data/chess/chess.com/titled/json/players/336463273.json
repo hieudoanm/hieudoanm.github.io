@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/musiclover288",
     "username": "musiclover288",
     "title": "WCM",
-    "followers": 9,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1734077381,
+    "last_online": 1738408559,
     "joined": 1704267748,
     "status": "premium",
     "is_streamer": false,
@@ -15,43 +15,43 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1670,
-            "date": 1713269252,
-            "rd": 243
+            "rating": 1831,
+            "date": 1735815774,
+            "rd": 53
         },
         "best": {
-            "rating": 1645,
-            "date": 1712820556,
-            "game": "https://www.chess.com/game/live/106558603143"
+            "rating": 1836,
+            "date": 1735612963,
+            "game": "https://www.chess.com/game/live/129265350751"
         },
         "record": {
-            "win": 2,
-            "loss": 0,
-            "draw": 0
+            "win": 28,
+            "loss": 15,
+            "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1602,
-            "date": 1727269140,
-            "rd": 103
+            "rating": 1781,
+            "date": 1740750583,
+            "rd": 25
         },
         "best": {
-            "rating": 1696,
-            "date": 1713459042,
-            "game": "https://www.chess.com/game/live/107206949085"
+            "rating": 1876,
+            "date": 1738668697,
+            "game": "https://www.chess.com/game/live/133109391421"
         },
         "record": {
-            "win": 7,
-            "loss": 13,
-            "draw": 2
+            "win": 418,
+            "loss": 378,
+            "draw": 31
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1743,
-            "date": 1734103391,
-            "rd": 21
+            "rating": 1809,
+            "date": 1739699441,
+            "rd": 40
         },
         "best": {
             "rating": 1876,
@@ -59,15 +59,15 @@
             "game": "https://www.chess.com/game/live/121435232421"
         },
         "record": {
-            "win": 1421,
-            "loss": 1280,
-            "draw": 142
+            "win": 1649,
+            "loss": 1494,
+            "draw": 162
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2883,
-            "date": 1709310087
+            "rating": 2905,
+            "date": 1735282216
         },
         "lowest": {
             "rating": 400,

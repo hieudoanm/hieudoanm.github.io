@@ -6,10 +6,10 @@
     "name": "Aristo Liu",
     "username": "coolthing",
     "title": "FM",
-    "followers": 100,
+    "followers": 103,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York",
-    "last_online": 1734156054,
+    "last_online": 1741662210,
     "joined": 1302482103,
     "status": "premium",
     "is_streamer": false,
@@ -108,8 +108,8 @@
     "fide": 2300,
     "tactics": {
         "highest": {
-            "rating": 3634,
-            "date": 1728600065
+            "rating": 3683,
+            "date": 1738952254
         },
         "lowest": {
             "rating": 1284,

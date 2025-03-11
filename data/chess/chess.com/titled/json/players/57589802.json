@@ -6,10 +6,10 @@
     "name": "Cristian Robledo",
     "username": "pintacara",
     "title": "FM",
-    "followers": 24,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Jujuy",
-    "last_online": 1732836357,
+    "last_online": 1741217855,
     "joined": 1550672997,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2345,
-            "date": 1732706280,
-            "rd": 36
+            "rating": 2463,
+            "date": 1741105703,
+            "rd": 52
         },
         "best": {
             "rating": 2702,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/116697582463"
         },
         "record": {
-            "win": 1135,
-            "loss": 977,
-            "draw": 121
+            "win": 1151,
+            "loss": 999,
+            "draw": 123
         }
     },
     "fide": 2288,

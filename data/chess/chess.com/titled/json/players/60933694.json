@@ -6,10 +6,10 @@
     "name": "Khandaker Aminul Islam",
     "username": "khandakeraminul",
     "title": "FM",
-    "followers": 61,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "DHAKA",
-    "last_online": 1734183337,
+    "last_online": 1741684968,
     "joined": 1557750036,
     "status": "premium",
     "is_streamer": false,
@@ -56,26 +56,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2194,
-            "date": 1727160274,
+            "rating": 2229,
+            "date": 1740208083,
             "rd": 49
         },
         "best": {
-            "rating": 2230,
-            "date": 1680367669,
+            "rating": 2252,
+            "date": 1738157180,
             "game": "https://www.chess.com/game/live/5494995553"
         },
         "record": {
-            "win": 30,
-            "loss": 27,
-            "draw": 7
+            "win": 42,
+            "loss": 34,
+            "draw": 8
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1965,
-            "date": 1701962407,
-            "rd": 91
+            "rating": 1907,
+            "date": 1739209988,
+            "rd": 65
         },
         "best": {
             "rating": 2180,
@@ -83,33 +83,33 @@
             "game": "https://www.chess.com/game/live/55185685891"
         },
         "record": {
-            "win": 742,
-            "loss": 500,
+            "win": 752,
+            "loss": 513,
             "draw": 45
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2324,
-            "date": 1733824003,
-            "rd": 31
+            "rating": 2335,
+            "date": 1741088787,
+            "rd": 29
         },
         "best": {
             "rating": 2472,
             "date": 1692698909,
-            "game": "https://www.chess.com/game/live/122743463365"
+            "game": "https://www.chess.com/game/live/130005034873"
         },
         "record": {
-            "win": 6786,
-            "loss": 5544,
-            "draw": 832
+            "win": 6929,
+            "loss": 5712,
+            "draw": 855
         }
     },
     "fide": 2229,
     "tactics": {
         "highest": {
-            "rating": 3495,
-            "date": 1653189336
+            "rating": 3498,
+            "date": 1737595631
         },
         "lowest": {
             "rating": 2193,

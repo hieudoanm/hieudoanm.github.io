@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1733241335,
+    "last_online": 1741639525,
     "joined": 1594994524,
     "status": "premium",
     "is_streamer": false,
@@ -43,6 +43,10 @@
         "best": {
             "total_attempts": 56,
             "score": 53
+        },
+        "daily": {
+            "total_attempts": 52,
+            "score": 50
         }
     }
 }

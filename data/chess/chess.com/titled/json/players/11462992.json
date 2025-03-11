@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/dopolian",
     "username": "dopolian",
     "title": "FM",
-    "followers": 141,
+    "followers": 142,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734044884,
+    "last_online": 1741479649,
     "joined": 1365563705,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1996,
-            "date": 1734044952,
-            "rd": 155
+            "rating": 1900,
+            "date": 1735942567,
+            "rd": 151
         },
         "best": {
             "rating": 2112,
@@ -27,10 +27,10 @@
         },
         "record": {
             "win": 379,
-            "loss": 223,
+            "loss": 224,
             "draw": 44,
-            "time_per_move": 31275,
-            "timeout_percent": 100
+            "time_per_move": 31304,
+            "timeout_percent": 0
         }
     },
     "chess960_daily": {
@@ -48,7 +48,7 @@
             "win": 14,
             "loss": 5,
             "draw": 1,
-            "time_per_move": 31275,
+            "time_per_move": 31304,
             "timeout_percent": 0
         }
     },
@@ -88,19 +88,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2666,
-            "date": 1733807930,
-            "rd": 48
+            "rating": 2575,
+            "date": 1740931493,
+            "rd": 37
         },
         "best": {
-            "rating": 2701,
-            "date": 1725816208,
+            "rating": 2703,
+            "date": 1734666487,
             "game": "https://www.chess.com/game/live/36872500267"
         },
         "record": {
-            "win": 4780,
-            "loss": 4595,
-            "draw": 868
+            "win": 4839,
+            "loss": 4659,
+            "draw": 880
         }
     },
     "fide": 2359,

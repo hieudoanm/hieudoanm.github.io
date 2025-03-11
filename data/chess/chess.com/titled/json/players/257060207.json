@@ -6,9 +6,9 @@
     "name": "Oleksii Molchanov",
     "username": "ol3ks2",
     "title": "IM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734112243,
+    "last_online": 1741436784,
     "joined": 1678032454,
     "status": "premium",
     "is_streamer": false,
@@ -17,19 +17,19 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2516,
-            "date": 1734026628,
+            "rating": 2545,
+            "date": 1740607716,
             "rd": 49
         },
         "best": {
-            "rating": 2516,
-            "date": 1734026627,
+            "rating": 2536,
+            "date": 1739625978,
             "game": "https://www.chess.com/game/live/116897375265"
         },
         "record": {
-            "win": 89,
-            "loss": 25,
-            "draw": 6
+            "win": 102,
+            "loss": 28,
+            "draw": 8
         }
     },
     "chess_blitz": {

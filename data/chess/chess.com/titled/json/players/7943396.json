@@ -6,10 +6,10 @@
     "name": "Jason Doss",
     "username": "jdoss",
     "title": "FM",
-    "followers": 109,
+    "followers": 114,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Dallas",
-    "last_online": 1734148565,
+    "last_online": 1741674078,
     "joined": 1340120772,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1694,
-            "date": 1733262936,
+            "rating": 1698,
+            "date": 1741674621,
             "rd": 189
         },
         "best": {
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/265205932"
         },
         "record": {
-            "win": 58,
+            "win": 60,
             "loss": 3,
             "draw": 0,
-            "time_per_move": 45046,
+            "time_per_move": 45714,
             "timeout_percent": 0
         }
     },
@@ -45,7 +45,7 @@
             "win": 1,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 45046,
+            "time_per_move": 45714,
             "timeout_percent": 0
         }
     },
@@ -68,8 +68,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2329,
-            "date": 1712183143,
+            "rating": 2271,
+            "date": 1741648535,
             "rd": 129
         },
         "best": {
@@ -78,16 +78,16 @@
             "game": "https://www.chess.com/game/live/52849838453"
         },
         "record": {
-            "win": 137,
-            "loss": 71,
+            "win": 139,
+            "loss": 73,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2412,
-            "date": 1727303017,
-            "rd": 81
+            "rating": 2427,
+            "date": 1741649074,
+            "rd": 100
         },
         "best": {
             "rating": 2538,
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/61526963369"
         },
         "record": {
-            "win": 1538,
+            "win": 1539,
             "loss": 924,
-            "draw": 200
+            "draw": 201
         }
     },
     "fide": 2336,

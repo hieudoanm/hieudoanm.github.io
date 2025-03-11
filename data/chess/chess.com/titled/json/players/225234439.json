@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 5,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1731760131,
+    "last_online": 1741682149,
     "joined": 1673671628,
     "status": "premium",
     "is_streamer": false,
@@ -79,6 +79,10 @@
         "best": {
             "total_attempts": 76,
             "score": 73
+        },
+        "daily": {
+            "total_attempts": 64,
+            "score": 61
         }
     }
 }

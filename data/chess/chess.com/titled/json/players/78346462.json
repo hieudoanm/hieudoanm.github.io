@@ -6,10 +6,10 @@
     "name": "Ali Aaron Jaramillo lopez",
     "username": "balachess2006",
     "title": "CM",
-    "followers": 49,
+    "followers": 50,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "Aragua",
-    "last_online": 1732556602,
+    "last_online": 1737663264,
     "joined": 1588372037,
     "status": "premium",
     "is_streamer": false,
@@ -32,7 +32,7 @@
             "loss": 1,
             "draw": 0,
             "time_per_move": 302548,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {

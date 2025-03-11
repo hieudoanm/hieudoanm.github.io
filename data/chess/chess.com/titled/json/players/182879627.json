@@ -7,8 +7,8 @@
     "username": "octopus_assassin",
     "title": "FM",
     "followers": 29,
-    "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1734080518,
+    "country": "https://api.chess.com/pub/country/AU",
+    "last_online": 1736456213,
     "joined": 1651873511,
     "status": "premium",
     "is_streamer": false,
@@ -17,20 +17,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2037,
-            "date": 1734170715,
-            "rd": 320
+            "rating": 2039,
+            "date": 1736539201,
+            "rd": 336
         },
         "best": {
-            "rating": 2037,
-            "date": 1707480578,
+            "rating": 2039,
+            "date": 1736539201,
             "game": "https://www.chess.com/game/daily/476482625"
         },
         "record": {
-            "win": 23,
+            "win": 25,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 4492,
+            "time_per_move": 5659,
             "timeout_percent": 0
         }
     },

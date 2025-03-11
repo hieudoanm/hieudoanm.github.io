@@ -6,9 +6,9 @@
     "name": "David Zhurbinsky",
     "username": "cm_rui",
     "title": "CM",
-    "followers": 555,
+    "followers": 557,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734131428,
+    "last_online": 1741666293,
     "joined": 1532543983,
     "status": "premium",
     "is_streamer": false,
@@ -53,36 +53,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2805,
-            "date": 1734134521,
-            "rd": 30
+            "rating": 2704,
+            "date": 1741225574,
+            "rd": 42
         },
         "best": {
-            "rating": 2805,
-            "date": 1733520672,
+            "rating": 2837,
+            "date": 1734480069,
             "game": "https://www.chess.com/game/live/15126416107"
         },
         "record": {
-            "win": 4389,
-            "loss": 4405,
-            "draw": 524
+            "win": 4476,
+            "loss": 4515,
+            "draw": 545
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2677,
-            "date": 1734146963,
-            "rd": 32
+            "rating": 2637,
+            "date": 1741161002,
+            "rd": 43
         },
         "best": {
-            "rating": 2737,
-            "date": 1730844279,
+            "rating": 2746,
+            "date": 1735959733,
             "game": "https://www.chess.com/game/live/37163474733"
         },
         "record": {
-            "win": 2507,
-            "loss": 2244,
-            "draw": 357
+            "win": 2563,
+            "loss": 2309,
+            "draw": 368
         }
     },
     "fide": 1782,

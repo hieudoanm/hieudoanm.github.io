@@ -5,9 +5,9 @@
     "name": "Sharad Tilak",
     "username": "darkal62",
     "title": "IM",
-    "followers": 246,
+    "followers": 267,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734154187,
+    "last_online": 1741687361,
     "joined": 1477718703,
     "status": "premium",
     "is_streamer": false,
@@ -50,19 +50,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2269,
-            "date": 1734154258,
-            "rd": 28
+            "rating": 2354,
+            "date": 1741687659,
+            "rd": 27
         },
         "best": {
-            "rating": 2419,
-            "date": 1726415860,
+            "rating": 2425,
+            "date": 1737956285,
             "game": "https://www.chess.com/game/live/64563117137"
         },
         "record": {
-            "win": 5320,
-            "loss": 4912,
-            "draw": 318
+            "win": 5711,
+            "loss": 5264,
+            "draw": 335
         }
     },
     "fide": 0,

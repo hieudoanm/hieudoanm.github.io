@@ -6,9 +6,9 @@
     "name": "Roberto Florin Neagu",
     "username": "roberz12",
     "title": "FM",
-    "followers": 38,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734027921,
+    "last_online": 1741701331,
     "joined": 1673869681,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "chess_daily": {
         "last": {
             "rating": 1736,
-            "date": 1734027993,
-            "rd": 181
+            "date": 1735877487,
+            "rd": 205
         },
         "best": {
             "rating": 1776,
@@ -27,17 +27,17 @@
             "game": "https://www.chess.com/game/daily/516229115"
         },
         "record": {
-            "win": 3,
+            "win": 4,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 109232,
+            "time_per_move": 115005,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2115,
-            "date": 1727522238,
+            "date": 1741646088,
             "rd": 49
         },
         "best": {
@@ -54,7 +54,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2545,
-            "date": 1727304025,
+            "date": 1740091032,
             "rd": 48
         },
         "best": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2511,
-            "date": 1732037447,
-            "rd": 47
+            "rating": 2688,
+            "date": 1741702854,
+            "rd": 40
         },
         "best": {
             "rating": 2653,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/110043143769"
         },
         "record": {
-            "win": 530,
-            "loss": 386,
-            "draw": 61
+            "win": 583,
+            "loss": 408,
+            "draw": 69
         }
     },
     "fide": 0,

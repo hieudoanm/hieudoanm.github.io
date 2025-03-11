@@ -6,14 +6,14 @@
     "name": "Miko\u0142aj Tomczak",
     "username": "dyziotomi99",
     "title": "IM",
-    "followers": 44,
+    "followers": 46,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734006972,
+    "last_online": 1741636807,
     "joined": 1483106492,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2522,
-            "date": 1733735680,
-            "rd": 46
+            "rating": 2512,
+            "date": 1734580993,
+            "rd": 45
         },
         "best": {
             "rating": 2661,
@@ -58,26 +58,25 @@
             "game": "https://www.chess.com/game/live/3570335413"
         },
         "record": {
-            "win": 224,
-            "loss": 143,
+            "win": 228,
+            "loss": 147,
             "draw": 32
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2762,
-            "date": 1733875146,
-            "rd": 38
+            "rating": 2766,
+            "date": 1741663696
         },
         "best": {
-            "rating": 2830,
-            "date": 1733846552,
+            "rating": 2853,
+            "date": 1739916421,
             "game": "https://www.chess.com/game/live/37334452301"
         },
         "record": {
-            "win": 1701,
-            "loss": 1316,
-            "draw": 334
+            "win": 1885,
+            "loss": 1428,
+            "draw": 368
         }
     },
     "fide": 2432,
@@ -93,8 +92,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 51,
-            "score": 48
+            "total_attempts": 68,
+            "score": 65
         }
     }
 }

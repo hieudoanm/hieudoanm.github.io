@@ -9,7 +9,7 @@
     "followers": 192,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Bacolod City",
-    "last_online": 1733813158,
+    "last_online": 1741657587,
     "joined": 1404896845,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2821,
-            "date": 1732700736,
-            "rd": 33
+            "rating": 2848,
+            "date": 1741664115,
+            "rd": 47
         },
         "best": {
             "rating": 2988,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/121533084363"
         },
         "record": {
-            "win": 978,
-            "loss": 498,
-            "draw": 74
+            "win": 985,
+            "loss": 501,
+            "draw": 75
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2739,
-            "date": 1730901082,
-            "rd": 48
+            "rating": 2804,
+            "date": 1741662379,
+            "rd": 45
         },
         "best": {
             "rating": 2768,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/48085224793"
         },
         "record": {
-            "win": 254,
-            "loss": 96,
+            "win": 265,
+            "loss": 97,
             "draw": 60
         }
     },

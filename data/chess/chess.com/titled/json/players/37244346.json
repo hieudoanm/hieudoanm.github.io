@@ -6,9 +6,9 @@
     "name": "Vladislav Voitovich",
     "username": "barboval",
     "title": "FM",
-    "followers": 12,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734152360,
+    "last_online": 1741358746,
     "joined": 1500809553,
     "status": "premium",
     "is_streamer": false,
@@ -17,36 +17,35 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2600,
-            "date": 1734123331,
-            "rd": 29
+            "rating": 2714,
+            "date": 1739822920
         },
         "best": {
-            "rating": 2721,
-            "date": 1653856940,
+            "rating": 2752,
+            "date": 1735470206,
             "game": "https://www.chess.com/game/live/125360360213"
         },
         "record": {
-            "win": 3503,
-            "loss": 4236,
-            "draw": 476
+            "win": 3943,
+            "loss": 4735,
+            "draw": 538
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2488,
-            "date": 1733852697,
-            "rd": 44
+            "rating": 2671,
+            "date": 1741703875,
+            "rd": 30
         },
         "best": {
-            "rating": 2623,
-            "date": 1645965559,
-            "game": "https://www.chess.com/game/live/120928865937"
+            "rating": 2679,
+            "date": 1738344130,
+            "game": "https://www.chess.com/game/live/128191265505"
         },
         "record": {
-            "win": 278,
-            "loss": 286,
-            "draw": 52
+            "win": 508,
+            "loss": 499,
+            "draw": 96
         }
     },
     "fide": 2319,
@@ -62,8 +61,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 43,
-            "score": 40
+            "total_attempts": 45,
+            "score": 42
         }
     }
 }

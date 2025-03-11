@@ -6,20 +6,20 @@
     "name": "Madhvendra Pratap Sharma",
     "username": "blunderingpanda01",
     "title": "CM",
-    "followers": 7,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733744255,
+    "last_online": 1741691949,
     "joined": 1723267081,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2082,
-            "date": 1733744629,
-            "rd": 204
+            "rating": 1896,
+            "date": 1741159596,
+            "rd": 108
         },
         "best": {
             "rating": 2082,
@@ -27,33 +27,33 @@
             "game": "https://www.chess.com/game/live/127483248753"
         },
         "record": {
-            "win": 1,
-            "loss": 0,
+            "win": 4,
+            "loss": 5,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2617,
-            "date": 1733717877,
-            "rd": 48
+            "rating": 2645,
+            "date": 1741691523,
+            "rd": 20
         },
         "best": {
-            "rating": 2666,
-            "date": 1730827279,
-            "game": "https://www.chess.com/game/live/120324665817"
+            "rating": 2806,
+            "date": 1739252151,
+            "game": "https://www.chess.com/game/live/132990567951"
         },
         "record": {
-            "win": 42,
-            "loss": 34,
-            "draw": 9
+            "win": 488,
+            "loss": 532,
+            "draw": 82
         }
     },
-    "fide": 2201,
+    "fide": 2234,
     "tactics": {
         "highest": {
-            "rating": 3613,
-            "date": 1730898370
+            "rating": 3622,
+            "date": 1734705254
         },
         "lowest": {
             "rating": 1000,

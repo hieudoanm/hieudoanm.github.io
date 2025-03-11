@@ -6,15 +6,15 @@
     "name": "Tommi Luukkonen",
     "username": "elvital",
     "title": "FM",
-    "followers": 19,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/FI",
     "location": "Jyvaskyla",
-    "last_online": 1734077106,
+    "last_online": 1741641378,
     "joined": 1294854711,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2414,
-            "date": 1724571599,
-            "rd": 116
+            "rating": 2425,
+            "date": 1741649689,
+            "rd": 45
         },
         "best": {
             "rating": 2548,
@@ -47,33 +47,33 @@
             "game": "https://www.chess.com/game/live/4707765431"
         },
         "record": {
-            "win": 9,
-            "loss": 5,
-            "draw": 1
+            "win": 26,
+            "loss": 15,
+            "draw": 2
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2479,
-            "date": 1733001409,
-            "rd": 60
+            "rating": 2478,
+            "date": 1741473174,
+            "rd": 36
         },
         "best": {
-            "rating": 2507,
-            "date": 1700584179,
-            "game": "https://www.chess.com/game/live/125771404681"
+            "rating": 2517,
+            "date": 1740528342,
+            "game": "https://www.chess.com/game/live/131841623995"
         },
         "record": {
-            "win": 165,
-            "loss": 130,
-            "draw": 20
+            "win": 259,
+            "loss": 228,
+            "draw": 29
         }
     },
     "fide": 2310,
     "tactics": {
         "highest": {
-            "rating": 2305,
-            "date": 1716746846
+            "rating": 2316,
+            "date": 1739819500
         },
         "lowest": {
             "rating": 1356,
@@ -82,8 +82,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 69,
-            "score": 66
+            "total_attempts": 75,
+            "score": 72
         }
     }
 }

@@ -9,7 +9,7 @@
     "followers": 84,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Blumenau",
-    "last_online": 1733854672,
+    "last_online": 1738159663,
     "joined": 1336695762,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3594,
-            "date": 1733846343
+            "rating": 3616,
+            "date": 1735243813
         },
         "lowest": {
             "rating": 989,

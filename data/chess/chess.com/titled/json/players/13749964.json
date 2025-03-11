@@ -9,7 +9,7 @@
     "followers": 35,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "Stockholm",
-    "last_online": 1732873850,
+    "last_online": 1741115569,
     "joined": 1380741292,
     "status": "premium",
     "is_streamer": false,
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2019,
-            "date": 1725812422,
-            "rd": 74
+            "rating": 2165,
+            "date": 1741003223,
+            "rd": 35
         },
         "best": {
             "rating": 2199,
             "date": 1406138912,
-            "game": "https://www.chess.com/game/live/81683143677"
+            "game": "https://www.chess.com/game/live/133126760619"
         },
         "record": {
-            "win": 91,
-            "loss": 41,
-            "draw": 8
+            "win": 167,
+            "loss": 94,
+            "draw": 35
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2324,
-            "date": 1734182913,
-            "rd": 28
+            "rating": 2362,
+            "date": 1741678506,
+            "rd": 29
         },
         "best": {
             "rating": 2441,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/91741714501"
         },
         "record": {
-            "win": 9777,
-            "loss": 6746,
-            "draw": 1596
+            "win": 10105,
+            "loss": 7010,
+            "draw": 1690
         }
     },
     "fide": 2286,

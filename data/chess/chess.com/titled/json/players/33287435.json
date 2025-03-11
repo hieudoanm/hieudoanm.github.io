@@ -1,19 +1,19 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/33287435.a7d0d536.200x200o.d1fd1e8d86ef.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/33287435.0d633258.200x200o.558329da4608.jpg",
     "player_id": 33287435,
     "@id": "https://api.chess.com/pub/player/coach_istvanovszki",
     "url": "https://www.chess.com/member/Coach_Istvanovszki",
     "name": "Martin Istvanovszki",
     "username": "coach_istvanovszki",
     "title": "FM",
-    "followers": 51,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734181292,
+    "last_online": 1740984826,
     "joined": 1487363849,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2464,
-            "date": 1733424425,
-            "rd": 94
+            "rating": 2519,
+            "date": 1741466372,
+            "rd": 100
         },
         "best": {
             "rating": 2681,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/93809401635"
         },
         "record": {
-            "win": 336,
+            "win": 338,
             "loss": 243,
             "draw": 69
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2643,
-            "date": 1733853949,
-            "rd": 39
+            "rating": 2588,
+            "date": 1741096125,
+            "rd": 38
         },
         "best": {
             "rating": 2718,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/127585859745"
         },
         "record": {
-            "win": 5195,
-            "loss": 4009,
-            "draw": 1023
+            "win": 5398,
+            "loss": 4175,
+            "draw": 1073
         }
     },
     "fide": 2350,
     "tactics": {
         "highest": {
-            "rating": 2940,
-            "date": 1695363985
+            "rating": 2943,
+            "date": 1737287791
         },
         "lowest": {
             "rating": 1183,

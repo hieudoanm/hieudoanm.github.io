@@ -9,7 +9,7 @@
     "followers": 30,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "Cambridge",
-    "last_online": 1734109225,
+    "last_online": 1740683082,
     "joined": 1388233404,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_daily": {
         "last": {
             "rating": 2337,
-            "date": 1733897613,
-            "rd": 168
+            "date": 1734889178,
+            "rd": 195
         },
         "best": {
             "rating": 2352,
@@ -30,8 +30,8 @@
         "record": {
             "win": 32,
             "loss": 1,
-            "draw": 7,
-            "time_per_move": 27666,
+            "draw": 9,
+            "time_per_move": 28094,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 18,
             "loss": 1,
             "draw": 1,
-            "time_per_move": 27666,
+            "time_per_move": 28094,
             "timeout_percent": 0
         }
     },

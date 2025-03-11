@@ -6,7 +6,7 @@
     "name": "Petr Mikhalchenko",
     "username": "godzillachessyoutube",
     "title": "FM",
-    "followers": 41,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Krasnoyarsk",
     "last_online": 1715391943,
@@ -14,7 +14,7 @@
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -35,19 +35,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2807,
-            "date": 1733564933,
-            "rd": 33
+            "rating": 2715,
+            "date": 1741446174
         },
         "best": {
-            "rating": 2807,
-            "date": 1733564933,
+            "rating": 2810,
+            "date": 1738751347,
             "game": "https://www.chess.com/game/live/104621513589"
         },
         "record": {
-            "win": 789,
-            "loss": 643,
-            "draw": 104
+            "win": 985,
+            "loss": 843,
+            "draw": 133
         }
     },
     "fide": 2322,

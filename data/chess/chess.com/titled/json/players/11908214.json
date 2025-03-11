@@ -6,10 +6,10 @@
     "name": "Daniel Fernando Nunez V",
     "username": "dafnu83",
     "title": "FM",
-    "followers": 17,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Bogot&aacute;",
-    "last_online": 1730816130,
+    "last_online": 1738506767,
     "joined": 1368733258,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2490,
-            "date": 1734179020,
-            "rd": 23
+            "rating": 2498,
+            "date": 1741696044,
+            "rd": 25
         },
         "best": {
             "rating": 2639,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/123861083251"
         },
         "record": {
-            "win": 1814,
-            "loss": 1758,
-            "draw": 145
+            "win": 2148,
+            "loss": 2162,
+            "draw": 173
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2506,
-            "date": 1729294713,
-            "rd": 26
+            "rating": 2517,
+            "date": 1739901749,
+            "rd": 49
         },
         "best": {
             "rating": 2543,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/123004818059"
         },
         "record": {
-            "win": 3448,
-            "loss": 3112,
-            "draw": 374
+            "win": 3452,
+            "loss": 3115,
+            "draw": 376
         }
     },
     "fide": 0,

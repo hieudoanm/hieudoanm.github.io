@@ -6,10 +6,10 @@
     "name": "Shaashwath Sivakumar",
     "username": "dontmesswithme_2",
     "title": "FM",
-    "followers": 135,
+    "followers": 138,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Sunnyvale",
-    "last_online": 1733851757,
+    "last_online": 1741555561,
     "joined": 1374630429,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2396,
-            "date": 1733619082,
-            "rd": 33
+            "rating": 2508,
+            "date": 1740949289,
+            "rd": 41
         },
         "best": {
             "rating": 2726,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/87081649619"
         },
         "record": {
-            "win": 9128,
-            "loss": 9956,
-            "draw": 901
+            "win": 9195,
+            "loss": 10031,
+            "draw": 904
         }
     },
     "fide": 2242,

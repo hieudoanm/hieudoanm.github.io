@@ -5,24 +5,24 @@
     "url": "https://www.chess.com/member/Trade_Union",
     "username": "trade_union",
     "title": "IM",
-    "followers": 1,
+    "followers": 3,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734159332,
+    "last_online": 1738911480,
     "joined": 1552666974,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
             "rating": 2200,
-            "date": 1732887747,
+            "date": 1737028536,
             "rd": 311
         },
         "best": {
-            "rating": 1839,
-            "date": 1586853892,
+            "rating": 2200,
+            "date": 1737021186,
             "game": "https://www.chess.com/game/live/4720214651"
         },
         "record": {
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2248,
-            "date": 1734162953,
-            "rd": 46
+            "rating": 2127,
+            "date": 1738915311,
+            "rd": 48
         },
         "best": {
             "rating": 2406,
@@ -43,15 +43,15 @@
             "game": "https://www.chess.com/game/live/127850941365"
         },
         "record": {
-            "win": 362,
-            "loss": 113,
-            "draw": 40
+            "win": 504,
+            "loss": 135,
+            "draw": 48
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2862,
-            "date": 1733950421
+            "rating": 2912,
+            "date": 1734277566
         },
         "lowest": {
             "rating": 1200,

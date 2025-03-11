@@ -9,7 +9,7 @@
     "followers": 66,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734173569,
+    "last_online": 1741507281,
     "joined": 1414680052,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2227,
-            "date": 1714748569,
+            "date": 1739733575,
             "rd": 135
         },
         "best": {
@@ -52,26 +52,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2693,
-            "date": 1733857693,
-            "rd": 43
+            "rating": 2549,
+            "date": 1741105632,
+            "rd": 49
         },
         "best": {
-            "rating": 2693,
-            "date": 1725706256,
+            "rating": 2702,
+            "date": 1734185474,
             "game": "https://www.chess.com/game/live/25377708709"
         },
         "record": {
-            "win": 1454,
-            "loss": 1308,
-            "draw": 176
+            "win": 1475,
+            "loss": 1341,
+            "draw": 182
         }
     },
     "fide": 2312,
     "tactics": {
         "highest": {
-            "rating": 3078,
-            "date": 1725242866
+            "rating": 3156,
+            "date": 1738218772
         },
         "lowest": {
             "rating": 1397,
@@ -82,10 +82,6 @@
         "best": {
             "total_attempts": 63,
             "score": 60
-        },
-        "daily": {
-            "total_attempts": 18,
-            "score": 15
         }
     }
 }

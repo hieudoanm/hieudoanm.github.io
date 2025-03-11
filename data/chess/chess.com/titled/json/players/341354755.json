@@ -6,9 +6,9 @@
     "name": "Sanjin Culum",
     "username": "culum2007",
     "title": "IM",
-    "followers": 13,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/BA",
-    "last_online": 1733860372,
+    "last_online": 1740928803,
     "joined": 1706274505,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2649,
-            "date": 1729758304,
-            "rd": 34
+            "rating": 2682,
+            "date": 1740855594,
+            "rd": 33
         },
         "best": {
             "rating": 2715,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/121889439735"
         },
         "record": {
-            "win": 159,
-            "loss": 179,
-            "draw": 28
+            "win": 194,
+            "loss": 213,
+            "draw": 35
         }
     },
     "chess_blitz": {
@@ -52,8 +52,8 @@
     "fide": 2409,
     "tactics": {
         "highest": {
-            "rating": 2513,
-            "date": 1720738320
+            "rating": 2960,
+            "date": 1740647502
         },
         "lowest": {
             "rating": 1000,

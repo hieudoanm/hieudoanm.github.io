@@ -6,9 +6,9 @@
     "name": "Vladimir Hrtko",
     "username": "2sks",
     "title": "CM",
-    "followers": 22,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/SK",
-    "last_online": 1734185360,
+    "last_online": 1741554472,
     "joined": 1507781168,
     "status": "premium",
     "is_streamer": false,
@@ -31,19 +31,19 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2202,
-            "date": 1734184802,
-            "rd": 43
+            "rating": 2220,
+            "date": 1741555625,
+            "rd": 48
         },
         "best": {
-            "rating": 2222,
-            "date": 1723875169,
+            "rating": 2234,
+            "date": 1739618075,
             "game": "https://www.chess.com/game/live/114039632777"
         },
         "record": {
-            "win": 510,
-            "loss": 397,
-            "draw": 127
+            "win": 534,
+            "loss": 417,
+            "draw": 131
         }
     },
     "chess_bullet": {
@@ -65,26 +65,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2216,
-            "date": 1734178816,
-            "rd": 26
+            "rating": 2239,
+            "date": 1741698046,
+            "rd": 27
         },
         "best": {
-            "rating": 2248,
-            "date": 1733918039,
+            "rating": 2272,
+            "date": 1739462492,
             "game": "https://www.chess.com/game/live/4004362913"
         },
         "record": {
-            "win": 13620,
-            "loss": 12556,
-            "draw": 2987
+            "win": 14022,
+            "loss": 12928,
+            "draw": 3106
         }
     },
     "fide": 2102,
     "tactics": {
         "highest": {
-            "rating": 2499,
-            "date": 1643570971
+            "rating": 2678,
+            "date": 1740234420
         },
         "lowest": {
             "rating": 789,

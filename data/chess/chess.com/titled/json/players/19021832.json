@@ -6,9 +6,9 @@
     "name": "Sergio Adan Bermudez",
     "username": "prime-morty",
     "title": "FM",
-    "followers": 80,
+    "followers": 93,
     "country": "https://api.chess.com/pub/country/XS",
-    "last_online": 1734173919,
+    "last_online": 1741690354,
     "joined": 1411501497,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2625,
-            "date": 1734174280,
-            "rd": 26
+            "rating": 2637,
+            "date": 1741699997,
+            "rd": 28
         },
         "best": {
             "rating": 2719,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/113694035967"
         },
         "record": {
-            "win": 3368,
-            "loss": 2869,
-            "draw": 481
+            "win": 3666,
+            "loss": 3125,
+            "draw": 542
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3355,
-            "date": 1685305127
+            "rating": 3394,
+            "date": 1741339338
         },
         "lowest": {
             "rating": 1226,

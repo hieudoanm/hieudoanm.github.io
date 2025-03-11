@@ -8,7 +8,7 @@
     "title": "IM",
     "followers": 26,
     "country": "https://api.chess.com/pub/country/SK",
-    "last_online": 1734056443,
+    "last_online": 1741683220,
     "joined": 1511268877,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2586,
-            "date": 1727040961,
-            "rd": 48
+            "rating": 2591,
+            "date": 1735706853,
+            "rd": 49
         },
         "best": {
             "rating": 2744,
@@ -61,7 +61,7 @@
             "game": "https://www.chess.com/game/live/46539054093"
         },
         "record": {
-            "win": 3062,
+            "win": 3063,
             "loss": 2286,
             "draw": 736
         }

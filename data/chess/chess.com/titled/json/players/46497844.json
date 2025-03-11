@@ -6,21 +6,21 @@
     "name": "Darius Vi\u0161kelis",
     "username": "darius321",
     "title": "FM",
-    "followers": 120,
+    "followers": 121,
     "country": "https://api.chess.com/pub/country/LT",
     "location": "Vilnius",
-    "last_online": 1734183487,
+    "last_online": 1741698507,
     "joined": 1527244035,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2080,
-            "date": 1734183556,
-            "rd": 83
+            "rating": 2130,
+            "date": 1741691053,
+            "rd": 85
         },
         "best": {
             "rating": 2155,
@@ -28,24 +28,18 @@
             "game": "https://www.chess.com/game/daily/676665475"
         },
         "record": {
-            "win": 204,
-            "loss": 56,
+            "win": 215,
+            "loss": 57,
             "draw": 42,
-            "time_per_move": 22927,
+            "time_per_move": 22818,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 176,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 2
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 2026,
-            "date": 1733126444,
-            "rd": 112
+            "rating": 2034,
+            "date": 1739696093,
+            "rd": 108
         },
         "best": {
             "rating": 2063,
@@ -53,17 +47,11 @@
             "game": "https://www.chess.com/game/daily/472806529"
         },
         "record": {
-            "win": 41,
-            "loss": 12,
+            "win": 45,
+            "loss": 13,
             "draw": 15,
-            "time_per_move": 22927,
+            "time_per_move": 22818,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 176,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 2
         }
     },
     "chess_rapid": {
@@ -102,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2290,
-            "date": 1730031918,
-            "rd": 78
+            "rating": 2293,
+            "date": 1741108610,
+            "rd": 74
         },
         "best": {
             "rating": 2407,
@@ -112,9 +100,9 @@
             "game": "https://www.chess.com/game/live/97700971629"
         },
         "record": {
-            "win": 2769,
-            "loss": 2183,
-            "draw": 331
+            "win": 2784,
+            "loss": 2195,
+            "draw": 332
         }
     },
     "tactics": {

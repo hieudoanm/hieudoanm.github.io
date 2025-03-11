@@ -6,10 +6,10 @@
     "name": "Tyler Tanaka",
     "username": "moon_stone123",
     "title": "FM",
-    "followers": 282,
+    "followers": 293,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Montreal",
-    "last_online": 1734145319,
+    "last_online": 1741448101,
     "joined": 1406456063,
     "status": "premium",
     "is_streamer": false,
@@ -52,7 +52,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2409,
-            "date": 1733268807,
+            "date": 1740507571,
             "rd": 49
         },
         "best": {
@@ -61,43 +61,43 @@
             "game": "https://www.chess.com/game/live/17265125381"
         },
         "record": {
-            "win": 147,
+            "win": 152,
             "loss": 81,
             "draw": 23
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2561,
-            "date": 1731870095,
-            "rd": 33
+            "rating": 2498,
+            "date": 1741457569,
+            "rd": 37
         },
         "best": {
             "rating": 2683,
             "date": 1723767697,
-            "game": "https://www.chess.com/game/live/125522303911"
+            "game": "https://www.chess.com/game/live/129148382363"
         },
         "record": {
-            "win": 2382,
-            "loss": 1912,
-            "draw": 241
+            "win": 2508,
+            "loss": 2033,
+            "draw": 253
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2630,
-            "date": 1733270523,
+            "rating": 2647,
+            "date": 1741453453,
             "rd": 48
         },
         "best": {
-            "rating": 2683,
-            "date": 1696900774,
+            "rating": 2684,
+            "date": 1736305462,
             "game": "https://www.chess.com/game/live/6567310953"
         },
         "record": {
-            "win": 2463,
-            "loss": 1656,
-            "draw": 323
+            "win": 2494,
+            "loss": 1673,
+            "draw": 334
         }
     },
     "fide": 2315,

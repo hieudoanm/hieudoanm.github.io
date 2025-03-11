@@ -6,10 +6,10 @@
     "name": "Wagner Guimar\u00e3es",
     "username": "mfwagnerpeixoto",
     "title": "FM",
-    "followers": 162,
+    "followers": 165,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Rio de Janeiro, Rio de Janeiro",
-    "last_online": 1733897148,
+    "last_online": 1738947125,
     "joined": 1402360811,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2357,
-            "date": 1730308519,
-            "rd": 36
+            "rating": 2394,
+            "date": 1738947431,
+            "rd": 43
         },
         "best": {
             "rating": 2420,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/5283609875"
         },
         "record": {
-            "win": 985,
-            "loss": 902,
-            "draw": 222
+            "win": 1023,
+            "loss": 930,
+            "draw": 231
         }
     },
     "tactics": {

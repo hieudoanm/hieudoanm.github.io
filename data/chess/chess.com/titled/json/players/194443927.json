@@ -6,9 +6,9 @@
     "name": "Ko Htaik",
     "username": "kyawlayhtaik8",
     "title": "FM",
-    "followers": 128,
+    "followers": 134,
     "country": "https://api.chess.com/pub/country/MM",
-    "last_online": 1734168945,
+    "last_online": 1741611817,
     "joined": 1661271938,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1640,
-            "date": 1713799476,
+            "date": 1739758101,
             "rd": 319
         },
         "best": {
@@ -37,8 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2439,
-            "date": 1733102132,
-            "rd": 49
+            "date": 1741017162
         },
         "best": {
             "rating": 2461,
@@ -46,33 +45,33 @@
             "game": "https://www.chess.com/game/live/88526527153"
         },
         "record": {
-            "win": 194,
-            "loss": 90,
-            "draw": 23
+            "win": 199,
+            "loss": 94,
+            "draw": 24
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2105,
-            "date": 1731833917,
-            "rd": 35
+            "rating": 2060,
+            "date": 1741699184,
+            "rd": 48
         },
         "best": {
-            "rating": 2161,
-            "date": 1729964114,
-            "game": "https://www.chess.com/game/live/123698433871"
+            "rating": 2170,
+            "date": 1739031097,
+            "game": "https://www.chess.com/game/live/134386139287"
         },
         "record": {
-            "win": 372,
-            "loss": 278,
-            "draw": 20
+            "win": 442,
+            "loss": 305,
+            "draw": 24
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2299,
-            "date": 1734106576,
-            "rd": 35
+            "rating": 2351,
+            "date": 1741700868,
+            "rd": 31
         },
         "best": {
             "rating": 2460,
@@ -80,9 +79,9 @@
             "game": "https://www.chess.com/game/live/109843888995"
         },
         "record": {
-            "win": 1708,
-            "loss": 1508,
-            "draw": 163
+            "win": 1843,
+            "loss": 1625,
+            "draw": 172
         }
     },
     "fide": 0,

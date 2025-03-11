@@ -9,7 +9,7 @@
     "followers": 6,
     "country": "https://api.chess.com/pub/country/EE",
     "location": "Tallinn",
-    "last_online": 1734178081,
+    "last_online": 1741623528,
     "joined": 1468436107,
     "status": "premium",
     "is_streamer": false,
@@ -37,26 +37,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1377,
-            "date": 1617516147,
-            "rd": 247
+            "rating": 2263,
+            "date": 1739701464,
+            "rd": 49
         },
         "best": {
-            "rating": 1377,
-            "date": 1617516147,
-            "game": "https://www.chess.com/game/live/11255006523"
+            "rating": 2263,
+            "date": 1739701464,
+            "game": "https://www.chess.com/game/live/133439346351"
         },
         "record": {
-            "win": 1,
+            "win": 2,
             "loss": 0,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2425,
-            "date": 1733916882,
-            "rd": 53
+            "rating": 2490,
+            "date": 1741636072,
+            "rd": 43
         },
         "best": {
             "rating": 2452,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/4702042020"
         },
         "record": {
-            "win": 206,
-            "loss": 128,
-            "draw": 46
+            "win": 245,
+            "loss": 150,
+            "draw": 56
         }
     },
     "fide": 2255,
     "tactics": {
         "highest": {
-            "rating": 3004,
-            "date": 1733837171
+            "rating": 3230,
+            "date": 1741073748
         },
         "lowest": {
             "rating": 1204,

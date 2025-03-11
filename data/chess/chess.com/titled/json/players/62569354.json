@@ -6,9 +6,9 @@
     "name": "LE MINh Hoang",
     "username": "binhminh2000",
     "title": "FM",
-    "followers": 257,
+    "followers": 265,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1734168882,
+    "last_online": 1741687882,
     "joined": 1561216486,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2393,
-            "date": 1722650373,
+            "date": 1737898702,
             "rd": 299
         },
         "best": {
@@ -83,8 +83,8 @@
             "score": 59
         },
         "daily": {
-            "total_attempts": 32,
-            "score": 30
+            "total_attempts": 36,
+            "score": 33
         }
     }
 }

@@ -6,21 +6,40 @@
     "name": "Alex Ivanov",
     "username": "im_alex_ivanov",
     "title": "IM",
-    "followers": 6,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Antalya",
-    "last_online": 1734126293,
+    "last_online": 1741463420,
     "joined": 1491897612,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Silver",
     "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 2003,
+            "date": 1738151852,
+            "rd": 346
+        },
+        "best": {
+            "rating": 2003,
+            "date": 1738151852,
+            "game": "https://www.chess.com/game/daily/764797281"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 814,
+            "timeout_percent": 0
+        }
+    },
     "chess_bullet": {
         "last": {
-            "rating": 2570,
-            "date": 1717064328,
-            "rd": 49
+            "rating": 2582,
+            "date": 1740825312,
+            "rd": 32
         },
         "best": {
             "rating": 2658,
@@ -28,9 +47,9 @@
             "game": "https://www.chess.com/game/live/86453946861"
         },
         "record": {
-            "win": 72,
-            "loss": 66,
-            "draw": 4
+            "win": 117,
+            "loss": 104,
+            "draw": 7
         }
     },
     "chess_blitz": {

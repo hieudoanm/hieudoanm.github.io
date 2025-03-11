@@ -6,10 +6,10 @@
     "name": "Muthaiah AL",
     "username": "muthaiahchess",
     "title": "IM",
-    "followers": 137,
+    "followers": 141,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734142681,
+    "last_online": 1741695322,
     "joined": 1511800960,
     "status": "premium",
     "is_streamer": false,
@@ -82,10 +82,6 @@
         "best": {
             "total_attempts": 73,
             "score": 70
-        },
-        "daily": {
-            "total_attempts": 52,
-            "score": 49
         }
     }
 }

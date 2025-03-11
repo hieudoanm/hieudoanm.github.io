@@ -6,10 +6,10 @@
     "name": "Ansumana Kamara",
     "username": "anskam",
     "title": "CM",
-    "followers": 122,
+    "followers": 123,
     "country": "https://api.chess.com/pub/country/SL",
     "location": "Freetown, Sierra Leone",
-    "last_online": 1734109636,
+    "last_online": 1741546144,
     "joined": 1363503082,
     "status": "premium",
     "is_streamer": false,
@@ -37,19 +37,19 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2055,
-            "date": 1734111144,
-            "rd": 32
+            "rating": 1979,
+            "date": 1741667504,
+            "rd": 29
         },
         "best": {
             "rating": 2155,
             "date": 1718644009,
-            "game": "https://www.chess.com/game/live/40949353291"
+            "game": "https://www.chess.com/game/live/131902277511"
         },
         "record": {
-            "win": 5267,
-            "loss": 4013,
-            "draw": 610
+            "win": 5466,
+            "loss": 4196,
+            "draw": 646
         }
     },
     "chess_bullet": {
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1912,
-            "date": 1646762793,
-            "rd": 72
+            "rating": 1885,
+            "date": 1741395304,
+            "rd": 90
         },
         "best": {
-            "rating": 2000,
-            "date": 1364269926,
+            "rating": 2126,
+            "date": 1741281245,
             "game": "https://www.chess.com/game/live/5283563673"
         },
         "record": {
-            "win": 602,
-            "loss": 450,
-            "draw": 37
+            "win": 616,
+            "loss": 463,
+            "draw": 41
         }
     },
     "tactics": {

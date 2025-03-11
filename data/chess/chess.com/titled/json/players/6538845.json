@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6538845.94154532.200x200o.6614a39de130.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6538845.0db8b116.200x200o.3fa2f2756c7d.png",
     "player_id": 6538845,
     "@id": "https://api.chess.com/pub/player/chessarchitect64",
     "url": "https://www.chess.com/member/ChessArchitect64",
     "name": "Christiansen Sava",
     "username": "chessarchitect64",
     "title": "FM",
-    "followers": 398,
+    "followers": 411,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Bucuresti",
-    "last_online": 1734178984,
+    "last_online": 1741688306,
     "joined": 1327213320,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 972,
-            "date": 1734167268,
-            "rd": 185
+            "rating": 1166,
+            "date": 1740814069,
+            "rd": 172
         },
         "best": {
             "rating": 1899,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/112651190"
         },
         "record": {
-            "win": 70,
+            "win": 72,
             "loss": 40,
             "draw": 3,
-            "time_per_move": 36435,
+            "time_per_move": 36582,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 16,
             "loss": 3,
             "draw": 0,
-            "time_per_move": 36435,
+            "time_per_move": 36582,
             "timeout_percent": 0
         }
     },
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1883,
-            "date": 1733781019,
-            "rd": 33
+            "rating": 1821,
+            "date": 1741701818,
+            "rd": 25
         },
         "best": {
             "rating": 2124,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/102534099843"
         },
         "record": {
-            "win": 4259,
-            "loss": 3875,
-            "draw": 364
+            "win": 4454,
+            "loss": 4088,
+            "draw": 382
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2176,
-            "date": 1732185689,
-            "rd": 70
+            "rating": 2198,
+            "date": 1740934473,
+            "rd": 66
         },
         "best": {
             "rating": 2299,
@@ -100,8 +100,8 @@
             "game": "https://www.chess.com/game/live/97345315051"
         },
         "record": {
-            "win": 1440,
-            "loss": 1115,
+            "win": 1446,
+            "loss": 1122,
             "draw": 98
         }
     },

@@ -5,9 +5,9 @@
     "name": "Shubh Laddha",
     "username": "chess123456s",
     "title": "FM",
-    "followers": 33,
+    "followers": 34,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734151966,
+    "last_online": 1741687300,
     "joined": 1589701852,
     "status": "premium",
     "is_streamer": false,
@@ -52,26 +52,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2794,
-            "date": 1734163716,
+            "rating": 2739,
+            "date": 1741700736,
             "rd": 26
         },
         "best": {
-            "rating": 2801,
-            "date": 1698515791,
+            "rating": 2832,
+            "date": 1739277208,
             "game": "https://www.chess.com/game/live/101330475009"
         },
         "record": {
-            "win": 5170,
-            "loss": 4460,
-            "draw": 847
+            "win": 5579,
+            "loss": 4780,
+            "draw": 897
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2631,
-            "date": 1733853930,
-            "rd": 43
+            "rating": 2611,
+            "date": 1740465389,
+            "rd": 48
         },
         "best": {
             "rating": 2698,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/81012190211"
         },
         "record": {
-            "win": 3283,
-            "loss": 2955,
-            "draw": 891
+            "win": 3308,
+            "loss": 2974,
+            "draw": 897
         }
     },
     "tactics": {

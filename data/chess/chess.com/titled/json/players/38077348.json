@@ -6,9 +6,9 @@
     "name": "Dmitry Anikonov",
     "username": "yrtimd",
     "title": "FM",
-    "followers": 29,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734166958,
+    "last_online": 1741253341,
     "joined": 1503584632,
     "status": "premium",
     "is_streamer": false,
@@ -76,10 +76,6 @@
         "best": {
             "total_attempts": 61,
             "score": 58
-        },
-        "daily": {
-            "total_attempts": 49,
-            "score": 46
         }
     }
 }

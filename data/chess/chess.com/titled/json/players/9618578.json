@@ -6,7 +6,7 @@
     "name": "Armen Hachijan",
     "username": "chillinx",
     "title": "FM",
-    "followers": 187,
+    "followers": 196,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Amsterdam, Netherlands",
     "last_online": 1728922006,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2618,
-            "date": 1734182070,
-            "rd": 31
+            "rating": 2559,
+            "date": 1741625014,
+            "rd": 39
         },
         "best": {
             "rating": 2744,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/97080586395"
         },
         "record": {
-            "win": 7233,
-            "loss": 5047,
-            "draw": 809
+            "win": 7375,
+            "loss": 5165,
+            "draw": 817
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2451,
-            "date": 1728922260,
-            "rd": 44
+            "rating": 2483,
+            "date": 1741606622,
+            "rd": 42
         },
         "best": {
             "rating": 2655,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/87602505055"
         },
         "record": {
-            "win": 5779,
-            "loss": 4268,
-            "draw": 833
+            "win": 5826,
+            "loss": 4304,
+            "draw": 842
         }
     },
     "tactics": {

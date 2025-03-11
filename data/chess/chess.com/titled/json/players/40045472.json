@@ -8,7 +8,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "\u041a\u0430\u0440\u0430\u0433\u0430\u043d\u0434\u0430",
-    "last_online": 1730828233,
+    "last_online": 1741604586,
     "joined": 1509784640,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2514,
-            "date": 1730226771,
-            "rd": 45
+            "rating": 2476,
+            "date": 1740671841,
+            "rd": 47
         },
         "best": {
             "rating": 2642,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/33164353551"
         },
         "record": {
-            "win": 98,
-            "loss": 104,
+            "win": 99,
+            "loss": 110,
             "draw": 11
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2533,
-            "date": 1700588983,
-            "rd": 71
+            "rating": 2477,
+            "date": 1740501550,
+            "rd": 55
         },
         "best": {
             "rating": 2673,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/67711513517"
         },
         "record": {
-            "win": 803,
-            "loss": 643,
-            "draw": 121
+            "win": 816,
+            "loss": 658,
+            "draw": 125
         }
     },
     "tactics": {
@@ -78,8 +78,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 54,
-            "score": 51
+            "total_attempts": 55,
+            "score": 52
         }
     }
 }

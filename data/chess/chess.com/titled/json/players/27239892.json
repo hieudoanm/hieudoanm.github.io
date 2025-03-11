@@ -9,7 +9,7 @@
     "followers": 37,
     "country": "https://api.chess.com/pub/country/LV",
     "location": "Riga",
-    "last_online": 1734005935,
+    "last_online": 1740965955,
     "joined": 1457996542,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2329,
-            "date": 1729409080,
-            "rd": 71
+            "rating": 2383,
+            "date": 1740967000,
+            "rd": 75
         },
         "best": {
             "rating": 2349,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/121558196089"
         },
         "record": {
-            "win": 221,
-            "loss": 132,
-            "draw": 18
+            "win": 227,
+            "loss": 134,
+            "draw": 19
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2234,
-            "date": 1730586890,
-            "rd": 102
+            "rating": 2324,
+            "date": 1739891757,
+            "rd": 69
         },
         "best": {
             "rating": 2396,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/5721190218"
         },
         "record": {
-            "win": 44,
-            "loss": 27,
-            "draw": 10
+            "win": 55,
+            "loss": 34,
+            "draw": 13
         }
     },
     "fide": 2390,

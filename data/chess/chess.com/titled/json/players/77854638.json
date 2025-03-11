@@ -3,9 +3,10 @@
     "player_id": 77854638,
     "@id": "https://api.chess.com/pub/player/konstantinb_1983",
     "url": "https://www.chess.com/member/KonstantinB_1983",
+    "name": "Konstantin Bazarov",
     "username": "konstantinb_1983",
     "title": "FM",
-    "followers": 20,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u041c\u043e\u0441\u043a\u0432\u0430",
     "last_online": 1706463111,
@@ -17,19 +18,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2734,
-            "date": 1734114732,
-            "rd": 48
+            "rating": 2606,
+            "date": 1741703096,
+            "rd": 29
         },
         "best": {
-            "rating": 2735,
-            "date": 1732890935,
+            "rating": 2775,
+            "date": 1735578920,
             "game": "https://www.chess.com/game/live/24773520815"
         },
         "record": {
-            "win": 3347,
-            "loss": 2749,
-            "draw": 497
+            "win": 3917,
+            "loss": 3197,
+            "draw": 585
         }
     },
     "fide": 2262,

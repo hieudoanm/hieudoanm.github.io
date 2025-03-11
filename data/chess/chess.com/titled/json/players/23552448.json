@@ -4,10 +4,10 @@
     "url": "https://www.chess.com/member/morralover",
     "username": "morralover",
     "title": "CM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/DE",
-    "location": "Berlin",
-    "last_online": 1728759884,
+    "location": "Hamburg",
+    "last_online": 1741650368,
     "joined": 1438844240,
     "status": "premium",
     "is_streamer": false,
@@ -17,12 +17,12 @@
     "chess_rapid": {
         "last": {
             "rating": 2200,
-            "date": 1707751154,
+            "date": 1735560639,
             "rd": 308
         },
         "best": {
-            "rating": 1245,
-            "date": 1661945046,
+            "rating": 2200,
+            "date": 1735560563,
             "game": "https://www.chess.com/game/live/54565112395"
         },
         "record": {
@@ -33,39 +33,38 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2174,
-            "date": 1725152475,
-            "rd": 36
+            "rating": 2251,
+            "date": 1741287126,
+            "rd": 26
         },
         "best": {
             "rating": 2429,
             "date": 1711840536,
-            "game": "https://www.chess.com/game/live/109026576085"
+            "game": "https://www.chess.com/game/live/133130929853"
         },
         "record": {
-            "win": 176,
-            "loss": 119,
-            "draw": 17
+            "win": 278,
+            "loss": 215,
+            "draw": 22
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2600,
-            "date": 1727207669,
-            "rd": 49
+            "rating": 2478,
+            "date": 1739650926,
+            "rd": 47
         },
         "best": {
             "rating": 2642,
             "date": 1661891599,
-            "game": "https://www.chess.com/game/live/4422422070"
+            "game": "https://www.chess.com/game/live/131319582943"
         },
         "record": {
-            "win": 769,
-            "loss": 609,
-            "draw": 116
+            "win": 778,
+            "loss": 625,
+            "draw": 122
         }
     },
-    "fide": 0,
     "tactics": {
         "highest": {
             "rating": 3126,

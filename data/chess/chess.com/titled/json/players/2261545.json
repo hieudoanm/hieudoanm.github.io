@@ -6,10 +6,10 @@
     "name": "Vladimir Danilov",
     "username": "danilovvladimir",
     "title": "IM",
-    "followers": 183,
+    "followers": 184,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Iasi",
-    "last_online": 1734184226,
+    "last_online": 1739562116,
     "joined": 1256828580,
     "status": "premium",
     "is_streamer": false,
@@ -35,19 +35,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2560,
-            "date": 1734185506,
-            "rd": 17
+            "rating": 2484,
+            "date": 1741374098,
+            "rd": 29
         },
         "best": {
-            "rating": 2684,
-            "date": 1718652548,
-            "game": "https://www.chess.com/game/live/111872530365"
+            "rating": 2690,
+            "date": 1736793493,
+            "game": "https://www.chess.com/game/live/129924634467"
         },
         "record": {
-            "win": 15309,
-            "loss": 12517,
-            "draw": 1873
+            "win": 17109,
+            "loss": 13948,
+            "draw": 2074
         }
     },
     "chess_blitz": {

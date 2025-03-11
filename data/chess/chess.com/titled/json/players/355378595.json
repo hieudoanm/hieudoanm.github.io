@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/355378595.5fbf80da.200x200o.742934d918ed.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/355378595.674634e8.200x200o.745f1bfd8d59.jpg",
     "player_id": 355378595,
     "@id": "https://api.chess.com/pub/player/bayasgalankh_2007",
     "url": "https://www.chess.com/member/bayasgalankh_2007",
     "name": "Bayasgalan Khishigbaatar",
     "username": "bayasgalankh_2007",
     "title": "WCM",
-    "followers": 17,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/MN",
     "location": "Mongolia Ulaanbaatar , Australia Sydney",
-    "last_online": 1734009377,
+    "last_online": 1741698447,
     "joined": 1712387637,
     "status": "premium",
     "is_streamer": false,
@@ -36,43 +36,43 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2084,
-            "date": 1731496126,
-            "rd": 47
+            "rating": 2106,
+            "date": 1734570935,
+            "rd": 48
         },
         "best": {
-            "rating": 2096,
-            "date": 1731460695,
+            "rating": 2106,
+            "date": 1734570935,
             "game": "https://www.chess.com/game/live/117705550303"
         },
         "record": {
-            "win": 20,
+            "win": 23,
             "loss": 9,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2403,
-            "date": 1733928364,
-            "rd": 22
+            "rating": 2395,
+            "date": 1741343020,
+            "rd": 35
         },
         "best": {
-            "rating": 2515,
-            "date": 1732008552,
-            "game": "https://www.chess.com/game/live/124532326209"
+            "rating": 2529,
+            "date": 1735994098,
+            "game": "https://www.chess.com/game/live/129692926957"
         },
         "record": {
-            "win": 482,
-            "loss": 358,
-            "draw": 60
+            "win": 633,
+            "loss": 517,
+            "draw": 77
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2535,
-            "date": 1733913160,
-            "rd": 41
+            "rating": 2460,
+            "date": 1741338028,
+            "rd": 52
         },
         "best": {
             "rating": 2550,
@@ -80,12 +80,12 @@
             "game": "https://www.chess.com/game/live/124501183999"
         },
         "record": {
-            "win": 187,
-            "loss": 104,
-            "draw": 16
+            "win": 200,
+            "loss": 121,
+            "draw": 17
         }
     },
-    "fide": 2307,
+    "fide": 2265,
     "tactics": {
         "highest": {
             "rating": 3559,

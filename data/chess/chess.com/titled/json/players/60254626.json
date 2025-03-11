@@ -6,9 +6,9 @@
     "name": "Andrei Ioan Trifan",
     "username": "andreiitrifan",
     "title": "FM",
-    "followers": 15,
+    "followers": 16,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734008710,
+    "last_online": 1739818108,
     "joined": 1556263500,
     "status": "premium",
     "is_streamer": false,
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2627,
-            "date": 1733242619,
+            "date": 1734698658,
             "rd": 49
         },
         "best": {

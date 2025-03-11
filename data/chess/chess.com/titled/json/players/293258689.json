@@ -1,13 +1,13 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/293258689.749fa470.200x200o.1fd01f36f9b0.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/293258689.f5102549.200x200o.7d02385f6712.jpg",
     "player_id": 293258689,
     "@id": "https://api.chess.com/pub/player/alphawomana",
     "url": "https://www.chess.com/member/AlphawomanA",
     "username": "alphawomana",
     "title": "WCM",
-    "followers": 465,
+    "followers": 813,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734118107,
+    "last_online": 1741694113,
     "joined": 1686664705,
     "status": "premium",
     "is_streamer": false,
@@ -16,23 +16,23 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1384,
-            "date": 1731621955,
-            "rd": 259
+            "rating": 821,
+            "date": 1736150555,
+            "rd": 175
         },
         "record": {
             "win": 0,
-            "loss": 1,
+            "loss": 12,
             "draw": 0,
-            "time_per_move": 18363,
+            "time_per_move": 4978,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2308,
-            "date": 1734121750,
-            "rd": 27
+            "rating": 2181,
+            "date": 1741702297,
+            "rd": 22
         },
         "best": {
             "rating": 2325,
@@ -40,16 +40,16 @@
             "game": "https://www.chess.com/game/live/123283279087"
         },
         "record": {
-            "win": 839,
-            "loss": 1040,
-            "draw": 148
+            "win": 1335,
+            "loss": 1655,
+            "draw": 224
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2107,
-            "date": 1733834131,
-            "rd": 33
+            "rating": 2020,
+            "date": 1741548949,
+            "rd": 36
         },
         "best": {
             "rating": 2169,
@@ -57,16 +57,16 @@
             "game": "https://www.chess.com/game/live/117128443899"
         },
         "record": {
-            "win": 197,
-            "loss": 216,
-            "draw": 25
+            "win": 244,
+            "loss": 278,
+            "draw": 34
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2212,
-            "date": 1734124855,
-            "rd": 32
+            "rating": 2121,
+            "date": 1740603627,
+            "rd": 38
         },
         "best": {
             "rating": 2249,
@@ -74,16 +74,16 @@
             "game": "https://www.chess.com/game/live/120688248969"
         },
         "record": {
-            "win": 466,
-            "loss": 546,
-            "draw": 44
+            "win": 494,
+            "loss": 588,
+            "draw": 48
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3054,
-            "date": 1731191249
+            "rating": 3168,
+            "date": 1740716470
         },
         "lowest": {
             "rating": 1000,

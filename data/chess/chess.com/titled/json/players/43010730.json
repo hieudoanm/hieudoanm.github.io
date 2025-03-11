@@ -5,9 +5,9 @@
     "name": "Stanislav Kovalevsky",
     "username": "stasor4ik",
     "title": "FM",
-    "followers": 10,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733923173,
+    "last_online": 1741552952,
     "joined": 1517777826,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2398,
-            "date": 1726586436,
-            "rd": 81
+            "rating": 2463,
+            "date": 1741553367,
+            "rd": 28
         },
         "best": {
             "rating": 2471,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/92253121089"
         },
         "record": {
-            "win": 103,
-            "loss": 141,
-            "draw": 18
+            "win": 221,
+            "loss": 238,
+            "draw": 31
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2502,
-            "date": 1733923468,
-            "rd": 47
+            "rating": 2430,
+            "date": 1741524547,
+            "rd": 54
         },
         "best": {
             "rating": 2524,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/94926051691"
         },
         "record": {
-            "win": 379,
-            "loss": 496,
-            "draw": 64
+            "win": 398,
+            "loss": 536,
+            "draw": 68
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Olivier Pucher",
     "username": "evargalopuch",
     "title": "FM",
-    "followers": 16,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733565542,
+    "last_online": 1741533008,
     "joined": 1374612787,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2238,
-            "date": 1732229235,
-            "rd": 52
+            "rating": 2213,
+            "date": 1741533605,
+            "rd": 57
         },
         "best": {
             "rating": 2389,
@@ -75,16 +75,16 @@
             "game": "https://www.chess.com/game/live/42738589121"
         },
         "record": {
-            "win": 5615,
-            "loss": 4148,
-            "draw": 563
+            "win": 5649,
+            "loss": 4178,
+            "draw": 570
         }
     },
     "fide": 2364,
     "tactics": {
         "highest": {
-            "rating": 3212,
-            "date": 1728849615
+            "rating": 3397,
+            "date": 1738439060
         },
         "lowest": {
             "rating": 1370,

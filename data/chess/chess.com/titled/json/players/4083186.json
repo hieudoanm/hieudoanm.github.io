@@ -8,7 +8,7 @@
     "followers": 14,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Duckstad",
-    "last_online": 1734017623,
+    "last_online": 1740686966,
     "joined": 1286371515,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1589,
-            "date": 1692192502,
-            "rd": 101
+            "rating": 1655,
+            "date": 1739890486,
+            "rd": 106
         },
         "best": {
             "rating": 1850,
@@ -63,8 +63,8 @@
             "game": "https://www.chess.com/game/live/63320323107"
         },
         "record": {
-            "win": 40,
-            "loss": 14,
+            "win": 45,
+            "loss": 16,
             "draw": 2
         }
     },
@@ -100,6 +100,10 @@
         "best": {
             "total_attempts": 56,
             "score": 53
+        },
+        "daily": {
+            "total_attempts": 43,
+            "score": 40
         }
     }
 }

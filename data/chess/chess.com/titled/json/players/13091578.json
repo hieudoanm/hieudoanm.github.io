@@ -5,9 +5,9 @@
     "name": "Aurelio Vila Dupla",
     "username": "lluiss",
     "title": "FM",
-    "followers": 36,
+    "followers": 40,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733781514,
+    "last_online": 1741631665,
     "joined": 1376146407,
     "status": "premium",
     "is_streamer": false,
@@ -50,19 +50,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2277,
-            "date": 1733784248,
-            "rd": 31
+            "rating": 2224,
+            "date": 1741638679,
+            "rd": 22
         },
         "best": {
-            "rating": 2316,
-            "date": 1681855294,
+            "rating": 2359,
+            "date": 1735843271,
             "game": "https://www.chess.com/game/live/123976255367"
         },
         "record": {
-            "win": 12405,
-            "loss": 14296,
-            "draw": 2492
+            "win": 13024,
+            "loss": 15057,
+            "draw": 2655
         }
     },
     "tactics": {

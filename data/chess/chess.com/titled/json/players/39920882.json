@@ -6,7 +6,7 @@
     "name": "vargas jose robinson",
     "username": "joserobinson",
     "title": "CM",
-    "followers": 30,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "tulua",
     "last_online": 1733320139,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1881,
-            "date": 1734087915,
-            "rd": 48
+            "rating": 1856,
+            "date": 1740956479,
+            "rd": 50
         },
         "best": {
             "rating": 2178,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/44385579655"
         },
         "record": {
-            "win": 1230,
-            "loss": 1361,
-            "draw": 131
+            "win": 1257,
+            "loss": 1395,
+            "draw": 132
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2214,
-            "date": 1723434298,
-            "rd": 59
+            "rating": 2240,
+            "date": 1738236338,
+            "rd": 92
         },
         "best": {
             "rating": 2255,
@@ -62,7 +62,7 @@
             "game": "https://www.chess.com/game/live/32721063019"
         },
         "record": {
-            "win": 1258,
+            "win": 1260,
             "loss": 1322,
             "draw": 191
         }

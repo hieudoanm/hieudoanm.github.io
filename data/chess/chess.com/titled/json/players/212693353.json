@@ -6,9 +6,9 @@
     "name": "Julio Antonio Hernando Rodrigo",
     "username": "whiteglovethief",
     "title": "IM",
-    "followers": 167,
+    "followers": 183,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733864204,
+    "last_online": 1741701159,
     "joined": 1670941979,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1807,
-            "date": 1713125509,
+            "date": 1737560137,
             "rd": 125
         },
         "best": {
@@ -32,12 +32,6 @@
             "draw": 1,
             "time_per_move": 9341,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 0
         }
     },
     "chess_rapid": {
@@ -54,26 +48,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2465,
-            "date": 1731183464,
-            "rd": 35
+            "rating": 2451,
+            "date": 1738656038,
+            "rd": 50
         },
         "best": {
-            "rating": 2477,
-            "date": 1731100934,
+            "rating": 2480,
+            "date": 1734544413,
             "game": "https://www.chess.com/game/live/82485151183"
         },
         "record": {
-            "win": 192,
-            "loss": 75,
-            "draw": 18
+            "win": 214,
+            "loss": 93,
+            "draw": 23
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2654,
-            "date": 1733864793,
-            "rd": 32
+            "rating": 2569,
+            "date": 1741685201,
+            "rd": 23
         },
         "best": {
             "rating": 2692,
@@ -81,15 +75,15 @@
             "game": "https://www.chess.com/game/live/122160607025"
         },
         "record": {
-            "win": 6614,
-            "loss": 4841,
-            "draw": 1070
+            "win": 7364,
+            "loss": 5438,
+            "draw": 1186
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2920,
-            "date": 1712413868
+            "rating": 2986,
+            "date": 1738485685
         },
         "lowest": {
             "rating": 1000,

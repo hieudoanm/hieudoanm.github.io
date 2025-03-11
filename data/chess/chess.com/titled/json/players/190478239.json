@@ -5,9 +5,9 @@
     "name": "Bayanmunkh Amin-Erdene",
     "username": "pineapplepenn",
     "title": "WCM",
-    "followers": 3,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/MN",
-    "last_online": 1733988147,
+    "last_online": 1741691970,
     "joined": 1658226163,
     "status": "premium",
     "is_streamer": false,
@@ -34,8 +34,8 @@
     "fide": 1539,
     "tactics": {
         "highest": {
-            "rating": 3285,
-            "date": 1724640897
+            "rating": 3435,
+            "date": 1740034047
         },
         "lowest": {
             "rating": 412,
@@ -44,8 +44,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 42
+            "total_attempts": 48,
+            "score": 44
         }
     }
 }

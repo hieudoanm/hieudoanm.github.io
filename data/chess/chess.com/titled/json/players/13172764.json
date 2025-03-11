@@ -6,10 +6,10 @@
     "name": "Corey Russell",
     "username": "coremind",
     "title": "FM",
-    "followers": 222,
+    "followers": 228,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Medford",
-    "last_online": 1733387034,
+    "last_online": 1739805134,
     "joined": 1376703852,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2329,
-            "date": 1734137434,
-            "rd": 37
+            "rating": 2336,
+            "date": 1741309298,
+            "rd": 41
         },
         "best": {
             "rating": 2401,
@@ -47,9 +47,9 @@
             "game": "https://www.chess.com/game/live/123015613241"
         },
         "record": {
-            "win": 2486,
-            "loss": 1279,
-            "draw": 473
+            "win": 2555,
+            "loss": 1317,
+            "draw": 493
         }
     },
     "chess_blitz": {

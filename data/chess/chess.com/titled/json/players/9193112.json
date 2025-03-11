@@ -5,10 +5,10 @@
     "name": "Constantius Leonardo Pratama",
     "username": "bocah_gila",
     "title": "FM",
-    "followers": 60,
+    "followers": 61,
     "country": "https://api.chess.com/pub/country/ID",
     "location": "Bekasi",
-    "last_online": 1732719575,
+    "last_online": 1740385350,
     "joined": 1349769945,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2474,
-            "date": 1731661165,
-            "rd": 40
+            "rating": 2521,
+            "date": 1740260996,
+            "rd": 42
         },
         "best": {
             "rating": 2701,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/80765479089"
         },
         "record": {
-            "win": 422,
-            "loss": 402,
+            "win": 447,
+            "loss": 423,
             "draw": 28
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2555,
-            "date": 1732722784,
-            "rd": 44
+            "rating": 2573,
+            "date": 1740154958,
+            "rd": 48
         },
         "best": {
             "rating": 2603,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/126019750463"
         },
         "record": {
-            "win": 527,
-            "loss": 423,
-            "draw": 59
+            "win": 534,
+            "loss": 430,
+            "draw": 62
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3362,
-            "date": 1719620788
+            "rating": 3375,
+            "date": 1737303302
         },
         "lowest": {
             "rating": 1358,

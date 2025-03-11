@@ -6,10 +6,10 @@
     "name": "Micha\u0142 Bartel",
     "username": "polandhussars",
     "title": "FM",
-    "followers": 115,
+    "followers": 116,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Warszawa",
-    "last_online": 1733741985,
+    "last_online": 1741121727,
     "joined": 1585993463,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2664,
-            "date": 1732637153,
-            "rd": 49
+            "rating": 2599,
+            "date": 1739293864,
+            "rd": 48
         },
         "best": {
             "rating": 2683,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/101067918245"
         },
         "record": {
-            "win": 1409,
-            "loss": 1069,
-            "draw": 319
+            "win": 1422,
+            "loss": 1084,
+            "draw": 324
         }
     },
     "tactics": {

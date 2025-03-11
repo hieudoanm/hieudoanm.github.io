@@ -5,10 +5,10 @@
     "name": "Edwin Adrian Navia Alvarez",
     "username": "giulianodragon",
     "title": "FM",
-    "followers": 71,
+    "followers": 72,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Cauca-Santander de Quilichao",
-    "last_online": 1734138542,
+    "last_online": 1740258296,
     "joined": 1421783416,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2218,
-            "date": 1720541333,
-            "rd": 61
+            "rating": 2197,
+            "date": 1735668706,
+            "rd": 93
         },
         "best": {
             "rating": 2504,
@@ -76,7 +76,7 @@
         },
         "record": {
             "win": 5438,
-            "loss": 4754,
+            "loss": 4756,
             "draw": 447
         }
     },

@@ -5,9 +5,9 @@
     "name": "Svetlana Berezovska",
     "username": "werta08",
     "title": "WCM",
-    "followers": 25,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/MC",
-    "last_online": 1727013559,
+    "last_online": 1737030243,
     "joined": 1523193797,
     "status": "premium",
     "is_streamer": false,
@@ -28,9 +28,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1371,
-            "date": 1734155434,
-            "rd": 26
+            "rating": 1441,
+            "date": 1741699895,
+            "rd": 23
         },
         "best": {
             "rating": 1794,
@@ -38,9 +38,9 @@
             "game": "https://www.chess.com/game/live/38969396623"
         },
         "record": {
-            "win": 16511,
-            "loss": 15488,
-            "draw": 1155
+            "win": 17104,
+            "loss": 16045,
+            "draw": 1194
         }
     },
     "chess_blitz": {
@@ -63,8 +63,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2613,
-            "date": 1730724658
+            "rating": 2863,
+            "date": 1738949286
         },
         "lowest": {
             "rating": 393,

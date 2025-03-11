@@ -5,9 +5,9 @@
     "name": "Borna Franc",
     "username": "bornafranc007",
     "title": "FM",
-    "followers": 21,
+    "followers": 37,
     "country": "https://api.chess.com/pub/country/HR",
-    "last_online": 1734108381,
+    "last_online": 1741703728,
     "joined": 1723984142,
     "status": "premium",
     "is_streamer": false,
@@ -30,13 +30,13 @@
             "loss": 1,
             "draw": 0,
             "time_per_move": 41113,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2273,
-            "date": 1725049020,
+            "date": 1737053460,
             "rd": 49
         },
         "best": {
@@ -46,31 +46,31 @@
         },
         "record": {
             "win": 1,
-            "loss": 1,
+            "loss": 2,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2748,
-            "date": 1732380634,
-            "rd": 23
+            "rating": 2825,
+            "date": 1740829633,
+            "rd": 34
         },
         "best": {
-            "rating": 2904,
-            "date": 1732212226,
-            "game": "https://www.chess.com/game/live/125925506181"
+            "rating": 2930,
+            "date": 1738542835,
+            "game": "https://www.chess.com/game/live/132173440955"
         },
         "record": {
-            "win": 429,
-            "loss": 310,
-            "draw": 52
+            "win": 562,
+            "loss": 441,
+            "draw": 70
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2807,
-            "date": 1734109277,
+            "rating": 2754,
+            "date": 1741702985,
             "rd": 24
         },
         "best": {
@@ -79,15 +79,15 @@
             "game": "https://www.chess.com/game/live/127608044175"
         },
         "record": {
-            "win": 798,
-            "loss": 791,
-            "draw": 187
+            "win": 1071,
+            "loss": 1136,
+            "draw": 263
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2411,
-            "date": 1725477707
+            "rating": 2419,
+            "date": 1738062753
         },
         "lowest": {
             "rating": 1000,

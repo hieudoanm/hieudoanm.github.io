@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/kyky1232",
     "username": "kyky1232",
     "title": "FM",
-    "followers": 67,
+    "followers": 66,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1734020429,
+    "last_online": 1736156638,
     "joined": 1563369591,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +15,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1189,
-            "date": 1726836330,
-            "rd": 123
+            "rating": 1202,
+            "date": 1735896561,
+            "rd": 157
         },
         "best": {
             "rating": 1411,
@@ -25,18 +25,18 @@
             "game": "https://www.chess.com/game/daily/559705277"
         },
         "record": {
-            "win": 9,
+            "win": 10,
             "loss": 8,
             "draw": 0,
-            "time_per_move": 44035,
+            "time_per_move": 42562,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2236,
-            "date": 1731658717,
-            "rd": 47
+            "rating": 2226,
+            "date": 1735897398,
+            "rd": 48
         },
         "best": {
             "rating": 2307,
@@ -44,32 +44,32 @@
             "game": "https://www.chess.com/game/live/122224206537"
         },
         "record": {
-            "win": 516,
-            "loss": 320,
+            "win": 517,
+            "loss": 322,
             "draw": 70
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2300,
-            "date": 1726836331,
-            "rd": 126
+            "rating": 2266,
+            "date": 1735893978,
+            "rd": 123
         },
         "best": {
-            "rating": 1323,
-            "date": 1658367970,
-            "game": "https://www.chess.com/game/live/52023033049"
+            "rating": 2266,
+            "date": 1735893978,
+            "game": "https://www.chess.com/game/live/129632917649"
         },
         "record": {
-            "win": 63,
-            "loss": 61,
+            "win": 64,
+            "loss": 62,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2369,
-            "date": 1732963165,
+            "rating": 2319,
+            "date": 1734796062,
             "rd": 79
         },
         "best": {
@@ -79,7 +79,7 @@
         },
         "record": {
             "win": 430,
-            "loss": 344,
+            "loss": 346,
             "draw": 32
         }
     },

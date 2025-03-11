@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 24,
     "country": "https://api.chess.com/pub/country/XE",
-    "last_online": 1733688209,
+    "last_online": 1740700093,
     "joined": 1258156926,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2045,
-            "date": 1723293309,
-            "rd": 169
+            "rating": 2034,
+            "date": 1740700237,
+            "rd": 165
         },
         "best": {
             "rating": 2196,
@@ -64,7 +64,7 @@
         "record": {
             "win": 23,
             "loss": 16,
-            "draw": 3
+            "draw": 4
         }
     },
     "chess_blitz": {

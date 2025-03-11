@@ -9,7 +9,7 @@
     "followers": 21,
     "country": "https://api.chess.com/pub/country/OM",
     "location": "oman",
-    "last_online": 1733832870,
+    "last_online": 1740394353,
     "joined": 1536445351,
     "status": "premium",
     "is_streamer": false,
@@ -86,7 +86,6 @@
             "draw": 2
         }
     },
-    "fide": 0,
     "tactics": {
         "highest": {
             "rating": 3221,

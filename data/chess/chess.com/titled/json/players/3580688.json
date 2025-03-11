@@ -9,7 +9,7 @@
     "followers": 34,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Annapolis, Maryland",
-    "last_online": 1734059640,
+    "last_online": 1735496702,
     "joined": 1274572455,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2404,
-            "date": 1734135697,
-            "rd": 23
+            "rating": 2415,
+            "date": 1741643128,
+            "rd": 20
         },
         "best": {
             "rating": 2483,
@@ -62,15 +62,15 @@
             "game": "https://www.chess.com/game/live/91211496541"
         },
         "record": {
-            "win": 4283,
-            "loss": 3457,
-            "draw": 624
+            "win": 4867,
+            "loss": 3951,
+            "draw": 693
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3009,
-            "date": 1730916045
+            "rating": 3035,
+            "date": 1741453912
         },
         "lowest": {
             "rating": 2170,

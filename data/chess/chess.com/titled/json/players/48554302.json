@@ -5,9 +5,9 @@
     "name": "Martin Christian Huber",
     "username": "chess4ever007",
     "title": "IM",
-    "followers": 18,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1733788503,
+    "last_online": 1741125918,
     "joined": 1533653800,
     "status": "premium",
     "is_streamer": false,
@@ -50,18 +50,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2399,
-            "date": 1729194699,
-            "rd": 90
+            "rating": 2394,
+            "date": 1738686056,
+            "rd": 74
         },
         "best": {
             "rating": 2535,
             "date": 1683316582,
-            "game": "https://www.chess.com/game/live/79987879687"
+            "game": "https://www.chess.com/game/live/132423682251"
         },
         "record": {
-            "win": 225,
-            "loss": 185,
+            "win": 232,
+            "loss": 195,
             "draw": 40
         }
     },

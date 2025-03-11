@@ -6,10 +6,10 @@
     "name": "Mihailo Vujic",
     "username": "profava",
     "title": "FM",
-    "followers": 126,
+    "followers": 130,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Valjevo",
-    "last_online": 1734118887,
+    "last_online": 1741646084,
     "joined": 1553906570,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1895,
-            "date": 1734119052,
-            "rd": 168
+            "rating": 1857,
+            "date": 1741646179,
+            "rd": 172
         },
         "best": {
             "rating": 2078,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/364960467"
         },
         "record": {
-            "win": 23,
+            "win": 24,
             "loss": 1,
-            "draw": 4,
-            "time_per_move": 17659,
+            "draw": 5,
+            "time_per_move": 18319,
             "timeout_percent": 0
         }
     },
@@ -50,14 +50,14 @@
             "win": 1,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 17659,
+            "time_per_move": 18319,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2210,
-            "date": 1733683814,
+            "rating": 2226,
+            "date": 1739107069,
             "rd": 49
         },
         "best": {
@@ -66,7 +66,7 @@
             "game": "https://www.chess.com/game/live/67749143569"
         },
         "record": {
-            "win": 148,
+            "win": 150,
             "loss": 60,
             "draw": 32
         }
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2504,
-            "date": 1733875487,
-            "rd": 47
+            "rating": 2548,
+            "date": 1741404229,
+            "rd": 36
         },
         "best": {
             "rating": 2570,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/45955258281"
         },
         "record": {
-            "win": 4147,
-            "loss": 2990,
-            "draw": 633
+            "win": 4204,
+            "loss": 3035,
+            "draw": 638
         }
     },
     "tactics": {

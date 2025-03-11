@@ -6,10 +6,10 @@
     "name": "Mr. Sai Han Thiha",
     "username": "saihanthiha",
     "title": "FM",
-    "followers": 78,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/MM",
     "location": "myanmar mandalay",
-    "last_online": 1734144379,
+    "last_online": 1740299695,
     "joined": 1470472051,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2450,
-            "date": 1730570309,
-            "rd": 36
+            "rating": 2488,
+            "date": 1734201015,
+            "rd": 47
         },
         "best": {
             "rating": 2603,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/82485605169"
         },
         "record": {
-            "win": 1690,
-            "loss": 1441,
-            "draw": 131
+            "win": 1699,
+            "loss": 1446,
+            "draw": 132
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2621,
-            "date": 1733820024,
-            "rd": 33
+            "rating": 2576,
+            "date": 1737283455,
+            "rd": 42
         },
         "best": {
             "rating": 2666,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/44209583533"
         },
         "record": {
-            "win": 5957,
-            "loss": 5094,
-            "draw": 670
+            "win": 5964,
+            "loss": 5104,
+            "draw": 672
         }
     },
     "fide": 2161,

@@ -6,9 +6,9 @@
     "name": "Carlos Eduardo Cardozo Munar",
     "username": "carloseduar100",
     "title": "FM",
-    "followers": 40,
+    "followers": 41,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1733933194,
+    "last_online": 1741407518,
     "joined": 1541211793,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2206,
-            "date": 1699381716,
-            "rd": 183
+            "rating": 2203,
+            "date": 1735148861,
+            "rd": 49
         },
         "best": {
             "rating": 2206,
@@ -48,7 +48,7 @@
         "record": {
             "win": 4,
             "loss": 4,
-            "draw": 0
+            "draw": 1
         }
     },
     "chess_bullet": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2351,
-            "date": 1733942952,
-            "rd": 41
+            "rating": 2292,
+            "date": 1741201200,
+            "rd": 40
         },
         "best": {
             "rating": 2405,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/110049736805"
         },
         "record": {
-            "win": 1126,
-            "loss": 1041,
-            "draw": 165
+            "win": 1198,
+            "loss": 1124,
+            "draw": 177
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3040,
-            "date": 1733228534
+            "rating": 3047,
+            "date": 1741616089
         },
         "lowest": {
             "rating": 1016,

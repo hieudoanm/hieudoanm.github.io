@@ -6,10 +6,10 @@
     "name": "Yaacov Norowitz",
     "username": "yaacovn",
     "title": "IM",
-    "followers": 2551,
+    "followers": 2571,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Elizabeth, NJ",
-    "last_online": 1734151561,
+    "last_online": 1741701915,
     "joined": 1316193079,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1571,
-            "date": 1734076912,
-            "rd": 120
+            "rating": 1506,
+            "date": 1741596946,
+            "rd": 118
         },
         "best": {
             "rating": 2128,
@@ -28,11 +28,11 @@
             "game": "https://www.chess.com/game/daily/130340128"
         },
         "record": {
-            "win": 197,
-            "loss": 27,
+            "win": 200,
+            "loss": 30,
             "draw": 14,
-            "time_per_move": 98591,
-            "timeout_percent": 0
+            "time_per_move": 99659,
+            "timeout_percent": 50
         }
     },
     "chess960_daily": {
@@ -50,32 +50,32 @@
             "win": 1,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 98591,
+            "time_per_move": 99659,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2374,
-            "date": 1733176968,
-            "rd": 48
+            "rating": 2483,
+            "date": 1741599093,
+            "rd": 49
         },
         "best": {
             "rating": 2822,
             "date": 1604796192,
-            "game": "https://www.chess.com/game/live/126810568843"
+            "game": "https://www.chess.com/game/live/131303450219"
         },
         "record": {
-            "win": 38,
-            "loss": 43,
-            "draw": 17
+            "win": 66,
+            "loss": 47,
+            "draw": 18
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2677,
-            "date": 1733687691,
-            "rd": 37
+            "rating": 2823,
+            "date": 1741604296,
+            "rd": 39
         },
         "best": {
             "rating": 3033,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/3588086049"
         },
         "record": {
-            "win": 20988,
-            "loss": 11626,
-            "draw": 2280
+            "win": 21049,
+            "loss": 11648,
+            "draw": 2288
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2836,
-            "date": 1734168160,
-            "rd": 23
+            "rating": 3015,
+            "date": 1741672527,
+            "rd": 24
         },
         "best": {
             "rating": 3081,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/21246616873"
         },
         "record": {
-            "win": 24643,
-            "loss": 16593,
-            "draw": 4407
+            "win": 25445,
+            "loss": 17013,
+            "draw": 4529
         }
     },
     "fide": 2420,

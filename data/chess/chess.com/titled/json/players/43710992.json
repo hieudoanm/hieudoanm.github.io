@@ -13,5 +13,56 @@
     "is_streamer": false,
     "verified": false,
     "league": "Bronze",
-    "streaming_platforms": []
+    "streaming_platforms": [],
+    "chess_bullet": {
+        "last": {
+            "rating": 2440,
+            "date": 1703695396,
+            "rd": 90
+        },
+        "best": {
+            "rating": 2440,
+            "date": 1703695396,
+            "game": "https://www.chess.com/game/live/97434167067"
+        },
+        "record": {
+            "win": 678,
+            "loss": 500,
+            "draw": 34
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2251,
+            "date": 1703787024,
+            "rd": 79
+        },
+        "best": {
+            "rating": 2378,
+            "date": 1671653114,
+            "game": "https://www.chess.com/game/live/4049601545"
+        },
+        "record": {
+            "win": 310,
+            "loss": 262,
+            "draw": 33
+        }
+    },
+    "fide": 2300,
+    "tactics": {
+        "highest": {
+            "rating": 3104,
+            "date": 1703697196
+        },
+        "lowest": {
+            "rating": 1994,
+            "date": 1520415136
+        }
+    },
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 60,
+            "score": 57
+        }
+    }
 }

@@ -6,10 +6,10 @@
     "name": "Nhu Tung Ton That",
     "username": "tungchessvn",
     "title": "IM",
-    "followers": 78,
+    "followers": 87,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Ho chi Minh",
-    "last_online": 1734004015,
+    "last_online": 1741352504,
     "joined": 1611305651,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1597,
-            "date": 1732592251,
+            "date": 1735609541,
             "rd": 203
         },
         "best": {
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1180,
-            "date": 1725785747,
-            "rd": 151
+            "rating": 1265,
+            "date": 1735711142,
+            "rd": 138
         },
         "best": {
             "rating": 1900,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/11182492941"
         },
         "record": {
-            "win": 145,
+            "win": 147,
             "loss": 188,
             "draw": 18
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2105,
-            "date": 1722188468,
-            "rd": 61
+            "rating": 2201,
+            "date": 1740291225,
+            "rd": 67
         },
         "best": {
             "rating": 2496,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/28213181427"
         },
         "record": {
-            "win": 971,
-            "loss": 1039,
-            "draw": 106
+            "win": 981,
+            "loss": 1044,
+            "draw": 107
         }
     },
     "chess_blitz": {

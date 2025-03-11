@@ -6,10 +6,10 @@
     "name": "Shreyas Smith",
     "username": "thechesslion64",
     "title": "FM",
-    "followers": 17,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/JM",
     "location": "Kingston",
-    "last_online": 1733628322,
+    "last_online": 1741633335,
     "joined": 1627600743,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2001,
-            "date": 1655652194,
-            "rd": 173
+            "date": 1741633809,
+            "rd": 49
         },
         "best": {
             "rating": 2191,
@@ -28,7 +28,7 @@
             "game": "https://www.chess.com/game/live/23323881101"
         },
         "record": {
-            "win": 3,
+            "win": 4,
             "loss": 5,
             "draw": 0
         }
@@ -62,8 +62,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 47,
-            "score": 44
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

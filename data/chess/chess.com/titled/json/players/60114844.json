@@ -5,9 +5,9 @@
     "name": "Adam Gaisinsky",
     "username": "knightoutpostop",
     "title": "CM",
-    "followers": 25,
+    "followers": 26,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1734137694,
+    "last_online": 1741654519,
     "joined": 1555945884,
     "status": "premium",
     "is_streamer": false,
@@ -33,26 +33,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2473,
-            "date": 1728664103,
-            "rd": 39
+            "rating": 2576,
+            "date": 1741654742,
+            "rd": 27
         },
         "best": {
-            "rating": 2539,
-            "date": 1650923676,
+            "rating": 2602,
+            "date": 1739399645,
             "game": "https://www.chess.com/game/live/36557407267"
         },
         "record": {
-            "win": 125,
-            "loss": 157,
-            "draw": 19
+            "win": 216,
+            "loss": 243,
+            "draw": 30
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2225,
-            "date": 1734139230,
-            "rd": 34
+            "rating": 2415,
+            "date": 1741653596,
+            "rd": 24
         },
         "best": {
             "rating": 2510,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/68057171121"
         },
         "record": {
-            "win": 1460,
-            "loss": 1690,
-            "draw": 223
+            "win": 1705,
+            "loss": 1919,
+            "draw": 259
         }
     },
     "tactics": {

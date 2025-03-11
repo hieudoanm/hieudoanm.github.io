@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/MILUIS",
     "username": "miluis",
     "title": "CM",
-    "followers": 199,
+    "followers": 213,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1734121158,
+    "last_online": 1741654388,
     "joined": 1544981309,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2229,
-            "date": 1734140159,
-            "rd": 29
+            "rating": 2187,
+            "date": 1741634241
         },
         "best": {
             "rating": 2336,
@@ -26,16 +25,16 @@
             "game": "https://www.chess.com/game/live/124820431727"
         },
         "record": {
-            "win": 1031,
-            "loss": 1319,
-            "draw": 445
+            "win": 1210,
+            "loss": 1520,
+            "draw": 554
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2195,
-            "date": 1733014731,
-            "rd": 59
+            "rating": 2165,
+            "date": 1735257493,
+            "rd": 38
         },
         "best": {
             "rating": 2248,
@@ -43,15 +42,15 @@
             "game": "https://www.chess.com/game/live/35408794047"
         },
         "record": {
-            "win": 4196,
-            "loss": 5120,
-            "draw": 1259
+            "win": 4225,
+            "loss": 5155,
+            "draw": 1264
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2235,
-            "date": 1732723470
+            "rating": 2405,
+            "date": 1741185462
         },
         "lowest": {
             "rating": 1218,

@@ -6,10 +6,10 @@
     "name": "Prantik Roy",
     "username": "royprantikchess",
     "title": "IM",
-    "followers": 172,
+    "followers": 185,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Kolkata",
-    "last_online": 1734178030,
+    "last_online": 1741342329,
     "joined": 1442727969,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2403,
-            "date": 1724006792,
+            "date": 1734285908,
             "rd": 82
         },
         "best": {

@@ -6,10 +6,10 @@
     "name": "Velislav Kukov",
     "username": "velis23",
     "title": "IM",
-    "followers": 78,
+    "followers": 79,
     "country": "https://api.chess.com/pub/country/BG",
     "location": "Kustendil",
-    "last_online": 1734078828,
+    "last_online": 1741680709,
     "joined": 1415429095,
     "status": "premium",
     "is_streamer": false,
@@ -66,19 +66,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2574,
-            "date": 1734105622,
-            "rd": 41
+            "rating": 2598,
+            "date": 1741594218,
+            "rd": 40
         },
         "best": {
-            "rating": 2616,
-            "date": 1700375640,
+            "rating": 2651,
+            "date": 1736837802,
             "game": "https://www.chess.com/game/live/46902094795"
         },
         "record": {
-            "win": 3907,
-            "loss": 3133,
-            "draw": 659
+            "win": 4007,
+            "loss": 3219,
+            "draw": 684
         }
     },
     "fide": 2410,

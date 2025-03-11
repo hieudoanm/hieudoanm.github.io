@@ -9,7 +9,7 @@
     "followers": 9,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Popay\u00e1n",
-    "last_online": 1734041798,
+    "last_online": 1741660738,
     "joined": 1502898521,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2450,
-            "date": 1713494750,
-            "rd": 36
+            "rating": 2516,
+            "date": 1741661778,
+            "rd": 38
         },
         "best": {
             "rating": 2530,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/99672662139"
         },
         "record": {
-            "win": 1154,
-            "loss": 555,
-            "draw": 63
+            "win": 1184,
+            "loss": 574,
+            "draw": 70
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2418,
-            "date": 1733866872,
-            "rd": 36
+            "rating": 2409,
+            "date": 1734388979,
+            "rd": 38
         },
         "best": {
             "rating": 2471,
             "date": 1731271214,
-            "game": "https://www.chess.com/game/live/125008128889"
+            "game": "https://www.chess.com/game/live/128051958175"
         },
         "record": {
-            "win": 518,
-            "loss": 294,
-            "draw": 36
+            "win": 519,
+            "loss": 296,
+            "draw": 37
         }
     },
     "fide": 1884,

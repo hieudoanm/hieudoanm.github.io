@@ -6,10 +6,10 @@
     "name": "Slavi\u0161a Milanovi\u0107",
     "username": "slavisamilanovic",
     "title": "IM",
-    "followers": 45,
+    "followers": 47,
     "country": "https://api.chess.com/pub/country/ME",
     "location": "Banjani, Ub",
-    "last_online": 1732959982,
+    "last_online": 1741609524,
     "joined": 1292360021,
     "status": "premium",
     "is_streamer": false,
@@ -32,8 +32,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2315,
-            "date": 1731871728,
+            "rating": 2299,
+            "date": 1741545489,
             "rd": 49
         },
         "best": {
@@ -42,8 +42,8 @@
             "game": "https://www.chess.com/game/live/5841489892"
         },
         "record": {
-            "win": 170,
-            "loss": 44,
+            "win": 172,
+            "loss": 46,
             "draw": 30
         }
     },

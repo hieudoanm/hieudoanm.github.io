@@ -5,10 +5,10 @@
     "name": "Sipos Stef\u00e1nia",
     "username": "s_stefi",
     "title": "WCM",
-    "followers": 18,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734022578,
+    "last_online": 1741628543,
     "joined": 1588705784,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1605,
-            "date": 1733861332,
+            "date": 1741270228,
             "rd": 100
         },
         "best": {
@@ -27,10 +27,10 @@
             "game": "https://www.chess.com/game/daily/420472999"
         },
         "record": {
-            "win": 86,
+            "win": 88,
             "loss": 40,
             "draw": 5,
-            "time_per_move": 209205,
+            "time_per_move": 210994,
             "timeout_percent": 0
         }
     },
@@ -54,8 +54,8 @@
     "chess_bullet": {
         "last": {
             "rating": 2072,
-            "date": 1713029954,
-            "rd": 49
+            "date": 1735406885,
+            "rd": 105
         },
         "best": {
             "rating": 2131,
@@ -64,7 +64,7 @@
         },
         "record": {
             "win": 66,
-            "loss": 182,
+            "loss": 184,
             "draw": 5
         }
     },
@@ -88,8 +88,8 @@
     "fide": 2021,
     "tactics": {
         "highest": {
-            "rating": 3232,
-            "date": 1725719625
+            "rating": 3274,
+            "date": 1740073477
         },
         "lowest": {
             "rating": 414,

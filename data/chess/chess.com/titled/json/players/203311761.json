@@ -6,9 +6,9 @@
     "name": "Salih Eke",
     "username": "saliheke",
     "title": "FM",
-    "followers": 11,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1734032695,
+    "last_online": 1741627653,
     "joined": 1666732810,
     "status": "premium",
     "is_streamer": false,
@@ -34,17 +34,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2643,
-            "date": 1731865671,
-            "rd": 47
+            "rating": 2645,
+            "date": 1738706937,
+            "rd": 49
         },
         "best": {
-            "rating": 2643,
-            "date": 1729638365,
+            "rating": 2645,
+            "date": 1738706929,
             "game": "https://www.chess.com/game/live/123376207485"
         },
         "record": {
-            "win": 59,
+            "win": 60,
             "loss": 42,
             "draw": 9
         }

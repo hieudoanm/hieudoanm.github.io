@@ -6,9 +6,9 @@
     "name": "Dmitrijus Chocenka",
     "username": "xereslt",
     "title": "FM",
-    "followers": 385,
+    "followers": 393,
     "country": "https://api.chess.com/pub/country/LT",
-    "last_online": 1734183484,
+    "last_online": 1741581370,
     "joined": 1400046810,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2584,
-            "date": 1734013781,
-            "rd": 34
+            "rating": 2471,
+            "date": 1741689276,
+            "rd": 38
         },
         "best": {
             "rating": 2654,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/5137873840"
         },
         "record": {
-            "win": 12633,
-            "loss": 11097,
-            "draw": 1433
+            "win": 12822,
+            "loss": 11259,
+            "draw": 1452
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3466,
-            "date": 1729873874
+            "rating": 3478,
+            "date": 1739449624
         },
         "lowest": {
             "rating": 1820,

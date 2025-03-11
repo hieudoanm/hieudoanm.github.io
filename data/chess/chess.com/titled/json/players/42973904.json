@@ -5,10 +5,10 @@
     "name": "Dan Shapiro",
     "username": "nitpicker",
     "title": "FM",
-    "followers": 65,
+    "followers": 66,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Great Neck, NY",
-    "last_online": 1734153731,
+    "last_online": 1741580621,
     "joined": 1517681770,
     "status": "premium",
     "is_streamer": false,
@@ -48,8 +48,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2329,
-            "date": 1733875506,
+            "rating": 2343,
+            "date": 1735689596,
             "rd": 34
         },
         "best": {
@@ -58,15 +58,15 @@
             "game": "https://www.chess.com/game/live/49584624445"
         },
         "record": {
-            "win": 2508,
-            "loss": 2576,
-            "draw": 419
+            "win": 2537,
+            "loss": 2619,
+            "draw": 422
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3549,
-            "date": 1733943256
+            "rating": 3577,
+            "date": 1739607778
         },
         "lowest": {
             "rating": 1207,
@@ -77,10 +77,6 @@
         "best": {
             "total_attempts": 46,
             "score": 44
-        },
-        "daily": {
-            "total_attempts": 43,
-            "score": 41
         }
     }
 }

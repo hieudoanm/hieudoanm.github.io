@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/capkrnch",
     "username": "capkrnch",
     "title": "FM",
-    "followers": 33,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734141151,
+    "last_online": 1741231232,
     "joined": 1534529303,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2098,
-            "date": 1734142432,
-            "rd": 19
+            "rating": 2102,
+            "date": 1738852314,
+            "rd": 26
         },
         "best": {
             "rating": 2361,
@@ -42,9 +42,9 @@
             "game": "https://www.chess.com/game/live/110312539477"
         },
         "record": {
-            "win": 2730,
-            "loss": 2026,
-            "draw": 366
+            "win": 3400,
+            "loss": 2527,
+            "draw": 473
         }
     },
     "chess_blitz": {

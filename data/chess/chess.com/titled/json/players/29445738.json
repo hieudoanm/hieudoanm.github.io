@@ -1,14 +1,12 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/29445738.055d9e1b.200x200o.d3d6ac5fd595.jpg",
     "player_id": 29445738,
     "@id": "https://api.chess.com/pub/player/shemka2006",
     "url": "https://www.chess.com/member/Shemka2006",
-    "name": "Nikita Shemyakinskiy",
     "username": "shemka2006",
     "title": "FM",
-    "followers": 34,
+    "followers": 39,
     "country": "https://api.chess.com/pub/country/FI",
-    "last_online": 1734109753,
+    "last_online": 1741103826,
     "joined": 1470989121,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +16,7 @@
     "chess_daily": {
         "last": {
             "rating": 1557,
-            "date": 1734095372,
+            "date": 1739822037,
             "rd": 82
         },
         "best": {
@@ -36,8 +34,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2106,
-            "date": 1717700364,
+            "rating": 2097,
+            "date": 1737906811,
             "rd": 49
         },
         "best": {
@@ -46,43 +44,43 @@
             "game": "https://www.chess.com/game/live/100279309289"
         },
         "record": {
-            "win": 33,
-            "loss": 16,
+            "win": 34,
+            "loss": 17,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2657,
-            "date": 1732406268,
-            "rd": 49
+            "rating": 2669,
+            "date": 1740849930,
+            "rd": 45
         },
         "best": {
             "rating": 2699,
             "date": 1694206113,
-            "game": "https://www.chess.com/game/live/95678436297"
+            "game": "https://www.chess.com/game/live/134587743551"
         },
         "record": {
-            "win": 243,
-            "loss": 145,
-            "draw": 26
+            "win": 250,
+            "loss": 151,
+            "draw": 28
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2755,
-            "date": 1734110828,
-            "rd": 44
+            "rating": 2714,
+            "date": 1741611933,
+            "rd": 36
         },
         "best": {
-            "rating": 2835,
-            "date": 1727692155,
-            "game": "https://www.chess.com/game/live/83855353713"
+            "rating": 2898,
+            "date": 1736616820,
+            "game": "https://www.chess.com/game/live/130029585963"
         },
         "record": {
-            "win": 2114,
-            "loss": 1799,
-            "draw": 381
+            "win": 2231,
+            "loss": 1906,
+            "draw": 403
         }
     },
     "tactics": {

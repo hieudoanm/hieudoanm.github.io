@@ -5,10 +5,10 @@
     "name": "Ladislav Langner",
     "username": "ladislav1969",
     "title": "IM",
-    "followers": 40,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Komorn\u00ed Lhotka",
-    "last_online": 1734084837,
+    "last_online": 1741614183,
     "joined": 1587459703,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2374,
-            "date": 1734037766,
-            "rd": 32
+            "rating": 2448,
+            "date": 1741620212,
+            "rd": 33
         },
         "best": {
             "rating": 2545,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/120824390115"
         },
         "record": {
-            "win": 3167,
-            "loss": 2512,
-            "draw": 667
+            "win": 3271,
+            "loss": 2601,
+            "draw": 700
         }
     },
     "tactics": {

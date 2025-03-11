@@ -9,7 +9,7 @@
     "followers": 30,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Ciudad Aut\u00f3noma de Buenos Aires",
-    "last_online": 1734167589,
+    "last_online": 1741681881,
     "joined": 1424648170,
     "status": "premium",
     "is_streamer": false,
@@ -117,8 +117,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 66,
-            "score": 63
+            "total_attempts": 73,
+            "score": 70
         }
     }
 }

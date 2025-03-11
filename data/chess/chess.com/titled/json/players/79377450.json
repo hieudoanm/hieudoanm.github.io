@@ -2,6 +2,7 @@
     "player_id": 79377450,
     "@id": "https://api.chess.com/pub/player/ianov0007",
     "url": "https://www.chess.com/member/IANOV0007",
+    "name": "Viktor Ianov",
     "username": "ianov0007",
     "title": "IM",
     "followers": 28,
@@ -16,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 2029,
-            "date": 1704619757,
+            "date": 1735220816,
             "rd": 85
         },
         "best": {

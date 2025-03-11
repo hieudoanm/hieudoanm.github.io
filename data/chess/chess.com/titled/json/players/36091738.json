@@ -6,9 +6,9 @@
     "name": "Jos\u00e9 Alejandro Acosta Amaya",
     "username": "jacosta7",
     "title": "IM",
-    "followers": 159,
+    "followers": 179,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1734051812,
+    "last_online": 1741206476,
     "joined": 1496710930,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2464,
-            "date": 1731608714,
-            "rd": 39
+            "rating": 2456,
+            "date": 1741020097,
+            "rd": 49
         },
         "best": {
             "rating": 2485,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/125187563241"
         },
         "record": {
-            "win": 247,
-            "loss": 144,
-            "draw": 43
+            "win": 258,
+            "loss": 152,
+            "draw": 44
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2502,
-            "date": 1731187012,
-            "rd": 52
+            "rating": 2439,
+            "date": 1741109988,
+            "rd": 33
         },
         "best": {
             "rating": 2593,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/118183750101"
         },
         "record": {
-            "win": 4647,
-            "loss": 3329,
-            "draw": 657
+            "win": 4797,
+            "loss": 3438,
+            "draw": 681
         }
     },
     "fide": 2292,

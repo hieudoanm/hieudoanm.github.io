@@ -6,10 +6,10 @@
     "name": "Andrey Marcelo Souza Neves",
     "username": "andreyneves",
     "title": "FM",
-    "followers": 66,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Manaus",
-    "last_online": 1733705448,
+    "last_online": 1739367795,
     "joined": 1418932433,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2166,
-            "date": 1732990832,
+            "rating": 2165,
+            "date": 1740751166,
             "rd": 49
         },
         "best": {
@@ -28,9 +28,9 @@
             "game": "https://www.chess.com/game/live/118114169837"
         },
         "record": {
-            "win": 47,
-            "loss": 27,
-            "draw": 11
+            "win": 53,
+            "loss": 30,
+            "draw": 12
         }
     },
     "chess_bullet": {
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2082,
-            "date": 1734029585,
-            "rd": 36
+            "rating": 2210,
+            "date": 1741658501,
+            "rd": 30
         },
         "best": {
             "rating": 2356,
@@ -62,15 +62,15 @@
             "game": "https://www.chess.com/game/live/104620904205"
         },
         "record": {
-            "win": 1926,
-            "loss": 1934,
-            "draw": 318
+            "win": 2057,
+            "loss": 2085,
+            "draw": 339
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2648,
-            "date": 1734068365
+            "rating": 2682,
+            "date": 1734251408
         },
         "lowest": {
             "rating": 1201,

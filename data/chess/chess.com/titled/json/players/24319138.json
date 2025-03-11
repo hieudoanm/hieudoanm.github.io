@@ -5,9 +5,9 @@
     "name": "Dirk Troltenier",
     "username": "dirk_da_player",
     "title": "FM",
-    "followers": 62,
+    "followers": 64,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1730833461,
+    "last_online": 1741660153,
     "joined": 1443404747,
     "status": "premium",
     "is_streamer": false,
@@ -16,19 +16,18 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2328,
-            "date": 1687303591,
-            "rd": 76
+            "rating": 2359,
+            "date": 1737856394
         },
         "best": {
-            "rating": 2346,
-            "date": 1687194480,
-            "game": "https://www.chess.com/game/live/68002888069"
+            "rating": 2374,
+            "date": 1736642109,
+            "game": "https://www.chess.com/game/live/129777546867"
         },
         "record": {
-            "win": 96,
-            "loss": 49,
-            "draw": 21
+            "win": 115,
+            "loss": 60,
+            "draw": 22
         }
     },
     "chess_bullet": {
@@ -50,9 +49,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2328,
-            "date": 1734147204,
-            "rd": 25
+            "rating": 2372,
+            "date": 1741659859,
+            "rd": 24
         },
         "best": {
             "rating": 2503,
@@ -60,15 +59,15 @@
             "game": "https://www.chess.com/game/live/96910248631"
         },
         "record": {
-            "win": 22088,
-            "loss": 19627,
-            "draw": 3247
+            "win": 22562,
+            "loss": 20033,
+            "draw": 3326
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3265,
-            "date": 1730249761
+            "rating": 3293,
+            "date": 1737298517
         },
         "lowest": {
             "rating": 1264,

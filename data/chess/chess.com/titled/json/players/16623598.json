@@ -6,15 +6,15 @@
     "name": "Kanan Izzat",
     "username": "deathadder96",
     "title": "IM",
-    "followers": 63,
+    "followers": 68,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "Melbourne",
-    "last_online": 1727794334,
+    "last_online": 1741427123,
     "joined": 1395841638,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2858,
-            "date": 1718280983,
-            "rd": 35
+            "rating": 2854,
+            "date": 1737717268,
+            "rd": 33
         },
         "best": {
             "rating": 2931,
             "date": 1698174754,
-            "game": "https://www.chess.com/game/live/99781891825"
+            "game": "https://www.chess.com/game/live/131108349307"
         },
         "record": {
-            "win": 1538,
-            "loss": 1246,
-            "draw": 259
+            "win": 1574,
+            "loss": 1280,
+            "draw": 262
         }
     },
     "tactics": {

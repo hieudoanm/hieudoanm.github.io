@@ -6,10 +6,10 @@
     "name": "Nelson III Mariano",
     "username": "drdrebeats",
     "title": "FM",
-    "followers": 391,
+    "followers": 411,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Metro Manila",
-    "last_online": 1734179009,
+    "last_online": 1741667499,
     "joined": 1343710449,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2728,
-            "date": 1733097201,
-            "rd": 48
+            "rating": 2736,
+            "date": 1740673201,
+            "rd": 47
         },
         "best": {
             "rating": 2841,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/118919371733"
         },
         "record": {
-            "win": 383,
-            "loss": 331,
-            "draw": 37
+            "win": 385,
+            "loss": 334,
+            "draw": 38
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2563,
-            "date": 1733443517,
-            "rd": 33
+            "rating": 2661,
+            "date": 1741668353,
+            "rd": 36
         },
         "best": {
             "rating": 2733,
@@ -76,16 +76,16 @@
             "game": "https://www.chess.com/game/live/49472993149"
         },
         "record": {
-            "win": 1225,
-            "loss": 1150,
-            "draw": 206
+            "win": 1299,
+            "loss": 1236,
+            "draw": 224
         }
     },
     "fide": 2322,
     "tactics": {
         "highest": {
-            "rating": 3265,
-            "date": 1707029540
+            "rating": 3295,
+            "date": 1739435356
         },
         "lowest": {
             "rating": 1358,

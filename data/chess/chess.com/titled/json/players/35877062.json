@@ -6,9 +6,9 @@
     "name": "Julius Muckle",
     "username": "undertaker2001",
     "title": "IM",
-    "followers": 56,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734016080,
+    "last_online": 1741437717,
     "joined": 1495969685,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2603,
-            "date": 1726264067,
-            "rd": 21
+            "rating": 2611,
+            "date": 1735578396,
+            "rd": 48
         },
         "best": {
             "rating": 2658,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/116351384069"
         },
         "record": {
-            "win": 3249,
-            "loss": 2704,
+            "win": 3251,
+            "loss": 2705,
             "draw": 411
         }
     },

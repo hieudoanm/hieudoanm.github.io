@@ -9,7 +9,7 @@
     "followers": 101,
     "country": "https://api.chess.com/pub/country/VE",
     "location": "Lara",
-    "last_online": 1733797983,
+    "last_online": 1740073363,
     "joined": 1487686948,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1544,
-            "date": 1730743621,
-            "rd": 163
+            "rating": 1307,
+            "date": 1738802352,
+            "rd": 235
         },
         "best": {
             "rating": 1636,
@@ -29,10 +29,10 @@
         },
         "record": {
             "win": 11,
-            "loss": 5,
+            "loss": 6,
             "draw": 0,
             "time_per_move": 99597,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {

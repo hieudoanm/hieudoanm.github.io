@@ -6,10 +6,10 @@
     "name": "Nima Javanbakht",
     "username": "nimajavanbakht",
     "title": "IM",
-    "followers": 76,
+    "followers": 77,
     "country": "https://api.chess.com/pub/country/SG",
     "location": "Singapore",
-    "last_online": 1734003349,
+    "last_online": 1741361030,
     "joined": 1352585214,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2600,
-            "date": 1720240524,
-            "rd": 35
+            "rating": 2593,
+            "date": 1741304370,
+            "rd": 49
         },
         "best": {
             "rating": 2711,
@@ -46,14 +46,14 @@
         },
         "record": {
             "win": 783,
-            "loss": 687,
+            "loss": 688,
             "draw": 95
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2621,
-            "date": 1732441836,
+            "rating": 2618,
+            "date": 1741361348,
             "rd": 49
         },
         "best": {
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/3838658381"
         },
         "record": {
-            "win": 274,
-            "loss": 113,
-            "draw": 35
+            "win": 284,
+            "loss": 118,
+            "draw": 37
         }
     },
     "fide": 2472,

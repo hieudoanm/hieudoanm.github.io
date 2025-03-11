@@ -6,14 +6,14 @@
     "name": "Marlon Miller",
     "username": "darthkiller2020",
     "title": "FM",
-    "followers": 61,
+    "followers": 69,
     "country": "https://api.chess.com/pub/country/HN",
-    "last_online": 1733605046,
+    "last_online": 1741703846,
     "joined": 1594581688,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1558,
-            "date": 1708145503,
-            "rd": 214
+            "rating": 1560,
+            "date": 1737180356,
+            "rd": 238
         },
         "best": {
             "rating": 2153,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/5241630468"
         },
         "record": {
-            "win": 28,
+            "win": 30,
             "loss": 11,
             "draw": 7
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2017,
-            "date": 1733959047,
-            "rd": 40
+            "rating": 2256,
+            "date": 1740499722,
+            "rd": 32
         },
         "best": {
             "rating": 2485,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/68409144865"
         },
         "record": {
-            "win": 231,
-            "loss": 226,
-            "draw": 17
+            "win": 460,
+            "loss": 398,
+            "draw": 38
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2202,
-            "date": 1730315216,
-            "rd": 47
+            "rating": 2228,
+            "date": 1741491701,
+            "rd": 39
         },
         "best": {
             "rating": 2382,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/81586462693"
         },
         "record": {
-            "win": 507,
-            "loss": 422,
-            "draw": 46
+            "win": 661,
+            "loss": 558,
+            "draw": 58
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2375,
-            "date": 1690587823
+            "rating": 2377,
+            "date": 1736541648
         },
         "lowest": {
             "rating": 2094,

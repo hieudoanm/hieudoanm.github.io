@@ -9,12 +9,12 @@
     "followers": 82,
     "country": "https://api.chess.com/pub/country/NG",
     "location": "Port harcourt",
-    "last_online": 1728417245,
+    "last_online": 1740781288,
     "joined": 1425176214,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -85,9 +85,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2079,
-            "date": 1727433483,
-            "rd": 125
+            "rating": 2182,
+            "date": 1736758770,
+            "rd": 100
         },
         "best": {
             "rating": 2294,
@@ -95,8 +95,8 @@
             "game": "https://www.chess.com/game/live/6578838055"
         },
         "record": {
-            "win": 655,
-            "loss": 764,
+            "win": 659,
+            "loss": 766,
             "draw": 60
         }
     },

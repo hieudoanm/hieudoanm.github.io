@@ -6,14 +6,14 @@
     "name": "Esteban Valderrama",
     "username": "spectralsoul",
     "title": "IM",
-    "followers": 733,
+    "followers": 737,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1709240298,
+    "last_online": 1738708088,
     "joined": 1377991886,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -89,9 +89,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2841,
-            "date": 1705613403,
-            "rd": 49
+            "rating": 2862,
+            "date": 1738428591,
+            "rd": 44
         },
         "best": {
             "rating": 2915,
@@ -99,8 +99,8 @@
             "game": "https://www.chess.com/game/live/4595511475"
         },
         "record": {
-            "win": 1207,
-            "loss": 888,
+            "win": 1217,
+            "loss": 894,
             "draw": 200
         }
     },
@@ -117,8 +117,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 43
+            "total_attempts": 46,
+            "score": 44
         }
     }
 }

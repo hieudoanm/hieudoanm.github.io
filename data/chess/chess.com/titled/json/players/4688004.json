@@ -6,10 +6,10 @@
     "name": "Juan Rolando Montenegro Mancera",
     "username": "rolyku",
     "title": "FM",
-    "followers": 110,
+    "followers": 117,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Sopo",
-    "last_online": 1734141028,
+    "last_online": 1741664277,
     "joined": 1297302740,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1404,
-            "date": 1734141053,
-            "rd": 165
+            "rating": 1381,
+            "date": 1741664300,
+            "rd": 144
         },
         "best": {
             "rating": 1441,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/707027335"
         },
         "record": {
-            "win": 5,
-            "loss": 3,
+            "win": 6,
+            "loss": 4,
             "draw": 0,
-            "time_per_move": 67209,
+            "time_per_move": 72727,
             "timeout_percent": 0
         }
     },
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2309,
-            "date": 1731085778,
-            "rd": 38
+            "rating": 2354,
+            "date": 1737503282,
+            "rd": 57
         },
         "best": {
             "rating": 2480,
             "date": 1707240981,
-            "game": "https://www.chess.com/game/live/97406596"
+            "game": "https://www.chess.com/game/live/129421382185"
         },
         "record": {
-            "win": 176,
-            "loss": 147,
-            "draw": 25
+            "win": 184,
+            "loss": 151,
+            "draw": 26
         }
     },
     "tactics": {

@@ -9,7 +9,7 @@
     "followers": 76,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto, Canada",
-    "last_online": 1734101957,
+    "last_online": 1741397972,
     "joined": 1458180150,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2577,
-            "date": 1729635948,
-            "rd": 49
+            "rating": 2573,
+            "date": 1736894119,
+            "rd": 48
         },
         "best": {
             "rating": 2685,
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/36268845917"
         },
         "record": {
-            "win": 2980,
-            "loss": 3127,
+            "win": 2982,
+            "loss": 3129,
             "draw": 570
         }
     },
@@ -65,10 +65,6 @@
         "best": {
             "total_attempts": 62,
             "score": 59
-        },
-        "daily": {
-            "total_attempts": 36,
-            "score": 33
         }
     }
 }

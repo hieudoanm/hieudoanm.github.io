@@ -9,17 +9,17 @@
     "followers": 6,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Sandnes",
-    "last_online": 1733065170,
+    "last_online": 1740938959,
     "joined": 1295995226,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2410,
-            "date": 1720532816,
+            "rating": 2385,
+            "date": 1738250661,
             "rd": 47
         },
         "best": {
@@ -29,14 +29,14 @@
         },
         "record": {
             "win": 4,
-            "loss": 5,
-            "draw": 1
+            "loss": 8,
+            "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2736,
-            "date": 1721229222,
+            "rating": 2649,
+            "date": 1740233193,
             "rd": 49
         },
         "best": {
@@ -46,15 +46,15 @@
         },
         "record": {
             "win": 109,
-            "loss": 23,
+            "loss": 32,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2404,
-            "date": 1730924171,
-            "rd": 58
+            "rating": 2396,
+            "date": 1740503181,
+            "rd": 57
         },
         "best": {
             "rating": 2535,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/114881391493"
         },
         "record": {
-            "win": 192,
-            "loss": 111,
-            "draw": 28
+            "win": 207,
+            "loss": 132,
+            "draw": 31
         }
     },
     "tactics": {

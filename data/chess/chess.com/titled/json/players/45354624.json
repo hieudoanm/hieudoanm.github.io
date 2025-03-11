@@ -9,12 +9,12 @@
     "followers": 65,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Krasnoyarsk",
-    "last_online": 1720800045,
+    "last_online": 1738598992,
     "joined": 1523896163,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2457,
-            "date": 1683097432,
-            "rd": 116
+            "rating": 2469,
+            "date": 1740120126,
+            "rd": 51
         },
         "best": {
             "rating": 2553,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/5148325349"
         },
         "record": {
-            "win": 1146,
-            "loss": 965,
-            "draw": 255
+            "win": 1174,
+            "loss": 982,
+            "draw": 257
         }
     },
     "fide": 2404,

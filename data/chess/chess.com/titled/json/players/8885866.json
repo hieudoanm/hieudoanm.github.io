@@ -5,10 +5,10 @@
     "name": "Doug Eckert",
     "username": "dougie47",
     "title": "FM",
-    "followers": 79,
+    "followers": 80,
     "country": "https://api.chess.com/pub/country/US",
     "location": "St. Louis",
-    "last_online": 1734162796,
+    "last_online": 1741668596,
     "joined": 1347498100,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2200,
-            "date": 1688408577,
-            "rd": 94
+            "rating": 2197,
+            "date": 1735162518,
+            "rd": 49
         },
         "best": {
             "rating": 2222,
@@ -28,7 +28,7 @@
         },
         "record": {
             "win": 35,
-            "loss": 15,
+            "loss": 16,
             "draw": 6
         }
     },
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2250,
-            "date": 1734163853,
-            "rd": 29
+            "rating": 2215,
+            "date": 1741676864,
+            "rd": 28
         },
         "best": {
             "rating": 2340,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/71364425631"
         },
         "record": {
-            "win": 9820,
-            "loss": 8004,
-            "draw": 1535
+            "win": 10033,
+            "loss": 8190,
+            "draw": 1588
         }
     },
     "fide": 2250,

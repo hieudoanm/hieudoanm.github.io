@@ -5,10 +5,10 @@
     "name": "Daniel Dominguez",
     "username": "daesdo",
     "title": "FM",
-    "followers": 123,
+    "followers": 128,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Sanl\u00facar de Barrameda",
-    "last_online": 1733909074,
+    "last_online": 1740499600,
     "joined": 1396958964,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2704,
-            "date": 1733255853,
-            "rd": 33
+            "rating": 2720,
+            "date": 1740502467,
+            "rd": 49
         },
         "best": {
             "rating": 2750,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/61326029227"
         },
         "record": {
-            "win": 3136,
-            "loss": 2897,
-            "draw": 610
+            "win": 3165,
+            "loss": 2923,
+            "draw": 616
         }
     },
     "tactics": {

@@ -6,10 +6,10 @@
     "name": "Khalil Bukhalaf",
     "username": "nakedorange",
     "title": "FM",
-    "followers": 94,
+    "followers": 102,
     "country": "https://api.chess.com/pub/country/BH",
     "location": "BahrainBahrain",
-    "last_online": 1728249646,
+    "last_online": 1739788834,
     "joined": 1542368753,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2023,
-            "date": 1734162847,
-            "rd": 27
+            "rating": 2004,
+            "date": 1741701370,
+            "rd": 33
         },
         "best": {
             "rating": 2238,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/80465970865"
         },
         "record": {
-            "win": 2214,
-            "loss": 2264,
-            "draw": 255
+            "win": 2445,
+            "loss": 2479,
+            "draw": 283
         }
     },
     "chess_blitz": {

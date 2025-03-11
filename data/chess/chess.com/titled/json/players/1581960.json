@@ -9,7 +9,7 @@
     "followers": 140,
     "country": "https://api.chess.com/pub/country/LT",
     "location": "Vilnius",
-    "last_online": 1733684366,
+    "last_online": 1741695152,
     "joined": 1226006979,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2537,
-            "date": 1733686489,
-            "rd": 48
+            "rating": 2528,
+            "date": 1735940791,
+            "rd": 49
         },
         "best": {
             "rating": 2631,
@@ -83,9 +83,9 @@
             "game": "https://www.chess.com/game/live/32122856373"
         },
         "record": {
-            "win": 2275,
-            "loss": 1979,
-            "draw": 240
+            "win": 2284,
+            "loss": 1984,
+            "draw": 241
         }
     },
     "fide": 2420,

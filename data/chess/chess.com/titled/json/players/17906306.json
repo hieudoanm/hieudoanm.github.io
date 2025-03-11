@@ -5,10 +5,10 @@
     "name": "Cl\u00e9ment Rabineau",
     "username": "magic-nelwyn",
     "title": "FM",
-    "followers": 85,
+    "followers": 100,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Clichy",
-    "last_online": 1734011917,
+    "last_online": 1741556493,
     "joined": 1404254445,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 400,
-            "date": 1715170171,
+            "date": 1738142909,
             "rd": 350
         },
         "record": {
@@ -31,8 +31,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2281,
-            "date": 1731588897,
+            "rating": 2296,
+            "date": 1740929450,
             "rd": 49
         },
         "best": {
@@ -41,16 +41,16 @@
             "game": "https://www.chess.com/game/live/40945245689"
         },
         "record": {
-            "win": 181,
-            "loss": 48,
+            "win": 187,
+            "loss": 49,
             "draw": 14
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2428,
-            "date": 1733428074,
-            "rd": 39
+            "rating": 2510,
+            "date": 1737666149,
+            "rd": 24
         },
         "best": {
             "rating": 2631,
@@ -58,16 +58,16 @@
             "game": "https://www.chess.com/game/live/106493855665"
         },
         "record": {
-            "win": 3164,
-            "loss": 3691,
-            "draw": 528
+            "win": 3435,
+            "loss": 3893,
+            "draw": 561
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2365,
-            "date": 1732099338,
-            "rd": 66
+            "rating": 2490,
+            "date": 1741351838,
+            "rd": 48
         },
         "best": {
             "rating": 2556,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/42304852449"
         },
         "record": {
-            "win": 1410,
-            "loss": 1418,
-            "draw": 246
+            "win": 1442,
+            "loss": 1430,
+            "draw": 248
         }
     },
     "fide": 2238,

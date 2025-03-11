@@ -5,10 +5,10 @@
     "name": "Bojosi Sabure",
     "username": "bojosi",
     "title": "CM",
-    "followers": 50,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/BW",
     "location": "Maun",
-    "last_online": 1733862342,
+    "last_online": 1741172184,
     "joined": 1321598293,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2236,
-            "date": 1732652347,
-            "rd": 31
+            "rating": 2257,
+            "date": 1741209529,
+            "rd": 55
         },
         "best": {
             "rating": 2317,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/120950454453"
         },
         "record": {
-            "win": 4807,
-            "loss": 5292,
-            "draw": 550
+            "win": 4812,
+            "loss": 5303,
+            "draw": 552
         }
     },
     "fide": 1981,

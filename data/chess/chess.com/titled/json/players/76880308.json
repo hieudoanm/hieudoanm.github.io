@@ -6,9 +6,9 @@
     "name": "Milos Milosevic",
     "username": "jordanloyd2020",
     "title": "IM",
-    "followers": 127,
+    "followers": 129,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734036378,
+    "last_online": 1741367754,
     "joined": 1587041495,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2434,
-            "date": 1734103407,
-            "rd": 34
+            "rating": 2393,
+            "date": 1741481882,
+            "rd": 39
         },
         "best": {
             "rating": 2711,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/83785212789"
         },
         "record": {
-            "win": 829,
-            "loss": 816,
-            "draw": 89
+            "win": 900,
+            "loss": 906,
+            "draw": 96
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2411,
-            "date": 1733716122,
-            "rd": 52
+            "rating": 2572,
+            "date": 1741682586,
+            "rd": 39
         },
         "best": {
             "rating": 2727,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/38701445139"
         },
         "record": {
-            "win": 2057,
-            "loss": 2088,
-            "draw": 329
+            "win": 2173,
+            "loss": 2208,
+            "draw": 348
         }
     },
     "fide": 2400,
     "tactics": {
         "highest": {
-            "rating": 3016,
-            "date": 1706100969
+            "rating": 3018,
+            "date": 1736190570
         },
         "lowest": {
             "rating": 1210,

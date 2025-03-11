@@ -6,10 +6,10 @@
     "name": "Kirill Klukin",
     "username": "kirill_klukin",
     "title": "IM",
-    "followers": 110,
-    "country": "https://api.chess.com/pub/country/AE",
+    "followers": 138,
+    "country": "https://api.chess.com/pub/country/RS",
     "location": "\u041c\u043e\u0441\u043a\u0432\u0430",
-    "last_online": 1734165221,
+    "last_online": 1741703933,
     "joined": 1471885050,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2374,
-            "date": 1732726698,
+            "date": 1740304914,
             "rd": 272
         },
         "best": {
@@ -52,22 +52,22 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2918,
-            "date": 1734172067,
-            "rd": 36
+            "rating": 2925,
+            "date": 1741465403,
+            "rd": 38
         },
         "best": {
             "rating": 2986,
             "date": 1722239089,
-            "game": "https://www.chess.com/game/live/78010970127"
+            "game": "https://www.chess.com/game/live/134265544155"
         },
         "record": {
-            "win": 3889,
-            "loss": 3038,
-            "draw": 868
+            "win": 4067,
+            "loss": 3147,
+            "draw": 908
         }
     },
-    "fide": 2413,
+    "fide": 2430,
     "tactics": {
         "highest": {
             "rating": 3325,
@@ -82,6 +82,10 @@
         "best": {
             "total_attempts": 52,
             "score": 49
+        },
+        "daily": {
+            "total_attempts": 31,
+            "score": 28
         }
     }
 }

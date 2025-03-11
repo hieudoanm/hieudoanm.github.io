@@ -6,10 +6,10 @@
     "name": "S.Wahabuddin Mirzaad",
     "username": "mirzaad786",
     "title": "FM",
-    "followers": 279,
+    "followers": 286,
     "country": "https://api.chess.com/pub/country/AF",
     "location": "Afghanistan",
-    "last_online": 1727013632,
+    "last_online": 1739171186,
     "joined": 1304938747,
     "status": "premium",
     "is_streamer": false,
@@ -73,9 +73,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2490,
-            "date": 1728318348,
-            "rd": 43
+            "rating": 2460,
+            "date": 1740151039,
+            "rd": 67
         },
         "best": {
             "rating": 2559,
@@ -83,9 +83,9 @@
             "game": "https://www.chess.com/game/live/83476582075"
         },
         "record": {
-            "win": 5570,
-            "loss": 6209,
-            "draw": 1022
+            "win": 5574,
+            "loss": 6214,
+            "draw": 1024
         }
     },
     "tactics": {

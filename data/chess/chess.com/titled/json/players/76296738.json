@@ -9,7 +9,7 @@
     "followers": 18,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "St.-Petersburg",
-    "last_online": 1734018189,
+    "last_online": 1741436534,
     "joined": 1586548250,
     "status": "premium",
     "is_streamer": false,
@@ -52,17 +52,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2398,
-            "date": 1708689329,
-            "rd": 83
+            "rating": 2446,
+            "date": 1735912194,
+            "rd": 123
         },
         "best": {
-            "rating": 2435,
-            "date": 1692118325,
+            "rating": 2446,
+            "date": 1735912194,
             "game": "https://www.chess.com/game/live/90693036945"
         },
         "record": {
-            "win": 227,
+            "win": 228,
             "loss": 292,
             "draw": 71
         }

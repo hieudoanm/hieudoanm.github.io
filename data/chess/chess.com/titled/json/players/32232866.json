@@ -6,9 +6,9 @@
     "name": "Thanh Ninh Vo",
     "username": "ninhvo",
     "title": "IM",
-    "followers": 82,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/VN",
-    "last_online": 1734012171,
+    "last_online": 1740984392,
     "joined": 1483878019,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2771,
-            "date": 1733645649,
-            "rd": 35
+            "rating": 2788,
+            "date": 1739253069,
+            "rd": 43
         },
         "best": {
             "rating": 2903,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/85293116451"
         },
         "record": {
-            "win": 1729,
-            "loss": 1305,
-            "draw": 269
+            "win": 1757,
+            "loss": 1344,
+            "draw": 273
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3366,
-            "date": 1726381335
+            "rating": 3431,
+            "date": 1736775282
         },
         "lowest": {
             "rating": 400,

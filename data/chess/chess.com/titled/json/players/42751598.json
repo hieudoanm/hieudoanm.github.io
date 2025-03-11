@@ -8,12 +8,12 @@
     "title": "FM",
     "followers": 96,
     "country": "https://api.chess.com/pub/country/IL",
-    "last_online": 1732299556,
+    "last_online": 1741351022,
     "joined": 1517087133,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -79,9 +79,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2505,
-            "date": 1717338638,
-            "rd": 47
+            "rating": 2503,
+            "date": 1737475669,
+            "rd": 49
         },
         "best": {
             "rating": 2573,
@@ -90,7 +90,7 @@
         },
         "record": {
             "win": 2665,
-            "loss": 2055,
+            "loss": 2056,
             "draw": 378
         }
     },

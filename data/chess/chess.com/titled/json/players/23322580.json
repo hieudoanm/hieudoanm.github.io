@@ -8,28 +8,28 @@
     "followers": 3,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Taunusstein",
-    "last_online": 1733916809,
+    "last_online": 1738599746,
     "joined": 1437417449,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2151,
-            "date": 1733342261,
-            "rd": 79
+            "rating": 2186,
+            "date": 1738600262,
+            "rd": 75
         },
         "best": {
             "rating": 2243,
             "date": 1501946363,
-            "game": "https://www.chess.com/game/live/2241999278"
+            "game": "https://www.chess.com/game/live/131215190133"
         },
         "record": {
-            "win": 34,
-            "loss": 19,
-            "draw": 3
+            "win": 38,
+            "loss": 21,
+            "draw": 5
         }
     },
     "fide": 2340,

@@ -6,9 +6,9 @@
     "name": "Igor Vershinin",
     "username": "igorvershinin2009",
     "title": "FM",
-    "followers": 262,
+    "followers": 265,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1733768102,
+    "last_online": 1741619181,
     "joined": 1471255111,
     "status": "premium",
     "is_streamer": false,
@@ -89,19 +89,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2643,
-            "date": 1733270839,
-            "rd": 45
+            "rating": 2585,
+            "date": 1741365522,
+            "rd": 47
         },
         "best": {
             "rating": 2676,
             "date": 1727789255,
-            "game": "https://www.chess.com/game/live/120348614873"
+            "game": "https://www.chess.com/game/live/131236235619"
         },
         "record": {
-            "win": 862,
-            "loss": 618,
-            "draw": 91
+            "win": 888,
+            "loss": 646,
+            "draw": 92
         }
     },
     "fide": 2298,

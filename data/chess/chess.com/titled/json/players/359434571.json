@@ -1,13 +1,13 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/359434571.34e56cdd.200x200o.25bc16ef75cb.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/359434571.cd5a88e1.200x200o.abf71662ff5b.png",
     "player_id": 359434571,
     "@id": "https://api.chess.com/pub/player/mikamis_fault",
     "url": "https://www.chess.com/member/Mikamis_Fault",
     "username": "mikamis_fault",
     "title": "FM",
-    "followers": 0,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/JP",
-    "last_online": 1734182501,
+    "last_online": 1741650423,
     "joined": 1714090596,
     "status": "premium",
     "is_streamer": false,
@@ -15,19 +15,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2744,
-            "date": 1732665685,
-            "rd": 44
+            "rating": 2821,
+            "date": 1741479610,
+            "rd": 39
         },
         "best": {
-            "rating": 2745,
-            "date": 1732664293,
+            "rating": 2755,
+            "date": 1739401490,
             "game": "https://www.chess.com/game/live/113704770647"
         },
         "record": {
-            "win": 151,
-            "loss": 98,
-            "draw": 29
+            "win": 204,
+            "loss": 135,
+            "draw": 34
         }
     },
     "fide": 2548,

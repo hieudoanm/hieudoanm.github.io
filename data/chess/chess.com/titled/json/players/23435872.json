@@ -6,10 +6,10 @@
     "name": "Richard Mladek",
     "username": "therigos",
     "title": "IM",
-    "followers": 42,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/CZ",
     "location": "Czech Republic",
-    "last_online": 1733617325,
+    "last_online": 1741167137,
     "joined": 1438108308,
     "status": "premium",
     "is_streamer": false,
@@ -101,10 +101,6 @@
         "best": {
             "total_attempts": 57,
             "score": 54
-        },
-        "daily": {
-            "total_attempts": 44,
-            "score": 41
         }
     }
 }

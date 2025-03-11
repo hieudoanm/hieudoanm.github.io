@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 20,
     "country": "https://api.chess.com/pub/country/HK",
-    "last_online": 1734065571,
+    "last_online": 1741534860,
     "joined": 1361205509,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1626,
-            "date": 1734121301,
-            "rd": 63
+            "rating": 1599,
+            "date": 1741690843,
+            "rd": 55
         },
         "best": {
             "rating": 1998,
@@ -26,17 +26,11 @@
             "game": "https://www.chess.com/game/daily/234569760"
         },
         "record": {
-            "win": 2387,
-            "loss": 935,
-            "draw": 245,
-            "time_per_move": 25200,
-            "timeout_percent": 3
-        },
-        "tournament": {
-            "points": 1275,
-            "withdraw": 0,
-            "count": 9,
-            "highest_finish": 1
+            "win": 2410,
+            "loss": 963,
+            "draw": 250,
+            "time_per_move": 25742,
+            "timeout_percent": 14
         }
     },
     "chess960_daily": {
@@ -54,14 +48,8 @@
             "win": 40,
             "loss": 33,
             "draw": 5,
-            "time_per_move": 25200,
+            "time_per_move": 25742,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 1275,
-            "withdraw": 0,
-            "count": 9,
-            "highest_finish": 1
         }
     },
     "chess_rapid": {

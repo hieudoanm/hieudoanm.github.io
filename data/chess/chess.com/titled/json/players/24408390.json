@@ -5,9 +5,9 @@
     "name": "Ruslan Musalov",
     "username": "mistango",
     "title": "IM",
-    "followers": 101,
+    "followers": 102,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734130939,
+    "last_online": 1741643050,
     "joined": 1443901613,
     "status": "premium",
     "is_streamer": false,
@@ -33,26 +33,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2666,
-            "date": 1732824489,
-            "rd": 31
+            "rating": 2577,
+            "date": 1736761642,
+            "rd": 43
         },
         "best": {
             "rating": 2706,
             "date": 1732609996,
-            "game": "https://www.chess.com/game/live/115741200027"
+            "game": "https://www.chess.com/game/live/128357409565"
         },
         "record": {
-            "win": 2964,
-            "loss": 3663,
-            "draw": 498
+            "win": 2970,
+            "loss": 3687,
+            "draw": 499
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2599,
-            "date": 1732648563,
-            "rd": 41
+            "rating": 2521,
+            "date": 1737040611,
+            "rd": 46
         },
         "best": {
             "rating": 2797,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/110064612381"
         },
         "record": {
-            "win": 2911,
-            "loss": 3260,
-            "draw": 626
+            "win": 2916,
+            "loss": 3275,
+            "draw": 628
         }
     },
     "tactics": {

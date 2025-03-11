@@ -8,17 +8,17 @@
     "title": "CM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/MT",
-    "last_online": 1734181657,
+    "last_online": 1741681706,
     "joined": 1706949111,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "streaming_platforms": [],
-    "fide": 2192,
+    "fide": 2093,
     "tactics": {
         "highest": {
-            "rating": 2871,
-            "date": 1734183112
+            "rating": 2891,
+            "date": 1740653179
         },
         "lowest": {
             "rating": 400,

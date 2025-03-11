@@ -6,10 +6,10 @@
     "name": "Gytis Vai\u010dekauskas",
     "username": "aminazinas",
     "title": "CM",
-    "followers": 28,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/LT",
     "location": "Plunge",
-    "last_online": 1734093767,
+    "last_online": 1741607563,
     "joined": 1440290242,
     "status": "premium",
     "is_streamer": false,
@@ -54,19 +54,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2674,
-            "date": 1734182113,
-            "rd": 28
+            "rating": 2653,
+            "date": 1741689008,
+            "rd": 30
         },
         "best": {
-            "rating": 2708,
-            "date": 1685975627,
+            "rating": 2741,
+            "date": 1735547294,
             "game": "https://www.chess.com/game/live/5883603585"
         },
         "record": {
-            "win": 5355,
-            "loss": 4502,
-            "draw": 1033
+            "win": 5615,
+            "loss": 4739,
+            "draw": 1089
         }
     },
     "fide": 2222,
@@ -84,10 +84,6 @@
         "best": {
             "total_attempts": 56,
             "score": 53
-        },
-        "daily": {
-            "total_attempts": 43,
-            "score": 40
         }
     }
 }

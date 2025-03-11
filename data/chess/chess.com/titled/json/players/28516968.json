@@ -6,10 +6,10 @@
     "name": "Guanchu Liu",
     "username": "smilecoach123",
     "title": "IM",
-    "followers": 115,
+    "followers": 117,
     "country": "https://api.chess.com/pub/country/CN",
     "location": "\u4e2d\u56fd",
-    "last_online": 1734156297,
+    "last_online": 1741503416,
     "joined": 1465213713,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2435,
-            "date": 1732846843,
-            "rd": 49
+            "rating": 2450,
+            "date": 1732846843
         },
         "best": {
             "rating": 2490,
@@ -100,10 +99,6 @@
         "best": {
             "total_attempts": 74,
             "score": 71
-        },
-        "daily": {
-            "total_attempts": 45,
-            "score": 42
         }
     }
 }

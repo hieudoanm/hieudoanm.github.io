@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Bestkeptsecret7",
     "username": "bestkeptsecret7",
     "title": "IM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1733570188,
+    "last_online": 1741646094,
     "joined": 1659910523,
     "status": "premium",
     "is_streamer": false,
@@ -16,12 +16,12 @@
     "chess_rapid": {
         "last": {
             "rating": 2033,
-            "date": 1664961786,
+            "date": 1737046950,
             "rd": 158
         },
         "best": {
-            "rating": 2033,
-            "date": 1664961786,
+            "rating": 2400,
+            "date": 1737045293,
             "game": "https://www.chess.com/game/live/58700439133"
         },
         "record": {
@@ -32,19 +32,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2679,
-            "date": 1733518260,
-            "rd": 26
+            "rating": 2681,
+            "date": 1741648417,
+            "rd": 24
         },
         "best": {
-            "rating": 2758,
-            "date": 1679514396,
+            "rating": 2783,
+            "date": 1737059982,
             "game": "https://www.chess.com/game/live/122338728023"
         },
         "record": {
-            "win": 2076,
-            "loss": 1538,
-            "draw": 433
+            "win": 2539,
+            "loss": 1904,
+            "draw": 530
         }
     },
     "tactics": {

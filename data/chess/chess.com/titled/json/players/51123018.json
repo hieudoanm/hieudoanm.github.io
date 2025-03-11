@@ -5,9 +5,9 @@
     "name": "Gabriel G\u00e4hwiler",
     "username": "swiss_fighter",
     "title": "IM",
-    "followers": 107,
+    "followers": 117,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1734089981,
+    "last_online": 1741692064,
     "joined": 1540469980,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2678,
-            "date": 1733435320,
-            "rd": 48
+            "rating": 2712,
+            "date": 1741646200,
+            "rd": 47
         },
         "best": {
             "rating": 2733,
@@ -26,16 +26,16 @@
             "game": "https://www.chess.com/game/live/104455213255"
         },
         "record": {
-            "win": 596,
-            "loss": 98,
-            "draw": 35
+            "win": 653,
+            "loss": 105,
+            "draw": 43
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2855,
-            "date": 1734037568,
-            "rd": 26
+            "rating": 2859,
+            "date": 1741692527,
+            "rd": 21
         },
         "best": {
             "rating": 3015,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/122410536131"
         },
         "record": {
-            "win": 8862,
-            "loss": 2957,
-            "draw": 578
+            "win": 9670,
+            "loss": 3304,
+            "draw": 647
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2801,
-            "date": 1734035874,
-            "rd": 33
+            "rating": 2912,
+            "date": 1741645246,
+            "rd": 29
         },
         "best": {
             "rating": 2960,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/41702986511"
         },
         "record": {
-            "win": 2422,
-            "loss": 1112,
-            "draw": 365
+            "win": 2618,
+            "loss": 1208,
+            "draw": 394
         }
     },
     "tactics": {

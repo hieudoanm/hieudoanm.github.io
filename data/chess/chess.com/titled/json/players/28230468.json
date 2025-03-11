@@ -6,15 +6,15 @@
     "name": "Dmitrijs Tokranovs",
     "username": "avto24",
     "title": "FM",
-    "followers": 21,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/LV",
     "location": "Riga",
-    "last_online": 1719938696,
+    "last_online": 1735751014,
     "joined": 1463499281,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2506,
-            "date": 1720116812,
-            "rd": 48
+            "rating": 2487,
+            "date": 1740680445,
+            "rd": 52
         },
         "best": {
             "rating": 2666,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/2544854949"
         },
         "record": {
-            "win": 445,
-            "loss": 357,
-            "draw": 61
+            "win": 455,
+            "loss": 370,
+            "draw": 64
         }
     },
     "tactics": {

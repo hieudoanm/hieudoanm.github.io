@@ -9,7 +9,7 @@
     "followers": 7,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Valencia",
-    "last_online": 1732558388,
+    "last_online": 1740141266,
     "joined": 1678447495,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2176,
-            "date": 1710506882,
+            "rating": 2150,
+            "date": 1741351539,
             "rd": 49
         },
         "best": {
@@ -29,15 +29,15 @@
         },
         "record": {
             "win": 4,
-            "loss": 3,
+            "loss": 6,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 1954,
-            "date": 1731794304,
-            "rd": 60
+            "rating": 1990,
+            "date": 1739826989,
+            "rd": 70
         },
         "best": {
             "rating": 2224,
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/111362466653"
         },
         "record": {
-            "win": 339,
-            "loss": 114,
+            "win": 348,
+            "loss": 116,
             "draw": 18
         }
     },

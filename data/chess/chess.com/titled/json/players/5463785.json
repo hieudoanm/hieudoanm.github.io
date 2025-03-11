@@ -6,10 +6,10 @@
     "name": "Shashikant Kutwal",
     "username": "shav3184",
     "title": "IM",
-    "followers": 173,
+    "followers": 176,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Pune",
-    "last_online": 1734008602,
+    "last_online": 1741559559,
     "joined": 1311043892,
     "status": "premium",
     "is_streamer": false,
@@ -27,13 +27,13 @@
             "loss": 15,
             "draw": 0,
             "time_per_move": 577422,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2135,
-            "date": 1688714330,
+            "date": 1737291775,
             "rd": 160
         },
         "best": {
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2503,
-            "date": 1721109365,
-            "rd": 141
+            "rating": 2494,
+            "date": 1737586797,
+            "rd": 49
         },
         "best": {
             "rating": 2566,
@@ -77,7 +77,7 @@
         },
         "record": {
             "win": 609,
-            "loss": 473,
+            "loss": 474,
             "draw": 70
         }
     },

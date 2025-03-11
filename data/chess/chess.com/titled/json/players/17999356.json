@@ -6,15 +6,15 @@
     "name": "Elbek Jumanov",
     "username": "elbek_jumanov",
     "title": "FM",
-    "followers": 178,
+    "followers": 194,
     "country": "https://api.chess.com/pub/country/UZ",
     "location": "Gulistan",
-    "last_online": 1734082315,
+    "last_online": 1741672691,
     "joined": 1404877301,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess960_daily": {
         "last": {
@@ -49,26 +49,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2424,
-            "date": 1728580029,
-            "rd": 82
+            "rating": 2435,
+            "date": 1741606850,
+            "rd": 90
         },
         "best": {
             "rating": 2545,
             "date": 1687506284,
-            "game": "https://www.chess.com/game/live/2026938819"
+            "game": "https://www.chess.com/game/live/129022372653"
         },
         "record": {
-            "win": 163,
-            "loss": 179,
-            "draw": 18
+            "win": 166,
+            "loss": 182,
+            "draw": 19
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2545,
-            "date": 1733388760,
-            "rd": 40
+            "rating": 2577,
+            "date": 1741697693,
+            "rd": 35
         },
         "best": {
             "rating": 2632,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/93716460201"
         },
         "record": {
-            "win": 1476,
-            "loss": 1744,
-            "draw": 244
+            "win": 1583,
+            "loss": 1863,
+            "draw": 264
         }
     },
     "fide": 2172,

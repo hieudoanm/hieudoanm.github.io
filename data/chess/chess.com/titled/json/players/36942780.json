@@ -9,7 +9,7 @@
     "followers": 28,
     "country": "https://api.chess.com/pub/country/CL",
     "location": "Puchuncav\u00ed",
-    "last_online": 1733991381,
+    "last_online": 1741655883,
     "joined": 1499738004,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1748,
-            "date": 1733991613,
-            "rd": 93
+            "rating": 1730,
+            "date": 1741655957,
+            "rd": 90
         },
         "best": {
             "rating": 1993,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/188609020"
         },
         "record": {
-            "win": 250,
-            "loss": 110,
-            "draw": 61,
-            "time_per_move": 91931,
+            "win": 251,
+            "loss": 111,
+            "draw": 65,
+            "time_per_move": 92792,
             "timeout_percent": 0
         }
     },
@@ -50,7 +50,7 @@
             "win": 3,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 91931,
+            "time_per_move": 92792,
             "timeout_percent": 0
         }
     },
@@ -108,8 +108,8 @@
     "fide": 2136,
     "tactics": {
         "highest": {
-            "rating": 2656,
-            "date": 1731641785
+            "rating": 2943,
+            "date": 1739573719
         },
         "lowest": {
             "rating": 809,

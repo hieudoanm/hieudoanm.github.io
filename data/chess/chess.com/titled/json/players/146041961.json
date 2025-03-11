@@ -5,10 +5,10 @@
     "name": "Khagan Ahmad",
     "username": "hakanazeri2",
     "title": "FM",
-    "followers": 55,
-    "country": "https://api.chess.com/pub/country/IM",
+    "followers": 67,
+    "country": "https://api.chess.com/pub/country/NR",
     "location": "Baku",
-    "last_online": 1734094762,
+    "last_online": 1741700194,
     "joined": 1624786547,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2537,
-            "date": 1731443895,
-            "rd": 49
+            "rating": 2547,
+            "date": 1739733575,
+            "rd": 46
         },
         "best": {
             "rating": 2560,
@@ -46,46 +46,46 @@
             "game": "https://www.chess.com/game/live/35821817501"
         },
         "record": {
-            "win": 153,
-            "loss": 161,
-            "draw": 47
+            "win": 159,
+            "loss": 163,
+            "draw": 48
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2785,
-            "date": 1732993079,
-            "rd": 33
+            "rating": 2837,
+            "date": 1740490883,
+            "rd": 38
         },
         "best": {
-            "rating": 2786,
-            "date": 1732992503,
+            "rating": 2806,
+            "date": 1734200088,
             "game": "https://www.chess.com/game/live/126728448251"
         },
         "record": {
-            "win": 438,
-            "loss": 450,
-            "draw": 69
+            "win": 531,
+            "loss": 497,
+            "draw": 75
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2827,
-            "date": 1734094360,
-            "rd": 28
+            "rating": 2924,
+            "date": 1741520553,
+            "rd": 31
         },
         "best": {
-            "rating": 2854,
-            "date": 1732957094,
+            "rating": 2931,
+            "date": 1741105703,
             "game": "https://www.chess.com/game/live/113070572765"
         },
         "record": {
-            "win": 3548,
-            "loss": 3772,
-            "draw": 748
+            "win": 3765,
+            "loss": 3953,
+            "draw": 796
         }
     },
-    "fide": 2406,
+    "fide": 2391,
     "tactics": {
         "highest": {
             "rating": 3747,

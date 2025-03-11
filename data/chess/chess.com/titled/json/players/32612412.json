@@ -6,51 +6,52 @@
     "name": "Mateusz Bobula",
     "username": "matbobula",
     "title": "IM",
-    "followers": 1710,
+    "followers": 1843,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Krosno",
-    "last_online": 1734126429,
+    "last_online": 1741687673,
     "joined": 1485186339,
     "status": "premium",
     "is_streamer": true,
+    "twitch_url": "https://twitch.tv/matbobula",
     "verified": false,
     "league": "Crystal",
     "streaming_platforms": [
         {
-            "type": "youtube",
-            "channel_url": "https://youtube.com/@matbobulaschessschool"
+            "type": "twitch",
+            "channel_url": "https://twitch.tv/matbobula"
         }
     ],
     "chess_daily": {
         "last": {
-            "rating": 1995,
-            "date": 1734093818,
-            "rd": 135
+            "rating": 2014,
+            "date": 1741676232,
+            "rd": 123
         },
         "best": {
             "rating": 2052,
             "date": 1588114152,
-            "game": "https://www.chess.com/game/daily/328190978"
+            "game": "https://www.chess.com/game/daily/732022979"
         },
         "record": {
-            "win": 50,
-            "loss": 9,
-            "draw": 9,
-            "time_per_move": 12414,
+            "win": 58,
+            "loss": 10,
+            "draw": 10,
+            "time_per_move": 13099,
             "timeout_percent": 0
         },
         "tournament": {
             "points": 0,
             "withdraw": 0,
-            "count": 2,
+            "count": 1,
             "highest_finish": 1
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2367,
-            "date": 1733856206,
-            "rd": 49
+            "rating": 2376,
+            "date": 1741378167,
+            "rd": 48
         },
         "best": {
             "rating": 2499,
@@ -58,16 +59,16 @@
             "game": "https://www.chess.com/game/live/49469426069"
         },
         "record": {
-            "win": 177,
-            "loss": 83,
-            "draw": 38
+            "win": 183,
+            "loss": 85,
+            "draw": 39
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2270,
-            "date": 1731079812,
-            "rd": 100
+            "rating": 2426,
+            "date": 1740785574,
+            "rd": 37
         },
         "best": {
             "rating": 2493,
@@ -75,9 +76,9 @@
             "game": "https://www.chess.com/game/live/3640386202"
         },
         "record": {
-            "win": 447,
-            "loss": 484,
-            "draw": 84
+            "win": 511,
+            "loss": 526,
+            "draw": 90
         }
     },
     "chess_blitz": {
@@ -100,8 +101,8 @@
     "fide": 2334,
     "tactics": {
         "highest": {
-            "rating": 3033,
-            "date": 1730227449
+            "rating": 3052,
+            "date": 1740499785
         },
         "lowest": {
             "rating": 1244,

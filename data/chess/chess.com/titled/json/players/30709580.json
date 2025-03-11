@@ -6,10 +6,10 @@
     "name": "Tena Frank",
     "username": "tf24",
     "title": "WFM",
-    "followers": 137,
+    "followers": 145,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Konstanz",
-    "last_online": 1733608257,
+    "last_online": 1741513139,
     "joined": 1478093693,
     "status": "premium",
     "is_streamer": false,
@@ -47,9 +47,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1389,
-            "date": 1732317670,
-            "rd": 43
+            "rating": 1523,
+            "date": 1741520655,
+            "rd": 26
         },
         "best": {
             "rating": 1663,
@@ -57,9 +57,9 @@
             "game": "https://www.chess.com/game/live/1879956722"
         },
         "record": {
-            "win": 3456,
-            "loss": 3278,
-            "draw": 107
+            "win": 3648,
+            "loss": 3446,
+            "draw": 113
         }
     },
     "fide": 0,

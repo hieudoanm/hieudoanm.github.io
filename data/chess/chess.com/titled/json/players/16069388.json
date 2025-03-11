@@ -8,7 +8,7 @@
     "followers": 23,
     "country": "https://api.chess.com/pub/country/CO",
     "location": "Bogota",
-    "last_online": 1734114846,
+    "last_online": 1741415158,
     "joined": 1392486383,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2202,
-            "date": 1734115909,
-            "rd": 51
+            "rating": 2210,
+            "date": 1734915365,
+            "rd": 49
         },
         "best": {
             "rating": 2278,
@@ -75,8 +75,8 @@
             "game": "https://www.chess.com/game/live/96597514741"
         },
         "record": {
-            "win": 5874,
-            "loss": 4846,
+            "win": 5879,
+            "loss": 4850,
             "draw": 634
         }
     },

@@ -5,14 +5,14 @@
     "name": "Alberto Hern\u00e1ndez",
     "username": "veiso",
     "title": "FM",
-    "followers": 17,
+    "followers": 18,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1730468151,
+    "last_online": 1741114736,
     "joined": 1494943528,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2529,
-            "date": 1705716100,
-            "rd": 47
+            "rating": 2522,
+            "date": 1738755228,
+            "rd": 49
         },
         "best": {
             "rating": 2534,
@@ -61,7 +61,7 @@
         },
         "record": {
             "win": 279,
-            "loss": 262,
+            "loss": 263,
             "draw": 45
         }
     },

@@ -6,9 +6,9 @@
     "name": "Elliot Papadiamandis",
     "username": "papa12341234",
     "title": "IM",
-    "followers": 7409,
+    "followers": 7591,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734159425,
+    "last_online": 1741634931,
     "joined": 1542300352,
     "status": "premium",
     "is_streamer": false,
@@ -56,7 +56,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2503,
-            "date": 1734050553,
+            "date": 1735257925,
             "rd": 49
         },
         "best": {
@@ -72,26 +72,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2923,
-            "date": 1734127236,
-            "rd": 28
+            "rating": 2900,
+            "date": 1740320466,
+            "rd": 37
         },
         "best": {
-            "rating": 2959,
-            "date": 1731853483,
+            "rating": 2965,
+            "date": 1734903962,
             "game": "https://www.chess.com/game/live/70592045353"
         },
         "record": {
-            "win": 2736,
-            "loss": 2660,
-            "draw": 487
+            "win": 2776,
+            "loss": 2687,
+            "draw": 493
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2856,
-            "date": 1734125823,
-            "rd": 38
+            "rating": 2796,
+            "date": 1741704023,
+            "rd": 43
         },
         "best": {
             "rating": 2905,
@@ -99,9 +99,9 @@
             "game": "https://www.chess.com/game/live/80919143443"
         },
         "record": {
-            "win": 1185,
-            "loss": 1178,
-            "draw": 302
+            "win": 1261,
+            "loss": 1260,
+            "draw": 322
         }
     },
     "fide": 2407,

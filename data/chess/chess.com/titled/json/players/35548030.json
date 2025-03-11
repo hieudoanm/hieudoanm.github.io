@@ -6,9 +6,9 @@
     "name": "Tokelo Klaas",
     "username": "klaas1996",
     "title": "CM",
-    "followers": 24,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/LS",
-    "last_online": 1733856613,
+    "last_online": 1741594145,
     "joined": 1494863441,
     "status": "premium",
     "is_streamer": false,
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1771,
-            "date": 1733768009,
-            "rd": 36
+            "rating": 1908,
+            "date": 1740420647,
+            "rd": 24
         },
         "best": {
             "rating": 2032,
@@ -58,16 +58,16 @@
             "game": "https://www.chess.com/game/live/102108322029"
         },
         "record": {
-            "win": 937,
-            "loss": 817,
-            "draw": 42
+            "win": 1113,
+            "loss": 958,
+            "draw": 55
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2221,
-            "date": 1733854204,
-            "rd": 94
+            "rating": 2249,
+            "date": 1741551881,
+            "rd": 54
         },
         "best": {
             "rating": 2221,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/94052526441"
         },
         "record": {
-            "win": 616,
-            "loss": 499,
-            "draw": 97
+            "win": 635,
+            "loss": 517,
+            "draw": 99
         }
     },
     "fide": 1860,

@@ -5,14 +5,14 @@
     "name": "Adri\u00e1n Exp\u00f3sito Mil\u00e1n",
     "username": "aexmi",
     "title": "FM",
-    "followers": 11,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734111879,
+    "last_online": 1741627225,
     "joined": 1549898463,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -33,36 +33,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2135,
-            "date": 1733766764,
-            "rd": 53
+            "rating": 2276,
+            "date": 1741639039,
+            "rd": 39
         },
         "best": {
-            "rating": 2247,
-            "date": 1719684446,
-            "game": "https://www.chess.com/game/live/113999981865"
+            "rating": 2264,
+            "date": 1738336402,
+            "game": "https://www.chess.com/game/live/131824168899"
         },
         "record": {
-            "win": 120,
-            "loss": 89,
-            "draw": 7
+            "win": 195,
+            "loss": 139,
+            "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2352,
-            "date": 1731193181,
-            "rd": 48
+            "rating": 2333,
+            "date": 1741383443,
+            "rd": 47
         },
         "best": {
-            "rating": 2368,
-            "date": 1725378083,
+            "rating": 2404,
+            "date": 1734981021,
             "game": "https://www.chess.com/game/live/119116775109"
         },
         "record": {
-            "win": 230,
-            "loss": 162,
-            "draw": 28
+            "win": 274,
+            "loss": 206,
+            "draw": 30
         }
     },
     "fide": 2276,

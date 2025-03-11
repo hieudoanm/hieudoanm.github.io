@@ -5,9 +5,9 @@
     "name": "Orlando Husbands",
     "username": "timetopush",
     "title": "IM",
-    "followers": 8,
+    "followers": 12,
     "country": "https://api.chess.com/pub/country/BB",
-    "last_online": 1733955898,
+    "last_online": 1741620061,
     "joined": 1515364048,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2186,
-            "date": 1596998515,
-            "rd": 153
+            "rating": 2163,
+            "date": 1741640216,
+            "rd": 49
         },
         "best": {
             "rating": 2186,
@@ -27,15 +27,15 @@
         },
         "record": {
             "win": 4,
-            "loss": 0,
+            "loss": 3,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2610,
-            "date": 1709322033,
-            "rd": 248
+            "rating": 2602,
+            "date": 1741127963,
+            "rd": 49
         },
         "best": {
             "rating": 2610,
@@ -44,15 +44,15 @@
         },
         "record": {
             "win": 1,
-            "loss": 0,
+            "loss": 1,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2287,
-            "date": 1732922539,
-            "rd": 136
+            "rating": 2237,
+            "date": 1738101170,
+            "rd": 132
         },
         "best": {
             "rating": 2572,
@@ -61,14 +61,14 @@
         },
         "record": {
             "win": 318,
-            "loss": 229,
+            "loss": 230,
             "draw": 25
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2311,
-            "date": 1726263058
+            "rating": 2346,
+            "date": 1737550698
         },
         "lowest": {
             "rating": 1200,

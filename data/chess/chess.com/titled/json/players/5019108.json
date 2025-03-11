@@ -6,10 +6,10 @@
     "name": "Donaldo Paiva",
     "username": "dlp300",
     "title": "CM",
-    "followers": 91,
+    "followers": 94,
     "country": "https://api.chess.com/pub/country/MZ",
     "location": "maputo",
-    "last_online": 1733235675,
+    "last_online": 1740749199,
     "joined": 1303425643,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2050,
-            "date": 1712992929,
-            "rd": 120
+            "rating": 2042,
+            "date": 1741169056,
+            "rd": 49
         },
         "best": {
             "rating": 2388,
@@ -43,7 +43,7 @@
         },
         "record": {
             "win": 13,
-            "loss": 9,
+            "loss": 10,
             "draw": 2
         }
     },

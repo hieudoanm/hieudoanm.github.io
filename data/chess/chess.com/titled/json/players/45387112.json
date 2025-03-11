@@ -6,9 +6,9 @@
     "name": "Steven Javier Rojas Salas",
     "username": "steven_rojas",
     "title": "FM",
-    "followers": 41,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/PE",
-    "last_online": 1734111821,
+    "last_online": 1740925448,
     "joined": 1523981745,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2575,
-            "date": 1733873258,
+            "rating": 2608,
+            "date": 1735663315,
             "rd": 48
         },
         "best": {
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/126981055293"
         },
         "record": {
-            "win": 411,
-            "loss": 367,
-            "draw": 62
+            "win": 417,
+            "loss": 372,
+            "draw": 63
         }
     },
     "tactics": {

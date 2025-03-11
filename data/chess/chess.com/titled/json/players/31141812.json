@@ -6,9 +6,9 @@
     "name": "Juan Manuel Galvan",
     "username": "galvanpalaciego",
     "title": "FM",
-    "followers": 35,
+    "followers": 36,
     "country": "https://api.chess.com/pub/country/CR",
-    "last_online": 1733654390,
+    "last_online": 1741537695,
     "joined": 1480044773,
     "status": "premium",
     "is_streamer": false,
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2166,
-            "date": 1733783663,
-            "rd": 46
+            "rating": 2187,
+            "date": 1741640835,
+            "rd": 30
         },
         "best": {
             "rating": 2358,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/105339660283"
         },
         "record": {
-            "win": 1452,
-            "loss": 1450,
-            "draw": 119
+            "win": 1645,
+            "loss": 1661,
+            "draw": 140
         }
     },
     "fide": 0,

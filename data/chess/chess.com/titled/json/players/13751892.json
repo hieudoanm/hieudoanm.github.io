@@ -6,10 +6,10 @@
     "name": "Medina Paz Miguel 1968",
     "username": "medinapazmiguel1968",
     "title": "IM",
-    "followers": 302,
+    "followers": 313,
     "country": "https://api.chess.com/pub/country/EC",
     "location": "Natalia, Texas",
-    "last_online": 1734169984,
+    "last_online": 1741702714,
     "joined": 1380753474,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2175,
-            "date": 1733867101,
-            "rd": 111
+            "rating": 2083,
+            "date": 1735072726,
+            "rd": 151
         },
         "best": {
             "rating": 2279,
@@ -29,10 +29,10 @@
         },
         "record": {
             "win": 87,
-            "loss": 13,
+            "loss": 15,
             "draw": 14,
             "time_per_move": 125802,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess960_daily": {
@@ -68,25 +68,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2652,
-            "date": 1728843371,
-            "rd": 41
+            "rating": 2584,
+            "date": 1741460338,
+            "rd": 28
         },
         "best": {
-            "rating": 2652,
-            "date": 1728843371,
-            "game": "https://www.chess.com/game/live/118864246769"
+            "rating": 2662,
+            "date": 1740243948,
+            "game": "https://www.chess.com/game/live/133982941761"
         },
         "record": {
-            "win": 6135,
-            "loss": 2825,
-            "draw": 329
+            "win": 6203,
+            "loss": 2908,
+            "draw": 345
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2438,
-            "date": 1733875598,
+            "rating": 2447,
+            "date": 1740528292,
             "rd": 44
         },
         "best": {
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/84064253815"
         },
         "record": {
-            "win": 830,
-            "loss": 533,
-            "draw": 122
+            "win": 863,
+            "loss": 571,
+            "draw": 134
         }
     },
     "tactics": {

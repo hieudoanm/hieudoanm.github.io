@@ -6,10 +6,10 @@
     "name": "Jos\u00e9 Remolar",
     "username": "joseremolar",
     "title": "FM",
-    "followers": 45,
+    "followers": 46,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Tu coraz\u00f3n \ud83d\udc93",
-    "last_online": 1733923544,
+    "last_online": 1741703276,
     "joined": 1617648792,
     "status": "premium",
     "is_streamer": false,
@@ -37,26 +37,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2003,
-            "date": 1722776744,
-            "rd": 49
+            "rating": 2011,
+            "date": 1739055252,
+            "rd": 48
         },
         "best": {
-            "rating": 2003,
-            "date": 1623930233,
-            "game": "https://www.chess.com/game/live/17668371793"
+            "rating": 2020,
+            "date": 1738964156,
+            "game": "https://www.chess.com/game/live/132702621251"
         },
         "record": {
-            "win": 7,
-            "loss": 0,
+            "win": 10,
+            "loss": 2,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2524,
-            "date": 1733422689,
-            "rd": 48
+            "rating": 2500,
+            "date": 1738076582,
+            "rd": 41
         },
         "best": {
             "rating": 2602,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/49536566467"
         },
         "record": {
-            "win": 488,
-            "loss": 349,
-            "draw": 57
+            "win": 507,
+            "loss": 366,
+            "draw": 60
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2552,
-            "date": 1734146491,
-            "rd": 29
+            "rating": 2500,
+            "date": 1738923985,
+            "rd": 32
         },
         "best": {
             "rating": 2604,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/14491586217"
         },
         "record": {
-            "win": 1623,
-            "loss": 1421,
-            "draw": 216
+            "win": 1728,
+            "loss": 1515,
+            "draw": 228
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2430,
-            "date": 1707902806
+            "rating": 2574,
+            "date": 1738928240
         },
         "lowest": {
             "rating": 1209,

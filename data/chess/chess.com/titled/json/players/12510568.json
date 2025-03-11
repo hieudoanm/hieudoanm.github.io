@@ -6,20 +6,20 @@
     "name": "Tony Corkett",
     "username": "tc58",
     "title": "FM",
-    "followers": 7,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "Hampshire",
-    "last_online": 1695156036,
+    "last_online": 1741618984,
     "joined": 1372418049,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 2176,
-            "date": 1462472140,
+            "date": 1740668324,
             "rd": 249
         },
         "best": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2070,
-            "date": 1546951607,
-            "rd": 70
+            "rating": 1977,
+            "date": 1741026728,
+            "rd": 50
         },
         "best": {
             "rating": 2031,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/3351967659"
         },
         "record": {
-            "win": 103,
-            "loss": 104,
-            "draw": 4
+            "win": 129,
+            "loss": 124,
+            "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2294,
-            "date": 1695128247,
-            "rd": 32
+            "rating": 2256,
+            "date": 1741645132,
+            "rd": 40
         },
         "best": {
             "rating": 2356,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/87499321733"
         },
         "record": {
-            "win": 6547,
-            "loss": 6070,
-            "draw": 717
+            "win": 6580,
+            "loss": 6102,
+            "draw": 723
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2880,
-            "date": 1694284434
+            "rating": 2993,
+            "date": 1741537697
         },
         "lowest": {
             "rating": 1069,

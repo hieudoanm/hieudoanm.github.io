@@ -5,37 +5,37 @@
     "name": "Nadia Fawaz",
     "username": "nadiafawaz",
     "title": "WCM",
-    "followers": 0,
+    "followers": 3,
     "country": "https://api.chess.com/pub/country/LB",
-    "last_online": 1734112837,
+    "last_online": 1739467632,
     "joined": 1732990341,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2086,
-            "date": 1733854066,
-            "rd": 128
+            "rating": 2265,
+            "date": 1739297615,
+            "rd": 61
         },
         "best": {
-            "rating": 2162,
-            "date": 1733851695,
+            "rating": 2300,
+            "date": 1738691512,
             "game": "https://www.chess.com/game/live/127585259439"
         },
         "record": {
-            "win": 4,
-            "loss": 9,
-            "draw": 0
+            "win": 17,
+            "loss": 36,
+            "draw": 4
         }
     },
     "fide": 1763,
     "tactics": {
         "highest": {
-            "rating": 2984,
-            "date": 1733568712
+            "rating": 3074,
+            "date": 1737643803
         },
         "lowest": {
             "rating": 1000,

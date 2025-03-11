@@ -5,9 +5,9 @@
     "name": "Kris Chan",
     "username": "kranchis",
     "title": "FM",
-    "followers": 42,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734137770,
+    "last_online": 1741591030,
     "joined": 1546038858,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2391,
-            "date": 1733998647,
-            "rd": 41
+            "rating": 2501,
+            "date": 1739856030,
+            "rd": 35
         },
         "best": {
             "rating": 2525,
@@ -62,26 +62,26 @@
             "game": "https://www.chess.com/game/live/123736220547"
         },
         "record": {
-            "win": 1049,
-            "loss": 695,
-            "draw": 86
+            "win": 1133,
+            "loss": 750,
+            "draw": 92
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2474,
-            "date": 1734072896,
-            "rd": 45
+            "rating": 2447,
+            "date": 1741399365,
+            "rd": 48
         },
         "best": {
             "rating": 2511,
             "date": 1734009401,
-            "game": "https://www.chess.com/game/live/4733443068"
+            "game": "https://www.chess.com/game/live/128243348615"
         },
         "record": {
-            "win": 483,
-            "loss": 270,
-            "draw": 46
+            "win": 532,
+            "loss": 311,
+            "draw": 59
         }
     },
     "tactics": {

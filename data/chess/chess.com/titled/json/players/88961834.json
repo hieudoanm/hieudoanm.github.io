@@ -6,9 +6,9 @@
     "name": "Natalia Avetisian",
     "username": "avenatalia",
     "title": "WCM",
-    "followers": 12,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734090094,
+    "last_online": 1741526242,
     "joined": 1597311560,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     "fide": 1974,
     "tactics": {
         "highest": {
-            "rating": 904,
-            "date": 1725478291
+            "rating": 1948,
+            "date": 1739020135
         },
         "lowest": {
             "rating": 798,

@@ -1,24 +1,25 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/48732514.e89bc058.200x200o.b72080195dcd.jpg",
     "player_id": 48732514,
-    "@id": "https://api.chess.com/pub/player/ajaysanthosh",
-    "url": "https://www.chess.com/member/AjaySanthosh",
+    "@id": "https://api.chess.com/pub/player/brahmashira2010",
+    "url": "https://www.chess.com/member/Brahmashira2010",
     "name": "Ajay Santhosh Parvathareddy",
-    "username": "ajaysanthosh",
+    "username": "brahmashira2010",
     "title": "FM",
-    "followers": 25,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "NOIDA",
-    "last_online": 1734075653,
+    "last_online": 1741340806,
     "joined": 1534169973,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 1277,
-            "date": 1728479255,
+            "date": 1738316664,
             "rd": 323
         },
         "best": {
@@ -36,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2372,
-            "date": 1689845188,
-            "rd": 76
+            "rating": 2374,
+            "date": 1739539260,
+            "rd": 49
         },
         "best": {
             "rating": 2380,
@@ -46,43 +47,43 @@
             "game": "https://www.chess.com/game/live/72365493003"
         },
         "record": {
-            "win": 88,
+            "win": 90,
             "loss": 38,
             "draw": 6
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2303,
-            "date": 1728479256,
-            "rd": 133
+            "rating": 2392,
+            "date": 1740834836,
+            "rd": 46
         },
         "best": {
-            "rating": 1986,
-            "date": 1719526816,
-            "game": "https://www.chess.com/game/live/54562702803"
+            "rating": 2348,
+            "date": 1740161085,
+            "game": "https://www.chess.com/game/live/133899563573"
         },
         "record": {
-            "win": 80,
-            "loss": 54,
-            "draw": 5
+            "win": 117,
+            "loss": 73,
+            "draw": 8
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2653,
-            "date": 1733426799,
-            "rd": 49
+            "rating": 2757,
+            "date": 1740839457,
+            "rd": 31
         },
         "best": {
-            "rating": 2681,
-            "date": 1728982316,
-            "game": "https://www.chess.com/game/live/123351698755"
+            "rating": 2740,
+            "date": 1740501084,
+            "game": "https://www.chess.com/game/live/132424914047"
         },
         "record": {
-            "win": 308,
-            "loss": 201,
-            "draw": 39
+            "win": 448,
+            "loss": 294,
+            "draw": 73
         }
     },
     "fide": 2303,

@@ -9,7 +9,7 @@
     "followers": 17,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Veenendaal",
-    "last_online": 1730837432,
+    "last_online": 1739184165,
     "joined": 1256592114,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2225,
-            "date": 1725383299,
-            "rd": 87
+            "rating": 2146,
+            "date": 1736273269,
+            "rd": 73
         },
         "best": {
             "rating": 2397,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/39306649839"
         },
         "record": {
-            "win": 536,
-            "loss": 541,
-            "draw": 57
+            "win": 540,
+            "loss": 556,
+            "draw": 58
         }
     },
     "fide": 2192,

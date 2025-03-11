@@ -5,10 +5,10 @@
     "name": "S\u00e9rgio Miguel",
     "username": "cabila",
     "title": "FM",
-    "followers": 144,
+    "followers": 162,
     "country": "https://api.chess.com/pub/country/AO",
     "location": "Cazenga, Luanda, Angola",
-    "last_online": 1734102678,
+    "last_online": 1741619428,
     "joined": 1335879689,
     "status": "premium",
     "is_streamer": false,
@@ -17,27 +17,27 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2080,
-            "date": 1734102666,
+            "rating": 2110,
+            "date": 1741546199,
             "rd": 110
         },
         "best": {
-            "rating": 2080,
-            "date": 1729665533,
+            "rating": 2110,
+            "date": 1736667367,
             "game": "https://www.chess.com/game/daily/92710804"
         },
         "record": {
-            "win": 72,
+            "win": 73,
             "loss": 43,
             "draw": 9,
-            "time_per_move": 41629,
+            "time_per_move": 43903,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2437,
-            "date": 1724969063,
+            "rating": 2410,
+            "date": 1741034328,
             "rd": 49
         },
         "best": {
@@ -47,7 +47,7 @@
         },
         "record": {
             "win": 187,
-            "loss": 130,
+            "loss": 133,
             "draw": 23
         }
     },
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2368,
-            "date": 1732458060,
-            "rd": 55
+            "rating": 2365,
+            "date": 1740686103,
+            "rd": 64
         },
         "best": {
             "rating": 2509,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/110495572349"
         },
         "record": {
-            "win": 882,
-            "loss": 809,
+            "win": 889,
+            "loss": 818,
             "draw": 72
         }
     },

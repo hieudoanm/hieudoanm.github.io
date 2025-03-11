@@ -5,50 +5,49 @@
     "name": "Pablo Insa Alfonso",
     "username": "pinpinall",
     "title": "FM",
-    "followers": 12,
-    "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734124151,
+    "followers": 13,
+    "country": "https://api.chess.com/pub/country/KN",
+    "last_online": 1741630906,
     "joined": 1548075863,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2856,
-            "date": 1733484834,
-            "rd": 33
+            "rating": 2878,
+            "date": 1737315812,
+            "rd": 41
         },
         "best": {
             "rating": 2938,
             "date": 1713699538,
-            "game": "https://www.chess.com/game/live/120242460633"
+            "game": "https://www.chess.com/game/live/128794451033"
         },
         "record": {
-            "win": 259,
-            "loss": 171,
-            "draw": 38
+            "win": 288,
+            "loss": 191,
+            "draw": 43
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2777,
-            "date": 1733608251,
-            "rd": 42
+            "rating": 2881,
+            "date": 1741646249,
+            "rd": 30
         },
         "best": {
-            "rating": 2810,
-            "date": 1732140564,
-            "game": "https://www.chess.com/game/live/125702329829"
+            "rating": 2922,
+            "date": 1738705984,
+            "game": "https://www.chess.com/game/live/132008398779"
         },
         "record": {
-            "win": 1352,
-            "loss": 1125,
-            "draw": 184
+            "win": 1481,
+            "loss": 1228,
+            "draw": 217
         }
     },
-    "fide": 0,
     "tactics": {
         "highest": {
             "rating": 4067,

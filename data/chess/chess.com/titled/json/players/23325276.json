@@ -9,7 +9,7 @@
     "followers": 438,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "S\u00e3o Paulo",
-    "last_online": 1733887944,
+    "last_online": 1738981299,
     "joined": 1437431024,
     "status": "premium",
     "is_streamer": false,
@@ -38,8 +38,8 @@
     "chess_rapid": {
         "last": {
             "rating": 1865,
-            "date": 1721784589,
-            "rd": 115
+            "date": 1738982032,
+            "rd": 234
         },
         "best": {
             "rating": 1985,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/5335227893"
         },
         "record": {
-            "win": 45,
+            "win": 46,
             "loss": 31,
             "draw": 11
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2024,
-            "date": 1733969186,
-            "rd": 88
+            "rating": 2016,
+            "date": 1734566072,
+            "rd": 87
         },
         "best": {
             "rating": 2258,
@@ -66,7 +66,7 @@
         "record": {
             "win": 1045,
             "loss": 905,
-            "draw": 103
+            "draw": 104
         }
     },
     "chess_blitz": {

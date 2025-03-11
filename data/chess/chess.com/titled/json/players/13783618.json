@@ -1,19 +1,20 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13783618.ba225829.200x200o.ef2af6306098.jpg",
     "player_id": 13783618,
     "@id": "https://api.chess.com/pub/player/lh84",
     "url": "https://www.chess.com/member/LH84",
     "name": "Lara Hernandez",
     "username": "lh84",
     "title": "WCM",
-    "followers": 4,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Avignon",
-    "last_online": 1734174885,
+    "last_online": 1741697162,
     "joined": 1380981835,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -70,26 +71,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1957,
-            "date": 1734175292,
-            "rd": 50
+            "rating": 2006,
+            "date": 1741212507,
+            "rd": 48
         },
         "best": {
             "rating": 2073,
             "date": 1720553806,
-            "game": "https://www.chess.com/game/live/114292230377"
+            "game": "https://www.chess.com/game/live/128190039851"
         },
         "record": {
-            "win": 1382,
-            "loss": 1529,
-            "draw": 150
+            "win": 1410,
+            "loss": 1563,
+            "draw": 151
         }
     },
     "fide": 1978,
     "tactics": {
         "highest": {
-            "rating": 2870,
-            "date": 1732573276
+            "rating": 2912,
+            "date": 1736789554
         },
         "lowest": {
             "rating": 1365,

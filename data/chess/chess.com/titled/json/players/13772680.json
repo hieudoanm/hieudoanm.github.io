@@ -6,10 +6,10 @@
     "name": "Mauricio Arias Santana",
     "username": "mauricioariascr",
     "title": "IM",
-    "followers": 165,
+    "followers": 189,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Costa Rica-USA",
-    "last_online": 1734179419,
+    "last_online": 1741701223,
     "joined": 1380904307,
     "status": "premium",
     "is_streamer": false,
@@ -67,8 +67,8 @@
     "fide": 2327,
     "tactics": {
         "highest": {
-            "rating": 1081,
-            "date": 1734183081
+            "rating": 2864,
+            "date": 1741698688
         },
         "lowest": {
             "rating": 400,

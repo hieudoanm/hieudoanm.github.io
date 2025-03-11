@@ -6,10 +6,10 @@
     "name": "Wojciech Reza",
     "username": "rezacz",
     "title": "FM",
-    "followers": 349,
+    "followers": 359,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Wroc\u0142aw",
-    "last_online": 1734081614,
+    "last_online": 1741686107,
     "joined": 1491743753,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2611,
-            "date": 1724425430,
-            "rd": 40
+            "rating": 2613,
+            "date": 1738870087,
+            "rd": 49
         },
         "best": {
             "rating": 2636,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/3587983959"
         },
         "record": {
-            "win": 447,
-            "loss": 282,
+            "win": 453,
+            "loss": 287,
             "draw": 46
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2525,
-            "date": 1717174831,
+            "date": 1741626712,
             "rd": 49
         },
         "best": {

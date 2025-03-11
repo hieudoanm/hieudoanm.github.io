@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/79281792.05058f7e.200x200o.b52fcbfb43a1.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/79281792.975ebdf5.200x200o.a408d2bd9732.jpg",
     "player_id": 79281792,
     "@id": "https://api.chess.com/pub/player/sofia_blokhin",
     "url": "https://www.chess.com/member/Sofia_Blokhin",
     "name": "Sofia Blokhin",
     "username": "sofia_blokhin",
     "title": "WCM",
-    "followers": 15,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/EE",
     "location": "Tallinn",
-    "last_online": 1733846584,
+    "last_online": 1739893892,
     "joined": 1589289559,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2260,
-            "date": 1733854022,
-            "rd": 52
+            "rating": 2286,
+            "date": 1739902305,
+            "rd": 49
         },
         "best": {
             "rating": 2336,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/117301891945"
         },
         "record": {
-            "win": 228,
-            "loss": 492,
-            "draw": 60
+            "win": 245,
+            "loss": 527,
+            "draw": 63
         }
     },
     "tactics": {

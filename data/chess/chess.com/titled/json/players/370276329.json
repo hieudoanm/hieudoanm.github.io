@@ -5,9 +5,9 @@
     "name": "Aron Moritz",
     "username": "blunderstormm",
     "title": "FM",
-    "followers": 0,
+    "followers": 1,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1731763081,
+    "last_online": 1740224502,
     "joined": 1718636892,
     "status": "premium",
     "is_streamer": false,
@@ -44,8 +44,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 53,
-            "score": 50
+            "total_attempts": 54,
+            "score": 51
         }
     }
 }

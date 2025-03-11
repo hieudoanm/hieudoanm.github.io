@@ -3,12 +3,12 @@
     "player_id": 41449556,
     "@id": "https://api.chess.com/pub/player/sardaukar-2",
     "url": "https://www.chess.com/member/Sardaukar-2",
-    "name": "Dmitriy Danilenko",
+    "name": "Dmytro Danylenko",
     "username": "sardaukar-2",
     "title": "IM",
-    "followers": 722,
+    "followers": 724,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1733589892,
+    "last_online": 1741668575,
     "joined": 1513613767,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 2127,
-            "date": 1730891669,
+            "date": 1738990174,
             "rd": 148
         },
         "best": {
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2532,
-            "date": 1702473931,
-            "rd": 106
+            "rating": 2517,
+            "date": 1739732487,
+            "rd": 47
         },
         "best": {
             "rating": 2822,
@@ -46,15 +46,15 @@
             "game": "https://www.chess.com/game/live/47317804129"
         },
         "record": {
-            "win": 442,
-            "loss": 24,
-            "draw": 23
+            "win": 448,
+            "loss": 26,
+            "draw": 24
         }
     },
     "chess_bullet": {
         "last": {
             "rating": 3100,
-            "date": 1726905230,
+            "date": 1739708055,
             "rd": 49
         },
         "best": {
@@ -70,8 +70,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2901,
-            "date": 1726923493,
+            "rating": 2917,
+            "date": 1740489853,
             "rd": 42
         },
         "best": {
@@ -80,20 +80,25 @@
             "game": "https://www.chess.com/game/live/39239934997"
         },
         "record": {
-            "win": 744,
-            "loss": 453,
-            "draw": 122
+            "win": 760,
+            "loss": 462,
+            "draw": 126
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3906,
-            "date": 1703809159
+            "rating": 3917,
+            "date": 1741054578
         },
         "lowest": {
             "rating": 1211,
             "date": 1652419868
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 65,
+            "score": 62
+        }
+    }
 }

@@ -9,18 +9,18 @@
     "followers": 8,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Munich",
-    "last_online": 1733682414,
+    "last_online": 1738666676,
     "joined": 1423045037,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2530,
-            "date": 1647385562,
-            "rd": 174
+            "rating": 2524,
+            "date": 1741692304,
+            "rd": 49
         },
         "best": {
             "rating": 2530,
@@ -29,28 +29,28 @@
         },
         "record": {
             "win": 733,
-            "loss": 631,
+            "loss": 632,
             "draw": 91
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2408,
-            "date": 1727296650,
-            "rd": 117
+            "rating": 2559,
+            "date": 1741691879,
+            "rd": 27
         },
         "best": {
-            "rating": 2629,
-            "date": 1646760244,
-            "game": "https://www.chess.com/game/live/40498846749"
+            "rating": 2684,
+            "date": 1737471058,
+            "game": "https://www.chess.com/game/live/130635024703"
         },
         "record": {
-            "win": 948,
-            "loss": 812,
-            "draw": 138
+            "win": 1228,
+            "loss": 1030,
+            "draw": 188
         }
     },
-    "fide": 2325,
+    "fide": 2388,
     "tactics": {
         "highest": {
             "rating": 3062,

@@ -6,9 +6,9 @@
     "name": "Nikita Voinikonis",
     "username": "tastytablet",
     "title": "FM",
-    "followers": 123,
+    "followers": 125,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733853825,
+    "last_online": 1741622466,
     "joined": 1562873181,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2629,
-            "date": 1727189935,
+            "rating": 2638,
+            "date": 1736589148,
             "rd": 48
         },
         "best": {
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/105804073761"
         },
         "record": {
-            "win": 1474,
-            "loss": 1232,
-            "draw": 336
+            "win": 1476,
+            "loss": 1233,
+            "draw": 337
         }
     },
     "fide": 2217,

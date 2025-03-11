@@ -5,10 +5,10 @@
     "name": "Valentin Baidetskyi",
     "username": "valentin_baidetskyi",
     "title": "IM",
-    "followers": 55,
+    "followers": 60,
     "country": "https://api.chess.com/pub/country/AT",
     "location": "Vienna",
-    "last_online": 1734090463,
+    "last_online": 1741352797,
     "joined": 1642349814,
     "status": "premium",
     "is_streamer": false,
@@ -37,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2056,
-            "date": 1723130115,
+            "date": 1737887674,
             "rd": 310
         },
         "best": {
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2913,
-            "date": 1734092171,
-            "rd": 48
+            "rating": 2857,
+            "date": 1740688205,
+            "rd": 37
         },
         "best": {
             "rating": 2938,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/71066810379"
         },
         "record": {
-            "win": 416,
-            "loss": 351,
-            "draw": 79
+            "win": 458,
+            "loss": 398,
+            "draw": 90
         }
     },
     "tactics": {

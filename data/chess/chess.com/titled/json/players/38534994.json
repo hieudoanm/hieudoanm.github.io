@@ -6,10 +6,10 @@
     "name": "Ferenc Olah",
     "username": "olfer",
     "title": "FM",
-    "followers": 23,
+    "followers": 25,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "novi sad",
-    "last_online": 1734164580,
+    "last_online": 1741701283,
     "joined": 1505081447,
     "status": "premium",
     "is_streamer": false,
@@ -38,8 +38,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2304,
-            "date": 1709798758,
-            "rd": 47
+            "date": 1736511910,
+            "rd": 50
         },
         "best": {
             "rating": 2304,
@@ -47,7 +47,7 @@
             "game": "https://www.chess.com/game/live/103481442573"
         },
         "record": {
-            "win": 5,
+            "win": 8,
             "loss": 2,
             "draw": 0
         }
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2179,
-            "date": 1734102523,
-            "rd": 51
+            "rating": 2185,
+            "date": 1735736405,
+            "rd": 56
         },
         "best": {
             "rating": 2335,
@@ -81,7 +81,7 @@
             "game": "https://www.chess.com/game/live/103450848805"
         },
         "record": {
-            "win": 1714,
+            "win": 1715,
             "loss": 1347,
             "draw": 181
         }
@@ -89,8 +89,8 @@
     "fide": 2308,
     "tactics": {
         "highest": {
-            "rating": 4027,
-            "date": 1734110169
+            "rating": 4092,
+            "date": 1737487493
         },
         "lowest": {
             "rating": 409,
@@ -99,12 +99,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 68,
-            "score": 65
+            "total_attempts": 69,
+            "score": 66
         },
         "daily": {
-            "total_attempts": 31,
-            "score": 30
+            "total_attempts": 39,
+            "score": 38
         }
     }
 }

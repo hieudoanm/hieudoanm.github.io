@@ -6,21 +6,21 @@
     "name": "Yuriy Krykun",
     "username": "yuriykrykun",
     "title": "IM",
-    "followers": 426,
+    "followers": 432,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Kyiv",
-    "last_online": 1733923308,
+    "last_online": 1741543388,
     "joined": 1456174326,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2536,
-            "date": 1733156056,
-            "rd": 49
+            "rating": 2542,
+            "date": 1741036135,
+            "rd": 48
         },
         "best": {
             "rating": 2578,
@@ -28,8 +28,8 @@
             "game": "https://www.chess.com/game/live/1549668236"
         },
         "record": {
-            "win": 565,
-            "loss": 479,
+            "win": 568,
+            "loss": 481,
             "draw": 129
         }
     },

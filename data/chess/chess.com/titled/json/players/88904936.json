@@ -5,9 +5,9 @@
     "name": "Guilio Borgo",
     "username": "giulioborgo",
     "title": "IM",
-    "followers": 23,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1734076492,
+    "last_online": 1741700382,
     "joined": 1597240707,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2446,
-            "date": 1731648071,
-            "rd": 28
+            "rating": 2606,
+            "date": 1741610828,
+            "rd": 26
         },
         "best": {
             "rating": 2646,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/100398769827"
         },
         "record": {
-            "win": 955,
-            "loss": 908,
-            "draw": 120
+            "win": 1141,
+            "loss": 1109,
+            "draw": 153
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2200,
-            "date": 1649202661
+            "rating": 2207,
+            "date": 1737656311
         },
         "lowest": {
             "rating": 2200,

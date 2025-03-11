@@ -1,20 +1,20 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/122070190.943d7fc7.200x200o.cd468b8950dd.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/122070190.b6405ac7.200x200o.f182f611e094.jpg",
     "player_id": 122070190,
-    "@id": "https://api.chess.com/pub/player/mgl_2009",
-    "url": "https://www.chess.com/member/mgl_2009",
+    "@id": "https://api.chess.com/pub/player/lakerrss",
+    "url": "https://www.chess.com/member/LaKeRrSs",
     "name": "Tuguldur Soninbayar",
-    "username": "mgl_2009",
+    "username": "lakerrss",
     "title": "CM",
-    "followers": 0,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/MN",
     "location": "Ulaanbaatar",
-    "last_online": 1733929546,
+    "last_online": 1741528309,
     "joined": 1613641825,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,43 +35,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2415,
-            "date": 1729322092,
-            "rd": 85
+            "rating": 2574,
+            "date": 1741528977,
+            "rd": 31
         },
         "best": {
-            "rating": 2486,
-            "date": 1728313666,
-            "game": "https://www.chess.com/game/live/106755691739"
+            "rating": 2731,
+            "date": 1738870862,
+            "game": "https://www.chess.com/game/live/132609614995"
         },
         "record": {
-            "win": 161,
-            "loss": 51,
-            "draw": 9
+            "win": 379,
+            "loss": 296,
+            "draw": 39
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2426,
-            "date": 1734112737,
-            "rd": 68
+            "rating": 2628,
+            "date": 1741106458,
+            "rd": 39
         },
         "best": {
-            "rating": 2426,
-            "date": 1734112737,
-            "game": "https://www.chess.com/game/live/123062454465"
+            "rating": 2657,
+            "date": 1739080562,
+            "game": "https://www.chess.com/game/live/132814143863"
         },
         "record": {
-            "win": 121,
-            "loss": 32,
-            "draw": 3
+            "win": 225,
+            "loss": 118,
+            "draw": 20
         }
     },
     "fide": 2089,
     "tactics": {
         "highest": {
-            "rating": 2460,
-            "date": 1733898101
+            "rating": 3108,
+            "date": 1739001525
         },
         "lowest": {
             "rating": 412,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 39,
-            "score": 36
+            "total_attempts": 45,
+            "score": 42
         }
     }
 }

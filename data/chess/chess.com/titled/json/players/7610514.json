@@ -9,7 +9,7 @@
     "followers": 29,
     "country": "https://api.chess.com/pub/country/HR",
     "location": "sisak",
-    "last_online": 1725039895,
+    "last_online": 1739549753,
     "joined": 1337294974,
     "status": "premium",
     "is_streamer": false,
@@ -66,8 +66,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2271,
-            "date": 1734164696,
+            "rating": 2426,
+            "date": 1741691177,
             "rd": 26
         },
         "best": {
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/60180036095"
         },
         "record": {
-            "win": 46566,
-            "loss": 29994,
-            "draw": 3066
+            "win": 46923,
+            "loss": 30206,
+            "draw": 3116
         }
     },
     "fide": 2350,

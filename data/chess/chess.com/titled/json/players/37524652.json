@@ -6,9 +6,9 @@
     "name": "Oleg Rychkov",
     "username": "karateloru",
     "title": "FM",
-    "followers": 54,
+    "followers": 57,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733240729,
+    "last_online": 1741701422,
     "joined": 1501770501,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2741,
-            "date": 1732637059,
+            "rating": 2746,
+            "date": 1740501049,
             "rd": 49
         },
         "best": {
             "rating": 2880,
             "date": 1700059068,
-            "game": "https://www.chess.com/game/live/93717688649"
+            "game": "https://www.chess.com/game/live/133031932713"
         },
         "record": {
-            "win": 2174,
-            "loss": 1578,
-            "draw": 444
+            "win": 2190,
+            "loss": 1588,
+            "draw": 448
         }
     },
     "fide": 2385,

@@ -6,10 +6,10 @@
     "name": "Dmytro Bondar",
     "username": "undead-boy",
     "title": "FM",
-    "followers": 25,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Ukraine",
-    "last_online": 1731969013,
+    "last_online": 1740826341,
     "joined": 1541597024,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2198,
-            "date": 1734038985,
-            "rd": 37
+            "rating": 2089,
+            "date": 1741507440,
+            "rd": 41
         },
         "best": {
             "rating": 2368,
@@ -45,33 +45,33 @@
             "game": "https://www.chess.com/game/live/73045000005"
         },
         "record": {
-            "win": 1146,
-            "loss": 1238,
-            "draw": 129
+            "win": 1206,
+            "loss": 1321,
+            "draw": 134
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2220,
-            "date": 1729623216,
-            "rd": 74
+            "rating": 2272,
+            "date": 1735662918,
+            "rd": 85
         },
         "best": {
             "rating": 2362,
             "date": 1724677754,
-            "game": "https://www.chess.com/game/live/70885992031"
+            "game": "https://www.chess.com/game/live/129399802739"
         },
         "record": {
-            "win": 625,
-            "loss": 526,
-            "draw": 82
+            "win": 626,
+            "loss": 527,
+            "draw": 83
         }
     },
     "fide": 2254,
     "tactics": {
         "highest": {
-            "rating": 2731,
-            "date": 1731105299
+            "rating": 2869,
+            "date": 1734813568
         },
         "lowest": {
             "rating": 1018,

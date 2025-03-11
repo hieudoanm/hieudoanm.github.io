@@ -5,9 +5,9 @@
     "name": "Martin Botond Vodila",
     "username": "csativero",
     "title": "FM",
-    "followers": 13,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/MZ",
-    "last_online": 1733868512,
+    "last_online": 1741613018,
     "joined": 1544895322,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2317,
-            "date": 1719779263,
+            "date": 1740941542,
             "rd": 49
         },
         "best": {
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2527,
-            "date": 1730932199,
-            "rd": 34
+            "rating": 2521,
+            "date": 1741614165,
+            "rd": 49
         },
         "best": {
             "rating": 2551,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/123294591721"
         },
         "record": {
-            "win": 174,
-            "loss": 93,
+            "win": 177,
+            "loss": 96,
             "draw": 15
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2352,
-            "date": 1732991586,
-            "rd": 53
+            "rating": 2347,
+            "date": 1741613757,
+            "rd": 56
         },
         "best": {
             "rating": 2444,
@@ -60,16 +60,16 @@
             "game": "https://www.chess.com/game/live/123940244579"
         },
         "record": {
-            "win": 251,
-            "loss": 143,
-            "draw": 46
+            "win": 277,
+            "loss": 165,
+            "draw": 50
         }
     },
     "fide": 2291,
     "tactics": {
         "highest": {
-            "rating": 3393,
-            "date": 1731080816
+            "rating": 3419,
+            "date": 1739397684
         },
         "lowest": {
             "rating": 2268,

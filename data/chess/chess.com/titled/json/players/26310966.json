@@ -6,9 +6,9 @@
     "name": "Jan Boder",
     "username": "meisterjabo",
     "title": "FM",
-    "followers": 41,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734019509,
+    "last_online": 1741263005,
     "joined": 1453631068,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 983,
-            "date": 1716213051,
+            "date": 1739464685,
             "rd": 182
         },
         "record": {
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2519,
-            "date": 1734098100,
-            "rd": 32
+            "rating": 2487,
+            "date": 1741105648,
+            "rd": 42
         },
         "best": {
             "rating": 2624,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/107043026119"
         },
         "record": {
-            "win": 580,
-            "loss": 743,
-            "draw": 146
+            "win": 654,
+            "loss": 818,
+            "draw": 159
         }
     },
     "fide": 0,

@@ -6,10 +6,10 @@
     "name": "Maciej Sroczy\u0144ski",
     "username": "szachmistrz2500",
     "title": "FM",
-    "followers": 555,
+    "followers": 554,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "KALISZ",
-    "last_online": 1734104889,
+    "last_online": 1741555459,
     "joined": 1557481863,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2292,
-            "date": 1701340774,
+            "date": 1738233248,
             "rd": 169
         },
         "best": {
@@ -73,19 +73,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2512,
-            "date": 1733873261,
-            "rd": 30
+            "rating": 2560,
+            "date": 1741557742,
+            "rd": 38
         },
         "best": {
-            "rating": 2601,
-            "date": 1600203311,
+            "rating": 2604,
+            "date": 1739141353,
             "game": "https://www.chess.com/game/live/127606839133"
         },
         "record": {
-            "win": 2312,
-            "loss": 2153,
-            "draw": 421
+            "win": 2403,
+            "loss": 2242,
+            "draw": 442
         }
     },
     "tactics": {

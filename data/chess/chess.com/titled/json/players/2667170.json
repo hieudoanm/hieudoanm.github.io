@@ -9,7 +9,7 @@
     "followers": 81,
     "country": "https://api.chess.com/pub/country/MY",
     "location": "Penang",
-    "last_online": 1724249284,
+    "last_online": 1741576811,
     "joined": 1269574896,
     "status": "premium",
     "is_streamer": false,
@@ -66,17 +66,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2041,
-            "date": 1723135780,
-            "rd": 116
+            "rating": 2158,
+            "date": 1738998357,
+            "rd": 179
         },
         "best": {
-            "rating": 2143,
-            "date": 1634387280,
+            "rating": 2158,
+            "date": 1738998357,
             "game": "https://www.chess.com/game/live/28120819393"
         },
         "record": {
-            "win": 189,
+            "win": 190,
             "loss": 141,
             "draw": 10
         }

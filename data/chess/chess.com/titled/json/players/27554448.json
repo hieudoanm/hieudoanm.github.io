@@ -6,9 +6,9 @@
     "name": "Leonid Sandler",
     "username": "keeron21",
     "title": "IM",
-    "followers": 37,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734143381,
+    "last_online": 1741678044,
     "joined": 1459587757,
     "status": "premium",
     "is_streamer": false,
@@ -16,8 +16,8 @@
     "streaming_platforms": [],
     "tactics": {
         "highest": {
-            "rating": 3393,
-            "date": 1697624681
+            "rating": 3434,
+            "date": 1741285689
         },
         "lowest": {
             "rating": 1336,

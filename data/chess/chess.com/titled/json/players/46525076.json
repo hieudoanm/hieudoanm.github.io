@@ -6,9 +6,9 @@
     "name": "Igor Wilk",
     "username": "herowilczek",
     "title": "CM",
-    "followers": 14,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734183926,
+    "last_online": 1741640827,
     "joined": 1527316104,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2228,
-            "date": 1733053865,
+            "date": 1739528336,
             "rd": 65
         },
         "best": {
@@ -34,36 +34,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2626,
-            "date": 1734184308,
-            "rd": 21
+            "rating": 2543,
+            "date": 1741538673,
+            "rd": 23
         },
         "best": {
-            "rating": 2691,
-            "date": 1733594927,
+            "rating": 2731,
+            "date": 1740245125,
             "game": "https://www.chess.com/game/live/103749130725"
         },
         "record": {
-            "win": 3168,
-            "loss": 3191,
-            "draw": 528
+            "win": 3667,
+            "loss": 3703,
+            "draw": 627
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2671,
-            "date": 1733162783,
-            "rd": 37
+            "rating": 2664,
+            "date": 1741204672,
+            "rd": 27
         },
         "best": {
             "rating": 2679,
             "date": 1732643405,
-            "game": "https://www.chess.com/game/live/126379744227"
+            "game": "https://www.chess.com/game/live/128213939839"
         },
         "record": {
-            "win": 1466,
-            "loss": 1251,
-            "draw": 271
+            "win": 1637,
+            "loss": 1409,
+            "draw": 311
         }
     },
     "fide": 2228,
@@ -79,10 +79,6 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 67,
-            "score": 64
-        },
-        "daily": {
             "total_attempts": 67,
             "score": 64
         }

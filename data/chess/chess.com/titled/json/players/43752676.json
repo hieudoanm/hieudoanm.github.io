@@ -4,14 +4,14 @@
     "url": "https://www.chess.com/member/Devil_from_Elysium",
     "username": "devil_from_elysium",
     "title": "FM",
-    "followers": 1,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733588319,
+    "last_online": 1741617763,
     "joined": 1519714618,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -30,21 +30,38 @@
             "draw": 0
         }
     },
-    "chess_blitz": {
+    "chess_bullet": {
         "last": {
-            "rating": 2310,
-            "date": 1730369007,
-            "rd": 67
+            "rating": 2242,
+            "date": 1741617954,
+            "rd": 88
         },
         "best": {
-            "rating": 2310,
-            "date": 1730369007,
+            "rating": 2116,
+            "date": 1734803449,
+            "game": "https://www.chess.com/game/live/128542358263"
+        },
+        "record": {
+            "win": 11,
+            "loss": 5,
+            "draw": 1
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2346,
+            "date": 1741618367,
+            "rd": 70
+        },
+        "best": {
+            "rating": 2343,
+            "date": 1734804383,
             "game": "https://www.chess.com/game/live/124106453569"
         },
         "record": {
-            "win": 92,
-            "loss": 48,
-            "draw": 3
+            "win": 102,
+            "loss": 56,
+            "draw": 4
         }
     },
     "fide": 0,

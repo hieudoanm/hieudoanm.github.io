@@ -2,13 +2,12 @@
     "player_id": 148160495,
     "@id": "https://api.chess.com/pub/player/supermaster15",
     "url": "https://www.chess.com/member/supermaster15",
-    "name": "Sathvik Adiga",
     "username": "supermaster15",
     "title": "FM",
     "followers": 28,
-    "country": "https://api.chess.com/pub/country/IM",
+    "country": "https://api.chess.com/pub/country/GI",
     "location": "Gibraltar",
-    "last_online": 1734148231,
+    "last_online": 1741271479,
     "joined": 1626535237,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2028,
-            "date": 1734175889,
-            "rd": 63
+            "rating": 2048,
+            "date": 1740664138,
+            "rd": 73
         },
         "best": {
             "rating": 2078,
@@ -27,10 +26,10 @@
             "game": "https://www.chess.com/game/daily/476334597"
         },
         "record": {
-            "win": 104,
-            "loss": 71,
+            "win": 106,
+            "loss": 72,
             "draw": 41,
-            "time_per_move": 26018,
+            "time_per_move": 26407,
             "timeout_percent": 0
         }
     },
@@ -49,7 +48,7 @@
             "win": 1,
             "loss": 1,
             "draw": 0,
-            "time_per_move": 26018,
+            "time_per_move": 26407,
             "timeout_percent": 0
         }
     },

@@ -6,10 +6,10 @@
     "name": "Jens Rahnfeld",
     "username": "jensrahnfeld",
     "title": "FM",
-    "followers": 18,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Freiburg",
-    "last_online": 1734181489,
+    "last_online": 1741542601,
     "joined": 1451222094,
     "status": "premium",
     "is_streamer": false,
@@ -47,19 +47,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2288,
-            "date": 1734184920,
-            "rd": 30
+            "rating": 2488,
+            "date": 1741630824,
+            "rd": 38
         },
         "best": {
-            "rating": 2465,
-            "date": 1726759030,
-            "game": "https://www.chess.com/game/live/94663234051"
+            "rating": 2533,
+            "date": 1738013310,
+            "game": "https://www.chess.com/game/live/132235249899"
         },
         "record": {
-            "win": 1013,
-            "loss": 742,
-            "draw": 126
+            "win": 1193,
+            "loss": 869,
+            "draw": 148
         }
     },
     "tactics": {

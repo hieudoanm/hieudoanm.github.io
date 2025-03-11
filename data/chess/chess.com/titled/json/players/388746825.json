@@ -6,15 +6,34 @@
     "name": "Kenji Kichiro",
     "username": "kenjikichiro",
     "title": "FM",
-    "followers": 17,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/EU",
-    "last_online": 1734031618,
+    "last_online": 1741564460,
     "joined": 1726443983,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Champion",
     "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 1860,
+            "date": 1741245984,
+            "rd": 179
+        },
+        "best": {
+            "rating": 1860,
+            "date": 1741245984,
+            "game": "https://www.chess.com/game/daily/728307041"
+        },
+        "record": {
+            "win": 4,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 50473,
+            "timeout_percent": 0
+        }
+    },
     "chess_rapid": {
         "last": {
             "rating": 2220,
@@ -34,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2465,
-            "date": 1732733705,
-            "rd": 57
+            "rating": 2513,
+            "date": 1737223611,
+            "rd": 49
         },
         "best": {
             "rating": 2521,
@@ -44,26 +63,26 @@
             "game": "https://www.chess.com/game/live/120350984051"
         },
         "record": {
-            "win": 129,
-            "loss": 23,
+            "win": 170,
+            "loss": 25,
             "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2600,
-            "date": 1734143811,
-            "rd": 45
+            "rating": 2762,
+            "date": 1739990809,
+            "rd": 47
         },
         "best": {
-            "rating": 2600,
-            "date": 1734143811,
-            "game": "https://www.chess.com/game/live/127876742617"
+            "rating": 2735,
+            "date": 1739366679,
+            "game": "https://www.chess.com/game/live/129775162891"
         },
         "record": {
-            "win": 220,
-            "loss": 26,
-            "draw": 15
+            "win": 255,
+            "loss": 37,
+            "draw": 18
         }
     },
     "fide": 2398,

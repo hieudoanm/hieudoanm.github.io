@@ -6,9 +6,9 @@
     "name": "Oleg Papayan",
     "username": "oleg_papayan",
     "title": "FM",
-    "followers": 474,
+    "followers": 501,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734157492,
+    "last_online": 1741565303,
     "joined": 1548773284,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2704,
-            "date": 1731536685,
-            "rd": 43
+            "rating": 2699,
+            "date": 1741566531,
+            "rd": 45
         },
         "best": {
             "rating": 2777,
@@ -46,15 +46,15 @@
             "game": "https://www.chess.com/game/live/107975403365"
         },
         "record": {
-            "win": 714,
-            "loss": 639,
+            "win": 720,
+            "loss": 646,
             "draw": 111
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2606,
-            "date": 1733851060,
+            "rating": 2601,
+            "date": 1741543620,
             "rd": 41
         },
         "best": {
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/112557597099"
         },
         "record": {
-            "win": 1662,
-            "loss": 1418,
-            "draw": 298
+            "win": 1733,
+            "loss": 1482,
+            "draw": 312
         }
     },
     "fide": 2300,

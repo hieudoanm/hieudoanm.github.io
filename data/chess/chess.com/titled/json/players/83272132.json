@@ -5,9 +5,9 @@
     "name": "James Moreby",
     "username": "if_name_main_a",
     "title": "FM",
-    "followers": 174,
+    "followers": 175,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1733936500,
+    "last_online": 1741476893,
     "joined": 1592506749,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2663,
-            "date": 1728660737,
-            "rd": 40
+            "rating": 2599,
+            "date": 1740248883,
+            "rd": 47
         },
         "best": {
             "rating": 2685,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/117671948849"
         },
         "record": {
-            "win": 712,
-            "loss": 507,
-            "draw": 80
+            "win": 727,
+            "loss": 527,
+            "draw": 81
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2451,
-            "date": 1733702707,
-            "rd": 69
+            "rating": 2543,
+            "date": 1741273579,
+            "rd": 48
         },
         "best": {
             "rating": 2668,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/81304959087"
         },
         "record": {
-            "win": 1453,
-            "loss": 1125,
-            "draw": 185
+            "win": 1486,
+            "loss": 1148,
+            "draw": 186
         }
     },
     "tactics": {

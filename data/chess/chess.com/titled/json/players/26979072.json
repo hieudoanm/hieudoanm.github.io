@@ -9,7 +9,7 @@
     "followers": 153,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Hamburg",
-    "last_online": 1734032678,
+    "last_online": 1741369802,
     "joined": 1456666232,
     "status": "premium",
     "is_streamer": false,
@@ -68,9 +68,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1889,
-            "date": 1732366407,
-            "rd": 45
+            "rating": 1859,
+            "date": 1738508165,
+            "rd": 62
         },
         "best": {
             "rating": 2172,
@@ -78,15 +78,15 @@
             "game": "https://www.chess.com/game/live/2670793523"
         },
         "record": {
-            "win": 4869,
-            "loss": 3651,
+            "win": 4870,
+            "loss": 3654,
             "draw": 344
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2150,
-            "date": 1734107371,
+            "rating": 2260,
+            "date": 1741613879,
             "rd": 34
         },
         "best": {
@@ -95,9 +95,9 @@
             "game": "https://www.chess.com/game/live/5581058707"
         },
         "record": {
-            "win": 8231,
-            "loss": 6699,
-            "draw": 986
+            "win": 8338,
+            "loss": 6776,
+            "draw": 1011
         }
     },
     "fide": 2159,

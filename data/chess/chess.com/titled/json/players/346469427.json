@@ -6,9 +6,9 @@
     "name": "Alikhan Daulet",
     "username": "chesskhan11",
     "title": "CM",
-    "followers": 9,
-    "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734016547,
+    "followers": 12,
+    "country": "https://api.chess.com/pub/country/ES",
+    "last_online": 1741702300,
     "joined": 1708445092,
     "status": "premium",
     "is_streamer": false,
@@ -29,9 +29,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2533,
-            "date": 1734018350,
-            "rd": 32
+            "rating": 2603,
+            "date": 1741583358,
+            "rd": 28
         },
         "best": {
             "rating": 2682,
@@ -39,29 +39,29 @@
             "game": "https://www.chess.com/game/live/126120549343"
         },
         "record": {
-            "win": 636,
-            "loss": 558,
-            "draw": 79
+            "win": 798,
+            "loss": 704,
+            "draw": 92
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2566,
-            "date": 1734017973,
-            "rd": 33
+            "rating": 2684,
+            "date": 1741590564,
+            "rd": 31
         },
         "best": {
-            "rating": 2644,
-            "date": 1732457565,
-            "game": "https://www.chess.com/game/live/125776785483"
+            "rating": 2776,
+            "date": 1737825266,
+            "game": "https://www.chess.com/game/live/133637939233"
         },
         "record": {
-            "win": 642,
-            "loss": 420,
-            "draw": 78
+            "win": 816,
+            "loss": 568,
+            "draw": 108
         }
     },
-    "fide": 2004,
+    "fide": 2013,
     "tactics": {
         "highest": {
             "rating": 3328,

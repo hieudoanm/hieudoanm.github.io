@@ -6,9 +6,9 @@
     "name": "Yuliia Osmak",
     "username": "zajka-molotok",
     "title": "IM",
-    "followers": 391,
+    "followers": 399,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1733845419,
+    "last_online": 1741549494,
     "joined": 1549533171,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2597,
-            "date": 1733869510,
+            "rating": 2602,
+            "date": 1739902297,
             "rd": 46
         },
         "best": {
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/108839404145"
         },
         "record": {
-            "win": 1093,
-            "loss": 919,
+            "win": 1105,
+            "loss": 928,
             "draw": 177
         }
     },

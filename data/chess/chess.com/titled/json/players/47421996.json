@@ -6,15 +6,15 @@
     "name": "Rathnakaran Kantholi",
     "username": "ratnakaran",
     "title": "IM",
-    "followers": 74,
+    "followers": 75,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Calicut",
-    "last_online": 1734154181,
+    "last_online": 1739714976,
     "joined": 1530078515,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -30,26 +30,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2557,
-            "date": 1587555042,
-            "rd": 55
+            "rating": 2578,
+            "date": 1736410149,
+            "rd": 47
         },
         "best": {
-            "rating": 2431,
-            "date": 1587553715,
+            "rating": 2578,
+            "date": 1736410149,
             "game": "https://www.chess.com/game/live/3590788546"
         },
         "record": {
-            "win": 53,
-            "loss": 29,
+            "win": 58,
+            "loss": 30,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2604,
-            "date": 1681232639,
-            "rd": 92
+            "rating": 2614,
+            "date": 1735891637,
+            "rd": 47
         },
         "best": {
             "rating": 2639,
@@ -57,8 +57,8 @@
             "game": "https://www.chess.com/game/live/37470104883"
         },
         "record": {
-            "win": 242,
-            "loss": 154,
+            "win": 248,
+            "loss": 160,
             "draw": 37
         }
     },
@@ -76,10 +76,6 @@
         "best": {
             "total_attempts": 55,
             "score": 52
-        },
-        "daily": {
-            "total_attempts": 43,
-            "score": 40
         }
     }
 }

@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/AlekhineGirl",
     "username": "alekhinegirl",
     "title": "WCM",
-    "followers": 9,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1734178523,
+    "last_online": 1741664118,
     "joined": 1549052389,
     "status": "premium",
     "is_streamer": false,
@@ -33,19 +33,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2147,
-            "date": 1734179091,
-            "rd": 23
+            "rating": 2252,
+            "date": 1741635748,
+            "rd": 30
         },
         "best": {
-            "rating": 2303,
-            "date": 1731101248,
-            "game": "https://www.chess.com/game/live/124483160915"
+            "rating": 2409,
+            "date": 1737053822,
+            "game": "https://www.chess.com/game/live/130791610485"
         },
         "record": {
-            "win": 2405,
-            "loss": 2122,
-            "draw": 248
+            "win": 2837,
+            "loss": 2478,
+            "draw": 284
         }
     },
     "tactics": {

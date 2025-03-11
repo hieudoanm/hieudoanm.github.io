@@ -5,9 +5,9 @@
     "name": "Andrea Drei",
     "username": "delpi2003",
     "title": "FM",
-    "followers": 97,
+    "followers": 101,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1734170299,
+    "last_online": 1741692564,
     "joined": 1587920518,
     "status": "premium",
     "is_streamer": false,
@@ -45,19 +45,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2258,
-            "date": 1734081563,
-            "rd": 22
+            "rating": 2314,
+            "date": 1741693929,
+            "rd": 26
         },
         "best": {
-            "rating": 2358,
-            "date": 1731457755,
+            "rating": 2361,
+            "date": 1735916129,
             "game": "https://www.chess.com/game/live/5593165905"
         },
         "record": {
-            "win": 8510,
-            "loss": 8734,
-            "draw": 1302
+            "win": 8919,
+            "loss": 9193,
+            "draw": 1374
         }
     },
     "fide": 2259,

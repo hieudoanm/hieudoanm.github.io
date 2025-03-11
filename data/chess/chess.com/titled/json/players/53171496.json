@@ -8,7 +8,7 @@
     "followers": 22,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Villa Adelina",
-    "last_online": 1727788960,
+    "last_online": 1740240962,
     "joined": 1544669140,
     "status": "premium",
     "is_streamer": false,
@@ -88,8 +88,8 @@
     "fide": 2282,
     "tactics": {
         "highest": {
-            "rating": 2613,
-            "date": 1610507781
+            "rating": 2629,
+            "date": 1739636531
         },
         "lowest": {
             "rating": 1214,

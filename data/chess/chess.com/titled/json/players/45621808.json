@@ -6,9 +6,9 @@
     "name": "Krzysztof Szczurek",
     "username": "krzysztofszczurek",
     "title": "FM",
-    "followers": 42,
+    "followers": 41,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733942698,
+    "last_online": 1741206321,
     "joined": 1524657257,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2298,
-            "date": 1733845997,
+            "date": 1741187649,
             "rd": 49
         },
         "best": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2613,
-            "date": 1732811138,
-            "rd": 49
+            "rating": 2627,
+            "date": 1739879654,
+            "rd": 48
         },
         "best": {
             "rating": 2730,
@@ -44,15 +44,15 @@
             "game": "https://www.chess.com/game/live/98385390955"
         },
         "record": {
-            "win": 782,
-            "loss": 744,
-            "draw": 86
+            "win": 801,
+            "loss": 765,
+            "draw": 89
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2562,
-            "date": 1733239339,
+            "rating": 2547,
+            "date": 1740995141,
             "rd": 48
         },
         "best": {
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/69509253649"
         },
         "record": {
-            "win": 848,
-            "loss": 607,
+            "win": 849,
+            "loss": 610,
             "draw": 143
         }
     },

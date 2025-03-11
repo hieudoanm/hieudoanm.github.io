@@ -6,9 +6,9 @@
     "name": "Kim Nygren",
     "username": "k-nygren",
     "title": "CM",
-    "followers": 20,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/SE",
-    "last_online": 1730485187,
+    "last_online": 1741454875,
     "joined": 1477415864,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2331,
-            "date": 1652299151,
-            "rd": 61
+            "date": 1737333335,
+            "rd": 50
         },
         "best": {
             "rating": 2414,
@@ -27,7 +27,7 @@
             "game": "https://www.chess.com/game/live/45931889727"
         },
         "record": {
-            "win": 24,
+            "win": 25,
             "loss": 14,
             "draw": 1
         }
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2540,
-            "date": 1720083190,
-            "rd": 36
+            "rating": 2631,
+            "date": 1740574508,
+            "rd": 31
         },
         "best": {
-            "rating": 2630,
-            "date": 1695940503,
+            "rating": 2644,
+            "date": 1738009751,
             "game": "https://www.chess.com/game/live/58094370683"
         },
         "record": {
-            "win": 877,
-            "loss": 870,
-            "draw": 136
+            "win": 987,
+            "loss": 978,
+            "draw": 148
         }
     },
     "fide": 0,

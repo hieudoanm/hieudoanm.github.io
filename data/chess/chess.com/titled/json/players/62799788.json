@@ -6,9 +6,9 @@
     "name": "Parnian Ghomi",
     "username": "parnian_gh",
     "title": "WCM",
-    "followers": 46,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/IR",
-    "last_online": 1732528285,
+    "last_online": 1739324194,
     "joined": 1561808314,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1022,
-            "date": 1724705565,
-            "rd": 137
+            "rating": 1227,
+            "date": 1736388853,
+            "rd": 127
         },
         "best": {
             "rating": 2087,
@@ -27,33 +27,33 @@
             "game": "https://www.chess.com/game/live/6481657682"
         },
         "record": {
-            "win": 33,
+            "win": 36,
             "loss": 9,
             "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2633,
-            "date": 1714165277,
-            "rd": 48
+            "rating": 2605,
+            "date": 1738723221,
+            "rd": 33
         },
         "best": {
-            "rating": 2634,
-            "date": 1714165098,
-            "game": "https://www.chess.com/game/live/107904024137"
+            "rating": 2717,
+            "date": 1737142223,
+            "game": "https://www.chess.com/game/live/130827582321"
         },
         "record": {
-            "win": 124,
-            "loss": 106,
-            "draw": 9
+            "win": 201,
+            "loss": 200,
+            "draw": 22
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2093,
-            "date": 1725052845,
-            "rd": 137
+            "rating": 2151,
+            "date": 1736389459,
+            "rd": 139
         },
         "best": {
             "rating": 2430,
@@ -61,15 +61,15 @@
             "game": "https://www.chess.com/game/live/4678386103"
         },
         "record": {
-            "win": 52,
+            "win": 54,
             "loss": 22,
             "draw": 7
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3029,
-            "date": 1714164619
+            "rating": 3362,
+            "date": 1738185902
         },
         "lowest": {
             "rating": 1212,

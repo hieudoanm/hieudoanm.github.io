@@ -6,10 +6,10 @@
     "name": "Rafael Miranda",
     "username": "th3_hound",
     "title": "FM",
-    "followers": 352,
+    "followers": 361,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "La Plata",
-    "last_online": 1734038214,
+    "last_online": 1741694660,
     "joined": 1586962011,
     "status": "premium",
     "is_streamer": true,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2153,
-            "date": 1729518679,
+            "date": 1738561153,
             "rd": 236
         },
         "best": {
@@ -29,17 +29,17 @@
         },
         "record": {
             "win": 19,
-            "loss": 0,
+            "loss": 1,
             "draw": 0,
             "time_per_move": 50976,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2598,
-            "date": 1733607894,
-            "rd": 48
+            "rating": 2591,
+            "date": 1738764652,
+            "rd": 49
         },
         "best": {
             "rating": 2743,
@@ -48,7 +48,7 @@
         },
         "record": {
             "win": 143,
-            "loss": 115,
+            "loss": 116,
             "draw": 17
         }
     },

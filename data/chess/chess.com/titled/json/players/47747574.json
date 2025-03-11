@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/benthat",
     "username": "benthat",
     "title": "FM",
-    "followers": 7,
+    "followers": 6,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733676277,
+    "last_online": 1739596147,
     "joined": 1531167685,
     "status": "premium",
     "is_streamer": false,
@@ -68,9 +68,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2380,
-            "date": 1733677300,
-            "rd": 48
+            "rating": 2338,
+            "date": 1739596681,
+            "rd": 54
         },
         "best": {
             "rating": 2472,
@@ -78,16 +78,16 @@
             "game": "https://www.chess.com/game/live/102215003517"
         },
         "record": {
-            "win": 766,
-            "loss": 811,
-            "draw": 194
+            "win": 777,
+            "loss": 829,
+            "draw": 199
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2372,
-            "date": 1733676345
+            "rating": 2383,
+            "date": 1735061724
         },
         "lowest": {
             "rating": 390,

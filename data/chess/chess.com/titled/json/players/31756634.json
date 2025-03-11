@@ -6,10 +6,10 @@
     "name": "Sergio Macagno",
     "username": "sergiopatagonia",
     "title": "FM",
-    "followers": 22,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Santa Cruz",
-    "last_online": 1733858736,
+    "last_online": 1741390005,
     "joined": 1482263655,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2540,
-            "date": 1689755910,
-            "rd": 211
+            "date": 1740326032,
+            "rd": 49
         },
         "best": {
             "rating": 2540,
@@ -28,32 +28,32 @@
             "game": "https://www.chess.com/game/live/83494521055"
         },
         "record": {
-            "win": 4,
+            "win": 8,
             "loss": 0,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2073,
-            "date": 1677901971,
-            "rd": 16
+            "rating": 2085,
+            "date": 1741409311,
+            "rd": 17
         },
         "best": {
-            "rating": 2122,
-            "date": 1666888930,
-            "game": "https://www.chess.com/game/live/60490853423"
+            "rating": 2172,
+            "date": 1740277491,
+            "game": "https://www.chess.com/game/live/128654553659"
         },
         "record": {
-            "win": 273,
-            "loss": 257,
-            "draw": 11
+            "win": 1379,
+            "loss": 944,
+            "draw": 48
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2302,
-            "date": 1733871309,
+            "rating": 2304,
+            "date": 1735443696,
             "rd": 25
         },
         "best": {
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/79086735759"
         },
         "record": {
-            "win": 1264,
-            "loss": 622,
-            "draw": 105
+            "win": 1376,
+            "loss": 685,
+            "draw": 109
         }
     },
     "fide": 2320,

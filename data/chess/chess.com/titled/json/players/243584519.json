@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Blindov",
     "username": "blindov",
     "title": "IM",
-    "followers": 2,
+    "followers": 4,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1734161351,
+    "last_online": 1741699590,
     "joined": 1676058464,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +15,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2803,
-            "date": 1734125230,
-            "rd": 26
+            "rating": 2773,
+            "date": 1741538472,
+            "rd": 27
         },
         "best": {
             "rating": 2891,
@@ -25,32 +25,32 @@
             "game": "https://www.chess.com/game/live/123027640873"
         },
         "record": {
-            "win": 445,
-            "loss": 381,
-            "draw": 44
+            "win": 774,
+            "loss": 727,
+            "draw": 91
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2742,
-            "date": 1734134265,
-            "rd": 23
+            "rating": 2777,
+            "date": 1741702097,
+            "rd": 22
         },
         "best": {
             "rating": 2889,
             "date": 1731593938,
-            "game": "https://www.chess.com/game/live/119485808787"
+            "game": "https://www.chess.com/game/live/128737423053"
         },
         "record": {
-            "win": 892,
-            "loss": 781,
-            "draw": 149
+            "win": 1202,
+            "loss": 1068,
+            "draw": 207
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3185,
-            "date": 1732798943
+            "rating": 3457,
+            "date": 1740040709
         },
         "lowest": {
             "rating": 1000,
@@ -59,8 +59,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 52,
-            "score": 49
+            "total_attempts": 67,
+            "score": 64
+        },
+        "daily": {
+            "total_attempts": 51,
+            "score": 48
         }
     }
 }

@@ -6,12 +6,12 @@
     "title": "CM",
     "followers": 4,
     "country": "https://api.chess.com/pub/country/GR",
-    "last_online": 1734008843,
+    "last_online": 1741545574,
     "joined": 1585569462,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -67,8 +67,8 @@
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 1200,
-            "date": 1585569462
+            "rating": 2119,
+            "date": 1741502258
         },
         "lowest": {
             "rating": 1200,
@@ -77,8 +77,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 22,
-            "score": 20
+            "total_attempts": 41,
+            "score": 38
         }
     }
 }

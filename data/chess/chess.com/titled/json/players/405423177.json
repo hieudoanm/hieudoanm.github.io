@@ -5,14 +5,32 @@
     "name": "Jonathan Ady",
     "username": "jonady1",
     "title": "FM",
-    "followers": 0,
+    "followers": 3,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1733656553,
+    "last_online": 1741252422,
     "joined": 1732726483,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Wood",
     "streaming_platforms": [],
+    "chess_blitz": {
+        "last": {
+            "rating": 2371,
+            "date": 1741111704,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2542,
+            "date": 1736871445,
+            "game": "https://www.chess.com/game/live/131242812953"
+        },
+        "record": {
+            "win": 21,
+            "loss": 30,
+            "draw": 3
+        }
+    },
     "fide": 2358,
     "tactics": {
         "highest": {

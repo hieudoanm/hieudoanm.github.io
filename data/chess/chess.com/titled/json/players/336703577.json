@@ -6,9 +6,9 @@
     "name": "Avinash Ramesh",
     "username": "knightmarestyle",
     "title": "IM",
-    "followers": 3,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/HK",
-    "last_online": 1734080778,
+    "last_online": 1741634661,
     "joined": 1704366929,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2746,
-            "date": 1733939087,
-            "rd": 21
+            "rating": 2796,
+            "date": 1739347966,
+            "rd": 44
         },
         "best": {
             "rating": 2827,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/115771229525"
         },
         "record": {
-            "win": 296,
-            "loss": 216,
-            "draw": 39
+            "win": 304,
+            "loss": 221,
+            "draw": 40
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2810,
-            "date": 1734084441,
-            "rd": 38
+            "rating": 2794,
+            "date": 1741624935,
+            "rd": 48
         },
         "best": {
             "rating": 2851,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/126393628421"
         },
         "record": {
-            "win": 126,
-            "loss": 77,
-            "draw": 25
+            "win": 165,
+            "loss": 92,
+            "draw": 35
         }
     },
     "tactics": {
@@ -61,8 +61,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 57,
-            "score": 54
+            "total_attempts": 58,
+            "score": 55
         }
     }
 }

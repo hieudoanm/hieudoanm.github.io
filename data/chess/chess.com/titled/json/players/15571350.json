@@ -6,10 +6,10 @@
     "name": "Zsolt Korpics",
     "username": "zsoltkorpics",
     "title": "FM",
-    "followers": 52,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1731444571,
+    "last_online": 1741124193,
     "joined": 1389701830,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2379,
-            "date": 1726592804,
-            "rd": 43
+            "rating": 2467,
+            "date": 1741131123,
+            "rd": 70
         },
         "best": {
             "rating": 2522,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/96157430501"
         },
         "record": {
-            "win": 369,
-            "loss": 271,
-            "draw": 87
+            "win": 376,
+            "loss": 279,
+            "draw": 91
         }
     },
     "fide": 2325,

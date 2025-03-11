@@ -5,10 +5,10 @@
     "name": "V Toshali",
     "username": "toshali",
     "title": "WFM",
-    "followers": 42,
+    "followers": 43,
     "country": "https://api.chess.com/pub/country/US",
     "location": "St.Louis",
-    "last_online": 1733942435,
+    "last_online": 1741651912,
     "joined": 1329383320,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2031,
-            "date": 1734029739,
+            "rating": 2028,
+            "date": 1741372692,
             "rd": 49
         },
         "best": {
@@ -28,14 +28,14 @@
         },
         "record": {
             "win": 20,
-            "loss": 3,
+            "loss": 4,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
             "rating": 1886,
-            "date": 1639737810,
+            "date": 1737430194,
             "rd": 124
         },
         "best": {
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2271,
-            "date": 1730214952,
+            "date": 1741653820,
             "rd": 52
         },
         "best": {

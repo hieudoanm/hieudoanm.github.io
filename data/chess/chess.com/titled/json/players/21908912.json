@@ -6,14 +6,14 @@
     "name": "Pranav Shetty",
     "username": "akiba182",
     "title": "CM",
-    "followers": 7,
+    "followers": 15,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734145095,
+    "last_online": 1741697180,
     "joined": 1428673016,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,26 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2314,
-            "date": 1734163940,
-            "rd": 39
+            "rating": 2407,
+            "date": 1741697737,
+            "rd": 28
         },
         "best": {
-            "rating": 2447,
-            "date": 1599754434,
+            "rating": 2503,
+            "date": 1739025336,
             "game": "https://www.chess.com/game/live/2630507001"
         },
         "record": {
-            "win": 752,
-            "loss": 615,
-            "draw": 68
+            "win": 945,
+            "loss": 806,
+            "draw": 90
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2438,
-            "date": 1733055701,
-            "rd": 39
+            "rating": 2430,
+            "date": 1741449846,
+            "rd": 48
         },
         "best": {
             "rating": 2544,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/4202019877"
         },
         "record": {
-            "win": 938,
-            "loss": 751,
-            "draw": 147
+            "win": 958,
+            "loss": 775,
+            "draw": 149
         }
     },
     "fide": 2144,
     "tactics": {
         "highest": {
-            "rating": 2862,
-            "date": 1732339294
+            "rating": 2927,
+            "date": 1741522580
         },
         "lowest": {
             "rating": 1257,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 42
+            "total_attempts": 46,
+            "score": 44
         }
     }
 }

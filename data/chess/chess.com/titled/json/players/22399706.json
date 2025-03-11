@@ -9,7 +9,7 @@
     "followers": 64,
     "country": "https://api.chess.com/pub/country/LK",
     "location": "Kurunegala",
-    "last_online": 1734096323,
+    "last_online": 1737024818,
     "joined": 1431703116,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2006,
-            "date": 1726223616,
-            "rd": 99
+            "rating": 1966,
+            "date": 1735732380,
+            "rd": 103
         },
         "best": {
             "rating": 2419,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/5941282429"
         },
         "record": {
-            "win": 186,
-            "loss": 89,
+            "win": 187,
+            "loss": 91,
             "draw": 18
         }
     },

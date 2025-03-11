@@ -5,9 +5,9 @@
     "name": "Alexei Saveliev",
     "username": "dedpihto_v_kozhanom_palto",
     "title": "IM",
-    "followers": 10,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733595627,
+    "last_online": 1737896870,
     "joined": 1634457491,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2770,
-            "date": 1734113911,
-            "rd": 27
+            "rating": 2667,
+            "date": 1734208656,
+            "rd": 21
         },
         "best": {
             "rating": 2886,
@@ -26,9 +26,9 @@
             "game": "https://www.chess.com/game/live/117836945201"
         },
         "record": {
-            "win": 429,
-            "loss": 334,
-            "draw": 42
+            "win": 489,
+            "loss": 395,
+            "draw": 51
         }
     },
     "chess_blitz": {
@@ -62,10 +62,6 @@
         "best": {
             "total_attempts": 64,
             "score": 61
-        },
-        "daily": {
-            "total_attempts": 61,
-            "score": 58
         }
     }
 }

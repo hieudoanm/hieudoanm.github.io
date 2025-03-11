@@ -5,9 +5,9 @@
     "name": "Phan Bao Khanh Tran",
     "username": "tipibeka",
     "title": "WFM",
-    "followers": 93,
+    "followers": 94,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1727419969,
+    "last_online": 1738692368,
     "joined": 1437394886,
     "status": "premium",
     "is_streamer": false,
@@ -47,9 +47,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2001,
-            "date": 1703821340,
-            "rd": 55
+            "rating": 1947,
+            "date": 1740620157,
+            "rd": 123
         },
         "best": {
             "rating": 2158,
@@ -58,7 +58,7 @@
         },
         "record": {
             "win": 534,
-            "loss": 412,
+            "loss": 413,
             "draw": 69
         }
     },

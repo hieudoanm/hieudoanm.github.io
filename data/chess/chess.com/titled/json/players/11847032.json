@@ -6,10 +6,10 @@
     "name": "Vinicius Rego",
     "username": "viniciusrego",
     "title": "FM",
-    "followers": 314,
+    "followers": 326,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Rio de Janeiro, Rio de Janeiro",
-    "last_online": 1733936003,
+    "last_online": 1739708472,
     "joined": 1368297169,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1391,
-            "date": 1726891515,
+            "date": 1738204676,
             "rd": 231
         },
         "best": {
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/593407705"
         },
         "record": {
-            "win": 3,
+            "win": 5,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 29707,
+            "time_per_move": 31197,
             "timeout_percent": 0
         }
     },
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2364,
-            "date": 1734100280,
-            "rd": 28
+            "rating": 2395,
+            "date": 1741691342,
+            "rd": 39
         },
         "best": {
             "rating": 2501,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/99766419427"
         },
         "record": {
-            "win": 5689,
-            "loss": 4735,
-            "draw": 938
+            "win": 5901,
+            "loss": 4909,
+            "draw": 967
         }
     },
     "fide": 2301,

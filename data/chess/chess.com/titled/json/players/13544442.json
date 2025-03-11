@@ -6,9 +6,9 @@
     "name": "Rusa Goletiani",
     "username": "wcachess",
     "title": "IM",
-    "followers": 93,
+    "followers": 94,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1731813539,
+    "last_online": 1741114551,
     "joined": 1379297784,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2185,
-            "date": 1727547520,
-            "rd": 116
+            "rating": 2271,
+            "date": 1739056385,
+            "rd": 111
         },
         "best": {
             "rating": 2461,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/7782091539"
         },
         "record": {
-            "win": 125,
+            "win": 130,
             "loss": 61,
-            "draw": 17
+            "draw": 18
         }
     },
     "tactics": {

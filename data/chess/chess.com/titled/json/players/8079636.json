@@ -5,9 +5,9 @@
     "name": "Anil Berk Erdogan",
     "username": "alohamora11",
     "title": "CM",
-    "followers": 49,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/TR",
-    "last_online": 1733999402,
+    "last_online": 1741543100,
     "joined": 1341316954,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 965,
-            "date": 1707197829,
+            "date": 1735591184,
             "rd": 347
         },
         "best": {
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2455,
-            "date": 1733293780,
-            "rd": 46
+            "rating": 2652,
+            "date": 1741640836,
+            "rd": 33
         },
         "best": {
             "rating": 2672,
@@ -79,15 +79,15 @@
             "game": "https://www.chess.com/game/live/87690727539"
         },
         "record": {
-            "win": 2641,
-            "loss": 2514,
-            "draw": 422
+            "win": 2735,
+            "loss": 2580,
+            "draw": 435
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3017,
-            "date": 1724182146
+            "rating": 3020,
+            "date": 1740739004
         },
         "lowest": {
             "rating": 1137,

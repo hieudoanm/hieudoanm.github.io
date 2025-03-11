@@ -7,7 +7,7 @@
     "title": "FM",
     "followers": 22,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1708096117,
+    "last_online": 1739108073,
     "joined": 1516046912,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1906,
-            "date": 1733070393,
-            "rd": 75
+            "rating": 1816,
+            "date": 1741523930,
+            "rd": 134
         },
         "best": {
             "rating": 2064,
@@ -27,10 +27,10 @@
         },
         "record": {
             "win": 104,
-            "loss": 74,
+            "loss": 76,
             "draw": 7,
             "time_per_move": 14096,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess960_daily": {

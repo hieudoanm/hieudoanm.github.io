@@ -5,9 +5,9 @@
     "name": "Kohei Yamada",
     "username": "kou88",
     "title": "FM",
-    "followers": 41,
+    "followers": 42,
     "country": "https://api.chess.com/pub/country/JP",
-    "last_online": 1734128435,
+    "last_online": 1741651684,
     "joined": 1321975823,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1611,
-            "date": 1734078125,
+            "date": 1741679328,
             "rd": 146
         },
         "best": {
@@ -29,7 +29,7 @@
             "win": 7,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 33198,
+            "time_per_move": 35827,
             "timeout_percent": 0
         }
     },
@@ -70,7 +70,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2385,
-            "date": 1732514126,
+            "date": 1741658791,
             "rd": 127
         },
         "best": {

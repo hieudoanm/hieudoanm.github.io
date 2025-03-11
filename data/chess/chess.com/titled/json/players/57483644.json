@@ -9,7 +9,7 @@
     "followers": 16,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Zaporizhzhya",
-    "last_online": 1733849163,
+    "last_online": 1741363140,
     "joined": 1550431928,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2512,
-            "date": 1733245033,
-            "rd": 48
+            "rating": 2476,
+            "date": 1741370104,
+            "rd": 47
         },
         "best": {
             "rating": 2563,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/32034080909"
         },
         "record": {
-            "win": 933,
-            "loss": 1015,
-            "draw": 98
+            "win": 966,
+            "loss": 1060,
+            "draw": 106
         }
     },
     "fide": 0,

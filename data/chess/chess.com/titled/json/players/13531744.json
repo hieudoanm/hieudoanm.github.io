@@ -6,10 +6,10 @@
     "name": "Alessandro Manzone",
     "username": "heineccius",
     "title": "FM",
-    "followers": 122,
+    "followers": 131,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Resistencia",
-    "last_online": 1734051121,
+    "last_online": 1741638864,
     "joined": 1379208561,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1590,
-            "date": 1715987915,
+            "date": 1741646428,
             "rd": 201
         },
         "best": {
@@ -31,32 +31,44 @@
             "win": 7,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 152778,
+            "time_per_move": 139295,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2135,
-            "date": 1733769729,
-            "rd": 49
+            "rating": 2300,
+            "date": 1741306831,
+            "rd": 48
         },
         "best": {
-            "rating": 2135,
-            "date": 1733769729,
-            "game": "https://www.chess.com/game/live/41658618901"
+            "rating": 2277,
+            "date": 1738787298,
+            "game": "https://www.chess.com/game/live/129000179269"
         },
         "record": {
-            "win": 59,
-            "loss": 20,
+            "win": 85,
+            "loss": 21,
             "draw": 1
+        }
+    },
+    "chess_bullet": {
+        "last": {
+            "rating": 2508,
+            "date": 1740865073,
+            "rd": 49
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2708,
-            "date": 1732923645,
-            "rd": 39
+            "rating": 2653,
+            "date": 1737647473,
+            "rd": 47
         },
         "best": {
             "rating": 2792,
@@ -64,9 +76,9 @@
             "game": "https://www.chess.com/game/live/5918536159"
         },
         "record": {
-            "win": 1105,
-            "loss": 663,
-            "draw": 138
+            "win": 1121,
+            "loss": 681,
+            "draw": 140
         }
     },
     "tactics": {

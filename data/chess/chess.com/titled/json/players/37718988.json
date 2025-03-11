@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37718988.7e9589eb.200x200o.130ec81829e8.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/37718988.1efa27a4.200x200o.c9bf5da1f995.jpg",
     "player_id": 37718988,
     "@id": "https://api.chess.com/pub/player/midgardsormur",
     "url": "https://www.chess.com/member/Midgardsormur",
     "name": "S\u00edmon \u00de\u00f3rhallsson",
     "username": "midgardsormur",
     "title": "FM",
-    "followers": 100,
+    "followers": 107,
     "country": "https://api.chess.com/pub/country/IS",
-    "last_online": 1734100535,
+    "last_online": 1741551612,
     "joined": 1502403578,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1854,
-            "date": 1734173237,
-            "rd": 67
+            "rating": 1814,
+            "date": 1741689699,
+            "rd": 72
         },
         "best": {
             "rating": 2001,
@@ -27,41 +27,41 @@
             "game": "https://www.chess.com/game/daily/559592991"
         },
         "record": {
-            "win": 644,
-            "loss": 240,
-            "draw": 111,
-            "time_per_move": 13874,
+            "win": 673,
+            "loss": 247,
+            "draw": 112,
+            "time_per_move": 13955,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 212,
+            "points": 99,
             "withdraw": 0,
-            "count": 4,
+            "count": 1,
             "highest_finish": 1
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 1316,
-            "date": 1722892116,
+            "rating": 1428,
+            "date": 1741475244,
             "rd": 107
         },
         "best": {
-            "rating": 1339,
-            "date": 1715866319,
+            "rating": 1428,
+            "date": 1741475244,
             "game": "https://www.chess.com/game/daily/645975351"
         },
         "record": {
-            "win": 24,
+            "win": 32,
             "loss": 4,
             "draw": 1,
-            "time_per_move": 13874,
+            "time_per_move": 13955,
             "timeout_percent": 0
         },
         "tournament": {
-            "points": 212,
+            "points": 99,
             "withdraw": 0,
-            "count": 4,
+            "count": 1,
             "highest_finish": 1
         }
     },
@@ -84,36 +84,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2455,
-            "date": 1733950204,
-            "rd": 37
+            "rating": 2480,
+            "date": 1740508036,
+            "rd": 58
         },
         "best": {
-            "rating": 2480,
-            "date": 1612534995,
-            "game": "https://www.chess.com/game/live/64331412577"
+            "rating": 2487,
+            "date": 1734264605,
+            "game": "https://www.chess.com/game/live/128003391055"
         },
         "record": {
-            "win": 843,
-            "loss": 518,
-            "draw": 75
+            "win": 855,
+            "loss": 524,
+            "draw": 78
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2459,
-            "date": 1733942659,
+            "rating": 2566,
+            "date": 1741555251,
             "rd": 34
         },
         "best": {
-            "rating": 2569,
-            "date": 1673467269,
-            "game": "https://www.chess.com/game/live/60448915805"
+            "rating": 2651,
+            "date": 1737499270,
+            "game": "https://www.chess.com/game/live/130005630085"
         },
         "record": {
-            "win": 4781,
-            "loss": 3805,
-            "draw": 757
+            "win": 5032,
+            "loss": 3999,
+            "draw": 796
         }
     },
     "tactics": {

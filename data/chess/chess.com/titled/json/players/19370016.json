@@ -6,9 +6,9 @@
     "name": "Karl-Emil Elmer Nielsen-Refs",
     "username": "karlemilelmer",
     "title": "CM",
-    "followers": 28,
+    "followers": 33,
     "country": "https://api.chess.com/pub/country/DK",
-    "last_online": 1733855830,
+    "last_online": 1741702099,
     "joined": 1413742950,
     "status": "premium",
     "is_streamer": false,
@@ -31,14 +31,14 @@
             "loss": 63,
             "draw": 7,
             "time_per_move": 104396,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2225,
-            "date": 1726228559,
-            "rd": 244
+            "rating": 2217,
+            "date": 1737792406,
+            "rd": 49
         },
         "best": {
             "rating": 2225,
@@ -46,43 +46,43 @@
             "game": "https://www.chess.com/game/live/4865002887"
         },
         "record": {
-            "win": 15,
-            "loss": 8,
+            "win": 16,
+            "loss": 9,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2177,
-            "date": 1726228278,
-            "rd": 67
+            "rating": 2207,
+            "date": 1740699911,
+            "rd": 34
         },
         "best": {
             "rating": 2212,
             "date": 1718039955,
-            "game": "https://www.chess.com/game/live/115214331939"
+            "game": "https://www.chess.com/game/live/132076912221"
         },
         "record": {
-            "win": 52,
-            "loss": 88,
-            "draw": 12
+            "win": 116,
+            "loss": 152,
+            "draw": 23
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2125,
-            "date": 1733853728,
-            "rd": 53
+            "rating": 2183,
+            "date": 1740522799,
+            "rd": 54
         },
         "best": {
             "rating": 2301,
             "date": 1718751988,
-            "game": "https://www.chess.com/game/live/112486873525"
+            "game": "https://www.chess.com/game/live/132423682751"
         },
         "record": {
-            "win": 112,
-            "loss": 206,
-            "draw": 13
+            "win": 124,
+            "loss": 260,
+            "draw": 16
         }
     },
     "fide": 2225,

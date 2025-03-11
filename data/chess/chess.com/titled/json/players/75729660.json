@@ -6,9 +6,9 @@
     "name": "Ruben Gideon K\u00f6llner",
     "username": "the_machine04",
     "title": "IM",
-    "followers": 114,
+    "followers": 121,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734170777,
+    "last_online": 1741683210,
     "joined": 1586081008,
     "status": "premium",
     "is_streamer": false,
@@ -34,39 +34,39 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2604,
-            "date": 1734088179,
-            "rd": 49
+            "rating": 2748,
+            "date": 1741643720,
+            "rd": 25
         },
         "best": {
-            "rating": 2866,
-            "date": 1726220522,
-            "game": "https://www.chess.com/game/live/117047482593"
+            "rating": 2874,
+            "date": 1737500540,
+            "game": "https://www.chess.com/game/live/128542379351"
         },
         "record": {
-            "win": 4386,
-            "loss": 2802,
-            "draw": 536
+            "win": 4969,
+            "loss": 3226,
+            "draw": 617
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2760,
-            "date": 1734100178,
-            "rd": 23
+            "rating": 2866,
+            "date": 1741347470,
+            "rd": 24
         },
         "best": {
-            "rating": 2919,
-            "date": 1724063100,
-            "game": "https://www.chess.com/game/live/127349984023"
+            "rating": 2948,
+            "date": 1739176703,
+            "game": "https://www.chess.com/game/live/134245745665"
         },
         "record": {
-            "win": 3900,
-            "loss": 2947,
-            "draw": 714
+            "win": 4427,
+            "loss": 3339,
+            "draw": 816
         }
     },
-    "fide": 2490,
+    "fide": 2503,
     "tactics": {
         "highest": {
             "rating": 3695,

@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 2,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734180031,
+    "last_online": 1741446534,
     "joined": 1641447251,
     "status": "premium",
     "is_streamer": false,
@@ -45,8 +45,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3562,
-            "date": 1733137428
+            "rating": 3569,
+            "date": 1736534018
         },
         "lowest": {
             "rating": 1200,
@@ -57,10 +57,6 @@
         "best": {
             "total_attempts": 66,
             "score": 63
-        },
-        "daily": {
-            "total_attempts": 42,
-            "score": 39
         }
     }
 }

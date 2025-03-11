@@ -6,31 +6,31 @@
     "name": "G\u00e1bor Guszt\u00e1v G\u00f6rcsi",
     "username": "gorcsi_gg",
     "title": "FM",
-    "followers": 6,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734026017,
+    "last_online": 1741079538,
     "joined": 1502719697,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1857,
-            "date": 1734171145,
-            "rd": 59
+            "rating": 1914,
+            "date": 1741542858,
+            "rd": 65
         },
         "best": {
-            "rating": 1889,
-            "date": 1732988182,
+            "rating": 1914,
+            "date": 1741179583,
             "game": "https://www.chess.com/game/daily/739964727"
         },
         "record": {
-            "win": 34,
-            "loss": 14,
-            "draw": 4,
-            "time_per_move": 5742,
+            "win": 67,
+            "loss": 17,
+            "draw": 5,
+            "time_per_move": 7062,
             "timeout_percent": 0
         }
     },
@@ -53,19 +53,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2303,
-            "date": 1733855317,
-            "rd": 29
+            "rating": 2356,
+            "date": 1741598804,
+            "rd": 53
         },
         "best": {
-            "rating": 2333,
-            "date": 1551039939,
+            "rating": 2352,
+            "date": 1741031374,
             "game": "https://www.chess.com/game/live/127566569783"
         },
         "record": {
-            "win": 1333,
-            "loss": 1083,
-            "draw": 201
+            "win": 1351,
+            "loss": 1087,
+            "draw": 202
         }
     },
     "tactics": {

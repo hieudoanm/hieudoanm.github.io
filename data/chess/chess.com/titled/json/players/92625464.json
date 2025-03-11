@@ -6,9 +6,9 @@
     "name": "Thandar Aye Win",
     "username": "thandaaw",
     "title": "WFM",
-    "followers": 62,
+    "followers": 69,
     "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1734154851,
+    "last_online": 1741613823,
     "joined": 1602035880,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1819,
-            "date": 1730985910,
+            "date": 1741603520,
             "rd": 115
         },
         "best": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1707,
-            "date": 1732187587,
-            "rd": 103
+            "rating": 1681,
+            "date": 1741602302,
+            "rd": 106
         },
         "best": {
             "rating": 1909,
@@ -45,15 +45,15 @@
         },
         "record": {
             "win": 336,
-            "loss": 254,
+            "loss": 255,
             "draw": 6
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 1912,
-            "date": 1707414175,
-            "rd": 230
+            "rating": 1999,
+            "date": 1739386735,
+            "rd": 133
         },
         "best": {
             "rating": 2109,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/5629605889"
         },
         "record": {
-            "win": 19,
-            "loss": 1,
+            "win": 36,
+            "loss": 3,
             "draw": 1
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2846,
-            "date": 1659411529
+            "rating": 2885,
+            "date": 1740988030
         },
         "lowest": {
             "rating": 1012,

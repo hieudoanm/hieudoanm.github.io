@@ -6,10 +6,10 @@
     "name": "Daniel Lopez Gonzalez",
     "username": "jsmastropiero",
     "title": "FM",
-    "followers": 106,
+    "followers": 110,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "M\u00e1laga",
-    "last_online": 1734179851,
+    "last_online": 1741633661,
     "joined": 1369576238,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2430,
-            "date": 1734180142,
-            "rd": 26
+            "rating": 2408,
+            "date": 1741677272,
+            "rd": 24
         },
         "best": {
             "rating": 2548,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/43672553823"
         },
         "record": {
-            "win": 9420,
-            "loss": 9963,
-            "draw": 1430
+            "win": 9812,
+            "loss": 10438,
+            "draw": 1511
         }
     },
     "fide": 2305,

@@ -8,7 +8,7 @@
     "followers": 0,
     "country": "https://api.chess.com/pub/country/MT",
     "location": "Filfla",
-    "last_online": 1734184790,
+    "last_online": 1741678100,
     "joined": 1667203218,
     "status": "premium",
     "is_streamer": false,
@@ -16,8 +16,8 @@
     "streaming_platforms": [],
     "tactics": {
         "highest": {
-            "rating": 3052,
-            "date": 1734184865
+            "rating": 3067,
+            "date": 1736846765
         },
         "lowest": {
             "rating": 805,

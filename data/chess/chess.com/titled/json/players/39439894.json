@@ -6,10 +6,10 @@
     "name": "Iveri Chighladze",
     "username": "iverichighladze",
     "title": "IM",
-    "followers": 19,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/GE",
     "location": "\u10d7\u10d1\u10d8\u10da\u10d8\u10e1\u10d8",
-    "last_online": 1734120011,
+    "last_online": 1741638809,
     "joined": 1507981925,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2279,
-            "date": 1609074253,
-            "rd": 152
+            "rating": 2294,
+            "date": 1734711049,
+            "rd": 49
         },
         "best": {
             "rating": 2496,
@@ -42,7 +42,7 @@
             "game": "https://www.chess.com/game/live/6070688070"
         },
         "record": {
-            "win": 3,
+            "win": 5,
             "loss": 4,
             "draw": 0
         }
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2403,
-            "date": 1734116138,
-            "rd": 47
+            "rating": 2583,
+            "date": 1741641790,
+            "rd": 38
         },
         "best": {
             "rating": 2619,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/5035245075"
         },
         "record": {
-            "win": 1861,
-            "loss": 1640,
-            "draw": 292
+            "win": 1938,
+            "loss": 1686,
+            "draw": 301
         }
     },
     "tactics": {
@@ -95,10 +95,6 @@
         "best": {
             "total_attempts": 50,
             "score": 48
-        },
-        "daily": {
-            "total_attempts": 20,
-            "score": 19
         }
     }
 }

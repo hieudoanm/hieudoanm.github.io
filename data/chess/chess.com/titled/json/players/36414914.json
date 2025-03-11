@@ -5,9 +5,9 @@
     "name": "Jefferson dos Santos Oliveira",
     "username": "jeffpk",
     "title": "FM",
-    "followers": 271,
+    "followers": 280,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734112633,
+    "last_online": 1741564516,
     "joined": 1497834016,
     "status": "premium",
     "is_streamer": false,
@@ -64,19 +64,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2444,
-            "date": 1734139696,
+            "rating": 2365,
+            "date": 1741685607,
             "rd": 18
         },
         "best": {
-            "rating": 2552,
-            "date": 1712708196,
-            "game": "https://www.chess.com/game/live/121623590313"
+            "rating": 2567,
+            "date": 1738180665,
+            "game": "https://www.chess.com/game/live/131731235899"
         },
         "record": {
-            "win": 14180,
-            "loss": 11325,
-            "draw": 1161
+            "win": 14991,
+            "loss": 11963,
+            "draw": 1252
         }
     },
     "fide": 0,

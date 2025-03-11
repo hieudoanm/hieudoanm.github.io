@@ -6,10 +6,10 @@
     "name": "Richard Leyva Proenza",
     "username": "richardleyvap",
     "title": "IM",
-    "followers": 909,
+    "followers": 932,
     "country": "https://api.chess.com/pub/country/CU",
     "location": "San Juan",
-    "last_online": 1734103906,
+    "last_online": 1741693082,
     "joined": 1402783166,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1381,
-            "date": 1728478928,
+            "date": 1741456202,
             "rd": 88
         },
         "best": {
@@ -31,49 +31,49 @@
             "win": 56,
             "loss": 12,
             "draw": 3,
-            "time_per_move": 62230,
+            "time_per_move": 62712,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2046,
-            "date": 1733927603,
+            "rating": 2057,
+            "date": 1735137557,
             "rd": 49
         },
         "best": {
-            "rating": 2047,
-            "date": 1693850812,
+            "rating": 2057,
+            "date": 1735137557,
             "game": "https://www.chess.com/game/live/127664982371"
         },
         "record": {
-            "win": 6,
+            "win": 7,
             "loss": 3,
             "draw": 2
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2519,
-            "date": 1734110370,
-            "rd": 15
+            "rating": 2540,
+            "date": 1741697503,
+            "rd": 20
         },
         "best": {
-            "rating": 2682,
-            "date": 1721672248,
+            "rating": 2738,
+            "date": 1738944647,
             "game": "https://www.chess.com/game/live/94594094377"
         },
         "record": {
-            "win": 11754,
-            "loss": 7944,
-            "draw": 936
+            "win": 12487,
+            "loss": 8800,
+            "draw": 1031
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2650,
-            "date": 1734113040,
-            "rd": 24
+            "rating": 2692,
+            "date": 1741696601,
+            "rd": 37
         },
         "best": {
             "rating": 2829,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/100719794413"
         },
         "record": {
-            "win": 5688,
-            "loss": 5343,
-            "draw": 931
+            "win": 5812,
+            "loss": 5481,
+            "draw": 954
         }
     },
     "fide": 2333,

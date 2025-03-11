@@ -8,7 +8,7 @@
     "followers": 4,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u0414\u043e\u043d\u0435\u0446\u043a",
-    "last_online": 1645037148,
+    "last_online": 1736239710,
     "joined": 1545157847,
     "status": "premium",
     "is_streamer": false,
@@ -43,8 +43,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 49,
-            "score": 46
+            "total_attempts": 61,
+            "score": 58
         }
     }
 }

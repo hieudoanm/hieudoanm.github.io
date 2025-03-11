@@ -6,10 +6,10 @@
     "name": "Nik Javornik",
     "username": "lildoggo2007",
     "title": "CM",
-    "followers": 18,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/SI",
     "location": "Miklav\u017e",
-    "last_online": 1734162592,
+    "last_online": 1741641142,
     "joined": 1639776556,
     "status": "premium",
     "is_streamer": false,
@@ -54,43 +54,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2529,
-            "date": 1734089328,
-            "rd": 33
+            "rating": 2609,
+            "date": 1741641452,
+            "rd": 29
         },
         "best": {
-            "rating": 2571,
-            "date": 1731949476,
-            "game": "https://www.chess.com/game/live/100898508759"
+            "rating": 2661,
+            "date": 1739183109,
+            "game": "https://www.chess.com/game/live/133219153755"
         },
         "record": {
-            "win": 2163,
-            "loss": 1778,
-            "draw": 313
+            "win": 2360,
+            "loss": 1949,
+            "draw": 361
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2529,
-            "date": 1734122759,
-            "rd": 44
+            "rating": 2566,
+            "date": 1741637315,
+            "rd": 37
         },
         "best": {
-            "rating": 2557,
-            "date": 1727707450,
+            "rating": 2573,
+            "date": 1739188388,
             "game": "https://www.chess.com/game/live/117301284449"
         },
         "record": {
-            "win": 619,
-            "loss": 467,
-            "draw": 88
+            "win": 677,
+            "loss": 515,
+            "draw": 109
         }
     },
     "fide": 2180,
     "tactics": {
         "highest": {
-            "rating": 3334,
-            "date": 1729333283
+            "rating": 3355,
+            "date": 1736007564
         },
         "lowest": {
             "rating": 1009,

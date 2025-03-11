@@ -6,10 +6,10 @@
     "name": "Silas Esben Lund",
     "username": "silasesbenlund",
     "title": "IM",
-    "followers": 25,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/DK",
     "location": "Copenhagen",
-    "last_online": 1734098155,
+    "last_online": 1741699871,
     "joined": 1411814498,
     "status": "premium",
     "is_streamer": false,
@@ -63,8 +63,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 32,
-            "score": 30
+            "total_attempts": 43,
+            "score": 40
         }
     }
 }

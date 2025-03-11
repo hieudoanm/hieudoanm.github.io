@@ -6,10 +6,10 @@
     "name": "Vusal Abbasov",
     "username": "chess_rsm",
     "title": "FM",
-    "followers": 63,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/AZ",
     "location": "Baku",
-    "last_online": 1734158912,
+    "last_online": 1741500725,
     "joined": 1585410204,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2570,
-            "date": 1732814229,
-            "rd": 41
+            "rating": 2611,
+            "date": 1738779930,
+            "rd": 29
         },
         "best": {
             "rating": 2656,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/118061945693"
         },
         "record": {
-            "win": 1461,
-            "loss": 1061,
-            "draw": 139
+            "win": 1519,
+            "loss": 1101,
+            "draw": 146
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2710,
-            "date": 1734159305,
-            "rd": 29
+            "rating": 2675,
+            "date": 1741684758,
+            "rd": 26
         },
         "best": {
-            "rating": 2726,
-            "date": 1722620063,
+            "rating": 2731,
+            "date": 1735128198,
             "game": "https://www.chess.com/game/live/125795341373"
         },
         "record": {
-            "win": 1100,
-            "loss": 767,
-            "draw": 167
+            "win": 1359,
+            "loss": 975,
+            "draw": 207
         }
     },
     "fide": 2281,

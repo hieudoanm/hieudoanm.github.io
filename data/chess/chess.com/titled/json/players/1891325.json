@@ -6,9 +6,9 @@
     "name": "Devina Devagharan",
     "username": "simplydevina",
     "title": "WFM",
-    "followers": 1199,
+    "followers": 1269,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734150830,
+    "last_online": 1741702465,
     "joined": 1240753160,
     "status": "premium",
     "is_streamer": true,
@@ -42,8 +42,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2298,
-            "date": 1734041034,
+            "rating": 2288,
+            "date": 1741316572,
             "rd": 49
         },
         "best": {
@@ -52,16 +52,16 @@
             "game": "https://www.chess.com/game/live/103485245693"
         },
         "record": {
-            "win": 142,
-            "loss": 129,
-            "draw": 42
+            "win": 151,
+            "loss": 142,
+            "draw": 45
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2701,
-            "date": 1734055576,
-            "rd": 30
+            "rating": 2487,
+            "date": 1741647237,
+            "rd": 26
         },
         "best": {
             "rating": 2701,
@@ -69,26 +69,26 @@
             "game": "https://www.chess.com/game/live/97704558957"
         },
         "record": {
-            "win": 5769,
-            "loss": 5768,
-            "draw": 1195
+            "win": 5939,
+            "loss": 6011,
+            "draw": 1239
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2475,
-            "date": 1734054900,
-            "rd": 39
+            "rating": 2508,
+            "date": 1741659738,
+            "rd": 36
         },
         "best": {
-            "rating": 2517,
-            "date": 1733194068,
+            "rating": 2616,
+            "date": 1737505917,
             "game": "https://www.chess.com/game/live/96762078067"
         },
         "record": {
-            "win": 1945,
-            "loss": 1878,
-            "draw": 433
+            "win": 2028,
+            "loss": 1963,
+            "draw": 456
         }
     },
     "tactics": {

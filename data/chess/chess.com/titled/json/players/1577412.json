@@ -6,15 +6,15 @@
     "name": "Ahmet Olcum",
     "username": "aolcum",
     "title": "FM",
-    "followers": 43,
+    "followers": 54,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Mersin",
-    "last_online": 1734086313,
+    "last_online": 1741477711,
     "joined": 1225770738,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -54,19 +54,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2383,
-            "date": 1733994788,
-            "rd": 37
+            "rating": 2481,
+            "date": 1739116571,
+            "rd": 44
         },
         "best": {
-            "rating": 2485,
-            "date": 1729096372,
+            "rating": 2486,
+            "date": 1735868558,
             "game": "https://www.chess.com/game/live/122859896037"
         },
         "record": {
-            "win": 226,
-            "loss": 231,
-            "draw": 22
+            "win": 275,
+            "loss": 270,
+            "draw": 26
         }
     },
     "tactics": {

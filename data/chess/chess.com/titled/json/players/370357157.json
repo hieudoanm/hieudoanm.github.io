@@ -6,71 +6,71 @@
     "name": "Daniel Hidalgo",
     "username": "midoriyarachelzanel34",
     "title": "FM",
-    "followers": 72,
+    "followers": 160,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734014019,
+    "last_online": 1741631432,
     "joined": 1718669449,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2420,
-            "date": 1732143263,
-            "rd": 48
+            "rating": 2436,
+            "date": 1738260658,
+            "rd": 49
         },
         "best": {
-            "rating": 2420,
-            "date": 1732143262,
+            "rating": 2436,
+            "date": 1738172651,
             "game": "https://www.chess.com/game/live/125879354273"
         },
         "record": {
-            "win": 4,
+            "win": 10,
             "loss": 0,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2405,
-            "date": 1730820594,
-            "rd": 255
+            "rating": 2947,
+            "date": 1738242529,
+            "rd": 32
         },
         "best": {
-            "rating": 1930,
-            "date": 1729207491,
-            "game": "https://www.chess.com/game/live/122946261983"
+            "rating": 2947,
+            "date": 1738242529,
+            "game": "https://www.chess.com/game/live/131815149727"
         },
         "record": {
-            "win": 1,
-            "loss": 0,
-            "draw": 0
+            "win": 209,
+            "loss": 80,
+            "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2912,
-            "date": 1733841673,
-            "rd": 28
+            "rating": 2998,
+            "date": 1741697536,
+            "rd": 49
         },
         "best": {
-            "rating": 2912,
-            "date": 1733839870,
-            "game": "https://www.chess.com/game/live/126367792015"
+            "rating": 2995,
+            "date": 1738177118,
+            "game": "https://www.chess.com/game/live/131915955805"
         },
         "record": {
-            "win": 148,
-            "loss": 54,
-            "draw": 35
+            "win": 193,
+            "loss": 87,
+            "draw": 49
         }
     },
     "fide": 2405,
     "tactics": {
         "highest": {
-            "rating": 3731,
-            "date": 1731278740
+            "rating": 3790,
+            "date": 1738355832
         },
         "lowest": {
             "rating": 1000,
@@ -81,6 +81,10 @@
         "best": {
             "total_attempts": 66,
             "score": 63
+        },
+        "daily": {
+            "total_attempts": 30,
+            "score": 27
         }
     }
 }

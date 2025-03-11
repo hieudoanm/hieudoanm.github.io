@@ -6,10 +6,10 @@
     "name": "Oleg Badmatsyrenov",
     "username": "syrbatman",
     "title": "IM",
-    "followers": 118,
+    "followers": 124,
     "country": "https://api.chess.com/pub/country/TH",
     "location": "Bangkok",
-    "last_online": 1734021292,
+    "last_online": 1741642723,
     "joined": 1459838524,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2762,
-            "date": 1733672646,
-            "rd": 40
+            "rating": 2713,
+            "date": 1740852091,
+            "rd": 41
         },
         "best": {
             "rating": 2888,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/10945572159"
         },
         "record": {
-            "win": 2590,
-            "loss": 2398,
-            "draw": 335
+            "win": 2615,
+            "loss": 2424,
+            "draw": 337
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2742,
-            "date": 1733734782,
-            "rd": 29
+            "rating": 2842,
+            "date": 1741548056,
+            "rd": 31
         },
         "best": {
-            "rating": 2888,
-            "date": 1699395439,
-            "game": "https://www.chess.com/game/live/117323453527"
+            "rating": 2926,
+            "date": 1739204138,
+            "game": "https://www.chess.com/game/live/130027202221"
         },
         "record": {
-            "win": 3529,
-            "loss": 3074,
-            "draw": 483
+            "win": 3847,
+            "loss": 3331,
+            "draw": 538
         }
     },
     "fide": 2516,

@@ -6,10 +6,10 @@
     "name": "Jayme Miranda",
     "username": "jaymemiranda",
     "title": "CM",
-    "followers": 55,
+    "followers": 57,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "jaymemirandacxjm2013@gmail.com",
-    "last_online": 1734009022,
+    "last_online": 1739020397,
     "joined": 1426931496,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 400,
-            "date": 1671953885,
+            "date": 1736174335,
             "rd": 349
         },
         "record": {

@@ -6,10 +6,10 @@
     "name": "Kamil Kozio\u0142",
     "username": "kozok",
     "title": "FM",
-    "followers": 259,
+    "followers": 260,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Rybnik",
-    "last_online": 1733973219,
+    "last_online": 1741193948,
     "joined": 1452889227,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2302,
-            "date": 1731361801,
-            "rd": 127
+            "rating": 2448,
+            "date": 1740958981,
+            "rd": 102
         },
         "best": {
             "rating": 2720,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/13731070935"
         },
         "record": {
-            "win": 566,
-            "loss": 570,
+            "win": 571,
+            "loss": 572,
             "draw": 56
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2283,
-            "date": 1724173570,
+            "date": 1738339763,
             "rd": 70
         },
         "best": {

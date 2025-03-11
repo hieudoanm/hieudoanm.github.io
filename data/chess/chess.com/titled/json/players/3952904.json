@@ -6,9 +6,9 @@
     "name": "Semetey Tologontegin",
     "username": "semetey",
     "title": "IM",
-    "followers": 108,
+    "followers": 109,
     "country": "https://api.chess.com/pub/country/KG",
-    "last_online": 1733845197,
+    "last_online": 1741274504,
     "joined": 1284058028,
     "status": "premium",
     "is_streamer": false,
@@ -31,9 +31,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2180,
-            "date": 1726858973,
-            "rd": 47
+            "rating": 2187,
+            "date": 1739725951,
+            "rd": 48
         },
         "best": {
             "rating": 2202,
@@ -41,9 +41,9 @@
             "game": "https://www.chess.com/game/live/5563337218"
         },
         "record": {
-            "win": 21,
-            "loss": 20,
-            "draw": 3
+            "win": 22,
+            "loss": 22,
+            "draw": 4
         }
     },
     "chess_bullet": {
@@ -65,9 +65,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2672,
-            "date": 1733854047,
-            "rd": 36
+            "rating": 2691,
+            "date": 1741111706,
+            "rd": 42
         },
         "best": {
             "rating": 2713,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/117999035269"
         },
         "record": {
-            "win": 1130,
-            "loss": 852,
-            "draw": 160
+            "win": 1176,
+            "loss": 880,
+            "draw": 167
         }
     },
     "fide": 2351,

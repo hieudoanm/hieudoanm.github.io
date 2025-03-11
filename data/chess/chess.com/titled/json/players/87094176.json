@@ -4,14 +4,14 @@
     "url": "https://www.chess.com/member/oliveratomchess",
     "username": "oliveratomchess",
     "title": "FM",
-    "followers": 35,
-    "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734133875,
+    "followers": 76,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1741658262,
     "joined": 1595183827,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -32,26 +32,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2496,
-            "date": 1734134818,
-            "rd": 47
+            "rating": 2487,
+            "date": 1741658576,
+            "rd": 34
         },
         "best": {
-            "rating": 2505,
-            "date": 1731289664,
-            "game": "https://www.chess.com/game/live/125027970813"
+            "rating": 2632,
+            "date": 1737153710,
+            "game": "https://www.chess.com/game/live/133453752547"
         },
         "record": {
-            "win": 121,
-            "loss": 71,
-            "draw": 17
+            "win": 292,
+            "loss": 299,
+            "draw": 51
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2406,
-            "date": 1733677443,
-            "rd": 26
+            "rating": 2507,
+            "date": 1740185514,
+            "rd": 32
         },
         "best": {
             "rating": 2546,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/123528072821"
         },
         "record": {
-            "win": 462,
-            "loss": 476,
-            "draw": 88
+            "win": 585,
+            "loss": 599,
+            "draw": 112
         }
     },
     "tactics": {

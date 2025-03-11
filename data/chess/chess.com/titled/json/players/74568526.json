@@ -9,7 +9,7 @@
     "followers": 38,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u0412\u0456\u043d\u043d\u0438\u0446\u044f",
-    "last_online": 1733859105,
+    "last_online": 1740589229,
     "joined": 1585223417,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2509,
-            "date": 1732121382,
-            "rd": 36
+            "rating": 2514,
+            "date": 1740590319,
+            "rd": 45
         },
         "best": {
             "rating": 2635,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/35062298037"
         },
         "record": {
-            "win": 1540,
-            "loss": 1415,
-            "draw": 316
+            "win": 1551,
+            "loss": 1429,
+            "draw": 321
         }
     },
     "tactics": {

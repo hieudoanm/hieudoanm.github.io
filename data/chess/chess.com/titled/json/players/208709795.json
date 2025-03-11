@@ -6,10 +6,10 @@
     "name": "Goran Vajic",
     "username": "goran_vajic",
     "title": "FM",
-    "followers": 84,
+    "followers": 86,
     "country": "https://api.chess.com/pub/country/BA",
     "location": "Doboj",
-    "last_online": 1733868213,
+    "last_online": 1741630382,
     "joined": 1669465715,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1911,
-            "date": 1725734316,
+            "date": 1736415286,
             "rd": 54
         },
         "best": {
@@ -54,19 +54,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2620,
-            "date": 1732398634,
-            "rd": 46
+            "rating": 2625,
+            "date": 1739569512,
+            "rd": 49
         },
         "best": {
-            "rating": 2625,
-            "date": 1731361231,
+            "rating": 2628,
+            "date": 1738179955,
             "game": "https://www.chess.com/game/live/63478025575"
         },
         "record": {
-            "win": 141,
-            "loss": 81,
-            "draw": 31
+            "win": 143,
+            "loss": 82,
+            "draw": 32
         }
     },
     "fide": 2302,

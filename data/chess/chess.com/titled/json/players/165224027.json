@@ -4,10 +4,10 @@
     "url": "https://www.chess.com/member/brilliantmind2011",
     "username": "brilliantmind2011",
     "title": "CM",
-    "followers": 12,
+    "followers": 15,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto",
-    "last_online": 1734182350,
+    "last_online": 1741628437,
     "joined": 1639728602,
     "status": "premium",
     "is_streamer": false,
@@ -64,19 +64,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2657,
-            "date": 1733862634,
-            "rd": 27
+            "rating": 2734,
+            "date": 1741511629,
+            "rd": 25
         },
         "best": {
-            "rating": 2778,
-            "date": 1719758944,
-            "game": "https://www.chess.com/game/live/121630219683"
+            "rating": 2795,
+            "date": 1738259178,
+            "game": "https://www.chess.com/game/live/131405989533"
         },
         "record": {
-            "win": 1522,
-            "loss": 1295,
-            "draw": 317
+            "win": 1717,
+            "loss": 1512,
+            "draw": 367
         }
     },
     "tactics": {

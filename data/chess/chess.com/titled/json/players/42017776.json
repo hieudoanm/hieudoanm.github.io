@@ -6,15 +6,15 @@
     "name": "Vijayalakshmi Subbaraman",
     "username": "svijayalakshmi",
     "title": "IM",
-    "followers": 26,
+    "followers": 50,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734000686,
+    "last_online": 1741692699,
     "joined": 1515144427,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -32,9 +32,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2429,
-            "date": 1730988259,
-            "rd": 44
+            "rating": 2418,
+            "date": 1741693362,
+            "rd": 19
         },
         "best": {
             "rating": 2473,
@@ -42,33 +42,33 @@
             "game": "https://www.chess.com/game/live/116949591479"
         },
         "record": {
-            "win": 1264,
-            "loss": 1028,
-            "draw": 112
+            "win": 1787,
+            "loss": 1490,
+            "draw": 159
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2407,
-            "date": 1730221638,
-            "rd": 59
+            "rating": 2628,
+            "date": 1740672124,
+            "rd": 35
         },
         "best": {
-            "rating": 2629,
-            "date": 1592579586,
-            "game": "https://www.chess.com/game/live/108250296289"
+            "rating": 2664,
+            "date": 1739456283,
+            "game": "https://www.chess.com/game/live/133187933267"
         },
         "record": {
-            "win": 70,
-            "loss": 64,
-            "draw": 15
+            "win": 177,
+            "loss": 134,
+            "draw": 23
         }
     },
     "fide": 2332,
     "tactics": {
         "highest": {
-            "rating": 3503,
-            "date": 1731136152
+            "rating": 3563,
+            "date": 1741018492
         },
         "lowest": {
             "rating": 2410,

@@ -6,9 +6,9 @@
     "name": "Rinoa Mariel Sadey",
     "username": "rinoasadey",
     "title": "WNM",
-    "followers": 40,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/PH",
-    "last_online": 1734185505,
+    "last_online": 1739604584,
     "joined": 1588577121,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2291,
-            "date": 1733848149,
-            "rd": 67
+            "rating": 2265,
+            "date": 1735642178,
+            "rd": 66
         },
         "best": {
             "rating": 2336,
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/121537256825"
         },
         "record": {
-            "win": 58,
-            "loss": 68,
+            "win": 60,
+            "loss": 73,
             "draw": 11
         }
     },

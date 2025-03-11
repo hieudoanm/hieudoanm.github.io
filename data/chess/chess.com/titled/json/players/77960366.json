@@ -6,10 +6,10 @@
     "name": "Sargis Manukyan",
     "username": "saqochess_coach",
     "title": "FM",
-    "followers": 1394,
+    "followers": 1466,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan",
-    "last_online": 1734145359,
+    "last_online": 1741661605,
     "joined": 1588002983,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1324,
-            "date": 1732048724,
+            "date": 1737560175,
             "rd": 131
         },
         "best": {
@@ -33,18 +33,12 @@
             "draw": 0,
             "time_per_move": 16848,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 91
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2521,
-            "date": 1733169536,
+            "date": 1740434058,
             "rd": 49
         },
         "best": {
@@ -60,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2687,
-            "date": 1733093562,
-            "rd": 49
+            "rating": 2685,
+            "date": 1738619325,
+            "rd": 48
         },
         "best": {
             "rating": 2785,
@@ -70,29 +64,29 @@
             "game": "https://www.chess.com/game/live/104348554287"
         },
         "record": {
-            "win": 1245,
-            "loss": 1044,
-            "draw": 181
+            "win": 1248,
+            "loss": 1048,
+            "draw": 182
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2653,
-            "date": 1733265619,
-            "rd": 48
+            "rating": 2813,
+            "date": 1741636839,
+            "rd": 27
         },
         "best": {
-            "rating": 2800,
-            "date": 1694354251,
-            "game": "https://www.chess.com/game/live/73627297707"
+            "rating": 2829,
+            "date": 1739228135,
+            "game": "https://www.chess.com/game/live/134870943621"
         },
         "record": {
-            "win": 2367,
-            "loss": 2395,
-            "draw": 472
+            "win": 2525,
+            "loss": 2519,
+            "draw": 510
         }
     },
-    "fide": 2216,
+    "fide": 2277,
     "tactics": {
         "highest": {
             "rating": 3529,

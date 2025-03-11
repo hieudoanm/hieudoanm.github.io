@@ -6,9 +6,9 @@
     "name": "Dinesh Rajan M",
     "username": "god_speedmove",
     "title": "CM",
-    "followers": 13,
+    "followers": 23,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734080260,
+    "last_online": 1741702114,
     "joined": 1729085648,
     "status": "premium",
     "is_streamer": false,
@@ -17,43 +17,43 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2693,
-            "date": 1733855712,
-            "rd": 35
+            "rating": 2696,
+            "date": 1740849754,
+            "rd": 47
         },
         "best": {
-            "rating": 2705,
-            "date": 1733241147,
+            "rating": 2767,
+            "date": 1738423434,
             "game": "https://www.chess.com/game/live/126979776193"
         },
         "record": {
-            "win": 96,
-            "loss": 78,
-            "draw": 6
+            "win": 125,
+            "loss": 111,
+            "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2702,
-            "date": 1733854158,
-            "rd": 40
+            "rating": 2765,
+            "date": 1741004056,
+            "rd": 42
         },
         "best": {
-            "rating": 2749,
-            "date": 1732180084,
-            "game": "https://www.chess.com/game/live/124562321867"
+            "rating": 2768,
+            "date": 1739896982,
+            "game": "https://www.chess.com/game/live/133634938869"
         },
         "record": {
-            "win": 71,
-            "loss": 38,
-            "draw": 9
+            "win": 130,
+            "loss": 81,
+            "draw": 15
         }
     },
     "fide": 2243,
     "tactics": {
         "highest": {
-            "rating": 2252,
-            "date": 1733385223
+            "rating": 2314,
+            "date": 1738118020
         },
         "lowest": {
             "rating": 1000,
@@ -62,8 +62,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 59,
-            "score": 56
+            "total_attempts": 60,
+            "score": 57
+        },
+        "daily": {
+            "total_attempts": 47,
+            "score": 44
         }
     }
 }

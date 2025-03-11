@@ -5,10 +5,10 @@
     "name": "Nicholas Vettese",
     "username": "nickvet",
     "title": "IM",
-    "followers": 102,
+    "followers": 107,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto",
-    "last_online": 1734155951,
+    "last_online": 1741629701,
     "joined": 1690180331,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1907,
-            "date": 1732389519,
+            "date": 1741644283,
             "rd": 98
         },
         "best": {
@@ -30,7 +30,7 @@
             "win": 24,
             "loss": 4,
             "draw": 2,
-            "time_per_move": 26011,
+            "time_per_move": 26710,
             "timeout_percent": 0
         }
     },
@@ -71,7 +71,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2780,
-            "date": 1733873455,
+            "date": 1741645521,
             "rd": 45
         },
         "best": {
@@ -97,7 +97,7 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 60,
+            "total_attempts": 59,
             "score": 57
         }
     }

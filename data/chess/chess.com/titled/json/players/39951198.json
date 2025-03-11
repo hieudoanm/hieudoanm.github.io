@@ -6,10 +6,10 @@
     "name": "Giovanni Carreto",
     "username": "diablanni",
     "title": "CM",
-    "followers": 54,
+    "followers": 56,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Ensenada",
-    "last_online": 1734023954,
+    "last_online": 1741510026,
     "joined": 1509515279,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2701,
-            "date": 1722377793,
-            "rd": 24
+            "rating": 2550,
+            "date": 1741515398,
+            "rd": 16
         },
         "best": {
             "rating": 2701,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/116061021393"
         },
         "record": {
-            "win": 6016,
-            "loss": 5019,
-            "draw": 445
+            "win": 7357,
+            "loss": 6149,
+            "draw": 579
         }
     },
     "chess_blitz": {
@@ -95,6 +95,10 @@
         "best": {
             "total_attempts": 74,
             "score": 71
+        },
+        "daily": {
+            "total_attempts": 62,
+            "score": 59
         }
     }
 }

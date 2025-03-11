@@ -6,9 +6,9 @@
     "name": "V\u00edctor Hugo Sanchez",
     "username": "pirlo1",
     "title": "FM",
-    "followers": 34,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1722950259,
+    "last_online": 1737301903,
     "joined": 1501340095,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2235,
-            "date": 1734183618,
-            "rd": 23
+            "rating": 2021,
+            "date": 1741532538,
+            "rd": 25
         },
         "best": {
             "rating": 2373,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/31375192959"
         },
         "record": {
-            "win": 12865,
-            "loss": 11466,
-            "draw": 838
+            "win": 13601,
+            "loss": 12139,
+            "draw": 881
         }
     },
     "chess_blitz": {
@@ -68,8 +68,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3415,
-            "date": 1731930419
+            "rating": 3416,
+            "date": 1735268573
         },
         "lowest": {
             "rating": 1206,

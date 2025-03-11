@@ -9,7 +9,7 @@
     "followers": 32,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto, Ontario",
-    "last_online": 1732141816,
+    "last_online": 1741125321,
     "joined": 1426984465,
     "status": "premium",
     "is_streamer": false,
@@ -89,8 +89,8 @@
     "fide": 2075,
     "tactics": {
         "highest": {
-            "rating": 3026,
-            "date": 1600027581
+            "rating": 3042,
+            "date": 1739137313
         },
         "lowest": {
             "rating": 1368,

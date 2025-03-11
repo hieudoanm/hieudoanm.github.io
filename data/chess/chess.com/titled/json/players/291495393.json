@@ -6,9 +6,9 @@
     "name": "Michal Walentukiewicz",
     "username": "catloverpl",
     "title": "CM",
-    "followers": 23,
+    "followers": 32,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733305230,
+    "last_online": 1741699757,
     "joined": 1686048629,
     "status": "premium",
     "is_streamer": false,
@@ -48,43 +48,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2536,
-            "date": 1733304075,
-            "rd": 36
+            "rating": 2565,
+            "date": 1741700770,
+            "rd": 41
         },
         "best": {
-            "rating": 2662,
-            "date": 1711626813,
-            "game": "https://www.chess.com/game/live/105898796169"
+            "rating": 2690,
+            "date": 1735261897,
+            "game": "https://www.chess.com/game/live/128995971335"
         },
         "record": {
-            "win": 500,
-            "loss": 347,
-            "draw": 76
+            "win": 711,
+            "loss": 527,
+            "draw": 105
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2419,
-            "date": 1733249310,
-            "rd": 57
+            "rating": 2470,
+            "date": 1741700360,
+            "rd": 41
         },
         "best": {
             "rating": 2577,
             "date": 1705261430,
-            "game": "https://www.chess.com/game/live/105831669231"
+            "game": "https://www.chess.com/game/live/131214047313"
         },
         "record": {
-            "win": 180,
-            "loss": 158,
-            "draw": 34
+            "win": 297,
+            "loss": 258,
+            "draw": 60
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2844,
-            "date": 1726780018
+            "rating": 2866,
+            "date": 1738097227
         },
         "lowest": {
             "rating": 1000,

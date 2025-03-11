@@ -6,10 +6,10 @@
     "name": "Elliott Winslow",
     "username": "ecwinslow",
     "title": "IM",
-    "followers": 210,
+    "followers": 213,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Alameda",
-    "last_online": 1734183900,
+    "last_online": 1741582081,
     "joined": 1201754882,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 1944,
-            "date": 1733204665,
-            "rd": 78
+            "rating": 1872,
+            "date": 1741462821,
+            "rd": 91
         },
         "best": {
             "rating": 2329,
@@ -47,8 +47,8 @@
             "game": "https://www.chess.com/game/live/6221431728"
         },
         "record": {
-            "win": 275,
-            "loss": 103,
+            "win": 279,
+            "loss": 105,
             "draw": 36
         }
     },
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2292,
-            "date": 1734184508,
-            "rd": 30
+            "rating": 2272,
+            "date": 1741585241,
+            "rd": 34
         },
         "best": {
             "rating": 2385,
@@ -81,16 +81,16 @@
             "game": "https://www.chess.com/game/live/4806750117"
         },
         "record": {
-            "win": 5090,
-            "loss": 3574,
-            "draw": 754
+            "win": 5256,
+            "loss": 3704,
+            "draw": 782
         }
     },
     "fide": 2250,
     "tactics": {
         "highest": {
-            "rating": 3285,
-            "date": 1714152786
+            "rating": 3308,
+            "date": 1739545220
         },
         "lowest": {
             "rating": 1308,

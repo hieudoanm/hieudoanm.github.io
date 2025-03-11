@@ -8,7 +8,7 @@
     "followers": 0,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "Stockholm",
-    "last_online": 1733783038,
+    "last_online": 1741620618,
     "joined": 1578597147,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     "fide": 2241,
     "tactics": {
         "highest": {
-            "rating": 3552,
-            "date": 1723313766
+            "rating": 3566,
+            "date": 1736182377
         },
         "lowest": {
             "rating": 1210,

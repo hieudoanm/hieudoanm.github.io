@@ -6,10 +6,10 @@
     "name": "Petar Krstic",
     "username": "gimagibi",
     "title": "FM",
-    "followers": 79,
+    "followers": 78,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Pirot",
-    "last_online": 1731172575,
+    "last_online": 1740338733,
     "joined": 1475441505,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1943,
-            "date": 1734182281,
-            "rd": 105
+            "rating": 1958,
+            "date": 1741670477,
+            "rd": 119
         },
         "best": {
-            "rating": 1943,
-            "date": 1729160521,
+            "rating": 1958,
+            "date": 1740301347,
             "game": "https://www.chess.com/game/daily/639256191"
         },
         "record": {
-            "win": 22,
+            "win": 23,
             "loss": 2,
             "draw": 5,
-            "time_per_move": 37714,
+            "time_per_move": 42344,
             "timeout_percent": 0
         }
     },

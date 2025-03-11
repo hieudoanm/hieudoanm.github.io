@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/nobodyperfect13",
     "username": "nobodyperfect13",
     "title": "IM",
-    "followers": 8,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/IR",
-    "last_online": 1733690279,
+    "last_online": 1740818926,
     "joined": 1482079249,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2016,
-            "date": 1728541795,
-            "rd": 89
+            "rating": 2044,
+            "date": 1740766086,
+            "rd": 98
         },
         "best": {
             "rating": 2472,
@@ -61,16 +61,16 @@
             "game": "https://www.chess.com/game/live/7777382161"
         },
         "record": {
-            "win": 165,
-            "loss": 176,
+            "win": 167,
+            "loss": 177,
             "draw": 17
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2155,
-            "date": 1733679980,
-            "rd": 70
+            "rating": 2120,
+            "date": 1740821554,
+            "rd": 61
         },
         "best": {
             "rating": 2459,
@@ -78,9 +78,9 @@
             "game": "https://www.chess.com/game/live/7518181363"
         },
         "record": {
-            "win": 1486,
-            "loss": 1395,
-            "draw": 189
+            "win": 1494,
+            "loss": 1405,
+            "draw": 190
         }
     },
     "fide": 0,

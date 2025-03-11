@@ -8,7 +8,7 @@
     "followers": 24,
     "country": "https://api.chess.com/pub/country/NI",
     "location": "Chinandega",
-    "last_online": 1734053843,
+    "last_online": 1741104967,
     "joined": 1544365396,
     "status": "premium",
     "is_streamer": false,
@@ -48,35 +48,35 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1255,
-            "date": 1603894230,
-            "rd": 298
+            "rating": 1872,
+            "date": 1738689990,
+            "rd": 70
         },
         "best": {
-            "rating": 1255,
-            "date": 1603894230,
-            "game": "https://www.chess.com/game/live/5648560464"
+            "rating": 1939,
+            "date": 1735156098,
+            "game": "https://www.chess.com/game/live/128894626379"
         },
         "record": {
-            "win": 1,
-            "loss": 0,
+            "win": 27,
+            "loss": 10,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2511,
-            "date": 1734055798,
-            "rd": 103
+            "rating": 2503,
+            "date": 1741111950,
+            "rd": 48
         },
         "best": {
-            "rating": 2511,
-            "date": 1734055798,
-            "game": "https://www.chess.com/game/live/81963558313"
+            "rating": 2519,
+            "date": 1735511681,
+            "game": "https://www.chess.com/game/live/131214047301"
         },
         "record": {
-            "win": 2496,
-            "loss": 1983,
+            "win": 2517,
+            "loss": 2005,
             "draw": 307
         }
     },

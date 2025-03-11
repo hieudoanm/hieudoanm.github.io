@@ -6,9 +6,9 @@
     "name": "Felix Ynojosa",
     "username": "felixjoseynojosa",
     "title": "IM",
-    "followers": 62,
+    "followers": 64,
     "country": "https://api.chess.com/pub/country/VE",
-    "last_online": 1732640949,
+    "last_online": 1736133974,
     "joined": 1257800192,
     "status": "premium",
     "is_streamer": false,
@@ -26,7 +26,7 @@
             "loss": 2,
             "draw": 0,
             "time_per_move": 14038,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2840,
-            "date": 1732121735,
-            "rd": 44
+            "rating": 2829,
+            "date": 1736134220,
+            "rd": 49
         },
         "best": {
             "rating": 2840,
@@ -59,7 +59,7 @@
         },
         "record": {
             "win": 670,
-            "loss": 526,
+            "loss": 527,
             "draw": 90
         }
     },

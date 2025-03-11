@@ -5,14 +5,14 @@
     "name": "Aydagnuhem Gezachew Abera",
     "username": "aydusha",
     "title": "CM",
-    "followers": 43,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/ET",
-    "last_online": 1733121394,
+    "last_online": 1738073006,
     "joined": 1594892842,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -47,19 +47,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2006,
-            "date": 1734184205,
-            "rd": 36
+            "rating": 2103,
+            "date": 1741624398,
+            "rd": 28
         },
         "best": {
-            "rating": 2101,
-            "date": 1725884894,
-            "game": "https://www.chess.com/game/live/119689210873"
+            "rating": 2181,
+            "date": 1738223744,
+            "game": "https://www.chess.com/game/live/131974148655"
         },
         "record": {
-            "win": 654,
-            "loss": 590,
-            "draw": 79
+            "win": 1006,
+            "loss": 921,
+            "draw": 127
         }
     },
     "fide": 0,

@@ -6,7 +6,7 @@
     "title": "FM",
     "followers": 11,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734176800,
+    "last_online": 1741702960,
     "joined": 1694774895,
     "status": "premium",
     "is_streamer": false,
@@ -29,9 +29,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2366,
-            "date": 1733057091,
-            "rd": 46
+            "rating": 2380,
+            "date": 1741004745
         },
         "best": {
             "rating": 2414,
@@ -39,16 +38,16 @@
             "game": "https://www.chess.com/game/live/104948386775"
         },
         "record": {
-            "win": 277,
-            "loss": 231,
-            "draw": 46
+            "win": 282,
+            "loss": 235,
+            "draw": 47
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2134,
-            "date": 1733746365,
-            "rd": 62
+            "rating": 2189,
+            "date": 1741547830,
+            "rd": 68
         },
         "best": {
             "rating": 2194,
@@ -56,16 +55,16 @@
             "game": "https://www.chess.com/game/live/124665543183"
         },
         "record": {
-            "win": 38,
-            "loss": 34,
+            "win": 47,
+            "loss": 39,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2509,
-            "date": 1734179152,
-            "rd": 25
+            "rating": 2547,
+            "date": 1741703669,
+            "rd": 31
         },
         "best": {
             "rating": 2567,
@@ -73,15 +72,15 @@
             "game": "https://www.chess.com/game/live/120570677499"
         },
         "record": {
-            "win": 757,
-            "loss": 676,
-            "draw": 103
+            "win": 928,
+            "loss": 829,
+            "draw": 121
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2075,
-            "date": 1727879565
+            "rating": 3414,
+            "date": 1738510954
         },
         "lowest": {
             "rating": 1000,

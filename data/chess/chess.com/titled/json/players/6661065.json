@@ -9,7 +9,7 @@
     "followers": 32,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Canary Islands",
-    "last_online": 1734101051,
+    "last_online": 1735383729,
     "joined": 1329082370,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2170,
-            "date": 1734108290,
-            "rd": 52
+            "rating": 2283,
+            "date": 1741194004,
+            "rd": 47
         },
         "best": {
             "rating": 2338,
@@ -76,16 +76,16 @@
             "game": "https://www.chess.com/game/live/4699943175"
         },
         "record": {
-            "win": 998,
-            "loss": 742,
-            "draw": 104
+            "win": 1044,
+            "loss": 764,
+            "draw": 111
         }
     },
     "fide": 2299,
     "tactics": {
         "highest": {
-            "rating": 2664,
-            "date": 1732022949
+            "rating": 2706,
+            "date": 1737470004
         },
         "lowest": {
             "rating": 1338,

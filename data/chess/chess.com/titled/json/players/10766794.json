@@ -6,9 +6,9 @@
     "name": "Evgeni Miller",
     "username": "jonasrath",
     "title": "CM",
-    "followers": 268,
+    "followers": 275,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1734182216,
+    "last_online": 1741630285,
     "joined": 1360500361,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1950,
-            "date": 1718471856,
+            "date": 1741681703,
             "rd": 214
         },
         "best": {
@@ -36,19 +36,18 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2453,
-            "date": 1733958367,
-            "rd": 32
+            "rating": 2489,
+            "date": 1737784505
         },
         "best": {
-            "rating": 2477,
-            "date": 1723590022,
-            "game": "https://www.chess.com/game/live/118908562205"
+            "rating": 2485,
+            "date": 1736206664,
+            "game": "https://www.chess.com/game/live/127962601361"
         },
         "record": {
-            "win": 152,
-            "loss": 61,
-            "draw": 26
+            "win": 181,
+            "loss": 72,
+            "draw": 28
         }
     },
     "chess_bullet": {
@@ -71,7 +70,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2616,
-            "date": 1723259269,
+            "date": 1734981967,
             "rd": 47
         },
         "best": {
