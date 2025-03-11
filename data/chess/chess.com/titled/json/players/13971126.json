@@ -6,10 +6,10 @@
     "name": "Teodora Injac",
     "username": "arctic_t00",
     "title": "IM",
-    "followers": 152,
+    "followers": 161,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Belgrade",
-    "last_online": 1734106561,
+    "last_online": 1741686424,
     "joined": 1382209248,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2689,
-            "date": 1734107334,
-            "rd": 33
+            "rating": 2741,
+            "date": 1741265954,
+            "rd": 30
         },
         "best": {
             "rating": 2805,
             "date": 1655242099,
-            "game": "https://www.chess.com/game/live/48980453853"
+            "game": "https://www.chess.com/game/live/128371749137"
         },
         "record": {
-            "win": 2263,
-            "loss": 2207,
-            "draw": 469
+            "win": 2479,
+            "loss": 2420,
+            "draw": 512
         }
     },
     "tactics": {

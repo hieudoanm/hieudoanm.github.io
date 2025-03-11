@@ -9,7 +9,7 @@
     "followers": 45,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "India",
-    "last_online": 1734000313,
+    "last_online": 1738480995,
     "joined": 1285080099,
     "status": "premium",
     "is_streamer": false,
@@ -52,17 +52,17 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2339,
-            "date": 1706520432,
-            "rd": 90
+            "rating": 2424,
+            "date": 1734243771,
+            "rd": 201
         },
         "best": {
-            "rating": 2354,
-            "date": 1603554928,
+            "rating": 2424,
+            "date": 1734243771,
             "game": "https://www.chess.com/game/live/5302107619"
         },
         "record": {
-            "win": 30,
+            "win": 31,
             "loss": 6,
             "draw": 2
         }

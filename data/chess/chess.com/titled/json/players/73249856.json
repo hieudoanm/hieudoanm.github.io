@@ -6,10 +6,10 @@
     "name": "Daniel Quizon",
     "username": "quizden37",
     "title": "GM",
-    "followers": 233,
+    "followers": 261,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Dasmarinas City Philippines",
-    "last_online": 1734017959,
+    "last_online": 1741631970,
     "joined": 1583750369,
     "status": "premium",
     "is_streamer": false,
@@ -35,8 +35,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3032,
-            "date": 1726261583,
+            "rating": 3014,
+            "date": 1740755275,
             "rd": 41
         },
         "best": {
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/103107687687"
         },
         "record": {
-            "win": 463,
-            "loss": 346,
-            "draw": 62
+            "win": 503,
+            "loss": 377,
+            "draw": 69
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2913,
-            "date": 1732895799,
-            "rd": 49
+            "rating": 2880,
+            "date": 1741612508,
+            "rd": 44
         },
         "best": {
             "rating": 2972,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/106892391625"
         },
         "record": {
-            "win": 428,
-            "loss": 308,
-            "draw": 89
+            "win": 439,
+            "loss": 323,
+            "draw": 92
         }
     },
     "fide": 2432,

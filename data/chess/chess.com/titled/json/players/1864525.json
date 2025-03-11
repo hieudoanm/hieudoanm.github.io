@@ -6,10 +6,10 @@
     "name": "Sam Shankland",
     "username": "shankland",
     "title": "GM",
-    "followers": 1991,
+    "followers": 2090,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Walnut Creek, USA",
-    "last_online": 1734133955,
+    "last_online": 1741201273,
     "joined": 1239306686,
     "status": "premium",
     "is_streamer": false,
@@ -71,19 +71,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3014,
-            "date": 1734133797,
+            "rating": 2934,
+            "date": 1738831394,
             "rd": 27
         },
         "best": {
-            "rating": 3077,
-            "date": 1731976583,
-            "game": "https://www.chess.com/game/live/127870804777"
+            "rating": 3096,
+            "date": 1737096795,
+            "game": "https://www.chess.com/game/live/129406407577"
         },
         "record": {
-            "win": 2041,
-            "loss": 1211,
-            "draw": 570
+            "win": 2298,
+            "loss": 1391,
+            "draw": 649
         }
     },
     "fide": 2731,

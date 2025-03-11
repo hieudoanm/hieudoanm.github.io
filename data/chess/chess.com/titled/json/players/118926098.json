@@ -6,9 +6,9 @@
     "name": "Giorgi Margvelashvili",
     "username": "thesilmarils",
     "title": "GM",
-    "followers": 1725,
+    "followers": 1756,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734130103,
+    "last_online": 1741233211,
     "joined": 1612618840,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2909,
-            "date": 1734144125,
-            "rd": 26
+            "rating": 2907,
+            "date": 1741655255,
+            "rd": 42
         },
         "best": {
             "rating": 3102,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/126124822271"
         },
         "record": {
-            "win": 4871,
-            "loss": 3403,
-            "draw": 1061
+            "win": 4971,
+            "loss": 3462,
+            "draw": 1076
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2955,
-            "date": 1734128239,
-            "rd": 28
+            "rating": 2891,
+            "date": 1741694888,
+            "rd": 43
         },
         "best": {
             "rating": 3032,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/80678575685"
         },
         "record": {
-            "win": 4857,
-            "loss": 4447,
-            "draw": 1734
+            "win": 4968,
+            "loss": 4545,
+            "draw": 1775
         }
     },
     "tactics": {

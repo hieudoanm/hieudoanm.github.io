@@ -1,34 +1,34 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/52166398.7310e5a6.200x200o.1883c1e2fef1.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/52166398.785c089c.200x200o.8c1adfdf4428.jpg",
     "player_id": 52166398,
     "@id": "https://api.chess.com/pub/player/timsel999",
     "url": "https://www.chess.com/member/TimSeL999",
     "username": "timsel999",
     "title": "GM",
-    "followers": 0,
+    "followers": 10,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734088378,
+    "last_online": 1741538105,
     "joined": 1542834754,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2601,
-            "date": 1734097847,
-            "rd": 42
+            "rating": 3026,
+            "date": 1741547078,
+            "rd": 27
         },
         "best": {
-            "rating": 2601,
-            "date": 1734097847,
-            "game": "https://www.chess.com/game/live/127831197375"
+            "rating": 3080,
+            "date": 1740716292,
+            "game": "https://www.chess.com/game/live/128714636957"
         },
         "record": {
-            "win": 83,
-            "loss": 21,
-            "draw": 5
+            "win": 483,
+            "loss": 274,
+            "draw": 67
         }
     },
     "tactics": {
@@ -43,8 +43,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 28,
-            "score": 25
+            "total_attempts": 65,
+            "score": 62
         }
     }
 }

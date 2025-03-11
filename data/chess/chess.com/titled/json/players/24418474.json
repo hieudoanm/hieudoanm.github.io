@@ -6,10 +6,10 @@
     "name": "Miguel Santos Ruiz",
     "username": "miguelito",
     "title": "GM",
-    "followers": 1597,
+    "followers": 1654,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Utrera, Sevilla",
-    "last_online": 1734136162,
+    "last_online": 1741447473,
     "joined": 1443960183,
     "status": "premium",
     "is_streamer": true,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2848,
-            "date": 1732045634,
-            "rd": 42
+            "rating": 2840,
+            "date": 1735495962,
+            "rd": 49
         },
         "best": {
             "rating": 2907,
@@ -46,15 +46,15 @@
         },
         "record": {
             "win": 311,
-            "loss": 205,
+            "loss": 206,
             "draw": 39
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2809,
-            "date": 1732044181,
-            "rd": 38
+            "rating": 2817,
+            "date": 1739473794,
+            "rd": 49
         },
         "best": {
             "rating": 2878,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/45937207281"
         },
         "record": {
-            "win": 478,
-            "loss": 272,
-            "draw": 91
+            "win": 491,
+            "loss": 281,
+            "draw": 93
         }
     },
     "fide": 2591,

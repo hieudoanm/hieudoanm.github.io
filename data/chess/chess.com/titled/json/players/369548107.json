@@ -6,9 +6,9 @@
     "name": "Nigel Fat",
     "username": "nigelfat",
     "title": "GM",
-    "followers": 11,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1734177102,
+    "last_online": 1739801997,
     "joined": 1718339371,
     "status": "premium",
     "is_streamer": false,
@@ -34,19 +34,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2866,
-            "date": 1733041850,
+            "rating": 2964,
+            "date": 1739793791,
             "rd": 47
         },
         "best": {
-            "rating": 2882,
-            "date": 1733041233,
+            "rating": 2943,
+            "date": 1738842373,
             "game": "https://www.chess.com/game/live/126779340459"
         },
         "record": {
-            "win": 52,
-            "loss": 17,
-            "draw": 2
+            "win": 89,
+            "loss": 39,
+            "draw": 7
         }
     },
     "tactics": {

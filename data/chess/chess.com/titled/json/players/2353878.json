@@ -6,10 +6,10 @@
     "name": "Lars Oskar Hauge",
     "username": "larso",
     "title": "GM",
-    "followers": 267,
+    "followers": 277,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Oslo",
-    "last_online": 1734131667,
+    "last_online": 1741694687,
     "joined": 1260047049,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1738,
-            "date": 1682461821,
+            "date": 1736099449,
             "rd": 87
         },
         "best": {
@@ -74,7 +74,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2808,
-            "date": 1732131251,
+            "date": 1741575622,
             "rd": 49
         },
         "best": {
@@ -90,9 +90,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2761,
-            "date": 1729467357,
-            "rd": 49
+            "rating": 2782,
+            "date": 1741553367
         },
         "best": {
             "rating": 2955,
@@ -100,8 +99,8 @@
             "game": "https://www.chess.com/game/live/25998636321"
         },
         "record": {
-            "win": 1421,
-            "loss": 1305,
+            "win": 1427,
+            "loss": 1308,
             "draw": 316
         }
     },

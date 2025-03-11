@@ -6,10 +6,10 @@
     "name": "Daniil Lintchevski",
     "username": "paralinch",
     "title": "GM",
-    "followers": 123,
+    "followers": 131,
     "country": "https://api.chess.com/pub/country/CH",
     "location": "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
-    "last_online": 1734124005,
+    "last_online": 1741252780,
     "joined": 1448901777,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2962,
-            "date": 1730147433,
-            "rd": 45
+            "rating": 2961,
+            "date": 1739955217,
+            "rd": 49
         },
         "best": {
             "rating": 3056,
@@ -47,13 +47,13 @@
         "record": {
             "win": 884,
             "loss": 359,
-            "draw": 98
+            "draw": 99
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2914,
-            "date": 1731686539,
+            "date": 1734512935,
             "rd": 49
         },
         "best": {

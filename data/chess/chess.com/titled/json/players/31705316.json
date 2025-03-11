@@ -6,10 +6,10 @@
     "name": "Vitaly Sivuk",
     "username": "vitaly_sivuk",
     "title": "GM",
-    "followers": 266,
-    "country": "https://api.chess.com/pub/country/CH",
-    "location": "Zurich",
-    "last_online": 1733841372,
+    "followers": 272,
+    "country": "https://api.chess.com/pub/country/UA",
+    "location": "Nikolaev",
+    "last_online": 1741688818,
     "joined": 1482071141,
     "status": "premium",
     "is_streamer": false,
@@ -53,8 +53,8 @@
     "fide": 2600,
     "tactics": {
         "highest": {
-            "rating": 3587,
-            "date": 1732181817
+            "rating": 3592,
+            "date": 1737980483
         },
         "lowest": {
             "rating": 1255,

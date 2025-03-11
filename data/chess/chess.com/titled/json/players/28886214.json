@@ -6,10 +6,10 @@
     "name": "Alihan H\u00fcseyino\u011flu",
     "username": "alihanhuseyinoglu",
     "title": "IM",
-    "followers": 27,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Eski\u015fehir",
-    "last_online": 1734118570,
+    "last_online": 1741617161,
     "joined": 1467448049,
     "status": "premium",
     "is_streamer": false,
@@ -37,26 +37,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2436,
-            "date": 1734120983,
+            "rating": 2430,
+            "date": 1739307697,
             "rd": 49
         },
         "best": {
-            "rating": 2436,
-            "date": 1734120983,
+            "rating": 2440,
+            "date": 1734381453,
             "game": "https://www.chess.com/game/live/127683666275"
         },
         "record": {
-            "win": 9,
-            "loss": 0,
-            "draw": 2
+            "win": 13,
+            "loss": 1,
+            "draw": 3
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2783,
-            "date": 1726385117,
-            "rd": 36
+            "rating": 2767,
+            "date": 1740325519,
+            "rd": 48
         },
         "best": {
             "rating": 2788,
@@ -64,8 +64,8 @@
             "game": "https://www.chess.com/game/live/117727752361"
         },
         "record": {
-            "win": 114,
-            "loss": 60,
+            "win": 115,
+            "loss": 62,
             "draw": 12
         }
     },

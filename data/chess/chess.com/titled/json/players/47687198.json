@@ -6,10 +6,10 @@
     "name": "Emin Ohanyan",
     "username": "ohanyaneminchess",
     "title": "GM",
-    "followers": 256,
+    "followers": 257,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan",
-    "last_online": 1734182814,
+    "last_online": 1741658698,
     "joined": 1530974787,
     "status": "premium",
     "is_streamer": false,
@@ -38,8 +38,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2451,
-            "date": 1727286791,
-            "rd": 47
+            "date": 1738099870,
+            "rd": 49
         },
         "best": {
             "rating": 2500,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/100457523739"
         },
         "record": {
-            "win": 82,
+            "win": 83,
             "loss": 72,
             "draw": 24
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2959,
-            "date": 1733936255,
-            "rd": 30
+            "rating": 2921,
+            "date": 1737828415,
+            "rd": 33
         },
         "best": {
             "rating": 3211,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/14642925929"
         },
         "record": {
-            "win": 6129,
-            "loss": 4025,
-            "draw": 710
+            "win": 6199,
+            "loss": 4072,
+            "draw": 715
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2811,
-            "date": 1732457471,
-            "rd": 49
+            "rating": 2825,
+            "date": 1739045269,
+            "rd": 48
         },
         "best": {
             "rating": 2925,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/31516266399"
         },
         "record": {
-            "win": 3880,
-            "loss": 3545,
-            "draw": 703
+            "win": 3883,
+            "loss": 3547,
+            "draw": 706
         }
     },
     "fide": 2456,

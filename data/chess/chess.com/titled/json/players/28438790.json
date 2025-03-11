@@ -6,9 +6,9 @@
     "name": "Natalia Zhukova",
     "username": "tashik",
     "title": "GM",
-    "followers": 111,
+    "followers": 113,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734182501,
+    "last_online": 1741627654,
     "joined": 1464725588,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2298,
-            "date": 1631536078,
-            "rd": 145
+            "rating": 2292,
+            "date": 1739819698,
+            "rd": 47
         },
         "best": {
             "rating": 2397,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/24938556703"
         },
         "record": {
-            "win": 7,
-            "loss": 5,
-            "draw": 4
+            "win": 8,
+            "loss": 11,
+            "draw": 5
         }
     },
     "chess_bullet": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2540,
-            "date": 1733077742,
-            "rd": 38
+            "rating": 2533,
+            "date": 1741630964,
+            "rd": 47
         },
         "best": {
             "rating": 2616,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/65290938357"
         },
         "record": {
-            "win": 1702,
-            "loss": 1585,
-            "draw": 236
+            "win": 1731,
+            "loss": 1612,
+            "draw": 239
         }
     },
     "tactics": {
@@ -80,6 +80,10 @@
         "best": {
             "total_attempts": 66,
             "score": 63
+        },
+        "daily": {
+            "total_attempts": 47,
+            "score": 46
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Misa Pap",
     "username": "misapap",
     "title": "GM",
-    "followers": 322,
-    "country": "https://api.chess.com/pub/country/HU",
+    "followers": 327,
+    "country": "https://api.chess.com/pub/country/ES",
     "location": "Novi Sad",
-    "last_online": 1734138872,
+    "last_online": 1741625175,
     "joined": 1184715283,
     "status": "premium",
     "is_streamer": false,
@@ -69,8 +69,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3516,
-            "date": 1684034889
+            "rating": 3703,
+            "date": 1741499279
         },
         "lowest": {
             "rating": 1408,

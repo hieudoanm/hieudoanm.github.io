@@ -6,10 +6,10 @@
     "name": "Anna M. Sargsyan",
     "username": "annasargsyan_m",
     "title": "IM",
-    "followers": 263,
+    "followers": 267,
     "country": "https://api.chess.com/pub/country/US",
     "location": "St. Louis, MO",
-    "last_online": 1734054486,
+    "last_online": 1741643889,
     "joined": 1565470150,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2549,
-            "date": 1727459091,
-            "rd": 48
+            "rating": 2622,
+            "date": 1741454181,
+            "rd": 36
         },
         "best": {
             "rating": 2739,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/115232280757"
         },
         "record": {
-            "win": 2579,
-            "loss": 3034,
-            "draw": 320
+            "win": 2642,
+            "loss": 3105,
+            "draw": 325
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2613,
-            "date": 1732644613,
-            "rd": 38
+            "rating": 2600,
+            "date": 1741133080,
+            "rd": 40
         },
         "best": {
             "rating": 2708,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/56826018247"
         },
         "record": {
-            "win": 1552,
-            "loss": 1338,
-            "draw": 191
+            "win": 1593,
+            "loss": 1374,
+            "draw": 197
         }
     },
     "fide": 2364,

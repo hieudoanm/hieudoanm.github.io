@@ -6,10 +6,10 @@
     "name": "Gregory Kaidanov",
     "username": "kaidanov",
     "title": "GM",
-    "followers": 249,
+    "followers": 258,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Lexington",
-    "last_online": 1734181088,
+    "last_online": 1741690016,
     "joined": 1258673312,
     "status": "premium",
     "is_streamer": false,
@@ -89,8 +89,8 @@
     "fide": 2645,
     "tactics": {
         "highest": {
-            "rating": 3190,
-            "date": 1713147209
+            "rating": 3200,
+            "date": 1734889951
         },
         "lowest": {
             "rating": 1349,

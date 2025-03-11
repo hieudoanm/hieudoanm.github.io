@@ -8,13 +8,25 @@
     "title": "GM",
     "followers": 101,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1730369103,
+    "last_online": 1739655727,
     "joined": 1540657745,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Crystal",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2024,
+            "date": 1739529815,
+            "rd": 49
+        },
+        "record": {
+            "win": 1,
+            "loss": 4,
+            "draw": 1
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 2882,

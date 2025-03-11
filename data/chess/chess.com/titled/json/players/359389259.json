@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Spasskyyyy",
     "username": "spasskyyyy",
     "title": "GM",
-    "followers": 114,
+    "followers": 119,
     "country": "https://api.chess.com/pub/country/UZ",
-    "last_online": 1734052081,
+    "last_online": 1741396846,
     "joined": 1714069561,
     "status": "premium",
     "is_streamer": false,
@@ -14,20 +14,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2003,
-            "date": 1734103806,
-            "rd": 115
+            "rating": 2037,
+            "date": 1741664039,
+            "rd": 121
         },
         "best": {
-            "rating": 2003,
-            "date": 1731902302,
-            "game": "https://www.chess.com/game/daily/717151783"
+            "rating": 2037,
+            "date": 1740267370,
+            "game": "https://www.chess.com/game/daily/774509167"
         },
         "record": {
-            "win": 23,
+            "win": 24,
             "loss": 0,
             "draw": 5,
-            "time_per_move": 5745,
+            "time_per_move": 7654,
             "timeout_percent": 0
         }
     },
@@ -50,8 +50,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2860,
-            "date": 1734056951,
+            "rating": 2872,
+            "date": 1741184953,
             "rd": 49
         },
         "best": {
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/114931719399"
         },
         "record": {
-            "win": 816,
-            "loss": 706,
-            "draw": 182
+            "win": 820,
+            "loss": 708,
+            "draw": 184
         }
     },
     "tactics": {

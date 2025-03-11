@@ -6,10 +6,10 @@
     "name": "Manuel Le\u00f3n Hoyos",
     "username": "leon009",
     "title": "GM",
-    "followers": 174,
+    "followers": 182,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Oregon, USA",
-    "last_online": 1732342432,
+    "last_online": 1741663827,
     "joined": 1480821309,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2856,
-            "date": 1732080103,
-            "rd": 35
+            "rating": 2936,
+            "date": 1741507309,
+            "rd": 26
         },
         "best": {
             "rating": 2946,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/120824395403"
         },
         "record": {
-            "win": 1205,
-            "loss": 1295,
-            "draw": 257
+            "win": 1306,
+            "loss": 1373,
+            "draw": 279
         }
     },
     "fide": 2603,

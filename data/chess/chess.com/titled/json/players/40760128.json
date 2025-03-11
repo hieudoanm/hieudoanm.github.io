@@ -7,7 +7,7 @@
     "username": "stanislavnovikov",
     "title": "GM",
     "followers": 66,
-    "country": "https://api.chess.com/pub/country/RU",
+    "country": "https://api.chess.com/pub/country/XX",
     "location": "Moscow",
     "last_online": 1727699484,
     "joined": 1511731786,
@@ -35,42 +35,42 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2755,
-            "date": 1733835024,
-            "rd": 25
+            "rating": 2732,
+            "date": 1741688441,
+            "rd": 40
         },
         "best": {
-            "rating": 2801,
-            "date": 1732880476,
+            "rating": 2803,
+            "date": 1736256578,
             "game": "https://www.chess.com/game/live/126277796385"
         },
         "record": {
-            "win": 316,
-            "loss": 335,
-            "draw": 42
+            "win": 493,
+            "loss": 541,
+            "draw": 69
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2808,
-            "date": 1732362249,
-            "rd": 49
+            "date": 1737711928,
+            "rd": 47
         },
         "best": {
-            "rating": 2808,
-            "date": 1728554232,
+            "rating": 2824,
+            "date": 1736085716,
             "game": "https://www.chess.com/game/live/43674342793"
         },
         "record": {
-            "win": 234,
-            "loss": 206,
-            "draw": 70
+            "win": 243,
+            "loss": 213,
+            "draw": 72
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2618,
-            "date": 1649224918
+            "rating": 2639,
+            "date": 1737227249
         },
         "lowest": {
             "rating": 2412,

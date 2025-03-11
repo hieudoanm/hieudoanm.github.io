@@ -6,7 +6,7 @@
     "name": "Hoang Thong Tu",
     "username": "nguyenxi",
     "title": "GM",
-    "followers": 366,
+    "followers": 367,
     "country": "https://api.chess.com/pub/country/VN",
     "location": "Ho Chi Minh City",
     "last_online": 1732794310,
@@ -32,7 +32,7 @@
             "loss": 40,
             "draw": 12,
             "time_per_move": 18658,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {

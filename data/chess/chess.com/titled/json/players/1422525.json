@@ -6,10 +6,10 @@
     "name": "Ramesh RB",
     "username": "thalaiva",
     "title": "GM",
-    "followers": 470,
+    "followers": 481,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734179346,
+    "last_online": 1741693779,
     "joined": 1214462028,
     "status": "premium",
     "is_streamer": false,
@@ -89,10 +89,6 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 60,
-            "score": 57
-        },
-        "daily": {
             "total_attempts": 60,
             "score": 57
         }

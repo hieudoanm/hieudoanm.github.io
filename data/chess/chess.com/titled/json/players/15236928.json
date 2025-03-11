@@ -8,7 +8,7 @@
     "followers": 11,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Columbia, SC",
-    "last_online": 1733167471,
+    "last_online": 1737419837,
     "joined": 1388029361,
     "status": "premium",
     "is_streamer": false,
@@ -54,7 +54,7 @@
     "chess_bullet": {
         "last": {
             "rating": 1850,
-            "date": 1676746046,
+            "date": 1737311957,
             "rd": 190
         },
         "best": {

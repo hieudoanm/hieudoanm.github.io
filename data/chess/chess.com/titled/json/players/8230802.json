@@ -6,15 +6,15 @@
     "name": "Ricardo Urbina",
     "username": "ajedrezhn",
     "title": "IM",
-    "followers": 48,
+    "followers": 49,
     "country": "https://api.chess.com/pub/country/HN",
     "location": "Tegucigalpa",
-    "last_online": 1734155855,
+    "last_online": 1741699475,
     "joined": 1342545289,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,19 +35,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2311,
-            "date": 1637293963,
-            "rd": 52
+            "rating": 2336,
+            "date": 1740850151,
+            "rd": 82
         },
         "best": {
-            "rating": 2320,
-            "date": 1630783642,
-            "game": "https://www.chess.com/game/live/23858800593"
+            "rating": 2404,
+            "date": 1736010427,
+            "game": "https://www.chess.com/game/live/129750610867"
         },
         "record": {
-            "win": 872,
-            "loss": 688,
-            "draw": 48
+            "win": 883,
+            "loss": 705,
+            "draw": 50
         }
     },
     "chess_blitz": {
@@ -83,8 +83,8 @@
             "score": 65
         },
         "daily": {
-            "total_attempts": 55,
-            "score": 52
+            "total_attempts": 56,
+            "score": 53
         }
     }
 }

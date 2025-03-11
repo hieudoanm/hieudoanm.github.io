@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6321091.0c0a6f0d.200x200o.543b58910a78.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/6321091.8e2efd7e.200x200o.0333cf8fee1b.jpg",
     "player_id": 6321091,
     "@id": "https://api.chess.com/pub/player/rz0",
     "url": "https://www.chess.com/member/RZ0",
     "name": "Enamul Hossain",
     "username": "rz0",
     "title": "GM",
-    "followers": 160,
-    "country": "https://api.chess.com/pub/country/BD",
-    "location": "Dhaka",
-    "last_online": 1734078649,
+    "followers": 169,
+    "country": "https://api.chess.com/pub/country/GB",
+    "location": "Portsmouth",
+    "last_online": 1741692947,
     "joined": 1324048353,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2541,
-            "date": 1733893173,
-            "rd": 32
+            "rating": 2578,
+            "date": 1741645370,
+            "rd": 28
         },
         "best": {
             "rating": 2646,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/125776785697"
         },
         "record": {
-            "win": 5292,
-            "loss": 4901,
-            "draw": 698
+            "win": 5444,
+            "loss": 5043,
+            "draw": 717
         }
     },
     "tactics": {
@@ -64,6 +64,10 @@
         "best": {
             "total_attempts": 47,
             "score": 44
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 39
         }
     }
 }

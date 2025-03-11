@@ -6,9 +6,9 @@
     "name": "Pasta Doctor Martin Ssempa",
     "username": "pastaaontwitch",
     "title": "GM",
-    "followers": 41,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/UG",
-    "last_online": 1732095619,
+    "last_online": 1740895389,
     "joined": 1694234457,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3051,
-            "date": 1731395610,
-            "rd": 40
+            "rating": 3034,
+            "date": 1734336613,
+            "rd": 48
         },
         "best": {
             "rating": 3168,
@@ -45,7 +45,7 @@
         },
         "record": {
             "win": 267,
-            "loss": 216,
+            "loss": 219,
             "draw": 45
         }
     },

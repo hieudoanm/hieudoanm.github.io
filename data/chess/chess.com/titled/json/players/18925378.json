@@ -8,7 +8,7 @@
     "followers": 58,
     "country": "https://api.chess.com/pub/country/AZ",
     "location": "Baku",
-    "last_online": 1734124608,
+    "last_online": 1740754670,
     "joined": 1410879736,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2587,
-            "date": 1730238031,
-            "rd": 48
+            "rating": 2586,
+            "date": 1738102565,
+            "rd": 49
         },
         "best": {
             "rating": 2595,
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/123954098587"
         },
         "record": {
-            "win": 105,
-            "loss": 78,
+            "win": 106,
+            "loss": 79,
             "draw": 13
         }
     },

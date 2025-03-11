@@ -5,14 +5,14 @@
     "name": "Stany Ga",
     "username": "stanyga",
     "title": "GM",
-    "followers": 178,
+    "followers": 201,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733811514,
+    "last_online": 1741667238,
     "joined": 1534868967,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,7 +34,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2135,
-            "date": 1641280678,
+            "date": 1741344305,
             "rd": 79
         },
         "best": {
@@ -50,26 +50,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2558,
-            "date": 1726632018,
-            "rd": 49
+            "rating": 2792,
+            "date": 1741674925,
+            "rd": 26
         },
         "best": {
             "rating": 2793,
             "date": 1586700980,
-            "game": "https://www.chess.com/game/live/4752600827"
+            "game": "https://www.chess.com/game/live/134843353671"
         },
         "record": {
-            "win": 345,
-            "loss": 197,
-            "draw": 56
+            "win": 453,
+            "loss": 290,
+            "draw": 92
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2998,
-            "date": 1728996996
+            "rating": 3397,
+            "date": 1741613305
         },
         "lowest": {
             "rating": 1007,

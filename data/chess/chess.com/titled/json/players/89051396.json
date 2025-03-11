@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/NotYetFinish",
     "username": "notyetfinish",
     "title": "GM",
-    "followers": 735,
+    "followers": 758,
     "country": "https://api.chess.com/pub/country/IS",
-    "last_online": 1726329531,
+    "last_online": 1738053157,
     "joined": 1597418750,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3061,
-            "date": 1726273888,
-            "rd": 47
+            "rating": 3018,
+            "date": 1738031223,
+            "rd": 39
         },
         "best": {
             "rating": 3092,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/68841262957"
         },
         "record": {
-            "win": 1099,
-            "loss": 209,
-            "draw": 80
+            "win": 1131,
+            "loss": 242,
+            "draw": 85
         }
     },
     "tactics": {

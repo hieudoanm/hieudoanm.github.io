@@ -6,10 +6,10 @@
     "name": "Mert Erdo\u011fdu",
     "username": "margency",
     "title": "GM",
-    "followers": 1569,
+    "followers": 1656,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "\u0130stanbul",
-    "last_online": 1734120352,
+    "last_online": 1741672754,
     "joined": 1421436107,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2385,
-            "date": 1729711102,
+            "date": 1739911195,
             "rd": 166
         },
         "best": {
@@ -36,7 +36,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2836,
-            "date": 1732695255,
+            "date": 1740386111,
             "rd": 36
         },
         "best": {
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2789,
-            "date": 1720656875,
-            "rd": 40
+            "rating": 2804,
+            "date": 1741530394,
+            "rd": 47
         },
         "best": {
             "rating": 2804,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/68942161103"
         },
         "record": {
-            "win": 5142,
-            "loss": 5318,
+            "win": 5146,
+            "loss": 5322,
             "draw": 981
         }
     },
@@ -80,8 +80,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 73,
-            "score": 70
+            "total_attempts": 78,
+            "score": 75
+        },
+        "daily": {
+            "total_attempts": 58,
+            "score": 55
         }
     }
 }

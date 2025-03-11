@@ -5,9 +5,9 @@
     "name": "Manuel Petrosyan",
     "username": "manuel_petrosyan",
     "title": "GM",
-    "followers": 136,
+    "followers": 141,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1733949875,
+    "last_online": 1740678543,
     "joined": 1465198188,
     "status": "premium",
     "is_streamer": false,
@@ -50,25 +50,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2929,
-            "date": 1732802988,
-            "rd": 44
+            "rating": 2987,
+            "date": 1739382416,
+            "rd": 43
         },
         "best": {
-            "rating": 2984,
-            "date": 1668086665,
+            "rating": 2987,
+            "date": 1739382416,
             "game": "https://www.chess.com/game/live/113068758329"
         },
         "record": {
-            "win": 2066,
-            "loss": 1689,
-            "draw": 497
+            "win": 2092,
+            "loss": 1712,
+            "draw": 504
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3096,
-            "date": 1647424235
+            "rating": 3113,
+            "date": 1740682296
         },
         "lowest": {
             "rating": 1365,

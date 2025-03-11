@@ -6,10 +6,10 @@
     "name": "Peter Lizak",
     "username": "alleyooper",
     "title": "IM",
-    "followers": 320,
+    "followers": 340,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734176618,
+    "last_online": 1741678824,
     "joined": 1440974694,
     "status": "premium",
     "is_streamer": false,
@@ -18,20 +18,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1685,
-            "date": 1726236634,
-            "rd": 90
+            "rating": 1703,
+            "date": 1741023478,
+            "rd": 103
         },
         "best": {
-            "rating": 1685,
-            "date": 1726236633,
+            "rating": 1706,
+            "date": 1739562265,
             "game": "https://www.chess.com/game/daily/660609881"
         },
         "record": {
-            "win": 36,
+            "win": 37,
             "loss": 4,
-            "draw": 2,
-            "time_per_move": 9876,
+            "draw": 4,
+            "time_per_move": 9995,
             "timeout_percent": 0
         }
     },
@@ -54,9 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2737,
-            "date": 1734109199,
-            "rd": 28
+            "rating": 2673,
+            "date": 1741700033
         },
         "best": {
             "rating": 2810,
@@ -64,16 +63,16 @@
             "game": "https://www.chess.com/game/live/101519526383"
         },
         "record": {
-            "win": 1226,
-            "loss": 1537,
-            "draw": 256
+            "win": 1482,
+            "loss": 1859,
+            "draw": 294
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2681,
-            "date": 1734179414,
-            "rd": 30
+            "rating": 2758,
+            "date": 1741688784,
+            "rd": 23
         },
         "best": {
             "rating": 2777,
@@ -81,9 +80,9 @@
             "game": "https://www.chess.com/game/live/4726346961"
         },
         "record": {
-            "win": 6637,
-            "loss": 7185,
-            "draw": 1455
+            "win": 6944,
+            "loss": 7524,
+            "draw": 1531
         }
     },
     "fide": 2398,

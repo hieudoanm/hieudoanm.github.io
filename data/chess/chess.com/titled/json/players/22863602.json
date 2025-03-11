@@ -5,10 +5,10 @@
     "name": "Yinglun Xu",
     "username": "xuyinglun",
     "title": "GM",
-    "followers": 96,
+    "followers": 99,
     "country": "https://api.chess.com/pub/country/CN",
     "location": "Beijing",
-    "last_online": 1733925511,
+    "last_online": 1741334974,
     "joined": 1434565024,
     "status": "premium",
     "is_streamer": false,
@@ -48,26 +48,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2738,
-            "date": 1727658714,
-            "rd": 49
+            "rating": 2819,
+            "date": 1739782770,
+            "rd": 48
         },
         "best": {
-            "rating": 2787,
-            "date": 1654355942,
-            "game": "https://www.chess.com/game/live/19132637255"
+            "rating": 2820,
+            "date": 1737985392,
+            "game": "https://www.chess.com/game/live/131724065893"
         },
         "record": {
-            "win": 518,
-            "loss": 415,
-            "draw": 60
+            "win": 534,
+            "loss": 419,
+            "draw": 62
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2908,
-            "date": 1733748371,
-            "rd": 48
+            "rating": 2903,
+            "date": 1737988379,
+            "rd": 46
         },
         "best": {
             "rating": 2936,
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/71325425357"
         },
         "record": {
-            "win": 1059,
-            "loss": 703,
-            "draw": 256
+            "win": 1079,
+            "loss": 720,
+            "draw": 261
         }
     },
     "fide": 2554,

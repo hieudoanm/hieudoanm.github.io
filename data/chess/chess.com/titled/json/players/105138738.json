@@ -5,15 +5,15 @@
     "name": "Arnaldo Jesus Fernandez De La Vara Mulet",
     "username": "arnaldofdelavaramulet",
     "title": "IM",
-    "followers": 96,
+    "followers": 117,
     "country": "https://api.chess.com/pub/country/CU",
     "location": "United States",
-    "last_online": 1718375527,
+    "last_online": 1741683144,
     "joined": 1608241375,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2881,
-            "date": 1718376367,
-            "rd": 44
+            "rating": 2871,
+            "date": 1741659906,
+            "rd": 19
         },
         "best": {
             "rating": 2903,
@@ -63,9 +63,9 @@
             "game": "https://www.chess.com/game/live/111007278647"
         },
         "record": {
-            "win": 240,
-            "loss": 73,
-            "draw": 20
+            "win": 746,
+            "loss": 285,
+            "draw": 76
         }
     },
     "chess_blitz": {

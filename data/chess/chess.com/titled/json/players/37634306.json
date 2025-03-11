@@ -6,9 +6,9 @@
     "name": "Jorge Cori",
     "username": "machupichu10",
     "title": "GM",
-    "followers": 739,
+    "followers": 749,
     "country": "https://api.chess.com/pub/country/PE",
-    "last_online": 1732513335,
+    "last_online": 1741370913,
     "joined": 1502127498,
     "status": "premium",
     "is_streamer": false,
@@ -32,7 +32,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2543,
-            "date": 1633114711,
+            "date": 1736181317,
             "rd": 113
         },
         "best": {
@@ -49,7 +49,7 @@
     "chess_bullet": {
         "last": {
             "rating": 3003,
-            "date": 1725744994,
+            "date": 1735000656,
             "rd": 49
         },
         "best": {
@@ -66,7 +66,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2825,
-            "date": 1730153800,
+            "date": 1738770513,
             "rd": 45
         },
         "best": {

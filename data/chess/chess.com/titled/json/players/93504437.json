@@ -5,14 +5,14 @@
     "name": "Jagadeesh Siddharth",
     "username": "jagadeesh_siddharth",
     "title": "GM",
-    "followers": 48,
+    "followers": 68,
     "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1734174467,
+    "last_online": 1741694562,
     "joined": 1603186678,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -33,42 +33,42 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2848,
-            "date": 1726549406,
-            "rd": 37
+            "rating": 2802,
+            "date": 1740250793,
+            "rd": 29
         },
         "best": {
             "rating": 2938,
             "date": 1702818717,
-            "game": "https://www.chess.com/game/live/37461663985"
+            "game": "https://www.chess.com/game/live/131567994309"
         },
         "record": {
-            "win": 1370,
-            "loss": 913,
-            "draw": 206
+            "win": 1514,
+            "loss": 1007,
+            "draw": 232
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2876,
-            "date": 1733853154,
-            "rd": 37
+            "rating": 2932,
+            "date": 1741697848,
+            "rd": 44
         },
         "best": {
-            "rating": 2900,
-            "date": 1733652890,
-            "game": "https://www.chess.com/game/live/114927499123"
+            "rating": 2929,
+            "date": 1737478884,
+            "game": "https://www.chess.com/game/live/131216347533"
         },
         "record": {
-            "win": 726,
-            "loss": 532,
-            "draw": 191
+            "win": 770,
+            "loss": 570,
+            "draw": 202
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3370,
-            "date": 1732438913
+            "rating": 3400,
+            "date": 1734464685
         },
         "lowest": {
             "rating": 2198,
@@ -81,8 +81,8 @@
             "score": 73
         },
         "daily": {
-            "total_attempts": 40,
-            "score": 37
+            "total_attempts": 51,
+            "score": 48
         }
     }
 }

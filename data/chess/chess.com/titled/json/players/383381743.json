@@ -6,9 +6,9 @@
     "name": "Rafael Vahanyan",
     "username": "rafaelvaganian",
     "title": "GM",
-    "followers": 21,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/AM",
-    "last_online": 1733957863,
+    "last_online": 1741692500,
     "joined": 1724675373,
     "status": "premium",
     "is_streamer": false,
@@ -30,8 +30,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2616,
-            "date": 1734184273,
-            "rd": 22
+            "date": 1741641862,
+            "rd": 25
         },
         "best": {
             "rating": 2716,
@@ -39,9 +39,9 @@
             "game": "https://www.chess.com/game/live/120345639623"
         },
         "record": {
-            "win": 1496,
-            "loss": 1469,
-            "draw": 313
+            "win": 2068,
+            "loss": 2105,
+            "draw": 429
         }
     },
     "fide": 2452,

@@ -9,7 +9,7 @@
     "followers": 23,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "NSW",
-    "last_online": 1734003998,
+    "last_online": 1740103580,
     "joined": 1383482595,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2356,
-            "date": 1733828440,
-            "rd": 26
+            "rating": 2441,
+            "date": 1738969261,
+            "rd": 39
         },
         "best": {
             "rating": 2640,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/16645629655"
         },
         "record": {
-            "win": 10520,
-            "loss": 8795,
-            "draw": 1007
+            "win": 10667,
+            "loss": 8907,
+            "draw": 1020
         }
     },
     "fide": 2279,
@@ -99,12 +99,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 58,
-            "score": 55
+            "total_attempts": 73,
+            "score": 70
         },
         "daily": {
-            "total_attempts": 52,
-            "score": 49
+            "total_attempts": 46,
+            "score": 45
         }
     }
 }

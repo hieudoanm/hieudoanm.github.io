@@ -4,14 +4,14 @@
     "url": "https://www.chess.com/member/Nezuko432",
     "username": "nezuko432",
     "title": "GM",
-    "followers": 11,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/GB",
-    "last_online": 1734174317,
+    "last_online": 1739275193,
     "joined": 1672933634,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -32,25 +32,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3098,
-            "date": 1734184801,
-            "rd": 44
+            "rating": 3110,
+            "date": 1737839702,
+            "rd": 43
         },
         "best": {
-            "rating": 3110,
-            "date": 1720180109,
-            "game": "https://www.chess.com/game/live/69924280321"
+            "rating": 3167,
+            "date": 1734281950,
+            "game": "https://www.chess.com/game/live/128254181335"
         },
         "record": {
-            "win": 113,
-            "loss": 43,
-            "draw": 19
+            "win": 168,
+            "loss": 73,
+            "draw": 26
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3657,
-            "date": 1734178838
+            "rating": 4031,
+            "date": 1734411273
         },
         "lowest": {
             "rating": 1000,
@@ -59,12 +59,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 70,
-            "score": 67
-        },
-        "daily": {
-            "total_attempts": 58,
-            "score": 55
+            "total_attempts": 81,
+            "score": 78
         }
     }
 }

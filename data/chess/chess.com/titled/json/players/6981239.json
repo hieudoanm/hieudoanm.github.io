@@ -6,9 +6,9 @@
     "name": "Atulya Shetty",
     "username": "asms9699",
     "title": "IM",
-    "followers": 252,
+    "followers": 251,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733936372,
+    "last_online": 1740860731,
     "joined": 1331841662,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1272,
-            "date": 1733856398,
+            "date": 1734837280,
             "rd": 168
         },
         "best": {

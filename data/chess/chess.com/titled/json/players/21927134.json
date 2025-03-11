@@ -6,15 +6,15 @@
     "name": "Johan-Sebastian Christiansen",
     "username": "jsprepz",
     "title": "GM",
-    "followers": 207,
+    "followers": 228,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Sandefjord",
-    "last_online": 1733591546,
+    "last_online": 1741702602,
     "joined": 1428774991,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2825,
-            "date": 1732828704,
-            "rd": 49
+            "rating": 2912,
+            "date": 1736790082,
+            "rd": 32
         },
         "best": {
             "rating": 3056,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/116172601937"
         },
         "record": {
-            "win": 2680,
-            "loss": 1972,
-            "draw": 350
+            "win": 2778,
+            "loss": 2012,
+            "draw": 358
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2870,
-            "date": 1732728887,
-            "rd": 43
+            "rating": 2877,
+            "date": 1741644178,
+            "rd": 41
         },
         "best": {
-            "rating": 2964,
-            "date": 1702928031,
-            "game": "https://www.chess.com/game/live/6566329913"
+            "rating": 3024,
+            "date": 1737159149,
+            "game": "https://www.chess.com/game/live/131239830627"
         },
         "record": {
-            "win": 1401,
-            "loss": 988,
-            "draw": 239
+            "win": 1601,
+            "loss": 1128,
+            "draw": 279
         }
     },
     "fide": 2662,

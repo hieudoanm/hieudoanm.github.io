@@ -6,10 +6,10 @@
     "name": "Miroslav Miljkovic",
     "username": "miromiljkovic",
     "title": "GM",
-    "followers": 438,
+    "followers": 469,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "Nis",
-    "last_online": 1734137130,
+    "last_online": 1741607272,
     "joined": 1392666127,
     "status": "premium",
     "is_streamer": false,
@@ -56,8 +56,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2318,
-            "date": 1733682980,
+            "rating": 2314,
+            "date": 1739124609,
             "rd": 49
         },
         "best": {
@@ -66,16 +66,16 @@
             "game": "https://www.chess.com/game/live/5270017997"
         },
         "record": {
-            "win": 29,
-            "loss": 4,
+            "win": 30,
+            "loss": 5,
             "draw": 23
         }
     },
     "chess_bullet": {
         "last": {
             "rating": 2612,
-            "date": 1728979052,
-            "rd": 49
+            "date": 1735112889,
+            "rd": 48
         },
         "best": {
             "rating": 2717,
@@ -83,26 +83,26 @@
             "game": "https://www.chess.com/game/live/1486508373"
         },
         "record": {
-            "win": 1146,
-            "loss": 969,
-            "draw": 178
+            "win": 1160,
+            "loss": 972,
+            "draw": 179
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2751,
-            "date": 1734138896,
-            "rd": 35
+            "rating": 2695,
+            "date": 1741651126,
+            "rd": 42
         },
         "best": {
-            "rating": 2751,
-            "date": 1734047507,
+            "rating": 2770,
+            "date": 1734479876,
             "game": "https://www.chess.com/game/live/127607443105"
         },
         "record": {
-            "win": 637,
-            "loss": 469,
-            "draw": 145
+            "win": 697,
+            "loss": 528,
+            "draw": 158
         }
     },
     "fide": 2468,

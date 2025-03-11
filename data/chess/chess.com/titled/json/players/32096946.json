@@ -6,10 +6,10 @@
     "name": "Aradhya Garg",
     "username": "aradhya2000",
     "title": "IM",
-    "followers": 273,
+    "followers": 277,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "New Delhi",
-    "last_online": 1733943986,
+    "last_online": 1741702774,
     "joined": 1483418980,
     "status": "premium",
     "is_streamer": false,
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2848,
-            "date": 1731783571,
-            "rd": 35
+            "rating": 2672,
+            "date": 1736621964,
+            "rd": 32
         },
         "best": {
             "rating": 2869,
@@ -59,16 +59,16 @@
             "game": "https://www.chess.com/game/live/125516894317"
         },
         "record": {
-            "win": 605,
-            "loss": 526,
-            "draw": 102
+            "win": 665,
+            "loss": 588,
+            "draw": 112
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2786,
-            "date": 1731435014,
-            "rd": 45
+            "rating": 2774,
+            "date": 1741111625,
+            "rd": 47
         },
         "best": {
             "rating": 2882,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/119122162067"
         },
         "record": {
-            "win": 1908,
-            "loss": 973,
-            "draw": 425
+            "win": 1972,
+            "loss": 1007,
+            "draw": 436
         }
     },
     "tactics": {
@@ -93,8 +93,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 69,
-            "score": 66
+            "total_attempts": 73,
+            "score": 70
+        },
+        "daily": {
+            "total_attempts": 61,
+            "score": 58
         }
     }
 }

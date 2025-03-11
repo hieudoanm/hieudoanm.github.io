@@ -6,14 +6,14 @@
     "name": "Momchil Petkov",
     "username": "momchilpetkov",
     "title": "GM",
-    "followers": 115,
+    "followers": 136,
     "country": "https://api.chess.com/pub/country/BG",
-    "last_online": 1734126779,
+    "last_online": 1741636304,
     "joined": 1519236236,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2848,
-            "date": 1734046118,
-            "rd": 35
+            "rating": 2972,
+            "date": 1741643552,
+            "rd": 28
         },
         "best": {
-            "rating": 3017,
-            "date": 1714579649,
+            "rating": 3041,
+            "date": 1738943365,
             "game": "https://www.chess.com/game/live/107337745065"
         },
         "record": {
-            "win": 5061,
-            "loss": 5644,
-            "draw": 852
+            "win": 5344,
+            "loss": 5960,
+            "draw": 910
         }
     },
     "fide": 2540,

@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35982786.1c3e9bed.200x200o.2dacfee3bed2.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/35982786.ba1b2cfc.200x200o.ffaa0f6252f2.jpg",
     "player_id": 35982786,
     "@id": "https://api.chess.com/pub/player/sergoy",
     "url": "https://www.chess.com/member/sergoy",
     "name": "Sergey Drygalov",
     "username": "sergoy",
     "title": "GM",
-    "followers": 384,
+    "followers": 419,
     "country": "https://api.chess.com/pub/country/KR",
-    "last_online": 1734163827,
+    "last_online": 1741700280,
     "joined": 1496330268,
     "status": "premium",
     "is_streamer": false,
@@ -32,8 +32,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2571,
-            "date": 1727366988,
-            "rd": 45
+            "date": 1739954022,
+            "rd": 49
         },
         "best": {
             "rating": 2624,
@@ -41,7 +41,7 @@
             "game": "https://www.chess.com/game/live/100462500901"
         },
         "record": {
-            "win": 49,
+            "win": 51,
             "loss": 31,
             "draw": 24
         }
@@ -65,19 +65,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2945,
-            "date": 1734062917,
-            "rd": 33
+            "rating": 3031,
+            "date": 1741608735,
+            "rd": 41
         },
         "best": {
-            "rating": 3095,
-            "date": 1730021929,
+            "rating": 3104,
+            "date": 1739291434,
             "game": "https://www.chess.com/game/live/102727841521"
         },
         "record": {
-            "win": 3841,
-            "loss": 2449,
-            "draw": 684
+            "win": 4013,
+            "loss": 2539,
+            "draw": 708
         }
     },
     "tactics": {

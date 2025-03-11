@@ -6,9 +6,9 @@
     "name": "Vasyl Ivanchuk",
     "username": "viviania",
     "title": "GM",
-    "followers": 1085,
+    "followers": 1123,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1725384939,
+    "last_online": 1741279682,
     "joined": 1412187570,
     "status": "premium",
     "is_streamer": false,
@@ -51,8 +51,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2904,
-            "date": 1713892325,
+            "rating": 2898,
+            "date": 1739318794,
             "rd": 46
         },
         "best": {
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/56219064625"
         },
         "record": {
-            "win": 257,
-            "loss": 58,
-            "draw": 50
+            "win": 265,
+            "loss": 62,
+            "draw": 52
         }
     },
     "fide": 2678,

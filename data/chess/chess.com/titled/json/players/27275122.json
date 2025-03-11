@@ -6,9 +6,9 @@
     "name": "Christophe Sochacki",
     "username": "lastreetcmamaison",
     "title": "GM",
-    "followers": 58,
+    "followers": 59,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1732563143,
+    "last_online": 1740084234,
     "joined": 1458177604,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2665,
-            "date": 1722703809,
-            "rd": 46
+            "rating": 2658,
+            "date": 1739906576,
+            "rd": 49
         },
         "best": {
             "rating": 2874,
@@ -64,24 +64,24 @@
         },
         "record": {
             "win": 1832,
-            "loss": 1358,
+            "loss": 1359,
             "draw": 176
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2565,
-            "date": 1725220094,
-            "rd": 47
+            "rating": 2660,
+            "date": 1740095808,
+            "rd": 45
         },
         "best": {
             "rating": 2801,
             "date": 1637694456,
-            "game": "https://www.chess.com/game/live/73756478991"
+            "game": "https://www.chess.com/game/live/131842231061"
         },
         "record": {
-            "win": 504,
-            "loss": 350,
+            "win": 525,
+            "loss": 362,
             "draw": 70
         }
     },

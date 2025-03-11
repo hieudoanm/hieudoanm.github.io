@@ -5,9 +5,9 @@
     "name": "Alexander Khlebovich",
     "username": "alexander_khlebovich",
     "title": "IM",
-    "followers": 26,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1734158219,
+    "last_online": 1740986973,
     "joined": 1573921890,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2739,
-            "date": 1732661753,
-            "rd": 45
+            "rating": 2815,
+            "date": 1738790256
         },
         "best": {
             "rating": 2903,
@@ -43,9 +42,9 @@
             "game": "https://www.chess.com/game/live/123976254807"
         },
         "record": {
-            "win": 354,
-            "loss": 254,
-            "draw": 86
+            "win": 392,
+            "loss": 273,
+            "draw": 95
         }
     },
     "tactics": {
@@ -60,12 +59,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 57,
-            "score": 54
-        },
-        "daily": {
-            "total_attempts": 52,
-            "score": 49
+            "total_attempts": 58,
+            "score": 55
         }
     }
 }

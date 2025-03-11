@@ -6,10 +6,10 @@
     "name": "Jeffery Xiong",
     "username": "jefferyx",
     "title": "GM",
-    "followers": 2069,
+    "followers": 2131,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Dallas",
-    "last_online": 1734137894,
+    "last_online": 1741675956,
     "joined": 1365648529,
     "status": "premium",
     "is_streamer": true,
@@ -60,9 +60,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2978,
-            "date": 1731370245,
-            "rd": 29
+            "rating": 2990,
+            "date": 1741460369,
+            "rd": 36
         },
         "best": {
             "rating": 3211,
@@ -70,26 +70,26 @@
             "game": "https://www.chess.com/game/live/6007385935"
         },
         "record": {
-            "win": 721,
-            "loss": 378,
-            "draw": 109
+            "win": 764,
+            "loss": 400,
+            "draw": 110
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3076,
-            "date": 1733875819,
-            "rd": 35
+            "rating": 2999,
+            "date": 1741111950,
+            "rd": 45
         },
         "best": {
             "rating": 3142,
             "date": 1724195124,
-            "game": "https://www.chess.com/game/live/117326449305"
+            "game": "https://www.chess.com/game/live/131238620011"
         },
         "record": {
-            "win": 2505,
-            "loss": 738,
-            "draw": 599
+            "win": 2602,
+            "loss": 773,
+            "draw": 617
         }
     },
     "fide": 2550,
@@ -107,10 +107,6 @@
         "best": {
             "total_attempts": 148,
             "score": 145
-        },
-        "daily": {
-            "total_attempts": 57,
-            "score": 54
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Alan Stein",
     "username": "aliencowboy",
     "title": "IM",
-    "followers": 874,
+    "followers": 887,
     "country": "https://api.chess.com/pub/country/US",
     "location": "New York City",
-    "last_online": 1734115894,
+    "last_online": 1741636954,
     "joined": 1302915125,
     "status": "premium",
     "is_streamer": false,
@@ -49,26 +49,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2600,
-            "date": 1734156508,
-            "rd": 22
+            "rating": 2566,
+            "date": 1741673671,
+            "rd": 31
         },
         "best": {
-            "rating": 2676,
-            "date": 1733883773,
+            "rating": 2709,
+            "date": 1734237484,
             "game": "https://www.chess.com/game/live/1548042233"
         },
         "record": {
-            "win": 23757,
-            "loss": 19270,
-            "draw": 2173
+            "win": 23870,
+            "loss": 19366,
+            "draw": 2185
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2559,
-            "date": 1733561883,
-            "rd": 25
+            "rating": 2602,
+            "date": 1741542066,
+            "rd": 23
         },
         "best": {
             "rating": 2747,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/96692825505"
         },
         "record": {
-            "win": 37824,
-            "loss": 29458,
-            "draw": 5731
+            "win": 38799,
+            "loss": 30235,
+            "draw": 5855
         }
     },
     "fide": 2400,

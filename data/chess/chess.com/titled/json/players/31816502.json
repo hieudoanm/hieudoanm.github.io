@@ -5,9 +5,9 @@
     "name": "Anar Allahverdiyev",
     "username": "anich75",
     "title": "IM",
-    "followers": 30,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/AZ",
-    "last_online": 1723019799,
+    "last_online": 1740811037,
     "joined": 1482495979,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_rapid": {
         "last": {
             "rating": 1941,
-            "date": 1718808462,
+            "date": 1738936363,
             "rd": 193
         },
         "best": {
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2518,
-            "date": 1718732111,
-            "rd": 50
+            "rating": 2519,
+            "date": 1735997091,
+            "rd": 49
         },
         "best": {
             "rating": 2668,
@@ -62,7 +62,7 @@
         "record": {
             "win": 41,
             "loss": 23,
-            "draw": 5
+            "draw": 6
         }
     },
     "fide": 0,

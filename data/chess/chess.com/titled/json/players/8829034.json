@@ -6,10 +6,10 @@
     "name": "Sam Sevian",
     "username": "konavets",
     "title": "GM",
-    "followers": 1168,
+    "followers": 1236,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Mass",
-    "last_online": 1734122123,
+    "last_online": 1741649629,
     "joined": 1347084219,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2669,
-            "date": 1727365474,
-            "rd": 45
+            "rating": 2690,
+            "date": 1739906053,
+            "rd": 44
         },
         "best": {
             "rating": 2776,
@@ -47,43 +47,43 @@
             "game": "https://www.chess.com/game/live/45684673131"
         },
         "record": {
-            "win": 161,
-            "loss": 74,
-            "draw": 133
+            "win": 167,
+            "loss": 78,
+            "draw": 139
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3155,
-            "date": 1732388294,
-            "rd": 33
+            "rating": 3141,
+            "date": 1741460309,
+            "rd": 25
         },
         "best": {
             "rating": 3218,
             "date": 1717173954,
-            "game": "https://www.chess.com/game/live/68672104441"
+            "game": "https://www.chess.com/game/live/132169216435"
         },
         "record": {
-            "win": 1551,
-            "loss": 768,
-            "draw": 169
+            "win": 2185,
+            "loss": 918,
+            "draw": 210
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3141,
-            "date": 1734125861,
+            "rating": 3137,
+            "date": 1741651072,
             "rd": 33
         },
         "best": {
-            "rating": 3189,
-            "date": 1707154284,
+            "rating": 3193,
+            "date": 1740528320,
             "game": "https://www.chess.com/game/live/5175078808"
         },
         "record": {
-            "win": 3961,
-            "loss": 1960,
-            "draw": 742
+            "win": 4244,
+            "loss": 2083,
+            "draw": 792
         }
     },
     "fide": 2511,

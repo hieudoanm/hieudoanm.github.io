@@ -6,9 +6,9 @@
     "name": "Wei Yi",
     "username": "lovevae",
     "title": "GM",
-    "followers": 1474,
+    "followers": 1591,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734153738,
+    "last_online": 1741662789,
     "joined": 1458315576,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2740,
-            "date": 1684087805,
-            "rd": 58
+            "rating": 2747,
+            "date": 1739985997,
+            "rd": 44
         },
         "best": {
             "rating": 2895,
@@ -46,33 +46,33 @@
             "game": "https://www.chess.com/game/live/5906991671"
         },
         "record": {
-            "win": 50,
-            "loss": 21,
-            "draw": 46
+            "win": 58,
+            "loss": 25,
+            "draw": 51
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3085,
-            "date": 1728904225,
-            "rd": 42
+            "rating": 3047,
+            "date": 1739987478,
+            "rd": 38
         },
         "best": {
-            "rating": 3105,
-            "date": 1727990806,
+            "rating": 3121,
+            "date": 1739719473,
             "game": "https://www.chess.com/game/live/3901791328"
         },
         "record": {
-            "win": 1059,
-            "loss": 491,
-            "draw": 124
+            "win": 1086,
+            "loss": 514,
+            "draw": 127
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3119,
-            "date": 1734058731,
-            "rd": 48
+            "rating": 3089,
+            "date": 1736878156,
+            "rd": 44
         },
         "best": {
             "rating": 3129,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/65349586733"
         },
         "record": {
-            "win": 591,
-            "loss": 299,
-            "draw": 138
+            "win": 614,
+            "loss": 311,
+            "draw": 146
         }
     },
     "tactics": {

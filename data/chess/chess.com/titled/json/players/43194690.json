@@ -6,10 +6,10 @@
     "name": "Vincent Keymer",
     "username": "vincentkeymer",
     "title": "GM",
-    "followers": 2824,
+    "followers": 3104,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Saulheim",
-    "last_online": 1734036978,
+    "last_online": 1741369659,
     "joined": 1518259553,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2773,
-            "date": 1727799848,
-            "rd": 42
+            "rating": 2733,
+            "date": 1739819859,
+            "rd": 47
         },
         "best": {
             "rating": 2820,
@@ -28,15 +28,15 @@
             "game": "https://www.chess.com/game/live/109191107247"
         },
         "record": {
-            "win": 108,
-            "loss": 54,
-            "draw": 60
+            "win": 111,
+            "loss": 57,
+            "draw": 63
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3015,
-            "date": 1732190456,
+            "rating": 3008,
+            "date": 1735743111,
             "rd": 49
         },
         "best": {
@@ -46,15 +46,15 @@
         },
         "record": {
             "win": 1676,
-            "loss": 1782,
+            "loss": 1783,
             "draw": 270
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3109,
-            "date": 1734040278,
-            "rd": 31
+            "rating": 3116,
+            "date": 1738617610,
+            "rd": 42
         },
         "best": {
             "rating": 3178,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/120954633537"
         },
         "record": {
-            "win": 3335,
-            "loss": 2799,
-            "draw": 952
+            "win": 3384,
+            "loss": 2844,
+            "draw": 967
         }
     },
     "tactics": {

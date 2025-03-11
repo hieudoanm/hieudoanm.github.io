@@ -5,10 +5,10 @@
     "name": "Shreyas Royal",
     "username": "mjray79",
     "title": "GM",
-    "followers": 140,
+    "followers": 145,
     "country": "https://api.chess.com/pub/country/XE",
     "location": "London",
-    "last_online": 1733929693,
+    "last_online": 1741624373,
     "joined": 1523822652,
     "status": "premium",
     "is_streamer": false,
@@ -66,7 +66,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2837,
-            "date": 1733856450,
+            "date": 1741367071,
             "rd": 39
         },
         "best": {

@@ -6,10 +6,10 @@
     "name": "Ronen Har-Zvi",
     "username": "oldweakgm",
     "title": "GM",
-    "followers": 67,
+    "followers": 70,
     "country": "https://api.chess.com/pub/country/IL",
     "location": "Ramat-Gan",
-    "last_online": 1733958284,
+    "last_online": 1741697495,
     "joined": 1262374296,
     "status": "premium",
     "is_streamer": false,
@@ -33,7 +33,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2392,
-            "date": 1731367354,
+            "date": 1739733575,
             "rd": 49
         },
         "best": {
@@ -49,9 +49,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2785,
-            "date": 1722880583,
-            "rd": 49
+            "rating": 2763,
+            "date": 1741697926,
+            "rd": 45
         },
         "best": {
             "rating": 2890,
@@ -59,9 +59,9 @@
             "game": "https://www.chess.com/game/live/93466244345"
         },
         "record": {
-            "win": 340,
-            "loss": 158,
-            "draw": 30
+            "win": 347,
+            "loss": 163,
+            "draw": 32
         }
     },
     "chess_blitz": {

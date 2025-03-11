@@ -6,14 +6,14 @@
     "name": "Ali Bitalzadeh",
     "username": "arashy_cc",
     "title": "IM",
-    "followers": 227,
+    "followers": 241,
     "country": "https://api.chess.com/pub/country/IR",
-    "last_online": 1723062103,
+    "last_online": 1741444581,
     "joined": 1338540177,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,26 +36,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2527,
-            "date": 1717234759,
-            "rd": 38
+            "rating": 2466,
+            "date": 1741387300,
+            "rd": 20
         },
         "best": {
-            "rating": 2584,
-            "date": 1499600700,
+            "rating": 2641,
+            "date": 1739544519,
             "game": "https://www.chess.com/game/live/2844252913"
         },
         "record": {
-            "win": 8360,
-            "loss": 7625,
-            "draw": 965
+            "win": 8672,
+            "loss": 8030,
+            "draw": 1003
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2567,
-            "date": 1720719558,
-            "rd": 31
+            "rating": 2514,
+            "date": 1740503295,
+            "rd": 48
         },
         "best": {
             "rating": 2637,
@@ -63,8 +63,8 @@
             "game": "https://www.chess.com/game/live/4594038575"
         },
         "record": {
-            "win": 1291,
-            "loss": 1023,
+            "win": 1294,
+            "loss": 1030,
             "draw": 176
         }
     },
@@ -81,8 +81,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 41,
-            "score": 38
+            "total_attempts": 49,
+            "score": 46
         }
     }
 }

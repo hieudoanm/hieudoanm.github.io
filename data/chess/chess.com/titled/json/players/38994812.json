@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/38994812.3669fb51.200x200o.e649a31a1d7e.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/38994812.35a18e56.200x200o.cbd8dd2da800.jpg",
     "player_id": 38994812,
     "@id": "https://api.chess.com/pub/player/mrtattaglia",
     "url": "https://www.chess.com/member/MrTattaglia",
     "name": "Adam Kozak",
     "username": "mrtattaglia",
     "title": "GM",
-    "followers": 331,
+    "followers": 358,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734157312,
+    "last_online": 1741695937,
     "joined": 1506539673,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2587,
-            "date": 1715620822,
-            "rd": 42
+            "rating": 2563,
+            "date": 1739812493,
+            "rd": 48
         },
         "best": {
             "rating": 2732,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/109275690593"
         },
         "record": {
-            "win": 56,
-            "loss": 35,
+            "win": 57,
+            "loss": 38,
             "draw": 32
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3007,
-            "date": 1734097334,
-            "rd": 42
+            "rating": 2930,
+            "date": 1741459762,
+            "rd": 32
         },
         "best": {
             "rating": 3246,
@@ -63,32 +63,32 @@
             "game": "https://www.chess.com/game/live/43772175857"
         },
         "record": {
-            "win": 7369,
-            "loss": 5557,
-            "draw": 727
+            "win": 7514,
+            "loss": 5655,
+            "draw": 735
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3010,
-            "date": 1734106849,
-            "rd": 27
+            "rating": 3017,
+            "date": 1741389085,
+            "rd": 30
         },
         "best": {
-            "rating": 3084,
-            "date": 1731363595,
+            "rating": 3085,
+            "date": 1736164679,
             "game": "https://www.chess.com/game/live/124654114651"
         },
         "record": {
-            "win": 4120,
-            "loss": 3232,
-            "draw": 708
+            "win": 4483,
+            "loss": 3461,
+            "draw": 768
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3668,
-            "date": 1730107785
+            "rating": 3820,
+            "date": 1739871434
         },
         "lowest": {
             "rating": 1212,
@@ -99,6 +99,10 @@
         "best": {
             "total_attempts": 67,
             "score": 64
+        },
+        "daily": {
+            "total_attempts": 46,
+            "score": 43
         }
     }
 }

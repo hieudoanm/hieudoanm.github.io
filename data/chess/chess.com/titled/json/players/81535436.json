@@ -6,9 +6,9 @@
     "name": "David Anton Guijarro",
     "username": "tptagain",
     "title": "GM",
-    "followers": 642,
+    "followers": 698,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734180565,
+    "last_online": 1741703837,
     "joined": 1591350311,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2648,
-            "date": 1727624874,
-            "rd": 44
+            "rating": 2633,
+            "date": 1739819879,
+            "rd": 46
         },
         "best": {
             "rating": 2746,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/100469605011"
         },
         "record": {
-            "win": 95,
-            "loss": 61,
-            "draw": 83
+            "win": 98,
+            "loss": 65,
+            "draw": 85
         }
     },
     "chess_bullet": {
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2947,
-            "date": 1733780545,
-            "rd": 28
+            "rating": 3033,
+            "date": 1741703054,
+            "rd": 26
         },
         "best": {
             "rating": 3117,
             "date": 1727798215,
-            "game": "https://www.chess.com/game/live/119119282427"
+            "game": "https://www.chess.com/game/live/131241601785"
         },
         "record": {
-            "win": 3642,
-            "loss": 2023,
-            "draw": 742
+            "win": 4183,
+            "loss": 2227,
+            "draw": 829
         }
     },
     "tactics": {

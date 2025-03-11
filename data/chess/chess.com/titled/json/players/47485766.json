@@ -6,10 +6,10 @@
     "name": "Jan-Krzysztof Duda",
     "username": "polish_fighter3000",
     "title": "GM",
-    "followers": 7814,
+    "followers": 8131,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Krak\u00f3w",
-    "last_online": 1734035005,
+    "last_online": 1741125539,
     "joined": 1530287021,
     "status": "premium",
     "is_streamer": false,
@@ -18,26 +18,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2739,
-            "date": 1727455988,
-            "rd": 45
+            "rating": 2778,
+            "date": 1740073012,
+            "rd": 41
         },
         "best": {
             "rating": 2997,
             "date": 1598121334,
-            "game": "https://www.chess.com/game/live/115142977915"
+            "game": "https://www.chess.com/game/live/133807144763"
         },
         "record": {
-            "win": 59,
-            "loss": 29,
-            "draw": 38
+            "win": 71,
+            "loss": 36,
+            "draw": 44
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3070,
-            "date": 1728427762,
-            "rd": 34
+            "rating": 3094,
+            "date": 1737921583,
+            "rd": 39
         },
         "best": {
             "rating": 3248,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/4269572840"
         },
         "record": {
-            "win": 3631,
-            "loss": 2478,
-            "draw": 377
+            "win": 3671,
+            "loss": 2485,
+            "draw": 383
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3117,
-            "date": 1731456225,
-            "rd": 38
+            "rating": 3200,
+            "date": 1741133125,
+            "rd": 36
         },
         "best": {
-            "rating": 3198,
-            "date": 1712701565,
+            "rating": 3210,
+            "date": 1741109227,
             "game": "https://www.chess.com/game/live/125170731093"
         },
         "record": {
-            "win": 2692,
-            "loss": 1247,
-            "draw": 507
+            "win": 2793,
+            "loss": 1271,
+            "draw": 530
         }
     },
     "fide": 2731,

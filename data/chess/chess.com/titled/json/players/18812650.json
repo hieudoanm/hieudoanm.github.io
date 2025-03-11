@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/18812650.b170eec8.200x200o.87362ea2b6f5.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/18812650.80124def.200x200o.b1ecd6dfd75a.jpg",
     "player_id": 18812650,
     "@id": "https://api.chess.com/pub/player/theredking89",
     "url": "https://www.chess.com/member/theredking89",
     "name": "Juan Carlos Obregon Rivero",
     "username": "theredking89",
     "title": "GM",
-    "followers": 1064,
+    "followers": 1193,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1733990180,
+    "last_online": 1741663908,
     "joined": 1410135802,
     "status": "premium",
     "is_streamer": false,
@@ -31,26 +31,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2659,
-            "date": 1725126041,
-            "rd": 39
+            "rating": 2728,
+            "date": 1738254411,
+            "rd": 28
         },
         "best": {
-            "rating": 2788,
-            "date": 1711335361,
+            "rating": 2800,
+            "date": 1738251120,
             "game": "https://www.chess.com/game/live/88622005329"
         },
         "record": {
-            "win": 544,
-            "loss": 454,
-            "draw": 74
+            "win": 600,
+            "loss": 499,
+            "draw": 83
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2745,
-            "date": 1733993101,
-            "rd": 32
+            "rating": 2822,
+            "date": 1741419655,
+            "rd": 27
         },
         "best": {
             "rating": 2992,
@@ -58,9 +58,9 @@
             "game": "https://www.chess.com/game/live/118398516233"
         },
         "record": {
-            "win": 9534,
-            "loss": 8626,
-            "draw": 1885
+            "win": 9826,
+            "loss": 8923,
+            "draw": 1937
         }
     },
     "fide": 2483,

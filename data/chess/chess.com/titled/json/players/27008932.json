@@ -1,16 +1,17 @@
 {
     "player_id": 27008932,
-    "@id": "https://api.chess.com/pub/player/alexchess1062",
-    "url": "https://www.chess.com/member/alexchess1062",
-    "username": "alexchess1062",
+    "@id": "https://api.chess.com/pub/player/korgissehc",
+    "url": "https://www.chess.com/member/korgissehc",
+    "username": "korgissehc",
     "title": "GM",
-    "followers": 36,
-    "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1628116799,
+    "followers": 42,
+    "country": "https://api.chess.com/pub/country/EU",
+    "last_online": 1741651249,
     "joined": 1456815851,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -31,25 +32,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3018,
-            "date": 1628101181,
-            "rd": 107
+            "rating": 3140,
+            "date": 1741656255,
+            "rd": 28
         },
         "best": {
-            "rating": 3103,
-            "date": 1578077387,
-            "game": "https://www.chess.com/game/live/4652907803"
+            "rating": 3183,
+            "date": 1741041164,
+            "game": "https://www.chess.com/game/live/132951617389"
         },
         "record": {
-            "win": 462,
-            "loss": 293,
-            "draw": 74
+            "win": 674,
+            "loss": 400,
+            "draw": 113
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3107,
-            "date": 1593058244
+            "rating": 3116,
+            "date": 1738267746
         },
         "lowest": {
             "rating": 1352,

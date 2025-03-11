@@ -6,10 +6,10 @@
     "name": "Aman Hambleton",
     "username": "knvb",
     "title": "GM",
-    "followers": 14986,
+    "followers": 15192,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto",
-    "last_online": 1734131097,
+    "last_online": 1741640253,
     "joined": 1292185376,
     "status": "premium",
     "is_streamer": true,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2645,
-            "date": 1733960126,
+            "rating": 2669,
+            "date": 1741536443,
             "rd": 49
         },
         "best": {
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/118447718201"
         },
         "record": {
-            "win": 166,
-            "loss": 33,
-            "draw": 15
+            "win": 196,
+            "loss": 40,
+            "draw": 16
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3068,
-            "date": 1734129227,
-            "rd": 20
+            "rating": 3107,
+            "date": 1741538335,
+            "rd": 28
         },
         "best": {
             "rating": 3201,
@@ -64,26 +64,26 @@
             "game": "https://www.chess.com/game/live/71091359605"
         },
         "record": {
-            "win": 25411,
-            "loss": 11645,
-            "draw": 2260
+            "win": 26462,
+            "loss": 11901,
+            "draw": 2320
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2828,
-            "date": 1734126680,
-            "rd": 26
+            "rating": 2974,
+            "date": 1741545243,
+            "rd": 49
         },
         "best": {
-            "rating": 2906,
-            "date": 1707841240,
+            "rating": 2974,
+            "date": 1737653377,
             "game": "https://www.chess.com/game/live/53892699947"
         },
         "record": {
-            "win": 12769,
-            "loss": 5676,
-            "draw": 1305
+            "win": 12959,
+            "loss": 5763,
+            "draw": 1326
         }
     },
     "fide": 2420,

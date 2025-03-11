@@ -6,9 +6,9 @@
     "name": "Zahar Efimenko",
     "username": "saxar85",
     "title": "GM",
-    "followers": 127,
+    "followers": 131,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1733397006,
+    "last_online": 1741615249,
     "joined": 1579983417,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2789,
-            "date": 1730221651,
-            "rd": 47
+            "rating": 2764,
+            "date": 1736267248,
+            "rd": 49
         },
         "best": {
             "rating": 2818,
@@ -62,8 +62,8 @@
         },
         "record": {
             "win": 282,
-            "loss": 173,
-            "draw": 74
+            "loss": 174,
+            "draw": 76
         }
     },
     "fide": 2601,

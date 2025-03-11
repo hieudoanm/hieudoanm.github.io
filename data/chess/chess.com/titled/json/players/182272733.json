@@ -6,10 +6,10 @@
     "name": "Karthik Rajaa",
     "username": "adapodadei",
     "title": "IM",
-    "followers": 43,
+    "followers": 46,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Tamil Nadu",
-    "last_online": 1734177629,
+    "last_online": 1741675256,
     "joined": 1651406042,
     "status": "premium",
     "is_streamer": false,
@@ -19,8 +19,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2428,
-            "date": 1733076136,
-            "rd": 109
+            "date": 1737828082,
+            "rd": 49
         },
         "best": {
             "rating": 2559,
@@ -28,15 +28,15 @@
             "game": "https://www.chess.com/game/live/46624240135"
         },
         "record": {
-            "win": 18,
+            "win": 24,
             "loss": 3,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2713,
-            "date": 1728908337,
+            "rating": 2699,
+            "date": 1737828620,
             "rd": 49
         },
         "best": {
@@ -46,15 +46,15 @@
         },
         "record": {
             "win": 380,
-            "loss": 198,
+            "loss": 200,
             "draw": 35
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2728,
-            "date": 1729005649,
-            "rd": 49
+            "rating": 2721,
+            "date": 1738085540,
+            "rd": 47
         },
         "best": {
             "rating": 2790,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/70734902309"
         },
         "record": {
-            "win": 809,
-            "loss": 497,
-            "draw": 136
+            "win": 815,
+            "loss": 499,
+            "draw": 138
         }
     },
     "fide": 2353,

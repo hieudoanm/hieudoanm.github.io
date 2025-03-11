@@ -6,30 +6,30 @@
     "name": "Peter Svidler",
     "username": "psvidler",
     "title": "GM",
-    "followers": 908,
+    "followers": 914,
     "country": "https://api.chess.com/pub/country/KN",
-    "last_online": 1733861694,
+    "last_online": 1741103406,
     "joined": 1565893811,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2644,
-            "date": 1715279332,
-            "rd": 45
+            "rating": 2639,
+            "date": 1739820065,
+            "rd": 46
         },
         "best": {
             "rating": 2800,
             "date": 1664043918,
-            "game": "https://www.chess.com/game/live/100716324091"
+            "game": "https://www.chess.com/game/live/133552161259"
         },
         "record": {
-            "win": 34,
-            "loss": 24,
-            "draw": 23
+            "win": 38,
+            "loss": 27,
+            "draw": 25
         }
     },
     "chess_bullet": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2948,
-            "date": 1716309811,
-            "rd": 47
+            "rating": 2863,
+            "date": 1741106278,
+            "rd": 48
         },
         "best": {
             "rating": 3079,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/4726797407"
         },
         "record": {
-            "win": 336,
-            "loss": 108,
-            "draw": 105
+            "win": 344,
+            "loss": 114,
+            "draw": 106
         }
     },
     "fide": 2683,

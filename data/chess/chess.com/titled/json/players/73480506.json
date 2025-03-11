@@ -6,9 +6,9 @@
     "name": "Andrew Hong",
     "username": "speedoflight0",
     "title": "GM",
-    "followers": 356,
+    "followers": 402,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734132052,
+    "last_online": 1740968490,
     "joined": 1584146334,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2541,
-            "date": 1727652878,
-            "rd": 46
+            "rating": 2536,
+            "date": 1739813311,
+            "rd": 48
         },
         "best": {
             "rating": 2738,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/5903894018"
         },
         "record": {
-            "win": 49,
-            "loss": 32,
+            "win": 50,
+            "loss": 35,
             "draw": 16
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3014,
-            "date": 1732104705,
-            "rd": 28
+            "rating": 2941,
+            "date": 1740200059,
+            "rd": 39
         },
         "best": {
             "rating": 3069,
@@ -44,26 +44,26 @@
             "game": "https://www.chess.com/game/live/101930771823"
         },
         "record": {
-            "win": 1390,
-            "loss": 910,
-            "draw": 141
+            "win": 1411,
+            "loss": 939,
+            "draw": 145
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3057,
-            "date": 1734048844,
-            "rd": 24
+            "rating": 3069,
+            "date": 1740528261,
+            "rd": 30
         },
         "best": {
             "rating": 3188,
             "date": 1720512958,
-            "game": "https://www.chess.com/game/live/121559985665"
+            "game": "https://www.chess.com/game/live/129362567795"
         },
         "record": {
-            "win": 1752,
-            "loss": 1056,
-            "draw": 285
+            "win": 1896,
+            "loss": 1208,
+            "draw": 317
         }
     },
     "tactics": {
@@ -80,10 +80,6 @@
         "best": {
             "total_attempts": 79,
             "score": 76
-        },
-        "daily": {
-            "total_attempts": 55,
-            "score": 52
         }
     }
 }

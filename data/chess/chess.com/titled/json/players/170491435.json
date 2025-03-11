@@ -6,10 +6,10 @@
     "name": "Jacek Stopa",
     "username": "jstopa4",
     "title": "GM",
-    "followers": 49,
+    "followers": 51,
     "country": "https://api.chess.com/pub/country/US",
     "location": "El Cerrito",
-    "last_online": 1734104764,
+    "last_online": 1741652191,
     "joined": 1643229081,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1917,
-            "date": 1728473017,
-            "rd": 37
+            "rating": 2017,
+            "date": 1737211122,
+            "rd": 58
         },
         "best": {
             "rating": 2126,
@@ -28,10 +28,10 @@
             "game": "https://www.chess.com/game/daily/702108689"
         },
         "record": {
-            "win": 193,
+            "win": 207,
             "loss": 47,
-            "draw": 30,
-            "time_per_move": 8894,
+            "draw": 31,
+            "time_per_move": 8995,
             "timeout_percent": 0
         }
     },
@@ -54,9 +54,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2786,
-            "date": 1734102803,
-            "rd": 31
+            "rating": 2779,
+            "date": 1737211938,
+            "rd": 26
         },
         "best": {
             "rating": 2845,
@@ -64,15 +64,15 @@
             "game": "https://www.chess.com/game/live/123088886107"
         },
         "record": {
-            "win": 1408,
-            "loss": 1553,
-            "draw": 403
+            "win": 1504,
+            "loss": 1660,
+            "draw": 444
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3566,
-            "date": 1734170820
+            "rating": 3585,
+            "date": 1734538953
         },
         "lowest": {
             "rating": 400,
@@ -83,10 +83,6 @@
         "best": {
             "total_attempts": 51,
             "score": 49
-        },
-        "daily": {
-            "total_attempts": 44,
-            "score": 41
         }
     }
 }

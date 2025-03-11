@@ -6,9 +6,9 @@
     "name": "Pablo Salinas Herrera",
     "username": "xdps",
     "title": "GM",
-    "followers": 2166,
+    "followers": 2227,
     "country": "https://api.chess.com/pub/country/CL",
-    "last_online": 1734131545,
+    "last_online": 1741569410,
     "joined": 1379455231,
     "status": "premium",
     "is_streamer": false,
@@ -48,26 +48,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2965,
-            "date": 1715735151,
-            "rd": 48
+            "rating": 2846,
+            "date": 1735411770,
+            "rd": 36
         },
         "best": {
-            "rating": 2965,
-            "date": 1715735151,
+            "rating": 2982,
+            "date": 1735406380,
             "game": "https://www.chess.com/game/live/6008354605"
         },
         "record": {
-            "win": 1464,
-            "loss": 915,
-            "draw": 171
+            "win": 1496,
+            "loss": 945,
+            "draw": 174
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2904,
-            "date": 1733509141,
-            "rd": 39
+            "rating": 2935,
+            "date": 1741182210,
+            "rd": 40
         },
         "best": {
             "rating": 2966,
@@ -75,15 +75,15 @@
             "game": "https://www.chess.com/game/live/64782116583"
         },
         "record": {
-            "win": 5937,
-            "loss": 3639,
-            "draw": 839
+            "win": 6023,
+            "loss": 3695,
+            "draw": 848
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3316,
-            "date": 1730675738
+            "rating": 3388,
+            "date": 1734965250
         },
         "lowest": {
             "rating": 1208,

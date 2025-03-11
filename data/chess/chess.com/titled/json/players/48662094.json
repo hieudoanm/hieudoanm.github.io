@@ -6,10 +6,10 @@
     "name": "ALEJANDRO NEEDLEMAN",
     "username": "alenee",
     "title": "IM",
-    "followers": 63,
+    "followers": 68,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Mendoza",
-    "last_online": 1733972135,
+    "last_online": 1741213262,
     "joined": 1533964047,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2272,
-            "date": 1728349026,
-            "rd": 113
+            "rating": 2418,
+            "date": 1741224600,
+            "rd": 50
         },
         "best": {
             "rating": 2433,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/44749793689"
         },
         "record": {
-            "win": 311,
-            "loss": 207,
-            "draw": 66
+            "win": 358,
+            "loss": 226,
+            "draw": 70
         }
     },
     "fide": 2338,

@@ -6,14 +6,14 @@
     "name": "Paul Velten",
     "username": "paulvelten",
     "title": "GM",
-    "followers": 106,
+    "followers": 108,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1733754414,
+    "last_online": 1741683498,
     "joined": 1428788238,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,42 +34,42 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2800,
-            "date": 1601497371,
-            "rd": 23
+            "rating": 2904,
+            "date": 1736325325,
+            "rd": 28
         },
         "best": {
-            "rating": 2800,
-            "date": 1601497371,
-            "game": "https://www.chess.com/game/live/5508414807"
+            "rating": 2904,
+            "date": 1736325325,
+            "game": "https://www.chess.com/game/live/130060765279"
         },
         "record": {
-            "win": 222,
-            "loss": 56,
-            "draw": 9
+            "win": 310,
+            "loss": 106,
+            "draw": 16
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2861,
-            "date": 1675972329,
-            "rd": 55
+            "rating": 2907,
+            "date": 1735051179,
+            "rd": 26
         },
         "best": {
-            "rating": 2861,
-            "date": 1675972329,
-            "game": "https://www.chess.com/game/live/5523090077"
+            "rating": 2934,
+            "date": 1734822716,
+            "game": "https://www.chess.com/game/live/128563395139"
         },
         "record": {
-            "win": 205,
-            "loss": 99,
-            "draw": 18
+            "win": 280,
+            "loss": 158,
+            "draw": 33
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3109,
-            "date": 1603880528
+            "rating": 3723,
+            "date": 1741685455
         },
         "lowest": {
             "rating": 1209,

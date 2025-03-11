@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/OutOfAces",
     "username": "outofaces",
     "title": "GM",
-    "followers": 44,
+    "followers": 48,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734147696,
+    "last_online": 1741286110,
     "joined": 1618459372,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2342,
-            "date": 1731610366,
-            "rd": 87
+            "rating": 2371,
+            "date": 1739253177,
+            "rd": 88
         },
         "best": {
             "rating": 2740,
@@ -42,26 +42,26 @@
             "game": "https://www.chess.com/game/live/17032927785"
         },
         "record": {
-            "win": 183,
-            "loss": 184,
-            "draw": 47
+            "win": 185,
+            "loss": 185,
+            "draw": 48
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2701,
-            "date": 1734153735,
-            "rd": 20
+            "rating": 2705,
+            "date": 1741286483,
+            "rd": 26
         },
         "best": {
             "rating": 2865,
             "date": 1732425548,
-            "game": "https://www.chess.com/game/live/126163756783"
+            "game": "https://www.chess.com/game/live/129420213297"
         },
         "record": {
-            "win": 6323,
-            "loss": 6059,
-            "draw": 2210
+            "win": 7065,
+            "loss": 6773,
+            "draw": 2434
         }
     },
     "tactics": {

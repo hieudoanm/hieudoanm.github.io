@@ -5,10 +5,10 @@
     "name": "Osvaldo Zambrana",
     "username": "locotito77",
     "title": "GM",
-    "followers": 38,
+    "followers": 40,
     "country": "https://api.chess.com/pub/country/BO",
     "location": "Sucre - Bolivia",
-    "last_online": 1733660249,
+    "last_online": 1741283129,
     "joined": 1587319735,
     "status": "premium",
     "is_streamer": false,
@@ -52,7 +52,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2522,
-            "date": 1729699483,
+            "date": 1739633443,
             "rd": 48
         },
         "best": {

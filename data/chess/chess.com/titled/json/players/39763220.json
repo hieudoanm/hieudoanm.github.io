@@ -6,9 +6,9 @@
     "name": "Leandro Krysa",
     "username": "olksuna",
     "title": "GM",
-    "followers": 237,
+    "followers": 247,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1733850243,
+    "last_online": 1741646821,
     "joined": 1508956991,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2725,
-            "date": 1703009367,
-            "rd": 52
+            "rating": 2808,
+            "date": 1741186482,
+            "rd": 45
         },
         "best": {
-            "rating": 2780,
-            "date": 1700608419,
+            "rating": 2821,
+            "date": 1740521871,
             "game": "https://www.chess.com/game/live/94347098207"
         },
         "record": {
-            "win": 625,
-            "loss": 409,
-            "draw": 134
+            "win": 663,
+            "loss": 425,
+            "draw": 146
         }
     },
     "tactics": {

@@ -6,14 +6,14 @@
     "name": "Kamil Miton",
     "username": "kamilek84",
     "title": "GM",
-    "followers": 24,
+    "followers": 55,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1725468165,
+    "last_online": 1741517254,
     "joined": 1584957034,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -34,19 +34,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2733,
-            "date": 1706203760,
-            "rd": 39
+            "rating": 2910,
+            "date": 1741178804,
+            "rd": 24
         },
         "best": {
-            "rating": 2788,
-            "date": 1615767555,
+            "rating": 2867,
+            "date": 1740575355,
             "game": "https://www.chess.com/game/live/4674021871"
         },
         "record": {
-            "win": 223,
-            "loss": 147,
-            "draw": 40
+            "win": 352,
+            "loss": 247,
+            "draw": 76
         }
     },
     "tactics": {

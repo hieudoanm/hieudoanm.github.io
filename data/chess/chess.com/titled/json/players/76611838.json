@@ -5,9 +5,9 @@
     "name": "Alexandre Qashashvili",
     "username": "qashashvilialexandre",
     "title": "GM",
-    "followers": 21,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1733979764,
+    "last_online": 1741614166,
     "joined": 1586806073,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2255,
-            "date": 1654866673,
-            "rd": 42
+            "rating": 2293,
+            "date": 1738074666,
+            "rd": 136
         },
         "best": {
             "rating": 2462,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/46176554261"
         },
         "record": {
-            "win": 652,
-            "loss": 383,
+            "win": 654,
+            "loss": 384,
             "draw": 73
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2255,
-            "date": 1731159519,
-            "rd": 122
+            "rating": 2163,
+            "date": 1741070806,
+            "rd": 115
         },
         "best": {
             "rating": 2409,
@@ -61,14 +61,14 @@
         },
         "record": {
             "win": 344,
-            "loss": 342,
-            "draw": 128
+            "loss": 344,
+            "draw": 129
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3026,
-            "date": 1732050672
+            "rating": 3037,
+            "date": 1736433823
         },
         "lowest": {
             "rating": 815,
@@ -77,8 +77,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 80,
-            "score": 77
+            "total_attempts": 116,
+            "score": 113
         }
     }
 }

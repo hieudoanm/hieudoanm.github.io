@@ -6,9 +6,9 @@
     "name": "Li Min Peng",
     "username": "peng_li-min",
     "title": "GM",
-    "followers": 177,
+    "followers": 179,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1734015804,
+    "last_online": 1741702755,
     "joined": 1503732044,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2902,
-            "date": 1727648651,
-            "rd": 34
+            "rating": 2922,
+            "date": 1741547061,
+            "rd": 48
         },
         "best": {
             "rating": 2902,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/84224338221"
         },
         "record": {
-            "win": 1333,
+            "win": 1335,
             "loss": 958,
-            "draw": 249
+            "draw": 251
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2782,
-            "date": 1733542021,
-            "rd": 30
+            "rating": 2800,
+            "date": 1741637990,
+            "rd": 34
         },
         "best": {
             "rating": 2951,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/125776108727"
         },
         "record": {
-            "win": 1447,
-            "loss": 1063,
-            "draw": 516
+            "win": 1536,
+            "loss": 1159,
+            "draw": 547
         }
     },
     "tactics": {

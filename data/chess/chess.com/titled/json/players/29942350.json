@@ -6,10 +6,10 @@
     "name": "Semen Khanin",
     "username": "semyon_khanin",
     "title": "GM",
-    "followers": 287,
+    "followers": 299,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Lubbock",
-    "last_online": 1734104791,
+    "last_online": 1741703842,
     "joined": 1473926036,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2445,
-            "date": 1729910879,
+            "date": 1739935165,
             "rd": 47
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2861,
-            "date": 1734131834,
-            "rd": 27
+            "rating": 2860,
+            "date": 1740965543,
+            "rd": 30
         },
         "best": {
             "rating": 2970,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/122535871371"
         },
         "record": {
-            "win": 6283,
-            "loss": 5913,
-            "draw": 1531
+            "win": 6460,
+            "loss": 6098,
+            "draw": 1573
         }
     },
     "fide": 2575,

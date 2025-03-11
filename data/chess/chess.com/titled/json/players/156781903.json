@@ -5,10 +5,10 @@
     "name": "Mark Bluvshtein",
     "username": "mbluvshtein",
     "title": "GM",
-    "followers": 5,
+    "followers": 9,
     "country": "https://api.chess.com/pub/country/CA",
     "location": "Toronto",
-    "last_online": 1733748494,
+    "last_online": 1741692703,
     "joined": 1633279623,
     "status": "premium",
     "is_streamer": false,
@@ -36,26 +36,25 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2497,
-            "date": 1732415514,
-            "rd": 48
+            "rating": 2580,
+            "date": 1737257411
         },
         "best": {
-            "rating": 2508,
-            "date": 1732412834,
-            "game": "https://www.chess.com/game/live/126127820513"
+            "rating": 2580,
+            "date": 1737256391,
+            "game": "https://www.chess.com/game/live/130956073925"
         },
         "record": {
-            "win": 7,
-            "loss": 3,
+            "win": 22,
+            "loss": 4,
             "draw": 0
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2677,
-            "date": 1733617960,
-            "rd": 43
+            "rating": 2770,
+            "date": 1741494263,
+            "rd": 31
         },
         "best": {
             "rating": 2798,
@@ -63,9 +62,9 @@
             "game": "https://www.chess.com/game/live/48199242637"
         },
         "record": {
-            "win": 574,
-            "loss": 380,
-            "draw": 108
+            "win": 697,
+            "loss": 450,
+            "draw": 130
         }
     },
     "tactics": {

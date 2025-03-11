@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/quemirasboboandaparaalla",
     "username": "quemirasboboandaparaalla",
     "title": "GM",
-    "followers": 105,
+    "followers": 112,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734017074,
+    "last_online": 1741575602,
     "joined": 1678041648,
     "status": "premium",
     "is_streamer": false,
@@ -16,9 +16,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 3019,
-            "date": 1734157181,
-            "rd": 30
+            "rating": 2980,
+            "date": 1741666018,
+            "rd": 32
         },
         "best": {
             "rating": 3098,
@@ -26,9 +26,9 @@
             "game": "https://www.chess.com/game/live/117520811677"
         },
         "record": {
-            "win": 1242,
-            "loss": 744,
-            "draw": 257
+            "win": 1448,
+            "loss": 897,
+            "draw": 307
         }
     },
     "tactics": {
@@ -43,8 +43,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 65,
-            "score": 62
+            "total_attempts": 71,
+            "score": 68
         }
     }
 }

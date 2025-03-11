@@ -6,9 +6,9 @@
     "name": "\u8521\u4f9d\u6797",
     "username": "jolintsai",
     "title": "GM",
-    "followers": 2143,
+    "followers": 2444,
     "country": "https://api.chess.com/pub/country/TW",
-    "last_online": 1734140400,
+    "last_online": 1741702264,
     "joined": 1484816541,
     "status": "premium",
     "is_streamer": false,
@@ -17,20 +17,20 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2568,
-            "date": 1733899335,
-            "rd": 97
+            "rating": 2569,
+            "date": 1741507603,
+            "rd": 108
         },
         "best": {
-            "rating": 2568,
-            "date": 1732207078,
+            "rating": 2569,
+            "date": 1738114439,
             "game": "https://www.chess.com/game/daily/533652821"
         },
         "record": {
-            "win": 454,
+            "win": 455,
             "loss": 9,
             "draw": 52,
-            "time_per_move": 16150,
+            "time_per_move": 16457,
             "timeout_percent": 0
         }
     },
@@ -49,7 +49,7 @@
             "win": 50,
             "loss": 3,
             "draw": 1,
-            "time_per_move": 16150,
+            "time_per_move": 16457,
             "timeout_percent": 0
         }
     },

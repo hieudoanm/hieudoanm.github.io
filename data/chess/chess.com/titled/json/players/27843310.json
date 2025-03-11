@@ -6,10 +6,10 @@
     "name": "Vitaly Kunin",
     "username": "rumpel-vk",
     "title": "GM",
-    "followers": 191,
+    "followers": 201,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Darmstadt",
-    "last_online": 1734128822,
+    "last_online": 1741685373,
     "joined": 1461229405,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2545,
-            "date": 1729028358,
-            "rd": 48
+            "rating": 2539,
+            "date": 1735057483,
+            "rd": 49
         },
         "best": {
             "rating": 2655,
@@ -82,8 +82,8 @@
         },
         "record": {
             "win": 205,
-            "loss": 146,
-            "draw": 42
+            "loss": 148,
+            "draw": 43
         }
     },
     "fide": 2527,

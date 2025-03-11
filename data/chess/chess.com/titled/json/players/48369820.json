@@ -6,14 +6,14 @@
     "name": "Arseny Alavkin",
     "username": "niktlt",
     "title": "GM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1731774977,
+    "last_online": 1741453838,
     "joined": 1533111691,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -29,9 +29,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2365,
-            "date": 1731778915,
-            "rd": 54
+            "rating": 2580,
+            "date": 1741458455,
+            "rd": 30
         },
         "best": {
             "rating": 2808,
@@ -39,15 +39,15 @@
             "game": "https://www.chess.com/game/live/24504713667"
         },
         "record": {
-            "win": 373,
-            "loss": 290,
-            "draw": 36
+            "win": 502,
+            "loss": 432,
+            "draw": 60
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2452,
-            "date": 1729614868,
+            "rating": 2444,
+            "date": 1741365052,
             "rd": 48
         },
         "best": {
@@ -56,9 +56,9 @@
             "game": "https://www.chess.com/game/live/117926405811"
         },
         "record": {
-            "win": 311,
-            "loss": 227,
-            "draw": 65
+            "win": 334,
+            "loss": 263,
+            "draw": 74
         }
     },
     "tactics": {

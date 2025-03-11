@@ -5,9 +5,9 @@
     "name": "Lalit Babu MR",
     "username": "itachiuchiha999",
     "title": "GM",
-    "followers": 84,
+    "followers": 87,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734017666,
+    "last_online": 1741692053,
     "joined": 1586846417,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2607,
-            "date": 1721238214,
+            "date": 1740417747,
             "rd": 47
         },
         "best": {
@@ -34,7 +34,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2680,
-            "date": 1727198479,
+            "date": 1740416574,
             "rd": 49
         },
         "best": {
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2829,
-            "date": 1727198866,
-            "rd": 49
+            "rating": 2793,
+            "date": 1736183558,
+            "rd": 44
         },
         "best": {
             "rating": 2961,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/74505746059"
         },
         "record": {
-            "win": 113,
-            "loss": 74,
-            "draw": 9
+            "win": 118,
+            "loss": 83,
+            "draw": 11
         }
     },
     "fide": 0,
@@ -80,6 +80,10 @@
         "best": {
             "total_attempts": 68,
             "score": 65
+        },
+        "daily": {
+            "total_attempts": 64,
+            "score": 61
         }
     }
 }

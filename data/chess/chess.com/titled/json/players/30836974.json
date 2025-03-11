@@ -6,9 +6,9 @@
     "name": "Rinat Jumabayev",
     "username": "jumbo",
     "title": "GM",
-    "followers": 715,
-    "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1734113702,
+    "followers": 794,
+    "country": "https://api.chess.com/pub/country/KZ",
+    "last_online": 1741702596,
     "joined": 1478787065,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2505,
-            "date": 1727292653,
-            "rd": 46
+            "rating": 2481,
+            "date": 1739815395,
+            "rd": 47
         },
         "best": {
             "rating": 2730,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/5338709466"
         },
         "record": {
-            "win": 82,
-            "loss": 106,
+            "win": 83,
+            "loss": 111,
             "draw": 38
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2842,
-            "date": 1733914505,
-            "rd": 35
+            "rating": 2785,
+            "date": 1741687089,
+            "rd": 18
         },
         "best": {
             "rating": 3003,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/99864785803"
         },
         "record": {
-            "win": 1352,
-            "loss": 1392,
-            "draw": 179
+            "win": 1905,
+            "loss": 1782,
+            "draw": 229
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2923,
-            "date": 1732433357,
-            "rd": 31
+            "rating": 2925,
+            "date": 1741540996,
+            "rd": 34
         },
         "best": {
             "rating": 2978,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/102792064925"
         },
         "record": {
-            "win": 3797,
-            "loss": 3020,
-            "draw": 669
+            "win": 3943,
+            "loss": 3141,
+            "draw": 689
         }
     },
     "tactics": {

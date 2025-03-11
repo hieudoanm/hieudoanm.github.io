@@ -9,7 +9,7 @@
     "followers": 40,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Kolkata",
-    "last_online": 1734021034,
+    "last_online": 1741517878,
     "joined": 1492949579,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2302,
-            "date": 1731122516,
-            "rd": 56
+            "rating": 2289,
+            "date": 1741274626,
+            "rd": 50
         },
         "best": {
             "rating": 2550,
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/121357257315"
         },
         "record": {
-            "win": 49,
-            "loss": 55,
-            "draw": 4
+            "win": 64,
+            "loss": 71,
+            "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2630,
-            "date": 1734163032,
-            "rd": 36
+            "rating": 2685,
+            "date": 1741009573,
+            "rd": 46
         },
         "best": {
             "rating": 2735,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/121072238443"
         },
         "record": {
-            "win": 1775,
-            "loss": 1331,
-            "draw": 269
+            "win": 1814,
+            "loss": 1356,
+            "draw": 279
         }
     },
     "fide": 2342,

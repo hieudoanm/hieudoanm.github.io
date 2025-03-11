@@ -6,10 +6,10 @@
     "name": "Arthur Guo",
     "username": "whiteshirt_boi",
     "title": "GM",
-    "followers": 174,
+    "followers": 181,
     "country": "https://api.chess.com/pub/country/MV",
     "location": "New York",
-    "last_online": 1734114137,
+    "last_online": 1741521702,
     "joined": 1346169923,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2759,
-            "date": 1731787398,
-            "rd": 48
+            "rating": 2762,
+            "date": 1741299255,
+            "rd": 47
         },
         "best": {
             "rating": 2932,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/116222439833"
         },
         "record": {
-            "win": 4761,
-            "loss": 4210,
-            "draw": 740
+            "win": 4815,
+            "loss": 4272,
+            "draw": 751
         }
     },
     "tactics": {

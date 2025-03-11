@@ -6,10 +6,10 @@
     "name": "Alvar Alonso Rosell",
     "username": "iwanyu",
     "title": "GM",
-    "followers": 163,
+    "followers": 181,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Barcelona",
-    "last_online": 1734119564,
+    "last_online": 1741628472,
     "joined": 1430131325,
     "status": "premium",
     "is_streamer": false,
@@ -37,26 +37,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2574,
-            "date": 1727292811,
-            "rd": 46
+            "rating": 2564,
+            "date": 1739815755,
+            "rd": 47
         },
         "best": {
             "rating": 2874,
             "date": 1678727626,
-            "game": "https://www.chess.com/game/live/72460351873"
+            "game": "https://www.chess.com/game/live/133549742565"
         },
         "record": {
-            "win": 31,
-            "loss": 31,
+            "win": 33,
+            "loss": 35,
             "draw": 16
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2859,
-            "date": 1731110919,
-            "rd": 43
+            "rating": 2866,
+            "date": 1741066051,
+            "rd": 49
         },
         "best": {
             "rating": 2953,
@@ -64,32 +64,32 @@
             "game": "https://www.chess.com/game/live/110500352217"
         },
         "record": {
-            "win": 489,
-            "loss": 247,
-            "draw": 38
+            "win": 497,
+            "loss": 251,
+            "draw": 39
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2840,
-            "date": 1732798278,
-            "rd": 36
+            "rating": 2854,
+            "date": 1741334017,
+            "rd": 41
         },
         "best": {
-            "rating": 2911,
-            "date": 1720540584,
+            "rating": 2922,
+            "date": 1740988118,
             "game": "https://www.chess.com/game/live/114277897251"
         },
         "record": {
-            "win": 1554,
-            "loss": 1088,
-            "draw": 231
+            "win": 1626,
+            "loss": 1135,
+            "draw": 241
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3750,
-            "date": 1730803832
+            "rating": 3758,
+            "date": 1736774858
         },
         "lowest": {
             "rating": 1357,

@@ -6,9 +6,10 @@
     "name": "Vojt\u011bch Pl\u00e1t",
     "username": "vojtechplat",
     "title": "GM",
-    "followers": 398,
+    "followers": 407,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1724792434,
+    "location": "Olomouc",
+    "last_online": 1740495752,
     "joined": 1502384897,
     "status": "premium",
     "is_streamer": false,
@@ -65,26 +66,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2852,
-            "date": 1724793428,
-            "rd": 48
+            "rating": 2886,
+            "date": 1740505886,
+            "rd": 47
         },
         "best": {
             "rating": 2914,
             "date": 1594657389,
-            "game": "https://www.chess.com/game/live/107646839651"
+            "game": "https://www.chess.com/game/live/134240340393"
         },
         "record": {
-            "win": 1007,
-            "loss": 859,
-            "draw": 285
+            "win": 1025,
+            "loss": 867,
+            "draw": 287
         }
     },
-    "fide": 2950,
+    "fide": 2460,
     "tactics": {
         "highest": {
-            "rating": 3384,
-            "date": 1712766435
+            "rating": 3455,
+            "date": 1737537452
         },
         "lowest": {
             "rating": 1200,

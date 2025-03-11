@@ -4,14 +4,14 @@
     "url": "https://www.chess.com/member/NowayJosey",
     "username": "nowayjosey",
     "title": "GM",
-    "followers": 190,
+    "followers": 196,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734150208,
+    "last_online": 1741666176,
     "joined": 1529638992,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -32,19 +32,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3047,
-            "date": 1734044781,
-            "rd": 30
+            "rating": 3115,
+            "date": 1740703566,
+            "rd": 36
         },
         "best": {
-            "rating": 3120,
-            "date": 1607130362,
+            "rating": 3140,
+            "date": 1739758818,
             "game": "https://www.chess.com/game/live/127614024921"
         },
         "record": {
-            "win": 1081,
-            "loss": 797,
-            "draw": 417
+            "win": 1248,
+            "loss": 907,
+            "draw": 461
         }
     },
     "fide": 0,
@@ -60,8 +60,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 87,
-            "score": 84
+            "total_attempts": 88,
+            "score": 85
+        },
+        "daily": {
+            "total_attempts": 60,
+            "score": 58
         }
     }
 }

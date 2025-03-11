@@ -6,9 +6,9 @@
     "name": "Kateryna Lagno",
     "username": "katerynalagno",
     "title": "GM",
-    "followers": 525,
+    "followers": 542,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1732029663,
+    "last_online": 1740344539,
     "joined": 1531215142,
     "status": "premium",
     "is_streamer": false,
@@ -52,8 +52,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2784,
-            "date": 1728245685,
-            "rd": 33
+            "date": 1740306330,
+            "rd": 50
         },
         "best": {
             "rating": 2928,
@@ -61,7 +61,7 @@
             "game": "https://www.chess.com/game/live/71137423939"
         },
         "record": {
-            "win": 695,
+            "win": 696,
             "loss": 387,
             "draw": 184
         }

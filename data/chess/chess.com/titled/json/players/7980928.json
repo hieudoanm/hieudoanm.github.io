@@ -6,10 +6,10 @@
     "name": "Daniel Semcesen",
     "username": "khaz_modan",
     "title": "GM",
-    "followers": 34,
+    "followers": 35,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "Malm\u00f6",
-    "last_online": 1734091232,
+    "last_online": 1741647737,
     "joined": 1340433468,
     "status": "premium",
     "is_streamer": false,
@@ -35,25 +35,25 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2543,
-            "date": 1733941620,
-            "rd": 36
+            "rating": 2609,
+            "date": 1741026799,
+            "rd": 39
         },
         "best": {
-            "rating": 2577,
-            "date": 1733869595,
+            "rating": 2581,
+            "date": 1734659535,
             "game": "https://www.chess.com/game/live/127680581087"
         },
         "record": {
-            "win": 384,
-            "loss": 303,
-            "draw": 41
+            "win": 448,
+            "loss": 347,
+            "draw": 50
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2582,
-            "date": 1733867212,
+            "rating": 2618,
+            "date": 1741279465,
             "rd": 31
         },
         "best": {
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/112991405335"
         },
         "record": {
-            "win": 2771,
-            "loss": 2068,
-            "draw": 400
+            "win": 3080,
+            "loss": 2297,
+            "draw": 466
         }
     },
     "fide": 2471,
     "tactics": {
         "highest": {
-            "rating": 3576,
-            "date": 1734052965
+            "rating": 3601,
+            "date": 1735171293
         },
         "lowest": {
             "rating": 1369,
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 67,
-            "score": 64
+            "total_attempts": 70,
+            "score": 67
         }
     }
 }

@@ -6,10 +6,10 @@
     "name": "Jaan Ehlvest",
     "username": "malev212",
     "title": "GM",
-    "followers": 394,
+    "followers": 404,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Nashville",
-    "last_online": 1734172985,
+    "last_online": 1741648659,
     "joined": 1300013608,
     "status": "premium",
     "is_streamer": false,
@@ -35,36 +35,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2438,
-            "date": 1708432162,
-            "rd": 124
+            "rating": 2490,
+            "date": 1735943635,
+            "rd": 49
         },
         "best": {
-            "rating": 2498,
-            "date": 1688659521,
+            "rating": 2501,
+            "date": 1735942179,
             "game": "https://www.chess.com/game/live/10954050469"
         },
         "record": {
-            "win": 1506,
-            "loss": 1261,
+            "win": 1507,
+            "loss": 1262,
             "draw": 34
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2684,
-            "date": 1733873411,
-            "rd": 47
+            "rating": 2727,
+            "date": 1741128081,
+            "rd": 48
         },
         "best": {
             "rating": 2737,
             "date": 1548897227,
-            "game": "https://www.chess.com/game/live/73171520973"
+            "game": "https://www.chess.com/game/live/134865538431"
         },
         "record": {
-            "win": 791,
-            "loss": 664,
-            "draw": 81
+            "win": 819,
+            "loss": 681,
+            "draw": 84
         }
     },
     "fide": 2701,

@@ -6,10 +6,10 @@
     "name": "Vidit Gujrathi",
     "username": "viditchess",
     "title": "GM",
-    "followers": 16219,
+    "followers": 16702,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Nashik",
-    "last_online": 1729788806,
+    "last_online": 1740481244,
     "joined": 1342890823,
     "status": "premium",
     "is_streamer": true,
@@ -24,9 +24,9 @@
     ],
     "chess_rapid": {
         "last": {
-            "rating": 2732,
-            "date": 1727715517,
-            "rd": 43
+            "rating": 2699,
+            "date": 1739816954,
+            "rd": 47
         },
         "best": {
             "rating": 2754,
@@ -34,9 +34,9 @@
             "game": "https://www.chess.com/game/live/70739610319"
         },
         "record": {
-            "win": 124,
-            "loss": 59,
-            "draw": 101
+            "win": 126,
+            "loss": 62,
+            "draw": 103
         }
     },
     "chess_bullet": {

@@ -8,7 +8,7 @@
     "title": "IM",
     "followers": 51,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1734068026,
+    "last_online": 1741565498,
     "joined": 1678394992,
     "status": "premium",
     "is_streamer": false,
@@ -34,26 +34,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2855,
-            "date": 1733821561,
-            "rd": 40
+            "rating": 2860,
+            "date": 1736615970,
+            "rd": 49
         },
         "best": {
-            "rating": 2858,
-            "date": 1715951502,
+            "rating": 2860,
+            "date": 1735579384,
             "game": "https://www.chess.com/game/live/118430353519"
         },
         "record": {
-            "win": 2256,
-            "loss": 1697,
-            "draw": 436
+            "win": 2259,
+            "loss": 1698,
+            "draw": 437
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2890,
-            "date": 1731688169,
-            "rd": 45
+            "rating": 2897,
+            "date": 1739983173,
+            "rd": 49
         },
         "best": {
             "rating": 2902,
@@ -61,7 +61,7 @@
             "game": "https://www.chess.com/game/live/99582102911"
         },
         "record": {
-            "win": 161,
+            "win": 162,
             "loss": 136,
             "draw": 51
         }
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 60,
-            "score": 57
+            "total_attempts": 62,
+            "score": 59
         }
     }
 }

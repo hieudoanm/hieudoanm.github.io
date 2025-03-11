@@ -5,9 +5,9 @@
     "name": "Ivan Aldokhin",
     "username": "aldokhinivan",
     "title": "IM",
-    "followers": 19,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733943625,
+    "last_online": 1741249439,
     "joined": 1476648129,
     "status": "premium",
     "is_streamer": false,
@@ -28,9 +28,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2586,
-            "date": 1723325294,
-            "rd": 43
+            "rating": 2576,
+            "date": 1736007290,
+            "rd": 47
         },
         "best": {
             "rating": 2800,
@@ -38,16 +38,16 @@
             "game": "https://www.chess.com/game/live/81972113675"
         },
         "record": {
-            "win": 1731,
-            "loss": 1835,
+            "win": 1733,
+            "loss": 1839,
             "draw": 224
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2670,
-            "date": 1734102957,
-            "rd": 48
+            "rating": 2588,
+            "date": 1739485427,
+            "rd": 44
         },
         "best": {
             "rating": 2744,
@@ -55,9 +55,9 @@
             "game": "https://www.chess.com/game/live/97950760763"
         },
         "record": {
-            "win": 3584,
-            "loss": 3202,
-            "draw": 446
+            "win": 3638,
+            "loss": 3255,
+            "draw": 452
         }
     },
     "fide": 0,

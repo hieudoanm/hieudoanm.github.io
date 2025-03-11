@@ -6,10 +6,10 @@
     "name": "Michael Brown",
     "username": "michaelq2d5",
     "title": "GM",
-    "followers": 1440,
+    "followers": 1520,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Washington, DC",
-    "last_online": 1733864437,
+    "last_online": 1741699565,
     "joined": 1394598118,
     "status": "premium",
     "is_streamer": false,
@@ -66,19 +66,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2923,
-            "date": 1733869899,
-            "rd": 27
+            "rating": 2953,
+            "date": 1741639832,
+            "rd": 36
         },
         "best": {
-            "rating": 3011,
-            "date": 1729518432,
+            "rating": 3039,
+            "date": 1738876403,
             "game": "https://www.chess.com/game/live/121444208407"
         },
         "record": {
-            "win": 6168,
-            "loss": 4303,
-            "draw": 1482
+            "win": 6315,
+            "loss": 4410,
+            "draw": 1515
         }
     },
     "fide": 2528,

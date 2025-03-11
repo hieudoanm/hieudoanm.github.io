@@ -5,9 +5,9 @@
     "name": "Ramazan Zhalmakhanov",
     "username": "zhalmakhanov_ramazan",
     "title": "GM",
-    "followers": 124,
+    "followers": 147,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1732870053,
+    "last_online": 1741585253,
     "joined": 1589823986,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2865,
-            "date": 1729881977,
-            "rd": 48
+            "rating": 2876,
+            "date": 1737292568,
+            "rd": 49
         },
         "best": {
             "rating": 2957,
@@ -43,16 +43,16 @@
             "game": "https://www.chess.com/game/live/97252324469"
         },
         "record": {
-            "win": 102,
+            "win": 104,
             "loss": 48,
             "draw": 10
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2960,
-            "date": 1732871376,
-            "rd": 45
+            "rating": 2914,
+            "date": 1740341654,
+            "rd": 47
         },
         "best": {
             "rating": 3019,
@@ -60,16 +60,16 @@
             "game": "https://www.chess.com/game/live/123351086889"
         },
         "record": {
-            "win": 267,
-            "loss": 164,
-            "draw": 35
+            "win": 310,
+            "loss": 203,
+            "draw": 38
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 2659,
-            "date": 1695886612
+            "rating": 2683,
+            "date": 1738943686
         },
         "lowest": {
             "rating": 2385,

@@ -6,10 +6,10 @@
     "name": "Aram Hakobyan",
     "username": "njal28",
     "title": "GM",
-    "followers": 509,
+    "followers": 547,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan",
-    "last_online": 1734140794,
+    "last_online": 1741679645,
     "joined": 1607624099,
     "status": "premium",
     "is_streamer": false,
@@ -32,14 +32,14 @@
             "loss": 1,
             "draw": 0,
             "time_per_move": 124184,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 2632,
-            "date": 1727542280,
-            "rd": 43
+            "rating": 2634,
+            "date": 1739820115,
+            "rd": 46
         },
         "best": {
             "rating": 2682,
@@ -47,16 +47,16 @@
             "game": "https://www.chess.com/game/live/109102187959"
         },
         "record": {
-            "win": 129,
-            "loss": 87,
-            "draw": 87
+            "win": 134,
+            "loss": 89,
+            "draw": 89
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2986,
-            "date": 1732796839,
-            "rd": 33
+            "rating": 3008,
+            "date": 1738436095,
+            "rd": 40
         },
         "best": {
             "rating": 3172,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/94024887849"
         },
         "record": {
-            "win": 2017,
-            "loss": 1863,
-            "draw": 400
+            "win": 2094,
+            "loss": 1899,
+            "draw": 412
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3023,
-            "date": 1733074837,
-            "rd": 40
+            "rating": 3010,
+            "date": 1741683317,
+            "rd": 34
         },
         "best": {
             "rating": 3140,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/95472553041"
         },
         "record": {
-            "win": 2577,
-            "loss": 2123,
-            "draw": 772
+            "win": 2706,
+            "loss": 2259,
+            "draw": 809
         }
     },
     "tactics": {

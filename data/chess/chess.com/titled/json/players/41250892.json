@@ -6,10 +6,10 @@
     "name": "Joseph Girel",
     "username": "mr_heisenberg13",
     "title": "GM",
-    "followers": 1550,
+    "followers": 1891,
     "country": "https://api.chess.com/pub/country/FR",
-    "location": "London",
-    "last_online": 1734124391,
+    "location": "Chicago",
+    "last_online": 1741694505,
     "joined": 1513075416,
     "status": "premium",
     "is_streamer": false,
@@ -54,43 +54,43 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2742,
-            "date": 1708702542,
-            "rd": 43
+            "rating": 2814,
+            "date": 1741391624,
+            "rd": 49
         },
         "best": {
-            "rating": 2775,
-            "date": 1707271593,
+            "rating": 2800,
+            "date": 1739208396,
             "game": "https://www.chess.com/game/live/49598986545"
         },
         "record": {
-            "win": 1078,
-            "loss": 692,
+            "win": 1088,
+            "loss": 693,
             "draw": 128
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2807,
-            "date": 1729363075,
-            "rd": 46
+            "rating": 2963,
+            "date": 1741658807,
+            "rd": 27
         },
         "best": {
-            "rating": 3000,
-            "date": 1711139933,
+            "rating": 3045,
+            "date": 1739839364,
             "game": "https://www.chess.com/game/live/77286118021"
         },
         "record": {
-            "win": 6594,
-            "loss": 5530,
-            "draw": 1215
+            "win": 6854,
+            "loss": 5720,
+            "draw": 1274
         }
     },
     "fide": 2495,
     "tactics": {
         "highest": {
-            "rating": 3733,
-            "date": 1728839441
+            "rating": 3796,
+            "date": 1739294303
         },
         "lowest": {
             "rating": 411,
@@ -99,8 +99,12 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 71,
-            "score": 68
+            "total_attempts": 72,
+            "score": 69
+        },
+        "daily": {
+            "total_attempts": 58,
+            "score": 55
         }
     }
 }

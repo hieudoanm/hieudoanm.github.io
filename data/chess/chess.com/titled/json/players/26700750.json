@@ -5,10 +5,10 @@
     "name": "Kenneth Solomon",
     "username": "underdogchss",
     "title": "GM",
-    "followers": 68,
+    "followers": 76,
     "country": "https://api.chess.com/pub/country/ZA",
     "location": "Venezia Italy",
-    "last_online": 1732897872,
+    "last_online": 1741433604,
     "joined": 1455400928,
     "status": "premium",
     "is_streamer": false,
@@ -31,21 +31,26 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2193,
-            "date": 1598186263,
-            "rd": 188
+            "rating": 2189,
+            "date": 1738878079,
+            "rd": 46
+        },
+        "best": {
+            "rating": 2385,
+            "date": 1597926982,
+            "game": "https://www.chess.com/game/live/132604807571"
         },
         "record": {
-            "win": 1,
-            "loss": 4,
-            "draw": 2
+            "win": 5,
+            "loss": 7,
+            "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2353,
-            "date": 1728724544,
-            "rd": 28
+            "rating": 2424,
+            "date": 1740761558,
+            "rd": 34
         },
         "best": {
             "rating": 2516,
@@ -53,26 +58,26 @@
             "game": "https://www.chess.com/game/live/122311805063"
         },
         "record": {
-            "win": 311,
-            "loss": 346,
-            "draw": 39
+            "win": 374,
+            "loss": 409,
+            "draw": 50
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2497,
-            "date": 1732898238,
-            "rd": 48
+            "rating": 2548,
+            "date": 1741108073,
+            "rd": 44
         },
         "best": {
             "rating": 2629,
             "date": 1705759074,
-            "game": "https://www.chess.com/game/live/1940209342"
+            "game": "https://www.chess.com/game/live/134842753997"
         },
         "record": {
-            "win": 2010,
-            "loss": 2143,
-            "draw": 402
+            "win": 2042,
+            "loss": 2179,
+            "draw": 415
         }
     },
     "tactics": {

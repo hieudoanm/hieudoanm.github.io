@@ -4,14 +4,14 @@
     "url": "https://www.chess.com/member/Lucerne82",
     "username": "lucerne82",
     "title": "GM",
-    "followers": 8,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1730995947,
+    "last_online": 1738657451,
     "joined": 1639568156,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
@@ -32,19 +32,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2932,
-            "date": 1730998937,
-            "rd": 46
+            "rating": 2984,
+            "date": 1738679616,
+            "rd": 36
         },
         "best": {
-            "rating": 2961,
-            "date": 1707487382,
+            "rating": 3014,
+            "date": 1734793128,
             "game": "https://www.chess.com/game/live/35038813293"
         },
         "record": {
-            "win": 202,
-            "loss": 143,
-            "draw": 25
+            "win": 289,
+            "loss": 193,
+            "draw": 48
         }
     },
     "tactics": {

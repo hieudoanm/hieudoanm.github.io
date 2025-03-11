@@ -6,9 +6,9 @@
     "name": "Wei Ming Kevin Goh",
     "username": "kevin_goh",
     "title": "GM",
-    "followers": 1296,
+    "followers": 1375,
     "country": "https://api.chess.com/pub/country/SG",
-    "last_online": 1734008386,
+    "last_online": 1741699881,
     "joined": 1253618961,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2721,
-            "date": 1731949314,
-            "rd": 49
+            "rating": 2702,
+            "date": 1741410549,
+            "rd": 42
         },
         "best": {
             "rating": 2834,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/44703625777"
         },
         "record": {
-            "win": 1955,
-            "loss": 1660,
-            "draw": 307
+            "win": 2012,
+            "loss": 1712,
+            "draw": 311
         }
     },
     "fide": 2501,

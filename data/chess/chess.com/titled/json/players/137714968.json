@@ -6,9 +6,9 @@
     "name": "Jesus Martin Duque",
     "username": "ajedrezenmadrid",
     "title": "IM",
-    "followers": 114,
+    "followers": 117,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734117561,
+    "last_online": 1741357389,
     "joined": 1619598970,
     "status": "premium",
     "is_streamer": false,
@@ -32,8 +32,8 @@
     "chess_rapid": {
         "last": {
             "rating": 1979,
-            "date": 1727858381,
-            "rd": 50
+            "date": 1736330604,
+            "rd": 75
         },
         "best": {
             "rating": 2003,
@@ -41,16 +41,16 @@
             "game": "https://www.chess.com/game/live/114195571155"
         },
         "record": {
-            "win": 7,
+            "win": 8,
             "loss": 1,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2371,
-            "date": 1722028533,
-            "rd": 42
+            "rating": 2340,
+            "date": 1740849951,
+            "rd": 92
         },
         "best": {
             "rating": 2536,
@@ -59,15 +59,15 @@
         },
         "record": {
             "win": 62,
-            "loss": 89,
+            "loss": 90,
             "draw": 4
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2441,
-            "date": 1734078483,
-            "rd": 47
+            "rating": 2366,
+            "date": 1741469178,
+            "rd": 35
         },
         "best": {
             "rating": 2698,
@@ -75,15 +75,15 @@
             "game": "https://www.chess.com/game/live/41700667319"
         },
         "record": {
-            "win": 1454,
-            "loss": 1413,
-            "draw": 230
+            "win": 1545,
+            "loss": 1497,
+            "draw": 243
         }
     },
     "tactics": {
         "highest": {
-            "rating": 1653,
-            "date": 1717658993
+            "rating": 2096,
+            "date": 1740433884
         },
         "lowest": {
             "rating": 1177,

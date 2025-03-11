@@ -6,10 +6,10 @@
     "name": "Artur Davtyan",
     "username": "artur0208",
     "title": "IM",
-    "followers": 136,
+    "followers": 137,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Yerevan",
-    "last_online": 1734090943,
+    "last_online": 1738857820,
     "joined": 1522300966,
     "status": "premium",
     "is_streamer": false,
@@ -88,8 +88,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3499,
-            "date": 1732447343
+            "rating": 3528,
+            "date": 1735829222
         },
         "lowest": {
             "rating": 411,

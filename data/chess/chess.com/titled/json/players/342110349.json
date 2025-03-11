@@ -6,9 +6,9 @@
     "name": "Sergei Azarov",
     "username": "sereiaza",
     "title": "GM",
-    "followers": 6,
+    "followers": 7,
     "country": "https://api.chess.com/pub/country/AT",
-    "last_online": 1734159922,
+    "last_online": 1741677335,
     "joined": 1706599964,
     "status": "premium",
     "is_streamer": false,
@@ -17,26 +17,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2582,
-            "date": 1706731653,
+            "rating": 2590,
+            "date": 1739819779,
             "rd": 46
         },
         "best": {
-            "rating": 2591,
-            "date": 1706722757,
-            "game": "https://www.chess.com/game/live/100458888975"
+            "rating": 2597,
+            "date": 1739818715,
+            "game": "https://www.chess.com/game/live/133555142247"
         },
         "record": {
-            "win": 4,
-            "loss": 4,
+            "win": 9,
+            "loss": 8,
             "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2715,
-            "date": 1733586832,
-            "rd": 47
+            "rating": 2741,
+            "date": 1739797391,
+            "rd": 48
         },
         "best": {
             "rating": 2716,
@@ -44,7 +44,7 @@
             "game": "https://www.chess.com/game/live/117187785009"
         },
         "record": {
-            "win": 54,
+            "win": 58,
             "loss": 23,
             "draw": 7
         }

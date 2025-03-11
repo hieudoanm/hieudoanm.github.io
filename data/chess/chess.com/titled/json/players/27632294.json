@@ -6,10 +6,10 @@
     "name": "Hugo Spangenberg",
     "username": "hugospangenberg",
     "title": "GM",
-    "followers": 130,
+    "followers": 132,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Buenos aires",
-    "last_online": 1733961322,
+    "last_online": 1737723553,
     "joined": 1460025086,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2763,
-            "date": 1734106997,
-            "rd": 26
+            "rating": 2626,
+            "date": 1741620785,
+            "rd": 37
         },
         "best": {
             "rating": 2804,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/122480113257"
         },
         "record": {
-            "win": 5444,
-            "loss": 3831,
-            "draw": 1103
+            "win": 5654,
+            "loss": 4001,
+            "draw": 1145
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3357,
-            "date": 1728721884
+            "rating": 3370,
+            "date": 1735675939
         },
         "lowest": {
             "rating": 1364,

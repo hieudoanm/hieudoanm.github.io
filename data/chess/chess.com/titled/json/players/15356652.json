@@ -5,9 +5,9 @@
     "name": "Pere Garriga Cazorla",
     "username": "hurricane7791",
     "title": "GM",
-    "followers": 28,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733808691,
+    "last_online": 1741693057,
     "joined": 1388598078,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2726,
-            "date": 1729508705,
-            "rd": 48
+            "rating": 2801,
+            "date": 1741553599,
+            "rd": 44
         },
         "best": {
             "rating": 2826,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/42913198111"
         },
         "record": {
-            "win": 1018,
-            "loss": 692,
-            "draw": 113
+            "win": 1031,
+            "loss": 697,
+            "draw": 114
         }
     },
     "tactics": {

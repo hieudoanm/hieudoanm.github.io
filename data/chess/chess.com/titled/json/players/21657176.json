@@ -6,15 +6,15 @@
     "name": "Justin Tan",
     "username": "justantan",
     "title": "GM",
-    "followers": 211,
+    "followers": 213,
     "country": "https://api.chess.com/pub/country/AU",
     "location": "Melbourne",
-    "last_online": 1733489355,
+    "last_online": 1741530133,
     "joined": 1427195847,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2905,
-            "date": 1718971554,
-            "rd": 49
+            "rating": 2925,
+            "date": 1741023101,
+            "rd": 31
         },
         "best": {
             "rating": 2975,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/4673614197"
         },
         "record": {
-            "win": 4218,
-            "loss": 3397,
-            "draw": 761
+            "win": 4263,
+            "loss": 3433,
+            "draw": 772
         }
     },
     "fide": 2500,

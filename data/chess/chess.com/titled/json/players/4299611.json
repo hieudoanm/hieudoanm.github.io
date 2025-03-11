@@ -6,10 +6,10 @@
     "name": "Adrien Demuth",
     "username": "lapitch",
     "title": "GM",
-    "followers": 272,
+    "followers": 293,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Fouras",
-    "last_online": 1734134585,
+    "last_online": 1741681741,
     "joined": 1290638871,
     "status": "premium",
     "is_streamer": false,
@@ -56,17 +56,17 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2521,
-            "date": 1617454696,
-            "rd": 320
+            "rating": 2523,
+            "date": 1741109057,
+            "rd": 49
         },
         "best": {
-            "rating": 2521,
-            "date": 1617454696,
+            "rating": 2523,
+            "date": 1741109057,
             "game": "https://www.chess.com/game/live/72732816"
         },
         "record": {
-            "win": 20,
+            "win": 22,
             "loss": 7,
             "draw": 3
         }

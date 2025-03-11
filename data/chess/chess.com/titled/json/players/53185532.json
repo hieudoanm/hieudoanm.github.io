@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/53185532.7c9157ff.200x200o.a07a35600f0e.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/53185532.bb104efa.200x200o.f6ab82129db8.jpg",
     "player_id": 53185532,
     "@id": "https://api.chess.com/pub/player/kazakhfighter04",
     "url": "https://www.chess.com/member/KazakhFighter04",
     "name": "Kazybek Nogerbek",
     "username": "kazakhfighter04",
     "title": "GM",
-    "followers": 842,
+    "followers": 872,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "Astana",
-    "last_online": 1733728360,
+    "last_online": 1741600446,
     "joined": 1544705337,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2004,
-            "date": 1728401063,
+            "date": 1740043764,
             "rd": 346
         },
         "best": {
@@ -54,8 +54,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3072,
-            "date": 1720091984,
+            "rating": 3066,
+            "date": 1739468037,
             "rd": 49
         },
         "best": {
@@ -65,15 +65,15 @@
         },
         "record": {
             "win": 4073,
-            "loss": 2276,
+            "loss": 2277,
             "draw": 381
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3002,
-            "date": 1729269994,
-            "rd": 48
+            "rating": 3034,
+            "date": 1741556967,
+            "rd": 46
         },
         "best": {
             "rating": 3055,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/101662312353"
         },
         "record": {
-            "win": 1853,
-            "loss": 1022,
-            "draw": 364
+            "win": 1889,
+            "loss": 1031,
+            "draw": 368
         }
     },
     "fide": 2472,

@@ -6,10 +6,10 @@
     "name": "Arad Nazari",
     "username": "aradnazari",
     "title": "IM",
-    "followers": 132,
+    "followers": 139,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "guilan",
-    "last_online": 1734018645,
+    "last_online": 1741008216,
     "joined": 1552158158,
     "status": "premium",
     "is_streamer": false,
@@ -18,26 +18,26 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2188,
-            "date": 1720799326,
-            "rd": 49
+            "rating": 2207,
+            "date": 1739731911,
+            "rd": 47
         },
         "best": {
-            "rating": 2189,
-            "date": 1659204995,
-            "game": "https://www.chess.com/game/live/53443185223"
+            "rating": 2218,
+            "date": 1739729789,
+            "game": "https://www.chess.com/game/live/133461577927"
         },
         "record": {
-            "win": 103,
-            "loss": 20,
+            "win": 107,
+            "loss": 24,
             "draw": 14
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2671,
-            "date": 1730207780,
-            "rd": 36
+            "rating": 2661,
+            "date": 1739212379,
+            "rd": 49
         },
         "best": {
             "rating": 2760,
@@ -45,33 +45,33 @@
             "game": "https://www.chess.com/game/live/76530712339"
         },
         "record": {
-            "win": 618,
-            "loss": 505,
+            "win": 619,
+            "loss": 508,
             "draw": 75
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2797,
-            "date": 1732036727,
-            "rd": 25
+            "rating": 2923,
+            "date": 1740550947,
+            "rd": 29
         },
         "best": {
-            "rating": 2948,
-            "date": 1727194547,
-            "game": "https://www.chess.com/game/live/118441672495"
+            "rating": 2954,
+            "date": 1739366888,
+            "game": "https://www.chess.com/game/live/134289542429"
         },
         "record": {
-            "win": 3454,
-            "loss": 3399,
-            "draw": 696
+            "win": 3727,
+            "loss": 3644,
+            "draw": 746
         }
     },
     "fide": 2410,
     "tactics": {
         "highest": {
-            "rating": 3733,
-            "date": 1710716921
+            "rating": 3810,
+            "date": 1738580481
         },
         "lowest": {
             "rating": 1200,

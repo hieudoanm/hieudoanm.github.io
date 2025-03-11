@@ -6,14 +6,14 @@
     "name": "Anthony F Ker",
     "username": "anthony_ker",
     "title": "IM",
-    "followers": 57,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/NZ",
-    "last_online": 1734026783,
+    "last_online": 1741293552,
     "joined": 1596699014,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1894,
-            "date": 1726984478,
-            "rd": 83
+            "rating": 1973,
+            "date": 1735700335,
+            "rd": 79
         },
         "best": {
             "rating": 2451,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/35161000371"
         },
         "record": {
-            "win": 159,
+            "win": 176,
             "loss": 43,
-            "draw": 8
+            "draw": 9
         }
     },
     "fide": 2303,
     "tactics": {
         "highest": {
-            "rating": 3291,
-            "date": 1732646754
+            "rating": 3293,
+            "date": 1740652165
         },
         "lowest": {
             "rating": 2308,

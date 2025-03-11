@@ -6,9 +6,9 @@
     "name": "Krishna teja",
     "username": "11kevin",
     "title": "IM",
-    "followers": 109,
+    "followers": 111,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1732586331,
+    "last_online": 1741621299,
     "joined": 1501995363,
     "status": "premium",
     "is_streamer": false,
@@ -94,6 +94,10 @@
         "best": {
             "total_attempts": 67,
             "score": 64
+        },
+        "daily": {
+            "total_attempts": 56,
+            "score": 53
         }
     }
 }

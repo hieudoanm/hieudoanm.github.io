@@ -6,30 +6,30 @@
     "name": "Trajko Nedev",
     "username": "trajkonedev",
     "title": "GM",
-    "followers": 12,
+    "followers": 13,
     "country": "https://api.chess.com/pub/country/MK",
-    "last_online": 1734109806,
+    "last_online": 1741685734,
     "joined": 1686680190,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2530,
-            "date": 1696957302,
-            "rd": 64
+            "rating": 2589,
+            "date": 1741636785,
+            "rd": 35
         },
         "best": {
-            "rating": 2530,
-            "date": 1696957302,
-            "game": "https://www.chess.com/game/live/90695986743"
+            "rating": 2622,
+            "date": 1739445976,
+            "game": "https://www.chess.com/game/live/133099176095"
         },
         "record": {
-            "win": 39,
-            "loss": 2,
-            "draw": 2
+            "win": 78,
+            "loss": 43,
+            "draw": 16
         }
     },
     "fide": 2474,

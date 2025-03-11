@@ -4,41 +4,64 @@
     "url": "https://www.chess.com/member/VBBraining",
     "username": "vbbraining",
     "title": "GM",
-    "followers": 0,
+    "followers": 2,
     "country": "https://api.chess.com/pub/country/KP",
-    "last_online": 1733844035,
+    "location": "Py\u014fngs\u014fng",
+    "last_online": 1741703772,
     "joined": 1719940773,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Elite",
     "streaming_platforms": [],
-    "chess_blitz": {
+    "chess_bullet": {
         "last": {
-            "rating": 2564,
-            "date": 1733845966,
-            "rd": 47
+            "rating": 2517,
+            "date": 1737995493,
+            "rd": 49
         },
         "best": {
-            "rating": 2564,
-            "date": 1733845966,
-            "game": "https://www.chess.com/game/live/125767122301"
+            "rating": 2517,
+            "date": 1737995493,
+            "game": "https://www.chess.com/game/live/131734262769"
         },
         "record": {
-            "win": 31,
-            "loss": 9,
-            "draw": 2
+            "win": 2,
+            "loss": 0,
+            "draw": 0
+        }
+    },
+    "chess_blitz": {
+        "last": {
+            "rating": 2903,
+            "date": 1741362790,
+            "rd": 33
+        },
+        "best": {
+            "rating": 2914,
+            "date": 1739282740,
+            "game": "https://www.chess.com/game/live/133017540175"
+        },
+        "record": {
+            "win": 158,
+            "loss": 126,
+            "draw": 30
         }
     },
     "tactics": {
         "highest": {
-            "rating": 1000,
-            "date": 1719940773
+            "rating": 3797,
+            "date": 1741445326
         },
         "lowest": {
             "rating": 1000,
             "date": 1719940773
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 70,
+            "score": 67
+        }
+    }
 }

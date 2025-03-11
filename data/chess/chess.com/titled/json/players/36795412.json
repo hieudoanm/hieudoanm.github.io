@@ -6,9 +6,9 @@
     "name": "Jos\u00e9 Mart\u00ednez",
     "username": "josmito80",
     "title": "GM",
-    "followers": 214,
+    "followers": 241,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733943283,
+    "last_online": 1741692750,
     "joined": 1499198885,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2619,
-            "date": 1734174577,
-            "rd": 22
+            "rating": 2587,
+            "date": 1741700986,
+            "rd": 23
         },
         "best": {
             "rating": 2834,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/107907003159"
         },
         "record": {
-            "win": 2803,
-            "loss": 3187,
-            "draw": 337
+            "win": 3254,
+            "loss": 3726,
+            "draw": 388
         }
     },
     "fide": 0,

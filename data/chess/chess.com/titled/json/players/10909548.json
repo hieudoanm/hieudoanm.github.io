@@ -6,10 +6,10 @@
     "name": "Erlend Mikalsen",
     "username": "abu_tyven_fra_bagdad",
     "title": "IM",
-    "followers": 262,
+    "followers": 264,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Her og der",
-    "last_online": 1733998659,
+    "last_online": 1741616183,
     "joined": 1361539098,
     "status": "premium",
     "is_streamer": false,
@@ -72,7 +72,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2681,
-            "date": 1718803580,
+            "date": 1741616896,
             "rd": 30
         },
         "best": {

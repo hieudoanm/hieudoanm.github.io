@@ -5,16 +5,35 @@
     "name": "Aljoscha Feuerstack",
     "username": "aljoschafeuerstack",
     "title": "IM",
-    "followers": 20,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/DE",
     "location": "Hamburg",
-    "last_online": 1733678860,
+    "last_online": 1741525986,
     "joined": 1284134842,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Silver",
     "streaming_platforms": [],
+    "chess_daily": {
+        "last": {
+            "rating": 834,
+            "date": 1741698837,
+            "rd": 340
+        },
+        "best": {
+            "rating": 1200,
+            "date": 1284134842,
+            "game": "https://www.chess.com/game/daily/716229467"
+        },
+        "record": {
+            "win": 1,
+            "loss": 0,
+            "draw": 0,
+            "time_per_move": 184676,
+            "timeout_percent": 0
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 2523,
@@ -34,9 +53,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2624,
-            "date": 1733679245,
-            "rd": 49
+            "rating": 2628,
+            "date": 1741370406,
+            "rd": 45
         },
         "best": {
             "rating": 2708,
@@ -44,8 +63,8 @@
             "game": "https://www.chess.com/game/live/95532100565"
         },
         "record": {
-            "win": 328,
-            "loss": 207,
+            "win": 333,
+            "loss": 211,
             "draw": 43
         }
     },

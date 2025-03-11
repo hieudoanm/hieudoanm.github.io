@@ -6,10 +6,10 @@
     "name": "Bai Jinshi",
     "username": "kaka666",
     "title": "GM",
-    "followers": 147,
+    "followers": 150,
     "country": "https://api.chess.com/pub/country/CN",
-    "location": "North East",
-    "last_online": 1731893692,
+    "location": "Hangzhou",
+    "last_online": 1741339850,
     "joined": 1439564166,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2886,
-            "date": 1726388348,
-            "rd": 41
+            "rating": 2876,
+            "date": 1739796979,
+            "rd": 48
         },
         "best": {
             "rating": 2999,
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/6279813358"
         },
         "record": {
-            "win": 194,
-            "loss": 107,
+            "win": 198,
+            "loss": 109,
             "draw": 11
         }
     },

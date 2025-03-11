@@ -6,10 +6,10 @@
     "name": "Romain Edouard",
     "username": "mugzyyy",
     "title": "GM",
-    "followers": 310,
+    "followers": 314,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Barcelone",
-    "last_online": 1732811688,
+    "last_online": 1741598139,
     "joined": 1425334717,
     "status": "premium",
     "is_streamer": false,
@@ -71,8 +71,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2770,
-            "date": 1732213182,
+            "rating": 2771,
+            "date": 1741601777,
             "rd": 49
         },
         "best": {
@@ -81,7 +81,7 @@
             "game": "https://www.chess.com/game/live/25994372459"
         },
         "record": {
-            "win": 355,
+            "win": 356,
             "loss": 138,
             "draw": 31
         }

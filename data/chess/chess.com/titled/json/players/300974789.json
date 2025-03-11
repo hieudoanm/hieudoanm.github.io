@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/soloadelante",
     "username": "soloadelante",
     "title": "GM",
-    "followers": 19,
+    "followers": 21,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734043765,
+    "last_online": 1741683044,
     "joined": 1689849792,
     "status": "premium",
     "is_streamer": false,
@@ -15,19 +15,19 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2882,
-            "date": 1734017680,
-            "rd": 33
+            "rating": 2970,
+            "date": 1741688435,
+            "rd": 28
         },
         "best": {
-            "rating": 3000,
-            "date": 1690106692,
-            "game": "https://www.chess.com/game/live/107792590635"
+            "rating": 3002,
+            "date": 1736589990,
+            "game": "https://www.chess.com/game/live/130459193623"
         },
         "record": {
-            "win": 1136,
-            "loss": 833,
-            "draw": 298
+            "win": 1377,
+            "loss": 1010,
+            "draw": 346
         }
     },
     "tactics": {

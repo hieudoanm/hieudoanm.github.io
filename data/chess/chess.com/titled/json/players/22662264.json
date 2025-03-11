@@ -6,15 +6,15 @@
     "name": "Sergei Movsesian",
     "username": "tesla37",
     "title": "GM",
-    "followers": 126,
+    "followers": 158,
     "country": "https://api.chess.com/pub/country/AM",
     "location": "Prague",
-    "last_online": 1734176062,
+    "last_online": 1741556345,
     "joined": 1433317458,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -35,36 +35,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2728,
-            "date": 1734124418,
-            "rd": 34
+            "rating": 2717,
+            "date": 1737488607,
+            "rd": 41
         },
         "best": {
             "rating": 2914,
             "date": 1644393903,
-            "game": "https://www.chess.com/game/live/5169979155"
+            "game": "https://www.chess.com/game/live/128068783439"
         },
         "record": {
-            "win": 355,
-            "loss": 240,
-            "draw": 44
+            "win": 400,
+            "loss": 278,
+            "draw": 47
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3050,
-            "date": 1733946438,
-            "rd": 44
+            "rating": 2875,
+            "date": 1741388617,
+            "rd": 35
         },
         "best": {
-            "rating": 3050,
-            "date": 1733946438,
+            "rating": 3062,
+            "date": 1734702461,
             "game": "https://www.chess.com/game/live/5170027352"
         },
         "record": {
-            "win": 996,
-            "loss": 617,
-            "draw": 232
+            "win": 1137,
+            "loss": 768,
+            "draw": 270
         }
     },
     "fide": 2655,

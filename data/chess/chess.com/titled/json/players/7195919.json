@@ -6,9 +6,9 @@
     "name": "Nihal Sarin",
     "username": "nihalsarin",
     "title": "GM",
-    "followers": 16747,
-    "country": "https://api.chess.com/pub/country/CL",
-    "last_online": 1734183696,
+    "followers": 17484,
+    "country": "https://api.chess.com/pub/country/IN",
+    "last_online": 1741685720,
     "joined": 1333645859,
     "status": "premium",
     "is_streamer": true,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2734,
-            "date": 1695064294,
-            "rd": 67
+            "rating": 2744,
+            "date": 1739819801,
+            "rd": 46
         },
         "best": {
             "rating": 2790,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/61320095035"
         },
         "record": {
-            "win": 158,
-            "loss": 68,
-            "draw": 57
+            "win": 163,
+            "loss": 70,
+            "draw": 59
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3112,
-            "date": 1732990095,
-            "rd": 42
+            "rating": 3102,
+            "date": 1741460332,
+            "rd": 35
         },
         "best": {
             "rating": 3402,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/70764127331"
         },
         "record": {
-            "win": 13372,
-            "loss": 6689,
-            "draw": 1691
+            "win": 13601,
+            "loss": 6777,
+            "draw": 1705
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3158,
-            "date": 1734118512,
-            "rd": 38
+            "rating": 3146,
+            "date": 1741688757,
+            "rd": 24
         },
         "best": {
             "rating": 3285,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/121127456549"
         },
         "record": {
-            "win": 14593,
-            "loss": 7832,
-            "draw": 2705
+            "win": 15225,
+            "loss": 8174,
+            "draw": 2800
         }
     },
     "fide": 2620,

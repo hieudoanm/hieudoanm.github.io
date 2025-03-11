@@ -9,7 +9,7 @@
     "followers": 25,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Eindhoven",
-    "last_online": 1734032560,
+    "last_online": 1739004402,
     "joined": 1412502398,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     "fide": 2500,
     "tactics": {
         "highest": {
-            "rating": 3631,
-            "date": 1727038357
+            "rating": 3662,
+            "date": 1739294610
         },
         "lowest": {
             "rating": 1207,

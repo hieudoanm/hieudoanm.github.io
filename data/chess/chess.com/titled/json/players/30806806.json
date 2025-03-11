@@ -6,16 +6,33 @@
     "name": "Sergiy Kryvosheya",
     "username": "skzt",
     "title": "GM",
-    "followers": 51,
+    "followers": 54,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Kyiv",
-    "last_online": 1733762511,
+    "last_online": 1741693277,
     "joined": 1478613097,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Bronze",
+    "league": "Silver",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 1960,
+            "date": 1739471195,
+            "rd": 53
+        },
+        "best": {
+            "rating": 1984,
+            "date": 1738521304,
+            "game": "https://www.chess.com/game/live/132260420801"
+        },
+        "record": {
+            "win": 1,
+            "loss": 1,
+            "draw": 3
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 2584,
@@ -30,9 +47,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2535,
-            "date": 1732640308,
-            "rd": 44
+            "rating": 2538,
+            "date": 1734452309,
+            "rd": 49
         },
         "best": {
             "rating": 2580,
@@ -40,16 +57,16 @@
             "game": "https://www.chess.com/game/live/124561210217"
         },
         "record": {
-            "win": 275,
-            "loss": 136,
+            "win": 276,
+            "loss": 137,
             "draw": 29
         }
     },
     "fide": 2460,
     "tactics": {
         "highest": {
-            "rating": 2518,
-            "date": 1586506277
+            "rating": 2523,
+            "date": 1740237758
         },
         "lowest": {
             "rating": 1817,

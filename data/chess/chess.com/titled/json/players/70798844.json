@@ -5,10 +5,10 @@
     "name": "Rustam Kasimdzhanov",
     "username": "solingen2020",
     "title": "GM",
-    "followers": 37,
+    "followers": 38,
     "country": "https://api.chess.com/pub/country/UZ",
     "location": "Tashkent",
-    "last_online": 1734167644,
+    "last_online": 1741679686,
     "joined": 1579102079,
     "status": "premium",
     "is_streamer": false,
@@ -45,10 +45,6 @@
         "best": {
             "total_attempts": 111,
             "score": 108
-        },
-        "daily": {
-            "total_attempts": 62,
-            "score": 59
         }
     }
 }

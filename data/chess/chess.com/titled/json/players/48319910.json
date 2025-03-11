@@ -6,9 +6,9 @@
     "name": "Andrei Macovei",
     "username": "andrewmaco",
     "title": "IM",
-    "followers": 117,
+    "followers": 122,
     "country": "https://api.chess.com/pub/country/MD",
-    "last_online": 1734158632,
+    "last_online": 1741620415,
     "joined": 1532964587,
     "status": "premium",
     "is_streamer": false,
@@ -51,8 +51,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2822,
-            "date": 1734142759,
+            "rating": 2723,
+            "date": 1741620753,
             "rd": 29
         },
         "best": {
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/106436825755"
         },
         "record": {
-            "win": 4003,
-            "loss": 4403,
-            "draw": 1087
+            "win": 4193,
+            "loss": 4629,
+            "draw": 1148
         }
     },
     "fide": 2491,

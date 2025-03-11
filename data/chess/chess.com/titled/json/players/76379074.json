@@ -5,9 +5,9 @@
     "name": "Praveen Thipsay",
     "username": "thipsay",
     "title": "GM",
-    "followers": 356,
+    "followers": 401,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734156307,
+    "last_online": 1741700068,
     "joined": 1586620885,
     "status": "premium",
     "is_streamer": false,
@@ -33,9 +33,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2207,
-            "date": 1734160791,
-            "rd": 18
+            "rating": 2309,
+            "date": 1741700206,
+            "rd": 22
         },
         "best": {
             "rating": 2477,
@@ -43,9 +43,9 @@
             "game": "https://www.chess.com/game/live/49019361677"
         },
         "record": {
-            "win": 15386,
-            "loss": 12971,
-            "draw": 878
+            "win": 16019,
+            "loss": 13518,
+            "draw": 899
         }
     },
     "chess_blitz": {

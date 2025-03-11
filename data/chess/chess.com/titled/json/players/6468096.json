@@ -6,10 +6,10 @@
     "name": "Basheer Alqudaimi",
     "username": "alqudaimi",
     "title": "IM",
-    "followers": 407,
+    "followers": 416,
     "country": "https://api.chess.com/pub/country/YE",
     "location": "Oman",
-    "last_online": 1729714205,
+    "last_online": 1741265837,
     "joined": 1326106607,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2064,
-            "date": 1715202188,
+            "date": 1741266413,
             "rd": 135
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 201,
             "loss": 30,
             "draw": 36,
-            "time_per_move": 32900,
+            "time_per_move": 33103,
             "timeout_percent": 0
         }
     },
@@ -50,32 +50,32 @@
             "win": 12,
             "loss": 5,
             "draw": 0,
-            "time_per_move": 32900,
+            "time_per_move": 33103,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1329,
-            "date": 1696577559,
-            "rd": 297
+            "rating": 2049,
+            "date": 1741268719,
+            "rd": 197
         },
         "best": {
             "rating": 2517,
             "date": 1681217654,
-            "game": "https://www.chess.com/game/live/2104515679"
+            "game": "https://www.chess.com/game/live/135004752995"
         },
         "record": {
-            "win": 8,
+            "win": 11,
             "loss": 3,
             "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2418,
-            "date": 1727680352,
-            "rd": 83
+            "rating": 2433,
+            "date": 1736070987,
+            "rd": 85
         },
         "best": {
             "rating": 2731,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/2208989925"
         },
         "record": {
-            "win": 3422,
-            "loss": 3183,
+            "win": 3425,
+            "loss": 3185,
             "draw": 360
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2455,
-            "date": 1697483405,
-            "rd": 84
+            "rating": 2309,
+            "date": 1738998444,
+            "rd": 132
         },
         "best": {
             "rating": 2607,
@@ -101,7 +101,7 @@
         },
         "record": {
             "win": 430,
-            "loss": 303,
+            "loss": 305,
             "draw": 44
         }
     },

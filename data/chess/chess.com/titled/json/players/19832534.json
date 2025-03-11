@@ -6,64 +6,64 @@
     "name": "Sanan Sjugirov",
     "username": "sanan_sjugirov",
     "title": "GM",
-    "followers": 2212,
+    "followers": 2336,
     "country": "https://api.chess.com/pub/country/HU",
-    "last_online": 1734129627,
+    "last_online": 1741640501,
     "joined": 1416598052,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2570,
-            "date": 1727292259,
+            "rating": 2606,
+            "date": 1739820075,
             "rd": 46
         },
         "best": {
             "rating": 2894,
             "date": 1590773321,
-            "game": "https://www.chess.com/game/live/80333610969"
+            "game": "https://www.chess.com/game/live/133546755721"
         },
         "record": {
-            "win": 80,
-            "loss": 69,
-            "draw": 55
+            "win": 85,
+            "loss": 72,
+            "draw": 56
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3018,
-            "date": 1733348616,
-            "rd": 32
+            "rating": 3022,
+            "date": 1737226718,
+            "rd": 34
         },
         "best": {
-            "rating": 3033,
-            "date": 1697497435,
+            "rating": 3034,
+            "date": 1736419334,
             "game": "https://www.chess.com/game/live/11032418873"
         },
         "record": {
-            "win": 2185,
-            "loss": 1478,
-            "draw": 262
+            "win": 2247,
+            "loss": 1499,
+            "draw": 269
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3053,
-            "date": 1733875819,
-            "rd": 35
+            "rating": 2989,
+            "date": 1741645101,
+            "rd": 36
         },
         "best": {
-            "rating": 3065,
-            "date": 1712884040,
+            "rating": 3083,
+            "date": 1736585079,
             "game": "https://www.chess.com/game/live/77386354205"
         },
         "record": {
-            "win": 6290,
-            "loss": 3590,
-            "draw": 1420
+            "win": 6474,
+            "loss": 3710,
+            "draw": 1469
         }
     },
     "fide": 2689,

@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 110,
     "country": "https://api.chess.com/pub/country/PR",
-    "last_online": 1722175099,
+    "last_online": 1741677739,
     "joined": 1541088655,
     "status": "premium",
     "is_streamer": false,
@@ -50,8 +50,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2675,
-            "date": 1708977149,
+            "rating": 2666,
+            "date": 1734904099,
             "rd": 49
         },
         "best": {
@@ -61,14 +61,14 @@
         },
         "record": {
             "win": 50,
-            "loss": 37,
+            "loss": 40,
             "draw": 1
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2966,
-            "date": 1719527609
+            "rating": 3007,
+            "date": 1741677926
         },
         "lowest": {
             "rating": 2212,

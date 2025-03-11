@@ -6,10 +6,10 @@
     "name": "GILBERTO HERNANDEZ",
     "username": "potosino1970",
     "title": "GM",
-    "followers": 265,
+    "followers": 274,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "San Luis, Argentina",
-    "last_online": 1733872916,
+    "last_online": 1741703418,
     "joined": 1503100320,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2691,
-            "date": 1600735511,
-            "rd": 134
+            "rating": 2685,
+            "date": 1740767407,
+            "rd": 48
         },
         "best": {
             "rating": 2759,
@@ -45,8 +45,8 @@
             "game": "https://www.chess.com/game/live/5479174443"
         },
         "record": {
-            "win": 5,
-            "loss": 2,
+            "win": 6,
+            "loss": 4,
             "draw": 0
         }
     },

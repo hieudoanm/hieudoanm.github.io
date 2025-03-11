@@ -6,10 +6,10 @@
     "name": "Richard Bitoon",
     "username": "richardbitoon",
     "title": "GM",
-    "followers": 407,
+    "followers": 415,
     "country": "https://api.chess.com/pub/country/PH",
     "location": "Philippines",
-    "last_online": 1734090957,
+    "last_online": 1740335368,
     "joined": 1247317779,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1612,
-            "date": 1729476496,
-            "rd": 59
+            "rating": 1524,
+            "date": 1738697868,
+            "rd": 141
         },
         "best": {
             "rating": 1636,
@@ -29,10 +29,10 @@
         },
         "record": {
             "win": 38,
-            "loss": 25,
+            "loss": 26,
             "draw": 3,
             "time_per_move": 73825,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess960_daily": {
@@ -85,9 +85,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2563,
-            "date": 1734091386,
-            "rd": 30
+            "rating": 2488,
+            "date": 1739218427,
+            "rd": 43
         },
         "best": {
             "rating": 2785,
@@ -95,15 +95,15 @@
             "game": "https://www.chess.com/game/live/77408534361"
         },
         "record": {
-            "win": 2396,
-            "loss": 2122,
-            "draw": 378
+            "win": 2416,
+            "loss": 2156,
+            "draw": 384
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3520,
-            "date": 1676753007
+            "rating": 3523,
+            "date": 1736623064
         },
         "lowest": {
             "rating": 511,

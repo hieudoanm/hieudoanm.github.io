@@ -7,7 +7,7 @@
     "title": "GM",
     "followers": 27,
     "country": "https://api.chess.com/pub/country/KZ",
-    "last_online": 1734031223,
+    "last_online": 1741689384,
     "joined": 1602177093,
     "status": "premium",
     "is_streamer": false,
@@ -16,19 +16,19 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2389,
-            "date": 1706294645,
+            "rating": 2400,
+            "date": 1739818716,
             "rd": 47
         },
         "best": {
             "rating": 2516,
             "date": 1681748968,
-            "game": "https://www.chess.com/game/live/100025501815"
+            "game": "https://www.chess.com/game/live/133546755875"
         },
         "record": {
-            "win": 13,
-            "loss": 4,
-            "draw": 3
+            "win": 14,
+            "loss": 8,
+            "draw": 6
         }
     },
     "chess_bullet": {
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2719,
-            "date": 1733953518,
-            "rd": 45
+            "rating": 2863,
+            "date": 1741702214,
+            "rd": 37
         },
         "best": {
             "rating": 2856,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/103418499267"
         },
         "record": {
-            "win": 729,
-            "loss": 557,
-            "draw": 120
+            "win": 801,
+            "loss": 614,
+            "draw": 130
         }
     },
     "tactics": {

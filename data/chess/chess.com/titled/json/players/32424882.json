@@ -6,10 +6,10 @@
     "name": "Lin Chen",
     "username": "lcfox",
     "title": "GM",
-    "followers": 372,
+    "followers": 391,
     "country": "https://api.chess.com/pub/country/CN",
     "location": "Nanjing",
-    "last_online": 1734172640,
+    "last_online": 1741652408,
     "joined": 1484528418,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1850,
-            "date": 1734140336,
+            "date": 1734919833,
             "rd": 214
         },
         "best": {
@@ -31,7 +31,7 @@
             "win": 98,
             "loss": 15,
             "draw": 6,
-            "time_per_move": 7176,
+            "time_per_move": 7222,
             "timeout_percent": 0
         }
     },
@@ -50,14 +50,14 @@
             "win": 43,
             "loss": 2,
             "draw": 0,
-            "time_per_move": 7176,
+            "time_per_move": 7222,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 1788,
-            "date": 1734141484,
+            "date": 1741653859,
             "rd": 149
         },
         "best": {

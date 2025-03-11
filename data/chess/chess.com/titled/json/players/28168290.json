@@ -6,10 +6,10 @@
     "name": "Oleksandr Bortnyk",
     "username": "oleksandr_bortnyk",
     "title": "GM",
-    "followers": 10063,
+    "followers": 10574,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Charlotte",
-    "last_online": 1734098212,
+    "last_online": 1741697373,
     "joined": 1463142885,
     "status": "premium",
     "is_streamer": true,
@@ -43,9 +43,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2675,
-            "date": 1727629135,
-            "rd": 43
+            "rating": 2676,
+            "date": 1739819943,
+            "rd": 46
         },
         "best": {
             "rating": 2939,
@@ -53,16 +53,16 @@
             "game": "https://www.chess.com/game/live/41447362479"
         },
         "record": {
-            "win": 266,
-            "loss": 132,
-            "draw": 87
+            "win": 270,
+            "loss": 134,
+            "draw": 90
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3232,
-            "date": 1734022938,
-            "rd": 31
+            "rating": 3130,
+            "date": 1741627660,
+            "rd": 24
         },
         "best": {
             "rating": 3367,
@@ -70,15 +70,15 @@
             "game": "https://www.chess.com/game/live/5727433305"
         },
         "record": {
-            "win": 17505,
-            "loss": 7565,
-            "draw": 1624
+            "win": 18408,
+            "loss": 7884,
+            "draw": 1678
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3030,
-            "date": 1734033069,
+            "rating": 3093,
+            "date": 1741629128,
             "rd": 28
         },
         "best": {
@@ -87,9 +87,9 @@
             "game": "https://www.chess.com/game/live/118534735617"
         },
         "record": {
-            "win": 8341,
-            "loss": 2553,
-            "draw": 1246
+            "win": 8902,
+            "loss": 2685,
+            "draw": 1333
         }
     },
     "fide": 2608,

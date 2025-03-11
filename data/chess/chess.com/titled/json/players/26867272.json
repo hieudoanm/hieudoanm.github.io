@@ -6,10 +6,10 @@
     "name": "Jose Martinez",
     "username": "jospem",
     "title": "GM",
-    "followers": 27765,
+    "followers": 29062,
     "country": "https://api.chess.com/pub/country/MX",
     "location": "Puebla",
-    "last_online": 1734183925,
+    "last_online": 1741686127,
     "joined": 1456152005,
     "status": "premium",
     "is_streamer": true,
@@ -43,9 +43,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2734,
-            "date": 1727717984,
-            "rd": 40
+            "rating": 2709,
+            "date": 1739820143,
+            "rd": 47
         },
         "best": {
             "rating": 2752,
@@ -53,16 +53,16 @@
             "game": "https://www.chess.com/game/live/109099316843"
         },
         "record": {
-            "win": 387,
-            "loss": 135,
-            "draw": 179
+            "win": 390,
+            "loss": 138,
+            "draw": 180
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3188,
-            "date": 1733597983,
-            "rd": 27
+            "rating": 3105,
+            "date": 1741457308,
+            "rd": 28
         },
         "best": {
             "rating": 3269,
@@ -70,16 +70,16 @@
             "game": "https://www.chess.com/game/live/11044480397"
         },
         "record": {
-            "win": 11027,
-            "loss": 5307,
-            "draw": 1172
+            "win": 11583,
+            "loss": 5489,
+            "draw": 1213
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3030,
-            "date": 1733943576,
-            "rd": 28
+            "rating": 3072,
+            "date": 1741654911,
+            "rd": 31
         },
         "best": {
             "rating": 3184,
@@ -87,9 +87,9 @@
             "game": "https://www.chess.com/game/live/124565321137"
         },
         "record": {
-            "win": 16704,
-            "loss": 7287,
-            "draw": 3087
+            "win": 17124,
+            "loss": 7422,
+            "draw": 3165
         }
     },
     "fide": 2620,
@@ -107,6 +107,10 @@
         "best": {
             "total_attempts": 96,
             "score": 93
+        },
+        "daily": {
+            "total_attempts": 41,
+            "score": 38
         }
     }
 }

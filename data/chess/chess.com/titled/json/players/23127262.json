@@ -5,10 +5,10 @@
     "name": "Pavel Smirnov",
     "username": "smirnov_pavel",
     "title": "GM",
-    "followers": 166,
+    "followers": 169,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "\u041a\u0438\u0441\u043b\u043e\u0432\u043e\u0434\u0441\u043a",
-    "last_online": 1727893578,
+    "last_online": 1739993736,
     "joined": 1436222705,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2557,
-            "date": 1727367634,
-            "rd": 45
+            "rating": 2565,
+            "date": 1739819779,
+            "rd": 46
         },
         "best": {
             "rating": 2679,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/100467833197"
         },
         "record": {
-            "win": 48,
-            "loss": 36,
-            "draw": 33
+            "win": 52,
+            "loss": 40,
+            "draw": 34
         }
     },
     "chess_bullet": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2700,
-            "date": 1706822126,
-            "rd": 49
+            "rating": 2754,
+            "date": 1738614001,
+            "rd": 38
         },
         "best": {
             "rating": 2917,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/5534078886"
         },
         "record": {
-            "win": 1121,
-            "loss": 666,
-            "draw": 253
+            "win": 1142,
+            "loss": 675,
+            "draw": 261
         }
     },
     "fide": 2600,

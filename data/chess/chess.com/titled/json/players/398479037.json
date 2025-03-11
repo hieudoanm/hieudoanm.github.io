@@ -4,30 +4,30 @@
     "url": "https://www.chess.com/member/WhooopsIDidItAgain",
     "username": "whooopsididitagain",
     "title": "GM",
-    "followers": 5,
+    "followers": 11,
     "country": "https://api.chess.com/pub/country/HT",
-    "last_online": 1733526342,
+    "last_online": 1741364217,
     "joined": 1729950684,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2860,
-            "date": 1733528033,
-            "rd": 18
+            "rating": 2909,
+            "date": 1741387123,
+            "rd": 25
         },
         "best": {
-            "rating": 2952,
-            "date": 1732818879,
-            "game": "https://www.chess.com/game/live/126553186299"
+            "rating": 2991,
+            "date": 1738619302,
+            "game": "https://www.chess.com/game/live/133460338443"
         },
         "record": {
-            "win": 499,
-            "loss": 224,
-            "draw": 61
+            "win": 1123,
+            "loss": 707,
+            "draw": 236
         }
     },
     "tactics": {
@@ -40,5 +40,10 @@
             "date": 1729950684
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 43,
+            "score": 41
+        }
+    }
 }

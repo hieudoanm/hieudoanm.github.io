@@ -6,10 +6,10 @@
     "name": "Parham Maghsoodloo",
     "username": "parhamov",
     "title": "GM",
-    "followers": 5000,
+    "followers": 5158,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Gorgan",
-    "last_online": 1733920245,
+    "last_online": 1741703373,
     "joined": 1483868974,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3006,
-            "date": 1733074657,
-            "rd": 44
+            "rating": 3055,
+            "date": 1741700240,
+            "rd": 37
         },
         "best": {
             "rating": 3149,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/114017491593"
         },
         "record": {
-            "win": 3639,
-            "loss": 3703,
-            "draw": 523
+            "win": 3710,
+            "loss": 3739,
+            "draw": 533
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3158,
-            "date": 1733178403,
-            "rd": 30
+            "rating": 3124,
+            "date": 1741697558,
+            "rd": 28
         },
         "best": {
-            "rating": 3210,
-            "date": 1729290818,
+            "rating": 3215,
+            "date": 1734540870,
             "game": "https://www.chess.com/game/live/94327922509"
         },
         "record": {
-            "win": 3656,
-            "loss": 2841,
-            "draw": 807
+            "win": 3951,
+            "loss": 3056,
+            "draw": 857
         }
     },
     "fide": 2728,
@@ -82,6 +82,10 @@
         "best": {
             "total_attempts": 96,
             "score": 93
+        },
+        "daily": {
+            "total_attempts": 73,
+            "score": 70
         }
     }
 }

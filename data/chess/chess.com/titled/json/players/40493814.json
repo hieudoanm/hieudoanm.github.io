@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/JustAnything",
     "username": "justanything",
     "title": "GM",
-    "followers": 80,
+    "followers": 81,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734067978,
+    "last_online": 1741697942,
     "joined": 1511012727,
     "status": "premium",
     "is_streamer": false,
@@ -97,6 +97,10 @@
         "best": {
             "total_attempts": 71,
             "score": 68
+        },
+        "daily": {
+            "total_attempts": 50,
+            "score": 48
         }
     }
 }

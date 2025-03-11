@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2368,
-            "date": 1733849485,
-            "rd": 43
+            "rating": 2378,
+            "date": 1736704374,
+            "rd": 44
         },
         "best": {
             "rating": 2534,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/54493856881"
         },
         "record": {
-            "win": 1900,
-            "loss": 1613,
-            "draw": 220
+            "win": 1918,
+            "loss": 1629,
+            "draw": 221
         }
     },
     "tactics": {

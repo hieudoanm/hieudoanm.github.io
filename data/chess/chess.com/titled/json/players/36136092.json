@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/markowskitomasz",
     "username": "markowskitomasz",
     "title": "GM",
-    "followers": 15,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1734179187,
+    "last_online": 1741622406,
     "joined": 1496864180,
     "status": "premium",
     "is_streamer": false,
@@ -27,9 +27,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2602,
-            "date": 1691002535,
-            "rd": 45
+            "rating": 2613,
+            "date": 1738166441
         },
         "best": {
             "rating": 2672,
@@ -37,8 +36,8 @@
             "game": "https://www.chess.com/game/live/6429242689"
         },
         "record": {
-            "win": 385,
-            "loss": 272,
+            "win": 387,
+            "loss": 273,
             "draw": 100
         }
     },

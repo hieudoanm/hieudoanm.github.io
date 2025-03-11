@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 14,
     "country": "https://api.chess.com/pub/country/TD",
-    "last_online": 1733922732,
+    "last_online": 1741038859,
     "joined": 1693241162,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1959,
-            "date": 1703602296,
+            "date": 1735205810,
             "rd": 125
         },
         "best": {

@@ -6,9 +6,9 @@
     "name": "Yunguo Wan",
     "username": "tk161",
     "title": "GM",
-    "followers": 19,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734183739,
+    "last_online": 1741274630,
     "joined": 1587656307,
     "status": "premium",
     "is_streamer": false,
@@ -34,8 +34,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2690,
-            "date": 1733973255,
+            "rating": 2662,
+            "date": 1735533908,
             "rd": 48
         },
         "best": {
@@ -45,32 +45,32 @@
         },
         "record": {
             "win": 2,
-            "loss": 2,
-            "draw": 0
+            "loss": 5,
+            "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2792,
-            "date": 1734184209,
-            "rd": 48
+            "rating": 2743,
+            "date": 1741279010,
+            "rd": 47
         },
         "best": {
-            "rating": 2800,
-            "date": 1732900066,
-            "game": "https://www.chess.com/game/live/126638939103"
+            "rating": 2814,
+            "date": 1734189045,
+            "game": "https://www.chess.com/game/live/132313265263"
         },
         "record": {
-            "win": 144,
-            "loss": 114,
-            "draw": 15
+            "win": 185,
+            "loss": 147,
+            "draw": 20
         }
     },
     "fide": 2508,
     "tactics": {
         "highest": {
-            "rating": 3408,
-            "date": 1709200745
+            "rating": 3553,
+            "date": 1740401984
         },
         "lowest": {
             "rating": 1214,

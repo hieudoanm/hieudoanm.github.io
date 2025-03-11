@@ -6,10 +6,10 @@
     "name": "Visakh NR",
     "username": "nrvisakh",
     "title": "GM",
-    "followers": 426,
+    "followers": 435,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Chennai",
-    "last_online": 1734145896,
+    "last_online": 1741697380,
     "joined": 1537685905,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1833,
-            "date": 1730650165,
+            "date": 1738641184,
             "rd": 151
         },
         "best": {
@@ -90,9 +90,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2913,
-            "date": 1732267384,
-            "rd": 37
+            "rating": 2945,
+            "date": 1739164930,
+            "rd": 48
         },
         "best": {
             "rating": 2974,
@@ -100,12 +100,12 @@
             "game": "https://www.chess.com/game/live/120402625375"
         },
         "record": {
-            "win": 2403,
-            "loss": 1600,
-            "draw": 786
+            "win": 2413,
+            "loss": 1605,
+            "draw": 788
         }
     },
-    "fide": 2501,
+    "fide": 2514,
     "tactics": {
         "highest": {
             "rating": 3920,

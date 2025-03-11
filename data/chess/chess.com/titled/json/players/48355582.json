@@ -6,10 +6,10 @@
     "name": "Roberto Garcia Pantoja",
     "username": "rogapa",
     "title": "GM",
-    "followers": 148,
+    "followers": 153,
     "country": "https://api.chess.com/pub/country/CU",
     "location": "Colombia",
-    "last_online": 1734020495,
+    "last_online": 1741572919,
     "joined": 1533064105,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2506,
-            "date": 1652316094,
-            "rd": 153
+            "rating": 2522,
+            "date": 1736275122,
+            "rd": 49
         },
         "best": {
-            "rating": 2513,
-            "date": 1605219438,
+            "rating": 2522,
+            "date": 1736275122,
             "game": "https://www.chess.com/game/live/4874512726"
         },
         "record": {
-            "win": 12,
+            "win": 14,
             "loss": 12,
             "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2659,
-            "date": 1681228578,
-            "rd": 66
+            "rating": 2714,
+            "date": 1736273324,
+            "rd": 46
         },
         "best": {
             "rating": 2831,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/4266820722"
         },
         "record": {
-            "win": 662,
-            "loss": 384,
+            "win": 670,
+            "loss": 387,
             "draw": 89
         }
     },

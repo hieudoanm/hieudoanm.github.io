@@ -6,9 +6,9 @@
     "name": "Marc-Andria Maurizzi",
     "username": "marcan2b",
     "title": "GM",
-    "followers": 374,
+    "followers": 409,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734102884,
+    "last_online": 1741683588,
     "joined": 1422466053,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1329,
-            "date": 1733857281,
+            "date": 1741253320,
             "rd": 116
         },
         "best": {
@@ -67,36 +67,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2674,
-            "date": 1716845273,
-            "rd": 47
+            "rating": 2882,
+            "date": 1741610063,
+            "rd": 49
         },
         "best": {
-            "rating": 2717,
-            "date": 1709461016,
-            "game": "https://www.chess.com/game/live/16828648547"
+            "rating": 2921,
+            "date": 1737818743,
+            "game": "https://www.chess.com/game/live/131455231609"
         },
         "record": {
-            "win": 1221,
-            "loss": 833,
-            "draw": 93
+            "win": 1282,
+            "loss": 850,
+            "draw": 100
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3034,
-            "date": 1733875301,
-            "rd": 27
+            "rating": 2987,
+            "date": 1741611850,
+            "rd": 42
         },
         "best": {
-            "rating": 3054,
-            "date": 1733529271,
-            "game": "https://www.chess.com/game/live/103646483129"
+            "rating": 3106,
+            "date": 1737718215,
+            "game": "https://www.chess.com/game/live/131017803913"
         },
         "record": {
-            "win": 6209,
-            "loss": 4743,
-            "draw": 762
+            "win": 6308,
+            "loss": 4830,
+            "draw": 795
         }
     },
     "tactics": {
@@ -113,6 +113,10 @@
         "best": {
             "total_attempts": 57,
             "score": 54
+        },
+        "daily": {
+            "total_attempts": 45,
+            "score": 42
         }
     }
 }

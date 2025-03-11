@@ -6,16 +6,33 @@
     "name": "Groszpeter Attila",
     "username": "incike",
     "title": "GM",
-    "followers": 19,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Kecskemet",
-    "last_online": 1734171302,
+    "last_online": 1741696107,
     "joined": 1454146815,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Stone",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2424,
+            "date": 1736095171,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2424,
+            "date": 1736091415,
+            "game": "https://www.chess.com/game/live/129828578361"
+        },
+        "record": {
+            "win": 4,
+            "loss": 0,
+            "draw": 0
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 2380,
@@ -35,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2752,
-            "date": 1734171508,
+            "rating": 2734,
+            "date": 1741696248,
             "rd": 35
         },
         "best": {
-            "rating": 2789,
-            "date": 1652093984,
+            "rating": 2796,
+            "date": 1739434992,
             "game": "https://www.chess.com/game/live/44272754361"
         },
         "record": {
-            "win": 1267,
-            "loss": 1024,
-            "draw": 311
+            "win": 1360,
+            "loss": 1114,
+            "draw": 341
         }
     },
     "fide": 2424,

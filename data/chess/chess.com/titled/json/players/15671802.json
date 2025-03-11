@@ -6,10 +6,10 @@
     "name": "Alexandru-Bogdan Banzea",
     "username": "alex_banzea",
     "title": "IM",
-    "followers": 1954,
+    "followers": 2026,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Bucharest, Romania",
-    "last_online": 1734106282,
+    "last_online": 1741696043,
     "joined": 1390248438,
     "status": "premium",
     "is_streamer": true,
@@ -44,7 +44,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2002,
-            "date": 1719577916,
+            "date": 1740523388,
             "rd": 49
         },
         "best": {
@@ -77,8 +77,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2723,
-            "date": 1734023177,
+            "rating": 2725,
+            "date": 1741428671,
             "rd": 49
         },
         "best": {
@@ -87,8 +87,8 @@
             "game": "https://www.chess.com/game/live/62895079773"
         },
         "record": {
-            "win": 6383,
-            "loss": 5550,
+            "win": 6385,
+            "loss": 5552,
             "draw": 1001
         }
     },

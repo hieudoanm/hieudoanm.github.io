@@ -6,10 +6,10 @@
     "name": "Guillermo Jos\u00e9 Llanos",
     "username": "ajedrezhoy",
     "title": "IM",
-    "followers": 349,
+    "followers": 352,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Buenos Aires",
-    "last_online": 1734175823,
+    "last_online": 1741649149,
     "joined": 1535980440,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 1975,
-            "date": 1593974634,
-            "rd": 115
+            "rating": 1830,
+            "date": 1738180487,
+            "rd": 210
         },
         "best": {
             "rating": 2224,
@@ -28,8 +28,8 @@
             "game": "https://www.chess.com/game/live/5105214615"
         },
         "record": {
-            "win": 16,
-            "loss": 3,
+            "win": 20,
+            "loss": 4,
             "draw": 1
         }
     },
@@ -52,8 +52,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2584,
-            "date": 1730481008
+            "rating": 3004,
+            "date": 1741654673
         },
         "lowest": {
             "rating": 411,

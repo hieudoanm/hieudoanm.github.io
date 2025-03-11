@@ -6,9 +6,9 @@
     "name": "Artem Omelja",
     "username": "temiksmozg",
     "title": "GM",
-    "followers": 82,
+    "followers": 85,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1734113680,
+    "last_online": 1741466434,
     "joined": 1495828148,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2719,
-            "date": 1713913700,
-            "rd": 43
+            "rating": 2738,
+            "date": 1737475685,
+            "rd": 49
         },
         "best": {
             "rating": 2756,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/107023197423"
         },
         "record": {
-            "win": 1879,
-            "loss": 1995,
-            "draw": 423
+            "win": 1885,
+            "loss": 1998,
+            "draw": 424
         }
     },
     "tactics": {

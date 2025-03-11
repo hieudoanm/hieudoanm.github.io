@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Neferpitou27",
     "username": "neferpitou27",
     "title": "GM",
-    "followers": 432,
+    "followers": 538,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734185266,
+    "last_online": 1741691569,
     "joined": 1687210380,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +15,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2945,
-            "date": 1730132830,
-            "rd": 49
+            "rating": 2973,
+            "date": 1741522952,
+            "rd": 45
         },
         "best": {
             "rating": 2961,
@@ -25,26 +25,26 @@
             "game": "https://www.chess.com/game/live/105732055995"
         },
         "record": {
-            "win": 68,
-            "loss": 38,
-            "draw": 6
+            "win": 78,
+            "loss": 44,
+            "draw": 8
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3088,
-            "date": 1734181173,
-            "rd": 27
+            "rating": 3041,
+            "date": 1741527011,
+            "rd": 32
         },
         "best": {
-            "rating": 3091,
-            "date": 1734110167,
-            "game": "https://www.chess.com/game/live/125525336381"
+            "rating": 3103,
+            "date": 1734259616,
+            "game": "https://www.chess.com/game/live/131312957479"
         },
         "record": {
-            "win": 539,
-            "loss": 459,
-            "draw": 125
+            "win": 663,
+            "loss": 559,
+            "draw": 157
         }
     },
     "tactics": {

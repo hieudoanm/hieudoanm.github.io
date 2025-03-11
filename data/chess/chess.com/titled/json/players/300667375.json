@@ -6,10 +6,10 @@
     "name": "Homayoon Toufighi",
     "username": "homayooont",
     "title": "GM",
-    "followers": 207,
+    "followers": 248,
     "country": "https://api.chess.com/pub/country/TR",
     "location": "Antalya",
-    "last_online": 1734122795,
+    "last_online": 1741687855,
     "joined": 1689702124,
     "status": "premium",
     "is_streamer": false,
@@ -18,18 +18,18 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 3003,
-            "date": 1730076832,
-            "rd": 28
+            "rating": 3002,
+            "date": 1741216740,
+            "rd": 39
         },
         "best": {
-            "rating": 3003,
-            "date": 1730076832,
+            "rating": 3023,
+            "date": 1740953178,
             "game": "https://www.chess.com/game/live/96204180151"
         },
         "record": {
-            "win": 514,
-            "loss": 267,
+            "win": 533,
+            "loss": 298,
             "draw": 32
         }
     },

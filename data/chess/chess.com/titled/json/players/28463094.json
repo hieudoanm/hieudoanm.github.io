@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/28463094.f8179a16.200x200o.8134671cac55.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/28463094.26b605cf.200x200o.edcbf77f5656.jpg",
     "player_id": 28463094,
     "@id": "https://api.chess.com/pub/player/sergiochess83",
     "url": "https://www.chess.com/member/sergiochess83",
     "name": "Sergey Grigoriants",
     "username": "sergiochess83",
     "title": "GM",
-    "followers": 2201,
+    "followers": 2275,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Szeged",
-    "last_online": 1734086277,
+    "last_online": 1741696064,
     "joined": 1464879662,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2344,
-            "date": 1715241890,
+            "date": 1739284622,
             "rd": 178
         },
         "best": {
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3000,
-            "date": 1727984386,
-            "rd": 24
+            "rating": 2910,
+            "date": 1741605699,
+            "rd": 40
         },
         "best": {
-            "rating": 3003,
-            "date": 1711493086,
-            "game": "https://www.chess.com/game/live/85878036211"
+            "rating": 3011,
+            "date": 1735081648,
+            "game": "https://www.chess.com/game/live/131233753409"
         },
         "record": {
-            "win": 3418,
-            "loss": 3324,
-            "draw": 1588
+            "win": 3487,
+            "loss": 3363,
+            "draw": 1608
         }
     },
     "fide": 2580,

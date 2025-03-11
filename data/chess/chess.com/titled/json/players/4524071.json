@@ -6,10 +6,10 @@
     "name": "Manea Alexandru",
     "username": "aikiigm",
     "title": "IM",
-    "followers": 678,
+    "followers": 707,
     "country": "https://api.chess.com/pub/country/RO",
     "location": "Bucuresti",
-    "last_online": 1734160001,
+    "last_online": 1741697787,
     "joined": 1294516948,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2500,
-            "date": 1688933700,
-            "rd": 294
+            "rating": 2444,
+            "date": 1741550531,
+            "rd": 49
         },
         "best": {
             "rating": 2500,
@@ -47,33 +47,33 @@
             "game": "https://www.chess.com/game/live/1907576728"
         },
         "record": {
-            "win": 1,
-            "loss": 0,
-            "draw": 0
+            "win": 8,
+            "loss": 3,
+            "draw": 1
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2581,
-            "date": 1734129799,
-            "rd": 36
+            "rating": 2599,
+            "date": 1741374431,
+            "rd": 35
         },
         "best": {
-            "rating": 2590,
-            "date": 1734129650,
-            "game": "https://www.chess.com/game/live/64872829793"
+            "rating": 2661,
+            "date": 1736547841,
+            "game": "https://www.chess.com/game/live/129552165495"
         },
         "record": {
-            "win": 3054,
-            "loss": 2381,
-            "draw": 340
+            "win": 3310,
+            "loss": 2566,
+            "draw": 371
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2579,
-            "date": 1731603836,
-            "rd": 37
+            "rating": 2583,
+            "date": 1741698071,
+            "rd": 44
         },
         "best": {
             "rating": 2707,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/80433558449"
         },
         "record": {
-            "win": 6477,
-            "loss": 4801,
-            "draw": 1109
+            "win": 6518,
+            "loss": 4821,
+            "draw": 1116
         }
     },
     "fide": 2414,

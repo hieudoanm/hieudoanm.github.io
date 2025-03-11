@@ -5,51 +5,51 @@
     "name": "Aaron Alonso Garcia",
     "username": "aaron080803",
     "title": "IM",
-    "followers": 12,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734120842,
+    "last_online": 1741638987,
     "joined": 1663716074,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1973,
-            "date": 1733862440,
-            "rd": 182
+            "rating": 1978,
+            "date": 1741508106,
+            "rd": 187
         },
         "best": {
-            "rating": 1973,
-            "date": 1731917282,
+            "rating": 1978,
+            "date": 1739701129,
             "game": "https://www.chess.com/game/daily/689449469"
         },
         "record": {
-            "win": 10,
+            "win": 11,
             "loss": 0,
             "draw": 0,
-            "time_per_move": 25178,
+            "time_per_move": 23088,
             "timeout_percent": 0
         }
     },
     "chess_rapid": {
         "last": {
-            "rating": 1865,
-            "date": 1729673953,
-            "rd": 348
+            "rating": 2425,
+            "date": 1741087317,
+            "rd": 49
         },
         "record": {
-            "win": 0,
-            "loss": 1,
+            "win": 2,
+            "loss": 3,
             "draw": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2552,
-            "date": 1729755355,
-            "rd": 44
+            "rating": 2533,
+            "date": 1741005062,
+            "rd": 49
         },
         "best": {
             "rating": 2593,
@@ -57,16 +57,16 @@
             "game": "https://www.chess.com/game/live/123414008385"
         },
         "record": {
-            "win": 7,
-            "loss": 6,
+            "win": 8,
+            "loss": 9,
             "draw": 3
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2715,
-            "date": 1734121371,
-            "rd": 31
+            "rating": 2733,
+            "date": 1741686230,
+            "rd": 29
         },
         "best": {
             "rating": 2780,
@@ -74,9 +74,9 @@
             "game": "https://www.chess.com/game/live/123370865105"
         },
         "record": {
-            "win": 436,
-            "loss": 279,
-            "draw": 68
+            "win": 755,
+            "loss": 518,
+            "draw": 147
         }
     },
     "fide": 0,

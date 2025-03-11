@@ -5,15 +5,15 @@
     "name": "\u0421\u043f\u0430\u0440\u0442\u0430\u043a \u0412\u044b\u0441\u043e\u0447\u0438\u043d",
     "username": "spartakus1975",
     "title": "GM",
-    "followers": 200,
+    "followers": 201,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u041a\u0438\u0435\u0432",
-    "last_online": 1733240434,
+    "last_online": 1741211106,
     "joined": 1380221179,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2454,
-            "date": 1668201315,
-            "rd": 97
+            "rating": 2517,
+            "date": 1738268021,
+            "rd": 49
         },
         "best": {
             "rating": 2617,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/1473228382"
         },
         "record": {
-            "win": 3973,
+            "win": 4007,
             "loss": 3002,
-            "draw": 319
+            "draw": 320
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2628,
-            "date": 1729854181,
-            "rd": 48
+            "rating": 2566,
+            "date": 1741212228,
+            "rd": 44
         },
         "best": {
             "rating": 2794,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/4784044932"
         },
         "record": {
-            "win": 1616,
-            "loss": 928,
-            "draw": 259
+            "win": 1676,
+            "loss": 944,
+            "draw": 268
         }
     },
     "tactics": {

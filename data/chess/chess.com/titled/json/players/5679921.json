@@ -6,10 +6,10 @@
     "name": "Axel Smith",
     "username": "klippfiskkjerringa",
     "title": "GM",
-    "followers": 95,
+    "followers": 110,
     "country": "https://api.chess.com/pub/country/SE",
     "location": "Kristiansund",
-    "last_online": 1734132886,
+    "last_online": 1741694733,
     "joined": 1314344952,
     "status": "premium",
     "is_streamer": false,
@@ -82,8 +82,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 50,
-            "score": 47
+            "total_attempts": 48,
+            "score": 48
         }
     }
 }

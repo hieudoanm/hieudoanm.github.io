@@ -6,10 +6,10 @@
     "name": "Vitaliy Bernadskiy",
     "username": "vitaliybernadskiy",
     "title": "GM",
-    "followers": 678,
+    "followers": 712,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Pasadena California US",
-    "last_online": 1734162947,
+    "last_online": 1741688756,
     "joined": 1423913669,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2883,
-            "date": 1733410456,
-            "rd": 31
+            "rating": 2903,
+            "date": 1741512567,
+            "rd": 29
         },
         "best": {
-            "rating": 2964,
-            "date": 1727021120,
+            "rating": 3032,
+            "date": 1734982387,
             "game": "https://www.chess.com/game/live/84037954539"
         },
         "record": {
-            "win": 5734,
-            "loss": 4320,
-            "draw": 1178
+            "win": 6078,
+            "loss": 4581,
+            "draw": 1256
         }
     },
     "fide": 2629,

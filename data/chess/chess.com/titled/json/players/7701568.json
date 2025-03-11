@@ -6,10 +6,10 @@
     "name": "Asaf Givon",
     "username": "asafgivon",
     "title": "IM",
-    "followers": 361,
+    "followers": 389,
     "country": "https://api.chess.com/pub/country/IL",
     "location": "Tel aviv",
-    "last_online": 1734133048,
+    "last_online": 1741695685,
     "joined": 1338115722,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2525,
-            "date": 1733953320,
+            "rating": 2519,
+            "date": 1741195212,
             "rd": 50
         },
         "best": {
@@ -47,9 +47,9 @@
             "game": "https://www.chess.com/game/live/49326570483"
         },
         "record": {
-            "win": 65,
+            "win": 66,
             "loss": 13,
-            "draw": 2
+            "draw": 3
         }
     },
     "chess_bullet": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2706,
-            "date": 1730926423,
-            "rd": 49
+            "rating": 2721,
+            "date": 1739923011,
+            "rd": 47
         },
         "best": {
             "rating": 2739,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/84144605059"
         },
         "record": {
-            "win": 704,
-            "loss": 420,
+            "win": 709,
+            "loss": 422,
             "draw": 95
         }
     },

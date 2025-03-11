@@ -6,10 +6,10 @@
     "name": "Irina Krush",
     "username": "irochka83",
     "title": "GM",
-    "followers": 603,
+    "followers": 622,
     "country": "https://api.chess.com/pub/country/US",
     "location": "new york city",
-    "last_online": 1734135155,
+    "last_online": 1741657128,
     "joined": 1241642455,
     "status": "premium",
     "is_streamer": false,
@@ -52,19 +52,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2606,
-            "date": 1733987527,
-            "rd": 37
+            "rating": 2595,
+            "date": 1740810553,
+            "rd": 47
         },
         "best": {
-            "rating": 2608,
-            "date": 1733985851,
+            "rating": 2641,
+            "date": 1735021151,
             "game": "https://www.chess.com/game/live/30220827487"
         },
         "record": {
-            "win": 366,
-            "loss": 253,
-            "draw": 58
+            "win": 435,
+            "loss": 298,
+            "draw": 72
         }
     },
     "fide": 2500,

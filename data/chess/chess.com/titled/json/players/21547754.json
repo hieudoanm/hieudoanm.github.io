@@ -5,10 +5,10 @@
     "name": "Cristobal Henriquez",
     "username": "hvillagra",
     "title": "GM",
-    "followers": 1603,
+    "followers": 1655,
     "country": "https://api.chess.com/pub/country/CL",
     "location": "Santiago",
-    "last_online": 1733948805,
+    "last_online": 1741703404,
     "joined": 1426537817,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2560,
-            "date": 1721239447,
-            "rd": 47
+            "rating": 2572,
+            "date": 1739820062,
+            "rd": 46
         },
         "best": {
             "rating": 2766,
@@ -27,15 +27,15 @@
             "game": "https://www.chess.com/game/live/100455804831"
         },
         "record": {
-            "win": 49,
-            "loss": 41,
-            "draw": 29
+            "win": 53,
+            "loss": 44,
+            "draw": 31
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2963,
-            "date": 1720288797,
+            "rating": 2967,
+            "date": 1741124196,
             "rd": 35
         },
         "best": {
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/81365431313"
         },
         "record": {
-            "win": 1218,
-            "loss": 961,
-            "draw": 182
+            "win": 1277,
+            "loss": 992,
+            "draw": 189
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2863,
-            "date": 1733850381,
-            "rd": 42
+            "rating": 2994,
+            "date": 1741366529,
+            "rd": 35
         },
         "best": {
             "rating": 3050,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/95536881937"
         },
         "record": {
-            "win": 2883,
-            "loss": 2431,
-            "draw": 635
+            "win": 3014,
+            "loss": 2493,
+            "draw": 655
         }
     },
     "tactics": {
@@ -80,6 +80,10 @@
         "best": {
             "total_attempts": 88,
             "score": 85
+        },
+        "daily": {
+            "total_attempts": 25,
+            "score": 23
         }
     }
 }

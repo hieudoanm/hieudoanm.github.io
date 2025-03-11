@@ -6,10 +6,10 @@
     "name": "Jesse Kraai",
     "username": "jessekraai",
     "title": "GM",
-    "followers": 415,
+    "followers": 429,
     "country": "https://api.chess.com/pub/country/US",
     "location": "United States",
-    "last_online": 1734096675,
+    "last_online": 1741615681,
     "joined": 1381696405,
     "status": "premium",
     "is_streamer": true,
@@ -47,9 +47,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2641,
-            "date": 1734108104,
-            "rd": 29
+            "rating": 2581,
+            "date": 1741639645,
+            "rd": 34
         },
         "best": {
             "rating": 2748,
@@ -57,9 +57,9 @@
             "game": "https://www.chess.com/game/live/11890988441"
         },
         "record": {
-            "win": 1956,
-            "loss": 1402,
-            "draw": 330
+            "win": 2113,
+            "loss": 1533,
+            "draw": 353
         }
     },
     "fide": 2550,

@@ -5,9 +5,9 @@
     "name": "Jiri Stocek",
     "username": "kruhor",
     "title": "GM",
-    "followers": 4,
+    "followers": 5,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1732135643,
+    "last_online": 1736798891,
     "joined": 1587323021,
     "status": "premium",
     "is_streamer": false,
@@ -50,8 +50,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2525,
-            "date": 1731013242,
+            "rating": 2522,
+            "date": 1735995633,
             "rd": 49
         },
         "best": {
@@ -62,7 +62,7 @@
         "record": {
             "win": 142,
             "loss": 69,
-            "draw": 19
+            "draw": 20
         }
     },
     "fide": 2589,

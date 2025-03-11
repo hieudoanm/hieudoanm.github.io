@@ -6,10 +6,10 @@
     "name": "Magnus Carlsen",
     "username": "magnuscarlsen",
     "title": "GM",
-    "followers": 233821,
+    "followers": 252961,
     "country": "https://api.chess.com/pub/country/NO",
     "location": "Norway",
-    "last_online": 1734131851,
+    "last_online": 1741695333,
     "joined": 1282856720,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2906,
-            "date": 1727802080,
+            "rating": 2909,
+            "date": 1740158071,
             "rd": 44
         },
         "best": {
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/121539623527"
         },
         "record": {
-            "win": 78,
-            "loss": 22,
-            "draw": 70
+            "win": 86,
+            "loss": 23,
+            "draw": 79
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3212,
-            "date": 1730832493,
-            "rd": 40
+            "rating": 3223,
+            "date": 1740855579,
+            "rd": 39
         },
         "best": {
             "rating": 3390,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/70204459381"
         },
         "record": {
-            "win": 996,
-            "loss": 357,
-            "draw": 178
+            "win": 1126,
+            "loss": 373,
+            "draw": 194
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3269,
-            "date": 1734133797,
-            "rd": 36
+            "rating": 3258,
+            "date": 1741626178,
+            "rd": 35
         },
         "best": {
             "rating": 3377,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/94327327601"
         },
         "record": {
-            "win": 3142,
-            "loss": 683,
-            "draw": 554
+            "win": 3449,
+            "loss": 751,
+            "draw": 613
         }
     },
     "fide": 2882,

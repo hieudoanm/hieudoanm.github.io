@@ -5,9 +5,9 @@
     "name": "Gennadi Zaichik",
     "username": "vica56",
     "title": "GM",
-    "followers": 117,
+    "followers": 125,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734148439,
+    "last_online": 1741659098,
     "joined": 1343370964,
     "status": "premium",
     "is_streamer": false,
@@ -45,9 +45,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2118,
-            "date": 1734162644,
-            "rd": 20
+            "rating": 2056,
+            "date": 1741678038,
+            "rd": 19
         },
         "best": {
             "rating": 2417,
@@ -55,16 +55,16 @@
             "game": "https://www.chess.com/game/live/4237768460"
         },
         "record": {
-            "win": 43240,
-            "loss": 36886,
-            "draw": 3219
+            "win": 44182,
+            "loss": 37709,
+            "draw": 3288
         }
     },
     "fide": 0,
     "tactics": {
         "highest": {
-            "rating": 3400,
-            "date": 1729779227
+            "rating": 3447,
+            "date": 1740194641
         },
         "lowest": {
             "rating": 1211,

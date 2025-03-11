@@ -6,10 +6,10 @@
     "name": "Laurent Fressinet",
     "username": "zlatan56",
     "title": "GM",
-    "followers": 195,
+    "followers": 206,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Paris",
-    "last_online": 1734088190,
+    "last_online": 1741601769,
     "joined": 1424776970,
     "status": "premium",
     "is_streamer": false,
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2601,
-            "date": 1727290968,
+            "rating": 2602,
+            "date": 1739819561,
             "rd": 46
         },
         "best": {
@@ -47,26 +47,26 @@
             "game": "https://www.chess.com/game/live/80322688475"
         },
         "record": {
-            "win": 30,
-            "loss": 25,
-            "draw": 40
+            "win": 34,
+            "loss": 29,
+            "draw": 41
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2904,
-            "date": 1733519889,
-            "rd": 41
+            "rating": 3001,
+            "date": 1739621494,
+            "rd": 36
         },
         "best": {
-            "rating": 2993,
-            "date": 1704811795,
+            "rating": 3001,
+            "date": 1739621494,
             "game": "https://www.chess.com/game/live/95478017807"
         },
         "record": {
-            "win": 633,
-            "loss": 423,
-            "draw": 196
+            "win": 697,
+            "loss": 467,
+            "draw": 226
         }
     },
     "fide": 2700,

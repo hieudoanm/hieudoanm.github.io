@@ -6,10 +6,10 @@
     "name": "Julio Leonardo Boudy Bueno",
     "username": "ajedrezcapablanca",
     "title": "IM",
-    "followers": 1164,
+    "followers": 1185,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Gij\u00f3n",
-    "last_online": 1734177983,
+    "last_online": 1741687314,
     "joined": 1502487277,
     "status": "premium",
     "is_streamer": true,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 1839,
-            "date": 1733182170,
-            "rd": 66
+            "rating": 1814,
+            "date": 1741647631,
+            "rd": 52
         },
         "best": {
             "rating": 2119,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/6257766051"
         },
         "record": {
-            "win": 928,
-            "loss": 794,
+            "win": 951,
+            "loss": 818,
             "draw": 39
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2192,
-            "date": 1716156387,
-            "rd": 60
+            "rating": 2202,
+            "date": 1740180930,
+            "rd": 92
         },
         "best": {
             "rating": 2337,
@@ -81,8 +81,8 @@
             "game": "https://www.chess.com/game/live/55118199303"
         },
         "record": {
-            "win": 528,
-            "loss": 339,
+            "win": 531,
+            "loss": 341,
             "draw": 30
         }
     },

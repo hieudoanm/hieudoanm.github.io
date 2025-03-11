@@ -6,10 +6,10 @@
     "name": "Khamrakulov Djurabek",
     "username": "khamrakulov_djurabek",
     "title": "GM",
-    "followers": 137,
+    "followers": 140,
     "country": "https://api.chess.com/pub/country/UZ",
     "location": "New York",
-    "last_online": 1734156111,
+    "last_online": 1741644062,
     "joined": 1469638018,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2808,
-            "date": 1731168444,
+            "date": 1734206358,
             "rd": 49
         },
         "best": {
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2909,
-            "date": 1731168977,
-            "rd": 49
+            "rating": 2913,
+            "date": 1734577270,
+            "rd": 48
         },
         "best": {
             "rating": 2947,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/4762872429"
         },
         "record": {
-            "win": 639,
-            "loss": 457,
-            "draw": 124
+            "win": 641,
+            "loss": 458,
+            "draw": 127
         }
     },
     "fide": 2514,
@@ -65,6 +65,10 @@
         "best": {
             "total_attempts": 74,
             "score": 71
+        },
+        "daily": {
+            "total_attempts": 41,
+            "score": 38
         }
     }
 }

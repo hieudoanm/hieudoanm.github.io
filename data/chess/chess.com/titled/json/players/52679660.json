@@ -5,9 +5,9 @@
     "name": "Evgeny Degtiarev",
     "username": "aemeffi",
     "title": "IM",
-    "followers": 7,
+    "followers": 8,
     "country": "https://api.chess.com/pub/country/CH",
-    "last_online": 1733350182,
+    "last_online": 1741449581,
     "joined": 1543771255,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2276,
-            "date": 1640613245,
-            "rd": 14
+            "rating": 2192,
+            "date": 1738790341,
+            "rd": 170
         },
         "best": {
             "rating": 2391,
@@ -46,15 +46,15 @@
         },
         "record": {
             "win": 397,
-            "loss": 385,
+            "loss": 386,
             "draw": 43
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2345,
-            "date": 1734171726,
-            "rd": 44
+            "rating": 2426,
+            "date": 1741368240,
+            "rd": 31
         },
         "best": {
             "rating": 2473,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/15701610587"
         },
         "record": {
-            "win": 1551,
-            "loss": 1644,
-            "draw": 210
+            "win": 1714,
+            "loss": 1825,
+            "draw": 227
         }
     },
     "tactics": {

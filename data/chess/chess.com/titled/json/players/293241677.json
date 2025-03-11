@@ -6,7 +6,7 @@
     "title": "GM",
     "followers": 1,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734001117,
+    "last_online": 1741694311,
     "joined": 1686659998,
     "status": "premium",
     "is_streamer": false,
@@ -15,9 +15,9 @@
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2923,
-            "date": 1734003763,
-            "rd": 31
+            "rating": 2892,
+            "date": 1741633424,
+            "rd": 44
         },
         "best": {
             "rating": 2982,
@@ -25,9 +25,9 @@
             "game": "https://www.chess.com/game/live/112614620843"
         },
         "record": {
-            "win": 348,
-            "loss": 314,
-            "draw": 83
+            "win": 366,
+            "loss": 335,
+            "draw": 84
         }
     },
     "tactics": {

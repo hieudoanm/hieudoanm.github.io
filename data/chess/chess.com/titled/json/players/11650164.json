@@ -6,10 +6,10 @@
     "name": "Luis Paulo Supi",
     "username": "lpsupi",
     "title": "GM",
-    "followers": 9726,
+    "followers": 10361,
     "country": "https://api.chess.com/pub/country/BR",
     "location": "Sao Paulo",
-    "last_online": 1734067565,
+    "last_online": 1741654344,
     "joined": 1366894767,
     "status": "premium",
     "is_streamer": true,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2855,
-            "date": 1713148218,
-            "rd": 38
+            "rating": 2866,
+            "date": 1740292671,
+            "rd": 48
         },
         "best": {
             "rating": 2971,
@@ -45,26 +45,26 @@
             "game": "https://www.chess.com/game/live/5662400997"
         },
         "record": {
-            "win": 377,
-            "loss": 281,
+            "win": 380,
+            "loss": 282,
             "draw": 52
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3037,
-            "date": 1733884385,
-            "rd": 27
+            "rating": 2970,
+            "date": 1741648720,
+            "rd": 31
         },
         "best": {
-            "rating": 3054,
-            "date": 1732305890,
+            "rating": 3081,
+            "date": 1739208123,
             "game": "https://www.chess.com/game/live/4828414254"
         },
         "record": {
-            "win": 6140,
-            "loss": 4265,
-            "draw": 1306
+            "win": 6581,
+            "loss": 4544,
+            "draw": 1388
         }
     },
     "fide": 2603,

@@ -6,10 +6,10 @@
     "name": "Sergey Zablotsky",
     "username": "zablotsky",
     "title": "GM",
-    "followers": 522,
+    "followers": 523,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Krasnoyarsk",
-    "last_online": 1731758589,
+    "last_online": 1741399055,
     "joined": 1462982121,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2497,
-            "date": 1595993236,
-            "rd": 105
+            "rating": 2415,
+            "date": 1740398413,
+            "rd": 178
         },
         "best": {
             "rating": 2501,
@@ -46,8 +46,8 @@
         },
         "record": {
             "win": 55,
-            "loss": 23,
-            "draw": 2
+            "loss": 24,
+            "draw": 3
         }
     },
     "chess_blitz": {

@@ -4,15 +4,32 @@
     "url": "https://www.chess.com/member/ShuiFeng90",
     "username": "shuifeng90",
     "title": "GM",
-    "followers": 18,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734178077,
+    "last_online": 1739803886,
     "joined": 1704908753,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Champion",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2684,
+            "date": 1739615933,
+            "rd": 49
+        },
+        "best": {
+            "rating": 2684,
+            "date": 1739615933,
+            "game": "https://www.chess.com/game/live/133353562855"
+        },
+        "record": {
+            "win": 5,
+            "loss": 1,
+            "draw": 1
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 3125,

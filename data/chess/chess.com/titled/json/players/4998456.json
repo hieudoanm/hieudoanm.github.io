@@ -6,9 +6,9 @@
     "name": "Ivan Sokolov",
     "username": "vegasicilia",
     "title": "GM",
-    "followers": 153,
+    "followers": 154,
     "country": "https://api.chess.com/pub/country/NL",
-    "last_online": 1734077077,
+    "last_online": 1741690867,
     "joined": 1303030746,
     "status": "premium",
     "is_streamer": false,
@@ -34,8 +34,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2719,
-            "date": 1727547677,
+            "rating": 2705,
+            "date": 1740488128,
             "rd": 49
         },
         "best": {
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/4695079554"
         },
         "record": {
-            "win": 559,
-            "loss": 340,
-            "draw": 80
+            "win": 563,
+            "loss": 346,
+            "draw": 81
         }
     },
     "fide": 2626,

@@ -5,7 +5,7 @@
     "name": "Ziaur Rahman",
     "username": "ziachess74",
     "title": "GM",
-    "followers": 466,
+    "followers": 474,
     "country": "https://api.chess.com/pub/country/BD",
     "location": "Dhaka",
     "last_online": 1719569073,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1504,
-            "date": 1720424699,
+            "date": 1737797308,
             "rd": 127
         },
         "best": {

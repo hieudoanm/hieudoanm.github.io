@@ -1,14 +1,15 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/55969842.26a82131.200x200o.bf61f0ec9715.jpg",
     "player_id": 55969842,
     "@id": "https://api.chess.com/pub/player/virgo15",
     "url": "https://www.chess.com/member/Virgo15",
     "name": "Munkhgal Gombosuren",
     "username": "virgo15",
     "title": "GM",
-    "followers": 125,
+    "followers": 134,
     "country": "https://api.chess.com/pub/country/MN",
     "location": "Ulaanbaatar",
-    "last_online": 1734173956,
+    "last_online": 1741686713,
     "joined": 1547482645,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +19,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2303,
-            "date": 1730288988,
-            "rd": 49
+            "date": 1739814371,
+            "rd": 48
         },
         "best": {
             "rating": 2614,
@@ -27,43 +28,43 @@
             "game": "https://www.chess.com/game/live/5323736681"
         },
         "record": {
-            "win": 51,
-            "loss": 22,
+            "win": 52,
+            "loss": 26,
             "draw": 21
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2669,
-            "date": 1711787869,
-            "rd": 48
+            "rating": 2673,
+            "date": 1738988723,
+            "rd": 21
         },
         "best": {
-            "rating": 2709,
-            "date": 1693833432,
-            "game": "https://www.chess.com/game/live/87572457021"
+            "rating": 2852,
+            "date": 1738838266,
+            "game": "https://www.chess.com/game/live/132555582547"
         },
         "record": {
-            "win": 80,
-            "loss": 58,
-            "draw": 7
+            "win": 222,
+            "loss": 194,
+            "draw": 28
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2700,
-            "date": 1734175432,
-            "rd": 42
+            "rating": 2841,
+            "date": 1741687233,
+            "rd": 25
         },
         "best": {
-            "rating": 2932,
-            "date": 1720541067,
-            "game": "https://www.chess.com/game/live/98089790503"
+            "rating": 3001,
+            "date": 1738939531,
+            "game": "https://www.chess.com/game/live/132502309663"
         },
         "record": {
-            "win": 2795,
-            "loss": 2980,
-            "draw": 559
+            "win": 3411,
+            "loss": 3635,
+            "draw": 699
         }
     },
     "fide": 2463,
@@ -81,6 +82,10 @@
         "best": {
             "total_attempts": 54,
             "score": 51
+        },
+        "daily": {
+            "total_attempts": 40,
+            "score": 37
         }
     }
 }

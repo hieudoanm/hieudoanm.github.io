@@ -6,15 +6,15 @@
     "name": "Amartuvshin Ganzorig",
     "username": "amartuvshinganzorig",
     "title": "IM",
-    "followers": 51,
+    "followers": 53,
     "country": "https://api.chess.com/pub/country/MN",
     "location": "Ulaanbaatar",
-    "last_online": 1734179349,
+    "last_online": 1741582862,
     "joined": 1512658928,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -68,9 +68,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2651,
-            "date": 1732156791,
-            "rd": 44
+            "rating": 2628,
+            "date": 1740475705,
+            "rd": 46
         },
         "best": {
             "rating": 2664,
@@ -78,26 +78,26 @@
             "game": "https://www.chess.com/game/live/124730410845"
         },
         "record": {
-            "win": 149,
-            "loss": 68,
-            "draw": 6
+            "win": 152,
+            "loss": 74,
+            "draw": 7
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2578,
-            "date": 1734179913,
+            "rating": 2610,
+            "date": 1741674187,
             "rd": 49
         },
         "best": {
-            "rating": 2661,
-            "date": 1692720432,
-            "game": "https://www.chess.com/game/live/118511879417"
+            "rating": 2688,
+            "date": 1736777721,
+            "game": "https://www.chess.com/game/live/130497611175"
         },
         "record": {
-            "win": 147,
-            "loss": 70,
-            "draw": 14
+            "win": 181,
+            "loss": 95,
+            "draw": 20
         }
     },
     "fide": 2350,
@@ -113,8 +113,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 40,
-            "score": 37
+            "total_attempts": 43,
+            "score": 42
         }
     }
 }

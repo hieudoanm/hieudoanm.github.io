@@ -6,7 +6,7 @@
     "title": "GM",
     "followers": 46,
     "country": "https://api.chess.com/pub/country/TZ",
-    "last_online": 1717798008,
+    "last_online": 1740901610,
     "joined": 1558323204,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2980,
-            "date": 1686305139,
-            "rd": 145
+            "rating": 2970,
+            "date": 1740903590,
+            "rd": 48
         },
         "best": {
             "rating": 3083,
@@ -42,8 +42,8 @@
             "game": "https://www.chess.com/game/live/4181474105"
         },
         "record": {
-            "win": 108,
-            "loss": 63,
+            "win": 109,
+            "loss": 66,
             "draw": 11
         }
     },

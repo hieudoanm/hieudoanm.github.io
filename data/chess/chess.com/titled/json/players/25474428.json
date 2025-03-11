@@ -6,10 +6,10 @@
     "name": "Adrian Suarez Uriel",
     "username": "adricalderon8",
     "title": "IM",
-    "followers": 44,
+    "followers": 45,
     "country": "https://api.chess.com/pub/country/ES",
     "location": "Madrid",
-    "last_online": 1733926508,
+    "last_online": 1739265978,
     "joined": 1449604587,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1220,
-            "date": 1717244572,
+            "date": 1740475720,
             "rd": 125
         },
         "best": {

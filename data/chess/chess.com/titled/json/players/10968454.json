@@ -6,10 +6,10 @@
     "name": "Marian Petrov",
     "username": "marianpetrov",
     "title": "GM",
-    "followers": 912,
+    "followers": 930,
     "country": "https://api.chess.com/pub/country/BG",
-    "location": "Burgas",
-    "last_online": 1734103944,
+    "location": "Sofia",
+    "last_online": 1741675704,
     "joined": 1361965613,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 2147,
-            "date": 1734105711,
-            "rd": 316
+            "rating": 1819,
+            "date": 1734696620,
+            "rd": 273
         },
         "best": {
             "rating": 2304,
@@ -29,17 +29,17 @@
         },
         "record": {
             "win": 11,
-            "loss": 0,
+            "loss": 1,
             "draw": 1,
             "time_per_move": 34701,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
         "last": {
             "rating": 2560,
-            "date": 1729953402,
-            "rd": 116
+            "date": 1740674090,
+            "rd": 49
         },
         "best": {
             "rating": 2560,
@@ -47,32 +47,32 @@
             "game": "https://www.chess.com/game/live/12250031381"
         },
         "record": {
-            "win": 77,
+            "win": 78,
             "loss": 24,
             "draw": 12
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2706,
-            "date": 1733400975,
-            "rd": 49
+            "rating": 2701,
+            "date": 1737980966,
+            "rd": 31
         },
         "best": {
-            "rating": 2706,
-            "date": 1646908909,
+            "rating": 2710,
+            "date": 1736957829,
             "game": "https://www.chess.com/game/live/40647612613"
         },
         "record": {
-            "win": 856,
-            "loss": 827,
-            "draw": 92
+            "win": 894,
+            "loss": 862,
+            "draw": 97
         }
     },
     "chess_blitz": {
         "last": {
             "rating": 2703,
-            "date": 1732810237,
+            "date": 1741683800,
             "rd": 49
         },
         "best": {
@@ -81,7 +81,7 @@
             "game": "https://www.chess.com/game/live/3756124495"
         },
         "record": {
-            "win": 3658,
+            "win": 3662,
             "loss": 3443,
             "draw": 712
         }

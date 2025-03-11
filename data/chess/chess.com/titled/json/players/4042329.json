@@ -5,9 +5,9 @@
     "name": "Dmitry Gurevich",
     "username": "zq1",
     "title": "GM",
-    "followers": 160,
+    "followers": 163,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734019290,
+    "last_online": 1741538907,
     "joined": 1285678506,
     "status": "premium",
     "is_streamer": false,
@@ -16,8 +16,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2372,
-            "date": 1721322320,
+            "rating": 2353,
+            "date": 1740945088,
             "rd": 49
         },
         "best": {
@@ -26,33 +26,33 @@
             "game": "https://www.chess.com/game/live/5850879207"
         },
         "record": {
-            "win": 8,
-            "loss": 7,
-            "draw": 2
+            "win": 11,
+            "loss": 14,
+            "draw": 5
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2108,
-            "date": 1733607946,
-            "rd": 36
+            "rating": 1986,
+            "date": 1741468390,
+            "rd": 31
         },
         "best": {
             "rating": 2594,
             "date": 1554318142,
-            "game": "https://www.chess.com/game/live/3588043818"
+            "game": "https://www.chess.com/game/live/127940999859"
         },
         "record": {
-            "win": 538,
-            "loss": 484,
-            "draw": 48
+            "win": 603,
+            "loss": 633,
+            "draw": 56
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2570,
-            "date": 1733875341,
-            "rd": 35
+            "rating": 2510,
+            "date": 1741471063,
+            "rd": 31
         },
         "best": {
             "rating": 2675,
@@ -60,15 +60,15 @@
             "game": "https://www.chess.com/game/live/104621514221"
         },
         "record": {
-            "win": 4846,
-            "loss": 3868,
-            "draw": 805
+            "win": 5020,
+            "loss": 4007,
+            "draw": 828
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3417,
-            "date": 1730781114
+            "rating": 3443,
+            "date": 1740613324
         },
         "lowest": {
             "rating": 1207,

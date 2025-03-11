@@ -6,9 +6,9 @@
     "name": "Marcin Krzy\u017canowski",
     "username": "krzyzan94",
     "title": "GM",
-    "followers": 135,
+    "followers": 138,
     "country": "https://api.chess.com/pub/country/PL",
-    "last_online": 1733994816,
+    "last_online": 1741680942,
     "joined": 1435093091,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2802,
-            "date": 1733846647,
-            "rd": 49
+            "rating": 2836,
+            "date": 1741133279,
+            "rd": 45
         },
         "best": {
             "rating": 2903,
@@ -80,16 +80,16 @@
             "game": "https://www.chess.com/game/live/99161131225"
         },
         "record": {
-            "win": 1317,
-            "loss": 1048,
-            "draw": 222
+            "win": 1344,
+            "loss": 1069,
+            "draw": 230
         }
     },
     "fide": 2503,
     "tactics": {
         "highest": {
-            "rating": 3850,
-            "date": 1706553044
+            "rating": 3851,
+            "date": 1736677857
         },
         "lowest": {
             "rating": 1366,

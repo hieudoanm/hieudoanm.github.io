@@ -6,10 +6,10 @@
     "name": "Ravi Haria",
     "username": "mesutgm",
     "title": "GM",
-    "followers": 53,
+    "followers": 54,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "London",
-    "last_online": 1732811495,
+    "last_online": 1741106208,
     "joined": 1448193911,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2695,
-            "date": 1734088984,
-            "rd": 42
+            "rating": 2728,
+            "date": 1741643356,
+            "rd": 36
         },
         "best": {
             "rating": 2897,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/14533070911"
         },
         "record": {
-            "win": 4036,
-            "loss": 3021,
-            "draw": 838
+            "win": 4137,
+            "loss": 3097,
+            "draw": 860
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3456,
-            "date": 1720190443
+            "rating": 3471,
+            "date": 1738693349
         },
         "lowest": {
             "rating": 1211,

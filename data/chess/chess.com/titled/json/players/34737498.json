@@ -6,10 +6,10 @@
     "name": "Samvel Ter-Sahakyan",
     "username": "sam_chessmood",
     "title": "GM",
-    "followers": 2158,
+    "followers": 2303,
     "country": "https://api.chess.com/pub/country/AM",
-    "location": "Armenia,Yerevan",
-    "last_online": 1734169849,
+    "location": "Singapore",
+    "last_online": 1741699493,
     "joined": 1492072105,
     "status": "premium",
     "is_streamer": false,
@@ -37,9 +37,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2615,
-            "date": 1727366165,
-            "rd": 45
+            "rating": 2595,
+            "date": 1739820119,
+            "rd": 46
         },
         "best": {
             "rating": 2661,
@@ -47,9 +47,9 @@
             "game": "https://www.chess.com/game/live/100458888529"
         },
         "record": {
-            "win": 153,
-            "loss": 61,
-            "draw": 78
+            "win": 157,
+            "loss": 65,
+            "draw": 79
         }
     },
     "chess_bullet": {
@@ -71,22 +71,22 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2930,
-            "date": 1733854080,
-            "rd": 43
+            "rating": 2987,
+            "date": 1741111680,
+            "rd": 42
         },
         "best": {
-            "rating": 2992,
-            "date": 1719506484,
+            "rating": 3003,
+            "date": 1740501645,
             "game": "https://www.chess.com/game/live/77028207695"
         },
         "record": {
-            "win": 1601,
-            "loss": 1003,
-            "draw": 499
+            "win": 1699,
+            "loss": 1024,
+            "draw": 519
         }
     },
-    "fide": 2624,
+    "fide": 2611,
     "tactics": {
         "highest": {
             "rating": 3444,
@@ -101,10 +101,6 @@
         "best": {
             "total_attempts": 79,
             "score": 78
-        },
-        "daily": {
-            "total_attempts": 18,
-            "score": 15
         }
     }
 }

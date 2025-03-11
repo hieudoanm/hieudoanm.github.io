@@ -6,10 +6,10 @@
     "name": "Mackenzie Molner",
     "username": "macmolner",
     "title": "GM",
-    "followers": 314,
+    "followers": 320,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Harrison, New Jersey",
-    "last_online": 1732981850,
+    "last_online": 1740789880,
     "joined": 1303168070,
     "status": "premium",
     "is_streamer": false,
@@ -72,7 +72,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2435,
-            "date": 1679674168,
+            "date": 1740185814,
             "rd": 129
         },
         "best": {

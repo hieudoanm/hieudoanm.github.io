@@ -5,9 +5,9 @@
     "name": "Jose Miguel Fernandez Garcia",
     "username": "2krk1",
     "title": "IM",
-    "followers": 2,
+    "followers": 3,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734169795,
+    "last_online": 1740240735,
     "joined": 1687878279,
     "status": "premium",
     "is_streamer": false,
@@ -17,16 +17,16 @@
     "chess_rapid": {
         "last": {
             "rating": 2395,
-            "date": 1719665923,
+            "date": 1739994674,
             "rd": 49
         },
         "best": {
             "rating": 2395,
             "date": 1688058964,
-            "game": "https://www.chess.com/game/live/113404227123"
+            "game": "https://www.chess.com/game/live/133732746079"
         },
         "record": {
-            "win": 2,
+            "win": 4,
             "loss": 0,
             "draw": 1
         }

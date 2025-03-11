@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/SenorNadie",
     "username": "senornadie",
     "title": "GM",
-    "followers": 26,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/XC",
-    "last_online": 1734136946,
+    "last_online": 1738079453,
     "joined": 1569250372,
     "status": "premium",
     "is_streamer": false,
@@ -49,19 +49,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3000,
-            "date": 1734127224,
-            "rd": 37
+            "rating": 2994,
+            "date": 1737396286,
+            "rd": 36
         },
         "best": {
-            "rating": 3047,
-            "date": 1697821698,
+            "rating": 3054,
+            "date": 1737051180,
             "game": "https://www.chess.com/game/live/93461348715"
         },
         "record": {
-            "win": 905,
-            "loss": 596,
-            "draw": 154
+            "win": 944,
+            "loss": 623,
+            "draw": 159
         }
     },
     "tactics": {

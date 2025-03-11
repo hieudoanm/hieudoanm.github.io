@@ -9,7 +9,7 @@
     "followers": 47,
     "country": "https://api.chess.com/pub/country/XX",
     "location": "Haifa",
-    "last_online": 1733906690,
+    "last_online": 1741163403,
     "joined": 1472226796,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2457,
-            "date": 1733501921,
-            "rd": 59
+            "rating": 2456,
+            "date": 1741447879,
+            "rd": 76
         },
         "best": {
             "rating": 2554,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/123255089035"
         },
         "record": {
-            "win": 60,
-            "loss": 48,
-            "draw": 3
+            "win": 61,
+            "loss": 49,
+            "draw": 4
         }
     },
     "chess_blitz": {

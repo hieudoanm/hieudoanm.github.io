@@ -1,18 +1,19 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/77090164.36a1cb94.200x200o.38f92146aea2.png",
     "player_id": 77090164,
     "@id": "https://api.chess.com/pub/player/peterheinenielsen",
     "url": "https://www.chess.com/member/PeterHeineNielsen",
     "name": "Peter Heine Nielsen",
     "username": "peterheinenielsen",
     "title": "GM",
-    "followers": 15,
+    "followers": 19,
     "country": "https://api.chess.com/pub/country/LT",
-    "last_online": 1734088204,
+    "last_online": 1741461131,
     "joined": 1587218256,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -36,7 +37,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2000,
-            "date": 1729168904,
+            "date": 1739545629,
             "rd": 49
         },
         "best": {

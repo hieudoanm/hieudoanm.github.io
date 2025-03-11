@@ -6,9 +6,9 @@
     "name": "Jiner Zhu",
     "username": "jinbojinbo",
     "title": "GM",
-    "followers": 145,
+    "followers": 150,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1733971158,
+    "last_online": 1741354241,
     "joined": 1489815738,
     "status": "premium",
     "is_streamer": false,
@@ -17,19 +17,19 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2413,
-            "date": 1727292224,
+            "rating": 2439,
+            "date": 1739819777,
             "rd": 46
         },
         "best": {
             "rating": 2501,
             "date": 1547261398,
-            "game": "https://www.chess.com/game/live/100458888847"
+            "game": "https://www.chess.com/game/live/133548539191"
         },
         "record": {
-            "win": 29,
-            "loss": 28,
-            "draw": 32
+            "win": 32,
+            "loss": 32,
+            "draw": 34
         }
     },
     "chess_bullet": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2724,
-            "date": 1733270589,
-            "rd": 43
+            "rating": 2730,
+            "date": 1741133279,
+            "rd": 39
         },
         "best": {
             "rating": 2832,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/127003231189"
         },
         "record": {
-            "win": 649,
-            "loss": 508,
-            "draw": 97
+            "win": 713,
+            "loss": 551,
+            "draw": 109
         }
     },
     "tactics": {

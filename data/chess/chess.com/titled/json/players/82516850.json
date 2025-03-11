@@ -5,9 +5,9 @@
     "name": "Mikel Huerga Leache",
     "username": "mikelhuerga",
     "title": "GM",
-    "followers": 11,
+    "followers": 14,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734025236,
+    "last_online": 1739404415,
     "joined": 1592065755,
     "status": "premium",
     "is_streamer": false,
@@ -33,18 +33,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1470,
-            "date": 1671456586,
-            "rd": 70
+            "rating": 1629,
+            "date": 1736290851,
+            "rd": 170
         },
         "best": {
             "rating": 2531,
             "date": 1592764069,
-            "game": "https://www.chess.com/game/live/5036549326"
+            "game": "https://www.chess.com/game/live/130028976061"
         },
         "record": {
-            "win": 6,
-            "loss": 27,
+            "win": 7,
+            "loss": 31,
             "draw": 3
         }
     },

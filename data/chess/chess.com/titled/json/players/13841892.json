@@ -6,10 +6,10 @@
     "name": "Thomas Beerdsen",
     "username": "kleinebeer98",
     "title": "GM",
-    "followers": 245,
+    "followers": 254,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Apeldoorn",
-    "last_online": 1734042631,
+    "last_online": 1741698701,
     "joined": 1381387479,
     "status": "premium",
     "is_streamer": false,
@@ -73,26 +73,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2924,
-            "date": 1731877150,
-            "rd": 49
+            "rating": 3006,
+            "date": 1739268046,
+            "rd": 41
         },
         "best": {
             "rating": 3025,
             "date": 1717110533,
-            "game": "https://www.chess.com/game/live/110842327845"
+            "game": "https://www.chess.com/game/live/131564433157"
         },
         "record": {
-            "win": 3455,
-            "loss": 2288,
-            "draw": 300
+            "win": 3519,
+            "loss": 2310,
+            "draw": 303
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2909,
-            "date": 1733246805,
-            "rd": 42
+            "rating": 2821,
+            "date": 1739293860,
+            "rd": 45
         },
         "best": {
             "rating": 2993,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/126984646245"
         },
         "record": {
-            "win": 1511,
-            "loss": 877,
-            "draw": 203
+            "win": 1558,
+            "loss": 906,
+            "draw": 209
         }
     },
     "fide": 2524,

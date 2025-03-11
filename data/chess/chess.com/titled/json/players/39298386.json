@@ -6,15 +6,15 @@
     "name": "Sergey Vokarev",
     "username": "monmoransy",
     "title": "GM",
-    "followers": 27,
+    "followers": 28,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Yekaterinburg",
-    "last_online": 1733906067,
+    "last_online": 1741501501,
     "joined": 1507533866,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Stone",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -70,8 +70,8 @@
     "fide": 2420,
     "tactics": {
         "highest": {
-            "rating": 3260,
-            "date": 1593869726
+            "rating": 3265,
+            "date": 1738909926
         },
         "lowest": {
             "rating": 1209,

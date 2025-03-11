@@ -6,9 +6,9 @@
     "name": "Matthieu Cornette",
     "username": "tocras",
     "title": "GM",
-    "followers": 343,
+    "followers": 347,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734093631,
+    "last_online": 1741544846,
     "joined": 1445116508,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2746,
-            "date": 1734096496,
-            "rd": 29
+            "rating": 2809,
+            "date": 1740661336,
+            "rd": 35
         },
         "best": {
             "rating": 2845,
@@ -44,26 +44,26 @@
             "game": "https://www.chess.com/game/live/127218626379"
         },
         "record": {
-            "win": 808,
-            "loss": 548,
-            "draw": 99
+            "win": 895,
+            "loss": 606,
+            "draw": 117
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2830,
-            "date": 1734077272,
-            "rd": 46
+            "rating": 2819,
+            "date": 1740740536,
+            "rd": 48
         },
         "best": {
-            "rating": 2870,
-            "date": 1678705463,
+            "rating": 2871,
+            "date": 1739279542,
             "game": "https://www.chess.com/game/live/92674989133"
         },
         "record": {
-            "win": 2322,
-            "loss": 1619,
-            "draw": 389
+            "win": 2354,
+            "loss": 1642,
+            "draw": 396
         }
     },
     "tactics": {

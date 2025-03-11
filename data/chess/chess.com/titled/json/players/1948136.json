@@ -6,10 +6,10 @@
     "name": "Ulvi Bajarani",
     "username": "ulvi95",
     "title": "GM",
-    "followers": 877,
+    "followers": 1143,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Houston, Texas",
-    "last_online": 1734185649,
+    "last_online": 1741630082,
     "joined": 1243801186,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2540,
-            "date": 1731288225,
+            "date": 1738535629,
             "rd": 165
         },
         "best": {

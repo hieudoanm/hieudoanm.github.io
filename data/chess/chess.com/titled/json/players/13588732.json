@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13588732.9ec2c4fc.200x200o.adf553ed6918.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/13588732.9eaff46e.200x200o.ee68892a678d.jpg",
     "player_id": 13588732,
     "@id": "https://api.chess.com/pub/player/medvegy",
     "url": "https://www.chess.com/member/Medvegy",
     "name": "Zoltan Medvegy",
     "username": "medvegy",
     "title": "GM",
-    "followers": 625,
+    "followers": 634,
     "country": "https://api.chess.com/pub/country/HU",
     "location": "Budapest",
-    "last_online": 1734166333,
+    "last_online": 1741633554,
     "joined": 1379619413,
     "status": "premium",
     "is_streamer": false,
@@ -70,8 +70,8 @@
     "fide": 2507,
     "tactics": {
         "highest": {
-            "rating": 3304,
-            "date": 1698961262
+            "rating": 3518,
+            "date": 1737983924
         },
         "lowest": {
             "rating": 1136,

@@ -6,9 +6,9 @@
     "name": "Andre Diamant",
     "username": "zugazuando",
     "title": "GM",
-    "followers": 1067,
+    "followers": 1085,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734014541,
+    "last_online": 1741644402,
     "joined": 1483890316,
     "status": "premium",
     "is_streamer": true,
@@ -24,8 +24,8 @@
     "chess_rapid": {
         "last": {
             "rating": 2358,
-            "date": 1730844160,
-            "rd": 49
+            "date": 1739630512,
+            "rd": 50
         },
         "best": {
             "rating": 2550,
@@ -33,7 +33,7 @@
             "game": "https://www.chess.com/game/live/3994268940"
         },
         "record": {
-            "win": 203,
+            "win": 204,
             "loss": 12,
             "draw": 13
         }
@@ -41,7 +41,7 @@
     "chess_bullet": {
         "last": {
             "rating": 1865,
-            "date": 1698523511,
+            "date": 1739492296,
             "rd": 142
         },
         "best": {
@@ -58,8 +58,8 @@
     "chess_blitz": {
         "last": {
             "rating": 2763,
-            "date": 1726177876,
-            "rd": 49
+            "date": 1741643646,
+            "rd": 50
         },
         "best": {
             "rating": 2780,
@@ -67,7 +67,7 @@
             "game": "https://www.chess.com/game/live/2905321189"
         },
         "record": {
-            "win": 1160,
+            "win": 1161,
             "loss": 507,
             "draw": 151
         }
@@ -75,8 +75,8 @@
     "fide": 2491,
     "tactics": {
         "highest": {
-            "rating": 3709,
-            "date": 1733785119
+            "rating": 3743,
+            "date": 1736448660
         },
         "lowest": {
             "rating": 2385,
@@ -87,6 +87,10 @@
         "best": {
             "total_attempts": 72,
             "score": 69
+        },
+        "daily": {
+            "total_attempts": 21,
+            "score": 20
         }
     }
 }

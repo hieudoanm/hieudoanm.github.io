@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/AlejandroMateo21",
     "username": "alejandromateo21",
     "title": "IM",
-    "followers": 64,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734094860,
+    "last_online": 1741699194,
     "joined": 1518876359,
     "status": "premium",
     "is_streamer": false,
@@ -51,7 +51,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2519,
-            "date": 1717343736,
+            "date": 1739452831,
             "rd": 48
         },
         "best": {
@@ -79,6 +79,10 @@
         "best": {
             "total_attempts": 64,
             "score": 61
+        },
+        "daily": {
+            "total_attempts": 37,
+            "score": 34
         }
     }
 }

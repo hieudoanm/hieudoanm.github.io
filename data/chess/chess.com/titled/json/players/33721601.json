@@ -5,9 +5,9 @@
     "name": "Nick De Firmian",
     "username": "hugooakland",
     "title": "GM",
-    "followers": 68,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734176878,
+    "last_online": 1741645922,
     "joined": 1488742412,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2550,
-            "date": 1734182703,
-            "rd": 19
+            "rating": 2541,
+            "date": 1741672398,
+            "rd": 20
         },
         "best": {
             "rating": 2670,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/116718665123"
         },
         "record": {
-            "win": 18612,
-            "loss": 14350,
-            "draw": 1993
+            "win": 19451,
+            "loss": 15028,
+            "draw": 2099
         }
     },
     "fide": 0,

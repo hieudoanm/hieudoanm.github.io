@@ -6,20 +6,20 @@
     "name": "Ray Robson",
     "username": "spicycaterpillar",
     "title": "GM",
-    "followers": 2858,
+    "followers": 2973,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734138267,
+    "last_online": 1741479096,
     "joined": 1542762877,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Elite",
+    "league": "Champion",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2687,
-            "date": 1727540219,
-            "rd": 43
+            "rating": 2682,
+            "date": 1739820009,
+            "rd": 46
         },
         "best": {
             "rating": 2732,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/89654474619"
         },
         "record": {
-            "win": 107,
-            "loss": 72,
-            "draw": 44
+            "win": 112,
+            "loss": 75,
+            "draw": 45
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3141,
-            "date": 1732305318,
-            "rd": 49
+            "rating": 3130,
+            "date": 1740026915,
+            "rd": 33
         },
         "best": {
             "rating": 3265,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/5860367635"
         },
         "record": {
-            "win": 3397,
-            "loss": 2557,
-            "draw": 374
+            "win": 3667,
+            "loss": 2641,
+            "draw": 392
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3085,
-            "date": 1734072949,
-            "rd": 44
+            "rating": 3059,
+            "date": 1741226708,
+            "rd": 33
         },
         "best": {
             "rating": 3139,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/62752184069"
         },
         "record": {
-            "win": 2042,
-            "loss": 1240,
-            "draw": 383
+            "win": 2369,
+            "loss": 1360,
+            "draw": 439
         }
     },
     "tactics": {
@@ -80,10 +80,6 @@
         "best": {
             "total_attempts": 184,
             "score": 181
-        },
-        "daily": {
-            "total_attempts": 52,
-            "score": 49
         }
     }
 }

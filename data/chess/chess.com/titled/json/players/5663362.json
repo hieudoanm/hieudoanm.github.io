@@ -6,10 +6,10 @@
     "name": "Joshua Sheng",
     "username": "jjosu",
     "title": "GM",
-    "followers": 292,
+    "followers": 300,
     "country": "https://api.chess.com/pub/country/US",
     "location": "California",
-    "last_online": 1733101775,
+    "last_online": 1739757104,
     "joined": 1314077782,
     "status": "premium",
     "is_streamer": false,
@@ -54,19 +54,19 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2901,
-            "date": 1730350879,
-            "rd": 38
+            "rating": 2975,
+            "date": 1736208017,
+            "rd": 29
         },
         "best": {
-            "rating": 2946,
-            "date": 1637566578,
+            "rating": 2984,
+            "date": 1736205632,
             "game": "https://www.chess.com/game/live/120694211623"
         },
         "record": {
-            "win": 2214,
-            "loss": 1185,
-            "draw": 154
+            "win": 2273,
+            "loss": 1220,
+            "draw": 157
         }
     },
     "chess_blitz": {

@@ -7,7 +7,7 @@
     "title": "GM",
     "followers": 4,
     "country": "https://api.chess.com/pub/country/AZ",
-    "last_online": 1727274236,
+    "last_online": 1738676460,
     "joined": 1570471356,
     "status": "premium",
     "is_streamer": false,
@@ -45,13 +45,18 @@
     },
     "tactics": {
         "highest": {
-            "rating": 2896,
-            "date": 1702530727
+            "rating": 2898,
+            "date": 1738157992
         },
         "lowest": {
             "rating": 1000,
             "date": 1570471356
         }
     },
-    "puzzle_rush": {}
+    "puzzle_rush": {
+        "best": {
+            "total_attempts": 7,
+            "score": 4
+        }
+    }
 }

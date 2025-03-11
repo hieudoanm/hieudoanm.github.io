@@ -6,9 +6,9 @@
     "name": "Luis Lazaro Aguero Jimenez",
     "username": "poseidon5191",
     "title": "GM",
-    "followers": 19,
+    "followers": 27,
     "country": "https://api.chess.com/pub/country/CU",
-    "last_online": 1734185191,
+    "last_online": 1741551159,
     "joined": 1644150336,
     "status": "premium",
     "is_streamer": false,
@@ -17,43 +17,43 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2508,
-            "date": 1732987102,
-            "rd": 43
+            "rating": 2534,
+            "date": 1737558171,
+            "rd": 48
         },
         "best": {
-            "rating": 2530,
-            "date": 1732387894,
+            "rating": 2534,
+            "date": 1737311370,
             "game": "https://www.chess.com/game/live/126124804181"
         },
         "record": {
-            "win": 24,
-            "loss": 30,
+            "win": 31,
+            "loss": 33,
             "draw": 5
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2711,
-            "date": 1734185487,
-            "rd": 39
+            "rating": 2725,
+            "date": 1740222439,
+            "rd": 45
         },
         "best": {
-            "rating": 2722,
-            "date": 1729717782,
+            "rating": 2748,
+            "date": 1737989095,
             "game": "https://www.chess.com/game/live/125552922489"
         },
         "record": {
-            "win": 370,
-            "loss": 214,
-            "draw": 58
+            "win": 404,
+            "loss": 237,
+            "draw": 67
         }
     },
     "fide": 2479,
     "tactics": {
         "highest": {
-            "rating": 2716,
-            "date": 1731885734
+            "rating": 2723,
+            "date": 1736865084
         },
         "lowest": {
             "rating": 1200,

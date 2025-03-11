@@ -7,7 +7,7 @@
     "title": "IM",
     "followers": 4,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1734125508,
+    "last_online": 1735598969,
     "joined": 1639147686,
     "status": "premium",
     "is_streamer": false,
@@ -16,8 +16,8 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2597,
-            "date": 1734125841,
+            "rating": 2589,
+            "date": 1734791702,
             "rd": 49
         },
         "best": {
@@ -27,7 +27,7 @@
         },
         "record": {
             "win": 8,
-            "loss": 1,
+            "loss": 2,
             "draw": 0
         }
     },

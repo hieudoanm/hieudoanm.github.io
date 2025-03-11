@@ -6,9 +6,9 @@
     "name": "Mikhail Kobalia",
     "username": "kobalia",
     "title": "GM",
-    "followers": 27,
+    "followers": 31,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1733906374,
+    "last_online": 1741457581,
     "joined": 1524049568,
     "status": "premium",
     "is_streamer": false,
@@ -17,8 +17,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2404,
-            "date": 1727459519,
+            "rating": 2435,
+            "date": 1739820143,
             "rd": 46
         },
         "best": {
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/121023009053"
         },
         "record": {
-            "win": 28,
-            "loss": 25,
-            "draw": 23
+            "win": 31,
+            "loss": 28,
+            "draw": 26
         }
     },
     "chess_bullet": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2813,
-            "date": 1733854098,
-            "rd": 46
+            "rating": 2778,
+            "date": 1741365569,
+            "rd": 44
         },
         "best": {
             "rating": 2862,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/37492886547"
         },
         "record": {
-            "win": 742,
-            "loss": 375,
-            "draw": 147
+            "win": 794,
+            "loss": 401,
+            "draw": 157
         }
     },
     "tactics": {
@@ -78,7 +78,7 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 53,
+            "total_attempts": 52,
             "score": 51
         }
     }

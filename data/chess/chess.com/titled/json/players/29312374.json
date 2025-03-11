@@ -7,12 +7,12 @@
     "followers": 29,
     "country": "https://api.chess.com/pub/country/KZ",
     "location": "tashkent",
-    "last_online": 1732738586,
+    "last_online": 1736739317,
     "joined": 1470120846,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Wood",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -64,9 +64,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2584,
-            "date": 1732741025,
-            "rd": 48
+            "rating": 2619,
+            "date": 1736827580,
+            "rd": 41
         },
         "best": {
             "rating": 2679,
@@ -74,9 +74,9 @@
             "game": "https://www.chess.com/game/live/3435584295"
         },
         "record": {
-            "win": 2295,
-            "loss": 1730,
-            "draw": 438
+            "win": 2319,
+            "loss": 1744,
+            "draw": 444
         }
     },
     "fide": 2438,

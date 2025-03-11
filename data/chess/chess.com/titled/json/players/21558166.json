@@ -8,7 +8,7 @@
     "title": "GM",
     "followers": 31,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734095411,
+    "last_online": 1741208982,
     "joined": 1426607029,
     "status": "premium",
     "is_streamer": false,
@@ -96,8 +96,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3474,
-            "date": 1652288399
+            "rating": 3615,
+            "date": 1741512462
         },
         "lowest": {
             "rating": 1924,

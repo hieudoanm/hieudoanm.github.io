@@ -6,9 +6,9 @@
     "name": "Zong-Yuan Zhao",
     "username": "megazz",
     "title": "GM",
-    "followers": 822,
+    "followers": 898,
     "country": "https://api.chess.com/pub/country/AU",
-    "last_online": 1734145633,
+    "last_online": 1741604532,
     "joined": 1471936279,
     "status": "premium",
     "is_streamer": false,
@@ -70,19 +70,18 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2815,
-            "date": 1733712469,
-            "rd": 36
+            "rating": 2864,
+            "date": 1737976121
         },
         "best": {
-            "rating": 2878,
-            "date": 1602736589,
+            "rating": 2907,
+            "date": 1736070598,
             "game": "https://www.chess.com/game/live/114679684241"
         },
         "record": {
-            "win": 4010,
-            "loss": 2987,
-            "draw": 686
+            "win": 4397,
+            "loss": 3278,
+            "draw": 757
         }
     },
     "tactics": {

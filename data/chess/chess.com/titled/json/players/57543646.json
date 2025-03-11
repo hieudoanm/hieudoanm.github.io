@@ -6,10 +6,10 @@
     "name": "Pablo Ismael Acosta",
     "username": "acostapablo",
     "title": "IM",
-    "followers": 114,
+    "followers": 115,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "San Luis",
-    "last_online": 1732031655,
+    "last_online": 1740591739,
     "joined": 1550573798,
     "status": "premium",
     "is_streamer": false,
@@ -35,8 +35,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2801,
-            "date": 1732031893,
+            "rating": 2786,
+            "date": 1735927748,
             "rd": 49
         },
         "best": {
@@ -46,7 +46,7 @@
         },
         "record": {
             "win": 134,
-            "loss": 136,
+            "loss": 138,
             "draw": 14
         }
     },

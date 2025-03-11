@@ -5,9 +5,9 @@
     "name": "Luka Paichadze",
     "username": "lukianoo",
     "title": "GM",
-    "followers": 584,
+    "followers": 690,
     "country": "https://api.chess.com/pub/country/GE",
-    "last_online": 1734171103,
+    "last_online": 1741615390,
     "joined": 1369734093,
     "status": "premium",
     "is_streamer": false,
@@ -64,25 +64,25 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2909,
-            "date": 1734173573,
+            "rating": 2947,
+            "date": 1741698123,
             "rd": 37
         },
         "best": {
-            "rating": 2978,
-            "date": 1728330469,
-            "game": "https://www.chess.com/game/live/123933624107"
+            "rating": 3004,
+            "date": 1735284100,
+            "game": "https://www.chess.com/game/live/130509049197"
         },
         "record": {
-            "win": 1782,
-            "loss": 1664,
-            "draw": 296
+            "win": 1874,
+            "loss": 1747,
+            "draw": 323
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3665,
-            "date": 1733133352
+            "rating": 3680,
+            "date": 1738090330
         },
         "lowest": {
             "rating": 1362,
@@ -93,10 +93,6 @@
         "best": {
             "total_attempts": 52,
             "score": 49
-        },
-        "daily": {
-            "total_attempts": 46,
-            "score": 43
         }
     }
 }

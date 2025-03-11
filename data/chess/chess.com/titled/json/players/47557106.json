@@ -6,9 +6,9 @@
     "name": "Nikola Djukic",
     "username": "stephendedalus83",
     "title": "GM",
-    "followers": 713,
+    "followers": 752,
     "country": "https://api.chess.com/pub/country/IE",
-    "last_online": 1733893190,
+    "last_online": 1741697014,
     "joined": 1530534976,
     "status": "premium",
     "is_streamer": false,
@@ -46,19 +46,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2903,
-            "date": 1720835761,
-            "rd": 34
+            "rating": 2927,
+            "date": 1736164597,
+            "rd": 30
         },
         "best": {
-            "rating": 2903,
-            "date": 1641145181,
+            "rating": 2927,
+            "date": 1736164597,
             "game": "https://www.chess.com/game/live/10460757483"
         },
         "record": {
-            "win": 2045,
-            "loss": 1479,
-            "draw": 533
+            "win": 2104,
+            "loss": 1522,
+            "draw": 541
         }
     },
     "tactics": {
@@ -75,6 +75,10 @@
         "best": {
             "total_attempts": 56,
             "score": 53
+        },
+        "daily": {
+            "total_attempts": 52,
+            "score": 49
         }
     }
 }

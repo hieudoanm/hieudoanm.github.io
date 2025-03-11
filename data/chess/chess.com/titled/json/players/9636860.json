@@ -1,24 +1,24 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/9636860.0c7b0620.200x200o.e8f5b7f35a66.jpg",
     "player_id": 9636860,
     "@id": "https://api.chess.com/pub/player/sumohawk",
     "url": "https://www.chess.com/member/SumoHawk",
     "name": "Jonathan Hawkins",
     "username": "sumohawk",
     "title": "GM",
-    "followers": 58,
+    "followers": 59,
     "country": "https://api.chess.com/pub/country/GB",
     "location": "London",
-    "last_online": 1731152104,
+    "last_online": 1739881820,
     "joined": 1352899997,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
+    "league": "Wood",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
             "rating": 2047,
-            "date": 1592123289,
+            "date": 1739887646,
             "rd": 344
         },
         "best": {
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2573,
-            "date": 1516115816,
-            "rd": 200
+            "rating": 2541,
+            "date": 1739884730,
+            "rd": 49
         },
         "best": {
             "rating": 2590,
@@ -47,7 +47,7 @@
         },
         "record": {
             "win": 28,
-            "loss": 3,
+            "loss": 5,
             "draw": 2
         }
     },

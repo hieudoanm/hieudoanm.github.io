@@ -6,10 +6,10 @@
     "name": "Leonardo Tristan",
     "username": "rodalquilar",
     "title": "GM",
-    "followers": 121,
+    "followers": 123,
     "country": "https://api.chess.com/pub/country/AR",
     "location": "Necochea",
-    "last_online": 1734151560,
+    "last_online": 1741662135,
     "joined": 1481090906,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2467,
-            "date": 1727292259,
-            "rd": 46
+            "rating": 2460,
+            "date": 1739813247,
+            "rd": 49
         },
         "best": {
             "rating": 2686,
@@ -29,7 +29,7 @@
         },
         "record": {
             "win": 19,
-            "loss": 30,
+            "loss": 31,
             "draw": 10
         }
     },
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2795,
-            "date": 1734042355,
-            "rd": 39
+            "rating": 2798,
+            "date": 1741370455,
+            "rd": 31
         },
         "best": {
             "rating": 2892,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/82225378723"
         },
         "record": {
-            "win": 2752,
-            "loss": 1766,
-            "draw": 337
+            "win": 2996,
+            "loss": 1932,
+            "draw": 365
         }
     },
     "fide": 2537,

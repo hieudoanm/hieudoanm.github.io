@@ -6,10 +6,10 @@
     "name": "Sebastien Joie",
     "username": "aariow",
     "title": "IM",
-    "followers": 310,
-    "country": "https://api.chess.com/pub/country/FR",
+    "followers": 314,
+    "country": "https://api.chess.com/pub/country/CH",
     "location": "Gen\u00e8ve",
-    "last_online": 1734087340,
+    "last_online": 1741688236,
     "joined": 1489574738,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2433,
-            "date": 1733392468,
-            "rd": 89
+            "rating": 2373,
+            "date": 1739454065,
+            "rd": 88
         },
         "best": {
             "rating": 2639,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/88896127773"
         },
         "record": {
-            "win": 1411,
-            "loss": 906,
-            "draw": 204
+            "win": 1412,
+            "loss": 909,
+            "draw": 205
         }
     },
     "fide": 236,

@@ -6,10 +6,10 @@
     "name": "Koen Leenhouts",
     "username": "scim",
     "title": "GM",
-    "followers": 93,
+    "followers": 95,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "IJzendijke",
-    "last_online": 1730840160,
+    "last_online": 1741641337,
     "joined": 1406456952,
     "status": "premium",
     "is_streamer": false,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2543,
-            "date": 1726178569,
-            "rd": 49
+            "rating": 2550,
+            "date": 1741130789,
+            "rd": 47
         },
         "best": {
             "rating": 2659,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/71943899297"
         },
         "record": {
-            "win": 1967,
-            "loss": 1720,
-            "draw": 409
+            "win": 1973,
+            "loss": 1729,
+            "draw": 413
         }
     },
     "fide": 2446,

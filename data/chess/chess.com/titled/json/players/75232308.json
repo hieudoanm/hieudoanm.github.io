@@ -5,10 +5,10 @@
     "url": "https://www.chess.com/member/Alphafischer2019",
     "name": "Francisco Fiorito",
     "username": "alphafischer2019",
-    "title": "FM",
-    "followers": 72,
+    "title": "IM",
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734014344,
+    "last_online": 1741607235,
     "joined": 1585686377,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_bullet": {
         "last": {
-            "rating": 2889,
-            "date": 1734015830,
-            "rd": 34
+            "rating": 2869,
+            "date": 1741552365,
+            "rd": 44
         },
         "best": {
             "rating": 2916,
@@ -27,16 +27,16 @@
             "game": "https://www.chess.com/game/live/83179692533"
         },
         "record": {
-            "win": 1014,
-            "loss": 787,
-            "draw": 142
+            "win": 1042,
+            "loss": 802,
+            "draw": 145
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2754,
-            "date": 1733229453,
-            "rd": 39
+            "rating": 2715,
+            "date": 1741370405,
+            "rd": 33
         },
         "best": {
             "rating": 2870,
@@ -44,9 +44,9 @@
             "game": "https://www.chess.com/game/live/113693429919"
         },
         "record": {
-            "win": 935,
-            "loss": 701,
-            "draw": 152
+            "win": 1017,
+            "loss": 762,
+            "draw": 170
         }
     },
     "fide": 2434,

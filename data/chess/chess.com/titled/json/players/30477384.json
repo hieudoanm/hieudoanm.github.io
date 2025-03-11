@@ -6,9 +6,9 @@
     "name": "Ruben Felgaer",
     "username": "rfelgaer",
     "title": "GM",
-    "followers": 78,
+    "followers": 85,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734008190,
+    "last_online": 1741629895,
     "joined": 1476886554,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2486,
-            "date": 1721243411,
-            "rd": 47
+            "rating": 2468,
+            "date": 1734981321,
+            "rd": 49
         },
         "best": {
             "rating": 2647,
@@ -28,7 +28,7 @@
         },
         "record": {
             "win": 13,
-            "loss": 9,
+            "loss": 13,
             "draw": 4
         }
     },
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2820,
-            "date": 1734025317,
-            "rd": 33
+            "rating": 2832,
+            "date": 1741646241,
+            "rd": 37
         },
         "best": {
-            "rating": 2853,
-            "date": 1733168893,
-            "game": "https://www.chess.com/game/live/3801907400"
+            "rating": 2934,
+            "date": 1739735717,
+            "game": "https://www.chess.com/game/live/132691754557"
         },
         "record": {
-            "win": 651,
-            "loss": 586,
-            "draw": 198
+            "win": 729,
+            "loss": 656,
+            "draw": 227
         }
     },
     "tactics": {

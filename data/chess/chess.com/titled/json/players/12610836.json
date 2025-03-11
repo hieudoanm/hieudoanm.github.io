@@ -6,9 +6,9 @@
     "name": "Luca Moroni Jr",
     "username": "moro182",
     "title": "GM",
-    "followers": 1084,
+    "followers": 1204,
     "country": "https://api.chess.com/pub/country/IT",
-    "last_online": 1734167560,
+    "last_online": 1741704049,
     "joined": 1373128795,
     "status": "premium",
     "is_streamer": false,
@@ -36,25 +36,25 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2514,
-            "date": 1727283050,
-            "rd": 48
+            "rating": 2502,
+            "date": 1741612552,
+            "rd": 47
         },
         "best": {
             "rating": 2623,
             "date": 1642335014,
-            "game": "https://www.chess.com/game/live/114972516305"
+            "game": "https://www.chess.com/game/live/133546755799"
         },
         "record": {
-            "win": 56,
-            "loss": 28,
-            "draw": 13
+            "win": 57,
+            "loss": 32,
+            "draw": 15
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2798,
-            "date": 1732381433,
+            "rating": 2801,
+            "date": 1739913585,
             "rd": 49
         },
         "best": {
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/39213560131"
         },
         "record": {
-            "win": 1335,
-            "loss": 659,
+            "win": 1339,
+            "loss": 661,
             "draw": 123
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2875,
-            "date": 1733999214,
-            "rd": 49
+            "rating": 2905,
+            "date": 1741370440,
+            "rd": 30
         },
         "best": {
-            "rating": 2992,
-            "date": 1720462829,
-            "game": "https://www.chess.com/game/live/113699384719"
+            "rating": 3043,
+            "date": 1737479462,
+            "game": "https://www.chess.com/game/live/130033174973"
         },
         "record": {
-            "win": 3773,
-            "loss": 2461,
-            "draw": 696
+            "win": 4121,
+            "loss": 2661,
+            "draw": 759
         }
     },
     "tactics": {

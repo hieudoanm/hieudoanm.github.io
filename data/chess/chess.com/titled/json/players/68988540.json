@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Srinavasan",
     "username": "srinavasan",
     "title": "GM",
-    "followers": 56,
+    "followers": 59,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734102617,
+    "last_online": 1740560424,
     "joined": 1575704516,
     "status": "premium",
     "is_streamer": false,
@@ -32,19 +32,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3130,
-            "date": 1729614061,
-            "rd": 41
+            "rating": 3182,
+            "date": 1740464838,
+            "rd": 37
         },
         "best": {
-            "rating": 3130,
-            "date": 1729614061,
+            "rating": 3182,
+            "date": 1740464317,
             "game": "https://www.chess.com/game/live/14089891235"
         },
         "record": {
-            "win": 180,
-            "loss": 95,
-            "draw": 47
+            "win": 211,
+            "loss": 116,
+            "draw": 52
         }
     },
     "tactics": {

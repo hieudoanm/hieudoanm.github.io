@@ -6,10 +6,10 @@
     "name": "Pawel Czarnota",
     "username": "pawelczarnota",
     "title": "GM",
-    "followers": 1044,
+    "followers": 1074,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Olkusz",
-    "last_online": 1734034579,
+    "last_online": 1741615494,
     "joined": 1290688923,
     "status": "premium",
     "is_streamer": false,
@@ -38,7 +38,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2502,
-            "date": 1733849669,
+            "date": 1741281936,
             "rd": 49
         },
         "best": {
@@ -55,7 +55,7 @@
     "chess_bullet": {
         "last": {
             "rating": 2749,
-            "date": 1732298701,
+            "date": 1741623536,
             "rd": 48
         },
         "best": {
@@ -72,7 +72,7 @@
     "chess_blitz": {
         "last": {
             "rating": 2842,
-            "date": 1733944303,
+            "date": 1741295805,
             "rd": 49
         },
         "best": {

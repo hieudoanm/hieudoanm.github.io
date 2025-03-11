@@ -6,10 +6,10 @@
     "name": "Yasser Quesada Perez",
     "username": "yqperez",
     "title": "GM",
-    "followers": 536,
+    "followers": 538,
     "country": "https://api.chess.com/pub/country/US",
     "location": "St. Louis",
-    "last_online": 1734134296,
+    "last_online": 1741618885,
     "joined": 1466554141,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2884,
-            "date": 1733874329,
-            "rd": 47
+            "rating": 2900,
+            "date": 1741471614,
+            "rd": 49
         },
         "best": {
             "rating": 2991,
@@ -76,8 +76,8 @@
             "game": "https://www.chess.com/game/live/127608657945"
         },
         "record": {
-            "win": 1015,
-            "loss": 608,
+            "win": 1021,
+            "loss": 611,
             "draw": 178
         }
     },

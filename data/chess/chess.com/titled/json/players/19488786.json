@@ -6,10 +6,10 @@
     "name": "Jean-Noel Riff",
     "username": "jncool68",
     "title": "GM",
-    "followers": 408,
+    "followers": 439,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Mulhouse",
-    "last_online": 1734184901,
+    "last_online": 1741702073,
     "joined": 1414522470,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2803,
-            "date": 1734169475,
-            "rd": 27
+            "rating": 2727,
+            "date": 1741688931,
+            "rd": 25
         },
         "best": {
             "rating": 2855,
@@ -62,15 +62,15 @@
             "game": "https://www.chess.com/game/live/117122392187"
         },
         "record": {
-            "win": 7522,
-            "loss": 5322,
-            "draw": 1469
+            "win": 7791,
+            "loss": 5533,
+            "draw": 1532
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3219,
-            "date": 1727019022
+            "rating": 3545,
+            "date": 1741213537
         },
         "lowest": {
             "rating": 1365,

@@ -7,7 +7,7 @@
     "title": "GM",
     "followers": 391,
     "country": "https://api.chess.com/pub/country/SI",
-    "last_online": 1734182142,
+    "last_online": 1741642601,
     "joined": 1560771851,
     "status": "premium",
     "is_streamer": false,
@@ -17,7 +17,7 @@
     "chess_daily": {
         "last": {
             "rating": 1593,
-            "date": 1714189110,
+            "date": 1738747774,
             "rd": 232
         },
         "best": {
@@ -35,18 +35,18 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2503,
-            "date": 1730760471,
+            "rating": 2497,
+            "date": 1741545887,
             "rd": 49
         },
         "best": {
-            "rating": 2503,
-            "date": 1730760471,
+            "rating": 2517,
+            "date": 1739109218,
             "game": "https://www.chess.com/game/live/100464229441"
         },
         "record": {
-            "win": 47,
-            "loss": 20,
+            "win": 49,
+            "loss": 22,
             "draw": 8
         }
     },
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2764,
-            "date": 1733506701,
-            "rd": 42
+            "rating": 2767,
+            "date": 1741643657,
+            "rd": 29
         },
         "best": {
             "rating": 2973,
@@ -79,9 +79,9 @@
             "game": "https://www.chess.com/game/live/99789714557"
         },
         "record": {
-            "win": 3631,
-            "loss": 2789,
-            "draw": 831
+            "win": 3914,
+            "loss": 3037,
+            "draw": 917
         }
     },
     "tactics": {

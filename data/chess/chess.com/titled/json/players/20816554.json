@@ -5,10 +5,10 @@
     "name": "Yovann Gatineau",
     "username": "amiralfio",
     "title": "IM",
-    "followers": 84,
+    "followers": 90,
     "country": "https://api.chess.com/pub/country/FR",
     "location": "Paris",
-    "last_online": 1734172130,
+    "last_online": 1741623942,
     "joined": 1422358296,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1021,
-            "date": 1707236741,
+            "date": 1735284885,
             "rd": 292
         },
         "best": {
@@ -53,8 +53,8 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2534,
-            "date": 1725980260,
+            "rating": 2530,
+            "date": 1737409675,
             "rd": 49
         },
         "best": {
@@ -63,26 +63,26 @@
             "game": "https://www.chess.com/game/live/4566677228"
         },
         "record": {
-            "win": 1800,
-            "loss": 1290,
+            "win": 1802,
+            "loss": 1291,
             "draw": 226
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2702,
-            "date": 1734173741,
-            "rd": 43
+            "rating": 2759,
+            "date": 1741680247,
+            "rd": 40
         },
         "best": {
-            "rating": 2798,
-            "date": 1722819779,
+            "rating": 2829,
+            "date": 1738165589,
             "game": "https://www.chess.com/game/live/127180811905"
         },
         "record": {
-            "win": 1773,
-            "loss": 1350,
-            "draw": 280
+            "win": 1907,
+            "loss": 1440,
+            "draw": 305
         }
     },
     "tactics": {

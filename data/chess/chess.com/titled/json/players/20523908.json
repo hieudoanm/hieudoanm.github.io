@@ -6,9 +6,9 @@
     "name": "Karthikeyan Murali",
     "username": "youngkid",
     "title": "GM",
-    "followers": 774,
+    "followers": 775,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734017075,
+    "last_online": 1741682329,
     "joined": 1420646904,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2892,
-            "date": 1727798751,
-            "rd": 48
+            "rating": 2889,
+            "date": 1739598116,
+            "rd": 49
         },
         "best": {
             "rating": 2937,
@@ -62,8 +62,8 @@
         },
         "record": {
             "win": 602,
-            "loss": 316,
-            "draw": 68
+            "loss": 317,
+            "draw": 69
         }
     },
     "fide": 0,

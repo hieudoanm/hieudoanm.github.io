@@ -5,9 +5,9 @@
     "name": "Volodymyr Onyshchuk",
     "username": "onyshchuk_v",
     "title": "GM",
-    "followers": 88,
+    "followers": 102,
     "country": "https://api.chess.com/pub/country/UA",
-    "last_online": 1733943139,
+    "last_online": 1740572688,
     "joined": 1454443083,
     "status": "premium",
     "is_streamer": false,
@@ -16,19 +16,19 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2535,
-            "date": 1727292139,
-            "rd": 46
+            "rating": 2519,
+            "date": 1739816718,
+            "rd": 47
         },
         "best": {
             "rating": 2719,
             "date": 1598016272,
-            "game": "https://www.chess.com/game/live/121026092857"
+            "game": "https://www.chess.com/game/live/133553940057"
         },
         "record": {
-            "win": 13,
-            "loss": 10,
-            "draw": 9
+            "win": 15,
+            "loss": 13,
+            "draw": 11
         }
     },
     "chess_bullet": {
@@ -45,19 +45,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2990,
-            "date": 1733875529,
-            "rd": 44
+            "rating": 2972,
+            "date": 1736876635,
+            "rd": 42
         },
         "best": {
-            "rating": 2994,
-            "date": 1733874273,
+            "rating": 2998,
+            "date": 1734456040,
             "game": "https://www.chess.com/game/live/127587078087"
         },
         "record": {
-            "win": 606,
-            "loss": 233,
-            "draw": 101
+            "win": 649,
+            "loss": 247,
+            "draw": 111
         }
     },
     "fide": 2633,
@@ -73,8 +73,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 44,
-            "score": 41
+            "total_attempts": 50,
+            "score": 47
         }
     }
 }

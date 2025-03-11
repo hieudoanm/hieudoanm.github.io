@@ -6,10 +6,10 @@
     "name": "Yuri Vovk",
     "username": "vovkcoach",
     "title": "GM",
-    "followers": 868,
+    "followers": 877,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Ukraine,Lviv",
-    "last_online": 1734022319,
+    "last_online": 1741273990,
     "joined": 1187273570,
     "status": "premium",
     "is_streamer": false,
@@ -67,7 +67,7 @@
             "draw": 380
         }
     },
-    "fide": 2571,
+    "fide": 2534,
     "tactics": {
         "highest": {
             "rating": 2754,

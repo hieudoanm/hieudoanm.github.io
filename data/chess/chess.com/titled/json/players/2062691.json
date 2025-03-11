@@ -6,10 +6,10 @@
     "name": "Swayams Mishra",
     "username": "swayamsm",
     "title": "GM",
-    "followers": 1274,
+    "followers": 1299,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Bhubaneswar,Odisha",
-    "last_online": 1733910385,
+    "last_online": 1741583668,
     "joined": 1248883729,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2646,
-            "date": 1730311039,
-            "rd": 44
+            "rating": 2671,
+            "date": 1739181637,
+            "rd": 43
         },
         "best": {
             "rating": 2833,
@@ -45,15 +45,15 @@
             "game": "https://www.chess.com/game/live/5788362794"
         },
         "record": {
-            "win": 1075,
-            "loss": 1013,
+            "win": 1096,
+            "loss": 1028,
             "draw": 121
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2624,
-            "date": 1733869154,
+            "rating": 2654,
+            "date": 1738847502,
             "rd": 48
         },
         "best": {
@@ -62,7 +62,7 @@
             "game": "https://www.chess.com/game/live/127002625377"
         },
         "record": {
-            "win": 537,
+            "win": 541,
             "loss": 449,
             "draw": 92
         }

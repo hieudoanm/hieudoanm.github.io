@@ -5,9 +5,9 @@
     "name": "Vitaly Teterev",
     "username": "tetrix83",
     "title": "GM",
-    "followers": 70,
+    "followers": 72,
     "country": "https://api.chess.com/pub/country/BY",
-    "last_online": 1733928388,
+    "last_online": 1741582343,
     "joined": 1510013992,
     "status": "premium",
     "is_streamer": false,
@@ -26,12 +26,6 @@
             "draw": 0,
             "time_per_move": 3370,
             "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 20
         }
     },
     "chess_rapid": {
@@ -53,9 +47,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2454,
-            "date": 1732989139,
-            "rd": 80
+            "rating": 2355,
+            "date": 1740771740,
+            "rd": 59
         },
         "best": {
             "rating": 2487,
@@ -63,15 +57,15 @@
             "game": "https://www.chess.com/game/live/126727157691"
         },
         "record": {
-            "win": 454,
-            "loss": 87,
-            "draw": 12
+            "win": 466,
+            "loss": 105,
+            "draw": 13
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2581,
-            "date": 1733853936,
+            "rating": 2662,
+            "date": 1741163737,
             "rd": 44
         },
         "best": {
@@ -80,9 +74,9 @@
             "game": "https://www.chess.com/game/live/123952866437"
         },
         "record": {
-            "win": 2242,
-            "loss": 2209,
-            "draw": 326
+            "win": 2294,
+            "loss": 2246,
+            "draw": 328
         }
     },
     "tactics": {

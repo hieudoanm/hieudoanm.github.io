@@ -6,10 +6,10 @@
     "name": "Mikhail M Ivanov",
     "username": "mikhail646464",
     "title": "GM",
-    "followers": 64,
+    "followers": 67,
     "country": "https://api.chess.com/pub/country/RS",
     "location": "SERBIA",
-    "last_online": 1734174513,
+    "last_online": 1741537297,
     "joined": 1438261904,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1733,
-            "date": 1734174887,
-            "rd": 76
+            "rating": 1715,
+            "date": 1741537399,
+            "rd": 85
         },
         "best": {
             "rating": 2269,
@@ -28,24 +28,18 @@
             "game": "https://www.chess.com/game/daily/120082052"
         },
         "record": {
-            "win": 103,
-            "loss": 56,
+            "win": 104,
+            "loss": 58,
             "draw": 13,
-            "time_per_move": 35768,
-            "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 6
+            "time_per_move": 36850,
+            "timeout_percent": 50
         }
     },
     "chess960_daily": {
         "last": {
-            "rating": 923,
-            "date": 1710145639,
-            "rd": 161
+            "rating": 871,
+            "date": 1739623146,
+            "rd": 172
         },
         "best": {
             "rating": 1200,
@@ -54,16 +48,10 @@
         },
         "record": {
             "win": 7,
-            "loss": 0,
+            "loss": 2,
             "draw": 0,
-            "time_per_move": 35768,
-            "timeout_percent": 0
-        },
-        "tournament": {
-            "points": 0,
-            "withdraw": 0,
-            "count": 1,
-            "highest_finish": 6
+            "time_per_move": 36850,
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
@@ -85,9 +73,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2156,
-            "date": 1720511002,
-            "rd": 54
+            "rating": 2133,
+            "date": 1736178099,
+            "rd": 91
         },
         "best": {
             "rating": 2200,
@@ -96,15 +84,15 @@
         },
         "record": {
             "win": 272,
-            "loss": 204,
+            "loss": 205,
             "draw": 35
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2326,
-            "date": 1714686248,
-            "rd": 27
+            "rating": 2351,
+            "date": 1738854112,
+            "rd": 95
         },
         "best": {
             "rating": 2388,
@@ -112,7 +100,7 @@
             "game": "https://www.chess.com/game/live/102174919313"
         },
         "record": {
-            "win": 518,
+            "win": 521,
             "loss": 414,
             "draw": 87
         }

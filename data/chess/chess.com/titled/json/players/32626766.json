@@ -6,10 +6,10 @@
     "name": "Sergei Matsenko",
     "username": "matsenkosergey",
     "title": "GM",
-    "followers": 234,
+    "followers": 237,
     "country": "https://api.chess.com/pub/country/US",
     "location": "Frisco, TX",
-    "last_online": 1734134635,
+    "last_online": 1741505672,
     "joined": 1485232980,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2766,
-            "date": 1731977721,
-            "rd": 48
+            "rating": 2761,
+            "date": 1741420157,
+            "rd": 42
         },
         "best": {
             "rating": 2865,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/106009178681"
         },
         "record": {
-            "win": 753,
-            "loss": 497,
-            "draw": 98
+            "win": 773,
+            "loss": 513,
+            "draw": 100
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2865,
-            "date": 1708052156,
-            "rd": 48
+            "rating": 2856,
+            "date": 1740901057,
+            "rd": 47
         },
         "best": {
             "rating": 2871,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/2778461888"
         },
         "record": {
-            "win": 3520,
-            "loss": 2210,
-            "draw": 698
+            "win": 3522,
+            "loss": 2212,
+            "draw": 700
         }
     },
     "fide": 2650,

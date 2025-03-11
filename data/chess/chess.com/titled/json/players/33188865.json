@@ -5,14 +5,14 @@
     "name": "Yan Liu",
     "username": "wanderingknightly",
     "title": "GM",
-    "followers": 68,
+    "followers": 85,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1734057669,
+    "last_online": 1741675611,
     "joined": 1487059444,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -64,22 +64,22 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2935,
-            "date": 1732783271,
-            "rd": 47
+            "rating": 2924,
+            "date": 1740646962,
+            "rd": 48
         },
         "best": {
-            "rating": 2935,
-            "date": 1732783271,
+            "rating": 2944,
+            "date": 1737865161,
             "game": "https://www.chess.com/game/live/122748317565"
         },
         "record": {
-            "win": 838,
-            "loss": 429,
-            "draw": 142
+            "win": 850,
+            "loss": 430,
+            "draw": 147
         }
     },
-    "fide": 2524,
+    "fide": 2552,
     "tactics": {
         "highest": {
             "rating": 4348,

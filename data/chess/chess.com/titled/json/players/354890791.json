@@ -6,10 +6,10 @@
     "name": "Jakhongir Vakhidov",
     "username": "jakhongir-vakhidov",
     "title": "GM",
-    "followers": 43,
+    "followers": 57,
     "country": "https://api.chess.com/pub/country/UZ",
     "location": "Samarkand",
-    "last_online": 1734013483,
+    "last_online": 1741006260,
     "joined": 1712177561,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2563,
-            "date": 1727288717,
-            "rd": 47
+            "rating": 2543,
+            "date": 1739812878,
+            "rd": 48
         },
         "best": {
             "rating": 2610,
@@ -28,8 +28,8 @@
             "game": "https://www.chess.com/game/live/115148970851"
         },
         "record": {
-            "win": 9,
-            "loss": 11,
+            "win": 10,
+            "loss": 14,
             "draw": 13
         }
     },
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2978,
-            "date": 1734013967,
-            "rd": 49
+            "rating": 2940,
+            "date": 1740527628,
+            "rd": 47
         },
         "best": {
             "rating": 3033,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/117382239835"
         },
         "record": {
-            "win": 289,
-            "loss": 222,
-            "draw": 97
+            "win": 308,
+            "loss": 232,
+            "draw": 99
         }
     },
     "fide": 2599,
     "tactics": {
         "highest": {
-            "rating": 3585,
-            "date": 1723192093
+            "rating": 3595,
+            "date": 1739810506
         },
         "lowest": {
             "rating": 1000,

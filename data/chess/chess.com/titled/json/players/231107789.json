@@ -1,13 +1,13 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/231107789.236e264b.200x200o.dba40b5638ec.jpg",
     "player_id": 231107789,
-    "@id": "https://api.chess.com/pub/player/llavash",
-    "url": "https://www.chess.com/member/LLavash",
-    "username": "llavash",
+    "@id": "https://api.chess.com/pub/player/kingragnarv1",
+    "url": "https://www.chess.com/member/KingRagnarV1",
+    "username": "kingragnarv1",
     "title": "GM",
     "followers": 57,
-    "country": "https://api.chess.com/pub/country/HR",
-    "last_online": 1731836170,
+    "country": "https://api.chess.com/pub/country/DK",
+    "last_online": 1739517004,
     "joined": 1674547621,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3031,
-            "date": 1731838721,
-            "rd": 42
+            "rating": 2963,
+            "date": 1739517675,
+            "rd": 49
         },
         "best": {
             "rating": 3092,
@@ -42,9 +42,9 @@
             "game": "https://www.chess.com/game/live/95659216451"
         },
         "record": {
-            "win": 277,
-            "loss": 262,
-            "draw": 73
+            "win": 278,
+            "loss": 271,
+            "draw": 74
         }
     },
     "tactics": {

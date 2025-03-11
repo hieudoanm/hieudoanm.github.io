@@ -6,10 +6,10 @@
     "name": "Jorden Van Foreest",
     "username": "joppie2",
     "title": "GM",
-    "followers": 1534,
+    "followers": 1574,
     "country": "https://api.chess.com/pub/country/NL",
     "location": "Groningen",
-    "last_online": 1734180545,
+    "last_online": 1741600414,
     "joined": 1304853620,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1606,
-            "date": 1708620956,
+            "date": 1739965094,
             "rd": 207
         },
         "best": {
@@ -56,9 +56,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2668,
-            "date": 1717077515,
-            "rd": 49
+            "rating": 2643,
+            "date": 1739813146,
+            "rd": 48
         },
         "best": {
             "rating": 2700,
@@ -66,16 +66,16 @@
             "game": "https://www.chess.com/game/live/109098748341"
         },
         "record": {
-            "win": 59,
-            "loss": 60,
+            "win": 60,
+            "loss": 63,
             "draw": 42
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 3001,
-            "date": 1730845263,
-            "rd": 34
+            "rating": 3016,
+            "date": 1736017121,
+            "rd": 35
         },
         "best": {
             "rating": 3140,
@@ -83,16 +83,16 @@
             "game": "https://www.chess.com/game/live/5734148455"
         },
         "record": {
-            "win": 3915,
-            "loss": 3210,
-            "draw": 364
+            "win": 3964,
+            "loss": 3232,
+            "draw": 369
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3082,
-            "date": 1734116426,
-            "rd": 41
+            "rating": 2974,
+            "date": 1741628185,
+            "rd": 39
         },
         "best": {
             "rating": 3141,
@@ -100,9 +100,9 @@
             "game": "https://www.chess.com/game/live/64529404433"
         },
         "record": {
-            "win": 5840,
-            "loss": 4559,
-            "draw": 1148
+            "win": 5912,
+            "loss": 4620,
+            "draw": 1165
         }
     },
     "fide": 2682,

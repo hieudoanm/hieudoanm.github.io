@@ -6,9 +6,9 @@
     "name": "Jose Gabriel Cardoso",
     "username": "thebigboss04",
     "title": "GM",
-    "followers": 482,
+    "followers": 488,
     "country": "https://api.chess.com/pub/country/CO",
-    "last_online": 1734181401,
+    "last_online": 1741551036,
     "joined": 1405365580,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 391,
-            "date": 1733593171,
+            "date": 1738795124,
             "rd": 339
         },
         "record": {
@@ -48,9 +48,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2941,
-            "date": 1732992878,
-            "rd": 35
+            "rating": 2996,
+            "date": 1738429770,
+            "rd": 41
         },
         "best": {
             "rating": 3142,
@@ -58,15 +58,15 @@
             "game": "https://www.chess.com/game/live/11549112223"
         },
         "record": {
-            "win": 2920,
-            "loss": 2268,
-            "draw": 330
+            "win": 3042,
+            "loss": 2308,
+            "draw": 345
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2803,
-            "date": 1733942003,
+            "rating": 2773,
+            "date": 1741464147,
             "rd": 48
         },
         "best": {
@@ -75,9 +75,9 @@
             "game": "https://www.chess.com/game/live/5175024317"
         },
         "record": {
-            "win": 1901,
-            "loss": 1430,
-            "draw": 276
+            "win": 1928,
+            "loss": 1456,
+            "draw": 284
         }
     },
     "fide": 2500,

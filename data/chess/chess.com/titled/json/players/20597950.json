@@ -6,9 +6,9 @@
     "name": "Tigran Gharamian",
     "username": "tigrangharamian",
     "title": "GM",
-    "followers": 195,
+    "followers": 196,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734003135,
+    "last_online": 1741682445,
     "joined": 1421082656,
     "status": "premium",
     "is_streamer": false,
@@ -68,8 +68,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 3556,
-            "date": 1675164451
+            "rating": 3580,
+            "date": 1740078070
         },
         "lowest": {
             "rating": 1362,

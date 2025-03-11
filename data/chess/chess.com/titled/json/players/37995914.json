@@ -5,9 +5,9 @@
     "name": "Pierre Laurent-Paoli",
     "username": "pilopa",
     "title": "GM",
-    "followers": 54,
+    "followers": 58,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1734079512,
+    "last_online": 1741696796,
     "joined": 1503320027,
     "status": "premium",
     "is_streamer": false,
@@ -35,36 +35,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2692,
-            "date": 1697236837,
-            "rd": 61
+            "rating": 2621,
+            "date": 1740828111,
+            "rd": 43
         },
         "best": {
-            "rating": 2701,
-            "date": 1696786661,
-            "game": "https://www.chess.com/game/live/90523170087"
+            "rating": 2715,
+            "date": 1739091002,
+            "game": "https://www.chess.com/game/live/132794990879"
         },
         "record": {
-            "win": 61,
-            "loss": 28,
-            "draw": 15
+            "win": 74,
+            "loss": 45,
+            "draw": 18
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2835,
-            "date": 1733907281,
-            "rd": 31
+            "rating": 2833,
+            "date": 1741519999,
+            "rd": 30
         },
         "best": {
             "rating": 2890,
             "date": 1733412465,
-            "game": "https://www.chess.com/game/live/123165610905"
+            "game": "https://www.chess.com/game/live/132424913901"
         },
         "record": {
-            "win": 3660,
-            "loss": 2671,
-            "draw": 603
+            "win": 3845,
+            "loss": 2816,
+            "draw": 634
         }
     },
     "tactics": {

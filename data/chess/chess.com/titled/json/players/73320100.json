@@ -6,9 +6,9 @@
     "name": "Anthony He",
     "username": "0gzpanda",
     "title": "IM",
-    "followers": 498,
+    "followers": 535,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734161982,
+    "last_online": 1741671832,
     "joined": 1583872513,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2599,
-            "date": 1708797746,
-            "rd": 107
+            "rating": 2592,
+            "date": 1736384032,
+            "rd": 49
         },
         "best": {
             "rating": 2599,
@@ -46,9 +46,9 @@
             "game": "https://www.chess.com/game/live/92343623725"
         },
         "record": {
-            "win": 32,
+            "win": 33,
             "loss": 15,
-            "draw": 8
+            "draw": 9
         }
     },
     "chess_bullet": {
@@ -70,19 +70,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2958,
-            "date": 1734131705,
-            "rd": 32
+            "rating": 3018,
+            "date": 1741677852,
+            "rd": 31
         },
         "best": {
-            "rating": 3111,
-            "date": 1682994512,
-            "game": "https://www.chess.com/game/live/125561343643"
+            "rating": 3114,
+            "date": 1738102805,
+            "game": "https://www.chess.com/game/live/134444943777"
         },
         "record": {
-            "win": 2244,
-            "loss": 1598,
-            "draw": 410
+            "win": 2501,
+            "loss": 1770,
+            "draw": 469
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Krasimir Rusev",
     "username": "krasimir_rusev",
     "title": "GM",
-    "followers": 1964,
+    "followers": 2089,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1734090479,
+    "last_online": 1740719830,
     "joined": 1387893996,
     "status": "premium",
     "is_streamer": false,
@@ -36,9 +36,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2515,
-            "date": 1726377216,
-            "rd": 108
+            "rating": 2483,
+            "date": 1741327245,
+            "rd": 49
         },
         "best": {
             "rating": 2635,
@@ -46,16 +46,16 @@
             "game": "https://www.chess.com/game/live/90435026233"
         },
         "record": {
-            "win": 59,
-            "loss": 7,
+            "win": 60,
+            "loss": 9,
             "draw": 4
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2770,
-            "date": 1733570640,
-            "rd": 21
+            "rating": 2729,
+            "date": 1741698391,
+            "rd": 23
         },
         "best": {
             "rating": 2841,
@@ -63,15 +63,15 @@
             "game": "https://www.chess.com/game/live/67771829485"
         },
         "record": {
-            "win": 9861,
-            "loss": 7756,
-            "draw": 1180
+            "win": 10532,
+            "loss": 8196,
+            "draw": 1239
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2711,
-            "date": 1730560422,
+            "rating": 2704,
+            "date": 1740037666,
             "rd": 49
         },
         "best": {
@@ -80,8 +80,8 @@
             "game": "https://www.chess.com/game/live/26569780767"
         },
         "record": {
-            "win": 2949,
-            "loss": 2216,
+            "win": 2951,
+            "loss": 2218,
             "draw": 409
         }
     },
@@ -100,6 +100,10 @@
         "best": {
             "total_attempts": 50,
             "score": 47
+        },
+        "daily": {
+            "total_attempts": 35,
+            "score": 34
         }
     }
 }

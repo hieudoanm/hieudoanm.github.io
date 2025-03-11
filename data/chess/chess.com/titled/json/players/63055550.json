@@ -6,9 +6,9 @@
     "name": "Mukhiddin Madaminov",
     "username": "macho_2006",
     "title": "GM",
-    "followers": 227,
+    "followers": 245,
     "country": "https://api.chess.com/pub/country/UZ",
-    "last_online": 1732554147,
+    "last_online": 1741703814,
     "joined": 1562500727,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2593,
-            "date": 1727624400,
-            "rd": 44
+            "rating": 2582,
+            "date": 1739819631,
+            "rd": 46
         },
         "best": {
             "rating": 2674,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/121030232299"
         },
         "record": {
-            "win": 51,
-            "loss": 13,
-            "draw": 8
+            "win": 55,
+            "loss": 17,
+            "draw": 9
         }
     },
     "chess_bullet": {
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2990,
-            "date": 1731430688,
-            "rd": 40
+            "rating": 2933,
+            "date": 1741606478,
+            "rd": 49
         },
         "best": {
             "rating": 3055,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/99166501509"
         },
         "record": {
-            "win": 2080,
-            "loss": 1670,
-            "draw": 350
+            "win": 2129,
+            "loss": 1703,
+            "draw": 357
         }
     },
     "fide": 0,

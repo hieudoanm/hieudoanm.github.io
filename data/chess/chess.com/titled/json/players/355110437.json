@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/355110437.b2dca3d7.200x200o.4d04d7e38a99.jpg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/355110437.0faac00f.200x200o.c3263e81560c.jpg",
     "player_id": 355110437,
     "@id": "https://api.chess.com/pub/player/aeiiuu",
     "url": "https://www.chess.com/member/aeiiuu",
     "name": "Erick Zhao",
     "username": "aeiiuu",
     "title": "IM",
-    "followers": 42,
+    "followers": 47,
     "country": "https://api.chess.com/pub/country/NZ",
-    "last_online": 1734150349,
+    "last_online": 1741650600,
     "joined": 1712272329,
     "status": "premium",
     "is_streamer": false,
@@ -25,44 +25,44 @@
             "loss": 3,
             "draw": 0,
             "time_per_move": 219878,
-            "timeout_percent": 100
+            "timeout_percent": 0
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2787,
-            "date": 1734067706,
-            "rd": 39
+            "rating": 2910,
+            "date": 1741489375,
+            "rd": 36
         },
         "best": {
-            "rating": 2969,
-            "date": 1720825959,
-            "game": "https://www.chess.com/game/live/111773631653"
+            "rating": 3052,
+            "date": 1735351799,
+            "game": "https://www.chess.com/game/live/129355983421"
         },
         "record": {
-            "win": 727,
-            "loss": 557,
-            "draw": 73
+            "win": 919,
+            "loss": 715,
+            "draw": 93
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2675,
-            "date": 1733934047,
-            "rd": 48
+            "rating": 2781,
+            "date": 1740501045,
+            "rd": 42
         },
         "best": {
-            "rating": 2705,
-            "date": 1732041415,
+            "rating": 2883,
+            "date": 1736097923,
             "game": "https://www.chess.com/game/live/112466520439"
         },
         "record": {
-            "win": 96,
-            "loss": 83,
-            "draw": 9
+            "win": 176,
+            "loss": 143,
+            "draw": 24
         }
     },
-    "fide": 2359,
+    "fide": 2413,
     "tactics": {
         "highest": {
             "rating": 3654,

@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/Resentiment18",
     "username": "resentiment18",
     "title": "GM",
-    "followers": 69,
+    "followers": 71,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734037695,
+    "last_online": 1741694326,
     "joined": 1523466022,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2905,
-            "date": 1734040416,
-            "rd": 32
+            "rating": 2971,
+            "date": 1741695207,
+            "rd": 36
         },
         "best": {
             "rating": 3034,
@@ -42,9 +42,9 @@
             "game": "https://www.chess.com/game/live/4595267043"
         },
         "record": {
-            "win": 1628,
-            "loss": 1878,
-            "draw": 737
+            "win": 1787,
+            "loss": 2058,
+            "draw": 824
         }
     },
     "tactics": {

@@ -5,10 +5,10 @@
     "name": "Aarav Dengla",
     "username": "aaravdenglaofficial",
     "title": "IM",
-    "followers": 99,
+    "followers": 100,
     "country": "https://api.chess.com/pub/country/PM",
     "location": "Andover, MA",
-    "last_online": 1734126957,
+    "last_online": 1741620709,
     "joined": 1665391580,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2366,
-            "date": 1731611013,
+            "date": 1740530468,
             "rd": 50
         },
         "best": {
@@ -34,9 +34,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2832,
-            "date": 1734149643,
-            "rd": 29
+            "rating": 2700,
+            "date": 1741620704,
+            "rd": 31
         },
         "best": {
             "rating": 2859,
@@ -44,16 +44,16 @@
             "game": "https://www.chess.com/game/live/99517361979"
         },
         "record": {
-            "win": 656,
-            "loss": 617,
-            "draw": 70
+            "win": 776,
+            "loss": 741,
+            "draw": 85
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2673,
-            "date": 1733603628,
-            "rd": 49
+            "rating": 2707,
+            "date": 1741481845,
+            "rd": 48
         },
         "best": {
             "rating": 2749,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/119465973473"
         },
         "record": {
-            "win": 217,
-            "loss": 196,
-            "draw": 32
+            "win": 239,
+            "loss": 217,
+            "draw": 33
         }
     },
     "tactics": {

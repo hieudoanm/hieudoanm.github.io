@@ -5,9 +5,9 @@
     "name": "Vladimir Raicevic",
     "username": "volodja49",
     "title": "GM",
-    "followers": 60,
+    "followers": 63,
     "country": "https://api.chess.com/pub/country/RS",
-    "last_online": 1734185419,
+    "last_online": 1741696436,
     "joined": 1394221714,
     "status": "premium",
     "is_streamer": false,
@@ -28,9 +28,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2333,
-            "date": 1734185677,
-            "rd": 20
+            "rating": 2413,
+            "date": 1741685518,
+            "rd": 22
         },
         "best": {
             "rating": 2524,
@@ -38,26 +38,26 @@
             "game": "https://www.chess.com/game/live/2857114292"
         },
         "record": {
-            "win": 40108,
-            "loss": 39129,
-            "draw": 3477
+            "win": 40599,
+            "loss": 39701,
+            "draw": 3531
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2582,
-            "date": 1734000034,
-            "rd": 28
+            "rating": 2599,
+            "date": 1741703972,
+            "rd": 26
         },
         "best": {
-            "rating": 2620,
-            "date": 1652965549,
+            "rating": 2643,
+            "date": 1739718376,
             "game": "https://www.chess.com/game/live/103995107313"
         },
         "record": {
-            "win": 9357,
-            "loss": 9190,
-            "draw": 1691
+            "win": 9624,
+            "loss": 9507,
+            "draw": 1754
         }
     },
     "tactics": {

@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/NoobMaster176",
     "username": "noobmaster176",
     "title": "GM",
-    "followers": 21,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1727813002,
+    "last_online": 1741704260,
     "joined": 1713980839,
     "status": "premium",
     "is_streamer": false,
@@ -32,19 +32,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3002,
-            "date": 1727733487,
-            "rd": 37
+            "rating": 3063,
+            "date": 1740335708,
+            "rd": 31
         },
         "best": {
-            "rating": 3083,
-            "date": 1714420804,
-            "game": "https://www.chess.com/game/live/112892956731"
+            "rating": 3109,
+            "date": 1740224848,
+            "game": "https://www.chess.com/game/live/133964345317"
         },
         "record": {
-            "win": 263,
-            "loss": 170,
-            "draw": 39
+            "win": 331,
+            "loss": 227,
+            "draw": 53
         }
     },
     "tactics": {
@@ -59,8 +59,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 3,
-            "score": 2
+            "total_attempts": 5,
+            "score": 4
         }
     }
 }

@@ -5,9 +5,9 @@
     "name": "Pablo Ricardi",
     "username": "pabloricardi",
     "title": "GM",
-    "followers": 68,
+    "followers": 73,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1733932273,
+    "last_online": 1740762514,
     "joined": 1567444586,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2527,
-            "date": 1731599307,
-            "rd": 41
+            "rating": 2523,
+            "date": 1738964336,
+            "rd": 48
         },
         "best": {
             "rating": 2598,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/4089523436"
         },
         "record": {
-            "win": 546,
-            "loss": 271,
-            "draw": 73
+            "win": 547,
+            "loss": 272,
+            "draw": 74
         }
     },
     "fide": 0,

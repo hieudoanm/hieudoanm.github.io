@@ -8,7 +8,7 @@
     "title": "GM",
     "followers": 22,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734143640,
+    "last_online": 1741471492,
     "joined": 1483579446,
     "status": "premium",
     "is_streamer": false,
@@ -64,10 +64,6 @@
         "best": {
             "total_attempts": 76,
             "score": 73
-        },
-        "daily": {
-            "total_attempts": 63,
-            "score": 60
         }
     }
 }

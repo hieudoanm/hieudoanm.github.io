@@ -6,9 +6,9 @@
     "name": "Anna Rudolf",
     "username": "anna_chess",
     "title": "IM",
-    "followers": 11900,
+    "followers": 11980,
     "country": "https://api.chess.com/pub/country/ES",
-    "last_online": 1733939561,
+    "last_online": 1740230861,
     "joined": 1475618378,
     "status": "premium",
     "is_streamer": true,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2130,
-            "date": 1718561657,
-            "rd": 138
+            "rating": 2049,
+            "date": 1738707200,
+            "rd": 93
         },
         "best": {
             "rating": 2200,
@@ -81,15 +81,15 @@
             "game": "https://www.chess.com/game/live/29369432865"
         },
         "record": {
-            "win": 260,
-            "loss": 100,
-            "draw": 23
+            "win": 264,
+            "loss": 105,
+            "draw": 24
         }
     },
     "tactics": {
         "highest": {
-            "rating": 2018,
-            "date": 1671213302
+            "rating": 2156,
+            "date": 1736201483
         },
         "lowest": {
             "rating": 1801,

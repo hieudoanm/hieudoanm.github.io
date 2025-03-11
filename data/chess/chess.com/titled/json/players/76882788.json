@@ -6,9 +6,9 @@
     "name": "Van Nguyen",
     "username": "ntdvan12",
     "title": "GM",
-    "followers": 171,
+    "followers": 195,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1734043238,
+    "last_online": 1741540297,
     "joined": 1587043272,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2957,
-            "date": 1734044890,
-            "rd": 47
+            "rating": 2986,
+            "date": 1741557761,
+            "rd": 45
         },
         "best": {
-            "rating": 2968,
-            "date": 1734044501,
+            "rating": 2977,
+            "date": 1739305758,
             "game": "https://www.chess.com/game/live/123891015683"
         },
         "record": {
-            "win": 894,
-            "loss": 786,
-            "draw": 242
+            "win": 908,
+            "loss": 794,
+            "draw": 244
         }
     },
     "tactics": {

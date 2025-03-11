@@ -6,9 +6,9 @@
     "name": "Raunak Sadhwani",
     "username": "raunaksadhwani2005",
     "title": "GM",
-    "followers": 1543,
+    "followers": 1690,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734145053,
+    "last_online": 1741694704,
     "joined": 1558072018,
     "status": "premium",
     "is_streamer": true,
@@ -23,9 +23,9 @@
     ],
     "chess_rapid": {
         "last": {
-            "rating": 2664,
-            "date": 1715448980,
-            "rd": 43
+            "rating": 2686,
+            "date": 1739825415,
+            "rd": 45
         },
         "best": {
             "rating": 2724,
@@ -33,16 +33,16 @@
             "game": "https://www.chess.com/game/live/72471075337"
         },
         "record": {
-            "win": 81,
-            "loss": 40,
-            "draw": 47
+            "win": 87,
+            "loss": 42,
+            "draw": 50
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2995,
-            "date": 1734133610,
-            "rd": 39
+            "rating": 3083,
+            "date": 1738343655,
+            "rd": 35
         },
         "best": {
             "rating": 3218,
@@ -50,16 +50,16 @@
             "game": "https://www.chess.com/game/live/6007408077"
         },
         "record": {
-            "win": 4879,
-            "loss": 3714,
-            "draw": 639
+            "win": 4994,
+            "loss": 3768,
+            "draw": 648
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3089,
-            "date": 1733628751,
-            "rd": 37
+            "rating": 3083,
+            "date": 1741033342,
+            "rd": 39
         },
         "best": {
             "rating": 3146,
@@ -67,9 +67,9 @@
             "game": "https://www.chess.com/game/live/120056981705"
         },
         "record": {
-            "win": 1683,
-            "loss": 962,
-            "draw": 473
+            "win": 1783,
+            "loss": 1044,
+            "draw": 497
         }
     },
     "fide": 2609,

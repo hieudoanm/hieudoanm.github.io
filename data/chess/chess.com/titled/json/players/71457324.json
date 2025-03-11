@@ -4,9 +4,9 @@
     "url": "https://www.chess.com/member/TheShakyRock",
     "username": "theshakyrock",
     "title": "GM",
-    "followers": 50,
+    "followers": 54,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734178277,
+    "last_online": 1741544666,
     "joined": 1580331962,
     "status": "premium",
     "is_streamer": false,
@@ -32,9 +32,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2694,
-            "date": 1734180587,
-            "rd": 41
+            "rating": 2826,
+            "date": 1741614455,
+            "rd": 37
         },
         "best": {
             "rating": 2863,
@@ -42,9 +42,9 @@
             "game": "https://www.chess.com/game/live/107536328683"
         },
         "record": {
-            "win": 1159,
-            "loss": 902,
-            "draw": 222
+            "win": 1224,
+            "loss": 937,
+            "draw": 232
         }
     },
     "tactics": {

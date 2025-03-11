@@ -6,15 +6,15 @@
     "name": "Shyam Sundar",
     "username": "shyam",
     "title": "GM",
-    "followers": 136,
+    "followers": 154,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "india,tamilnadu",
-    "last_online": 1734185572,
+    "last_online": 1741501449,
     "joined": 1185801156,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Crystal",
+    "league": "Elite",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -66,19 +66,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2792,
-            "date": 1734165518,
-            "rd": 37
+            "rating": 2868,
+            "date": 1741318845,
+            "rd": 48
         },
         "best": {
-            "rating": 2811,
-            "date": 1734076395,
-            "game": "https://www.chess.com/game/live/4865310197"
+            "rating": 2865,
+            "date": 1739413613,
+            "game": "https://www.chess.com/game/live/133151352949"
         },
         "record": {
-            "win": 1129,
-            "loss": 813,
-            "draw": 169
+            "win": 1150,
+            "loss": 821,
+            "draw": 173
         }
     },
     "tactics": {

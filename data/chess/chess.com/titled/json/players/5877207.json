@@ -6,10 +6,10 @@
     "name": "karthikeyan pandian",
     "username": "kargan90",
     "title": "GM",
-    "followers": 124,
+    "followers": 131,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "chennai",
-    "last_online": 1734098318,
+    "last_online": 1741538032,
     "joined": 1317391258,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2714,
-            "date": 1734114020,
-            "rd": 30
+            "rating": 2755,
+            "date": 1741539573,
+            "rd": 37
         },
         "best": {
             "rating": 2845,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/126588558791"
         },
         "record": {
-            "win": 1218,
-            "loss": 1070,
-            "draw": 164
+            "win": 1302,
+            "loss": 1134,
+            "draw": 170
         }
     },
     "fide": 0,

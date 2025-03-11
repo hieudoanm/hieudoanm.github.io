@@ -6,10 +6,10 @@
     "name": "Nana Dzagnidze",
     "username": "lili_ani",
     "title": "GM",
-    "followers": 224,
+    "followers": 230,
     "country": "https://api.chess.com/pub/country/GE",
     "location": "Tbilisi",
-    "last_online": 1733683573,
+    "last_online": 1740857542,
     "joined": 1579691223,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2609,
-            "date": 1732561979,
-            "rd": 44
+            "rating": 2549,
+            "date": 1740732009,
+            "rd": 46
         },
         "best": {
             "rating": 2742,
@@ -76,9 +76,9 @@
             "game": "https://www.chess.com/game/live/6159761907"
         },
         "record": {
-            "win": 734,
-            "loss": 718,
-            "draw": 151
+            "win": 757,
+            "loss": 748,
+            "draw": 156
         }
     },
     "tactics": {

@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/lonelyqueen0",
     "username": "lonelyqueen0",
     "title": "GM",
-    "followers": 362,
+    "followers": 366,
     "country": "https://api.chess.com/pub/country/GT",
-    "last_online": 1733859583,
+    "last_online": 1741671093,
     "joined": 1554667583,
     "status": "premium",
     "is_streamer": false,
@@ -50,9 +50,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2986,
-            "date": 1733861329,
-            "rd": 45
+            "rating": 2980,
+            "date": 1741656176,
+            "rd": 31
         },
         "best": {
             "rating": 3055,
@@ -60,15 +60,15 @@
             "game": "https://www.chess.com/game/live/32026269699"
         },
         "record": {
-            "win": 2020,
-            "loss": 1486,
-            "draw": 385
+            "win": 2108,
+            "loss": 1534,
+            "draw": 400
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3428,
-            "date": 1639055517
+            "rating": 3457,
+            "date": 1740357424
         },
         "lowest": {
             "rating": 1012,
@@ -79,6 +79,10 @@
         "best": {
             "total_attempts": 88,
             "score": 85
+        },
+        "daily": {
+            "total_attempts": 49,
+            "score": 48
         }
     }
 }

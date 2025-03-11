@@ -6,9 +6,9 @@
     "name": "Raja Harshit",
     "username": "raja3401",
     "title": "GM",
-    "followers": 961,
+    "followers": 1009,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1733838923,
+    "last_online": 1741634680,
     "joined": 1508083123,
     "status": "premium",
     "is_streamer": false,
@@ -51,9 +51,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2805,
-            "date": 1733871351,
-            "rd": 48
+            "rating": 2815,
+            "date": 1741635041,
+            "rd": 49
         },
         "best": {
             "rating": 2901,
@@ -61,9 +61,9 @@
             "game": "https://www.chess.com/game/live/113130022341"
         },
         "record": {
-            "win": 3868,
-            "loss": 4448,
-            "draw": 809
+            "win": 3881,
+            "loss": 4454,
+            "draw": 810
         }
     },
     "tactics": {

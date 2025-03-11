@@ -6,10 +6,10 @@
     "name": "Yuriy Kuzubov",
     "username": "kuzubovyuriy",
     "title": "GM",
-    "followers": 253,
+    "followers": 263,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Odesa",
-    "last_online": 1734102701,
+    "last_online": 1741704124,
     "joined": 1454843360,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2641,
-            "date": 1727370255,
-            "rd": 45
+            "rating": 2619,
+            "date": 1739819944,
+            "rd": 46
         },
         "best": {
             "rating": 2703,
@@ -28,9 +28,9 @@
             "game": "https://www.chess.com/game/live/89657346913"
         },
         "record": {
-            "win": 102,
-            "loss": 52,
-            "draw": 44
+            "win": 105,
+            "loss": 56,
+            "draw": 46
         }
     },
     "chess_bullet": {
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2960,
-            "date": 1730236560,
-            "rd": 49
+            "rating": 2958,
+            "date": 1736273567,
+            "rd": 46
         },
         "best": {
             "rating": 2993,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/102191105509"
         },
         "record": {
-            "win": 1515,
-            "loss": 975,
+            "win": 1523,
+            "loss": 978,
             "draw": 314
         }
     },

@@ -4,30 +4,30 @@
     "url": "https://www.chess.com/member/Sjandy",
     "username": "sjandy",
     "title": "GM",
-    "followers": 18,
+    "followers": 20,
     "country": "https://api.chess.com/pub/country/DK",
-    "last_online": 1734037335,
+    "last_online": 1741685216,
     "joined": 1596796856,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Silver",
+    "league": "Crystal",
     "streaming_platforms": [],
     "chess_blitz": {
         "last": {
-            "rating": 2504,
-            "date": 1733063017,
-            "rd": 40
+            "rating": 2574,
+            "date": 1741688201,
+            "rd": 37
         },
         "best": {
             "rating": 2732,
             "date": 1598445815,
-            "game": "https://www.chess.com/game/live/5377441857"
+            "game": "https://www.chess.com/game/live/131123387271"
         },
         "record": {
-            "win": 450,
-            "loss": 260,
-            "draw": 102
+            "win": 533,
+            "loss": 306,
+            "draw": 129
         }
     },
     "fide": 0,

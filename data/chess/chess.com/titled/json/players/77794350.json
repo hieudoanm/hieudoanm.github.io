@@ -6,9 +6,9 @@
     "name": "Viswanathan Anand",
     "username": "thevish",
     "title": "GM",
-    "followers": 6505,
+    "followers": 6805,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734179593,
+    "last_online": 1741689530,
     "joined": 1587843367,
     "status": "premium",
     "is_streamer": false,
@@ -63,6 +63,10 @@
         "best": {
             "total_attempts": 62,
             "score": 59
+        },
+        "daily": {
+            "total_attempts": 56,
+            "score": 53
         }
     }
 }

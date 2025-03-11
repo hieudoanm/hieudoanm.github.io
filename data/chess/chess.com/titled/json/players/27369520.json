@@ -6,10 +6,10 @@
     "name": "Di Li",
     "username": "joshuachick",
     "title": "GM",
-    "followers": 500,
+    "followers": 502,
     "country": "https://api.chess.com/pub/country/CN",
     "location": "ChengDu",
-    "last_online": 1724739176,
+    "last_online": 1736273265,
     "joined": 1458654083,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1750,
-            "date": 1711661486,
+            "date": 1741339718,
             "rd": 239
         },
         "best": {

@@ -5,9 +5,9 @@
     "name": "Alexander Krastev",
     "username": "alex-11211",
     "title": "IM",
-    "followers": 22,
+    "followers": 24,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1733848566,
+    "last_online": 1741369711,
     "joined": 1387396438,
     "status": "premium",
     "is_streamer": false,
@@ -69,9 +69,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2559,
-            "date": 1729786912,
-            "rd": 89
+            "rating": 2570,
+            "date": 1741129431,
+            "rd": 48
         },
         "best": {
             "rating": 2609,
@@ -79,16 +79,16 @@
             "game": "https://www.chess.com/game/live/53213473303"
         },
         "record": {
-            "win": 1798,
-            "loss": 1362,
+            "win": 1803,
+            "loss": 1367,
             "draw": 167
         }
     },
     "fide": 2350,
     "tactics": {
         "highest": {
-            "rating": 3759,
-            "date": 1727776133
+            "rating": 3763,
+            "date": 1735919361
         },
         "lowest": {
             "rating": 1099,

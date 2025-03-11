@@ -6,9 +6,9 @@
     "name": "Prraneeth Vuppala",
     "username": "reality-stone",
     "title": "GM",
-    "followers": 42,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1734169572,
+    "last_online": 1741682309,
     "joined": 1544243688,
     "status": "premium",
     "is_streamer": false,
@@ -70,9 +70,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2822,
-            "date": 1734173230,
-            "rd": 44
+            "rating": 2770,
+            "date": 1739026718,
+            "rd": 48
         },
         "best": {
             "rating": 2858,
@@ -80,15 +80,15 @@
             "game": "https://www.chess.com/game/live/119721657619"
         },
         "record": {
-            "win": 1075,
-            "loss": 1002,
-            "draw": 170
+            "win": 1091,
+            "loss": 1027,
+            "draw": 176
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3909,
-            "date": 1708184482
+            "rating": 3954,
+            "date": 1735122515
         },
         "lowest": {
             "rating": 1215,
@@ -99,10 +99,6 @@
         "best": {
             "total_attempts": 84,
             "score": 81
-        },
-        "daily": {
-            "total_attempts": 51,
-            "score": 48
         }
     }
 }

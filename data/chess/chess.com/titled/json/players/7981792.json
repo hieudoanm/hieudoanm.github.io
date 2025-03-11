@@ -6,10 +6,10 @@
     "name": "Andriy Vovk",
     "username": "vovan1991",
     "title": "GM",
-    "followers": 976,
+    "followers": 998,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "\u041b\u044c\u0432\u0456\u0432",
-    "last_online": 1734185208,
+    "last_online": 1741528901,
     "joined": 1340441285,
     "status": "premium",
     "is_streamer": false,
@@ -57,7 +57,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2639,
-            "date": 1721394832,
+            "date": 1740764546,
             "rd": 346
         },
         "best": {

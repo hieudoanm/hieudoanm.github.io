@@ -6,10 +6,10 @@
     "name": "Mikhail Golubev",
     "username": "mikhail_golubev",
     "title": "GM",
-    "followers": 540,
+    "followers": 553,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "Odessa",
-    "last_online": 1734028895,
+    "last_online": 1741642291,
     "joined": 1406475021,
     "status": "premium",
     "is_streamer": false,
@@ -32,7 +32,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2439,
-            "date": 1733962976,
+            "date": 1740855412,
             "rd": 48
         },
         "best": {
@@ -65,19 +65,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2608,
-            "date": 1733875717,
+            "rating": 2724,
+            "date": 1735689763,
             "rd": 29
         },
         "best": {
-            "rating": 2763,
-            "date": 1724166537,
+            "rating": 2814,
+            "date": 1735079373,
             "game": "https://www.chess.com/game/live/85246402053"
         },
         "record": {
-            "win": 4469,
-            "loss": 3766,
-            "draw": 862
+            "win": 4543,
+            "loss": 3814,
+            "draw": 883
         }
     },
     "fide": 2461,

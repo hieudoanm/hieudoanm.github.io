@@ -6,10 +6,10 @@
     "name": "Sergey Domogaev",
     "username": "sergey071164",
     "title": "GM",
-    "followers": 76,
+    "followers": 77,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "sergeydomogaev@mail.ru",
-    "last_online": 1734097630,
+    "last_online": 1741689282,
     "joined": 1521157375,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 2106,
-            "date": 1704109242,
+            "date": 1735723744,
             "rd": 245
         },
         "best": {
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2581,
-            "date": 1732633963,
-            "rd": 49
+            "rating": 2575,
+            "date": 1741689722,
+            "rd": 35
         },
         "best": {
             "rating": 2647,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/96373217867"
         },
         "record": {
-            "win": 1267,
-            "loss": 1302,
-            "draw": 262
+            "win": 1325,
+            "loss": 1371,
+            "draw": 283
         }
     },
     "fide": 2336,

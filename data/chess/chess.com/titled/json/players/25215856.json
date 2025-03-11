@@ -1,15 +1,15 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25215856.2e09823b.200x200o.e255b362d757.png",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/25215856.a2d43d73.200x200o.745039526c6f.jpg",
     "player_id": 25215856,
     "@id": "https://api.chess.com/pub/player/arman_hakemi",
     "url": "https://www.chess.com/member/Arman_Hakemi",
     "name": "Arman Hakemi",
     "username": "arman_hakemi",
     "title": "IM",
-    "followers": 668,
+    "followers": 715,
     "country": "https://api.chess.com/pub/country/IR",
     "location": "Tehran",
-    "last_online": 1733812667,
+    "last_online": 1741681925,
     "joined": 1448284671,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2761,
-            "date": 1732640171,
-            "rd": 44
+            "rating": 2752,
+            "date": 1736584736,
+            "rd": 49
         },
         "best": {
             "rating": 2910,
@@ -65,7 +65,7 @@
         },
         "record": {
             "win": 987,
-            "loss": 658,
+            "loss": 659,
             "draw": 95
         }
     },

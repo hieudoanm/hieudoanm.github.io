@@ -6,9 +6,9 @@
     "name": "Rasmus Svane",
     "username": "rasmussvane",
     "title": "GM",
-    "followers": 4061,
+    "followers": 4370,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734040874,
+    "last_online": 1741698806,
     "joined": 1481752303,
     "status": "premium",
     "is_streamer": false,
@@ -17,9 +17,9 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2617,
-            "date": 1727538192,
-            "rd": 42
+            "rating": 2613,
+            "date": 1739819777,
+            "rd": 46
         },
         "best": {
             "rating": 2653,
@@ -27,9 +27,9 @@
             "game": "https://www.chess.com/game/live/108926456741"
         },
         "record": {
-            "win": 550,
-            "loss": 131,
-            "draw": 84
+            "win": 553,
+            "loss": 133,
+            "draw": 88
         }
     },
     "chess_bullet": {
@@ -51,26 +51,26 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2988,
-            "date": 1733875638,
-            "rd": 32
+            "rating": 2986,
+            "date": 1741370454,
+            "rd": 28
         },
         "best": {
-            "rating": 3058,
-            "date": 1680015701,
+            "rating": 3061,
+            "date": 1738172332,
             "game": "https://www.chess.com/game/live/123443387303"
         },
         "record": {
-            "win": 4732,
-            "loss": 1904,
-            "draw": 951
+            "win": 5008,
+            "loss": 2006,
+            "draw": 1007
         }
     },
     "fide": 2628,
     "tactics": {
         "highest": {
-            "rating": 3814,
-            "date": 1723603438
+            "rating": 3869,
+            "date": 1739660622
         },
         "lowest": {
             "rating": 1245,

@@ -6,10 +6,10 @@
     "name": "Maciej Klekowski",
     "username": "maciek_92",
     "title": "GM",
-    "followers": 352,
+    "followers": 360,
     "country": "https://api.chess.com/pub/country/PL",
     "location": "Krak\u00f3w",
-    "last_online": 1733953380,
+    "last_online": 1741694231,
     "joined": 1377720328,
     "status": "premium",
     "is_streamer": false,
@@ -54,36 +54,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2877,
-            "date": 1733497204,
-            "rd": 47
+            "rating": 2906,
+            "date": 1741694470,
+            "rd": 35
         },
         "best": {
-            "rating": 2956,
-            "date": 1720892048,
+            "rating": 2964,
+            "date": 1737829154,
             "game": "https://www.chess.com/game/live/114628692899"
         },
         "record": {
-            "win": 1851,
-            "loss": 1411,
-            "draw": 171
+            "win": 1933,
+            "loss": 1452,
+            "draw": 178
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2908,
-            "date": 1733953500,
-            "rd": 47
+            "rating": 3000,
+            "date": 1741269411,
+            "rd": 31
         },
         "best": {
-            "rating": 2997,
-            "date": 1725557314,
+            "rating": 3000,
+            "date": 1741269078,
             "game": "https://www.chess.com/game/live/122452442267"
         },
         "record": {
-            "win": 4442,
-            "loss": 3206,
-            "draw": 664
+            "win": 4563,
+            "loss": 3303,
+            "draw": 680
         }
     },
     "fide": 2514,

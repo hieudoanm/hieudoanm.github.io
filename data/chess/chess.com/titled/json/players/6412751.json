@@ -6,10 +6,10 @@
     "name": "S.L. Narayanan",
     "username": "indianlad",
     "title": "GM",
-    "followers": 1228,
+    "followers": 1272,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Trivandrum,Kerala",
-    "last_online": 1734109126,
+    "last_online": 1741702291,
     "joined": 1325265629,
     "status": "premium",
     "is_streamer": false,
@@ -18,8 +18,8 @@
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
-            "rating": 2514,
-            "date": 1727292072,
+            "rating": 2556,
+            "date": 1739819951,
             "rd": 46
         },
         "best": {
@@ -28,16 +28,16 @@
             "game": "https://www.chess.com/game/live/43262963213"
         },
         "record": {
-            "win": 27,
-            "loss": 29,
-            "draw": 31
+            "win": 30,
+            "loss": 30,
+            "draw": 36
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2919,
-            "date": 1731779365,
-            "rd": 45
+            "rating": 2899,
+            "date": 1741460302,
+            "rd": 34
         },
         "best": {
             "rating": 3138,
@@ -45,16 +45,16 @@
             "game": "https://www.chess.com/game/live/35550984049"
         },
         "record": {
-            "win": 3630,
-            "loss": 2489,
-            "draw": 436
+            "win": 3706,
+            "loss": 2533,
+            "draw": 440
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 3052,
-            "date": 1732646144,
-            "rd": 44
+            "rating": 3036,
+            "date": 1741698480,
+            "rd": 32
         },
         "best": {
             "rating": 3090,
@@ -62,16 +62,16 @@
             "game": "https://www.chess.com/game/live/4864855903"
         },
         "record": {
-            "win": 6730,
-            "loss": 4641,
-            "draw": 1560
+            "win": 6834,
+            "loss": 4703,
+            "draw": 1586
         }
     },
     "fide": 2695,
     "tactics": {
         "highest": {
-            "rating": 3762,
-            "date": 1713717020
+            "rating": 3776,
+            "date": 1739251180
         },
         "lowest": {
             "rating": 1335,

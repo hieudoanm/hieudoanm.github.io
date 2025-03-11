@@ -7,7 +7,7 @@
     "title": "GM",
     "followers": 23,
     "country": "https://api.chess.com/pub/country/XX",
-    "last_online": 1733943371,
+    "last_online": 1741597626,
     "joined": 1658869474,
     "status": "premium",
     "is_streamer": false,
@@ -50,8 +50,8 @@
     },
     "tactics": {
         "highest": {
-            "rating": 1036,
-            "date": 1658954190
+            "rating": 2837,
+            "date": 1736326884
         },
         "lowest": {
             "rating": 1011,
@@ -60,8 +60,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 49,
-            "score": 46
+            "total_attempts": 77,
+            "score": 74
         }
     }
 }

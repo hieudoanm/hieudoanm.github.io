@@ -9,7 +9,7 @@
     "followers": 15,
     "country": "https://api.chess.com/pub/country/IL",
     "location": "Rishon Lezion",
-    "last_online": 1718433591,
+    "last_online": 1736887080,
     "joined": 1370694646,
     "status": "premium",
     "is_streamer": false,
@@ -66,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 1862,
-            "date": 1718438000,
-            "rd": 118
+            "rating": 1851,
+            "date": 1736888762,
+            "rd": 170
         },
         "best": {
             "rating": 2158,
@@ -78,7 +78,7 @@
         "record": {
             "win": 69,
             "loss": 41,
-            "draw": 2
+            "draw": 3
         }
     },
     "fide": 2353,

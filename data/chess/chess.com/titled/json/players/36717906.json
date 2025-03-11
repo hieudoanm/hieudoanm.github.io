@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/thatsallshewrote",
     "username": "thatsallshewrote",
     "title": "GM",
-    "followers": 102,
+    "followers": 108,
     "country": "https://api.chess.com/pub/country/CZ",
-    "last_online": 1733940708,
+    "last_online": 1741289999,
     "joined": 1498917104,
     "status": "premium",
     "is_streamer": false,
@@ -33,19 +33,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2805,
-            "date": 1733941339,
-            "rd": 28
+            "rating": 2857,
+            "date": 1741114974,
+            "rd": 35
         },
         "best": {
-            "rating": 2936,
-            "date": 1543755633,
+            "rating": 2998,
+            "date": 1736197034,
             "game": "https://www.chess.com/game/live/61570901947"
         },
         "record": {
-            "win": 4723,
-            "loss": 3566,
-            "draw": 838
+            "win": 4996,
+            "loss": 3805,
+            "draw": 877
         }
     },
     "tactics": {

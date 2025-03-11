@@ -6,9 +6,9 @@
     "name": "Francesco Rambaldi",
     "username": "kaphrep",
     "title": "GM",
-    "followers": 994,
+    "followers": 1008,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734009210,
+    "last_online": 1741550528,
     "joined": 1284133838,
     "status": "premium",
     "is_streamer": false,
@@ -53,9 +53,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2849,
-            "date": 1726261211,
-            "rd": 44
+            "rating": 2809,
+            "date": 1738452843,
+            "rd": 47
         },
         "best": {
             "rating": 2901,
@@ -63,16 +63,16 @@
             "game": "https://www.chess.com/game/live/3161740208"
         },
         "record": {
-            "win": 1297,
-            "loss": 926,
+            "win": 1300,
+            "loss": 935,
             "draw": 150
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2720,
-            "date": 1733707394,
-            "rd": 44
+            "rating": 2754,
+            "date": 1741567171,
+            "rd": 35
         },
         "best": {
             "rating": 2917,
@@ -80,9 +80,9 @@
             "game": "https://www.chess.com/game/live/103137130873"
         },
         "record": {
-            "win": 5691,
-            "loss": 4197,
-            "draw": 899
+            "win": 5777,
+            "loss": 4275,
+            "draw": 909
         }
     },
     "tactics": {

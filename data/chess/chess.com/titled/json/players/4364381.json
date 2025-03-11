@@ -1,13 +1,15 @@
 {
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/4364381.ddca33ef.200x200o.04d921dfb8dc.jpg",
     "player_id": 4364381,
     "@id": "https://api.chess.com/pub/player/luisibarrach",
     "url": "https://www.chess.com/member/LuisIbarraCh",
     "name": "Luis Fernando Ibarra Chami",
     "username": "luisibarrach",
     "title": "GM",
-    "followers": 185,
+    "followers": 188,
     "country": "https://api.chess.com/pub/country/MX",
-    "last_online": 1732726767,
+    "location": "https://all-inchess.com/",
+    "last_online": 1741328860,
     "joined": 1291883115,
     "status": "premium",
     "is_streamer": false,
@@ -64,9 +66,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2579,
-            "date": 1732730731,
-            "rd": 45
+            "rating": 2569,
+            "date": 1741089922,
+            "rd": 49
         },
         "best": {
             "rating": 2898,
@@ -75,14 +77,15 @@
         },
         "record": {
             "win": 761,
-            "loss": 418,
+            "loss": 419,
             "draw": 108
         }
     },
+    "fide": 2422,
     "tactics": {
         "highest": {
-            "rating": 2637,
-            "date": 1506329123
+            "rating": 2860,
+            "date": 1741234488
         },
         "lowest": {
             "rating": 1401,
@@ -91,8 +94,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 59,
-            "score": 56
+            "total_attempts": 60,
+            "score": 57
         }
     }
 }

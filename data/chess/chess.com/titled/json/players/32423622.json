@@ -6,10 +6,10 @@
     "name": "Konstantine Shanava",
     "username": "killer-kostya",
     "title": "GM",
-    "followers": 110,
+    "followers": 113,
     "country": "https://api.chess.com/pub/country/GE",
     "location": "Tbilisi",
-    "last_online": 1734034078,
+    "last_online": 1741379308,
     "joined": 1484523406,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_rapid": {
         "last": {
             "rating": 2003,
-            "date": 1705532325,
+            "date": 1737133686,
             "rd": 221
         },
         "best": {

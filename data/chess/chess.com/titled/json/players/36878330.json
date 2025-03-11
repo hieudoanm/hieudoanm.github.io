@@ -6,14 +6,14 @@
     "name": "Pavel Skatchkov",
     "username": "pavel_skatchkov",
     "title": "GM",
-    "followers": 14,
+    "followers": 17,
     "country": "https://api.chess.com/pub/country/RU",
-    "last_online": 1718362915,
+    "last_online": 1741542371,
     "joined": 1499508290,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Stone",
+    "league": "Bronze",
     "streaming_platforms": [],
     "chess_rapid": {
         "last": {
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2602,
-            "date": 1696957668,
-            "rd": 86
+            "rating": 2712,
+            "date": 1741544979,
+            "rd": 42
         },
         "best": {
-            "rating": 2688,
-            "date": 1620646970,
-            "game": "https://www.chess.com/game/live/18726086929"
+            "rating": 2692,
+            "date": 1738102587,
+            "game": "https://www.chess.com/game/live/131841031887"
         },
         "record": {
-            "win": 134,
-            "loss": 93,
-            "draw": 14
+            "win": 186,
+            "loss": 126,
+            "draw": 17
         }
     },
     "fide": 2460,
@@ -79,8 +79,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 45,
-            "score": 42
+            "total_attempts": 46,
+            "score": 43
         }
     }
 }

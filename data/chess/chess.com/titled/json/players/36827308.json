@@ -6,9 +6,9 @@
     "name": "Vaishali R",
     "username": "vaishali2001",
     "title": "GM",
-    "followers": 1364,
+    "followers": 1426,
     "country": "https://api.chess.com/pub/country/IN",
-    "last_online": 1733846343,
+    "last_online": 1741256548,
     "joined": 1499318482,
     "status": "premium",
     "is_streamer": false,
@@ -55,8 +55,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2442,
-            "date": 1715201437,
+            "rating": 2451,
+            "date": 1739820098,
             "rd": 46
         },
         "best": {
@@ -65,9 +65,9 @@
             "game": "https://www.chess.com/game/live/71426056023"
         },
         "record": {
-            "win": 48,
-            "loss": 35,
-            "draw": 17
+            "win": 51,
+            "loss": 40,
+            "draw": 18
         }
     },
     "chess_bullet": {
@@ -89,19 +89,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2675,
-            "date": 1733849920,
-            "rd": 48
+            "rating": 2769,
+            "date": 1741258311,
+            "rd": 45
         },
         "best": {
-            "rating": 2772,
-            "date": 1678382636,
-            "game": "https://www.chess.com/game/live/69525960181"
+            "rating": 2773,
+            "date": 1741111741,
+            "game": "https://www.chess.com/game/live/133633759601"
         },
         "record": {
-            "win": 464,
-            "loss": 350,
-            "draw": 120
+            "win": 491,
+            "loss": 366,
+            "draw": 125
         }
     },
     "tactics": {

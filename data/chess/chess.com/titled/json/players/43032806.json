@@ -6,10 +6,10 @@
     "name": "Raja Rithvik R",
     "username": "starworld123",
     "title": "GM",
-    "followers": 596,
+    "followers": 620,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "Hyderabad",
-    "last_online": 1734116171,
+    "last_online": 1741597936,
     "joined": 1517848179,
     "status": "premium",
     "is_streamer": false,
@@ -54,42 +54,42 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2923,
-            "date": 1731316912,
-            "rd": 47
+            "rating": 2925,
+            "date": 1734705191,
+            "rd": 32
         },
         "best": {
-            "rating": 2953,
-            "date": 1663439476,
+            "rating": 2975,
+            "date": 1734445560,
             "game": "https://www.chess.com/game/live/41174374979"
         },
         "record": {
-            "win": 4372,
-            "loss": 4525,
-            "draw": 599
+            "win": 4415,
+            "loss": 4557,
+            "draw": 603
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2910,
-            "date": 1727463772,
-            "rd": 49
+            "rating": 2977,
+            "date": 1739299181,
+            "rd": 29
         },
         "best": {
-            "rating": 2946,
-            "date": 1717518533,
-            "game": "https://www.chess.com/game/live/94322599227"
+            "rating": 2988,
+            "date": 1734971764,
+            "game": "https://www.chess.com/game/live/129709115489"
         },
         "record": {
-            "win": 2037,
-            "loss": 1814,
-            "draw": 392
+            "win": 2168,
+            "loss": 1927,
+            "draw": 419
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3833,
-            "date": 1695144700
+            "rating": 3906,
+            "date": 1735578056
         },
         "lowest": {
             "rating": 1007,

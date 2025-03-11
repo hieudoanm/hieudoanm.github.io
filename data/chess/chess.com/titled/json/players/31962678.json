@@ -1,14 +1,14 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/31962678.0708587d.200x200o.04998ee5fb21.webp",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/31962678.f7b5259d.200x200o.f85a855ba12b.png",
     "player_id": 31962678,
     "@id": "https://api.chess.com/pub/player/aa175",
     "url": "https://www.chess.com/member/aa175",
     "name": "Anthony Atanasov",
     "username": "aa175",
     "title": "IM",
-    "followers": 333,
+    "followers": 350,
     "country": "https://api.chess.com/pub/country/CA",
-    "last_online": 1734168918,
+    "last_online": 1741691257,
     "joined": 1482971316,
     "status": "premium",
     "is_streamer": false,
@@ -67,9 +67,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2907,
-            "date": 1733762145,
-            "rd": 44
+            "rating": 2860,
+            "date": 1741453611,
+            "rd": 34
         },
         "best": {
             "rating": 3156,
@@ -77,16 +77,16 @@
             "game": "https://www.chess.com/game/live/104557170351"
         },
         "record": {
-            "win": 11335,
-            "loss": 10277,
-            "draw": 1274
+            "win": 11533,
+            "loss": 10461,
+            "draw": 1299
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2906,
-            "date": 1734006414,
-            "rd": 27
+            "rating": 2850,
+            "date": 1741647273,
+            "rd": 30
         },
         "best": {
             "rating": 3069,
@@ -94,9 +94,9 @@
             "game": "https://www.chess.com/game/live/116805609229"
         },
         "record": {
-            "win": 4811,
-            "loss": 4392,
-            "draw": 746
+            "win": 5248,
+            "loss": 4907,
+            "draw": 835
         }
     },
     "tactics": {

@@ -6,9 +6,9 @@
     "name": "Advait Patel",
     "username": "adypady02",
     "title": "IM",
-    "followers": 296,
+    "followers": 297,
     "country": "https://api.chess.com/pub/country/US",
-    "last_online": 1734020160,
+    "last_online": 1741319681,
     "joined": 1384909057,
     "status": "premium",
     "is_streamer": false,
@@ -67,9 +67,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2831,
-            "date": 1724904196,
-            "rd": 35
+            "rating": 2849,
+            "date": 1741333454,
+            "rd": 43
         },
         "best": {
             "rating": 2962,
@@ -77,16 +77,16 @@
             "game": "https://www.chess.com/game/live/112322413725"
         },
         "record": {
-            "win": 4522,
-            "loss": 2686,
-            "draw": 389
+            "win": 4540,
+            "loss": 2699,
+            "draw": 390
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2832,
-            "date": 1720490943,
-            "rd": 44
+            "rating": 2828,
+            "date": 1739840089,
+            "rd": 49
         },
         "best": {
             "rating": 2904,
@@ -94,8 +94,8 @@
             "game": "https://www.chess.com/game/live/5017666437"
         },
         "record": {
-            "win": 1343,
-            "loss": 855,
+            "win": 1346,
+            "loss": 859,
             "draw": 171
         }
     },

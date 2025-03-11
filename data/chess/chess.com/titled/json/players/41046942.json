@@ -5,9 +5,9 @@
     "url": "https://www.chess.com/member/I_will_never_forget_u",
     "username": "i_will_never_forget_u",
     "title": "GM",
-    "followers": 23,
+    "followers": 29,
     "country": "https://api.chess.com/pub/country/KY",
-    "last_online": 1734147653,
+    "last_online": 1737865943,
     "joined": 1512519763,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 3044,
-            "date": 1734135703,
-            "rd": 26
+            "rating": 2968,
+            "date": 1736735014,
+            "rd": 36
         },
         "best": {
             "rating": 3098,
@@ -62,32 +62,32 @@
             "game": "https://www.chess.com/game/live/127612179413"
         },
         "record": {
-            "win": 441,
-            "loss": 202,
-            "draw": 40
+            "win": 501,
+            "loss": 237,
+            "draw": 48
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2947,
-            "date": 1734138498,
-            "rd": 33
+            "rating": 2978,
+            "date": 1737865953,
+            "rd": 39
         },
         "best": {
-            "rating": 3030,
-            "date": 1728529083,
+            "rating": 3038,
+            "date": 1734893092,
             "game": "https://www.chess.com/game/live/125951900151"
         },
         "record": {
-            "win": 351,
-            "loss": 143,
-            "draw": 66
+            "win": 425,
+            "loss": 177,
+            "draw": 81
         }
     },
     "tactics": {
         "highest": {
-            "rating": 3747,
-            "date": 1732064204
+            "rating": 3785,
+            "date": 1734708290
         },
         "lowest": {
             "rating": 417,

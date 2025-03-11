@@ -6,10 +6,10 @@
     "name": "Aditya Bagus Arfan",
     "username": "arfan48",
     "title": "IM",
-    "followers": 30,
+    "followers": 33,
     "country": "https://api.chess.com/pub/country/ID",
     "location": "Bekasi",
-    "last_online": 1732681658,
+    "last_online": 1741614717,
     "joined": 1589006290,
     "status": "premium",
     "is_streamer": false,
@@ -35,36 +35,36 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2525,
-            "date": 1721548459,
-            "rd": 47
+            "rating": 2534,
+            "date": 1738569488,
+            "rd": 48
         },
         "best": {
-            "rating": 2529,
-            "date": 1721547917,
+            "rating": 2534,
+            "date": 1738569488,
             "game": "https://www.chess.com/game/live/115287484059"
         },
         "record": {
-            "win": 33,
-            "loss": 4,
-            "draw": 0
+            "win": 35,
+            "loss": 5,
+            "draw": 1
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2743,
-            "date": 1725250350,
-            "rd": 42
+            "rating": 2844,
+            "date": 1741615722,
+            "rd": 48
         },
         "best": {
-            "rating": 2762,
-            "date": 1714642790,
-            "game": "https://www.chess.com/game/live/106393628713"
+            "rating": 2815,
+            "date": 1739541231,
+            "game": "https://www.chess.com/game/live/132916161311"
         },
         "record": {
-            "win": 141,
-            "loss": 81,
-            "draw": 28
+            "win": 162,
+            "loss": 88,
+            "draw": 29
         }
     },
     "fide": 2274,

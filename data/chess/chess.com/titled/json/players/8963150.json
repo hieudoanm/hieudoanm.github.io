@@ -1,5 +1,5 @@
 {
-    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8963150.2223e9d0.200x200o.c848100878e6.jpeg",
+    "avatar": "https://images.chesscomfiles.com/uploads/v1/user/8963150.0c0488d3.200x200o.2f3ea6a12eb8.jpg",
     "player_id": 8963150,
     "@id": "https://api.chess.com/pub/player/parimarjan",
     "url": "https://www.chess.com/member/Parimarjan",
@@ -9,7 +9,7 @@
     "followers": 109,
     "country": "https://api.chess.com/pub/country/IN",
     "location": "New Delhi",
-    "last_online": 1724299874,
+    "last_online": 1739885102,
     "joined": 1348071374,
     "status": "premium",
     "is_streamer": false,
@@ -19,7 +19,7 @@
     "chess_daily": {
         "last": {
             "rating": 1656,
-            "date": 1546973057,
+            "date": 1739890142,
             "rd": 342
         },
         "best": {

@@ -6,10 +6,10 @@
     "name": "Dmitry Kryakvin",
     "username": "savelijtartakover",
     "title": "GM",
-    "followers": 113,
+    "followers": 123,
     "country": "https://api.chess.com/pub/country/RU",
     "location": "Rostov-on-Don",
-    "last_online": 1733933669,
+    "last_online": 1741661823,
     "joined": 1360312597,
     "status": "premium",
     "is_streamer": false,
@@ -52,22 +52,22 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2869,
-            "date": 1732461766,
-            "rd": 33
+            "rating": 2910,
+            "date": 1740507141,
+            "rd": 39
         },
         "best": {
-            "rating": 2869,
-            "date": 1732461766,
-            "game": "https://www.chess.com/game/live/123355305155"
+            "rating": 2933,
+            "date": 1739296891,
+            "game": "https://www.chess.com/game/live/128823152313"
         },
         "record": {
-            "win": 709,
-            "loss": 369,
-            "draw": 297
+            "win": 783,
+            "loss": 403,
+            "draw": 325
         }
     },
-    "fide": 2566,
+    "fide": 2459,
     "tactics": {
         "highest": {
             "rating": 2463,

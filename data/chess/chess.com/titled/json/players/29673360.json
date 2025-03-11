@@ -1,20 +1,20 @@
 {
     "avatar": "https://images.chesscomfiles.com/uploads/v1/user/29673360.0e125abd.200x200o.80a114119619.jpeg",
     "player_id": 29673360,
-    "@id": "https://api.chess.com/pub/player/mikaelyanarman",
-    "url": "https://www.chess.com/member/MikaelyanArman",
+    "@id": "https://api.chess.com/pub/player/peacefulwarrior888",
+    "url": "https://www.chess.com/member/PeacefulWarrior888",
     "name": "Arman Mikaelyan",
-    "username": "mikaelyanarman",
+    "username": "peacefulwarrior888",
     "title": "GM",
-    "followers": 169,
+    "followers": 197,
     "country": "https://api.chess.com/pub/country/US",
     "location": "California",
-    "last_online": 1734136414,
+    "last_online": 1741649787,
     "joined": 1472372091,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
-    "league": "Champion",
+    "league": "Legend",
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
@@ -37,8 +37,8 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2399,
-            "date": 1728595443,
+            "rating": 2446,
+            "date": 1739820115,
             "rd": 47
         },
         "best": {
@@ -47,43 +47,43 @@
             "game": "https://www.chess.com/game/live/108933572945"
         },
         "record": {
-            "win": 48,
-            "loss": 49,
+            "win": 53,
+            "loss": 53,
             "draw": 21
         }
     },
     "chess_bullet": {
         "last": {
-            "rating": 2927,
-            "date": 1734140220,
-            "rd": 40
+            "rating": 2916,
+            "date": 1741141957,
+            "rd": 33
         },
         "best": {
-            "rating": 2973,
-            "date": 1730060526,
-            "game": "https://www.chess.com/game/live/125361550419"
+            "rating": 2974,
+            "date": 1736550667,
+            "game": "https://www.chess.com/game/live/131421573809"
         },
         "record": {
-            "win": 430,
-            "loss": 315,
-            "draw": 57
+            "win": 655,
+            "loss": 473,
+            "draw": 85
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2913,
-            "date": 1734137611,
-            "rd": 31
+            "rating": 2892,
+            "date": 1741304935,
+            "rd": 25
         },
         "best": {
-            "rating": 2971,
-            "date": 1685229544,
-            "game": "https://www.chess.com/game/live/123955845297"
+            "rating": 2992,
+            "date": 1737834775,
+            "game": "https://www.chess.com/game/live/132306059219"
         },
         "record": {
-            "win": 3243,
-            "loss": 2698,
-            "draw": 674
+            "win": 3677,
+            "loss": 3072,
+            "draw": 770
         }
     },
     "fide": 2519,

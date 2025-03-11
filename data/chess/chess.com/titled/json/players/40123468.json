@@ -6,10 +6,10 @@
     "name": "Lucas van Foreest",
     "username": "jlucasvf",
     "title": "GM",
-    "followers": 308,
+    "followers": 310,
     "country": "https://api.chess.com/pub/country/US",
     "location": "St. Louis",
-    "last_online": 1734101944,
+    "last_online": 1739968575,
     "joined": 1510011057,
     "status": "premium",
     "is_streamer": false,
@@ -86,7 +86,7 @@
             "draw": 292
         }
     },
-    "fide": 2544,
+    "fide": 2588,
     "tactics": {
         "highest": {
             "rating": 5110,
@@ -101,10 +101,6 @@
         "best": {
             "total_attempts": 60,
             "score": 57
-        },
-        "daily": {
-            "total_attempts": 55,
-            "score": 53
         }
     }
 }

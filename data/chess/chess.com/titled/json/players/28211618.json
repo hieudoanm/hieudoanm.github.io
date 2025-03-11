@@ -6,10 +6,10 @@
     "name": "Gata Kamsky",
     "username": "tigrvshlyape",
     "title": "GM",
-    "followers": 3582,
+    "followers": 3608,
     "country": "https://api.chess.com/pub/country/US",
     "location": "France",
-    "last_online": 1734103670,
+    "last_online": 1739292833,
     "joined": 1463389351,
     "status": "premium",
     "is_streamer": true,
@@ -71,9 +71,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2945,
-            "date": 1733875819,
-            "rd": 36
+            "rating": 2868,
+            "date": 1735686103,
+            "rd": 38
         },
         "best": {
             "rating": 3041,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/30309491651"
         },
         "record": {
-            "win": 5097,
-            "loss": 1730,
-            "draw": 1620
+            "win": 5121,
+            "loss": 1740,
+            "draw": 1631
         }
     },
     "fide": 2660,

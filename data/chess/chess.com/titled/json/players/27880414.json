@@ -6,9 +6,9 @@
     "name": "Meelis Kanep",
     "username": "paul66666",
     "title": "GM",
-    "followers": 43,
+    "followers": 44,
     "country": "https://api.chess.com/pub/country/EE",
-    "last_online": 1734136589,
+    "last_online": 1741369167,
     "joined": 1461438296,
     "status": "premium",
     "is_streamer": false,
@@ -34,9 +34,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2550,
-            "date": 1732106117,
-            "rd": 31
+            "rating": 2561,
+            "date": 1739663823,
+            "rd": 48
         },
         "best": {
             "rating": 2697,
@@ -44,8 +44,8 @@
             "game": "https://www.chess.com/game/live/4150457249"
         },
         "record": {
-            "win": 1806,
-            "loss": 1439,
+            "win": 1808,
+            "loss": 1440,
             "draw": 280
         }
     },

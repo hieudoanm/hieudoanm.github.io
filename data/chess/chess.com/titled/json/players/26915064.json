@@ -6,9 +6,9 @@
     "name": "Xu Xiangyu",
     "username": "xxysoul6",
     "title": "GM",
-    "followers": 647,
+    "followers": 670,
     "country": "https://api.chess.com/pub/country/CN",
-    "last_online": 1733972682,
+    "last_online": 1741701397,
     "joined": 1456363446,
     "status": "premium",
     "is_streamer": false,
@@ -18,7 +18,7 @@
     "chess_daily": {
         "last": {
             "rating": 1818,
-            "date": 1709717883,
+            "date": 1741339718,
             "rd": 80
         },
         "best": {
@@ -50,9 +50,9 @@
     },
     "chess_rapid": {
         "last": {
-            "rating": 2669,
-            "date": 1678939028,
-            "rd": 89
+            "rating": 2652,
+            "date": 1739817364,
+            "rd": 47
         },
         "best": {
             "rating": 2883,
@@ -60,9 +60,9 @@
             "game": "https://www.chess.com/game/live/69184021457"
         },
         "record": {
-            "win": 17,
-            "loss": 5,
-            "draw": 20
+            "win": 20,
+            "loss": 8,
+            "draw": 21
         }
     },
     "chess_bullet": {
@@ -84,9 +84,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2983,
-            "date": 1732414223,
-            "rd": 42
+            "rating": 2988,
+            "date": 1741665597,
+            "rd": 49
         },
         "best": {
             "rating": 3030,
@@ -94,9 +94,9 @@
             "game": "https://www.chess.com/game/live/91173592107"
         },
         "record": {
-            "win": 774,
-            "loss": 504,
-            "draw": 216
+            "win": 797,
+            "loss": 519,
+            "draw": 219
         }
     },
     "tactics": {
@@ -113,6 +113,10 @@
         "best": {
             "total_attempts": 74,
             "score": 71
+        },
+        "daily": {
+            "total_attempts": 60,
+            "score": 57
         }
     }
 }

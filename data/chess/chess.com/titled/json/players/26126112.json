@@ -6,10 +6,10 @@
     "name": "Vugar Rasulov",
     "username": "vugarrasulov",
     "title": "GM",
-    "followers": 416,
+    "followers": 444,
     "country": "https://api.chess.com/pub/country/AZ",
     "location": "ganja",
-    "last_online": 1733763601,
+    "last_online": 1741693760,
     "joined": 1452754635,
     "status": "premium",
     "is_streamer": false,
@@ -54,26 +54,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2953,
-            "date": 1730569465,
-            "rd": 36
+            "rating": 3043,
+            "date": 1737831533,
+            "rd": 34
         },
         "best": {
-            "rating": 2997,
-            "date": 1696703620,
+            "rating": 3057,
+            "date": 1737828826,
             "game": "https://www.chess.com/game/live/97705165283"
         },
         "record": {
-            "win": 2043,
-            "loss": 869,
-            "draw": 198
+            "win": 2138,
+            "loss": 903,
+            "draw": 201
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2886,
-            "date": 1733265613,
-            "rd": 48
+            "rating": 3010,
+            "date": 1741369691,
+            "rd": 45
         },
         "best": {
             "rating": 3073,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/81644594469"
         },
         "record": {
-            "win": 6867,
-            "loss": 2853,
-            "draw": 1196
+            "win": 6988,
+            "loss": 2890,
+            "draw": 1219
         }
     },
     "fide": 2511,

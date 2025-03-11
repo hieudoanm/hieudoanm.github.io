@@ -4,15 +4,32 @@
     "url": "https://www.chess.com/member/Lembke407",
     "username": "lembke407",
     "title": "GM",
-    "followers": 245,
+    "followers": 416,
     "country": "https://api.chess.com/pub/country/BR",
-    "last_online": 1734093367,
+    "last_online": 1741702485,
     "joined": 1567004943,
     "status": "premium",
     "is_streamer": false,
     "verified": false,
     "league": "Champion",
     "streaming_platforms": [],
+    "chess_rapid": {
+        "last": {
+            "rating": 2498,
+            "date": 1739613392,
+            "rd": 47
+        },
+        "best": {
+            "rating": 2498,
+            "date": 1739613392,
+            "game": "https://www.chess.com/game/live/133275538513"
+        },
+        "record": {
+            "win": 3,
+            "loss": 0,
+            "draw": 4
+        }
+    },
     "chess_bullet": {
         "last": {
             "rating": 3130,
@@ -32,19 +49,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 3185,
-            "date": 1734030249,
-            "rd": 30
+            "rating": 3184,
+            "date": 1741701509,
+            "rd": 36
         },
         "best": {
-            "rating": 3242,
-            "date": 1733669538,
+            "rating": 3251,
+            "date": 1738867413,
             "game": "https://www.chess.com/game/live/126898219067"
         },
         "record": {
-            "win": 634,
-            "loss": 187,
-            "draw": 154
+            "win": 761,
+            "loss": 238,
+            "draw": 177
         }
     },
     "tactics": {

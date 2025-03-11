@@ -6,10 +6,10 @@
     "name": "Toms Kantans",
     "username": "tomskantans",
     "title": "GM",
-    "followers": 201,
+    "followers": 205,
     "country": "https://api.chess.com/pub/country/LV",
     "location": "Riga",
-    "last_online": 1733954553,
+    "last_online": 1741694501,
     "joined": 1234378480,
     "status": "premium",
     "is_streamer": false,
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2669,
-            "date": 1733931368,
-            "rd": 43
+            "rating": 2676,
+            "date": 1734202788,
+            "rd": 36
         },
         "best": {
             "rating": 2786,
@@ -64,16 +64,16 @@
             "game": "https://www.chess.com/game/live/83180164499"
         },
         "record": {
-            "win": 680,
-            "loss": 455,
-            "draw": 78
+            "win": 704,
+            "loss": 470,
+            "draw": 81
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2733,
-            "date": 1732996231,
-            "rd": 49
+            "rating": 2739,
+            "date": 1741366978,
+            "rd": 47
         },
         "best": {
             "rating": 2812,
@@ -81,9 +81,9 @@
             "game": "https://www.chess.com/game/live/82827752909"
         },
         "record": {
-            "win": 2749,
-            "loss": 2016,
-            "draw": 356
+            "win": 2752,
+            "loss": 2018,
+            "draw": 357
         }
     },
     "fide": 2528,

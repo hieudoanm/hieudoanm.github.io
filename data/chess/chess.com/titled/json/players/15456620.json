@@ -6,10 +6,10 @@
     "name": "Aleksandr Razmyslov",
     "username": "aleks45",
     "title": "IM",
-    "followers": 225,
+    "followers": 229,
     "country": "https://api.chess.com/pub/country/UA",
     "location": "49c0a92c-7bf9-420b-8237-35281db2ae99",
-    "last_online": 1734090285,
+    "last_online": 1741615155,
     "joined": 1389093049,
     "status": "premium",
     "is_streamer": false,
@@ -35,9 +35,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2545,
-            "date": 1733761488,
-            "rd": 33
+            "rating": 2562,
+            "date": 1741450531,
+            "rd": 47
         },
         "best": {
             "rating": 2627,
@@ -45,9 +45,9 @@
             "game": "https://www.chess.com/game/live/83251528083"
         },
         "record": {
-            "win": 5039,
-            "loss": 4649,
-            "draw": 420
+            "win": 5051,
+            "loss": 4663,
+            "draw": 422
         }
     },
     "chess_blitz": {

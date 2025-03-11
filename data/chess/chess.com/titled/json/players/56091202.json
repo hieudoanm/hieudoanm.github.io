@@ -6,9 +6,9 @@
     "name": "Diego Flores",
     "username": "messiboca",
     "title": "GM",
-    "followers": 237,
+    "followers": 240,
     "country": "https://api.chess.com/pub/country/AR",
-    "last_online": 1734181419,
+    "last_online": 1741631622,
     "joined": 1547648391,
     "status": "premium",
     "is_streamer": false,
@@ -51,8 +51,8 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2769,
-            "date": 1725362963,
+            "rating": 2777,
+            "date": 1734480553,
             "rd": 48
         },
         "best": {
@@ -61,8 +61,8 @@
             "game": "https://www.chess.com/game/live/85852307387"
         },
         "record": {
-            "win": 144,
-            "loss": 83,
+            "win": 148,
+            "loss": 84,
             "draw": 30
         }
     },

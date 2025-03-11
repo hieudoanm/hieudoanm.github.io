@@ -6,10 +6,10 @@
     "name": "Giorgi Kacheishvili",
     "username": "mgeli",
     "title": "GM",
-    "followers": 92,
+    "followers": 95,
     "country": "https://api.chess.com/pub/country/US",
     "location": "NY city",
-    "last_online": 1734083331,
+    "last_online": 1741150805,
     "joined": 1337437958,
     "status": "premium",
     "is_streamer": false,
@@ -52,9 +52,9 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2663,
-            "date": 1734084703,
-            "rd": 23
+            "rating": 2514,
+            "date": 1741700889,
+            "rd": 24
         },
         "best": {
             "rating": 2763,
@@ -62,9 +62,9 @@
             "game": "https://www.chess.com/game/live/121211990335"
         },
         "record": {
-            "win": 1742,
-            "loss": 1374,
-            "draw": 199
+            "win": 1927,
+            "loss": 1546,
+            "draw": 214
         }
     },
     "fide": 2600,

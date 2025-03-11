@@ -6,10 +6,10 @@
     "name": "Ibrahim Chahrour",
     "username": "abechahrour",
     "title": "IM",
-    "followers": 21,
+    "followers": 22,
     "country": "https://api.chess.com/pub/country/US",
     "location": "usa",
-    "last_online": 1732133621,
+    "last_online": 1738786731,
     "joined": 1443581759,
     "status": "premium",
     "is_streamer": false,
@@ -18,9 +18,9 @@
     "streaming_platforms": [],
     "chess_daily": {
         "last": {
-            "rating": 1900,
-            "date": 1732294775,
-            "rd": 168
+            "rating": 1526,
+            "date": 1740343094,
+            "rd": 271
         },
         "best": {
             "rating": 2008,
@@ -29,10 +29,10 @@
         },
         "record": {
             "win": 68,
-            "loss": 5,
+            "loss": 6,
             "draw": 0,
             "time_per_move": 16541,
-            "timeout_percent": 0
+            "timeout_percent": 100
         }
     },
     "chess_rapid": {
@@ -54,9 +54,9 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2322,
-            "date": 1682303710,
-            "rd": 61
+            "rating": 2370,
+            "date": 1740177570,
+            "rd": 94
         },
         "best": {
             "rating": 2424,
@@ -64,9 +64,9 @@
             "game": "https://www.chess.com/game/live/3660614797"
         },
         "record": {
-            "win": 415,
-            "loss": 365,
-            "draw": 63
+            "win": 420,
+            "loss": 368,
+            "draw": 65
         }
     },
     "chess_blitz": {

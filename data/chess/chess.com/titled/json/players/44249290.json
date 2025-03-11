@@ -6,10 +6,10 @@
     "name": "Nasanjargal Urtnasan",
     "username": "naaas1",
     "title": "GM",
-    "followers": 121,
+    "followers": 134,
     "country": "https://api.chess.com/pub/country/MN",
     "location": "Ulaanbaatar",
-    "last_online": 1734071271,
+    "last_online": 1741654562,
     "joined": 1520994318,
     "status": "premium",
     "is_streamer": false,
@@ -35,26 +35,26 @@
     },
     "chess_bullet": {
         "last": {
-            "rating": 2769,
-            "date": 1733104076,
-            "rd": 45
+            "rating": 2702,
+            "date": 1741655356,
+            "rd": 34
         },
         "best": {
-            "rating": 2791,
-            "date": 1726972125,
+            "rating": 2850,
+            "date": 1735725707,
             "game": "https://www.chess.com/game/live/120102601723"
         },
         "record": {
-            "win": 115,
-            "loss": 109,
-            "draw": 14
+            "win": 159,
+            "loss": 174,
+            "draw": 19
         }
     },
     "chess_blitz": {
         "last": {
-            "rating": 2629,
-            "date": 1732764729,
-            "rd": 49
+            "rating": 2621,
+            "date": 1735286185,
+            "rd": 48
         },
         "best": {
             "rating": 2808,
@@ -62,8 +62,8 @@
             "game": "https://www.chess.com/game/live/6542229826"
         },
         "record": {
-            "win": 495,
-            "loss": 452,
+            "win": 496,
+            "loss": 454,
             "draw": 78
         }
     },
@@ -80,8 +80,8 @@
     },
     "puzzle_rush": {
         "best": {
-            "total_attempts": 46,
-            "score": 43
+            "total_attempts": 48,
+            "score": 45
         }
     }
 }

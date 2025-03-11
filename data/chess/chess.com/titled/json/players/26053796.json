@@ -6,9 +6,9 @@
     "name": "Roven Vogel",
     "username": "nevorlegov",
     "title": "GM",
-    "followers": 117,
+    "followers": 128,
     "country": "https://api.chess.com/pub/country/DE",
-    "last_online": 1734091660,
+    "last_online": 1741596104,
     "joined": 1452418992,
     "status": "premium",
     "is_streamer": false,
@@ -51,19 +51,19 @@
     },
     "chess_blitz": {
         "last": {
-            "rating": 2856,
-            "date": 1734108502,
-            "rd": 24
+            "rating": 2982,
+            "date": 1741542951,
+            "rd": 40
         },
         "best": {
-            "rating": 3011,
-            "date": 1728032680,
+            "rating": 3025,
+            "date": 1739009531,
             "game": "https://www.chess.com/game/live/126531609583"
         },
         "record": {
-            "win": 6289,
-            "loss": 4780,
-            "draw": 1521
+            "win": 6424,
+            "loss": 4873,
+            "draw": 1559
         }
     },
     "fide": 2550,
