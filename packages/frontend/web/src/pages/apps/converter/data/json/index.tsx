@@ -13,6 +13,13 @@ const JsonAppsPage: NextPage = () => {
       icon: <FaTable className="text-xl md:text-2xl" />,
     },
     {
+      id: 'converter-data-json-xml',
+      href: 'converter/data/json/xml',
+      name: 'JSON to XML',
+      shortName: 'json2xml',
+      icon: <FaTable className="text-xl md:text-2xl" />,
+    },
+    {
       id: 'converter-data-json-yaml',
       href: 'converter/data/json/yaml',
       name: 'JSON to YAML',
@@ -24,7 +31,7 @@ const JsonAppsPage: NextPage = () => {
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
-        <div className="grid h-full grow grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1 md:gap-8">
+        <div className="grid h-full grow grid-cols-1 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-1 md:gap-8">
           {apps.map(
             ({ id = '', href = '', name = '', shortName = '', icon }) => {
               return (

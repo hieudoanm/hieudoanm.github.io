@@ -29,7 +29,11 @@ const JsonToYamlPage: NextPage = () => {
                 setState({ yaml: newYAML, json: newJSON });
               } catch (error) {
                 console.error(error);
-                setState((previous) => ({ ...previous, json: newJSON }));
+                setState((previous) => ({
+                  ...previous,
+                  json: newJSON,
+                  yaml: (error as Error).message,
+                }));
               }
             }}
           />
