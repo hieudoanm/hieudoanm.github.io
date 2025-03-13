@@ -433,8 +433,8 @@ importers:
   packages/cli/ts:
     dependencies:
       '@oclif/core':
-        specifier: 4.2.9
-        version: 4.2.9
+        specifier: 4.2.10
+        version: 4.2.10
       uuid:
         specifier: 11.1.0
         version: 11.1.0
@@ -2362,8 +2362,8 @@ packages:
     resolution: {integrity: sha512-NCcr1uQo1k5U+SYlnIrbAh3cxy+OQT1VtqiAbxdymSlptbzBb62AjH2xXgjNCoP073hoa1CfCAcwoZ8k96C4nA==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  '@oclif/core@4.2.9':
-    resolution: {integrity: sha512-cIlvpefLtorcyvnvJiOmYBqn6J6qdp/06tk54p2MddGEr0gnA7EIaQXM2UtRjf4ryDVCbIo+8IFRsW8Flt0uGA==}
+  '@oclif/core@4.2.10':
+    resolution: {integrity: sha512-fAqcXgqkUm4v5FYy7qWP4w1HaOlVSVJveah+yVTo5Nm5kTiXhmD5mQQ7+knGeBaStyrtQy6WardoC2xSic9rlQ==}
     engines: {node: '>=18.0.0'}
 
   '@oclif/plugin-help@6.2.26':
@@ -11378,7 +11378,7 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@oclif/core@4.2.9':
+  '@oclif/core@4.2.10':
     dependencies:
       ansi-escapes: 4.3.2
       ansis: 3.17.0
@@ -11401,12 +11401,12 @@ snapshots:
 
   '@oclif/plugin-help@6.2.26':
     dependencies:
-      '@oclif/core': 4.2.9
+      '@oclif/core': 4.2.10
 
   '@oclif/plugin-not-found@3.2.44(@types/node@22.13.10)':
     dependencies:
       '@inquirer/prompts': 7.3.2(@types/node@22.13.10)
-      '@oclif/core': 4.2.9
+      '@oclif/core': 4.2.10
       ansis: 3.17.0
       fast-levenshtein: 3.0.0
     transitivePeerDependencies:
@@ -11414,7 +11414,7 @@ snapshots:
 
   '@oclif/plugin-warn-if-update-available@3.1.35':
     dependencies:
-      '@oclif/core': 4.2.9
+      '@oclif/core': 4.2.10
       ansis: 3.17.0
       debug: 4.4.0(supports-color@8.1.1)
       http-call: 5.3.0
@@ -17105,7 +17105,7 @@ snapshots:
       '@inquirer/confirm': 3.2.0
       '@inquirer/input': 2.3.0
       '@inquirer/select': 2.5.0
-      '@oclif/core': 4.2.9
+      '@oclif/core': 4.2.10
       '@oclif/plugin-help': 6.2.26
       '@oclif/plugin-not-found': 3.2.44(@types/node@22.13.10)
       '@oclif/plugin-warn-if-update-available': 3.1.35
