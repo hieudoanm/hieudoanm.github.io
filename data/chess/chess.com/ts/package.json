@@ -19,6 +19,7 @@
     "prisma:generate": "prisma format && prisma generate",
     "lint": "eslint --fix .",
     "format": "prettier --cache --write ./src",
+    "prebuild": "pnpm run prisma:generate",
     "build": "tsc"
   },
   "dependencies": {
