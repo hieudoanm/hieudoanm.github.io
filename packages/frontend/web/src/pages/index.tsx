@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import {
   FaAppStoreIos,
+  FaFileWord,
   FaLinkedin,
   FaSquareGithub,
   FaSquareInstagram,
@@ -20,6 +21,13 @@ const HomePage: NextPage = () => {
               href: '/apps',
               name: 'Apps',
               icon: <FaAppStoreIos />,
+              target: '_self',
+            },
+            {
+              id: 'notes',
+              href: '/posts',
+              name: 'Notes',
+              icon: <FaFileWord />,
               target: '_self',
             },
             {
@@ -45,7 +53,7 @@ const HomePage: NextPage = () => {
             },
             {
               id: 'instagram',
-              href: 'https://instagram.com/hieudoanm',
+              href: 'https://instagram.com/hieudoanmm',
               name: 'Instagram',
               icon: <FaSquareInstagram />,
               target: '_blank',
