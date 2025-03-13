@@ -14,7 +14,6 @@ import {
   FaGithub,
   FaGoogle,
   FaImages,
-  FaInstagram,
   FaJs,
   FaLightbulb,
   FaMarkdown,
@@ -25,6 +24,7 @@ import {
   FaSquareJs,
   FaTable,
   FaTelegram,
+  FaTextWidth,
   FaU,
   FaY,
 } from 'react-icons/fa6';
@@ -146,13 +146,6 @@ const AppsPage: NextPage = () => {
       icon: <FaImages className="text-xl md:text-2xl" />,
     },
     {
-      id: 'instagram',
-      href: 'instagram',
-      name: 'Instagram',
-      shortName: 'insta',
-      icon: <FaInstagram className="text-xl md:text-2xl" />,
-    },
-    {
       id: 'list-chemistry',
       href: 'list/chemistry',
       name: 'Chemistry',
@@ -179,6 +172,13 @@ const AppsPage: NextPage = () => {
       name: 'Resolution',
       shortName: 'resolution',
       icon: <FaRulerCombined className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'string',
+      href: 'string',
+      name: 'String',
+      shortName: 'string',
+      icon: <FaTextWidth className="text-xl md:text-2xl" />,
     },
     {
       id: 'status',
