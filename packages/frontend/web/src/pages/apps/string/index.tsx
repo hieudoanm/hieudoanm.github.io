@@ -13,10 +13,31 @@ const StringAppsPage: NextPage = () => {
       icon: <FaTextWidth className="text-xl md:text-2xl" />,
     },
     {
+      id: 'string-deburr',
+      href: 'string/deburr',
+      name: 'Deburr',
+      shortName: 'deburr',
+      icon: <FaTextWidth className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'string-kebabcase',
+      href: 'string/kebabcase',
+      name: 'Kebabcase',
+      shortName: 'kebab-case',
+      icon: <FaTextWidth className="text-xl md:text-2xl" />,
+    },
+    {
       id: 'string-lowercase',
       href: 'string/lowercase',
       name: 'Lowercase',
       shortName: 'lowercase',
+      icon: <FaTextWidth className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'string-snakecase',
+      href: 'string/snakecase',
+      name: 'Snakecase',
+      shortName: 'snake_case',
       icon: <FaTextWidth className="text-xl md:text-2xl" />,
     },
     {
@@ -31,7 +52,7 @@ const StringAppsPage: NextPage = () => {
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
-        <div className="grid h-full grow grid-cols-1 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-1 md:gap-8">
+        <div className="grid h-full grow grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-8">
           {apps.map(
             ({ id = '', href = '', name = '', shortName = '', icon }) => {
               return (

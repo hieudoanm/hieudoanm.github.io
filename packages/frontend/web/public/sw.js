@@ -1,30 +1,30 @@
 if (!self.define) {
   let s,
     e = {};
-  const c = (c, a) => (
-    (c = new URL(c + '.js', a).href),
-    e[c] ||
+  const i = (i, c) => (
+    (i = new URL(i + '.js', c).href),
+    e[i] ||
       new Promise((e) => {
         if ('document' in self) {
           const s = document.createElement('script');
-          (s.src = c), (s.onload = e), document.head.appendChild(s);
-        } else (s = c), importScripts(c), e();
+          (s.src = i), (s.onload = e), document.head.appendChild(s);
+        } else (s = i), importScripts(i), e();
       }).then(() => {
-        let s = e[c];
-        if (!s) throw new Error(`Module ${c} didn’t register its module`);
+        let s = e[i];
+        if (!s) throw new Error(`Module ${i} didn’t register its module`);
         return s;
       })
   );
-  self.define = (a, t) => {
-    const i =
+  self.define = (c, a) => {
+    const t =
       s ||
       ('document' in self ? document.currentScript.src : '') ||
       location.href;
-    if (e[i]) return;
+    if (e[t]) return;
     let n = {};
-    const r = (s) => c(s, i),
-      d = { module: { uri: i }, exports: n, require: r };
-    e[i] = Promise.all(a.map((s) => d[s] || r(s))).then((s) => (t(...s), n));
+    const r = (s) => i(s, t),
+      o = { module: { uri: t }, exports: n, require: r };
+    e[t] = Promise.all(c.map((s) => o[s] || r(s))).then((s) => (a(...s), n));
   };
 }
 define(['./workbox-46b0bab3'], function (s) {
@@ -43,460 +43,480 @@ define(['./workbox-46b0bab3'], function (s) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
+          url: '/_next/static/RMZm4bi7RCPPW257z9c-7/_buildManifest.js',
+          revision: '7d5ed95f4eee2d6c383952f97d04cb14',
+        },
+        {
+          url: '/_next/static/RMZm4bi7RCPPW257z9c-7/_ssgManifest.js',
+          revision: 'b6652df95db52feb4daf4eca35380933',
+        },
+        {
           url: '/_next/static/chunks/1646.94ba75b36b7ac842.js',
           revision: '94ba75b36b7ac842',
         },
         {
           url: '/_next/static/chunks/2515-79de49b7db3f1d9c.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/3620-e29bdad7008b36f1.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/4385-5ac14eb5266c9aa5.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/5163ca1c-a1199f4643217b18.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/5962-edcc007ac210e745.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/5b79675f-85ea3c7f2ad93a6a.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/6335-c9815eae8de24e1a.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/6d1efd94-185dff1e9409bc40.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/7466-581ea2f0ae587a8c.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/7700-55e7a1df39745771.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/8863-11a24f5d6e17f957.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/9142-4a21b18146bbb6ee.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/b51d1a98-30971278b38e7bce.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/bf9d8ce5-9f7306c40178035c.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/framework-da1c48dc673ca549.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/main-a19e8d07085146fb.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/main-app-0297771a67cc741a.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/404-f92401d257eb65c0.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/500-5c3d3df19e1f1499.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/_app-c862b78daec3d437.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/_error-8996b75f37243f2f.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps-8b33d9708ef03e8a.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/chess-675d46ad0ef09cd8.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/chess/bookmarks-7de577ddc2208178.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/chess/books/chess960-a68db6611be92835.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/chess/books/openings-2d65fce5f2eab5aa.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/chess/converter/fen2png-4d68e79f931b2135.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/chess/converter/pgn2gif-3a5919cff070ed51.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/chess/tools/clock-7fd0bd2eb0caf9f8.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/chess/tools/elo-4c9296db89ea1891.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/clock-cf1327c874f4e09a.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/clock/epoch-409f7f2dba104815.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/clock/timezones-3acb806c79a6a532.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/clock/widgets-2dd220fe45525142.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/colors-776d439d61f3fb2d.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/colors/hex2rgb-48b00debb693394e.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/colors/widgets-39ee1796ced7dfc3.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/code/braille-0d2756b6c3ada838.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/code/morse-5a7abad984d11ea1.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/csv-1bba2bbc66808199.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/csv/html-244ba129d0567355.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/csv/json-84613b135058943e.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/csv/md-6d9da0b2e9d07d00.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/csv/sql-70f03cfdd6430e8d.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/json-d97544af833c7d9e.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/json/csv-edbb8877b76ae4cb.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/json/xml-d6446cf605b3b1df.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/json/yaml-bd5ffe1d7fff7f2b.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/yaml-8fa8744c62af486d.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/yaml/json-f2af89f8471e4e7e.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/converter/data/yaml/openapi2postmanv2-5d086862af3392bb.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/editor/manifest.json-0314fbd4a2eb4aff.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/editor/markdown-5092d2a259240f8c.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/gen.ai-bea11a3158c97509.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/generate/qrcode-2f9019060083d6e4.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/generate/uuid-7cdee6019b9e4f91.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/github-750b45a09fd87280.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/github/cover-4d50710f70f53ab2.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/github/languages-d37db9a4fd5af0cb.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/google-f7b73f9d6a88309b.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/google/trends-ce969c1595822b08.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/google/widgets-76169774c397d921.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/images-9deec90143a35d2f.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/images/converter/base64-d1f5ec9cf766d2d6.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/images/converter/png2ico-5255eb943a76110c.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/images/converter/svg2png-49a5095c74ea8c72.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/images/filter/golden-d8636e782057c55f.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/images/filter/grayscale-2e64fbaef1d5cc5c.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/images/instagram-363a4c8a10637aa4.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/list/chemistry-f3ed53b9301c9114.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/list/countries-50a9b50d4e3a13b6.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/ocr-5393c4ed6eda2504.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/resolution-78da48e589b6dabd.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/status-c7f265f8732ae6e1.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
-          url: '/_next/static/chunks/pages/apps/string-36d2290dce7399be.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          url: '/_next/static/chunks/pages/apps/string-c95fe0a3bc64286b.js',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
-          url: '/_next/static/chunks/pages/apps/string/capitalise-8d61a31d1e5ee67c.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          url: '/_next/static/chunks/pages/apps/string/capitalise-65da3d477567ba2a.js',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
+        },
+        {
+          url: '/_next/static/chunks/pages/apps/string/deburr-8980633d58ac371b.js',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
+        },
+        {
+          url: '/_next/static/chunks/pages/apps/string/kebabcase-8e01b5cfd281e422.js',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/string/lowercase-d879ce1655ac24af.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
+        },
+        {
+          url: '/_next/static/chunks/pages/apps/string/snakecase-e9b32cbe871c2950.js',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/string/uppercase-ebb9226c600aa52f.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/telegram/webhook-49d3492bbe65b5d2.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/apps/words/english-9596e2297d9a620f.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/index-02835c06ee8b55de.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets-93a2a3f7d15ce152.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/all-865a486cd9b31803.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/battery-bc2d4463a1faee23.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/browser-275501800fcb8d12.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/calculator-63c68f3406cd5f93.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/calendar-11bc46bd38cd1288.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/camera-2ecccf9c80bb8afa.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/compass-00e565716f1f4969.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/crypto-21b44a101cda4b04.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/devices-83ff5deaf2d0c316.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/files-c50b5be36db97e9b.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/fitness-4f56bf04e359fa9a.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/games-486628c245fc97a5.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/health-2cf6c6811276f891.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/home-899b970ede526aed.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/mail-e3690278a77bcaaa.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/maps-320b7dd857c4c86d.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/messages-c3ee42e7d8c94d3a.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/music-3012f2f2ad0b7323.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/news-c67e3da10ea778ce.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/notes-1ed80eb590a38221.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/phone-d2796899ab4f0315.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/photos-cdcb8a6ed7d22df3.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/settings-07c7d25c2edc2880.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/sports-e8e7bceafc491933.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/stocks-f8ba4dbcae675749.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/tasks-cf105c4998fc020f.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/translate-95adfc6a5b4ac9d7.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/transportation-9631dba9417edf6d.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/videos-b786f8bdd1337fbe.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/wallet-3dc0dd72c0f4f832.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/pages/widgets/weather-20ffee3bfafc9451.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/chunks/polyfills-42372ed130431b0a.js',
@@ -504,7 +524,7 @@ define(['./workbox-46b0bab3'], function (s) {
         },
         {
           url: '/_next/static/chunks/webpack-ca25dbde007283fc.js',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/_next/static/css/599a6cb87c5bd873.css',
@@ -535,16 +555,8 @@ define(['./workbox-46b0bab3'], function (s) {
           revision: 'b81c67a29589fddab85121a51ffd832d',
         },
         {
-          url: '/_next/static/qxbc4EYcdVmMWOJswkKUU/_buildManifest.js',
-          revision: 'fc83c698b9c29f8bd41d9a34decc58e4',
-        },
-        {
-          url: '/_next/static/qxbc4EYcdVmMWOJswkKUU/_ssgManifest.js',
-          revision: 'b6652df95db52feb4daf4eca35380933',
-        },
-        {
           url: '/_next/static/wasm/80eae4f554bb5227.wasm',
-          revision: 'qxbc4EYcdVmMWOJswkKUU',
+          revision: 'RMZm4bi7RCPPW257z9c-7',
         },
         {
           url: '/data/csv/psychology/hofstede.csv',
@@ -630,8 +642,8 @@ define(['./workbox-46b0bab3'], function (s) {
             cacheWillUpdate: async ({
               request: s,
               response: e,
-              event: c,
-              state: a,
+              event: i,
+              state: c,
             }) =>
               e && 'opaqueredirect' === e.type
                 ? new Response(e.body, {
