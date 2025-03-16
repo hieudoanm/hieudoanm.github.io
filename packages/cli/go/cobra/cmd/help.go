@@ -22,6 +22,8 @@ to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		utils.LogProgramName()
 		// Commands
+		fmt.Println("chess     - Chess SDK")
+		fmt.Println("chess960  - Chess960 SDK")
 		fmt.Println("colors    - Colors SDK")
 		fmt.Println("convert   - Convert Text")
 		fmt.Println("crypto    - Crypto SDK")
@@ -29,6 +31,7 @@ to quickly create a Cobra application.`,
 		fmt.Println("generate  - Generate")
 		fmt.Println("instagram - Instagram SDK")
 		fmt.Println("status    - Get Status")
+		fmt.Println("string    - String SDK")
 		fmt.Println("telegram  - Telegram SDK")
 		fmt.Println("version   - Get Version")
 		fmt.Println("youtube   - YouTube SDK")

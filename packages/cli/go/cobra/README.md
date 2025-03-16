@@ -11,6 +11,7 @@ curl -o- https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/
 
 ## Commands
 
+- `chess960`
 - `clock`
 - `colors`
   - `hex2rgb`
@@ -32,6 +33,13 @@ curl -o- https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/
   - `github`
   - `supabase`
   - `vercel`
+- `string`
+  - `capitalise`
+  - `deburr`
+  - `kebabcase`
+  - `lowercase`
+  - `snakecase`
+  - `uppercase`
 - `telegram`
   - `message`
     - `send`
