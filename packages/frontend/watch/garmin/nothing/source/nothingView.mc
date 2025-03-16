@@ -69,13 +69,22 @@ class nothingView extends WatchUi.WatchFace {
       dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
       dc.fillCircle(minuteX, minuteY, 5);
 
-      // Heart Rate
-      var heartRate = Activity.getActivityInfo().currentHeartRate; //get the latest HR if available
-      if (heartRate == null) {
-        heartRate = "--";
+      // Get battery level
+      var batteryLevel = "--"; // Default
+      try {
+        var systemStats = System.getSystemStats();
+        batteryLevel = systemStats.battery.toNumber().toString();
+      } catch (ex) {
+        batteryLevel = "N/A"; // Error handling
       }
-      System.println("Heart Rate: " + heartRate);
-      dc.drawText(centerX, centerY - 20, Graphics.FONT_LARGE, heartRate.toString(), Graphics.TEXT_JUSTIFY_CENTER);
+      // Heart Rate
+      var currentHeartRate = Activity.getActivityInfo().currentHeartRate; //get the latest HR if available
+      var heartRate = clockHour.format("%02d") + ":" + clockMinute.format("%02d");
+      if (currentHeartRate != null) {
+        heartRate = currentHeartRate.toString();
+      }
+      var text = batteryLevel + "\n" + heartRate;
+      dc.drawText(centerX, centerY - 25, Graphics.FONT_SYSTEM_SMALL, text, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // Called when this View is removed from the screen. Save the
