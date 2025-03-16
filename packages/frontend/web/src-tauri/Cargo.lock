@@ -94,7 +94,7 @@ checksum = "dcfed56ad506cb2c684a14971b8861fdc3baaaae314b9e5f9bb532cbe3ba7a4f"
 name = "app"
 version = "0.1.0"
 dependencies = [
- "glib 0.20.0",
+ "glib 0.20.9",
  "log",
  "serde",
  "serde_json",
@@ -1216,9 +1216,9 @@ dependencies = [
 
 [[package]]
 name = "glib"
-version = "0.20.0"
+version = "0.20.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fee90a615ce05be7a32932cfb8adf2c4bbb4700e80d37713c981fb24c0c56238"
+checksum = "707b819af8059ee5395a2de9f2317d87a53dbad8846a2f089f0bb44703f37686"
 dependencies = [
  "bitflags 2.9.0",
  "futures-channel",
@@ -1233,7 +1233,6 @@ dependencies = [
  "libc",
  "memchr",
  "smallvec",
- "thiserror 1.0.69",
 ]
 
 [[package]]
