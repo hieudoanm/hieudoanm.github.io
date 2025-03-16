@@ -22,15 +22,14 @@ to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		utils.LogProgramName()
 		// Commands
-		fmt.Println("braille   - Convert Text to Braille")
 		fmt.Println("colors    - Colors SDK")
+		fmt.Println("convert   - Convert Text")
+		fmt.Println("crypto    - Crypto SDK")
 		fmt.Println("forex     - Get Foreign Currency Exchange")
+		fmt.Println("generate  - Generate")
 		fmt.Println("instagram - Instagram SDK")
-		fmt.Println("morse     - Convert Text to Morse")
-		fmt.Println("qrcode    - Generate QRCode from URL")
 		fmt.Println("status    - Get Status")
 		fmt.Println("telegram  - Telegram SDK")
-		fmt.Println("uuid      - Generate UUID")
 		fmt.Println("version   - Get Version")
 		fmt.Println("youtube   - YouTube SDK")
 	},

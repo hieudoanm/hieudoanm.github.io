@@ -16,21 +16,19 @@
 
 ## Downloads
 
-- CLI
-  - [x] `hieu.bash` - Download [here](./packages/cli/bash/dist/hieu.bash)
-  - [x] `hieu.binary` - Download [here](./packages/cli/go/cobra/bin/hieu)
-    - [x] `curl -o- https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/cli/go/cobra/install.sh | bash`
-  - [x] [GitHub CLI - Extensions](https://cli.github.com/manual/gh_extension)
-    - [x] `gh-coc` - Download [here](./packages/cli/go/github/extensions/gh-coc/bin/gh-coc)
-    - [x] `gh-ignore` - Download [here](./packages/cli/go/github/extensions/gh-ignore/bin/gh-ignore)
-    - [x] `gh-license` - Download [here](./packages/cli/go/github/extensions/gh-license/bin/gh-license)
-- Desktop
-  - [ ] `linux.AppImage`
-  - [ ] `linux.deb`
-  - [x] `macos.dmg`- Download [here](./packages/frontend/web/src-tauri/dist/dmg/nothing_0.0.1_aarch64.dmg)
-  - [x] `windows.exe` - Download [here](./packages/frontend/web/src-tauri/dist/exe/nothing_0.0.1_x64-setup.exe)
-- Mobile
-  - [ ] `android.apk`
+| Group  | Subgroup                       | Name             | Documentation                                                             | Download                                                                                |
+| ------ | ------------------------------ | ---------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| CLI    |                                | `hieu.bash`      | [Documentation](./packages/cli/bash/README.md)                            | Download [here](./packages/cli/bash/dist/hieu.bash)                                     |
+| CLI    |                                | `hieu.binary`    | [Documentation](./packages/cli/go/cobra/README.md)                        | Download [here](./packages/cli/go/cobra/bin/hieu)                                       |
+| CLI    | [GitHub CLI][gh-cli-extension] | `gh-coc`         | [Documentation](./packages/cli/go/github/extensions/gh-coc/README.md)     | Download [here](./packages/cli/go/github/extensions/gh-coc/bin/gh-coc)                  |
+| CLI    | [GitHub CLI][gh-cli-extension] | `gh-ignore`      | [Documentation](./packages/cli/go/github/extensions/gh-ignore/README.md)  | Download [here](./packages/cli/go/github/extensions/gh-ignore/bin/gh-ignore)            |
+| CLI    | [GitHub CLI][gh-cli-extension] | `gh-license`     | [Documentation](./packages/cli/go/github/extensions/gh-license/README.md) | Download [here](./packages/cli/go/github/extensions/gh-license/bin/gh-license)          |
+| Native | Desktop                        | `linux.AppImage` |                                                                           |                                                                                         |
+| Native | Desktop                        | `linux.deb`      |                                                                           |                                                                                         |
+| Native | Desktop                        | `macos.dmg`      |                                                                           | Download [here](./packages/frontend/web/src-tauri/dist/dmg/nothing_0.0.1_aarch64.dmg)   |
+| Native | Desktop                        | `windows.exe`    |                                                                           | Download [here](./packages/frontend/web/src-tauri/dist/exe/nothing_0.0.1_x64-setup.exe) |
+| Native | Mobile                         | `android.apk`    |                                                                           |                                                                                         |
+| Native | Smart Watch (Garmin)           | `garmin.rpg`     |                                                                           |                                                                                         |
 
 ## Favourites
 
@@ -210,6 +208,7 @@
 [gh]: https://github.com/
 [gh-actions]: https://github.com/features/actions
 [gh-cli]: https://docs.github.com/en/github-cli
+[gh-cli-extension]: https://cli.github.com/manual/gh_extension
 [gh-pages]: https://pages.github.com/
 [go]: https://go.dev/
 [java]: https://www.java.com/
