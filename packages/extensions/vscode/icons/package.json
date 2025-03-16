@@ -28,7 +28,7 @@
     "format": "prettier --cache --write ."
   },
   "devDependencies": {
-    "@vscode/vsce": "3.2.2",
+    "@vscode/vsce": "3.3.0",
     "prettier": "3.5.3"
   }
 }
