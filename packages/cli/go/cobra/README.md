@@ -11,6 +11,7 @@ curl -o- https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/
 
 ## Commands
 
+- `clock`
 - `colors`
   - `hex2rgb`
   - `random`
