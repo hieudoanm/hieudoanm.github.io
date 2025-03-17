@@ -17,7 +17,6 @@ class MinimalismView extends WatchUi.WatchFace {
   function onShow() as Void {
   }
 
-
   // Update the view
   function onUpdate(dc as Dc) as Void {
     var width = dc.getWidth();
