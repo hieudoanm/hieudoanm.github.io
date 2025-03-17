@@ -1,6 +1,7 @@
 ---
 title: 'Hamilton'
 date: '2025-03-17'
+tags: ['music']
 ---
 
 # Hamilton

@@ -14,19 +14,20 @@ const NotesPage: NextPage<{
   posts: { id: string; title: string; date: string }[];
 }> = ({ posts }) => {
   return (
-    <main className="h-screen bg-gray-100 text-gray-900">
-      <div className="container mx-auto p-8">
-        <ul>
-          {posts.map(({ id, title, date }) => (
-            <li key={id} className="border-b border-gray-300 pb-8">
+    <main className="min-h-screen bg-gray-100 text-gray-900">
+      <ul>
+        <li></li>
+        {posts.map(({ id, title, date }) => (
+          <li key={id} className="mx-auto border-t border-gray-300 px-8 py-4">
+            <div className="container mx-auto">
               <Link href={`/posts/${id}`}>
                 <p>{title}</p>
               </Link>
-              <small>{date}</small>
-            </li>
-          ))}
-        </ul>
-      </div>
+              <small>Date: {date}</small>
+            </div>
+          </li>
+        ))}
+      </ul>
     </main>
   );
 };

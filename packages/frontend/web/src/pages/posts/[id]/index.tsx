@@ -1,9 +1,10 @@
 import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
 import { GetStaticProps, NextPage } from 'next';
+import path from 'path';
+import { remark } from 'remark';
+import gfm from 'remark-gfm';
+import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'src/posts');
 
@@ -22,7 +23,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   const { data, content } = matter(fileContents);
-  const processedContent = await remark().use(html).process(content);
+  const processedContent = await remark().use(gfm).use(html).process(content);
   const contentHtml = processedContent.toString();
 
   return {
@@ -40,11 +41,13 @@ const PostPage: NextPage<{
   postData: { title: string; date: string; contentHtml: string };
 }> = ({ postData }) => {
   return (
-    <article className="container mx-auto p-8">
-      <h1 className="text-xl font-black">{postData.title}</h1>
-      <small>{postData.date}</small>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-    </article>
+    <div className="markdown-body min-h-screen">
+      <article className="container mx-auto p-8">
+        <h1 className="text-xl font-black">{postData.title}</h1>
+        <small>{postData.date}</small>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </article>
+    </div>
   );
 };
 
