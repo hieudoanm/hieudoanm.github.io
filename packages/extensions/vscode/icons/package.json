@@ -1,8 +1,12 @@
 {
   "name": "nothing-vscode-icons",
+  "displayName": "Nothing - VSCode - Icons",
   "version": "0.0.1",
-  "description": "Nothing - VSCode - Icons",
+  "description": "VSCode Icons - Nothing Inspired",
   "main": "index.js",
+  "categories": [
+    "Visualization"
+  ],
   "keywords": [
     "extension",
     "nothing",
@@ -14,21 +18,25 @@
   "packageManager": "pnpm@10.6.3",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/hieudoanm/nothing.git"
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/hieudoanm/nothing/issues"
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
   },
-  "homepage": "https://github.com/hieudoanm/nothing#readme",
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io#readme",
   "engines": {
     "node": "22.14.0",
     "vscode": "1.98.2"
   },
   "scripts": {
-    "format": "prettier --cache --write ."
+    "format": "prettier --cache --write .",
+    "package": "rimraf build && mkdir build && vsce package --out \"./build/nothing-vscode-icons-0.0.1.vsix\""
   },
   "devDependencies": {
     "@vscode/vsce": "3.3.0",
     "prettier": "3.5.3"
+  },
+  "contributes": {
+    "icons": {}
   }
 }
