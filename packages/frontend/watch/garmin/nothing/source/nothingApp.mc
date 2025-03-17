@@ -22,7 +22,7 @@ class NothingApp extends Application.AppBase {
     System.println(selectedFace);
 
     if (selectedFace == null) {
-      selectedFace = "timezones"; // Default to face1 if not set
+      selectedFace = "hands"; // Default to face1 if not set
       Application.Storage.setValue("selectedFace", selectedFace);
     }
 
@@ -34,7 +34,11 @@ class NothingApp extends Application.AppBase {
       return [new MinimalismView()];
     }
 
-    return [new TimeZonesView()];
+    if (selectedFace == "timezones") {
+      return [new TimeZonesView()];
+    }
+
+    return [new HandsView()];
   }
 }
 

@@ -25,17 +25,15 @@ class MaximalismView extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
+      // Draw a circle at the center
       var width = dc.getWidth();
       var height = dc.getHeight();
-
-      dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-      dc.clear();
-
-      // Draw a circle at the center
       var centerX = width / 2;
       var centerY = height / 2;
       var radius = Math.mean([centerX, centerY]) / 1.25;
-      // dc.fillCircle(centerX, centerY, 10);
+      // Clean Screen
+      dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+      dc.clear();
       // Clock
       var clockTime = System.getClockTime();
       var clockHour = clockTime.hour;
