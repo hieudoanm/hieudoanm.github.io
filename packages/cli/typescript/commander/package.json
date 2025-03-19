@@ -1,0 +1,47 @@
+{
+  "name": "@cli/commander",
+  "version": "0.0.1",
+  "description": "CLI - Commander",
+  "main": "dist/main.js",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/hieudoanm#readme",
+  "license": "GPL-3.0",
+  "keywords": [
+    "commander",
+    "cli"
+  ],
+  "scripts": {
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "format": "prettier --cache --write .",
+    "prebuild": "rimraf dist",
+    "build": "tsc && chmod +x dist/main.js",
+    "preinstall-cli": "pnpm run build",
+    "install-cli": "npm install -g . --force"
+  },
+  "dependencies": {
+    "commander": "13.1.0",
+    "figlet": "1.8.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.22.0",
+    "@types/figlet": "1.7.0",
+    "@types/node": "22.13.10",
+    "eslint": "9.22.0",
+    "globals": "16.0.0",
+    "prettier": "3.5.3",
+    "rimraf": "6.0.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.8.2",
+    "typescript-eslint": "8.26.1"
+  },
+  "bin": {
+    "hd-commander": "./dist/main.js"
+  }
+}

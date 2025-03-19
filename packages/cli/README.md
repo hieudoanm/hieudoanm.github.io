@@ -2,10 +2,11 @@
 
 - [Nothing Command Line Interface (CLI)](#nothing-command-line-interface-cli)
   - [Features](#features)
-  - [Go (Golang)](#go-golang)
-  - [Py (Python)](#py-python)
-  - [Rs (Rust)](#rs-rust)
-  - [TS (TypeScript)](#ts-typescript)
+  - [Techstack](#techstack)
+    - [Golang](#golang)
+    - [Python](#python)
+    - [Rust](#rust)
+    - [TypeScript](#typescript)
 
 ## Features
 
@@ -29,15 +30,24 @@
 | 16  | version   |              |              |       | `Yes` |       |       |       |
 | 17  | youtube   | download     |              |       | `Yes` |       |       |       |
 
-## Go (Golang)
+## Techstack
+
+| Language | Name | GitHub |
+| -------- | ---- | ------ |
+
+### Golang
 
 - [Cobra](https://cobra.dev/) - [GitHub](https://github.com/spf13/cobra)
 
-## Py (Python)
+### Python
 
-## Rs (Rust)
+### Rust
 
 - [Argh](https://docs.rs/argh/latest/argh/) - [GitHub](https://github.com/google/argh) - **Google**
 - [Clap](https://docs.rs/clap/latest/clap/) - [GitHub](https://github.com/clap-rs/clap)
 
-## TS (TypeScript)
+### TypeScript
+
+- Commander - [GitHub](https://github.com/tj/commander.js)
+- [Open CLI Framework](https://oclif.io/)
+- [yargs](https://yargs.js.org/) - [GitHub](https://github.com/yargs/yargs)

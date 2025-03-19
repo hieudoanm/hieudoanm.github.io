@@ -446,7 +446,47 @@ importers:
         specifier: 8.26.1
         version: 8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
 
-  packages/cli/ts:
+  packages/cli/typescript/commander:
+    dependencies:
+      commander:
+        specifier: 13.1.0
+        version: 13.1.0
+      figlet:
+        specifier: 1.8.0
+        version: 1.8.0
+    devDependencies:
+      '@eslint/js':
+        specifier: 9.22.0
+        version: 9.22.0
+      '@types/figlet':
+        specifier: 1.7.0
+        version: 1.7.0
+      '@types/node':
+        specifier: 22.13.10
+        version: 22.13.10
+      eslint:
+        specifier: 9.22.0
+        version: 9.22.0(jiti@2.4.2)
+      globals:
+        specifier: 16.0.0
+        version: 16.0.0
+      prettier:
+        specifier: 3.5.3
+        version: 3.5.3
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@types/node@22.13.10)(typescript@5.8.2)
+      typescript:
+        specifier: 5.8.2
+        version: 5.8.2
+      typescript-eslint:
+        specifier: 8.26.1
+        version: 8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
+
+  packages/cli/typescript/oclif:
     dependencies:
       '@oclif/core':
         specifier: 4.2.10
@@ -473,6 +513,49 @@ importers:
       prettier:
         specifier: 3.5.3
         version: 3.5.3
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@types/node@22.13.10)(typescript@5.8.2)
+      typescript:
+        specifier: 5.8.2
+        version: 5.8.2
+      typescript-eslint:
+        specifier: 8.26.1
+        version: 8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
+
+  packages/cli/typescript/yargs:
+    dependencies:
+      figlet:
+        specifier: 1.8.0
+        version: 1.8.0
+      yargs:
+        specifier: 17.7.2
+        version: 17.7.2
+    devDependencies:
+      '@eslint/js':
+        specifier: 9.22.0
+        version: 9.22.0
+      '@types/figlet':
+        specifier: 1.7.0
+        version: 1.7.0
+      '@types/node':
+        specifier: 22.13.10
+        version: 22.13.10
+      '@types/yargs':
+        specifier: 17.0.33
+        version: 17.0.33
+      eslint:
+        specifier: 9.22.0
+        version: 9.22.0(jiti@2.4.2)
+      globals:
+        specifier: 16.0.0
+        version: 16.0.0
+      prettier:
+        specifier: 3.5.3
+        version: 3.5.3
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
       ts-node:
         specifier: 10.9.2
         version: 10.9.2(@types/node@22.13.10)(typescript@5.8.2)
@@ -2109,10 +2192,6 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
-
-  '@inquirer/figures@1.0.10':
-    resolution: {integrity: sha512-Ey6176gZmeqZuY/W/nZiUyvmb1/qInjcpiZjXWi6nON+nxJpD1bxtSoBxNliGISae32n6OwbY+TSXPZ1CfS4bw==}
-    engines: {node: '>=18'}
 
   '@inquirer/figures@1.0.11':
     resolution: {integrity: sha512-eOg92lvrn/aRUqbxRyvpEWnrvRuTYRifixHkYVpJiygTgVSBIHDqLh0SrMQXkafvULg3ck11V7xvR+zcgvpHFw==}
@@ -4407,6 +4486,10 @@ packages:
     resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
     engines: {node: '>=18'}
 
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
+    engines: {node: '>=18'}
+
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
@@ -5328,6 +5411,11 @@ packages:
     peerDependenciesMeta:
       picomatch:
         optional: true
+
+  figlet@1.8.0:
+    resolution: {integrity: sha512-chzvGjd+Sp7KUvPHZv6EXV5Ir3Q7kYNpCr4aHrRW79qFtTefmQZNny+W1pW9kf5zeE6dikku2W50W/wAH2xWgw==}
+    engines: {node: '>= 0.4.0'}
+    hasBin: true
 
   figures@3.2.0:
     resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
@@ -11217,7 +11305,7 @@ snapshots:
 
   '@inquirer/core@9.2.1':
     dependencies:
-      '@inquirer/figures': 1.0.10
+      '@inquirer/figures': 1.0.11
       '@inquirer/type': 2.0.0
       '@types/mute-stream': 0.0.4
       '@types/node': 22.13.10
@@ -11245,8 +11333,6 @@ snapshots:
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
       '@types/node': 22.13.10
-
-  '@inquirer/figures@1.0.10': {}
 
   '@inquirer/figures@1.0.11': {}
 
@@ -11312,7 +11398,7 @@ snapshots:
   '@inquirer/select@2.5.0':
     dependencies:
       '@inquirer/core': 9.2.1
-      '@inquirer/figures': 1.0.10
+      '@inquirer/figures': 1.0.11
       '@inquirer/type': 1.5.5
       ansi-escapes: 4.3.2
       yoctocolors-cjs: 2.1.2
@@ -14204,6 +14290,8 @@ snapshots:
 
   commander@12.1.0: {}
 
+  commander@13.1.0: {}
+
   commander@2.20.3: {}
 
   commander@7.1.0: {}
@@ -15338,6 +15426,8 @@ snapshots:
   fdir@6.4.3(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
+
+  figlet@1.8.0: {}
 
   figures@3.2.0:
     dependencies:
