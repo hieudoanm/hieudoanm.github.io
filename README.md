@@ -36,7 +36,7 @@
   - ⭐ [Chess](https://hieudoanm.github.io/apps/chess)
     - ⭐ [Chess960](https://hieudoanm.github.io/apps/chess/books/chess960)
     - ⭐ [Openings](https://hieudoanm.github.io/apps/chess/books/openings)
-  - ⭐ [Instagram](https://hieudoanm.github.io/apps/instagram)
+  - ⭐ [Instagram](https://hieudoanm.github.io/apps/images/instagram)
 
 ## Tech Stack
 
