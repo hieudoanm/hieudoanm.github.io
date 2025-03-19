@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>OpenAPI to PostmanV2</title>
+  </head>
+  <body>
+    <div class="w-screen h-screen">
+      <div class="grid grid-cols-2 h-full">
+        <div class="col-span-1 bg-gray-100 text-gray-900">
+          <textarea
+            id="openapi"
+            name="openapi"
+            class="w-full h-full p-8 bg-transparent"
+            placeholder="OpenAPI"
+            hx-post="/convert"
+            hx-trigger="input changed delay:500ms"
+            hx-target="#postmanv2"
+            hx-on::after-request="parseResponse(event)"></textarea>
+        </div>
+        <div class="col-span-1 bg-gray-900 text-gray-100">
+          <textarea
+            id="postmanv2"
+            class="w-full h-full p-8 bg-transparent"
+            placeholder="PostmanV2"
+            readonly></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const parseResponse = (event) => {
+      console.log(event.detail.xhr.response);
+      document.getElementById('postmanv2').value = JSON.stringify(
+        JSON.parse(event.detail.xhr.response),
+        null,
+        2
+      );
+    };
+  </script>
+</html>
