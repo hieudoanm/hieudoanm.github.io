@@ -43,7 +43,7 @@
 ### Languages
 
 | Prerequisite               | IDE                              | Languages                | Docker                       | Note                                                             |
-| -------------------------- | -------------------------------- | ------------------------ | ---------------------------- |
+| -------------------------- | -------------------------------- | ------------------------ | ---------------------------- | ---------------------------------------------------------------- |
 |                            | [Android Studio][android-studio] | [Kotlin][kotlin]         |                              | For `Front-end` - `Android` & `ChromeOS` (Google) Development    |
 |                            | [XCode][xcode]                   | [Swift][swift]           |                              | For `Front-end` - `iOS` & `iPadOS` & `macOS` (Apple) Development |
 | [.NET][dotnet]             | [Visual Studio][vs]              | [C#][csharp]             |                              | For `Front-end` - `Windows` (Microsoft) Development              |
