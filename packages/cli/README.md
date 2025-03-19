@@ -3,10 +3,6 @@
 - [Nothing Command Line Interface (CLI)](#nothing-command-line-interface-cli)
   - [Features](#features)
   - [Techstack](#techstack)
-    - [Golang](#golang)
-    - [Python](#python)
-    - [Rust](#rust)
-    - [TypeScript](#typescript)
 
 ## Features
 
@@ -32,22 +28,12 @@
 
 ## Techstack
 
-| Language | Name | GitHub |
-| -------- | ---- | ------ |
-
-### Golang
-
-- [Cobra](https://cobra.dev/) - [GitHub](https://github.com/spf13/cobra)
-
-### Python
-
-### Rust
-
-- [Argh](https://docs.rs/argh/latest/argh/) - [GitHub](https://github.com/google/argh) - **Google**
-- [Clap](https://docs.rs/clap/latest/clap/) - [GitHub](https://github.com/clap-rs/clap)
-
-### TypeScript
-
-- Commander - [GitHub](https://github.com/tj/commander.js)
-- [Open CLI Framework](https://oclif.io/)
-- [yargs](https://yargs.js.org/) - [GitHub](https://github.com/yargs/yargs)
+| Language   | Name                                      | GitHub                                       | Maintainer     |
+| ---------- | ----------------------------------------- | -------------------------------------------- | -------------- |
+| Golang     | [Cobra](https://cobra.dev/)               | [GitHub](https://github.com/spf13/cobra)     |                |
+| Python     |                                           |                                              |                |
+| Rust       | [Argh](https://docs.rs/argh/latest/argh/) | [GitHub](https://github.com/google/argh)     | **Google**     |
+| Rust       | [Clap](https://docs.rs/clap/latest/clap/) | [GitHub](https://github.com/clap-rs/clap)    |                |
+| TypeScript | Commander                                 | [GitHub](https://github.com/tj/commander.js) |                |
+| TypeScript | [Open CLI Framework](https://oclif.io/)   | [GitHub](https://github.com/oclif/oclif)     | **Salesforce** |
+| TypeScript | [yargs](https://yargs.js.org/)            | [GitHub](https://github.com/yargs/yargs)     |                |
