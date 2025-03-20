@@ -24,7 +24,7 @@
     "start": "node ./dist/server.js"
   },
   "dependencies": {
-    "@distube/ytdl-core": "4.16.4"
+    "@distube/ytdl-core": "4.16.5"
   },
   "devDependencies": {
     "@eslint/js": "9.22.0",
