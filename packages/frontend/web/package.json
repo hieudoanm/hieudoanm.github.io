@@ -73,7 +73,7 @@
     "@types/react-dom": "19.0.4",
     "@types/showdown": "2.0.6",
     "cpr": "3.0.1",
-    "daisyui": "5.0.6",
+    "daisyui": "5.0.9",
     "eslint": "9.22.0",
     "eslint-config-next": "15.2.3",
     "husky": "9.1.7",
