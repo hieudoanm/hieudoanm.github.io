@@ -24,7 +24,7 @@ const Status: FC<{ service: string; url: string }> = ({
           <Link
             href={url}
             target="_blank"
-            className="underline decoration-dotted underline-offset-4">
+            className="truncate whitespace-nowrap underline decoration-dotted underline-offset-4">
             {service.replaceAll('-', ' ')}
           </Link>
         </p>
@@ -48,7 +48,7 @@ const Status: FC<{ service: string; url: string }> = ({
 const StatusPage = () => {
   return (
     <div className="h-screen w-screen p-8">
-      <div className="grid h-full grid-cols-4 gap-8">
+      <div className="grid h-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {Object.entries({
           analytics:
             'https://analytics.status.atlassian.com/api/v2/status.json',
