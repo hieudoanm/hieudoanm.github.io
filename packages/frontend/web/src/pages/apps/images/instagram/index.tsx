@@ -27,7 +27,7 @@ const InstagramPage: NextPage = () => {
         'Content-Type': 'application/json', // Specify content type
       };
       const downloadUrl: string =
-        'https://nothing-instagram.onrender.com/download';
+        'https://nothing-instagram.onrender.com/api/download';
       const response = await fetch(downloadUrl, {
         method: 'POST',
         headers,
