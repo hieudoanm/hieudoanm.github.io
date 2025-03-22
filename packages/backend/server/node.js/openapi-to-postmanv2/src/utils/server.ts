@@ -1,5 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'node:http';
 import path from 'node:path';
+import { logger } from './log';
 
 export const CONTENT_TYPE_APPLICATION_JSON = 'application/json';
 
@@ -37,7 +38,7 @@ export const getRequestBody = async (request: IncomingMessage) => {
         const params = new URLSearchParams(body);
         data = Object.fromEntries(params.entries());
       }
-      console.info('Received JSON:', data);
+      logger.info('Received Request Body:', data);
       resolve(data);
     });
   });
