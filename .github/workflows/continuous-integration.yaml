@@ -1,4 +1,4 @@
-name: Nothing - Continuous Integration
+name: Continuous Integration
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   ci:
-    name: Nothing - Continuous Integration
+    name: Continuous Integration
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
