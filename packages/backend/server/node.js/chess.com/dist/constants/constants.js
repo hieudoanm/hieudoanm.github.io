@@ -1,6 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TOPIC = exports.TITLES_MAP = exports.TITLES = exports.WOMAN_TITLES = exports.OPEN_TITLES = void 0;
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+exports.TOPIC =
+  exports.TITLES_MAP =
+  exports.TITLES =
+  exports.WOMAN_TITLES =
+  exports.OPEN_TITLES =
+    void 0;
 exports.OPEN_TITLES = ['GM', 'IM', 'FM', 'NM', 'CM'];
 exports.WOMAN_TITLES = ['WGM', 'WIM', 'WFM', 'WNM', 'WCM'];
 exports.TITLES = [...exports.OPEN_TITLES, ...exports.WOMAN_TITLES];
