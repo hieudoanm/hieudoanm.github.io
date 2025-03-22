@@ -1,5 +1,5 @@
 {
-  "name": "@hieudoanm/reverse-proxy-fastify",
+  "name": "@nothing/reverse-proxy-fastify",
   "version": "0.0.1",
   "description": "Reverse Proxy - Express.js",
   "main": "dist/server.js",

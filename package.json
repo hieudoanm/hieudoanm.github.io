@@ -24,7 +24,8 @@
   "scripts": {
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "build": "turbo run build && touch ./docs/.nojekyll",
+    "build": "turbo run build",
+    "postbuild": "touch ./docs/.nojekyll",
     "format": "turbo run format",
     "prepare": "husky || true"
   },

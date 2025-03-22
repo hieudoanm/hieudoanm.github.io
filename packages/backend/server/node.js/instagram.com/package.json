@@ -1,7 +1,7 @@
 {
-  "name": "@hieudoanm/instagran",
+  "name": "@nothing/instagram.com",
   "version": "0.0.1",
-  "description": "Instagram",
+  "description": "instagram.com",
   "main": "./dist/server.js",
   "repository": {
     "type": "git",

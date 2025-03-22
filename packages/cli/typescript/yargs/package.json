@@ -1,5 +1,5 @@
 {
-  "name": "@cli/yargs",
+  "name": "@nothing/yargs",
   "version": "0.0.1",
   "description": "CLI - Yargs",
   "main": "dist/main.js",

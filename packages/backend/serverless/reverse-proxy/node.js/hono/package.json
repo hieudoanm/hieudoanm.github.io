@@ -1,5 +1,5 @@
 {
-  "name": "@hieudoanm/reverse-proxy-hono",
+  "name": "@nothing/reverse-proxy-hono",
   "version": "0.0.1",
   "description": "Reverse Proxy - Hono",
   "main": "dist/server.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@hieudoanm/openapi-to-postmanv2",
+  "name": "@nothing/openapi-to-postmanv2",
   "version": "0.0.1",
   "description": "OpenAPI to PostmanV2",
   "main": "dist/server.js",

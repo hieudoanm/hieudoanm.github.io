@@ -1,5 +1,5 @@
 {
-  "name": "@hieudoanm/reverse-proxy-http",
+  "name": "@nothing/reverse-proxy-http",
   "version": "0.0.1",
   "description": "Reverse Proxy - Node.js - HTTP",
   "main": "dist/server.js",

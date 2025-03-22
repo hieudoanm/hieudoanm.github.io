@@ -1,5 +1,5 @@
 {
-  "name": "@hieudoanm/cli",
+  "name": "@nothing/oclif",
   "version": "0.0.1",
   "description": "CLI",
   "main": "dist/main.js",
