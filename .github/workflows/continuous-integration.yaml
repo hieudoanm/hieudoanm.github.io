@@ -28,6 +28,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Linting
-        run: pnpm run lint
+        run: pnpm run lint --concurrency 1
       - name: Build Production
-        run: pnpm run build
+        run: pnpm run build --concurrency 1
