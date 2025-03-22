@@ -191,6 +191,12 @@ importers:
 
   packages/backend/server/node.js/instagram.com:
     dependencies:
+      pino:
+        specifier: 9.6.0
+        version: 9.6.0
+      pino-pretty:
+        specifier: 13.0.0
+        version: 13.0.0
       puppeteer:
         specifier: 24.4.0
         version: 24.4.0(typescript@5.8.2)
