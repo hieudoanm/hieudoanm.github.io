@@ -18,12 +18,13 @@
   "scripts": {
     "lint": "eslint --fix .",
     "format": "prettier --cache --write .",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && pnpm prisma:generate",
     "build": "tsc",
-    "predev": "pnpm prisma:push",
+    "predev": "pnpm prisma:generate",
     "dev": "nodemon",
     "start": "node ./dist/server.js",
-    "prisma:push": "prisma format && prisma generate && prisma db push",
+    "prisma:generate": "prisma format && prisma generate",
+    "prisma:push": "pnpm prisma:generate && prisma db push",
     "prisma:studio": "prisma studio"
   },
   "dependencies": {
