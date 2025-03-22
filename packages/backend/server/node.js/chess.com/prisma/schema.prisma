@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Player {
+  id                         Int      @id @default(0) @map("id") @db.Integer
+  avatar                     String   @default("") @map("avatar") @db.Text
+  url                        String   @default("") @map("url") @db.Text
+  name                       String   @default("") @map("name") @db.Text
+  username                   String   @default("") @map("username") @db.Text
+  title                      String   @default("") @map("title") @db.Text
+  followers                  Int      @default(0) @map("followers") @db.Integer
+  country                    String   @default("") @map("country") @db.Text
+  location                   String   @default("") @map("location") @db.Text
+  lastOnline                 DateTime @default("1970-01-01T00:00:00Z") @map("last_online") @db.Timestamp
+  joined                     DateTime @default("1970-01-01T00:00:00Z") @map("joined") @db.Timestamp
+  status                     String   @default("") @map("status") @db.Text
+  isStreamer                 Boolean  @default(false) @map("is_streamer") @db.Boolean
+  twitchUrl                  String   @default("") @map("twitch_url") @db.Text
+  verified                   Boolean  @default(false) @map("verified") @db.Boolean
+  league                     String   @default("") @map("league") @db.Text
+  // Chess Rapid
+  chessRapidRatingLast       Int      @default(0) @map("chess_rapid_rating_last") @db.Integer
+  chessRapidRatingDeviation  Int      @default(0) @map("chess_rapid_rating_deviation") @db.Integer
+  chessRapidRatingBest       Int      @default(0) @map("chess_rapid_rating_best") @db.Integer
+  chessRapidRecordWin        Int      @default(0) @map("chess_rapid_record_win") @db.Integer
+  chessRapidRecordDraw       Int      @default(0) @map("chess_rapid_record_draw") @db.Integer
+  chessRapidRecordLoss       Int      @default(0) @map("chess_rapid_record_loss") @db.Integer
+  // Chess Blitz
+  chessBlitzRatingLast       Int      @default(0) @map("chess_blitz_rating_last") @db.Integer
+  chessBlitzRatingDeviation  Int      @default(0) @map("chess_blitz_rating_deviation") @db.Integer
+  chessBlitzRatingBest       Int      @default(0) @map("chess_blitz_rating_best") @db.Integer
+  chessBlitzRecordWin        Int      @default(0) @map("chess_blitz_record_win") @db.Integer
+  chessBlitzRecordDraw       Int      @default(0) @map("chess_blitz_record_draw") @db.Integer
+  chessBlitzRecordLoss       Int      @default(0) @map("chess_blitz_record_loss") @db.Integer
+  // Chess Bullet
+  chessBulletRatingLast      Int      @default(0) @map("chess_bullet_rating_last") @db.Integer
+  chessBulletRatingDeviation Int      @default(0) @map("chess_bullet_rating_deviation") @db.Integer
+  chessBulletRatingBest      Int      @default(0) @map("chess_bullet_rating_best") @db.Integer
+  chessBulletRecordWin       Int      @default(0) @map("chess_bullet_record_win") @db.Integer
+  chessBulletRecordDraw      Int      @default(0) @map("chess_bullet_record_draw") @db.Integer
+  chessBulletRecordLoss      Int      @default(0) @map("chess_bullet_record_loss") @db.Integer
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+
+  @@index([id])
+  @@map("players")
+}

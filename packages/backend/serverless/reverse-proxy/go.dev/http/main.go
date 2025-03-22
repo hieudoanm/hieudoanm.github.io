@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"net/http/httputil"
@@ -8,13 +9,15 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", handleProxy)
+	http.HandleFunc("/", HandleProxy)
 	log.Println("Starting dynamic reverse proxy on :8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
-func handleProxy(w http.ResponseWriter, r *http.Request) {
+// HandleProxy ...
+func HandleProxy(w http.ResponseWriter, r *http.Request) {
 	targetURL := r.URL.Query().Get("url")
+	fmt.Println("targetURL: ", targetURL)
 	if targetURL == "" {
 		http.Error(w, "Missing 'url' query parameter", http.StatusBadRequest)
 		return
@@ -22,6 +25,7 @@ func handleProxy(w http.ResponseWriter, r *http.Request) {
 
 	// Parse the target URL
 	parsedURL, err := url.Parse(targetURL)
+	fmt.Println("parsedURL: ", parsedURL)
 	if err != nil {
 		http.Error(w, "Invalid URL: "+err.Error(), http.StatusBadRequest)
 		return

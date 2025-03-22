@@ -4,7 +4,7 @@ import path from 'node:path';
 import url from 'node:url';
 import Converter from 'openapi-to-postmanv2';
 
-const publicDir = path.join(__dirname, '../public');
+const publicDir = path.join(process.cwd(), '../public');
 
 const convert = async (openapi: string) => {
   return new Promise((resolve, reject) => {
