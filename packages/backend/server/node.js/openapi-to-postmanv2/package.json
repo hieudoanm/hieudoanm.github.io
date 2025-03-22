@@ -24,7 +24,9 @@
     "start": "node ./dist/server.js"
   },
   "dependencies": {
-    "openapi-to-postmanv2": "5.0.0"
+    "openapi-to-postmanv2": "5.0.0",
+    "pino": "9.6.0",
+    "pino-pretty": "13.0.0"
   },
   "devDependencies": {
     "@eslint/js": "9.23.0",

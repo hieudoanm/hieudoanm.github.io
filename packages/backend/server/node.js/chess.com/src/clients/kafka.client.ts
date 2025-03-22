@@ -19,3 +19,7 @@ export const kafka = new Kafka({
   clientId: 'chess.com-consumer',
   brokers: ['127.0.0.1:9092'], // Use 'kafka:9092' if inside Docker
 });
+
+export const consumer = kafka.consumer({ groupId: 'chess-group' });
+
+export const producer = kafka.producer();

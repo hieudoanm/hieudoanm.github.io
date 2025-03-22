@@ -234,6 +234,12 @@ importers:
       openapi-to-postmanv2:
         specifier: 5.0.0
         version: 5.0.0(encoding@0.1.13)
+      pino:
+        specifier: 9.6.0
+        version: 9.6.0
+      pino-pretty:
+        specifier: 13.0.0
+        version: 13.0.0
     devDependencies:
       '@eslint/js':
         specifier: 9.23.0

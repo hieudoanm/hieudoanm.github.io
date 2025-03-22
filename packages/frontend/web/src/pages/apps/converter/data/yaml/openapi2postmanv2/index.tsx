@@ -56,7 +56,7 @@ const OpenAPI2PostmanV2Page: NextPage = () => {
         'Content-Type': 'application/json', // Specify content type
       };
       const downloadUrl: string =
-        'https://nothing-openapi-to-postmanv2.onrender.com/convert';
+        'https://nothing-openapi-to-postmanv2.onrender.com/api/convert';
       const response = await fetch(downloadUrl, {
         method: 'POST',
         headers,

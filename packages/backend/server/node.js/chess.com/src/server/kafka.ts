@@ -1,11 +1,11 @@
-import { kafka } from '../clients/kafka';
-import { TOPIC } from '../constants/constants';
-import { addPlayer } from '../services/chess.service';
+import { consumer } from '../clients/kafka.client';
+import { addPlayer } from '../services/chess/chess.service';
+
+export const TOPIC = 'chess-titled-player';
+
 import { logger } from '../utils/log';
 
-export const consumer = kafka.consumer({ groupId: 'chess-group' });
-
-export const startConsumerServer = async () => {
+export const startKafkaServer = async () => {
   try {
     await consumer.connect();
     logger.info('✅ Kafka Consumer Connected');

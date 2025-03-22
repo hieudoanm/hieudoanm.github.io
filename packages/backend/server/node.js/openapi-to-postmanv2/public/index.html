@@ -17,7 +17,7 @@
             name="openapi"
             class="w-full h-full p-8 bg-transparent"
             placeholder="OpenAPI"
-            hx-post="/convert"
+            hx-post="/api/convert"
             hx-trigger="input changed delay:500ms"
             hx-target="#postmanv2"
             hx-on::after-request="parseResponse(event)"></textarea>
@@ -38,7 +38,7 @@
       document.getElementById('postmanv2').value = JSON.stringify(
         JSON.parse(event.detail.xhr.response),
         null,
-        2
+        4
       );
     };
   </script>
