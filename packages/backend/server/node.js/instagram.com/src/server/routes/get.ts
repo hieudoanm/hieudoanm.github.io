@@ -1,12 +1,11 @@
 import { readFile } from 'node:fs/promises';
 import { IncomingMessage, ServerResponse } from 'node:http';
-import path from 'node:path';
-import url, { UrlWithParsedQuery } from 'node:url';
+import { join } from 'node:path';
 import { logger } from '../../utils/log';
 import { getContentType } from '../../utils/server';
 import { tryCatch } from '../../utils/try-catch';
 
-const PUBLIC_DIR = path.join(process.cwd(), 'public');
+const PUBLIC_DIR = join(process.cwd(), 'public');
 
 export const getRoute = async (
   request: IncomingMessage,
@@ -14,11 +13,11 @@ export const getRoute = async (
     req: IncomingMessage;
   }
 ) => {
-  const parsedUrl: UrlWithParsedQuery = url.parse(request.url ?? '', true);
-  const pathname: string = parsedUrl.pathname ?? '';
-  const staticFile: string = pathname === '/' ? 'index.html' : pathname;
-  const filePath = path.join(PUBLIC_DIR, staticFile);
-  logger.info('GET', filePath);
+  const { url = '' } = request;
+  const [path] = url.split('?');
+  const staticFile: string = path === '/' ? 'index.html' : path;
+  const filePath = join(PUBLIC_DIR, staticFile);
+  logger.info(`getRoute filePath=${filePath}`);
   const { data } = await tryCatch(readFile(filePath));
   response.writeHead(200, { 'Content-Type': getContentType(filePath) });
   response.end(data);
