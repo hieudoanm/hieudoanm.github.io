@@ -1,13 +1,9 @@
 services:
-  nothing-instagram:
-    container_name: nothing-instagram
+  nothing-openapi-to-postmanv2:
+    container_name: nothing-openapi-to-postmanv2
     build: .
     ports:
       - '10000:10000'
-    environment:
-      # This is optional since your Dockerfile already sets it,
-      # but you can override or confirm the value here.
-      - FIREFOX_EXECUTABLE_PATH=/usr/bin/firefox
     deploy:
       resources:
         limits:

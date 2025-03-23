@@ -1,4 +1,15 @@
 services:
+  nothing-chess:
+    container_name: nothing-chess
+    build: .
+    ports:
+      - '10000:10000'
+    deploy:
+      resources:
+        limits:
+          cpus: 0.1
+          memory: 512M
+
   zookeeper:
     image: confluentinc/cp-zookeeper:7.9.0
     container_name: zookeeper
@@ -39,19 +50,6 @@ services:
       POSTGRES_PASSWORD: password
     volumes:
       - pgdata:/var/lib/postgresql/data
-
-  kafka-ui:
-    image: provectuslabs/kafka-ui:latest
-    container_name: kafka-ui
-    restart: always
-    depends_on:
-      - kafka
-    ports:
-      - '8080:8080'
-    environment:
-      KAFKA_CLUSTERS_0_NAME: local
-      KAFKA_CLUSTERS_0_BOOTSTRAP_SERVERS: 127.0.0.1:9092
-      KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
 
 volumes:
   pgdata:
