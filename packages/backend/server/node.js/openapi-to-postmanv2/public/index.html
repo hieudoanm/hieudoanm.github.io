@@ -9,13 +9,13 @@
     <title>OpenAPI to PostmanV2</title>
   </head>
   <body>
-    <div class="w-screen h-screen">
-      <div class="grid grid-cols-2 h-full">
+    <div class="h-screen w-screen">
+      <div class="grid h-full grid-cols-2">
         <div class="col-span-1 bg-gray-100 text-gray-900">
           <textarea
             id="openapi"
             name="openapi"
-            class="w-full h-full p-8 bg-transparent"
+            class="h-full w-full bg-transparent p-8"
             placeholder="OpenAPI"
             hx-post="/api/convert"
             hx-trigger="input changed delay:500ms"
@@ -25,14 +25,14 @@
         <div class="col-span-1 bg-gray-900 text-gray-100">
           <textarea
             id="postmanv2"
-            class="w-full h-full p-8 bg-transparent"
+            class="h-full w-full bg-transparent p-8"
             placeholder="PostmanV2"
             readonly></textarea>
         </div>
       </div>
     </div>
   </body>
-  <script>
+  <script type="text/javascript">
     const parseResponse = (event) => {
       console.log(event.detail.xhr.response);
       document.getElementById('postmanv2').value = JSON.stringify(

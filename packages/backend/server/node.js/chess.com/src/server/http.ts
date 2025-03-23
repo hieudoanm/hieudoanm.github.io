@@ -1,4 +1,5 @@
 import { createServer } from 'node:http';
+import ip from 'ip';
 import { logger } from '../utils/log';
 import { enableCors } from '../utils/server';
 import { routes } from './routes/api';
@@ -29,7 +30,7 @@ const httpServer = createServer(async (request, response) => {
       path: routePath,
       function: routeFunction,
     } = route;
-    if (method === routeMethod && path.startsWith(routePath)) {
+    if (method === routeMethod && path === routePath) {
       routeFunction(request, response);
       return;
     }
@@ -48,7 +49,8 @@ export const startHttpServer = (): Promise<void> => {
       const message = `🚀 Server is listening on
 
 - Local (host) : http://localhost:${PORT}
-- Local (IP)   : http://127.0.0.1:${PORT}`;
+- Local (IP)   : http://127.0.0.1:${PORT}
+- Network      : http://${ip.address()}:${PORT}`;
 
       logger.info(message);
       resolve();

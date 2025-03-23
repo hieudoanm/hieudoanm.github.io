@@ -65,8 +65,8 @@
           <a href="https://chess.com" target="_blank">chess.com</a>
           <span class="text-green-900">Titled</span>
         </h1>
-        <div class="border rounded-md overflow-hidden">
-          <table class="bg-gray-300 bg-white w-full">
+        <div class="overflow-hidden rounded-md border">
+          <table class="w-full bg-gray-300 bg-white">
             <thead>
               <tr>
                 <th>Title</th>
@@ -84,74 +84,74 @@
             <tbody>
               <tr class="border-t">
                 <td class="text-center">Open</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     GM
                   </div>
                 </td>
                 <td class="text-center text-green-900">2500+</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     IM
                   </div>
                 </td>
                 <td class="text-center text-green-900">2400+</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     FM
                   </div>
                 </td>
                 <td class="text-center text-green-900">2300+</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     CM
                   </div>
                 </td>
                 <td class="text-center text-green-900">2200+</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     NM
                   </div>
                 </td>
               </tr>
               <tr class="border-t">
                 <td class="text-center">Woman</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     WGM
                   </div>
                 </td>
                 <td class="text-center text-green-900">2300+</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     WIM
                   </div>
                 </td>
                 <td class="text-center text-green-900">2200+</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     WFM
                   </div>
                 </td>
                 <td class="text-center text-green-900">2100+</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     WCM
                   </div>
                 </td>
                 <td class="text-center text-green-900">2000+</td>
-                <td class="text-center py-1">
+                <td class="py-1 text-center">
                   <div
-                    class="px-2 bg-green-900 text-gray-100 inline-block rounded-md">
+                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
                     WNM
                   </div>
                 </td>
@@ -162,7 +162,7 @@
         <select
           id="title"
           name="title"
-          class="bg-green-900 text-gray-100 py-2 px-4 rounded-md w-full text-center"
+          class="w-full rounded-md bg-green-900 px-4 py-2 text-center text-gray-100"
           hx-get="/api/titled"
           hx-trigger="click"
           hx-target="#chart-data"
@@ -180,21 +180,21 @@
           <option value="WCM">Woman Title: WCM (2000+)</option>
           <option value="WNM">Woman Title: WNM</option>
         </select>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div class="col-span-1">
-            <canvas id="rapidChart" class="!w-full !aspect-video"></canvas>
+            <canvas id="rapidChart" class="!aspect-video !w-full"></canvas>
           </div>
           <div class="col-span-1">
-            <canvas id="blitzChart" class="!w-full !aspect-video"></canvas>
+            <canvas id="blitzChart" class="!aspect-video !w-full"></canvas>
           </div>
           <div class="col-span-1">
-            <canvas id="bulletChart" class="!w-full !aspect-video"></canvas>
+            <canvas id="bulletChart" class="!aspect-video !w-full"></canvas>
           </div>
         </div>
         <div id="chart-data" class="hidden"></div>
       </div>
     </div>
-    <script>
+    <script type="text/javascript">
       const charts = {};
 
       const parseResponse = (event) => {

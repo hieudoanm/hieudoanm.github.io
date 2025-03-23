@@ -1,10 +1,11 @@
 import { createServer } from 'node:http';
+import ip from 'ip';
 import { logger } from '../utils/log';
 import { enableCors } from '../utils/server';
 import { routes } from './routes/api';
 import { getRoute as getIndexRoute } from './routes/get';
 
-const httpServer = createServer((request, response) => {
+const httpServer = createServer(async (request, response) => {
   enableCors(response);
 
   const { method = '', url = '' } = request;
@@ -18,7 +19,7 @@ const httpServer = createServer((request, response) => {
     return;
   }
 
-  if (method === 'GET' && (path === '/' || path.includes('favicon'))) {
+  if (method === 'GET' && (url === '/' || path.includes('favicon'))) {
     getIndexRoute(request, response);
     return;
   }
@@ -29,7 +30,7 @@ const httpServer = createServer((request, response) => {
       path: routePath,
       function: routeFunction,
     } = route;
-    if (method === routeMethod && path.startsWith(routePath)) {
+    if (method === routeMethod && path === routePath) {
       routeFunction(request, response);
       return;
     }
@@ -48,7 +49,8 @@ export const startHttpServer = (): Promise<void> => {
       const message = `🚀 Server is listening on
 
 - Local (host) : http://localhost:${PORT}
-- Local (IP)   : http://127.0.0.1:${PORT}`;
+- Local (IP)   : http://127.0.0.1:${PORT}
+- Network      : http://${ip.address()}:${PORT}`;
 
       logger.info(message);
       resolve();
