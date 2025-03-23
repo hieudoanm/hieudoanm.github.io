@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import {
   FaAppStoreIos,
+  FaChessKnight,
   FaFileWord,
   FaLinkedin,
   FaSquareGithub,
@@ -29,6 +30,13 @@ const HomePage: NextPage = () => {
               name: 'Notes',
               icon: <FaFileWord />,
               target: '_self',
+            },
+            {
+              id: 'chess',
+              href: 'https://www.chess.com/member/redeyesdarknessmetaldrago',
+              name: 'Chess',
+              icon: <FaChessKnight />,
+              target: '_blank',
             },
             {
               id: 'github',
