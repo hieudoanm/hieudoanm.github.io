@@ -18,7 +18,8 @@ export const getRoute = async (
   const staticFile: string = path === '/' ? 'index.html' : path;
   const filePath = join(PUBLIC_DIR, staticFile);
   logger.info(`getRoute filePath=${filePath}`);
-  const { data } = await tryCatch(readFile(filePath));
+  const { data, error } = await tryCatch(readFile(filePath));
+  if (error) logger.error(`getRoute error=${error.message}`);
   response.writeHead(200, { 'Content-Type': getContentType(filePath) });
   response.end(data);
 };

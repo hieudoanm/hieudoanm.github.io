@@ -2,7 +2,7 @@
   "name": "@nothing/openapi-to-postmanv2",
   "version": "0.0.1",
   "description": "OpenAPI to PostmanV2",
-  "main": "dist/server.js",
+  "main": "./dist/server.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"

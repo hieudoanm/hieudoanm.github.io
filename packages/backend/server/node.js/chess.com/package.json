@@ -14,7 +14,7 @@
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "packageManager": "pnpm@10.6.5",
-  "main": "index.js",
+  "main": "./dist/server.js",
   "scripts": {
     "format": "prettier --cache --write .",
     "prelint": "pnpm prisma:generate",
