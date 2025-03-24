@@ -1,6 +1,6 @@
 ---
 title: 'Bored'
-date: '2025-03-19'
+date: '2025-03-24'
 ---
 
 # Bored
@@ -33,16 +33,18 @@ What I do when I am bored (or think I have nothing to do). Maybe you can do it t
 | 22  | Education    | Science     | Learn Physics                              |
 | 23  | Education    | Science     | Learn Chemistry                            |
 | 24  | Education    | Science     | Learn Biology                              |
-| 25  | Recreational |             | Practive writing with non-dominant hand    |
-| 26  | Recreational |             | Museum Visit                               |
-| 27  | Recreational |             | Listen to Hamilton                         |
-| 28  | Recreational |             | Go to the Arcade                           |
-| 29  | Recreational |             | Go stargazing                              |
-| 30  | Sports       |             | Play Chess                                 |
-| 31  | Sports       |             | Play Football                              |
-| 32  | Sports       |             | Run 5km                                    |
-| 33  | Sports       |             | Bike 20km                                  |
-| 34  | Work         |             | Update Resume                              |
-| 35  | Work         |             | Update LinkedIn                            |
-| 36  | Work         |             | Work on `Broca`                            |
-| 37  | Work         |             | Work on `Nothing`                          |
+| 25  | Education    | Design      | Learn Illustrator                          |
+| 26  | Recreational |             | Practive writing with non-dominant hand    |
+| 27  | Recreational |             | Museum Visit                               |
+| 28  | Recreational |             | Listen to Hamilton                         |
+| 29  | Recreational |             | Go to the Arcade                           |
+| 30  | Recreational |             | Go stargazing                              |
+| 31  | Recreational |             | Film Photography                           |
+| 32  | Sports       |             | Play Chess                                 |
+| 33  | Sports       |             | Play Football                              |
+| 34  | Sports       |             | Run 5km                                    |
+| 35  | Sports       |             | Bike 20km                                  |
+| 36  | Work         |             | Update Resume                              |
+| 37  | Work         |             | Update LinkedIn                            |
+| 38  | Work         |             | Work on `Broca`                            |
+| 39  | Work         |             | Work on `Nothing`                          |
