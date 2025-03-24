@@ -10,6 +10,9 @@ date: '2025-03-24'
 - [Health (Physical and Mental)](#health-physical-and-mental)
   - [Table of Contents](#table-of-contents)
   - [Maslow's hierarchy of needs](#maslows-hierarchy-of-needs)
+  - [Daily Routines](#daily-routines)
+    - [Morning Routine](#morning-routine)
+    - [Work](#work)
 
 ## Maslow's hierarchy of needs
 
@@ -35,6 +38,7 @@ date: '2025-03-24'
   - Family:
   - Intimacy:
     - Avoid Porn
+    - Avoid Social Media
   - Sense of Connection
 - Level 4: Self-esteem
   - Confidence:
@@ -46,8 +50,42 @@ date: '2025-03-24'
     - Play (min) 10 minutes of Chess
 - Level 5
   - Morality
+    - Practice `Self-reflection`
   - Creativity
   - Spontaneity
   - Acceptance
   - Experience Purpose
   - Meaning and Inner Potential
+
+## Daily Routines
+
+- 8 hours of Sleep
+- Do 50 Push-up
+- Run 5 km
+
+| Time          | Activity                            | Time          | Activity                                   |
+| ------------- | ----------------------------------- | ------------- | ------------------------------------------ |
+| 00:00 - 01:00 | Sleep                               | 12:00 - 13:00 | Lunch & Break                              |
+| 01:00 - 02:00 | Sleep                               | 13:00 - 14:00 | Nap                                        |
+| 02:00 - 03:00 | Sleep                               | 14:00 - 15:00 | [Work](#work)                              |
+| 03:00 - 04:00 | Sleep                               | 15:00 - 16:00 | [Work](#work)                              |
+| 04:00 - 05:00 | Sleep                               | 16:00 - 17:00 | [Work](#work) with Tea (Yogurt with Fruit) |
+| 05:00 - 06:00 | Sleep                               | 17:00 - 18:00 | [Work](#work)                              |
+| 06:00 - 07:00 | Sleep                               | 18:00 - 19:00 | [Work](#work)                              |
+| 07:00 - 08:00 | Sleep                               | 19:00 - 20:00 | Dinner                                     |
+| 08:00 - 09:00 | [Morning Routine](#morning-routine) | 20:00 - 21:00 | Leisure OR Psychology Practices            |
+| 09:00 - 10:00 | [Work](#work)                       | 21:00 - 22:00 | Leisure OR Psychology Practices            |
+| 10:00 - 11:00 | [Work](#work)                       | 22:00 - 23:00 | Run 5 km & 25 push-up & 25 sit-up          |
+| 11:00 - 12:00 | [Work](#work)                       | 23:00 - 24:00 | Cool down and prepare to sleep             |
+
+### Morning Routine
+
+- Eat breakfast
+- Do 25 push-up
+- Do 25 sit-up
+
+### Work
+
+- Coding
+- University Assignments
+- Scrum Master and Documentation

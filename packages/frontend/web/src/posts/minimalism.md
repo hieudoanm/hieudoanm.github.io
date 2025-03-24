@@ -8,6 +8,7 @@ date: '2025-03-24'
 - [Minimalism](#minimalism)
   - [Clothes](#clothes)
   - [Technology](#technology)
+    - [Software](#software)
   - [Vehicles](#vehicles)
 
 ## Clothes
@@ -45,11 +46,18 @@ date: '2025-03-24'
 
 - [ ] 04 Laptop Related
   - [x] 01 Laptop
+    - Options:
+      - ASUS
+      - MacOS
   - [x] 01 Laptop Charger
   - [ ] 01 Laptop Mouse
   - [x] 01 Remote Screen
 - [x] 03 Phone Related
   - [x] 01 Phone
+    - Options:
+      - Nothing
+      - Apple
+      - Google Pixel
   - [x] 01 Phone Charger
   - [x] 01 Portable Battery
 - [ ] 04 Tablet Related
@@ -61,6 +69,27 @@ date: '2025-03-24'
 - [x] 01 Camera
 - [x] 01 Speaker
 - `13` in Total
+
+### Software
+
+1. General
+   1. [1.1.1.1](https://one.one.one.one/)
+   2. [Docker](https://www.docker.com/)
+   3. [Firefox](https://www.mozilla.org/en-US/firefox/)
+   4. [GitHub](https://github.com/)
+   5. [Google Drive](https://drive.google.com)
+   6. [Signal](https://signal.org/)
+   7. [VS Code](https://code.visualstudio.com/)
+2. AI
+   1. Deepseek
+   2. Google Gemini
+   3. Microsoft Copilot
+3. Chess
+   1. [chess.com](https://www.chess.com)
+   2. [lichess.org](https://lichess.org/)
+4. Cloud
+   1. [Google Drive](https://drive.google.com)
+   2. Microsoft OneDrive
 
 ## Vehicles
 
