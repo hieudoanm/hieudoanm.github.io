@@ -1,6 +1,6 @@
 ---
 title: 'Minimalism'
-date: '2025-03-24'
+date: '2025-03-25'
 ---
 
 # Minimalism
@@ -10,6 +10,7 @@ date: '2025-03-24'
   - [Technology](#technology)
     - [Software](#software)
   - [Vehicles](#vehicles)
+  - [Financial](#financial)
 
 ## Clothes
 
@@ -97,3 +98,11 @@ date: '2025-03-24'
 - [ ] 01 Motorcycle
 - [ ] 01 Car
 - `03` in Total
+
+## Financial
+
+| Category  | Details                                | Monthly    |
+| --------- | -------------------------------------- | ---------- |
+| Utilities | Electricity / Water / Housing Services | 2,000,000  |
+| Food      | 2,000,000 / week (~300,000 VND / day)  | 8,000,000  |
+| Total     |                                        | 10,000,000 |
