@@ -3,6 +3,3 @@ format:
 
 vet:
 	go vet ./...
-
-lint:
-	golint ./...
