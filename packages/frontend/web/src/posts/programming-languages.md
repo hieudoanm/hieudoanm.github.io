@@ -15,6 +15,7 @@ date: '2025-03-25'
 | 06  |                    | [Jupyter][jupyter]               | [Python][python]         | [Docker][docker-hub-python]  | For `Back-end` Development and `Machine Learning`                |
 | 07  |                    | [Visual Studio][vsc]             | [Go][go]                 | [Docker][docker-hub-golang]  | For `Back-end` Development and `CLI` Development                 |
 | 08  |                    |                                  | C++                      |                              |                                                                  |
+| 09  |                    |                                  | Rust                     |                              |                                                                  |
 
 - JDK: Java Development Kit
 
