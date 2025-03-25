@@ -17,7 +17,7 @@ type Word = {
 const EnglishWordsPage: NextPage = () => {
   const [word, setWord] = useState('example');
 
-  const input: string = `https://raw.githubusercontent.com/hieudoanm/nothing/refs/heads/master/data/languages/english/words/${encodeURI(word)}.json`;
+  const input: string = `https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/data/languages/english/words/${encodeURI(word)}.json`;
   const { isPending, error, data, refetch } = useQuery({
     queryKey: [`word-${encodeURI(word)}`],
     queryFn: () => fetch(input).then((res) => res.json()),
@@ -36,7 +36,7 @@ const EnglishWordsPage: NextPage = () => {
             </h1>
             <p>
               <Link
-                href="https://raw.githubusercontent.com/hieudoanm/nothing/refs/heads/master/data/english/words.jsonl"
+                href="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/data/english/words.jsonl"
                 target="_blank">
                 Download
               </Link>
