@@ -7,7 +7,6 @@
   - [Downloads](#downloads)
   - [Favourites](#favourites)
   - [Tech Stack](#tech-stack)
-    - [Languages](#languages)
     - [Main](#main)
       - [Front-end](#front-end)
       - [Back-end](#back-end)
@@ -40,18 +39,6 @@
 
 ## Tech Stack
 
-### Languages
-
-| Prerequisite               | IDE                              | Languages                | Docker                       | Note                                                             |
-| -------------------------- | -------------------------------- | ------------------------ | ---------------------------- | ---------------------------------------------------------------- |
-|                            | [Android Studio][android-studio] | [Kotlin][kotlin]         |                              | For `Front-end` - `Android` & `ChromeOS` (Google) Development    |
-|                            | [XCode][xcode]                   | [Swift][swift]           |                              | For `Front-end` - `iOS` & `iPadOS` & `macOS` (Apple) Development |
-| [.NET][dotnet]             | [Visual Studio][vs]              | [C#][csharp]             |                              | For `Front-end` - `Windows` (Microsoft) Development              |
-| [Node.js][node.js]         | [Visual Studio][vsc]             | [TypeScript][typescript] | [Docker][docker-hub-node]    | For `Front-end` - `Web` Development                              |
-| JDK (Java Development Kit) | [IDEA][jetbrains-idea]           | [Java][java]             | [Docker][docker-hub-openjdk] | For `Back-end` Development                                       |
-|                            | [Jupyter][jupyter]               | [Python][python]         | [Docker][docker-hub-python]  | For `Back-end` Development and `Machine Learning`                |
-|                            | [Visual Studio][vsc]             | [Go][go]                 | [Docker][docker-hub-golang]  | For `Back-end` Development and `CLI` Development                 |
-
 ### Main
 
 | No  | Supergroup | Group                | Subgroup             | Technology                       |
@@ -72,20 +59,11 @@
 
 #### Front-end
 
-| No  | Supergroup | Group     | Subgroup        | Technology                                  |
-| --- | ---------- | --------- | --------------- | ------------------------------------------- |
-| 01  | C#         | Styling   | UI Components   | [WinUI][winui]                              |
-| 02  | Kotlin     | Styling   | UI Components   | [Material][material]                        |
-| 03  | Swift      | Styling   | UI Components   | [SwiftUI][swiftui]                          |
-| 04  | TypeScript | Dev Tools | Linting         | [ESLint][eslint]                            |
-| 05  | TypeScript | Dev Tools | Formatting      | [Prettier][prettier]                        |
-| 06  | TypeScript | Styling   | CSS Utilities   | [TailwindCSS][tailwindcss]                  |
-| 07  | TypeScript | Styling   | UI Components   | [DaisyUI][daisyui]                          |
-| 08  | TypeScript | Framework | Web             | [Next.js][next.js] - [React][react]         |
-| 09  | TypeScript | Framework | Mobile (Hybrid) | [Expo][expo] - [React Native][react-native] |
-| 10  | TypeScript | Framework | Desktop         | [Tauri][tauri]                              |
-| 11  | TypeScript | Libraries | Authentication  | [NextAuth][next-auth]                       |
-| 12  | TypeScript | SaaS      | Authentication  | [Clerk][clerk]                              |
+| No  | Supergroup | Group   | Subgroup      | Technology           |
+| --- | ---------- | ------- | ------------- | -------------------- |
+| 01  | C#         | Styling | UI Components | [WinUI][winui]       |
+| 02  | Kotlin     | Styling | UI Components | [Material][material] |
+| 03  | Swift      | Styling | UI Components | [SwiftUI][swiftui]   |
 
 #### Back-end
 
@@ -166,7 +144,6 @@
   - [ ] Build Native App with [Lynx](https://lynxjs.org/)
 
 [alpine]: https://alpinelinux.org/
-[android-studio]: https://developer.android.com/studio
 [apache]: https://apache.org/
 [auth0]: https://auth0.com/
 [aws]: https://aws.amazon.com/
@@ -174,8 +151,6 @@
 [black]: https://black.readthedocs.io/en/stable/
 [clerk]: https://clerk.com/
 [cloudflare-pages]: https://pages.cloudflare.com/
-[csharp]: https://learn.microsoft.com/en-us/dotnet/csharp/
-[daisyui]: https://daisyui.com/
 [docker]: https://www.docker.com/
 [docker-compose]: https://docs.docker.com/compose/
 [docker-hub-alpine]: https://hub.docker.com/_/alpine
@@ -185,66 +160,42 @@
 [docker-hub-dgraph]: https://hub.docker.com/r/dgraph/dgraph
 [docker-hub-elasticsearch]: https://hub.docker.com/_/elasticsearch
 [docker-hub-fauna]: https://hub.docker.com/r/fauna/faunadb
-[docker-hub-golang]: https://hub.docker.com/_/golang/
 [docker-hub-httpd]: https://hub.docker.com/_/httpd
-[docker-hub-node]: https://hub.docker.com/_/node/
-[docker-hub-openjdk]: https://hub.docker.com/_/openjdk
 [docker-hub-memcached]: https://hub.docker.com/_/memcached
 [docker-hub-mongo]: https://hub.docker.com/_/mongo
 [docker-hub-mysql]: https://hub.docker.com/_/mysql
 [docker-hub-neo4j]: https://hub.docker.com/_/neo4j
 [docker-hub-nginx]: https://hub.docker.com/_/nginx
 [docker-hub-postgres]: https://hub.docker.com/_/postgres
-[docker-hub-python]: https://hub.docker.com/_/python/
 [docker-hub-redis]: https://hub.docker.com/_/redis/
 [docker-hub-solr]: https://hub.docker.com/_/solr
 [docker-hub-ubuntu]: https://hub.docker.com/_/ubuntu/
 [docker-swarm]: https://docs.docker.com/engine/swarm/
-[dotnet]: https://dotnet.microsoft.com/en-us/
 [elasticsearch]: https://www.elastic.co/elasticsearch
-[eslint]: https://eslint.org/
-[expo]: https://expo.dev/
 [fastapi]: https://fastapi.tiangolo.com/
 [gh]: https://github.com/
 [gh-actions]: https://github.com/features/actions
 [gh-cli]: https://docs.github.com/en/github-cli
 [gh-cli-extension]: https://cli.github.com/manual/gh_extension
 [gh-pages]: https://pages.github.com/
-[go]: https://go.dev/
-[java]: https://www.java.com/
-[jetbrains-idea]: https://www.jetbrains.com/idea/
-[jupyter]: https://jupyter.org/
 [keycloak]: https://www.keycloak.org/
-[kotlin]: https://kotlinlang.org/
 [material]: https://m3.material.io/
 [mongodb]: https://www.mongodb.com/
 [next-auth]: https://next-auth.js.org/
-[next.js]: https://nextjs.org/
 [netlify]: https://www.netlify.com/
 [node.js]: https://nodejs.org/en
 [onelogin]: https://www.onelogin.com/
 [okta]: https://www.okta.com/
 [postgresql]: https://www.postgresql.org/
-[prettier]: https://prettier.io/
 [prisma]: https://www.prisma.io/
 [puppeteer]: https://pptr.dev/
-[python]: https://www.python.org/
-[react]: https://react.dev/
-[react-native]: https://reactnative.dev/
 [redis]: https://redis.io/
 [render]: https://render.com/
 [ruff]: https://docs.astral.sh/ruff/
 [scikit-learn]: https://scikit-learn.org/
-[swift]: https://www.swift.org/
 [swiftui]: https://developer.apple.com/xcode/swiftui/
-[tailwindcss]: https://tailwindcss.com/
 [tensorflow]: https://www.tensorflow.org/
-[tauri]: https://v2.tauri.app/
 [terraform]: https://www.terraform.io
-[typescript]: https://www.typescriptlang.org/
 [ubuntu]: https://ubuntu.com/
 [vercel]: https://vercel.com/
-[vs]: https://visualstudio.microsoft.com/
-[vsc]: https://code.visualstudio.com/
-[xcode]: https://developer.apple.com/xcode/
 [winui]: https://learn.microsoft.com/vi-vn/windows/apps/winui/
