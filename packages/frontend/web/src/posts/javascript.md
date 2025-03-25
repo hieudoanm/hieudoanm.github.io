@@ -1,6 +1,6 @@
 ---
 title: 'JavaScript'
-date: '2025-03-23'
+date: '2025-03-25'
 tags: ['technology']
 ---
 
@@ -79,13 +79,18 @@ tags: ['technology']
 
 ### Operating Systems
 
-| Industry    | Supersector | Sector          | Subsector | Technology         | Open Source | Maintainer      | Language | Recommended |
-| ----------- | ----------- | --------------- | --------- | ------------------ | ----------- | --------------- | -------- | ----------- |
-| Development | OS          | [Linux][kernel] |           | [Debian][debian]   |             |                 |          |             |
-| Development | OS          | [Linux][kernel] |           | [Mint][linuxmint]  |             |                 |          |             |
-| Development | OS          | [Linux][kernel] |           | [Ubuntu][ubuntu]   |             |                 |          | Recommended |
-| Development | OS          | Unix            |           | [macOS][macos]     |             | [Apple][apple]  |          |             |
-| Development | OS          | OS/2            |           | [Windows][windows] |             | [Microsoft][ms] |          |             |
+| Industry    | Supersector | Sector          | Subsector | Technology                           | Open Source | Maintainer      | Language | Recommended |
+| ----------- | ----------- | --------------- | --------- | ------------------------------------ | ----------- | --------------- | -------- | ----------- |
+| Development | OS          | [Linux][kernel] |           | [Alpine](https://alpinelinux.org/)   |             |                 |          |             |
+| Development | OS          | [Linux][kernel] |           | [Arch](https://archlinux.org/)       |             |                 |          |             |
+| Development | OS          | [Linux][kernel] |           | [Debian][debian]                     |             |                 |          |             |
+| Development | OS          | [Linux][kernel] |           | [Fedora](https://fedoraproject.org/) |             |                 |          |             |
+| Development | OS          | [Linux][kernel] |           | [Kali](https://www.kali.org/)        |             |                 |          |             |
+| Development | OS          | [Linux][kernel] |           | [Mint][linuxmint]                    |             |                 |          |             |
+| Development | OS          | [Linux][kernel] |           | RHEL (Red Hat Enterprise Linux)      |             |                 |          |             |
+| Development | OS          | [Linux][kernel] |           | [Ubuntu][ubuntu]                     |             |                 |          | Recommended |
+| Development | OS          | Unix            |           | [macOS][macos]                       |             | [Apple][apple]  |          |             |
+| Development | OS          | OS/2            |           | [Windows][windows]                   |             | [Microsoft][ms] |          |             |
 
 [⬆️ Back to Table of Content](#table-of-content)
 
@@ -278,6 +283,7 @@ tags: ['technology']
 | --------- | ---------------- | ------------------- | --------- | ------------------------------ | -------------------------- | ----------------- | -------- | ----------- |
 | Front-end | Mobile Framework |                     |           | [Ionic][ionic]                 | [GitHub][gh-ionic]         |                   | [TS][ts] |             |
 | Front-end | Mobile Framework |                     |           | [NativeScript][nativescript]   | [GitHub][gh-nativescript]  | [OpenJS][openjsf] | [TS][ts] |             |
+| Front-end | Mobile Framework |                     |           | [Lynx](https://lynxjs.org/)    |                            |                   |          |             |
 | Front-end | Mobile Framework | [React][react]      |           | [React Native][rn]             | [GitHub][gh-meta-rn]       |                   | C++      |             |
 | Front-end | Mobile Framework | [React Native][rn]  |           | [Expo][expo]                   | [GitHub][gh-expo]          |                   | [TS][ts] | Recommended |
 | Front-end | Mobile Framework | [Svelte.js][svelte] |           | [Svelte Native][svelte-native] | [GitHub][gh-svelte-native] |                   | [TS][ts] |             |
@@ -621,6 +627,7 @@ tags: ['technology']
 | Front-end   | Meta Framework        | SSG                          | [React][react]             | [Gatsby.js][gatsbyjs]                           | [GitHub][gh-gatsby]            | [Netlify][netlify]       | [TS][ts]         |             |
 | Front-end   | Mobile Framework      |                              |                            | [Ionic][ionic]                                  | [GitHub][gh-ionic]             |                          | [TS][ts]         |             |
 | Front-end   | Mobile Framework      |                              |                            | [NativeScript][nativescript]                    | [GitHub][gh-nativescript]      | [OpenJS][openjsf]        | [TS][ts]         |             |
+| Front-end   | Mobile Framework      |                              |                            | [Lynx](https://lynxjs.org/)                     |                                |                          |                  |             |
 | Front-end   | Mobile Framework      | [React][react]               |                            | [React Native][rn]                              | [GitHub][gh-meta-rn]           |                          | C++              |             |
 | Front-end   | Mobile Framework      | [React Native][rn]           |                            | [Expo][expo]                                    | [GitHub][gh-expo]              |                          | [TS][ts]         | Recommended |
 | Front-end   | Mobile Framework      | [Svelte.js][svelte]          |                            | [Svelte Native][svelte-native]                  | [GitHub][gh-svelte-native]     |                          | [TS][ts]         |             |
@@ -634,11 +641,13 @@ tags: ['technology']
 | Front-end   | Library               | Logging                      |                            | npmlog                                          | [GitHub][gh-npmlog]            |                          | [JS][js]         |             |
 | Front-end   | Library               | Authentication               |                            | [JWT][jwt]                                      | [GitHub][gh-jwt]               |                          | [JS][js]         |             |
 | Front-end   | Library               | Authentication               |                            | [NextAuth][next-auth]                           | [GitHub][gh-next-auth]         |                          | [TS][ts]         |             |
+| Front-end   | Library               | Authentication               |                            | [BetterAuth][better-auth]                       |                                |                          |                  |             |
 | Back-end    | Framework             | [GraphQL][graphql]           |                            | [GraphQL][graphql]                              | [GitHub][gh-graphql]           | [Meta][meta]             | [TS][ts]         |             |
 | Back-end    | Framework             | [GraphQL][graphql]           |                            | [Apollo Server][apollo-server]                  | [GitHub][gh-apollo-server]     | [Apollo][apollo]         | [TS][ts]         | Recommended |
 | Back-end    | Framework             | [GraphQL][graphql]           |                            | [Yoga][yoga]                                    | [GitHub][gh-yoga]              |                          | [TS][ts]         |             |
 | Back-end    | Framework             | [GraphQL][graphql]           |                            | [Mercurius][mercurius]                          | [GitHub][gh-mercurius]         |                          | [JS][js]         |             |
 | Back-end    | Framework             | [GraphQL][graphql]           |                            | [Garph][garph]                                  | [GitHub][gh-garph]             |                          | [TS][ts]         |             |
+| Back-end    | Framework             | HTTP                         |                            | [HTTP](https://nodejs.org/api/http.html)        |                                |                          |                  |             |
 | Back-end    | Framework             | HTTP                         |                            | [Express.js][expressjs]                         | [GitHub][gh-express]           | [OpenJS][openjsf]        | [JS][js]         |             |
 | Back-end    | Framework             | HTTP                         |                            | [Hono](https://hono.dev/)                       |                                |                          |                  |             |
 | Back-end    | Framework             | HTTP                         |                            | [Koa][koa]                                      | [GitHub][gh-koa]               |                          | [JS][js]         |             |
@@ -665,6 +674,7 @@ tags: ['technology']
 | Back-end    | Database              | Wide Column                  |                            | [Cassandra][apache-cassandra]                   |                                |                          |                  |             |
 | Back-end    | Database              | Wide Column                  |                            | [HBase][apache-hbase]                           |                                |                          |                  |             |
 | Back-end    | Database              | Documental                   |                            | [CouchDB][apache-couchdb]                       | [GitHub][gh-apache-couchdb]    | [Apache][apache]         | [Erlang][erlang] |             |
+| Back-end    | Database              | Documental                   |                            | [Couchbase](https://www.couchbase.com)          |                                |                          |                  |             |
 | Back-end    | Database              | Documental                   |                            | [MongoDB][mongodb]                              | [GitHub][gh-mongodb]           |                          | C++              |             |
 | Back-end    | Database              | Relational                   |                            | [PostgreSQL][postgresql]                        | [GitHub][gh-postgresql]        |                          | C                | Recommended |
 | Back-end    | Database              | Relational                   |                            | [CockroachDB][cockroachdb]                      | [GitHub][gh-cockroach]         |                          | [Go][go]         |             |
@@ -690,7 +700,7 @@ tags: ['technology']
 | AI          | Deep Learning         | Neural Network               |                            | [Synaptic.js][synaptic.js]                      | [GitHub][gh-synaptic]          |                          | [JS][js]         |             |
 | AI          | LLM                   |                              |                            | [LangChain][langchain]                          |                                |                          |                  |             |
 | AI          | Models                |                              |                            | [HuggingFace][huggingface]                      |                                | [Apache][apache]         |                  |             |
-| DevOps      | Server                |                              |                            | [HTTP][apache-httpd]                            |                                |                          |                  |             |
+| DevOps      | Server                |                              |                            | [HTTPD][apache-httpd]                           |                                |                          |                  |             |
 | DevOps      | Server                |                              |                            | [nginx][nginx]                                  |                                |                          |                  |             |
 | DevOps      | Version Control       | System                       | [Git][git]                 | [BitBucket][bitbucket]                          |                                |                          |                  |             |
 | DevOps      | Version Control       | System                       | [Git][git]                 | [GitHub][github]                                |                                |                          |                  |             |
@@ -702,10 +712,18 @@ tags: ['technology']
 | DevOps      | CI/CD                 |                              |                            | [Harness][harness]                              |                                |                          |                  |             |
 | DevOps      | CI/CD                 |                              |                            | [Jenkins][jenkins]                              |                                |                          |                  |             |
 | DevOps      | CI/CD                 |                              |                            | [Travis][travis-ci]                             |                                |                          |                  |             |
+| DevOps      | Application           | Container                    |                            | [containerd](https://containerd.io/)            |                                |                          |                  |             |
 | DevOps      | Application           | Container                    |                            | [Docker][docker]                                | [GitHub][gh-docker]            |                          |                  |             |
+| DevOps      | Application           | Container                    |                            | [Podman](https://podman.io/)                    |                                |                          |                  |             |
+| DevOps      | Application           | Container                    |                            | [Docker Compose][docker-compose]                |                                |                          |                  |             |
+| DevOps      | Application           | Container                    |                            | [Docker Swarm][docker-swarm]                    |                                |                          |                  |             |
 | DevOps      | Application           | Container Orchestration      |                            | [Kubernetes][kubernetes]                        | [GitHub][gh-kubernetes]        |                          | [Go][go]         |             |
+| DevOps      | Application           | Container Orchestration      |                            | [Nomad](https://www.nomadproject.io/)           |                                |                          |                  |             |
+| DevOps      | Application           | Container Orchestration      |                            | [Rancher](https://www.rancher.com/)             |                                |                          |                  |             |
 | DevOps      | Application           | Secrets                      |                            | [Vault][vault]                                  | [GitHub][gh-vault]             | [HashiCorp][hashicorp]   |                  |             |
 | DevOps      | Application           | IaC                          |                            | [Terraform][terraform]                          | [GitHub][gh-terraform]         | [HashiCorp][hashicorp]   |                  |             |
+| DevOps      | Application           | Static                       |                            | [Cloudflare Pages][cloudflare-pages]            |                                |                          |                  |             |
+| DevOps      | Application           | Static                       |                            | [GitHub Pages][github-pages]                    |                                |                          |                  |             |
 | DevOps      | Application           | Serverless                   |                            | [Cloudflare Workers][cloudflare-workers]        |                                | [Cloudflare][cloudflare] |                  |             |
 | DevOps      | Application           | Serverless                   |                            | [Deno Deploy][deno-deploy]                      |                                |                          |                  |             |
 | DevOps      | Application           | Serverless                   |                            | [Fly][fly]                                      | [GitHub][gh-fly]               | [Fly][fly]               |                  |             |
@@ -714,6 +732,7 @@ tags: ['technology']
 | DevOps      | Application           | SaaS                         | Authentication             | [Auth0][auth0]                                  | [GitHub][gh-auth0]             |                          | [TS][ts]         | Recommended |
 | DevOps      | Application           | SaaS                         | Authentication             | [Clerk][clerk]                                  | [GitHub][gh-clerk]             |                          | [TS][ts]         |             |
 | DevOps      | Application           | SaaS                         | Authentication             | [Keycloak][keycloak]                            | [GitHub][gh-keycloak]          |                          | [Java][java]     |             |
+| DevOps      | Application           | SaaS                         | Authentication             | [Okta][okta]                                    |                                |                          |                  |             |
 | DevOps      | Application           | SaaS                         | Authentication             | [OneLogin][onelogin]                            | [GitHub][gh-onelogin]          |                          | [TS][ts]         |             |
 | DevOps      | Application           | SaaS                         | Authentication             | [OSSO][osso]                                    | [GitHub][gh-osso]              |                          | [TS][ts]         |             |
 | DevOps      | Application           | SaaS                         | Authentication             | [Zitadel][zitadel]                              | [GitHub][gh-zitadel]           |                          | [Go][go]         |             |
@@ -793,6 +812,7 @@ tags: ['technology']
 [aws]: https://aws.amazon.com
 [babel]: https://babeljs.io
 [backbone]: https://backbonejs.org
+[better-auth]: https://www.better-auth.com/
 [biome]: https://biomejs.dev
 [bit]: https://bit.dev
 [bitbucket]: https://bitbucket.org
@@ -810,6 +830,7 @@ tags: ['technology']
 [chromium]: https://www.chromium.org
 [clerk]: https://clerk.com
 [cloudflare]: https://cloudflare.com
+[cloudflare-pages]: https://pages.cloudflare.com/
 [cloudflare-workers]: https://workers.cloudflare.com
 [cockroachdb]: https://www.cockroachlabs.com
 [cors]: https://expressjs.com/en/resources/middleware/cors.html
@@ -823,6 +844,8 @@ tags: ['technology']
 [dgraph]: https://dgraph.io
 [digital-ocean]: https://www.digitalocean.com
 [docker]: http://docker.com
+[docker-compose]: https://docs.docker.com/compose/
+[docker-swarm]: https://docs.docker.com/engine/swarm/
 [docsify]: https://docsify.js.org
 [docusaurus]: https://docusaurus.io
 [dprint]: https://dprint.dev
@@ -850,6 +873,7 @@ tags: ['technology']
 [github]: https://github.com
 [github-actions]: https://github.com/features/actions
 [github-packages]: https://github.com/features/packages
+[github-pages]: https://pages.github.com/
 [gitlab]: https://gitlab.com
 [gitlab-ci]: https://docs.gitlab.com/ee/ci
 [go]: https://go.dev
@@ -940,6 +964,7 @@ tags: ['technology']
 [npmjs]: https://www.npmjs.com
 [nuxt]: https://nuxtjs.org
 [nx]: https://nx.dev
+[okta]: https://www.okta.com/
 [onelogin]: https://developers.onelogin.com
 [openjsf]: https://openjsf.org
 [openshift]: https://www.redhat.com/en/technologies/cloud-computing/openshift
