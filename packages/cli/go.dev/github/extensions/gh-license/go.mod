@@ -3,7 +3,7 @@ module github.com/hieudoanm/gh-license
 go 1.22.2
 
 require (
-	github.com/cli/go-gh/v2 v2.11.2
+	github.com/cli/go-gh/v2 v2.12.0
 	github.com/manifoldco/promptui v0.9.0
 )
 
