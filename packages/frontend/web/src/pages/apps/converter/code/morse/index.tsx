@@ -76,8 +76,8 @@ const MorsePage: NextPage = () => {
 
   return (
     <div className="h-screen w-screen">
-      <div className="grid h-full grid-cols-2 grid-rows-1 md:grid-cols-2 md:grid-rows-1">
-        <div className="col-span-1 row-span-1 h-full">
+      <div className="grid h-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        <div className="col-span-1 row-span-1 h-full bg-gray-100 text-gray-900">
           <textarea
             id="text"
             name="text"
