@@ -18,7 +18,7 @@ const LicensePlatePage: NextPage = () => {
           <div className="h-full w-full p-8">
             <label
               htmlFor="upload-image"
-              className="h-full w-full cursor-pointer border border-dotted text-center">
+              className="flex h-full w-full cursor-pointer items-center justify-center border border-dotted">
               <input
                 type="file"
                 name="image"
@@ -62,7 +62,7 @@ const LicensePlatePage: NextPage = () => {
         </div>
         <div className="col-span-1 row-span-1 h-full bg-gray-900 text-gray-100">
           <div className="h-full w-full bg-gray-900 p-8 text-gray-100">
-            <p>{loading ? 'Loading' : text}</p>
+            <p>{loading ? 'Loading' : (text ?? 'No File Yet')}</p>
           </div>
         </div>
       </div>
