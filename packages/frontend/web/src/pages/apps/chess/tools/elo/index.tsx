@@ -395,7 +395,7 @@ export const EloPage: NextPage = () => {
     <div className="h-auto w-screen overflow-hidden lg:h-screen">
       <div className="grid h-full grid-rows-1 lg:grid-cols-2">
         <div className="row-span-1 lg:col-span-1">
-          <div className="flex h-full w-full items-center">
+          <div className="flex h-full w-full items-center bg-gray-100 text-gray-900">
             <Calculator />
           </div>
         </div>

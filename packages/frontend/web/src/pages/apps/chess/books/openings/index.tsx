@@ -60,7 +60,7 @@ const OpeningsPage: NextPage = () => {
     <div className="h-screen w-screen">
       <div className="grid h-full w-full grid-cols-1 md:grid-cols-2">
         <div className="col-span-1">
-          <div className="flex h-full w-full flex-col items-center justify-center gap-y-4 px-8 py-8 md:px-16 lg:px-32">
+          <div className="flex h-full w-full flex-col items-center justify-center gap-y-4 bg-gray-100 px-8 py-8 text-gray-900 md:px-16 lg:px-32">
             <h1 className="w-full text-center">
               {openingIndex > -1
                 ? (openings.at(openingIndex)?.name ?? 'Opening')

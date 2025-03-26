@@ -103,58 +103,60 @@ const PgnToGifPage: NextPage = () => {
   const boardRef = useRef(null);
 
   return (
-    <div className="container mx-auto px-8">
-      <div className="mx-auto flex h-full max-w-md flex-col items-center justify-center gap-y-4 py-4 md:gap-y-8 md:py-8">
-        <h1 className="text-2xl md:text-4xl">PGN to GIF</h1>
-        <div className="w-full rounded bg-gray-900 p-4 text-red-500">
-          <textarea
-            id="pgn"
-            name="pgn"
-            className="w-full"
-            rows={4}
-            placeholder={initial}
-            value={pgn}
-            onChange={(event) =>
-              setState((previous) => ({
-                ...previous,
-                pgn: event.target.value,
-              }))
-            }
-          />
-        </div>
-        <div
-          ref={boardRef}
-          className="aspect-square w-full overflow-hidden rounded">
-          <Chessboard id="board" position={game.fen()} />
-        </div>
-        <button
-          type="button"
-          className="w-full cursor-pointer rounded bg-gray-900 px-4 py-2 text-red-500"
-          onClick={async () => {
-            const moves = getMovesFromPGN(pgn);
-            const resetGame = new Chess();
-            setGame(resetGame);
-
-            const dataURLs: string[] = [];
-            for (const move of moves) {
-              setGame((previous) => {
-                console.log(previous.fen());
-                const newGame = new Chess(previous.fen());
-                newGame.move(move);
-
-                return new Chess(newGame.fen());
-              });
-              if (boardRef.current) {
-                const canvas = await html2canvas(boardRef.current);
-                const dataURL = canvas.toDataURL('image/png');
-                dataURLs.push(dataURL);
+    <div className="min-h-screen bg-gray-100 text-gray-900">
+      <div className="container mx-auto px-8">
+        <div className="mx-auto flex h-full max-w-md flex-col items-center justify-center gap-y-4 py-4 md:gap-y-8 md:py-8">
+          <h1 className="text-2xl md:text-4xl">PGN to GIF</h1>
+          <div className="w-full rounded bg-gray-900 p-4 text-red-500">
+            <textarea
+              id="pgn"
+              name="pgn"
+              className="w-full"
+              rows={4}
+              placeholder={initial}
+              value={pgn}
+              onChange={(event) =>
+                setState((previous) => ({
+                  ...previous,
+                  pgn: event.target.value,
+                }))
               }
-            }
+            />
+          </div>
+          <div
+            ref={boardRef}
+            className="aspect-square w-full overflow-hidden rounded">
+            <Chessboard id="board" position={game.fen()} />
+          </div>
+          <button
+            type="button"
+            className="w-full cursor-pointer rounded bg-gray-900 px-4 py-2 text-red-500"
+            onClick={async () => {
+              const moves = getMovesFromPGN(pgn);
+              const resetGame = new Chess();
+              setGame(resetGame);
 
-            downloadGIF(dataURLs);
-          }}>
-          {loading ? 'Downloading' : 'Download'}
-        </button>
+              const dataURLs: string[] = [];
+              for (const move of moves) {
+                setGame((previous) => {
+                  console.log(previous.fen());
+                  const newGame = new Chess(previous.fen());
+                  newGame.move(move);
+
+                  return new Chess(newGame.fen());
+                });
+                if (boardRef.current) {
+                  const canvas = await html2canvas(boardRef.current);
+                  const dataURL = canvas.toDataURL('image/png');
+                  dataURLs.push(dataURL);
+                }
+              }
+
+              downloadGIF(dataURLs);
+            }}>
+            {loading ? 'Downloading' : 'Download'}
+          </button>
+        </div>
       </div>
     </div>
   );
