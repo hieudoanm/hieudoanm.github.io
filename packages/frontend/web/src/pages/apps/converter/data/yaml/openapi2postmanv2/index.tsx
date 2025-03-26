@@ -83,8 +83,8 @@ const OpenAPI2PostmanV2Page: NextPage = () => {
 
   return (
     <div className="h-screen w-screen">
-      <div className="grid h-full grid-cols-2">
-        <div className="col-span-1">
+      <div className="grid h-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        <div className="col-span-1 row-span-1 h-full bg-gray-100 text-gray-900">
           <div className="h-full w-full bg-gray-100 text-gray-900">
             <textarea
               id="openapi"
@@ -100,7 +100,7 @@ const OpenAPI2PostmanV2Page: NextPage = () => {
             />
           </div>
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 row-span-1 h-full bg-gray-900 text-gray-100">
           <div className="h-full w-full bg-gray-900 text-gray-100">
             <textarea
               id="postman"
