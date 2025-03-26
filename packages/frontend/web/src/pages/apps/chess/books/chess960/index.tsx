@@ -111,7 +111,7 @@ const Chess960Page: NextPage = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-gray-100">
+    <div className="min-h-screen bg-gray-100 text-gray-900">
       <div className="container mx-auto px-8">
         <div className="flex h-full flex-col items-center justify-center gap-y-4 pt-4 md:gap-y-8 md:pt-8">
           <h1 className="text-2xl md:text-4xl">
