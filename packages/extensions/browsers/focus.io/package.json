@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@eslint/js": "9.23.0",
-    "@types/chrome": "0.0.310",
+    "@types/chrome": "0.0.312",
     "@types/node": "22.13.13",
     "@webpack-cli/generators": "3.0.7",
     "copy-webpack-plugin": "13.0.0",
