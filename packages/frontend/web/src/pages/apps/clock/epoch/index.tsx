@@ -47,14 +47,14 @@ Your Time Zone : ${readableString} GMT+${addZero(timezone)}`;
 
   return (
     <div className="h-screen w-screen">
-      <div className="grid h-full grid-cols-2">
-        <div className="col-span-1">
+      <div className="grid h-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        <div className="col-span-1 row-span-1 h-full bg-gray-100 text-gray-900">
           <textarea
             id="timestamp"
             name="timestamp"
             placeholder="Timestamp"
             value={timestamp}
-            className="h-full w-full bg-gray-100 p-8 text-gray-900"
+            className="h-full w-full p-8"
             onChange={(event) => {
               const newTimestamp: number =
                 parseInt(event.target.value ?? '0', 10) ?? 0;
@@ -75,14 +75,14 @@ Your Time Zone : ${readableString} GMT+${addZero(timezone)}`;
             }}
           />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 row-span-1 h-full bg-gray-900 text-gray-100">
           <textarea
             id="dateTime"
             name="dateTime"
             placeholder="Date Time"
             value={dateString}
-            className="h-full w-full bg-gray-900 p-8 text-gray-100"
-            disabled
+            className="h-full w-full p-8"
+            readOnly
           />
         </div>
       </div>
