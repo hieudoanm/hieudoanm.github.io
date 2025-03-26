@@ -33,7 +33,7 @@
     "package": "rimraf build && mkdir build && vsce package --out \"./build/nothing-vscode-theme-0.0.1.vsix\""
   },
   "devDependencies": {
-    "@vscode/vsce": "3.3.0",
+    "@vscode/vsce": "3.3.1",
     "rimraf": "6.0.1"
   },
   "contributes": {
