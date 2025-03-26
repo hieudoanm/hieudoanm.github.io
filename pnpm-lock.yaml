@@ -658,8 +658,8 @@ importers:
   packages/extensions/vscode/icons:
     devDependencies:
       '@vscode/vsce':
-        specifier: 3.3.0
-        version: 3.3.0
+        specifier: 3.3.1
+        version: 3.3.1
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -667,8 +667,8 @@ importers:
   packages/extensions/vscode/themes:
     devDependencies:
       '@vscode/vsce':
-        specifier: 3.3.0
-        version: 3.3.0
+        specifier: 3.3.1
+        version: 3.3.1
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -3610,8 +3610,8 @@ packages:
   '@vscode/vsce-sign@2.0.5':
     resolution: {integrity: sha512-GfYWrsT/vypTMDMgWDm75iDmAOMe7F71sZECJ+Ws6/xyIfmB3ELVnVN+LwMFAvmXY+e6eWhR2EzNGF/zAhWY3Q==}
 
-  '@vscode/vsce@3.3.0':
-    resolution: {integrity: sha512-HA/pUyvh/TQWkc4wG7AudPIWUvsR8i4jiWZZgM/a69ncPi9Nm5FDogf/wVEk4EWJs4/UdxU7J6X18dfAwfPbxA==}
+  '@vscode/vsce@3.3.1':
+    resolution: {integrity: sha512-aZ+0UilLsSidWcY6qjQRmsNgJXfFvE3ihj0u9oNLMejFGBBYORTRua0KHx3kx+RW5pxvza2OepzTpct2OdhTUA==}
     engines: {node: '>= 20'}
     hasBin: true
 
@@ -12981,7 +12981,7 @@ snapshots:
       '@vscode/vsce-sign-win32-arm64': 2.0.2
       '@vscode/vsce-sign-win32-x64': 2.0.2
 
-  '@vscode/vsce@3.3.0':
+  '@vscode/vsce@3.3.1':
     dependencies:
       '@azure/identity': 4.7.0
       '@vscode/vsce-sign': 2.0.5
