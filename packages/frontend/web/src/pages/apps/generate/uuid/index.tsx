@@ -27,7 +27,7 @@ const UuidPage: NextPage = () => {
   }, []);
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center p-8">
+    <div className="flex h-screen w-screen items-center justify-center bg-gray-100 p-8 text-gray-900">
       <div className="flex flex-col gap-y-2">
         <div className="flex items-center gap-2 rounded-full bg-gray-900 text-gray-100 md:flex-row">
           <div className="flex aspect-square h-full items-center pl-4">NIL</div>

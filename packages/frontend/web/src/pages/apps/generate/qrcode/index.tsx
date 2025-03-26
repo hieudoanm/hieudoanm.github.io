@@ -30,31 +30,29 @@ const QRCodePage: NextPage = () => {
 
   return (
     <div className="h-screen w-screen">
-      <div className="grid h-full grid-cols-1 md:grid-cols-2">
-        <div className="col-span-1 bg-gray-100 text-gray-900">
-          <div className="h-full p-8 md:p-16 lg:p-32">
-            <textarea
-              id="text"
-              name="text"
-              placeholder="Text"
-              className="h-full w-full rounded bg-gray-900 p-4 text-gray-100"
-              value={text}
-              onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
-                const text: string = event.target.value;
-                if (text.length > 0) {
-                  const qr: string = await toDataURL(text, {
-                    errorCorrectionLevel: 'H',
-                    type: 'image/jpeg',
-                    width: 512,
-                    margin: 1,
-                  });
-                  setTextQR({ qr, text });
-                }
-              }}
-            />
-          </div>
+      <div className="grid h-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        <div className="col-span-1 row-span-1 h-full bg-gray-100 text-gray-900">
+          <textarea
+            id="text"
+            name="text"
+            placeholder="Text"
+            className="h-full w-full p-8 md:p-16 lg:p-32"
+            value={text}
+            onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
+              const text: string = event.target.value;
+              if (text.length > 0) {
+                const qr: string = await toDataURL(text, {
+                  errorCorrectionLevel: 'H',
+                  type: 'image/jpeg',
+                  width: 512,
+                  margin: 1,
+                });
+                setTextQR({ qr, text });
+              }
+            }}
+          />
         </div>
-        <div className="col-span-1 bg-gray-900 text-gray-100">
+        <div className="col-span-1 row-span-1 h-full bg-gray-900 text-gray-100">
           <div className="p-8 md:p-16 lg:p-32">
             <button
               type="button"
