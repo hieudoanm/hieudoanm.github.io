@@ -2,7 +2,7 @@
   "name": "hieudoanm.github.io",
   "version": "0.0.1",
   "description": "hieudoanm",
-  "packageManager": "pnpm@10.6.5",
+  "packageManager": "pnpm@10.7.0",
   "main": "index.js",
   "directories": {
     "doc": "docs"
