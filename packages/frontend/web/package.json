@@ -54,7 +54,7 @@
     "showdown": "2.1.0",
     "tesseract.js": "6.0.0",
     "uuid": "11.1.0",
-    "yaml": "2.7.0"
+    "yaml": "2.7.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
