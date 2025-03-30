@@ -9,7 +9,7 @@ import Head from 'next/head';
 const queryClient = new QueryClient();
 
 const mono = Geist_Mono({
-  weight: ['400', '700'],
+  weight: ['100', '900'],
   style: ['normal'],
   subsets: ['latin'],
   display: 'swap',
