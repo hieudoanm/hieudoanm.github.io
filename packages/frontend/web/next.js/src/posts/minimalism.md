@@ -46,15 +46,15 @@ date: '2025-03-25'
 ## Technology
 
 - [ ] 04 Laptop Related
-  - [x] 01 Laptop
+  - [x] 01 13-inch Laptop
     - Options:
       - ASUS
       - MacOS
   - [x] 01 Laptop Charger
   - [ ] 01 Laptop Mouse
-  - [x] 01 Remote Screen
+  - [x] 01 26-inch Screen
 - [x] 03 Phone Related
-  - [x] 01 Phone
+  - [x] 01 6-inch Phone
     - Options:
       - Nothing
       - Apple
@@ -62,10 +62,10 @@ date: '2025-03-25'
   - [x] 01 Phone Charger
   - [x] 01 Portable Battery
 - [ ] 04 Tablet Related
-  - [ ] 01 Tablet
-  - [ ] 02 Tablet Charger
-  - [ ] 03 Tablet Keyboard
-  - [ ] 04 Tablet Pen
+  - [ ] 01 10-inch Tablet
+  - [ ] 01 Tablet Charger
+  - [ ] 01 Tablet Keyboard
+  - [ ] 01 Tablet Pen
 - [x] 01 Smart Watch
 - [x] 01 Camera
 - [x] 01 Speaker
