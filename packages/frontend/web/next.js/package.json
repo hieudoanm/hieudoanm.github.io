@@ -1,8 +1,11 @@
 {
-  "name": "@nothing/web",
+  "name": "@nothing/web-next",
   "version": "0.0.1",
-  "description": "Web",
+  "description": "Web - Next.js",
   "main": "index.js",
+  "keywords": [
+    "next.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
@@ -87,8 +90,5 @@
     "ts-jest": "29.3.0",
     "ts-node": "10.9.2",
     "typescript": "5.8.2"
-  },
-  "keywords": [
-    "apps"
-  ]
+  }
 }

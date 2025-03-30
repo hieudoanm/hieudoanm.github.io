@@ -73,4 +73,6 @@ const HomePage = (): JSX.Element => {
   );
 };
 
+export const prerender = true;
+
 export default HomePage;

@@ -1,13 +1,24 @@
 {
-  "name": "solid.js",
+  "name": "@nothing/web-solid",
   "version": "0.0.1",
-  "description": "",
+  "description": "Web - Solid.js",
   "main": "index.js",
-  "keywords": [],
+  "keywords": [
+    "solid.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io#readme",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
-  "packageManager": "pnpm@10.7.0",
   "type": "module",
+  "packageManager": "pnpm@10.7.0",
+  "private": true,
   "scripts": {
     "format": "prettier --cache --write .",
     "predev": "kill-port 3000",
