@@ -5,58 +5,75 @@
 - [Front-end](#front-end)
   - [Table of Content](#table-of-content)
   - [Daily Driver](#daily-driver)
-    - [Best Techstack and Alternative](#best-techstack-and-alternative)
-  - [Frameworks](#frameworks)
-    - [Web](#web)
-    - [Mobile](#mobile)
-    - [Desktop](#desktop)
+    - [Daily Driver and Potential Alternative](#daily-driver-and-potential-alternative)
+  - [Engine vs Runtime vs Package Registry vs Package Manager](#engine-vs-runtime-vs-package-registry-vs-package-manager)
+  - [Front-end Framework](#front-end-framework)
+    - [Web Framework](#web-framework)
+    - [Mobile Framework](#mobile-framework)
+    - [Desktop Framework](#desktop-framework)
+  - [Back-end for Front-end](#back-end-for-front-end)
+    - [Database and ORM](#database-and-orm)
   - [Abbreviation](#abbreviation)
 
 ## Daily Driver
 
-1. Linter - [ESLint][eslint]: Considering switching to Biome
-2. Formatter - [Prettier][prettier]: Considering switching to Biome
-3. Testing - [Jest.js][jest.js]: Work well with [React][react]
-4. Build Tools - [Turbo][turbo]: Work well with [Next.js][next.js]
-5. CSS in JS - [TailwindCSS][tailwindcss]: Easy-to-use
-6. UI Components - [DaisyUI][daisyui]: Based on [TailwindCSS][tailwindcss]
-7. State Management - [Zustand][zustand]: Most Modern Solution
-8. Web - SSG - [Docusaurus][docusaurus]: Backed by [Meta][meta]
-9. Web - SSR - [Next.js][next.js]: Backed by [Vercel][vercel] and Based on [React][react], which is Backed by [Meta][meta]
-10. Mobile - [Lynx][lynx]: Based on [React][react] and Backed by [ByteDance][bytedance]
-11. Desktop - [Tauri][tauri]: Best Native Performance and Lightweight
-12. Back-end - [tRPC][trpc]: Work seamlessly with [Next.js][next.js]
-13. ORM - [Prisma][prisma]: Easy-to-use
-14. Database - [PostgreSQL][postgresql]: Best Database
-15. Static - [GitHub Pages][gh-pages]: Easy and Free to Use
-16. Serverless - [Vercel][vercel]: Work well with [Next.js][next.js]
+1. **Runtime** - [Node.js][node.js]: Most Popular and Active Community
+2. **Package Registry** - [npm][npm]: Most Popular and Active Registry
+3. **Package Manager** - [pnpm][pnpm]: Best Performance Manager
+4. **Linter** - [ESLint][eslint]: Considering switching to Biome
+5. **Formatter** - [Prettier][prettier]: Considering switching to Biome
+6. **Testing** - [Jest.js][jest.js]: Work well with [React][react]
+7. **Build Tools** - [Turbo][turbo]: Work well with [Next.js][next.js]
+8. **CSS in JS** - [TailwindCSS][tailwindcss]: Easy-to-use
+9. **UI Components** - [DaisyUI][daisyui]: Based on [TailwindCSS][tailwindcss]
+10. **State Management** - [Zustand][zustand]: Most Modern Solution
+11. **Web** - [React][react]: Backed by [Meta][meta]
+12. **Web (SSG)** - [Docusaurus][docusaurus]: Based on [React][react] and Backed by [Meta][meta]
+13. **Web (SSR)** - [Next.js][next.js]: Based on [React][react] and Backed by [Vercel][vercel]
+14. **Mobile** - [Lynx][lynx]: Based on [React][react] and Backed by [ByteDance][bytedance]
+15. **Desktop** - [Tauri][tauri]: Best Native Performance and Lightweight
+16. **Back-end** - [tRPC][trpc]: Work seamlessly with [Next.js][next.js]
+17. **ORM** - [Prisma][prisma]: Easy-to-use and Support Most Databases
+18. **Database** - [PostgreSQL][postgresql]: Most Advanced Relational Database
+19. **Static** - [GitHub Pages][gh-pages]: Easy and Free to Use
+20. **Serverless** - [Vercel][vercel]: Work Well with [Next.js][next.js]
 
-### Best Techstack and Alternative
+### Daily Driver and Potential Alternative
 
-| No. | Category  | Subcategory          | Winner                     | Runner-up                            |
-| --- | --------- | -------------------- | -------------------------- | ------------------------------------ |
-| 01  | Dev Tool  | Linter               | [ESLint][eslint]           | [Biome.js][biome.js]                 |
-| 02  | Dev Tool  | Formatter            | [Prettier][prettier]       | [Biome.js][biome.js]                 |
-| 03  | Dev Tool  | Testing              | [Jest.js][jest.js]         | [Vitest][vitest]                     |
-| 04  | Dev Tool  | Build Tools          | [Turbo][turbo]             | [Vite][vite]                         |
-| 05  | Supported | CSS in JS            | [TailwindCSS][tailwindcss] | [Bootstrap][bootstrap]               |
-| 06  | Supported | UI Components        | [DaisyUI][daisyui]         | [shadcn/ui][shadcn]                  |
-| 07  | Supported | State Management     | [Zustand][zustand]         | [Jotai][jotai]                       |
-| 08  | Framework | **Web - Overall**    | [React][react]             | [Vue][vue]                           |
-| 09  | Framework | **Web - Performace** | [Solid][solid]             | [Svelte][svelte]                     |
-| 10  | Framework | Web - SSG            | [Docusaurus][docusaurus]   | [Astro][astro]                       |
-| 11  | Framework | Web - SSR            | [Next.js][next.js]         | [SolidStart][solid-start]            |
-| 12  | Framework | [Mobile](#mobile)    | [Lynx][lynx]               | [Expo][expo]                         |
-| 13  | Framework | [Desktop](#desktop)  | [Tauri][tauri]             | [Wails][wails]                       |
-| 14  | Back-end  | Framework            | [tRPC][trpc]               | [GraphQL][graphql]                   |
-| 15  | Back-end  | ORM                  | [Prisma][prisma]           | [Drizzle][drizzle]                   |
-| 16  | Back-end  | Database             | [PostgreSQL][postgresql]   | [MongoDB][mongodb]                   |
-| 17  | Hosting   | Static               | [GitHub Pages][gh-pages]   | [Cloudflare Pages][cloudflare-pages] |
-| 18  | Hosting   | Serverless           | [Vercel][vercel]           | [Netlify][netlify]                   |
+| No. | Category  | Subcategory                                                                   | Winner                                  | Runner-up                                      |
+| --- | --------- | ----------------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
+| 01  | Dev Tool  | [Runtime](#engine-vs-runtime-vs-package-registry-vs-package-manager)          | [Node.js][node.js]                      | [Deno][deno]                                   |
+| 02  | Dev Tool  | [Package Registry](#engine-vs-runtime-vs-package-registry-vs-package-manager) | [npm][npm]                              | [JSR][jsr]                                     |
+| 03  | Dev Tool  | [Package Manager](#engine-vs-runtime-vs-package-registry-vs-package-manager)  | [pnpm][pnpm]                            | [yarn][yarn]                                   |
+| 04  | Dev Tool  | Linter                                                                        | [ESLint][eslint]                        | [Biome.js][biome.js]                           |
+| 05  | Dev Tool  | Formatter                                                                     | [Prettier][prettier]                    | [Biome.js][biome.js]                           |
+| 06  | Dev Tool  | Testing                                                                       | [Jest.js][jest.js]                      | [Vitest][vitest]                               |
+| 07  | Dev Tool  | Build Tools                                                                   | [Turbo][turbo]                          | [Vite][vite]                                   |
+| 08  | Supported | CSS in JS                                                                     | [TailwindCSS][tailwindcss]              | [Bootstrap][bootstrap]                         |
+| 09  | Supported | UI Components                                                                 | [DaisyUI][daisyui]                      | [shadcn/ui][shadcn]                            |
+| 10  | Supported | State Management                                                              | [Zustand][zustand]                      | [Jotai][jotai]                                 |
+| 11  | Framework | [Web](#web-framework)                                                         | [React][react] / [Vue][vue] (Community) | [Solid][solid] / [Svelte][svelte] (Performace) |
+| 12  | Framework | [Web - SSG](#web-framework)                                                   | [Docusaurus][docusaurus]                | [Astro][astro]                                 |
+| 13  | Framework | [Web - SSR](#web-framework)                                                   | [Next.js][next.js]                      | [SolidStart][solid-start]                      |
+| 14  | Framework | [Mobile](#mobile-framework)                                                   | [Lynx][lynx]                            | [Expo][expo]                                   |
+| 15  | Framework | [Desktop](#desktop-framework)                                                 | [Tauri][tauri]                          | [Wails][wails]                                 |
+| 16  | BFF       | Framework                                                                     | [tRPC][trpc]                            | [GraphQL][graphql]                             |
+| 17  | BFF       | ORM                                                                           | [Prisma][prisma]                        | [Drizzle][drizzle]                             |
+| 18  | BFF       | Database                                                                      | [PostgreSQL][postgresql] (Relational)   | [MongoDB][mongodb] (Documental)                |
+| 19  | Hosting   | Static                                                                        | [GitHub Pages][gh-pages]                | [Cloudflare Pages][cloudflare-pages]           |
+| 20  | Hosting   | Serverless                                                                    | [Vercel][vercel]                        | [Netlify][netlify]                             |
 
-## Frameworks
+## Engine vs Runtime vs Package Registry vs Package Manager
 
-### Web
+| No  | Engine                           | Runtime            | Package Registry (Built-in) | Package Registry (External) | Package Manager (Built-in) | Package Manager (External)  |
+| --- | -------------------------------- | ------------------ | --------------------------- | --------------------------- | -------------------------- | --------------------------- |
+| 01  | [V8][v8]                         | [Node.js][node.js] |                             | [npm][npm]                  | [npm][npm]                 | [pnpm][pnpm] / [yarn][yarn] |
+| 02  | [V8][v8]                         | [Deno][deno]       | [Deno][deno]                | [JSR][jsr]                  | [Deno][deno]               |                             |
+| 03  | [JavaScriptCore][javascriptcore] | [Bun][bun]         | [Bun][bun]                  | [JSR][jsr]                  | [Bun][bun]                 |                             |
+
+## Front-end Framework
+
+### Web Framework
 
 | No  | Type        | Framework          | SSR                        | SSG                      | Maintainer (Invidual)          | Maintainer (Company)            |
 | --- | ----------- | ------------------ | -------------------------- | ------------------------ | ------------------------------ | ------------------------------- |
@@ -67,7 +84,7 @@
 | 05  | JSX         | [Solid.js][solid]  | [SolidStart][solid-start]  |                          | [Ryan Carniato][ryan-carniato] | [Netlify][netlify]              |
 | 06  | Multi Model |                    |                            | [Astro][astro]           |                                |                                 |
 
-### Mobile
+### Mobile Framework
 
 | No  | Type                    | Model                        | Framework                     | Maintainer               |
 | --- | ----------------------- | ---------------------------- | ----------------------------- | ------------------------ |
@@ -78,7 +95,7 @@
 | 05  | WebView + Native Bridge | Multi Model                  | [Ionic][ionic]                | [Ionic Team][ionic-team] |
 | 06  | WebView + Native Bridge | [Vue.js][vue]                | [Quasar][quasar]              |                          |
 
-### Desktop
+### Desktop Framework
 
 | No  | Engine   | Native      | Language   | Framework                  |
 | --- | -------- | ----------- | ---------- | -------------------------- |
@@ -86,12 +103,32 @@
 | 02  | WebView  | Direct OS   | Go         | [Wails][wails]             |
 | 03  | Chromium | Node.js API | TypeScript | [Electron.js][electron.js] |
 
+## Back-end for Front-end
+
+### Database and ORM
+
+| No  | Paradigm   | Database    | Prisma      | Drizzle     | Hosting          |
+| --- | ---------- | ----------- | ----------- | ----------- | ---------------- |
+| 01  | Documental | DynamoDB    |             |             | AWS DynamoDB     |
+| 02  | Documental | MongoDB     | `Supported` |             | MongoDB Atlas    |
+| 03  | Relational | CockroachDB | `Supported` |             | CockroachDB Labs |
+| 04  | Relational | libSQL      |             | `Supported` | Turso            |
+| 05  | Relational | MariaDB     | `Supported` |             |                  |
+| 06  | Relational | MS SQL      | `Supported` |             |                  |
+| 07  | Relational | MySQL       | `Supported` | `Supported` | PlanetScale      |
+| 08  | Relational | PostgreSQL  | `Supported` | `Supported` | Neon / Supabase  |
+| 09  | Relational | SQLite      | `Supported` | `Supported` | Cloudflare D1    |
+
 ## Abbreviation
 
+- `BFF`: Back-end for Front-end
 - `CSS`: Cascading Style Sheets
 - `HTML`: HyperText Markup Language
 - `JS`: JavaScript
+- `JSR`: JavaScript Registry
 - `JSX`: JavaScript XML
+- `npm`: Node.js Package Manager
+- `pnpm`: Performant Node Package Manager
 - `ORM`: Object Relational Mapping
 - `SSG`: Static Site Generation
 - `SSR`: Server-side Rendering
@@ -102,10 +139,12 @@
 [astro]: https://astro.build/
 [biome.js]: https://biomejs.dev/
 [bootstrap]: https://getbootstrap.com/
+[bun]: https://bun.sh/
 [bytedance]: https://www.bytedance.com/
 [capacitor.js]: https://capacitorjs.com/
 [cloudflare-pages]: https://pages.cloudflare.com/
 [daisyui]: https://daisyui.com/
+[deno]: https://deno.com/
 [docusaurus]: https://docusaurus.io/
 [drizzle]: https://orm.drizzle.team/
 [electron.js]: https://www.electronjs.org/
@@ -116,15 +155,20 @@
 [graphql]: https://graphql.org/
 [ionic]: https://ionicframework.com/
 [ionic-team]: https://github.com/ionic-team
+[javascriptcore]: https://developer.apple.com/documentation/javascriptcore
 [jest.js]: https://jestjs.io/
 [jotai]: https://jotai.org/
+[jsr]: https://jsr.io/
 [lynx]: https://lynxjs.org/
 [meta]: https://developers.facebook.com/
 [mongodb]: https://www.mongodb.com/
 [native-script]: https://nativescript.org/
 [netlify]: https://www.netlify.com/
 [next.js]: https://nextjs.org/
+[node.js]: https://nodejs.org/
+[npm]: https://www.npmjs.com/
 [nuxt]: https://nuxt.com/
+[pnpm]: https://pnpm.io/
 [postgresql]: https://www.postgresql.org/
 [prettier]: https://prettier.io/
 [prisma]: https://www.prisma.io/
@@ -142,10 +186,12 @@
 [tauri]: https://v2.tauri.app/
 [trpc]: https://trpc.io/
 [turbo]: https://turbo.build
+[v8]: https://v8.dev/
 [vercel]: https://vercel.com
 [vite]: https://vite.dev/
 [vitest]: https://vitest.dev/
 [vite-press]: https://vitepress.dev/
 [vue]: https://vuejs.org/
 [wails]: https://wails.io/
+[yarn]: https://yarnpkg.com/
 [zustand]: https://zustand-demo.pmnd.rs/
