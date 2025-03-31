@@ -207,8 +207,8 @@ importers:
   packages/backend/server/node.js/youtube.com:
     dependencies:
       '@distube/ytdl-core':
-        specifier: 4.16.5
-        version: 4.16.5
+        specifier: 4.16.6
+        version: 4.16.6
       ip:
         specifier: 2.0.1
         version: 2.0.1
@@ -1858,8 +1858,8 @@ packages:
     resolution: {integrity: sha512-4B4OijXeVNOPZlYA2oEwWOTkzyltLao+xbotHQeqN++Rv27Y6s818+n2Qkp8q+Fxhn0t/5lA5X1Mxktud8eayQ==}
     engines: {node: '>=14.17.0'}
 
-  '@distube/ytdl-core@4.16.5':
-    resolution: {integrity: sha512-sl84k2iNVJSiONR+ZpXJOYKBqx4wnH/VrNClsQbMR7fIveBxLZnd6eBRP8IE6mwyaJTbbc7JEHarGB2i8eNH6A==}
+  '@distube/ytdl-core@4.16.6':
+    resolution: {integrity: sha512-+K88E2FRk/QPSC3l/U/qNq2LO0hPmFnDmK8CHK1Pzwh530aSacTLBhuZPgtoJAwNNncaTkmskP6lXoaw2eZjQw==}
     engines: {node: '>=20.18.1'}
 
   '@emnapi/runtime@1.3.1':
@@ -12113,7 +12113,7 @@ snapshots:
 
   '@discoveryjs/json-ext@0.6.3': {}
 
-  '@distube/ytdl-core@4.16.5':
+  '@distube/ytdl-core@4.16.6':
     dependencies:
       http-cookie-agent: 6.0.8(tough-cookie@5.1.2)(undici@7.4.0)
       https-proxy-agent: 7.0.6
@@ -16543,7 +16543,7 @@ snapshots:
       '@typescript-eslint/parser': 8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)
       eslint: 9.23.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.8.3(eslint-plugin-import@2.31.0)(eslint@9.23.0(jiti@2.4.2))
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-typescript@3.8.3)(eslint@9.23.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.23.0(jiti@2.4.2))
       eslint-plugin-react: 7.37.4(eslint@9.23.0(jiti@2.4.2))
@@ -16563,7 +16563,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0)(eslint@9.23.0(jiti@2.4.2)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.0(supports-color@8.1.1)
@@ -16578,14 +16578,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.3)(eslint@9.23.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)
       eslint: 9.23.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.8.3(eslint-plugin-import@2.31.0)(eslint@9.23.0(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -16600,7 +16600,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.23.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.3)(eslint@9.23.0(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
