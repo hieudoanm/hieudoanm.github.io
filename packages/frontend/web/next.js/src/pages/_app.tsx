@@ -32,7 +32,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <title>HIEU</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#101828" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <div className={mono.className}>
