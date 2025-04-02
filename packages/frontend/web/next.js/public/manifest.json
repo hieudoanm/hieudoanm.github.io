@@ -3,12 +3,28 @@
   "name": "Nothing",
   "short_name": "Nothing",
   "description": "A Nothing Progressive Web App",
-  "start_url": "/",
   "display": "fullscreen",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "portrait",
-  "categories": ["design"],
+  "categories": ["design", "app"],
+  "start_url": "https://hieudoanm.github.io/",
+  "scope": "https://hieudoanm.github.io/",
+  "shortcuts": [
+    {
+      "name": "Applications",
+      "short_name": "Apps",
+      "description": "Apps",
+      "url": "/apps",
+      "icons": [
+        {
+          "src": "/icons/icon-128x128.png",
+          "sizes": "128x128",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
   "icons": [
     {
       "src": "/icons/icon-128x128.png",
