@@ -1,7 +1,7 @@
 module github.com/hieudoanm/reverse-proxy
 
 go 1.23.6
-toolchain go1.24.1
+toolchain go1.24.2
 
 require github.com/gin-gonic/gin v1.10.0
 
