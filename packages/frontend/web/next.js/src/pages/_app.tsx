@@ -5,6 +5,7 @@ import 'github-markdown-css/github-markdown.css';
 import type { AppProps } from 'next/app';
 import { Geist_Mono } from 'next/font/google';
 import Head from 'next/head';
+import { FC, useEffect } from 'react';
 
 const queryClient = new QueryClient();
 
@@ -15,11 +16,24 @@ const mono = Geist_Mono({
   display: 'swap',
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+const App: FC<AppProps> = ({ Component, pageProps }) => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch((error) =>
+          console.log('Service Worker registration failed:', error)
+        );
+    }
+  }, []);
+
   return (
     <>
       <Head>
         <title>HIEU</title>
+        <link rel="manifest" href={`${BASE_PATH}/manifest.json`} />
+        <meta name="theme-color" content="#000000" />
         <link
           rel="icon"
           type="image/x-icon"
@@ -33,4 +47,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
     </>
   );
-}
+};
+
+export default App;
