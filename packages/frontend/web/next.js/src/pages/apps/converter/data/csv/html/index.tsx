@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { BASE_PATH } from '@web/environments/environments';
 import { csv2json, csv2md, csv2sql } from '@web/utils/csv';
 import { copyToClipboard } from '@web/utils/navigator';
 import type { NextPage } from 'next';
@@ -66,7 +65,7 @@ const CsvPage: NextPage = () => {
   const getFile = async (file: string) => {
     let fileCSV: string = initialCSV;
     if (file !== '') {
-      const response = await fetch(`${BASE_PATH}/${file}`);
+      const response = await fetch(`/${file}`);
       fileCSV = await response.text();
     }
     const fileData: Record<string, string>[] = csv2json(fileCSV, { delimiter });

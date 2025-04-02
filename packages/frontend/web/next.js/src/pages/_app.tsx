@@ -1,4 +1,3 @@
-import { BASE_PATH } from '@web/environments/environments';
 import '@web/styles/globals.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import 'github-markdown-css/github-markdown.css';
@@ -32,13 +31,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>HIEU</title>
-        <link rel="manifest" href={`${BASE_PATH}/manifest.json`} />
+        <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
-        <link
-          rel="icon"
-          type="image/x-icon"
-          href={`${BASE_PATH}/favicon.ico`}
-        />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <div className={mono.className}>
         <QueryClientProvider client={queryClient}>
