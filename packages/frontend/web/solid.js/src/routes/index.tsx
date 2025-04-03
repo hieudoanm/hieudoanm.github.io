@@ -50,13 +50,6 @@ const HomePage = (): JSX.Element => {
               icon: <></>,
               target: '_blank',
             },
-            {
-              id: 'instagram',
-              href: 'https://instagram.com/hieudoanmm',
-              name: 'Instagram',
-              icon: <></>,
-              target: '_blank',
-            },
           ].map(({ href, name, icon, target = '_self' }) => {
             return (
               <div class="flex items-center gap-x-1 border-b border-dotted">

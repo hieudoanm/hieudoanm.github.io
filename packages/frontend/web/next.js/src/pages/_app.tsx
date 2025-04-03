@@ -30,7 +30,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>HIEU</title>
+        <title>Nothing</title>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#f3f4f6" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
