@@ -7,6 +7,6 @@ vet:
 build:
 	go fmt ./...
 	go vet ./...
-	go build -o ./bin/hieu ./main.go
-	sudo rm -rf /usr/local/bin/hieu
-	sudo cp ./bin/hieu /usr/local/bin/
+	go build -o ./bin/nothing ./main.go
+	sudo rm -rf /usr/local/bin/nothing
+	sudo cp ./bin/nothing /usr/local/bin/

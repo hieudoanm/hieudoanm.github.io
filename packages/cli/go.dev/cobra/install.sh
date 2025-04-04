@@ -8,8 +8,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Define variables
-BIN_NAME="hieu"  # Change this to your binary name
-GITHUB_RAW_URL="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/cli/go/cobra/bin/hieu"  # Update this URL
+BIN_NAME="nothing"  # Change this to your binary name
+GITHUB_RAW_URL="https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/cli/go/cobra/bin/nothing"  # Update this URL
 
 # Ensure BIN_NAME is not empty
 if [[ -z "$BIN_NAME" ]]; then

@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"hieu-cli/utils"
+	"nothing-cli/utils"
 )
 
 // SetResponse ...

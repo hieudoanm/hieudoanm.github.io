@@ -3,9 +3,9 @@ package cmd
 
 import (
 	"fmt"
-	"hieu-cli/data"
-	"hieu-cli/utils"
 	"math/rand"
+	"nothing-cli/data"
+	"nothing-cli/utils"
 
 	"github.com/spf13/cobra"
 )
