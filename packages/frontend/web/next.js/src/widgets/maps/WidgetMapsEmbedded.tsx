@@ -1,4 +1,4 @@
-import { useGeolocation } from '@web/hooks/use-geolocation';
+import { useGeolocation } from '@web/hooks/window/navigator/use-geolocation';
 import { FC } from 'react';
 
 export const WidgetMapsEmbedded: FC = () => {

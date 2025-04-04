@@ -1,9 +1,9 @@
-import { useBrowser } from '@web/hooks/use-browser';
-import { useScreenSize } from '@web/hooks/use-screen-size';
+import { useBrowser } from '@web/hooks/window/navigator/use-browser';
+import { useWindowSize } from '@web/hooks/window/use-size';
 import { NextPage } from 'next';
 
 const ScreenPage: NextPage = () => {
-  const { width, height } = useScreenSize();
+  const { width = 0, height = 0 } = useWindowSize();
   const { browser } = useBrowser();
 
   return (

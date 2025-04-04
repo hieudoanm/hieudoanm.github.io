@@ -1,4 +1,4 @@
-import { useGeolocation } from '@web/hooks/use-geolocation';
+import { useGeolocation } from '@web/hooks/window/navigator/use-geolocation';
 import { FC } from 'react';
 import { FaLocationDot } from 'react-icons/fa6';
 

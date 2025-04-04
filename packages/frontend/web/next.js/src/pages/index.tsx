@@ -2,11 +2,11 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import {
   FaAppStoreIos,
-  FaChessKnight,
   FaFileWord,
   FaLinkedin,
   FaSquareGithub,
   FaSquareTwitter,
+  FaWindowRestore,
 } from 'react-icons/fa6';
 
 const HomePage: NextPage = () => {
@@ -31,10 +31,10 @@ const HomePage: NextPage = () => {
               target: '_self',
             },
             {
-              id: 'chess',
-              href: 'https://www.chess.com/member/redeyesdarknessmetaldrago',
-              name: 'Chess',
-              icon: <FaChessKnight />,
+              id: 'widgets',
+              href: '/widgets',
+              name: 'Widgets',
+              icon: <FaWindowRestore />,
               target: '_blank',
             },
             {
