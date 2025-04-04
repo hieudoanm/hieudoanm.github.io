@@ -9,7 +9,7 @@ date: '2025-04-04'
 
 - [Techstack](#techstack)
   - [Table of Content](#table-of-content)
-  - [Front-end](#front-end)
+  - [Full-stack Software](#full-stack-software)
     - [Daily Driver](#daily-driver)
       - [Daily Driver and Potential Alternative](#daily-driver-and-potential-alternative)
     - [Engine vs Runtime vs Package Registry vs Package Manager](#engine-vs-runtime-vs-package-registry-vs-package-manager)
@@ -19,9 +19,10 @@ date: '2025-04-04'
       - [Desktop Framework](#desktop-framework)
     - [Back-end for Front-end](#back-end-for-front-end)
       - [Database and ORM](#database-and-orm)
+    - [Data Science](#data-science)
   - [Abbreviation](#abbreviation)
 
-## Front-end
+## Full-stack Software
 
 ### Daily Driver
 
@@ -127,6 +128,23 @@ date: '2025-04-04'
 | 08  | Relational | PostgreSQL  | `Supported` | `Supported` | Neon / Supabase  |
 | 09  | Relational | SQLite      | `Supported` | `Supported` | Cloudflare D1    |
 
+### Data Science
+
+[Python](https://www.python.org)
+
+| No  | Group    | Subgroup       | Name                        | GitHub                      | Language |
+| --- | -------- | -------------- | --------------------------- | --------------------------- | -------- |
+| 01  | Code     | Format         | 💅 [Black][black]           | [GitHub][github-black]      | Python   |
+| 02  | Code     | Lint           | 🧰 [Ruff][ruff]             | [GitHub][github-ruff]       | Rust     |
+| 03  | Data     |                | 🗃️ [Pandas][pandas]         | [GitHub][github-pandas]     | Python   |
+| 04  | Data     |                | 🧮 [NumPy][numpy]           | [GitHub][github-numpy]      | Python   |
+| 05  | Back-end | Framework      | 🚀 [FastAPI][fastapi]       | [GitHub][github-fastapi]    | Python   |
+| 06  | Back-end | ORM            | 🔌 [SQLAlchemy][sqlalchemy] | [GitHub][github-sqlalchemy] | Python   |
+| 07  | Notebook | Visualisation  | 📈 [Plotly][plotly]         | [GitHub][github-plotly]     | Python   |
+| 08  | Notebook | Vision         | 👁️ [OpenCV][opencv]         | [GitHub][github-opencv]     | C++      |
+| 09  | Notebook | Language       | 💬 [NLTK][nltk]             | [GitHub][github-nltk]       | Python   |
+| 10  | Notebook | Neural Network | 🧠 [TensorFlow][tensorflow] | [GitHub][github-tensorflow] | C++      |
+
 ## Abbreviation
 
 - `BFF`: Back-end for Front-end
@@ -203,3 +221,23 @@ date: '2025-04-04'
 [wails]: https://wails.io/
 [yarn]: https://yarnpkg.com/
 [zustand]: https://zustand-demo.pmnd.rs/
+[black]: https://black.readthedocs.io/en/stable/
+[fastapi]: https://fastapi.tiangolo.com/
+[nltk]: https://www.nltk.org/
+[numpy]: https://numpy.org/
+[opencv]: https://opencv.org/
+[pandas]: https://pandas.pydata.org/
+[plotly]: https://plotly.com/
+[ruff]: https://docs.astral.sh/ruff/
+[sqlalchemy]: https://www.sqlalchemy.org/
+[tensorflow]: https://www.tensorflow.org
+[github-black]: https://github.com/psf/black
+[github-fastapi]: https://github.com/fastapi/fastapi
+[github-nltk]: https://github.com/nltk/nltk
+[github-numpy]: https://github.com/numpy/numpy
+[github-opencv]: https://github.com/opencv/opencv
+[github-pandas]: https://github.com/pandas-dev/pandas
+[github-plotly]: https://github.com/plotly/plotly.py
+[github-ruff]: https://github.com/astral-sh/ruff
+[github-sqlalchemy]: https://github.com/sqlalchemy/sqlalchemy
+[github-tensorflow]: https://github.com/tensorflow/tensorflow
