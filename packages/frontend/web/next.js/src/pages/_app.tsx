@@ -31,11 +31,8 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>Nothing</title>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#f3f4f6" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-      <div className={`${mono.className} bg-gray-100 text-gray-900`}>
+      <div className={mono.className}>
         <QueryClientProvider client={queryClient}>
           <Component {...pageProps} />
         </QueryClientProvider>
