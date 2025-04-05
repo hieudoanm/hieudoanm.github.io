@@ -2,7 +2,7 @@ module github.com/hieudoanm/reverse-proxy
 
 go 1.23.6
 
-require github.com/beego/beego/v2 v2.3.6
+require github.com/beego/beego/v2 v2.3.7
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
