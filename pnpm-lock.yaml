@@ -742,8 +742,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       tesseract.js:
-        specifier: 6.0.0
-        version: 6.0.0(encoding@0.1.13)
+        specifier: 6.0.1
+        version: 6.0.1(encoding@0.1.13)
       uuid:
         specifier: 11.1.0
         version: 11.1.0
@@ -9077,8 +9077,8 @@ packages:
   tesseract.js-core@6.0.0:
     resolution: {integrity: sha512-1Qncm/9oKM7xgrQXZXNB+NRh19qiXGhxlrR8EwFbK5SaUbPZnS5OMtP/ghtqfd23hsr1ZvZbZjeuAGcMxd/ooA==}
 
-  tesseract.js@6.0.0:
-    resolution: {integrity: sha512-tqYCod1HwJzkeZw1l6XWx+ly2hhisGcBtak9MArhYwDAxL0NgeVhLJcUjqPxZMQtpgtVUzWcpZPryi+hnaQGVw==}
+  tesseract.js@6.0.1:
+    resolution: {integrity: sha512-/sPvMvrCtgxnNRCjbTYbr7BRu0yfWDsMZQ2a/T5aN/L1t8wUQN6tTWv6p6FwzpoEBA0jrN2UD2SX4QQFRdoDbA==}
 
   test-exclude@6.0.0:
     resolution: {integrity: sha512-cAGWPIyOHU6zlmg88jwm7VRyXnMN7iV68OGAbYDk/Mh/xC/pzVPlQtY6ngoIH/5/tciuhGfvESU8GrHrcxD56w==}
@@ -20494,7 +20494,7 @@ snapshots:
 
   tesseract.js-core@6.0.0: {}
 
-  tesseract.js@6.0.0(encoding@0.1.13):
+  tesseract.js@6.0.1(encoding@0.1.13):
     dependencies:
       bmp-js: 0.1.0
       idb-keyval: 6.2.1
