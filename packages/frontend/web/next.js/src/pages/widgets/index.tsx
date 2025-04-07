@@ -5,7 +5,6 @@ import {
   FaBatteryFull,
   FaBitcoin,
   FaBus,
-  FaCalculator,
   FaCalendarDays,
   FaCamera,
   FaChartLine,
@@ -27,7 +26,6 @@ import {
   FaMusic,
   FaNewspaper,
   FaPhone,
-  FaPhotoFilm,
   FaRectangleList,
   FaTemperatureFull,
   FaWallet,
@@ -49,13 +47,6 @@ const WidgetsPage: NextPage = () => {
       name: 'browser',
       shortName: '',
       icon: <FaFirefoxBrowser className="text-2xl" />,
-    },
-    {
-      id: 'calculator',
-      href: 'calculator',
-      name: 'calculator',
-      shortName: '',
-      icon: <FaCalculator className="text-2xl" />,
     },
     {
       id: 'calendar',
@@ -177,13 +168,6 @@ const WidgetsPage: NextPage = () => {
       icon: <FaPhone className="text-2xl" />,
     },
     {
-      id: 'photos',
-      href: 'photos',
-      name: 'photos',
-      shortName: '',
-      icon: <FaPhotoFilm className="text-2xl" />,
-    },
-    {
       id: 'settings',
       href: 'settings',
       name: 'settings',
@@ -251,7 +235,7 @@ const WidgetsPage: NextPage = () => {
   return (
     <div className="h-[100vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-4 grid-rows-8 gap-4 md:grid-cols-8 md:grid-rows-4 md:gap-8">
+        <div className="grid h-full grid-cols-4 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-4 md:gap-8">
           {apps.map(({ id, href, name, icon }) => {
             return (
               <div key={id} className="col-span-1">

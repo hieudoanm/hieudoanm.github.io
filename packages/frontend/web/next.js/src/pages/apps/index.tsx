@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import {
   FaBook,
+  FaCalculator,
   FaChessKnight,
   FaCircleDot,
   FaClock,
@@ -11,21 +12,20 @@ import {
   FaEyeSlash,
   FaFlag,
   FaFlask,
+  FaG,
   FaGithub,
   FaGoogle,
+  FaImage,
   FaImages,
   FaJs,
   FaLightbulb,
-  FaMarkdown,
   FaPalette,
-  FaQrcode,
+  FaPenToSquare,
   FaRobot,
   FaRulerCombined,
-  FaSquareJs,
   FaTable,
   FaTelegram,
   FaTextWidth,
-  FaU,
   FaY,
 } from 'react-icons/fa6';
 
@@ -33,6 +33,13 @@ const AppsPage: NextPage = () => {
   const [{ search }, setState] = useState<{ search: string }>({ search: '' });
 
   const apps: NothingApp[] = [
+    {
+      id: 'calculator',
+      href: 'calculator',
+      name: 'Calculator',
+      shortName: 'calculator',
+      icon: <FaCalculator className="text-xl md:text-2xl" />,
+    },
     {
       id: 'chess',
       href: 'chess',
@@ -90,32 +97,18 @@ const AppsPage: NextPage = () => {
       icon: <FaY className="text-xl md:text-2xl" />,
     },
     {
-      id: 'editor-manifest.json',
-      href: 'editor/manifest.json',
-      name: 'manifest.json',
-      shortName: 'manifest',
-      icon: <FaSquareJs className="text-xl md:text-2xl" />,
+      id: 'editor',
+      href: 'editor',
+      name: 'Editor',
+      shortName: 'editor',
+      icon: <FaPenToSquare className="text-xl md:text-2xl" />,
     },
     {
-      id: 'editor-markdown',
-      href: 'editor/markdown',
-      name: 'Markdown',
-      shortName: 'md',
-      icon: <FaMarkdown className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'generate-qrcode',
-      href: 'generate/qrcode',
-      name: 'QR Code',
-      shortName: 'qr.code',
-      icon: <FaQrcode className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'generate-uuid',
-      href: 'generate/uuid',
-      name: 'UUID',
-      shortName: 'uuid',
-      icon: <FaU className="text-xl md:text-2xl" />,
+      id: 'generate',
+      href: 'generate',
+      name: 'Generate',
+      shortName: 'generate',
+      icon: <FaG className="text-xl md:text-2xl" />,
     },
     {
       id: 'gen.ai',
@@ -165,6 +158,13 @@ const AppsPage: NextPage = () => {
       name: 'OCR',
       shortName: 'ocr',
       icon: <FaEye className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'photos',
+      href: 'photos',
+      name: 'Photos',
+      shortName: 'photos',
+      icon: <FaImage className="text-xl md:text-2xl" />,
     },
     {
       id: 'resolution',
