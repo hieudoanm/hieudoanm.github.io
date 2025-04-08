@@ -1,0 +1,426 @@
+[
+  {
+    "rank": 1,
+    "flag": "🇳🇴",
+    "country": "Norway",
+    "region": "Northern Europe",
+    "continent": "Europe",
+    "name": "Magnus Carlsen",
+    "worldTitles": {
+      "classical": "World Classical Champion",
+      "fisher": "",
+      "rapid": "World Rapid & Blitz Champion - Rapid",
+      "blitz": "World Rapid & Blitz Champion - Blitz"
+    },
+    "fullName": "",
+    "rating": { "peak": { "fide": 2882, "live": 2889.2 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 2,
+    "flag": "🇷🇺",
+    "country": "Russia",
+    "region": "",
+    "continent": "Europe",
+    "name": "Garry Kasparov",
+    "fullName": "Garry Kimovich Kasparov",
+    "worldTitles": {
+      "classical": "World Classical Champion",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2851, "live": 2856.7 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 3,
+    "flag": "🇺🇲",
+    "country": "United States",
+    "region": "",
+    "continent": "America",
+    "name": "Fabiano Caruana",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2844, "live": 2851.3 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 4,
+    "flag": "🇺🇲",
+    "country": "United States",
+    "region": "",
+    "continent": "America",
+    "name": "Levon Aronian",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": "World Rapid & Blitz Champion - Blitz"
+    },
+    "rating": { "peak": { "fide": 2830, "live": 2835.5 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 5,
+    "flag": "🇺🇲",
+    "country": "United States",
+    "region": "",
+    "continent": "America",
+    "name": "Wesley So",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "World Classical Fisher Champion",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2822, "live": 2824.5 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 6,
+    "flag": "🇦🇿",
+    "country": "Azerbaijan",
+    "region": "",
+    "continent": "Europe",
+    "name": "Shakhriyar Mamedyarov",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "World Rapid & Blitz Champion - Rapid",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2820, "live": 2826.2 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 7,
+    "flag": "🇫🇷",
+    "country": "France",
+    "region": "",
+    "continent": "Europe",
+    "name": "Maxime Vachier-Lagrave",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": "World Rapid & Blitz Champion - Blitz"
+    },
+    "rating": { "peak": { "fide": 2819, "live": 2819.3 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 8,
+    "flag": "🇮🇳",
+    "country": "India",
+    "region": "",
+    "continent": "Asia",
+    "name": "Viswanathan Anand",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "World Classical Champion",
+      "fisher": "",
+      "rapid": "World Rapid & Blitz Champion - Rapid",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2817, "live": 2820.7 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 9,
+    "flag": "🇷🇺",
+    "country": "Russia",
+    "region": "",
+    "continent": "Europe",
+    "name": "Vladimir Kramnik",
+    "fullName": "Vladimir Borisovich Kramnik",
+    "worldTitles": {
+      "classical": "World Classical Champion",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2817, "live": 2817.8 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 10,
+    "flag": "🇧🇬",
+    "country": "Bulgaria",
+    "region": "",
+    "continent": "Europe",
+    "name": "Veselin Topalov",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "World FIDE Champion",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2816, "live": 2826.5 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 11,
+    "flag": "🇺🇲",
+    "country": "United States",
+    "region": "",
+    "continent": "America",
+    "name": "Hikaru Nakamura",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "World Classical Fisher Champion",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2816, "live": 2819.0 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 12,
+    "flag": "🇨🇳",
+    "country": "China",
+    "region": "",
+    "continent": "Asia",
+    "name": "Ding Liren",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "World Classical Champion",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2816, "live": 2816.9 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 13,
+    "flag": "🇷🇺",
+    "country": "Russia",
+    "region": "",
+    "continent": "Europe",
+    "name": "Alexander Grischuk",
+    "fullName": "Alexander Igorevich Grischuk",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": "World Rapid & Blitz Champion - Blitz"
+    },
+    "rating": { "peak": { "fide": 2810, "live": 2813.6 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 14,
+    "flag": "🇫🇷",
+    "country": "France",
+    "region": "",
+    "continent": "Europe",
+    "name": "Alireza Firouzja",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2804, "live": 2804.0 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 15,
+    "flag": "🇮🇳",
+    "country": "India",
+    "region": "",
+    "continent": "Asia",
+    "name": "Arjun Erigaisi",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2801, "live": 2809.3 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 16,
+    "flag": "🇳🇱",
+    "country": "Netherlands",
+    "region": "",
+    "continent": "Europe",
+    "name": "Anish Giri",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2798, "live": 2802.8 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 17,
+    "flag": "🇷🇺",
+    "country": "Russia",
+    "region": "",
+    "continent": "Europe",
+    "name": "Ian Nepomniachtchi",
+    "fullName": "Ian Aleksandrovich Nepomniachtchi",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": "World Rapid & Blitz Champion - Blitz"
+    },
+    "rating": { "peak": { "fide": 2795, "live": 2799.8 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 18,
+    "flag": "🇮🇳",
+    "country": "India",
+    "region": "",
+    "continent": "Asia",
+    "name": "Gukesh Dommaraju",
+    "worldTitles": {
+      "classical": "World Classical Champion",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2794, "live": 2796.4 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 19,
+    "flag": "🇦🇿",
+    "country": "Azerbaijan",
+    "region": "",
+    "continent": "Europe",
+    "name": "Teimour Radjabov",
+    "fullName": "",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2793, "live": 2799.6 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 20,
+    "flag": "🇷🇺",
+    "country": "Russia",
+    "region": "",
+    "continent": "Europe",
+    "name": "Aleksandr Morozevich",
+    "fullName": "Aleksandr Sergeyevich Morozevich",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2788, "live": 2798.9 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 21,
+    "flag": "🇷🇺",
+    "country": "Russia",
+    "region": "",
+    "continent": "Europe",
+    "name": "Sergey Karjakin",
+    "fullName": "Sergey Alexandrovich Karjakin",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "World Rapid & Blitz Champion - Rapid",
+      "blitz": "World Rapid & Blitz Champion - Blitz"
+    },
+    "rating": { "peak": { "fide": 2788, "live": 2788 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 22,
+    "flag": "🇺🇦",
+    "country": "Ukraine",
+    "region": "",
+    "continent": "Europe",
+    "name": "Vasyl Ivanchuk",
+    "fullName": "Vasyl Mykhailovych Ivanchuk",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "World Rapid & Blitz Champion - Rapid",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2787, "live": 2791.5 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 23,
+    "flag": "🇺🇲",
+    "country": "United States",
+    "region": "",
+    "continent": "America",
+    "name": "Bobby Fischer",
+    "fullName": "Robert James Fischer",
+    "worldTitles": {
+      "classical": "World Classical Champion",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2785, "live": 2789.7 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 24,
+    "flag": "🇺🇿",
+    "country": "Uzbekistan",
+    "region": "",
+    "continent": "Asia",
+    "name": "Nodirbek Abdusattorov",
+    "fullName": "Nodirbek Abdusattorov",
+    "worldTitles": {
+      "classical": "",
+      "fisher": "",
+      "rapid": "World Rapid & Blitz Champion - Rapid",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2783, "live": 2783 } },
+    "url": { "chess.com": "" }
+  },
+  {
+    "rank": 25,
+    "flag": "🇷🇺",
+    "country": "Russia",
+    "region": "",
+    "continent": "Europe",
+    "name": "Anatoly Karpov ",
+    "fullName": "Anatoly Yevgenyevich Karpov",
+    "worldTitles": {
+      "classical": "World Classical Champion",
+      "fisher": "",
+      "rapid": "",
+      "blitz": ""
+    },
+    "rating": { "peak": { "fide": 2780, "live": 2790.9 } },
+    "url": { "chess.com": "" }
+  }
+]

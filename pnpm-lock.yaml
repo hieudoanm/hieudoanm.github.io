@@ -847,12 +847,27 @@ importers:
       '@solidjs/start':
         specifier: 1.1.3
         version: 1.1.3(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(solid-js@1.9.5)(terser@5.39.0)(vinxi@0.5.3(@azure/identity@4.7.0)(@types/node@22.14.0)(db0@0.3.1)(encoding@0.1.13)(idb-keyval@6.2.1)(ioredis@5.6.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(xml2js@0.6.2)(yaml@2.7.1))(vite@6.1.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
+      '@tanstack/solid-query':
+        specifier: 5.72.0
+        version: 5.72.0(solid-js@1.9.5)
+      '@tanstack/solid-table':
+        specifier: 8.21.2
+        version: 8.21.2(solid-js@1.9.5)
+      '@tanstack/solid-virtual':
+        specifier: 3.13.6
+        version: 3.13.6(solid-js@1.9.5)
+      chessground:
+        specifier: 9.1.1
+        version: 9.1.1
       solid-icons:
         specifier: 1.1.0
         version: 1.1.0(solid-js@1.9.5)
       solid-js:
         specifier: 1.9.5
         version: 1.9.5
+      uuid:
+        specifier: 11.1.0
+        version: 11.1.0
       vinxi:
         specifier: 0.5.3
         version: 0.5.3(@azure/identity@4.7.0)(@types/node@22.14.0)(db0@0.3.1)(encoding@0.1.13)(idb-keyval@6.2.1)(ioredis@5.6.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(xml2js@0.6.2)(yaml@2.7.1)
@@ -863,6 +878,9 @@ importers:
       '@tailwindcss/vite':
         specifier: 4.1.3
         version: 4.1.3(vite@6.1.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1))
+      '@types/web-bluetooth':
+        specifier: 0.0.21
+        version: 0.0.21
       eslint:
         specifier: 9.24.0
         version: 9.24.0(jiti@2.4.2)
@@ -890,6 +908,9 @@ importers:
       vite-plugin-solid:
         specifier: 2.11.6
         version: 2.11.6(solid-js@1.9.5)(vite@6.1.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1))
+      vite-plugin-wasm:
+        specifier: 3.4.1
+        version: 3.4.1(vite@6.1.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1))
 
   packages/libraries/node.js/api:
     dependencies:
@@ -3200,6 +3221,22 @@ packages:
     resolution: {integrity: sha512-J6kJyJif3UuuPaz3whboTID4PTKADFQUTuEfNm/PBAUWj6/0GYs+S8DBuIIc9lkD87FhT5ETo3NuY3CtmC+yhQ==}
     engines: {node: '>=12'}
 
+  '@tanstack/solid-query@5.72.0':
+    resolution: {integrity: sha512-zQ27dZEakN05hZB9C+qTKgtBU3N7Li3rx++nUOd4K5LtrTMjiIEp2FEbYoGe9B0Pn9tF5CIthc9fknl/qBVI5g==}
+    peerDependencies:
+      solid-js: ^1.6.0
+
+  '@tanstack/solid-table@8.21.2':
+    resolution: {integrity: sha512-5Rc68rM+TGbZDrm5Onmg4erHurwU4a0eYCQUpLgsXLk/L/gYJmhmY5FXiKUTJGjEIAqCqOYuMbmICY/P0l6uFA==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      solid-js: '>=1.3'
+
+  '@tanstack/solid-virtual@3.13.6':
+    resolution: {integrity: sha512-tD9BIRg0aSqQJ2Ek0mu6dUjluK+3nGNvqWLtwY7r0vJNNpIA4PsKMenhvD+h42qG3Xmi9jTqN2hDleS2kVUXNA==}
+    peerDependencies:
+      solid-js: ^1.3.0
+
   '@tanstack/table-core@8.21.2':
     resolution: {integrity: sha512-uvXk/U4cBiFMxt+p9/G7yUWI/UbHYbyghLCjlpWZ3mLeIZiUBSKcUnw9UnKkdRz7Z/N4UBuFLWQdJCjUe7HjvA==}
     engines: {node: '>=12'}
@@ -4444,6 +4481,9 @@ packages:
 
   chess.js@1.2.0:
     resolution: {integrity: sha512-QWdfpAkMslQ48hDDoEzEko6GbYTAKKx4UdXAPEF8nFnAuqp+woyL8LHSbziRP8u1aMAbnlOF0YkXF4ui0Nsubg==}
+
+  chessground@9.1.1:
+    resolution: {integrity: sha512-X4xrBICrixaLATCn+jGEzk58UXcas+9QqJnwVq9nT7AaX2M1CJLMA0vC7noG0s6Tr2zoAHZ1FOviE5b05MgduQ==}
 
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
@@ -9647,6 +9687,11 @@ packages:
       '@testing-library/jest-dom':
         optional: true
 
+  vite-plugin-wasm@3.4.1:
+    resolution: {integrity: sha512-ja3nSo2UCkVeitltJGkS3pfQHAanHv/DqGatdI39ja6McgABlpsZ5hVgl6wuR8Qx5etY3T5qgDQhOWzc5RReZA==}
+    peerDependencies:
+      vite: ^2 || ^3 || ^4 || ^5 || ^6
+
   vite@6.1.2:
     resolution: {integrity: sha512-EiXfDyO/uNKhYOSlZ6+9qBz4H46A8Lr07pyjmb88KTbJ+xkXvnqtxvgtg2VxPU6Kfj8Ep0un9JLqdrCWLqIanw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -13191,6 +13236,21 @@ snapshots:
       - tsx
       - yaml
 
+  '@tanstack/solid-query@5.72.0(solid-js@1.9.5)':
+    dependencies:
+      '@tanstack/query-core': 5.72.0
+      solid-js: 1.9.5
+
+  '@tanstack/solid-table@8.21.2(solid-js@1.9.5)':
+    dependencies:
+      '@tanstack/table-core': 8.21.2
+      solid-js: 1.9.5
+
+  '@tanstack/solid-virtual@3.13.6(solid-js@1.9.5)':
+    dependencies:
+      '@tanstack/virtual-core': 3.13.6
+      solid-js: 1.9.5
+
   '@tanstack/table-core@8.21.2': {}
 
   '@tanstack/virtual-core@3.13.6': {}
@@ -14737,6 +14797,8 @@ snapshots:
       whatwg-mimetype: 4.0.0
 
   chess.js@1.2.0: {}
+
+  chessground@9.1.1: {}
 
   chokidar@3.6.0:
     dependencies:
@@ -21144,6 +21206,10 @@ snapshots:
       vitefu: 1.0.6(vite@6.1.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1))
     transitivePeerDependencies:
       - supports-color
+
+  vite-plugin-wasm@3.4.1(vite@6.1.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1)):
+    dependencies:
+      vite: 6.1.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1)
 
   vite@6.1.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1):
     dependencies:
