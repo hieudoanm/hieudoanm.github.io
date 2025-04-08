@@ -4,7 +4,7 @@ import { toXML } from 'jstoxml';
 import { createSignal } from 'solid-js';
 
 const JsonToXmlPage = () => {
-  const [{ json = '', xml = '' }, setState] = useState<{
+  const [{ json = '', xml = '' }, setState] = createSignalgnal<{
     json: string;
     xml: string;
   }>({
