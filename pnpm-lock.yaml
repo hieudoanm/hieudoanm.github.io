@@ -908,6 +908,9 @@ importers:
 
   packages/frontend/web/solid.js:
     dependencies:
+      '@silvia-odwyer/photon':
+        specifier: 0.3.2
+        version: 0.3.2
       '@solidjs/router':
         specifier: 0.15.3
         version: 0.15.3(solid-js@1.9.5)
