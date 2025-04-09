@@ -950,6 +950,9 @@ importers:
       vinxi:
         specifier: 0.5.4
         version: 0.5.4(@azure/identity@4.7.0)(@types/node@22.14.0)(db0@0.3.1)(encoding@0.1.13)(idb-keyval@6.2.1)(ioredis@5.6.0)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(xml2js@0.6.2)(yaml@2.7.1)
+      yaml:
+        specifier: 2.7.1
+        version: 2.7.1
     devDependencies:
       '@eslint/js':
         specifier: 9.24.0
