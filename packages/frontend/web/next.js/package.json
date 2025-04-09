@@ -75,7 +75,7 @@
     "@types/showdown": "2.0.6",
     "@types/web-bluetooth": "0.0.21",
     "cpr": "3.0.1",
-    "daisyui": "5.0.16",
+    "daisyui": "5.0.17",
     "eslint": "9.24.0",
     "eslint-config-next": "15.2.4",
     "husky": "9.1.7",
