@@ -932,6 +932,9 @@ importers:
       gif.js:
         specifier: 0.2.0
         version: 0.2.0
+      html2canvas-pro:
+        specifier: 1.5.8
+        version: 1.5.8
       qrcode:
         specifier: 1.5.4
         version: 1.5.4
