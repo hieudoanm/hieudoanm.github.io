@@ -2,4 +2,9 @@ packages:
   - data/**
   - packages/**
 onlyBuiltDependencies:
+  - '@prisma/client'
+  - '@prisma/engines'
+  - pdf2html
+  - prisma
   - tesseract.js
+  - workerd
