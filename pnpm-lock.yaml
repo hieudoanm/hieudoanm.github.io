@@ -935,6 +935,9 @@ importers:
       html2canvas-pro:
         specifier: 1.5.8
         version: 1.5.8
+      pdfmake:
+        specifier: 0.2.18
+        version: 0.2.18
       qrcode:
         specifier: 1.5.4
         version: 1.5.4
