@@ -923,6 +923,9 @@ importers:
       '@tanstack/solid-virtual':
         specifier: 3.13.6
         version: 3.13.6(solid-js@1.9.5)
+      chess.js:
+        specifier: 1.2.0
+        version: 1.2.0
       chessground:
         specifier: 9.1.1
         version: 9.1.1
