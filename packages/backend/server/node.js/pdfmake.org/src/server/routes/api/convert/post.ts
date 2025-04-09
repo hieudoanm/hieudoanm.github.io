@@ -5,13 +5,14 @@ import { IncomingMessage, ServerResponse } from 'node:http';
 import path from 'node:path';
 // @ts-expect-error ...
 import pdf2html from 'pdf2html';
-import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
+import * as pdfMake from 'pdfmake/build/pdfmake';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import { logger } from '../../../../utils/log';
 
 const CWD = process.cwd();
 
-pdfMake.vfs = pdfFonts.vfs;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(<any>pdfMake).vfs = pdfFonts.vfs;
 
 const { window } = new JSDOM('');
 
