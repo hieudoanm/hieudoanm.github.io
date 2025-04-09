@@ -929,6 +929,9 @@ importers:
       chessground:
         specifier: 9.1.1
         version: 9.1.1
+      gif.js:
+        specifier: 0.2.0
+        version: 0.2.0
       qrcode:
         specifier: 1.5.4
         version: 1.5.4

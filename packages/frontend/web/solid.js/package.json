@@ -36,6 +36,7 @@
     "@tanstack/solid-virtual": "3.13.6",
     "chess.js": "1.2.0",
     "chessground": "9.1.1",
+    "gif.js": "0.2.0",
     "qrcode": "1.5.4",
     "showdown": "2.1.0",
     "solid-icons": "1.1.0",
