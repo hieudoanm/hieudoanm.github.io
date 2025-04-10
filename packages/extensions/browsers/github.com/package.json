@@ -26,15 +26,21 @@
     "@eslint/js": "9.24.0",
     "@eslint/json": "0.11.0",
     "@eslint/markdown": "6.3.0",
+    "@types/chrome": "0.0.313",
     "@types/node": "22.14.0",
+    "@webpack-cli/generators": "3.0.7",
     "copy-webpack-plugin": "13.0.0",
     "eslint": "9.24.0",
     "globals": "16.0.0",
     "prettier": "3.5.3",
     "rimraf": "6.0.1",
+    "ts-loader": "9.5.2",
     "ts-node": "10.9.2",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.29.1"
+    "typescript-eslint": "8.29.1",
+    "web-ext": "8.5.0",
+    "webpack": "5.99.5",
+    "webpack-cli": "6.0.1"
   },
   "keywords": [
     "github",
