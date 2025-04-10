@@ -16,8 +16,9 @@
   "packageManager": "pnpm@10.8.0",
   "private": true,
   "scripts": {
-    "prebuild": "pnpm run lint && pnpm run format",
+    "prebuild": "rimraf dist download && pnpm run lint && pnpm run format",
     "build": "webpack --mode=production",
+    "postbuild": "make lint && make build",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "format": "prettier --cache --write ."
   },

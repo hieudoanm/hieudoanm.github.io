@@ -11,6 +11,7 @@ const hideElement = (className: string) => {
 const hideRatings = () => {
   hideElement('live-game-start-component');
   hideElement('live-game-over-component');
+  hideElement('user-tagline-username');
   hideElement('user-tagline-rating');
   hideElement('user-rating');
 };
