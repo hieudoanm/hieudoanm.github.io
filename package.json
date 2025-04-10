@@ -38,7 +38,7 @@
     "@babel/helpers": "7.27.0",
     "@babel/runtime": "7.27.0",
     "@octokit/plugin-paginate-rest": "11.6.0",
-    "@octokit/request-error": "6.1.7",
+    "@octokit/request-error": "6.1.8",
     "@octokit/request": "9.2.2",
     "cookie": "1.0.2",
     "cross-spawn": "7.0.6",
