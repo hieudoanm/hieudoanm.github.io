@@ -37,7 +37,7 @@
   "resolutions": {
     "@babel/helpers": "7.27.0",
     "@babel/runtime": "7.27.0",
-    "@octokit/plugin-paginate-rest": "11.6.0",
+    "@octokit/plugin-paginate-rest": "12.0.0",
     "@octokit/request-error": "6.1.8",
     "@octokit/request": "9.2.3",
     "cookie": "1.0.2",
