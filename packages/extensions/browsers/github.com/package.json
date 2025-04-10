@@ -1,0 +1,41 @@
+{
+  "name": "@nothing/github.com-extensions",
+  "version": "0.0.1",
+  "description": "Extensions - github.com",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io#readme",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.8.0",
+  "private": true,
+  "scripts": {
+    "prebuild": "pnpm run lint && pnpm run format",
+    "build": "webpack --mode=production",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "format": "prettier --cache --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "9.24.0",
+    "@eslint/json": "^0.11.0",
+    "@eslint/markdown": "^6.3.0",
+    "@types/node": "22.14.0",
+    "copy-webpack-plugin": "13.0.0",
+    "eslint": "9.24.0",
+    "globals": "16.0.0",
+    "prettier": "3.5.3",
+    "ts-node": "10.9.2",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.29.1"
+  },
+  "keywords": [
+    "github",
+    "github.com"
+  ]
+}
