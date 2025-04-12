@@ -8,18 +8,34 @@ import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'src/posts');
 
-export async function getStaticPaths() {
-  const fileNames = fs.readdirSync(postsDirectory);
+// Helper to recursively get all .md file paths
+function getMarkdownFiles(dir: string): string[] {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  return entries.flatMap((entry) => {
+    const fullPath = path.join(dir, entry.name);
+    return entry.isDirectory()
+      ? getMarkdownFiles(fullPath)
+      : fullPath.endsWith('.md')
+        ? [fullPath]
+        : [];
+  });
+}
 
-  const paths = fileNames.map((fileName) => ({
-    params: { id: fileName.replace(/\.md$/, '') },
-  }));
+export async function getStaticPaths() {
+  const filePaths = getMarkdownFiles(postsDirectory);
+
+  const paths = filePaths.map((filePath) => {
+    const relativePath = path.relative(postsDirectory, filePath);
+    const id = relativePath.replace(/\.md$/, '').replace(/\\/g, '/'); // for Windows compatibility
+    return { params: { id } };
+  });
 
   return { paths, fallback: false };
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const fullPath = path.join(postsDirectory, `${params?.id}.md`);
+  const id = params?.id as string;
+  const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   const { data, content } = matter(fileContents);
@@ -29,7 +45,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       postData: {
-        id: params?.id,
+        id,
         ...data,
         contentHtml,
       },
