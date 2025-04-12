@@ -2,16 +2,38 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+// Helper function to recursively read directories and get file names
+function getFilesRecursively(dir: string): string[] {
+  const files = fs.readdirSync(dir);
+  let allFiles: string[] = [];
+
+  files.forEach((file) => {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+
+    if (stat.isDirectory()) {
+      // If the file is a directory, recursively fetch its files
+      allFiles = allFiles.concat(getFilesRecursively(fullPath));
+    } else {
+      // If it's a file, add it to the list
+      allFiles.push(fullPath);
+    }
+  });
+
+  return allFiles;
+}
+
 const postsDirectory = path.join(process.cwd(), 'src/posts');
 
 export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const filePaths = getFilesRecursively(postsDirectory);
 
   const allPostsData: { id: string; title: string; date: string }[] =
-    fileNames.map((fileName) => {
-      const id = fileName.replace(/\.md$/, '');
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
+    filePaths.map((filePath) => {
+      const id = filePath
+        .replace(`${postsDirectory}/`, '')
+        .replace(/\.md$/, '');
+      const fileContents = fs.readFileSync(filePath, 'utf8');
 
       const { data } = matter(fileContents);
 
