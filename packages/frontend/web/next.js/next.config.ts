@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   images: { unoptimized: true },
-  experimental: { turbo: { treeShaking: true } },
+  turbopack: {},
   basePath: '',
   distDir: NODE_ENV === 'development' ? '.next' : '../../../../docs',
   webpack: (config) => {

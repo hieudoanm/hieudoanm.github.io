@@ -229,7 +229,9 @@ const AppsPage: NextPage = () => {
                     shortName.toLowerCase().includes(search.toLowerCase())
                 : true;
             })
-            .map(({ id = '', href = '', name = '', shortName = '', icon }) => {
+            .map(({ id = '', href = '', name = '', shortName = '', icon = <>
+
+                </> }) => {
               return (
                 <div key={id} className="col-span-1 row-span-1">
                   <div className="flex h-full items-center justify-center">
