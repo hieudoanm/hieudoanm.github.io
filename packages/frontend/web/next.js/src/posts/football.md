@@ -9,23 +9,44 @@ date: '2025-03-17'
 
 - [Football](#football)
   - [Table of Content](#table-of-content)
-  - [Premier League Best XI by Countries](#premier-league-best-xi-by-countries)
-    - [All](#all)
-      - [Japanese](#japanese)
-      - [Korean](#korean)
-    - [Liverpool](#liverpool)
-      - [England](#england)
-      - [Netherlands](#netherlands)
-  - [Champions](#champions)
+  - [Competitions](#competitions)
+    - [Premier League Best XI by Countries](#premier-league-best-xi-by-countries)
+      - [All](#all)
+        - [Japanese](#japanese)
+        - [Korean](#korean)
+      - [Liverpool](#liverpool)
+        - [England](#england)
+        - [Netherlands](#netherlands)
+    - [Champions](#champions)
   - [Players](#players)
   - [Positions](#positions)
     - [Honorable Mentions](#honorable-mentions)
 
-## Premier League Best XI by Countries
+## Competitions
 
-### All
+| No  | Level         | Country     | Competition                       |
+| --- | ------------- | ----------- | --------------------------------- |
+| 01  | Clubs         | England     | English Premier League (EPL)      |
+| 02  | Clubs         | France      | Ligue 1                           |
+| 03  | Clubs         | Germany     | Bundesliga                        |
+| 04  | Clubs         | Italy       | Serie A                           |
+| 05  | Clubs         | Netherlands | Eredivisie                        |
+| 06  | Clubs         | Portugal    | Primeira Liga                     |
+| 07  | Clubs         | Spain       | La Liga                           |
+| 08  | Clubs         | USA         | Major League Soccer (MLS)         |
+| 09  | Clubs         |             | UEFA Champions League             |
+| 10  | Clubs         |             | UEFA Europa League                |
+| 11  | International |             | Copa América                      |
+| 12  | International |             | UEFA European Championship (Euro) |
+| 13  | International |             | AFC Asian Cup                     |
+| 14  | International |             | Africa Cup of Nations (AFCON)     |
+| 15  | International |             | FIFA World Cup                    |
 
-#### Japanese
+### Premier League Best XI by Countries
+
+#### All
+
+##### Japanese
 
 | No  | Pos | Name              | Club                   |
 | --- | --- | ----------------- | ---------------------- |
@@ -41,7 +62,7 @@ date: '2025-03-17'
 | 9   | ST  | Shinji Okazaki    | Leicester City         |
 | 11  | LW  | Kaoru Mitoma      | Brighton & Hove Albion |
 
-#### Korean
+##### Korean
 
 | No  | Pos | Name           | Club                    |
 | --- | --- | -------------- | ----------------------- |
@@ -57,9 +78,9 @@ date: '2025-03-17'
 | 9   | ST  | Hwang Hee-Chan | Wolverhampton Wanderers |
 | 11  | LW  | Son Heung-Min  | Tottenham Hotspur       |
 
-### Liverpool
+#### Liverpool
 
-#### England
+##### England
 
 | No  | Pos | Name                   | Club      |
 | --- | --- | ---------------------- | --------- |
@@ -75,7 +96,7 @@ date: '2025-03-17'
 | 9   | ST  | Robbie Fowler          | Liverpool |
 | 11  | LW  | John Barnes            | Liverpool |
 
-#### Netherlands
+##### Netherlands
 
 | No  | Pos | Name                | Club      |
 | --- | --- | ------------------- | --------- |
@@ -91,7 +112,7 @@ date: '2025-03-17'
 | 9   | ST  |                     |           |
 | 11  | LW  | Cody Gakpo          | Liverpool |
 
-## Champions
+### Champions
 
 | Year | World Cup    | Euro           | Copa America | Africa Cup of Nations | Asian Cup    | ASEAN Championship | Champion League   | Europa League            | Premier League          | FA Cup                  | La Liga             | Seria A       | Bundesliga               | Ligue 1             | Primeira Liga | Eredivisie |
 | ---- | ------------ | -------------- | ------------ | --------------------- | ------------ | ------------------ | ----------------- | ------------------------ | ----------------------- | ----------------------- | ------------------- | ------------- | ------------------------ | ------------------- | ------------- | ---------- |
