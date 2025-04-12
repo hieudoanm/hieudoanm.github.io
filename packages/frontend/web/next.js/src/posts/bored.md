@@ -3,8 +3,6 @@ title: 'Bored'
 date: '2025-03-24'
 ---
 
-# Bored
-
 What I do when I am bored (or think I have nothing to do). Maybe you can do it too.
 
 | No  | Category     | Subcategory | Action                                     |

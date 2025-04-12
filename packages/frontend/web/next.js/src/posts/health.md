@@ -3,16 +3,13 @@ title: 'Health'
 date: '2025-03-25'
 ---
 
-# Health (Physical and Mental)
-
 ## Table of Contents
 
-- [Health (Physical and Mental)](#health-physical-and-mental)
-  - [Table of Contents](#table-of-contents)
-  - [Maslow's hierarchy of needs](#maslows-hierarchy-of-needs)
-  - [Daily Routines](#daily-routines)
-    - [Morning Routine](#morning-routine)
-    - [Work](#work)
+- [Table of Contents](#table-of-contents)
+- [Maslow's hierarchy of needs](#maslows-hierarchy-of-needs)
+- [Daily Routines](#daily-routines)
+  - [Morning Routine](#morning-routine)
+  - [Work](#work)
 
 ## Maslow's hierarchy of needs
 

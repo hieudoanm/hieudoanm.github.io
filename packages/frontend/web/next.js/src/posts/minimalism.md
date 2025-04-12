@@ -3,14 +3,14 @@ title: 'Minimalism'
 date: '2025-03-25'
 ---
 
-# Minimalism
+## Table of Contents
 
-- [Minimalism](#minimalism)
-  - [Clothes](#clothes)
-  - [Technology](#technology)
-    - [Software](#software)
-  - [Vehicles](#vehicles)
-  - [Financial](#financial)
+- [Table of Contents](#table-of-contents)
+- [Clothes](#clothes)
+- [Technology](#technology)
+  - [Software](#software)
+- [Vehicles](#vehicles)
+- [Financial](#financial)
 
 ## Clothes
 

@@ -3,7 +3,12 @@ title: 'Chess Tactics'
 date: '2025-03-24'
 ---
 
-# Chess Tactics
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Tactics](#tactics)
+
+## Tactics
 
 Here’s a list of the key chess tactics from the [article](https://www.chess.com/article/view/chess-tactics#attackingf7f2), with short descriptions:
 

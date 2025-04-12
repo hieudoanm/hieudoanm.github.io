@@ -3,8 +3,6 @@ title: 'Technology'
 date: '2025-03-17'
 ---
 
-# Technology
-
 | Continent | Country     | Brand          | Device     | Year | Model                      |
 | --------- | ----------- | -------------- | ---------- | ---- | -------------------------- |
 | America   | USA         | Apple          | Mobile     | 2007 | iPhone                     |

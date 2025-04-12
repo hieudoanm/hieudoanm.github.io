@@ -3,7 +3,7 @@ title: 'To(day)Do'
 date: '2025-03-19'
 ---
 
-# The Eisenhower Matrix: How to prioritize your to-do list
+## The Eisenhower Matrix: How to prioritize your to-do list
 
 |               | Urgent      | Not Urgent |
 | ------------- | ----------- | ---------- |
