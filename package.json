@@ -24,6 +24,7 @@
   "scripts": {
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "prebuild": "rimraf docs",
     "build": "turbo run build",
     "postbuild": "touch ./docs/.nojekyll",
     "format": "turbo run format",

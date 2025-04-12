@@ -1,7 +1,7 @@
-import fs from 'fs';
 import matter from 'gray-matter';
 import { GetStaticProps, NextPage } from 'next';
-import path from 'path';
+import fs, { readFileSync } from 'node:fs';
+import path from 'node:path';
 import { remark } from 'remark';
 import gfm from 'remark-gfm';
 import html from 'remark-html';
@@ -25,18 +25,21 @@ export async function getStaticPaths() {
   const filePaths = getMarkdownFiles(postsDirectory);
 
   const paths = filePaths.map((filePath) => {
-    const relativePath = path.relative(postsDirectory, filePath);
-    const id = relativePath.replace(/\.md$/, '').replace(/\\/g, '/'); // for Windows compatibility
-    return { params: { id } };
+    const relativePath: string = path.relative(postsDirectory, filePath);
+    const idArray: string[] = relativePath.replace(/\.md$/, '').split(path.sep); // MUST be an array
+    return { params: { id: idArray } };
   });
 
   return { paths, fallback: false };
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const id = params?.id as string;
+  console.info('params.id', params?.id);
+  const id: string = Array.isArray(params?.id)
+    ? params.id.join('/')
+    : (params?.id ?? '');
   const fullPath = path.join(postsDirectory, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const fileContents = readFileSync(fullPath, 'utf8');
 
   const { data, content } = matter(fileContents);
   const processedContent = await remark().use(gfm).use(html).process(content);
