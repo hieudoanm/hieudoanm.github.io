@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "commander": "13.1.0",
-    "figlet": "1.8.0"
+    "figlet": "1.8.1"
   },
   "devDependencies": {
     "@eslint/js": "9.24.0",
