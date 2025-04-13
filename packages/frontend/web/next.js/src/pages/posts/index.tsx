@@ -1,6 +1,7 @@
 import { getSortedPostsData } from '@web/utils/posts';
 import { NextPage } from 'next';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export async function getStaticProps() {
   const posts = getSortedPostsData();
@@ -13,21 +14,45 @@ export async function getStaticProps() {
 const NotesPage: NextPage<{
   posts: { id: string; title: string; date: string }[];
 }> = ({ posts }) => {
+  const [{ search }, setState] = useState<{ search: string }>({ search: '' });
+
   return (
     <main className="min-h-screen bg-gray-100 text-gray-900">
-      <ul>
-        <li></li>
-        {posts.map(({ id, title, date }) => (
-          <li key={id} className="mx-auto border-t border-gray-300 px-8 py-4">
+      <div className="border-b border-gray-300 px-8 py-4">
+        <div className="container mx-auto">
+          <input
+            id="search"
+            name="search"
+            placeholder="Search"
+            className="w-full rounded border border-gray-300 px-4 py-2"
+            value={search}
+            onChange={(event) => {
+              setState((previous) => ({
+                ...previous,
+                search: event.target.value,
+              }));
+            }}
+          />
+        </div>
+      </div>
+      {posts
+        .filter(({ title }) => {
+          return search !== ''
+            ? title.toLowerCase().includes(search.toLowerCase())
+            : true;
+        })
+        .map(({ id = '', title = '', date = '' }) => (
+          <div key={id} className="border-b border-gray-300 px-8 py-4">
             <div className="container mx-auto">
               <Link href={`/posts/${id}`}>
-                <p>{title}</p>
+                <p>
+                  <b>{title}</b>
+                </p>
+                <small>Date: {date}</small>
               </Link>
-              <small>Date: {date}</small>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
     </main>
   );
 };
