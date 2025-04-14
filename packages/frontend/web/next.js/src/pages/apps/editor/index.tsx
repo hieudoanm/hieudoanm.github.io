@@ -35,14 +35,8 @@ pdfMake.fonts = {
 };
 
 enum Func {
-  CAPITALISE = 'Capitalise',
-  DEBURR = 'deburr',
-  KEBABCASE = 'kebab-case',
-  LOWERCASE = 'lowercase',
-  SNAKECASE = 'snake_case',
-  UPPERCASE = 'UPPERCASE',
-  BRAILLIFY = 'Braillify (⠃⠗⠁⠊⠇⠇⠊⠋⠽)',
-  MORSIFY = 'Morsify (-----.-........-.-.--)',
+  CODE_BRAILLIFY = 'Braillify (⠃⠗⠁⠊⠇⠇⠊⠋⠽)',
+  CODE_MORSIFY = 'Morsify (-----.-........-.-.--)',
   CSV_TO_HTML = 'CSV to HTML',
   CSV_TO_JSON = 'CSV to JSON',
   CSV_TO_MD = 'CSV to Markdown',
@@ -52,6 +46,12 @@ enum Func {
   JSON_TO_XML = 'JSON to XML',
   JSON_TO_YAML = 'JSON to YAML',
   MARKDOWN_PREVIEW = 'Markdown Preview',
+  STRING_CAPITALISE = 'Capitalise',
+  STRING_DEBURR = 'deburr',
+  STRING_KEBABCASE = 'kebab-case',
+  STRING_LOWERCASE = 'lowercase',
+  STRING_SNAKECASE = 'snake_case',
+  STRING_UPPERCASE = 'STRING_UPPERCASE',
   TIME_EPOCH = 'Epoch',
   YAML_TO_JSON = 'YAML to JSON',
 }
@@ -71,21 +71,21 @@ const convert = async ({
   source: string;
 }): Promise<string> => {
   let result: string = source;
-  if (func === Func.BRAILLIFY) {
+  if (func === Func.CODE_BRAILLIFY) {
     result = braillify(source);
-  } else if (func === Func.CAPITALISE) {
+  } else if (func === Func.STRING_CAPITALISE) {
     result = capitalise(source);
-  } else if (func === Func.DEBURR) {
+  } else if (func === Func.STRING_DEBURR) {
     result = deburr(source);
-  } else if (func === Func.KEBABCASE) {
+  } else if (func === Func.STRING_KEBABCASE) {
     result = kebabcase(source);
-  } else if (func === Func.LOWERCASE) {
+  } else if (func === Func.STRING_LOWERCASE) {
     result = source.toLowerCase();
-  } else if (func === Func.MORSIFY) {
+  } else if (func === Func.CODE_MORSIFY) {
     result = morsify(source);
-  } else if (func === Func.SNAKECASE) {
+  } else if (func === Func.STRING_SNAKECASE) {
     result = snakecase(source);
-  } else if (func === Func.UPPERCASE) {
+  } else if (func === Func.STRING_UPPERCASE) {
     result = source.toUpperCase();
   } else if (func === Func.IMAGE_QRCODE) {
     if (source === '') return '';
@@ -178,7 +178,7 @@ const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
 const StringPage: NextPage = () => {
   const [
     {
-      func = Func.CAPITALISE,
+      func = Func.STRING_CAPITALISE,
       text = INITIAL_STRING,
       result = capitalise(INITIAL_STRING),
     },
@@ -188,7 +188,7 @@ const StringPage: NextPage = () => {
     text: string;
     result: string;
   }>({
-    func: Func.CAPITALISE,
+    func: Func.STRING_CAPITALISE,
     text: INITIAL_STRING,
     result: capitalise(INITIAL_STRING),
   });
@@ -197,12 +197,15 @@ const StringPage: NextPage = () => {
     <div className="h-screen w-screen">
       <div className="grid h-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
         <div className="col-span-1 row-span-1 flex h-full flex-col gap-y-2 bg-gray-100 p-4 text-gray-900 md:gap-y-4 md:p-8">
-          <p className="font-semibold">String</p>
+          <div className="flex items-center justify-between">
+            <p className="font-semibold">String</p>
+            <p>Word Count: {countWords(text)}</p>
+          </div>
           <textarea
             id="text"
             name="text"
             placeholder="Text"
-            className="w-full grow focus:outline-none"
+            className="w-full grow rounded border border-dashed border-gray-300 p-2 focus:outline-none"
             value={text}
             onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
               const newText = event.target.value;
@@ -217,13 +220,10 @@ const StringPage: NextPage = () => {
               }));
             }}
           />
-          <p className="py-2">Word Count: {countWords(text)}</p>
-        </div>
-        <div className="col-span-1 row-span-1 flex h-full flex-col gap-y-2 bg-gray-900 p-4 text-gray-100 md:gap-y-4 md:p-8">
           <select
             id="func"
             name="func"
-            className="w-full appearance-none font-semibold"
+            className="w-full appearance-none rounded bg-gray-900 p-2 font-semibold text-gray-100"
             value={func}
             onChange={async (event) => {
               const newFunc: Func = event.target.value as Func;
@@ -274,8 +274,8 @@ const StringPage: NextPage = () => {
               }));
             }}>
             <optgroup label="Code">
-              <option value={Func.BRAILLIFY}>{Func.BRAILLIFY}</option>
-              <option value={Func.MORSIFY}>{Func.MORSIFY}</option>
+              <option value={Func.CODE_BRAILLIFY}>{Func.CODE_BRAILLIFY}</option>
+              <option value={Func.CODE_MORSIFY}>{Func.CODE_MORSIFY}</option>
             </optgroup>
             <optgroup label="CSV">
               <option value={Func.CSV_TO_HTML}>{Func.CSV_TO_HTML}</option>
@@ -297,12 +297,22 @@ const StringPage: NextPage = () => {
               </option>
             </optgroup>
             <optgroup label="String">
-              <option value={Func.CAPITALISE}>{Func.CAPITALISE}</option>
-              <option value={Func.DEBURR}>{Func.DEBURR}</option>
-              <option value={Func.KEBABCASE}>{Func.KEBABCASE}</option>
-              <option value={Func.LOWERCASE}>{Func.LOWERCASE}</option>
-              <option value={Func.SNAKECASE}>{Func.SNAKECASE}</option>
-              <option value={Func.UPPERCASE}>{Func.UPPERCASE}</option>
+              <option value={Func.STRING_CAPITALISE}>
+                {Func.STRING_CAPITALISE}
+              </option>
+              <option value={Func.STRING_DEBURR}>{Func.STRING_DEBURR}</option>
+              <option value={Func.STRING_KEBABCASE}>
+                {Func.STRING_KEBABCASE}
+              </option>
+              <option value={Func.STRING_LOWERCASE}>
+                {Func.STRING_LOWERCASE}
+              </option>
+              <option value={Func.STRING_SNAKECASE}>
+                {Func.STRING_SNAKECASE}
+              </option>
+              <option value={Func.STRING_UPPERCASE}>
+                {Func.STRING_UPPERCASE}
+              </option>
             </optgroup>
             <optgroup label="Time">
               <option value={Func.TIME_EPOCH}>{Func.TIME_EPOCH}</option>
@@ -311,6 +321,9 @@ const StringPage: NextPage = () => {
               <option value={Func.YAML_TO_JSON}>{Func.YAML_TO_JSON}</option>
             </optgroup>
           </select>
+        </div>
+        <div className="col-span-1 row-span-1 flex h-full flex-col gap-y-2 bg-gray-900 p-4 text-gray-100 md:gap-y-4 md:p-8">
+          <p className="font-semibold">Output</p>
           {func === Func.CSV_TO_HTML && (
             <div className="w-full grow overflow-auto">
               <CSVTable csv={text} />
@@ -336,7 +349,7 @@ const StringPage: NextPage = () => {
                 id="result"
                 name="result"
                 placeholder="result"
-                className="w-full grow focus:outline-none"
+                className="w-full grow rounded border border-dashed border-gray-700 p-2 focus:outline-none"
                 value={result}
                 readOnly
               />

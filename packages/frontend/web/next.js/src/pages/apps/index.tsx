@@ -7,20 +7,17 @@ import {
   FaCalculator,
   FaChessKnight,
   FaClock,
-  FaFlag,
-  FaFlask,
   FaGithub,
   FaGoogle,
   FaImages,
   FaJs,
   FaLightbulb,
+  FaList,
   FaPalette,
-  FaRobot,
+  FaPenToSquare,
   FaRulerCombined,
   FaTelegram,
-  FaTextWidth,
   FaU,
-  FaY,
 } from 'react-icons/fa6';
 
 const AppsPage: NextPage = () => {
@@ -56,32 +53,11 @@ const AppsPage: NextPage = () => {
       icon: <FaPalette className="text-xl md:text-2xl" />,
     },
     {
-      id: 'converter-openapi2postmanv2',
-      href: 'converter/openapi2postmanv2',
-      name: 'openapi2postmanv2',
-      shortName: 'openapi2postmanv2',
-      icon: <FaY className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-string',
-      href: 'converter/string',
-      name: 'string',
-      shortName: 'string',
-      icon: <FaTextWidth className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'manifest.json',
-      href: 'manifest.json',
-      name: 'manifest.json',
-      shortName: 'manifest.json',
-      icon: <FaJs className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'gen.ai',
-      href: 'gen.ai',
-      name: 'gen.ai',
-      shortName: 'gen.ai',
-      icon: <FaRobot className="text-xl md:text-2xl" />,
+      id: 'editor',
+      href: 'editor',
+      name: 'editor',
+      shortName: 'editor',
+      icon: <FaPenToSquare className="text-xl md:text-2xl" />,
     },
     {
       id: 'github',
@@ -98,18 +74,18 @@ const AppsPage: NextPage = () => {
       icon: <FaGoogle className="text-xl md:text-2xl" />,
     },
     {
-      id: 'list-chemistry',
-      href: 'list/chemistry',
-      name: 'chemistry',
-      shortName: 'chemistry',
-      icon: <FaFlask className="text-xl md:text-2xl" />,
+      id: 'list',
+      href: 'list',
+      name: 'list',
+      shortName: 'list',
+      icon: <FaList className="text-xl md:text-2xl" />,
     },
     {
-      id: 'list-countries',
-      href: 'list/countries',
-      name: 'countries',
-      shortName: 'countries',
-      icon: <FaFlag className="text-xl md:text-2xl" />,
+      id: 'manifest.json',
+      href: 'manifest.json',
+      name: 'manifest.json',
+      shortName: 'manifest.json',
+      icon: <FaJs className="text-xl md:text-2xl" />,
     },
     {
       id: 'photos',
@@ -173,7 +149,7 @@ const AppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-3 grid-rows-6 gap-4 md:grid-cols-6 md:grid-rows-3 md:gap-8">
+        <div className="grid h-full grow grid-cols-3 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-3 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''
