@@ -6,26 +6,22 @@ import {
   FaBook,
   FaCalculator,
   FaChessKnight,
-  FaCircleDot,
   FaClock,
   FaEye,
-  FaEyeSlash,
   FaFlag,
   FaFlask,
-  FaG,
   FaGithub,
   FaGoogle,
   FaImage,
   FaImages,
-  FaJs,
   FaLightbulb,
   FaPalette,
   FaPenToSquare,
   FaRobot,
   FaRulerCombined,
-  FaTable,
   FaTelegram,
   FaTextWidth,
+  FaU,
   FaY,
 } from 'react-icons/fa6';
 
@@ -62,39 +58,18 @@ const AppsPage: NextPage = () => {
       icon: <FaPalette className="text-xl md:text-2xl" />,
     },
     {
-      id: 'converter-code-braille',
-      href: 'converter/code/braille',
-      name: 'braille',
-      shortName: 'braille',
-      icon: <FaEyeSlash className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-code-morse',
-      href: 'converter/code/morse',
-      name: 'morse',
-      shortName: 'morse',
-      icon: <FaCircleDot className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-data-csv',
-      href: 'converter/data/csv',
-      name: 'csv',
-      shortName: 'csv',
-      icon: <FaTable className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-data-json',
-      href: 'converter/data/json',
-      name: 'json',
-      shortName: 'json',
-      icon: <FaJs className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'converter-data-yaml',
-      href: 'converter/data/yaml',
-      name: 'yaml',
-      shortName: 'yaml',
+      id: 'converter-openapi2postmanv2',
+      href: 'converter/openapi2postmanv2',
+      name: 'openapi2postmanv2',
+      shortName: 'openapi2postmanv2',
       icon: <FaY className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'converter-string',
+      href: 'converter/string',
+      name: 'string',
+      shortName: 'string',
+      icon: <FaTextWidth className="text-xl md:text-2xl" />,
     },
     {
       id: 'editor',
@@ -102,13 +77,6 @@ const AppsPage: NextPage = () => {
       name: 'editor',
       shortName: 'editor',
       icon: <FaPenToSquare className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'generate',
-      href: 'generate',
-      name: 'generate',
-      shortName: 'generate',
-      icon: <FaG className="text-xl md:text-2xl" />,
     },
     {
       id: 'gen.ai',
@@ -174,13 +142,6 @@ const AppsPage: NextPage = () => {
       icon: <FaRulerCombined className="text-xl md:text-2xl" />,
     },
     {
-      id: 'string',
-      href: 'string',
-      name: 'string',
-      shortName: 'string',
-      icon: <FaTextWidth className="text-xl md:text-2xl" />,
-    },
-    {
       id: 'status',
       href: 'status',
       name: 'status',
@@ -193,6 +154,13 @@ const AppsPage: NextPage = () => {
       name: 'telegram webhook',
       shortName: 'tele.hook',
       icon: <FaTelegram className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'uuid',
+      href: 'uuid',
+      name: 'uuid',
+      shortName: 'uuid',
+      icon: <FaU className="text-xl md:text-2xl" />,
     },
     {
       id: 'words-english',
@@ -221,7 +189,7 @@ const AppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-4 grid-rows-6 gap-4 md:grid-cols-6 md:grid-rows-4 md:gap-8">
+        <div className="grid h-full grow grid-cols-4 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-4 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''

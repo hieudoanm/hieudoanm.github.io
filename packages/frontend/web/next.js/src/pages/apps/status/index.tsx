@@ -47,8 +47,8 @@ const Status: FC<{ service: string; url: string }> = ({
 
 const StatusPage = () => {
   return (
-    <div className="h-screen w-screen p-8">
-      <div className="grid h-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <div className="w-screen p-4 md:p-6 lg:p-8">
+      <div className="grid h-full grid-cols-1 gap-2 md:grid-cols-2 md:gap-3 lg:grid-cols-4 lg:gap-4">
         {Object.entries({
           analytics:
             'https://analytics.status.atlassian.com/api/v2/status.json',

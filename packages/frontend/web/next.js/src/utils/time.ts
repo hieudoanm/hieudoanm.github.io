@@ -1,3 +1,45 @@
+import { addZero } from './number';
+
+export const months: string[] = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+export const shortMonths: string[] = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
+export const weekdays: string[] = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
+
 export const getOrdinalSuffix = (weekday: number): string => {
   const j = weekday % 10;
   const k = weekday % 100;
@@ -29,4 +71,37 @@ export const getNumberOfDaysPerMonth = (year: number): number[] => {
     30, // November
     31, // December
   ];
+};
+
+export const buildReadableString = (date: Date): string => {
+  const dateString: string = `${weekdays[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+  const time: string = `${addZero(date.getHours())}:${addZero(date.getMinutes())}:${addZero(date.getSeconds())}`;
+  return `${dateString} ${time}`;
+};
+
+export const getTimezone = (): number => {
+  const date: Date = new Date();
+  const timezoneOffset: number = date.getTimezoneOffset();
+  return timezoneOffset / -60;
+};
+
+export const ONE_SECOND: number = 1000;
+export const ONE_MINUTE: number = ONE_SECOND * 60;
+export const ONE_HOUR: number = ONE_MINUTE * 60;
+export const ONE_DAY: number = ONE_HOUR * 24;
+export const ONE_WEEK: number = ONE_DAY * 7;
+
+export const buildEpochString = (unixTimestamp: number) => {
+  const timezone: number = getTimezone();
+  const timestamp: number = unixTimestamp * 1000;
+  console.log(unixTimestamp, timestamp);
+  const date: Date = new Date(timestamp);
+  const isoString: string = date.toISOString();
+  const readableString: string = buildReadableString(date);
+  const gmtDate: Date = new Date(timestamp - timezone * ONE_HOUR);
+  const gmtString: string = buildReadableString(gmtDate);
+  return `Assuming that this timestamp is in seconds:\n
+ISO String     : ${isoString}
+GMT            : ${gmtString} GMT
+Your Time Zone : ${readableString} GMT+${addZero(timezone)}`;
 };

@@ -1,6 +1,9 @@
-import { months } from '@web/constants';
 import { chunkArray } from '@web/utils/array';
-import { getNumberOfDaysPerMonth, getOrdinalSuffix } from '@web/utils/time';
+import {
+  getNumberOfDaysPerMonth,
+  getOrdinalSuffix,
+  months,
+} from '@web/utils/time';
 import { FC, useEffect, useState } from 'react';
 
 export const WidgetCalendarMonthly: FC = () => {

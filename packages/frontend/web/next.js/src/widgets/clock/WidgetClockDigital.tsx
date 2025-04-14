@@ -1,6 +1,5 @@
-import { months, weekdays } from '@web/constants';
 import { addZero } from '@web/utils/number';
-import { getOrdinalSuffix } from '@web/utils/time';
+import { getOrdinalSuffix, months, weekdays } from '@web/utils/time';
 import { FC, useEffect, useState } from 'react';
 
 export const WidgetClockDigital: FC = () => {
