@@ -1,16 +1,47 @@
 import { NothingApp } from '@web/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { FaImages, FaWindowRestore } from 'react-icons/fa6';
+import { useState } from 'react';
+import { FaImages, FaInstagram, FaWindowRestore } from 'react-icons/fa6';
 
 const PhotosAppsPage: NextPage = () => {
+  const [{ search }, setState] = useState<{ search: string }>({ search: '' });
+
   const apps: NothingApp[] = [
+    {
+      id: 'photos-converter-string',
+      href: 'photos/converter/string',
+      name: 'string',
+      shortName: 'string',
+      icon: <FaImages className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'photos-converter-png2ico',
+      href: 'photos/converter/png2ico',
+      name: 'png2ico',
+      shortName: 'png2ico',
+      icon: <FaImages className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'photos-converter-svg2png',
+      href: 'photos/converter/svg2png',
+      name: 'svg2png',
+      shortName: 'svg2png',
+      icon: <FaImages className="text-xl md:text-2xl" />,
+    },
     {
       id: 'photos-gallery',
       href: 'photos/gallery',
       name: 'Gallery',
       shortName: 'gallery',
       icon: <FaImages className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'photos-instagram',
+      href: 'photos/instagram',
+      name: 'Instagram',
+      shortName: 'insta',
+      icon: <FaInstagram className="text-xl md:text-2xl" />,
     },
     {
       id: 'photos-widgets',
@@ -24,9 +55,32 @@ const PhotosAppsPage: NextPage = () => {
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
       <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
-        <div className="grid h-full grow grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1 md:gap-8">
-          {apps.map(
-            ({ id = '', href = '', name = '', shortName = '', icon }) => {
+        <div className="w-full">
+          <input
+            id="search"
+            name="search"
+            placeholder="Search"
+            className="w-full rounded border border-gray-300 px-4 py-2"
+            value={search}
+            onChange={(event) => {
+              setState((previous) => ({
+                ...previous,
+                search: event.target.value,
+              }));
+            }}
+          />
+        </div>
+        <div className="grid h-full grow grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-8">
+          {apps
+            .filter(({ name, shortName }) => {
+              return search !== ''
+                ? name.toLowerCase().includes(search.toLowerCase()) ||
+                    shortName.toLowerCase().includes(search.toLowerCase())
+                : true;
+            })
+            .map(({ id = '', href = '', name = '', shortName = '', icon = <>
+
+                </> }) => {
               return (
                 <div key={id} className="col-span-1 row-span-1">
                   <div className="flex h-full items-center justify-center">
@@ -46,8 +100,7 @@ const PhotosAppsPage: NextPage = () => {
                   </div>
                 </div>
               );
-            }
-          )}
+            })}
         </div>
       </div>
     </div>

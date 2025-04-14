@@ -37,7 +37,7 @@ export const downloadImage = ({
   filename,
 }: {
   content: string;
-  format: 'jpg' | 'png' | 'ico';
+  format: 'jpg' | 'png' | 'ico' | 'gif';
   filename: string;
 }) => {
   download({ content, format, filename });

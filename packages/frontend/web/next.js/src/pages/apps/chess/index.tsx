@@ -1,6 +1,7 @@
 import { NothingApp } from '@web/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
+import { useState } from 'react';
 import {
   FaBook,
   FaCalculator,
@@ -11,6 +12,8 @@ import {
 } from 'react-icons/fa6';
 
 const ChessAppsPage: NextPage = () => {
+  const [{ search }, setState] = useState<{ search: string }>({ search: '' });
+
   const apps: NothingApp[] = [
     {
       id: 'chess-books-chess960',
@@ -58,12 +61,35 @@ const ChessAppsPage: NextPage = () => {
 
   return (
     <div className="h-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
-      <div className="container mx-auto h-full p-4 md:p-8">
-        <div className="grid h-full grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-8">
-          {apps.map(
-            ({ id = '', href = '', name = '', shortName = '', icon }) => {
+      <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
+        <div className="w-full">
+          <input
+            id="search"
+            name="search"
+            placeholder="Search"
+            className="w-full rounded border border-gray-300 px-4 py-2"
+            value={search}
+            onChange={(event) => {
+              setState((previous) => ({
+                ...previous,
+                search: event.target.value,
+              }));
+            }}
+          />
+        </div>
+        <div className="grid h-full grow grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-8">
+          {apps
+            .filter(({ name, shortName }) => {
+              return search !== ''
+                ? name.toLowerCase().includes(search.toLowerCase()) ||
+                    shortName.toLowerCase().includes(search.toLowerCase())
+                : true;
+            })
+            .map(({ id = '', href = '', name = '', shortName = '', icon = <>
+
+                </> }) => {
               return (
-                <div key={id} className="col-span-1">
+                <div key={id} className="col-span-1 row-span-1">
                   <div className="flex h-full items-center justify-center">
                     <Link
                       href={`/apps/${href}`}
@@ -72,15 +98,16 @@ const ChessAppsPage: NextPage = () => {
                         {icon}
                       </div>
                       <p className="w-full truncate text-center text-xs font-semibold md:text-sm">
-                        <span className="inline md:hidden">{shortName}</span>
+                        <span className="inline lowercase md:hidden">
+                          {shortName}
+                        </span>
                         <span className="hidden md:inline">{name}</span>
                       </p>
                     </Link>
                   </div>
                 </div>
               );
-            }
-          )}
+            })}
         </div>
       </div>
     </div>

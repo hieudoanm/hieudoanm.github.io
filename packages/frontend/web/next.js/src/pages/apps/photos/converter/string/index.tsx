@@ -1,0 +1,280 @@
+import { downloadImage } from '@web/utils/download';
+import { copyToClipboard } from '@web/utils/navigator';
+import { NextPage } from 'next';
+import { useState } from 'react';
+import { recognize } from 'tesseract.js';
+
+enum Func {
+  BASE64 = 'Base64',
+  OCR = 'OCR',
+  FILTER_GOLDEN = 'Golden',
+  FILTER_GRAYSCALE = 'Grayscale',
+}
+
+const getMimeType = (base64: string): string | null => {
+  const regexp: RegExp = /^data:(.*?);base64,/;
+  const match = regexp.exec(base64);
+  console.info('match', match);
+  return match ? match[1] : null;
+};
+
+const mimeToExtension: Record<string, 'gif' | 'ico' | 'jpg' | 'png'> = {
+  'image/gif': 'gif',
+  'image/jpeg': 'jpg',
+  'image/png': 'png',
+  'image/x-icon': 'ico',
+};
+
+const base64 = (file: File): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      const { result } = reader;
+      if (!result) {
+        resolve('');
+      } else if (typeof result === 'string') {
+        resolve(result);
+      } else {
+        const decoder = new TextDecoder('utf-8');
+        const text = decoder.decode(result);
+        resolve(text);
+      }
+    };
+    reader.onerror = (event) => reject(new Error(event.type));
+  });
+};
+
+const filter = async (
+  layer: 'golden' | 'grayscale',
+  image: HTMLImageElement
+): Promise<string> => {
+  const { golden, grayscale, open_image } = await import(
+    '@silvia-odwyer/photon'
+  );
+
+  const canvas = document.createElement('canvas');
+  canvas.width = image.width;
+  canvas.height = image.height;
+
+  const context = canvas.getContext('2d');
+  if (context === null) return '';
+  context.drawImage(image, 0, 0);
+
+  const photonImage = open_image(canvas, context);
+  canvas.remove();
+
+  if (layer === 'golden') {
+    golden(photonImage);
+  } else if (layer === 'grayscale') {
+    grayscale(photonImage);
+  }
+
+  const base64: string = photonImage.get_base64();
+  return base64;
+};
+
+const filterBase64 = (
+  mask: 'golden' | 'grayscale',
+  base64: string
+): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.src = base64;
+
+    image.onload = async () => {
+      const base64: string = await filter(mask, image);
+      resolve(base64);
+    };
+
+    image.onerror = () => {
+      reject(new Error('Error'));
+    };
+  });
+};
+
+const ocr = (file: File): Promise<string> => {
+  const imageURL = URL.createObjectURL(file);
+  return new Promise((resolve) => {
+    recognize(imageURL, 'eng')
+      .then(({ data }) => {
+        resolve(data.text ?? 'No Text');
+      })
+      .catch((error) => {
+        console.error('error', error);
+        resolve('Unable to Recognize');
+      });
+  });
+};
+
+const convert = async ({
+  func,
+  file,
+}: {
+  func: Func;
+  file: File;
+}): Promise<string> => {
+  if (func === Func.BASE64) {
+    return await base64(file);
+  } else if (func === Func.OCR) {
+    return await ocr(file);
+  } else if (func === Func.FILTER_GOLDEN) {
+    const base64String: string = await base64(file);
+    return await filterBase64('golden', base64String);
+  } else if (func === Func.FILTER_GRAYSCALE) {
+    const base64String: string = await base64(file);
+    return await filterBase64('grayscale', base64String);
+  }
+  return '';
+};
+
+const ImagesPage: NextPage = () => {
+  const [
+    {
+      func = Func.BASE64,
+      loading = false,
+      inputFile = null,
+      inputString = '',
+      output = '',
+    },
+    setState,
+  ] = useState<{
+    func: Func;
+    loading: boolean;
+    inputFile: File | null;
+    inputString: string;
+    output: string;
+  }>({
+    func: Func.BASE64,
+    loading: false,
+    inputFile: null,
+    inputString: '',
+    output: '',
+  });
+
+  return (
+    <div className="h-screen w-screen">
+      <div className="grid h-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        <div className="col-span-1 row-span-1 flex h-full flex-col gap-y-2 bg-gray-100 p-4 text-gray-900 md:gap-y-4 md:p-8">
+          <p className="font-semibold">Image</p>
+          <div
+            className="h-full w-full grow overflow-hidden rounded border border-dashed border-gray-500 bg-cover bg-center"
+            style={{ backgroundImage: `url(${inputString})` }}></div>
+          <label
+            htmlFor="upload-image"
+            className="cursor-pointer rounded border border-dashed border-gray-500 py-2 text-center">
+            <input
+              type="file"
+              name="image"
+              accept="image/*"
+              id="upload-image"
+              className="hidden"
+              onChange={async (event) => {
+                const files = event.target.files;
+                if (files === null) return;
+                const file = files.item(0);
+                if (!file) return;
+                const newInputString: string = await base64(file);
+                setState((previous) => ({
+                  ...previous,
+                  loading: true,
+                  inputFile: file,
+                  inputString: newInputString,
+                }));
+                const newOutput: string = await convert({ func, file });
+                setState((previous) => ({
+                  ...previous,
+                  loading: false,
+                  output: newOutput,
+                }));
+              }}
+            />
+            <span>Upload File</span>
+          </label>
+        </div>
+        <div className="col-span-1 row-span-1 flex h-full flex-col gap-y-2 bg-gray-900 p-4 text-gray-100 md:gap-y-4 md:p-8">
+          <select
+            id="func"
+            name="func"
+            className="w-full appearance-none font-semibold"
+            value={func}
+            onChange={async (event) => {
+              const newFunc: Func = event.target.value as Func;
+              if (!inputFile) return;
+              setState((previous) => ({
+                ...previous,
+                func: newFunc,
+                loading: true,
+              }));
+              const newOutput: string = await convert({
+                func: newFunc,
+                file: inputFile,
+              });
+              setState((previous) => ({
+                ...previous,
+                loading: false,
+                output: newOutput,
+              }));
+            }}>
+            <optgroup label="Convert">
+              <option value={Func.BASE64}>{Func.BASE64}</option>
+              <option value={Func.OCR}>{Func.OCR}</option>
+            </optgroup>
+            <optgroup label="Filter">
+              <option value={Func.FILTER_GOLDEN}>{Func.FILTER_GOLDEN}</option>
+              <option value={Func.FILTER_GRAYSCALE}>
+                {Func.FILTER_GRAYSCALE}
+              </option>
+            </optgroup>
+          </select>
+          {func === Func.FILTER_GOLDEN || func === Func.FILTER_GRAYSCALE ? (
+            <div className="w-full grow overflow-auto">
+              {!loading && (
+                <div
+                  className="h-full w-full grow overflow-hidden rounded bg-cover bg-center"
+                  style={{ backgroundImage: `url(${output})` }}
+                />
+              )}
+            </div>
+          ) : (
+            <textarea
+              id="output"
+              name="output"
+              placeholder="output"
+              className="w-full grow focus:outline-none"
+              value={loading ? 'Loading' : (output ?? 'No File Yet')}
+              readOnly
+            />
+          )}
+          <button
+            type="button"
+            className="cursor-pointer rounded bg-red-500 py-2 font-semibold text-gray-100"
+            onClick={() => {
+              if (
+                func === Func.FILTER_GOLDEN ||
+                func === Func.FILTER_GRAYSCALE
+              ) {
+                const mime: string = getMimeType(output) ?? '';
+                const format: 'jpg' | 'png' | 'ico' | 'gif' =
+                  mimeToExtension[mime];
+                console.info('format', format);
+                downloadImage({
+                  format,
+                  content: output,
+                  filename: 'image',
+                });
+              } else {
+                copyToClipboard(output);
+              }
+            }}>
+            {func === Func.FILTER_GOLDEN || func === Func.FILTER_GRAYSCALE
+              ? 'Download'
+              : 'Copy'}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ImagesPage;

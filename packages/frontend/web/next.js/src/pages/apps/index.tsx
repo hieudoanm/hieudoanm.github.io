@@ -7,16 +7,14 @@ import {
   FaCalculator,
   FaChessKnight,
   FaClock,
-  FaEye,
   FaFlag,
   FaFlask,
   FaGithub,
   FaGoogle,
-  FaImage,
   FaImages,
+  FaJs,
   FaLightbulb,
   FaPalette,
-  FaPenToSquare,
   FaRobot,
   FaRulerCombined,
   FaTelegram,
@@ -72,11 +70,11 @@ const AppsPage: NextPage = () => {
       icon: <FaTextWidth className="text-xl md:text-2xl" />,
     },
     {
-      id: 'editor',
-      href: 'editor',
-      name: 'editor',
-      shortName: 'editor',
-      icon: <FaPenToSquare className="text-xl md:text-2xl" />,
+      id: 'manifest.json',
+      href: 'manifest.json',
+      name: 'manifest.json',
+      shortName: 'manifest.json',
+      icon: <FaJs className="text-xl md:text-2xl" />,
     },
     {
       id: 'gen.ai',
@@ -100,13 +98,6 @@ const AppsPage: NextPage = () => {
       icon: <FaGoogle className="text-xl md:text-2xl" />,
     },
     {
-      id: 'images',
-      href: 'images',
-      name: 'images',
-      shortName: 'images',
-      icon: <FaImages className="text-xl md:text-2xl" />,
-    },
-    {
       id: 'list-chemistry',
       href: 'list/chemistry',
       name: 'chemistry',
@@ -121,18 +112,11 @@ const AppsPage: NextPage = () => {
       icon: <FaFlag className="text-xl md:text-2xl" />,
     },
     {
-      id: 'ocr',
-      href: 'ocr',
-      name: 'ocr',
-      shortName: 'ocr',
-      icon: <FaEye className="text-xl md:text-2xl" />,
-    },
-    {
       id: 'photos',
       href: 'photos',
       name: 'photos',
       shortName: 'photos',
-      icon: <FaImage className="text-xl md:text-2xl" />,
+      icon: <FaImages className="text-xl md:text-2xl" />,
     },
     {
       id: 'resolution',
@@ -189,7 +173,7 @@ const AppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-4 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-4 md:gap-8">
+        <div className="grid h-full grow grid-cols-3 grid-rows-6 gap-4 md:grid-cols-6 md:grid-rows-3 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''
