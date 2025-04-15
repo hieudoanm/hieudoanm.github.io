@@ -20,7 +20,14 @@ import { marked } from 'marked';
 import { NextPage } from 'next';
 import pdfMake from 'pdfmake/build/pdfmake';
 import { toDataURL } from 'qrcode';
-import { ChangeEvent, Dispatch, FC, SetStateAction, useState } from 'react';
+import {
+  ChangeEvent,
+  Dispatch,
+  FC,
+  SetStateAction,
+  useRef,
+  useState,
+} from 'react';
 import { parse, stringify } from 'yaml';
 
 pdfMake.fonts = {
@@ -237,6 +244,7 @@ const ActionButton: FC<{
 };
 
 const StringPage: NextPage = () => {
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const [
     {
       func = Func.STRING_CAPITALISE,
@@ -263,12 +271,14 @@ const StringPage: NextPage = () => {
             <p>Word Count: {countWords(text)}</p>
           </div>
           <textarea
+            ref={textareaRef}
             id="text"
             name="text"
             placeholder="Text"
             className="w-full grow rounded border border-dashed border-gray-300 p-2 focus:outline-none"
             value={text}
             onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
+              const { selectionStart, selectionEnd } = event.target;
               const newText = event.target.value;
               const newResult: string = await convert({
                 func: func as Func,
@@ -279,6 +289,13 @@ const StringPage: NextPage = () => {
                 text: newText,
                 result: newResult,
               }));
+              // Wait for state update and restore cursor position
+              setTimeout(() => {
+                textareaRef.current?.setSelectionRange(
+                  selectionStart,
+                  selectionEnd
+                );
+              }, 0);
             }}
           />
           <select
