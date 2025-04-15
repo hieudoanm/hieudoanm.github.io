@@ -5,6 +5,7 @@ import {
   INITIAL_STRING,
   INTIIAL_YAML,
 } from '@web/constants';
+import { useWindowSize } from '@web/hooks/window/use-size';
 import { braillify } from '@web/utils/braille';
 import { csv2json, csv2md, csv2sql } from '@web/utils/csv';
 import { downloadImage } from '@web/utils/download';
@@ -25,9 +26,12 @@ import {
   Dispatch,
   FC,
   SetStateAction,
+  useEffect,
+  useLayoutEffect,
   useRef,
   useState,
 } from 'react';
+import Split from 'react-split';
 import { parse, stringify } from 'yaml';
 
 pdfMake.fonts = {
@@ -244,7 +248,15 @@ const ActionButton: FC<{
 };
 
 const StringPage: NextPage = () => {
+  const { width } = useWindowSize();
+  // This is for textarea
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+  const cursorRef = useRef({
+    selectionStart: 0,
+    selectionEnd: 0,
+    scrollTop: 0,
+  });
+  // Component States
   const [
     {
       func = Func.STRING_CAPITALISE,
@@ -262,10 +274,49 @@ const StringPage: NextPage = () => {
     result: capitalise(INITIAL_STRING),
   });
 
+  const direction = width > 768 ? 'horizontal' : 'vertical';
+  console.info('direction & width', { direction, width });
+
+  useEffect(() => {
+    const gutters = document.getElementsByClassName('gutter');
+    const gutter = gutters.item(0);
+    if (!gutter) return;
+    if (direction === 'vertical') {
+      gutter.classList.remove('!h-full', 'w-1');
+      gutter.classList.add('!w-full', 'h-1');
+    } else if (direction === 'horizontal') {
+      gutter.classList.remove('!w-full', 'h-1');
+      gutter.classList.add('!h-full', 'w-1');
+    }
+  }, [direction]);
+
+  useLayoutEffect(() => {
+    const textarea = textareaRef.current;
+    if (textarea) {
+      const { selectionStart, selectionEnd, scrollTop } = cursorRef.current;
+      textarea.selectionStart = selectionStart;
+      textarea.selectionEnd = selectionEnd;
+      textarea.scrollTop = scrollTop;
+    }
+  }, [text]);
+
   return (
     <div className="h-screen w-screen">
-      <div className="grid h-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
-        <div className="col-span-1 row-span-1 flex h-full flex-col gap-y-2 bg-gray-100 p-4 text-gray-900 md:gap-y-4 md:p-8">
+      <Split
+        expandToMin={false}
+        sizes={[50, 50]}
+        minSize={100} // pixel
+        gutter={() => {
+          const gutter = document.createElement('div');
+          gutter.className = 'gutter bg-gray-300 hover:cursor-pointer';
+          return gutter;
+        }}
+        gutterAlign="center"
+        gutterSize={4}
+        direction={direction}
+        className="flex h-full flex-col md:flex-row">
+        <div
+          className={`flex h-full flex-col gap-y-2 bg-gray-100 p-4 text-gray-900 md:gap-y-4 md:p-8 ${width > 768 ? '!h-full' : '!w-full'}`}>
           <div className="flex items-center justify-between">
             <p className="font-semibold">String</p>
             <p>Word Count: {countWords(text)}</p>
@@ -278,7 +329,9 @@ const StringPage: NextPage = () => {
             className="w-full grow rounded border border-dashed border-gray-300 p-2 focus:outline-none"
             value={text}
             onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
-              const { selectionStart, selectionEnd } = event.target;
+              const { selectionStart, selectionEnd, scrollTop } = event.target;
+              cursorRef.current = { selectionStart, selectionEnd, scrollTop };
+              // Value
               const newText = event.target.value;
               const newResult: string = await convert({
                 func: func as Func,
@@ -289,13 +342,6 @@ const StringPage: NextPage = () => {
                 text: newText,
                 result: newResult,
               }));
-              // Wait for state update and restore cursor position
-              setTimeout(() => {
-                textareaRef.current?.setSelectionRange(
-                  selectionStart,
-                  selectionEnd
-                );
-              }, 0);
             }}
           />
           <select
@@ -405,7 +451,8 @@ const StringPage: NextPage = () => {
             </optgroup>
           </select>
         </div>
-        <div className="col-span-1 row-span-1 flex h-full flex-col gap-y-2 bg-gray-900 p-4 text-gray-100 md:gap-y-4 md:p-8">
+        <div
+          className={`flex h-full flex-col gap-y-2 bg-gray-900 p-4 text-gray-100 md:gap-y-4 md:p-8 ${width > 768 ? '!h-full' : '!w-full'}`}>
           <p className="font-semibold">Output</p>
           {func === Func.CSV_TO_HTML && (
             <div className="w-full grow overflow-auto">
@@ -443,7 +490,7 @@ const StringPage: NextPage = () => {
             setState={setState}
           />
         </div>
-      </div>
+      </Split>
     </div>
   );
 };
