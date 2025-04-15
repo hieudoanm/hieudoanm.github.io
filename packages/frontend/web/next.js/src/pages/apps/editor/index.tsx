@@ -13,13 +13,14 @@ import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
 import { capitalise, deburr, kebabcase, snakecase } from '@web/utils/string';
 import { buildEpochString } from '@web/utils/time';
+import { buildUuidString } from '@web/utils/uuid';
 import htmlToPdfmake from 'html-to-pdfmake';
 import { toXML } from 'jstoxml';
 import { marked } from 'marked';
 import { NextPage } from 'next';
 import pdfMake from 'pdfmake/build/pdfmake';
 import { toDataURL } from 'qrcode';
-import { ChangeEvent, FC, useState } from 'react';
+import { ChangeEvent, Dispatch, FC, SetStateAction, useState } from 'react';
 import { parse, stringify } from 'yaml';
 
 pdfMake.fonts = {
@@ -53,6 +54,7 @@ enum Func {
   STRING_SNAKECASE = 'snake_case',
   STRING_UPPERCASE = 'STRING_UPPERCASE',
   TIME_EPOCH = 'Epoch',
+  UUID = 'UUID',
   YAML_TO_JSON = 'YAML to JSON',
 }
 
@@ -117,6 +119,8 @@ const convert = async ({
     result = stringify(jsonParse(source, {}));
   } else if (func === Func.MARKDOWN_PREVIEW) {
     result = await marked(source);
+  } else if (func === Func.UUID) {
+    result = buildUuidString();
   }
   return result;
 };
@@ -172,6 +176,63 @@ const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
         })}
       </tbody>
     </table>
+  );
+};
+
+const ActionButton: FC<{
+  func: Func;
+  result: string;
+  setState: Dispatch<
+    SetStateAction<{
+      func: string;
+      text: string;
+      result: string;
+    }>
+  >;
+}> = ({ func, result = '', setState }) => {
+  const actionText = () => {
+    if (func === Func.IMAGE_QRCODE || func === Func.MARKDOWN_PREVIEW) {
+      return 'Download';
+    }
+
+    if (func === Func.UUID) {
+      return 'Refresh';
+    }
+
+    return 'Copy';
+  };
+
+  return (
+    <button
+      type="button"
+      className="cursor-pointer rounded bg-red-500 py-2 font-semibold text-gray-100"
+      onClick={async () => {
+        if (func === Func.CSV_TO_HTML) {
+          const csvHtmlTable: string =
+            document.getElementById('csv-html-table')?.outerHTML ?? '';
+          copyToClipboard(csvHtmlTable);
+        } else if (func === Func.IMAGE_QRCODE) {
+          downloadImage({
+            content: result,
+            filename: 'qrcode',
+            format: 'jpg',
+          });
+        } else if (func === Func.MARKDOWN_PREVIEW) {
+          const converted = htmlToPdfmake(result);
+          const docDefinition = { content: converted };
+          pdfMake.createPdf(docDefinition).download('markdown.pdf');
+        } else if (func === Func.UUID) {
+          const newResult = await convert({ func, source: '' });
+          setState((previous) => ({
+            ...previous,
+            result: newResult,
+          }));
+        } else {
+          copyToClipboard(result);
+        }
+      }}>
+      {actionText()}
+    </button>
   );
 };
 
@@ -259,6 +320,8 @@ const StringPage: NextPage = () => {
                 newText = JSON.stringify(INITIAL_JSON, null, 2);
               } else if (newFunc === Func.MARKDOWN_PREVIEW) {
                 newText = INITIAL_MARKDOWN;
+              } else if (newFunc === Func.UUID) {
+                newText = '';
               } else if (newFunc === Func.YAML_TO_JSON) {
                 newText = INTIIAL_YAML;
               }
@@ -317,6 +380,9 @@ const StringPage: NextPage = () => {
             <optgroup label="Time">
               <option value={Func.TIME_EPOCH}>{Func.TIME_EPOCH}</option>
             </optgroup>
+            <optgroup label="UUI">
+              <option value={Func.UUID}>{Func.UUID}</option>
+            </optgroup>
             <optgroup label="YAML">
               <option value={Func.YAML_TO_JSON}>{Func.YAML_TO_JSON}</option>
             </optgroup>
@@ -354,32 +420,11 @@ const StringPage: NextPage = () => {
                 readOnly
               />
             )}
-          <button
-            type="button"
-            className="cursor-pointer rounded bg-red-500 py-2 font-semibold text-gray-100"
-            onClick={() => {
-              if (func === Func.CSV_TO_HTML) {
-                const csvHtmlTable: string =
-                  document.getElementById('csv-html-table')?.outerHTML ?? '';
-                copyToClipboard(csvHtmlTable);
-              } else if (func === Func.IMAGE_QRCODE) {
-                downloadImage({
-                  content: result,
-                  filename: 'qrcode',
-                  format: 'jpg',
-                });
-              } else if (func === Func.MARKDOWN_PREVIEW) {
-                const converted = htmlToPdfmake(result);
-                const docDefinition = { content: converted };
-                pdfMake.createPdf(docDefinition).download('markdown.pdf');
-              } else {
-                copyToClipboard(result);
-              }
-            }}>
-            {func === Func.IMAGE_QRCODE || func === Func.MARKDOWN_PREVIEW
-              ? 'Download'
-              : 'Copy'}
-          </button>
+          <ActionButton
+            func={func as Func}
+            result={result}
+            setState={setState}
+          />
         </div>
       </div>
     </div>

@@ -8,16 +8,13 @@ import {
   FaChessKnight,
   FaClock,
   FaGithub,
-  FaGoogle,
   FaImages,
   FaJs,
   FaLightbulb,
   FaList,
   FaPalette,
   FaPenToSquare,
-  FaRulerCombined,
   FaTelegram,
-  FaU,
 } from 'react-icons/fa6';
 
 const AppsPage: NextPage = () => {
@@ -67,13 +64,6 @@ const AppsPage: NextPage = () => {
       icon: <FaGithub className="text-xl md:text-2xl" />,
     },
     {
-      id: 'google',
-      href: 'google',
-      name: 'google',
-      shortName: 'ggl',
-      icon: <FaGoogle className="text-xl md:text-2xl" />,
-    },
-    {
       id: 'list',
       href: 'list',
       name: 'list',
@@ -95,13 +85,6 @@ const AppsPage: NextPage = () => {
       icon: <FaImages className="text-xl md:text-2xl" />,
     },
     {
-      id: 'resolution',
-      href: 'resolution',
-      name: 'resolution',
-      shortName: 'resolution',
-      icon: <FaRulerCombined className="text-xl md:text-2xl" />,
-    },
-    {
       id: 'status',
       href: 'status',
       name: 'status',
@@ -114,13 +97,6 @@ const AppsPage: NextPage = () => {
       name: 'telegram webhook',
       shortName: 'tele.hook',
       icon: <FaTelegram className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'uuid',
-      href: 'uuid',
-      name: 'uuid',
-      shortName: 'uuid',
-      icon: <FaU className="text-xl md:text-2xl" />,
     },
     {
       id: 'words-english',
@@ -149,7 +125,7 @@ const AppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-3 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-3 md:gap-8">
+        <div className="grid h-full grow grid-cols-3 grid-rows-4 gap-4 md:grid-cols-4 md:grid-rows-3 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''

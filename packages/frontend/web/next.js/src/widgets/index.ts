@@ -10,7 +10,6 @@ export * from './devices';
 export * from './files';
 export * from './fitness';
 export * from './games';
-export * from './google';
 export * from './health';
 export * from './home';
 export * from './mail';
