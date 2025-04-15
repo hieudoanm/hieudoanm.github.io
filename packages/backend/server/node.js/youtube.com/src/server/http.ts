@@ -1,5 +1,5 @@
-import ip from 'ip';
 import { createServer } from 'node:http';
+import { publicIpv4 } from 'public-ip';
 import { logger } from '../utils/log';
 import { enableCors } from '../utils/server';
 import { routes } from './routes/api';
@@ -45,12 +45,13 @@ const PORT: number = parseInt(process.env.PORT ?? '10000') ?? 10000;
 export const startHttpServer = (): Promise<void> => {
   return new Promise((resolve) => {
     // starts a simple http server locally on port 10000
-    httpServer.listen(PORT, '0.0.0.0', () => {
+    httpServer.listen(PORT, '0.0.0.0', async () => {
+      const publicIpV4: string = await publicIpv4();
       const message = `🚀 Server is listening on
 
 - Local (host) : http://localhost:${PORT}
 - Local (IP)   : http://127.0.0.1:${PORT}
-- Network      : http://${ip.address()}:${PORT}`;
+- Network      : http://${publicIpV4}:${PORT}`;
 
       logger.info(message);
       resolve();

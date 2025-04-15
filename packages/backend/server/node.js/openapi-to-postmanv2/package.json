@@ -24,10 +24,10 @@
     "start": "node ./dist/server.js"
   },
   "dependencies": {
-    "ip": "2.0.1",
     "openapi-to-postmanv2": "5.0.0",
     "pino": "9.6.0",
-    "pino-pretty": "13.0.0"
+    "pino-pretty": "13.0.0",
+    "public-ip": "7.0.1"
   },
   "devDependencies": {
     "@eslint/js": "9.24.0",

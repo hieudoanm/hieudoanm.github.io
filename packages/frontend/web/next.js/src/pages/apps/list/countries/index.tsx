@@ -1,7 +1,7 @@
-import { TanStackTable } from '@web/components/TanStackTable';
+import { createColumnHelper } from '@tanstack/react-table';
+import { TanStackTable } from '@web/components/Tanstack/Table';
 import countriesJSON from '@web/json/countries.json';
 import { copyToClipboard } from '@web/utils/navigator';
-import { createColumnHelper } from '@tanstack/react-table';
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
