@@ -3,24 +3,21 @@ title: 'Football'
 date: '2025-03-17'
 ---
 
-# Football
-
 ## Table of Content
 
-- [Football](#football)
-  - [Table of Content](#table-of-content)
-  - [Competitions](#competitions)
-    - [Premier League Best XI by Countries](#premier-league-best-xi-by-countries)
-      - [All](#all)
-        - [Japanese](#japanese)
-        - [Korean](#korean)
-      - [Liverpool](#liverpool)
-        - [England](#england)
-        - [Netherlands](#netherlands)
-    - [Champions](#champions)
-  - [Players](#players)
-  - [Positions](#positions)
-    - [Honorable Mentions](#honorable-mentions)
+- [Table of Content](#table-of-content)
+- [Competitions](#competitions)
+  - [Premier League Best XI by Countries](#premier-league-best-xi-by-countries)
+    - [All](#all)
+      - [Japanese](#japanese)
+      - [Korean](#korean)
+    - [Liverpool](#liverpool)
+      - [England](#england)
+      - [Netherlands](#netherlands)
+  - [Champions](#champions)
+- [Players](#players)
+- [Positions](#positions)
+  - [Honorable Mentions](#honorable-mentions)
 
 ## Competitions
 

@@ -3,24 +3,21 @@ title: 'Techstack'
 date: '2025-04-04'
 ---
 
-# Techstack
-
 ## Table of Content
 
-- [Techstack](#techstack)
-  - [Table of Content](#table-of-content)
-  - [Full-stack Software](#full-stack-software)
-    - [Daily Driver](#daily-driver)
-      - [Daily Driver and Potential Alternative](#daily-driver-and-potential-alternative)
-    - [Engine vs Runtime vs Package Registry vs Package Manager](#engine-vs-runtime-vs-package-registry-vs-package-manager)
-    - [Front-end Framework](#front-end-framework)
-      - [Web Framework](#web-framework)
-      - [Mobile Framework](#mobile-framework)
-      - [Desktop Framework](#desktop-framework)
-    - [Back-end for Front-end](#back-end-for-front-end)
-      - [Database and ORM](#database-and-orm)
-    - [Data Science](#data-science)
-  - [Abbreviation](#abbreviation)
+- [Table of Content](#table-of-content)
+- [Full-stack Software](#full-stack-software)
+  - [Daily Driver](#daily-driver)
+    - [Daily Driver and Potential Alternative](#daily-driver-and-potential-alternative)
+  - [Engine vs Runtime vs Package Registry vs Package Manager](#engine-vs-runtime-vs-package-registry-vs-package-manager)
+  - [Front-end Framework](#front-end-framework)
+    - [Web Framework](#web-framework)
+    - [Mobile Framework](#mobile-framework)
+    - [Desktop Framework](#desktop-framework)
+  - [Back-end for Front-end](#back-end-for-front-end)
+    - [Database and ORM](#database-and-orm)
+  - [Data Science](#data-science)
+- [Abbreviation](#abbreviation)
 
 ## Full-stack Software
 

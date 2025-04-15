@@ -3,11 +3,8 @@ title: 'Computational Neuroscience'
 date: '2025-03-17'
 ---
 
-# Computational Neuroscience
-
-- [Computational Neuroscience](#computational-neuroscience)
-  - [Company](#company)
-  - [Jobs](#jobs)
+- [Company](#company)
+- [Jobs](#jobs)
 
 ## Company
 

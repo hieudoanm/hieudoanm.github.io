@@ -9,24 +9,10 @@ const PhotosAppsPage: NextPage = () => {
 
   const apps: NothingApp[] = [
     {
-      id: 'photos-converter-string',
-      href: 'photos/converter/string',
-      name: 'string',
-      shortName: 'string',
-      icon: <FaImages className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'photos-converter-png2ico',
-      href: 'photos/converter/png2ico',
-      name: 'png2ico',
-      shortName: 'png2ico',
-      icon: <FaImages className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'photos-converter-svg2png',
-      href: 'photos/converter/svg2png',
-      name: 'svg2png',
-      shortName: 'svg2png',
+      id: 'photos-converter',
+      href: 'photos/converter',
+      name: 'converter',
+      shortName: 'converter',
       icon: <FaImages className="text-xl md:text-2xl" />,
     },
     {
@@ -70,7 +56,7 @@ const PhotosAppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-8">
+        <div className="grid h-full grow grid-cols-2 grid-rows-2 gap-4 md:grid-cols-4 md:grid-rows-1 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''

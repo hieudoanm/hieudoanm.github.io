@@ -3,8 +3,6 @@ title: 'American Football'
 date: '2025-04-12'
 ---
 
-# American Football
-
 - AFC: American Football Conference
 - NFC: National Football Conference
 

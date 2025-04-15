@@ -3,8 +3,6 @@ title: 'Tennis'
 date: '2025-04-12'
 ---
 
-# Tennis
-
 | Year | Australia Open   | French Open         | Wimbledon        | US Open               |
 | ---- | ---------------- | ------------------- | ---------------- | --------------------- |
 | 2000 | Andre Agassi     | Gustavo Kuerten     | Pete Sampras     | Marat Safin           |
@@ -33,4 +31,8 @@ date: '2025-04-12'
 | 2023 | Novak Djokovic   | Novak Djokovic      | Carlos Alcaraz   | Novak Djokovic        |
 | 2024 | Jannik Sinner    | Carlos Alcaraz      | Carlos Alcaraz   |                       |
 | 2025 |                  |                     |                  |                       |
-|      |                  |                     |                  |                       |
+| 2026 |                  |                     |                  |                       |
+| 2027 |                  |                     |                  |                       |
+| 2028 |                  |                     |                  |                       |
+| 2029 |                  |                     |                  |                       |
+| 2030 |                  |                     |                  |                       |

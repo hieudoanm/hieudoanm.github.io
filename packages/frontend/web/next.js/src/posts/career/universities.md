@@ -3,8 +3,6 @@ title: 'Universities'
 date: '2025-03-19'
 ---
 
-# Universities
-
 | #   | Group          | Country          | State/Province               | City         | University                       |
 | --- | -------------- | ---------------- | ---------------------------- | ------------ | -------------------------------- |
 | 1   | Group of Eight | Australia        | Australian Capital Territory | Canberra     | Australian National University   |

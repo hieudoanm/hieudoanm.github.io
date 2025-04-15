@@ -3,8 +3,6 @@ title: 'Futsal'
 date: '2025-04-12'
 ---
 
-# Futsal
-
 | Competition | Year | Champion        |
 | ----------- | ---- | --------------- |
 | World Cup   | 1989 | Brazil          |
