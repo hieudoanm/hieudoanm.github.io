@@ -495,7 +495,7 @@ const StringPage: NextPage = () => {
       <Split
         expandToMin={false}
         sizes={[50, 50]}
-        minSize={100} // pixel
+        minSize={150} // pixel
         gutter={() => {
           const gutter = document.createElement('div');
           gutter.className = 'gutter bg-gray-300 hover:cursor-pointer order-2';

@@ -56,7 +56,9 @@ const ChemistryPage: FC = () => {
           </thead>
           <tbody>
             <tr>
-              <td align="center"></td>
+              <td align="center">
+                <div className="px-4" />
+              </td>
               <td align="center">1</td>
               <td align="center">2</td>
               <td align="center">3</td>
@@ -75,7 +77,9 @@ const ChemistryPage: FC = () => {
               <td align="center">16</td>
               <td align="center">17</td>
               <td align="center">18</td>
-              <td></td>
+              <td>
+                <div className="px-4" />
+              </td>
             </tr>
             <tr>
               <td align="center">1</td>
