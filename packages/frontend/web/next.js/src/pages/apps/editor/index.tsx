@@ -168,7 +168,7 @@ const convert = async ({
       source === ''
         ? Math.floor(new Date().getTime() / 1000).toString()
         : source;
-    result = buildEpochString(parseInt(source, 10));
+    result = await buildEpochString(parseInt(source, 10));
   } else if (func === Func.CSV_TO_JSON) {
     result = JSON.stringify(csv2json(source), null, 2);
   } else if (func === Func.CSV_TO_MD) {

@@ -1,4 +1,6 @@
 import { addZero } from './number';
+import { capitalise } from './string';
+import { tryCatch } from './try-catch';
 
 export const months: string[] = [
   'January',
@@ -91,17 +93,35 @@ export const ONE_HOUR: number = ONE_MINUTE * 60;
 export const ONE_DAY: number = ONE_HOUR * 24;
 export const ONE_WEEK: number = ONE_DAY * 7;
 
-export const buildEpochString = (unixTimestamp: number) => {
+const buildEpochStringByTimestamp = async (
+  timestamp: number,
+  unit: 'seconds' | 'milliseconds'
+) => {
   const timezone: number = getTimezone();
-  const timestamp: number = unixTimestamp * 1000;
-  console.log(unixTimestamp, timestamp);
   const date: Date = new Date(timestamp);
   const isoString: string = date.toISOString();
   const readableString: string = buildReadableString(date);
   const gmtDate: Date = new Date(timestamp - timezone * ONE_HOUR);
   const gmtString: string = buildReadableString(gmtDate);
-  return `Assuming that this timestamp is in seconds:\n
+  return `Assuming that this timestamp is in ${unit}:\n
 ISO String     : ${isoString}
 GMT            : ${gmtString} GMT
 Your Time Zone : ${readableString} GMT+${addZero(timezone)}`;
+};
+
+export const buildEpochString = async (unixTimestamp: number) => {
+  const timestamp: number = unixTimestamp * 1000;
+  const { data, error } = await tryCatch(
+    Promise.resolve(buildEpochStringByTimestamp(timestamp, 'seconds'))
+  );
+  if (error) {
+    const { data, error } = await tryCatch(
+      buildEpochStringByTimestamp(unixTimestamp, 'milliseconds')
+    );
+    if (error) {
+      return `Error: ${capitalise(error.message)}`;
+    }
+    return data;
+  }
+  return data;
 };
