@@ -1,6 +1,8 @@
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import {
   INITIAL_CSV,
+  INITIAL_MANIFEST_EXTENSION,
+  INITIAL_MANIFEST_PWA,
   INITIAL_MARKDOWN,
   INITIAL_STRING,
   INTIIAL_YAML,
@@ -57,6 +59,8 @@ enum Func {
   JSON_TO_CSV = 'JSON to CSV',
   JSON_TO_XML = 'JSON to XML',
   JSON_TO_YAML = 'JSON to YAML',
+  MANIFEST_EXTENSION = 'manifest.json Extension',
+  MANIFEST_PWA = 'manifest.json PWA',
   MARKDOWN_PREVIEW = 'Markdown Preview',
   STRING_CAPITALISE = 'Capitalise',
   STRING_DEBURR = 'deburr',
@@ -132,6 +136,8 @@ const convert = async ({
     result = await marked(source);
   } else if (func === Func.UUID) {
     result = buildUuidString();
+  } else if (func === Func.MANIFEST_EXTENSION || func === Func.MANIFEST_PWA) {
+    result = JSON.stringify(JSON.parse(source), null, 2);
   }
   return result;
 };
@@ -387,6 +393,10 @@ const StringPage: NextPage = () => {
                 newText = '';
               } else if (newFunc === Func.YAML_TO_JSON) {
                 newText = INTIIAL_YAML;
+              } else if (newFunc === Func.MANIFEST_EXTENSION) {
+                newText = JSON.stringify(INITIAL_MANIFEST_EXTENSION, null, 2);
+              } else if (newFunc === Func.MANIFEST_PWA) {
+                newText = JSON.stringify(INITIAL_MANIFEST_PWA, null, 2);
               }
               const newResult: string = await convert({
                 func: newFunc,
@@ -399,30 +409,36 @@ const StringPage: NextPage = () => {
                 result: newResult,
               }));
             }}>
-            <optgroup label="Code">
+            <optgroup label="code">
               <option value={Func.CODE_BRAILLIFY}>{Func.CODE_BRAILLIFY}</option>
               <option value={Func.CODE_MORSIFY}>{Func.CODE_MORSIFY}</option>
             </optgroup>
-            <optgroup label="CSV">
+            <optgroup label="csv">
               <option value={Func.CSV_TO_HTML}>{Func.CSV_TO_HTML}</option>
               <option value={Func.CSV_TO_JSON}>{Func.CSV_TO_JSON}</option>
               <option value={Func.CSV_TO_MD}>{Func.CSV_TO_MD}</option>
               <option value={Func.CSV_TO_SQL}>{Func.CSV_TO_SQL}</option>
             </optgroup>
-            <optgroup label="Image">
+            <optgroup label="image">
               <option value={Func.IMAGE_QRCODE}>{Func.IMAGE_QRCODE}</option>
             </optgroup>
-            <optgroup label="JSON">
+            <optgroup label="json">
               <option value={Func.JSON_TO_CSV}>{Func.JSON_TO_CSV}</option>
               <option value={Func.JSON_TO_XML}>{Func.JSON_TO_XML}</option>
               <option value={Func.JSON_TO_YAML}>{Func.JSON_TO_YAML}</option>
             </optgroup>
-            <optgroup label="Markdown">
+            <optgroup label="manifest.json">
+              <option value={Func.MANIFEST_EXTENSION}>
+                {Func.MANIFEST_EXTENSION}
+              </option>
+              <option value={Func.MANIFEST_PWA}>{Func.MANIFEST_PWA}</option>
+            </optgroup>
+            <optgroup label="markdown">
               <option value={Func.MARKDOWN_PREVIEW}>
                 {Func.MARKDOWN_PREVIEW}
               </option>
             </optgroup>
-            <optgroup label="String">
+            <optgroup label="string">
               <option value={Func.STRING_CAPITALISE}>
                 {Func.STRING_CAPITALISE}
               </option>
@@ -440,13 +456,13 @@ const StringPage: NextPage = () => {
                 {Func.STRING_UPPERCASE}
               </option>
             </optgroup>
-            <optgroup label="Time">
+            <optgroup label="time">
               <option value={Func.TIME_EPOCH}>{Func.TIME_EPOCH}</option>
             </optgroup>
-            <optgroup label="UUI">
+            <optgroup label="uuid">
               <option value={Func.UUID}>{Func.UUID}</option>
             </optgroup>
-            <optgroup label="YAML">
+            <optgroup label="yaml">
               <option value={Func.YAML_TO_JSON}>{Func.YAML_TO_JSON}</option>
             </optgroup>
           </select>

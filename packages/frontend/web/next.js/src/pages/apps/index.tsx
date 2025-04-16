@@ -10,7 +10,6 @@ import {
   FaFlask,
   FaGithub,
   FaImages,
-  FaJs,
   FaLightbulb,
   FaPalette,
   FaPenToSquare,
@@ -69,13 +68,6 @@ const AppsPage: NextPage = () => {
       name: 'gitHub',
       shortName: 'gh',
       icon: <FaGithub className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'manifest.json',
-      href: 'manifest.json',
-      name: 'manifest.json',
-      shortName: 'manifest.json',
-      icon: <FaJs className="text-xl md:text-2xl" />,
     },
     {
       id: 'photos',
