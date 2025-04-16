@@ -4,11 +4,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import {
   FaBook,
-  FaCalculator,
   FaChessKnight,
   FaClock,
   FaFlask,
-  FaGithub,
   FaImages,
   FaLightbulb,
   FaPalette,
@@ -20,13 +18,6 @@ const AppsPage: NextPage = () => {
   const [{ search }, setState] = useState<{ search: string }>({ search: '' });
 
   const apps: NothingApp[] = [
-    {
-      id: 'calculator',
-      href: 'calculator',
-      name: 'calculator',
-      shortName: 'calculator',
-      icon: <FaCalculator className="text-xl md:text-2xl" />,
-    },
     {
       id: 'chemistry',
       href: 'chemistry',
@@ -61,13 +52,6 @@ const AppsPage: NextPage = () => {
       name: 'editor',
       shortName: 'editor',
       icon: <FaPenToSquare className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'github',
-      href: 'github',
-      name: 'gitHub',
-      shortName: 'gh',
-      icon: <FaGithub className="text-xl md:text-2xl" />,
     },
     {
       id: 'photos',
@@ -117,7 +101,7 @@ const AppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-3 grid-rows-4 gap-4 md:grid-cols-4 md:grid-rows-3 md:gap-8">
+        <div className="grid h-full grow grid-cols-3 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-3 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''

@@ -23,6 +23,20 @@ const PhotosAppsPage: NextPage = () => {
       icon: <FaImages className="text-xl md:text-2xl" />,
     },
     {
+      id: 'photos-github-cover',
+      href: 'photos/github/cover',
+      name: 'github.cover',
+      shortName: 'gh.cover',
+      icon: <FaImages className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'photos-github-languages',
+      href: 'photos/github/languages',
+      name: 'github.languages',
+      shortName: 'gh.lang',
+      icon: <FaImages className="text-xl md:text-2xl" />,
+    },
+    {
       id: 'photos-instagram',
       href: 'photos/instagram',
       name: 'instagram',
@@ -56,7 +70,7 @@ const PhotosAppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-2 grid-rows-2 gap-4 md:grid-cols-4 md:grid-rows-1 md:gap-8">
+        <div className="grid h-full grow grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''

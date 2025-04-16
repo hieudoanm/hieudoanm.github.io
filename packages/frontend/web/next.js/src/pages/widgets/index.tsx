@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import {
   FaBatteryFull,
-  FaBitcoin,
   FaBus,
+  FaCalculator,
   FaCalendarDays,
   FaCamera,
   FaChartLine,
@@ -59,6 +59,13 @@ const WidgetsPage: NextPage = () => {
       icon: <FaCalendarDays className="text-2xl" />,
     },
     {
+      id: 'calculator',
+      href: 'calculator',
+      name: 'calculator',
+      shortName: 'calculator',
+      icon: <FaCalculator className="text-2xl" />,
+    },
+    {
       id: 'camera',
       href: 'camera',
       name: 'camera',
@@ -71,13 +78,6 @@ const WidgetsPage: NextPage = () => {
       name: 'compass',
       shortName: 'compass',
       icon: <FaCompass className="text-2xl" />,
-    },
-    {
-      id: 'crypto',
-      href: 'crypto',
-      name: 'crypto',
-      shortName: 'crypto',
-      icon: <FaBitcoin className="text-2xl" />,
     },
     {
       id: 'devices',
@@ -120,6 +120,13 @@ const WidgetsPage: NextPage = () => {
       name: 'home',
       shortName: 'home',
       icon: <FaHouseChimney className="text-2xl" />,
+    },
+    {
+      id: 'investment',
+      href: 'investment',
+      name: 'investment',
+      shortName: 'investment',
+      icon: <FaChartLine className="text-2xl" />,
     },
     {
       id: 'mail',
@@ -183,13 +190,6 @@ const WidgetsPage: NextPage = () => {
       name: 'sports',
       shortName: 'sports',
       icon: <FaFutbol className="text-2xl" />,
-    },
-    {
-      id: 'stocks',
-      href: 'stocks',
-      name: 'stocks',
-      shortName: 'stocks',
-      icon: <FaChartLine className="text-2xl" />,
     },
     {
       id: 'tasks',
