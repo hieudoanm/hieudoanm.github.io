@@ -873,8 +873,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0
       react-chessboard:
-        specifier: 4.7.2
-        version: 4.7.2(@types/node@22.14.1)(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 4.7.3
+        version: 4.7.3(@types/node@22.14.1)(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-dom:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
@@ -8968,8 +8968,8 @@ packages:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
 
-  react-chessboard@4.7.2:
-    resolution: {integrity: sha512-aOWWf+Qnsa9HIsT08PK4ORXLR8pP82DgidpHmQnjnI3GrudqCCE2WqNZe4j3tSQ0kI733qFjhqu+GFWhuG/QdA==}
+  react-chessboard@4.7.3:
+    resolution: {integrity: sha512-pQNs/Ee3EJqv1kv5sWkO8J4TOEuZC8Nm7NOWGHcFSBmiBLX1uvbZD2/7snmKdt2GB5+QJhTQ+PSJJ+e32c3e7w==}
     peerDependencies:
       react: '>=16.14.0'
       react-dom: '>=16.14.0'
@@ -20941,7 +20941,7 @@ snapshots:
       minimist: 1.2.8
       strip-json-comments: 2.0.1
 
-  react-chessboard@4.7.2(@types/node@22.14.1)(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-chessboard@4.7.3(@types/node@22.14.1)(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
       react-dnd: 16.0.1(@types/node@22.14.1)(@types/react@19.1.2)(react@19.1.0)
