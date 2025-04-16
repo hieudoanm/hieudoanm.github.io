@@ -568,8 +568,7 @@ const ChemistryPage: FC = () => {
               <td align="center">7</td>
             </tr>
             <tr>
-              <td></td>
-              <td align="right" colSpan={2}>
+              <td align="right" colSpan={3}>
                 <p className="px-1 text-sm">Lanthanide Series</p>
               </td>
               <td>
@@ -655,8 +654,7 @@ const ChemistryPage: FC = () => {
               <td></td>
             </tr>
             <tr>
-              <td></td>
-              <td align="right" colSpan={2}>
+              <td align="right" colSpan={3}>
                 <p className="px-1 text-sm">Actinide Series</p>
               </td>
               <td>

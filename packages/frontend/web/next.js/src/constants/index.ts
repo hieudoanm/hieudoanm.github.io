@@ -237,3 +237,8 @@ export const INITIAL_MANIFEST_PWA = {
   theme_color: '#000000',
   background_color: '#ffffff',
 };
+
+export const INITIAL_TELEGRAM_WEBHOOK = {
+  token: '',
+  webhook: '',
+};

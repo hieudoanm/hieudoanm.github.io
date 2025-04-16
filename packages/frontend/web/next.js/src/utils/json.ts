@@ -1,6 +1,7 @@
-export const jsonParse = <T = unknown>(text: string, defaultValue: T) => {
+export const jsonParse = <T = unknown>(text: string, defaultValue: T): T => {
   try {
-    return JSON.parse(text);
+    const data = JSON.parse(text);
+    return data;
   } catch (error) {
     console.error('error', error);
     return defaultValue;

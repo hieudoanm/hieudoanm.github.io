@@ -10,7 +10,6 @@ import {
   FaLightbulb,
   FaPalette,
   FaPenToSquare,
-  FaTelegram,
 } from 'react-icons/fa6';
 
 const AppsPage: NextPage = () => {
@@ -65,13 +64,6 @@ const AppsPage: NextPage = () => {
       name: 'status',
       shortName: 'status',
       icon: <FaLightbulb className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'telegram-webhook',
-      href: 'telegram/webhook',
-      name: 'telegram webhook',
-      shortName: 'tele.hook',
-      icon: <FaTelegram className="text-xl md:text-2xl" />,
     },
   ];
 
