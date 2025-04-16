@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 import {
   FaBatteryFull,
+  FaBitcoin,
   FaBus,
   FaCalculator,
   FaCalendarDays,
   FaCamera,
   FaChartLine,
+  FaClock,
   FaCloudSunRain,
   FaCompass,
   FaEnvelopesBulk,
@@ -73,11 +75,25 @@ const WidgetsPage: NextPage = () => {
       icon: <FaCamera className="mx-auto text-2xl" />,
     },
     {
+      id: 'clock',
+      href: 'clock',
+      name: 'clock',
+      shortName: 'clock',
+      icon: <FaClock className="text-2xl" />,
+    },
+    {
       id: 'compass',
       href: 'compass',
       name: 'compass',
       shortName: 'compass',
       icon: <FaCompass className="text-2xl" />,
+    },
+    {
+      id: 'crypto',
+      href: 'crypto',
+      name: 'crypto',
+      shortName: 'crypto',
+      icon: <FaBitcoin className="text-2xl" />,
     },
     {
       id: 'devices',
@@ -120,13 +136,6 @@ const WidgetsPage: NextPage = () => {
       name: 'home',
       shortName: 'home',
       icon: <FaHouseChimney className="text-2xl" />,
-    },
-    {
-      id: 'investment',
-      href: 'investment',
-      name: 'investment',
-      shortName: 'investment',
-      icon: <FaChartLine className="text-2xl" />,
     },
     {
       id: 'mail',
@@ -192,6 +201,13 @@ const WidgetsPage: NextPage = () => {
       icon: <FaFutbol className="text-2xl" />,
     },
     {
+      id: 'stock',
+      href: 'stock',
+      name: 'stock',
+      shortName: 'stock',
+      icon: <FaChartLine className="text-2xl" />,
+    },
+    {
       id: 'tasks',
       href: 'tasks',
       name: 'tasks',
@@ -253,7 +269,7 @@ const WidgetsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grid-cols-4 grid-rows-7 gap-4 md:grid-cols-7 md:grid-rows-4 md:gap-8">
+        <div className="grid h-full grid-cols-5 grid-rows-6 gap-4 md:grid-cols-6 md:grid-rows-5 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''

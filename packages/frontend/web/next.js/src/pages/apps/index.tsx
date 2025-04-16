@@ -4,12 +4,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import {
   FaChessKnight,
-  FaClock,
+  FaCode,
   FaFlask,
   FaImages,
   FaLightbulb,
   FaPalette,
-  FaPenToSquare,
 } from 'react-icons/fa6';
 
 const AppsPage: NextPage = () => {
@@ -31,25 +30,11 @@ const AppsPage: NextPage = () => {
       icon: <FaChessKnight className="text-xl md:text-2xl" />,
     },
     {
-      id: 'clock',
-      href: 'clock',
-      name: 'clock',
-      shortName: 'clock',
-      icon: <FaClock className="text-xl md:text-2xl" />,
-    },
-    {
       id: 'colors',
       href: 'colors',
       name: 'colors',
       shortName: 'colors',
       icon: <FaPalette className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'editor',
-      href: 'editor',
-      name: 'editor',
-      shortName: 'editor',
-      icon: <FaPenToSquare className="text-xl md:text-2xl" />,
     },
     {
       id: 'photos',
@@ -64,6 +49,13 @@ const AppsPage: NextPage = () => {
       name: 'status',
       shortName: 'status',
       icon: <FaLightbulb className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'studio',
+      href: 'studio',
+      name: 'studio',
+      shortName: 'studio',
+      icon: <FaCode className="text-xl md:text-2xl" />,
     },
   ];
 
@@ -85,7 +77,7 @@ const AppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-2 grid-rows-4 gap-4 md:grid-cols-4 md:grid-rows-2 md:gap-8">
+        <div className="grid h-full grow grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''

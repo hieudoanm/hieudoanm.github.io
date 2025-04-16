@@ -23,6 +23,7 @@ import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
 import { capitalise, deburr, kebabcase, snakecase } from '@web/utils/string';
 import { buildEpochString } from '@web/utils/time';
+import { tryCatch } from '@web/utils/try-catch';
 import { buildUuidString } from '@web/utils/uuid';
 import htmlToPdfmake from 'html-to-pdfmake';
 import { toXML } from 'jstoxml';
@@ -54,36 +55,59 @@ pdfMake.fonts = {
   },
 };
 
-enum Func {
-  CODE_BRAILLIFY = 'Braillify (⠃⠗⠁⠊⠇⠇⠊⠋⠽)',
-  CODE_MORSIFY = 'Morsify (-----.-........-.-.--)',
+enum ActCSV {
   CSV_TO_HTML = 'CSV to HTML',
   CSV_TO_JSON = 'CSV to JSON',
   CSV_TO_MD = 'CSV to Markdown',
   CSV_TO_SQL = 'CSV to SQL',
-  IMAGE_QRCODE = 'QR Code',
+}
+
+enum ActJSON {
   JSON_EDITOR = 'JSON Editor',
   JSON_MINIFY = 'JSON Minify',
   JSON_TO_CSV = 'JSON to CSV',
   JSON_TO_XML = 'JSON to XML',
   JSON_TO_YAML = 'JSON to YAML',
-  MANIFEST_EXTENSION = 'manifest.json Extension',
-  MANIFEST_PWA = 'manifest.json PWA',
-  MARKDOWN_DICTIONARY = 'Markdown Dictionary',
-  MARKDOWN_EDITOR = 'Markdown Editor',
-  STRING_CAPITALISE = 'Capitalise',
-  STRING_DEBURR = 'deburr',
-  STRING_KEBABCASE = 'kebab-case',
-  STRING_LOWERCASE = 'lowercase',
-  STRING_SNAKECASE = 'snake_case',
-  STRING_UPPERCASE = 'UPPERCASE',
+}
+
+enum ActManifestJSON {
+  MANIFEST_JSON_EXTENSION = 'manifest.json Extension',
+  MANIFEST_JSON_PWA = 'manifest.json PWA',
+}
+
+enum ActString {
+  STRING_CAPITALISE = 'String - Capitalise',
+  STRING_DEBURR = 'String - deburr',
+  STRING_KEBABCASE = 'String - kebab-case',
+  STRING_LOWERCASE = 'String - lowercase',
+  STRING_SNAKECASE = 'String - snake_case',
+  STRING_UPPERCASE = 'String - UPPERCASE',
+}
+
+enum ActTelegram {
   TELEGRAM_WEBHOOK_SET = 'Telegram - Webhook - Set',
   TELEGRAM_WEBHOOK_DELETE = 'Telegram - Webhook - Delete',
   TELEGRAM_WEBHOOK_GET_INFO = 'Telegram - Webhook - Get Info',
+}
+
+enum ActOther {
+  CODE_BRAILLIFY = 'Braillify (⠃⠗⠁⠊⠇⠇⠊⠋⠽)',
+  CODE_MORSIFY = 'Morsify (-----.-........-.-.--)',
+  IMAGE_QRCODE = 'QR Code',
+  MARKDOWN_DICTIONARY = 'Markdown Dictionary',
+  MARKDOWN_EDITOR = 'Markdown Editor',
   TIME_EPOCH = 'Epoch',
   UUID = 'UUID',
   YAML_TO_JSON = 'YAML to JSON',
 }
+
+type Act =
+  | ActCSV
+  | ActJSON
+  | ActManifestJSON
+  | ActString
+  | ActTelegram
+  | ActOther;
 
 const INITIAL_JSON = [
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
@@ -92,70 +116,149 @@ const INITIAL_JSON = [
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
 ];
 
-const convert = async ({
-  func,
+const actTelegram = async ({
+  action,
   source,
 }: {
-  func: Func;
+  action: ActTelegram;
+  source: string;
+}) => {
+  let result = '';
+  const { data } = await tryCatch<{ token: string; webhook: string }>(
+    JSON.parse(source)
+  );
+  const { token = '', webhook = '' } = data ?? {};
+  if (token === '' || webhook === '') {
+    result = 'Missing Token or Webhook';
+  }
+  if (action === ActTelegram.TELEGRAM_WEBHOOK_GET_INFO) {
+    const { data, error } = await tryCatch(getWebhookInfo(token));
+    if (error) {
+      result = error.message;
+    } else {
+      result = JSON.stringify(data, null, 2);
+    }
+  } else if (action === ActTelegram.TELEGRAM_WEBHOOK_DELETE) {
+    const { data, error } = await tryCatch(deleteWebhook(token, webhook));
+    if (error) {
+      result = error.message;
+    } else {
+      result = JSON.stringify(data, null, 2);
+    }
+  } else if (action === ActTelegram.TELEGRAM_WEBHOOK_SET) {
+    const { data, error } = await tryCatch(setWebhook(token, webhook));
+    if (error) {
+      result = error.message;
+    } else {
+      result = JSON.stringify(data, null, 2);
+    }
+  }
+  return result;
+};
+
+const isActionTelegram = (act: Act): act is ActTelegram => {
+  return Object.values(ActTelegram).includes(act as ActTelegram);
+};
+
+const actString = ({
+  action,
+  source,
+}: {
+  action: ActString;
+  source: string;
+}) => {
+  let result = '';
+  if (action === ActString.STRING_CAPITALISE) {
+    result = capitalise(source);
+  } else if (action === ActString.STRING_DEBURR) {
+    result = deburr(source);
+  } else if (action === ActString.STRING_KEBABCASE) {
+    result = kebabcase(source);
+  } else if (action === ActString.STRING_LOWERCASE) {
+    result = source.toLowerCase();
+  } else if (action === ActString.STRING_SNAKECASE) {
+    result = snakecase(source);
+  } else if (action === ActString.STRING_UPPERCASE) {
+    result = source.toUpperCase();
+  }
+  return result;
+};
+
+const isActionString = (act: Act): act is ActString => {
+  return Object.values(ActString).includes(act as ActString);
+};
+
+const actJSON = ({ action, source }: { action: ActJSON; source: string }) => {
+  let result = '';
+  if (action === ActJSON.JSON_MINIFY) {
+    try {
+      result = JSON.stringify(JSON.parse(source));
+    } catch (error) {
+      result = (error as Error).message;
+    }
+  } else if (action === ActJSON.JSON_EDITOR) {
+    try {
+      result = JSON.stringify(JSON.parse(source), null, 2);
+    } catch (error) {
+      result = (error as Error).message;
+    }
+  } else if (action === ActJSON.JSON_TO_CSV) {
+    result = json2csv(
+      jsonParse<Record<string, string | number | boolean | Date>[]>(source, [])
+    );
+  } else if (action === ActJSON.JSON_TO_XML) {
+    result = toXML(jsonParse(source, {}), { indent: '  ' });
+  } else if (action === ActJSON.JSON_TO_YAML) {
+    result = stringify(jsonParse(source, {}));
+  }
+  return result;
+};
+
+const isActionJSON = (act: Act): act is ActJSON => {
+  return Object.values(ActJSON).includes(act as ActJSON);
+};
+
+const isActionManifestJSON = (act: Act): act is ActManifestJSON => {
+  return Object.values(ActManifestJSON).includes(act as ActManifestJSON);
+};
+
+const actCSV = ({ action, source }: { action: ActCSV; source: string }) => {
+  let result = '';
+  if (action === ActCSV.CSV_TO_JSON) {
+    result = JSON.stringify(csv2json(source), null, 2);
+  } else if (action === ActCSV.CSV_TO_MD) {
+    result = csv2md(source);
+  } else if (action === ActCSV.CSV_TO_SQL) {
+    result = csv2sql(source);
+  }
+  return result;
+};
+
+const isActionCSV = (act: Act): act is ActCSV => {
+  return Object.values(ActCSV).includes(act as ActCSV);
+};
+
+const act = async ({
+  action,
+  source,
+}: {
+  action: Act;
   source: string;
 }): Promise<string> => {
   let result: string = source;
-  if (func === Func.TELEGRAM_WEBHOOK_GET_INFO) {
-    try {
-      const data: { token: string; webhook: string } = JSON.parse(source);
-      const { token = '', webhook = '' } = data;
-      if (token === '' || webhook === '') {
-        result = 'Missing Token or Webhook';
-      } else {
-        const response = await getWebhookInfo(token);
-        result = JSON.stringify(response, null, 2);
-      }
-    } catch (error) {
-      result = (error as Error).message;
-    }
-  } else if (func === Func.TELEGRAM_WEBHOOK_DELETE) {
-    try {
-      const data: { token: string; webhook: string } = JSON.parse(source);
-      const { token = '', webhook = '' } = data;
-      if (token === '' || webhook === '') {
-        result = 'Missing Token or Webhook';
-      } else {
-        const response = await deleteWebhook(token, webhook);
-        result = JSON.stringify(response, null, 2);
-      }
-    } catch (error) {
-      result = (error as Error).message;
-    }
-  } else if (func === Func.TELEGRAM_WEBHOOK_SET) {
-    try {
-      const data: { token: string; webhook: string } = JSON.parse(source);
-      const { token = '', webhook = '' } = data;
-      if (token === '' || webhook === '') {
-        result = 'Missing Token or Webhook';
-      } else {
-        const response = await setWebhook(token, webhook);
-        result = JSON.stringify(response, null, 2);
-      }
-    } catch (error) {
-      result = (error as Error).message;
-    }
-  } else if (func === Func.CODE_BRAILLIFY) {
+  if (isActionTelegram(action)) {
+    result = await actTelegram({ action, source });
+  } else if (isActionCSV(action)) {
+    result = actCSV({ action, source });
+  } else if (isActionJSON(action)) {
+    result = actJSON({ action, source });
+  } else if (isActionString(action)) {
+    result = actString({ action, source });
+  } else if (action === ActOther.CODE_BRAILLIFY) {
     result = braillify(source);
-  } else if (func === Func.STRING_CAPITALISE) {
-    result = capitalise(source);
-  } else if (func === Func.STRING_DEBURR) {
-    result = deburr(source);
-  } else if (func === Func.STRING_KEBABCASE) {
-    result = kebabcase(source);
-  } else if (func === Func.STRING_LOWERCASE) {
-    result = source.toLowerCase();
-  } else if (func === Func.CODE_MORSIFY) {
+  } else if (action === ActOther.CODE_MORSIFY) {
     result = morsify(source);
-  } else if (func === Func.STRING_SNAKECASE) {
-    result = snakecase(source);
-  } else if (func === Func.STRING_UPPERCASE) {
-    result = source.toUpperCase();
-  } else if (func === Func.IMAGE_QRCODE) {
+  } else if (action === ActOther.IMAGE_QRCODE) {
     if (source === '') return '';
     result = await toDataURL(source, {
       errorCorrectionLevel: 'H',
@@ -163,43 +266,21 @@ const convert = async ({
       width: 512,
       margin: 1,
     });
-  } else if (func === Func.TIME_EPOCH) {
+  } else if (action === ActOther.TIME_EPOCH) {
     source =
       source === ''
         ? Math.floor(new Date().getTime() / 1000).toString()
         : source;
     result = await buildEpochString(parseInt(source, 10));
-  } else if (func === Func.CSV_TO_JSON) {
-    result = JSON.stringify(csv2json(source), null, 2);
-  } else if (func === Func.CSV_TO_MD) {
-    result = csv2md(source);
-  } else if (func === Func.CSV_TO_SQL) {
-    result = csv2sql(source);
-  } else if (func === Func.YAML_TO_JSON) {
+  } else if (action === ActOther.YAML_TO_JSON) {
     result = JSON.stringify(parse(source), null, 2);
-  } else if (func === Func.JSON_MINIFY) {
-    try {
-      result = JSON.stringify(JSON.parse(source));
-    } catch (error) {
-      result = (error as Error).message;
-    }
-  } else if (func === Func.JSON_EDITOR) {
-    try {
-      result = JSON.stringify(JSON.parse(source), null, 2);
-    } catch (error) {
-      result = (error as Error).message;
-    }
-  } else if (func === Func.JSON_TO_CSV) {
-    result = json2csv(
-      jsonParse<Record<string, string | number | boolean | Date>[]>(source, [])
-    );
-  } else if (func === Func.JSON_TO_XML) {
-    result = toXML(jsonParse(source, {}), { indent: '  ' });
-  } else if (func === Func.JSON_TO_YAML) {
-    result = stringify(jsonParse(source, {}));
-  } else if (func === Func.MARKDOWN_EDITOR) {
+  } else if (action === ActOther.MARKDOWN_EDITOR) {
     result = await marked(source);
-  } else if (func === Func.MARKDOWN_DICTIONARY) {
+  } else if (action === ActOther.UUID) {
+    result = buildUuidString();
+  } else if (isActionManifestJSON(action)) {
+    result = JSON.stringify(JSON.parse(source), null, 2);
+  } else if (action === ActOther.MARKDOWN_DICTIONARY) {
     const word: Word = await getWord(source);
     const { results = [] } = word;
     if (results.length === 0) {
@@ -235,10 +316,6 @@ ${results
         .join('\n');
       result = await marked(markdown);
     }
-  } else if (func === Func.UUID) {
-    result = buildUuidString();
-  } else if (func === Func.MANIFEST_EXTENSION || func === Func.MANIFEST_PWA) {
-    result = JSON.stringify(JSON.parse(source), null, 2);
   }
   return result;
 };
@@ -300,11 +377,14 @@ const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
 };
 
 const ActionButton: FC<{
-  func: Func;
+  action: Act;
   result: string;
-}> = ({ func, result = '' }) => {
+}> = ({ action, result = '' }) => {
   const actionText = () => {
-    if (func === Func.IMAGE_QRCODE || func === Func.MARKDOWN_EDITOR) {
+    if (
+      action === ActOther.IMAGE_QRCODE ||
+      action === ActOther.MARKDOWN_EDITOR
+    ) {
       return <FaDownload className="mx-auto" />;
     }
 
@@ -317,17 +397,17 @@ const ActionButton: FC<{
         type="button"
         className="h-full w-full cursor-pointer p-4"
         onClick={async () => {
-          if (func === Func.CSV_TO_HTML) {
+          if (action === ActCSV.CSV_TO_HTML) {
             const csvHtmlTable: string =
               document.getElementById('csv-html-table')?.outerHTML ?? '';
             copyToClipboard(csvHtmlTable);
-          } else if (func === Func.IMAGE_QRCODE) {
+          } else if (action === ActOther.IMAGE_QRCODE) {
             downloadImage({
               content: result,
               filename: 'qrcode',
               format: 'jpg',
             });
-          } else if (func === Func.MARKDOWN_EDITOR) {
+          } else if (action === ActOther.MARKDOWN_EDITOR) {
             const converted = htmlToPdfmake(result);
             const docDefinition = { content: converted };
             pdfMake.createPdf(docDefinition).download('markdown.pdf');
@@ -354,19 +434,19 @@ const StringPage: NextPage = () => {
   const [
     {
       loading = false,
-      func = Func.STRING_CAPITALISE,
+      action = ActString.STRING_CAPITALISE,
       text = INITIAL_STRING,
       result = capitalise(INITIAL_STRING),
     },
     setState,
   ] = useState<{
     loading: boolean;
-    func: string;
+    action: string;
     text: string;
     result: string;
   }>({
     loading: false,
-    func: Func.STRING_CAPITALISE,
+    action: ActString.STRING_CAPITALISE,
     text: INITIAL_STRING,
     result: capitalise(INITIAL_STRING),
   });
@@ -397,12 +477,12 @@ const StringPage: NextPage = () => {
     }
   }, [text]);
 
-  const submit = async ({ func, text }: { func: Func; text: string }) => {
+  const submit = async ({ action, text }: { action: Act; text: string }) => {
     setState((previous) => ({
       ...previous,
       loading: true,
     }));
-    const newResult = await convert({ func: func, source: text });
+    const newResult = await act({ action: action, source: text });
     setState((previous) => ({
       ...previous,
       loading: false,
@@ -434,7 +514,7 @@ const StringPage: NextPage = () => {
           <form
             onSubmit={async (event) => {
               event.preventDefault();
-              await submit({ func: func as Func, text });
+              await submit({ action: action as Act, text });
             }}
             className="flex grow flex-col overflow-hidden rounded border border-gray-300">
             <textarea
@@ -454,170 +534,196 @@ const StringPage: NextPage = () => {
                   ...previous,
                   text: newText,
                 }));
-                await submit({ func: func as Func, text: newText });
+                await submit({ action: action as Act, text: newText });
               }}
             />
             <div className="flex items-center justify-center border-t border-gray-300">
               <select
-                id="func"
-                name="func"
+                id="action"
+                name="action"
                 className="h-full grow appearance-none p-2 font-semibold"
-                value={func}
+                value={action}
                 onChange={async (event) => {
-                  const newFunc: Func = event.target.value as Func;
+                  const newFunc: Act = event.target.value as Act;
                   let newText: string = text;
                   // Check CSV Convertor
                   const previousFuncIsNotCSV: boolean =
-                    func !== Func.CSV_TO_HTML &&
-                    func !== Func.CSV_TO_JSON &&
-                    func !== Func.CSV_TO_MD &&
-                    func !== Func.CSV_TO_SQL;
+                    action !== ActCSV.CSV_TO_HTML &&
+                    action !== ActCSV.CSV_TO_JSON &&
+                    action !== ActCSV.CSV_TO_MD &&
+                    action !== ActCSV.CSV_TO_SQL;
                   const nextFuncIsCSV =
-                    newFunc === Func.CSV_TO_HTML ||
-                    newFunc === Func.CSV_TO_JSON ||
-                    newFunc === Func.CSV_TO_MD ||
-                    newFunc === Func.CSV_TO_SQL;
+                    newFunc === ActCSV.CSV_TO_HTML ||
+                    newFunc === ActCSV.CSV_TO_JSON ||
+                    newFunc === ActCSV.CSV_TO_MD ||
+                    newFunc === ActCSV.CSV_TO_SQL;
                   // Check JSON Convertor
                   const previousFuncIsNotJSON: boolean =
-                    func !== Func.JSON_EDITOR &&
-                    func !== Func.JSON_MINIFY &&
-                    func !== Func.JSON_TO_CSV &&
-                    func !== Func.JSON_TO_XML &&
-                    func !== Func.JSON_TO_YAML;
+                    action !== ActJSON.JSON_EDITOR &&
+                    action !== ActJSON.JSON_MINIFY &&
+                    action !== ActJSON.JSON_TO_CSV &&
+                    action !== ActJSON.JSON_TO_XML &&
+                    action !== ActJSON.JSON_TO_YAML;
                   const nextFuncIsJSON =
-                    newFunc === Func.JSON_EDITOR ||
-                    newFunc === Func.JSON_MINIFY ||
-                    newFunc === Func.JSON_TO_CSV ||
-                    newFunc === Func.JSON_TO_XML ||
-                    newFunc === Func.JSON_TO_YAML;
+                    newFunc === ActJSON.JSON_EDITOR ||
+                    newFunc === ActJSON.JSON_MINIFY ||
+                    newFunc === ActJSON.JSON_TO_CSV ||
+                    newFunc === ActJSON.JSON_TO_XML ||
+                    newFunc === ActJSON.JSON_TO_YAML;
                   // Check Telegram
                   const previousFuncIsNotTelegram: boolean =
-                    func !== Func.TELEGRAM_WEBHOOK_SET &&
-                    func !== Func.TELEGRAM_WEBHOOK_DELETE &&
-                    func !== Func.TELEGRAM_WEBHOOK_GET_INFO;
+                    action !== ActTelegram.TELEGRAM_WEBHOOK_SET &&
+                    action !== ActTelegram.TELEGRAM_WEBHOOK_DELETE &&
+                    action !== ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
                   const nextFuncIsTelegram =
-                    newFunc === Func.TELEGRAM_WEBHOOK_SET ||
-                    newFunc === Func.TELEGRAM_WEBHOOK_DELETE ||
-                    newFunc === Func.TELEGRAM_WEBHOOK_GET_INFO;
+                    newFunc === ActTelegram.TELEGRAM_WEBHOOK_SET ||
+                    newFunc === ActTelegram.TELEGRAM_WEBHOOK_DELETE ||
+                    newFunc === ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
                   // Get Initial String
-                  if (newFunc === Func.TIME_EPOCH) {
+                  if (newFunc === ActOther.TIME_EPOCH) {
                     newText = Math.floor(
                       new Date().getTime() / 1000
                     ).toString();
                   } else if (previousFuncIsNotCSV && nextFuncIsCSV) {
                     newText = INITIAL_CSV;
-                  } else if (newFunc === Func.IMAGE_QRCODE) {
+                  } else if (newFunc === ActOther.IMAGE_QRCODE) {
                     newText = 'https://google.com';
                   } else if (previousFuncIsNotJSON && nextFuncIsJSON) {
                     newText = JSON.stringify(INITIAL_JSON, null, 2);
-                  } else if (newFunc === Func.MARKDOWN_EDITOR) {
+                  } else if (newFunc === ActOther.MARKDOWN_EDITOR) {
                     newText = INITIAL_MARKDOWN;
-                  } else if (newFunc === Func.MARKDOWN_DICTIONARY) {
+                  } else if (newFunc === ActOther.MARKDOWN_DICTIONARY) {
                     newText = 'example';
-                  } else if (newFunc === Func.UUID) {
+                  } else if (newFunc === ActOther.UUID) {
                     newText = '';
-                  } else if (newFunc === Func.YAML_TO_JSON) {
+                  } else if (newFunc === ActOther.YAML_TO_JSON) {
                     newText = INTIIAL_YAML;
-                  } else if (newFunc === Func.MANIFEST_EXTENSION) {
+                  } else if (
+                    newFunc === ActManifestJSON.MANIFEST_JSON_EXTENSION
+                  ) {
                     newText = JSON.stringify(
                       INITIAL_MANIFEST_EXTENSION,
                       null,
                       2
                     );
-                  } else if (newFunc === Func.MANIFEST_PWA) {
+                  } else if (newFunc === ActManifestJSON.MANIFEST_JSON_PWA) {
                     newText = JSON.stringify(INITIAL_MANIFEST_PWA, null, 2);
                   } else if (previousFuncIsNotTelegram && nextFuncIsTelegram) {
                     newText = JSON.stringify(INITIAL_TELEGRAM_WEBHOOK, null, 2);
                   }
                   setState((previous) => ({
                     ...previous,
-                    func: newFunc,
+                    action: newFunc,
                     text: newText,
                   }));
-                  await submit({ func: newFunc, text: newText });
+                  await submit({ action: newFunc, text: newText });
                 }}>
                 <optgroup label="code">
-                  <option value={Func.CODE_BRAILLIFY}>
-                    {Func.CODE_BRAILLIFY}
+                  <option value={ActOther.CODE_BRAILLIFY}>
+                    {ActOther.CODE_BRAILLIFY}
                   </option>
-                  <option value={Func.CODE_MORSIFY}>{Func.CODE_MORSIFY}</option>
+                  <option value={ActOther.CODE_MORSIFY}>
+                    {ActOther.CODE_MORSIFY}
+                  </option>
                 </optgroup>
                 <optgroup label="csv">
-                  <option value={Func.CSV_TO_HTML}>{Func.CSV_TO_HTML}</option>
-                  <option value={Func.CSV_TO_JSON}>{Func.CSV_TO_JSON}</option>
-                  <option value={Func.CSV_TO_MD}>{Func.CSV_TO_MD}</option>
-                  <option value={Func.CSV_TO_SQL}>{Func.CSV_TO_SQL}</option>
+                  <option value={ActCSV.CSV_TO_HTML}>
+                    {ActCSV.CSV_TO_HTML}
+                  </option>
+                  <option value={ActCSV.CSV_TO_JSON}>
+                    {ActCSV.CSV_TO_JSON}
+                  </option>
+                  <option value={ActCSV.CSV_TO_MD}>{ActCSV.CSV_TO_MD}</option>
+                  <option value={ActCSV.CSV_TO_SQL}>{ActCSV.CSV_TO_SQL}</option>
                 </optgroup>
                 <optgroup label="image">
-                  <option value={Func.IMAGE_QRCODE}>{Func.IMAGE_QRCODE}</option>
+                  <option value={ActOther.IMAGE_QRCODE}>
+                    {ActOther.IMAGE_QRCODE}
+                  </option>
                 </optgroup>
                 <optgroup label="json">
-                  <option value={Func.JSON_EDITOR}>{Func.JSON_EDITOR}</option>
-                  <option value={Func.JSON_MINIFY}>{Func.JSON_MINIFY}</option>
-                  <option value={Func.JSON_TO_CSV}>{Func.JSON_TO_CSV}</option>
-                  <option value={Func.JSON_TO_XML}>{Func.JSON_TO_XML}</option>
-                  <option value={Func.JSON_TO_YAML}>{Func.JSON_TO_YAML}</option>
+                  <option value={ActJSON.JSON_EDITOR}>
+                    {ActJSON.JSON_EDITOR}
+                  </option>
+                  <option value={ActJSON.JSON_MINIFY}>
+                    {ActJSON.JSON_MINIFY}
+                  </option>
+                  <option value={ActJSON.JSON_TO_CSV}>
+                    {ActJSON.JSON_TO_CSV}
+                  </option>
+                  <option value={ActJSON.JSON_TO_XML}>
+                    {ActJSON.JSON_TO_XML}
+                  </option>
+                  <option value={ActJSON.JSON_TO_YAML}>
+                    {ActJSON.JSON_TO_YAML}
+                  </option>
                 </optgroup>
                 <optgroup label="manifest.json">
-                  <option value={Func.MANIFEST_EXTENSION}>
-                    {Func.MANIFEST_EXTENSION}
+                  <option value={ActManifestJSON.MANIFEST_JSON_EXTENSION}>
+                    {ActManifestJSON.MANIFEST_JSON_EXTENSION}
                   </option>
-                  <option value={Func.MANIFEST_PWA}>{Func.MANIFEST_PWA}</option>
+                  <option value={ActManifestJSON.MANIFEST_JSON_PWA}>
+                    {ActManifestJSON.MANIFEST_JSON_PWA}
+                  </option>
                 </optgroup>
                 <optgroup label="markdown">
-                  <option value={Func.MARKDOWN_DICTIONARY}>
-                    {Func.MARKDOWN_DICTIONARY}
+                  <option value={ActOther.MARKDOWN_DICTIONARY}>
+                    {ActOther.MARKDOWN_DICTIONARY}
                   </option>
-                  <option value={Func.MARKDOWN_EDITOR}>
-                    {Func.MARKDOWN_EDITOR}
+                  <option value={ActOther.MARKDOWN_EDITOR}>
+                    {ActOther.MARKDOWN_EDITOR}
                   </option>
                 </optgroup>
                 <optgroup label="string">
-                  <option value={Func.STRING_CAPITALISE}>
-                    {Func.STRING_CAPITALISE}
+                  <option value={ActString.STRING_CAPITALISE}>
+                    {ActString.STRING_CAPITALISE}
                   </option>
-                  <option value={Func.STRING_DEBURR}>
-                    {Func.STRING_DEBURR}
+                  <option value={ActString.STRING_DEBURR}>
+                    {ActString.STRING_DEBURR}
                   </option>
-                  <option value={Func.STRING_KEBABCASE}>
-                    {Func.STRING_KEBABCASE}
+                  <option value={ActString.STRING_KEBABCASE}>
+                    {ActString.STRING_KEBABCASE}
                   </option>
-                  <option value={Func.STRING_LOWERCASE}>
-                    {Func.STRING_LOWERCASE}
+                  <option value={ActString.STRING_LOWERCASE}>
+                    {ActString.STRING_LOWERCASE}
                   </option>
-                  <option value={Func.STRING_SNAKECASE}>
-                    {Func.STRING_SNAKECASE}
+                  <option value={ActString.STRING_SNAKECASE}>
+                    {ActString.STRING_SNAKECASE}
                   </option>
-                  <option value={Func.STRING_UPPERCASE}>
-                    {Func.STRING_UPPERCASE}
+                  <option value={ActString.STRING_UPPERCASE}>
+                    {ActString.STRING_UPPERCASE}
                   </option>
                 </optgroup>
                 <optgroup label="telegram">
-                  <option value={Func.TELEGRAM_WEBHOOK_SET}>
-                    {Func.TELEGRAM_WEBHOOK_SET}
+                  <option value={ActTelegram.TELEGRAM_WEBHOOK_SET}>
+                    {ActTelegram.TELEGRAM_WEBHOOK_SET}
                   </option>
-                  <option value={Func.TELEGRAM_WEBHOOK_DELETE}>
-                    {Func.TELEGRAM_WEBHOOK_DELETE}
+                  <option value={ActTelegram.TELEGRAM_WEBHOOK_DELETE}>
+                    {ActTelegram.TELEGRAM_WEBHOOK_DELETE}
                   </option>
-                  <option value={Func.TELEGRAM_WEBHOOK_GET_INFO}>
-                    {Func.TELEGRAM_WEBHOOK_GET_INFO}
+                  <option value={ActTelegram.TELEGRAM_WEBHOOK_GET_INFO}>
+                    {ActTelegram.TELEGRAM_WEBHOOK_GET_INFO}
                   </option>
                 </optgroup>
                 <optgroup label="time">
-                  <option value={Func.TIME_EPOCH}>{Func.TIME_EPOCH}</option>
+                  <option value={ActOther.TIME_EPOCH}>
+                    {ActOther.TIME_EPOCH}
+                  </option>
                 </optgroup>
                 <optgroup label="uuid">
-                  <option value={Func.UUID}>{Func.UUID}</option>
+                  <option value={ActOther.UUID}>{ActOther.UUID}</option>
                 </optgroup>
                 <optgroup label="yaml">
-                  <option value={Func.YAML_TO_JSON}>{Func.YAML_TO_JSON}</option>
+                  <option value={ActOther.YAML_TO_JSON}>
+                    {ActOther.YAML_TO_JSON}
+                  </option>
                 </optgroup>
               </select>
               <button
                 type="submit"
                 className="h-full cursor-pointer border-l border-gray-300 p-4"
                 onClick={async () => {
-                  await submit({ func: func as Func, text });
+                  await submit({ action: action as Act, text });
                 }}>
                 <FaPaperPlane />
               </button>
@@ -632,12 +738,12 @@ const StringPage: NextPage = () => {
               <div className="h-full grow p-2">Loading</div>
             ) : (
               <>
-                {func === Func.CSV_TO_HTML && (
+                {action === ActCSV.CSV_TO_HTML && (
                   <div className="w-full grow overflow-auto p-2">
                     <CSVTable csv={text} />
                   </div>
                 )}
-                {func === Func.IMAGE_QRCODE && (
+                {action === ActOther.IMAGE_QRCODE && (
                   <div className="w-full grow overflow-auto p-2">
                     <div
                       className="mx-auto aspect-square h-full overflow-hidden rounded bg-cover bg-center"
@@ -645,16 +751,16 @@ const StringPage: NextPage = () => {
                     />
                   </div>
                 )}
-                {(func === Func.MARKDOWN_EDITOR ||
-                  func === Func.MARKDOWN_DICTIONARY) && (
+                {(action === ActOther.MARKDOWN_EDITOR ||
+                  action === ActOther.MARKDOWN_DICTIONARY) && (
                   <div className="w-full grow overflow-auto p-2">
                     <MarkdownPreviewer html={result} />
                   </div>
                 )}
-                {func !== Func.CSV_TO_HTML &&
-                  func !== Func.IMAGE_QRCODE &&
-                  func !== Func.MARKDOWN_EDITOR &&
-                  func !== Func.MARKDOWN_DICTIONARY && (
+                {action !== ActCSV.CSV_TO_HTML &&
+                  action !== ActOther.IMAGE_QRCODE &&
+                  action !== ActOther.MARKDOWN_EDITOR &&
+                  action !== ActOther.MARKDOWN_DICTIONARY && (
                     <div className="mb-2 w-full grow rounded">
                       <textarea
                         id="result"
@@ -668,7 +774,7 @@ const StringPage: NextPage = () => {
                   )}
               </>
             )}
-            <ActionButton func={func as Func} result={result} />
+            <ActionButton action={action as Act} result={result} />
           </div>
         </div>
       </Split>
