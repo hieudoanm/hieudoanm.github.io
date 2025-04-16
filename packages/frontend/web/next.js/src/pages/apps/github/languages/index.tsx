@@ -15,7 +15,7 @@ const GitHubLanguagesPage: NextPage = () => {
   }>({
     token: '',
     username: 'hieudoanm',
-    repository: 'reverse-proxy',
+    repository: 'hieudoanm',
   });
 
   const url = `https://api.github.com/repos/${username}/${repository}/languages`;
@@ -100,7 +100,7 @@ const GitHubLanguagesPage: NextPage = () => {
         </form>
         <div
           ref={languagesRef}
-          className="flex h-12 w-full items-center overflow-hidden rounded">
+          className="flex w-full flex-col items-center overflow-hidden rounded md:flex-row">
           {isPending && <div className="text-center">Loading</div>}
           {error && <div className="text-center">Error: {error.message}</div>}
           {JSON.stringify(data) !== '{}' && (
@@ -123,9 +123,9 @@ const GitHubLanguagesPage: NextPage = () => {
                   return (
                     <div
                       key={languageKey}
-                      className="flex h-full w-full items-center justify-center text-center text-xs text-gray-100"
+                      className="flex h-full w-full items-center justify-center py-2 text-center text-xs text-gray-100"
                       style={{ backgroundColor: color }}>
-                      {languageKey}
+                      <b>{languageKey}</b>
                     </div>
                   );
                 })}
