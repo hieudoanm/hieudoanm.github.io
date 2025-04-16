@@ -1,3 +1,4 @@
+import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import {
   INITIAL_CSV,
@@ -61,13 +62,14 @@ enum Func {
   JSON_TO_YAML = 'JSON to YAML',
   MANIFEST_EXTENSION = 'manifest.json Extension',
   MANIFEST_PWA = 'manifest.json PWA',
-  MARKDOWN_PREVIEW = 'Markdown Preview',
+  MARKDOWN_DICTIONARY = 'Markdown Dictionary',
+  MARKDOWN_EDITOR = 'Markdown Editor',
   STRING_CAPITALISE = 'Capitalise',
   STRING_DEBURR = 'deburr',
   STRING_KEBABCASE = 'kebab-case',
   STRING_LOWERCASE = 'lowercase',
   STRING_SNAKECASE = 'snake_case',
-  STRING_UPPERCASE = 'STRING_UPPERCASE',
+  STRING_UPPERCASE = 'UPPERCASE',
   TIME_EPOCH = 'Epoch',
   UUID = 'UUID',
   YAML_TO_JSON = 'YAML to JSON',
@@ -132,8 +134,44 @@ const convert = async ({
     result = toXML(jsonParse(source, {}), { indent: '  ' });
   } else if (func === Func.JSON_TO_YAML) {
     result = stringify(jsonParse(source, {}));
-  } else if (func === Func.MARKDOWN_PREVIEW) {
+  } else if (func === Func.MARKDOWN_EDITOR) {
     result = await marked(source);
+  } else if (func === Func.MARKDOWN_DICTIONARY) {
+    const word: Word = await getWord(source);
+    const { results = [] } = word;
+    if (results.length === 0) {
+      result = 'No Results';
+    } else {
+      const partOfSpeeches: string[] = [
+        ...new Set(results.map(({ partOfSpeech }) => partOfSpeech)),
+      ];
+      const resultsByPartOfSpeeches = partOfSpeeches.map((partOfSpeech) => {
+        const resultsByPartOfSpeech = results.filter(
+          ({ partOfSpeech: resultPartOfSpeech }) =>
+            partOfSpeech === resultPartOfSpeech
+        );
+        return { partOfSpeech, results: resultsByPartOfSpeech };
+      });
+      const markdown: string = resultsByPartOfSpeeches
+        .map(({ partOfSpeech, results }) => {
+          return `# ${word.word ?? 'Word'}
+
+## As a ${partOfSpeech}
+
+${results
+  .map(({ definition = '', examples = [], synonyms = [], antonyms = [] }) => {
+    return `> ${definition}
+${examples.length > 0 ? `- Examples: **${examples.at(0)}**` : '*No Examples*'}
+- Synonyms: ${synonyms.length > 0 ? `${synonyms.map((synonym) => `\`${synonym}\``).join(', ')}` : '~~No Synonyms~~'}
+- Antonyms: ${antonyms.length > 0 ? `${antonyms.map((antonym) => `\`${antonym}\``).join(', ')}` : '~~No Antonyms~~'}
+`;
+  })
+  .join('\n')}
+`;
+        })
+        .join('\n');
+      result = await marked(markdown);
+    }
   } else if (func === Func.UUID) {
     result = buildUuidString();
   } else if (func === Func.MANIFEST_EXTENSION || func === Func.MANIFEST_PWA) {
@@ -201,6 +239,7 @@ const ActionButton: FC<{
   result: string;
   setState: Dispatch<
     SetStateAction<{
+      loading: boolean;
       func: string;
       text: string;
       result: string;
@@ -208,7 +247,7 @@ const ActionButton: FC<{
   >;
 }> = ({ func, result = '', setState }) => {
   const actionText = () => {
-    if (func === Func.IMAGE_QRCODE || func === Func.MARKDOWN_PREVIEW) {
+    if (func === Func.IMAGE_QRCODE || func === Func.MARKDOWN_EDITOR) {
       return 'Download';
     }
 
@@ -234,7 +273,7 @@ const ActionButton: FC<{
             filename: 'qrcode',
             format: 'jpg',
           });
-        } else if (func === Func.MARKDOWN_PREVIEW) {
+        } else if (func === Func.MARKDOWN_EDITOR) {
           const converted = htmlToPdfmake(result);
           const docDefinition = { content: converted };
           pdfMake.createPdf(docDefinition).download('markdown.pdf');
@@ -265,16 +304,19 @@ const StringPage: NextPage = () => {
   // Component States
   const [
     {
+      loading = false,
       func = Func.STRING_CAPITALISE,
       text = INITIAL_STRING,
       result = capitalise(INITIAL_STRING),
     },
     setState,
   ] = useState<{
+    loading: boolean;
     func: string;
     text: string;
     result: string;
   }>({
+    loading: false,
     func: Func.STRING_CAPITALISE,
     text: INITIAL_STRING,
     result: capitalise(INITIAL_STRING),
@@ -339,13 +381,18 @@ const StringPage: NextPage = () => {
               cursorRef.current = { selectionStart, selectionEnd, scrollTop };
               // Value
               const newText = event.target.value;
+              setState((previous) => ({
+                ...previous,
+                loading: true,
+                text: newText,
+              }));
               const newResult: string = await convert({
                 func: func as Func,
                 source: newText,
               });
               setState((previous) => ({
                 ...previous,
-                text: newText,
+                loading: false,
                 result: newResult,
               }));
             }}
@@ -387,8 +434,10 @@ const StringPage: NextPage = () => {
                 newText = 'https://google.com';
               } else if (previousFuncIsNotJSON && nextFuncIsJSON) {
                 newText = JSON.stringify(INITIAL_JSON, null, 2);
-              } else if (newFunc === Func.MARKDOWN_PREVIEW) {
+              } else if (newFunc === Func.MARKDOWN_EDITOR) {
                 newText = INITIAL_MARKDOWN;
+              } else if (newFunc === Func.MARKDOWN_DICTIONARY) {
+                newText = 'example';
               } else if (newFunc === Func.UUID) {
                 newText = '';
               } else if (newFunc === Func.YAML_TO_JSON) {
@@ -434,8 +483,11 @@ const StringPage: NextPage = () => {
               <option value={Func.MANIFEST_PWA}>{Func.MANIFEST_PWA}</option>
             </optgroup>
             <optgroup label="markdown">
-              <option value={Func.MARKDOWN_PREVIEW}>
-                {Func.MARKDOWN_PREVIEW}
+              <option value={Func.MARKDOWN_DICTIONARY}>
+                {Func.MARKDOWN_DICTIONARY}
+              </option>
+              <option value={Func.MARKDOWN_EDITOR}>
+                {Func.MARKDOWN_EDITOR}
               </option>
             </optgroup>
             <optgroup label="string">
@@ -470,36 +522,45 @@ const StringPage: NextPage = () => {
         <div
           className={`flex h-full flex-col gap-y-2 bg-gray-900 p-4 text-gray-100 md:gap-y-4 md:p-8 ${width > 768 ? '!h-full' : '!w-full'}`}>
           <p className="font-semibold">Output</p>
-          {func === Func.CSV_TO_HTML && (
-            <div className="w-full grow overflow-auto">
-              <CSVTable csv={text} />
-            </div>
+          {loading ? (
+            <div className="h-full grow">Loading</div>
+          ) : (
+            <>
+              {func === Func.CSV_TO_HTML && (
+                <div className="w-full grow overflow-auto">
+                  <CSVTable csv={text} />
+                </div>
+              )}
+              {func === Func.IMAGE_QRCODE && (
+                <div className="w-full grow overflow-auto">
+                  <div
+                    className="aspect-square h-full overflow-hidden rounded bg-cover bg-center"
+                    style={{ backgroundImage: `url(${result})` }}
+                  />
+                </div>
+              )}
+              {(func === Func.MARKDOWN_EDITOR ||
+                func === Func.MARKDOWN_DICTIONARY) && (
+                <div className="w-full grow overflow-auto">
+                  <MarkdownPreviewer html={result} />
+                </div>
+              )}
+              {func !== Func.CSV_TO_HTML &&
+                func !== Func.IMAGE_QRCODE &&
+                func !== Func.MARKDOWN_EDITOR &&
+                func !== Func.MARKDOWN_DICTIONARY && (
+                  <textarea
+                    id="result"
+                    name="result"
+                    placeholder="result"
+                    className="w-full grow rounded border border-dashed border-gray-700 p-2 focus:outline-none"
+                    value={result}
+                    readOnly
+                  />
+                )}
+            </>
           )}
-          {func === Func.IMAGE_QRCODE && (
-            <div className="w-full grow overflow-auto">
-              <div
-                className="aspect-square h-full overflow-hidden rounded bg-cover bg-center"
-                style={{ backgroundImage: `url(${result})` }}
-              />
-            </div>
-          )}
-          {func === Func.MARKDOWN_PREVIEW && (
-            <div className="w-full grow overflow-auto">
-              <MarkdownPreviewer html={result} />
-            </div>
-          )}
-          {func !== Func.CSV_TO_HTML &&
-            func !== Func.IMAGE_QRCODE &&
-            func !== Func.MARKDOWN_PREVIEW && (
-              <textarea
-                id="result"
-                name="result"
-                placeholder="result"
-                className="w-full grow rounded border border-dashed border-gray-700 p-2 focus:outline-none"
-                value={result}
-                readOnly
-              />
-            )}
+
           <ActionButton
             func={func as Func}
             result={result}

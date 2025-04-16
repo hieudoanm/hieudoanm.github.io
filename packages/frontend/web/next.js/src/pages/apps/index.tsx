@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import { useState } from 'react';
 import {
-  FaBook,
   FaChessKnight,
   FaClock,
   FaFlask,
@@ -74,13 +73,6 @@ const AppsPage: NextPage = () => {
       shortName: 'tele.hook',
       icon: <FaTelegram className="text-xl md:text-2xl" />,
     },
-    {
-      id: 'words-english',
-      href: 'words/english',
-      name: 'english',
-      shortName: 'eng',
-      icon: <FaBook className="text-xl md:text-2xl" />,
-    },
   ];
 
   return (
@@ -101,7 +93,7 @@ const AppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-3 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-3 md:gap-8">
+        <div className="grid h-full grow grid-cols-2 grid-rows-4 gap-4 md:grid-cols-4 md:grid-rows-2 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''
