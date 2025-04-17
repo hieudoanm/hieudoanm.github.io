@@ -1,19 +1,12 @@
-import { defineConfig } from 'eslint/config';
+import pluginJs from '@eslint/js';
 import globals from 'globals';
-import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
-export default defineConfig([
-  { ignores: ['dist'] },
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  { ignores: ['bin/*', 'build/*', 'dist/*', 'lib/*'] },
   { files: ['**/*.{js,mjs,cjs,ts}'] },
-  {
-    files: ['**/*.{js,mjs,cjs,ts}'],
-    languageOptions: { globals: globals.node },
-  },
-  {
-    files: ['**/*.{js,mjs,cjs,ts}'],
-    plugins: { js },
-    extends: ['js/recommended'],
-  },
-  tseslint.configs.recommended,
-]);
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+];

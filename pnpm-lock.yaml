@@ -61,6 +61,9 @@ importers:
       '@types/node':
         specifier: 22.14.1
         version: 22.14.1
+      '@webpack-cli/generators':
+        specifier: 3.0.7
+        version: 3.0.7(mem-fs@2.3.0)(prettier@3.5.3)(webpack-cli@6.0.1)(webpack@5.99.5)
       eslint:
         specifier: 9.24.0
         version: 9.24.0(jiti@2.4.2)
@@ -94,6 +97,12 @@ importers:
       typescript-eslint:
         specifier: 8.30.1
         version: 8.30.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)
+      webpack:
+        specifier: 5.99.5
+        version: 5.99.5(esbuild@0.25.2)(webpack-cli@6.0.1)
+      webpack-cli:
+        specifier: 6.0.1
+        version: 6.0.1(webpack@5.99.5)
 
   packages/backend/server/node.js/instagram.com:
     dependencies:
@@ -122,6 +131,9 @@ importers:
       '@types/node':
         specifier: 22.14.1
         version: 22.14.1
+      '@webpack-cli/generators':
+        specifier: 3.0.7
+        version: 3.0.7(mem-fs@2.3.0)(prettier@3.5.3)(webpack-cli@6.0.1)(webpack@5.99.5)
       eslint:
         specifier: 9.24.0
         version: 9.24.0(jiti@2.4.2)
@@ -149,6 +161,12 @@ importers:
       typescript-eslint:
         specifier: 8.30.1
         version: 8.30.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)
+      webpack:
+        specifier: 5.99.5
+        version: 5.99.5(webpack-cli@6.0.1)
+      webpack-cli:
+        specifier: 6.0.1
+        version: 6.0.1(webpack@5.99.5)
 
   packages/backend/server/node.js/openapi-to-postmanv2:
     dependencies:
@@ -180,6 +198,9 @@ importers:
       '@types/openapi-to-postmanv2':
         specifier: 3.2.4
         version: 3.2.4
+      '@webpack-cli/generators':
+        specifier: 3.0.7
+        version: 3.0.7(mem-fs@2.3.0)(prettier@3.5.3)(webpack-cli@6.0.1)(webpack@5.99.5)
       eslint:
         specifier: 9.24.0
         version: 9.24.0(jiti@2.4.2)
@@ -207,6 +228,12 @@ importers:
       typescript-eslint:
         specifier: 8.30.1
         version: 8.30.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)
+      webpack:
+        specifier: 5.99.5
+        version: 5.99.5(webpack-cli@6.0.1)
+      webpack-cli:
+        specifier: 6.0.1
+        version: 6.0.1(webpack@5.99.5)
 
   packages/backend/server/node.js/pdfmake.org:
     dependencies:
@@ -244,6 +271,9 @@ importers:
       '@types/node':
         specifier: 22.14.1
         version: 22.14.1
+      '@webpack-cli/generators':
+        specifier: 3.0.7
+        version: 3.0.7(mem-fs@2.3.0)(prettier@3.5.3)(webpack-cli@6.0.1)(webpack@5.99.5)
       eslint:
         specifier: 9.24.0
         version: 9.24.0(jiti@2.4.2)
@@ -274,6 +304,12 @@ importers:
       typescript-eslint:
         specifier: 8.30.1
         version: 8.30.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)
+      webpack:
+        specifier: 5.99.5
+        version: 5.99.5(webpack-cli@6.0.1)
+      webpack-cli:
+        specifier: 6.0.1
+        version: 6.0.1(webpack@5.99.5)
 
   packages/backend/server/node.js/youtube.com:
     dependencies:
@@ -302,6 +338,9 @@ importers:
       '@types/node':
         specifier: 22.14.1
         version: 22.14.1
+      '@webpack-cli/generators':
+        specifier: 3.0.7
+        version: 3.0.7(mem-fs@2.3.0)(prettier@3.5.3)(webpack-cli@6.0.1)(webpack@5.99.5)
       eslint:
         specifier: 9.24.0
         version: 9.24.0(jiti@2.4.2)
@@ -329,6 +368,12 @@ importers:
       typescript-eslint:
         specifier: 8.30.1
         version: 8.30.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)
+      webpack:
+        specifier: 5.99.5
+        version: 5.99.5(webpack-cli@6.0.1)
+      webpack-cli:
+        specifier: 6.0.1
+        version: 6.0.1(webpack@5.99.5)
 
   packages/backend/serverless/reverse-proxy/node.js/express:
     dependencies:
@@ -22123,6 +22168,17 @@ snapshots:
       solid-js: 1.9.5
       solid-use: 0.9.1(solid-js@1.9.5)
 
+  terser-webpack-plugin@5.3.12(esbuild@0.25.2)(webpack@5.99.5):
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.25
+      jest-worker: 27.5.1
+      schema-utils: 4.3.0
+      serialize-javascript: 6.0.2
+      terser: 5.39.0
+      webpack: 5.99.5(esbuild@0.25.2)(webpack-cli@6.0.1)
+    optionalDependencies:
+      esbuild: 0.25.2
+
   terser-webpack-plugin@5.3.12(webpack@5.99.5):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
@@ -22972,6 +23028,38 @@ snapshots:
   webpack-sources@3.2.3: {}
 
   webpack-virtual-modules@0.6.2: {}
+
+  webpack@5.99.5(esbuild@0.25.2)(webpack-cli@6.0.1):
+    dependencies:
+      '@types/eslint-scope': 3.7.7
+      '@types/estree': 1.0.7
+      '@webassemblyjs/ast': 1.14.1
+      '@webassemblyjs/wasm-edit': 1.14.1
+      '@webassemblyjs/wasm-parser': 1.14.1
+      acorn: 8.14.1
+      browserslist: 4.24.4
+      chrome-trace-event: 1.0.4
+      enhanced-resolve: 5.18.1
+      es-module-lexer: 1.6.0
+      eslint-scope: 5.1.1
+      events: 3.3.0
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.11
+      json-parse-even-better-errors: 2.3.1
+      loader-runner: 4.3.0
+      mime-types: 2.1.35
+      neo-async: 2.6.2
+      schema-utils: 4.3.0
+      tapable: 2.2.1
+      terser-webpack-plugin: 5.3.12(esbuild@0.25.2)(webpack@5.99.5)
+      watchpack: 2.4.2
+      webpack-sources: 3.2.3
+    optionalDependencies:
+      webpack-cli: 6.0.1(webpack@5.99.5)
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
 
   webpack@5.99.5(webpack-cli@6.0.1):
     dependencies:
