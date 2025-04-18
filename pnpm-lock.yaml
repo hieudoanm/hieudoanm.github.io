@@ -301,6 +301,9 @@ importers:
       tailwindcss:
         specifier: 4.1.4
         version: 4.1.4
+      ts-loader:
+        specifier: 9.5.2
+        version: 9.5.2(typescript@5.8.3)(webpack@5.99.5)
       ts-node:
         specifier: 10.9.2
         version: 10.9.2(@types/node@22.14.1)(typescript@5.8.3)
@@ -14832,12 +14835,12 @@ snapshots:
 
   '@webpack-cli/configtest@3.0.1(webpack-cli@6.0.1)(webpack@5.99.5)':
     dependencies:
-      webpack: 5.99.5(esbuild@0.25.2)(webpack-cli@6.0.1)
+      webpack: 5.99.5(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack@5.99.5)
 
   '@webpack-cli/generators@3.0.7(mem-fs@2.3.0)(prettier@3.5.3)(webpack-cli@6.0.1)(webpack@5.99.5)':
     dependencies:
-      webpack: 5.99.5(esbuild@0.25.2)(webpack-cli@6.0.1)
+      webpack: 5.99.5(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack@5.99.5)
       yeoman-environment: 3.19.3
       yeoman-generator: 5.10.0(mem-fs@2.3.0)(yeoman-environment@3.19.3)
@@ -14850,12 +14853,12 @@ snapshots:
 
   '@webpack-cli/info@3.0.1(webpack-cli@6.0.1)(webpack@5.99.5)':
     dependencies:
-      webpack: 5.99.5(esbuild@0.25.2)(webpack-cli@6.0.1)
+      webpack: 5.99.5(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack@5.99.5)
 
   '@webpack-cli/serve@3.0.1(webpack-cli@6.0.1)(webpack@5.99.5)':
     dependencies:
-      webpack: 5.99.5(esbuild@0.25.2)(webpack-cli@6.0.1)
+      webpack: 5.99.5(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack@5.99.5)
 
   '@xtuc/ieee754@1.2.0': {}
@@ -22267,7 +22270,7 @@ snapshots:
       semver: 7.7.1
       source-map: 0.7.4
       typescript: 5.8.3
-      webpack: 5.99.5(esbuild@0.25.2)(webpack-cli@6.0.1)
+      webpack: 5.99.5(webpack-cli@6.0.1)
 
   ts-node@10.9.2(@types/node@22.14.1)(typescript@5.8.3):
     dependencies:
@@ -22937,7 +22940,7 @@ snapshots:
       import-local: 3.2.0
       interpret: 3.1.1
       rechoir: 0.8.0
-      webpack: 5.99.5(esbuild@0.25.2)(webpack-cli@6.0.1)
+      webpack: 5.99.5(webpack-cli@6.0.1)
       webpack-merge: 6.0.1
 
   webpack-merge@6.0.1:
