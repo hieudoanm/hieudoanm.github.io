@@ -21,10 +21,10 @@ What I do when I am bored (or think I have nothing to do). Maybe you can do it t
 | 12  | Education    | Languages   | Learn Dutch                                |
 | 13  | Education    | Languages   | Learn Germany                              |
 | 14  | Education    | Languages   | Learn Korean                               |
-| 15  | Education    | Programming | Learn C                                    |
-| 16  | Education    | Programming | Learn C++                                  |
+| 15  | Education    | Programming | Learn C / C++                              |
 | 17  | Education    | Programming | Learn Rust                                 |
 | 18  | Education    | Programming | Learn Kotlin for Android Development       |
+| 16  | Education    | Programming | Learn C# for Game Development              |
 | 19  | Education    | Programming | Learn Swift for iOS Development            |
 | 20  | Education    | Programming | Build a Chess Engine                       |
 | 21  | Education    | Science     | Learn Math                                 |
