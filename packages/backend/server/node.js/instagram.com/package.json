@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/instagram.com",
+  "name": "@nothing-server/instagram.com",
   "version": "0.0.1",
   "description": "instagram.com",
   "main": "./dist/server.js",

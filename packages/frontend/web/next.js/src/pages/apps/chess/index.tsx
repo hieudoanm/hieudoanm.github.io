@@ -60,14 +60,14 @@ const ChessAppsPage: NextPage = () => {
   ];
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
+    <div className="h-screen w-screen overflow-hidden md:h-screen">
       <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
         <div className="w-full">
           <input
             id="search"
             name="search"
             placeholder="Search"
-            className="w-full rounded border border-gray-300 px-4 py-2"
+            className="w-full rounded border border-gray-700 px-4 py-2 focus:outline-none"
             value={search}
             onChange={(event) => {
               setState((previous) => ({
@@ -94,7 +94,7 @@ const ChessAppsPage: NextPage = () => {
                     <Link
                       href={`/apps/${href}`}
                       className="flex flex-col items-center gap-y-1 md:gap-y-2">
-                      <div className="flex aspect-square w-12 items-center justify-center overflow-hidden rounded-full bg-gray-900 text-gray-100 hover:bg-red-500 md:w-16">
+                      <div className="flex aspect-square w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 text-gray-900 hover:bg-red-500 hover:text-gray-100 md:w-16">
                         {icon}
                       </div>
                       <p className="w-full truncate text-center text-xs font-semibold md:text-sm">

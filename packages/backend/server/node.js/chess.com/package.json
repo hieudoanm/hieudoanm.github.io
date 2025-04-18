@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/chess.com-titled",
+  "name": "@nothing-server/chess.com",
   "version": "0.0.1",
   "description": "chess.com - kafka",
   "keywords": [],

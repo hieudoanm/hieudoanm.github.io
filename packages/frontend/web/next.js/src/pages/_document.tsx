@@ -6,9 +6,9 @@ export default function Document() {
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#f3f4f6" />
+        <meta name="theme-color" content="#101828" />
       </Head>
-      <body className="bg-gray-100 text-gray-900 antialiased">
+      <body className="bg-gray-900 text-gray-100 antialiased">
         <Main />
         <NextScript />
       </body>

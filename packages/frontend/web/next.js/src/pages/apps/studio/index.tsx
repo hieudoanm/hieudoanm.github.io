@@ -64,6 +64,15 @@ pdfMake.fonts = {
   },
 };
 
+enum ActColor {
+  HEX_TO_RGB = 'HEX to RGB',
+  RGB_TO_HEX = 'RGB to HEX',
+  HEX_TO_HSL = 'HEX to HSL',
+  HSL_TO_HEX = 'HSL to HEX',
+  RGB_TO_HSL = 'RGB to HSL',
+  HSL_TO_RGB = 'HSL to RGB',
+}
+
 enum ActCSV {
   CSV_TO_HTML = 'CSV to HTML',
   CSV_TO_JSON = 'CSV to JSON',
@@ -122,6 +131,7 @@ enum ActNumber {
 }
 
 type Act =
+  | ActColor
   | ActCSV
   | ActJSON
   | ActManifestJSON

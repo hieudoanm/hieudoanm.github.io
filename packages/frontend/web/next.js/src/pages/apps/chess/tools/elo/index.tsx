@@ -344,24 +344,6 @@ export const EloPage: NextPage = () => {
       },
     }) => fide >= 2775
   );
-  // World Titles
-  const worldTitles: string[] = [
-    ...new Set(
-      players
-        .map(({ worldTitles }) =>
-          Object.values(worldTitles as Record<string, string>)
-        )
-        .flat(1)
-        .filter((worldTitle) => Boolean(worldTitle))
-    ),
-  ].sort((a, b) => (a > b ? 1 : -1));
-  const playersByWorldTitles = worldTitles.map((worldTitle: string) => {
-    const playersByContinent = players.filter(
-      ({ worldTitles: playerWorldTitles }) =>
-        Object.values(playerWorldTitles).includes(worldTitle)
-    );
-    return { worldTitle, players: playersByContinent };
-  });
   // Continents
   const continents: string[] = [
     ...new Set(
@@ -403,29 +385,6 @@ export const EloPage: NextPage = () => {
           <div className="bg-gray-900 p-8 text-gray-100">
             <div className="flex flex-col gap-y-4">
               <h1 className="text-xl font-black">World Title</h1>
-              <div className="flex flex-col gap-y-2">
-                {worldTitles.map((worldTitle, index) => {
-                  return (
-                    <p key={worldTitle}>
-                      <span className="text-red-500">
-                        {addZero(index + 1)}. 🇺🇳
-                      </span>{' '}
-                      <span>{worldTitle}</span>{' '}
-                      <sup>{'*'.repeat(index + 1)}</sup>
-                    </p>
-                  );
-                })}
-              </div>
-              {playersByWorldTitles.map(({ worldTitle, players }) => {
-                return (
-                  <>
-                    <h1 className="text-xl font-black">
-                      {worldTitle} ({players.length})
-                    </h1>
-                    <Players players={players} />
-                  </>
-                );
-              })}
               {playersByContinents.map(({ continent, players }) => {
                 return (
                   <>

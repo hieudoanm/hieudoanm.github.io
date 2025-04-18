@@ -61,8 +61,8 @@ const HomePage: NextPage = () => {
   });
 
   return (
-    <div className="h-screen w-screen bg-gray-100 p-8">
-      <div className="flex h-full flex-col items-center justify-center gap-y-8 text-black">
+    <div className="h-screen w-screen p-8">
+      <div className="flex h-full flex-col items-center justify-center gap-y-8">
         <p className="text-xl font-black tracking-wide uppercase">Nothing</p>
         <div className="flex flex-col items-center justify-center gap-y-8">
           {appsByTarget.map(({ target, apps = [] }) => {

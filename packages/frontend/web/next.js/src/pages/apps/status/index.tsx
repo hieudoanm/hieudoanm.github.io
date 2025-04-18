@@ -18,18 +18,18 @@ const Status: FC<{ service: string; url: string }> = ({
   });
 
   return (
-    <div className="w-full rounded-full bg-gray-900 px-4 py-2 text-gray-100">
+    <div className="w-full rounded-full bg-gray-100 px-4 py-2 text-gray-900">
       <div className="flex items-center justify-between">
         <p className="capitalize">
           <Link
             href={url}
             target="_blank"
             className="truncate whitespace-nowrap underline decoration-dotted underline-offset-4">
-            {service.replaceAll('-', ' ')}
+            <strong>{service.replaceAll('-', ' ')}</strong>
           </Link>
         </p>
         {isPending ? (
-          <div className="aspect-square w-4 rounded-full bg-gray-700" />
+          <div className="aspect-square w-4 rounded-full bg-gray-500" />
         ) : (
           <>
             {(error || data?.status.indicator !== 'none') && (
@@ -46,37 +46,52 @@ const Status: FC<{ service: string; url: string }> = ({
 };
 
 const StatusPage = () => {
+  const services: Record<string, Record<string, string>> = {
+    atlassian: {
+      analytics: 'https://analytics.status.atlassian.com/api/v2/status.json',
+      atlas: 'https://atlas.status.atlassian.com/api/v2/status.json',
+      bitbucket: 'https://bitbucket.status.atlassian.com/api/v2/status.json',
+      compass: 'https://compass.status.atlassian.com/api/v2/status.json',
+      confluence: 'https://confluence.status.atlassian.com/api/v2/status.json',
+      developer: 'https://developer.status.atlassian.com/api/v2/status.json',
+      'jira-service-management':
+        'https://jira-service-management.status.atlassian.com/api/v2/status.json',
+      'jira-software':
+        'https://jira-software.status.atlassian.com/api/v2/status.json',
+      guard: 'https://guard.status.atlassian.com/api/v2/status.json',
+      opsgenie: 'https://opsgenie.status.atlassian.com/api/v2/status.json',
+      partners: 'https://partners.status.atlassian.com/api/v2/status.json',
+      support: 'https://support.status.atlassian.com/api/v2/status.json',
+      trello: 'https://trello.status.atlassian.com/api/v2/status.json',
+    },
+    'back-end': {
+      supabase: 'https://status.supabase.com/api/v2/status.json',
+    },
+    crypto: {
+      hedera: 'https://status.hedera.com/api/v2/status.json',
+      solana: 'https://status.solana.com/api/v2/status.json',
+    },
+    'version-control': {
+      github: 'https://www.githubstatus.com/api/v2/status.json',
+    },
+    server: {
+      render: 'https://status.render.com/api/v2/status.json',
+    },
+    serverless: {
+      netlify: 'https://www.netlifystatus.com/api/v2/status.json',
+      vercel: 'https://www.vercel-status.com/api/v2/status.json',
+    },
+  };
+
+  const allServices: Record<string, string> = Object.assign(
+    {},
+    ...Object.values(services)
+  );
+
   return (
     <div className="w-screen p-4 md:p-6 lg:p-8">
       <div className="grid h-full grid-cols-1 gap-2 md:grid-cols-2 md:gap-3 lg:grid-cols-4 lg:gap-4">
-        {Object.entries({
-          analytics:
-            'https://analytics.status.atlassian.com/api/v2/status.json',
-          atlas: 'https://atlas.status.atlassian.com/api/v2/status.json',
-          bitbucket:
-            'https://bitbucket.status.atlassian.com/api/v2/status.json',
-          compass: 'https://compass.status.atlassian.com/api/v2/status.json',
-          confluence:
-            'https://confluence.status.atlassian.com/api/v2/status.json',
-          developer:
-            'https://developer.status.atlassian.com/api/v2/status.json',
-          'jira-service-management':
-            'https://jira-service-management.status.atlassian.com/api/v2/status.json',
-          'jira-software':
-            'https://jira-software.status.atlassian.com/api/v2/status.json',
-          guard: 'https://guard.status.atlassian.com/api/v2/status.json',
-          opsgenie: 'https://opsgenie.status.atlassian.com/api/v2/status.json',
-          partners: 'https://partners.status.atlassian.com/api/v2/status.json',
-          support: 'https://support.status.atlassian.com/api/v2/status.json',
-          trello: 'https://trello.status.atlassian.com/api/v2/status.json',
-          github: 'https://www.githubstatus.com/api/v2/status.json',
-          render: 'https://status.render.com/api/v2/status.json',
-          netlify: 'https://www.netlifystatus.com/api/v2/status.json',
-          vercel: 'https://www.vercel-status.com/api/v2/status.json',
-          supabase: 'https://status.supabase.com/api/v2/status.json',
-          solana: 'https://status.solana.com/api/v2/status.json',
-          hedera: 'https://status.hedera.com/api/v2/status.json',
-        }).map(([service, url]) => {
+        {Object.entries(allServices).map(([service, url]) => {
           return (
             <div key={service} className="col-span-1">
               <Status service={service} url={url} />

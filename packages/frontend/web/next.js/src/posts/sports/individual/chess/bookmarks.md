@@ -1,6 +1,6 @@
 ---
-title: 'Chess'
-date: '2025-04-18'
+title: 'Chess Bookmarks'
+date: '2025-04-19'
 ---
 
 ## Table of Contents
