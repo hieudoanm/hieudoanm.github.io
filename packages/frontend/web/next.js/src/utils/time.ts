@@ -1,4 +1,4 @@
-import { addZero } from './number';
+import { addZero } from './number/utils';
 import { capitalise } from './string';
 import { tryCatch } from './try-catch';
 

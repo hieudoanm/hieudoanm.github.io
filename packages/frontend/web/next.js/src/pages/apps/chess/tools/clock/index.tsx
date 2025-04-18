@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { addZero } from '@web/utils/number';
+import { addZero } from '@web/utils/number/utils';
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import { FaArrowsRotate, FaPause, FaPlay } from 'react-icons/fa6';

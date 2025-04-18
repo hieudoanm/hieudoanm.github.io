@@ -1,5 +1,5 @@
 import { downloadImage } from '@web/utils/download';
-import { addZero } from '@web/utils/number';
+import { addZero } from '@web/utils/number/utils';
 import { NextPage } from 'next';
 import { useState } from 'react';
 

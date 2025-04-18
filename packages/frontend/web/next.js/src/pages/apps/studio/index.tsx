@@ -21,6 +21,15 @@ import { downloadImage } from '@web/utils/download';
 import { json2csv, jsonParse } from '@web/utils/json';
 import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
+import {
+  fromBinary,
+  fromHexadecimal,
+  fromOctal,
+  toBinary,
+  toHexadecimal,
+  toOctal,
+} from '@web/utils/number/base';
+import { fromRoman, toRoman } from '@web/utils/number/roman';
 import { capitalise, deburr, kebabcase, snakecase } from '@web/utils/string';
 import { buildEpochString } from '@web/utils/time';
 import { tryCatch } from '@web/utils/try-catch';
@@ -101,13 +110,25 @@ enum ActOther {
   YAML_TO_JSON = 'YAML to JSON',
 }
 
+enum ActNumber {
+  NUMBER_FROM_BINARY = 'From Binary to Number',
+  NUMBER_TO_BINARY = 'From Number to Binary',
+  NUMBER_FROM_OCTAL = 'From Octal to Number',
+  NUMBER_TO_OCTAL = 'From Number to Octal',
+  NUMBER_FROM_HEXADECIMAL = 'From Hexadecimal to Number',
+  NUMBER_TO_HEXADECIMAL = 'From Number to Hexadecimal',
+  NUMBER_FROM_ROMAN = 'From Roman to Number',
+  NUMBER_TO_ROMAN = 'From Number to Roman',
+}
+
 type Act =
   | ActCSV
   | ActJSON
   | ActManifestJSON
   | ActString
   | ActTelegram
-  | ActOther;
+  | ActOther
+  | ActNumber;
 
 const INITIAL_JSON = [
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
@@ -115,6 +136,37 @@ const INITIAL_JSON = [
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
 ];
+
+const actNumber = ({
+  action,
+  source,
+}: {
+  action: ActNumber;
+  source: string;
+}): string => {
+  if (action === ActNumber.NUMBER_FROM_ROMAN) {
+    return fromRoman(source).toString();
+  } else if (action === ActNumber.NUMBER_TO_ROMAN) {
+    return toRoman(parseInt(source, 10));
+  } else if (action === ActNumber.NUMBER_FROM_BINARY) {
+    return fromBinary(source).toString();
+  } else if (action === ActNumber.NUMBER_TO_BINARY) {
+    return toBinary(parseInt(source, 10));
+  } else if (action === ActNumber.NUMBER_FROM_OCTAL) {
+    return fromOctal(source).toString();
+  } else if (action === ActNumber.NUMBER_TO_OCTAL) {
+    return toOctal(parseInt(source, 10));
+  } else if (action === ActNumber.NUMBER_FROM_HEXADECIMAL) {
+    return fromHexadecimal(source).toString().toUpperCase();
+  } else if (action === ActNumber.NUMBER_TO_HEXADECIMAL) {
+    return toHexadecimal(parseInt(source, 10));
+  }
+  return '';
+};
+
+const isActionNumber = (act: Act): act is ActNumber => {
+  return Object.values(ActNumber).includes(act as ActNumber);
+};
 
 const actTelegram = async ({
   action,
@@ -246,7 +298,9 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let result: string = source;
-  if (isActionTelegram(action)) {
+  if (isActionNumber(action)) {
+    result = actNumber({ action, source });
+  } else if (isActionTelegram(action)) {
     result = await actTelegram({ action, source });
   } else if (isActionCSV(action)) {
     result = actCSV({ action, source });
@@ -610,6 +664,22 @@ const StringPage: NextPage = () => {
                     newText = JSON.stringify(INITIAL_MANIFEST_PWA, null, 2);
                   } else if (previousFuncIsNotTelegram && nextFuncIsTelegram) {
                     newText = JSON.stringify(INITIAL_TELEGRAM_WEBHOOK, null, 2);
+                  } else if (newFunc === ActNumber.NUMBER_FROM_ROMAN) {
+                    newText = 'MCMXCV';
+                  } else if (newFunc === ActNumber.NUMBER_TO_ROMAN) {
+                    newText = '1995';
+                  } else if (newFunc === ActNumber.NUMBER_FROM_BINARY) {
+                    newText = '1010';
+                  } else if (newFunc === ActNumber.NUMBER_TO_BINARY) {
+                    newText = '10';
+                  } else if (newFunc === ActNumber.NUMBER_FROM_OCTAL) {
+                    newText = '12';
+                  } else if (newFunc === ActNumber.NUMBER_TO_OCTAL) {
+                    newText = '7';
+                  } else if (newFunc === ActNumber.NUMBER_FROM_HEXADECIMAL) {
+                    newText = 'A';
+                  } else if (newFunc === ActNumber.NUMBER_TO_HEXADECIMAL) {
+                    newText = '10';
                   }
                   setState((previous) => ({
                     ...previous,
@@ -672,6 +742,32 @@ const StringPage: NextPage = () => {
                   </option>
                   <option value={ActOther.MARKDOWN_EDITOR}>
                     {ActOther.MARKDOWN_EDITOR}
+                  </option>
+                </optgroup>
+                <optgroup label="number">
+                  <option value={ActNumber.NUMBER_FROM_ROMAN}>
+                    {ActNumber.NUMBER_FROM_ROMAN}
+                  </option>
+                  <option value={ActNumber.NUMBER_TO_ROMAN}>
+                    {ActNumber.NUMBER_TO_ROMAN}
+                  </option>
+                  <option value={ActNumber.NUMBER_FROM_BINARY}>
+                    {ActNumber.NUMBER_FROM_BINARY}
+                  </option>
+                  <option value={ActNumber.NUMBER_TO_BINARY}>
+                    {ActNumber.NUMBER_TO_BINARY}
+                  </option>
+                  <option value={ActNumber.NUMBER_FROM_OCTAL}>
+                    {ActNumber.NUMBER_FROM_OCTAL}
+                  </option>
+                  <option value={ActNumber.NUMBER_TO_OCTAL}>
+                    {ActNumber.NUMBER_TO_OCTAL}
+                  </option>
+                  <option value={ActNumber.NUMBER_FROM_HEXADECIMAL}>
+                    {ActNumber.NUMBER_FROM_HEXADECIMAL}
+                  </option>
+                  <option value={ActNumber.NUMBER_TO_HEXADECIMAL}>
+                    {ActNumber.NUMBER_TO_HEXADECIMAL}
                   </option>
                 </optgroup>
                 <optgroup label="string">

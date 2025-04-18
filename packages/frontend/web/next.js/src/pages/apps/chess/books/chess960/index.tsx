@@ -1,6 +1,6 @@
 import { Chessboard } from '@web/components/Chessboard';
 import chess960 from '@web/json/chess/chess960.json';
-import { addZero, range } from '@web/utils/number';
+import { addZero, range } from '@web/utils/number/utils';
 import { NextPage } from 'next';
 import { ChangeEvent, FC, useEffect, useState } from 'react';
 import {

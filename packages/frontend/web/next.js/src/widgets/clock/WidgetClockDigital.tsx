@@ -1,4 +1,4 @@
-import { addZero } from '@web/utils/number';
+import { addZero } from '@web/utils/number/utils';
 import { getOrdinalSuffix, months, weekdays } from '@web/utils/time';
 import { FC, useEffect, useState } from 'react';
 

@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import players2700 from '@web/json/chess/players/2700.json';
 import playersVietnam from '@web/json/chess/players/vietnam.json';
 import { ChangeEvent, FC, useState } from 'react';
-import { addZero } from '@web/utils/number';
+import { addZero } from '@web/utils/number/utils';
 import Link from 'next/link';
 
 type DevelopmentCoefficient = 10 | 20 | 40;
