@@ -8,7 +8,7 @@ date: '2025-04-18'
 - [Table of Contents](#table-of-contents)
 - [Top 10](#top-10)
 - [Native](#native)
-- [Infrastructure](#infrastructure)
+- [Other](#other)
 
 ## Top 10
 
@@ -33,10 +33,12 @@ date: '2025-04-18'
 | 02  | [Google][google] | Android | Android | ChromeOS | [Material][google-material] |
 | 03  | [Microsoft][ms]  |         |         | Windows  | [WinUI][ms-winui]           |
 
-## Infrastructure
+## Other
 
-- Docker
-- Terraform
+- Infrastructure
+  - Docker
+  - Terraform
+- Markdown
 
 [android-studio]: https://developer.android.com/studio
 [apple]: https://www.apple.com/
