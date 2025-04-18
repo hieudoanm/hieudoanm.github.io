@@ -1,6 +1,8 @@
 ---
 title: 'Technology'
 date: '2025-03-17'
+tags:
+  ['mobile', 'tablet', 'laptop', 'headphone', 'smart-watch', 'apple', 'nothing']
 ---
 
 ## Table of Contents
@@ -12,17 +14,19 @@ date: '2025-03-17'
   - [Tablet](#tablet)
   - [Laptop](#laptop)
   - [Headphone](#headphone)
+  - [Smart Watch](#smart-watch)
 - [Ecosystem](#ecosystem)
   - [Apple](#apple)
 
 ## Daily Driver
 
-| Device    | Name          |
-| --------- | ------------- |
-| Mobile    | Nothing Phone |
-| Tablet    |               |
-| Laptop    | Macbook Pro   |
-| Headphone | Beats Buds    |
+| No  | Device      | Name          |
+| --- | ----------- | ------------- |
+| 1   | Mobile      | Nothing Phone |
+| 2   | Tablet      |               |
+| 3   | Laptop      | Macbook Pro   |
+| 4   | Headphone   | Beats Buds    |
+| 5   | Smart Watch | Garmin        |
 
 ## Devices
 
@@ -63,21 +67,32 @@ date: '2025-03-17'
 
 ### Headphone
 
-| No  | Country | Company    | Name                          |
-| --- | ------- | ---------- | ----------------------------- |
-| 1   | Japan   | Sony       | WH-1000XM5 (Noise-Cancelling) |
-| 2   | USA     | Bose       | QuietComfort Series           |
-| 3   | Germany | Sennheiser | Momentum & HD Series          |
-| 4   | USA     | Apple      | AirPods Pro 2 & AirPods Max   |
-| 5   | USA     | JBL        | Club & Tour Series            |
+| No  | Country       | Company    | Name                          |
+| --- | ------------- | ---------- | ----------------------------- |
+| 01  | Germany       | Sennheiser | Momentum & HD Series          |
+| 02  | Japan         | Sony       | WH-1000XM5 (Noise-Cancelling) |
+| 03  | United States | Bose       | QuietComfort Series           |
+| 04  | United States | Apple      | AirPods Pro 2 & AirPods Max   |
+| 05  | United States | JBL        | Club & Tour Series            |
+
+### Smart Watch
+
+| No  | Country       | Company | Name         |
+| --- | ------------- | ------- | ------------ |
+| 01  | China         | Garmin  |              |
+| 02  | China         | Huawei  | Huawei Watch |
+| 03  | South Korea   | Samsung | Galaxy Watch |
+| 04  | United States | Apple   | Apple Watch  |
+| 05  | United States | Google  | Pixel Watch  |
 
 ## Ecosystem
 
 ### Apple
 
-| Device    | Name    |
-| --------- | ------- |
-| Mobile    | iPhone  |
-| Tablet    | iPad    |
-| Laptop    | Macbook |
-| Headphone | AirPods |
+| No  | Device      | Name        |
+| --- | ----------- | ----------- |
+| 01  | Mobile      | iPhone      |
+| 02  | Tablet      | iPad        |
+| 03  | Laptop      | Macbook     |
+| 04  | Headphone   | AirPods     |
+| 05  | Smart Watch | Apple Watch |
