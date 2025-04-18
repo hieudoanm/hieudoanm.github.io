@@ -994,8 +994,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       daisyui:
-        specifier: 5.0.23
-        version: 5.0.23
+        specifier: 5.0.26
+        version: 5.0.26
       eslint:
         specifier: 9.24.0
         version: 9.24.0(jiti@2.4.2)
@@ -5332,8 +5332,8 @@ packages:
     resolution: {integrity: sha512-e1U46jVP+w7Iut8Jt8ri1YsPOvFpg46k+K8TpCb0P+zjCkjkPnV7WzfDJzMHy1LnA+wj5pLT1wjO901gLXeEhA==}
     engines: {node: '>=12'}
 
-  daisyui@5.0.23:
-    resolution: {integrity: sha512-SIR8yAneeNxvrpaR5kREG1DrPK8XFyfmyvqyZEUTJ2e6tv4Pp56/w+52Vdv34hmSmtAyDldTCEPWx+GvPyp0Yg==}
+  daisyui@5.0.26:
+    resolution: {integrity: sha512-YNt9gNV3wZQPeiwtdBvNYWLaN39VguyAYSwizgYywMAqDlStEh5rGHBUsyrgbA09Iws+ORO+P28oFJe59kTkxA==}
 
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -16320,7 +16320,7 @@ snapshots:
       d3-transition: 3.0.1(d3-selection@3.0.0)
       d3-zoom: 3.0.0
 
-  daisyui@5.0.23: {}
+  daisyui@5.0.26: {}
 
   damerau-levenshtein@1.0.8: {}
 
