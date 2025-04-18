@@ -35,9 +35,13 @@ date: '2025-03-19'
 
 ### Notable Mentions
 
-| #   | State    | City      | Name |
-| --- | -------- | --------- | ---- |
-| 1   | Victoria | Melbourne | RMIT |
+| #   | State           | City      | Name                                  |
+| --- | --------------- | --------- | ------------------------------------- |
+| 1   | Victoria        | Melbourne | Deakin University                     |
+| 2   | Victoria        | Melbourne | RMIT                                  |
+| 3   | Victoria        | Melbourne | La Trobe University                   |
+| 4   | New South Wales | Sydney    | University of Technology Sydney (UTS) |
+| 5   | New South Wales | Sydney    | Macquarie University                  |
 
 ## Canada
 
