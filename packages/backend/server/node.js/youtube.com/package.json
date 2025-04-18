@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/youtube.com",
+  "name": "@nothing-server/youtube.com",
   "version": "0.0.1",
   "description": "youtube.com",
   "main": "./dist/server.js",

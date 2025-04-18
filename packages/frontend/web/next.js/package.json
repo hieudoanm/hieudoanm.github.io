@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/web-next",
+  "name": "@nothing-web/next",
   "version": "0.0.1",
   "description": "Web - Next.js",
   "main": "index.js",

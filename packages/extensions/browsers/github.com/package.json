@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/github.com-extensions",
+  "name": "@nothing-extension/github.com",
   "version": "0.0.1",
   "description": "Extensions - github.com",
   "main": "dist/index.js",

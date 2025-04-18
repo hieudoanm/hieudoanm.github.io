@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/focus.io-extensions",
+  "name": "@nothing-extension/focus.io",
   "version": "0.0.1",
   "description": "Extensions - Focus.io",
   "main": "dist/index.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/commander",
+  "name": "@nothing-cli/commander",
   "version": "0.0.1",
   "description": "CLI - Commander",
   "main": "dist/main.js",

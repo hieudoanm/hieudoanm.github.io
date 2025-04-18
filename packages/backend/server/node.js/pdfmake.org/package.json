@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/pdfmake.org",
+  "name": "@nothing-server/pdfmake.org",
   "version": "0.0.1",
   "description": "pdfmake.org",
   "main": "./dist/server.js",

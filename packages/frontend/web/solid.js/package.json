@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/web-solid",
+  "name": "@nothing-web/solid",
   "version": "0.0.1",
   "description": "Web - Solid.js",
   "main": "index.js",

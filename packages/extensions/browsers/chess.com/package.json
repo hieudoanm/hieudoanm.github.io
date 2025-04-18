@@ -1,5 +1,5 @@
 {
-  "name": "@nothing/chess.com-extensions",
+  "name": "@nothing-extension/chess.com",
   "version": "0.0.1",
   "description": "Extensions - chess.com",
   "main": "dist/index.js",
