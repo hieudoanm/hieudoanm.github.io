@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import {
   FaAppStoreIos,
+  FaChessKnight,
   FaFileWord,
   FaLinkedin,
   FaSquareGithub,
@@ -63,6 +64,9 @@ const HomePage: NextPage = () => {
   return (
     <div className="h-screen w-screen p-8">
       <div className="flex h-full flex-col items-center justify-center gap-y-8">
+        <div className="flex aspect-square w-24 items-center justify-center rounded-full bg-gray-100 text-gray-900">
+          <FaChessKnight className="text-5xl" />
+        </div>
         <p className="text-xl font-black tracking-wide uppercase">Nothing</p>
         <div className="flex flex-col items-center justify-center gap-y-8">
           {appsByTarget.map(({ target, apps = [] }) => {
