@@ -18,22 +18,20 @@ const NotesPage: NextPage<{
 
   return (
     <main className="min-h-screen">
-      <div className="border-b border-gray-700 px-8 py-4">
-        <div className="container mx-auto">
-          <input
-            id="search"
-            name="search"
-            placeholder="Search"
-            className="w-full rounded border border-gray-700 px-4 py-2"
-            value={search}
-            onChange={(event) => {
-              setState((previous) => ({
-                ...previous,
-                search: event.target.value,
-              }));
-            }}
-          />
-        </div>
+      <div className="container mx-auto px-8 py-4">
+        <input
+          id="search"
+          name="search"
+          placeholder="Search"
+          className="w-full rounded border border-gray-800 px-4 py-2"
+          value={search}
+          onChange={(event) => {
+            setState((previous) => ({
+              ...previous,
+              search: event.target.value,
+            }));
+          }}
+        />
       </div>
       {posts
         .filter(({ title }) => {
@@ -42,7 +40,7 @@ const NotesPage: NextPage<{
             : true;
         })
         .map(({ id = '', title = '', date = '' }) => (
-          <div key={id} className="border-b border-gray-700 px-8 py-4">
+          <div key={id} className="border-t border-gray-800 px-8 py-4">
             <div className="container mx-auto">
               <Link href={`/posts/${id}`}>
                 <p>
