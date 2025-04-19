@@ -3,14 +3,21 @@ import Link from 'next/link';
 import {
   FaAppStoreIos,
   FaChessKnight,
+  FaCode,
   FaFileWord,
   FaLinkedin,
+  FaNoteSticky,
   FaSquareGithub,
   FaSquareTwitter,
   FaWindowRestore,
 } from 'react-icons/fa6';
 
 const HomePage: NextPage = () => {
+  const icons = [
+    <FaCode key="code" className="text-5xl" />,
+    <FaNoteSticky key="notes" className="text-5xl" />,
+    <FaChessKnight key="chess" className="text-5xl" />,
+  ];
   const apps = [
     {
       id: 'apps',
@@ -65,9 +72,9 @@ const HomePage: NextPage = () => {
     <div className="h-screen w-screen p-8">
       <div className="flex h-full flex-col items-center justify-center gap-y-8">
         <div className="flex aspect-square w-24 items-center justify-center rounded-full bg-gray-100 text-gray-900">
-          <FaChessKnight className="text-5xl" />
+          {icons.at(Math.floor(Math.random() * icons.length))}
         </div>
-        <p className="text-xl font-black tracking-wide uppercase">Nothing</p>
+        <p className="text-xl font-bold uppercase">Hieu Doan</p>
         <div className="flex flex-col items-center justify-center gap-y-8">
           {appsByTarget.map(({ target, apps = [] }) => {
             return (

@@ -500,37 +500,39 @@ const ActionButton: FC<{
       action === ActOther.IMAGE_QRCODE ||
       action === ActOther.MARKDOWN_EDITOR
     ) {
-      return <FaDownload className="mx-auto" />;
+      return <FaDownload className="text-sm" />;
     }
 
-    return <FaCopy className="mx-auto" />;
+    return <FaCopy className="text-sm" />;
   };
 
   return (
-    <button
-      type="button"
-      className="w-full cursor-pointer rounded border border-gray-800 p-4"
-      onClick={async () => {
-        if (action === ActCSV.CSV_TO_HTML) {
-          const csvHtmlTable: string =
-            document.getElementById('csv-html-table')?.outerHTML ?? '';
-          copyToClipboard(csvHtmlTable);
-        } else if (action === ActOther.IMAGE_QRCODE) {
-          downloadImage({
-            content: result,
-            filename: 'qrcode',
-            format: 'jpg',
-          });
-        } else if (action === ActOther.MARKDOWN_EDITOR) {
-          const converted = htmlToPdfmake(result);
-          const docDefinition = { content: converted };
-          pdfMake.createPdf(docDefinition).download('markdown.pdf');
-        } else {
-          copyToClipboard(result);
-        }
-      }}>
-      {actionText()}
-    </button>
+    <div className="flex">
+      <button
+        type="button"
+        className="cursor-pointer rounded-full border border-gray-800 p-2"
+        onClick={async () => {
+          if (action === ActCSV.CSV_TO_HTML) {
+            const csvHtmlTable: string =
+              document.getElementById('csv-html-table')?.outerHTML ?? '';
+            copyToClipboard(csvHtmlTable);
+          } else if (action === ActOther.IMAGE_QRCODE) {
+            downloadImage({
+              content: result,
+              filename: 'qrcode',
+              format: 'jpg',
+            });
+          } else if (action === ActOther.MARKDOWN_EDITOR) {
+            const converted = htmlToPdfmake(result);
+            const docDefinition = { content: converted };
+            pdfMake.createPdf(docDefinition).download('markdown.pdf');
+          } else {
+            copyToClipboard(result);
+          }
+        }}>
+        {actionText()}
+      </button>
+    </div>
   );
 };
 
@@ -629,7 +631,7 @@ const StringPage: NextPage = () => {
                 action !== ActOther.IMAGE_QRCODE &&
                 action !== ActOther.MARKDOWN_EDITOR &&
                 action !== ActOther.MARKDOWN_DICTIONARY && (
-                  <div className="mb-2 w-full rounded">
+                  <div className="mb-2 w-full grow rounded">
                     <textarea
                       id="result"
                       name="result"
@@ -651,27 +653,36 @@ const StringPage: NextPage = () => {
               await submit({ action: action as Act, text });
             }}
             className="overflow-hidde flex grow flex-col rounded-none rounded-t-2xl bg-gray-800 md:rounded-2xl">
-            <textarea
-              ref={textareaRef}
-              id="text"
-              name="text"
-              placeholder="Text"
-              className="scroll-none h-full w-full p-4 focus:outline-none"
-              rows={text.split('\n').length > 5 ? 5 : text.split('\n').length}
-              value={text}
-              onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
-                const { selectionStart, selectionEnd, scrollTop } =
-                  event.target;
-                cursorRef.current = { selectionStart, selectionEnd, scrollTop };
-                // Value
-                const newText = event.target.value;
-                setState((previous) => ({
-                  ...previous,
-                  text: newText,
-                }));
-                await submit({ action: action as Act, text: newText });
-              }}
-            />
+            {action === ActChess.CHESS_960 || action === ActOther.UUID ? (
+              <></>
+            ) : (
+              <textarea
+                ref={textareaRef}
+                id="text"
+                name="text"
+                placeholder="Text"
+                className="scroll-none h-full w-full p-4 focus:outline-none"
+                rows={text.split('\n').length > 5 ? 5 : text.split('\n').length}
+                value={text}
+                onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
+                  const { selectionStart, selectionEnd, scrollTop } =
+                    event.target;
+                  cursorRef.current = {
+                    selectionStart,
+                    selectionEnd,
+                    scrollTop,
+                  };
+                  // Value
+                  const newText = event.target.value;
+                  setState((previous) => ({
+                    ...previous,
+                    text: newText,
+                  }));
+                  await submit({ action: action as Act, text: newText });
+                }}
+              />
+            )}
+
             <div className="flex items-center justify-center">
               <select
                 id="action"
