@@ -11,16 +11,16 @@ const HEX2RGBPage: NextPage = () => {
   const { width = 0, height = 0 } = useWindowSize();
   const { browser = '' } = useBrowser();
   const [
-    { hex = '#000000', hsl = hex2hsl('#000000'), rgb = hex2rgb('#000000') },
+    { hex = '#101828', hsl = hex2hsl('#101828'), rgb = hex2rgb('#101828') },
     setState,
   ] = useState<{
     hex: string;
     hsl: { h: number; s: number; l: number } | null;
     rgb: { r: number; g: number; b: number } | null;
   }>({
-    hex: '#000000',
-    hsl: hex2hsl('#000000'),
-    rgb: hex2rgb('#000000'),
+    hex: '#101828',
+    hsl: hex2hsl('#101828'),
+    rgb: hex2rgb('#101828'),
   });
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const HEX2RGBPage: NextPage = () => {
         className="h-screen w-screen"
         style={{
           backgroundColor: hex,
-          color: getBrightness(hex) ? '#ffffff' : '#000000',
+          color: getBrightness(hex) ? '#ffffff' : '#101828',
         }}>
         <div className="fixed top-2 right-0 left-0 text-center md:top-4">
           {width}
