@@ -491,6 +491,10 @@ const ActionButton: FC<{
   action: Act;
   result: string;
 }> = ({ action, result = '' }) => {
+  if (action === ActChess.CHESS_960) {
+    return <></>;
+  }
+
   const actionText = () => {
     if (
       action === ActOther.IMAGE_QRCODE ||
@@ -592,21 +596,22 @@ const StringPage: NextPage = () => {
         </div>
         <div className="flex grow flex-col overflow-hidden px-4">
           {loading ? (
-            <div className="h-full grow p-2">Loading</div>
+            <div className="h-full p-2">Loading</div>
           ) : (
             <>
               {action === ActChess.CHESS_960 && (
-                <div className="flex w-full grow items-center justify-center overflow-auto">
+                <div
+                  className={`flex h-full items-center justify-center overflow-auto ${width > height ? 'h-full' : 'w-full'}`}>
                   <Chess960 />
                 </div>
               )}
               {action === ActCSV.CSV_TO_HTML && (
-                <div className="w-full grow overflow-auto p-2">
+                <div className="w-full overflow-auto p-2">
                   <CSVTable csv={text} />
                 </div>
               )}
               {action === ActOther.IMAGE_QRCODE && (
-                <div className="w-full grow overflow-auto p-2">
+                <div className="w-full overflow-auto p-2">
                   <div
                     className={`mx-auto aspect-square overflow-hidden rounded bg-cover bg-center ${width > height ? 'h-full' : 'w-full'}`}
                     style={{ backgroundImage: `url(${result})` }}
@@ -615,7 +620,7 @@ const StringPage: NextPage = () => {
               )}
               {(action === ActOther.MARKDOWN_EDITOR ||
                 action === ActOther.MARKDOWN_DICTIONARY) && (
-                <div className="w-full grow overflow-auto p-2">
+                <div className="w-full overflow-auto p-2">
                   <MarkdownPreviewer html={result} />
                 </div>
               )}
@@ -624,7 +629,7 @@ const StringPage: NextPage = () => {
                 action !== ActOther.IMAGE_QRCODE &&
                 action !== ActOther.MARKDOWN_EDITOR &&
                 action !== ActOther.MARKDOWN_DICTIONARY && (
-                  <div className="mb-2 w-full grow rounded">
+                  <div className="mb-2 w-full rounded">
                     <textarea
                       id="result"
                       name="result"

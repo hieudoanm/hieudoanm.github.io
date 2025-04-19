@@ -51,62 +51,62 @@ export const Chessboard: FC<{
       customPieces={{
         wK: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessKing className="text-2xl text-white md:text-4xl" />
+            <FaChessKing className="text-xl text-white md:text-2xl" />
           </div>
         ),
         wQ: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessQueen className="text-2xl text-white md:text-4xl" />
+            <FaChessQueen className="text-xl text-white md:text-2xl" />
           </div>
         ),
         wR: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessRook className="text-2xl text-white md:text-4xl" />
+            <FaChessRook className="text-xl text-white md:text-2xl" />
           </div>
         ),
         wB: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessBishop className="text-2xl text-white md:text-4xl" />
+            <FaChessBishop className="text-xl text-white md:text-2xl" />
           </div>
         ),
         wN: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessKnight className="text-2xl text-white md:text-4xl" />
+            <FaChessKnight className="text-xl text-white md:text-2xl" />
           </div>
         ),
         wP: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessPawn className="text-2xl text-white md:text-4xl" />
+            <FaChessPawn className="text-xl text-white md:text-2xl" />
           </div>
         ),
         bK: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessKing className="text-2xl text-red-500 md:text-4xl" />
+            <FaChessKing className="text-xl text-red-500 md:text-2xl" />
           </div>
         ),
         bQ: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessQueen className="text-2xl text-red-500 md:text-4xl" />
+            <FaChessQueen className="text-xl text-red-500 md:text-2xl" />
           </div>
         ),
         bR: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessRook className="text-2xl text-red-500 md:text-4xl" />
+            <FaChessRook className="text-xl text-red-500 md:text-2xl" />
           </div>
         ),
         bB: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessBishop className="text-2xl text-red-500 md:text-4xl" />
+            <FaChessBishop className="text-xl text-red-500 md:text-2xl" />
           </div>
         ),
         bN: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessKnight className="text-2xl text-red-500 md:text-4xl" />
+            <FaChessKnight className="text-xl text-red-500 md:text-2xl" />
           </div>
         ),
         bP: () => (
           <div className="flex h-full w-full items-center justify-center">
-            <FaChessPawn className="text-2xl text-red-500 md:text-4xl" />
+            <FaChessPawn className="text-xl text-red-500 md:text-2xl" />
           </div>
         ),
       }}
