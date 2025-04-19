@@ -1,13 +1,22 @@
 ---
 title: 'Vehicles'
-date: '2025-03-17'
+date: '2025-04-19'
 ---
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Daily Driver](#daily-driver)
 - [Car](#car)
 - [Motorcycle](#motorcycle)
+
+## Daily Driver
+
+| No  | Vehicle    | Current | Future      |
+| --- | ---------- | ------- | ----------- |
+| 01  | Motorbike  | -       | Honda Wave  |
+| 02  | Motorcycle | -       | Honda Rebel |
+| 03  | Car        | -       | Vinfast VF3 |
 
 ## Car
 

@@ -1,6 +1,6 @@
 ---
 title: 'Technology'
-date: '2025-03-17'
+date: '2025-04-19'
 tags:
   ['mobile', 'tablet', 'laptop', 'headphone', 'smart-watch', 'apple', 'nothing']
 ---
@@ -20,13 +20,13 @@ tags:
 
 ## Daily Driver
 
-| No  | Device      | Name          |
-| --- | ----------- | ------------- |
-| 1   | Mobile      | Nothing Phone |
-| 2   | Tablet      |               |
-| 3   | Laptop      | Macbook Pro   |
-| 4   | Headphone   | Beats Buds    |
-| 5   | Smart Watch | Garmin        |
+| No  | Device      | Current      | Future        |
+| --- | ----------- | ------------ | ------------- |
+| 1   | Mobile      | Apple iPhone | Nothing Phone |
+| 2   | Tablet      | -            | Apple iPad    |
+| 3   | Laptop      | Macbook Pro  | -             |
+| 4   | Headphone   | Beats Buds   | Nothing Ear   |
+| 5   | Smart Watch | Garmin       | -             |
 
 ## Devices
 
@@ -38,7 +38,7 @@ tags:
 | 02  | China          | Xiaomi   |        |
 | 03  | China          | Huawei   |        |
 | 04  | China          | OnePlus  |        |
-| 05  | Korean         | Samsung  | Galaxy |
+| 05  | Korea          | Samsung  | Galaxy |
 | 06  | Taiwan         | Asus     |        |
 | 07  | United Kingdom | Nothing  |        |
 | 08  | United States  | Apple    | iPhone |
@@ -51,7 +51,7 @@ tags:
 | --- | ------------- | ------- | ---- |
 | 01  | China         | Xiaomi  |      |
 | 02  | China         | Huawei  |      |
-| 03  | Korean        | Samsung |      |
+| 03  | Korea         | Samsung |      |
 | 04  | United States | Apple   | iPad |
 | 05  | United States | Google  |      |
 
@@ -67,13 +67,17 @@ tags:
 
 ### Headphone
 
-| No  | Country       | Company    | Name                          |
-| --- | ------------- | ---------- | ----------------------------- |
-| 01  | Germany       | Sennheiser | Momentum & HD Series          |
-| 02  | Japan         | Sony       | WH-1000XM5 (Noise-Cancelling) |
-| 03  | United States | Bose       | QuietComfort Series           |
-| 04  | United States | Apple      | AirPods Pro 2 & AirPods Max   |
-| 05  | United States | JBL        | Club & Tour Series            |
+| No  | Country        | Company    | Name                          |
+| --- | -------------- | ---------- | ----------------------------- |
+| 01  | Germany        | Sennheiser | Momentum & HD Series          |
+| 02  | Japan          | Sony       | WH-1000XM5 (Noise-Cancelling) |
+| 03  | Korea          | Samsung    | Buds                          |
+| 04  | United Kingdom | Marshall   |                               |
+| 05  | United Kingdom | Nothing    | Nothing Ear                   |
+| 06  | United States  | Apple      | AirPods Pro 2 & AirPods Max   |
+| 07  | United States  | Beats      | Beats                         |
+| 08  | United States  | Bose       | QuietComfort Series           |
+| 09  | United States  | JBL        | Club & Tour Series            |
 
 ### Smart Watch
 
