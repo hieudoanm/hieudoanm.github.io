@@ -30,7 +30,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Nothing</title>
+        <title>Hieu Doan</title>
       </Head>
       <div className={mono.className}>
         <QueryClientProvider client={queryClient}>
