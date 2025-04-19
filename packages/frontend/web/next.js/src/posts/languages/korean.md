@@ -1,47 +1,60 @@
 ---
 title: 'Korean'
-date: '2025-04-12'
+date: '2025-04-19'
 ---
 
-| number | category  | subcategory | hangul | latin |
-| ------ | --------- | ----------- | ------ | ----- |
-| 1      | consonant | plain       | ㄱ     | g     |
-| 2      | consonant | plain       | ㄴ     | n     |
-| 3      | consonant | plain       | ㄷ     | d     |
-| 4      | consonant | plain       | ㄹ     | r     |
-| 5      | consonant | plain       | ㅁ     | m     |
-| 6      | consonant | plain       | ㅂ     | b     |
-| 7      | consonant | plain       | ㅅ     | s     |
-| 8      | consonant | plain       | ㅇ     | -     |
-| 9      | consonant | plain       | ㅈ     | j     |
-| 10     | consonant | plain       | ㅎ     | h     |
-| 11     | consonant | aspirated   | ㅊ     | ch    |
-| 12     | consonant | aspirated   | ㅋ     | k     |
-| 13     | consonant | aspirated   | ㅌ     | t     |
-| 14     | consonant | aspirated   | ㅍ     | p     |
-| 15     | consonant | tense       | ㄲ     | kk    |
-| 16     | consonant | tense       | ㄸ     | tt    |
-| 17     | consonant | tense       | ㅃ     | pp    |
-| 18     | consonant | tense       | ㅆ     | ss    |
-| 19     | consonant | tense       | ㅉ     | jj    |
-| 20     | vowel     | plain       | ㅏ     | a     |
-| 21     | vowel     | plain       | ㅑ     | ya    |
-| 22     | vowel     | plain       | ㅓ     | eo    |
-| 23     | vowel     | plain       | ㅕ     | yeo   |
-| 24     | vowel     | plain       | ㅗ     | o     |
-| 25     | vowel     | plain       | ㅛ     | yo    |
-| 26     | vowel     | plain       | ㅜ     | u     |
-| 27     | vowel     | plain       | ㅠ     | yu    |
-| 28     | vowel     | plain       | ㅡ     | eu    |
-| 29     | vowel     | plain       | ㅣ     | i     |
-| 30     | vowel     | plain       | ㅐ     | ae    |
-| 31     | vowel     | plain       | ㅒ     | yae   |
-| 32     | vowel     | plain       | ㅔ     | e     |
-| 33     | vowel     | plain       | ㅖ     | ye    |
-| 34     | vowel     | double      | ㅘ     | wa    |
-| 35     | vowel     | double      | ㅙ     | wae   |
-| 36     | vowel     | double      | ㅚ     | oe    |
-| 37     | vowel     | double      | ㅝ     | wo    |
-| 38     | vowel     | double      | ㅞ     | we    |
-| 39     | vowel     | double      | ㅟ     | wi    |
-| 40     | vowel     | double      | ㅢ     | ui    |
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Consonants](#consonants)
+- [Vowels](#vowels)
+
+## Consonants
+
+| No  | Category  | Hangul | Latin |
+| --- | --------- | ------ | ----- |
+| 1   | plain     | ㄱ     | g     |
+| 2   | plain     | ㄴ     | n     |
+| 3   | plain     | ㄷ     | d     |
+| 4   | plain     | ㄹ     | r     |
+| 5   | plain     | ㅁ     | m     |
+| 6   | plain     | ㅂ     | b     |
+| 7   | plain     | ㅅ     | s     |
+| 8   | plain     | ㅇ     | -     |
+| 9   | plain     | ㅈ     | j     |
+| 10  | plain     | ㅎ     | h     |
+| 11  | aspirated | ㅊ     | ch    |
+| 12  | aspirated | ㅋ     | k     |
+| 13  | aspirated | ㅌ     | t     |
+| 14  | aspirated | ㅍ     | p     |
+| 15  | tense     | ㄲ     | kk    |
+| 16  | tense     | ㄸ     | tt    |
+| 17  | tense     | ㅃ     | pp    |
+| 18  | tense     | ㅆ     | ss    |
+| 19  | tense     | ㅉ     | jj    |
+
+## Vowels
+
+| No  | Category | Hangul | Latin |
+| --- | -------- | ------ | ----- |
+| 20  | plain    | ㅏ     | a     |
+| 21  | plain    | ㅑ     | ya    |
+| 22  | plain    | ㅓ     | eo    |
+| 23  | plain    | ㅕ     | yeo   |
+| 24  | plain    | ㅗ     | o     |
+| 25  | plain    | ㅛ     | yo    |
+| 26  | plain    | ㅜ     | u     |
+| 27  | plain    | ㅠ     | yu    |
+| 28  | plain    | ㅡ     | eu    |
+| 29  | plain    | ㅣ     | i     |
+| 30  | plain    | ㅐ     | ae    |
+| 31  | plain    | ㅒ     | yae   |
+| 32  | plain    | ㅔ     | e     |
+| 33  | plain    | ㅖ     | ye    |
+| 34  | double   | ㅘ     | wa    |
+| 35  | double   | ㅙ     | wae   |
+| 36  | double   | ㅚ     | oe    |
+| 37  | double   | ㅝ     | wo    |
+| 38  | double   | ㅞ     | we    |
+| 39  | double   | ㅟ     | wi    |
+| 40  | double   | ㅢ     | ui    |
