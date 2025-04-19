@@ -161,14 +161,14 @@ enum ActOther {
 }
 
 enum ActNumber {
-  NUMBER_FROM_BINARY = 'From Binary to Number',
-  NUMBER_TO_BINARY = 'From Number to Binary',
-  NUMBER_FROM_OCTAL = 'From Octal to Number',
-  NUMBER_TO_OCTAL = 'From Number to Octal',
-  NUMBER_FROM_HEXADECIMAL = 'From Hexadecimal to Number',
-  NUMBER_TO_HEXADECIMAL = 'From Number to Hexadecimal',
-  NUMBER_FROM_ROMAN = 'From Roman to Number',
-  NUMBER_TO_ROMAN = 'From Number to Roman',
+  NUMBER_BASE_BINARY_FROM = 'Base - Binary - To Number',
+  NUMBER_BASE_BINARY_TO = 'Base - Binary - From Number',
+  NUMBER_BASE_OCTAL_FROM = 'Base - Octal - To Number',
+  NUMBER_BASE_OCTAL_TO = 'Base - Octal - From Number',
+  NUMBER_BASE_HEXADECIMAL_FROM = 'Base - Hexadecimal - To Number',
+  NUMBER_BASE_HEXADECIMAL_TO = 'Base - Hexadecimal - From Hexadecimal',
+  NUMBER_ROMAN_FROM = 'Roman - To Number',
+  NUMBER_ROMAN_TO = 'Roman - From Number',
 }
 
 type Act =
@@ -224,21 +224,21 @@ const actNumber = ({
   action: ActNumber;
   source: string;
 }): string => {
-  if (action === ActNumber.NUMBER_FROM_ROMAN) {
+  if (action === ActNumber.NUMBER_ROMAN_FROM) {
     return fromRoman(source).toString();
-  } else if (action === ActNumber.NUMBER_TO_ROMAN) {
+  } else if (action === ActNumber.NUMBER_ROMAN_TO) {
     return toRoman(parseInt(source, 10));
-  } else if (action === ActNumber.NUMBER_FROM_BINARY) {
+  } else if (action === ActNumber.NUMBER_BASE_BINARY_FROM) {
     return fromBinary(source).toString();
-  } else if (action === ActNumber.NUMBER_TO_BINARY) {
+  } else if (action === ActNumber.NUMBER_BASE_BINARY_TO) {
     return toBinary(parseInt(source, 10));
-  } else if (action === ActNumber.NUMBER_FROM_OCTAL) {
+  } else if (action === ActNumber.NUMBER_BASE_OCTAL_FROM) {
     return fromOctal(source).toString();
-  } else if (action === ActNumber.NUMBER_TO_OCTAL) {
+  } else if (action === ActNumber.NUMBER_BASE_OCTAL_TO) {
     return toOctal(parseInt(source, 10));
-  } else if (action === ActNumber.NUMBER_FROM_HEXADECIMAL) {
+  } else if (action === ActNumber.NUMBER_BASE_HEXADECIMAL_FROM) {
     return fromHexadecimal(source).toString().toUpperCase();
-  } else if (action === ActNumber.NUMBER_TO_HEXADECIMAL) {
+  } else if (action === ActNumber.NUMBER_BASE_HEXADECIMAL_TO) {
     return toHexadecimal(parseInt(source, 10));
   }
   return '';
@@ -862,21 +862,25 @@ const StringPage: NextPage = () => {
                     newText = JSON.stringify(INITIAL_MANIFEST_PWA, null, 2);
                   } else if (previousFuncIsNotTelegram && nextFuncIsTelegram) {
                     newText = JSON.stringify(INITIAL_TELEGRAM_WEBHOOK, null, 2);
-                  } else if (nextAction === ActNumber.NUMBER_FROM_ROMAN) {
+                  } else if (nextAction === ActNumber.NUMBER_ROMAN_FROM) {
                     newText = 'MCMXCV';
-                  } else if (nextAction === ActNumber.NUMBER_TO_ROMAN) {
+                  } else if (nextAction === ActNumber.NUMBER_ROMAN_TO) {
                     newText = '1995';
-                  } else if (nextAction === ActNumber.NUMBER_FROM_BINARY) {
+                  } else if (nextAction === ActNumber.NUMBER_BASE_BINARY_FROM) {
                     newText = '1010';
-                  } else if (nextAction === ActNumber.NUMBER_TO_BINARY) {
+                  } else if (nextAction === ActNumber.NUMBER_BASE_BINARY_TO) {
                     newText = '10';
-                  } else if (nextAction === ActNumber.NUMBER_FROM_OCTAL) {
+                  } else if (nextAction === ActNumber.NUMBER_BASE_OCTAL_FROM) {
                     newText = '12';
-                  } else if (nextAction === ActNumber.NUMBER_TO_OCTAL) {
+                  } else if (nextAction === ActNumber.NUMBER_BASE_OCTAL_TO) {
                     newText = '7';
-                  } else if (nextAction === ActNumber.NUMBER_FROM_HEXADECIMAL) {
+                  } else if (
+                    nextAction === ActNumber.NUMBER_BASE_HEXADECIMAL_FROM
+                  ) {
                     newText = 'A';
-                  } else if (nextAction === ActNumber.NUMBER_TO_HEXADECIMAL) {
+                  } else if (
+                    nextAction === ActNumber.NUMBER_BASE_HEXADECIMAL_TO
+                  ) {
                     newText = '10';
                   } else if (nextAction === ActChess.CHESS_FEN_TO_PNG) {
                     newText =
@@ -970,29 +974,29 @@ const StringPage: NextPage = () => {
                   </option>
                 </optgroup>
                 <optgroup label="number">
-                  <option value={ActNumber.NUMBER_FROM_ROMAN}>
-                    {ActNumber.NUMBER_FROM_ROMAN}
+                  <option value={ActNumber.NUMBER_BASE_BINARY_FROM}>
+                    {ActNumber.NUMBER_BASE_BINARY_FROM}
                   </option>
-                  <option value={ActNumber.NUMBER_TO_ROMAN}>
-                    {ActNumber.NUMBER_TO_ROMAN}
+                  <option value={ActNumber.NUMBER_BASE_BINARY_TO}>
+                    {ActNumber.NUMBER_BASE_BINARY_TO}
                   </option>
-                  <option value={ActNumber.NUMBER_FROM_BINARY}>
-                    {ActNumber.NUMBER_FROM_BINARY}
+                  <option value={ActNumber.NUMBER_BASE_OCTAL_FROM}>
+                    {ActNumber.NUMBER_BASE_OCTAL_FROM}
                   </option>
-                  <option value={ActNumber.NUMBER_TO_BINARY}>
-                    {ActNumber.NUMBER_TO_BINARY}
+                  <option value={ActNumber.NUMBER_BASE_OCTAL_TO}>
+                    {ActNumber.NUMBER_BASE_OCTAL_TO}
                   </option>
-                  <option value={ActNumber.NUMBER_FROM_OCTAL}>
-                    {ActNumber.NUMBER_FROM_OCTAL}
+                  <option value={ActNumber.NUMBER_BASE_HEXADECIMAL_FROM}>
+                    {ActNumber.NUMBER_BASE_HEXADECIMAL_FROM}
                   </option>
-                  <option value={ActNumber.NUMBER_TO_OCTAL}>
-                    {ActNumber.NUMBER_TO_OCTAL}
+                  <option value={ActNumber.NUMBER_BASE_HEXADECIMAL_TO}>
+                    {ActNumber.NUMBER_BASE_HEXADECIMAL_TO}
                   </option>
-                  <option value={ActNumber.NUMBER_FROM_HEXADECIMAL}>
-                    {ActNumber.NUMBER_FROM_HEXADECIMAL}
+                  <option value={ActNumber.NUMBER_ROMAN_FROM}>
+                    {ActNumber.NUMBER_ROMAN_FROM}
                   </option>
-                  <option value={ActNumber.NUMBER_TO_HEXADECIMAL}>
-                    {ActNumber.NUMBER_TO_HEXADECIMAL}
+                  <option value={ActNumber.NUMBER_ROMAN_TO}>
+                    {ActNumber.NUMBER_ROMAN_TO}
                   </option>
                 </optgroup>
                 <optgroup label="string">

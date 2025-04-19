@@ -28,17 +28,37 @@ export const csv2md = (csv: string): string => {
   const data: Record<string, string>[] = csv2json(csv);
   const header = data[0] ?? {};
   const headers = Object.keys(header);
+  const headerConfigs = headers.map((header: string) => {
+    const valuesByHeader = data.map((item) => item[header] ?? '');
+    const maxLength: number = Math.max(
+      ...valuesByHeader.map((value) => value.length),
+      header.length
+    );
+    return { header, length: maxLength };
+  });
   const headerRow: string =
-    headers.length > 0 ? `| ${headers.join(' | ')} |` : '';
+    headerConfigs.length > 0
+      ? `| ${headerConfigs
+          .map(({ header = '', length = 0 }) => {
+            const padding: number = Math.max(0, length - header.length);
+            return `${header}${' '.repeat(padding)}`;
+          })
+          .join(' | ')} |`
+      : '';
   const dividerRow: string =
     headers.length > 0
-      ? `| ${headers.map((key) => '-'.repeat(key.length)).join(' | ')} |`
+      ? `| ${headerConfigs.map(({ length = 0 }) => '-'.repeat(length)).join(' | ')} |`
       : '';
   const rows: string = data
     .map((item) => {
-      const values: string[] = Object.values(item);
-      const row: string = values.map((value) => ` ${value} `).join('|');
-      return `|${row}|`;
+      const row = headerConfigs
+        .map(({ header, length }) => {
+          const value = item[header] ?? '';
+          const padding: number = Math.max(0, length - (value.length ?? 0));
+          return `${value}${' '.repeat(padding)}`;
+        })
+        .join(' | ');
+      return `| ${row} |`;
     })
     .join('\n');
   const md = `${headerRow}\n${dividerRow}\n${rows}`;
