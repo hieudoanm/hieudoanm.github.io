@@ -1,30 +1,81 @@
 ---
 title: 'Resume'
-date: '2025-03-17'
+date: '2025-04-19'
 ---
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Experience](#experience)
+- [Experiences](#experiences)
+  - [Senior Software Developer at NAB](#senior-software-developer-at-nab)
+  - [Software Developer at BoostCommerce](#software-developer-at-boostcommerce)
+  - [Front-end Developer at admetrics](#front-end-developer-at-admetrics)
+  - [Front-end Developer at Witrafi](#front-end-developer-at-witrafi)
 - [Education](#education)
+  - [Bachelor of Psychology at RMIT](#bachelor-of-psychology-at-rmit)
+  - [Bachelor of BA, BIT at LAB](#bachelor-of-ba-bit-at-lab)
 
-## Experience
+## Experiences
 
-| Country | City              | Start    | End      | Place                          | Position                  |
-| ------- | ----------------- | -------- | -------- | ------------------------------ | ------------------------- |
-| Vietnam | Ho Chi Minh City  | 2021 Aug | **now**  | [NAB][nab]                     | Senior Software Developer |
-| Vietnam | Hanoi             | 2019 Mar | 2021 Mar | [BoostCommerce][boostcommerce] | Software Developer        |
-| Germany | Frankfurt am Main | 2017 Feb | 2019 Feb | [admetrics][admetrics]         | Front-end Developer       |
-| Finland | Helsinki          | 2015 Jan | 2017 Jan | Witrafi                        | Front-end Developer       |
+### Senior Software Developer at [NAB][nab]
+
+Location: **Ho Chi Minh City**, **Vietnam**
+
+From **2021-08-01** to **now**
+
+- Designed, developed, and maintained microservices, ensuring high performance, security, and scalability.
+- Collaborated with cross-functional teams to gather requirements and deliver tailored software solutions.
+- Implemented automated unit and integration tests to ensure code quality and functionality.
+- Techstack: **Java Spring Boot**, **Kafka**, **React**, **GraphQL**
+- Certificates:
+  - [AWS][aws] [Solutions Architect - Associate][aws-ssa] from **2021-09-11** to **2024-09-11**
+
+### Software Developer at [BoostCommerce][boostcommerce]
+
+Location: **Hanoi**, **Vietnam**
+
+From **2019-03-01** to **2021-02-28**
+
+- Designed, developed, and maintained microservices, ensuring high performance, security, and scalability.
+- Collaborated with cross-functional teams to gather requirements and deliver tailored software solutions.
+- Implemented automated unit and integration tests to ensure code quality and functionality.
+- Techstack: **Express.js**, **React**
+
+### Front-end Developer at [admetrics][admetrics]
+
+Location: **Frankfurt am Main**, **Germany**
+
+From **2017-03-01** to **2019-02-28**
+
+- Designed and developed responsive, user-friendly web interfaces using HTML, CSS, and JavaScript.
+- Collaborated with UX/UI designers to implement visually appealing and accessible websites and applications.
+- Integrated APIs and third-party services to enhance functionality and improve user experiences.
+- Techstack: **Angular**
+
+### Front-end Developer at Witrafi
+
+Location: **Helsinki**, **Finland**
+
+Date: **2015-01-01** to **2017-02-28**
+
+- Designed and developed responsive, user-friendly web interfaces using HTML, CSS, and JavaScript.
+- Collaborated with UX/UI designers to implement visually appealing and accessible websites and applications.
+- Integrated APIs and third-party services to enhance functionality and improve user experiences.
+- Techstack: **Angular.js**
 
 ## Education
 
-| Country | City             | Start    | End      | Place        | Position                                   |
-| ------- | ---------------- | -------- | -------- | ------------ | ------------------------------------------ |
-| Vietnam | Ho Chi Minh City | 2022 Nov | **now**  | [RMIT][rmit] | [Bachelor of Psychology][rmit-psychology]  |
-| Vietnam | Ho Chi Minh City | 2021 Sep | 2024 Sep | [AWS][aws]   | [Solutions Architect - Associate][aws-ssa] |
-| Finland | Lahti            | 2013 Sep | 2016 Dec | [LAB][lab]   | [Bachelor of BA, BIT][lab-bba-bit]         |
+### [Bachelor of Psychology][rmit-psychology] at [RMIT][rmit]
+
+Location: **Ho Chi Minh City**, **Vietnam**
+
+Date: **2022-11-01** to **now**
+
+### [Bachelor of BA, BIT][lab-bba-bit] at [LAB][lab]
+
+Location: **Lahti**, **Finland**
+
+Date: **2013-09-01** to **2016-12-31**
 
 [admetrics]: https://www.admetrics.io/
 [aws]: https://aws.amazon.com

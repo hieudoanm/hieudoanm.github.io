@@ -62,15 +62,15 @@ import {
 import { FaArrowLeft, FaCopy, FaDownload, FaPaperPlane } from 'react-icons/fa6';
 import { parse, stringify } from 'yaml';
 
+const FONT_FOLDER: string = 'https://hieudoanm.github.io/fonts';
+const FONT_NAME: string = 'Roboto';
+
 pdfMake.fonts = {
   Roboto: {
-    normal:
-      'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
-    bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
-    italics:
-      'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
-    bolditalics:
-      'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf',
+    normal: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Regular.ttf`,
+    bold: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Medium.ttf`,
+    italics: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Italic.ttf`,
+    bolditalics: `${FONT_FOLDER}/${FONT_NAME}/Roboto-MediumItalic.ttf`,
   },
 };
 
