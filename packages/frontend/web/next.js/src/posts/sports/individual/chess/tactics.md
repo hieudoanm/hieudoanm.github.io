@@ -1,5 +1,5 @@
 ---
-title: 'Chess Bookmarks'
+title: 'Chess Tactics'
 date: '2025-04-19'
 ---
 
@@ -7,7 +7,6 @@ date: '2025-04-19'
 
 - [Table of Contents](#table-of-contents)
 - [Tactics](#tactics)
-- [Websites](#websites)
 
 ## Tactics
 
@@ -29,12 +28,3 @@ Here’s a list of the key chess tactics from the [article](https://www.chess.co
 14. **Back-Rank Checkmate** – Delivering checkmate when an opponent’s king is trapped by its own pieces on the back rank.
 
 This covers the core tactics from the article in a concise list!
-
-## Websites
-
-- [chess.com](https://chess.com)
-  - [puzzles](https://chess.com/puzzles)
-- [lichess.org](https://lichess.org)
-  - [openings](https://lichess.org/opening)
-  - [puzzles](https://lichess.org/training)
-- [tablebase](https://syzygy-tables.info/)

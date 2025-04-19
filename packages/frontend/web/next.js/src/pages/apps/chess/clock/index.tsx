@@ -29,17 +29,28 @@ export const ChessClockPage: NextPage = () => {
     current: '',
     running: false,
   };
+
   const [clock, setClock] = useState<ChessClockState>(initial);
 
   const [timer, setTimer] = useState<any>(null);
 
   const click = (side: ChessClockSide) => {
     const otherSide: ChessClockSide = side === 'white' ? 'black' : 'white';
-    setClock((previousClock) => ({
-      ...previousClock,
-      current: otherSide,
-      running: true,
-    }));
+    setClock((previous) => {
+      const { milliseconds } = previous;
+      const newMilliseconds: number =
+        milliseconds[side] + previous.increment[side] * ONE_SECOND;
+
+      return {
+        ...previous,
+        milliseconds: {
+          ...milliseconds,
+          [side]: newMilliseconds,
+        },
+        current: otherSide,
+        running: true,
+      };
+    });
 
     const newTimer = setInterval(() => {
       if (clock.milliseconds.white === 0 || clock.milliseconds.black === 0) {
@@ -56,7 +67,7 @@ export const ChessClockPage: NextPage = () => {
             if (current === '')
               return { timeControl, current, milliseconds, increment, running };
             const newCurrentMilliseconds: number =
-              milliseconds[current] - ONE_UNIT + increment[current];
+              milliseconds[current] - ONE_UNIT;
 
             return {
               current,

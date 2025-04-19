@@ -1,15 +1,14 @@
 ---
 title: 'Minimalism'
-date: '2025-03-25'
+date: '2025-04-19'
 ---
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Clothes](#clothes)
-- [Technology](#technology)
   - [Software](#software)
-- [Vehicles](#vehicles)
+- [Other](#other)
 - [Financial](#financial)
 
 ## Clothes
@@ -43,34 +42,6 @@ date: '2025-03-25'
 - Countless Football Jerseys (for home)
 - `85+` in Total
 
-## Technology
-
-- [ ] 04 Laptop Related
-  - [x] 01 13-inch Laptop
-    - Options:
-      - ASUS
-      - MacOS
-  - [x] 01 Laptop Charger
-  - [ ] 01 Laptop Mouse
-  - [x] 01 26-inch Screen
-- [x] 03 Phone Related
-  - [x] 01 6-inch Phone
-    - Options:
-      - Nothing
-      - Apple
-      - Google Pixel
-  - [x] 01 Phone Charger
-  - [x] 01 Portable Battery
-- [ ] 04 Tablet Related
-  - [ ] 01 10-inch Tablet
-  - [ ] 01 Tablet Charger
-  - [ ] 01 Tablet Keyboard
-  - [ ] 01 Tablet Pen
-- [x] 01 Smart Watch
-- [x] 01 Camera
-- [x] 01 Speaker
-- `13` in Total
-
 ### Software
 
 1. General
@@ -92,12 +63,10 @@ date: '2025-03-25'
    1. [Google Drive](https://drive.google.com)
    2. Microsoft OneDrive
 
-## Vehicles
+## Other
 
-- [x] 01 Bike
-- [ ] 01 Motorcycle
-- [ ] 01 Car
-- `03` in Total
+- [Technology](../technology)
+- [Vehicles](../vehicles)
 
 ## Financial
 

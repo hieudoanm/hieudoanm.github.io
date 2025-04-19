@@ -1,17 +1,42 @@
 ---
 title: 'Python'
-date: '2025-03-25'
+date: '2025-04-19'
 ---
 
-| No  | Supergroup | Group            | Subgroup   | Technology                                |
-| --- | ---------- | ---------------- | ---------- | ----------------------------------------- |
-| 12  | Python     | Dev Tools        | Linting    | [Ruff][ruff]                              |
-| 13  | Python     | Dev Tools        | Formatting | [Black][black]                            |
-| 14  | Python     | Framework        |            | [FastAPI][fastapi]                        |
-| 15  | Python     | Database         | ORM        | [SQLAlchemy](https://www.sqlalchemy.org/) |
-| 16  | Python     | Machine Learning |            | [scikit-learn][scikit-learn]              |
-| 17  | Python     | Machine Learning |            | [TensorFlow][tensorflow]                  |
-| 18  | Python     | Machine Learning |            | [HuggingFace](https://huggingface.co/)    |
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Dev Tools](#dev-tools)
+- [Back-end](#back-end)
+- [Machine Learning](#machine-learning)
+
+## Dev Tools
+
+| No  | Group        | Technology                                |
+| --- | ------------ | ----------------------------------------- |
+| 01  | Linting      | [Ruff][ruff]                              |
+| 02  | Formatting   | [Black][black]                            |
+| 03  | Database ORM | [SQLAlchemy](https://www.sqlalchemy.org/) |
+
+## Back-end
+
+| No  | Group     | Technology                                            |
+| --- | --------- | ----------------------------------------------------- |
+| 01  | Framework | http.server                                           |
+| 02  | Framework | [Bottle](https://bottlepy.org)                        |
+| 03  | Framework | [Django](https://www.djangoproject.com/)              |
+| 04  | Framework | [FastAPI][fastapi]                                    |
+| 05  | Framework | [Flask](https://flask.palletsprojects.com/en/stable/) |
+
+## Machine Learning
+
+| No  | Group                          | Technology                             |
+| --- | ------------------------------ | -------------------------------------- |
+| 01  | Machine Learning               | [scikit-learn][scikit-learn]           |
+| 02  | Machine Learning               | [Keras](https://keras.io/)             |
+| 03  | Deep Learning x Neural Network | [TensorFlow][tensorflow]               |
+| 04  | Deep Learning x Neural Network | [PyTorch](https://pytorch.org/)        |
+| 05  | Machine Learning Models        | [HuggingFace](https://huggingface.co/) |
 
 [black]: https://black.readthedocs.io/en/stable/
 [fastapi]: https://fastapi.tiangolo.com/

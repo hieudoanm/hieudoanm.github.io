@@ -9,8 +9,8 @@ date: '2025-04-18'
 - [World Cup](#world-cup)
 - [Euro](#euro)
 - [Copa](#copa)
-- [CONCACAF](#concacaf)
-- [Africa Cup](#africa-cup)
+- [CONCACAF Futsal Championship](#concacaf-futsal-championship)
+- [Futsal Africa Cup of Nations](#futsal-africa-cup-of-nations)
 - [OFC](#ofc)
 - [AFC Futsal Asian Cup](#afc-futsal-asian-cup)
   - [AFF Futsal Championship](#aff-futsal-championship)
@@ -66,30 +66,31 @@ date: '2025-04-18'
 | 2022 | Argentina |           |
 | 2024 | Brazil    |           |
 
-## CONCACAF
+## CONCACAF Futsal Championship
 
-| Year | Champion      | Runner-up |
-| ---- | ------------- | --------- |
-| 1996 | United States |           |
-| 2000 | Costa Rica    |           |
-| 2004 | United States |           |
-| 2008 | Guatemala     |           |
-| 2012 | Costa Rica    |           |
-| 2016 | Costa Rica    |           |
-| 2021 | Costa Rica    |           |
-| 2024 | Panama        |           |
+| Year | Host       | Champion      | Score     | Runner-up     |
+| ---- | ---------- | ------------- | --------- | ------------- |
+| 1996 | Guatemala  | United States | 7-3       | Cuba          |
+| 2000 | Costa Rica | Costa Rica    | 2-0       | Cuba          |
+| 2004 | Costa Rica | United States | 2-0       | Cuba          |
+| 2008 | Guatemala  | Guatemala     | 3-3 (5-3) | Cuba          |
+| 2012 | Guatemala  | Costa Rica    | 3-2       | Guatemala     |
+| 2016 | Costa Rica | Costa Rica    | 4-0       | Panama        |
+| 2021 | Guatemala  | Costa Rica    | 3-2       | United States |
+| 2024 | Nicaragua  | Panama        | 4-3       | Cuba          |
 
-## Africa Cup
+## Futsal Africa Cup of Nations
 
-| Year | Champion | Runner-up |
-| ---- | -------- | --------- |
-| 1996 | Egypt    |           |
-| 2000 | Egypt    |           |
-| 2004 | Egypt    |           |
-| 2008 | Libya    |           |
-| 2016 | Morocco  |           |
-| 2020 | Morocco  |           |
-| 2024 | Morocco  |           |
+| Year | Host         | Champion      | Score      | Runner-up  |
+| ---- | ------------ | ------------- | ---------- | ---------- |
+| 1996 | Egypt        | Egypt         |            | Ghana      |
+| 2000 | Egypt        | Egypt         |            | Morocco    |
+| 2004 |              | Egypt         | 10-2 & 3-5 | Mozambique |
+| 2008 | Libya        | Libya         | 4-2        | Egypt      |
+| 2011 | Burkina Faso | **Cancelled** |            |            |
+| 2016 | South Africa | Morocco       | 3-2        | Egypt      |
+| 2020 | Morocco      | Morocco       | 5-0        | Egypt      |
+| 2024 | Morocco      | Morocco       | 5-1        | Angola     |
 
 ## OFC
 
@@ -145,7 +146,7 @@ date: '2025-04-18'
 | 2008 | Thailand      | Thailand  | 5–1       | Indonesia |
 | 2009 | Vietnam       | Thailand  | 4–1       | Vietnam   |
 | 2010 | Vietnam       | Indonesia | 5–0       | Malaysia  |
-| 2011 | **Cancelled** |           |           |
+| 2011 | **Cancelled** |           |           |           |
 | 2012 | Thailand      | Thailand  | 9–4       | Vietnam   |
 | 2013 | Thailand      | Thailand  | 2–1       | Australia |
 | 2014 | Malaysia      | Thailand  | 6-0       | Australia |
@@ -154,7 +155,7 @@ date: '2025-04-18'
 | 2017 | Vietnam       | Thailand  | 4−3       | Malaysia  |
 | 2018 | Indonesia     | Thailand  | 4−2       | Malaysia  |
 | 2019 | Vietnam       | Thailand  | 5−0       | Indonesia |
-| 2020 | **Cancelled** |           |           |
-| 2021 | **Cancelled** |           |           |
+| 2020 | **Cancelled** |           |           |           |
+| 2021 | **Cancelled** |           |           |           |
 | 2022 | Thailand      | Thailand  | 2−2 (5-3) | Indonesia |
 | 2024 | Thailand      | Indonesia | 2−0       | Vietnam   |
