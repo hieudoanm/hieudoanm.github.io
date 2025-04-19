@@ -39,7 +39,7 @@ const Block: FC<{
 
 export const PeriodicTable: FC = () => {
   return (
-    <div className="overflow-auto">
+    <div className="scroll-none overflow-auto">
       <table>
         <thead>
           <tr>

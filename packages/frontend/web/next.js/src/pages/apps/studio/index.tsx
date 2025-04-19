@@ -6,6 +6,7 @@ import {
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
 import { Chess960 } from '@web/components/chess/Chess960';
+import { Chessboard } from '@web/components/chess/Chessboard';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { Status } from '@web/components/Status';
 import {
@@ -43,13 +44,22 @@ import { buildEpochString } from '@web/utils/time';
 import { tryCatch } from '@web/utils/try-catch';
 import { buildUuidString } from '@web/utils/uuid';
 import htmlToPdfmake from 'html-to-pdfmake';
+import html2canvas from 'html2canvas-pro';
 import { toXML } from 'jstoxml';
 import { marked } from 'marked';
 import { NextPage } from 'next';
+import Link from 'next/link';
 import pdfMake from 'pdfmake/build/pdfmake';
 import { toDataURL } from 'qrcode';
-import { ChangeEvent, FC, useLayoutEffect, useRef, useState } from 'react';
-import { FaCopy, FaDownload, FaPaperPlane } from 'react-icons/fa6';
+import {
+  ChangeEvent,
+  FC,
+  RefObject,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
+import { FaArrowLeft, FaCopy, FaDownload, FaPaperPlane } from 'react-icons/fa6';
 import { parse, stringify } from 'yaml';
 
 pdfMake.fonts = {
@@ -66,6 +76,7 @@ pdfMake.fonts = {
 
 enum ActChess {
   CHESS_960 = 'Chess960',
+  CHESS_FEN_TO_PNG = 'FEN to PNG',
 }
 
 enum ActColor {
@@ -360,7 +371,9 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let result: string = source;
-  if (isActionColor(action)) {
+  if (action === ActChess.CHESS_960) {
+    result = source;
+  } else if (isActionColor(action)) {
     result = actColor({ action, source });
   } else if (isActionNumber(action)) {
     result = actNumber({ action, source });
@@ -496,8 +509,9 @@ const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
 
 const ActionButton: FC<{
   action: Act;
+  ref: RefObject<HTMLDivElement | null>;
   result: string;
-}> = ({ action, result = '' }) => {
+}> = ({ action, ref, result = '' }) => {
   if (
     action === ActChess.CHESS_960 ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
@@ -508,42 +522,66 @@ const ActionButton: FC<{
 
   const actionText = () => {
     if (
+      action === ActChess.CHESS_FEN_TO_PNG ||
       action === ActOther.IMAGE_QRCODE ||
       action === ActOther.MARKDOWN_EDITOR
     ) {
-      return <FaDownload className="text-sm" />;
+      return <FaDownload className="text-xs" />;
     }
 
-    return <FaCopy className="text-sm" />;
+    return <FaCopy className="text-xs" />;
+  };
+
+  const downloadHTML = async ({
+    ref,
+    result = '',
+  }: {
+    ref: RefObject<HTMLDivElement | null>;
+    result: string;
+  }) => {
+    if (ref.current) {
+      await new Promise((resolve) => requestAnimationFrame(resolve)); // Wait for rendering
+      const canvas = await html2canvas(ref.current, {
+        scale: 2,
+        useCORS: true,
+      });
+      const dataURL = canvas.toDataURL('image/png');
+      // Create a download link
+      const link = document.createElement('a');
+      link.href = dataURL;
+      link.download = `${result}.png`;
+      link.click();
+      link.remove();
+    }
   };
 
   return (
-    <div className="flex">
-      <button
-        type="button"
-        className="cursor-pointer rounded-full border border-gray-800 p-2"
-        onClick={async () => {
-          if (action === ActCSV.CSV_TO_HTML) {
-            const csvHtmlTable: string =
-              document.getElementById('csv-html-table')?.outerHTML ?? '';
-            copyToClipboard(csvHtmlTable);
-          } else if (action === ActOther.IMAGE_QRCODE) {
-            downloadImage({
-              content: result,
-              filename: 'qrcode',
-              format: 'jpg',
-            });
-          } else if (action === ActOther.MARKDOWN_EDITOR) {
-            const converted = htmlToPdfmake(result);
-            const docDefinition = { content: converted };
-            pdfMake.createPdf(docDefinition).download('markdown.pdf');
-          } else {
-            copyToClipboard(result);
-          }
-        }}>
-        {actionText()}
-      </button>
-    </div>
+    <button
+      type="button"
+      className="cursor-pointer rounded border border-gray-800 p-2"
+      onClick={async () => {
+        if (action === ActCSV.CSV_TO_HTML) {
+          const csvHtmlTable: string =
+            document.getElementById('csv-html-table')?.outerHTML ?? '';
+          copyToClipboard(csvHtmlTable);
+        } else if (action === ActOther.IMAGE_QRCODE) {
+          downloadImage({
+            content: result,
+            filename: 'qrcode',
+            format: 'jpg',
+          });
+        } else if (action === ActOther.MARKDOWN_EDITOR) {
+          const converted = htmlToPdfmake(result);
+          const docDefinition = { content: converted };
+          pdfMake.createPdf(docDefinition).download('markdown.pdf');
+        } else if (action === ActChess.CHESS_FEN_TO_PNG) {
+          await downloadHTML({ ref, result });
+        } else {
+          copyToClipboard(result);
+        }
+      }}>
+      {actionText()}
+    </button>
   );
 };
 
@@ -556,6 +594,8 @@ const StringPage: NextPage = () => {
     selectionEnd: 0,
     scrollTop: 0,
   });
+  // This is for div element
+  const divRef = useRef<HTMLDivElement | null>(null);
   // Component States
   const [
     {
@@ -604,70 +644,90 @@ const StringPage: NextPage = () => {
     <div className="h-screen w-screen">
       <div className="flex h-full flex-col gap-y-4">
         <div className="flex items-center justify-between px-4 pt-4">
-          <p className="font-semibold">Studio</p>
-          <p>Word Count: {countWords(text)}</p>
+          <div className="flex items-center gap-x-2">
+            <Link href="/apps">
+              <FaArrowLeft />
+            </Link>
+            <p className="font-semibold">Studio</p>
+          </div>
+          <div className="flex items-center gap-x-2">
+            <p>Word Count: {countWords(text)}</p>
+            <ActionButton action={action as Act} ref={divRef} result={result} />
+          </div>
         </div>
-        <div className="flex grow flex-col gap-y-2 overflow-hidden px-4">
-          {loading ? (
-            <div className="h-full p-2">Loading</div>
-          ) : (
-            <>
-              {action === ActChess.CHESS_960 && (
-                <div
-                  className={`flex h-full items-center justify-center overflow-auto ${width > height ? 'h-full' : 'w-full'}`}>
-                  <Chess960 />
-                </div>
-              )}
-              {action === ActWidget.WIDGET_PERIODIC_TABLE && (
-                <div className="w-full overflow-auto">
-                  <PeriodicTable />
-                </div>
-              )}
-              {action === ActWidget.WIDGET_STATUS && (
-                <div className="w-full overflow-auto">
-                  <Status />
-                </div>
-              )}
-              {action === ActCSV.CSV_TO_HTML && (
-                <div className="w-full overflow-auto">
-                  <CSVTable csv={text} />
-                </div>
-              )}
-              {action === ActOther.IMAGE_QRCODE && (
-                <div className="w-full overflow-auto">
+        <div className="flex w-full grow gap-x-2 overflow-hidden px-4">
+          <div className="scroll-none grow overflow-auto">
+            {loading ? (
+              <div className="h-full p-2">Loading</div>
+            ) : (
+              <>
+                {action === ActChess.CHESS_960 && (
                   <div
-                    className={`mx-auto aspect-square overflow-hidden rounded bg-cover bg-center ${width > height ? 'h-full' : 'w-full'}`}
-                    style={{ backgroundImage: `url(${result})` }}
-                  />
-                </div>
-              )}
-              {(action === ActOther.MARKDOWN_EDITOR ||
-                action === ActOther.MARKDOWN_DICTIONARY) && (
-                <div className="w-full overflow-auto p-2">
-                  <MarkdownPreviewer html={result} />
-                </div>
-              )}
-              {action !== ActChess.CHESS_960 &&
-                action !== ActCSV.CSV_TO_HTML &&
-                action !== ActOther.IMAGE_QRCODE &&
-                action !== ActOther.MARKDOWN_EDITOR &&
-                action !== ActOther.MARKDOWN_DICTIONARY &&
-                action !== ActWidget.WIDGET_PERIODIC_TABLE &&
-                action !== ActWidget.WIDGET_STATUS && (
-                  <div className="w-full grow rounded">
-                    <textarea
-                      id="result"
-                      name="result"
-                      placeholder="result"
-                      className="scroll-none h-full w-full focus:outline-none"
-                      value={result}
-                      readOnly
+                    className={`flex h-full items-center justify-center overflow-auto ${width > height ? 'h-full' : 'w-full'}`}>
+                    <Chess960 />
+                  </div>
+                )}
+                {action === ActChess.CHESS_FEN_TO_PNG && (
+                  <div
+                    className={`flex h-full items-center justify-center overflow-auto ${width > height ? 'h-full' : 'w-full'}`}>
+                    <div
+                      ref={divRef}
+                      className="w-full max-w-sm overflow-hidden border border-gray-800">
+                      <Chessboard id="fen2png" position={result} />
+                    </div>
+                  </div>
+                )}
+                {action === ActWidget.WIDGET_PERIODIC_TABLE && (
+                  <div className="scroll-none w-full overflow-auto">
+                    <PeriodicTable />
+                  </div>
+                )}
+                {action === ActWidget.WIDGET_STATUS && (
+                  <div className="scroll-none w-full overflow-auto">
+                    <Status />
+                  </div>
+                )}
+                {action === ActCSV.CSV_TO_HTML && (
+                  <div className="w-full overflow-auto">
+                    <CSVTable csv={text} />
+                  </div>
+                )}
+                {action === ActOther.IMAGE_QRCODE && (
+                  <div className="w-full overflow-auto">
+                    <div
+                      className={`mx-auto aspect-square overflow-hidden rounded bg-cover bg-center ${width > height ? 'h-full' : 'w-full'}`}
+                      style={{ backgroundImage: `url(${result})` }}
                     />
                   </div>
                 )}
-            </>
-          )}
-          <ActionButton action={action as Act} result={result} />
+                {(action === ActOther.MARKDOWN_EDITOR ||
+                  action === ActOther.MARKDOWN_DICTIONARY) && (
+                  <div className="w-full overflow-auto p-2">
+                    <MarkdownPreviewer html={result} />
+                  </div>
+                )}
+                {action !== ActChess.CHESS_960 &&
+                  action !== ActChess.CHESS_FEN_TO_PNG &&
+                  action !== ActCSV.CSV_TO_HTML &&
+                  action !== ActOther.IMAGE_QRCODE &&
+                  action !== ActOther.MARKDOWN_EDITOR &&
+                  action !== ActOther.MARKDOWN_DICTIONARY &&
+                  action !== ActWidget.WIDGET_PERIODIC_TABLE &&
+                  action !== ActWidget.WIDGET_STATUS && (
+                    <div className="h-full w-full rounded">
+                      <textarea
+                        id="result"
+                        name="result"
+                        placeholder="result"
+                        className="scroll-none h-full w-full resize-none focus:outline-none"
+                        value={result}
+                        readOnly
+                      />
+                    </div>
+                  )}
+              </>
+            )}
+          </div>
         </div>
         <div className="flex flex-col px-0 pb-0 md:px-4 md:pb-4">
           <form
@@ -708,7 +768,6 @@ const StringPage: NextPage = () => {
                 }}
               />
             )}
-
             <div className="flex items-center justify-center">
               <select
                 id="action"
@@ -716,7 +775,7 @@ const StringPage: NextPage = () => {
                 className="h-full w-full appearance-none p-4 font-semibold"
                 value={action}
                 onChange={async (event) => {
-                  const newFunc: Act = event.target.value as Act;
+                  const nextAction: Act = event.target.value as Act;
                   let newText: string = text;
                   // Check CSV Convertor
                   const previousFuncIsNotCSV: boolean =
@@ -725,10 +784,10 @@ const StringPage: NextPage = () => {
                     action !== ActCSV.CSV_TO_MD &&
                     action !== ActCSV.CSV_TO_SQL;
                   const nextFuncIsCSV =
-                    newFunc === ActCSV.CSV_TO_HTML ||
-                    newFunc === ActCSV.CSV_TO_JSON ||
-                    newFunc === ActCSV.CSV_TO_MD ||
-                    newFunc === ActCSV.CSV_TO_SQL;
+                    nextAction === ActCSV.CSV_TO_HTML ||
+                    nextAction === ActCSV.CSV_TO_JSON ||
+                    nextAction === ActCSV.CSV_TO_MD ||
+                    nextAction === ActCSV.CSV_TO_SQL;
                   // Check JSON Convertor
                   const previousFuncIsNotJSON: boolean =
                     action !== ActJSON.JSON_EDITOR &&
@@ -737,78 +796,97 @@ const StringPage: NextPage = () => {
                     action !== ActJSON.JSON_TO_XML &&
                     action !== ActJSON.JSON_TO_YAML;
                   const nextFuncIsJSON =
-                    newFunc === ActJSON.JSON_EDITOR ||
-                    newFunc === ActJSON.JSON_MINIFY ||
-                    newFunc === ActJSON.JSON_TO_CSV ||
-                    newFunc === ActJSON.JSON_TO_XML ||
-                    newFunc === ActJSON.JSON_TO_YAML;
+                    nextAction === ActJSON.JSON_EDITOR ||
+                    nextAction === ActJSON.JSON_MINIFY ||
+                    nextAction === ActJSON.JSON_TO_CSV ||
+                    nextAction === ActJSON.JSON_TO_XML ||
+                    nextAction === ActJSON.JSON_TO_YAML;
                   // Check Telegram
                   const previousFuncIsNotTelegram: boolean =
                     action !== ActTelegram.TELEGRAM_WEBHOOK_SET &&
                     action !== ActTelegram.TELEGRAM_WEBHOOK_DELETE &&
                     action !== ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
                   const nextFuncIsTelegram =
-                    newFunc === ActTelegram.TELEGRAM_WEBHOOK_SET ||
-                    newFunc === ActTelegram.TELEGRAM_WEBHOOK_DELETE ||
-                    newFunc === ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
+                    nextAction === ActTelegram.TELEGRAM_WEBHOOK_SET ||
+                    nextAction === ActTelegram.TELEGRAM_WEBHOOK_DELETE ||
+                    nextAction === ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
+                  // Check HEX
+                  const previousFuncIsNotHex: boolean =
+                    action !== ActColor.HEX_TO_CMYK &&
+                    action !== ActColor.HEX_TO_HSL &&
+                    action !== ActColor.HEX_TO_OKLCH &&
+                    action !== ActColor.HEX_TO_RGB;
+                  const nextFuncIsHex =
+                    nextAction === ActColor.HEX_TO_CMYK ||
+                    nextAction === ActColor.HEX_TO_HSL ||
+                    nextAction === ActColor.HEX_TO_OKLCH ||
+                    nextAction === ActColor.HEX_TO_RGB;
                   // Get Initial String
-                  if (newFunc === ActOther.TIME_EPOCH) {
+                  if (nextAction === ActOther.TIME_EPOCH) {
                     newText = Math.floor(
                       new Date().getTime() / 1000
                     ).toString();
                   } else if (previousFuncIsNotCSV && nextFuncIsCSV) {
                     newText = INITIAL_CSV;
-                  } else if (newFunc === ActOther.IMAGE_QRCODE) {
+                  } else if (nextAction === ActOther.IMAGE_QRCODE) {
                     newText = 'https://google.com';
                   } else if (previousFuncIsNotJSON && nextFuncIsJSON) {
                     newText = JSON.stringify(INITIAL_JSON, null, 2);
-                  } else if (newFunc === ActOther.MARKDOWN_EDITOR) {
+                  } else if (nextAction === ActOther.MARKDOWN_EDITOR) {
                     newText = INITIAL_MARKDOWN;
-                  } else if (newFunc === ActOther.MARKDOWN_DICTIONARY) {
+                  } else if (nextAction === ActOther.MARKDOWN_DICTIONARY) {
                     newText = 'example';
-                  } else if (newFunc === ActOther.UUID) {
+                  } else if (nextAction === ActOther.UUID) {
                     newText = '';
-                  } else if (newFunc === ActOther.YAML_TO_JSON) {
+                  } else if (nextAction === ActOther.YAML_TO_JSON) {
                     newText = INTIIAL_YAML;
                   } else if (
-                    newFunc === ActManifestJSON.MANIFEST_JSON_EXTENSION
+                    nextAction === ActManifestJSON.MANIFEST_JSON_EXTENSION
                   ) {
                     newText = JSON.stringify(
                       INITIAL_MANIFEST_EXTENSION,
                       null,
                       2
                     );
-                  } else if (newFunc === ActManifestJSON.MANIFEST_JSON_PWA) {
+                  } else if (nextAction === ActManifestJSON.MANIFEST_JSON_PWA) {
                     newText = JSON.stringify(INITIAL_MANIFEST_PWA, null, 2);
                   } else if (previousFuncIsNotTelegram && nextFuncIsTelegram) {
                     newText = JSON.stringify(INITIAL_TELEGRAM_WEBHOOK, null, 2);
-                  } else if (newFunc === ActNumber.NUMBER_FROM_ROMAN) {
+                  } else if (nextAction === ActNumber.NUMBER_FROM_ROMAN) {
                     newText = 'MCMXCV';
-                  } else if (newFunc === ActNumber.NUMBER_TO_ROMAN) {
+                  } else if (nextAction === ActNumber.NUMBER_TO_ROMAN) {
                     newText = '1995';
-                  } else if (newFunc === ActNumber.NUMBER_FROM_BINARY) {
+                  } else if (nextAction === ActNumber.NUMBER_FROM_BINARY) {
                     newText = '1010';
-                  } else if (newFunc === ActNumber.NUMBER_TO_BINARY) {
+                  } else if (nextAction === ActNumber.NUMBER_TO_BINARY) {
                     newText = '10';
-                  } else if (newFunc === ActNumber.NUMBER_FROM_OCTAL) {
+                  } else if (nextAction === ActNumber.NUMBER_FROM_OCTAL) {
                     newText = '12';
-                  } else if (newFunc === ActNumber.NUMBER_TO_OCTAL) {
+                  } else if (nextAction === ActNumber.NUMBER_TO_OCTAL) {
                     newText = '7';
-                  } else if (newFunc === ActNumber.NUMBER_FROM_HEXADECIMAL) {
+                  } else if (nextAction === ActNumber.NUMBER_FROM_HEXADECIMAL) {
                     newText = 'A';
-                  } else if (newFunc === ActNumber.NUMBER_TO_HEXADECIMAL) {
+                  } else if (nextAction === ActNumber.NUMBER_TO_HEXADECIMAL) {
                     newText = '10';
+                  } else if (nextAction === ActChess.CHESS_FEN_TO_PNG) {
+                    newText =
+                      'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+                  } else if (previousFuncIsNotHex && nextFuncIsHex) {
+                    newText = '#000000';
                   }
                   setState((previous) => ({
                     ...previous,
-                    action: newFunc,
+                    action: nextAction,
                     text: newText,
                   }));
-                  await submit({ action: newFunc, text: newText });
+                  await submit({ action: nextAction, text: newText });
                 }}>
                 <optgroup label="chess">
                   <option value={ActChess.CHESS_960}>
                     {ActChess.CHESS_960}
+                  </option>
+                  <option value={ActChess.CHESS_FEN_TO_PNG}>
+                    {ActChess.CHESS_FEN_TO_PNG}
                   </option>
                 </optgroup>
                 <optgroup label="code">

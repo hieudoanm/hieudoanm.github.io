@@ -5,53 +5,45 @@ import {
   FaBook,
   FaCalculator,
   FaClockRotateLeft,
-  FaImage,
   FaVideo,
 } from 'react-icons/fa6';
 
 const ChessAppsPage: NextPage = () => {
   const apps: NothingApp[] = [
     {
-      id: 'chess-books-openings',
-      href: 'chess/books/openings',
-      name: 'Openings Explorer',
-      shortName: 'openings',
-      icon: <FaBook className="text-xl md:text-2xl" />,
+      id: 'chess-clock',
+      href: 'chess/clock',
+      name: 'clock',
+      shortName: 'clock',
+      icon: <FaClockRotateLeft className="text-xl md:text-2xl" />,
     },
     {
-      id: 'chess-converter-fen2png',
-      href: 'chess/converter/fen2png',
-      name: 'FEN to PNG',
-      shortName: 'fen2png',
-      icon: <FaImage className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'chess-converter-pgn2gif',
-      href: 'chess/converter/pgn2gif',
-      name: 'PGN to GIF',
-      shortName: 'pgn2gif',
-      icon: <FaVideo className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'chess-tools-elo',
-      href: 'chess/tools/elo',
-      name: 'Elo Calculator',
+      id: 'chess-elo',
+      href: 'chess/elo',
+      name: 'elo',
       shortName: 'elo',
       icon: <FaCalculator className="text-xl md:text-2xl" />,
     },
     {
-      id: 'chess-tools-clock',
-      href: 'chess/tools/clock',
-      name: 'Clock',
-      shortName: 'clock',
-      icon: <FaClockRotateLeft className="text-xl md:text-2xl" />,
+      id: 'chess-openings',
+      href: 'chess/openings',
+      name: 'openings',
+      shortName: 'openings',
+      icon: <FaBook className="text-xl md:text-2xl" />,
+    },
+    {
+      id: 'chess-pgn2gif',
+      href: 'chess/pgn2gif',
+      name: 'pgn2gif',
+      shortName: 'pgn2gif',
+      icon: <FaVideo className="text-xl md:text-2xl" />,
     },
   ];
 
   return (
     <div className="h-screen w-screen overflow-hidden md:h-screen">
       <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
-        <div className="grid h-full grow grid-cols-1 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-1 md:gap-8">
+        <div className="grid h-full grow grid-cols-1 grid-rows-4 gap-4 md:grid-cols-4 md:grid-rows-1 md:gap-8">
           {apps.map(({ id = '', href = '', name = '', shortName = '', icon = <>
 
               </> }) => {

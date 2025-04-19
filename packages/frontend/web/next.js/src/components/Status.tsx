@@ -84,7 +84,7 @@ export const Status: FC = () => {
   };
 
   return (
-    <div className="flex h-full w-full flex-col gap-y-4 overflow-auto">
+    <div className="scroll-none flex h-full w-full flex-col gap-y-4 overflow-auto">
       {Object.entries(services).map(([category, services]) => {
         return (
           <div key={category} className="flex flex-col gap-y-4 font-black">

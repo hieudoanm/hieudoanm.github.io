@@ -1,23 +1,36 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
+import { useState } from 'react';
 import {
   FaAppStoreIos,
   FaChessKnight,
   FaCode,
-  FaFileWord,
+  FaGithub,
   FaLinkedin,
+  FaLinkedinIn,
+  FaPalette,
+  FaPenToSquare,
   FaRobot,
   FaSquareGithub,
   FaSquareTwitter,
+  FaTwitter,
   FaWindowRestore,
 } from 'react-icons/fa6';
 
 const HomePage: NextPage = () => {
+  const [{ index = 0 }, setState] = useState<{ index: number }>({ index: 0 });
+
   const icons = [
     <FaCode key="code" className="text-5xl" />,
     <FaRobot key="robot" className="text-5xl" />,
+    <FaGithub key="github" className="text-5xl" />,
+    <FaTwitter key="github" className="text-5xl" />,
+    <FaPalette key="design" className="text-5xl" />,
+    <FaLinkedinIn key="github" className="text-5xl" />,
     <FaChessKnight key="chess" className="text-5xl" />,
+    <FaPenToSquare key="notes" className="text-5xl" />,
   ];
+
   const apps = [
     {
       id: 'apps',
@@ -30,7 +43,7 @@ const HomePage: NextPage = () => {
       id: 'notes',
       href: '/posts',
       name: 'Notes',
-      icon: <FaFileWord />,
+      icon: <FaPenToSquare />,
       target: '_self',
     },
     {
@@ -71,9 +84,14 @@ const HomePage: NextPage = () => {
   return (
     <div className="h-screen w-screen p-8">
       <div className="flex h-full flex-col items-center justify-center gap-y-8">
-        <div className="flex aspect-square w-24 items-center justify-center rounded-full bg-gray-100 text-gray-900">
-          {icons.at(Math.floor(Math.random() * icons.length))}
-        </div>
+        <button
+          className="flex aspect-square w-24 cursor-pointer items-center justify-center rounded-full bg-gray-100 text-gray-900"
+          onClick={() => {
+            const newIndex: number = Math.floor(Math.random() * icons.length);
+            setState((previous) => ({ ...previous, index: newIndex }));
+          }}>
+          {icons.at(index)}
+        </button>
         <p className="text-xl font-bold uppercase">Hieu Doan</p>
         <div className="flex flex-col items-center justify-center gap-y-8">
           {appsByTarget.map(({ target, apps = [] }) => {

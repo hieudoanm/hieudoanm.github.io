@@ -6,16 +6,8 @@ date: '2025-04-19'
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Engines](#engines)
 - [Tactics](#tactics)
 - [Websites](#websites)
-
-## Engines
-
-1. [AlphaZero](https://deepmind.google/discover/blog/alphazero-shedding-new-light-on-chess-shogi-and-go/)
-2. [Stockfish](https://stockfishchess.org/)
-3. [Leela Chess Zero](https://lczero.org/)
-4. [Komodo](https://komodochess.com/)
 
 ## Tactics
 
