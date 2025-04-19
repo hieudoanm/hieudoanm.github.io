@@ -4,8 +4,10 @@ import {
   setWebhook,
 } from '@web/clients/telegram.org/telegram.client';
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
+import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
 import { Chess960 } from '@web/components/chess/Chess960';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
+import { Status } from '@web/components/Status';
 import {
   INITIAL_CSV,
   INITIAL_MANIFEST_EXTENSION,
@@ -124,6 +126,11 @@ enum ActTelegram {
   TELEGRAM_WEBHOOK_GET_INFO = 'Telegram - Webhook - Get Info',
 }
 
+enum ActWidget {
+  WIDGET_PERIODIC_TABLE = 'Periodic Table',
+  WIDGET_STATUS = 'Status',
+}
+
 enum ActOther {
   CODE_BRAILLIFY = 'Braillify (⠃⠗⠁⠊⠇⠇⠊⠋⠽)',
   CODE_MORSIFY = 'Morsify (-----.-........-.-.--)',
@@ -152,10 +159,11 @@ type Act =
   | ActCSV
   | ActJSON
   | ActManifestJSON
+  | ActNumber
+  | ActOther
   | ActString
   | ActTelegram
-  | ActOther
-  | ActNumber;
+  | ActWidget;
 
 const INITIAL_JSON = [
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
@@ -490,7 +498,11 @@ const ActionButton: FC<{
   action: Act;
   result: string;
 }> = ({ action, result = '' }) => {
-  if (action === ActChess.CHESS_960) {
+  if (
+    action === ActChess.CHESS_960 ||
+    action === ActWidget.WIDGET_PERIODIC_TABLE ||
+    action === ActWidget.WIDGET_STATUS
+  ) {
     return <></>;
   }
 
@@ -595,7 +607,7 @@ const StringPage: NextPage = () => {
           <p className="font-semibold">Studio</p>
           <p>Word Count: {countWords(text)}</p>
         </div>
-        <div className="flex grow flex-col overflow-hidden px-4">
+        <div className="flex grow flex-col gap-y-2 overflow-hidden px-4">
           {loading ? (
             <div className="h-full p-2">Loading</div>
           ) : (
@@ -606,13 +618,23 @@ const StringPage: NextPage = () => {
                   <Chess960 />
                 </div>
               )}
+              {action === ActWidget.WIDGET_PERIODIC_TABLE && (
+                <div className="w-full overflow-auto">
+                  <PeriodicTable />
+                </div>
+              )}
+              {action === ActWidget.WIDGET_STATUS && (
+                <div className="w-full overflow-auto">
+                  <Status />
+                </div>
+              )}
               {action === ActCSV.CSV_TO_HTML && (
-                <div className="w-full overflow-auto p-2">
+                <div className="w-full overflow-auto">
                   <CSVTable csv={text} />
                 </div>
               )}
               {action === ActOther.IMAGE_QRCODE && (
-                <div className="w-full overflow-auto p-2">
+                <div className="w-full overflow-auto">
                   <div
                     className={`mx-auto aspect-square overflow-hidden rounded bg-cover bg-center ${width > height ? 'h-full' : 'w-full'}`}
                     style={{ backgroundImage: `url(${result})` }}
@@ -629,8 +651,10 @@ const StringPage: NextPage = () => {
                 action !== ActCSV.CSV_TO_HTML &&
                 action !== ActOther.IMAGE_QRCODE &&
                 action !== ActOther.MARKDOWN_EDITOR &&
-                action !== ActOther.MARKDOWN_DICTIONARY && (
-                  <div className="mb-2 w-full grow rounded">
+                action !== ActOther.MARKDOWN_DICTIONARY &&
+                action !== ActWidget.WIDGET_PERIODIC_TABLE &&
+                action !== ActWidget.WIDGET_STATUS && (
+                  <div className="w-full grow rounded">
                     <textarea
                       id="result"
                       name="result"
@@ -652,7 +676,10 @@ const StringPage: NextPage = () => {
               await submit({ action: action as Act, text });
             }}
             className="overflow-hidde flex grow flex-col rounded-none rounded-t-2xl bg-gray-800 md:rounded-2xl">
-            {action === ActChess.CHESS_960 || action === ActOther.UUID ? (
+            {action === ActChess.CHESS_960 ||
+            action === ActOther.UUID ||
+            action === ActWidget.WIDGET_PERIODIC_TABLE ||
+            action === ActWidget.WIDGET_STATUS ? (
               <></>
             ) : (
               <textarea
@@ -918,6 +945,14 @@ const StringPage: NextPage = () => {
                 </optgroup>
                 <optgroup label="uuid">
                   <option value={ActOther.UUID}>{ActOther.UUID}</option>
+                </optgroup>
+                <optgroup label="widgets">
+                  <option value={ActWidget.WIDGET_PERIODIC_TABLE}>
+                    {ActWidget.WIDGET_PERIODIC_TABLE}
+                  </option>
+                  <option value={ActWidget.WIDGET_STATUS}>
+                    {ActWidget.WIDGET_STATUS}
+                  </option>
                 </optgroup>
                 <optgroup label="yaml">
                   <option value={ActOther.YAML_TO_JSON}>

@@ -1,7 +1,7 @@
 import { NothingApp } from '@web/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { FaImages, FaWindowRestore } from 'react-icons/fa6';
+import { FaImages } from 'react-icons/fa6';
 
 const PhotosAppsPage: NextPage = () => {
   const apps: NothingApp[] = [
@@ -33,19 +33,12 @@ const PhotosAppsPage: NextPage = () => {
       shortName: 'gh.lang',
       icon: <FaImages className="text-xl md:text-2xl" />,
     },
-    {
-      id: 'photos-widgets',
-      href: 'photos/widgets',
-      name: 'widgets',
-      shortName: 'widgets',
-      icon: <FaWindowRestore className="text-xl md:text-2xl" />,
-    },
   ];
 
   return (
     <div className="h-screen w-screen overflow-hidden md:h-screen">
       <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
-        <div className="grid h-full grow grid-cols-1 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-1 md:gap-8">
+        <div className="grid h-full grow grid-cols-1 grid-rows-4 gap-4 md:grid-cols-4 md:grid-rows-1 md:gap-8">
           {apps.map(({ id = '', href = '', name = '', shortName = '', icon = <>
 
               </> }) => {

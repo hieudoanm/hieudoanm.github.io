@@ -6,7 +6,7 @@ import {
   FaCode,
   FaFileWord,
   FaLinkedin,
-  FaNoteSticky,
+  FaRobot,
   FaSquareGithub,
   FaSquareTwitter,
   FaWindowRestore,
@@ -15,7 +15,7 @@ import {
 const HomePage: NextPage = () => {
   const icons = [
     <FaCode key="code" className="text-5xl" />,
-    <FaNoteSticky key="notes" className="text-5xl" />,
+    <FaRobot key="robot" className="text-5xl" />,
     <FaChessKnight key="chess" className="text-5xl" />,
   ];
   const apps = [

@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import { FC } from 'react';
 
-const Status: FC<{ service: string; url: string }> = ({
+const ServiceStatus: FC<{ service: string; url: string }> = ({
   service = '',
   url = '',
 }) => {
@@ -45,7 +45,7 @@ const Status: FC<{ service: string; url: string }> = ({
   );
 };
 
-const StatusPage = () => {
+export const Status: FC = () => {
   const services: Record<string, Record<string, string>> = {
     atlassian: {
       analytics: 'https://analytics.status.atlassian.com/api/v2/status.json',
@@ -84,7 +84,7 @@ const StatusPage = () => {
   };
 
   return (
-    <div className="flex w-screen flex-col gap-y-4 p-4 md:p-6 lg:p-8">
+    <div className="flex h-full w-full flex-col gap-y-4 overflow-auto">
       {Object.entries(services).map(([category, services]) => {
         return (
           <div key={category} className="flex flex-col gap-y-4 font-black">
@@ -95,7 +95,7 @@ const StatusPage = () => {
               {Object.entries(services).map(([service, url]) => {
                 return (
                   <div key={service} className="col-span-1">
-                    <Status service={service} url={url} />
+                    <ServiceStatus service={service} url={url} />
                   </div>
                 );
               })}
@@ -106,5 +106,3 @@ const StatusPage = () => {
     </div>
   );
 };
-
-export default StatusPage;
