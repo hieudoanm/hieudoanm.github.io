@@ -4,6 +4,7 @@ import { GetStaticProps, NextPage } from 'next';
 import fs, { readFileSync } from 'node:fs';
 import path from 'node:path';
 import pdfMake from 'pdfmake/build/pdfmake';
+import { useState } from 'react';
 import { remark } from 'remark';
 import gfm from 'remark-gfm';
 import html from 'remark-html';
@@ -77,20 +78,26 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 const PostPage: NextPage<{
   postData: { title: string; date: string; contentHtml: string };
 }> = ({ postData }) => {
+  const [{ loading }, setState] = useState<{ loading: boolean }>({
+    loading: false,
+  });
   return (
     <div className="markdown-body min-h-screen bg-gray-900!">
       <article className="container mx-auto p-8">
         <button
           className="w-full cursor-pointer rounded bg-red-500 py-2 font-semibold"
+          disabled={loading}
           onClick={() => {
+            setState((previous) => ({ ...previous, loading: true }));
             const converted = htmlToPdfmake(postData.contentHtml);
             const docDefinition = {
               content: converted,
               defaultStyle: { font: 'Times' },
             };
             pdfMake.createPdf(docDefinition).download(`${postData.title}.pdf`);
+            setState((previous) => ({ ...previous, loading: false }));
           }}>
-          Download
+          {loading ? 'Downloading ...' : 'Download PDF'}
         </button>
         <h1 className="text-xl font-black">{postData.title}</h1>
         <small>{postData.date}</small>

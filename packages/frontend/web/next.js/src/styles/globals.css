@@ -61,3 +61,7 @@ body {
     scrollbar-width: none; /* Firefox */
   }
 }
+
+.markdown-body ul {
+  list-style: circle;
+}
