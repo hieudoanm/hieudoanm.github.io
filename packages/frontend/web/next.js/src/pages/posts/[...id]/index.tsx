@@ -60,7 +60,7 @@ const PostPage: NextPage<{
   postData: { title: string; date: string; contentHtml: string };
 }> = ({ postData }) => {
   return (
-    <div className="markdown-body min-h-screen">
+    <div className="markdown-body min-h-screen bg-gray-900!">
       <article className="container mx-auto p-8">
         <h1 className="text-xl font-black">{postData.title}</h1>
         <small>{postData.date}</small>

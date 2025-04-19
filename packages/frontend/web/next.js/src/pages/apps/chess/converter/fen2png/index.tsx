@@ -2,7 +2,7 @@ import {
   CloudEvaluation,
   getCloudEvaluation,
 } from '@web/clients/lichess.org/lichess.client';
-import { Chessboard } from '@web/components/Chessboard';
+import { Chessboard } from '@web/components/chess/Chessboard';
 import { useQuery } from '@tanstack/react-query';
 import { Chess } from 'chess.js';
 import html2canvas from 'html2canvas-pro';
@@ -77,15 +77,15 @@ const FenToPngPage: NextPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
+    <div className="min-h-screen">
       <div className="container mx-auto px-8">
         <div className="mx-auto flex h-full max-w-md flex-col items-center justify-center gap-y-4 py-4 md:gap-y-8 md:py-8">
           <h1 className="text-2xl md:text-4xl">FEN to PNG</h1>
-          <div className="w-full rounded bg-gray-900 p-4 text-red-500">
+          <div className="w-full rounded">
             <input
               id="fen"
               name="fen"
-              className="w-full"
+              className="w-full rounded border border-gray-700 p-2 text-red-500 focus:outline-none"
               placeholder={initial}
               value={fen}
               onChange={(event) =>
@@ -99,7 +99,7 @@ const FenToPngPage: NextPage = () => {
           <div className="relative aspect-square w-full">
             <div
               ref={boardRef}
-              className="h-full w-full overflow-hidden rounded">
+              className="h-full w-full overflow-hidden rounded border border-gray-700">
               <Chessboard
                 id="board"
                 position={fen}
@@ -108,7 +108,7 @@ const FenToPngPage: NextPage = () => {
               />
             </div>
             {!game.isCheckmate() ? (
-              <div className="absolute top-0 -right-12 h-full w-8 overflow-hidden rounded border border-gray-900">
+              <div className="absolute top-0 -right-12 h-full w-8 overflow-hidden rounded border border-gray-700">
                 <div
                   className={`w-full bg-gray-900 text-center text-[8px] text-gray-100 transition-all ${getEvaluation({ pawn, mate }).percentage === 0 ? 'text-gray-900' : 'text-gray-100'}`}
                   style={{
@@ -127,7 +127,7 @@ const FenToPngPage: NextPage = () => {
           </div>
           <button
             type="button"
-            className="w-full cursor-pointer rounded bg-gray-900 px-4 py-2 text-red-500"
+            className="w-full cursor-pointer rounded bg-red-500 px-4 py-2 font-semibold text-gray-100"
             disabled={loading}
             onClick={async () => {
               try {

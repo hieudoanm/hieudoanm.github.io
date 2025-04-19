@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { rgbToHex } from '@web/utils/colors';
+import { rgb2hex } from '@web/utils/colors/code/rgb';
 import { copyToClipboard } from '@web/utils/navigator';
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 
 export const WidgetColorsPicker: FC = () => {
   const [{ color }, setState] = useState<{ color: string }>({
@@ -73,7 +73,7 @@ export const WidgetColorsPicker: FC = () => {
                 color.g = Math.round(color.g * cw + 255 * ww);
                 color.b = Math.round(color.b * cw + 255 * ww);
                 //Compute the hex color code and apply it
-                const hexColor = rgbToHex(color.r, color.g, color.b);
+                const hexColor = rgb2hex(color.r, color.g, color.b);
                 setState((previous) => ({ ...previous, color: hexColor }));
               }}
               onClick={() => copyToClipboard(color)}></button>

@@ -4,6 +4,7 @@ import {
   setWebhook,
 } from '@web/clients/telegram.org/telegram.client';
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
+import { Chess960 } from '@web/components/chess/Chess960';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import {
   INITIAL_CSV,
@@ -16,6 +17,12 @@ import {
 } from '@web/constants';
 import { useWindowSize } from '@web/hooks/window/use-size';
 import { braillify } from '@web/utils/braille';
+import {
+  hex2cmyk,
+  hex2hsl,
+  hex2oklch,
+  hex2rgb,
+} from '@web/utils/colors/code/hex';
 import { csv2json, csv2md, csv2sql } from '@web/utils/csv';
 import { downloadImage } from '@web/utils/download';
 import { json2csv, jsonParse } from '@web/utils/json';
@@ -40,16 +47,8 @@ import { marked } from 'marked';
 import { NextPage } from 'next';
 import pdfMake from 'pdfmake/build/pdfmake';
 import { toDataURL } from 'qrcode';
-import {
-  ChangeEvent,
-  FC,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from 'react';
+import { ChangeEvent, FC, useLayoutEffect, useRef, useState } from 'react';
 import { FaCopy, FaDownload, FaPaperPlane } from 'react-icons/fa6';
-import Split from 'react-split';
 import { parse, stringify } from 'yaml';
 
 pdfMake.fonts = {
@@ -64,13 +63,31 @@ pdfMake.fonts = {
   },
 };
 
+enum ActChess {
+  CHESS_960 = 'Chess960',
+}
+
 enum ActColor {
-  HEX_TO_RGB = 'HEX to RGB',
-  RGB_TO_HEX = 'RGB to HEX',
+  // CMYK
+  CMYK_TO_HEX = 'CMYK to HEX',
+  CMYK_TO_HSL = 'CMYK to HSL',
+  CMYK_TO_OKLCH = 'CMYK to OKLCH',
+  CMYK_TO_RGB = 'CMYK to RGB',
+  // HEX
+  HEX_TO_CMYK = 'HEX to CMYK',
   HEX_TO_HSL = 'HEX to HSL',
+  HEX_TO_OKLCH = 'HEX to OKLCH',
+  HEX_TO_RGB = 'HEX to RGB',
+  // HSL
+  HSL_TO_CMYK = 'HSL to CMYK',
   HSL_TO_HEX = 'HSL to HEX',
-  RGB_TO_HSL = 'RGB to HSL',
+  HSL_TO_OKLCH = 'HSL to OKLCH',
   HSL_TO_RGB = 'HSL to RGB',
+  // RGB
+  RGB_TO_CMYK = 'RGB to CMYK',
+  RGB_TO_HEX = 'RGB to HEX',
+  RGB_TO_HSL = 'RGB to HSL',
+  RGB_TO_OKLCH = 'RGB to OKLCH',
 }
 
 enum ActCSV {
@@ -131,6 +148,7 @@ enum ActNumber {
 }
 
 type Act =
+  | ActChess
   | ActColor
   | ActCSV
   | ActJSON
@@ -146,6 +164,33 @@ const INITIAL_JSON = [
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
 ];
+
+const actColor = ({
+  action,
+  source,
+}: {
+  action: ActColor;
+  source: string;
+}): string => {
+  if (action === ActColor.HEX_TO_CMYK) {
+    const { c = 0, m = 0, y = 0, k = 0 } = hex2cmyk(source);
+    return `cmyk(${c}%, ${m}%, ${y}%, ${k}%)`;
+  } else if (action === ActColor.HEX_TO_HSL) {
+    const { h, s, l } = hex2hsl(source);
+    return `hsl(${h}, ${s}, ${l}%)`;
+  } else if (action === ActColor.HEX_TO_OKLCH) {
+    const { l, c, h } = hex2oklch(source);
+    return `oklch(${l}% ${c} ${h})`;
+  } else if (action === ActColor.HEX_TO_RGB) {
+    const { r = 0, g = 0, b = 0 } = hex2rgb(source) ?? {};
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+  return '';
+};
+
+const isActionColor = (act: Act): act is ActColor => {
+  return Object.values(ActColor).includes(act as ActColor);
+};
 
 const actNumber = ({
   action,
@@ -308,7 +353,9 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let result: string = source;
-  if (isActionNumber(action)) {
+  if (isActionColor(action)) {
+    result = actColor({ action, source });
+  } else if (isActionNumber(action)) {
     result = actNumber({ action, source });
   } else if (isActionTelegram(action)) {
     result = await actTelegram({ action, source });
@@ -397,7 +444,7 @@ const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
   });
 
   return (
-    <div className="w-full overflow-auto rounded border border-gray-700">
+    <div className="w-full overflow-auto rounded border border-gray-800">
       <table id="csv-html-table" className="w-full">
         {data[0] ? (
           <thead>
@@ -421,7 +468,7 @@ const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
             return (
               <tr
                 key={`row-${JSON.stringify(item)}`}
-                className="border-t border-gray-700">
+                className="border-t border-gray-800">
                 {Object.values(item).map((value: string) => {
                   return (
                     <td key={value}>
@@ -456,37 +503,35 @@ const ActionButton: FC<{
   };
 
   return (
-    <div className="flex items-center justify-center border-t border-gray-700">
-      <button
-        type="button"
-        className="h-full w-full cursor-pointer p-4"
-        onClick={async () => {
-          if (action === ActCSV.CSV_TO_HTML) {
-            const csvHtmlTable: string =
-              document.getElementById('csv-html-table')?.outerHTML ?? '';
-            copyToClipboard(csvHtmlTable);
-          } else if (action === ActOther.IMAGE_QRCODE) {
-            downloadImage({
-              content: result,
-              filename: 'qrcode',
-              format: 'jpg',
-            });
-          } else if (action === ActOther.MARKDOWN_EDITOR) {
-            const converted = htmlToPdfmake(result);
-            const docDefinition = { content: converted };
-            pdfMake.createPdf(docDefinition).download('markdown.pdf');
-          } else {
-            copyToClipboard(result);
-          }
-        }}>
-        {actionText()}
-      </button>
-    </div>
+    <button
+      type="button"
+      className="w-full cursor-pointer rounded border border-gray-800 p-4"
+      onClick={async () => {
+        if (action === ActCSV.CSV_TO_HTML) {
+          const csvHtmlTable: string =
+            document.getElementById('csv-html-table')?.outerHTML ?? '';
+          copyToClipboard(csvHtmlTable);
+        } else if (action === ActOther.IMAGE_QRCODE) {
+          downloadImage({
+            content: result,
+            filename: 'qrcode',
+            format: 'jpg',
+          });
+        } else if (action === ActOther.MARKDOWN_EDITOR) {
+          const converted = htmlToPdfmake(result);
+          const docDefinition = { content: converted };
+          pdfMake.createPdf(docDefinition).download('markdown.pdf');
+        } else {
+          copyToClipboard(result);
+        }
+      }}>
+      {actionText()}
+    </button>
   );
 };
 
 const StringPage: NextPage = () => {
-  const { width } = useWindowSize();
+  const { width = 0, height = 0 } = useWindowSize();
   // This is for textarea
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const cursorRef = useRef({
@@ -515,22 +560,6 @@ const StringPage: NextPage = () => {
     result: capitalise(INITIAL_STRING),
   });
 
-  const direction = width > 768 ? 'horizontal' : 'vertical';
-  console.info('direction & width', { direction, width });
-
-  useEffect(() => {
-    const gutters = document.getElementsByClassName('gutter');
-    const gutter = gutters.item(0);
-    if (!gutter) return;
-    if (direction === 'vertical') {
-      gutter.classList.remove('!h-full', 'w-1');
-      gutter.classList.add('!w-full', 'h-1');
-    } else if (direction === 'horizontal') {
-      gutter.classList.remove('!w-full', 'h-1');
-      gutter.classList.add('!h-full', 'w-1');
-    }
-  }, [direction]);
-
   useLayoutEffect(() => {
     const textarea = textareaRef.current;
     if (textarea) {
@@ -556,37 +585,74 @@ const StringPage: NextPage = () => {
 
   return (
     <div className="h-screen w-screen">
-      <Split
-        expandToMin={false}
-        sizes={[50, 50]}
-        minSize={150} // pixel
-        gutter={() => {
-          const gutter = document.createElement('div');
-          gutter.className = 'gutter bg-gray-300 hover:cursor-pointer order-2';
-          return gutter;
-        }}
-        gutterAlign="center"
-        gutterSize={4}
-        direction={direction}
-        className="flex h-full flex-col md:flex-row">
-        <div
-          className={`order-3 flex h-full flex-col gap-y-1 bg-gray-100 p-2 text-gray-900 md:order-1 md:gap-y-2 md:p-4 ${width > 768 ? '!h-full' : '!w-full'}`}>
-          <div className="flex items-center justify-between">
-            <p className="font-semibold">Input</p>
-            <p>Word Count: {countWords(text)}</p>
-          </div>
+      <div className="flex h-full flex-col gap-y-4">
+        <div className="flex items-center justify-between px-4 pt-4">
+          <p className="font-semibold">Studio</p>
+          <p>Word Count: {countWords(text)}</p>
+        </div>
+        <div className="flex grow flex-col overflow-hidden px-4">
+          {loading ? (
+            <div className="h-full grow p-2">Loading</div>
+          ) : (
+            <>
+              {action === ActChess.CHESS_960 && (
+                <div className="flex w-full grow items-center justify-center overflow-auto">
+                  <Chess960 />
+                </div>
+              )}
+              {action === ActCSV.CSV_TO_HTML && (
+                <div className="w-full grow overflow-auto p-2">
+                  <CSVTable csv={text} />
+                </div>
+              )}
+              {action === ActOther.IMAGE_QRCODE && (
+                <div className="w-full grow overflow-auto p-2">
+                  <div
+                    className={`mx-auto aspect-square overflow-hidden rounded bg-cover bg-center ${width > height ? 'h-full' : 'w-full'}`}
+                    style={{ backgroundImage: `url(${result})` }}
+                  />
+                </div>
+              )}
+              {(action === ActOther.MARKDOWN_EDITOR ||
+                action === ActOther.MARKDOWN_DICTIONARY) && (
+                <div className="w-full grow overflow-auto p-2">
+                  <MarkdownPreviewer html={result} />
+                </div>
+              )}
+              {action !== ActChess.CHESS_960 &&
+                action !== ActCSV.CSV_TO_HTML &&
+                action !== ActOther.IMAGE_QRCODE &&
+                action !== ActOther.MARKDOWN_EDITOR &&
+                action !== ActOther.MARKDOWN_DICTIONARY && (
+                  <div className="mb-2 w-full grow rounded">
+                    <textarea
+                      id="result"
+                      name="result"
+                      placeholder="result"
+                      className="scroll-none h-full w-full focus:outline-none"
+                      value={result}
+                      readOnly
+                    />
+                  </div>
+                )}
+            </>
+          )}
+          <ActionButton action={action as Act} result={result} />
+        </div>
+        <div className="flex flex-col px-0 pb-0 md:px-4 md:pb-4">
           <form
             onSubmit={async (event) => {
               event.preventDefault();
               await submit({ action: action as Act, text });
             }}
-            className="flex grow flex-col overflow-hidden rounded border border-gray-300">
+            className="overflow-hidde flex grow flex-col rounded-none rounded-t-2xl bg-gray-800 md:rounded-2xl">
             <textarea
               ref={textareaRef}
               id="text"
               name="text"
               placeholder="Text"
-              className="h-full w-full p-2 focus:outline-none"
+              className="scroll-none h-full w-full p-4 focus:outline-none"
+              rows={text.split('\n').length > 5 ? 5 : text.split('\n').length}
               value={text}
               onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
                 const { selectionStart, selectionEnd, scrollTop } =
@@ -601,11 +667,11 @@ const StringPage: NextPage = () => {
                 await submit({ action: action as Act, text: newText });
               }}
             />
-            <div className="flex items-center justify-center border-t border-gray-300">
+            <div className="flex items-center justify-center">
               <select
                 id="action"
                 name="action"
-                className="h-full grow appearance-none p-2 font-semibold"
+                className="h-full w-full appearance-none p-4 font-semibold"
                 value={action}
                 onChange={async (event) => {
                   const newFunc: Act = event.target.value as Act;
@@ -698,12 +764,31 @@ const StringPage: NextPage = () => {
                   }));
                   await submit({ action: newFunc, text: newText });
                 }}>
+                <optgroup label="chess">
+                  <option value={ActChess.CHESS_960}>
+                    {ActChess.CHESS_960}
+                  </option>
+                </optgroup>
                 <optgroup label="code">
                   <option value={ActOther.CODE_BRAILLIFY}>
                     {ActOther.CODE_BRAILLIFY}
                   </option>
                   <option value={ActOther.CODE_MORSIFY}>
                     {ActOther.CODE_MORSIFY}
+                  </option>
+                </optgroup>
+                <optgroup label="color">
+                  <option value={ActColor.HEX_TO_CMYK}>
+                    {ActColor.HEX_TO_CMYK}
+                  </option>
+                  <option value={ActColor.HEX_TO_HSL}>
+                    {ActColor.HEX_TO_HSL}
+                  </option>
+                  <option value={ActColor.HEX_TO_OKLCH}>
+                    {ActColor.HEX_TO_OKLCH}
+                  </option>
+                  <option value={ActColor.HEX_TO_RGB}>
+                    {ActColor.HEX_TO_RGB}
                   </option>
                 </optgroup>
                 <optgroup label="csv">
@@ -827,7 +912,7 @@ const StringPage: NextPage = () => {
               </select>
               <button
                 type="submit"
-                className="h-full cursor-pointer border-l border-gray-300 p-4"
+                className="h-full cursor-pointer p-4"
                 onClick={async () => {
                   await submit({ action: action as Act, text });
                 }}>
@@ -836,54 +921,7 @@ const StringPage: NextPage = () => {
             </div>
           </form>
         </div>
-        <div
-          className={`order-1 flex h-full flex-col gap-y-1 bg-gray-900 p-2 text-gray-100 md:order-3 md:gap-y-2 md:p-4 ${width > 768 ? '!h-full' : '!w-full'}`}>
-          <p className="font-semibold">Output</p>
-          <div className="flex grow flex-col overflow-hidden rounded border border-gray-700">
-            {loading ? (
-              <div className="h-full grow p-2">Loading</div>
-            ) : (
-              <>
-                {action === ActCSV.CSV_TO_HTML && (
-                  <div className="w-full grow overflow-auto p-2">
-                    <CSVTable csv={text} />
-                  </div>
-                )}
-                {action === ActOther.IMAGE_QRCODE && (
-                  <div className="w-full grow overflow-auto p-2">
-                    <div
-                      className="mx-auto aspect-square h-full overflow-hidden rounded bg-cover bg-center"
-                      style={{ backgroundImage: `url(${result})` }}
-                    />
-                  </div>
-                )}
-                {(action === ActOther.MARKDOWN_EDITOR ||
-                  action === ActOther.MARKDOWN_DICTIONARY) && (
-                  <div className="w-full grow overflow-auto p-2">
-                    <MarkdownPreviewer html={result} />
-                  </div>
-                )}
-                {action !== ActCSV.CSV_TO_HTML &&
-                  action !== ActOther.IMAGE_QRCODE &&
-                  action !== ActOther.MARKDOWN_EDITOR &&
-                  action !== ActOther.MARKDOWN_DICTIONARY && (
-                    <div className="mb-2 w-full grow rounded">
-                      <textarea
-                        id="result"
-                        name="result"
-                        placeholder="result"
-                        className="h-full w-full p-2 focus:outline-none"
-                        value={result}
-                        readOnly
-                      />
-                    </div>
-                  )}
-              </>
-            )}
-            <ActionButton action={action as Act} result={result} />
-          </div>
-        </div>
-      </Split>
+      </div>
     </div>
   );
 };

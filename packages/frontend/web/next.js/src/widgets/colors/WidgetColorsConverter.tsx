@@ -1,4 +1,6 @@
-import { hexToRgb, randomHexColorCode, rgbToHex } from '@web/utils/colors';
+import { hex2rgb } from '@web/utils/colors/code/hex';
+import { rgb2hex } from '@web/utils/colors/code/rgb';
+import { randomHexColorCode } from '@web/utils/colors/utils';
 import { copyToClipboard } from '@web/utils/navigator';
 import { ChangeEvent, useState } from 'react';
 import { FaArrowRotateLeft, FaCopy } from 'react-icons/fa6';
@@ -25,7 +27,7 @@ export const WidgetColorsConverter = () => {
               value={colors.hex}
               onChange={(event: ChangeEvent<HTMLInputElement>) => {
                 const newHex: string = event.target.value.toString();
-                const newRBG = hexToRgb(newHex);
+                const newRBG = hex2rgb(newHex);
                 if (newRBG === null)
                   return setColors({ ...colors, hex: newHex });
                 const { r, g, b } = newRBG;
@@ -49,7 +51,7 @@ export const WidgetColorsConverter = () => {
                   .replaceAll(')', '')
                   .replaceAll(' ', '')
                   .split(',');
-                const newHex: string = rgbToHex(
+                const newHex: string = rgb2hex(
                   parseInt(r, 10),
                   parseInt(g, 10),
                   parseInt(b, 10)
@@ -64,7 +66,7 @@ export const WidgetColorsConverter = () => {
               className="text-gray-100"
               onClick={() => {
                 const newHex: string = randomHexColorCode();
-                const newRBG = hexToRgb(newHex);
+                const newRBG = hex2rgb(newHex);
                 if (newRBG === null)
                   return setColors({ ...colors, hex: newHex });
                 const { r, g, b } = newRBG;

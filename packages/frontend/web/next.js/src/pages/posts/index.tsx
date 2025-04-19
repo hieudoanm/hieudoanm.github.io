@@ -17,14 +17,14 @@ const NotesPage: NextPage<{
   const [{ search }, setState] = useState<{ search: string }>({ search: '' });
 
   return (
-    <main className="min-h-screen bg-gray-100 text-gray-900">
-      <div className="border-b border-gray-300 px-8 py-4">
+    <main className="min-h-screen">
+      <div className="border-b border-gray-700 px-8 py-4">
         <div className="container mx-auto">
           <input
             id="search"
             name="search"
             placeholder="Search"
-            className="w-full rounded border border-gray-300 px-4 py-2"
+            className="w-full rounded border border-gray-700 px-4 py-2"
             value={search}
             onChange={(event) => {
               setState((previous) => ({
@@ -42,7 +42,7 @@ const NotesPage: NextPage<{
             : true;
         })
         .map(({ id = '', title = '', date = '' }) => (
-          <div key={id} className="border-b border-gray-300 px-8 py-4">
+          <div key={id} className="border-b border-gray-700 px-8 py-4">
             <div className="container mx-auto">
               <Link href={`/posts/${id}`}>
                 <p>

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Chessboard } from '@web/components/Chessboard';
+import { Chessboard } from '@web/components/chess/Chessboard';
 import { getMovesFromPGN } from '@web/utils/chess';
 import { Chess } from 'chess.js';
 import GIF from 'gif.js';
@@ -103,15 +103,15 @@ const PgnToGifPage: NextPage = () => {
   const boardRef = useRef(null);
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
+    <div className="min-h-screen">
       <div className="container mx-auto px-8">
         <div className="mx-auto flex h-full max-w-md flex-col items-center justify-center gap-y-4 py-4 md:gap-y-8 md:py-8">
           <h1 className="text-2xl md:text-4xl">PGN to GIF</h1>
-          <div className="w-full rounded bg-gray-900 p-4 text-red-500">
+          <div className="w-full rounded bg-gray-900 text-red-500">
             <textarea
               id="pgn"
               name="pgn"
-              className="w-full"
+              className="w-full rounded border border-gray-700 p-2 focus:outline-none"
               rows={4}
               placeholder={initial}
               value={pgn}
@@ -125,12 +125,12 @@ const PgnToGifPage: NextPage = () => {
           </div>
           <div
             ref={boardRef}
-            className="aspect-square w-full overflow-hidden rounded">
+            className="aspect-square w-full overflow-hidden rounded border border-gray-700">
             <Chessboard id="board" position={game.fen()} />
           </div>
           <button
             type="button"
-            className="w-full cursor-pointer rounded bg-gray-900 px-4 py-2 text-red-500"
+            className="w-full cursor-pointer rounded bg-red-500 px-4 py-2 font-semibold text-gray-100"
             onClick={async () => {
               const moves = getMovesFromPGN(pgn);
               const resetGame = new Chess();

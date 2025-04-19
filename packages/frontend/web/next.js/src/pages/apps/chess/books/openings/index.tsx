@@ -1,4 +1,4 @@
-import { Chessboard } from '@web/components/Chessboard';
+import { Chessboard } from '@web/components/chess/Chessboard';
 import openings from '@web/json/chess/openings.json';
 import { getMovesFromPGN } from '@web/utils/chess';
 import { sleep } from '@web/utils/sleep';
@@ -109,7 +109,7 @@ const OpeningsPage: NextPage = () => {
         </div>
         <div className="col-span-1 overflow-hidden">
           <div className="h-full w-full overflow-auto bg-gray-900 text-gray-100">
-            <div className="no-scrollbar flex grow flex-col gap-y-2 overflow-auto">
+            <div className="scroll-none flex grow flex-col gap-y-2 overflow-auto">
               {openings
                 .filter(({ pgn: openingPGN }) => {
                   return openingPGN.length === 0

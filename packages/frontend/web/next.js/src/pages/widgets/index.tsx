@@ -17,6 +17,7 @@ import {
   FaFileLines,
   FaFileZipper,
   FaFirefoxBrowser,
+  FaFlask,
   FaFutbol,
   FaGamepad,
   FaGear,
@@ -28,6 +29,7 @@ import {
   FaMobile,
   FaMusic,
   FaNewspaper,
+  FaPalette,
   FaPhone,
   FaRectangleList,
   FaTemperatureFull,
@@ -75,11 +77,25 @@ const WidgetsPage: NextPage = () => {
       icon: <FaCamera className="mx-auto text-2xl" />,
     },
     {
+      id: 'chemistry',
+      href: 'chemistry',
+      name: 'chemistry',
+      shortName: 'chemistry',
+      icon: <FaFlask className="mx-auto text-2xl" />,
+    },
+    {
       id: 'clock',
       href: 'clock',
       name: 'clock',
       shortName: 'clock',
       icon: <FaClock className="text-2xl" />,
+    },
+    {
+      id: 'colors',
+      href: 'colors',
+      name: 'colors',
+      shortName: 'colors',
+      icon: <FaPalette className="text-2xl" />,
     },
     {
       id: 'compass',
@@ -252,14 +268,14 @@ const WidgetsPage: NextPage = () => {
   ];
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-gray-100 md:h-screen">
+    <div className="h-screen w-screen overflow-hidden md:h-screen">
       <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
         <div className="w-full">
           <input
             id="search"
             name="search"
             placeholder="Search"
-            className="w-full rounded border border-gray-300 px-4 py-2"
+            className="w-full rounded border border-gray-800 px-4 py-2 focus:outline-none"
             value={search}
             onChange={(event) => {
               setState((previous) => ({
@@ -269,7 +285,7 @@ const WidgetsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grid-cols-5 grid-rows-6 gap-4 md:grid-cols-6 md:grid-rows-5 md:gap-8">
+        <div className="grid h-full grid-cols-4 grid-rows-8 gap-4 md:grid-cols-8 md:grid-rows-4 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''
@@ -286,7 +302,7 @@ const WidgetsPage: NextPage = () => {
                     <Link
                       href={`/widgets/${href}`}
                       className="flex flex-col items-center gap-y-1 md:gap-y-2">
-                      <div className="flex aspect-square w-12 items-center justify-center overflow-hidden rounded-full bg-gray-900 text-gray-100 hover:bg-red-500 md:w-16">
+                      <div className="flex aspect-square w-12 items-center justify-center overflow-hidden rounded-full border border-gray-800 md:w-16">
                         {icon}
                       </div>
                       <p className="w-full truncate text-center text-xs font-semibold md:text-sm">

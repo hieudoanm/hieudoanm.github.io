@@ -18,14 +18,14 @@ const Status: FC<{ service: string; url: string }> = ({
   });
 
   return (
-    <div className="w-full rounded-full bg-gray-100 px-4 py-2 text-gray-900">
+    <div className="w-full rounded-full border border-gray-800 px-4 py-2">
       <div className="flex items-center justify-between">
         <p className="capitalize">
           <Link
             href={url}
             target="_blank"
-            className="truncate whitespace-nowrap underline decoration-dotted underline-offset-4">
-            <strong>{service.replaceAll('-', ' ')}</strong>
+            className="truncate font-medium whitespace-nowrap underline decoration-dotted underline-offset-4">
+            {service.replaceAll('-', ' ')}
           </Link>
         </p>
         {isPending ? (
@@ -83,22 +83,26 @@ const StatusPage = () => {
     },
   };
 
-  const allServices: Record<string, string> = Object.assign(
-    {},
-    ...Object.values(services)
-  );
-
   return (
-    <div className="w-screen p-4 md:p-6 lg:p-8">
-      <div className="grid h-full grid-cols-1 gap-2 md:grid-cols-2 md:gap-3 lg:grid-cols-4 lg:gap-4">
-        {Object.entries(allServices).map(([service, url]) => {
-          return (
-            <div key={service} className="col-span-1">
-              <Status service={service} url={url} />
+    <div className="flex w-screen flex-col gap-y-4 p-4 md:p-6 lg:p-8">
+      {Object.entries(services).map(([category, services]) => {
+        return (
+          <div key={category} className="flex flex-col gap-y-4 font-black">
+            <h1 className="indent-4 capitalize">
+              {category.replaceAll('-', ' ')}
+            </h1>
+            <div className="grid h-full grid-cols-1 gap-2 md:grid-cols-2 md:gap-3 lg:grid-cols-4 lg:gap-4">
+              {Object.entries(services).map(([service, url]) => {
+                return (
+                  <div key={service} className="col-span-1">
+                    <Status service={service} url={url} />
+                  </div>
+                );
+              })}
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

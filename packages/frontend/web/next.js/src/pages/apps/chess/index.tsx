@@ -5,7 +5,6 @@ import { useState } from 'react';
 import {
   FaBook,
   FaCalculator,
-  FaChessBoard,
   FaClockRotateLeft,
   FaImage,
   FaVideo,
@@ -15,13 +14,6 @@ const ChessAppsPage: NextPage = () => {
   const [{ search }, setState] = useState<{ search: string }>({ search: '' });
 
   const apps: NothingApp[] = [
-    {
-      id: 'chess-books-chess960',
-      href: 'chess/books/chess960',
-      name: 'Chess960',
-      shortName: 'chess960',
-      icon: <FaChessBoard className="text-xl md:text-2xl" />,
-    },
     {
       id: 'chess-books-openings',
       href: 'chess/books/openings',
@@ -67,7 +59,7 @@ const ChessAppsPage: NextPage = () => {
             id="search"
             name="search"
             placeholder="Search"
-            className="w-full rounded border border-gray-700 px-4 py-2 focus:outline-none"
+            className="w-full rounded border border-gray-800 px-4 py-2 focus:outline-none"
             value={search}
             onChange={(event) => {
               setState((previous) => ({
@@ -77,7 +69,7 @@ const ChessAppsPage: NextPage = () => {
             }}
           />
         </div>
-        <div className="grid h-full grow grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-8">
+        <div className="grid h-full grow grid-cols-1 grid-rows-5 gap-4 md:grid-cols-5 md:grid-rows-1 md:gap-8">
           {apps
             .filter(({ name, shortName }) => {
               return search !== ''
@@ -94,7 +86,7 @@ const ChessAppsPage: NextPage = () => {
                     <Link
                       href={`/apps/${href}`}
                       className="flex flex-col items-center gap-y-1 md:gap-y-2">
-                      <div className="flex aspect-square w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 text-gray-900 hover:bg-red-500 hover:text-gray-100 md:w-16">
+                      <div className="flex aspect-square w-12 items-center justify-center overflow-hidden rounded-full border border-gray-800 md:w-16">
                         {icon}
                       </div>
                       <p className="w-full truncate text-center text-xs font-semibold md:text-sm">

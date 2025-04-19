@@ -1,7 +1,9 @@
+import { useWindowSize } from '@web/hooks/window/use-size';
 import { downloadImage } from '@web/utils/download';
 import { copyToClipboard } from '@web/utils/navigator';
 import { NextPage } from 'next';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Split from 'react-split';
 import { recognize } from 'tesseract.js';
 
 enum Func {
@@ -196,6 +198,10 @@ const convert = async ({
 };
 
 const ImagesPage: NextPage = () => {
+  const { width } = useWindowSize();
+  const direction = width > 768 ? 'horizontal' : 'vertical';
+  console.info('direction & width', { direction, width });
+
   const [
     {
       func = Func.BASE64,
@@ -219,10 +225,36 @@ const ImagesPage: NextPage = () => {
     output: '',
   });
 
+  useEffect(() => {
+    const gutters = document.getElementsByClassName('gutter');
+    const gutter = gutters.item(0);
+    if (!gutter) return;
+    if (direction === 'vertical') {
+      gutter.classList.remove('!h-full', 'w-1');
+      gutter.classList.add('!w-full', 'h-1');
+    } else if (direction === 'horizontal') {
+      gutter.classList.remove('!w-full', 'h-1');
+      gutter.classList.add('!h-full', 'w-1');
+    }
+  }, [direction]);
+
   return (
     <div className="h-screen w-screen">
-      <div className="grid h-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
-        <div className="col-span-1 row-span-1 flex h-full flex-col gap-y-2 bg-gray-100 p-4 text-gray-900 md:gap-y-4 md:p-8">
+      <Split
+        expandToMin={false}
+        sizes={[50, 50]}
+        minSize={150} // pixel
+        gutter={() => {
+          const gutter = document.createElement('div');
+          gutter.className = 'gutter bg-gray-300 hover:cursor-pointer order-2';
+          return gutter;
+        }}
+        gutterAlign="center"
+        gutterSize={4}
+        direction={direction}
+        className="flex h-full flex-col md:flex-row">
+        <div
+          className={`order-3 flex h-full flex-col gap-y-1 bg-gray-100 p-2 text-gray-900 md:order-1 md:gap-y-2 md:p-4 ${width > 768 ? '!h-full' : '!w-full'}`}>
           <p className="font-semibold">Image</p>
           <div
             className="h-full w-full grow overflow-hidden rounded border border-dashed border-gray-500 bg-contain bg-center bg-no-repeat"
@@ -259,7 +291,8 @@ const ImagesPage: NextPage = () => {
             <span>Upload File</span>
           </label>
         </div>
-        <div className="col-span-1 row-span-1 flex h-full flex-col gap-y-2 bg-gray-900 p-4 text-gray-100 md:gap-y-4 md:p-8">
+        <div
+          className={`order-1 flex h-full flex-col gap-y-1 bg-gray-900 p-2 text-gray-100 md:order-3 md:gap-y-2 md:p-4 ${width > 768 ? '!h-full' : '!w-full'}`}>
           <select
             id="func"
             name="func"
@@ -359,7 +392,7 @@ const ImagesPage: NextPage = () => {
               : 'Copy'}
           </button>
         </div>
-      </div>
+      </Split>
     </div>
   );
 };

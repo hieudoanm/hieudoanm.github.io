@@ -8,8 +8,7 @@ date: '2025-04-19'
 - [Table of Contents](#table-of-contents)
 - [World Classical Champion](#world-classical-champion)
 - [World Fisher Champion](#world-fisher-champion)
-- [World Rapid Champion](#world-rapid-champion)
-- [World Blitz Champion](#world-blitz-champion)
+- [World Rapid \& Blitz Champions](#world-rapid--blitz-champions)
 
 ## World Classical Champion
 
@@ -41,25 +40,27 @@ date: '2025-04-19'
 | 01  | Wesley So       | United States |
 | 02  | Hikaru Nakamura | United States |
 
-## World Rapid Champion
+## World Rapid & Blitz Champions
 
-| No  | Name                  | Country |
-| --- | --------------------- | ------- |
-| 01  | Magnus Carlsen        | Norway  |
-| 02  | Shakhriyar Mamedyarov |         |
-| 03  | Viswanathan Anand     |         |
-| 04  | Sergey Karjakin       | Russia  |
-| 05  | Vasyl Ivanchuk        |         |
-| 06  | Nodirbek Abdusattorov |         |
-
-## World Blitz Champion
-
-| No  | Name                   | Country       |
-| --- | ---------------------- | ------------- |
-| 01  | Magnus Carlsen         | Norway        |
-| 02  | Levon Aronian          | United States |
-| 03  | Maxime Vachier-Lagrave | France        |
-| 04  | Alexander Grischuk     | Russia        |
-| 05  | Ian Nepomniachtchi     | Russia        |
-| 06  | Sergey Karjakin        | Russia        |
-| 07  | Liem Le                | Vietnam       |
+| Year | Host                     | Rapid                 | Rapid (Country) | Blitz                               | Blitz (Country) |
+| ---- | ------------------------ | --------------------- | --------------- | ----------------------------------- | --------------- |
+| 2006 | Rishon Lezion, Israel    |                       |                 | Alexander Grischuk                  | Russia          |
+| 2007 | Moscow, Russia           |                       |                 | Vasyl Ivanchuk                      | Ukraina         |
+| 2008 | Almaty, Kazakhstan       |                       |                 | Leinier Domínguez                   | Cuba            |
+| 2009 | Moscow, Russia           |                       |                 | Magnus Carlsen                      | Norway          |
+| 2010 | Moscow, Russia           |                       |                 | Levon Aronian                       | Armenia         |
+| 2011 |                          |                       |                 | _Cancelled_                         |                 |
+| 2012 | Astana, Kazakhstan       | Sergey Karjakin       | Russia          | Alexander Grischuk                  | Russia          |
+| 2013 | Khanty-Mansiysk, Russia  | Shakhriyar Mamedyarov | Azerbaijan      | Liem Le                             | Vietnam         |
+| 2014 | Dubai, UAE               | Magnus Carlsen        | Norway          | Magnus Carlsen                      | Norway          |
+| 2015 | Berlin, Germany          | Magnus Carlsen        | Norway          | Alexander Grischuk                  | Russia          |
+| 2016 | Doha, Qatar              | Vasyl Ivanchuk        | Ukraina         | Sergey Karjakin                     | Russia          |
+| 2017 | Riyadh, Saudi Arabia     | Viswanathan Anand     | India           | Magnus Carlsen                      | Norway          |
+| 2018 | Saint Petersburg, Russia | Daniil Dubov          | Russia          | Magnus Carlsen                      | Norway          |
+| 2019 | Moscow, Russia           | Magnus Carlsen        | Norway          | Magnus Carlsen                      | Norway          |
+| 2020 |                          |                       |                 |                                     |                 |
+| 2021 | Warsaw, Poland           | Nodirbek Abdusattorov | Uzbekistan      | Maxime Vachier-Lagrave              | France          |
+| 2022 | Almaty, Kazakhstan       | Magnus Carlsen        | Norway          | Magnus Carlsen                      | Norway          |
+| 2023 | Samarkand, Uzbekistan    | Magnus Carlsen        | Norway          | Magnus Carlsen                      | Norway          |
+| 2024 | New York, United States  | Volodar Murzin        | Russia          | Magnus Carlsen & Ian Nepomniachtchi | Norway & Russia |
+| 2025 |                          |                       |                 |                                     |                 |
