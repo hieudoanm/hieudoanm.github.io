@@ -63,14 +63,21 @@ import { FaArrowLeft, FaCopy, FaDownload, FaPaperPlane } from 'react-icons/fa6';
 import { parse, stringify } from 'yaml';
 
 const FONT_FOLDER: string = 'https://hieudoanm.github.io/fonts';
-const FONT_NAME: string = 'Roboto';
+const FONT_NAME_ROBOTO: string = 'Roboto';
+const FONT_NAME_TIMES: string = 'Times-New-Roman';
 
 pdfMake.fonts = {
   Roboto: {
-    normal: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Regular.ttf`,
-    bold: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Medium.ttf`,
-    italics: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Italic.ttf`,
-    bolditalics: `${FONT_FOLDER}/${FONT_NAME}/Roboto-MediumItalic.ttf`,
+    normal: `${FONT_FOLDER}/${FONT_NAME_ROBOTO}/${FONT_NAME_ROBOTO}-Regular.ttf`,
+    bold: `${FONT_FOLDER}/${FONT_NAME_ROBOTO}/${FONT_NAME_ROBOTO}-Medium.ttf`,
+    italics: `${FONT_FOLDER}/${FONT_NAME_ROBOTO}/${FONT_NAME_ROBOTO}-Italic.ttf`,
+    bolditalics: `${FONT_FOLDER}/${FONT_NAME_ROBOTO}/${FONT_NAME_ROBOTO}-MediumItalic.ttf`,
+  },
+  Times: {
+    normal: `${FONT_FOLDER}/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Regular.ttf`,
+    bold: `${FONT_FOLDER}/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Bold.ttf`,
+    italics: `${FONT_FOLDER}/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Italic.ttf`,
+    bolditalics: `${FONT_FOLDER}/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Bold-Italic.ttf`,
   },
 };
 
@@ -572,7 +579,10 @@ const ActionButton: FC<{
           });
         } else if (action === ActOther.MARKDOWN_EDITOR) {
           const converted = htmlToPdfmake(result);
-          const docDefinition = { content: converted };
+          const docDefinition = {
+            content: converted,
+            defaultStyle: { font: 'Times' },
+          };
           pdfMake.createPdf(docDefinition).download('markdown.pdf');
         } else if (action === ActChess.CHESS_FEN_TO_PNG) {
           await downloadHTML({ ref, result });

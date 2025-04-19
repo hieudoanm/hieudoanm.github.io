@@ -9,14 +9,21 @@ import gfm from 'remark-gfm';
 import html from 'remark-html';
 
 const FONT_FOLDER: string = 'https://hieudoanm.github.io/fonts';
-const FONT_NAME: string = 'Times-New-Roman';
+const FONT_NAME_ROBOTO: string = 'Roboto';
+const FONT_NAME_TIMES: string = 'Times-New-Roman';
 
 pdfMake.fonts = {
+  Roboto: {
+    normal: `${FONT_FOLDER}/${FONT_NAME_ROBOTO}/${FONT_NAME_ROBOTO}-Regular.ttf`,
+    bold: `${FONT_FOLDER}/${FONT_NAME_ROBOTO}/${FONT_NAME_ROBOTO}-Medium.ttf`,
+    italics: `${FONT_FOLDER}/${FONT_NAME_ROBOTO}/${FONT_NAME_ROBOTO}-Italic.ttf`,
+    bolditalics: `${FONT_FOLDER}/${FONT_NAME_ROBOTO}/${FONT_NAME_ROBOTO}-MediumItalic.ttf`,
+  },
   Times: {
-    normal: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Regular.ttf`,
-    bold: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Bold.ttf`,
-    italics: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Italic.ttf`,
-    bolditalics: `${FONT_FOLDER}/${FONT_NAME}/${FONT_NAME}-Bold-Italic.ttf`,
+    normal: `${FONT_FOLDER}/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Regular.ttf`,
+    bold: `${FONT_FOLDER}/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Bold.ttf`,
+    italics: `${FONT_FOLDER}/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Italic.ttf`,
+    bolditalics: `${FONT_FOLDER}/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Bold-Italic.ttf`,
   },
 };
 
@@ -77,7 +84,10 @@ const PostPage: NextPage<{
           className="w-full cursor-pointer rounded bg-red-500 py-2 font-semibold"
           onClick={() => {
             const converted = htmlToPdfmake(postData.contentHtml);
-            const docDefinition = { content: converted };
+            const docDefinition = {
+              content: converted,
+              defaultStyle: { font: 'Times' },
+            };
             pdfMake.createPdf(docDefinition).download(`${postData.title}.pdf`);
           }}>
           Download
