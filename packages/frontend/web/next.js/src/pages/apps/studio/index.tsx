@@ -11,7 +11,6 @@ import {
   INITIAL_MANIFEST_EXTENSION,
   INITIAL_MANIFEST_PWA,
   INITIAL_MARKDOWN,
-  INITIAL_STRING,
   INITIAL_TELEGRAM_WEBHOOK,
   INTIIAL_YAML,
 } from '@web/constants';
@@ -549,9 +548,9 @@ const StringPage: NextPage = () => {
   const [
     {
       loading = false,
-      action = ActString.STRING_CAPITALISE,
-      text = INITIAL_STRING,
-      result = capitalise(INITIAL_STRING),
+      action = ActChess.CHESS_960,
+      text = 'CHESS_960',
+      result = '',
     },
     setState,
   ] = useState<{
@@ -561,9 +560,9 @@ const StringPage: NextPage = () => {
     result: string;
   }>({
     loading: false,
-    action: ActString.STRING_CAPITALISE,
-    text: INITIAL_STRING,
-    result: capitalise(INITIAL_STRING),
+    action: ActChess.CHESS_960,
+    text: '',
+    result: '',
   });
 
   useLayoutEffect(() => {
