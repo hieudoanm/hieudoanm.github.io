@@ -822,19 +822,43 @@ const Output: FC<{
   }
 
   if (action === ActGitHub.GITHUB_SOCIAL_PREVIEW) {
-    const [name, repository] = input.split('\n');
+    const lines = input.split('\n');
+
+    let name = '';
+    let repository = '';
+    let description = '';
+    if (lines.length === 1) {
+      name = lines.at(0) ?? '';
+    } else if (lines.length === 2) {
+      name = lines.at(0) ?? '';
+      repository = lines.at(1) ?? '';
+    } else if (lines.length === 3) {
+      name = lines.at(0) ?? '';
+      repository = lines.at(1) ?? '';
+      description = lines.at(2) ?? '';
+    }
+
     return (
       <div className={`${width > height ? 'h-full' : 'w-full'}`}>
         <div
           ref={divRef}
           className={`flex aspect-[2/1] items-center justify-center border border-gray-800 bg-gray-900 ${width > height ? 'h-full' : 'w-full'} ${oleoScript.className} `}>
           <div className="flex flex-col gap-y-2">
-            <p className="text-center text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
-              {(name ?? '').trim()}
-            </p>
-            <p className="text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-              {(repository ?? '').trim()}{' '}
-            </p>
+            {name && (
+              <p className="text-center text-6xl leading-none md:text-7xl lg:text-8xl xl:text-9xl">
+                {(name ?? '').trim()}
+              </p>
+            )}
+            {repository && (
+              <p className="text-center text-3xl leading-none md:text-4xl lg:text-5xl xl:text-6xl">
+                {(repository ?? '').trim()}{' '}
+              </p>
+            )}
+            {description && (
+              <p className="text-center text-base leading-none md:text-lg lg:text-xl xl:text-2xl">
+                {(description ?? '').trim()}{' '}
+              </p>
+            )}
           </div>
         </div>
       </div>

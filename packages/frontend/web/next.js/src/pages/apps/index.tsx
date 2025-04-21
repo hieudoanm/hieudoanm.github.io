@@ -34,10 +34,10 @@ const AppsPage: NextPage = () => {
       icon: <FaBook className="text-xl md:text-2xl" />,
     },
     {
-      id: 'photos-gallery',
-      href: 'photos/gallery',
-      name: 'gallery',
-      shortName: 'gallery',
+      id: 'photos',
+      href: 'photos',
+      name: 'photos',
+      shortName: 'photos',
       icon: <FaImages className="text-xl md:text-2xl" />,
     },
     {
