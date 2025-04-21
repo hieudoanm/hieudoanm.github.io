@@ -44,7 +44,7 @@ export const Chess960: FC = () => {
   };
 
   return (
-    <div className="flex h-full w-full max-w-sm flex-col gap-y-8">
+    <div className="flex h-full w-full max-w-sm flex-col gap-y-4 md:gap-y-8">
       <h1 className="text-center text-2xl md:text-4xl">
         <span>Chess</span>
         <select
