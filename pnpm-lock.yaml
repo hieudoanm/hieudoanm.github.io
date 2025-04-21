@@ -253,8 +253,8 @@ importers:
         specifier: 26.1.0
         version: 26.1.0
       pdf2html:
-        specifier: 3.1.0
-        version: 3.1.0
+        specifier: 3.3.0
+        version: 3.3.0
       pdfmake:
         specifier: 0.2.18
         version: 0.2.18
@@ -8587,8 +8587,8 @@ packages:
   pathe@2.0.3:
     resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
 
-  pdf2html@3.1.0:
-    resolution: {integrity: sha512-S6d64dwkTOpnMVzn8zq4muycurlvS/UAg6apTqN1Afi7dph/Lwm4uvEVbRAYFNtYsOOlj2IgHYhMztojM179HQ==}
+  pdf2html@3.3.0:
+    resolution: {integrity: sha512-jVJXLhSB60Hn/7nylgqhJAHD76cBb23raoyi6MuDbkDogbjnbrhkG5NkrjdSlU6mTxyaHRseXIk+ApB10eQpJA==}
     engines: {node: '>= 14'}
 
   pdfmake@0.2.18:
@@ -20322,7 +20322,7 @@ snapshots:
 
   pathe@2.0.3: {}
 
-  pdf2html@3.1.0:
+  pdf2html@3.3.0:
     dependencies:
       cheerio: 1.0.0
       debug: 4.4.0(supports-color@8.1.1)
