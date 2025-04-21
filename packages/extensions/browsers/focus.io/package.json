@@ -22,12 +22,12 @@
     "build": "webpack --mode=production"
   },
   "devDependencies": {
-    "@eslint/js": "9.25.0",
+    "@eslint/js": "9.25.1",
     "@types/chrome": "0.0.315",
     "@types/node": "22.14.1",
     "@webpack-cli/generators": "3.0.7",
     "copy-webpack-plugin": "13.0.0",
-    "eslint": "9.25.0",
+    "eslint": "9.25.1",
     "globals": "16.0.0",
     "prettier": "3.5.3",
     "ts-loader": "9.5.2",
