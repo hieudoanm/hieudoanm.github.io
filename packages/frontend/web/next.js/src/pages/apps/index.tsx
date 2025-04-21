@@ -2,11 +2,9 @@ import { NothingApp } from '@web/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import {
-  FaBook,
   FaCalculator,
   FaClockRotateLeft,
   FaCode,
-  FaDesktop,
   FaImages,
 } from 'react-icons/fa6';
 
@@ -27,25 +25,11 @@ const AppsPage: NextPage = () => {
       icon: <FaCalculator className="text-xl md:text-2xl" />,
     },
     {
-      id: 'chess-openings',
-      href: 'chess/openings',
-      name: 'openings',
-      shortName: 'openings',
-      icon: <FaBook className="text-xl md:text-2xl" />,
-    },
-    {
       id: 'photos',
       href: 'photos',
       name: 'photos',
       shortName: 'photos',
       icon: <FaImages className="text-xl md:text-2xl" />,
-    },
-    {
-      id: 'screen',
-      href: 'screen',
-      name: 'screen',
-      shortName: 'screen',
-      icon: <FaDesktop className="text-xl md:text-2xl" />,
     },
     {
       id: 'studio',
@@ -59,7 +43,7 @@ const AppsPage: NextPage = () => {
   return (
     <div className="h-screen w-screen overflow-hidden md:h-screen">
       <div className="container mx-auto flex h-full flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
-        <div className="grid h-full grow grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-8">
+        <div className="grid h-full grow grid-cols-2 grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-8">
           {apps.map(({ id = '', href = '', name = '', shortName = '', icon = <>
 
               </> }) => {

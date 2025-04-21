@@ -84,6 +84,8 @@ import {
   FaSpinner,
 } from 'react-icons/fa6';
 import { parse, stringify } from 'yaml';
+import { FullScreen } from '@web/components/FullScreen';
+import { ChessOpenings } from '@web/components/chess/ChessOpenings';
 
 const oleoScript = Oleo_Script({ weight: '400', subsets: ['latin'] });
 
@@ -117,8 +119,9 @@ enum ActImage {
 
 enum ActChess {
   CHESS_960 = 'Chess960',
-  CHESS_FEN_TO_PNG = 'Chess - FEN to PNG',
-  CHESS_PGN_TO_GIF = 'Chess - PGN to GIF',
+  CHESS_CONVERT_FEN_TO_PNG = 'Chess - Convert FEN to PNG',
+  CHESS_CONVERT_PGN_TO_GIF = 'Chess - Convert PGN to GIF',
+  CHESS_OPENINGS = 'Chess Openings',
 }
 
 enum ActColor {
@@ -180,6 +183,7 @@ enum ActTelegram {
 }
 
 enum ActWidget {
+  WIDGET_FULL_SCREEN = 'Full Screen',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
   WIDGET_STATUS = 'Status',
 }
@@ -596,7 +600,9 @@ const ActionButton: FC<{
 }> = ({ action, ref, output = '' }) => {
   if (
     action === ActChess.CHESS_960 ||
-    action === ActChess.CHESS_PGN_TO_GIF ||
+    action === ActChess.CHESS_CONVERT_PGN_TO_GIF ||
+    action === ActChess.CHESS_OPENINGS ||
+    action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_STATUS
   ) {
@@ -605,7 +611,7 @@ const ActionButton: FC<{
 
   const actionText = () => {
     if (
-      action === ActChess.CHESS_FEN_TO_PNG ||
+      action === ActChess.CHESS_CONVERT_FEN_TO_PNG ||
       action === ActGitHub.GITHUB_LANGUAGES ||
       action === ActGitHub.GITHUB_SOCIAL_PREVIEW ||
       action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
@@ -675,7 +681,7 @@ const ActionButton: FC<{
           };
           pdfMake.createPdf(docDefinition).download('markdown.pdf');
         } else if (
-          action === ActChess.CHESS_FEN_TO_PNG ||
+          action === ActChess.CHESS_CONVERT_FEN_TO_PNG ||
           action === ActGitHub.GITHUB_LANGUAGES ||
           action === ActGitHub.GITHUB_SOCIAL_PREVIEW
         ) {
@@ -711,7 +717,9 @@ const Input: FC<{
 
   if (
     action === ActChess.CHESS_960 ||
+    action === ActChess.CHESS_OPENINGS ||
     action === ActOther.UUID ||
+    action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_STATUS
   ) {
@@ -783,7 +791,7 @@ const Output: FC<{
     );
   }
 
-  if (action === ActChess.CHESS_FEN_TO_PNG) {
+  if (action === ActChess.CHESS_CONVERT_FEN_TO_PNG) {
     return (
       <div
         className={`flex flex-col items-center justify-center ${width > height ? 'h-full' : 'w-full'}`}>
@@ -796,11 +804,21 @@ const Output: FC<{
     );
   }
 
-  if (action === ActChess.CHESS_PGN_TO_GIF) {
+  if (action === ActChess.CHESS_CONVERT_PGN_TO_GIF) {
     return (
       <div
         className={`flex flex-col items-center justify-center ${width > height ? 'h-full' : 'w-full'}`}>
         <ChessPGN2GIF pgn={input} />
+      </div>
+    );
+  }
+
+  if (action === ActChess.CHESS_OPENINGS) {
+    return (
+      <div className="w-full">
+        <div className="m-auto size-fit">
+          <ChessOpenings />
+        </div>
       </div>
     );
   }
@@ -891,6 +909,10 @@ const Output: FC<{
         <MarkdownPreviewer html={output} />
       </div>
     );
+  }
+
+  if (action === ActWidget.WIDGET_FULL_SCREEN) {
+    return <FullScreen />;
   }
 
   if (action === ActWidget.WIDGET_PERIODIC_TABLE) {
@@ -1121,10 +1143,12 @@ const StudioPage: NextPage = () => {
                     nextAction === ActNumber.NUMBER_BASE_HEXADECIMAL_TO
                   ) {
                     newText = '10';
-                  } else if (nextAction === ActChess.CHESS_FEN_TO_PNG) {
+                  } else if (nextAction === ActChess.CHESS_CONVERT_FEN_TO_PNG) {
                     newText = INTITAL_FEN;
-                  } else if (nextAction === ActChess.CHESS_PGN_TO_GIF) {
+                  } else if (nextAction === ActChess.CHESS_CONVERT_PGN_TO_GIF) {
                     newText = INITIAL_PGN;
+                  } else if (nextAction === ActChess.CHESS_OPENINGS) {
+                    newText = '';
                   } else if (previousActionIsNotHex && nextActionIsHex) {
                     newText = '#000000';
                   } else if (nextAction === ActGitHub.GITHUB_LANGUAGES) {
@@ -1143,11 +1167,14 @@ const StudioPage: NextPage = () => {
                   <option value={ActChess.CHESS_960}>
                     {ActChess.CHESS_960}
                   </option>
-                  <option value={ActChess.CHESS_FEN_TO_PNG}>
-                    {ActChess.CHESS_FEN_TO_PNG}
+                  <option value={ActChess.CHESS_CONVERT_FEN_TO_PNG}>
+                    {ActChess.CHESS_CONVERT_FEN_TO_PNG}
                   </option>
-                  <option value={ActChess.CHESS_PGN_TO_GIF}>
-                    {ActChess.CHESS_PGN_TO_GIF}
+                  <option value={ActChess.CHESS_CONVERT_PGN_TO_GIF}>
+                    {ActChess.CHESS_CONVERT_PGN_TO_GIF}
+                  </option>
+                  <option value={ActChess.CHESS_OPENINGS}>
+                    {ActChess.CHESS_OPENINGS}
                   </option>
                 </optgroup>
                 <optgroup label="code">
@@ -1314,6 +1341,9 @@ const StudioPage: NextPage = () => {
                   <option value={ActOther.UUID}>{ActOther.UUID}</option>
                 </optgroup>
                 <optgroup label="widgets">
+                  <option value={ActWidget.WIDGET_FULL_SCREEN}>
+                    {ActWidget.WIDGET_FULL_SCREEN}
+                  </option>
                   <option value={ActWidget.WIDGET_PERIODIC_TABLE}>
                     {ActWidget.WIDGET_PERIODIC_TABLE}
                   </option>
