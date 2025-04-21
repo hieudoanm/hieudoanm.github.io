@@ -1,4 +1,4 @@
-import { Chessboard } from '@web/components/chess/Chessboard';
+import { Chessboard } from '@web/components/chess/Board';
 import openings from '@web/json/chess/openings.json';
 import { copyToClipboard } from '@web/utils/navigator';
 import { Chess } from 'chess.js';

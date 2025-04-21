@@ -1,7 +1,7 @@
 import chess960 from '@web/json/chess/chess960.json';
 import { addZero, range } from '@web/utils/number/utils';
 import { ChangeEvent, FC, useEffect, useState } from 'react';
-import { Chessboard } from './Chessboard';
+import { Chessboard } from './Board';
 
 const toFen = (position: string) => {
   return `${position.toLowerCase()}/pppppppp/8/8/8/8/PPPPPPPP/${position.toUpperCase()} w KQkq - 0 1`;

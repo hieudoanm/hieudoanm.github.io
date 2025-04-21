@@ -4,7 +4,7 @@ import { Chess } from 'chess.js';
 import GIF from 'gif.js';
 import html2canvas from 'html2canvas-pro';
 import { FC, useRef, useState } from 'react';
-import { Chessboard } from './Chessboard';
+import { Chessboard } from './Board';
 import { FaDownload, FaSpinner } from 'react-icons/fa6';
 import { INITIAL_PGN } from '@web/constants';
 

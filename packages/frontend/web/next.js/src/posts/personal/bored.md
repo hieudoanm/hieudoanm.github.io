@@ -1,6 +1,6 @@
 ---
 title: 'Bored'
-date: '2025-04-19'
+date: '2025-04-21'
 ---
 
 ## Table of Contents

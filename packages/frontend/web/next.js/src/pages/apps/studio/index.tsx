@@ -6,9 +6,9 @@ import {
 import { Oleo_Script } from 'next/font/google';
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
-import { Chess960 } from '@web/components/chess/Chess960';
-import { Chessboard } from '@web/components/chess/Chessboard';
-import { ChessPGN2GIF } from '@web/components/chess/ChessPGN2GIF';
+import { Chess960 } from '@web/components/chess/960';
+import { Chessboard } from '@web/components/chess/Board';
+import { ChessPGN2GIF } from '@web/components/chess/PGN2GIF';
 import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { Status } from '@web/components/Status';
@@ -85,7 +85,8 @@ import {
 } from 'react-icons/fa6';
 import { parse, stringify } from 'yaml';
 import { FullScreen } from '@web/components/FullScreen';
-import { ChessOpenings } from '@web/components/chess/ChessOpenings';
+import { ChessOpenings } from '@web/components/chess/Openings';
+import { ChessClock } from '@web/components/chess/Clock';
 
 const oleoScript = Oleo_Script({ weight: '400', subsets: ['latin'] });
 
@@ -119,9 +120,10 @@ enum ActImage {
 
 enum ActChess {
   CHESS_960 = 'Chess960',
+  CHESS_CLOCK = 'Chess - Clock',
   CHESS_CONVERT_FEN_TO_PNG = 'Chess - Convert FEN to PNG',
   CHESS_CONVERT_PGN_TO_GIF = 'Chess - Convert PGN to GIF',
-  CHESS_OPENINGS = 'Chess Openings',
+  CHESS_OPENINGS = 'Chess - Openings',
 }
 
 enum ActColor {
@@ -600,6 +602,7 @@ const ActionButton: FC<{
 }> = ({ action, ref, output = '' }) => {
   if (
     action === ActChess.CHESS_960 ||
+    action === ActChess.CHESS_CLOCK ||
     action === ActChess.CHESS_CONVERT_PGN_TO_GIF ||
     action === ActChess.CHESS_OPENINGS ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
@@ -717,6 +720,7 @@ const Input: FC<{
 
   if (
     action === ActChess.CHESS_960 ||
+    action === ActChess.CHESS_CLOCK ||
     action === ActChess.CHESS_OPENINGS ||
     action === ActOther.UUID ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
@@ -789,6 +793,10 @@ const Output: FC<{
         <Chess960 />
       </div>
     );
+  }
+
+  if (action === ActChess.CHESS_CLOCK) {
+    return <ChessClock />;
   }
 
   if (action === ActChess.CHESS_CONVERT_FEN_TO_PNG) {
@@ -1166,6 +1174,9 @@ const StudioPage: NextPage = () => {
                 <optgroup label="chess">
                   <option value={ActChess.CHESS_960}>
                     {ActChess.CHESS_960}
+                  </option>
+                  <option value={ActChess.CHESS_CLOCK}>
+                    {ActChess.CHESS_CLOCK}
                   </option>
                   <option value={ActChess.CHESS_CONVERT_FEN_TO_PNG}>
                     {ActChess.CHESS_CONVERT_FEN_TO_PNG}
