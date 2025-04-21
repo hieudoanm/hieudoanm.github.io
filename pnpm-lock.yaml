@@ -638,8 +638,8 @@ importers:
         specifier: 16.0.0
         version: 16.0.0
       oclif:
-        specifier: 4.17.44
-        version: 4.17.44(@types/node@22.14.1)
+        specifier: 4.17.45
+        version: 4.17.45(@types/node@22.14.1)
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -2697,8 +2697,8 @@ packages:
     resolution: {integrity: sha512-H2y3PtiU/MYZXvvWUR0vr4PCoSSsN8inGDlLgLxQ4q+osAlJ256RxKCVMsSJG9fWt+Pg/+wrLzpx0OsbyVOi9g==}
     engines: {node: '>=18.0.0'}
 
-  '@oclif/plugin-warn-if-update-available@3.1.35':
-    resolution: {integrity: sha512-gQfFW0UfT3msq/3O3idgBq4CA3cyXzFtrkoG7MK4FXVK0wxIdG0EVgJn4/o3jqjWO7t+93siCXyq56CGTGUZWQ==}
+  '@oclif/plugin-warn-if-update-available@3.1.38':
+    resolution: {integrity: sha512-lwYtVXdQaBJV94DglPu140Bc6NmmysHhX5PZtdxeNcUG2BgSX/Sre7oCzMEgmuhe4Lu2jDviMxTX81a8wv6v1w==}
     engines: {node: '>=18.0.0'}
 
   '@octokit/auth-token@2.5.0':
@@ -8384,8 +8384,8 @@ packages:
     resolution: {integrity: sha512-gXah6aZrcUxjWg2zR2MwouP2eHlCBzdV4pygudehaKXSGW4v2AsRQUK+lwwXhii6KFZcunEnmSUoYp5CXibxtA==}
     engines: {node: '>= 0.4'}
 
-  oclif@4.17.44:
-    resolution: {integrity: sha512-w05L5LKhPiKT5uAn1yzMV+5EpwNvUrJKIlgtzBm4QxMlQ+MsBVclnCXoji1s+Kr0kZd8aC3x8q6VYiuoCxRuZQ==}
+  oclif@4.17.45:
+    resolution: {integrity: sha512-uy43gOt4+su9j1flXmp4RQmsuD7ACNlZqlqnTZXGydoZFn4UduZuTw2NkYzWv1a3K+cEcxJdwMbUay6WDlaCYA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -13153,7 +13153,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  '@oclif/plugin-warn-if-update-available@3.1.35':
+  '@oclif/plugin-warn-if-update-available@3.1.38':
     dependencies:
       '@oclif/core': 4.2.10
       ansis: 3.17.0
@@ -20188,7 +20188,7 @@ snapshots:
       define-properties: 1.2.1
       es-object-atoms: 1.1.1
 
-  oclif@4.17.44(@types/node@22.14.1):
+  oclif@4.17.45(@types/node@22.14.1):
     dependencies:
       '@aws-sdk/client-cloudfront': 3.787.0
       '@aws-sdk/client-s3': 3.782.0
@@ -20198,7 +20198,7 @@ snapshots:
       '@oclif/core': 4.2.10
       '@oclif/plugin-help': 6.2.27
       '@oclif/plugin-not-found': 3.2.48(@types/node@22.14.1)
-      '@oclif/plugin-warn-if-update-available': 3.1.35
+      '@oclif/plugin-warn-if-update-available': 3.1.38
       async-retry: 1.3.3
       chalk: 4.1.2
       change-case: 4.1.2
