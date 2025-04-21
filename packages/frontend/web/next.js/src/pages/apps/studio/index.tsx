@@ -3,10 +3,13 @@ import {
   getWebhookInfo,
   setWebhook,
 } from '@web/clients/telegram.org/telegram.client';
+import { Oleo_Script } from 'next/font/google';
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
 import { Chess960 } from '@web/components/chess/Chess960';
 import { Chessboard } from '@web/components/chess/Chessboard';
+import { ChessPGN2GIF } from '@web/components/chess/ChessPGN2GIF';
+import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { Status } from '@web/components/Status';
 import {
@@ -14,8 +17,10 @@ import {
   INITIAL_MANIFEST_EXTENSION,
   INITIAL_MANIFEST_PWA,
   INITIAL_MARKDOWN,
+  INITIAL_PGN,
   INITIAL_TELEGRAM_WEBHOOK,
   INTIIAL_YAML,
+  INTITAL_FEN,
 } from '@web/constants';
 import { useWindowSize } from '@web/hooks/window/use-size';
 import { braillify } from '@web/utils/braille';
@@ -27,6 +32,15 @@ import {
 } from '@web/utils/colors/code/hex';
 import { csv2json, csv2md, csv2sql } from '@web/utils/csv';
 import { downloadImage } from '@web/utils/download';
+import {
+  base64,
+  filter,
+  getMimeType,
+  mimeToExtension,
+  ocr,
+  png2ico,
+  svg2png,
+} from '@web/utils/image';
 import { json2csv, jsonParse } from '@web/utils/json';
 import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
@@ -53,14 +67,25 @@ import pdfMake from 'pdfmake/build/pdfmake';
 import { toDataURL } from 'qrcode';
 import {
   ChangeEvent,
+  Dispatch,
   FC,
   RefObject,
+  SetStateAction,
   useLayoutEffect,
   useRef,
   useState,
 } from 'react';
-import { FaArrowLeft, FaCopy, FaDownload, FaPaperPlane } from 'react-icons/fa6';
+import {
+  FaArrowLeft,
+  FaCopy,
+  FaDownload,
+  FaImages,
+  FaPaperPlane,
+  FaSpinner,
+} from 'react-icons/fa6';
 import { parse, stringify } from 'yaml';
+
+const oleoScript = Oleo_Script({ weight: '400', subsets: ['latin'] });
 
 const FONT_FOLDER: string = 'https://hieudoanm.github.io/fonts';
 const FONT_NAME_ROBOTO: string = 'Roboto';
@@ -81,9 +106,19 @@ pdfMake.fonts = {
   },
 };
 
+enum ActImage {
+  IMAGE_BASE64 = 'Image - Base64',
+  IMAGE_CONVERT_PNG_TO_ICO = 'Image - PNG to ICO',
+  IMAGE_CONVERT_SVG_TO_PNG = 'Image - SVG to PNG',
+  IMAGE_FILTER_GOLDEN = 'Image - Filter - Golden',
+  IMAGE_FILTER_GRAYSCALE = 'Image - Filter - Grayscale',
+  IMAGE_OCR = 'Image - OCR',
+}
+
 enum ActChess {
   CHESS_960 = 'Chess960',
-  CHESS_FEN_TO_PNG = 'FEN to PNG',
+  CHESS_FEN_TO_PNG = 'Chess - FEN to PNG',
+  CHESS_PGN_TO_GIF = 'Chess - PGN to GIF',
 }
 
 enum ActColor {
@@ -149,10 +184,13 @@ enum ActWidget {
   WIDGET_STATUS = 'Status',
 }
 
+enum ActQRCode {
+  QRCODE_TO_IMAGE = 'QR Code - To Image',
+}
+
 enum ActOther {
   CODE_BRAILLIFY = 'Braillify (⠃⠗⠁⠊⠇⠇⠊⠋⠽)',
   CODE_MORSIFY = 'Morsify (-----.-........-.-.--)',
-  IMAGE_QRCODE = 'QR Code',
   MARKDOWN_DICTIONARY = 'Markdown Dictionary',
   MARKDOWN_EDITOR = 'Markdown Editor',
   TIME_EPOCH = 'Epoch',
@@ -171,6 +209,11 @@ enum ActNumber {
   NUMBER_ROMAN_TO = 'Roman - From Number',
 }
 
+enum ActGitHub {
+  GITHUB_LANGUAGES = 'GitHub - Languages',
+  GITHUB_SOCIAL_PREVIEW = 'GitHub - Social Preview',
+}
+
 type Act =
   | ActChess
   | ActColor
@@ -179,9 +222,12 @@ type Act =
   | ActManifestJSON
   | ActNumber
   | ActOther
+  | ActQRCode
   | ActString
   | ActTelegram
-  | ActWidget;
+  | ActWidget
+  | ActGitHub
+  | ActImage;
 
 const INITIAL_JSON = [
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
@@ -211,6 +257,33 @@ const actColor = ({
     return `rgb(${r}, ${g}, ${b})`;
   }
   return '';
+};
+
+const isActImage = (act: Act): act is ActImage => {
+  return Object.values(ActImage).includes(act as ActImage);
+};
+
+const actImage = ({
+  action,
+  source,
+}: {
+  action: ActImage;
+  source: string;
+}): Promise<string> => {
+  if (action === ActImage.IMAGE_BASE64) {
+    return Promise.resolve(source);
+  } else if (action === ActImage.IMAGE_CONVERT_PNG_TO_ICO) {
+    return png2ico(source);
+  } else if (action === ActImage.IMAGE_CONVERT_SVG_TO_PNG) {
+    return svg2png(source);
+  } else if (action === ActImage.IMAGE_FILTER_GOLDEN) {
+    return filter('golden', source);
+  } else if (action === ActImage.IMAGE_FILTER_GRAYSCALE) {
+    return filter('grayscale', source);
+  } else if (action === ActImage.IMAGE_OCR) {
+    return ocr(source);
+  }
+  return Promise.resolve('');
 };
 
 const isActionColor = (act: Act): act is ActColor => {
@@ -255,37 +328,37 @@ const actTelegram = async ({
   action: ActTelegram;
   source: string;
 }) => {
-  let result = '';
+  let output = '';
   const { data } = await tryCatch<{ token: string; webhook: string }>(
     JSON.parse(source)
   );
   const { token = '', webhook = '' } = data ?? {};
   if (token === '' || webhook === '') {
-    result = 'Missing Token or Webhook';
+    output = 'Missing Token or Webhook';
   }
   if (action === ActTelegram.TELEGRAM_WEBHOOK_GET_INFO) {
     const { data, error } = await tryCatch(getWebhookInfo(token));
     if (error) {
-      result = error.message;
+      output = error.message;
     } else {
-      result = JSON.stringify(data, null, 2);
+      output = JSON.stringify(data, null, 2);
     }
   } else if (action === ActTelegram.TELEGRAM_WEBHOOK_DELETE) {
     const { data, error } = await tryCatch(deleteWebhook(token, webhook));
     if (error) {
-      result = error.message;
+      output = error.message;
     } else {
-      result = JSON.stringify(data, null, 2);
+      output = JSON.stringify(data, null, 2);
     }
   } else if (action === ActTelegram.TELEGRAM_WEBHOOK_SET) {
     const { data, error } = await tryCatch(setWebhook(token, webhook));
     if (error) {
-      result = error.message;
+      output = error.message;
     } else {
-      result = JSON.stringify(data, null, 2);
+      output = JSON.stringify(data, null, 2);
     }
   }
-  return result;
+  return output;
 };
 
 const isActionTelegram = (act: Act): act is ActTelegram => {
@@ -299,21 +372,21 @@ const actString = ({
   action: ActString;
   source: string;
 }) => {
-  let result = '';
+  let output = '';
   if (action === ActString.STRING_CAPITALISE) {
-    result = capitalise(source);
+    output = capitalise(source);
   } else if (action === ActString.STRING_DEBURR) {
-    result = deburr(source);
+    output = deburr(source);
   } else if (action === ActString.STRING_KEBABCASE) {
-    result = kebabcase(source);
+    output = kebabcase(source);
   } else if (action === ActString.STRING_LOWERCASE) {
-    result = source.toLowerCase();
+    output = source.toLowerCase();
   } else if (action === ActString.STRING_SNAKECASE) {
-    result = snakecase(source);
+    output = snakecase(source);
   } else if (action === ActString.STRING_UPPERCASE) {
-    result = source.toUpperCase();
+    output = source.toUpperCase();
   }
-  return result;
+  return output;
 };
 
 const isActionString = (act: Act): act is ActString => {
@@ -321,29 +394,29 @@ const isActionString = (act: Act): act is ActString => {
 };
 
 const actJSON = ({ action, source }: { action: ActJSON; source: string }) => {
-  let result = '';
+  let output = '';
   if (action === ActJSON.JSON_MINIFY) {
     try {
-      result = JSON.stringify(JSON.parse(source));
+      output = JSON.stringify(JSON.parse(source));
     } catch (error) {
-      result = (error as Error).message;
+      output = (error as Error).message;
     }
   } else if (action === ActJSON.JSON_EDITOR) {
     try {
-      result = JSON.stringify(JSON.parse(source), null, 2);
+      output = JSON.stringify(JSON.parse(source), null, 2);
     } catch (error) {
-      result = (error as Error).message;
+      output = (error as Error).message;
     }
   } else if (action === ActJSON.JSON_TO_CSV) {
-    result = json2csv(
+    output = json2csv(
       jsonParse<Record<string, string | number | boolean | Date>[]>(source, [])
     );
   } else if (action === ActJSON.JSON_TO_XML) {
-    result = toXML(jsonParse(source, {}), { indent: '  ' });
+    output = toXML(jsonParse(source, {}), { indent: '  ' });
   } else if (action === ActJSON.JSON_TO_YAML) {
-    result = stringify(jsonParse(source, {}));
+    output = stringify(jsonParse(source, {}));
   }
-  return result;
+  return output;
 };
 
 const isActionJSON = (act: Act): act is ActJSON => {
@@ -355,15 +428,15 @@ const isActionManifestJSON = (act: Act): act is ActManifestJSON => {
 };
 
 const actCSV = ({ action, source }: { action: ActCSV; source: string }) => {
-  let result = '';
+  let output = '';
   if (action === ActCSV.CSV_TO_JSON) {
-    result = JSON.stringify(csv2json(source), null, 2);
+    output = JSON.stringify(csv2json(source), null, 2);
   } else if (action === ActCSV.CSV_TO_MD) {
-    result = csv2md(source);
+    output = csv2md(source);
   } else if (action === ActCSV.CSV_TO_SQL) {
-    result = csv2sql(source);
+    output = csv2sql(source);
   }
-  return result;
+  return output;
 };
 
 const isActionCSV = (act: Act): act is ActCSV => {
@@ -377,28 +450,30 @@ const act = async ({
   action: Act;
   source: string;
 }): Promise<string> => {
-  let result: string = source;
+  let output: string = source;
   if (action === ActChess.CHESS_960) {
-    result = source;
+    output = source;
+  } else if (isActImage(action)) {
+    output = await actImage({ action, source });
   } else if (isActionColor(action)) {
-    result = actColor({ action, source });
+    output = actColor({ action, source });
   } else if (isActionNumber(action)) {
-    result = actNumber({ action, source });
+    output = actNumber({ action, source });
   } else if (isActionTelegram(action)) {
-    result = await actTelegram({ action, source });
+    output = await actTelegram({ action, source });
   } else if (isActionCSV(action)) {
-    result = actCSV({ action, source });
+    output = actCSV({ action, source });
   } else if (isActionJSON(action)) {
-    result = actJSON({ action, source });
+    output = actJSON({ action, source });
   } else if (isActionString(action)) {
-    result = actString({ action, source });
+    output = actString({ action, source });
   } else if (action === ActOther.CODE_BRAILLIFY) {
-    result = braillify(source);
+    output = braillify(source);
   } else if (action === ActOther.CODE_MORSIFY) {
-    result = morsify(source);
-  } else if (action === ActOther.IMAGE_QRCODE) {
+    output = morsify(source);
+  } else if (action === ActQRCode.QRCODE_TO_IMAGE) {
     if (source === '') return '';
-    result = await toDataURL(source, {
+    output = await toDataURL(source, {
       errorCorrectionLevel: 'H',
       type: 'image/jpeg',
       width: 512,
@@ -409,20 +484,20 @@ const act = async ({
       source === ''
         ? Math.floor(new Date().getTime() / 1000).toString()
         : source;
-    result = await buildEpochString(parseInt(source, 10));
+    output = await buildEpochString(parseInt(source, 10));
   } else if (action === ActOther.YAML_TO_JSON) {
-    result = JSON.stringify(parse(source), null, 2);
+    output = JSON.stringify(parse(source), null, 2);
   } else if (action === ActOther.MARKDOWN_EDITOR) {
-    result = await marked(source);
+    output = await marked(source);
   } else if (action === ActOther.UUID) {
-    result = buildUuidString();
+    output = buildUuidString();
   } else if (isActionManifestJSON(action)) {
-    result = JSON.stringify(JSON.parse(source), null, 2);
+    output = JSON.stringify(JSON.parse(source), null, 2);
   } else if (action === ActOther.MARKDOWN_DICTIONARY) {
     const word: Word = await getWord(source);
     const { results = [] } = word;
     if (results.length === 0) {
-      result = 'No Results';
+      output = 'No Results';
     } else {
       const partOfSpeeches: string[] = [
         ...new Set(results.map(({ partOfSpeech }) => partOfSpeech)),
@@ -452,10 +527,10 @@ ${results
 `;
         })
         .join('\n');
-      result = await marked(markdown);
+      output = await marked(markdown);
     }
   }
-  return result;
+  return output;
 };
 
 const countWords = (str: string) => {
@@ -517,10 +592,11 @@ const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
 const ActionButton: FC<{
   action: Act;
   ref: RefObject<HTMLDivElement | null>;
-  result: string;
-}> = ({ action, ref, result = '' }) => {
+  output: string;
+}> = ({ action, ref, output = '' }) => {
   if (
     action === ActChess.CHESS_960 ||
+    action === ActChess.CHESS_PGN_TO_GIF ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_STATUS
   ) {
@@ -530,7 +606,13 @@ const ActionButton: FC<{
   const actionText = () => {
     if (
       action === ActChess.CHESS_FEN_TO_PNG ||
-      action === ActOther.IMAGE_QRCODE ||
+      action === ActGitHub.GITHUB_LANGUAGES ||
+      action === ActGitHub.GITHUB_SOCIAL_PREVIEW ||
+      action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
+      action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
+      action === ActImage.IMAGE_FILTER_GOLDEN ||
+      action === ActImage.IMAGE_FILTER_GRAYSCALE ||
+      action === ActQRCode.QRCODE_TO_IMAGE ||
       action === ActOther.MARKDOWN_EDITOR
     ) {
       return <FaDownload className="text-xs" />;
@@ -541,10 +623,10 @@ const ActionButton: FC<{
 
   const downloadHTML = async ({
     ref,
-    result = '',
+    output = '',
   }: {
     ref: RefObject<HTMLDivElement | null>;
-    result: string;
+    output: string;
   }) => {
     if (ref.current) {
       await new Promise((resolve) => requestAnimationFrame(resolve)); // Wait for rendering
@@ -556,7 +638,7 @@ const ActionButton: FC<{
       // Create a download link
       const link = document.createElement('a');
       link.href = dataURL;
-      link.download = `${result}.png`;
+      link.download = `${output}.png`;
       link.click();
       link.remove();
     }
@@ -571,23 +653,35 @@ const ActionButton: FC<{
           const csvHtmlTable: string =
             document.getElementById('csv-html-table')?.outerHTML ?? '';
           copyToClipboard(csvHtmlTable);
-        } else if (action === ActOther.IMAGE_QRCODE) {
+        } else if (
+          action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
+          action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
+          action === ActImage.IMAGE_FILTER_GOLDEN ||
+          action === ActImage.IMAGE_FILTER_GRAYSCALE ||
+          action === ActQRCode.QRCODE_TO_IMAGE
+        ) {
+          const mime: string = getMimeType(output) ?? '';
+          const format: 'jpg' | 'png' | 'ico' | 'gif' = mimeToExtension[mime];
           downloadImage({
-            content: result,
-            filename: 'qrcode',
-            format: 'jpg',
+            format,
+            content: output,
+            filename: 'output',
           });
         } else if (action === ActOther.MARKDOWN_EDITOR) {
-          const converted = htmlToPdfmake(result);
+          const converted = htmlToPdfmake(output);
           const docDefinition = {
             content: converted,
             defaultStyle: { font: 'Times' },
           };
           pdfMake.createPdf(docDefinition).download('markdown.pdf');
-        } else if (action === ActChess.CHESS_FEN_TO_PNG) {
-          await downloadHTML({ ref, result });
+        } else if (
+          action === ActChess.CHESS_FEN_TO_PNG ||
+          action === ActGitHub.GITHUB_LANGUAGES ||
+          action === ActGitHub.GITHUB_SOCIAL_PREVIEW
+        ) {
+          await downloadHTML({ ref, output });
         } else {
-          copyToClipboard(result);
+          copyToClipboard(output);
         }
       }}>
       {actionText()}
@@ -595,8 +689,217 @@ const ActionButton: FC<{
   );
 };
 
-const StringPage: NextPage = () => {
+const Input: FC<{
+  action: Act;
+  input: string;
+  submit: ({ action, input }: { action: Act; input: string }) => Promise<void>;
+  setState: Dispatch<
+    SetStateAction<{
+      loading: boolean;
+      action: Act;
+      input: string;
+      output: string;
+    }>
+  >;
+}> = ({ input, action, setState, submit }) => {
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+  const cursorRef = useRef({
+    selectionStart: 0,
+    selectionEnd: 0,
+    scrollTop: 0,
+  });
+
+  if (
+    action === ActChess.CHESS_960 ||
+    action === ActOther.UUID ||
+    action === ActWidget.WIDGET_PERIODIC_TABLE ||
+    action === ActWidget.WIDGET_STATUS
+  ) {
+    return <></>;
+  }
+
+  if (isActImage(action)) {
+    return (
+      <div className="h-full w-full px-4 pt-4">
+        <div
+          className="h-16 bg-contain bg-left bg-no-repeat md:h-32"
+          style={{ backgroundImage: `url(${input})` }}></div>
+      </div>
+    );
+  }
+
+  return (
+    <textarea
+      ref={textareaRef}
+      id="text"
+      name="text"
+      placeholder="Text"
+      className="scroll-none h-full w-full p-4 focus:outline-none"
+      rows={input.split('\n').length > 5 ? 5 : input.split('\n').length}
+      value={input}
+      onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
+        const { selectionStart, selectionEnd, scrollTop } = event.target;
+        cursorRef.current = {
+          selectionStart,
+          selectionEnd,
+          scrollTop,
+        };
+        // Value
+        const newText = event.target.value;
+        setState((previous) => ({
+          ...previous,
+          input: newText,
+        }));
+        await submit({ action: action as Act, input: newText });
+      }}
+    />
+  );
+};
+
+const Output: FC<{
+  action: Act;
+  input: string;
+  output: string;
+  divRef: RefObject<HTMLDivElement | null>;
+}> = ({
+  action = ActChess.CHESS_960,
+  input = '',
+  output = '',
+  divRef,
+}: {
+  action: Act;
+  input: string;
+  output: string;
+  divRef: RefObject<HTMLDivElement | null>;
+}) => {
   const { width = 0, height = 0 } = useWindowSize();
+
+  if (action === ActChess.CHESS_960) {
+    return (
+      <div
+        className={`flex flex-col items-center justify-center ${width > height ? 'h-full' : 'w-full'}`}>
+        <Chess960 />
+      </div>
+    );
+  }
+
+  if (action === ActChess.CHESS_FEN_TO_PNG) {
+    return (
+      <div
+        className={`flex flex-col items-center justify-center ${width > height ? 'h-full' : 'w-full'}`}>
+        <div
+          ref={divRef}
+          className="w-full max-w-sm overflow-hidden border border-gray-800">
+          <Chessboard id="fen2png" position={output} />
+        </div>
+      </div>
+    );
+  }
+
+  if (action === ActChess.CHESS_PGN_TO_GIF) {
+    return (
+      <div
+        className={`flex flex-col items-center justify-center ${width > height ? 'h-full' : 'w-full'}`}>
+        <ChessPGN2GIF pgn={input} />
+      </div>
+    );
+  }
+
+  if (action === ActCSV.CSV_TO_HTML) {
+    return (
+      <div className="w-full overflow-auto">
+        <CSVTable csv={input} />
+      </div>
+    );
+  }
+
+  if (action === ActGitHub.GITHUB_LANGUAGES) {
+    return (
+      <div className="w-full overflow-auto">
+        <GitHubLanguages ref={divRef} repository={input} />
+      </div>
+    );
+  }
+
+  if (action === ActGitHub.GITHUB_SOCIAL_PREVIEW) {
+    const [name, repository] = input.split('\n');
+    return (
+      <div className={`${width > height ? 'h-full' : 'w-full'}`}>
+        <div
+          ref={divRef}
+          className={`flex aspect-[2/1] items-center justify-center border border-gray-800 bg-gray-900 ${width > height ? 'h-full' : 'w-full'} ${oleoScript.className} `}>
+          <div className="flex flex-col gap-y-2">
+            <p className="text-center text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+              {(name ?? '').trim()}
+            </p>
+            <p className="text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+              {(repository ?? '').trim()}{' '}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (
+    action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
+    action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
+    action === ActImage.IMAGE_FILTER_GOLDEN ||
+    action === ActImage.IMAGE_FILTER_GRAYSCALE ||
+    action === ActQRCode.QRCODE_TO_IMAGE
+  ) {
+    return (
+      <div className="w-full overflow-auto">
+        <div
+          className={`mx-auto aspect-square overflow-hidden rounded bg-cover bg-center ${width > height ? 'h-full' : 'w-full'}`}
+          style={{ backgroundImage: `url(${output})` }}
+        />
+      </div>
+    );
+  }
+
+  if (
+    action === ActOther.MARKDOWN_EDITOR ||
+    action === ActOther.MARKDOWN_DICTIONARY
+  ) {
+    return (
+      <div className="w-full overflow-auto p-2">
+        <MarkdownPreviewer html={output} />
+      </div>
+    );
+  }
+
+  if (action === ActWidget.WIDGET_PERIODIC_TABLE) {
+    return (
+      <div className="scroll-none w-full overflow-auto">
+        <PeriodicTable />
+      </div>
+    );
+  }
+
+  if (action === ActWidget.WIDGET_STATUS) {
+    return (
+      <div className="scroll-none w-full overflow-auto">
+        <Status />
+      </div>
+    );
+  }
+
+  return (
+    <div className="h-full w-full rounded">
+      <textarea
+        id="output"
+        name="output"
+        placeholder="Output"
+        className="scroll-none h-full w-full resize-none focus:outline-none"
+        value={output}
+        readOnly
+      />
+    </div>
+  );
+};
+
+const StudioPage: NextPage = () => {
   // This is for textarea
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const cursorRef = useRef({
@@ -608,23 +911,18 @@ const StringPage: NextPage = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
   // Component States
   const [
-    {
-      loading = false,
-      action = ActChess.CHESS_960,
-      text = 'CHESS_960',
-      result = '',
-    },
+    { loading = false, action = ActChess.CHESS_960, input = '', output = '' },
     setState,
   ] = useState<{
     loading: boolean;
-    action: string;
-    text: string;
-    result: string;
+    action: Act;
+    input: string;
+    output: string;
   }>({
     loading: false,
     action: ActChess.CHESS_960,
-    text: '',
-    result: '',
+    input: '',
+    output: '',
   });
 
   useLayoutEffect(() => {
@@ -635,18 +933,18 @@ const StringPage: NextPage = () => {
       textarea.selectionEnd = selectionEnd;
       textarea.scrollTop = scrollTop;
     }
-  }, [text]);
+  }, [input]);
 
-  const submit = async ({ action, text }: { action: Act; text: string }) => {
+  const submit = async ({ action, input }: { action: Act; input: string }) => {
     setState((previous) => ({
       ...previous,
       loading: true,
     }));
-    const newResult = await act({ action: action, source: text });
+    const newResult = await act({ action: action, source: input });
     setState((previous) => ({
       ...previous,
       loading: false,
-      result: newResult,
+      output: newResult,
     }));
   };
 
@@ -661,8 +959,8 @@ const StringPage: NextPage = () => {
             <p className="font-semibold">Studio</p>
           </div>
           <div className="flex items-center gap-x-2">
-            <p>Word Count: {countWords(text)}</p>
-            <ActionButton action={action as Act} ref={divRef} result={result} />
+            <p>Word Count: {countWords(output)}</p>
+            <ActionButton action={action} ref={divRef} output={output} />
           </div>
         </div>
         <div className="flex w-full grow gap-x-2 overflow-hidden px-4">
@@ -670,72 +968,12 @@ const StringPage: NextPage = () => {
             {loading ? (
               <div className="h-full p-2">Loading</div>
             ) : (
-              <>
-                {action === ActChess.CHESS_960 && (
-                  <div
-                    className={`flex h-full items-center justify-center overflow-auto ${width > height ? 'h-full' : 'w-full'}`}>
-                    <Chess960 />
-                  </div>
-                )}
-                {action === ActChess.CHESS_FEN_TO_PNG && (
-                  <div
-                    className={`flex h-full items-center justify-center overflow-auto ${width > height ? 'h-full' : 'w-full'}`}>
-                    <div
-                      ref={divRef}
-                      className="w-full max-w-sm overflow-hidden border border-gray-800">
-                      <Chessboard id="fen2png" position={result} />
-                    </div>
-                  </div>
-                )}
-                {action === ActWidget.WIDGET_PERIODIC_TABLE && (
-                  <div className="scroll-none w-full overflow-auto">
-                    <PeriodicTable />
-                  </div>
-                )}
-                {action === ActWidget.WIDGET_STATUS && (
-                  <div className="scroll-none w-full overflow-auto">
-                    <Status />
-                  </div>
-                )}
-                {action === ActCSV.CSV_TO_HTML && (
-                  <div className="w-full overflow-auto">
-                    <CSVTable csv={text} />
-                  </div>
-                )}
-                {action === ActOther.IMAGE_QRCODE && (
-                  <div className="w-full overflow-auto">
-                    <div
-                      className={`mx-auto aspect-square overflow-hidden rounded bg-cover bg-center ${width > height ? 'h-full' : 'w-full'}`}
-                      style={{ backgroundImage: `url(${result})` }}
-                    />
-                  </div>
-                )}
-                {(action === ActOther.MARKDOWN_EDITOR ||
-                  action === ActOther.MARKDOWN_DICTIONARY) && (
-                  <div className="w-full overflow-auto p-2">
-                    <MarkdownPreviewer html={result} />
-                  </div>
-                )}
-                {action !== ActChess.CHESS_960 &&
-                  action !== ActChess.CHESS_FEN_TO_PNG &&
-                  action !== ActCSV.CSV_TO_HTML &&
-                  action !== ActOther.IMAGE_QRCODE &&
-                  action !== ActOther.MARKDOWN_EDITOR &&
-                  action !== ActOther.MARKDOWN_DICTIONARY &&
-                  action !== ActWidget.WIDGET_PERIODIC_TABLE &&
-                  action !== ActWidget.WIDGET_STATUS && (
-                    <div className="h-full w-full rounded">
-                      <textarea
-                        id="result"
-                        name="result"
-                        placeholder="result"
-                        className="scroll-none h-full w-full resize-none focus:outline-none"
-                        value={result}
-                        readOnly
-                      />
-                    </div>
-                  )}
-              </>
+              <Output
+                action={action}
+                input={input}
+                output={output}
+                divRef={divRef}
+              />
             )}
           </div>
         </div>
@@ -743,42 +981,16 @@ const StringPage: NextPage = () => {
           <form
             onSubmit={async (event) => {
               event.preventDefault();
-              await submit({ action: action as Act, text });
+              await submit({ action: action, input });
             }}
             className="overflow-hidde flex grow flex-col rounded-none rounded-t-2xl bg-gray-800 md:rounded-2xl">
-            {action === ActChess.CHESS_960 ||
-            action === ActOther.UUID ||
-            action === ActWidget.WIDGET_PERIODIC_TABLE ||
-            action === ActWidget.WIDGET_STATUS ? (
-              <></>
-            ) : (
-              <textarea
-                ref={textareaRef}
-                id="text"
-                name="text"
-                placeholder="Text"
-                className="scroll-none h-full w-full p-4 focus:outline-none"
-                rows={text.split('\n').length > 5 ? 5 : text.split('\n').length}
-                value={text}
-                onChange={async (event: ChangeEvent<HTMLTextAreaElement>) => {
-                  const { selectionStart, selectionEnd, scrollTop } =
-                    event.target;
-                  cursorRef.current = {
-                    selectionStart,
-                    selectionEnd,
-                    scrollTop,
-                  };
-                  // Value
-                  const newText = event.target.value;
-                  setState((previous) => ({
-                    ...previous,
-                    text: newText,
-                  }));
-                  await submit({ action: action as Act, text: newText });
-                }}
-              />
-            )}
-            <div className="flex items-center justify-center">
+            <Input
+              action={action}
+              input={input}
+              submit={submit}
+              setState={setState}
+            />
+            <div className="flex items-center justify-center gap-x-2 px-2">
               <select
                 id="action"
                 name="action"
@@ -786,47 +998,47 @@ const StringPage: NextPage = () => {
                 value={action}
                 onChange={async (event) => {
                   const nextAction: Act = event.target.value as Act;
-                  let newText: string = text;
+                  let newText: string = input;
                   // Check CSV Convertor
-                  const previousFuncIsNotCSV: boolean =
+                  const previousActionIsNotCSV: boolean =
                     action !== ActCSV.CSV_TO_HTML &&
                     action !== ActCSV.CSV_TO_JSON &&
                     action !== ActCSV.CSV_TO_MD &&
                     action !== ActCSV.CSV_TO_SQL;
-                  const nextFuncIsCSV =
+                  const nextActionIsCSV =
                     nextAction === ActCSV.CSV_TO_HTML ||
                     nextAction === ActCSV.CSV_TO_JSON ||
                     nextAction === ActCSV.CSV_TO_MD ||
                     nextAction === ActCSV.CSV_TO_SQL;
                   // Check JSON Convertor
-                  const previousFuncIsNotJSON: boolean =
+                  const previousActionIsNotJSON: boolean =
                     action !== ActJSON.JSON_EDITOR &&
                     action !== ActJSON.JSON_MINIFY &&
                     action !== ActJSON.JSON_TO_CSV &&
                     action !== ActJSON.JSON_TO_XML &&
                     action !== ActJSON.JSON_TO_YAML;
-                  const nextFuncIsJSON =
+                  const nextActionIsJSON =
                     nextAction === ActJSON.JSON_EDITOR ||
                     nextAction === ActJSON.JSON_MINIFY ||
                     nextAction === ActJSON.JSON_TO_CSV ||
                     nextAction === ActJSON.JSON_TO_XML ||
                     nextAction === ActJSON.JSON_TO_YAML;
                   // Check Telegram
-                  const previousFuncIsNotTelegram: boolean =
+                  const previousActionIsNotTelegram: boolean =
                     action !== ActTelegram.TELEGRAM_WEBHOOK_SET &&
                     action !== ActTelegram.TELEGRAM_WEBHOOK_DELETE &&
                     action !== ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
-                  const nextFuncIsTelegram =
+                  const nextActionIsTelegram =
                     nextAction === ActTelegram.TELEGRAM_WEBHOOK_SET ||
                     nextAction === ActTelegram.TELEGRAM_WEBHOOK_DELETE ||
                     nextAction === ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
                   // Check HEX
-                  const previousFuncIsNotHex: boolean =
+                  const previousActionIsNotHex: boolean =
                     action !== ActColor.HEX_TO_CMYK &&
                     action !== ActColor.HEX_TO_HSL &&
                     action !== ActColor.HEX_TO_OKLCH &&
                     action !== ActColor.HEX_TO_RGB;
-                  const nextFuncIsHex =
+                  const nextActionIsHex =
                     nextAction === ActColor.HEX_TO_CMYK ||
                     nextAction === ActColor.HEX_TO_HSL ||
                     nextAction === ActColor.HEX_TO_OKLCH ||
@@ -836,11 +1048,11 @@ const StringPage: NextPage = () => {
                     newText = Math.floor(
                       new Date().getTime() / 1000
                     ).toString();
-                  } else if (previousFuncIsNotCSV && nextFuncIsCSV) {
+                  } else if (previousActionIsNotCSV && nextActionIsCSV) {
                     newText = INITIAL_CSV;
-                  } else if (nextAction === ActOther.IMAGE_QRCODE) {
+                  } else if (nextAction === ActQRCode.QRCODE_TO_IMAGE) {
                     newText = 'https://google.com';
-                  } else if (previousFuncIsNotJSON && nextFuncIsJSON) {
+                  } else if (previousActionIsNotJSON && nextActionIsJSON) {
                     newText = JSON.stringify(INITIAL_JSON, null, 2);
                   } else if (nextAction === ActOther.MARKDOWN_EDITOR) {
                     newText = INITIAL_MARKDOWN;
@@ -860,7 +1072,10 @@ const StringPage: NextPage = () => {
                     );
                   } else if (nextAction === ActManifestJSON.MANIFEST_JSON_PWA) {
                     newText = JSON.stringify(INITIAL_MANIFEST_PWA, null, 2);
-                  } else if (previousFuncIsNotTelegram && nextFuncIsTelegram) {
+                  } else if (
+                    previousActionIsNotTelegram &&
+                    nextActionIsTelegram
+                  ) {
                     newText = JSON.stringify(INITIAL_TELEGRAM_WEBHOOK, null, 2);
                   } else if (nextAction === ActNumber.NUMBER_ROMAN_FROM) {
                     newText = 'MCMXCV';
@@ -883,17 +1098,22 @@ const StringPage: NextPage = () => {
                   ) {
                     newText = '10';
                   } else if (nextAction === ActChess.CHESS_FEN_TO_PNG) {
-                    newText =
-                      'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
-                  } else if (previousFuncIsNotHex && nextFuncIsHex) {
+                    newText = INTITAL_FEN;
+                  } else if (nextAction === ActChess.CHESS_PGN_TO_GIF) {
+                    newText = INITIAL_PGN;
+                  } else if (previousActionIsNotHex && nextActionIsHex) {
                     newText = '#000000';
+                  } else if (nextAction === ActGitHub.GITHUB_LANGUAGES) {
+                    newText = 'hieudoanm/hieudoanm.github.io';
+                  } else if (nextAction === ActGitHub.GITHUB_SOCIAL_PREVIEW) {
+                    newText = 'Hieu Doan';
                   }
                   setState((previous) => ({
                     ...previous,
                     action: nextAction,
-                    text: newText,
+                    input: newText,
                   }));
-                  await submit({ action: nextAction, text: newText });
+                  await submit({ action: nextAction, input: newText });
                 }}>
                 <optgroup label="chess">
                   <option value={ActChess.CHESS_960}>
@@ -901,6 +1121,9 @@ const StringPage: NextPage = () => {
                   </option>
                   <option value={ActChess.CHESS_FEN_TO_PNG}>
                     {ActChess.CHESS_FEN_TO_PNG}
+                  </option>
+                  <option value={ActChess.CHESS_PGN_TO_GIF}>
+                    {ActChess.CHESS_PGN_TO_GIF}
                   </option>
                 </optgroup>
                 <optgroup label="code">
@@ -935,9 +1158,32 @@ const StringPage: NextPage = () => {
                   <option value={ActCSV.CSV_TO_MD}>{ActCSV.CSV_TO_MD}</option>
                   <option value={ActCSV.CSV_TO_SQL}>{ActCSV.CSV_TO_SQL}</option>
                 </optgroup>
+                <optgroup label="github">
+                  <option value={ActGitHub.GITHUB_LANGUAGES}>
+                    {ActGitHub.GITHUB_LANGUAGES}
+                  </option>
+                  <option value={ActGitHub.GITHUB_SOCIAL_PREVIEW}>
+                    {ActGitHub.GITHUB_SOCIAL_PREVIEW}
+                  </option>
+                </optgroup>
                 <optgroup label="image">
-                  <option value={ActOther.IMAGE_QRCODE}>
-                    {ActOther.IMAGE_QRCODE}
+                  <option value={ActImage.IMAGE_BASE64}>
+                    {ActImage.IMAGE_BASE64}
+                  </option>
+                  <option value={ActImage.IMAGE_CONVERT_PNG_TO_ICO}>
+                    {ActImage.IMAGE_CONVERT_PNG_TO_ICO}
+                  </option>
+                  <option value={ActImage.IMAGE_CONVERT_SVG_TO_PNG}>
+                    {ActImage.IMAGE_CONVERT_SVG_TO_PNG}
+                  </option>
+                  <option value={ActImage.IMAGE_FILTER_GOLDEN}>
+                    {ActImage.IMAGE_FILTER_GOLDEN}
+                  </option>
+                  <option value={ActImage.IMAGE_FILTER_GRAYSCALE}>
+                    {ActImage.IMAGE_FILTER_GRAYSCALE}
+                  </option>
+                  <option value={ActImage.IMAGE_OCR}>
+                    {ActImage.IMAGE_OCR}
                   </option>
                 </optgroup>
                 <optgroup label="json">
@@ -999,6 +1245,11 @@ const StringPage: NextPage = () => {
                     {ActNumber.NUMBER_ROMAN_TO}
                   </option>
                 </optgroup>
+                <optgroup label="qrcode">
+                  <option value={ActQRCode.QRCODE_TO_IMAGE}>
+                    {ActQRCode.QRCODE_TO_IMAGE}
+                  </option>
+                </optgroup>
                 <optgroup label="string">
                   <option value={ActString.STRING_CAPITALISE}>
                     {ActString.STRING_CAPITALISE}
@@ -1052,13 +1303,69 @@ const StringPage: NextPage = () => {
                   </option>
                 </optgroup>
               </select>
+              <label
+                htmlFor="upload-image"
+                className="cursor-pointer rounded-full bg-gray-700 p-2 p-3 text-center text-xs">
+                <input
+                  type="file"
+                  name="image"
+                  accept="image/*"
+                  id="upload-image"
+                  className="hidden"
+                  readOnly={loading}
+                  onChange={async (event) => {
+                    const files = event.target.files;
+                    if (files === null) return;
+                    const file = files.item(0);
+                    if (!file) return;
+                    const base64Code = await base64(file);
+                    // Check HEX
+                    const previousActionIsNotImage: boolean =
+                      action !== ActImage.IMAGE_BASE64 &&
+                      action !== ActImage.IMAGE_CONVERT_PNG_TO_ICO &&
+                      action !== ActImage.IMAGE_CONVERT_SVG_TO_PNG &&
+                      action !== ActImage.IMAGE_FILTER_GOLDEN &&
+                      action !== ActImage.IMAGE_FILTER_GRAYSCALE &&
+                      action !== ActImage.IMAGE_OCR;
+                    let nextAction: Act = action;
+                    if (previousActionIsNotImage) {
+                      nextAction = ActImage.IMAGE_BASE64;
+                    }
+                    setState((previous) => ({
+                      ...previous,
+                      loading: true,
+                    }));
+                    const newResult = await act({
+                      action: nextAction,
+                      source: base64Code,
+                    });
+                    setState((previous) => ({
+                      ...previous,
+                      loading: false,
+                      input: base64Code,
+                      action: nextAction,
+                      output: newResult,
+                    }));
+                  }}
+                />
+                {loading ? (
+                  <FaSpinner className="animate-spin" />
+                ) : (
+                  <FaImages />
+                )}
+              </label>
               <button
                 type="submit"
-                className="h-full cursor-pointer p-4"
+                className="cursor-pointer rounded-full bg-gray-700 p-3 text-xs"
+                disabled={loading}
                 onClick={async () => {
-                  await submit({ action: action as Act, text });
+                  await submit({ action: action, input });
                 }}>
-                <FaPaperPlane />
+                {loading ? (
+                  <FaSpinner className="animate-spin" />
+                ) : (
+                  <FaPaperPlane />
+                )}
               </button>
             </div>
           </form>
@@ -1068,4 +1375,4 @@ const StringPage: NextPage = () => {
   );
 };
 
-export default StringPage;
+export default StudioPage;

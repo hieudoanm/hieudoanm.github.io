@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useWindowSize } from '@web/hooks/window/use-size';
 import { addZero } from '@web/utils/number/utils';
+import { ONE_MINUTE, ONE_SECOND } from '@web/utils/time';
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import { FaArrowsRotate, FaPause, FaPlay } from 'react-icons/fa6';
@@ -16,8 +17,6 @@ type ChessClockState = {
 };
 
 const ONE_UNIT: number = 10;
-const ONE_SECOND: number = 1000;
-const ONE_MINUTE: number = 60 * ONE_SECOND;
 
 export const ChessClockPage: NextPage = () => {
   const { width } = useWindowSize();
@@ -112,144 +111,142 @@ export const ChessClockPage: NextPage = () => {
     <div className="h-screen w-screen overflow-hidden">
       <div className="flex h-full flex-row md:flex-col">
         <div className="order-3 md:order-1">
-          <div className="grid h-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
-            <div className="col-span-1 row-span-1">
-              <div className="h-full w-full">
-                <select
-                  name="white"
-                  style={{
-                    textAlignLast: 'center',
-                    writingMode: width > 768 ? 'horizontal-tb' : 'vertical-lr',
-                  }}
-                  className="h-full w-full appearance-none p-4 text-center"
-                  value={clock.timeControl.white}
-                  onChange={(event) => {
-                    const newTimeControl: string = event.target.value;
-                    const timeControl: string[] = newTimeControl.split('+');
-                    const newMinutes: number = parseInt(
-                      timeControl.at(0) ?? '',
-                      10
-                    );
-                    const newMilliseconds: number = newMinutes * ONE_MINUTE;
-                    const newIncrement: number = parseInt(
-                      timeControl.at(1) ?? '',
-                      10
-                    );
-                    setClock(
-                      ({
-                        timeControl,
-                        current,
-                        milliseconds,
-                        increment,
-                        running,
-                      }: ChessClockState) => {
-                        const side = 'white';
+          <div className="grid h-full w-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+            <div
+              className={`col-span-1 row-span-1 ${width > 768 ? 'py-2 md:py-4' : 'px-2 md:px-4'}`}>
+              <select
+                name="white"
+                style={{
+                  textAlignLast: 'center',
+                  writingMode: width > 768 ? 'horizontal-tb' : 'vertical-lr',
+                }}
+                className={`appearance-none text-center ${width > 768 ? 'w-full' : 'h-full'}`}
+                value={clock.timeControl.white}
+                onChange={(event) => {
+                  const newTimeControl: string = event.target.value;
+                  const timeControl: string[] = newTimeControl.split('+');
+                  const newMinutes: number = parseInt(
+                    timeControl.at(0) ?? '',
+                    10
+                  );
+                  const newMilliseconds: number = newMinutes * ONE_MINUTE;
+                  const newIncrement: number = parseInt(
+                    timeControl.at(1) ?? '',
+                    10
+                  );
+                  setClock(
+                    ({
+                      timeControl,
+                      current,
+                      milliseconds,
+                      increment,
+                      running,
+                    }: ChessClockState) => {
+                      const side = 'white';
 
-                        return {
-                          current,
-                          running,
-                          timeControl: {
-                            ...timeControl,
-                            [side]: newTimeControl,
-                          },
-                          increment: { ...increment, [side]: newIncrement },
-                          milliseconds: {
-                            ...milliseconds,
-                            [side]: newMilliseconds,
-                          },
-                        };
-                      }
-                    );
-                  }}>
-                  <optgroup label="Bullet">
-                    <option value="1+0">1 + 0</option>
-                    <option value="1+1">1 + 1</option>
-                  </optgroup>
-                  <optgroup label="Blitz">
-                    <option value="3+0">3 + 0</option>
-                    <option value="3+2">3 + 2</option>
-                    <option value="5+0">5 + 0</option>
-                    <option value="5+5">5 + 5</option>
-                  </optgroup>
-                  <optgroup label="Rapid">
-                    <option value="10+0">10 + 0</option>
-                    <option value="10+5">10 + 5</option>
-                    <option value="15+10">15 + 10</option>
-                    <option value="30+0">30 + 0</option>
-                    <option value="45+0">45 + 0</option>
-                    <option value="60+0">60 + 0</option>
-                  </optgroup>
-                </select>
-              </div>
+                      return {
+                        current,
+                        running,
+                        timeControl: {
+                          ...timeControl,
+                          [side]: newTimeControl,
+                        },
+                        increment: { ...increment, [side]: newIncrement },
+                        milliseconds: {
+                          ...milliseconds,
+                          [side]: newMilliseconds,
+                        },
+                      };
+                    }
+                  );
+                }}>
+                <optgroup label="Bullet">
+                  <option value="1+0">1 + 0</option>
+                  <option value="1+1">1 + 1</option>
+                </optgroup>
+                <optgroup label="Blitz">
+                  <option value="3+0">3 + 0</option>
+                  <option value="3+2">3 + 2</option>
+                  <option value="5+0">5 + 0</option>
+                  <option value="5+5">5 + 5</option>
+                </optgroup>
+                <optgroup label="Rapid">
+                  <option value="10+0">10 + 0</option>
+                  <option value="10+5">10 + 5</option>
+                  <option value="15+10">15 + 10</option>
+                  <option value="30+0">30 + 0</option>
+                  <option value="45+0">45 + 0</option>
+                  <option value="60+0">60 + 0</option>
+                </optgroup>
+              </select>
             </div>
-            <div className="col-span-1 row-span-1 bg-gray-100 text-gray-900">
-              <div className="h-full w-full">
-                <select
-                  name="black"
-                  style={{
-                    textAlignLast: 'center',
-                    writingMode: width > 768 ? 'horizontal-tb' : 'vertical-lr',
-                  }}
-                  className="h-full w-full appearance-none p-4 text-center"
-                  value={clock.timeControl.black}
-                  onChange={(event) => {
-                    const newTimeControl: string = event.target.value;
-                    const timeControl: string[] = newTimeControl.split('+');
-                    const newMinutes: number = parseInt(
-                      timeControl.at(0) ?? '',
-                      10
-                    );
-                    const newMilliseconds: number = newMinutes * ONE_MINUTE;
-                    const newIncrement: number = parseInt(
-                      timeControl.at(1) ?? '',
-                      10
-                    );
-                    setClock(
-                      ({
-                        timeControl,
-                        current,
-                        milliseconds,
-                        increment,
-                        running,
-                      }: ChessClockState) => {
-                        const side = 'black';
+            <div
+              className={`col-span-1 row-span-1 bg-gray-100 text-gray-900 ${width > 768 ? 'py-2 md:py-4' : 'px-2 md:px-4'}`}>
+              <select
+                name="black"
+                style={{
+                  textAlignLast: 'center',
+                  writingMode: width > 768 ? 'horizontal-tb' : 'vertical-lr',
+                }}
+                className={`appearance-none text-center ${width > 768 ? 'w-full' : 'h-full'}`}
+                value={clock.timeControl.black}
+                onChange={(event) => {
+                  const newTimeControl: string = event.target.value;
+                  const timeControl: string[] = newTimeControl.split('+');
+                  const newMinutes: number = parseInt(
+                    timeControl.at(0) ?? '',
+                    10
+                  );
+                  const newMilliseconds: number = newMinutes * ONE_MINUTE;
+                  const newIncrement: number = parseInt(
+                    timeControl.at(1) ?? '',
+                    10
+                  );
+                  setClock(
+                    ({
+                      timeControl,
+                      current,
+                      milliseconds,
+                      increment,
+                      running,
+                    }: ChessClockState) => {
+                      const side = 'black';
 
-                        return {
-                          current,
-                          running,
-                          timeControl: {
-                            ...timeControl,
-                            [side]: newTimeControl,
-                          },
-                          increment: { ...increment, [side]: newIncrement },
-                          milliseconds: {
-                            ...milliseconds,
-                            [side]: newMilliseconds,
-                          },
-                        };
-                      }
-                    );
-                  }}>
-                  <optgroup label="Bullet">
-                    <option value="1+0">1 + 0</option>
-                    <option value="1+1">1 + 1</option>
-                  </optgroup>
-                  <optgroup label="Blitz">
-                    <option value="3+0">3 + 0</option>
-                    <option value="3+2">3 + 2</option>
-                    <option value="5+0">5 + 0</option>
-                    <option value="5+5">5 + 5</option>
-                  </optgroup>
-                  <optgroup label="Rapid">
-                    <option value="10+0">10 + 0</option>
-                    <option value="10+5">10 + 5</option>
-                    <option value="15+10">15 + 10</option>
-                    <option value="30+0">30 + 0</option>
-                    <option value="45+0">45 + 0</option>
-                    <option value="60+0">60 + 0</option>
-                  </optgroup>
-                </select>
-              </div>
+                      return {
+                        current,
+                        running,
+                        timeControl: {
+                          ...timeControl,
+                          [side]: newTimeControl,
+                        },
+                        increment: { ...increment, [side]: newIncrement },
+                        milliseconds: {
+                          ...milliseconds,
+                          [side]: newMilliseconds,
+                        },
+                      };
+                    }
+                  );
+                }}>
+                <optgroup label="Bullet">
+                  <option value="1+0">1 + 0</option>
+                  <option value="1+1">1 + 1</option>
+                </optgroup>
+                <optgroup label="Blitz">
+                  <option value="3+0">3 + 0</option>
+                  <option value="3+2">3 + 2</option>
+                  <option value="5+0">5 + 0</option>
+                  <option value="5+5">5 + 5</option>
+                </optgroup>
+                <optgroup label="Rapid">
+                  <option value="10+0">10 + 0</option>
+                  <option value="10+5">10 + 5</option>
+                  <option value="15+10">15 + 10</option>
+                  <option value="30+0">30 + 0</option>
+                  <option value="45+0">45 + 0</option>
+                  <option value="60+0">60 + 0</option>
+                </optgroup>
+              </select>
             </div>
           </div>
         </div>
@@ -278,7 +275,7 @@ export const ChessClockPage: NextPage = () => {
           </div>
         </div>
         <div className="order-1 grid grid-cols-1 md:order-3 md:grid-cols-2">
-          <div className="col-span-1">
+          <div className="col-span-1 row-span-1">
             <button
               type="button"
               className="h-full w-full bg-gray-900 p-4 text-center text-gray-100"
@@ -297,7 +294,7 @@ export const ChessClockPage: NextPage = () => {
               )}
             </button>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 row-span-1">
             <button
               type="button"
               className="h-full w-full bg-gray-100 p-4 text-center text-gray-900"
