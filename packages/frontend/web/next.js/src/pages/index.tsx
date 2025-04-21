@@ -33,17 +33,17 @@ const HomePage: NextPage = () => {
 
   const apps = [
     {
-      id: 'apps',
-      href: '/apps',
-      name: 'Apps',
-      icon: <FaAppStoreIos />,
-      target: '_self',
-    },
-    {
       id: 'notes',
       href: '/posts',
       name: 'Notes',
       icon: <FaPenToSquare />,
+      target: '_self',
+    },
+    {
+      id: 'studio',
+      href: '/apps',
+      name: 'studio',
+      icon: <FaAppStoreIos />,
       target: '_self',
     },
     {
