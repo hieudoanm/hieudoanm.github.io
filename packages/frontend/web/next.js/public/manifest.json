@@ -1,20 +1,20 @@
 {
-  "id": "nothing",
-  "name": "Nothing",
-  "short_name": "Nothing",
-  "description": "A Nothing Progressive Web App",
+  "id": "hieudoan",
+  "name": "Hieu Doan",
+  "short_name": "HD",
+  "description": "Hieu Doan - Progressive Web App",
   "display": "fullscreen",
   "background_color": "#101828",
   "theme_color": "#101828",
   "orientation": "portrait",
-  "categories": ["design", "app"],
+  "categories": ["apps", "notes", "widgets"],
   "start_url": "https://hieudoanm.github.io/",
   "scope": "https://hieudoanm.github.io/",
   "shortcuts": [
     {
-      "name": "Applications",
-      "short_name": "Apps",
-      "description": "Apps",
+      "name": "Studio",
+      "short_name": "Studio",
+      "description": "Studio",
       "url": "/apps",
       "icons": [
         {
