@@ -1020,7 +1020,7 @@ const StudioPage: NextPage = () => {
       <div className="flex h-full flex-col gap-y-4">
         <div className="flex items-center justify-between px-4 pt-4">
           <div className="flex items-center gap-x-2">
-            <Link href="/apps">
+            <Link href="/">
               <FaArrowLeft />
             </Link>
             <p className="font-semibold">Studio</p>
