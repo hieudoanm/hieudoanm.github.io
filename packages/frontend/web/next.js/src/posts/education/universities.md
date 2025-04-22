@@ -1,11 +1,12 @@
 ---
 title: 'Universities'
-date: '2025-03-19'
+date: '2025-04-22'
 ---
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Notable Schools](#notable-schools)
 - [Australia](#australia)
   - [Group of Eight (G8)](#group-of-eight-g8)
   - [Notable Mentions](#notable-mentions)
@@ -17,6 +18,14 @@ date: '2025-03-19'
 - [United States](#united-states)
   - [Ivy League (8)](#ivy-league-8)
   - [Notable Mentions (USA)](#notable-mentions-usa)
+
+## Notable Schools
+
+1. Business School
+2. Law School
+3. Medical School
+4. Engineering and Technology
+5. Natural and Social Sciences
 
 ## Australia
 
@@ -67,9 +76,14 @@ date: '2025-03-19'
 
 ## Singapore
 
-- National University of Singapore
-  - Duke–NUS Medical School
-  - Yale-NUS College
+| #   | Name                                                 | Medical School          | Law School       |
+| --- | ---------------------------------------------------- | ----------------------- | ---------------- |
+| 01  | National University of Singapore                     | Duke–NUS Medical School | Yale-NUS College |
+| 02  | Nanyang Technological University (NTU)               |                         |                  |
+| 03  | Singapore Management University (SMU)                |                         |                  |
+| 04  | Singapore University of Technology and Design (SUTD) |                         |                  |
+| 05  | Singapore Institute of Technology (SIT)              |                         |                  |
+| 06  | Singapore University of Social Sciences (SUSS)       |                         |                  |
 
 ## United Kingdom
 
