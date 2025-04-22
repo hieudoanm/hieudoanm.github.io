@@ -7,7 +7,6 @@ date: '2025-04-21'
 
 - [Table of Contents](#table-of-contents)
 - [Activities](#activities)
-- [The Eisenhower Matrix: How to prioritize your to-do list](#the-eisenhower-matrix-how-to-prioritize-your-to-do-list)
 
 ## Activities
 
@@ -55,15 +54,3 @@ What I do when I am bored (or think I have nothing to do). Maybe you can do it t
 | 38  | Work         |             | Work on `Broca`                            |
 | 39  | Work         |             | Work on `Nothing`                          |
 | 40  | Work         |             |                                            |
-
-## The Eisenhower Matrix: How to prioritize your to-do list
-
-|               | Urgent      | Not Urgent |
-| ------------- | ----------- | ---------- |
-| Important     | `Do` It Now | `Schedule` |
-| Not important | `Delegate`  | `Delete`   |
-
-1. `Do` It Now
-2. `Schedule`
-3. `Delegate`
-4. `Delete`

@@ -5,33 +5,33 @@ date: '2025-04-21'
 
 ## Vietnamese
 
-- Phở Gà
-- Phở Bò
-- Bún Chả
-- Bún Riêu
-- Bún Đậu
-- Cơm Tấm
-- Bánh Mì
-- Xôi
+1. Phở Gà
+2. Phở Bò
+3. Bún Chả
+4. Bún Riêu
+5. Bún Đậu
+6. Cơm Tấm
+7. Bánh Mì
+8. Xôi
 
 ## Thai
 
-- Pad Thai
-- Đảo Sườn
-- Cơm Dừa
+1. Pad Thai
+2. Đảo Sườn
+3. Cơm Dừa
 
 ## Korean
 
-- Mì lạnh
-- Kimbap
+1. Mì lạnh
+2. Kimbap
 
 ## Japanese
 
-- Sushi
-- Ramen
-- Udon
+1. Sushi
+2. Ramen
+3. Udon
 
 ## Italian
 
-- Mỳ Ý
-- Pizza
+1. Mỳ Ý
+2. Pizza
