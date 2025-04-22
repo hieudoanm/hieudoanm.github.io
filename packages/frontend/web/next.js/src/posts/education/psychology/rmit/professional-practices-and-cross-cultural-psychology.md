@@ -187,9 +187,34 @@ date: '2025-04-22'
 
 ### Week 04
 
+- Explain and discuss psychology research ethics in terms of:
+  - Background classic studies
+  - Relate key research ethical principles to these classic cases
+- Explain and discuss professional psychology ethical issues in terms of:
+  - General principles
+  - Relate key clinical case studies to these general professional issues
+- Explain and discuss RMIT staff code of ethics in terms of:
+  - Guiding principles
+  - Relate key academic case studies to these guiding principles
+- Explain and discuss RMIT student code of ethics in terms of:
+  - The three general types of misconduct
+  - Relate key student case studies to the three types of misconduct
+
 ### Week 05
 
+- Conceptualize psychological research in crime
+- Explain and discuss psychology and the law
+- Discuss the parameters of forensic psychology [including being a witness]
+- Explain how psychologists use profiling
+- Explain malpractice, identify the different types of malpractice and explain each in terms of case material
+
 ### Week 06
+
+- What is cultural diversity, its relevance to Australia and to professional psychology
+- Explain causation from a multicultural perspective and discuss the role of the DSM 5 in terms of cultural diversity
+- What is migration stress and evaluate acculturation strategies to decrease stress
+- Discuss the impact of different service models and psychotherapies in a multicultural society
+- What is cultural competence and explain its training and evaluation
 
 ## Midterm 2
 
