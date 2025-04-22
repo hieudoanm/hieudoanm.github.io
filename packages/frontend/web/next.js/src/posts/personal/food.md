@@ -5,14 +5,17 @@ date: '2025-04-21'
 
 ## Vietnamese
 
-1. Phở Gà
-2. Phở Bò
-3. Bún Chả
-4. Bún Riêu
-5. Bún Đậu
-6. Cơm Tấm
-7. Bánh Mì
-8. Xôi
+- Breakfast
+  - Phở Gà
+  - Phở Bò
+  - Bánh Mì
+- Lunch
+  - Bún Chả
+  - Xôi
+- Dinner
+  - Bún Riêu
+  - Bún Đậu
+  - Cơm Tấm
 
 ## Thai
 
