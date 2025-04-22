@@ -125,6 +125,66 @@ date: '2025-04-22'
 
 ### Week 03
 
+- Define and explain the concept of worldview
+  - Personal and philosophical view => reflecting your belief and assumptions of the world
+  - Have impact (but inconsistence) on your daily life => how you behave, response and relate to others
+  - Identify the major [philosophical] issues => Research it => Conclude => Ensure there is a consistency
+- Discuss the importance of worldview awareness and being internally consistent within your own worldview
+  - Importance of worldview awareness
+    - Worldviews serve as the necessary foundation and framework for our thoughts and actions => Ditact action
+    - Our worldviews are the single greatest influence on the way we interpret our experiences and respond to those experiences => Ditact action
+    - To successfully engage with diversity [gender, developmental age, culture, etc] is to think of them in terms of the worldviews they reflect => understand people worldview to work with them
+  - Understanding different worldview creates different actions => better understand and response to other from their perspective
+- Explain a model of worldview using the following domains: Philosophy; Psychology; Knowledge; Ethics; and, Application
+  - Philosophy
+    - Good vs Evil vs Tabula Rasa
+    - Nature vs Nurture: Biological vs Social
+    - Free will vs Determinism: Create Own Destiny vs Cause and Effect
+    - Body vs Mind: Biological and Cognitive vs Emotion and Motivation
+    - Rational vs Irrational: Cognitive vs Emotion
+    - Whole vs Part
+    - Quantitative vs Qualitative: Structure vs Functionalism
+    - Morality vs Moral Responsibility: Ethics vs Pragmatism
+    - Individualism vs Society: Individuals Goal vs Common Goods
+    - Ethical Behaviour: Interpersonal Relationship
+  - Psychology
+    - Psychology is how we try to answer the 10 questions of Philosophy
+  - Knowledge
+    - Research help (in)validate theory => Developing the understanding of Psychology
+  - Ethics
+    - Personal Ethics vs Professional Guildlines (Standards and Ethics)
+  - Application
+    - Own vs Org vs Client
+- Discuss research using the factor analysis to study Worldviews and its ability to predict responses on fundamental traits of human nature
+  - Research
+    - Nilsson, A. (2015) on Worldview factors:
+      - Worldview factor 1: Scientism-reductionism = "There is a rational explanation of everything"
+      - Worldview factor 2: Scientism-common sense empiricism = "All knowledge is based on experience and observation, theories are by themselves meaningless abstraction"
+      - Worldview factor 3: Scientific naturalism = "Human action is constrained by the limits placed by inheritance and environment"
+      - Worldview factor 4: Common sense empiricism = "You should be critical and ready to challenge authorities as everyone else"
+      - Sample only colleges students
+    - Saucier, G., et al (2015): Global [pan-cultural] focus and therefore minimal focus on national [cross cultural] issues and the individual [psychological] level
+    - Bond, M., et al. (2004)
+      - Dynamic externality vs Societal cynicism => create 4 group of people
+        - Scored high on religiousity, reward for application, fate control
+        - Societal cynicism – living in a predictable, benign environment, do not aspire to high performance but focus on sensible, realistic, achievable outcomes
+  - Factors
+    - Factor 1: Religiosity – this factor focuses on religious authority and tradition. People scoring high on this factor believe in the existence of a God who created nature and life and controls what happens to people – both good and bad
+    - Factor 2: Naturalism - This factor is associated with the relationship between humans and nature. This includes connectedness, choice of life style and [negative] impact of human activity on nature
+    - Factor 3: Integrated Worldview - This factor is associated with the relationship between humans and nature. This includes connectedness, choice of life style and [negative] impact of human activity on nature
+    - Factor 4: Individualism - This factor is associated with being independent, using their own judgement, choosing their own life style and being recognized for their own achievements
+    - Factor 5: Gestalt formation - This cognitive factor emphasizes completeness/wholeness. That is, the idea that people should integrate all perspectives, appreciate and accept different perspectives from diverse groups, and is contrary to the belief that people should be defined by their own attributes
+    - Factor 6: Scientism - This factor focuses on the belief that science is the ultimate source of facts [reality], that science is important and will ultimately solve all the world’s problems.
+    - Factor 7: Developing self - This factor reflects that a fundamental part of developing is a welfare state and educational institutions that will lead to inner [personal] growth and self-actualization. If is contrary to individuals trying to adapt their self to fit into society
+- Explain how profiling worldviews help understand how people act in various scenarios
+  - Factor 1: Religiosity - People with religious beliefs have a tendency to see humans as morally fragile and in need of guidance/direction by higher power
+  - Factor 2: Naturalism - Strongly endorsing changing the society [which in turn will indirectly change the individual] and changing [rehabilitate] prisoners to strengthen their connection with society [develop skills to get jobs, money, home, family, etc]
+  - Factor 3: Integrated Worldview - Hence, the strong support for changing society and rehabilitation of prisoners.
+  - Factor 4: Individualism - From an individualistic perspective the most logically interventions are advocating harsher penalties for in the individual prisoner or rehabilitation of the prisoner – teaching the individual more appropriate life skills. Someone focusing on individualism is unlikely to endorse changing society to fit the individual
+  - Factor 5: Gestalt formation - Contrary to this prediction, the most favoured solution by this group was the simple judicial solution of increasing criminal penalties
+  - Factor 6: Scientism - In this case, the evidence suggests that the most pragmatic solution is to rehabilitate prisoners followed by changing societal values. Few people who believe in scientism would endorse the “failed” strategy of simply making penalties more harsh
+  - Factor 7: Hence a strong endorsement for this factor would not endorse changing society, but would focus on punishment [increase penalties] and individual skill development [rehabilitate prisoners]
+
 ### Week 04
 
 ### Week 05

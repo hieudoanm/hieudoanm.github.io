@@ -80,7 +80,7 @@ import {
   useState,
 } from 'react';
 import {
-  FaArrowLeft,
+  FaChevronLeft,
   FaCopy,
   FaDownload,
   FaImages,
@@ -1021,7 +1021,7 @@ const StudioPage: NextPage = () => {
         <div className="flex items-center justify-between px-4 pt-4">
           <div className="flex items-center gap-x-2">
             <Link href="/">
-              <FaArrowLeft />
+              <FaChevronLeft />
             </Link>
             <p className="font-semibold">Studio</p>
           </div>
