@@ -203,10 +203,107 @@ date: '2025-04-22'
 ### Week 05
 
 - Conceptualize psychological research in crime
+  - Crime can be conceptualized as the interaction between offender and victim [or their property] and the environment
+  - Theories
+    - Victim precipitation theory: it is the victim's fault
+    - Deviant place theory: hot spots of crime
+    - Personality [Psychopathology] theory: Profiling
 - Explain and discuss psychology and the law
+  - Flaws in Eye-witness
+    - Loftus & Palmer (1974) => distord memory
+    - Loftus & Pickrell (1990) => It was possible to implant false memories
+    - Loftus fight her own case
 - Discuss the parameters of forensic psychology [including being a witness]
+  - A lot of myths: cool, carrying weapons, inaccurate
+  - Forensic psychology is the intersection between psychology and the all areas of the criminal justice system and involves the following areas:
+    - **Research and develop theories associated with crime and victimization**
+    - **Testify in courts as an expert witness**
+    - **Profiling**
+    - Determine the competence of the accused to stand trial
+    - Family law involvement [include child custody and visitation]
+    - Determination of insanity
+    - Litigation of others
+    - Worker and motor accident compensation
+    - Assessing criminals in terms of sentencing and or release/probation
+    - Assessing witnesses in terms of reliability and credibility
+  - Psychologist in the court
+    - Types
+      - Witness of fact - assessment, perception and interpretation of client
+      - Expert witness - expert knowledge, can provide opinion
+      - Litigant
+      - Conflict of interest => Witness of fact >< Expert witness
+    - Why
+      - Psychologists are called to provide expert testimony on specific psychological questions that are deemed beyond the experience of a typical juror member
+    - Requirements
+      - Evidence of their own competence to testify on this matter
+      - Evidence of their ethical and professional standards
+      - Testimony/evidence based on the reliable and valid principles and procedures of the discipline and profession of Psychology
+      - Factual information that is clear, concise and understandable – to the general public
+      - Material relevant to a specific issue and subject to the rules of evidence (eg, not hearsay)
 - Explain how psychologists use profiling
+  - Definition: the recording and analysis of a person's psychological and behavioural characteristics, so as to assess or predict their capabilities in a certain sphere or to assist in identifying categories of people
+  - Offender profiling:
+    - One of many criminal investigative tools
+    - Is a scientific [educated] attempt at offender identification
+    - Infers behaviours arising from a crime scene
+    - From these behaviours – determines offender characteristics
+    - Characteristics typically include
+      - demographics [gender, age, education level, marital status, culture/ethnicity]
+      - psychographics [personality traits and any psychopathology]
+    - Primary goal is to allow investigators to identify a specific offender from the general population [hence demographics to arrest, psychographics when questioning]
+  - Errors:
+    - Type 1 Error: Focus on the wrong suspect
+    - Type 2 Error: Offender is ignored
+  - Most accurate profiling method
+    - Behavioural Evidence Analysis – deductive reasoning – focuses on the scientific investigation via the collection, interpretation and testing of crime scene evidence
+    - Equivocal forensic analysis – examine all crime scene evidence
+    - Victimology – determine victim life-style [demographics, family and social history/background] – a forensic autopsy
+    - Crime scene characteristics – mainly focus on victim’s relationships with location and known associates
+    - Characteristics of crime and criminal behaviour/skill
 - Explain malpractice, identify the different types of malpractice and explain each in terms of case material
+  - Therapist Malpractice: cause harm to patient
+  - Common errors
+    - Making inappropriate or excessive self-disclosure;
+    - Using techniques without proper training;
+    - Deliberately misdiagnosing patients;
+    - Having a sexual relationship with a current or former patient;
+    - Failing to take adequate notes;
+    - Failing to take a proper history; and/or
+    - Failing to consult with peers or to take the advice of peers.
+  - Client have to prove
+    - show that an ordinary reasonable therapist
+    - show that client suffered some injury
+    - The injuries must be measurable
+  - Defense
+    - For a charge regarding sexual misconduct or sexual assault: No physical contact
+    - For a charge regarding negligent practice: Qualifications
+    - Using controversial methods of therapy or methods: Qualifications
+    - Session notes: exercised good judgment
+    - Written evidence of fully informed consent
+  - Consequences
+    - Professional reputation
+    - Financial
+    - Personally => give up practice
+  - Under the law clients/patients have:
+    - The right to psychotherapy in the least restrictive environment
+    - The right to exercise informed consent to treatment alternatives
+    - The right to treatment that satisfies the highest standards of care
+    - The right to expect that their therapist will act ethically
+  - Malpractice laws serve three important community functions:
+    - It protects the public from professional wrongdoing by providing aversive consequences [professional, financial, personal] for misconduct
+    - It transfers the “loss” from one party to another party who is more culpable
+    - It distributes the cost of professional negligence across the profession through increased insurance premiums – hence put pressure on professional associations [APS] to self-regulate and self-scrutinize
+  - Proving malpractice [via the criminal justice system]:
+    - Legal: Status and Case Law
+    - Professional: Ethical codes / Consensus of professionals / Consensus in the community
+  - Litigation:
+    - Litigation 1: Practising medicine without a license and was found guilty
+    - Litigation 2: Failure to communicate and was found guilty
+    - Litigation 3: Failure to manage risk but found not guilty
+    - Litigation 5: Failure to maintain confidentiality and found guilty
+    - Litigation 6: Failure to provide informed consent [fully informed about the nature of the evaluation – that is who requested it? and why?]. The psychologist was found guilty
+    - Litigation 7: Sexual victimisation
+    - Litigation 8: Financial/business arrangements
 
 ### Week 06
 
