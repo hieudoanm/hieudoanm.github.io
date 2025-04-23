@@ -27,7 +27,7 @@
     "pino": "9.6.0",
     "pino-pretty": "13.0.0",
     "public-ip": "7.0.1",
-    "puppeteer": "24.7.0"
+    "puppeteer": "24.7.1"
   },
   "devDependencies": {
     "@eslint/js": "9.25.1",
