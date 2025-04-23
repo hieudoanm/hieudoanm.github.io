@@ -27,21 +27,24 @@ date: '2025-04-18'
 
 ## Native
 
-| No  | Group            | Mobile  | Tablet  | Desktop  | Name                        |
-| --- | ---------------- | ------- | ------- | -------- | --------------------------- |
-| 01  | [Apple][apple]   | iOS     | iPadOS  | macOS    | [SwiftUI][apple-swiftui]    |
-| 02  | [Google][google] | Android | Android | ChromeOS | [Material][google-material] |
-| 03  | [Microsoft][ms]  |         |         | Windows  | [WinUI][ms-winui]           |
+| No  | Group            | Mobile                    | Tablet                    | Desktop                     | Name                        |
+| --- | ---------------- | ------------------------- | ------------------------- | --------------------------- | --------------------------- |
+| 01  | [Apple][apple]   | [iOS][apple-ios]          | [iPadOS][apple-ipados]    | [macOS][apple-macos]        | [SwiftUI][apple-swiftui]    |
+| 02  | [Google][google] | [Android][google-android] | [Android][google-android] | [ChromeOS][google-chromeos] | [Material][google-material] |
+| 03  | [Microsoft][ms]  |                           |                           | [Windows][ms-windows]       | [WinUI][ms-winui]           |
 
 ## Other
 
 - Infrastructure
-  - Docker
-  - Terraform
+  - [Docker](https://www.docker.com/)
+  - [Terraform](https://developer.hashicorp.com/terraform)
 - Markdown
 
 [android-studio]: https://developer.android.com/studio
 [apple]: https://www.apple.com/
+[apple-ios]: https://www.apple.com/ios/
+[apple-ipados]: https://www.apple.com/ipados/ipados-18/
+[apple-macos]: https://www.apple.com/macos/
 [apple-swift]: https://www.swift.org/
 [apple-swiftui]: https://developer.apple.com/xcode/swiftui/
 [apple-xcode]: https://developer.apple.com/xcode/
@@ -51,6 +54,8 @@ date: '2025-04-18'
 [docker-hub-python]: https://hub.docker.com/_/python/
 [go]: https://go.dev/
 [google]: https://www.google.com/
+[google-android]: https://www.android.com/
+[google-chromeos]: https://chromeos.google/
 [google-material]: https://m3.material.io/
 [jetbrains]: https://www.jetbrains.com/
 [jetbrains-idea]: https://www.jetbrains.com/idea/
@@ -61,6 +66,7 @@ date: '2025-04-18'
 [ms-typescript]: https://www.typescriptlang.org/
 [ms-vs]: https://visualstudio.microsoft.com/
 [ms-vsc]: https://code.visualstudio.com/
+[ms-windows]: https://www.microsoft.com/en-us/windows/
 [ms-winui]: https://learn.microsoft.com/vi-vn/windows/apps/winui/
 [oracle]: https://www.oracle.com/
 [oracle-java]: https://www.java.com/
