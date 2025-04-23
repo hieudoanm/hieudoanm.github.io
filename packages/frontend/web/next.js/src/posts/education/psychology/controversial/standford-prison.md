@@ -28,7 +28,7 @@ The Stanford Prison Experiment (SPE), conducted in 1971 by psychologist Philip Z
 ### Ethical
 
 - Lack of Informed Consent: The participants are not informed of potential psychological distress.
-- Psychological Harm: Some participants (mostly plays prisoners) experience emotional and psychological distress
+- Lack of Protection of Participants from Psychological Harm: Some participants (mostly plays prisoners) experience emotional and psychological distress
 - Lack of Right to Withdraw: Participants are not allowed to leave
 - Dual Roles and Conflict of Interest: Zimbardo act as both observer and superintendent, influecing the research himself
 

@@ -189,15 +189,59 @@ date: '2025-04-22'
 
 - Explain and discuss psychology research ethics in terms of:
   - Background classic studies
+    - Informed consent – tell participants real aim of study
+    - Protection of participants – do not harm
+    - Deception avoidance – tell no lies
+    - Confidentiality – protect all participant information
+    - Right to withdraw – permission to leave study at any time
+    - Debrief – fully explain study afterwards
   - Relate key research ethical principles to these classic cases
 - Explain and discuss professional psychology ethical issues in terms of:
   - General principles
+    - Psychological Professional Ethics
+      - Purpose of a code of professional practice
+        - Articulates and promotes ethical principles
+        - Sets specific standards to guide psychologists and public
+        - Clarifies the expectations of what is considered ethical professional conduct by psychologists
+        - Has three general principles [see next slides]
+          - A: Respect for the rights and dignity of people and peoples - Regard people as intrinsically valuable and respect their rights, including the right to autonomy and justice. Psychologists engage in conduct which promotes equity and the protection of people’s human rights, legal rights, and moral rights. They respect the dignity of all people and peoples.
+          - B: Propriety - The welfare of clients and the public, and the standing of the profession, take precedence over a psychologist’s self-interest.
+          - C: Integrity - Power / Trust / Honesty
+    - Case vignettes
+      - Competence – professional has sufficient knowledge, judgement and skill in the relevant area
+      - Confidentiality – keeping client information restricted/private
+      - Dual relationships – existence of multiple roles with client – eg client is also a relative or work colleague etc
+      - Informed consent – client both understands their condition and proposed therapy
+      - Therapist impairment – condition that has a negative impact on the therapist’s professional functioning
   - Relate key clinical case studies to these general professional issues
 - Explain and discuss RMIT staff code of ethics in terms of:
   - Guiding principles
+    - Respecting others - staff at all times are expected to treat students, other staff and members of the community with respect
+    - Behaving professionally - Staff are expected to carry out their work duties in a professional and conscientious manner at all times
+    - Avoiding conflict of interest - Staff must take reasonable steps to avoid any actual or potential conflict of interest and act in the best interests of the University
+    - Using University resources - Staff are expected to use all University facilities, equipment and processes efficiently, carefully and in a proper manner
+    - Recognising academic freedom - Staff have a general right to intellectual freedom of enquiry and expression in areas where they possess a level of expertise
   - Relate key academic case studies to these guiding principles
 - Explain and discuss RMIT student code of ethics in terms of:
   - The three general types of misconduct
+    - High-risk misconduct refers to concerns that a student may have threatened the safety of the University or of any person
+    - General misconduct refers to concerns that a student may have:
+      - failed to comply with a reasonable request from a member of staff
+      - affected the reputation of the University
+      - discriminated against another person
+      - harassed or intimidated or bullied another person
+      - caused property damage or committed theft
+      - improperly used University facilities
+      - hacked or inappropriately accessed computer records
+      - breached copyright
+      - encouraged other students to behave inappropriately
+    - Academic misconduct refers to concerns that a student may have cheated by:
+      - taking notes or other unauthorised materials into an examination
+      - plagiarising the work of another person or student
+      - deliberately letting their work be used by another student
+      - impersonating another student, or allowing themselves to be impersonated
+      - breaching the research code
+      - somehow misleading the teacher responsible for an assessment task.
   - Relate key student case studies to the three types of misconduct
 
 ### Week 05
