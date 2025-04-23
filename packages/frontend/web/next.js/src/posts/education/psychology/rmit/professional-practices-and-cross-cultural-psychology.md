@@ -211,10 +211,86 @@ date: '2025-04-22'
 ### Week 06
 
 - What is cultural diversity, its relevance to Australia and to professional psychology
+  - Diversity includes a broad range of variables (gender, age, LGBT+, religion)
+  - Systematic cultural differences that exist in development, cognitive-language, social, personality, psychopathology and the needs/expectations associated with psychotherapy
+  - Types:
+    - Ethnocentrism: use your standard to judge other
+    - Cultural relativism: use their own standard to judge them
+    - Cultural universals: use the common global standard
+      - ETIC – what all cultures have in common
+      - EMIC – what is specific to each culture
+  - Tripartite model:
+    - Individual level – genetics and non-shared experiences – all individuals are unique and are not like other individuals [solely EMIC influences]
+    - Group level – all individuals are, in some respects, like other people [within a culture] [ETIC, but acknowledges EMIC influences]
+    - Universal level – all individuals are, in some respects, like all other individuals [across cultures] [solely ETIC influences]
+  - Australia
+    - Diverse Culture due to Immigrants and Refugees
+  - Issues
+    - Western psychology makes universal assumptions
+    - Diagnostic tool is Western-based
+    - Trained only in Western psychotherapies [primarily CBT]
+    - Focus on Individualistic
+  - Cultural variations:
+    - There appears to be widespread cultural variation in the causal explanation of mental illness
+    - If cause is assumed to be biological, then the intervention [treatment] should logically be biological
 - Explain causation from a multicultural perspective and discuss the role of the DSM 5 in terms of cultural diversity
+  - There are four major causal explanations for abnormal behaviour
+    - Supernatural healing: Evil Spirit
+    - Natural healing: Imbalance/disharmony with the natural forces that rule the universe
+    - Medical – physiological approaches: Weakness of exhaustion of nervous system of physiological imbalance
+    - Social – Psychological: Emotional (or anxiety based) and/or cognitions
+  - Schizophrenia was universal [biological] but ETIC [causes] and EMIC [solutions]
+    - Developing nations [eg India, Columbia, Nigeria] had better long-term outcomes [lower prevalence rates] compared to developed nations [eg, USA, UK, Denmark, Japan, Russia]
+    - Constract to common logic because developed nation should have better conditions
+    - Because developing nations is
+      - not dominated by treatment via the medical disease model
+      - focused on environmental areas
+      - different social psychological influences
+  - DSM is extremly Western-influence and based on medical disease model
+  - In medicine and medical anthropology, a culture-bound syndrome, culture-specific syndrome, or folk illness is a combination of psychiatric and somatic symptoms that are considered to be a recognizable disease only within a specific society or culture.
 - What is migration stress and evaluate acculturation strategies to decrease stress
+  - There are multiple theories trying to explain the high rates of schizophrenia found in migrants groups [including refugees]
+  - Enculturation & Acculturation
+    - Enculturation is the process whereby humans learn the cultural norms and behaviours of their (first) and original culture [see parenting and child development]
+    - Acculturation begins to occur when humans migrate to a new national culture and begin to permanently reside within this new (host) culture. Humans in this context can choose to adapt to this new culture.
+
+|                    | High Enculturation                 | Low Enculturation                       |
+| ------------------ | ---------------------------------- | --------------------------------------- |
+| High Acculturation | Integration (Low in Mental Health) | Assimilation                            |
+| Low Acculturation  | Separation                         | Marginalisation (High in Mental Health) |
+
 - Discuss the impact of different service models and psychotherapies in a multicultural society
+  - Approarches
+    - ETIC: Top-down - be cost-effective but fail to help the culturally diverse
+    - EMIC: Bottom-up - increase cost but ensure services for all Australians [benefits]
+  - Type of psychotherapy
+    - Psychoanalysis
+    - Humanistic
+    - Behaviour Therapy (CBT): use conditioning to change behaviour, focusing on individual
+      - therapist as an interpreter, a facilitator or a trainer
+    - Naikan Therapy (introspection or look inside) (culture-specific therapy): culturally appropriate interdependent relationship with significant others in their lives, sfocusing on collectivism
+      - therapist as pastoral role – just to support the client in isolation [to focus the mind] and self-reflection [on clarifying their thinking]
+      - Question 1: What have I received from \_\_\_ ?
+      - Question 2: What have I given to \_\_\_ ?
+      - Question 3: What troubles or difficulties I have caused \_\_ ?
 - What is cultural competence and explain its training and evaluation
+  - Four skills:
+    - Admission
+    - Awareness
+    - Knowledge
+    - Skills
+  - Why?
+    - Form a strong therapeutic relationship
+    - Disclose more
+    - Be more trusting
+    - Be more likely to accept therapeutic advice and be adherent to treatment goals – therapy will be culturally sensible
+  - Requires
+    - Admit Limitations: Know that your knowledge are limited
+    - Cultural self-awareness: Know your culture and bias
+    - Knowledge of diverse cultures: Know your client's culture and bias
+    - Culturally appropriate clinical skills
+  - Training
+    - Diverse student and teaching staff
 
 ## Midterm 2
 
