@@ -12,26 +12,22 @@ date: '2025-04-18'
 
 ## Top 10
 
-| No  | Language                                 | Language (Maintainer)  | IDE                              | IDE (Maintainer)       | Docker                       | Usage               |
-| --- | ---------------------------------------- | ---------------------- | -------------------------------- | ---------------------- | ---------------------------- | ------------------- |
-| 01  | [Java][oracle-java]                      | [Oracle][oracle]       | [IDEA][jetbrains-idea]           | [JetBrains][jetbrains] | [Docker][docker-hub-openjdk] | Back-end            |
-| 02  | [Go][go]                                 | [Google][google]       |                                  |                        | [Docker][docker-hub-golang]  | CLI                 |
-| 03  | [Python][python]                         |                        | [Jupyter][jupyter]               |                        | [Docker][docker-hub-python]  | Data Science        |
-| 04  | C / C++                                  |                        |                                  |                        |                              | Embedded            |
-| 05  | [C#][ms-csharp]                          | [Microsoft][ms]        | [Visual Studio][ms-vs]           | [Microsoft][ms]        |                              | Front-end - Desktop |
-| 06  | [Kotlin][jetbrains-kotlin]               | [JetBrains][jetbrains] | [Android Studio][android-studio] | [Google][google]       |                              | Front-end - Mobile  |
-| 07  | [Swift][apple-swift]                     | [Apple][apple]         | [XCode][apple-xcode]             | [Apple][apple]         |                              | Front-end - Mobile  |
-| 08  | JavaScript / [TypeScript][ms-typescript] | [Microsoft][ms]        | [Visual Studio Code][ms-vsc]     | [Microsoft][ms]        | [Docker][docker-hub-node]    | Front-end - Web     |
-| 09  | [Rust][rust]                             |                        |                                  |                        |                              | OS                  |
-| 10  |                                          |                        |                                  |                        |                              |                     |
+| No  | Language                                 | Language (Maintainer) | IDE                          | IDE (Maintainer)       | Docker                       | Usage           |
+| --- | ---------------------------------------- | --------------------- | ---------------------------- | ---------------------- | ---------------------------- | --------------- |
+| 01  | [Java][oracle-java]                      | [Oracle][oracle]      | [IDEA][jetbrains-idea]       | [JetBrains][jetbrains] | [Docker][docker-hub-openjdk] | Back-end        |
+| 02  | [Go][go]                                 | [Google][google]      |                              |                        | [Docker][docker-hub-golang]  | CLI             |
+| 03  | [Python][python]                         |                       | [Jupyter][jupyter]           |                        | [Docker][docker-hub-python]  | Data Science    |
+| 04  | C / C++                                  |                       |                              |                        |                              | Embedded        |
+| 05  | JavaScript / [TypeScript][ms-typescript] | [Microsoft][ms]       | [Visual Studio Code][ms-vsc] | [Microsoft][ms]        | [Docker][docker-hub-node]    | Front-end - Web |
+| 06  | [Rust][rust]                             |                       |                              |                        |                              | OS              |
 
 ## Native
 
-| No  | Group            | Mobile                    | Tablet                    | Desktop                     | Name                        |
-| --- | ---------------- | ------------------------- | ------------------------- | --------------------------- | --------------------------- |
-| 01  | [Apple][apple]   | [iOS][apple-ios]          | [iPadOS][apple-ipados]    | [macOS][apple-macos]        | [SwiftUI][apple-swiftui]    |
-| 02  | [Google][google] | [Android][google-android] | [Android][google-android] | [ChromeOS][google-chromeos] | [Material][google-material] |
-| 03  | [Microsoft][ms]  |                           |                           | [Windows][ms-windows]       | [WinUI][ms-winui]           |
+| No  | Group            | Mobile                    | Tablet                    | Desktop                     | Language                                            | UI                          | IDE                              | Company          |
+| --- | ---------------- | ------------------------- | ------------------------- | --------------------------- | --------------------------------------------------- | --------------------------- | -------------------------------- | ---------------- |
+| 01  | [Apple][apple]   | [iOS][apple-ios]          | [iPadOS][apple-ipados]    | [macOS][apple-macos]        | [Swift][apple-swift]                                | [SwiftUI][apple-swiftui]    | [XCode][apple-xcode]             | [Apple][apple]   |
+| 02  | [Google][google] | [Android][google-android] | [Android][google-android] | [ChromeOS][google-chromeos] | [Kotlin][jetbrains-kotlin] ([JetBrains][jetbrains]) | [Material][google-material] | [Android Studio][android-studio] | [Google][google] |
+| 03  | [Microsoft][ms]  |                           |                           | [Windows][ms-windows]       | [C#][ms-csharp]                                     | [WinUI][ms-winui]           | [Visual Studio][ms-vs]           | [Microsoft][ms]  |
 
 ## Other
 
