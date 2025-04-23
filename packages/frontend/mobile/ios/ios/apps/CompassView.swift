@@ -1,12 +1,46 @@
 //
-//  ContentView.swift
+//  CompassView.swift
 //  ios
 //
 //  Created by Hieu Doan on 23/4/25.
 //
 
+import Combine
+import CoreLocation
 import Foundation
 import SwiftUI
+
+class CompassHeading: NSObject, ObservableObject, CLLocationManagerDelegate {
+    var objectWillChange = PassthroughSubject<Void, Never>()
+    var degrees: Double = .zero {
+        didSet {
+            objectWillChange.send()
+        }
+    }
+
+    private let locationManager: CLLocationManager
+
+    override init() {
+        locationManager = CLLocationManager()
+        super.init()
+
+        locationManager.delegate = self
+        setup()
+    }
+
+    private func setup() {
+        locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.headingAvailable() {
+            locationManager.startUpdatingLocation()
+            locationManager.startUpdatingHeading()
+        }
+    }
+
+    func locationManager(_: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        degrees = -1 * newHeading.magneticHeading
+    }
+}
 
 struct Marker: Hashable {
     let degrees: Double
@@ -18,7 +52,7 @@ struct Marker: Hashable {
     }
 
     func degreeText() -> String {
-        return String(format: "%.0f", self.degrees)
+        return String(format: "%.0f", degrees)
     }
 
     static func markers() -> [Marker] {
@@ -34,7 +68,7 @@ struct Marker: Hashable {
             Marker(degrees: 240),
             Marker(degrees: 270, label: "W"),
             Marker(degrees: 300),
-            Marker(degrees: 330)
+            Marker(degrees: 330),
         ]
     }
 }
@@ -62,23 +96,23 @@ struct CompassMarkerView: View {
     }
 
     private func capsuleWidth() -> CGFloat {
-        return self.marker.degrees == 0 ? 7 : 3
+        return marker.degrees == 0 ? 7 : 3
     }
 
     private func capsuleHeight() -> CGFloat {
-        return self.marker.degrees == 0 ? 45 : 30
+        return marker.degrees == 0 ? 45 : 30
     }
 
     private func capsuleColor() -> Color {
-        return self.marker.degrees == 0 ? .red : .gray
+        return marker.degrees == 0 ? .red : .gray
     }
 
     private func textAngle() -> Angle {
-        return Angle(degrees: -self.compassDegress - self.marker.degrees)
+        return Angle(degrees: -compassDegress - marker.degrees)
     }
 }
 
-struct ContentView : View {
+struct CompassView: View {
     @ObservedObject var compassHeading = CompassHeading()
 
     var body: some View {
@@ -101,5 +135,5 @@ struct ContentView : View {
 }
 
 #Preview {
-    ContentView()
+    CompassView()
 }
