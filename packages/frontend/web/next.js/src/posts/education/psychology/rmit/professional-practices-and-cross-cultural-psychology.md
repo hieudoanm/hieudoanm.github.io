@@ -8,7 +8,8 @@ date: '2025-04-22'
 - [Table of Contents](#table-of-contents)
 - [Midterm 1](#midterm-1)
   - [Week 01](#week-01)
-    - [Week 01 - Objective 3](#week-01---objective-3)
+    - [Week 01 - Objective 1: Introduction to the Concept of a Capstone Course](#week-01---objective-1-introduction-to-the-concept-of-a-capstone-course)
+    - [Week 01 - Objective 3: Stakeholders and their (Interactive) Role](#week-01---objective-3-stakeholders-and-their-interactive-role)
   - [Week 02](#week-02)
     - [Week 02 - Learning Objective 01: History of psychology in Australia](#week-02---learning-objective-01-history-of-psychology-in-australia)
     - [Week 02 - Learning Objective 02: Role of psychology in Australia: Positive and Negative examples](#week-02---learning-objective-02-role-of-psychology-in-australia-positive-and-negative-examples)
@@ -49,7 +50,28 @@ date: '2025-04-22'
 
 ### Week 01
 
-#### Week 01 - Objective 3
+#### Week 01 - Objective 1: Introduction to the Concept of a Capstone Course
+
+- Purposes
+  - Assess the impact of their undergraduate education on the development of:
+    - Critical thinking skills
+    - Ethical perspectives
+    - Personal and professional growth
+  - Integrate and apply all the material they have learnt from the psychology program to their personal and professional lives
+  - Evaluate the students’ readiness to transition out of University
+- Types of capstones courses
+  - Discipline based – major project or thesis
+  - Transition only course – life after third year (information-based)
+  - Career planning course – further study or job seeking (skills-based)
+  - Interdisciplinary course – contextualize psychology with related disciplines (psychiatry, medicine, social work, occupational therapists, etc)
+- Focus
+  - Student-centred learning (cognitive self-learning)
+  - Emphatic listening (by department staff)
+  - Affective and experiential learning (growth in emotional learning)
+  - Writing assignments that focus on personal and professional growth
+  - Collaborative learning and self-disclosure
+
+#### Week 01 - Objective 3: Stakeholders and their (Interactive) Role
 
 - A stakeholder is any party that has an interest in a program and can either affect or be affected by that program
 - Stakeholders
