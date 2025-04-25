@@ -12,5 +12,6 @@ date: '2025-04-28'
 
 | No  | Name        |
 | --- | ----------- |
-| 1   | Hanoi       |
+| 1   | Ha Noi      |
 | 2   | Ho Chi Minh |
+| 3   | Da Nang     |
