@@ -247,15 +247,21 @@ date: '2025-04-22'
     - Limitaion: Sample only colleges students
   - Saucier, G., et al (2015): Global [pan-cultural] focus and therefore minimal focus on national [cross cultural] issues and the individual [psychological] level
   - Bond, M., et al. (2004)
+    - Dynamic externality – scored high on religiousity, reward for application, fate control
+    - Societal cynicism – living in a predictable, benign environment, do not aspire to high performance but focus on sensible, realistic, achievable outcomes
     - Dynamic externality vs Societal cynicism => create 4 group of people
-      - Scored high on religiousity, reward for application, fate control
-      - Societal cynicism – living in a predictable, benign environment, do not aspire to high performance but focus on sensible, realistic, achievable outcomes
+
+|                          | Dynamic externality - Low | Dynamic externality - High |
+| ------------------------ | ------------------------- | -------------------------- |
+| Societal cynicism - High | Germany and Japan         | Russia and Hong Kong       |
+| Societal cynicism - Low  | USA and Australia         | Philippines and Indonesia  |
+
 - Factors
-  - Factor 1: Religiosity – this factor focuses on religious authority and tradition. People scoring high on this factor believe in the existence of a God who created nature and life and controls what happens to people – both good and bad
+  - Factor 1: Religiosity – This factor focuses on religious authority and tradition. People scoring high on this factor believe in the existence of a God who created nature and life and controls what happens to people – both good and bad
   - Factor 2: Naturalism - This factor is associated with the relationship between humans and nature. This includes connectedness, choice of life style and [negative] impact of human activity on nature
   - Factor 3: Integrated Worldview - The third factor focuses on a global perspective. People scoring high on this factor feel connected to the universe, feel they are citizens of the world and see understanding their personal growth and knowledge from the sciences and the arts
   - Factor 4: Individualism - This factor is associated with being independent, using their own judgement, choosing their own life style and being recognized for their own achievements
-  - Factor 5: Gestalt formation - This cognitive factor emphasizes completeness/wholeness. That is, the idea that people should integrate all perspectives, appreciate and accept different perspectives from diverse groups, and is contrary to the belief that people should be defined by their own attributes
+  - Factor 5: Gestalt Formation - This cognitive factor emphasizes completeness/wholeness. That is, the idea that people should integrate all perspectives, appreciate and accept different perspectives from diverse groups, and is contrary to the belief that people should be defined by their own attributes
   - Factor 6: Scientism - This factor focuses on the belief that science is the ultimate source of facts [reality], that science is important and will ultimately solve all the world’s problems.
   - Factor 7: Developing self - This factor reflects that a fundamental part of developing is a welfare state and educational institutions that will lead to inner [personal] growth and self-actualization. If is contrary to individuals trying to adapt their self to fit into society
 
