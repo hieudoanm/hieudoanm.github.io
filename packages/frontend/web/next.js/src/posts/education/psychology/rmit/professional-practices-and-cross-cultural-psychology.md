@@ -198,14 +198,33 @@ date: '2025-04-22'
 
 - Philosophy
   - Good vs Evil vs Tabula Rasa
+    - Freud - Psychoanalysis - Evil => autocratic
+    - Rogers - Humanism - Good => laissez-faire
+    - Learning Theories - Tabula Rasa => authoritatian
   - Nature vs Nurture: Biological vs Social
+    - Biological (evolutionary)
+    - Social
   - Free will vs Determinism: Create Own Destiny vs Cause and Effect
+    - Quanlitative => Create Own Destiny
+    - Quantitative => Cause and Effect
   - Body vs Mind: Biological and Cognitive vs Emotion and Motivation
+    - Body: Biological and Cognitive
+    - Mind: Emotion and Motivation
   - Rational vs Irrational: Cognitive vs Emotion
+    - Cognitive and Behavioural Psychology
+    - Psychoananalytic
   - Whole vs Part
-  - Quantitative vs Qualitative: Structure vs Functionalism
-  - Morality vs Moral Responsibility: Ethics vs Pragmatism
-  - Individualism vs Society: Individuals Goal vs Common Goods
+    - Gestalt Psychology
+    - Human Information Processing
+  - Quantitative vs Qualitative: Structuralism vs Functionalism
+    - Quantitative: Structure - Introspection (analyzing one’s own conscious thoughts and feelings in detail).
+    - Qualitative: Functionalism - Broader, including introspection, observation, and questionnaires.
+  - Morality vs Moral Responsibility
+    - Ethics and Professional Issues
+    - Pragmatism
+  - Individualism vs Society: Individuals Goal
+    - Individuals Goal
+    - Common Goods
   - Ethical Behaviour: Interpersonal Relationship
 - Psychology
   - Psychology is how we try to answer the 10 questions of Philosophy
@@ -243,12 +262,33 @@ date: '2025-04-22'
 #### Week 03 - Learning Objective 05: Explain how profiling worldviews help understand how people act in various scenarios
 
 - Factor 1: Religiosity - People with religious beliefs have a tendency to see humans as morally fragile and in need of guidance/direction by higher power
+  - Increase Penalties: High
+  - Change social values: Mid to Low
+  - Rehabilitate: Low
 - Factor 2: Naturalism - Strongly endorsing changing the society [which in turn will indirectly change the individual] and changing [rehabilitate] prisoners to strengthen their connection with society [develop skills to get jobs, money, home, family, etc]
+  - Increase Penalties: Low
+  - Change social values: High
+  - Rehabilitate: High
 - Factor 3: Integrated Worldview - Hence, the strong support for changing society and rehabilitation of prisoners.
+  - Increase Penalties: Low
+  - Change social values: High
+  - Rehabilitate: Mid to High
 - Factor 4: Individualism - From an individualistic perspective the most logically interventions are advocating harsher penalties for in the individual prisoner or rehabilitation of the prisoner – teaching the individual more appropriate life skills. Someone focusing on individualism is unlikely to endorse changing society to fit the individual
+  - Increase Penalties: High
+  - Change social values: Low
+  - Rehabilitate: Mid
 - Factor 5: Gestalt formation - Contrary to this prediction, the most favoured solution by this group was the simple judicial solution of increasing criminal penalties
+  - Increase Penalties: High
+  - Change social values: Low
+  - Rehabilitate: Mid
 - Factor 6: Scientism - In this case, the evidence suggests that the most pragmatic solution is to rehabilitate prisoners followed by changing societal values. Few people who believe in scientism would endorse the “failed” strategy of simply making penalties more harsh
+  - Increase Penalties: Low
+  - Change social values: Mid
+  - Rehabilitate: High
 - Factor 7: Hence a strong endorsement for this factor would not endorse changing society, but would focus on punishment [increase penalties] and individual skill development [rehabilitate prisoners]
+  - Increase Penalties: High
+  - Change social values: Low
+  - Rehabilitate: High
 
 ### Week 04
 
@@ -271,7 +311,7 @@ date: '2025-04-22'
       - Articulates and promotes ethical principles
       - Sets specific standards to guide psychologists and public
       - Clarifies the expectations of what is considered ethical professional conduct by psychologists
-      - Has three general principles [see next slides]
+      - Has three general principles
         - A: Respect for the rights and dignity of people and peoples - Regard people as intrinsically valuable and respect their rights, including the right to autonomy and justice. Psychologists engage in conduct which promotes equity and the protection of people’s human rights, legal rights, and moral rights. They respect the dignity of all people and peoples.
         - B: Propriety - The welfare of clients and the public, and the standing of the profession, take precedence over a psychologist’s self-interest.
         - C: Integrity - Power / Trust / Honesty
