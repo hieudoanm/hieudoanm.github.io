@@ -708,8 +708,8 @@ importers:
         specifier: 6.4.0
         version: 6.4.0
       '@types/chrome':
-        specifier: 0.0.316
-        version: 0.0.316
+        specifier: 0.0.317
+        version: 0.0.317
       '@types/node':
         specifier: 22.15.1
         version: 22.15.1
@@ -759,8 +759,8 @@ importers:
         specifier: 9.25.1
         version: 9.25.1
       '@types/chrome':
-        specifier: 0.0.316
-        version: 0.0.316
+        specifier: 0.0.317
+        version: 0.0.317
       '@types/node':
         specifier: 22.15.1
         version: 22.15.1
@@ -810,8 +810,8 @@ importers:
         specifier: 6.4.0
         version: 6.4.0
       '@types/chrome':
-        specifier: 0.0.316
-        version: 0.0.316
+        specifier: 0.0.317
+        version: 0.0.317
       '@types/node':
         specifier: 22.15.1
         version: 22.15.1
@@ -3686,8 +3686,8 @@ packages:
   '@types/braces@3.0.5':
     resolution: {integrity: sha512-SQFof9H+LXeWNz8wDe7oN5zu7ket0qwMu5vZubW4GCJ8Kkeh6nBWUz87+KTz/G3Kqsrp0j/W253XJb3KMEeg3w==}
 
-  '@types/chrome@0.0.316':
-    resolution: {integrity: sha512-zoXIly8A41t8U5oC/14hgwjJ3k6kOE6ODJcCSGYda9AFOSloySO6OSO+RHayndb4BaJWg9s5FrXhYkemgsSEkA==}
+  '@types/chrome@0.0.317':
+    resolution: {integrity: sha512-ibKycbXX8ZZToFshjgWg98BTvFUSvQht8m53Xc+87ye3Z6ZoHJubLjoiDsil8rtW+noWE+Z0+7y0nwLxArU+CQ==}
 
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
@@ -14666,7 +14666,7 @@ snapshots:
 
   '@types/braces@3.0.5': {}
 
-  '@types/chrome@0.0.316':
+  '@types/chrome@0.0.317':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
