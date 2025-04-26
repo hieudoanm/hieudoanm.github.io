@@ -27,7 +27,7 @@
     "html-to-pdfmake": "2.5.23",
     "jsdom": "26.1.0",
     "pdf2html": "3.3.0",
-    "pdfmake": "0.2.18",
+    "pdfmake": "0.2.19",
     "pino": "9.6.0",
     "pino-pretty": "13.0.0",
     "public-ip": "7.0.1"
