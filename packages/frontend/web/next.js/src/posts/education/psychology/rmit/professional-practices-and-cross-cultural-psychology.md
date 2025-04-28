@@ -198,14 +198,33 @@ date: '2025-04-22'
 
 - Philosophy
   - Good vs Evil vs Tabula Rasa
+    - Freud - Psychoanalysis - Evil => autocratic
+    - Rogers - Humanism - Good => laissez-faire
+    - Learning Theories - Tabula Rasa => authoritatian
   - Nature vs Nurture: Biological vs Social
+    - Biological (evolutionary)
+    - Social
   - Free will vs Determinism: Create Own Destiny vs Cause and Effect
+    - Quanlitative => Create Own Destiny
+    - Quantitative => Cause and Effect
   - Body vs Mind: Biological and Cognitive vs Emotion and Motivation
+    - Body: Biological and Cognitive
+    - Mind: Emotion and Motivation
   - Rational vs Irrational: Cognitive vs Emotion
+    - Cognitive and Behavioural Psychology
+    - Psychoananalytic
   - Whole vs Part
-  - Quantitative vs Qualitative: Structure vs Functionalism
-  - Morality vs Moral Responsibility: Ethics vs Pragmatism
-  - Individualism vs Society: Individuals Goal vs Common Goods
+    - Gestalt Psychology
+    - Human Information Processing
+  - Quantitative vs Qualitative: Structuralism vs Functionalism
+    - Quantitative: Structure - Introspection (analyzing one’s own conscious thoughts and feelings in detail).
+    - Qualitative: Functionalism - Broader, including introspection, observation, and questionnaires.
+  - Morality vs Moral Responsibility
+    - Ethics and Professional Issues
+    - Pragmatism
+  - Individualism vs Society: Individuals Goal
+    - Individuals Goal
+    - Common Goods
   - Ethical Behaviour: Interpersonal Relationship
 - Psychology
   - Psychology is how we try to answer the 10 questions of Philosophy
@@ -220,34 +239,62 @@ date: '2025-04-22'
 
 - Research
   - Nilsson, A. (2015) on Worldview factors:
-    - Worldview factor 1: Scientism-reductionism = "There is a rational explanation of everything"
-    - Worldview factor 2: Scientism-common sense empiricism = "All knowledge is based on experience and observation, theories are by themselves meaningless abstraction"
-    - Worldview factor 3: Scientific naturalism = "Human action is constrained by the limits placed by inheritance and environment"
-    - Worldview factor 4: Common sense empiricism = "You should be critical and ready to challenge authorities as everyone else"
-    - Sample only colleges students
+    - Factors
+      - Worldview factor 1: Scientism-reductionism = "There is a rational explanation of everything"
+      - Worldview factor 2: Scientism-common sense empiricism = "All knowledge is based on experience and observation, theories are by themselves meaningless abstraction"
+      - Worldview factor 3: Scientific naturalism = "Human action is constrained by the limits placed by inheritance and environment"
+      - Worldview factor 4: Common sense empiricism = "You should be critical and ready to challenge authorities as everyone else"
+    - Limitaion: Sample only colleges students
   - Saucier, G., et al (2015): Global [pan-cultural] focus and therefore minimal focus on national [cross cultural] issues and the individual [psychological] level
   - Bond, M., et al. (2004)
+    - Dynamic externality – scored high on religiousity, reward for application, fate control
+    - Societal cynicism – living in a predictable, benign environment, do not aspire to high performance but focus on sensible, realistic, achievable outcomes
     - Dynamic externality vs Societal cynicism => create 4 group of people
-      - Scored high on religiousity, reward for application, fate control
-      - Societal cynicism – living in a predictable, benign environment, do not aspire to high performance but focus on sensible, realistic, achievable outcomes
+
+|                          | Dynamic externality - Low | Dynamic externality - High |
+| ------------------------ | ------------------------- | -------------------------- |
+| Societal cynicism - High | Germany and Japan         | Russia and Hong Kong       |
+| Societal cynicism - Low  | USA and Australia         | Philippines and Indonesia  |
+
 - Factors
-  - Factor 1: Religiosity – this factor focuses on religious authority and tradition. People scoring high on this factor believe in the existence of a God who created nature and life and controls what happens to people – both good and bad
+  - Factor 1: Religiosity – This factor focuses on religious authority and tradition. People scoring high on this factor believe in the existence of a God who created nature and life and controls what happens to people – both good and bad
   - Factor 2: Naturalism - This factor is associated with the relationship between humans and nature. This includes connectedness, choice of life style and [negative] impact of human activity on nature
-  - Factor 3: Integrated Worldview - This factor is associated with the relationship between humans and nature. This includes connectedness, choice of life style and [negative] impact of human activity on nature
+  - Factor 3: Integrated Worldview - The third factor focuses on a global perspective. People scoring high on this factor feel connected to the universe, feel they are citizens of the world and see understanding their personal growth and knowledge from the sciences and the arts
   - Factor 4: Individualism - This factor is associated with being independent, using their own judgement, choosing their own life style and being recognized for their own achievements
-  - Factor 5: Gestalt formation - This cognitive factor emphasizes completeness/wholeness. That is, the idea that people should integrate all perspectives, appreciate and accept different perspectives from diverse groups, and is contrary to the belief that people should be defined by their own attributes
+  - Factor 5: Gestalt Formation - This cognitive factor emphasizes completeness/wholeness. That is, the idea that people should integrate all perspectives, appreciate and accept different perspectives from diverse groups, and is contrary to the belief that people should be defined by their own attributes
   - Factor 6: Scientism - This factor focuses on the belief that science is the ultimate source of facts [reality], that science is important and will ultimately solve all the world’s problems.
   - Factor 7: Developing self - This factor reflects that a fundamental part of developing is a welfare state and educational institutions that will lead to inner [personal] growth and self-actualization. If is contrary to individuals trying to adapt their self to fit into society
 
 #### Week 03 - Learning Objective 05: Explain how profiling worldviews help understand how people act in various scenarios
 
 - Factor 1: Religiosity - People with religious beliefs have a tendency to see humans as morally fragile and in need of guidance/direction by higher power
+  - Increase Penalties: High
+  - Change social values: Mid to Low
+  - Rehabilitate: Low
 - Factor 2: Naturalism - Strongly endorsing changing the society [which in turn will indirectly change the individual] and changing [rehabilitate] prisoners to strengthen their connection with society [develop skills to get jobs, money, home, family, etc]
+  - Increase Penalties: Low
+  - Change social values: High
+  - Rehabilitate: High
 - Factor 3: Integrated Worldview - Hence, the strong support for changing society and rehabilitation of prisoners.
+  - Increase Penalties: Low
+  - Change social values: High
+  - Rehabilitate: Mid to High
 - Factor 4: Individualism - From an individualistic perspective the most logically interventions are advocating harsher penalties for in the individual prisoner or rehabilitation of the prisoner – teaching the individual more appropriate life skills. Someone focusing on individualism is unlikely to endorse changing society to fit the individual
+  - Increase Penalties: High
+  - Change social values: Low
+  - Rehabilitate: Mid
 - Factor 5: Gestalt formation - Contrary to this prediction, the most favoured solution by this group was the simple judicial solution of increasing criminal penalties
+  - Increase Penalties: High
+  - Change social values: Low
+  - Rehabilitate: Mid
 - Factor 6: Scientism - In this case, the evidence suggests that the most pragmatic solution is to rehabilitate prisoners followed by changing societal values. Few people who believe in scientism would endorse the “failed” strategy of simply making penalties more harsh
+  - Increase Penalties: Low
+  - Change social values: Mid
+  - Rehabilitate: High
 - Factor 7: Hence a strong endorsement for this factor would not endorse changing society, but would focus on punishment [increase penalties] and individual skill development [rehabilitate prisoners]
+  - Increase Penalties: High
+  - Change social values: Low
+  - Rehabilitate: High
 
 ### Week 04
 
@@ -270,7 +317,7 @@ date: '2025-04-22'
       - Articulates and promotes ethical principles
       - Sets specific standards to guide psychologists and public
       - Clarifies the expectations of what is considered ethical professional conduct by psychologists
-      - Has three general principles [see next slides]
+      - Has three general principles
         - A: Respect for the rights and dignity of people and peoples - Regard people as intrinsically valuable and respect their rights, including the right to autonomy and justice. Psychologists engage in conduct which promotes equity and the protection of people’s human rights, legal rights, and moral rights. They respect the dignity of all people and peoples.
         - B: Propriety - The welfare of clients and the public, and the standing of the profession, take precedence over a psychologist’s self-interest.
         - C: Integrity - Power / Trust / Honesty
