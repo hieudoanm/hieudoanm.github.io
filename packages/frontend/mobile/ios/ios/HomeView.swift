@@ -16,10 +16,19 @@ struct HomeView: View {
             VStack {
                 Text("Hieu Doan")
                     .padding(.bottom, 16)
-                NavigationLink("Apps", destination: AppsView()).padding(.bottom, 16)
+                    .font(.title2)
+                NavigationLink("Apps", destination: AppsView())
+                    .padding(.bottom, 16)
+                    .font(.title2)
                 Link("GitHub", destination: URL(string: gitHubUrl)!)
+                    .padding(.bottom, 8)
+                    .font(.title2)
                 Link("Twitter", destination: URL(string: twitterUrl)!)
+                    .padding(.bottom, 8)
+                    .font(.title2)
                 Link("LinkedIn", destination: URL(string: linkedInUrl)!)
+                    .padding(.bottom, 0)
+                    .font(.title2)
             }
         }
     }

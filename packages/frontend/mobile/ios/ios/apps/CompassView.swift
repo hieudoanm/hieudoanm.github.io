@@ -18,6 +18,29 @@ class CompassHeading: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
 
+    var label: String {
+        switch degrees.truncatingRemainder(dividingBy: 360) {
+        case -22.5 ..< 22.5:
+            return "N"
+        case 22.5 ..< 67.5:
+            return "NE"
+        case 67.5 ..< 112.5:
+            return "E"
+        case 112.5 ..< 157.5:
+            return "SE"
+        case 157.5 ..< 202.5:
+            return "S"
+        case 202.5 ..< 247.5:
+            return "SW"
+        case 247.5 ..< 292.5:
+            return "W"
+        case 292.5 ..< 337.5:
+            return "NW"
+        default:
+            return "N"
+        }
+    }
+
     private let locationManager: CLLocationManager
 
     override init() {
@@ -114,13 +137,13 @@ struct CompassMarkerView: View {
 
 struct CompassView: View {
     @ObservedObject var compassHeading = CompassHeading()
+    @StateObject var locationManager = LocationManager()
 
     var body: some View {
         VStack {
             Capsule()
                 .frame(width: 5,
                        height: 50)
-
             ZStack {
                 ForEach(Marker.markers(), id: \.self) { marker in
                     CompassMarkerView(marker: marker,
@@ -130,6 +153,27 @@ struct CompassView: View {
             .frame(width: 300,
                    height: 300)
             .rotationEffect(Angle(degrees: self.compassHeading.degrees))
+            Text(String(format: "%.0f", -self.compassHeading.degrees)).font(.largeTitle) + Text("° ")
+                .font(.largeTitle) + Text(self.compassHeading.label).font(.largeTitle)
+            if let lat = locationManager.latitude,
+               let lon = locationManager.longitude
+            {
+                Text("\(convertToDMS(coordinate: lat)) \(convertToDMS(coordinate: lon))")
+            } else {
+                Text("Getting coordinates...")
+            }
+            if let city = locationManager.city,
+               let country = locationManager.country
+            {
+                Text("\(city), \(country)")
+            } else {
+                Text("Getting location...")
+            }
+            if let altitude = locationManager.altitude {
+                Text("Elevation: \(altitude, specifier: "%.0f") m")
+            } else {
+                Text("Getting elevation...")
+            }
         }
     }
 }

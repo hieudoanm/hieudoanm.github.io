@@ -11,9 +11,17 @@ struct AppsView: View {
         NavigationStack {
             VStack {
                 NavigationLink("Camera", destination: CameraView())
+                    .padding(.bottom, 16)
+                    .font(.title2)
                 NavigationLink("Compass", destination: CompassView())
+                    .padding(.bottom, 16)
+                    .font(.title2)
                 NavigationLink("Level", destination: LevelView())
+                    .padding(.bottom, 16)
+                    .font(.title2)
                 NavigationLink("NFC", destination: NFCView())
+                    .padding(.bottom, 16)
+                    .font(.title2)
             }
         }
     }

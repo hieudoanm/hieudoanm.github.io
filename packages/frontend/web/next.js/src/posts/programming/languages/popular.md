@@ -6,20 +6,19 @@ date: '2025-04-18'
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Top 10](#top-10)
+- [Software Development](#software-development)
 - [Native](#native)
+- [Data Science / Machine Learning](#data-science--machine-learning)
+- [Low Level](#low-level)
 - [Other](#other)
 
-## Top 10
+## Software Development
 
 | No  | Language                                 | Language (Maintainer) | IDE                          | IDE (Maintainer)       | Docker                       | Usage           |
 | --- | ---------------------------------------- | --------------------- | ---------------------------- | ---------------------- | ---------------------------- | --------------- |
 | 01  | [Java][oracle-java]                      | [Oracle][oracle]      | [IDEA][jetbrains-idea]       | [JetBrains][jetbrains] | [Docker][docker-hub-openjdk] | Back-end        |
 | 02  | [Go][go]                                 | [Google][google]      |                              |                        | [Docker][docker-hub-golang]  | CLI             |
-| 03  | [Python][python]                         |                       | [Jupyter][jupyter]           |                        | [Docker][docker-hub-python]  | Data Science    |
-| 04  | C / C++                                  |                       |                              |                        |                              | Embedded        |
-| 05  | JavaScript / [TypeScript][ms-typescript] | [Microsoft][ms]       | [Visual Studio Code][ms-vsc] | [Microsoft][ms]        | [Docker][docker-hub-node]    | Front-end - Web |
-| 06  | [Rust][rust]                             |                       |                              |                        |                              | OS              |
+| 03  | JavaScript / [TypeScript][ms-typescript] | [Microsoft][ms]       | [Visual Studio Code][ms-vsc] | [Microsoft][ms]        | [Docker][docker-hub-node]    | Front-end - Web |
 
 ## Native
 
@@ -28,6 +27,18 @@ date: '2025-04-18'
 | 01  | [Apple][apple]   | [iOS][apple-ios]          | [iPadOS][apple-ipados]    | [macOS][apple-macos]        | [Swift][apple-swift]                                | [SwiftUI][apple-swiftui]    | [XCode][apple-xcode]             | [Apple][apple]   |
 | 02  | [Google][google] | [Android][google-android] | [Android][google-android] | [ChromeOS][google-chromeos] | [Kotlin][jetbrains-kotlin] ([JetBrains][jetbrains]) | [Material][google-material] | [Android Studio][android-studio] | [Google][google] |
 | 03  | [Microsoft][ms]  |                           |                           | [Windows][ms-windows]       | [C#][ms-csharp]                                     | [WinUI][ms-winui]           | [Visual Studio][ms-vs]           | [Microsoft][ms]  |
+
+## Data Science / Machine Learning
+
+| Language         | IDE                | Docker                      |
+| ---------------- | ------------------ | --------------------------- |
+| [Python][python] | [Jupyter][jupyter] | [Docker][docker-hub-python] |
+| [R][r]           | [Jupyter][jupyter] |                             |
+
+## Low Level
+
+- C / C++
+- [Rust][rust]
 
 ## Other
 
@@ -67,4 +78,5 @@ date: '2025-04-18'
 [oracle]: https://www.oracle.com/
 [oracle-java]: https://www.java.com/
 [python]: https://www.python.org/
+[r]: https://www.r-project.org/
 [rust]: https://www.rust-lang.org/
