@@ -4,8 +4,8 @@
 //
 //  Created by Hieu Doan on 23/4/25.
 //
-
 import CoreMotion
+
 import UIKit
 
 class MotionDetector: ObservableObject {

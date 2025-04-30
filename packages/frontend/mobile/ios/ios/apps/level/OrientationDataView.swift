@@ -1,23 +1,6 @@
-//
-//  LevelView.swift
-//  ios
-//
-//  Created by Hieu Doan on 23/4/25.
-//
-
 import SwiftUI
 
-struct OrientationDataView_Previews: PreviewProvider {
-    @StateObject private static var motionDetector = MotionDetector(updateInterval: 0.01).started()
-
-    static var previews: some View {
-        LevelView()
-
-            .environmentObject(motionDetector)
-    }
-}
-
-struct LevelView: View {
+struct OrientationDataView: View {
     @EnvironmentObject var detector: MotionDetector
 
     var rollString: String {
@@ -41,6 +24,12 @@ struct LevelView: View {
     }
 }
 
-#Preview {
-    LevelView()
+struct OrientationDataView_Previews: PreviewProvider {
+    @StateObject private static var motionDetector = MotionDetector(updateInterval: 0.01).started()
+
+    static var previews: some View {
+        OrientationDataView()
+
+            .environmentObject(motionDetector)
+    }
 }

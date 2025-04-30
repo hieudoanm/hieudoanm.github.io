@@ -16,7 +16,7 @@ struct AppsView: View {
                 NavigationLink("Compass", destination: CompassView())
                     .padding(.bottom, 16)
                     .font(.title2)
-                NavigationLink("Level", destination: LevelView())
+                NavigationLink("Level", destination: BubbleLevel())
                     .padding(.bottom, 16)
                     .font(.title2)
                 NavigationLink("NFC", destination: NFCView())

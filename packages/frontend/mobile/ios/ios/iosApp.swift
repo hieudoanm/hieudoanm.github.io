@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct iosApp: App {
+    @StateObject private var motionDetector = MotionDetector(updateInterval: 0.01).started()
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeView().environmentObject(motionDetector) // Inject it at the root level
         }
     }
 }
