@@ -7,6 +7,9 @@ date: '2025-04-30'
 
 - [Table of Contents](#table-of-contents)
 - [Provinces](#provinces)
+- [Government](#government)
+  - [Presidents](#presidents)
+  - [Prime Ministers](#prime-ministers)
 
 ## Provinces
 
@@ -46,3 +49,9 @@ date: '2025-04-30'
 | 32  |             |       |
 | 33  |             |       |
 | 34  |             |       |
+
+## Government
+
+### Presidents
+
+### Prime Ministers
