@@ -1011,8 +1011,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       daisyui:
-        specifier: 5.0.30
-        version: 5.0.30
+        specifier: 5.0.32
+        version: 5.0.32
       eslint:
         specifier: 9.25.1
         version: 9.25.1(jiti@2.4.2)
@@ -5529,8 +5529,8 @@ packages:
     resolution: {integrity: sha512-e1U46jVP+w7Iut8Jt8ri1YsPOvFpg46k+K8TpCb0P+zjCkjkPnV7WzfDJzMHy1LnA+wj5pLT1wjO901gLXeEhA==}
     engines: {node: '>=12'}
 
-  daisyui@5.0.30:
-    resolution: {integrity: sha512-eLQsjeYC3qDTjapQa30BP/qhdZ9y1II4ZXOEzJ9j0UKJePP3Rnh79rwZkMefkfozW2dgcx65cXTyzAUHLNoCYg==}
+  daisyui@5.0.32:
+    resolution: {integrity: sha512-fdcfLdyxApqX33tITX6M2YXeYsw+SARZi57dfo0OHB7ay8R5f6zZX2A5WITn6Gnx/Bvl+HEByXAVzFVFBsIrmA==}
 
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -11322,6 +11322,7 @@ packages:
   wrangler@4.14.0:
     resolution: {integrity: sha512-WhypgOBEYuUMo/ZFw8MgZ0wtyE7EmDanytjD8Me+OMm62raKU9V9DZTlF1UVLkNfilfQNlRbMnFRdzSBji/MEA==}
     engines: {node: '>=18.0.0'}
+    deprecated: Workers with configured tail consumers would sometimes prevent wrangler dev from running. Downgrade to 4.13.2 to workaround this issue
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20250428.0
@@ -16893,7 +16894,7 @@ snapshots:
       d3-transition: 3.0.1(d3-selection@3.0.0)
       d3-zoom: 3.0.0
 
-  daisyui@5.0.30: {}
+  daisyui@5.0.32: {}
 
   damerau-levenshtein@1.0.8: {}
 
