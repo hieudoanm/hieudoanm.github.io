@@ -24,7 +24,7 @@
     "start": "node ./dist/server.js"
   },
   "dependencies": {
-    "html-to-pdfmake": "2.5.23",
+    "html-to-pdfmake": "2.5.24",
     "jsdom": "26.1.0",
     "pdf2html": "3.3.0",
     "pdfmake": "0.2.19",
